@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - byte keyword [C#]
 ms.assetid: 111f1db9-ca32-4f0e-b497-4783517eda47
-ms.openlocfilehash: 4ac913bd0d1bd178211ad26a720a80e22877c961
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 28acbe67b85637550fdb1f5e290a9abb60bf5c65
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172174"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027887"
 ---
 # <a name="byte-c-reference"></a>byte (référence C#)
 
 `byte` désigne un type intégral qui stocke des valeurs comme indiqué dans le tableau suivant.  
   
-|Type|Plage|Size|Type .NET Framework|  
+|Type|Plage|Size|Type .NET|  
 |----------|-----------|----------|-------------------------|  
-|`byte`|0 à 255|Entier 8 bits non signé|<xref:System.Byte?displayProperty=nameWithType>|  
+|`byte`|0 à 255|Entier 8 bits non signé|<xref:System.Byte?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Littéraux  
 

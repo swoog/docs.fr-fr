@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: bb2190a4fae6f8a26b220fd12ecb9f65ea6f4b96
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 8664493f3d5d5e03cccbe1c33f2c2abe048e3f57
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251114"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105574"
 ---
 # <a name="official-net-docker-images"></a>Images officielles .NET Docker
 
@@ -56,4 +56,5 @@ En explorant les dépôts d’images .NET dans Docker Hub, vous trouverez plusie
 
 
 >[!div class="step-by-step"]
-[Précédent] (net-container-os-targets.md) [Suivant] (../architect-microservice-container-applications/index.md)
+[Précédent](net-container-os-targets.md)
+[Suivant](../architect-microservice-container-applications/index.md)

@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2ea56f5a28d115fc5d91a98604b82565c8bf5c78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b2981579f28c083a31d7af6ae42f4e3ca8bbd88
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582819"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105499"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>À propos de l’autorisation dans les microservices .NET et les applications web
 
@@ -129,4 +129,5 @@ Un exemple de condition d’autorisation personnalisée et de gestionnaire desti
 
 
 >[!div class="step-by-step"]
-[Précédent] (index.md) [Suivant] (developer-app-secrets-storage.md)
+[Précédent](index.md)
+[Suivant](developer-app-secrets-storage.md)

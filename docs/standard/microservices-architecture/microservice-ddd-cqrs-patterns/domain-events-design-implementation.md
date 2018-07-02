@@ -4,12 +4,12 @@ description: 'Architecture des microservices .NET pour les applications .NET en 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44fbe79c9ed7cfd4a79daf6ee9b3d39afd33a910
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697194"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106023"
 ---
 # <a name="domain-events-design-and-implementation"></a>Événements de domaine : conception et implémentation
 
@@ -366,4 +366,5 @@ Comme nous l’avons vu, les événements de domaine permettent d’implémenter
 
 
 >[!div class="step-by-step"]
-[précédent] (client-side-validation.md) [suivant] (infrastructure-persistence-layer-design.md)
+[Précédent](client-side-validation.md)
+[Suivant](infrastructure-persistence-layer-design.md)

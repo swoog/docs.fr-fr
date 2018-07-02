@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 0f3b4539156f3ba437c77dea721ca53206d1ed40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579897"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106474"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implémentation de la couche de persistance de l’infrastructure avec Entity Framework Core
 
@@ -471,4 +471,5 @@ Même si nous ne recommandons pas de retourner des données IQueryable à partir
     
 
 >[!div class="step-by-step"]
-[Précédent] (infrastructure-persistence-layer-design.md) [Suivant] (nosql-database-persistence-infrastructure.md)
+[Précédent](infrastructure-persistence-layer-design.md)
+[Suivant](nosql-database-persistence-infrastructure.md)

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 520f2928eb0d300ab0dc2d328d974455e102e4d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579351"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105769"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Conception d’un microservice orienté DDD
 
@@ -106,4 +106,5 @@ Cette conception de couche doit être indépendante pour chaque microservice. Co
 
 
 >[!div class="step-by-step"]
-[Précédent] (cqrs-microservice-reads.md) [Suivant] (microservice-domain-model.md)
+[Précédent](cqrs-microservice-reads.md)
+[Suivant](microservice-domain-model.md)

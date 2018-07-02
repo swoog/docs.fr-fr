@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5d7037f91cb338721f91d35567246ebbca018a3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d8ba76caab39db222c2ceba36a4d67cab3e8a3f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579170"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105792"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)
 
@@ -129,4 +129,5 @@ Les méthodes `Subscribe` (vous pouvez avoir plusieurs implémentations selon le
 
 
 >[!div class="step-by-step"]
-[précédent] (database-server-container.md) [suivant] (rabbitmq-event-bus-development-test-environment.md)
+[Précédent](database-server-container.md)
+[Suivant](rabbitmq-event-bus-development-test-environment.md)

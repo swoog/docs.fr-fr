@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 45917a9dbfbd6610c3cca9ab7dcf9f924c329c10
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 761a9579cc301b7ca4b949a2a83af20ab8bb0f20
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314924"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104650"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Quand choisir .NET Core pour les conteneurs Docker
 
@@ -53,4 +53,5 @@ Cela est particulièrement intéressant pour les architectures de microservices 
 
 
 >[!div class="step-by-step"]
-[Précédent] (general-guidance.md) [Suivant] (net-framework-container-scenarios.md)
+[Précédent](general-guidance.md)
+[Suivant](net-framework-container-scenarios.md)

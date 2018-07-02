@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: 4a2d13463348c2f0c32aec076623f59040d1d81f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94968ed61fced9716112740613a4e3a86622e2e3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289190"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028056"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (référence C#)
 
 `sbyte` désigne un type intégral qui stocke des valeurs en fonction de la taille et de la plage indiquées dans le tableau suivant.  
   
-|Type|Plage|Size|Type .NET Framework|  
+|Type|Plage|Size|Type .NET|  
 |----------|-----------|----------|-------------------------|  
 |`sbyte`|-128 à 127|Entier 8 bits signé|<xref:System.SByte?displayProperty=nameWithType>|  
   

@@ -4,12 +4,12 @@ description: Architecture en microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: cce0b11ca8cb4fe4d97e2f575888254f92543fc3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec3ccdd823e00d148bb8a97e906132f44e7fa727
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573670"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106669"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adressabilité des microservices et registre des services
 
@@ -34,4 +34,5 @@ Notez qu’il existe certaines similitudes entre le modèle de registre des serv
 
 
 >[!div class="step-by-step"]
-[Précédent] (maintain-microservice-apis.md) [Suivant] (microservice-based-composite-ui-shape-layout.md)
+[Précédent](maintain-microservice-apis.md)
+[Suivant](microservice-based-composite-ui-shape-layout.md)

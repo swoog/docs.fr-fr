@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 59f0d46dadb736ad55e53f6715b7ca1b62e9cec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592403"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106591"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
@@ -552,4 +552,5 @@ Si vous hébergez votre application sur Azure, vous pouvez utiliser Microsoft Az
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Précédent] (common-client-side-web-technologies.md) [Suivant] (work-with-data-in-asp-net-core-apps.md)
+[Précédent](common-client-side-web-technologies.md)
+[Suivant](work-with-data-in-asp-net-core-apps.md)

@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: c5cfe617335d8150d069149ac87f79206b1b5eca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1469038af29167f7dbb1a161b951eee742cf4bec
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578653"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105616"
 ---
 # <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
@@ -59,4 +59,5 @@ Des **sources de données distantes et des outils de mise en cache**, comme Azur
 
 
 >[!div class="step-by-step"]
-[Précédent] (containerize-monolithic-applications.md) [Suivant] (service-oriented-architecture.md)
+[Précédent](containerize-monolithic-applications.md)
+[Suivant](service-oriented-architecture.md)

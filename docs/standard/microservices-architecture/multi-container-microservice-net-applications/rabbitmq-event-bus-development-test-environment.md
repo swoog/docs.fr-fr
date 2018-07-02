@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e2b0f1a6152df5d323164fb2eca102fcb973667e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9bf51d947774cddd7b42ade0f05abc8fb3d7e9
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580235"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104751"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implémentation d’un bus d’événements avec RabbitMQ pour un environnement de développement ou de test
 
@@ -111,4 +111,5 @@ La méthode Subscribe accepte un objet IIntegrationEventHandler, qui est semblab
 
 
 >[!div class="step-by-step"]
-[Précédent] (integration-event-based-microservice-communications.md) [Suivant] (subscribe-events.md)
+[Précédent](integration-event-based-microservice-communications.md)
+[Suivant](subscribe-events.md)

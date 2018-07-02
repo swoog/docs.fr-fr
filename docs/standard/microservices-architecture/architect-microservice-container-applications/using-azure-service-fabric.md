@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577676"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105818"
 ---
 # <a name="using-azure-service-fabric"></a>Utilisation d’Azure Service Fabric
 
@@ -89,4 +89,5 @@ Les autres frameworks de microservices qui permettent les services avec état, q
 Notez que les conteneurs Docker sont eux-mêmes sans état. Si vous voulez implémenter un service avec état, vous avez besoin d’un des frameworks normatifs et de plus haut niveau supplémentaires précédemment indiqués. 
 
 >[!div class="step-by-step"]
-[Précédent] (scalable-available-multi-container-microservice-applications.md) [Suivant] (../docker-application-development-process/index.md)
+[Précédent](scalable-available-multi-container-microservice-applications.md)
+[Suivant](../docker-application-development-process/index.md)

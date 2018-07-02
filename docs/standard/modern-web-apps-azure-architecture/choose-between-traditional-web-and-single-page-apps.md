@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Mi
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208161"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104764"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Choisir entre des applications web traditionnelles et des applications monopages
 
@@ -92,4 +92,5 @@ Le tableau de décision ci-dessous récapitule certains facteurs à prendre en c
   | Exigences d’une interface utilisateur riche et complexe | **Limité** | **Adapté** |
 
 >[!div class="step-by-step"]
-[Précédent] (modern-web-applications-characteristics.md) [Suivant](architectural-principles.md)
+[Précédent](modern-web-applications-characteristics.md)
+[Suivant](architectural-principles.md)

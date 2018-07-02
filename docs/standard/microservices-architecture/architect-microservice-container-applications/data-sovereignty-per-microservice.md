@@ -4,12 +4,12 @@ description: Architecture en microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: d739cc33dec372f6bd9569c05d034dcd25be8395
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d66f5d40234e689685b1b8c36367cc9dc2fc7c6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577291"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106864"
 ---
 # <a name="data-sovereignty-per-microservice"></a>Souveraineté des données par microservice
 
@@ -63,4 +63,5 @@ La conception DDD tire parti des microservices en obtenant les limites réelles 
 
 
 >[!div class="step-by-step"]
-[Précédent] (microservices-architecture.md) [Suivant] (logical-versus-physical-architecture.md)
+[Précédent](microservices-architecture.md)
+[Suivant](logical-versus-physical-architecture.md)

@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 66f321d4671364fa1f7eebef98d53210098b5ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585487"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106851"
 ---
 # <a name="development-process-for-azure"></a>Processus de développement pour Azure
 
@@ -113,4 +113,5 @@ Pendant l’exécution de l’application web, vous pouvez surveiller son intég
 
 
 >[!div class="step-by-step"]
-[Précédent] (test-asp-net-core-mvc-apps.md) [Suivant] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[Précédent](test-asp-net-core-mvc-apps.md)
+[Suivant](azure-hosting-recommendations-for-asp-net-web-apps.md)

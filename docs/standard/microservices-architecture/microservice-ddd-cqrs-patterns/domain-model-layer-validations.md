@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ce3cb0c79cbd492224ce1d4ecb25cd02062f11cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578948"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105733"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>Conception de validations dans la couche de modèle de domaine
 
@@ -132,4 +132,5 @@ En utilisant la validation de champ avec des annotations de données, par exempl
 
 
 >[!div class="step-by-step"]
-[Précédent] (enumeration-classes-over-enum-types.md) [Suivant] (client-side-validation.md)
+[Précédent](enumeration-classes-over-enum-types.md)
+[Suivant](client-side-validation.md)

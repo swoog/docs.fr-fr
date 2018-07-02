@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-ms.openlocfilehash: fa0169ad92819cee36832d6c928202eb0dd6733e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ee19688ff0a6687bcf761857958aa2022fdb0c8
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288903"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027809"
 ---
 # <a name="uint-c-reference"></a>uint (référence C#)
 
 Le mot clé `uint` désigne un type intégral qui stocke des valeurs en fonction de la taille et de la plage indiquées dans le tableau suivant.  
   
-|Type|Plage|Size|Type .NET Framework|  
+|Type|Plage|Size|Type .NET|  
 |----------|-----------|----------|-------------------------|  
-|`uint`|de 0 à 4 294 967 295|Entier 32 bits non signé|<xref:System.UInt32?displayProperty=nameWithType>|  
+|`uint`|de 0 à 4 294 967 295|Entier 32 bits non signé|<xref:System.UInt32?displayProperty=nameWithType>|  
   
  **Note** Le type `uint` n’est pas conforme CLS. Utilisez `int` autant que possible.  
   

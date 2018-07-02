@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fadd2611283f0a7dadbf1734fe48f7d1a13096ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06dd5199b8dbc42ce3e9ae35bc5c3673d01cb4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576192"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106799"
 ---
 # <a name="what-is-docker"></a>Présentation de Docker
 
@@ -58,4 +58,5 @@ Une image conteneur est un moyen d’empaqueter une application ou un service et
 Les développeurs Docker ne disent pas : « Cela fonctionne sur ma machine, alors pourquoi pas en production ? » Ils disent : « Cela s’exécute sur Docker ». Les applications empaquetées dans Docker s’exécutent dans tous les environnements Docker pris en charge. Elles s’exécutent de façon cohérente sur toutes les cibles de déploiement (développement, test, préproduction, production).
 
 >[!div class="step-by-step"]
-[Previous] (index.md) [Next] (docker-terminology.md)
+[Précédent](index.md)
+[Suivant](docker-terminology.md)

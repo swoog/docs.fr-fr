@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579143"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072954"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Utilisation de la classe StringBuilder dans .NET
 L’objet <xref:System.String> est immuable. Chaque fois que vous utilisez l’une des méthodes de la classe <xref:System.String?displayProperty=nameWithType>, vous créez un nouvel objet string en mémoire, ce qui nécessite une nouvelle allocation d’espace pour ce nouvel objet. Si vous devez effectuer des modifications répétées sur une chaîne, la surcharge associée à la création d’un objet <xref:System.String> peut être coûteuse. Vous pouvez utiliser la classe <xref:System.Text.StringBuilder?displayProperty=nameWithType> quand vous voulez modifier une chaîne sans créer d’objet. Par exemple, la classe <xref:System.Text.StringBuilder> permet d’améliorer les performances quand il s’agit de concaténer un grand nombre de chaînes dans une boucle.  
@@ -43,7 +43,7 @@ L’objet <xref:System.String> est immuable. Chaque fois que vous utilisez l’u
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Définition de la capacité et de la longueur  
- Bien que <xref:System.Text.StringBuilder> soit un objet dynamique qui permet de développer le nombre de caractères contenus dans la chaîne qu’il encapsule, vous pouvez spécifier une valeur pour le nombre maximal de caractères qu’elle peut contenir. Cette valeur est appelée « capacité » de l’objet et ne doit pas être confondue avec la longueur de la chaîne que l’instance actuelle de <xref:System.Text.StringBuilder> contient. Par exemple, vous pouvez créer une nouvelle instance de la classe <xref:System.Text.StringBuilder> avec la chaîne « Hello », dont la longueur est de 5, et préciser que l’objet a une capacité maximale de 25. Quand vous modifiez l’instance de <xref:System.Text.StringBuilder>, elle ne se réalloue pas une taille tant que la capacité maximale n’est pas atteinte. Quand cela se produit, le nouvel espace est alloué automatiquement et la capacité est doublée. Vous pouvez spécifier la capacité de la classe <xref:System.Text.StringBuilder> en utilisant l’un des constructeurs surchargés. L’exemple suivant spécifie que l’objet `MyStringBuilder` peut être développé en 25 espaces, au maximum.  
+ Bien que <xref:System.Text.StringBuilder> soit un objet dynamique qui permet de développer le nombre de caractères contenus dans la chaîne qu’il encapsule, vous pouvez spécifier une valeur pour le nombre maximal de caractères qu’elle peut contenir. Cette valeur est appelée « capacité » de l’objet et ne doit pas être confondue avec la longueur de la chaîne que l’instance actuelle de <xref:System.Text.StringBuilder> contient. Par exemple, vous pouvez créer une nouvelle instance de la classe <xref:System.Text.StringBuilder> avec la chaîne « Hello », dont la longueur est de 5, et préciser que l’objet a une capacité maximale de 25. Quand vous modifiez l’instance de <xref:System.Text.StringBuilder>, elle ne se réalloue pas une taille tant que la capacité maximale n’est pas atteinte. Quand cela se produit, le nouvel espace est alloué automatiquement et la capacité est doublée. Vous pouvez spécifier la capacité de la classe <xref:System.Text.StringBuilder> en utilisant l’un des constructeurs surchargés. L’exemple suivant spécifie que l’objet `myStringBuilder` peut être développé en 25 espaces, au maximum.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]
