@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63767a3ba2831ca9cadd9b99998eb871780143e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579039"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105652"
 ---
 # <a name="file-and-stream-io"></a>Fichier et flux de données E/S
 E/S de fichier et de flux (entrées/sorties) fait référence au transfert de données vers ou depuis un support de stockage. Dans le .NET Framework, les espaces de noms `System.IO` contiennent des types qui permettent la lecture et l'écriture, de façon synchrone ou asynchrone, sur les flux de données et les fichiers. Ces espaces de noms contiennent également les types qui exécutent la compression et la décompression sur les fichiers, et ceux qui permettent la communication via des canaux et des ports série.  
@@ -26,6 +26,8 @@ E/S de fichier et de flux (entrées/sorties) fait référence au transfert de do
   
 ## <a name="files-and-directories"></a>Fichiers et répertoires  
  Utilisez les types de l'espace de noms <xref:System.IO?displayProperty=nameWithType> pour interagir avec les fichiers et les répertoires. Par exemple, obtenez et définissez les propriétés des fichiers et des répertoires, et extrayez les collections de fichiers et de répertoires en fonction de critères de recherche.  
+
+Pour les conventions de nommage des chemins et les nouvelles méthodes pour exprimer un chemin de fichier pour les systèmes Windows, notamment avec la syntaxe des appareils DOS prise en charge dans .NET Core 1.1 et ultérieur et le .NET Framework 4.6.2 et ultérieur, consultez [Formats de chemin de fichier sur les systèmes Windows](file-path-formats.md). 
   
  Voici quelques classes de fichiers et de répertoires couramment utilisées :  
   

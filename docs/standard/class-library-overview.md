@@ -39,14 +39,15 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c61e4721e6daa548db2fffccc75606e98f71cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577304"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207454"
 ---
 # <a name="net-class-library-overview"></a>Présentation des bibliothèques de classes .NET
+
 Les implémentations .NET incluent des classes, des interfaces, des délégués et des types valeur qui permettent d'accélérer et d'optimiser le processus de développement et de fournir l'accès aux fonctions du système. Pour faciliter l'interopérabilité entre les langages, la plupart des types .NET sont conformes CLS (Common Language Specification) et peuvent, par conséquent, être utilisés à partir de n'importe quel langage de programmation dont le compilateur est conforme CLS.  
   
  Les types .NET sont le fondement sur lequel les applications, composants et contrôles .NET sont construits. Les implémentations .NET comprennent des types qui effectuent les fonctions suivantes :  
@@ -63,22 +64,24 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
   
 -   Fournir l'accès aux données, l'interface GUI riche côté client et l'interface GUI côté client contrôlée par le serveur.  
   
- .NET fournit un ensemble complet d'interfaces, ainsi que des classes abstraites et concrètes (non abstraites). Vous pouvez utiliser les classes concrètes telles quelles ou, dans de nombreux cas, en dériver vos propres classes. Pour utiliser les fonctionnalités d'une interface, vous pouvez créer une classe qui implémente l'interface ou dériver une classe d'une de celles du .NET Framework qui implémente l'interface.  
+ .NET fournit un ensemble complet d'interfaces, ainsi que des classes abstraites et concrètes (non abstraites). Vous pouvez utiliser les classes concrètes telles quelles ou, dans de nombreux cas, en dériver vos propres classes. Pour utiliser les fonctionnalités d’une interface, vous pouvez créer une classe qui implémente l’interface ou dériver une classe de l’une des classes .NET qui implémentent l’interface.  
   
-## <a name="naming-conventions"></a>Conventions d'affectation de noms  
- Les types .NET utilisent un schéma de nommage dans lequel les points indiquent une hiérarchie. Cette technique regroupe les types associés en espaces de noms de sorte qu'ils peuvent être recherchés et référencés plus facilement. La première partie du nom complet (jusqu'au point le plus à droite) constitue le nom de l'espace de noms. La dernière partie du nom est le nom du type. Par exemple, **System.Collections.ArrayList** représente le type **ArrayList**, qui appartient à l’espace de noms **System.Collections**. Les types qui se trouvent dans **System.Collections** peuvent être utilisés pour manipuler les collections d’objets.  
+## <a name="naming-conventions"></a>Conventions d'attribution d'un nom
+
+ Les types .NET utilisent un schéma de nommage dans lequel les points indiquent une hiérarchie. Cette technique regroupe les types associés en espaces de noms de sorte qu'ils peuvent être recherchés et référencés plus facilement. La première partie du nom complet (jusqu'au point le plus à droite) constitue le nom de l'espace de noms. La dernière partie du nom est le nom du type. Par exemple, `System.Collections.Generic.List<T>` représente le type `List<T>`, qui appartient à l’espace de noms `System.Collections.Generic`. Les types dans <xref:System.Collections.Generic> peuvent être utilisés pour manipuler des collections génériques.  
   
  Pour les développeurs de bibliothèques qui étendent le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], ce schéma d'affectation de noms facilite la création de groupes hiérarchiques de types et l'attribution d'un nom cohérent et descriptif. Il permet également d'identifier clairement les types par leur nom complet (autrement dit, par leur espace de noms et nom de type) et d'empêcher les collisions de nom de type. Les développeurs de bibliothèques sont censés utiliser la convention suivante lors de l'affectation de noms aux nouveaux espaces de noms :  
   
  *NomSociété*.*NomTechnologie*  
   
- Par exemple, l'espace de noms Microsoft.Word est conforme à cette indication.  
+ Par exemple, l’espace de noms `Microsoft.Word` est conforme à cette indication.  
   
  L’utilisation de modèles d’affectation de noms pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma d’affectation de noms n’a pas d’effet sur la visibilité, l’accès aux membres, l’héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
   
  Pour plus d’informations sur les espaces de noms et les noms des types, consultez [Système de type commun (CTS, Common Type System)](../../docs/standard/base-types/common-type-system.md).  
   
-## <a name="system-namespace"></a>Espace de noms System  
+## <a name="system-namespace"></a>System (espace de noms)
+
  L'espace de noms <xref:System> est l'espace de noms racine pour les types fondamentaux dans .NET. Cet espace de noms comprend les classes qui représentent les types de données de base utilisés par toutes les applications : <xref:System.Object> (racine de la hiérarchie d'héritage), <xref:System.Byte>, <xref:System.Char>, <xref:System.Array>, <xref:System.Int32>, <xref:System.String>, et ainsi de suite. Nombre de ces types correspondent aux types de données primitifs que votre langage de programmation utilise. Lorsque vous écrivez du code à l'aide des types .NET Framework, vous pouvez utiliser le mot clé correspondant de votre langage lorsqu'un type de données de base .NET Framework est prévu.  
   
  Le tableau suivant énumère les types de base fournis par .NET, décrit brièvement chaque type et indique le type correspondant en Visual Basic, C#, C++ et F#.  

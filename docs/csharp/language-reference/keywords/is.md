@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289215"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207916"
 ---
 # <a name="is-c-reference"></a>is (référence C#) #
 
@@ -75,7 +75,7 @@ Lorsque vous utilisez le modèle de type pour rechercher des critères spéciaux
 
 où *expr* est une expression qui correspond à une instance d’un type, où *type* est le nom du type dans lequel le résultat de *expr* doit être converti, et où *varname* est l’objet dans lequel le résultat de *expr* est converti si le test `is` a la valeur `true`. 
 
-L’expression `is` est `true` si l’une des affirmations suivantes est vraie :
+L’expression `is` est `true` si *expr* n’est pas `null` et que l’un des énoncés suivants est vrai :
 
 - *expr* est une instance du même type que *type*.
 
@@ -85,7 +85,7 @@ L’expression `is` est `true` si l’une des affirmations suivantes est vraie 
 
 - *expr* est une instance d’un type qui implémente l’interface *type*.
 
-Si *exp* est `true` et si `is` est utilisé avec une instruction `if`, *varname* est assigné et sa portée locale se limite à l’instruction `if`.
+Si *exp* est `true` et que `is` est utilisé avec une instruction `if`, *varname* est assigné et sa portée locale se limite à l’instruction `if`.
 
 L’exemple suivant utilise le modèle de type `is` pour fournir l’implémentation de la méthode <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> d’un type.
 

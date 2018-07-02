@@ -3,12 +3,12 @@ title: Génération d’arborescences d’expressions
 description: En savoir plus sur les techniques de génération d’arborescences d’expressions.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216312"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207187"
 ---
 # <a name="building-expression-trees"></a>Génération d’arborescences d’expressions
 
@@ -43,10 +43,10 @@ var addition = Expression.Add(one, two);
 Après cela, nous pouvons créer l’expression lambda :
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
-Cette LambdaExpression est très simple, car elle ne contient aucun argument.
+Cette expression lambda est très simple, car elle ne contient aucun argument.
 Plus loin dans cette section, nous verrons comment mapper des arguments à des paramètres, et comment générer des expressions plus complexes.
 
 Pour les expressions qui sont aussi simples que celle-ci, nous pouvons combiner tous les appels en une seule instruction :
