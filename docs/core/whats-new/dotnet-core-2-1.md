@@ -1,0 +1,238 @@
+---
+title: Nouveautés de .NET Core 2.1
+description: Découvrez les nouvelles fonctionnalités de .NET Core 2.1.
+author: rpetrusha
+ms.author: ronpet
+ms.date: 06/06/2018
+ms.openlocfilehash: 241ac0195e5edcd17ac67ea7ea0fac159af97414
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826930"
+---
+# <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
+
+.NET Core 2.1 inclut les nouvelles fonctionnalités et améliorations dans les domaines suivants :
+
+- [Outillage](#tooling)
+- [Restauration par progression](#roll-forward)
+- [Déploiement](#deployment)
+- [Pack de compatibilité Windows](#windows-compatibility-pack)
+- [Améliorations de la compilation JIT](#jit-compiler-improvements)
+- [Modifications d'API](#api-changes)
+
+## <a name="tooling"></a>Outillage
+
+Le Kit SDK.NET Core 2.1 (2.1.300), les outils inclus avec .NET Core 2.1, intègrent les modifications et améliorations suivantes :
+
+### <a name="build-performance-improvements"></a>Amélioration des performances des builds
+
+Un objectif majeur de .NET Core 2.1 est l’amélioration des performances des builds, en particulier pour les builds incrémentielles. Ces améliorations des performances s’appliquent aux builds en ligne de commande à l’aide de `dotnet build` et aux builds dans Visual Studio. Certaines zones individuelles d’amélioration incluent :
+
+- Pour la résolution de ressources de package, résolution uniquement des ressources utilisées par une build plutôt que de toutes les ressources.
+
+- Mise en cache des références d’assembly.
+
+- Utilisation de serveurs de build SDK de longue durée, représentant des processus qui couvrent des appels `dotnet build` individuels. Ils suppriment la nécessité de la compilation JIT de grands blocs de code à chaque exécution de `dotnet build`. Les processus d’un serveur de build peuvent être automatiquement terminés avec la commande suivante :
+
+   ```console
+   dotnet buildserver shutdown
+   ```
+
+### <a name="new-cli-commands"></a>Nouvelles commandes CLI
+
+Un certain nombre d’outils qui étaient disponibles uniquement par projet à l’aide de [`DotnetCliToolReference`](../tools/extensibility.md) sont désormais disponibles dans le cadre du Kit de développement .NET Core. Ces outils incluent :
+
+- `dotnet watch` fournit un observateur de système de fichiers qui attend la modification d’un fichier avant d’exécuter un ensemble désigné de commandes. Par exemple, la commande suivante reconstruit automatiquement le projet actuel et génère une sortie détaillée à chaque modification d’un fichier :
+
+   ```console
+   dotnet watch -- --verbose build
+   ```
+  
+   Remarquez l’option `--` qui précède l’option `--verbose`. Elle délimite les options passées directement à la commande `dotnet watch` à partir des arguments passés au processus enfant `dotnet`. Sans elle, l’option `--verbose` s’applique à la commande `dotnet watch`, et non à la commande `dotnet build`.
+  
+   Pour plus d’informations, consultez [Développer des applications ASP.NET Core à l’aide de dotnet watch](/aspnet/core/tutorials/dotnet-watch)
+
+- `dotnet dev-certs` génère et gère les certificats utilisés pendant le développement dans les applications ASP.NET Core.
+
+- `dotnet user-secrets` gère les secrets d’un magasin de secrets d’un utilisateur dans les applications ASP.NET Core.
+
+- `dotnet sql-cache` crée un tableau et des index dans une base de données Microsoft SQL Server à utiliser pour la mise en cache distribuée.
+
+- `dotnet ef` est un outil de gestion des bases de données, des objets <xref:Microsoft.EntityFrameworkCore.DbContext> et des migrations dans les applications Entity Framework Core. Pour plus d’informations, consultez [Outils en ligne de commande EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
+
+### <a name="global-tools"></a>Outils globaux
+
+.NET Core 2.1 prend en charge les *outils globaux*, autrement dit des outils personnalisés disponibles globalement à partir de la ligne de commande. Le modèle d’extensibilité des versions précédentes de .NET Core proposant des outils personnalisés par projet uniquement à l’aide de [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
+
+Pour installer un outil global, vous utilisez la commande [dotnet tool install](..\tools\dotnet-tool-install.md). Exemple :
+
+```console
+dotnet tool install -g dotnetsay
+```
+
+Une fois installé, l’outil peut être exécuté à partir de la ligne de commande en spécifiant le nom de l’outil. Pour plus d’informations, consultez [Vue d’ensemble des outils globaux .NET Core](../tools/global-tools.md).
+
+### <a name="tool-management-with-the-dotnet-tool-command"></a>Gestion des outils avec la commande `dotnet tool`
+
+Dans .NET Core SDK 2.1 (2.1.300), toutes les opérations avec les outils utilisent la commande `dotnet tool`. Les options ci-dessous sont disponibles :
+
+- [`dotnet tool install`](../tools/dotnet-tool-install.md) pour installer un outil.
+
+- [`dotnet tool update`](../tools/dotnet-tool-update.md) pour désinstaller et réinstaller un outil (et donc le mettre à jour).
+
+- [`dotnet tool list`](../tools/dotnet-tool-list.md) pour répertorier les outils actuellement installés.
+
+- [`dotnet tool uninstall`](../tools/dotnet-tool-uninstall.md) pour désinstaller des outils actuellement installés.
+
+## <a name="roll-forward"></a>Restauration par progression
+
+Toutes les applications .NET Core depuis .NET Core 2.0 peuvent être restaurées par progression vers la dernière *version mineure* installée sur un système. 
+
+À compter de .NET Core 2.0, si la version de .NET Core avec laquelle une application a été créée n’est pas présente lors de l’exécution, l’application s’exécute automatiquement avec la dernière *version mineure* installée de .NET Core. En d’autres termes, si une application est générée avec .NET Core 2.0 et que .NET Core 2.0 n’est pas présent sur le système hôte, mais que .NET Core 2.1 l’est, l’application s’exécute avec .NET Core 2.1.
+
+> [!IMPORTANT]
+> Ce comportement de restauration par progression ne s’applique pas aux préversions, ni aux versions majeures. Par exemple, une application .NET Core 1.0 ne peut pas être restaurée par progression vers .NET Core 2.0 ou .NET Core 2.1.
+
+Vous pouvez également désactiver la restauration par progression d’une version mineure de trois manières :
+
+- Définissez la variable d’environnement `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` sur 0.
+
+- Ajoutez la ligne suivante au fichier runtimeconfig.json :
+
+   ```json
+   "rollForwardOnNoCandidateFx" : 0
+   ```
+
+- Lorsque vous utilisez les [outils CLI .NET Core](../tools/index.md), incluez l’option suivante dans une commande .NET Core telle que `run` :
+
+   ```console
+   dotnet run --rollForwardOnNoCandidateFx=0
+   ```
+
+## <a name="deployment"></a>Déploiement
+
+### <a name="self-contained-application-servicing"></a>Maintenance d’une application autonome
+
+`dotnet publish` publie désormais des applications autonomes avec une version de runtime révisée. Lorsque vous publiez une application autonome avec le Kit de développement .NET Core 2.1 (2.1.300), votre application inclut la dernière version du runtime révisée et identifiée par ce SDK. Lorsque vous effectuez une mise à niveau avec la dernière version du SDK, vous publiez la dernière version du runtime .NET Core. Cela s’applique aux runtimes .NET Core 1.0 et versions ultérieures.
+
+La publication autonome s’appuie sur les versions de runtime de NuGet.org. Vous n’avez pas besoin du runtime révisé sur votre ordinateur.
+
+À l’aide du Kit de développement logiciel .NET Core 2.0, les applications autonomes sont publiées avec le runtime .NET Core 2.0.0, sauf si une version différente est spécifiée via la propriété `RuntimeFrameworkVersion`. Avec ce nouveau comportement, vous n’aurez plus besoin de définir cette propriété afin de sélectionner une version de runtime ultérieure pour une application autonome. Dorénavant, l’approche la plus simple consiste à toujours publier avec le Kit de développement .NET Core 2.1 (2.1.300).
+
+## <a name="windows-compatibility-pack"></a>Pack de compatibilité Windows
+
+Lorsque vous portez du code existant de .NET Framework vers .NET Core, vous pouvez utiliser le [pack de compatibilité Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Il permet d’accéder aux plus de 20 000 API disponibles dans .NET Core. Ces API incluent les types dans l’espace de noms <xref:System.Drawing?displayProperty="nameWithType">, la classe <xref:System.Diagnostics.EventLog>, WMI, les compteurs de performances, les services Windows, ainsi que les types et membres de registre Windows.
+
+## <a name="jit-compiler-improvements"></a>Améliorations du compilateur JIT
+
+.NET Core intègre une nouvelle technologie de compilateur JIT appelée *compilation à plusieurs niveaux* (ou également *optimisation adaptative*), qui peut améliorer considérablement les performances. La compilation à plusieurs niveaux n’est pas activée par défaut.
+
+Une des tâches importantes effectuées par le compilateur JIT est l’optimisation de l’exécution du code. Toutefois, pour les chemins de code peu utilisés, le compilateur peut passer plus de temps à optimiser le code que le runtime passe à exécuter du code non optimisé. La compilation à plusieurs niveaux ajoute deux étapes à la compilation JIT :
+
+- Un **premier niveau**, qui génère du code aussi rapidement que possible.
+
+- Un **second niveau**, qui génère un code optimisé pour les méthodes fréquemment exécutées. Le second niveau de compilation est effectué en parallèle pour améliorer les performances.
+
+Vous pouvez activer la compilation à plusieurs niveaux de deux manières.
+
+- Pour utiliser la compilation à plusieurs niveaux dans tous les projets qui utilisent le Kit de développement .NET Core 2.1, définissez la variable d’environnement suivante :
+
+  ```console
+  COMPlus_TieredCompilation="1"
+  ```
+
+- Pour utiliser la compilation à plusieurs niveaux par projet, ajoutez la propriété `<TieredCompilation>` à la section `<PropertyGroup>` du fichier projet MSBuild, comme le montre l’exemple suivant :
+
+   ```xml
+   <PropertyGroup>
+      <!-- other property definitions -->
+
+      <TieredCompilation>true</TieredCompilation>
+   </PropertyGroup>
+   ```
+
+## <a name="api-changes"></a>Modifications d'API
+
+### <a name="spant-and-memoryt"></a>`Span<T>` et `Memory<T>`
+
+.NET Core 2.1 inclut certains nouveaux types qui facilitent l’utilisation de tableaux et d’autres types de mémoire beaucoup plus efficaces. Ces nouveaux types incluent :
+
+- Voir <xref:System.Span%601?displayProperty=nameWithType> et <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>.
+
+- Voir <xref:System.Memory%601?displayProperty=nameWithType> et <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>.
+
+Sans ces types, lorsque vous passez des éléments de ce type comme une partie d’un tableau ou d’une section d’une mémoire tampon, vous devez créer une copie d’une partie des données avant de les passer à une méthode. Ces types fournissent une représentation virtuelle des données, qui supprime les opérations supplémentaires d’allocation de mémoire et de copie.
+
+L’exemple suivant utilise une instance <xref:System.Span%601> pour fournir une représentation virtuelle de 10 éléments d’un tableau.
+
+[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+### <a name="brotli-compression"></a>Compression de Brotli
+
+.NET Core 2.1 prend en charge la compression et la décompression de Brotli. Brotli est un algorithme de compression sans perte à usage général, défini dans [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt), et pris en charge par la plupart des navigateurs web et les principaux serveurs web. Vous pouvez utiliser une classe <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> basée sur les flux ou des classes hautes performances <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> et <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> basées sur la portée. L'exemple suivant montre une compression avec la classe <xref:System.IO.Compression.BrotliStream> :
+
+[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+Le comportement de <xref:System.IO.Compression.BrotliStream> est identique à <xref:System.IO.Compression.DeflateStream> et <xref:System.IO.Compression.GZipStream>, ce qui facilite la convertir du code qui appelle ces API pour <xref:System.IO.Compression.BrotliStream>.
+
+### <a name="new-cryptography-apis-and-cryptography-improvements"></a>Nouvelles API de chiffrement et améliorations du chiffrement
+
+.NET Core 2.1 inclut de nombreuses améliorations des API de chiffrement :
+
+- <xref:System.Security.Cryptography.Pkcs.SignedCms?displayProperty=nameWithType> est disponible dans le package System.Security.Cryptography.Pkcs. L’implémentation est identique à la classe <xref:System.Security.Cryptography.Pkcs.SignedCms> du .NET Framework.
+
+- De nouvelles surcharges des méthodes <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHash%2A?displayProperty=nameWithType> et <xref:System.Security.Cryptography.X509Certificates.X509Certificate.GetCertHashString%2A?displayProperty=nameWithType> acceptent un identificateur d’algorithme de hachage permettant aux appelants d’obtenir les valeurs d’empreinte numérique de certificat à l’aide d’algorithmes autres que SHA-1.
+
+- De nouvelles API de chiffrement basées sur <xref:System.Span%601> sont disponibles pour le hachage, HMAC, la génération de codes de chiffrement aléatoires, la génération de signatures asymétriques, le traitement de signatures asymétriques et le chiffrement RSA.
+
+- Les performances de <xref:System.Security.Cryptography.Rfc2898DeriveBytes?displayProperty=nameWithType> ont été améliorées d’environ 15 % grâce à une implémentation <xref:System.Span%601>.
+
+- La nouvelle classe <xref:System.Security.Cryptography.CryptographicOperations?displayProperty=nameWithType> inclut deux nouvelles méthodes :
+
+  - <xref:System.Security.Cryptography.CryptographicOperations.FixedTimeEquals%2A> prend une quantité fixe de temps pour renvoyer deux entrées de même longueur, ce qui permet de l’utiliser dans une vérification du chiffrement afin d’éviter la temporisation des informations sur le canal auxiliaire.
+
+  - <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> est une routine de nettoyage de la mémoire qui ne peut pas être optimisée.
+
+- La méthode statique <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> remplit <xref:System.Span%601> de valeurs aléatoires.
+
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> est maintenant pris en charge sous Linux et macOS.
+
+- Diffie-Hellman à courbe elliptique (ECDH) est désormais disponible dans la famille de classe <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType>. La surface d’exposition est la même que dans le .NET Framework.
+
+- L’instance retournée par <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType> peut chiffrer ou déchiffrer avec OAEP à l’aide d’un condensat SHA-2, et permet de générer ou de valider des signatures à l’aide de RSA-PSS.
+
+### <a name="sockets-improvements"></a>Améliorations des sockets
+
+.NET Core inclut un nouveau type, <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>, et une <xref:System.Net.Http.HttpMessageHandler?displayProperty=nameWithType> réécrite, qui constituent la base des API de mise en réseau de niveau supérieur.  <xref:System.Net.Http.SocketsHttpHandler?displayProperty=nameWithType>, par exemple, est la base de l’implémentation <xref:System.Net.Http.HttpClient>. Dans les versions précédentes de .NET Core, les API de niveau supérieur étaient basées sur des implémentations de mise en réseau natives.
+
+L’implémentation de sockets introduite dans .NET Core 2.1 présente plusieurs avantages :
+
+- Une amélioration significative des performances par rapport à l’implémentation précédente.
+
+- La suppression des dépendances de plateforme, qui simplifie le déploiement et la maintenance.
+
+- Comportement cohérent sur toutes les plates-formes .NET Core.
+
+<xref:System.Net.Http.SocketsHttpHandler> est l’implémentation par défaut dans .NET Core 2.1. Toutefois, vous pouvez configurer votre application pour utiliser l’ancienne classe <xref:System.Net.Http.HttpClientHandler> en appelant la méthode <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType"> :
+
+```csharp
+AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", false);
+```
+
+```vb
+AppContext.SetSwitch("System.Net.Http.useSocketsHttpHandler", False)
+```
+
+Vous pouvez également utiliser une variable d’environnement pour désactiver l’utilisation des implémentations de sockets basées sur <xref:System.Net.Http.SocketsHttpHandler>. Pour cela, définissez `DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER` sur `false` ou 0.
+
+Sous Windows, vous pouvez également choisir d’utiliser <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType>, repose sur une implémentation native, ou la classe <xref:System.Net.Http.SocketsHttpHandler> en passant une instance de la classe au constructeur <xref:System.Net.Http.HttpClient>.
+
+Sous Linux et macOS, vous pouvez uniquement configurer <xref:System.Net.Http.HttpClient> par processus. Sous Linux, vous devez déployer [libcurl](https://curl.haxx.se/libcurl/) si vous souhaitez utiliser l’ancienne implémentation <xref:System.Net.Http.HttpClient>. (Il est installé avec .NET Core 2.0.)
+
+## <a name="see-also"></a>Voir aussi
+
+[Nouveautés de .NET Core](index.md)  
+[Nouvelles fonctionnalités d’EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
+[Nouveautés d’ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)

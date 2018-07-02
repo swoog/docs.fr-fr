@@ -3,11 +3,12 @@ title: Modèle d’événement .NET Core mis à jour
 description: Découvrez toute la souplesse apportée par le modèle d’événement .NET Core et la compatibilité descendante et apprenez à implémenter un traitement sécurisé des événements grâce aux abonnés asynchrones.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827178"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Modèle d’événement .NET Core mis à jour
 
@@ -22,22 +23,7 @@ Le programme fonctionnera exactement de la même façon.
 
 Vous pouvez également changer les `SearchDirectoryArgs` en un struct si vous faites une modification de plus :
 
-```csharp  
-internal struct SearchDirectoryArgs  
-{  
-    internal string CurrentSearchDirectory { get; }  
-    internal int TotalDirs { get; }  
-    internal int CompletedDirs { get; }  
-    
-    internal SearchDirectoryArgs(string dir, int totalDirs, 
-        int completedDirs) : this()  
-    {  
-        CurrentSearchDirectory = dir;  
-        TotalDirs = totalDirs;  
-        CompletedDirs = completedDirs;  
-    }  
-}  
-```   
+[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
 La modification supplémentaire consiste à appeler le constructeur par défaut avant d’entrer dans le constructeur qui initialise tous les champs. Sans cet ajout, les règles de C# signalent que les propriétés sont accessibles avant qu’une valeur leur soit affectée.
 

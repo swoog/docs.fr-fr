@@ -5,11 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d454621f82e499960af4af16b17ac68f3cb5f70f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805618"
 ---
 # <a name="local-functions-c-programming-guide"></a>Fonctions locales (Guide de programmation C#)
 
@@ -73,7 +74,7 @@ L’exemple suivant utilise une méthode asynchrone nommée `GetMultipleAsync` v
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
-Comme nous l’avons fait avec l’itérateur de méthode, nous pouvons refactoriser le code de cet exemple pour assurer la validation avant l’appel de la méthode asynchrone. Comme le montre la sortie de l’exemple suivant, l’exception <xref:System.ArgumentOutOfRangeException> n’est pas encapsulée dans une exception <x:System.AggregateException>.
+Comme nous l’avons fait avec l’itérateur de méthode, nous pouvons refactoriser le code de cet exemple pour assurer la validation avant l’appel de la méthode asynchrone. Comme le montre la sortie de l’exemple suivant, l’exception <xref:System.ArgumentOutOfRangeException> n’est pas encapsulée dans une exception <xref:System.AggregateException>.
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 

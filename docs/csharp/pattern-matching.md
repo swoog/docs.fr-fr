@@ -3,11 +3,12 @@ title: Critères spéciaux - Guide C#
 description: En savoir plus sur les expressions de critères spéciaux en langage C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0f95ac8b16939173e6cfd7304b9cbe52526b5169
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231474"
 ---
 # <a name="pattern-matching"></a>Critères spéciaux #
 
@@ -72,7 +73,7 @@ Ces restrictions ayant été supprimées, vous pouvez maintenant écrire une ins
 L’instruction de critères spéciaux `switch` utilise une syntaxe qui est familière aux développeurs ayant utilisé l’instruction `switch` de style C standard. Chaque instruction `case` est évaluée, et le code en-dessous de la condition qui correspond à la variable d’entrée est exécuté. L’exécution du code ne continue pas d’une expression case à la suivante, car la syntaxe de l’instruction `case` nécessite que chaque `case` se termine par un `break`, `return` ou `goto`.
 
 > [!NOTE]
-> Les instructions `goto` pour accéder à une autre étiquette sont valides uniquement pour le modèle de constante, l’instruction switch standard.
+> Les instructions `goto` pour accéder à une autre étiquette sont valides uniquement pour le modèle de constante (l’instruction switch standard).
 
 Il y a de nouvelles règles importantes qui régissent l’instruction `switch`. Les restrictions sur le type de la variable dans l’expression `switch` ont été supprimées.
 Vous pouvez maintenant utiliser tous les types, comme le type `object` dans cet exemple. Les expressions case ne sont plus limitées à des valeurs de constante. Avec la suppression de cette limitation, la réorganisation des sections `switch` peut changer le comportement d’un programme.

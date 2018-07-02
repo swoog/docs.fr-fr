@@ -4,11 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 6be8b52f42e3e37ff03e561af45c46f4dd283d9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805472"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Application des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
 
@@ -46,7 +47,7 @@ Il n’existe qu’une seule architecture des applications : l’architecture de
 -   **Greg Young. CQS vs. CQRS**
     [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. CQRS Documents**
+-   **Greg Young. Documents CQRS**
     [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
 -   **Greg Young. CQRS, Task Based UIs and Event Sourcing**

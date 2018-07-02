@@ -3,12 +3,13 @@ title: Quand choisir .NET Framework pour les conteneurs Docker
 description: Architecture de microservices .NET pour les applications .NET en conteneur | Quand choisir .NET Framework pour les conteneurs Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/07/2018
+ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251033"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Quand choisir .NET Framework pour les conteneurs Docker
 
@@ -22,15 +23,15 @@ Dans la plupart des cas, pour ce scénario, vous n’aurez pas besoin de migrer 
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Utilisation de bibliothèques .NET ou de packages NuGet tiers non disponibles pour .NET Core
 
-Les bibliothèques tierces adoptent rapidement [.NET Standard](../../net-standard.md), ce qui permet de partager du code entre toutes les versions de .NET, notamment .NET Core. Avec la bibliothèque .NET Standard version 2.0 et au-delà, la compatibilité de la surface d’API entre les différents frameworks s’est considérablement élargie et dans.NET Core 2.0, les applications peuvent aussi faire directement référence aux bibliothèques .NET Framework existantes (consultez [compat shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Les bibliothèques tierces adoptent rapidement [.NET Standard](../../net-standard.md), ce qui permet de partager du code entre toutes les versions de .NET, notamment .NET Core. Avec la bibliothèque .NET Standard version 2.0 et au-delà, la compatibilité de la surface d’API entre les différents frameworks s’est considérablement élargie et dans.NET Core 2.x, les applications peuvent aussi faire directement référence aux bibliothèques .NET Framework existantes (consultez [compat shim](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
 Cependant, malgré cette progression exceptionnelle depuis .NET Standard 2.0 et .NET Core 2.0, certains packages NuGet peuvent avoir besoin que Windows s’exécute et peuvent ne pas prendre en charge .NET Core. Si ces packages sont indispensables à votre application, vous devez utiliser le .NET Framework dans des conteneurs Windows.
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Utilisation de technologies .NET non disponibles pour .NET Core 
 
-Certaines technologies du .NET Framework ne sont pas disponibles dans la version actuelle de .NET Core (version 2.0 au moment de la rédaction de cet article). Certaines d’entre elles seront disponibles dans les prochaines versions de .NET Core (.NET Core 2.x), tandis que d’autres, qui ne s’appliquent pas aux nouveaux modèles d’application ciblés par .NET Core, risquent de ne jamais l’être.
+Certaines technologies du .NET Framework ne sont pas disponibles dans la version actuelle de .NET Core (version 2.1 au moment de la rédaction de cet article). Certaines d’entre elles seront disponibles dans les prochaines versions de .NET Core (.NET Core 2.x), tandis que d’autres, qui ne s’appliquent pas aux nouveaux modèles d’application ciblés par .NET Core, risquent de ne jamais l’être.
 
-La liste suivante recense la plupart des technologies qui ne sont pas disponibles dans .NET Core 2.0 :
+La liste suivante recense la plupart des technologies qui ne sont pas disponibles dans .NET Core 2.1 :
 
 -   Web Forms ASP.NET : cette technologie est disponible uniquement sur le .NET Framework. Il n’est pas prévu d’intégrer Web Forms ASP.NET à .NET Core.
 

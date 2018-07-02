@@ -1,24 +1,24 @@
 ---
-title: Gestion et levée des exceptions
-ms.date: 03/30/2017
+title: Gestion et levée d’exceptions dans .NET
+ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-- exceptions [.NET Framework], handling
+- exceptions [.NET], handling
 - runtime, exceptions
 - filtering exceptions
-- errors [.NET Framework], exceptions
-- exceptions [.NET Framework], throwing
-- exceptions [.NET Framework]
+- errors [.NET], exceptions
+- exceptions [.NET], throwing
+- exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b71ffd9bfcfcb048f148ac1a3a418c03b9834ea2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575451"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298342"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestion et levée d’exceptions dans .NET
 
@@ -36,38 +36,37 @@ Traditionnellement, le modèle de gestion des erreurs d'un langage reposait soit
 
 - La gestion et la levée des exceptions fonctionne de la même façon pour les langages de programmation .NET.
 
-- Ne requiert aucune syntaxe particulière pour la gestion des exceptions, mais laisse chaque langage définir sa propre syntaxe.
+- ne requiert aucune syntaxe particulière pour la gestion des exceptions, mais laisse chaque langage définir sa propre syntaxe.
 
 - Les exceptions peuvent être levées au-delà des limites des processus et même des ordinateurs.
 
 - Un code de gestion des exceptions peut être ajouté à une application pour augmenter la fiabilité du programme.
 
-Les exceptions offrent des avantages par rapport à d’autres méthodes de notification des erreurs, comme les codes de retour. Les erreurs ne passent pas inaperçues, car si une exception est levée et que vous ne la gérez pas, le runtime arrête votre application. Les valeurs non valides ne continuent pas à se propager dans le système parce que du code n’a pas pu vérifier un code de retour d’échec. 
+Les exceptions offrent des avantages par rapport à d’autres méthodes de notification des erreurs, comme les codes de retour. Les erreurs ne passent pas inaperçues, car si une exception est levée et que vous ne la gérez pas, le runtime arrête votre application. Les valeurs non valides ne continuent pas à se propager dans le système parce que du code n’a pas pu vérifier un code de retour d’échec.
 
 ## <a name="common-exceptions"></a>Exceptions courantes
 
 Le tableau suivant répertorie certaines exceptions courantes avec des exemples de cause possible.
 
-| Type d'exception | Type de base | Description | Exemple |
-| -------------- | --------- | ----------- | ------- |
-| <xref:System.Exception> | <xref:System.Object> | Classe de base pour toutes les exceptions. | Aucun (utilisez une classe dérivée de cette exception). |
-| <xref:System.IndexOutOfRangeException> | <xref:System.Exception> | Levée par le runtime uniquement en cas d’indexation incorrecte du tableau. | Indexation d’un tableau en dehors de sa plage valide : `arr[arr.Length+1]` |
-| <xref:System.NullReferenceException> | <xref:System.Exception> | Levée par le runtime uniquement si un objet Null est référencé. | `object o = null; o.ToString();` |
-| <xref:System.InvalidOperationException> | <xref:System.Exception> | Levée par les méthodes en cas d’état non valide. | Appel de `Enumerator.GetNext()` après la suppression d’un élément de la collection sous-jacente. |
-| <xref:System.ArgumentException> | <xref:System.Exception> | Classe de base pour toutes les exceptions d’argument. | Aucun (utilisez une classe dérivée de cette exception). |
-| <xref:System.ArgumentNullException> | <xref:System.Exception> | Levée par les méthodes qui n’acceptent pas la valeur Null pour un argument. | `String s = null; "Calculate".IndexOf (s);` |
-| <xref:System.ArgumentOutOfRangeException> | <xref:System.Exception> | Levée par les méthodes qui vérifient que les arguments sont inclus dans une plage donnée. | `String s = "string"; s.Substring(s.Length+1);` |
+| Type d'exception | Description | Exemple |
+| -------------- | ----------- | ------- |
+| <xref:System.Exception> | Classe de base pour toutes les exceptions. | Aucun (utilisez une classe dérivée de cette exception). |
+| <xref:System.IndexOutOfRangeException> | Levée par le runtime uniquement en cas d’indexation incorrecte du tableau. | Indexation d’un tableau en dehors de sa plage valide : <br /> `arr[arr.Length+1]` |
+| <xref:System.NullReferenceException> | Levée par le runtime uniquement si un objet Null est référencé. | `object o = null;` <br /> `o.ToString();` |
+| <xref:System.InvalidOperationException> | Levée par les méthodes en cas d’état non valide. | Appel de `Enumerator.MoveNext()` après la suppression d’un élément de la collection sous-jacente. |
+| <xref:System.ArgumentException> | Classe de base pour toutes les exceptions d’argument. | Aucun (utilisez une classe dérivée de cette exception). |
+| <xref:System.ArgumentNullException> | Levée par les méthodes qui n’acceptent pas la valeur Null pour un argument. | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
+| <xref:System.ArgumentOutOfRangeException> | Levée par les méthodes qui vérifient que les arguments sont inclus dans une plage donnée. | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Classe et propriétés d’exception](exception-class-and-properties.md)
-* [Guide pratique pour utiliser le bloc try/catch pour intercepter des exceptions](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [Guide pratique : utiliser des exceptions spécifiques dans un bloc Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [Guide pratique pour lever explicitement des exceptions](how-to-explicitly-throw-exceptions.md)
-* [Guide pratique : créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md)
-* [Utilisation de gestionnaires filtrés par l'utilisateur](using-user-filtered-exception-handlers.md)
-* [Guide pratique pour utiliser des blocs Finally](how-to-use-finally-blocks.md)
-* [Gestion des exceptions COM Interop](handling-com-interop-exceptions.md)
-* [Meilleures pratiques pour les exceptions](best-practices-for-exceptions.md)
-
-Pour en savoir plus sur le fonctionnement des exceptions dans .NET, consultez [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tout ce que doit savoir un développeur sur les exceptions dans le runtime).
+[Classe et propriétés d’exception](exception-class-and-properties.md)  
+[Guide pratique pour utiliser le bloc try/catch pour intercepter des exceptions](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+[Guide pratique : utiliser des exceptions spécifiques dans un bloc Catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
+[Guide pratique pour lever explicitement des exceptions](how-to-explicitly-throw-exceptions.md)  
+[Guide pratique : créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md)  
+[Utilisation de gestionnaires filtrés par l'utilisateur](using-user-filtered-exception-handlers.md)  
+[Guide pratique pour utiliser des blocs Finally](how-to-use-finally-blocks.md)  
+[Gestion des exceptions COM Interop](handling-com-interop-exceptions.md)  
+[Meilleures pratiques pour les exceptions](best-practices-for-exceptions.md)  
+[What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tout ce que doit savoir un développeur sur les exceptions dans le runtime).

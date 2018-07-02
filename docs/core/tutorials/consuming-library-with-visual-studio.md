@@ -1,21 +1,22 @@
 ---
-title: Utilisation d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017
+title: Utilisation d’une bibliothèque .NET Standard dans Visual Studio 2017
 description: Découvrez comment appeler les membres dans une bibliothèque de classes avec Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 08/07/2017
+ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 0a7002f2a5dba5a5aad32a83a43a933cd2cc5722
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e71001ee8595741119293304190fd9ef4251148
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827311"
 ---
-# <a name="consuming-a-class-library-with-net-core-in-visual-studio-2017"></a>Utilisation d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017
+# <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Utilisation d’une bibliothèque .NET Standard dans Visual Studio 2017
 
-Une fois que vous avez créé une bibliothèque de classes en suivant les étapes de [Création d’une bibliothèque de classes C# avec .NET Core dans Visual Studio 2017](./library-with-visual-studio.md) ou [Création d’une bibliothèque de classes Visual Basic avec .NET Core dans Visual Studio 2017](vb-library-with-visual-studio.md), que vous l’avez testée en suivant les instructions dans [Test d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017](testing-library-with-visual-studio.md) et que vous avez créé une version Release de la bibliothèque, l’étape suivante consiste à la rendre accessible aux appelants. Pour cela, deux solutions s'offrent à vous :
+Une fois que vous avez créé une bibliothèque de classes .NET Standard en suivant les étapes de [Création d’une bibliothèque de classes C# avec .NET Core dans Visual Studio 2017](./library-with-visual-studio.md) ou [Création d’une bibliothèque de classes Visual Basic avec .NET Core dans Visual Studio 2017](vb-library-with-visual-studio.md), que vous l’avez testée en suivant les instructions dans [Test d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017](testing-library-with-visual-studio.md) et que vous avez créé une version Release de la bibliothèque, l’étape suivante consiste à la rendre accessible aux appelants. Pour cela, deux solutions s'offrent à vous :
 
 * Si la bibliothèque doit être utilisée par une seule solution (par exemple s’il s’agit d’un composant dans une seule application de grande taille), vous pouvez l’inclure en tant que projet dans votre solution.
 
@@ -48,7 +49,7 @@ Tout comme vous avez inclus des tests unitaires dans la même solution que votre
 
    [!CODE-csharp[UsingClassLib#1](../../../samples/snippets/csharp/getting_started/with_visual_studio_2017/showcase.cs)]
 
-   Le code utilise la propriété [Console.WindowHeight](xref:System.Console.WindowHeight) pour déterminer le nombre de lignes de la fenêtre de console. Quand la propriété [Console.CursorTop](xref:System.Console.CursorTop) est supérieure ou égale au nombre total de lignes dans la fenêtre de console, le code efface la fenêtre de console et affiche un message à l’utilisateur.
+   Le code utilise la variable `row` pour comptabiliser le nombre de lignes de données écrites dans la fenêtre de console. Chaque fois que ce nombre est supérieur ou égal à 25, le code efface la fenêtre de console et envoie un message à l’utilisateur.
 
    Le programme invite l’utilisateur à entrer une chaîne. Il indique si la chaîne commence par une majuscule. Si l’utilisateur appuie sur la touche Entrée sans entrer une chaîne, l’application se termine et la fenêtre de console se ferme.
 
@@ -78,7 +79,7 @@ Tout comme vous avez inclus des tests unitaires dans la même solution que votre
 
     [!CODE-vb[UsingClassLib#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/showcase.vb)]
 
-   Le code utilise la propriété [Console.WindowHeight](xref:System.Console.WindowHeight) pour déterminer le nombre de lignes de la fenêtre de console. Quand la propriété [Console.CursorTop](xref:System.Console.CursorTop) est supérieure ou égale au nombre total de lignes dans la fenêtre de console, le code efface la fenêtre de console et affiche un message à l’utilisateur.
+   Le code utilise la variable `row` pour comptabiliser le nombre de lignes de données écrites dans la fenêtre de console. Chaque fois que ce nombre est supérieur ou égal à 25, le code efface la fenêtre de console et envoie un message à l’utilisateur.
 
    Le programme invite l’utilisateur à entrer une chaîne. Il indique si la chaîne commence par une majuscule. Si l’utilisateur appuie sur la touche Entrée sans entrer une chaîne, l’application se termine et la fenêtre de console se ferme.
 

@@ -2,11 +2,12 @@
 title: Sécurisation des applications ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 5e4363ada4ebdb94801378bc61139f68085b462d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728600"
 ---
 # <a name="securing-adonet-applications"></a>Sécurisation des applications ADO.NET
 L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter les pièges de codage courants, tels que la non validation des entrées d'utilisateur. Une application qui accède à des données présente de nombreux points de défaillance possibles qu'un agresseur peut exploiter pour extraire, manipuler ou détruire des données sensibles. Il est donc important de comprendre tous les aspects de la sécurité, depuis le processus de modélisation de menace durant la phase de conception de votre application, jusqu'à son déploiement éventuel et sa maintenance en cours.  
@@ -39,12 +40,12 @@ L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter le
  Décrit la sécurité des applications reposant sur Entity Framework.  
   
  [Sécurité](../../../../docs/standard/security/index.md)  
- Contient des liens vers des rubriques qui décrivent tous les aspects de la sécurité dans le .NET Framework.  
+ Contient des liens vers des rubriques qui décrivent tous les aspects de la sécurité dans .NET.  
   
  [Outils de sécurité](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Outils .NET Framework pour la sécurisation et l'administration de la stratégie de sécurité.  
   
- [Ressources pour la création d’Applications sécurisées](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Ressources de création des applications sécurisées](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Fournit des liens vers des rubriques pour la création d'applications sécurisées.  
   
  [Bibliographie relative à la sécurité](/visualstudio/ide/security-bibliography)  

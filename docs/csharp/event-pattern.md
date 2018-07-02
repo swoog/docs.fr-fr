@@ -3,11 +3,12 @@ title: Modèles d’événement .NET standard
 description: En savoir plus sur les modèles d’événement .NET et comment créer des sources d’événements standard, vous abonner à des événements standard dans votre code et traiter ces événements.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 633a90062f2d068cfa050c0aa151885608cc4172
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bd9f71726647966dd1e4426b260484decb048c6
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827246"
 ---
 # <a name="standard-net-event-patterns"></a>Modèles d’événement .NET standard
 
@@ -38,17 +39,7 @@ L’utilisation d’un modèle d’événement offre certains avantages en mati�
 
 Voici la déclaration d’argument d’événement initiale pour trouver un fichier recherché : 
 
-```csharp
-public class FileFoundArgs : EventArgs
-{
-    public string FoundFile { get; }
-
-    public FileFoundArgs(string fileName)
-    {
-        FoundFile = fileName;
-    }
-}
-```
+[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgsV1 "Define event arguments")]
 
 Bien que ce type ressemble à un petit type « données uniquement », vous devez suivre la convention et faire de lui un type référence (`class`). Cela signifie que l’objet d’argument sera passé par référence, et que les mises à jour des données seront visibles par tous les abonnés. La première version est un objet immuable. Il vaut mieux rendre immuables les propriétés dans votre argument d’événement. Ainsi, un abonné ne peut pas changer les valeurs avant qu’un autre abonné ne les voit. (Il existe des exceptions, comme vous le verrez ci-dessous.)  
 
@@ -56,42 +47,21 @@ Ensuite, nous devons créer la déclaration d’événement dans la classe FileS
 
 Nous allons remplir la classe FileSearcher pour rechercher les fichiers qui correspondent à un modèle et déclencher l’événement approprié quand une correspondance est détectée.
 
-```csharp
-public class FileSearcher
-{
-    public event EventHandler<FileFoundArgs> FileFound;
-
-    public void Search(string directory, string searchPattern)
-    {
-        foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
-        {
-            FileFound?.Invoke(this, new FileFoundArgs(file));
-        }
-    }
-}
-```
+[!code-csharp[FileSearxcher](../../samples/csharp/events/Program.cs#FileSearcherV1 "Create the initial file searcher")]
 
 ## <a name="definining-and-raising-field-like-events"></a>Définition et déclenchement d’événements de type champ
 
-Pour ajouter un événement à votre classe, le plus simple consiste à déclarer cet événement en tant que champ public, comme dans l’exemple ci-dessous :
+Pour ajouter un événement à votre classe, le plus simple consiste à déclarer cet événement en tant que champ public, comme dans l’exemple précédent :
 
-```csharp
-public event EventHandler<FileFoundArgs> FileFound;
-```
+[!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
 Ce code semble déclarer un champ public, ce qui semble être une mauvaise pratique orientée objet. Vous devez protéger l’accès aux données par l’intermédiaire des propriétés ou méthodes. Bien que cela semble être une mauvaise pratique, le code généré par le compilateur crée en fait des wrappers pour que les objets d’événements soient accessibles uniquement de manière sécurisée. Les seules opérations disponibles sur un événement de type champ sont l’ajout de gestionnaire :
 
-```csharp
-EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
-    Console.WriteLine(eventArgs.FoundFile);
-lister.FileFound += onFileFound;
-```
+[!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 
 et la suppression de gestionnaire :
 
-```csharp
-lister.FileFound -= onFileFound;
-```
+[!code-csharp[RemoveEventHandler](../../samples/csharp/events/Program.cs#RemoveHandler "Remove the event handler")]
 
 Notez qu’il existe une variable locale pour le gestionnaire. Si vous utilisiez le corps de l’expression lambda, la suppression ne fonctionnerait pas correctement. Il s’agirait d’une autre instance du délégué, et l’opération ne ferait rien en mode silencieux.
 
@@ -113,22 +83,11 @@ Pour ce modèle, le nouveau champ est initialisé avec la valeur `false`. Tout a
 Le deuxième modèle annule l’opération uniquement si tous les abonnés souhaitent l’annuler. Dans ce modèle, le nouveau champ est initialisé pour indiquer que l’opération doit être annulée, et n’importe quel abonné peut le changer pour indiquer que l’opération doit continuer.
 Une fois que tous les abonnés ont vu l’événement déclenché, le composant FileSearcher examine la valeur booléenne et effectue une action. Il existe une étape supplémentaire dans ce modèle : le composant doit savoir si des abonnés ont vu l’événement. S’il n’y a pas d’abonnés, le champ indique incorrectement une annulation.
 
-Implémentons la première version pour cet exemple. Nous devons ajouter un champ booléen au type FileFoundEventArgs :
+Implémentons la première version pour cet exemple. Vous devez ajouter un champ booléen nommé `CancelRequested` au type `FileFoundArgs` :
 
-```csharp
-public class FileFoundArgs : EventArgs
-{
-    public string FoundFile { get; }
-    public bool CancelRequested { get; set; }
+[!code-csharp[EventArgs](../../samples/csharp/events/Program.cs#EventArgs "Update event arguments")]
 
-    public FileFoundArgs(string fileName)
-    {
-        FoundFile = fileName;
-    }
-}
-```
-
-Ce nouveau champ doit être initialisé avec la valeur false, afin de ne pas être annulé sans raison. Comme il s’agit de la valeur par défaut pour un champ booléen, cela se produit automatiquement. Le seul autre changement à apporter au composant consiste à vérifier l’indicateur après le déclenchement de l’événement, pour voir si l’un des abonnés a demandé une annulation :
+Ce nouveau champ est automatiquement initialisé avec `false`, la valeur par défaut pour un champ booléen, pour éviter tout risque d’annulation accidentelle. Le seul autre changement à apporter au composant consiste à vérifier l’indicateur après le déclenchement de l’événement, pour voir si l’un des abonnés a demandé une annulation :
 
 ```csharp
 public void List(string directory, string searchPattern)
@@ -164,88 +123,25 @@ Cette opération pourrait prendre beaucoup de temps dans un répertoire contenan
 
 Nous allons commencer par créer la nouvelle classe dérivée EventArgs pour signaler le nouveau répertoire et la progression. 
 
-```csharp
-internal class SearchDirectoryArgs : EventArgs
-{
-    internal string CurrentSearchDirectory { get; }
-    internal int TotalDirs { get; }
-    internal int CompletedDirs { get; }
-
-    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs)
-    {
-        CurrentSearchDirectory = dir;
-        TotalDirs = totalDirs;
-        CompletedDirs = completedDirs;
-    }
-}
-``` 
+[!code-csharp[DirEventArgs](../../samples/csharp/events/Program.cs#SearchDirEventArgs "Define search directory event arguments")]
 
 Là encore, nous pouvons suivre les recommandations pour créer un type référence immuable pour les arguments d’événements.
 
-Maintenant, définissons l’événement. Cette fois-ci, nous utiliserons une syntaxe différente. En plus d’utiliser la syntaxe du champ, nous pouvons créer explicitement la propriété, avec des gestionnaires d’ajout et de suppression. Dans cet exemple, nous n’aurons pas besoin de code supplémentaire dans ces gestionnaires dans ce projet, mais cet exemple montre comment les créer.
+Maintenant, définissons l’événement. Cette fois-ci, nous utiliserons une syntaxe différente. En plus d’utiliser la syntaxe du champ, nous pouvons créer explicitement la propriété, avec des gestionnaires d’ajout et de suppression. Dans cet exemple, nous n’aurons pas besoin de code supplémentaire dans ces gestionnaires, mais cet exemple montre comment les créer.
 
-```csharp
-internal event EventHandler<SearchDirectoryArgs> DirectoryChanged
-{
-    add { directoryChanged += value; }
-    remove { directoryChanged -= value; }
-}
-private EventHandler<SearchDirectoryArgs> directoryChanged;
-```
+[!code-csharp[Declare event with add and remove handlers](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Declare the event with add and remove handlers")]
 
 Le code que nous écrivons ici reflète en grande partie le code généré par le compilateur pour les définitions d’événements de champs que nous avons vu précédemment. Nous créons l’événement à l’aide d’une syntaxe très similaire à celle utilisée pour les [propriétés](properties.md). Notez que les gestionnaires ont des noms différents : `add` et `remove`. Il sont appelés pour s’abonner à l’événement ou pour annuler un abonnement. Notez que vous devez également déclarer un champ de stockage privé pour stocker la variable d’événement. Il est initialisé avec la valeur null.
 
 Ensuite, nous allons ajouter la surcharge de la méthode Search() qui parcourt les sous-répertoires et déclenche les deux événements. Le moyen le plus simple consiste à utiliser un argument par défaut pour indiquer que nous souhaitons rechercher dans tous les répertoires :
 
-```csharp
-public void Search(string directory, string searchPattern, bool searchSubDirs = false)
-{
-    if (searchSubDirs)
-    {
-        var allDirectories = Directory.GetDirectories(directory, "*.*", SearchOption.AllDirectories);
-        var completedDirs = 0;
-        var totalDirs = allDirectories.Length + 1;
-        foreach (var dir in allDirectories)
-        {
-            directoryChanged?.Invoke(this,
-                new SearchDirectoryArgs(dir, totalDirs, completedDirs++));
-            // Recursively search this child directory:
-            SearchDirectory(dir, searchPattern);
-        }
-        // Include the Current Directory:
-        directoryChanged?.Invoke(this,
-            new SearchDirectoryArgs(directory, totalDirs, completedDirs++));
-        SearchDirectory(directory, searchPattern);
-    }
-    else
-    {
-        SearchDirectory(directory, searchPattern);
-    }
-}
-
-private void SearchDirectory(string directory, string searchPattern)
-{
-    foreach (var file in Directory.EnumerateFiles(directory, searchPattern))
-    {
-        var args = new FileFoundArgs(file);
-        FileFound?.Invoke(this, args);
-        if (args.CancelRequested)
-            break;
-    }
-}
-```
+[!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
 À ce stade, nous pouvons exécuter l’application qui appelle la surcharge pour rechercher dans tous les sous-répertoires. Il n’existe aucun abonné sur le nouvel événement `ChangeDirectory`, mais l’utilisation de l’idiome `?.Invoke()` garantit que cela fonctionne correctement.
 
  Ajoutons un gestionnaire pour écrire une ligne qui affiche la progression dans la fenêtre de la console. 
 
-```csharp
-lister.DirectoryChanged += (sender, eventArgs) =>
-{
-    Console.Write($"Entering '{eventArgs.CurrentSearchDirectory}'.");
-    Console.WriteLine($" {eventArgs.CompletedDirs} of {eventArgs.TotalDirs} completed...");
-};
-```
+[!code-csharp[Search](../../samples/csharp/events/Program.cs#Search "Declare event handler")]
 
 Nous avons vu des modèles qui sont suivis dans tout l’écosystème .NET.
 En apprenant ces modèles et ces conventions, vous écrirez rapidement du code C# et .NET idiomatique.

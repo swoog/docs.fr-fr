@@ -3,12 +3,13 @@ title: Commande dotnet - Interface CLI .NET Core
 description: Découvrez la commande dotnet (le pilote générique des outils .NET Core CLI) et comment l’utiliser.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2018
-ms.openlocfilehash: c56ed032ccef6c6fd19a13214b04b384ffff28d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/04/2018
+ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805657"
 ---
 # <a name="dotnet-command"></a>Commande dotnet
 
@@ -20,7 +21,12 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Résumé
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
@@ -42,7 +48,53 @@ Le seul cas où la commande `dotnet` est utilisée seule est l’exécution d’
 
 ## <a name="options"></a>Options
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`--additional-deps <PATH>`
+
+Chemin du fichier *deps.json* supplémentaire.
+
+`--additionalprobingpath <PATH>`
+
+Chemin d’accès contenant la stratégie de sondage et les assemblys à sonder.
+
+`-d|--diagnostics`
+
+Active la sortie de diagnostic.
+
+`--fx-version <VERSION>`
+
+Version du runtime .NET Core installé à utiliser pour exécuter l’application.
+
+`-h|--help`
+
+Affiche une aide brève pour la commande. Si vous l’utilisez avec `dotnet`, elle affiche également la liste des commandes disponibles.
+
+`--info`
+
+Affiche des informations détaillées sur l’environnement et les outils CLI, telles que le système d’exploitation actuel, le SHA de validation de la version, etc.
+
+`--list-runtimes`
+
+Affiche les runtimes .NET Core installés.
+
+`--list-sdks`
+
+Affiche les kits de développement logiciel .NET Core installés.
+
+`--roll-forward-on-no-candidate-fx`
+
+ Effectue une restauration par progression en l’absence de framework candidat partagé.
+
+`-v|--verbosity <LEVEL>`
+
+Définit le niveau de détail de la commande. Les valeurs autorisées sont `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` et `diag[nostic]`. Non pris en charge dans toutes les commandes ; consultez la page de commande spécifique pour déterminer si cette option est disponible.
+
+`--version`
+
+Affiche la version du SDK .NET Core en cours d’utilisation.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -116,7 +168,26 @@ Affiche la version du SDK .NET Core en cours d’utilisation.
 
 ### <a name="general"></a>Général
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+| Commande                                       | Fonction                                                            |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)               | Génère une application .NET Core.                                     |
+| [dotnet build-server](dotnet-build-server.md) | Interagit avec les serveurs démarrés par une build.                          |
+| [dotnet clean](dotnet-clean.md)               | Nettoie les sorties de build.                                                |
+| [dotnet help](dotnet-help.md)                 | Affiche plus de documentation détaillée en ligne pour la commande.           |
+| [dotnet migrate](dotnet-migrate.md)           | Migre un projet Preview 2 valide vers un projet SDK .NET Core 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md)           | Fournit l’accès à la ligne de commande MSBuild.                        |
+| [dotnet new](dotnet-new.md)                   | Initialise un projet C# ou F# pour un modèle donné.                |
+| [dotnet pack](dotnet-pack.md)                 | Crée un package NuGet à partir de votre code.                               |
+| [dotnet publish](dotnet-publish.md)           | Publie une application .NET dépendante du framework ou autonome. |
+| [dotnet restore](dotnet-restore.md)           | Restaure les dépendances d’une application donnée.                  |
+| [dotnet run](dotnet-run.md)                   | Exécute l’application à partir de la source.                                   |
+| [dotnet sln](dotnet-sln.md)                   | Options pour ajouter, supprimer et lister des projets dans un fichier solution.       |
+| [dotnet store](dotnet-store.md)               | Stocke les assemblys dans le magasin de packages de runtime.                     |
+| [dotnet test](dotnet-test.md)                 | Exécute des tests à l’aide d’un lanceur de tests.                                     |
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | Commande                             | Fonction                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -156,7 +227,7 @@ Affiche la version du SDK .NET Core en cours d’utilisation.
 
 Commande | Fonction
 --- | ---
-[dotnet add reference](dotnet-add-reference.md) | Ajoute une référence de projet.
+[dotnet add reference](dotnet-add-reference.md) | Ajoute une référence au projet.
 [dotnet list reference](dotnet-list-reference.md) | Liste les références du projet.
 [dotnet remove reference](dotnet-remove-reference.md) | Supprime une référence de projet.
 
@@ -175,9 +246,34 @@ Commande | Fonction
 [dotnet nuget locals](dotnet-nuget-locals.md) | Efface ou liste les ressources NuGet locales telles que le cache de requête HTTP, le cache temporaire ou le dossier de packages globaux à l’échelle de l’ordinateur.
 [dotnet nuget push](dotnet-nuget-push.md) | Effectue une transmission de type push d’un package sur le serveur et le publie.
 
+### <a name="global-tools-commands"></a>Outils et commandes globaux
+
+Les [outils globaux .NET Core](global-tools.md) sont disponibles à partir de .NET Core SDK 2.1.300 :
+
+Commande | Fonction
+--- | ---
+[dotnet tool install](dotnet-tool-install.md) | Installe un outil global sur votre ordinateur.
+[dotnet tool list](dotnet-tool-list.md) | Répertorie tous les outils globaux actuellement installés dans le répertoire par défaut de votre machine ou à l’emplacement du chemin spécifié.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | Désinstalle un outil global de votre ordinateur.
+[dotnet tool update](dotnet-tool-update.md) | Met à jour un outil global sur votre ordinateur.
+
+### <a name="additional-tools"></a>Outils supplémentaires
+
+À partir de .NET Core SDK 2.1.300, un certain nombre d’outils qui étaient disponibles uniquement par projet à l’aide de `DotnetCliToolReference` sont désormais disponibles dans le cadre du Kit de développement .NET Core. Ces outils incluent :
+
+| Outil                                              | Fonction                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| dev-certs                                         | Crée et gère les certificats de développement.                |
+| [ef](/ef/core/miscellaneous/cli/dotnet)           | Outils en ligne de commande Entity Framework Core.                    |
+| sql-cache                                         | Outils en ligne de commande du cache SQL Server.                         |
+| [user-secrets](/aspnet/core/security/app-secrets) | Gère les secrets de développement de l’utilisateur.                            |
+| [watch](/aspnet/core/tutorials/dotnet-watch)      | Démarre un observateur de fichier qui exécute une commande à chaque modification de fichier. |
+
+Pour plus d'informations sur chaque outil, exécutez `dotnet <tool-name> --help`.
+
 ## <a name="examples"></a>Exemples
 
-Initialisez un exemple d’application console .NET Core qui peut être compilé et exécuté :
+Crée une application console .NET Core :
 
 `dotnet new console`
 
@@ -197,7 +293,7 @@ Exécuter une application dépendante du framework nommée `myapp.dll` :
 
 ## <a name="environment-variables"></a>Variables d’environnement
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -209,7 +305,29 @@ Spécifie l’emplacement de l’index de service que doit utiliser l’hôte pa
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Spécifie si les données concernant l’utilisation des outils .NET Core doivent être collectées et envoyées à Microsoft. Définie sur `true` pour ne pas adhérer à la fonctionnalité de télémétrie (valeurs acceptées : `1`, `yes` ou `false`) ; définie sur `true` pour adhérer aux fonctionnalités de télémétrie (valeurs acceptées : `false`, `0` ou `no`). Si elle n’est pas définie, la valeur par défaut est `false`, et la fonctionnalité de télémétrie est active.
+Spécifie si les données concernant l’utilisation des outils .NET Core doivent être collectées et envoyées à Microsoft. Définie sur `true` pour ne pas adhérer à la fonctionnalité de télémétrie (valeurs acceptées : `true`, `1` ou `yes`). Sinon, définie sur `false` pour adhérer aux fonctionnalités de télémétrie (valeurs acceptées : `false`, `0` ou `no`). Si elle n’est pas définie, la valeur par défaut est `false`, et la fonctionnalité de télémétrie est active.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+Spécifie si le runtime .NET Core, le framework partagé ou le SDK sont résolus à partir de l’emplacement global. Si elle n’est pas définie, la valeur par défaut est `true`. Définie sur `false` pour ne pas résoudre depuis l’emplacement global et avoir des installations .NET Core (les valeurs `0` ou `false` sont acceptées). Pour plus d’informations sur la recherche multiniveau, consultez [Recherche SharedFX multiniveau](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+
+`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
+
+Désactive la restauration par progression d’une version mineure. Pour plus d'informations, consultez [Restauration par progression](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`DOTNET_PACKAGES`
+
+Cache du package principal. S’il n’est pas défini, les valeurs par défaut sont `$HOME/.nuget/packages` sous Unix et `%HOME%\NuGet\Packages` sous Windows.
+
+`DOTNET_SERVICING`
+
+Spécifie l’emplacement de l’index de service que doit utiliser l’hôte partagé lors du chargement de l’exécution.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+Spécifie si les données concernant l’utilisation des outils .NET Core doivent être collectées et envoyées à Microsoft. Définie sur `true` pour ne pas adhérer à la fonctionnalité de télémétrie (valeurs acceptées : `true`, `1` ou `yes`). Sinon, définie sur `false` pour adhérer aux fonctionnalités de télémétrie (valeurs acceptées : `false`, `0` ou `no`). Si elle n’est pas définie, la valeur par défaut est `false`, et la fonctionnalité de télémétrie est active.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
@@ -227,6 +345,6 @@ Spécifie l’emplacement de l’index de service que doit utiliser l’hôte pa
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Spécifie si les données concernant l’utilisation des outils .NET Core doivent être collectées et envoyées à Microsoft. Définie sur `true` pour ne pas adhérer à la fonctionnalité de télémétrie (valeurs acceptées : `1`, `yes` ou `false`) ; définie sur `true` pour adhérer aux fonctionnalités de télémétrie (valeurs acceptées : `false`, `0` ou `no`). Si elle n’est pas définie, la valeur par défaut est `false`, et la fonctionnalité de télémétrie est active.
+Spécifie si les données concernant l’utilisation des outils .NET Core doivent être collectées et envoyées à Microsoft. Définie sur `true` pour ne pas adhérer à la fonctionnalité de télémétrie (valeurs acceptées : `true`, `1` ou `yes`). Sinon, définie sur `false` pour adhérer aux fonctionnalités de télémétrie (valeurs acceptées : `false`, `0` ou `no`). Si elle n’est pas définie, la valeur par défaut est `false`, et la fonctionnalité de télémétrie est active.
 
 ---
