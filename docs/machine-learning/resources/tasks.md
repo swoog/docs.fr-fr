@@ -4,12 +4,12 @@ description: Explorez les différentes tâches d’apprentissage automatique pri
 ms.date: 06/04/2018
 author: aditidugar
 ms.author: johalex
-ms.openlocfilehash: 22249ac2d275a4168dbd8b03b90d9698fe90f2d1
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 875006a9cddb87b5f9436b78773420858fd842dd
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34860665"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207718"
 ---
 # <a name="machine-learning-tasks"></a>Tâches d’apprentissage automatique
 
@@ -29,13 +29,17 @@ Une tâche [Apprentissage automatique supervisé](glossary.md#supervised-machine
 * Diagnostiquer si un patient est atteint ou non d’une certaine maladie.
 * Décider si un e-mail doit être considéré comme « spam » ou non.
 
-## <a name="multi-class-classification"></a>Classification multiclasse
+Pour plus d’informations, consultez l’article Wikipédia [Classification binaire](https://en.wikipedia.org/wiki/Binary_classification).
+
+## <a name="multiclass-classification"></a>Classification multiclasse
 
 Une tâche [Apprentissage automatique supervisé](glossary.md#supervised-machine-learning) utilisée pour prédire la classe (catégorie) d’une instance de données. L’entrée d’un algorithme de classification est un ensemble d’exemples étiquetés. Chaque étiquette est un entier compris entre 0 et k-1, où k est le nombre de classes. La sortie d’un algorithme de classification est un classifieur, que vous pouvez utiliser pour prédire la classe de nouvelles instances sans étiquette. Voici quelques exemples de scénarios de classification multiclasse :
 
 * Déterminer la race d’un chien, par exemple « Husky de Sibérie », « Golden Retriever », « Caniche », etc.
 * Déterminer si des critiques d’un film sont « positives », « neutres » ou « négatives ».
 * Classer les évaluations d’un hôtel par « situation géographique », « prix », « propreté », etc.
+
+Pour plus d’informations, consultez l’article Wikipédia [Classification multiclasse](https://en.wikipedia.org/wiki/Multiclass_classification).
 
 ## <a name="regression"></a>Régression
 
