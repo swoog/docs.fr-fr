@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: fcff492f420a60a41b373bf9042ed0c2d66d0446
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 64b326b82cd022ed6590a232546690e2ec2a5c78
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34456586"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105486"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Types Nullable (Guide de programmation C#)
 Les types Nullable sont des instances du struct <xref:System.Nullable%601?displayProperty=nameWithType>. Un type Nullable peut représenter la plage correcte de valeurs de son type valeur sous-jacent, plus une valeur `null` supplémentaire. Par exemple, un `Nullable<Int32>`, prononcé « Nullable d’Int32 », peut se voir affecter n’importe quelle valeur entre -2147483648 et 2147483647, ou la valeur `null`. Un `Nullable<bool>` peut se voir affecter les valeurs [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) ou [null](../../../csharp/language-reference/keywords/null.md). La capacité à affecter `null` aux types numériques et booléens est particulièrement utile lorsque l’on travaille avec des bases de données et d’autres types de données qui contiennent des éléments potentiellement sans valeur. Par exemple, un champ booléen dans une base de données peut stocker la valeur `true` ou `false`, ou être indéfini. 
@@ -27,7 +27,7 @@ Pour plus d’exemples, consultez la page [Utiliser les types Nullable](../../..
   
 -   La syntaxe `T?` est la forme abrégée de <xref:System.Nullable%601>, où `T` est un type valeur. Les deux formats sont interchangeables.  
   
--   Affectez une valeur à un type Nullable, comme vous le feriez pour un type valeur ordinaire, par exemple `int? x = 10;` ou `double? d = 4.108`. Un type Nullable peut également avoir la valeur `null` : `int? x = null.`  
+-   Affectez une valeur à un type Nullable, comme vous le feriez pour un type valeur ordinaire, par exemple `int? x = 10;` ou `double? d = 4.108;`. Un type Nullable peut également avoir la valeur `null` : `int? x = null;`.  
   
 -   Utilisez la méthode <xref:System.Nullable%601.GetValueOrDefault%2A?displayProperty=nameWithType> pour retourner la valeur affectée, ou la valeur par défaut du type sous-jacent si la valeur est `null`, par exemple `int j = x.GetValueOrDefault();`  
   

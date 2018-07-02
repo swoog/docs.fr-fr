@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: 7d2f81ef08892c994163d609a56008c1accadaa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8026ac821dfeed03127c894a5768a4c91b13beb3
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570599"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207171"
 ---
 # <a name="net-class-libraries"></a>Bibliothèques de classes .NET
 
@@ -23,7 +23,7 @@ Il existe trois types de bibliothèques de classes que vous pouvez utiliser :
 *   Les bibliothèques de classes **portables** ont accès à un sous-ensemble d’API et sont utilisables par les applications et les bibliothèques qui ciblent plusieurs plateformes.
 *   Les bibliothèques de classes **.NET Standard** sont une fusion du concept de bibliothèques spécifiques d’une plateforme et portables en un seul modèle qui offre le meilleur des deux.
 
-## <a name="platform-specific-class-libraries"></a>Bibliothèques de classes spécifiques d’une plateforme
+## <a name="platform-specific-class-libraries"></a>Bibliothèques de classes propres à la plateforme
 
 Les bibliothèques spécifiques d’une plateforme sont liées à une seule implémentation .NET (par exemple, .NET Framework sur Windows) et peuvent donc accepter des dépendances significatives sur un environnement d’exécution connu. Un tel environnement expose un ensemble connu d’API (API .NET et de système d’exploitation), et maintient et expose l’état attendu (par exemple, le Registre Windows).
 
@@ -39,7 +39,7 @@ Vous choisissez une configuration de plateforme quand vous créez une bibliothè
 
 De nombreux développeurs de bibliothèques ont abandonné la production de plusieurs bibliothèques spécifiques d’une plateforme à partir d’une seule source (à l’aide de directives de compilation conditionnelle) au profit des bibliothèques portables. Il existe [plusieurs approches](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) permettant d’accéder à une fonctionnalité spécifique d’une plateforme dans les bibliothèques portables, [bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) étant la technique la plus répandue à ce stade.
 
-### <a name="net-standard-class-libraries"></a>Bibliothèques de classes .NET Standard
+## <a name="net-standard-class-libraries"></a>Bibliothèques de classes .NET Standard
 
 Les bibliothèques .NET Standard remplacent les concepts de bibliothèques spécifiques d’une plateforme et portables. Elles sont spécifiques d’une plateforme en ce sens qu’elles exposent toutes les fonctionnalités de la plateforme sous-jacente (pas de plateforme synthétique ni d’intersection de plateformes). Elles sont portables en ce sens qu’elles fonctionnent sur toutes les plateformes de prise en charge.
 
@@ -60,6 +60,6 @@ Les plateformes suivantes prennent en charge les bibliothèques .NET Standard :
 
 Pour plus d’informations, consultez la rubrique [.NET Standard](net-standard.md).
 
-### <a name="mono-class-libraries"></a>Bibliothèques de classes Mono
+## <a name="mono-class-libraries"></a>Bibliothèques de classes Mono
 
 Les bibliothèques de classes sont prises en charge sur Mono, y compris les trois types de bibliothèques décrits ci-dessus. Mono a souvent été considéré (à juste titre) comme une implémentation multiplateforme de Microsoft .NET Framework. C’est en partie parce que les bibliothèques .NET Framework spécifiques d’une plateforme peuvent s’exécuter sur le runtime Mono sans modification ou recompilation. Cette caractéristique existait avant la création des bibliothèques de classes portables, elle était donc choisie en priorité pour permettre la portabilité binaire entre le .NET Framework et Mono (même si cela ne fonctionnait que dans un sens).

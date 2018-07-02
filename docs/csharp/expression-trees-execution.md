@@ -3,26 +3,28 @@ title: Exécution d’arborescences d’expressions
 description: En savoir plus sur l’exécution des arborescences d’expressions en les convertissant en instructions de langage intermédiaire exécutables.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 54706cd5d8ebe60bb893bc82f05aecddae370602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218161"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207389"
 ---
 # <a name="executing-expression-trees"></a>Exécution d’arborescences d’expressions
 
 [Précédent -- Types de frameworks prenant en charge les arborescences d’expressions](expression-classes.md)
 
 Une *arborescence d’expressions* est une structure de données qui représente du code.
-Il ne s’agit pas de code compilé et exécutable. Si vous souhaitez exécuter le code .NET représenté par une arborescence d’expressions, vous devez le convertir en instructions de langage intermédiaire exécutables. 
+Il ne s’agit pas de code compilé et exécutable. Si vous souhaitez exécuter le code .NET représenté par une arborescence d’expressions, vous devez le convertir en instructions de langage intermédiaire exécutables.
+
 ## <a name="lambda-expressions-to-functions"></a>Des expressions lambda aux fonctions
-Vous pouvez convertir n’importe quelle LambdaExpression ou n’importe quel type dérivé de LambdaExpression en langage intermédiaire exécutable. Les autres types d’expressions ne peuvent pas être convertis directement en code. Cette restriction a peu d’effet dans la pratique. Les expressions lambda sont les seuls types d’expressions que vous pourriez souhaiter exécuter par l’intermédiaire d’une conversion en langage intermédiaire exécutable. (Pensez à ce que cela signifierait d’exécuter directement une `ConstantExpression`. Serait-ce utile ?) Toute arborescence d’expressions qui est une `LamdbaExpression` ou un type dérivé de `LambdaExpression` peut être convertie en langage intermédiaire.
+
+Vous pouvez convertir n’importe quelle LambdaExpression ou n’importe quel type dérivé de LambdaExpression en langage intermédiaire exécutable. Les autres types d’expressions ne peuvent pas être convertis directement en code. Cette restriction a peu d’effet dans la pratique. Les expressions lambda sont les seuls types d’expressions que vous pourriez souhaiter exécuter par l’intermédiaire d’une conversion en langage intermédiaire exécutable. (Pensez à ce que cela signifierait d’exécuter directement une `ConstantExpression`. Serait-ce utile ?) Toute arborescence d’expressions qui est une `LambdaExpression` ou un type dérivé de `LambdaExpression` peut être convertie en langage intermédiaire.
 Le type d’expression `Expression<TDelegate>` est le seul exemple concret dans les bibliothèques .NET Core. Il sert à représenter une expression mappée à un type délégué quelconque. Ce type étant mappé à un type délégué, .NET peut examiner l’expression et générer le langage intermédiaire pour un délégué approprié qui correspond à la signature de l’expression lambda. 
 
 Dans la plupart des cas, cela crée un mappage simple entre une expression et son délégué correspondant. Par exemple, une arborescence d’expressions représentée par `Expression<Func<int>>` serait convertie en un délégué du type `Func<int>`. Pour une expression lambda avec tout type de retour et liste d’arguments, il existe un type délégué qui est le type cible pour le code exécutable représenté par cette expression lambda.
 
-Le type `LamdbaExpression` contient des membres `Compile` et `CompileToMethod` que vous utiliseriez pour convertir une arborescence d’expressions en code exécutable. La méthode `Compile` crée un délégué. La méthode `CompileToMethod` met à jour un objet `MethodBuilder` avec le langage intermédiaire qui représente la sortie compilée de l’arborescence d’expressions. Notez que `CompileToMethod` n’est disponible que sur le framework de bureau complet, et non sur le framework .NET Core.
+Le type `LambdaExpression` contient des membres `Compile` et `CompileToMethod` que vous utiliseriez pour convertir une arborescence d’expressions en code exécutable. La méthode `Compile` crée un délégué. La méthode `CompileToMethod` met à jour un objet `MethodBuilder` avec le langage intermédiaire qui représente la sortie compilée de l’arborescence d’expressions. Notez que `CompileToMethod` n’est disponible que sur le framework de bureau complet, et non dans .NET Core.
 
 Si vous le souhaitez, vous pouvez également fournir un `DebugInfoGenerator` qui recevra les informations de débogage de symbole pour l’objet délégué généré. Cela vous permet de convertir l’arborescence d’expressions en objet délégué et de disposer d’informations de débogage complètes sur le délégué généré.
 
@@ -35,11 +37,11 @@ var answer = func(); // Invoke Delegate
 Console.WriteLine(answer);
 ```
 
-Notez que le type délégué est basé sur le type d’expression. Si vous souhaitez utiliser l’objet délégué d’une manière fortement typée, vous devez connaître le type de retour et la liste d’arguments. La méthode `LambdaExpression.Compile()` retourne le type `Delegate`. Vous devrez effectuer un cast sur le type délégué approprié pour que les outils de compilation puissent vérifier la liste d’arguments de type de retour.
+Notez que le type délégué est basé sur le type d’expression. Si vous souhaitez utiliser l’objet délégué d’une manière fortement typée, vous devez connaître le type de retour et la liste d’arguments. La méthode `LambdaExpression.Compile()` retourne le type `Delegate`. Vous devrez effectuer un cast vers le type délégué approprié pour que les outils de compilation puissent vérifier la liste d’arguments de type de retour.
 
 ## <a name="execution-and-lifetimes"></a>Exécution et durées de vie
 
-Vous exécutez le code en appelant le délégué créé quand vous avez appelé `LamdbaExpression.Compile()`. Vous pouvez l’observer ci-dessus, où `add.Compile()` retourne un délégué. L’appel de ce délégué en appelant `func()` exécute le code.
+Vous exécutez le code en appelant le délégué créé quand vous avez appelé `LambdaExpression.Compile()`. Vous pouvez l’observer ci-dessus, où `add.Compile()` retourne un délégué. L’appel de ce délégué en appelant `func()` exécute le code.
 
 Ce délégué représente le code dans l’arborescence d’expressions. Vous pouvez conserver le handle de ce délégué et l’appeler ultérieurement. Vous n’avez pas besoin de compiler l’arborescence d’expressions chaque fois que vous souhaitez exécuter le code qu’elle représente. (N’oubliez pas que les arborescences d’expressions sont immuables ; compiler la même arborescence d’expressions ultérieurement crée un délégué qui exécute le même code.)
 

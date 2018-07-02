@@ -4,17 +4,17 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 7b4bcb1c39ddbbc104820558532b03bc9341804e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592559"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208167"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Tester des applications ASP.NET Core MVC
 
 > _« Si vous n’avez pas envie d’effectuer des tests unitaires sur votre produit, il est fort probable que vos clients n’auront pas non plus envie de l’essayer. »_
-> _ - Anonyme -
+>  _- Anonyme-_
 
 ## <a name="summary"></a>Récapitulatif
 
@@ -38,7 +38,7 @@ Les procédures de configuration et de désactivation (teardown) des tests d’i
 
 La classe d’implémentation LocalFileImageService implémente la logique nécessaire pour récupérer (fetch) et retourner les octets d’un fichier image à partir d’un dossier spécifique, avec un id donné :
 
-```cs
+```csharp
 public class LocalFileImageService : IImageService
 {
     private readonly IHostingEnvironment _env;
@@ -53,6 +53,13 @@ public class LocalFileImageService : IImageService
             var contentRoot = _env.ContentRootPath + "//Pics";
             var path = Path.Combine(contentRoot, id + ".png");
             return File.ReadAllBytes(path);
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new CatalogImageMissingException(ex);
+        }
+    }
+}
 ```
 
 ### <a name="functional-tests"></a>Tests fonctionnels
@@ -101,19 +108,19 @@ Figure 9-3. Ajout d’un projet de test xUnit dans Visual Studio
 
 Nommez vos tests de façon cohérente, en choisissant des noms qui indiquent clairement l’objet de chaque test. Une approche que j’ai expérimentée et qui a fait ses preuves est de nommer les classes de test en fonction de la classe et de la méthode qu’elles testent. Cela crée beaucoup de petites classes de test, mais cela a l’avantage d’indiquer avec précision de quoi chaque test est responsable. Une fois que vous avez défini le nom de la classe de test pour identifier la classe et la méthode à tester, vous pouvez utiliser le nom de la méthode de test pour indiquer le comportement à tester. Il s’agit notamment d’indiquer le comportement attendu ainsi que les entrées ou hypothèses qui doivent interrompre ce comportement. Voici quelques exemples de noms de test :
 
--   CatalogControllerGetImage.CallsImageServiceWithId
+- CatalogControllerGetImage.CallsImageServiceWithId
 
--   CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- CatalogControllerGetImage.LogsWarningGivenImageMissingException
 
--   CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
 
--   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
 Une variante de cette approche termine chaque nom de classe de test par « Should » et modifie légèrement la conjugaison du verbe :
 
--   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 Certaines équipes de développement trouvent la deuxième approche de nommage plus claire, bien que légèrement plus détaillée. Dans tous les cas, essayez de choisir une convention de nommage suffisamment explicite pour comprendre le comportement de test. Ainsi, si un ou plusieurs tests échouent, vous pourrez facilement déterminer ce qui a échoué d’après les noms des tests. Évitez d’utiliser des noms de test trop vagues, comme ControllerTests.Test1, car vous ne saurez pas précisément à quoi ils correspondent dans les résultats de test.
 
@@ -131,7 +138,7 @@ Dans une application ASP.NET Core bien conçue, la majeure partie de la complexi
 
 Vous devrez parfois refactoriser votre code pour pouvoir le tester au moyen de tests unitaires. Cela implique souvent d’identifier les abstractions et d’utiliser l’injection de dépendances pour accéder à l’abstraction dans le code que vous souhaitez tester, au lieu de coder directement dans l’infrastructure. Par exemple, examinez cette méthode d’action simple pour afficher des images :
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
@@ -146,7 +153,7 @@ Il est difficile d’utiliser des tests unitaires pour tester cette méthode à 
 
 Si vous ne pouvez pas utiliser de tests unitaires pour tester directement le comportement du système de fichiers, et que vous ne pouvez pas tester l’itinéraire, que reste-t-il à tester ? En fait, après avoir refactorisé le code pour rendre les tests unitaires possibles, vous risquez de découvrir des cas de test et un comportement manquant, comme la gestion des erreurs. Que fait la méthode quand il manque un fichier ? Que doit-elle faire ? Dans cet exemple, la méthode refactorisée ressemble à ceci :
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")\]
 public IActionResult GetImage(int id)
 {
@@ -168,21 +175,11 @@ Les valeurs \_logger et \_imageService sont injectées comme dépendances. Vous 
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Tests d’intégration dans les applications ASP.NET Core
 
-```cs
-    }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 Ce service utilise IHostingEnvironment, tout comme le faisait le code CatalogController avant d’être refactorisé en un service distinct. Étant donné que c’était le seul code dans le contrôleur qui utilisait IHostingEnvironment, cette dépendance a été supprimée du constructeur de CatalogController.
 
 Pour tester que ce service fonctionne correctement, créez un fichier image de test connu et vérifiez que le service le retourne avec une entrée spécifique. Prenez soin de ne pas utiliser d’objets fictifs sur le comportement que vous souhaitez tester (dans ce cas, la lecture de données du système de fichiers). Toutefois, les objets fictifs peuvent être utiles pour configurer des tests d’intégration. Dans ce cas, vous pouvez simuler IHostingEnvironment afin que son ContentRootPath pointe vers le dossier que vous allez utiliser pour votre image de test. La classe complète de test d’intégration est affichée ci-dessous :
 
-```cs
+```csharp
 public class LocalFileImageServiceGetImageBytesById
 {
     private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
@@ -224,7 +221,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 Pour les applications ASP.NET Core, la classe TestServer facilite l’écriture des tests fonctionnels. Vous configurez un TestServer à l’aide d’un WebHostBuilder, comme vous le feriez normalement pour votre application. Ce WebHostBuilder doit être configuré comme l’hôte réel de votre application, mais vous pouvez modifier les aspects souhaités pour faciliter le test. La plupart du temps, vous allez réutiliser le même TestServer pour plusieurs cas de test. Vous pouvez donc l’encapsuler dans une méthode réutilisable (par exemple, dans une classe de base) :
 
-```cs
+```csharp
 public abstract class BaseWebTest
 {
     protected readonly HttpClient _client;
@@ -234,14 +231,14 @@ public abstract class BaseWebTest
     {
         _client = GetClient();
     }
-    
+
     protected HttpClient GetClient()
     {
         var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
         _contentRoot = GetProjectPath("src", startupAssembly);
         var builder = new WebHostBuilder()
         .UseContentRoot(_contentRoot)
-        .UseStartup&lt;Startup&gt;();
+        .UseStartup<Startup>();
         var server = new TestServer(builder);
         var client = server.CreateClient();
         return client;
@@ -251,7 +248,7 @@ public abstract class BaseWebTest
 
 La méthode GetProjectPath retourne simplement le chemin physique au projet web (téléchargez l’exemple de solution). Dans ce cas, le WebHostBuilder spécifie simplement l’emplacement de la racine du contenu pour l’application web et il référence la même classe de démarrage que celle utilisée par l’application web réelle. Pour utiliser le TestServer, vous devez spécifier le type System.Net.HttpClient standard pour l’envoi des requêtes. Le TestServer expose une méthode CreateClient utile qui fournit un client préconfiguré prêt à envoyer des requêtes à l’application exécutée sur le TestServer. Utilisez ce client (défini sur le membre \_client protégé dans le test de base ci-dessus) quand vous écrivez des tests fonctionnels pour votre application ASP.NET Core :
 
-```cs
+```csharp
 public class CatalogControllerGetImage : BaseWebTest
 {
     [Fact]

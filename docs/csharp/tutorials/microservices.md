@@ -1,33 +1,34 @@
 ---
 title: Microservices hébergés dans Docker - C#
 description: Apprenez à créer des services principaux ASP.NET qui s’exécutent dans des conteneurs Docker
-ms.date: 02/03/2017
+ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 7428051c1d9a29ba98ca1f28288b3c50ea36ae1a
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: b043b0109bcf8a67867d2c73a5ab22e43a4963cf
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207917"
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservices hébergés dans Docker
 
 Ce didacticiel détaille les tâches nécessaires pour générer et déployer un microservice ASP.NET Core dans un conteneur Docker. Au cours de ce didacticiel, vous apprendrez à :
 
-* Générer une application ASP.NET Core à l’aide de Yeoman
-* Guide de création d’un environnement de développement Docker
+* Générer une application ASP.NET Core.
+* Créer un environnement de développement Docker.
 * Créer une image Docker basée sur une image existante.
 * Déployer votre service dans un conteneur Docker.
 
 Au passage, vous verrez également certaines fonctionnalités du langage C# :
 
-* Conversion des objets C# en charges utiles JSON.
+* Conversion des objets C# en charges utiles JSON
 * Création d’objets de transfert de données immuables
-* Traitement des demandes HTTP entrantes et création de la réponse HTTP
-* Guide pratique de travail avec les types valeur Nuallable
+* Traitement des requêtes HTTP entrantes et création de la réponse HTTP
+* Utilisation des types valeur Nullable
 
 Vous pouvez [afficher ou télécharger l’exemple d’application](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) de cette rubrique. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-### <a name="why-docker"></a>Pourquoi Docker ?
+## <a name="why-docker"></a>Pourquoi Docker ?
 
 Docker facilite la création d’images de machine standard pour héberger vos services dans un centre de données ou dans le cloud public. Docker vous permet de configurer l’image et de la répliquer en fonction des besoins pour mettre à l’échelle l’installation de votre application.
 
@@ -35,72 +36,57 @@ Tout le code de ce didacticiel fonctionne dans n’importe quel environnement .N
 Les tâches supplémentaires pour une installation Docker fonctionneront pour une application ASP.NET Core. 
 
 ## <a name="prerequisites"></a>Prérequis
+
 Vous devez configurer votre ordinateur pour exécuter .NET Core. Vous trouverez les instructions d’installation sur la page de [.NET Core](https://www.microsoft.com/net/core).
-Vous pouvez exécuter cette application sur Windows, Ubuntu Linux, Mac OS ou dans un conteneur Docker. Vous devez installer l’éditeur de code de votre choix. Les descriptions ci-dessous utilisent [Visual Studio Code](https://code.visualstudio.com/), un éditeur open source et multiplateforme. Cependant, vous pouvez utiliser les outils avec lesquels vous êtes le plus à l’aise.
+Vous pouvez exécuter cette application sur Windows, Linux, Mac OS ou dans un conteneur Docker.
+Vous devez installer l’éditeur de code de votre choix. Les descriptions ci-dessous utilisent [Visual Studio Code](https://code.visualstudio.com/), un éditeur open source et multiplateforme. Cependant, vous pouvez utiliser les outils avec lesquels vous êtes le plus à l’aise.
 
 Vous devez également installer le moteur Docker. Consultez la [page d’installation de Docker](http://www.docker.com/products/docker) pour obtenir des instructions pour votre plateforme.
 Docker peut être installé dans de nombreuses distributions Linux, Mac OS ou Windows. La page mentionnée ci-dessus contient des sections pour chacune des installations disponibles.
 
-La plupart des composants à installer le sont par un gestionnaire de package. Si vous disposez du gestionnaire de packages de node.js `npm` installé, vous pouvez ignorer cette étape. Sinon, installez la dernière version de NodeJs à partir de [nodejs.org](https://nodejs.org), ce qui installe le gestionnaire de packages npm. 
-
-À ce stade, vous devrez installer un certain nombre d’outils de ligne de commande qui prennent en charge le développement avec ASP.NET Core. Les modèles de ligne de commande utilisent Yeoman, Bower, Grunt et Gulp. Si vous les avez déjà installés, c’est parfait, sinon saisissez ce qui suit dans votre interpréteur de commandes préféré :
-
-`npm install -g yo bower grunt-cli gulp`
-
-L’option `-g` indique qu’il s’agit d’une installation globale, et que ces outils sont disponibles à l’échelle du système. (Une installation locale définit la portée du package sur un projet unique). Une fois que vous avez installé les outils de base, vous devez installer les générateurs de modèle yeoman ASP.NET :
-
-`npm install -g generator-aspnet`
-
 ## <a name="create-the-application"></a>Création de l’application
 
-Maintenant que vous avez installé tous les outils, créez une application ASP.NET Core. Pour utiliser le générateur de ligne de commande, exécutez la commande yeoman suivante dans votre interpréteur de commandes préféré :
+Maintenant que vous avez installé tous les outils, créez une application ASP.NET Core. Pour ce faire, créez un répertoire nommé « WeatherMicroservice » et exécutez la commande suivante dans ce répertoire dans l’interpréteur de commandes de votre choix :
 
-`yo aspnet`
+```console
+dotnet new web
+```
 
-Cette commande vous invite à sélectionner le type d’application que vous souhaitez créer. Pour ce microservice, vous souhaitez obtenir l’application web la plus simple et légère possible, sélectionnez donc « Application Web vide ». Le modèle vous demandera un nom. Sélectionnez « WeatherMicroservice ». 
+La commande `dotnet` exécute les outils nécessaires pour le développement .NET. Chaque verbe exécute une commande différente.
 
-Le modèle crée huit fichiers pour vous :
+La commande `dotnet new` sert à créer des projets .NET Core.
 
-* Un fichier .gitignore personnalisé pour les applications ASP.NET Core.
+Pour ce microservice, nous souhaitons que l’application web soit la plus simple et la plus légère possible. Nous avons donc utilisé le modèle « ASP.NET Core vide », en spécifiant son nom court, `web`.
+
+Le modèle crée quatre fichiers pour vous :
+
 * Un fichier Startup.cs. Cela contient la base de l’application.
 * Un fichier Program.cs. Cela contient le point d’entrée de l’application.
 * Un fichier WeatherMicroservice.csproj. Il s’agit du fichier de génération de l’application.
-* Un Dockerfile. Ce script crée une image Docker pour l’application.
-* Un README.md. Il contient des liens vers d’autres ressources ASP.NET Core.
-* Un fichier web.config. Les informations de configuration de base s’y trouvent.
-* Un fichier runtimeconfig.template.json. Il contient les paramètres de débogage utilisés par l’EDI.
+* Un fichier Properties/launchSettings.json. Il contient les paramètres de débogage utilisés par l’EDI.
 
-Vous pouvez maintenant exécuter l’application générée par le modèle. Vous pouvez le faire à l’aide d’une série d’outils en ligne de commande. La commande `dotnet` exécute les outils nécessaires pour le développement .NET. Chaque verbe exécute une commande différente
-
-La première étape consiste à restaurer toutes les dépendances :
-
-```console
-dotnet restore
-```
-
-La restauration Dotnet utilise le gestionnaire de packages NuGet pour installer tous les packages dans le répertoire de l’application. Il génère également un fichier project.json.lock. Ce fichier contient des informations sur chaque package référencé. Après la restauration de toutes les dépendances, vous générez l’application :
-
-```console
-dotnet build
-```
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-Et une fois que vous générez l’application, vous l’exécutez à partir de la ligne de commande :
+Vous pouvez maintenant exécuter l’application générée par le modèle :
 
 ```console
 dotnet run
 ```
 
+Cette commande restaure tout d’abord les dépendances requises pour générer l’application, puis elle génère l’application.
+
 La configuration par défaut écoute le port `http://localhost:5000`. Vous pouvez ouvrir un navigateur et accéder à cette page pour voir un « Hello World! » « Operation Not Found! ».
+
+Quand vous avez terminé, vous pouvez arrêter l’application en appuyant sur <kbd>Ctrl</kbd>+<kbd>C</kbd>.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomie d’une application ASP.NET Core
 
-Maintenant que vous avez créé l’application, nous allons voir comment cette fonctionnalité est implémentée. Deux des fichiers générés sont particulièrement intéressants à ce stade : project.json et Startup.cs. 
+Maintenant que vous avez créé l’application, nous allons voir comment cette fonctionnalité est implémentée. Deux des fichiers générés sont particulièrement intéressants à ce stade : WeatherMicroservice.csproj et Startup.cs. 
 
-Project.json qui contient des informations sur le projet. Ces deux nœuds, que vous utiliserez souvent, sont des « dépendances » et des « frameworks ». Le nœud de dépendances répertorie tous les packages qui sont nécessaires pour cette application.
-À ce stade, il s’agit d’un petit nœud, qui ne nécessite que les packages qui exécutent le serveur Web.
+Le fichier .csproj contient des informations sur le projet.
+Les deux nœuds les plus intéressants sont `<TargetFramework>` et `<PackageReference>`.
 
-Le nœud « frameworks » spécifie les versions et les configurations du .NET Framework qui va exécuter cette application.
+Le nœud `<TargetFramework>` spécifie la version de .NET qui exécutera cette application.
+
+Chaque nœud `<PackageReference>` sert à spécifier un package qui est nécessaire pour cette application.
 
 L’application est implémentée dans Startup.cs. Ce fichier contient la classe de démarrage.
 
@@ -120,11 +106,13 @@ Il existe un certain nombre de tâches que vous devez effectuer pour implémente
 
 Les sections suivantes décrivent chacune de ces étapes.
 
-### <a name="parsing-the-query-string"></a>Analyse de la chaîne de requête.
+### <a name="parsing-the-query-string"></a>Analyse de la chaîne de requête
 
 Vous commencerez par analyser la chaîne de requête. Le service acceptera les arguments 'lat' et 'longs' sur la chaîne de requête dans ce formulaire :
 
-`http://localhost:5000/?lat=-35.55&long=-12.35`  
+```
+http://localhost:5000/?lat=-35.55&long=-12.35
+```
 
 Toutes les modifications que vous devez apporter se trouvent dans l’expression lambda définie comme argument de `app.Run` dans votre classe de démarrage.
 
@@ -132,7 +120,7 @@ L’argument de l’expression lambda est le `HttpContext` pour la demande. Une 
 
 [!code-csharp[ReadQueryString](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ReadQueryString "read variables from the query string")]
 
-Les valeurs du dictionnaire de requêtes sont de type `StringValue`. Ce type peut contenir une collection de chaînes. Pour votre service météo, chaque valeur est une chaîne unique. C’est pourquoi il y a un appel à `FirstOrDefault()` dans le code ci-dessus. 
+Les valeurs du dictionnaire `Query` sont de type `StringValue`. Ce type peut contenir une collection de chaînes. Pour votre service météo, chaque valeur est une chaîne unique. C’est pourquoi il y a un appel à `FirstOrDefault()` dans le code ci-dessus. 
 
 Ensuite, vous devez convertir les chaînes en valeurs de type double. La méthode que vous allez utiliser pour convertir la chaîne en double est `double.TryParse()` :
 
@@ -148,9 +136,13 @@ Les méthodes d’extension sont des méthodes qui sont définies comme des mét
 
 [!code-csharp[TryParseExtension](../../../samples/csharp/getting-started/WeatherMicroservice/Extensions.cs#TryParseExtension "try parse to a nullable")]
 
-L’expression `default(double?)` retourne la valeur par défaut pour le type `double?`. Cette valeur par défaut est la valeur null (ou manquante).
+Avant d’appeler la méthode d’extension, changez la culture actuelle pour qu’elle soit invariante :
 
-Vous pouvez utiliser cette méthode d’extension pour convertir les arguments de chaîne de requête en type double :
+[!code-csharp[SetCulture](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#SetCulture "set current culture to invariant")]
+
+Cela permet de s’assurer que votre application analyse les nombres de la même façon sur tous les serveurs, quel que soit sa culture par défaut.
+
+Vous pouvez maintenant utiliser la méthode d’extension pour convertir les arguments de chaîne de requête en type double :
 
 [!code-csharp[UseTryParse](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#UseTryParse "Use the try parse extension method")]
 
@@ -167,7 +159,7 @@ La tâche suivante consiste à créer des prévisions météorologiques aléatoi
 ```csharp
 public class WeatherReport
 {
-    private static readonly string[] PossibleConditions = new string[]
+    private static readonly string[] PossibleConditions =
     {
         "Sunny",
         "Mostly Sunny",
@@ -177,26 +169,35 @@ public class WeatherReport
         "Rain"
     };
 
-    public int HiTemperature { get; }
-    public int LoTemperature { get; }
-    public int AverageWindSpeed { get; }
-    public string Conditions { get; }
+    public int HighTemperatureFahrenheit { get; }
+    public int LowTemperatureFahrenheit { get; }
+    public int AverageWindSpeedMph { get; }
+    public string Condition { get; }
 }
 ```
 
-Ensuite, générez un constructeur qui définit de façon aléatoire ces valeurs. Ce constructeur utilise les valeurs de latitude et de longitude pour amorcer le générateur de nombres aléatoires. Cela signifie que la prévision pour un même emplacement est la même. Si vous modifiez les arguments pour la latitude et la longitude, vous obtiendrez une prévision différente (parce que vous démarrez avec une valeur initiale différente.)
+Ensuite, générez un constructeur qui définit de façon aléatoire ces valeurs. Ce constructeur utilise les valeurs de latitude et de longitude pour amorcer le générateur de nombres `Random`. Cela signifie que la prévision pour un même emplacement est la même. Si vous changez les arguments de latitude et de longitude, vous obtiendrez une prévision différente (car vous démarrez avec une valeur initiale différente).
 
 [!code-csharp[WeatherReportConstructor](../../../samples/csharp/getting-started/WeatherMicroservice/WeatherReport.cs#WeatherReportConstructor "Weather Report Constructor")]
 
 Vous pouvez maintenant générer des prévisions sur 5 jours dans votre méthode de réponse :
 
-[!code-csharp[GenerateRandomReport](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#GenerateRandomReport "Generate a random weather report")]
-
-### <a name="build-the-json-response"></a>Générez la réponse JSON.
-
-La tâche de code final sur le serveur consiste à convertir le tableau WeatherReport en un paquet JSON, et de renvoyer cela au client. Commençons par créer le paquet JSON. Vous allez ajouter le sérialiseur JSON NewtonSoft à la liste des dépendances. Pour ce faire, utilisez l’interface CLI `dotnet` :
-
+```csharp
+if (latitude.HasValue && longitude.HasValue)
+{
+    var forecast = new List<WeatherReport>();
+    for (var days = 1; days <= 5; days++)
+    {
+        forecast.Add(new WeatherReport(latitude.Value, longitude.Value, days));
+    }
+}
 ```
+
+### <a name="build-the-json-response"></a>Générer la réponse JSON
+
+La tâche de code finale sur le serveur consiste à convertir la liste `WeatherReport` en document JSON, et à renvoyer cela au client. Commençons par créer le document JSON. Vous allez ajouter le sérialiseur JSON Newtonsoft à la liste des dépendances. Vous pouvez pour cela utiliser la commande `dotnet` suivante :
+
+```console
 dotnet add package Newtonsoft.Json
 ```
 
@@ -204,7 +205,7 @@ Ensuite, vous pouvez utiliser la classe `JsonConvert` pour écrire l’objet dan
 
 [!code-csharp[ConvertToJson](../../../samples/csharp/getting-started/WeatherMicroservice/Startup.cs#ConvertToJSON "Convert objects to JSON")]
 
-Le code ci-dessus convertit l’objet de prévision (une liste d’objets `WeatherForecast`) en un paquet JSON. Une fois que vous avez construit le paquet de réponse, vous définissez le type de contenu `application/json` et écrivez la chaîne.
+Le code ci-dessus convertit l’objet de prévision (une liste d’objets `WeatherForecast`) en document JSON. Une fois que vous avez construit le document de réponse, vous définissez le type de contenu `application/json` et écrivez la chaîne.
 
 Maintenant, l’application s’exécute et renvoie des prévisions aléatoires.
 
@@ -218,49 +219,74 @@ Un ***conteneur Docker*** représente une instance en cours d’exécution d’u
 
 Par analogie, vous pouvez considérer *l’Image Docker* comme une *classe* et le *conteneur Docker* comme un objet ou une instance de cette classe.  
 
-Le fichier Dockerfile créé par le modèle ASP.NET prend en charge nos besoins. Attardons-nous sur son contenu.
-
-La première ligne indique l’image source :
+Le Dockerfile suivant correspond à nos besoins :
 
 ```
-FROM microsoft/dotnet:1.1-sdk-msbuild
+FROM microsoft/dotnet:2.1-sdk AS build
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
+```
+
+Attardons-nous sur son contenu.
+
+La première ligne spécifie l’image source utilisée pour générer l’application :
+
+```
+FROM microsoft/dotnet:2.1-sdk AS build
 ```
 
 Docker vous permet de configurer une image d’ordinateur basée sur un modèle source. Cela signifie que vous n’êtes pas obligé de fournir tous les paramètres de la machine lorsque vous démarrez. Il vous suffit de fournir les modifications éventuelles. Les modifications apportées ici serviront à inclure notre application.
 
-Dans ce premier exemple, nous allons utiliser la version `1.1-sdk-msbuild` de l’image dotnet. Il s’agit du moyen le plus simple de créer un environnement Docker. Cette image inclut le composant d’exécution principal dotnet et le kit de développement logiciel dotnet. Cela facilite la mise en route et la création, mais génère aussi une image plus grande.
+Dans cet exemple, nous allons utiliser la version `2.1-sdk` de l’image `dotnet`. Il s’agit du moyen le plus simple de créer un environnement Docker. Cette image inclut le runtime .NET Core et le kit SDK .NET Core.
+Cela simplifie la prise en main et la génération initiale, mais crée une image plus grande. Nous allons donc utiliser cette image pour générer l’application et une image différente pour l’exécuter.
 
-Les cinq lignes suivantes configurent et génèrent votre application :
+Les lignes suivantes configurent et génèrent votre application :
 
 ```
 WORKDIR /app
 
-# copy csproj and restore as distinct layers
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
 
-COPY WeatherMicroService.csproj .
-RUN dotnet restore 
-
-# copy and build everything else
-
-COPY . .
-
-# RUN dotnet restore
+# Copy everything else and build
+COPY . ./
 RUN dotnet publish -c Release -o out
 ```
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+Cela copie le fichier projet du répertoire actif sur la machine virtuelle Docker et restaure tous les packages. L’utilisation de l’interface de ligne de commande dotnet signifie que l’image Docker doit inclure le kit de développement logiciel .NET Core. Après cela, le reste de votre application est copié et la commande `dotnet
+publish` génère et crée un package de votre application.
 
-Cela copie le fichier projet du répertoire actif sur la machine virtuelle Docker et restaure tous les packages. L’utilisation de l’interface de ligne de commande dotnet signifie que l’image Docker doit inclure le kit de développement logiciel .NET Core. Après cela, le reste de votre application est copié et le la commande dotnet publish génère et crée un package de votre application.
-
-La dernière ligne du fichier exécute l’application :
+Pour finir, nous allons créer une deuxième image Docker qui exécute l’application :
 
 ```
-ENTRYPOINT ["dotnet", "out/WeatherMicroService.dll", "--server.urls", "http://0.0.0.0:5000"]
+# Build runtime image
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "WeatherMicroservice.dll"]
 ```
 
-Ce port configuré est référencé dans l’argument `--server.urls` sur `dotnet` sur la dernière ligne du fichier Docker. La commande `ENTRYPOINT` informe Docker des options de commande et de ligne de commande qui démarrent le service. 
+Cette image utilise la version `2.1-aspnetcore-runtime` de l’image `dotnet`, qui contient tous les éléments nécessaires pour exécuter des applications ASP.NET Core, mais n’inclut pas le kit SDK .NET Core. Cela signifie que nous ne pouvons pas utiliser cette image pour créer des applications .NET Core, mais par contre cela limite la taille de l’image finale.
 
-## <a name="building-and-running-the-image-in-a-container"></a>Génération et exécution de l’image dans un conteneur.
+Nous allons copier l’application générée de la première image vers la deuxième.
+
+La commande `ENTRYPOINT` indique à Docker quelle commande démarre le service.
+
+## <a name="building-and-running-the-image-in-a-container"></a>Génération et exécution de l’image dans un conteneur
 
 Nous allons créer une image et exécuter le service à l’intérieur d’un conteneur Docker. Nous ne voulons pas que tous les fichiers de votre répertoire local soient copiés dans l’image. Au lieu de cela, nous allons développer l’application dans le conteneur. Vous allez créer un fichier `.dockerignore` pour spécifier les répertoires qui ne sont pas copiés dans l’image. Nous ne souhaitons copier aucune des ressources build. Spécifiez les répertoires build et publish dans le fichier `.dockerignore` :
 
@@ -281,10 +307,10 @@ Cette commande génère l’image de conteneur sur la base de toutes les informa
 Exécutez la commande suivante pour démarrer le conteneur et lancer votre service :
 
 ```console
-docker run -d -p 80:5000 --name hello-docker weather-microservice
+docker run -d -p 80:80 --name hello-docker weather-microservice
 ```
 
-L’option `-d` consiste à exécuter le conteneur de façon détachée du terminal actuel. Cela signifie que vous ne verrez pas le résultat de la commande dans votre terminal. L’option `-p` indique le mappage de port entre le service et la machine hôte. Ici, elle indique que toute requête entrante sur le port 80 doit être transférée vers le port 5000 sur le conteneur. 5000 correspond au port sur lequel votre service écoute venant des arguments de ligne de commande spécifiés dans le fichier Docker ci-dessus. L’argument `--name` nomme votre conteneur en cours d’exécution. Il s’agit d’un nom convivial que vous pouvez utiliser pour travailler avec ce conteneur. 
+L’option `-d` consiste à exécuter le conteneur de façon détachée du terminal actuel. Cela signifie que vous ne verrez pas le résultat de la commande dans votre terminal. L’option `-p` indique le mappage de port entre le service et la machine hôte. Ici, elle indique que toute requête entrante sur le port 80 doit être transférée vers le port 80 sur le conteneur. Le fait de spécifier 80 permet d’établir une correspondance avec le port sur lequel votre service écoute, qui est le port par défaut pour les applications de production. L’argument `--name` nomme votre conteneur en cours d’exécution. Il s’agit d’un nom convivial que vous pouvez utiliser pour travailler avec ce conteneur.
 
 Vous pouvez voir si l’image est en cours d’exécution avec la commande :
 
@@ -292,7 +318,7 @@ Vous pouvez voir si l’image est en cours d’exécution avec la commande :
 docker ps
 ```
 
-Si votre conteneur est en cours d’exécution, vous verrez une ligne qui répertorie les processus en cours d’exécution. (Il peut s’agir de la seule).
+Si votre conteneur est en cours d’exécution, vous verrez une ligne qui répertorie les processus en cours d’exécution. (Il peut s’agir du seul processus.)
 
 Vous pouvez tester votre service en ouvrant un navigateur et en accédant à localhost et en spécifiant une latitude et une longitude :
 
@@ -302,20 +328,20 @@ http://localhost/?lat=35.5&long=40.75
 
 ## <a name="attaching-to-a-running-container"></a>Attachement à un conteneur en cours d’exécution
 
-Lorsque vous avez exécuté votre service dans une fenêtre de commande, vous pouvez voir les informations de diagnostic imprimées pour chaque demande. Ces informations ne s’affichent pas lorsque votre conteneur s’exécute en mode détaché. La commande attach de Docker vous permet de vous attacher à un conteneur en cours d’exécution afin de voir les informations du journal.  Exécutez cette commande à partir d’une fenêtre de commande :
+Quand vous avez exécuté votre service dans une fenêtre de commande, vous avez pu voir les informations de diagnostic imprimées pour chaque requête. Ces informations ne s’affichent pas lorsque votre conteneur s’exécute en mode détaché. La commande attach de Docker vous permet de vous attacher à un conteneur en cours d’exécution afin de voir les informations du journal.  Exécutez cette commande à partir d’une fenêtre de commande :
 
 ```console
 docker attach --sig-proxy=false hello-docker
 ```
 
-L’argument `--sig-proxy=false` signifie que les commandes `Ctrl-C` ne sont pas envoyées au processus de conteneur, mais arrêtent plutôt la commande `docker attach`. Le dernier argument est le nom donné au conteneur dans la commande `docker run`. 
+L’argument `--sig-proxy=false` signifie que les commandes <kbd>Ctrl</kbd>+<kbd>C</kbd> ne sont pas envoyées au processus de conteneur, mais arrêtent plutôt la commande `docker attach`. Le dernier argument est le nom donné au conteneur dans la commande `docker run`. 
 
 > [!NOTE]
 > Vous pouvez également utiliser l’ID de conteneur assigné au Docker pour faire référence à un conteneur. Si vous n’avez pas spécifié de nom pour votre conteneur dans `docker run`, vous devez utiliser l’ID de conteneur.
 
 Ouvrez un navigateur et accédez à votre service. Vous verrez les messages de diagnostic dans la fenêtre de commande à partir du conteneur en cours d’exécution attaché.
 
-Appuyez sur `Ctrl-C` pour arrêter le processus d’attachement.
+Appuyez sur <kbd>Ctrl</kbd>+<kbd>C</kbd> pour arrêter le processus d’attachement.
 
 Lorsque vous avez terminé de manipuler votre conteneur, vous pouvez l’arrêter :
 
