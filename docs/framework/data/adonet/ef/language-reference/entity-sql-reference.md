@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 79cdf35128ac35920797060b09ff2fc5999708a7
 ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/27/2018
 ms.locfileid: "37028017"
@@ -50,12 +50,12 @@ L'égalité et l'inégalité sont définies pour tout type d'objet qui possède 
 |[= (égal à)](equals-entity-sql.md)|Compare l'égalité de deux expressions.|
 |[> (supérieur à)](greater-than-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure à celle de l'expression de droite.|
 |[>= (supérieur ou égal à)](greater-than-or-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure ou égale à celle de l'expression de droite.|
-|[EST &AMP;#91;PAS&AMP;#93; NULL](isnull-entity-sql.md)|Détermine si une expression de requête a la valeur NULL.|
+|[EST &#91;PAS&#93; NULL](isnull-entity-sql.md)|Détermine si une expression de requête a la valeur NULL.|
 |[< (inférieur à)](less-than-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure à celle de l'expression de droite.|
 |[<= (inférieur ou égal à)](less-than-or-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure ou égale à celle de l'expression de droite.|
-|[&AMP;#91;PAS&AMP;#93; BETWEEN](between-entity-sql.md)|Détermine si une expression a pour résultat une valeur contenue dans une plage spécifiée.|
-|[!= (différent de)](not-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si l’expression de gauche n’est pas égale à l’expression de droite.|
-|[&AMP;#91;PAS&AMP;#93; COMME](like-entity-sql.md)|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié.|
+|[&#91;PAS&#93; BETWEEN](between-entity-sql.md)|Détermine si une expression a pour résultat une valeur contenue dans une plage spécifiée.|
+|[\!= (différent de)](not-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si l’expression de gauche n’est pas égale à l’expression de droite.|
+|[&#91;PAS&#93; COMME](like-entity-sql.md)|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié.|
 
 ## <a name="logical-and-case-expression-operators"></a>Opérateurs logiques et d’expression case
 
@@ -63,7 +63,7 @@ Les opérateurs logiques testent le caractère vrai ou faux d'une condition. L'e
 
 |Opérateur|Description|
 |--------------|-----------------|
-|[& & (AND logique)](and-entity-sql.md)|AND logique|
+|[&& (AND logique)](and-entity-sql.md)|AND logique|
 |[!, (NOT logique)](not-entity-sql.md)|NOT logique.|
 |[&#124;&#124;(Ou logique)](or-entity-sql.md)|OR logique|
 |[CASE](case-entity-sql.md)|Évalue un ensemble d'expressions booléennes pour déterminer le résultat.|
@@ -106,9 +106,9 @@ Entity SQL fournit diverses opérations set performantes. Cela inclut les opéra
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|Extrait un élément d'une collection à valeurs multiples.|
 |[EXCEPT](except-entity-sql.md)|Retourne une collection de valeurs distinctes à partir de l’expression de requête à gauche de l’opérande EXCEPT qui ne sont pas retournées à partir de l’expression de requête située à droite de l’opérande EXCEPT.|
-|[&AMP;#91;PAS&AMP;#93; EXISTS](exists-entity-sql.md)|Détermine si une collection est vide.|
+|[&#91;PAS&#93; EXISTS](exists-entity-sql.md)|Détermine si une collection est vide.|
 |[FLATTEN](flatten-entity-sql.md)|Convertit une collection de collections en collection plane.|
-|[&AMP;#91;PAS&AMP;#93; IN](in-entity-sql.md)|Détermine si une valeur correspond à une valeur incluse dans une collection.|
+|[&#91;PAS&#93; IN](in-entity-sql.md)|Détermine si une valeur correspond à une valeur incluse dans une collection.|
 |[INTERSECT](intersect-entity-sql.md)|Retourne une collection de valeurs distinctes qui sont retournées par les expressions de requête tant à gauche qu'à droite de l'opérande INTERSECT.|
 |[OVERLAPS](overlaps-entity-sql.md)|Détermine si deux collections ont des éléments en commun.|
 |[SET](set-entity-sql.md)|Permet de convertir une collection d’objets en un ensemble en produisant une nouvelle collection dans laquelle tous les éléments en double ont été supprimés.|
@@ -122,7 +122,7 @@ Entity SQL fournit les opérations qui permettent le type d’une expression (va
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|Convertit une expression d'un type de données à un autre.|
 |[COLLECTION](collection-entity-sql.md)|Utilisé dans un [fonction](function-entity-sql.md) opération pour déclarer une collection de types d’entité ou des types complexes.|
-|[EST &AMP;#91;PAS&AMP;#93; OF](isof-entity-sql.md)|Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.|
+|[EST &#91;PAS&#93; OF](isof-entity-sql.md)|Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.|
 |[OFTYPE](oftype-entity-sql.md)|Retourne une collection d'objets à partir d'une expression de requête d'un type spécifique.|
 |[Constructeur de type nommé](named-type-constructor-entity-sql.md)|Permet de créer des instances de types d'entités ou de types complexes.|
 |[MULTISET](multiset-entity-sql.md)|Crée une instance d'un multiensemble à partir d'une liste de valeurs.|
