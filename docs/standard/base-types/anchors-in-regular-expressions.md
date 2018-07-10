@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cbf0ceb7d5f8e56955f8989e5eb4efba99540bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578025"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948587"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancres dans les expressions régulières
 <a name="top"></a> Les ancres, ou assertions atomiques de largeur nulle, spécifient une position dans la chaîne où une correspondance doit se produire. Quand vous utilisez une ancre dans votre expression de recherche, le moteur des expressions régulières n'avance pas dans la chaîne ou ne consomme pas de caractères ; il recherche uniquement une correspondance à la position spécifiée. Par exemple, `^` spécifie que la correspondance doit commencer au début d'une ligne ou d'une chaîne. Par conséquent, l'expression régulière `^http:` correspond uniquement à « http: » quand elle se produit au début d'une ligne. Le tableau suivant répertorie les ancres prises en charge par les expressions régulières dans .NET.  
   
 |Ancre|Description|  
 |------------|-----------------|  
-|`^`|La correspondance doit se produire au début de la chaîne ou de la ligne. Pour plus d'informations, consultez [Début de chaîne ou de ligne](#Start).|  
-|`$`|La correspondance doit se produire à la fin de la chaîne ou de la ligne ou avant `\n` à la fin de la chaîne ou de la ligne. Pour plus d'informations, consultez [Fin de chaîne ou de ligne](#End).|  
+|`^`|Par défaut, la correspondance doit se produire au début de la chaîne ; en mode multiligne, elle doit se produire au début de la ligne. Pour plus d'informations, consultez [Début de chaîne ou de ligne](#Start).|  
+|`$`|Par défaut, la correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne ; en mode multiligne, elle doit se produire à la fin de la ligne ou avant `\n` à la fin de la ligne. Pour plus d'informations, consultez [Fin de chaîne ou de ligne](#End).|  
 |`\A`|La correspondance doit se produire au début de la chaîne uniquement (aucun support multiligne). Pour plus d'informations, consultez [Début de chaîne uniquement](#StartOnly).|  
 |`\Z`|La correspondance doit se produire à la fin de la chaîne, ou avant `\n` à la fin de la chaîne. Pour plus d'informations, consultez [Fin de chaîne ou avant un saut de ligne final](#EndOrNOnly).|  
 |`\z`|La correspondance doit se produire uniquement à la fin de la chaîne. Pour plus d'informations, consultez [Fin de chaîne uniquement](#EndOnly).|  
@@ -40,7 +40,7 @@ ms.locfileid: "33578025"
   
 <a name="Start"></a>   
 ## <a name="start-of-string-or-line-"></a>Début de chaîne ou de ligne : ^  
- L'ancre `^` spécifie que le modèle suivant doit commencer à la première position de caractère de la chaîne. Si vous utilisez `^` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)), la correspondance doit se trouver au début de chaque ligne.  
+ Par défaut, l’ancre `^` spécifie que le modèle suivant doit commencer à la première position de caractère de la chaîne. Si vous utilisez `^` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> (consultez [Options des expressions régulières](../../../docs/standard/base-types/regular-expression-options.md)), la correspondance doit se trouver au début de chaque ligne.  
   
  L'exemple suivant utilise l'ancre `^` dans une expression régulière qui extrait des informations à propos des années pendant lesquelles certaines équipes de base-ball professionnelles ont existé. L'exemple appelle deux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> :  
   
