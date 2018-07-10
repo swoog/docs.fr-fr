@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 2618e8c068ec538f5bfed2f8243d1c594478fcb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578961"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106643"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Utilisation de bases de données NoSQL comme infrastructure de persistance
 
@@ -310,7 +310,7 @@ Si la variable globale `ESHOP_AZURE_COSMOSDB` est vide, ce qui signifie qu’ell
 -   **Introduction à Azure Cosmos DB : API MongoDB** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
--   **Azure Cosmos DB : Développer une application web API MongoDB avec .NET et le Portail Azure** 
+-   **Azure Cosmos DB : Développer une application web API MongoDB avec .NET et le Portail Azure** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **Utiliser l’émulateur Azure Cosmos DB pour le développement et le test locaux** 
@@ -330,4 +330,5 @@ Si la variable globale `ESHOP_AZURE_COSMOSDB` est vide, ce qui signifie qu’ell
 
 
 >[!div class="step-by-step"]
-[Précédent] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [Suivant] (microservice-application-layer-web-api-design.md)
+[Précédent](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Suivant](microservice-application-layer-web-api-design.md)

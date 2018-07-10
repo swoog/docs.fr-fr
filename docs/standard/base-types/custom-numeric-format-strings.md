@@ -1,6 +1,6 @@
 ---
 title: Chaînes de format numériques personnalisées
-ms.date: 03/30/2017
+ms.date: 06/25/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,16 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fa1ab1d9a9ff3d652ce97d4fe7e6d04f744aea98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579234"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106526"
 ---
 # <a name="custom-numeric-format-strings"></a>Chaînes de format numériques personnalisées
+
 Vous pouvez créer une chaîne de format numérique personnalisée, qui est composée d'un ou de plusieurs spécificateurs de format numériques personnalisés, pour définir la mise en forme des données numériques. Une chaîne de format numérique personnalisée est toute chaîne autre qu'une [chaîne de format numérique standard](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
+
  Les chaînes de format numérique personnalisées sont prises en charge par certaines surcharges de la méthode `ToString` de tous les types numériques. Par exemple, vous pouvez fournir une chaîne de format numérique aux méthodes <xref:System.Int32.ToString%28System.String%29> et <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> du type <xref:System.Int32> . Les chaînes de format numérique personnalisées sont également prises en charge par la fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) .NET, utilisée par certaines méthodes `Write` et `WriteLine` des classes <xref:System.Console> et <xref:System.IO.StreamWriter>, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et la méthode <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. La fonctionnalité [Interpolation de chaîne](../../csharp/language-reference/tokens/interpolated.md) prend également en charge les chaînes de format numérique personnalisées.  
   
 > [!TIP]
@@ -45,11 +47,13 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
 |"‰"|Espace réservé « pour mille »|Multiplie un nombre par 1000 et insère un symbole « pour mille » localisé dans la chaîne de résultat.<br /><br /> Informations supplémentaires : [Spécificateur personnalisé« ‰ »](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Notation exponentielle|Si le spécificateur est suivi d'au moins un zéro (0), met en forme le résultat à l'aide de la notation exponentielle. La casse de « E » ou « e » indique la casse du symbole d'exposant dans la chaîne de résultat. Le nombre des zéros qui suivent le caractère « E » ou « e » détermine le nombre minimal de chiffres dans l'exposant. Un signe plus (+) indique qu'un caractère de signe précède toujours l'exposant. Un signe moins (-) indique qu'un caractère de signe précède uniquement les exposants négatifs.<br /><br /> Informations supplémentaires : [Spécificateurs personnalisés « E » et « e »](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|Caractère d'échappement|Entraîne l'interprétation du caractère suivant comme un littéral plutôt que comme un spécificateur de format personnalisé.<br /><br /> Informations supplémentaires : [Caractère d'échappement « \\ »](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
-|'*chaîne*'<br /><br /> "*chaîne*"|Délimiteur de chaîne littérale|Indique que les caractères encadrés doivent être copiés inchangés dans la chaîne de résultat.|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
+|'*chaîne*'<br /><br /> "*chaîne*"|Délimiteur de chaîne littérale|Indique que les caractères encadrés doivent être copiés inchangés dans la chaîne de résultat.<br/><br/>Plus d’informations : [Littéraux de caractère](#character-literals).|68 ("# ' degrees'") -> 68  degrees<br /><br /> 68 ("#' degrees'") -> 68 degrees|  
 |;|Séparateur de section|Définit des sections avec des chaînes de format distinctes pour les nombres positifs, négatifs et nuls.<br /><br /> Informations supplémentaires : [Séparateur de section « ; »](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
-|Autre|Tous les autres caractères|Le caractère est copié inchangé dans la chaîne de résultat.|68 ("# °") -> 68 °|  
+|Autre|Tous les autres caractères|Le caractère est copié inchangé dans la chaîne de résultat.<br/><br/>Plus d’informations : [Littéraux de caractère](#character-literals).|68 ("# °") -> 68 °|  
   
  Les sections suivantes fournissent des informations détaillées sur chacun des spécificateurs de format numériques personnalisés.  
+
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Spécificateur personnalisé « 0 »  
@@ -60,7 +64,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant affiche plusieurs valeurs qui sont mises en forme à l'aide de chaînes de format personnalisées incluant des espaces réservés du zéro.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [Retour au tableau](#table)  
@@ -76,19 +80,19 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant affiche plusieurs valeurs qui sont mises en forme à l'aide de chaînes de format personnalisées incluant des espaces réservés de chiffres.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Pour retourner une chaîne de résultat dans laquelle les chiffres absents ou les zéros non significatifs sont remplacés par des espaces, utilisez la [fonctionnalité de mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) et spécifiez une largeur de champ, comme l’illustre l’exemple suivant.  
   
  [!code-cpp[Formatting.Numeric.Custom#12](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/SpaceOrDigit1.cpp#12)]
- [!code-csharp[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#12](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/SpaceOrDigit1.cs#12)]
  [!code-vb[Formatting.Numeric.Custom#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/SpaceOrDigit1.vb#12)]  
   
  [Retour au tableau](#table)  
   
 <a name="SpecifierPt"></a>   
-## <a name="the--custom-specifier"></a>Le spécificateur personnalisé "."  
+## <a name="the--custom-specifier"></a>Spécificateur personnalisé « . »  
  Le spécificateur de format personnalisé "." insère un séparateur décimal localisé dans la chaîne de résultat. Le premier point de la chaîne de format détermine l'emplacement du séparateur décimal dans la valeur mise en forme. Tout autre point est ignoré.  
   
  Le caractère qui est utilisé comme séparateur décimal dans la chaîne de résultat n'est pas toujours un point ; il est déterminé par la propriété <xref:System.Globalization.NumberFormatInfo.NumberDecimalSeparator%2A> de l'objet <xref:System.Globalization.NumberFormatInfo> qui contrôle la mise en forme.  
@@ -96,7 +100,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant utilise le spécificateur de format "." pour définir l'emplacement de la virgule décimale dans plusieurs chaînes de résultat.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [Retour au tableau](#table)  
@@ -116,13 +120,13 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant illustre l'utilisation de la virgule comme séparateur de groupes.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  L'exemple suivant illustre l'utilisation de la virgule comme spécificateur pour la mise à l'échelle des nombres.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [Retour au tableau](#table)  
@@ -134,19 +138,19 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant définit plusieurs chaînes de format personnalisées qui incluent le spécificateur personnalisé "%".  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [Retour au tableau](#table)  
   
 <a name="SpecifierPerMille"></a>   
-## <a name="the--custom-specifier"></a>Spécificateur personnalisé« ‰ »  
+## <a name="the--custom-specifier"></a>Spécificateur personnalisé « ‰ »  
  Un caractère « pour mille » (‰ ou \u2030) dans une chaîne de format entraîne la multiplication d'un nombre par 1 000 avant sa mise en forme. Le symbole « pour mille » approprié est inséré dans la chaîne retournée, à l'emplacement où le symbole ‰ apparaît dans la chaîne de format. Le caractère « pour mille » utilisé est défini par la propriété <xref:System.Globalization.NumberFormatInfo.PerMilleSymbol%2A?displayProperty=nameWithType> de l'objet qui fournit les informations de mise en forme spécifique à la culture.  
   
  L'exemple suivant définit une chaîne de format personnalisée qui inclut le spécificateur personnalisé "‰".  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [Retour au tableau](#table)  
@@ -158,13 +162,13 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant met en forme plusieurs valeurs numériques à l'aide des spécificateurs pour la notation scientifique.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [Retour au tableau](#table)  
   
 <a name="SpecifierEscape"></a>   
-## <a name="the--escape-character"></a>Caractère d'échappement « \\ »  
+## <a name="the--escape-character"></a>Caractère d’échappement « \\ »  
  Les symboles "#", "0", ".", ",", "%" et "‰" dans une chaîne de format sont interprétés comme des spécificateurs de format plutôt que comme des caractères littéraux. En fonction de leur position dans une chaîne de format personnalisée, les "E" majuscules et minuscules ainsi que les symboles + et - peuvent également être interprétés comme des spécificateurs de format.  
   
  Pour éviter qu'un caractère soit interprété comme un spécificateur de format, vous pouvez le faire précéder d'une barre oblique inverse, qui est le caractère d'échappement. Le caractère d'échappement signifie que le caractère suivant est un caractère littéral qui doit être inclus inchangé dans la chaîne de résultat.  
@@ -177,7 +181,7 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L’exemple suivant utilise le caractère d’échappement pour empêcher l’opération de mise en forme d’interpréter les caractères « # », « 0 » et « \\ » comme des caractères d’échappement ou des spécificateurs de format. L'exemple C# utilise une barre oblique inverse supplémentaire pour garantir qu'une barre oblique inverse est interprétée comme un caractère littéral.  
   
  [!code-cpp[Formatting.Numeric.Custom#11](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/escape1.cpp#11)]
- [!code-csharp[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#11](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/escape1.cs#11)]
  [!code-vb[Formatting.Numeric.Custom#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/escape1.vb#11)]  
   
  [Retour au tableau](#table)  
@@ -197,11 +201,43 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant utilise le spécificateur de format ";" pour mettre en forme différemment les nombres positifs, négatifs et nuls.  
   
  [!code-cpp[Formatting.Numeric.Custom#8](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#8)]
- [!code-csharp[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#8](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#8)]
  [!code-vb[Formatting.Numeric.Custom#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#8)]  
   
  [Retour au tableau](#table)  
+
+## <a name="character-literals"></a>Littéraux de caractère  
+ 
+Les spécificateurs de format qui apparaissent dans une chaîne de format numérique personnalisée sont toujours interprétés comme des caractères de mise en forme, jamais comme des caractères littéraux. Il s’agit notamment des caractères suivants :  
+
+- [0](#Specifier0)
+- [\#](#SpecifierD)
+- [%](#SpecifierPct)
+- [‰](#SpecifierPerMille)
+- '
+- [\\](#SpecifierEscape)
+- [.](#SpecifierPt)
+- [,](#SpecifierTh)
+- [E ou e](#SpecifierExponent), en fonction de sa position dans la chaîne de format.
+
+Tous les autres caractères sont toujours interprétés comme des caractères littéraux et, dans une opération de mise en forme, sont inclus inchangés dans la chaîne de résultat.  Dans une opération d’analyse, ils doivent correspondre exactement aux caractères présents dans la chaîne d’entrée. La comparaison respecte la casse.  
   
+L’exemple suivant illustre un usage courant des unités de caractères littéraux (dans ce cas, les milliers) :
+  
+ [!code-csharp-interactive[literal characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal2.cs#1)]
+ [!code-vb[literal characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal2.vb#1)]  
+  
+ Il existe deux façons d’indiquer que les caractères doivent être interprétés comme des caractères littéraux, et non comme des caractères de mise en forme, pour qu’ils puissent être inclus dans une chaîne de résultat ou analysés correctement dans une chaîne d’entrée :  
+  
+- En échappant un caractère de mise en forme. Pour plus d’informations, consultez [Caractère d’échappement « \\ »](#SpecifierEscape).
+  
+- En plaçant la totalité de la chaîne littérale entre apostrophes.
+
+L’exemple suivant utilise les deux approches pour inclure des caractères réservés dans une chaîne de format numérique personnalisée.  
+  
+     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
+     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+    
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Notes  
   
@@ -223,13 +259,13 @@ Vous pouvez créer une chaîne de format numérique personnalisée, qui est comp
  L'exemple suivant présente deux chaînes de format numériques personnalisées. Dans les deux cas, l'espace réservé de chiffre (`#`) affiche les données numériques, et tous les autres caractères sont copiés dans la chaîne de résultat.  
   
  [!code-cpp[Formatting.Numeric.Custom#10](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/example1.cpp#10)]
- [!code-csharp[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
+ [!code-csharp-interactive[Formatting.Numeric.Custom#10](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/example1.cs#10)]
  [!code-vb[Formatting.Numeric.Custom#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/example1.vb#10)]  
   
  [Retour au tableau](#table)  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Globalization.NumberFormatInfo>  
+ <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
  [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
  [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Guide pratique pour remplir un nombre avec des zéros non significatifs](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  

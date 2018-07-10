@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314836"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948616"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -113,13 +113,13 @@ Ajoutez les instructions `using` supplémentaires suivantes en haut du fichier *
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Vous devez créer trois variables globales pour contenir le chemin d’accès aux fichiers récemment téléchargés :
+Vous devez créer trois champs globaux pour contenir les chemins des fichiers récemment téléchargés :
 
 * `_dataPath` contient le chemin d’accès au jeu de données utilisé pour l’apprentissage du modèle.
 * `_testDataPath` contient le chemin d’accès au jeu de données utilisé pour évaluer le modèle.
 * `_modelPath` contient le chemin d’accès où le modèle formé est enregistré.
 
-Ajoutez le code suivant à la ligne directement au-dessus de la méthode `Main` pour spécifier les fichiers récemment téléchargés :
+Ajoutez le code suivant à la ligne juste au-dessus de la méthode `Main` pour spécifier ces chemins :
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

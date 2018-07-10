@@ -1,6 +1,6 @@
 ---
 title: comportement de marshaling par défaut
-ms.date: 03/30/2017
+ms.date: 06/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5fef84250f9dbc10a921a6844f7020c72835cea
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457390"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028069"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -113,9 +113,11 @@ interface DelegateTest : IDispatch {
 ```  
   
  Un pointeur fonction peut être déréférencé, comme n'importe quel autre pointeur fonction non managé.  
-  
+
+Dans cet exemple, quand les deux délégués sont marshalés sous la forme <xref:System.Runtime.InteropServices.UnmanagedType.FunctionPtr?displayProperty=nameWithType>, le résultat est un `int` et un pointeur vers un `int`. Comme les types délégués sont marshalés, `int` représente ici un pointeur vers une valeur void (`void*`), qui est l’adresse du délégué en mémoire. En d’autres termes, ce résultat est spécifique des systèmes Windows 32 bits, car `int` représente ici la taille du pointeur de fonction.
+
 > [!NOTE]
->  Une référence au pointeur fonction d'un délégué managé compris dans du code non managé n'empêche pas le common language runtime d'effectuer le garbage collection sur l'objet managé.  
+>  Une référence au pointeur fonction d’un délégué managé compris dans du code non managé n’empêche pas le common language runtime d’effectuer le garbage collection sur l’objet managé.  
   
  Par exemple, le code suivant est incorrect, car la référence à l'objet `cb` passé à la méthode `SetChangeHandler` ne permet pas à `cb` de rester actif au-delà de la durée de vie de la méthode `Test`. Une fois l'objet `cb` collecté, le pointeur fonction passé à `SetChangeHandler` n'est plus valide.  
   

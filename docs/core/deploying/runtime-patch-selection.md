@@ -4,16 +4,16 @@ description: Découvrez-en plus sur les modifications apportées à la commande 
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 40d28e81e2ac1b27e7fd89e16d2d906a080fd18b
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697209"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071030"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Restauration par progression du runtime de déploiement autonome
 
-[Les déploiements d’applications autonomes](index.md) .NET Core incluent à la fois les bibliothèques .NET Core et le runtime .NET Core. À compter du SDK .NET Core 2.1.300 (.NET Core 2.1), un déploiement d’applications autonome [permet de publier le runtime du correctif le plus élevé sur votre machine](https://github.com/dotnet/designs/pull/36). Par défaut,[`dotnet publish`](../tools/dotnet-publish.md) pour un déploiement autonome sélectionne la dernière version installée dans le cadre du SDK sur l’ordinateur de publication. Ainsi, votre application déployée peut exécuter des correctifs de sécurité (et d’autres correctifs) disponibles pendant `publish`. L’application doit être republiée pour obtenir un nouveau correctif. Les applications autonomes sont créées en spécifiant `-r <RID>` dans la commande `dotnet publish` ou en spécifiant l’[identificateur du runtime (RID)](../rid-catalog.md) dans le fichier projet (csproj/vbproj) ou sur la ligne de commande.
+[Les déploiements d’applications autonomes](index.md) .NET Core incluent à la fois les bibliothèques .NET Core et le runtime .NET Core. À compter du SDK .NET Core 2.1.300 (.NET Core 2.1), un déploiement d’applications autonome [publie le runtime du correctif le plus élevé sur votre machine](https://github.com/dotnet/designs/pull/36). Par défaut, [`dotnet publish`](../tools/dotnet-publish.md) pour un déploiement autonome sélectionne la dernière version installée dans le cadre du SDK sur la machine de publication. Ainsi, votre application déployée peut exécuter des correctifs de sécurité (et d’autres correctifs) disponibles pendant `publish`. L’application doit être republiée pour obtenir un nouveau correctif. Les applications autonomes sont créées en spécifiant `-r <RID>` dans la commande `dotnet publish` ou en spécifiant l’[identificateur du runtime (RID)](../rid-catalog.md) dans le fichier projet (csproj/vbproj) ou sur la ligne de commande.
 
 ## <a name="patch-version-roll-forward-overview"></a>Vue d’ensemble de la restauration par progression d’une version de correctif
 
@@ -28,15 +28,15 @@ ms.locfileid: "34697209"
 
 L’exécution de `restore` dans le cadre de l’opération `publish` peut ne pas convenir à votre scénario. Pour éviter `restore` pendant `publish` quand vous créez des applications autonomes, procédez effectuez les étapes suivantes :
 
-* Affectez à la propriété `RuntimeIdentifiers` la valeur d’une liste séparée par des points-virgules de tous les [RID](../rid-catalog.md) à publier.
-* Affectez à la propriété `TargetLatestRuntimePatch` la valeur `true`
+* Définissez la propriété `RuntimeIdentifiers` sur une liste séparée par des points-virgules de tous les [RID](../rid-catalog.md) à publier.
+* Affectez à la propriété `TargetLatestRuntimePatch` la valeur `true`.
 
 ## <a name="no-restore-argument-with-dotnet-publish-options"></a>Argument No-restore avec des options dotnet publish
 
 Pour créer à la fois des applications autonomes et des [applications dépendant du framework](index.md) avec le même fichier projet, quand vous voulez utiliser l’argument `--no-restore` avec `dotnet publish`, choisissez l’une des possibilités suivantes :
 
-1. Préférez le comportement dépendant du framework. Si l’application dépend du framework, il s’agit du comportement par défaut. Si l’application est autonome et peut utiliser un runtime local 2.1.0 sans correctif, définissez `TargetLatestRuntimePatch` sur `false` dans le fichier projet (csproj/vbproj).
+1. Préférez le comportement dépendant du framework. Si l’application dépend du framework, il s’agit du comportement par défaut. Si l’application est autonome et peut utiliser un runtime local 2.1.0 sans correctif, définissez `TargetLatestRuntimePatch` sur `false` dans le fichier projet.
 
-2. Préférez le comportement autonome. Si l’application est autonome, il s’agit du comportement par défaut. Si l’application dépend du framework et requiert l’installation du dernier correctif, définissez `TargetLatestRuntimePatch` sur `true` dans le fichier projet (csproj/vbproj).
+2. Préférez le comportement autonome. Si l’application est autonome, il s’agit du comportement par défaut. Si l’application dépend du framework et nécessite l’installation du dernier correctif, définissez `TargetLatestRuntimePatch` sur `true` dans le fichier projet.
 
-3. Prenez le contrôle explicite de la version du framework du runtime en définissant `RuntimeFrameworkVersion` sur la version du correctif spécifique dans le fichier projet (csproj/vbproj).
+3. Prenez le contrôle explicite de la version du framework du runtime en définissant `RuntimeFrameworkVersion` sur la version de correctif spécifique dans le fichier projet.

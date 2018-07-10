@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
-ms.openlocfilehash: ded2e5399938be25005776963b0310b6a49d0353
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 430fbe3fc6d63fd3b90b578f32b42831c368ba10
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592351"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106302"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Définition de votre application à plusieurs conteneurs avec docker-compose.yml 
 
@@ -548,4 +548,5 @@ Ainsi, vous pouvez générer votre application en procédant de la même façon 
 
 
 >[!div class="step-by-step"]
-[Précédent] (data-driven-crud-microservice.md) [Suivant] (database-server-container.md)
+[Précédent](data-driven-crud-microservice.md)
+[Suivant](database-server-container.md)

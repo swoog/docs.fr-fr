@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b41161d1511f7dce975ac5ad916750734972fa3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579871"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948603"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -93,8 +93,8 @@ ms.locfileid: "33579871"
   
 |Assertion|Description|Motif|Correspondances|  
 |---------------|-----------------|-------------|-------------|  
-|`^`|La correspondance doit commencer au début de la chaîne ou de la ligne.|`^\d{3}`|"901" dans<br /><br /> "901-333-"|  
-|`$`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la ligne ou de la chaîne.|`-\d{3}$`|"-333" dans<br /><br /> "-901-333"|  
+|`^`|Par défaut, la correspondance doit commencer au début de la chaîne ; en mode multiligne, elle doit commencer au début de la ligne.|`^\d{3}`|"901" dans<br /><br /> "901-333-"|  
+|`$`|Par défaut, la correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne ; en mode multiligne, elle doit se produire avant la fin de la ligne ou avant `\n` à la fin de la ligne.|`-\d{3}$`|"-333" dans<br /><br /> "-901-333"|  
 |`\A`|La correspondance doit se produire au début de la chaîne.|`\A\d{3}`|"901" dans<br /><br /> "901-333-"|  
 |`\Z`|La correspondance doit se produire à la fin de la chaîne ou avant `\n` à la fin de la chaîne.|`-\d{3}\Z`|"-333" dans<br /><br /> "-901-333"|  
 |`\z`|La correspondance doit se produire à la fin de la chaîne.|`-\d{3}\z`|"-333" dans<br /><br /> "-901-333"|  

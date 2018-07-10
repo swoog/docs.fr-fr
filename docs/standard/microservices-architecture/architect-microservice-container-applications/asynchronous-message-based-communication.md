@@ -4,12 +4,12 @@ description: Architecture en microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: bee9a6215d2952f6c7f71607b1c4b1f44d1c0faf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579130"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106406"
 ---
 # <a name="asynchronous-message-based-communication"></a>Communication basée sur des messages asynchrones
 
@@ -108,4 +108,5 @@ Si vous envisagez d’utiliser la communication asynchrone, veillez également �
 
 
 >[!div class="step-by-step"]
-[Précédent] (communication-in-microservice-architecture.md) [Suivant] (maintain-microservice-apis.md)
+[Précédent](communication-in-microservice-architecture.md)
+[Suivant](maintain-microservice-apis.md)

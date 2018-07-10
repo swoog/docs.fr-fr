@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574671"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104567"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validation côté client (validation dans les couches de présentation)
 
@@ -29,7 +29,7 @@ L’implémentation de la validation côté client dépend du type d’applicati
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validation dans les applications mobiles Xamarin
 
--   **Validate Text Input and Show Errors**
+-   **Valider l’entrée de texte et afficher les erreurs**
     [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Validation Callback**
@@ -65,4 +65,5 @@ En résumé, voici les concepts les plus importants en ce qui concerne la valida
 
 
 >[!div class="step-by-step"]
-[Précédent] (domain-model-layer-validations.md) [Suivant] (domain-events-design-implementation.md)
+[Précédent](domain-model-layer-validations.md)
+[Suivant](domain-events-design-implementation.md)

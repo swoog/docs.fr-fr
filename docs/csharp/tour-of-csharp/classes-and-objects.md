@@ -3,12 +3,12 @@ title: Classes et objets dans C# - Visite guidée du langage C#
 description: Novice en matière de langage C# ? Lisez cette présentation des classes, des objets et de l’héritage
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 1e89d8b89e5f4f74d637a1e3674fb3959a231a49
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298290"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140279"
 ---
 # <a name="classes-and-objects"></a>Classes et objets
 
@@ -55,7 +55,7 @@ Vous trouverez ci-dessous une vue d’ensemble des types de membres qu'une class
 
 ## <a name="accessibility"></a>Accessibilité
 
-Chaque membre d’une classe a une accessibilité associée, qui contrôle les régions du texte du programme qui sont en mesure d’accéder au membre. Il existe cinq formes possibles d’accessibilité. Ils sont résumés ci-dessous.
+Chaque membre d’une classe a une accessibilité associée, qui contrôle les régions du texte du programme qui sont en mesure d’accéder au membre. Il existe six formes possibles d’accessibilité. Ils sont résumés ci-dessous.
 
 * `public`
     - Accès non limité
@@ -64,7 +64,7 @@ Chaque membre d’une classe a une accessibilité associée, qui contrôle les r
 * `internal`
     - Accès limité à l’assembly actuel (.exe, .dll, etc.)
 * `protected internal`
-    - Accès limité à la classe conteneur ou aux classes dérivées de la classe conteneur
+    - Accès limité à la classe conteneur, aux classes dérivées de la classe conteneur ou aux classes dans le même assembly
 * `private`
     - Accès limité à cette classe
 * `private protected`

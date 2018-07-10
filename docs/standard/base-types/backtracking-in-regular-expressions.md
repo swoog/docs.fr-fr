@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7caf42ee45f31e374bd2cbf7c700992130281ff0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579767"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071862"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Rétroaction dans les expressions régulières
 <a name="top"></a> La rétroaction se produit lorsqu'un modèle d'expression régulière contient des quantificateurs [facultatifs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) ou des [constructions d'alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), et que le moteur des expressions régulières retourne à l'état enregistré précédent pour poursuivre la recherche d'une correspondance. La rétroaction est essentielle à la puissance des expressions régulières ; elle permet aux expressions d'être puissantes et flexibles et de correspondre à des modèles très complexes. Cependant, cette puissance a un coût. La rétroaction est souvent le facteur le plus important qui affecte les performances du moteur des expressions régulières. Heureusement, le développeur contrôle le comportement du moteur des expressions régulières et comment il utilise la rétroaction. Cette rubrique explique comment la rétroaction fonctionne et comment elle peut être activée.  
@@ -169,7 +169,7 @@ ms.locfileid: "33579767"
 |`[-.\w]*`|Mettre en correspondance zéro, une ou plusieurs occurrences d'un trait d'union, d'un point ou d'un caractère alphabétique.|  
 |`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique.|  
 |`([-.\w]*[0-9A-Z])*`|Mettre en correspondance zéro, une ou plusieurs occurrences de la combinaison de zéro ou plus traits d'union, points ou caractères alphabétiques, suivis d'un caractère alphanumérique. Il s'agit du premier groupe de capture.|  
-|`@`|Mettre en correspondance un arobase (« @ »).|  
+|`@`|Mettre en correspondance une arobase (« \@ »).|  
   
  Le second modèle d'expression régulière, `^[0-9A-Z][-.\w]*(?<=[0-9A-Z])@`, utilise une assertion de postanalyse positive. Il est défini comme indiqué dans le tableau suivant.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "33579767"
 |`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
 |`[-.\w]*`|Mettre en correspondance zéro, une ou plusieurs occurrences d'un trait d'union, d'un point ou d'un caractère alphabétique.|  
 |`(?<=[0-9A-Z])`|Remonter au dernier caractère mis en correspondance et continuer la mise en correspondances si elle est alphanumérique. Notez que les caractères alphanumériques sont un sous-ensemble du jeu qui se compose de points, de traits d'union et de tous les caractères alphabétiques.|  
-|`@`|Mettre en correspondance un arobase (« @ »).|  
+|`@`|Mettre en correspondance une arobase (« \@ »).|  
   
 <a name="Lookahead"></a>   
 ### <a name="lookahead-assertions"></a>assertions de préanalyse  
