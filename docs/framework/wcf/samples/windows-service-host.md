@@ -10,6 +10,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807965"
 ---
 # <a name="windows-service-host"></a>Windows Service Host
 Cet exemple montre un service Windows Communication Foundation (WCF) hébergé dans un Service Windows managé. Services Windows sont contrôlés à l’aide de l’applet Services **le panneau de configuration** et peut être configuré pour démarrer automatiquement après un redémarrage du système. L'exemple se compose d'un programme client et d'un programme de service Windows. Le service est implémenté en tant que programme .exe et contient son propre code d'hébergement. Dans d'autres environnements d'hébergement, tels que WAS (Windows Process Activation Services) ou IIS (Internet Information Services), vous n'avez pas besoin d'écrire le code d'hébergement.  
