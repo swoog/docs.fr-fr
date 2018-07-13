@@ -2,12 +2,12 @@
 title: Sérialisation de génériques de services Web, exemple de technologie
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 29cfa8f66f4b465d30c85c6944b8f3d94203f489
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 799206b1bd86e98c87441771174441d07074a325
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585614"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936774"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Sérialisation de génériques de services Web, exemple de technologie
 [Télécharger l’exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -58,7 +58,7 @@ ms.locfileid: "33585614"
   
 1.  Ouvrez une fenêtre de navigateur et sélectionnez sa barre d'adresses.  
   
-2.  Type  **http://localhost/[directory]/Service.asmx virtuel**, où [répertoire virtuel] représente le répertoire virtuel que vous avez créé lors de la génération de l’exemple.  
+2.  Type `http://localhost/[virtual directory]/Service.asmx`, où `[virtual directory]` représente le répertoire virtuel que vous avez créé lors de la création de l’exemple.  
   
 ## <a name="remarks"></a>Notes  
  L'exemple affiche une page ASP.NET par défaut qui contient des liens vers la définition du service Web. Vous pouvez modifier le code source pour le service Web, mais également personnaliser l'affichage. Pour plus d’informations, consultez [Création de clients de service web XML](https://msdn.microsoft.com/library/c606f3cb-4111-45b4-ae42-9300420fa16c).  
