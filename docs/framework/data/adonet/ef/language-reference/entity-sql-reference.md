@@ -64,7 +64,7 @@ Les opérateurs logiques testent le caractère vrai ou faux d'une condition. L'e
 |Opérateur|Description|
 |--------------|-----------------|
 |[&& (AND logique)](and-entity-sql.md)|AND logique|
-|[!, (NOT logique)](not-entity-sql.md)|NOT logique.|
+|[\! (NOT logique)](not-entity-sql.md)|NOT logique.|
 |[&#124;&#124;(Ou logique)](or-entity-sql.md)|OR logique|
 |[CASE](case-entity-sql.md)|Évalue un ensemble d'expressions booléennes pour déterminer le résultat.|
 |[THEN](then-entity-sql.md)|Le résultat d’une [lorsque](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) clause lorsqu’il a la valeur true.|
