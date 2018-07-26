@@ -1,5 +1,5 @@
 ---
-title: '&lt;SMTP&gt; élément (paramètres réseau)'
+title: '&lt;SMTP&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -11,15 +11,15 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741891"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874921"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; élément (paramètres réseau)
-Configure le format de remise, de la méthode de remise et à partir de l’adresse pour l’envoi des messages électroniques.  
+# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; , élément (paramètres réseau)
+Configure le format de remise, la méthode de remise et à partir de l’adresse pour l’envoi des e-mails.  
   
  \<configuration>  
 \<system.net>  
@@ -46,7 +46,7 @@ Configure le format de remise, de la méthode de remise et à partir de l’adre
 |Attribut|Description|  
 |---------------|-----------------|  
 |`deliveryFormat`|Spécifie le format de remise de messages électroniques sortants. Les valeurs acceptables sont SevenBit et International.|  
-|`deliveryMethod`|Spécifie la méthode de remise pour les messages électroniques. Les valeurs acceptables sont network, pickupDirectoryFromIis et SpecifiedPickupDirectory.|  
+|`deliveryMethod`|Spécifie la méthode de remise pour les e-mails. Les valeurs acceptables sont réseau, PickupDirectoryFromIis et SpecifiedPickupDirectory.|  
 |`from`|Spécifie l’adresse d’origine de messages électroniques sortants.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -54,7 +54,7 @@ Configure le format de remise, de la méthode de remise et à partir de l’adre
 |Attribut|Description|  
 |---------------|-----------------|  
 |`specifiedPickupDirectory`|Configure le répertoire local pour un serveur SMTP Simple Mail Transport Protocol ().|  
-|`network`|Configure les options réseau pour un serveur SMTP externe.|  
+|`network`|Configure les options de réseau pour un serveur SMTP externe.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -63,13 +63,13 @@ Configure le format de remise, de la méthode de remise et à partir de l’adre
 |[\<mailSettings>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configure les options d’envoi du courrier.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant spécifie les paramètres SMTP appropriés pour envoyer un courrier électronique à l’aide des informations d’identification de réseau par défaut.  
+ L’exemple suivant spécifie les paramètres SMTP appropriés pour envoyer un e-mail à l’aide des informations d’identification du réseau par défaut.  
   
 ```xml  
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

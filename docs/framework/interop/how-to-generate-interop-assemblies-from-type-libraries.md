@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aea23daff28b50678b9fa7902857fc302494c4a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62d9213e58aaabd0b4001d5c6a7fd6fd375eba2e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387729"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874856"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>Comment : générer des assemblys d'interopérabilité à partir de bibliothèques de types
 L’outil en ligne de commande [Tlbimp.exe (importateur de bibliothèques de types)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) permet de convertir les coclasses et les interfaces figurant dans une bibliothèque de types COM en métadonnées. Cet outil crée automatiquement un assembly d’interopérabilité et un espace de noms pour les informations sur les types. Une fois les métadonnées d’une classe disponibles, les clients managés peuvent créer des instances du type COM et appeler ses méthodes, comme s’il s’agissait d’une instance .NET. Tlbimp.exe convertit en une seule opération l’intégralité d’une bibliothèque de types en métadonnées et ne peut pas générer d’informations sur les types pour un sous-ensemble de types définis dans une bibliothèque de types.  
@@ -32,13 +32,13 @@ L’outil en ligne de commande [Tlbimp.exe (importateur de bibliothèques de typ
  La commande suivante produit l’assembly Loanlib.dll dans l’espace de noms `Loanlib`.  
   
 ```  
-tlbimp Loanlib.dll  
+tlbimp Loanlib.tlb  
 ```  
   
  La commande suivante produit un assembly d’interopérabilité avec un nom modifié (LOANLib.dll).  
   
 ```  
-tlbimp LoanLib.dll /out: LOANLib.dll  
+tlbimp LoanLib.tlb /out: LOANLib.dll  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

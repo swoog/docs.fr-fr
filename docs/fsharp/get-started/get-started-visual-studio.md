@@ -1,69 +1,53 @@
 ---
-title: 'Prise en main) (F # dans Visual Studio'
+title: 'Bien démarrer avec F # dans Visual Studio'
 description: 'Découvrez comment utiliser F # avec Visual Studio.'
-ms.date: 02/13/2017
-ms.openlocfilehash: 22fbe8086ec133605e1d9b4b28e524fe2ed8ac28
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 07/03/2018
+ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728532"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874713"
 ---
-# <a name="get-started-with-f-in-visual-studio"></a>Prise en main) (F # dans Visual Studio
+# <a name="get-started-with-f-in-visual-studio"></a>Bien démarrer avec F # dans Visual Studio
 
-F # et les outils Visual F # sont pris en charge dans l’IDE de Visual Studio.  Pour commencer, vous devez [télécharger Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), si vous n’avez pas encore.  Cet article utilise Visual Studio 2017 Community Edition, mais vous pouvez utiliser F # avec la version de votre choix.
+F # et les outils Visual F # sont pris en charge dans l’IDE Visual Studio.
 
-## <a name="installing-f"></a>Lors de l’installation) (F # #
+Pour commencer, assurez-vous d’avoir [installé Visual Studio avec F #](install-fsharp.md#install-f-with-visual-studio).
 
-Si vous téléchargez Visual Studio pour la première fois, il sera tout d’abord installer le programme d’installation de Visual Studio.  Installer une version de Visual Studio 2017 du programme d’installation. Si vous avez déjà installé, cliquez sur **modifier**.
+## <a name="creating-a-console-application"></a>Création d’une application de console
 
-Vous verrez ensuite une liste de charges de travail. Vous pouvez installer F # par le biais des charges de travail suivants :
+Un des projets plus simples dans Visual Studio est l’Application de Console.  Voici comment faire.  Une fois que Visual Studio est ouvert :
 
-|Charge de travail|Action|
-|--------|------|
-| Développement multiplateforme .NET Core | Aucune action - F # n’est installée par défaut |
-| Développement web et ASP.NET | Aucune action - F # n’est installée par défaut |
-| Développement Azure | Aucune action - F # n’est installée par défaut |
-| Développement mobile en .NET | Aucune action - F # n’est installée par défaut |
-| Applications de science des données et analytiques | Aucune action - F # n’est installée par défaut |
-| Développement .NET Desktop | Sélectionnez **prise en charge de bureau langage F #** à partir de la droite |
-| Traitement et stockage de données | Sélectionnez **prise en charge de bureau langage F #** à partir de la droite |
+1. Sur le **fichier** menu, pointez sur **New**, puis choisissez **projet**.
 
-Ensuite, cliquez sur **modifier** dans l’angle inférieur droit.  Ceci installe tout ce dont vous avez sélectionné.  Vous pouvez ensuite ouvrir Visual Studio 2017 avec prise en charge linguistique F # en cliquant sur **lancer**.
-
-## <a name="creating-a-console-application"></a>Création d’une application console
-
-Un des projets dans Visual Studio plus simples est de l’Application Console.  Voici comment faire.  Une fois Visual Studio ouvert :
-
-1. Sur le **fichier** menu, pointez sur **nouveau**, puis choisissez **projet**.
-
-2.  Dans le nouveau projet de boîte de dialogue, sous **modèles**, vous devez voir **Visual F #**.  Choisissez cette option pour afficher les modèles F #.
+2.  Dans la nouvelle boîte de dialogue projet, sous **modèles**, vous devez voir **Visual F #**.  Choisissez cette option pour afficher les modèles F #.
 
 3. Sélectionnez **.NET Core application Console** ou **application Console**.
 
-3. Choisissez le **OK** bouton permettant de créer le projet F # !  Vous devez maintenant voir un projet F # dans l’Explorateur de solutions.
+3. Choisissez le **OK** bouton pour créer le projet F # !  Vous devez maintenant voir un projet F # dans l’Explorateur de solutions.
 
-## <a name="writing-your-code"></a>L’écriture de votre code.
+## <a name="writing-your-code"></a>Écrivez votre code
 
-Nous pouvons commencer à écrire du code tout d’abord.  Assurez-vous que le `Program.fs` fichier est ouvert, puis remplacez son contenu par les éléments suivants :
+Commençons par écrire du code tout d’abord.  Assurez-vous que le `Program.fs` fichier est ouvert, puis remplacez son contenu par le code suivant :
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Dans l’exemple de code précédent, une fonction `square` a été défini qui accepte une entrée nommée `x` et multiplie par lui-même.  Étant donné que F # utilise [l’inférence de Type](../language-reference/type-inference.md), le type de `x` n’a pas besoin d’être spécifiés.  Le compilateur F # comprend les types où la multiplication est valide et affectera un type à `x` selon la façon dont `square` est appelée.  Si vous pointez sur `square`, vous devez voir les éléments suivants :
+Dans l’exemple de code précédent, une fonction `square` a été trouvé qui accepte une entrée nommée `x` et le multiplie par lui-même.  Étant donné que F # utilise [l’inférence de Type](../language-reference/type-inference.md), le type de `x` n’a pas besoin d’être spécifié.  Le compilateur F # comprend les types où la multiplication est valide et affectera un type à `x` selon la façon dont `square` est appelée.  Si vous pointez sur `square`, vous devez voir les éléments suivants :
 
 ```
 val square: x:int -> int
 ```
 
-C’est ce que l'on appelle la signature de type de la fonction.  Il peut être lu comme suit : « carrée est une fonction qui accepte un entier nommé x et produit un entier ».  Notez que le compilateur a donné `square` le `int` type pour le moment - il s’agit, car la multiplication n’est pas générique sur *tous les* types, mais plutôt générique entre un ensemble fermé de types.  Le compilateur F # prélevé `int` sur ce point, mais il ajuste la signature de type si vous appelez `square` avec un autre type d’entrée, comme un `float`.
+C’est ce qui est appelé signature de type de la fonction.  Il peut être lu comme suit : « carré est une fonction qui prend un entier nommé x et produit un entier ».  Notez que le compilateur retournait `square` le `int` type pour le moment - il s’agit, car la multiplication n’est pas générique sur *tous les* types, mais plutôt générique entre un ensemble fermé de types.  Le compilateur F # prélevé `int` sur ce point, mais il ajuste la signature de type si vous appelez `square` avec un autre type d’entrée, comme un `float`.
 
-Une autre fonction, `main`, est défini, ce qui est décoré avec le `EntryPoint` attribut pour indiquer au compilateur F # que l’exécution du programme doit commencer de là.  Il suit la même convention que les autres [les langages de programmation de style C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), où les arguments de ligne de commande peuvent être passés à cette fonction, et un code d’entier est retourné (généralement `0`).
+Une autre fonction, `main`, est défini, ce qui est décoré avec le `EntryPoint` attribut pour indiquer au compilateur F # que l’exécution du programme doit commencer.  Il suit la même convention que les autres [les langages de programmation de style C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), où les arguments de ligne de commande peuvent être passés à cette fonction, et un code entier est retourné (généralement `0`).
 
-Il se trouve dans cette fonction que nous appelons le `square` fonction avec un argument de `12`.  Le compilateur F # puis assigne le type de `square` être `int -> int` (autrement dit, une fonction qui prend un `int` et produit un `int`).  L’appel à `printfn` est une fonction d’impression mis en forme qui utilise une chaîne de format, semblable aux langages de programmation de style C, les paramètres qui correspondent à celles spécifiées dans la chaîne de format, puis imprime le résultat et une nouvelle ligne.
+Il se trouve dans cette fonction que nous appelons le `square` fonction avec un argument de `12`.  Le compilateur F # puis assigne le type de `square` être `int -> int` (autrement dit, une fonction qui prend un `int` et produit un `int`).  L’appel à `printfn` est une fonction d’impression mis en forme qui utilise une chaîne de format, similaire aux langages de programmation de style C, les paramètres qui correspondent à celles spécifiées dans la chaîne de format et imprime ensuite le résultat et une nouvelle ligne.
 
 ## <a name="running-your-code"></a>Exécution de votre code
 
-Vous pouvez exécuter le code et afficher les résultats en appuyant sur **ctrl-f5**.  Il exécute le programme sans débogage et vous permet de voir les résultats.  Vous pouvez également choisir la **déboguer** menu de niveau supérieur d’élément dans Visual Studio et choisissez **démarrer sans débogage**.
+Vous pouvez exécuter le code et afficher les résultats en appuyant sur **ctrl-f5**.  Cela exécutera le programme sans débogage et vous permet de voir les résultats.  Vous pouvez également choisir le **déboguer** menu de niveau supérieur d’élément dans Visual Studio et choisissez **démarrer sans débogage**.
 
 Vous devez maintenant voir ce qui suit imprimé dans la fenêtre de console Visual Studio de s’afficher :
 
@@ -71,15 +55,11 @@ Vous devez maintenant voir ce qui suit imprimé dans la fenêtre de console Visu
 12 squared is 144!
 ```
 
-Félicitations !  Vous avez créé votre premier projet F # dans Visual Studio, écrit qu'une fonction) (F # imprimer les résultats de l’appel de cette fonction et exécutez le projet pour afficher certains résultats.
+Félicitations !  Vous avez créé votre premier projet F # dans Visual Studio, écrit qu'une fonction F # imprimer les résultats de l’appel de cette fonction et exécutez le projet pour afficher certains résultats.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous n’avez pas encore, consultez le [visite guidée de F #](../tour.md), qui traite de certaines fonctionnalités de base du langage F #.  Il vous donner une vue d’ensemble de certaines des fonctionnalités de F # et fournissent des exemples de code suffisamment que vous pouvez copier dans Visual Studio et exécuter.  Il existe également des ressources utiles externes, vous pouvez utiliser, a dans le [Guide F #](../index.md).
+Si vous n’avez pas déjà, consultez le [visite guidée de F #](../tour.md), qui aborde certaines des principales fonctionnalités du langage F #.  Il vous donner une vue d’ensemble de certaines des fonctionnalités de F # et fournissent des exemples de code suffisamment que vous pouvez copier dans Visual Studio et exécuter.  Il existe également des ressources exceptionnelles externes, vous pouvez utiliser, présentée dans le [Guide F #](../index.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Visual F#](index.md)  
- [Présentation de F#](../tour.md)  
- [Référence du langage F #](../language-reference/index.md)  
- [Inférence de type](../language-reference/type-inference.md)  
- [Référence des symboles et l’opérateur](../language-reference/symbol-and-operator-reference/index.md)  
+ [Visite guidée de F #](../tour.md) [référence du langage F #](../language-reference/index.md) [l’inférence de Type](../language-reference/type-inference.md) [symbole et l’opérateur de référence](../language-reference/symbol-and-operator-reference/index.md)

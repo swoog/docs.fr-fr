@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652842"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961019"
 ---
 # <a name="reference-visual-basic"></a>Référence (Visual Basic)
-Cette section fournit des liens vers des informations de référence sur différents aspects de programmation Visual Basic.  
+Cette section fournit des liens vers des informations de référence sur différents aspects de la programmation de Visual Basic.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Informations de référence sur le langage Visual Basic](../../visual-basic/language-reference/index.md)  
@@ -26,7 +26,7 @@ Cette section fournit des liens vers des informations de référence sur différ
  Propose des liens vers des informations sur l'utilisation de la bibliothèque de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] .  
   
  [Spécification du langage Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Fournit des liens vers la spécification du langage Visual Basic terminée, contient des informations détaillées sur tous les aspects du langage.  
+ Fournit des liens vers la spécification complète du langage Visual Basic, qui contient des informations détaillées sur tous les aspects du langage.  
   
 ## <a name="reference"></a>Référence  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
@@ -40,7 +40,7 @@ Cette section fournit des liens vers des informations de référence sur différ
  Contient des rubriques pour les boîtes de dialogue et fenêtres utilisées dans Visual Studio.  
   
  [Outils XML dans Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Fournit des liens vers des rubriques sur divers outils XML disponibles dans Visual Studio.  
+ Fournit des liens vers des rubriques sur les divers outils XML disponibles dans Visual Studio.  
   
  [Informations de référence sur l’extensibilité et l’automation](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Fournit des liens vers des rubriques qui décrivent l’automatisation et extensibilité dans Visual Studio, pour les composants partagés et spécifiques au langage.
+ Fournit des liens vers des rubriques décrivant l’automatisation et extensibilité dans Visual Studio, pour les composants partagés et spécifiques au langage.

@@ -2,12 +2,12 @@
 title: Threads (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 9f1c7071972d8e449bc06054fbe6d70e447b694f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335833"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874664"
 ---
 # <a name="threading-c"></a>Threads (C#)
 Les threads donnent la possibilité à votre programme C# d’effectuer des traitements simultanés, ce qui vous permet de faire plusieurs opérations à la fois. Par exemple, vous pouvez utiliser les threads pour surveiller les entrées de l’utilisateur, effectuer des tâches en arrière-plan et gérer des flux d’entrée simultanés.  
@@ -41,7 +41,6 @@ Les threads donnent la possibilité à votre programme C# d’effectuer des trai
 |[Paramètres et valeurs de retour pour les procédures multithreads (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|Décrit comment passer et retourner des paramètres avec des applications multithreads.|  
 |[Procédure pas à pas : multithreading avec le composant BackgroundWorker (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|Montre comment créer une application multithread simple.|  
 |[Synchronisation des threads (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|Décrit comment contrôler les interactions des threads.|  
-|[Minuteurs de thread (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|Décrit comment exécuter des procédures sur des threads distincts à intervalles fixes.|  
 |[Mise en pool de threads (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Décrit comment utiliser un pool de threads de travail qui sont gérés par le système.|  
 |[Guide pratique pour utiliser un pool de threads (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Montre l’utilisation synchronisée de plusieurs threads dans le pool de threads.|  
 |[Thread](../../../../../docs/standard/threading/index.md)|Décrit comment implémenter des threads dans le .NET Framework.|

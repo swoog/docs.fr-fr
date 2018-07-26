@@ -8,11 +8,11 @@ helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
 ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566083"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961324"
 ---
 # <a name="do-c-reference"></a>do (référence C#)
 
@@ -26,7 +26,7 @@ Vous pouvez également quitter une boucle `do-while` en utilisant les instructio
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de l’instruction `do`. Sélectionnez **Exécuter** pour exécuter l’exemple de code. Après cela, vous pourrez modifier le code et le réexécuter.
+L’exemple suivant illustre l’utilisation de l’instruction `do`. Sélectionnez **Exécuter** pour exécuter l’exemple de code. Après cela, vous pouvez modifier le code et le réexécuter.
 
 [!code-csharp-interactive[do loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#4)]
 

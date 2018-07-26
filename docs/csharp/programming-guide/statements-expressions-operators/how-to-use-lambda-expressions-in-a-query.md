@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 7b9808e1f9bfca362a1cc97aa97d77482928cc68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 97abbada9ff77c6e6d4fa401e956a6bd7edca9d5
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328134"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936761"
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Guide pratique pour utiliser des expressions lambda dans une requête (Guide de programmation C#)
 Vous n’utilisez pas d’expressions lambda directement dans la syntaxe de requête, mais vous les utilisez dans les appels de méthode qui peuvent être contenus dans des expressions de requête. En effet, certaines opérations de requête ne peuvent être exprimées que dans une syntaxe de méthode. Pour plus d’informations sur la différence entre la syntaxe de requête et la syntaxe de méthode, consultez [Syntaxe de requête et syntaxe de méthode dans LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
@@ -29,6 +29,7 @@ Vous n’utilisez pas d’expressions lambda directement dans la syntaxe de requ
 ## <a name="compiling-the-code"></a>Compilation du code  
  Pour exécuter ce code, copiez-collez la méthode dans la `StudentClass` qui est fournie dans [Guide pratique pour interroger une collection d’objets](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md), puis appelez-la à partir de la méthode `Main`.  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Arborescences d’expressions](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+## <a name="see-also"></a>Voir aussi
+
+[Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+[Arborescences d’expressions (C#)](../concepts/expression-trees/index.md)  

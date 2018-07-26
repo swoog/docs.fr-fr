@@ -3,11 +3,11 @@ title: Guide pratique pour interroger LINQ to XML à l’aide de XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
 ms.openlocfilehash: a02149719afa19350a9baf15c41bd3548daa1344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317084"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959853"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>Guide pratique pour interroger LINQ to XML à l’aide de XPath (C#)
 Cette rubrique présente les méthodes d’extension qui vous permettent d’interroger une arborescence XML à l’aide de XPath. Pour plus d'informations sur l'utilisation de ces méthodes d'extension, consultez <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Call statement [Visual Basic]
 - procedures [Visual Basic], calling
 ms.assetid: e5b31571-6867-406f-b8e7-a3f9aae4723a
-ms.openlocfilehash: 2074f44aedf59f1570e73c898a9bf64e57034923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 259fcc6f1c59df09e768a08204df81aa8105de53
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603390"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936787"
 ---
 # <a name="call-statement-visual-basic"></a>Call, instruction (Visual Basic)
 Transfère le contrôle à un `Function`, `Sub`, ou de la procédure de la bibliothèque de liens dynamiques (DLL).  
@@ -25,16 +25,16 @@ Transfère le contrôle à un `Function`, `Sub`, ou de la procédure de la bibli
 ```  
   
 ## <a name="parts"></a>Composants  
- `procedureName`  
- Obligatoire. Nom de la procédure à appeler.  
-  
- `argumentList`  
- Facultatif. Liste de variables ou d’expressions représentant les arguments passés à la procédure lorsqu’elle est appelée. Plusieurs arguments sont séparés par des virgules. Si vous incluez `argumentList`, vous devez le placer entre parenthèses.  
+|||
+|---|---|
+|`procedureName`|Obligatoire. Nom de la procédure à appeler.|
+|`argumentList`|Facultatif. Liste des variables ou expressions représentant les arguments passés à la procédure lorsqu’elle est appelée. Plusieurs arguments sont séparés par des virgules. Si vous incluez `argumentList`, vous devez le placer entre parenthèses.|
+|||
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser le `Call` mot clé lorsque vous appelez une procédure. Pour la plupart des appels de procédure, vous n’êtes pas obligé d’utiliser ce mot clé.  
   
- Vous utilisez généralement la `Call` mot clé lorsque l’expression appelée ne commence pas par un identificateur. Utilisation de la `Call` n’est pas recommandé de mot clé pour d’autres utilisations.  
+ Vous utilisez généralement le `Call` mot clé lorsque l’expression appelée ne commence pas par un identificateur. Utilisation de la `Call` mot clé pour d’autres utilisations n’est pas recommandé.  
   
  Si la procédure retourne une valeur, la `Call` instruction ignore.  
   

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
 ms.openlocfilehash: b33b8b2d17c240e380377528d4f5d2f511381a7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655321"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959950"
 ---
 # <a name="local-type-inference-visual-basic"></a>Inférence de type local (Visual Basic)
 Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer les types de données des variables locales déclarées sans un `As` clause. Le compilateur déduit le type de la variable du type de l’expression d’initialisation. Cela vous permet de déclarer des variables sans déclarer explicitement un type, comme illustré dans l’exemple suivant. À la suite les déclarations, les deux `num1` et `num2` sont fortement typées en tant qu’entiers.  
@@ -25,20 +25,20 @@ Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer le
  [!code-vb[VbVbalrTypeInference#1](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_1.vb)]  
  
 > [!NOTE]
->  Si vous ne souhaitez pas `num2` dans l’exemple précédent typé comme un `Integer`, vous pouvez spécifier un autre type à l’aide d’une déclaration comme `Dim num3 As Object = 3` ou `Dim num4 As Double = 3`.  
+>  Si vous ne souhaitez pas `num2` dans l’exemple précédent soit typée comme un `Integer`, vous pouvez spécifier un autre type à l’aide d’une déclaration telle que `Dim num3 As Object = 3` ou `Dim num4 As Double = 3`.  
 
 > [!NOTE]
->  L’inférence de type peut être utilisé uniquement pour les variables locales non statiques ; Il ne peut pas être utilisé pour déterminer le type des champs de la classe, des propriétés ou des fonctions.
+>  Inférence de type peut être utilisée uniquement pour les variables locales non statiques ; Il ne peut pas être utilisé pour déterminer le type des champs de classe, des propriétés ou des fonctions.
  
- Inférence de type local s’applique au niveau de la procédure. Il ne peut pas être utilisé pour déclarer des variables au niveau du module (dans une classe, une structure, un module ou une interface, mais pas dans une procédure ou un bloc). Si `num2` dans l’exemple précédent est un champ d’une classe au lieu d’une variable locale dans une procédure, la déclaration génère une erreur avec `Option Strict` et classe `num2` comme un `Object` avec `Option Strict` désactivé. De même, l’inférence de type local ne s’applique pas aux variables de niveau procédure déclarées en tant que `Static`.  
+ Inférence de type local s’applique au niveau de la procédure. Il ne peut pas être utilisé pour déclarer des variables au niveau du module (au sein d’une classe, une structure, un module ou une interface, mais pas dans une procédure ou un bloc). Si `num2` dans l’exemple précédent ont un champ d’une classe au lieu d’une variable locale dans une procédure, la déclaration génère une erreur avec `Option Strict` et classifieriez `num2` comme un `Object` avec `Option Strict` désactivé. De même, l’inférence de type local ne s’applique pas aux variables de niveau procédure déclarées en tant que `Static`.  
   
-## <a name="type-inference-vs-late-binding"></a>Visual Studio de l’inférence de type. Liaison tardive  
- Code qui utilise l’inférence de type ressemble au code qui s’appuie sur la liaison tardive. Toutefois, l’inférence de type type fort à la variable au lieu de laisser sous la forme `Object`. Le compilateur utilise l’initialiseur de variable pour déterminer le type de variable au moment de la compilation pour produire un code à liaison anticipée. Dans l’exemple précédent, `num2`, comme `num1`, est typé comme un `Integer`.  
+## <a name="type-inference-vs-late-binding"></a>Visual Studio l’inférence de type. La liaison tardive  
+ Code utilise l’inférence de type ressemble au code qui s’appuie sur la liaison tardive. Toutefois, l’inférence de type type fort à la variable au lieu de laisser en tant que `Object`. Le compilateur utilise l’initialiseur de variable pour déterminer le type de variable au moment de la compilation pour produire un code à liaison anticipée. Dans l’exemple précédent, `num2`, comme `num1`, est typé comme un `Integer`.  
   
- Le comportement de variables à liaison anticipée diffère de celui des variables à liaison tardive, pour lequel le type est connu uniquement au moment de l’exécution. Connaître que le type tôt permet au compilateur d’identifier les problèmes avant l’exécution, allouer la mémoire précisément et effectuer d’autres optimisations. Liaison anticipée permet également de l’environnement de développement intégré (IDE) pour fournir l’aide d’IntelliSense sur les membres d’un objet Visual Basic. Liaison anticipée est également recommandée pour les performances. C’est parce que toutes les données stockées dans une variable à liaison tardive doivent être encapsulées en tant que type `Object`, ainsi que l’accès aux membres du type au moment de l’exécution ralentit le programme.  
+ Le comportement des variables à liaison anticipée diffère de celui des variables à liaison tardive, dont le type est connu uniquement au moment de l’exécution. Connaître le type tôt permet au compilateur d’identifier les problèmes avant l’exécution, d’allouer la mémoire précisément et d’effectuer d’autres optimisations. Liaison anticipée permet également de l’environnement de développement intégré (IDE) pour fournir une aide IntelliSense sur les membres d’un objet Visual Basic. Liaison anticipée est également par défaut pour les performances. Il s’agit, car toutes les données stockées dans une variable à liaison tardive doivent être encapsulées en tant que type `Object`, ainsi que l’accès aux membres du type au moment de l’exécution ralentit le programme.  
   
 ## <a name="examples"></a>Exemples  
- L’inférence de type se produit lorsqu’une variable locale est déclarée sans un `As` clause et initialisé. Le compilateur utilise le type de la valeur initiale assignée en tant que le type de la variable. Par exemple, chacune des lignes de code suivants déclare une variable de type `String`.  
+ Inférence de type se produit lorsqu’une variable locale est déclarée sans un `As` clause et initialisé. Le compilateur utilise le type de la valeur initiale assignée en tant que le type de la variable. Par exemple, chacune des lignes de code suivants déclare une variable de type `String`.  
   
  [!code-vb[VbVbalrTypeInference#2](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_2.vb)]  
   
@@ -50,16 +50,16 @@ Le compilateur Visual Basic utilise *l’inférence de type* pour déterminer le
   
  [!code-vb[VbVbalrTypeInference#4](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_4.vb)]  
   
- Inférence de type local peut être utilisé dans `Using` instructions pour établir le type de nom de la ressource, comme illustré dans l’exemple suivant.  
+ Inférence de type local peut être utilisé dans `Using` instructions pour établir le type de nom de la ressource, comme le montre l’exemple suivant.  
   
  [!code-vb[VbVbalrTypeInference#7](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_5.vb)]  
   
- Le type d’une variable peut également être déduit à partir des valeurs de retour des fonctions, comme illustré dans l’exemple suivant. Les deux `pList1` et `pList2` sont des tableaux de processus, car `Process.GetProcesses` retourne un tableau de processus.  
+ Le type d’une variable peut également être déduit à partir de valeurs de retour des fonctions, comme le montre l’exemple suivant. Les deux `pList1` et `pList2` sont des tableaux de processus, car `Process.GetProcesses` retourne un tableau de processus.  
   
  [!code-vb[VbVbalrTypeInference#5](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/local-type-inference_6.vb)]  
   
 ## <a name="option-infer"></a>Option Infer  
- `Option Infer` vous permet de que spécifier si l’inférence de type local est autorisée dans un fichier particulier. Pour activer ou bloquer l’option, tapez les instructions suivantes au début du fichier.  
+ `Option Infer` vous permet de que spécifier si l’inférence de type local est autorisée dans un fichier particulier. Pour activer ou bloquer l’option, tapez une des instructions suivantes au début du fichier.  
   
  `Option Infer On`  
   

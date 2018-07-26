@@ -1,5 +1,5 @@
 ---
-title: '&lt;specifiedPickupDirectory&gt; élément (paramètres réseau)'
+title: '&lt;specifiedPickupDirectory&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -11,14 +11,14 @@ ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3a982bdbe4953691d4e8e7663f14059ff4771934
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50ab7387fc5e2cac65cac1a6dba0e563225beec9
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743974"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874700"
 ---
-# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; élément (paramètres réseau)
+# <a name="ltspecifiedpickupdirectorygt-element-network-settings"></a>&lt;specifiedPickupDirectory&gt; , élément (paramètres réseau)
 Configure le répertoire local pour un serveur SMTP Simple Mail Transport Protocol ().  
   
  \<configuration>  
@@ -42,7 +42,7 @@ Configure le répertoire local pour un serveur SMTP Simple Mail Transport Protoc
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|Le répertoire dans lequel enregistrent les applications de courrier électronique pour un traitement ultérieur par le serveur SMTP.|  
+|`pickupDirectoryLocation`|Le répertoire dans lequel les applications enregistrent e-mail pour un traitement ultérieur par le serveur SMTP.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -63,7 +63,7 @@ Configure le répertoire local pour un serveur SMTP Simple Mail Transport Protoc
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="specifiedPickupDirectory">  
+      <smtp deliveryMethod="SpecifiedPickupDirectory">  
         <specifiedPickupDirectory  
           pickupDirectoryLocation="c:\maildrop"  
         />  

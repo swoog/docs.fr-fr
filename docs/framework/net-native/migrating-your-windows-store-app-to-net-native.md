@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a316cd8ed82f9833b23fe313b8f4c4903bd0a433
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a44819e8a8c0b07b3ffbfb2d92533cbdc558ef6
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397778"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874742"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migration de votre application du Windows Store vers .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] fournit une compilation statique des applications dans le Windows Store ou sur l'ordinateur du développeur. Cela diffère de la compilation dynamique effectuée pour les applications du Windows Store par le compilateur juste-à-temps (JIT) ou le [générateur d'images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sur l'appareil. Malgré les différences, [!INCLUDE[net_native](../../../includes/net-native-md.md)] essaie d’assurer la compatibilité avec [.NET pour les applications du Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Pour l'essentiel, les éléments qui fonctionnent sur .NET pour les applications du Windows Store fonctionnent également avec [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Toutefois, dans certains cas, vous pouvez rencontrer des changements de comportement. Ce document traite de ces différences entre la version .NET standard pour les applications du Windows Store et [!INCLUDE[net_native](../../../includes/net-native-md.md)] dans les domaines suivants :  
+.NET native fournit une compilation statique des applications dans le Windows Store ou sur l’ordinateur du développeur. Cela diffère de la compilation dynamique effectuée pour les applications du Windows Store par le compilateur juste-à-temps (JIT) ou le [générateur d'images natives (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) sur l'appareil. Malgré les différences, .NET Native tente de maintenir la compatibilité avec les [les applications .NET pour Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). La plupart du temps, les éléments qui fonctionnent sur les applications .NET pour Windows Store fonctionnent également avec .NET Native.  Toutefois, dans certains cas, vous pouvez rencontrer des changements de comportement. Ce document aborde ces différences entre les applications .NET pour Windows Store standard et .NET Native dans les domaines suivants :  
   
 -   [Différences générales au moment de l'exécution](#Runtime)  
   
@@ -27,36 +27,36 @@ ms.locfileid: "33397778"
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>Différences générales au moment de l'exécution  
   
--   Les exceptions, telles que <xref:System.TypeLoadException>, qui sont levées par le compilateur JIT quand une application s'exécute sur le Common Language Runtime (CLR) entraînent généralement des erreurs de compilation pendant le traitement par [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+-   Exceptions, telles que <xref:System.TypeLoadException>, qui sont levées par le compilateur JIT quand une application s’exécute sur le common language runtime (CLR) entraîne généralement des erreurs de compilation lors du traitement par .NET Native.  
   
--   N'appelez pas la méthode <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> à partir du thread d'interface utilisateur d'une application. Cela peut entraîner un blocage sur [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+-   N'appelez pas la méthode <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> à partir du thread d'interface utilisateur d'une application. Cela peut entraîner un blocage sur .NET Native.  
   
--   Ne vous fiez pas à l'ordre d'appel des constructeurs de classe statique. Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)], l'ordre d'appel est différent de l'ordre sur le runtime standard. (Même avec le runtime standard, évitez de vous fier à l'ordre d'exécution des constructeurs de classe statique.)  
+-   Ne vous fiez pas à l'ordre d'appel des constructeurs de classe statique. Dans .NET Native, l’ordre d’appel est différent de l’ordre sur le runtime standard. (Même avec le runtime standard, évitez de vous fier à l'ordre d'exécution des constructeurs de classe statique.)  
   
 -   Des boucles infinies sans appel (par exemple, `while(true);`) sur n'importe quel thread peuvent entraîner l'arrêt de l'application. Il en va de même dans le cas des attentes de longues durées ou infinies.  
   
--   Certains cycles d'initialisation générique ne lèvent pas d'exceptions dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Par exemple, le code suivant lève une exception <xref:System.TypeLoadException> sur le CLR standard, mais pas dans [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+-   Certains cycles d’initialisation générique ne lèvent des exceptions dans .NET Native. Par exemple, le code suivant lève une exception <xref:System.TypeLoadException> sur le CLR standard, Dans .NET Native, ce n’est pas.  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   Dans certains cas, [!INCLUDE[net_native](../../../includes/net-native-md.md)] fournit des implémentations différentes des bibliothèques de classes .NET Framework. Un objet retourné par une méthode implémente toujours les membres du type retourné. Toutefois, l'implémentation de sa sauvegarde étant différente, vous ne pourrez peut-être pas effectuer un cast vers le même ensemble de types comme vous le pourriez sur d'autres plateformes .NET Framework. Par exemple, dans certains cas, vous ne pourrez peut-être pas effectuer un cast de l'objet d'interface <xref:System.Collections.Generic.IEnumerable%601> retourné par des méthodes telles que <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> ou <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> vers `T[]`.  
+-   Dans certains cas, .NET Native fournit des implémentations différentes des bibliothèques de classes .NET Framework. Un objet retourné par une méthode implémente toujours les membres du type retourné. Toutefois, l'implémentation de sa sauvegarde étant différente, vous ne pourrez peut-être pas effectuer un cast vers le même ensemble de types comme vous le pourriez sur d'autres plateformes .NET Framework. Par exemple, dans certains cas, vous ne pourrez peut-être pas effectuer un cast de l'objet d'interface <xref:System.Collections.Generic.IEnumerable%601> retourné par des méthodes telles que <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> ou <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> vers `T[]`.  
   
--   Le cache WinInet n'est pas activé par défaut sur .NET pour les applications du Windows Store, mais il l'est sur [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Cela améliore les performances, mais a des implications pour les jeux de travail. Aucune action n'est nécessaire de la part du développeur.  
+-   Le cache WinInet n’est pas activé par défaut sur les applications .NET pour Windows Store, mais il se trouve sur .NET Native. Cela améliore les performances, mais a des implications pour les jeux de travail. Aucune action n'est nécessaire de la part du développeur.  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>Différences de programmation dynamique  
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] effectue des liaisons statiques dans le code à partir du .NET Framework pour rendre le code app-local afin d'optimiser les performances. Cependant, la taille des binaires doit demeurer petite, pour que l'ensemble du .NET Framework ne soit pas sollicité. Le compilateur [!INCLUDE[net_native](../../../includes/net-native-md.md)] résout cette limitation en utilisant un réducteur de dépendances qui supprime les références au code non utilisé. Toutefois, [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne peut pas tenir à jour ou générer certaines informations de type et du code quand ces informations ne peuvent pas être déduites statiquement au moment de la compilation, mais qu'elles sont au contraire récupérées de façon dynamique au moment de l'exécution.  
+ .NET native de manière statique dans le code à partir de .NET Framework pour rendre le code local d’application pour optimiser les performances. Cependant, la taille des binaires doit demeurer petite, pour que l'ensemble du .NET Framework ne soit pas sollicité. Le compilateur .NET Native résout cette limitation en utilisant un réducteur de dépendances qui supprime les références au code non utilisé. Toutefois, .NET Native ne peut pas mettre à jour ou générer des informations de type et le code lorsque ces informations ne peuvent pas être déduites statiquement au moment de la compilation, mais au lieu de cela récupérées de façon dynamique lors de l’exécution.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] n'active pas la réflexion et la programmation dynamique. Toutefois, tous les types ne peuvent pas être marqués pour réflexion, car la taille du code généré serait alors trop grande (notamment car la réflexion d'API publiques dans le .NET Framework est prise en charge). Le compilateur [!INCLUDE[net_native](../../../includes/net-native-md.md)] choisit intelligemment les types devant prendre en charge la réflexion, et il ne conserve les métadonnées et ne génère le code que pour ces types.  
+ .NET native active la réflexion et la programmation dynamique. Toutefois, tous les types ne peuvent pas être marqués pour réflexion, car la taille du code généré serait alors trop grande (notamment car la réflexion d'API publiques dans le .NET Framework est prise en charge). Le compilateur .NET Native choisit intelligemment sur les types doivent prendre en charge la réflexion, et il conserve les métadonnées et génère du code uniquement pour ces types.  
   
- Par exemple, pour la liaison de données, une application doit pouvoir mapper les noms de propriété sur les fonctions. Dans .NET pour les applications du Windows Store, le Common Language Runtime utilise automatiquement la réflexion pour fournir cette fonctionnalité pour les types managés et les types natifs disponibles publiquement. Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)], le compilateur inclut automatiquement les métadonnées des types auxquels vous liez des données.  
+ Par exemple, pour la liaison de données, une application doit pouvoir mapper les noms de propriété sur les fonctions. Dans .NET pour les applications du Windows Store, le Common Language Runtime utilise automatiquement la réflexion pour fournir cette fonctionnalité pour les types managés et les types natifs disponibles publiquement. Dans .NET Native, le compilateur inclut automatiquement les métadonnées pour les types à laquelle lier des données.  
   
- Le compilateur [!INCLUDE[net_native](../../../includes/net-native-md.md)] peut également gérer les types génériques couramment utilisés tels que <xref:System.Collections.Generic.List%601> et <xref:System.Collections.Generic.Dictionary%602>, qui fonctionnent sans indications ou directives. Le mot clé [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) est également pris en charge, dans certaines limites.  
+ .NET Native compilateur ne peut également gérer couramment utilisé des types génériques comme <xref:System.Collections.Generic.List%601> et <xref:System.Collections.Generic.Dictionary%602>, qui fonctionnent sans indications ou directives. Le mot clé [dynamic](~/docs/csharp/language-reference/keywords/dynamic.md) est également pris en charge, dans certaines limites.  
   
 > [!NOTE]
->  Vous devez tester minutieusement tous les chemins de code dynamiques quand vous portez votre application vers [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+>  Vous devez tester minutieusement tous les chemins de code dynamique lors du portage de votre application vers .NET Native.  
   
- La configuration par défaut pour [!INCLUDE[net_native](../../../includes/net-native-md.md)] est suffisante pour la plupart des développeurs, mais certains peuvent souhaiter affiner leurs configurations à l'aide d'un fichier de directives runtime (.rd.xml). En outre, dans certains cas, le compilateur [!INCLUDE[net_native](../../../includes/net-native-md.md)] est incapable de déterminer les métadonnées indispensables pour la réflexion et s'appuie sur les indicateurs, notamment dans les cas suivants :  
+ La configuration par défaut pour .NET Native est suffisante pour la plupart des développeurs, mais certains développeurs souhaiterez permettent d’affiner leurs configurations à l’aide des directives runtime (. rd.xml) fichier. En outre, dans certains cas, le compilateur .NET Native est impossible de déterminer les métadonnées doivent être disponibles pour la réflexion et s’appuie sur les indicateurs, en particulier dans les cas suivants :  
   
 -   Certaines constructions telles que <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> et <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> ne peuvent pas être déterminées de manière statique.  
   
@@ -65,13 +65,13 @@ ms.locfileid: "33397778"
 > [!NOTE]
 >  Les directives runtime sont définies dans un fichier de directives runtime (.rd.xml). Pour obtenir des informations générales sur l’utilisation de ce fichier, consultez la rubrique [Bien démarrer](../../../docs/framework/net-native/getting-started-with-net-native.md). Pour plus d’informations sur les directives runtime, consultez [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] inclut également des outils de profilage qui permettent au développeur de déterminer quels types en dehors du jeu par défaut doivent prendre en charge la réflexion.  
+ .NET native inclut également des outils qui permettent au développeur de déterminer quels types en dehors de l’ensemble par défaut doivent prendre en charge la réflexion de profilage.  
   
 <a name="Reflection"></a>   
 ## <a name="other-reflection-related-differences"></a>Autres différences en matière de réflexion  
- Le comportement de .NET pour les applications du Windows Store et de [!INCLUDE[net_native](../../../includes/net-native-md.md)]présente un certain nombre d'autres différences liées à la réflexion.  
+ Il existe un nombre d’autres différences individuels liés à la réflexion de comportement entre les applications .NET pour Windows Store et .NET Native.  
   
- Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)] :  
+ En mode natif .NET :  
   
 -   La réflexion privée de types et de membres de la bibliothèque de classes .NET Framework n'est pas prise en charge. Vous pouvez, toutefois, réfléchir vos propres types et membres privés, ainsi que les types et les membres dans des bibliothèques tierces.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "33397778"
   
 -   Vous ne pouvez pas utiliser la réflexion pour obtenir ou définir un champ de pointeur.  
   
--   Quand le nombre d'arguments et le type de l'un des arguments sont incorrects, [!INCLUDE[net_native](../../../includes/net-native-md.md)] lève une <xref:System.ArgumentException> au lieu d'une <xref:System.Reflection.TargetParameterCountException>.  
+-   Lorsque le nombre d’arguments et le type d’un des arguments est incorrect, .NET Native lève une <xref:System.ArgumentException> au lieu d’un <xref:System.Reflection.TargetParameterCountException>.  
   
 -   La sérialisation binaire des exceptions n'est généralement pas prise en charge. Ainsi, les objets non sérialisables peuvent être ajoutés au dictionnaire <xref:System.Exception.Data%2A?displayProperty=nameWithType>.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "33397778"
 ### <a name="general-development-differences"></a>Différences de développement général  
  **Types de valeur**  
   
--   Si vous substituez les méthodes <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> et <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> pour un type de valeur, n'appelez pas les implémentations de classe de base. Dans .NET pour les applications du Windows Store, ces méthodes reposent sur la réflexion. Au moment de la compilation, [!INCLUDE[net_native](../../../includes/net-native-md.md)] génère une implémentation qui ne repose pas sur la réflexion de runtime. Cela signifie que si vous ne substituez pas ces deux méthodes, elles fonctionnent comme prévu, car [!INCLUDE[net_native](../../../includes/net-native-md.md)] génère l'implémentation au moment de la compilation. Toutefois, la substitution de ces méthodes tout en appelant l'implémentation de la classe de base entraîne une exception.  
+-   Si vous substituez les méthodes <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> et <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> pour un type de valeur, n'appelez pas les implémentations de classe de base. Dans .NET pour les applications du Windows Store, ces méthodes reposent sur la réflexion. Au moment de la compilation .NET Native génère une implémentation qui ne repose pas sur la réflexion de runtime. Cela signifie que si vous ne substituez pas ces deux méthodes, il fonctionnera comme prévu, car .NET Native génère l’implémentation au moment de la compilation. Toutefois, la substitution de ces méthodes tout en appelant l'implémentation de la classe de base entraîne une exception.  
   
 -   Les types de valeur supérieurs à un mégaoctet ne sont pas pris en charge.  
   
--   Les types de valeur ne peuvent pas avoir de constructeur par défaut dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. (C# et Visual Basic interdisent les constructeurs par défaut sur les types de valeur. Toutefois, ceux-ci peuvent être créés dans un langage intermédiaire.)  
+-   Les types valeur ne peut pas avoir un constructeur par défaut dans .NET Native. (C# et Visual Basic interdisent les constructeurs par défaut sur les types de valeur. Toutefois, ceux-ci peuvent être créés dans un langage intermédiaire.)  
   
  **Tableaux**  
   
@@ -147,39 +147,35 @@ ms.locfileid: "33397778"
   
  `Delegate.BeginInvoke` et `Delegate.EndInvoke` ne sont pas pris en charge.  
   
- **Async**  
-  
- L'insertion de logique sous forme de thread dans les surcharges de Task IAsync n'est pas prise en charge.  
-  
  **API diverses**  
   
 -   La propriété <xref:System.Reflection.TypeInfo.GUID%2A?displayProperty=nameWithType> lève une exception <xref:System.PlatformNotSupportedException> si un attribut <xref:System.Runtime.InteropServices.GuidAttribute> n'est pas appliqué au type. Le GUID est utilisé principalement pour la prise en charge de COM.  
   
--   La méthode <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> traite correctement les chaînes qui contiennent des dates courtes dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Toutefois, elle n’assure pas la compatibilité avec les changements apportés à l’analyse des dates et heures, décrits dans les articles de la Base de connaissances Microsoft [KB2803771](http://support.microsoft.com/kb/2803771) et [KB2803755](http://support.microsoft.com/kb/2803755).  
+-   Le <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> méthode traite correctement les chaînes qui contiennent des dates courtes dans .NET Native. Toutefois, elle n’assure pas la compatibilité avec les changements apportés à l’analyse des dates et heures, décrits dans les articles de la Base de connaissances Microsoft [KB2803771](http://support.microsoft.com/kb/2803771) et [KB2803755](http://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` est arrondi correctement dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Dans certaines versions du CLR, la chaîne de résultat est tronquée et non arrondie.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` est arrondi correctement dans .NET Native. Dans certaines versions du CLR, la chaîne de résultat est tronquée et non arrondie.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Différences pour HttpClient  
- Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)], la classe <xref:System.Net.Http.HttpClientHandler> utilise WinINet de façon interne (via la classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) ) au lieu des classes <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> utilisées dans la version .NET standard pour les applications du Windows Store.  WinINet ne prend pas en charge toutes les options de configuration prises en charge par la classe <xref:System.Net.Http.HttpClientHandler> .  Par conséquent :  
+ Dans .NET Native, le <xref:System.Net.Http.HttpClientHandler> classe utilise en interne WinINet (via le [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) classe) au lieu du <xref:System.Net.WebRequest> et <xref:System.Net.WebResponse> classes utilisées dans les applications .NET pour Windows Store standards.  WinINet ne prend pas en charge toutes les options de configuration prises en charge par la classe <xref:System.Net.Http.HttpClientHandler> .  Par conséquent :  
   
--   Certaines des propriétés de fonctionnalité de <xref:System.Net.Http.HttpClientHandler> retournent `false` sur [!INCLUDE[net_native](../../../includes/net-native-md.md)], tandis qu'elles retournent `true` dans la version .NET standard pour les applications du Windows Store.  
+-   Certaines des propriétés de fonctionnalité de <xref:System.Net.Http.HttpClientHandler> retourner `false` sur .NET Native, tandis qu’elles retournent `true` dans les applications .NET pour Windows Store standards.  
   
--   Une partie des accesseurs `get` des propriétés de configuration retournent toujours une valeur fixe sur [!INCLUDE[net_native](../../../includes/net-native-md.md)] qui est différente de la valeur configurable par défaut dans .NET pour les applications du Windows Store.  
+-   Certains de la propriété de configuration `get` accesseurs retournent toujours une valeur fixe sur .NET Native est différente de celle de la valeur configurable par défaut dans les applications .NET pour Windows Store.  
   
  Certaines différences de comportement supplémentaires sont décrites dans les sous-sections suivantes.  
   
  **Proxy**  
   
- La classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) ne prend pas en charge la configuration ou le remplacement du proxy à chaque demande.  Cela signifie que toutes les demandes présentées sur [!INCLUDE[net_native](../../../includes/net-native-md.md)] utilisent le serveur proxy configuré par le système ou aucun serveur proxy, en fonction de la valeur de la propriété <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType>.  Dans .NET pour les applications du Windows Store, le serveur proxy est défini par la propriété <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>.  Sur [!INCLUDE[net_native](../../../includes/net-native-md.md)], définir <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> sur une valeur autre que `null` lève une exception <xref:System.PlatformNotSupportedException>.  La propriété <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> retourne `false` sur [!INCLUDE[net_native](../../../includes/net-native-md.md)], tandis qu'elle retourne `true` dans le .NET Framework standard pour les applications du Windows Store.  
+ La classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) ne prend pas en charge la configuration ou le remplacement du proxy à chaque demande.  Cela signifie que toutes les demandes sur .NET Native utilisent le serveur proxy système configuré ou aucun serveur proxy, selon la valeur de la <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> propriété.  Dans .NET pour les applications du Windows Store, le serveur proxy est défini par la propriété <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType>.  Sur .NET Native, définissant le <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> à une valeur autre que `null` lève un <xref:System.PlatformNotSupportedException> exception.  Le <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> retourne de la propriété `false` sur .NET Native, tandis qu’elle retourne `true` dans les applications .NET Framework pour Windows Store standards.  
   
  **Redirection automatique**  
   
- La classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) ne permet pas de configurer le nombre maximal de redirections automatiques.  La valeur de la propriété <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> est 50 par défaut dans la version .NET standard pour les applications du Windows Store et peut être modifiée. Sur [!INCLUDE[net_native](../../../includes/net-native-md.md)], la valeur de cette propriété est 10 et toute modification de cette valeur lève une exception <xref:System.PlatformNotSupportedException> .  La propriété <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> retourne `false` sur [!INCLUDE[net_native](../../../includes/net-native-md.md)], tandis qu'elle retourne `true` dans .NET pour les applications du Windows Store.  
+ La classe [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) ne permet pas de configurer le nombre maximal de redirections automatiques.  La valeur de la propriété <xref:System.Net.Http.HttpClientHandler.MaxAutomaticRedirections%2A?displayProperty=nameWithType> est 50 par défaut dans la version .NET standard pour les applications du Windows Store et peut être modifiée. Sur .NET Native, la valeur de cette propriété est 10 et toute modification lève un <xref:System.PlatformNotSupportedException> exception.  Le <xref:System.Net.Http.HttpClientHandler.SupportsRedirectConfiguration%2A?displayProperty=nameWithType> retourne de la propriété `false` sur .NET Native, tandis qu’elle retourne `true` dans les applications .NET pour Windows Store.  
   
  **Décompression automatique**  
   
- .NET pour les applications du Windows Store vous permet de définir la propriété <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> sur <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, à la fois sur <xref:System.Net.DecompressionMethods.Deflate> et <xref:System.Net.DecompressionMethods.GZip>, ou sur <xref:System.Net.DecompressionMethods.None>.  [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne prend en charge <xref:System.Net.DecompressionMethods.Deflate> qu'avec <xref:System.Net.DecompressionMethods.GZip>ou <xref:System.Net.DecompressionMethods.None>.  Si vous essayez de définir la propriété <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> uniquement sur <xref:System.Net.DecompressionMethods.Deflate> ou <xref:System.Net.DecompressionMethods.GZip> , elle est automatiquement définie à la fois sur <xref:System.Net.DecompressionMethods.Deflate> et <xref:System.Net.DecompressionMethods.GZip>.  
+ .NET pour les applications du Windows Store vous permet de définir la propriété <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> sur <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, à la fois sur <xref:System.Net.DecompressionMethods.Deflate> et <xref:System.Net.DecompressionMethods.GZip>, ou sur <xref:System.Net.DecompressionMethods.None>.  .NET native prend uniquement en charge <xref:System.Net.DecompressionMethods.Deflate> avec <xref:System.Net.DecompressionMethods.GZip>, ou <xref:System.Net.DecompressionMethods.None>.  Si vous essayez de définir la propriété <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> uniquement sur <xref:System.Net.DecompressionMethods.Deflate> ou <xref:System.Net.DecompressionMethods.GZip> , elle est automatiquement définie à la fois sur <xref:System.Net.DecompressionMethods.Deflate> et <xref:System.Net.DecompressionMethods.GZip>.  
   
  **Cookies**  
   
@@ -187,11 +183,11 @@ ms.locfileid: "33397778"
   
  **Informations d'identification**  
   
- Dans .NET pour les applications du Windows Store, les propriétés <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> et <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> fonctionnent de manière indépendante.  En outre, la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> accepte tout objet qui implémente l'interface <xref:System.Net.ICredentials> .  Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)], quand la propriété <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> est définie sur `true` , la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> prend la valeur `null`.  En outre, la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> peut être définie uniquement sur `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>ou un objet de type <xref:System.Net.NetworkCredential>.  L'affectation de tout autre objet <xref:System.Net.ICredentials> , le plus courant étant <xref:System.Net.CredentialCache>, à la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> lève une <xref:System.PlatformNotSupportedException>.  
+ Dans .NET pour les applications du Windows Store, les propriétés <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> et <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> fonctionnent de manière indépendante.  En outre, la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> accepte tout objet qui implémente l'interface <xref:System.Net.ICredentials> .  Dans .NET Native, la définition de la <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> propriété `true` provoque la <xref:System.Net.Http.HttpClientHandler.Credentials%2A> propriété devienne `null`.  En outre, la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> peut être définie uniquement sur `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>ou un objet de type <xref:System.Net.NetworkCredential>.  L'affectation de tout autre objet <xref:System.Net.ICredentials> , le plus courant étant <xref:System.Net.CredentialCache>, à la propriété <xref:System.Net.Http.HttpClientHandler.Credentials%2A> lève une <xref:System.PlatformNotSupportedException>.  
   
  **Autres fonctionnalités non prises en charge ou non configurables**  
   
- Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]:  
+ En mode natif .NET :  
   
 -   La valeur de la propriété <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> est toujours <xref:System.Net.Http.ClientCertificateOption.Automatic>.  Dans .NET pour les applications du Windows Store, la valeur par défaut est <xref:System.Net.Http.ClientCertificateOption.Manual>.  
   
@@ -205,7 +201,7 @@ ms.locfileid: "33397778"
 ### <a name="interop-differences"></a>Différences concernant l'interopérabilité  
  **API déconseillées**  
   
- Un certain nombre d'API peu utilisées pour l'interopérabilité avec du code managé ont été déconseillées. Quand elles sont utilisées avec [!INCLUDE[net_native](../../../includes/net-native-md.md)], ces API peuvent lever une exception <xref:System.NotImplementedException> ou <xref:System.PlatformNotSupportedException> , ou entraîner une erreur du compilateur. Dans .NET pour les applications du Windows Store, ces API sont marquées comme obsolètes, même si les appeler génère un avertissement, plutôt qu'une erreur, du compilateur.  
+ Un certain nombre d'API peu utilisées pour l'interopérabilité avec du code managé ont été déconseillées. Lorsqu’il est utilisé avec .NET Native, ces API peuvent lever une <xref:System.NotImplementedException> ou <xref:System.PlatformNotSupportedException> exception, ou entraîner une erreur du compilateur. Dans .NET pour les applications du Windows Store, ces API sont marquées comme obsolètes, même si les appeler génère un avertissement, plutôt qu'une erreur, du compilateur.  
   
  API déconseillées pour le marshaling `VARIANT` :  
   
@@ -238,7 +234,7 @@ ms.locfileid: "33397778"
 |<xref:System.Runtime.InteropServices.ComEventsHelper?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>|  
   
- API déconseillées dans l'interface <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType>, non prises en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)] :  
+ API déconseillées dans le <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> interface, ce qui n’est pas pris en charge dans .NET Native :  
   
 |Type|Membre|  
 |----------|------------|  
@@ -276,7 +272,7 @@ ms.locfileid: "33397778"
   
  **Appel de plateforme et compatibilité avec l'interopérabilité COM**  
   
- La plupart des scénarios d'appel de plateforme et d'interopérabilité COM sont toujours pris en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. En particulier, toute l'interopérabilité avec les API Windows Runtime (WinRT) et tout le marshaling nécessaire pour le Windows Runtime sont pris en charge. Cela inclut la prise en charge du marshaling pour les éléments suivants :  
+ La plupart des code non managé et des scénarios COM interop sont toujours pris en charge dans .NET Native. En particulier, toute l'interopérabilité avec les API Windows Runtime (WinRT) et tout le marshaling nécessaire pour le Windows Runtime sont pris en charge. Cela inclut la prise en charge du marshaling pour les éléments suivants :  
   
 -   Tableaux (y compris <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>)  
   
@@ -324,7 +320,7 @@ ms.locfileid: "33397778"
   
     -   [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509.aspx)  
   
- Toutefois, [!INCLUDE[net_native](../../../includes/net-native-md.md)] ne prend pas en charge les opérations suivantes :  
+ Toutefois, .NET Native ne prend en charge les éléments suivants :  
   
 -   L'utilisation d'événements COM classiques  
   
@@ -336,11 +332,11 @@ ms.locfileid: "33397778"
   
 <a name="APIs"></a>   
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>Autres différences par rapport aux API .NET pour les applications du Windows Store  
- Cette section répertorie les API restantes qui ne sont pas prises en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. La plus grande partie des API non prises en charge sont des API Windows Communication Foundation (WCF).  
+ Cette section répertorie les API restantes qui ne sont pas pris en charge dans .NET Native. La plus grande partie des API non prises en charge sont des API Windows Communication Foundation (WCF).  
   
  **DataAnnotations (System.ComponentModel.DataAnnotations)**  
   
- Les types dans les espaces de noms <xref:System.ComponentModel.DataAnnotations> et <xref:System.ComponentModel.DataAnnotations.Schema> ne sont pas pris en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Ceux-ci comprennent les types suivants présents dans .NET pour les applications du Windows Store pour Windows 8 :  
+ Les types dans les <xref:System.ComponentModel.DataAnnotations> et <xref:System.ComponentModel.DataAnnotations.Schema> espaces de noms ne sont pas pris en charge dans .NET Native. Ceux-ci comprennent les types suivants présents dans .NET pour les applications du Windows Store pour Windows 8 :  
   
 ||  
 |-|  
@@ -372,7 +368,7 @@ ms.locfileid: "33397778"
   
  **Visual Basic**  
   
- Visual Basic n'est pas actuellement pris en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Les types suivants dans les espaces de noms <xref:Microsoft.VisualBasic> et <xref:Microsoft.VisualBasic.CompilerServices> ne sont pas disponibles dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]:  
+ Visual Basic n’est pas actuellement pris en charge dans .NET Native. Les types suivants dans le <xref:Microsoft.VisualBasic> et <xref:Microsoft.VisualBasic.CompilerServices> espaces de noms ne sont pas disponibles dans .NET Native :  
   
 ||  
 |-|  
@@ -396,15 +392,15 @@ ms.locfileid: "33397778"
   
  **Contexte de réflexion (espace de noms System.Reflection.Context)**  
   
- La classe <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> n'est pas prise en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+ Le <xref:System.Reflection.Context.CustomReflectionContext?displayProperty=nameWithType> classe n’est pas prise en charge dans .NET Native.  
   
  **RTC (System.Net.Http.Rtc)**  
   
- La classe <xref:System.Net.Http.RtcRequestFactory?displayProperty=nameWithType> n'est pas prise en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+ Le <xref:System.Net.Http.RtcRequestFactory?displayProperty=nameWithType> classe n’est pas prise en charge dans .NET Native.  
   
  **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**  
   
- Les types dans les [espaces de noms System.ServiceModel.*](http://msdn.microsoft.com/library/gg145010.aspx) ne sont pas pris en charge dans [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Ce sont notamment les types suivants :  
+ Les types dans les [espaces de noms System.ServiceModel. *](http://msdn.microsoft.com/library/gg145010.aspx) ne sont pas pris en charge dans .NET Native. Ce sont notamment les types suivants :  
   
 ||  
 |-|  
@@ -590,7 +586,7 @@ ms.locfileid: "33397778"
 ### <a name="differences-in-serializers"></a>Différences entre les sérialiseurs  
  Les différences suivantes concernent la sérialisation et la désérialisation avec les classes <xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>et <xref:System.Xml.Serialization.XmlSerializer> :  
   
--   Dans [!INCLUDE[net_native](../../../includes/net-native-md.md)], <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ne parviennent pas à sérialiser ou à désérialiser une classe dérivée qui a un membre de classe de base dont le type n'est pas un type de sérialisation racine. Par exemple, dans le code suivant, sérialiser ou désérialiser `Y` génère une erreur :  
+-   Dans .NET Native, <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ne parviennent pas à sérialiser ou désérialiser une classe dérivée qui a un membre de classe de base dont le type n’est pas un type de sérialisation racine. Par exemple, dans le code suivant, sérialiser ou désérialiser `Y` génère une erreur :  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
@@ -652,7 +648,7 @@ ms.locfileid: "33397778"
 ## <a name="visual-studio-differences"></a>Différences concernant Visual Studio  
  **Exceptions et débogage**  
   
- Quand vous exécutez des applications compilées à l'aide de [!INCLUDE[net_native](../../../includes/net-native-md.md)] dans le débogueur, les exceptions de première chance sont activées pour les types d'exception suivants :  
+ Lorsque vous exécutez des applications compilées à l’aide de .NET Native dans le débogueur, exceptions de première chance sont activées pour les types d’exception suivants :  
   
 -   <xref:System.MemberAccessException>  
   
@@ -672,10 +668,10 @@ ms.locfileid: "33397778"
   
  **Projets de bibliothèque de tests unitaires**  
   
- L'activation de [!INCLUDE[net_native](../../../includes/net-native-md.md)] sur une bibliothèque de tests unitaires pour un projet d'application du Windows Store n'est pas prise en charge et entraîne l'échec de la génération du projet.  
+ L’activation de .NET Native sur une bibliothèque de tests unitaires pour un projet d’applications Windows Store n’est pas pris en charge et, le projet ne parviennent pas à générer.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en main](../../../docs/framework/net-native/getting-started-with-net-native.md)  
  [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [Vue d’ensemble des applications .NET pour le Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
+ [Vue d’ensemble des applications .NET pour Windows Store](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
  [Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

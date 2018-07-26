@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: cd99ce43ad359c58c855748dff9a01abb6dbd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268118"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961168"
 ---
 # <a name="null-c-reference"></a>null (référence C#)
 Le mot clé `null` est un littéral qui représente une référence null, c’est-à-dire qui ne fait pas référence à un objet. `null` est la valeur par défaut des variables de type référence. Les types valeur ordinaires ne peuvent pas être Null. Toutefois, C# 2.0 a introduit les types valeur Nullable. Consultez [Types Nullable](../../../csharp/programming-guide/nullable-types/index.md).  

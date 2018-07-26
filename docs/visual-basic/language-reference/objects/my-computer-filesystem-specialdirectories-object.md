@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
 ms.openlocfilehash: 9ceede5a717b26d349f9a306864f74ac0ec33691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596975"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37959508"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories, objet
 Fournit des propriétés utilisées pour accéder aux répertoires communément référencés.  
@@ -20,7 +20,7 @@ Fournit des propriétés utilisées pour accéder aux répertoires communément 
   
  Pour plus d’informations, consultez [Comment : récupérer le contenu du répertoire Mes Documents](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Namespace :** <xref:Microsoft.VisualBasic.MyServices>  
   
  **Classe :** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (fournit l’accès à <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
