@@ -3,6 +3,5 @@
 ## [Paramètres et valeurs de retour pour les procédures multithread](parameters-and-return-values-for-multithreaded-procedures.md)
 ## [Procédure pas à pas : multithreading avec le composant BackgroundWorker](walkthrough-multithreading-with-the-backgroundworker-component.md)
 ## [Synchronisation des threads](thread-synchronization.md)
-## [Composants Timer thread](thread-timers.md)
 ## [Regroupement des threads](thread-pooling.md)
 ### [Guide pratique : utiliser un pool de threads](how-to-use-a-thread-pool.md)

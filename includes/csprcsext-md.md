@@ -1,1 +1,1 @@
-<span data-ttu-id="b397e-101">Microsoft Visual C# 2005</span><span class="sxs-lookup"><span data-stu-id="b397e-101">Microsoft Visual C# 2005</span></span>
+<span data-ttu-id="4867e-101">Microsoft Visual C# 2005</span><span class="sxs-lookup"><span data-stu-id="4867e-101">Microsoft Visual C# 2005</span></span>
