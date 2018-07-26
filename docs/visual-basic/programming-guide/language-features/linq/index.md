@@ -5,11 +5,11 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 ms.openlocfilehash: 58eeffc2445b71adee4fce2f8cff0c69a597f140
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648988"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199132"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ en Visual Basic
 Cette section contient des vues d’ensemble, des exemples et des informations générales qui vous aideront à comprendre et à utiliser Visual Basic et [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  

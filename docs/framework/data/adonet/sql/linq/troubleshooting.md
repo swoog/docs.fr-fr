@@ -2,12 +2,12 @@
 title: Résolution des problèmes
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 24c7ddd42a4e66785921d9c63a6a757d9806503d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364822"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198807"
 ---
 # <a name="troubleshooting"></a>Résolution des problèmes
 Les informations suivantes exposent quelques problèmes que vous pouvez rencontrer dans vos applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] et fournissent des suggestions pour les éviter, ou du moins en réduire l'effet.  
@@ -15,10 +15,10 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
  Autres problèmes sont traités dans [Forum aux Questions](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Opérateurs de requête standard non pris en charge  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge toutes les méthodes d'opérateur de requête standard (par exemple, <xref:System.Linq.Enumerable.ElementAt%2A>). En conséquence, les projets qui sont compilés peuvent produire des erreurs d'exécution. Pour plus d’informations, consultez [traduction d’opérateur de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne prend pas en charge toutes les méthodes d'opérateur de requête standard (par exemple, <xref:System.Linq.Enumerable.ElementAt%2A>). En conséquence, les projets qui sont compilés peuvent produire des erreurs d'exécution. Pour plus d’informations, consultez [traduction des opérateurs de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Problèmes de mémoire  
- Si une requête concerne une collection en mémoire et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, la requête peut être exécutée en mémoire, selon l’ordre dans lequel les deux collections sont spécifiées. Si la requête doit être exécutée dans la mémoire, les données de la table de base de données devront être extraites.  
+ Si une requête implique une collection en mémoire et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, la requête peut être exécutée en mémoire, en fonction de l’ordre dans lequel les deux collections sont spécifiées. Si la requête doit être exécutée dans la mémoire, les données de la table de base de données devront être extraites.  
   
  Cette approche est inefficace et peut se traduire par une utilisation significative de la mémoire et du processeur. Essayez d'éviter de telles requêtes multidomaines.  
   
@@ -49,18 +49,18 @@ Les informations suivantes exposent quelques problèmes que vous pouvez rencontr
 -   Vous avez un `Imports` (Visual Basic) ou `using` directive (c#) pour <xref:System.Linq> et <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
- Au cours de débogage un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projet, il est possible que vous les relations d’une entité. Cela place ces éléments dans le cache, et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est informé de leur présence. Si vous tentez ensuite d'exécuter <xref:System.Data.Linq.Table%601.Attach%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> ou une méthode similaire qui produit plusieurs lignes ayant la même clé, une <xref:System.Data.Linq.DuplicateKeyException> est levée.  
+ Au cours de débogage un [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projet, vous pouvez parcourir les relations d’une entité. Cela apporte ces éléments dans le cache, et [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est informé de leur présence. Si vous tentez ensuite d'exécuter <xref:System.Data.Linq.Table%601.Attach%2A> ou <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> ou une méthode similaire qui produit plusieurs lignes ayant la même clé, une <xref:System.Data.Linq.DuplicateKeyException> est levée.  
   
 ## <a name="string-concatenation-exceptions"></a>Exceptions de concaténation de chaînes  
- La concaténation sur les opérandes mappées à `[n]text` et d'autre `[n][var]char` n'est pas prise en charge. Une exception est levée en cas de concaténation de chaînes mappée à deux ensembles de types différents. Pour plus d’informations, consultez [méthodes System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).  
+ La concaténation sur les opérandes mappées à `[n]text` et d'autre `[n][var]char` n'est pas prise en charge. Une exception est levée en cas de concaténation de chaînes mappée à deux ensembles de types différents. Pour plus d’informations, consultez [System.String, méthodes](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).  
   
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Exceptions d'ignorance (Skip) et d'acceptation (Take) dans SQL Server 2000  
- Vous devez utiliser des membres d'identité (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) lorsque vous utilisez <xref:System.Linq.Queryable.Take%2A> ou <xref:System.Linq.Queryable.Skip%2A> sur une base de données Microsoft SQL Server 2000. La requête doit être effectuée sur une table unique (c'est-à-dire, pas une jointure) ou il doit s'agir d'une opération <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> ou <xref:System.Linq.Queryable.Union%2A>, et elle ne doit pas inclure d'opération <xref:System.Linq.Queryable.Concat%2A>. Pour plus d’informations, consultez la section « Prise en charge SQL Server 2000 » dans [traduction d’opérateur de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ Vous devez utiliser des membres d'identité (<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>) lorsque vous utilisez <xref:System.Linq.Queryable.Take%2A> ou <xref:System.Linq.Queryable.Skip%2A> sur une base de données Microsoft SQL Server 2000. La requête doit être effectuée sur une table unique (c'est-à-dire, pas une jointure) ou il doit s'agir d'une opération <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> ou <xref:System.Linq.Queryable.Union%2A>, et elle ne doit pas inclure d'opération <xref:System.Linq.Queryable.Concat%2A>. Pour plus d’informations, consultez la section « Prise en charge SQL Server 2000 » dans [traduction des opérateurs de requête Standard](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
  Cette spécification ne s'applique pas à [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- Cette exception est levée lorsqu'une valeur de colonne est null dans une requête <xref:System.Linq.Enumerable.GroupBy%2A> regroupée par une expression `boolean`, telle que `group x by (Phone==@phone)`. Étant donné que l’expression est un `boolean`, la clé doit donc être `boolean`, et non `nullable``boolean`. Lorsque la comparaison traduite produit une valeur null, une tentative est effectuée pour affecter un `nullable``boolean` à un `boolean`, et l’exception est levée.  
+ Cette exception est levée lorsqu'une valeur de colonne est null dans une requête <xref:System.Linq.Enumerable.GroupBy%2A> regroupée par une expression `boolean`, telle que `group x by (Phone==@phone)`. L'expression étant `boolean`, la clé doit donc être `boolean`, et non `nullable``boolean`. Lorsque la comparaison traduite produit un null, une tentative est faite pour assigner un `nullable``boolean` à un `boolean`, et l'exception est levée.  
   
  Pour éviter cette situation (en supposant que vous souhaitiez traiter les valeurs null comme des valeurs false), utilisez, par exemple, la méthode suivante :  
   

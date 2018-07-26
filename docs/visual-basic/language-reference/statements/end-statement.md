@@ -1,5 +1,5 @@
 ---
-title: End, instruction
+title: End, instruction (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 864ac5ef1713f8ffa93c18accede8ecd5b3b7a8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd489dc9f12f7e80ef2dd49c6e2dee6c28ae761
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604423"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199395"
 ---
 # <a name="end-statement"></a>End, instruction
 Termine l’exécution immédiatement.  
@@ -31,21 +31,21 @@ End
 ```  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez placer le `End` instruction n’importe où dans une procédure pour forcer l’application entière pour interrompre l’exécution. `End` Ferme tous les fichiers ouverts avec un `Open` instruction et efface toutes les variables de l’application. L’application se ferme dès qu’il n’y aucun programme contenant des références à ses objets et son code est en cours d’exécution.  
+ Vous pouvez placer le `End` instruction n’importe où dans une procédure pour forcer l’application entière pour interrompre l’exécution. `End` Ferme tous les fichiers ouverts avec un `Open` instruction et efface toutes les variables de l’application. L’application se ferme dès qu’il en existe aucun programme contenant des références à ses objets et son code est en cours d’exécution.  
   
 > [!NOTE]
 >  Le `End` instruction met immédiatement fin à l’exécution de code et n’appelle pas la `Dispose` ou `Finalize` (méthode), ou tout autre code Visual Basic. Références d’objet détenus par d’autres programmes sont invalidés. Si un `End` est rencontrée dans une `Try` ou `Catch` bloc, le contrôle ne passe pas correspondant `Finally` bloc.  
   
  Le `Stop` instruction interrompt l’exécution, mais contrairement à `End`, il ne pas fermer tous les fichiers ou effacer toutes les variables, sauf si elle est placée dans un fichier exécutable compilé (.exe).  
   
- Étant donné que `End` met fin à votre application sans se préoccuper des ressources qui peuvent être ouverts, vous devez tenter de fermer correctement avant de l’utiliser. Par exemple, si votre application comporte des formulaires ouverts, vous devez les fermer avant de contrôle atteint la `End` instruction.  
+ Étant donné que `End` met fin à votre application sans se préoccuper des ressources qui peuvent être ouvertes, essayez de fermer correctement avant de l’utiliser. Par exemple, si votre application comporte des formulaires ouverts, vous devez les fermer avant de contrôle atteint la `End` instruction.  
   
- Vous devez utiliser `End` avec parcimonie et uniquement lorsque vous devez arrêter immédiatement. Les méthodes normales pour mettre fin à une procédure ([instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) et [instruction Exit](../../../visual-basic/language-reference/statements/exit-statement.md)) permettent de fermer correctement la procédure, mais également le code appelant. Par exemple, une application console, peut simplement `Return` à partir de la `Main` procédure.  
+ Vous devez utiliser `End` avec parcimonie et uniquement lorsque vous devez arrêter immédiatement. Les méthodes normales pour mettre fin à une procédure ([instruction Return](../../../visual-basic/language-reference/statements/return-statement.md) et [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) permettent de fermer correctement la procédure, mais également le code appelant. Une application console, par exemple, peut simplement `Return` à partir de la `Main` procédure.  
   
 > [!IMPORTANT]
->  Le `End` instruction appelle la <xref:System.Environment.Exit%2A> méthode de la <xref:System.Environment> classe dans le <xref:System> espace de noms. <xref:System.Environment.Exit%2A> exige que vous disposiez `UnmanagedCode` autorisation. Si vous ne le faites pas, un <xref:System.Security.SecurityException> erreur se produit.  
+>  Le `End` instruction appelle la <xref:System.Environment.Exit%2A> méthode de la <xref:System.Environment> classe dans le <xref:System> espace de noms. <xref:System.Environment.Exit%2A> Vous devez disposer `UnmanagedCode` autorisation. Si vous ne le faites pas, un <xref:System.Security.SecurityException> erreur se produit.  
   
- Lorsqu’il est suivi par un mot clé supplémentaire, [fin \<mot clé > instruction](../../../visual-basic/language-reference/statements/end-keyword-statement.md) délimite la fin de la définition de la procédure appropriée ou le bloc. Par exemple, `End Function` termine la définition d’un `Function` procédure.  
+ S’il est suivi par un mot clé supplémentaire, [fin \<mot clé > instruction](../../../visual-basic/language-reference/statements/end-keyword-statement.md) délimite la fin de la définition de la procédure appropriée ou du bloc. Par exemple, `End Function` termine la définition d’un `Function` procédure.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise la `End` instruction pour mettre fin à l’exécution de code si l’utilisateur le demande.  

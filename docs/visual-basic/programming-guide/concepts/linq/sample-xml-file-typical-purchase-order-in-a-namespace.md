@@ -1,13 +1,13 @@
 ---
-title: 'Exemple de fichier XML : Type achat dans un Namespace3'
+title: 'Exemple de fichier XML : Les commandes de fournisseur typique dans un espace de noms3'
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
 ms.openlocfilehash: 94aa8d39b351a55183b7164bd4ceca875742f17d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644779"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244824"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Exemple de fichier XML : Commande fournisseur typique dans un espace de noms
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il concerne une commande fournisseur typique. Le code XML se trouve dans un espace de noms.  

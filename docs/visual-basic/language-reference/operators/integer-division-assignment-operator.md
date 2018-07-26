@@ -1,5 +1,5 @@
 ---
-title: '\= (opérateur)'
+title: '\= Opérateur (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '\='
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator \= [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 6f39915d-e398-4045-afcc-da6885e57b9c
-ms.openlocfilehash: 4ebbf2eca7fb3cd208d979d7f3c77aa106569119
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcfc59efda0627f83713fe9ada24cedc20d823e3
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603559"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198206"
 ---
 # <a name="-operator"></a>\\=, Opérateur
 Divise la valeur d’une variable ou une propriété par la valeur d’une expression et assigne le résultat de l’entier à la variable ou propriété.  
@@ -37,7 +37,7 @@ variableorproperty \= expression
 ## <a name="remarks"></a>Notes  
  L’élément sur le côté gauche de la `\=` opérateur peut être une simple variable scalaire, une propriété ou un élément d’un tableau. La variable ou la propriété ne peut pas être [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- Le `\=` opérateur divise la valeur d’une variable ou une propriété du côté gauche par la valeur située à droite et assigne le résultat de l’entier à la variable ou propriété du côté gauche  
+ Le `\=` opérateur divise la valeur d’une variable ou une propriété du côté gauche par la valeur situé à sa droite et assigne le résultat de l’entier à la variable ou propriété du côté gauche  
   
  Pour plus d’informations sur la division d’entier, consultez [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: Delegate, instruction
+title: Delegate, instruction (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Delegate
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - delegate keyword [Visual Basic]
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
-ms.openlocfilehash: 3965dc2d71ec9356cdb38d5ddcd4e00f9259951a
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234676"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244239"
 ---
 # <a name="delegate-statement"></a>Delegate, instruction
-Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` d’un type ou à une méthode d’instance d’un objet de méthode. Toute procédure ayant des types de paramètres et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  
+Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` méthode d’un type ou à une méthode d’instance d’un objet. Toute procédure ayant des types de paramètre et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,15 +33,15 @@ Utilisé pour déclarer un délégué. Un délégué est un type référence qui
 |`Shadows`|Facultatif. Indique que ce délégué redéclare et masque un élément de programmation portant le même nom ou un ensemble d’éléments surchargés, dans une classe de base. Vous pouvez occulter tout type d'élément déclaré par un autre type.<br /><br /> Un élément occulté n'est pas disponible à partir de la classe dérivée qui l'occulte, sauf à partir de l'emplacement où l'élément d'occultation est inaccessible. Par exemple, si un `Private` élément occulte un élément de la classe de base, le code qui n’est pas autorisé à accéder à la `Private` élément accède à l’élément de la classe de base à la place.|  
 |`Sub`|Facultatif, mais `Sub` ou `Function` doit apparaître. Déclare cette procédure en tant que délégué `Sub` procédure qui ne retourne pas de valeur.|  
 |`Function`|Facultatif, mais `Sub` ou `Function` doit apparaître. Déclare cette procédure en tant que délégué `Function` procédure qui retourne une valeur.|  
-|`name`|Obligatoire. Nom du type délégué ; suit les conventions d’affectation de noms de variable standard.|  
-|`typeparamlist`|Facultatif. Liste des paramètres de type pour ce délégué. Plusieurs paramètres de type sont séparés par des virgules. Éventuellement, chaque paramètre de type peut être déclaré variant à l’aide de `In` et `Out` modificateurs génériques. Vous devez placer le [Type liste](../../../visual-basic/language-reference/statements/type-list.md) entre parenthèses et introduire avec la `Of` (mot clé).|  
+|`name`|Obligatoire. Nom du type délégué ; suit les conventions d’affectation de noms standard pour la variable.|  
+|`typeparamlist`|Facultatif. Liste des paramètres de type pour ce délégué. Plusieurs paramètres de type sont séparés par des virgules. Si vous le souhaitez, chaque paramètre de type peut être déclaré variant à l’aide de `In` et `Out` modificateurs génériques. Vous devez placer le [liste Type](../../../visual-basic/language-reference/statements/type-list.md) entre parenthèses et l’introduire avec le `Of` mot clé.|  
 |`parameterlist`|Facultatif. Liste des paramètres qui sont passés à la procédure lorsqu’elle est appelée. Vous devez placer le [liste de paramètres](../../../visual-basic/language-reference/statements/parameter-list.md) entre parenthèses.|  
 |`type`|Obligatoire si vous spécifiez un `Function` procédure. Type de données de la valeur de retour.|  
   
 ## <a name="remarks"></a>Notes  
- La `Delegate` instruction définit les types de paramètres et de retour d’une classe déléguée. Toute procédure ayant des paramètres et types de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué, en appelant du délégué `Invoke` (méthode).  
+ La `Delegate` instruction définit les types de paramètre et de retour d’une classe déléguée. Toute procédure ayant des paramètres et types de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué, en appelant le délégué `Invoke` (méthode).  
   
- Délégués peuvent être déclarés au niveau de l’espace de noms, un module, une classe ou un niveau de la structure, mais pas dans une procédure.  
+ Les délégués peuvent être déclarés à l’espace de noms, un module, une classe ou un niveau de la structure, mais pas dans une procédure.  
   
  Chaque classe déléguée définit un constructeur auquel les caractéristiques d’une méthode objet sont passées. L’argument d’un constructeur délégué doit être une référence à une méthode ou une expression lambda.  
   
@@ -60,7 +60,7 @@ Utilisé pour déclarer un délégué. Un délégué est un type référence qui
  Pour plus d’informations sur les délégués, consultez [délégués](../../../visual-basic/programming-guide/language-features/delegates/index.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise la `Delegate` instruction pour déclarer un délégué pour fonctionner sur deux nombres et de retourner un nombre. Le `DelegateTest` méthode prend une instance d’un délégué de ce type et l’utilise pour fonctionner sur des paires de numéros de.  
+ L’exemple suivant utilise la `Delegate` instruction pour déclarer un délégué pour fonctionner sur deux nombres et de retourner un nombre. Le `DelegateTest` méthode prend une instance d’un délégué de ce type et l’utilise pour fonctionner sur les paires de numéros.  
   
  [!code-vb[VbVbalrDelegates#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/delegate-statement_1.vb)]  
   

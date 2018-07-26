@@ -1,6 +1,6 @@
 ---
 title: Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,19 +14,21 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578218"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245492"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ressources d'application pour les bibliothèques qui ciblent des plateformes multiples
-Vous pouvez utiliser le .NET Framework [bibliothèque de classes portables](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) type pour vous assurer que les ressources dans vos bibliothèques de classes sont accessibles à partir de plusieurs plateformes de projet. Ce type de projet est disponible dans [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] et cible le sous-ensemble portable de la bibliothèque de classes du .NET Framework. L'utilisation de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garantit l'accessibilité de votre bibliothèque à partir des applications de bureau, des [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], Silverlight et Windows Phone.  
+Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) type pour vous assurer que les ressources dans vos bibliothèques de classes sont accessible à partir de plusieurs plateformes de projet. Ce type de projet est disponible dans [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] et cible le sous-ensemble portable de la bibliothèque de classes du .NET Framework. L'utilisation de [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] garantit l'accessibilité de votre bibliothèque à partir des applications de bureau, des [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], Silverlight et Windows Phone.  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  Le projet [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] ne génère qu'un sous-ensemble très limité des types dans l'espace de noms <xref:System.Resources> disponible pour votre application, mais il vous permet d'utiliser la classe <xref:System.Resources.ResourceManager> pour extraire des ressources. Toutefois, si vous créez une application à l'aide de Visual Studio, vous devez utiliser le wrapper fortement typé créé par Visual Studio, plutôt que d'utiliser directement la classe <xref:System.Resources.ResourceManager>.  
   
- Pour créer un wrapper fortement typé dans Visual Studio, définissez le fichier de ressources principal **modificateur d’accès** dans le Concepteur de ressources Visual Studio pour **Public**. Cela crée un fichier [resourceFileName].designer.cs ou [resourceFileName].designer.vb qui contient le wrapper fortement typé ResourceManager. Pour plus d’informations sur l’utilisation d’un wrapper de ressource fortement typée, consultez la section « Génération d’une classe fortement typée ressource » dans le [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) rubrique.  
+ Pour créer un wrapper fortement typé dans Visual Studio, définissez le fichier de ressources principal **modificateur d’accès** dans le Concepteur de ressources Visual Studio pour **Public**. Cela crée un fichier [resourceFileName].designer.cs ou [resourceFileName].designer.vb qui contient le wrapper fortement typé ResourceManager. Pour plus d’informations sur l’utilisation d’un wrapper de ressources fortement typées, consultez la section « Génération d’une classe fortement typée ressource » dans le [Resgen.exe (Resource File Generator)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) rubrique.  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>Gestionnaire des ressources dans [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
  Dans un projet [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], tout accès aux ressources est géré par la classe <xref:System.Resources.ResourceManager>. Étant donné que les types dans l'espace de noms <xref:System.Resources>, tels que <xref:System.Resources.ResourceReader> et <xref:System.Resources.ResourceSet>, ne sont pas accessibles à partir d'un projet [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], elles ne peuvent pas être utilisées pour accéder aux ressources.  
@@ -65,7 +67,7 @@ Vous pouvez utiliser le .NET Framework [bibliothèque de classes portables](../.
 |NameLength|25|  
 |Titre|Base de données des employés|  
   
- Le code suivant définit un `UILibrary` classe qui utilise le wrapper du Gestionnaire de ressources nommé `resources` généré par Visual Studio lorsque le **modificateur d’accès** pour le fichier est modifié en **Public** . La classe UILibrary analyse les données de chaîne selon les besoins. . Notez que la classe est dans l'espace de noms `MyCompany.Employees`.  
+ Le code suivant définit un `UILibrary` classe qui utilise le wrapper de gestionnaire de ressources nommé `resources` généré par Visual Studio lorsque le **modificateur d’accès** pour le fichier est remplacé par **Public** . La classe UILibrary analyse les données de chaîne selon les besoins. . Notez que la classe est dans l'espace de noms `MyCompany.Employees`.  
   
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]  

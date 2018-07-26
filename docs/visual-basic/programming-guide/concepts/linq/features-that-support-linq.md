@@ -6,26 +6,26 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: db2eff2f7c19a3c510e7b212f5bb406d7a885439
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643898"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199145"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Fonctionnalités Visual Basic prenant en charge LINQ
-Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence à la technologie en Visual Basic prend en charge la syntaxe de requête et les autres constructions de langage directement dans le langage. Avec [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous n’avez pas à apprendre un nouveau langage de requête sur une source de données externe. Vous pouvez interroger les données dans les bases de données relationnelles, de magasins XML ou d’objets à l’aide de Visual Basic. Cette intégration de fonctions de requête dans la langue permet la vérification de la compilation pour les erreurs de syntaxe et de la sécurité de type. Cette intégration garantit également que vous connaissez déjà la majeure partie de ce que vous devez savoir pour écrire des requêtes riches et variées dans Visual Basic.  
+Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence à la technologie en Visual Basic prend en charge la syntaxe de requête et les autres constructions de langage directement dans le langage. Avec [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous n’avez pas à apprendre un nouveau langage de requête sur une source de données externe. Vous pouvez interroger les données dans les bases de données relationnelles, de magasins XML ou d’objets à l’aide de Visual Basic. Cette intégration de fonctions de requête dans le langage permet la vérification au moment de la compilation pour les erreurs de syntaxe et de sécurité de type. Cette intégration garantit également que vous connaissez déjà la majeure partie de ce que vous devez savoir pour écrire des requêtes riches et variées dans Visual Basic.  
   
- Les sections suivantes décrivent les constructions de langage qui prend en charge de LINQ dans assez de détails pour vous permettre de lire les documentations d’introduction, les exemples de code et les exemples d’applications. Vous pouvez également cliquer sur les liens pour consulter des explications plus détaillées de la façon dont les fonctionnalités de langage collaborer pour activer language integrated query. Un bon point de départ est [procédure pas à pas : écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
+ Les sections suivantes décrivent les constructions de langage qui prennent en charge LINQ suffisamment détaillés pour vous permettent de lire la documentation d’introduction, les exemples de code et les exemples d’applications. Vous pouvez également cliquer sur les liens pour trouver des explications plus détaillées de la façon dont les fonctionnalités de langage sont combinent pour activer language integrated query. Un bon point de départ est [procédure pas à pas : écriture de requêtes dans Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
 ## <a name="query-expressions"></a>Expressions de requête  
- En Visual Basic, les expressions de requête peuvent être exprimées dans une syntaxe déclarative similaire à celle de SQL ou XQuery. Au moment de la compilation, syntaxe de requête est convertie en appels de méthode à l’implémentation d’un fournisseur LINQ des méthodes d’extension de requête standard opérateur. Contrôle des applications qui sont des opérateurs de requête standard dans la portée en spécifiant l’espace de noms approprié avec une `Imports` instruction. Syntaxe pour une expression de requête Visual Basic ressemble à ceci :  
+ En Visual Basic, les expressions de requête peuvent être exprimées dans une syntaxe déclarative semblable à celle de SQL ou XQuery. Au moment de la compilation, la syntaxe de requête est convertie en appels de méthode à l’implémentation d’un fournisseur LINQ des méthodes d’extension de requête standard opérateur. Contrôle d’applications qui sont des opérateurs de requête standard dans la portée en spécifiant l’espace de noms approprié avec une `Imports` instruction. Syntaxe d’une expression de requête Visual Basic ressemble à ceci :  
   
  [!code-vb[VbLINQVbFeatures#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_1.vb)]  
   
  Pour plus d’informations, consultez [Introduction à LINQ en Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ## <a name="implicitly-typed-variables"></a>Variables implicitement typées  
- Au lieu de spécifier explicitement un type lorsque vous déclarez et initialisez une variable, vous pouvez activer au compilateur de déduire et d’assigner le type. Cela est appelé *l’inférence de type local*.  
+ Au lieu de spécifier explicitement un type lorsque vous déclarez et initialisez une variable, vous pouvez activer le compilateur doit déduire et assigner le type. Cela est appelé *inférence de type local*.  
   
  Les variables dont les types sont déduits sont fortement typées, comme les variables dont vous spécifiez explicitement le type. Inférence de type local fonctionne uniquement lorsque vous définissez une variable locale à l’intérieur d’un corps de méthode. Pour plus d’informations, consultez [Option Infer, instruction](../../../../visual-basic/language-reference/statements/option-infer-statement.md) et [l’inférence de Type Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
@@ -35,12 +35,12 @@ Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence 
   
  Inférence de type local rend également possible de créer des types anonymes, qui sont décrites plus loin dans cette section et sont nécessaires pour les requêtes LINQ.  
   
- Dans l’exemple LINQ suivant, l’inférence de type se produit si `Option Infer` est `On` ou `Off`. Une erreur de compilation se produit si `Option Infer` est `Off` et `Option Strict` est `On`.  
+ Dans l’exemple suivant de LINQ, l’inférence de type se produit si `Option Infer` est soit `On` ou `Off`. Une erreur de compilation se produit si `Option Infer` est `Off` et `Option Strict` est `On`.  
   
  [!code-vb[VbLINQVbFeatures#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_3.vb)]  
   
 ## <a name="object-initializers"></a>Initialiseurs d'objets  
- Initialiseurs d’objets sont utilisés dans les expressions de requête lorsque vous avez besoin de créer un type anonyme pour contenir les résultats d’une requête. Ils peuvent également servir à initialiser des objets de types nommés en dehors de requêtes. En utilisant un initialiseur d’objet, vous pouvez initialiser un objet dans une seule ligne sans appeler explicitement un constructeur. En supposant que vous ayez une classe nommée `Customer` qui a public `Name` et `Phone` propriétés, ainsi que d’autres propriétés, un initialiseur d’objet peut être utilisé de cette manière :  
+ Initialiseurs d’objets sont utilisés dans les expressions de requête lorsque vous devez créer un type anonyme pour stocker les résultats d’une requête. Ils peuvent également être utilisés pour initialiser des objets de types nommés en dehors des requêtes. En utilisant un initialiseur d’objet, vous pouvez initialiser un objet dans une seule ligne sans appeler explicitement un constructeur. En supposant que vous avez une classe nommée `Customer` qui a public `Name` et `Phone` propriétés, ainsi que d’autres propriétés, un initialiseur d’objet peut être utilisé de cette manière :  
   
  [!code-vb[VbLINQVbFeatures#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_4.vb)]  
   
@@ -56,7 +56,7 @@ Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence 
  Pour plus d’informations, consultez [Types anonymes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>méthodes d’extension.  
- Méthodes d’extension permettent d’ajouter des méthodes à un type de données ou d’une interface à partir d’à l’extérieur de la définition. Cette fonctionnalité vous permet, en effet, ajouter de nouvelles méthodes à un type existant sans modifier réellement. Les opérateurs de requête standard sont eux-mêmes un ensemble de méthodes d’extension qui fournissent des [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fonctionnalité de requête pour n’importe quel type qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Autres extensions <xref:System.Collections.Generic.IEnumerable%601> incluent <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, et <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Méthodes d’extension permettent d’ajouter des méthodes à un type de données ou d’une interface à partir d’en dehors de la définition. Cette fonctionnalité vous permet, en effet, ajouter de nouvelles méthodes à un type existant sans modifier réellement. Les opérateurs de requête standard sont eux-mêmes un ensemble de méthodes d’extension qui fournissent des [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fonctionnalité de requête pour n’importe quel type qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Autres extensions à <xref:System.Collections.Generic.IEnumerable%601> incluent <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>, et <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  La méthode d’extension suivante ajoute une méthode d’impression à la <xref:System.String> classe.  
   
@@ -79,11 +79,11 @@ Le nom [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] fait référence 
   
  Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], expressions lambda sous-tendent à la plupart des opérateurs de requête standard. Le compilateur crée des expressions lambda pour capturer les calculs qui sont définis dans les méthodes de requête fondamentaux tels que `Where`, `Select`, `Order By`, `Take While`et d’autres.  
   
- Par exemple, le code suivant définit une requête qui retourne tous les étudiants supérieurs à partir d’une liste d’étudiants.  
+ Par exemple, le code suivant définit une requête qui retourne tous les étudiants seniors dans une liste d’étudiants.  
   
  [!code-vb[VbLINQVbFeatures#9](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_10.vb)]  
   
- La définition de requête est compilée en code similaire à l’exemple suivant, qui utilise deux expressions lambda pour spécifier les arguments pour `Where` et `Select`.  
+ La définition de requête est compilée en code qui est similaire à l’exemple suivant, qui utilise deux expressions lambda pour spécifier les arguments pour `Where` et `Select`.  
   
  [!code-vb[VbLINQVbFeatures#10](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/features-that-support-linq_11.vb)]  
   

@@ -2,16 +2,16 @@
 title: Référence Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: 79cdf35128ac35920797060b09ff2fc5999708a7
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
-ms.translationtype: HT
+ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028017"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39221047"
 ---
 # <a name="entity-sql-reference"></a>Référence Entity SQL
 
-Cette section contient des articles de référence Entity SQL. Cet article résume et regroupe les opérateurs Entity SQL par catégorie.
+Cette section contient des articles de référence Entity SQL. Cet article récapitule et groupe les opérateurs d’Entity SQL par catégorie.
 
 ## <a name="arithmetic-operators"></a>Opérateurs arithmétiques
 
@@ -32,11 +32,11 @@ Les fonctions canoniques sont prises en charge par tous les fournisseurs de donn
 
 |Fonction|Type|
 |--------------|----------|
-|[Fonctions canoniques d’agrégation Entity SQL](aggregate-canonical-functions.md)|Décrit les fonctions canoniques Entity SQL d’agrégation.|
-|[Fonctions canoniques mathématiques](math-canonical-functions.md)|Décrit les fonctions canoniques mathématiques Entity SQL.|
+|[Fonctions canoniques Entity agrégation SQL](aggregate-canonical-functions.md)|Décrit les fonctions canoniques Entity SQL d’agrégation.|
+|[Fonctions canoniques mathématiques](math-canonical-functions.md)|Traite des fonctions mathématiques canoniques Entity SQL.|
 |[Fonctions canoniques de chaîne](string-canonical-functions.md)|Décrit les fonctions canoniques de chaîne Entity SQL.|
 |[Fonctions canoniques de date et d’heure](date-and-time-canonical-functions.md)|Décrit les fonctions canoniques de date et d’heure Entity SQL.|
-|[Fonctions canoniques au niveau du bit](bitwise-canonical-functions.md)|Décrit les fonctions canoniques Entity SQL au niveau du bit.|
+|[Fonctions canoniques au niveau du bit](bitwise-canonical-functions.md)|Traite des fonctions canoniques Entity SQL au niveau du bit.|
 |[Autres fonctions canoniques](other-canonical-functions.md)|Décrit les fonctions qui ne sont pas considérées comme des fonctions au niveau du bit, des fonctions de date/heure, des fonctions de chaîne, des fonctions mathématiques ni des fonctions d'agrégation.|
 
 ## <a name="comparison-operators"></a>Opérateurs de comparaison
@@ -50,12 +50,12 @@ L'égalité et l'inégalité sont définies pour tout type d'objet qui possède 
 |[= (égal à)](equals-entity-sql.md)|Compare l'égalité de deux expressions.|
 |[> (supérieur à)](greater-than-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure à celle de l'expression de droite.|
 |[>= (supérieur ou égal à)](greater-than-or-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est supérieure ou égale à celle de l'expression de droite.|
-|[EST &#91;PAS&#93; NULL](isnull-entity-sql.md)|Détermine si une expression de requête a la valeur NULL.|
+|[EST \[PAS\] NULL](isnull-entity-sql.md)|Détermine si une expression de requête a la valeur NULL.|
 |[< (inférieur à)](less-than-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure à celle de l'expression de droite.|
 |[<= (inférieur ou égal à)](less-than-or-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si la valeur de l'expression de gauche est inférieure ou égale à celle de l'expression de droite.|
-|[&#91;PAS&#93; BETWEEN](between-entity-sql.md)|Détermine si une expression a pour résultat une valeur contenue dans une plage spécifiée.|
-|[\!= (différent de)](not-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si l’expression de gauche n’est pas égale à l’expression de droite.|
-|[&#91;PAS&#93; COMME](like-entity-sql.md)|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié.|
+|[\[PAS\] BETWEEN](between-entity-sql.md)|Détermine si une expression a pour résultat une valeur contenue dans une plage spécifiée.|
+|[\!= (Différent de)](not-equal-to-entity-sql.md)|Compare deux expressions pour déterminer si l’expression de gauche n’est pas égale à l’expression de droite.|
+|[\[PAS\] COMME](like-entity-sql.md)|Détermine si une chaîne de caractères donnée correspond à un modèle spécifié.|
 
 ## <a name="logical-and-case-expression-operators"></a>Opérateurs logiques et d’expression case
 
@@ -76,7 +76,7 @@ Les opérateurs de requête permettent de définir des expressions de requête q
 |Opérateur|Utilisez|
 |--------------|---------|
 |[FROM](from-entity-sql.md)|Spécifie la collection qui est utilisée dans [sélectionnez](select-entity-sql.md) instructions.|
-|[GROUP BY](group-by-entity-sql.md)|Spécifie les groupes dans les objets qui sont retournés par une requête ([sélectionnez](select-entity-sql.md)) expression doivent être placés.|
+|[GROUP BY](group-by-entity-sql.md)|Spécifie les groupes dans laquelle des objets qui sont retournés par une requête ([sélectionnez](select-entity-sql.md)) expression doivent être placés.|
 |[GroupPartition](grouppartition-entity-sql.md)|Retourne une collection de valeurs d’argument, projetées en dehors de la partition de groupe à laquelle l’agrégat est associé.|
 |[HAVING](having-entity-sql.md)|Spécifie une condition de recherche pour un groupe ou un agrégat.|
 |[LIMIT](limit-entity-sql.md)|Utilisé avec le [ORDER BY](order-by-entity-sql.md) clause pour effectuer une pagination physique.|
@@ -88,7 +88,7 @@ Les opérateurs de requête permettent de définir des expressions de requête q
 
 ## <a name="reference-operators"></a>Opérateurs de référence
 
-Une référence est un pointeur logique (clé étrangère) vers une entité spécifique dans un jeu d'entités spécifique. Entity SQL prend en charge les opérateurs suivants pour construire, déconstruire et Explorer les références :
+Une référence est un pointeur logique (clé étrangère) vers une entité spécifique dans un jeu d'entités spécifique. Entity SQL prend en charge les opérateurs suivants pour construire, déconstruire et parcourir les références :
 
 |Opérateur|Utilisez|
 |--------------|---------|
@@ -100,15 +100,15 @@ Une référence est un pointeur logique (clé étrangère) vers une entité spé
 
 ## <a name="set-operators"></a>Opérateurs de jeu
 
-Entity SQL fournit diverses opérations set performantes. Cela inclut les opérateurs de jeu aux opérateurs Transact-SQL telles que l’UNION, INTERSECT, EXCEPT et EXISTS. Entity SQL prend également en charge les opérateurs pour l’élimination des doublons (SET), l’appartenance au test (IN) et jointures (JOIN). Le tableau suivant répertorie les opérateurs de jeu Entity SQL :
+Entity SQL fournit diverses opérations set performantes. Cela inclut les opérateurs de jeu similaires aux opérateurs Transact-SQL comme UNION, INTERSECT, EXCEPT et EXISTS. Entity SQL prend également en charge les opérateurs pour l’élimination des doublons (SET), les tests d’appartenance (IN) et les jointures (JOIN). Le tableau suivant répertorie les opérateurs de jeu Entity SQL :
 
 |Opérateur|Utilisez|
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|Extrait un élément d'une collection à valeurs multiples.|
-|[EXCEPT](except-entity-sql.md)|Retourne une collection de valeurs distinctes à partir de l’expression de requête à gauche de l’opérande EXCEPT qui ne sont pas retournées à partir de l’expression de requête située à droite de l’opérande EXCEPT.|
-|[&#91;PAS&#93; EXISTS](exists-entity-sql.md)|Détermine si une collection est vide.|
+|[EXCEPT](except-entity-sql.md)|Retourne une collection de valeurs distinctes à partir de l’expression de requête à gauche de l’opérande EXCEPT qui ne sont pas également retournées à partir de l’expression de requête à droite de l’opérande EXCEPT.|
+|[\[PAS\] EXISTS](exists-entity-sql.md)|Détermine si une collection est vide.|
 |[FLATTEN](flatten-entity-sql.md)|Convertit une collection de collections en collection plane.|
-|[&#91;PAS&#93; IN](in-entity-sql.md)|Détermine si une valeur correspond à une valeur incluse dans une collection.|
+|[\[PAS\] IN](in-entity-sql.md)|Détermine si une valeur correspond à une valeur incluse dans une collection.|
 |[INTERSECT](intersect-entity-sql.md)|Retourne une collection de valeurs distinctes qui sont retournées par les expressions de requête tant à gauche qu'à droite de l'opérande INTERSECT.|
 |[OVERLAPS](overlaps-entity-sql.md)|Détermine si deux collections ont des éléments en commun.|
 |[SET](set-entity-sql.md)|Permet de convertir une collection d’objets en un ensemble en produisant une nouvelle collection dans laquelle tous les éléments en double ont été supprimés.|
@@ -116,13 +116,13 @@ Entity SQL fournit diverses opérations set performantes. Cela inclut les opéra
 
 ## <a name="type-operators"></a>Opérateurs de type
 
-Entity SQL fournit les opérations qui permettent le type d’une expression (valeur) à être construit, l’interrogation et manipulé. Le tableau suivant répertorie les opérateurs qui sont utilisées pour travailler avec les types :
+Entity SQL fournit les opérations qui permettent le type d’une expression (valeur) construit, interrogé, et la manipulation. Le tableau suivant répertorie les opérateurs sont utilisés pour travailler avec des types :
 
 |Opérateur|Utilisez|
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|Convertit une expression d'un type de données à un autre.|
 |[COLLECTION](collection-entity-sql.md)|Utilisé dans un [fonction](function-entity-sql.md) opération pour déclarer une collection de types d’entité ou des types complexes.|
-|[EST &#91;PAS&#93; OF](isof-entity-sql.md)|Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.|
+|[EST \[PAS\] OF](isof-entity-sql.md)|Détermine si le type d'une expression appartient au type spécifié ou à l'un de ses sous-types.|
 |[OFTYPE](oftype-entity-sql.md)|Retourne une collection d'objets à partir d'une expression de requête d'un type spécifique.|
 |[Constructeur de type nommé](named-type-constructor-entity-sql.md)|Permet de créer des instances de types d'entités ou de types complexes.|
 |[MULTISET](multiset-entity-sql.md)|Crée une instance d'un multiensemble à partir d'une liste de valeurs.|

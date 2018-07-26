@@ -1,5 +1,5 @@
 ---
-title: Compilateur de ligne de commande Visual Basic
+title: Compilateur de ligne de commande de Visual Basic
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -11,13 +11,13 @@ ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1dd00fca2f2b24386773ac4868763cfb868e6b37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650905"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244762"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Compilateur de ligne de commande Visual Basic
+# <a name="visual-basic-command-line-compiler"></a>Compilateur de ligne de commande de Visual Basic
 
 Le compilateur de ligne de commande Visual Basic fournit une alternative aux programmes de compilation dans l’environnement de développement intégré (IDE) Visual Studio. Cette section contient des descriptions pour les options du compilateur Visual Basic.
 
@@ -26,7 +26,7 @@ Le compilateur de ligne de commande Visual Basic fournit une alternative aux pro
 ## <a name="in-this-section"></a>Dans cette section
 
 [Génération à partir de la ligne de commande](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Décrit le compilateur de ligne de commande Visual Basic, qui est fourni comme alternative aux programmes de compilation dans l’IDE de Visual Studio.
+Décrit le compilateur de ligne de commande Visual Basic, qui est fourni comme alternative aux programmes de compilation dans l’IDE Visual Studio.
 
 [Options du compilateur Visual Basic par ordre alphabétique](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
 Répertorie les options du compilateur dans une table alphabétique
@@ -37,4 +37,4 @@ Présente les options du compilateur dans des groupes fonctionnels.
 ## <a name="related-sections"></a>Rubriques connexes
 
 [Guide Visual Basic](../../index.md)  
-Le point de départ pour la documentation de Visual Basic.
+Le point de départ pour obtenir la documentation de Visual Basic.

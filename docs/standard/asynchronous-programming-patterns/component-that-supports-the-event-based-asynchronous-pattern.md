@@ -1,5 +1,5 @@
 ---
-title: 'Procédure pas à pas : implémentation d’un composant qui prend en charge le modèle asynchrone basé sur des événements'
+title: 'Comment : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 9156a538e306fb8657855a840dd8185cef8794b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5282befe15dc65db5ba320f558c7f22949ae7c2
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579260"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220761"
 ---
-# <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Procédure pas à pas : implémentation d’un composant qui prend en charge le modèle asynchrone basé sur des événements
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Comment : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements
 Si vous écrivez une classe qui comporte certaines opérations pouvant entraîner d’importants ralentissements, pensez à lui affecter des fonctionnalités asynchrones en implémentant la [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
   
  Cette procédure pas à pas montre comment créer un composant qui applique le modèle asynchrone basé sur les événements. Il est implémenté à l'aide de classes d'assistance provenant de l'espace de noms <xref:System.ComponentModel?displayProperty=nameWithType>, ce qui garantit son bon fonctionnement quel que soit le modèle d’application, y compris [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], les applications Console et les applications Windows Forms. Vous pouvez également le concevoir avec un contrôle <xref:System.Windows.Forms.PropertyGrid> et vos propres concepteurs personnalisés.  
@@ -254,6 +254,4 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
 ## <a name="see-also"></a>Voir aussi  
  [Guide pratique pour exécuter une opération en arrière-plan](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
- [ABSENT DE LA BUILD : Multithreading en Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- [Programmation multithread avec le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+ [Modèle asynchrone basé sur les événements (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  

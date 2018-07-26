@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585825"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198838"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accès aux données dans les applications Visual Basic
 Visual Basic inclut plusieurs nouvelles fonctionnalités conçues pour vous aider à développer des applications qui accèdent à des données. Vous pouvez créer des formulaires liés aux données pour des applications Windows en faisant glisser des éléments de la [fenêtre Sources de données](/visualstudio/data-tools/add-new-data-sources) sur les formulaires. Vous pouvez également lier des contrôles aux données en faisant glisser des éléments de la **fenêtre Sources de données** sur des contrôles existants.  

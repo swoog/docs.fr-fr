@@ -6,18 +6,18 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653544"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244892"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Comment : créer une expression lambda (Visual Basic)
-A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom. Une expression lambda peut être utilisée partout où un type délégué est valid.  
+Un *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom. Une expression lambda peut être utilisée partout où un type délégué est valide.  
   
 ### <a name="to-create-a-single-line-lambda-expression-function"></a>Pour créer une fonction d’expression lambda sur une ligne  
   
-1.  Dans toute situation où un type délégué peut être utilisé, tapez le mot clé `Function`, comme dans l’exemple suivant :  
+1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Function`, comme dans l’exemple suivant :  
   
      `Dim add1 =`   `Function`  
   
@@ -25,7 +25,7 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3.  Après la liste de paramètres, tapez une expression unique comme corps de la fonction. La valeur de l’expression prend la valeur est la valeur retournée par la fonction. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
+3.  Après la liste de paramètres, tapez une expression unique comme corps de la fonction. La valeur que prend l’expression est la valeur retournée par la fonction. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
   
      [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
@@ -39,7 +39,7 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
   
 ### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Pour créer une sous-routine d’expression lambda sur une ligne  
   
-1.  Dans toute situation où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant.  
+1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant.  
   
      `Dim add1 =`   `Sub`  
   
@@ -57,7 +57,7 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
   
 ### <a name="to-create-a-multiline-lambda-expression-function"></a>Pour créer une fonction d’expression lambda multiligne  
   
-1.  Dans toute situation où un type délégué peut être utilisé, tapez le mot clé `Function`, comme illustré dans l’exemple suivant.  
+1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Function`, comme illustré dans l’exemple suivant.  
   
      `Dim add1 =`   `Function`  
   
@@ -65,7 +65,7 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3.  Appuyez sur Entrée. La `End Function` instruction est ajoutée automatiquement.  
+3.  Appuyez sur Entrée. La `End Function` instruction est automatiquement ajoutée.  
   
 4.  Dans le corps de la fonction, ajoutez le code suivant pour créer une expression et la valeur de retour. Vous n’utilisez pas un `As` clause pour spécifier le type de retour.  
   
@@ -77,7 +77,7 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
   
 ### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Pour créer une sous-routine d’expression lambda multiligne  
   
-1.  Dans toute situation où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant :  
+1.  Dans les cas où un type délégué peut être utilisé, tapez le mot clé `Sub`, comme illustré dans l’exemple suivant :  
   
      `Dim add1 =`   `Sub`  
   
@@ -85,7 +85,7 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3.  Appuyez sur Entrée. La `End Sub` instruction est ajoutée automatiquement.  
+3.  Appuyez sur Entrée. La `End Sub` instruction est automatiquement ajoutée.  
   
 4.  Dans le corps de la fonction, ajoutez le code suivant à exécuter lorsque la sous-routine est appelée.  
   
@@ -96,11 +96,11 @@ A *expression lambda* est une fonction ou une sous-routine qui n’a pas de nom.
      [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## <a name="example"></a>Exemple  
- Une utilisation courante des expressions lambda consiste à définir une fonction qui peut être passée comme argument pour un paramètre dont le type est `Delegate`. Dans l’exemple suivant, la <xref:System.Diagnostics.Process.GetProcesses%2A> méthode retourne un tableau des processus en cours d’exécution sur l’ordinateur local. Le <xref:System.Linq.Enumerable.Where%2A> méthode à partir de la <xref:System.Linq.Enumerable> classe requiert un `Boolean` délégué en tant que son argument. L’expression lambda dans l’exemple est utilisée à cet effet. Elle retourne `True` pour chaque processus qui a un seul thread, et ceux sélectionnés dans `filteredList`.  
+ Une utilisation courante des expressions lambda consiste à définir une fonction qui peut être passée comme argument pour un paramètre dont le type est `Delegate`. Dans l’exemple suivant, la <xref:System.Diagnostics.Process.GetProcesses%2A> méthode retourne un tableau des processus en cours d’exécution sur l’ordinateur local. Le <xref:System.Linq.Enumerable.Where%2A> méthode à partir de la <xref:System.Linq.Enumerable> classe nécessite une `Boolean` délégué comme argument. L’expression lambda dans l’exemple est utilisée à cet effet. Elle retourne `True` pour chaque processus qui a un seul thread, et ces dernières sont sélectionnées dans `filteredList`.  
   
  [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
- L’exemple précédent équivaut au code suivant, qui est écrit dans [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntaxe :  
+ L’exemple précédent équivaut au code suivant, qui est écrit en [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntaxe :  
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   

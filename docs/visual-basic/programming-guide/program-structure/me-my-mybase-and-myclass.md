@@ -22,19 +22,19 @@ helpviewer_keywords:
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
 ms.openlocfilehash: f3db5f8f6688e68992f683ac1b1465078aa41231
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650525"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244710"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase et MyClass dans Visual Basic
-`Me`, `My`, `MyBase`, et `MyClass` en Visual Basic, ont des noms semblables, mais à des fins différentes. Cette rubrique décrit chacune de ces entités afin de les distinguer.  
+`Me`, `My`, `MyBase`, et `MyClass` en Visual Basic ont des noms similaires, mais à des fins différentes. Cette rubrique décrit chacune de ces entités afin de les distinguer.  
   
 ## <a name="me"></a>Me  
- Le `Me` mot clé permet de faire référence à l’instance spécifique d’une classe ou structure dans laquelle le code est en cours d’exécution. `Me` se comporte comme une variable objet ou une variable de structure faisant référence à l’instance actuelle. À l’aide de `Me` est particulièrement utile pour passer des informations sur l’instance en cours d’exécution d’une classe ou une structure à une procédure dans une autre classe, structure ou un module.  
+ Le `Me` mot clé permet de faire référence à l’instance spécifique d’une classe ou structure dans laquelle le code est en cours d’exécution. `Me` se comporte comme une variable objet ou une variable de structure faisant référence à l’instance actuelle. À l’aide de `Me` est particulièrement utile pour transmettre des informations sur l’instance en cours d’exécution d’une classe ou une structure à une procédure dans une autre classe, structure ou module.  
   
- Par exemple, supposons que vous disposez de la procédure suivante dans un module.  
+ Par exemple, supposons que vous avez la procédure suivante dans un module.  
   
 ```  
 Sub ChangeFormColor(FormName As Form)  
@@ -50,13 +50,13 @@ ChangeFormColor(Me)
 ```  
   
 ## <a name="my"></a>My  
- Le `My` fonction fournit un accès facile et intuitif pour un certain nombre de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes, l’activation de l’utilisateur de Visual Basic interagir avec l’ordinateur, applications, paramètres, ressources et ainsi de suite.  
+ Le `My` fonctionnalité offre un accès facile et intuitif à un nombre de [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] classes, l’activation de l’utilisateur de Visual Basic interagir avec l’ordinateur, application, paramètres, ressources et ainsi de suite.  
   
 ## <a name="mybase"></a>MyBase  
- Le `MyBase` (mot clé) se comporte comme une variable objet faisant référence à la classe de base de l’instance actuelle d’une classe. `MyBase` est couramment utilisé pour accéder aux membres de classe de base qui sont substitués ou occultés dans une classe dérivée. `MyBase.New` est utilisé pour appeler explicitement un constructeur de classe de base à partir d’un constructeur de classe dérivée.  
+ Le `MyBase` mot clé se comporte comme une variable objet faisant référence à la classe de base de l’instance actuelle d’une classe. `MyBase` est couramment utilisé pour accéder aux membres de classe de base qui sont substitués ou occultés dans une classe dérivée. `MyBase.New` est utilisé pour appeler explicitement un constructeur de classe de base à partir d’un constructeur de classe dérivée.  
   
 ## <a name="myclass"></a>MyClass  
- Le `MyClass` (mot clé) se comporte comme une variable objet faisant référence à l’instance actuelle d’une classe implémentée à l’origine. `MyClass` est semblable à `Me`, mais tous les appels de méthode sur celui-ci sont traités comme si la méthode était `NotOverridable`.  
+ Le `MyClass` mot clé se comporte comme une variable objet faisant référence à l’instance actuelle d’une classe implémentée à l’origine. `MyClass` est similaire à `Me`, mais tous les appels de méthode sur celui-ci sont traités comme si la méthode était `NotOverridable`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éléments fondamentaux de l’héritage](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

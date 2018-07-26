@@ -1,13 +1,13 @@
 ---
-title: 'Exemple de fichier XML : Configuration de Test dans un Namespace3'
+title: 'Exemple de fichier XML : Configuration de Test dans un espace de noms3'
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
 ms.openlocfilehash: 2a572bb4d2618bdd6ef002389703ea63ee2ed21b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644626"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243840"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Exemple de fichier XML : Configuration test dans un espace de noms
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il s'agit d'un fichier de configuration test. Le code XML se trouve dans un espace de noms.  

@@ -1,5 +1,5 @@
 ---
-title: Error, instruction
+title: Error, instruction (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: 3ecfe18392de15dc937d90565b49641415dd7e0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603884"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199477"
 ---
 # <a name="error-statement"></a>Error, instruction
 Simule la présence d’une erreur.  
@@ -31,33 +31,33 @@ Error errornumber
  Obligatoire. Peut être n’importe quel numéro d’erreur valide.  
   
 ## <a name="remarks"></a>Notes  
- La `Error` instruction est prise en charge pour la compatibilité descendante. Dans le nouveau code, notamment lors de la création d’objets, utilisez la `Err` l’objet `Raise` méthode pour générer des erreurs d’exécution.  
+ La `Error` instruction est prise en charge pour la compatibilité descendante. Dans le nouveau code, en particulier lors de la création d’objets, utilisez le `Err` l’objet `Raise` méthode permettant de générer des erreurs d’exécution.  
   
- Si `errornumber` est défini, le `Error` instruction appelle le Gestionnaire d’erreurs après les propriétés de la `Err` objet affecté les valeurs par défaut suivantes :  
+ Si `errornumber` est défini, le `Error` instruction appelle le Gestionnaire d’erreurs après les propriétés de la `Err` objet sont affectées les valeurs par défaut suivantes :  
   
 |Propriété|Value|  
 |--------------|-----------|  
-|`Number`|Valeur spécifiée en tant qu’argument à `Error` instruction. Peut être n’importe quel numéro d’erreur valide.|  
+|`Number`|Valeur spécifiée comme argument à `Error` instruction. Peut être n’importe quel numéro d’erreur valide.|  
 |`Source`|Nom du projet Visual Basic actuel.|  
-|`Description`|Expression de chaîne correspondant à la valeur de retour de la `Error` fonction spécifié `Number`, si cette chaîne existe. Si la chaîne n’existe pas, `Description` contient une chaîne de longueur nulle ( » »).|  
-|`HelpFile`|Le lecteur complet, le chemin d’accès et le nom de fichier du fichier d’aide Visual Basic approprié.|  
-|`HelpContext`|ID de contexte pour l’erreur correspondant à l’aide de Visual Basic approprié du fichier le `Number` propriété.|  
-|`LastDLLError`|Zéro.|  
+|`Description`|Expression de chaîne correspondant à la valeur de retournée de la `Error` fonction spécifié `Number`, si cette chaîne existe. Si la chaîne n’existe pas, `Description` contient une chaîne de longueur nulle ( » »).|  
+|`HelpFile`|Le lecteur complet, le chemin d’accès et le nom du fichier d’aide de Visual Basic approprié.|  
+|`HelpContext`|Les fichier d’aide Visual Basic approprié ID de contexte pour l’erreur correspondant à la `Number` propriété.|  
+|`LastDLLError`|Égal à zéro.|  
   
  Si aucun gestionnaire d’erreur existe, ou si aucune n’est activée, un message d’erreur est créé et affiché à partir de la `Err` propriétés de l’objet.  
   
 > [!NOTE]
->  Certaines applications hôtes de Visual Basic ne peut pas créer des objets. Consultez la documentation de votre application hôte pour déterminer si elle peut créer des classes et des objets.  
+>  Certaines applications d’hôte de Visual Basic ne peut pas créer des objets. Consultez la documentation de votre application hôte pour déterminer si elle peut créer des classes et des objets.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise la `Error` instruction à générer l’erreur numéro 11.  
+ Cet exemple utilise la `Error` instruction pour générer le numéro d’erreur 11.  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Namespace :** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **Assembly :** bibliothèque Visual Basic Runtime (dans Microsoft.VisualBasic.dll)  

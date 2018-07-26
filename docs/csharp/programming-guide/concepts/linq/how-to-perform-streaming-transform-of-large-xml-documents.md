@@ -3,11 +3,11 @@ title: Guide pratique pour effectuer une transformation de streaming de document
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
 ms.openlocfilehash: 1a12e8c0ae98be37599b05e5d63469336247d915
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325602"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244138"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>Guide pratique pour effectuer une transformation de streaming de documents XML volumineux (C#)
 Vous devez parfois transformer des fichiers XML volumineux et écrire votre application de sorte que son encombrement mémoire soit prévisible. Si vous tentez de remplir une arborescence XML avec un très grand fichier XML, l'utilisation de la mémoire sera proportionnelle à la taille du fichier (c'est-à-dire excessive). Par conséquent, vous devez utiliser une technique de diffusion en continu à la place.  

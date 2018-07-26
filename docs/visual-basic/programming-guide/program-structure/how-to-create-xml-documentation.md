@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
 ms.openlocfilehash: 7fb56da8a28367a6dcd5e28f208b4519510d7d95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650879"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39243877"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Comment : créer une documentation XML en Visual Basic
 Cet exemple montre comment ajouter des commentaires de documentation XML à votre code.  
@@ -19,7 +19,7 @@ Cet exemple montre comment ajouter des commentaires de documentation XML à votr
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>Pour créer une documentation XML pour un type ou membre  
   
-1.  Dans le **éditeur de Code**, placez votre curseur sur la ligne au-dessus du type ou du membre pour lequel vous souhaitez créer une documentation.  
+1.  Dans le **éditeur de Code**, positionnez votre curseur sur la ligne au-dessus du type ou le membre pour lequel vous souhaitez créer la documentation.  
   
 2.  Type `'''` (trois guillemets simples).  
   

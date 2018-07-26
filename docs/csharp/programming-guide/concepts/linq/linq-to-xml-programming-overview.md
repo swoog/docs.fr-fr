@@ -3,10 +3,11 @@ title: Vue d’ensemble de la programmation LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 2dfa9b6f-5890-461d-b81c-316853c7f320
 ms.openlocfilehash: c461d4b4082293d91d18538596cfa03d9445c224
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198882"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a>Vue d’ensemble de la programmation LINQ to XML (C#)
 Ces rubriques fournissent des informations de haut niveau concernant les classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], ainsi que des informations détaillées sur trois des classes les plus importantes.  

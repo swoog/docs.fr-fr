@@ -3,11 +3,11 @@ title: Guide pratique pour intercepter les erreurs d’analyse (C#)
 ms.date: 07/20/2015
 ms.assetid: bfb612d4-5605-48ef-8c93-915cf9d5dcfb
 ms.openlocfilehash: 037e490fa7b0600b906ec310201e5d33c2f55baa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333383"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198471"
 ---
 # <a name="how-to-catch-parsing-errors-c"></a>Guide pratique pour intercepter les erreurs d’analyse (C#)
 Cette rubrique montre comment détecter du code XML incorrect ou non valide.  
