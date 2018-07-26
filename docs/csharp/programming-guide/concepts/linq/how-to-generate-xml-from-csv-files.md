@@ -3,19 +3,19 @@ title: Guide pratique pour générer du code XML à partir de fichiers CSV (C#)
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 71fc10d4b48737a816532fa16f4e621c81050ab3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325654"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244723"
 ---
-# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="57aa4-102">Guide pratique pour générer du code XML à partir de fichiers CSV (C#)</span><span class="sxs-lookup"><span data-stu-id="57aa4-102">How to: Generate XML from CSV Files (C#)</span></span>
-<span data-ttu-id="57aa4-103">Cet exemple montre comment utiliser [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour générer un fichier XML à partir d'un fichier de valeurs séparées par des virgules (CSV).</span><span class="sxs-lookup"><span data-stu-id="57aa4-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
+# <a name="how-to-generate-xml-from-csv-files-c"></a><span data-ttu-id="d76a5-102">Guide pratique pour générer du code XML à partir de fichiers CSV (C#)</span><span class="sxs-lookup"><span data-stu-id="d76a5-102">How to: Generate XML from CSV Files (C#)</span></span>
+<span data-ttu-id="d76a5-103">Cet exemple montre comment utiliser [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour générer un fichier XML à partir d'un fichier de valeurs séparées par des virgules (CSV).</span><span class="sxs-lookup"><span data-stu-id="d76a5-103">This example shows how to use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to generate an XML file from a comma-separated value (CSV) file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="57aa4-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="57aa4-104">Example</span></span>  
- <span data-ttu-id="57aa4-105">Le code suivant exécute une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sur un tableau de chaînes.</span><span class="sxs-lookup"><span data-stu-id="57aa4-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
+## <a name="example"></a><span data-ttu-id="d76a5-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="d76a5-104">Example</span></span>  
+ <span data-ttu-id="d76a5-105">Le code suivant exécute une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] sur un tableau de chaînes.</span><span class="sxs-lookup"><span data-stu-id="d76a5-105">The following code performs a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query on an array of strings.</span></span>  
   
- <span data-ttu-id="57aa4-106">La requête utilise la clause `let` pour fractionner chaque chaîne en un tableau de champs.</span><span class="sxs-lookup"><span data-stu-id="57aa4-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
+ <span data-ttu-id="d76a5-106">La requête utilise la clause `let` pour fractionner chaque chaîne en un tableau de champs.</span><span class="sxs-lookup"><span data-stu-id="d76a5-106">The query uses the `let` clause to split each string into an array of fields.</span></span>  
   
 ```csharp  
 // Create the text file.  
@@ -48,7 +48,7 @@ XElement cust = new XElement("Root",
 Console.WriteLine(cust);  
 ```  
   
- <span data-ttu-id="57aa4-107">Ce code génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="57aa4-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="d76a5-107">Ce code génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="d76a5-107">This code produces the following output:</span></span>  
   
 ```xml  
 <Root>  
@@ -107,5 +107,5 @@ Console.WriteLine(cust);
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="57aa4-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="57aa4-108">See Also</span></span>  
- [<span data-ttu-id="57aa4-109">Projections et transformations (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="57aa4-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="d76a5-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d76a5-108">See Also</span></span>  
+ [<span data-ttu-id="d76a5-109">Projections et transformations (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d76a5-109">Projections and Transformations (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
