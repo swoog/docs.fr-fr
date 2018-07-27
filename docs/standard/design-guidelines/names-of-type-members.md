@@ -15,19 +15,19 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/26/2018
 ms.locfileid: "33575347"
 ---
 # <a name="names-of-type-members"></a>Noms de membres de type
-Les types sont constitués de membres : méthodes, propriétés, événements, constructeurs et les champs. Les sections suivantes décrivent les conventions de dénomination des membres de type.  
+Les types se composent de membres, de méthodes, de propriétés, d’événements, de constructeurs et de champs. Les sections suivantes décrivent les règles de nommage des membres de type.  
   
 ## <a name="names-of-methods"></a>Noms des méthodes  
- Étant donné que les méthodes sont le moyen d’une action, les règles de conception méthode les noms doivent être verbes ou verbaux. Suivez ces indications également sert à distinguer les noms de méthode à partir des noms de propriété et le type, qui sont des expressions nominales ou adjectif.  
+ Comme les méthodes permettent d’entreprendre des actions, les règles de conception exigent que les noms des méthodes soient des verbes ou des expressions verbales. Cette règle sert également à distinguer les noms de méthode des noms de propriété et de type, qui sont des expressions nominales ou adjectivales.  
   
- **✓ FAIRE** indiquent les noms de méthodes qui sont des verbes ou des phrases de verbe.  
+ **✓ DO** Donner des noms de méthode qui sont des verbes ou des expressions verbales.  
   
 ```  
 public class String {  
@@ -38,24 +38,24 @@ public class String {
 ```  
   
 ## <a name="names-of-properties"></a>Noms des propriétés  
- Contrairement aux autres membres, les propriétés doivent être fournies expression nominale ou noms adjectivales. C'est-à-dire, car une propriété qui fait référence aux données et le nom de la propriété reflète qui. Casse Pascal est toujours utilisé pour les noms de propriété.  
+ Contrairement aux autres membres, les noms des propriétés doivent être des expressions nominales ou adjectivales. C’est parce que les propriétés font référence à des données, donc leur nom doivent le refléter. La casse Pascal est toujours utilisée pour les noms de propriété.  
   
- **✓ FAIRE** nom des propriétés à l’aide d’un nom, une expression nominale ou un adjectif.  
+ **✓ DO** Nommer les propriétés en utilisant un substantif, une expression nominale ou un adjectif.  
   
- **X ne sont pas** ont des propriétés qui correspondent au nom de méthodes « Get » comme dans l’exemple suivant :  
+ **X DO NOT** Avoir des propriétés qui correspondent au nom des méthodes "Get", comme dans l’exemple suivant :  
   
  `public string TextWriter { get {...} set {...} }`  
  `public string GetTextWriter(int value) { ... }`  
   
- Ce modèle indique généralement que la propriété doit être réellement d’une méthode.  
+ Ce modèle indique typiquement que la propriété doit vraiment être une méthode.  
   
- **✓ FAIRE** nom des propriétés de la collection avec une expression au pluriel décrivant les éléments de la collection au lieu d’utiliser une expression au singulier, suivie de la « Liste » ou « Collection ».  
+ **✓ DO** Nommer les propriétés de collection avec une expression au pluriel décrivant les éléments de la collection au lieu d’utiliser une expression au singulier suivie de « Liste » ou « Collection ».  
   
- **✓ FAIRE** propriétés de type Boolean une expression affirmative (`CanSeek` au lieu de `CantSeek`). Si vous le souhaitez, vous pouvez également faire précéder propriétés booléennes avec « Est », « peut » ou « A » mais uniquement lorsqu’il ajoute la valeur.  
+ **✓ DO** Nommer des propriétés booléennes avec une expression affirmative (`CanSeek` au lieu de `CantSeek`). Si vous le souhaitez, vous pouvez aussi préfixer les propriétés booléennes avec « Is », « Can » ou « Has », mais uniquement si cela apporte une valeur ajoutée.  
   
- **✓ Envisagez** donnant une propriété le même nom que son type.  
+ **✓ CONSIDER** Donner à une propriété le même nom que son type.  
   
- Par exemple, la propriété suivante correctement Obtient et définit une valeur d’énumération nommée `Color`, de sorte que la propriété est nommée `Color`:  
+ Par exemple, la propriété suivante obtient et définit correctement une valeur enum nommée `Color`, donc la propriété est nommée `Color`:  
   
 ```  
 public enum Color {...}  
@@ -65,42 +65,42 @@ public class Control {
 ```  
   
 ## <a name="names-of-events"></a>Noms des événements  
- Événements font toujours référence à une action, soit celui se produise ou celui qui s’est produite. Par conséquent, comme avec les méthodes, les événements sont nommées avec les verbes et conjugaison de verbes est utilisé pour indiquer l’heure lorsque l’événement est déclenché.  
+ Les événements font toujours référence à une action, soit une action en cours, soit une action passée. Par conséquent, comme avec les méthodes, les événements sont nommés avec des verbes, le temps des verbes servant à indiquer l’heure où l’événement est déclenché.  
   
- **✓ FAIRE** nommer des événements avec un verbe ou une expression verbale.  
+ **✓ DO** Nommer les événements avec un verbe ou une expression verbale.  
   
- Exemples `Clicked`, `Painting`, `DroppedDown`, et ainsi de suite.  
+ Par exemple, `Clicked`, `Painting`, `DroppedDown`, etc.  
   
- **✓ FAIRE** indiquent les noms des événements avec un concept d’avant et après, en utilisant le présent et passé temps.  
+ **✓ DO** Donner des noms d’événement avec un concept avant/après, en utilisant les temps du présent et du passé.  
   
- Par exemple, un événement de fermeture qui est déclenché avant la fermeture d’une fenêtre est être appelé `Closing`, et qui est déclenché après la fermeture de la fenêtre se nomme `Closed`.  
+ Par exemple, un événement de fermeture déclenché avant la fermeture d’une fenêtre serait nommé `Closing`, tandis qu’un événement déclenché après la fermeture de la fenêtre serait nommé `Closed`.  
   
- **X ne sont pas** utiliser « Before » ou « After » préfixes ou suffixes pour indiquer les et les post-événements. Utilisation actuelle et le temps passé comme décrit ci-dessus.  
+ **X DO NOT** Utiliser « Before » ou « After » comme préfixes ou suffixes pour indiquer des pré/post-événements. Utilisez les temps du présent et du passé, comme nous venons de le décrire.  
   
- **✓ FAIRE** nom de gestionnaires d’événements (délégués utilisés comme types d’événements) avec le suffixe « EventHandler », comme indiqué dans l’exemple suivant :  
+ **✓ DO** Nommer les gestionnaires d’événements (délégués utilisés comme types d’événements) avec le suffixe « EventHandler », comme illustré dans l’exemple suivant :  
   
  `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
   
- **✓ FAIRE** utiliser deux paramètres nommés `sender` et `e` dans les gestionnaires d’événements.  
+ **✓ DO** Utiliser deux paramètres nommés `sender` et `e` dans les gestionnaires d’événements.  
   
- Le paramètre sender représente l’objet qui a déclenché l’événement. Le paramètre de l’expéditeur est généralement de type `object`, même s’il est possible d’employer un type plus spécifique.  
+ Le paramètre d’expéditeur représente l’objet qui a déclenché l’événement. Le paramètre d’expéditeur est généralement de type `object`, même s’il est possible d’employer un type plus spécifique.  
   
- **✓ FAIRE** nom d’événement avec le suffixe « EventArgs » classes d’argument.  
+ **✓ DO** Nommer les classes d’argument d’événement avec le suffixe « EventArgs ».  
   
-## <a name="names-of-fields"></a>Noms de champs  
- Les instructions d’affectation de noms de champ s’appliquent pour les champs statiques publics et protégés. Les champs internes et privés ne sont pas couverts par les instructions et des champs d’instance publics ou protégés ne sont pas autorisées par le [les règles de conception de membre](../../../docs/standard/design-guidelines/member.md).  
+## <a name="names-of-fields"></a>Noms des champs  
+ Les règles de nommage des champs s’appliquent à des champs publics et protégés statiques. Les champs internes et privés ne sont pas couverts par les règles, tandis que les champs d’instance publics ou protégés ne sont pas autorisés par les [règles de conception de membres](../../../docs/standard/design-guidelines/member.md).  
   
- **✓ FAIRE** utilisent la casse Pascal dans les noms de champ.  
+ **✓ DO** Utiliser la casse Pascal dans les noms de champ.  
   
- **✓ FAIRE** nom des champs à l’aide d’un nom, une expression nominale ou un adjectif.  
+ **✓ DO** Nommer les champs en utilisant un substantif, une expression nominale ou un adjectif.  
   
- **X ne sont pas** utiliser un préfixe pour les noms de champ.  
+ **X DO NOT** Utiliser un préfixe pour les noms de champ.  
   
- Par exemple, n’utilisez pas « g_ » ou « s_ » pour indiquer les champs statiques.  
+ Par exemple, n’utilisez pas « g_ » ou « s_ » pour indiquer des champs statiques.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi  
  [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
