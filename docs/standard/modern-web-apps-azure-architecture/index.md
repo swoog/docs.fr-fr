@@ -1,66 +1,102 @@
 ---
 title: Architecturer des applications web modernes avec ASP.NET Core et Azure
-description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Introduction
+description: Un guide qui fournit une aide de bout en bout sur la création d’applications web monolithiques avec ASP.NET Core et Azure.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 085ec85002fc1661d6e20b3c3f11cf4b6ea2161b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: e2d2545108b55043c322baffbd609b2422d2743b
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37103917"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936982"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Architecturer des applications web modernes avec ASP.NET Core et Azure
 
-![image de couverture](./media/cover.jpg)
+![image de couverture](./media/cover.png)
 
+PUBLIÉ PAR
+
+Division Développeurs Microsoft, équipes produit .NET et Visual Studio
+
+Division de Microsoft Corporation
+
+One Microsoft Way
+
+Redmond, Washington 98052-6399
+
+Copyright © 2018 Microsoft Corporation
+
+Tous droits réservés. Aucune partie du contenu de ce document ne peut être reproduite ou transmise sous quelque forme ou par quelque moyen que ce soit sans l’autorisation écrite de l’éditeur.
+
+Ce document est fourni « en l’état » et exprime les points de vue et les opinions de son auteur. Les points de vue, les opinions et les informations exprimés dans ce document, notamment l’URL et autres références à des sites web Internet, peuvent faire l’objet de modifications sans préavis.
+
+Certains exemples décrits dans ce document ne sont fournis qu’à titre d’illustration et sont purement fictifs. Toute ressemblance ou tout lien avec le monde réel sont purement fortuits et involontaires.
+
+Microsoft et les marques commerciales mentionnées dans la page web « Marques » à l’adresse https://www.microsoft.com sont des marques du groupe de sociétés Microsoft.
+
+Mac et macOS sont des marques commerciales d’Apple Inc.
+
+Le logo de Docker représentant une baleine est une marque déposée de Docker, Inc. Utilisé sous autorisation.
+
+Toutes les autres marques et tous les autres logos sont la propriété de leurs propriétaires respectifs.
+
+Auteur :
+
+> **Steve Smith (@ardalis)**, Consultant en architecture des logiciels, [Ardalis.com](https://ardalis.com)
+
+Rédacteurs :
+
+> **Maira Wenzel**
+
+## <a name="introduction"></a>Introduction
 
 .NET Core et ASP.NET Core offrent plusieurs avantages par rapport au développement .NET classique. Il est recommandé d’utiliser .NET Core pour vos applications serveur si tout ou partie des éléments suivants sont importants pour la réussite de votre application :
 
--   Prise en charge multiplateforme
+- Prise en charge multiplateforme.
 
--   Utilisation de microservices
+- Utilisation de microservices.
 
--   Utilisation de conteneurs Docker
+- Utilisation de conteneurs Docker.
 
--   Nécessité de hautes performances et de scalabilité
+- Exigences en matière de hautes performances et de scalabilité.
 
--   Gestion des versions côte à côte des versions de .NET par application sur le même serveur
+- Gestion côte à côte des versions de .NET par application sur le même serveur.
 
 Les applications .NET classiques prennent en charge ces spécifications, mais ASP.NET Core et .NET Core ont été optimisés pour offrir une prise en charge améliorée des scénarios ci-dessus.
 
 De plus en plus d’organisations choisissent d’héberger leurs applications web dans le cloud en utilisant des services comme Microsoft Azure. Envisagez d’héberger votre application dans le cloud si les points suivants sont importants pour votre application ou votre organisation :
 
--   Réduction des investissements dans les coûts des centres de données (matériel, logiciel, espace, utilitaires, etc.)
+- Réduction des investissements dans les coûts des centres de données (matériel, logiciel, espace, utilitaires, etc.)
 
--   Tarification flexible (paiement basé sur l’utilisation et non pas pour une capacité inactive)
+- Tarification flexible (paiement basé sur l’utilisation et non pas pour une capacité inactive).
 
--   Extrême fiabilité
+- Fiabilité extrême.
 
--   Mobilité accrue de l’application ; changement facile de l’endroit et de la façon dont votre application est déployée
+- Mobilité accrue de l’application ; changement facile de l’endroit et de la façon dont votre application est déployée.
 
--   Capacité flexible ; montée ou descente en puissance en fonction des besoins réels
+- Capacité flexible ; montée ou descente en puissance en fonction des besoins réels.
 
-La création d’applications web avec ASP.NET Core, hébergées dans Microsoft Azure, offre de nombreux avantages concurrentiels par rapport aux alternatives classiques. ASP.NET Core est optimisé pour les pratiques de développement d’applications web modernes et les scénarios d’hébergement cloud. Dans ce guide, vous découvrez comment architecturer vos applications ASP.NET Core pour tirer le meilleur parti de ces fonctionnalités.
+La création d’applications web avec ASP.NET Core, hébergées dans Azure, offre de nombreux avantages concurrentiels par rapport aux alternatives classiques. ASP.NET Core est optimisé pour les pratiques de développement d’applications web modernes et les scénarios d’hébergement cloud. Dans ce guide, vous découvrez comment architecturer vos applications ASP.NET Core pour tirer le meilleur parti de ces fonctionnalités.
 
 ## <a name="purpose"></a>Objectif
 
 Ce guide fournit une aide de bout en bout sur la création d’applications web monolithiques avec ASP.NET Core et Azure.
 
-Ce guide vient en complément de « *Architecting and Developing Containerized and Microservice-based Applications with .NET* », qui est davantage consacré à Docker, aux microservices et au déploiement de conteneurs pour héberger des applications d’entreprise.
+Ce guide est complémentaire à [« _Architecture des microservices .NET. pour les applications .NET en conteneur_ »](../microservices-architecture/index.md), qui est davantage consacré à Docker, aux microservices et au déploiement de conteneurs pour héberger des applications d’entreprise.
 
-> ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a>Architecture et développement d’applications basées sur des microservices en conteneur dans .NET
-> - **Livre électronique**  
-> <http://aka.ms/MicroservicesEbook>
-> - **Exemple d’application**  
-> <http://aka.ms/microservicesarchitecture>
+### <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservices .NET. Architecture pour les applications .NET en conteneur
+
+- **Livre électronique**  
+  <https://aka.ms/MicroservicesEbook>
+- **Exemple d’application**  
+  <https://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>Public visé par ce guide
 
 Le public visé par ce guide est principalement constitué de développeurs, de responsables du développement et d’architectes qui sont intéressés par la création d’applications web modernes avec des technologies et des services Microsoft dans le cloud.
 
-Il s’adresse aussi aux décideurs techniques qui connaissent déjà ASP.NET et/ou Azure, et qui recherchent des informations sur la pertinence d’un passage à ASP.NET Core pour des projets nouveaux ou existants.
+Il s’adresse aussi aux décideurs techniques qui connaissent déjà ASP.NET ou Azure, et qui recherchent des informations sur la pertinence d’un passage à ASP.NET Core pour des projets nouveaux ou existants.
 
 ## <a name="how-you-can-use-this-guide"></a>Utilisation de ce guide
 
@@ -69,8 +105,9 @@ Ce guide a été condensé en un document relativement court, qui est consacré 
 N’hésitez pas à faire connaître ce guide pour favoriser une compréhension partagée de ces considérations et de ces opportunités. Le fait que chacun utilise un même ensemble de terminologie et de principes sous-jacents permet d’obtenir plus facilement une application cohérente des modèles et des pratiques en matière d’architecture.
 
 ## <a name="references"></a>Références
+
 - **Choix entre .NET Core et .NET Framework pour les applications serveur**  
-<https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
+  <https://docs.microsoft.com/dotnet/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [Next](modern-web-applications-characteristics.md)

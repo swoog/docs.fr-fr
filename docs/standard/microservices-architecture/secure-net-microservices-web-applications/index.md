@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106695"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937031"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Sécurisation des microservices .NET et des applications web
 
@@ -43,7 +43,7 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 Une fois ASP.NET Core Identity configuré, il convient de l’activer en appelant app.UseIdentity dans la méthode Startup.Configure du service.
 
-L’utilisation d’ASP.NET Code Identity autorise plusieurs scénarios :
+L’utilisation d’ASP.NET Core Identity autorise plusieurs scénarios :
 
 -   Création d’informations utilisateur à l’aide du type UserManager (userManager.CreateAsync).
 

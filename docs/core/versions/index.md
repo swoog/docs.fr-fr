@@ -4,12 +4,12 @@ description: Découvrez comment fonctionne la gestion des versions de .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018
-ms.openlocfilehash: 33c545fdea254133fe6e65f4d6dd725f5184faec
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: aa4f05a1a95c1bfbd16f41ca695ea23d48606772
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298238"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792320"
 ---
 # <a name="net-core-versioning"></a>Gestion des versions de .NET Core
 
@@ -32,6 +32,15 @@ Avec .NET Core 2.0, les téléchargements comportent un numéro de version uniq
 * Le métapackage `Microsoft.NETCore.App`.
 
 L’utilisation d’un seul numéro de version permet aux utilisateurs de savoir plus facilement quelle version du SDK installer sur leurs machines de développement et quelle doit être la version correspondante du framework partagé quand il faut approvisionner un environnement de production. Quand vous téléchargez un SDK ou un runtime, le numéro de version que vous voyez sera donc le même.
+
+### <a name="version-selection"></a>Sélection de la version
+
+.NET Core applique un ensemble de stratégies qui déterminent quelles versions du runtime .NET Core et du SDK sont utilisées dans les différents scénarios. Ces scénarios et ces stratégies sont entièrement décrits dans l’article sur la [sélection de la version](selection.md).
+
+Vous pouvez considérer que ces stratégies remplissent les rôles suivants :
+
+* Permettre un déploiement facile et efficace de .NET Core, notamment les mises à jour de sécurité et de fiabilité.
+* Permettre aux développeurs d’utiliser les outils et commandes les plus récents, indépendamment du runtime cible.
 
 ### <a name="installers"></a>Programmes d’installation
 

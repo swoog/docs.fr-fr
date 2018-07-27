@@ -3,17 +3,17 @@ title: Implémentation d’applications résilientes
 description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémentation d’applications résilientes
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ddb0f54b15735b9192d2088495947588f59829a0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106049"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875118"
 ---
 # <a name="implementing-resilient-applications"></a>Implémentation d’applications résilientes
 
-*Vos applications basées sur des microservices et le cloud devront faire face tôt ou tard à des défaillances partielles qui se produiront certainement. Vous devez concevoir votre application de façon à la rendre résiliente face à ces défaillances partielles.*
+*Vos applications basées sur des microservices et sur le cloud devront faire face tôt ou tard à des défaillances partielles qui se produiront à coup sûr. Vous devez concevoir votre application de façon à la rendre résiliente face à ces défaillances partielles.*
 
 La résilience est la capacité à surmonter les défaillances et à continuer de fonctionner. Il ne s’agit pas d’éviter les défaillances, mais d’accepter le fait qu’il s’en produira et qu’il faudra y répondre pour éviter les temps d’arrêt ou des pertes de données. La résilience vise à remettre l’application dans un état entièrement fonctionnel après une défaillance.
 
