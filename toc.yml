@@ -25,6 +25,9 @@
             - name: Microservices .NET - DevOps (livre électronique)
               tocHref: /dotnet/standard/containerized-lifecycle-architecture/
               topicHref: /dotnet/standard/containerized-lifecycle-architecture/index
+            - name: Livre électronique sur les applications serverless
+              tocHref: /dotnet/standard/serverless-architecture/
+              topicHref: /dotnet/standard/serverless-architecture/index
             - name: Modèles de programmation asynchrone
               tocHref: /dotnet/standard/asynchronous-programming-patterns/
               topicHref: /dotnet/standard/asynchronous-programming-patterns/index
