@@ -7,17 +7,17 @@ helpviewer_keywords:
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
 ms.openlocfilehash: 7d2477070dce558aa932c822852ac8ac9c6721e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654058"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332659"
 ---
 # <a name="string-basics-in-visual-basic"></a>Concepts de base des chaînes en Visual Basic
 Le type de données `String` représente une série de caractères (chacun représentant à son tour une instance du type de données `Char`). Cette rubrique présente les concepts de base des chaînes en Visual Basic.  
   
 ## <a name="string-variables"></a>Variables de chaîne  
- Il est possible d'assigner à une instance de chaîne une valeur littérale représentant une série de caractères. Par exemple :  
+ Il est possible d'assigner à une instance de chaîne une valeur littérale représentant une série de caractères. Exemple :  
   
  [!code-vb[VbVbalrStrings#63](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_1.vb)]  
   
@@ -29,7 +29,7 @@ Le type de données `String` représente une série de caractères (chacun repr�
   
  [!code-vb[VbVbalrStrings#65](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_3.vb)]  
   
- Ce code entraîne une erreur car le compilateur arrête la chaîne après les deuxièmes guillemets, et le reste de la chaîne est interprété comme du code. Pour résoudre ce problème, Visual Basic interprète deux guillemets dans un littéral de chaîne comme un guillemet dans la chaîne. L'exemple suivant illustre comment inclure correctement des guillemets dans une chaîne :  
+ Ce code entraîne une erreur car le compilateur arrête la chaîne après les deuxièmes guillemets, et le reste de la chaîne est interprété comme du code. Pour résoudre ce problème, Visual Basic interprète deux guillemets dans un littéral de chaîne comme un seul guillemet dans la chaîne. L'exemple suivant illustre comment inclure correctement des guillemets dans une chaîne :  
   
  [!code-vb[VbVbalrStrings#66](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_4.vb)]  
   
@@ -50,18 +50,18 @@ World]]></xml>.Value
 ```  
   
 ## <a name="characters-in-strings"></a>Caractères dans des chaînes  
- Une chaîne peut être considérée comme une série de valeurs `Char` et le type `String` possède des fonctions intégrées qui vous permettent d'exécuter de nombreuses manipulations sur une chaîne qui ressemblent aux manipulations autorisées par les tableaux. Comme tous les tableaux dans le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], ce sont des tableaux de base zéro. Vous pouvez vous référer à un caractère spécifique dans une chaîne via la propriété `Chars`, ce qui permet d'accéder à un caractère à la position où il apparaît dans la chaîne. Par exemple :  
+ Une chaîne peut être considérée comme une série de valeurs `Char` et le type `String` possède des fonctions intégrées qui vous permettent d'exécuter de nombreuses manipulations sur une chaîne qui ressemblent aux manipulations autorisées par les tableaux. Comme tous les tableaux dans le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], ce sont des tableaux de base zéro. Vous pouvez vous référer à un caractère spécifique dans une chaîne via la propriété `Chars`, ce qui permet d'accéder à un caractère à la position où il apparaît dans la chaîne. Exemple :  
   
  [!code-vb[VbVbalrStrings#67](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_5.vb)]  
   
- Dans l'exemple ci-dessus, la propriété `Chars` de la chaîne retourne le quatrième caractère de la chaîne, qui est `D`, et l'assigne à `myChar`. Vous pouvez également obtenir la longueur d'une chaîne particulière via la propriété `Length`. Si vous devez exécuter plusieurs manipulations de type tableau sur une chaîne, vous pouvez la convertir en tableau d'instances `Char` à l'aide de la fonction `ToCharArray` de la chaîne. Par exemple :  
+ Dans l'exemple ci-dessus, la propriété `Chars` de la chaîne retourne le quatrième caractère de la chaîne, qui est `D`, et l'assigne à `myChar`. Vous pouvez également obtenir la longueur d'une chaîne particulière via la propriété `Length`. Si vous devez exécuter plusieurs manipulations de type tableau sur une chaîne, vous pouvez la convertir en tableau d'instances `Char` à l'aide de la fonction `ToCharArray` de la chaîne. Exemple :  
   
  [!code-vb[VbVbalrStrings#68](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_6.vb)]  
   
  La variable `myArray` contient à présent un tableau de valeurs `Char`, dont chacune représente un caractère issu de `myString`.  
   
 ## <a name="the-immutability-of-strings"></a>Immuabilité des chaînes  
- Une chaîne est *immuable*, ce qui signifie que sa valeur ne peut pas être modifiée une fois qu’elle a été créée. Toutefois, cela ne vous empêche pas d'assigner plusieurs valeurs à une variable de chaîne. Prenons l'exemple suivant :  
+ Une chaîne est *immuable*, ce qui signifie que sa valeur ne peut pas être modifiée une fois qu’il a été créé. Toutefois, cela ne vous empêche pas d'assigner plusieurs valeurs à une variable de chaîne. Prenons l'exemple suivant :  
   
  [!code-vb[VbVbalrStrings#69](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/string-basics_7.vb)]  
   

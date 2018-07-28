@@ -6,14 +6,14 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: b69615a5cf05427a2bfde82af976cfafb41171b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655269"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39332871"
 ---
 # <a name="events-visual-basic"></a>Événements (Visual Basic)
-Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de procédures qui s’exécutent dans une séquence, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par les occurrences externes appelées *événements*.  
+Bien que vous pouvez visualiser un projet Visual Studio sous la forme d’une série de procédures qui s’exécutent dans une séquence, en réalité, la plupart des programmes sont pilotés par des événements, ce qui signifie que le flux d’exécution est déterminé par des occurrences externes nommées *événements*.  
   
  Un événement est un signal qui informe l’application que quelque chose d’important s’est produit. Par exemple, lorsqu’un utilisateur clique sur un contrôle sur un formulaire, le formulaire peut déclencher un événement `Click` et appeler une procédure qui gère l’événement. Les événements permettent également à des tâches distinctes de communiquer. Supposons, par exemple, que votre application exécute une tâche de tri de façon distincte de l’application principale. Si un utilisateur annule le tri, votre application peut envoyer un événement d’annulation demandant l’arrêt du processus de tri.  
   
@@ -26,7 +26,7 @@ Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de p
  [!code-vb[VbVbalrEvents#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_1.vb)]  
   
 ### <a name="raising-events"></a>Déclencher des événements  
- Un événement est comme un message qui annonce que quelque chose d’important s’est produit. L’acte de diffusion du message est appelé *déclenchement* de l’événement. En Visual Basic, vous déclenchez des événements avec la `RaiseEvent` instruction, comme dans l’exemple suivant :  
+ Un événement est comme un message qui annonce que quelque chose d’important s’est produit. L’acte de diffusion du message est appelé *déclenchement* de l’événement. En Visual Basic, vous déclenchez des événements avec le `RaiseEvent` instruction, comme dans l’exemple suivant :  
   
  [!code-vb[VbVbalrEvents#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_2.vb)]  
   
@@ -38,7 +38,7 @@ Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de p
 ### <a name="event-handlers"></a>Gestionnaires d'événements  
  Les *gestionnaires d’événements* sont des procédures qui sont appelées lorsqu’un événement correspondant se produit. Une sous-routine valide avec une signature correspondante peut être utilisée comme gestionnaire d’événements. Il n’est pas possible d’utiliser une fonction comme gestionnaire d’événements, toutefois, car elle ne peut pas retourner de valeur à la source de l’événement.  
   
- Visual Basic utilise une convention d’affectation de noms standard pour les gestionnaires d’événements qui associe le nom de l’expéditeur de l’événement, un trait de soulignement et le nom de l’événement. Par exemple, l’événement `Click` d’un bouton nommé `button1` serait nommé `Sub button1_Click`.  
+ Visual Basic utilise une convention d’affectation de noms standard pour les gestionnaires d’événements qui associe le nom de l’expéditeur d’événement, un trait de soulignement et le nom de l’événement. Par exemple, l’événement `Click` d’un bouton nommé `button1` serait nommé `Sub button1_Click`.  
   
 > [!NOTE]
 >  Nous recommandons d’utiliser cette convention d’affectation de noms pour définir des gestionnaires d’événements pour vos propres événements, mais ce n’est pas obligatoire ; il est possible d’utiliser n’importe quel nom de sous-routine valide.  
@@ -63,7 +63,7 @@ Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de p
   
  Bien que la clause `Handles` représente le moyen standard d’associer un événement à un gestionnaire d’événements, elle est limitée à l’association d’événements avec des gestionnaires d’événements à la compilation.  
   
- Dans certains cas, comme avec les événements associés aux formulaires ou des contrôles, Visual Basic automatiquement choisit un gestionnaire d’événements vide et l’associe à un événement. Par exemple, lorsque vous double-cliquez sur un bouton de commande sur un formulaire en mode design, Visual Basic crée un gestionnaire d’événements vide et une `WithEvents` variable du bouton de commande, comme dans le code suivant :  
+ Dans certains cas, tels que des événements associés aux formulaires ou les contrôles, Visual Basic automatiquement choisit un gestionnaire d’événements vide et l’associe à un événement. Par exemple, lorsque vous double-cliquez sur un bouton de commande sur un formulaire en mode design, Visual Basic crée un gestionnaire d’événements vide et une `WithEvents` variable pour le bouton de commande, comme dans le code suivant :  
   
  [!code-vb[VbVbalrEvents#26](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_4.vb)]  
   
@@ -74,7 +74,7 @@ Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de p
   
  [!code-vb[VbVbalrEvents#28](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_5.vb)]  
   
- `RemoveHandler`, qui déconnecte un événement d’un gestionnaire d’événements, utilise la même syntaxe que `AddHandler`. Par exemple :  
+ `RemoveHandler`, qui déconnecte un événement d’un gestionnaire d’événements, utilise la même syntaxe que `AddHandler`. Exemple :  
   
  [!code-vb[VbVbalrEvents#29](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_6.vb)]  
   
@@ -91,7 +91,7 @@ Vous pouvez visualiser un projet Visual Studio sous la forme d’une série de p
   
 #### <a name="to-handle-events-from-a-base-class"></a>Gérer des événements provenant d’une classe de base  
   
--   Déclarez un gestionnaire d’événements dans la classe dérivée en ajoutant une instruction `Handles MyBase.`*eventname* à la ligne de déclaration de votre procédure de gestionnaire d’événements, où *eventname* est le nom de l’événement dans la classe de base que vous gérez. Par exemple :  
+-   Déclarez un gestionnaire d’événements dans la classe dérivée en ajoutant une instruction `Handles MyBase.`*eventname* à la ligne de déclaration de votre procédure de gestionnaire d’événements, où *eventname* est le nom de l’événement dans la classe de base que vous gérez. Exemple :  
   
      [!code-vb[VbVbalrEvents#12](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/events_8.vb)]  
   
