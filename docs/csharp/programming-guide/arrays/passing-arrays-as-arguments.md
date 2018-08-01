@@ -1,64 +1,64 @@
 ---
 title: Passage de tableaux en tant qu’arguments (Guide de programmation C#)
-ms.date: 07/20/2015
+ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315514"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199224"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>Passage de tableaux en tant qu’arguments (Guide de programmation C#)
-Les tableaux peuvent être passés en tant qu’arguments à des paramètres de méthode. Comme les tableaux sont des types référence, la méthode peut modifier la valeur des éléments.  
-  
-## <a name="passing-single-dimensional-arrays-as-arguments"></a>Passage de tableaux unidimensionnels en tant qu’arguments  
- Vous pouvez passer un tableau unidimensionnel initialisé à une méthode. Par exemple, l’instruction suivante envoie un tableau à une méthode Print.  
-  
- [!code-csharp[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_1.cs)]  
-  
- Le code suivant illustre une implémentation partielle de la méthode Print.  
-  
- [!code-csharp[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_2.cs)]  
-  
- Vous pouvez initialiser et passer un nouveau tableau en une seule étape, comme dans l’exemple suivant.  
-  
- [!code-csharp[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_3.cs)]  
-  
-## <a name="example"></a>Exemple  
-  
-### <a name="description"></a>Description  
- Dans l’exemple suivant, un tableau de chaînes est initialisé et passé en tant qu’argument à une méthode `PrintArray` pour des chaînes. La méthode affiche les éléments du tableau. Ensuite, les méthodes `ChangeArray` et `ChangeArrayElement` sont appelées pour montrer que l’envoi d’un argument de tableau par valeur n’empêche pas les modifications au niveau des éléments du tableau.  
-  
-### <a name="code"></a>Code  
- [!code-csharp[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_4.cs)]  
-  
-## <a name="passing-multidimensional-arrays-as-arguments"></a>Passage de tableaux multidimensionnels en tant qu’arguments  
- Vous pouvez passer un tableau multidimensionnel initialisé à une méthode de la même manière que vous passez un tableau unidimensionnel.  
-  
- [!code-csharp[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_5.cs)]  
-  
- Le code suivant illustre une déclaration partielle d’une méthode Print qui accepte un tableau à deux dimensions en tant qu’argument.  
-  
- [!code-csharp[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_6.cs)]  
-  
- Vous pouvez initialiser et passer un nouveau tableau en une seule étape, comme dans l’exemple suivant.  
-  
- [!code-csharp[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_7.cs)]  
-  
-## <a name="example"></a>Exemple  
-  
-### <a name="description"></a>Description  
- Dans l’exemple suivant, un tableau à deux dimensions d’entiers est initialisé et passé à la méthode `Print2DArray`. La méthode affiche les éléments du tableau.  
-  
-### <a name="code"></a>Code  
- [!code-csharp[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
-  
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Tableaux](../../../csharp/programming-guide/arrays/index.md)  
- [Tableaux unidimensionnels](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Tableaux multidimensionnels](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Tableaux en escalier](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+
+Les tableaux peuvent être passés en tant qu’arguments à des paramètres de méthode. Comme les tableaux sont des types référence, la méthode peut modifier la valeur des éléments.
+
+## <a name="passing-single-dimensional-arrays-as-arguments"></a>Passage de tableaux unidimensionnels en tant qu’arguments
+
+Vous pouvez passer un tableau unidimensionnel initialisé à une méthode. Par exemple, l’instruction suivante envoie un tableau à une méthode Print.
+
+[!code-csharp[csProgGuideArrays#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#34)]
+
+Le code suivant illustre une implémentation partielle de la méthode Print.
+
+[!code-csharp[csProgGuideArrays#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#33)]
+
+Vous pouvez initialiser et passer un nouveau tableau en une seule étape, comme dans l’exemple suivant.
+
+[!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
+
+### <a name="example"></a>Exemple
+
+Dans l’exemple suivant, un tableau de chaînes est initialisé et passé en tant qu’argument à une méthode `DisplayArray` pour des chaînes. La méthode affiche les éléments du tableau. Ensuite, la méthode `ChangeArray` inverse les éléments du tableau, puis la méthode `ChangeArrayElements` modifie les trois premiers éléments du tableau. Une fois que chaque méthode est retournée, la méthode `DisplayArray` montre que le passage d’un tableau par valeur n’empêche pas les modifications des éléments du tableau.
+
+[!code-csharp[csProgGuideArrays#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/ArrayExample.cs)]
+
+## <a name="passing-multidimensional-arrays-as-arguments"></a>Passage de tableaux multidimensionnels en tant qu’arguments
+
+Vous pouvez passer un tableau multidimensionnel initialisé à une méthode de la même manière que vous passez un tableau unidimensionnel.
+
+[!code-csharp[csProgGuideArrays#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#41)]
+
+Le code suivant illustre une déclaration partielle d’une méthode Print qui accepte un tableau à deux dimensions en tant qu’argument.
+
+[!code-csharp[csProgGuideArrays#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#36)]
+
+Vous pouvez initialiser et passer un nouveau tableau en une seule étape, comme dans l’exemple suivant :
+
+[!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
+
+### <a name="example"></a>Exemple
+
+Dans l’exemple suivant, un tableau à deux dimensions d’entiers est initialisé et passé à la méthode `Print2DArray`. La méthode affiche les éléments du tableau.
+
+[!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
+
+## <a name="see-also"></a>Voir aussi
+
+[Guide de programmation C#](../index.md)  
+[Tableaux](index.md)  
+[Tableaux unidimensionnels](single-dimensional-arrays.md)  
+[Tableaux multidimensionnels](multidimensional-arrays.md)  
+[Tableaux en escalier](jagged-arrays.md)  

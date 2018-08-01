@@ -1,5 +1,5 @@
 ---
-title: global (Référence C#)
+title: global, mot clé contextuel (référence C#)
 ms.date: 07/20/2015
 f1_keywords:
 - global
@@ -7,20 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: d6323f3b429b74c9b1f6e5d05c213d2e8f5a96c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79e0184f58ffc6232038abdd3d9f852147d5732c
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216019"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404286"
 ---
 # <a name="global-c-reference"></a>global (Référence C#)
-Le mot clé contextuel `global`, quand il vient avant l’[opérateur ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md), fait référence à l’espace de noms global, qui est l’espace de noms par défaut pour tout programme C# et ne possède pas de nom. Pour plus d’informations, consultez [Guide pratique pour utiliser l’alias d’espace de noms global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant indique comment utiliser le mot clé contextuel `global` pour spécifier que la classe `TestApp` est définie dans l’espace de noms global :  
-  
- [!code-csharp[csrefKeywordsContextual#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/global_1.cs)]  
-  
-## <a name="see-also"></a>Voir aussi  
- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)
+
+Le mot clé contextuel `global`, quand il vient avant l’[opérateur ::](../operators/namespace-alias-qualifer.md), fait référence à l’espace de noms global, qui est l’espace de noms par défaut pour tout programme C# et ne possède pas de nom. Pour plus d’informations, consultez [Guide pratique pour utiliser l’alias d’espace de noms global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant indique comment utiliser le mot clé contextuel `global` pour spécifier que la classe `TestApp` est définie dans l’espace de noms global :
+
+[!code-csharp[csrefKeywordsContextual#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#13)]
+
+## <a name="see-also"></a>Voir aussi
+
+[Espaces de noms](../../programming-guide/namespaces/index.md)

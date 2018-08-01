@@ -3,34 +3,32 @@ title: Recommandations sur l’hébergement Azure pour les applications web ASP.
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Recommandations sur l’hébergement Azure pour les applications web ASP.NET
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/07/2017
-ms.openlocfilehash: 756f74cacec0a9f5be502ee02659510869d79746
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/27/2018
+ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105707"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404526"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recommandations sur l’hébergement Azure pour les applications web ASP.NET Core
 
 > « Les leaders métier ne passent plus par les départements informatiques pour obtenir des applications du cloud (également appelé SaaS) et les paient comme ils paient un abonnement à un magazine. Quand ils n’ont plus besoin du service, ils peuvent annuler l’abonnement sans se retrouver avec du matériel inutilisé dans un coin. »  
 > _\- Daryl Plummer, analyste chez Gartner_
 
-## <a name="summary"></a>Récapitulatif
-
-Quels que soient les besoins et l’architecture de votre application, Microsoft Azure peut la prendre en charge. Vos besoins d’hébergement peuvent être aussi simples que ceux d’un site web statique et aussi complexes que ceux d’une application extrêmement sophistiquée constituée de dizaines de services. Pour les applications ASP.NET Core monolithiques et les services qui les prennent en charge, il existe plusieurs configurations connues qui sont recommandées. Les recommandations ci-dessous sont regroupées en fonction du type de ressource à héberger, qu’il s’agisse d’applications complètes, de processus individuels ou de données.
+Quels que soient les besoins et l’architecture de votre application, Microsoft Azure peut la prendre en charge. Vos besoins d’hébergement peuvent être aussi simples que ceux d’un site web statique ou aussi complexes que ceux d’une application sophistiquée constituée de dizaines de services. Pour les applications ASP.NET Core monolithiques et les services qui les prennent en charge, il existe plusieurs configurations connues qui sont recommandées. Les suggestions présentées dans cet article sont regroupées en fonction du type de ressource à héberger, qu’il s’agisse d’applications complètes, de processus individuels ou de données.
 
 ## <a name="web-applications"></a>Applications Web
 
 Les applications web peuvent être hébergées avec :
 
--   App Service Web Apps
+- App Service Web Apps
 
--   Conteneurs
+- Des conteneurs
 
--   Azure Service Fabric
+- Azure Service Fabric
 
--   Des machines virtuelles
+- Des machines virtuelles
 
 Entre tous, App Service Web Apps constitue l’approche recommandée pour la plupart des scénarios. Pour les architectures de microservices, envisagez une approche basée sur les conteneurs ou Service Fabric. Si vous avez besoin de contrôler davantage les machines qui exécutent votre application, envisagez le service Machines virtuelles Azure.
 
@@ -38,29 +36,30 @@ Entre tous, App Service Web Apps constitue l’approche recommandée pour la plu
 
 App Service Web Apps offre une plateforme entièrement managée, optimisée pour l’hébergement d’applications web. Il s’agit d’une offre de plateforme PaaS qui vous permet de vous concentrer sur votre logique métier, tandis qu’Azure fournit l’infrastructure nécessaire pour exécuter et mettre à l’échelle l’application. Voici quelques fonctionnalités clés d’App Service Web Apps :
 
--   Optimisation de DevOps (intégration et livraison continues, environnements multiples, tests A/B, prise en charge des scripts)
+- Optimisation de DevOps (intégration et livraison continues, environnements multiples, tests A/B, prise en charge des scripts).
 
--   Échelle globale et haute disponibilité
+- Échelle globale et haute disponibilité.
 
--   Connexions aux plateformes SaaS et à vos données locales
+- Connexions aux plateformes SaaS et à vos données locales.
 
--   Sécurité et conformité
+- Sécurité et conformité.
 
--   Visual Studio, intégration
+- Intégration Visual Studio.
 
 Azure App Service est le meilleur choix pour la plupart des applications web. Le déploiement et la gestion sont intégrés à la plateforme, les sites peuvent évoluer rapidement pour gérer des charges de trafic élevées, et l’équilibrage de charge et le gestionnaire de trafic intégrés offrent une haute disponibilité. Vous pouvez déplacer facilement des sites existants vers Azure App Service avec un outil de migration en ligne, utiliser une application open source de la galerie d’applications web, ou créer un site en utilisant le framework et les outils de votre choix. La fonctionnalité WebJobs facilite l’ajout du traitement de travaux en arrière-plan à votre application web App Service.
 
-### <a name="containers-and-azure-container-service"></a>Conteneurs et Azure Container Service
+### <a name="azure-kubernetes-service"></a>Azure Kubernetes Service
 
-Azure Container Service facilite la création, la configuration et la gestion d’un cluster de machines virtuelles qui sont préconfigurées pour exécuter des applications en conteneur. Il utilise une configuration optimisée d’outils de planification et d’orchestration open source connus. Vous pouvez ainsi faire appel à vos compétences existantes ou profiter de l’expertise vaste et toujours croissante de la communauté pour déployer et gérer sur Microsoft Azure des applications basées sur des conteneurs.
+Azure Kubernetes Service (AKS) gère votre environnement Kubernetes hébergé, ce qui vous permet de déployer et de gérer de manière simple et rapide les applications en conteneur sans pour autant maîtriser l’orchestration de conteneurs. Il élimine aussi les contraintes liées aux opérations et à la maintenance continues en provisionnant, en mettant à niveau et en mettant à l’échelle les ressources à la demande, sans déconnecter vos applications.
 
-Azure Container Service facilite la création, la configuration et la gestion d’un cluster de machines virtuelles qui sont préconfigurées pour exécuter des applications en conteneur. Il utilise une configuration optimisée d’outils de planification et d’orchestration open source connus. Vous pouvez ainsi faire appel à vos compétences existantes ou profiter de l’expertise vaste et toujours croissante de la communauté pour déployer et gérer sur Microsoft Azure des applications basées sur des conteneurs.
+AKS réduit la complexité et les frais de fonctionnement liés à la gestion d’un cluster Kubernetes en déléguant une grande partie de cette responsabilité à Azure. En tant que service Kubernetes hébergé, Azure gère les tâches critiques à votre place, notamment l’analyse du fonctionnement et la maintenance. Par ailleurs, vous payez uniquement pour les nœuds d’agent de vos clusters, pas pour les maîtres. En tant que service Kubernetes géré, AKS fournit :
 
-Un des objectifs d’Azure Container Service est de fournir un environnement d’hébergement de conteneurs avec des technologies et des outils open source aujourd’hui répandus parmi les clients de Microsoft. À cette fin, Azure Container Service expose les points de terminaison d’API standard pour l’orchestrateur de votre choix (DC/OS, Docker Swarm ou Kubernetes). En utilisant ces points de terminaison, vous pouvez exploiter n’importe quel logiciel capable de communiquer avec ces points de terminaison. Par exemple, dans le cas du point de terminaison Docker Swarm, vous pouvez choisir d’utiliser l’interface de ligne de commande de Docker. Pour DC/OS, vous pouvez choisir l’interface de ligne de commande DCOS. Pour Kubernetes, vous pouvez choisir kubectl. La figure 11-1 montre comment utiliser ces points de terminaison pour gérer vos clusters de conteneurs.
+- Des mises à niveau de version et des mises à jour correctives Kubernetes automatisées.
+- Une mise à l’échelle simplifiée des clusters.
+- Un plan de contrôle hébergé avec auto-réparation (maîtres).
+- Une réduction des coûts : vous payez uniquement pour les nœuds de pool d’agents qui s’exécutent.
 
-![](./media/image11-1.png)
-
-**Figure 11-1.** Gestion d’Azure Container Service avec des points de terminaison Docker, Kubernetes ou DC/OS.
+La gestion des nœuds de votre cluster AKS étant assurée par Azure, vous n’avez plus besoin d’effectuer de nombreuses tâches manuelles, comme les mises à niveau de cluster. Comme Azure gère ces tâches de maintenance critiques à votre place, AKS ne fournit pas d’accès direct (comme avec SSH) au cluster.
 
 ### <a name="azure-service-fabric"></a>Azure Service Fabric
 
@@ -72,20 +71,20 @@ Si vous avez une application existante qui nécessite des modifications substant
 
 #### <a name="feature-comparison"></a>Comparaison des fonctionnalités
 
-| Fonctionnalité App Service | Service Fabric | Machine virtuelle |
-|---------|----------|----------|
-| Déploiement quasi instantané | X | X | |
-| Mise à l’échelle (scale up) vers des machines plus puissantes sans redéploiement | X | X | |
-| Les instances partagent le contenu et la configuration ; pas de redéploiement ou de reconfiguration nécessaire lors d’une mise à l’échelle | X | X | |
-| Plusieurs environnements de déploiement (production, préproduction) | X | X | |
-| Gestion automatique de la mise à jour du système d’exploitation | X | | |
-| Passage fluide entre les plateformes 32/64 bits | X | | |
-| Déploiement du code avec Git, FTP | X | | X |
-| Déploiement du code avec WebDeploy | X | | X |
-| Déploiement du code avec TFS | X | X | X |
-| Hébergement de niveau web ou service web, avec une architecture multiniveau | X | X | X |
-| Accès à des services Azure comme Service Bus, Stockage, SQL Database | X | X | X |
-| Installation de n’importe quel MSI personnalisé | | X | X |
+| Fonctionnalité                                                                                    | App Service | Containers (AKS) | Service Fabric | Machine virtuelle |
+| ------------------------------------------------------------------------------------------ | ----------- | ---------------- | -------------- | --------------- |
+| Déploiement quasi instantané                                                                    | X           | X                | X              |                 |
+| Mise à l’échelle (scale up) vers des machines plus puissantes sans redéploiement                                               | X           | X                | X              |                 |
+| Les instances partagent le contenu et la configuration ; pas de redéploiement ou de reconfiguration nécessaire lors d’une mise à l’échelle | X           | X                | X              |                 |
+| Plusieurs environnements de déploiement (production, préproduction)                                     | X           | X                | X              |                 |
+| Gestion automatique de la mise à jour du système d’exploitation                                                             | X           | X                |                |                 |
+| Basculement fluide entre les plateformes 32/64 bits                                             | X           | X                |                |                 |
+| Déploiement du code avec Git, FTP                                                                  | X           | X                |                | X               |
+| Déploiement du code avec WebDeploy                                                                 | X           | X                |                | X               |
+| Déploiement du code avec TFS                                                                       | X           | X                | X              | X               |
+| Hébergement de niveau web ou service web, avec une architecture multiniveau                                    | X           | X                | X              | X               |
+| Accès à des services Azure comme Service Bus, Stockage, SQL Database                              | X           | X                | X              | X               |
+| Installation de n’importe quel MSI personnalisé                                                                     |             | X                | X              | X               |
 
 ## <a name="logical-processes"></a>Processus logiques
 
@@ -101,29 +100,32 @@ Les données JSON non structurées peuvent être stockées de différentes faço
 
 Les données basées sur des commandes ou des événements transitoires pour orchestrer le comportement des applications peuvent utiliser Azure Service Bus ou Stockage File d’attente Azure. Azure Service Bus offre davantage de souplesse et est le service recommandé pour les échanges complexes de messages au sein des applications et entre elles.
 
-## <a name="architecture-recommendations"></a>Recommandations en matière d’architecture
+## <a name="architecture-recommendations"></a>Suggestions en matière d’architecture
 
-Les exigences de votre application doivent dicter son architecture. De nombreux services Azure différents sont disponibles : le choix du bon service est une décision importante. Microsoft propose une galerie d’architectures de référence pour aider à identifier des architectures classiques optimisées pour les scénarios courants. Vous pouvez adopter une architecture de référence qui correspond étroitement aux exigences de votre application ou qui offre au moins un point de départ.
+Les exigences de votre application doivent dicter son architecture. Il existe de nombreux services Azure différents. Aussi, il est important de choisir le bon. Microsoft propose une galerie d’architectures de référence pour aider à identifier des architectures classiques optimisées pour les scénarios courants. Vous pouvez adopter une architecture de référence qui correspond de près aux exigences de votre application ou qui constitue au moins un point de départ.
 
 La figure 11-2 montre un exemple d’architecture de référence. Ce diagramme décrit une approche recommandée pour l’architecture d’un site web de système de gestion de contenu Sitecore optimisé pour le marketing.
 
 ![](./media/image11-2.png)
 
-**Figure 11-2.** Architecture de référence d’un site web de marketing Sitecore.
+**Figure 11-1.** Architecture de référence d’un site web de marketing Sitecore.
 
-**Informations de référence : recommandations sur l’hébergement Azure**
+**Informations de référence : recommandations sur l’hébergement Azure**
 
--   Architectures de solutions Azure\
-    <https://azure.microsoft.com/solutions/architecture/>
+- Architectures de solutions Azure\
+  <https://azure.microsoft.com/solutions/architecture/>
 
--   Guide du développeur Azure\
-    <https://azure.microsoft.com/campaigns/developer-guide/>
+- Guide du développeur Azure\
+  <https://azure.microsoft.com/campaigns/developer-guide/>
 
--   Présentation d’Azure App Service\
-    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
+- Vue d’ensemble de Web Apps\
+  <https://docs.microsoft.com/azure/app-service/app-service-web-overview>
 
--   Comparaison entre Azure App Service, Machines virtuelles, Service Fabric et Services cloud\
-    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+- Comparaison entre Azure App Service, Machines virtuelles, Service Fabric et Services cloud\
+  <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
+
+- Présentation d’Azure Kubernetes Service (AKS)\
+  <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
 [Précédent](development-process-for-azure.md)

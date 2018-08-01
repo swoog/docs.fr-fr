@@ -2,12 +2,12 @@
 title: Types de retour async (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 07aefcf3149b2210e3dc97713647fa3a0133a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143555"
 ---
 # <a name="async-return-types-c"></a>Types de retour async (C#)
 Les méthodes async peuvent avoir les types de retour suivants :
@@ -24,7 +24,7 @@ Pour plus d’informations sur les méthodes async, consultez [Programmation asy
   
 Chaque type de retour est examiné dans l’une des sections suivantes, et vous trouverez un exemple complet qui utilise les trois types à la fin de la rubrique.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Type de retour Task(T)  
+##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>, type de retour  
 Le type de retour <xref:System.Threading.Tasks.Task%601> est utilisé pour une méthode async qui contient une instruction [return](../../../../csharp/language-reference/keywords/return.md) (C#) dans laquelle l’opérande est de type `TResult`.  
   
 Dans l’exemple suivant, la méthode async `GetLeisureHours` contient une instruction `return` qui retourne un entier. La déclaration de méthode doit donc spécifier un type de retour `Task<int>`.  La méthode async <xref:System.Threading.Tasks.Task.FromResult%2A> est un espace réservé pour une opération qui retourne une chaîne.
@@ -56,17 +56,17 @@ Le code suivant sépare l’appel à la méthode `WaitAndApologize` de l’atten
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
 ##  <a name="BKMK_VoidReturnType"></a> Type de retour void  
-Vous utilisez le type de retour `void` dans les gestionnaires d’événements asynchrones, lesquels exigent un type de retour `void`. Pour les méthodes autres que les gestionnaires d’événements qui ne retournent pas de valeur, vous devez retourner un <xref:System.Threading.Tasks.Task> à la place, car une méthode async qui retourne `void` ne peut pas être attendue. Tout appelant d’une telle méthode doit pouvoir continuer jusqu’à l’achèvement sans attendre que la méthode async soit terminée, et l’appelant doit être indépendant des valeurs ou des exceptions générées par la méthode async.  
+Vous utilisez le type de retour `void` dans les gestionnaires d’événements asynchrones, lesquels exigent un type de retour `void`. Pour les méthodes autres que les gestionnaires d’événements qui ne retournent pas de valeur, vous devez retourner <xref:System.Threading.Tasks.Task> à la place, car une méthode async qui retourne `void` ne peut pas être attendue. Tout appelant d’une telle méthode doit pouvoir continuer jusqu’à l’achèvement sans attendre que la méthode async soit terminée, et l’appelant doit être indépendant des valeurs ou des exceptions générées par la méthode async.  
   
 L’appelant d’une méthode async qui retourne une valeur void ne peut pas intercepter les exceptions levées à partir de la méthode, et ces exceptions non gérées peuvent entraîner l’échec de votre application. Si une exception se produit dans une méthode async qui retourne <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>, l’exception est stockée dans la tâche retournée et est à nouveau levée pendant l’attente de la tâche. Par conséquent, veillez à ce qu’une méthode async capable de générer une exception ait le type de retour <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> et que les appels à la méthode soient attendus.  
   
-Pour plus d’informations sur l’interception des exceptions dans les méthodes async, consultez [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).  
+Pour plus d’informations sur l’interception des exceptions dans les méthodes async, consultez la section [Exceptions dans les méthodes async](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) de la rubrique [try-catch](../../../language-reference/keywords/try-catch.md).  
   
 L’exemple suivant définit un gestionnaire d’événements asynchrones.  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>Types de retour async généralisés et ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>Types de retour async généralisés et ValueTask\<TResult\>
 
 À compter de C# 7.0, une méthode async peut retourner tout type ayant une méthode `GetAwaiter` accessible.
  

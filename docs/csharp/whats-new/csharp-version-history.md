@@ -3,12 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207532"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404591"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -73,7 +73,7 @@ C# version 3.0 est apparu fin 2007, en même temps que Visual Studio 2008, même
 - [Méthodes d’extension](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Variables locales implicitement typées](../language-reference/keywords/var.md)
 - [Méthodes partielles](../language-reference/keywords/partial-method.md)
-- Initialiseurs d’objets et de collections
+- [Initialiseurs d’objets et de collections](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Rétrospectivement, nombre de ces fonctionnalités semblent à la fois inéluctables et inséparables. Elles s’assemblent de façon stratégique. L’expression de requête, également appelée LINQ (Language-Integrated Query), était globalement considérée comme la fonctionnalité remarquable de cette version de C#.
 

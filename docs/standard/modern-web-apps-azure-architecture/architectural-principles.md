@@ -3,20 +3,18 @@ title: Principes de l’architecture
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Principes de l’architecture
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: 4ee14b128d3b83fd446352bb6f78afc08fb38c52
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105857"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404436"
 ---
 # <a name="architectural-principles"></a>Principes de l’architecture
 
 > « Si les bâtisseurs bâtissaient des bâtiments comme les programmeurs écrivent des programmes, le premier pivert passant par là détruirait la civilisation. »  
 > _\- Gerald Weinberg_
-
-## <a name="summary"></a>Récapitulatif
 
 Quand vous architecturez et que vous concevez des solutions logicielles, vous devez penser à leur maintenabilité. Les principes présentés dans cette section peuvent vous aider à prendre des décisions en matière d’architecture aboutissant à des applications propres et maintenables. D’une façon générale, ces principes vous guident dans la création d’applications à partir de composants individuels qui ne sont pas étroitement couplés à d’autres parties de votre application, mais qui communiquent plutôt via des interfaces explicites ou des systèmes de messages.
 
@@ -64,9 +62,9 @@ Dans une application monolithique, nous pouvons appliquer le principe de respons
 
 Quand ce principe est appliqué à l’architecture d’une application et mené à son aboutissement logique, vous obtenez des microservices. Un microservice donné ne doit avoir qu’une seule responsabilité. Si vous devez étendre le comportement d’un système, il est généralement préférable de le faire en ajoutant des microservices supplémentaires, au lieu d’ajouter une responsabilité à un microservice existant.
 
-[En savoir plus sur l’architecture des microservices](http://aka.ms/MicroservicesEbook)
+[En savoir plus sur l’architecture des microservices](https://aka.ms/MicroservicesEbook)
 
-### <a name="dont-repeat-yourself-dry"></a>Ne vous répétez pas
+### <a name="dont-repeat-yourself-dry"></a>Ne vous répétez pas (DRY)
 
 L’application doit éviter de spécifier à plusieurs endroits un comportement lié à un concept particulier, car il s’agit d’une source d’erreurs fréquente. À un moment donné, une modification des spécifications nécessite de changer ce comportement, et la probabilité que la mise à jour d’au moins une instance du comportement échoue entraîne un comportement incohérent du système.
 
@@ -81,17 +79,17 @@ Au lieu de dupliquer la logique, encapsulez-la dans une construction de programm
 
 Voici quelques exemples de violation de ce principe :
 
--   Une classe de base obligatoire
+- Une classe de base obligatoire.
 
--   Une implémentation d’une interface obligatoire
+- Une implémentation d’interface obligatoire.
 
--   Des classes responsables de leur propre enregistrement (comme le modèle Enregistrement actif)
+- Des classes responsables de leur propre enregistrement (comme le modèle Enregistrement actif).
 
--   Un constructeur par défaut obligatoire
+- Un constructeur par défaut obligatoire.
 
--   Des propriétés nécessitant un mot clé virtuel
+- Des propriétés nécessitant un mot clé virtuel.
 
--   Des attributs obligatoires spécifiques à la persistance
+- Des attributs obligatoires propres à la persistance.
 
 La nécessité pour les classes de n’avoir aucune des caractéristiques ou aucun des comportements ci-dessus ajoute un couplage entre les types qui doivent être stockés et le choix de la technologie de stockage, ce qui rend difficile l’adoption de nouvelles stratégies d’accès aux données dans le futur.
 
@@ -103,19 +101,20 @@ Au minimum, les applications web individuelles doivent s’efforcer d’être le
 
 > ### <a name="references--modern-web-applications"></a>Informations de référence sur les applications web modernes
 > - **Séparation des responsabilités**  
-> <http://deviq.com/separation-of-concerns/>
-> - **Encapsulation** <http://deviq.com/encapsulation/>
+> <https://deviq.com/separation-of-concerns/>
+> - **Encapsulation**  
+> <https://deviq.com/encapsulation/>
 > - **Principe d’inversion des dépendances**  
-> <http://deviq.com/dependency-inversion-principle/>
+> <https://deviq.com/dependency-inversion-principle/>
 > - **Principe des dépendances explicites**  
-> <http://deviq.com/explicit-dependencies-principle/>
+> <https://deviq.com/explicit-dependencies-principle/>
 > - **Ne vous répétez pas**  
-> <http://deviq.com/don-t-repeat-yourself/>
+> <https://deviq.com/don-t-repeat-yourself/>
 > - **Ignorance de la persistance**  
-> <http://deviq.com/persistence-ignorance/>
+> <https://deviq.com/persistence-ignorance/>
 > - **Contexte délimité**  
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
-> [!div class="step-by-step"]
+>[!div class="step-by-step"]
 [Précédent](choose-between-traditional-web-and-single-page-apps.md)
 [Suivant](common-web-application-architectures.md)

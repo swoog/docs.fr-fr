@@ -3,13 +3,13 @@ title: Installer le .NET Framework 3.5 sur Windows 10, Windows 8.1 et Windows
 description: Découvrez comment installer .NET Framework 3.5 sur Windows 10, Windows 8.1 et Windows 8.
 author: rlander
 ms.author: mairaw
-ms.date: 03/30/2018
-ms.openlocfilehash: 226449b8ee7c9360e6bfdc5bfa5dfeb59f19bd2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 07/16/2018
+ms.openlocfilehash: 7b3b7ca5709008260ea284602a3ed8d2b288c410
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387414"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245527"
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Installer le .NET Framework 3.5 sur Windows 10, Windows 8.1 et Windows 8
 
@@ -42,3 +42,6 @@ Vous pouvez activer le .NET Framework 3.5 dans le Panneau de configuration de W
 Pendant l’installation, si vous rencontrez l’erreur 0x800f0906, 0x800f0907, 0x800f081f ou 0x800F0922, consultez [Erreur d’installation de .NET Framework 3.5 : 0x800f0906, 0x800f0907 ou 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) pour découvrir comment résoudre ces problèmes.
 
 Si vous ne pouvez toujours pas résoudre votre problème d’installation ou si vous n’avez pas de connexion Internet, vous pouvez essayer de l’installer en utilisant votre support d’installation Windows. Pour plus d’informations, consultez [Déployer le .NET Framework 3.5 à l’aide de Gestion et maintenance des images de déploiement (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Si vous ne disposez pas du support d’installation, consultez [Créer un support d’installation pour Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+
+> [!WARNING]
+> Si vous ne vous basez pas sur Windows Update comme source pour l’installation de .NET Framework 3.5, vous devez veiller à utiliser strictement des sources de la même version du système d’exploitation Windows correspondant. L’utilisation d’un chemin d’accès source qui ne correspond pas à la même version de Windows n’empêchera pas l’installation d’une version incompatible de .NET Framework 3.5. Toutefois, l’état du système devient inutilisable et non pris en charge.

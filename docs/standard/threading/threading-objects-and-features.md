@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591324"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874785"
 ---
 # <a name="threading-objects-and-features"></a>Fonctionnalités et objets de threading
 .NET Framework fournit plusieurs objets permettant de créer et de gérer des applications multithread. Les threads managés sont représentés par la classe <xref:System.Threading.Thread>. La classe <xref:System.Threading.ThreadPool> permet de créer et de gérer facilement des tâches d'arrière-plan multithread. La classe <xref:System.ComponentModel.BackgroundWorker> permet la même chose pour les tâches qui interagissent avec l'interface utilisateur. La classe <xref:System.Threading.Timer> exécute des tâches en arrière-plan à intervalles réguliers.  
@@ -24,8 +24,8 @@ ms.locfileid: "33591324"
  [Pool de threads managés](../../../docs/standard/threading/the-managed-thread-pool.md)  
  Décrit la classe **ThreadPool**, qui vous permet de demander à un thread d’exécuter une tâche sans avoir à gérer les threads vous-même.  
   
- [Minuteries](../../../docs/standard/threading/timers.md)  
- Explique comment utiliser une **minuterie** pour spécifier le délégué devant être appelé à une heure spécifique.  
+ [Minuteurs](../../../docs/standard/threading/timers.md)  
+ Décrit les minuteurs qui peuvent être utilisés dans un environnement multithread.  
   
  [Moniteurs](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  Explique comment utiliser la classe **Monitor** pour synchroniser l’accès à un membre ou pour créer vos propres types de gestion de threads.  

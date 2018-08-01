@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: eaf410fa198fdb38a39a0474e9e147542919df8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 519c22e3c2647e2ae3423688b468e133a3e5eb84
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578419"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937112"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Meilleures pratiques pour implémenter le modèle asynchrone basé sur des événements
 Le modèle asynchrone basé sur les événements vous permet d’exposer efficacement un comportement asynchrone dans les classes, en utilisant une sémantique d’événement et de délégué familière. Pour implémenter le modèle asynchrone basé sur les événements, vous devez respecter certaines contraintes liées au comportement. Les sections ci-après décrivent les exigences et les recommandations que vous devez prendre en compte quand vous implémentez une classe qui suit le modèle asynchrone basé sur les événements.  
@@ -28,14 +28,14 @@ Le modèle asynchrone basé sur les événements vous permet d’exposer efficac
  Si vous implémentez le modèle asynchrone basé sur les événements, vous devez fournir une série de garanties pour que votre classe se comporte correctement et que les clients de votre classe puissent s'appuyer sur ce comportement.  
   
 ### <a name="completion"></a>Achèvement  
- Appelez toujours le gestionnaire d’événements *NomMéthode***Completed** quand l’opération s’est terminée correctement, ou bien en cas d’erreur ou d’annulation. Les applications ne doivent jamais rencontrer de situation dans laquelle elles demeurent inactives sans jamais terminer l'opération en cours. Une exception à cette règle est la situation dans laquelle l'opération asynchrone elle-même est conçue de manière à ne jamais se terminer.  
+ Appelez toujours le gestionnaire d’événements <em>MethodName</em>**Completed** quand l’opération s’est terminée correctement, ou bien en cas d’erreur ou d’annulation. Les applications ne doivent jamais rencontrer de situation dans laquelle elles demeurent inactives sans jamais terminer l'opération en cours. Une exception à cette règle est la situation dans laquelle l'opération asynchrone elle-même est conçue de manière à ne jamais se terminer.  
   
 ### <a name="completed-event-and-eventargs"></a>Événement Completed et classe EventArgs  
- Pour chaque méthode *NomMéthode***Async** distincte, appliquez les contraintes de conception suivantes :  
+ Pour chaque méthode <em>MethodName</em>**Async** distincte, appliquez les contraintes de conception suivantes :  
   
--   Définissez un événement *NomMéthode***Completed** sur la même classe que la méthode.  
+-   Définissez un événement <em>MethodName</em>**Completed** sur la même classe que la méthode.  
   
--   Définissez une classe <xref:System.EventArgs> et le délégué associé pour l’événement *NomMéthode***Completed** qui dérive de la classe <xref:System.ComponentModel.AsyncCompletedEventArgs>. Le nom de classe par défaut doit être de la forme *NomMéthode***CompletedEventArgs**.  
+-   Définissez une classe <xref:System.EventArgs> et le délégué associé pour l’événement <em>MethodName</em>**Completed** qui dérive de la classe <xref:System.ComponentModel.AsyncCompletedEventArgs>. Le nom de classe par défaut doit être de la forme *NomMéthode***CompletedEventArgs**.  
   
 -   Vérifiez que la classe <xref:System.EventArgs> est spécifique des valeurs de retour de la méthode *nom_méthode*. Quand vous utilisez la classe <xref:System.EventArgs>, vous ne devez jamais obliger les développeurs à effectuer un transtypage du résultat.  
   

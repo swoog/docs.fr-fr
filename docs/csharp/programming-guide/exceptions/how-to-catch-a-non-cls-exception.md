@@ -4,60 +4,49 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions [C#], non-CLS
 ms.assetid: db4630b3-5240-471a-b3a7-c7ff6ab31e8d
-ms.openlocfilehash: 6169f4b6de2efdfed0dbf43272d708c47b46dbca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c3153da78e0c25d59da7b5d83bd33f8080c7fae8
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340019"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198768"
 ---
 # <a name="how-to-catch-a-non-cls-exception"></a>Guide pratique pour intercepter une exception non-CLS
-Certains langages .NET, dont C++/CLI, permettent aux objets de lever des exceptions qui ne dérivent pas d’<xref:System.Exception>. De telles exceptions sont appelées *exceptions non-CLS* ou *non exceptions*. Dans Visual C#, vous ne pouvez pas lever d’exceptions non-CLS, mais vous pouvez les intercepter de deux façons :  
+Certains langages .NET, dont C++/CLI, permettent aux objets de lever des exceptions qui ne dérivent pas d’<xref:System.Exception>. De telles exceptions sont appelées *exceptions non-CLS* ou *non exceptions*. Dans C#, vous ne pouvez pas lever d’exceptions non-CLS, mais vous pouvez les intercepter de deux façons :  
   
--   Dans un bloc `catch (Exception e)`, en tant que <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
+-   Dans un bloc `catch (RuntimeWrappedException e)`.
   
-     Par défaut, un assembly Visual C# intercepte les exceptions non-CLS comme des exceptions encapsulées. Utilisez cette méthode si vous devez accéder à l’exception d’origine, qui est accessible via la propriété <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>. La procédure située plus loin dans cette rubrique explique comment intercepter les exceptions de cette manière.  
+     Par défaut, un assembly Visual C# intercepte les exceptions non-CLS comme des exceptions encapsulées. Utilisez cette méthode si vous devez accéder à l’exception d’origine, qui est accessible via la propriété <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType>. La procédure située plus loin dans cette rubrique explique comment intercepter les exceptions de cette manière.  
   
--   Dans un bloc catch général (un bloc catch sans type d’exception spécifié) qui est placé après un bloc `catch (Exception)` ou `catch (Exception e)`.  
+-   Dans un bloc catch général (bloc catch sans type d’exception spécifié) qui est placé après tous les autres blocs `catch`.
   
      Utilisez cette méthode lorsque vous souhaitez effectuer une action (comme écrire dans un fichier journal) en réponse à des exceptions non-CLS, et que vous n’avez pas besoin d’accéder aux informations de l’exception. Par défaut, le common language runtime inclut dans un wrapper toutes les exceptions. Pour désactiver ce comportement, ajoutez cet attribut d’assembly à votre code, généralement dans le fichier AssemblyInfo.cs : `[assembly: RuntimeCompatibilityAttribute(WrapNonExceptionThrows = false)]`.  
   
 ### <a name="to-catch-a-non-cls-exception"></a>Comment intercepter une exception non-CLS  
   
-1.  Dans un `catch(Exception e) block`, utilisez le mot clé `as` pour tester si `e` peut être casté en <xref:System.Runtime.CompilerServices.RuntimeWrappedException>.  
-  
-2.  Accédez à l’exception d’origine via la propriété <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A>.  
+Dans un bloc `catch(RuntimeWrappedException e)`, accédez à l’exception d’origine via la propriété <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment intercepter une exception non-CLS levée à partir d’une bibliothèque de classes écrite en C++ /CLR. Notez que dans cet exemple, le code client Visual C# sait par avance que le type d’exception levé est un <xref:System.String?displayProperty=nameWithType>. Vous pouvez caster la propriété <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A> en son type d’origine, tant que celui-ci est accessible à partir de votre code.  
+ L’exemple suivant montre comment intercepter une exception non-CLS levée à partir d’une bibliothèque de classes écrite en C++/CLI. Notez que dans cet exemple, le code client C# sait par avance que le type d’exception levé est un <xref:System.String?displayProperty=nameWithType>. Vous pouvez caster la propriété <xref:System.Runtime.CompilerServices.RuntimeWrappedException.WrappedException%2A?displayProperty=nameWithType> en son type d’origine, tant que celui-ci est accessible à partir de votre code.  
   
-```  
-// Class library written in C++/CLR.  
-   ThrowNonCLS.Class1 myClass = new ThrowNonCLS.Class1();  
-  
-   try  
-   {  
+```csharp
+// Class library written in C++/CLI.
+var myClass = new ThrowNonCLS.Class1();
+
+try
+{
     // throws gcnew System::String(  
     // "I do not derive from System.Exception!");  
-    myClass.TestThrow();   
-   }  
-  
-   catch (Exception e)  
-   {  
-    RuntimeWrappedException rwe = e as RuntimeWrappedException;  
-    if (rwe != null)      
-    {  
-      String s = rwe.WrappedException as String;  
-      if (s != null)  
-      {  
-        Console.WriteLine(s);  
-      }  
-    }  
-    else  
-    {  
-       // Handle other System.Exception types.  
-    }  
-   }             
+    myClass.TestThrow();
+}
+catch (RuntimeWrappedException e)
+{
+    String s = e.WrappedException as String;
+    if (s != null)
+    {
+        Console.WriteLine(s);
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

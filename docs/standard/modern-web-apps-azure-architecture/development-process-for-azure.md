@@ -3,13 +3,13 @@ title: Processus de développement pour Azure
 description: Architecturer des applications web modernes avec ASP.NET Core et Azure | Processus de développement pour Azure
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/08/2017
-ms.openlocfilehash: ea7b173369cea3b785297a136546d65965c3d789
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/28/2018
+ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106851"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404387"
 ---
 # <a name="development-process-for-azure"></a>Processus de développement pour Azure
 
@@ -40,8 +40,6 @@ Que vous préfériez un IDE complet et puissant ou un éditeur léger et agile, 
 
 [Télécharger Visual Studio Code](https://code.visualstudio.com/download)
 
-
-
 ## <a name="development-workflow-for-azure-hosted-aspnet-core-apps"></a>Flux de travail de développement pour les applications ASP.NET Core hébergées par Azure
 
 Le cycle de vie du développement d’une application débute sur une machine de développeur, là où le développeur programme l’application dans le langage de son choix et où il la teste localement. Les développeurs peuvent choisir leur système de contrôle de code source par défaut et peuvent configurer l’intégration continue (CI) et/ou la livraison/le déploiement continu(e) (CD) à l’aide d’un serveur de builds ou en fonction des fonctionnalités Azure intégrées.
@@ -52,9 +50,9 @@ Pour commencer à développer une application ASP.NET Core à l’aide de CI/CD,
 
 Pour créer un pipeline de mise en production pour votre application, vous devez avoir votre code d’application dans le contrôle de code source. Configurez un référentiel local et connectez-le à un référentiel distant dans un projet d’équipe. Suivez les instructions ci-dessous :
 
--   [Partager votre code avec Git et Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
+- [Partager votre code avec Git et Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
 
--   [Partager votre code avec TFVC et Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [Partager votre code avec TFVC et Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Créez un service d’application Azure où vous déploierez votre application. Créez une application web en accédant au panneau App Services dans le portail Azure. Cliquez sur +Ajouter, sélectionnez le modèle Application web, cliquez sur Créer et spécifiez un nom et d’autres détails. L’application web sera accessible à partir de {nom}.azurewebsites.net.
 
@@ -90,7 +88,7 @@ Le développement d’une application ASP.NET Core pour le déploiement sur Azur
 
 Chaque fois que vous êtes prêt à partager votre code avec votre équipe, vous devez envoyer vos modifications de votre référentiel de code source local vers le référentiel de code source partagé de votre équipe. Si vous travaillez dans une branche personnalisée, cette étape nécessite généralement la fusion de votre code dans une branche partagée (par exemple au moyen d’une [demande de tirage (pull request)](https://docs.microsoft.com/vsts/git/pull-requests)).
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Étape 3. Serveur de builds : Intégration continue. Build, Test, Package
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Étape 3. Serveur de builds : Intégration continue. Générer, tester, empaqueter
 
 Une nouvelle build est déclenchée sur le serveur de builds chaque fois qu’une nouvelle validation est effectuée dans le référentiel de code d’application partagé. Dans le cadre du processus CI, cette build doit compiler entièrement l’application et exécuter des tests automatisés afin de confirmer que tout fonctionne comme prévu. Le résultat final du processus CI doit être une version empaquetée de l’application web, prête pour le déploiement.
 
@@ -98,7 +96,7 @@ Une nouvelle build est déclenchée sur le serveur de builds chaque fois qu’un
 
 Une fois qu’une build a réussi, le processus CD prend en charge les artefacts de build générés, qui comprennent notamment un package de déploiement web. Le serveur de builds déploie ce package sur Azure App Service, en remplaçant tout service existant par celui qui vient d’être créé. En général, cette étape cible un environnement de préproduction, mais certaines applications sont déployées directement en production par le biais d’un processus CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Étape 5. Azure App Service. Application web.
+#### <a name="step-5-azure-app-service-web-app"></a>Étape 5. Azure App Service Web App
 
 Une fois déployée, l’application ASP.NET Core s’exécute dans le contexte d’une application web Azure App Service. Cette application web peut être surveillée et configurée davantage dans le portail Azure.
 
@@ -110,7 +108,6 @@ Pendant l’exécution de l’application web, vous pouvez surveiller son intég
 
 **Générer et déployer votre application ASP.NET Core sur Azure**  
 <https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
-
 
 >[!div class="step-by-step"]
 [Précédent](test-asp-net-core-mvc-apps.md)

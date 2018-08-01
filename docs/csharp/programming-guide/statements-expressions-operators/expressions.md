@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 830c68e6857e72fe19099753ba57a7e22491af2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339655"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936946"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressions (Guide de programmation C#)
 Une *expression* est une séquence d’un ou plusieurs opérandes et de zéro, un ou plusieurs opérateurs qui peuvent être évalués à une valeur, un objet, une méthode ou un espace de noms unique. Elle peut être constituée d’une valeur littérale, d’un appel de méthode, d’un opérateur et de ses opérandes, ou d’un *nom simple*. Un nom simple peut être le nom d'une variable, d'un membre de type, d'un paramètre de méthode, d'un espace de noms ou d'un type.  
@@ -61,8 +61,9 @@ DoWork();
 ## <a name="lambda-expressions"></a>Expressions lambda  
  Les expressions lambda représentent des « méthodes inline » qui n’ont aucun nom mais qui peuvent avoir des paramètres d’entrée et plusieurs instructions. Elles sont largement utilisées dans LINQ pour passer des arguments aux méthodes. Les expressions lambda sont compilées en délégués ou en arborescences de l’expression en fonction du contexte dans lequel elles sont utilisées. Pour plus d’informations, consultez [Expressions lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
-## <a name="expression-trees"></a>Arborescences de l’expression  
- Les arborescences de l’expression permettent de représenter des expressions en tant que structures de données. Elles sont largement utilisées par les fournisseurs LINQ pour traduire des expressions de requête en code explicite dans un autre contexte, comme une base de données SQL. Pour plus d’informations, consultez [Arborescences de l’expression](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+## <a name="expression-trees"></a>Arborescences de l’expression
+
+Les arborescences de l’expression permettent de représenter des expressions en tant que structures de données. Elles sont largement utilisées par les fournisseurs LINQ pour traduire des expressions de requête en code explicite dans un autre contexte, comme une base de données SQL. Pour plus d’informations, consultez [Arborescences d’expressions (C#)](../concepts/expression-trees/index.md).
   
 ## <a name="expression-body-definitions"></a>Définitions de corps d’expression
 

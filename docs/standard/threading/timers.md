@@ -1,6 +1,7 @@
 ---
-title: Minuteries
-ms.date: 03/30/2017
+title: Minuteurs
+description: Découvrez les minuteurs .NET à utiliser dans un environnement multithread.
+ms.date: 07/03/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -10,29 +11,53 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 478484651bf839f842148f0b4164c9387db3b98a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584955"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875064"
 ---
-# <a name="timers"></a>Minuteries
-Les minuteurs sont des objets légers qui vous permettent de spécifier un délégué à appeler à une heure définie. Un thread du pool de threads exécute l’opération d’attente.  
-  
- L’utilisation de la classe <xref:System.Threading.Timer?displayProperty=nameWithType> est simple. Vous créez un **minuteur** en passant un délégué <xref:System.Threading.TimerCallback> à la méthode de rappel, un objet représentant l’état qui sera passé au rappel, une heure de déclenchement initiale et une heure représentant l’intervalle entre les appels de rappel. Pour annuler un minuteur en attente, appelez la fonction **Timer.Dispose**.  
-  
+# <a name="timers"></a>Minuteurs
+
+.NET propose deux minuteurs à utiliser dans un environnement multithread :
+
+- <xref:System.Threading.Timer?displayProperty=nameWithType>, qui exécute une méthode de rappel unique sur un thread <xref:System.Threading.ThreadPool> à intervalles réguliers.
+- <xref:System.Timers.Timer?displayProperty=nameWithType> qui, par défaut, déclenche un événement sur un thread <xref:System.Threading.ThreadPool> à intervalles réguliers.
+
 > [!NOTE]
->  Il existe deux autres classes de minuteur. La classe <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> est un contrôle qui fonctionne avec les concepteurs visuels et qui est destiné à une utilisation dans des contextes d’interface utilisateur. Il déclenche des événements sur le thread d’interface utilisateur. La classe <xref:System.Timers.Timer?displayProperty=nameWithType> dérive de <xref:System.ComponentModel.Component>, ce qui permet de l’utiliser avec des concepteurs visuels. Elle déclenche également des événements, mais sur un thread <xref:System.Threading.ThreadPool>. La classe <xref:System.Threading.Timer?displayProperty=nameWithType> effectue les rappels sur un thread <xref:System.Threading.ThreadPool> et n’utilise jamais le modèle d’événement. Elle fournit également un objet d’état à la méthode de rappel, à la différence des autres minuteurs. Elle est très légère.  
+> Certaines implémentations .NET peuvent inclure des minuteurs supplémentaires :
+>
+> - <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> : composant Windows Forms qui déclenche un événement à intervalles réguliers. Le composant ne possède pas d’interface utilisateur et est conçu pour une utilisation dans un environnement à thread unique.  
+> - <xref:System.Web.UI.Timer?displayProperty=nameWithType> : composant ASP.NET qui effectue des publications (postback) de pages web asynchrones ou synchrones à intervalles réguliers.
+> - <xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType> : minuteur intégré à la file d’attente <xref:System.Windows.Threading.Dispatcher> qui est traitée selon un intervalle de temps et une priorité spécifiés.
+
+## <a name="the-systemthreadingtimer-class"></a>Classe System.Threading.Timer
+
+La classe <xref:System.Threading.Timer?displayProperty=nameWithType> vous permet d’appeler en permanence un délégué à des intervalles de temps spécifiés. Vous pouvez aussi utiliser cette classe pour planifier un appel unique à un délégué dans un intervalle de temps spécifié. Le délégué est exécuté sur un thread <xref:System.Threading.ThreadPool>.
+
+Quand vous créez un objet <xref:System.Threading.Timer?displayProperty=nameWithType>, vous spécifiez un délégué <xref:System.Threading.TimerCallback> qui définit la méthode de rappel, un objet d’état facultatif qui est passé au rappel, la durée d’attente avant la première invocation du rappel et l’intervalle de temps entre les invocations de rappel. Pour annuler un minuteur en attente, appelez la méthode <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType>.
+
+L’exemple suivant crée un minuteur qui appelle le délégué fourni au bout d’une seconde (1000 millisecondes) la première fois et ensuite toutes les deux secondes. L’objet d’état de l’exemple sert à compter le nombre de fois que le délégué est appelé. Le minuteur s’arrête dès que le délégué a été appelé au moins 10 fois.
+
+[!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
+[!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
+[!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
+
+Pour plus d'informations et d'exemples, consultez <xref:System.Threading.Timer?displayProperty=nameWithType>.
+
+## <a name="the-systemtimerstimer-class"></a>Classe System.Timers.Timer
+
+L’autre minuteur qui peut être utilisé dans un environnement multithread est <xref:System.Timers.Timer?displayProperty=nameWithType> qui, par défaut, déclenche un événement sur un thread <xref:System.Threading.ThreadPool>.
+
+Au moment de créer un objet <xref:System.Timers.Timer?displayProperty=nameWithType>, vous pouvez spécifier l’intervalle de temps au cours duquel un événement <xref:System.Timers.Timer.Elapsed> est déclenché. Utilisez la propriété <xref:System.Timers.Timer.Enabled%2A> pour indiquer si un minuteur doit déclencher un événement <xref:System.Timers.Timer.Elapsed>. Si vous avez besoin qu’un événement <xref:System.Timers.Timer.Elapsed> soit déclenché une seule fois à l’issue de l’intervalle spécifié, définissez le <xref:System.Timers.Timer.AutoReset%2A> sur `false`. La valeur par défaut de la propriété <xref:System.Timers.Timer.AutoReset%2A> est `true`, ce qui signifie qu’un événement <xref:System.Timers.Timer.Elapsed> est déclenché régulièrement selon l’intervalle défini par la propriété <xref:System.Timers.Timer.Interval%2A>.
+
+Pour plus d'informations et d'exemples, consultez <xref:System.Timers.Timer?displayProperty=nameWithType>.
   
- L’exemple de code suivant lance un minuteur qui se déclenche après une seconde (1 000 millisecondes) et qui marque chaque seconde jusqu'à ce que vous appuyiez sur la touche **Entrée**. La variable contenant la référence au minuteur est un champ de niveau classe qui garantit que le minuteur ne sera pas soumis au nettoyage de mémoire durant son exécution. Pour plus d’informations sur le nettoyage de mémoire agressif, consultez <xref:System.GC.KeepAlive%2A>.  
-  
- [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
- [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
- [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
-  
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Threading.Timer>  
- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Voir aussi
+
+ <xref:System.Threading.Timer?displayProperty=nameWithType>  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>  
+ [Fonctionnalités et objets de threading](threading-objects-and-features.md)

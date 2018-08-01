@@ -3,13 +3,13 @@ title: Gestion d’une défaillance partielle
 description: Architecture des microservices .NET pour les applications .NET en conteneur | Gestion d’une défaillance partielle
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105193"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875181"
 ---
 # <a name="handling-partial-failure"></a>Gestion d’une défaillance partielle
 
@@ -27,7 +27,7 @@ Dans une large application basée sur des microservices, une défaillance partie
 
 **Figure 10-2**. Impact d’une mauvaise conception avec de longues chaînes de requêtes HTTP
 
-Une défaillance intermittente est quasiment inévitable dans un système cloud et distribué, même si les dépendances présentent individuellement une haute disponibilité. C’est un point important à prendre en compte.
+Une défaillance intermittente est inévitable dans un système cloud et distribué, même si les dépendances présentent individuellement une haute disponibilité. C’est un point important à prendre en compte.
 
 Si vous ne concevez pas et n’implémentez pas de techniques de tolérance de panne, même de courts temps d’arrêt peuvent avoir des répercussions amplifiées. Par exemple, l’existence de 50 dépendances avec 99,99 % de disponibilité se traduit par plusieurs heures d’arrêt chaque mois en raison de cet effet amplificateur. En cas d’échec d’une dépendance de microservice pendant le traitement d’un grand nombre de requêtes, cette défaillance peut rapidement saturer tous les threads de requête disponibles dans chaque service et entraîner le blocage de l’application entière.
 
@@ -35,7 +35,7 @@ Si vous ne concevez pas et n’implémentez pas de techniques de tolérance de p
 
 **Figure 10-3**. Défaillance partielle amplifiée par les microservices avec de longues chaînes d’appels HTTP synchrones
 
-Pour limiter ce problème, nous vous recommandons d’utiliser la communication asynchrone entre les microservices internes, comme cela est expliqué dans la section *Asynchronous microservice integration enforce microservice’s autonomy* (dans le chapitre sur l’architecture). Nous expliquerons un peu plus ce point dans la section suivante.
+Pour limiter ce problème, la section « *Asynchronous microservice integration enforce microservice’s autonomy* » (dans le chapitre sur l’architecture) vous recommande d’utiliser une communication asynchrone entre les microservices internes. 
 
 De plus, il est essentiel de concevoir vos microservices et applications clientes pour gérer les défaillances partielles, et ainsi les rendre résilients.
 

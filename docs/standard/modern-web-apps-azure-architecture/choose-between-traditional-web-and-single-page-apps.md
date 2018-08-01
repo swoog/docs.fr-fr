@@ -1,40 +1,38 @@
 ---
 title: Choisir entre des applications web traditionnelles et des applications monopages
-description: Architecturer des applications web modernes avec ASP.NET Core et Microsoft Azure
+description: Apprenez à choisir entre des applications web traditionnelles et des applications monopages (SPA) quand il s’agit de créer des applications web.
 author: ardalis
 ms.author: wiwagn
-ms.date: 10/06/2017
-ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 6/28/2018
+ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104764"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404144"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Choisir entre des applications web traditionnelles et des applications monopages
 
 > « Loi d’Atwood : Toute application pouvant être écrite en JavaScript sera au bout du compte écrite en JavaScript. »  
 > _\- Jeff Atwood_
 
-## <a name="summary"></a>Récapitulatif
-
 Aujourd’hui, vous avez le choix entre deux approches pour créer des applications web : les applications web traditionnelles qui effectuent la plupart de la logique d’application sur le serveur, et les applications monopages qui effectuent la plupart de la logique d’interface utilisateur dans un navigateur web en communiquant avec le serveur web principalement à l’aide d’API web. Une approche hybride est également possible, la plus simple étant d’héberger une ou plusieurs sous-applications de type monopage au sein d’une application web classique plus grande.
 
 Vous devez utiliser des applications web traditionnelles quand :
 
--   Les exigences côté client de votre application sont simples (voire même lecture seule).
+- Les exigences côté client de votre application sont simples (voire même lecture seule).
 
--   Votre application doit fonctionner dans les navigateurs sans prise en charge de JavaScript.
+- Votre application doit fonctionner dans les navigateurs sans prise en charge de JavaScript.
 
--   Votre équipe ne connaît pas très bien les techniques de développement JavaScript ou TypeScript.
+- Votre équipe ne connaît pas très bien les techniques de développement JavaScript ou TypeScript.
 
 Vous devez utiliser une application monopage (SPA, Single-Page Application) quand :
 
--   Votre application doit exposer une interface utilisateur élaborée offrant de nombreuses fonctionnalités.
+- Votre application doit exposer une interface utilisateur élaborée offrant de nombreuses fonctionnalités.
 
--   Votre équipe connaît bien les techniques de développement JavaScript et/ou TypeScript.
+- Votre équipe connaît bien les techniques de développement JavaScript et/ou TypeScript.
 
--   Votre application doit déjà exposer une API pour d’autres clients (internes ou publics).
+- Votre application doit déjà exposer une API pour d’autres clients (internes ou publics).
 
 De plus, les frameworks SPA demandent de plus grandes connaissances en architecture et en sécurité. Elles subissent davantage de modifications que les applications web traditionnelles en raison des mises à jour fréquentes et des nouveaux frameworks. La configuration de processus de déploiement et de génération automatisés et l’utilisation d’options de déploiement telles que des conteneurs sont plus difficiles avec les applications SPA qu’avec les applications web traditionnelles.
 
@@ -71,10 +69,11 @@ Notez que souvent les applications SPA doivent implémenter des fonctionnalités
 L’écriture d’applications SPA nécessite une bonne connaissance des bibliothèques et des techniques de programmation côté client et JavaScript et/ou TypeScript. Votre équipe doit savoir écrire du code JavaScript moderne à l’aide d’un framework SPA comme Angular.
 
 > ### <a name="references--spa-frameworks"></a>Références – Frameworks de SPA
+>
 > - **Angular**  
-> <https://angular.io>
+>   <https://angular.io>
 > - **Comparaison des frameworks JavaScript**  
-> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **Votre application doit déjà exposer une API pour d’autres clients (internes ou publics)**
 
@@ -84,12 +83,12 @@ Si vous prenez déjà en charge une API web pour une utilisation par d’autres 
 
 Le tableau de décision ci-dessous récapitule certains facteurs à prendre en compte lors du choix entre une application web traditionnelle et une application monopage.
 
-  | **Facteur** | **Application web traditionnelle** | **Application à une seule page** |
-  |---|---|---|
-  | Connaissances de l’équipe de JavaScript/TypeScript | **Minimale** | **Obligatoire** |
-  | Prise en charge des navigateurs sans script | **Prise en charge** | **Pas de prise en charge** |
-  | Comportement d’application côté client minimal | **Adapté** | **Non adapté** |
-  | Exigences d’une interface utilisateur riche et complexe | **Limité** | **Adapté** |
+| **Facteur**                                           | **Application web traditionnelle** | **Application à une seule page** |
+| ---------------------------------------------------- | ----------------------- | --------------------------- |
+| Connaissances de l’équipe de JavaScript/TypeScript | **Minimale**             | **Obligatoire**                |
+| Prise en charge des navigateurs sans script                   | **Prise en charge**           | **Pas de prise en charge**           |
+| Comportement d’application côté client minimal             | **Adapté**         | **Non adapté**                |
+| Exigences d’une interface utilisateur riche et complexe            | **Limité**             | **Adapté**             |
 
 >[!div class="step-by-step"]
 [Précédent](modern-web-applications-characteristics.md)
