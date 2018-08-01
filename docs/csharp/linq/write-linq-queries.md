@@ -1,89 +1,88 @@
 ---
 title: Écrire des requêtes LINQ en C#
-description: Comment écrire des requêtes.
+description: Découvrez comment écrire des requêtes LINQ en C#.
 ms.date: 12/1/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: a9683dbf3c4101829054477824ccc7135f20f535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5003d1a5e15e17bea4204941d1c43895e3fb91f4
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33288835"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403932"
 ---
-# <a name="write-linq-queries-in-c"></a><span data-ttu-id="f749c-103">Écrire des requêtes LINQ en C#</span><span class="sxs-lookup"><span data-stu-id="f749c-103">Write LINQ queries in C#</span></span>
+# <a name="write-linq-queries-in-c"></a><span data-ttu-id="7117b-103">Écrire des requêtes LINQ en C#</span><span class="sxs-lookup"><span data-stu-id="7117b-103">Write LINQ queries in C#</span></span> #
 
-<span data-ttu-id="f749c-104">Cette rubrique présente les trois façons d’écrire une requête LINQ en C# :</span><span class="sxs-lookup"><span data-stu-id="f749c-104">This topic shows the three ways in which you can write a LINQ query in C#:</span></span>  
-  
-1.  <span data-ttu-id="f749c-105">Utilisez la syntaxe de requête.</span><span class="sxs-lookup"><span data-stu-id="f749c-105">Use query syntax.</span></span>  
-  
-2.  <span data-ttu-id="f749c-106">Utilisez la syntaxe de méthode.</span><span class="sxs-lookup"><span data-stu-id="f749c-106">Use method syntax.</span></span>  
-  
-3.  <span data-ttu-id="f749c-107">Utilisez une combinaison de syntaxe de requête et de syntaxe de méthode.</span><span class="sxs-lookup"><span data-stu-id="f749c-107">Use a combination of query syntax and method syntax.</span></span>  
-  
- <span data-ttu-id="f749c-108">Les exemples suivants montrent des requêtes LINQ simples en utilisant chaque approche répertoriée précédemment.</span><span class="sxs-lookup"><span data-stu-id="f749c-108">The following examples demonstrate some simple LINQ queries by using each approach listed previously.</span></span> <span data-ttu-id="f749c-109">En général, la règle consiste à utiliser (1) dès que possible et à utiliser (2) et (3) dès que cela est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="f749c-109">In general, the rule is to use (1) whenever possible, and use (2) and (3) whenever necessary.</span></span>  
-  
+<span data-ttu-id="7117b-104">Cet article présente les trois façons d’écrire une requête LINQ en C# :</span><span class="sxs-lookup"><span data-stu-id="7117b-104">This article shows the three ways in which you can write a LINQ query in C#:</span></span>
+
+1. <span data-ttu-id="7117b-105">Utilisez la syntaxe de requête.</span><span class="sxs-lookup"><span data-stu-id="7117b-105">Use query syntax.</span></span>
+
+2. <span data-ttu-id="7117b-106">Utilisez la syntaxe de méthode.</span><span class="sxs-lookup"><span data-stu-id="7117b-106">Use method syntax.</span></span>
+
+3. <span data-ttu-id="7117b-107">Utilisez une combinaison de syntaxe de requête et de syntaxe de méthode.</span><span class="sxs-lookup"><span data-stu-id="7117b-107">Use a combination of query syntax and method syntax.</span></span>
+
+<span data-ttu-id="7117b-108">Les exemples suivants montrent des requêtes LINQ simples en utilisant chaque approche répertoriée précédemment.</span><span class="sxs-lookup"><span data-stu-id="7117b-108">The following examples demonstrate some simple LINQ queries by using each approach listed previously.</span></span> <span data-ttu-id="7117b-109">En général, la règle consiste à utiliser (1) dès que possible et à utiliser (2) et (3) dès que cela est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="7117b-109">In general, the rule is to use (1) whenever possible, and use (2) and (3) whenever necessary.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="f749c-110">Ces requêtes fonctionnent sur les collections simples en mémoire ; toutefois, la syntaxe de base est identique à celle utilisée dans LINQ to Entities et LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="f749c-110">These queries operate on simple in-memory collections; however, the basic syntax is identical to that used in LINQ to Entities and LINQ to XML.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="f749c-111">Exemple</span><span class="sxs-lookup"><span data-stu-id="f749c-111">Example</span></span>  
-  
-## <a name="query-syntax"></a><span data-ttu-id="f749c-112">Syntaxe de requête</span><span class="sxs-lookup"><span data-stu-id="f749c-112">Query syntax</span></span>  
- <span data-ttu-id="f749c-113">La méthode recommandée pour écrire la plupart des requêtes consiste à utiliser la *syntaxe de requête* pour créer des *expressions de requête*.</span><span class="sxs-lookup"><span data-stu-id="f749c-113">The recommended way to write most queries is to use *query syntax* to create *query expressions*.</span></span> <span data-ttu-id="f749c-114">L’exemple suivant présente trois expressions de requête.</span><span class="sxs-lookup"><span data-stu-id="f749c-114">The following example shows three query expressions.</span></span> <span data-ttu-id="f749c-115">La première expression de requête montre comment filtrer ou restreindre des résultats en appliquant des conditions avec une clause `where`.</span><span class="sxs-lookup"><span data-stu-id="f749c-115">The first query expression demonstrates how to filter or restrict results by applying conditions with a `where` clause.</span></span> <span data-ttu-id="f749c-116">Tous les éléments de la séquence source dont la valeur est supérieure à 7 ou inférieure à 3 sont retournés.</span><span class="sxs-lookup"><span data-stu-id="f749c-116">It returns all elements in the source sequence whose values are greater than 7 or less than 3.</span></span> <span data-ttu-id="f749c-117">La deuxième expression montre comment classer les résultats retournés.</span><span class="sxs-lookup"><span data-stu-id="f749c-117">The second expression demonstrates how to order the returned results.</span></span> <span data-ttu-id="f749c-118">La troisième expression montre comment regrouper des résultats en fonction d’une clé.</span><span class="sxs-lookup"><span data-stu-id="f749c-118">The third expression demonstrates how to group results according to a key.</span></span> <span data-ttu-id="f749c-119">Cette requête retourne deux groupes en fonction de la première lettre du mot.</span><span class="sxs-lookup"><span data-stu-id="f749c-119">This query returns two groups based on the first letter of the word.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#5](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]  
-  
- <span data-ttu-id="f749c-120">Notez que le type des requêtes est <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="f749c-120">Note that the type of the queries is <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="f749c-121">Toutes ces requêtes pourraient être écrites à l’aide de `var`, comme illustré dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="f749c-121">All of these queries could be written using `var` as shown in the following example:</span></span>  
-  
- `var query = from num in numbers...`  
-  
- <span data-ttu-id="f749c-122">Dans chacun des exemples précédents, les requêtes ne s’exécutent pas réellement tant vous n’avez pas itéré la variable de requête dans une instruction `foreach` ou une autre instruction.</span><span class="sxs-lookup"><span data-stu-id="f749c-122">In each previous example, the queries do not actually execute until you iterate over the query variable in a `foreach` statement or other statement.</span></span> <span data-ttu-id="f749c-123">Pour plus d’informations, consultez [Introduction aux requêtes LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="f749c-123">For more information, see [Introduction to LINQ Queries](../programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="f749c-124">Exemple</span><span class="sxs-lookup"><span data-stu-id="f749c-124">Example</span></span>  
-  
-## <a name="method-syntax"></a><span data-ttu-id="f749c-125">Syntaxe de méthode</span><span class="sxs-lookup"><span data-stu-id="f749c-125">Method syntax</span></span>  
- <span data-ttu-id="f749c-126">Certaines opérations de requête doivent être exprimées comme un appel de méthode.</span><span class="sxs-lookup"><span data-stu-id="f749c-126">Some query operations must be expressed as a method call.</span></span> <span data-ttu-id="f749c-127">Les plus répandues de ces méthodes retournent des valeurs numériques uniques, telles que <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>, et ainsi de suite.</span><span class="sxs-lookup"><span data-stu-id="f749c-127">The most common such methods are those that return singleton numeric values, such as <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>, and so on.</span></span> <span data-ttu-id="f749c-128">Ces méthodes doivent toujours être appelées en dernier dans toutes les requêtes, car elles ne représentent qu’une valeur unique et ne peuvent pas servir de source pour une opération de requête supplémentaire.</span><span class="sxs-lookup"><span data-stu-id="f749c-128">These methods must always be called last in any query because they represent only a single value and cannot serve as the source for an additional query operation.</span></span> <span data-ttu-id="f749c-129">L’exemple suivant présente un appel de méthode dans une expression de requête :</span><span class="sxs-lookup"><span data-stu-id="f749c-129">The following example shows a method call in a query expression:</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#6](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="f749c-130">Exemple</span><span class="sxs-lookup"><span data-stu-id="f749c-130">Example</span></span>  
- <span data-ttu-id="f749c-131">Si la méthode a des paramètres Action ou Func, ceux-ci sont fournis sous la forme d’une expression [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md), comme dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="f749c-131">If the method has  Action or Func parameters, these are provided in the form of a [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md) expression, as shown in the following example:</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#7](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]  
-  
- <span data-ttu-id="f749c-132">Dans les requêtes précédentes, seule la requête 4 s’exécute immédiatement.</span><span class="sxs-lookup"><span data-stu-id="f749c-132">In the previous queries, only Query #4 executes immediately.</span></span> <span data-ttu-id="f749c-133">Cela s’explique par le fait qu’elle retourne une valeur unique et non une collection <xref:System.Collections.Generic.IEnumerable%601> générique.</span><span class="sxs-lookup"><span data-stu-id="f749c-133">This is because it returns a single value, and not a generic <xref:System.Collections.Generic.IEnumerable%601> collection.</span></span> <span data-ttu-id="f749c-134">La méthode elle-même doit utiliser `foreach` pour calculer sa valeur.</span><span class="sxs-lookup"><span data-stu-id="f749c-134">The method itself has to use `foreach` in order to compute its value.</span></span>  
-  
- <span data-ttu-id="f749c-135">Chacune des requêtes précédentes peut être écrite en utilisant des types implicites avec [var](../language-reference/keywords/var.md), comme dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="f749c-135">Each of the previous queries can be written by using implicit typing with [var](../language-reference/keywords/var.md), as shown in the following example:</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#8](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="f749c-136">Exemple</span><span class="sxs-lookup"><span data-stu-id="f749c-136">Example</span></span>  
-  
-## <a name="mixed-query-and-method-syntax"></a><span data-ttu-id="f749c-137">Syntaxe de méthode et de requête mixte</span><span class="sxs-lookup"><span data-stu-id="f749c-137">Mixed query and method syntax</span></span>  
- <span data-ttu-id="f749c-138">Cet exemple montre comment utiliser la syntaxe de méthode sur les résultats d’une clause de requête.</span><span class="sxs-lookup"><span data-stu-id="f749c-138">This example shows how to use method syntax on the results of a query clause.</span></span> <span data-ttu-id="f749c-139">Encadrez simplement l’expression de requête entre parenthèses, puis appliquez l’opérateur point et appelez la méthode.</span><span class="sxs-lookup"><span data-stu-id="f749c-139">Just enclose the query expression in parentheses, and then apply the dot operator and call the method.</span></span> <span data-ttu-id="f749c-140">Dans l’exemple suivant, la requête 7 retourne les nombres dont la valeur est comprise entre 3 et 7.</span><span class="sxs-lookup"><span data-stu-id="f749c-140">In the following example, query #7 returns a count of the numbers whose value is between 3 and 7.</span></span> <span data-ttu-id="f749c-141">Toutefois, il est généralement préférable d’utiliser une deuxième variable pour stocker le résultat de l’appel de méthode.</span><span class="sxs-lookup"><span data-stu-id="f749c-141">In general, however, it is better to use a second variable to store the result of the method call.</span></span> <span data-ttu-id="f749c-142">De cette manière, il est moins probable que la requête ne soit confondue avec les résultats de la requête.</span><span class="sxs-lookup"><span data-stu-id="f749c-142">In this manner, the query is less likely to be confused with the results of the query.</span></span>  
-  
- [!code-csharp[csProgGuideLINQ#9](../../../samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]  
-  
- <span data-ttu-id="f749c-143">Comme la requête 7 retourne une valeur unique et non une collection, la requête s’exécute immédiatement.</span><span class="sxs-lookup"><span data-stu-id="f749c-143">Because Query #7 returns a single value and not a collection, the query executes immediately.</span></span>  
-  
- <span data-ttu-id="f749c-144">La requête précédente peut être écrite en utilisant des types implicites avec `var`, comme suit :</span><span class="sxs-lookup"><span data-stu-id="f749c-144">The previous query can be written by using implicit typing with `var`, as follows:</span></span>  
-  
-```csharp  
-var numCount = (from num in numbers...  
-```  
-  
- <span data-ttu-id="f749c-145">Elle peut être écrite dans la syntaxe de méthode comme suit :</span><span class="sxs-lookup"><span data-stu-id="f749c-145">It can be written in method syntax as follows:</span></span>  
-  
-```csharp  
-var numCount = numbers.Where(n => n < 3 || n > 7).Count();  
-```  
-  
- <span data-ttu-id="f749c-146">Elle peut être écrite en utilisant des types explicites, comme suit :</span><span class="sxs-lookup"><span data-stu-id="f749c-146">It can be written by using explicit typing, as follows:</span></span>  
-  
-```csharp  
-int numCount = numbers.Where(n => n < 3 || n > 7).Count();  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="f749c-147">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f749c-147">See Also</span></span>  
-  <span data-ttu-id="f749c-148">[Procédure pas à pas : écriture de requêtes en C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md) </span><span class="sxs-lookup"><span data-stu-id="f749c-148">[Walkthrough: Writing Queries in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md) </span></span>  
- [<span data-ttu-id="f749c-149">Expressions de requête LINQ</span><span class="sxs-lookup"><span data-stu-id="f749c-149">LINQ Query Expressions</span></span>](index.md)  
- [<span data-ttu-id="f749c-150">where, clause</span><span class="sxs-lookup"><span data-stu-id="f749c-150">where clause</span></span>](../language-reference/keywords/where-clause.md)
+> <span data-ttu-id="7117b-110">Ces requêtes fonctionnent sur les collections simples en mémoire ; toutefois, la syntaxe de base est identique à celle utilisée dans LINQ to Entities et LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="7117b-110">These queries operate on simple in-memory collections; however, the basic syntax is identical to that used in LINQ to Entities and LINQ to XML.</span></span>
+
+## <a name="example---query-syntax"></a><span data-ttu-id="7117b-111">Exemple – Syntaxe de requête</span><span class="sxs-lookup"><span data-stu-id="7117b-111">Example - Query syntax</span></span>
+
+<span data-ttu-id="7117b-112">La méthode recommandée pour écrire la plupart des requêtes consiste à utiliser la *syntaxe de requête* pour créer des *expressions de requête*.</span><span class="sxs-lookup"><span data-stu-id="7117b-112">The recommended way to write most queries is to use *query syntax* to create *query expressions*.</span></span> <span data-ttu-id="7117b-113">L’exemple suivant présente trois expressions de requête.</span><span class="sxs-lookup"><span data-stu-id="7117b-113">The following example shows three query expressions.</span></span> <span data-ttu-id="7117b-114">La première expression de requête montre comment filtrer ou restreindre des résultats en appliquant des conditions avec une clause `where`.</span><span class="sxs-lookup"><span data-stu-id="7117b-114">The first query expression demonstrates how to filter or restrict results by applying conditions with a `where` clause.</span></span> <span data-ttu-id="7117b-115">Tous les éléments de la séquence source dont la valeur est supérieure à 7 ou inférieure à 3 sont retournés.</span><span class="sxs-lookup"><span data-stu-id="7117b-115">It returns all elements in the source sequence whose values are greater than 7 or less than 3.</span></span> <span data-ttu-id="7117b-116">La deuxième expression montre comment classer les résultats retournés.</span><span class="sxs-lookup"><span data-stu-id="7117b-116">The second expression demonstrates how to order the returned results.</span></span> <span data-ttu-id="7117b-117">La troisième expression montre comment regrouper des résultats en fonction d’une clé.</span><span class="sxs-lookup"><span data-stu-id="7117b-117">The third expression demonstrates how to group results according to a key.</span></span> <span data-ttu-id="7117b-118">Cette requête retourne deux groupes en fonction de la première lettre du mot.</span><span class="sxs-lookup"><span data-stu-id="7117b-118">This query returns two groups based on the first letter of the word.</span></span>
+
+[!code-csharp[csProgGuideLINQ#5](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_1.cs)]
+
+<span data-ttu-id="7117b-119">Notez que le type des requêtes est <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="7117b-119">Note that the type of the queries is <xref:System.Collections.Generic.IEnumerable%601>.</span></span> <span data-ttu-id="7117b-120">Toutes ces requêtes pourraient être écrites à l’aide de `var`, comme illustré dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="7117b-120">All of these queries could be written using `var` as shown in the following example:</span></span>
+
+`var query = from num in numbers...`
+
+<span data-ttu-id="7117b-121">Dans chacun des exemples précédents, les requêtes ne s’exécutent pas réellement tant vous n’avez pas itéré la variable de requête dans une instruction `foreach` ou une autre instruction.</span><span class="sxs-lookup"><span data-stu-id="7117b-121">In each previous example, the queries do not actually execute until you iterate over the query variable in a `foreach` statement or other statement.</span></span> <span data-ttu-id="7117b-122">Pour plus d’informations, consultez [Introduction aux requêtes LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).</span><span class="sxs-lookup"><span data-stu-id="7117b-122">For more information, see [Introduction to LINQ Queries](../programming-guide/concepts/linq/introduction-to-linq-queries.md).</span></span>
+
+## <a name="example---method-syntax"></a><span data-ttu-id="7117b-123">Exemple – Syntaxe de méthode</span><span class="sxs-lookup"><span data-stu-id="7117b-123">Example - Method syntax</span></span>
+
+<span data-ttu-id="7117b-124">Certaines opérations de requête doivent être exprimées comme un appel de méthode.</span><span class="sxs-lookup"><span data-stu-id="7117b-124">Some query operations must be expressed as a method call.</span></span> <span data-ttu-id="7117b-125">Les plus répandues de ces méthodes retournent des valeurs numériques uniques, telles que <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>, et ainsi de suite.</span><span class="sxs-lookup"><span data-stu-id="7117b-125">The most common such methods are those that return singleton numeric values, such as <xref:System.Linq.Enumerable.Sum%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, <xref:System.Linq.Enumerable.Average%2A>, and so on.</span></span> <span data-ttu-id="7117b-126">Ces méthodes doivent toujours être appelées en dernier dans toutes les requêtes, car elles ne représentent qu’une valeur unique et ne peuvent pas servir de source pour une opération de requête supplémentaire.</span><span class="sxs-lookup"><span data-stu-id="7117b-126">These methods must always be called last in any query because they represent only a single value and cannot serve as the source for an additional query operation.</span></span> <span data-ttu-id="7117b-127">L’exemple suivant présente un appel de méthode dans une expression de requête :</span><span class="sxs-lookup"><span data-stu-id="7117b-127">The following example shows a method call in a query expression:</span></span>
+
+[!code-csharp[csProgGuideLINQ#6](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_2.cs)]
+
+<span data-ttu-id="7117b-128">Si la méthode a des paramètres Action ou Func, ceux-ci sont fournis sous la forme d’une expression [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md), comme dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="7117b-128">If the method has Action or Func parameters, these are provided in the form of a [lambda](../programming-guide/statements-expressions-operators/lambda-expressions.md) expression, as shown in the following example:</span></span>
+
+[!code-csharp[csProgGuideLINQ#7](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_3.cs)]
+
+<span data-ttu-id="7117b-129">Dans les requêtes précédentes, seule la requête 4 s’exécute immédiatement.</span><span class="sxs-lookup"><span data-stu-id="7117b-129">In the previous queries, only Query #4 executes immediately.</span></span> <span data-ttu-id="7117b-130">Cela s’explique par le fait qu’elle retourne une valeur unique et non une collection <xref:System.Collections.Generic.IEnumerable%601> générique.</span><span class="sxs-lookup"><span data-stu-id="7117b-130">This is because it returns a single value, and not a generic <xref:System.Collections.Generic.IEnumerable%601> collection.</span></span> <span data-ttu-id="7117b-131">La méthode elle-même doit utiliser `foreach` pour calculer sa valeur.</span><span class="sxs-lookup"><span data-stu-id="7117b-131">The method itself has to use `foreach` in order to compute its value.</span></span>
+
+<span data-ttu-id="7117b-132">Chacune des requêtes précédentes peut être écrite en utilisant des types implicites avec [var](../language-reference/keywords/var.md), comme dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="7117b-132">Each of the previous queries can be written by using implicit typing with [var](../language-reference/keywords/var.md), as shown in the following example:</span></span>
+
+[!code-csharp[csProgGuideLINQ#8](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_4.cs)]
+
+## <a name="example---mixed-query-and-method-syntax"></a><span data-ttu-id="7117b-133">Exemple – Syntaxe de méthode et de requête mixte</span><span class="sxs-lookup"><span data-stu-id="7117b-133">Example - Mixed query and method syntax</span></span>
+
+<span data-ttu-id="7117b-134">Cet exemple montre comment utiliser la syntaxe de méthode sur les résultats d’une clause de requête.</span><span class="sxs-lookup"><span data-stu-id="7117b-134">This example shows how to use method syntax on the results of a query clause.</span></span> <span data-ttu-id="7117b-135">Encadrez simplement l’expression de requête entre parenthèses, puis appliquez l’opérateur point et appelez la méthode.</span><span class="sxs-lookup"><span data-stu-id="7117b-135">Just enclose the query expression in parentheses, and then apply the dot operator and call the method.</span></span> <span data-ttu-id="7117b-136">Dans l’exemple suivant, la requête 7 retourne les nombres dont la valeur est comprise entre 3 et 7.</span><span class="sxs-lookup"><span data-stu-id="7117b-136">In the following example, query #7 returns a count of the numbers whose value is between 3 and 7.</span></span> <span data-ttu-id="7117b-137">Toutefois, il est généralement préférable d’utiliser une deuxième variable pour stocker le résultat de l’appel de méthode.</span><span class="sxs-lookup"><span data-stu-id="7117b-137">In general, however, it is better to use a second variable to store the result of the method call.</span></span> <span data-ttu-id="7117b-138">De cette manière, il est moins probable que la requête ne soit confondue avec les résultats de la requête.</span><span class="sxs-lookup"><span data-stu-id="7117b-138">In this manner, the query is less likely to be confused with the results of the query.</span></span>
+
+[!code-csharp[csProgGuideLINQ#9](~/samples/snippets/csharp/concepts/linq/how-to-write-linq-queries_5.cs)]
+
+<span data-ttu-id="7117b-139">Comme la requête 7 retourne une valeur unique et non une collection, la requête s’exécute immédiatement.</span><span class="sxs-lookup"><span data-stu-id="7117b-139">Because Query #7 returns a single value and not a collection, the query executes immediately.</span></span>
+
+<span data-ttu-id="7117b-140">La requête précédente peut être écrite en utilisant des types implicites avec `var`, comme suit :</span><span class="sxs-lookup"><span data-stu-id="7117b-140">The previous query can be written by using implicit typing with `var`, as follows:</span></span>
+
+```csharp
+var numCount = (from num in numbers...
+```
+
+<span data-ttu-id="7117b-141">Elle peut être écrite dans la syntaxe de méthode comme suit :</span><span class="sxs-lookup"><span data-stu-id="7117b-141">It can be written in method syntax as follows:</span></span>
+
+```csharp
+var numCount = numbers.Where(n => n < 3 || n > 7).Count();
+```
+
+<span data-ttu-id="7117b-142">Elle peut être écrite en utilisant des types explicites, comme suit :</span><span class="sxs-lookup"><span data-stu-id="7117b-142">It can be written by using explicit typing, as follows:</span></span>
+
+```csharp
+int numCount = numbers.Where(n => n < 3 || n > 7).Count();
+```
+
+## <a name="see-also"></a><span data-ttu-id="7117b-143">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7117b-143">See also</span></span>
+
+<span data-ttu-id="7117b-144">[Procédure pas à pas : Écriture de requêtes en C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+[LINQ (Language-Integrated Query)](index.md)
+[where, clause](../language-reference/keywords/where-clause.md)</span><span class="sxs-lookup"><span data-stu-id="7117b-144">[Walkthrough: Writing Queries in C#](../programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+[Language Integrated Query (LINQ)](index.md)
+[where clause](../language-reference/keywords/where-clause.md)</span></span>

@@ -1,13 +1,8 @@
 ---
-title: Minuteries
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+title: Minuteurs
+description: Découvrez les minuteurs .NET à utiliser dans un environnement multithread.
+ms.date: 07/03/2018
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -16,33 +11,53 @@ helpviewer_keywords:
 - threading [.NET Framework], timers
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
-caps.latest.revision: 
-author: rpetrusha
+author: pkulikov
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-- dotnetcore
-ms.openlocfilehash: 80b4cee03e934d3aec98ca323aac43f934c56455
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ae41c535d8bc1c0a05174b9051ba34f1a0a34638
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37875064"
 ---
-# <a name="timers"></a><span data-ttu-id="2bfc6-102">Minuteries</span><span class="sxs-lookup"><span data-stu-id="2bfc6-102">Timers</span></span>
-<span data-ttu-id="2bfc6-103">Les minuteurs sont des objets légers qui vous permettent de spécifier un délégué à appeler à une heure définie.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-103">Timers are lightweight objects that enable you to specify a delegate to be called at a specified time.</span></span> <span data-ttu-id="2bfc6-104">Un thread du pool de threads exécute l’opération d’attente.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-104">A thread in the thread pool performs the wait operation.</span></span>  
-  
- <span data-ttu-id="2bfc6-105">L’utilisation de la classe <xref:System.Threading.Timer?displayProperty=nameWithType> est simple.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-105">Using the <xref:System.Threading.Timer?displayProperty=nameWithType> class is straightforward.</span></span> <span data-ttu-id="2bfc6-106">Vous créez un **minuteur** en passant un délégué <xref:System.Threading.TimerCallback> à la méthode de rappel, un objet représentant l’état qui sera passé au rappel, une heure de déclenchement initiale et une heure représentant l’intervalle entre les appels de rappel.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-106">You create a **Timer**, passing a <xref:System.Threading.TimerCallback> delegate to the callback method, an object representing state that will be passed to the callback, an initial raise time, and a time representing the period between callback invocations.</span></span> <span data-ttu-id="2bfc6-107">Pour annuler un minuteur en attente, appelez la fonction **Timer.Dispose**.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-107">To cancel a pending timer, call the **Timer.Dispose** function.</span></span>  
-  
+# <a name="timers"></a><span data-ttu-id="6830c-103">Minuteurs</span><span class="sxs-lookup"><span data-stu-id="6830c-103">Timers</span></span>
+
+<span data-ttu-id="6830c-104">.NET propose deux minuteurs à utiliser dans un environnement multithread :</span><span class="sxs-lookup"><span data-stu-id="6830c-104">.NET provides two timers to use in a multithreaded environment:</span></span>
+
+- <span data-ttu-id="6830c-105"><xref:System.Threading.Timer?displayProperty=nameWithType>, qui exécute une méthode de rappel unique sur un thread <xref:System.Threading.ThreadPool> à intervalles réguliers.</span><span class="sxs-lookup"><span data-stu-id="6830c-105"><xref:System.Threading.Timer?displayProperty=nameWithType>, which executes a single callback method on a <xref:System.Threading.ThreadPool> thread at regular intervals.</span></span>
+- <span data-ttu-id="6830c-106"><xref:System.Timers.Timer?displayProperty=nameWithType> qui, par défaut, déclenche un événement sur un thread <xref:System.Threading.ThreadPool> à intervalles réguliers.</span><span class="sxs-lookup"><span data-stu-id="6830c-106"><xref:System.Timers.Timer?displayProperty=nameWithType>, which by default raises an event on a <xref:System.Threading.ThreadPool> thread at regular intervals.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="2bfc6-108">Il existe deux autres classes de minuteur.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-108">There are two other timer classes.</span></span> <span data-ttu-id="2bfc6-109">La classe <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> est un contrôle qui fonctionne avec les concepteurs visuels et qui est destiné à une utilisation dans des contextes d’interface utilisateur. Il déclenche des événements sur le thread d’interface utilisateur.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-109">The <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> class is a control that works with visual designers and is meant to be used in user interface contexts; it raises events on the user interface thread.</span></span> <span data-ttu-id="2bfc6-110">La classe <xref:System.Timers.Timer?displayProperty=nameWithType> dérive de <xref:System.ComponentModel.Component>, ce qui permet de l’utiliser avec des concepteurs visuels. Elle déclenche également des événements, mais sur un thread <xref:System.Threading.ThreadPool>.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-110">The <xref:System.Timers.Timer?displayProperty=nameWithType> class derives from <xref:System.ComponentModel.Component>, so it can be used with visual designers; it also raises events, but it raises them on a <xref:System.Threading.ThreadPool> thread.</span></span> <span data-ttu-id="2bfc6-111">La classe <xref:System.Threading.Timer?displayProperty=nameWithType> effectue les rappels sur un thread <xref:System.Threading.ThreadPool> et n’utilise jamais le modèle d’événement.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-111">The <xref:System.Threading.Timer?displayProperty=nameWithType> class makes callbacks on a <xref:System.Threading.ThreadPool> thread and does not use the event model at all.</span></span> <span data-ttu-id="2bfc6-112">Elle fournit également un objet d’état à la méthode de rappel, à la différence des autres minuteurs.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-112">It also provides a state object to the callback method, which the other timers do not.</span></span> <span data-ttu-id="2bfc6-113">Elle est très légère.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-113">It is extremely lightweight.</span></span>  
+> <span data-ttu-id="6830c-107">Certaines implémentations .NET peuvent inclure des minuteurs supplémentaires :</span><span class="sxs-lookup"><span data-stu-id="6830c-107">Some .NET implementations may include additional timers:</span></span>
+>
+> - <span data-ttu-id="6830c-108"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType> : composant Windows Forms qui déclenche un événement à intervalles réguliers.</span><span class="sxs-lookup"><span data-stu-id="6830c-108"><xref:System.Windows.Forms.Timer?displayProperty=nameWithType>: a Windows Forms component that fires an event at regular intervals.</span></span> <span data-ttu-id="6830c-109">Le composant ne possède pas d’interface utilisateur et est conçu pour une utilisation dans un environnement à thread unique.</span><span class="sxs-lookup"><span data-stu-id="6830c-109">The component has no user interface and is designed for use in a single-threaded environment.</span></span>  
+> - <span data-ttu-id="6830c-110"><xref:System.Web.UI.Timer?displayProperty=nameWithType> : composant ASP.NET qui effectue des publications (postback) de pages web asynchrones ou synchrones à intervalles réguliers.</span><span class="sxs-lookup"><span data-stu-id="6830c-110"><xref:System.Web.UI.Timer?displayProperty=nameWithType>: an ASP.NET component that performs asynchronous or synchronous web page postbacks at a regular interval.</span></span>
+> - <span data-ttu-id="6830c-111"><xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType> : minuteur intégré à la file d’attente <xref:System.Windows.Threading.Dispatcher> qui est traitée selon un intervalle de temps et une priorité spécifiés.</span><span class="sxs-lookup"><span data-stu-id="6830c-111"><xref:System.Windows.Threading.DispatcherTimer?displayProperty=nameWithType>: a timer that is integrated into the <xref:System.Windows.Threading.Dispatcher> queue which is processed at a specified interval of time and at a specified priority.</span></span>
+
+## <a name="the-systemthreadingtimer-class"></a><span data-ttu-id="6830c-112">Classe System.Threading.Timer</span><span class="sxs-lookup"><span data-stu-id="6830c-112">The System.Threading.Timer class</span></span>
+
+<span data-ttu-id="6830c-113">La classe <xref:System.Threading.Timer?displayProperty=nameWithType> vous permet d’appeler en permanence un délégué à des intervalles de temps spécifiés.</span><span class="sxs-lookup"><span data-stu-id="6830c-113">The <xref:System.Threading.Timer?displayProperty=nameWithType> class enables you to continuously call a delegate at specified time intervals.</span></span> <span data-ttu-id="6830c-114">Vous pouvez aussi utiliser cette classe pour planifier un appel unique à un délégué dans un intervalle de temps spécifié.</span><span class="sxs-lookup"><span data-stu-id="6830c-114">You also can use this class to schedule a single call to a delegate in a specified time interval.</span></span> <span data-ttu-id="6830c-115">Le délégué est exécuté sur un thread <xref:System.Threading.ThreadPool>.</span><span class="sxs-lookup"><span data-stu-id="6830c-115">The delegate is executed on a <xref:System.Threading.ThreadPool> thread.</span></span>
+
+<span data-ttu-id="6830c-116">Quand vous créez un objet <xref:System.Threading.Timer?displayProperty=nameWithType>, vous spécifiez un délégué <xref:System.Threading.TimerCallback> qui définit la méthode de rappel, un objet d’état facultatif qui est passé au rappel, la durée d’attente avant la première invocation du rappel et l’intervalle de temps entre les invocations de rappel.</span><span class="sxs-lookup"><span data-stu-id="6830c-116">When you create a <xref:System.Threading.Timer?displayProperty=nameWithType> object, you specify a <xref:System.Threading.TimerCallback> delegate that defines the callback method, an optional state object that is passed to the callback, the amount of time to delay before the first invocation of the callback, and the time interval between callback invocations.</span></span> <span data-ttu-id="6830c-117">Pour annuler un minuteur en attente, appelez la méthode <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6830c-117">To cancel a pending timer, call the <xref:System.Threading.Timer.Dispose%2A?displayProperty=nameWithType> method.</span></span>
+
+<span data-ttu-id="6830c-118">L’exemple suivant crée un minuteur qui appelle le délégué fourni au bout d’une seconde (1000 millisecondes) la première fois et ensuite toutes les deux secondes.</span><span class="sxs-lookup"><span data-stu-id="6830c-118">The following example creates a timer that calls the provided delegate for the first time after one second (1000 milliseconds) and then calls it every two seconds.</span></span> <span data-ttu-id="6830c-119">L’objet d’état de l’exemple sert à compter le nombre de fois que le délégué est appelé.</span><span class="sxs-lookup"><span data-stu-id="6830c-119">The state object in the example is used to count how many times the delegate is called.</span></span> <span data-ttu-id="6830c-120">Le minuteur s’arrête dès que le délégué a été appelé au moins 10 fois.</span><span class="sxs-lookup"><span data-stu-id="6830c-120">The timer is stopped when the delegate has been called at least 10 times.</span></span>
+
+[!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
+[!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
+[!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]
+
+<span data-ttu-id="6830c-121">Pour plus d'informations et d'exemples, consultez <xref:System.Threading.Timer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6830c-121">For more information and examples, see <xref:System.Threading.Timer?displayProperty=nameWithType>.</span></span>
+
+## <a name="the-systemtimerstimer-class"></a><span data-ttu-id="6830c-122">Classe System.Timers.Timer</span><span class="sxs-lookup"><span data-stu-id="6830c-122">The System.Timers.Timer class</span></span>
+
+<span data-ttu-id="6830c-123">L’autre minuteur qui peut être utilisé dans un environnement multithread est <xref:System.Timers.Timer?displayProperty=nameWithType> qui, par défaut, déclenche un événement sur un thread <xref:System.Threading.ThreadPool>.</span><span class="sxs-lookup"><span data-stu-id="6830c-123">Another timer that can be used in a multithreaded environment is <xref:System.Timers.Timer?displayProperty=nameWithType> that by default raises an event on a <xref:System.Threading.ThreadPool> thread.</span></span>
+
+<span data-ttu-id="6830c-124">Au moment de créer un objet <xref:System.Timers.Timer?displayProperty=nameWithType>, vous pouvez spécifier l’intervalle de temps au cours duquel un événement <xref:System.Timers.Timer.Elapsed> est déclenché.</span><span class="sxs-lookup"><span data-stu-id="6830c-124">When you create a <xref:System.Timers.Timer?displayProperty=nameWithType> object, you may specify the time interval in which to raise an <xref:System.Timers.Timer.Elapsed> event.</span></span> <span data-ttu-id="6830c-125">Utilisez la propriété <xref:System.Timers.Timer.Enabled%2A> pour indiquer si un minuteur doit déclencher un événement <xref:System.Timers.Timer.Elapsed>.</span><span class="sxs-lookup"><span data-stu-id="6830c-125">Use the <xref:System.Timers.Timer.Enabled%2A> property to indicate if a timer should raise an <xref:System.Timers.Timer.Elapsed> event.</span></span> <span data-ttu-id="6830c-126">Si vous avez besoin qu’un événement <xref:System.Timers.Timer.Elapsed> soit déclenché une seule fois à l’issue de l’intervalle spécifié, définissez le <xref:System.Timers.Timer.AutoReset%2A> sur `false`.</span><span class="sxs-lookup"><span data-stu-id="6830c-126">If you need an <xref:System.Timers.Timer.Elapsed> event to be raised only once after the specified interval has elapsed, set the <xref:System.Timers.Timer.AutoReset%2A> to `false`.</span></span> <span data-ttu-id="6830c-127">La valeur par défaut de la propriété <xref:System.Timers.Timer.AutoReset%2A> est `true`, ce qui signifie qu’un événement <xref:System.Timers.Timer.Elapsed> est déclenché régulièrement selon l’intervalle défini par la propriété <xref:System.Timers.Timer.Interval%2A>.</span><span class="sxs-lookup"><span data-stu-id="6830c-127">The default value of the <xref:System.Timers.Timer.AutoReset%2A> property is `true`, which means that an <xref:System.Timers.Timer.Elapsed> event is raised regularly at the interval defined by the <xref:System.Timers.Timer.Interval%2A> property.</span></span>
+
+<span data-ttu-id="6830c-128">Pour plus d'informations et d'exemples, consultez <xref:System.Timers.Timer?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6830c-128">For more information and examples, see <xref:System.Timers.Timer?displayProperty=nameWithType>.</span></span>
   
- <span data-ttu-id="2bfc6-114">L’exemple de code suivant lance un minuteur qui se déclenche après une seconde (1 000 millisecondes) et qui marque chaque seconde jusqu'à ce que vous appuyiez sur la touche **Entrée**.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-114">The following code example starts a timer that starts after one second (1000 milliseconds) and ticks every second until you press the **Enter** key.</span></span> <span data-ttu-id="2bfc6-115">La variable contenant la référence au minuteur est un champ de niveau classe qui garantit que le minuteur ne sera pas soumis au nettoyage de mémoire durant son exécution.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-115">The variable containing the reference to the timer is a class-level field, to ensure that the timer is not subject to garbage collection while it is still running.</span></span> <span data-ttu-id="2bfc6-116">Pour plus d’informations sur le nettoyage de mémoire agressif, consultez <xref:System.GC.KeepAlive%2A>.</span><span class="sxs-lookup"><span data-stu-id="2bfc6-116">For more information on aggressive garbage collection, see <xref:System.GC.KeepAlive%2A>.</span></span>  
-  
- [!code-cpp[System.Threading.Timer#2](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.Timer/CPP/source2.cpp#2)]
- [!code-csharp[System.Threading.Timer#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.Timer/CS/source2.cs#2)]
- [!code-vb[System.Threading.Timer#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Threading.Timer/VB/source2.vb#2)]  
-  
-## <a name="see-also"></a><span data-ttu-id="2bfc6-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2bfc6-117">See Also</span></span>  
- <xref:System.Threading.Timer>  
- [<span data-ttu-id="2bfc6-118">Fonctionnalités et objets de threading</span><span class="sxs-lookup"><span data-stu-id="2bfc6-118">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a><span data-ttu-id="6830c-129">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6830c-129">See also</span></span>
+
+ <xref:System.Threading.Timer?displayProperty=nameWithType>  
+ <xref:System.Timers.Timer?displayProperty=nameWithType>  
+ [<span data-ttu-id="6830c-130">Fonctionnalités et objets de threading</span><span class="sxs-lookup"><span data-stu-id="6830c-130">Threading Objects and Features</span></span>](threading-objects-and-features.md)
