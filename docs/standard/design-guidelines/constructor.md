@@ -30,50 +30,50 @@ Il existe deux types de constructeurs : constructeurs et les constructeurs d’
   
  Les constructeurs sont la façon la plus naturelle pour créer des instances d’un type. La plupart des développeurs recherche et essayez d’utiliser un constructeur avant d’autres méthodes pour créer des instances (par exemple, les méthodes de fabrique).  
   
- **✓ Envisagez** fournissant simple, dans l’idéal, par défaut, les constructeurs.  
+ **✓ CONSIDER** fournissant simple, dans l’idéal, par défaut, les constructeurs.  
   
  Un constructeur simple possède un très petit nombre de paramètres, et tous les paramètres sont des primitives ou enums. Ces constructeurs simples faciliter l’utilisation de l’infrastructure.  
   
- **✓ Envisagez** à l’aide d’une méthode de fabrique statique au lieu d’un constructeur si la sémantique de l’opération requise ne correspond pas directement à la construction d’une nouvelle instance, ou si les règles de conception du constructeur vous semblent pas naturelles.  
+ **✓ CONSIDER** à l’aide d’une méthode de fabrique statique au lieu d’un constructeur si la sémantique de l’opération requise ne correspond pas directement à la construction d’une nouvelle instance, ou si les règles de conception du constructeur vous semblent pas naturelles.  
   
- **✓ FAIRE** utiliser les paramètres du constructeur en tant que raccourcis pour définir les propriétés principales.  
+ **✓ DO** utiliser les paramètres du constructeur en tant que raccourcis pour définir les propriétés principales.  
   
  Il ne doit y avoir aucune différence de sémantique entre l’utilisation du constructeur vide suivi de certains jeux de propriétés et à l’aide d’un constructeur avec plusieurs arguments.  
   
- **✓ FAIRE** utiliser le même nom pour les paramètres du constructeur et une propriété si les paramètres du constructeur sont utilisés pour définir simplement la propriété.  
+ **✓ DO** utiliser le même nom pour les paramètres du constructeur et une propriété si les paramètres du constructeur sont utilisés pour définir simplement la propriété.  
   
  La seule différence entre ces paramètres et les propriétés est la casse.  
   
- **✓ FAIRE** travail minimal dans le constructeur.  
+ **✓ DO** travail minimal dans le constructeur.  
   
  Les constructeurs ne quantité de travail autre que capture les paramètres du constructeur. Le coût de tout autre traitement doit être différé jusqu'à ce que nécessaire.  
   
- **✓ FAIRE** lever des exceptions à partir des constructeurs d’instance, le cas échéant.  
+ **✓ DO** lever des exceptions à partir des constructeurs d’instance, le cas échéant.  
   
- **✓ FAIRE** déclarer explicitement le constructeur public par défaut dans les classes, si un tel constructeur est nécessaire.  
+ **✓ DO** déclarer explicitement le constructeur public par défaut dans les classes, si un tel constructeur est nécessaire.  
   
  Si vous ne déclarez explicitement de constructeur sur un type, plusieurs langues (par exemple, en c#) ajoute automatiquement un constructeur public par défaut. (Les classes abstraites obtenir un constructeur protégé.)  
   
  Ajout d’un constructeur paramétrable à une classe d’empêche le compilateur d’ajouter le constructeur par défaut. Cela entraîne souvent des modifications avec rupture accidentelle.  
   
- **X Évitez** définition explicite des constructeurs par défaut sur les structures.  
+ **X AVOID** définition explicite des constructeurs par défaut sur les structures.  
   
  Cela rend la création de tableau plus rapide, car si le constructeur par défaut n’est pas défini, il n’a pas à être exécuté sur tous les emplacements dans le tableau. Notez que de nombreux compilateurs, notamment c#, ne pas autoriser les structs peuvent avoir des constructeurs sans paramètre pour cette raison.  
   
- **X Évitez** appel des membres virtuels sur un objet à l’intérieur de son constructeur.  
+ **X AVOID** appel des membres virtuels sur un objet à l’intérieur de son constructeur.  
   
  Appel d’un membre virtuel entraînera le remplacement de la plus dérivé à appeler, même si le constructeur du type plus dérivé a été entièrement s’exécute pas encore.  
   
 ### <a name="type-constructor-guidelines"></a>Instructions de constructeur de type  
- **✓ FAIRE** rendre les constructeurs statiques privé.  
+ **✓ DO** rendre les constructeurs statiques privé.  
   
  Un constructeur statique, également appelé constructeur de classe, est utilisé pour initialiser un type. Le CLR appelle le constructeur statique avant la création de la première instance du type ou de tout membre statique de ce type est appelées. L’utilisateur n’a aucun contrôle sur lorsque le constructeur statique est appelé. Si un constructeur statique n’est pas privé, il peut être appelé par du code autre que le CLR. Selon les opérations effectuées dans le constructeur, cela peut provoquer un comportement inattendu. Le compilateur c# force les constructeurs statiques privé.  
   
- **X ne sont pas** lever des exceptions à partir des constructeurs statiques.  
+ **X DO NOT** lever des exceptions à partir des constructeurs statiques.  
   
  Si une exception est levée à partir d’un constructeur de type, le type n’est pas utilisable dans le domaine d’application actuel.  
   
- **✓ Envisagez** initialiser les champs statiques inline au lieu d’utiliser explicitement des constructeurs statiques, car le runtime peut optimiser les performances des types qui n’ont pas un constructeur statique explicitement défini.  
+ **✓ CONSIDER** initialiser les champs statiques inline au lieu d’utiliser explicitement des constructeurs statiques, car le runtime peut optimiser les performances des types qui n’ont pas un constructeur statique explicitement défini.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

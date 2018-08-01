@@ -26,25 +26,25 @@ ms.locfileid: "33574632"
   
  Les propriétés qui n’ont pas nécessairement être spécifié lorsque l’attribut est appliqué sont appelées propriétés facultatives (ou les arguments facultatifs). Ils sont représentés par les propriétés définissables. Les compilateurs fournissent une syntaxe spéciale pour définir ces propriétés lorsqu’un attribut est appliqué. Par exemple, le <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> propriété représente un argument facultatif.  
   
- **✓ FAIRE** nommez des classes d’attributs personnalisés avec le suffixe « Attribut ».  
+ **✓ DO** nommez des classes d’attributs personnalisés avec le suffixe « Attribut ».  
   
- **✓ FAIRE** appliquer le <xref:System.AttributeUsageAttribute> à des attributs personnalisés.  
+ **✓ DO** appliquer le <xref:System.AttributeUsageAttribute> à des attributs personnalisés.  
   
- **✓ FAIRE** fournir les propriétés définissables pour les arguments facultatifs.  
+ **✓ DO** fournir les propriétés définissables pour les arguments facultatifs.  
   
- **✓ FAIRE** fournissent des propriétés get uniquement pour les arguments requis.  
+ **✓ DO** fournissent des propriétés get uniquement pour les arguments requis.  
   
- **✓ FAIRE** fournissent des paramètres du constructeur pour initialiser les propriétés qui correspondent aux arguments requis. Chaque paramètre doit avoir le même nom (mais avec une casse différente) en tant que la propriété correspondante.  
+ **✓ DO** fournissent des paramètres du constructeur pour initialiser les propriétés qui correspondent aux arguments requis. Chaque paramètre doit avoir le même nom (mais avec une casse différente) en tant que la propriété correspondante.  
   
- **X Évitez** fournissant les paramètres du constructeur pour initialiser les propriétés qui correspondent aux arguments facultatifs.  
+ **X AVOID** fournissant les paramètres du constructeur pour initialiser les propriétés qui correspondent aux arguments facultatifs.  
   
  En d’autres termes, n’ont pas de propriétés qui peuvent être définies avec un constructeur et un accesseur Set. Cette règle rend très explicite les arguments sont facultatifs et qui sont nécessaire et évite d’avoir deux façons de faire la même chose.  
   
- **X Évitez** surcharge des constructeurs d’attribut personnalisé.  
+ **X AVOID** surcharge des constructeurs d’attribut personnalisé.  
   
  Avoir qu’un seul constructeur clairement à l’utilisateur qui sont obligatoires et facultatifs.  
   
- **✓ FAIRE** sceller des classes d’attributs personnalisés, si possible. Cela accélère la recherche de l’attribut.  
+ **✓ DO** sceller des classes d’attributs personnalisés, si possible. Cela accélère la recherche de l’attribut.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

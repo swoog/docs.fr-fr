@@ -24,11 +24,11 @@ En principe, une classe devient une classe de base lorsqu’une autre classe est
   
  Comme nous l’avons vu précédemment, classes de base peuvent fournir une aide précieuse pour les utilisateurs qui ont besoin d’implémenter des abstractions, mais en même temps, ils peuvent être une responsabilité importante. Ils ajouter la surface d’exposition et augmentent la profondeur de hiérarchies d’héritage et donc conceptuellement compliquent l’infrastructure. Par conséquent, les classes de base doivent être utilisés uniquement si ils fournissent une valeur ajoutée significative pour les utilisateurs de l’infrastructure. Ils doivent être évités s’ils fournissent la valeur uniquement pour les implémenteurs de l’infrastructure, dans lequel cas délégation vers une implémentation interne au lieu de l’héritage à partir d’une classe de base doit être fortement considérée comme.  
   
- **✓ Envisagez** les classes de base en abstraite même s’ils ne contiennent aucun membre abstrait. Clairement aux utilisateurs de la classe conçue uniquement pour être héritée.  
+ **✓ CONSIDER** les classes de base en abstraite même s’ils ne contiennent aucun membre abstrait. Clairement aux utilisateurs de la classe conçue uniquement pour être héritée.  
   
- **✓ Envisagez** en plaçant des classes de base dans un espace de noms distinct à partir des types de scénario principal. Par définition, les classes de base sont destinées aux scénarios d’extensibilité avancés et par conséquent ne sont pas utiles pour la majorité des utilisateurs.  
+ **✓ CONSIDER** en plaçant des classes de base dans un espace de noms distinct à partir des types de scénario principal. Par définition, les classes de base sont destinées aux scénarios d’extensibilité avancés et par conséquent ne sont pas utiles pour la majorité des utilisateurs.  
   
- **X Évitez** d’affectation de noms des classes de base avec un suffixe « Base » si la classe est destinée à être utilisée dans les API publiques.  
+ **X AVOID** d’affectation de noms des classes de base avec un suffixe « Base » si la classe est destinée à être utilisée dans les API publiques.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

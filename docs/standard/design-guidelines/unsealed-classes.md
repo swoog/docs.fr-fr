@@ -19,7 +19,7 @@ ms.locfileid: "33571659"
 # <a name="unsealed-classes"></a>Classes unsealed
 Classes sealed ne peut pas être héritées, et empêchent d’extensibilité. En revanche, les classes qui peuvent être héritées sont appelées classes unsealed.  
   
- **✓ Envisagez** à l’aide des classes unsealed sans aucune ajouté des membres virtuels ou protégés comme un excellent moyen de fournir un peu coûteux encore apprécié extensibilité à une infrastructure.  
+ **✓ CONSIDER** à l’aide des classes unsealed sans aucune ajouté des membres virtuels ou protégés comme un excellent moyen de fournir un peu coûteux encore apprécié extensibilité à une infrastructure.  
   
  Les développeurs souhaitent souvent héritent des classes unsealed afin d’ajouter des membres de commodité telles que les constructeurs personnalisés, les nouvelles méthodes ou les surcharges de méthode. Par exemple, `System.Messaging.MessageQueue` est non scellé, et permet ainsi aux utilisateurs de créer des files d’attente personnalisées cette valeur par défaut pour un chemin d’accès de la file d’attente particulière ou ajouter des méthodes personnalisées qui simplifient l’API pour des scénarios spécifiques.  
   

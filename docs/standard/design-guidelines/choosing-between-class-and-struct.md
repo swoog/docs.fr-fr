@@ -36,9 +36,9 @@ Les décisions de conception de base que fait face à chaque concepteur framewor
   
  En règle générale, la plupart des types dans une infrastructure doit-elle être des classes. Toutefois, il existe certaines situations dans lesquelles les caractéristiques d’un type valeur qu’il est plus approprié à utiliser les structures.  
   
- **✓ Envisagez** définition d’un struct au lieu d’une classe si les instances du type sont généralement de courte durée et de petite taille ou sont généralement incorporés dans d’autres objets.  
+ **✓ CONSIDER** définition d’un struct au lieu d’une classe si les instances du type sont généralement de courte durée et de petite taille ou sont généralement incorporés dans d’autres objets.  
   
- **X Évitez** définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
+ **X AVOID** définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
   
 -   Il représente logiquement une seule valeur, semblable aux types primitifs (`int`, `double`, etc..).  
   

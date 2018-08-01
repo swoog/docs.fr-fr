@@ -27,24 +27,24 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
  `Fabrikam.Math`  
  `Litware.Security`  
   
- **✓ FAIRE** faites précéder les noms d’espace de noms avec un nom de société pour empêcher les espaces de noms provenant de différentes sociétés de ne pas avoir le même nom.  
+ **✓ DO** faites précéder les noms d’espace de noms avec un nom de société pour empêcher les espaces de noms provenant de différentes sociétés de ne pas avoir le même nom.  
   
- **✓ FAIRE** utiliser un nom de produit indépendant de la version stable au deuxième niveau d’un espace de noms.  
+ **✓ DO** utiliser un nom de produit indépendant de la version stable au deuxième niveau d’un espace de noms.  
   
- **X ne sont pas** utiliser des hiérarchies d’organisation comme base pour les noms dans les hiérarchies de l’espace de noms, étant donné que les noms de groupe au sein des entreprises ont tendance à être de courte durée de vie. Organiser la hiérarchie d’espaces de noms autour des groupes des technologies connexes.  
+ **X DO NOT** utiliser des hiérarchies d’organisation comme base pour les noms dans les hiérarchies de l’espace de noms, étant donné que les noms de groupe au sein des entreprises ont tendance à être de courte durée de vie. Organiser la hiérarchie d’espaces de noms autour des groupes des technologies connexes.  
   
- **✓ FAIRE** utilisent la casse Pascal et des composants de l’espace de noms distinct avec des périodes (par exemple, `Microsoft.Office.PowerPoint`). Si votre marque utilise une casse non traditionnel, vous devez suivre la casse définie par votre marque, même s’il diffère de casse de l’espace de noms normal.  
+ **✓ DO** utilisent la casse Pascal et des composants de l’espace de noms distinct avec des périodes (par exemple, `Microsoft.Office.PowerPoint`). Si votre marque utilise une casse non traditionnel, vous devez suivre la casse définie par votre marque, même s’il diffère de casse de l’espace de noms normal.  
   
- **✓ Envisagez** à l’aide de noms au pluriel, le cas échéant.  
+ **✓ CONSIDER** à l’aide de noms au pluriel, le cas échéant.  
   
  Par exemple, utilisez `System.Collections` au lieu de `System.Collection`. Les marques et les acronymes sont toutefois des exceptions à cette règle. Par exemple, utilisez `System.IO` au lieu de `System.IOs`.  
   
- **X ne sont pas** utiliser le même nom pour un espace de noms et un type dans cet espace de noms.  
+ **X DO NOT** utiliser le même nom pour un espace de noms et un type dans cet espace de noms.  
   
  Par exemple, n’utilisez pas `Debug` comme un espace de noms nommer et puis fournissent également une classe nommée `Debug` dans le même espace de noms. Plusieurs compilateurs exigent de tels types qualifiés complets.  
   
 ### <a name="namespaces-and-type-name-conflicts"></a>Espaces de noms et le nom de Type est en conflit  
- **X ne sont pas** présentent des noms de type générique comme `Element`, `Node`, `Log`, et `Message`.  
+ **X DO NOT** présentent des noms de type générique comme `Element`, `Node`, `Log`, et `Message`.  
   
  Il est fort probable que cela entraîne le nom de type est en conflit en commun des scénarios. Vous devez qualifier les noms de type générique (`FormElement`, `XmlNode`, `EventLog`, `SoapMessage`).  
   
@@ -57,7 +57,7 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
      `System.Windows*`   
      `System.Web.UI*`  
   
-     **X ne sont pas** donner le même nom aux types dans les espaces de noms dans un modèle d’application unique.  
+     **X DO NOT** donner le même nom aux types dans les espaces de noms dans un modèle d’application unique.  
   
      Par exemple, n’ajoutez pas d’un type nommé `Page` à la <xref:System.Web.UI.Adapters?displayProperty=nameWithType> espace de noms, étant donné que la <xref:System.Web.UI?displayProperty=nameWithType> espace de noms contient déjà un type nommé `Page`.  
   
@@ -69,7 +69,7 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
      Espaces de noms principaux incluent tous les `System` espaces de noms, à l’exclusion des espaces de noms des modèles d’application et les espaces de noms d’Infrastructure. Espaces de noms principaux incluent, entre autres, `System`, `System.IO`, `System.Xml`, et `System.Net`.  
   
-     **X ne sont pas** permettent de types de noms qui sont en conflit avec un type dans les espaces de noms de base.  
+     **X DO NOT** permettent de types de noms qui sont en conflit avec un type dans les espaces de noms de base.  
   
      Par exemple, n’utilisez jamais `Stream` comme nom de type. Elle serait en conflit avec <xref:System.IO.Stream?displayProperty=nameWithType>, une très courants de type.  
   
@@ -77,9 +77,9 @@ Comme avec les autres instructions d’affectation de noms, l’objectif lorsque
   
      Cette catégorie comprend tous les espaces de noms avec les deux premiers nœuds d’espace de noms même `(<Company>.<Technology>*`), tel que `Microsoft.Build.Utilities` et `Microsoft.Build.Tasks`. Il est important que les types appartenant à une technologie unique ne sont pas en conflit entre eux.  
   
-     **X ne sont pas** affecter des noms de type qui sont en conflit avec d’autres types au sein d’une seule technologie.  
+     **X DO NOT** affecter des noms de type qui sont en conflit avec d’autres types au sein d’une seule technologie.  
   
-     **X ne sont pas** présentent des conflits de nom de type entre les types dans les espaces de noms de technologie et un espace de noms de modèle d’application (à moins que la technologie n’est pas destinée à être utilisée avec le modèle d’application).  
+     **X DO NOT** présentent des conflits de nom de type entre les types dans les espaces de noms de technologie et un espace de noms de modèle d’application (à moins que la technologie n’est pas destinée à être utilisée avec le modèle d’application).  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

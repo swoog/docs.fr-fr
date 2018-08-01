@@ -27,35 +27,35 @@ ms.locfileid: "36338102"
 Cette section décrit d’affectation de noms conventions générales relatives au choix des mots, des recommandations sur l’utilisation des abréviations et les acronymes et les recommandations sur la façon d’éviter l’utilisation de noms spécifiques au langage.  
   
 ## <a name="word-choice"></a>Choix des mots  
- **✓ FAIRE** choisir des noms d’identificateurs lisibles.  
+ **✓ DO** choisir des noms d’identificateurs lisibles.  
   
  Par exemple, une propriété nommée `HorizontalAlignment` est plus anglais-lisible que `AlignmentHorizontal`.  
   
- **✓ FAIRE** privilégier la lisibilité des raisons de concision.  
+ **✓ DO** privilégier la lisibilité des raisons de concision.  
   
  Le nom de propriété `CanScrollHorizontally` est meilleure que `ScrollableX` (une référence à l’axe x).  
   
- **X ne sont pas** utiliser d’autres caractères non alphanumériques, des traits d’union ou des traits de soulignement.  
+ **X DO NOT** utiliser d’autres caractères non alphanumériques, des traits d’union ou des traits de soulignement.  
   
- **X ne sont pas** utilisent une notation hongroise.  
+ **X DO NOT** utilisent une notation hongroise.  
   
- **X Évitez** à l’aide d’identificateurs qui entrent en conflit avec les mots clés de largement utilisé des langages de programmation.  
+ **X AVOID** à l’aide d’identificateurs qui entrent en conflit avec les mots clés de largement utilisé des langages de programmation.  
   
  En fonction de la règle 4 du Common Language Specification (CLS), tous les langages conformes doivent fournir un mécanisme qui permet d’accéder à des éléments nommés qui utilisent un mot clé de cette langue en tant qu’identificateur. En c#, par exemple, utilise le signe comme un mécanisme d’échappement dans ce cas @. Toutefois, il est toujours conseillé d’éviter les mots clés courants, car il est beaucoup plus difficile d’utiliser une méthode avec la séquence d’échappement à l’autre sans.  
   
 ## <a name="using-abbreviations-and-acronyms"></a>À l’aide des acronymes et les abréviations  
- **X ne sont pas** utiliser des abréviations ou contractions comme faisant partie des noms d’identificateur.  
+ **X DO NOT** utiliser des abréviations ou contractions comme faisant partie des noms d’identificateur.  
   
  Par exemple, utilisez `GetWindow` plutôt que `GetWin`.  
   
- **X ne sont pas** utiliser des acronymes ne sont pas largement reconnue et même si elles sont uniquement lorsque cela est nécessaire.  
+ **X DO NOT** utiliser des acronymes ne sont pas largement reconnue et même si elles sont uniquement lorsque cela est nécessaire.  
   
 ## <a name="avoiding-language-specific-names"></a>Éviter des noms spécifiques au langage  
- **✓ FAIRE** utiliser des noms sémantiquement intéressants plutôt que des mots clés spécifiques à la langue pour les noms de type.  
+ **✓ DO** utiliser des noms sémantiquement intéressants plutôt que des mots clés spécifiques à la langue pour les noms de type.  
   
  Par exemple, `GetLength` est un nom plus approprié que `GetInt`.  
   
- **✓ FAIRE** utiliser un nom de type CLR générique, plutôt que d’un nom spécifique au langage, dans les rares cas où un identificateur n’a aucune signification sémantique au-delà de son type.  
+ **✓ DO** utiliser un nom de type CLR générique, plutôt que d’un nom spécifique au langage, dans les rares cas où un identificateur n’a aucune signification sémantique au-delà de son type.  
   
  Par exemple, une méthode de conversion en <xref:System.Int64> doivent être nommés `ToInt64`, et non `ToLong` (car <xref:System.Int64> est un nom CLR pour c#-alias spécifique `long`). Le tableau suivant présente plusieurs types de base de données utilisant les noms de types CLR (ainsi que les noms de types correspondants pour c#, Visual Basic et C++).  
   
@@ -76,24 +76,24 @@ Cette section décrit d’affectation de noms conventions générales relatives 
 |**string**|**String**|**String**|**String**|  
 |**object**|**Objet**|**Objet**|**Objet**|  
   
- **✓ FAIRE** utiliser un nom commun, tel que `value` ou `item`, plutôt que de répéter le nom de type dans les rares cas où un identificateur n’a aucune signification sémantique et le type du paramètre n’est pas important.  
+ **✓ DO** utiliser un nom commun, tel que `value` ou `item`, plutôt que de répéter le nom de type dans les rares cas où un identificateur n’a aucune signification sémantique et le type du paramètre n’est pas important.  
   
 ## <a name="naming-new-versions-of-existing-apis"></a>D’affectation de noms de nouvelles Versions d’API existantes  
- **✓ FAIRE** utiliser un nom semblable à l’ancien API lors de la création de nouvelles versions d’une API existante.  
+ **✓ DO** utiliser un nom semblable à l’ancien API lors de la création de nouvelles versions d’une API existante.  
   
  Cela permet de mettre en évidence la relation entre les API.  
   
- **✓ FAIRE** préférez l’ajout d’un suffixe au lieu d’un préfixe pour indiquer une nouvelle version d’une API existante.  
+ **✓ DO** préférez l’ajout d’un suffixe au lieu d’un préfixe pour indiquer une nouvelle version d’une API existante.  
   
  Cela est utile pour la détection lorsque vous parcourez la documentation, ou à l’aide d’IntelliSense. L’ancienne version de l’API est organisée proches les nouvelles API, car la plupart des navigateurs et IntelliSense affichent les identificateurs dans l’ordre alphabétique.  
   
- **✓ Envisagez** à l’aide d’un identificateur de tout nouveau, mais significatif, au lieu d’ajouter un préfixe ou un suffixe.  
+ **✓ CONSIDER** à l’aide d’un identificateur de tout nouveau, mais significatif, au lieu d’ajouter un préfixe ou un suffixe.  
   
- **✓ FAIRE** un suffixe numérique permet d’indiquer une nouvelle version d’une API existante, en particulier si le nom existant de l’API est le seul nom logique (par exemple, si elle est une norme sectorielle) et si l’ajout explicite tout suffixe (ou la modification du nom) n’est pas une application option de ropriate.  
+ **✓ DO** un suffixe numérique permet d’indiquer une nouvelle version d’une API existante, en particulier si le nom existant de l’API est le seul nom logique (par exemple, si elle est une norme sectorielle) et si l’ajout explicite tout suffixe (ou la modification du nom) n’est pas une application option de ropriate.  
   
- **X ne sont pas** utiliser le « Ex » (ou un texte similaire) suffixe pour un identificateur pour le distinguer d’une version antérieure de la même API.  
+ **X DO NOT** utiliser le « Ex » (ou un texte similaire) suffixe pour un identificateur pour le distinguer d’une version antérieure de la même API.  
   
- **✓ FAIRE** utiliser le suffixe « 64 » lorsque vous introduisez des versions d’API qui fonctionnent sur un entier 64 bits (un entier long) au lieu d’un entier 32 bits. Vous pouvez suivre cette approche lorsqu’il existe de l’API 32 bits existante ; ne le faites pour toute nouvelle API avec uniquement une version 64 bits.  
+ **✓ DO** utiliser le suffixe « 64 » lorsque vous introduisez des versions d’API qui fonctionnent sur un entier 64 bits (un entier long) au lieu d’un entier 32 bits. Vous pouvez suivre cette approche lorsqu’il existe de l’API 32 bits existante ; ne le faites pour toute nouvelle API avec uniquement une version 64 bits.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

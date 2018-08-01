@@ -24,9 +24,9 @@ Les membres protégés par eux-mêmes ne fournissent pas de n’importe quel d�
   
  Concepteurs de Framework doivent être prudent avec les membres protégés, car le nom « protégé » peut donner un sentiment de sécurité. Toute personne est en mesure de sous-classe d’une classe unsealed et les membres de l’accès protégé, et par conséquent, les mêmes défensives pratiques de codage utilisés pour les membres publics s’appliquent à des membres protégés.  
   
- **✓ Envisagez** à l’aide de membres pour la personnalisation avancée protégés.  
+ **✓ CONSIDER** à l’aide de membres pour la personnalisation avancée protégés.  
   
- **✓ FAIRE** considérer les membres protégés dans les classes unsealed comme public à des fins de sécurité, la documentation et compatibilité analysis.  
+ **✓ DO** considérer les membres protégés dans les classes unsealed comme public à des fins de sécurité, la documentation et compatibilité analysis.  
   
  Toute personne peut hériter d’une classe et accéder aux membres protégés.  
   

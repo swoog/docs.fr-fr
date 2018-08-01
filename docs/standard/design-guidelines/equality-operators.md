@@ -21,29 +21,29 @@ ms.locfileid: "33571015"
 # <a name="equality-operators"></a>Opérateurs d'égalité
 Cette section présente la surcharge d’opérateurs d’égalité et fait référence à `operator==` et `operator!=` en tant qu’opérateurs d’égalité.  
   
- **X ne sont pas** un des opérateurs d’égalité et pas dans l’autre surcharge.  
+ **X DO NOT** un des opérateurs d’égalité et pas dans l’autre surcharge.  
   
- **✓ FAIRE** vous assurer que <xref:System.Object.Equals%2A?displayProperty=nameWithType> et les opérateurs d’égalité ont exactement la même sémantique et des caractéristiques similaires.  
+ **✓ DO** vous assurer que <xref:System.Object.Equals%2A?displayProperty=nameWithType> et les opérateurs d’égalité ont exactement la même sémantique et des caractéristiques similaires.  
   
  Cela signifie souvent que `Object.Equals` doit être remplacée lorsque les opérateurs d’égalité sont surchargés.  
   
- **X Évitez** lever des exceptions à partir des opérateurs d’égalité.  
+ **X AVOID** lever des exceptions à partir des opérateurs d’égalité.  
   
  Par exemple, retourner false si l’un des arguments est null au lieu de lever `NullReferenceException`.  
   
 ## <a name="equality-operators-on-value-types"></a>Opérateurs d’égalité sur les Types valeur  
- **✓ FAIRE** surcharger les opérateurs d’égalité sur les types valeur, si l’égalité est explicite.  
+ **✓ DO** surcharger les opérateurs d’égalité sur les types valeur, si l’égalité est explicite.  
   
  Dans la plupart des langages de programmation, il n’existe aucune implémentation par défaut de `operator==` pour les types valeur.  
   
 ## <a name="equality-operators-on-reference-types"></a>Opérateurs d’égalité sur les Types référence  
- **X Évitez** la surcharge des opérateurs d’égalité sur les types référence mutables.  
+ **X AVOID** la surcharge des opérateurs d’égalité sur les types référence mutables.  
   
  Pour de nombreuses langues d’opérateurs d’égalité intégrés pour les types référence. Les opérateurs intégrés implémentent généralement l’égalité de référence et de nombreux développeurs sont surpris lorsque le comportement par défaut est modifié à l’égalité des valeurs.  
   
  Ce problème est atténué pour les types référence immuable parce que l’immuabilité rend plus difficile à remarquer la différence entre l’égalité des références et l’égalité des valeurs.  
   
- **X Évitez** surcharge des opérateurs d’égalité sur les types référence si l’implémentation est beaucoup plus lente que celui de l’égalité des références.  
+ **X AVOID** surcharge des opérateurs d’égalité sur les types référence si l’implémentation est beaucoup plus lente que celui de l’égalité des références.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

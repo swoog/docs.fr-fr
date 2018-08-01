@@ -23,23 +23,23 @@ ms.locfileid: "33572734"
 # <a name="struct-design"></a>Conception de structures
 Le type de valeur à usage général est souvent appelé un struct, le mot clé c#. Cette section fournit des instructions pour la conception de la structure générale.  
   
- **X ne sont pas** fournir un constructeur par défaut pour un struct.  
+ **X DO NOT** fournir un constructeur par défaut pour un struct.  
   
  Cette règle permet les tableaux de structs peuvent être créés sans avoir à exécuter le constructeur sur chaque élément du tableau. Notez que c# n’autorise pas les structures d’avoir des constructeurs par défaut.  
   
- **X ne sont pas** définissent les types de valeur mutable.  
+ **X DO NOT** définissent les types de valeur mutable.  
   
  Les types de valeur mutable ont plusieurs problèmes. Par exemple, lorsqu’un accesseur Get retourne un type de valeur, l’appelant reçoit une copie. Étant donné que la copie est créée implicitement, les développeurs connaissez peut-être pas qu’ils sont mutation la copie et non la valeur d’origine. En outre, certains langages (langages dynamiques, en particulier) ont des problèmes à l’aide de types valeur mutable, car même des variables locales, fois déréférencé, une copie doit être effectuée.  
   
- **✓ FAIRE** s’assurer qu’un état où toutes les données de l’instance est défini sur zéro, false ou null (le cas échéant) est valide.  
+ **✓ DO** s’assurer qu’un état où toutes les données de l’instance est défini sur zéro, false ou null (le cas échéant) est valide.  
   
  Cela empêche la création accidentelle d’instances non valides lors de la création d’un tableau des structures des.  
   
- **✓ FAIRE** implémenter <xref:System.IEquatable%601> sur les types valeur.  
+ **✓ DO** implémenter <xref:System.IEquatable%601> sur les types valeur.  
   
  Le <xref:System.Object.Equals%2A?displayProperty=nameWithType> méthode sur les types valeur entraîne la conversion boxing et son implémentation par défaut n’est pas très efficace, car il utilise la réflexion. <xref:System.IEquatable%601.Equals%2A> peut avoir de bien meilleures performances et peut être implémentée afin qu’elle n’entraîne pas de boxing.  
   
- **X ne sont pas** prolonger explicitement <xref:System.ValueType>. En fait, la plupart des langages éviter ce problème.  
+ **X DO NOT** prolonger explicitement <xref:System.ValueType>. En fait, la plupart des langages éviter ce problème.  
   
  En général, les structs peuvent être très utiles mais ne doit être utilisées que pour les valeurs de petite, unique et immuables qui ne seront pas boxed fréquemment.  
   

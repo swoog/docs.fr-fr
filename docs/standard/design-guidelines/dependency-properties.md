@@ -17,26 +17,26 @@ Une propriété de dépendance (DP) est une propriété normale qui stocke sa va
   
  Une propriété de dépendance jointe est un type de propriété de dépendance modélisée en tant que les méthodes Get et Set statiques qui représente « propriétés », description des relations entre les objets et leurs conteneurs (par exemple, la position d’un `Button` de l’objet sur un `Panel` conteneur).  
   
- **✓ FAIRE** fournissent les propriétés de dépendance, si vous avez besoin des propriétés pour prendre en charge des fonctionnalités WPF telles que les styles, les déclencheurs, liaison de données, des animations, ressources dynamiques et d’héritage.  
+ **✓ DO** fournissent les propriétés de dépendance, si vous avez besoin des propriétés pour prendre en charge des fonctionnalités WPF telles que les styles, les déclencheurs, liaison de données, des animations, ressources dynamiques et d’héritage.  
   
 ## <a name="dependency-property-design"></a>Conception de propriété de dépendance  
- **✓ FAIRE** hériter <xref:System.Windows.DependencyObject>, ou l’un de ses sous-types, lors de l’implémentation des propriétés de dépendance. Ce type fournit une implémentation très efficace d’une banque de propriétés et prend automatiquement en charge la liaison de données WPF.  
+ **✓ DO** hériter <xref:System.Windows.DependencyObject>, ou l’un de ses sous-types, lors de l’implémentation des propriétés de dépendance. Ce type fournit une implémentation très efficace d’une banque de propriétés et prend automatiquement en charge la liaison de données WPF.  
   
- **✓ FAIRE** fournir une propriété CLR normale et un champ statique public en lecture seule le stockage d’une instance de <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> pour chaque propriété de dépendance.  
+ **✓ DO** fournir une propriété CLR normale et un champ statique public en lecture seule le stockage d’une instance de <xref:System.Windows.DependencyProperty?displayProperty=nameWithType> pour chaque propriété de dépendance.  
   
- **✓ FAIRE** implémenter des propriétés de dépendance en appelant des méthodes d’instance <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> et <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
+ **✓ DO** implémenter des propriétés de dépendance en appelant des méthodes d’instance <xref:System.Windows.DependencyObject.GetValue%2A?displayProperty=nameWithType> et <xref:System.Windows.DependencyObject.SetValue%2A?displayProperty=nameWithType>.  
   
- **✓ FAIRE** nom du champ de propriété de dépendance statique par suffixant le nom de la propriété « Property ».  
+ **✓ DO** nom du champ de propriété de dépendance statique par suffixant le nom de la propriété « Property ».  
   
- **X ne sont pas** définir explicitement les valeurs par défaut des propriétés de dépendance dans le code ; les définir dans les métadonnées.  
+ **X DO NOT** définir explicitement les valeurs par défaut des propriétés de dépendance dans le code ; les définir dans les métadonnées.  
   
  Si vous définissez explicitement une valeur par défaut de la propriété, vous risquez d’empêcher cette propriété soient définies par des moyens implicites, par exemple, un style.  
   
- **X ne sont pas** placez le code dans les accesseurs de propriété autre que le code standard pour accéder au champ statique.  
+ **X DO NOT** placez le code dans les accesseurs de propriété autre que le code standard pour accéder au champ statique.  
   
  Que code ne sera pas s’exécuter si la propriété est définie par des moyens implicites, par exemple, un style, étant donné que les styles d’utilise directement le champ statique.  
   
- **X ne sont pas** utilise les propriétés de dépendance pour stocker des données sécurisées. Propriétés de dépendance même privée est accessible publiquement.  
+ **X DO NOT** utilise les propriétés de dépendance pour stocker des données sécurisées. Propriétés de dépendance même privée est accessible publiquement.  
   
 ## <a name="attached-dependency-property-design"></a>Conception de propriété de dépendance jointe  
  Propriétés de dépendance décrites dans la section précédente représentent les propriétés intrinsèques du type déclarant ; par exemple, le `Text` propriété est une propriété de `TextButton`, qui le déclare. Un type spécial de propriété de dépendance est la propriété de dépendance jointe.  
@@ -82,15 +82,15 @@ public class Grid {
   
  Malheureusement, les accesseurs de propriété de dépendance ne peut pas contenir de code de validation arbitraire. Au lieu de cela, logique de validation de propriété de dépendance doit être spécifié au cours de l’inscription de la propriété.  
   
- **X ne sont pas** placer la logique de validation de propriété de dépendance dans les accesseurs de la propriété. Au lieu de cela, passez un rappel de validation à `DependencyProperty.Register` (méthode).  
+ **X DO NOT** placer la logique de validation de propriété de dépendance dans les accesseurs de la propriété. Au lieu de cela, passez un rappel de validation à `DependencyProperty.Register` (méthode).  
   
 ## <a name="dependency-property-change-notifications"></a>Notifications de modification de propriété de dépendance  
- **X ne sont pas** implémenter la logique de notification de modification dans les accesseurs de propriété de dépendance. Propriétés de dépendance ont une fonctionnalité de notifications de modification intégrée qui doit être utilisée, vous devez fournir un rappel de notification de modification pour le <xref:System.Windows.PropertyMetadata>.  
+ **X DO NOT** implémenter la logique de notification de modification dans les accesseurs de propriété de dépendance. Propriétés de dépendance ont une fonctionnalité de notifications de modification intégrée qui doit être utilisée, vous devez fournir un rappel de notification de modification pour le <xref:System.Windows.PropertyMetadata>.  
   
 ## <a name="dependency-property-value-coercion"></a>Contrainte de valeur de propriété de dépendance  
  La contrainte de propriété a lieu lorsque la valeur donnée à un accesseur Set de propriété est modifiée par la méthode setter avant que la banque de propriétés est réellement modifiée.  
   
- **X ne sont pas** implémenter la logique de la contrainte dans les accesseurs de propriété de dépendance.  
+ **X DO NOT** implémenter la logique de la contrainte dans les accesseurs de propriété de dépendance.  
   
  Propriétés de dépendance ont une fonctionnalité intégrée de la contrainte, et il peut être utilisé, vous devez fournir un rappel de la contrainte à la `PropertyMetadata`.  
   

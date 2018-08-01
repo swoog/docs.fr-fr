@@ -21,15 +21,15 @@ Levée d’exceptions des indications décrites dans cette section nécessitent 
   
  La plupart des développeurs sont à l’aise avec l’utilisation d’exceptions pour les erreurs d’utilisation telles que la division par zéro ou des références null. Dans le Framework, les exceptions sont utilisées pour toutes les conditions d’erreur, y compris les erreurs d’exécution.  
   
- **X ne sont pas** codes d’erreur.  
+ **X DO NOT** codes d’erreur.  
   
  Les exceptions sont le moyen principal de signalement des erreurs dans les infrastructures.  
   
- **✓ FAIRE** signale les échecs de l’exécution en levant des exceptions.  
+ **✓ DO** signale les échecs de l’exécution en levant des exceptions.  
   
- **✓ Envisagez** mettre fin au processus en appelant `System.Environment.FailFast` (fonctionnalité de .NET Framework 2.0) au lieu de lever une exception si votre code rencontre une situation où il est risqué pour obtenir de l’exécution.  
+ **✓ CONSIDER** mettre fin au processus en appelant `System.Environment.FailFast` (fonctionnalité de .NET Framework 2.0) au lieu de lever une exception si votre code rencontre une situation où il est risqué pour obtenir de l’exécution.  
   
- **X ne sont pas** utiliser des exceptions pour le flux normal de contrôle, si possible.  
+ **X DO NOT** utiliser des exceptions pour le flux normal de contrôle, si possible.  
   
  À l’exception des défaillances du système et les opérations avec des conditions de concurrence potentielle, les concepteurs de framework doivent concevoir les API pour les utilisateurs peuvent écrire du code qui ne lève pas d’exceptions. Par exemple, vous pouvez fournir un moyen de vérifier les conditions préalables avant d’appeler un membre pour les utilisateurs peuvent écrire du code qui ne lève pas d’exceptions.  
   
@@ -37,29 +37,29 @@ Levée d’exceptions des indications décrites dans cette section nécessitent 
   
  Il existe des cas lorsque le modèle utilisateur testeur peut avoir une surcharge de performances inacceptables. Dans ce cas, le modèle d’analyse de Try soi-disant doit être considérée comme (consultez [Exceptions et les performances](../../../docs/standard/design-guidelines/exceptions-and-performance.md) pour plus d’informations).  
   
- **✓ Envisagez** l’impact sur les performances de lever des exceptions. Taux de throw supérieure à 100 par seconde sont susceptibles de considérablement affecter les performances de la plupart des applications.  
+ **✓ CONSIDER** l’impact sur les performances de lever des exceptions. Taux de throw supérieure à 100 par seconde sont susceptibles de considérablement affecter les performances de la plupart des applications.  
   
- **✓ FAIRE** document toutes les exceptions levées par les membres pouvant être appelés publiquement en raison d’une violation du membre de contrat (au lieu d’une défaillance du système) et les traitent en tant que partie de votre contrat.  
+ **✓ DO** document toutes les exceptions levées par les membres pouvant être appelés publiquement en raison d’une violation du membre de contrat (au lieu d’une défaillance du système) et les traitent en tant que partie de votre contrat.  
   
  Les exceptions qui font partie du contrat de ne doivent pas changer d’une version à l’autre (par exemple, type d’exception ne doit pas modifier, et de nouvelles exceptions ne doivent pas être ajoutées).  
   
- **X ne sont pas** ont des membres publics qui peuvent lever ou non basées sur une option.  
+ **X DO NOT** ont des membres publics qui peuvent lever ou non basées sur une option.  
   
- **X ne sont pas** des membres publics de retournent des exceptions comme valeur de retour ou un `out` paramètre.  
+ **X DO NOT** des membres publics de retournent des exceptions comme valeur de retour ou un `out` paramètre.  
   
  Retourner des exceptions à partir des API publiques, au lieu de lever les va à l’encontre de nombreux avantages de l’erreur de type exception.  
   
- **✓ Envisagez** à l’aide des méthodes de générateur d’exceptions.  
+ **✓ CONSIDER** à l’aide des méthodes de générateur d’exceptions.  
   
  Il est courant de lève la même exception à partir d’emplacements différents. Pour éviter l’excès de code, utilisez les méthodes d’assistance qui créent des exceptions et initialisent leurs propriétés.  
   
  En outre, les membres qui lèvent des exceptions n’obtiennent pas inline. Déplacement de l’instruction throw à l’intérieur du Générateur de peut permettre au membre être inline.  
   
- **X ne sont pas** lever des exceptions à partir de blocs de filtre d’exception.  
+ **X DO NOT** lever des exceptions à partir de blocs de filtre d’exception.  
   
  Lorsqu’un filtre d’exceptions lève une exception, l’exception est interceptée par le CLR, et le filtre retourne false. Ce comportement est indiscernable le filtre exécute et retourne explicitement la valeur false et est donc très difficile à déboguer.  
   
- **X Évitez** lever explicitement des exceptions à partir de blocs finally. Les exceptions levées implicitement résultant d’appels de méthodes sont acceptables.  
+ **X AVOID** lever explicitement des exceptions à partir de blocs finally. Les exceptions levées implicitement résultant d’appels de méthodes sont acceptables.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

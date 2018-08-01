@@ -17,11 +17,11 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570394"
 ---
 # <a name="arrays"></a>Tableaux
-**✓ FAIRE** préférez l’utilisation de collections sur des tableaux dans les API publiques. Le [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section fournit des détails sur le choix entre les collections et tableaux.  
+**✓ DO** préférez l’utilisation de collections sur des tableaux dans les API publiques. Le [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section fournit des détails sur le choix entre les collections et tableaux.  
   
- **X ne sont pas** utiliser les champs de tableau en lecture seule. Le champ lui-même est en lecture seule et ne peut pas être modifié, mais les éléments du tableau peuvent être modifiés.  
+ **X DO NOT** utiliser les champs de tableau en lecture seule. Le champ lui-même est en lecture seule et ne peut pas être modifié, mais les éléments du tableau peuvent être modifiés.  
   
- **✓ Envisagez** à l’aide de tableaux en escalier à la place de tableaux multidimensionnels.  
+ **✓ CONSIDER** à l’aide de tableaux en escalier à la place de tableaux multidimensionnels.  
   
  Un tableau en escalier est un tableau comportant des éléments qui sont également des tableaux. Les tableaux qui composent les éléments peuvent être de différentes tailles, conduisant à un gaspillage d’espace pour certains jeux de données (par exemple, une matrice éparse) par rapport aux tableaux multidimensionnels. En outre, le CLR optimise les opérations d’index sur des tableaux en escalier, afin qu’ils peuvent exposer les meilleures performances dans certains scénarios d’exécution.  
   

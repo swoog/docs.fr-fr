@@ -25,13 +25,13 @@ Membres virtuels peuvent être substituées, ce qui modifie le comportement de l
   
  Les membres virtuels, comme des rappels (et peut-être plusieurs rappels), sont coûteuses à concevoir, tester et mettre à jour, car un appel à un membre virtuel peut être substitué de manière imprévisible et peut exécuter du code arbitraire. En outre, beaucoup plus d’effort est généralement requis pour définir clairement le contrat de membres virtuels, ce qui augmente le coût de la conception et à les documenter.  
   
- **X ne sont pas** rendre les membres virtuels sauf si vous avez une bonne raison à cela et que vous connaissez tous les coûts liés à la conception, de test et de maintenance des membres virtuels.  
+ **X DO NOT** rendre les membres virtuels sauf si vous avez une bonne raison à cela et que vous connaissez tous les coûts liés à la conception, de test et de maintenance des membres virtuels.  
   
  Membres virtuels sont moins indulgent en termes de modifications qui peuvent être mises sans rompre la compatibilité. En outre, ils sont plus lentes que les membres non virtuelle, principalement parce que les appels aux membres virtuels ne sont pas inline.  
   
- **✓ Envisagez** limiter l’extensibilité à celles qui sont absolument nécessaires.  
+ **✓ CONSIDER** limiter l’extensibilité à celles qui sont absolument nécessaires.  
   
- **✓ FAIRE** accessibilité protégée préférer une accessibilité publique pour les membres virtuels. Les membres publics doivent fournir l’extensibilité (si nécessaire) en appelant un membre virtuel protégé.  
+ **✓ DO** accessibilité protégée préférer une accessibilité publique pour les membres virtuels. Les membres publics doivent fournir l’extensibilité (si nécessaire) en appelant un membre virtuel protégé.  
   
  Les membres publics d’une classe doivent fournir l’ensemble approprié de fonctionnalités pour les consommateurs directs de cette classe. Membres virtuels sont conçus pour être substitué dans les sous-classes et accessibilité protégée est un excellent moyen de l’étendue de tous les points d’extensibilité virtuel où elles peuvent être utilisées.  
   

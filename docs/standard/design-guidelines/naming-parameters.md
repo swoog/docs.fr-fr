@@ -18,20 +18,20 @@ ms.locfileid: "33570484"
 # <a name="naming-parameters"></a>Attribution d'un nom à des paramètres
 Au-delà de la raison évidente de lisibilité, il est important de suivre les instructions pour les noms de paramètre, car les paramètres sont affichés dans la documentation et dans le concepteur lorsque les outils de conception visuelle fournissent Intellisense et la classe de fonctionnalités de navigation.  
   
- **✓ FAIRE** utilisez la casse mixte dans les noms de paramètre.  
+ **✓ DO** utilisez la casse mixte dans les noms de paramètre.  
   
- **✓ FAIRE** utiliser des noms de paramètres descriptifs.  
+ **✓ DO** utiliser des noms de paramètres descriptifs.  
   
- **✓ Envisagez** à l’aide de noms basés sur la signification du paramètre plutôt que le type de paramètre.  
+ **✓ CONSIDER** à l’aide de noms basés sur la signification du paramètre plutôt que le type de paramètre.  
   
 ### <a name="naming-operator-overload-parameters"></a>Paramètres de surcharge d’opérateur d’affectation de noms  
- **✓ FAIRE** utiliser `left` et `right` opérateur binaire surchargé aux noms de paramètres s’il n’a aucune signification pour les paramètres.  
+ **✓ DO** utiliser `left` et `right` opérateur binaire surchargé aux noms de paramètres s’il n’a aucune signification pour les paramètres.  
   
- **✓ FAIRE** utiliser `value` pour unaire surcharge d’opérateur les noms de paramètres s’il n’a aucune signification pour les paramètres.  
+ **✓ DO** utiliser `value` pour unaire surcharge d’opérateur les noms de paramètres s’il n’a aucune signification pour les paramètres.  
   
- **✓ Envisagez** des noms explicites pour l’opérateur de paramètres de surcharge si cela ajoute une valeur significative.  
+ **✓ CONSIDER** des noms explicites pour l’opérateur de paramètres de surcharge si cela ajoute une valeur significative.  
   
- **X ne sont pas** les noms de paramètres de surcharge des abréviations d’utilisation ou un index numérique pour l’opérateur.  
+ **X DO NOT** les noms de paramètres de surcharge des abréviations d’utilisation ou un index numérique pour l’opérateur.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

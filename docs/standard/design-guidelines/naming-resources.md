@@ -21,15 +21,15 @@ ms.locfileid: "33571184"
 # <a name="naming-resources"></a>Attribution d'un nom à des ressources
 Étant donné que les ressources localisables peuvent être référencés via certains objets comme s’ils étaient des propriétés, les instructions d’affectation de noms pour les ressources sont semblables aux instructions de la propriété.  
   
- **✓ FAIRE** utilisent la casse Pascal dans les clés de ressources.  
+ **✓ DO** utilisent la casse Pascal dans les clés de ressources.  
   
- **✓ FAIRE** fournir descriptif au lieu d’identificateurs courts.  
+ **✓ DO** fournir descriptif au lieu d’identificateurs courts.  
   
- **X ne sont pas** utiliser des mots clés de langage spécifique langage CLR principal.  
+ **X DO NOT** utiliser des mots clés de langage spécifique langage CLR principal.  
   
- **✓ FAIRE** utiliser uniquement des caractères alphanumériques et des traits de soulignement dans les noms des ressources.  
+ **✓ DO** utiliser uniquement des caractères alphanumériques et des traits de soulignement dans les noms des ressources.  
   
- **✓ FAIRE** utilisent la convention d’affectation de noms suivante pour les ressources de message d’exception.  
+ **✓ DO** utilisent la convention d’affectation de noms suivante pour les ressources de message d’exception.  
   
  L’identificateur de ressource doit être le nom de type d’exception plus un identificateur court de l’exception :  
   

@@ -23,23 +23,23 @@ Bien que la plupart des API sont mieux modélisées au moyen des classes et stru
   
  L’autre situation qui vous définissez une interface est appropriée est pour la création d’une interface commune qui peut être pris en charge par plusieurs types, y compris certains types de valeur. Types valeur ne peut pas hériter des types autres que <xref:System.ValueType>, mais elles peuvent implémenter des interfaces, donc à l’aide d’une interface est la seule option afin de fournir un type de base commun.  
   
- **✓ FAIRE** définir une interface si vous avez besoin de certaines API courantes pour être pris en charge par un ensemble de types qui inclut les types de valeur.  
+ **✓ DO** définir une interface si vous avez besoin de certaines API courantes pour être pris en charge par un ensemble de types qui inclut les types de valeur.  
   
- **✓ Envisagez** définissant une interface si vous avez besoin prendre en charge ses fonctionnalités sur les types qui héritent déjà d’un autre type.  
+ **✓ CONSIDER** définissant une interface si vous avez besoin prendre en charge ses fonctionnalités sur les types qui héritent déjà d’un autre type.  
   
- **X Évitez** à l’aide des interfaces de marqueur (interfaces sans membres).  
+ **X AVOID** à l’aide des interfaces de marqueur (interfaces sans membres).  
   
  Si vous avez besoin marquer une classe comme ayant une caractéristique spécifique (marqueur), utilisez en général, un attribut personnalisé plutôt qu’une interface.  
   
- **✓ FAIRE** fournir au moins un type qui est une implémentation d’une interface.  
+ **✓ DO** fournir au moins un type qui est une implémentation d’une interface.  
   
  Effectuant cette vous aide à la validation de la conception de l’interface. Par exemple, <xref:System.Collections.Generic.List%601> est une implémentation de la <xref:System.Collections.Generic.IList%601> interface.  
   
- **✓ FAIRE** fournissent au moins une API qui consomme chaque interface que vous définissez (une méthode qui prend l’interface comme paramètre ou une propriété de type interface).  
+ **✓ DO** fournissent au moins une API qui consomme chaque interface que vous définissez (une méthode qui prend l’interface comme paramètre ou une propriété de type interface).  
   
  Effectuant cette vous aide à valider la conception de l’interface. Par exemple, <xref:System.Collections.Generic.List%601.Sort%2A?displayProperty=nameWithType> consomme la <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> interface.  
   
- **X ne sont pas** ajouter des membres à une interface qui existait précédemment.  
+ **X DO NOT** ajouter des membres à une interface qui existait précédemment.  
   
  Cela compromettrait les implémentations de l’interface. Vous devez créer une nouvelle interface afin d’éviter les problèmes de versioning.  
   

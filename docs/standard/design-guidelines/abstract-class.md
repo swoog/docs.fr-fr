@@ -20,17 +20,17 @@ ms.lasthandoff: 05/04/2018
 ms.locfileid: "33570543"
 ---
 # <a name="abstract-class-design"></a>Conception de classes abstraites
-**X ne sont pas** définir des constructeurs internes publiques ou protégées dans les types abstraits.  
+**X DO NOT** définir des constructeurs internes publiques ou protégées dans les types abstraits.  
   
  Les constructeurs doivent être publics uniquement si les utilisateurs doivent créer des instances du type. Étant donné que vous ne peut pas créer des instances d’un type abstrait, un type abstrait avec un constructeur public s’est correctement conçu et trompeur pour les utilisateurs.  
   
- **✓ FAIRE** définir un document protégé ou un constructeur interne dans les classes abstraites.  
+ **✓ DO** définir un document protégé ou un constructeur interne dans les classes abstraites.  
   
  Un constructeur protégé est plus courant et il permet simplement de la classe de base pour sa propre initialisation lorsque des sous-types sont créés.  
   
  Un constructeur interne peut être utilisé pour limiter les implémentations concrètes de la classe abstraite à l’assembly de définition de la classe.  
   
- **✓ FAIRE** fournir au moins un type concret qui hérite de chaque classe abstraite qui vous sont fournis.  
+ **✓ DO** fournir au moins un type concret qui hérite de chaque classe abstraite qui vous sont fournis.  
   
  Effectuant cette vous aide à la validation de la conception de la classe abstraite. Par exemple, <xref:System.IO.FileStream?displayProperty=nameWithType> est une implémentation de la <xref:System.IO.Stream?displayProperty=nameWithType> classe abstraite.  
   

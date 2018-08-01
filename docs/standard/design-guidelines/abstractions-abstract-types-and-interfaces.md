@@ -28,11 +28,11 @@ Une abstraction est un type qui décrit un contrat, mais ne fournit pas une impl
   
  Toutefois, les abstractions fournissent extrêmement puissante d’extensibilité que les autres mécanismes d’extensibilité ne peuvent pas correspondre souvent. Elles sont au cœur de nombreux modèles d’architecture, tels que les plug-ins, inversion de contrôle (IoC), pipelines et ainsi de suite. Ils sont également extrêmement importants pour la testabilité des infrastructures. Abstractions bon rendent possible d’extraire des dépendances importantes à des fins de test unitaire. En résumé, les abstractions sont responsables de la richesse précieuses des infrastructures et orienté objet modernes.  
   
- **X ne sont pas** fournissent des abstractions, sauf si elles sont testées par le développement de plusieurs implémentations concrètes et consomme les abstractions des API.  
+ **X DO NOT** fournissent des abstractions, sauf si elles sont testées par le développement de plusieurs implémentations concrètes et consomme les abstractions des API.  
   
- **✓ FAIRE** choisir entre une classe abstraite et une interface avec soin lors de la conception d’une abstraction.  
+ **✓ DO** choisir entre une classe abstraite et une interface avec soin lors de la conception d’une abstraction.  
   
- **✓ Envisagez** fournissant des tests de référence pour les implémentations concrètes d’abstractions. Ces tests doivent permettre aux utilisateurs de vérifier si leurs implémentations implémentent correctement le contrat.  
+ **✓ CONSIDER** fournissant des tests de référence pour les implémentations concrètes d’abstractions. Ces tests doivent permettre aux utilisateurs de vérifier si leurs implémentations implémentent correctement le contrat.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

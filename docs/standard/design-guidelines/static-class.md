@@ -24,15 +24,15 @@ Une classe statique est définie comme une classe qui contient uniquement des me
   
  Les classes statiques sont un compromis entre pure conception orientée objet et la simplicité. Ils sont couramment utilisés pour fournir des raccourcis à d’autres opérations (telles que <xref:System.IO.File?displayProperty=nameWithType>), titulaires de méthodes d’extension ou de fonctionnalités pour lequel un wrapper orienté objet est injustifié (tel que <xref:System.Environment?displayProperty=nameWithType>).  
   
- **✓ FAIRE** utilisent des classes statiques avec parcimonie.  
+ **✓ DO** utilisent des classes statiques avec parcimonie.  
   
  Les classes static doivent être utilisés uniquement comme classes de prise en charge pour le noyau orientée objet de l’infrastructure.  
   
- **X ne sont pas** traiter des classes statiques comme un compartiment divers.  
+ **X DO NOT** traiter des classes statiques comme un compartiment divers.  
   
- **X ne sont pas** déclarer ou substituer des membres d’instance dans les classes static.  
+ **X DO NOT** déclarer ou substituer des membres d’instance dans les classes static.  
   
- **✓ FAIRE** déclarer des classes statiques comme sealed, abstract, et ajoutez un constructeur d’instance privée si votre langage de programmation ne dispose pas de prise en charge intégrée pour les classes static.  
+ **✓ DO** déclarer des classes statiques comme sealed, abstract, et ajoutez un constructeur d’instance privée si votre langage de programmation ne dispose pas de prise en charge intégrée pour les classes static.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

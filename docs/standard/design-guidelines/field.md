@@ -23,19 +23,19 @@ Le principe d’encapsulation est un des notions plus importantes dans la concep
   
  Nous exclure constantes et statiques des champs en lecture seule de cette restriction stricte, car ces champs, presque par définition, ne sont jamais tenus à modifier.  
   
- **X ne sont pas** contiennent des champs d’instance qui sont publics ou protégés.  
+ **X DO NOT** contiennent des champs d’instance qui sont publics ou protégés.  
   
  Vous devez fournir des propriétés pour accéder à des champs au lieu de les rendre publics ou protégés.  
   
- **✓ FAIRE** utiliser les champs constants pour les constantes qui ne changent pas.  
+ **✓ DO** utiliser les champs constants pour les constantes qui ne changent pas.  
   
  Le compilateur augmente les valeurs des champs const directement dans le code appelant. Par conséquent, les valeurs const ne peuvent jamais être modifiées sans risque de rupture de compatibilité.  
   
- **✓ FAIRE** utiliser statique public `readonly` champs pour les instances d’objet prédéfinies.  
+ **✓ DO** utiliser statique public `readonly` champs pour les instances d’objet prédéfinies.  
   
  S’il existe des instances prédéfinies du type, déclarez les champs statiques en lecture seule comme publics du type lui-même.  
   
- **X ne sont pas** affecter des instances de types mutables à `readonly` champs.  
+ **X DO NOT** affecter des instances de types mutables à `readonly` champs.  
   
  Un type mutable est un type avec des instances qui peuvent être modifiées une fois qu’ils sont instanciés. Par exemple, les flux, la plupart des collections et tableaux sont des types mutables, mais <xref:System.Int32?displayProperty=nameWithType>, <xref:System.Uri?displayProperty=nameWithType>, et <xref:System.String?displayProperty=nameWithType> sont toutes immuables. Le modificateur en lecture seule sur un champ de type référence empêche l’instance stockée dans le champ ne soit pas remplacé, mais il n’empêche pas les données d’instance du champ d’être modifié en appelant des membres modification de l’instance.  
   

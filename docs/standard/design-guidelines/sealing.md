@@ -22,7 +22,7 @@ Une des fonctionnalités des infrastructures d’orientée objet est que les dé
   
  Scellement d’un mécanisme puissant qui empêche d’extensibilité. Vous pouvez sceller à la classe ou des membres individuels. Le fait de sceller une classe d’empêche les utilisateurs d’hériter de la classe. Le fait de sceller un membre d’empêche les utilisateurs de substituer un membre particulier.  
   
- **X ne sont pas** sceller des classes sans avoir une bonne raison de le faire.  
+ **X DO NOT** sceller des classes sans avoir une bonne raison de le faire.  
   
  Le fait de sceller une classe, car vous ne savez pas un scénario d’extensibilité n’est pas une bonne raison. Les utilisateurs de Framework tels que d’hériter des classes pour différentes raisons identifiable, telles que l’ajout de membres de commodité. Consultez [Classes Unsealed](../../../docs/standard/design-guidelines/unsealed-classes.md) pour obtenir des exemples de raisons identifiable les utilisateurs souhaitent hériter d’un type.  
   
@@ -36,11 +36,11 @@ Une des fonctionnalités des infrastructures d’orientée objet est que les dé
   
 -   La classe est un attribut qui nécessite la recherche d’exécution très rapide. Les attributs sealed ont des niveaux de performance légèrement plus élevées que celles non scellés. consultez [attributs](../../../docs/standard/design-guidelines/attributes.md).  
   
- **X ne sont pas** déclarer les membres virtuels ou protégés sur les types sealed.  
+ **X DO NOT** déclarer les membres virtuels ou protégés sur les types sealed.  
   
  Par définition, les types sealed ne peut pas être héritées. Cela signifie que les membres protégés sur les types sealed ne peut pas être appelées, et les méthodes virtuelles sur les types sealed ne peut pas être substituées.  
   
- **✓ Envisagez** sceller les membres que vous substituez.  
+ **✓ CONSIDER** sceller les membres que vous substituez.  
   
  Des problèmes qui peuvent résulter de présentation des membres virtuels (présentés dans [membres virtuels](../../../docs/standard/design-guidelines/virtual-members.md)) s’appliquent aux substitutions, bien qu’à un degré moindre. Le fait de sceller un remplacement vous protège ces problèmes, en commençant à partir de ce point dans la hiérarchie d’héritage.  
   

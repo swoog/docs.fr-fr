@@ -32,7 +32,7 @@ Du point de vue du CLR, il existe uniquement deux catégories de types : types 
   
  Les délégués, des exceptions, des attributs, des tableaux et des collections sont tous les cas spéciaux de types de référence prévus pour des utilisations spécifiques, et des recommandations pour la conception et d’utilisation sont traitées ailleurs dans ce guide.  
   
- **✓ FAIRE** Vérifiez que chaque type est un ensemble bien défini de membres associés, pas seulement une collection aléatoire des fonctionnalités non liées.  
+ **✓ DO** Vérifiez que chaque type est un ensemble bien défini de membres associés, pas seulement une collection aléatoire des fonctionnalités non liées.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Choix entre classe et structure](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  

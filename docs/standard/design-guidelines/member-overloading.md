@@ -34,23 +34,23 @@ public static class Console {
   
  La surcharge est une des techniques plus importants pour améliorer la facilité d’utilisation, la productivité et la lisibilité des bibliothèques réutilisables. La surcharge sur le nombre de paramètres rend possible fournir des versions plus simples des constructeurs et méthodes. La surcharge sur le type de paramètre rend possible d’utiliser le même nom de membre pour effectuer des opérations identiques sur un ensemble sélectionné de différents types de membres.  
   
- **✓ FAIRE** essayez d’utiliser des noms de paramètres descriptifs pour indiquer la valeur par défaut utilisée par les surcharges plus courts.  
+ **✓ DO** essayez d’utiliser des noms de paramètres descriptifs pour indiquer la valeur par défaut utilisée par les surcharges plus courts.  
   
- **X Évitez** Variant de façon arbitraire les noms de paramètres dans les surcharges. Si un paramètre d’une surcharge représente la même entrée en tant que paramètre dans une autre surcharge, les paramètres doivent avoir le même nom.  
+ **X AVOID** Variant de façon arbitraire les noms de paramètres dans les surcharges. Si un paramètre d’une surcharge représente la même entrée en tant que paramètre dans une autre surcharge, les paramètres doivent avoir le même nom.  
   
- **X Évitez** incohérent dans l’ordre des paramètres de surcharge membres. Paramètres portant le même nom doivent apparaître dans la même position dans toutes les surcharges.  
+ **X AVOID** incohérent dans l’ordre des paramètres de surcharge membres. Paramètres portant le même nom doivent apparaître dans la même position dans toutes les surcharges.  
   
- **✓ FAIRE** créer uniquement la surcharge la plus longue virtuelle (si l’extensibilité est requise). Les surcharges plus courtes doivent appeler simplement une surcharge plus longue.  
+ **✓ DO** créer uniquement la surcharge la plus longue virtuelle (si l’extensibilité est requise). Les surcharges plus courtes doivent appeler simplement une surcharge plus longue.  
   
- **X ne sont pas** utiliser `ref` ou `out` modificateurs pour surcharger les membres.  
+ **X DO NOT** utiliser `ref` ou `out` modificateurs pour surcharger les membres.  
   
  Certains langages ne peut pas résoudre les appels aux surcharges comme suit. En outre, ces surcharges ont généralement une sémantique complètement différente et ne doivent pas être surcharges mais les deux méthodes distinctes à la place.  
   
- **X ne sont pas** ont des surcharges avec des paramètres à la même position et les types semblables, mais avec une sémantique différente.  
+ **X DO NOT** ont des surcharges avec des paramètres à la même position et les types semblables, mais avec une sémantique différente.  
   
- **✓ FAIRE** autoriser `null` à passer les arguments facultatifs.  
+ **✓ DO** autoriser `null` à passer les arguments facultatifs.  
   
- **✓ FAIRE** utiliser membre surcharge plutôt que de définir des membres avec des arguments par défaut.  
+ **✓ DO** utiliser membre surcharge plutôt que de définir des membres avec des arguments par défaut.  
   
  Arguments par défaut ne sont pas compatibles CLS.  
   
