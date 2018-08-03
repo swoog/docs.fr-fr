@@ -1,1 +1,1 @@
-<span data-ttu-id="91c64-101">Bibliothèque de classes portable</span><span class="sxs-lookup"><span data-stu-id="91c64-101">Portable Class Library</span></span>
+<span data-ttu-id="76c64-101">Bibliothèque de classes portable</span><span class="sxs-lookup"><span data-stu-id="76c64-101">Portable Class Library</span></span>
