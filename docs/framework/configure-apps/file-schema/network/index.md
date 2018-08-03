@@ -16,10 +16,10 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: c080ff7ebef680712581d1f77fd4eb1ec99c6a86
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "32742612"
 ---
 # <a name="network-settings-schema"></a>Schéma des paramètres réseau
@@ -31,8 +31,7 @@ Les paramètres réseau spécifient la façon dont le .NET Framework se connecte
 |[\<connectionManagement>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|Spécifie le nombre maximal de connexions à destination des hôtes Internet.|  
 |[\<defaultProxy>, élément(paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Spécifie le serveur proxy utilisé pour les requêtes HTTP à destination d’Internet.|  
 |[\<mailSettings>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Contient les paramètres des options d’envoi de courrier.|  
-|[\<requestCaching>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Spécifie les modules utilisés pour demander des informations à partir des hôtes Internet.|  
-|[\<requestCaching>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net?displayProperty=nameWithType>.|  
+|[\<requestCaching>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Contrôle le mécanisme de mise en cache pour les demandes réseau.|  
 |[\<webRequestModules>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Spécifie les modules utilisés pour demander des informations à partir des hôtes Internet.|  
   
  Les paramètres d’URI spécifient la façon dont le .NET Framework gère les adresses web exprimées à l’aide d’URI (Uniform Resource Identifier). Le tableau suivant décrit la fonction de chaque élément de configuration enfant sous [\<Uri>, élément (paramètres d’Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md).  

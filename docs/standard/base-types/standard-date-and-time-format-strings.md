@@ -17,10 +17,10 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579806"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Chaînes de format de date et d'heure standard
@@ -29,12 +29,14 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
 -   Pour définir la chaîne qui résulte d'une opération de mise en forme.  
   
 -   Pour définir la représentation textuelle d'une valeur de date et d'heure pouvant être convertie en valeur <xref:System.DateTime> ou en valeur <xref:System.DateTimeOffset> lors d'une opération d'analyse.  
-  
- Les chaînes de format de date et d'heure standard peuvent être utilisées avec les valeurs <xref:System.DateTime> et <xref:System.DateTimeOffset>.  
-  
+
 > [!TIP]
 >  Vous pouvez télécharger l’[utilitaire de formatage](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), une application qui vous permet d’appliquer des chaînes de mise en forme à des valeurs numériques ou à des valeurs de date et d’heure, et d’afficher la chaîne de résultat.  
+
+Les chaînes de format de date et d'heure standard peuvent être utilisées avec les valeurs <xref:System.DateTime> et <xref:System.DateTimeOffset>.  
   
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+
 <a name="table"></a> Le tableau suivant décrit les spécificateurs de format de date et d’heure standard. Sauf indication contraire, un spécificateur de format de date et d'heure standard particulier produit une représentation sous forme de chaîne identique, qu'il soit utilisé avec une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset>. Pour plus d’informations sur l’utilisation de chaînes de format de date et d’heure standard, consultez la section [Remarques](#Notes).  
   
 |Spécificateur de format|Description|Exemples|  
@@ -63,17 +65,17 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
 -   Vous pouvez utiliser la culture par défaut (ou actuelle). L'exemple suivant affiche une date à l'aide du format de date courte de la culture actuelle. Dans ce cas, la culture actuelle est en-US.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
 -   Vous pouvez passer un objet <xref:System.Globalization.CultureInfo> représentant la culture dont la mise en forme sera utilisée à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte de la culture pt-BR.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   Vous pouvez passer un objet <xref:System.Globalization.DateTimeFormatInfo> qui fournit des informations de mise en forme à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte d'un objet <xref:System.Globalization.DateTimeFormatInfo> pour la culture hr-HR.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -90,7 +92,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Les chaînes de format standard peuvent également utilisées dans les opérations d'analyses avec les méthodes <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>. Pour que l'opération d'analyse aboutisse, ces méthodes requièrent qu'une chaîne d'entrée se conforme exactement à un modèle particulier. De nombreuses chaînes de format standard peuvent être mappées à plusieurs chaînes de format personnalisées, afin qu'une valeur de date et d'heure puisse être représentée dans divers formats et que l'opération d'analyse puisse continuer à aboutir. Vous pouvez déterminer les chaînes de format personnalisées qui correspondent à une chaîne de format standard en appelant la méthode <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType>. L’exemple suivant affiche les chaînes de format personnalisées qui sont mappées à la chaîne de format standard « d » (modèle de date courte).  
   
- [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  Les sections suivantes décrivent les spécificateurs de format standard pour les valeurs <xref:System.DateTime> et <xref:System.DateTimeOffset>.  
@@ -101,14 +103,14 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui contrôlent la mise en forme de la chaîne retournée.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Définit le format global de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DateSeparator%2A>|Définit la chaîne qui sépare les composants « année », « mois » et « jour » d'une date.|  
   
  L'exemple suivant utilise le spécificateur de format "d" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [Retour au tableau](#table)  
@@ -119,7 +121,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui contrôlent la mise en forme de la chaîne retournée.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Définit le format global de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Définit les noms de jours localisés qui peuvent apparaître dans la chaîne de résultat.|  
@@ -127,7 +129,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "D" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [Retour au tableau](#table)  
@@ -138,7 +140,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Les informations de mise en forme d'un objet <xref:System.Globalization.DateTimeFormatInfo> spécifique affectent la chaîne de résultat. Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé retourné par les propriétés <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> et <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A>|Définit le format du composant « date » de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Définit le format du composant « heure » de la chaîne de résultat.|  
@@ -150,7 +152,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "f" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [Retour au tableau](#table)  
@@ -161,7 +163,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé qui est retourné par la propriété <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Définit le format global de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Définit les noms de jours localisés qui peuvent apparaître dans la chaîne de résultat.|  
@@ -172,7 +174,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "F" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [Retour au tableau](#table)  
@@ -183,7 +185,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Les informations de mise en forme d'un objet <xref:System.Globalization.DateTimeFormatInfo> spécifique affectent la chaîne de résultat. Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé qui est retourné par les propriétés <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> et <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Définit le format du composant « date » de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Définit le format du composant « heure » de la chaîne de résultat.|  
@@ -194,7 +196,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "g" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [Retour au tableau](#table)  
@@ -205,7 +207,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Les informations de mise en forme d'un objet <xref:System.Globalization.DateTimeFormatInfo> spécifique affectent la chaîne de résultat. Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé qui est retourné par les propriétés <xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A?displayProperty=nameWithType> et <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortDatePattern%2A>|Définit le format du composant « date » de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Définit le format du composant « heure » de la chaîne de résultat.|  
@@ -216,7 +218,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "G" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [Retour au tableau](#table)  
@@ -227,14 +229,14 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui contrôlent la mise en forme de la chaîne retournée.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthDayPattern%2A>|Définit le format global de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Définit les noms de mois localisés qui peuvent apparaître dans la chaîne de résultat.|  
   
  L'exemple suivant utilise le spécificateur de format "m" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [Retour au tableau](#table)  
@@ -259,12 +261,12 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "o" pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
   
- [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  L'exemple suivant utilise le spécificateur de format "o" pour créer une chaîne mise en forme, puis restaure la valeur de date et d'heure d'origine en appelant une méthode `Parse` de date et d'heure.  
   
- [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [Retour au tableau](#table)  
@@ -275,7 +277,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  La chaîne de résultat est affectée par les propriétés suivantes de l'objet <xref:System.Globalization.DateTimeFormatInfo> retourné par la propriété <xref:System.Globalization.DateTimeFormatInfo.InvariantInfo%2A?displayProperty=nameWithType> qui représente la culture dite indifférente.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.RFC1123Pattern%2A>|Définit le format de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A>|Définit les noms de jours abrégés qui peuvent s'afficher dans la chaîne de résultat.|  
@@ -285,7 +287,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "r" pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
   
- [!code-csharp[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
   
  [Retour au tableau](#table)  
@@ -300,7 +302,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "s" pour afficher une valeur <xref:System.DateTime> et une valeur <xref:System.DateTimeOffset> sur un système situé dans le fuseau horaire Pacifique (États-Unis).  
   
- [!code-csharp[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
   
  [Retour au tableau](#table)  
@@ -311,7 +313,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Les informations de mise en forme d'un objet <xref:System.Globalization.DateTimeFormatInfo> spécifique affectent la chaîne de résultat. Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé qui est retourné par la propriété <xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A?displayProperty=nameWithType> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.ShortTimePattern%2A>|Définit le format du composant « heure » de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Définit la chaîne qui sépare les composants « heure », « minute » et « seconde » d'une heure.|  
@@ -320,7 +322,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "t" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [Retour au tableau](#table)  
@@ -331,7 +333,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé qui est retourné par la propriété <xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A?displayProperty=nameWithType> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.LongTimePattern%2A>|Définit le format du composant « heure » de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A>|Définit la chaîne qui sépare les composants « heure », « minute » et « seconde » d'une heure.|  
@@ -340,7 +342,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "T" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [Retour au tableau](#table)  
@@ -353,7 +355,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format « u » pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Standard#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#13)]  
   
  [Retour au tableau](#table)  
@@ -364,7 +366,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui peuvent contrôler la mise en forme de la chaîne retournée. Le spécificateur de format personnalisé qui est retourné par la propriété <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> de certaines cultures ne peut pas utiliser toutes les propriétés.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A>|Définit le format global de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.DayNames%2A>|Définit les noms de jours localisés qui peuvent apparaître dans la chaîne de résultat.|  
@@ -377,7 +379,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  L'exemple suivant utilise le spécificateur de format "U" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [Retour au tableau](#table)  
@@ -388,14 +390,14 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
   
  Le tableau suivant répertorie les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> qui contrôlent la mise en forme de la chaîne retournée.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |<xref:System.Globalization.DateTimeFormatInfo.YearMonthPattern%2A>|Définit le format global de la chaîne de résultat.|  
 |<xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A>|Définit les noms de mois localisés qui peuvent apparaître dans la chaîne de résultat.|  
   
  L'exemple suivant utilise le spécificateur de format "y" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [Retour au tableau](#table)  

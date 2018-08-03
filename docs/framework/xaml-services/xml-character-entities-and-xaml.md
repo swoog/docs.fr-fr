@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: 5ef489498cdc8716f7599124138f9ecf8945ac9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33564746"
 ---
 # <a name="xml-character-entities-and-xaml"></a>Entités de caractères XML et XAML
@@ -48,11 +48,11 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
 |---------------|------------|-----------|  
 |& (et commercial)|\&amp;|Doit être utilisé à la fois pour les valeurs d'attribut et pour le contenu d'un élément.|  
 |> (supérieur à)|\&gt;|Doit être utilisé pour la valeur d'attribut, mais le caractère > est acceptable comme contenu d'un élément à condition que le caractère < ne le précède pas.|  
-|< (inférieur à)|\&lt;|Doit être utilisé pour une valeur d’attribut, mais \< est acceptable comme contenu d’un élément en tant que > ne le suive pas.|  
+|< (inférieur à)|\&lt;|Doit être utilisé pour une valeur d’attribut, mais \< est acceptable comme contenu d’un élément en tant que > ne la respecte pas.|  
 |" (guillemets droits)|\&quot;|Doit être utilisé pour une valeur d'attribut, mais le guillemet droit (") est acceptable comme contenu d'un élément. Notez que les valeurs d'attributs peuvent être placées entre un guillemet droit unique (') ou des guillemets droit (") ; le caractère qui apparaît en premier définit ce qui est inclus dans la valeur d'attribut, et l'autre guillemet peut ensuite être utilisé comme littéral dans la valeur.|  
 |' (guillemet droit unique)|\&apos;|Doit être utilisé pour une valeur d'attribut, mais le guillemet droit unique (') est acceptable comme contenu d'un élément. Notez que les valeurs d'attributs peuvent être placées entre un guillemet droit unique (') ou des guillemets droit (") ; le caractère qui apparaît en premier définit ce qui est inclus dans la valeur d'attribut, et l'autre guillemet peut ensuite être utilisé comme littéral dans la valeur.|  
-|(mappages de caractères numériques)|&#*[entier]* ; ou & #x *[hex]*;|XAML prend en charge les mappages de caractères numériques dans de l'encodage actif.|  
-|(espace insécable)|&\#160 ; (en supposant que l’encodage UTF-8)|Pour les éléments de document dynamique ou les éléments qui acceptent du texte tels que le <xref:System.Windows.Controls.TextBox> WPF, les espaces insécables ne sont pas normalisés hors du balisage, même pour `xml:space="default"`. (Pour plus d’informations, consultez [traitement des espaces blancs en XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
+|(mappages de caractères numériques)|&#*[entier]* ; ou & #x *[hexa]*;|XAML prend en charge les mappages de caractères numériques dans de l'encodage actif.|  
+|(espace insécable)|&\#160 ; (en supposant que le codage UTF-8)|Pour les éléments de document dynamique ou les éléments qui acceptent du texte tels que le <xref:System.Windows.Controls.TextBox> WPF, les espaces insécables ne sont pas normalisés hors du balisage, même pour `xml:space="default"`. (Pour plus d’informations, consultez [blancs en XAML traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>Format de commentaire XML  
@@ -60,10 +60,10 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
   
 <a name="xml_processing_instructions"></a>   
 ## <a name="xml-processing-instructions"></a>Instructions de traitement XML  
- XAML gère les instructions de traitement XML conformément aux spécifications XML, qui déclarent que les instructions doivent être transmises. Traitement XAML dans les Services XAML .NET Framework n’utilise pas les instructions de traitement. Les autres infrastructures existantes qui utilisent XAML n'utilisent pas non plus d'instructions de traitement de XAML.  
+ XAML gère les instructions de traitement XML conformément aux spécifications XML, qui déclarent que les instructions doivent être transmises. XAML de traitement dans les Services XAML .NET Framework n’utilise pas les instructions de traitement. Les autres infrastructures existantes qui utilisent XAML n'utilisent pas non plus d'instructions de traitement de XAML.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du langage XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Extensions de balisage et XAML WPF](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
  [XamlName, grammaire](../../../docs/framework/xaml-services/xamlname-grammar.md)  
- [Traitement des espaces blancs en XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+ [Espace blanc dans XAML de traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)

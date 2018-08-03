@@ -8,10 +8,10 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33563041"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Comment : contrôler le remplissage d'une forme composite
@@ -19,7 +19,7 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
   
  **EvenOdd :** cette règle détermine si un point se trouve dans la région de remplissage en dessinant un rayon à partir de ce point vers l’infini dans n’importe quelle direction et en comptant le nombre de segments de tracé dans la forme donnée qui sont coupés par le rayon. Si ce nombre est impair, le point est à l’intérieur ; s’il est pair, le point est à l’extérieur.  
   
- Par exemple, le code XAML suivant crée une forme composite constituée d’une série d’anneaux concentriques (cible) avec une <xref:System.Windows.Media.GeometryGroup.FillRule%2A> la valeur <xref:System.Windows.Media.FillRule.EvenOdd>.  
+ Par exemple, le XAML ci-dessous crée une forme composite constituée d’une série d’anneaux concentriques (cible) avec un <xref:System.Windows.Media.GeometryGroup.FillRule%2A> défini sur <xref:System.Windows.Media.FillRule.EvenOdd>.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
@@ -35,7 +35,7 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
- À l’aide de l’exemple ci-dessus, la valeur <xref:System.Windows.Media.FillRule.Nonzero> pour <xref:System.Windows.Media.GeometryGroup.FillRule%2A> permet ainsi de l’illustration suivante :  
+ À l’aide de l’exemple ci-dessus, la valeur <xref:System.Windows.Media.FillRule.Nonzero> pour <xref:System.Windows.Media.GeometryGroup.FillRule%2A> donne par conséquent de l’illustration suivante :  
   
  ![Capture d'écran : valeur FillRule de NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
   
@@ -43,7 +43,7 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
   
  ![Diagramme : valeur de propriété FillRule égale à NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
   
- Pour mieux illustrer le comportement de <xref:System.Windows.Media.FillRule.Nonzero> une forme plus complexe avec des segments en cours d’exécution dans différentes directions de règle est requise. Le code XAML suivant crée une forme semblable que l’exemple précédent, sauf qu’il est créé avec un <xref:System.Windows.Media.PathGeometry> plutôt qu’un <xref:System.Windows.Media.EllipseGeometry> cercles concentriques plutôt que ce qui crée quatre arcs concentriques complètement fermés.  
+ Pour mieux illustrer le comportement de <xref:System.Windows.Media.FillRule.Nonzero> règle une forme plus complexe avec des segments en cours d’exécution dans différentes directions est requise. Le code XAML ci-dessous crée une forme semblable que l’exemple précédent, à ceci près qu’elle est créée avec un <xref:System.Windows.Media.PathGeometry> puis plutôt un <xref:System.Windows.Media.EllipseGeometry> cercles concentriques plutôt puis qui crée quatre cercles concentriques complètement fermés.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
@@ -55,7 +55,7 @@ Le <xref:System.Windows.Media.GeometryGroup.FillRule%2A> propriété d’un <xre
   
  ![Diagramme : valeur de propriété FillRule de NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **Remarque :** dans le cadre de <xref:System.Windows.Media.FillRule>, toutes les formes sont considérées comme fermées. S’il y a un écart dans un segment, dessinez une ligne imaginaire pour le fermer. Dans l’exemple ci-dessus, on observe existe de petits écarts au niveau des anneaux. On peut donc s’attendre à ce qu’un rayon qui traverse cet écart produise un résultat différent de celui d’un rayon qui s’étend dans une autre direction. Voici une illustration agrandie d’une de ces intervalles et la « segment imaginaire » (segment dessiné à des fins de l’application de la <xref:System.Windows.Media.FillRule>) qui le ferme.  
+ **Remarque :** dans le cadre de <xref:System.Windows.Media.FillRule>, toutes les formes sont considérées comme fermées. S’il y a un écart dans un segment, dessinez une ligne imaginaire pour le fermer. Dans l’exemple ci-dessus, on observe existe de petits écarts au niveau des anneaux. On peut donc s’attendre à ce qu’un rayon qui traverse cet écart produise un résultat différent de celui d’un rayon qui s’étend dans une autre direction. Voici une illustration agrandie d’un de ces écarts et du « segment imaginaire » (segment dessiné afin d’appliquer le <xref:System.Windows.Media.FillRule>) qui le referme.  
   
  ![Diagramme : pour FillRule, les segments sont toujours fermés](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   
