@@ -1,6 +1,6 @@
 ---
 title: Écriture des attributs personnalisés
-ms.date: 03/30/2017
+ms.date: 07/17/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,10 +19,10 @@ ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/02/2018
 ms.locfileid: "33574645"
 ---
 # <a name="writing-custom-attributes"></a>Écriture des attributs personnalisés
@@ -30,39 +30,36 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
   
  Les principales étapes permettant de concevoir correctement des classes d’attributs personnalisés sont les suivantes :  
   
--   [Application d’AttributeUsageAttribute](#cpconapplyingattributeusageattribute)  
+- [Application d’AttributeUsageAttribute](#applying-the-attributeusageattribute)  
   
--   [Déclaration de la classe d’attributs](#cpcondeclaringattributeclass)  
+- [Déclaration de la classe d’attributs](#declaring-the-attribute-class)  
   
--   [Déclaration des constructeurs](#cpcondeclaringconstructors)  
+- [Déclaration des constructeurs](#declaring-constructors)  
   
--   [Déclaration des propriétés](#cpcondeclaringproperties)  
+- [Déclaration des propriétés](#declaring-properties)  
   
- Cette section décrit chacune de ces étapes et se termine par un [exemple d’attribut personnalisé](#cpconcustomattributeexample).  
+ Cette section décrit chacune de ces étapes et se termine par un [exemple d’attribut personnalisé](#custom-attribute-example).  
   
-<a name="cpconapplyingattributeusageattribute"></a>   
 ## <a name="applying-the-attributeusageattribute"></a>Application d’AttributeUsageAttribute  
- Une déclaration d’attribut personnalisé commence par **AttributeUsageAttribute**, qui définit certaines caractéristiques clés de votre classe d’attributs. Par exemple, vous pouvez spécifier si votre attribut peut être hérité par d’autres classes ou spécifier les éléments auxquels l’attribut peut être appliqué. Le fragment de code suivant montre comment utiliser **AttributeUsageAttribute**.  
+ Une déclaration d’attribut personnalisé commence par <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>, qui définit certaines caractéristiques clés de votre classe d’attributs. Par exemple, vous pouvez spécifier si votre attribut peut être hérité par d’autres classes ou spécifier les éléments auxquels l’attribut peut être appliqué. Le fragment de code suivant montre comment utiliser l’attribut <xref:System.AttributeUsageAttribute>.  
   
  [!code-cpp[Conceptual.Attributes.Usage#5](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#5)]
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType> possède trois membres importants pour la création d’attributs personnalisés : [AttributeTargets](#cpconwritingcustomattributesanchor1), [Inherited](#cpconwritingcustomattributesanchor2)et [AllowMultiple](#cpconwritingcustomattributesanchor3).  
+ <xref:System.AttributeUsageAttribute> possède trois membres importants pour la création d’attributs personnalisés : [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property)et [AllowMultiple](#allowmultiple-property).  
   
-<a name="cpconwritingcustomattributesanchor1"></a>   
 ### <a name="attributetargets-member"></a>Membre AttributeTargets  
- Dans l’exemple précédent, **AttributeTargets.All** est spécifié, ce qui indique que cet attribut peut être appliqué à tous les éléments de programme. Vous pouvez également spécifier **AttributeTargets.Class**, qui indique que votre attribut peut être appliqué uniquement à une classe, ou **AttributeTargets.Method**, qui indique que votre attribut peut être appliqué uniquement à une méthode. Tous les éléments de programme peuvent être marqués pour description par un attribut personnalisé de cette manière.  
+ Dans l’exemple précédent, <xref:System.AttributeTargets.All?displayProperty=nameWithType> est spécifié, ce qui indique que cet attribut peut être appliqué à tous les éléments de programme. Vous pouvez également spécifier <xref:System.AttributeTargets.Class?displayProperty=nameWithType>, qui indique que votre attribut peut être appliqué uniquement à une classe, ou <xref:System.AttributeTargets.Method?displayProperty=nameWithType>, qui indique que votre attribut peut être appliqué uniquement à une méthode. Tous les éléments de programme peuvent être marqués pour description par un attribut personnalisé de cette manière.  
   
- Vous pouvez également transmettre plusieurs instances de <xref:System.AttributeTargets>. Le fragment de code suivant spécifie qu’un attribut personnalisé peut être appliqué à n’importe quelle classe ou méthode.  
+ Vous pouvez également transmettre plusieurs valeurs de <xref:System.AttributeTargets>. Le fragment de code suivant spécifie qu’un attribut personnalisé peut être appliqué à n’importe quelle classe ou méthode.  
   
  [!code-cpp[Conceptual.Attributes.Usage#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#6)]
  [!code-csharp[Conceptual.Attributes.Usage#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#6)]
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
-<a name="cpconwritingcustomattributesanchor2"></a>   
 ### <a name="inherited-property"></a>Propriété Inherited  
- La propriété <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> indique si votre attribut peut être hérité par les classes qui sont dérivées des classes auxquelles votre attribut est appliqué. Cette propriété reçoit un indicateur **true** (par défaut) ou **false** . Dans l’exemple suivant, la valeur `MyAttribute` par défaut de <xref:System.AttributeUsageAttribute.Inherited%2A> est **true**, tandis que la valeur `YourAttribute` de <xref:System.AttributeUsageAttribute.Inherited%2A> est **false**.  
+ La propriété <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> indique si votre attribut peut être hérité par les classes qui sont dérivées des classes auxquelles votre attribut est appliqué. Cette propriété reçoit un indicateur `true` (par défaut) ou `false`. Dans l’exemple suivant, `MyAttribute` affiche une valeur par défaut <xref:System.AttributeUsageAttribute.Inherited%2A> de `true`, tandis `YourAttribute` affiche une valeur <xref:System.AttributeUsageAttribute.Inherited%2A> de `false`.  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -80,11 +77,10 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
  [!code-csharp[Conceptual.Attributes.Usage#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#10)]
  [!code-vb[Conceptual.Attributes.Usage#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#10)]  
   
-<a name="cpconwritingcustomattributesanchor3"></a>   
 ### <a name="allowmultiple-property"></a>Propriété AllowMultiple  
- La propriété <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> indique si plusieurs instances de votre attribut peuvent exister sur un élément. Si la valeur est **true**, plusieurs instances sont autorisées, si la valeur est **false** (par défaut), une seule instance est autorisée.  
+ La propriété <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> indique si plusieurs instances de votre attribut peuvent exister sur un élément. Si la valeur est `true`, plusieurs instances sont autorisées, si la valeur est `false` (par défaut), une seule instance est autorisée.  
   
- Dans l’exemple suivant, la valeur `MyAttribute` par défaut de <xref:System.AttributeUsageAttribute.AllowMultiple%2A> est **true**, tandis que la valeur de `YourAttribute` est **false**.  
+ Dans l’exemple suivant, `MyAttribute` affiche une valeur par défaut <xref:System.AttributeUsageAttribute.AllowMultiple%2A> de `false`, tandis `YourAttribute` affiche une valeur de `true`.  
   
  [!code-cpp[Conceptual.Attributes.Usage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#11)]
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]
@@ -96,9 +92,8 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
  [!code-csharp[Conceptual.Attributes.Usage#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#13)]
  [!code-vb[Conceptual.Attributes.Usage#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#13)]  
   
- Si la propriété <xref:System.AttributeUsageAttribute.AllowMultiple%2A> et la propriété <xref:System.AttributeUsageAttribute.Inherited%2A> ont la valeur **true**, une classe héritée d’une autre classe peut hériter d’un attribut et avoir une autre instance du même attribut appliquée dans la même classe enfant. Si <xref:System.AttributeUsageAttribute.AllowMultiple%2A> a la valeur **false**, les valeurs des attributs de la classe parente sont remplacées par les nouvelles instances du même attribut dans la classe enfant.  
+ Si la propriété <xref:System.AttributeUsageAttribute.AllowMultiple%2A> et la propriété <xref:System.AttributeUsageAttribute.Inherited%2A> ont la valeur `true`, une classe héritée d’une autre classe peut hériter d’un attribut et avoir une autre instance du même attribut appliquée dans la même classe enfant. Si <xref:System.AttributeUsageAttribute.AllowMultiple%2A> a la valeur `false`, les valeurs des attributs de la classe parente sont remplacées par les nouvelles instances du même attribut dans la classe enfant.  
   
-<a name="cpcondeclaringattributeclass"></a>   
 ## <a name="declaring-the-attribute-class"></a>Déclaration de la classe d’attributs  
  Une fois que vous avez appliqué <xref:System.AttributeUsageAttribute>, vous pouvez commencer à définir les particularités de votre attribut. La déclaration d’une classe d’attributs ressemble à la déclaration d’une classe traditionnelle, comme illustré dans le code suivant.  
   
@@ -108,17 +103,16 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
   
  Cette définition de l’attribut illustre les points suivants :  
   
--   Les classes d’attributs doivent être déclarées comme des classes publiques.  
+- Les classes d’attributs doivent être déclarées comme des classes publiques.  
   
--   Par convention, le nom de la classe d’attributs se termine par le mot **Attribute**. Même si elle n’est pas obligatoire, cette convention est recommandée pour une meilleure lisibilité. Quand l’attribut est appliqué, l’inclusion du mot Attribute est facultative.  
+- Par convention, le nom de la classe d’attributs se termine par le mot **Attribute**. Même si elle n’est pas obligatoire, cette convention est recommandée pour une meilleure lisibilité. Quand l’attribut est appliqué, l’inclusion du mot Attribute est facultative.  
   
--   Toutes les classes d’attributs doivent hériter directement ou indirectement de **System.Attribute**.  
+- Toutes les classes d’attributs doivent hériter directement ou indirectement de <xref:System.Attribute?displayProperty=nameWithType>.  
   
--   Dans Microsoft Visual Basic, toutes les classes d’attributs personnalisés doivent avoir l’attribut **AttributeUsageAttribute** .  
+- Dans Microsoft Visual Basic, toutes les classes d’attributs personnalisés doivent avoir l’attribut <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>.  
   
-<a name="cpcondeclaringconstructors"></a>   
 ## <a name="declaring-constructors"></a>Déclaration des constructeurs  
- Les attributs sont initialisés avec des constructeurs de la même façon que les classes traditionnelles. Le fragment de code suivant illustre un constructeur d’attribut classique. Ce constructeur public accepte un paramètre et définit sa valeur sur une variable membre.  
+ Les attributs sont initialisés avec des constructeurs de la même façon que les classes traditionnelles. Le fragment de code suivant illustre un constructeur d’attribut classique. Ce constructeur public accepte un paramètre et définit une variable membre égale à sa valeur.  
   
  [!code-cpp[Conceptual.Attributes.Usage#15](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#15)]
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
@@ -132,7 +126,6 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
  [!code-csharp[Conceptual.Attributes.Usage#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#17)]
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
-<a name="cpcondeclaringproperties"></a>   
 ## <a name="declaring-properties"></a>Déclaration des propriétés  
  Si vous voulez définir un paramètre nommé ou fournir un moyen facile de retourner les valeurs stockées par votre attribut, déclarez une [propriété](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Les propriétés d’attribut doivent être déclarées comme des entités publiques avec une description du type de données à retourner. Définissez la variable qui contient la valeur de votre propriété et associez-la aux méthodes **get** et **set** . L’exemple de code suivant montre comment implémenter une propriété simple dans votre attribut.  
   
@@ -140,7 +133,6 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
  [!code-vb[Conceptual.Attributes.Usage#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#16)]  
   
-<a name="cpconcustomattributeexample"></a>   
 ## <a name="custom-attribute-example"></a>exemple d’attribut personnalisé  
  Cette section intègre les informations précédentes et montre comment concevoir un attribut simple qui documente des informations sur l’auteur d’une section de code. L’attribut de cet exemple stocke le nom et le niveau du programmeur, et indique si le code a été révisé. Il utilise trois variables privées pour stocker les valeurs réelles à enregistrer. Chaque variable est représentée par une propriété publique qui obtient et définit les valeurs. Enfin, le constructeur est défini avec deux paramètres obligatoires.  
   
@@ -158,5 +150,5 @@ Pour concevoir vos propres attributs personnalisés, vous n’avez pas besoin de
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute>  
+ <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
  [Attributs](../../../docs/standard/attributes/index.md)
