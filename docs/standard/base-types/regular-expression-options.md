@@ -15,10 +15,10 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f3c229b0fc463863b7113c7ba73890b84e86553b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579650"
 ---
 # <a name="regular-expression-options"></a>Options des expressions régulières
@@ -275,7 +275,7 @@ ms.locfileid: "33579650"
   
 -   L'espace blanc dans une classe de caractères est toujours interprété de façon littérale. Par exemple, le modèle d'expression régulière `[ .,;:]` met en correspondance n'importe quel espace blanc, point, virgule, point-virgule ou symbole deux-points unique.  
   
--   L’espace blanc n’est pas autorisé dans un quantificateur entre accolades, comme `{`*n*`}`, `{`*n*`,}`, and `{`*n*`,`*m*`}`. Par exemple, le modèle d'expression régulière `\d{1. 3}` ne peut pas mettre en correspondance les séquences d'un à trois chiffres, car il contient un espace blanc.  
+-   L’espace blanc n’est pas autorisé dans un quantificateur entre accolades, comme `{`*n*`}`, `{`*n*`,}`, and `{`*n*`,`*m*`}`. Par exemple, le modèle d'expression régulière `\d{1, 3}` ne peut pas mettre en correspondance les séquences d'un à trois chiffres, car il contient un espace blanc.  
   
 -   L'espace blanc n'est pas autorisé dans une séquence de caractères qui introduit un élément de langage. Exemple :  
   
