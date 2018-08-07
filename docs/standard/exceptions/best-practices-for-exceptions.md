@@ -1,5 +1,5 @@
 ---
-title: Meilleures pratiques pour les exceptions
+title: Bonnes pratiques pour les exceptions
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,10 +12,10 @@ ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd38b59e39f938d6347457100243f09935444d88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33578078"
 ---
 # <a name="best-practices-for-exceptions"></a>Bonnes pratiques pour les exceptions
@@ -104,17 +104,19 @@ Par exemple, sur les implémentations .NET qui prennent en charge des domaines d
 
 - Si les domaines ne partagent pas une base d'application commune, signez l'assembly qui contient les informations sur les exceptions à l'aide d'un nom fort et déployez l'assembly dans le Global Assembly Cache.
 
-## <a name="include-a-localized-description-string-in-every-exception"></a>Inclure une chaîne de description localisée dans chaque exception
-
-Le message d’erreur que l’utilisateur voit est dérivé de la chaîne de description de l’exception qui a été levée et non du nom de la classe d’exception.
-
 ## <a name="use-grammatically-correct-error-messages"></a>Utiliser des messages d’erreur grammaticalement corrects
 
-Écrivez des phrases claires et insérez une ponctuation finale. Chaque phrase de la chaîne de description d'une exception doit se terminer par un point. Par exemple, « La table du journal a débordé. » est une chaîne de description appropriée.
+Écrivez des phrases claires et insérez une ponctuation finale. Chaque phrase de la chaîne affectée à la propriété <xref:System.Exception.Message?displayProperty=nameWithType> doit se terminer par un point. Par exemple, « La table du journal a débordé. » est une chaîne de message appropriée.
+
+## <a name="include-a-localized-string-message-in-every-exception"></a>Inclure une chaîne de message localisée dans chaque exception
+
+Le message d’erreur que l’utilisateur voit est dérivé de la propriété <xref:System.Exception.Message?displayProperty=nameWithType> de l’exception qui a été levée, et non pas du nom de la classe d’exception. En règle générale, vous affectez une valeur à la propriété <xref:System.Exception.Message?displayProperty=nameWithType> en passant la chaîne de message à l’argument `message` d’un [constructeur d’exception](xref:System.Exception.%23ctor%2A). 
+
+Pour les applications localisées, vous devez fournir une chaîne de message localisée pour chaque exception que votre application peut lever. Vous utilisez des fichiers de ressources pour fournir les messages d’erreur localisés. Pour plus d’informations sur la localisation d’applications et la récupération des chaînes localisées, consultez [Ressources dans les applications pour poste de travail](../../framework/resources/index.md) et <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
 ## <a name="in-custom-exceptions-provide-additional-properties-as-needed"></a>Dans les exceptions personnalisées, fournir des propriétés supplémentaires si nécessaire
 
-Fournissez des propriétés supplémentaires (autres que la chaîne de description) pour une exception uniquement s'il existe un scénario par programmation dans lequel les informations supplémentaires sont utiles. Par exemple, la classe <xref:System.IO.FileNotFoundException> fournit la propriété <xref:System.IO.FileNotFoundException.FileName>.
+Spécifiez des propriétés supplémentaires (en plus de la chaîne de message personnalisée) pour une exception seulement dans le cas d’un scénario du programme où les informations supplémentaires sont utiles. Par exemple, la classe <xref:System.IO.FileNotFoundException> fournit la propriété <xref:System.IO.FileNotFoundException.FileName>.
 
 ## <a name="place-throw-statements-so-that-the-stack-trace-will-be-helpful"></a>Placer des instructions throw pour que la trace de la pile soit utile
 

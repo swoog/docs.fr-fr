@@ -1,6 +1,6 @@
 ---
 title: Modèle asynchrone basé sur les événements (EAP)
-ms.date: 03/30/2017
+ms.date: 07/23/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - asynchronous calls
@@ -10,38 +10,44 @@ ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7811113244d8c5f7d79a55ebb01f04e99e9bd2a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33567804"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Modèle asynchrone basé sur les événements (EAP)
+
 Il existe plusieurs façons d’exposer des fonctionnalités asynchrones à du code client. Le modèle asynchrone basé sur les événements recommande une méthode pour obtenir des classes un comportement asynchrone.  
   
 > [!NOTE]
->  À partir du [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], la bibliothèque parallèle de tâches fournit un nouveau modèle de programmation asynchrone et parallèle. Pour plus d’informations, consultez la page [Programmation parallèle](../../../docs/standard/parallel-programming/index.md).  
+> À compter du .NET Framework 4, la bibliothèque parallèle de tâches propose un nouveau modèle pour la programmation asynchrone et parallèle. Pour plus d’informations, consultez [Bibliothèque parallèle de tâches](../parallel-programming/task-parallel-library-tpl.md) et [Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](task-based-asynchronous-pattern-tap.md).
   
-## <a name="in-this-section"></a>Dans cette section  
- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+## <a name="in-this-section"></a>Dans cette section
+
+ [Vue d’ensemble du modèle asynchrone basé sur les événements](event-based-asynchronous-pattern-overview.md)  
  Explique comment le modèle asynchrone basé sur les événements permet de profiter des avantages des applications multithread tout en masquant de nombreux problèmes complexes inhérents à la conception multithread.  
   
- [Implémentation du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+ [Implémentation du modèle asynchrone basé sur les événements](implementing-the-event-based-asynchronous-pattern.md)  
  Décrit la façon standardisée de placer dans un package une classe qui possède des fonctionnalités asynchrones.  
   
- [Meilleures pratiques pour implémenter le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+ [Meilleures pratiques pour implémenter le modèle asynchrone basé sur les événements](best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
  Décrit les exigences liées à l’exposition de fonctionnalités asynchrones conformément au modèle asynchrone basé sur les événements.  
   
- [Choix du moment auquel implémenter le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- Explique dans quelles situations vous devez implémenter le modèle asynchrone basé sur les événements plutôt que le modèle <xref:System.IAsyncResult>.  
+ [Choix du moment auquel implémenter le modèle asynchrone basé sur les événements](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
+ Explique comment savoir quand vous devez implémenter le modèle asynchrone basé sur les événements au lieu du modèle <xref:System.IAsyncResult> représenté par le [ modèle de programmation asynchrone (APM)](asynchronous-programming-model-apm.md).
   
- [Procédure pas à pas : implémenter un composant qui prend en charge le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- Illustre la création d’un composant qui implémente le modèle asynchrone basé sur les événements. Il est implémenté à l'aide de classes d'assistance à partir de l'espace de noms <xref:System.ComponentModel?displayProperty=nameWithType>, ce qui garantit le bon fonctionnement du composant avec n'importe quel modèle d'application.  
+ [Guide pratique pour implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements](component-that-supports-the-event-based-asynchronous-pattern.md)  
+ Décrit comment créer un composant qui implémente le modèle asynchrone basé sur les événements. Il est implémenté à l'aide de classes d'assistance à partir de l'espace de noms <xref:System.ComponentModel?displayProperty=nameWithType>, ce qui garantit le bon fonctionnement du composant avec n'importe quel modèle d'application.  
+
+ [Guide pratique pour implémenter un client du modèle asynchrone basé sur des événements](how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)  
+ Décrit comment créer un client qui utilise un composant implémentant le modèle asynchrone basé sur les événements.
   
- [Guide pratique : utiliser des composants qui prennent en charge le modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
+ [Guide pratique : utiliser des composants qui prennent en charge le modèle asynchrone basé sur les événements](how-to-use-components-that-support-the-event-based-asynchronous-pattern.md)  
  Explique comment créer un composant qui prend en charge le modèle asynchrone basé sur les événements.  
   
-## <a name="reference"></a>Référence  
+## <a name="reference"></a>Référence
+
  <xref:System.ComponentModel.AsyncOperation>  
  Décrit la classe <xref:System.ComponentModel.AsyncOperation> et propose des liens vers tous ses membres.  
   
@@ -51,18 +57,16 @@ Il existe plusieurs façons d’exposer des fonctionnalités asynchrones à du c
  <xref:System.ComponentModel.BackgroundWorker>  
  Décrit le composant <xref:System.ComponentModel.BackgroundWorker> et propose des liens vers tous ses membres.  
   
-## <a name="related-sections"></a>Rubriques connexes  
- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+## <a name="related-sections"></a>Rubriques connexes
+
+ [La bibliothèque parallèle de tâches](../parallel-programming/task-parallel-library-tpl.md)  
  Décrit un modèle de programmation pour les opérations asynchrones et parallèles.  
   
  [Thread](../../../docs/standard/threading/index.md)  
- Décrit les fonctionnalités de multithreading du .NET Framework.  
+ Décrit les fonctionnalités de multithreading dans .NET.  
   
- [Thread](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
- Décrit les fonctionnalités de multithreading des langages C# et Visual Basic.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Bonnes pratiques de threading géré](../../../docs/standard/threading/managed-threading-best-practices.md)  
- [Événements](../../../docs/standard/events/index.md)  
- [Multithreading dans les composants](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- [Modèles de conception de la programmation asynchrone](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
+## <a name="see-also"></a>Voir aussi
+
+ [Bonnes pratiques de threading géré](../threading/managed-threading-best-practices.md)  
+ [Événements](../events/index.md)  
+ [Modèles de conception de la programmation asynchrone](index.md)

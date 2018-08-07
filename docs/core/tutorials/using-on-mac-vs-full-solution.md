@@ -5,17 +5,17 @@ author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
 ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36314696"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac
 
 Visual Studio pour Mac fournit un environnement de développement intégré (IDE) complet pour le développement d’applications .NET Core. Cette rubrique vous guide lors de la génération d’une solution .NET Core qui inclut une bibliothèque réutilisable et un test unitaire.
 
-Ce didacticiel vous montre comment créer une application qui accepte un terme de recherche et une chaîne de texte saisis par l’utilisateur, compte le nombre de fois où le terme de recherche apparaît dans la chaîne à l’aide d’une méthode dans une bibliothèque de classes puis retourne le résultat à l’utilisateur. La solution inclut également des tests unitaires pour la bibliothèque de classes servant d’introduction aux concepts de développement avec tests (TDD). Si vous préférez poursuivre le didacticiel avec un exemple complet, téléchargez l’[exemple de solution](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ce didacticiel vous montre comment créer une application qui accepte un terme de recherche et une chaîne de texte saisis par l’utilisateur, compte le nombre de fois où le terme de recherche apparaît dans la chaîne à l’aide d’une méthode dans une bibliothèque de classes puis retourne le résultat à l’utilisateur. La solution inclut également des tests unitaires pour la bibliothèque de classes servant d’introduction aux concepts des tests unitaires. Si vous préférez poursuivre le didacticiel avec un exemple complet, téléchargez l’[exemple de solution](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
 > Vos commentaires sont extrêmement précieux. Il existe deux moyens de transmettre vos commentaires à l’équipe de développement sur Visual Studio pour Mac :
@@ -106,15 +106,15 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
 
    ![Test unitaire initial pour vérifier GetWordCount dans la fenêtre principale de l’IDE](./media/using-on-mac-vs-full-solution/vsmacfull08.png)
 
-   Lorsque vous utilisez TDD, il est important de faire échouer un test afin de confirmer que sa logique de test est correcte. La méthode passe le nom « Jack » (majuscule) et une chaîne avec « Jack » et « jack » (majuscules et minuscules). Si la méthode `GetWordCount` fonctionne correctement, elle retourne deux instances du mot recherché. Pour faire échouer ce test intentionnellement, vous implémentez d’abord le test en déclarant que deux instances du mot recherché « Jack » ne sont pas retournées par la méthode `GetWordCount`. Passez à l’étape suivante pour faire échouer le test intentionnellement.
+   Il est important de faire échouer un nouveau test une fois, afin de vérifier que sa logique de test est correcte. La méthode passe le nom « Jack » (majuscule) et une chaîne avec « Jack » et « jack » (majuscules et minuscules). Si la méthode `GetWordCount` fonctionne correctement, elle retourne deux instances du mot recherché. Pour faire échouer ce test intentionnellement, vous implémentez d’abord le test en déclarant que deux instances du mot recherché « Jack » ne sont pas retournées par la méthode `GetWordCount`. Passez à l’étape suivante pour faire échouer le test intentionnellement.
 
 1. Ouvrez le panneau **Tests unitaires** sur le côté droit de l’écran.
 
-![Panneau Tests unitaires](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
+   ![Panneau Tests unitaires](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanel.png)
 
 1. Cliquez sur l’icône **Ancrer** pour garder le panneau ouvert.
 
-![Icône Ancrer du panneau Tests unitaires](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
+   ![Icône Ancrer du panneau Tests unitaires](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Cliquez sur le bouton **Tout exécuter**.
    

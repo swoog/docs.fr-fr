@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827337"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Création d’images Docker pour les applications .NET Core
@@ -34,7 +34,7 @@ Lors de la création d’images Docker pour les développeurs, nous nous sommes 
 * Images utilisées pour exécuter des applications .NET Core
 
 Pourquoi trois images ?
-Lors du développement, de la génération et de l’exécution d’applications en conteneur, nous avons des priorités différentes.
+Lors du développement, de la génération et de l’exécution d’applications conteneurisées, nous avons des priorités différentes.
 
 * **Développement :** la priorité porte sur la rapidité avec laquelle vous pouvez apporter des modifications de façon itérative, et la possibilité de déboguer les modifications. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de les voir rapidement.
 
@@ -83,6 +83,17 @@ Versions les plus récentes de chaque variante :
 * [Cet exemple d’ASP.NET Core Docker](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) montre un modèle des meilleures pratiques pour la création d’images Docker pour les applications ASP.NET Core pour la production. L’exemple s’applique aux conteneurs Linux et Windows.
 
 * Cet exemple de Docker .NET Core montre un modèle des meilleures pratiques pour la [création d’images Docker pour les applications .NET Core pour la production.](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp)
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>Transférer le schéma de demande et l’adresse IP d’origine
+
+Les serveurs proxy, les équilibreurs de charge et autres appliances réseau masquent souvent les informations sur une requête avant qu’elle n’atteigne l’application conteneurisée :
+
+* Quand les requêtes HTTPS sont transmises par proxy via HTTP, le schéma d’origine (HTTPS) est perdu et doit être transféré dans un en-tête.
+* Étant donné qu’une application reçoit une requête du proxy et non pas de sa source réelle sur Internet ou sur le réseau d’entreprise, l’adresse IP du client d’origine doit également être transférée dans un en-tête.
+
+Ces informations peuvent être importantes pour traiter les requêtes, par exemple dans les redirections, l’authentification, la génération de lien, l’évaluation des stratégies et la géolocalisation des clients.
+
+Pour transférer le schéma et l’adresse IP d’origine à une application ASP.NET Core conteneurisée, utilisez le middleware (intergiciel) d’en-têtes transférés. Pour plus d’informations, consultez [Configurer ASP.NET Core pour l’utilisation de serveurs proxy et d’équilibreurs de charge](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>Votre première application Docker ASP.NET Core
 
@@ -258,7 +269,6 @@ Félicitations ! Vous venez de :
 > * Exécuter l’exemple d’application ASP.NET localement
 > * Générer et exécuter l’exemple avec Docker pour des conteneurs Linux
 > * Générer et exécuter l’exemple avec Docker pour des conteneurs Windows
-
 
 **Étapes suivantes**
 

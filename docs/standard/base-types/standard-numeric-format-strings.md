@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208170"
 ---
 # <a name="standard-numeric-format-strings"></a>Chaînes de format numériques standard
@@ -67,7 +67,7 @@ Les chaînes de format numériques standard sont prises en charge par :
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Utilisation de chaînes de format numériques standard  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 Une chaîne de format numérique standard peut être utilisée pour définir la mise en forme d'une valeur numérique de l'une des deux manières suivantes :  
   
@@ -166,7 +166,7 @@ Une chaîne de format numérique standard peut être utilisée pour définir la 
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Spécificateur de format à virgule fixe ("F")  
- Le spécificateur de format à virgule fixe ("F") convertit un nombre en chaîne sous la forme « -ddd.ddd… » où chaque « d » indique un chiffre (0-9). La chaîne commence par un signe moins si le nombre est négatif.  
+ Le spécificateur de format à virgule fixe ("F") convertit un nombre en chaîne au format "-ddd.ddd…" où chaque "d" correspond à un chiffre (0-9). La chaîne commence par un signe moins si le nombre est négatif.  
   
  Le spécificateur de précision indique le nombre de décimales voulu. Si le spécificateur de précision est omis, la propriété <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType> actuelle fournit la précision numérique.  
   
@@ -350,7 +350,7 @@ Pour les valeurs <xref:System.Double>, le spécificateur de format "R" ne parvie
   
 ## <a name="example"></a>Exemple  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  L'exemple suivant met en forme une valeur numérique intégrale et à virgule flottante en utilisant la culture en-US et tous les spécificateurs de format numériques standard. Cet exemple utilise deux types numériques particuliers (<xref:System.Double> et <xref:System.Int32>), mais produirait des résultats similaires pour n'importe lequel des autres types numériques de base (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> et <xref:System.Single>).  
   
