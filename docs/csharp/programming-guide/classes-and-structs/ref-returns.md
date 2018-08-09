@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339616"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Retours ref et variables locales ref
@@ -35,16 +35,19 @@ En outre, les valeurs de retour de référence ne sont pas autorisées sur les m
  
 ## <a name="defining-a-ref-return-value"></a>Définition d’une valeur de retour de référence
 
-Vous définissez une valeur de retour de référence en ajoutant le mot clé [ref](../../language-reference/keywords/ref.md) au type de retour de la signature de méthode. Par exemple, la signature suivante indique que la propriété `GetContactInformation` retourne une référence à un objet `Person` à l’appelant :
+Une méthode qui retourne une *valeur de retour de référence* doit remplir les deux conditions suivantes :
+
+- Dans la signature de méthode, le mot clé [ref](../../language-reference/keywords/ref.md) précède le type de retour.
+- Pour chaque instruction [return](../../language-reference/keywords/return.md) dans le corps de la méthode, le mot clé [ref](../../language-reference/keywords/ref.md) précède le nom de l’instance retournée.
+
+L’exemple suivant montre une méthode qui remplit ces conditions et retourne une référence à un objet `Person` nommé `p` :
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
-```
-
-De plus, le nom de l’objet retourné par chaque instruction [return](../../language-reference/keywords/return.md) dans le corps de la méthode doit être précédé du mot clé [ref](../../language-reference/keywords/ref.md). Par exemple, l’instruction `return` suivante retourne une référence à un objet `Person` nommé `p` :
-
-```csharp
-return ref p;
+public ref Person GetContactInformation(string fname, string lname)
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>Utilisation d’une valeur de retour de référence

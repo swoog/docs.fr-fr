@@ -4,10 +4,10 @@ description: Découvrir la programmation déclarative à l’aide des attributs 
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
 ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "34312233"
 ---
 # <a name="attributes"></a>Attributs
@@ -24,7 +24,11 @@ Toutes les classes d’attributs dérivent de la classe de base <xref:System.Att
 
 Cet exemple joint un `HelpAttribute` à la classe `Widget`. Il ajoute un autre `HelpAttribute` à la méthode `Display` dans la classe. Les constructeurs publics d’une classe d’attributs contrôlent les informations qui doivent être fournies lorsque l’attribut est joint à une entité de programme. Des informations supplémentaires peuvent être fournies en référençant les propriétés en lecture-écriture publiques de la classe d’attributs (comme la référence à la propriété `Topic`, précédemment).
 
-Lorsqu’un attribut particulier est demandé par réflexion, le constructeur de la classe d’attributs est appelé avec les informations fournies dans la source du programme, et l’instance d’attribut qui en résulte est retournée. Si des informations supplémentaires ont été fournies via les propriétés, ces propriétés sont définies sur les valeurs données avant que le renvoi de l’instance de l’attribut.
+Les métadonnées définies par les attributs peuvent être lues et manipulées par réflexion lors de l’exécution. Lorsqu’un attribut particulier est demandé à l’aide de cette technique, le constructeur de la classe d’attributs est appelé avec les informations fournies dans la source du programme, et l’instance d’attribut qui en résulte est retournée. Si des informations supplémentaires ont été fournies via les propriétés, ces propriétés sont définies sur les valeurs données avant que le renvoi de l’instance de l’attribut.
+
+L’exemple de code suivant montre comment obtenir les `HelpAttribute` instances associées à la classe `Widget` et sa méthode `Display`.
+
+[!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
 [Précédent](delegates.md)
