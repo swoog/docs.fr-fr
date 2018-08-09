@@ -1,105 +1,174 @@
 ---
 title: Extensions de type (F#)
 description: 'Découvrez comment les extensions de type F # permettent de que vous ajoutez de nouveaux membres à un type d’objet précédemment défini.'
-ms.date: 05/16/2016
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566884"
 ---
-# <a name="type-extensions"></a><span data-ttu-id="6ec42-103">Extensions de type</span><span class="sxs-lookup"><span data-stu-id="6ec42-103">Type Extensions</span></span>
+# <a name="type-extensions"></a><span data-ttu-id="49466-103">Extensions de type</span><span class="sxs-lookup"><span data-stu-id="49466-103">Type extensions</span></span>
 
-<span data-ttu-id="6ec42-104">Extensions de type vous permettent d’ajouter de nouveaux membres à un type d’objet précédemment défini.</span><span class="sxs-lookup"><span data-stu-id="6ec42-104">Type extensions let you add new members to a previously defined object type.</span></span>
+<span data-ttu-id="49466-104">Extensions de type (également appelé _augmentations_) est une famille de fonctionnalités qui vous permettent d’ajouter de nouveaux membres à un type d’objet précédemment défini.</span><span class="sxs-lookup"><span data-stu-id="49466-104">Type extensions (also called _augmentations_) are a family of features that let you add new members to a previously defined object type.</span></span> <span data-ttu-id="49466-105">Les trois fonctionnalités sont :</span><span class="sxs-lookup"><span data-stu-id="49466-105">The three features are:</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="6ec42-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6ec42-105">Syntax</span></span>
+* <span data-ttu-id="49466-106">Extensions de type intrinsèques</span><span class="sxs-lookup"><span data-stu-id="49466-106">Intrinsic type extensions</span></span>
+* <span data-ttu-id="49466-107">Extensions de type facultatif</span><span class="sxs-lookup"><span data-stu-id="49466-107">Optional type extensions</span></span>
+* <span data-ttu-id="49466-108">Méthodes d’extension</span><span class="sxs-lookup"><span data-stu-id="49466-108">Extension methods</span></span>
+
+<span data-ttu-id="49466-109">Chacun peut être utilisé dans différents scénarios et a différents compromis.</span><span class="sxs-lookup"><span data-stu-id="49466-109">Each can be used in different scenarios and has different tradeoffs.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="49466-110">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="49466-110">Syntax</span></span>
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="6ec42-106">Notes</span><span class="sxs-lookup"><span data-stu-id="6ec42-106">Remarks</span></span>
-<span data-ttu-id="6ec42-107">Il existe deux formes d’extensions de type qui ont des comportements et une syntaxe légèrement différente.</span><span class="sxs-lookup"><span data-stu-id="6ec42-107">There are two forms of type extensions that have slightly different syntax and behavior.</span></span> <span data-ttu-id="6ec42-108">Un *extension intrinsèque* est une extension qui s’affiche dans le même espace de noms ou module, dans le même fichier source et dans le même assembly (DLL ou fichier exécutable) que le type étendu.</span><span class="sxs-lookup"><span data-stu-id="6ec42-108">An *intrinsic extension* is an extension that appears in the same namespace or module, in the same source file, and in the same assembly (DLL or executable file) as the type being extended.</span></span> <span data-ttu-id="6ec42-109">Un *extension facultative* est une extension qui apparaît en dehors du module, espace de noms ou assembly du type en cours d’extension d’origine.</span><span class="sxs-lookup"><span data-stu-id="6ec42-109">An *optional extension* is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span> <span data-ttu-id="6ec42-110">Les extensions intrinsèques apparaissent sur le type lorsque le type est examiné par réflexion, mais pas des extensions facultatives.</span><span class="sxs-lookup"><span data-stu-id="6ec42-110">Intrinsic extensions appear on the type when the type is examined by reflection, but optional extensions do not.</span></span> <span data-ttu-id="6ec42-111">Facultatif pour les extensions doivent être dans des modules et sont uniquement dans la portée lorsque le module qui contient l’extension est ouvert.</span><span class="sxs-lookup"><span data-stu-id="6ec42-111">Optional extensions must be in modules, and they are only in scope when the module that contains the extension is open.</span></span>
+## <a name="intrinsic-type-extensions"></a><span data-ttu-id="49466-111">Extensions de type intrinsèques</span><span class="sxs-lookup"><span data-stu-id="49466-111">Intrinsic type extensions</span></span>
 
-<span data-ttu-id="6ec42-112">Dans la syntaxe précédente, *typename* représente le type qui est étendu.</span><span class="sxs-lookup"><span data-stu-id="6ec42-112">In the previous syntax, *typename* represents the type that is being extended.</span></span> <span data-ttu-id="6ec42-113">N’importe quel type accessible peut être étendu, mais le nom de type doit être un nom de type réel, pas une abréviation de type.</span><span class="sxs-lookup"><span data-stu-id="6ec42-113">Any type that can be accessed can be extended, but the type name must be an actual type name, not a type abbreviation.</span></span> <span data-ttu-id="6ec42-114">Vous pouvez définir plusieurs membres dans une extension de type.</span><span class="sxs-lookup"><span data-stu-id="6ec42-114">You can define multiple members in one type extension.</span></span> <span data-ttu-id="6ec42-115">Le *auto-identificateur* représente l’instance de l’objet qui est appelée, comme dans des membres ordinaires.</span><span class="sxs-lookup"><span data-stu-id="6ec42-115">The *self-identifier* represents the instance of the object being invoked, just as in ordinary members.</span></span>
+<span data-ttu-id="49466-112">Une extension de type intrinsèque est une extension de type qui étend un type défini par l’utilisateur.</span><span class="sxs-lookup"><span data-stu-id="49466-112">An intrinsic type extension is a type extension that extends a user-defined type.</span></span>
 
-<span data-ttu-id="6ec42-116">Le `end` mot clé est facultatif dans la syntaxe simplifiée.</span><span class="sxs-lookup"><span data-stu-id="6ec42-116">The `end` keyword is optional in lightweight syntax.</span></span>
+<span data-ttu-id="49466-113">Extensions de type intrinsèques doivent être définies dans le même fichier **et** dans le même espace de noms ou module en tant que le type de la société étend.</span><span class="sxs-lookup"><span data-stu-id="49466-113">Intrinsic type extensions must be defined in the same file **and** in the same namespace or module as the type they're extending.</span></span> <span data-ttu-id="49466-114">N’importe quel autre définition les entraîne en cours [extensions de type facultatif](type-extensions.md#optional-type-extensions).</span><span class="sxs-lookup"><span data-stu-id="49466-114">Any other definition will result in them being [optional type extensions](type-extensions.md#optional-type-extensions).</span></span>
 
-<span data-ttu-id="6ec42-117">Les membres définis dans les extensions de type peuvent être utilisés comme les autres membres sur un type de classe.</span><span class="sxs-lookup"><span data-stu-id="6ec42-117">Members defined in type extensions can be used just like other members on a class type.</span></span> <span data-ttu-id="6ec42-118">Comme d’autres membres, ils peuvent être statiques ou membres d’instance.</span><span class="sxs-lookup"><span data-stu-id="6ec42-118">Like other members, they can be static or instance members.</span></span> <span data-ttu-id="6ec42-119">Ces méthodes sont également appelés *les méthodes d’extension*; propriétés sont appelées *propriétés d’extension*, et ainsi de suite.</span><span class="sxs-lookup"><span data-stu-id="6ec42-119">These methods are also known as *extension methods*; properties are known as *extension properties*, and so on.</span></span> <span data-ttu-id="6ec42-120">Membres d’extension facultatifs sont compilés en membres statiques pour lequel l’instance d’objet est passée implicitement comme premier paramètre.</span><span class="sxs-lookup"><span data-stu-id="6ec42-120">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="6ec42-121">Toutefois, ils agissent comme si elles étaient des membres d’instance ou des membres statiques en fonction de la façon dont ils sont déclarés.</span><span class="sxs-lookup"><span data-stu-id="6ec42-121">However, they act as if they were instance members or static members according to how they are declared.</span></span> <span data-ttu-id="6ec42-122">Membres d’extension implicites sont inclus en tant que membres du type et peuvent être utilisés sans restriction.</span><span class="sxs-lookup"><span data-stu-id="6ec42-122">Implicit extension members are included as members of the type and can be used without restriction.</span></span>
-
-<span data-ttu-id="6ec42-123">Méthodes d’extension ne peut pas être des méthodes virtuelles ou abstraites.</span><span class="sxs-lookup"><span data-stu-id="6ec42-123">Extension methods cannot be virtual or abstract methods.</span></span> <span data-ttu-id="6ec42-124">Elles peuvent surcharger d’autres méthodes portant le même nom, mais le compilateur donne la préférence des méthodes d’extension non dans le cas d’un appel ambigu.</span><span class="sxs-lookup"><span data-stu-id="6ec42-124">They can overload other methods of the same name, but the compiler gives preference to non-extension methods in the case of an ambiguous call.</span></span>
-
-<span data-ttu-id="6ec42-125">Si plusieurs extensions de type intrinsèque existent pour un type, tous les membres doivent être uniques.</span><span class="sxs-lookup"><span data-stu-id="6ec42-125">If multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="6ec42-126">Pour les extensions de type facultatif, les membres dans différentes extensions de type vers le même type peuvent avoir le même nom.</span><span class="sxs-lookup"><span data-stu-id="6ec42-126">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="6ec42-127">Erreurs d’ambiguïté se produisent uniquement si le code client ouvre deux portées différentes qui définissent les mêmes noms de membre.</span><span class="sxs-lookup"><span data-stu-id="6ec42-127">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
-
-<span data-ttu-id="6ec42-128">Dans l’exemple suivant, un type dans un module a une extension de type intrinsèque.</span><span class="sxs-lookup"><span data-stu-id="6ec42-128">In the following example, a type in a module has an intrinsic type extension.</span></span> <span data-ttu-id="6ec42-129">Au code client en dehors du module, l’extension de type apparaît comme un membre standard du type à tous les égards.</span><span class="sxs-lookup"><span data-stu-id="6ec42-129">To client code outside the module, the type extension appears as a regular member of the type in all respects.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-<span data-ttu-id="6ec42-130">Vous pouvez utiliser des extensions de type intrinsèque pour séparer la définition d’un type en sections.</span><span class="sxs-lookup"><span data-stu-id="6ec42-130">You can use intrinsic type extensions to separate the definition of a type into sections.</span></span> <span data-ttu-id="6ec42-131">Cela peut être utile pour gérer les définitions de type de grande taille, par exemple, pour séparer le code généré par le compilateur et le code créé ou permettent de regrouper de code créés par différentes personnes ou associés à des fonctionnalités différentes.</span><span class="sxs-lookup"><span data-stu-id="6ec42-131">This can be useful in managing large type definitions, for example, to keep compiler-generated code and authored code separate or to group together code created by different people or associated with different functionality.</span></span>
-
-<span data-ttu-id="6ec42-132">Dans l’exemple suivant, une extension de type facultative étend la `System.Int32` type avec une méthode d’extension `FromString` qui appelle le membre statique `Parse`.</span><span class="sxs-lookup"><span data-stu-id="6ec42-132">In the following example, an optional type extension extends the `System.Int32` type with an extension method `FromString` that calls the static member `Parse`.</span></span> <span data-ttu-id="6ec42-133">Le `testFromString` méthode montre que le nouveau membre est appelé comme n’importe quel membre d’instance.</span><span class="sxs-lookup"><span data-stu-id="6ec42-133">The `testFromString` method demonstrates that the new member is called just like any instance member.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-<span data-ttu-id="6ec42-134">Le nouveau membre d’instance apparaît comme toute autre méthode de la `Int32` type dans IntelliSense, mais uniquement lorsque le module qui contient l’extension est ouvert ou dans la portée.</span><span class="sxs-lookup"><span data-stu-id="6ec42-134">The new instance member will appear like any other method of the `Int32` type in IntelliSense, but only when the module that contains the extension is open or otherwise in scope.</span></span>
-
-## <a name="generic-extension-methods"></a><span data-ttu-id="6ec42-135">Méthodes d’Extension générique</span><span class="sxs-lookup"><span data-stu-id="6ec42-135">Generic Extension Methods</span></span>
-<span data-ttu-id="6ec42-136">Avant de F # 3.1, le compilateur F # n’a pas prendre en charge l’utilisation du langage c#-style de méthodes d’extension avec une variable de type générique, type de tableau, type de tuple ou un type de fonction F # comme paramètre de « THI ».</span><span class="sxs-lookup"><span data-stu-id="6ec42-136">Before F# 3.1, the F# compiler didn't support the use of C#-style extension methods with a generic type variable, array type, tuple type, or an F# function type as the "this" parameter.</span></span> <span data-ttu-id="6ec42-137">F # 3.1 prend en charge l’utilisation de ces membres d’extension.</span><span class="sxs-lookup"><span data-stu-id="6ec42-137">F# 3.1 supports the use of these extension members.</span></span>
-
-<span data-ttu-id="6ec42-138">Par exemple, dans le code F # 3.1, vous pouvez utiliser les méthodes d’extension avec des signatures qui ressemblent à la syntaxe suivante en c# :</span><span class="sxs-lookup"><span data-stu-id="6ec42-138">For example, in F# 3.1 code, you can use extension methods with signatures that resemble the following syntax in C#:</span></span>
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-<span data-ttu-id="6ec42-139">Cette approche est particulièrement utile lorsque le paramètre de type générique est limité.</span><span class="sxs-lookup"><span data-stu-id="6ec42-139">This approach is particularly useful when the generic type parameter is constrained.</span></span> <span data-ttu-id="6ec42-140">En outre, vous pouvez désormais déclarer les membres d’extension comme suit dans le code F # et définir un ensemble supplémentaire, sémantiquement riche de méthodes d’extension.</span><span class="sxs-lookup"><span data-stu-id="6ec42-140">Further, you can now declare extension members like this in F# code and define an additional, semantically rich set of extension methods.</span></span> <span data-ttu-id="6ec42-141">En F #, vous définissez généralement les membres d’extension comme le montre l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="6ec42-141">In F#, you usually define extension members as the following example shows:</span></span>
+<span data-ttu-id="49466-115">Extensions de type intrinsèques sont parfois un moyen plus clair de séparer les fonctionnalités de la déclaration de type.</span><span class="sxs-lookup"><span data-stu-id="49466-115">Intrinsic type extensions are sometimes a cleaner way to separate functionality from the type declaration.</span></span> <span data-ttu-id="49466-116">L’exemple suivant montre comment définir une extension de type intrinsèque :</span><span class="sxs-lookup"><span data-stu-id="49466-116">The following example shows how to define an intrinsic type extension:</span></span>
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+<span data-ttu-id="49466-117">À l’aide d’une extension de type vous permet de séparer les éléments suivants :</span><span class="sxs-lookup"><span data-stu-id="49466-117">Using a type extension allows you to separate each of the following:</span></span>
+
+* <span data-ttu-id="49466-118">La déclaration d’un `Variant` type</span><span class="sxs-lookup"><span data-stu-id="49466-118">The declaration of a `Variant` type</span></span>
+* <span data-ttu-id="49466-119">Fonctionnalités pour imprimer la `Variant` classe selon sa « forme »</span><span class="sxs-lookup"><span data-stu-id="49466-119">Functionality to print the `Variant` class depending on its "shape"</span></span>
+* <span data-ttu-id="49466-120">Un moyen d’accéder à la fonctionnalité d’impression avec le style de l’objet `.`-notation</span><span class="sxs-lookup"><span data-stu-id="49466-120">A way to access the printing functionality with object-style `.`-notation</span></span>
+
+<span data-ttu-id="49466-121">Il s’agit d’une alternative à la définition de tous les éléments en tant que membre sur `Variant`.</span><span class="sxs-lookup"><span data-stu-id="49466-121">This is an alternative to defining everything as a member on `Variant`.</span></span> <span data-ttu-id="49466-122">Il n’est pas intrinsèquement une meilleure approche, mais il peut être une représentation plus claire de fonctionnalités dans certaines situations.</span><span class="sxs-lookup"><span data-stu-id="49466-122">Although it is not an inherently better approach, it can be a cleaner representation of functionality in some situations.</span></span>
+
+<span data-ttu-id="49466-123">Extensions de type intrinsèques sont compilées en tant que membres du type augmenter, ils apparaissent sur le type lorsque le type est examiné par réflexion.</span><span class="sxs-lookup"><span data-stu-id="49466-123">Intrinsic type extensions are compiled as members of the type they augment, and appear on the type when the type is examined by reflection.</span></span>
+
+## <a name="optional-type-extensions"></a><span data-ttu-id="49466-124">Extensions de type facultatif</span><span class="sxs-lookup"><span data-stu-id="49466-124">Optional type extensions</span></span>
+
+<span data-ttu-id="49466-125">Une extension de type facultatif est une extension qui s’affiche à l’extérieur du module, espace de noms ou assembly du type étendu d’origine.</span><span class="sxs-lookup"><span data-stu-id="49466-125">An optional type extension is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span>
+
+<span data-ttu-id="49466-126">Extensions de type facultatives sont utiles pour l’extension d’un type que vous n’avez pas défini vous-même.</span><span class="sxs-lookup"><span data-stu-id="49466-126">Optional type extensions are useful for extending a type that you have not defined yourself.</span></span> <span data-ttu-id="49466-127">Exemple :</span><span class="sxs-lookup"><span data-stu-id="49466-127">For example:</span></span>
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-<span data-ttu-id="6ec42-142">Toutefois, pour un type générique, la variable de type ne peut pas être contraints.</span><span class="sxs-lookup"><span data-stu-id="6ec42-142">However, for a generic type, the type variable may not be constrained.</span></span> <span data-ttu-id="6ec42-143">Vous pouvez désormais déclarer c#-membre d’extension de style en F # pour contourner cette limitation.</span><span class="sxs-lookup"><span data-stu-id="6ec42-143">You can now declare a C#-style extension member in F# to work around this limitation.</span></span> <span data-ttu-id="6ec42-144">Lorsque vous combinez ce type de déclaration avec la fonctionnalité inline de F #, vous pouvez présenter les algorithmes génériques en tant que membres d’extension.</span><span class="sxs-lookup"><span data-stu-id="6ec42-144">When you combine this kind of declaration with the inline feature of F#, you can present generic algorithms as extension members.</span></span>
+<span data-ttu-id="49466-128">Vous pouvez désormais accéder `RepeatElements` comme s’il est membre de <xref:System.Collections.Generic.IEnumerable%601> tant que le `Extensions` module est ouvert dans l’étendue que vous utilisez.</span><span class="sxs-lookup"><span data-stu-id="49466-128">You can now access `RepeatElements` as if it's a member of <xref:System.Collections.Generic.IEnumerable%601> as long as the `Extensions` module is opened in the scope that you are working in.</span></span>
 
-<span data-ttu-id="6ec42-145">Prenons la déclaration suivante :</span><span class="sxs-lookup"><span data-stu-id="6ec42-145">Consider the following declaration:</span></span>
+<span data-ttu-id="49466-129">Des extensions facultatives n’apparaissent pas sur le type étendu quand il est examiné par réflexion.</span><span class="sxs-lookup"><span data-stu-id="49466-129">Optional extensions do not appear on the extended type when examined by reflection.</span></span> <span data-ttu-id="49466-130">Des extensions facultatives doivent être dans des modules, et ils sont uniquement dans la portée lorsque le module qui contient l’extension est ouvert ou dans la portée.</span><span class="sxs-lookup"><span data-stu-id="49466-130">Optional extensions must be in modules, and they're only in scope when the module that contains the extension is open or is otherwise in scope.</span></span>
+
+<span data-ttu-id="49466-131">Membres d’extension facultatifs sont compilés en membres statiques pour lequel l’instance d’objet est passée implicitement comme premier paramètre.</span><span class="sxs-lookup"><span data-stu-id="49466-131">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="49466-132">Toutefois, ils agissent comme si elles sont membres d’instance ou des membres statiques selon la façon dont elles sont déclarées.</span><span class="sxs-lookup"><span data-stu-id="49466-132">However, they act as if they're instance members or static members according to how they're declared.</span></span>
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a><span data-ttu-id="49466-133">Limitation générique des extensions de type intrinsèque et facultatifs</span><span class="sxs-lookup"><span data-stu-id="49466-133">Generic limitation of intrinsic and optional type extensions</span></span>
+
+<span data-ttu-id="49466-134">Il est possible de déclarer une extension de type sur un type générique, où la variable de type est contraint.</span><span class="sxs-lookup"><span data-stu-id="49466-134">It's possible to declare a type extension on a generic type where the type variable is constrained.</span></span> <span data-ttu-id="49466-135">L’exigence est que la contrainte de la déclaration de l’extension correspond à la contrainte du type déclaré.</span><span class="sxs-lookup"><span data-stu-id="49466-135">The requirement is that the constraint of the extension declaration matches the constraint of the declared type.</span></span>
+
+<span data-ttu-id="49466-136">Toutefois, même lorsque les contraintes sont mises en correspondance entre un type déclaré et une extension de type, il est possible pour une contrainte à être déduit par le corps d’un membre d’étendue qui impose des exigences différentes sur le paramètre de type que le type déclaré.</span><span class="sxs-lookup"><span data-stu-id="49466-136">However, even when constraints are matched between a declared type and a type extension, it's possible for a constraint to be inferred by the body of an extended member that imposes a different requirement on the type parameter than the declared type.</span></span> <span data-ttu-id="49466-137">Exemple :</span><span class="sxs-lookup"><span data-stu-id="49466-137">For example:</span></span>
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+<span data-ttu-id="49466-138">Il n’existe aucun moyen pour obtenir ce code fonctionne avec une extension de type facultatif :</span><span class="sxs-lookup"><span data-stu-id="49466-138">There is no way to get this code to work with an optional type extension:</span></span>
+
+* <span data-ttu-id="49466-139">En l’état, le `Sum` membre a une contrainte différente `'T` (`static member get_Zero` et `static member (+)`) à ce qui définit l’extension du type.</span><span class="sxs-lookup"><span data-stu-id="49466-139">As is, the `Sum` member has a different constraint on `'T` (`static member get_Zero` and `static member (+)`) than what the type extension defines.</span></span>
+* <span data-ttu-id="49466-140">Modification de l’extension de type pour avoir la même contrainte en tant que `Sum` n’est pas la contrainte définie sur `IEnumerable<'T>`.</span><span class="sxs-lookup"><span data-stu-id="49466-140">Modifying the type extension to have the same constraint as `Sum` will no longer match the defined constraint on `IEnumerable<'T>`.</span></span>
+* <span data-ttu-id="49466-141">Apporter la modification de membre à `member inline Sum` générera une erreur d’incompatibilité de contraintes de type</span><span class="sxs-lookup"><span data-stu-id="49466-141">Making changing the member to `member inline Sum` will give an error that type constraints are mismatched</span></span>
+
+<span data-ttu-id="49466-142">Ce que vous souhaitez sont des méthodes statiques qui « flottant dans l’espace » et peuvent être présentés comme s’ils vous étendez un type.</span><span class="sxs-lookup"><span data-stu-id="49466-142">What is desired are static methods that "float in space" and can be presented as if they're extending a type.</span></span> <span data-ttu-id="49466-143">Il s’agit dans lequel les méthodes d’extension devient nécessaires.</span><span class="sxs-lookup"><span data-stu-id="49466-143">This is where extension methods become necessary.</span></span>
+
+## <a name="extension-methods"></a><span data-ttu-id="49466-144">Méthodes d’extension</span><span class="sxs-lookup"><span data-stu-id="49466-144">Extension methods</span></span>
+
+<span data-ttu-id="49466-145">Enfin, les méthodes d’extension (parfois appelés « C# style membres d’extension ») peuvent être déclarées en F # comme une méthode membre statique sur une classe.</span><span class="sxs-lookup"><span data-stu-id="49466-145">Finally, extension methods (sometimes called "C# style extension members") can be declared in F# as a static member method on a class.</span></span>
+
+<span data-ttu-id="49466-146">Méthodes d’extension sont utiles pour lorsque vous souhaitez définir des extensions sur un type générique qui contrainte la variable de type.</span><span class="sxs-lookup"><span data-stu-id="49466-146">Extension methods are useful for when you wish to define extensions on a generic type that will constrain the type variable.</span></span> <span data-ttu-id="49466-147">Exemple :</span><span class="sxs-lookup"><span data-stu-id="49466-147">For example:</span></span>
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-<span data-ttu-id="6ec42-146">À l’aide de cette déclaration, vous pouvez écrire du code qui ressemble à l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="6ec42-146">By using this declaration, you can write code that resembles the following sample.</span></span>
+<span data-ttu-id="49466-148">Lorsqu’il est utilisé, ce code sera faire apparaître comme si `Sum` est défini sur <xref:System.Collections.Generic.IEnumerable%601>, à condition que `Extensions` a été ouvert ou est dans la portée.</span><span class="sxs-lookup"><span data-stu-id="49466-148">When used, this code will make it appear as if `Sum` is defined on <xref:System.Collections.Generic.IEnumerable%601>, so long as `Extensions` has been opened or is in scope.</span></span>
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a><span data-ttu-id="49466-149">Autres remarques</span><span class="sxs-lookup"><span data-stu-id="49466-149">Other remarks</span></span>
 
-<span data-ttu-id="6ec42-147">Dans ce code, le même code arithmétique générique est appliqué aux listes de deux types sans surcharge, en définissant un membre de la même extension.</span><span class="sxs-lookup"><span data-stu-id="6ec42-147">In this code, the same generic arithmetic code is applied to lists of two types without overloading, by defining a single extension member.</span></span>
+<span data-ttu-id="49466-150">Extensions de type ont également les attributs suivants :</span><span class="sxs-lookup"><span data-stu-id="49466-150">Type extensions also have the following attributes:</span></span>
 
+* <span data-ttu-id="49466-151">N’importe quel type accessible peut être étendu.</span><span class="sxs-lookup"><span data-stu-id="49466-151">Any type that can be accessed can be extended.</span></span>
+* <span data-ttu-id="49466-152">Définissent des extensions de type intrinsèques et facultatif _n’importe quel_ type de membre, pas seulement méthodes.</span><span class="sxs-lookup"><span data-stu-id="49466-152">Intrinsic and optional type extensions can define _any_ member type, not just methods.</span></span> <span data-ttu-id="49466-153">Par conséquent, les propriétés d’extension sont également possibles, par exemple.</span><span class="sxs-lookup"><span data-stu-id="49466-153">So extension properties are also possible, for example.</span></span>
+* <span data-ttu-id="49466-154">Le `self-identifier` jeton dans le [syntaxe](type-extensions.md#syntax) représente l’instance du type appelé, comme des membres ordinaires.</span><span class="sxs-lookup"><span data-stu-id="49466-154">The `self-identifier` token in the [syntax](type-extensions.md#syntax) represents the instance of the type being invoked, just like ordinary members.</span></span>
+* <span data-ttu-id="49466-155">Étendues peuvent être statiques ou membres d’instance.</span><span class="sxs-lookup"><span data-stu-id="49466-155">Extended members can be static or instance members.</span></span>
+* <span data-ttu-id="49466-156">Les variables de type sur une extension de type doivent correspondre aux contraintes du type déclaré.</span><span class="sxs-lookup"><span data-stu-id="49466-156">Type variables on a type extension must match the constraints of the declared type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="6ec42-148">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6ec42-148">See Also</span></span>
-[<span data-ttu-id="6ec42-149">Informations de référence du langage F#</span><span class="sxs-lookup"><span data-stu-id="6ec42-149">F# Language Reference</span></span>](index.md)
+<span data-ttu-id="49466-157">Les limitations suivantes existent également pour les extensions de type :</span><span class="sxs-lookup"><span data-stu-id="49466-157">The following limitations also exist for type extensions:</span></span>
 
-[<span data-ttu-id="6ec42-150">Membres</span><span class="sxs-lookup"><span data-stu-id="6ec42-150">Members</span></span>](members/index.md)
+* <span data-ttu-id="49466-158">Extensions de type ne prennent pas en charge les méthodes virtuelles ou abstraites.</span><span class="sxs-lookup"><span data-stu-id="49466-158">Type extensions do not support virtual or abstract methods.</span></span>
+* <span data-ttu-id="49466-159">Extensions de type ne gèrent pas les méthodes override en tant que les augmentations.</span><span class="sxs-lookup"><span data-stu-id="49466-159">Type extensions do not support override methods as augmentations.</span></span>
+* <span data-ttu-id="49466-160">Extensions de type ne gèrent pas [paramètres résolus statiquement Type](generics/statically-resolved-type-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="49466-160">Type extensions do not support [Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md).</span></span>
+* <span data-ttu-id="49466-161">Les extensions de Type facultatives ne gèrent pas les constructeurs en tant que les augmentations.</span><span class="sxs-lookup"><span data-stu-id="49466-161">Optional Type extensions do not support constructors as augmentations.</span></span>
+* <span data-ttu-id="49466-162">Extensions de type ne peut pas être définies sur [abréviations de types](type-abbreviations.md).</span><span class="sxs-lookup"><span data-stu-id="49466-162">Type extensions cannot be defined on [type abbreviations](type-abbreviations.md).</span></span>
+* <span data-ttu-id="49466-163">Extensions de type ne sont pas valides pour `byref<'T>` (même si elles peuvent être déclarées).</span><span class="sxs-lookup"><span data-stu-id="49466-163">Type extensions are not valid for `byref<'T>` (though they can be declared).</span></span>
+* <span data-ttu-id="49466-164">Extensions de type ne sont pas valides pour les attributs (même si elles peuvent être déclarées).</span><span class="sxs-lookup"><span data-stu-id="49466-164">Type extensions are not valid for attributes (though they can be declared).</span></span>
+* <span data-ttu-id="49466-165">Vous pouvez définir des extensions qui surchargent les autres méthodes du même nom, mais le compilateur F # donne la préférence aux méthodes d’extension non s’il existe un appel ambigu.</span><span class="sxs-lookup"><span data-stu-id="49466-165">You can define extensions that overload other methods of the same name, but the F# compiler gives preference to non-extension methods if there is an ambiguous call.</span></span>
+
+<span data-ttu-id="49466-166">Enfin, si plusieurs extensions de type intrinsèques existent pour un type, tous les membres doivent être uniques.</span><span class="sxs-lookup"><span data-stu-id="49466-166">Finally, if multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="49466-167">Pour les extensions de type facultatif, les membres dans différentes extensions de type vers le même type peuvent avoir les mêmes noms.</span><span class="sxs-lookup"><span data-stu-id="49466-167">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="49466-168">Erreurs d’ambiguïté se produisent uniquement si le code client ouvre deux portées différentes qui définissent les mêmes noms de membre.</span><span class="sxs-lookup"><span data-stu-id="49466-168">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="49466-169">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="49466-169">See also</span></span>
+
+[<span data-ttu-id="49466-170">Informations de référence du langage F#</span><span class="sxs-lookup"><span data-stu-id="49466-170">F# Language Reference</span></span>](index.md)
+
+[<span data-ttu-id="49466-171">Membres</span><span class="sxs-lookup"><span data-stu-id="49466-171">Members</span></span>](members/index.md)
