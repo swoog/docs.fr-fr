@@ -1,105 +1,174 @@
 ---
 title: Extensions de type (F#)
 description: 'Découvrez comment les extensions de type F # permettent de que vous ajoutez de nouveaux membres à un type d’objet précédemment défini.'
-ms.date: 05/16/2016
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566884"
 ---
 # <a name="type-extensions"></a>Extensions de type
 
-Extensions de type vous permettent d’ajouter de nouveaux membres à un type d’objet précédemment défini.
+Extensions de type (également appelé _augmentations_) est une famille de fonctionnalités qui vous permettent d’ajouter de nouveaux membres à un type d’objet précédemment défini. Les trois fonctionnalités sont :
+
+* Extensions de type intrinsèques
+* Extensions de type facultatif
+* Méthodes d’extension
+
+Chacun peut être utilisé dans différents scénarios et a différents compromis.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a>Notes
-Il existe deux formes d’extensions de type qui ont des comportements et une syntaxe légèrement différente. Un *extension intrinsèque* est une extension qui s’affiche dans le même espace de noms ou module, dans le même fichier source et dans le même assembly (DLL ou fichier exécutable) que le type étendu. Un *extension facultative* est une extension qui apparaît en dehors du module, espace de noms ou assembly du type en cours d’extension d’origine. Les extensions intrinsèques apparaissent sur le type lorsque le type est examiné par réflexion, mais pas des extensions facultatives. Facultatif pour les extensions doivent être dans des modules et sont uniquement dans la portée lorsque le module qui contient l’extension est ouvert.
+## <a name="intrinsic-type-extensions"></a>Extensions de type intrinsèques
 
-Dans la syntaxe précédente, *typename* représente le type qui est étendu. N’importe quel type accessible peut être étendu, mais le nom de type doit être un nom de type réel, pas une abréviation de type. Vous pouvez définir plusieurs membres dans une extension de type. Le *auto-identificateur* représente l’instance de l’objet qui est appelée, comme dans des membres ordinaires.
+Une extension de type intrinsèque est une extension de type qui étend un type défini par l’utilisateur.
 
-Le `end` mot clé est facultatif dans la syntaxe simplifiée.
+Extensions de type intrinsèques doivent être définies dans le même fichier **et** dans le même espace de noms ou module en tant que le type de la société étend. N’importe quel autre définition les entraîne en cours [extensions de type facultatif](type-extensions.md#optional-type-extensions).
 
-Les membres définis dans les extensions de type peuvent être utilisés comme les autres membres sur un type de classe. Comme d’autres membres, ils peuvent être statiques ou membres d’instance. Ces méthodes sont également appelés *les méthodes d’extension*; propriétés sont appelées *propriétés d’extension*, et ainsi de suite. Membres d’extension facultatifs sont compilés en membres statiques pour lequel l’instance d’objet est passée implicitement comme premier paramètre. Toutefois, ils agissent comme si elles étaient des membres d’instance ou des membres statiques en fonction de la façon dont ils sont déclarés. Membres d’extension implicites sont inclus en tant que membres du type et peuvent être utilisés sans restriction.
-
-Méthodes d’extension ne peut pas être des méthodes virtuelles ou abstraites. Elles peuvent surcharger d’autres méthodes portant le même nom, mais le compilateur donne la préférence des méthodes d’extension non dans le cas d’un appel ambigu.
-
-Si plusieurs extensions de type intrinsèque existent pour un type, tous les membres doivent être uniques. Pour les extensions de type facultatif, les membres dans différentes extensions de type vers le même type peuvent avoir le même nom. Erreurs d’ambiguïté se produisent uniquement si le code client ouvre deux portées différentes qui définissent les mêmes noms de membre.
-
-Dans l’exemple suivant, un type dans un module a une extension de type intrinsèque. Au code client en dehors du module, l’extension de type apparaît comme un membre standard du type à tous les égards.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-Vous pouvez utiliser des extensions de type intrinsèque pour séparer la définition d’un type en sections. Cela peut être utile pour gérer les définitions de type de grande taille, par exemple, pour séparer le code généré par le compilateur et le code créé ou permettent de regrouper de code créés par différentes personnes ou associés à des fonctionnalités différentes.
-
-Dans l’exemple suivant, une extension de type facultative étend la `System.Int32` type avec une méthode d’extension `FromString` qui appelle le membre statique `Parse`. Le `testFromString` méthode montre que le nouveau membre est appelé comme n’importe quel membre d’instance.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-Le nouveau membre d’instance apparaît comme toute autre méthode de la `Int32` type dans IntelliSense, mais uniquement lorsque le module qui contient l’extension est ouvert ou dans la portée.
-
-## <a name="generic-extension-methods"></a>Méthodes d’Extension générique
-Avant de F # 3.1, le compilateur F # n’a pas prendre en charge l’utilisation du langage c#-style de méthodes d’extension avec une variable de type générique, type de tableau, type de tuple ou un type de fonction F # comme paramètre de « THI ». F # 3.1 prend en charge l’utilisation de ces membres d’extension.
-
-Par exemple, dans le code F # 3.1, vous pouvez utiliser les méthodes d’extension avec des signatures qui ressemblent à la syntaxe suivante en c# :
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-Cette approche est particulièrement utile lorsque le paramètre de type générique est limité. En outre, vous pouvez désormais déclarer les membres d’extension comme suit dans le code F # et définir un ensemble supplémentaire, sémantiquement riche de méthodes d’extension. En F #, vous définissez généralement les membres d’extension comme le montre l’exemple suivant :
+Extensions de type intrinsèques sont parfois un moyen plus clair de séparer les fonctionnalités de la déclaration de type. L’exemple suivant montre comment définir une extension de type intrinsèque :
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+À l’aide d’une extension de type vous permet de séparer les éléments suivants :
+
+* La déclaration d’un `Variant` type
+* Fonctionnalités pour imprimer la `Variant` classe selon sa « forme »
+* Un moyen d’accéder à la fonctionnalité d’impression avec le style de l’objet `.`-notation
+
+Il s’agit d’une alternative à la définition de tous les éléments en tant que membre sur `Variant`. Il n’est pas intrinsèquement une meilleure approche, mais il peut être une représentation plus claire de fonctionnalités dans certaines situations.
+
+Extensions de type intrinsèques sont compilées en tant que membres du type augmenter, ils apparaissent sur le type lorsque le type est examiné par réflexion.
+
+## <a name="optional-type-extensions"></a>Extensions de type facultatif
+
+Une extension de type facultatif est une extension qui s’affiche à l’extérieur du module, espace de noms ou assembly du type étendu d’origine.
+
+Extensions de type facultatives sont utiles pour l’extension d’un type que vous n’avez pas défini vous-même. Exemple :
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-Toutefois, pour un type générique, la variable de type ne peut pas être contraints. Vous pouvez désormais déclarer c#-membre d’extension de style en F # pour contourner cette limitation. Lorsque vous combinez ce type de déclaration avec la fonctionnalité inline de F #, vous pouvez présenter les algorithmes génériques en tant que membres d’extension.
+Vous pouvez désormais accéder `RepeatElements` comme s’il est membre de <xref:System.Collections.Generic.IEnumerable%601> tant que le `Extensions` module est ouvert dans l’étendue que vous utilisez.
 
-Prenons la déclaration suivante :
+Des extensions facultatives n’apparaissent pas sur le type étendu quand il est examiné par réflexion. Des extensions facultatives doivent être dans des modules, et ils sont uniquement dans la portée lorsque le module qui contient l’extension est ouvert ou dans la portée.
+
+Membres d’extension facultatifs sont compilés en membres statiques pour lequel l’instance d’objet est passée implicitement comme premier paramètre. Toutefois, ils agissent comme si elles sont membres d’instance ou des membres statiques selon la façon dont elles sont déclarées.
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitation générique des extensions de type intrinsèque et facultatifs
+
+Il est possible de déclarer une extension de type sur un type générique, où la variable de type est contraint. L’exigence est que la contrainte de la déclaration de l’extension correspond à la contrainte du type déclaré.
+
+Toutefois, même lorsque les contraintes sont mises en correspondance entre un type déclaré et une extension de type, il est possible pour une contrainte à être déduit par le corps d’un membre d’étendue qui impose des exigences différentes sur le paramètre de type que le type déclaré. Exemple :
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+Il n’existe aucun moyen pour obtenir ce code fonctionne avec une extension de type facultatif :
+
+* En l’état, le `Sum` membre a une contrainte différente `'T` (`static member get_Zero` et `static member (+)`) à ce qui définit l’extension du type.
+* Modification de l’extension de type pour avoir la même contrainte en tant que `Sum` n’est pas la contrainte définie sur `IEnumerable<'T>`.
+* Apporter la modification de membre à `member inline Sum` générera une erreur d’incompatibilité de contraintes de type
+
+Ce que vous souhaitez sont des méthodes statiques qui « flottant dans l’espace » et peuvent être présentés comme s’ils vous étendez un type. Il s’agit dans lequel les méthodes d’extension devient nécessaires.
+
+## <a name="extension-methods"></a>Méthodes d’extension
+
+Enfin, les méthodes d’extension (parfois appelés « C# style membres d’extension ») peuvent être déclarées en F # comme une méthode membre statique sur une classe.
+
+Méthodes d’extension sont utiles pour lorsque vous souhaitez définir des extensions sur un type générique qui contrainte la variable de type. Exemple :
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-À l’aide de cette déclaration, vous pouvez écrire du code qui ressemble à l’exemple suivant.
+Lorsqu’il est utilisé, ce code sera faire apparaître comme si `Sum` est défini sur <xref:System.Collections.Generic.IEnumerable%601>, à condition que `Extensions` a été ouvert ou est dans la portée.
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a>Autres remarques
 
-Dans ce code, le même code arithmétique générique est appliqué aux listes de deux types sans surcharge, en définissant un membre de la même extension.
+Extensions de type ont également les attributs suivants :
 
+* N’importe quel type accessible peut être étendu.
+* Définissent des extensions de type intrinsèques et facultatif _n’importe quel_ type de membre, pas seulement méthodes. Par conséquent, les propriétés d’extension sont également possibles, par exemple.
+* Le `self-identifier` jeton dans le [syntaxe](type-extensions.md#syntax) représente l’instance du type appelé, comme des membres ordinaires.
+* Étendues peuvent être statiques ou membres d’instance.
+* Les variables de type sur une extension de type doivent correspondre aux contraintes du type déclaré.
+
+Les limitations suivantes existent également pour les extensions de type :
+
+* Extensions de type ne prennent pas en charge les méthodes virtuelles ou abstraites.
+* Extensions de type ne gèrent pas les méthodes override en tant que les augmentations.
+* Extensions de type ne gèrent pas [paramètres résolus statiquement Type](generics/statically-resolved-type-parameters.md).
+* Les extensions de Type facultatives ne gèrent pas les constructeurs en tant que les augmentations.
+* Extensions de type ne peut pas être définies sur [abréviations de types](type-abbreviations.md).
+* Extensions de type ne sont pas valides pour `byref<'T>` (même si elles peuvent être déclarées).
+* Extensions de type ne sont pas valides pour les attributs (même si elles peuvent être déclarées).
+* Vous pouvez définir des extensions qui surchargent les autres méthodes du même nom, mais le compilateur F # donne la préférence aux méthodes d’extension non s’il existe un appel ambigu.
+
+Enfin, si plusieurs extensions de type intrinsèques existent pour un type, tous les membres doivent être uniques. Pour les extensions de type facultatif, les membres dans différentes extensions de type vers le même type peuvent avoir les mêmes noms. Erreurs d’ambiguïté se produisent uniquement si le code client ouvre deux portées différentes qui définissent les mêmes noms de membre.
 
 ## <a name="see-also"></a>Voir aussi
+
 [Informations de référence du langage F#](index.md)
 
 [Membres](members/index.md)
