@@ -1,6 +1,6 @@
 ---
-title: GetPropertyHandle (fonction) (référence des API non managées)
-description: La fonction GetPropertyHandle retourne un identificateur unique qu’identités une propriété.
+title: Getpropertyhandle, fonction (référence des API non managées)
+description: Getpropertyhandle, de la fonction retourne un handle unique qu’identités une propriété.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyHandle
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460581"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754492"
 ---
-# <a name="getpropertyhandle-function"></a>GetPropertyHandle (fonction)
-Retourne un identificateur unique qui identifie une propriété.
+# <a name="getpropertyhandle-function"></a>Getpropertyhandle, fonction
+Retourne un handle unique qui identifie une propriété.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -43,13 +43,13 @@ HRESULT GetPropertyHandle (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) instance.
+[in] Un pointeur vers un [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.
 
 `wszPropertyName`  
-[in] Se terminant par null chaîne codée au format UTF16 characaters qui contient le nom de propriété.   
+[in] Chaîne se terminant par null de characaters encodé en UTF16 qui contient le nom de propriété.   
 
 `pType`  
 [out] Un pointeur vers un [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) membre d’énumération qui représente le type CIM de la propriété.
@@ -70,18 +70,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::GetPropertyHandle](https://msdn.microsoft.com/library/aa391771(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) (méthode).
 
-Vous pouvez utiliser ce handle pour identifier les propriétés lorsque vous utilisez [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) méthodes pour lire ou écrire des valeurs de propriété.
+Vous pouvez utiliser ce handle pour identifier les propriétés lorsque vous utilisez [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) méthodes pour lire ou écrire des valeurs de propriété.
 
-Handles peuvent être récupérées pour les propriétés de tous les types de données autres que `CIM_OBJECT` et `CIM_ARRAY`. Retournée le travail de handles sur toutes les instances d’une classe.
+Handles peuvent être récupérées pour les propriétés de tous les types de données autre que `CIM_OBJECT` et `CIM_ARRAY`. Retourné handles travail sur toutes les instances d’une classe.
 
-## <a name="requirements"></a>Spécifications  
-**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

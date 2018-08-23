@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 394059481b5081586904d2d5ea5d4a3d3e0df42b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 40ba9085905869ca5d3d8f39a3d7ce11639b1504
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758891"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754546"
 ---
 # <a name="local-transactions"></a>Transactions locales
-Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez utiliser des transactions lorsque vous souhaitez lier plusieurs tâches entre elles afin qu'elles s'exécutent comme une seule unité de travail. Par exemple, imaginez qu'une application effectue deux tâches. Premièrement, elle met à jour une table avec des informations de commande. Deuxièmement, elle met à jour une table qui contient des informations de stock, en débitant les articles commandés. Si des tâches échoue, puis les mises à jour sont restaurées.  
+Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez utiliser des transactions lorsque vous souhaitez lier plusieurs tâches entre elles afin qu'elles s'exécutent comme une seule unité de travail. Par exemple, imaginez qu'une application effectue deux tâches. Premièrement, elle met à jour une table avec des informations de commande. Deuxièmement, elle met à jour une table qui contient des informations de stock, en débitant les articles commandés. Si des tâches échoue, puis les deux mises à jour sont annulées.  
   
 ## <a name="determining-the-transaction-type"></a>Détermination du type de transaction  
- Une transaction est considéré comme une transaction locale lorsqu’il existe une transaction en une seule phase et est gérée directement par la base de données. Une transaction est considéré comme une transaction distribuée lorsqu’il est coordonné par un moniteur de transaction et utilise des mécanismes de prévention de défaillance (tels que la validation en deux phases) pour la résolution de la transaction.  
+ Une transaction est considérée comme une transaction locale lorsqu’il est une transaction à phase unique et est gérée directement par la base de données. Une transaction est considérée comme une transaction distribuée lorsqu’il est coordonné par un moniteur de transaction et utilise des mécanismes de prévention de défaillance (par exemple, la validation en deux phases) pour la résolution de la transaction.  
   
- Chacun des fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a son propre objet `Transaction` pour l'exécution des transactions locales. Si vous avez besoin qu'une transaction soit effectuée dans une base de données SQL Server, sélectionnez une transaction <xref:System.Data.SqlClient>. Pour une transaction Oracle, utilisez le fournisseur <xref:System.Data.OracleClient>. En outre, il existe un <xref:System.Data.Common.DbTransaction> classe qui est disponible pour l’écriture de code indépendant du fournisseur qui requiert des transactions.  
+ Chacun des fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a son propre objet `Transaction` pour l'exécution des transactions locales. Si vous avez besoin qu'une transaction soit effectuée dans une base de données SQL Server, sélectionnez une transaction <xref:System.Data.SqlClient>. Pour une transaction Oracle, utilisez le fournisseur <xref:System.Data.OracleClient>. En outre, il existe un <xref:System.Data.Common.DbTransaction> classe qui est disponible pour l’écriture de code indépendant du fournisseur qui nécessite des transactions.  
   
 > [!NOTE]
->  Les transactions ont une efficacité maximale lorsqu’elles sont exécutées sur le serveur. Si vous utilisez une base de données SQL Server qui utilise beaucoup des transactions explicites, envisagez de les écrire sous la forme de procédures stockées à l'aide de l'instruction Transact-SQL BEGIN TRANSACTION. Pour plus d'informations sur l'exécution de transactions côté serveur, consultez la documentation en ligne de SQL Server.  
+> Les transactions ont une efficacité maximale lorsqu’elles sont exécutées sur le serveur. Si vous utilisez une base de données SQL Server qui utilise beaucoup des transactions explicites, envisagez de les écrire sous la forme de procédures stockées à l’aide de l’instruction Transact-SQL BEGIN TRANSACTION.
   
-## <a name="performing-a-transaction-using-a-single-connection"></a>Exécution d'une transaction à l'aide d'une connexion unique  
+## <a name="performing-a-transaction-using-a-single-connection"></a>Exécution d’une transaction à l’aide d’une connexion unique  
  Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous contrôlez les transactions à l'aide de l'objet `Connection`. Vous pouvez initier une transaction locale avec la méthode `BeginTransaction`. Après avoir commencé une transaction, vous pouvez inscrire une commande dans cette transaction avec la propriété `Transaction` d'un objet `Command`. Vous pouvez ensuite valider ou annuler les modifications apportées à la source de données en fonction de la réussite ou de l'échec des composants de la transaction.  
   
 > [!NOTE]

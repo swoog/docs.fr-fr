@@ -1,6 +1,6 @@
 ---
-title: GetObjectText (fonction) (référence des API non managées)
-description: La fonction GetObjectText retourne un rendu de texte d’un objet dans la syntaxe MOF.
+title: Getobjecttext, fonction (référence des API non managées)
+description: Getobjecttext, de la fonction retourne un rendu textuel d’un objet dans la syntaxe MOF.
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2f0e766a3a310bdb58f7cbffd8d49404eb5e0b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24ba4b37cc8221df4e018d172996c0910ec07f7d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459637"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754487"
 ---
-# <a name="getobjecttext-function"></a>GetObjectText (fonction)
-Retourne un rendu de texte de l’objet dans la syntaxe de Format MOF (Managed Object).
+# <a name="getobjecttext-function"></a>Getobjecttext, fonction
+Retourne un rendu textuel de l’objet dans la syntaxe de Format MOF (Managed Object).
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,13 +42,13 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `lFlags`  
-[in] Normalement, 0. Si `WBEM_FLAG_NO_FLAVORS` (ou 0 x 1) est spécifié, les qualificateurs sont incluses sans informations de propagation ou la version.
+[in] Généralement 0. Si `WBEM_FLAG_NO_FLAVORS` (ou 0 x 1) est spécifiée, les qualificateurs sont inclus sans les informations de la propagation ou la version.
 
 `pstrObjectText`   
 [out] Un pointeur vers un `null` sur ENTRÉE. Moment du retour, qui vient d’être alloué `BSTR` qui contient un rendu de la syntaxe MOF de l’objet.  
@@ -59,30 +59,30 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Il a été un échec général. |
+|`WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour terminer l’opération. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::GetObjectText](https://msdn.microsoft.com/library/aa391448(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext) (méthode).
 
-Le texte de la structure MOF retourné ne contient pas toutes les informations sur l’objet, mais suffisamment d’informations pour le compilateur MOF être en mesure de recréer l’objet d’origine. Par exemple, aucun qualificateurs propagés ou les propriétés de la classe parent ne sont incluses.
+Le texte MOF retourné ne contient pas toutes les informations sur l’objet, mais suffisamment d’informations pour le compilateur MOF être en mesure de recréer l’objet d’origine. Par exemple, aucun qualificateurs propagés ou les propriétés de la classe parent ne sont incluses.
 
 L’algorithme suivant est utilisé pour reconstruire le texte des paramètres d’une méthode :
 
 1. Les paramètres sont resequenced dans l’ordre de leurs valeurs d’identificateur.
 1. Les paramètres sont spécifiés en tant que `[in]` et `[out]` sont combinés en un seul paramètre.
  
-`pstrObjectText` doit être un pointeur vers un `null` lorsque la fonction est appelée ; il ne doit pas pointer vers une chaîne qui est valide avant l’appel de méthode, car le pointeur n’est pas être libéré.
+`pstrObjectText` doit être un pointeur vers un `null` lorsque la fonction est appelée ; il ne doit pas pointer vers une chaîne qui est valide avant l’appel de méthode, car le pointeur n’est pas libéré.
 
-## <a name="requirements"></a>Spécifications  
-**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429499"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754648"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream, méthode
-Crée un flux de données avec le format et le nom spécifié.  
+Crée un flux avec le format et le nom spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,26 +45,26 @@ HRESULT CreateStream (
  [in] Indicateurs définis dans Fusion.idl.  
   
  `pszStreamName`  
- [in] Le nom du flux de données doit être créé.  
+ [in] Le nom du flux doit être créé.  
   
  `dwFormat`  
- [in] Le format du fichier doit être diffusé en continu.  
+ [in] Le format du fichier à être diffusé en continu.  
   
  `dwFormatFlags`  
  [in] Indicateurs spécifiques au format définis dans Fusion.idl.  
   
  `ppIStream`  
- [out] Un pointeur vers l’adresse de retourné [IStream](https://msdn.microsoft.com/library/aa380034.aspx) instance.  
+ [out] Un pointeur vers l’adresse de retourné [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.  
   
  `puliMaxSize`  
- [in, facultatif] La taille maximale du flux référencé par `ppIStream`.  
+ [in, optional] La taille maximale du flux référencé par `ppIStream`.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Fusion.h  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IAssemblyCacheItem, interface](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

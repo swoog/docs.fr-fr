@@ -1,5 +1,5 @@
 ---
-title: '&lt;proxy&gt; élément (paramètres réseau)'
+title: '&lt;proxy&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/proxy
@@ -11,14 +11,14 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 5fba4bfa14642092dbb7c0153bcd92160a62b12b
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072512"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754606"
 ---
-# <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; élément (paramètres réseau)
+# <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; , élément (paramètres réseau)
 Définit un serveur proxy.  
   
  \<configuration>  
@@ -48,7 +48,7 @@ Définit un serveur proxy.
 |`autoDetect`|Spécifie si le proxy est détecté automatiquement. La valeur par défaut est `unspecified`.|  
 |`bypassonlocal`|Spécifie si le proxy est contourné pour les ressources locales. Les ressources locales incluent le serveur local (`http://localhost`, `http://loopback`, ou `http://127.0.0.1`) et un URI sans point (`http://webserver`). La valeur par défaut est `unspecified`.|  
 |`proxyaddress`|Spécifie l’URI de proxy à utiliser.|  
-|`scriptLocation`|Spécifie l’emplacement du script de configuration.|  
+|`scriptLocation`|Spécifie l’emplacement du script de configuration. N’utilisez pas le `bypassonlocal` attribut avec cet attribut. |  
 |`usesystemdefault`|Spécifie s’il faut utiliser les paramètres de proxy Internet Explorer. Si la valeur `true`, les attributs suivants remplacent les paramètres de proxy Internet Explorer. La valeur par défaut est `unspecified`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -63,11 +63,11 @@ Définit un serveur proxy.
 ## <a name="text-value"></a>Valeur texte  
   
 ## <a name="remarks"></a>Notes  
- Le `proxy` élément définit un serveur proxy pour une application. Si cet élément est manquant dans le fichier de configuration, le .NET Framework utilise les paramètres de proxy dans Internet Explorer.  
+ Le `proxy` élément définit un serveur proxy pour une application. Si cet élément est manquant à partir du fichier de configuration, le .NET Framework utilise les paramètres de proxy dans Internet Explorer.  
   
- La valeur de la `proxyaddress` attribut doit être un bien formé URI Uniform Resource Indicator ().  
+ La valeur de la `proxyaddress` attribut doit être un bien formé indicateur URI (Uniform Resource).  
   
- Le `scriptLocation` attribut fait référence à la détection automatique des scripts de configuration de proxy. Le <xref:System.Net.WebProxy> classe tente de localiser un script de configuration (généralement nommé Wpad.dat) lorsque le **utiliser le script de configuration automatique** option est sélectionnée dans Internet Explorer.  
+ Le `scriptLocation` attribut fait référence à la détection automatique des scripts de configuration de proxy. Le <xref:System.Net.WebProxy> classe tente de localiser un script de configuration (généralement nommé Wpad.dat) lorsque le **utiliser le script de configuration automatique** option est sélectionnée dans Internet Explorer. Si `bypassonlocal` est définie sur n’importe quelle valeur, `scriptLocation` est ignoré.
   
  Utilisez le `usesystemdefault` attribut pour les applications .NET Framework version 1.1 qui effectuent une migration vers la version 2.0.  
   
@@ -77,7 +77,7 @@ Définit un serveur proxy.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise les valeurs par défaut du proxy Internet Explorer, spécifie l’adresse proxy et contourne le proxy pour l’accès local.  
+ L’exemple suivant utilise les valeurs par défaut du proxy Internet Explorer, spécifie l’adresse de proxy et contourne le proxy pour l’accès local.  
   
 ```xml  
 <configuration>  
