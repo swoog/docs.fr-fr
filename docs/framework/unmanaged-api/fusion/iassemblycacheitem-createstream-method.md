@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429499"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754648"
 ---
-# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="a1f3c-102">IAssemblyCacheItem::CreateStream, méthode</span><span class="sxs-lookup"><span data-stu-id="a1f3c-102">IAssemblyCacheItem::CreateStream Method</span></span>
-<span data-ttu-id="a1f3c-103">Crée un flux de données avec le format et le nom spécifié.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-103">Creates a stream with the specified name and format.</span></span>  
+# <a name="iassemblycacheitemcreatestream-method"></a><span data-ttu-id="fe992-102">IAssemblyCacheItem::CreateStream, méthode</span><span class="sxs-lookup"><span data-stu-id="fe992-102">IAssemblyCacheItem::CreateStream Method</span></span>
+<span data-ttu-id="fe992-103">Crée un flux avec le format et le nom spécifié.</span><span class="sxs-lookup"><span data-stu-id="fe992-103">Creates a stream with the specified name and format.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a1f3c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a1f3c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe992-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="fe992-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateStream (  
@@ -40,31 +40,31 @@ HRESULT CreateStream (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="a1f3c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a1f3c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="fe992-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="fe992-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="a1f3c-106">[in] Indicateurs définis dans Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-106">[in] Flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="fe992-106">[in] Indicateurs définis dans Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="fe992-106">[in] Flags defined in Fusion.idl.</span></span>  
   
  `pszStreamName`  
- <span data-ttu-id="a1f3c-107">[in] Le nom du flux de données doit être créé.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-107">[in] The name of the stream to be created.</span></span>  
+ <span data-ttu-id="fe992-107">[in] Le nom du flux doit être créé.</span><span class="sxs-lookup"><span data-stu-id="fe992-107">[in] The name of the stream to be created.</span></span>  
   
  `dwFormat`  
- <span data-ttu-id="a1f3c-108">[in] Le format du fichier doit être diffusé en continu.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-108">[in] The format of the file to be streamed.</span></span>  
+ <span data-ttu-id="fe992-108">[in] Le format du fichier à être diffusé en continu.</span><span class="sxs-lookup"><span data-stu-id="fe992-108">[in] The format of the file to be streamed.</span></span>  
   
  `dwFormatFlags`  
- <span data-ttu-id="a1f3c-109">[in] Indicateurs spécifiques au format définis dans Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
+ <span data-ttu-id="fe992-109">[in] Indicateurs spécifiques au format définis dans Fusion.idl.</span><span class="sxs-lookup"><span data-stu-id="fe992-109">[in] Format-specific flags defined in Fusion.idl.</span></span>  
   
  `ppIStream`  
- <span data-ttu-id="a1f3c-110">[out] Un pointeur vers l’adresse de retourné [IStream](https://msdn.microsoft.com/library/aa380034.aspx) instance.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-110">[out] A pointer to the address of the returned [IStream](https://msdn.microsoft.com/library/aa380034.aspx) instance.</span></span>  
+ <span data-ttu-id="fe992-110">[out] Un pointeur vers l’adresse de retourné [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span><span class="sxs-lookup"><span data-stu-id="fe992-110">[out] A pointer to the address of the returned [IStream](/windows/desktop/api/objidl/nn-objidl-istream) instance.</span></span>  
   
  `puliMaxSize`  
- <span data-ttu-id="a1f3c-111">[in, facultatif] La taille maximale du flux référencé par `ppIStream`.</span><span class="sxs-lookup"><span data-stu-id="a1f3c-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
+ <span data-ttu-id="fe992-111">[in, optional] La taille maximale du flux référencé par `ppIStream`.</span><span class="sxs-lookup"><span data-stu-id="fe992-111">[in, optional] The maximum size of the stream referenced by `ppIStream`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a1f3c-112">Spécifications</span><span class="sxs-lookup"><span data-stu-id="a1f3c-112">Requirements</span></span>  
- <span data-ttu-id="a1f3c-113">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1f3c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fe992-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="fe992-112">Requirements</span></span>  
+ <span data-ttu-id="fe992-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fe992-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a1f3c-114">**En-tête :** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a1f3c-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="fe992-114">**En-tête :** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="fe992-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="a1f3c-115">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1f3c-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fe992-115">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fe992-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a1f3c-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a1f3c-116">See Also</span></span>  
- [<span data-ttu-id="a1f3c-117">IAssemblyCacheItem, interface</span><span class="sxs-lookup"><span data-stu-id="a1f3c-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fe992-116">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fe992-116">See Also</span></span>  
+ [<span data-ttu-id="fe992-117">IAssemblyCacheItem, interface</span><span class="sxs-lookup"><span data-stu-id="fe992-117">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
