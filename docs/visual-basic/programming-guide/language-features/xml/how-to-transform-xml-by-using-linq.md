@@ -6,22 +6,22 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: 94ad5180c7921a5ace09f9161de5f275475e46d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652959"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924907"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Comment : transformer du code XML à l'aide de LINQ (Visual Basic)
-[Littéraux XML](../../../../visual-basic/language-reference/xml-literals/index.md) permet de lire les données XML dans la source et la transformer en un nouveau format XML. Vous pouvez tirer parti des requêtes LINQ pour récupérer le contenu à transformer, ou modifier le contenu d’un document existant vers un nouveau format XML.  
+[Littéraux XML](../../../../visual-basic/language-reference/xml-literals/index.md) rendent facile à lire les données XML à partir d’une source et le transforme en un nouveau format XML. Vous pouvez tirer parti des requêtes LINQ pour récupérer le contenu à transformer, ou modifier le contenu d’un document existant dans un nouveau format XML.  
   
- L’exemple de cette rubrique transforme le contenu d’un document source XML en HTML à afficher dans un navigateur.  
+ L’exemple de cette rubrique transforme le contenu d’un document source XML au format HTML à afficher dans un navigateur.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ### <a name="to-transform-an-xml-document"></a>Pour transformer un document XML  
   
-1.  Dans Visual Studio, créez un nouveau projet Visual Basic dans la **Application Console** modèle de projet.  
+1.  Dans Visual Studio, créez un nouveau projet Visual Basic dans le **Application Console** modèle de projet.  
   
 2.  Double-cliquez sur le fichier Module1.vb créé dans le projet pour modifier le code Visual Basic. Ajoutez le code suivant à la `Sub Main` de la `Module1` module. Ce code crée le document XML source comme un <xref:System.Xml.Linq.XDocument> objet.  
   
@@ -57,9 +57,9 @@ ms.locfileid: "33652959"
         </Catalog>  
     ```  
   
-     [Comment : charger du code XML à partir d’un fichier, une chaîne ou un flux](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
+     [Comment : charger du code XML à partir d’un fichier, une chaîne ou un Stream](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md).  
   
-3.  Après le code pour créer le document XML source, ajoutez le code suivant pour extraire tous les \<Book > éléments à partir de l’objet et les transformer en un document HTML. La liste des \<Book > éléments est créé à l’aide d’une requête LINQ qui retourne une collection de <xref:System.Xml.Linq.XElement> objets qui contiennent le HTML transformé. Vous pouvez utiliser des expressions incorporées pour classer les valeurs à partir du document source dans le nouveau format XML.  
+3.  Après le code pour créer le document XML source, ajoutez le code suivant pour extraire tous les \<livre > éléments à partir de l’objet et les transformer en un document HTML. La liste des \<livre > éléments est créé à l’aide d’une requête LINQ qui retourne une collection de <xref:System.Xml.Linq.XElement> objets qui contiennent le code HTML transformé. Vous pouvez utiliser des expressions incorporées pour placer les valeurs à partir du document source dans le nouveau format XML.  
   
      Le document HTML résultant est écrit dans un fichier à l’aide de la <xref:System.Xml.Linq.XElement.Save%2A> (méthode).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "33652959"
   
 4.  Après avoir `Sub Main` de `Module1`, ajoutez une nouvelle méthode (`Sub`) pour transformer un \<Description > nœud dans le format HTML spécifié. Cette méthode est appelée par le code à l’étape précédente et est utilisée pour conserver le format de la \<Description > éléments.  
   
-     Cette méthode remplace les sous-éléments de le \<Description > élément avec du code HTML. Le `ReplaceWith` méthode est utilisée pour conserver l’emplacement des sous-éléments. Le contenu transformé de le \<Description > élément est inclus dans un paragraphe HTML (\<p >) élément. Le <xref:System.Xml.Linq.XContainer.Nodes%2A> propriété est utilisée pour récupérer le contenu transformé de le \<Description > élément. Cela garantit que les sous-éléments sont inclus dans le contenu transformé.  
+     Cette méthode remplace les sous-éléments de le \<Description > élément HTML. Le `ReplaceWith` méthode est utilisée pour conserver l’emplacement des sous-éléments. Le contenu transformé de la \<Description > élément est inclus dans un paragraphe HTML (\<p >) élément. Le <xref:System.Xml.Linq.XContainer.Nodes%2A> propriété est utilisée pour récupérer le contenu transformé de la \<Description > élément. Cela garantit que les sous-éléments sont inclus dans le contenu transformé.  
   
      Ajoutez le code suivant après `Sub Main` de `Module1`.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "33652959"
   
 5.  Enregistrez les modifications apportées.  
   
-6.  Appuyez sur F5 pour exécuter le code. Le document enregistré qui résulte ressemble à ceci :  
+6.  Appuyez sur F5 pour exécuter le code. Enregistré le document résultant ressemblera à ce qui suit :  
   
     ```  
     <?xml version="1.0"?>  

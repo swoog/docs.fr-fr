@@ -6,21 +6,22 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 46278e35c6966e473f5a800f7e99814efd7b943c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925476"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
-Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient une option <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés, qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
+Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient un texte facultatif <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Structure URI d'une adresse  
  L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, les quatre parties de l’URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint peuvent être décomposées comme suit :  
   
 -   Schéma : http:  
   
--   Ordinateur : www.fabrikam.com  
+-   Ordinateur : `www.fabrikam.com`  
   
 -   (facultatif) Port : 322  
   
@@ -30,15 +31,15 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
  L'adresse du point de terminaison pour un service peut être spécifiée de manière impérative en utilisant le code ou de façon déclarative par la configuration. La définition de points de terminaison dans le code est généralement peu pratique car les liaisons et les adresses pour un service déployé sont en général différentes de celles utilisées au cours du développement du service. En général, il est plus pratique de définir des points de terminaison de service à l'aide de la configuration plutôt que du code. Le fait de conserver les informations de liaison et d'adressage hors du code leur permet de changer sans nécessiter de recompilation et de redéploiement de l'application.  
   
 ### <a name="defining-an-address-in-configuration"></a>Définition d'une adresse dans la configuration  
- Pour définir un point de terminaison dans un fichier de configuration, utilisez la [ \<point de terminaison >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) élément. Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Pour définir un point de terminaison dans un fichier de configuration, utilisez le [ \<point de terminaison >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) élément. Pour plus d’informations et un exemple, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="defining-an-address-in-code"></a>Définition d'une adresse dans le code  
- Une adresse de point de terminaison peut être créée dans le code avec la classe <xref:System.ServiceModel.EndpointAddress>. Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Une adresse de point de terminaison peut être créée dans le code avec la classe <xref:System.ServiceModel.EndpointAddress>. Pour plus d’informations et un exemple, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
 ### <a name="endpoints-in-wsdl"></a>Points de terminaison dans WSDL  
- Une adresse de point de terminaison peut aussi être représentée dans WSDL sous la forme d'un élément EPR WS-Addressing à l'intérieur de l'élément `wsdl:port` du point de terminaison correspondant. L'EPR contient l'adresse du point de terminaison ainsi que toutes les propriétés d'adresse. Pour plus d’informations, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
+ Une adresse de point de terminaison peut aussi être représentée dans WSDL sous la forme d'un élément EPR WS-Addressing à l'intérieur de l'élément `wsdl:port` du point de terminaison correspondant. L'EPR contient l'adresse du point de terminaison ainsi que toutes les propriétés d'adresse. Pour plus d’informations et un exemple, consultez [spécification d’une adresse de point de terminaison](../../../../docs/framework/wcf/specifying-an-endpoint-address.md).  
   
-## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Plusieurs IIS liaison prise en charge dans .NET Framework 3.5  
+## <a name="multiple-iis-binding-support-in-net-framework-35"></a>Plusieurs liaisons de prise en charge dans .NET Framework 3.5 IIS  
  Les fournisseurs de services Internet hébergent souvent de nombreuses applications sur le même serveur et le même site pour augmenter la densité du site et réduire le coût total de possession. Ces applications sont liées en général à des adresses de base différentes. Un site web IIS (Internet Information Services) peut contenir plusieurs applications. Les applications dans un site sont accessibles par le biais d'une ou de plusieurs liaisons IIS.  
   
  Les liaisons IIS fournissent deux informations : un protocole de liaison et des informations de liaison. Le protocole de liaison définit la méthode selon laquelle la communication se produit, et les informations de liaison sont les informations utilisées pour accéder au site.  
@@ -49,7 +50,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
 -   Informations de liaison : adresse IP, port, en-tête de l’hôte  
   
- IIS peut spécifier plusieurs liaisons pour chaque site, ce qui génère plusieurs adresses de base pour chaque méthode. Antérieures à [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF ne prenait pas en charge plusieurs adresses pour un schéma et, s’ils ont été spécifiés, a levé une <xref:System.ArgumentException> lors de l’activation.  
+ IIS peut spécifier plusieurs liaisons pour chaque site, ce qui génère plusieurs adresses de base pour chaque méthode. Antérieures à [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], WCF ne prenait pas en charge plusieurs adresses pour un schéma et, s’ils ont été spécifiés, a levé une <xref:System.ArgumentException> pendant l’activation.  
   
  Le [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] permet aux fournisseurs de services Internet d'héberger plusieurs applications avec différentes adresses de base pour la même méthode sur le même site.  
   
@@ -59,7 +60,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
 -   http://shipping.myorg.com/Service.svc  
   
- Grâce au [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], vous spécifiez un filtre de préfixe au niveau de AppDomain dans le fichier de configuration. Cela avec la [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) élément, qui contient une liste de préfixes. Les adresses de base entrantes, fournies par IIS, sont filtrées selon la liste de préfixes facultative. Par défaut, lorsqu'un préfixe n'est pas spécifié, toutes les adresses sont transmises. La spécification du préfixe entraîne uniquement la transmission de l'adresse de base correspondante pour ce schéma.  
+ Grâce au [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], vous spécifiez un filtre de préfixe au niveau de AppDomain dans le fichier de configuration. Faites-le avec la [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) élément, qui contient une liste de préfixes. Les adresses de base entrantes, fournies par IIS, sont filtrées selon la liste de préfixes facultative. Par défaut, lorsqu'un préfixe n'est pas spécifié, toutes les adresses sont transmises. La spécification du préfixe entraîne uniquement la transmission de l'adresse de base correspondante pour ce schéma.  
   
  Les éléments suivants sont un exemple de code de configuration qui utilise les filtres de préfixe.  
   
@@ -74,7 +75,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
 </system.serviceModel>  
 ```  
   
- Dans l’exemple précédent, NET.TCP://Payroll.myorg.com : 8000 et http://shipping.myorg.com:8000 sont les seules adresses de base, pour leur modèle respectif, qui est transmises.  
+ Dans l’exemple précédent, NET.TCP://Payroll.myorg.com : 8000 et http://shipping.myorg.com:8000 sont les seules adresses de base, pour leur modèle respectif, qui est ensuite transmis.  
   
  Le `baseAddressPrefixFilter` ne prend pas en charge de caractères génériques.  
   
@@ -94,10 +95,10 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Tout paramètre baseAddressPrefixFilters est ignoré, à la fois pour les protocoles HTTP et non HTTP, lorsque plusieurs liaisons de site sont activées à l’aide de ce paramètre.  
   
- Pour plus d’informations et d’exemples, consultez [prise en charge de plusieurs liaisons IIS Site](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) et <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
+ Pour plus d’informations et des exemples, consultez [prise en charge de plusieurs liaisons IIS Site](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md) et <xref:System.ServiceModel.ServiceHostingEnvironment.MultipleSiteBindingsEnabled%2A>.  
   
 ## <a name="extending-addressing-in-wcf-services"></a>Extension de l'adressage dans les services WCF  
- La valeur par défaut, le modèle des services WCF d’adressage utilise l’URI d’adresse de point de terminaison pour les raisons suivantes :  
+ La valeur par défaut, le modèle de services WCF d’adressage utilise l’URI d’adresse de point de terminaison aux fins suivantes :  
   
 -   Pour spécifier l'adresse d'écoute du service, l'emplacement où le point de terminaison écoute les messages.  
   

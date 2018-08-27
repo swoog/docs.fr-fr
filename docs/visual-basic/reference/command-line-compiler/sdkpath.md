@@ -12,10 +12,11 @@ ms.assetid: fec8a3f1-b791-4a37-8af7-344859f8212d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 162c7d58350c381ec667e8a4cd11c03e83fcdf44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925683"
 ---
 # <a name="-sdkpath"></a>-sdkpath
 Spécifie l’emplacement de mscorlib.dll et de Microsoft.VisualBasic.dll.  
@@ -28,13 +29,13 @@ Spécifie l’emplacement de mscorlib.dll et de Microsoft.VisualBasic.dll.
   
 ## <a name="arguments"></a>Arguments  
  `path`  
- Le répertoire contenant les versions de mscorlib.dll et de Microsoft.VisualBasic.dll à utiliser pour la compilation. Ce chemin d’accès n’est pas vérifiée jusqu'à ce qu’il est chargé. Placez le nom de répertoire entre guillemets ( » «) si elle contient un espace.  
+ Le répertoire contenant les versions de mscorlib.dll et de Microsoft.VisualBasic.dll à utiliser pour la compilation. Ce chemin d’accès n’est pas vérifié jusqu'à ce qu’il est chargé. Placez le nom de répertoire entre guillemets ( » «) s’il contient un espace.  
   
 ## <a name="remarks"></a>Notes  
- Cette option indique au compilateur de Visual Basic pour charger le mscorlib.dll et Microsoft.VisualBasic.dll fichiers à partir d’un emplacement non définis par défaut. Le `-sdkpath` option a été conçue pour être utilisé avec [- /netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). Le [!INCLUDE[Compact](~/includes/compact-md.md)] utilise différentes versions de ces bibliothèques d’assistance pour éviter l’utilisation de types et de fonctionnalités de langage introuvables sur les appareils.  
+ Cette option indique au compilateur de Visual Basic pour charger le mscorlib.dll et Microsoft.VisualBasic.dll fichiers à partir d’un emplacement non défini par défaut. Le `-sdkpath` option a été conçue pour être utilisée avec [- /netcf](../../../visual-basic/reference/command-line-compiler/netcf.md). Le [!INCLUDE[Compact](~/includes/compact-md.md)] utilise différentes versions de ces bibliothèques d’assistance pour éviter l’utilisation de types et les fonctionnalités de langage introuvables sur les appareils.  
   
 > [!NOTE]
->  Le `-sdkpath` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande. Le `-sdkpath` option est définie lors du chargée d’un projet de périphérique Visual Basic.  
+>  Le `-sdkpath` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande. Le `-sdkpath` option est définie lorsqu’un projet smart device de Visual Basic est chargé.  
   
  Vous pouvez spécifier que le compilateur doit compiler sans référence à la bibliothèque Runtime Visual Basic à l’aide de la `-vbruntime` option du compilateur. Pour plus d’informations, consultez [- vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md).  
   

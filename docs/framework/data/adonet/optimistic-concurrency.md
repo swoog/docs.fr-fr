@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: b1395c3bd81f7f9d2f12d5b1ea2ec4b784f7aab9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766226"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911998"
 ---
 # <a name="optimistic-concurrency"></a>Accès concurrentiel optimiste
 Dans un environnement multi-utilisateur, il existe deux modèles pour la mise à jour de données dans une base de données : l'accès simultané optimiste et l'accès simultané pessimiste. L'objet <xref:System.Data.DataSet> est conçu pour privilégier l'utilisation de l'accès simultané optimiste pour les activités longues, comme lors de la communication à distance de données ou de l'interaction avec ces dernières.  
@@ -30,9 +30,9 @@ Dans un environnement multi-utilisateur, il existe deux modèles pour la mise à
   
  À 13h00, l'utilisateur 1 lit une ligne de la base de données contenant les valeurs suivantes :  
   
- **IDClient Nom Prénom**  
+ **CustID LastName FirstName**  
   
- 101 Smith Bob  
+ 101 Bob Smith  
   
 |Nom de la colonne|Valeur d'origine|Valeur actuelle|Valeur dans la base de données|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -42,7 +42,7 @@ Dans un environnement multi-utilisateur, il existe deux modèles pour la mise à
   
  À 13h01, l'utilisateur 2 lit la même ligne.  
   
- À 13 h 03, l’utilisateur 2 modifie **FirstName** à partir de « Bob » à « Robert » et met à jour la base de données.  
+ À 13 h 03, l’utilisateur 2 modifie **FirstName** de « Bob » par « Robert » et met à jour de la base de données.  
   
 |Nom de la colonne|Valeur d'origine|Valeur actuelle|Valeur dans la base de données|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  Vous pouvez aussi choisir d'appliquer des critères moins restrictifs lorsque vous utilisez un modèle d'accès simultané optimiste. Par exemple, utiliser uniquement les colonnes de clé primaire dans la clause WHERE aboutit au remplacement des données, que les autres colonnes aient ou non subi une mise à jour depuis la dernière requête. Vous pouvez aussi appliquer une clause WHERE à certaines colonnes uniquement, ce qui aura pour effet de remplacer les données, sauf si des champs spécifiques ont été mis à jour depuis la dernière requête les concernant.  
   
 ### <a name="the-dataadapterrowupdated-event"></a>Événement DataAdapter.RowUpdated  
- Le **RowUpdated** l’événement de la <xref:System.Data.Common.DataAdapter> objet peut être utilisé conjointement avec les techniques précédemment décrites, afin de fournir une notification à votre application de violations d’accès concurrentiel optimiste. **RowUpdated** intervient après chaque tentative pour mettre à jour un **modifié** de ligne à partir d’un **DataSet**. Cela vous permet d'ajouter un code de gestion spécial, qui traitera les exceptions le cas échéant, ajoutera des informations d'erreur personnalisées, ajoutera une logique pour les nouvelles tentatives, etc. Le <xref:System.Data.Common.RowUpdatedEventArgs> objet retourne un **RecordsAffected** propriété contenant le nombre de lignes affectées par une commande de mise à jour spécifique pour une ligne modifiée dans une table. En configurant la commande de mise à jour pour tester l’accès simultané optimiste, la **RecordsAffected** propriété, par conséquent, renvoie la valeur 0 lorsqu’une violation d’accès concurrentiel optimiste s’est produite, car aucun enregistrement ont été mis à jour. Dans ce cas, une exception est levée. Le **RowUpdated** événements vous permettent de gérer cette occurrence et d’éviter l’exception en définissant une **RowUpdatedEventArgs.Status** de valeurs, tels que  **UpdateStatus.SkipCurrentRow**. Pour plus d’informations sur la **RowUpdated** événements, consultez [gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ Le **RowUpdated** événements de la <xref:System.Data.Common.DataAdapter> objet peut être utilisé conjointement avec les techniques précédemment décrites, afin de fournir une notification à votre application de violations d’accès concurrentiel optimiste. **RowUpdated** intervient après chaque tentative pour mettre à jour un **Modified** ligne à partir d’un **DataSet**. Cela vous permet d'ajouter un code de gestion spécial, qui traitera les exceptions le cas échéant, ajoutera des informations d'erreur personnalisées, ajoutera une logique pour les nouvelles tentatives, etc. Le <xref:System.Data.Common.RowUpdatedEventArgs> objet retourne un **RecordsAffected** propriété contenant le nombre de lignes affectées par une commande de mise à jour particulière pour une ligne modifiée dans une table. En définissant la commande de mise à jour pour tester l’accès concurrentiel optimiste, la **RecordsAffected** propriété, par conséquent, renvoie la valeur 0 lorsqu’une violation d’accès concurrentiel optimiste s’est produite, car aucun enregistrement ont été mis à jour. Dans ce cas, une exception est levée. Le **RowUpdated** événement vous permet de gérer cet événement et d’éviter l’exception en définissant une **RowUpdatedEventArgs.Status** valeur, telle que  **UpdateStatus.SkipCurrentRow**. Pour plus d’informations sur la **RowUpdated** événement, consultez [gestion des événements DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
- Si vous le souhaitez, vous pouvez définir **DataAdapter.ContinueUpdateOnError** à **true**, avant d’appeler **mise à jour**et répondre aux informations d’erreur stockées dans la **RowError** propriété d’un particulier en ligne lorsque la **mise à jour** est terminée. Pour plus d’informations, consultez [informations d’erreur de ligne](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
+ Si vous le souhaitez, vous pouvez définir **DataAdapter.ContinueUpdateOnError** à **true**, avant d’appeler **mise à jour**et répondre aux informations d’erreur stockées dans le **RowError** ligne de propriété d’un particulier lorsque le **mise à jour** est terminée. Pour plus d’informations, consultez [informations d’erreur de ligne](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md).  
   
 ## <a name="optimistic-concurrency-example"></a>Exemple d'accès simultané optimiste  
- Voici un exemple simple qui définit le **UpdateCommand** d’un **DataAdapter** pour tester l’accès simultané optimiste, puis utilise le **RowUpdated** pour tester l’événement violations d’accès concurrentiel optimiste. Une violation d’accès concurrentiel optimiste est rencontrée, l’application définit la **RowError** de la ligne de la mise à jour a été émis pour afin de refléter une violation d’accès concurrentiel optimiste.  
+ Voici un exemple simple qui définit les **UpdateCommand** d’un **DataAdapter** pour tester l’accès concurrentiel optimiste et utilise ensuite le **RowUpdated** événement à tester pour violations d’accès concurrentiel optimiste. Une violation d’accès concurrentiel optimiste, l’application définit le **RowError** de la ligne de la mise à jour a été émis pour afin de refléter une violation d’accès concurrentiel optimiste.  
   
- Notez que les valeurs de paramètre passées à la clause WHERE de la commande de mise à jour sont mappées à la **d’origine** les valeurs de leurs colonnes respectives.  
+ Notez que les valeurs de paramètre passées à la clause WHERE de la commande de mise à jour sont mappées à la **d’origine** valeurs de leurs colonnes respectives.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -166,7 +166,7 @@ SqlDataAdapter adapter = new SqlDataAdapter(
 // The Update command checks for optimistic concurrency violations  
 // in the WHERE clause.  
 adapter.UpdateCommand = new SqlCommand("UPDATE Customers Set CustomerID = @CustomerID, CompanyName = @CompanyName " +  
-   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName, connection);  
+   "WHERE CustomerID = @oldCustomerID AND CompanyName = @oldCompanyName", connection);  
 adapter.UpdateCommand.Parameters.Add(  
   "@CustomerID", SqlDbType.NChar, 5, "CustomerID");  
 adapter.UpdateCommand.Parameters.Add(  

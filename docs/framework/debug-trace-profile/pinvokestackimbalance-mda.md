@@ -12,55 +12,56 @@ helpviewer_keywords:
 ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9938db3f4a3d054fde52139c166fb6a2e2a402df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5594166081c36fbda1e5d1a62e017aaceb7a553d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388054"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912112"
 ---
-# <a name="pinvokestackimbalance-mda"></a>Assistant Débogage managé pInvokeStackImbalance
-L'Assistant Débogage managé (MDA) `pInvokeStackImbalance` est activé quand le CLR détecte que la profondeur de la pile après un appel de code non managé ne correspond pas à la profondeur de la pile attendue par rapport à la convention d'appel spécifiée dans l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute> et à la déclaration des paramètres dans la signature managée.  
-  
+# <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance (MDA)
+
+Le `PInvokeStackImbalance` assistant débogage managé (MDA) est activé lorsque le CLR détecte que la profondeur de la pile après un appel de code non managé ne correspond pas à la profondeur de pile attendue, étant donnée la convention d’appel spécifiée dans le <xref:System.Runtime.InteropServices.DllImportAttribute> attribut et le déclaration des paramètres dans la signature managée.
+
+L'Assistant Débogage managé (MDA) `PInvokeStackImbalance` est implémenté uniquement pour les plateformes 32 bits x86.
+
 > [!NOTE]
->  L'Assistant Débogage managé (MDA) `pInvokeStackImbalance` est implémenté uniquement pour les plateformes 32 bits x86.  
-  
-> [!NOTE]
->  Dans .NET Framework 3.5, l'Assistant Débogage managé (MDA) `pInvokeStackImbalance` est désactivé par défaut. Si vous utilisez le .NET Framework 3.5 avec Visual Studio 2005, l’Assistant Débogage managé (MDA) `pInvokeStackImbalance` figure dans la liste **Assistants Débogage managé** de la boîte de dialogue **Exceptions** (qui s’affiche quand vous cliquez sur **Exceptions** dans le menu **Déboguer**). Toutefois, le fait de cocher ou décocher la case **Levé** pour `pInvokeStackImbalance` ne permet pas d’activer ou de désactiver l’Assistant Débogage managé (MDA) ; cela détermine seulement si Visual Studio lève une exception quand cet Assistant est activé.  
-  
-## <a name="symptoms"></a>Symptômes  
- Une application rencontre une violation d'accès ou une altération de la mémoire pendant ou après un appel de code non managé.  
-  
-## <a name="cause"></a>Cause  
- Il se peut que la signature managée de l'appel de code non managé ne corresponde pas à la signature non managée de la méthode qui est appelée.  Cette incompatibilité peut être due au fait que la signature managée ne déclare pas le nombre correct de paramètres ou ne spécifie pas la taille appropriée pour les paramètres.  L'Assistant Débogage managé (MDA) peut également être activé parce que la convention d'appel, éventuellement spécifiée par l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute>, ne correspond pas à la convention d'appel non managée.  
-  
-## <a name="resolution"></a>Résolution  
- Vérifiez que la signature managée de l'appel de code non managé et la convention d'appel correspondent à la signature et à la convention d'appel de la cible native.  Essayez de spécifier explicitement la convention d'appel à la fois du côté managé et du côté non managé. Il est également possible, mais moins probable, que la fonction non managée ait déséquilibré la pile pour une raison quelconque, telle qu'un bogue dans le compilateur non managé.  
-  
-## <a name="effect-on-the-runtime"></a>Effet sur le runtime  
- Oblige tous les appels de code non managé à prendre le chemin d'accès non optimisé dans le CLR.  
-  
-## <a name="output"></a>Sortie  
- Le message de l'Assistant Débogage managé (MDA) donne le nom de l'appel de méthode d'appel de code non managé qui provoque le déséquilibre de la pile.  Voici un exemple de message d'un appel de code non managé sur la méthode `SampleMethod` :  
-  
-```  
-A call to PInvoke function 'SampleMethod' has unbalanced the stack.   
-This is likely because the managed PInvoke signature does not match   
-the unmanaged target signature. Check that the calling convention and   
-parameters of the PInvoke signature match the target unmanaged signature.  
-```  
-  
-## <a name="configuration"></a>Configuration  
-  
-```xml  
-<mdaConfig>  
-  <assistants>  
-    <pInvokeStackImbalance />  
-  </assistants>  
-</mdaConfig>  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)
+> Le `PInvokeStackImbalance` Assistant Débogage MANAGÉ est désactivé par défaut. Dans Visual Studio 2017, le `PInvokeStackImbalance` MDA s’affiche dans le **Assistants Débogage managé** liste dans le **paramètres d’Exception** boîte de dialogue (qui s’affiche lorsque vous sélectionnez **déboguer**  >  **Windows** > **paramètres d’Exception**). Toutefois, en sélectionnant ou en désactivant le **arrêter lorsque levée** case à cocher ne pas activer ou désactiver l’Assistant Débogage MANAGÉ ; cela détermine seulement si Visual Studio lève une exception lorsque l’Assistant Débogage MANAGÉ est activé.
+
+## <a name="symptoms"></a>Symptômes
+
+Une application rencontre une violation d'accès ou une altération de la mémoire pendant ou après un appel de code non managé.
+
+## <a name="cause"></a>Cause
+
+Il se peut que la signature managée de l'appel de code non managé ne corresponde pas à la signature non managée de la méthode qui est appelée.  Cette incompatibilité peut être due au fait que la signature managée ne déclare pas le nombre correct de paramètres ou ne spécifie pas la taille appropriée pour les paramètres.  L'Assistant Débogage managé (MDA) peut également être activé parce que la convention d'appel, éventuellement spécifiée par l'attribut <xref:System.Runtime.InteropServices.DllImportAttribute>, ne correspond pas à la convention d'appel non managée.
+
+## <a name="resolution"></a>Résolution
+
+Vérifiez que la signature managée de l'appel de code non managé et la convention d'appel correspondent à la signature et à la convention d'appel de la cible native.  Essayez de spécifier explicitement la convention d'appel à la fois du côté managé et du côté non managé. Il est également possible, mais moins probable, que la fonction non managée ait déséquilibré la pile pour une raison quelconque, telle qu'un bogue dans le compilateur non managé.
+
+## <a name="effect-on-the-runtime"></a>Effet sur le runtime
+
+Oblige tous les appels de code non managé à prendre le chemin d'accès non optimisé dans le CLR.
+
+## <a name="output"></a>Sortie
+
+Le message de l'Assistant Débogage managé (MDA) donne le nom de l'appel de méthode d'appel de code non managé qui provoque le déséquilibre de la pile. Voici un exemple de message d'un appel de code non managé sur la méthode `SampleMethod` :
+
+**Un appel à la fonction PInvoke 'SampleMethod' a ait déséquilibré la pile. Cela est probablement parce que la signature PInvoke managée ne correspond pas à la signature cible non managée. Vérifiez que la convention d’appel et les paramètres de la signature PInvoke correspondent à la signature non managée cible.**
+
+## <a name="configuration"></a>Configuration
+
+```xml
+<mdaConfig>
+  <assistants>
+    <pInvokeStackImbalance />
+  </assistants>
+</mdaConfig>
+```
+
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [Diagnostic d’erreurs avec les Assistants Débogage managé](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Marshaling d'interopérabilité](../../../docs/framework/interop/interop-marshaling.md)

@@ -10,30 +10,30 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: e672402535215ca30d19cc480e39b42b0364f137
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09b0162068bc068bd77612816626897ec4a151d9
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590807"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911965"
 ---
 # <a name="char-data-type-visual-basic"></a>Char, type de données (Visual Basic)
-Contient les points de code de (2 octets) de 16 bits non signé compris entre 0 et 65 535. Chaque *point de code*, ou le code de caractère, représente un caractère Unicode.  
+Contient les points de code de (2 octets) de 16 bits non signé compris entre 0 et 65 535. Chaque *point de code*, ou code de caractère, représente un caractère Unicode.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le `Char` lorsque vous avez besoin contenir un seul type de données de caractères et n’avez pas besoin de la charge de `String`. Dans certains cas, vous pouvez utiliser `Char()`, un tableau de `Char` éléments, pour contenir plusieurs caractères.  
+ Utilisez le `Char` lorsque vous avez besoin contenir un seul type de données de caractères et n’avez pas besoin de la surcharge de `String`. Dans certains cas, vous pouvez utiliser `Char()`, un tableau de `Char` éléments, pour contenir plusieurs caractères.  
   
  La valeur par défaut de `Char` est le caractère avec un point de code de 0.  
   
 ## <a name="unicode-characters"></a>Caractères Unicode  
- Les premiers points de 128 code (0 à 127) Unicode correspondent aux lettres et des symboles sur un clavier américain standard. Ces premiers points de 128 code sont les mêmes que ceux du jeu de caractères ASCII. Les deuxième 128 points de code (128 à 255) représentent des caractères spéciaux, tels que des lettres de l’alphabet de latines, les accents, les symboles monétaires et les fractions. Unicode utilise les points de code restants (256-65 535) pour un large éventail de symboles, y compris les caractères textuels mondiaux, les signes diacritiques et les symboles mathématiques et techniques.  
+ Les premiers points de 128 code (0 à 127) Unicode correspondent aux lettres et des symboles sur un clavier américain standard. Ces premiers points de 128 code sont les mêmes que celles définit le jeu de caractères ASCII. Les deuxième 128 points de code (128 à 255) représentent des caractères spéciaux, tels que des lettres de l’alphabet Latin en fonction du, les accents, les symboles monétaires et les fractions. Unicode utilise les points de code restants (256-65 535) pour une grande variété de symboles, y compris les caractères textuels mondiaux, les signes diacritiques et les symboles mathématiques et techniques.  
   
- Vous pouvez utiliser les méthodes, telles que <xref:System.Char.IsDigit%2A> et <xref:System.Char.IsPunctuation%2A> sur une `Char` variable pour déterminer sa classification Unicode.  
+ Vous pouvez utiliser des méthodes telles que <xref:System.Char.IsDigit%2A> et <xref:System.Char.IsPunctuation%2A> sur une `Char` variable pour déterminer sa classification Unicode.  
   
 ## <a name="type-conversions"></a>Conversions de type  
- Visual Basic ne convertit pas directement entre `Char` et les types numériques. Vous pouvez utiliser la <xref:Microsoft.VisualBasic.Strings.Asc%2A> ou <xref:Microsoft.VisualBasic.Strings.AscW%2A> fonction pour convertir un `Char` valeur un `Integer` qui représente son point de code. Vous pouvez utiliser la <xref:Microsoft.VisualBasic.Strings.Chr%2A> ou <xref:Microsoft.VisualBasic.Strings.ChrW%2A> fonction pour convertir une `Integer` valeur un `Char` qui a ce point de code.  
+ Visual Basic ne convertit pas directement entre `Char` et les types numériques. Vous pouvez utiliser la <xref:Microsoft.VisualBasic.Strings.Asc%2A> ou <xref:Microsoft.VisualBasic.Strings.AscW%2A> fonction pour convertir un `Char` valeur un `Integer` qui représente son point de code. Vous pouvez utiliser la <xref:Microsoft.VisualBasic.Strings.Chr%2A> ou <xref:Microsoft.VisualBasic.Strings.ChrW%2A> fonction pour convertir un `Integer` valeur un `Char` qui a ce point de code.  
   
- Si le commutateur de la vérification de type ([Option Strict, instruction](../../../visual-basic/language-reference/statements/option-strict-statement.md)) est activé, vous devez ajouter le caractère de type littéral à un seul caractère littéral de chaîne à l’identifier en tant que le `Char` type de données. L'exemple suivant illustre ce comportement.  
+ Si le commutateur de vérification de type ([Option Strict, instruction](../../../visual-basic/language-reference/statements/option-strict-statement.md)) est activé, vous devez ajouter le caractère de type littéral à un seul caractère littéral de chaîne à l’identifier en tant que le `Char` type de données. L'exemple suivant illustre ce comportement.  
   
 ```  
 Option Strict On  
@@ -55,7 +55,7 @@ charVar = "Z"C
   
 -   **Caractères de type.** L’ajout du caractère de type de littéral `C` à une chaîne à un caractère littéral force ce dernier à la `Char` type de données. `Char` n’a aucun caractère de type d’identificateur.  
   
--   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Char?displayProperty=nameWithType>.  
+-   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Char?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Char?displayProperty=nameWithType>  
@@ -63,7 +63,7 @@ charVar = "Z"C
  <xref:Microsoft.VisualBasic.Strings.AscW%2A>  
  <xref:Microsoft.VisualBasic.Strings.Chr%2A>  
  <xref:Microsoft.VisualBasic.Strings.ChrW%2A>  
- [Types de données](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
  [String (type de données)](../../../visual-basic/language-reference/data-types/string-data-type.md)  
  [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  

@@ -2,22 +2,22 @@
 title: Utilisation de Windows Management Instrumentation pour les diagnostics
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 3b06cc61714b3fdc63086d2b79b087540bece698
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b1ebb6b438df6d7efb5342a82e42220a58ea5cbd
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805939"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42908144"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Utilisation de Windows Management Instrumentation pour les diagnostics
 Windows Communication Foundation (WCF) expose des données d’inspection d’un service lors de l’exécution via un fournisseur de services WCF Windows Management Instrumentation (WMI).  
   
 ## <a name="enabling-wmi"></a>Activation de WMI  
- WMI est l'implémentation de Microsoft de la norme WBEM (Web-Based Enterprise Management). Pour plus d’informations sur le SDK WMI, consultez [Windows Management Instrumentation](https://msdn.microsoft.com/library/aa394582.aspx). WBEM est une norme d'industrie qui détermine comment les applications exposent l'instrumentation de gestion aux outils de gestion externes.  
+ WMI est l'implémentation de Microsoft de la norme WBEM (Web-Based Enterprise Management). Pour plus d’informations sur le SDK WMI, consultez [Windows Management Instrumentation](/windows/desktop/WmiSdk/wmi-start-page). WBEM est une norme d'industrie qui détermine comment les applications exposent l'instrumentation de gestion aux outils de gestion externes.  
   
- Un fournisseur WMI est un composant qui expose l'instrumentation au moment de l'exécution par l'intermédiaire d'une interface WBEM compatible. Il se compose d'un jeu d'objets WMI qui ont des paires attribut/valeur. Les paires peuvent être plusieurs types simples. Les outils de gestion peuvent se connecter aux services au moment de l'exécution par l'intermédiaire de l'interface. WCF expose des attributs de services tels que les adresses, liaisons, des comportements et des écouteurs.  
+ Un fournisseur WMI est un composant qui expose l'instrumentation au moment de l'exécution par l'intermédiaire d'une interface WBEM compatible. Il se compose d'un jeu d'objets WMI qui ont des paires attribut/valeur. Les paires peuvent être plusieurs types simples. Les outils de gestion peuvent se connecter aux services au moment de l'exécution par l'intermédiaire de l'interface. WCF expose des attributs de services tels que les adresses, liaisons, comportements et écouteurs.  
   
- Le fournisseur WMI intégré peut être activé dans le fichier de configuration de l'application. Cette opération est effectuée via le `wmiProviderEnabled` attribut de la [ \<diagnostics >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) dans les [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) section, comme indiqué dans l’exemple suivant configuration.  
+ Le fournisseur WMI intégré peut être activé dans le fichier de configuration de l'application. Cette opération est effectuée via le `wmiProviderEnabled` attribut de la [ \<diagnostics >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) dans le [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) section, comme illustré dans l’exemple suivant configuration.  
   
 ```xml  
 <system.serviceModel>  
@@ -46,11 +46,11 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
  **Attention** WMI prend uniquement en charge un <xref:System.TimeSpan> valeur jusqu'à 3 virgules décimales. Par exemple, si votre service affecte à l'une de ses propriétés la valeur <xref:System.TimeSpan.MaxValue>, sa valeur est tronquée après 3 virgules décimales lorsque elle est affichée dans WMI.  
   
 ## <a name="security"></a>Sécurité  
- Étant donné que le fournisseur WMI WCF permet la découverte de services dans un environnement, vous devez être très prudent avant d’accorder l’accès à celui-ci. Si vous relâchez l'accès réservé aux administrateurs par défaut, vous permettez à des correspondants d'un niveau de confiance moindre d'accéder à des données sensibles dans votre environnement. En particulier, si vous relâchez les autorisations pour l'accès WMI distant, vous risquez un grand nombre d'attaques. Si un processus est inondé par des demandes WMI excessives, cela peut nuire à ses performances.  
+ Car le fournisseur WMI WCF permet la découverte de services dans un environnement, vous devez être très prudent avant d’accorder l’accès à celui-ci. Si vous relâchez l'accès réservé aux administrateurs par défaut, vous permettez à des correspondants d'un niveau de confiance moindre d'accéder à des données sensibles dans votre environnement. En particulier, si vous relâchez les autorisations pour l'accès WMI distant, vous risquez un grand nombre d'attaques. Si un processus est inondé par des demandes WMI excessives, cela peut nuire à ses performances.  
   
  De plus, si vous relâchez les autorisations d'accès pour le fichier MOF, les correspondants d'un niveau de confiance moindre peuvent manipuler le comportement de WMI et modifier les objets chargés dans le schéma WMI. Par exemple, des champs peuvent être supprimés au point que des données critiques sont dissimulées à l'administrateur ou que des champs qui ne se remplissent pas ou lèvent des exceptions sont ajoutés au fichier.  
   
- Par défaut, le fournisseur WMI WCF accorde « execute method », « écriture fournisseur » et « activer le compte » pour l’administrateur et « enable account » pour ASP.NET, Service Local et Service réseau. En particulier, sur les plateformes non [!INCLUDE[wv](../../../../../includes/wv-md.md)], le compte ASP.NET a accès en lecture à l'espace de noms WMI ServiceModel. Si vous ne souhaitez pas accorder ces privilèges à un groupe d'utilisateurs particulier, vous devez désactiver le fournisseur WMI (désactivé par défaut) ou désactiver l'accès pour le groupe d'utilisateurs spécifique.  
+ Par défaut, le fournisseur WMI WCF accorde « execute method », « provider write » et « enable account » pour l’administrateur et « enable account » pour ASP.NET, Service Local et Service réseau. En particulier, sur les plateformes non [!INCLUDE[wv](../../../../../includes/wv-md.md)], le compte ASP.NET a accès en lecture à l'espace de noms WMI ServiceModel. Si vous ne souhaitez pas accorder ces privilèges à un groupe d'utilisateurs particulier, vous devez désactiver le fournisseur WMI (désactivé par défaut) ou désactiver l'accès pour le groupe d'utilisateurs spécifique.  
   
  De plus, lorsque vous essayez d'activer WMI par configuration, WMI peut ne pas être activé en raison de privilège utilisateur insuffisant. Toutefois, aucun événement n'est écrit dans le journal des événements pour enregistrer cette défaillance.  
   
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
   
 2.  Avec le bouton droit **Services et applications/contrôle WMI** pour sélectionner **propriétés**.  
   
-3.  Sélectionnez le **sécurité** onglet, puis accédez à la **Root/ServiceModel** espace de noms. Cliquez sur le **sécurité** bouton.  
+3.  Sélectionnez le **sécurité** onglet et accédez à la **Root/ServiceModel** espace de noms. Cliquez sur le **sécurité** bouton.  
   
 4.  Sélectionnez le groupe ou utilisateur spécifique que vous souhaitez contrôler l’accès et utiliser le **autoriser** ou **Deny** case à cocher pour configurer les autorisations.  
   
@@ -110,7 +110,7 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
     write-host ""  
     ```  
   
-     Ce script PowerShell utilise la définition de langage SDDL (Security Descriptor) pour accorder l’accès du groupe utilisateurs intégrés à l’espace de noms WMI « root/servicemodel ». Il spécifie les listes de contrôle d'accès (ACL) suivantes :  
+     Ce script PowerShell utilise la définition de langage SDDL (Security Descriptor) pour accorder l’accès de groupe d’utilisateurs intégrés à l’espace de noms WMI « root/servicemodel ». Il spécifie les listes de contrôle d'accès (ACL) suivantes :  
   
     -   Administrateurs intégrés (BA) - Bénéficie déjà d'un accès.  
   
@@ -147,7 +147,7 @@ Windows Communication Foundation (WCF) expose des données d’inspection d’un
 Whoami /user  
 ```  
   
- Ce faisant, vous obtenez l'identificateur SID de l'utilisateur actuel, mais cette méthode ne peut pas être utilisée pour obtenir le SID d'un utilisateur arbitraire. Une autre méthode permettant d’obtenir le SID consiste à utiliser le [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) outil à partir de la [outils Kit de ressources techniques Windows 2000 pour les tâches administratives](http://go.microsoft.com/fwlink/?LinkId=178660). Cet outil compare l'identificateur SID de deux utilisateurs (locaux ou domaine), et imprime par voie de conséquence les deux SID sur la ligne de commande. Pour plus d’informations, consultez [Well Known SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Ce faisant, vous obtenez l'identificateur SID de l'utilisateur actuel, mais cette méthode ne peut pas être utilisée pour obtenir le SID d'un utilisateur arbitraire. Une autre méthode pour obtenir le SID consiste à utiliser le [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) outil à partir de la [Windows 2000 Resource Kit Tools pour les tâches administratives](http://go.microsoft.com/fwlink/?LinkId=178660). Cet outil compare l'identificateur SID de deux utilisateurs (locaux ou domaine), et imprime par voie de conséquence les deux SID sur la ligne de commande. Pour plus d’informations, consultez [WKT SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Accès aux instances d'objet WMI distantes  
  Si vous avez besoin accéder aux instances WMI WCF sur un ordinateur distant, vous devez activer la confidentialité du paquet sur les outils que vous utilisez pour l’accès. La section suivante décrit comment y parvenir à l'aide de WMI CIM Studio, Windows Management Instrumentation Tester, et le Kit de développement .Net SDK 2.0.  
@@ -162,7 +162,7 @@ Whoami /user
 2.  Dans le **WMI CIM Studio Login** fenêtre, cliquez sur le **Options >>** bouton pour développer la fenêtre. Sélectionnez **confidentialité du paquet** pour **niveau d’authentification**, puis cliquez sur **OK**.  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation Tester  
- Cet outil est installé par Windows. Pour l’exécuter, lancez une console de commande en tapant **cmd.exe** dans les **démarrer/exécuter** boîte de dialogue et cliquez sur **OK**. Ensuite, tapez **wbemtest.exe** dans la fenêtre de commande. Puis l'outil Windows Management Instrumentation Tester est lancé.  
+ Cet outil est installé par Windows. Pour l’exécuter, lancez une console de commande en tapant **cmd.exe** dans le **démarrer/exécuter** boîte de dialogue et cliquez sur **OK**. Ensuite, tapez **wbemtest.exe** dans la fenêtre de commande. Puis l'outil Windows Management Instrumentation Tester est lancé.  
   
 1.  Cliquez sur le **Connect** bouton dans l’angle supérieur droit de la fenêtre.  
   
