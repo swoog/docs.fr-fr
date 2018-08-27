@@ -6,35 +6,37 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ab2d3042aff51e85b50296ce6f4382f588e1af71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cabd39307b6928302b40931c39fc61c3898821ed
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217283"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929642"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduction au langage C# et au .NET Framework
+
 C# est un langage élégant et de type sécurisé orienté objet qui permet aux développeurs de créer toute une gamme d'applications sûres et solides exécutées sur [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Vous pouvez utiliser C# pour créer des applications clientes Windows, services Web XML, composants distribués, applications client-serveur, applications de base de données et bien plus encore. Visual C# fournit un éditeur de code avancé, des concepteurs d’interface utilisateur pratiques, un débogueur intégré et de nombreux autres outils pour faciliter le développement d’applications basées sur le langage C# et le [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
 > [!NOTE]
 > La documentation de Visual C# suppose que vous avez une compréhension des concepts de base de la programmation. Si vous êtes un débutant complet, vous souhaiterez peut-être consulter Visual C# Express, qui est disponible sur le web. Vous pouvez également tirer parti de la documentation et des ressources Web sur C# pour acquérir des compétences de programmation pratiques.  
   
-## <a name="c-language"></a>Langage C#  
+## <a name="c-language"></a>Langage C#
+
  La syntaxe C# est très expressive, mais elle est également simple et facile à apprendre. La syntaxe avec accolades de C# sera facile à reconnaître pour toute personne familiarisée avec C, C++ ou Java. Les développeurs qui connaissent un de ces langages peuvent généralement commencer à travailler efficacement en C# en très peu de temps. La syntaxe C# simplifie beaucoup des complexités de C++ et fournit des fonctionnalités puissantes, comme les types valeur Nullable, les énumérations, les délégués, les expressions lambda et l’accès direct à la mémoire, qui ne figurent pas dans Java. C# prend en charge des méthodes et types génériques qui fournissent de meilleures performances et plus de sécurité pour les types, et des itérateurs, qui permettent aux implémenteurs de classes de collection de définir des comportements d’itération personnalisés qui peuvent être utilisés facilement par le code client. Les expressions [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] font des requêtes fortement typées une construction de première classe du langage.  
   
  En tant que langage orienté objet, C# prend en charge les concepts d’encapsulation, d’héritage et de polymorphisme. Toutes les variables et méthodes, y compris la méthode `Main`, le point d’entrée de l’application, sont encapsulées dans des définitions de classe. Une classe peut hériter directement d'une classe parent, mais peut implémenter un nombre quelconque d'interfaces. Les méthodes qui substituent des méthodes virtuelles dans une classe parente requièrent le mot-clé `override` pour éviter toute redéfinition accidentelle. En C#, un struct est comme une classe légère : il s’agit d’un type alloué par la pile qui peut implémenter des interfaces mais ne prend pas en charge l’héritage.  
   
  Outre ces principes orientés objet de base, C# facilite le développement de composants logiciels à travers plusieurs constructions de langage novatrices, y compris ce qui suit :  
   
--   Des signatures de méthode encapsulées appelées *délégués*, qui activent les notifications d’événement de type sécurisé.  
+- Des signatures de méthode encapsulées appelées *délégués*, qui activent les notifications d’événement de type sécurisé.  
   
--   Les propriétés, qui sont utilisées comme accesseurs pour les variables de membre privé.  
+- Les propriétés, qui sont utilisées comme accesseurs pour les variables de membre privé.  
   
--   Les attributs, qui fournissent des métadonnées déclaratives sur les types au moment de l’exécution.  
+- Les attributs, qui fournissent des métadonnées déclaratives sur les types au moment de l’exécution.  
   
--   Commentaires de documentation XML inline.  
+- Commentaires de documentation XML inline.  
   
--   [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], qui fournit des fonctions de requête intégrées sur diverses sources de données.  
+- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], qui fournit des fonctions de requête intégrées sur diverses sources de données.  
   
  Si vous devez interagir avec d’autres logiciels Windows, comme les objets COM ou les DLL Win32 natives, vous pouvez faire cela dans C# via un processus appelé « Interopérabilité ». L’interopérabilité permet aux programmes C# de faire presque tout ce qu’une application native C++ peut faire. C# prend même en charge les pointeurs et le concept de code « unsafe » pour les cas où l’accès direct à la mémoire est absolument essentiel.  
   
@@ -42,13 +44,14 @@ C# est un langage élégant et de type sécurisé orienté objet qui permet aux 
   
  Voici des ressources C# supplémentaires :  
   
--   Pour une bonne présentation générale du langage, consultez le chapitre 1 de la [Spécification du langage C#](../../csharp/language-reference/language-specification/index.md).  
+- Pour une bonne présentation générale du langage, consultez le chapitre 1 de la [Spécification du langage C#](../../csharp/language-reference/language-specification/index.md).  
   
--   Pour plus d’informations sur des aspects spécifiques du langage C#, consultez la [Référence de C#](../../csharp/language-reference/index.md).  
+- Pour plus d’informations sur des aspects spécifiques du langage C#, consultez la [Référence de C#](../../csharp/language-reference/index.md).  
   
--   Pour plus d’informations sur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], consultez [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).  
+- Pour plus d’informations sur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], consultez [LINQ (Language-Integrated Query)](../programming-guide/concepts/linq/index.md).  
 
-## <a name="net-framework-platform-architecture"></a>Architecture de la plateforme .NET Framework  
+## <a name="net-framework-platform-architecture"></a>Architecture de la plateforme .NET Framework
+
  C# s’exécute sur [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], un composant intégral de Windows qui inclut un système d’exécution virtuel appelé Common Language Runtime (CLR) et un ensemble unifié de bibliothèques de classes. CLR est l’implémentation commerciale par Microsoft de la Common Language Infrastructure (CLI), une norme internationale qui sert de base pour la création d’environnements de développement et d’exécution dans lesquels les langages et bibliothèques fonctionnent ensemble en toute transparence.  
   
  Le code source écrit en C# est compilé dans un langage intermédiaire (IL) qui est conforme à la spécification CLI. Le code de langage intermédiaire et les ressources, comme les bitmaps et les chaînes, sont stockés sur disque dans un fichier exécutable appelé assembly, généralement avec l’extension .exe ou .dll. Un assembly contient un manifeste qui fournit des informations sur les types de l’assembly, sa version, sa culture et ses conditions de sécurité.  
@@ -64,4 +67,6 @@ C# est un langage élégant et de type sécurisé orienté objet qui permet aux 
  Pour plus d’informations sur .NET Framework, consultez [Présentation de Microsoft .NET Framework](../../framework/get-started/overview.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [C#](../../csharp/index.md) [Bien démarrer avec Visual C# et Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+- [C#](../../csharp/index.md)
+- [Bien démarrer avec Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172160"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929271"
 ---
 # <a name="string-c-reference"></a>string (référence C#)
 Le type `string` représente une séquence de zéro, un ou plusieurs caractères Unicode. `string` est un alias de <xref:System.String> dans .NET.  
@@ -99,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Bonnes pratiques pour l’utilisation de chaînes](../../../standard/base-types/best-practices-strings.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Types référence](../../../csharp/language-reference/keywords/reference-types.md)  
- [Types valeur](../../../csharp/language-reference/keywords/value-types.md)  
- [Opérations de chaînes de base](../../../standard/base-types/basic-string-operations.md)  
- [Création de chaînes](../../../standard/base-types/creating-new.md)  
- [Tableau des formats des résultats numériques](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Bonnes pratiques pour l’utilisation de chaînes](../../../standard/base-types/best-practices-strings.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Types référence](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Types valeur](../../../csharp/language-reference/keywords/value-types.md)  
+- [Opérations de chaînes de base](../../../standard/base-types/basic-string-operations.md)  
+- [Création de chaînes](../../../standard/base-types/creating-new.md)  
+- [Tableau des formats des résultats numériques](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
