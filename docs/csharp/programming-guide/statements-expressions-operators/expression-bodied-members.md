@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 800280ed9ceaf69b825bb2a3c2c3d0d5f829922d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332752"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911904"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membres expression-bodied (Guide de programmation C#)
 Les définitions de corps d’expression vous permettent de fournir l’implémentation d’un membre sous une forme lisible et très concise. Vous pouvez utiliser une définition de corps d’expression chaque fois que la logique d’un membre pris en charge, comme une méthode ou une propriété, se compose d’une seule expression. La syntaxe générale d’une définition de corps d’expression est la suivante :
@@ -37,7 +37,7 @@ La prise en charge des définitions de corps d’expression a été introduite p
 
 Une méthode expression-bodied se compose d’une seule expression qui retourne une valeur dont le type correspond au type de retour de la méthode ou, pour les méthodes qui retournent `void`, qui effectue une opération. Par exemple, les types qui substituent la méthode <xref:System.Object.ToString%2A> incluent généralement une expression unique qui retourne la représentation sous forme de chaîne de l’objet actuel. 
 
-L’exemple suivant définit une classe `Person` qui substitue la méthode <xref:System.Object.ToString%2A> avec une définition de corps d’expression. Il définit également une méthode `Show` qui affiche un nom sur la console. Notez que le mot clé `return` n’est pas utilisé dans la définition de corps d’expression `ToString`.
+L’exemple suivant définit une classe `Person` qui substitue la méthode <xref:System.Object.ToString%2A> avec une définition de corps d’expression. Il définit également une méthode `DisplayName` qui affiche un nom sur la console. Notez que le mot clé `return` n’est pas utilisé dans la définition de corps d’expression `ToString`.
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 

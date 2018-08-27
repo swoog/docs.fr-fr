@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: f815c08b9be11efc71b04678d9780cabcdd69ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93eea5d539e943c57ed7c6236caa854486ac238e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765982"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933851"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 Indique les éléments retournés par une requête.  
@@ -32,9 +32,9 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  Autorise la spécification d'un seul élément et n'ajoute pas de wrapper de ligne.  
   
  `topSubclause`  
- Toute expression valide indiquant le nombre de premiers résultats à retourner de la requête, sous la forme `top (``expr``)`.  
+ Toute expression valide qui indique le nombre de premiers résultats à retourner à partir de la requête, sous la forme `top(expr)`.  
   
- Le paramètre de limite de la [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) opérateur vous permet également de sélectionner les n premiers éléments dans le jeu de résultats.  
+ Le paramètre LIMIT de la [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) opérateur vous permet également de sélectionner les n premiers éléments dans le jeu de résultats.  
   
  `aliasedExpr`  
  Expression sous la forme :  
@@ -45,7 +45,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  Littéral ou expression.  
   
 ## <a name="remarks"></a>Notes  
- La clause SELECT est évaluée après le [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), et [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) clauses ont été évaluées. La clause SELECT ne peut faire référence qu'aux éléments qui se trouvent actuellement dans l'étendue (de la clause FROM ou d'étendues externes). Si une clause GROUP BY a été spécifiée, la clause SELECT ne peut faire référence qu'aux alias des clés GROUP BY. Le référencement des éléments de la clause FROM n'est autorisé que dans les fonctions d'agrégation.  
+ La clause SELECT est évaluée après la [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md), [GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md), et [HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md) clauses ont été évaluées. La clause SELECT ne peut faire référence qu'aux éléments qui se trouvent actuellement dans l'étendue (de la clause FROM ou d'étendues externes). Si une clause GROUP BY a été spécifiée, la clause SELECT ne peut faire référence qu'aux alias des clés GROUP BY. Le référencement des éléments de la clause FROM n'est autorisé que dans les fonctions d'agrégation.  
   
  La liste constituée d'une ou plusieurs expressions de requête figurant après le mot clé SELECT est appelée « liste de sélection » ou, de manière plus formelle, « projection ». La forme de projection la plus courante est une expression de requête unique. Si vous sélectionnez un membre `member1` dans une collection `collection1`, vous générez une nouvelle collection constituée de toutes les valeurs `member1` pour chaque objet de `collection1`, comme l'illustre l'exemple suivant.  
   

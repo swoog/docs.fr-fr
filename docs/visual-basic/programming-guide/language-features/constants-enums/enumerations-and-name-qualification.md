@@ -17,20 +17,20 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: eb1f5653d968e81168833cd57813219e8f049b70
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd07c883c576e917cf1aa5072505854bc906eb3f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648578"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933964"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Énumérations et qualification de noms (Visual Basic)
-Normalement, lorsque vous faites référence à un membre d’une énumération, vous devez qualifier le nom du membre avec le nom de l’énumération. Par exemple, pour faire référence à la `Sunday` membre de votre `Days` énumération, vous utilisez la syntaxe suivante :  
+Normalement, lorsque vous faites référence à un membre d’une énumération, vous devez qualifier le nom du membre avec le nom de l’énumération. Par exemple, pour faire référence à la `Sunday` membre de votre `Days` énumération, vous utiliseriez la syntaxe suivante :  
   
  [!code-vb[VbEnumsTask#18](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_1.vb)]  
   
 ## <a name="using-the-imports-statement"></a>À l’aide de l’instruction Imports  
- Vous pouvez éviter d’utiliser des noms qualifiés complets en ajoutant un `Imports` instruction dans la section de déclarations d’espace de noms de votre code, comme dans l’exemple suivant :  
+ Vous pouvez éviter d’utiliser des noms qualifiés complets en ajoutant un `Imports` instruction à la section de déclarations d’espace de noms de votre code, comme dans l’exemple suivant :  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
@@ -38,13 +38,13 @@ Normalement, lorsque vous faites référence à un membre d’une énumération,
   
  [!code-vb[VbEnumsTask#24](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_3.vb)]  
   
- En organisant les ensembles de constantes connexes dans les énumérations, vous pouvez utiliser les mêmes noms de constantes dans des contextes différents. Par exemple, vous pouvez utiliser les mêmes noms pour les constantes de jour de la semaine dans la `Days` et `WorkDays` énumérations. Si vous utilisez la `Imports` instruction avec vos énumérations, vous devez veiller à éviter les références ambiguës. Prenons l'exemple suivant :  
+ En organisant des ensembles de constantes connexes dans les énumérations, vous pouvez utiliser les mêmes noms de constantes dans des contextes différents. Par exemple, vous pouvez utiliser les mêmes noms pour les constantes de jour de la semaine dans le `Days` et `WorkDays` énumérations. Si vous utilisez la `Imports` instruction avec vos énumérations, vous devez être prudent afin d’éviter les références ambiguës. Prenons l'exemple suivant :  
   
  [!code-vb[VbEnumsTask#22](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_2.vb)]  
   
  [!code-vb[VbEnumsTask#25](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_4.vb)]  
   
- En supposant que `Monday` est membre des deux le `Days` énumération et la `Workdays` énumération, ce code génère une erreur du compilateur. Pour éviter les références ambiguës lorsque vous faites référence à une constante individuelle, qualifiez le nom de constant par son énumération. Le code suivant fait référence à la `Saturday` constantes dans les `Days` et `WorkDays` énumérations.  
+ En supposant que `Monday` est membre des groupes le `Days` énumération et la `Workdays` énumération, ce code génère une erreur du compilateur. Pour éviter les références ambiguës lorsque vous faites référence à une constante individuelle, qualifiez le nom de constante par son énumération. Le code suivant fait référence à la `Saturday` constantes dans le `Days` et `WorkDays` énumérations.  
   
  [!code-vb[VbEnumsTask#32](../../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/enumerations-and-name-qualification_5.vb)]  
   
@@ -58,4 +58,4 @@ Normalement, lorsque vous faites référence à un membre d’une énumération,
  [Constantes et types de données littérales](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)  
  [Enum (instruction)](../../../../visual-basic/language-reference/statements/enum-statement.md)  
  [Imports (instruction) (espace de noms et type .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Types de données](../../../../visual-basic/language-reference/data-types/data-type-summary.md)
+ [Types de données](../../../../visual-basic/language-reference/data-types/index.md)

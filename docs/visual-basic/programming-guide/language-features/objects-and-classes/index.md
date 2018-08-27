@@ -6,16 +6,16 @@ helpviewer_keywords:
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 ms.openlocfilehash: 2917a698f9aa7828c201a048f443f5941797c704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655861"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934288"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objets et classes dans Visual Basic
 Un *objet* est une combinaison de code et de données qui peuvent être traités en tant qu’unité. Un objet peut être une partie d’une application, comme une commande ou un formulaire. Une application entière peut également être un objet.
 
-Lorsque vous créez une application dans Visual Basic, vous travaillez constamment avec des objets. Vous pouvez utiliser les objets fournis par Visual Basic, telles que des objets de données, les formulaires et les contrôles d’accès. Vous pouvez également utiliser des objets à partir d’autres applications au sein de votre application Visual Basic. Vous pouvez même créer vos propres objets et définir des propriétés et des méthodes supplémentaires pour ceux-ci. Les objets se comportent comme des blocs de construction préfabriqués : ils vous permettent d’écrire un fragment de code une seule fois et de le réutiliser maintes fois.  
+Lorsque vous créez une application dans Visual Basic, vous utilisez constamment des objets. Vous pouvez utiliser les objets fournis par Visual Basic, tels que des objets de données, les formulaires et les contrôles d’accès. Vous pouvez également utiliser des objets à partir d’autres applications au sein de votre application Visual Basic. Vous pouvez même créer vos propres objets et définir des propriétés et des méthodes supplémentaires pour ceux-ci. Les objets se comportent comme des blocs de construction préfabriqués : ils vous permettent d’écrire un fragment de code une seule fois et de le réutiliser maintes fois.  
   
 Cette rubrique présente les objets en détail.  
 
@@ -232,7 +232,7 @@ Assurez-vous que le compilateur peut accéder à la classe à partir de laquelle
 Les objets peuvent également être liés par une *relation d’imbrication*. Les objets conteneur encapsulent de manière logique d’autres objets. Par exemple, l’objet <xref:System.OperatingSystem> contient de manière logique un objet <xref:System.Version>, qu’il retourne via sa propriété <xref:System.OperatingSystem.Version%2A>. Notez que l’objet conteneur ne contient physiquement aucun autre objet.
 
 #### <a name="collections"></a>Collections
-Un type particulier de relation d’imbrication d’objet est représenté par les *collections*. Les collections sont des groupes d’objets similaires qui peuvent être énumérés. Visual Basic prend en charge une syntaxe spécifique dans le [For Each... L’instruction suivante](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) qui vous permet de parcourir les éléments d’une collection. En outre, les collections vous permettent souvent d’utiliser un <xref:Microsoft.VisualBasic.Collection.Item%2A> pour récupérer des éléments à l’aide de leur index ou en les associant à une chaîne unique. Les collections peuvent être plus faciles à utiliser que les tableaux car elles vous permettent d’ajouter ou de supprimer des éléments sans utiliser d’index. En raison de leur simplicité d’utilisation, les collections sont souvent utilisées pour stocker les formulaires et les commandes.
+Un type particulier de relation d’imbrication d’objet est représenté par les *collections*. Les collections sont des groupes d’objets similaires qui peuvent être énumérés. Visual Basic prend en charge une syntaxe spécifique dans le [pour chaque... L’instruction suivante](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) qui vous permet de parcourir les éléments d’une collection. En outre, les collections vous permettent souvent d’utiliser un <xref:Microsoft.VisualBasic.Collection.Item%2A> pour récupérer des éléments à l’aide de leur index ou en les associant à une chaîne unique. Les collections peuvent être plus faciles à utiliser que les tableaux car elles vous permettent d’ajouter ou de supprimer des éléments sans utiliser d’index. En raison de leur simplicité d’utilisation, les collections sont souvent utilisées pour stocker les formulaires et les commandes.
 
 ## <a name="related-topics"></a>Rubriques connexes  
  [Procédure pas à pas : définition de classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  

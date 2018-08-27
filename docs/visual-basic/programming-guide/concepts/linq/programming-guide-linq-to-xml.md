@@ -3,17 +3,17 @@ title: Guide de programmation (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
 ms.openlocfilehash: 70c169cecc8ca4ede30216bc832a8518766cd1a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647415"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929813"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>Guide de programmation (LINQ to XML) (Visual Basic)
 Cette section fournit des informations conceptuelles et de procédure sur la programmation avec [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
 ## <a name="who-should-read-this-documentation"></a>À qui cette documentation est-elle destinée ?  
- Cette documentation est destinée aux développeurs qui connaissent déjà Visual Basic et certains aspects de base de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
+ Cette documentation est destinée aux développeurs qui connaissent déjà de Visual Basic et certains aspects de base de la [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
  L’objectif de cette documentation est de simplifier l’utilisation de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] pour tous les développeurs. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] facilite la programmation XML. Son utilisation n'est pas restreinte aux développeurs expérimentés.  
   
@@ -23,7 +23,7 @@ Cette section fournit des informations conceptuelles et de procédure sur la pro
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[LINQ à la vue d’ensemble de programmation XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Fournit une vue d'ensemble des classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] et des informations détaillées sur trois des classes les plus importantes : <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> et <xref:System.Xml.Linq.XDocument>.|  
+|[LINQ à vue d’ensemble de programmation XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)|Fournit une vue d'ensemble des classes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] et des informations détaillées sur trois des classes les plus importantes : <xref:System.Xml.Linq.XElement>, <xref:System.Xml.Linq.XAttribute> et <xref:System.Xml.Linq.XDocument>.|  
 |[Création d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)|Fournit des informations conceptuelles et basées sur les tâches concernant la création des arborescences XML. Vous pouvez créer des arborescences XML à l'aide de la construction fonctionnelle ou en analysant du texte XML à partir d'une chaîne ou d'un fichier. Vous pouvez également utiliser un objet <xref:System.Xml.XmlReader> pour remplir une arborescence XML.|  
 |[Utilisation des espaces de noms XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)|Fournit des informations détaillées sur la création d’arborescences XML qui utilisent des espaces de noms.|  
 |[Sérialisation d’arborescences XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)|Décrit plusieurs approches de la sérialisation d’une arborescence XML et fournit des conseils sur l’approche à utiliser.|  

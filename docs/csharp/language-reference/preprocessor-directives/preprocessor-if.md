@@ -1,17 +1,17 @@
 ---
 title: '#Directive de préprocesseur if (référence C#)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287681"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000935"
 ---
 # <a name="if-c-reference"></a>#if (référence C#)
 
@@ -33,9 +33,9 @@ Une directive conditionnelle commençant par une directive `#if` doit se termine
 
 `#define` vous permet de définir un symbole. En utilisant ensuite ce dernier comme expression passée à la directive `#if`, l’expression correspond à `true`.
 
-Vous pouvez également définir un symbole avec l’option du compilateur [/define](../compiler-options/define-compiler-option.md). Vous pouvez annuler la définition d’un symbole avec [#undef](preprocessor-undef.md).
+Vous pouvez aussi définir un symbole avec l’option du compilateur [-define](../compiler-options/define-compiler-option.md). Vous pouvez annuler la définition d’un symbole avec [#undef](preprocessor-undef.md).
 
-Un symbole que vous définissez avec `/define` ou `#define` n’est pas en conflit avec une variable du même nom. Autrement dit, un nom de variable ne doit pas être passé à une directive de préprocesseur, et un symbole ne peut être évalué que par une directive de préprocesseur.
+Un symbole que vous définissez avec `-define` ou `#define` n’est pas en conflit avec une variable du même nom. Autrement dit, un nom de variable ne doit pas être passé à une directive de préprocesseur, et un symbole ne peut être évalué que par une directive de préprocesseur.
 
 La portée d’un symbole créé avec `#define` est le fichier dans lequel il a été défini.
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence C#](../../../csharp/language-reference/index.md)  
-[Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-[Directives de préprocesseur C#](index.md)  
-[Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Directives de préprocesseur C#](index.md)  
+- [Guide pratique pour effectuer une compilation conditionnelle avec Trace et Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

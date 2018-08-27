@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 58500cf2caa1446af6b663f1b765c0be92309f1d
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 913957e6afad1d9d516a01f4bb0e377b94a40aea
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198420"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924986"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in, modificateur de paramètre (référence C#)
 
@@ -122,4 +122,5 @@ Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types d
  [Référence C#](../index.md)  
  [Guide de programmation C#](../../programming-guide/index.md)  
  [Mots clés C#](index.md)  
- [Paramètres de méthode](method-parameters.md) [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)
+ [Paramètres de méthodes](method-parameters.md)  
+ [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)  

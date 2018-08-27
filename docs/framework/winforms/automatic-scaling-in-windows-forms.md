@@ -5,26 +5,29 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314761"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931649"
 ---
-# <a name="automatic-scaling-in-windows-forms"></a>Automatique de mise à l’échelle dans les Windows Forms
+# <a name="automatic-scaling-in-windows-forms"></a>Automatique mise à l’échelle dans les Windows Forms
+
 La mise à l’échelle automatique permet d’afficher correctement un formulaire et ses contrôles conçus sur un ordinateur avec une certaine police système et une certaine résolution d’affichage sur un autre ordinateur avec une police système ou une résolution d’affichage différente. Elle garantit que le formulaire et ses contrôles seront redimensionnés intelligemment et de manière cohérente avec les fenêtres natives et d'autres applications sur les ordinateurs des utilisateurs et d'autres développeurs. La prise en charge dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de la mise à l'échelle automatique et des styles visuels permet aux applications [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] de conserver une apparence cohérente avec les applications Windows natives sur l'ordinateur de chaque utilisateur.
-  
-La plupart du temps, la mise à l’échelle automatique fonctionne comme prévu dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0 et versions ultérieures. Toutefois, les modifications de schéma de police peuvent être problématiques. Pour voir un exemple montrant comment résoudre ce problème, consultez [Comment : répondre aux modifications de jeu de polices dans une Application Windows Forms](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
-  
-## <a name="need-for-automatic-scaling"></a>Besoin de mise à l’échelle automatique  
+
+La plupart du temps, la mise à l’échelle automatique fonctionne comme prévu dans [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0 et versions ultérieures. Toutefois, les modifications de schéma de police peuvent être problématiques. Pour obtenir un exemple montrant comment résoudre ce problème, consultez [Comment : répondre aux modifications de schéma de polices dans une Application de formulaires Windows](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md).
+
+## <a name="need-for-automatic-scaling"></a>Besoin de mise à l’échelle automatique
+
 Sans mise à l'échelle automatique, une application conçue pour une résolution d'écran ou une police particulière apparaîtra trop petite ou trop grande en cas de modification de cette résolution ou police. Par exemple, si l'application est conçue à l'aide de la police Tahoma 9 points comme ligne de base, sans réglage elle apparaîtra trop petite si vous l'exécutez sur un ordinateur où la police système est Tahoma 12 points. Les éléments de texte (tels que les titres, les menus, le contenu des zones de texte et ainsi de suite) apparaîtront plus petits que dans les autres applications. En outre, la taille des éléments d'interface utilisateur qui contiennent du texte (comme la barre de titre, les menus et de nombreux contrôles) dépend de la police utilisée. Dans cet exemple, ces éléments apparaîtront aussi relativement plus petits.
 
-Une situation analogue se produit quand une application est conçue pour une certaine résolution d'écran. Résolution d’affichage la plus courante est de 96 points par pouce (PPP), ce qui équivaut à l’échelle de l’affichage 100 %, mais affiche de résolution plus élevée prise en charge de 125 %, 150 %, 200 % (les 120 respectivement égales, 144 et 192 PPP) et ci-dessus sont de plus en plus courant. Sans réglage, une application (en particulier basée sur des graphismes) conçue pour une résolution spécifique apparaîtra trop grande ou trop petite en cas d'exécution dans une autre résolution.
+Une situation analogue se produit quand une application est conçue pour une certaine résolution d'écran. La résolution d’affichage plus courante est de 96 points par pouce (PPP), ce qui équivaut à l’échelle de l’affichage 100 %, mais affiche de résolution plus élevée prenant en charge 125 %, 150 %, 200 % (les 120 respectivement égale, 144 et 192 PPP) et versions ultérieures sont plus répandue. Sans réglage, une application (en particulier basée sur des graphismes) conçue pour une résolution spécifique apparaîtra trop grande ou trop petite en cas d'exécution dans une autre résolution.
 
 La mise à l'échelle automatique vise à améliorer ces problèmes en redimensionnant automatiquement le formulaire et ses contrôles enfants en fonction de la taille de police ou résolution d'affichage relative. Le système d'exploitation Windows prend en charge la mise à l'échelle automatique des boîtes de dialogue à l'aide d'une unité de mesure relative appelée unité de boîte de dialogue. Une unité de boîte de dialogue est basée sur la police système et sa relation aux pixels peut être déterminée à l'aide de la fonction du SDK Win32 `GetDialogBaseUnits`. Quand un utilisateur change le thème utilisé par Windows, toutes les boîtes de dialogue sont automatiquement ajustés en conséquence. En outre, le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] prend en charge la mise à l’échelle automatique en fonction de la police système par défaut ou la résolution d’affichage. Le cas échéant, la mise à l'échelle automatique peut être désactivée dans une application.
 
 ## <a name="original-support-for-automatic-scaling"></a>Prise en charge d’origine pour la mise à l’échelle automatique
+
 Les versions 1.0 et 1.1 de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] prenaient en charge la mise à l’échelle automatique d’une manière simple, qui dépendait de la police Windows par défaut utilisée pour l’interface utilisateur et représentée par la valeur **DEFAULT_GUI_FONT** du SDK Win32. Cette police est généralement modifiée uniquement quand la résolution d’écran change. Le mécanisme suivant était utilisé pour implémenter la mise à l'échelle automatique :
 
 1. Au moment du design, la propriété <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> (qui est maintenant déconseillée) prenait comme valeur la hauteur et la largeur de la police système par défaut sur l'ordinateur du développeur.
@@ -37,7 +40,7 @@ Les versions 1.0 et 1.1 de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshor
 
 Même si ce mécanisme était suffisant dans la plupart des cas, il souffrait des limitations suivantes :
 
-- Étant donné que le <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> propriété représente la taille de police de base en tant que valeurs entières, des erreurs d’arrondi apparaissent clairement lorsqu’un formulaire passe par plusieurs résolutions.
+- Dans la mesure où le <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> propriété représente la taille de police de base en tant que valeurs entières, erreurs d’arrondi apparaissent clairement quand un formulaire passe par plusieurs résolutions.
 
 - La mise à l'échelle automatique était implémentée uniquement dans la classe <xref:System.Windows.Forms.Form>, et non dans la classe <xref:System.Windows.Forms.ContainerControl>. Ainsi, les contrôles utilisateur étaient mis à l'échelle correctement uniquement quand le contrôle utilisateur était conçu à la même résolution que le formulaire et quand il était placé dans le formulaire au moment du design.
 
@@ -52,7 +55,8 @@ Bien que ce mécanisme soit conservé dans [!INCLUDE[dnprdnshort](../../../inclu
 > [!NOTE]
 > Vous pouvez supprimer sans risque les références à ces membres quand vous mettez à niveau votre code hérité vers [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0.
 
-## <a name="current-support-for-automatic-scaling"></a>Prise en charge en cours de mise à l’échelle automatique
+## <a name="current-support-for-automatic-scaling"></a>Prise en charge actuelle pour la mise à l’échelle automatique
+
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] version 2.0 élimine les limitations précédentes en introduisant les modifications suivantes de la mise à l'échelle automatique des Windows Forms :
 
 - La prise en charge de base de la mise à l'échelle a été déplacée vers la classe <xref:System.Windows.Forms.ContainerControl> pour que les formulaires, les contrôles composites natifs et les contrôles utilisateur bénéficient tous d'une prise en charge uniforme de la mise à l'échelle. Les nouveaux membres <xref:System.Windows.Forms.ContainerControl.AutoScaleFactor%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> et <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> ont été ajoutés.
@@ -68,7 +72,8 @@ Bien que ce mécanisme soit conservé dans [!INCLUDE[dnprdnshort](../../../inclu
 > [!CAUTION]
 > Les combinaisons arbitraires de modes de mise à l'échelle de police et PPP ne sont pas prises en charge. Bien que vous puissiez mettre à l'échelle un contrôle utilisateur à l'aide d'un mode (par exemple PPP) et le et placer sur un formulaire à l'aide d'un autre mode (Police) sans problème, le fait de combiner un formulaire de base dans un mode et un formulaire dérivé dans un autre peut produire des résultats inattendus.
 
-### <a name="automatic-scaling-in-action"></a>Automatique de mise à l’échelle en action
+### <a name="automatic-scaling-in-action"></a>Automatique mise à l’échelle en action
+
 Windows Forms utilise désormais la logique suivante pour mettre automatiquement à l'échelle les formulaires et leur contenu :
 
 1. Au moment du design, chaque <xref:System.Windows.Forms.ContainerControl> enregistre le mode de mise à l'échelle et sa résolution actuelle dans les propriétés <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> et <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>, respectivement.
@@ -80,9 +85,9 @@ Windows Forms utilise désormais la logique suivante pour mettre automatiquement
 4. <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> est également appelée automatiquement dans les situations suivantes :
 
     - En réponse à l'événement <xref:System.Windows.Forms.Control.OnFontChanged%2A> si le mode de mise à l'échelle est <xref:System.Windows.Forms.AutoScaleMode.Font>.
-  
+
     - Quand la disposition du contrôle conteneur reprend et qu'une modification est détectée dans la propriété <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> ou <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>.
-  
+
     - Comme expliqué ci-dessus, quand un <xref:System.Windows.Forms.ContainerControl> parent est mis à l'échelle. Chaque contrôle conteneur est responsable de la mise à l'échelle de ses enfants à l'aide de ses propres facteurs d'échelle, et non de celui de son conteneur parent.
 
 5. Les contrôles enfants peuvent modifier leur comportement de mise à l'échelle de plusieurs manières :
@@ -94,9 +99,10 @@ Windows Forms utilise désormais la logique suivante pour mettre automatiquement
     - La méthode <xref:System.Windows.Forms.Control.ScaleControl%2A> peut être substituée pour modifier la logique de mise à l'échelle pour le contrôle actuel.
 
 ## <a name="see-also"></a>Voir aussi
- <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>  
- <xref:System.Windows.Forms.Control.Scale%2A>  
- <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
- <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>  
- [Rendu des contrôles avec les styles visuels](./controls/rendering-controls-with-visual-styles.md)  
- [Guide pratique pour améliorer les performances en évitant la mise à l’échelle automatique](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+
+- <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
+- <xref:System.Windows.Forms.Control.Scale%2A>
+- <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
+- <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
+- [Rendu des contrôles avec les styles visuels](./controls/rendering-controls-with-visual-styles.md)
+- [Guide pratique pour améliorer les performances en évitant la mise à l’échelle automatique](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

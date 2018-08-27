@@ -3,11 +3,11 @@ title: Guide de programmation (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
 ms.openlocfilehash: 03742916c973f9ddac8163fe231cba45750ff080
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334160"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752042"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Guide de programmation (LINQ to XML) (C#)
 Cette section fournit des informations conceptuelles et de procédure sur la programmation avec [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

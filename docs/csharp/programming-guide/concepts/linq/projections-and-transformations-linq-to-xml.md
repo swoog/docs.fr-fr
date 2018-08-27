@@ -3,10 +3,11 @@ title: Projections et transformations (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
 ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929793"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Projections et transformations (LINQ to XML) (C#)
 Cette section fournit des exemples de projections et de transformations [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  

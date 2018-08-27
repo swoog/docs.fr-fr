@@ -2,12 +2,12 @@
 title: Activation de l'accès entre bases de données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-ms.openlocfilehash: 22fa2b48d795fb81b4740ce882f9bff632deabbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e041a6c90940ad33e17d83e5f0400d05c645ada
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353460"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934561"
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Activation de l'accès entre bases de données dans SQL Server
 Le chaînage des propriétés des bases de données croisées se produit lorsqu'une procédure dans une base de données repose sur des objets appartenant à une autre base de données. La chaîne des propriétés des bases de données croisées fonctionne de la même manière que le chaînage des propriétés dans une seule base de données, sauf qu'une chaîne de propriétés continue nécessite le mappage de tous les propriétaires d'objets au même compte de connexion. Si l'objet source de la base de données source et les objets cibles des bases de données cibles appartiennent au même compte de connexion, SQL Server ne vérifie pas les autorisations sur les objets cibles.  
@@ -41,14 +41,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>Code SQL dynamique  
- Le chaînage des propriétés des bases de données croisées ne fonctionne pas dans les cas où des instructions SQL créées dynamiquement sont exécutées sauf si le même utilisateur existe dans les deux bases de données. Vous pouvez contourner ce dans SQL Server en créant une procédure stockée qui accède aux données dans une autre base de données et en signant la procédure avec un certificat qui existe dans les deux bases de données. De cette manière, les utilisateurs ont accès aux ressources de base de données utilisées par la procédure sans que l'accès ou les autorisations de base de données leur soient octroyés.  
+ Le chaînage des propriétés des bases de données croisées ne fonctionne pas dans les cas où des instructions SQL créées dynamiquement sont exécutées sauf si le même utilisateur existe dans les deux bases de données. Il est possible de contourner cette restriction dans SQL Server en créant une procédure stockée qui accède aux données dans une autre base de données et en signant la procédure avec un certificat qui existe dans les deux bases de données. De cette manière, les utilisateurs ont accès aux ressources de base de données utilisées par la procédure sans que l'accès ou les autorisations de base de données leur soient octroyés.  
   
 ## <a name="external-resources"></a>Ressources externes  
  Pour plus d'informations, voir les ressources ci-dessous.  
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Extension de l’emprunt d’identité de base de données à l’aide de EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) et [Cross DB Ownership Chaining (Option)](http://msdn.microsoft.com/library/ms188694.aspx)documentation en ligne de SQL Server.|Rubriques décrivent comment configurer le chaînage des bases de données croisées pour une instance de SQL Server.|  
+|[Extension de l’emprunt d’identité de base de données à l’aide de EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) et [Cross DB Ownership Chaining Option](/sql/database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option)documentation en ligne SQL Server.|Rubriques décrivent comment configurer le chaînage des bases de données croisées pour une instance de SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

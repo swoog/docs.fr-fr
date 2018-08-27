@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6625103da5b9e235b214a41d990d7accb2646e57
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314937"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933701"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Développement interplateforme avec la bibliothèque de classes portable
 Le type de projet de bibliothèque de classes portables .NET Framework dans Visual Studio vous permet de créer rapidement et facilement des applications interplateformes et des bibliothèques pour les plateformes Microsoft.  
@@ -147,7 +147,7 @@ Boîte de dialogue Modifier les cibles dans Visual Studio 2012
  ➌ Requiert [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) package  
   
 > [!WARNING]
->  Vous pouvez rencontrer des erreurs lorsque vous référencez le [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) et [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) packages à partir d’une bibliothèque portable utilisée par une application Windows Phone Silverlight 8.1. Pour plus d’informations, consultez [compatibilité de la plateforme et modifications récentes pour les applications Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
+>  Vous pouvez rencontrer des erreurs lorsque vous référencez le [Microsoft Compression](https://www.nuget.org/packages/Microsoft.Bcl.Compression) et [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http) packages à partir d’une bibliothèque portable utilisée par une application Windows Phone Silverlight 8.1. Pour plus d’informations, consultez [compatibilité de la plateforme et modifications récentes pour les applications Windows Phone Silverlight 8.1](https://docs.microsoft.com/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Types et membres pris en charge  

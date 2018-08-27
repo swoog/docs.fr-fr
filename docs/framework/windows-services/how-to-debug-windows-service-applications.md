@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 2c73ccd75bdbd1298371921bababa87ba4520495
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518048"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935685"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Comment : déboguer les applications de service Windows
 Un service doit être exécuté à partir du Gestionnaire de contrôle des services plutôt qu'à partir de Visual Studio. C'est pourquoi le débogage d'un service n'est pas aussi simple que le débogage d'autres types d'applications Visual Studio. Pour déboguer un service, vous devez le démarrer et attacher un débogueur au processus dans lequel il s'exécute. Vous pouvez alors déboguer votre application à l'aide de toutes les fonctionnalités de débogage standard de Visual Studio.  
@@ -33,7 +33,7 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
 >  Le débogage de la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> peut s'avérer difficile, car le Gestionnaire de contrôle des services impose un délai de 30 secondes pour toute tentative de démarrage d'un service. Pour plus d’informations, consultez [Résolution des problèmes : débogage des services Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Pour obtenir des informations significatives pour le débogage, le débogueur Visual Studio doit rechercher les fichiers de symboles pour les fichiers binaires qui sont en cours de débogage. Si vous déboguez un service que vous avez généré dans Visual Studio, les fichiers de symboles (fichiers .pdb) se trouvent dans le même dossier que l’exécutable ou la bibliothèque, et le débogueur les charge automatiquement. Si vous déboguez un service que vous n'avez pas généré, vous devez d'abord rechercher des symboles pour le service, puis vous assurer qu'ils sont accessibles par le débogueur. Consultez [Spécifier les fichiers de symbole (.pdb) et les fichiers sources](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si vous déboguez un processus système ou que vous voulez disposer de symboles pour les appels système dans vos services, vous devez ajouter des serveurs de symboles Microsoft. Consultez [Symboles de débogage](http://msdn.microsoft.com/windows/desktop/ee416588.aspx).  
+>  Pour obtenir des informations significatives pour le débogage, le débogueur Visual Studio doit rechercher les fichiers de symboles pour les fichiers binaires qui sont en cours de débogage. Si vous déboguez un service que vous avez généré dans Visual Studio, les fichiers de symboles (fichiers .pdb) se trouvent dans le même dossier que l’exécutable ou la bibliothèque, et le débogueur les charge automatiquement. Si vous déboguez un service que vous n'avez pas généré, vous devez d'abord rechercher des symboles pour le service, puis vous assurer qu'ils sont accessibles par le débogueur. Consultez [Spécifier les fichiers de symbole (.pdb) et les fichiers sources](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si vous déboguez un processus système ou que vous voulez disposer de symboles pour les appels système dans vos services, vous devez ajouter des serveurs de symboles Microsoft. Consultez [Symboles de débogage](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Pour déboguer un service  
   
@@ -80,7 +80,7 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
   
 1.  Ajoutez une méthode à votre service qui exécute les méthodes <xref:System.ServiceProcess.ServiceBase.OnStart%2A> et <xref:System.ServiceProcess.ServiceBase.OnStop%2A> :  
   
-    ```  
+    ```csharp  
     internal void TestStartupAndStop(string[] args)  
     {  
         this.OnStart(args);  
@@ -91,18 +91,19 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
   
 2.  Réécrivez la méthode `Main` suit :  
   
-    ```  
+    ```csharp  
     static void Main(string[] args)  
-            {  
-                if (Environment.UserInteractive)  
-                {  
-                    MyNewService service1 = new MyNewService(args);  
-                    service1.TestStartupAndStop(args);  
-                }  
-                else  
-                {  
-                    // Put the body of your old Main method here.  
-                }  
+    {  
+        if (Environment.UserInteractive)  
+        {  
+            MyNewService service1 = new MyNewService(args);  
+            service1.TestStartupAndStop(args);  
+        }  
+        else  
+        {  
+            // Put the body of your old Main method here.  
+        }  
+    }
     ```  
   
 3.  Sous l’onglet **Application** des propriétés du projet, choisissez **Application console** comme **Type de sortie**.  
@@ -117,4 +118,4 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
  [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Guide pratique pour installer et désinstaller des services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
  [Guide pratique pour démarrer des services](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Débogage d’un service](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)
+ [Débogage d’un service](/windows/desktop/Services/debugging-a-service)

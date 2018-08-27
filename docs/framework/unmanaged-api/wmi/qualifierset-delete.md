@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460043"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929780"
 ---
 # <a name="qualifiersetdelete-function"></a>QualifierSet_Delete (fonction)
 Supprime un qualificateur spécifié par nom.  
@@ -41,13 +41,13 @@ HRESULT QualifierSet_Delete (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`   
-[in] Un pointeur vers un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.
+[in] Un pointeur vers un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.
 
 `wszName`   
-[in] Le nom du qualificateur de la suppression.
+[in] Le nom du qualificateur à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -59,20 +59,20 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | La suppression de ce qualificateur est non conforme. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Le qualificateur spécifié est introuvable. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
-| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | Le remplacement local a été supprimé et le qualificateur d’origine de l’objet parent a repris l’étendue. |
+| `WBEM_S_RESET_TO_DEFAULT` | 0x40002 | La valeur de remplacement locale a été supprimé et le qualificateur d’origine à partir de l’objet parent a repris l’étendue. |
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) (méthode).
 
-En raison des règles de propagation de qualificateur, un qualificateur particulier peut ont été hérité d’un autre objet et simplement remplacé dans l’instance ou la classe actuelle. Dans ce cas, le `QualifierSet_Delete` méthode rétablit le qualificateur de la valeur héritée d’origine. Dans ce cas, la fonction retourne le code d’état `WBEM_S_RESET_TO_DEFAULT`.
+En raison des règles de propagation d’un qualificateur de nom, un qualificateur particulier peut ont été hérité d’un autre objet et simplement de substitution dans la classe en cours ou l’instance. Dans ce cas, le `QualifierSet_Delete` méthode réinitialise le qualificateur à sa valeur d’origine hérité. Dans ce cas, la fonction retourne le code d’état `WBEM_S_RESET_TO_DEFAULT`.
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

@@ -1,6 +1,6 @@
 ---
 title: InheritsFrom (fonction) (référence des API non managées)
-description: La fonction InheritsFrom détermine si une classe ou une instance dérivée d’une classe parente particulier.
+description: La fonction InheritsFrom détermine si une classe ou instance dérive d’une classe parente particulier.
 ms.date: 11/06/2017
 api_name:
 - InheritsFrom
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87a1c1ee44d3b192747bd785f538c0332300ff50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461413"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930920"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (fonction)
-Détermine si l’instance ou la classe actuelle dérive d’une classe parente spécifiée.
+Détermine si l’instance ou une classe en cours dérive d’une classe parent spécifié.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,10 +41,10 @@ HRESULT InheritsFrom (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `wszAncestor`  
 [in] Le nom de la classe. `wszAncestor` doit pointer vers un valide `LPCWSTR`.
@@ -56,19 +56,19 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | L’objet actuel hérite `wszAncestor`.  |
-| `WBEM_S_FALSE` | 1 | L’objet actuel n’hérite pas de `wszAncestor`. |
+| `WBEM_S_FALSE` | 1 | L’objet en cours n’hérite pas de `wszAncestor`. |
 |`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `wszAncestor` a la valeur `null`. |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::InheritsFrom](https://msdn.microsoft.com/library/aa391452(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) (méthode).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

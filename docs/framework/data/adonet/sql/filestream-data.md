@@ -2,12 +2,12 @@
 title: Données FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 782674cb38669c400bd5d730c2fd0c144778a985
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb7291fad15917614f5eebd31ad0e239c987a81d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357770"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931398"
 ---
 # <a name="filestream-data"></a>Données FILESTREAM
 L'attribut de stockage FILESTREAM est destiné aux données binaires (BLOB) stockées dans une colonne varbinary(max). Avant l'introduction de cet attribut, le stockage des données binaires nécessitait un traitement spécial. Les données non structurées, telles que les documents texte, les images et les vidéos, sont souvent stockées en dehors de la base de données, ce qui rend difficile leur gestion.  
@@ -18,10 +18,10 @@ L'attribut de stockage FILESTREAM est destiné aux données binaires (BLOB) stoc
  Si vous spécifiez l'attribut FILESTREAM sur une colonne varbinary(max), SQL Server stocke les données sur le système de fichiers NTFS local au lieu du fichier de base de données. Même si elles sont stockées séparément, vous pouvez utiliser les mêmes instructions [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] prises en charge pour l'utilisation des données varbinary(max) stockées dans la base.  
   
 ## <a name="sqlclient-support-for-filestream"></a>Prise en charge de SqlClient pour FILESTREAM  
- Le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server, <xref:System.Data.SqlClient>, prend en charge la lecture et l’écriture de données FILESTREAM en utilisant le <xref:System.Data.SqlTypes.SqlFileStream> classe définie dans le <xref:System.Data.SqlTypes> espace de noms. `SqlFileStream` hérite de la classe <xref:System.IO.Stream>, qui fournit les méthodes permettant de lire et d'écrire vers les flux de données. La lecture à partir d'un flux transfère les données du flux dans une structure de données, tel qu'un tableau d'octets. L'écriture transfère les données de la structure dans un flux.  
+ Le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server, <xref:System.Data.SqlClient>, prend en charge la lecture et écriture aux données FILESTREAM en utilisant le <xref:System.Data.SqlTypes.SqlFileStream> classe définie dans le <xref:System.Data.SqlTypes> espace de noms. `SqlFileStream` hérite de la classe <xref:System.IO.Stream>, qui fournit les méthodes permettant de lire et d'écrire vers les flux de données. La lecture à partir d'un flux transfère les données du flux dans une structure de données, tel qu'un tableau d'octets. L'écriture transfère les données de la structure dans un flux.  
   
 ### <a name="creating-the-sql-server-table"></a>Création de la table SQL Server  
- L'instruction [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] suivante crée une table nommée employees et y insère une ligne de données. Après avoir activé le stockage FILESTREAM, vous pouvez combiner cette table aux exemples de code suivants. Les liens vers des ressources dans la documentation en ligne de SQL Server figurent à la fin de cette rubrique.  
+ L'instruction [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] suivante crée une table nommée employees et y insère une ligne de données. Après avoir activé le stockage FILESTREAM, vous pouvez combiner cette table aux exemples de code suivants. Les liens vers des ressources dans la documentation en ligne de SQL Server se trouvent à la fin de cette rubrique.  
   
 ```  
 CREATE TABLE employees  
@@ -167,18 +167,18 @@ namespace FileStreamTest
 }
 ```  
   
- Pour un autre exemple, consultez [comment stocker et extraire les données binaires dans une colonne de flux de fichier](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
+ Pour obtenir un autre exemple, consultez [comment stocker et récupérer des données binaires dans une colonne de flux de fichier](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
 ## <a name="resources-in-sql-server-books-online"></a>Ressources dans la documentation en ligne de SQL Server.  
- La documentation complète pour FILESTREAM se trouve dans les sections suivantes dans la documentation en ligne de SQL Server.  
+ La documentation complète relative à FILESTREAM se trouve dans les sections suivantes dans la documentation en ligne de SQL Server.  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Conception et implémentation du stockage FILESTREAM](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Fournit des liens vers la documentation relative à FILESTREAM et les rubriques connexes.|  
 |[Vue d’ensemble FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Explique quand utiliser le stockage FILESTREAM et comment il intègre le moteur de base de données SQL Server avec un système de fichiers NTFS.|  
-|[Mise en route du stockage FILESTREAM](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Explique comment activer FILESTREAM sur une instance de SQL Server, comment créer une base de données et une table pour stocker les données FILESTREAM, et comment manipuler les lignes contenant des données FILESTREAM.|  
+|[Prise en main du stockage FILESTREAM](http://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Explique comment activer FILESTREAM sur une instance de SQL Server, comment créer une base de données et une table pour stocker les données FILESTREAM, et comment manipuler les lignes contenant des données FILESTREAM.|  
 |[Utilisation du stockage FILESTREAM dans les Applications clientes](http://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Décrit les fonctions API Win32 pour une utilisation avec des données FILESTREAM.|  
-|[FILESTREAM et autres fonctionnalités SQL Server](http://msdn.microsoft.com/library/bb895334\(SQL.105\).aspx)|Fournit des considérations, indications et limitations relatives à l’utilisation des données FILESTREAM avec d’autres fonctionnalités de SQL Server.|  
+|[FILESTREAM et autres fonctionnalités SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Fournit des considérations, indications et limitations relatives à l’utilisation des données FILESTREAM avec d’autres fonctionnalités de SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Types de données SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

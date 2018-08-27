@@ -8,41 +8,41 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: a1c1b7c247d3277c6614a4774395650c4c069c2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644301"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929996"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Procédure pas à pas : implémentation de l'héritage avec les objets COM (Visual Basic)
-Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans les objets COM, même ceux créés dans les versions antérieures de Visual Basic. Les propriétés et méthodes des classes héritées d’objets COM peuvent être substituées ou surchargées comme les propriétés et méthodes de toute autre classe de base peuvent être remplacées ou surchargés. L’héritage à partir des objets COM est utile lorsque vous disposez d’une bibliothèque de classe existante que vous ne souhaitez pas recompiler.  
+Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans les objets COM, même ceux créés dans les versions antérieures de Visual Basic. Les propriétés et méthodes des classes héritées d’objets COM peuvent être substituées ou surchargées comme les propriétés et méthodes de toute autre classe de base peuvent être substituées ou surchargés. L’héritage d’objets COM est utile lorsque vous avez une bibliothèque de classe existante que vous ne souhaitez pas recompiler.  
   
- La procédure suivante montre comment utiliser Visual Basic 6.0 pour créer un objet COM qui contient une classe, puis l’utiliser comme classe de base.  
+ La procédure suivante montre comment utiliser Visual Basic 6.0 pour créer un objet COM contenant une classe et ensuite l’utiliser comme une classe de base.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Pour générer l’objet COM qui est utilisé dans cette procédure pas à pas  
+### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>Pour créer l’objet COM qui est utilisé dans cette procédure pas à pas  
   
-1.  Dans Visual Basic 6.0, ouvrez un nouveau projet de DLL ActiveX. Un projet nommé `Project1` est créé. Il comporte une classe nommée `Class1`.  
+1.  Dans Visual Basic 6.0, ouvrez un nouveau projet de DLL ActiveX. Un projet nommé `Project1` est créé. Il a une classe nommée `Class1`.  
   
-2.  Dans le **Explorateur de projets**, avec le bouton droit **Projet1**, puis cliquez sur **Propriétés Projet1**. Le **propriétés du projet** boîte de dialogue s’affiche.  
+2.  Dans le **Explorateur de projets**, avec le bouton droit **Project1**, puis cliquez sur **Propriétés Projet1**. Le **propriétés du projet** boîte de dialogue s’affiche.  
   
-3.  Sur le **général** onglet de la **propriétés du projet** boîte de dialogue, changez le nom du projet en tapant `ComObject1` dans les **nom du projet** champ.  
+3.  Sur le **général** onglet de la **propriétés du projet** boîte de dialogue, changez le nom du projet en tapant `ComObject1` dans le **nom_projet** champ.  
   
 4.  Dans le **Explorateur de projets**, avec le bouton droit `Class1`, puis cliquez sur **propriétés**. Le **propriétés** fenêtre de la classe s’affiche.  
   
-5.  Modifier la `Name` propriété `MathFunctions`.  
+5.  Modifier le `Name` propriété `MathFunctions`.  
   
 6.  Dans le **Explorateur de projets**, avec le bouton droit `MathFunctions`, puis cliquez sur **afficher le Code**. Le **éditeur de Code** s’affiche.  
   
-7.  Ajoutez une variable locale pour stocker la valeur de propriété :  
+7.  Ajoutez une variable locale pour contenir la valeur de propriété :  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  Ajoutez la propriété `Let` et la propriété `Get` procédures de propriété :  
+8.  Ajouter une propriété `Let` et propriété `Get` procédures de propriété :  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -66,13 +66,13 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
     End Function  
     ```  
   
-10. Créer et inscrire l’objet COM en cliquant sur **Créer ComObject1.dll** sur la **fichier** menu.  
+10. Créer et inscrire l’objet COM en cliquant sur **Créer ComObject1.dll** sur le **fichier** menu.  
   
     > [!NOTE]
-    >  Bien que vous pouvez également exposer une classe créée avec Visual Basic en tant qu’objet COM, il n’est pas un objet COM réel et ne peut pas être utilisé dans cette procédure pas à pas. Pour plus d’informations, consultez [interopérabilité COM dans les Applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
+    >  Bien que vous pouvez également exposer une classe créée avec Visual Basic en tant qu’objet COM, il n’est pas un véritable objet COM et ne peut pas être utilisé dans cette procédure pas à pas. Pour plus d’informations, consultez [interopérabilité COM dans les Applications .NET Framework](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md).  
   
-## <a name="interop-assemblies"></a>Assemblys d’interopérabilité  
- Dans la procédure suivante, vous allez créer un assembly d’interopérabilité, qui fait Office de pont entre le code non managé (par exemple, un objet COM) et le code managé, que Visual Studio utilise. L’assembly PIA Visual Basic crée gère de nombreux détails de l’utilisation avec des objets COM, tel que *le marshaling d’interopérabilité*, le processus empaqueter des paramètres et valeurs de retour des données de l’équivalentes de types lors de leur déplacement à et à partir des objets COM. La référence de l’application Visual Basic pointe vers l’assembly d’interopérabilité, pas l’objet COM réel.  
+## <a name="interop-assemblies"></a>Assemblys PIA  
+ Dans la procédure suivante, vous allez créer un assembly d’interopérabilité, qui fait Office de pont entre le code non managé (par exemple, un objet COM) et le code managé qu'utilise Visual Studio. L’assembly d’interopérabilité qui crée de Visual Basic gère de nombreux détails de l’utilisation avec des objets COM, tel que *le marshaling d’interopérabilité*, le processus empaqueter des paramètres et valeurs de retour dans les données équivalents types lorsqu’ils passent à et à partir des objets COM. La référence dans l’application Visual Basic pointe vers l’assembly d’interopérabilité, pas l’objet COM réel.  
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>Pour utiliser un objet COM avec Visual Basic 2005 et versions ultérieures  
   
@@ -82,7 +82,7 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
      La boîte de dialogue **Ajouter une référence** s’affiche.  
   
-3.  Sur le **COM** onglet, double-cliquez sur `ComObject1` dans les **nom du composant** liste et cliquez sur **OK**.  
+3.  Sur le **COM** onglet, double-cliquez sur `ComObject1` dans le **nom du composant** liste et cliquez sur **OK**.  
   
 4.  Dans le menu **Projet** , cliquez sur **Ajouter un nouvel élément**.  
   
@@ -90,13 +90,13 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
 5.  Dans le **modèles** volet, cliquez sur **classe**.  
   
-     Le nom de fichier par défaut, `Class1.vb`, apparaît dans le **nom** champ. Remplacez ce champ par MathClass.vb et cliquez sur **ajouter**. Cette opération crée une classe nommée `MathClass`et affiche son code.  
+     Le nom de fichier par défaut, `Class1.vb`, apparaît dans le **nom** champ. Modifiez ce champ à MathClass.vb et cliquez sur **ajouter**. Cette opération crée une classe nommée `MathClass`et affiche son code.  
   
-6.  Ajoutez le code suivant en haut du `MathClass` d’hériter de la classe COM.  
+6.  Ajoutez le code suivant au début du `MathClass` d’hériter de la classe COM.  
   
      [!code-vb[VbVbalrInterop#31](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_1.vb)]  
   
-7.  Surcharge de la méthode publique de la classe de base en ajoutant le code suivant à `MathClass`:  
+7.  Surcharger la méthode publique de la classe de base en ajoutant le code suivant à `MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_2.vb)]  
   
@@ -110,20 +110,20 @@ Vous pouvez dériver des classes Visual Basic à partir de `Public` classes dans
   
 1.  Ajouter un bouton à votre formulaire de démarrage, puis double-cliquez dessus pour afficher son code.  
   
-2.  Dans du bouton `Click` procédure gestionnaire d’événements, ajoutez le code suivant pour créer une instance de `MathClass` et appeler les méthodes surchargées :  
+2.  Dans le bouton `Click` procédure de gestionnaire d’événements, ajoutez le code suivant pour créer une instance de `MathClass` et appeler les méthodes surchargées :  
   
      [!code-vb[VbVbalrInterop#34](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/walkthrough-implementing-inheritance-with-com-objects_4.vb)]  
   
 3.  Exécutez le projet en appuyant sur F5.  
   
- Lorsque vous cliquez sur le bouton dans le formulaire, le `AddNumbers` méthode est d’abord appelée avec `Short` nombres, de type de données et Visual Basic choisit la méthode appropriée à partir de la classe de base. Le deuxième appel à `AddNumbers` est dirigé vers la méthode de surcharge à partir de `MathClass`. Le troisième appel appelle le `SubtractNumbers` (méthode), qui étend la classe. La propriété dans la classe de base est définie, et la valeur est affichée.  
+ Lorsque vous cliquez sur le bouton sur le formulaire, le `AddNumbers` méthode est appelée tout d’abord avec `Short` numéros, de type de données et Visual Basic choisit la méthode appropriée à partir de la classe de base. Le deuxième appel à `AddNumbers` est dirigé vers la méthode de surcharge à partir de `MathClass`. Le troisième appel appelle le `SubtractNumbers` (méthode), qui étend la classe. La propriété dans la classe de base est définie, et la valeur est affichée.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez peut-être remarqué que surchargées `AddNumbers` fonction semble avoir les mêmes données que la méthode héritée de la classe de base de l’objet COM de type. Il s’agit, car les arguments et les paramètres de la méthode de classe de base sont définis en tant qu’entiers 16 bits dans Visual Basic 6.0, mais elles sont exposées en tant qu’entiers 16 bits de type `Short` dans les versions ultérieures de Visual Basic. La nouvelle fonction accepte les nombres entiers 32 bits et les surcharges de la fonction de la classe de base.  
+ Vous avez peut-être remarqué que surchargées `AddNumbers` fonction semble avoir les données du mêmes type que la méthode héritée de la classe de base de l’objet COM. Il s’agit, car les arguments et les paramètres de la méthode de classe de base sont définis en tant qu’entiers 16 bits dans Visual Basic 6.0, mais elles sont exposées sous forme d’entiers 16 bits de type `Short` dans les versions ultérieures de Visual Basic. La nouvelle fonction accepte des entiers 32 bits et surcharge de la fonction de la classe de base.  
   
- Lorsque vous travaillez avec des objets COM, vérifiez que les types de données et la taille des paramètres. Par exemple, lorsque vous utilisez un objet COM qui accepte un objet de collection Visual Basic 6.0 en tant qu’argument, vous ne peut pas fournir une collection à partir d’une version ultérieure de Visual Basic.  
+ Lorsque vous travaillez avec des objets COM, vérifiez que les taille et les types des paramètres. Par exemple, lorsque vous utilisez un objet COM qui accepte un objet de collection Visual Basic 6.0 en tant qu’argument, vous ne peut pas fournir une collection à partir d’une version ultérieure de Visual Basic.  
   
- Propriétés et méthodes héritées des classes COM peuvent être remplacées, ce qui signifie que que vous pouvez déclarer une propriété locale ou une méthode qui remplace une propriété ou une méthode héritée d’une classe COM de base. Les règles de substitution des propriétés COM héritées sont similaires aux règles de substitution des autres propriétés et méthodes avec les exceptions suivantes :  
+ Propriétés et méthodes héritées des classes COM peuvent être substituées, ce qui signifie que vous pouvez déclarer une propriété locale ou une méthode qui remplace une propriété ou méthode héritée d’une classe COM de base. Les règles de substitution des propriétés COM héritées sont similaires aux règles de substitution des autres propriétés et méthodes avec les exceptions suivantes :  
   
 -   Si vous substituez une propriété ou une méthode héritée d’une classe COM, vous devez substituer toutes les autres propriétés et méthodes héritées.  
   

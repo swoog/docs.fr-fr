@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: b918b378623a239803fb4e0a65fcf82fd677b21f
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961324"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932385"
 ---
 # <a name="do-c-reference"></a>do (référence C#)
 
@@ -36,9 +36,9 @@ L’exemple suivant illustre l’utilisation de l’instruction `do`. Sélection
 
 ## <a name="see-also"></a>Voir aussi
 
- [Référence C#](../index.md)  
- [Guide de programmation C#](../../programming-guide/index.md)  
- [Mots clés C#](index.md)  
- [do-while, instruction (C++)](/cpp/cpp/do-while-statement-cpp)  
- [Instructions d’itération](iteration-statements.md)  
- [instruction while](while.md)  
+- [Référence C#](../index.md)  
+- [Guide de programmation C#](../../programming-guide/index.md)  
+- [Mots clés C#](index.md)  
+- [do-while, instruction (C++)](/cpp/cpp/do-while-statement-cpp)  
+- [Instructions d’itération](iteration-statements.md)  
+- [instruction while](while.md)  

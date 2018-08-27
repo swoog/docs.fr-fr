@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 84e016e4620b73444f800b02076489012ea5e844
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105282"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001438"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Utilisation d’Azure Key Vault pour protéger les secrets au moment de la production
 
@@ -19,7 +19,7 @@ Le package Microsoft.Extensions.Configuration.AzureKeyVault permet à une applic
 
 En premier lieu, inscrivez votre application en tant qu’application Azure AD. (L’accès aux coffres de clés est géré par Azure AD.) Vous pouvez faire cela sur le portail de gestion Azure.
 
-Si vous préférez que votre application s’authentifie avec un certificat plutôt qu’un mot de passe ou une clé secrète client, vous pouvez utiliser l’applet de commande PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/resourcemanager/azurerm.resources/v3.3.0/new-azurermadapplication). Le certificat que vous inscrivez auprès d’Azure Key Vault n’a besoin que de votre clé publique. (Votre application utilisera la clé privée.)
+Si vous préférez que votre application s’authentifie avec un certificat plutôt qu’un mot de passe ou une clé secrète client, vous pouvez utiliser l’applet de commande PowerShell [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication). Le certificat que vous inscrivez auprès d’Azure Key Vault n’a besoin que de votre clé publique. (Votre application utilisera la clé privée.)
 
 En second lieu, accordez à l’application inscrite un accès au coffre de clés en créant un principal de service. Pour cela, vous pouvez utiliser les commandes PowerShell suivantes :
 

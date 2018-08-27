@@ -2,12 +2,12 @@
 title: Chiffrement des données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 9e2924dc9f2f2954f6690ad5009c4143d1b9a44f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358366"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932742"
 ---
 # <a name="data-encryption-in-sql-server"></a>Chiffrement des données dans SQL Server
 SQL Server fournit des fonctions de chiffrement et déchiffrement de données à l'aide d'un certificat, d'une clé asymétrique ou d'une clé symétrique. Il gère tous ces éléments dans un magasin de certificats interne. Le magasin utilise une hiérarchie de chiffrement qui sécurise les certificats et les clés sur un niveau à l'aide de la couche située au-dessus dans la hiérarchie. Ce domaine de fonctionnalités de SQL Server est appelé stockage secret.  
@@ -19,15 +19,15 @@ SQL Server fournit des fonctions de chiffrement et déchiffrement de données à
   
  Dans l'étendue d'une connexion de base de données, SQL Server peut gérer plusieurs clés symétriques ouvertes. Une clé ouverte est récupérée du magasin et est disponible pour le déchiffrement des données. Lorsqu'une donnée est déchiffrée, il est inutile de spécifier la clé symétrique à utiliser. Chaque valeur chiffrée contient l'identificateur (GUID clé) de la clé utilisée pour la chiffrer. Le moteur met en correspondance le flux d'octets chiffrés avec une clé symétrique ouverte, si la clé correcte a été déchiffrée et est ouverte. Cette clé est ensuite utilisée pour procéder au déchiffrement et retourner les données. Si la clé correcte n'est pas ouverte, la valeur NULL est retournée.  
   
- Pour obtenir un exemple qui montre comment utiliser les données chiffrées dans une base de données, consultez [Comment : chiffrer une colonne de données](http://go.microsoft.com/fwlink/?LinkID=128559) dans la documentation en ligne de SQL Server.  
+ Pour obtenir un exemple qui montre comment utiliser les données chiffrées dans une base de données, consultez [chiffrer une colonne de données](/sql/relational-databases/security/encryption/encrypt-a-column-of-data).
   
 ## <a name="external-resources"></a>Ressources externes  
  Pour plus d'informations sur le chiffrement des données, voir les ressources suivantes.  
   
-|||  
+|Ressource|Description|  
 |-|-|  
-|[Chiffrement SQL Server](http://msdn.microsoft.com/library/bb510663.aspx) dans la documentation en ligne de SQL Server|Fournit une vue d'ensemble du chiffrement dans SQL Server. Cette rubrique fournit des liens vers des rubriques et procédures supplémentaires. |  
-|[Hiérarchie de chiffrement](http://msdn.microsoft.com/library/ms189586.aspx) et [rubriques de procédures de chiffrement](http://msdn.microsoft.com/library/aa337557.aspx) dans la documentation en ligne de SQL Server|Fournit une vue d'ensemble du chiffrement dans SQL Server. Cette rubrique fournit des liens vers des rubriques et procédures supplémentaires. |  
+|[Chiffrement SQL Server](/sql/relational-databases/security/encryption/sql-server-encryption)|Fournit une vue d'ensemble du chiffrement dans SQL Server. Cette rubrique inclut des liens vers des articles supplémentaires.|  
+|[Hiérarchie de chiffrement](/sql/relational-databases/security/encryption/encryption-hierarchy)|Fournit une vue d'ensemble du chiffrement dans SQL Server. Cette rubrique fournit des liens vers des articles supplémentaires.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

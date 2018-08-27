@@ -3,11 +3,11 @@ title: Création d’arborescences XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
 ms.openlocfilehash: f9367cd795104020c88c40e820c6af15054e38be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318586"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999407"
 ---
 # <a name="creating-xml-trees-c"></a>Création d’arborescences XML (C#)
 L'une des tâches XML les plus courantes consiste à construire une arborescence XML. Cette section décrit plusieurs manières de procéder.  

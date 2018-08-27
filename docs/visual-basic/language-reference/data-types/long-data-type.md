@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 687c235be76ef522758658fd1c5fe0cb1dbeb414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b3970aad08f2be98d175b4175ef06711bcaf609
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591364"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935440"
 ---
 # <a name="long-data-type-visual-basic"></a>Type de données long (Visual Basic)
 
@@ -35,13 +35,13 @@ Contient des entiers (8 octets) de 64 bits dont la valeur de -9,223,372,036,854,
   
 ## <a name="remarks"></a>Notes
 
- Utilisez le `Long` type de données pour contenir des nombres entiers qui sont trop volumineuses pour tenir la `Integer` type de données.  
+ Utilisez le `Long` type de données contenant des nombres entiers qui sont trop volumineuses pour tenir le `Integer` type de données.  
   
  La valeur par défaut de `Long` est 0.
 
-## <a name="literal-assignments"></a>Attributions de littéral 
+## <a name="literal-assignments"></a>Affectations de littéraux 
 
-Vous pouvez déclarer et initialiser une `Long` variable en lui assignant un décimal littéral, un littéral hexadécimal, un littéral octal, ou (à partir de Visual Basic 2017) un littéral binaire. Si le littéral entier est en dehors de la plage de `Long` (autrement dit, s’il est inférieur à <xref:System.Int64.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Int64.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit.
+Vous pouvez déclarer et initialiser une `Long` variable en lui assignant un littéral décimal, un littéral hexadécimal, un littéral octal, ou (à partir de Visual Basic 2017) un littéral binaire. Si le littéral entier est en dehors de la plage de `Long` (autrement dit, s’il est inférieur à <xref:System.Int64.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Int64.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit.
 
 Dans l’exemple suivant, les entiers égaux à 4 294 967 296 représentés comme des littéraux décimaux, hexadécimaux et binaires sont assignés aux valeurs `Long`.
   
@@ -50,11 +50,11 @@ Dans l’exemple suivant, les entiers égaux à 4 294 967 296 représentés c
 > [!NOTE]
 > Vous utilisez le préfixe `&h` ou `&H` pour désigner un littéral hexadécimal, le préfixe `&b` ou `&B` pour désigner un littéral binaire et le préfixe `&o` ou `&O` pour désigner un littéral octal. Les littéraux décimaux n’ont pas de préfixe.
 
-À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur de chiffres pour améliorer la lisibilité, comme l’exemple suivant montre le.
+À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur numérique pour améliorer la lisibilité, comme dans l’exemple suivant montre.
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
-À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Par exemple :
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octaux. Exemple :
 
 ```vb
 Dim number As Long = &H_0FAC_0326_1489_D68C
@@ -76,12 +76,12 @@ Dim number = &H_0FAC_0326_1489_D68CL
   
 -   **Caractères de type.** L'ajout du caractère de type littéral `L` à un littéral force ce dernier en type de données `Long`. L'ajout du caractère de type identificateur `&` à un identificateur force ce dernier en type `Long`.  
   
--   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Int64?displayProperty=nameWithType>.  
+-   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Int64?displayProperty=nameWithType>.  
 
 ## <a name="see-also"></a>Voir aussi
 
 <xref:System.Int64>
-[Types de données](../../../visual-basic/language-reference/data-types/data-type-summary.md)   
+[Types de données](../../../visual-basic/language-reference/data-types/index.md)   
 [Type de données Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)   
 [Type de données de type short](../../../visual-basic/language-reference/data-types/short-data-type.md)   
 [Fonctions de Conversion de type](../../../visual-basic/language-reference/functions/type-conversion-functions.md)   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: 1e1efd6db6efa3a0b85d7d7794be7d3728da8c85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557509"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931538"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Étendre le cadre de transparence dans une application WPF
 Cette rubrique montre comment étendre le [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cadre de transparence dans la zone cliente d’une application Windows Presentation Foundation (WPF).  
@@ -62,10 +62,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) est la fonction DWM qui étend le cadre dans la zone cliente. Elle nécessite deux paramètres ; un handle de fenêtre et une structure [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx). [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) indique à DWM le niveau d’extension du cadre dans la zone cliente.  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) est la fonction DWM qui étend le cadre dans la zone cliente. Elle nécessite deux paramètres ; un handle de fenêtre et une structure [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins). [MARGINS](/windows/desktop/api/uxtheme/ns-uxtheme-_margins) indique à DWM le niveau d’extension du cadre dans la zone cliente.  
   
 ## <a name="example"></a>Exemple  
- Pour utiliser la fonction [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx), un handle de fenêtre doit être obtenu. Dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], le handle de fenêtre peut être obtenu à partir de la <xref:System.Windows.Interop.HwndSource.Handle%2A> propriété d’un <xref:System.Windows.Interop.HwndSource>. Dans l’exemple suivant, le cadre est étendu dans la zone cliente sur le <xref:System.Windows.FrameworkElement.Loaded> l’événement de la fenêtre.  
+ Pour utiliser la fonction [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), un handle de fenêtre doit être obtenu. Dans [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], le handle de fenêtre peut être obtenu à partir de la <xref:System.Windows.Interop.HwndSource.Handle%2A> propriété d’un <xref:System.Windows.Interop.HwndSource>. Dans l’exemple suivant, le cadre est étendu dans la zone cliente sur le <xref:System.Windows.FrameworkElement.Loaded> événement de la fenêtre.  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -150,6 +150,6 @@ void OnLoaded(object sender, RoutedEventArgs e)
  ![Cadre de transparence étendu dans une application WPF.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du Gestionnaire de fenêtrage](https://msdn.microsoft.com/library/aa969540.aspx)  
- [Vue d’ensemble de gestionnaire de fenêtrage flou](https://msdn.microsoft.com/library/aa969537.aspx)  
- [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx)
+ [Vue d’ensemble du Gestionnaire de fenêtrage](/windows/desktop/dwm/dwm-overview)  
+ [Vue d’ensemble du flou du Gestionnaire de fenêtrage](/windows/desktop/dwm/blur-ovw)  
+ [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea)

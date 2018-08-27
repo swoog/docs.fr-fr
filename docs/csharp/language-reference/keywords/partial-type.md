@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 362a02815cb249d57c0bd19706714df1d71644f4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960295"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929661"
 ---
 # <a name="partial-type-c-reference"></a>partial, type (référence C#)
 Les définitions de type partiel permettent le fractionnement de la définition d’une classe, d’un struct ou d’une interface entre plusieurs fichiers.  
@@ -31,8 +31,9 @@ Les définitions de type partiel permettent le fractionnement de la définition 
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 599a08e5e1723fc760a8211df4634064911ded37
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548121"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933740"
 ---
 # <a name="xaml-in-wpf"></a>Intégration du format XAML au format WPF
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] est un langage de balisage pour une application déclarative de programmation. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implémente l’implémentation du processeur XAML et fournit la prise en charge du langage XAML. Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types sont implémentés, tels qu’ils puissent fournir le stockage pour une représentation XAML du type requis. En général, vous pouvez créer la majorité de vos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interface utilisateur des applications dans le balisage XAML.  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] est un langage de balisage pour une application déclaratif de programmation. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implémente l’implémentation du processeur XAML et fournit la prise en charge du langage XAML. Le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] types sont implémentés, tels qu’ils peuvent fournir le stockage pour une représentation XAML du type requis. En règle générale, vous pouvez créer la majorité de votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] l’interface utilisateur d’application dans le balisage XAML.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
@@ -26,7 +26,7 @@ ms.locfileid: "33548121"
  [Espaces de noms XAML et mappage d'espace de noms pour XAML WPF](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
  [Portées de nom XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
  [Modèles et styles intralignes](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [Traitement des espaces blancs en XAML](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
+ [Espace blanc dans XAML de traitement](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
  [TypeConverters et XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
  [Entités de caractères XML et XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
  [Fonctionnalités de langage pour les espaces de noms XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
 ms.openlocfilehash: 0383a5e369ee4a8146764c13b2f12f48ebe52190
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653492"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934575"
 ---
 # <a name="-bugreport"></a>-bugreport
-Crée un fichier que vous pouvez utiliser lorsque vous archivez un rapport de bogue.  
+Crée un fichier que vous pouvez utiliser quand vous archivez un rapport de bogue.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -26,7 +26,7 @@ Crée un fichier que vous pouvez utiliser lorsque vous archivez un rapport de bo
   
 |Terme|Définition|  
 |---|---|  
-|`file`|Obligatoire. Le nom du fichier qui contient votre rapport de bogue. Placez le nom de fichier entre guillemets ( » «) si le nom contient un espace.|  
+|`file`|Obligatoire. Le nom du fichier qui contiendra votre rapport de bogue. Placez le nom de fichier entre guillemets ( » «) si le nom contient un espace.|  
   
 ## <a name="remarks"></a>Notes  
  Les informations suivantes sont ajoutées à `file`:  
@@ -35,26 +35,26 @@ Crée un fichier que vous pouvez utiliser lorsque vous archivez un rapport de bo
   
 -   Une liste des options du compilateur utilisé dans la compilation.  
   
--   Informations de version sur votre compilateur, le common language runtime et le système d’exploitation.  
+-   Informations de version concernant votre compilateur, le common language runtime et le système d’exploitation.  
   
 -   Les résultats de la compilation, le cas échéant.  
   
--   Description du problème pour lequel vous êtes invité.  
+-   Une description du problème pour lequel vous êtes invité.  
   
--   Obtenir une description de la façon dont vous pensez que le problème doit être corrigée pour lequel vous êtes invité.  
+-   Une description de la façon dont vous pensez que le problème doit être corrigée, pour lequel vous êtes invité.  
   
- Une copie de tous les fichiers de code source est inclus dans `file`, vous pouvez souhaiter reproduire l’erreur de code (supposée) dans le programme le plus court possible.  
+ Car une copie de tous les fichiers de code source est incluse dans `file`, vous pouvez souhaiter reproduire l’erreur de code (supposée) dans le programme le plus court possible.  
   
 > [!IMPORTANT]
->  Le `-bugreport` option génère un fichier qui contient des informations potentiellement sensibles. Cela inclut l’heure actuelle, la version du compilateur, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] version, version du système d’exploitation, nom d’utilisateur, les arguments de ligne de commande avec laquelle le compilateur a été exécuté, tout le code source, et la forme binaire de tout assembly référencé. Cette option est accessible en spécifiant des options de ligne de commande dans le fichier Web.config pour une compilation côté serveur d’un [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] application. Pour éviter ce problème, modifiez le fichier Machine.config pour empêcher les utilisateurs de se compiler sur le serveur.  
+>  Le `-bugreport` option génère un fichier qui contient des informations potentiellement sensibles. Cela inclut l’heure actuelle, la version du compilateur, [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] version, version du système d’exploitation, nom d’utilisateur, les arguments de ligne de commande avec laquelle le compilateur a été exécuté, tout le code source, et la forme binaire de tout assembly référencé. Cette option est accessible en spécifiant des options de ligne de commande dans le fichier Web.config pour une compilation côté serveur d’un [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] application. Pour éviter ce problème, modifiez le fichier Machine.config pour interdire aux utilisateurs de se compiler sur le serveur.  
   
- Si cette option est utilisée avec `-errorreport:prompt`, `-errorreport:queue`, ou `-errorreport:send`, et votre application rencontre une erreur interne du compilateur, les informations contenues dans `file` sont envoyées à Microsoft Corporation. Ces informations aideront les ingénieurs de Microsoft à identifier la cause de l’erreur et peuvent aider à améliorer la prochaine version de Visual Basic. Par défaut, aucune information n’est envoyée à Microsoft. Toutefois, lorsque vous compilez une application à l’aide de `-errorreport:queue`, qui est activé par défaut, l’application rassemble ses rapports d’erreurs. Ensuite, lorsque l’administrateur de l’ordinateur se connecte, le système de création de rapports d’erreurs affiche une fenêtre contextuelle qui permet à l’administrateur à envoyer à Microsoft les rapports de toute erreur qui se sont produites depuis l’ouverture de session.  
+ Si cette option est utilisée avec `-errorreport:prompt`, `-errorreport:queue`, ou `-errorreport:send`, et votre application rencontre une erreur interne du compilateur, les informations contenues dans `file` sont envoyées à Microsoft Corporation. Ces informations aideront les ingénieurs Microsoft à identifier la cause de l’erreur et peuvent contribuer à améliorer la prochaine version de Visual Basic. Par défaut, aucune information n’est envoyée à Microsoft. Toutefois, lorsque vous compilez une application à l’aide de `-errorreport:queue`, qui est activé par défaut, l’application rassemble ses rapports d’erreurs. Ensuite, lorsque l’administrateur de l’ordinateur se connecte, le système de création de rapports d’erreurs affiche une fenêtre contextuelle qui permet à l’administrateur à envoyer à Microsoft signale toute erreur qui se sont produites depuis l’ouverture de session.  
   
 > [!NOTE]
 >  Le `/bugreport` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lorsque vous compilez à partir de la ligne de commande.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant compile `T2.vb` et y place toutes les informations de rapport de bogue dans le fichier `Problem.txt`.  
+ L’exemple suivant compile `T2.vb` et place toutes les informations de rapport de bogue dans le fichier `Problem.txt`.  
   
 ```  
 vbc -bugreport:problem.txt t2.vb  

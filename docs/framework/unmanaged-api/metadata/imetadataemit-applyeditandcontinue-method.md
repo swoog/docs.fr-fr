@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c15c554e0ec135b33d671a83b5e27d0a2a89b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444254"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930935"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue, méthode
-La portée de l’assembly actuel des mises à jour avec les modifications apportées dans les métadonnées spécifiées.  
+Met à jour la portée d’assembly actuelle avec les modifications apportées dans les métadonnées spécifiées.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,18 +37,18 @@ HRESULT ApplyEditAndContinue (
   
 #### <a name="parameters"></a>Paramètres  
  `pImport`  
- [in] Pointeur vers un <<!--zzxref:IUnknown --> `IUnknown`> objet qui représente les métadonnées delta à partir du fichier exécutable portable (PE).  
+ \[dans\] pointeur vers un [IUnknown](/cpp/atl/iunknown) objet qui représente les métadonnées delta à partir du fichier exécutable portable (PE).
   
- Les métadonnées delta sont le bloc de métadonnées qui inclut les modifications qui ont été apportées à la copie de métadonnées du module.  
+ Les métadonnées delta sont le bloc de métadonnées qui inclut les modifications qui ont été apportées à la copie des métadonnées réelles du module.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

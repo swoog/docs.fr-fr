@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f8189f0adb62aa32cd0b85ca5a653aa466c7032
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb187719ff502abe61ac5deb69c6427a4a64ab44
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460459"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930225"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance (fonction)
 Crée une nouvelle instance d’une classe.    
@@ -41,16 +41,16 @@ HRESULT SpawnInstance (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `lFlags`  
 [in] Réservé. Ce paramètre doit être 0.
 
 `ppNewInstance`  
-[out] Reçoit le pointeur vers la nouvelle instance de la classe. Si une erreur se produit, un nouvel objet n’est pas renvoyé, et `ppNewInstance` non de gauche est modifié.
+[out] Reçoit le pointeur vers la nouvelle instance de la classe. Si une erreur se produit, un nouvel objet n’est pas retournée, et `ppNewInstance` est gauche tels quels.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -58,28 +58,28 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` n’est pas une définition de classe valide et ne peut pas générer de nouvelles instances. Il est incomplet ou qu’il n’a pas été inscrit avec la gestion de Windows en appelant [PutClassWmi](putclasswmi.md). |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour terminer l’opération. |
+| `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` n’est pas une définition de classe valide et ne peut pas générer de nouvelles instances. Soit il est incomplet, soit il n’a pas été inscrit avec la gestion de Windows en appelant [PutClassWmi](putclasswmi.md). |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `ppNewClass` a la valeur `null`. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::SpawnInstance](https://msdn.microsoft.com/library/aa391458(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::SpawnInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-spawninstance) (méthode).
 
-`ptr` doit être une définition de classe obtenue à partir de la gestion de Windows. (Notez que la génération automatique d’une instance d’une instance est prise en charge mais l’instance retournée est vide.) Vous utilisez ensuite cette définition de classe pour créer des instances. Un appel à la [PutInstanceWmi](putinstancewmi.md) fonction est obligatoire si vous envisagez d’écrire l’instance à la gestion de Windows.
-
-
+`ptr` doit être une définition de classe obtenue à partir de la gestion de Windows. (Notez que lors de la génération une instance d’une instance est prise en charge, mais l’instance retournée est vide.) Vous utilisez ensuite cette définition de classe pour créer des instances. Un appel à la [PutInstanceWmi](putinstancewmi.md) fonction est nécessaire si vous avez l’intention d’écrire l’instance à la gestion de Windows.
 
 
-Le nouvel objet retourné dans `ppNewClass` devient automatiquement une sous-classe de l’objet actuel. Ce comportement ne peut pas être substitué. Il n’existe aucune autre méthode par laquelle les sous-classes (classes dérivées) peuvent être créés.
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+
+Le nouvel objet retourné dans `ppNewClass` devient automatiquement une sous-classe de l’objet actuel. Ce comportement ne peut pas être remplacé. Il n’existe aucune autre méthode par laquelle les sous-classes (classes dérivées) peuvent être créés.
+
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

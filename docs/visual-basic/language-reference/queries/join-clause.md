@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: 2186954ab6536988271629c4feba0a40563bfc3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1551583079c66d1bf5f6963a42d5d24e518fff3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603910"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933865"
 ---
 # <a name="join-clause-visual-basic"></a>Join, clause (Visual Basic)
 Combine deux collections en une collection unique. L’opération de jointure est basée sur les clés correspondantes et utilise le `Equals` opérateur.  
@@ -31,30 +31,30 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="parts"></a>Composants  
  `element`  
- Obligatoire. La variable de contrôle de la collection jointe.  
+ Obligatoire. La variable de contrôle pour la collection jointe.  
   
  `collection`  
- Obligatoire. Collection à combiner à la collection identifiée sur le côté gauche de la `Join` opérateur. A `Join` clause peut être imbriquée dans une autre `Join` clause, ou dans un `Group Join` clause.  
+ Obligatoire. La collection à combiner avec la collection identifiée sur le côté gauche de la `Join` opérateur. Un `Join` clause peut être imbriquée dans une autre `Join` clause, ou dans un `Group Join` clause.  
   
  `joinClause`  
- Facultatif. Un ou plus supplémentaires `Join` clauses pour davantage affiner la requête.  
+ Facultatif. Un ou plus supplémentaires `Join` clauses pour en savoir plus affiner la requête.  
   
  `groupJoinClause`  
- Facultatif. Un ou plus supplémentaires `Group Join` clauses pour davantage affiner la requête.  
+ Facultatif. Un ou plus supplémentaires `Group Join` clauses pour en savoir plus affiner la requête.  
   
  `key1` `Equals` `key2`  
- Obligatoire. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` pour comparer les clés des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. `key1` doit être de la collection sur le côté gauche de la `Join` opérateur. `key2` doit être de la collection sur le côté droit de la `Join` opérateur.  
+ Obligatoire. Identifie les clés pour les collections qui sont jointes. Vous devez utiliser le `Equals` opérateur pour comparer les clés à partir des collections qui sont jointes. Vous pouvez combiner des conditions de jointure à l’aide de la `And` opérateur afin d’identifier plusieurs clés. `key1` doit être de la collection sur le côté gauche de la `Join` opérateur. `key2` doit être de la collection sur le côté droit de la `Join` opérateur.  
   
- Les clés utilisées dans la condition de jointure peuvent être des expressions incluant plusieurs éléments de la collection. Toutefois, chaque expression clé peut contenir uniquement les éléments à partir de sa collection respective.  
+ Les clés utilisées dans la condition de jointure peuvent être des expressions incluant plusieurs éléments de la collection. Toutefois, chaque expression clé peut contenir uniquement des éléments à partir de sa collection respectif.  
   
 ## <a name="remarks"></a>Notes  
- Le `Join` clause combine deux collections en fonction des valeurs de clés correspondantes des collections qui sont jointes. La collection résultante peut contenir n’importe quelle combinaison de valeurs de la collection identifiée sur le côté gauche de la `Join` opérateur et la collection identifiée dans la `Join` clause. La requête retourne uniquement les résultats pour lesquels la condition spécifiée par la `Equals` opérateur est remplie. Cela équivaut à un `INNER JOIN` dans SQL.  
+ Le `Join` clause combine deux collections en fonction des valeurs de clés correspondantes des collections qui sont jointes. La collection résultante peut contenir n’importe quelle combinaison de valeurs de la collection identifiée sur le côté gauche de la `Join` opérateur et la collection identifiée dans le `Join` clause. La requête retournera uniquement des résultats pour lesquels la condition spécifiée par la `Equals` opérateur est remplie. Cela équivaut à un `INNER JOIN` dans SQL.  
   
  Vous pouvez utiliser plusieurs `Join` clauses dans une requête pour joindre deux collections ou plus en une collection unique.  
   
  Vous pouvez effectuer une jointure implicite pour combiner des collections sans la `Join` clause. Pour ce faire, inclure plusieurs `In` clauses dans votre `From` clause et spécifiez un `Where` clause qui identifie les clés que vous souhaitez utiliser pour la jointure.  
   
- Vous pouvez utiliser la `Group Join` clause pour combiner des collections en une collection hiérarchique unique. Il s’agit comme un `LEFT OUTER JOIN` dans SQL.  
+ Vous pouvez utiliser le `Group Join` clause pour combiner des collections en une collection hiérarchique unique. Il s’agit comme un `LEFT OUTER JOIN` dans SQL.  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant effectue une jointure implicite pour combiner une liste de clients avec leurs commandes.  
@@ -66,7 +66,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  [!code-vb[VbSimpleQuerySamples#12](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_2.vb)]  
   
- Cet exemple produira un résultat semblable au suivant :  
+ Cet exemple produira un résultat similaire à ce qui suit :  
   
  `winlogon (968), Windows Logon`  
   
@@ -79,7 +79,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
  [!code-vb[VbSimpleQuerySamples#17](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/join-clause_3.vb)]  
   
- L’exemple de sortie produite est semblable au suivant :  
+ L’exemple de sortie produite est semblable à ce qui suit :  
   
  `winlogon (968), Windows Logon, Priority = 13`  
   
@@ -89,7 +89,7 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Requêtes](../../../visual-basic/language-reference/queries/queries.md)  
+ [Requêtes](../../../visual-basic/language-reference/queries/index.md)  
  [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From (clause)](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Group Join (clause)](../../../visual-basic/language-reference/queries/group-join-clause.md)  

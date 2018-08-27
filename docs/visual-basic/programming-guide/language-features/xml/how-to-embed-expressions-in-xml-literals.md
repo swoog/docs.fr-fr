@@ -6,24 +6,24 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
 ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652267"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929514"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Comment : incorporer des expressions dans des littéraux XML (Visual Basic)
-Vous pouvez combiner des littéraux XML avec des expressions incorporées pour créer un document XML, un fragment ou un élément qui contient le contenu créé au moment de l’exécution. Les exemples suivants montrent comment utiliser des expressions incorporées pour remplir les noms d’éléments, attributs et contenu de l’élément en cours d’exécution.  
+Vous pouvez combiner des littéraux XML avec des expressions incorporées pour créer un document XML, un fragment ou un élément qui contient le contenu créé au moment de l’exécution. Les exemples suivants montrent comment utiliser des expressions incorporées pour remplir le contenu de l’élément, des attributs et des noms d’élément en cours d’exécution.  
   
  La syntaxe pour une expression incorporée est `<%=` `exp` `%>`, qui est la même syntaxe que [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] utilise. Pour plus d’informations, consultez [Expressions incorporées en XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Vous pouvez également utiliser le [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API pour créer des [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objets. Pour plus d'informations, consultez <xref:System.Xml.Linq.XElement>.  
+ Vous pouvez également utiliser le [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API pour créer [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objets. Pour plus d'informations, consultez <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Procédures  
   
 #### <a name="to-insert-text-as-element-content"></a>Pour insérer du texte en tant que contenu de l’élément  
   
--   L’exemple suivant montre comment insérer le texte contenu dans le `contactName` variable entre les éléments de nom d’ouverture et de fermeture.  
+-   L’exemple suivant montre comment insérer le texte qui est contenu dans le `contactName` variable entre les éléments de nom d’ouverture et de fermeture.  
   
      [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
@@ -37,7 +37,7 @@ Vous pouvez combiner des littéraux XML avec des expressions incorporées pour c
   
 #### <a name="to-insert-text-as-an-attribute-value"></a>Pour insérer du texte comme valeur d’attribut  
   
--   L’exemple suivant montre comment insérer le texte contenu dans le `phoneType` variable comme valeur de la `type` attribut.  
+-   L’exemple suivant montre comment insérer le texte qui est contenu dans le `phoneType` variable comme valeur de la `type` attribut.  
   
      [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
@@ -51,7 +51,7 @@ Vous pouvez combiner des littéraux XML avec des expressions incorporées pour c
   
 #### <a name="to-insert-text-for-an-element-name"></a>Pour insérer du texte pour un nom d’élément  
   
--   L’exemple suivant montre comment insérer le texte contenu dans le `elementName` variable en tant que le nom d’un élément.  
+-   L’exemple suivant montre comment insérer le texte qui est contenu dans le `elementName` variable en tant que le nom d’un élément.  
   
      Lorsque vous créez des éléments à l’aide de cette technique, vous devez les fermer avec la \</ > balise.  
   

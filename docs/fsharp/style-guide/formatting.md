@@ -1,27 +1,27 @@
 ---
 title: 'Les instructions de mise en forme de code F #'
-description: 'Découvrez les instructions de mise en forme du code F #.'
+description: 'Découvrez les instructions de mise en forme de code F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: 6c8e4059fd4bf1e7450118a6df02609217c4f4db
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: 9c6e80509e9a5654e6514674d38c02e2a6b44e37
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231504"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935935"
 ---
 # <a name="f-code-formatting-guidelines"></a>Les instructions de mise en forme de code F #
 
-Cet article propose des recommandations pour la mise en forme votre code afin que votre code F # est :
+Cet article propose des instructions pour savoir comment mettre en forme votre code afin que votre code F # est :
 
-* Généralement affichées comme plus lisibles
-* Est conformément aux conventions appliquées par les outils dans Visual Studio et autres éditeurs de mise en forme
+* Généralement considérée comme plus lisibles
+* Est conformément aux conventions appliquées par la mise en forme des outils dans Visual Studio et autres éditeurs
 * Similaire à un autre code en ligne
 
-Ces instructions sont basées sur [un guide complet sur les Conventions de mise en forme F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) par [Anh-fumier Phan](https://github.com/dungpa).
+Ces instructions sont basées sur [un guide complet sur les Conventions de mise en forme F #](https://github.com/dungpa/fantomas/blob/master/docs/FormattingConventions.md) par [Anh-Dung Phan](https://github.com/dungpa).
 
 ## <a name="general-rules-for-indentation"></a>Règles générales pour la mise en retrait
 
-F # utilise un espace blanc significatif par défaut. Les instructions suivantes sont destinées à fournir des conseils sur la manière de jongler avec des défis que cela peut imposer.
+F # utilise des espaces blancs significatifs par défaut. Les instructions suivantes sont destinées à fournir des conseils quant à jongler avec des défis que cela peut imposer.
 
 ### <a name="using-spaces"></a>L’utilisation des espaces
 
@@ -29,18 +29,18 @@ Lors de la mise en retrait est requise, vous devez utiliser des espaces, tabulat
 
 **Nous vous recommandons 4 espaces par mise en retrait.**
 
-Ceci dit, la mise en retrait des programmes est une question subjective. Variations sont OK, mais la première règle, vous devez suivre est *la cohérence de la mise en retrait*. Choisissez un style de mise en retrait de généralement accepté et utiliser systématiquement dans l’ensemble de votre code base.
+Ceci dit, la mise en retrait de programmes est très subjective. Variations sont OK, mais la première règle, vous devez suivre est *la cohérence de la mise en retrait*. Choisir un style généralement accepté de mise en retrait et l’utiliser systématiquement tout au long de votre base de code.
 
 ## <a name="formatting-blank-lines"></a>Mise en forme des lignes vides
 
-* Distinct niveau supérieur (fonction) et la classe définitions avec deux lignes vides.
-* Les définitions de méthode à l’intérieur d’une classe sont séparées par une ligne vide.
-* Lignes vierges supplémentaires peuvent servir (avec parcimonie) pour séparer les groupes de fonctions connexes. Lignes vides peuvent être omises entre un ensemble de commandes associées à une ligne (par exemple, un ensemble d’implémentations fictives).
-* Utiliser avec parcimonie lignes vides dans les fonctions, pour indiquer les sections logiques.
+* Distinct niveau supérieur (fonction) et classe les définitions avec deux lignes vides.
+* Les définitions de méthode à l’intérieur d’une classe sont séparées par une ligne vierge.
+* Lignes vierges supplémentaires peuvent servir (avec parcimonie) pour séparer les groupes de fonctions associées. Peuvent être omis des lignes vides entre un ensemble de commandes associées à une ligne (par exemple, un ensemble d’implémentations factices).
+* Utiliser avec parcimonie, des lignes vides dans les fonctions, pour indiquer les sections logiques.
 
 ## <a name="formatting-comments"></a>Mise en forme de commentaires
 
-Préférez généralement plusieurs commentaires double barre oblique sur les commentaires en bloc style ML.
+Préférez généralement plusieurs commentaires double barre oblique sur les commentaires de bloc de style de ML.
 
 ```fsharp
 // Prefer this style of comments when you want
@@ -52,7 +52,7 @@ Préférez généralement plusieurs commentaires double barre oblique sur les co
 *)
 ```
 
-Commentaires incorporés doivent mettre en majuscule la première lettre.
+Les commentaires incorporés doivent mettre en majuscule la première lettre.
 
 ```fsharp
 let f x = x + 1 // Increment by one.
@@ -60,9 +60,9 @@ let f x = x + 1 // Increment by one.
 
 ## <a name="naming-conventions"></a>Conventions d'attribution d'un nom
 
-### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Utilisez camelCase pour les fonctions et les valeurs de limite de classe, expression-modèle liées et
+### <a name="use-camelcase-for-class-bound-expression-bound-and-pattern-bound-values-and-functions"></a>Utilisent une casse mixte pour les fonctions et les valeurs de limite de classe, expression-liées aux et modèle
 
-Il est courant et acceptée style F # à utiliser camelCase pour tous les noms lié en tant que variables locales ou dans les correspondances de modèle et les définitions de fonction.
+Il est courant et acceptés F # style à utiliser une casse mixte pour tous les noms liée en tant que variables locales ou dans les correspondances de modèle et les définitions de fonction.
 
 ```fsharp
 // OK
@@ -75,7 +75,7 @@ let addIAndJ I J = I+J
 let AddIAndJ i j = i + j
 ```
 
-Fonctions liées au localement dans les classes doivent également utiliser camelCase.
+Fonctions liées à localement dans les classes doivent également utiliser une casse mixte.
 
 ```fsharp
 type MyClass() =
@@ -89,9 +89,9 @@ type MyClass() =
     member x.Result = doSomething()
 ```
 
-### <a name="use-camelcase-for-module-bound-public-functions"></a>Utilisez camelCase pour les fonctions liées au module public
+### <a name="use-camelcase-for-module-bound-public-functions"></a>Utilisent une casse mixte pour les fonctions publiques liées à un module
 
-Lorsqu’une fonction liée au module fait partie d’une API publique, il doit utiliser camelCase :
+Quand une fonction liée au module fait partie d’une API publique, il doit utiliser une casse mixte :
 
 ```fsharp
 module MyAPI =
@@ -100,22 +100,22 @@ module MyAPI =
     let publicFunctionTwo param1 param2 param3 = ...
 ```
 
-### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Utilisez camelCase pour les fonctions et les valeurs liées au module internes et privés
+### <a name="use-camelcase-for-internal-and-private-module-bound-values-and-functions"></a>Utilisent une casse mixte pour les fonctions et les valeurs de module dépendant internes et privés
 
-Utilisez camelCase pour des valeurs liées au module privées, notamment les suivantes :
+Utilisez la casse mixte pour les valeurs liée aux module privées, y compris les éléments suivants :
 
-* Les fonctions ad hoc dans les scripts
+* Fonctions ad hoc dans les scripts
 
-* Valeurs constituant l’implémentation interne de type ou module
+* Valeurs constituant l’implémentation interne d’un module ou un type
 
 ```fsharp
 let emailMyBossTheLatestResults =
     ...
 ```
 
-### <a name="use-camelcase-for-parameters"></a>Utilisez camelCase pour les paramètres
+### <a name="use-camelcase-for-parameters"></a>Utilisez la casse mixte pour les paramètres
 
-Tous les paramètres doivent utiliser camelCase conformément aux conventions d’affectation de noms de .NET.
+Tous les paramètres doivent utiliser une casse mixte conformément aux conventions d’affectation de noms .NET.
 
 ```fsharp
 module MyModule =
@@ -125,9 +125,9 @@ type MyClass() =
     member this.MyMethod(paramOne, paramTwo) = ...
 ```
 
-### <a name="use-pascalcase-for-modules"></a>Utiliser PascalCase pour les modules
+### <a name="use-pascalcase-for-modules"></a>Utiliser la casse Pascal pour les modules
 
-Tous les modules (niveau supérieur, internes, privés, imbriquées) doivent utiliser PascalCase.
+Tous les modules (niveau supérieur, internes, privés, imbriquées) doivent utiliser la casse Pascal.
 
 ```fsharp
 module MyTopLevelModule
@@ -139,9 +139,9 @@ module Helpers =
     ...
 ```
 
-### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Utilisez PascalCase pour les étiquettes, les membres et les déclarations de type
+### <a name="use-pascalcase-for-type-declarations-members-and-labels"></a>Utilisez la casse Pascal pour les déclarations de type, les membres et les étiquettes
 
-Classes, interfaces, structures, énumérations, délégués, les enregistrements et les unions discriminées doivent être nommées avec PascalCase. Les membres dans les types et les étiquettes pour les enregistrements et les unions discriminées doivent également utiliser PascalCase.
+Classes, interfaces, structures, énumérations, délégués, les enregistrements et les unions discriminées doivent être nommées avec la casse Pascal. Membres au sein des types et des étiquettes pour les enregistrements et les unions discriminées doivent également utiliser la casse Pascal.
 
 ```fsharp
 type IMyInterface =
@@ -159,19 +159,19 @@ type SchoolPerson =
     | Administrator
 ```
 
-### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Utilisez PascalCase pour les constructions intrinsèques pour .NET
+### <a name="use-pascalcase-for-constructs-intrinsic-to-net"></a>Utilisez la casse Pascal pour les constructions intrinsèques pour .NET
 
-Espaces de noms, exceptions, événements et le projet /`.dll` noms doivent également utiliser PascalCase. N’est pas seulement cela rend la consommation à partir d’autres langages .NET semble plus naturel aux consommateurs, il est également cohérent avec les conventions d’affectation de noms .NET que vous êtes susceptible de rencontrer.
+Espaces de noms, exceptions, événements et projet /`.dll` noms doivent également utiliser la casse Pascal. Non seulement est-ce que la consommation à partir d’autres langages .NET sembler plus naturelle pour les consommateurs, il est également cohérente avec les conventions d’affectation de noms .NET que vous êtes susceptible de rencontrer.
 
 ### <a name="avoid-underscores-in-names"></a>Éviter les traits de soulignement dans les noms
 
-Historiquement, certaines bibliothèques F # ont utilisé des traits de soulignement dans les noms. Toutefois, cela est n’est plus largement accepté, car il est en conflit avec les conventions d’affectation de noms .NET. Ceci dit, certains programmeurs F # utilisent des traits de soulignement importante, en partie pour des raisons historiques, et la tolérance de panne et de respect est important. Toutefois, sachez que le style est souvent disliked par d’autres personnes ont la possibilité d’utiliser.
+Historiquement, certaines bibliothèques F # ont utilisé des traits de soulignement dans les noms. Toutefois, cela est n’est plus largement acceptée, en partie parce qu’il est en conflit avec les conventions d’affectation de noms .NET. Ceci dit, certains programmeurs F # utilisent des traits de soulignement fortement, en partie pour des raisons historiques, et la tolérance de panne et le respect est important. Toutefois, n’oubliez pas que le style n’est souvent pas satisfaisant par d’autres personnes qui ont la possibilité d’utiliser.
 
-Certaines exceptions inclut l’interopérabilité avec des composants natifs, où des traits de soulignement sont très courantes.
+Certaines exceptions inclut l’interopérabilité avec les composants natifs, où des traits de soulignement sont très courantes.
 
 ### <a name="use-standard-f-operators"></a>Utilisez les opérateurs standard F #
 
-Les opérateurs suivants sont définis dans la bibliothèque standard) (F # et doivent être utilisées au lieu de définir des équivalents. L’utilisation de ces opérateurs est recommandée car il a tendance à rendre le code plus lisible et idiomatique. Les développeurs avec un arrière-plan dans OCaml ou autre langage de programmation fonctionnelle peuvent être habitués à différents langages. La liste suivante résume les opérateurs F # recommandées.
+Les opérateurs suivants sont définis dans la bibliothèque standard F # et doivent être utilisés au lieu de définir des équivalents. L’utilisation de ces opérateurs est recommandée car elle a tendance à rendre le code plus lisible et idiomatique. Les développeurs avec un arrière-plan dans OCaml ou autre langage de programmation fonctionnel peut-être habitués à différents idiomes. La liste suivante récapitule les opérateurs F # recommandées.
 
 ```fsharp
 x |> f // Forward pipeline
@@ -191,20 +191,37 @@ x &&& y // Bitwise and, also for working with “flags” enumeration
 x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 ```
 
-### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Utilisez la syntaxe de préfixe des génériques (`Foo<T>`), plutôt que la syntaxe de suffixe (`T Foo`)
+### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>Utiliser la syntaxe du préfixe pour les génériques (`Foo<T>`) plutôt que de la syntaxe de suffixe (`T Foo`)
 
-F # hérite à la fois le style de ML suffixée des noms de types génériques (par exemple, `int list`), ainsi que le préfixe style .NET (par exemple, `list<int>`). Préférez le style de .NET, à l’exception des quatre types spécifiques :
+F # hérite à la fois le style de ML suffixe de nommage des types génériques (par exemple, `int list`), ainsi que le préfixe de style .NET (par exemple, `list<int>`). Préférer le style de .NET, à l’exception des quatre types spécifiques :
 
-1. Pour F # les listes, utilisez la forme suffixée : `int list` plutôt que `list<int>`.
+1. Pour les listes F #, utilisez la forme suffixée : `int list` plutôt que `list<int>`.
 2. Pour les Options F #, utilisez la forme suffixée : `int option` plutôt que `option<int>`.
 3. Pour les tableaux F #, utilisez le nom syntaxique `int[]` plutôt que `int array` ou `array<int>`.
 4. Pour les cellules de référence, utilisez `int ref` plutôt que `ref<int>` ou `Ref<int>`.
 
-Pour tous les autres types, utilisez le format de préfixe.
+Pour tous les autres types, utilisez la forme de préfixe.
 
-## <a name="formatting-discriminated-union-declarations"></a>Mise en forme discriminée déclarations d’union
+## <a name="formatting-tuples"></a>Mise en forme de tuples
 
-Mettre en retrait `|` dans la définition de type par 4 espaces :
+Une instanciation de tuple doit être entre parenthèses, et les virgules de délimitation dans doivent être suivies par un espace, par exemple : `(1, 2)`, `(x, y, z)`.
+
+Il est généralement admis pour omettre les parenthèses dans les critères spéciaux de tuples :
+
+```fsharp
+let (x, y) = z // Destructuring
+let x, y = z // OK
+
+// OK
+match x, y with
+| 1, _ -> 0
+| x, 1 -> 0
+| x, y -> 1
+```
+
+## <a name="formatting-discriminated-union-declarations"></a>Mise en forme discriminée des déclarations d’union
+
+Mettre en retrait `|` dans la définition de type par des 4 espaces :
 
 ```fsharp
 // OK
@@ -220,7 +237,9 @@ type Volume =
 | ImperialPint of float
 ```
 
-Instancié Unions discriminées réparties sur plusieurs lignes doit fournir des données qu’ils contiennent une nouvelle étendue avec mise en retrait :
+## <a name="formatting-discriminated-unions"></a>Mise en forme des unions discriminées
+
+Instancié Unions discriminées qui réparties sur plusieurs lignes doit fournir des données qu’il contient une nouvelle étendue avec la mise en retrait :
 
 ```fsharp
 let tree1 =
@@ -239,24 +258,49 @@ let tree1 =
     )
 ```
 
-## <a name="formatting-tuples"></a>Mise en forme des tuples
+## <a name="formatting-record-declarations"></a>Mise en forme de déclarations d’enregistrement
 
-Une instanciation de tuple doit être entre parenthèses et les virgules de délimitation dans doivent être suivis par un espace, par exemple : `(1, 2)`, `(x, y, z)`.
-
-Une exception couramment acceptée est d’omettre les parenthèses dans les critères spéciaux de tuples :
+Mettre en retrait `{` dans le type de définition par 4 espaces et démarrer la liste de champs sur la même ligne :
 
 ```fsharp
-let (x, y) = z // Destructuring
+// OK
+type PostalAddress =
+    { Address : string
+      City : string
+      Zip : string }
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
 
-match x, y with
-| 1, _ -> 0
-| x, 1 -> 0
-| x, y -> 1
+// Not OK
+type PostalAddress =
+  { Address : string
+    City : string
+    Zip : string }
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+// Unusual in F#
+type PostalAddress =
+    { 
+        Address : string
+        City : string
+        Zip : string
+    }
 ```
 
-## <a name="formatting-records"></a>Mise en forme des enregistrements
+Le fait de placer le jeton d’ouverture sur la même ligne et le jeton de fermeture sur une nouvelle ligne consiste également, mais n’oubliez pas que vous devez utiliser le [syntaxe détaillée](../language-reference/verbose-syntax.md) pour définir les membres (le `with` mot clé) :
 
-Enregistrements courts peuvent être écrites dans une seule ligne :
+```fsharp
+//  OK, but verbose syntax required
+type PostalAddress = { 
+    Address : string
+    City : string
+    Zip : string
+} with
+    member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+```
+
+## <a name="formatting-records"></a>Mise en forme d’enregistrements
+
+Enregistrements courts peuvent être écrite sur une seule ligne :
 
 ```fsharp
 let point = { X = 1.0; Y = 0.0 }
@@ -270,7 +314,7 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Placer le jeton d’ouverture sur la même ligne et le jeton de fermeture sur une nouvelle ligne est également correct :
+Le fait de placer le jeton d’ouverture sur la même ligne et le jeton de fermeture sur une nouvelle ligne est également correcte :
 
 ```fsharp
 let rainbow = {
@@ -288,11 +332,11 @@ let rainbow = {
 
 Les mêmes règles s’appliquent pour les éléments de liste et tableau.
 
-## <a name="formatting-lists-and-arrays"></a>Mise en forme de listes et des tableaux
+## <a name="formatting-lists-and-arrays"></a>Mise en forme des listes et des tableaux
 
-Écrire `x :: l` avec les espaces autour de le `::` (opérateur) (`::` est un opérateur infixe, par conséquent, entouré par des espaces) et `[1; 2; 3]` (`;` est un délimiteur, par conséquent, suivi d’un espace).
+Écrire `x :: l` avec des espaces autour de la `::` opérateur (`::` est un opérateur infixe, par conséquent, entouré d’espaces) et `[1; 2; 3]` (`;` est un délimiteur, par conséquent, suivi d’un espace).
 
-Utilisez toujours au moins un espace entre les deux opérateurs accolade de type distincts. Par exemple, laissez un espace entre un `[` et un `{`.
+Utilisez toujours au moins un espace entre les deux opérateurs distincts de type accolade. Par exemple, laissez un espace entre un `[` et un `{`.
 
 ```fsharp
 // OK
@@ -310,7 +354,7 @@ Utilisez toujours au moins un espace entre les deux opérateurs accolade de type
  { IngredientName = "Lemon"; Quantity = 1 }]
 ```
 
-Listes et aux tableaux réparties sur plusieurs lignes respecte une règle similaire comme enregistrements :
+Listes et des tableaux réparties sur plusieurs lignes suivent une règle similaire comme enregistrements :
 
 ```fsharp
 let pascalsTriangle = [|
@@ -328,29 +372,21 @@ let pascalsTriangle = [|
 
 ## <a name="formatting-if-expressions"></a>Mise en forme if expressions
 
-Mise en retrait des éléments conditionnels varie selon les tailles des expressions qui les composent. Si `cond`, `e1` et `e2` sont petites, il vous suffit de les écrire sur une seule ligne :
+Mise en retrait des instructions conditionnelles varie selon les tailles des expressions qui les composent. Si `cond`, `e1` et `e2` sont courtes, il vous suffit de les écrire sur une seule ligne :
 
 ```fsharp
 if cond then e1 else e2
 ```
 
-Si `e1` et `cond` sont petits, mais `e2` est importante :
+Si `cond`, `e1` ou `e2` sont plus de temps, mais pas plusieurs lignes :
 
 ```fsharp
-if cond then e1
-else
-    e2
-```
-
-Si `e1` et `cond` sont volumineux et `e2` est petite :
-
-```fsharp
-if cond then
-    e1
+if cond
+then e1
 else e2
 ```
 
-Si toutes les expressions sont volumineuses :
+Si une des expressions est multiligne :
 
 ```fsharp
 if cond then
@@ -359,7 +395,7 @@ else
     e2
 ```
 
-Plusieurs conditions avec `elif` et `else` sont mises en retrait à la même portée que la `if`:
+Plusieurs instructions conditionnelles avec `elif` et `else` sont mises en retrait dans la même étendue en tant que le `if`:
 
 ```fsharp
 if cond1 then e1
@@ -370,7 +406,7 @@ else e4
 
 ### <a name="pattern-matching-constructs"></a>Constructions de correspondance de modèle
 
-Utilisez un `|` pour chaque clause d’une correspondance avec aucune mise en retrait. Si l’expression est courte, vous pouvez envisager d’utiliser une seule ligne si chaque sous-expression est aussi simple.
+Utilisez un `|` pour chaque clause d’une correspondance avec aucune mise en retrait. Si l’expression est courte, vous pouvez envisager d’utiliser une seule ligne si chaque sous-expression est également simple.
 
 ```fsharp
 // OK
@@ -386,7 +422,7 @@ match l with
     | [] -> failwith "Couldn't find David"
 ```
 
-Si l’expression à droite de la flèche de mise en correspondance est trop grande, déplacez-le vers la ligne suivante, la mise en retrait d’une seule étape à partir de la `match` / `|`.
+Si l’expression à droite de la flèche de critères spéciaux est trop volumineuse, déplacez-le vers la ligne suivante, mis en retrait d’une seule étape à partir de la `match` / `|`.
 
 ```fsharp
 match lam with
@@ -398,7 +434,7 @@ match lam with
 
 ```
 
-Filtre de correspondance de fonctions anonymes, en commençant par `function`, doit généralement pas mettre en retrait trop loin. Par exemple, il est correct de mise en retrait d’une étendue comme suit :
+Filtre de correspondance de fonctions anonymes, en commençant par `function`, doit généralement pas mettre en retrait trop loin. Par exemple, il est bien de mise en retrait d’une étendue comme suit :
 
 ```fsharp
 lambdaList
@@ -408,7 +444,7 @@ lambdaList
     | Var v -> 1)
 ```
 
-Mise en correspondance dans les fonctions définies par `let` ou `let rec` doit être mis en retrait 4 espaces après le démarrage de `let`, même si `function` mot clé est utilisé :
+Critères spéciaux dans les fonctions définies par `let` ou `let rec` doit être mis en retrait 4 espaces après le démarrage de `let`, même si `function` mot clé est utilisé :
 
 ```fsharp
 let rec sizeLambda acc = function
@@ -419,9 +455,9 @@ let rec sizeLambda acc = function
 
 Nous vous déconseillons d’alignement des flèches.
 
-## <a name="formatting-trywith-expressions"></a>Essayez de mise en forme / avec des expressions
+## <a name="formatting-trywith-expressions"></a>Mise en forme try / with expressions
 
-Mise en correspondance sur le type d’exception doit être mis en retrait au même niveau que `with`.
+Critères spéciaux sur le type d’exception doit être mis en retrait au même niveau que `with`.
 
 ```fsharp
 try
@@ -436,11 +472,11 @@ with
     printfn "A second that was a multiple of 3"
 ```
 
-## <a name="formatting-function-parameter-application"></a>Application de paramètre de fonction de mise en forme
+## <a name="formatting-function-parameter-application"></a>Mise en forme d’application de paramètre de fonction
 
 En règle générale, la plupart des applications de paramètre de fonction sont effectuée sur la même ligne.
 
-Si vous souhaitez appliquer des paramètres à une fonction sur une nouvelle ligne, les mettre en retrait une étendue.
+Si vous souhaitez appliquer des paramètres à une fonction sur une nouvelle ligne, mettre en retrait les par une étendue.
 
 ```fsharp
 // OK
@@ -478,11 +514,11 @@ let printListWithOffset a list1 =
 
 Toutefois, si le corps d’une expression lambda est plusieurs lignes, envisagez factorisant dans une fonction distincte plutôt que d’avoir une construction multiligne appliquée en tant qu’un seul argument à une fonction.
 
-### <a name="formatting-infix-operators"></a>Opérateurs infix mise en forme
+### <a name="formatting-infix-operators"></a>Opérateurs infixes mise en forme
 
-Opérateurs distincts par des espaces. Exceptions évidentes à cette règle sont les `!` et `.` opérateurs.
+Opérateurs distincts par des espaces. Exceptions évident à cette règle sont les `!` et `.` opérateurs.
 
-Les expressions infix sont OK l’alignement sur la même colonne :
+Expressions de correspondance des infixes sont OK pour l’alignement sur la même colonne :
 
 ```fsharp
 acc +
@@ -494,9 +530,9 @@ let function1 arg1 arg2 arg3 arg4 =
     arg3 + arg4
 ```
 
-### <a name="formatting-pipeline-operators"></a>Opérateurs de pipeline de mise en forme
+### <a name="formatting-pipeline-operators"></a>Mise en forme des opérateurs de pipeline
 
-Pipeline `|>` opérateurs doivent figurer sous les ils opèrent sur des expressions.
+Pipeline `|>` opérateurs doivent figurer sous elles opèrent selon des expressions.
 
 ```fsharp
 // Preferred approach
@@ -553,9 +589,9 @@ let comparer =
               reversed.CompareTo (rev s2) }
 ```
 
-### <a name="formatting-whitespace-in-expressions"></a>Mise en forme des espaces blancs dans les expressions
+### <a name="formatting-white-space-in-expressions"></a>Mise en forme des espaces blancs dans les expressions
 
-Évitez l’espace superflu dans les expressions F #.
+Évitez les espaces superflus dans les expressions F #.
 
 ```fsharp
 // OK

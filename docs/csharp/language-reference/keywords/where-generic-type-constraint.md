@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 94db10c81af55030dfcf6e210a86658c84868e42
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961079"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931874"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (contrainte de type générique) (Référence C#)
 
@@ -64,8 +64,8 @@ Pour plus d’informations sur la syntaxe et l’utilisation de contraintes, con
 
 ## <a name="see-also"></a>Voir aussi
 
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [new, contrainte](../../../csharp/language-reference/keywords/new-constraint.md)  
- [Contraintes sur les paramètres de type](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [new, contrainte](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [Contraintes sur les paramètres de type](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  

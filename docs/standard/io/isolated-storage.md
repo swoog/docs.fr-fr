@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ab12ac28728535c3bc984d6b37d82f5bf371ba2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88c70e6a35e0a731cd8937b188dc6ee8e9bce105
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579468"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998852"
 ---
 # <a name="isolated-storage"></a>Stockage isolé
 <a name="top"></a> Pour les applications de [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], le stockage isolé est un mécanisme de stockage de données qui offre une isolation et une sécurité en définissant des méthodes standardisées pour associer du code à des données enregistrées. La standardisation offre également d'autres avantages. Les administrateurs peuvent utiliser des outils conçus pour manipuler un stockage isolé afin de configurer l'espace de stockage du fichier, de définir des stratégies de sécurité et de supprimer des données inutilisées. Grâce au stockage isolé, votre code ne nécessite plus de chemins d'accès uniques pour spécifier des emplacements sécurisés dans le système de fichiers. En outre, les données sont protégées des autres applications qui possèdent uniquement un accès au stockage isolé. Les informations codées en dur concernant l'emplacement de la zone de stockage d'une application ne sont pas nécessaires.  
   
 > [!IMPORTANT]
->  Le stockage isolé n'est pas disponible pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . À la place, utilisez les classes de données d'application des espaces de noms `Windows.Storage` inclus dans l'API [!INCLUDE[wrt](../../../includes/wrt-md.md)] pour stocker des données locales et des fichiers. Pour plus d’informations, consultez [Données d’applications](/previous-versions/windows/apps/hh464917(v=win.10)) dans le Centre de développement Windows.  
+>  Le stockage isolé n'est pas disponible pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . À la place, utilisez les classes de données d'application des espaces de noms `Windows.Storage` inclus dans l'API [!INCLUDE[wrt](../../../includes/wrt-md.md)] pour stocker des données locales et des fichiers. Pour plus d’informations, consultez [Données d’applications](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) dans le Centre de développement Windows.  
   
  Cette rubrique contient les sections suivantes :  
   

@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a5fccf5ea86469f14963fad8e7d2af0f7c68d2df
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107031"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933603"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formats de chemin de fichier sur les systèmes Windows
 
@@ -181,7 +181,7 @@ Outre les séries de séparateurs et de segments relatifs supprimés précédemm
 
 ## <a name="skipping-normalization"></a>Ignorer la normalisation
 
-En règle générale, tout chemin passé à une API Windows est (effectivement) passé à la [fonction GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) et normalisé. Il existe toutefois une exception importante : un chemin de périphérique qui commence par un point d’interrogation et non un point. À moins qu’il ne commence exactement par `\\?\` (notez l’utilisation de la barre oblique inverse canonique), le chemin est normalisé.
+En règle générale, tout chemin passé à une API Windows est (effectivement) passé à la [fonction GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) et normalisé. Il existe toutefois une exception importante : un chemin de périphérique qui commence par un point d’interrogation et non un point. À moins qu’il ne commence exactement par `\\?\` (notez l’utilisation de la barre oblique inverse canonique), le chemin est normalisé.
 
 Pourquoi ignorer la normalisation ? Voici les trois raisons principales :
 
@@ -196,9 +196,9 @@ Pourquoi ignorer la normalisation ? Voici les trois raisons principales :
 
 La seule différence entre les deux syntaxes de chemin de périphérique tient au fait que vous pouvez ignorer la normalisation et les vérifications de la longueur maximale des chemins ; sinon, elles sont identiques. Soyez prudent si vous choisissez d’ignorer la normalisation, car vous pouvez facilement créer des chemins difficiles à gérer pour les applications « normales ».
 
-Les chemins qui commencent par `\\?\` sont toujours normalisés si vous les passez explicitement à la [fonction GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx).
+Les chemins qui commencent par `\\?\` sont toujours normalisés si vous les passez explicitement à la [fonction GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Notez que vous pouvez passer les chemins de plus de `MAX_PATH` caractères à la fonction [GetFullPathName](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) sans `\\?\`. Elle prend en charge les chemins de longueur arbitraire jusqu’à la taille de chaîne maximale gérée par Windows.
+Notez que vous pouvez passer les chemins de plus de `MAX_PATH` caractères à la fonction [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sans `\\?\`. Elle prend en charge les chemins de longueur arbitraire jusqu’à la taille de chaîne maximale gérée par Windows.
 
 ## <a name="case-and-the-windows-file-system"></a>Casse et système de fichiers Windows
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508772"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999479"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Membres obsolètes dans le .NET Framework
 Les tableaux de cet article listent les membres de type obsolètes dans le .NET Framework 4.5 et versions ultérieures, organisés par assembly. Utilisez les liens suivants pour consulter la liste des membres obsolètes et des alternatives recommandées dans chaque assembly. Cette rubrique ne répertorie pas les membres des types obsolètes. Pour obtenir la liste des types obsolètes, consultez [Types obsolètes](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -266,7 +266,7 @@ Les tableaux de cet article listent les membres de type obsolètes dans le .NET 
 |<xref:System.Windows.Media.ContainerVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.ContainerVisual.BitmapEffect%2A>|Les effets bitmap sont dépréciés et ne fonctionnent plus. Utilisez plutôt <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>, le cas échéant.|  
 |<xref:System.Windows.Media.ContainerVisual?displayProperty=nameWithType>|<xref:System.Windows.Media.ContainerVisual.BitmapEffectInput%2A>|Les effets bitmap sont dépréciés et ne fonctionnent plus. Utilisez plutôt <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>, le cas échéant.|  
 |<xref:System.Windows.Media.DrawingContext?displayProperty=nameWithType>|<xref:System.Windows.Media.DrawingContext.PushEffect%2A>|Les effets bitmap sont dépréciés et ne fonctionnent plus. Utilisez plutôt <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>, le cas échéant.|  
-|<xref:System.Windows.Media.RenderCapability?displayProperty=nameWithType>|<xref:System.Windows.Media.RenderCapability.IsShaderEffectSoftwareRenderingSupported%2A>|Cette propriété est dépréciée. Utilisez la méthode statique <xref:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupportedInSoftware%2A?displayProperty=nameWithType> à la place.|  
+|<xref:System.Windows.Media.RenderCapability?displayProperty=nameWithType>|<xref:System.Windows.Media.RenderCapability.IsShaderEffectSoftwareRenderingSupported%2A>|Cette propriété est déconseillée. Utilisez la méthode statique <xref:System.Windows.Media.RenderCapability.IsPixelShaderVersionSupportedInSoftware%2A?displayProperty=nameWithType> à la place.|  
 |<xref:System.Windows.Media.Visual?displayProperty=nameWithType>|<xref:System.Windows.Media.Visual.VisualBitmapEffect%2A>|Les effets bitmap sont dépréciés et ne fonctionnent plus. Utilisez plutôt <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>, le cas échéant.|  
 |<xref:System.Windows.Media.Visual?displayProperty=nameWithType>|<xref:System.Windows.Media.Visual.VisualBitmapEffectInput%2A>|Les effets bitmap sont dépréciés et ne fonctionnent plus. Utilisez plutôt <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>, le cas échéant.|  
 |<xref:System.Windows.Media.Effects.BevelBitmapEffect?displayProperty=nameWithType>|<xref:System.Windows.Media.Effects.BitmapEffect.CreateUnmanagedEffect%2A>|Les effets bitmap sont dépréciés et ne fonctionnent plus. Utilisez plutôt <xref:System.Windows.Media.Effects.Effect?displayProperty=nameWithType>, le cas échéant.|  
@@ -593,7 +593,7 @@ Les tableaux de cet article listent les membres de type obsolètes dans le .NET 
   
 |Type|Membre|Message|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Cette propriété est obsolète. Pour activer Http <xref:System.Net.CookieContainer>, utilisez la propriété <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies` à la place.|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Cette propriété est obsolète. Pour activer Http <xref:System.Net.CookieContainer>, utilisez la propriété <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType> à la place.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> La fonctionnalité de canal pair est obsolète et sera supprimée dans le futur.|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> L'utilisation de ce type génère une erreur du compilateur.<br /><br /> Cette API prend en charge l'infrastructure .NET Framework et n'est pas destinée à être directement utilisée à partir de votre code.|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> L'utilisation de ce type génère une erreur du compilateur.<br /><br /> Cette API prend en charge l'infrastructure .NET Framework et n'est pas destinée à être directement utilisée à partir de votre code.|  
@@ -778,7 +778,7 @@ Les tableaux de cet article listent les membres de type obsolètes dans le .NET 
   
 |Type|Membre|Message|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Utilisé uniquement pour des raisons de compatibilité descendante avec la version 3.5.|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|D'abord déconseillé dans .NET Framework 4.5.<br /><br /> Utilisé uniquement pour des raisons de compatibilité descendante avec la version 3.5.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>Assembly : Microsoft.VisualBasic.dll  

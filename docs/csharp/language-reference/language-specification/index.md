@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 5ed035d5e1e524de9f86254d03e3276966293bf6
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472787"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931274"
 ---
 # <a name="c-60-draft-language-specification"></a>Projet de spécification du langage C# 6.0
 
@@ -26,8 +26,9 @@ La version 6.0 de la spécification n’a pas été approuvée comme standard. 
 Les problèmes sur le projet de spécification doivent être créés dans le dépôt [dotnet/csharplang](https://github.com/dotnet/csharplang/issues). Si cela vous intéresse de corriger les erreurs que vous trouvez, vous pouvez envoyer une [demande de tirage (pull request)](https://github.com/dotnet/csharplang/pulls) à ce même dépôt.
 
 ## <a name="see-also"></a>Voir aussi
- [Référence C#](../index.md)  
- [Guide de programmation C#](../../programming-guide/index.md)
+
+- [Référence C#](../index.md)  
+- [Guide de programmation C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
 [Next](../../../../_csharplang/spec/introduction.md)

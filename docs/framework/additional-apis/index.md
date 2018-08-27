@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752427"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933528"
 ---
 # <a name="additional-class-libraries-and-apis"></a>API et bibliothèques de classes supplémentaires
 
-Le .NET Framework est en constante évolution et pour améliorer le développement multiplateforme ou proposer des nouveautés à nos clients à un stade précoce, nous diffusons les nouvelles fonctionnalités hors bande (OOB). Cette rubrique répertorie les projets OOB pour lesquels nous fournissons une documentation.  
+Le .NET Framework est en constante évolution. Pour améliorer le développement multiplateforme et introduire de nouvelles fonctionnalités très tôt, les nouvelles fonctionnalités sont publiées hors bande (OOB). Cette rubrique répertorie les projets OOB pour lesquels nous fournissons une documentation.  
   
-En outre, certaines bibliothèques ciblent des plateformes ou des implémentations précises du .NET Framework. Par exemple, la <xref:System.Text.CodePagesEncodingProvider> classe rend les codages de pages de code disponibles pour les applications UWP développées à l’aide de .NET Framework. Cette rubrique liste également ces bibliothèques.  
+En outre, certaines bibliothèques ciblent des plateformes ou des implémentations précises du .NET Framework. Par exemple, le <xref:System.Text.CodePagesEncodingProvider> classe rend les codages de page de code disponible pour les applications UWP développées à l’aide de .NET Framework. Cette rubrique liste également ces bibliothèques.  
   
 ## <a name="oob-projects"></a>Projets OOB
   
@@ -35,7 +35,7 @@ En outre, certaines bibliothèques ciblent des plateformes ou des implémentatio
   
 | Projet | Description |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Étend la <xref:System.Text.EncodingProvider> classe pour rendre les codages de pages de code disponibles pour les applications qui ciblent la plateforme Windows universelle. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Étend la <xref:System.Text.EncodingProvider> classe pour rendre les codages de page de code disponibles pour les applications qui ciblent la plateforme Windows universelle. |  
   
 ## <a name="private-apis"></a>API privées  
 
@@ -49,7 +49,7 @@ Ces API prennent en charge l'infrastructure du produit et ne sont ni utilisables
 | [System.Net.ConnectionGroup.m\_ConnectionList champ](../../../docs/framework/additional-apis/m_connectionlist.md) |
 | [Classe de System.Net.CoreResponseData](../../../docs/framework/additional-apis/coreresponsedata.md) |
 | [System.Net.CoreResponseData.m\_ResponseHeaders champ](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode champ](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
+| [System.Net.CoreResponseData.m\_champ StatusCode](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
 | [System.Net.HttpWebRequest. \_AutoRedirects champ](../../../docs/framework/additional-apis/_autoredirects.md) |
 | [System.Net.HttpWebRequest. \_CoreResponse champ](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
 | [System.Net.HttpWebRequest. \_HttpResponse champ](../../../docs/framework/additional-apis/_httpresponse.md) |

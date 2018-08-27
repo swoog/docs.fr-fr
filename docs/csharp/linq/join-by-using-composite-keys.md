@@ -3,12 +3,12 @@ title: Effectuer des opérations de jointure à l'aide de clés composites (LINQ
 description: Découvrez comment effectuer des opérations de jointure à l'aide de clés composites dans LINQ.
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: dd3f5e949b5c1bc6abc592dc135e73a91be801e9
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404026"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932332"
 ---
 # <a name="join-by-using-composite-keys"></a>Effectuer des jointures à l’aide de clés composites
 
@@ -38,6 +38,6 @@ Vous pouvez aussi utiliser des clés composites dans une clause `group`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[LINQ (Language Integrated Query)](index.md)  
-[join, clause](../language-reference/keywords/join-clause.md)  
-[group, clause](../language-reference/keywords/group-clause.md)  
+- [LINQ (Language Integrated Query)](index.md)  
+- [join, clause](../language-reference/keywords/join-clause.md)  
+- [group, clause](../language-reference/keywords/group-clause.md)  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], modifiers
 - modifiers [C#]
 ms.assetid: c96691dd-b357-49ec-b5ae-03ca214fadfb
-ms.openlocfilehash: 241cbc767a3d094d664cf77f488e4154812d7516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5000f94a954994769eda2ac09404ba6a71c4639b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272680"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930362"
 ---
 # <a name="modifiers-c-reference"></a>Modificateurs (référence C#)
 Les modificateurs permettent de modifier les déclarations des types et membres de types. Cette section présente les modificateurs C#.  
@@ -33,7 +33,8 @@ Les modificateurs permettent de modifier les déclarations des types et membres 
 |[virtual](../../../csharp/language-reference/keywords/virtual.md)|Déclare une méthode ou un accesseur dont l’implémentation peut être modifiée par un membre de substitution dans une classe dérivée.|  
 |[volatile](../../../csharp/language-reference/keywords/volatile.md)|Indique qu'un champ peut être modifié dans le programme par quelque chose, tel que le système d'exploitation, le matériel ou un thread s'exécutant simultanément.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)

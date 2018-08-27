@@ -18,37 +18,37 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590710"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930150"
 ---
-# <a name="short-data-type-visual-basic"></a>Type de données short (Visual Basic)
+# <a name="short-data-type-visual-basic"></a>Type de données de type short (Visual Basic)
 Contient des entiers 16 bits (2 octets) de valeurs comprises entre-32 768 à 32 767 signés.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le `Short` type de données pour contenir des valeurs entières qui ne nécessitent pas la largeur totale des données de `Integer`. Dans certains cas, le common language runtime peut pack votre `Short` variables étroitement ensemble et d’enregistrer la consommation de mémoire.  
+ Utilisez le `Short` type de données pour contenir des valeurs entières qui ne nécessitent pas la largeur totale des données de `Integer`. Dans certains cas, le common language runtime peut regrouper votre `Short` variables étroitement ensemble et d’enregistrer la consommation de mémoire.  
   
  La valeur par défaut de `Short` est 0.  
   
-## <a name="literal-assignments"></a>Attributions de littéral
+## <a name="literal-assignments"></a>Affectations de littéraux
 
-Vous pouvez déclarer et initialiser une `Short` variable en lui assignant un décimal littéral, un littéral hexadécimal, un littéral octal, ou (à partir de Visual Basic 2017) un littéral binaire. Si le littéral entier est en dehors de la plage de `Short` (autrement dit, s’il est inférieur à <xref:System.Int16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Int16.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit.
+Vous pouvez déclarer et initialiser une `Short` variable en lui assignant un littéral décimal, un littéral hexadécimal, un littéral octal, ou (à partir de Visual Basic 2017) un littéral binaire. Si le littéral entier est en dehors de la plage de `Short` (autrement dit, s’il est inférieur à <xref:System.Int16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.Int16.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit.
 
-Dans l’exemple suivant, les entiers égal à 1,034 sont représentées sous forme de nombre décimal, hexadécimal, et les littéraux binaires sont converties implicitement à partir [entier](integer-data-type.md) à `Short` valeurs.
+Dans l’exemple suivant, les entiers égaux à 1 034 représentés comme séparateur décimal, hexadécimal, et les littéraux binaires sont implicitement convertis à partir de [entier](integer-data-type.md) à `Short` valeurs.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
 > Vous utilisez le préfixe `&h` ou `&H` pour désigner un littéral hexadécimal, le préfixe `&b` ou `&B` pour désigner un littéral binaire et le préfixe `&o` ou `&O` pour désigner un littéral octal. Les littéraux décimaux n’ont pas de préfixe.
 
-À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur de chiffres pour améliorer la lisibilité, comme l’exemple suivant montre le.
+À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur numérique pour améliorer la lisibilité, comme dans l’exemple suivant montre.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Par exemple :
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octaux. Exemple :
 
 ```vb
 Dim number As Short = &H_3264
@@ -68,12 +68,12 @@ Dim number = &H_3264S
   
 -   **Caractères de type.** L'ajout du caractère de type littéral `S` à un littéral force ce dernier en type de données `Short`. `Short` n’a aucun caractère de type d’identificateur.  
   
--   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Int16?displayProperty=nameWithType>.  
+-   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Int16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi
 
  <xref:System.Int16?displayProperty=nameWithType>  
- [Types de données](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
  [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Integer (type de données)](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
