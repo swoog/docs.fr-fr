@@ -5,32 +5,32 @@ helpviewer_keywords:
 - elementary data types [Visual Basic]
 - data types [Visual Basic], elementary
 ms.assetid: dfad6fe9-2da6-49a4-b0b1-2d7ae0283de5
-ms.openlocfilehash: 57caaf33d3e67bc6a2a0caed9733bc42ffdb54be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db989bbfcb8aa00278eb20bd269872c9447616f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646376"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998626"
 ---
-# <a name="elementary-data-types-visual-basic"></a><span data-ttu-id="6300f-102">Types de données élémentaires (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6300f-102">Elementary Data Types (Visual Basic)</span></span>
-<span data-ttu-id="6300f-103">Visual Basic fournit un jeu de types de données prédéfinis, vous pouvez utiliser pour la plupart de vos éléments de programmation.</span><span class="sxs-lookup"><span data-stu-id="6300f-103">Visual Basic supplies a set of predefined data types, which you can use for many of your programming elements.</span></span> <span data-ttu-id="6300f-104">Cette section décrit ces types et comment les utiliser.</span><span class="sxs-lookup"><span data-stu-id="6300f-104">This section describes these types and how to use them.</span></span>  
+# <a name="elementary-data-types-visual-basic"></a><span data-ttu-id="09666-102">Types de données élémentaires (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="09666-102">Elementary Data Types (Visual Basic)</span></span>
+<span data-ttu-id="09666-103">Visual Basic fournit un ensemble de types de données prédéfinis, vous pouvez utiliser pour la plupart des éléments de programmation.</span><span class="sxs-lookup"><span data-stu-id="09666-103">Visual Basic supplies a set of predefined data types, which you can use for many of your programming elements.</span></span> <span data-ttu-id="09666-104">Cette section décrit ces types et comment les utiliser.</span><span class="sxs-lookup"><span data-stu-id="09666-104">This section describes these types and how to use them.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6300f-105">Chaque type de données élémentaire en Visual Basic est prise en charge par une structure ou une classe qui se trouve dans le <xref:System> espace de noms.</span><span class="sxs-lookup"><span data-stu-id="6300f-105">Every elementary data type in Visual Basic is supported by a structure or a class that is in the <xref:System> namespace.</span></span> <span data-ttu-id="6300f-106">Le compilateur utilise chaque mot clé type de données en tant qu’alias pour la structure sous-jacente ou de la classe.</span><span class="sxs-lookup"><span data-stu-id="6300f-106">The compiler uses each data type keyword as an alias for the underlying structure or class.</span></span> <span data-ttu-id="6300f-107">Par exemple, déclarer une variable en utilisant le mot réservé `Byte` est identique à la déclarer en utilisant le nom de structure qualifié <xref:System.Byte?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="6300f-107">For example, declaring a variable by using the reserved word `Byte` is the same as declaring it by using the fully qualified structure name <xref:System.Byte?displayProperty=nameWithType>.</span></span>  
+>  <span data-ttu-id="09666-105">Chaque type de données élémentaire en Visual Basic est prise en charge par une structure ou une classe qui se trouve dans le <xref:System> espace de noms.</span><span class="sxs-lookup"><span data-stu-id="09666-105">Every elementary data type in Visual Basic is supported by a structure or a class that is in the <xref:System> namespace.</span></span> <span data-ttu-id="09666-106">Le compilateur utilise chaque mot de clé de type de données en tant qu’alias pour la structure sous-jacente ou de la classe.</span><span class="sxs-lookup"><span data-stu-id="09666-106">The compiler uses each data type keyword as an alias for the underlying structure or class.</span></span> <span data-ttu-id="09666-107">Par exemple, déclarer une variable en utilisant le mot réservé `Byte` est identique à la déclaration d’en utilisant le nom qualifié complet de structure <xref:System.Byte?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="09666-107">For example, declaring a variable by using the reserved word `Byte` is the same as declaring it by using the fully qualified structure name <xref:System.Byte?displayProperty=nameWithType>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6300f-108">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6300f-108">In This Section</span></span>  
- [<span data-ttu-id="6300f-109">Types de données numériques</span><span class="sxs-lookup"><span data-stu-id="6300f-109">Numeric Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
- <span data-ttu-id="6300f-110">Décrit les types numériques intégraux et non intégral.</span><span class="sxs-lookup"><span data-stu-id="6300f-110">Describes the integral and non-integral numeric types.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="09666-108">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="09666-108">In This Section</span></span>  
+ [<span data-ttu-id="09666-109">Types de données numériques</span><span class="sxs-lookup"><span data-stu-id="09666-109">Numeric Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
+ <span data-ttu-id="09666-110">Décrit les types numériques intégraux et non intégraux.</span><span class="sxs-lookup"><span data-stu-id="09666-110">Describes the integral and non-integral numeric types.</span></span>  
   
- [<span data-ttu-id="6300f-111">Types de données caractère</span><span class="sxs-lookup"><span data-stu-id="6300f-111">Character Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- <span data-ttu-id="6300f-112">Décrit la `Char` et `String` types.</span><span class="sxs-lookup"><span data-stu-id="6300f-112">Describes the `Char` and `String` types.</span></span>  
+ [<span data-ttu-id="09666-111">Types de données caractère</span><span class="sxs-lookup"><span data-stu-id="09666-111">Character Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
+ <span data-ttu-id="09666-112">Décrit le `Char` et `String` types.</span><span class="sxs-lookup"><span data-stu-id="09666-112">Describes the `Char` and `String` types.</span></span>  
   
- [<span data-ttu-id="6300f-113">Types de données divers</span><span class="sxs-lookup"><span data-stu-id="6300f-113">Miscellaneous Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- <span data-ttu-id="6300f-114">Décrit la `Boolean`, `Date`, et `Object` types.</span><span class="sxs-lookup"><span data-stu-id="6300f-114">Describes the `Boolean`, `Date`, and `Object` types.</span></span>  
+ [<span data-ttu-id="09666-113">Types de données divers</span><span class="sxs-lookup"><span data-stu-id="09666-113">Miscellaneous Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
+ <span data-ttu-id="09666-114">Décrit le `Boolean`, `Date`, et `Object` types.</span><span class="sxs-lookup"><span data-stu-id="09666-114">Describes the `Boolean`, `Date`, and `Object` types.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6300f-115">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="6300f-115">Related Sections</span></span>  
- [<span data-ttu-id="6300f-116">Types de données</span><span class="sxs-lookup"><span data-stu-id="6300f-116">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- <span data-ttu-id="6300f-117">Présente les types de données Visual Basic et décrit comment les utiliser.</span><span class="sxs-lookup"><span data-stu-id="6300f-117">Introduces the Visual Basic data types and describes how to use them.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="09666-115">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="09666-115">Related Sections</span></span>  
+ [<span data-ttu-id="09666-116">Types de données</span><span class="sxs-lookup"><span data-stu-id="09666-116">Data Types</span></span>](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+ <span data-ttu-id="09666-117">Introduit les types de données Visual Basic et décrit comment les utiliser.</span><span class="sxs-lookup"><span data-stu-id="09666-117">Introduces the Visual Basic data types and describes how to use them.</span></span>  
   
- [<span data-ttu-id="6300f-118">Types de données</span><span class="sxs-lookup"><span data-stu-id="6300f-118">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- <span data-ttu-id="6300f-119">Fournit une vue d’ensemble des types de données élémentaires fournis par Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="6300f-119">Provides an overview of the elementary data types supplied by Visual Basic.</span></span>
+ [<span data-ttu-id="09666-118">Types de données</span><span class="sxs-lookup"><span data-stu-id="09666-118">Data Types</span></span>](../../../../visual-basic/language-reference/data-types/index.md)  
+ <span data-ttu-id="09666-119">Fournit une vue d’ensemble des types de données élémentaires fournis par Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="09666-119">Provides an overview of the elementary data types supplied by Visual Basic.</span></span>
