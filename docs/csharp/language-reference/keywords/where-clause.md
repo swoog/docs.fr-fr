@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: bc040e17f5c612b9fc43a9ef24fb6f15f0942b8e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 8607c79a8b1e9a9fd999e4f5b77ecfac786161b3
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243992"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003149"
 ---
 # <a name="where-clause-c-reference"></a>where, clause (Référence C#)
 La clause `where` est utilisée dans une expression de requête pour spécifier les éléments de la source de données qui seront retournés dans l’expression de requête. Elle applique une condition booléenne (un *prédicat*) à chaque élément source (référencé par la variable de portée) et retourne ceux pour lesquels la condition spécifiée est remplie. Une expression de requête unique peut contenir plusieurs clauses `where` et une clause unique peut contenir plusieurs sous-expressions de prédicat.  
@@ -39,10 +39,11 @@ La clause `where` est utilisée dans une expression de requête pour spécifier 
   
  Au moment de la compilation, le mot clé `where` est converti en appel à la méthode d’opérateur de requête standard <xref:System.Linq.Enumerable.Where%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Mots clés de requête (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from, clause](../../../csharp/language-reference/keywords/from-clause.md)  
- [select, clause](../../../csharp/language-reference/keywords/select-clause.md)  
- [Filtrage des données](../../programming-guide/concepts/linq/filtering-data.md)  
- [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Bien démarrer avec LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Mots clés de requête (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from, clause](../../../csharp/language-reference/keywords/from-clause.md)  
+- [select, clause](../../../csharp/language-reference/keywords/select-clause.md)  
+- [Filtrage des données](../../programming-guide/concepts/linq/filtering-data.md)  
+- [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Bien démarrer avec LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
