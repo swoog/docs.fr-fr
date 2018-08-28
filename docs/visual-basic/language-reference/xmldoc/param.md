@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: c992c96303eb1441eaf667693b7aefb5361b196c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cb3de06d574f8b9abb3e3e11641a6ada750b56a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602919"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935756"
 ---
 # <a name="ltparamgt-visual-basic"></a>&lt;Param&gt; (Visual Basic)
 Définit un nom de paramètre et une description.  
@@ -29,9 +29,9 @@ Définit un nom de paramètre et une description.
  Description du paramètre.  
   
 ## <a name="remarks"></a>Notes  
- Le `<param>` balise doit être utilisée dans le commentaire pour une déclaration de méthode pour décrire l’un des paramètres de la méthode.  
+ Le `<param>` balise doit être utilisée dans le commentaire pour une déclaration de méthode pour décrire un des paramètres pour la méthode.  
   
- Le texte de la `<param>` balise apparaît dans les emplacements suivants :  
+ Le texte pour le `<param>` balise apparaît dans les emplacements suivants :  
   
 -   Informations sur les paramètres d’IntelliSense. Pour plus d’informations, consultez [Utilisation d’IntelliSense](/visualstudio/ide/using-intellisense).  
   
@@ -45,4 +45,4 @@ Définit un nom de paramètre et une description.
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)
