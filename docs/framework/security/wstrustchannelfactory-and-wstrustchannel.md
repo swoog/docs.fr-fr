@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3fabd7e3cad76e17061751d0fe0bb4ae06bf6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410453"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998464"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory et WSTrustChannel
 Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous savez probablement que les clients WCF prennent déjà en charge la fédération. En configurant un client WCF avec une liaison <xref:System.ServiceModel.WSFederationHttpBinding> ou une liaison personnalisée similaire, vous pouvez utiliser l’authentification fédérée auprès d’un service.  
@@ -34,10 +34,10 @@ Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous sav
 > [!TIP]
 >  Quelle est la différence entre ActAs et OnBehalfOf ?  
 >   
->  Du point de vue du protocole WS-Trust :  
+>  Du point de vue de protocole WS-Trust :  
 >   
->  1.  Un élément RST ActAs indique que le demandeur souhaite obtenir un jeton qui contient les revendications sur deux entités distinctes : le demandeur, et une entité externe représentée par le jeton situé dans l’élément ActAs.  
-> 2.  Un élément RST OnBehalfOf indique que le demandeur souhaite obtenir un jeton qui contient les revendications sur une seule entité : l’entité externe représentée par le jeton situé dans l’élément OnBehalfOf.  
+> 1. Un élément RST ActAs indique que le demandeur souhaite obtenir un jeton qui contient les revendications sur deux entités distinctes : le demandeur, et une entité externe représentée par le jeton situé dans l’élément ActAs.  
+> 2. Un élément RST OnBehalfOf indique que le demandeur souhaite obtenir un jeton qui contient les revendications sur une seule entité : l’entité externe représentée par le jeton situé dans l’élément OnBehalfOf.  
 >   
 >  La fonctionnalité ActAs est généralement utilisée dans les scénarios qui nécessitent une délégation composite, c’est-à-dire où le destinataire final du jeton émis peut inspecter la chaîne de délégation entière et voir non seulement le client, mais tous les intermédiaires. Ce destinataire peut ainsi effectuer un contrôle d’accès, l’audit et d’autres activités associées en fonction de la chaîne de délégation d’identité entière. La fonctionnalité ActAs est couramment utilisée dans les systèmes multiniveaux pour authentifier et passer des informations sur les identités entre les niveaux sans devoir passer ces informations à la couche logique application/métier.  
 >   

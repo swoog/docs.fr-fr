@@ -12,14 +12,14 @@ ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cb5d3b4c50a9c22880bdcc8406835cf51481e3cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654367"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003123"
 ---
 # <a name="-reference-visual-basic"></a>-référence (Visual Basic)
-Indique au compilateur rendre les informations de type dans les assemblys spécifiés disponibles pour le projet en cours de compilation.  
+Indique au compilateur de rendre les informations de type dans les assemblys spécifiés disponibles pour le projet en cours de compilation.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +44,16 @@ Indique au compilateur rendre les informations de type dans les assemblys spéci
   
 -   Un champ, une propriété, un événement ou une méthode qui a un type de retour ou un type de paramètre de l’Assembly B est appelé.  
   
- Utilisez [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) pour spécifier le répertoire dans lequel sont trouve une ou plusieurs références d’assembly.  
+ Utilisez [- libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) pour spécifier le répertoire dans lequel sont trouvent une ou plusieurs de vos références d’assembly.  
   
- Pour le compilateur de reconnaître un type dans un assembly (pas un module), il doit être forcé à résoudre le type. Un exemple de comment vous pouvez faire cela est pour définir une instance du type. Autres méthodes sont disponibles pour résoudre les noms de type dans un assembly pour le compilateur. Par exemple, si vous héritez d’un type dans un assembly, le nom de type puis devienne connu du compilateur.  
+ Pour le compilateur reconnaisse un type dans un assembly (pas un module), il doit être forcé à résoudre le type. Un exemple de comment vous pouvez faire cela consiste à définir une instance du type. Autres méthodes sont disponibles pour résoudre les noms de type dans un assembly pour le compilateur. Par exemple, si vous héritez d’un type dans un assembly, le nom de type puis devienne connu du compilateur.  
   
  Le fichier réponse Vbc.rsp, qui référence couramment utilisés [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] assemblys, est utilisé par défaut. Utilisez `-noconfig` si vous ne souhaitez pas que le compilateur utilise Vbc.rsp.  
   
  La forme abrégée de `-reference` est `/r`.  
   
 ## <a name="example"></a>Exemple  
- La commande suivante compile le fichier source `Input.vb` et référencer des assemblys à partir de `Metad1.dll` et `Metad2.dll` pour produire `Out.exe`.  
+ La commande suivante compile le fichier source `Input.vb` et référence des assemblys à partir de `Metad1.dll` et `Metad2.dll` pour produire `Out.exe`.  
   
 ```console
 vbc -reference:metad1.dll,metad2.dll -out:out.exe input.vb  

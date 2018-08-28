@@ -14,25 +14,25 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643024"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999907"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Comment : appeler une fonction Windows qui possède des types non signés (Visual Basic)
 Si vous consommez une classe, un module ou une structure qui possède des membres de types d’entiers non signés, vous pouvez accéder à ces membres avec Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Pour appeler une fonction Windows qui prend un type non signé  
   
-1.  Utilisez un [instruction Declare](../../../visual-basic/language-reference/statements/declare-statement.md) pour indiquer à Visual Basic de bibliothèque qui conserve la fonction, ce qui est son nom dans cette bibliothèque, quelle est sa séquence d’appel et comment convertir des chaînes lors de son appel.  
+1.  Utilisez un [instruction Declare](../../../visual-basic/language-reference/statements/declare-statement.md) pour indiquer à Visual Basic quelle bibliothèque contient la fonction, ce qui est son nom dans cette bibliothèque, sa séquence d’appel What ' s et comment convertir des chaînes lors de son appel.  
   
 2.  Dans le `Declare` instruction, utilisez `UInteger`, `ULong`, `UShort`, ou `Byte` selon le cas pour chaque paramètre avec un type non signé.  
   
-3.  Consultez la documentation de la fonction Windows que vous appelez pour rechercher les noms et valeurs de constantes. Bon nombre d'entre elles sont définies dans le fichier WinUser.h.  
+3.  Consultez la documentation de la fonction Windows que vous appelez pour rechercher les noms et valeurs des constantes, qu'elle utilise. Nombre d'entre elles sont définies dans le fichier WinUser.h.  
   
-4.  Déclarez les constantes nécessaires dans votre code. Nombreuses constantes Windows sont des valeurs non signées de 32 bits, et vous devez déclarer `As``UInteger`.  
+4.  Déclarez les constantes nécessaires dans votre code. Nombreuses constantes Windows sont des valeurs non signées de 32 bits, et vous devez déclarer ces `As``UInteger`.  
   
 5.  Appelez la fonction de façon normale. L’exemple suivant appelle la fonction Windows `MessageBox`, qui prend un argument d’entier non signé.  
   
@@ -69,16 +69,16 @@ Si vous consommez une classe, un module ou une structure qui possède des membre
     ```  
   
     > [!CAUTION]
-    >  Le `UInteger`, `ULong`, `UShort`, et `SByte` des types de données ne sont pas dans le cadre de la [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS), un code conforme CLS ne peut pas consommer un composant qui les utilise.  
+    >  Le `UInteger`, `ULong`, `UShort`, et `SByte` les types de données ne sont pas dans le cadre de la [indépendance du langage et composants indépendants du langage](../../../standard/language-independence-and-language-independent-components.md) (CLS), le code conforme CLS ne peut pas consommer un composant qui les utilise.  
   
     > [!IMPORTANT]
-    >  Effectue un appel au code non managé, telles que l’interface de programmation d’application Windows (API), expose votre code à des risques de sécurité potentiels.  
+    >  Effectuer un appel au code non managé, telles que l’interface de programmation d’application Windows (API), expose votre code à des risques de sécurité potentiels.  
   
     > [!IMPORTANT]
-    >  Appel de l’API Windows requiert l’autorisation de code non managé, ce qui peut affecter son exécution dans les situations de confiance partielle. Pour plus d’informations, consultez <xref:System.Security.Permissions.SecurityPermission> et [autorisations d’accès de Code](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Appeler l’API Windows nécessite une autorisation de code non managé, ce qui peut affecter son exécution dans les situations de confiance partielle. Pour plus d’informations, consultez <xref:System.Security.Permissions.SecurityPermission> et [autorisations d’accès de Code](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
  [Integer (type de données)](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
  [UInteger (type de données)](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
  [Declare (instruction)](../../../visual-basic/language-reference/statements/declare-statement.md)  

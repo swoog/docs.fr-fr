@@ -2,24 +2,24 @@
 title: Modèle de configuration hiérarchique
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: 233a8d4ba36835ab26e0c4a8cd044cf60d497a0b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806628"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000099"
 ---
 # <a name="hierarchical-configuration-model"></a>Modèle de configuration hiérarchique
 Cet exemple montre comment implémenter une hiérarchie de fichiers de configuration pour les services. Il montre également comment les liaisons, comportements de service et comportements de point de terminaison sont hérités des niveaux supérieurs de la hiérarchie.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Une des fonctionnalités développées pour WCF dans [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est l’amélioration du modèle de configuration hiérarchique. Un exemple de modèle de configuration hiérarchique pourrait être celui que définit Machine.config -> Rootweb.config -> Web.config. Dans [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], les liaisons et comportements définis dans les niveaux supérieurs de la hiérarchie de configuration sont ajoutés à vos services sans configuration explicite. Cet exemple montre comment il est possible de simplifier votre configuration de services en vous appuyant sur les éléments de configuration définis au niveau de l'ordinateur ou de l'application.  
+ L’une des fonctionnalités développées pour WCF dans [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] est l’amélioration du produit dans le modèle de configuration hiérarchique. Un exemple de modèle de configuration hiérarchique pourrait être celui que définit Machine.config -> Rootweb.config -> Web.config. Dans [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)], les liaisons et comportements définis dans les niveaux supérieurs de la hiérarchie de configuration sont ajoutés à vos services sans configuration explicite. Cet exemple montre comment il est possible de simplifier votre configuration de services en vous appuyant sur les éléments de configuration définis au niveau de l'ordinateur ou de l'application.  
   
  Cet exemple se compose de neuf services, définis dans trois niveaux de la hiérarchie. `Service1` se trouve à la racine. `Service2` et `Service3` héritent des éléments par défaut de `Service1`. `Service4`, `Service5`, `Service6` et `Service7` sont définis à un troisième niveau de la hiérarchie et héritent des éléments par défaut de `Service3`. Enfin, `Service10` et `Service11` se situent à un quatrième niveau de la hiérarchie.  
   
  Tous les services implémentent le contrat `IDesc`. La définition de l'interface `IDesc` qui montre les méthodes exposées dans cette interface est présentée ci-dessous. L'interface `IDesc` est définie dans Service1.cs.  
   
-```  
+```csharp  
 // Define a service contract  
 [ServiceContract(Namespace="http://Microsoft.Samples.ConfigHierarchicalModel")]  
 public interface IDesc  
@@ -58,20 +58,20 @@ public interface IDesc
 4.  Pour exécuter le client, appuyez sur Ctrl+F5.  
   
 > [!NOTE]
->  Si ces étapes ne fonctionnent pas, vérifiez que votre environnement a été correctement configuré, en procédant comme suit.  
+>  Si ces étapes ne fonctionnent pas, assurez-vous que votre environnement a été correctement configuré, en procédant comme suit :  
 >   
->  1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-> 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-> 3.  Pour exécuter l’exemple dans un seul ou plusieurs configurations d’ordinateur, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+> 1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).  
+> 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](building-the-samples.md).  
+> 3.  Pour exécuter l’exemple dans un seul ou plusieurs configurations d’ordinateur, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de gestion de AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [Exemples de gestion AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)

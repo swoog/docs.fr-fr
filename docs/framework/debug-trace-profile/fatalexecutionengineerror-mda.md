@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4595049d4ea71de30cf13334e32cd4bb2699f2ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f12b94198b88111d559cfe372c28bdbf4b37e3fe
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392536"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999133"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>Assistant Débogage managé fatalExecutionEngineError
-L’Assistant Débogage managé `fatalExecutionEngine``Error` est activé quand une erreur irrécupérable dans le common language runtime a été détectée. Le processus se termine.  
+L’Assistant Débogage managé `fatalExecutionEngineError` est activé quand une erreur irrécupérable dans le common language runtime a été détectée. Le processus se termine.  
   
 ## <a name="symptoms"></a>Symptômes  
  Arrêt inattendu du processus. D’autres symptômes ne peuvent pas être déterminés, car une défaillance du common language runtime peut se produire pour différentes raisons.  

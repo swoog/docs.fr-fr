@@ -1,6 +1,6 @@
 ---
-title: GetMethodOrigin (fonction) (référence des API non managées)
-description: La fonction GetMethodOrigin détermine la classe dans laquelle une méthode est déclarée.
+title: Getmethodorigin, fonction (référence des API non managées)
+description: Getmethodorigin, de la fonction détermine la classe dans laquelle une méthode est déclarée.
 ms.date: 11/06/2017
 api_name:
 - GetMethodOrigin
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35e56494d0082db970afce21da8e63a597f0a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1cc754fcf7d1defa815bb0a74b7c2b4a6909478
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458147"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999391"
 ---
-# <a name="getmethodorigin-function"></a>GetMethodOrigin (fonction)
+# <a name="getmethodorigin-function"></a>Getmethodorigin, fonction
 Détermine la classe dans laquelle une méthode est déclarée.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -42,13 +42,13 @@ HRESULT GetMethodOrigin (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `wszMethodName`  
-[in] Le nom de la méthode de l’objet dont la classe propriétaire est demandée. 
+[in] Le nom de la méthode pour l’objet dont la classe propriétaire est demandée. 
 
 `pstrClassName`  
 [out] Reçoit le nom de la classe qui possède la méthode.
@@ -65,18 +65,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::GetMethodOrigin](https://msdn.microsoft.com/library/aa391443(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::GetMethodOrigin](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod) (méthode).
 
 Car une classe peut hériter des méthodes à partir d’une ou plusieurs classes de base, les développeurs souhaitent souvent de déterminer la classe dans laquelle une méthode donnée est définie.
 
-Le `pstrClassName` paramètre ne doit pas pointer vers un valide `BSTR` avant l’appel de la fonction, car il s’agit d’un `out` paramètre ; ce pointeur n’est pas libéré une fois que la fonction retourne.
+Le `pstrClassName` paramètre ne doit pas pointer vers un valide `BSTR` avant que la fonction est appelée, car il s’agit d’un `out` paramètre ; ce pointeur n’est pas libéré une fois que la fonction retourne.
 
-## <a name="requirements"></a>Spécifications  
-**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

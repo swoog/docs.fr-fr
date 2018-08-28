@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ebdcda655a186d54065e98f8b9c5c7ae2fda4955
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569902"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931857"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caractères d'échappement dans les expressions régulières
 La barre oblique inverse (\\) dans une expression régulière indique une des possibilités suivantes :  
@@ -38,7 +38,7 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
   
 |Caractère ou séquence|Description|  
 |---------------------------|-----------------|  
-|Tous les caractères à l'exception des suivants :<br /><br /> . $ ^ { [ ( &#124; ) * + ? \|Les caractères autres que ceux répertoriés dans la colonne **Caractère ou séquence** n’ont pas de signification spéciale dans les expressions régulières ; ils ne correspondent qu’à eux-mêmes.<br /><br /> Les caractères inclus dans la colonne **Caractère ou séquence** sont des éléments spéciaux du langage des expressions régulières. Pour les faire correspondre dans une expression régulière, ils doivent être utilisés avec un caractère d’échappement ou inclus dans un [groupe de caractères positif](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Par exemple, l'expression régulière `\$\d+` ou `[$]\d+` est en correspondance avec "$1200".|  
+|Tous les caractères à l'exception des suivants :<br /><br /> . $ ^ { [ ( &#124; ) * + ? \ |Les caractères autres que ceux répertoriés dans la colonne **Caractère ou séquence** n’ont pas de signification spéciale dans les expressions régulières ; ils ne correspondent qu’à eux-mêmes.<br /><br /> Les caractères inclus dans la colonne **Caractère ou séquence** sont des éléments spéciaux du langage des expressions régulières. Pour les faire correspondre dans une expression régulière, ils doivent être utilisés avec un caractère d’échappement ou inclus dans un [groupe de caractères positif](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Par exemple, l'expression régulière `\$\d+` ou `[$]\d+` est en correspondance avec "$1200".|  
 |`\a`|Correspond à un caractère représentant une cloche (alarme), `\u0007`.|  
 |`\b`|Dans une classe de caractères `[`*groupe_caractères*`]`, correspond à un retour arrière, `\u0008`.  (Voir [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).) En dehors d'une classe de caractères, `\b` est une ancre qui correspond à une limite de mot. (Voir [Ancres](../../../docs/standard/base-types/anchors-in-regular-expressions.md).)|  
 |`\t`|Correspond à une tabulation, `\u0009`.|  

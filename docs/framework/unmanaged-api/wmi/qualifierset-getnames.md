@@ -1,6 +1,6 @@
 ---
 title: QualifierSet_GetNames (fonction) (référence des API non managées)
-description: La fonction QualifierSet_GetNames récupère les noms des qualificateurs d’un objet ou une propriété.
+description: La fonction QualifierSet_GetNames récupère les noms des qualificateurs à partir d’un objet ou une propriété.
 ms.date: 11/06/2017
 api_name:
 - QualifierSet_GetNames
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7c96439cf50c18e336baa70cf463b9463203290
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461176"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999376"
 ---
 # <a name="qualifiersetgetnames-function"></a>QualifierSet_GetNames (fonction)
 Récupère les noms de tous les qualificateurs ou de certains qualificateurs qui sont disponibles à partir de l’objet en cours ou de la propriété. 
@@ -42,10 +42,10 @@ HRESULT QualifierSet_GetNames (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`   
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`   
-[in] Un pointeur vers un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.
+[in] Un pointeur vers un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.
 
 `lFlags`   
 [in] Un des indicateurs ou des valeurs qui spécifie les noms à inclure dans l’énumération suivante.
@@ -53,10 +53,10 @@ HRESULT QualifierSet_GetNames (
 |Constante  |Value  |Description  |
 |---------|---------|---------|
 |  | 0 | Retourner les noms de tous les qualificateurs. |
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retourner uniquement les noms des qualificateurs spécifiques à l’objet ou la propriété actuelle. <br/> Pour une propriété : retourner uniquement les qualificateurs spécifiques à la propriété (y compris les substitutions), et pas ces qualificateurs propagés à partir de la définition de classe. <br/> Pour une instance : retourner uniquement des noms spécifiques à l’instance qualificateur. <br/> Pour une classe : retourner uniquement les qualificateurs spécifiques à la beiong de la classe dérivée.
-|`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Retourne uniquement les noms des qualificateurs propagés à partir d’un autre objet. <br/> Pour une propriété : retour uniquement les qualificateurs propagées à cette propriété à partir de la définition de classe et non celles de la propriété proprement dite. <br/> Pour une instance : retour uniquement ces qualificateurs propagés à partir de la définition de classe. <br/> Pour une classe : retour uniquement les noms de qualificateur héritées des classes parentes. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retourner uniquement les noms des qualificateurs spécifiques à l’objet ou la propriété actuelle. <br/> Pour une propriété : retourner uniquement les qualificateurs spécifiques à la propriété (y compris les substitutions), et pas ces qualificateurs propagés à partir de la définition de classe. <br/> Pour une instance : retourner uniquement les noms d’un qualificateur de nom spécifique à l’instance. <br/> Pour une classe : retourner uniquement des qualificateurs spécifiques à la beiong de classe dérivée.
+|`WBEM_FLAG_PROPAGATED_ONLY` | 0 x 20 | Retour uniquement les noms des qualificateurs propagés à partir d’un autre objet. <br/> Pour une propriété : retour uniquement les qualificateurs propagées à cette propriété à partir de la définition de classe et non celles de la propriété proprement dite. <br/> Pour une instance : retour uniquement ces qualificateurs propagés à partir de la définition de classe. <br/> Pour une classe : retour uniquement les noms de qualificateur héritées des classes parentes. |
 
-`pstrNames` [out] Un nouveau `SAFEARRAY` qui contient les noms demandés. Le tableau peut avoir 0 éléments. Si une erreur se produit, un nouveau `SAFEARRAY` n’est pas renvoyé.
+`pstrNames` [out] Un nouveau `SAFEARRAY` qui contient les noms demandés. Le tableau peut avoir 0 éléments. Si une erreur se produit, un nouveau `SAFEARRAY` n’est pas retournée.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -70,18 +70,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemQualifierSet::GetNames](https://msdn.microsoft.com/library/aa391868(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemQualifierSet::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-getnames) (méthode).
 
 Une fois que vous avez extrait les noms de qualificateur, vous pouvez accéder à chaque qualificateur par nom, en appelant le [QualifierSet_Get](qualifierset-get.md) (fonction). 
 
-Il n’est pas une erreur d’un objet donné pour que les qualificateurs de zéro, par conséquent, le nombre de chaînes dans `pstrNames` en retour peut être 0, même si la fonction retourne `WBEM_S_NO_ERROR`.
+Il n’est pas une erreur pour un objet donné pour que les qualificateurs de zéro, par conséquent, le nombre de chaînes dans `pstrNames` en retour peut être 0, même si la fonction retourne `WBEM_S_NO_ERROR`.
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: a9c672a397510c69c9ee67358689feff80d8831a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5b26bd1d3ebae5136718833c124e3c6e575e9b7
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605418"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998804"
 ---
 # <a name="like-operator-visual-basic"></a>Like (opérateur Visual Basic)
 Compare une chaîne à un modèle.  
@@ -49,56 +49,56 @@ result = string Like pattern
  Obligatoire. N’importe quel `String` expression conforme aux critères spéciaux décrits dans la section « Notes ».  
   
 ## <a name="remarks"></a>Notes  
- Si la valeur de `string` est conforme au modèle contenu dans `pattern`, `result` est `True`. Si la chaîne ne satisfait pas le modèle, `result` est `False`. Si les deux `string` et `pattern` sont des chaînes vides, le résultat est `True`.  
+ Si la valeur dans `string` respecte le modèle contenu dans `pattern`, `result` est `True`. Si la chaîne ne respecte pas le modèle, `result` est `False`. Si les deux `string` et `pattern` sont des chaînes vides, le résultat est `True`.  
   
 ## <a name="comparison-method"></a>Méthode de comparaison  
- Le comportement de la `Like` opérateur varie selon le [instruction Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md). La méthode de comparaison de chaînes par défaut pour chaque fichier source est `Option Compare Binary`.  
+ Le comportement de la `Like` opérateur varie selon le [instruction Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md). La méthode de comparaison de chaîne par défaut pour chaque fichier source est `Option Compare Binary`.  
   
 ## <a name="pattern-options"></a>Options de modèle  
- Intégrée des critères spéciaux de fournit un outil polyvalent pour les comparaisons de chaînes. Les fonctionnalités de mise en correspondance de modèle permettent de faire correspondre chaque caractère `string` sur un caractère spécifique, un caractère générique, une liste de caractères ou une plage de caractères. Le tableau suivant montre les caractères autorisés dans `pattern` et leur correspondance.  
+ Correspondance de modèles intégrée fournit un outil polyvalent pour les comparaisons de chaînes. Les fonctionnalités de critères spéciaux permettent de mettre en correspondance chaque caractère dans `string` par rapport à un caractère spécifique, un caractère générique, une liste de caractères ou une plage de caractères. Le tableau suivant présente les caractères autorisés dans `pattern` et ce à quoi ils correspondent.  
   
 |Caractères dans `pattern`|Correspondances dans `string`|  
 |-----------------------------|-------------------------|  
 |`?`|Tout caractère unique|  
 |`*`|Zéro ou plusieurs caractères|  
-|`#`|Tout chiffre (0 à 9)|  
-|`[charlist]`|Tout caractère unique dans `charlist`|  
-|`[!charlist]`|N’importe quel caractère ne figurant pas dans `charlist`|  
+|`#`|N’importe quel chiffre unique (0-9)|  
+|`[charlist]`|N’importe quel caractère unique dans `charlist`|  
+|`[!charlist]`|N’importe quel caractère absent de `charlist`|  
   
 ## <a name="character-lists"></a>Listes de caractères  
- Un groupe d’un ou plusieurs caractères (`charlist`) placés entre crochets (`[ ]`) peut être utilisé pour correspondre à n’importe quel caractère unique dans `string` et peut inclure le code de presque n’importe quel caractère, y compris les chiffres.  
+ Un groupe d’un ou plusieurs caractères (`charlist`) entre crochets (`[ ]`) peut être utilisé pour correspondre à n’importe quel caractère unique dans `string` et peut inclure le code de presque n’importe quel caractère, y compris les chiffres.  
   
  Un point d’exclamation (`!`) au début de `charlist` signifie qu’une correspondance est établie si un caractère à l’exception des caractères de `charlist` se trouve dans `string`. Lorsqu’il est utilisé en dehors de crochets, le point d’exclamation correspond à lui-même.  
   
 ## <a name="special-characters"></a>Caractères spéciaux  
- Pour mettre en correspondance le crochet de caractères spéciaux (`[`), point d’interrogation (`?`), signe dièse (`#`) et l’astérisque (`*`), les mettre entre parenthèses. Le crochet droit (`]`) ne peut pas être utilisé dans un groupe pour correspondre à lui-même, mais il peut être utilisé en dehors d’un groupe de caractères.  
+ Pour faire correspondre le crochet gauche des caractères spéciaux (`[`), point d’interrogation (`?`), signe dièse (`#`) et l’astérisque (`*`), placer entre crochets. Le crochet droit (`]`) ne peut pas être utilisé dans un groupe de recherche, mais il peut être utilisé en dehors d’un groupe de caractères.  
   
- La séquence de caractères `[]` est considérée comme une chaîne de longueur nulle (`""`). Toutefois, il ne peut pas faire partie d’une liste de caractères placés entourée crochets. Si vous souhaitez vérifier si une position dans `string` contient l’un d’un groupe de caractères ou aucun caractère, vous pouvez utiliser `Like` à deux reprises. Pour obtenir un exemple, consultez [Comment : faire correspondre une chaîne à un modèle](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
+ La séquence de caractères `[]` est considéré comme une chaîne de longueur nulle (`""`). Toutefois, elle ne peut pas faire partie d’une liste de caractères placés entourée crochets. Si vous souhaitez vérifier si une position dans `string` contient l’un d’un groupe de caractère ou pas du tout, vous pouvez utiliser `Like` à deux reprises. Pour obtenir un exemple, consultez [Comment : faire correspondre une chaîne à un modèle](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md).  
   
 ## <a name="character-ranges"></a>Plages de caractères  
  À l’aide d’un trait d’union (`–`) pour séparer les limites inférieure et supérieure de la plage, `charlist` peut spécifier une plage de caractères. Par exemple, `[A–Z]` trouve une correspondance si la position de caractère correspondant dans `string` contient un caractère dans la plage `A`–`Z`, et `[!H–L]` trouve une correspondance si la position de caractère correspondant contient un caractère en dehors de la plage `H`–`L`.  
   
- Lorsque vous spécifiez une plage de caractères, ils doivent apparaître dans l’ordre croissant, autrement dit, du plus petit au plus grand. Par conséquent, `[A–Z]` est un modèle valide, mais `[Z–A]` n’est pas.  
+ Lorsque vous spécifiez une plage de caractères, ils doivent apparaître dans l’ordre croissant, autrement dit, du plus bas au plus élevé. Par conséquent, `[A–Z]` est un modèle valide, mais `[Z–A]` n’est pas.  
   
 ### <a name="multiple-character-ranges"></a>Plusieurs plages de caractères  
- Pour spécifier plusieurs plages pour la même position de caractère, placez les crochets sans délimiteurs. Par exemple, `[A–CX–Z]` trouve une correspondance si la position de caractère correspondant dans `string` contient un caractère dans la plage de `A`–`C` ou la plage `X`–`Z`.  
+ Pour spécifier plusieurs plages pour la même position de caractère, placez-les dans les mêmes crochets sans délimiteurs. Par exemple, `[A–CX–Z]` trouve une correspondance si la position de caractère correspondant dans `string` contient un caractère dans la plage de `A`–`C` ou la plage `X`–`Z`.  
   
-### <a name="usage-of-the-hyphen"></a>Utilisation du trait d’union  
- Un trait d’union (`–`) peuvent apparaître au début (après un point d’exclamation, le cas échéant) ou à la fin de `charlist` pour correspondre à lui-même. Dans un autre emplacement, le trait d’union identifie une plage de caractères délimitée par les caractères de chaque côté du trait d’union.  
+### <a name="usage-of-the-hyphen"></a>Utilisation de traits d’union  
+ Un trait d’union (`–`) peut apparaître au début (après un point d’exclamation, le cas échéant) ou à la fin de `charlist` pour correspondre à lui-même. Dans tout autre emplacement, le trait d’union identifie une plage de caractères délimités par les caractères de chaque côté de traits d’union.  
   
 ## <a name="collating-sequence"></a>Séquence de classement  
- La signification d’une plage spécifiée dépend de l’ordre au moment de l’exécution, comme déterminé par des caractères `Option``Compare` et les paramètres régionaux du système, le code s’exécute. Avec `Option``Compare``Binary`, la plage `[A–E]` correspond à `A`, `B`, `C`, `D`, et `E`. Avec `Option``Compare``Text`, `[A–E]` correspond à `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, et `e`. La plage ne correspond pas à `Ê` ou `ê` , car les caractères accentués sont des caractères non accentués dans l’ordre de tri.  
+ La signification d’une plage spécifiée dépend de l’ordre des caractères au moment de l’exécution, tel que déterminé par `Option Compare` et les paramètres régionaux du système, le code s’exécute sur. Avec `Option Compare Binary`, la plage `[A–E]` correspond à `A`, `B`, `C`, `D`, et `E`. Avec `Option Compare Text`, `[A–E]` correspond à `A`, `a`, `À`, `à`, `B`, `b`, `C`, `c`, `D`, `d`, `E`, et `e`. La plage ne correspond pas à `Ê` ou `ê` , car les caractères accentués sont des caractères non accentués dans l’ordre de tri.  
   
 ## <a name="digraph-characters"></a>Caractères digrammes  
- Dans certaines langues, il existe des caractères alphabétiques représentent deux caractères distincts. Par exemple, plusieurs langues utilisent le caractère `æ` pour représenter les caractères `a` et `e` lorsqu’ils apparaissent ensemble. Le `Like` opérateur reconnaît que le caractère digramme simple et deux caractères sont équivalents.  
+ Dans certaines langues, il existe des caractères alphabétiques qui représentent des caractères distincts. Par exemple, plusieurs langues utilisent le caractère `æ` pour représenter les caractères `a` et `e` lorsqu’ils apparaissent ensemble. Le `Like` opérateur reconnaît que le caractère digramme simple et deux caractères sont équivalents.  
   
- Lorsqu’une langue qui utilise un caractère digramme est spécifiée dans les paramètres régionaux du système, une occurrence du caractère digramme simple, que ce soit `pattern` ou `string` correspond à la séquence de deux caractères équivalente dans l’autre chaîne. De même, un caractère digramme dans `pattern` entre crochets (lui-même, dans une liste ou dans une plage) correspond à la séquence de deux caractères équivalente dans `string`.  
+ Quand une langue qui utilise un caractère digramme est spécifiée dans les paramètres régionaux du système, une occurrence du caractère digramme simple dans soit `pattern` ou `string` correspond à la séquence de deux caractères équivalente dans l’autre chaîne. De même, un caractère digramme dans `pattern` entre crochets (par lui-même, dans une liste ou dans une plage) correspond à la séquence de deux caractères équivalente dans `string`.  
   
 ## <a name="overloading"></a>Surcharge  
- Le `Like` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Le `Like` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement lorsqu’un opérande a le type de cette classe ou structure. Si votre code utilise cet opérateur sur une telle classe ou structure, veillez à ce que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le `Like` pour comparer des chaînes de plusieurs modèles. Les résultats se dirigent vers un `Boolean` variable qui indique si chaque chaîne satisfait le modèle.  
+ Cet exemple utilise le `Like` opérateur pour comparer des chaînes de plusieurs modèles. Les résultats aborde un `Boolean` variable indiquant si chaque chaîne est conforme au modèle.  
   
  [!code-vb[VbVbalrOperators#30](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/like-operator_1.vb)]  
   

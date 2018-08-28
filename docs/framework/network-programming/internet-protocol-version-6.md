@@ -11,12 +11,12 @@ ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 995bc2075a7df5c9a37cc68e812f62c9de2e53c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8842bb47ad32ae1e26eaa503398ea91afb7fd1dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003201"
 ---
 # <a name="internet-protocol-version-6"></a>Protocole Internet version 6
 Le protocole IPv6 (protocole Internet version 6) est une nouvelle suite de protocoles standard conçus pour la couche réseau d’Internet. IPv6 est destiné à résoudre bon nombre des problèmes de l’actuelle version de la suite de protocoles (appelée IPv4), notamment ceux liés à l’épuisement des adresses, la sécurité, la configuration automatique, l’extensibilité, etc. IPv6 étend les capacités d’Internet à de nouveaux types d’applications, comme les applications pair à pair (P2P) et les applications mobiles. Voici les principaux problèmes du protocole IPv4 actuel :  
@@ -61,6 +61,6 @@ Le protocole IPv6 (protocole Internet version 6) est une nouvelle suite de prot
  Vous pouvez également trouver des informations concernant IPv6 dans la [section IPv6 sur Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de sockets IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [Exemple de sockets IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
  [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Sockets](../../../docs/framework/network-programming/sockets.md)

@@ -1,6 +1,6 @@
 ---
 title: "Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide"
-ms.date: 03/30/2017
+ms.date: 08/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -20,19 +20,16 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c942dea3314581ce8f758bb9ed3ce88c2fe150
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 18426e655f6702844daa822921888194ed7ecb64
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172327"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42753869"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Comment : vérifier que des chaînes sont dans un format d'adresse de messagerie valide
 L'exemple suivant utilise une expression régulière pour vérifier qu'une chaîne est dans un format d'adresse de messagerie valide.  
 
-> [!NOTE]
->  Nous vous recommandons d’utiliser la classe <xref:System.Net.Mail.MailAddress?displayProperty=nameWithType> pour vérifier qu’une chaîne est dans un format d’adresse de messagerie valide. Pour cela, passez la chaîne d’adresse de messagerie au constructeur de classe <xref:System.Net.Mail.MailAddress.%23ctor%28System.String%29?displayProperty=nameWithType>, qui lève une exception <xref:System.FormatException> si la chaîne a un format non reconnu.  
-  
 ## <a name="example"></a>Exemple  
  L'exemple définit une méthode `IsValidEmail` qui retourne la valeur `true` si la chaîne contient une adresse de messagerie valide et la valeur `false` dans le cas contraire, mais qui n'effectue aucune autre action.  
   

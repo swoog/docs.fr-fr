@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 4912f1eeaa0c7d461250f783767ac44b2038f594
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805692"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998870"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets qui sont utilisés pour spécifier les détails de communication qui sont requises pour se connecter au point de terminaison d’un service Windows Communication Foundation (WCF). Chaque point de terminaison dans un service WCF requiert une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d’une liaison, les liaisons incluses dans WCF et comment une liaison peut être spécifiée pour un point de terminaison.  
@@ -27,10 +27,10 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
  Détermine le protocole de transport sous-jacent à utiliser (par exemple, TCP ou HTTP).  
   
 ## <a name="the-elements-of-a-binding"></a>Les éléments d'une liaison  
- Une liaison est constituée fondamentalement d'une pile ordonnée d'éléments de liaison, chacun spécifiant une partie des informations de communication requises pour se connecter à un point de terminaison de service. Les deux couches inférieures de la pile sont requises. À la base de la pile se trouve l'élément de liaison de transport, et juste au-dessus de celui-ci se trouve l'élément qui contient les spécifications d'encodage de message. Les éléments de liaison facultatifs qui spécifient les autres protocoles de communication sont disposés en couches sur ces deux éléments requis. Pour plus d’informations sur ces éléments de liaison et de leur classement correct, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Une liaison est constituée fondamentalement d'une pile ordonnée d'éléments de liaison, chacun spécifiant une partie des informations de communication requises pour se connecter à un point de terminaison de service. Les deux couches inférieures de la pile sont requises. À la base de la pile se trouve l'élément de liaison de transport, et juste au-dessus de celui-ci se trouve l'élément qui contient les spécifications d'encodage de message. Les éléments de liaison facultatifs qui spécifient les autres protocoles de communication sont disposés en couches sur ces deux éléments requis. Pour plus d’informations sur ces éléments de liaison et leur classement approprié, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
- Les informations contenues dans une liaison peuvent être complexes et certains paramètres peuvent ne pas être compatibles avec d'autres. Pour cette raison, WCF inclut un jeu de liaisons fournies par le système. Ces liaisons sont conçues pour couvrir la plupart des exigences d’applications. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
+ Les informations contenues dans une liaison peuvent être complexes et certains paramètres peuvent ne pas être compatibles avec d'autres. Pour cette raison, WCF inclut un ensemble de liaisons fournies par le système. Ces liaisons sont conçues pour couvrir la plupart des exigences d’applications. Les classes suivantes représentent quelques exemples de liaisons fournies par le système :  
   
 -   <xref:System.ServiceModel.BasicHttpBinding> : une liaison de protocole HTTP adaptée à la connexion à des services Web conformes à la spécification WS-I Basic Profile (par exemple, services basés sur les services Web ASP.NET).  
   
@@ -39,8 +39,10 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
 -   <xref:System.ServiceModel.NetNamedPipeBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour se connecter à d’autres points de terminaison WCF sur le même ordinateur.  
   
 -   <xref:System.ServiceModel.NetMsmqBinding>: Utilise le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour créer des connexions de message en file d’attente avec d’autres points de terminaison WCF.  
+
+- <xref:System.ServiceModel.NetTcpBinding>: Cette liaison offre de meilleures performances que les liaisons HTTP et est idéale pour une utilisation dans un réseau local.
   
- Pour obtenir la liste complète, avec les descriptions, de toutes les fournie par WCF liaisons, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md).  
+ Pour obtenir la liste complète, avec leurs descriptions, de toutes les fourni par WCF liaisons, consultez [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="using-your-own-bindings"></a>Utilisation de vos propres liaisons  
  Si aucune des liaisons fournies par le système ne possède la bonne combinaison de fonctionnalités requise par une application de service, vous pouvez créer votre propre liaison. Il existe deux manières de procéder. Vous pouvez soit créer une liaison à partir d'éléments de liaison préexistants à l'aide d'un objet <xref:System.ServiceModel.Channels.CustomBinding>, soit créer une liaison entièrement définie par l'utilisateur en dérivant de la liaison <xref:System.ServiceModel.Channels.Binding>. Pour plus d’informations sur la création de votre propre liaison à l’aide de ces deux approches, consultez [liaisons personnalisées](../../../docs/framework/wcf/extending/custom-bindings.md) et [Creating liaisons](../../../docs/framework/wcf/extending/creating-user-defined-bindings.md).  
@@ -53,7 +55,7 @@ Les liaisons sont des objets qui sont utilisés pour spécifier les détails de 
 2.  Créer un point de terminaison qui utilise la liaison sélectionnée ou définie.  
   
 ## <a name="code-and-configuration"></a>Code et configuration  
- Vous pouvez définir des liaisons de deux manières : par le biais de code ou par configuration. Ces deux approches ne dépendent pas du fait que vous utilisez une liaison fournie par le système ou une liaison personnalisée. En général, l’utilisation de code procure un contrôle total sur la définition d’une liaison au moment du design. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou du client pour modifier les paramètres d’une liaison sans devoir recompiler l’application de service. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir les exigences spécifiques sur lesquels une application WCF doit être déployée. Le fait de conserver les informations de liaison (et d’adressage) hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application. Notez que les liaisons définies dans le code sont créées après les liaisons spécifiées dans la configuration, ce qui permet aux liaisons définies dans le code de remplacer celles définies par configuration.  
+ Vous pouvez définir des liaisons de deux manières : par le biais de code ou par configuration. Ces deux approches ne dépendent pas du fait que vous utilisez une liaison fournie par le système ou une liaison personnalisée. En général, l’utilisation de code procure un contrôle total sur la définition d’une liaison au moment du design. À l’aide de la configuration, en revanche, permet à un administrateur système ou l’utilisateur d’un service WCF ou le client pour modifier les paramètres d’une liaison sans devoir recompiler l’application de service. Cette souplesse est souvent souhaitable car il n’existe aucun moyen de prévoir les exigences spécifiques du matériel sur lequel une application WCF doit être déployée. Le fait de conserver les informations de liaison (et d’adressage) hors du code leur permet de changer sans nécessiter de recompilation ou de redéploiement de l’application. Notez que les liaisons définies dans le code sont créées après les liaisons spécifiées dans la configuration, ce qui permet aux liaisons définies dans le code de remplacer celles définies par configuration.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation de liaisons pour configurer des services et des clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

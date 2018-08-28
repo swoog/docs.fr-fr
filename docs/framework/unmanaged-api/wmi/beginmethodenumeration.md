@@ -1,6 +1,6 @@
 ---
-title: BeginMethodEnumeration (fonction) (référence des API non managées)
-description: La fonction BeginMethodEnumeration commence une énumération des méthodes de l’objet
+title: Beginmethodenumeration, fonction (référence des API non managées)
+description: Beginmethodenumeration, de la fonction commence une énumération des méthodes de l’objet
 ms.date: 11/06/2017
 api_name:
 - BeginMethodEnumeration
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d87627b8bb3414860d994273396dbb4e64acdea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459874"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000341"
 ---
-# <a name="beginenumeration-function"></a>BeginEnumeration (fonction)
+# <a name="beginenumeration-function"></a>BeginEnumeration, fonction
 Commence une énumération des méthodes disponibles pour l’objet.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -41,10 +41,10 @@ HRESULT BeginMethodEnumeration (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `lEnumFlags`  
 [in] Zéro (0) pour toutes les méthodes, ou un indicateur qui spécifie la portée de l’énumération. Les indicateurs suivants sont définis dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code :
@@ -60,21 +60,21 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags` est différent de zéro et n’est pas un des indicateurs spécifiés. |
+|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | `lEnnumFlags` est différent de zéro et ne fait pas partie des indicateurs spécifiés. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::BeginMethodEnumeration](https://msdn.microsoft.com/library/aa391435(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::BeginMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-beginmethodenumeration) (méthode).
 
-Cet appel de méthode n’est possible que si l’objet actuel est une définition de classe. Manipulation de la méthode n’est pas disponible à partir de [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) pointeurs qui pointent vers les instances. L’ordre dans lequel les méthodes sont énumérées est garanti être indifférente pour une instance donnée de [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx).
+Cet appel de méthode n’est possible que si l’objet actuel est une définition de classe. Manipulation de la méthode n’est pas disponible à partir de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointeurs qui pointent vers des instances. L’ordre dans lequel les méthodes sont énumérées est garanti être indifférente pour une instance donnée de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

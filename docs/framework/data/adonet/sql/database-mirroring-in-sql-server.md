@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: cbb4b729475c8f77c204c3a9250d48d4b0cd3bc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362268"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003084"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mise en miroir de bases de données dans SQL Server
 La mise en miroir des bases de données dans SQL Server vous permet de conserver une copie, ou miroir, d'une base de données SQL Server sur un serveur en veille. La mise en miroir garantit que deux copies distinctes des données existent en permanence, en offrant une haute disponibilité et une redondance complète des données. Le fournisseur de données .NET pour SQL Server offre une prise en charge implicite de la mise en miroir de base de données, de façon à ce que le développeur ne doive pas exécuter d'action ni écrire de code une fois qu'il a été configuré pour une base de données SQL Server. En outre, l'objet <xref:System.Data.SqlClient.SqlConnection> prend en charge un mode de connexion explicite qui permet la fourniture du nom d'un serveur partenaire de basculement dans la propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -40,7 +40,7 @@ La mise en miroir des bases de données dans SQL Server vous permet de conserver
 ## <a name="retrieving-the-current-server-name"></a>Extraction du nom de serveur actuel  
  En cas de basculement, vous pouvez extraire le nom du serveur auquel la connexion actuelle est réellement connectée en utilisant la propriété <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> d'un objet <xref:System.Data.SqlClient.SqlConnection>. Le fragment de code suivant extrait le nom du serveur actif, en partant de l'hypothèse que la variable de connexion fait référence à un <xref:System.Data.SqlClient.SqlConnection> ouvert.  
   
- Lorsqu’un événement de basculement se produit et de la connexion est basculée vers le serveur miroir, le **DataSource** propriété est mise à jour pour refléter le nom du miroir.  
+ Lorsqu’un événement de basculement se produit et la connexion est passée au serveur miroir, le **DataSource** propriété est mise à jour pour refléter le nom du miroir.  
   
 ```vb  
 Dim activeServer As String = connection.DataSource  
@@ -51,17 +51,17 @@ string activeServer = connection.DataSource;
 ```  
   
 ## <a name="sqlclient-mirroring-behavior"></a>Comportement de mise en miroir de SqlClient  
- Le client tente toujours de se connecter au serveur principal actuel. S'il échoue, il essaie le partenaire de basculement. Si la base de données miroir a déjà été basculée vers le rôle principal sur le serveur partenaire, la connexion réussit et le nouveau mappage miroir-principal est envoyé au client et mis en cache pendant la durée de l'appel <xref:System.AppDomain>. Il n’est pas stocké dans un stockage persistant et n’est pas disponible pour les connexions suivantes dans un autre **AppDomain** ou processus. Toutefois, il est disponible pour les connexions suivantes au sein du même **AppDomain**. Notez qu’un autre **AppDomain** ou processus qui s’exécute toujours sur le même ou un autre ordinateur doté de son pool de connexions, et ces connexions ne sont pas réinitialisées. Dans ce cas, si la base de données principal tombe en panne, chaque processus ou **AppDomain** échoue une fois et le pool est automatiquement effacé.  
+ Le client tente toujours de se connecter au serveur principal actuel. S'il échoue, il essaie le partenaire de basculement. Si la base de données miroir a déjà été basculée vers le rôle principal sur le serveur partenaire, la connexion réussit et le nouveau mappage miroir-principal est envoyé au client et mis en cache pendant la durée de l'appel <xref:System.AppDomain>. Il n’est pas stocké dans un stockage persistant et n’est pas disponible pour les connexions suivantes dans une autre **AppDomain** ou processus. Toutefois, il est disponible pour les connexions ultérieures au sein du même **AppDomain**. Notez qu’une autre **AppDomain** ou processus qui s’exécute toujours sur le même ou un autre ordinateur a son pool de connexions, et ces connexions ne sont pas réinitialisées. Dans ce cas, si la base de données principal tombe en panne, chaque processus ou **AppDomain** échoue une fois et le pool est automatiquement effacé.  
   
 > [!NOTE]
 >  La prise en charge de la mise en miroir sur le serveur est configurée pour chaque base de données. Si des opérations de manipulation des données sont exécutées sur d'autres bases de données non incluses dans l'ensemble principal/miroir, soit en utilisant des noms multipart, soit en modifiant la base de données en cours, les modifications apportées à ces autres bases de données ne sont pas propagées en cas d'échec. Aucune erreur n'est générée en cas de modification des données d'une base de données non mise en miroir. Le développeur doit évoluer l'impact possible de telles opérations.  
   
 ## <a name="database-mirroring-resources"></a>Ressources relatives à la mise en miroir de bases de données  
- Pour obtenir des informations et de la documentation conceptuelle sur la configuration, le déploiement et l'administration de la mise en miroir, voir les ressources suivantes dans la documentation en ligne de SQL Server.  
+ Pour la documentation conceptuelle et des informations sur la configuration, déploiement et administration de mise en miroir, consultez les ressources suivantes dans la documentation de SQL Server.  
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[La mise en miroir de base de données](http://msdn.microsoft.com/library/bb934127.aspx) dans la documentation en ligne de SQL Server|Décrit comment installer et configurer la mise en miroir dans SQL Server.|  
+|[Mise en miroir de base de données](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Décrit comment installer et configurer la mise en miroir dans SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)

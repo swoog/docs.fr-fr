@@ -1,6 +1,6 @@
 ---
-title: GetMethodQualifierSet (fonction) (référence des API non managées)
-description: La fonction GetMethodQualifierSet récupère le jeu de qualificateurs d’une méthode.
+title: Getmethodqualifierset, fonction (référence des API non managées)
+description: La getmethodqualifierset, fonction récupère le jeu de qualificateurs d’une méthode.
 ms.date: 11/06/2017
 api_name:
 - GetMethodQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459109"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001407"
 ---
-# <a name="getmethodqualifierset-function"></a>GetMethodQualifierSet (fonction)
-Récupère le qualificateur défini pour une méthode particulière.
+# <a name="getmethodqualifierset-function"></a>Getmethodqualifierset, fonction
+Récupère le jeu de qualificateurs pour une méthode particulière.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -42,10 +42,10 @@ HRESULT GetMethodQualifierSet (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `wszMethod`  
 [in] Le nom de la méthode. `wszMethod` doit pointer vers un valide `LPCWSTR`. 
@@ -65,18 +65,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::GetMethodQualifierSet](https://msdn.microsoft.com/library/aa391446(v=vs.85).aspx) (méthode). 
+Cette fonction encapsule un appel à la [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) (méthode). 
 
-Un appel à cette fonction est prise en charge uniquement si l’objet actuel est une définition de classe CIM. Manipulation de la méthode n’est pas disponible pour [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponters qui pointent vers les instances CIM.
+Un appel à cette fonction est prise en charge uniquement si l’objet actuel est une définition de classe CIM. Manipulation de la méthode n’est pas disponible pour [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters qui pointent vers des instances CIM.
 
-Étant donné que chaque méthode peut avoir son propre qualificateurs, le [IWbemQualifierSet pointeur](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) permet d’ajouter, modifier ou supprimer ces qualificateurs de l’appelant.
+Étant donné que chaque méthode peut avoir son propre qualificateurs, le [IWbemQualifierSet pointeur](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permet à l’appelant ajouter, modifier ou supprimer ces qualificateurs.
 
-## <a name="requirements"></a>Spécifications  
-**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

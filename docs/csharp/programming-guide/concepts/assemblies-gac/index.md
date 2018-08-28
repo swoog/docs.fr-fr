@@ -2,12 +2,12 @@
 title: Assemblys et le Global Assembly Cache (C#)
 ms.date: 07/20/2015
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
-ms.openlocfilehash: 994498525aed3ebb08f2de7926c7adc2d3d95f56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07ee54fc19abecba5e8335f063277418ede80b36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320923"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933023"
 ---
 # <a name="assemblies-and-the-global-assembly-cache-c"></a>Assemblys et le Global Assembly Cache (C#)
 Les assemblys constituent l’unité fondamentale dans le déploiement, la gestion de version, la portée d’activation et les autorisations de sécurité d’une application .NET. Les assemblys prennent la forme d’un fichier exécutable (.exe) ou d’un fichier de bibliothèque de liens dynamiques (.dll) et sont les blocs de construction du .NET Framework. Ils fournissent au Common Language Runtime les informations dont il a besoin pour connaître les implémentations de type. Vous pouvez comparer un assembly à une collection de types et de ressources conçus pour opérer ensemble et former une unité logique de fonctionnalité.  
@@ -27,7 +27,7 @@ Les assemblys constituent l’unité fondamentale dans le déploiement, la gesti
 -   Si vous voulez charger un assembly seulement pour l’inspecter, utilisez une méthode comme <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>.  
   
 ## <a name="assembly-manifest"></a>Manifeste d'assembly  
- Tous les assemblys contiennent un *manifeste d’assembly*. Semblable à une table des matières, le manifeste d’assembly contient les éléments suivants :  
+ Il existe un *manifeste d’assembly* dans tous les assemblys. Semblable à une table des matières, le manifeste d’assembly contient les éléments suivants :  
   
 -   L’identité de l’assembly (nom et version).  
   

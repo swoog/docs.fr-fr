@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579832"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925722"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Bonnes pratiques pour les expressions régulières dans .NET
 <a name="top"></a> Le moteur d’expressions régulières de .NET est un outil puissant et complet. Il traite le texte en fonction de correspondances de modèles plutôt qu’en comparant et en confrontant le texte littéral. Dans la plupart des cas, il exécute les critères spéciaux de façon rapide et efficace. Toutefois, dans certains cas, le moteur des expressions régulières peut sembler très lent. Dans des cas extrêmes, il semble même cesser de répondre. Il traite en effet peu d'entrées sur une période de plusieurs heures ou même de plusieurs jours.  
@@ -190,7 +190,7 @@ ms.locfileid: "33579832"
   
  Étant donné qu'une limite de mot est différente d'un caractère alphabétique et qu'elle n'est pas un sous-ensemble de ce dernier, il est impossible que le moteur des expressions régulières franchisse une limite de mot lors de la mise en correspondance de caractères alphabétiques. Cela signifie que, pour cette expression régulière, une rétroaction ne peut jamais contribuer à la réussite globale d'une correspondance. Elle risque en revanche de diminuer les performances, étant donné que le moteur des expressions régulières doit impérativement enregistrer sont état pour chaque correspondance préliminaire d'un caractère alphabétique trouvée.  
   
- Si vous concluez que le retour arrière n'est pas nécessaire, vous pouvez le désactiver à l'aide de l'élément de langage `(?>``subexpression``)`. L'exemple suivant analyse une chaîne d'entrée à l'aide de deux expressions régulières. La première, `\b\p{Lu}\w*\b`, utilise la rétroaction. La seconde, `\b\p{Lu}(?>\w*)\b`, désactive la rétroaction. Comme l'indique la sortie de l'exemple, les résultats obtenus sont identiques.  
+ Si vous concluez que le retour arrière n'est pas nécessaire, vous pouvez le désactiver à l'aide de l'élément de langage `(?>subexpression)`. L'exemple suivant analyse une chaîne d'entrée à l'aide de deux expressions régulières. La première, `\b\p{Lu}\w*\b`, utilise la rétroaction. La seconde, `\b\p{Lu}(?>\w*)\b`, désactive la rétroaction. Comme l'indique la sortie de l'exemple, les résultats obtenus sont identiques.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579832"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- Lorsque vous utilisez des sous-expressions uniquement pour y appliquer des quantificateurs et que le texte capturé ne vous intéresse pas, vous devez désactiver les captures de groupe. Par exemple, l'élément de langage `(?:``subexpression``)` empêche le groupe auquel il s'applique de capturer les sous-chaînes correspondantes. Dans l'exemple suivant, le modèle d'expression régulière de l'exemple précédent est remplacé par `\b(?:\w+[;,]?\s?)+[.?!]`. Comme l'indique la sortie, le moteur des expressions régulières ne peut pas remplir les collections <xref:System.Text.RegularExpressions.GroupCollection> et <xref:System.Text.RegularExpressions.CaptureCollection>.  
+ Lorsque vous utilisez des sous-expressions uniquement pour y appliquer des quantificateurs et que le texte capturé ne vous intéresse pas, vous devez désactiver les captures de groupe. Par exemple, l'élément de langage `(?:subexpression)` empêche le groupe auquel il s'applique de capturer les sous-chaînes correspondantes. Dans l'exemple suivant, le modèle d'expression régulière de l'exemple précédent est remplacé par `\b(?:\w+[;,]?\s?)+[.?!]`. Comme l'indique la sortie, le moteur des expressions régulières ne peut pas remplir les collections <xref:System.Text.RegularExpressions.GroupCollection> et <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  Vous pouvez désactiver les captures de l'une des façons suivantes :  
   
--   Utilisez l'élément de langage `(?:``subexpression``)`. Cet élément empêche la capture des sous-chaînes correspondantes dans le groupe auquel il s'applique. Il ne désactive pas les captures de la sous-chaîne dans les groupes imbriqués.  
+-   Utilisez l'élément de langage `(?:subexpression)`. Cet élément empêche la capture des sous-chaînes correspondantes dans le groupe auquel il s'applique. Il ne désactive pas les captures de la sous-chaîne dans les groupes imbriqués.  
   
--   Utilisez l'option <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Elle désactive toutes les captures implicites ou sans nom dans le modèle d’expression régulière. Avec cette option, seules les sous-chaînes qui correspondent à des groupes nommés définis avec l'élément de langage `(?<``name``>``subexpression``)` peuvent être capturées. L'indicateur <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> peut être passé au paramètre `options` d'un constructeur de classe <xref:System.Text.RegularExpressions.Regex> ou au paramètre `options` d'une méthode correspondante statique <xref:System.Text.RegularExpressions.Regex>.  
+-   Utilisez l'option <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Elle désactive toutes les captures implicites ou sans nom dans le modèle d’expression régulière. Avec cette option, seules les sous-chaînes qui correspondent à des groupes nommés définis avec l'élément de langage `(?<name>subexpression)` peuvent être capturées. L'indicateur <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> peut être passé au paramètre `options` d'un constructeur de classe <xref:System.Text.RegularExpressions.Regex> ou au paramètre `options` d'une méthode correspondante statique <xref:System.Text.RegularExpressions.Regex>.  
   
 -   Utilisez l'option `n` dans l'élément de langage `(?imnsx)`. Cette option désactive toutes les captures implicites ou sans nom à partir du point où l'élément apparaît dans le modèle d'expression régulière. Les captures sont désactivées jusqu'à la fin du modèle ou jusqu'à ce que l'option `(-n)` active les captures implicites ou sans nom. Pour plus d’informations, consultez [Constructions diverses](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Utilisez l'option `n` dans l'élément de langage `(?imnsx:``subexpression``)`. Cette option désactive toutes les captures implicites ou sans nom dans `subexpression`. Les captures effectuées par les groupes de capture imbriqués implicites ou sans nom sont également désactivées.  
+-   Utilisez l'option `n` dans l'élément de langage `(?imnsx:subexpression)`. Cette option désactive toutes les captures implicites ou sans nom dans `subexpression`. Les captures effectuées par les groupes de capture imbriqués implicites ou sans nom sont également désactivées.  
   
  [Retour au début](#top)  
   

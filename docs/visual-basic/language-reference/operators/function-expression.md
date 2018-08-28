@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: 29bf95a336b6f6ed5c9c310c9ea7575a91089361
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfdd17f6f4ee6c4ddb3fa73ab3ec9c5ce46a162f
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604885"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998948"
 ---
 # <a name="function-expression-visual-basic"></a>Expression de fonction (Visual Basic)
 Déclare les paramètres et le code qui définissent une expression lambda de fonction.  
@@ -35,7 +35,7 @@ End Function
 |`statements`|Obligatoire. Une liste d’instructions qui retourne une valeur à l’aide de la `Return` instruction. (Consultez [instruction Return](../../../visual-basic/language-reference/statements/return-statement.md).) Le type de la valeur retournée est le type de retour de la fonction.|  
   
 ## <a name="remarks"></a>Notes  
- A *expression lambda* est une fonction sans nom qui calcule et retourne une valeur. Vous pouvez utiliser une expression lambda partout où vous pouvez utiliser un type délégué, sauf en tant qu’argument à `RemoveHandler`. Pour plus d’informations sur les délégués et l’utilisation d’expressions lambda avec les délégués, consultez [instruction Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) et [Conversion souple en délégué](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
+ Un *expression lambda* est une fonction sans nom qui calcule et retourne une valeur. Vous pouvez utiliser une expression lambda n’importe où vous pouvez utiliser un type délégué, sauf en tant qu’argument à `RemoveHandler`. Pour plus d’informations sur les délégués et l’utilisation d’expressions lambda avec les délégués, consultez [instruction Delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) et [Conversion souple des délégués](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md).  
   
 ## <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda  
  La syntaxe d’une expression lambda ressemble à celle d’une fonction standard. Les différences sont les suivantes :  
@@ -44,18 +44,18 @@ End Function
   
 -   Expressions lambda ne peut pas avoir de modificateurs, tels que `Overloads` ou `Overrides`.  
   
--   Les expressions lambda n’utilisent pas une `As` clause pour désigner le type de retour de la fonction. Au lieu de cela, le type est déduit à partir de la valeur que le corps d’une expression lambda sur une ligne a la valeur ou la valeur de retour d’une expression lambda multiligne. Par exemple, si le corps d’une expression lambda sur une ligne est `Where cust.City = "London"`, son type de retour est `Boolean`.  
+-   Expressions lambda n’utilisent pas un `As` clause pour désigner le type de retour de la fonction. Au lieu de cela, le type est déduit à partir de la valeur que prend le corps d’une expression lambda sur une ligne ou la valeur de retour d’une expression lambda multiligne. Par exemple, si le corps d’une expression lambda sur une ligne est `Where cust.City = "London"`, son type de retour est `Boolean`.  
   
--   Le corps d’une expression lambda sur une ligne doit être une expression, pas une instruction. Le corps peut se composer d’un appel à une procédure function, mais pas d’un appel à une procédure sub.  
+-   Le corps d’une expression lambda sur une ligne doit être une expression, pas une instruction. Le corps peut se composer d’un appel à une procédure de fonction, mais pas un appel à une procédure sub.  
   
--   Tous les paramètres doivent avoir indiqué les types de données ou de l’ensemble doit être déduit.  
+-   Tous les paramètres doivent avoir spécifié les types de données ou l’ensemble doit être déduit.  
   
 -   Paramètres facultatifs et Paramarray ne sont pas autorisées.  
   
 -   Paramètres génériques ne sont pas autorisées.  
   
 ## <a name="example"></a>Exemple  
- Les exemples suivants montrent deux façons de créer des expressions lambda simples. Le premier utilise un `Dim` pour fournir un nom pour la fonction. Pour appeler la fonction, vous envoyez une valeur pour le paramètre.  
+ Les exemples suivants montrent deux façons de créer des expressions lambda simple. Le premier utilise un `Dim` à fournir un nom pour la fonction. Pour appeler la fonction, vous envoyez une valeur pour le paramètre.  
   
  [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
   
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
   
 ## <a name="example"></a>Exemple  
- Expressions lambda sous-tendent à de nombreux opérateurs de requête de [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]et peuvent être utilisées explicitement dans les requêtes basées sur une méthode. L’exemple suivant montre une manière classique [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requête, suivie de la traduction de la requête au format de la méthode.  
+ Expressions lambda sous-tendent à la plupart des opérateurs de requête dans [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]et peut être utilisée explicitement dans les requêtes fondées sur une méthode. L’exemple suivant présente un standard [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requête, suivie de la traduction de la requête au format de la méthode.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,7 +85,7 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- Pour plus d’informations sur les méthodes de requête, consultez [requêtes](../../../visual-basic/language-reference/queries/queries.md). Pour plus d’informations sur les opérateurs de requête standard, consultez [vue d’ensemble des opérateurs de requête Standard](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
+ Pour plus d’informations sur les méthodes de requête, consultez [requêtes](../../../visual-basic/language-reference/queries/index.md). Pour plus d’informations sur les opérateurs de requête standard, consultez [vue d’ensemble des opérateurs de requête Standard](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Function (instruction)](../../../visual-basic/language-reference/statements/function-statement.md)  
