@@ -14,29 +14,29 @@ helpviewer_keywords:
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1841fbfcb76d5b56681b63ec4b39e9a7418707f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f60a2283c01d0dc2665dafaa99ea52000aa3bc47
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576140"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931205"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>Noms de classes, de structures et d'interfaces
-Les instructions d’affectation de noms qui suivent s’appliquent aux noms de type général.  
+Les instructions d’affectation de noms qui suivent s’appliquent au type général d’affectation de noms.  
   
  **✓ DO** un nom de classes et structs avec des noms ou des expressions nominales, à l’aide de la casse Pascal.  
   
- Cela permet de différencier les noms de types, ces méthodes sont nommées avec verbaux.  
+ Cette particularité le distingue les noms de types à partir de méthodes, qui sont nommés avec des expressions de verbe.  
   
  **✓ DO** nom interfaces phrases adjectivales ou parfois avec des noms ou des expressions nominales.  
   
- Les noms et des expressions nominales doivent être utilisées rarement et ils peuvent indiquer que le type doit être une classe abstraite et pas une interface.  
+ Noms et des expressions nominales doivent être utilisées rarement et ils peuvent indiquer que le type doit être une classe abstraite et pas une interface.  
   
  **X DO NOT** donner des noms de classe un préfixe (par exemple, « C »).  
   
  **✓ CONSIDER** se terminant par le nom de classes dérivées portant le nom de la classe de base.  
   
- Cela est très lisible et explique la relation clairement. Voici quelques exemples de ce code : `ArgumentOutOfRangeException`, qui est une sorte de `Exception`, et `SerializableAttribute`, qui est un type de `Attribute`. Toutefois, il est important d’utiliser les Réfléchissez soigneusement en appliquant cette indication ; par exemple, le `Button` classe est une sorte de `Control` événement, bien que `Control` n’apparaît pas dans son nom.  
+ Cela est très lisible et explique clairement de la relation. Voici quelques exemples de ce code : `ArgumentOutOfRangeException`, qui est un type de `Exception`, et `SerializableAttribute`, qui est un type de `Attribute`. Toutefois, il est important d’utiliser Réfléchissez soigneusement en appliquant cette recommandation ; par exemple, le `Button` classe est une sorte de `Control` événement, bien que `Control` n’apparaît pas dans son nom.  
   
  **✓ DO** préfixe les noms d’interface avec la lettre I, pour indiquer que le type est une interface.  
   
@@ -60,32 +60,32 @@ public struct Nullable<T> where T:struct { ... }
  **✓ DO** préfixe des noms de paramètre de type descriptifs avec `T`.  
   
 ```  
-public interface ISessionChannel<TSession> where TSession : ISession{  
+public interface ISessionChannel<TSession> where TSession : ISession {  
     TSession Session { get; }  
 }  
 ```  
   
  **✓ CONSIDER** indiquer les contraintes placées sur un paramètre de type dans le nom du paramètre.  
   
- Par exemple, un paramètre contraint à `ISession` peut être appelée `TSession`.  
+ Par exemple, un paramètre limité à `ISession` peut être appelée `TSession`.  
   
 ## <a name="names-of-common-types"></a>Noms des Types courants  
  **✓ DO** suivez les instructions décrites dans le tableau suivant lorsque vous nommez des types dérivés ou implémenter certains types .NET Framework.  
   
-|Base Type|Règle de Type dérivé/de mise en œuvre|  
+|Base Type|Règle de Type dérivé et l’implémentation de|  
 |---------------|------------------------------------------|  
 |`System.Attribute`|**✓ DO** ajouter le suffixe « Attribute » aux noms des classes d’attributs personnalisés.|  
 |`System.Delegate`|**✓ DO** ajouter le suffixe « EventHandler » aux noms de délégués qui sont utilisés dans les événements.<br /><br /> **✓ DO** ajouter le suffixe « Rappel » aux noms de délégués autres que ceux utilisés en tant que gestionnaires d’événements.<br /><br /> **X DO NOT** ajouter le suffixe « Délégué » à un délégué.|  
 |`System.EventArgs`|**✓ DO** ajouter le suffixe « EventArgs ».|  
 |`System.Enum`|**X DO NOT** dériver de cette classe ; utilisez le mot clé pris en charge par votre langage à la place ; par exemple, en c#, utilisez le `enum` (mot clé).<br /><br /> **X DO NOT** ajouter le suffixe « Enum » ou « Indicateur ».|  
 |`System.Exception`|**✓ DO** ajouter le suffixe « Exception ».|  
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** ajouter le suffixe « Dictionnaire ». Notez que `IDictionary` est un type spécifique de la collection, mais cette instruction est prioritaire sur la règle de collections plus générale qui suit.|  
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|**✓ DO** ajouter le suffixe « Dictionnaire ». Notez que `IDictionary` est un type spécifique de collection, mais cette instruction est prioritaire sur la règle de collections plus générale qui suit.|  
 |`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|**✓ DO** ajouter le suffixe « Collection ».|  
 |`System.IO.Stream`|**✓ DO** ajouter le suffixe « Stream ».|  
 |`CodeAccessPermission IPermission`|**✓ DO** ajouter le suffixe « Autorisation ».|  
   
 ## <a name="naming-enumerations"></a>Énumérations d’affectation de noms  
- Noms des types énumération (également appelés enums) en général doivent respecter les règles d’affectation de noms de type standard (casse Pascal, etc.). Toutefois, il existe des instructions supplémentaires qui s’appliquent spécifiquement aux enums.  
+ Noms des types énumération (également appelés enums) en général doivent respecter les règles d’affectation de noms de type standard (casse Pascal, etc.). Toutefois, il existe des recommandations supplémentaires qui s’appliquent spécifiquement aux enums.  
   
  **✓ DO** utiliser un nom de type au singulier pour une énumération, sauf si ses valeurs sont les champs de bits.  
   
@@ -99,7 +99,7 @@ public interface ISessionChannel<TSession> where TSession : ISession{
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi  
  [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
