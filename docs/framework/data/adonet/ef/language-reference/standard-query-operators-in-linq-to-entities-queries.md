@@ -1,23 +1,23 @@
 ---
 title: Opérateurs de requête standard dans les requêtes LINQ to Entities
-ms.date: 03/30/2017
+ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: a65f759ef51d34cc3ac6d37fe3575b9e89aadf7c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766398"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238561"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Opérateurs de requête standard dans les requêtes LINQ to Entities
-Dans une requête, vous indiquez les informations que vous voulez extraire de la source de données. Une requête peut également spécifier la manière dont ces informations doivent être triées, regroupées et mises en forme avant d'être retournées. LINQ fournit un ensemble de méthodes de requête standard utilisables dans une requête. La plupart de ces méthodes fonctionne sur des séquences ; Dans ce contexte, une séquence est un objet dont le type implémente le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Les fonctionnalités de requête des opérateurs de requête standard incluent le filtrage, la projection, l'agrégation, le tri, le regroupement, la pagination, etc. Certains des opérateurs de requête standard les plus couramment utilisés ont une syntaxe de mots clés dédiée qui leur permet d'être appelés à l'aide d'une syntaxe d'expression de requête. Une expression de requête est une façon différente et plus lisible d'exprimer une requête que son équivalent fondé sur une méthode. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation. Pour obtenir la liste des opérateurs de requête standard qui possèdent des clauses d’expression de requête équivalente, consultez [vue d’ensemble des opérateurs de requête Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Dans une requête, vous indiquez les informations que vous voulez extraire de la source de données. Une requête peut également spécifier la manière dont ces informations doivent être triées, regroupées et mises en forme avant d'être retournées. LINQ fournit un ensemble de méthodes de requête standard utilisables dans une requête. La plupart de ces méthodes fonctionne sur des séquences ; Dans ce contexte, une séquence est un objet dont le type implémente le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Les fonctionnalités de requête des opérateurs de requête standard incluent le filtrage, la projection, l'agrégation, le tri, le regroupement, la pagination, etc. Certains des opérateurs de requête standard les plus couramment utilisés ont une syntaxe de mots clés dédiée qui leur permet d'être appelés à l'aide d'une syntaxe d'expression de requête. Une expression de requête est une façon différente et plus lisible d'exprimer une requête que son équivalent fondé sur une méthode. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation. Pour obtenir la liste des opérateurs de requête standard qui comportent des clauses d’expression de requête équivalente, consultez [vue d’ensemble des opérateurs de requête Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
- Certains opérateurs de requête standard ne sont pas pris en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Pour plus d’informations, consultez [pris en charge et les méthodes non prises en charge de LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Cette rubrique fournit des informations sur les opérateurs de requête standard qui sont spécifiques à [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Pour plus d’informations sur les problèmes connus dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de requêtes, consultez [problèmes connus et des considérations dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
+ Certains opérateurs de requête standard ne sont pas pris en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Pour plus d’informations, consultez [pris en charge et les méthodes LINQ non prises en charge (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Cette rubrique fournit des informations sur les opérateurs de requête standard qui sont spécifiques à [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Pour plus d’informations sur les problèmes connus dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de requêtes, consultez [problèmes connus et des considérations dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
 ## <a name="projection-and-filtering-methods"></a>Méthodes de projection et de filtrage  
  *Projection* fait référence à la transformation des éléments d’un jeu de résultats dans une forme souhaitée. Par exemple, vous pouvez projeter un sous-ensemble des propriétés dont vous avez besoin de chaque objet du jeu de résultats, vous pouvez projeter une propriété et lui appliquer un calcul mathématique, ou vous pouvez projeter l'objet entier à partir du jeu de résultats. Les méthodes de projection sont `Select` et `SelectMany`.  
   
- *Le filtrage* fait référence à l’opération de restriction du jeu de résultats à contenir uniquement les éléments qui correspondent à une condition spécifiée. La méthode de filtrage est `Where`.  
+ *Filtrage* fait référence à l’opération de restriction du jeu de résultats à contienne uniquement les éléments qui correspondent à une condition spécifiée. La méthode de filtrage est `Where`.  
   
  La plupart des surcharges des méthodes de projection et de filtrage sont prises en charge dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], à l'exception de celles qui acceptent un argument positionnel.  
   
@@ -67,14 +67,14 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
 |`Sum`|Retourne la valeur NULL.|Retourne la valeur NULL.|Retourne la somme de la valeur non NULL dans une séquence.|Calcule la somme d'une séquence de valeurs numériques.|  
   
 ## <a name="type-methods"></a>Méthodes de type  
- Les deux méthodes LINQ qui traitent de la conversion et des tests de types sont prises en charge dans le contexte d'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Cela signifie que les seuls types pris en charge sont les types qui correspondent au type [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] approprié. Pour obtenir la liste de ces types, consultez [Types de modèle conceptuel (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Les méthodes de type sont `Convert` et `OfType`.  
+ Les deux méthodes LINQ qui traitent de la conversion et des tests de types sont prises en charge dans le contexte d'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Cela signifie que les seuls types pris en charge sont les types qui correspondent au type [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] approprié. Pour obtenir la liste de ces types, consultez [Types du modèle conceptuel (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Les méthodes de type sont `Convert` et `OfType`.  
   
  La méthode `OfType` est prise en charge pour les types d'entités. La méthode `Convert` est prise en charge pour les types primitifs de modèle conceptuel.  Les méthodes C# `is` et `as` sont également prises en charge.  
   
 ## <a name="paging-methods"></a>Méthodes de pagination  
- Les opérations de pagination retournent un élément unique et spécifique à partir d'une séquence. Les méthodes d'éléments sont `ElementAt`, `First`, `FirstOrDefault`, `Last`, `LastOrDefault`, `Single`, `Skip`, `Take` et `TakeWhile`.  
+ Opérations de pagination retournent un élément unique ou plusieurs éléments d’une séquence. Les méthodes de pagination prises en charge sont `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, et `Take`.  
   
- Certaines méthodes de pagination ne sont pas prises en charge en raison de l'impossibilité de mapper les fonctions à la source de données ou de l'absence de classement implicite des jeux dans la source de données. Les méthodes qui retournent une valeur par défaut sont limitées aux types primitifs de modèle conceptuel et aux types référence avec des valeurs par défaut NULL. Les méthodes de pagination qui sont exécutées sur une séquence vide retourneront la valeur NULL.  
+ Un nombre de méthodes de pagination n’est pas compatibles, en raison de l’impossibilité pour mapper les fonctions à la source de données ou à l’absence de classement implicite des jeux sur la source de données. Les méthodes qui retournent une valeur par défaut sont limitées aux types primitifs de modèle conceptuel et aux types référence avec des valeurs par défaut NULL. Les méthodes de pagination qui sont exécutées sur une séquence vide retourneront la valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes LINQ prises en charge et non prises en charge (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
