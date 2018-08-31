@@ -11,11 +11,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931613"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258575"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Vue d'ensemble de TextPattern et des objets incorporés
 > [!NOTE]
@@ -78,7 +78,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retourne la chaîne « l’URL http://www.microsoft.com est incorporée dans le texte ».|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit de l' <xref:System.Windows.Automation.AutomationElement> qui représente le fournisseur de texte lui-même.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne un <xref:System.Windows.Automation.AutomationElement> qui représente le contrôle de lien hypertexte.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetChildren` précédente.|Retourne la plage qui représente «http://www.microsoft.com».|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetChildren` précédente.|Retourne la plage qui représente « http://www.microsoft.com».|  
   
  **Exemple 2 - Plage de texte couvrant partiellement un lien hypertexte textuel incorporé**  
   
