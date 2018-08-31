@@ -1,7 +1,7 @@
 ---
 title: Tableau des valeurs par défaut (référence C#)
-description: Découvrez les valeurs par défaut des types valeur qui sont retournées par les constructeurs par défaut.
-ms.date: 07/20/2015
+description: Découvrez quelles sont les valeurs par défaut des types valeur C#.
+ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
@@ -11,51 +11,65 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-ms.openlocfilehash: 634a55304534b4269487f29be1fbb4930f51d8ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218788"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935837"
 ---
-# <a name="default-values-table-c-reference"></a><span data-ttu-id="23d2a-103">Tableau des valeurs par défaut (référence C#)</span><span class="sxs-lookup"><span data-stu-id="23d2a-103">Default values table (C# Reference)</span></span>
+# <a name="default-values-table-c-reference"></a><span data-ttu-id="bb05a-103">Tableau des valeurs par défaut (référence C#)</span><span class="sxs-lookup"><span data-stu-id="bb05a-103">Default values table (C# Reference)</span></span>
 
-<span data-ttu-id="23d2a-104">Le tableau suivant indique les valeurs par défaut de types valeur qui sont retournées par les constructeurs par défaut.</span><span class="sxs-lookup"><span data-stu-id="23d2a-104">The following table shows the default values of value types returned by the default constructors.</span></span> <span data-ttu-id="23d2a-105">Les constructeurs par défaut sont appelés au moyen de l’opérateur `new`, comme suit :</span><span class="sxs-lookup"><span data-stu-id="23d2a-105">Default constructors are invoked by using the `new` operator, as follows:</span></span>
+<span data-ttu-id="bb05a-104">Le tableau suivant présente les valeurs par défaut des [types valeur](value-types.md).</span><span class="sxs-lookup"><span data-stu-id="bb05a-104">The following table shows the default values of [value types](value-types.md).</span></span>
 
-```csharp
-int myInt = new int();
-```
-
-<span data-ttu-id="23d2a-106">L’instruction qui précède produit le même résultat que la suivante :</span><span class="sxs-lookup"><span data-stu-id="23d2a-106">The preceding statement has the same effect as the following statement:</span></span>
-
-```csharp
-int myInt = 0;
-```
-
-<span data-ttu-id="23d2a-107">Pour rappel, il n’est pas possible d’utiliser en C# des variables qui n’ont pas été initialisées.</span><span class="sxs-lookup"><span data-stu-id="23d2a-107">Remember that using uninitialized variables in C# is not allowed.</span></span>
-
-|<span data-ttu-id="23d2a-108">Type de valeur</span><span class="sxs-lookup"><span data-stu-id="23d2a-108">Value type</span></span>|<span data-ttu-id="23d2a-109">Valeur par défaut</span><span class="sxs-lookup"><span data-stu-id="23d2a-109">Default value</span></span>|
+|<span data-ttu-id="bb05a-105">Type valeur</span><span class="sxs-lookup"><span data-stu-id="bb05a-105">Value type</span></span>|<span data-ttu-id="bb05a-106">Valeur par défaut</span><span class="sxs-lookup"><span data-stu-id="bb05a-106">Default value</span></span>|
 |----------------|-------------------|
-|[<span data-ttu-id="23d2a-110">bool</span><span class="sxs-lookup"><span data-stu-id="23d2a-110">bool</span></span>](bool.md)|`false`|
-|[<span data-ttu-id="23d2a-111">byte</span><span class="sxs-lookup"><span data-stu-id="23d2a-111">byte</span></span>](byte.md)|<span data-ttu-id="23d2a-112">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-112">0</span></span>|
-|[<span data-ttu-id="23d2a-113">char</span><span class="sxs-lookup"><span data-stu-id="23d2a-113">char</span></span>](char.md)|<span data-ttu-id="23d2a-114">'\0'</span><span class="sxs-lookup"><span data-stu-id="23d2a-114">'\0'</span></span>|
-|[<span data-ttu-id="23d2a-115">decimal</span><span class="sxs-lookup"><span data-stu-id="23d2a-115">decimal</span></span>](decimal.md)|<span data-ttu-id="23d2a-116">0M</span><span class="sxs-lookup"><span data-stu-id="23d2a-116">0M</span></span>|
-|[<span data-ttu-id="23d2a-117">double</span><span class="sxs-lookup"><span data-stu-id="23d2a-117">double</span></span>](double.md)|<span data-ttu-id="23d2a-118">0.0D</span><span class="sxs-lookup"><span data-stu-id="23d2a-118">0.0D</span></span>|
-|[<span data-ttu-id="23d2a-119">enum</span><span class="sxs-lookup"><span data-stu-id="23d2a-119">enum</span></span>](enum.md)|<span data-ttu-id="23d2a-120">Valeur produite par l’expression (E)0, où E est l’identificateur de l’enum.</span><span class="sxs-lookup"><span data-stu-id="23d2a-120">The value produced by the expression (E)0, where E is the enum identifier.</span></span>|
-|[<span data-ttu-id="23d2a-121">float</span><span class="sxs-lookup"><span data-stu-id="23d2a-121">float</span></span>](float.md)|<span data-ttu-id="23d2a-122">0.0F</span><span class="sxs-lookup"><span data-stu-id="23d2a-122">0.0F</span></span>|
-|[<span data-ttu-id="23d2a-123">int</span><span class="sxs-lookup"><span data-stu-id="23d2a-123">int</span></span>](int.md)|<span data-ttu-id="23d2a-124">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-124">0</span></span>|
-|[<span data-ttu-id="23d2a-125">long</span><span class="sxs-lookup"><span data-stu-id="23d2a-125">long</span></span>](long.md)|<span data-ttu-id="23d2a-126">0L</span><span class="sxs-lookup"><span data-stu-id="23d2a-126">0L</span></span>|
-|[<span data-ttu-id="23d2a-127">sbyte</span><span class="sxs-lookup"><span data-stu-id="23d2a-127">sbyte</span></span>](sbyte.md)|<span data-ttu-id="23d2a-128">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-128">0</span></span>|
-|[<span data-ttu-id="23d2a-129">short</span><span class="sxs-lookup"><span data-stu-id="23d2a-129">short</span></span>](short.md)|<span data-ttu-id="23d2a-130">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-130">0</span></span>|
-|[<span data-ttu-id="23d2a-131">struct</span><span class="sxs-lookup"><span data-stu-id="23d2a-131">struct</span></span>](struct.md)|<span data-ttu-id="23d2a-132">Valeur produite en affectant à tous les champs de type valeur leur valeur par défaut et à tous les champs de type référence la valeur `null`.</span><span class="sxs-lookup"><span data-stu-id="23d2a-132">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
-|[<span data-ttu-id="23d2a-133">uint</span><span class="sxs-lookup"><span data-stu-id="23d2a-133">uint</span></span>](uint.md)|<span data-ttu-id="23d2a-134">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-134">0</span></span>|
-|[<span data-ttu-id="23d2a-135">ulong</span><span class="sxs-lookup"><span data-stu-id="23d2a-135">ulong</span></span>](ulong.md)|<span data-ttu-id="23d2a-136">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-136">0</span></span>|
-|[<span data-ttu-id="23d2a-137">ushort</span><span class="sxs-lookup"><span data-stu-id="23d2a-137">ushort</span></span>](ushort.md)|<span data-ttu-id="23d2a-138">0</span><span class="sxs-lookup"><span data-stu-id="23d2a-138">0</span></span>|
+|[<span data-ttu-id="bb05a-107">bool</span><span class="sxs-lookup"><span data-stu-id="bb05a-107">bool</span></span>](bool.md)|`false`|
+|[<span data-ttu-id="bb05a-108">byte</span><span class="sxs-lookup"><span data-stu-id="bb05a-108">byte</span></span>](byte.md)|<span data-ttu-id="bb05a-109">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-109">0</span></span>|
+|[<span data-ttu-id="bb05a-110">char</span><span class="sxs-lookup"><span data-stu-id="bb05a-110">char</span></span>](char.md)|<span data-ttu-id="bb05a-111">'\0'</span><span class="sxs-lookup"><span data-stu-id="bb05a-111">'\0'</span></span>|
+|[<span data-ttu-id="bb05a-112">decimal</span><span class="sxs-lookup"><span data-stu-id="bb05a-112">decimal</span></span>](decimal.md)|<span data-ttu-id="bb05a-113">0M</span><span class="sxs-lookup"><span data-stu-id="bb05a-113">0M</span></span>|
+|[<span data-ttu-id="bb05a-114">double</span><span class="sxs-lookup"><span data-stu-id="bb05a-114">double</span></span>](double.md)|<span data-ttu-id="bb05a-115">0.0D</span><span class="sxs-lookup"><span data-stu-id="bb05a-115">0.0D</span></span>|
+|[<span data-ttu-id="bb05a-116">enum</span><span class="sxs-lookup"><span data-stu-id="bb05a-116">enum</span></span>](enum.md)|<span data-ttu-id="bb05a-117">Valeur produite par l’expression `(E)0`, où `E` est l’identificateur de l’enum.</span><span class="sxs-lookup"><span data-stu-id="bb05a-117">The value produced by the expression `(E)0`, where `E` is the enum identifier.</span></span>|
+|[<span data-ttu-id="bb05a-118">float</span><span class="sxs-lookup"><span data-stu-id="bb05a-118">float</span></span>](float.md)|<span data-ttu-id="bb05a-119">0.0F</span><span class="sxs-lookup"><span data-stu-id="bb05a-119">0.0F</span></span>|
+|[<span data-ttu-id="bb05a-120">int</span><span class="sxs-lookup"><span data-stu-id="bb05a-120">int</span></span>](int.md)|<span data-ttu-id="bb05a-121">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-121">0</span></span>|
+|[<span data-ttu-id="bb05a-122">long</span><span class="sxs-lookup"><span data-stu-id="bb05a-122">long</span></span>](long.md)|<span data-ttu-id="bb05a-123">0L</span><span class="sxs-lookup"><span data-stu-id="bb05a-123">0L</span></span>|
+|[<span data-ttu-id="bb05a-124">sbyte</span><span class="sxs-lookup"><span data-stu-id="bb05a-124">sbyte</span></span>](sbyte.md)|<span data-ttu-id="bb05a-125">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-125">0</span></span>|
+|[<span data-ttu-id="bb05a-126">short</span><span class="sxs-lookup"><span data-stu-id="bb05a-126">short</span></span>](short.md)|<span data-ttu-id="bb05a-127">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-127">0</span></span>|
+|[<span data-ttu-id="bb05a-128">struct</span><span class="sxs-lookup"><span data-stu-id="bb05a-128">struct</span></span>](struct.md)|<span data-ttu-id="bb05a-129">Valeur produite en affectant à tous les champs de type valeur leur valeur par défaut et à tous les champs de type référence la valeur `null`.</span><span class="sxs-lookup"><span data-stu-id="bb05a-129">The value produced by setting all value-type fields to their default values and all reference-type fields to `null`.</span></span>|
+|[<span data-ttu-id="bb05a-130">uint</span><span class="sxs-lookup"><span data-stu-id="bb05a-130">uint</span></span>](uint.md)|<span data-ttu-id="bb05a-131">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-131">0</span></span>|
+|[<span data-ttu-id="bb05a-132">ulong</span><span class="sxs-lookup"><span data-stu-id="bb05a-132">ulong</span></span>](ulong.md)|<span data-ttu-id="bb05a-133">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-133">0</span></span>|
+|[<span data-ttu-id="bb05a-134">ushort</span><span class="sxs-lookup"><span data-stu-id="bb05a-134">ushort</span></span>](ushort.md)|<span data-ttu-id="bb05a-135">0</span><span class="sxs-lookup"><span data-stu-id="bb05a-135">0</span></span>|
 
-## <a name="see-also"></a><span data-ttu-id="23d2a-139">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="23d2a-139">See also</span></span>
- [<span data-ttu-id="23d2a-140">Référence C#</span><span class="sxs-lookup"><span data-stu-id="23d2a-140">C# Reference</span></span>](../index.md)  
- [<span data-ttu-id="23d2a-141">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="23d2a-141">C# Programming Guide</span></span>](../../programming-guide/index.md)  
- [<span data-ttu-id="23d2a-142">Tableau des types valeur</span><span class="sxs-lookup"><span data-stu-id="23d2a-142">Value Types Table</span></span>](value-types-table.md)  
- [<span data-ttu-id="23d2a-143">Types valeur</span><span class="sxs-lookup"><span data-stu-id="23d2a-143">Value Types</span></span>](value-types.md)  
- [<span data-ttu-id="23d2a-144">Tableau des types intégrés</span><span class="sxs-lookup"><span data-stu-id="23d2a-144">Built-In Types Table</span></span>](built-in-types-table.md)  
- [<span data-ttu-id="23d2a-145">Tableaux de référence des types</span><span class="sxs-lookup"><span data-stu-id="23d2a-145">Reference Tables for Types</span></span>](reference-tables-for-types.md)
+## <a name="remarks"></a><span data-ttu-id="bb05a-136">Notes</span><span class="sxs-lookup"><span data-stu-id="bb05a-136">Remarks</span></span>
+
+<span data-ttu-id="bb05a-137">Vous ne pouvez pas utiliser des variables non initialisées en C#.</span><span class="sxs-lookup"><span data-stu-id="bb05a-137">You cannot use uninitialized variables in C#.</span></span> <span data-ttu-id="bb05a-138">Vous pouvez initialiser une variable avec la valeur par défaut de son type.</span><span class="sxs-lookup"><span data-stu-id="bb05a-138">You can initialize a variable with the default value of its type.</span></span> <span data-ttu-id="bb05a-139">Vous pouvez également utiliser la valeur par défaut d’un type pour spécifier la valeur par défaut de l’[argument facultatif](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) d’une méthode.</span><span class="sxs-lookup"><span data-stu-id="bb05a-139">You also can use the default value of a type to specify the default value of a method's [optional argument](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments).</span></span>
+
+<span data-ttu-id="bb05a-140">Utilisez l’[expression de valeur par défaut](../../programming-guide/statements-expressions-operators/default-value-expressions.md) pour produire la valeur par défaut d’un type, comme illustré dans l’exemple suivant :</span><span class="sxs-lookup"><span data-stu-id="bb05a-140">Use the [default value expression](../../programming-guide/statements-expressions-operators/default-value-expressions.md) to produce the default value of a type, as the following example shows:</span></span>
+
+```csharp
+int a = default(int);
+```
+
+<span data-ttu-id="bb05a-141">À compter de C# 7.1, vous pouvez utiliser le [littéral `default`](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) pour initialiser une variable avec la valeur par défaut de son type :</span><span class="sxs-lookup"><span data-stu-id="bb05a-141">Beginning with C# 7.1, you can use the [`default` literal](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) to initialize a variable with the default value of its type:</span></span>
+
+```csharp
+int a = default;
+```
+
+<span data-ttu-id="bb05a-142">Vous pouvez également utiliser le constructeur par défaut ou le constructeur par défaut implicite pour produire la valeur par défaut d’un type valeur, comme illustré dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="bb05a-142">You also can use the default constructor or the implicit default constructor to produce the default value of a value type, as the following example shows.</span></span> <span data-ttu-id="bb05a-143">Pour plus d’informations sur les constructeurs, consultez l’article [Constructeurs](../../programming-guide/classes-and-structs/constructors.md).</span><span class="sxs-lookup"><span data-stu-id="bb05a-143">For more information about constructors, see the [Constructors](../../programming-guide/classes-and-structs/constructors.md) article.</span></span>
+
+```csharp
+int a = new int();
+```
+
+<span data-ttu-id="bb05a-144">La valeur par défaut de tout [type référence](reference-types.md) est `null`.</span><span class="sxs-lookup"><span data-stu-id="bb05a-144">The default value of any [reference type](reference-types.md) is `null`.</span></span> <span data-ttu-id="bb05a-145">La valeur par défaut d’un [type nullable](../../programming-guide/nullable-types/index.md) est une instance pour laquelle la propriété <xref:System.Nullable%601.HasValue%2A> est `false` et la propriété <xref:System.Nullable%601.Value%2A> n’est pas définie.</span><span class="sxs-lookup"><span data-stu-id="bb05a-145">The default value of a [nullable type](../../programming-guide/nullable-types/index.md) is an instance for which the <xref:System.Nullable%601.HasValue%2A> property is `false` and the <xref:System.Nullable%601.Value%2A> property is undefined.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="bb05a-146">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bb05a-146">See also</span></span>
+
+- [<span data-ttu-id="bb05a-147">Référence C#</span><span class="sxs-lookup"><span data-stu-id="bb05a-147">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="bb05a-148">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="bb05a-148">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="bb05a-149">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="bb05a-149">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="bb05a-150">Tableaux de référence des types</span><span class="sxs-lookup"><span data-stu-id="bb05a-150">Reference tables for types</span></span>](reference-tables-for-types.md)
+- [<span data-ttu-id="bb05a-151">Types valeur</span><span class="sxs-lookup"><span data-stu-id="bb05a-151">Value types</span></span>](value-types.md)
+- [<span data-ttu-id="bb05a-152">Tableau des types valeur</span><span class="sxs-lookup"><span data-stu-id="bb05a-152">Value types table</span></span>](value-types-table.md)
+- [<span data-ttu-id="bb05a-153">Tableaux des types intégrés</span><span class="sxs-lookup"><span data-stu-id="bb05a-153">Built-in types table</span></span>](built-in-types-table.md)
