@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f163de89a3edbf3a4ca8509fdecd10f1aa1adf1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396790"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931048"
 ---
 # <a name="certificate-selection-and-validation"></a>Sélection et validation de certificats
 Les classes <xref:System.Net> prennent en charge plusieurs manières de sélectionner et de valider <xref:System.Security.Cryptography.X509Certificates> pour les connexions SSL (Secure Socket Layer). Un client peut sélectionner un ou plusieurs certificats pour s’authentifier auprès d’un serveur. Un serveur peut exiger qu’un certificat client ait un ou plusieurs attributs spécifiques pour l’authentification.  
@@ -43,7 +43,7 @@ Les classes <xref:System.Net> prennent en charge plusieurs manières de sélecti
   
  Vous pouvez utiliser *Winhttpcertcfg.exe* pour configurer les certificats clients. L’outil *Winhttpcertcfg.exe* est fourni avec le SDK Windows Server 2003. Il est également disponible en téléchargement dans le cadre des Outils du Kit de ressources techniques Windows Server 2003 sur www.microsoft.com.  
   
- Vous pouvez utiliser *HttpCfg.exe* pour configurer des certificats de serveur pour la classe <xref:System.Net.HttpListener>. *HttpCfg.exe* est l’un des outils de support pour Windows Server 2003 et Windows XP Service Pack 2. *HttpCfg.exe* et les autres outils de support ne sont pas installés par défaut sur Windows Server 2003 ou Windows XP. Sur Windows Server 2003, les outils de support sont installés séparément à partir du dossier et du fichier suivants sur le CD-ROM de Windows Server 2003 :  
+Vous pouvez utiliser *HttpCfg.exe* pour configurer des certificats de serveur pour la classe <xref:System.Net.HttpListener>. *HttpCfg.exe* est l’un des outils de support pour Windows Server 2003 et Windows XP Service Pack 2. *HttpCfg.exe* et les autres outils de support ne sont pas installés par défaut sur Windows Server 2003 ou Windows XP. Sur Windows Server 2003, les outils de support sont installés séparément à partir du dossier et du fichier suivants sur le CD-ROM de Windows Server 2003 :  
   
  \Support\Tools\Suptools.msi  
   

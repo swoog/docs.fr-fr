@@ -1,6 +1,6 @@
 ---
 title: Bonnes pratiques pour l’utilisation de chaînes dans .NET
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bdc23c909be0f9df051d538ca93cbb0a8e31426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14945cc6812e4bcb14085656337c7df1abc0a5bf
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579728"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000149"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Bonnes pratiques pour l’utilisation de chaînes dans .NET
 <a name="top"></a> .NET offre une prise en charge complète du développement d’applications localisées et globalisées, et facilite l’application des conventions de la culture actuelle ou d’une culture spécifique durant l’exécution d’opérations courantes telles que le tri et l’affichage de chaînes. Toutefois, le tri ou la comparaison de chaînes n'est pas toujours une opération dépendante de la culture. Par exemple, les chaînes utilisées en interne par une application doivent généralement être gérées de la même manière dans toutes les cultures. Quand des données de type chaîne culturellement indépendantes, telles que des balises XML, des balises HTML, des noms d'utilisateurs, des chemins d'accès aux fichiers et des noms d'objets système, sont interprétées comme si elles étaient dépendantes de la culture, le code d'application peut faire l'objet de bogues subtils, de performances médiocres et, dans certains cas, de problèmes de sécurité.  
@@ -121,7 +121,10 @@ ms.locfileid: "33579728"
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Détails de la comparaison de chaînes  
  La comparaison de chaînes est le cœur de nombreuses opérations liées aux chaînes, en particulier le tri et le test d'égalité. Les chaînes sont triées dans un ordre déterminé : si "my" s'affiche avant "string" dans une liste triée de chaînes, "my" doit être considéré comme inférieur ou égal à "string". En outre, la comparaison définit implicitement l'égalité. L'opération de comparaison retourne zéro pour les chaînes qu'il estime égales. Considérer qu'aucune chaîne n'est inférieure à l'autre constitue une bonne interprétation. La plupart des opérations significatives impliquant des chaînes incluent l'une des procédures suivantes, ou les deux : comparaison avec une autre chaîne et exécution d'une opération de tri bien définie.  
-  
+
+> [!NOTE]
+> Vous pouvez télécharger les [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un ensemble de fichiers texte qui contiennent des informations sur les poids des caractères utilisés dans les opérations de tri et de comparaison pour les systèmes d’exploitation Windows.
+
  Toutefois, l'évaluation de l'égalité ou de l'ordre de tri de deux chaînes ne produit pas un résultat correct unique ; le résultat dépend des critères utilisés pour comparer les chaînes. En particulier, les comparaisons de chaînes qui sont ordinales ou basées sur les conventions de casse et de tri de la culture actuelle ou la culture dite indifférente (culture aux paramètres régionaux non spécifiés basée sur la langue anglaise) peuvent produire des résultats différents.  
   
 <a name="current_culture"></a>   

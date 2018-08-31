@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592546"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925609"
 ---
 # <a name="whats-new-for-visual-basic"></a>Nouveautés de Visual Basic
 
@@ -23,33 +23,33 @@ Cette rubrique liste les noms des principales fonctionnalités de chaque version
   
 ## <a name="current-version"></a>Version actuelle
 
-Visual Basic 15.5   
+Visual Basic 15.5 / Visual Studio 2017 Version 15.5  
 Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Versions antérieures
 
-Visual Basic 15.3   
+Visual Basic 15.3 / Visual Studio 2017 Version 15.3  
 Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017   
+Visual Basic 2017 / Visual Studio 2017  
 Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 2017](#visual-basic-2017)
 
-Visual Basic / Visual Studio .NET 2015   
+Visual Basic / Visual Studio 2015   
 Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 14](#visual-basic-14)
 
-Visual Basic / Visual Studio .NET 2013  
+Visual Basic / Visual Studio 2013  
 Aperçus des technologies de la plateforme des compilateurs .NET (« Roslyn »)
 
-Visual Basic / Visual Studio .NET 2012   
+Visual Basic / Visual Studio 2012   
 Mots clés `Async` et `await`, itérateurs, attributs des informations de l’appelant
 
-Visual Basic, Visual Studio .NET 2010   
+Visual Basic, Visual Studio 2010   
 Propriétés implémentées automatiquement, initialiseurs de collection, continuation de ligne implicite, variance co/contra générique, dynamique, accès de l’espace de noms global
 
-Visual Basic / Visual Studio .NET 2008   
+Visual Basic / Visual Studio 2008   
 LINQ (Language Integrated Query), littéraux XML, inférence de type local, initialiseurs d’objet, types anonymes, méthodes d’extension, inférence de type `var` local, expressions lambda, opérateur `if`, méthodes partielles, types de valeur nullable  
 
-Visual Basic / Visual Studio .NET 2005   
+Visual Basic / Visual Studio 2005   
 Type `My` et types d’assistance (accès à l’application, ordinateur, système de fichiers, réseau)
 
 Visual Basic / Visual Studio .NET 2003   
@@ -123,7 +123,7 @@ Vous pouvez définir un littéral binaire à l’aide du préfixe `&B` ou `&b`. 
 
 Pour plus d’informations, consultez la section « Affectations de littéraux » des types de données [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) et [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-**Prise en charge des valeurs de retour de référence C#**
+[**Prise en charge des valeurs de retour de référence C#**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 À compter de C# 7.0, C# prend en charge les valeurs de retour de référence. Autrement dit, quand la méthode d’appel reçoit une valeur retournée par référence, elle peut modifier la valeur de la référence. Visual Basic ne vous autorise pas à créer des méthodes avec des valeurs de retour de référence, mais vous permet d’utiliser et de modifier ces valeurs.
 
@@ -159,25 +159,25 @@ Vous pouvez rechercher les valeurs Null à l’aide d’une syntaxe très légè
 [Littéraux de chaîne multiligne](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Les littéraux de chaîne peuvent contenir des séquences de saut de ligne.  Il n’est plus nécessaire de passer par la méthode `<xml><![CDATA[...text with newlines...]]></xml>.Value`.  
   
-Commentaires  
-Vous pouvez placer des commentaires après les continuations de ligne implicite, dans les expressions d’initialiseur et dans les termes d’expression LINQ.  
+**Commentaires**  
+Vous pouvez placer des commentaires après les continuations de lignes implicites, dans les expressions d’initialiseur et dans les termes d’expression LINQ.  
   
- Résolution de nom qualifié complet plus intelligente  
+**Résolution de nom qualifié complet plus intelligente**  
  En présence de code tel que `Threading.Thread.Sleep(1000)`, Visual Basic recherchait l’espace de noms « Threading », détectait l’ambiguïté entre System.Threading et System.Windows.Threading, et signalait une erreur.  Visual Basic prend désormais en compte les deux espaces de noms possibles.  Lorsque vous affichez la liste de saisie semi-automatique, les membres de ces deux types y sont recensés par l’éditeur Visual Studio.  
   
- Littéraux de date avec année en premier  
+ **Littéraux de date avec année en premier**  
  Vous pouvez avoir des littéraux de date au format aaaa-mm-jj, `#2015-03-17 16:10 PM#`.  
   
- Propriétés d’interface en lecture seule  
+ **Propriétés d’interface en lecture seule**  
  Vous pouvez implémenter des propriétés d’interface en lecture seule à l’aide d’une propriété readwrite.  L’interface garantit les fonctionnalités minimales et n’empêche pas une classe d’implémentation d’autoriser la définition de la propriété.  
   
  [TypeOf \<expr> IsNot \<type>](../../visual-basic/language-reference/operators/typeof-operator.md)  
  Pour une meilleure lisibilité du code, vous pouvez maintenant utiliser `TypeOf` avec `IsNot`.  
   
- [#Disable Warning \<ID> et #Enable Warning \<ID>](../../visual-basic/language-reference/directives/directives.md)  
+ [#Disable Warning \<ID> et #Enable Warning \<ID>](../../visual-basic/language-reference/directives/index.md)  
  Vous pouvez désactiver et activer des avertissements spécifiques pour les zones d’un fichier source.  
   
- Améliorations de la fonctionnalité de commentaires de document XML  
+ **Améliorations de la fonctionnalité de commentaires de document XML**  
  Lorsque vous écrivez des commentaires de document, vous bénéficiez d’un éditeur intelligent et de la prise en charge de version pour la validation des noms de paramètres, le gestion appropriée des `crefs` (génériques, opérateurs, etc.), la colorisation et la refactorisation.  
   
  [Définitions d’interface et de module partielles](../../visual-basic/language-reference/modifiers/partial.md)  
@@ -189,10 +189,10 @@ Vous pouvez placer des commentaires après les continuations de ligne implicite,
  [Les définitions de substitutions sont implicitement des surcharges](../../visual-basic/language-reference/modifiers/overrides.md)  
  Si vous ajoutez le modificateur `Overrides` à une définition, le compilateur ajoute `Overloads` de manière implicite, de sorte que vous pouvez taper moins de code dans les situations courantes.  
   
- CObj autorisé dans les arguments d’attributs  
+ **CObj autorisé dans les arguments d’attributs**  
  Le compilateur signalait l’erreur indiquant que CObj(...) n’est pas une constante lorsqu’il est utilisé dans les constructions d’attribut.  
   
- Déclaration et utilisation de méthodes ambiguës issues d’interfaces différentes  
+ **Déclaration et utilisation de méthodes ambiguës issues d’interfaces différentes**  
  Auparavant, le code suivant générait des erreurs qui vous empêchaient de déclarer `IMock` ou d’appeler `GetDetails` (s’ils avaient été déclarés en C#) :  
   
 ```vb  

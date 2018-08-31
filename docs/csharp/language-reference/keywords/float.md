@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028238"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932908"
 ---
 # <a name="float-c-reference"></a>float (référence C#)
 
@@ -21,7 +21,7 @@ Le mot clé `float` désigne un type simple qui stocke des valeurs à virgule fl
 
 |Type|Plage approximative|Précision|Type .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|-3.4 × 10<sup>38</sup> à +3.4 × 10<sup>38</sup>|7 chiffres|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1,5 x 10<sup>−45</sup> à ±3,4 x 10<sup>38</sup>|7 chiffres|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Littéraux
 
@@ -37,9 +37,9 @@ Si vous n’utilisez pas de suffixe dans la déclaration précédente, vous obti
 
 Vous pouvez combiner des types numériques intégraux et des types virgule flottante dans une expression. Dans ce cas, les types intégraux sont convertis en types virgule flottante. L’évaluation de l’expression est exécutée d’après les règles suivantes :
 
-- Si l’un des types virgule flottante est [double](double.md), l’expression prend la valeur [double](double.md) ou [bool](bool.md) dans les expressions relationnelles ou booléennes.
+- Si l’un des types virgule flottante est [double](double.md), l’expression prend la valeur [double](double.md), ou [bool](bool.md) dans les comparaisons relationnelles ou les comparaisons d’égalité.
 
-- S’il n’existe aucun type [double](double.md) dans l’expression, elle prend la valeur `float` ou [bool](bool.md) dans les expressions relationnelles ou booléennes.
+- S’il n’y a aucun type [double](double.md) dans l’expression, elle prend la valeur `float`, ou [bool](bool.md) dans les comparaisons relationnelles ou les comparaisons d’égalité.
 
 Une expression à virgule flottante peut contenir les ensembles de valeurs suivants :
 
@@ -65,12 +65,12 @@ Dans l’exemple suivant, un [int](int.md), un [short](short.md) et un `float` s
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.Single>  
-[Référence C#](../index.md)  
-[Guide de programmation C#](../../programming-guide/index.md)  
-[Cast et conversions de types](../../programming-guide/types/casting-and-type-conversions.md)  
-[Mots clés C#](index.md)  
-[Tableau des types intégraux](integral-types-table.md)  
-[Tableau des types intégrés](built-in-types-table.md)  
-[Tableau des conversions numériques implicites](implicit-numeric-conversions-table.md)  
-[Tableau des conversions numériques explicites](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>  
+- [Référence C#](../index.md)  
+- [Guide de programmation C#](../../programming-guide/index.md)  
+- [Cast et conversions de types](../../programming-guide/types/casting-and-type-conversions.md)  
+- [Mots clés C#](index.md)  
+- [Tableau des types intégraux](integral-types-table.md)  
+- [Tableau des types intégrés](built-in-types-table.md)  
+- [Tableau des conversions numériques implicites](implicit-numeric-conversions-table.md)  
+- [Tableau des conversions numériques explicites](explicit-numeric-conversions-table.md)  

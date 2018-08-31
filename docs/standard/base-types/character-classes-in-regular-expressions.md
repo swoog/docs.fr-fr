@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 241bc9756118cd2db15356dcc2c724a24c84d0fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579689"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931178"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caractères dans les expressions régulières
 <a name="Top"></a> Une classe de caractères définit un jeu de caractères, chacun d'entre eux pouvant apparaître dans une chaîne d'entrée pour aboutir à une correspondance. Le langage d’expression régulière dans .NET prend en charge les classes de caractères suivantes :  
@@ -168,7 +168,7 @@ ms.locfileid: "33579689"
 > [!NOTE]
 >  Étant donné qu'elle correspond à n'importe quel caractère sauf `\n`, la classe de caractères `.` correspond également à `\r` (retour chariot, \u000D).  
   
--   Dans un groupe de caractères négatif ou positif, un point est traité comme un caractère littéral de point, et non pas comme une classe de caractères. Pour plus d'informations, consultez [Groupe de caractères positif](#PositiveGroup) et [Groupe de caractères négatif](#NegativeGroup) plus haut dans cette rubrique. L'exemple suivant en propose une illustration. Il définit une expression régulière qui inclut le point (`.`) à la fois en tant que classe de caractères et en tant que membre d'un groupe de caractères positif. L'expression régulière `\b.*[.?!;:](\s|\z)` commence à une limite de mot, correspond à n'importe quel caractère tant qu'elle ne rencontre pas un des quatre signes de ponctuation, y compris le point, puis correspond à un espace blanc ou à la fin de la chaîne.  
+-   Dans un groupe de caractères négatif ou positif, un point est traité comme un caractère littéral de point, et non pas comme une classe de caractères. Pour plus d'informations, consultez [Groupe de caractères positif](#PositiveGroup) et [Groupe de caractères négatif](#NegativeGroup) plus haut dans cette rubrique. L'exemple suivant en propose une illustration. Il définit une expression régulière qui inclut le point (`.`) à la fois en tant que classe de caractères et en tant que membre d'un groupe de caractères positif. L’expression régulière `\b.*[.?!;:](\s|\z)` commence à une limite de mot, correspond à n’importe quel caractère tant qu’elle ne rencontre pas l’un des cinq signes de ponctuation, y compris le point, puis correspond à un espace blanc ou à la fin de la chaîne.  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
@@ -188,7 +188,7 @@ ms.locfileid: "33579689"
   
  correspond à n’importe quel caractère qui appartient à une catégorie Unicode générale ou à un bloc nommé, où *nom* est l’abréviation de la catégorie ou le nom du bloc nommé. Pour obtenir la liste des abréviations des catégories, consultez la section [Catégories générales Unicode prises en charge](#SupportedUnicodeGeneralCategories) plus loin dans cette rubrique. Pour obtenir la liste des blocs nommés, consultez la section [Blocs nommés pris en charge](#SupportedNamedBlocks) plus loin dans cette rubrique.  
   
- L'exemple suivant utilise la construction `\p{`*nom*`}` pour mettre en correspondance une catégorie Unicode générale (dans ce cas, la catégorie `Pd` ou Punctuation, Dash) et un bloc nommé (les blocs nommés `IsGreek` et `IsBasicLatin`).  
+ L’exemple suivant utilise la construction `\p{`*nom*`}` pour mettre en correspondance une catégorie Unicode générale (dans ce cas, la catégorie `Pd` ou Punctuation, Dash) et un bloc nommé (les blocs nommés `IsGreek` et `IsBasicLatin`).  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/category1.cs#6)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/category1.vb#6)]  

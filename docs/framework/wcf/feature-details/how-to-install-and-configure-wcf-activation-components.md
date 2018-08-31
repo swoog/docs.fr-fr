@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd792c2c26898cd3dfd7b52d865fa83636c426eb
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491746"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253971"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Comment : installer et configurer des composants d'activation WCF
-Cette rubrique décrit les étapes requises pour configurer le Service d’Activation des processus Windows (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
+Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP. Les sections suivantes définissent les étapes pour cette configuration :  
   
 -   Installer (ou vérifiez l’installation) les composants d’activation de WCF.  
   
 -   Configurer le service WAS pour prendre en charge un protocole non HTTP. La procédure suivante configure [!INCLUDE[wv](../../../../includes/wv-md.md)] pour l'activation TCP.  
   
- Une fois l’installation et configuration du service WAS, voir [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) pour les procédures pour créer un service WCF qui expose un point de terminaison non-HTTP qui utilise le service WAS.  
+ Une fois l’installation et configuration du service WAS, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) pour connaître les procédures créer un service WCF qui expose un point de terminaison non HTTP qui emploie WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Pour installer les composants d'activation non HTTP WCF  
   
@@ -26,7 +26,7 @@ Cette rubrique décrit les étapes requises pour configurer le Service d’Activ
   
 2.  Cliquez sur **programmes**, puis cliquez sur **programmes et fonctionnalités**.  
   
-3.  Sur le **tâches** menu, cliquez sur **ou désactiver des fonctionnalités Windows d’activer**.  
+3.  Sur le **tâches** menu, cliquez sur **ou désactiver des fonctionnalités Windows activer**.  
   
 4.  Recherchez le noeud [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], sélectionnez-le puis développez-le.  
   
@@ -51,7 +51,7 @@ Cette rubrique décrit les étapes requises pour configurer le Service d’Activ
     ```  
   
     > [!NOTE]
-    >  Cette commande est une ligne unique de texte. Cette commande active le /\<*Application WCF*> application accessible à l’aide des deux http://localhost  */ \<Application WCF >* et net.tcp:// localhost /*\<Application WCF >*.  
+    >  Cette commande est une ligne unique de texte. Cette commande active le /\<*Application WCF*> application accessible à l’aide des deux `http://localhost/<WCF Application>` et `net.tcp://localhost/<WCF Application>`.
   
      Supprimez la liaison de site net.tcp que vous avez ajoutée dans le cadre de cet exemple.  
   

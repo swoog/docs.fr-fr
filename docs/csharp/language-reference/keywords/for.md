@@ -1,5 +1,5 @@
 ---
-title: for (référence C#)
+title: for, instruction C#
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207920"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930948"
 ---
 # <a name="for-c-reference"></a>for (référence C#)
 
 L’instruction `for` exécute une instruction ou un bloc d’instructions jusqu’à ce qu’une expression booléenne spécifique corresponde à la valeur `true`.
 
 À tout moment dans le bloc d’instructions `for`, vous pouvez sortir de la boucle à l’aide de l’instruction [break](break.md), ou passer à l’itération suivante de la boucle à l’aide de l’instruction [continue](continue.md). Vous pouvez également quitter une boucle `for` en utilisant les instructions [goto](goto.md), [return](return.md) ou [throw](throw.md).
-  
+
 ## <a name="structure-of-the-for-statement"></a>Structure de l’instruction `for`
 
 Chaque instruction `for` définit des sections *initialiseur*, *condition* et *itérateur* :
-  
+
 ```csharp
-for (initializer; condition; iterator)  
-    body  
+for (initializer; condition; iterator)
+    body
 ```
 
 Ces trois sections sont facultatives. Le corps de la boucle est une instruction ou un bloc d’instructions.
@@ -45,11 +45,11 @@ Les instructions figurant dans la section *initialiseur* sont exécutées une se
 
   - Instruction d’[assignation](../operators/assignment-operator.md)
 
-  - Appel d’une méthode  
+  - Appel d’une méthode
 
-  - Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`  
+  - Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`
 
-  - Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`  
+  - Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`
 
   - Création d’un objet à l’aide du mot clé [new](new-operator.md)
 
@@ -73,15 +73,15 @@ i < 5
 
 ### <a name="the-iterator-section"></a>La section *itérateur*
 
-La section *itérateur* définit ce qui se produit après chaque itération du corps de la boucle. La section *itérateur* contient zéro, une ou plusieurs des expressions d’instruction suivantes, séparées par des virgules :  
+La section *itérateur* définit ce qui se produit après chaque itération du corps de la boucle. La section *itérateur* contient zéro, une ou plusieurs des expressions d’instruction suivantes, séparées par des virgules :
 
 - Instruction d’[assignation](../operators/assignment-operator.md)
 
-- Appel d’une méthode  
+- Appel d’une méthode
 
-- Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`  
+- Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`
 
-- Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`  
+- Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`
 
 - Création d’un objet à l’aide du mot clé [new](new-operator.md)
 
@@ -96,23 +96,23 @@ i++
 ## <a name="examples"></a>Exemples
 
 L’exemple suivant illustre plusieurs utilisations moins courantes des sections d’instruction `for` : l’attribution d’une valeur à une variable de boucle externe dans la section *initialiseur*, l’appel d’une méthode dans les sections *initialiseur* et *itérateur*, et la modification des valeurs de deux variables dans la section *itérateur*. Sélectionnez **Exécuter** pour exécuter l’exemple de code. Après cela, vous pouvez modifier le code et le réexécuter.
-  
+
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
-  
+
 L’exemple suivant définit la boucle `for` infinie :
-  
+
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
+
+## <a name="c-language-specification"></a>spécification du langage C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-  
+
 ## <a name="see-also"></a>Voir aussi
 
-[L’instruction for (spécification du langage C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[Référence C#](../index.md)  
-[Guide de programmation C#](../../programming-guide/index.md)  
-[Mots clés C#](index.md)  
-[foreach, in](foreach-in.md)  
-[for, instruction (C++)](/cpp/cpp/for-statement-cpp)  
-[Instructions d’itération](iteration-statements.md)
+- [L’instruction for (spécification du langage C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [foreach, in](foreach-in.md)
+- [for, instruction (C++)](/cpp/cpp/for-statement-cpp)
+- [Instructions d’itération](iteration-statements.md)

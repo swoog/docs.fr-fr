@@ -10,12 +10,12 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: ab732ffedfbe05b1b246d8d8eef1c374e223eb39
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401178"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931613"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Vue d'ensemble de TextPattern et des objets incorporés
 > [!NOTE]
@@ -41,12 +41,12 @@ Exemple de l'affichage du contenu pour une partie du conteneur de texte précéd
   
  Le contenu textuel (ou texte interne) d'un conteneur de texte et d'un objet incorporé, tel qu'un lien hypertexte ou une cellule de tableau, est exposé en tant que flux de texte unique et continu dans l'affichage de contrôle et l'affichage du contenu de l'arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ; le contour des objets est ignoré. Si un client UI Automation récupère le texte à des fins de récitation, interprétation ou analyse de quelque façon que ce soit, vous devez vérifier les cas spéciaux de la plage de texte, tels qu’un tableau avec du contenu textuel ou d’autres objets incorporés. Vous pouvez le faire en appelant <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> pour obtenir un <xref:System.Windows.Automation.AutomationElement> pour chaque objet incorporé, puis <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> pour obtenir une plage de texte pour chaque élément. Cette action se répète jusqu'à ce que tout le contenu textuel ait été récupéré.  
   
- ![Plages de texte couvertes par les objets incorporés. ] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
+ ![Plages de texte sur lesquelles s’étend des objets incorporés. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjecttextranges.png "UIA_TextPattern_EmbeddedObjectTextRanges")  
 Exemple de flux de texte avec des objets incorporés et leurs amplitudes  
   
  Quand il est nécessaire de parcourir le contenu d'une plage de texte, il faut effectuer une série d'étapes en arrière-plan pour assurer la bonne exécution de la méthode <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans les situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, « {l’U} RL [ http://www.microsoft.com ](http://www.microsoft.com) est incorporée dans le texte » où « { » et «} » est des points de terminaison de plage de texte.  
+1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, « {l’U} RL [ http://www.microsoft.com ](http://www.microsoft.com) est incorporée dans le texte » où « { » et «} » est des points de terminaison de plage de texte.  
   
 2.  La plage obtenue est déplacée vers l'arrière dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> au début de la limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
   
@@ -82,7 +82,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
   
  **Exemple 2 - Plage de texte couvrant partiellement un lien hypertexte textuel incorporé**  
   
- L’URL http://{[www]} est incorporée dans le texte.  
+ L’URL `http://{[www]}` est incorporée dans le texte.  
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
@@ -90,7 +90,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit du contrôle de lien hypertexte.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne `null` étant donné que la plage de texte ne couvre pas entièrement la chaîne d'URL.|  
   
- **Exemple 3 : une plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
+ **Exemple 3 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
   
  {L’URL} [ http://www.microsoft.com ](http://www.microsoft.com) est incorporée dans le texte.  
   
@@ -113,7 +113,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne un <xref:System.Windows.Automation.AutomationElement> qui représente le contrôle image.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> précédente.|Retourne la plage dégénérée qui représente «![exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")».|  
   
- **Exemple 2 - une plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte comporte une image incorporée qui ne fait pas partie de la plage de texte.**  
+ **Exemple 2 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte comporte une image incorporée qui ne fait pas partie de la plage de texte.**  
   
  {L’image} ![Exemple d’Image incorporée](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") est incorporée dans le texte.  
   
@@ -131,8 +131,8 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |Cellule avec l'image|Cellule avec le texte|  
 |---------------------|--------------------|  
 |![Incorporé exemple d’Image](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")|X|  
-|![Incorporé exemple d’Image 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
-|![Incorporé exemple d’Image 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Image pour Z|Z|  
+|![Incorporé exemple Image 2](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample2.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample2")|Y|  
+|![Incorporé exemple Image 3](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample3.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample3")<br /><br /> Image pour Z|Z|  
   
  **Exemple 1 - Obtenir le conteneur de texte à partir du contenu d'une cellule.**  
   
@@ -159,4 +159,4 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
  [Accéder à des objets incorporés à l’aide d’UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [Exposer le contenu d’une table à l’aide d’UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [Accéder au texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Exemple de sélection et de recherche de TextPattern](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [Recherche de TextPattern et exemple de sélection](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

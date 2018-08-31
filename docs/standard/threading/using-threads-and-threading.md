@@ -1,6 +1,6 @@
 ---
 title: Utilisation des threads et du threading
-ms.date: 03/30/2017
+ms.date: 08/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
@@ -8,39 +8,52 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725a47cae6e3e91cf9e7385427bceece81f3c918
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584178"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934129"
 ---
 # <a name="using-threads-and-threading"></a>Utilisation des threads et du threading
-Les rubriques de cette section décrivent la création et la gestion de threads managés. Elles expliquent également comment passer des données à des threads managés et obtenir des résultats en retour, et comment détruire des threads et gérer une exception <xref:System.Threading.ThreadAbortException>.  
+
+Avec .NET, vous pouvez écrire des applications qui effectuent plusieurs opérations en même temps. Les opérations présentant le risque d’accaparer les ressources d’autres opérations peuvent s’exécuter sur des threads distincts : ce processus est appelé *multithreading* ou *threading libre*.  
   
-## <a name="in-this-section"></a>Dans cette section  
- [Création de threads et passage de données au démarrage](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
- Décrit et illustre la création de threads managés, y compris la façon de passer des données à de nouveaux threads et d’obtenir des données en retour.  
+Les applications qui utilisent le multithreading sont plus réactives aux entrées utilisateur, car l’interface utilisateur reste active pendant que les tâches sollicitant beaucoup le processeur s’exécutent sur des threads distincts. Le multithreading est également utile quand vous créez des applications scalables, car vous pouvez ajouter des threads au fil de l’augmentation de la charge de travail.
+
+> [!NOTE]
+> Si vous avez besoin de plus de contrôle sur le comportement des threads de l’application, vous pouvez gérer vous-même les threads. Toutefois, à compter de .NET Framework 4, la programmation multithread est considérablement simplifiée avec les classes <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md), de nouvelles classes de collections simultanées dans l’espace de noms <xref:System.Collections.Concurrent?displayProperty=nameWithType>, et un nouveau modèle de programmation basé sur le concept de tâches plutôt que de threads. Pour plus d’informations, consultez [Programmation parallèle](../parallel-programming/index.md) et [Bibliothèque parallèle de tâches (TPL)](../parallel-programming/task-parallel-library-tpl.md).
+
+## <a name="how-to-create-and-start-a-new-thread"></a>Comment créer et démarrer un nouveau thread
+
+Pour créer un thread, vous devez créer une instance de la classe <xref:System.Threading.Thread?displayProperty=nameWithType> et fournir au constructeur le nom de la méthode que vous souhaitez exécuter sur un nouveau thread. Pour démarrer un thread créé, appelez la méthode <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>. Pour plus d’informations et pour obtenir des exemples, consultez l’article [Création de threads et passage de données au démarrage](creating-threads-and-passing-data-at-start-time.md) et la référence de l’API <xref:System.Threading.Thread>.
+
+## <a name="how-to-stop-a-thread"></a>Comment arrêter un thread
+
+Pour mettre fin à l’exécution d’un thread, utilisez la méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Cette méthode lève une <xref:System.Threading.ThreadAbortException> sur le thread sur lequel elle est appelée. Pour plus d’informations, consultez [Destruction de threads](destroying-threads.md).
+
+À compter de .NET Framework 4, vous pouvez utiliser <xref:System.Threading.CancellationToken?displayProperty=nameWithType> pour annuler un thread de manière coopérative. Pour plus d’informations, consultez [Annulation de threads de façon coopérative](canceling-threads-cooperatively.md).
+
+Utilisez la méthode <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> pour faire en sorte que le thread appelant attende l’arrêt du thread sur lequel la méthode est appelée.
+
+## <a name="how-to-pause-or-interrupt-a-thread"></a>Comment suspendre ou interrompre un thread
+
+Vous utilisez la méthode <xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> pour suspendre le thread actif pendant un certain laps de temps. Vous pouvez interrompre un thread bloqué en appelant la méthode <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>. Pour plus d’informations, consultez [Suspension et interruption de threads](pausing-and-resuming-threads.md).
+
+## <a name="thread-properties"></a>Propriétés du thread
+
+Le tableau suivant présente certaines des propriétés de <xref:System.Threading.Thread> :  
   
- [Suspension et reprise des threads](../../../docs/standard/threading/pausing-and-resuming-threads.md)  
- Décrit les conséquences de la suspension et de la reprise de threads managés.  
-  
- [Détruire de threads](../../../docs/standard/threading/destroying-threads.md)  
- Décrit les conséquences de la destruction de threads managés et explique comment gérer une exception <xref:System.Threading.ThreadAbortException>.  
-  
- [Planification de threads](../../../docs/standard/threading/scheduling-threads.md)  
- Décrit les priorités des threads et explique comment ils affectent la planification de threads.  
-  
-## <a name="reference"></a>Référence  
- <xref:System.Threading.Thread>  
- Fournit la documentation de référence pour la classe <xref:System.Threading.Thread> qui représente un thread managé, qu'elle provienne de code non managé ou qu'elle ait été créée dans une application managée.  
-  
- <xref:System.Threading.ThreadStart>  
- Fournit la documentation de référence pour le délégué <xref:System.Threading.ThreadStart> qui représente les procédures de thread sans paramètres.  
-  
- <xref:System.Threading.ParameterizedThreadStart>  
- Fournit un moyen simple de passer des données à une procédure de thread, même sans typage fort.  
-  
-## <a name="related-sections"></a>Rubriques connexes  
- [Threads et threading](../../../docs/standard/threading/threads-and-threading.md)  
- Offre une introduction au threading managé.
+|Propriété|Description|  
+|--------------|-----------|  
+|<xref:System.Threading.Thread.IsAlive%2A>|Retourne `true` si un thread a été démarré et ne s’est pas encore arrêté normalement ou n’a pas été abandonné.|  
+|<xref:System.Threading.Thread.IsBackground%2A>|Obtient ou définit une valeur booléenne qui indique si un thread est un thread d’arrière-plan. Les threads d’arrière-plan ressemblent aux threads de premier plan, mais un thread d’arrière-plan n’empêche pas un processus de s’arrêter. Une fois que tous les threads de premier plan appartenant à un processus sont arrêtés, le common language runtime met fin au processus en appelant la méthode <xref:System.Threading.Thread.Abort%2A> sur les threads d’arrière-plan encore actifs. Pour plus d’informations, consultez [Threads de premier plan et d’arrière-plan](foreground-and-background-threads.md).|  
+|<xref:System.Threading.Thread.Name%2A>|Obtient ou définit le nom d’un thread. Généralement utilisé pour découvrir des threads individuels lors du débogage.|  
+|<xref:System.Threading.Thread.Priority%2A>|Obtient ou définit une valeur <xref:System.Threading.ThreadPriority> utilisée par le système d’exploitation pour classer par priorité la planification des threads. Pour plus d’informations, consultez [Planification des threads](scheduling-threads.md) et la référence de <xref:System.Threading.ThreadPriority>.|  
+|<xref:System.Threading.Thread.ThreadState%2A>|Obtient une valeur <xref:System.Threading.ThreadState> contenant les états actuels d’un thread.|  
+
+## <a name="see-also"></a>Voir aussi
+
+ <xref:System.Threading.Thread?displayProperty=nameWithType>  
+ [Threads et threading](threads-and-threading.md)  
+ [Programmation parallèle](../parallel-programming/index.md)  

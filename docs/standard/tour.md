@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314641"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931551"
 ---
 # <a name="tour-of-net"></a>Présentation de .NET
 
@@ -79,7 +79,7 @@ La cohérence des types est également utilisée pour aider à appliquer l’enc
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB et F# prennent en charge l’*inférence de type* locale. L’inférence de type signifie que le compilateur déduit le type de l’expression à gauche à partir de l’expression à droite. Cela ne signifie pas que la cohérence des types est interrompue ou évitée. Le type résultant a un type fort avec tout ce que cela implique. À partir de l’exemple précédent, `dog` et `cat` sont réécrits pour présenter l’inférence de type, et le reste de l’exemple reste inchangé :
+C#, VB et F# prennent en charge l’*inférence de type* locale. L’inférence de type signifie que le compilateur déduit le type de l’expression à gauche à partir de l’expression à droite. Cela ne signifie pas que la cohérence des types est interrompue ou évitée. Le type résultant a un type fort avec tout ce que cela implique. À partir de l’exemple précédent, `dog` est réécrit pour présenter l’inférence de type, et le reste de l’exemple reste inchangé :
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 

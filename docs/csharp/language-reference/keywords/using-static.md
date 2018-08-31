@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285133"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929676"
 ---
 # <a name="using-static-directive-c-reference"></a>using static, directive (référence C#)
 
-La directive `using static` désigne un type aux membres statiques duquel vous pouvez accéder sans spécifier un nom de type. Sa syntaxe est la suivante :
+La directive `using static` désigne un type dont vous pouvez accéder aux membres statiques et aux types imbriqués sans spécifier de nom de type. Sa syntaxe est la suivante :
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-où *fully-qualified-type-name* est le nom du type dont les membres statiques peuvent être référencés sans spécifier de nom de type. Si vous ne fournissez pas de nom de type complet (le nom de l’espace de noms complet avec le nom du type), C# génère l’erreur du compilateur CS0246 : "Le nom du type ou de l’espace de noms '<nom_type>' est introuvable".
+où *fully-qualified-type-name* est le nom du type dont les membres statiques et les types imbriqués peuvent être référencés sans spécifier de nom de type. Si vous ne fournissez pas de nom de type complet (le nom de l’espace de noms complet avec le nom du type), C# génère l’erreur du compilateur [CS0246](../compiler-messages/cs0246.md) : "Le nom du type ou de l’espace de noms 'type/espace_de_nom' est introuvable (il manque peut-être une directive using ou une référence d’assembly).
 
-La directive `using static` s’applique à tout type ayant des membres statiques, même s’il a également des membres d’instance. Toutefois, les membres d’instance ne peuvent être appelés que par l’instance du type.
+La directive `using static` s’applique à tout type ayant des membres statiques (ou des types imbriqués), même s’il a également des membres d’instance. Toutefois, les membres d’instance ne peuvent être appelés que par l’instance du type.
 
 La directive `using static` a été introduite avec C# 6.
 
@@ -53,9 +53,9 @@ Dans cet exemple, la directive `using static` aurait également pu être appliqu
 
 ## <a name="see-also"></a>Voir aussi
 
-[using, directive](using-directive.md)   
-[Référence du langage C#](../../../csharp/language-reference/index.md)   
-[Mots clés C#](../../../csharp/language-reference/keywords/index.md)   
-[Utilisation d’espaces de noms](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)   
+- [Directive using](using-directive.md)
+- [Référence C#](../../../csharp/language-reference/index.md)
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+- [Utilisation d’espaces de noms](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)

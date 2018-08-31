@@ -4,12 +4,12 @@ description: Découvrez comment exécuter des tests sur une sortie publiée avec
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210251"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936024"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Tester la sortie publiée avec dotnet vstest
 
@@ -34,5 +34,6 @@ dotnet vstest out/MyProject.Tests.dll
 > Remarque : si votre application cible une version de .NET Framework autre que `netcoreapp`, vous pouvez toujours exécuter la commande `dotnet vstest` en passant à la version de .NET Framework ciblée avec un indicateur de .NET Framework. Par exemple, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`. Dans Visual Studio 2017 Update 5, la version souhaitée du .NET framework est automatiquement détectée.
 
 ## <a name="see-also"></a>Voir aussi
- [Tests unitaires avec dotnet-test et xUnit](unit-testing-with-dotnet-test.md)  
- [Tests unitaires avec dotnet-test et MSTest](unit-testing-with-mstest.md)  
+- [Tests unitaires avec dotnet-test et xUnit](unit-testing-with-dotnet-test.md)
+- [Tests unitaires avec dotnet-test et NUnit](unit-testing-with-nunit.md)
+- [Tests unitaires avec dotnet-test et MSTest](unit-testing-with-mstest.md)

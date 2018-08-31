@@ -3,12 +3,12 @@ title: Sémantique de référence avec les types valeur
 description: Comprendre les fonctionnalités de langage conçues pour minimiser les structures de copie en toute sécurité
 ms.date: 11/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 0646a7fbc01ed76883fb6b16ce04006049ef054a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f241219994d7a03192a4aea69b912bf1ac5ed29c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566278"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930647"
 ---
 # <a name="reference-semantics-with-value-types"></a>Sémantique de référence avec les types valeur
 

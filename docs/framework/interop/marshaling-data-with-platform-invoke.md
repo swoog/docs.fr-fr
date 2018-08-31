@@ -1,6 +1,6 @@
 ---
 title: Marshaling de données à l’aide de l’appel de code managé
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391314"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911729"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling de données à l’aide de l’appel de code managé
 Pour appeler des fonctions exportées depuis une bibliothèque non managée, une application .NET Framework a besoin d'un prototype de fonction dans du code managé qui représente la fonction non managée. Pour créer un prototype qui permette à un appel de code non managé de marshaler des données correctement, vous devez procédez comme suit :  
@@ -33,7 +33,8 @@ Pour appeler des fonctions exportées depuis une bibliothèque non managée, une
   
 |Type non managé dans Wtypes.h|Type de langage C non managé|Nom de classe managée|Description|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits sur les systèmes d'exploitation Windows 32 bits, 64 bits sur les systèmes d'exploitation Windows 64 bits.|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Appliqué à une fonction qui ne retourne pas de valeur.|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|32 bits sur les systèmes d'exploitation Windows 32 bits, 64 bits sur les systèmes d'exploitation Windows 64 bits.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 bits|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bits|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 bits|  
@@ -45,10 +46,10 @@ Pour appeler des fonctions exportées depuis une bibliothèque non managée, une
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 bits|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Décorer avec ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Décorer avec Unicode.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec ANSI.|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec ANSI.|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec Unicode.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec Unicode.|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec Unicode.|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Décorer avec Unicode.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 bits|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 bits|  
   

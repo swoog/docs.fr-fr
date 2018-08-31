@@ -3,12 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404591"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752116"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -105,7 +105,11 @@ La liaison dynamique offre la possibilité de commettre des erreurs, mais égale
 C# version 5.0 était une version concentrée du langage. Presque tous les efforts déployés pour cette version portaient sur un autre concept révolutionnaire du langage : le modèle `async` et `await` pour la programmation asynchrone.  Voici la liste des fonctionnalités principales :
 
 - [Membres asynchrones](../async.md)
-- [Attributs d’informations de l’appelant](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Attributs d’informations de l’appelant](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>Voir aussi
+
+* [Projet de code : Attributs des informations de l’appelant en C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 L’attribut d’informations de l’appelant vous permet de récupérer facilement des informations sur le contexte d’exécution sans avoir recours à une multitude de code de réflexion réutilisable. Nombre de ses usages ont trait aux diagnostics et aux tâches de journalisation.
 

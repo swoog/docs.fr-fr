@@ -3,22 +3,22 @@ title: Types de frameworks prenant en charge les arborescences d’expressions
 description: En savoir plus sur les types de frameworks prenant en charge les arborescences d’expressions, la création d’arborescences d’expressions et les techniques d’utilisation des API d’arborescences d’expressions.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 3110f2a9534085aba95fcb5c8e76f66229e79f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214943"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934790"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Types de frameworks prenant en charge les arborescences d’expressions
 
 [Précédent -- Explication des arborescences d’expressions](expression-trees-explained.md)
 
 Il existe une longue liste de classes dans le framework .NET Core qui fonctionnent avec des arborescences d’expressions.
-Vous pouvez voir la liste complète [ici](/dotnet/core/api/System.Linq.Expressions).
+Vous pouvez voir la liste complète dans <xref:System.Linq.Expressions>.
 Au lieu de parcourir la liste complète, essayons de comprendre comment les classes du framework ont été conçues.
 
-Dans la conception du langage, une expression est un corps de code qui évalue et retourne une valeur. Les expressions peuvent être très simples : l’expression constante `1` retourne la valeur constante 1. Elles peuvent être plus compliquées : l’expression `(-B + Math.Sqrt(B*B + 4 * A * C)) / (2 * A)` retourne une racine pour une équation quadratique (dans le cas où l’équation a une solution).  
+Dans la conception du langage, une expression est un corps de code qui évalue et retourne une valeur. Les expressions peuvent être très simples : l’expression constante `1` retourne la valeur constante 1. Elles peuvent être plus compliquées : l’expression `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` retourne une racine pour une équation quadratique (dans le cas où l’équation a une solution).  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>Tout commence par System.Linq.Expression
 

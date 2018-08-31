@@ -1,7 +1,7 @@
 ---
 title: Tableau des valeurs par défaut (référence C#)
-description: Découvrez les valeurs par défaut des types valeur qui sont retournées par les constructeurs par défaut.
-ms.date: 07/20/2015
+description: Découvrez quelles sont les valeurs par défaut des types valeur C#.
+ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
@@ -11,37 +11,25 @@ helpviewer_keywords:
 - variables [C#], value types
 - constructors [C#], default constructor
 - types [C#], default constructor return values
-ms.openlocfilehash: 634a55304534b4269487f29be1fbb4930f51d8ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 184a9f42ddd3654a81aef0b7ce35e404de2d4bb9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218788"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935837"
 ---
 # <a name="default-values-table-c-reference"></a>Tableau des valeurs par défaut (référence C#)
 
-Le tableau suivant indique les valeurs par défaut de types valeur qui sont retournées par les constructeurs par défaut. Les constructeurs par défaut sont appelés au moyen de l’opérateur `new`, comme suit :
+Le tableau suivant présente les valeurs par défaut des [types valeur](value-types.md).
 
-```csharp
-int myInt = new int();
-```
-
-L’instruction qui précède produit le même résultat que la suivante :
-
-```csharp
-int myInt = 0;
-```
-
-Pour rappel, il n’est pas possible d’utiliser en C# des variables qui n’ont pas été initialisées.
-
-|Type de valeur|Valeur par défaut|
+|Type valeur|Valeur par défaut|
 |----------------|-------------------|
 |[bool](bool.md)|`false`|
 |[byte](byte.md)|0|
 |[char](char.md)|'\0'|
 |[decimal](decimal.md)|0M|
 |[double](double.md)|0.0D|
-|[enum](enum.md)|Valeur produite par l’expression (E)0, où E est l’identificateur de l’enum.|
+|[enum](enum.md)|Valeur produite par l’expression `(E)0`, où `E` est l’identificateur de l’enum.|
 |[float](float.md)|0.0F|
 |[int](int.md)|0|
 |[long](long.md)|0L|
@@ -52,10 +40,36 @@ Pour rappel, il n’est pas possible d’utiliser en C# des variables qui n’on
 |[ulong](ulong.md)|0|
 |[ushort](ushort.md)|0|
 
+## <a name="remarks"></a>Notes
+
+Vous ne pouvez pas utiliser des variables non initialisées en C#. Vous pouvez initialiser une variable avec la valeur par défaut de son type. Vous pouvez également utiliser la valeur par défaut d’un type pour spécifier la valeur par défaut de l’[argument facultatif](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments) d’une méthode.
+
+Utilisez l’[expression de valeur par défaut](../../programming-guide/statements-expressions-operators/default-value-expressions.md) pour produire la valeur par défaut d’un type, comme illustré dans l’exemple suivant :
+
+```csharp
+int a = default(int);
+```
+
+À compter de C# 7.1, vous pouvez utiliser le [littéral `default`](../../programming-guide/statements-expressions-operators/default-value-expressions.md#default-literal-and-type-inference) pour initialiser une variable avec la valeur par défaut de son type :
+
+```csharp
+int a = default;
+```
+
+Vous pouvez également utiliser le constructeur par défaut ou le constructeur par défaut implicite pour produire la valeur par défaut d’un type valeur, comme illustré dans l’exemple suivant. Pour plus d’informations sur les constructeurs, consultez l’article [Constructeurs](../../programming-guide/classes-and-structs/constructors.md).
+
+```csharp
+int a = new int();
+```
+
+La valeur par défaut de tout [type référence](reference-types.md) est `null`. La valeur par défaut d’un [type nullable](../../programming-guide/nullable-types/index.md) est une instance pour laquelle la propriété <xref:System.Nullable%601.HasValue%2A> est `false` et la propriété <xref:System.Nullable%601.Value%2A> n’est pas définie.
+
 ## <a name="see-also"></a>Voir aussi
- [Référence C#](../index.md)  
- [Guide de programmation C#](../../programming-guide/index.md)  
- [Tableau des types valeur](value-types-table.md)  
- [Types valeur](value-types.md)  
- [Tableau des types intégrés](built-in-types-table.md)  
- [Tableaux de référence des types](reference-tables-for-types.md)
+
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [Tableaux de référence des types](reference-tables-for-types.md)
+- [Types valeur](value-types.md)
+- [Tableau des types valeur](value-types-table.md)
+- [Tableaux des types intégrés](built-in-types-table.md)

@@ -4,12 +4,12 @@ description: Guide sur l’implémentation de .NET à envisager pour générer u
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298186"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934531"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -102,8 +102,8 @@ En plus de la feuille de route officielle, il existe d’autres frameworks à po
 Certaines plateformes Microsoft ou tierces ne prennent pas en charge .NET Core. Par exemple, certains services Azure, tels que Service Fabric Stateful Reliable Services et Service Fabric Reliable Actors, exigent .NET Framework. D’autres services fournissent un SDK qui n’est pas encore utilisable sur .NET Core. Il s’agit d’une circonstance transitoire, car tous les services Azure utilisent .NET Core. En attendant, vous pouvez toujours utiliser l’API REST équivalente au lieu du SDK client.
 
 ## <a name="see-also"></a>Voir aussi
- [Choisir entre ASP.NET et ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
- [Guide .NET Core](../core/index.md)  
+
+ [Choisir entre ASP.NET et ASP.NET Core](/aspnet/core/choose-aspnet-framework) [Cibler des frameworks](frameworks.md) [Guide .NET Core](../core/index.md)  
  [Portage depuis .NET Framework vers .NET Core](../core/porting/index.md)  
  [Guide de .NET Framework sur Docker](../framework/docker/index.md)  
  [Vue d’ensemble des composants .NET](components.md)  
