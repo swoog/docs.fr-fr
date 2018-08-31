@@ -2,21 +2,21 @@
 title: Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 9476249a657d009deba190a3db4726f50b2d7747
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f0afc9f0a6254b0df1e0c6e724ec5b3cfd1f86d0
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520144"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332771"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Prise en charge de nouvelles fonctionnalités Workflow Foundation 4.5 dans le concepteur de workflow réhébergé
-Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a introduit de nombreuses nouvelles fonctionnalités, notamment plusieurs améliorations à l’utilisation de workflow designer. Cette rubrique détaille lesquelles de ces fonctionnalités sont prises en charge dans le concepteur réhébergé, et celles qui ne sont pas actuellement prises en charge.  
+Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] a introduit de nombreuses nouvelles fonctionnalités, notamment plusieurs améliorations à l’expérience de Concepteur de flux de travail. Cette rubrique détaille lesquelles de ces fonctionnalités sont prises en charge dans le concepteur réhébergé, et celles qui ne sont pas actuellement prises en charge.  
   
 > [!NOTE]
->  Pour obtenir la liste de toutes les nouvelles fonctionnalités de Windows Workflow Foundation (WF) introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], y compris celles qui ne sont pas liées au réhébergement du concepteur, consultez [quelles sont les nouveautés de Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Pour obtenir la liste de toutes les nouvelles fonctionnalités de Windows Workflow Foundation (WF) introduites dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], y compris celles qui ne sont pas liées au réhébergement du concepteur, consultez [What ' s New in Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Activités  
- La bibliothèque d'activités intégrée contient de nouvelles activités et de nouvelles fonctionnalités pour les activités existantes. Toutes ces nouvelles activités sont prises en charge dans le concepteur réhébergé. Pour plus d’informations sur ces nouvelles activités, consultez le [activités](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) section de [quelles sont les nouveautés de Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+ La bibliothèque d'activités intégrée contient de nouvelles activités et de nouvelles fonctionnalités pour les activités existantes. Toutes ces nouvelles activités sont prises en charge dans le concepteur réhébergé. Pour plus d’informations sur ces nouvelles activités, consultez le [activités](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) section de [What ' s New in Windows Workflow Foundation dans .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="c-expressions"></a>Expressions C#  
  Avant le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], toutes les expressions de workflow ne pouvaient être écrites que dans Visual Basic. Dans le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les expressions Visual Basic sont uniquement utilisées pour les projets créés à l'aide de Visual Basic. Les projets Visual C# utilisent C# pour les expressions. Lors de la création de workflow dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], un éditeur d'expressions C# fonctionnel est fourni, qui a des fonctions telles que la mise en surbrillance de la grammaire et IntelliSense. Les projets de workflow C# créés dans les versions antérieures qui utilisent des expressions Visual Basic continueront à fonctionner.  
@@ -44,7 +44,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
   
  La capture d'écran suivante affiche une activité `WriteLine` avec le `Body` d'un `NoPersistScope`.  
   
- ![Auto&#45;entourer d’emplacement de dépôt](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Auto&#45;entourent l’emplacement de dépôt](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  La capture d'écran suivante montre l'activité `Sequence` créée automatiquement dans le `Body` lorsqu'un second `WriteLine` est supprimé sous le premier.  
   
@@ -65,9 +65,9 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
  Il est également possible de glisser-déplacer plusieurs activités sélectionnées et de les utiliser dans une interaction à l'aide du menu contextuel.  
   
 ### <a name="outline-view-of-workflow-items"></a>Mode Plan des éléments de workflow  
- Afin de simplifier la navigation dans les workflows hiérarchiques, les composants d’un workflow s’affichent dans un mode Plan de style arborescent. Le mode plan est affiché dans le **structure du Document** vue. Pour ouvrir cette vue dans Visual Studio, dans le menu principal, sélectionnez **vue**, **autres fenêtres**, **structure du Document**, ou appuyez sur Ctrl W, U. Cliquer sur un nœud en mode Plan permet d'accéder à l'activité correspondante dans le Concepteur de workflow, et le mode Plan est mis à jour pour afficher les activités qui sont sélectionnées dans le concepteur. Cette fonctionnalité est prise en charge dans le concepteur réhébergé.  
+ Afin de simplifier la navigation dans les workflows hiérarchiques, les composants d’un workflow s’affichent dans un mode Plan de style arborescent. Le mode plan est affiché dans le **structure du Document** vue. Pour ouvrir cette vue dans Visual Studio, dans le menu supérieur, sélectionnez **vue**, **Windows autres**, **structure du Document**, ou appuyez sur Ctrl W, U. Cliquer sur un nœud en mode Plan permet d'accéder à l'activité correspondante dans le Concepteur de workflow, et le mode Plan est mis à jour pour afficher les activités qui sont sélectionnées dans le concepteur. Cette fonctionnalité est prise en charge dans le concepteur réhébergé.  
   
- La capture d’écran suivante du flux de travail terminé à partir de la [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) montre le mode plan avec un flux de travail séquentiel.  
+ La capture d’écran suivante du workflow terminé à partir de la [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) montre le mode plan avec un workflow séquentiel.  
   
  ![Mode d’affichage dans le Concepteur de flux de travail plan](../../../docs/framework/windows-workflow-foundation/media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")  
   
@@ -79,11 +79,11 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
   
  La capture d'écran suivante montre les points d'attachement qui sont visibles lorsqu'une activité est déplacée depuis la boîte à outils.  
   
- ![Nœud de démarrage d’organigramme montrant des points](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
+ ![Nœud de départ organigramme montrant les points de connexion automatique](../../../docs/framework/windows-workflow-foundation/media/autoconnect1.png "Autoconnect1")  
   
  Les activités peuvent également être déplacées sur les connexions entre des nœuds d'organigramme et des états de façon à insérer automatiquement le nœud entre deux autres nœuds. La capture d’écran suivante montre la ligne de connexion en surbrillance où les activités peuvent être glissées-déposées depuis la boîte à outils.  
   
- ![Auto&#45;insérer descripteur pour déposer les activités](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
+ ![Auto&#45;insérer handle pour déposer les activités](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "Autoinsert")  
   
  Connexion automatique et insertion automatique sont prises en charge dans le concepteur réhébergé.  
   
@@ -111,7 +111,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
  La validation de l'arrière-plan au moment de la génération est prise en charge dans le concepteur réhébergé.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>État d'affichage dans un emplacement distinct des fichiers XAML  
- Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], les informations d'état d'affichage pour un workflow sont stockées dans le fichier XAML en différents emplacements. Cela n'est pas pratique pour les développeurs qui souhaitent lire le XAML directement, ou écrire du code pour supprimer les informations d'état d'affichage. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les informations d’état de vue dans le fichier XAML sont sérialisées comme un élément distinct dans le fichier XAML.  Les développeurs peuvent facilement localiser et modifier les informations de l’état d’affichage d’une activité ou supprimer complètement de l’état d’affichage.  
+ Dans le [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], les informations d'état d'affichage pour un workflow sont stockées dans le fichier XAML en différents emplacements. Cela n'est pas pratique pour les développeurs qui souhaitent lire le XAML directement, ou écrire du code pour supprimer les informations d'état d'affichage. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], les informations d’état de vue dans le fichier XAML sont sérialisées comme un élément distinct dans le fichier XAML.  Les développeurs peuvent facilement localiser et modifier les informations d’état de vue d’une activité ou supprimer complètement de l’état d’affichage.  
   
  Cette fonctionnalité est prise en charge dans le concepteur de workflow réhébergé.  
   
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
  Outre les modèles de développement d'organigramme et workflow séquentiel, cette version inclut des workflows Machine à états, et les services de workflow Contrat en premier.  
   
 ### <a name="state-machine-workflows"></a>Workflows de machine à états  
- Flux de travail de machine à états ont été introduites dans le cadre du .NET Framework 4.0.1 dans le [Microsoft .NET Framework 4 Platform Update 1](http://go.microsoft.com/fwlink/?LinkID=215092). Cette mise à jour inclut plusieurs nouvelles classes et activités qui permettent aux développeurs de créer des workflow de machine à états. Ces classes et activités ont été mises à jour pour le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Les mises à jour comprennent :  
+ Workflows de machine à états ont été introduits dans le cadre du .NET Framework 4.0.1 dans le [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Cette mise à jour inclut plusieurs nouvelles classes et activités qui permettent aux développeurs de créer des workflow de machine à états. Ces classes et activités ont été mises à jour pour le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Les mises à jour comprennent :  
   
 1.  Possibilité de définir des points d'arrêt sur des états  
   
@@ -132,14 +132,14 @@ Windows Workflow Foundation (WF) dans [!INCLUDE[net_v45](../../../includes/net-v
   
 4.  Les activités utilisées pour créer des workflows Machine à états, notamment : <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> et <xref:System.Activities.Statements.Transition>  
   
- La capture d’écran suivante montre le workflow de machine d’état terminé à partir du [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) étape [Comment : créer un Workflow de Machine d’état](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).  
+ La capture d’écran suivante montre le workflow de machine d’état terminé du [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) étape [Comment : créer un Workflow de Machine d’état](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).  
   
- ![Flux de travail de Machine d’état terminé](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![Flux de travail de Machine à états terminé](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
- Pour plus d’informations sur la création de workflows d’ordinateur d’état, consultez [Workflows d’ordinateur d’état](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Les workflow de machine à états sont pris en charge dans le concepteur réhébergé.  
+ Pour plus d’informations sur la création de workflows machine à états, consultez [Workflows Machine à états](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Les workflow de machine à états sont pris en charge dans le concepteur réhébergé.  
   
 ### <a name="contract-first-workflow-development"></a>Développement de workflow « contrat en premier »  
- L’outil de développement de workflow contrat en premier permet au développeur de concevoir un contrat dans le code tout d’abord, puis, en quelques clics dans Visual Studio, générer automatiquement un modèle d’activité dans la boîte à outils représentant chaque opération. Ces activités sont ensuite utilisées pour créer un workflow qui implémente les opérations définies par le contrat. Le concepteur de workflow validera le service de workflow pour garantir que ces opérations sont implémentées et que la signature du workflow correspond à la signature du contrat. Le développeur peut également associer un service de workflow à une collection de contrats implémentés. Pour plus d’informations sur le développement de service de workflow contrat en premier, consultez [Comment : créer un service de flux de travail qui consomme un contrat de service existant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ L’outil de développement de workflow contrat en premier permet au développeur de concevoir un contrat dans le code tout d’abord, puis, en quelques clics dans Visual Studio, générez automatiquement un modèle d’activité dans la boîte à outils représentant chaque opération. Ces activités sont ensuite utilisées pour créer un workflow qui implémente les opérations définies par le contrat. Le concepteur de workflow validera le service de workflow pour garantir que ces opérations sont implémentées et que la signature du workflow correspond à la signature du contrat. Le développeur peut également associer un service de workflow à une collection de contrats implémentés. Pour plus d’informations sur le développement de service de workflow contrat en premier, consultez [Comment : créer un service de flux de travail qui utilise un contrat de service existant](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  Le développement de workflow « contrat en premier » n'est pas pris en charge dans Workflow Designer.

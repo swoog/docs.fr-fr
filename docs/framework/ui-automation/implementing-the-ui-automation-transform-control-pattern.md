@@ -9,16 +9,16 @@ ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 65c90e8e9f0653181b98645bf453c9d78c14bc15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f193380619d5e75eaacebe00f602a3716d91ddf
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408263"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332758"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>Implémentation du modèle de contrôle Transform d’UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique présente les conventions et directives à respecter pour implémenter <xref:System.Windows.Automation.Provider.ITransformProvider>, notamment les informations sur les propriétés, les méthodes et les événements. Des liens vers des références supplémentaires sont répertoriés à la fin de la rubrique.  
   
@@ -42,11 +42,11 @@ ms.locfileid: "33408263"
   
 |Membres requis|Type de membre|Notes|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propriété|Aucun|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propriété|Aucun|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propriété|Aucun|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Méthode|Aucun|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Méthode|Aucun|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|Propriété|Aucun.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|Propriété|Aucun.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|Propriété|Aucun.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|Méthode|Aucun.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|Méthode|Aucun.|  
 |<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|Méthode|Aucune|  
   
  Ce modèle de contrôle n’est associé aucun événement.  

@@ -2,19 +2,19 @@
 title: Langage d'Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
-ms.openlocfilehash: dbc44189634f4548b97647d19465e28ee343635d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1df5372bed2c4c4b026662e0d1912683dd8752e9
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761036"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331952"
 ---
 # <a name="entity-sql-language"></a>Langage d'Entity SQL
 Entity SQL est un langage de requête indépendant du stockage et semblable à SQL. Entity SQL vous permet d'interroger des données d'entité, en tant qu'objets ou sous une forme tabulaire. Vous devez envisager d'utiliser Entity SQL dans les cas suivants :  
   
 -   Lorsqu'une requête doit être construite dynamiquement au moment de l'exécution. Dans ce cas, vous devez également envisager d'utiliser les méthodes du Générateur de requêtes d'<xref:System.Data.Objects.ObjectQuery%601> au lieu de construire une chaîne de requête Entity SQL au moment de l'exécution.  
   
--   Lorsque vous voulez définir une requête dans le cadre de la définition du modèle. Seul Entity SQL est pris en charge dans un modèle de données. Pour plus d’informations, consultez [élément QueryView (MSL)](http://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)  
+-   Lorsque vous voulez définir une requête dans le cadre de la définition du modèle. Seul Entity SQL est pris en charge dans un modèle de données. Pour plus d’informations, consultez [élément QueryView (MSL)](https://msdn.microsoft.com/library/f0426b34-45cb-4fd7-9777-e0570c5e0e80)  
   
 -   Lorsque vous utilisez EntityClient pour retourner des données d'entité en lecture seule sous la forme d'ensembles de lignes à l'aide d'un <xref:System.Data.EntityClient.EntityDataReader>. Pour plus d’informations, consultez [fournisseur EntityClient pour Entity Framework](../../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
@@ -48,31 +48,31 @@ Entity SQL est un langage de requête indépendant du stockage et semblable à S
 ## <a name="using-entity-sql-with-object-queries"></a>Utilisation de Entity SQL avec des requêtes d'objet  
  Pour plus d'informations sur l'utilisation de Entity SQL avec des requêtes d'objet, consultez les rubriques suivantes :  
   
- [Comment : exécuter une requête qui retourne des objets de Type d’entité](http://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
+ [Comment : exécuter une requête qui retourne des objets de Type d’entité](https://msdn.microsoft.com/library/f73e137d-1534-42bb-9e31-99ca42c19b48)  
   
- [Comment : exécuter une requête paramétrable](http://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
+ [Comment : exécuter une requête paramétrable](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
   
- [Comment : parcourir les relations à l’aide des propriétés de Navigation](http://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
+ [Comment : naviguer parmi les relations à l’aide des propriétés de Navigation](https://msdn.microsoft.com/library/b1d71c7d-16a7-4b46-96ac-690176bd5057)  
   
- [Comment : appeler une fonction définie par l’utilisateur](http://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
+ [Comment : appeler une fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02)  
   
- [Comment : filtrer des données](http://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
+ [Comment : filtrer les données](https://msdn.microsoft.com/library/776f8556-3350-4572-804a-b1513515c1b2)  
   
- [Comment : trier des données](http://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
+ [Comment : trier des données](https://msdn.microsoft.com/library/c05f2506-cb9d-4ebc-822b-300042ad53e7)  
   
- [Comment : regrouper des données](http://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
+ [Comment : regrouper des données](https://msdn.microsoft.com/library/df801d9d-9a8a-4157-97a6-5016b18998e1)  
   
- [Comment : regrouper des données](http://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
+ [Comment : agréger des données](https://msdn.microsoft.com/library/4cf04ce8-3c0f-4f88-9d97-8fac8622598d)  
   
- [Comment : exécuter une requête qui retourne des objets de Type anonyme](http://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Comment : exécuter une requête qui retourne des objets de Type anonyme](https://msdn.microsoft.com/library/3b264025-e911-4d73-90ce-992d2b9d189d)  
   
- [Comment : exécuter une requête qui retourne une Collection de Types primitifs](http://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
+ [Comment : exécuter une requête qui retourne une Collection de Types primitifs](https://msdn.microsoft.com/library/115b52c0-4f27-4253-8991-284b450000b5)  
   
- [Comment : interroger les objets connexes d’un EntityCollection](http://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
+ [Comment : interroger les objets connexes dans une EntityCollection](https://msdn.microsoft.com/library/11ce946f-16f8-4c1d-9d80-f740853807ba)  
   
- [Comment : classer l’Union de deux requêtes](http://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
+ [Comment : ordonner l’Union de deux requêtes](https://msdn.microsoft.com/library/853c583a-eaba-4400-830d-be974e735313)  
   
- [Comment : résultats de la Page via la requête](http://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
+ [Comment : résultats de la Page via la requête](https://msdn.microsoft.com/library/ffc0f920-e7de-42e0-9b12-ef356421d030)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble d’Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  

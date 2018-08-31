@@ -2,15 +2,15 @@
 title: Déduction de tables
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
-ms.openlocfilehash: b14cbc39b02136ac7f226faf2636a69ac072f529
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38709f91e01c7f85d9e8482bdd49bc0892121f09
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757825"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332851"
 ---
 # <a name="inferring-tables"></a>Déduction de tables
-Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir d'un document XML, ADO.NET identifie d'abord les éléments XML qui représentent des tables. Les structures XML suivantes résulter dans une table pour le **DataSet** schéma :  
+Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir d'un document XML, ADO.NET identifie d'abord les éléments XML qui représentent des tables. Les structures XML suivantes donneront une table pour le **DataSet** schéma :  
   
 -   éléments avec attributs ;  
   
@@ -30,7 +30,7 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
   
  Le processus d'inférence produit une table nommée « Element1 ».  
   
- **DataSet :** DocumentElement  
+ **Jeu de données :** DocumentElement  
   
  **Table :** Element1  
   
@@ -52,7 +52,7 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
   
  Le processus d'inférence produit une table nommée « Element1 ».  
   
- **DataSet :** DocumentElement  
+ **Jeu de données :** DocumentElement  
   
  **Table :** Element1  
   
@@ -60,7 +60,7 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
 |-------------------|  
 |Text1|  
   
- L'élément document, ou racine, donne une table déduite s'il comporte des attributs ou des éléments enfants qui sont inférés en tant que colonnes. Si l’élément de document ne comporte pas d’attributs et pas d’éléments enfants qui seraient déduits en tant que colonnes, l’élément est déduit en tant qu’un **DataSet**. Examinons, par exemple, le code XML suivant :  
+ L'élément document, ou racine, donne une table déduite s'il comporte des attributs ou des éléments enfants qui sont inférés en tant que colonnes. Si l’élément document ne comporte pas d’attributs et pas d’éléments enfants qui seraient déduits en tant que colonnes, il est déduit en tant qu’un **DataSet**. Examinons, par exemple, le code XML suivant :  
   
 ```xml  
 <DocumentElement>  
@@ -71,7 +71,7 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
   
  Le processus d'inférence produit une table nommée « DocumentElement ».  
   
- **DataSet :** NewDataSet  
+ **Jeu de données :** NewDataSet  
   
  **Table :** DocumentElement  
   
@@ -87,9 +87,9 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
 </DocumentElement>  
 ```  
   
- Le processus d’inférence produit un **DataSet** nommé « DocumentElement » contenant une table nommée « Element1 ».  
+ Le processus d’inférence produit un **DataSet** nommée « DocumentElement » contenant une table nommée « Element1 ».  
   
- **DataSet :** DocumentElement  
+ **Jeu de données :** DocumentElement  
   
  **Table :** Element1  
   
@@ -109,7 +109,7 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
   
  Le processus d'inférence produit une table nommée « Element1 ».  
   
- **DataSet :** DocumentElement  
+ **Jeu de données :** DocumentElement  
   
  **Table :** Element1  
   
@@ -124,4 +124,4 @@ Lors de l'inférence du schéma d'un objet <xref:System.Data.DataSet> à partir 
  [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

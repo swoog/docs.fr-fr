@@ -9,12 +9,12 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: 3615ab1f9a9076b8db0e5fde1e5bd4a1a804f3bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671553b496520f2c2ac3fea90b1514a6cdf1764a
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538526"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331759"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel, contrôle (Windows Forms)
 Le contrôle <xref:System.Windows.Forms.TableLayoutPanel> réorganise son contenu dans une grille. La disposition étant effectuée au moment du design et au moment de l'exécution, elle peut changer dynamiquement quand l'environnement d'application change. Cela permet de redimensionner proportionnellement les contrôles du panneau, pour pouvoir répondre à des modifications telles que le redimensionnement du contrôle parent ou le changement de longueur de texte en raison de la localisation.  
@@ -38,13 +38,13 @@ Le contrôle <xref:System.Windows.Forms.TableLayoutPanel> réorganise son conten
  [Guide pratique pour créer un Windows Form redimensionnable pour l'entrée de données](../../../../docs/framework/winforms/controls/how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Montre comment utiliser un contrôle <xref:System.Windows.Forms.TableLayoutPanel> pour créer un formulaire qui réponde bien au redimensionnement.  
   
-1.  [Comment : aligner et étirer un contrôle dans un contrôle TableLayoutPanel](http://msdn.microsoft.com/library/ms171688\(v=vs.110\))  
+1.  [Comment : aligner et étirer un contrôle dans un contrôle TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2.  [Comment : étendre des lignes et des colonnes dans un contrôle TableLayoutPanel](http://msdn.microsoft.com/library/ms171687\(v=vs.110\))  
+2.  [Comment : étendre des lignes et des colonnes dans un contrôle TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3.  [Comment : modifier des colonnes et des lignes dans un contrôle TableLayoutPanel](http://msdn.microsoft.com/library/ms171686\(v=vs.110\))  
+3.  [Comment : modifier des colonnes et des lignes dans un contrôle TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4.  [Procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide d’un TableLayoutPanel](http://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
+4.  [Procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide d’un TableLayoutPanel](https://msdn.microsoft.com/library/w4yc3e8c\(v=vs.110\))  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.TableLayoutPanel>  
@@ -60,4 +60,4 @@ Le contrôle <xref:System.Windows.Forms.TableLayoutPanel> réorganise son conten
  [Localisation](../../../../docs/standard/globalization-localization/localization.md)  
  Fournit une vue d'ensemble des rubriques relatives à la localisation.  
   
- Consultez également [localisation d’Applications](http://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) ou [localisation d’Applications](http://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
+ Consultez également [Localizing Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.110\)) ou [localisation d’Applications](https://msdn.microsoft.com/library/z68135h5\(v=vs.120\))
