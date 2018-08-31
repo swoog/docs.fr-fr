@@ -4,50 +4,50 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 438733b2cde1d4eff178a5fd4a4ed0bb93804f76
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105447"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257355"
 ---
 # <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
-Une primitive de conteneurs est que l’immuabilité. Quand elle est comparée à une machine virtuelle, les conteneurs ne disparaissent comme une occurrence courante. Une machine virtuelle peut échouer dans différentes formes à partir des processus, surcharge de l’UC ou un disque complet ou ayant échoué. Encore, nous pensons que la machine virtuelle soit disponible et de disques RAID sont courants pour vous assurer de défaillances de disque conserver les données.
+Une primitive de conteneurs est immuabilité. Par rapport à une machine virtuelle, les conteneurs ne disparaissent en tant qu’une occurrence courante. Une machine virtuelle peut échouer dans différentes formes à partir des processus obsolètes, surcharge de l’UC ou un disque complet ou ayant échoué. Pourtant, nous pensons que la machine virtuelle soit disponible et disques RAID sont très courants pour vous assurer de défaillances de disque conserver les données.
 
-Toutefois, les conteneurs sont supposées être des instances de processus. Un processus ne conservent l’état durable. Même si un conteneur peut écrire dans un stockage local, en supposant que cette instance sera autour indéfiniment serait équivalente à en supposant qu'une copie unique de la mémoire sera durable. Vous devez supposer que les conteneurs, tels que des processus, sont dupliqués, arrêté, ou lorsque gérés par un orchestrateur de conteneur, ils peuvent être déplacés.
+Toutefois, les conteneurs sont considérés être des instances de processus. Un processus ne conserve pas état durable. Même si un conteneur peut écrire dans son stockage local, en supposant que cette instance sera présente indéfiniment serait équivalente à en supposant qu'une copie unique de mémoire pourra perdurer. Vous devez supposer que les conteneurs, comme les processus, sont dupliqués, arrêté, ou quand gérée avec un orchestrateur de conteneurs, ils peuvent être déplacés.
 
-Docker utilise une fonctionnalité appelée un *superposition de système de fichiers* pour implémenter un processus de copie sur écriture qui les stocke des informations mises à jour au système de fichiers racine d’un conteneur, par rapport à l’image d’origine sur lequel il est basé. Ces modifications sont perdues si le conteneur est supprimé par la suite à partir du système. Un conteneur, par conséquent, n’a pas le stockage persistant par défaut. Bien qu’il soit possible d’enregistrer l’état d’un conteneur, vous concevez un système de contourner ce problème serait en conflit avec le principe de l’architecture de conteneur.
+Docker utilise une fonctionnalité appelée un *système de fichiers de superposition* pour implémenter un processus de copie sur écriture qui stocke une informations mises à jour au système de fichiers racine d’un conteneur, par rapport à l’image d’origine sur lequel il est basé. Ces modifications sont perdues si le conteneur est supprimé par la suite à partir du système. Un conteneur, par conséquent, n’a pas le stockage persistant par défaut. Bien qu’il soit possible d’enregistrer l’état d’un conteneur, conception d’un système de contourner ce problème serait en conflit avec le principe de l’architecture de conteneur.
 
-Pour gérer les données persistantes dans les applications de Docker, il existe des solutions courantes :
+Pour gérer les données persistantes dans les applications Docker, il existe des solutions courantes :
 
--   [**Volumes de données**](https://docs.docker.com/engine/tutorials/dockervolumes/) ces monter à l’hôte, comme indiqué uniquement.
+-   [**Volumes de données**](https://docs.docker.com/engine/tutorials/dockervolumes/) ces montent à l’hôte, comme mentionné plus haut uniquement.
 
--   [**Conteneurs de volumes de données**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) ils fournissent un stockage partagé entre les conteneurs, à l’aide d’un conteneur externe que vous pouvez parcourir.
+-   [**Conteneurs de volumes de données**](https://docs.docker.com/engine/tutorials/dockervolumes/#/creating-and-mounting-a-data-volume-container) ceux-ci fournissent un stockage partagé entre les conteneurs, à l’aide d’un conteneur externe qui peut faire.
 
--   [**Plug-ins de volume**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) ces monter des volumes à distance, en fournissant la persistance à long terme.
+-   [**Plug-ins de volume**](https://docs.docker.com/engine/tutorials/dockervolumes/#/mount-a-shared-storage-volume-as-a-data-volume) ces monter les volumes vers des emplacements distants, en fournissant une persistance à long terme.
 
--   **Sources de données distantes** exemples incluent des bases de données SQL et non-SQL ou de mettre en cache des services tels que Redis.
+-   **Sources de données distantes** exemples incluent des bases de données SQL et NoSQL ou cache des services tels que Redis.
 
--   [**Le stockage Azure**](https://docs.microsoft.com/azure/storage/) ainsi un stockage de service (PaaS), qui offre le meilleur de conteneurs de persistance à long terme comme plateforme distribuable de géo-réplication.
+-   [**Stockage Azure**](https://docs.microsoft.com/azure/storage/) ainsi en tant que service (PaaS) stockage, qui offre le meilleur de conteneurs de persistance à long terme comme plateforme distribuable géo.
 
-Volumes de données sont désignés spécialement de répertoires dans un ou plusieurs conteneurs qui ignorent la [système de fichiers Union](https://docs.docker.com/v1.8/reference/glossary#union-file-system). Volumes de données sont conçus pour mettre à jour les données, indépendamment du cycle de vie du conteneur. Docker donc jamais supprime automatiquement les volumes lorsque vous supprimez un conteneur, ni s’il les volumes « collecter garbage » qui ne sont plus référencés par un conteneur. Le système d’exploitation hôte peuvent parcourir et modifier les données dans n’importe quel volume de librement, qui est simplement une autre raison d’utiliser des volumes de données avec parcimonie.
+Volumes de données sont désignés spécialement les répertoires au sein d’un ou plusieurs conteneurs qui contournent le [Union système de fichiers](https://docs.docker.com/glossary/?term=Union%20file%20system). Volumes de données sont conçus pour mettre à jour les données, indépendamment du cycle de vie du conteneur. Docker par conséquent jamais supprime automatiquement les volumes lorsque vous supprimez un conteneur, ni sera-t-il volumes « collecter garbage » qui ne sont plus référencés par un conteneur. Le système d’exploitation hôte peut parcourir et modifier les données dans n’importe quel volume de librement, ce qui est simplement une autre raison d’utiliser des volumes de données avec parcimonie.
 
-A [conteneur de volumes de données](https://docs.docker.com/v1.8/userguide/dockervolumes/) est une amélioration des volumes de données standard. Il est en fait un conteneur dormant qui possède un ou plusieurs volumes de données créées dans cette (comme décrit précédemment). Le conteneur de volumes de données fournit un accès aux conteneurs à partir d’un point de montage central. L’avantage de cette méthode d’accès est qu’il résume l’emplacement des données d’origine, qui effectue le conteneur de données à un point de montage logique. Il permet également à des conteneurs de « application » accèdent aux volumes de conteneur de données pour la création et la destruction tout en conservant les données persistantes dans un conteneur dédié.
+Un [conteneur de volumes de données](https://docs.docker.com/glossary/?term=volume) est une amélioration des volumes de données standard. Il est essentiellement un conteneur dormant qui a un ou plusieurs volumes de données créés qu’il contient (comme décrit précédemment). Le conteneur de volumes de données fournit un accès aux conteneurs à partir d’un point de montage central. L’avantage de cette méthode d’accès est qu’il fournit une abstraction l’emplacement des données d’origine, ce qui le conteneur de données à un point de montage logique. Il permet également de conteneurs « application » accèdent aux volumes de conteneur de données pour être créés et détruits tout en conservant les données persistantes dans un conteneur dédié.
 
-Figure 4-5 indique que les volumes Docker standard peuvent être placés sur un stockage hors les conteneurs eux-mêmes, mais dans les limites physiques du serveur/machine virtuelle hôte. *Volumes docker n’ont pas la possibilité d’utiliser un volume à partir d’un ordinateur hôte serveur/machine virtuelle à un autre*.
+Figure 4-5 montre que les volumes Docker standard peuvent être placées sur le stockage hors les conteneurs eux-mêmes, mais dans les limites physiques du serveur/machine virtuelle hôte. *Volumes docker n’ont pas la possibilité d’utiliser un volume à partir d’un ordinateur hôte serveur/machine virtuelle à un autre*.
 
 ![](./media/image5.png)
 
 Figure 4-5 : volumes de données et sources de données externes pour les applications de conteneurs/conteneurs
 
-En raison de l’incapacité à gérer les données partagées entre les conteneurs qui s’exécutent sur des hôtes physiques distincts, il est recommandé de pas utiliser des volumes de données d’entreprise, sauf si l’hôte Docker est un ordinateur hôte/virtuel fixe, car lorsque vous utilisez des conteneurs Docker dans un orchestrator, conteneurs doivent être déplacées vers un autre hôte, selon les optimisations à effectuer par le cluster.
+En raison de l’incapacité à gérer les données partagées entre les conteneurs qui s’exécutent sur des hôtes physiques distincts, il est recommandé de pas utiliser des volumes de données d’entreprise, sauf si l’hôte Docker est un ordinateur hôte/virtuel fixe, car lorsque vous utilisez des conteneurs Docker dans un orchestrateur, les conteneurs sont supposées être déplacées vers un autre hôte, selon les optimisations à effectuer par le cluster.
 
-Par conséquent, les volumes de données régulières sont un bon mécanisme pour travailler avec les fichiers de trace, fichiers temporelle ou de concept similaire qui n’affecte pas la cohérence des données métier si ou lorsque vos conteneurs sont déplacés sur plusieurs ordinateurs hôtes.
+Par conséquent, les volumes de données régulières sont un bon mécanisme pour travailler avec des fichiers de trace, temporelles fichiers ou n’importe quel concept similaire qui n’affecte pas la cohérence des données métier si ou quand vos conteneurs sont déplacées entre plusieurs hôtes.
 
-Comme les plug-ins de volume [Flocker](https://clusterhq.com/flocker/) fournissent des données sur tous les hôtes dans un cluster. Bien que pas tous les plug-ins de volume sont créés de manière égale, plug-ins de volume généralement fournir externalisés le stockage persistant fiable à partir des conteneurs immuables.
+[Plug-ins de volume](https://docs.docker.com/engine/extend/plugins_volume/) fournissent des données sur tous les hôtes dans un cluster. Bien que pas tous les plug-ins de volume sont créés de manière égale, plug-ins de volume généralement fournir le stockage persistant externalisé fiable à partir des conteneurs immuables.
 
-Sources de données distantes et les caches comme base de données SQL, DocumentDB ou un cache à distance comme Redis serait identique développement sans conteneurs. Il s’agit d’une des manières préférés et éprouvée, pour stocker les données d’application métier.
+Sources de données distantes et des caches comme base de données SQL, DocumentDB ou un cache à distance comme Redis serait identique développements sans conteneurs. Il s’agit d’une des manières préféré et éprouvée, pour stocker les données d’application métier.
 
 
 >[!div class="step-by-step"]

@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 108946428cdfadcfb9c653b7e444bf278dfa2782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461979"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258109"
 ---
-# <a name="getnames-function"></a>GetNames (fonction)
-Récupère un sous-ensemble ou tous les noms des propriétés d’un objet. 
+# <a name="getnames-function"></a>GetNames, fonction
+Récupère un sous-ensemble ou l’ensemble des noms des propriétés d’un objet. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -44,22 +44,22 @@ HRESULT GetNames (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `wszQualifierName`  
-[in] Un pointeur vers un élément valide `LPCWSTR` qui spécifie un nom du qualificateur qui fonctionne en tant que partie d’un filtre. Pour plus d’informations, consultez la [notes](#remarks) section. Ce paramètre peut être `null`. 
+[in] Un pointeur vers une valide `LPCWSTR` qui spécifie un nom de qualificateur qui opère en tant que partie d’un filtre. Pour plus d’informations, consultez le [notes](#remarks) section. Ce paramètre peut être `null`. 
 
 `lFlags`  
-[in] Une combinaison des champs de bits. Pour plus d’informations, consultez la [notes](#remarks) section.
+[in] Une combinaison des champs de bits. Pour plus d’informations, consultez le [notes](#remarks) section.
 
 `pQualifierValue`   
-[in] Un pointeur vers un élément valide `VARIANT` structure initialisé à une valeur de filtre. Ce paramètre peut être `null`. 
+[in] Un pointeur vers une valide `VARIANT` structure initialisé à une valeur de filtre. Ce paramètre peut être `null`. 
 
 `pstrNames`  
-[out] A `SAFEARRAY` structure qui contient les noms de propriété. À l’entrée, ce paramètre doit toujours être un pointeur vers `null`. Consultez le [notes](#remarks) section pour plus d’informations. 
+[out] Un `SAFEARRAY` structure qui contient les noms de propriété. À l’entrée, ce paramètre doit toujours être un pointeur vers `null`. Consultez le [notes](#remarks) section pour plus d’informations. 
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -67,49 +67,49 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | 0 x 80041001 | Il a été un échec général. |
-|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un ou plusieurs paramètres ne sont pas valides, ou une combinaison incorrecte d’indicateurs et de paramètres a été spécifiée. |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible pour terminer l’opération. |
+|`WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
+|`WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un ou plusieurs paramètres ne sont pas valides, ou une combinaison incorrecte des indicateurs et des paramètres a été spécifiée. |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Mémoire est insuffisante pour terminer l’opération. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::GetNames](https://msdn.microsoft.com/library/aa391447(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::GetNames](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getnames) (méthode).
 
-Nommé retourné est contrôlé par une combinaison d’indicateurs et de paramètres. Par exemple, la fonction peut retourner les noms de toutes les propriétés ou uniquement les noms des propriétés de clé.  Le filtre principal est spécifié dans le `lFlags` paramètre et les autres paramètres varient selon qu’il.
+Nommé retourné est contrôlé par une combinaison d’indicateurs et de paramètres. Par exemple, la fonction peut retourner les noms de toutes les propriétés ou uniquement les noms des propriétés de clé.  Le filtre principal est spécifié dans le `lFlags` paramètre et les autres paramètres dépendent.
 
-Valeurs de l’indicateur de `lFlags` sont des champs de bits
+L’indicateur des valeurs dans `lFlags` sont des champs de bits
 
 
-Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument sont des champs de bits sont définis dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code.  Vous pouvez combiner un indicateur de chaque groupe de tout indicateur de tout autre groupe. Toutefois, les indicateurs à partir du même groupe sont mutuellement exclusifs. 
+Les indicateurs qui peuvent être passés en tant que le `lEnumFlags` argument sont des champs de bits qui sont définis dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code.  Vous pouvez combiner un indicateur de chaque groupe avec n’importe quel indicateur à partir d’un autre groupe. Toutefois, les indicateurs à partir du même groupe sont mutuellement exclusifs. 
 
 | Indicateurs de groupe 1 |Value  |Description  |
 |---------|---------|---------|
 | `WBEM_FLAG_ALWAYS` | 0 | Retourner tous les noms de propriété. `strQualifierName` et `pQualifierVal` ne sont pas utilisés. |
-| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Retourner uniquement les propriétés qui ont un qualificateur du nom spécifié par le `strQualifierName` paramètre. Si cet indicateur est utilisé, vous devez spécifier `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Retourner uniquement des propriétés qui n’ont pas d’un qualificateur du nom spécifié par le `strQualifierName` paramètre. Si cet indicateur est utilisé, vous devez spécifier `strQualifierName`. |
-|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Retourne uniquement les propriétés qui ont un qualificateur du nom spécifié par le `wszQualifierName` paramètre et également avoir une valeur identique à celle spécifiée par la `pQualifierVal` structure. Si cet indicateur est utilisé, vous devez spécifier à la fois un `wszQualifierName` et un `pQualifierValue`. |
+| `WBEM_FLAG_ONLY_IF_TRUE` | 1 | Retourner uniquement des propriétés qui ont un qualificateur de nom spécifié par le `strQualifierName` paramètre. Si cet indicateur est utilisé, vous devez spécifier `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_FALSE` | 2 |  Retourner uniquement des propriétés qui n’ont pas d’un qualificateur de nom spécifié par le `strQualifierName` paramètre. Si cet indicateur est utilisé, vous devez spécifier `strQualifierName`. |
+|`WBEM_FLAG_ONLY_IF_IDENTICAL` | 3 | Retourne uniquement les propriétés qui ont un qualificateur de nom spécifié par le `wszQualifierName` paramètre et également avoir une valeur identique à celui spécifié par le `pQualifierVal` structure. Si cet indicateur est utilisé, vous devez spécifier à la fois un `wszQualifierName` et un `pQualifierValue`. |
 
 | Indicateurs de groupe 2 |Value  |Description  |
 |---------|---------|---------|
 |`WBEM_FLAG_KEYS_ONLY` | 0 x 4 | Retourner uniquement les noms des propriétés qui définissent les clés. |
-|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Retour uniquement noms de propriétés qui sont des références d’objet. |
+|`WBEM_FLAG_REFS_ONLY` | 0 x 8 | Retour seuls noms de propriétés qui sont des références d’objet. |
 
 | Indicateurs de groupe 3 |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retourner uniquement les noms de propriété qui appartiennent à la classe la plus dérivée. Exclure les propriétés des classes parentes. |
-| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Retourner uniquement les noms de propriété qui appartiennent à des classes parentes. |
+| `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Retourner uniquement les noms de propriétés qui appartiennent à la classe la plus dérivée. Exclure les propriétés des classes parentes. |
+| `WBEM_FLAG_PROPAGATED_ONLY` |  0 x 20 | Retourner uniquement les noms de propriétés qui appartiennent à des classes parentes. |
 |`WBEM_FLAG_SYSTEM_ONLY` | 0 x 30 | Retourner uniquement les noms des propriétés système. |
-|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Retourner uniquement les noms des propriétés de non système. |
+|`WBEM_FLAG_NONSYSTEM_ONLY` | 0 x 40 | Retourner uniquement les noms des propriétés non système. |
 
-La fonction alloue une nouvelle toujours `SAFEARRAY` si elle retourne `WBEM_S_NO_ERROR`, et `pstrNames` est toujours défini à pointer sur elle. Le tableau retourné peut avoir des éléments, 0 si aucune propriété correspondent aux filtres spécifiés. Si la fonction retourne une valeur autre que `WBM_S_NO_ERROR`, un nouveau `SAFEARRAY` structure n’est pas retournée.
+La fonction alloue toujours un nouveau `SAFEARRAY` si elle retourne `WBEM_S_NO_ERROR`, et `pstrNames` est toujours défini pour pointer vers elle. Le tableau retourné peut avoir les éléments 0 si aucune propriété correspondent aux filtres spécifiés. Si la fonction retourne une valeur autre que `WBM_S_NO_ERROR`, un nouveau `SAFEARRAY` structure n’est pas retournée.
  
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

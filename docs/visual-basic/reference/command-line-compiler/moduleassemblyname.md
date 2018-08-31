@@ -1,5 +1,5 @@
 ---
-title: -/moduleassemblyname
+title: -moduleassemblyname
 ms.date: 03/13/2018
 helpviewer_keywords:
 - moduleassemblyname compiler option [Visual Basic]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8b579c2c3ae22469706326ee17109b8e39dab60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 479f9f639548eb81351d1df3f8f08b29b393cba1
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650788"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257247"
 ---
-# <a name="-moduleassemblyname"></a>-/moduleassemblyname
+# <a name="-moduleassemblyname"></a>-moduleassemblyname
 Spécifie le nom de l’assembly dont ce module doit faire partie.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -31,7 +31,7 @@ Spécifie le nom de l’assembly dont ce module doit faire partie.
 |`assembly_name`|Le nom de l’assembly de ce module fera partie.|  
   
 ## <a name="remarks"></a>Notes  
- Le compilateur traite la `-moduleassemblyname` option uniquement si la `-target:module` option a été spécifiée. Cela entraîne le compilateur à créer un module. Le module créé par le compilateur est valide uniquement pour l’assembly spécifié avec la `-moduleassemblyname` option. Si vous placez le module dans un assembly différent, les erreurs d’exécution seront produit.  
+ Le compilateur traite la `-moduleassemblyname` option uniquement si le `-target:module` option a été spécifiée. Cela indique au compilateur de créer un module. Le module créé par le compilateur est valide uniquement pour l’assembly spécifié avec la `-moduleassemblyname` option. Si vous placez le module dans un assembly différent, les erreurs d’exécution seront produit.  
   
  Le `-moduleassemblyname` option est uniquement requise lorsque les conditions suivantes sont remplies :  
   
@@ -39,7 +39,7 @@ Spécifie le nom de l’assembly dont ce module doit faire partie.
   
 -   L’assembly référencé a accordé l’accès d’assembly friend à l’assembly dans lequel le module sera généré.  
   
- Pour plus d’informations sur la création d’un module, consultez [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Pour plus d’informations sur les assemblys friend, consultez [Friend Assemblies](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
+ Pour plus d’informations sur la création d’un module, consultez [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md). Pour plus d’informations sur les assemblys friend, consultez [assemblys Friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
   
 > [!NOTE]
 >  Le `-moduleassemblyname` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lorsque vous compilez à partir d’une invite de commandes.  
@@ -53,4 +53,4 @@ Spécifie le nom de l’assembly dont ce module doit faire partie.
  [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
  [Assemblys et le Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Assemblys friend](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055)
+ [Assemblys friend](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)

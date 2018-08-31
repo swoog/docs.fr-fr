@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: e06836e53a69394ad899bedc8e545dbff9b9c29d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525776"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257921"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributs dans les contrôles Windows Forms
 .NET Framework fournit divers attributs que vous pouvez appliquer aux membres de vos composants et contrôles personnalisés. Certains de ces attributs affectent le comportement d’exécution d’une classe, et d’autres affectent le comportement au moment de la conception.  
@@ -24,10 +24,10 @@ ms.locfileid: "33525776"
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Spécifie la valeur à passer à une propriété pour que celle-ci obtienne sa valeur à partir d’une autre source. On appelle cela *l’ambiance*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Spécifie si une propriété ou un événement doit être affiché dans une fenêtre **Propriétés**.|  
-|<xref:System.ComponentModel.CategoryAttribute>|Spécifie le nom de la catégorie dans laquelle grouper la propriété ou l’événement lorsque affichés dans un <xref:System.Windows.Forms.PropertyGrid> contrôle <xref:System.Windows.Forms.PropertySort.Categorized> mode.|  
+|<xref:System.ComponentModel.CategoryAttribute>|Spécifie le nom de la catégorie dans laquelle grouper la propriété ou l’événement lorsque affichés dans un <xref:System.Windows.Forms.PropertyGrid> contrôle défini sur <xref:System.Windows.Forms.PropertySort.Categorized> mode.|  
 |<xref:System.ComponentModel.DefaultValueAttribute>|Spécifie la valeur par défaut d'une propriété.|  
 |<xref:System.ComponentModel.DescriptionAttribute>|Spécifie une description pour une propriété ou un événement.|  
-|<xref:System.ComponentModel.DisplayNameAttribute>|Spécifie le nom d’affichage complet pour une propriété, un événement, ou une méthode `public``void` qui n’accepte aucun argument.|  
+|<xref:System.ComponentModel.DisplayNameAttribute>|Spécifie le nom d’affichage complet pour une propriété, un événement, ou une méthode `public void` qui n’accepte aucun argument.|  
 |<xref:System.ComponentModel.EditorAttribute>|Spécifie l’éditeur à utiliser pour modifier une propriété.|  
 |<xref:System.ComponentModel.EditorBrowsableAttribute>|Spécifie qu'une propriété ou une méthode peut s'afficher dans un éditeur.|  
 |<xref:System.ComponentModel.Design.HelpKeywordAttribute>|Spécifie le mot-clé de contexte pour une classe ou un membre.|  

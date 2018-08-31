@@ -1,5 +1,5 @@
 ---
-title: Operator Statement
+title: Operator, instruction (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.operator
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: cb7fe7929e4b6e61ca3b39be5615e09182f2fe0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69dea99cf71bd1e091116e54e244abfca291ffdb
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605496"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255876"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Déclare le symbole d’opérateur, opérandes et le code qui définissent une procédure d’opérateur sur une classe ou structure.  
@@ -50,10 +50,10 @@ End Operator
  Facultatif. Consultez [surcharges](../../../visual-basic/language-reference/modifiers/overloads.md).  
   
  `Shared`  
- Obligatoire. Indique que cette procédure d’opérateur est un [Shared](../../../visual-basic/language-reference/modifiers/shared.md) procédure.  
+ Obligatoire. Indique que cette procédure d’opérateur est un [partagé](../../../visual-basic/language-reference/modifiers/shared.md) procédure.  
   
  `Shadows`  
- Facultatif. Consultez [ombres](../../../visual-basic/language-reference/modifiers/shadows.md).  
+ Facultatif. Consultez [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
  `Widening`  
  Obligatoire pour un opérateur de conversion, sauf si vous spécifiez `Narrowing`. Indique que cette procédure d’opérateur définit un [Widening](../../../visual-basic/language-reference/modifiers/widening.md) conversion. Consultez « Conversions étendues et restrictives » sur cette page d’aide.  
@@ -62,13 +62,13 @@ End Operator
  Obligatoire pour un opérateur de conversion, sauf si vous spécifiez `Widening`. Indique que cette procédure d’opérateur définit un [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md) conversion. Consultez « Conversions étendues et restrictives » sur cette page d’aide.  
   
  `operatorsymbol`  
- Obligatoire. Le symbole ou l’identificateur de l’opérateur qui définit de cette procédure d’opérateur.  
+ Obligatoire. Le symbole ou l’identificateur de l’opérateur qui définit cette procédure d’opérateur.  
   
  `operand1`  
- Obligatoire. Le nom et le type de l’opérande unique d’un opérateur unaire (y compris un opérateur de conversion) ou de l’opérande de gauche d’un opérateur binaire.  
+ Obligatoire. Le nom et le type de l’opérande unique d’un opérateur unaire (y compris un opérateur de conversion) ou de l’opérande gauche d’un opérateur binaire.  
   
  `operand2`  
- Obligatoire pour les opérateurs binaires. Le nom et le type de l’opérande de droite d’un opérateur binaire.  
+ Requis pour les opérateurs binaires. Le nom et le type de l’opérande de droite d’un opérateur binaire.  
   
  `operand1` et `operand2` ont la syntaxe et les éléments suivants :  
   
@@ -84,22 +84,22 @@ End Operator
  Facultatif, sauf si `Option Strict` est `On`. Type de données de la valeur de la procédure d’opérateur retourne.  
   
  `statements`  
- Facultatif. Bloc d’instructions qui s’exécute de la procédure d’opérateur.  
+ Facultatif. Bloc d’instructions qui s’exécute la procédure d’opérateur.  
   
  `returnvalue`  
- Obligatoire. La valeur de la procédure d’opérateur retourne au code appelant.  
+ Obligatoire. La valeur que la procédure d’opérateur retourne au code appelant.  
   
  `End` `Operator`  
- Obligatoire. Termine la définition de cette procédure d’opérateur.  
+ Obligatoire. Met fin à la définition de cette procédure d’opérateur.  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez utiliser `Operator` uniquement dans une classe ou structure. Cela signifie que la *contexte de déclaration* pour un opérateur ne peut pas être un fichier source, espace de noms, module, interface, procédure ou bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Vous pouvez utiliser `Operator` uniquement dans une classe ou structure. Cela signifie que le *contexte de déclaration* pour un opérateur ne peut pas être un fichier source, espace de noms, module, interface, procédure ou bloc. Pour plus d’informations, consultez [Contextes de déclaration et niveaux d’accès par défaut](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Tous les opérateurs doivent être `Public Shared`. Vous ne pouvez pas spécifier `ByRef`, `Optional`, ou `ParamArray` pour des opérandes.  
   
- Vous ne pouvez pas utiliser le symbole d’opérateur ou l’identificateur pour contenir une valeur de retour. Vous devez utiliser le `Return` l’instruction et il doivent spécifier une valeur. Un nombre quelconque de `Return` instructions peuvent apparaître n’importe où dans la procédure.  
+ Vous ne pouvez pas utiliser le symbole d’opérateur ou l’identificateur pour contenir une valeur de retour. Vous devez utiliser le `Return` instruction et elle doit spécifier une valeur. Un nombre quelconque de `Return` instructions peuvent apparaître n’importe où dans la procédure.  
   
- Définition d’un opérateur de cette façon est appelée *surcharge d’opérateur*, que vous utilisiez ou non le `Overloads` (mot clé). Le tableau suivant présente les opérateurs que vous pouvez définir.  
+ Définition d’un opérateur de cette façon est appelée *surcharge d’opérateur*, que vous utilisiez ou non le `Overloads` mot clé. Le tableau suivant présente les opérateurs que vous pouvez définir.  
   
 |Type|Opérateurs|  
 |----------|---------------|  
@@ -133,40 +133,40 @@ End Operator
   
  Certains opérateurs ont des données supplémentaires de type des restrictions, comme suit :  
   
--   Si vous définissez la `IsTrue` et `IsFalse` opérateurs, elles doivent toutes deux retournent la `Boolean` type.  
+-   Si vous définissez la `IsTrue` et `IsFalse` opérateurs, ils doivent retourner le `Boolean` type.  
   
--   Si vous définissez la `<<` et `>>` opérateurs, ils doivent tous deux spécifient la `Integer` de type pour le `operandtype` de `operand2`.  
+-   Si vous définissez la `<<` et `>>` opérateurs, ils doivent tous deux spécifient le `Integer` type pour le `operandtype` de `operand2`.  
   
- Le type de retour n’a pas à correspondre au type de des opérandes. Par exemple, un opérateur de comparaison tels que `=` ou `<>` peut retourner `Boolean` même si aucun des opérandes sont `Boolean`.  
+ Le type de retour ne doit pas forcément correspondre au type de des opérandes. Par exemple, un opérateur de comparaison tel que `=` ou `<>` peut retourner `Boolean` même si aucun des opérandes sont `Boolean`.  
   
 ## <a name="logical-and-bitwise-operators"></a>Opérateurs logiques et au niveau du bit  
  Le `And`, `Or`, `Not`, et `Xor` opérateurs peuvent effectuer des opérations logiques ou au niveau du bit en Visual Basic. Toutefois, si vous définissez un de ces opérateurs sur une classe ou structure, vous pouvez définir uniquement son opération au niveau du bit.  
   
  Vous ne pouvez pas définir le `AndAlso` opérateur directement avec un `Operator` instruction. Toutefois, vous pouvez utiliser `AndAlso` si vous avez rempli les conditions suivantes :  
   
--   Vous avez défini `And` sur les mêmes types d’opérande que vous souhaitez utiliser pour `AndAlso`.  
+-   Vous avez défini `And` sur les mêmes types d’opérande à utiliser pour `AndAlso`.  
   
--   Votre définition de `And` retourne le même type que la classe ou la structure sur laquelle vous l’avez défini.  
+-   Votre définition de `And` retourne le même type que la classe ou la structure sur lequel vous l’avez défini.  
   
 -   Vous avez défini le `IsFalse` opérateur sur la classe ou la structure sur laquelle vous avez défini `And`.  
   
  De même, vous pouvez utiliser `OrElse` si vous avez défini `Or` sur les mêmes opérandes, avec le type de retour de la classe ou structure et que vous avez défini `IsTrue` sur la classe ou structure.  
   
 ## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions  
- A *conversion étendue* réussit toujours au moment de l’exécution, pendant un *conversion restrictive* peut échouer au moment de l’exécution. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Un *conversion étendue* réussit toujours au moment de l’exécution, pendant un *conversion restrictive* peut échouer au moment de l’exécution. Pour plus d’informations, consultez [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
- Si vous déclarez une procédure de conversion comme étant `Widening`, votre code de procédure ne doit pas générer d’échecs. Par conséquent :  
+ Si vous déclarez une procédure de conversion pour être `Widening`, votre code de procédure ne doit pas générer d’échecs. Par conséquent :  
   
 -   Elle doit toujours retourner une valeur valide de type `type`.  
   
 -   Il doit gérer toutes les exceptions possibles et autres conditions d’erreur.  
   
--   Il doit gérer les erreurs retournées par les des procédures qu’elle appelle.  
+-   Il doit gérer les erreurs retournées par toutes les procédures qu’elle appelle.  
   
- S’il est possible qu’une procédure de conversion ne peut pas réussir, ou qu’elle peut provoquer une exception non gérée, vous devez la déclarer comme `Narrowing`.  
+ S’il est possible qu’une procédure de conversion peut échouer, ou qu’elle peut entraîner une exception non gérée, vous devez déclarer qu’elle soit `Narrowing`.  
   
 ## <a name="example"></a>Exemple  
- Le code suivant exemple utilise le `Operator` instruction pour définir le contour d’une structure qui inclut des procédures d’opérateur pour le `And`, `Or`, `IsFalse`, et `IsTrue` opérateurs. `And` et `Or` acceptent chacun deux opérandes de type `abc` et type de retour `abc`. `IsFalse` et `IsTrue` acceptent chacun un opérande unique de type `abc` et retourner `Boolean`. Ces définitions permettent au code appelant d’utiliser `And`, `AndAlso`, `Or`, et `OrElse` avec opérandes de type `abc`.  
+ Le code suivant exemple utilise le `Operator` instruction pour définir le contour d’une structure qui inclut des procédures d’opérateur pour le `And`, `Or`, `IsFalse`, et `IsTrue` opérateurs. `And` et `Or` chacun prennent deux opérandes de type `abc` et type de retour `abc`. `IsFalse` et `IsTrue` chacune accepter un opérande unique de type `abc` et retourner `Boolean`. Ces définitions permettent au code appelant d’utiliser `And`, `AndAlso`, `Or`, et `OrElse` avec opérandes de type `abc`.  
   
  [!code-vb[VbVbalrStatements#44](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/operator-statement_1.vb)]  
   

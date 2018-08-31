@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: e790f8abd216e198ff5077beab6f857e39981d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78311651593d3d4a47c723f64a9a74d4660f7c90
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602078"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254060"
 ---
 # <a name="ltseegt-visual-basic"></a>&lt;consultez&gt; (Visual Basic)
 Spécifie un lien vers un autre membre.  
@@ -23,17 +23,17 @@ Spécifie un lien vers un autre membre.
   
 #### <a name="parameters"></a>Paramètres  
  `member`  
- Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel. Le compilateur vérifie que l’élément de code donné existe et qu’il passe `member` nom de l’élément dans la sortie XML. `member` doit apparaître entre guillemets doubles (" ").  
+ Référence à un membre ou un champ qu’il est possible d’appeler à partir de l’environnement de compilation actuel. Le compilateur vérifie que l’élément de code donné existe et qu’il passe `member` au nom d’élément dans la sortie XML. `member` doit apparaître entre guillemets doubles (" ").  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le `<see>` balise pour spécifier un lien à partir du texte. Utilisez [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) pour indiquer le texte que vous souhaitez apparaissent dans une section « Voir aussi ».  
+ Utilisez le `<see>` balise pour spécifier un lien à partir du texte. Utilisez [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) pour indiquer le texte que vous souhaitez voir apparaître dans une section « Voir aussi ».  
   
  Compilez avec [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) pour placer les commentaires de documentation dans un fichier en vue de les traiter.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le `<see>` de balise dans le `UpdateRecord` la section Notes de la section pour faire référence à la `DoesRecordExist` (méthode).  
+ Cet exemple utilise le `<see>` balise dans le `UpdateRecord` section pour faire référence à la section Notes le `DoesRecordExist` (méthode).  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)
