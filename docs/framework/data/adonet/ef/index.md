@@ -2,14 +2,14 @@
 title: ADO.NET Entity Framework
 ms.date: 03/30/2017
 ms.assetid: a437041f-6899-4ae7-96ce-aabf528d7205
-ms.openlocfilehash: 1fc2c0e651124d2bd4365d620cca771faf484999
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e5a282a1a4cfd0e986456d0e277585c2b08c0bfa
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760477"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43330917"
 ---
-# <a name="adonet-entity-framework"></a><span data-ttu-id="bee48-102">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="bee48-102">ADO.NET Entity Framework</span></span>
-<span data-ttu-id="bee48-103">Le site [msdn.com/data/ef](http://msdn.microsoft.com/data/ef) est maintenant l’emplacement principal du contenu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="bee48-103">The [msdn.com/data/ef](http://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="adonet-entity-framework"></a><span data-ttu-id="3bb46-102">ADO.NET Entity Framework</span><span class="sxs-lookup"><span data-stu-id="3bb46-102">ADO.NET Entity Framework</span></span>
+<span data-ttu-id="3bb46-103">Le [docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) site est maintenant l’emplacement principal pour le contenu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="3bb46-103">The [docs.microsoft.com/ef/](https://docs.microsoft.com/ef/) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="bee48-104">Le contenu de cette rubrique est disponible dans la page suivante : [Présentation d’Entity Framework](http://msdn.microsoft.com/data/jj590134).</span><span class="sxs-lookup"><span data-stu-id="bee48-104">The content for this topic is now available on the following page: [Introducing Entity Framework](http://msdn.microsoft.com/data/jj590134).</span></span>
+ <span data-ttu-id="3bb46-104">Le contenu de cette rubrique est disponible dans la page suivante : [Présentation d’Entity Framework](https://msdn.microsoft.com/data/jj590134).</span><span class="sxs-lookup"><span data-stu-id="3bb46-104">The content for this topic is now available on the following page: [Introducing Entity Framework](https://msdn.microsoft.com/data/jj590134).</span></span>
