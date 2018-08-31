@@ -5,21 +5,21 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 74fd333b97f2e5fbbee3771f6715cc36bbd12037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587408"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255200"
 ---
 # <a name="programming-in-visual-basic"></a>Programmation dans Visual Basic
 Cette section décrit les tâches de programmation qu’il peut être intéressant d’approfondir pour créer une application Visual Basic.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Accès aux ressources de l’ordinateur](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
+ [Accès aux ressources de l’ordinateur](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  Contient une documentation sur l’utilisation de l’objet `My.Computer` pour accéder à des informations relatives à l’ordinateur sur lequel s’exécute une application et au contrôle de l’ordinateur.  
   
- [Enregistrement d’informations provenant de l’application](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
+ [Enregistrement d’informations provenant de l’application](../../../visual-basic/developing-apps/programming/log-info/index.md)  
  Contient une documentation sur l’enregistrement d’informations provenant de l’application avec les objets `My.Application.Log` et `My.Log` et sur l’extension des fonctionnalités de journalisation de l’application.  
   
  [Accès aux données de l’utilisateur](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
@@ -31,7 +31,7 @@ Cette section décrit les tâches de programmation qu’il peut être intéressa
  [Accès aux services web d’une application](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Contient une documentation sur l’accès aux services web référencés par l’application avec l’objet `My.WebServices`.  
   
- [Accès aux paramètres d’application](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
+ [Accès aux paramètres d’application](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Contient une documentation sur l’accès aux paramètres d’une application avec l’objet `My.Settings`.  
   
  [Traitement de lecteurs, de répertoires et de fichiers](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
