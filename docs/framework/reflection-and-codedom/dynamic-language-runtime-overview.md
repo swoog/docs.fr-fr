@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33397284"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393765"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Vue d'ensemble du Dynamic Language Runtime
 Le *Dynamic Language Runtime* (DLR) est un environnement d’exécution ajoutant au Common Language Runtime (CLR) un ensemble de services pour les langages dynamiques. Le DLR simplifie le développement de langages dynamiques à exécuter sur le .NET Framework et l’ajout de fonctionnalités dynamiques aux langages typés statiquement.  
@@ -52,7 +52,7 @@ Le *Dynamic Language Runtime* (DLR) est un environnement d’exécution ajoutant
   
 -   IronPython. Disponible en logiciel open source sur le site web [GitHub](https://github.com/IronLanguages/ironpython2).  
   
--   IronRuby. Disponible en tant que logiciel open source à partir du site web [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044).  
+-   IronRuby. Disponible en tant que logiciel open source à partir du site web [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).  
   
 ## <a name="primary-dlr-advantages"></a>Principaux avantages du DLR  
  Le DLR offre les avantages suivants.  
@@ -80,7 +80,7 @@ Architecture du DLR
   
  Le DLR ajoute un ensemble de services au CLR pour une meilleure prise en charge des langages dynamiques. Il s’agit des services suivants :  
   
--   Arborescences de l’expression. Le DLR utilise des arborescences de l’expression pour représenter la syntaxe de langage. À cette fin, le DLR a étendu les arborescences de l’expression LINQ pour inclure le flux de contrôle, l’assignation et d’autres nœuds de modélisation de langage. Pour plus d’informations, consultez [Arborescences de l’expression](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+-   Arborescences de l’expression. Le DLR utilise des arborescences de l’expression pour représenter la syntaxe de langage. À cette fin, le DLR a étendu les arborescences de l’expression LINQ pour inclure le flux de contrôle, l’assignation et d’autres nœuds de modélisation de langage. Pour plus d’informations, consultez [Arborescences de l’expression](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
 -   Mise en cache dans le site d’appel. Un *site d’appel dynamique* est un emplacement dans le code où vous exécutez une opération comme `a + b` ou `a.b()` sur des objets dynamiques. Le DLR met en cache les caractéristiques de `a` et `b` (en général, les types de ces objets) et les informations sur l’opération. Si une opération de ce type a été exécutée précédemment, le DLR extrait toutes les informations nécessaires du cache pour une distribution rapide.  
   
@@ -95,5 +95,5 @@ Architecture du DLR
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [Common Language Runtime](../../../docs/standard/clr.md)  
- [Arborescences d’expressions](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Arborescences d’expressions](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [Procédure pas à pas : création et utilisation d’objets dynamiques](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: e278b28e5c0015eeab549b04d3870dfa247a57ed
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 9c2a8d89fc62f8e3e0ce17f13604a6ba05df1a6f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33808869"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395063"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informations de confidentialité relatives à Windows Communication Foundation
 Microsoft s’engage à protéger la confidentialité des utilisateurs finals. Lorsque vous créez une application à l’aide de Windows Communication Foundation (WCF), version 3.0, votre application peut avoir un impact sur confidentialité de vos utilisateurs finaux. Par exemple, votre application peut recueillir des informations de contact utilisateur de manière explicite ou elle peut demander ou envoyer des informations sur Internet à votre site web. Si vous incorporez la technologie Microsoft dans votre application, cette technologie peut avoir son propre comportement qui peut affecter la confidentialité. WCF n’envoie pas toutes les informations à Microsoft à partir de votre application, si vous ou l’utilisateur final ne nous l’envoyer.  
@@ -127,13 +127,13 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  Clés qui sont supprimées :  
   
- \- Pour xmlns:wst = «http://schemas.xmlsoap.org/ws/2004/04/trust» et xmlns:wst = «http://schemas.xmlsoap.org/ws/2005/02/trust»  
+ \- Pour xmlns:wst = « http://schemas.xmlsoap.org/ws/2004/04/trust» et xmlns:wst = « http://schemas.xmlsoap.org/ws/2005/02/trust»  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- \- Pour xmlns:wsse = «http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» et xmlns:wsse = «http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»  
+ \- Pour xmlns:wsse = « http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» et xmlns:wsse = « http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  Informations potentiellement personnelles qui sont supprimées :  
   
- \- Pour xmlns:wsse = «http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» et xmlns:wsse = «http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»  
+ \- Pour xmlns:wsse = « http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd» et xmlns:wsse = « http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd»  
   
  wsse:Username  
   
@@ -304,7 +304,7 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
   
  Pour les espaces de noms suivants :  
   
- xmlns:WST = «http://schemas.xmlsoap.org/ws/2004/04/trust» et xmlns:wst = «http://schemas.xmlsoap.org/ws/2005/02/trust» (par exemple, si aucune action n’est disponible)  
+ xmlns:WST = « http://schemas.xmlsoap.org/ws/2004/04/trust» et xmlns:wst = « http://schemas.xmlsoap.org/ws/2005/02/trust» (par exemple, si aucune action n’est disponible)  
   
  Les informations sont supprimées pour ces éléments de corps, qui impliquent l'échange de clé :  
   
@@ -402,5 +402,5 @@ Microsoft s’engage à protéger la confidentialité des utilisateurs finals. L
  Le langage WDSL (Web Services Description Language) contient une définition du port. Chaque port a une adresse de point de terminaison et une liaison qui représente les services utilisés par l'application. L'exposition du langage WSDL peut être désactivée à l'aide de la configuration. Aucune information n'est conservée sur l'ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](https://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Sécurité](../../../docs/framework/wcf/feature-details/security.md)
