@@ -5,12 +5,12 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8c09ab934ee7457fdff39a63c58f2546cda4d643
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598548"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384229"
 ---
 # <a name="ltexamplegt-visual-basic"></a>&lt;exemple&gt; (Visual Basic)
 Spécifie un exemple pour le membre.  
@@ -36,4 +36,4 @@ Spécifie un exemple pour le membre.
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [Étiquettes XML pour les commentaires](../../../visual-basic/language-reference/xmldoc/index.md)

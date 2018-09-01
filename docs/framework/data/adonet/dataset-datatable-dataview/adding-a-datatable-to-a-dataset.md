@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: 3554790bb65310031b00ca5fb320aa4c111e1e11
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f2282b7aea8adf9e7574e2abe86af7cc5a487e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758540"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392291"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Ajout d'un nouveau DataTable à un DataSet
 ADO.NET vous permet de créer des objets <xref:System.Data.DataTable> et de les ajouter à un objet <xref:System.Data.DataSet> existant. Vous pouvez définir des informations de contrainte pour un objet <xref:System.Data.DataTable> en utilisant les propriétés <xref:System.Data.DataTable.PrimaryKey%2A> et <xref:System.Data.DataColumn.Unique%2A>.  
@@ -22,9 +22,9 @@ ADO.NET vous permet de créer des objets <xref:System.Data.DataTable> et de les 
  [!code-vb[DataWorks Data.DataTableAdd#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableAdd/VB/source.vb#1)]  
   
 ## <a name="case-sensitivity"></a>Respect de la casse  
- Un objet <xref:System.Data.DataSet> peut contenir plusieurs tables ou relations dont les noms ne diffèrent que par la casse. Dans ces cas, les références par nom aux tables et relations respectent la casse. Par exemple, si le <xref:System.Data.DataSet> **dataSet** contient des tables **Table1** et **table1**, vous devez référencer **Table1** par nom en tant que **dataSet.Tables["Table1 »]**, et **table1** en tant que **dataSet.Tables["table1 »]**. Tentative de référencer une des tables comme **dataSet.Tables["TABLE1 »]** génèrent une exception.  
+ Un objet <xref:System.Data.DataSet> peut contenir plusieurs tables ou relations dont les noms ne diffèrent que par la casse. Dans ces cas, les références par nom aux tables et relations respectent la casse. Par exemple, si le <xref:System.Data.DataSet> **dataSet** contient des tables **Table1** et **table1**, vous devez référencer **Table1** par nom en tant que **dataSet.Tables["Table1 »]**, et **table1** comme **dataSet.Tables["table1 »]**. Si vous tentez de référencer une des tables en tant que **dataSet.Tables["TABLE1 »]** génère une exception.  
   
- Le comportement de respect de la casse ne s'applique pas s'il n'existe qu'une seule table ou relation ayant un nom particulier. Par exemple, si le <xref:System.Data.DataSet> a uniquement **Table1**, vous pouvez faire référence à l’aide de **dataSet.Tables["TABLE1 »]**.  
+ Le comportement de respect de la casse ne s'applique pas s'il n'existe qu'une seule table ou relation ayant un nom particulier. Par exemple, si le <xref:System.Data.DataSet> a uniquement **Table1**, vous pouvez le référencer à l’aide de **dataSet.Tables["TABLE1 »]**.  
   
 > [!NOTE]
 >  La propriété <xref:System.Data.DataSet.CaseSensitive%2A> de l'objet <xref:System.Data.DataSet> n'affecte pas ce comportement. La propriété <xref:System.Data.DataSet.CaseSensitive%2A> s'applique aux données de l'objet <xref:System.Data.DataSet> et affecte les contraintes de tri, de recherche, de filtrage, d'application, etc.  
@@ -34,4 +34,4 @@ ADO.NET vous permet de créer des objets <xref:System.Data.DataTable> et de les 
   
 ## <a name="see-also"></a>Voir aussi  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

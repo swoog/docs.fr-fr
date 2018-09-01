@@ -5,18 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: b8e6ce386dc122ba059a18a448239cec7eaae222
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeea3933446a401ad8f556dc546f54122a19a8b5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396767"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Comment : implémenter une opération de service asynchrone
-Dans les applications Windows Communication Foundation (WCF), une opération de service peut être implémentée en mode asynchrone ou synchrone sans dicter au client comment l’appeler. Par exemple, les opérations de service asynchrones peuvent être appelées de façon synchrone, et inversement. Pour obtenir un exemple qui montre comment appeler une opération de façon asynchrone dans une application cliente, consultez [Comment : appeler les opérations de Service asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Pour plus d’informations sur les opérations synchrones et asynchrones, consultez [concevoir des contrats de Service](../../../docs/framework/wcf/designing-service-contracts.md) et [synchrone et asynchrone des opérations](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Cette rubrique décrit la structure de base d'une opération de service asynchrone, le code n'est pas complet. Pour obtenir un exemple complet de côtés le service et le client, consultez [asynchrone](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+Dans les applications Windows Communication Foundation (WCF), une opération de service peut être implémentée en mode asynchrone ou synchrone sans dicter au client comment l’appeler. Par exemple, les opérations de service asynchrones peuvent être appelées de façon synchrone, et inversement. Pour obtenir un exemple qui montre comment appeler une opération de façon asynchrone dans une application cliente, consultez [Comment : appeler les opérations de Service asynchrone](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Pour plus d’informations sur les opérations synchrones et asynchrones, consultez [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) et [synchrone et opérations asynchrones](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). Cette rubrique décrit la structure de base d'une opération de service asynchrone, le code n'est pas complet. Pour obtenir un exemple complet de côtés le service et le client, consultez [asynchrone](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Implémenter une opération de service de façon asynchrone  
   
-1.  Dans votre contrat de service, déclarez une paire de méthodes asynchrones conformément aux règles de design asynchrone .NET. La méthode `Begin` prend un paramètre, un objet de rappel et un objet d'état, puis retourne <xref:System.IAsyncResult?displayProperty=nameWithType> et une méthode `End` correspondante qui prend <xref:System.IAsyncResult?displayProperty=nameWithType> et retourne la valeur de retour. Pour plus d’informations sur les appels asynchrones, consultez [Asynchronous Programming Design Patterns](http://go.microsoft.com/fwlink/?LinkId=248221).  
+1.  Dans votre contrat de service, déclarez une paire de méthodes asynchrones conformément aux règles de design asynchrone .NET. La méthode `Begin` prend un paramètre, un objet de rappel et un objet d'état, puis retourne <xref:System.IAsyncResult?displayProperty=nameWithType> et une méthode `End` correspondante qui prend <xref:System.IAsyncResult?displayProperty=nameWithType> et retourne la valeur de retour. Pour plus d’informations sur les appels asynchrones, consultez [les modèles de conception de programmation asynchrone](https://go.microsoft.com/fwlink/?LinkId=248221).  
   
 2.  Marquez la méthode `Begin` de la paire de méthodes asynchrones avec l'attribut <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> et affectez <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> à la propriété `true`. Par exemple, le code suivant exécute les étapes 1 et 2.  
   

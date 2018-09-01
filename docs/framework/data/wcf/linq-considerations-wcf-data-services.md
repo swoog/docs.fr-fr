@@ -9,34 +9,34 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 030c8e12b45cfc11d1440a410c69d8bc911c56c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365967"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394638"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considérations sur LINQ (WCF Data Services)
-Cette rubrique fournit des informations sur la façon dont les requêtes LINQ sont composées et exécutées lorsque vous utilisez le client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] et décrit les restrictions d'utilisation de LINQ pour interroger un service de données qui implémente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Pour plus d’informations sur la composition des et d’exécution des requêtes par rapport à un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-en fonction du service de données, consultez [interrogation du Service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Cette rubrique fournit des informations sur la façon dont les requêtes LINQ sont composées et exécutées lorsque vous utilisez le client [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] et décrit les restrictions d'utilisation de LINQ pour interroger un service de données qui implémente [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Pour plus d’informations sur la composition et l’exécution de requêtes sur un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-service de données, consultez [interrogation du Service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Composition de requêtes LINQ  
- LINQ vous permet de composer des requêtes pour interroger une collection d'objets qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Les deux le **ajouter une référence de Service** boîte de dialogue dans Visual Studio et l’outil DataSvcUtil.exe sont utilisés pour générer la représentation d’un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service comme une classe de conteneur d’entités qui hérite de <xref:System.Data.Services.Client.DataServiceContext>, ainsi que objets qui représentent les entités retournées dans les flux. Ces outils génèrent également des propriétés sur la classe de conteneur d’entités des collections qui sont exposées en tant que flux par le service. Chacune de ces propriétés de classe qui encapsule le service de données retourne un <xref:System.Data.Services.Client.DataServiceQuery%601>. Étant donné que la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implémente l'interface <xref:System.Linq.IQueryable%601> définie par LINQ, vous pouvez composer une requête LINQ sur des flux exposés par le service de données, qui sont convertis par la bibliothèque cliente en un URI de demande de requête envoyé au service de données lors de l'exécution.  
+ LINQ vous permet de composer des requêtes pour interroger une collection d'objets qui implémente <xref:System.Collections.Generic.IEnumerable%601>. Les deux le **ajouter une référence de Service** boîte de dialogue dans Visual Studio et de l’outil DataSvcUtil.exe sont utilisés pour générer la représentation d’un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] service comme une classe de conteneur d’entités qui hérite de <xref:System.Data.Services.Client.DataServiceContext>, ainsi que objets qui représentent les entités retournées dans les flux. Ces outils génèrent également des propriétés sur la classe de conteneur d’entités des collections qui sont exposées en tant que flux par le service. Chacune de ces propriétés de classe qui encapsule le service de données retourne un <xref:System.Data.Services.Client.DataServiceQuery%601>. Étant donné que la classe <xref:System.Data.Services.Client.DataServiceQuery%601> implémente l'interface <xref:System.Linq.IQueryable%601> définie par LINQ, vous pouvez composer une requête LINQ sur des flux exposés par le service de données, qui sont convertis par la bibliothèque cliente en un URI de demande de requête envoyé au service de données lors de l'exécution.  
   
 > [!IMPORTANT]
->  L'ensemble de requêtes pouvant être exprimées dans la syntaxe LINQ est plus étendu que dans la syntaxe d'URI utilisée par les services de données [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. <xref:System.NotSupportedException> est levée lorsque la requête ne peut pas être mappée à un URI dans le service de données cible. Pour plus d’informations, consultez la [les méthodes LINQ non prises en charge](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) dans cette rubrique.  
+>  L'ensemble de requêtes pouvant être exprimées dans la syntaxe LINQ est plus étendu que dans la syntaxe d'URI utilisée par les services de données [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. <xref:System.NotSupportedException> est levée lorsque la requête ne peut pas être mappée à un URI dans le service de données cible. Pour plus d’informations, consultez le [des méthodes LINQ non prises en charge](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) dans cette rubrique.  
   
  L'exemple suivant est une requête LINQ qui retourne des `Orders` ayant un coût de fret supérieur à $30 et trie les résultats par date d'expédition, en commençant par la dernière :  
   
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Cette requête LINQ est traduite de la requête suivante URI qui est exécutée sur la station de travail Northwind [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) service de données :  
+ Cette requête LINQ est traduite dans la requête suivante URI qui est exécutée sur la base de Northwind [quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) service de données :  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- Pour plus d’informations à propos de LINQ, consultez [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Pour obtenir des informations plus générales sur LINQ, consultez [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  LINQ vous permet de composer des requêtes en utilisant aussi bien la syntaxe déclarative spécifique au langage, illustrée dans l'exemple précédent, qu'un ensemble de méthodes de requête qu'on nomme opérateurs de requête standard. Une requête équivalente à l'exemple précédent peut être composée en utilisant uniquement la syntaxe reposant sur une méthode, comme illustré dans l'exemple suivant :  
   
@@ -137,7 +137,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 <a name="expand"></a>   
 ### <a name="expand"></a>Expand  
- Lorsque vous interrogez un service de données [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], vous pouvez demander que les entités liées à l'entité cible par la requête soient incluses dans le flux retourné. La méthode <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> est appelée sur la <xref:System.Data.Services.Client.DataServiceQuery%601> pour l'ensemble d'entités ciblé par la requête LINQ, avec le nom de l'ensemble d'entités relatif fourni sous la forme de paramètre `path`. Pour plus d’informations, consultez [chargement différé contenu](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
+ Lorsque vous interrogez un service de données [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], vous pouvez demander que les entités liées à l'entité cible par la requête soient incluses dans le flux retourné. La méthode <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> est appelée sur la <xref:System.Data.Services.Client.DataServiceQuery%601> pour l'ensemble d'entités ciblé par la requête LINQ, avec le nom de l'ensemble d'entités relatif fourni sous la forme de paramètre `path`. Pour plus d’informations, consultez [le chargement du contenu différé](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
  Les exemples suivants illustrent les différentes façons d'utiliser la méthode <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> dans une requête :  
   
@@ -165,7 +165,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Opérateurs de projection et de filtrage|Les opérateurs de projection et de filtrage suivants, qui acceptent un argument de position, ne sont pas pris en charge sur <xref:System.Data.Services.Client.DataServiceQuery%601> :<br /><br /> -   <xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29>|  
 |Opérateurs de groupement|Aucun opérateur de groupement n'est pris en charge sur un <xref:System.Data.Services.Client.DataServiceQuery%601>, impliquant ce qui suit :<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Les opérations de groupement doivent être exécutées sur le client.|  
 |Opérateurs d'agrégation|Aucune opération d'agrégation n'est prise en charge sur un <xref:System.Data.Services.Client.DataServiceQuery%601>, impliquant ce qui suit :<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Les opérations d'agrégation doivent soit être exécutées sur le client, soit être encapsulées par une opération de service.|  
-|Opérateurs de pagination|Les opérateur de pagination suivants ne sont pas pris en charge sur un <xref:System.Data.Services.Client.DataServiceQuery%601> :<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Remarque :** des opérateurs de pagination qui sont exécutées sur une séquence vide retournent la valeur null.|  
+|Opérateurs de pagination|Les opérateur de pagination suivants ne sont pas pris en charge sur un <xref:System.Data.Services.Client.DataServiceQuery%601> :<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Remarque :** des opérateurs de pagination qui sont exécutées sur une séquence vide retournent null.|  
 |Autres opérateurs|Les autres opérateur suivants ne sont pas pris en charge sur un <xref:System.Data.Services.Client.DataServiceQuery%601> :<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
@@ -195,7 +195,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.DateTime.Second>|`int second(DateTime p0)`|  
 |<xref:System.DateTime.Year>|`int year(DateTime p0)`|  
   
- <sup>1</sup>l’équivalente de date et les propriétés au moment de <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, ainsi que le <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> méthode dans Visual Basic sont également pris en charge.  
+ <sup>1</sup>la date équivalente et les propriétés au moment de <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, ainsi que le <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> méthode dans Visual Basic sont également acceptés.  
   
 |Membre <xref:System.Math>|Fonction [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prise en charge|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
@@ -216,4 +216,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [Interrogation du service de données](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [Projections de requête](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
  [Matérialisation d’objet](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
- [OData : Conventions d’URI](http://go.microsoft.com/fwlink/?LinkID=185564)
+ [OData : Conventions d’URI](https://go.microsoft.com/fwlink/?LinkID=185564)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77debed932b78ae0aa1d8eebf54bd2d3bfbfea7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591961"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389623"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procédure pas à pas : création d'une application de chiffrement
 Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. Les exemples de code sont conçus pour une application Windows Forms. Cette application ne montre pas de scénarios du monde réel, tels que l'utilisation de cartes à puce. Elle montre les principes fondamentaux du chiffrement et du déchiffrement.  
@@ -123,7 +123,7 @@ Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. L
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>Déchiffrement d'un fichier  
- Cette tâche inclut deux méthodes : la méthode de gestionnaire d'événements pour le bouton `Decrypt File` (`buttonEncryptFile_Click`) et la méthode `DecryptFile`. La première méthode affiche une boîte de dialogue permettant de sélectionner un fichier, puis passe le nom du fichier à la deuxième méthode qui effectue le déchiffrement.  
+ Cette tâche inclut deux méthodes : la méthode de gestionnaire d'événements pour le bouton `Decrypt File` (`buttonDecryptFile_Click`) et la méthode `DecryptFile`. La première méthode affiche une boîte de dialogue permettant de sélectionner un fichier, puis passe le nom du fichier à la deuxième méthode qui effectue le déchiffrement.  
   
  La méthode `Decrypt` effectue les opérations suivantes :  
   

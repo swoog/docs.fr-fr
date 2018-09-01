@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fdf18564d3545e0061d8323e544aecfeed621d0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4abd570f8bb40f2faa72f2debf2dee563d3a23
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489981"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394940"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Vue d'ensemble de la protection étendue de l'authentification
 La protection étendue de l'authentification contribue à la protection contre les attaques de l'intercepteur (« man-in-the-middle ») au cours desquelles un intrus intercepte les informations d'identification d'un client et les transmet à un serveur.  
@@ -35,4 +35,4 @@ La protection étendue de l'authentification contribue à la protection contre l
  Pour plus d'informations, consultez l'exemple Win7 CBT/Protection étendue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

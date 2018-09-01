@@ -2,18 +2,18 @@
 title: Adoption de Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: 49ba71e2-9468-4082-84c5-cf8daf95e34a
-ms.openlocfilehash: 3ca2561356fb57fa685c778e509682581e317092
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 5773d2687eb06cfc562dbe25fa9b94864b1b3a49
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999331"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389610"
 ---
 # <a name="adopting-windows-communication-foundation"></a>Adoption de Windows Communication Foundation
 
 Vous pouvez choisir d’utiliser Windows Communication Foundation (WCF) pour tout nouveau développement, alors que continuant à gérer les applications existantes développées à l’aide de ASP.NET. Étant donné que WCF est destinée à être le meilleur choix pour faciliter la communication avec les applications générées avec le .NET Framework dans n’importe quel scénario, il peut constituer un outil standard pour résoudre un large éventail de problèmes de communication de logiciels de manière qu’ASP.NET ne peut pas.
 
-Nouvelles applications WCF peuvent être déployées sur les mêmes machines en tant que services Web ASP.NET existants. Si les services Web ASP.NET existants utilisent une version du .NET Framework antérieures à la version 2.0, vous pouvez utiliser l’outil ASP.NET IIS Registration pour déployer sélectivement le .NET Framework 2.0 dans les applications IIS dans lequel les nouvelles applications WCF doivent être hébergés. Cet outil est décrit à l’adresse [outil ASP.NET IIS Registration (Aspnet_regiis.exe)](http://go.microsoft.com/fwlink/?LinkId=94687), et a une interface utilisateur intégrée de la console de gestion IIS 6.0.
+Nouvelles applications WCF peuvent être déployées sur les mêmes machines en tant que services Web ASP.NET existants. Si les services Web ASP.NET existants utilisent une version du .NET Framework antérieures à la version 2.0, vous pouvez utiliser l’outil ASP.NET IIS Registration pour déployer sélectivement le .NET Framework 2.0 dans les applications IIS dans lequel les nouvelles applications WCF doivent être hébergés. Cet outil est décrit à l’adresse [outil ASP.NET IIS Registration (Aspnet_regiis.exe)](https://go.microsoft.com/fwlink/?LinkId=94687), et a une interface utilisateur intégrée de la console de gestion IIS 6.0.
 
 WCF peut être utilisé pour ajouter de nouvelles fonctionnalités aux services Web ASP.NET existants en ajoutant des services WCF configurés pour s’exécuter en mode de compatibilité ASP.NET pour les applications de service Web ASP.NET existantes dans IIS. En raison du mode de compatibilité ASP.NET, le code pour les nouveaux services WCF permettre accéder et mettre à jour les informations d’état application même que le code ASP.NET préexistant, à l’aide de la <xref:System.Web.HttpContext> classe. Les applications peuvent également partager les mêmes bibliothèques de classes.
 

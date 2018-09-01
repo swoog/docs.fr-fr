@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
-ms.openlocfilehash: 9e9cf91559fe164fc42d5f9532428310fa1b16ed
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759463"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392089"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtention d'un DbProviderFactory
 Le processus d'obtention d'un objet <xref:System.Data.Common.DbProviderFactory> implique de passer des informations à propos d'un fournisseur de données à la classe <xref:System.Data.Common.DbProviderFactories>. En fonction de ces informations, la méthode <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crée une fabrique de fournisseurs fortement typée. Par exemple, pour créer un objet <xref:System.Data.SqlClient.SqlClientFactory>, vous pouvez passer à `GetFactory` une chaîne avec le nom du fournisseur spécifié comme « System.Data.SqlClient ». L'autre surcharge de `GetFactory` prend un objet <xref:System.Data.DataRow>. Une fois que vous avez créé la fabrique de fournisseurs, vous pouvez ensuite utiliser ses méthodes pour créer des objets supplémentaires. Parmi les méthodes d'un `SqlClientFactory`, citons <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> et <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  
@@ -19,7 +19,7 @@ Le processus d'obtention d'un objet <xref:System.Data.Common.DbProviderFactory> 
 >  Les objets <xref:System.Data.OracleClient.OracleClientFactory>, <xref:System.Data.Odbc.OdbcFactory> .NET Framework et les classes <xref:System.Data.OleDb.OleDbFactory> fournissent des fonctionnalités similaires.  
   
 ## <a name="registering-dbproviderfactories"></a>Inscription de DbProviderFactories  
- Chaque fournisseur de données .NET Framework qui prend en charge une classe de fabrique enregistre les informations de configuration dans le **DbProviderFactories** section de la **machine.config** fichier sur l’ordinateur local. Le fragment de fichier de configuration suivant montre la syntaxe et le format de <xref:System.Data.SqlClient>.  
+ Chaque fournisseur de données .NET Framework qui prend en charge d’une classe de fabrique enregistre les informations de configuration dans le **DbProviderFactories** section de la **machine.config** fichier sur l’ordinateur local. Le fragment de fichier de configuration suivant montre la syntaxe et le format de <xref:System.Data.SqlClient>.  
   
 ```xml  
 <system.data>  
@@ -79,7 +79,7 @@ Le processus d'obtention d'un objet <xref:System.Data.Common.DbProviderFactory> 
 ```  
   
 ### <a name="retrieving-a-connection-string-by-provider-name"></a>Récupération d'une chaîne de connexion à l'aide du nom du fournisseur  
- Pour créer une fabrique de fournisseurs, vous devez fournir une chaîne de connexion ainsi que le nom du fournisseur. Cet exemple montre comment extraire une chaîne de connexion à partir d’un fichier de configuration en passant le nom du fournisseur dans le format invariant «*System.Data.ProviderName*». Le code itère au sein de l'objet <xref:System.Configuration.ConnectionStringSettingsCollection>. Il retourne la propriété <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> en cas de réussite; sinon `null` (`Nothing` dans Visual Basic). S'il existe plusieurs entrées pour un fournisseur, la première occurrence trouvée est retournée. Pour plus d’informations et des exemples de la récupération des chaînes de connexion à partir des fichiers de configuration, consultez [les chaînes de connexion et les fichiers de Configuration](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
+ Pour créer une fabrique de fournisseurs, vous devez fournir une chaîne de connexion ainsi que le nom du fournisseur. Cet exemple montre comment récupérer une chaîne de connexion à partir d’un fichier de configuration d’application en passant le nom du fournisseur dans le format invariant «*System.Data.ProviderName*». Le code itère au sein de l'objet <xref:System.Configuration.ConnectionStringSettingsCollection>. Il retourne la propriété <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> en cas de réussite; sinon `null` (`Nothing` dans Visual Basic). S'il existe plusieurs entrées pour un fournisseur, la première occurrence trouvée est retournée. Pour plus d’informations et des exemples d’extraction de chaînes de connexion à partir des fichiers de configuration, consultez [chaînes de connexion et les fichiers de Configuration](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 > [!NOTE]
 >  Une référence à `System.Configuration.dll` est requise pour que le code s'exécute.  
@@ -98,5 +98,5 @@ Le processus d'obtention d'un objet <xref:System.Data.Common.DbProviderFactory> 
 ## <a name="see-also"></a>Voir aussi  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)  
- [À l’aide des Classes de Configuration](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Utilisation des classes de configuration](https://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

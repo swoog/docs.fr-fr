@@ -2,12 +2,12 @@
 title: Vue d'ensemble de la sécurité SQL Server
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 84b6724417d03a30c131700e197744839d3a020d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25f9f96a550438d242ee409da0d09b7df06de33c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362232"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395800"
 ---
 # <a name="overview-of-sql-server-security"></a>Vue d'ensemble de la sécurité SQL Server
 Une stratégie de défense en profondeur avec chevauchement des couches de sécurité est le meilleur moyen de contrer les menaces de sécurité. SQL Server propose une architecture de sécurité conçue pour permettre aux administrateurs et aux développeurs de bases de données de créer des applications de base de données sécurisées et de contrer les menaces. Chaque version de SQL Server offre des améliorations par rapport aux versions précédentes avec l'introduction de nouvelles fonctions et fonctionnalités. Pour autant, il ne peut exister de plan de sécurité prêt à l'emploi. Chaque application a des spécifications de sécurité uniques. Les développeurs doivent comprendre quelle combinaison de fonctions et fonctionnalités est la plus adéquate pour contrer les menaces identifiées et pour anticiper les menaces qui risquent de voir le jour dans l'avenir.  
@@ -43,4 +43,4 @@ Une stratégie de défense en profondeur avec chevauchement des couches de sécu
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Sécurité SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Scénarios de sécurité des applications dans SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

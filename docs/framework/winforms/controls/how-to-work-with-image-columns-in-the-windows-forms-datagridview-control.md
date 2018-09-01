@@ -10,12 +10,12 @@ helpviewer_keywords:
 - image columns [Windows Forms], Windows Forms
 - DataGridView control [Windows Forms], image columns
 ms.assetid: 8a37aa75-3c6e-4893-91d0-7a5f34bfe287
-ms.openlocfilehash: b1c3fb5048419944507e9269c5ffd46fbe4a722b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7948ee69b35aaca111fa71e6f0540f2fcffc05dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532770"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388744"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Comment : utiliser des colonnes de type image dans le contrôle DataGridView Windows Forms
 L'exemple de code suivant montre comment utiliser les colonnes d'image <xref:System.Windows.Forms.DataGridView> dans une interface utilisateur interactive. Il illustre également les possibilités de dimensionnement et de disposition des images avec <xref:System.Windows.Forms.DataGridViewImageColumn>.  
@@ -30,7 +30,7 @@ L'exemple de code suivant montre comment utiliser les colonnes d'image <xref:Sys
   
 -   des références aux assemblys System et System.Windows.Forms ;  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.DataGridView>  

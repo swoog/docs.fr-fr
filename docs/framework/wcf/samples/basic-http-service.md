@@ -2,15 +2,15 @@
 title: Service HTTP de base
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 0f93b43a08f586e99d8a49379cfb2e283ff7918d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808856"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390378"
 ---
 # <a name="basic-http-service"></a>Service HTTP de base
-Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RPC ce concept est communément appelé service « POX » (Plain Old XML) à l’aide du modèle de programmation de Windows Communication Foundation (WCF) REST. Cet exemple se compose de deux composants : un service HTTP WCF auto-hébergé (Service.cs) et une application de console (Program.cs) qui crée le service et effectue des appels à ce dernier.  
+Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RPC ce concept est communément appelé service « POX » (Plain Old XML) – à l’aide du modèle de programmation REST Windows Communication Foundation (WCF). Cet exemple se compose de deux composants : un service HTTP WCF auto-hébergé (Service.cs) et une application de console (Program.cs) qui crée le service et effectue des appels à ce dernier.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le service WCF expose 2 opérations, `EchoWithGet` et `EchoWithPost`, qui retourne la chaîne passée en tant qu’entrée.  
@@ -19,9 +19,9 @@ Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RP
   
  L'opération `EchoWithPost` est annotée avec <xref:System.ServiceModel.Web.WebInvokeAttribute>, ce qui indique qu'il ne s'agit pas d'une opération `GET` (elle a des effets secondaires). Comme le <xref:System.ServiceModel.Web.WebInvokeAttribute> ne spécifie pas explicitement de `Method`, l'opération traite les requêtes HTTP `POST` dont le corps contient la chaîne (au format XML, par exemple). Notez que la méthode HTTP et le format de l'URI de la requête peuvent être personnalisés à l'aide des propriétés <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> et <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>, respectivement.  
   
- Le fichier App.config configure le service WCF avec un <xref:System.ServiceModel.Description.WebHttpEndpoint> par défaut dont la propriété <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> a la valeur `true`. Par conséquent, l’infrastructure WCF crée une page d’aide HTML automatique à `http://localhost:8000/Customers/help` qui fournit des informations sur comment construire des requêtes HTTP au service et de consommer la réponse du service HTTP.  
+ Le fichier App.config configure le service WCF avec un <xref:System.ServiceModel.Description.WebHttpEndpoint> par défaut dont la propriété <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> a la valeur `true`. Par conséquent, l’infrastructure WCF crée une page d’aide HTML automatique à `http://localhost:8000/Customers/help` qui fournit des informations sur comment construire des requêtes HTTP au service et comment utiliser la réponse du service HTTP.  
   
- Program.cs montre comment une fabrique de canaux WCF peut servir à effectuer des appels au services et traiter les réponses. Notez qu'il ne s'agit là que de l'un des moyens d'accéder à un service WCF. Il est également possible d'accéder au service à l'aide d'autres classes .NET Framework, comme <xref:System.Net.HttpWebRequest> et <xref:System.Net.WebClient>. D’autres exemples dans le Kit de développement logiciel (tels que les [la sélection automatique du Format](../../../../docs/framework/wcf/samples/automatic-format-selection.md) exemple et [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple) montrent comment utiliser ces classes pour communiquer avec un service WCF.  
+ Program.cs montre comment une fabrique de canaux WCF peut servir à effectuer des appels au services et traiter les réponses. Notez qu'il ne s'agit là que de l'un des moyens d'accéder à un service WCF. Il est également possible d'accéder au service à l'aide d'autres classes .NET Framework, comme <xref:System.Net.HttpWebRequest> et <xref:System.Net.WebClient>. Autres exemples du SDK (telles que la [la sélection automatique du Format](../../../../docs/framework/wcf/samples/automatic-format-selection.md) exemple et [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple) montrent comment utiliser ces classes pour communiquer avec un service WCF.  
   
  L'exemple est constitué d'un service auto-hébergé et d'un client qui s'exécutent tous deux dans une application console. Lorsque l'application console s'exécute, le client adresse des requêtes au service et affiche les informations pertinentes des réponses dans la fenêtre de console.  
   
@@ -38,7 +38,7 @@ Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RP
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

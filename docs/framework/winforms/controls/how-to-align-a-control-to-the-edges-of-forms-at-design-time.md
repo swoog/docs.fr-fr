@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 5b36879413442ff99da034fcbee6bf6388affa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513029c1bd5cc4af52fcee97f7fab961729e613c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528711"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389053"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Comment : aligner un contrôle sur les bords des formulaires au moment du design
 Vous pouvez aligner un contrôle sur le bord de vos formulaires en définissant le <xref:System.Windows.Forms.Control.Dock%2A>. Cette propriété désigne l’emplacement de votre contrôle dans le formulaire. La propriété <xref:System.Windows.Forms.Control.Dock%2A> peut avoir les valeurs suivantes :  
@@ -20,22 +20,22 @@ Vous pouvez aligner un contrôle sur le bord de vos formulaires en définissant 
 |<xref:System.Windows.Forms.DockStyle.Bottom>|S'ancre en bas du formulaire.|  
 |<xref:System.Windows.Forms.DockStyle.Fill>|Remplit tout l'espace restant dans le formulaire.|  
 |<xref:System.Windows.Forms.DockStyle.Left>|S'ancre sur le côté gauche du formulaire.|  
-|<xref:System.Windows.Forms.DockStyle.None>|Ne s’ancre nulle part et apparaît à l’emplacement spécifié par son <xref:System.Windows.Forms.Control.Location%2A>.|  
+|<xref:System.Windows.Forms.DockStyle.None>|Ne s’ancre en tout lieu et il s’affiche à l’emplacement spécifié par son <xref:System.Windows.Forms.Control.Location%2A>.|  
 |<xref:System.Windows.Forms.DockStyle.Right>|S'ancre sur le côté droit du formulaire.|  
 |<xref:System.Windows.Forms.DockStyle.Top>|S'ancre en haut du formulaire.|  
   
  Ces valeurs peuvent également être définies dans le code. Pour plus d’informations, consultez [Comment : aligner un contrôle sur les bords des formulaires](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Pour définir la propriété Dock de votre contrôle au moment du design  
   
 1.  Dans le Concepteur Windows Forms, sélectionnez votre contrôle.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur la liste déroulante située en regard du <xref:System.Windows.Forms.Control.Dock%2A> propriété.  
+2.  Dans le **propriétés** , cliquez sur la liste déroulante située en regard du <xref:System.Windows.Forms.Control.Dock%2A> propriété.  
   
-     Une interface graphique représentant les six possible <xref:System.Windows.Forms.Control.Dock%2A> paramètres s’affiche.  
+     Une interface graphique représentant les six possibles <xref:System.Windows.Forms.Control.Dock%2A> paramètres s’affiche.  
   
 3.  Choisissez le paramètre approprié.  
   

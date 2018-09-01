@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495052"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389917"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Sécurité de message avec un client anonyme
-Le scénario suivant montre un client et un service sécurisé par la sécurité de message Windows Communication Foundation (WCF). L'un des objectifs de conception consiste à utiliser la sécurité de message plutôt que la sécurité de transport, afin qu'à l'avenir il puisse prendre en charge un modèle plus riche basé sur les revendications. Pour plus d’informations sur l’utilisation des revendications riche pour l’autorisation, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+Le scénario suivant montre un client / service sécurisé par la sécurité de message Windows Communication Foundation (WCF). L'un des objectifs de conception consiste à utiliser la sécurité de message plutôt que la sécurité de transport, afin qu'à l'avenir il puisse prendre en charge un modèle plus riche basé sur les revendications. Pour plus d’informations sur l’utilisation de revendications riches pour l’autorisation, consultez [la gestion des revendications et autorisation avec le modèle d’identité](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Pour un exemple d’application, consultez [Message Security Anonymous](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
@@ -138,4 +138,4 @@ Le scénario suivant montre un client et un service sécurisé par la sécurité
  [Sécurité des applications distribuées](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [Sécurité de message anonyme](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: c3cede1eb90b963f4c0b567a8df48925bca9b02d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494827"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395304"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Comment : configurer un port avec un certificat SSL
-Lors de la création d’un service auto-hébergé de Windows Communication Foundation (WCF) avec le <xref:System.ServiceModel.WSHttpBinding> utilise le transport de sécurité de classe, vous devez également configurer un port avec un certificat X.509. Si vous ne créez pas de service auto-hébergé, vous pouvez héberger votre service sur les services Internet (IIS). Pour plus d’informations, consultez [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+Lors de la création d’un service auto-hébergé de Windows Communication Foundation (WCF) avec le <xref:System.ServiceModel.WSHttpBinding> ce transport utilise la sécurité de classe, vous devez également configurer un port avec un certificat X.509. Si vous ne créez pas de service auto-hébergé, vous pouvez héberger votre service sur les services Internet (IIS). Pour plus d’informations, consultez [sécurité du Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Pour configurer un port, l'outil que vous utilisez dépend du système d'exploitation qui s'exécute sur votre ordinateur.  
   
- Si vous exécutez [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilisez l'outil HttpCfg.exe. Avec [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], cet outil est installé. Avec [!INCLUDE[wxp](../../../../includes/wxp-md.md)], vous pouvez télécharger l’outil à [outils de prise en charge de Windows XP Service Pack 2](http://go.microsoft.com/fwlink/?LinkId=88606). Pour plus d’informations, consultez [vue d’ensemble de Httpcfg](http://go.microsoft.com/fwlink/?LinkId=88605). Le [documentation des outils de Support Windows](http://go.microsoft.com/fwlink/?LinkId=94840) explique la syntaxe de l’outil Httpcfg.exe.  
+ Si vous exécutez [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilisez l'outil HttpCfg.exe. Avec [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], cet outil est installé. Avec [!INCLUDE[wxp](../../../../includes/wxp-md.md)], vous pouvez télécharger l’outil sur [outils de Support de Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Pour plus d’informations, consultez [vue d’ensemble de Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605). Le [documentation sur les outils de prise en charge de Windows](https://go.microsoft.com/fwlink/?LinkId=94840) explique la syntaxe de l’outil Httpcfg.exe.  
   
  Si vous exécutez [!INCLUDE[wv](../../../../includes/wv-md.md)], utilisez l'outil Netsh.exe qui est déjà installé.  
   
@@ -41,7 +41,7 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
   
 ### <a name="to-determine-how-ports-are-configured"></a>Pour déterminer comment sont configurés les ports  
   
-1.  Dans [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilisez l’outil HttpCfg.exe pour afficher la configuration du port en cours, à l’aide de la **requête** et **ssl** bascule, comme indiqué dans l’exemple suivant.  
+1.  Dans [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], utilisez l’outil HttpCfg.exe pour consulter la configuration de port actuelle, à l’aide de la **requête** et **ssl** bascule, comme illustré dans l’exemple suivant.  
   
     ```  
     httpcfg query ssl  
@@ -55,7 +55,7 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
   
 ### <a name="to-get-a-certificates-thumbprint"></a>Pour obtenir l'empreinte numérique d'un certificat  
   
-1.  Utilisez le composant logiciel enfichable MMC Certificats pour rechercher un certificat X.509 ayant pour objectif l'authentification du client. Pour plus d’informations, consultez [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Utilisez le composant logiciel enfichable MMC Certificats pour rechercher un certificat X.509 ayant pour objectif l'authentification du client. Pour plus d’informations, consultez [Guide pratique pour afficher des certificats à l’aide du composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Accédez à l'empreinte numérique du certificat. Pour plus d’informations, consultez [Comment : récupérer l’empreinte numérique d’un certificat](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).  
   
@@ -71,7 +71,7 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6  
     ```  
   
-    -   Le **-i** commutateur possède la syntaxe de `IP`:`port` et indique à l’outil pour définir le certificat sur le port 8012 de l’ordinateur. Le cas échéant, les quatre zéros qui précédent le nombre peuvent aussi être remplacés par l'adresse IP réelle de l'ordinateur.  
+    -   Le **-i** commutateur a la syntaxe de `IP`:`port` et indique à l’outil pour définir le certificat vers le port 8012 de l’ordinateur. Le cas échéant, les quatre zéros qui précédent le nombre peuvent aussi être remplacés par l'adresse IP réelle de l'ordinateur.  
   
     -   Le **-h** commutateur spécifie l’empreinte numérique du certificat.  
   
@@ -83,7 +83,7 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
   
     -   Le **certhash** paramètre spécifie l’empreinte numérique du certificat.  
   
-    -   Le **port** paramètre spécifie l’adresse IP et le port, et fonctionne exactement comme le **-i** switch de l’outil Httpcfg.exe décrit.  
+    -   Le **ipport** paramètre spécifie l’adresse IP et le port, et fonctionne exactement comme le **-i** switch de l’outil Httpcfg.exe décrit.  
   
     -   Le **appid** paramètre est un GUID qui peut être utilisé pour identifier l’application propriétaire.  
   
@@ -95,7 +95,7 @@ Lors de la création d’un service auto-hébergé de Windows Communication Foun
     httpcfg set ssl -i 0.0.0.0:8012 -h 0000000000003ed9cd0c315bbb6dc1c08da5e6 -f 2  
     ```  
   
-     Le **-f** commutateur possède la syntaxe de `n` où n est un nombre compris entre 1 et 7. Une valeur de 2, comme indiqué dans l'exemple précédent, active des certificats clients au niveau de la couche de transport. La valeur 3 active les certificats clients et mappe ces certificats à un compte Windows. Consultez l'aide de HttpCfg.exe pour connaître le comportement des autres valeurs.  
+     Le **-f** commutateur a la syntaxe de `n` où n est un nombre compris entre 1 et 7. Une valeur de 2, comme indiqué dans l'exemple précédent, active des certificats clients au niveau de la couche de transport. La valeur 3 active les certificats clients et mappe ces certificats à un compte Windows. Consultez l'aide de HttpCfg.exe pour connaître le comportement des autres valeurs.  
   
 2.  Dans [!INCLUDE[wv](../../../../includes/wv-md.md)], pour prendre en charge les clients authentifiés avec les certificats X.509 au niveau de la couche de transport, suivez la procédure précédente mais avec un paramètre supplémentaire, comme indiqué dans l'exemple suivant.  
   

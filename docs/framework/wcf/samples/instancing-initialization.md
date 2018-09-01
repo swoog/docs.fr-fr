@@ -2,21 +2,21 @@
 title: Instancing Initialization
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ae01254760219f2b408ef9d9663c4158e2802be8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807920"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388259"
 ---
 # <a name="instancing-initialization"></a>Instancing Initialization
-Cet exemple étend le [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemple en définissant une interface, `IObjectControl`, qui personnalise l’initialisation d’un objet à activer et désactiver. Le client appelle des méthodes qui retournent l'objet au pool et d'autres qui ne retournent pas l'objet au pool.  
+Cet exemple étend la [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemple en définissant une interface, `IObjectControl`, qui personnalise l’initialisation d’un objet par l’activation et à le désactiver. Le client appelle des méthodes qui retournent l'objet au pool et d'autres qui ne retournent pas l'objet au pool.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
 ## <a name="extensibility-points"></a>Points d'extensibilité  
- La première étape dans la création d’une extension de Windows Communication Foundation (WCF) consiste à déterminer le point d’extensibilité à utiliser. Dans WCF, le terme *EndpointDispatcher* fait référence à un composant runtime chargé de convertir des messages entrants en appels de méthode sur le service de l’utilisateur et pour convertir des valeurs de retour de cette méthode à un message sortant . Un service WCF crée un EndpointDispatcher pour chaque point de terminaison.  
+ La première étape de création d’une extension de Windows Communication Foundation (WCF) consiste à déterminer le point d’extensibilité à utiliser. Dans WCF, le terme *EndpointDispatcher* fait référence à un composant runtime chargé de convertir les messages entrants en appels de méthode sur le service de l’utilisateur et pour la conversion des valeurs de retour de cette méthode à un message sortant . Un service WCF crée un EndpointDispatcher pour chaque point de terminaison.  
   
  L'EndpointDispatcher permet l'extensibilité de l'étendue du point de terminaison (pour tous les messages reçus ou envoyés par le service) à l'aide de la classe <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>. Cette classe vous permet de personnaliser différentes propriétés qui contrôlent le comportement de l'EndpointDispatcher. Cet exemple se concentre sur la propriété <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> qui pointe sur l'objet qui fournit les instances de la classe de service.  
   
@@ -190,7 +190,7 @@ public void ApplyDispatchBehavior(ServiceDescription description, ServiceHostBas
   
  Outre une implémentation <xref:System.ServiceModel.Description.IServiceBehavior>, la classe `ObjectPoolingAttribute` a plusieurs membres pour personnaliser le mise en pool d’objets à l'aide des arguments d'attribut. Ces membres incluent `MaxSize`, `MinSize`, `Enabled` et `CreationTimeout`, pour faire correspondre le jeu de fonctionnalités de mise en mise en pool d’objets fourni par .NET Enterprise Services.  
   
- L’objet de comportement de regroupement peut maintenant être ajouté à un service WCF en annotant l’implémentation de service avec le personnalisé récemment créé `ObjectPooling` attribut.  
+ L’objet que le comportement de regroupement peut désormais être ajouté à un service WCF en annotant l’implémentation de service avec le personnalisé récemment créé `ObjectPooling` attribut.  
   
 ```  
 [ObjectPooling(MaxSize=1024, MinSize=10, CreationTimeout=30000]      
@@ -205,7 +205,7 @@ public class PoolService : IPoolService
   
  Le pool d'objets appelle la méthode `Activate` juste avant de retourner l'objet depuis le pool. `Deactivate` est appelé lorsque l'objet est retourné au pool. La classe <xref:System.EnterpriseServices.ServicedComponent> de base a également une propriété `boolean` appelée `CanBePooled`, qui peut être utilisée pour notifier au pool que l'objet peut être davantage regroupé.  
   
- Pour reproduire ces fonctionnalités, l'exemple déclare une interface publique (`IObjectControl`) avec les membres susmentionnés. Puis cette interface est implémentée par les classes de service conçues pour assurer l'initialisation spécifique au contexte. L'implémentation <xref:System.ServiceModel.Dispatcher.IInstanceProvider> doit être modifiée pour satisfaire ces spécifications. Maintenant, chaque fois que vous obtenez un objet en appelant le `GetInstance` (méthode), vous devez vérifier si l’objet implémente `IObjectControl.` dans ce cas, vous devez appeler la `Activate` méthode correctement.  
+ Pour reproduire ces fonctionnalités, l'exemple déclare une interface publique (`IObjectControl`) avec les membres susmentionnés. Puis cette interface est implémentée par les classes de service conçues pour assurer l'initialisation spécifique au contexte. L'implémentation <xref:System.ServiceModel.Dispatcher.IInstanceProvider> doit être modifiée pour satisfaire ces spécifications. Désormais, chaque fois que vous obtenez un objet en appelant le `GetInstance` (méthode), vous devez vérifier si l’objet implémente `IObjectControl.` le cas échéant, vous devez appeler la `Activate` méthode correctement.  
   
 ```  
 if (obj is IObjectControl)  
@@ -250,18 +250,18 @@ else if (pool.Count < minPoolSize)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
   

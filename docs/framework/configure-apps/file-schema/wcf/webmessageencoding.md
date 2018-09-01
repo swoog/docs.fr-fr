@@ -2,12 +2,12 @@
 title: '&lt;webMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: fc1f83128dacb588d8179dea95c132da1ab2be91
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eddda5e805d7e2cc361b6925d34d13eb8fd614f9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755264"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385392"
 ---
 # <a name="ltwebmessageencodinggt"></a>&lt;webMessageEncoding&gt;
 Permet de lire et d’écrire du contenu XML en texte brut, les encodages de message JSON (JavaScript Objet Notation) et du contenu binaire brut dans une liaison Windows Communication Foundation (WCF).  
@@ -37,13 +37,13 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 |---------------|-----------------|  
 |`maxReadPoolSize`|Quantité maximale de messages pouvant être consultés simultanément sans allouer de nouveaux lecteurs. Des pools plus volumineux permettent au système d'être plus tolérant aux pics d'activité au prix d'une plage de travail plus volumineuse. La valeur par défaut est de 64 lecteurs par encodeur interne (texte, JSON, et « brut »).<br /><br /> L'augmentation de ce nombre entraîne celle de la consommation de mémoire, mais prépare l'encodeur afin de traiter les rafales soudaines de messages entrants. En effet, il peut ainsi utiliser les lecteurs existants du pool au lieu d'en créer.|  
 |`maxWritePoolSize`|Quantité maximale de messages pouvant être envoyés simultanément sans allouer de nouveaux enregistreurs. Des pools plus volumineux permettent au système d'être plus tolérant aux pics d'activité au prix d'une plage de travail plus volumineuse. La valeur par défaut est de 16 enregistreurs par encodeur interne (texte, JSON, et « brut »).<br /><br /> L'augmentation de ce nombre entraîne celle de la consommation de mémoire, mais prépare l'encodeur afin de traiter les rafales soudaines de messages sortants. En effet, il peut ainsi utiliser les writers existants du pool au lieu d'en créer.|  
-|`writeEncoding`|Spécifie l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -UnicodeFffeTextEncoding : Encodage Unicode Big Endian.<br />-Utf16TextEncoding : L’encodage Unicode.<br />-Utf8TextEncoding : encodage de 8 bits.<br /><br /> La valeur par défaut est Utf8TextEncoding. Cet attribut est de type <xref:System.Text.Encoding>.|  
+|`writeEncoding`|Spécifie l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -UnicodeFffeTextEncoding : Encodage Unicode Big Endian.<br />-Utf16TextEncoding : Encodage de l’Unicode.<br />-Utf8TextEncoding : encodage de 8 bits.<br /><br /> La valeur par défaut est Utf8TextEncoding. Cet attribut est de type <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -62,7 +62,7 @@ writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
   
  `maxReadPoolSize` et `maxWritePoolSize` peuvent également être utilisés pour définir respectivement le nombre maximal de lecteurs et de writers à allouer. Par défaut, 64 lecteurs et 16 writers sont alloués.  
   
- Contraintes de complexité par défaut sont également définies à l’aide de la [ \<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) élément pour vous protéger contre une classe d’attaques de déni de service (DOS) qui tentent d’exploiter la complexité des messages pour bloquer le traitement de point de terminaison des attaques ressources.  
+ Contraintes de complexité par défaut sont également définies à l’aide de la [ \<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd) élément pour vous protéger contre une classe de déni de service (DOS) attaques qui tentent d’exploiter la complexité de message pour lier le traitement de point de terminaison ressources.  
   
 ## <a name="example"></a>Exemple  
   

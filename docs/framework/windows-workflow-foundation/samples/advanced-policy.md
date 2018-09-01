@@ -2,12 +2,12 @@
 title: Advanced Policy
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515553"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387887"
 ---
 # <a name="advanced-policy"></a>Advanced Policy
 Cet exemple complète l'exemple de stratégie simple. Outre les règles de remise résidentielle et de remise d'entreprise traitées dans l'exemple de stratégie simple, plusieurs nouvelles règles ont été ajoutées.  
@@ -48,7 +48,7 @@ Cet exemple complète l'exemple de stratégie simple. Outre les règles de remis
   
  ELSE Total = OrderValue  
   
- **ErrorTotalRule :**  
+ **Impliquées ErrorTotalRule :**  
   
  IF Total \< 0  
   
@@ -73,7 +73,7 @@ Cet exemple complète l'exemple de stratégie simple. Outre les règles de remis
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

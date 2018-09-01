@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: 181cc641bb12329c898cc3bb226ea49f0836e979
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932025"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394394"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While, clause (Visual Basic)
 Inclut les éléments d'une collection tant qu'une condition spécifiée a la valeur `true` et ignore les éléments restants.  

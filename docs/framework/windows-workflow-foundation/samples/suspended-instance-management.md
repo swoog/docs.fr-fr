@@ -2,12 +2,12 @@
 title: Gestion de l'instance interrompue
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519221"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394598"
 ---
 # <a name="suspended-instance-management"></a>Gestion de l'instance interrompue
 Cet exemple montre comment gérer des instances de workflow qui ont été interrompues.  L'action par défaut pour <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> est `AbandonAndSuspend`. Cela signifie que, par défaut, les exceptions non gérées levées à partir d'une instance de workflow hébergée dans le <xref:System.ServiceModel.WorkflowServiceHost> provoqueront la suppression de l'instance de la mémoire (abandon), et la version durable/persistante de l'instance sera marquée comme interrompue. Une instance de workflow interrompue ne sera pas en mesure de fonctionner tant que l'interruption n'a pas été annulée.  
@@ -50,11 +50,11 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
   
     4.  Ouvrez la console Gestion de l'ordinateur en exécutant Compmgmt.msc à partir d'une invite de commandes.  
   
-    5.  Développez **services et Applications**, **Message Queuing**, **files d’attente privées**.  
+    5.  Développez **Service et les Applications**, **Message Queuing**, **files d’attente privées**.  
   
-    6.  Bouton droit sur le **ReceiveTx** de file d’attente, puis sélectionnez **propriétés**.  
+    6.  Bouton droit sur le **ReceiveTx** de file d’attente et sélectionnez **propriétés**.  
   
-    7.  Sélectionnez le **sécurité** onglet et autoriser **tout le monde** disposent des autorisations pour **recevoir un Message**, **lire le Message**, et  **Envoyer le Message**.  
+    7.  Sélectionnez le **sécurité** onglet et autoriser **tout le monde** disposer d’autorisations à **recevoir un Message**, **lire le Message**, et  **Envoyer le Message**.  
   
 4.  Exécutez maintenant l'exemple.  
   
@@ -70,7 +70,7 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
   
 1.  Ouvrez la console Gestion de l'ordinateur en exécutant Compmgmt.msc à partir d'une invite de commandes `vs2010`.  
   
-2.  Développez **services et Applications**, **Message Queuing**, **files d’attente privées**.  
+2.  Développez **Service et les Applications**, **Message Queuing**, **files d’attente privées**.  
   
 3.  Supprimer le **ReceiveTx** file d’attente.  
   
@@ -81,6 +81,6 @@ Cet exemple montre comment gérer des instances de workflow qui ont été interr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

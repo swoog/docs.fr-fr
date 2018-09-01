@@ -1,5 +1,5 @@
 ---
-title: Option Compare, instruction
+title: Option Compare, instruction (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,11 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 675ad649650d9fbc6f2c0f1dc689aa682ca6103c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385105"
 ---
 # <a name="option-compare-statement"></a>Option Compare, instruction
 Déclare la méthode de comparaison par défaut à utiliser lors de la comparaison de données de type chaîne.  
@@ -58,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>En l'absence d'instruction Option Compare  
- Si le code source ne contient pas un `Option Compare` instruction, le **Option Compare** définition sur le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) est utilisé. Si vous utilisez le compilateur de ligne de commande, le paramètre spécifié par le [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) option du compilateur est utilisée.  
+ Si le code source ne contient-elle pas une `Option Compare` instruction, le **Option Compare** définition sur le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) est utilisé. Si vous utilisez le compilateur de ligne de commande, le paramètre spécifié par le [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) option du compilateur est utilisée.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -68,7 +69,7 @@ Option Compare { Binary | Text }
   
 2.  Cliquez sur l’onglet **Compiler**.  
   
-3.  Définissez la valeur de la **Option Compare** boîte.  
+3.  Définissez la valeur dans le **Option Compare** boîte.  
   
  Lorsque vous créez un projet, le **Option Compare** définition sur le **compiler** onglet est définie sur le **Option Compare** définition dans le **Options** boîte de dialogue. Pour modifier ce paramètre, dans le **outils** menu, cliquez sur **Options**. Dans la boîte de dialogue **Options**, développez **Projets et solutions**, puis cliquez sur **Valeurs par défaut VB**. Le paramètre par défaut initial dans **valeurs par défaut VB** est **binaire**.  
   

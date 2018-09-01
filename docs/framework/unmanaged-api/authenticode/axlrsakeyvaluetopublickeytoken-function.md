@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402407"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385885"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a>_AxlRSAKeyValueToPublicKeyToken, fonction
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken (fonction)
+
 Convertit un modulo et un exposant en un jeton de clé publique de nom fort.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -30,12 +31,12 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+### <a name="parameters"></a>Paramètres  
  `pModulusBlob`  
- [in] L’objet blob Modulus codé en base64 (à partir de la \<modulo > élément).  Consultez le [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) structure.  
+ [in] L’objet blob Modulus codé en base64 (à partir de la \<modulo > élément).  Consultez le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.  
   
  `pExponentBlob`  
- [in] L’objet blob Exponent codé en base64 (à partir de la \<exposant > élément). Consultez le [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) structure.  
+ [in] L’objet blob Exponent codé en base64 (à partir de la \<exposant > élément). Consultez le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.  
   
  `ppwszPublicKeyToken`  
  [en sortie] Un pointeur vers WCHAR * pour recevoir le jeton de clé publique codé en hexadécimal.  

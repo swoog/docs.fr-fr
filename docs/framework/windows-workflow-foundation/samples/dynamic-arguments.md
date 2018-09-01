@@ -2,12 +2,12 @@
 title: Arguments dynamiques
 ms.date: 03/30/2017
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-ms.openlocfilehash: 5c00b9678191e4e88e9e41380d6b10be39684b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcf6b84889f3bd7d043f736336c39634cd5384c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517976"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387238"
 ---
 # <a name="dynamic-arguments"></a>Arguments dynamiques
 Cet exemple montre comment implémenter une activité pour laquelle les arguments sont définis par le consommateur de l’activité plutôt que par l’auteur de l’activité. Pour ce faire, il substitue la façon dont le runtime construit les métadonnées de l'activité.  
@@ -41,6 +41,6 @@ Cet exemple montre comment implémenter une activité pour laquelle les argument
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`

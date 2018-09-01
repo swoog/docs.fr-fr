@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 272ce198a61e0d1bbe9c44514aaf51db72f5d04c
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43257921"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390540"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attributs dans les contrôles Windows Forms
 .NET Framework fournit divers attributs que vous pouvez appliquer aux membres de vos composants et contrôles personnalisés. Certains de ces attributs affectent le comportement d’exécution d’une classe, et d’autres affectent le comportement au moment de la conception.  
@@ -63,5 +63,5 @@ ms.locfileid: "43257921"
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Attribute>  
  [Guide pratique pour appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [Extension de la prise en charge au moment du design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Extension de la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)

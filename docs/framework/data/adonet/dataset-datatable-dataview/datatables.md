@@ -2,23 +2,23 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: e148b20c7d8efdb16a897c5606535e4b0112ea29
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2849d159fbfdb0c0739b76fd288a987d4ce3d02f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759710"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395782"
 ---
 # <a name="datatables"></a>DataTables
-Un objet <xref:System.Data.DataSet> est constitué d'une collection de tables, de relations et de contraintes. Dans ADO.NET, <xref:System.Data.DataTable> objets sont utilisés pour représenter les tables dans un **DataSet**. A **DataTable** représente une table de données relationnelles de la mémoire ; les données seront locales pour le. Application basée sur le réseau dans lequel il réside, mais peut être rempli à partir d’une source de données telles que Microsoft SQL Server à l’aide un **DataAdapter** pour plus d’informations, consultez [remplissage d’un DataSet à partir d’un DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
+Un objet <xref:System.Data.DataSet> est constitué d'une collection de tables, de relations et de contraintes. Dans ADO.NET, <xref:System.Data.DataTable> objets sont utilisés pour représenter les tables dans un **DataSet**. Un **DataTable** représente une table de données relationnelles en mémoire ; les données sont locales à le. Application basée sur les NET dans lequel il réside, mais peut être rempli à partir d’une source de données telles que Microsoft SQL Server en utilisant un **DataAdapter** pour plus d’informations, consultez [remplissage d’un DataSet à partir d’un DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md) .  
   
  Le **DataTable** classe est un membre de la **System.Data** espace de noms dans la bibliothèque de classes .NET Framework. Vous pouvez créer et utiliser un **DataTable** indépendamment ou en tant que membre d’un **DataSet**, et **DataTable** objets peuvent également être utilisés conjointement avec d’autres objets .NET Framework, y compris le <xref:System.Data.DataView>. Accéder à la collection de tables dans un **DataSet** via la **Tables** propriété de la **DataSet** objet.  
   
  Le schéma, ou structure, d'une table est représenté par des colonnes et des contraintes. Vous définissez le schéma d’un **DataTable** à l’aide de <xref:System.Data.DataColumn> objets ainsi que <xref:System.Data.ForeignKeyConstraint> et <xref:System.Data.UniqueConstraint> objets. Les colonnes d'une table peuvent mapper aux colonnes d'une source de données. Elles contiennent des valeurs calculées à partir d'expressions, incrémentent automatiquement leurs valeurs ou contiennent des valeurs de clé primaire.  
   
- Outre un schéma, un **DataTable** doit également avoir des lignes pour contenir et trier les données. La classe <xref:System.Data.DataRow> représente les données en cours contenues dans une table. Vous utilisez la **DataRow** et ses propriétés et méthodes pour extraire, évaluer et manipuler les données dans une table. Comme vous accéder et modifier les données dans une ligne, la **DataRow** objet conserve son état d’origine et actuelle.  
+ Outre un schéma, un **DataTable** doit également avoir des lignes pour contenir et trier des données. La classe <xref:System.Data.DataRow> représente les données en cours contenues dans une table. Vous utilisez le **DataRow** et ses propriétés et méthodes pour extraire, évaluer et manipuler les données dans une table. Lorsque vous y accéder et modifier les données dans une ligne, la **DataRow** objet conserve son état d’origine et actuel.  
   
- Vous pouvez créer des relations parent-enfant entre des tables à l'aide d'une ou plusieurs colonnes connexes de ces tables. Vous créez une relation entre **DataTable** à l’aide des objets un <xref:System.Data.DataRelation>. **DataRelation** objets peuvent ensuite être utilisés pour retourner les lignes connexes enfants ou parentes d’une ligne particulière. Pour plus d’informations, consultez [Ajout de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
+ Vous pouvez créer des relations parent-enfant entre des tables à l'aide d'une ou plusieurs colonnes connexes de ces tables. Vous créez une relation entre **DataTable** objets à l’aide un <xref:System.Data.DataRelation>. **DataRelation** objets peuvent ensuite être utilisés pour retourner les lignes connexes enfants ou parentes d’une ligne particulière. Pour plus d’informations, consultez [Ajout de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Création d’un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-datatable.md)  
@@ -31,14 +31,14 @@ Un objet <xref:System.Data.DataSet> est constitué d'une collection de tables, d
  Explique comment ajouter, modifier et supprimer des données dans une table. Explique comment utiliser **DataTable** événements pour examiner les modifications apportées aux données dans la table.  
   
  [Gestion des événements de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- Fournit des informations sur les événements disponibles pour une utilisation avec un **DataTable**, y compris les événements lorsque les valeurs de colonne sont modifiées et les lignes sont ajoutées ou supprimées.  
+ Fournit des informations sur les événements disponibles pour une utilisation avec un **DataTable**, notamment les événements liés aux valeurs de colonne sont modifiées et les lignes sont ajoutées ou supprimées.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
  Décrit l'architecture et les composants d'ADO.NET ainsi que la façon de les utiliser pour accéder à des sources de données existantes et pour gérer des données d'application.  
   
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- Fournit des informations sur l’ADO.NET **DataSet** , notamment comment créer des relations entre les tables.  
+ Fournit des informations sur l’objet ADO.NET **DataSet** notamment comment créer des relations entre tables.  
   
  <xref:System.Data.Constraint>  
  Fournit des informations de référence sur les **contrainte** objet.  
@@ -56,4 +56,4 @@ Un objet <xref:System.Data.DataSet> est constitué d'une collection de tables, d
  Fournit une vue d’ensemble de la bibliothèque de classes .NET Framework, y compris le **système** espace de noms, ainsi que son espace de noms de deuxième niveau, **System.Data**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -15,22 +15,22 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523992"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388002"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Comment : utiliser les modificateurs et les propriétés GenerateMember
-Lorsque vous placez un composant sur un Windows Form, deux propriétés sont fournies par l’environnement de conception : `GenerateMember` et `Modifiers`. Le `GenerateMember` propriété spécifie que lorsque le Concepteur Windows Forms génère une variable membre pour un composant. Le `Modifiers` propriété est le modificateur d’accès assigné à cette variable de membre. Si la valeur de la `GenerateMember` propriété `false`, la valeur de la `Modifiers` propriété n’a aucun effet.  
+Lorsque vous placez un composant sur un formulaire Windows, les deux propriétés sont fournies par l’environnement de conception : `GenerateMember` et `Modifiers`. Le `GenerateMember` propriété spécifie quand le Concepteur de formulaires Windows génère une variable membre pour un composant. Le `Modifiers` propriété est le modificateur d’accès assigné à cette variable de membre. Si la valeur de la `GenerateMember` propriété est `false`, la valeur de la `Modifiers` propriété n’a aucun effet.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Pour spécifier si un composant est un membre de l’écran  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Pour spécifier si un composant est un membre du formulaire  
   
-1.  Dans le Concepteur Windows Forms, ouvrez votre formulaire.  
+1.  Dans le Concepteur de formulaires Windows, ouvrez votre formulaire.  
   
 2.  Ouvrez le **boîte à outils**et sur le formulaire, placez trois <xref:System.Windows.Forms.Button> contrôles.  
   
@@ -46,9 +46,9 @@ Lorsque vous placez un composant sur un Windows Form, deux propriétés sont fou
   
 5.  Dans l’**Explorateur de solutions**, cliquez sur le bouton **Afficher tous les fichiers**.  
   
-6.  Ouvrez le **Form1** nœud, puis, dans le **éditeur de Code**, ouvrez le **Form1.Designer.vb** ou **Form1.Designer.cs** fichier. Ce fichier contient le code émis par le Concepteur Windows Forms.  
+6.  Ouvrez le **Form1** nœud, puis, dans le **éditeur de Code**, ouvrez le **Form1.Designer.vb** ou **Form1.Designer.cs** fichier. Ce fichier contient le code émis par le Concepteur de formulaires Windows.  
   
-7.  Recherchez les déclarations pour les trois boutons. L’exemple de code suivant montre les différences spécifiées par le `GenerateMember` et `Modifiers` propriétés.  
+7.  Trouver les déclarations pour les trois boutons. L’exemple de code suivant montre les différences spécifiées par le `GenerateMember` et `Modifiers` propriétés.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -57,7 +57,7 @@ Lorsque vous placez un composant sur un Windows Form, deux propriétés sont fou
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  Par défaut, le Concepteur Windows Forms assigne le `private` (`Friend` en Visual Basic) modificateur aux contrôles conteneur comme <xref:System.Windows.Forms.Panel>. Si votre base de <xref:System.Windows.Forms.UserControl> ou <xref:System.Windows.Forms.Form> a un contrôle conteneur, il n’acceptera pas de nouveaux enfants dans les formulaires et contrôles hérités. La solution consiste à modifier le modificateur du contrôle conteneur de base à `protected` ou `public`.  
+>  Par défaut, le Concepteur de formulaires Windows attribue le `private` (`Friend` en Visual Basic) modificateur aux contrôles conteneur comme <xref:System.Windows.Forms.Panel>. Si votre base de <xref:System.Windows.Forms.UserControl> ou <xref:System.Windows.Forms.Form> a un contrôle conteneur, il n’acceptera pas de nouveaux enfants dans les formulaires et contrôles hérités. La solution consiste à modifier le modificateur du contrôle conteneur de base à `protected` ou `public`.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Button>  

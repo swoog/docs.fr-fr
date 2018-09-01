@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 3c74bed67069740354b36891db73ed80b952f0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362722"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389573"
 ---
 # <a name="large-udts"></a>Grands types définis par l'utilisateur
 Les types définis par l'utilisateur (UDT, User-Defined Types) permettent à un développeur d'étendre le système de type scalaire du serveur, en stockant des objets CLR (Common Language Runtime) dans une base de données SQL Server. Les UDT peuvent contenir plusieurs éléments et, contrairement aux types de données alias traditionnels, avoir des comportements qui consistent en un unique type de données système SQL Server.  
@@ -24,7 +24,7 @@ Les types définis par l'utilisateur (UDT, User-Defined Types) permettent à un 
   
  **Documentation en ligne de SQL Server**  
   
-1.  [Types CLR définis par l’utilisateur](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [Types CLR définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Récupération de schémas UDT à l'aide de GetSchema  
  La méthode <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> de <xref:System.Data.SqlClient.SqlConnection> retourne les informations de schéma de la base de données dans un objet <xref:System.Data.DataTable>. Pour plus d’informations, consultez [Collections de schémas SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
@@ -136,4 +136,4 @@ End Using
  [Récupération des informations de schéma de base de données](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

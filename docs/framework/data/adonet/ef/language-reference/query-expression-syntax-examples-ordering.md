@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: c4cc8bf1c43c2153cf8031427bb11c4fa45b8f4c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762193"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387856"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>Exemples de syntaxe d'expression de requête : classement
-Les exemples de cette rubrique montrent comment utiliser le `OrderBy` et `OrderByDescending` méthodes permettant d’interroger la [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
+Les exemples de cette rubrique montrent comment utiliser le `OrderBy` et `OrderByDescending` méthodes permettant d’interroger la [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
   

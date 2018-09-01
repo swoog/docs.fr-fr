@@ -2,17 +2,17 @@
 title: '&lt;peerAuthentication&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
-ms.openlocfilehash: db544b1bbf46d0656b763d5be769d9521a299f1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4fb8cc4989313afa3ef16c90b54e0feae1ccb71d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749814"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390330"
 ---
 # <a name="ltpeerauthenticationgt-element"></a>&lt;peerAuthentication&gt;, élément
 Spécifie les options d'authentification pour les clients du réseau pair à pair.  
   
- Pour plus d’informations sur la programmation d’égal à égal, consultez [mise en réseau pair à pair](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Pour plus d’informations sur la programmation de peer-to-peer, consultez [mise en réseau Peer-to-Peer](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
  \<system.ServiceModel>  
 \<comportements >  
@@ -43,7 +43,7 @@ trustedStoreLocation="CurrentUser/LocalMachine"
 |`customCertificateValidatorType`|Chaîne facultative. Type et assembly utilisés pour valider un type personnalisé. Cet attribut doit être défini lorsque `certificateValidationMode` a la valeur `Custom`.|  
 |`certifcateValidationMode`|Énumération facultative. Spécifie l'un de trois modes utilisés pour valider des informations d'identification. S'il est défini à `Custom`, un `customCertificateValidator` doit également être fourni. La valeur par défaut est `ChainTrust`.|  
 |`revocationMode`|Énumération facultative. Un des modes utilisés pour vérifier des listes de certificat révoqués (CRL). La valeur par défaut est `Online`.|  
-|`trustedStoreLocation`|Énumération facultative. L'un des deux emplacements du magasin du système : `LocalMachine` ou `CurrentUser`. Cette valeur est utilisée lorsqu'un certificat de service est négocié au client. La validation est exécutée sur le **personnes** stocker dans l’emplacement de magasin spécifié. La valeur par défaut est `CurrentUser`.|  
+|`trustedStoreLocation`|Énumération facultative. L'un des deux emplacements du magasin du système : `LocalMachine` ou `CurrentUser`. Cette valeur est utilisée lorsqu'un certificat de service est négocié au client. La validation est effectuée sur le **personnes** stocker dans l’emplacement de magasin spécifié. La valeur par défaut est `CurrentUser`.|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType, attribut  
   
@@ -110,6 +110,6 @@ trustedStoreLocation="CurrentUser/LocalMachine"
  <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>  
  [Utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Réseaux homologues](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
- [Authentification de Message de canal homologue](http://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
- [Authentification personnalisée de canal homologue](http://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
+ [Authentification de Message de canal homologue](https://msdn.microsoft.com/library/80e73386-514e-4c30-9e4a-b9ca8c173a95)  
+ [Authentification personnalisée de canal homologue](https://msdn.microsoft.com/library/4aa8a82e-41a8-48e2-8621-7e1cbabdca7c)  
  [Sécurisation des applications de canal homologue](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

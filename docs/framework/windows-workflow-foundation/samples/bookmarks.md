@@ -2,11 +2,12 @@
 title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
-ms.openlocfilehash: 61abc1d1a5084018511975e27fa96311c168eb69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387387"
 ---
 # <a name="bookmarks"></a>Signets
 Cet exemple montre comment écrire une activité personnalisée qui crée un signet destiné à recevoir une entrée externe. Il inclut également une application console de base qui utilise l'activité personnalisée dans un workflow et montre comment découvrir et reprendre des signets associés à une instance de workflow en cours d'exécution. Pour plus d’informations sur les signets, consultez [signets](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  
@@ -24,6 +25,6 @@ Cet exemple montre comment écrire une activité personnalisée qui crée un sig
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CodeBodied\Bookmarks`

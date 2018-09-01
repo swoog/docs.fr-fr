@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5020c31f590f527856f966ede512e98c07496ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3eb23da5accd89931ee4b883bfa162035ec26ddd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435386"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384620"
 ---
 # <a name="iclrstrongnamestrongnamecompareassemblies-method"></a>Méthode ICLRStrongName::StrongNameCompareAssemblies
 Détermine si deux assemblys diffèrent uniquement par leurs signatures de nom fort.  
@@ -47,26 +47,26 @@ HRESULT StrongNameCompareAssemblies (
  `pdwResult`  
  [out] Une des valeurs suivantes :  
   
--   `SN_CMP_DIFFERENT` (0) - Spécifie que les assemblys contiennent des données différentes.  
+-   `SN_CMP_DIFFERENT` (0) : Spécifie que les assemblys contiennent des données différentes.  
   
--   `SN_CMP_IDENTICAL` (1) - Spécifie que les assemblys sont exactement les mêmes, y compris leurs signatures et la somme de contrôle.  
+-   `SN_CMP_IDENTICAL` (1) - Spécifie que les assemblys sont exactement identiques, y compris leurs signatures et la somme de contrôle.  
   
--   `SN_CMP_SIGONLY` (2) - Spécifie que les assemblys diffèrent uniquement par leur signature et de somme de contrôle.  
+-   `SN_CMP_SIGONLY` (2) : Spécifie que les assemblys diffèrent uniquement par la signature et la somme de contrôle.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
+ `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (consultez [valeurs HRESULT courantes](https://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="remarks"></a>Notes  
- La signature de nom fort d’un assembly se compose du nom de l’assembly, version, culture et jeton de clé publique.  
+ La signature de nom fort d’un assembly se compose du nom de texte, version, culture et jeton de clé publique de l’assembly.  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICLRStrongName, interface](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cce181037ee4f4db3a828f98cc3e07dfb45aff3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bb3e382a93f28ea99c66268e6e402ea275961047
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461628"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387193"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT a été introduit dans le .NET Framework version 2.0. La [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] retourne ce HRESULT dans deux scénarios :  
+CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT a été introduit dans le .NET Framework version 2.0. Le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] retourne ce HRESULT dans deux scénarios :  
   
--   Lorsqu’un profileur réinitialise forcée d’un thread enregistrer le contexte à un moment arbitraire afin que le thread tente d’accéder aux structures qui sont dans un état incohérent.  
+-   Lorsqu’un profileur réinitialise forcée d’un thread inscrire le contexte à un moment arbitraire afin que le thread tente d’accéder aux structures qui sont dans un état incohérent.  
   
 -   Lorsqu’un profileur essaie d’appeler une méthode à caractère informatif qui déclenche le garbage collection à partir d’une méthode de rappel qui interdit le garbage collection.  
   
@@ -27,15 +27,15 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT a été introduit dans le .NET Frame
 ## <a name="hijacking-profilers"></a>Profileurs d’attaques  
  (Ce scénario est principalement un problème de détournement des profileurs bien qu’il existe des cas où des profileurs non détournés peuvent consulter ce HRESULT.)  
   
- Dans ce scénario, un profileur de détournement réinitialise de force le contexte de Registre d’un thread à un moment arbitraire afin que le thread puisse entrer le code du profileur ou entrer de nouveau le common language runtime (CLR) via une [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) (méthode).  
+ Dans ce scénario, un profileur réinitialise de force le contexte de Registre d’un thread à un moment arbitraire afin que le thread peut entrer le code du profileur ou entrer de nouveau le common language runtime (CLR) via une [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) (méthode).  
   
- De nombreux les ID que l’API de profilage fournit point aux structures de données dans le CLR. Nombreux `ICorProfilerInfo` appelle simplement lire les informations de ces structures de données et les passent. Toutefois, le CLR peut modifier des éléments dans ces structures qu’elle s’exécute, et il peut utiliser des verrous au pour faire. Supposons que le CLR a été déjà maintenant (ou une tentative d’acquisition) un verrou au moment où le profileur a détourné le thread. Si le thread accède au CLR et essaie de prendre plus de verrous ou d’inspecter des structures qui étaient dans le processus en cours de modification, ces structures peuvent être dans un état incohérent. Blocages et les violations d’accès peuvent se produire facilement dans de telles situations.  
+ La plupart des ID que l’API de profilage fournit point aux structures de données dans le CLR. Nombreux `ICorProfilerInfo` appelle simplement lire les informations de ces structures de données et les transmettre. Toutefois, le CLR peut modifier des éléments dans ces structures comme il s’exécute, et peut utiliser des verrous au pour faire. Supposons que le CLR a été déjà maintenant (ou une tentative d’acquisition) un verrou au moment où le profileur a détourné le thread. Si le thread entre à nouveau le CLR et essaie de prendre plus de verrous ou d’inspecter des structures qui étaient en cours de modification, ces structures peuvent être dans un état incohérent. Blocages et les violations d’accès peuvent se produire facilement dans de telles situations.  
   
- En général, lorsqu’un profileur non malveillant exécute du code à l’intérieur d’un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) méthode et appelle une `ICorProfilerInfo` méthode avec des paramètres valides, il le ne devrait pas de blocage ou une violation d’accès. Par exemple, profileur de code qui s’exécute à l’intérieur de la [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) méthode peut demander des informations sur la classe en appelant le [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) méthode. Le code peut recevoir un résultat CORPROF_E_DATAINCOMPLETE HRESULT pour indiquer que les informations sont indisponibles ; Toutefois, il ne sera pas de blocage ou une violation d’accès. Cette classe d’appels dans `ICorProfilerInfo` est appelée synchrone, car elles ont été effectuées à partir d’un `ICorProfilerCallback` (méthode).  
+ En règle générale, quand un profileur non malveillant exécute le code à l’intérieur d’un [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (méthode) et des appels dans un `ICorProfilerInfo` méthode avec des paramètres valides, il le ne devrait pas se bloquer ou une violation d’accès. Par exemple, profileur de code qui s’exécute à l’intérieur de la [ICorProfilerCallback::ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) méthode peut demander des informations sur la classe en appelant le [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) méthode. Le code peut recevoir un résultat CORPROF_E_DATAINCOMPLETE HRESULT pour indiquer que les informations sont indisponibles ; Toutefois, n’interblocage ni recevoir une violation d’accès. Cette classe d’appels dans `ICorProfilerInfo` est appelée synchrone, car elles ont été effectuées à partir d’un `ICorProfilerCallback` (méthode).  
   
- Toutefois, un thread managé qui exécute un code qui n’est pas dans un `ICorProfilerCallback` (méthode) est censée être un appel asynchrone. Dans la version 1 du .NET Framework, il était difficile de déterminer ce qui peut se produire dans un appel asynchrone. L’appel Impossible de blocage, se bloquer ou donner une réponse non valide. Le .NET Framework version 2.0 a introduit des contrôles simples pour vous aider à éviter ce problème. Dans le .NET Framework 2.0, si vous appelez un unsafe `ICorProfilerInfo` fonctionne de façon asynchrone, elle échoue avec un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
+ Toutefois, un thread managé qui exécute le code qui n’est pas dans un `ICorProfilerCallback` méthode est considérée comme à être un appel asynchrone. Dans le .NET Framework version 1, il était difficile de déterminer ce qui peut se produire dans un appel asynchrone. L’appel peut se bloquer, se bloquer ou fournissent une réponse non valide. Le .NET Framework version 2.0 a introduit des contrôles simples pour vous aider à éviter ce problème. Dans le .NET Framework 2.0, si vous appelez un unsafe `ICorProfilerInfo` fonctionner de façon asynchrone, elle échoue avec un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
- En règle générale, les appels asynchrones ne sont pas sécurisés. Toutefois, les méthodes suivantes sont sécurisées et en particulier prend en charge les appels asynchrones :  
+ En règle générale, les appels asynchrones ne sont pas sécurisés. Toutefois, les méthodes suivantes sont sécurisées et prennent en charge les appels asynchrones :  
   
 -   [GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)  
   
@@ -69,12 +69,12 @@ CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT a été introduit dans le .NET Frame
   
 -   [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- Pour plus d’informations, consultez l’entrée [pourquoi nous devons CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](http://go.microsoft.com/fwlink/?LinkId=169156) dans le blog de l’API de profilage CLR.  
+ Pour plus d’informations, consultez l’entrée [pourquoi nous avons CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://go.microsoft.com/fwlink/?LinkId=169156) dans le blog de l’API de profilage CLR.  
   
 ## <a name="triggering-garbage-collections"></a>Déclenchement de Garbage Collections  
- Ce scénario implique un profileur est en cours d’exécution à l’intérieur d’une méthode de rappel (par exemple, parmi les `ICorProfilerCallback` méthodes) qui interdit le garbage collection. Si le profileur essaie d’appeler une méthode à caractère informatif (par exemple, une méthode sur le `ICorProfilerInfo` interface) qui peut déclencher un garbage collection, la méthode à caractère informatif échoue avec un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
+ Ce scénario implique un profileur est en cours d’exécution à l’intérieur d’une méthode de rappel (par exemple, un de le `ICorProfilerCallback` méthodes) qui interdit le garbage collection. Si le profileur tente d’appeler une méthode à caractère informatif (par exemple, une méthode sur le `ICorProfilerInfo` interface) qui peut déclencher une garbage collection, la méthode à caractère informatif échoue avec un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
- Le tableau suivant affiche les méthodes de rappel qui interdisent les garbage collections et les méthodes d’information qui peuvent déclencher des opérations garbage collection. Si le profileur s’exécute à l’intérieur d’une des méthodes de rappel répertoriées et appelle l’une des méthodes répertoriées d’information, méthode à caractère informatif échoue avec un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
+ Le tableau suivant affiche les méthodes de rappel qui interdisent les garbage collections et des méthodes d’information qui peuvent déclencher un garbage collection. Si le profileur s’exécute à l’intérieur d’une des méthodes de rappel répertoriées et appelle l’une des méthodes répertoriées d’information, cette méthode à caractère informatif échoue avec un CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  
   
 |Méthodes de rappel qui interdisent les garbage collections|Méthodes d’information qui déclenchent les garbage collection|  
 |------------------------------------------------------|------------------------------------------------------------|  

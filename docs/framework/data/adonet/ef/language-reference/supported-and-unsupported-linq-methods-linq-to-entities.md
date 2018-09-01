@@ -2,15 +2,15 @@
 title: Méthodes LINQ prises en charge et non prises en charge (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 6994632c88b4ac67c9340fc95f07687d99917933
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a57e8facdd0ece7223ec780a9ef22a1be7c53221
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766632"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386361"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Méthodes LINQ prises en charge et non prises en charge (LINQ to Entities)
-Cette section fournit des informations sur les opérateurs de requête standard LINQ (Language-Integrated Query) qui sont pris en charge ou non pris en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. De nombreux opérateurs de requête standard LINQ ont une version surchargée qui accepte un argument entier. L’argument entier correspond à un index de base zéro de la séquence qui est traitée, une <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Sauf spécification contraire, ces versions surchargées des opérateurs de requête standard LINQ ne sont pas prises en charge et toute tentative pour les utiliser lèvera une exception.  
+Cette section fournit des informations sur les opérateurs de requête standard LINQ (Language-Integrated Query) qui sont pris en charge ou non pris en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. De nombreux opérateurs de requête standard LINQ ont une version surchargée qui accepte un argument entier. L’argument entier correspond à un index de base zéro de la séquence qui est désignée pour l’opération, un <xref:System.Collections.Generic.IEqualityComparer%601>, ou <xref:System.Collections.Generic.IComparer%601>. Sauf spécification contraire, ces versions surchargées des opérateurs de requête standard LINQ ne sont pas prises en charge et toute tentative pour les utiliser lèvera une exception.  
   
 ## <a name="projection-and-restriction-methods"></a>Méthodes de projection et de restriction  
  La plupart des méthodes de projection et de restriction LINQ sont prises en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], à l'exception de celles qui acceptent un argument positionnel. Pour plus d’informations, consultez [des opérateurs de requête Standard dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md). Le tableau suivant répertorie les méthodes de projection et de restriction prises en charge et non prises en charge.  
@@ -145,7 +145,7 @@ Cette section fournit des informations sur les opérateurs de requête standard 
 |<xref:System.Linq.Queryable.Sum%2A>|Non pris en charge|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Méthodes de type  
- Les opérateurs de requête standard LINQ qui traitent de la conversion et du test des types CLR sont pris en charge dans [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Seuls les types CLR qui sont mappés aux types de modèle conceptuel sont pris en charge dans LINQ to Entities. Pour obtenir la liste des types de modèle conceptuel, consultez [Types de modèle conceptuel (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Le tableau suivant répertorie les méthodes de type prises en charge et non prises en charge.  
+ Les opérateurs de requête standard LINQ qui traitent de la conversion et du test des types CLR sont pris en charge dans [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Seuls les types CLR qui sont mappés aux types de modèle conceptuel sont pris en charge dans LINQ to Entities. Pour obtenir la liste des types de modèle conceptuel, consultez [Types du modèle conceptuel (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Le tableau suivant répertorie les méthodes de type prises en charge et non prises en charge.  
   
 |Méthode|Prise en charge|Signature de fonction Visual Basic|Signature de méthode C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

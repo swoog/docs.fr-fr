@@ -2,18 +2,18 @@
 title: Exemple Basic
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 67c626dfa511251043da81e025aab20578be3016
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502136"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392248"
 ---
 # <a name="basic-sample"></a>Exemple Basic
 Cet exemple montre comment rendre un service détectable, et comment rechercher et appeler un service détectable. Cet exemple est composé de deux projets : service et client.  
   
 > [!NOTE]
->  Cet exemple implémente la découverte dans le code.  Pour voir un exemple qui implémente la découverte dans configuration, [Configuration](../../../../docs/framework/wcf/samples/configuration-sample.md).  
+>  Cet exemple implémente la découverte dans le code.  Pour obtenir un exemple qui implémente la découverte dans configuration, consultez [Configuration](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
 ## <a name="service"></a>Service  
  Il s'agit d'une implémentation simple du service de calculatrice. Le code de découverte associé se trouve dans `Main`, où un <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> est ajouté à l'hôte de service et où un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> est ajouté comme indiqué dans le code suivant.  
@@ -82,7 +82,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Pour plus d’informations, consultez [configuration de HTTP et HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353). L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d'utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Pour plus d’informations, consultez [configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d'utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  À l'aide de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], ouvrez Basic.sln et générez l'exemple.  
   
@@ -97,7 +97,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Basic`  
   

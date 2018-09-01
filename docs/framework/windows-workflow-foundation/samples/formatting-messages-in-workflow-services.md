@@ -2,14 +2,15 @@
 title: Mise en forme des messages dans les services de workflow
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
-ms.openlocfilehash: eac9f7042dbcbd31f9a8c7d5e56c7b7d2ab62156
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389135"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Mise en forme des messages dans les services de workflow
-Cet exemple montre comment différents types utilisateur peuvent être utilisés dans des activités de messagerie (services WF). L'exemple de service est un service d'approbation des dépenses simple qui expose trois opérations. `ApproveExpense` prend un type de contrat de données et montre comment utiliser des types connus. L'opération retourne `true` ou `false` selon le montant de la dépense. `ApprovePO` prend un type XmlSerializer et retourne `true` ou `false` selon le montant de frais.`ApprovedVendor` prend un type de contrat de message et retourne `true` ou `false` si le fournisseur figure dans la liste des fournisseurs approuvés ou si la demande provient du service financier (le service financier peut utiliser n’importe quel fournisseur).  
+Cet exemple montre comment différents types utilisateur peuvent être utilisés dans des activités de messagerie (services WF). L'exemple de service est un service d'approbation des dépenses simple qui expose trois opérations. `ApproveExpense` prend un type de contrat de données et montre comment utiliser des types connus. L'opération retourne `true` ou `false` selon le montant de la dépense. `ApprovePO` prend un type XmlSerializer et retourne `true` ou `false` selon le montant des dépenses.`ApprovedVendor` prend un type de contrat de message et retourne `true` ou `false` si le fournisseur est dans la liste des fournisseurs approuvés ou si la demande provient du service financier (le service financier peut utiliser n’importe quel fournisseur).  
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
@@ -26,6 +27,6 @@ Cet exemple montre comment différents types utilisateur peuvent être utilisés
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Formatter`

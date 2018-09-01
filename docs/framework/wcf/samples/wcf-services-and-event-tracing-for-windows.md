@@ -2,19 +2,19 @@
 title: WCF Services et suivi d'événements Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: ea917ee87b598fc3ad01df70d9aedfadfd1396a4
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 11f476b966886d4a114f7870b4c029e200ee84e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809831"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388021"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF Services et suivi d'événements Windows
-Cet exemple montre comment utiliser le traçage analytique dans Windows Communication Foundation (WCF) pour émettre des événements dans Event Tracing pour Windows (ETW). Les traces analytiques sont des événements émis à des points clés dans la pile WCF qui autorisent la résolution des problèmes des services WCF dans un environnement de production.  
+Cet exemple montre comment utiliser le traçage analytique dans Windows Communication Foundation (WCF) pour émettre des événements Event Tracing for Windows (ETW). Les traces analytiques sont des événements émis à des points clés dans la pile de WCF qui permettent la résolution des problèmes des services WCF dans un environnement de production.  
   
- Trace analytique des services WCF est suivi qui peuvent être activés dans un environnement de production avec un impact minimal sur les performances. Ces traces sont émises en tant qu'événements dans une session de suivi ETW.  
+ Trace analytique dans les services WCF qui est le suivi peut être activé dans un environnement de production avec un impact minimal sur les performances. Ces traces sont émises en tant qu'événements dans une session de suivi ETW.  
   
- Cet exemple inclut un service WCF de base dans lequel les événements sont émis à partir du service dans le journal des événements, qui peuvent être affiché à l’aide de l’Observateur d’événements. Il est également possible de démarrer une session ETW dédiée qui écoute les événements du service WCF. L'exemple comprend un script permettant de créer une session de suivi ETW dédiée qui stocke des événements dans un fichier binaire pouvant être lu à l'aide de l'Observateur d'événements.  
+ Cet exemple inclut un service WCF de base dans lequel les événements sont émis à partir du service dans le journal des événements, qui peut être affiché à l’aide de l’Observateur d’événements. Il est également possible de démarrer une session ETW dédiée qui écoute les événements à partir du service WCF. L'exemple comprend un script permettant de créer une session de suivi ETW dédiée qui stocke des événements dans un fichier binaire pouvant être lu à l'aide de l'Observateur d'événements.  
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
@@ -30,7 +30,7 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
   
 4.  Exécutez le client de test WCF (WcfTestClient.exe).  
   
-     Le client de test WCF (WcfTestClient.exe) se trouve dans le \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Répertoire_installation_ > \Common7\IDE\ WcfTestClient.exe (valeur par défaut [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] est C:\Program Files\Microsoft Visual Studio 10.0).  
+     Le client de test WCF (WcfTestClient.exe) se trouve dans le \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Répertoire_installation > \Common7\IDE\ WcfTestClient.exe (par défaut [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] est C:\Program Files\Microsoft Visual Studio 10.0).  
   
 5.  Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.  
   
@@ -52,13 +52,13 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
   
 #### <a name="to-test-the-service"></a>Pour tester le service  
   
-1.  Revenez au client test WCF et double-cliquez sur `Divide` et conservez les valeurs par défaut, qui spécifient le dénominateur 0.  
+1.  Basculez vers le client test WCF et double-cliquez sur `Divide` et conservez les valeurs par défaut, qui spécifient le dénominateur 0.  
   
      Si le dénominateur est 0, le service génère une erreur.  
   
 2.  Observez les événements émis par le service.  
   
-     Revenez à l’Observateur d’événements et naviguez jusqu'à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, puis **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **Actualiser**.  
+     Revenez à l’Observateur d’événements et accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, puis **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **Actualiser**.  
   
      Les événements du traçage analytique de WCF s'affichent dans l'Observateur d'événements. Notez qu'en raison de l'erreur générée par le service, un événement de trace d'erreur est visible dans l'Observateur d'événements.  
   
@@ -83,9 +83,9 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTracing`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -2,18 +2,18 @@
 title: Federation, exemple
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: a9c2b91f7d8bdf24476c76fcd479b7f2fb44c90f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806846"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389486"
 ---
 # <a name="federation-sample"></a>Federation, exemple
 Cet exemple présente la sécurité fédérée :  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Windows Communication Foundation (WCF) fournit la prise en charge pour déployer des architectures de sécurité fédérée via la `wsFederationHttpBinding`. `wsFederationHttpBinding` fournit une liaison sécurisée, fiable et interopérable qui implique l'utilisation de HTTP comme mécanisme de transport sous-jacent pour la communication demande/réponse, le format de câble d'encodage étant Text/XML. Pour plus d’informations sur la fédération dans WCF, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
+ Windows Communication Foundation (WCF) prend en charge pour le déploiement d’architectures de sécurité fédérée via la `wsFederationHttpBinding`. `wsFederationHttpBinding` fournit une liaison sécurisée, fiable et interopérable qui implique l'utilisation de HTTP comme mécanisme de transport sous-jacent pour la communication demande/réponse, le format de câble d'encodage étant Text/XML. Pour plus d’informations sur la fédération dans WCF, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
  Le scénario comporte 4 parties :  
   
@@ -82,7 +82,7 @@ Cet exemple présente la sécurité fédérée :
  Suivez les instructions suivantes sur la configuration et l'exécution de cet exemple.  
   
 > [!NOTE]
->  Vous devez disposer des autorisations en écriture sur le **wwwroot** active pour exécuter cet exemple.  
+>  Vous devez disposer des autorisations d’écriture sur le **wwwroot** directory pour exécuter cet exemple.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
@@ -91,13 +91,13 @@ Cet exemple présente la sécurité fédérée :
     > [!NOTE]
     >  Le fichier de commandes Setup.bat est conçu pour s'exécuter à partir d'une invite de commandes du Kit de développement Windows SDK. La variable d'environnement du Kit de développement MS SDK doit pointer vers le répertoire d'installation du Kit de développement SDK. Cette variable est définie automatiquement dans une invite de commandes du Kit de développement logiciel Windows. Sur [!INCLUDE[wv](../../../../includes/wv-md.md)], vous devez vous assurer que la compatibilité avec la gestion IIS 6 est installée, car le programme d'installation utilise des scripts d'administrateur IIS. L'exécution du script installation sur [!INCLUDE[wv](../../../../includes/wv-md.md)] requiert des privilèges d'administrateur.  
   
-2.  Ouvrez FederationSample.sln dans Visual Studio et sélectionnez **générer la Solution** à partir de la **générer** menu. Cette opération génère les fichiers de projet communs, le service Bookstore, le STS Bookstore, le STS HomeRealm, et les déploie dans IIS. Elle génère également l'application cliente Bookstore et place le fichier exécutable BookStoreClient.exe dans le dossier FederationSample\BookStoreClient\bin\Debug.  
+2.  Ouvrez FederationSample.sln dans Visual Studio et sélectionnez **générer la Solution** à partir de la **Build** menu. Cette opération génère les fichiers de projet communs, le service Bookstore, le STS Bookstore, le STS HomeRealm, et les déploie dans IIS. Elle génère également l'application cliente Bookstore et place le fichier exécutable BookStoreClient.exe dans le dossier FederationSample\BookStoreClient\bin\Debug.  
   
 3.  Double-cliquez sur BookStoreClient.exe. La fenêtre BookStoreClient s'affiche.  
   
 4.  Vous pouvez parcourir les livres disponibles dans la librairie en cliquant sur **Browse Books**.  
   
-5.  Pour acheter un livre spécifique, sélectionnez-le dans la liste et cliquez sur **Buy Book**. L'application démarre et s'authentifie à l'aide de l'authentification Windows avec le STS HomeRealm.  
+5.  Pour acheter un livre en particulier, sélectionnez-le dans la liste et cliquez sur **Buy Book**. L'application démarre et s'authentifie à l'aide de l'authentification Windows avec le STS HomeRealm.  
   
      L'exemple est configuré pour permettre aux utilisateurs d'acheter des livres pour un montant égal ou inférieur à 15 dollars. Si un client tente d'acheter des livres pour un montant supérieur à 15 dollars, il reçoit un message du service BookStore indiquant que l'accès est refusé.  
   
@@ -113,7 +113,7 @@ Cet exemple présente la sécurité fédérée :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
   

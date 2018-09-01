@@ -7,20 +7,20 @@ helpviewer_keywords:
 - ListBox control [WPF], how-to topics
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
-ms.openlocfilehash: 474057801cb1a1883282e435faa9d7a85870102c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d7f37acb2c0e09a0a9104a0bb7bd90b2d324a4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551776"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396169"
 ---
 # <a name="listbox-how-to-topics"></a>Rubriques "Comment utiliser le ListBox"
-Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.ListBox> contrôle affichent des listes d’éléments sélectionnables.  
+Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.ListBox> contrôle pour afficher des listes sélectionnables d’éléments.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Lier un ListBox à des données](../../../../docs/framework/wpf/controls/how-to-bind-a-listbox-to-data.md)  
  [Obtenir un ListBoxItem](../../../../docs/framework/wpf/controls/how-to-get-a-listboxitem.md)  
- [Comment : ajouter des données à un ItemsControl](http://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
+ [Comment : ajouter des données à un ItemsControl](https://msdn.microsoft.com/library/271e52ce-0f44-4b1f-a7da-0bc72bd9ed65)  
  [Améliorer les performances de défilement d'un contrôle ListBox](../../../../docs/framework/wpf/controls/how-to-improve-the-scrolling-performance-of-a-listbox.md)  
   
 ## <a name="reference"></a>Référence  

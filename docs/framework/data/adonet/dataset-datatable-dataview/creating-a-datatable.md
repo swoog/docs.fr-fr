@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: a374c7c6e7dfc04cd8828208d6762f8d8665072e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ad3f8bc6b42c5a54b42100a5d010e097ba80adc2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767165"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386911"
 ---
 # <a name="creating-a-datatable"></a>Création d'un DataTable
 Un objet <xref:System.Data.DataTable>, qui représente une table de données relationnelles en mémoire, peut être créé et utilisé de façon indépendante. Il peut également être utilisé par d'autres objets .NET Framework, la plupart du temps comme membre d'un objet <xref:System.Data.DataSet>.  
   
  Vous pouvez créer un **DataTable** objet en respectant **DataTable** constructeur. Vous pouvez l’ajouter à la **DataSet** à l’aide de la **ajouter** méthode à ajouter à la **DataTable** l’objet **Tables** collection.  
   
- Vous pouvez également créer **DataTable** objets au sein d’un **DataSet** à l’aide de la **remplir** ou **FillSchema** méthodes de la  **DataAdapter** objet, ou à partir d’un prédéfini ou déduit XML schema à l’aide de la **ReadXml**, **ReadXmlSchema**, ou **InferXmlSchema** méthodes de la **DataSet**. Notez que, après avoir ajouté un **DataTable** en tant que membre de la **Tables** collection d’un **DataSet**, vous ne pouvez l’ajouter à la collection de tables de toutes les autres **DataSet**.  
+ Vous pouvez également créer **DataTable** d’objets dans un **DataSet** à l’aide de la **remplir** ou **FillSchema** méthodes de la  **DataAdapter** objet, ou à partir d’un prédéfini ou déduit XML schema à l’aide de la **ReadXml**, **ReadXmlSchema**, ou **InferXmlSchema** méthodes de la **DataSet**. Notez qu’après avoir ajouté un **DataTable** en tant que membre de la **Tables** collection d’un **DataSet**, vous ne pouvez pas l’ajouter à la collection de tables de n’importe quel autre **DataSet**.  
   
- Lorsque vous créez un **DataTable**, il ne possède pas de schéma (autrement dit, une structure). Pour définir le schéma de la table, vous devez créer et ajouter <xref:System.Data.DataColumn> des objets sur le **colonnes** collection de la table. Vous pouvez également définir une colonne de clé primaire pour la table et créer et ajouter **contrainte** des objets sur le **contraintes** collection de la table. Après avoir défini le schéma pour un **DataTable**, vous pouvez ajouter des lignes de données à la table en ajoutant **DataRow** des objets sur le **lignes** collection de la table.  
+ Lorsque vous créez un **DataTable**, il ne possède pas de schéma (autrement dit, une structure). Pour définir le schéma de la table, vous devez créer et ajouter <xref:System.Data.DataColumn> des objets sur le **colonnes** collection de la table. Vous pouvez également définir une colonne de clé primaire pour la table et créer et ajouter **contrainte** des objets sur le **contraintes** collection de la table. Une fois que vous avez défini le schéma pour un **DataTable**, vous pouvez ajouter des lignes de données à la table en ajoutant **DataRow** des objets sur le **lignes** collection de la table.  
   
- Vous n’êtes pas obligé de fournir une valeur pour le <xref:System.Data.DataTable.TableName%2A> propriété lorsque vous créez un **DataTable**; vous pouvez spécifier la propriété à un autre moment, ou vous pouvez la laisser vide. Toutefois, lorsque vous ajoutez une table sans un **TableName** valeur un **DataSet**, la table a un nom incrémentiel par défaut de la Table*N*, en commençant par « Table » pour Table0.  
+ Vous n’êtes pas obligé de fournir une valeur pour le <xref:System.Data.DataTable.TableName%2A> propriété lorsque vous créez un **DataTable**; vous pouvez spécifier la propriété à un autre moment, ou vous pouvez la laisser vide. Toutefois, lorsque vous ajoutez une table sans un **TableName** valeur un **DataSet**, le tableau aura un nom incrémentiel par défaut de Table*N*, en commençant par « Table » pour Table0.  
   
 > [!NOTE]
 >  Nous vous recommandons d’éviter le « Table*N*« convention d’affectation de noms lorsque vous fournissez un **TableName** valeur, car le nom fourni peut entrer en conflit avec un nom de table par défaut existant dans le **jeu de données** . Si le nom fourni existe déjà, une exception est levée.  
   
- L’exemple suivant crée une instance d’un **DataTable** de l’objet et lui attribue le nom « Customers ».  
+ L’exemple suivant crée une instance d’un **DataTable** objet et lui attribue le nom « Customers ».  
   
 ```vb  
 Dim workTable as DataTable = New DataTable("Customers")  
@@ -56,4 +56,4 @@ DataTable customersTable = customers.Tables.Add("CustomersTable");
  [Remplissage d’un DataSet à partir d’un DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [Chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
  [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

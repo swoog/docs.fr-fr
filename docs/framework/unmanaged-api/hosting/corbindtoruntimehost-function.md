@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c1d83b32402343f3cd2b5403e328698abd6a930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1952121a6c0c735926944c839c3c7e8a8db5fb53
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436213"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396829"
 ---
 # <a name="corbindtoruntimehost-function"></a>CorBindToRuntimeHost, fonction
 Permet aux hôtes de charger une version spécifiée du common language runtime (CLR) dans un processus.  
   
- Cette fonction est déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
+ Cette fonction a été déconseillée dans le [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,46 +47,46 @@ HRESULT CorBindToRuntimeHost (
  `pwszVersion`  
  [in] Chaîne qui décrit la version du CLR à charger.  
   
- Un numéro de version du .NET Framework se compose de quatre parties séparées par des points : *major.minor.build.revision*. La chaîne passée en tant que `pwszVersion` doit commencer par le caractère « v », suivi par les trois premières parties du numéro de version (par exemple, « v1.0.1529 »).  
+ Un numéro de version dans le .NET Framework se compose de quatre parties séparées par des points : *major.minor.build.revision*. La chaîne passée en tant que `pwszVersion` doit commencer par le caractère « v », suivi par les trois premières parties du numéro de version (par exemple, « v1.0.1529 »).  
   
- Certaines versions du CLR sont installées avec une instruction de stratégie qui spécifie la compatibilité avec les versions précédentes du CLR. Par défaut, le shim de démarrage évalue `pwszVersion` par rapport aux instructions de stratégie et charge la dernière version du runtime qui est compatible avec la version demandée. Un hôte peut forcer le shim à ignorer l’évaluation de stratégie et charger la version exacte spécifiée dans `pwszVersion` en passant une valeur de STARTUP_LOADER_SAFEMODE pour le `startupFlags` paramètre.  
+ Certaines versions du CLR sont installées avec une instruction de stratégie qui spécifie la compatibilité avec les versions précédentes du CLR. Par défaut, le shim de démarrage évalue `pwszVersion` contre les instructions de stratégie et charge la dernière version du runtime qui est compatible avec la version demandée. Un hôte peut obliger le shim à ignorer l’évaluation de stratégie et charger la version exacte spécifiée dans `pwszVersion` en transmettant une valeur de STARTUP_LOADER_SAFEMODE pour le `startupFlags` paramètre.  
   
- Si `pwszVersion` est `null,` la méthode ne charge pas de n’importe quelle version du CLR. Au lieu de cela, il retourne CLR_E_SHIM_RUNTIMELOAD, qui indique l’échec de chargement du runtime.  
+ Si `pwszVersion` est `null,` la méthode ne charge pas n’importe quelle version du CLR. Au lieu de cela, il retourne CLR_E_SHIM_RUNTIMELOAD, qui indique l’échec de chargement du runtime.  
   
  `pwszBuildFlavor`  
  [in] Chaîne qui spécifie s’il faut charger le serveur de build ou de la station de travail du CLR. Les valeurs valides sont `svr` et `wks`. La build du serveur est optimisée pour tirer parti de plusieurs processeurs pour les garbage collection, et la génération de la station de travail est optimisée pour les applications clientes s’exécutant sur un ordinateur à processeur unique.  
   
- Si `pwszBuildFlavor` a la valeur null, la build de la station de travail est chargée. Lors de l’exécution sur un ordinateur à un seul processeur, la build de la station de travail est toujours chargée, même si `pwszBuildFlavor` a la valeur `svr`. Toutefois, si `pwszBuildFlavor` a la valeur `svr` et le garbage collection simultané est spécifié (consultez la description de le `startupFlags` paramètre), la build du serveur est chargée.  
+ Si `pwszBuildFlavor` a la valeur null, la build de la station de travail est chargée. Lors de l’exécution sur un ordinateur monoprocesseur, la build de la station de travail est toujours chargée, même si `pwszBuildFlavor` est défini sur `svr`. Toutefois, si `pwszBuildFlavor` a la valeur `svr` et le garbage collection simultané est spécifié (consultez la description de le `startupFlags` paramètre), la build du serveur est chargée.  
   
 > [!NOTE]
->  Le garbage collection simultané n’est pas pris en charge dans les applications en cours d’exécution WOW64 x86 émulateur sur les systèmes 64 bits qui implémentent l’architecture Intel Itanium (anciennement appelée IA-64). Pour plus d’informations sur l’utilisation de WOW64 sur les systèmes 64 bits de Windows, consultez [Applications en cours d’exécution de 32 bits](http://msdn.microsoft.com/library/windows/desktop/aa384249.aspx).  
+>  Le garbage collection simultané n’est pas pris en charge dans les applications en cours d’exécution WOW64 x86 émulateur sur les systèmes 64 bits qui implémentent l’architecture Intel Itanium (anciennement appelée IA-64). Pour plus d’informations sur l’utilisation de WOW64 sur les systèmes Windows 64 bits, consultez [Applications en cours d’exécution de 32 bits](/windows/desktop/WinProg64/running-32-bit-applications).  
   
  `pwszHostConfigFile`  
- [in] Le nom de fichier de configuration hôte qui spécifie la version du CLR à charger. Si le nom de fichier n’inclut pas un chemin d’accès complet, le fichier est supposé être dans le même répertoire que l’exécutable qui effectue l’appel.  
+ [in] Le nom de fichier de configuration hôte qui spécifie la version du CLR à charger. Si le nom de fichier n’inclut pas un chemin d’accès qualifié complet, le fichier est supposé se trouver dans le même répertoire que l’exécutable qui effectue l’appel.  
   
  `pReserved`  
- [in] Réservé pour une future extensibilité.  
+ [in] Réservé pour une extensibilité future.  
   
  `startupFlags`  
- [in] Un ensemble d’indicateurs qui contrôle le garbage collection simultané, code indépendant du domaine et le comportement de le `pwszVersion` paramètre. La valeur par défaut est le domaine unique si aucun indicateur n’est défini. Pour obtenir la liste de valeurs prises en charge, consultez la [énumération STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
+ [in] Un jeu d’indicateurs qui contrôle le garbage collection simultané, code indépendant du domaine et le comportement de le `pwszVersion` paramètre. La valeur par défaut est le domaine unique si aucun indicateur n’est défini. Pour obtenir la liste de valeurs prises en charge, consultez le [énumération STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md).  
   
  `rclsid`  
  [in] Le `CLSID` de la coclasse qui implémente le [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) ou le [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md) interface. Valeurs prises en charge sont CLSID_CorRuntimeHost ou CLSID_CLRRuntimeHost.  
   
  `riid`  
- [in] Le `IID` de l’interface demandée. Valeurs prises en charge sont IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
+ [in] Le `IID` de l’interface que vous demandez. Valeurs prises en charge sont IID_ICorRuntimeHost ou IID_ICLRRuntimeHost.  
   
  `ppv`  
  [out] Un pointeur d’interface vers la version du runtime qui a été chargé.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
- **En-tête :** MSCorEE.idl  
+ **En-tête :** Mscoree  
   
  **Bibliothèque :** MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [CorBindToCurrentRuntime, fonction](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)  

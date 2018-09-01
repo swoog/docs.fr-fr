@@ -2,12 +2,12 @@
 title: Programmation de l’arborescence des éléments de modèle
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: c5bbbba4f599801c5bffdbd19e14295ff239dfcd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a24e52ec2b7cab10471d756a721611c6dd10516e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516472"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393486"
 ---
 # <a name="programming-model-item-tree"></a>Programmation de l’arborescence des éléments de modèle
 Cet exemple montre comment parcourir le <xref:System.Activities.Presentation.Model.ModelItem> arborescence à l’aide de la liaison de données déclarative à partir de l’arborescence de Windows Presentation Foundation (WPF).  
@@ -31,11 +31,11 @@ justAdded.Properties["DisplayName"].SetValue("new name");
   
 1.  Ouvrez la solution ProgrammingModelItemTree.sln dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-2.  Générez la solution en sélectionnant **générer la Solution** à partir de la **générer** menu.  
+2.  Générez la solution en sélectionnant **générer la Solution** à partir de la **Build** menu.  
   
 3.  Appuyez sur F5 pour exécuter l'application. Le formulaire [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] s'affiche alors.  
   
-4.  Cliquez sur le **charger WF** bouton Charger le <xref:System.Activities.Presentation.Model.ModelItem> et la lier à l’arborescence.  
+4.  Cliquez sur le **charger WF** bouton Charger le <xref:System.Activities.Presentation.Model.ModelItem> et liez-le à l’arborescence.  
   
 5.  En cliquant sur le **arborescence d’éléments de modèle de modification** bouton exécute le code précédent pour ajouter un élément dans l’arborescence et définir une propriété.  
   
@@ -44,7 +44,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   

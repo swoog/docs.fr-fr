@@ -1,171 +1,171 @@
 ---
-title: 'Comment : créer un service WCF compatible AJAX et un client ASP.NET qui accède à ce service'
-ms.date: 03/30/2017
+title: Créer un Service WCF compatible AJAX et un Client ASP.NET dans Visual Studio
+ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
-ms.openlocfilehash: 58971d11ab76112627dd81d53381236932268e25
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a1e903991e09243572f2a99c19edae7f9793b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490628"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384284"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Comment : créer un service WCF compatible AJAX et un client ASP.NET qui accède à ce service
-Cette rubrique montre comment utiliser Visual Studio 2008 pour créer un service compatible AJAX Windows Communication Foundation (WCF) et un client ASP.NET qui accède au service. Le code pour le service et pour le client est fourni dans la section Exemple après les étapes de création décrites dans la section Procédures.  
-  
-### <a name="to-create-the-aspnet-client-application"></a>Pour créer l'application cliente ASP.NET  
-  
-1.  Ouvrez [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
-2.  À partir de la **fichier** menu, sélectionnez **nouveau**, puis **projet**, puis **Web**, puis sélectionnez **ASP.NET Web Application**.  
-  
-3.  Nommez le projet `SandwichServices` et cliquez sur **OK**.  
-  
-### <a name="to-create-the-wcf-ajax-enabled-service"></a>Pour créer le service WCF compatible AJAX  
-  
-1.  Avec le bouton droit le `SandwichServices` de projet dans le **l’Explorateur de solutions** et sélectionnez **ajouter**, puis **un nouvel élément**, puis **Service WCF compatible AJAX** .  
-  
-2.  Nom de service `CostService` dans les **nom** , puis cliquez sur **ajouter**.  
-  
-3.  Ouvrez le fichier CostService.svc.cs.  
-  
-4.  Spécifiez le `Namespace` pour <xref:System.ServiceModel.ServiceContractAttribute> comme `SandwichService`:  
-  
-    ```  
-    namespace SandwichServices  
-    {  
-      [ServiceContract(Namespace = "SandwichServices")]  
-      [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-       public class CostService  
-       {  
-         …  
-       }  
-     }  
-    ```  
-  
-5.  Implémentez les opérations dans le service. Ajoutez <xref:System.ServiceModel.OperationContractAttribute> à chacune des opérations pour indiquer qu'elles font partie du contrat. L'exemple suivant implémente une méthode qui retourne le coût d'une quantité donnée de sandwichs.  
-  
-    ```  
-    public class CostService  
-    {  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-    // Add more operations here and mark them with [OperationContract]  
-    }  
-    ```  
-  
-### <a name="to-configure-the-client-to-access-the-service"></a>Pour configurer le client pour accéder au service  
-  
-1.  Ouvrez la page Default.aspx, puis sélectionnez le **conception** vue.  
-  
-2.  À partir de la **vue** menu, sélectionnez **boîte à outils**.  
-  
-3.  Développez le **Extensions AJAX** nœud et glisser-déplacer un **ScriptManager** sur la page Default.aspx.  
-  
-4.  Cliquez sur le **ScriptManager** et sélectionnez **propriétés**.  
-  
-5.  Développez le **Services** collection dans le **propriétés** fenêtre pour ouvrir la **éditeur de collections ServiceReference** fenêtre.  
-  
-6.  Cliquez sur **ajouter**, spécifiez `CostService.svc` comme le **chemin d’accès** référencé, puis cliquez sur **OK**.  
-  
-7.  Développez le **HTML** nœud dans le **boîte à outils** et faites glisser et déposez une **entrée (bouton)** sur la page Default.aspx.  
-  
-8.  Cliquez sur le **bouton** et sélectionnez **propriétés**.  
-  
-9. Modifier la **valeur** au champ `Price for 3 Sandwiches`.  
-  
-10. Double-cliquez sur le **bouton** pour accéder au code JavaScript.  
-  
-11. Passez dans le code JavaScript suivant dans le <`script`> élément.  
-  
-    ```  
-    function Button1_onclick() {  
-    var service = new SandwichServices.CostService();  
-    service.CostOfSandwiches(3, onSuccess, null, null);  
-    }  
-  
-    function onSuccess(result){  
-    alert(result);  
-    }  
-    ```  
-  
-### <a name="to-access-the-service-from-the-client"></a>Pour accéder au service depuis le client  
-  
-1.  Utilisez Ctrl + F5 pour lancer le service et le client Web. Cliquez sur le **prix de 3 Sandwiches grillé** bouton pour générer la sortie attendue de « 3.75 ».  
-  
-## <a name="example"></a>Exemple  
- Cet exemple contient le code de service contenu dans le fichier WCFService.svc.cs et le code client contenu dans le fichier Default.aspx.  
-  
-```  
-//The service code contained in the CostService.svc.cs file.  
-  
-using System;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.ServiceModel.Activation;  
-using System.ServiceModel.Web;  
-  
-namespace SandwichServices  
-{  
-    [ServiceContract(Namespace="SandwichServices")]  
-    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]  
-    public class CostService  
-    {  
-        // Add [WebGet] attribute to use HTTP GET  
-        [OperationContract]  
-        public double CostOfSandwiches(int quantity)  
-        {  
-            return 1.25 * quantity;  
-        }  
-  
-        // Add more operations here and mark them with [OperationContract]  
-    }  
-}  
-//The code for hosting the service is contained in the CostService.svc file.  
-  
-<%@ ServiceHost Language="C#" Debug="true" Service="SandwichServices.CostService" CodeBehind="CostService.svc.cs" %>  
-  
-//The client code contained in the Default.aspx file.  
-  
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SandwichServices._Default" %>  
-  
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
-  
-<html >  
-<head runat="server">  
-    <title>Untitled Page</title>  
-<script language="javascript" type="text/javascript">  
-// <!CDATA[  
-  
-function Button1_onclick() {  
-var service = new SandwichServices.CostService();  
-service.CostOfSandwiches(3, onSuccess, null, null);  
-}  
-  
-function onSuccess(result){  
-alert(result);  
-}  
-  
-// ]]>  
-</script>  
-</head>  
-<body>  
-    <form id="form1" runat="server">  
-    <div>  
-  
-    </div>  
-    <asp:ScriptManager ID="ScriptManager1" runat="server">  
-        <services>  
-            <asp:servicereference Path="CostService.svc" />  
-        </services>  
-    </asp:ScriptManager>  
-    </form>  
-    <p>  
-        <input id="Button1" type="button" value="Price for 3 Sandwiches" onclick="return Button1_onclick()" /></p>  
-</body>  
-</html>  
-```     
+
+Cette rubrique montre comment utiliser Visual Studio pour créer un service compatible AJAX Windows Communication Foundation (WCF) et un client ASP.NET qui accède au service.
+
+## <a name="create-an-aspnet-web-app"></a>Créer une application web ASP.NET
+
+1. Ouvrez Visual Studio.
+
+1. À partir de la **fichier** menu, sélectionnez **New** > **projet**
+
+1. Dans le **nouveau projet** boîte de dialogue, développez le **installé** > **Visual C#** > **Web** catégorie, puis Sélectionnez **Application Web ASP.NET (.NET Framework)**.
+
+1. Nommez le projet **SandwichServices** et cliquez sur **OK**.
+
+1. Dans le **nouvelle Application Web ASP.NET** boîte de dialogue, sélectionnez **vide** , puis sélectionnez **OK**.
+
+   ![ASP.NET web application type boîte de dialogue dans Visual Studio](../media/create-an-ajax-wcf-asp-net-client/new-asp-net-web-app-type.png)
+
+## <a name="add-a-web-form"></a>Ajoutez un formulaire web
+
+1. Cliquez sur le projet SandwichServices dans **l’Explorateur de solutions** et sélectionnez **ajouter** > **un nouvel élément**.
+
+1. Dans le **ajouter un nouvel élément** boîte de dialogue, développez le **installé** > **Visual C#** > **Web** catégorie, puis Sélectionnez le **Web Form** modèle.
+
+1. Acceptez le nom par défaut (**WebForm1**), puis sélectionnez **ajouter**.
+
+   *WebForm1.aspx* s’ouvre dans **Source** vue.
+
+1. Ajoutez le balisage suivant à l’intérieur de la  **\<corps >** balises :
+
+   ```html
+   <input type="button" value="Price of 3 sandwiches" onclick="Calculate()"/>
+   <br />
+   <span id="additionResult"></span>
+   ```
+
+## <a name="create-an-ajax-enabled-wcf-service"></a>Créer un service WCF compatible AJAX
+
+1. Cliquez sur le projet SandwichServices dans **l’Explorateur de solutions** et sélectionnez **ajouter** > **un nouvel élément**.
+
+1. Dans le **ajouter un nouvel élément** boîte de dialogue, développez le **installé** > **Visual C#** > **Web** catégorie, puis Sélectionnez le **Service WCF (compatible AJAX)** modèle.
+
+   ![Modèle d’élément (compatible AJAX) de Service WCF dans Visual Studio](../media/create-an-ajax-wcf-asp-net-client/add-wcf-service.png)
+
+1. Nommez le service **CostService** , puis sélectionnez **ajouter**.
+
+   *CostService.svc.cs* s’ouvre dans l’éditeur.
+
+1. Implémenter l’opération dans le service. Ajoutez la méthode suivante à la classe CostService pour calculer le coût d’une quantité de sandwichs :
+
+    ```csharp
+    [OperationContract]
+    public double CostOfSandwiches(int quantity)
+    {
+        return 1.25 * quantity;
+    }
+    ```
+
+## <a name="configure-the-client-to-access-the-service"></a>Configurer le client pour accéder au service
+
+1. Ouvrez le *WebForm1.aspx* fichier et sélectionnez le **conception** vue.
+
+2. À partir de la **vue** menu, sélectionnez **boîte à outils**.
+
+3. Développez le **Extensions AJAX** nœud et glisser -déplacer un **ScriptManager** vers le formulaire.
+
+4. Dans le **Source** afficher, ajoutez le code suivant entre les  **\<ScriptManager >** balises pour spécifier le chemin d’accès au service WCF :
+
+    ```html
+    <Services>
+       <asp:ServiceReference Path="~/CostService.svc" />
+    </Services>
+    ```
+
+1. Ajoutez le code pour la fonction Javascript `Calculate()`. Placez le code suivant dans le **head** section du formulaire web :
+
+    ```javascript
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+    ```
+
+   Ce code appelle la méthode de CostService pour calculer le prix des trois sandwiches, puis affiche le résultat dans l’étendue appelée **additionResult**.
+
+## <a name="run-the-program"></a>Exécuter le programme
+
+Assurez-vous que l’option *WebForm1.aspx* a le focus, puis appuyez sur **Démarrer** bouton pour lancer le client web. Le bouton a un triangle vert et disant quelque chose comme **IIS Express (Microsoft Edge)**. Ou, vous pouvez appuyer sur **F5**. Cliquez sur le **prix de 3 sandwiches** bouton pour générer la sortie attendue de « 3.75 ».
+
+## <a name="example-code"></a>exemple de code
+
+Voici le code complet dans le *CostService.svc.cs* fichier :
+
+```csharp
+using System.ServiceModel;
+using System.ServiceModel.Activation;
+
+namespace SandwichServices
+{
+    [ServiceContract(Namespace = "")]
+    [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
+    public class CostService
+    {
+        [OperationContract]
+        public double CostOfSandwiches(int quantity)
+        {
+            return 1.25 * quantity;
+        }
+    }
+}
+```
+
+Voici le contenu complet de la *WebForm1.aspx* page :
+
+```aspx-csharp
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="SandwichServices.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <script type="text/javascript">
+
+        function Calculate() {
+            CostService.CostOfSandwiches(3, onSuccess);
+        }
+
+        function onSuccess(result) {
+            var myres = $get("additionResult");
+            myres.innerHTML = result;
+        }
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+        </div>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Services>
+                <asp:ServiceReference Path="~/CostService.svc" />
+            </Services>
+        </asp:ScriptManager>
+
+        <input type="button" value="Price of 3 sandwiches" onclick="Calculate()" />
+        <br />
+        <span id="additionResult"></span>
+    </form>
+</body>
+</html>
+```

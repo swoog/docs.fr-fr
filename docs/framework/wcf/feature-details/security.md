@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499087"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384926"
 ---
 # <a name="windows-communication-foundation-security"></a>Sécurité dans Windows Communication Foundation
 Les rubriques de cette section décrivent les fonctionnalités de sécurité de Windows Communication Foundation (WCF) et comment les utiliser pour sécuriser les messages.  
   
- Pour plus d’informations sur la sécurité et de Windows Server AppFabric, consultez [modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Pour plus d’informations sur la sécurité et de Windows Server AppFabric, consultez [modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -28,7 +28,7 @@ Les rubriques de cette section décrivent les fonctionnalités de sécurité de 
  Décrit la terminologie et les principaux concepts utilisés dans la sécurité WCF.  
   
  [Scénarios de sécurité courants](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
- Décrit des scénarios et des topologies que vous pouvez configurer avec WCF.  
+ Décrit les scénarios et topologies que vous pouvez configurer avec WCF.  
   
  [Comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  Fournit une vue d'ensemble des comportements WCF qui affectent la sécurité, comme la définition des informations d'identification.  
@@ -37,7 +37,7 @@ Les rubriques de cette section décrivent les fonctionnalités de sécurité de 
  Une vue orientée sécurité des liaisons, y compris des rubriques qui montrent comment créer des liaisons de sécurité personnalisées.  
   
  [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Décrit comment sécuriser des messages à l’aide des fonctionnalités de sécurité WCF.  
+ Explique comment sécuriser des messages à l’aide des fonctionnalités de sécurité WCF.  
   
  [Authentification](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Illustre des tâches d’authentification courantes.  

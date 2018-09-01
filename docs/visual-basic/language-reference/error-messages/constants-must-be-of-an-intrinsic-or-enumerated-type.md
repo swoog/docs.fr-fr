@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
 ms.openlocfilehash: 4d635d289ed99aed48c296c278bc546971af51da
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999199"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397476"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>Les constantes doivent être de type intrinsèque ou énuméré, et non de type classe, structure, paramètre de type ou tableau
 Vous avez tenté de déclarer une constante comme une classe, une structure ou un type de tableau, ou comme un paramètre de type défini par un type générique conteneur.  

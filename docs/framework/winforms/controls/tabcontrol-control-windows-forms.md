@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536759"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384952"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl, contrôle (Windows Forms)
 Le `TabControl` Windows Forms affiche plusieurs onglets comparables aux intercalaires d'un agenda ou aux étiquettes d'un ensemble de dossiers dans un classeur. Les onglets peuvent contenir des images et d'autres contrôles. Utilisez le `TabControl` pour créer des pages de propriétés.  
@@ -36,7 +36,7 @@ Le `TabControl` Windows Forms affiche plusieurs onglets comparables aux intercal
  [Guide pratique pour désactiver les pages d'onglets](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Explique comment restreindre l'accès à une page d'onglet, éventuellement en fonction des informations d'identification de l'utilisateur.  
   
- Consultez également [Comment : ajouter et supprimer des onglets avec le contrôle TabControl Windows Forms à l’aide du concepteur](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [Comment : ajouter un contrôle à une Page onglet à l’aide du Concepteur](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Consultez également [Comment : ajouter et supprimer des onglets avec le contrôle TabControl Windows Forms à l’aide du concepteur](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [Comment : ajouter un contrôle onglet Page à l’aide du Concepteur](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Référence  
  Classe <xref:System.Windows.Forms.TabControl>  

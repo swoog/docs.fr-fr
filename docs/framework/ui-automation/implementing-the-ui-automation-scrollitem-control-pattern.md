@@ -9,26 +9,26 @@ ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cdf663b2989ccf93fa9bb6742bfb491a691dea02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0346b70b4400c5f7a8d282d945e029701973dad1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399036"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393466"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>Implémentation du modèle de contrôle ScrollItem d’UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette rubrique présente les conventions de mise en œuvre et la <xref:System.Windows.Automation.Provider.IScrollItemProvider>, notamment des informations sur les propriétés, méthodes et événements. Des liens vers des références supplémentaires sont répertoriés à la fin de la rubrique.  
+ Cette rubrique présente les conventions pour l’implémentation et la <xref:System.Windows.Automation.Provider.IScrollItemProvider>, notamment des informations sur les propriétés, méthodes et événements. Des liens vers des références supplémentaires sont répertoriés à la fin de la rubrique.  
   
- Le <xref:System.Windows.Automation.ScrollItemPattern> modèle de contrôle est utilisé pour prendre en charge les contrôles enfants individuels des conteneurs qui implémentent <xref:System.Windows.Automation.Provider.IScrollProvider>. Ce modèle de contrôle agit comme un canal de communication entre un contrôle enfant et son conteneur pour garantir que le conteneur est en mesure de modifier le contenu (ou la zone) actuellement visible dans sa fenêtre d’affichage pour afficher le contrôle enfant. Pour obtenir des exemples de contrôles implémentant ce modèle de contrôle, consultez [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ Le <xref:System.Windows.Automation.ScrollItemPattern> modèle de contrôle est utilisé pour prendre en charge les contrôles enfants individuels de conteneurs qui implémentent <xref:System.Windows.Automation.Provider.IScrollProvider>. Ce modèle de contrôle agit comme un canal de communication entre un contrôle enfant et son conteneur pour garantir que le conteneur est en mesure de modifier le contenu (ou la zone) actuellement visible dans sa fenêtre d’affichage pour afficher le contrôle enfant. Pour obtenir des exemples de contrôles implémentant ce modèle de contrôle, consultez [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Conventions et recommandations en matière d'implémentation  
  Quand vous implémentez le modèle de contrôle Scroll Item, notez les conventions et recommandations suivantes :  
   
--   Les éléments contenus dans un contrôle Window ou Canvas ne sont pas tenus d’implémenter l’interface IScrollItemProvider. En guise d’alternative, toutefois, ils doivent exposer un emplacement valide pour le <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Ainsi, une application du client UI Automation à utiliser le <xref:System.Windows.Automation.ScrollPattern> sur le conteneur pour afficher l’élément enfant, les méthodes de modèle de contrôle.  
+-   Les éléments contenus dans un contrôle Window ou Canvas ne sont pas tenus d’implémenter l’interface IScrollItemProvider. Comme alternative, toutefois, ils doivent exposer un emplacement valide pour le <xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>. Ainsi, une application de client UI Automation pour utiliser le <xref:System.Windows.Automation.ScrollPattern> contrôler les méthodes de modèle sur le conteneur pour afficher l’élément enfant.  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>Membres requis pour IScrollItemProvider  
@@ -36,7 +36,7 @@ ms.locfileid: "33399036"
   
 |Membres requis|Type de membre|Notes|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-(Méthode)|Aucun|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|-Méthode|Aucun.|  
   
  Ce modèle de contrôle n’est associé à aucune propriété ni à aucun événement.  
   

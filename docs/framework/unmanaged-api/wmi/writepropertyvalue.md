@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461082"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393905"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue (fonction)
 Écrit un nombre spécifié d’octets à une propriété identifiée par un descripteur de propriété.
@@ -43,13 +43,13 @@ HRESULT WritePropertyValue (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) instance.
+[in] Un pointeur vers un [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) instance.
 
 `lHandle`  
-[in] Entier qui contient le descripteur qui identifie cette propriété. Le handle peut être récupéré en appelant le [GetPropertyHandle](getpropertyhandle.md) (fonction).   
+[in] Entier qui contient le handle qui identifie cette propriété. Le handle peut être récupéré en appelant le [GetPropertyHandle](getpropertyhandle.md) (fonction).   
 
 `lNumBytes`  
 [in] Le nombre d’octets écrits dans la propriété. Consultez le [notes](#remarks) section pour plus d’informations.
@@ -69,18 +69,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::WritePropertyValue](https://msdn.microsoft.com/library/aa391783(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::WritePropertyValue](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-writepropertyvalue) (méthode).
 
-Utilisez cette fonction pour définir une chaîne et tous les autres non -`DWORD` ou non-`QWORD` données.
+Utilisez cette fonction pour définir la chaîne et tous les autres non -`DWORD` ou non-`QWORD` données.
 
-Pour les valeurs de propriété de chaîne, `lNumBytes` doit être la taille des données correct du type de propriété spécifié. Pour les valeurs de propriété de chaîne, `lNumBytes` doit être la longueur de la chaîne spécifiée en octets et la chaîne lui-même doit être de même longueur en octets et être suivie d’un caractère de fin de la valeur null.
+Pour les valeurs de propriété sans chaînes, `lNumBytes` doit être la taille des données correctes du type de propriété spécifié. Pour les valeurs de propriété de chaîne, `lNumBytes` doit être la longueur de la chaîne spécifiée en octets et la chaîne lui-même doit être de même longueur en octets et être suivie d’un caractère de fin de la valeur null.
 
-## <a name="requirements"></a>Spécifications  
-**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

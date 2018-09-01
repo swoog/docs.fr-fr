@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258575"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395476"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Vue d'ensemble de TextPattern et des objets incorporés
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette vue d'ensemble décrit comment [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expose des objets incorporés ou des éléments enfants dans un document texte ou un conteneur.  
   
@@ -46,7 +46,7 @@ Exemple de flux de texte avec des objets incorporés et leurs amplitudes
   
  Quand il est nécessaire de parcourir le contenu d'une plage de texte, il faut effectuer une série d'étapes en arrière-plan pour assurer la bonne exécution de la méthode <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, « {l’U} RL [ http://www.microsoft.com ](http://www.microsoft.com) est incorporée dans le texte » où « { » et «} » est des points de terminaison de plage de texte.  
+1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, « {l’U} RL [ http://www.microsoft.com ](https://www.microsoft.com) est incorporée dans le texte » où « { » et «} » est des points de terminaison de plage de texte.  
   
 2.  La plage obtenue est déplacée vers l'arrière dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> au début de la limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
   
@@ -71,7 +71,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 ### <a name="hyperlink"></a>Lien hypertexte  
  **Exemple 1 - Plage de texte contenant un lien hypertexte textuel incorporé**  
   
- {L’URL [ http://www.microsoft.com ](http://www.microsoft.com) est incorporée dans le texte}.  
+ {L’URL [ http://www.microsoft.com ](https://www.microsoft.com) est incorporée dans le texte}.  
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
   
  **Exemple 3 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
   
- {L’URL} [ http://www.microsoft.com ](http://www.microsoft.com) est incorporée dans le texte.  
+ {L’URL} [ http://www.microsoft.com ](https://www.microsoft.com) est incorporée dans le texte.  
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
  [Accéder à des objets incorporés à l’aide d’UI Automation](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [Exposer le contenu d’une table à l’aide d’UI Automation](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [Accéder au texte à l’aide d’UI Automation](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [Recherche de TextPattern et exemple de sélection](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [Recherche de TextPattern et exemple de sélection](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

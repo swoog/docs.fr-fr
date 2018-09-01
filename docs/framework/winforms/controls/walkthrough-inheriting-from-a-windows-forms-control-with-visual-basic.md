@@ -10,18 +10,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: a6b1e78d17d952590510bdda80bf802ccc094285
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541435"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389978"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Procédure pas à pas : héritage à partir d'un contrôle Windows Forms à l'aide de Visual Basic
-Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants via *héritage*. L’héritage vous permet de créer des contrôles qui conservent toutes les fonctionnalités inhérentes des contrôles Windows Forms standard, tout en intégrant des fonctionnalités personnalisées. Dans cette procédure pas à pas, vous allez créer un contrôle hérité simple appelé `ValueButton`. Ce bouton hérite des fonctionnalités de Windows Forms standard <xref:System.Windows.Forms.Button> contrôler et expose une propriété personnalisée nommée `ButtonValue`.  
+Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants via *héritage*. L’héritage vous permet de créer des contrôles qui conservent toutes les fonctionnalités inhérentes des contrôles Windows Forms standard, tout en intégrant des fonctionnalités personnalisées. Dans cette procédure pas à pas, vous allez créer un contrôle hérité simple appelé `ValueButton`. Ce bouton héritera des fonctionnalités des formulaires Windows standard <xref:System.Windows.Forms.Button> contrôler et exposera une propriété personnalisée nommée `ButtonValue`.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Création du projet  
  Lorsque vous créez un nouveau projet, vous spécifiez son nom afin de définir l’espace de noms racine, le nom de l’assembly et le nom de projet, et de vous assurer que le composant par défaut sera placé dans l’espace de noms approprié.  
@@ -30,7 +30,7 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
 1.  Dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.  
   
-2.  Sélectionnez le **bibliothèque de contrôles Windows Forms** modèle de projet à partir de la liste des projets Visual Basic et le type `ValueButtonLib` dans les **nom** boîte.  
+2.  Sélectionnez le **bibliothèque de contrôles Windows Forms** modèle de projet à partir de la liste des projets Visual Basic et le type `ValueButtonLib` dans le **nom** boîte.  
   
      Le nom du projet, `ValueButtonLib`, est également assigné à l’espace de noms racine par défaut. L’espace de noms racine est utilisé pour qualifier les noms des composants dans l’assembly. Par exemple, si deux assemblies contiennent des composants nommés `ValueButton`, vous pouvez spécifier votre composant `ValueButton` à l’aide de `ValueButtonLib.ValueButton`. Pour plus d’informations, consultez l’article [Espaces de noms dans Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
@@ -40,13 +40,13 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
 5.  Ouvrez le nœud **ValueButton.vb** pour afficher le fichier de code généré par le concepteur, **ValueButton.Designer.vb**. Ouvrez ce fichier dans **l’éditeur de code**.  
   
-6.  Recherchez le `Class` instruction, `Partial Public Class ValueButton`et modifier le type à partir duquel ce contrôle hérite <xref:System.Windows.Forms.UserControl> à <xref:System.Windows.Forms.Button>. Cela permet à votre contrôle d’hériter de toutes les fonctionnalités de la <xref:System.Windows.Forms.Button> contrôle.  
+6.  Recherchez le `Class` instruction, `Partial Public Class ValueButton`et modifier le type à partir duquel ce contrôle hérite de <xref:System.Windows.Forms.UserControl> à <xref:System.Windows.Forms.Button>. Cela permet à votre contrôle hérité peut hériter de toutes les fonctionnalités de la <xref:System.Windows.Forms.Button> contrôle.  
   
-7.  Recherchez le `InitializeComponent` (méthode) et supprimer la ligne qui assigne la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriété. Cette propriété n’existe pas dans le <xref:System.Windows.Forms.Button> contrôle.  
+7.  Recherchez le `InitializeComponent` (méthode) et supprimez la ligne qui assigne la <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> propriété. Cette propriété n’existe pas dans le <xref:System.Windows.Forms.Button> contrôle.  
   
 8.  Dans le menu **Fichier**, sélectionnez **Enregistrer tout** pour enregistrer le projet.  
   
-     Notez que plus aucun concepteur visuel n’est disponible. Étant donné que le <xref:System.Windows.Forms.Button> contrôle effectue sa propre peinture, vous ne pouvez pas modifier son apparence dans le concepteur. Représentation visuelle sera exactement le même que celui de la classe, elle hérite (autrement dit, <xref:System.Windows.Forms.Button>), sauf si la modification dans le code.  
+     Notez que plus aucun concepteur visuel n’est disponible. Étant donné que le <xref:System.Windows.Forms.Button> contrôle effectue sa propre peinture, vous ne pouvez pas modifier son apparence dans le concepteur. Sa représentation visuelle sera exactement la même que celle de la classe, il hérite (autrement dit, <xref:System.Windows.Forms.Button>), sauf si la modification du code.  
   
 > [!NOTE]
 >  Vous pouvez toujours ajouter sur l’aide de conception des composants n’ayant aucun élément d’interface utilisateur.  
@@ -94,7 +94,7 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
   
 1.  Dans le menu **Fichier**, pointez vers**Ajouter**, puis cliquez sur **Nouveau projet** pour ouvrir la boîte de dialogue **Ajouter un nouveau projet**.  
   
-2.  Sélectionnez le nœud projets Visual Basic, puis cliquez sur **Application Windows Forms**.  
+2.  Sélectionnez le nœud de projets Visual Basic, puis cliquez sur **Windows Forms Application**.  
   
 3.  Dans la zone **Nom**, tapez `Test`.  
   
@@ -151,4 +151,4 @@ Avec Visual Basic, vous pouvez créer des contrôles personnalisés puissants vi
  [Comment : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Développement de contrôles Windows Forms personnalisés avec le .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [Principes fondamentaux de l’héritage (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Procédures pas à pas de la création de composants](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [Procédures pas à pas de la création de composants](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

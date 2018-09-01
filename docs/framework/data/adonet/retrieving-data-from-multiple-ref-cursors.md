@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 361e9bd4-447d-44b7-8629-3c11f1a7ffbb
-ms.openlocfilehash: ae33786cda956d3e01e6a904369a1f1b114d0b6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9da85f8998905689115cf24fb84870af45ea105
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356171"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393535"
 ---
 # <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a>Extraction de données à partir de plusieurs REF CURSOR à l'aide d'un OracleDataReader
 Cet exemple Microsoft Visual Basic exécute une procédure stockée PL/SQL qui retourne deux paramètres REF CURSOR et lit les valeurs à l'aide d'un <xref:System.Data.OracleClient.OracleDataReader>.  
@@ -52,4 +52,4 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [REF CURSOR Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

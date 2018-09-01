@@ -3,11 +3,11 @@ title: LINQ to XML pour les utilisateurs de XPath (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
 ms.openlocfilehash: e4a84c373a4b355297db130c64ca3a1df5726c5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653255"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395687"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML pour les utilisateurs de XPath (Visual Basic)
 
@@ -21,7 +21,7 @@ Cet ensemble de rubriques illustre un certain nombre d'expressions XPath et leur
 |-----------|-----------------|  
 |[Comparaison de XPath et LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/comparison-of-xpath-and-linq-to-xml.md)|Fournit une vue d'ensemble des similitudes et différences entre XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Comment : rechercher un élément enfant (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-child-element-xpath-linq-to-xml.md)|Compare l’axe des éléments enfants XPath à la méthode [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Element%2A>.<br /><br /> L'expression XPath associée est : `"DeliveryNotes"`.|  
-|[Comment : rechercher une liste d’éléments de l’enfant (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|Compare l’axe des éléments enfants XPath à l’axe [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.<br /><br /> L'expression XPath associée est : `"./*"`|  
+|[Comment : rechercher une liste d’éléments enfants (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md)|Compare l’axe des éléments enfants XPath à l’axe [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.<br /><br /> L'expression XPath associée est : `"./*"`|  
 |[Comment : rechercher l’élément racine (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-root-element-xpath-linq-to-xml.md)|Compare comment obtenir l'élément racine avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"/PurchaseOrders"`|  
 |[Comment : rechercher des éléments descendants (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-descendant-elements-xpath-linq-to-xml.md)|Compare comment obtenir les éléments descendants avec un nom particulier avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `"//Name"`|  
 |[Comment : filtrer sur un attribut (XPath-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-filter-on-an-attribute-xpath-linq-to-xml.md)|Compare comment obtenir les éléments descendants avec un nom spécifié, et avec un attribut avec une valeur spécifiée avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].<br /><br /> L'expression XPath associée est : `".//Address[@Type='Shipping']"`|  

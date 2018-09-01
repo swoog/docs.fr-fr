@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: 0a5d2dd5ac72d5199d143c6173e28457e1a80f6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c183cb03535832dce9b2c3ed97eb4d68fab19796
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529131"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385762"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>Comment : personnaliser les cellules et les colonnes du contrôle DataGridView Windows Forms en étendant leur comportement et leur apparence
 Le contrôle <xref:System.Windows.Forms.DataGridView> offre plusieurs manières de personnaliser son apparence et son comportement à l'aide de propriétés, d'événements et de classes auxiliaires. Parfois, vous pouvez avoir des exigences pour vos cellules qui vont au-delà de ce que peuvent fournir ces fonctionnalités. Vous pouvez créer vos propres classes <xref:System.Windows.Forms.DataGridViewCell> pour fournir des fonctionnalités étendues.  
@@ -28,7 +28,7 @@ Le contrôle <xref:System.Windows.Forms.DataGridView> offre plusieurs manières 
 > [!NOTE]
 >  Cet exemple ne fonctionnera pas correctement si vous ajoutez des lignes vides. Des lignes vides sont créées par exemple quand vous ajoutez des lignes au contrôle en définissant la propriété <xref:System.Windows.Forms.DataGridView.RowCount%2A>. Cela est dû au fait que les lignes ajoutées dans ce cas sont partagées automatiquement, ce qui signifie que les objets `DataGridViewRolloverCell` ne sont instanciés qu'une fois que vous cliquez sur les cellules individuelles, provoquant ainsi l'annulation du partage des lignes associées.  
   
- Ce type de personnalisation de cellule exigeant des lignes non partagées, il ne convient pas aux grands jeux de données. Pour plus d’informations sur le partage de lignes, consultez [meilleures pratiques pour la mise à l’échelle du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Ce type de personnalisation de cellule exigeant des lignes non partagées, il ne convient pas aux grands jeux de données. Pour plus d’informations sur le partage de la ligne, consultez [meilleures pratiques pour la mise à l’échelle le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 > [!NOTE]
 >  Quand vous dérivez de <xref:System.Windows.Forms.DataGridViewCell> ou <xref:System.Windows.Forms.DataGridViewColumn> et que vous ajoutez de nouvelles propriétés à la classe dérivée, veillez à substituer la méthode `Clone` pour copier les nouvelles propriétés lors des opérations de clonage. Vous devez aussi appeler la méthode `Clone` de la classe de base pour que les propriétés de la classe de base soient copiées dans la nouvelle cellule ou colonne.  
@@ -68,7 +68,7 @@ Le contrôle <xref:System.Windows.Forms.DataGridView> offre plusieurs manières 
   
 -   Références aux assemblys System, System.Windows.Form et System.Drawing.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.DataGridView>  

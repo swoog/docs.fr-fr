@@ -2,22 +2,22 @@
 title: Débogage et gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
-ms.openlocfilehash: 20f5af5736e5869ead0f7c50ce0fff22391ea730
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389066"
 ---
 # <a name="bridging-and-error-handling"></a>Débogage et gestion des erreurs
-Cet exemple montre comment le service de routage de Windows Communication Foundation (WCF) est utilisé pour le pontage de communication entre un client et un service qui utilisent des liaisons différentes. Il montre également comment utiliser un service de sauvegarde pour les scénarios de basculement. Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard pour communiquer à l’aide du service de routage.  
+Cet exemple montre comment le service de routage de Windows Communication Foundation (WCF) est utilisé pour le pontage de communication entre un client et un service qui utilisent des liaisons différentes. Il montre également comment utiliser un service de sauvegarde pour les scénarios de basculement. Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le service de routage.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\ErrorHandlingAndBridging`  
   
@@ -39,7 +39,7 @@ Cet exemple montre comment le service de routage de Windows Communication Founda
   
 2.  Appuyez sur F5 ou sur CTRL+MAJ+B dans Visual Studio.  
   
-    1.  Si vous souhaitez lancer automatiquement les projets nécessaires lorsque vous appuyez sur F5, cliquez sur la solution, sélectionnez **propriétés**et dans le **projet de démarrage** nœud sous **depropriétéscommunes**, sélectionnez **plusieurs projets de démarrage**et tous les projets **Démarrer**.  
+    1.  Si vous souhaitez lancer automatiquement les projets nécessaires lorsque vous appuyez sur F5, cliquez sur la solution, sélectionnez **propriétés**, puis, dans le **projet de démarrage** nœud sous **depropriétéscommunes**, sélectionnez **plusieurs projets de démarrage**et tous les projets **Démarrer**.  
   
     2.  Si vous générez le projet avec CTRL+MAJ+B, vous devez démarrer les applications suivantes :  
   
@@ -70,4 +70,4 @@ Cet exemple montre comment le service de routage de Windows Communication Founda
  Contoso souhaite fournir un point de terminaison de service pouvant interagir avec le monde extérieur, tout en optimisant les performances en interne. Il expose donc ses services au monde via un point de terminaison utilisant BasicHttpBinding, et recourt en interne au service de routage pour établir un pont entre cette connexion et le point de terminaison NetTcpBinding qu'utilisent ses services. En outre, Contoso souhaite que son offre de services présente une tolérance aux pannes temporaires dans chacun de ses services de production. À cette fin, il virtualise plusieurs points de terminaison derrière le service de routeur en s'appuyant sur les fonctionnalités de gestion des erreurs pour basculer automatiquement vers les points de terminaison de sauvegarde en cas de nécessité.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

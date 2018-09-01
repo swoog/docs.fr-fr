@@ -2,12 +2,12 @@
 title: Calculatrice corrélée
 ms.date: 03/30/2017
 ms.assetid: c365166e-6552-49a4-bf17-9f4e597d4d41
-ms.openlocfilehash: 77e13b3ca913d2432cfe5d4a95e83764effbb109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71cfdd0906ef20ec36b76ef5e508a4551b9fe3fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514139"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384669"
 ---
 # <a name="correlated-calculator"></a>Calculatrice corrélée
 Cet exemple montre comment utiliser les activités de messagerie (<xref:System.ServiceModel.Activities.Receive> et <xref:System.ServiceModel.Activities.SendReply>) dans le concepteur avec une corrélation basée sur le contenu selon un paramètre dans le message. Dans ce scénario, les opérations de la calculatrice sont dans un convoi parallèle. Une instance et une corrélation (selon `CalculatorId`) sont toutes deux créées lorsque le premier message est envoyé au workflow et les messages suivants avec le même `CalculatorId` sont distribués à cette instance jusqu'à l'appel de l'opération de réinitialisation. Le client est implémenté comme une application WPF qui utilise un proxy client basé sur du code pour communiquer avec le service.  
@@ -33,6 +33,6 @@ Cet exemple montre comment utiliser les activités de messagerie (<xref:System.S
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\CorellatedCalculator`

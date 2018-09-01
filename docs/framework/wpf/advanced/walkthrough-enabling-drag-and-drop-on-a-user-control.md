@@ -8,17 +8,17 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: e4dba856b973f1210f2d088de3ed8ae5df2c6988
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e151eb7f428fecb330970210fd7addb1603a211f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549748"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386604"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procédure pas à pas : activation de la fonction glisser-déplacer sur un contrôle utilisateur
 Cette procédure pas à pas montre comment créer un contrôle utilisateur personnalisé qui peut participer à un transfert de données par glisser-déplacer dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
- Dans cette procédure pas à pas, vous allez créer un WPF personnalisé <xref:System.Windows.Controls.UserControl> qui représente une forme de cercle. Vous implémentez la fonctionnalité sur le contrôle pour activer le transfert de données par glisser-déplacer. Par exemple, si vous faites glisser un contrôle de cercle sur un autre, les données de couleur de remplissage sont copiées du cercle source vers la cible. Si vous faites glisser un contrôle Circle à un <xref:System.Windows.Controls.TextBox>, la représentation sous forme de chaîne de la couleur de remplissage est copiée vers le <xref:System.Windows.Controls.TextBox>. Vous créerez également une petite application qui contient deux contrôles de panneau de configuration et un <xref:System.Windows.Controls.TextBox> pour tester la fonctionnalité de glisser-déplacer. Vous écrivez du code qui permet aux panneaux de traiter les données de cercle déplacées, ce qui vous permet de déplacer ou copier des cercles de la collection d’enfants d’un panneau à l’autre.  
+ Dans cette procédure pas à pas, vous allez créer un WPF personnalisé <xref:System.Windows.Controls.UserControl> qui représente une forme de cercle. Vous implémentez la fonctionnalité sur le contrôle pour activer le transfert de données par glisser-déplacer. Par exemple, si vous faites glisser un contrôle de cercle sur un autre, les données de couleur de remplissage sont copiées du cercle source vers la cible. Si vous faites glisser un contrôle de cercle pour un <xref:System.Windows.Controls.TextBox>, la représentation sous forme de chaîne de la couleur de remplissage est copiée dans le <xref:System.Windows.Controls.TextBox>. Vous allez également créer une petite application qui contient deux contrôles de panneau et un <xref:System.Windows.Controls.TextBox> pour tester la fonctionnalité de glisser-déplacer. Vous écrivez du code qui permet aux panneaux de traiter les données de cercle déplacées, ce qui vous permet de déplacer ou copier des cercles de la collection d’enfants d’un panneau à l’autre.  
   
  Cette procédure pas à pas décrit les tâches suivantes :  
   
@@ -36,11 +36,11 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
 -   Visual Studio 2010  
   
 ## <a name="creating-the-application-project"></a>Création du projet d’application  
- Dans cette section, vous allez créer l’infrastructure d’application, qui comprend une page principale avec deux panneaux et un <xref:System.Windows.Controls.TextBox>.  
+ Dans cette section, vous allez créer l’infrastructure d’application, qui inclut une page principale avec deux panneaux et un <xref:System.Windows.Controls.TextBox>.  
   
 ### <a name="to-create-the-project"></a>Pour créer le projet  
   
-1.  Créez un projet d’application WPF en Visual Basic ou Visual C# nommé `DragDropExample`. Pour plus d'informations, consultez [Guide pratique pour créer un projet d'application WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Créez un projet d’application WPF en Visual Basic ou Visual C# nommé `DragDropExample`. Pour plus d'informations, consultez [Guide pratique pour créer un projet d'application WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
 2.  Ouvrez MainWindow.xaml.  
   
@@ -65,7 +65,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
      Ce fichier doit contenir les éléments d’interface utilisateur du contrôle utilisateur.  
   
-4.  Ajoutez le balisage suivant à la racine <xref:System.Windows.Controls.Grid> pour créer un contrôle utilisateur simple qui présente un cercle bleu comme interface utilisateur.  
+4.  Ajoutez le balisage suivant à la racine <xref:System.Windows.Controls.Grid> pour créer un contrôle utilisateur simple qui est un cercle bleu comme interface utilisateur.  
   
      [!code-xaml[DragDropWalkthrough#EllipseXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]  
   
@@ -82,13 +82,13 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 1.  Ouvrez MainWindow.xaml.  
   
-2.  Ajoutez le code XAML suivant à l’ouverture <xref:System.Windows.Window> balise pour créer une référence d’espace de noms XML à l’application actuelle.  
+2.  Ajoutez le XAML suivant à l’ouverture <xref:System.Windows.Window> balise pour créer une référence d’espace de noms XML à l’application actuelle.  
   
     ```  
     xmlns:local="clr-namespace:DragDropExample"  
     ```  
   
-3.  Dans la première <xref:System.Windows.Controls.StackPanel>, ajoutez le code XAML suivant pour créer deux instances du contrôle utilisateur cercle dans le premier panneau.  
+3.  Dans la première <xref:System.Windows.Controls.StackPanel>, ajoutez le XAML suivant pour créer deux instances du contrôle de l’utilisateur de cercle dans le premier panneau.  
   
      [!code-xaml[DragDropWalkthrough#CirclesXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]  
   
@@ -97,9 +97,9 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
      [!code-xaml[DragDropWalkthrough#PanelsStep2XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#panelsstep2xaml)]  
   
 ## <a name="implementing-drag-source-events-in-the-user-control"></a>Implémentation d’événements de source de glissement dans le contrôle utilisateur  
- Dans cette section, vous remplace le <xref:System.Windows.UIElement.OnMouseMove%2A> (méthode) et lancer l’opération de glisser-déplacer.  
+ Dans cette section, vous allez substituer les <xref:System.Windows.UIElement.OnMouseMove%2A> (méthode) et lance l’opération de glisser-déplacer.  
   
- Si une opération de glissement n’est démarrée (un bouton de la souris est enfoncé et la souris est déplacée), vous créez un package les données à transférer dans un <xref:System.Windows.DataObject>. Dans cet exemple, le contrôle de cercle empaquette trois éléments de données : une représentation sous forme de chaîne de sa couleur de remplissage, une double représentation de sa hauteur et une copie de lui-même.  
+ Si une opération de glissement est démarrée (un bouton de la souris est enfoncé et la souris est déplacée), vous empaqueter les données à transférer dans un <xref:System.Windows.DataObject>. Dans cet exemple, le contrôle de cercle empaquette trois éléments de données : une représentation sous forme de chaîne de sa couleur de remplissage, une double représentation de sa hauteur et une copie de lui-même.  
   
 ### <a name="to-initiate-a-drag-and-drop-operation"></a>Pour lancer une opération de glisser-déplacer  
   
@@ -114,7 +114,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
     -   Vérifie si le bouton gauche de la souris est enfoncé quand la souris se déplace.  
   
-    -   Regroupe les données Circle dans un <xref:System.Windows.DataObject>. Dans cet exemple, le contrôle de cercle empaquette trois éléments de données : une représentation sous forme de chaîne de sa couleur de remplissage, une double représentation de sa hauteur et une copie de lui-même.  
+    -   Empaquette les données de cercle dans un <xref:System.Windows.DataObject>. Dans cet exemple, le contrôle de cercle empaquette trois éléments de données : une représentation sous forme de chaîne de sa couleur de remplissage, une double représentation de sa hauteur et une copie de lui-même.  
   
     -   Appelle la méthode statique <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> méthode pour lancer l’opération de glisser-déplacer. Vous passez les trois paramètres suivants pour le <xref:System.Windows.DragDrop.DoDragDrop%2A> méthode :  
   
@@ -126,15 +126,15 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 3.  Appuyez sur F5 pour générer et exécuter l'application.  
   
-4.  Cliquez sur un des contrôles Circle et faites-le glisser sur les panneaux, cercle et le <xref:System.Windows.Controls.TextBox>. Lorsque vous faites glisser sur le <xref:System.Windows.Controls.TextBox>, le curseur se transforme pour indiquer un déplacement.  
+4.  Cliquez sur un des contrôles de cercle et faites-le glisser sur les panneaux, l’autre cercle et le <xref:System.Windows.Controls.TextBox>. Lorsque vous faites glisser sur le <xref:System.Windows.Controls.TextBox>, le curseur se transforme pour indiquer un déplacement.  
   
-5.  Tout en faisant glisser un cercle sur le <xref:System.Windows.Controls.TextBox>, appuyez sur la touche CTRL ENFONCÉE. Notez que le curseur change pour indiquer une copie.  
+5.  Tout en faisant glisser un cercle sur le <xref:System.Windows.Controls.TextBox>, appuyez sur la touche CTRL enfoncée. Notez que le curseur change pour indiquer une copie.  
   
-6.  Faites glisser et déposez un cercle sur le <xref:System.Windows.Controls.TextBox>. La représentation sous forme de chaîne de couleur de remplissage du cercle est ajoutée à la <xref:System.Windows.Controls.TextBox>.  
+6.  Faites glisser et déposez un cercle sur le <xref:System.Windows.Controls.TextBox>. La représentation sous forme de chaîne de la couleur de remplissage du cercle est ajoutée à la <xref:System.Windows.Controls.TextBox>.  
   
      ![Représentation sous forme de chaîne de la couleur de remplissage du cercle](../../../../docs/framework/wpf/advanced/media/dragdrop-colorstring.png "DragDrop_ColorString")  
   
- Par défaut, le curseur change pendant une opération de glisser-déplacer pour indiquer l’effet du déplacement des données. Vous pouvez personnaliser les commentaires donnés à l’utilisateur en gérant le <xref:System.Windows.UIElement.GiveFeedback> événement et en définissant un autre curseur.  
+ Par défaut, le curseur change pendant une opération de glisser-déplacer pour indiquer l’effet du déplacement des données. Vous pouvez personnaliser les commentaires donnés à l’utilisateur en gérant la <xref:System.Windows.UIElement.GiveFeedback> événement et en définissant un autre curseur.  
   
 ### <a name="to-give-feedback-to-the-user"></a>Pour transmettre des commentaires à l’utilisateur  
   
@@ -153,7 +153,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 3.  Appuyez sur F5 pour générer et exécuter l'application.  
   
-4.  Faites glisser un de cercle contrôle sur les panneaux, cercle, et le <xref:System.Windows.Controls.TextBox>. Notez que les curseurs sont à présent les curseurs personnalisés que vous avez spécifié dans le <xref:System.Windows.UIElement.OnGiveFeedback%2A> remplacer.  
+4.  Faites glisser un du cercle le contrôle sur les panneaux, l’autre cercle et le <xref:System.Windows.Controls.TextBox>. Notez que les curseurs sont maintenant les curseurs personnalisés que vous avez spécifié dans le <xref:System.Windows.UIElement.OnGiveFeedback%2A> remplacer.  
   
      ![Glisser-déplacer avec des curseurs personnalisés](../../../../docs/framework/wpf/advanced/media/dragdrop-customcursor.png "DragDrop_CustomCursor")  
   
@@ -172,7 +172,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
      [!code-xaml[DragDropWalkthrough#UCTagXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]  
   
- Le <xref:System.Windows.UIElement.OnDrop%2A> méthode est appelée lorsque le <xref:System.Windows.UIElement.AllowDrop%2A> est définie sur `true` et données à partir de la source de glissement sont supprimées sur le contrôle utilisateur Circle. Dans cette méthode, vous traitez les données qui ont été déplacées et appliquez les données au cercle.  
+ Le <xref:System.Windows.UIElement.OnDrop%2A> méthode est appelée lorsque le <xref:System.Windows.UIElement.AllowDrop%2A> propriété est définie sur `true` et données à partir de la source de glissement sont déplacées sur le contrôle utilisateur de cercle. Dans cette méthode, vous traitez les données qui ont été déplacées et appliquez les données au cercle.  
   
 ### <a name="to-process-the-dropped-data"></a>Pour traiter les données déplacées  
   
@@ -189,9 +189,9 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
     -   Utilise le <xref:System.Windows.DataObject.GetData%2A> méthode pour extraire les données de chaîne si elle est présente.  
   
-    -   Utilise un <xref:System.Windows.Media.BrushConverter> tente de convertir la chaîne en un <xref:System.Windows.Media.Brush>.  
+    -   Utilise un <xref:System.Windows.Media.BrushConverter> pour essayer de convertir la chaîne à un <xref:System.Windows.Media.Brush>.  
   
-    -   Si la conversion réussit, applique le pinceau pour le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle Circle.  
+    -   Si la conversion réussite, applique le pinceau pour le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle de cercle.  
   
     -   Marque le <xref:System.Windows.UIElement.Drop> événement comme géré. Vous devez marquer l’événement de déplacement comme étant géré pour que les autres éléments qui reçoivent cet événement sachent que le contrôle utilisateur de cercle l’a géré.  
   
@@ -209,11 +209,11 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 8.  Faites le glisser vers un contrôle de cercle et déplacez-le. Notez que le curseur change pour indiquer que le déplacement est autorisé, mais la couleur du cercle ne change pas, car `gre` n’est pas une couleur valide.  
   
-9. Faites glisser le contrôle de cercle vert et déplacez-le sur le contrôle de cercle bleu. Le cercle passe du bleu au vert. Notez que le curseur est affiché varie selon que le <xref:System.Windows.Controls.TextBox> ou le cercle vide est la source de glissement.  
+9. Faites glisser le contrôle de cercle vert et déplacez-le sur le contrôle de cercle bleu. Le cercle passe du bleu au vert. Notez que le curseur affiché varie selon que le <xref:System.Windows.Controls.TextBox> ou le cercle est la source du glissement.  
   
- Définition de la <xref:System.Windows.UIElement.AllowDrop%2A> propriété `true` et traiter les données déplacées est tout ce qui est nécessaire pour activer un élément à une cible de dépôt. Toutefois, pour fournir une meilleure expérience utilisateur, vous devez également gérer les <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, et <xref:System.Windows.UIElement.DragOver> événements. Dans ces événements, vous pouvez effectuer des vérifications et fournir des commentaires supplémentaires à l’utilisateur avant de déplacer les données.  
+ Définition de la <xref:System.Windows.UIElement.AllowDrop%2A> propriété `true` et traitement des données déplacées est tout ce qui est nécessaire pour un élément peut être une cible de dépôt. Toutefois, pour fournir une meilleure expérience utilisateur, vous devez également gérer les <xref:System.Windows.UIElement.DragEnter>, <xref:System.Windows.UIElement.DragLeave>, et <xref:System.Windows.UIElement.DragOver> événements. Dans ces événements, vous pouvez effectuer des vérifications et fournir des commentaires supplémentaires à l’utilisateur avant de déplacer les données.  
   
- Quand les données sont glissées sur le contrôle utilisateur de cercle, le contrôle doit notifier la source de glissement si elle peut ou non traiter les données en cours de glissement. Si le contrôle ne sait pas comment traiter les données, il doit refuser le déplacement. Pour ce faire, vous allez gérer les <xref:System.Windows.UIElement.DragOver> événement et définissez le <xref:System.Windows.DragEventArgs.Effects%2A> propriété.  
+ Quand les données sont glissées sur le contrôle utilisateur de cercle, le contrôle doit notifier la source de glissement si elle peut ou non traiter les données en cours de glissement. Si le contrôle ne sait pas comment traiter les données, il doit refuser le déplacement. Pour ce faire, vous gérerez les <xref:System.Windows.UIElement.DragOver> .PreviewKeyDown et définir le <xref:System.Windows.DragEventArgs.Effects%2A> propriété.  
   
 ### <a name="to-verify-that-the-data-drop-is-allowed"></a>Pour vérifier que le déplacement de données est autorisé  
   
@@ -228,7 +228,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
     -   Affecte la valeur <xref:System.Windows.DragEventArgs.Effects%2A> à la propriété <xref:System.Windows.DragDropEffects.None>.  
   
-    -   Exécute les mêmes vérifications sont effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si le contrôle utilisateur Circle peut traiter les données glissées.  
+    -   Exécute les mêmes vérifications que celles effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si le contrôle utilisateur de cercle peut traiter les données glissées.  
   
     -   Si le contrôle utilisateur peut traiter les données, définit les <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy> ou <xref:System.Windows.DragDropEffects.Move>.  
   
@@ -238,13 +238,13 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 5.  Faites glisser le texte vers un contrôle de cercle. Notez que le curseur change à présent pour indiquer que le déplacement n’est pas autorisé, car `gre` n’est pas une couleur valide.  
   
- Vous pouvez améliorer l’expérience utilisateur en appliquant un aperçu de l’opération de déplacement. Pour le contrôle utilisateur Circle, remplace le <xref:System.Windows.UIElement.OnDragEnter%2A> et <xref:System.Windows.UIElement.OnDragLeave%2A> méthodes. Lorsqu’il sont déplacées les données sur le contrôle, l’arrière-plan actuel <xref:System.Windows.Shapes.Shape.Fill%2A> est enregistré dans une variable d’espace réservé. La chaîne est ensuite convertie en un pinceau et appliquée à la <xref:System.Windows.Shapes.Ellipse> qui fournit du cercle l’interface utilisateur. Si les données sont déplacées hors du cercle sans en cours de suppression d’origine <xref:System.Windows.Shapes.Shape.Fill%2A> valeur est de nouveau appliquée au cercle.  
+ Vous pouvez améliorer l’expérience utilisateur en appliquant un aperçu de l’opération de déplacement. Pour le contrôle utilisateur de cercle, vous remplacerez la <xref:System.Windows.UIElement.OnDragEnter%2A> et <xref:System.Windows.UIElement.OnDragLeave%2A> méthodes. Lorsque les données sont glissées sur le contrôle, l’arrière-plan actuel <xref:System.Windows.Shapes.Shape.Fill%2A> est enregistré dans une variable d’espace réservé. La chaîne est ensuite convertie en pinceau et appliquée à la <xref:System.Windows.Shapes.Ellipse> qui fournit le cercle l’interface utilisateur. Si les données sont glissées en dehors du cercle sans être déplacées, la version d’origine <xref:System.Windows.Shapes.Shape.Fill%2A> valeur est réappliquée au cercle.  
   
 ### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>Pour afficher un aperçu du résultat de l’opération de glisser-déplacer  
   
 1.  Ouvrez Circle.xaml.cs ou Circle.xaml.vb.  
   
-2.  Dans la classe Circle, déclarez un private <xref:System.Windows.Media.Brush> variable nommée `_previousFill` et initialisez-le à `null`.  
+2.  Dans la classe de cercle, déclarez une privée <xref:System.Windows.Media.Brush> variable nommée `_previousFill` et initialisez-la à `null`.  
   
      [!code-csharp[DragDropWalkthrough#Brush](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]  
@@ -258,7 +258,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
     -   Enregistre le <xref:System.Windows.Shapes.Shape.Fill%2A> propriété de la <xref:System.Windows.Shapes.Ellipse> dans le `_previousFill` variable.  
   
-    -   Exécute les mêmes vérifications sont effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si les données peuvent être converties en un <xref:System.Windows.Media.Brush>.  
+    -   Exécute les mêmes vérifications que celles effectuées dans le <xref:System.Windows.UIElement.OnDrop%2A> méthode pour déterminer si les données peuvent être converties à un <xref:System.Windows.Media.Brush>.  
   
     -   Si les données sont converties à valide <xref:System.Windows.Media.Brush>, s’applique à la <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse>.  
   
@@ -269,7 +269,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
      Cela <xref:System.Windows.UIElement.OnDragLeave%2A> remplacement effectue les tâches suivantes :  
   
-    -   S’applique le <xref:System.Windows.Media.Brush> enregistrées dans le `_previousFill` variable à la <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle utilisateur Circle.  
+    -   S’applique le <xref:System.Windows.Media.Brush> enregistré dans le `_previousFill` à la variable le <xref:System.Windows.Shapes.Shape.Fill%2A> de la <xref:System.Windows.Shapes.Ellipse> qui fournit l’interface utilisateur du contrôle d’utilisateur de cercle.  
   
 5.  Appuyez sur F5 pour générer et exécuter l'application.  
   
@@ -288,7 +288,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 1.  Ouvrez MainWindow.xaml.  
   
-2.  Comme indiqué dans le code XAML suivant, dans chacun de la <xref:System.Windows.Controls.StackPanel> contrôles, ajouter des gestionnaires pour les <xref:System.Windows.UIElement.DragOver> et <xref:System.Windows.UIElement.Drop> événements. Nom de la <xref:System.Windows.UIElement.DragOver> Gestionnaire d’événements, `panel_DragOver`et nommez le <xref:System.Windows.UIElement.Drop> Gestionnaire d’événements, `panel_Drop`.  
+2.  Comme indiqué dans le XAML suivant, dans chacun de la <xref:System.Windows.Controls.StackPanel> contrôles, ajoutez des gestionnaires pour les <xref:System.Windows.UIElement.DragOver> et <xref:System.Windows.UIElement.Drop> événements. Nom de la <xref:System.Windows.UIElement.DragOver> Gestionnaire d’événements, `panel_DragOver`et nommez le <xref:System.Windows.UIElement.Drop> Gestionnaire d’événements, `panel_Drop`.  
   
      [!code-xaml[DragDropWalkthrough#PanelsXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]  
   
@@ -301,11 +301,11 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
      Cela <xref:System.Windows.UIElement.DragOver> Gestionnaire d’événements effectue les tâches suivantes :  
   
-    -   Vérifie que les données glissées contiennent les données « Objet » qui a été créées dans le <xref:System.Windows.DataObject> par le contrôle utilisateur Circle et passées dans l’appel à <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
+    -   Vérifie que les données glissées contiennent les données « Object » qui a été empaquetées dans le <xref:System.Windows.DataObject> par le contrôle utilisateur de cercle et passées dans l’appel à <xref:System.Windows.DragDrop.DoDragDrop%2A>.  
   
     -   Si les données « Object » sont présentes, vérifie si la touche CTRL est enfoncée.  
   
-    -   Si la touche CTRL, définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy>. Sinon, la valeur du <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Move>.  
+    -   Si la touche CTRL est enfoncée, définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Copy>. Sinon, définissez le <xref:System.Windows.DragEventArgs.Effects%2A> propriété <xref:System.Windows.DragDropEffects.Move>.  
   
 5.  Ajoutez le code suivant pour le <xref:System.Windows.UIElement.Drop> Gestionnaire d’événements.  
   
@@ -314,15 +314,15 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
      Cela <xref:System.Windows.UIElement.Drop> Gestionnaire d’événements effectue les tâches suivantes :  
   
-    -   Vérifie si le <xref:System.Windows.UIElement.Drop> événement a déjà été traité. Par exemple, si un cercle est déplacé sur un autre contrôle Circle qui gère la <xref:System.Windows.UIElement.Drop> événement, vous ne souhaitez pas que le panneau de configuration qui contient le cercle également le gérer.  
+    -   Vérifie si le <xref:System.Windows.UIElement.Drop> événement a déjà été géré. Par exemple, si un cercle est déplacé sur un autre cercle qui gère la <xref:System.Windows.UIElement.Drop> événement, vous ne souhaitez pas que le panneau qui contient le contrôle de cercle gère aussi.  
   
-    -   Si le <xref:System.Windows.UIElement.Drop> événement n'est pas géré, vérifie si la touche CTRL.  
+    -   Si le <xref:System.Windows.UIElement.Drop> événement n'est pas géré, vérifie si la touche CTRL est enfoncée.  
   
-    -   Si la touche CTRL est activée lorsque le <xref:System.Windows.UIElement.Drop> se produit, effectue une copie du cercle de contrôle et l’ajouter à la <xref:System.Windows.Controls.Panel.Children%2A> collection de la <xref:System.Windows.Controls.StackPanel>.  
+    -   Si la touche CTRL est enfoncée quand le <xref:System.Windows.UIElement.Drop> se produit, effectue une copie du cercle, contrôle et ajoutez-la à la <xref:System.Windows.Controls.Panel.Children%2A> collection de la <xref:System.Windows.Controls.StackPanel>.  
   
-    -   Si la touche CTRL n’est pas activée, déplace le cercle à partir de la <xref:System.Windows.Controls.Panel.Children%2A> collection de son panneau parent vers le <xref:System.Windows.Controls.Panel.Children%2A> collection du panneau qui il a été supprimé.  
+    -   Si la touche CTRL n’est pas enfoncée, déplace le cercle à partir de la <xref:System.Windows.Controls.Panel.Children%2A> collection de son panneau parent vers le <xref:System.Windows.Controls.Panel.Children%2A> collection du panneau qui il a été supprimé.  
   
-    -   Définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété pour notifier le <xref:System.Windows.DragDrop.DoDragDrop%2A> (méthode) indique si une opération de déplacement ou de copie a été effectuée.  
+    -   Définit le <xref:System.Windows.DragEventArgs.Effects%2A> propriété pour notifier le <xref:System.Windows.DragDrop.DoDragDrop%2A> méthode si une opération de déplacement ou de copie a été effectuée.  
   
 6.  Appuyez sur F5 pour générer et exécuter l'application.  
   
@@ -330,7 +330,7 @@ Cette procédure pas à pas montre comment créer un contrôle utilisateur perso
   
 8.  Faites glisser le texte sur un contrôle de cercle et déplacez-le.  
   
-9. Faites glisser un contrôle de cercle du panneau gauche vers le panneau droit et déplacez-le. Le cercle est supprimé de la <xref:System.Windows.Controls.Panel.Children%2A> collection du panneau gauche et ajouté à la collection Children du panneau droit.  
+9. Faites glisser un contrôle de cercle du panneau gauche vers le panneau droit et déplacez-le. Le cercle est supprimé de la <xref:System.Windows.Controls.Panel.Children%2A> collection du panneau gauche et ajouté à la collection d’enfants du panneau droit.  
   
 10. Faites glisser un contrôle de cercle du panneau dans lequel il se trouve vers l’autre panneau et déplacez-le en maintenant la touche CTRL enfoncée. Le cercle est copié et la copie est ajoutée à la <xref:System.Windows.Controls.Panel.Children%2A> collection du Panneau de réception.  
   

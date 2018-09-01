@@ -6,50 +6,50 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 9eea7d397824e443c46acff73fe6db0e43bcfe42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 81898e09ff513043b205cde13378ae24ee755226
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539476"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391982"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Vue d'ensemble du contrôle SplitContainer (Windows Forms)
 Le contrôle Windows Forms <xref:System.Windows.Forms.SplitContainer> peut être considéré comme un composite ; il s'agit de deux panneaux séparés par une barre mobile. Quand le pointeur de la souris est sur la barre, il change de forme pour montrer que la barre est mobile.  
   
 > [!IMPORTANT]
->  Dans le **boîte à outils**, <xref:System.Windows.Forms.SplitContainer> contrôle remplace le <xref:System.Windows.Forms.Splitter> contrôle qui existait dans la version précédente de Visual Studio. Il vaut beaucoup mieux utiliser le contrôle <xref:System.Windows.Forms.SplitContainer> que le contrôle <xref:System.Windows.Forms.Splitter>. Le <xref:System.Windows.Forms.Splitter> classe est toujours inclus dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour la compatibilité avec les applications existantes, mais nous vous encourageons vivement à utiliser le <xref:System.Windows.Forms.SplitContainer> contrôle pour les nouveaux projets.  
+>  Dans le **boîte à outils**, <xref:System.Windows.Forms.SplitContainer> contrôle remplace le <xref:System.Windows.Forms.Splitter> contrôle qui existait dans la version précédente de Visual Studio. Il vaut beaucoup mieux utiliser le contrôle <xref:System.Windows.Forms.SplitContainer> que le contrôle <xref:System.Windows.Forms.Splitter>. Le <xref:System.Windows.Forms.Splitter> classe est toujours incluse dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour assurer la compatibilité avec les applications existantes, mais nous vous encourageons vivement à utiliser le <xref:System.Windows.Forms.SplitContainer> contrôle pour les nouveaux projets.  
   
- Avec la <xref:System.Windows.Forms.SplitContainer> contrôle, vous pouvez créer des interfaces utilisateur complexes ; souvent, une sélection dans un panneau détermine les objets affichés dans l’autre panneau. Cette disposition est très efficace pour afficher et parcourir des informations. Avoir deux panneaux vous permet de regrouper des informations dans les zones et de la barre, ou « séparateur », permet aux utilisateurs de redimensionner les panneaux.  
+ Avec la <xref:System.Windows.Forms.SplitContainer> contrôle, vous pouvez créer des interfaces utilisateur complexes ; souvent, une sélection dans un panneau détermine quels objets sont affichés dans l’autre panneau. Cette disposition est très efficace pour afficher et parcourir des informations. D’avoir deux panneaux vous permet vous agréger des informations dans les zones et la barre, ou « séparateur », permet aux utilisateurs de redimensionner les panneaux.  
   
- Plusieurs <xref:System.Windows.Forms.SplitContainer> contrôle peut également être imbriquée, la seconde <xref:System.Windows.Forms.SplitContainer> contrôle orientée horizontalement, pour créer des panneaux inférieur et supérieur.  
+ Plusieurs <xref:System.Windows.Forms.SplitContainer> contrôle peut également être imbriqué, et de la seconde <xref:System.Windows.Forms.SplitContainer> contrôle orientée horizontalement, pour créer des panneaux inférieur et supérieur.  
   
- N’oubliez pas que le <xref:System.Windows.Forms.SplitContainer> contrôle est accessible par le clavier par défaut ; les utilisateurs peuvent appuyer sur les touches de direction pour déplacer le séparateur si la <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> est définie sur `false`.  
+ N’oubliez pas que le <xref:System.Windows.Forms.SplitContainer> contrôle est accessible par le clavier par défaut ; les utilisateurs peuvent appuyer sur les touches de direction pour déplacer le séparateur si le <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriété est définie sur `false`.  
   
- Le <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriété de la <xref:System.Windows.Forms.SplitContainer> contrôle détermine la direction du séparateur et non du contrôle lui-même. Par conséquent, lorsque cette propriété a la valeur <xref:System.Windows.Forms.Orientation.Vertical>, le séparateur s’exécute de haut en bas, en créant des panneaux gauche et droite.  
+ Le <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriété de la <xref:System.Windows.Forms.SplitContainer> contrôle détermine la direction du séparateur et non du contrôle lui-même. Par conséquent, lorsque cette propriété a la valeur <xref:System.Windows.Forms.Orientation.Vertical>, le séparateur s’exécute de haut en bas, la création des panneaux gauche et droite.  
   
- En outre, sachez que la valeur de la <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> propriété varie selon la valeur de la <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriété. Pour plus d’informations, consultez <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> propriété.  
+ En outre, n’oubliez pas que la valeur de la <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> propriété varie selon la valeur de la <xref:System.Windows.Forms.SplitContainer.Orientation%2A> propriété. Pour plus d’informations, consultez <xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> propriété.  
   
- Vous pouvez également limiter la taille et le déplacement de la <xref:System.Windows.Forms.SplitContainer> contrôle. Le <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> propriété détermine le panneau qui reste la même taille après le <xref:System.Windows.Forms.SplitContainer> contrôle est redimensionné et le <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriété détermine si le séparateur est mobile par le clavier ou la souris.  
+ Vous pouvez également restreindre la taille et le déplacement de la <xref:System.Windows.Forms.SplitContainer> contrôle. Le <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> propriété détermine le panneau qui restera la même taille après le <xref:System.Windows.Forms.SplitContainer> contrôle est redimensionné et le <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriété détermine si le séparateur est mobile par le clavier ou la souris.  
   
 > [!NOTE]
->  Même si le <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> est définie sur `true`, le séparateur peut encore être déplacé par programmation ; par exemple, à l’aide de la <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propriété.  
+>  Même si le <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> propriété est définie sur `true`, le séparateur peut encore être déplacé par programmation ; par exemple, à l’aide de la <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> propriété.  
   
- Enfin, chaque panneau de configuration de la <xref:System.Windows.Forms.SplitContainer> contrôle possède des propriétés pour déterminer sa taille individuelle.  
+ Enfin, chaque panneau de configuration de la <xref:System.Windows.Forms.SplitContainer> contrôle a les propriétés pour déterminer sa taille individuelle.  
   
 ## <a name="commonly-used-properties-methods-and-events"></a>Propriétés, méthodes et événements couramment utilisés  
   
 |Name|Description|  
 |----------|-----------------|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Détermine le panneau qui reste la même taille après le <xref:System.Windows.Forms.SplitContainer> contrôle est redimensionné.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Détermine si le séparateur peut être déplacé avec la souris ou du clavier.|  
+|Propriété <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>|Détermine le panneau qui restera la même taille après le <xref:System.Windows.Forms.SplitContainer> contrôle est redimensionné.|  
+|Propriété <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>|Détermine si le séparateur peut être déplacé par le clavier ou la souris.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.Orientation%2A>|Détermine si le séparateur est disposé verticalement ou horizontalement.|  
-|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Détermine la distance en pixels du bord gauche ou supérieur à la barre de fractionnement mobile.|  
+|Propriété <xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>|Détermine la distance en pixels en partant du bord gauche ou supérieur à la barre de fractionnement mobile.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>|Détermine la distance minimale, en pixels, que le séparateur peut être déplacé par l’utilisateur.|  
 |Propriété <xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A>|Détermine l’épaisseur, en pixels, du séparateur.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Événement|Se produit lorsque le séparateur est en mouvement.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Événement|Se produit lorsque le séparateur se déplace.|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Événement|Se produit lorsque le séparateur a été déplacé.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.SplitContainer>  
  [SplitContainer, contrôle](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Exemple de contrôle SplitContainer](http://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+ [Exemple de contrôle SplitContainer](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)

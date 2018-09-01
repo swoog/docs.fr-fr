@@ -2,12 +2,12 @@
 title: Apprentissage par les procédures pas à pas
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 028bd2af9ba88136e5955c6776b0d765af20fca3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362219"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385456"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprentissage par les procédures pas à pas
 Le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation fournit plusieurs procédures pas à pas. Cette rubrique aborde certains problèmes généraux de procédure pas à pas (y compris leur résolution) et fournit des liens vers plusieurs procédures pas à pas de base pour découvrir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -39,7 +39,7 @@ Le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] procédures pas à pas nécessite généralement la base de données Northwind. Pour plus d’informations, consultez [téléchargement d’exemples de bases de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Les boîtes de dialogue et les commandes de menu affichées dans les procédures pas à pas peuvent différer de celles décrites dans l’aide, en fonction de vos paramètres actifs ou votre édition de Visual Studio. Pour modifier ces paramètres, cliquez sur **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Les boîtes de dialogue et commandes de menu affichées dans les procédures pas à pas peuvent différer de celles décrites dans l’aide, en fonction de vos paramètres actifs ou votre édition de Visual Studio. Pour modifier ces paramètres, cliquez sur **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 -   Pour les procédures pas à pas qui abordent des scénarios multicouches, un serveur doit se trouver sur un ordinateur autre que l'ordinateur de développement et vous devez disposer des autorisations appropriées pour accéder au serveur.  
   
@@ -53,20 +53,20 @@ Le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documenta
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>Pour vérifier ou modifier la connexion à la base de données  
   
-1.  Sur les fenêtres **Démarrer** menu, pointez sur **tous les programmes**, **Microsoft SQL Server 2005**, pointez sur **outils de Configuration**, puis cliquez sur **Gestionnaire de Configuration SQL Server**.  
+1.  Sur le Windows **Démarrer** menu, pointez sur **tous les programmes**, **Microsoft SQL Server 2005**, pointez sur **outils de Configuration**, puis cliquez sur **Gestionnaire de Configuration SQL Server**.  
   
 2.  Dans le volet gauche de la **Gestionnaire de Configuration SQL Server**, cliquez sur **SQL Server 2005 Services**.  
   
 3.  Dans le volet droit, cliquez sur **SQL Server (SQLEXPRESS)**, puis cliquez sur **propriétés**.  
   
-4.  Cliquez sur le **session** onglet et vérifiez la façon dont vous tentez d’ouvrir une session sur le serveur.  
+4.  Cliquez sur le **ouverture de session** onglet et vérifiez la façon dont vous tentez d’ouvrir une session sur le serveur.  
   
      Dans la plupart des cas, **système Local** fonctionne.  
   
      Si vous apportez une modification, cliquez sur **redémarrer** pour redémarrer le service.  
   
 ### <a name="protocols"></a>Protocoles  
- Parfois, les protocoles ne peuvent pas être définis correctement pour que votre application puisse accéder à la base de données. Par exemple, le **canaux nommés** protocole, ce qui est nécessaire pour les procédures pas à pas dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], n’est pas activé par défaut.  
+ Parfois, les protocoles ne peuvent pas être définis correctement pour que votre application puisse accéder à la base de données. Par exemple, le **canaux nommés** protocole, ce qui est requis pour les procédures pas à pas dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], n’est pas activé par défaut.  
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>Pour activer le protocole Canaux nommés  
   

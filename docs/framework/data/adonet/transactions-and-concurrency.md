@@ -2,12 +2,12 @@
 title: Transactions et accès simultané
 ms.date: 03/30/2017
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-ms.openlocfilehash: 9ea136a34c478f3619c81ad3cbbae0765fb99374
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd47c5e0e2b2086e5fd0482bf4319ebab5674a54
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365265"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386683"
 ---
 # <a name="transactions-and-concurrency"></a>Transactions et accès simultané
 Une transaction est composée d’une seule commande ou d’un groupe de commandes qui s’exécutent sous forme de package. Les transactions vous permettent de combiner plusieurs opérations en une seule unité de travail. Si une panne se produit pendant la transaction, toutes les mises à jour sont ramenées dans l'état qui était le leur avant le début de la transaction.  
@@ -19,7 +19,7 @@ Une transaction est composée d’une seule commande ou d’un groupe de command
   
  Si une transaction implique plusieurs tables dans la même base de données ou le même serveur, des transactions explicites dans des procédures stockées fonctionnent souvent mieux. Vous pouvez créer des transactions dans des procédures stockées SQL Server à l'aide des instructions Transact-SQL `BEGIN TRANSACTION`, `COMMIT TRANSACTION` et `ROLLBACK TRANSACTION`. Pour plus d'informations, voir la documentation en ligne de SQL Server.  
   
- Les transactions impliquant différents gestionnaires de ressources, comme une transaction entre SQL Server et Oracle, requièrent une transaction distribuée.  
+ Les transactions impliquant différents gestionnaires de ressources, tel qu’une transaction entre SQL Server et Oracle, requièrent une transaction distribuée.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Transactions locales](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -29,7 +29,7 @@ Une transaction est composée d’une seule commande ou d’un groupe de command
  Décrit comment effectuer des transactions distribuées dans ADO.NET.  
   
  [Intégration de System.Transactions à SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- Décrit <xref:System.Transactions> intégration avec SQL Server pour travailler avec des transactions distribuées.  
+ Décrit <xref:System.Transactions> intégration avec SQL Server pour travailler avec les transactions distribuées.  
   
  [Accès concurrentiel optimiste](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Décrit les accès concurrentiels optimiste et pessimiste et la manière de tester les violations d'accès concurrentiel.  
@@ -40,4 +40,4 @@ Une transaction est composée d’une seule commande ou d’un groupe de command
  [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

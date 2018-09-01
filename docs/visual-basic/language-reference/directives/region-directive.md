@@ -1,5 +1,5 @@
 ---
-title: '#Directive de région'
+title: '#Directive de région (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Region
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: d25871140ef0674c013fc70d1306b2b4d0858556
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588433"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385370"
 ---
 # <a name="region-directive"></a>#Region, directive
 Réduit et masque des sections de code dans des fichiers Visual Basic.  
@@ -35,7 +35,7 @@ Réduit et masque des sections de code dans des fichiers Visual Basic.
 |`#End Region`|Met fin au bloc `#Region`.|  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la directive `#Region` pour spécifier un bloc de code que vous pouvez développer ou réduire dans le mode Plan de l'éditeur de code Visual Studio. Vous pouvez placer, ou *imbriquer*, régions dans d’autres régions pour grouper des régions semblables.  
+ Utilisez la directive `#Region` pour spécifier un bloc de code que vous pouvez développer ou réduire dans le mode Plan de l'éditeur de code Visual Studio. Vous pouvez placer, ou *imbriquer*, régions dans d’autres régions pour grouper des régions semblables ensemble.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise la directive `#Region`.  

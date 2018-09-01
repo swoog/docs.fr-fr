@@ -2,11 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: 257db62fcdaba454f528c2eecedfef735291f4af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 499311f4db9d36f9f95d20c6ef0441ff42f0029b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384651"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] est un composant de la version 3.5 du [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] qui fournit une infrastructure runtime pour gérer les données relationnelles comme des objets.  
@@ -18,7 +19,7 @@ ms.lasthandoff: 05/04/2018
   
  Les développeurs qui utilisent Visual Studio généralement utilisent le [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)], qui fournit une interface utilisateur pour l’implémentation de nombreuses fonctionnalités de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- La documentation incluse avec cette version de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] décrit les blocs de construction de base, les processus et les techniques dont vous avez besoin pour générer des applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Vous pouvez également rechercher Microsoft Docs des problèmes spécifiques, et vous pouvez participer à la [Forum LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), où vous pourrez aborder des sujets plus complexes avec des experts. Enfin, le [LINQ to SQL : Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205) livre blanc détails [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologie, terminée avec des exemples de code Visual Basic et c#.  
+ La documentation incluse avec cette version de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] décrit les blocs de construction de base, les processus et les techniques dont vous avez besoin pour générer des applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Vous pouvez également rechercher Microsoft Docs des problèmes spécifiques, et vous pouvez participer à la [Forum LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), où vous pourrez aborder des sujets plus complexes avec des experts. Enfin, le [LINQ to SQL : Language-Integrated Query pour les données relationnelles](https://go.microsoft.com/fwlink/?LinkId=93205) détails du livre blanc [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologie, obtenir des exemples de code Visual Basic et c#.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en main](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
@@ -34,20 +35,20 @@ ms.lasthandoff: 05/04/2018
  Fournit des liens vers des exemples Visual Basic et c#.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  Fournit une vue d'ensemble des technologies [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
   
  [LINQ](../../../../../visual-basic/programming-guide/language-features/linq/index.md)  
  Décrit [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] technologies pour les utilisateurs de Visual Basic.  
   
- [LINQ to ADO.NET](http://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
+ [LINQ to ADO.NET](https://msdn.microsoft.com/library/be3297b9-1b54-4d4c-82a8-add0d79c2006)  
  Fournit des liens vers le portail d'[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)].  
   
- [Procédures pas à pas LINQ to SQL](http://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
+ [Procédures pas à pas LINQ to SQL](https://msdn.microsoft.com/library/308e66ac-f704-4e00-9b4e-7af0045a2374)  
  Répertorie les procédures pas à pas disponibles pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Téléchargement d’exemples de base de données](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  
  Explique comment télécharger les exemples de base de données utilisés dans la documentation.  
   
- [Vue d’ensemble de la technologie LinqDataSource](http://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
+ [Vue d’ensemble de la technologie LinqDataSource](https://msdn.microsoft.com/library/104cfc3f-7385-47d3-8a51-830dfa791136)  
  Décrit comment le contrôle <xref:System.Web.UI.WebControls.LinqDataSource> expose [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] aux développeurs de sites Web via l'architecture de contrôle de source de données d'[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)].

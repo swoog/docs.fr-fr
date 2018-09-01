@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 04cedc0df60ef95acb79b651ddcbcbb34ae5e920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07a4de944e36b0be1a6196d08df33c4f3ab24bcc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539664"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387036"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Comment : développer un contrôle Windows Forms simple
 Cette section vous guide à travers les étapes clés de création d’un contrôle Windows Forms personnalisé. Le contrôle simple développé dans cette procédure pas à pas permet l’alignement de ses <xref:System.Windows.Forms.Control.Text%2A> propriété à modifier. Il ne permet pas de déclencher ni de gérer des événements.  
@@ -31,22 +31,22 @@ Cette section vous guide à travers les étapes clés de création d’un contr�
     ```  
   
     ```csharp  
-    public class FirstControl:Control{}  
+    public class FirstControl:Control {}  
     ```  
   
-2.  Définissez des propriétés. (Vous ne doivent pas définir les propriétés, car un contrôle hérite de nombreuses propriétés de la <xref:System.Windows.Forms.Control> classe, mais la plupart des contrôles personnalisés définissent généralement des propriétés supplémentaires.) Le fragment de code suivant définit une propriété nommée `TextAlignment` qui `FirstControl` utilise pour mettre en forme l’affichage de la <xref:System.Windows.Forms.Control.Text%2A> héritée de la propriété <xref:System.Windows.Forms.Control>. Pour plus d’informations sur la définition des propriétés, consultez [Vue d’ensemble des propriétés](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
+2.  Définissez des propriétés. (Vous n'êtes pas obligé définir les propriétés, car un contrôle hérite de nombreuses propriétés à partir de la <xref:System.Windows.Forms.Control> classe, mais la plupart des contrôles personnalisés définissent généralement des propriétés supplémentaires.) Le fragment de code suivant définit une propriété nommée `TextAlignment` qui `FirstControl` utilise pour mettre en forme l’affichage de la <xref:System.Windows.Forms.Control.Text%2A> héritée de la propriété <xref:System.Windows.Forms.Control>. Pour plus d’informations sur la définition des propriétés, consultez [Vue d’ensemble des propriétés](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Lorsque vous définissez une propriété qui modifie l’affichage visuel du contrôle, vous devez appeler la <xref:System.Windows.Forms.Control.Invalidate%2A> méthode pour redessiner le contrôle. <xref:System.Windows.Forms.Control.Invalidate%2A> est défini dans la classe de base <xref:System.Windows.Forms.Control>.  
+     Lorsque vous définissez une propriété qui modifie l’affichage visuel du contrôle, vous devez appeler la <xref:System.Windows.Forms.Control.Invalidate%2A> méthode doit redessiner le contrôle. <xref:System.Windows.Forms.Control.Invalidate%2A> est défini dans la classe de base <xref:System.Windows.Forms.Control>.  
   
-3.  Substituez la méthode protégée <xref:System.Windows.Forms.Control.OnPaint%2A> héritée de la méthode <xref:System.Windows.Forms.Control> pour fournir la logique de rendu à votre contrôle. Si vous ne substituez pas <xref:System.Windows.Forms.Control.OnPaint%2A>, votre contrôle ne sera pas en mesure de se dessiner. Dans le fragment de code suivant, le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode affiche le <xref:System.Windows.Forms.Control.Text%2A> héritée de la propriété <xref:System.Windows.Forms.Control> avec l’alignement spécifié par le `alignmentValue` champ.  
+3.  Remplacer l’élément protégé <xref:System.Windows.Forms.Control.OnPaint%2A> héritée de la méthode <xref:System.Windows.Forms.Control> pour fournir la logique de rendu à votre contrôle. Si vous ne substituez pas <xref:System.Windows.Forms.Control.OnPaint%2A>, votre contrôle ne sera pas en mesure de se dessiner lui-même. Dans le fragment de code suivant, le <xref:System.Windows.Forms.Control.OnPaint%2A> méthode affiche le <xref:System.Windows.Forms.Control.Text%2A> héritée de la propriété <xref:System.Windows.Forms.Control> avec l’alignement spécifié par le `alignmentValue` champ.  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Fournissez des attributs à votre contrôle. Les attributs permettent à un concepteur visuel d’afficher correctement votre contrôle ainsi que ses propriétés et événements au moment du design. Le fragment de code suivant applique des attributs à la propriété `TextAlignment`. Dans un concepteur, tels que Visual Studio, le <xref:System.ComponentModel.CategoryAttribute.Category%2A> attribut (indiqué dans le fragment de code), la propriété à afficher sous une catégorie logique. Le <xref:System.ComponentModel.DescriptionAttribute.Description%2A> attribut entraîne une chaîne descriptive à afficher en bas de la **propriétés** fenêtre lorsque le `TextAlignment` propriété est sélectionnée. Pour plus d’informations sur les attributs, consultez [Attributs en mode design pour les composants](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+4.  Fournissez des attributs à votre contrôle. Les attributs permettent à un concepteur visuel d’afficher correctement votre contrôle ainsi que ses propriétés et événements au moment du design. Le fragment de code suivant applique des attributs à la propriété `TextAlignment`. Dans un concepteur tel que Visual Studio, le <xref:System.ComponentModel.CategoryAttribute.Category%2A> attribut (indiqué dans le fragment de code), la propriété à afficher sous une catégorie logique. Le <xref:System.ComponentModel.DescriptionAttribute.Description%2A> attribut entraîne une chaîne descriptive à afficher en bas de la **propriétés** fenêtre lorsque le `TextAlignment` propriété est sélectionnée. Pour plus d’informations sur les attributs, consultez [Attributs en mode design pour les composants](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
@@ -69,7 +69,7 @@ Cette section vous guide à travers les étapes clés de création d’un contr�
   
          L’option du compilateur `/t:library` indique au compilateur que l’assembly créé est une bibliothèque (et non un exécutable). L’option `/out` spécifie le chemin d’accès et le nom de l’assembly. L’option `/r` fournit le nom des assemblys référencés par votre code. Dans cet exemple, vous créez un assembly privé que seules vos applications peuvent utiliser. Par conséquent, vous devez l’enregistrer dans le répertoire de votre application. Pour plus d’informations sur l’empaquetage et le déploiement d’un contrôle à des fins de distribution, consultez [Déploiement](../../../../docs/framework/deployment/index.md).  
   
- L’exemple suivant présente le code pour `FirstControl`. Le contrôle est inséré dans l’espace de noms `CustomWinControls`. Un espace de noms fournit un regroupement logique des types connexes. Vous pouvez créer votre contrôle dans un espace de noms nouveau ou existant. En C#, la déclaration `using` (en Visual Basic, `Imports`) autorise l’accès aux types à partir d’un espace de noms sans le nom qualifié complet du type. Dans l’exemple suivant, la `using` déclaration permet au code d’accéder à la classe <xref:System.Windows.Forms.Control> de <xref:System.Windows.Forms?displayProperty=nameWithType> simplement <xref:System.Windows.Forms.Control> au lieu de devoir utiliser le nom qualifié complet <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
+ L’exemple suivant présente le code pour `FirstControl`. Le contrôle est inséré dans l’espace de noms `CustomWinControls`. Un espace de noms fournit un regroupement logique des types connexes. Vous pouvez créer votre contrôle dans un espace de noms nouveau ou existant. En C#, la déclaration `using` (en Visual Basic, `Imports`) autorise l’accès aux types à partir d’un espace de noms sans le nom qualifié complet du type. Dans l’exemple suivant, le `using` déclaration permet au code d’accéder à la classe <xref:System.Windows.Forms.Control> de <xref:System.Windows.Forms?displayProperty=nameWithType> simplement <xref:System.Windows.Forms.Control> au lieu de devoir utiliser le nom qualifié complet <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
   
  [!code-csharp[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#1)]
  [!code-vb[System.Windows.Forms.FirstControl#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#1)]  

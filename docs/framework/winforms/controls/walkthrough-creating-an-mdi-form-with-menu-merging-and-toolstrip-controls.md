@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: d5fa1ebcc044a18e21e57aa2f66bd8486369fe42
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a84b51679969f38955dd6a72ffe94ec8ca70b3df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255691"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393042"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Procédure pas à pas : création d'un formulaire MDI avec la fusion de menus et des contrôles ToolStrip
 L'espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> prend en charge plusieurs applications MDI (Multiple Document Interface) et le contrôle <xref:System.Windows.Forms.MenuStrip> prend en charge la fusion de menus. Les formulaires MDI peuvent également contenir des contrôles <xref:System.Windows.Forms.ToolStrip>.  
@@ -107,7 +107,7 @@ L'espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> prend 
   
 1.  Ajoutez un nouveau formulaire nommé `ChildForm` au projet.  
   
-     Pour plus d’informations, consultez [Comment : ajouter des formulaires Windows à un projet](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+     Pour plus d’informations, consultez [Comment : ajouter des formulaires Windows à un projet](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   
 2.  À partir de la **boîte à outils**, faites glisser un <xref:System.Windows.Forms.MenuStrip> contrôle vers le formulaire enfant.  
   
@@ -115,7 +115,7 @@ L'espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> prend 
   
 4.  Dans le **éditeur de collections Items** boîte de dialogue zone, ajoutez une nouvelle <xref:System.Windows.Forms.ToolStripMenuItem> nommé **ChildMenuItem** au menu enfant.  
   
-     Pour plus d’informations, consultez [éditeur de collections d’éléments ToolStrip](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
+     Pour plus d’informations, consultez [éditeur de collections d’éléments ToolStrip](https://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
   
 ## <a name="testing-the-form"></a>Test du formulaire  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: 048add340a81856cd30482c52c93c76bbf6181f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529553"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386076"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Comment : ajouter un MenuStrip à une fenêtre parente MDI (Windows Forms)
 Dans certaines applications, le type d'une fenêtre enfant d'interface multidocument (MDI) peut être différent de celui de la fenêtre parente MDI. Par exemple, le parent MDI peut être une feuille de calcul et l'enfant MDI un graphique. Dans ce cas, vous souhaitez mettre à jour le contenu du menu du parent MDI avec le contenu du menu de l'enfant MDI à mesure que des fenêtres enfants MDI de types différents sont activées.  
   
  La procédure suivante utilise les propriétés <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> et <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> pour ajouter le menu MDI enfant au menu MDI parent. La fermeture de la fenêtre MDI enfant supprime le menu ajouté du MDI parent.  
   
- Consultez également [Applications d’Interface multidocument (MDI)](http://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\)).  
+ Consultez également [Applications d’Interface multidocument (MDI)](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\)).  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Pour ajouter un élément à un menu MDI parent  
   

@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: e49404626f6de1bfe260f0abb692d68ad779a7ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391848"
 ---
 # <a name="service-transaction-behavior"></a>Service Transaction Behavior
-Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais qui est étendu pour conserver un journal des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calcul du serveur. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d’une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  
+Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais est étendu pour maintenir un journal de serveur des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calculatrice. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d’une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -99,7 +100,7 @@ client.Close();
   
     -   La propriété `ReleaseServiceInstanceOnTransactionComplete` spécifie si l'instance de service sous-jacente est recyclée à la fin de l'exécution d'une transaction. Si elle a la valeur `false`, le service maintient la même instance de service à travers les demandes de l'opération. Cela est nécessaire pour maintenir le total évolutif. Si elle a la valeur `true`, une nouvelle instance est générée après chaque action complétée.  
   
-    -   La propriété `TransactionAutoCompleteOnSessionClose` spécifie si les transactions en attente sont exécutées lorsque la session se ferme. En lui affectant `false`, les opérations individuelles doivent affecter la `OperationBehaviorAttribute``TransactionAutoComplete` propriété `true` ou requérir explicitement un appel à la `SetTransactionComplete` méthode pour exécuter des transactions. Cet exemple illustre les deux approches.  
+    -   La propriété `TransactionAutoCompleteOnSessionClose` spécifie si les transactions en attente sont exécutées lorsque la session se ferme. En lui affectant `false`, les opérations individuelles sont nécessaires pour définir le `OperationBehaviorAttribute``TransactionAutoComplete` propriété `true` ou requérir explicitement un appel à la `SetTransactionComplete` méthode pour effectuer des transactions. Cet exemple illustre les deux approches.  
   
 -   Sur le `ServiceContractAttribute` :  
   
@@ -209,9 +210,9 @@ Creating new service instance...
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Si vous exécutez l’exemple sur plusieurs ordinateurs, vous devez configurer le Microsoft Distributed Transaction Coordinator (MSDTC) pour activer le flux de transaction réseau et utiliser l’outil WsatConfig.exe pour activer Windows Communication Foundation (WCF) transactions réseau prise en charge.  
+ Si vous exécutez l’exemple sur plusieurs ordinateurs, vous devez configurer le Microsoft Distributed Transaction Coordinator (MSDTC) pour activer le flux de transaction réseau et utiliser l’outil WsatConfig.exe pour activer le réseau de transactions Windows Communication Foundation (WCF) prise en charge.  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>Pour configurer le Microsoft Distributed Transaction Coordinator (MSDTC) de manière à prendre en charge l’exécution de l’exemple sur plusieurs ordinateurs  
   
@@ -219,7 +220,7 @@ Creating new service instance...
   
     1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
-    2.  Avec le bouton droit **poste** et sélectionnez **propriétés**.  
+    2.  Avec le bouton droit **poste de travail** et sélectionnez **propriétés**.  
   
     3.  Sur le **MSDTC** , cliquez sur **Configuration de la sécurité**.  
   
@@ -237,19 +238,19 @@ Creating new service instance...
   
     3.  Naviguez jusqu’au dossier C:\WINDOWS\System32.  
   
-    4.  Sélectionnez Msdtc.exe et cliquez sur **ouvrir**.  
+    4.  Sélectionnez Msdtc.exe et cliquez sur **Open**.  
   
-    5.  Cliquez sur **OK** pour fermer la **ajouter un programme** boîte de dialogue, puis cliquez sur **OK** à nouveau pour fermer l’applet de pare-feu Windows.  
+    5.  Cliquez sur **OK** pour fermer la **ajouter un programme** boîte de dialogue, puis cliquez sur **OK** à nouveau pour fermer l’applet de pare-feu de Windows.  
   
 3.  Sur l’ordinateur client, configurez MSDTC pour autoriser les transactions réseau sortantes :  
   
     1.  À partir de la **Démarrer** menu, accédez à **le panneau de configuration**, puis **outils d’administration**, puis **Services de composants**.  
   
-    2.  Avec le bouton droit **poste** et sélectionnez **propriétés**.  
+    2.  Avec le bouton droit **poste de travail** et sélectionnez **propriétés**.  
   
     3.  Sur le **MSDTC** , cliquez sur **Configuration de la sécurité**.  
   
-    4.  Vérifiez **les accès DTC réseau** et **autoriser les transactions sortantes**.  
+    4.  Vérifiez **les accès DTC réseau** et **autoriser le trafic sortant**.  
   
     5.  Cliquez sur **Oui** à redémarrer le service MS DTC, puis cliquez sur **OK**.  
   
@@ -260,7 +261,7 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   

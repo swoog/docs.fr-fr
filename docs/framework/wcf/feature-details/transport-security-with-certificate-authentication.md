@@ -6,20 +6,21 @@ dev_langs:
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: a4f29d9ac34437431a95a247ef1e7aa5c9084c36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2da7a304af613920449e925e3bb43b350f556e6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394185"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>Sécurité de transport avec l'authentification par certificat
-Cette rubrique décrit l'utilisation des certificats X.509 pour l'authentification du serveur et du client lorsque vous utilisez la sécurité de transport. Pour plus d’informations sur la norme X.509 certificats Voir [des certificats de clé publique X.509](http://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Certificats doivent être émis par une autorité de certification, qui est souvent un tiers émetteur de certificats. Dans un domaine Windows Server, les services de certificats Active Directory peuvent être utilisés pour émettre des certificats pour les ordinateurs clients figurant sur le domaine. Pour plus d’informations, consultez [Services de certificats Windows 2008 R2](http://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Dans ce scénario, le service est hébergé sous Internet Information Services (IIS) qui est configuré avec SSL (Secure Sockets Layer). Le service est configuré avec un certificat SSL (X.509) pour permettre aux clients de vérifier l'identité du serveur. Le client est également configuré avec un certificat X.509 qui permet au service de vérifier l'identité du client. Le certificat du serveur doit être approuvé par le client et le certificat du client doit être approuvé par le serveur. Le mécanisme réel de vérification par le service et le client de leurs identités réciproques n'est pas traité dans cette rubrique. Pour plus d’informations, consultez [Signature numérique sur Wikipédia](http://go.microsoft.com/fwlink/?LinkId=253157).  
+Cette rubrique décrit l'utilisation des certificats X.509 pour l'authentification du serveur et du client lorsque vous utilisez la sécurité de transport. Pour plus d’informations sur les certificats X.509, consultez [Certificats de clé publique X.509](https://msdn.microsoft.com/library/bb540819\(VS.85\).aspx). Certificats doivent être émis par une autorité de certification, qui est souvent un tiers émetteur de certificats. Dans un domaine Windows Server, les services de certificats Active Directory peuvent être utilisés pour émettre des certificats pour les ordinateurs clients figurant sur le domaine. Pour plus d’informations, consultez [Services de certificats Windows 2008 R2](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409). Dans ce scénario, le service est hébergé sous Internet Information Services (IIS) qui est configuré avec SSL (Secure Sockets Layer). Le service est configuré avec un certificat SSL (X.509) pour permettre aux clients de vérifier l'identité du serveur. Le client est également configuré avec un certificat X.509 qui permet au service de vérifier l'identité du client. Le certificat du serveur doit être approuvé par le client et le certificat du client doit être approuvé par le serveur. Le mécanisme réel de vérification par le service et le client de leurs identités réciproques n'est pas traité dans cette rubrique. Pour plus d’informations, consultez [Signature numérique sur Wikipedia](https://go.microsoft.com/fwlink/?LinkId=253157).  
   
  Ce scénario implémente un modèle de message de demande/réponse comme illustré dans le schéma suivant.  
   
  ![Sécuriser le transfert à l’aide de certificats](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- Pour plus d’informations sur l’utilisation d’un certificat avec un service, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) et [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). Le tableau suivant décrit les différentes caractéristiques du scénario.  
+ Pour plus d’informations sur l’utilisation d’un certificat avec un service, consultez [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md) et [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md). Le tableau suivant décrit les différentes caractéristiques du scénario.  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -140,4 +141,4 @@ cc.Close();
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

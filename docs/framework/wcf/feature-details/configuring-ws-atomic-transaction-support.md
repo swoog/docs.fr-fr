@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: a89caad51f098e17bca1a5ba3df600a6dbf1dd9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d0e0a1bea32fe3be896b80e77de34e04cd9f2f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495156"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396331"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>Configuration de la prise en charge WS-Atomic Transaction
 Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransaction (WS-AT) à l'aide de l'utilitaire de configuration WS-AT.  
@@ -21,9 +21,9 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
   
  La fenêtre de ligne de commande est accessible à l'emplacement d'installation du Kit de développement logiciel (SDK) Windows « %WINDIR%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation ».  
   
- Pour plus d’informations sur l’outil de ligne de commande, consultez [l’utilitaire de Configuration WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
+ Pour plus d’informations sur l’outil de ligne de commande, consultez [(wsatConfig.exe) de l’utilitaire de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md).  
   
- Si vous exécutez [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], vous pouvez accéder dans le composant logiciel enfichable MMC en naviguant jusqu’au **contrôle de panneau de configuration/Administrative Tools/Services de composants**, avec le bouton droit **poste de travail**, et en sélectionnant **propriétés**. Il s’agit du même emplacement que celui où vous pouvez configurer Microsoft Distributed Transaction Coordinator (MSDTC). Les options disponibles pour la configuration sont groupées sous la **WS-AT** onglet. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], le composant logiciel enfichable MMC sont accessibles en cliquant sur le **Démarrer** bouton et en entrant `dcomcnfg.exe` dans les **recherche** boîte. Lorsque la console MMC est ouverte, accédez à la **poste de travail\distributed Transaction Coordinator\Local DTC** nœud, cliquez droit et sélectionnez **propriétés**. Les options disponibles pour la configuration sont groupées sous la **WS-AT** onglet.  
+ Si vous exécutez [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], vous pouvez accéder dans le composant logiciel enfichable MMC en naviguant jusqu’au **contrôle panneau/Administrative Tools/Services de composants**, droit **poste de travail**, et en sélectionnant **propriétés**. Il s’agit du même emplacement que celui où vous pouvez configurer Microsoft Distributed Transaction Coordinator (MSDTC). Les options disponibles pour la configuration sont regroupées sous le **WS-AT** onglet. Si vous exécutez Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], le composant logiciel enfichable MMC et être accessible en cliquant sur le **Démarrer** bouton et en entrant `dcomcnfg.exe` dans le **recherche** boîte. Lorsque la console MMC est ouverte, accédez à la **mes travail\distributed Transaction Coordinator\Local DTC** nœud, cliquez droit puis sélectionnez **propriétés**. Les options disponibles pour la configuration sont regroupées sous le **WS-AT** onglet.  
   
  Pour plus d’informations sur le composant logiciel enfichable, consultez le [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md).  
   
@@ -52,9 +52,9 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
  L'exemple suivant illustre les étapes requises pour établir la confiance entre deux ordinateurs, A et B.  
   
 ### <a name="creating-and-exporting-certificates"></a>Création et exportation de certificats  
- Cette procédure requiert le composant logiciel enfichable MMC Certificats. Ce composant logiciel enfichable est accessible en ouvrant le menu Démarrer/Exécuter, en tapant « mmc » dans la zone d'entrée et en appuyant sur OK. Puis, dans le **Console1** fenêtre, accédez à **la fichier/ajouter-supprimer** -composant logiciel enfichable, cliquez sur Ajouter et choisissez **certificats** à partir de la **autonome disponible Composants logiciels enfichables** liste. Enfin, sélectionnez **compte d’ordinateur** à gérer, puis cliquez sur **OK**. Le **certificats** nœud s’affiche dans la console du composant logiciel enfichable.  
+ Cette procédure requiert le composant logiciel enfichable MMC Certificats. Ce composant logiciel enfichable est accessible en ouvrant le menu Démarrer/Exécuter, en tapant « mmc » dans la zone d'entrée et en appuyant sur OK. Ensuite, dans le **Console1** fenêtre, accédez à **la fichier/ajouter ou supprimer** -composant logiciel enfichable, cliquez sur Ajouter et choisissez **certificats** à partir de la **autonome disponible Composants logiciels enfichables** liste. Enfin, sélectionnez **compte d’ordinateur** à gérer, puis cliquez sur **OK**. Le **certificats** nœud apparaît dans la console du composant logiciel enfichable.  
   
- Vous devez déjà posséder les certificats requis pour établir la confiance. Pour savoir comment créer et installer de nouveaux certificats avant les étapes suivantes, consultez [Comment : créer et installer des certificats Client temporaires dans WCF pendant le développement](http://go.microsoft.com/fwlink/?LinkId=158925).  
+ Vous devez déjà posséder les certificats requis pour établir la confiance. Pour savoir comment créer et installer de nouveaux certificats avant les étapes suivantes, consultez [Comment : créer et installer des certificats Client temporaires dans WCF pendant le développement](https://go.microsoft.com/fwlink/?LinkId=158925).  
   
 1.  Sur l'ordinateur A, à l'aide du composant logiciel enfichable MMC Certificats, importez le certificat existant (certA) dans les magasins LocalMachine\MY (Nœud personnel) et LocalMachine\ROOT (nœud de l'Autorité de certification racine de confiance). Pour importer un certificat à un nœud spécifique, cliquez sur le nœud et choisissez **toutes les tâches/importer**.  
   
@@ -89,12 +89,12 @@ Cette rubrique décrit comment configurer la prise en charge WS-AtomicTransactio
 >  Si le nom de l'ordinateur change, par exemple lorsqu'un ordinateur de groupe de travail rejoint un domaine, vous devez rééditer les certificats ou configurer manuellement les suffixes DNS.  
   
 ## <a name="security"></a>Sécurité  
- Étant donné que certains des paramètres liés à MSDTC et WS-AT sont stockés dans le Registre, respectivement aux emplacements HKLM\Software\Microsoft\MSDTC et HKLM\Software\Microsoft\WSAT, assurez-vous que ces clés de Registre sont sécurisées afin que seuls les administrateurs puissent y écrire. Dans l’outil Éditeur du Registre, cliquez sur la clé que vous souhaitez sécuriser et sélectionnez **autorisation** pour définir le contrôle d’accès appropriés. Il est essentiel pour la sécurité et l'intégrité du système que les clés importantes soient en lecture seule pour les utilisateurs à faible privilège.  
+ Étant donné que certains des paramètres liés à MSDTC et WS-AT sont stockés dans le Registre, respectivement aux emplacements HKLM\Software\Microsoft\MSDTC et HKLM\Software\Microsoft\WSAT, assurez-vous que ces clés de Registre sont sécurisées afin que seuls les administrateurs puissent y écrire. Dans l’outil Éditeur du Registre, cliquez sur la clé que vous souhaitez sécuriser et sélectionnez **autorisation** pour définir le contrôle d’accès approprié. Il est essentiel pour la sécurité et l'intégrité du système que les clés importantes soient en lecture seule pour les utilisateurs à faible privilège.  
   
  Lors du déploiement de MSDTC, l'administrateur doit s'assurer que tout échange de données MSDTC est sécurisé. Dans un déploiement de groupe de travail, isolez l'infrastructure transactionnelle des utilisateurs malveillants ; dans un déploiement de cluster, sécurisez le Registre de cluster.  
   
 ## <a name="tracing"></a>Traçage  
- Le service de protocole WS-AT prend en charge intégrée, transaction suivi spécifique, qui peut être activé et géré à l’aide de la [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) outil.  Les suivis peuvent inclure des données qui indiquent l’heure d’une inscription pour une transaction spécifique, l’heure à laquelle une transaction atteint son état terminal, le résultat que chaque inscription de transaction a reçu. Toutes les traces peuvent être affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) outil.  
+ Le prend en charge du service de protocole WS-AT intégré, transaction suivi spécifique qui peut être activé et géré à l’aide de la [le composant logiciel enfichable MMC de Configuration WS-AtomicTransaction](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) outil.  Les suivis peuvent inclure des données qui indiquent l’heure d’une inscription pour une transaction spécifique, l’heure à laquelle une transaction atteint son état terminal, le résultat que chaque inscription de transaction a reçu. Toutes les traces peuvent être affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) outil.  
   
  Le service de protocole WS-AT prend en charge également le suivi ServiceModel intégré sur l'ensemble de la session de suivi ETW. Cela procure des suivis plus détaillés et spécifiques à la communication, en plus des suivis de transaction existants.  Pour activer ces suivis supplémentaires, procédez comme suit  
   

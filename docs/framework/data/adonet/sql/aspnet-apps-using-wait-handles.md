@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
-ms.openlocfilehash: 867b225336da2188b8d1709c09d480317a6d02e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356461"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386280"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Applications ASP.NET utilisant les handles d'attente
 Les modèles de rappel et d'interrogation pour le traitement d'opérations asynchrones sont utiles lorsque votre application ne traite qu'une opération asynchrone à la fois. Les modèles d'attente offrent un traitement plus souple des multiples opérations asynchrones. Il existe deux modèles d'attente nommés pour les méthodes <xref:System.Threading.WaitHandle> utilisées pour leur implémentation : le modèle d'attente (un) et le modèle d'attente (tout).  
@@ -581,4 +581,4 @@ void Button1_Click(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérations asynchrones](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

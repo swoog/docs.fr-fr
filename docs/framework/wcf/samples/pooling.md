@@ -2,22 +2,22 @@
 title: Pooling
 ms.date: 03/30/2017
 ms.assetid: 688dfb30-b79a-4cad-a687-8302f8a9ad6a
-ms.openlocfilehash: 6554ec9c5eaefaf8c9e39d2a8d92982716cc18c5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ee57763674d194f71c85b1318dbb116dc829bd55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809818"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393305"
 ---
 # <a name="pooling"></a>Pooling
-Cet exemple montre comment étendre Windows Communication Foundation (WCF) pour prendre en charge le regroupement d’objets. L'exemple montre comment créer un attribut syntaxiquement et sémantiquement similaire aux fonctionnalités de l'attribut `ObjectPoolingAttribute` de Enterprise Services. Le mise en pool d’objets permet une amélioration significative de la performance d'une application. Toutefois, il peut avoir l’effet inverse s’il n’est pas utilisé de manière appropriée. Le mise en pool d’objets évite d'avoir à recréer les objets fréquemment utilisés qui requièrent une initialisation complète. Toutefois, si un appel à une méthode sur un objet du pool met beaucoup de temps à s'exécuter, le mise en pool d’objets met les demandes supplémentaires en file d'attente dès que la taille de pool maximale est atteinte. Il peut donc ne pas traiter certaines demandes de création d'objet en levant une exception de délai d'attente.  
+Cet exemple montre comment étendre Windows Communication Foundation (WCF) pour prendre en charge le pool d’objets. L'exemple montre comment créer un attribut syntaxiquement et sémantiquement similaire aux fonctionnalités de l'attribut `ObjectPoolingAttribute` de Enterprise Services. Le mise en pool d’objets permet une amélioration significative de la performance d'une application. Toutefois, il peut avoir l’effet inverse s’il n’est pas utilisé de manière appropriée. Le mise en pool d’objets évite d'avoir à recréer les objets fréquemment utilisés qui requièrent une initialisation complète. Toutefois, si un appel à une méthode sur un objet du pool met beaucoup de temps à s'exécuter, le mise en pool d’objets met les demandes supplémentaires en file d'attente dès que la taille de pool maximale est atteinte. Il peut donc ne pas traiter certaines demandes de création d'objet en levant une exception de délai d'attente.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- La première étape dans la création d’une extension WCF consiste à déterminer le point d’extensibilité à utiliser.  
+ La première étape de création d’une extension WCF consiste à déterminer le point d’extensibilité à utiliser.  
   
- Dans WCF le terme *répartiteur* fait référence à un composant runtime chargé de convertir des messages entrants en appels de méthode sur le service de l’utilisateur et pour convertir des valeurs de retour de cette méthode à un message sortant. Un service WCF crée un répartiteur pour chaque point de terminaison. Un client WCF doit utiliser un répartiteur si le contrat associé à ce client est un contrat duplex.  
+ Dans WCF le terme *répartiteur* fait référence à un composant runtime chargé de convertir les messages entrants en appels de méthode sur le service de l’utilisateur et pour la conversion des valeurs de retour de cette méthode à un message sortant. Un service WCF crée un répartiteur pour chaque point de terminaison. Un client WCF doit utiliser un répartiteur si le contrat associé à ce client est un contrat duplex.  
   
  Les répartiteurs de canal et de point de terminaison offrent une extensibilité au niveau du contrat et du canal en exposant diverses propriétés qui contrôlent le comportement du répartiteur. La propriété <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.DispatchRuntime%2A> vous permet également d'inspecter, de modifier ou de personnaliser le processus de distribution. Cet exemple se concentre sur la propriété <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> qui pointe sur l'objet qui fournit les instances de la classe de service.  
   
@@ -178,7 +178,7 @@ InvalidOperationException(ResourceHelper.GetString("ExNullThrottle"));
   
  Outre une implémentation <xref:System.ServiceModel.Description.IServiceBehavior>, la classe <xref:System.EnterpriseServices.ObjectPoolingAttribute> a plusieurs membres pour personnaliser le mise en pool d’objets à l'aide des arguments d'attribut. Ces membres incluent <xref:System.EnterpriseServices.ObjectPoolingAttribute.MaxPoolSize%2A>, <xref:System.EnterpriseServices.ObjectPoolingAttribute.MinPoolSize%2A> et <xref:System.EnterpriseServices.ObjectPoolingAttribute.CreationTimeout%2A>, pour faire correspondre le jeu de fonctionnalités de mise en pool d’objets fourni par .NET Enterprise Services.  
   
- L’objet de comportement de regroupement peut maintenant être ajouté à un service WCF en annotant l’implémentation de service avec le personnalisé récemment créé `ObjectPooling` attribut.  
+ L’objet que le comportement de regroupement peut désormais être ajouté à un service WCF en annotant l’implémentation de service avec le personnalisé récemment créé `ObjectPooling` attribut.  
   
 ```  
 [ObjectPooling(MaxPoolSize=1024, MinPoolSize=10, CreationTimeout=30000)]      
@@ -237,11 +237,11 @@ Press <ENTER> to exit.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Si vous utilisez Svcutil.exe pour régénérer la configuration pour cet exemple, assurez-vous de modifier le nom du point de terminaison dans la configuration client afin qu'il corresponde au code client.  
@@ -251,7 +251,7 @@ Press <ENTER> to exit.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Pooling`  
   

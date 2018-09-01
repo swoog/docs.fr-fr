@@ -2,12 +2,12 @@
 title: Activation basée sur la configuration dans les services IIS et WAS
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: aa4a3c682ab1d5d7ca0869fee588934b9ed2bf75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488941"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384793"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Activation basée sur la configuration dans les services IIS et WAS
 Normalement lorsque vous hébergez un service Windows Communication Foundation (WCF) sous Internet Information Services (IIS) ou le Service d’Activation des processus Windows (WAS), vous devez fournir un fichier .svc. Le fichier .svc contient le nom du service et une fabrique hôte de service personnalisée facultative. Ce fichier supplémentaire facilite encore la gestion. Grâce à la fonctionnalité d’activation basée sur la configuration, le fichier .svc et, par conséquent, les surcharges associées ne sont plus indispensables.  
@@ -16,7 +16,7 @@ Normalement lorsque vous hébergez un service Windows Communication Foundation (
  L'activation basée sur la configuration prend les métadonnées qui étaient placées dans le fichier .svc et les met dans le fichier Web.config. Dans le <`serviceHostingEnvironment`> élément est un <`serviceActivations`> élément. Dans le <`serviceActivations`> élément sont un ou plusieurs <`add`> éléments, un pour chaque service hébergé. Le <`add`> élément contient des attributs qui vous permettent de définir l’adresse relative pour le service et le type de service ou une fabrique d’hôte de service. L'exemple de code de configuration suivant montre comment cette section est utilisée.  
   
 > [!NOTE]
->  Chaque <`add`> élément doit spécifier un service ou un attribut factory. Il est possible de spécifier les deux.  
+>  Chaque <`add`> élément doit spécifier un service ou un attribut de fabrique. Il est possible de spécifier les deux.  
   
 ```xml  
 <serviceHostingEnvironment>  
@@ -30,7 +30,7 @@ Normalement lorsque vous hébergez un service Windows Communication Foundation (
   
 > [!NOTE]
 >  -   Lors d'une activation basée sur la configuration, le code inline dans les fichiers .svc n'est pas pris en charge.  
-> -   Le `relativeAddress` attribut doit être défini comme une adresse relative «\<sous-répertoire > / service.svc » ou « ~ /\<sub/service.svc ».  
+> -   Le `relativeAddress` attribut doit être défini à une adresse relative telle que «\<sous-répertoire > / service.svc » ou « ~ /\<sub/service.svc ».  
 > -   Une exception de configuration est levée si vous inscrivez une adresse relative sans extension connue, associée à WCF.  
 > -   L'adresse relative spécifiée est relative à la racine de l'application virtuelle.  
 > -   En raison du modèle hiérarchique de configuration, les adresses relatives enregistrées au niveau de l'ordinateur et du site sont héritées par les applications virtuelles.  
@@ -42,4 +42,4 @@ Normalement lorsque vous hébergez un service Windows Communication Foundation (
  [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)  
  [Vue d’ensemble de l’hébergement de services de workflow](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  
  [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
- [Fonctionnalités d’hébergement de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

@@ -2,15 +2,15 @@
 title: Custom Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805562"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395659"
 ---
 # <a name="custom-demux"></a>Custom Demux
-Cet exemple montre comment les en-têtes de message MSMQ peuvent être mappés à différentes opérations de service afin que les services Windows Communication Foundation (WCF) qui utilisent <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ne sont pas limités à l’utilisation d’une opération de service comme illustré dans le [ Message Queuing à Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) et [Windows Communication Foundation à Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemples.  
+Cet exemple montre comment les en-têtes de message MSMQ peuvent être mappés à différentes opérations de service afin que les services Windows Communication Foundation (WCF) qui utilisent <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ne sont pas limités à l’utilisation d’une opération de service comme illustré dans le [ Message Queuing vers Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) et [Windows Communication Foundation vers Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemples.  
   
  Dans cet exemple, le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
   
@@ -119,7 +119,7 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  Cet exemple requiert l’installation de [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143).  
+>  Cet exemple requiert l’installation de [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=95143).  
   
  Démarrez le service et exécutez le client.  
   
@@ -154,7 +154,7 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Si le service est exécuté en premier, il vérifie que la file d'attente existe. Si la file d'attente n'existe pas, le service en crée une. Vous pouvez exécuter le service en premier pour créer la file d'attente, ou en créer une à l'aide du Gestionnaire de files d'attente MSMQ. Procédez comme suit pour créer une file d'attente dans Windows 2008 :  
   
@@ -162,15 +162,15 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
   
     2.  Développez le **fonctionnalités** onglet.  
   
-    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **nouveau**, **file d’attente privée**.  
+    3.  Avec le bouton droit **files d’attente de messages privées**, puis sélectionnez **New**, **file d’attente privée**.  
   
-    4.  Vérifiez le **transactionnel** boîte.  
+    4.  Vérifier le **transactionnel** boîte.  
   
     5.  Entrez `ServiceModelSamplesTransacted` comme nom de la nouvelle file d’attente.  
   
 3.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -189,10 +189,10 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en file d’attente dans WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Message Queuing](http://go.microsoft.com/fwlink/?LinkId=95143)
+ [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=95143)

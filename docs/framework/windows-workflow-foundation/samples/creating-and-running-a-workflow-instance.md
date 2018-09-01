@@ -2,11 +2,12 @@
 title: Création et exécution d'une instance de workflow
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: 3bfcde3dd635820fa66d639134a43e5e43186c17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393778"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Création et exécution d'une instance de workflow
 Cet exemple montre comment exécuter une instance de workflow. Il indique comment l’exécuter de façon synchrone et de façon asynchrone.  
@@ -24,7 +25,7 @@ Cet exemple montre comment exécuter une instance de workflow. Il indique commen
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`  
   

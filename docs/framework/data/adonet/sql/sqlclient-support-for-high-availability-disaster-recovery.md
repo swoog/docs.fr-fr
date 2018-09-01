@@ -2,19 +2,19 @@
 title: Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 001b99d7a7ec7dd7e483887ceeb0b2563a46da0a
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 258922a1541c4594ce2b4673d4d68c279087aef2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948522"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395853"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Prise en charge de SqlClient pour la haute disponibilité et la récupération d'urgence
 Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) de la haute disponibilité, récupération d'urgence -- groupes de disponibilité AlwaysOn.  Fonctionnalité de groupes de disponibilité AlwaysOn a été ajoutée à SQL Server 2012. Pour plus d’informations sur les groupes de disponibilité AlwaysOn, consultez la documentation en ligne de SQL Server.  
   
- Vous pouvez maintenant spécifier l’écouteur du groupe de disponibilité d’une (haute disponibilité, récupération d’urgence) groupe de disponibilité (AG) ou l’Instance de Cluster de basculement SQL Server 2012 dans la propriété de connexion. Si une application SqlClient est connectée à une base de données AlwaysOn qui bascule, la connexion initiale est interrompue et l'application doit ouvrir une nouvelle connexion pour continuer les tâches après le basculement.  
+ Vous pouvez désormais spécifier l’écouteur de groupe de disponibilité d’une (haute disponibilité et récupération d’urgence) groupe de disponibilité (AG) ou l’Instance de Cluster de basculement SQL Server 2012 dans la propriété de connexion. Si une application SqlClient est connectée à une base de données AlwaysOn qui bascule, la connexion initiale est interrompue et l'application doit ouvrir une nouvelle connexion pour continuer les tâches après le basculement.  
   
- Si vous ne vous connectez pas à un écouteur de groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012, et si plusieurs adresses IP sont associées à un nom d’hôte, SqlClient sera itérer séquentiellement toutes les adresses IP associées entrée DNS. Cela peut prendre du temps si la première adresse IP retournée par le serveur DNS n'est liée à aucune carte d'interface réseau. Lors de la connexion à un écouteur de groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012, SqlClient tente d’établir des connexions à toutes les adresses IP en parallèle et si une tentative de connexion réussit, le pilote ignore toutes les connexions en attente tentatives.  
+ Si vous n’êtes pas connecté à un écouteur de groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012, et si plusieurs adresses IP sont associées à un nom d’hôte, SqlClient sera itérer séquentiellement toutes les adresses IP associées avec l’entrée DNS. Cela peut prendre du temps si la première adresse IP retournée par le serveur DNS n'est liée à aucune carte d'interface réseau. Lors de la connexion à un écouteur de groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012, SqlClient tente d’établir des connexions à toutes les adresses IP en parallèle et si une tentative de connexion réussit, le pilote ignore toute connexion en attente tentatives.  
   
 > [!NOTE]
 >  L'augmentation du délai de connexion et l'implémentation de la logique de nouvelles tentatives de connexion augmentent la probabilité qu'une application se connecte à un groupe de disponibilité. En outre, étant donné qu'une connexion peut échouer en raison d'un basculement, vous devez implémenter la logique pour les nouvelles tentatives de connexion, nouvelle tentative de connexion jusqu'à reconnexion.  
@@ -35,13 +35,13 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
 >  Paramètre `MultiSubnetFailover` à `true` n’est pas nécessaire avec [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)] ou versions ultérieures.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connexion avec MultiSubnetFailover  
- Spécifiez toujours `MultiSubnetFailover=True` lors de la connexion à un écouteur de groupe de disponibilité de SQL Server 2012 ou une Instance de Cluster de basculement SQL Server 2012. `MultiSubnetFailover` permet un basculement plus rapide pour tous les groupes de disponibilité et ou Instance de Cluster de basculement dans SQL Server 2012 et va réduire considérablement le temps de basculement pour les topologies AlwaysOn de sous-réseaux uniques et multiples. Pendant un basculement de multi sous-réseau, le client effectue des tentatives de connexion en parallèle. Pendant un basculement de sous-réseau, le client effectue des tentatives de connexion TCP de manière agressive.  
+ Spécifiez toujours `MultiSubnetFailover=True` lors de la connexion à un écouteur de groupe de disponibilité de SQL Server 2012 ou une Instance de Cluster de basculement SQL Server 2012. `MultiSubnetFailover` permet un basculement plus rapide pour tous les groupes de disponibilité et ou Instance de Cluster de basculement dans SQL Server 2012 et réduire considérablement le temps de basculement pour les topologies AlwaysOn de sous-réseaux uniques et multiples. Pendant un basculement de multi sous-réseau, le client effectue des tentatives de connexion en parallèle. Pendant un basculement de sous-réseau, le client effectue des tentatives de connexion TCP de manière agressive.  
   
  Le `MultiSubnetFailover` propriété de connexion indique que l’application est déployée dans un groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012 et que SqlClient tente de se connecter à la base de données sur l’instance de SQL Server principale en essayant de se connecter à toutes les adresses IP. Lorsque `MultiSubnetFailover=True` est spécifié pour une connexion, le client effectue des tentatives de connexion TCP plus rapidement que les intervalles de retransmission TCP par défaut du système d'exploitation. Cela permet une reconnexion plus rapide après basculement d'un groupe de disponibilité AlwaysOn ou d'une instance de cluster de basculement AlwaysOn, et s'applique aux groupes de disponibilité de sous-réseau unique et de multi-sous-réseau et aux instances de cluster de basculement.  
   
  Pour plus d'informations sur les mots clés de chaîne de connexion dans SqlClient, consultez <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
- Spécification de `MultiSubnetFailover=True` lorsque la connexion à un élément autre qu’un écouteur du groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012 peut provoquer une diminution des performances et n’est pas pris en charge.  
+ Spécification `MultiSubnetFailover=True` lorsque la connexion à un élément autre qu’un écouteur du groupe de disponibilité ou d’une Instance de Cluster de basculement SQL Server 2012 peut entraîner un impact sur les performances et n’est pas pris en charge.  
   
  Utilisez les instructions suivantes pour vous connecter à un serveur dans un groupe de disponibilité ou Instance de Cluster de basculement SQL Server 2012 :  
   
@@ -49,9 +49,9 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
 -   Pour vous connecter à un groupe de disponibilité, spécifiez l'écouteur du groupe de disponibilité en tant que serveur dans votre chaîne de connexion.  
   
--   Connexion à un serveur SQL Server instance configurée avec plus de 64 adresses IP entraîne un échec de connexion.  
+-   Connexion à un serveur SQL Server instance configurée avec plus de 64 adresses IP entraînera un échec de connexion.  
   
--   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : l’authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
+-   Comportement d’une application qui utilise le `MultiSubnetFailover` propriété de connexion n’est pas affectée selon le type d’authentification : authentification SQL Server, l’authentification Kerberos ou l’authentification Windows.  
   
 -   Augmentez la valeur de `Connect Timeout` pour permettre la prise en charge pour le temps de basculement et réduire les tentatives de nouvelle connexion d'application.  
   
@@ -98,4 +98,4 @@ Cette rubrique décrit la prise en charge SqlClient (ajoutée dans [!INCLUDE[net
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

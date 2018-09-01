@@ -5,12 +5,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: e5ef455a-e049-429c-8005-30c93132fb79
-ms.openlocfilehash: 49bf94959b2efb19ff6e3a273f4cd09905089b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72ce238fdcbdcb81fc710a21d1675de67f4adc15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540704"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393548"
 ---
 # <a name="toolstrip-control-windows-forms"></a>ToolStrip, contrôle (Windows Forms)
 Les contrôles <xref:System.Windows.Forms.ToolStrip> sont des barres d'outils qui peuvent héberger des menus, des contrôles et des contrôles utilisateur dans vos applications Windows Forms.  
@@ -73,17 +73,17 @@ Les contrôles <xref:System.Windows.Forms.ToolStrip> sont des barres d'outils qu
  [Guide pratique pour implémenter un ToolStripRenderer personnalisé](../../../../docs/framework/winforms/controls/how-to-implement-a-custom-toolstriprenderer.md)  
  Décrit comment personnaliser l'apparence d'un contrôle <xref:System.Windows.Forms.ToolStrip> en implémentant une classe qui dérive de <xref:System.Windows.Forms.ToolStripRenderer>.  
   
--   [Comment : créer un ToolStrip Windows base Forms avec des éléments Standard à l’aide du Concepteur](http://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
+-   [Comment : créer un ToolStrip de formulaires Windows de base avec des éléments Standard à l’aide du Concepteur](https://msdn.microsoft.com/library/571c1z99\(v=vs.110\))  
   
--   [Guide pratique pour déplacer un ToolStrip hors d'un ToolStripContainer dans un formulaire](http://msdn.microsoft.com/library/ms171701\(v=vs.110\))  
+-   [Guide pratique pour déplacer un ToolStrip hors d'un ToolStripContainer dans un formulaire](how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md)  
   
--   [Procédure pas à pas : création d'un contrôle ToolStrip de style professionnel](http://msdn.microsoft.com/library/ms233664\(v=vs.110\))  
+-   [Procédure pas à pas : création d'un contrôle ToolStrip de style professionnel](walkthrough-creating-a-professionally-styled-toolstrip-control.md)  
   
--   [Procédure pas à pas : création d'un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](http://msdn.microsoft.com/library/ms233676\(v=vs.110\))  
+-   [Procédure pas à pas : création d'un formulaire MDI avec la fusion de menus et des contrôles ToolStrip](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
--   [Tâches ToolStrip, boîte de dialogue](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [Tâches ToolStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [Éditeur de collections d’éléments ToolStrip](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Éditeur de collections d’éléments ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="reference"></a>Référence  
  Classe <xref:System.Windows.Forms.ToolStrip>  

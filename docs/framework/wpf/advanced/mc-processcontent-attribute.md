@@ -5,15 +5,15 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: 2e93734b8ab4aefca080736db3a512f272625271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59097959ff4b3efaba4e4ee63d308eb21f91529d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545251"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386000"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent, attribut
-Spécifie les [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] éléments doivent avoir toujours contenu traités par les éléments parents pertinents, même si l’élément parent immédiat peut être ignoré par un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur en raison de la spécification [mc : attribut Ignorable](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) . Le `mc:ProcessContent` attribut prend en charge la compatibilité du balisage à la fois pour le mappage d’espace de noms personnalisé et [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] le contrôle de version.  
+Spécifie les [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] éléments doivent toujours avoir contenu traité par les éléments parents pertinents, même si l’élément parent immédiat peut être ignoré par un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur en raison de la spécification [mc : Ignorable, attribut](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md) . Le `mc:ProcessContent` attribut prend en charge la compatibilité du balisage à la fois pour le mappage d’espace de noms personnalisé et [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] le contrôle de version.  
   
 ## <a name="xaml-attribute-usage"></a>Utilisation d'attributs XAML  
   
@@ -34,17 +34,17 @@ Spécifie les [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md
   
 |||  
 |-|-|  
-|*ignorablePrefix*|Toute chaîne de préfixe valide, conformément à la spécification XML 1.0.|  
-|*ignorableUri*|Tout URI valide pour la désignation d’un espace de noms, conformément à la spécification XML 1.0.|  
+|*ignorablePrefix*|N’importe quelle chaîne de préfixe valide, conformément à la spécification XML 1.0.|  
+|*ignorableUri*|N’importe quel URI valide pour la désignation d’un espace de noms, conformément à la spécification XML 1.0.|  
 |*ThisElementCanBeIgnored*|Un élément qui peut être ignoré par [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] implémentations de processeur, si le type sous-jacent ne peut pas être résolu.|  
-|*[contenu]*|*ThisElementCanBeIgnored* est marqué comme pouvant être ignoré. Si le processeur ignore cet élément, *[contenu]* est traité par *objet*.|  
+|*[contenu]*|*ThisElementCanBeIgnored* est marqué comme pouvant être ignoré. Si le processeur ignore cet élément, *[content]* est traité par *objet*.|  
   
 ## <a name="remarks"></a>Notes  
  Par défaut, un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur ignore le contenu d’un élément ignoré. Vous pouvez spécifier un élément spécifique par `mc:ProcessContent`et un [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] processeur continue à traiter le contenu dans l’élément ignoré. Cela doit généralement être utilisé si le contenu est imbriqué dans plusieurs balises, au moins un d'entre eux peut être ignoré et au moins un d'entre eux n’est pas peut être ignoré.  
   
  Plusieurs préfixes peuvent être spécifiés dans l’attribut, à l’aide d’un espace de séparation, par exemple : `mc:ProcessContent="ignore:Element1 ignore:Element2"`.  
   
- Le [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] espace de noms définit d’autres éléments et attributs qui ne sont pas documentés dans cette zone de la [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Pour plus d’informations, consultez [spécification de compatibilité du balisage XML](http://go.microsoft.com/fwlink/?LinkId=73824).  
+ Le [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)] espace de noms définit les autres éléments et attributs qui ne sont pas documentés dans cette zone de la [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]. Pour plus d’informations, consultez [spécification de compatibilité du balisage XML](https://go.microsoft.com/fwlink/?LinkId=73824).  
   
 ## <a name="see-also"></a>Voir aussi  
  [mc:Ignorable, attribut](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)  

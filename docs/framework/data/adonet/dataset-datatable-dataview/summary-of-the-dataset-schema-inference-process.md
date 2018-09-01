@@ -2,12 +2,12 @@
 title: Résumé du processus d'inférence du schéma de données
 ms.date: 03/30/2017
 ms.assetid: fd0891c8-d068-4e30-a76f-7c375f078bf7
-ms.openlocfilehash: 9bcc5ce1574eed60d2ef1aa35bdafe8c6050e44c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1583d5232a3dd483bbe2a6fa0b1bc8a3ae6a659f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760269"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395821"
 ---
 # <a name="summary-of-the-dataset-schema-inference-process"></a>Résumé du processus d'inférence du schéma de données
 Le processus d'inférence identifie d'abord, à partir du document XML, les éléments qui seront déduits en tant que tables. À partir du XML restant, le processus d'inférence détermine les colonnes qui feront partie de ces tables. Pour les tables imbriquées, le processus d'inférence génère des objets <xref:System.Data.DataRelation> et <xref:System.Data.ForeignKeyConstraint> imbriqués.  
@@ -26,7 +26,7 @@ Le processus d'inférence identifie d'abord, à partir du document XML, les él�
   
 -   Les éléments dépourvus d'attributs ou d'éléments enfants et qui ne se répètent pas sont déduits en tant que colonnes.  
   
--   Pour les éléments qui sont déduits en tant que tables imbriquées dans d’autres éléments également déduits en tant que tables, imbriquée **DataRelation** est créé entre les deux tables. Une nouvelle colonne clée primaire nommée **TableName_Id** est ajoutée aux deux tables et utilisée par le **DataRelation**. A **ForeignKeyConstraint** est créé entre les deux tables à l’aide de la **TableName_Id** colonne.  
+-   Pour les éléments qui sont déduits en tant que tables imbriquées dans d’autres éléments également déduits en tant que tables, imbriquée **DataRelation** est créé entre les deux tables. Une nouvelle colonne clé primaire nommée **TableName_Id** est ajoutée aux deux tables et utilisée par le **DataRelation**. Un **ForeignKeyConstraint** est créé entre les deux tables à l’aide de la **TableName_Id** colonne.  
   
 -   Pour les éléments qui sont déduits en tant que tables et qui contiennent du texte mais n’ont pas d’éléments enfants, une nouvelle colonne nommée **TableName_Text** est créé pour le texte de chacun des éléments. Si un élément déduit en tant que table comprend du texte, mais également des éléments enfants, le texte est ignoré.  
   
@@ -36,4 +36,4 @@ Le processus d'inférence identifie d'abord, à partir du document XML, les él�
  [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

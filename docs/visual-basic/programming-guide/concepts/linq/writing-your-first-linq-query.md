@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998435"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387632"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Écriture de votre première requête LINQ (Visual Basic)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont exprimées dans un langage de requête dédié. Au fil du temps, différents langages ont été développées pour différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Cela rend nécessaire pour le développeur d’applications à apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qui est pris en charge.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Pour plus d’informations sur la création de types de sources de données spécifiques, consultez la documentation relative aux différents fournisseurs [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Pour obtenir la liste de ces fournisseurs, consultez [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) La règle de base est simple : un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] source de données est n’importe quel objet qui prend en charge le modèle générique <xref:System.Collections.Generic.IEnumerable%601> interface ou une interface qui hérite de celle-ci.  
+ Pour plus d’informations sur la création de types de sources de données spécifiques, consultez la documentation relative aux différents fournisseurs [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Pour obtenir la liste de ces fournisseurs, consultez [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) La règle de base est simple : un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] source de données est n’importe quel objet qui prend en charge le modèle générique <xref:System.Collections.Generic.IEnumerable%601> interface ou une interface qui hérite de celle-ci.  
   
 > [!NOTE]
 >  Types tels que <xref:System.Collections.ArrayList> qui prennent en charge le non générique <xref:System.Collections.IEnumerable> interface peut également être utilisée en tant que [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] des sources de données. Pour obtenir un exemple qui utilise un <xref:System.Collections.ArrayList>, consultez [Comment : interroger un ArrayList avec LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  

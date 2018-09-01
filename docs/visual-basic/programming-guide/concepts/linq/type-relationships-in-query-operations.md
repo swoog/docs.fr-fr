@@ -12,11 +12,11 @@ helpviewer_keywords:
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
 ms.openlocfilehash: f1084ffcf0b5330185a44eda8721ef2a03413602
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258147"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386562"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relations des types dans des opérations de requête (Visual Basic)
 Variables utilisées dans [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] requête opérations sont fortement typées et doivent être compatibles entre eux. Un typage fort est utilisé dans la source de données, dans la requête elle-même et dans l’exécution des requêtes. L’illustration suivante identifie les termes utilisés pour décrire un [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] requête. Pour plus d’informations sur les parties d’une requête, consultez [opérations de requête de base (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

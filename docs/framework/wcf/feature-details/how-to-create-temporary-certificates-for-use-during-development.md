@@ -5,22 +5,22 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 8310e7c465d0e3494482b6a38a7b2a67b67ae842
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495364"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385175"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Comment : créer des certificats temporaires à utiliser au cours du développement
-Lorsque vous développez un service sécurisé ou un client à l’aide de Windows Communication Foundation (WCF), il est souvent nécessaire de fournir un certificat X.509 à utiliser comme informations d’identification. Le certificat fait en général partie d'une chaîne de certificats dont l'autorité racine est présente dans le magasin d'Autorités de certification racines de confiance de l'ordinateur. Une chaîne de certificats vous permet de définir la portée d'un jeu de certificats où en général l'autorité racine provient de votre organisation ou votre division. Pour émuler ce scénario au moment du développement, vous pouvez créer deux certificats pour satisfaire les conditions de sécurité. Le premier est un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance. Le deuxième certificat est créé à partir du premier et placé dans le magasin personnel de l'emplacement de l'ordinateur local ou dans le magasin personnel de l'emplacement de l'utilisateur actif. Cette rubrique décrit les étapes permettant de créer ces deux certificats à l’aide de l’ [outil de création de certificat (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), fourni par le Kit de développement logiciel (SDK) [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] .  
+Lorsque vous développez un service sécurisé ou un client à l’aide de Windows Communication Foundation (WCF), il est souvent nécessaire de fournir un certificat X.509 à utiliser comme informations d’identification. Le certificat fait en général partie d'une chaîne de certificats dont l'autorité racine est présente dans le magasin d'Autorités de certification racines de confiance de l'ordinateur. Une chaîne de certificats vous permet de définir la portée d'un jeu de certificats où en général l'autorité racine provient de votre organisation ou votre division. Pour émuler ce scénario au moment du développement, vous pouvez créer deux certificats pour satisfaire les conditions de sécurité. Le premier est un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance. Le deuxième certificat est créé à partir du premier et placé dans le magasin personnel de l'emplacement de l'ordinateur local ou dans le magasin personnel de l'emplacement de l'utilisateur actif. Cette rubrique décrit les étapes pour créer ces deux certificats à l’aide de la [outil Certificate Creation Tool (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185), qui est fournie par le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  
   
 > [!IMPORTANT]
 >  Les certificats générés par l'outil de création de certification sont fournis uniquement à des fins de tests. Lorsque vous déployez un service ou un client, veillez à utiliser un certificat approprié fourni par une autorité de certification. Celui-ci peut provenir d'un serveur de certificat [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] dans votre organisation ou d'un tiers.  
 >   
->  Par défaut, le [Makecert.exe (outil de création de certificat)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crée des certificats dont l’autorité racine est appelée « agence de racine **. »** Comme celle-ci ne figure pas dans le magasin d'Autorités de certification racines de confiance, ces certificats ne sont pas sécurisés. La création d'un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance vous permet de créer un environnement de développement qui reproduit plus fidèlement votre environnement de déploiement.  
+>  Par défaut, le [Makecert.exe (outil Certificate Creation Tool)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d) crée des certificats dont l’autorité racine est appelée « agence racine **. »** Comme celle-ci ne figure pas dans le magasin d'Autorités de certification racines de confiance, ces certificats ne sont pas sécurisés. La création d'un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance vous permet de créer un environnement de développement qui reproduit plus fidèlement votre environnement de déploiement.  
   
- Pour plus d’informations sur la création et l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Pour plus d’informations sur l’utilisation d’un certificat comme informations d’identification, consultez [sécurisation des Services et les Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Pour obtenir un didacticiel à propos de l’utilisation de la technologie Authenticode de Microsoft, consultez [Authenticode Overviews and Tutorials](http://go.microsoft.com/fwlink/?LinkId=88919)(Vues d’ensemble et didacticiels relatifs à Authenticode).  
+ Pour plus d’informations sur la création et l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Pour plus d’informations sur l’utilisation d’un certificat comme information d’identification, consultez [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md). Pour obtenir un didacticiel sur l’utilisation de la technologie Authenticode de Microsoft, consultez [Authenticode Overviews and Tutorials](https://go.microsoft.com/fwlink/?LinkId=88919).  
   
 ### <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Pour créer un certificat d'autorité racine auto-signé et exporter la clé privée  
   
@@ -63,7 +63,7 @@ Lorsque vous développez un service sécurisé ou un client à l’aide de Windo
   
 #### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Pour installer un certificat auto-signé dans les Autorités de certification racines de confiance  
   
-1.  Ouvrez le composant logiciel enfichable Certificat. Pour plus d’informations, consultez [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+1.  Ouvrez le composant logiciel enfichable Certificat. Pour plus d’informations, consultez [Guide pratique pour afficher des certificats à l’aide du composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 2.  Ouvrez le dossier pour stocker le certificat, soit **Ordinateur local** , soit **Utilisateur actuel**.  
   
@@ -92,7 +92,7 @@ Lorsque vous développez un service sécurisé ou un client à l’aide de Windo
     </bindings>  
     ```  
   
- Dans le fichier de configuration pour un client, utilisez le code XML suivant pour spécifier que le certificat est trouvé dans le magasin de l’utilisateur et sont accessibles via le champ SubjectName la valeur « CohoWinery ».  
+ Dans le fichier de configuration pour un client, utilisez le code XML suivant pour spécifier que le certificat est trouvé dans le magasin de l’utilisateur et peut être trouvé en recherchant le champ SubjectName pour la valeur « CohoWinery ».  
   
 ```xml  
 <behaviors>  

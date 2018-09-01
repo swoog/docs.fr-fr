@@ -2,12 +2,12 @@
 title: Validation des relations des activités
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
-ms.openlocfilehash: e6dd0e6a7b48444073ebae378e21c1b45977a1f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515106"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394683"
 ---
 # <a name="activity-relationships-validation"></a>Validation des relations des activités
 Cet exemple se compose de trois activités, `CreateCity`, `CreateState` et `CreateCountry`. `CreateCity` doit être à l'intérieur d'une activité `CreateState`, et `CreateState` à l'intérieur d'une activité `CreateCountry`. Pour les besoins de cet exemple, la logique de validation est dans le code pour l'activité `CreateState`, et dans XAML pour l'activité `CreateCity`. Les deux contraintes ont le même comportement.  
@@ -38,6 +38,6 @@ Cet exemple se compose de trois activités, `CreateCity`, `CreateState` et `Crea
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`

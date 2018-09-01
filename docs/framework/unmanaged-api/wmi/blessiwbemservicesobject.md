@@ -1,6 +1,6 @@
 ---
-title: BlessIWbemServicesObject (fonction) (référence des API non managées)
-description: La fonction BlessIWbemServicesObject indique si les informations d’identification utilisateur autorisent l’accès à un objet IWbemServices
+title: Blessiwbemservicesobject, fonction (référence des API non managées)
+description: Blessiwbemservicesobject, de la fonction indique si les informations d’identification de l’utilisateur autorisent l’accès à un objet IWbemServices
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServicesObject
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457917"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394976"
 ---
-# <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject (fonction)
-Indique si les informations d’identification utilisateur autorisent l’accès à un [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) objet.   
+# <a name="blessiwbemservicesobject-function"></a>Blessiwbemservicesobject, fonction
+Indique si les informations d’identification utilisateur autorisent l’accès à une certaine [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) objet.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,7 +44,7 @@ HRESULT BlessIWbemServicesObject (
 ## <a name="parameters"></a>Paramètres
 
 `pIWbemServices`  
-[in] Pointeur vers un objet du service WMI.
+[in] Pointeur vers un objet de service WMI.
 
 `strUser`  
 [in] Le nom d’utilisateur.
@@ -64,18 +64,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0 x 80070057 | Un ou plusieurs arguments ne sont pas valide. |
+| `E_INVALIDARG` | 0 x 80070057 | Un ou plusieurs arguments ne sont pas valides. |
 | `E_POINTER` | 0 x 80004003 | `pIWbemServices` a la valeur `null`. | 
 | `E_FAIL` | 0x80000008 | Une erreur non spécifiée s’est produite. |
 | `E_OUTOFMEMORY` | 0x80000002 | Mémoire disponible est insuffisante pour effectuer l’opération. | 
 | `S_OK` | 0 | L’appel de fonction a réussi. | 
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

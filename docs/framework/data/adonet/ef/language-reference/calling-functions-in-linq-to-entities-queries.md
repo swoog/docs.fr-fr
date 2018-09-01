@@ -2,12 +2,12 @@
 title: Appel de fonctions dans les requêtes LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 690f1a2cdcd8726d40a6627c1ceb05c9ae7e7fdd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4aed9fd59cceb72baac9dc12a85c52787c4b3866
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760139"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388513"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Appel de fonctions dans les requêtes LINQ to Entities
 Les rubriques de cette section expliquent comment appeler des fonctions dans les requêtes LINQ to Entities.  
@@ -38,5 +38,5 @@ Les rubriques de cette section expliquent comment appeler des fonctions dans les
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [Fonctions canoniques](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)  
- [vue d’ensemble du fichier .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Comment : définir des fonctions personnalisées dans le modèle conceptuel](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)
+ [vue d’ensemble du fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [Comment : définir des fonctions personnalisées dans le modèle conceptuel](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f)

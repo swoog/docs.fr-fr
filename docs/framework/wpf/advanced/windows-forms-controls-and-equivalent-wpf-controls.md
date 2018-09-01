@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 0bf1d646b8efc0d350be13dffc6136f6f1d7495a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0daa399e2d000a228773ee20f157af7439f7acbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547308"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396665"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Contrôles Windows Forms et contrôles WPF équivalents
-Nombreux [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] les contrôles ont équivalent [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles, mais certains [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles n’ont pas d’équivalent dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette rubrique compare les types de contrôles fournies par les deux technologies.  
+Nombreux [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles ont équivalent [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôles, mais certains [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles n’ont pas d’équivalents dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Cette rubrique compare les types de contrôle fournis par les deux technologies.  
   
  Vous pouvez toujours utiliser l’interopérabilité à l’hôte [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles qui n’ont pas d’équivalents dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-en fonction des applications.  
   
- Le tableau suivant indique les [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles et composants ont équivalent [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôlent les fonctionnalités.  
+ Le tableau suivant montre quelles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] contrôles et composants ont équivalent [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] contrôlent les fonctionnalités.  
   
 |contrôle Windows Forms|Contrôle WPF équivalent|Notes|  
 |---------------------------|----------------------------|-------------|  
@@ -39,13 +39,13 @@ Nombreux [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-m
 |<xref:System.Windows.Forms.FontDialog>|Aucun contrôle équivalent.||  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Window>|<xref:System.Windows.Window> ne prend pas en charge les fenêtres enfants.|  
 |<xref:System.Windows.Forms.GroupBox>|<xref:System.Windows.Controls.GroupBox>||  
-|<xref:System.Windows.Forms.HelpProvider>|Aucun contrôle équivalent.|Aucune aide (F1). « Qu’est-ce » aide est remplacé par les info-bulles.|  
-|<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Le défilement est intégré dans les contrôles conteneurs.|  
+|<xref:System.Windows.Forms.HelpProvider>|Aucun contrôle équivalent.|Aucune aide F1. « Qu’est-ce » aide est remplacée par l’info-bulles.|  
+|<xref:System.Windows.Forms.HScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Le défilement est intégré aux contrôles de conteneur.|  
 |<xref:System.Windows.Forms.ImageList>|Aucun contrôle équivalent.||  
 |<xref:System.Windows.Forms.Label>|<xref:System.Windows.Controls.Label>||  
-|<xref:System.Windows.Forms.LinkLabel>|Aucun contrôle équivalent.|Vous pouvez utiliser la <xref:System.Windows.Documents.Hyperlink> classe pour héberger des liens hypertexte dans le contenu de flux.|  
+|<xref:System.Windows.Forms.LinkLabel>|Aucun contrôle équivalent.|Vous pouvez utiliser la <xref:System.Windows.Documents.Hyperlink> classe pour héberger des liens hypertexte dans le contenu dynamique.|  
 |<xref:System.Windows.Forms.ListBox>|<xref:System.Windows.Controls.ListBox>||  
-|<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|Le <xref:System.Windows.Controls.ListView> contrôle fournit une vue détails en lecture seule.|  
+|<xref:System.Windows.Forms.ListView>|<xref:System.Windows.Controls.ListView>|Le <xref:System.Windows.Controls.ListView> contrôle fournit une vue de détails en lecture seule.|  
 |<xref:System.Windows.Forms.MaskedTextBox>|Aucun contrôle équivalent.||  
 |<xref:System.Windows.Forms.MenuStrip>|<xref:System.Windows.Controls.Menu>|<xref:System.Windows.Controls.Menu> style de contrôle peut se rapprocher le comportement et l’apparence de la <xref:System.Windows.Forms.ToolStripProfessionalRenderer?displayProperty=nameWithType> classe.|  
 |<xref:System.Windows.Forms.MonthCalendar>|<xref:System.Windows.Controls.Calendar>||  
@@ -81,13 +81,13 @@ Nombreux [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-m
 |<xref:System.Windows.Forms.TrackBar>|<xref:System.Windows.Controls.Slider>||  
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
-|<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Le défilement est intégré dans les contrôles conteneurs.|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|Le <xref:System.Windows.Controls.Frame> contrôle peut héberger des pages HTML.<br /><br /> À compter de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], le <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> contrôle peut héberger des pages HTML et permet de sauvegarder le <xref:System.Windows.Controls.Frame> contrôle.|  
+|<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|Le défilement est intégré aux contrôles de conteneur.|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|Le <xref:System.Windows.Controls.Frame> contrôle peut héberger des pages HTML.<br /><br /> À compter de la [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], le <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> contrôle peut héberger des pages HTML et stocker également le <xref:System.Windows.Controls.Frame> contrôle.|  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Concepteur WPF pour les Windows Forms aux développeurs](http://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)  
+ [Concepteur WPF pour les Windows Forms aux développeurs](https://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)  
  [Procédure pas à pas : hébergement d’un contrôle Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
  [Procédure pas à pas : Hébergement d'un contrôle composite WPF dans Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
  [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)

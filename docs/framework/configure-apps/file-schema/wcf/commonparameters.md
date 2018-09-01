@@ -2,12 +2,12 @@
 title: '&lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 881a7d0890991aa4f542ff92c2a721b9d9cb7b29
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5e4c19c48709ffd81cb00e9820e6c3cdb297ec7e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749437"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391718"
 ---
 # <a name="ltcommonparametersgt"></a>&lt;commonParameters&gt;
 Représente une collection de paramètres utilisés globalement dans plusieurs services. Cette collection inclut généralement la chaîne de connexion de base de données pouvant être partagée par les services fiables.  
@@ -45,7 +45,7 @@ Représente une collection de paramètres utilisés globalement dans plusieurs s
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Spécifie les paramètres d’une instance de <xref:System.Workflow.Runtime.WorkflowRuntime> pour l’hébergement des services de Windows Communication Foundation (WCF) basée sur les flux de travail.|  
+|[\<workflowRuntime >](../../../../../docs/framework/configure-apps/file-schema/wcf/workflowruntime.md)|Spécifie les paramètres d’une instance de <xref:System.Workflow.Runtime.WorkflowRuntime> pour l’hébergement de services de Windows Communication Foundation (WCF) basés sur les flux de travail.|  
   
 ## <a name="remarks"></a>Notes  
  L'élément `<commonParameters>` définit tous les paramètres utilisés globalement dans plusieurs services, par exemple `ConnectionString` lors de l'utilisation de <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -73,7 +73,7 @@ Représente une collection de paramètres utilisés globalement dans plusieurs s
 </WorkflowRuntime>  
 ```  
   
- Notez que la `EnableRetries` paramètre peut être défini à un niveau global (comme indiqué dans le *Paramètres_courants* section) ou pour des services individuels qui prennent en charge `EnableRetries` (comme indiqué dans le *Services*section).  
+ Notez que le `EnableRetries` paramètre peut être défini à un niveau global (comme indiqué dans le *Paramètres_courants* section) ou pour des services individuels qui prennent en charge `EnableRetries` (comme indiqué dans le *Services*section).  
   
  L'exemple de code suivant indique comment modifier les paramètres communs par programme.  
   
@@ -85,7 +85,7 @@ commonParameters["ConnectionString"].Value="another connection string";
 config.Save();  
 ```  
   
- Pour plus d’informations sur l’utilisation d’un fichier de configuration pour contrôler le comportement d’un <xref:System.Workflow.Runtime.WorkflowRuntime> objet d’une application hôte Windows Workflow Foundation, consultez [les fichiers de Configuration de flux de travail](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Pour plus d’informations sur l’utilisation d’un fichier de configuration pour contrôler le comportement d’un <xref:System.Workflow.Runtime.WorkflowRuntime> objet d’une application hôte Windows Workflow Foundation, consultez [les fichiers de Configuration de flux de travail](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Exemple  
   
@@ -102,5 +102,5 @@ config.Save();
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [Fichiers de Configuration de flux de travail](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
+ [Fichiers de Configuration de flux de travail](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-commonparameters.md)

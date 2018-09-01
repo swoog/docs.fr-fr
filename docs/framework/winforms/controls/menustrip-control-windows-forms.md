@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540188"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385118"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip, contrôle (Windows Forms)
 Ce contrôle regroupe des commandes d'application et les rend facilement accessibles.  
@@ -55,19 +55,19 @@ Ce contrôle regroupe des commandes d'application et les rend facilement accessi
  [Guide pratique pour configurer la fusion de menus automatique pour les applications MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Décrit comment fusionner automatiquement des éléments de menu au moment de l’exécution.  
   
--   [Éditeur de collections d’éléments MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Éditeur de collections d’éléments MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Guide pratique pour copier des ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [Guide pratique pour copier des ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Guide pratique pour masquer des ToolStripMenuItems à l'aide du concepteur](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [Guide pratique pour masquer des ToolStripMenuItems à l'aide du concepteur](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Guide pratique pour désactiver des ToolStripMenuItems à l’aide du concepteur](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [Guide pratique pour désactiver des ToolStripMenuItems à l’aide du concepteur](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Guide pratique pour déplacer des ToolStripMenuItems](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [Guide pratique pour déplacer des ToolStripMenuItems](how-to-move-toolstripmenuitems.md)  
   
--   [Procédure pas à pas : mise à disposition d'éléments de menu standard pour un formulaire](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [Procédure pas à pas : mise à disposition d'éléments de menu standard pour un formulaire](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Tâches MenuStrip, boîte de dialogue](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Tâches MenuStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.MenuStrip>  

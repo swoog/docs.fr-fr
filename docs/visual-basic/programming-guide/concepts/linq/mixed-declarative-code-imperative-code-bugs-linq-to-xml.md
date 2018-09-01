@@ -1,13 +1,13 @@
 ---
-title: Bogues du Code impératif de Code déclaratif (LINQ to XML) mixtes (Visual Basic)
+title: Déclarative Code-bogues mixtes Code impératif (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f12b1ab4-bb92-4b92-a648-0525e45b3ce7
 ms.openlocfilehash: 797866514a2f290a98d1a75e92f850e96d28dabd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650814"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385605"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-visual-basic"></a>Déclarative Code/bogues mixtes Code impératif (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contient diverses méthodes qui vous permettent de modifier directement une arborescence XML. Vous pouvez ajouter des éléments, supprimer des éléments, modifier le contenu d'un élément, ajouter des attributs, et ainsi de suite. Cette interface de programmation est décrite dans [modification d’arborescences XML (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Si vous itérez au sein de l'un des axes, tels que <xref:System.Xml.Linq.XContainer.Elements%2A>, et que vous modifiez l'arborescence XML à mesure que vous parcourez l'axe, vous pouvez constater des bogues étranges.  

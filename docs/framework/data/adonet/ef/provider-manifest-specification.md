@@ -2,12 +2,12 @@
 title: Spécification de manifeste du fournisseur
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 02faee9ad69bd75f4df608b9a4767560945c7bb3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9875f0ce8d7b10532d7545c05d58ab43146120f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767139"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387300"
 ---
 # <a name="provider-manifest-specification"></a>Spécification de manifeste du fournisseur
 Cette section explique comment un fournisseur de banques de données peut prendre en charge les types et les fonctions dans la banque de données.  
@@ -23,9 +23,9 @@ Cette section explique comment un fournisseur de banques de données peut prendr
   
  Le manifeste du fournisseur doit pouvoir être chargé par les outils au moment du design sans devoir ouvrir une connexion à la banque de données.  
   
- Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] respecte la casse, mais la banque de données sous-jacente ne peut pas être. Lorsque les artefacts EDM (identificateurs et noms de type, par exemple) sont définis et utilisés dans le manifeste, ils doivent utiliser le respect de la casse d'[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Si des éléments de la banque de données respectueux de la casse apparaissent dans le manifeste du fournisseur, cette casse doit être conservée dans le manifeste du fournisseur.  
+ Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] respecte la casse, mais le magasin de données sous-jacent ne peut pas être. Lorsque les artefacts EDM (identificateurs et noms de type, par exemple) sont définis et utilisés dans le manifeste, ils doivent utiliser le respect de la casse d'[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Si des éléments de la banque de données respectueux de la casse apparaissent dans le manifeste du fournisseur, cette casse doit être conservée dans le manifeste du fournisseur.  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requiert un manifeste du fournisseur pour tous les fournisseurs de données. Si vous essayez d’utiliser un fournisseur qui ne dispose pas d’un fournisseur de manifeste avec le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous obtiendrez une erreur.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requiert un manifeste du fournisseur pour tous les fournisseurs de données. Si vous essayez d’utiliser un fournisseur qui n’a pas de fournisseur de manifeste avec le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], vous obtiendrez une erreur.  
   
  Le tableau suivant décrit les types d'exceptions levés par [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] si des exceptions sont déclenchées par l'interaction d'un fournisseur :  
   
@@ -91,7 +91,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Utilisation d'un jeton du manifeste du fournisseur.  
- Pour le scénario hors connexion, le jeton est sélectionné dans une représentation SSDL. Le langage SSDL vous permet de spécifier un ProviderManifestToken (consultez [élément Schema (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) pour plus d’informations). Par exemple, si une connexion ne peut pas être ouverte, le langage SSDL a un jeton du manifeste du fournisseur qui spécifie des informations sur le manifeste.  
+ Pour le scénario hors connexion, le jeton est sélectionné dans une représentation SSDL. Le langage SSDL vous permet de spécifier un ProviderManifestToken (consultez [élément de schéma (SSDL)](https://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) pour plus d’informations). Par exemple, si une connexion ne peut pas être ouverte, le langage SSDL a un jeton du manifeste du fournisseur qui spécifie des informations sur le manifeste.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
