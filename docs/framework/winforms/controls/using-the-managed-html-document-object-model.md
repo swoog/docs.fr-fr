@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: 95b14ae455ef8fcd0a81decec21b8305f2573643
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7800311895d1c0fac43577076226a68712164f60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535949"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396156"
 ---
-# <a name="using-the-managed-html-document-object-model"></a><span data-ttu-id="18093-102">Utilisation du modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="18093-102">Using the Managed HTML Document Object Model</span></span>
-<span data-ttu-id="18093-103">Le modèle d’objet document HTML managé (DOM) fournit un wrapper basé sur le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour les classes HTML exposées par Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="18093-103">The managed HTML document object model (DOM) provides a wrapper based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for the HTML classes exposed by Internet Explorer.</span></span> <span data-ttu-id="18093-104">Utilisez ces classes pour manipuler des pages HTML hébergées dans le <xref:System.Windows.Forms.WebBrowser> (contrôle), ou pour créer de nouvelles pages à partir du début.</span><span class="sxs-lookup"><span data-stu-id="18093-104">Use these classes to manipulate HTML pages hosted in the <xref:System.Windows.Forms.WebBrowser> control, or to build new pages from the beginning.</span></span>  
+# <a name="using-the-managed-html-document-object-model"></a><span data-ttu-id="5ecbc-102">Utilisation du modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="5ecbc-102">Using the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="5ecbc-103">Le modèle d’objet de document (DOM) HTML managé fournit un wrapper basé sur le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour les classes HTML exposées par Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-103">The managed HTML document object model (DOM) provides a wrapper based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for the HTML classes exposed by Internet Explorer.</span></span> <span data-ttu-id="5ecbc-104">Utilisez ces classes pour manipuler des pages HTML hébergées dans le <xref:System.Windows.Forms.WebBrowser> contrôle, ou pour créer de nouvelles pages à partir du début.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-104">Use these classes to manipulate HTML pages hosted in the <xref:System.Windows.Forms.WebBrowser> control, or to build new pages from the beginning.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="18093-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="18093-105">In This Section</span></span>  
- [<span data-ttu-id="18093-106">Guide pratique pour accéder au modèle DOM (Document Object Model) HTML managé</span><span class="sxs-lookup"><span data-stu-id="18093-106">How to: Access the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-access-the-managed-html-document-object-model.md)  
- <span data-ttu-id="18093-107">Décrit comment obtenir une instance valide de <xref:System.Windows.Forms.HtmlDocument> à partir d’une application Windows Forms ou un <xref:System.Windows.Forms.UserControl> hébergée dans Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="18093-107">Describes how to obtain a valid instance of <xref:System.Windows.Forms.HtmlDocument> from either a Windows Forms application or a <xref:System.Windows.Forms.UserControl> hosted in Internet Explorer.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5ecbc-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="5ecbc-105">In This Section</span></span>  
+ [<span data-ttu-id="5ecbc-106">Guide pratique pour accéder au modèle DOM (Document Object Model) HTML managé</span><span class="sxs-lookup"><span data-stu-id="5ecbc-106">How to: Access the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-access-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="5ecbc-107">Décrit comment obtenir une instance valide de <xref:System.Windows.Forms.HtmlDocument> à partir d’une application Windows Forms ou une <xref:System.Windows.Forms.UserControl> hébergée dans Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-107">Describes how to obtain a valid instance of <xref:System.Windows.Forms.HtmlDocument> from either a Windows Forms application or a <xref:System.Windows.Forms.UserControl> hosted in Internet Explorer.</span></span>  
   
- [<span data-ttu-id="18093-108">Guide pratique pour accéder à la source HTML dans le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="18093-108">How to: Access the HTML Source in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-access-the-html-source-in-the-managed-html-document-object-model.md)  
- <span data-ttu-id="18093-109">Décrit comment obtenir la source HTML d’origine, non modifiée et comment obtenir la source « dynamique » qui reflète l’état actuel du DOM.</span><span class="sxs-lookup"><span data-stu-id="18093-109">Describes how to obtain the original, unmodified HTML source, and how to obtain the "live" source that reflects the current state of the DOM.</span></span>  
+ [<span data-ttu-id="5ecbc-108">Guide pratique pour accéder à la source HTML dans le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="5ecbc-108">How to: Access the HTML Source in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-access-the-html-source-in-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="5ecbc-109">Décrit comment obtenir la source HTML d’origine, non modifiée et comment obtenir la source « live » qui reflète l’état actuel du DOM.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-109">Describes how to obtain the original, unmodified HTML source, and how to obtain the "live" source that reflects the current state of the DOM.</span></span>  
   
- [<span data-ttu-id="18093-110">Guide pratique pour modifier des styles d'un élément dans le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="18093-110">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md)  
- <span data-ttu-id="18093-111">Explique comment manipuler les styles, qui sont utilisés pour contrôler l’affichage d’éléments.</span><span class="sxs-lookup"><span data-stu-id="18093-111">Describes how to manipulate styles, which are used to control the visual display of elements.</span></span>  
+ [<span data-ttu-id="5ecbc-110">Guide pratique pour modifier des styles d'un élément dans le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="5ecbc-110">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="5ecbc-111">Décrit comment manipuler les styles, qui sont utilisés pour contrôler l’affichage d’éléments.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-111">Describes how to manipulate styles, which are used to control the visual display of elements.</span></span>  
   
- [<span data-ttu-id="18093-112">Accès aux frames dans le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="18093-112">Accessing Frames in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/accessing-frames-in-the-managed-html-document-object-model.md)  
- <span data-ttu-id="18093-113">Décrit ce qu’est les cadres et des jeux de frames et comment accéder au DOM d’un frame.</span><span class="sxs-lookup"><span data-stu-id="18093-113">Describes what frames and framesets are, and how to access the DOM of a frame.</span></span>  
+ [<span data-ttu-id="5ecbc-112">Accès aux frames dans le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="5ecbc-112">Accessing Frames in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/accessing-frames-in-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="5ecbc-113">Décrit les cadres et des jeux de frames et indique comment accéder au DOM d’un frame.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-113">Describes what frames and framesets are, and how to access the DOM of a frame.</span></span>  
   
- [<span data-ttu-id="18093-114">Accès aux membres non exposés sur le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="18093-114">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md)  
- <span data-ttu-id="18093-115">Décrit comment accéder aux membres du modèle DOM sous-jacent qui n’ont pas d’équivalent managé.</span><span class="sxs-lookup"><span data-stu-id="18093-115">Describes how to access members of the underlying DOM that do not have a managed equivalent.</span></span>  
+ [<span data-ttu-id="5ecbc-114">Accès aux membres non exposés sur le modèle objet de document HTML managé</span><span class="sxs-lookup"><span data-stu-id="5ecbc-114">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="5ecbc-115">Décrit comment accéder aux membres du modèle DOM sous-jacent qui n’ont pas un équivalent managé.</span><span class="sxs-lookup"><span data-stu-id="5ecbc-115">Describes how to access members of the underlying DOM that do not have a managed equivalent.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="18093-116">Référence</span><span class="sxs-lookup"><span data-stu-id="18093-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5ecbc-116">Référence</span><span class="sxs-lookup"><span data-stu-id="5ecbc-116">Reference</span></span>  
  <xref:System.Windows.Forms.HtmlDocument>  
   
  <xref:System.Windows.Forms.HtmlElement>  
   
  <xref:System.Windows.Forms.HtmlWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="18093-117">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="18093-117">Related Sections</span></span>  
- [<span data-ttu-id="18093-118">WebBrowser, contrôle</span><span class="sxs-lookup"><span data-stu-id="18093-118">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+## <a name="related-sections"></a><span data-ttu-id="5ecbc-117">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="5ecbc-117">Related Sections</span></span>  
+ [<span data-ttu-id="5ecbc-118">WebBrowser, contrôle</span><span class="sxs-lookup"><span data-stu-id="5ecbc-118">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
   
-## <a name="see-also"></a><span data-ttu-id="18093-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="18093-119">See Also</span></span>  
- [<span data-ttu-id="18093-120">Sur le modèle d’objet DHTML</span><span class="sxs-lookup"><span data-stu-id="18093-120">About the DHTML Object Model</span></span>](http://msdn.microsoft.com/library/default.asp?url=/workshop/author/om/doc_object.asp)
+## <a name="see-also"></a><span data-ttu-id="5ecbc-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5ecbc-119">See Also</span></span>  
+ [<span data-ttu-id="5ecbc-120">Sur le modèle d’objet DHTML</span><span class="sxs-lookup"><span data-stu-id="5ecbc-120">About the DHTML Object Model</span></span>](https://msdn.microsoft.com/library/default.asp?url=/workshop/author/om/doc_object.asp)

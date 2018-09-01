@@ -5,60 +5,60 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 69c807bdc052dda9e62216aa1611b4a6b2155a27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762811"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396624"
 ---
-# <a name="query-expression-syntax-examples-projection"></a><span data-ttu-id="9e997-102">Exemples de syntaxe d'expression de requête : Projection</span><span class="sxs-lookup"><span data-stu-id="9e997-102">Query Expression Syntax Examples: Projection</span></span>
-<span data-ttu-id="9e997-103">Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) et le `From … From …` mots clés pour interroger le [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête.</span><span class="sxs-lookup"><span data-stu-id="9e997-103">The examples in this topic demonstrate how to use the `Select` method and the `From … From …` keywords to query the [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="9e997-104">`From … From …` est l'équivalent basé sur une requête de la méthode `SelectMany`.</span><span class="sxs-lookup"><span data-stu-id="9e997-104">`From … From …` is the query based equivalent of the `SelectMany` method.</span></span> <span data-ttu-id="9e997-105">Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="9e997-105">The AdventureWorks Sales model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="query-expression-syntax-examples-projection"></a><span data-ttu-id="ce611-102">Exemples de syntaxe d'expression de requête : Projection</span><span class="sxs-lookup"><span data-stu-id="ce611-102">Query Expression Syntax Examples: Projection</span></span>
+<span data-ttu-id="ce611-103">Les exemples de cette rubrique montrent comment utiliser le `Select` (méthode) et le `From … From …` mots clés pour interroger le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête.</span><span class="sxs-lookup"><span data-stu-id="ce611-103">The examples in this topic demonstrate how to use the `Select` method and the `From … From …` keywords to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="ce611-104">`From … From …` est l'équivalent basé sur une requête de la méthode `SelectMany`.</span><span class="sxs-lookup"><span data-stu-id="ce611-104">`From … From …` is the query based equivalent of the `SelectMany` method.</span></span> <span data-ttu-id="ce611-105">Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="ce611-105">The AdventureWorks Sales model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="9e997-106">Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :</span><span class="sxs-lookup"><span data-stu-id="9e997-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="ce611-106">Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :</span><span class="sxs-lookup"><span data-stu-id="ce611-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="select"></a><span data-ttu-id="9e997-107">Sélectionner</span><span class="sxs-lookup"><span data-stu-id="9e997-107">Select</span></span>  
+## <a name="select"></a><span data-ttu-id="ce611-107">Sélectionner</span><span class="sxs-lookup"><span data-stu-id="ce611-107">Select</span></span>  
   
-### <a name="example"></a><span data-ttu-id="9e997-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="9e997-108">Example</span></span>  
- <span data-ttu-id="9e997-109">L'exemple ci-dessous utilise la méthode <xref:System.Linq.Enumerable.Select%2A> pour retourner toutes les lignes de la table `Product` et afficher les noms de produits.</span><span class="sxs-lookup"><span data-stu-id="9e997-109">The following example uses the <xref:System.Linq.Enumerable.Select%2A> method to return all the rows from the `Product` table and display the product names.</span></span>  
+### <a name="example"></a><span data-ttu-id="ce611-108">Exemple</span><span class="sxs-lookup"><span data-stu-id="ce611-108">Example</span></span>  
+ <span data-ttu-id="ce611-109">L'exemple ci-dessous utilise la méthode <xref:System.Linq.Enumerable.Select%2A> pour retourner toutes les lignes de la table `Product` et afficher les noms de produits.</span><span class="sxs-lookup"><span data-stu-id="ce611-109">The following example uses the <xref:System.Linq.Enumerable.Select%2A> method to return all the rows from the `Product` table and display the product names.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectSimple1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectsimple1)]
  [!code-vb[DP L2E Examples#SelectSimple1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectsimple1)]  
   
-### <a name="example"></a><span data-ttu-id="9e997-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="9e997-110">Example</span></span>  
- <span data-ttu-id="9e997-111">L'exemple ci-dessous utilise <xref:System.Linq.Enumerable.Select%2A> pour retourner une séquence comportant uniquement des noms de produits.</span><span class="sxs-lookup"><span data-stu-id="9e997-111">The following example uses <xref:System.Linq.Enumerable.Select%2A> to return a sequence of only product names.</span></span>  
+### <a name="example"></a><span data-ttu-id="ce611-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="ce611-110">Example</span></span>  
+ <span data-ttu-id="ce611-111">L'exemple ci-dessous utilise <xref:System.Linq.Enumerable.Select%2A> pour retourner une séquence comportant uniquement des noms de produits.</span><span class="sxs-lookup"><span data-stu-id="ce611-111">The following example uses <xref:System.Linq.Enumerable.Select%2A> to return a sequence of only product names.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectSimple2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectsimple2)]
  [!code-vb[DP L2E Examples#SelectSimple2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectsimple2)]  
   
-### <a name="example"></a><span data-ttu-id="9e997-112">Exemple</span><span class="sxs-lookup"><span data-stu-id="9e997-112">Example</span></span>  
- <span data-ttu-id="9e997-113">L'exemple ci-dessous utilise la méthode <xref:System.Linq.Queryable.Select%2A> pour projeter les propriétés `Product.Name` et `Product.ProductID` dans une séquence de types anonymes.</span><span class="sxs-lookup"><span data-stu-id="9e997-113">The following example uses the <xref:System.Linq.Queryable.Select%2A> method to project the `Product.Name` and `Product.ProductID` properties into a sequence of anonymous types.</span></span>  
+### <a name="example"></a><span data-ttu-id="ce611-112">Exemple</span><span class="sxs-lookup"><span data-stu-id="ce611-112">Example</span></span>  
+ <span data-ttu-id="ce611-113">L'exemple ci-dessous utilise la méthode <xref:System.Linq.Queryable.Select%2A> pour projeter les propriétés `Product.Name` et `Product.ProductID` dans une séquence de types anonymes.</span><span class="sxs-lookup"><span data-stu-id="ce611-113">The following example uses the <xref:System.Linq.Queryable.Select%2A> method to project the `Product.Name` and `Product.ProductID` properties into a sequence of anonymous types.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectanonymoustypes)]
  [!code-vb[DP L2E Examples#SelectAnonymousTypes](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectanonymoustypes)]  
   
-## <a name="from--from--selectmany"></a><span data-ttu-id="9e997-114">De...</span><span class="sxs-lookup"><span data-stu-id="9e997-114">From …</span></span> <span data-ttu-id="9e997-115">De...</span><span class="sxs-lookup"><span data-stu-id="9e997-115">From …</span></span> <span data-ttu-id="9e997-116">(SelectMany)</span><span class="sxs-lookup"><span data-stu-id="9e997-116">(SelectMany)</span></span>  
+## <a name="from--from--selectmany"></a><span data-ttu-id="ce611-114">De...</span><span class="sxs-lookup"><span data-stu-id="ce611-114">From …</span></span> <span data-ttu-id="ce611-115">De...</span><span class="sxs-lookup"><span data-stu-id="ce611-115">From …</span></span> <span data-ttu-id="ce611-116">(SelectMany)</span><span class="sxs-lookup"><span data-stu-id="ce611-116">(SelectMany)</span></span>  
   
-### <a name="example"></a><span data-ttu-id="9e997-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="9e997-117">Example</span></span>  
- <span data-ttu-id="9e997-118">L'exemple ci-dessous utilise `From … From …` (l'équivalent de la méthode <xref:System.Linq.Enumerable.SelectMany%2A>) pour sélectionner toutes les commandes où `TotalDue` est inférieur à 500.</span><span class="sxs-lookup"><span data-stu-id="9e997-118">The following example uses `From … From …` (the equivalent of the <xref:System.Linq.Enumerable.SelectMany%2A> method) to select all orders where `TotalDue` is less than 500.00.</span></span>  
+### <a name="example"></a><span data-ttu-id="ce611-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="ce611-117">Example</span></span>  
+ <span data-ttu-id="ce611-118">L'exemple ci-dessous utilise `From … From …` (l'équivalent de la méthode <xref:System.Linq.Enumerable.SelectMany%2A>) pour sélectionner toutes les commandes où `TotalDue` est inférieur à 500.</span><span class="sxs-lookup"><span data-stu-id="ce611-118">The following example uses `From … From …` (the equivalent of the <xref:System.Linq.Enumerable.SelectMany%2A> method) to select all orders where `TotalDue` is less than 500.00.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectManyCompoundFrom](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanycompoundfrom)]
  [!code-vb[DP L2E Examples#SelectManyCompoundFrom](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanycompoundfrom)]  
   
-### <a name="example"></a><span data-ttu-id="9e997-119">Exemple</span><span class="sxs-lookup"><span data-stu-id="9e997-119">Example</span></span>  
- <span data-ttu-id="9e997-120">L'exemple ci-dessous utilise `From … From …` (l'équivalent de la méthode <xref:System.Linq.Enumerable.SelectMany%2A>) pour sélectionner toutes les commandes qui ont été passées le 1er octobre 2002 ou après.</span><span class="sxs-lookup"><span data-stu-id="9e997-120">The following example uses `From … From …` (the equivalent of the <xref:System.Linq.Enumerable.SelectMany%2A> method) to select all orders where the order was made on October 1, 2002 or later.</span></span>  
+### <a name="example"></a><span data-ttu-id="ce611-119">Exemple</span><span class="sxs-lookup"><span data-stu-id="ce611-119">Example</span></span>  
+ <span data-ttu-id="ce611-120">L'exemple ci-dessous utilise `From … From …` (l'équivalent de la méthode <xref:System.Linq.Enumerable.SelectMany%2A>) pour sélectionner toutes les commandes qui ont été passées le 1er octobre 2002 ou après.</span><span class="sxs-lookup"><span data-stu-id="ce611-120">The following example uses `From … From …` (the equivalent of the <xref:System.Linq.Enumerable.SelectMany%2A> method) to select all orders where the order was made on October 1, 2002 or later.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectManyCompoundFrom2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanycompoundfrom2)]
  [!code-vb[DP L2E Examples#SelectManyCompoundFrom2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanycompoundfrom2)]  
   
-### <a name="example"></a><span data-ttu-id="9e997-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="9e997-121">Example</span></span>  
- <span data-ttu-id="9e997-122">L'exemple ci-dessous utilise `From … From …` (l'équivalent de la méthode <xref:System.Linq.Enumerable.SelectMany%2A>) pour sélectionner toutes les commandes dont le total est supérieur à 10 000 et utilise l'assignation `From` pour éviter de demander deux fois le total.</span><span class="sxs-lookup"><span data-stu-id="9e997-122">The following example uses a `From … From …` (the equivalent of the <xref:System.Linq.Enumerable.SelectMany%2A> method) to select all orders where the order total is greater than 10000.00 and uses `From` assignment to avoid requesting the total twice.</span></span>  
+### <a name="example"></a><span data-ttu-id="ce611-121">Exemple</span><span class="sxs-lookup"><span data-stu-id="ce611-121">Example</span></span>  
+ <span data-ttu-id="ce611-122">L'exemple ci-dessous utilise `From … From …` (l'équivalent de la méthode <xref:System.Linq.Enumerable.SelectMany%2A>) pour sélectionner toutes les commandes dont le total est supérieur à 10 000 et utilise l'assignation `From` pour éviter de demander deux fois le total.</span><span class="sxs-lookup"><span data-stu-id="ce611-122">The following example uses a `From … From …` (the equivalent of the <xref:System.Linq.Enumerable.SelectMany%2A> method) to select all orders where the order total is greater than 10000.00 and uses `From` assignment to avoid requesting the total twice.</span></span>  
   
  [!code-csharp[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#selectmanyfromassignment)]
  [!code-vb[DP L2E Examples#SelectManyFromAssignment](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#selectmanyfromassignment)]  
   
-## <a name="see-also"></a><span data-ttu-id="9e997-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9e997-123">See Also</span></span>  
- [<span data-ttu-id="9e997-124">Requêtes dans LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="9e997-124">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="ce611-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ce611-123">See Also</span></span>  
+ [<span data-ttu-id="ce611-124">Requêtes dans LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="ce611-124">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
