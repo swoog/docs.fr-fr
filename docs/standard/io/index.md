@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254310"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394332"
 ---
 # <a name="file-and-stream-io"></a>Fichier et flux de données E/S
 E/S de fichier et de flux (entrées/sorties) fait référence au transfert de données vers ou depuis un support de stockage. Dans le .NET Framework, les espaces de noms `System.IO` contiennent des types qui permettent la lecture et l'écriture, de façon synchrone ou asynchrone, sur les flux de données et les fichiers. Ces espaces de noms contiennent également les types qui exécutent la compression et la décompression sur les fichiers, et ceux qui permettent la communication via des canaux et des ports série.  
@@ -137,13 +137,13 @@ Pour les conventions de nommage des chemins et les nouvelles méthodes pour expr
   
  Quelques différences importantes sont notables pour les opérations d'E/S dans les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] :  
   
--   Les types spécifiquement liés aux opérations sur les fichiers, tels que <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> et <xref:System.IO.DirectoryInfo> ne sont pas inclus dans [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. À la place, utilisez les types de l'espace de noms [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) de [!INCLUDE[wrt](../../../includes/wrt-md.md)], comme [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) et [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Les types spécifiquement liés aux opérations sur les fichiers, tels que <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> et <xref:System.IO.DirectoryInfo> ne sont pas inclus dans [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. À la place, utilisez les types de l'espace de noms [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) de [!INCLUDE[wrt](../../../includes/wrt-md.md)], comme [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) et [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   Le stockage isolé n'est pas disponible ; à la place, utilisez les [données d'application](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Utilisez les méthodes asynchrones, telles que <xref:System.IO.Stream.ReadAsync%2A> et <xref:System.IO.Stream.WriteAsync%2A> pour empêcher le blocage du thread d'interface utilisateur.  
   
--   Les types de compression <xref:System.IO.Compression.ZipFile> et <xref:System.IO.Compression.ZipFileExtensions> basés sur le chemin d'accès ne sont pas disponibles. À la place, utilisez les types de l'espace de noms [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+-   Les types de compression <xref:System.IO.Compression.ZipFile> et <xref:System.IO.Compression.ZipFileExtensions> basés sur le chemin d'accès ne sont pas disponibles. À la place, utilisez les types de l'espace de noms [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
   
  Vous pouvez convertir entre les flux .NET Framework et les flux Windows Runtime, si nécessaire. Pour plus d'informations, consultez la page [Guide pratique : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

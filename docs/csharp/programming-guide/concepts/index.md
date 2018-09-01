@@ -2,12 +2,12 @@
 title: Concepts de programmation (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: a557812ff99f09f20d3eb17ea7ff4dd80483a4a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 965ce386bcf6ff8d11c9e20616c1ca44640ddaf2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335635"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403021"
 ---
 # <a name="programming-concepts-c"></a>Concepts de programmation (C#)
 Cette section explique les concepts de programmation du langage C#.  
@@ -34,4 +34,4 @@ Cette section explique les concepts de programmation du langage C#.
   
 |||  
 |---|---|  
-|[Conseils relatifs aux performances](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) | Décrit plusieurs règles de base qui peuvent aider à augmenter les performances des applications.|
+|[Conseils relatifs aux performances](../../../../docs/framework/performance/performance-tips.md) | Décrit plusieurs règles de base qui peuvent aider à augmenter les performances des applications.|

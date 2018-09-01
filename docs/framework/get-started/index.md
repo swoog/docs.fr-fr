@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314748"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387771"
 ---
 # <a name="get-started-with-the-net-framework"></a>Bien démarrer avec le .NET Framework
 
@@ -69,7 +69,7 @@ Pour développer des applications ou des composants .NET Framework, procédez co
 
 1. Si elle n’est pas préinstallée sur votre système d’exploitation, installez la version du .NET Framework ciblée par votre application. La dernière version en production est le .NET Framework 4.7.2, préinstallé sur la Mise à jour du 10 avril 2018 de Windows 10 et disponible en téléchargement sur les versions précédentes du système d’exploitation Windows. Pour la configuration système requise du .NET Framework, consultez [Configuration requise](../../../docs/framework/get-started/system-requirements.md). Pour plus d’informations sur l’installation d’autres versions du .NET Framework, consultez [Guide d’installation](../../../docs/framework/install/guide-for-developers.md). Les autres packages .NET Framework sont fournis hors bande, ce qui signifie qu’ils sont publiés en continu, en dehors d’un cycle de publications classique ou planifié. Pour plus d’informations sur ces packages, consultez [Versions finales hors plage du .NET Framework](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
-2. Sélectionnez le ou les langages pris en charge par le .NET Framework que vous prévoyez d’utiliser pour développer vos applications. Microsoft propose plusieurs langages, notamment [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) et C++/CLI. (Un langage de programmation qui vous permet de développer des applications pour le .NET Framework respecte la [spécification CLI (Common Language Infrastructure)](http://go.microsoft.com/fwlink/?LinkId=199862).)
+2. Sélectionnez le ou les langages pris en charge par le .NET Framework que vous prévoyez d’utiliser pour développer vos applications. Microsoft propose plusieurs langages, notamment [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) et C++/CLI. (Un langage de programmation qui vous permet de développer des applications pour le .NET Framework respecte la [spécification CLI (Common Language Infrastructure)](https://go.microsoft.com/fwlink/?LinkId=199862).)
 
 3. Sélectionnez et installez l’environnement de développement à utiliser pour créer vos applications et qui prend en charge le ou les langages de programmation sélectionnés. L’environnement de développement intégré (IDE) de Microsoft pour les applications .NET Framework est [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Il est disponible dans plusieurs éditions.
 

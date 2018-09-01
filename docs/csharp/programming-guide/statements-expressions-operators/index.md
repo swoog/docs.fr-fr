@@ -9,39 +9,37 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 3759b6e09b1df53eb95cfce2a93f5197fb913adf
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 26a6046ac926a13c4f2a2f2cc4dfd250d998bc93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198193"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386166"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Instructions, expressions et opérateurs (guide de programmation C#)
 Le code C# qui comprend une application se compose d’instructions à base de mots clés, d’expressions et d’opérateurs. Cette section contient des informations concernant ces éléments fondamentaux d’un programme C#.  
   
  Pour plus d'informations, voir :  
   
--   [Instructions](../../../csharp/programming-guide/statements-expressions-operators/statements.md)  
+-   [Instructions](statements.md)  
   
--   [Expressions](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+-   [Expressions](expressions.md)  
   
     -   [Membres expression-bodied](expression-bodied-members.md)
  
--   [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+-   [Opérateurs](operators.md)  
   
--   [Fonctions anonymes](../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
+-   [Fonctions anonymes](anonymous-functions.md)  
   
--   [Opérateurs surchargeables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+-   [Opérateurs surchargeables](overloadable-operators.md)  
   
--   [Opérateurs de conversion](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+-   [Opérateurs de conversion](conversion-operators.md)  
   
-    -   [Utilisation d’opérateurs de conversion](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+    -   [Utilisation d’opérateurs de conversion](using-conversion-operators.md)  
   
-    -   [Comment : implémenter des conversions définies par l’utilisateur entre des structs](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+    -   [Guide pratique pour implémenter des conversions définies par l’utilisateur entre des structs](how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [Comment : utiliser la surcharge d’opérateur pour créer une classe de nombres complexes](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md)  
-  
--   [Comparaisons d’égalité](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+-   [Comparaisons d’égalité](equality-comparisons.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f14cac08a2f110d97b8f9f660eb3dd1e664165c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926da78a470911af3d8b068107f637406cb0eb9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289150"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391150"
 ---
 # <a name="c-keywords"></a>Mots clés C#
 Les mots clés sont des identificateurs réservés prédéfinis, qui ont des significations spécifiques pour le compilateur. Ils ne peuvent pas être utilisés comme identificateurs dans votre programme, sauf s’ils incluent `@` comme préfixe. Par exemple, `@if` est un identificateur valide, mais pas `if`, car `if` est un mot clé.  
@@ -59,6 +59,7 @@ Les mots clés sont des identificateurs réservés prédéfinis, qui ont des sig
 |[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (condition de filtre)](when.md)|   
 |[where (contrainte de type générique)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[where (clause de requête)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)

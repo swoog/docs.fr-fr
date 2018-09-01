@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396527"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404606"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Déploiement d'applications et du .NET Framework
 Cet article est conçu pour vous aider à prendre en main le processus de déploiement du .NET Framework avec votre application. Les informations fournies sont principalement destinées aux développeurs, aux OEM et aux administrateurs d'entreprise. Les utilisateurs qui souhaitent installer le .NET Framework sur leurs ordinateurs sont invités à lire la page [Installer le .NET Framework](~/docs/framework/install/index.md).  
@@ -58,13 +58,13 @@ Cet article est conçu pour vous aider à prendre en main le processus de déplo
   
 -   Déploiement du .NET Framework (pour les OEM et les administrateurs) :  
   
-    -   [Kit de déploiement et d'évaluation (ADK) Windows](http://go.microsoft.com/fwlink/p/?LinkId=254976)  
+    -   [Kit de déploiement et d'évaluation (ADK) Windows](https://go.microsoft.com/fwlink/p/?LinkId=254976)  
   
     -   [Guide de l'administrateur](../../../docs/framework/deployment/guide-for-administrators.md)  
   
  **Maintenance**  
   
--   Pour obtenir des informations générales, consultez le [blog .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=254977).  
+-   Pour obtenir des informations générales, consultez le [blog .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977).  
   
 -   [Détection des versions](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
   

@@ -2,12 +2,12 @@
 title: Articles de guide pratique (Guide C#)
 description: Série de petits conseils et d’exemples de code spécifiques courts
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999561"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421195"
 ---
 # <a name="how-to-c"></a>Guides pratiques (C#)
 
@@ -21,7 +21,7 @@ Plusieurs conseils et astuces sont des pratiques courantes des développeurs en 
 - [Découvrir les différences entre le passage d’un struct et d’une classe à une méthode](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Guide pratique pour utiliser des expressions lambda](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Résoudre les conflits de nom de type à l’aide de l’alias d’espace de noms global](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Utiliser la surcharge d’opérateur](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md).
+- [Utiliser la surcharge d’opérateur](../language-reference/keywords/operator.md).
 - [Implémenter et appeler une méthode d’extension personnalisée](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Même les programmeurs en C# pourraient vouloir [utiliser l’espace de noms `My` de VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Créer une méthode pour un type `enum` à l’aide des méthodes d’extension](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).

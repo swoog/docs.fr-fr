@@ -4,12 +4,12 @@ description: Présentation des outils et fonctionnalités de l’interface de li
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: e6519ef560026899344c7fc36d91c2409cf1df9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217930"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403404"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Outils de l’interface de ligne de commande (CLI) de .NET Core
 
@@ -119,7 +119,6 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-
 ---
 
 ### <a name="driver"></a>Pilote
@@ -140,7 +139,7 @@ Les arguments que vous passez sur la ligne de commande sont les arguments de la 
 
 ### <a name="options"></a>Options
 
-Les options que vous passez sur la ligne de commande sont les options de la commande appelée. Par exemple, lorsque vous exécutez `dotnet publish --output /build_output`, l’option `--output` et sa valeur sont passés à la commande `publish`. 
+Les options que vous passez sur la ligne de commande sont les options de la commande appelée. Par exemple, lorsque vous exécutez `dotnet publish --output /build_output`, l’option `--output` et sa valeur sont passés à la commande `publish`.
 
 ## <a name="migration-from-projectjson"></a>Migration à partir de project.json
 
@@ -148,5 +147,5 @@ Si vous avez utilisé les outils Preview 2 pour produire des projets *project.j
 
 ## <a name="see-also"></a>Voir aussi
 
- [Référentiel GitHub dotnet/CLI](https://github.com/dotnet/cli/)  
- [Guide d’installation de .NET Core](https://aka.ms/dotnetcoregs)  
+* [Référentiel GitHub dotnet/CLI](https://github.com/dotnet/cli/)  
+* [Guide d’installation de .NET Core](https://aka.ms/dotnetcoregs)  

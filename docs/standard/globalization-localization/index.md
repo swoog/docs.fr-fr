@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f03935c1ee38cec4ee20c4306213be484933f0bb
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 653a39d1e217d0478ff7c9b01c6ac146fe6b5fac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35250997"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419145"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>Internationalisation et localisation d’applications .NET
-Le développement d'une [application internationalisable](http://msdn.microsoft.com/goglobal/bb978433.aspx), notamment une application qui peut être localisée dans une ou plusieurs langues, implique trois étapes : l’internationalisation, l'étude de faisabilité de la localisation et la localisation.  
+Le développement d'une [application mondialisable](https://msdn.microsoft.com/goglobal/bb978433.aspx), notamment une application qui peut être localisée dans une ou plusieurs langues, implique trois étapes : la globalisation, l'examen de la faisabilité de localisation et la localisation.  
   
- [Internationalisation](../../../docs/standard/globalization-localization/globalization.md)  
- Cette étape implique la conception et le codage d'une application indépendante des cultures et des langues qui prend en charge les interfaces utilisateur localisées et les paramètres régionaux pour tous les utilisateurs. Elle implique également de prendre des décisions relatives à la conception et à la programmation qui ne sont pas basées sur des hypothèses spécifiques à une culture. Même si une application internationalisée n'est pas localisée, elle est néanmoins conçue et écrite pour pouvoir être ensuite localisée assez facilement dans une ou plusieurs langues.  
+ [Globalisation](../../../docs/standard/globalization-localization/globalization.md)  
+ Cette étape implique la conception et le codage d'une application indépendante des cultures et des langues qui prend en charge les interfaces utilisateur localisées et les paramètres régionaux pour tous les utilisateurs. Elle implique également de prendre des décisions relatives à la conception et à la programmation qui ne sont pas basées sur des hypothèses spécifiques à la culture. Même si une application globalisée n'est pas localisée, elle est néanmoins conçue et écrite pour pouvoir être ensuite localisée assez facilement en une ou plusieurs langues.  
   
  [Étude de faisabilité de la localisation](../../../docs/standard/globalization-localization/localizability-review.md)  
- Cette étape implique d’examiner le code et la conception d’une application pour vérifier qu’elle peut être localisée facilement et identifier les obstacles éventuels à la localisation, et de vérifier que le code exécutable de l’application est bien séparé de ses ressources. Si la phase d’internationalisation s'est déroulée correctement, l'étude de faisabilité de la localisation confirmera les choix de conception et de codage effectués pendant l’internationalisation. Cette phase d'étude peut également identifier les problèmes restants afin de ne pas avoir à modifier le code source d'une application pendant la phase de localisation.  
+ Cette étape implique d’examiner le code et la conception d’une application pour vérifier qu’elle peut être localisée facilement et identifier les obstacles éventuels à la localisation, et de vérifier que le code exécutable de l’application est bien séparé de ses ressources. Si la phase de globalisation s'est déroulée correctement, l'examen de la faisabilité de localisation confirmera les choix de conception et de codage effectués pendant la globalisation. La phase d'examen de la faisabilité de localisation peut également identifier les problèmes restants afin de ne pas avoir à modifier le code source d'une application pendant la phase de localisation.  
   
  [Localisation](../../../docs/standard/globalization-localization/localization.md)  
- Cette étape implique la personnalisation d'une application pour des cultures ou des régions spécifiques. Si les étapes d’internationalisation et de faisabilité de localisation ont été effectuées correctement, la localisation consiste principalement à traduire l'interface utilisateur.  
+ Cette étape implique la personnalisation d'une application pour des cultures ou des régions spécifiques. Si les étapes de globalisation et de faisabilité de localisation ont été effectuées correctement, la localisation consiste principalement à traduire l'interface utilisateur.  
   
  L'exécution de ces trois étapes offre deux avantages :  
   
@@ -40,11 +40,11 @@ Le développement d'une [application internationalisable](http://msdn.microsoft.
   
  .NET assure une prise en charge complète du développement d’applications internationalisables et localisées. En particulier, plusieurs membres de type de la bibliothèque de classes .NET facilitent l’internationalisation en retournant des valeurs qui reflètent les conventions de la culture de l’utilisateur actuel ou d’une culture spécifiée. De plus, .NET prend en charge les assemblys satellites, qui simplifient le processus de localisation d’une application.  
   
- Pour plus d'informations, consultez la [documentation sur l’internationalisation](/globalization/).  
+ Pour plus d'informations, consultez la [documentation sur la globalisation](/globalization/).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Internationalisation](../../../docs/standard/globalization-localization/globalization.md)  
- Décrit la première phase de création d'une application internationalisable, qui implique la conception et le codage d'une application indépendante des cultures et des langues.  
+ [Globalisation](../../../docs/standard/globalization-localization/globalization.md)  
+ Décrit la première phase de création d'une application mondialisable, qui implique la conception et le codage d'une application indépendante des cultures et des langues.  
   
  [Étude de faisabilité de la localisation](../../../docs/standard/globalization-localization/localizability-review.md)  
  Décrit la seconde phase de création d'une application localisée, qui implique l'identification d'obstacles éventuels à la localisation.  
@@ -56,7 +56,7 @@ Le développement d'une [application internationalisable](http://msdn.microsoft.
  Explique comment utiliser les méthodes et les classes .NET dépendantes de la culture par défaut pour obtenir des résultats indépendants de la culture.  
   
  [Bonnes pratiques pour développer des applications internationales](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
- Décrit les bonnes pratiques d’internationalisation, de localisation et de développement d'applications ASP.NET internationalisables.  
+ Décrit les meilleures pratiques en matière de globalisation, de localisation et de développement d'applications ASP.NET mondialisables.  
   
 ## <a name="reference"></a>Référence  
  Espace de noms <xref:System.Globalization?displayProperty=nameWithType>  

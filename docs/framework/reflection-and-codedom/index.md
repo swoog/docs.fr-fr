@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 979c8bb2c851b9c49d74110f53ee5ce0f04e7acc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398818"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418531"
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Programmation dynamique dans le .NET Framework
 Cette section de la documentation fournit des informations sur la programmation dynamique dans le .NET Framework.  
@@ -33,4 +33,4 @@ Cette section de la documentation fournit des informations sur la programmation 
 ## <a name="related-sections"></a>Rubriques connexes  
  [Guide de développement](../../../docs/framework/development-guide.md)  
   
- [Lecture avancée pour le .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Lecture avancée pour le .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
