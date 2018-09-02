@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 49c24b12616834ecc532a5568c0971e3dd75cfd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bcd29531858f9cf014042db7ee447cecfdd89b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527759"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399788"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Comment : hériter de formulaires à l'aide de la boîte de dialogue Sélecteur d'héritage
 Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet consiste à utiliser la boîte de dialogue **Sélecteur d’héritage**. Avec elle, vous pouvez tirer parti du code ou des interfaces utilisateur que vous avez déjà créés dans d'autres solutions.  
@@ -19,7 +19,7 @@ Le moyen le plus simple d’hériter d’un formulaire ou d’un autre objet con
 > [!NOTE]
 >  Pour hériter d’un formulaire avec la boîte de dialogue **Sélecteur d’héritage**, il faut que le projet contenant ce formulaire ait été intégré à un fichier exécutable ou une DLL. Pour générer le projet, choisissez **Générer la solution** dans le menu **Générer**.  
 >   
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Pour créer un formulaire Windows hérité d'un formulaire existant à l'aide du Sélecteur d'héritage  
   

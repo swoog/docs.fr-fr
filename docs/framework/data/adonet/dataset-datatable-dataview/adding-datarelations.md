@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 451ee0eee466efca86345ea7112e9b178a2c66e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d0f481979ead7af775d462a2624ec43080e2c5a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756941"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399192"
 ---
 # <a name="adding-datarelations"></a>Ajout de DataRelations
 Dans un objet <xref:System.Data.DataSet> contenant plusieurs objets <xref:System.Data.DataTable>, vous pouvez utiliser des objets <xref:System.Data.DataRelation> pour associer une table à une autre, pour vous déplacer dans les tables et pour retourner les lignes enfants ou parentes d'une table associée.  
   
- Les arguments requis pour créer un **DataRelation** sont un nom pour le **DataRelation** est créé et un tableau d’un ou plusieurs <xref:System.Data.DataColumn> références aux colonnes de servir de parent et enfant colonnes dans la relation. Après avoir créé un **DataRelation**, vous pouvez l’utiliser pour naviguer entre les tables et de récupérer des valeurs.  
+ Les arguments requis pour créer un **DataRelation** sont un nom pour le **DataRelation** est créé et un tableau d’un ou plusieurs <xref:System.Data.DataColumn> références aux colonnes qui servent de parent et enfant colonnes dans la relation. Après avoir créé un **DataRelation**, vous pouvez l’utiliser pour naviguer entre les tables et de récupérer des valeurs.  
   
- Ajout d’un **DataRelation** à un <xref:System.Data.DataSet> ajoute par défaut, un <xref:System.Data.UniqueConstraint> à la table parente et une <xref:System.Data.ForeignKeyConstraint> à la table enfant. Pour plus d’informations sur ces contraintes par défaut, consultez [contraintes DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
+ Ajout d’un **DataRelation** à un <xref:System.Data.DataSet> ajoute, par défaut, un <xref:System.Data.UniqueConstraint> à la table parente et une <xref:System.Data.ForeignKeyConstraint> à la table enfant. Pour plus d’informations sur ces contraintes par défaut, consultez [contraintes de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
   
  L’exemple de code suivant crée un **DataRelation** à l’aide de deux <xref:System.Data.DataTable> des objets dans un <xref:System.Data.DataSet>. Chaque <xref:System.Data.DataTable> contient une colonne nommée **CustID**, qui sert de lien entre les deux <xref:System.Data.DataTable> objets. L’exemple ajoute un seul **DataRelation** à la **Relations** collection de la <xref:System.Data.DataSet>. Le premier argument dans l’exemple spécifie le nom de la **DataRelation** en cours de création. Le deuxième argument définit le parent **DataColumn** et le troisième argument définit l’enfant **DataColumn**.  
   
@@ -33,8 +33,8 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- A **DataRelation** a également un **Nested** propriété qui, lorsque la valeur **true**, imbrique les lignes de la table enfant dans la ligne associée de la table parente lors de l’écriture en tant qu’éléments XML à l’aide de <xref:System.Data.DataSet.WriteXml%2A> . Pour plus d’informations, consultez [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
+ Un **DataRelation** a également un **Nested** propriété qui, lorsque la valeur **true**, imbrique les lignes de la table enfant dans la ligne associée de la table parente lors de l’écriture en tant qu’éléments XML à l’aide de <xref:System.Data.DataSet.WriteXml%2A> . Pour plus d’informations, consultez [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

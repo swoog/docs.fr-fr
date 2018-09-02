@@ -2,12 +2,12 @@
 title: Traitement des commandes avec une stratégie
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519416"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398368"
 ---
 # <a name="order-processing-with-policy"></a>Traitement des commandes avec une stratégie
 L'exemple de stratégie du traitement des commandes présente quelques-unes des fonctionnalités clés contenues dans le [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] de Windows Workflow Foundation (WF). Les fonctionnalités suivantes du moteur de règles WF sont nouvelles :  
@@ -24,7 +24,7 @@ L'exemple de stratégie du traitement des commandes présente quelques-unes des 
  L'exemple présente un projet `OrderProcessingPolicy` contenant une commande client composée d'une liste numérotée d'éléments disponibles et d'un code postal. Le traitement de cette commande aboutit si les deux entrées sont correctes ; dans le cas contraire, la stratégie crée des objets d'erreur en utilisant un opérateur `+` surchargé et une méthode d'extension prédéfinie afin d'informer l'utilisateur de ces erreurs.  
   
 > [!NOTE]
->  Pour plus d’informations sur les méthodes d’extension, consultez [spécification c# Version 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Pour plus d’informations sur les méthodes d’extension, consultez [spécification c# Version 3.0](https://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Cet exemple est composé des projets suivants :  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f023abe6f803413b862d695a73988c3ea779a88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526638"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398934"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Comment : créer un ToolStrip Windows Forms de base avec des éléments standard à l'aide du concepteur
-La procédure suivante montre comment créer un <xref:System.Windows.Forms.ToolStrip> et ajouter sept <xref:System.Windows.Forms.ToolStripButton> contrôles qui représentent des tâches types.  
+La procédure suivante montre comment créer un <xref:System.Windows.Forms.ToolStrip> et sept <xref:System.Windows.Forms.ToolStripButton> contrôles qui représentent les tâches typiques.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-standard-items-in-the-designer"></a>Pour ajouter des éléments dans le Concepteur  
   

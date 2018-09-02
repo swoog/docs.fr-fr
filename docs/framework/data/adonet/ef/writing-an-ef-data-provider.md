@@ -2,15 +2,15 @@
 title: Écriture d’un fournisseur de données Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 578de94aa191d7302b762f1cdc87d4a6810037e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762632"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401459"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Écriture d’un fournisseur de données Entity Framework
-Cette section explique comment écrire un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournisseur pour prendre en charge d’une source de données autre que SQL Server. Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] comprend un fournisseur qui prend en charge de SQL Server.  
+Cette section explique comment écrire un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournisseur pour prendre en charge d’une source de données autres que SQL Server. Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] inclut un fournisseur qui prend en charge de SQL Server.  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>Présentation du modèle de fournisseur Entity Framework  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] est une base de données indépendante et il est possible d'écrire un fournisseur à l'aide du modèle de fournisseur ADO.NET pour se connecter à un jeu divers de sources de données.  
@@ -32,7 +32,7 @@ Cette section explique comment écrire un [!INCLUDE[adonet_ef](../../../../../in
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>Exemple  
- Consultez le [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) pour obtenir un exemple d’un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournisseur qui prend en charge une source de données autre que SQL Server.  
+ Consultez le [Entity Framework Sample Provider](https://go.microsoft.com/fwlink/?LinkId=180616) pour obtenir un exemple d’un [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] fournisseur qui prend en charge d’une source de données autres que SQL Server.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Génération SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  

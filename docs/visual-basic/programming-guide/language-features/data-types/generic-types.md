@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925551"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397362"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Types génériques Visual Basic (Visual Basic)
 Un *type générique* est un élément de programmation unique qui s’adapte pour exécuter la même fonction sur différents types de données. Quand vous définissez une classe ou procédure générique, vous n’avez pas besoin de définir une version distincte pour chaque type de données pour lequel vous voulez exécuter la fonction.  
@@ -158,4 +158,4 @@ Tournevis configuré comme un outil générique
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Object (type de données)](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
  [Covariance et contravariance](../../concepts/covariance-contravariance/index.md)  
- [Itérateurs](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+ [Itérateurs](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)

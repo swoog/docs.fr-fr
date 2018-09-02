@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], developing using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
-ms.openlocfilehash: 935358664f93b6428b9153a9bcbed862aeee07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ab459f37e825d71163e375e10f30fbe3e23911a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528666"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397601"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Développement de contrôles Windows Forms personnalisés avec le .NET Framework
 Les contrôles Windows Forms sont des composants réutilisables qui encapsulent des fonctionnalités d'interface utilisateur et sont utilisés dans des applications Windows côté client. Windows Forms fournit non seulement de nombreux contrôles prêts à l'emploi, mais également l'infrastructure pour le développement de vos propres contrôles. Vous pouvez combiner ou étendre des contrôles existants, ou encore créer vos propres contrôles personnalisés. Cette section fournit des informations générales et des exemples pour vous aider à développer des contrôles Windows Forms.  
@@ -51,13 +51,13 @@ Les contrôles Windows Forms sont des composants réutilisables qui encapsulent 
  Décrit cette classe et propose des liens vers tous ses membres.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Attributs en mode design pour les composants](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
+ [Attributs en mode design pour les composants](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  
  Répertorie les attributs de métadonnées à appliquer aux composants et aux contrôles pour qu'ils s'affichent correctement au moment du design dans les concepteurs visuels.  
   
- [Extension de la prise en charge au moment du design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Extension de la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  Décrit comment implémenter des classes telles que les éditeurs et concepteurs qui fournissent la prise en charge au moment du design.  
   
- [Guide pratique : accorder la licence d’utilisation de composants et de contrôles](http://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
+ [Guide pratique : accorder la licence d’utilisation de composants et de contrôles](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57)  
  Décrit comment implémenter la gestion des licences dans votre contrôle ou composant.  
   
- Voir aussi [Développement de contrôles Windows Forms au moment du design](http://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).
+ Voir aussi [Développement de contrôles Windows Forms au moment du design](https://msdn.microsoft.com/library/w29y3h59\(v=vs.110\)).

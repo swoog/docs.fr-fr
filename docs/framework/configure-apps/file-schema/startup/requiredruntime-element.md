@@ -12,12 +12,12 @@ ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 184547dd47e728f17f28105e74b2ca67c1436efc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749980"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398730"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; élément
 Spécifie que l’application prend en charge uniquement la version 1.0 du common language runtime. Cet élément est déconseillé et ne doit plus être utilisé. Le [ `supportedRuntime` ](supportedruntime-element.md) élément doit être utilisé à la place.
@@ -41,7 +41,7 @@ safemode="true|false"/>
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`version`|Attribut facultatif.<br /><br /> Valeur de chaîne qui spécifie la version du .NET Framework qui prend en charge de cette application. La valeur de chaîne doit correspondre le nom de répertoire se trouve sous la racine d’installation de .NET Framework. Le contenu de la valeur de chaîne n’est pas analysé.|  
+|`version`|Attribut facultatif.<br /><br /> Valeur de chaîne qui spécifie la version du .NET Framework qui prend en charge de cette application. La valeur de chaîne doit correspondre au nom de répertoire trouvé sous la racine d’installation de .NET Framework. Le contenu de la valeur de chaîne n’est pas analysé.|  
 |`safemode`|Attribut facultatif.<br /><br /> Spécifie si le code de démarrage runtime recherche dans le Registre pour déterminer la version du runtime.|  
   
 ## <a name="safemode-attribute"></a>SafeMode attribut  
@@ -65,12 +65,12 @@ safemode="true|false"/>
  Les applications générées pour prendre en charge uniquement la version 1.0 du runtime doivent utiliser le `<requiredRuntime>` élément. Les applications générées à l’aide de la version 1.1 ou ultérieure du runtime doivent utiliser le `<supportedRuntime>` élément.  
   
 > [!NOTE]
->  Si vous utilisez la [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) de fonction pour spécifier le fichier de configuration, vous devez utiliser le `<requiredRuntime>` élément pour toutes les versions du runtime. Le `<supportedRuntime>` élément est ignoré lorsque vous utilisez [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
+>  Si vous utilisez le [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) de fonction pour spécifier le fichier de configuration, vous devez utiliser le `<requiredRuntime>` élément pour toutes les versions du runtime. Le `<supportedRuntime>` élément est ignoré lorsque vous utilisez [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
   
- Le `version` chaîne d’attribut doit correspondre au nom de dossier d’installation de la version spécifiée du .NET Framework. Cette chaîne n’est pas interprétée. Si le code de démarrage runtime ne trouve pas le dossier correspondant, le runtime n’est pas chargé ; le code de démarrage affiche un message d’erreur et se ferme.  
+ Le `version` chaîne de l’attribut doit correspondre au nom de dossier d’installation de la version spécifiée du .NET Framework. Cette chaîne n’est pas interprétée. Si le code de démarrage runtime ne trouve pas de dossier correspondant, le runtime n’est pas chargé ; le code de démarrage affiche un message d’erreur et se ferme.  
   
 > [!NOTE]
->  Le code de démarrage d’une application qui est hébergé dans Microsoft Internet Explorer ignore le `<requiredRuntime>` élément.  
+>  Le code de démarrage pour une application qui est hébergé dans Microsoft Internet Explorer ignore les `<requiredRuntime>` élément.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment spécifier la version du runtime dans un fichier de configuration.  
@@ -86,4 +86,4 @@ safemode="true|false"/>
 ## <a name="see-also"></a>Voir aussi  
  [Schéma des paramètres de démarrage](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Spécification de la version du runtime à utiliser](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+ [\<PaveOver> Spécification de la version du runtime à utiliser](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)

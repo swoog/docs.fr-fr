@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f6f0cbc9-f7bf-4d6e-875f-ad1ba0b4aa62
-ms.openlocfilehash: 9b485ac3f12587256a56fdfa44cf8b9c8b41a6bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24657f541daf5bb098f8db3b59a3241ecf832d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365340"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398863"
 ---
 # <a name="transaction-and-bulk-copy-operations"></a>Transaction et opérations de copie en bloc
 Les opérations de copie en bloc peuvent être réalisées sous forme d’opérations isolées ou en tant qu’étape d’une transaction en comptant plusieurs. Cette dernière option vous permet d'effectuer plus d'une opération de copie en bloc dans la même transaction et d'effectuer d'autres opérations de base de données (telles que des insertions, des mises à jour et des suppressions) tout en vous laissant la possibilité de valider ou de restaurer toute la transaction.  
   
- Par défaut, une opération de copie en bloc est exécutée sous forme d'opération isolée : elle se produit de manière non traitée, sans possibilité de restauration. Si vous devez restaurer tout ou partie de la copie en bloc lorsqu’une erreur se produit, vous pouvez utiliser un <xref:System.Data.SqlClient.SqlBulkCopy>-gérés transaction, effectuer l’opération de copie en bloc dans une transaction existante ou être inscrit dans un **System.Transactions** <xref:System.Transactions.Transaction>.  
+ Par défaut, une opération de copie en bloc est exécutée sous forme d'opération isolée : elle se produit de manière non traitée, sans possibilité de restauration. Si vous devez restaurer tout ou partie de la copie en bloc lorsqu’une erreur se produit, vous pouvez utiliser un <xref:System.Data.SqlClient.SqlBulkCopy>-managé transaction, effectuer l’opération de copie en bloc dans une transaction existante ou être inscrit dans un **System.Transactions** <xref:System.Transactions.Transaction>.  
   
 ## <a name="performing-a-non-transacted-bulk-copy-operation"></a>Exécution d'une opération de copie en bloc non traitée  
  L'application console suivante montre ce qui se passe lorsqu'une opération de copie en bloc non traitée rencontre une erreur dans l'opération.  
   
- Dans l’exemple, la table source et la table de destination comportent chacune une `Identity` colonne nommée **ProductID**. Le code commence par préparer la table de destination en supprimant toutes les lignes et puis en insérant une simple ligne dont **ProductID** est censé exister dans la table source. Par défaut, une nouvelle valeur pour la colonne `Identity` est générée dans la table de destination pour chaque ligne ajoutée. Dans cet exemple, une option est définie lorsque la connexion est ouverte qui oblige le processus de chargement en bloc à utiliser les valeurs `Identity` de la table source.  
+ Dans l’exemple, la table source et la table de destination comportent chacune un `Identity` colonne nommée **ProductID**. Le code commence par préparer la table de destination en supprimant toutes les lignes et puis en insérant une seule ligne dont **ProductID** est connues pour exister dans la table source. Par défaut, une nouvelle valeur pour la colonne `Identity` est générée dans la table de destination pour chaque ligne ajoutée. Dans cet exemple, une option est définie lorsque la connexion est ouverte qui oblige le processus de chargement en bloc à utiliser les valeurs `Identity` de la table source.  
   
  L'opération de copie en bloc est exécutée avec la propriété <xref:System.Data.SqlClient.SqlBulkCopy.BatchSize%2A> ayant la valeur 10. Lorsque l'opération rencontre la ligne non valide, une exception est levée. Dans ce premier exemple, l'opération de copie en bloc n'est pas traitée. Tous les lots copiés jusqu’au moment de l’erreur sont validés ; le lot contenant la clé dupliquée est annulé et l’opération de copie en bloc est suspendue avant la reprise du traitement des autres lots.  
   
 > [!NOTE]
->  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
+>  Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [exemple de configuration de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
   
  [!code-csharp[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.DefaultTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.DefaultTransaction/VB/source.vb#1)]  
@@ -41,7 +41,7 @@ Les opérations de copie en bloc peuvent être réalisées sous forme d’opéra
  L'application console suivante est semblable à l'exemple précédent, avec une exception : dans cet exemple, l'opération de copie en bloc gère ses propres transactions. Tous les lots copiés jusqu’au moment de l’erreur sont validés ; le lot contenant la clé dupliquée est annulé et l’opération de copie en bloc est suspendue avant la reprise du traitement des autres lots.  
   
 > [!IMPORTANT]
->  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
+>  Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [exemple de configuration de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
   
  [!code-csharp[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.InternalTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.InternalTransaction/VB/source.vb#1)]  
@@ -54,11 +54,11 @@ Les opérations de copie en bloc peuvent être réalisées sous forme d’opéra
  L'application console suivante est semblable au premier exemple (non accompli), avec une exception : dans cet exemple, l'opération de copie en bloc est incluse dans une transaction externe plus large. Si l’erreur de violation de clé primaire se produit, toute la transaction est annulée et aucune ligne n’est ajoutée à la table de destination.  
   
 > [!IMPORTANT]
->  Cet exemple ne s’exécutera pas à moins que vous ayez créé les tables de travail comme décrit dans [configuration exemple de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
+>  Cet exemple ne s’exécutera pas, sauf si vous avez créé les tables de travail comme décrit dans [exemple de configuration de copie en bloc](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md). Ce code est fourni pour illustrer la syntaxe pour l’utilisation de **SqlBulkCopy** uniquement. Si les tables source et de destination se trouvent dans la même instance de SQL Server, il est plus facile et plus rapide d’utiliser un [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] `INSERT … SELECT` instruction pour copier les données.  
   
  [!code-csharp[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/CS/source.cs#1)]
  [!code-vb[DataWorks SqlBulkCopy.SqlTransaction#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlBulkCopy.SqlTransaction/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérations de copie en bloc dans SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 119c4397dee76429e776378ee89fa49747dbfce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8f9e83468a7b189b96efca2e175c0f3fe0dfff
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544341"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399351"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>Comment : utiliser un objet ThicknessConverter
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment créer une instance de <xref:System.Windows.ThicknessConverter> et l’utiliser pour modifier l’épaisseur d’une bordure.  
   
- L’exemple définit une méthode personnalisée appelée `changeThickness`; cette méthode convertit d’abord le contenu d’un <xref:System.Windows.Controls.ListBoxItem>, tel que défini dans une fonction [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier, à une instance de <xref:System.Windows.Thickness>et convertit le contenu par la suite un <xref:System.String>. Cette méthode passe le <xref:System.Windows.Controls.ListBoxItem> à un <xref:System.Windows.ThicknessConverter> objet, qui convertit le <xref:System.Windows.Controls.ContentControl.Content%2A> d’un <xref:System.Windows.Controls.ListBoxItem> à une instance de <xref:System.Windows.Thickness>. Cette valeur est ensuite retournée comme la valeur de la <xref:System.Windows.Controls.Border.BorderThickness%2A> propriété de la <xref:System.Windows.Controls.Border>.  
+ L’exemple définit une méthode personnalisée nommée `changeThickness`; cette méthode convertit d’abord le contenu d’un <xref:System.Windows.Controls.ListBoxItem>, tel que défini dans une fonction [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichier, à une instance de <xref:System.Windows.Thickness>et plus tard convertit le contenu dans un <xref:System.String>. Cette méthode passe le <xref:System.Windows.Controls.ListBoxItem> à un <xref:System.Windows.ThicknessConverter> objet, qui convertit le <xref:System.Windows.Controls.ContentControl.Content%2A> d’un <xref:System.Windows.Controls.ListBoxItem> à une instance de <xref:System.Windows.Thickness>. Cette valeur est ensuite retournée comme la valeur de la <xref:System.Windows.Controls.Border.BorderThickness%2A> propriété de la <xref:System.Windows.Controls.Border>.  
   
  Cet exemple ne s’exécute pas.  
   
@@ -30,6 +30,6 @@ ms.locfileid: "33544341"
  <xref:System.Windows.Thickness>  
  <xref:System.Windows.ThicknessConverter>  
  <xref:System.Windows.Controls.Border>  
- [Comment : modifier la propriété Margin](http://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [Comment : convertir un ListBoxItem en un nouveau Type de données](http://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
+ [Comment : modifier la propriété Margin](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
+ [Comment : convertir un ListBoxItem en un nouveau Type de données](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
  [Vue d’ensemble de Panel](../../../../docs/framework/wpf/controls/panels-overview.md)

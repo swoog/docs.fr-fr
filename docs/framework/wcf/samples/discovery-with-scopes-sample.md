@@ -2,12 +2,12 @@
 title: Exemple Discovery with Scopes
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: ee6fdb69f6417e6c43d671c7c76bda8af067d5a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9adc33d73642a42a8ba948b3c5bf75bd4bc1f5c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502198"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398133"
 ---
 # <a name="discovery-with-scopes-sample"></a>Exemple Discovery with Scopes
 Cet exemple montre comment utiliser des portées pour catégoriser des points de terminaison détectables et comment utiliser <xref:System.ServiceModel.Discovery.DiscoveryClient> pour rechercher des points de terminaison de façon asynchrone. Sur le service, cet exemple montre comment personnaliser la découverte pour chaque point de terminaison en ajoutant un comportement de découverte du point de terminaison, et en l'utilisant pour ajouter une portée au point de terminaison et contrôler la fonctionnalité de découverte du point de terminaison. Sur le client, l'exemple passe en revue la façon dont les clients peuvent créer un <xref:System.ServiceModel.Discovery.DiscoveryClient> et ajuster les paramètres de recherche de manière à inclure des portées en les ajoutant à <xref:System.ServiceModel.Discovery.FindCriteria>. Cet exemple montre comment les clients peuvent limiter les réponses en ajoutant un critère d'arrêt.  
@@ -20,7 +20,7 @@ Cet exemple montre comment utiliser des portées pour catégoriser des points de
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Consultez [configuration de HTTP et HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) pour plus d’informations. L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d'utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle : `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1.  Cet exemple utilise des points de terminaison HTTP et pour exécuter cet exemple, des listes de contrôle d'accès (ACL) d'URL appropriées doivent être ajoutées. Consultez [configuration de HTTP et HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) pour plus d’informations. L'exécution de la commande suivante avec un privilège élevé doit ajouter les ACL appropriées. Vous pouvez substituer vos domaine et nom d'utilisateur aux arguments suivants si la commande ne fonctionne pas telle quelle : `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2.  Générez la solution.  
   
@@ -33,7 +33,7 @@ Cet exemple montre comment utiliser des portées pour catégoriser des points de
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   

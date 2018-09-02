@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 275ae52a36ed9766e2569bd6c8ecdea78ea56e0b
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255080"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399472"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Comment : hériter des Windows Forms
 Créer des Windows Forms en héritant de formulaires de base est un moyen pratique de dupliquer vos efforts sans avoir à recréer entièrement un formulaire chaque fois que vous en avez besoin.  

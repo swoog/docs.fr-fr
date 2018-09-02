@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: b70387e604b0917d154fc056b904e9ee05f6fbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a11dcfc9030944365adda3656a8895912b0ef0d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557236"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399211"
 ---
 # <a name="tooltip-overview"></a>Vue d'ensemble de l'info-bulle
-Une info-bulle est une petite fenêtre contextuelle qui apparaît lorsqu’un utilisateur place le pointeur de la souris au-dessus d’un élément, tel qu’un <xref:System.Windows.Controls.Button>. Cette rubrique présente l’info-bulle et explique comment créer et personnaliser son contenu.  
+Une info-bulle est une petite fenêtre contextuelle qui s’affiche lorsqu’un utilisateur place le pointeur de la souris au-dessus d’un élément, tel qu’un <xref:System.Windows.Controls.Button>. Cette rubrique présente l’info-bulle et explique comment créer et personnaliser son contenu.  
   
  
   
@@ -42,34 +42,34 @@ Une info-bulle est une petite fenêtre contextuelle qui apparaît lorsqu’un ut
   
  [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
- L’exemple suivant utilise le code pour générer un <xref:System.Windows.Controls.ToolTip> objet. L’exemple crée un <xref:System.Windows.Controls.ToolTip> (`tt`) et l’associe à un <xref:System.Windows.Controls.Button>.  
+ L’exemple suivant utilise le code pour générer un <xref:System.Windows.Controls.ToolTip> objet. L’exemple crée un <xref:System.Windows.Controls.ToolTip> (`tt`) et l’associe un <xref:System.Windows.Controls.Button>.  
   
  [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
- Vous pouvez également créer le contenu d’info-bulle qui n’est pas défini comme un <xref:System.Windows.Controls.ToolTip> objet en mettant le contenu de l’info-bulle dans un élément de disposition, comme un <xref:System.Windows.Controls.DockPanel>. L’exemple suivant montre comment définir la <xref:System.Windows.FrameworkElement.ToolTip%2A> propriété d’un <xref:System.Windows.Controls.TextBox> au contenu qui est inclu dans un <xref:System.Windows.Controls.DockPanel> contrôle.  
+ Vous pouvez également créer le contenu d’info-bulle qui n’est pas défini comme un <xref:System.Windows.Controls.ToolTip> objet en plaçant le contenu de l’info-bulle dans un élément de disposition, comme un <xref:System.Windows.Controls.DockPanel>. L’exemple suivant montre comment définir le <xref:System.Windows.FrameworkElement.ToolTip%2A> propriété d’un <xref:System.Windows.Controls.TextBox> au contenu qui est inclu dans un <xref:System.Windows.Controls.DockPanel> contrôle.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
 ## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a>Utilisation des propriétés de l’info-bulle et des classes ToolTipService  
- Vous pouvez personnaliser le contenu de l’info-bulle en définissant des propriétés visuelles et en appliquant des styles. Si vous définissez l’info-bulle contenu comme un <xref:System.Windows.Controls.ToolTip> de l’objet, vous pouvez définir les propriétés visuelles de la <xref:System.Windows.Controls.ToolTip> objet. Dans le cas contraire, vous devez définir des propriétés jointes équivalentes sur le <xref:System.Windows.Controls.ToolTipService> classe.  
+ Vous pouvez personnaliser le contenu de l’info-bulle en définissant des propriétés visuelles et en appliquant des styles. Si vous définissez l’info-bulle contenu comme un <xref:System.Windows.Controls.ToolTip> de l’objet, vous pouvez définir les propriétés visuelles de la <xref:System.Windows.Controls.ToolTip> objet. Sinon, vous devez définir des propriétés jointes équivalentes sur la <xref:System.Windows.Controls.ToolTipService> classe.  
   
  Pour obtenir un exemple montrant comment définir des propriétés pour spécifier la position du contenu de l’info-bulle à l’aide de la <xref:System.Windows.Controls.ToolTip> et <xref:System.Windows.Controls.ToolTipService> propriétés, consultez [positionner une info-bulle](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
   
 <a name="StylingToolTip"></a>   
 ## <a name="styling-a-tooltip"></a>Application d’un style à une info-bulle  
- Vous pouvez appliquer un style un <xref:System.Windows.Controls.ToolTip> en définissant une personnalisée <xref:System.Windows.Style>. L’exemple suivant définit un <xref:System.Windows.Style> appelé `Simple` qui montre comment compenser le placement de la <xref:System.Windows.Controls.ToolTip> et modifier son apparence en définissant le <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, et <xref:System.Windows.Controls.Control.FontWeight%2A>.  
+ Vous pouvez appliquer un style un <xref:System.Windows.Controls.ToolTip> en définissant un personnalisé <xref:System.Windows.Style>. L’exemple suivant définit un <xref:System.Windows.Style> appelé `Simple` qui montre comment décaler le positionnement de la <xref:System.Windows.Controls.ToolTip> et modifier son apparence en définissant le <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, et <xref:System.Windows.Controls.Control.FontWeight%2A>.  
   
  [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
 <a name="UsingtheToolTipServiceTimeIntervalProperties"></a>   
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Utilisation des propriétés d’intervalle de temps de ToolTipService  
- Le <xref:System.Windows.Controls.ToolTipService> classe fournit les propriétés suivantes pour vous permettre de définir des info-bulle affichent des heures : <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
+ Le <xref:System.Windows.Controls.ToolTipService> classe fournit les propriétés suivantes pour vous permettent de définir des info-bulle affichent des heures : <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Utilisez le <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriétés pour spécifier un délai, généralement bref, avant qu’un <xref:System.Windows.Controls.ToolTip> s’affiche et également pour spécifier la durée pendant laquelle un <xref:System.Windows.Controls.ToolTip> reste visible. Pour plus d’informations, consultez la page [Comment : différer l’affichage d’une info-bulle](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Utilisez le <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> et <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> propriétés pour spécifier un délai, généralement bref, avant qu’un <xref:System.Windows.Controls.ToolTip> s’affiche et également de spécifier la durée pendant laquelle un <xref:System.Windows.Controls.ToolTip> reste visible. Pour plus d’informations, consultez la page [Comment : différer l’affichage d’une info-bulle](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
- Le <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriété détermine si les info-bulles des différents contrôles apparaissent sans délai initial lorsque vous déplacez le pointeur de souris rapidement entre eux. Pour plus d’informations sur la <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriété, consultez [utiliser la propriété BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ Le <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriété détermine si les info-bulles des différents contrôles apparaissent sans délai initial lorsque vous déplacez rapidement le pointeur de la souris entre eux. Pour plus d’informations sur la <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> propriété, consultez [utiliser la propriété BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
  L’exemple suivant montre comment définir ces propriétés pour une info-bulle.  
   

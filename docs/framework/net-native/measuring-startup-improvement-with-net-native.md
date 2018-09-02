@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b010307baa8634a4bb62310318d1d718a2525d4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397739"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399761"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Mesure de l'amélioration du démarrage avec .NET Native
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] améliore de façon significative le temps de lancement des applications. Cette amélioration est particulièrement visible sur les appareils portables à basse consommation d'énergie hébergeant des applications complexes. Cette rubrique facilite la prise en main de l'instrumentation de base servant à mesurer cette amélioration du démarrage.  
@@ -54,10 +54,10 @@ ms.locfileid: "33397739"
  Quand l'application est instrumentée, vous êtes prêt à collecter des événements.  
   
 ## <a name="gathering-events-with-perfview"></a>Collecte d'événements avec PerfView  
- PerfView utilise des événements ETW pour vous aider à effectuer toutes sortes d'investigations de performances sur votre application. Il inclut également une interface utilisateur graphique de configuration qui vous permet d'activer ou de désactiver la journalisation de différents types d'événement. PerfView est un outil gratuit qui peut être téléchargé à partir du [Centre de téléchargement Microsoft](http://www.microsoft.com/download/details.aspx?id=28567). Pour plus d’informations, regardez les [vidéos du didacticiel PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial).  
+ PerfView utilise des événements ETW pour vous aider à effectuer toutes sortes d'investigations de performances sur votre application. Il inclut également une interface utilisateur graphique de configuration qui vous permet d'activer ou de désactiver la journalisation de différents types d'événement. PerfView est un outil gratuit qui peut être téléchargé à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=28567). Pour plus d’informations, regardez les [vidéos du didacticiel PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial).  
   
 > [!NOTE]
->  PerfView ne peut pas être utilisé pour collecter des événements sur les systèmes ARM. Pour collecter des événements sur les systèmes ARM, utilisez l'Enregistreur de performance Windows (WPR). Pour plus d’informations, consultez le [blog de Vance Morrison](http://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
+>  PerfView ne peut pas être utilisé pour collecter des événements sur les systèmes ARM. Pour collecter des événements sur les systèmes ARM, utilisez l'Enregistreur de performance Windows (WPR). Pour plus d’informations, consultez le [blog de Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2012/12/19/collecting-etw-perfview-data-on-an-windows-rt-winrt-arm-surface-device.aspx).  
   
  Vous pouvez également appeler PerfView à partir de la ligne de commande. Pour consigner uniquement les événements à partir de votre fournisseur, ouvrez la fenêtre d'invite de commandes et entrez la commande suivante :  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  Sélectionnez tous les événements répertoriés dans le volet de gauche (Ctrl+A), puis appuyez sur la touche **Entrée**. À présent, l'horodatage de chaque événement doit apparaître. Ces horodatages étant exprimés par rapport au début de la trace, vous devez soustraire l'heure de chaque événement de l'heure de début du processus pour identifier le temps écoulé depuis le démarrage. Si vous utilisez Ctrl+clic pour sélectionner deux horodatages, vous verrez la différence qui les sépare dans la barre d'état en bas de la page. Cela permet de voir facilement le temps écoulé entre deux événements dans l'affichage (y compris le début des processus). Vous pouvez ouvrir le menu contextuel de l'affichage pour accéder à de nombreuses options utiles, telles que l'exportation vers des fichiers CSV ou l'ouverture de Microsoft Excel pour enregistrer ou traiter les données.  
   
- En répétant la procédure pour votre application d'origine et la version que vous avez créée à l'aide de la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)], vous pouvez comparer les performances.   En règle générale, les applications [!INCLUDE[net_native](../../../includes/net-native-md.md)] démarrent plus rapidement que les applications non-[!INCLUDE[net_native](../../../includes/net-native-md.md)]. Si vous souhaitez en savoir plus, PerfView peut également identifier les parties de votre code qui prennent le plus de temps. Pour plus d’informations, regardez les [vidéos du didacticiel PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) ou lisez le [blog de Vance Morrison](http://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
+ En répétant la procédure pour votre application d'origine et la version que vous avez créée à l'aide de la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)], vous pouvez comparer les performances.   En règle générale, les applications [!INCLUDE[net_native](../../../includes/net-native-md.md)] démarrent plus rapidement que les applications non-[!INCLUDE[net_native](../../../includes/net-native-md.md)]. Si vous souhaitez en savoir plus, PerfView peut également identifier les parties de votre code qui prennent le plus de temps. Pour plus d’informations, regardez les [vidéos du didacticiel PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) ou lisez le [blog de Vance Morrison](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Diagnostics.Tracing.EventSource>
