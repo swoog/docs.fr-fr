@@ -13,7 +13,6 @@
 ### [Utilisation d’opérateurs de conversion](using-conversion-operators.md)
 ### [Guide pratique pour implémenter des conversions définies par l’utilisateur entre des structs](how-to-implement-user-defined-conversions-between-structs.md)
 ## [Expressions de valeur par défaut](default-value-expressions.md)
-## [Comment : utiliser la surcharge d’opérateur pour créer une classe de nombres complexes](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [Comparaisons d’égalité](equality-comparisons.md)
 ### [Comment : définir une égalité de valeurs pour un type](how-to-define-value-equality-for-a-type.md)
 ### [Guide pratique pour tester l’égalité des références (Identité)](how-to-test-for-reference-equality-identity.md)
