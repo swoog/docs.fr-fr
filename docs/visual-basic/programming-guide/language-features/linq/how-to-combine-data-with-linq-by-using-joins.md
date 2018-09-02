@@ -9,15 +9,15 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: f0279cc13e938b6f7853ef11fee1ef046f192316
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653453"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422340"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Comment : combiner des données avec LINQ à l'aide de jointures (Visual Basic)
-Visual Basic fournit le `Join` et `Group Join` pour vous permettre de combiner le contenu de plusieurs collections basées sur des valeurs communes entre les collections de clauses de requête. Ces valeurs sont appelées *clé* valeurs. Les développeurs familiarisés avec les concepts de base de données relationnelle reconnaîtront la `Join` clause INNER JOIN et `Group Join` clause en tant que, en effet, une jointure externe gauche.  
+Visual Basic fournit le `Join` et `Group Join` clauses pour vous permettre de combiner le contenu de plusieurs collections basées sur des valeurs communes entre les collections de requête. Ces valeurs sont appelées *clé* valeurs. Les développeurs familiarisés avec les concepts de base de données relationnelle reconnaîtra le `Join` clause comme une jointure interne et le `Group Join` clause en tant que, en effet, une jointure externe gauche.  
   
  Les exemples de cette rubrique montrent quelques façons de combiner des données à l’aide de la `Join` et `Group Join` clauses de requête.  
   
@@ -27,13 +27,13 @@ Visual Basic fournit le `Join` et `Group Join` pour vous permettre de combiner l
   
 1.  Pour exécuter les exemples dans cette rubrique, ouvrez Visual Studio et ajoutez un nouveau projet d’Application Console Visual Basic. Double-cliquez sur le fichier Module1.vb créé par Visual Basic.  
   
-2.  Les exemples de cette rubrique utilisent le `Person` et `Pet` types et les données de l’exemple de code suivant. Copiez ce code dans la valeur par défaut `Module1` module créé par Visual Basic.  
+2.  Les exemples de cette rubrique utilisent le `Person` et `Pet` types et les données à partir de l’exemple de code suivant. Copiez ce code dans la valeur par défaut `Module1` module créé par Visual Basic.  
   
      [!code-vb[VbLINQHowTos#1](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_1.vb)]  
     [!code-vb[VbLINQHowTos#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_2.vb)]  
   
 ## <a name="perform-an-inner-join-by-using-the-join-clause"></a>Effectuer une jointure interne à l’aide de la Clause de jointure  
- Une jointure interne combine les données des deux collections. Éléments pour lesquels les valeurs de clé spécifiés correspond à sont inclus. Tous les éléments à partir de des collections qui n’ont pas d’élément correspondant dans l’autre collection sont exclus.  
+ Une instruction INNER JOIN combine les données à partir de deux collections. Dont les valeurs de clé spécifiés correspond à des éléments sont inclus. Tous les éléments à partir de des collections qui n’ont pas un élément correspondant dans l’autre collection sont exclus.  
   
  En Visual Basic, LINQ fournit deux options pour effectuer une jointure interne : une jointure implicite et une jointure explicite.  
   
@@ -47,21 +47,21 @@ Visual Basic fournit le `Join` et `Group Join` pour vous permettre de combiner l
   
      [!code-vb[VbLINQHowTos#4](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_3.vb)]  
   
-## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Effectuer une jointure externe gauche à l’aide de la Clause de jointure de groupe  
- Une jointure externe gauche comprend tous les éléments de la collection située du côté gauche de la jointure et uniquement les valeurs de la collection située du côté droit de la jointure correspondantes. Tous les éléments de la collection située du côté droit de la jointure qui n’ont pas d’élément correspondant dans la collection de gauche sont exclus du résultat de la requête.  
+## <a name="perform-a-left-outer-join-by-using-the-group-join-clause"></a>Effectuer une jointure externe gauche à l’aide de la Clause Group Join  
+ Une jointure externe gauche comprend tous les éléments de la collection du côté gauche de la jointure et uniquement les valeurs de la collection du côté droit de la jointure correspondantes. Tous les éléments de la collection du côté droit de la jointure qui n’ont pas un élément correspondant dans la collection de gauche sont exclus du résultat de requête.  
   
- Le `Group Join` clause effectue, en effet, une jointure externe gauche. La différence entre ce qui est généralement appelé une jointure externe gauche et ce que le `Group Join` clause retourne une valeur qui est la `Group Join` résultats de groupes de clause de la collection située du côté droit de la jointure pour chaque élément dans la collection de gauche. Dans une base de données relationnelle, une jointure externe gauche retourne un résultat non groupé dans laquelle chaque élément dans la requête résultat contient des éléments correspondants des deux collections dans la jointure. Dans ce cas, les éléments de la collection située du côté gauche de la jointure sont répétées pour chaque élément correspondant de la collection de droite. Vous verrez à quoi cela ressemble lorsque vous effectuez la procédure suivante.  
+ Le `Group Join` clause effectue, en effet, une jointure externe gauche. La différence entre ce qui est généralement appelé une jointure externe gauche et ce que le `Group Join` clause retourne une valeur qui est le `Group Join` résultats de groupes de clause de la collection de droite de la jointure pour chaque élément dans la collection de gauche. Dans une base de données relationnelle, une jointure externe gauche renvoie un résultat non groupé dans lequel chaque élément dans la requête résultat contient des éléments correspondants des deux collections dans la jointure. Dans ce cas, les éléments de la collection du côté gauche de la jointure sont répétées pour chaque élément correspondant de la collection de droite. Vous verrez comment cela se présente lorsque vous effectuez la procédure suivante.  
   
- Vous pouvez récupérer les résultats d’une `Group Join` requête sous la forme d’un résultat dégroupé en étendant votre requête afin de retourner un élément pour chaque résultat de requête groupé. Pour ce faire, vous devez vous assurer que vous interrogez le `DefaultIfEmpty` méthode de la collection groupée. Cela garantit que les éléments de la collection située du côté gauche de la jointure sont toujours inclus dans le résultat de la requête même s’ils n’ont aucun résultat correspondant à partir de la collection située à droite. Vous pouvez ajouter du code à votre requête pour fournir une valeur de résultat par défaut lorsqu’il n’existe aucune valeur correspondante dans la collection située à droite de la jointure.  
+ Vous pouvez récupérer les résultats d’une `Group Join` requête sous la forme d’un résultat non groupé en étendant votre requête pour retourner un élément pour chaque résultat de requête groupé. Pour ce faire, vous devez vous assurer que vous interrogez le `DefaultIfEmpty` méthode de la collection groupée. Cela garantit que les éléments de la collection du côté gauche de la jointure sont toujours inclus dans le résultat de la requête même s’ils ne disposent d’aucun résultat correspondant à partir de la collection de droite. Vous pouvez ajouter du code à votre requête pour fournir une valeur de résultat par défaut lorsqu’il n’existe aucune valeur correspondante dans la collection du côté droit de la jointure.  
   
-#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Pour effectuer une jointure externe gauche à l’aide de la clause Group Join  
+#### <a name="to-perform-a-left-outer-join-by-using-the-group-join-clause"></a>Pour effectuer une jointure externe gauche en utilisant la clause Group Join  
   
 1.  Ajoutez le code suivant à la `Module1` module dans votre projet pour voir des exemples d’une jointure externe gauche groupée et une jointure externe gauche non groupée.  
   
      [!code-vb[VbLINQHowTos#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/how-to-combine-data-with-linq-by-using-joins_4.vb)]  
   
 ## <a name="perform-a-join-by-using-a-composite-key"></a>Effectuer une jointure à l’aide d’une clé Composite  
- Vous pouvez utiliser la `And` mot clé dans un `Join` ou `Group Join` clause pour identifier les différents champs clés à utiliser lors de la mise en correspondance les valeurs des collections jointes. Le `And` mot clé spécifie que tous les spécifiés les champs clés doivent correspondre pour les éléments à joindre.  
+ Vous pouvez utiliser la `And` mot clé dans un `Join` ou `Group Join` clause pour identifier les différents champs clés à utiliser lors de la correspondance des valeurs des collections qui sont jointes. Le `And` mot clé spécifie que tous les spécifiés des champs clés doivent correspondre pour les éléments à joindre.  
   
 #### <a name="to-perform-a-join-by-using-a-composite-key"></a>Pour effectuer une jointure à l’aide d’une clé composite  
   
@@ -86,5 +86,5 @@ Visual Basic fournit le `Join` et `Group Join` pour vous permettre de combiner l
  [Group Join (clause)](../../../../visual-basic/language-reference/queries/group-join-clause.md)  
  [From (clause)](../../../../visual-basic/language-reference/queries/from-clause.md)  
  [Where (clause)](../../../../visual-basic/language-reference/queries/where-clause.md)  
- [Requêtes](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Requêtes](../../../../visual-basic/language-reference/queries/index.md)  
  [Transformations de données avec LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md)

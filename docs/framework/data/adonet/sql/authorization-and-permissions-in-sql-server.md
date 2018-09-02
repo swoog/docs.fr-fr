@@ -2,12 +2,12 @@
 title: Autorisation et permissions dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: bddbbd7eac29d33801042276e5f4ca9a05a83c1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdf5112e3f0e2cada4885b0b66adf248f0ffe808
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364221"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424145"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisation et permissions dans SQL Server
 Lorsque vous créez des objets de base de données, vous devez accorder explicitement des autorisations de manière à les rendre accessibles aux utilisateurs. Chaque objet sécurisable possède des autorisations qui peuvent être accordées à une principal de sécurité à l'aide d'instructions d'autorisation.  
@@ -56,7 +56,7 @@ Lorsque vous créez des objets de base de données, vous devez accorder explicit
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Autorisations](http://msdn.microsoft.com/library/ms191291.aspx) dans la documentation en ligne de SQL Server|Contient des rubriques qui décrivent la hiérarchie des autorisations, les affichages catalogue et les autorisations des rôles serveur et de base de données fixes.|  
+|[Autorisations](/sql/relational-databases/security/permissions-database-engine)|Contient des rubriques qui décrivent la hiérarchie des autorisations, les affichages catalogue et les autorisations des rôles serveur et de base de données fixes.|
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ Lorsque vous créez des objets de base de données, vous devez accorder explicit
  [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Serveur et rôles de base de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Propriété et séparation des schémas utilisateur dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
