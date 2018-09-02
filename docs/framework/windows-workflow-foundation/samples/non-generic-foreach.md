@@ -2,17 +2,17 @@
 title: ForEach non générique
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: c67f6e3c3afb893f7bb5713d64ce2f119eebc157
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b94ad54d248af7f6ad45c11b9860dd415db840f9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519478"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419315"
 ---
 # <a name="non-generic-foreach"></a>ForEach non générique
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] est fourni dans sa boîte à outils, un ensemble d’activités de flux de contrôle, y compris <xref:System.Activities.Statements.ForEach%601>, ce qui permet l’itération au sein de <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` collections.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] est fourni dans sa boîte à outils, un ensemble d’activités de flux de contrôle, y compris <xref:System.Activities.Statements.ForEach%601>, ce qui permet l’itération <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` collections.  
   
- <xref:System.Activities.Statements.ForEach%601> nécessite son <xref:System.Activities.Statements.ForEach%601.Values%2A> propriété de type <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Cela empêche les utilisateurs d’itérer au sein des structures de données qui implémentent <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` interface (par exemple, <xref:System.Collections.ArrayList>). La version non générique de <xref:System.Activities.Statements.ForEach%601> passe outre cette spécification, aux dépens d'un runtime plus complexe afin de garantir la compatibilité des types des valeurs dans la collection.  
+ <xref:System.Activities.Statements.ForEach%601> nécessite son <xref:System.Activities.Statements.ForEach%601.Values%2A> propriété puisse être de type <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable`. Cela empêche les utilisateurs à partir de l’itération au sein des structures de données qui implémentent <!--zz <xref:System.Collections.IEnumerable%601> --> `System.Collections.IEnumerable` interface (par exemple, <xref:System.Collections.ArrayList>). La version non générique de <xref:System.Activities.Statements.ForEach%601> passe outre cette spécification, aux dépens d'un runtime plus complexe afin de garantir la compatibilité des types des valeurs dans la collection.  
   
  Cet exemple montre comment implémenter une activité <xref:System.Activities.Statements.ForEach%601> non générique et son concepteur. Cette activité peut être utilisée pour itérer au sein de <xref:System.Collections.ArrayList>.  
   
@@ -72,7 +72,7 @@ Activity sampleUsage =
 |La valeur est `null`|La valeur d'un argument d'activité 'Values' requis n'a pas été fournie.|Erreur|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Concepteur ForEach  
- Le concepteur d'activités de l'exemple est semblable, en apparence, au concepteur fourni pour l'activité <xref:System.Activities.Statements.ForEach%601> intégrée. Le concepteur s’affiche dans la boîte à outils dans le **exemples**, **activités Non génériques** catégorie. Le concepteur est nommé **ForEachWithBodyFactory** dans la boîte à outils, car l’activité expose un <xref:System.Activities.Presentation.IActivityTemplateFactory> dans la boîte à outils, ce qui crée l’activité correctement configuré <xref:System.Activities.ActivityAction>.  
+ Le concepteur d'activités de l'exemple est semblable, en apparence, au concepteur fourni pour l'activité <xref:System.Activities.Statements.ForEach%601> intégrée. Le concepteur s’affiche dans la boîte à outils dans le **exemples**, **activités Non génériques** catégorie. Le concepteur est nommé **ForEachWithBodyFactory** dans la boîte à outils, car l’activité expose un <xref:System.Activities.Presentation.IActivityTemplateFactory> dans la boîte à outils, ce qui crée l’activité avec un correctement configuré <xref:System.Activities.ActivityAction>.  
   
 ```  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -108,6 +108,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

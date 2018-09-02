@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: c6b3151a95f949100e10e630da848e34ebbf1187
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d7f49644996d87ddb5d191dc313916c0ca6fbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764396"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423907"
 ---
 # <a name="working-with-data-definition-language"></a>Utilisation du langage de définition de données
 En commençant par le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 4, le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] prend en charge le langage de définition de données (DDL). Cela vous permet de créer ou de supprimer une instance de base de données selon la chaîne de connexion et les métadonnées du modèle de stockage (SSDL).  
@@ -40,11 +40,11 @@ En commençant par le [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort
   
 2.  Ajoutez un modèle existant à votre application.  
   
-    1.  Ajouter un modèle vide nommé `SchoolModel`. Pour créer un modèle vide, consultez la [Comment : créer un nouveau .edmx fichier](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) rubrique.  
+    1.  Ajouter un modèle vide nommé `SchoolModel`. Pour créer un modèle vide, consultez le [Comment : créer un fichier .edmx](https://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) rubrique.  
   
      Le fichier SchoolModel.edmx est ajouté à votre projet.  
   
-    1.  Copier le stockage conceptuel et de mappage du contenu pour le modèle School à partir de la [modèle School](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) rubrique.  
+    1.  Copier le stockage conceptuel et de mappage du contenu pour le modèle School à partir de la [modèle School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) rubrique.  
   
     2.  Ouvrez le fichier SchoolModel.edmx et collez le contenu dans les balises `edmx:Runtime`.  
   

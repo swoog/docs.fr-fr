@@ -2,22 +2,22 @@
 title: Gestion avancée des erreurs
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-ms.openlocfilehash: 723b1ca9c2fa771d8bc3f337d9c4fde8c9632c68
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810081"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423430"
 ---
 # <a name="advanced-error-handling"></a>Gestion avancée des erreurs
-Cet exemple montre comment le service de routage de Windows Communication Foundation (WCF). Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple montre comment le service de routage récupère intelligemment suite à des erreurs, en utilisant des transactions et d’autres concepts de messagerie plus complexes, comme la multidiffusion.  
+Cet exemple montre le service de routage de Windows Communication Foundation (WCF). Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple montre comment le service de routage récupère intelligemment suite à des erreurs, en utilisant des transactions et d’autres concepts de messagerie plus complexes, comme la multidiffusion.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedErrorHandling`  
   
@@ -29,7 +29,7 @@ Cet exemple montre comment le service de routage de Windows Communication Founda
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
 1.  > [!IMPORTANT]
-    >  Installez MSMQ avant d'exécuter cet exemple. Si MSMQ n'est pas installé, un message d'exception est retourné lors de l'exécution de l'exemple. Vous trouverez des instructions d’installation de MSMQ à [l’installation de Message Queuing (MSMQ)](http://go.microsoft.com/fwlink/?LinkId=166437).  
+    >  Installez MSMQ avant d'exécuter cet exemple. Si MSMQ n'est pas installé, un message d'exception est retourné lors de l'exécution de l'exemple. Instructions d’installation de MSMQ se trouvent à [installation de Message Queuing (MSMQ)](https://go.microsoft.com/fwlink/?LinkId=166437).  
   
      À l'aide de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], ouvrez AdvancedErrorHandling.sln.  
   
@@ -96,4 +96,4 @@ Cet exemple montre comment le service de routage de Windows Communication Founda
  Contoso souhaite utiliser des réceptions transactionnelles via le service de routage pour faire en sorte que tous les services concernés reçoivent les informations même dans des conditions d'erreur. La société souhaite en outre que les erreurs soient gérées correctement et automatiquement, et que les échecs soient signalés en cas de non remise de messages malgré l'utilisation d'une logique de gestion des erreurs. À cette fin, elle configure le service de routage de sorte qu’il bascule vers des points de terminaison spécifiques comme prévu et qu’il gère les situations d’erreur, ce qui comprend la création, l’achèvement, ainsi que la restauration/l’abandon de transactions/contextes de réception selon les besoins.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: fc27426e4d48ae519fc743c8a4f7eb3d1e6a4e81
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566650"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423242"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Fonctionnement des concepts et structures du flux de nœud XAML
 Les lecteurs et writers XAML tels qu'ils sont implémentés dans les services XAML .NET Framework sont basés sur le concept d'un flux de nœud XAML. Le flux de nœud XAML est une conceptualisation d'un ensemble de nœuds XAML. Dans cette conceptualisation, un processeur XAML parcourt la structure des relations de nœud dans le code XAML une par une. À tout moment, il n'existe qu'un seul enregistrement actuel ou position actuelle dans un flux de nœud XAML ouvert, et de nombreux aspects de l'API ne signalent que les informations disponibles à partir de cette position. Le nœud actuel dans un flux de nœud XAML peut être un objet, un membre ou une valeur. Si les lecteurs XAML traitent le XAML en tant que flux de nœud XAML, ils peuvent communiquer avec les writers XAML et activer un programme qui permet d'afficher, de manipuler ou de modifier le contenu d'un flux de nœud XAML pendant une opération de chemin de chargement ou d'enregistrement impliquant du code XAML. La conception de l'API des lecteurs et writers XAML et le concept de flux de nœud XAML sont similaires aux conceptions et concepts des lecteurs et writers associés précédents, tels que le [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] et les classes <xref:System.Xml.XmlReader> et <xref:System.Xml.XmlWriter> . Cette rubrique aborde les concepts de flux de nœud XAML et décrit comment écrire des routines qui interagissent avec des représentations XAML au niveau des nœuds XAML.  
@@ -80,7 +80,7 @@ while (xxr.Read()) {
  Vous pouvez éventuellement utiliser une représentation XAML autrement que sous forme de boucle de nœud XAML. Par exemple, un lecteur XAML peut lire un nœud indexé ou accéder aux nœuds directement par le biais de `x:Name`, `x:Uid`ou d'autres identificateurs. Les services XAML .NET Framework ne permettent pas une implémentation complète, mais suggèrent un modèle par le biais de services et de types de support. Pour plus d’informations, consultez <xref:System.Xaml.IXamlIndexingReader> et <xref:System.Xaml.XamlNodeList>.  
   
 > [!TIP]
->  Microsoft produit également une version hors-bande appelée Microsoft XAML Toolkit. Cette version hors bande est encore au stade préliminaire. Toutefois, si vous acceptez d'utiliser des composants préliminaires, Microsoft XAML Toolkit fournit des ressources intéressantes pour les outils XAML et l'analyse statique du code XAML. Microsoft XAML Toolkit inclut une API DOM XAML, la prise en charge de l'analyse FxCop et un contexte de schéma XAML pour Silverlight. Pour plus d’informations, consultez [Microsoft XAML Toolkit](http://code.msdn.microsoft.com/XAML).  
+>  Microsoft produit également une version hors-bande appelée Microsoft XAML Toolkit. Cette version hors bande est encore au stade préliminaire. Toutefois, si vous acceptez d'utiliser des composants préliminaires, Microsoft XAML Toolkit fournit des ressources intéressantes pour les outils XAML et l'analyse statique du code XAML. Microsoft XAML Toolkit inclut une API DOM XAML, la prise en charge de l'analyse FxCop et un contexte de schéma XAML pour Silverlight. Pour plus d’informations, consultez [Microsoft XAML Toolkit](https://code.msdn.microsoft.com/XAML).  
   
 <a name="working_with_the_current_node"></a>   
 ## <a name="working-with-the-current-node"></a>Utilisation du nœud actuel  

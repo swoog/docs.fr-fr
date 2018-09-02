@@ -2,12 +2,12 @@
 title: Gestion des autorisations avec les procédures stockées dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912063"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425196"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Gestion des autorisations avec les procédures stockées dans SQL Server
 Une méthode pour créer plusieurs lignes de défense autour de votre base de données consiste à implémenter tous les accès aux données à l'aide de procédures stockées ou de fonctions définies par l'utilisateur. Vous révoquez ou refusez toutes les autorisations sur les objets sous-jacents, tels que les tables, et accordez les autorisations EXECUTE sur les procédures stockées De cette manière, vous créez un périmètre de sécurité autour vos objets de données et de base de données.  
@@ -54,7 +54,7 @@ Une méthode pour créer plusieurs lignes de défense autour de votre base de do
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Procédures stockées](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) et [Injection SQL](http://go.microsoft.com/fwlink/?LinkId=98234) dans la documentation en ligne de SQL Server|Ces rubriques expliquent comment créer des procédures stockées et comment fonctionne l'injection SQL.|  
+|[Procédures stockées](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) et [Injection SQL](https://go.microsoft.com/fwlink/?LinkId=98234) dans la documentation en ligne de SQL Server|Ces rubriques expliquent comment créer des procédures stockées et comment fonctionne l'injection SQL.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ Une méthode pour créer plusieurs lignes de défense autour de votre base de do
  [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

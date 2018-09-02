@@ -2,18 +2,18 @@
 title: Propriété et séparation des schémas utilisateur dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358405"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421575"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Propriété et séparation des schémas utilisateur dans SQL Server
 Il existe un concept essentiel relative à la sécurité de SQL Server, selon lequel les propriétaires d'objets disposent d'autorisations irrévocables pour les administrer. Vous ne pouvez pas supprimer les privilèges d'un propriétaire d'objets et vous ne pouvez pas supprimer des utilisateurs d'une base de données dans laquelle se trouvent des objets qui leur appartiennent.  
   
 ## <a name="user-schema-separation"></a>Séparation utilisateur-schéma  
- La séparation utilisateur-schéma permet plus de souplesse dans la gestion des autorisations d'objet de base de données. A *schéma* est un conteneur nommé pour les objets de base de données, qui vous permet de grouper des objets dans les espaces de noms distincts. Par exemple, l'exemple de base de données AdventureWorks contient des schémas pour Production, Sales et HumanResources.  
+ La séparation utilisateur-schéma permet plus de souplesse dans la gestion des autorisations d'objet de base de données. Un *schéma* est un conteneur nommé pour les objets de base de données, ce qui vous permet d’objets de groupe dans les espaces de noms distincts. Par exemple, l'exemple de base de données AdventureWorks contient des schémas pour Production, Sales et HumanResources.  
   
  La syntaxe de dénomination en quatre parties destinée à faire référence à des objets spécifie le nom de schéma.  
   
@@ -55,7 +55,7 @@ Server.Database.DatabaseSchema.DatabaseObject
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Séparation utilisateur-schéma](http://msdn.microsoft.com/library/ms190387.aspx) dans la documentation en ligne de SQL Server|Décrit les modifications introduites par la séparation utilisateur-schéma. Inclut un nouveau comportement, son impact sur la propriété, des affichages catalogue et des autorisations.|  
+|[Séparation utilisateur-schéma](https://msdn.microsoft.com/library/ms190387.aspx) dans la documentation en ligne de SQL Server|Décrit les modifications introduites par la séparation utilisateur-schéma. Inclut un nouveau comportement, son impact sur la propriété, des affichages catalogue et des autorisations.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Serveur et rôles de base de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Autorisation et permissions dans SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

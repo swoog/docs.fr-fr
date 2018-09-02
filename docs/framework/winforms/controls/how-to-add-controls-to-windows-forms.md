@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 2dd048fb074d1ec5bb7bc0a67f196d5d51281545
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b803a93f865eaa4db6751187213c4bb01d2a5ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528475"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422547"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Comment : ajouter des contrôles à des Windows Forms
-La plupart des formulaires sont conçus en ajoutant des contrôles à la surface de l’écran pour définir une interface utilisateur (IU). A *contrôle* est un composant d’un formulaire utilisé pour afficher des informations ou accepter l’entrée d’utilisateur. Pour plus d’informations sur les contrôles, consultez [des contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
+La plupart des formulaires sont conçus en ajoutant des contrôles à la surface du formulaire pour définir une interface utilisateur (IU). Un *contrôle* est un composant d’un formulaire utilisé pour afficher des informations ou accepter l’entrée d’utilisateur. Pour plus d’informations sur les contrôles, consultez [des contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md).  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-draw-a-control-on-a-form"></a>Pour dessiner un contrôle sur un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : afficher des Windows Forms dans le concepteur](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : afficher Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Dans le **boîte à outils**, cliquez sur le contrôle que vous souhaitez ajouter à votre formulaire.  
   
-3.  Dans le formulaire, cliquez à l’endroit où le coin supérieur gauche du contrôle à localiser et faites glisser vers l’emplacement souhaité de l’angle inférieur droit du contrôle à localiser.  
+3.  Dans le formulaire, cliquez sur l’emplacement du coin supérieur gauche du contrôle à localiser et faites glisser vers l’emplacement de l’angle inférieur droit du contrôle à localiser.  
   
      Le contrôle est ajouté au formulaire avec la taille et l’emplacement spécifié.  
   
     > [!NOTE]
-    >  Chaque contrôle possède une taille par défaut définie. Vous pouvez ajouter un contrôle à votre formulaire dans la taille du contrôle par défaut en le faisant glisser à partir de la **boîte à outils** au formulaire.  
+    >  Chaque contrôle a une taille par défaut définie. Vous pouvez ajouter un contrôle à votre formulaire dans la taille du contrôle par défaut en le faisant glisser à partir de la **boîte à outils** au formulaire.  
   
 ### <a name="to-drag-a-control-to-a-form"></a>Pour faire glisser un contrôle à un formulaire  
   
-1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : afficher des Windows Forms dans le concepteur](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Ouvrez le formulaire. Pour plus d’informations, consultez [Comment : afficher Windows Forms dans le concepteur](https://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  Dans le **boîte à outils**, cliquez sur le contrôle souhaité et faites-le glisser vers votre formulaire.  
   
@@ -46,14 +46,14 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
     > [!NOTE]
     >  Vous pouvez double-cliquer sur un contrôle dans le **boîte à outils** pour l’ajouter à l’angle supérieur gauche du formulaire dans sa taille par défaut.  
   
-     Vous pouvez également ajouter dynamiquement des contrôles à un formulaire au moment de l’exécution. Dans l’exemple de code suivant, un <xref:System.Windows.Forms.TextBox> contrôle sera ajouté au formulaire quand un <xref:System.Windows.Forms.Button> un clic sur le contrôle.  
+     Vous pouvez également ajouter dynamiquement des contrôles à un formulaire au moment de l’exécution. Dans l’exemple de code suivant, un <xref:System.Windows.Forms.TextBox> contrôle sera ajouté au formulaire quand un <xref:System.Windows.Forms.Button> clic sur le contrôle.  
   
     > [!NOTE]
     >  La procédure suivante requiert l’existence d’un formulaire avec un **bouton** contrôle, `Button1`déjà placé dessus.  
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>Pour ajouter un contrôle à un formulaire par programmation  
   
-1.  Dans la méthode qui gère du bouton `Click` événement au sein de la classe de votre formulaire, code d’insertion semblable au suivant pour ajouter une référence à la variable du contrôle, définissez du contrôle `Location`et ajouter le contrôle.  
+1.  Dans la méthode qui gère le bouton `Click` événement au sein de la classe de votre formulaire, insertion code similaire à ce qui suit pour ajouter une référence à votre variable de contrôle, définissez le contrôle `Location`et ajouter le contrôle.  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -87,7 +87,7 @@ La plupart des formulaires sont conçus en ajoutant des contrôles à la surface
     >  Vous pouvez également ajouter le code pour initialiser d’autres propriétés du contrôle.  
   
     > [!IMPORTANT]
-    >  Vous pouvez exposer votre ordinateur local à un risque de sécurité via le réseau en référençant un malveillant `UserControl`. Il s’agit uniquement d’un problème dans le cas d’une personne malveillante, créer un contrôle personnalisé causer des dommages, suivi de vous ajouter par erreur à votre projet.  
+    >  Vous pouvez exposer votre ordinateur local à un risque de sécurité via le réseau en référençant un malveillant `UserControl`. Il s’agit uniquement d’un problème dans le cas d’une personne malveillante, création d’un contrôle personnalisé causer des dommages, que vous suivi par inadvertance l’ajout à votre projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)  

@@ -2,12 +2,12 @@
 title: Suivi à l'aide d'un fichier texte
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805796"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422887"
 ---
 # <a name="tracking-using-a-text-file"></a>Suivi à l'aide d'un fichier texte
 Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (WF) en créant un participant de suivi personnalisé. Les participants de suivi sont des classes .NET Framework qui reçoivent des enregistrements de suivi du runtime lorsqu'ils sont émis. Vous pouvez créer un participant de suivi pour transporter les événements de suivi vers toute destination qui est requise pour votre scénario. Par exemple, le participant de suivi ETW (Event Tracing for Windows, suivi d'événements pour Windows) est fourni dans le cadre du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Dans cet exemple, le participant de suivi écrit les enregistrements au format XML dans un fichier texte.  
@@ -18,7 +18,7 @@ Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (W
 |Classe|Description|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|Un <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> est utilisé pour définir la section de configuration utilisée pour configurer le participant de suivi de fichier texte. Cela permet aux utilisateurs de spécifier la destination du fichier journal à l'aide de fichiers de configuration .NET Framework standard.|  
-|`TextFileTrackingBehavior`|Comportements dans WCF permettent aux utilisateurs d’injecter des extensions dans le runtime. Ce comportement ajoute le participant de suivi au service lors du démarrage de ce dernier.|  
+|`TextFileTrackingBehavior`|Les comportements WCF permettent aux utilisateurs d’injecter des extensions dans l’exécution. Ce comportement ajoute le participant de suivi au service lors du démarrage de ce dernier.|  
 |`TextFileTrackingParticipant`|Participant de suivi qui reçoit des participants de suivi au moment de l'exécution et les stocke à un fichier journal au format XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Configuration des éléments d'extension de comportement  
@@ -53,7 +53,7 @@ Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (W
   
 4.  Dans le navigateur, cliquez sur StockPriceService.xamlx.  
   
-5.  Le navigateur affiche le **StockPriceService** page qui contient l’adresse wsdl du service local. Copiez cette adresse.  
+5.  Le navigateur affiche le **StockPriceService** page, qui contient l’adresse wsdl du service local. Copiez cette adresse.  
   
      Un exemple de l’adresse wsdl du service local est http://localhost:53797/StockPriceService.xamlx?wsdl.  
   
@@ -61,7 +61,7 @@ Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (W
   
 7.  Double-cliquez sur le fichier WcfTestClient.exe pour lancer le client test WCF.  
   
-8.  Dans le Client Test WCF, sélectionnez **ajouter un Service en cours...** à partir de la **fichier** menu.  
+8.  Dans le Client Test WCF, sélectionnez **ajouter un Service...** à partir de la **fichier** menu.  
   
 9. Collez l'URL que vous venez de copier dans la zone de texte.  
   
@@ -71,7 +71,7 @@ Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (W
   
     1.  Dans le Client Test WCF, double-cliquez sur **GetStockPrice()** sous le **IStockPriceService** nœud.  
   
-         Le **GetStockPrice()** méthode s’affiche dans le volet droit, avec un paramètre.  
+         Le **GetStockPrice()** méthode apparaît dans le volet droit, avec un seul paramètre.  
   
     2.  Tapez Contoso comme valeur pour le paramètre.  
   
@@ -87,9 +87,9 @@ Cet exemple montre comment étendre le suivi dans Windows Workflow Foundation (W
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -9,16 +9,16 @@ ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0e1a8e6820d70e4c50599056e31563f7f792f6d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2873fc18d5eb18160bf361b07af2bf12eef32e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400105"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422221"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Implémentation de fournisseur UI Automation côté client
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Plusieurs infrastructures d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] différentes sont utilisées dans les systèmes d’exploitation [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , notamment [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]et [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expose aux clients des informations sur les éléments d’interface utilisateur. Toutefois, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] n’a pas connaissance des différents types de contrôle qui existent dans ces infrastructures, ni des techniques nécessaires pour en extraire les informations. En revanche, cette tâche est affectée aux objets appelés fournisseurs. Un fournisseur extrait des informations d’un contrôle spécifique, et les transmet à [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], qui les présente ensuite au client de façon cohérente.  
   
@@ -26,9 +26,9 @@ ms.locfileid: "33400105"
   
  Toutefois, les contrôles plus anciens tels que ceux de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] ne prennent pas directement en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. En effet, ces contrôles sont traités par des fournisseurs qui existent dans le processus client et obtiennent des informations sur les contrôles à l’aide de la communication entre processus. C’est le cas, par exemple, avec la surveillance des messages de fenêtres à destination et en provenance des contrôles. Ces fournisseurs côté client sont parfois appelés des proxies.  
   
- [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] prévoit des fournisseurs pour standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et contrôles Windows Forms. En outre, un fournisseur de secours assure une prise en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] partielle pour les contrôles non traités par un autre fournisseur côté serveur ou un proxy, mais disposant d’une implémentation de [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . Tous ces fournisseurs sont automatiquement chargés et disponibles pour les applications clientes.  
+ [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] prévoit des fournisseurs pour l’édition standard [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et contrôles Windows Forms. En outre, un fournisseur de secours assure une prise en charge [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] partielle pour les contrôles non traités par un autre fournisseur côté serveur ou un proxy, mais disposant d’une implémentation de [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . Tous ces fournisseurs sont automatiquement chargés et disponibles pour les applications clientes.  
   
- Pour plus d’informations sur la prise en charge de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et contrôles Windows Forms, consultez [UI Automation prennent en charge pour les contrôles Standard](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Pour plus d’informations sur la prise en charge de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et contrôles Windows Forms, consultez [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
  Les applications peuvent également inscrire d’autres fournisseurs côté client.  
   

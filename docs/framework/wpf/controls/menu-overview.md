@@ -5,20 +5,20 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: 4c3e8398ad058c50df535fea88dd9f366b7f24ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1074d09c195a78dcc79df0841123672b716bcfe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557600"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423110"
 ---
 # <a name="menu-overview"></a>Vue d'ensemble de Menu
-La <xref:System.Windows.Controls.Menu> classe vous permet d’organiser des éléments associés aux commandes et gestionnaires d’événements dans un ordre hiérarchique. Chaque <xref:System.Windows.Controls.Menu> élément contient une collection de <xref:System.Windows.Controls.MenuItem> éléments.  
+Le <xref:System.Windows.Controls.Menu> classe vous permet d’organiser les éléments associés aux commandes et gestionnaires d’événements dans un ordre hiérarchique. Chaque <xref:System.Windows.Controls.Menu> élément contient une collection de <xref:System.Windows.Controls.MenuItem> éléments.  
   
   
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>Contrôle Menu  
- Le <xref:System.Windows.Controls.Menu> contrôle présente une liste d’éléments qui spécifient des commandes ou des options pour une application. En règle générale, en cliquant sur un <xref:System.Windows.Controls.MenuItem> ouvre un sous-menu ou entraîne l’application à exécuter une commande.  
+ Le <xref:System.Windows.Controls.Menu> contrôle présente une liste des éléments qui spécifient des commandes ou des options pour une application. En règle générale, en cliquant sur un <xref:System.Windows.Controls.MenuItem> ouvre un sous-menu ou entraîne l’application à exécuter une commande.  
   
 <a name="creating_menus"></a>   
 ## <a name="creating-menus"></a>Création de menus  
@@ -31,7 +31,7 @@ La <xref:System.Windows.Controls.Menu> classe vous permet d’organiser des él�
   
 <a name="menus_with_shortcutkeys"></a>   
 ## <a name="menuitems-with-keyboard-shortcuts"></a>MenuItems avec raccourcis clavier  
- Raccourcis clavier sont des combinaisons de caractères qui peuvent être entrées avec le clavier pour appeler <xref:System.Windows.Controls.Menu> commandes. Par exemple, le raccourci clavier de la **copie** est CTRL+C. Il existe deux propriétés à utiliser avec les raccourcis clavier et des éléments de menu :<xref:System.Windows.Controls.MenuItem.InputGestureText%2A> ou <xref:System.Windows.Controls.MenuItem.Command%2A>.  
+ Raccourcis clavier sont des combinaisons de caractères qui peuvent être entrés avec le clavier pour appeler <xref:System.Windows.Controls.Menu> commandes. Par exemple, le raccourci clavier de la **copie** est CTRL+C. Il existe deux propriétés à utiliser avec les raccourcis clavier et les éléments de menu :<xref:System.Windows.Controls.MenuItem.InputGestureText%2A> ou <xref:System.Windows.Controls.MenuItem.Command%2A>.  
   
 <a name="menus_inputgesturetext"></a>   
 ### <a name="inputgesturetext"></a>InputGestureText  
@@ -41,7 +41,7 @@ La <xref:System.Windows.Controls.Menu> classe vous permet d’organiser des él�
   
 <a name="menus_commands"></a>   
 ### <a name="command"></a>Commande  
- L’exemple suivant montre comment utiliser le <xref:System.Windows.Controls.MenuItem.Command%2A> propriété pour associer le **ouvrir** et **enregistrer** avec des commandes <xref:System.Windows.Controls.MenuItem> contrôles. Non seulement la propriété de la commande associer une commande avec un <xref:System.Windows.Controls.MenuItem>, mais elle fournit également le texte de mouvement d’entrée à utiliser comme un raccourci.  
+ L’exemple suivant montre comment utiliser le <xref:System.Windows.Controls.MenuItem.Command%2A> propriété à associer le **Open** et **enregistrer** commandes avec <xref:System.Windows.Controls.MenuItem> contrôles. Non seulement la propriété de la commande associer une commande avec un <xref:System.Windows.Controls.MenuItem>, mais elle fournit également le texte de mouvement d’entrée à utiliser comme un raccourci.  
   
  [!code-xaml[MenuEvent#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuEvent/CSharp/Pane1.xaml#8)]  
   
@@ -49,15 +49,15 @@ La <xref:System.Windows.Controls.Menu> classe vous permet d’organiser des él�
   
 <a name="menu_styling"></a>   
 ## <a name="menu-styling"></a>Styles de menu  
- Avec contrôle de style, vous pouvez modifier considérablement l’apparence et le comportement de <xref:System.Windows.Controls.Menu> contrôles sans devoir écrire un contrôle personnalisé. En plus de définir des propriétés visuelles, vous pouvez également appliquer un <xref:System.Windows.Style> aux parties individuelles d’un contrôle, modifier le comportement de parties du contrôle à travers des propriétés ou ajouter des parties supplémentaires ou modifier la disposition d’un contrôle. Les exemples suivants illustrent plusieurs façons d’ajouter un <xref:System.Windows.Style> à un <xref:System.Windows.Controls.Menu> contrôle.  
+ Avec les styles de contrôle, vous pouvez modifier considérablement l’apparence et le comportement de <xref:System.Windows.Controls.Menu> contrôles sans devoir écrire un contrôle personnalisé. Outre la définition des propriétés visuelles, vous pouvez également appliquer un <xref:System.Windows.Style> aux parties individuelles d’un contrôle, modifier le comportement de parties du contrôle via les propriétés, ou ajouter des parties supplémentaires ou modifier la disposition d’un contrôle. Les exemples suivants illustrent plusieurs façons d’ajouter un <xref:System.Windows.Style> à un <xref:System.Windows.Controls.Menu> contrôle.  
   
  Le premier exemple de code définit un <xref:System.Windows.Style> appelée `Simple` qui montre comment utiliser les paramètres système actuels dans votre style. Le code assigne la couleur du pinceau `MenuHighlightBrush` comme couleur d’arrière-plan du menu et celle du pinceau `MenuTextBrush` comme couleur de premier plan du menu. Notez que vous utilisez des clés de ressource pour assigner les pinceaux.  
   
  [!code-xaml[MenuStylesSnippet#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#1)]  
   
- L’exemple suivant utilise <xref:System.Windows.Trigger> les éléments qui vous permettent de modifier l’apparence d’un <xref:System.Windows.Controls.MenuItem> en réponse aux événements qui se produisent sur le <xref:System.Windows.Controls.Menu>. Lorsque vous déplacez la souris sur le <xref:System.Windows.Controls.Menu>, la couleur de premier plan et de modifier les caractéristiques de police des éléments de menu.  
+ L’exemple suivant utilise <xref:System.Windows.Trigger> les éléments qui vous permettent de modifier l’apparence d’un <xref:System.Windows.Controls.MenuItem> en réponse aux événements qui se produisent sur le <xref:System.Windows.Controls.Menu>. Lorsque vous déplacez la souris sur le <xref:System.Windows.Controls.Menu>, la couleur de premier plan et les caractéristiques de police des éléments de menu Modifier.  
   
  [!code-xaml[MenuStylesSnippet#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de galerie de contrôles WPF](http://go.microsoft.com/fwlink/?LinkID=160053)
+ [Exemple de galerie de contrôles WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

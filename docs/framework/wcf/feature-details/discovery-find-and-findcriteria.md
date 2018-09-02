@@ -2,15 +2,15 @@
 title: Recherche de découverte et FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: 70739647ac5904159b71121e86aa98e92981d4ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495318"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423321"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Recherche de découverte et FindCriteria
-Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
+Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
   
 ## <a name="discoveryclient"></a>DiscoveryClient  
  La classe <xref:System.ServiceModel.Discovery.DiscoveryClient> fournit le mécanisme pour effectuer des opérations de recherche et permet d'effectuer plus facilement des opérations clientes de découverte. Elle contient une méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A>, qui effectue une recherche synchrone (bloquante), et une méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.FindAsync%2A>, qui initialise une recherche asynchrone non bloquante. Ces deux méthodes prennent un paramètre <xref:System.ServiceModel.Discovery.FindCriteria> et fournissent les résultats à l'utilisateur via un objet <xref:System.ServiceModel.Discovery.FindResponse>.  

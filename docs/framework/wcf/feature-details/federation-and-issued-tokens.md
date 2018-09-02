@@ -6,12 +6,12 @@ helpviewer_keywords:
 - issued tokens [WCF]
 - federation [WCF], issued tokens
 ms.assetid: 4c31ee7d-a820-4067-8b84-a83049021bb6
-ms.openlocfilehash: b6a5411b74b53cb5e3b18cced7fd8fc09e9a9676
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdbd5c49197b65816da9b0f2c87d97afb893d79f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491573"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420208"
 ---
 # <a name="federation-and-issued-tokens"></a>Fédération et jetons émis
 Avec Windows Communication Foundation (WCF), vous pouvez créer des clients qui communiquent en toute sécurité avec les services qui implémentent les spécifications WS-Federation et WS-Trust. Ces spécifications utilisent XML, SOAP et WSDL (Web Services Description Language) pour fournir des mécanismes permettant d'activer l'authentification et l'autorisation sur différents domaines de confiance.  
@@ -24,7 +24,7 @@ Avec Windows Communication Foundation (WCF), vous pouvez créer des clients qui 
  Répertorie les problèmes de conception dont il convient d'être informé lors de la création de services ou de clients fédérés.  
   
  [Guide pratique pour créer un client fédéré](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- Décrit les principes fondamentaux de la création d’un client fédéré avec WCF.  
+ Décrit les principes fondamentaux de création d’un client fédéré avec WCF.  
   
  [Guide pratique pour configurer des informations d’identification sur un service FS (Federation Service)](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  Décrit les étapes de création d'un service fédéré.  
@@ -64,4 +64,4 @@ Avec Windows Communication Foundation (WCF), vous pouvez créer des clients qui 
 ## <a name="see-also"></a>Voir aussi  
  [Autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Jetons personnalisés](../../../../docs/framework/wcf/extending/custom-tokens.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

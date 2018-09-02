@@ -8,24 +8,24 @@ helpviewer_keywords:
 - properties [Windows Forms], defining in code
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
-ms.openlocfilehash: dc47d7152419d55b3e52aec70257e2b39e9aaca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c21aee867fc78c55e62eb183bb1a12ebf1c472e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528321"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425578"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Définition d'une propriété dans les contrôles Windows Forms
-Vous trouverez une vue d’ensemble de propriétés sur la page [Vue d’ensemble des propriétés](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Il est important de prendre en compte plusieurs points avant de définir une propriété :  
+Vous trouverez une vue d’ensemble de propriétés sur la page [Vue d’ensemble des propriétés](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Il est important de prendre en compte plusieurs points avant de définir une propriété :  
   
--   Vous devez appliquer des attributs aux propriétés que vous définissez. Les attributs spécifient la manière dont le concepteur doit afficher une propriété. Pour plus d’informations, consultez la page [Attributs au moment du design des composants](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
+-   Vous devez appliquer des attributs aux propriétés que vous définissez. Les attributs spécifient la manière dont le concepteur doit afficher une propriété. Pour plus d’informations, consultez la page [Attributs au moment du design des composants](https://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3).  
   
--   Si la modification de la propriété affecte l’affichage visuel du contrôle, appelez le <xref:System.Windows.Forms.Control.Invalidate%2A> (méthode) (qui hérite de votre contrôle <xref:System.Windows.Forms.Control>) à partir de la `set` accesseur. <xref:System.Windows.Forms.Control.Invalidate%2A> à son tour appelle la <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode), qui redessine le contrôle. Appels multiples à <xref:System.Windows.Forms.Control.Invalidate%2A> entraînant un appel unique à <xref:System.Windows.Forms.Control.OnPaint%2A> pour plus d’efficacité.  
+-   Si la modification de la propriété affecte l’affichage visuel du contrôle, appelez le <xref:System.Windows.Forms.Control.Invalidate%2A> (méthode) (que votre contrôle hérite <xref:System.Windows.Forms.Control>) à partir de la `set` accesseur. <xref:System.Windows.Forms.Control.Invalidate%2A> à son tour appelle la <xref:System.Windows.Forms.Control.OnPaint%2A> (méthode), qui redessine le contrôle. Appels multiples à <xref:System.Windows.Forms.Control.Invalidate%2A> entraîne un appel unique à <xref:System.Windows.Forms.Control.OnPaint%2A> pour plus d’efficacité.  
   
 -   La bibliothèque de classes .NET Framework fournit des convertisseurs de type pour les types de données courants : entiers, nombres décimaux, valeurs booléennes, etc. L’objectif d’un convertisseur de type consiste généralement à fournir une conversion de chaînes en valeurs (des données de chaîne vers d’autres types de données). Les types de données courants sont associés à des convertisseurs de type par défaut qui convertissent les valeurs en chaînes et les chaînes vers les types de données adéquats. Si vous définissez une propriété d’un type de donnée personnalisé (autrement dit, non standard), il vous faudra appliquer un attribut qui spécifie le convertisseur de type à associer à cette propriété. Vous pouvez également utiliser un attribut pour associer un éditeur de type avec interface utilisateur personnalisé à une propriété. Un éditeur de type avec interface utilisateur fournit une interface utilisateur permettant de modifier un type de données ou une propriété. Par exemple, un sélecteur de couleurs est un éditeur de type avec interface utilisateur. Des exemples d’attributs sont donnés à la fin de cette rubrique.  
   
     > [!NOTE]
-    >  S’il n’y a pas de convertisseur de type ou d’éditeur de type avec interface utilisateur disponible pour votre propriété personnalisée, vous pouvez en implémenter un en suivant les instructions de la page [Étendre la prise en charge au moment du design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
+    >  S’il n’y a pas de convertisseur de type ou d’éditeur de type avec interface utilisateur disponible pour votre propriété personnalisée, vous pouvez en implémenter un en suivant les instructions de la page [Étendre la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2).  
   
  Le fragment de code suivant montre définit une propriété personnalisée nommée `EndColor` pour le contrôle personnalisé `FlashTrackBar`.  
   

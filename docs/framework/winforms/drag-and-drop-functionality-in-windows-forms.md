@@ -5,15 +5,15 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: c43d5ad9203afad67601d9e36447db7c49a5a98e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539398"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452984"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Fonctionnalité de glisser-déposer dans les Windows Forms
-Windows Forms comprend un ensemble de méthodes, événements et classes qui implémentent le comportement de glisser-déposer. Cette rubrique offre une vue d’ensemble de la prise en charge du glisser-déposer dans Windows Forms.  Consultez également [les opérations de glisser-déplacer et prise en charge du Presse-papiers](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
+Windows Forms comprend un ensemble de méthodes, événements et classes qui implémentent le comportement de glisser-déposer. Cette rubrique offre une vue d’ensemble de la prise en charge du glisser-déposer dans Windows Forms.  Consultez également [les opérations de glisser-déplacer et prise en charge du Presse-papiers](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Exécution d’opérations de glisser-déposer  
  Pour effectuer une opération de glisser-déplacer, utilisez la méthode <xref:System.Windows.Forms.Control.DoDragDrop%2A> de la classe <xref:System.Windows.Forms.Control>. Pour plus d'informations sur la façon d'exécuter une opération de glisser-déplacer, consultez <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Pour obtenir le rectangle sur lequel le pointeur de la souris doit être déplacé pour qu'une opération de glisser-déplacer commence, utilisez la propriété <xref:System.Windows.Forms.SystemInformation.DragSize%2A> de la classe <xref:System.Windows.Forms.SystemInformation>.  

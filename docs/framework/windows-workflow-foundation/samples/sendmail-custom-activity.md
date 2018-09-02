@@ -2,15 +2,15 @@
 title: Activité personnalisée SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4ad250b42ca06867d307148f93e11c59846a61f5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519702"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423398"
 ---
 # <a name="sendmail-custom-activity"></a>Activité personnalisée SendMail
-Cet exemple montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow. L’activité personnalisée utilise les fonctionnalités de <xref:System.Net.Mail.SmtpClient> d’envoyer par courrier électronique de manière asynchrone et d’envoyer des messages avec l’authentification. Elle fournit aussi certaines fonctionnalités d’utilisateur final telles que le mode Test, le remplacement des jetons, les modèles de fichier et le chemin d’accès de dépôt de test.  
+Cet exemple montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow. L’activité personnalisée utilise les fonctionnalités de <xref:System.Net.Mail.SmtpClient> pour envoyer un e-mail de façon asynchrone et d’envoyer des messages avec l’authentification. Elle fournit aussi certaines fonctionnalités d’utilisateur final telles que le mode Test, le remplacement des jetons, les modèles de fichier et le chemin d’accès de dépôt de test.  
   
  Le tableau suivant décrit en détail les arguments pour l'activité `SendMail`.  
   
@@ -31,7 +31,7 @@ Cet exemple montre comment créer une activité personnalisée dérivée de <xre
 |jetons|<xref:System.Activities.InArgument%601>< IDictionary\<chaîne, chaîne >>|Jetons à remplacer dans le corps. Cette fonctionnalité permet aux utilisateurs de spécifier certaines valeurs dans le corps qui peuvent être remplacées ultérieurement par les jetons fournis à l'aide de cette propriété.|  
 |BodyTemplateFilePath|Chaîne|Chemin d'accès à un modèle de corps. L'activité `SendMail` copie le contenu de ce fichier dans sa propriété de corps.<br /><br /> Ce modèle peut contenir des jetons qui sont remplacés par le contenu de la propriété des jetons.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Lorsque cette propriété est définie, tous les messages électroniques sont envoyés à l’adresse spécifiée.<br /><br /> Cette propriété n'est pas conçue pour une utilisation lors du test des workflows. Par exemple, lorsque vous souhaitez vous assurer que tous les messages électroniques sont envoyés sans les envoyer aux destinataires réels.|  
-|TestDropPath|Chaîne|Lorsque cette propriété est définie, tous les messages électroniques sont également enregistrés dans le fichier spécifié.<br /><br /> Cette propriété est destinée à être utilisée lorsque vous testez ou déboguer des workflows, pour vous assurer que le format et le contenu des messages électroniques sortants est appropriée.|  
+|TestDropPath|Chaîne|Lorsque cette propriété est définie, tous les messages électroniques sont également enregistrés dans le fichier spécifié.<br /><br /> Cette propriété est destinée à être utilisée lors de tests ou de débogage de workflows, pour vous assurer que le format et le contenu des messages électroniques sortants est appropriée.|  
   
 ## <a name="solution-contents"></a>Contenu de la solution  
  La solution contient deux projets.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Envoi de messages électronique en mode Test  
- Cet extrait de code montre comment définir les deux propriétés de tests : en définissant `TestMailTo` vers tous les messages seront envoyés à john.doe@contoso.con (sans tenir compte des valeurs de, Cc, Cci). En définissant TestDropPath, tous les messages électroniques sortants seront aussi enregistrés dans le chemin d’accès fourni. Ces propriétés peuvent être définies indépendamment (elles ne sont pas liées).  
+ Cet extrait de code montre comment définir les deux propriétés de tests : en définissant `TestMailTo` à tous les messages seront envoyés à john.doe@contoso.con (sans tenir compte des valeurs de, Cc, Cci). En définissant TestDropPath, tous les messages électroniques sortants seront aussi enregistrés dans le chemin d’accès fourni. Ces propriétés peuvent être définies indépendamment (elles ne sont pas liées).  
   
 ```  
 new SendMail  
@@ -107,13 +107,13 @@ new SendMail
   
  Pour plus d’informations sur la configuration d’un serveur SMTP, consultez les liens suivants.  
   
--   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
+-   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [Configuration du Service SMTP (IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [Configuration du Service SMTP (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0 : Configuration de courrier électronique SMTP](http://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0 : Configuration de courrier électronique SMTP](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Comment installer le Service SMTP](http://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [Comment installer le Service SMTP](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  Les émulateurs SMTP fournis par des tiers ne sont pas disponibles pour le téléchargement.  
   
@@ -123,7 +123,7 @@ new SendMail
   
 2.  Vérifiez que vous avez accès à un serveur SMTP valide. Consultez les instructions d'installation.  
   
-3.  Configuration du programme avec l’adresse de votre serveur et à partir d’et vers les adresses de messagerie.  
+3.  Configurez le programme avec l’adresse de votre serveur et à partir d’et vers les adresses de messagerie.  
   
      Pour exécuter correctement cet exemple, vous devrez peut-être configurer la valeur de depuis et vers les adresses de messagerie et l’adresse du serveur SMTP dans le fichier Program.cs et Sequence.xaml. Vous devrez modifier l'adresse à ces deux emplacements car le programme envoie les messages de différentes façons.  
   
@@ -136,6 +136,6 @@ new SendMail
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\SendMail`

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09bfa08589bda68258883e6f080392f534e8c5df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365876"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425754"
 ---
 # <a name="code-contracts"></a>Contrats de code
 Les contrats de code offrent un moyen de spécifier des conditions préalables, des post-conditions et des invariants d'objet dans votre code. Les conditions préalables sont des exigences qui doivent être satisfaites à l'entrée d'une méthode ou d'une propriété. Les post-conditions décrivent les attentes à la sortie de la méthode ou de la propriété. Les invariants d'objet décrivent l'état attendu pour une classe présentant un état correct.  
@@ -35,7 +35,7 @@ Les contrats de code offrent un moyen de spécifier des conditions préalables, 
   
  La plupart des méthodes dans la classe de contrat sont compilées de façon conditionnelle, à savoir que le compilateur effectue des appels à ces méthodes uniquement si vous définissez le symbole spécial CONTRACTS_FULL à l'aide de la directive `#define`. Avec CONTRACTS_FULL, vous pouvez écrire des contrats dans votre code sans utiliser de directives `#ifdef`, et générer ainsi différentes builds, avec et sans contrats.  
   
- Pour télécharger les outils et obtenir des instructions détaillées sur l’utilisation des contrats de code, consultez [Contrats de code](http://go.microsoft.com/fwlink/?LinkId=152461) sur le site web MSDN DevLabs.  
+ Pour télécharger les outils et obtenir des instructions détaillées sur l’utilisation des contrats de code, consultez [Contrats de code](https://go.microsoft.com/fwlink/?LinkId=152461) sur le site web MSDN DevLabs.  
   
 ## <a name="preconditions"></a>Preconditions  
  Vous pouvez spécifier des conditions préalables à l'aide de la méthode <xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType>. Les conditions préalables définissent l'état à l'appel d'une méthode. Elles sont généralement utilisées pour indiquer des valeurs de paramètre valides. Tous les membres spécifiés dans les conditions préalables doivent être au moins aussi accessibles que la méthode elle-même. Autrement, la condition préalable risque de ne pas être comprise par tous les appelants de la méthode. La condition ne doit pas avoir d'effets secondaires. Le comportement au moment de l'exécution des conditions préalables non réussies est déterminé par l'analyseur au moment de l'exécution.  

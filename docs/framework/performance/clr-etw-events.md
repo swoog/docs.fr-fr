@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7d1f7ba1a0384ed93932733f12aa3306e16b790
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393917"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423483"
 ---
 # <a name="clr-etw-events"></a>Événements ETW du CLR
 Les rubriques de cette section décrivent le suivi d’événements pour les événements Windows (ETW). Chaque événement est associé à un mot clé et à un niveau, qui sont décrits dans la rubrique [Niveaux et mots clés ETW du CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). Le CLR a deux fournisseurs pour les événements :  
@@ -62,8 +62,8 @@ Les rubriques de cette section décrivent le suivi d’événements pour les év
  Capture des informations utilisées avec d’autres événements pour générer des traces de pile après le déclenchement d’un événement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Améliorer le débogage et le réglage des performances avec ETW](http://go.microsoft.com/fwlink/?LinkId=179696)  
- [Blog des performances de Windows](http://go.microsoft.com/fwlink/?LinkId=179509)  
+ [Améliorer le débogage et l’optimisation des performances avec ETW](https://go.microsoft.com/fwlink/?LinkId=179696)  
+ [Blog des performances de Windows](https://go.microsoft.com/fwlink/?LinkId=179509)  
  [Contrôle de l’enregistrement .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  [Fournisseurs ETW du CLR](../../../docs/framework/performance/clr-etw-providers.md)  
  [Niveaux et mots clés ETW du CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  

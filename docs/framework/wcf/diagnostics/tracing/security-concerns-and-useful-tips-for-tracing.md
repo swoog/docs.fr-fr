@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 88bc2880-ecb9-47cd-9816-39016a07076f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 664785bc97574eff73dc1c2be64f407641df6b00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb16a0996386f3518bc52e95c1892c56e8bbad2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484567"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420830"
 ---
 # <a name="security-concerns-and-useful-tips-for-tracing"></a>Problèmes de sécurité et conseils utiles pour le suivi
 Cette rubrique décrit comment empêcher l'exposition des informations sensibles et fournit également des conseils utiles en cas d'utilisation de WebHost.  
@@ -88,7 +88,7 @@ Cette rubrique décrit comment empêcher l'exposition des informations sensibles
   
  Pour plus d’informations sur la journalisation PII, consultez [verrouillage de sécurité des informations d’identification personnelle](../../../../../docs/framework/wcf/samples/pii-security-lockdown.md) exemple.  
   
- L'administrateur d'ordinateur et le responsable du déploiement d'applications doivent observer la plus grande prudence lorsqu'ils utilisent ces deux commutateurs. Si la journalisation PII est activée, les clés de sécurité et les informations personnelles sont enregistrées. Si elle est désactivée, les données sensibles et spécifiques aux applications sont toujours enregistrées dans les corps et en-têtes des messages. Pour une discussion plus approfondie sur la confidentialité et la protection des informations d’identification personnelle ne soient exposées, consultez [confidentialité de l’utilisateur](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ L'administrateur d'ordinateur et le responsable du déploiement d'applications doivent observer la plus grande prudence lorsqu'ils utilisent ces deux commutateurs. Si la journalisation PII est activée, les clés de sécurité et les informations personnelles sont enregistrées. Si elle est désactivée, les données sensibles et spécifiques aux applications sont toujours enregistrées dans les corps et en-têtes des messages. Pour une discussion plus détaillée sur la confidentialité et protection des informations d’identification personnelle empêcher l’exposition, consultez [la confidentialité des utilisateurs](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
  De plus, l'adresse IP de l'expéditeur du message est enregistrée une fois par connexion pour les transports orientés connexion, et une fois par message envoyé par d'autres transports. Cette opération est effectuée sans le consentement de l'expéditeur. Toutefois, cet enregistrement se produit uniquement aux niveaux de suivi Information ou Verbose, qui ne sont pas les niveaux de suivi par défaut ou recommandés dans les environnements de production, hormis pour le débogage en direct.  
   

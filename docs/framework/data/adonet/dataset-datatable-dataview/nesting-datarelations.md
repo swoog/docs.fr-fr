@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9530f9c9-dd98-4b93-8cdb-40d7f1e8d0ab
-ms.openlocfilehash: 3f17d81ac41c90e7f1c48523a4ced91bc788a962
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9255615c7786773f1d4f453b910fdccdf191721f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32761894"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420272"
 ---
 # <a name="nesting-datarelations"></a>Imbrication de DataRelations
 Dans une représentation relationnelle des données, chaque table contient des lignes reliées aux lignes d'autres tables par une colonne ou un ensemble de colonnes. Dans l'objet <xref:System.Data.DataSet> ADO.NET, la relation entre les tables est implémentée à l'aide d'un objet <xref:System.Data.DataRelation>. Lorsque vous créez un **DataRelation**, les relations parent-enfant des colonnes sont managées uniquement via la relation. Les tables et les colonnes constituent des entités distinctes. Dans la représentation hiérarchique des données proposée par XML, les relations parent-enfant sont représentés sous forme d'éléments parents contenant des éléments enfants imbriqués.  
   
- Pour faciliter l’imbrication des objets enfants quand un **DataSet** est synchronisé avec une <xref:System.Xml.XmlDataDocument> ou écrit sous forme de XML à l’aide de données **WriteXml**, le **DataRelation** expose un **Nested** propriété. Définissant le **Nested** propriété d’un **DataRelation** à **true** entraîne des lignes de la relation d’imbrication dans la colonne parente lors de l’écriture en tant que données XML de l’enfant ou synchronisé avec un **XmlDataDocument**. Le **Nested** propriété de la **DataRelation** est **false**, par défaut.  
+ Pour faciliter l’imbrication des objets enfants lorsqu’un **DataSet** est synchronisé avec un <xref:System.Xml.XmlDataDocument> ou écrit sous forme de données XML à l’aide **WriteXml**, le **DataRelation** expose un **Nested** propriété. Définissant le **Nested** propriété d’un **DataRelation** à **true** provoque des lignes de la relation d’imbrication dans la colonne parente lorsque écrit en tant que données XML de l’enfant ou synchronisé avec un **XmlDataDocument**. Le **Nested** propriété de la **DataRelation** est **false**, par défaut.  
   
  Par exemple, considérez les éléments suivants **DataSet**.  
   
@@ -59,9 +59,9 @@ DataRelation customerOrders = dataSet.Relations.Add(
   dataSet.Tables["Orders"].Columns["CustomerID"]);  
 ```  
   
- Étant donné que la **Nested** propriété de la **DataRelation** objet n’est pas défini sur **true** pour ce **DataSet**, les objets enfants ne sont pas imbriqués dans les éléments parents lorsque ce **DataSet** est représenté sous forme de données XML. Transformation de la représentation XML d’un **DataSet** contenant connexes **DataSet**connexes avec des relations de données non imbriquées peut entraîner un ralentissement des performances. Il est recommandé d'imbriquer les relations de données. Pour ce faire, définissez la **Nested** propriété **true**. Puis, écrivez le code dans la feuille de style XSLT qui utilise des expressions de requête XPath hiérarchisées de haut en bas pour rechercher et transformer les données.  
+ Étant donné que le **Nested** propriété de la **DataRelation** objet n’est pas défini sur **true** pour ce **DataSet**, les objets enfants ne sont pas imbriqués dans les éléments parents lorsque ce **DataSet** est représenté en tant que données XML. Transformer la représentation XML d’un **DataSet** qui contient connexes **DataSet**s avec des relations de données non imbriquées peut entraîner le ralentissement des performances. Il est recommandé d'imbriquer les relations de données. Pour ce faire, définissez la **Nested** propriété **true**. Puis, écrivez le code dans la feuille de style XSLT qui utilise des expressions de requête XPath hiérarchisées de haut en bas pour rechercher et transformer les données.  
   
- L’exemple de code suivant montre le résultat de l’appel **WriteXml** sur la **DataSet**.  
+ L’exemple de code suivant montre le résultat de l’appel **WriteXml** sur le **DataSet**.  
   
 ```xml  
 <CustomerOrders>  
@@ -91,7 +91,7 @@ DataRelation customerOrders = dataSet.Relations.Add(
 </CustomerOrders>  
 ```  
   
- Notez que la **clients** élément et la **commandes** éléments sont présentés en tant qu’éléments frères. Si vous souhaitiez le **commandes** éléments s’affichent en tant qu’enfants de leurs éléments parents respectifs, le **Nested** propriété de la **DataRelation** devra être définie à **true** et ajouter les éléments suivants :  
+ Notez que le **clients** élément et le **commandes** éléments sont affichés en tant qu’éléments frères. Si vous souhaitiez le **commandes** éléments s’affichent en tant qu’enfants de leurs éléments parents respectifs, le **Nested** propriété de la **DataRelation** devra être définie à **true** et vous devez ajouter les éléments suivants :  
   
 ```vb  
 customerOrders.Nested = True  
@@ -101,7 +101,7 @@ customerOrders.Nested = True
 customerOrders.Nested = true;  
 ```  
   
- Le code suivant montre ce que le résultat ressemble à, avec le **commandes** les éléments imbriqués dans leurs éléments parents respectifs.  
+ Le code suivant montre à quoi la sortie résultante ressemblerait, avec le **commandes** les éléments imbriqués dans leurs éléments parents respectifs.  
   
 ```xml  
 <CustomerOrders>  
@@ -135,4 +135,4 @@ customerOrders.Nested = true;
  [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Ajout de DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

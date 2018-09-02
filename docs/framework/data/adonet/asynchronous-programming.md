@@ -2,12 +2,12 @@
 title: Programmation asynchrone
 ms.date: 03/30/2017
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 29324a07ffdaf99d1b7631ad8e94e773ed509fcc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759905"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425723"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
@@ -35,15 +35,15 @@ Cette rubrique décrit la prise en charge pour la programmation asynchrone dans 
 
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [À l’aide de méthodes asynchrones de la nouvelle du SqlDataReader dans .net 4.5 (partie 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [À l’aide de nouvelles méthodes asynchrones de SqlDataReader dans .net 4.5 (partie 1)](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [À l’aide de méthodes asynchrones de la nouvelle du SqlDataReader dans .net 4.5 (partie 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [À l’aide de nouvelles méthodes asynchrones de SqlDataReader dans .net 4.5 (partie 2)](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
  
  Lorsque votre interface utilisateur ne répond pas ou votre serveur ne monte pas en charge, il est probable que vous votre code doit être plus asynchrone.  Écrire du code asynchrone implique en général l'installation d'un rappel (également appelé suite) pour exprimer la logique qui se produit après que l'opération asynchrone s'est terminée. Cela complique la structure du code asynchrone par rapport au code synchrone.  
   
  Vous pouvez maintenant appeler des méthodes asynchrones sans utiliser de rappels, et sans fractionner votre code entre plusieurs méthodes ou expressions lambda.  
   
- Le modificateur `async` spécifie qu'une méthode est asynchrone. Lors de l'appel d'une méthode `async`, une tâche est retournée. Lorsque le `await` opérateur est appliqué à une tâche, la méthode actuelle se ferme immédiatement. Lorsque la tâche se termine, l’exécution reprend dans la même méthode.
+ Le modificateur `async` spécifie qu'une méthode est asynchrone. Lors de l'appel d'une méthode `async`, une tâche est retournée. Lorsque le `await` opérateur est appliqué à une tâche, la méthode actuelle se termine immédiatement. Lorsque la tâche se termine, l’exécution reprend dans la même méthode.
   
 > [!WARNING]
 >  Les appels asynchrones ne sont pas pris en charge si une application utilise également le mot clé de chaîne de connexion `Context Connection`.  
@@ -172,7 +172,7 @@ class A {
 ### <a name="using-the-base-provider-model-and-the-new-asynchronous-feature"></a>Utilisation du modèle de fournisseur de base et de la nouvelle fonctionnalité asynchrone  
  Vous devrez peut-être créer un outil qui peut se connecter à différentes bases de données et exécuter des requêtes. Vous pouvez utiliser le modèle de fournisseur de base et la nouvelle fonctionnalité asynchrone.  
   
- Microsoft Distributed Transaction Controller (MSDTC) doit être activé sur le serveur pour utiliser des transactions distribuées. Pour plus d’informations sur l’activation du service MSDTC, consultez [comment activer MSDTC sur un serveur Web](http://msdn.microsoft.com/library/dd327979.aspx).  
+ Microsoft Distributed Transaction Controller (MSDTC) doit être activé sur le serveur pour utiliser des transactions distribuées. Pour plus d’informations sur l’activation de MSDTC, consultez [comment activer MSDTC sur un serveur Web](https://msdn.microsoft.com/library/dd327979.aspx).  
   
 ```csharp
 using System;  
@@ -697,9 +697,9 @@ class Class1 {
 ```  
   
 ## <a name="asynchronously-reading-and-updating-data-with-mars"></a>Lecture et mise à jour des données asynchrones avec MARS  
- MARS permet d'utiliser une connexion pour les opérations de lecture et les opérations en langage DML (Data Manipulation Language) avec plusieurs opérations en attente. Cette fonction élimine la nécessité pour une application de gérer les erreurs en relation avec une connexion occupée. En outre, MARS peut se substituer à l'utilisation de curseurs côté serveur, qui utilisent généralement davantage de ressources. Enfin, comme plusieurs opérations peuvent opérer sur une seule connexion, elles peuvent partager le même contexte de transaction, en éliminant la nécessité d’utiliser **sp_getbindtoken** et **sp_bindsession** stockées système procédures.  
+ MARS permet d'utiliser une connexion pour les opérations de lecture et les opérations en langage DML (Data Manipulation Language) avec plusieurs opérations en attente. Cette fonction élimine la nécessité pour une application de gérer les erreurs en relation avec une connexion occupée. En outre, MARS peut se substituer à l'utilisation de curseurs côté serveur, qui utilisent généralement davantage de ressources. Enfin, étant donné que plusieurs opérations peuvent opérer sur une seule connexion, ils peuvent partager le même contexte de transaction, en éliminant la nécessité d’utiliser **sp_getbindtoken** et **sp_bindsession** stockées système procédures.  
   
- L'application console suivante montre comment utiliser deux objets <xref:System.Data.SqlClient.SqlDataReader> avec trois objets <xref:System.Data.SqlClient.SqlCommand> et un objet <xref:System.Data.SqlClient.SqlConnection> lorsque MARS est activé. Le premier objet de commande extrait une liste de fournisseurs dont le taux de crédit est 5. Le second objet de commande utilise l'ID du fournisseur fourni par un <xref:System.Data.SqlClient.SqlDataReader> pour charger le second <xref:System.Data.SqlClient.SqlDataReader> avec tous les produits du fournisseur en question. Chaque enregistrement de produit est consulté par le second <xref:System.Data.SqlClient.SqlDataReader>. Un calcul est effectué pour déterminer le **OnOrderQty** doit être. Troisième objet de commande est ensuite utilisé pour mettre à jour le **ProductVendor** table avec la nouvelle valeur. Tout ce processus se déroule dans le cadre d’une seule transaction, qui est annulée à la fin.  
+ L'application console suivante montre comment utiliser deux objets <xref:System.Data.SqlClient.SqlDataReader> avec trois objets <xref:System.Data.SqlClient.SqlCommand> et un objet <xref:System.Data.SqlClient.SqlConnection> lorsque MARS est activé. Le premier objet de commande extrait une liste de fournisseurs dont le taux de crédit est 5. Le second objet de commande utilise l'ID du fournisseur fourni par un <xref:System.Data.SqlClient.SqlDataReader> pour charger le second <xref:System.Data.SqlClient.SqlDataReader> avec tous les produits du fournisseur en question. Chaque enregistrement de produit est consulté par le second <xref:System.Data.SqlClient.SqlDataReader>. Un calcul est effectué pour déterminer quelles nouvelles **OnOrderQty** doit être. La troisième commande objet est ensuite utilisé pour mettre à jour le **ProductVendor** table avec la nouvelle valeur. Tout ce processus se déroule dans le cadre d’une seule transaction, qui est annulée à la fin.  
   
 > [!NOTE]
 >  L’exemple suivant utilise l’exemple **AdventureWorks** inclus avec SQL Server de base de données. La chaîne de connexion fournie dans l'exemple de code suppose que la base de données est installée et disponible sur l'ordinateur local. Si nécessaire, modifiez la chaîne de connexion en fonction de votre environnement.  

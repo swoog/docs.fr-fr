@@ -2,12 +2,12 @@
 title: Exemple Asynchronous Find
 ms.date: 03/30/2017
 ms.assetid: 7a713a25-c1f4-42e1-8c4a-93d64ca45a3b
-ms.openlocfilehash: ed900ba3cd1b55f4e35ec0d2b92ef6b7283b498e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37edcb4d1f04eb56d3f24ca3acc3543d7f9696f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500275"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424389"
 ---
 # <a name="asynchronous-find-sample"></a>Exemple Asynchronous Find
 Cet exemple montre comment utiliser l'opération de recherche asynchrone à partir d'une application cliente.  
@@ -35,7 +35,7 @@ Cet exemple montre comment utiliser l'opération de recherche asynchrone à part
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\AsyncFind`  
   

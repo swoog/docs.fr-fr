@@ -1,5 +1,5 @@
 ---
-title: '#If... Then... #Else, Directives'
+title: '#If... Then... #Else, Directives (Visual Basic)'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69ce56d770de5f004f204b1764fd51d948ba92c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05aac9109e49897d1c4dbbad60d807eb3e47798d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591079"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423201"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else, directives
 Compilation conditionnelle des blocs de code Visual Basic sélectionnés.  
@@ -47,10 +47,10 @@ Compilation conditionnelle des blocs de code Visual Basic sélectionnés.
   
 ## <a name="parts"></a>Composants  
  `expression`  
- Requis pour `#If` et `#ElseIf` instructions, facultatif ailleurs. Toute expression, exclusivement consistant en une ou plusieurs constantes de compilation conditionnelle, les littéraux et les opérateurs, qui prend la valeur `True` ou `False`.  
+ Requis pour `#If` et `#ElseIf` instructions, facultatives ailleurs. Toute expression, exclusivement consistant en une ou plusieurs constantes de compilation conditionnelle, les littéraux et les opérateurs, qui prend la valeur `True` ou `False`.  
   
  `statements`  
- Requis pour `#If` bloc d’instructions, facultatif ailleurs. Lignes de programme Visual Basic ou des directives de compilateur qui sont compilés si l’expression associée a la valeur `True`.  
+ Requis pour `#If` instruction bloc, facultatif ailleurs. Lignes de programme Visual Basic ou des directives de compilateur qui sont compilés si l’expression associée prend la valeur `True`.  
   
  `#End If`  
  Met fin à la `#If` bloc d’instructions.  
@@ -58,14 +58,14 @@ Compilation conditionnelle des blocs de code Visual Basic sélectionnés.
 ## <a name="remarks"></a>Notes  
  Sur la surface, le comportement de la `#If...Then...#Else` directives semble être le même que celui de la `If...Then...Else` instructions. Toutefois, le `#If...Then...#Else` directives évaluent ce qui est compilé par le compilateur, alors que le `If...Then...Else` instructions évaluent les conditions au moment de l’exécution.  
   
- Compilation conditionnelle est généralement utilisée pour compiler le même programme pour les différentes plateformes. Il est également utilisé pour empêcher le code d’apparaître dans un fichier exécutable de débogage. Code exclu lors de la compilation conditionnelle est totalement absent du fichier exécutable final, afin qu’il n’a aucun effet sur la taille ou des performances.  
+ Compilation conditionnelle est généralement utilisée pour compiler le même programme sur différentes plateformes. Il est également utilisé pour empêcher le débogage de code d’apparaître dans un fichier exécutable. Code exclu durant la compilation conditionnelle est totalement absent du fichier exécutable final, afin qu’il n’a aucun effet sur la taille ou de performances.  
   
  Quel que soit le résultat des évaluations, toutes les expressions sont évaluées à l’aide de `Option Compare Binary`. Le `Option Compare` instruction n’affecte pas les expressions dans `#If` et `#ElseIf` instructions.  
   
 > [!NOTE]
 >  Aucune forme d’une ligne de la `#If`, `#Else`, `#ElseIf`, et `#End If` directives existe. Aucun autre code ne peut apparaître sur la même ligne qu’une des directives. 
 
-Les instructions dans un bloc de compilation conditionnelle doivent être complètes logique. Par exemple, vous ne pouvez pas effectuer une compilation conditionnelle uniquement les attributs d’une fonction, mais vous pouvez déclarer conditionnelle de la fonction, ainsi que ses attributs :
+Les instructions dans un bloc de compilation conditionnelle doivent être complète logique. Par exemple, vous ne pouvez pas effectuer une compilation conditionnelle uniquement les attributs d’une fonction, mais vous pouvez déclarer conditionnelle de la fonction, ainsi que ses attributs :
 
 ```vb
    #If DEBUG Then

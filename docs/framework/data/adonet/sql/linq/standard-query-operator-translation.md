@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: b05cd427bc1b3b13b68fe7c38a798c8c2baa0af1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365811"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424228"
 ---
 # <a name="standard-query-operator-translation"></a>Traduction des opérateurs de requête standard
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les opérateurs de requête standard en commandes SQL. Le processeur de requêtes de la base de données détermine la sémantique d’exécution de la traduction SQL.  
   
- Opérateurs de requête standard définis sur *séquences*. Une séquence est *classés* et s’appuie sur l’identité de référence pour chaque élément de la séquence. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+ Opérateurs de requête standard sont définis par rapport à *séquences*. Une séquence est *classés* et s’appuie sur l’identité de référence pour chaque élément de la séquence. Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
  SQL traite essentiellement des *non ordonné d’ensembles de valeurs*. Le classement est généralement une opération de post-traitement déclarée explicitement appliquée au résultat final d'une requête plutôt qu'à des résultats intermédiaires. L'identité est définie par des valeurs. Pour cette raison, les requêtes SQL sont censées traiter les multijeux (*sacs*) au lieu de *définit*.  
   
@@ -87,7 +87,7 @@ ORDER BY [t0].[CustomerID]
  La valeur `null` dans le classement est définie par SQL Server. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ne change pas le classement.  
   
 ### <a name="aggregates"></a>Agrégats  
- La méthode d'agrégation (opérateur de requête standard) <xref:System.Linq.Enumerable.Sum%2A> prend la valeur zéro pour une séquence vide ou contenant uniquement des valeurs null. Dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la sémantique de SQL reste inchangée, et <xref:System.Linq.Enumerable.Sum%2A> prend la valeur `null` au lieu de zéro pour une séquence vide ou une séquence qui contient uniquement des valeurs NULL.  
+ La méthode d'agrégation (opérateur de requête standard) <xref:System.Linq.Enumerable.Sum%2A> prend la valeur zéro pour une séquence vide ou contenant uniquement des valeurs null. Dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], la sémantique de SQL reste inchangée, et <xref:System.Linq.Enumerable.Sum%2A> prend la valeur `null` au lieu de la valeur zéro pour une séquence vide ou une séquence qui contient uniquement des valeurs NULL.  
   
  Les limitations SQL sur les résultats intermédiaires s'appliquent aux agrégats dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Le <xref:System.Linq.Enumerable.Sum%2A> de quantités d'entiers 32 bits n'est pas calculé à partir des résultats 64 bits. Un dépassement de capacité peut se produire pour une traduction [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] de <xref:System.Linq.Enumerable.Sum%2A>, même si l'implémentation de l'opérateur de requête standard n'entraîne pas de dépassement de capacité pour la séquence en mémoire correspondante.  
   
@@ -147,7 +147,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="inheritance-support"></a>Prise en charge de l'héritage  
   
 ### <a name="inheritance-mapping-restrictions"></a>Restrictions du mappage d'héritage  
- Pour plus d’informations, consultez [Comment : mapper des hiérarchies d’héritage](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
+ Pour plus d’informations, consultez [Comment : mappage de hiérarchies d’héritage](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-inheritance-hierarchies.md).  
   
 ### <a name="inheritance-in-queries"></a>Héritage dans les requêtes  
  Les casts C# sont pris en charge uniquement dans la projection. Les casts utilisés ailleurs ne sont pas traduits et sont ignorés. Hormis les noms de fonction SQL, SQL effectue uniquement l'équivalent du <xref:System.Convert> CLR. Autrement dit, SQL peut modifier la valeur d'un type en un autre. Le cast CLR n'a pas d'équivalent car il n'existe pas de concept de réinterprétation des mêmes bits que ceux d'un autre type. C'est pourquoi un cast C# fonctionne uniquement en local. Il n'est pas mis à distance.  
@@ -195,7 +195,7 @@ ORDER BY [t0].[CustomerID]
  Aucune résolution n’est disponible pour cette limitation. Précisément, vous ne pouvez pas utiliser `Distinct()` sur des résultats contenant des membres mappés à des colonnes `text` ou `ntext`.  
   
 ### <a name="behavior-triggered-by-nested-queries"></a>Comportement déclenché par les sous-requêtes  
- [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (via SP4) classeur présente des spécificités qui sont déclenchées par des requêtes imbriquées. Le jeu de requêtes SQL qui déclenche ces spécificités n'est pas bien défini. Pour cette raison, vous ne pouvez pas définir l’ensemble des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes susceptibles de provoquer des exceptions de SQL Server.  
+ [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (via SP4) binder présente des spécificités qui sont déclenchées par des requêtes imbriquées. Le jeu de requêtes SQL qui déclenche ces spécificités n'est pas bien défini. Pour cette raison, vous ne pouvez pas définir l’ensemble des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes susceptibles de provoquer des exceptions de SQL Server.  
   
 ### <a name="skip-and-take-operators"></a>Opérateurs Skip et Take  
  <xref:System.Linq.Enumerable.Take%2A> et <xref:System.Linq.Enumerable.Skip%2A> sont soumis à certaines restrictions lorsqu'ils sont utilisés dans des requêtes sur [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Pour plus d’informations, consultez l’entrée « Skip et Take des Exceptions dans SQL Server 2000 » dans [dépannage](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
@@ -203,7 +203,7 @@ ORDER BY [t0].[CustomerID]
 ## <a name="object-materialization"></a>Matérialisation d'objet  
  La matérialisation crée des objets CLR à partir de lignes retournées par une ou plusieurs requêtes SQL.  
   
--   Les appels suivants sont *exécutées localement* dans le cadre de la matérialisation :  
+-   Les appels suivants sont *exécuté localement* dans le cadre de la matérialisation :  
   
     -   Constructeurs  
   
@@ -211,13 +211,13 @@ ORDER BY [t0].[CustomerID]
   
     -   Casts de type dans les projections  
   
--   Les méthodes qui suivent le <xref:System.Linq.Enumerable.AsEnumerable%2A> méthode sont *exécutées localement*. Cette méthode ne provoque pas d'exécution immédiate.  
+-   Méthodes qui suivent le <xref:System.Linq.Enumerable.AsEnumerable%2A> méthode sont *exécuté localement*. Cette méthode ne provoque pas d'exécution immédiate.  
   
 -   Vous pouvez utiliser un `struct` comme type de retour d'un résultat de requête ou comme membre du type de résultat. Les entités doivent être des classes. Les types anonymes sont matérialisés en instances de classe, mais les structs nommés (non entités) peuvent être utilisés dans la projection.  
   
 -   Un membre du type de retour d'un résultat de requête peut être de type <xref:System.Linq.IQueryable%601>. Il est matérialisé en collection locale.  
   
--   Les méthodes suivantes provoquent la *matérialisation immédiate* de la séquence que les méthodes sont appliquées à :  
+-   Les méthodes suivantes provoquent la *matérialisation immédiate* de la séquence que les méthodes s’appliquent à :  
   
     -   <xref:System.Linq.Enumerable.ToList%2A>  
   

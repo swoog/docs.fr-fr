@@ -2,12 +2,12 @@
 title: Utilisation de la portée d'édition
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 67b79ebe558578ca612d59d48eb7ee291a6db501
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 268849c584c235a21a0818baa60f119cf8e49305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517389"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419982"
 ---
 # <a name="using-editing-scope"></a>Utilisation de la portée d'édition
 Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'elles puissent être annulées dans une unité atomique unique. Par défaut, les actions effectuées par un auteur de concepteur d'activités sont automatiquement intégrées dans le système d'annulation/de rétablissement.  
@@ -32,13 +32,13 @@ Cet exemple montre comment traiter par lot un ensemble de modifications afin qu'
   
     2.  Trois activités sont ensuite ajoutées au <xref:System.Activities.Presentation.Model.ModelItem> sélectionné. Notez que si la portée d'édition n'avait pas été ouverte avec <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A>, trois nouvelles activités apparaitraient sur la zone de conception. Étant donné que cette opération est toujours en attente dans <xref:System.Activities.Presentation.Model.EditingScope>, le concepteur n'est pas encore mis à jour.  
   
-3.  Appuyez sur **fermer la portée d’édition** pour valider la portée d’édition. Trois activités apparaissent dans le concepteur.  
+3.  Appuyez sur **fermer portée d’édition** pour valider la portée d’édition. Trois activités apparaissent dans le concepteur.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253350"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420982"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Comment : définir des options de grille pour tous les Windows Forms
 Comme vous deviennent habitué à utiliser dans l’environnement de développement Visual Studio, vous pouvez définir les préférences pour tous les formulaires et les projets que vous utilisez dans le Concepteur de formulaires Windows.  
@@ -31,7 +31,7 @@ Comme vous deviennent habitué à utiliser dans l’environnement de développem
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Général, le Concepteur Windows Forms, boîte de dialogue Options](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Général, le Concepteur Windows Forms, boîte de dialogue Options](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Comment : ajouter des contrôles à des Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Disposition des contrôles dans les Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  

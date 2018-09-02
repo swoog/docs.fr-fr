@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, topic list
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
-ms.openlocfilehash: 91a0f8c3dcb4999d2b3d4491106c978de940344a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d317310a7ae9369fab32acfe30a61d2c20c96c2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591032"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422515"
 ---
 # <a name="datarepeater-control-visual-studio"></a>Contrôle DataRepeater (Visual Studio)
 Le contrôle <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> de Visual Basic Power Packs est un conteneur à défilement pour les contrôles qui affichent des données répétées, par exemple des lignes dans une table de base de données. Il peut être utilisé comme alternative au contrôle <xref:System.Windows.Forms.DataGridView> quand vous avez besoin de plus de contrôle sur la disposition des données.  
   
- Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir du [Centre de téléchargement](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir de la [centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Introduction au contrôle DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  

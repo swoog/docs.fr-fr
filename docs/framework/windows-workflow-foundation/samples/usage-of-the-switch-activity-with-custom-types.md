@@ -2,15 +2,15 @@
 title: Utilisation de l'activité Switch avec des types personnalisés
 ms.date: 03/30/2017
 ms.assetid: 482a48c4-eb83-40c3-a4e2-2f9a8af88b75
-ms.openlocfilehash: 2b6f3109324064cb5e746de9c61e5a70c4c4d60b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b24a03573b31f3fb1c34d4aa6e03bc11f5b25455
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517879"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423563"
 ---
 # <a name="usage-of-the-switch-activity-with-custom-types"></a>Utilisation de l'activité Switch avec des types personnalisés
-Cet exemple montre comment permettre à une activité <xref:System.Activities.Statements.Switch%601> d'évaluer un type complexe défini par l'utilisateur au moment de l'exécution. Dans les langages de programmation procéduraux traditionnels, un [commutateur](http://go.microsoft.com/fwlink/?LinkId=180521) instruction sélectionne une logique d’exécution en fonction de l’évaluation conditionnelle d’une variable. D'ordinaire, une instruction `switch` opère sur une expression qui peut être évaluée statiquement. Par exemple, en C#, cela signifie que seuls des types primitifs, tels que <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, et des types énumération sont pris en charge.  
+Cet exemple montre comment permettre à une activité <xref:System.Activities.Statements.Switch%601> d'évaluer un type complexe défini par l'utilisateur au moment de l'exécution. Dans la plupart des langages de programmation procéduraux, un [basculer](https://go.microsoft.com/fwlink/?LinkId=180521) instruction sélectionne une logique d’exécution basée sur l’évaluation conditionnelle d’une variable. D'ordinaire, une instruction `switch` opère sur une expression qui peut être évaluée statiquement. Par exemple, en C#, cela signifie que seuls des types primitifs, tels que <xref:System.Boolean>, <xref:System.Int32>, <xref:System.String>, et des types énumération sont pris en charge.  
   
  Pour permettre la commutation sur une classe personnalisée, la logique doit être implémentée pour évaluer les valeurs du type complexe personnalisé au moment de l'exécution. Cet exemple montre comment permettre la commutation sur un type complexe personnalisé nommé `Person`.  
   
@@ -107,9 +107,9 @@ Cet exemple montre comment permettre à une activité <xref:System.Activities.St
   
 -   **Person.cs**: définit la `Person` classe.  
   
--   **PersonConverter.cs**: le convertisseur de type pour la `Person` classe.  
+-   **PersonConverter.cs**: convertisseur de type pour la `Person` classe.  
   
--   **Sequence.XAML**: un workflow qui bascule vers le `Person` type.  
+-   **Sequence.XAML**: un workflow qui bascule le `Person` type.  
   
 -   **Program.cs**: la fonction principale qui exécute le flux de travail.  
   
@@ -126,7 +126,7 @@ Cet exemple montre comment permettre à une activité <xref:System.Activities.St
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Switch`  
   

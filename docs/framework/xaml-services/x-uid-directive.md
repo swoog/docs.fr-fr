@@ -7,15 +7,15 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 667b722097d091902cb65f2e6f0485a039f8a2ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561834"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452625"
 ---
 # <a name="xuid-directive"></a>x:Uid, directive
-Fournit un identificateur unique pour les éléments de balisage. Dans de nombreux scénarios, cet identificateur unique est utilisé par des outils et processus de localisation XAML.  
+Fournit un identificateur unique pour les éléments de balisage. Dans de nombreux scénarios, cet identificateur unique est utilisé par les outils et processus de localisation de XAML.  
   
 ## <a name="xaml-attribute-usage"></a>Utilisation d'attributs XAML  
   
@@ -27,19 +27,19 @@ Fournit un identificateur unique pour les éléments de balisage. Dans de nombre
   
 |||  
 |-|-|  
-|`identifier`|Créée manuellement ou chaîne générée automatiquement qui doit être unique dans un fichier lorsqu’il est interprété par un `x:Uid` consommateur.|  
+|`identifier`|Créée manuellement ou chaîne générée automatiquement qui doit être unique dans un fichier lorsqu’il est interprété par une `x:Uid` consommateur.|  
   
 ## <a name="remarks"></a>Notes  
- Dans [MS-XAML] `x:Uid` est défini comme une directive. Pour plus d’informations, consultez [ \[MS-XAML\] Section 5.3.6](http://go.microsoft.com/fwlink/?LinkId=114525).  
+ Dans [MS-XAML], `x:Uid` est défini comme une directive. Pour plus d’informations, consultez [ \[MS-XAML\] Section 5.3.6](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
- `x:Uid` est différent de `x:Name` à la fois en raison du scénario de localisation XAML déclaré et afin que les identificateurs qui sont utilisés pour la localisation n’ont aucune dépendance sur les conséquences de modèle de programmation de `x:Name`. En outre, `x:Name` est régie par la portée de nom XAML ; Toutefois, `x:Uid` n’est pas régi par un concept de langage défini XAML de mise en œuvre de l’unicité. Les processeurs XAML au sens large (processeurs qui ne font pas partie du processus de localisation) ne sont pas prévus pour garantir l’unicité de `x:Uid` valeurs. Cette responsabilité revient conceptuellement à l’initiateur des valeurs. L’attente d’unicité de `x:Uid` des valeurs dans une source XAML unique est justifiée pour les consommateurs des valeurs, telles que le processus d’internationalisation dédié ou d’outils. Le modèle d’unicité typique est que `x:Uid` sont uniques au sein d’un fichier XML qui représente le XAML.  
+ `x:Uid` est différent de `x:Name` à la fois en raison du scénario de localisation XAML déclaré et afin que les identificateurs qui sont utilisés pour la localisation n’ont aucune dépendance sur les conséquences de modèle de programmation de `x:Name`. En outre, `x:Name` est régie par la portée de nom XAML ; Toutefois, `x:Uid` n’est pas régi par n’importe quel concept de langage défini XAML de l’application l’unicité. Les processeurs XAML au sens large (processeurs qui ne font pas partie du processus de localisation) ne sont pas censés l’unicité des `x:Uid` valeurs. Cette responsabilité est conceptuellement sur le donneur d’ordre des valeurs. L’attente d’unicité de `x:Uid` valeurs dans une source XAML unique est justifiée pour les consommateurs des valeurs, telles que le processus de globalisation dédié ou d’outils. Le modèle d’unicité typique est que `x:Uid` sont uniques au sein d’un fichier XML qui représente le XAML.  
   
- Les outils qui ont une connaissance significative d’un schéma XAML particulier peuvent choisir d’appliquer `x:Uid` uniquement pour les chaînes localisables true, au lieu de tous les cas où une valeur de chaîne de texte est rencontrée dans la balise.  
+ Outils qui ont une connaissance significative d’un schéma XAML particulier peuvent choisir d’appliquer `x:Uid` uniquement pour les chaînes localisables true, au lieu de tous les cas où une valeur de chaîne de texte est rencontrée dans le balisage.  
   
- Frameworks peuvent spécifier une propriété particulière dans leur modèle d’objet comme étant un alias pour `x:Uid` en appliquant l’attribut <xref:System.Windows.Markup.UidPropertyAttribute> pour le type de définition. Si une infrastructure spécifie une propriété particulière, il n’est pas possible de spécifier à la fois `x:Uid` et le membre d’un alias sur le même objet. Si les deux `x:Uid` et le membre d’un alias sont spécifiés, l’API des Services XAML .NET Framework lève généralement <xref:System.Xaml.XamlDuplicateMemberException> pour ce cas.  
+ Frameworks peuvent spécifier une propriété particulière dans leur modèle d’objet comme étant un alias pour `x:Uid` en appliquant l’attribut <xref:System.Windows.Markup.UidPropertyAttribute> pour le type de définition. Si une infrastructure spécifie une propriété particulière, il n’est pas valide pour spécifier à la fois `x:Uid` et le membre ajouté en alias sur le même objet. Si les deux `x:Uid` et le membre ajouté en alias sont spécifiés, l’API de Services XAML .NET Framework lève généralement <xref:System.Xaml.XamlDuplicateMemberException> pour ce cas.  
   
-## <a name="wpf-usage-notes"></a>Notes d’utilisation WPF  
- Pour plus d’informations sur le rôle de `x:Uid` dans le processus de localisation WPF et dans la forme BAML du XAML, consultez [globalisation pour WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) ou <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+## <a name="wpf-usage-notes"></a>Remarques sur l’utilisation WPF  
+ Pour plus d’informations sur le rôle de `x:Uid` dans le processus de localisation WPF et dans le formulaire BAML de XAML, consultez [globalisation pour WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) ou <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  

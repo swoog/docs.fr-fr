@@ -4,31 +4,31 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 19ba0e585dfdd2ee47781b04a3d1a5bbdba60371
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807431"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419742"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Configuration des services à l'aide de fichiers de configuration
-Configuration d’un service Windows Communication Foundation (WCF) avec un fichier de configuration vous donne la souplesse de fournir le point de terminaison et les données de comportement de service dans la phase de déploiement et non au moment du design. Cette rubrique esquisse les principales techniques disponibles.  
+Configuration d’un service Windows Communication Foundation (WCF) avec un fichier de configuration vous offre la possibilité de fournir le point de terminaison et les données de comportement de service au point de déploiement au lieu d’au moment du design. Cette rubrique esquisse les principales techniques disponibles.  
   
- Un service WCF est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologie de configuration. En règle générale, les éléments XML sont ajoutés au fichier Web.config pour un site Internet Information Services (IIS) qui héberge un service WCF. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service) à partir de chaque ordinateur individuel. En outre, WCF inclut plusieurs éléments fournis par le système qui vous permettent de sélectionner rapidement les principales fonctionnalités de base pour un service. En commençant par [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF est fourni avec un nouveau modèle de configuration par défaut qui simplifie les exigences de configuration WCF. Si vous ne fournissez pas toute la configuration WCF pour un service particulier, le runtime configure automatiquement votre service avec quelques points de terminaison standard et le comportement de la liaison par défaut. Dans la pratique, configuration de l’écriture est une majeure partie de la programmation d’applications WCF.  
+ Un service WCF est configurable à l’aide du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] configuration de la technologie. En règle générale, les éléments XML sont ajoutés au fichier Web.config pour un site Internet Information Services (IIS) qui héberge un service WCF. Les éléments vous permettent de modifier des détails, tels que les adresses de point de terminaison (les adresses réelles qui communiquent avec le service) à partir de chaque ordinateur individuel. En outre, WCF inclut plusieurs éléments fournis par le système qui vous permettent de sélectionner rapidement les fonctionnalités les plus simples pour un service. En commençant par [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], WCF est fourni avec un nouveau modèle de configuration par défaut qui simplifie les conditions requises de configuration WCF. Si vous ne fournissez pas de toute configuration de WCF pour un service particulier, le runtime configure automatiquement votre service avec certains points de terminaison standard et le comportement de la liaison par défaut. Dans la pratique, écriture de la configuration est des principales parties de la programmation d’applications WCF.  
   
- Pour plus d’informations, consultez [configuration des liaisons pour les Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Pour une liste des plus fréquemment utilisées d’éléments, consultez [les liaisons fournies](../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les points de terminaison par défaut, les liaisons et comportements, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Pour plus d’informations, consultez [configuration des liaisons pour les Services](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Pour une liste des plus fréquemment utilisées d’éléments, consultez [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Si vous déployez des scénarios côte à côte où deux versions différentes d'un service sont déployées, vous devez spécifier les noms partiels des assemblys référencés dans les fichiers de configuration. En effet, le fichier de configuration est partagé entre toutes les versions d'un service et elles peuvent s'exécuter sous différentes versions du .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration : Web.config et App.config  
- WCF utilise le système de configuration System.Configuration du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ WCF utilise le système de configuration System.Configuration le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Lorsque vous configurez un service dans Visual Studio, vous devez utiliser un fichier Web.config ou un fichier App.config pour spécifier les paramètres. Le choix du nom de fichier de configuration est déterminé par l'environnement d'hébergement que vous choisissez pour le service. Si vous utilisez IIS pour héberger votre service, utilisez un fichier Web.config. Si vous utilisez tout autre environnement d'hébergement, utilisez un fichier App.config.  
   
  Dans Visual Studio, le fichier nommé App.config est utilisé pour créer le fichier de configuration finale. Le nom final réellement utilisé pour la configuration dépend du nom de l'assembly. Par exemple, un assembly nommé "Cohowinery.exe" porte le nom de fichier de configuration final "Cohowinery.exe.config". Toutefois, vous devez seulement modifier le fichier App.config. Les modifications apportées à ce fichier sont automatiquement répercutées dans le fichier final de configuration de l'application, à la compilation.  
   
- Pour utiliser un fichier App.config, le système de configuration fusionne le fichier App.config avec le contenu du fichier Machine.config lorsque l'application démarre et la configuration est appliquée. Ce mécanisme autorise la définition de paramètres à l'échelle de l'ordinateur dans le fichier Machine.config. Le fichier App.config peut être utilisé pour substituer les paramètres du fichier Machine.config ; vous pouvez également verrouiller les paramètres dans le fichier Machine.config afin qu'ils soient utilisés. Dans le cas de Web.config, le système de configuration fusionne les fichiers Web.config dans tous les répertoires qui mènent au répertoire de l'application dans la configuration qui est appliquée. Pour plus d’informations sur la configuration et les priorités de paramètre, consultez les rubriques de la <xref:System.Configuration> espace de noms.  
+ Pour utiliser un fichier App.config, le système de configuration fusionne le fichier App.config avec le contenu du fichier Machine.config lorsque l'application démarre et la configuration est appliquée. Ce mécanisme autorise la définition de paramètres à l'échelle de l'ordinateur dans le fichier Machine.config. Le fichier App.config peut être utilisé pour substituer les paramètres du fichier Machine.config ; vous pouvez également verrouiller les paramètres dans le fichier Machine.config afin qu'ils soient utilisés. Dans le cas de Web.config, le système de configuration fusionne les fichiers Web.config dans tous les répertoires qui mènent au répertoire de l'application dans la configuration qui est appliquée. Pour plus d’informations sur la configuration et les priorités de paramètre, consultez les rubriques dans le <xref:System.Configuration> espace de noms.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Sections majeures du fichier de configuration  
  Les sections principales dans le fichier de configuration incluent les éléments suivants.  
@@ -91,7 +91,7 @@ Configuration d’un service Windows Communication Foundation (WCF) avec un fich
   
 -   `contract`. Spécifie l'interface qui définit le contrat. C'est l'interface implémentée dans le type Common Language Runtime (CLR) spécifié par l'attribut `name` de l'élément `service` .  
   
--   [\<point de terminaison > référence des éléments](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<point de terminaison > référence des éléments](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>Le \<liaisons > élément  
  L'élément `bindings` contient les caractéristiques pour toutes les liaisons qui peuvent être utilisées par tout point de terminaison défini dans un service.  
@@ -101,7 +101,7 @@ Configuration d’un service Windows Communication Foundation (WCF) avec un fich
 ### <a name="the-binding-element"></a>Le \<liaison > élément  
  L'élément `binding` contenus dans l'élément `bindings` peuvent être une des liaisons fournies par le système (consultez [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)) ou une liaison personnalisée (consultez [Custom Bindings](../../../docs/framework/wcf/extending/custom-bindings.md)). L'élément `binding` a un attribut `name` qui correspond la liaison avec le point de terminaison spécifié dans l'attribut `bindingConfiguration` de l'élément `endpoint` . Si aucun nom n'est spécifié, cette liaison correspond à la valeur par défaut de ce type de liaison.  
   
- Pour plus d’informations sur la configuration des services et des clients, consultez [configuration d’Applications Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ Pour plus d’informations sur la configuration des services et des clients, consultez [configuration des Applications Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<liaison >](../../../docs/framework/misc/binding.md)  
   
@@ -116,7 +116,7 @@ Configuration d’un service Windows Communication Foundation (WCF) avec un fich
  [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Comment : utiliser les configurations de liaison et de comportement  
- WCF facilite le partage des configurations entre des points de terminaison à l’aide d’un système de référence dans la configuration. Plutôt qu'assigner directement des valeurs de configuration à un point de terminaison, les valeurs de configuration connexes à la liaison sont groupées dans les éléments `bindingConfiguration` dans la section `<binding>` . Une configuration de liaison est un groupe nommé de paramètres sur une liaison. Les points de terminaison peuvent référencer ensuite l'élément `bindingConfiguration` par nom.  
+ WCF facilite le partage des configurations entre les points de terminaison à l’aide d’un système de référence dans la configuration. Plutôt qu'assigner directement des valeurs de configuration à un point de terminaison, les valeurs de configuration connexes à la liaison sont groupées dans les éléments `bindingConfiguration` dans la section `<binding>` . Une configuration de liaison est un groupe nommé de paramètres sur une liaison. Les points de terminaison peuvent référencer ensuite l'élément `bindingConfiguration` par nom.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -148,7 +148,7 @@ Configuration d’un service Windows Communication Foundation (WCF) avec un fich
 </configuration>  
 ```  
   
- L'attribut `name` de l'élément `bindingConfiguration` est défini dans l'élément `<binding>` . Le `name` doit être une chaîne unique dans l’étendue du type de liaison : dans ce cas le [< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), ou une valeur vide pour faire référence à la liaison par défaut. Le point de terminaison est relié à la configuration en affectant l'attribut `bindingConfiguration` à cette chaîne.  
+ L'attribut `name` de l'élément `bindingConfiguration` est défini dans l'élément `<binding>` . Le `name` doit être une chaîne unique dans l’étendue du type de liaison, dans ce cas le [< basicHttpBinding\>](../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md), ou une valeur vide pour faire référence à la liaison par défaut. Le point de terminaison est relié à la configuration en affectant l'attribut `bindingConfiguration` à cette chaîne.  
   
  Un attribut `behaviorConfiguration` est implémenté de la même façon, comme illustré dans l'exemple suivant.  
   
@@ -222,7 +222,7 @@ Configuration d’un service Windows Communication Foundation (WCF) avec un fich
   
  Le service situé à l'emplacement ~\Child\Service.svc se comportera comme s'il contenait les comportements serviceDebug et serviceMetadata. Le service qui se trouve à l'emplacement ~\Service.svc aura uniquement le comportement serviceDebug. Les deux collections de comportements portant le même nom (dans ce cas la chaîne vide) sont fusionnées.  
   
- Vous pouvez aussi effacer les collections de comportements à l’aide de la \<Effacer > balise et les comportements individuels supprimés de la collection à l’aide de la \<Supprimer > balise. Par exemple, les deux configurations suivantes provoquent uniquement le comportement serviceMetadata du service enfant :  
+ Vous pouvez également effacer les collections de comportements à l’aide de la \<Effacer > balise et les comportements individuels supprimés de la collection à l’aide de la \<Supprimer > balise. Par exemple, les deux configurations suivantes provoquent uniquement le comportement serviceMetadata du service enfant :  
   
 ```xml  
 <configuration>  
@@ -260,10 +260,10 @@ Configuration d’un service Windows Communication Foundation (WCF) avec un fich
   
  La fusion des comportements s'applique à la fois aux comportements de points de terminaison et aux comportements de services dans une configuration.  
   
- Si une collection de comportements enfants contient un comportement qui est déjà présent dans la collection de comportements parents, le comportement enfant remplace le comportement parent. Ainsi, si une collection de comportements parents contient `<serviceMetadata httpGetEnabled="False" />` et une collection de comportements enfants `<serviceMetadata httpGetEnabled="True" />`, le comportement enfant remplace le comportement parent dans la collection de comportements et httpGetEnabled a « true ».  
+ Si une collection de comportements enfants contient un comportement qui est déjà présent dans la collection de comportements parents, le comportement enfant remplace le comportement parent. Par conséquent, si une collection de comportements parents avait `<serviceMetadata httpGetEnabled="False" />` et une collection de comportements enfants `<serviceMetadata httpGetEnabled="True" />`, le comportement enfant remplace le comportement parent dans la collection de comportements et httpGetEnabled a « true ».  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md)  
- [Configuration des applications Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Configuration des applications Windows Communication Foundation](https://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<service>](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<liaison >](../../../docs/framework/misc/binding.md)

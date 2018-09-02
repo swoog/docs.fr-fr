@@ -2,11 +2,12 @@
 title: Canaux WCF prenant en charge ReceiveContext
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442744"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Canaux WCF prenant en charge ReceiveContext
 Cet exemple montre l'utilité de canaux WCF prenant en charge <xref:System.ServiceModel.Channels.ReceiveContext>. L'exemple implémente un service pour rechercher le produit de deux nombres à l'aide d'un canal NetMSMQ.  
@@ -18,7 +19,7 @@ Cet exemple montre l'utilité de canaux WCF prenant en charge <xref:System.Servi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -34,9 +35,9 @@ Cet exemple montre l'utilité de canaux WCF prenant en charge <xref:System.Servi
   
         3.  Dans la fenêtre résultante, développez **Message Queuing**.  
   
-        4.  Développez **Message Queuing Services**.  
+        4.  Développez **Services de file d’attente de messages**.  
   
-        5.  Cliquez sur **intégration des Services Active** (pour les ordinateurs joints à un domaine), puis cliquez sur **prise en charge HTTP**.  
+        5.  Cliquez sur **intégration de Services d’annuaire** (pour les ordinateurs joints à un domaine), puis cliquez sur **prise en charge HTTP**.  
   
         6.  Cliquez sur **suivant**, puis cliquez sur **installer**.  
   
@@ -46,7 +47,7 @@ Cet exemple montre l'utilité de canaux WCF prenant en charge <xref:System.Servi
   
         2.  Cliquez sur **programmes** puis, sous **programmes et fonctionnalités**, cliquez sur **activer et désactiver des fonctionnalités Windows**.  
   
-        3.  Développez **Microsoft Message Queue (MSMQ) Server**, développez **Microsoft Message Queue (MSMQ) Server Core**, puis sélectionnez les cases à cocher des composants Message Queuing à installer :  
+        3.  Développez **Microsoft Message Queue Server (MSMQ)**, développez **Microsoft Message Queue (MSMQ) Server Core**, puis sélectionnez les cases à cocher pour les fonctionnalités suivantes de Message Queuing à installer :  
   
             -   Serveur Message Queuing  
   

@@ -2,15 +2,15 @@
 title: Architecture et conception
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: c2e8ff5f21a2941d75b21915552e6935a1423978
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766866"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419602"
 ---
 # <a name="architecture-and-design"></a>Architecture et conception
-Le module de génération SQL dans le [fournisseur d’exemples](http://go.microsoft.com/fwlink/?LinkId=180616) est implémenté en tant que visiteur de l’arborescence d’expression qui représente l’arborescence de commandes. La génération est effectuée par un unique passage sur l’arborescence de l’expression.  
+Le module de génération SQL dans le [exemple de fournisseur](https://go.microsoft.com/fwlink/?LinkId=180616) est implémenté en tant que visiteur sur l’arborescence d’expression qui représente l’arborescence de commandes. La génération est effectuée par un unique passage sur l’arborescence de l’expression.  
   
  Les nœuds de l'arborescence sont traités de bas en haut. En premier lieu, une structure intermédiaire est produite : SqlSelectStatement ou SqlBuilder, tous deux implémentant ISqlFragment. Ensuite, l'instruction SQL de chaîne est issue de cette structure. Il y a deux raisons pour la structure intermédiaire :  
   
@@ -25,7 +25,7 @@ Le module de génération SQL dans le [fournisseur d’exemples](http://go.micro
  Dans la deuxième phase, lors de la production de la chaîne réelle, les alias sont renommés.  
   
 ## <a name="data-structures"></a>Structures de données  
- Cette section décrit les types utilisés dans les [fournisseur d’exemples](http://go.microsoft.com/fwlink/?LinkId=180616) que vous utilisez pour créer une instruction SQL.  
+ Cette section décrit les types utilisés dans le [fournisseur d’exemples](https://go.microsoft.com/fwlink/?LinkId=180616) qui vous permet de générer une instruction SQL.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  Cette section décrit les classes qui implémentent l'interface ISqlFragment, avec deux objectifs :  
@@ -212,7 +212,7 @@ private bool IsParentAJoin{get}
 ### <a name="input-alias-redirecting"></a>Redirection d'alias d'entrée  
  La redirection d'alias d'entrée est accomplie avec la table de symboles.  
   
- Pour expliquer la redirection d’alias d’entrée, consultez le premier exemple de [SQL de génération à partir d’arborescences de commandes - meilleures pratiques](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Dans cet exemple « a » doit être redirigé vers « b » dans la projection.  
+ Pour expliquer la redirection d’alias d’entrée, reportez-vous au premier exemple dans [SQL de génération à partir d’arborescences de commandes - meilleures pratiques](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Dans cet exemple « a » doit être redirigé vers « b » dans la projection.  
   
  Lorsqu'un objet SqlSelectStatement est créé, l'étendue qui est l'entrée du nœud est mise dans la propriété FROM du SqlSelectStatement. Un symbole (<symbol_b>) est créé selon le nom de liaison d'entrée (« b ») pour représenter cette étendue et "AS  " + <symbol_b> est ajouté à la Clause From.  Le symbole est également ajouté à la propriété FromExtents.  
   

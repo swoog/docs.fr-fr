@@ -4,12 +4,12 @@ description: Cette rubrique vous guide lors de la génération d’une solution 
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 17d7cc5b085b4d47ebf1e5ed9a766be9d5d8b01f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "36314696"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457041"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Génération d’une solution .NET Core complète sur macOS à l’aide de Visual Studio pour Mac
 
@@ -95,7 +95,7 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
            public void IgnoreCasing()
            {
                var wordCount = WordCount.GetWordCount("Jack", "Jack jack");
-   
+
                Assert.NotEqual(2, wordCount);
            }
        }
@@ -117,7 +117,7 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
    ![Icône Ancrer du panneau Tests unitaires](./media/using-on-mac-vs-full-solution/vsmacfull_UnitTestPanelDockIcon.png)
 
 1. Cliquez sur le bouton **Tout exécuter**.
-   
+
    Le test échoue, ce qui est le résultat correct. La méthode de test déclare que deux instances de `inputString`, « Jack », ne sont pas retournées par la chaîne « Jack jack » fournie à la méthode `GetWordCount`. Étant donné que la méthode `GetWordCount` respecte la casse, les deux instances sont retournées. L’assertion que 2 *n’est pas égal à* 2 échoue. Il s’agit du résultat correct, et la logique de notre test est donc bonne.
 
    ![Échec du test](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
@@ -135,8 +135,8 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
    [InlineData(0, "Ting", "Does not appear in the string.")]
    [InlineData(1, "Ting", "Ting appears once.")]
    [InlineData(2, "Ting", "Ting appears twice with Ting.")]
-   public void CountInstancesCorrectly(int count, 
-                                       string searchWord, 
+   public void CountInstancesCorrectly(int count,
+                                       string searchWord,
                                        string inputString)
    {
        Assert.NotEqual(count, WordCount.GetWordCount(searchWord,
@@ -145,7 +145,7 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
    ```
 
    `CountInstancesCorrectly` vérifie que la méthode `GetWordCount` compte correctement. `InlineData` fournit un nombre, un terme de recherche et une chaîne d’entrée à vérifier. La méthode de test s’exécute une fois pour chaque ligne de données. Notez que, là encore, vous déclarez tout d’abord un échec en utilisant `Assert.NotEqual`, même si vous savez que les nombres contenus dans les données sont corrects et que les valeurs correspondent aux nombres retournés par la méthode `GetWordCount`. L’exécution de l’étape d’échec intentionnel du test peut sembler a priori une perte de temps, mais la vérification de la logique de test en la faisant échouer est une étape importante pour valider la logique de vos tests. Lorsqu’une méthode de test réussit alors que vous pensiez qu’elle échouerait, c’est que vous avez trouvé un bogue dans la logique du test. Il est recommandé de suivre cette procédure chaque fois que vous créez une méthode de test.
-   
+
 1. Enregistrez le fichier et réexécutez les tests. Le test de la casse réussit, mais les trois tests d’énumération échouent. C’est exactement le résultat que vous attendiez.
 
    ![Échec du test](./media/using-on-mac-vs-full-solution/vsmacfull11.png)
@@ -192,4 +192,4 @@ Les tests unitaires effectuent des tests logiciels automatisés pendant le déve
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notes de publication de Visual Studio 2017 pour Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
+* [Notes de publication de Visual Studio 2017 pour Mac](/visualstudio/releasenotes/vs2017-mac-relnotes)
