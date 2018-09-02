@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 2b0441dfebb6692cbea0d1ab7909d7b8f04490cb
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 30e4942934e5d65b214d24a0948f70169d625485
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34457602"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461074"
 ---
 # <a name="c-operators"></a>Opérateurs C#
 C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles opérations (mathématiques, indexation, appel de fonction, etc.) effectuer dans une expression. Vous pouvez [surcharger](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) de nombreux opérateurs pour modifier leur signification quand ils sont appliqués à un type défini par l’utilisateur.  
@@ -207,10 +207,11 @@ C# fournit de nombreux opérateurs, qui sont des symboles spécifiant quelles op
 -   Le dépassement arithmétique ou la division par zéro d'une virgule flottante ne lèvent jamais d'exception, car les types à virgule flottante se basent sur IEEE 754 et peuvent représenter l'infini et NaN (n'est pas un nombre).  
   
 -   Le dépassement arithmétique d’un nombre [décimal](../../../csharp/language-reference/keywords/decimal.md) lève toujours une exception <xref:System.OverflowException>. La division d'un nombre décimal par zéro lève toujours une exception <xref:System.DivideByZeroException>.  
-  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Opérateurs surchargeables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) [C#](../../../csharp/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [C#](../../../csharp/index.md)
+- [Opérateurs surchargeables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
