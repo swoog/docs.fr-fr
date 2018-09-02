@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d7cff23fc0b58d316ce19950a982249e84b79ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d06f1c93275cb6adf4f1da02ccd5d889cb06c5d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441950"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422638"
 ---
-# <a name="ihostsyncmanagercreatemonitorevent-method"></a><span data-ttu-id="de691-102">IHostSyncManager::CreateMonitorEvent, méthode</span><span class="sxs-lookup"><span data-stu-id="de691-102">IHostSyncManager::CreateMonitorEvent Method</span></span>
-<span data-ttu-id="de691-103">Crée un objet d’événement de réinitialisation automatique surveillé.</span><span class="sxs-lookup"><span data-stu-id="de691-103">Creates a monitored auto-reset event object.</span></span>  
+# <a name="ihostsyncmanagercreatemonitorevent-method"></a><span data-ttu-id="bed28-102">IHostSyncManager::CreateMonitorEvent, méthode</span><span class="sxs-lookup"><span data-stu-id="bed28-102">IHostSyncManager::CreateMonitorEvent Method</span></span>
+<span data-ttu-id="bed28-103">Crée un objet d’événement d’auto-réinitialisation surveillé.</span><span class="sxs-lookup"><span data-stu-id="bed28-103">Creates a monitored auto-reset event object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de691-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="de691-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bed28-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bed28-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateMonitorEvent (  
@@ -36,41 +36,41 @@ HRESULT CreateMonitorEvent (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="de691-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="de691-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bed28-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="bed28-105">Parameters</span></span>  
  `cookie`  
- <span data-ttu-id="de691-106">[in] Cookie à associer à l’objet d’événement.</span><span class="sxs-lookup"><span data-stu-id="de691-106">[in] A cookie to associate with the event object.</span></span>  
+ <span data-ttu-id="bed28-106">[in] Un cookie à associer à l’objet d’événement.</span><span class="sxs-lookup"><span data-stu-id="bed28-106">[in] A cookie to associate with the event object.</span></span>  
   
  `ppEvent`  
- <span data-ttu-id="de691-107">[out] Un pointeur vers l’adresse d’un [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) de l’instance, ou null si l’objet d’événement n’a pas pu être créé.</span><span class="sxs-lookup"><span data-stu-id="de691-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
+ <span data-ttu-id="bed28-107">[out] Un pointeur vers l’adresse d’un [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) d’instance, ou null si l’objet d’événement n’a pas pu être créé.</span><span class="sxs-lookup"><span data-stu-id="bed28-107">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance, or null if the event object could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="de691-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="de691-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bed28-108">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="bed28-108">Return Value</span></span>  
   
-|<span data-ttu-id="de691-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="de691-109">HRESULT</span></span>|<span data-ttu-id="de691-110">Description</span><span class="sxs-lookup"><span data-stu-id="de691-110">Description</span></span>|  
+|<span data-ttu-id="bed28-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="bed28-109">HRESULT</span></span>|<span data-ttu-id="bed28-110">Description</span><span class="sxs-lookup"><span data-stu-id="bed28-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="de691-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="de691-111">S_OK</span></span>|<span data-ttu-id="de691-112">`CreateMonitorEvent` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="de691-112">`CreateMonitorEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="de691-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="de691-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="de691-114">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter du code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="de691-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="de691-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="de691-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="de691-116">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="de691-116">The call timed out.</span></span>|  
-|<span data-ttu-id="de691-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="de691-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="de691-118">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="de691-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="de691-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="de691-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="de691-120">Un événement a été annulé alors qu’un thread bloqué ou une fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="de691-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="de691-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="de691-121">E_FAIL</span></span>|<span data-ttu-id="de691-122">Une défaillance grave et inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="de691-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="de691-123">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable dans le processus.</span><span class="sxs-lookup"><span data-stu-id="de691-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="de691-124">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="de691-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="de691-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="de691-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="de691-126">Pas assez de mémoire n’était disponible pour créer l’objet de l’événement demandé.</span><span class="sxs-lookup"><span data-stu-id="de691-126">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="bed28-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="bed28-111">S_OK</span></span>|<span data-ttu-id="bed28-112">`CreateMonitorEvent` retourné avec succès.</span><span class="sxs-lookup"><span data-stu-id="bed28-112">`CreateMonitorEvent` returned successfully.</span></span>|  
+|<span data-ttu-id="bed28-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="bed28-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="bed28-114">Le common language runtime (CLR) n’a pas été chargé dans un processus ou le CLR est dans un état dans lequel il ne peut pas exécuter le code managé ou traiter l’appel avec succès.</span><span class="sxs-lookup"><span data-stu-id="bed28-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="bed28-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="bed28-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="bed28-116">L’appel a expiré.</span><span class="sxs-lookup"><span data-stu-id="bed28-116">The call timed out.</span></span>|  
+|<span data-ttu-id="bed28-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="bed28-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="bed28-118">L’appelant ne possède pas le verrou.</span><span class="sxs-lookup"><span data-stu-id="bed28-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="bed28-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="bed28-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="bed28-120">Un événement a été annulé alors qu’un thread bloqué ou Fibre l’attendait.</span><span class="sxs-lookup"><span data-stu-id="bed28-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="bed28-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="bed28-121">E_FAIL</span></span>|<span data-ttu-id="bed28-122">Une défaillance catastrophique inconnue s’est produite.</span><span class="sxs-lookup"><span data-stu-id="bed28-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="bed28-123">Lorsqu’une méthode retourne E_FAIL, le CLR n’est plus utilisable au sein du processus.</span><span class="sxs-lookup"><span data-stu-id="bed28-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="bed28-124">Les appels suivants aux méthodes d’hébergement retournent HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="bed28-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="bed28-125">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="bed28-125">E_OUTOFMEMORY</span></span>|<span data-ttu-id="bed28-126">Pas assez de mémoire n’était disponible pour créer l’objet événement demandé.</span><span class="sxs-lookup"><span data-stu-id="bed28-126">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="de691-127">Notes</span><span class="sxs-lookup"><span data-stu-id="de691-127">Remarks</span></span>  
- <span data-ttu-id="de691-128">`CreateMonitorEvent` Retourne un `IHostAutoEvent` que le CLR utilise dans son implémentation de managé <xref:System.Threading.Monitor?displayProperty=nameWithType> type.</span><span class="sxs-lookup"><span data-stu-id="de691-128">`CreateMonitorEvent` returns an `IHostAutoEvent` that the CLR uses in its implementation of the managed <xref:System.Threading.Monitor?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="de691-129">Cette méthode reflète Win32 `CreateEvent` fonction, avec la valeur `false` spécifié pour le `bManualReset` paramètre.</span><span class="sxs-lookup"><span data-stu-id="de691-129">This method mirrors the Win32 `CreateEvent` function, with a value of `false` specified for the `bManualReset` parameter.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bed28-127">Notes</span><span class="sxs-lookup"><span data-stu-id="bed28-127">Remarks</span></span>  
+ <span data-ttu-id="bed28-128">`CreateMonitorEvent` Retourne un `IHostAutoEvent` que le CLR utilise dans son implémentation de managé <xref:System.Threading.Monitor?displayProperty=nameWithType> type.</span><span class="sxs-lookup"><span data-stu-id="bed28-128">`CreateMonitorEvent` returns an `IHostAutoEvent` that the CLR uses in its implementation of the managed <xref:System.Threading.Monitor?displayProperty=nameWithType> type.</span></span> <span data-ttu-id="bed28-129">Cette méthode reflète Win32 `CreateEvent` (fonction), avec la valeur `false` spécifié pour le `bManualReset` paramètre.</span><span class="sxs-lookup"><span data-stu-id="bed28-129">This method mirrors the Win32 `CreateEvent` function, with a value of `false` specified for the `bManualReset` parameter.</span></span>  
   
- <span data-ttu-id="de691-130">L’hôte peut utiliser le cookie pour déterminer quelle tâche attend sur l’écran en appelant le [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="de691-130">The host can use the cookie to determine which task is waiting on the monitor by calling the [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) method.</span></span>  
+ <span data-ttu-id="bed28-130">L’hôte peut utiliser le cookie pour déterminer quelle tâche attend le moniteur en appelant le [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) (méthode).</span><span class="sxs-lookup"><span data-stu-id="bed28-130">The host can use the cookie to determine which task is waiting on the monitor by calling the [ICLRSyncManager::GetMonitorOwner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de691-131">Spécifications</span><span class="sxs-lookup"><span data-stu-id="de691-131">Requirements</span></span>  
- <span data-ttu-id="de691-132">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="de691-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bed28-131">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="bed28-131">Requirements</span></span>  
+ <span data-ttu-id="bed28-132">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bed28-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="de691-133">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="de691-133">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="bed28-133">**En-tête :** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="bed28-133">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="de691-134">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="de691-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bed28-134">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bed28-134">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="de691-135">**Versions du .NET framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de691-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="bed28-135">**Versions du .NET Framework :** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bed28-135">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de691-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="de691-136">See Also</span></span>  
- [<span data-ttu-id="de691-137">ICLRSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="de691-137">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [<span data-ttu-id="de691-138">IHostAutoEvent, interface</span><span class="sxs-lookup"><span data-stu-id="de691-138">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [<span data-ttu-id="de691-139">IHostSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="de691-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- [<span data-ttu-id="de691-140">Moniteurs</span><span class="sxs-lookup"><span data-stu-id="de691-140">Monitors</span></span>](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)
+## <a name="see-also"></a><span data-ttu-id="bed28-136">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bed28-136">See Also</span></span>  
+ [<span data-ttu-id="bed28-137">ICLRSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="bed28-137">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
+ [<span data-ttu-id="bed28-138">IHostAutoEvent, interface</span><span class="sxs-lookup"><span data-stu-id="bed28-138">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
+ [<span data-ttu-id="bed28-139">IHostSyncManager, interface</span><span class="sxs-lookup"><span data-stu-id="bed28-139">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
+ [<span data-ttu-id="bed28-140">Moniteurs</span><span class="sxs-lookup"><span data-stu-id="bed28-140">Monitors</span></span>](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)
