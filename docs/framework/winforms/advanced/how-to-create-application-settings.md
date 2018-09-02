@@ -8,30 +8,30 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: e6e268169949994e1b58b5b8a7dcd0429895fb38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a84fc85b42f2b78ccafcae3c815847633b9916d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524168"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400528"
 ---
 # <a name="how-to-create-application-settings"></a>Comment : créer des paramètres d'application
 À l'aide de code managé, vous pouvez créer des paramètres d'application et les lier à des propriétés ou des contrôles sur votre formulaire, pour que ces paramètres soient chargés et enregistrés automatiquement au moment de l'exécution.  
   
  Dans la procédure suivante, vous allez créer manuellement une classe wrapper qui dérive de <xref:System.Configuration.ApplicationSettingsBase>. Vous ajouterez à cette classe une propriété accessible publiquement pour chaque paramètre d'application que vous souhaitez exposer.  
   
- Vous pouvez également appliquer cette procédure avec un minimum de code dans le concepteur Visual Studio.  Consultez également [Comment : créer des Application paramètres de l’aide du concepteur](http://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
+ Vous pouvez également appliquer cette procédure avec un minimum de code dans le concepteur Visual Studio.  Consultez également [Comment : créer des Application paramètres de l’aide du concepteur](https://msdn.microsoft.com/library/wabtadw6\(v=vs.110\)).  
   
 ### <a name="to-create-new-application-settings-programmatically"></a>Pour créer des paramètres d'application par programmation  
   
 1.  Ajoutez une nouvelle classe à votre projet et renommez-la. Pour cette procédure, nous appellerons cette classe `MyUserSettings`. Modifiez la définition de la classe pour qu'elle dérive de <xref:System.Configuration.ApplicationSettingsBase>.  
   
-2.  Définissez une propriété sur cette classe wrapper pour chaque paramètre d'application nécessaire et appliquez cette propriété avec le <xref:System.Configuration.ApplicationScopedSettingAttribute> ou le <xref:System.Configuration.UserScopedSettingAttribute>, selon la portée du paramètre. Pour plus d’informations sur la portée des paramètres, consultez [vue d’ensemble des paramètres d’Application](../../../../docs/framework/winforms/advanced/application-settings-overview.md). Votre code doit maintenant ressembler à ce qui suit :  
+2.  Définissez une propriété sur cette classe wrapper pour chaque paramètre d'application nécessaire et appliquez cette propriété avec le <xref:System.Configuration.ApplicationScopedSettingAttribute> ou le <xref:System.Configuration.UserScopedSettingAttribute>, selon la portée du paramètre. Pour plus d’informations sur la portée des paramètres, consultez [Application Settings Overview](../../../../docs/framework/winforms/advanced/application-settings-overview.md). Votre code doit maintenant ressembler à ce qui suit :  
   
      [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
      [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
-3.  Créez une instance de cette classe wrapper dans votre application. Il s'agira généralement d'un membre privé du formulaire principal. Maintenant que vous avez défini votre classe, vous devez la lier à une propriété. Ici, il s'agit de la propriété <xref:System.Windows.Forms.Form.BackColor%2A> de votre formulaire. Vous pouvez le faire dans votre formulaire `Load` Gestionnaire d’événements.  
+3.  Créez une instance de cette classe wrapper dans votre application. Il s'agira généralement d'un membre privé du formulaire principal. Maintenant que vous avez défini votre classe, vous devez la lier à une propriété. Ici, il s'agit de la propriété <xref:System.Windows.Forms.Form.BackColor%2A> de votre formulaire. Vous pouvez y parvenir dans votre formulaire `Load` Gestionnaire d’événements.  
   
      [!code-csharp[ApplicationSettings.Create#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/Form1.cs#2)]
      [!code-vb[ApplicationSettings.Create#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/Form1.vb#2)]  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925476"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404565"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
 Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient un texte facultatif <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
@@ -119,7 +119,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
 -   Dans le code, vous créez des en-têtes d'adresse personnalisés à l'aide de la classe <xref:System.ServiceModel.Channels.AddressHeader>, que vous utilisez ensuite dans la construction d'un <xref:System.ServiceModel.EndpointAddress>.  
   
--   Dans la configuration, personnalisée [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) sont spécifiés en tant qu’enfants de le [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément.  
+-   Dans la configuration, personnalisée [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) sont spécifiés en tant qu’enfants de le [ \<point de terminaison >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément.  
   
  La configuration est généralement préférable au code, car elle vous permet de modifier les en-têtes après le déploiement.  
   
@@ -130,7 +130,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
 -   Dans le code, spécifiez une adresse d'écoute personnalisée en ajoutant une classe <xref:System.ServiceModel.Description.ClientViaBehavior> à la collection de comportements du point de terminaison.  
   
--   Dans la configuration, spécifiez une adresse d’écoute personnalisée avec le `ListenUri` attribut du service [ \<point de terminaison >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément.  
+-   Dans la configuration, spécifiez une adresse d’écoute personnalisée avec le `ListenUri` attribut du service [ \<point de terminaison >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément.  
   
 ### <a name="custom-soap-address-filter"></a>Filtre d'adresse SOAP personnalisé  
  L'<xref:System.ServiceModel.EndpointAddress.Uri%2A> est utilisé conjointement avec toute propriété <xref:System.ServiceModel.EndpointAddress.Headers%2A> pour définir le filtre d'adresse SOAP d'un point de terminaison (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Par défaut, ce filtre vérifie qu'un message entrant a un en-tête de message `To` qui correspond à l'URI du point de terminaison et que tous les en-têtes de point de terminaison requis sont présents dans le message.  

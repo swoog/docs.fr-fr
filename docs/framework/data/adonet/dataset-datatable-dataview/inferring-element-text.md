@@ -2,15 +2,15 @@
 title: Déduction du texte d'un élément
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
-ms.openlocfilehash: b32d8f3f89a16166ffc0e903ef1f63c3b97a249c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762713"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405786"
 ---
 # <a name="inferring-element-text"></a>Déduction du texte d'un élément
-Si un élément contient du texte et ne comporte aucun élément enfant à déduire en tant que tables telles que (éléments avec attributs) ou des éléments répétés, une nouvelle colonne portant le nom **TableName_Text** sera ajouté à la table qui est déduite pour l’élément. Le texte contenu dans l'élément sera ajouté à une ligne de la table et stocké dans la nouvelle colonne. Le **ColumnMapping** propriété de la nouvelle colonne est fixée à **MappingType.SimpleContent**.  
+Si un élément contient du texte et ne contient aucun élément enfant à déduire en tant que tables telles que (éléments avec attributs) ou des éléments répétés, une nouvelle colonne portant le nom **TableName_Text** sera ajouté à la table qui est déduite pour l’élément. Le texte contenu dans l'élément sera ajouté à une ligne de la table et stocké dans la nouvelle colonne. Le **ColumnMapping** propriété de la nouvelle colonne est définie **MappingType.SimpleContent**.  
   
  Examinons, par exemple, le code XML suivant.  
   
@@ -20,9 +20,9 @@ Si un élément contient du texte et ne comporte aucun élément enfant à dédu
 </DocumentElement>  
 ```  
   
- Le processus d’inférence produira une table nommée **Element1** avec deux colonnes : **attr1** et **Element1_Text**. Le **ColumnMapping** propriété de la **attr1** colonne a la valeur **MappingType.Attribute**. Le **ColumnMapping** propriété de la **Element1_Text** colonne a la valeur **MappingType.SimpleContent**.  
+ Le processus d’inférence produira une table nommée **Element1** avec deux colonnes : **attr1** et **Element1_Text**. Le **ColumnMapping** propriété de la **attr1** jeu de colonnes **MappingType.Attribute**. Le **ColumnMapping** propriété de la **Element1_Text** jeu de colonnes **MappingType.SimpleContent**.  
   
- **DataSet :** DocumentElement  
+ **Jeu de données :** DocumentElement  
   
  **Table :** Element1  
   
@@ -40,9 +40,9 @@ Si un élément contient du texte et ne comporte aucun élément enfant à dédu
 </Element1>  
 ```  
   
- Le processus d’inférence produira une table nommée **Element1** avec une colonne nommée **ChildElement1**. Le texte de la **ChildElement1** élément figureront dans une ligne de la table. L'autre texte sera ignoré. Le **ColumnMapping** propriété de la **ChildElement1** colonne a la valeur **MappingType.Element**.  
+ Le processus d’inférence produira une table nommée **Element1** avec une colonne nommée **ChildElement1**. Le texte pour le **ChildElement1** élément figureront dans une ligne dans la table. L'autre texte sera ignoré. Le **ColumnMapping** propriété de la **ChildElement1** jeu de colonnes **MappingType.Element**.  
   
- **DataSet :** DocumentElement  
+ **Jeu de données :** DocumentElement  
   
  **Table :** Element1  
   
@@ -56,4 +56,4 @@ Si un élément contient du texte et ne comporte aucun élément enfant à dédu
  [Chargement des informations de schéma de DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Utilisation de XML dans un DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

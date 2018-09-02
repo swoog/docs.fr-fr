@@ -2,12 +2,12 @@
 title: Séquences Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 9f89234168351191c63d81fd4f3b68b01bfac2da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c1829cc3f9506b0317e6638fd2760a91c7d19d6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358610"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403969"
 ---
 # <a name="oracle-sequences"></a>Séquences Oracle
 Le fournisseur de données .NET Framework pour Oracle offre une prise en charge pour l'extraction des valeurs de séquence Oracle clés générées par le serveur, une fois les insertions réalisées par <xref:System.Data.OracleClient.OracleDataAdapter>.  
@@ -20,7 +20,7 @@ Le fournisseur de données .NET Framework pour Oracle offre une prise en charge
   
  Lorsque vous créez une séquence dans une base de données Oracle, vous pouvez définir sa valeur initiale et l'incrémentation entre ses valeurs. Vous pouvez également interroger la séquence à propos de nouvelles valeurs avant de soumettre de nouvelles lignes. Cela signifie que votre code peut reconnaître les valeurs clés des nouvelles lignes avant que vous ne les insériez dans la base de données.  
   
- Pour plus d’informations sur la création de colonnes à incrémentation automatique à l’aide de SQL Server et ADO.NET, consultez [la récupération des valeurs d’identité ou NuméroAuto](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) et [Creating AutoIncrement Columns](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
+ Pour plus d’informations sur la création de colonnes à incrémentation automatique à l’aide de SQL Server et ADO.NET, consultez [récupération des valeurs d’identité ou NuméroAuto](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md) et [création des colonnes AutoIncrement](../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-autoincrement-columns.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple C# suivant montre comment vous pouvez extraire de nouvelles valeurs de séquence à partir d'une base de données Oracle. Cet exemple référence la séquence dans la requête INSERT INTO utilisée pour soumettre les nouvelles lignes, puis retourne la valeur de séquence générée à l'aide de la clause RETURNING introduite dans Oracle10g. L'exemple ajoute une série de nouvelles lignes en attente dans <xref:System.Data.DataTable> à l'aide d'une fonctionnalité d'incrémentation automatique ADO.NET pour générer des valeurs de clé primaire « espace réservé ». Notez que la valeur incrémentielle ADO.NET générée pour la nouvelle ligne est simplement un « espace réservé ». Cela signifie que la base de données peut générer des valeurs différentes de celles qu'ADO.NET génère.  
@@ -100,4 +100,4 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>Voir aussi  
  [Oracle et ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

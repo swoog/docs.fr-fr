@@ -9,18 +9,18 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 55ec68e8918c9f7fbc9d3ac0062926cc03cb5e10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b972da093fc50563c5db93e61aeb8421f9bf20b2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556651"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407544"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Comment : filtrer les données d'une vue
 Cet exemple montre comment filtrer des données dans une vue.  
   
 ## <a name="example"></a>Exemple  
- Pour créer un filtre, définissez une méthode qui fournit la logique de filtrage. La méthode est utilisée comme un rappel et accepte un paramètre de type `object`. La méthode suivante retourne tous les le `Order` objets avec le `filled` propriété définie sur « Non », filtre le reste des objets.  
+ Pour créer un filtre, définissez une méthode qui fournit la logique de filtrage. La méthode est utilisée comme un rappel et accepte un paramètre de type `object`. La méthode suivante retourne tous les `Order` objets avec le `filled` propriété définie sur « Non », filtre le reste des objets.  
   
  [!code-csharp[SortFilter#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#2)]
  [!code-vb[SortFilter#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#2)]  
@@ -35,14 +35,14 @@ Cet exemple montre comment filtrer des données dans une vue.
  [!code-csharp[SortFilter#Unfilter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- Pour plus d’informations sur la façon de créer ou d’obtenir une vue, consultez [obtenir la vue par défaut d’une Collection de données](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md). Pour obtenir un exemple complet, consultez [de tri et de filtrage des éléments dans une vue, exemple](http://go.microsoft.com/fwlink/?LinkID=160040).  
+ Pour plus d’informations sur la façon de créer ou d’obtenir une vue, consultez [obtenir la vue par défaut d’une Collection de données](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md). Pour obtenir un exemple complet, consultez [de tri et filtrage des éléments dans une vue, exemple](https://go.microsoft.com/fwlink/?LinkID=160040).  
   
  Si votre objet de vue provient d’un <xref:System.Windows.Data.CollectionViewSource> de l’objet, vous appliquez la logique de filtrage en définissant un gestionnaire d’événements pour le <xref:System.Windows.Data.CollectionViewSource.Filter> événement. Dans l’exemple suivant, `listingDataView` est une instance de <xref:System.Windows.Data.CollectionViewSource>.  
   
  [!code-csharp[DataBindingLab#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#10)]
  [!code-vb[DataBindingLab#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#10)]  
   
- L’exemple suivant montre l’implémentation de l’exemple `ShowOnlyBargainsFilter` Gestionnaire d’événements de filtre. Ce gestionnaire d’événements utilise le <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> propriété à filtrer `AuctionItem` objets qui ont un `CurrentPrice` de $25 ou plus.  
+ L’exemple suivant montre l’implémentation de l’exemple `ShowOnlyBargainsFilter` Gestionnaire d’événements de filtre. Ce gestionnaire d’événements utilise la <xref:System.Windows.Data.FilterEventArgs.Accepted%2A> propriété pour filtrer les `AuctionItem` objets qui ont un `CurrentPrice` de 25 $ ou plus.  
   
  [!code-csharp[DataBindingLab#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: a3353122d6b2cd44f0de12ef8799d71bddab6160
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602631"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402225"
 ---
 # <a name="visual-basic-language-reference"></a>Informations de référence sur le langage Visual Basic
 Cette section fournit des informations de référence sur les divers aspects du langage Visual Basic.  
@@ -36,10 +36,10 @@ Cette section fournit des informations de référence sur les divers aspects du 
  [Constantes et énumérations](../../visual-basic/language-reference/constants-and-enumerations.md)  
  Documente les constantes et énumérations disponibles dans Visual Basic.  
   
- [Types de données](../../visual-basic/language-reference/data-types/data-type-summary.md)  
- Décrit les types de données disponibles dans Visual Basic.  
+ [Types de données](../../visual-basic/language-reference/data-types/index.md)  
+ Documente les types de données disponibles dans Visual Basic.  
   
- [Directives](../../visual-basic/language-reference/directives/directives.md)  
+ [Directives](../../visual-basic/language-reference/directives/index.md)  
  Documente les directives du compilateur disponibles dans Visual Basic.  
   
  [Fonctions](../../visual-basic/language-reference/functions/index.md)  
@@ -49,13 +49,13 @@ Cette section fournit des informations de référence sur les divers aspects du 
  Liste les modificateurs runtime de Visual Basic et fournit des liens vers d’autres informations.  
   
  [Modules](../../visual-basic/language-reference/modules.md)  
- Documente les modules disponibles dans Visual Basic et leurs membres.  
+ Documente les modules disponibles dans Visual Basic et de leurs membres.  
   
  [Nothing](../../visual-basic/language-reference/nothing.md)  
  Décrit la valeur par défaut de tout type de données.  
   
  [Objects](../../visual-basic/language-reference/objects/index.md)  
- Documente les objets disponibles dans Visual Basic et leurs membres.  
+ Documente les objets disponibles dans Visual Basic et de leurs membres.  
   
  [Opérateurs](../../visual-basic/language-reference/operators/index.md)  
  Documente les opérateurs disponibles dans Visual Basic.  
@@ -63,16 +63,16 @@ Cette section fournit des informations de référence sur les divers aspects du 
  [Propriétés](../../visual-basic/language-reference/properties.md)  
  Documente les propriétés disponibles dans Visual Basic.  
   
- [Requêtes](../../visual-basic/language-reference/queries/queries.md)  
+ [Requêtes](../../visual-basic/language-reference/queries/index.md)  
  Fournit des informations de référence sur l’utilisation d’expressions [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] dans votre code.  
   
  [Instructions](../../visual-basic/language-reference/statements/index.md)  
- Documente les instructions de déclaration et d’exécutable disponibles dans Visual Basic.  
+ Documente les déclaration et les instructions exécutables disponibles dans Visual Basic.  
   
- [Étiquettes XML pour les commentaires](../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ [Étiquettes XML pour les commentaires](../../visual-basic/language-reference/xmldoc/index.md)  
  Décrit les commentaires de documentation pour lesquels IntelliSense est fourni dans l’éditeur de Code Visual Basic.  
   
- [Propriétés d’axe XML](../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Propriétés d’axe XML](../../visual-basic/language-reference/xml-axis/index.md)  
  Fournit des liens vers des informations sur l’utilisation de propriétés d’axe XML pour accéder directement au code XML dans votre code.  
   
  [Littéraux XML](../../visual-basic/language-reference/xml-literals/index.md)  

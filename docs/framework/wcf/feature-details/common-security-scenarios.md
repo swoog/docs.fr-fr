@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0fb51ea0624c4fa686e4e99ffb9c30decedfea10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 220795488d6e4bedf40e0764040470c18d3a3b48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490901"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402780"
 ---
 # <a name="common-security-scenarios"></a>Scénarios de sécurité courants
 Les rubriques de cette section présentent un certain nombre de configurations de sécurité de service et client possibles. Les configurations varient selon un certain nombre de facteurs. Par exemple, si un service ou un client est sur un intranet, ou si la sécurité est fournie par Windows ou un transport (tel que HTTPS).  
@@ -36,7 +36,7 @@ Les rubriques de cette section présentent un certain nombre de configurations d
  Présente un client/service sécurisé par un certificat.  
   
  [Sécurité de message avec un client anonyme](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
- Montre un client et un service sécurisé par la sécurité de message WCF.  
+ Montre un client / service sécurisé par la sécurité de message WCF.  
   
  [Sécurité de message avec un client de type Nom d’utilisateur](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Le client est une application Windows Forms qui autorise les clients à se connecter à l’aide d’un mot de passe et d’un nom d’utilisateur de domaine.  
@@ -83,4 +83,4 @@ Les rubriques de cette section présentent un certain nombre de configurations d
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide sur la sécurité et bonnes pratiques](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

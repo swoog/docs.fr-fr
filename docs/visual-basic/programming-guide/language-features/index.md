@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 3446b6b8eeb646fa8929efa10366cb6a83627eae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652010"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402613"
 ---
 # <a name="visual-basic-language-features"></a>Fonctionnalités du langage Visual Basic
-Les rubriques suivantes présentent et décrivent les composants essentiels de Visual Basic, un langage de programmation orientée objet. Après avoir créé l’interface utilisateur de votre application à l’aide des formulaires et des contrôles, vous avez besoin d’écrire le code qui définit le comportement de l’application. Comme avec n’importe quel langage de programmation modernes, Visual Basic prend en charge un nombre de constructions de programmation courantes et des éléments de langage.  
+Les rubriques suivantes présentent et décrivent les composants essentiels de Visual Basic, un langage de programmation orientée objet. Après avoir créé l’interface utilisateur de votre application à l’aide des formulaires et des contrôles, vous avez besoin d’écrire le code qui définit le comportement de l’application. Comme avec n’importe quel langage de programmation modern, Visual Basic prend en charge un nombre de constructions de programmation courants et les éléments de langage.  
   
- Si vous avez déjà programmé dans d’autres langages, la plupart des informations présentées dans cette section vous seront familières. Alors que la plupart des constructions est semblable à celles d’autres langages, la nature pilotée par événements de Visual Basic présente quelques différences subtiles.  
+ Si vous avez déjà programmé dans d’autres langages, la plupart des informations présentées dans cette section vous seront familières. La plupart des constructions sont semblable à celles des autres langages, la nature événementielle de Visual Basic présente quelques différences subtiles.  
   
  Si vous êtes novice en programmation, les éléments de cette section servent d’introduction aux blocs de construction de base pour l’écriture de code. Une fois que vous comprenez les notions de base, vous pouvez créer des applications puissantes à l’aide de Visual Basic.  
   
@@ -78,8 +78,8 @@ Les rubriques suivantes présentent et décrivent les composants essentiels de V
  Fournit des liens vers des rubriques qui expliquent comment utiliser XML en Visual Basic.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+ [Collections](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
  Décrit quelques-uns des types de collections fournis par .NET Framework. Montre comment utiliser des collections simples et des collections de paires clé/valeur.  
   
  [Informations de référence sur le langage Visual Basic](../../../visual-basic/language-reference/index.md)  
- Fournit des informations de référence sur les divers aspects de programmation Visual Basic.
+ Fournit des informations de référence sur divers aspects de programmation en Visual Basic.

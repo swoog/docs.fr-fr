@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe7c1eddd67e678e7086d948efb854a6b4b52f6e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cfd90c5d38be788125af3bafe1e9ba034e9b957
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539489"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400378"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Comment : créer une application Windows Forms à partir de la ligne de commande
-Les procédures suivantes décrivent les étapes de base que vous devez effectuer pour créer et exécuter une application Windows Forms à partir de la ligne de commande. Ces procédures sont très bien prises en charge dans Visual Studio.  Consultez également [procédure pas à pas : création d’un Windows Form Simple](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
+Les procédures suivantes décrivent les étapes de base que vous devez effectuer pour créer et exécuter une application Windows Forms à partir de la ligne de commande. Ces procédures sont très bien prises en charge dans Visual Studio.  Consultez également [procédure pas à pas : création d’un formulaire Windows Simple](https://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
   
 ## <a name="procedure"></a>Procédure  
   
@@ -44,9 +44,9 @@ Les procédures suivantes décrivent les étapes de base que vous devez effectue
   
 4.  Ajoutez une méthode `Main` à la classe.  
   
-    1.  Appliquer le <xref:System.STAThreadAttribute> au c# `Main` méthode pour indiquer que votre application Windows Forms est un thread cloisonné. (L’attribut n’est pas nécessaire en Visual Basic, étant donné que les applications Windows forms développement avec Visual Basic utilisent un modèle de thread unique cloisonné par défaut.)  
+    1.  Appliquer le <xref:System.STAThreadAttribute> c# `Main` méthode pour spécifier votre application Windows Forms est un thread unique cloisonné. (L’attribut n’est pas nécessaire en Visual Basic, dans la mesure où Windows forms applications développées avec Visual Basic utilisez un modèle de thread unique cloisonné par défaut.)  
   
-    2.  Appelez <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> pour appliquer des styles de système d’exploitation pour votre application.  
+    2.  Appelez <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> pour appliquer des styles de système d’exploitation à votre application.  
   
     3.  Créez une instance du formulaire et exécutez-la.  
   

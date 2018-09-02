@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d682533f96b5fb56430a0826d37a9794dc8c5d8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc6453dc188e7621444b6f44b805aab9354d81f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655308"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402059"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 Spécifie un nom de conteneur de clé pour une paire de clés afin d'attribuer un nom fort à un assembly.  
@@ -31,9 +31,9 @@ Spécifie un nom de conteneur de clé pour une paire de clés afin d'attribuer u
 |`container`|Obligatoire. Fichier conteneur qui contient la clé. Placez le nom de fichier entre guillemets (" ») si le nom contient un espace.|  
   
 ## <a name="remarks"></a>Notes  
- Le compilateur crée le composant partageable en insérant une clé publique dans le manifeste d’assembly et en signant l’assembly final avec la clé privée. Pour générer un fichier de clé, tapez `sn -k``file` à la ligne de commande. Le `-i` option installe la paire de clés dans un conteneur. Pour plus d’informations, consultez [Sn.exe (outil Strong Name)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
+ Le compilateur crée le composant partageable en insérant une clé publique dans le manifeste d’assembly et en signant l’assembly final avec la clé privée. Pour générer un fichier de clé, tapez `sn -k file` à la ligne de commande. Le `-i` option installe la paire de clés dans un conteneur. Pour plus d’informations, consultez [Sn.exe (Strong Name Tool)][Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
- Si vous compilez avec `-target:module`, le nom du fichier de clé est conservé dans le module et incorporé dans l’assembly qui est créé lorsque vous compilez un assembly avec [- /addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
+ Si vous compilez avec `-target:module`, le nom du fichier de clé est conservé dans le module et incorporé dans l’assembly qui est créé lorsque vous compilez un assembly avec [- addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
  Vous pouvez également spécifier cette option comme attribut personnalisé (<xref:System.Reflection.AssemblyKeyNameAttribute>) dans le code source de n'importe quel module MSIL (Microsoft Intermediate Language).  
   

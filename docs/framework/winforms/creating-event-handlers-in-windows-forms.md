@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [Windows Forms], event handlers
 - event handlers [Windows Forms]
 ms.assetid: 6514e530-c6b8-489c-a8d2-eda7b7072701
-ms.openlocfilehash: 96697fa54b569b6d1ce092ebfc76ef593f2ac66f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9095946d52360c69fd6c4dd6285039fb3e1874d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539151"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401594"
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Création de gestionnaires d'événements dans les Windows Forms
 Un gestionnaire d'événements est une procédure de votre code qui détermine les actions à effectuer quand un événement se produit, par exemple, quand un utilisateur clique sur un bouton ou une file d'attente reçoit un message. Au déclenchement de l'événement, le ou les gestionnaires d'événements qui reçoivent l'événement sont exécutés. Des événements peuvent être affectés à plusieurs gestionnaires et les méthodes qui gèrent des événements particuliers peuvent être modifiées de façon dynamique. Vous pouvez également utiliser le Concepteur Windows Forms pour créer des gestionnaires d'événements.  
@@ -34,7 +34,7 @@ Un gestionnaire d'événements est une procédure de votre code qui détermine l
  [Ordre des événements dans les Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Décrit l'ordre dans lequel les événements sont déclenchés dans les contrôles Windows Forms.  
   
- [Comment : créer des gestionnaires d'événements à l'aide du concepteur](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Comment : créer des gestionnaires d'événements à l'aide du concepteur](https://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Décrit comment utiliser le Concepteur Windows Forms pour créer des gestionnaires d'événements.  
   
 ## <a name="related-sections"></a>Rubriques connexes  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8024abdab01b2df151a6c0c2f5760e85ae119fd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72a2ea1393daa7435ae233d1e420cf88b6f5b6af
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508304"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402414"
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
 La terminologie utilisée pour aborder la sécurité peut vous sembler peu familière. Cette rubrique explique rapidement certains des termes relatifs à la sécurité, mais ne fournit pas d'informations complètes pour chaque élément.  
@@ -30,10 +30,10 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Acte de contrôler l'accès et les droits à une ressource. Par exemple, permettre aux membres d'un groupe de lire un fichier, mais permettre uniquement aux membres d'un autre groupe de modifier le fichier.  
   
  certificat d'autorité de certification (Certificate Authority ou CA)  
- Identifie l'autorité de certification (CA) qui publie des certificats d'authentification serveur et client pour les serveurs et les clients qui les demandent. Car il contient une clé publique utilisée dans les signatures numériques, il est également appelé un *le certificat de signature*. Si l’autorité de certification est une autorité racine, le certificat d’autorité de certification peut être appelé une *certificat racine*. Également connu comme un *certificat de site*.  
+ Identifie l'autorité de certification (CA) qui publie des certificats d'authentification serveur et client pour les serveurs et les clients qui les demandent. Car elle contient une clé publique utilisée dans les signatures numériques, il est également appelé un *le certificat de signature*. Si l’autorité de certification est une autorité racine, le certificat d’autorité de certification peut être appelé une *certificat racine*. Également connu comme un *certificat de site*.  
   
  Hiérarchie d'autorités de certification  
- Une hiérarchie d'autorités de certification contient plusieurs CA. Elle est organisée afin que chaque autorité de certification est certifiée par une autre autorité de certification dans un niveau supérieur de la hiérarchie jusqu'à ce que le haut de la hiérarchie, également connu sous le *autorité racine*, est atteinte.  
+ Une hiérarchie d'autorités de certification contient plusieurs CA. Elle est organisée afin que chaque autorité de certification soit certifiée par une autre autorité de certification dans un niveau supérieur de la hiérarchie jusqu'à ce que le sommet de la hiérarchie, également connu sous le *autorité racine*, est atteinte.  
   
  certificat  
  Déclaration signée numériquement qui contient des informations à propos d'une entité et la clé publique de l'entité, et lie donc ces deux renseignements ensemble. Un certificat est publié par une organisation approuvée (ou entité), appelée autorité de certification, après que l'autorité a vérifié que l'entité est qui elle prétend être.  
@@ -92,7 +92,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Norme de syntaxe de message de chiffrement. Syntaxe générale des données auxquelles le chiffrement peut être appliqué, telles que les signatures numériques et le chiffrement. Elle fournit également la syntaxe pour diffuser au message des certificats ou des listes de révocation de certificats et d'autres attributs de message, tels que les horodatages.  
   
  texte brut  
- Message non chiffré. Messages texte en clair sont parfois appelés *en texte clair* messages.  
+ Message non chiffré. Messages en texte brut sont parfois appelés *en texte clair* messages.  
   
  privilège  
  Droit d'un utilisateur à exécuter différentes opérations relatives au système, telles que l'arrêt du système, le chargement de pilotes de périphériques, ou la modification de l'heure système. Le jeton d'accès d'un utilisateur contient une liste des privilèges détenus par l'utilisateur ou le groupe d'utilisateurs.  
@@ -175,10 +175,10 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Logiciel qui décide si un fichier donné est approuvé. Cette décision est basée sur le certificat associé au fichier.  
   
  nom d'utilisateur principal (User Principal Name ou UPN)  
- Un nom de compte d’utilisateur (parfois appelé le *nom d’utilisateur d’ouverture de session*) et le nom de domaine identifiant le domaine dans lequel se trouve le compte d’utilisateur. Il s'agit de la méthode de connexion standard à un domaine Windows. Le format est : someone@example.com (comme pour une adresse de messagerie).  
+ Un nom de compte d’utilisateur (parfois appelé le *nom d’utilisateur d’ouverture de session*) et un nom de domaine identifiant le domaine dans lequel se trouve le compte d’utilisateur. Il s'agit de la méthode de connexion standard à un domaine Windows. Le format est : someone@example.com (comme pour une adresse de messagerie).  
   
 > [!NOTE]
->  En plus de la forme UPN standard, WCF accepte les UPN sous forme de bas niveau, par exemple, cohowinery.com\someone.  
+>  En plus de la forme UPN standard, WCF accepte les UPN sous forme de bas niveau, par exemple, com\personne.  
   
  X.509  
  Norme reconnue internationalement pour les certificats qui définit leurs parties requises.  
@@ -186,4 +186,4 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
 ## <a name="see-also"></a>Voir aussi  
  [Concepts fondamentaux de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md)  
  [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

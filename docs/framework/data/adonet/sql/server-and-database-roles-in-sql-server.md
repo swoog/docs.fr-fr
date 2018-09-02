@@ -2,12 +2,12 @@
 title: Serveur et rôles de base de données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925463"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403142"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serveur et rôles de base de données dans SQL Server
 Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles, qui vous permet d'attribuer des autorisations à un rôle ou à un groupe d'utilisateurs au lieu de les attribuer à des utilisateurs individuels. Les rôles serveur fixes et de base de données fixes possèdent un ensemble fixe d'autorisations qui leur sont attribuées.  
@@ -27,8 +27,8 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Les rôles au niveau du serveur](/sql/relational-databases/security/authentication-access/server-level-roles) et [autorisations des rôles serveur fixes](http://msdn.microsoft.com/library/ms175892.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
-|[Rôles au niveau de la base de données](/sql/relational-databases/security/authentication-access/database-level-roles) et [autorisations des rôles de base de données fixe](http://msdn.microsoft.com/library/ms189612.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
+|[Les rôles au niveau du serveur](/sql/relational-databases/security/authentication-access/server-level-roles) et [autorisations des rôles serveur fixes](https://msdn.microsoft.com/library/ms175892.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles serveur fixes et les autorisations qui s’y rapportent dans SQL Server.|  
+|[Rôles au niveau de la base de données](/sql/relational-databases/security/authentication-access/database-level-roles) et [autorisations des rôles de base de données fixe](https://msdn.microsoft.com/library/ms189612.aspx) dans la documentation en ligne de SQL Server|Décrit les rôles de base de données fixes et les autorisations qui leur sont attribuées|  
   
 ## <a name="database-roles-and-users"></a>Rôles de base de données et utilisateurs  
  Les connexions doivent être mappées sur des comptes d'utilisateur de base de données afin de fonctionner avec des objets de base de données. Les utilisateurs de base de données peuvent alors être ajoutés à des rôles de base de données et héritent de tous les jeux d'autorisations associés à ces rôles. Toutes les autorisations peuvent être accordées.  
@@ -58,7 +58,7 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Identité et contrôle d’accès](http://msdn.microsoft.com/library/bb510418.aspx) dans la documentation en ligne de SQL Server|Contient des liens vers des rubriques qui décrivent les entités de sécurité, les rôles, les informations d'identification, les éléments sécurisables et les autorisations.|  
+|[Identité et contrôle d’accès](https://msdn.microsoft.com/library/bb510418.aspx) dans la documentation en ligne de SQL Server|Contient des liens vers des rubriques qui décrivent les entités de sécurité, les rôles, les informations d'identification, les éléments sécurisables et les autorisations.|  
 |[Principaux](/sql/relational-databases/security/authentication-access/principals-database-engine) dans la documentation en ligne de SQL Server|Décrit les entités de sécurité et contient des liens vers des rubriques qui décrivent les rôles serveur et de base de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -67,4 +67,4 @@ Toutes les versions de SQL Server utilisent la sécurité basée sur les rôles,
  [Authentification dans SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Propriété et séparation des schémas utilisateur dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [Autorisation et permissions dans SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
