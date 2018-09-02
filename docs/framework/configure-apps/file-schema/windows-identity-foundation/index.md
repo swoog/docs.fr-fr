@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 8e813383f68644315d59aa58f87cea7532a1d4c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8881339a5dcf21df17e7200847fc46854ead17e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767607"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468441"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Schéma de configuration de Windows Identity Foundation
 Les rubriques de cette section fournissent des informations sur le schéma de configuration de Windows Identity Foundation (WIF). Vous pouvez également configurer une application pour utiliser WIF via les classes exposées par le framework. Ces classes sont indiquées dans les sections qui traitent les éléments correspondants dans le schéma. L’exemple suivant montre la structure de la balise XML de base exposée par le schéma de configuration WIF. Les attributs sont omis. Les commentaires surlignés indiquent les principaux composants du schéma.  
@@ -113,4 +113,4 @@ Les rubriques de cette section fournissent des informations sur le schéma de co
  [\<system.identityModel.services>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) Fournit la configuration de la fédération passive à l’aide de WIF. Configure le module d’authentification de session (SAM) et le module d’authentification fédérée (WSFAM).  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Configuration, administration et gestion](http://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Décrit comment configurer et gérer des services et applications WIF.
+ [Configuration, administration et gestion](https://msdn.microsoft.com/library/1e03c389-de2c-4096-aaff-86b087e1bea0) Décrit comment configurer et gérer des services et applications WIF.

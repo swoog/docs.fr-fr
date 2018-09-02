@@ -2,12 +2,12 @@
 title: '&lt;net.tcp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: 9e44ddcc3a3e983abe6e36d4b6095c5c4a67529f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349881"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467599"
 ---
 # <a name="ltnettcpgt"></a>&lt;net.tcp&gt;
 Spécifie les paramètres de configuration du service de partage de port NET.TCP, qui permet à plusieurs processus de partager le même port TCP.  
@@ -71,9 +71,9 @@ Spécifie les paramètres de configuration du service de partage de port NET.TCP
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Contient les paramètres de configuration du processus de l'écouteur SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur le partage de ports, consultez [le partage de ports Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Pour comprendre comment configurer le service de partage de ports, consultez [configurer le Service de partage de ports Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Pour plus d’informations sur le partage de port, consultez [le partage de ports Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Pour comprendre comment configurer le service de partage de ports, consultez [configurer le Service de partage de Port Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Partage de ports Net.TCP](http://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [Configuration du service de partage de ports Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Partage de ports Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Configuration du service de partage de ports Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

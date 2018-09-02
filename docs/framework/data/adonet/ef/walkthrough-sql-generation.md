@@ -2,15 +2,15 @@
 title: 'Procédure pas à pas : génération SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766320"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472070"
 ---
 # <a name="walkthrough-sql-generation"></a>Procédure pas à pas : génération SQL
-Cette rubrique illustre comment la génération SQL se produit dans le [fournisseur d’exemples](http://go.microsoft.com/fwlink/?LinkId=180616). La requête Entity SQL suivante utilise le modèle inclus dans le fournisseur d'exemples :  
+Cette rubrique illustre comment la génération SQL se produit dans le [fournisseur d’exemples](https://go.microsoft.com/fwlink/?LinkId=180616). La requête Entity SQL suivante utilise le modèle inclus dans le fournisseur d'exemples :  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -126,7 +126,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- La valeur « false » suivante est ajoutée à la pile IsParentAJoin et la condition de jointure Var(Extent1).CategoryID == Var(Extent2).CategoryID est traitée. Var(Extent1) est résolue en <symbol_Extent1> après une recherche dans la table de symboles. Étant donné que l’instance est résolue en un symbole simple, à la suite du traitement Var(Extent1). CategoryID, un SqlBuilder avec \<symbol1 >. » CategoryID » est retournée. De la même façon, l'autre partie de la comparaison est traitée et le résultat de la visite de la condition de jointure est ajouté à la clause FROM de SelectStatement1 et la valeur « false » est retirée de la pile IsParentAJoin.  
+ La valeur « false » suivante est ajoutée à la pile IsParentAJoin et la condition de jointure Var(Extent1).CategoryID == Var(Extent2).CategoryID est traitée. Var(Extent1) est résolue en <symbol_Extent1> après une recherche dans la table de symboles. L’instance étant résolue en un symbole simple, à la suite de traitement Var(Extent1). CategoryID, un SqlBuilder avec \<symbol1 >. » CategoryID » est retourné. De la même façon, l'autre partie de la comparaison est traitée et le résultat de la visite de la condition de jointure est ajouté à la clause FROM de SelectStatement1 et la valeur « false » est retirée de la pile IsParentAJoin.  
   
  Avec ceci, Join1 a été traité complètement et une étendue est dépilée de la table de symboles.  
   

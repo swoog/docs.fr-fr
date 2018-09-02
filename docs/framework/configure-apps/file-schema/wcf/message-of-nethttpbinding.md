@@ -2,12 +2,12 @@
 title: '&lt;message&gt; of &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9def5a35-475d-40d6-b716-ccdbd93863c7
-ms.openlocfilehash: be96306b61b3eb6bfb8d3305ccbb05bb3ec4549d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30098d2b9a9087eb0543bdd7c8a899cd66c91ed8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354110"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466709"
 ---
 # <a name="ltmessagegt-of-ltnethttpbindinggt"></a>&lt;message&gt; of &lt;netHttpBinding&gt;
 Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -41,11 +41,11 @@ Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpB
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|UserName|-Requiert le client soit authentifié au serveur avec une information d’identification de nom d’utilisateur. Ces informations d'identification doivent être spécifiées à l'aide de l'élément <`clientCredentials`>.<br />-WCF ne prend pas en charge l’envoi d’un condensat de mot de passe ou la dérivation de clés à l’aide de mots de passe et de l’utilisation de telles clés pour la sécurité de message. WCF applique donc que le transport est sécurisé lors de l’utilisation des informations d’identification UserName. Pour le `basicHttpBinding`, cela requiert la configuration d'un canal SSL.|  
-|Certificat|Requiert que le client soit authentifié auprès du serveur à l'aide d'un certificat. Les informations d'identification du client dans ce cas doivent être spécifiées à l'aide de <`clientCredentials`> et de <`clientCertificate`>. De plus, lors de l'utilisation du mode de sécurité du message, le client doit être configuré avec le certificat du service. Les informations d’identification de service dans ce cas doivent être spécifiées à l’aide <xref:System.ServiceModel.Description.ClientCredentials> classe ou `ClientCredentials` élément de comportement et en spécifiant le service de certificats à l’aide de la \<serviceCertificate > élément de serviceCredentials.|  
+|UserName|-Nécessite le client soit authentifié au serveur avec une information d’identification de nom d’utilisateur. Ces informations d'identification doivent être spécifiées à l'aide de l'élément <`clientCredentials`>.<br />-WCF ne prend pas en charge l’envoi d’un mot de passe digest ou de dérivation de clés à l’aide de mots de passe et à l’aide de ces clés pour la sécurité de message. WCF applique donc que le transport est sécurisé lors de l’utilisation des informations d’identification UserName. Pour le `basicHttpBinding`, cela requiert la configuration d'un canal SSL.|  
+|Certificat|Requiert que le client soit authentifié auprès du serveur à l'aide d'un certificat. Les informations d'identification du client dans ce cas doivent être spécifiées à l'aide de <`clientCredentials`> et de <`clientCertificate`>. De plus, lors de l'utilisation du mode de sécurité du message, le client doit être configuré avec le certificat du service. Les informations d’identification de service dans ce cas doivent être spécifiées à l’aide <xref:System.ServiceModel.Description.ClientCredentials> classe ou `ClientCredentials` élément de comportement et spécifiez le service de certificats à l’aide de la \<serviceCertificate > élément de serviceCredentials.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -129,5 +129,5 @@ Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpB
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<liaison >](../../../../../docs/framework/misc/binding.md)

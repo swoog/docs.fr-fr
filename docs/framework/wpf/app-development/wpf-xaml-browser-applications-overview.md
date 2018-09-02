@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: cdd636a1854b891605abadaf31b1667e235eea92
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253196"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462477"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Vue d'ensemble des applications de navigateur XAML
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43253196"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Création d’une nouvelle application de navigateur XAML (XBAP)  
- La méthode la plus simple pour créer un nouveau projet XBAP est avec Microsoft Visual Studio. Lorsque vous créez un nouveau projet, sélectionnez **Application de navigateur WPF** dans la liste des modèles. Pour plus d’informations, consultez l’article [Comment : créer un projet d’application de navigateur WPF](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ La méthode la plus simple pour créer un nouveau projet XBAP est avec Microsoft Visual Studio. Lorsque vous créez un nouveau projet, sélectionnez **Application de navigateur WPF** dans la liste des modèles. Pour plus d’informations, consultez l’article [Comment : créer un projet d’application de navigateur WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  Lorsque vous exécutez le projet XBAP, celui-ci s’ouvre dans une fenêtre de navigateur et non dans une fenêtre indépendante. Lorsque vous déboguez l’application XBAP à partir de Visual Studio, l’application s’exécute avec les autorisations de zone Internet et lèvera des exceptions de sécurité si ces autorisations sont dépassées. Pour plus d’informations, voir [Sécurité](../../../../docs/framework/wpf/security-wpf.md) et [Sécurité de confiance partielle de WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "43253196"
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Communication avec la page web hôte  
- Lorsque l’application est hébergée dans un cadre HTML, vous pouvez communiquer avec la page web qui contient l’application XBAP. Pour cela en récupérant le <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> propriété du <xref:System.Windows.Interop.BrowserInteropHelper>. Cette propriété renvoie un objet de script qui représente la fenêtre HTML. Vous pouvez consulter les propriétés, méthodes et événements sur [l’objet de fenêtre](http://go.microsoft.com/fwlink/?LinkId=160274) en utilisant la syntaxe de point normale. Vous pouvez également accéder aux méthodes de script et aux variables globales. L’exemple suivant montre comment récupérer l’objet de script et fermer le navigateur.  
+ Lorsque l’application est hébergée dans un cadre HTML, vous pouvez communiquer avec la page web qui contient l’application XBAP. Pour cela en récupérant le <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> propriété du <xref:System.Windows.Interop.BrowserInteropHelper>. Cette propriété renvoie un objet de script qui représente la fenêtre HTML. Vous pouvez consulter les propriétés, méthodes et événements sur [l’objet de fenêtre](https://go.microsoft.com/fwlink/?LinkId=160274) en utilisant la syntaxe de point normale. Vous pouvez également accéder aux méthodes de script et aux variables globales. L’exemple suivant montre comment récupérer l’objet de script et fermer le navigateur.  
   
  [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
@@ -176,7 +176,7 @@ ms.locfileid: "43253196"
 > [!NOTE]
 >  Le comportement décrit dans le tableau précédent concerne les applications XBAP de confiance totale qui ne suivent pas le modèle de déploiement approuvé ClickOnce.  
   
- Il est recommandé d’utiliser le modèle de déploiement approuvé ClickOnce pour déployer une application XBAP de confiance totale. Ce modèle permet d’accorder automatiquement une confiance totale à votre application XBAP, quelle que soit la zone de sécurité, afin que l’utilisateur ne reçoive aucune invite. Dans le cadre de ce modèle, vous devez signer votre application avec un certificat d’un éditeur approuvé. Pour plus d’informations, consultez les articles [Vue d’ensemble du déploiement d’applications approuvées](/visualstudio/deployment/trusted-application-deployment-overview) et [Présentation de la signature de code](http://go.microsoft.com/fwlink/?LinkId=166327).  
+ Il est recommandé d’utiliser le modèle de déploiement approuvé ClickOnce pour déployer une application XBAP de confiance totale. Ce modèle permet d’accorder automatiquement une confiance totale à votre application XBAP, quelle que soit la zone de sécurité, afin que l’utilisateur ne reçoive aucune invite. Dans le cadre de ce modèle, vous devez signer votre application avec un certificat d’un éditeur approuvé. Pour plus d’informations, consultez les articles [Vue d’ensemble du déploiement d’applications approuvées](/visualstudio/deployment/trusted-application-deployment-overview) et [Présentation de la signature de code](https://go.microsoft.com/fwlink/?LinkId=166327).  
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>Considérations relatives au temps de démarrage des applications XPAB  

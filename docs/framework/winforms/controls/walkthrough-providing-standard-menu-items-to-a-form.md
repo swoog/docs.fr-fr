@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: c0e3a9471afd05ec0e07e8d8a71ffd76c91ec14d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0275d3af0c12eb8edacc1711c8eead45eeca75e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541484"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466941"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>Procédure pas à pas : mise à disposition d'éléments de menu standard pour un formulaire
 Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xref:System.Windows.Forms.MenuStrip>.  
@@ -30,12 +30,12 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 -   Gérer la sélection d’éléments de menu.  
   
- Lorsque vous avez terminé, vous disposerez d’un formulaire avec un menu standard affichant les sélections d’élément de menu dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
+ Lorsque vous avez terminé, vous disposerez d’un formulaire avec un menu standard qui affiche les sélections d’élément de menu dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
  Pour copier le code dans cette rubrique sous forme de liste unique, consultez [Comment : fournir d’éléments de Menu Standard à un formulaire](../../../../docs/framework/winforms/controls/how-to-provide-standard-menu-items-to-a-form.md).  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous avez besoin des éléments suivants :  
@@ -47,14 +47,12 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
-1.  Créez un projet d’application Windows appelé **StandardMenuForm**.  
-  
-     Pour plus d’informations, consultez [Comment : créer un projet d’application Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+1.  Créez un projet d’application Windows appelé **StandardMenuForm** (**fichier** > **New** > **projet**  >  **Visual C#** ou **Visual Basic** > **bureau classique** > **Windows Forms Application**).  
   
 2.  Dans le Concepteur Windows Forms, sélectionnez le formulaire.  
   
 ## <a name="creating-a-standard-menu"></a>Création d’un Menu Standard  
- Le Concepteur Windows Forms peut remplir automatiquement un <xref:System.Windows.Forms.MenuStrip> contrôle avec des éléments de menu standard.  
+ Le Concepteur de formulaires Windows peut remplir automatiquement un <xref:System.Windows.Forms.MenuStrip> contrôle avec les éléments de menu standard.  
   
 #### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard  
   
@@ -67,7 +65,7 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
 3.  Cliquez sur le **fichier** élément de menu pour afficher ses éléments de menu par défaut et les icônes correspondantes.  
   
 ## <a name="creating-a-statusstrip-control"></a>Création d’un contrôle StatusStrip  
- Utilisez la <xref:System.Windows.Forms.StatusStrip> contrôle pour afficher l’état de vos applications Windows Forms. Dans l’exemple actuel, les éléments de menu sélectionnés par l’utilisateur sont affichés dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
+ Utilisez le <xref:System.Windows.Forms.StatusStrip> contrôle pour afficher l’état de vos applications Windows Forms. Dans l’exemple actuel, les éléments de menu sélectionnés par l’utilisateur sont affichés dans un <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
 #### <a name="to-create-a-statusstrip-control"></a>Pour créer un contrôle StatusStrip  
   
@@ -75,10 +73,10 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
      Le <xref:System.Windows.Forms.StatusStrip> contrôle s’ancre automatiquement vers le bas du formulaire.  
   
-2.  Cliquez sur le <xref:System.Windows.Forms.StatusStrip> du contrôle bouton de liste déroulante, puis sélectionnez **StatusLabel** pour ajouter un <xref:System.Windows.Forms.ToolStripStatusLabel> le contrôle à la <xref:System.Windows.Forms.StatusStrip> contrôle.  
+2.  Cliquez sur le <xref:System.Windows.Forms.StatusStrip> du contrôle bouton de liste déroulante et sélectionnez **StatusLabel** pour ajouter un <xref:System.Windows.Forms.ToolStripStatusLabel> le contrôle à la <xref:System.Windows.Forms.StatusStrip> contrôle.  
   
 ## <a name="handling-item-selection"></a>Sélection d’éléments de gestion  
- Gérer les <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement répondre quand l’utilisateur sélectionne un élément de menu.  
+ Gérer le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement répondre quand l’utilisateur sélectionne un élément de menu.  
   
 #### <a name="to-handle-item-selection"></a>Pour gérer la sélection d’éléments  
   
@@ -88,14 +86,14 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
   
 3.  Double-cliquez sur le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
   
-     Le Concepteur Windows Forms génère un gestionnaire d’événements pour le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
+     Le Concepteur de formulaires Windows génère un gestionnaire d’événements pour le <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked> événement.  
   
 4.  Insérez le code suivant dans le Gestionnaire d’événements.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  Insérer le `UpdateStatus` définition de méthode utilitaire dans le formulaire.  
+5.  Insérer le `UpdateStatus` définition de méthode d’utilitaire dans le formulaire.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -113,7 +111,7 @@ Vous pouvez fournir un menu standard pour vos formulaires avec le contrôle <xre
      Le <xref:System.Windows.Forms.StatusStrip> contrôle affiche l’élément sélectionné.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Dans cette procédure pas à pas, vous avez créé un formulaire avec un menu standard. Vous pouvez utiliser la <xref:System.Windows.Forms.ToolStrip> famille de contrôles de nombreuses autres fins :  
+ Dans cette procédure pas à pas, vous avez créé un formulaire avec un menu standard. Vous pouvez utiliser le <xref:System.Windows.Forms.ToolStrip> famille de contrôles à de nombreuses autres fins :  
   
 -   Créer des menus contextuels pour vos contrôles avec <xref:System.Windows.Forms.ContextMenuStrip>. Pour plus d’informations, consultez [vue d’ensemble du composant ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md).  
   

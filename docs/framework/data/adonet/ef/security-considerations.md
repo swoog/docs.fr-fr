@@ -2,12 +2,12 @@
 title: Considérations sur la sécurité (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 337424395186532969734e0977ea111d8995a154
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25d313f9c6f71d946ed8d9cc5db2e99dc84983b3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766619"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456842"
 ---
 # <a name="security-considerations-entity-framework"></a>Considérations sur la sécurité (Entity Framework)
 Cette rubrique décrit les considérations sur la sécurité qui sont spécifiques au développement, au déploiement et à l'exécution d'applications [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Vous devez également suivre ces recommandations pour créer des applications [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] sécurisées. Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -27,7 +27,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
  Pendant l'opération d'ouverture de session, les informations qui sont basées sur le mot de passe de l'utilisateur sont passées au serveur via bibliothèques réseau de la source de données sous-jacente. Un fournisseur malveillant peut voler les informations d'identification de l'utilisateur, générer des requêtes malveillantes ou falsifier le jeu de résultats.  
   
 #### <a name="encrypt-your-connection-to-protect-sensitive-data"></a>Chiffrez votre connexion pour protéger les données sensibles.  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne gère pas directement le chiffrement des données. Si les utilisateurs accèdent aux données via un réseau public, votre application doit établir une connexion chiffrée à la source de données pour augmenter la sécurité. Pour plus d'informations, voir la documentation relative à la sécurité pour votre source de données. Pour une source de données SQL Server, consultez [le chiffrement des connexions à SQL Server](http://go.microsoft.com/fwlink/?LinkId=119544).  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne gère pas directement le chiffrement des données. Si les utilisateurs accèdent aux données via un réseau public, votre application doit établir une connexion chiffrée à la source de données pour augmenter la sécurité. Pour plus d'informations, voir la documentation relative à la sécurité pour votre source de données. Pour une source de données SQL Server, consultez [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?LinkId=119544).  
   
 #### <a name="secure-the-connection-string"></a>Sécurisez la chaîne de connexion.  
  La protection de l'accès à votre source de données représente l'un de vos principaux objectifs lorsque vous sécurisez une application. Une chaîne de connexion présente une vulnérabilité potentielle si elle n'est pas sécurisée ou si elle n'est pas correctement construite. Lorsque vous stockez les informations de connexion au format texte brut ou que vous les conservez dans la mémoire, vous risquez de compromettre l'ensemble de votre système. Les méthodes recommandées pour sécuriser des chaînes de connexion sont les suivantes :  
@@ -38,7 +38,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
 -   Chiffrez les sections du fichier de configuration à l'aide d'une configuration protégée.  
   
-     ASP.NET fournit une nouvelle fonctionnalité, appelée « configuration protégée », qui vous permet de chiffrer les informations sensibles dans un fichier de configuration. Bien qu'elle ait été conçue à l'origine pour ASP.NET, vous pouvez utiliser la configuration protégée pour chiffrer les sections des fichiers de configuration dans des applications Windows. Pour obtenir une description détaillée des nouvelles fonctionnalités de configuration protégée, consultez [chiffrement Configuration des informations à l’aide de Configuration protégée](http://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
+     ASP.NET fournit une nouvelle fonctionnalité, appelée « configuration protégée », qui vous permet de chiffrer les informations sensibles dans un fichier de configuration. Bien qu'elle ait été conçue à l'origine pour ASP.NET, vous pouvez utiliser la configuration protégée pour chiffrer les sections des fichiers de configuration dans des applications Windows. Pour obtenir une description détaillée des nouvelles fonctionnalités de configuration protégée, consultez [chiffrement Configuration des informations à l’aide de la Configuration protégée](https://msdn.microsoft.com/library/51cdfe5b-9d82-458c-94ff-c551c4f38ed1).  
   
 -   Stockez les chaînes de connexion dans des fichiers de configuration sécurisés.  
   
@@ -46,7 +46,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
 -   Utilisez des générateurs de chaînes de connexion lors de la création dynamique de connexions.  
   
-     Si vous devez construire des chaînes de connexion au moment de l'exécution, utilisez la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Cette classe du générateur de chaînes permet d'empêcher les attaques par injection de chaîne de connexion en validant et en plaçant dans une séquence d'échappement les informations d'entrée non valides. Pour plus d’informations, consultez [Comment : créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Également utiliser la classe de générateur de chaîne appropriée pour construire la chaîne de connexion de source de données qui fait partie de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] chaîne de connexion. Pour plus d’informations sur les générateurs de chaînes de connexion pour les fournisseurs ADO.NET, consultez [générateurs de chaînes de connexion](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
+     Si vous devez construire des chaînes de connexion au moment de l'exécution, utilisez la classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Cette classe du générateur de chaînes permet d'empêcher les attaques par injection de chaîne de connexion en validant et en plaçant dans une séquence d'échappement les informations d'entrée non valides. Pour plus d’informations, consultez [Comment : créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md). Utilisez également la classe de générateur de chaînes appropriée pour construire la chaîne de connexion de source de données qui fait partie de la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] chaîne de connexion. Pour plus d’informations sur les générateurs de chaînes de connexion pour les fournisseurs ADO.NET, consultez [générateurs de chaînes de connexion](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
   
  Pour plus d’informations, consultez [Protection des informations de connexion](../../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
@@ -73,7 +73,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
 -   <xref:System.Security.Permissions.SecurityPermission> : <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> pour sérialiser des exceptions à l'aide de l'interface <xref:System.Runtime.Serialization.ISerializable>.  
   
--   Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, tel que <xref:System.Data.SqlClient.SqlClientPermission> pour une base de données SQL Server.  
+-   Autorisation d’ouvrir une connexion de base de données et exécuter des commandes sur la base de données, telles que <xref:System.Data.SqlClient.SqlClientPermission> pour une base de données SQL Server.  
   
  Pour plus d'informations, consultez [Sécurité d'accès du code et ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -81,12 +81,12 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] n'applique aucune autorisation de sécurité et appelle tout le code d'objet de données fourni par l'utilisateur en cours de traitement, qu'il soit approuvé ou non. Assurez-vous que l'authentification et l'autorisation du client sont effectuées par la banque de données et par votre application.  
   
 #### <a name="restrict-access-to-all-configuration-files"></a>Limitez l'accès à tous les fichiers de configuration.  
- Un administrateur doit limiter l’accès en écriture à tous les fichiers qui spécifient la configuration d’une application, y compris à enterprisesec.config, à security.config, à machine.conf et le fichier de configuration d’application \< *application* >. exe.config.  
+ Un administrateur doit limiter l’accès en écriture à tous les fichiers qui spécifient la configuration pour une application, y compris à enterprisesec.config, à security.config, à machine.conf et le fichier de configuration d’application \< *application* >. exe.config.  
   
  Le nom invariant du fournisseur est modifiable dans le fichier app.config. L'application cliente doit prendre la responsabilité de l'accès au fournisseur sous-jacent via le modèle Factory du fournisseur standard en utilisant un nom fort.  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>Limitez les autorisations aux fichiers de modèle et de mappage.  
- Un administrateur doit limiter l'accès en écriture aux fichiers de modèle et de mappage (.edmx, .csdl, .ssdl et .msl) uniquement aux utilisateurs qui modifient le modèle ou les mappages. Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] requiert uniquement l’accès en lecture à ces fichiers en cours d’exécution. Un administrateur doit également limiter l'accès aux fichiers de couche objet et aux fichiers de code source de vue précompilés qui sont générés par les outils [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
+ Un administrateur doit limiter l'accès en écriture aux fichiers de modèle et de mappage (.edmx, .csdl, .ssdl et .msl) uniquement aux utilisateurs qui modifient le modèle ou les mappages. Le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] uniquement requiert un accès en lecture à ces fichiers au moment de l’exécution. Un administrateur doit également limiter l'accès aux fichiers de couche objet et aux fichiers de code source de vue précompilés qui sont générés par les outils [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)].  
   
 ## <a name="security-considerations-for-queries"></a>Considérations sur la sécurité pour les requêtes  
  Vous devez tenir compte des considérations sur la sécurité suivantes lors de l'interrogation d'un modèle conceptuel. Ces considérations s'appliquent aux requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] utilisant EntityClient et aux requêtes d'objet utilisant LINQ, [!INCLUDE[esql](../../../../../includes/esql-md.md)] et les méthodes du Générateur de requêtes.  
@@ -98,7 +98,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
   
      Les attaques par injection de code SQL peuvent être effectuées dans [!INCLUDE[esql](../../../../../includes/esql-md.md)] en fournissant une entrée malveillante à des valeurs qui sont utilisées dans un prédicat de requête et dans les noms de paramètres. Pour éviter le risque d'injection de code SQL, vous ne devez jamais associer une entrée d'utilisateur à un texte de commande [!INCLUDE[esql](../../../../../includes/esql-md.md)].  
   
-     Les requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] acceptent des paramètres partout où des littéraux sont admis. Vous devez utiliser des requêtes paramétrables plutôt que d'injecter des littéraux directement dans la requête à partir d'un agent externe. Vous devez également envisager d’utiliser des méthodes du Générateur de requête pour construire sans risque [Entity SQL](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     Les requêtes [!INCLUDE[esql](../../../../../includes/esql-md.md)] acceptent des paramètres partout où des littéraux sont admis. Vous devez utiliser des requêtes paramétrables plutôt que d'injecter des littéraux directement dans la requête à partir d'un agent externe. Vous devez également envisager d’utiliser des méthodes du Générateur de requête pour construire sans risque [Entity SQL](https://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   Attaques par injection [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] :  
   
@@ -132,7 +132,7 @@ Cette rubrique décrit les considérations sur la sécurité qui sont spécifiqu
  Les considérations sur la sécurité suivantes s'appliquent lors de la génération et l'utilisation de types d'entités.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Ne partagez pas un ObjectContext entre des domaines d'application.  
- Le partage d'un objet <xref:System.Data.Objects.ObjectContext> avec plusieurs domaines d'application peut exposer des informations dans la chaîne de connexion. Il est préférable de transférer les objets sérialisés ou les graphiques d'objets à l'autre domaine d'application, puis d'attacher ces objets à un objet <xref:System.Data.Objects.ObjectContext> dans ce domaine d'application. Pour plus d’informations, consultez [sérialisation d’objets](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Le partage d'un objet <xref:System.Data.Objects.ObjectContext> avec plusieurs domaines d'application peut exposer des informations dans la chaîne de connexion. Il est préférable de transférer les objets sérialisés ou les graphiques d'objets à l'autre domaine d'application, puis d'attacher ces objets à un objet <xref:System.Data.Objects.ObjectContext> dans ce domaine d'application. Pour plus d’informations, consultez [sérialisation d’objets](https://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Évitez les violations de la cohérence des types.  
  Si la cohérence des types est violée, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ne peut pas garantir l'intégrité des données dans les objets. Les violations de la cohérence des types peuvent se produire si vous permettez à des applications non approuvées de s'exécuter avec une sécurité d'accès du code d'un niveau de confiance totale.  

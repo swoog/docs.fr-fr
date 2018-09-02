@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551189"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466354"
 ---
 # <a name="combobox"></a>ComboBox
-Le <xref:System.Windows.Controls.ComboBox> contrôle présente aux utilisateurs une liste d’options. La liste est affichée et masquée lorsque le contrôle se développe et réduit. Dans son état par défaut, la liste est réduite pour afficher les choix qu’un seul. L’utilisateur clique sur un bouton pour afficher la liste complète des options.  
+Le <xref:System.Windows.Controls.ComboBox> contrôle offre aux utilisateurs une liste d’options. La liste est affichée et masquée lorsque le contrôle se développe et réduit. Dans son état par défaut, la liste est réduite, affichage seul choix. L’utilisateur clique sur un bouton pour afficher la liste complète des options.  
   
  L’illustration suivante montre un <xref:System.Windows.Controls.ComboBox> dans différents états.  
   
@@ -23,7 +23,7 @@ Le <xref:System.Windows.Controls.ComboBox> contrôle présente aux utilisateurs 
 Réduit et développé  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comment : obtenir un ComboBoxItem](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Comment : obtenir un ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.ComboBox>

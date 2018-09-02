@@ -7,19 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 9be4e753a229d97f2caf1d74b3b9b8239b99c694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2264686f34123e74bf7d24ce80877742d952f35d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558151"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470877"
 ---
 # <a name="structured-navigation-overview"></a>Vue d'ensemble de la navigation structurée
-Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, ou un <xref:System.Windows.Navigation.NavigationWindow> est composé de pages qui peuvent être identifiés par le pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] et navigation en liens hypertexte. La structure des pages et comment elles sont accessibles, tel que défini par des liens hypertexte, porte le nom de topologie de navigation. Une telle topologie convient à différents types d’applications, notamment celles permettant de parcourir des documents. Pour de telles applications, l’utilisateur peut naviguer d’une page à une autre page sans qu’une page ait besoin de savoir quoi que ce soit sur l’autre page.  
+Contenu qui peut être hébergé par un [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], un <xref:System.Windows.Controls.Frame>, ou un <xref:System.Windows.Navigation.NavigationWindow> est composé de pages qui peuvent être identifiés par le pack [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] et navigation en liens hypertexte. La structure des pages et comment elles sont accessibles, tel que défini par des liens hypertexte, porte le nom de topologie de navigation. Une telle topologie convient à différents types d’applications, notamment celles permettant de parcourir des documents. Pour de telles applications, l’utilisateur peut naviguer d’une page à une autre page sans qu’une page ait besoin de savoir quoi que ce soit sur l’autre page.  
   
  Toutefois, d’autres types d’applications ont des pages qui ont besoin de savoir quand une navigation parmi les pages a eu lieu. Par exemple, considérez une application de ressources humaines ayant une page pour répertorier tous les employés d’une organisation, la page « Liste des employés ». Cette page pourrait également permettre aux utilisateurs d’ajouter un nouvel employé en cliquant sur un lien hypertexte. En cas de clic sur ce lien, l’utilisateur accède à une page « Ajouter un employé » pour recueillir les détails du nouvel employé et les retourner à la page « Liste des employés » afin de créer le nouvel employé et de mettre à jour la liste. Ce style de navigation s’apparente à l’appel d’une méthode pour effectuer un traitement et retourner une valeur, ce qui porte le nom de programmation structurée. Ce style de navigation est appelé *navigation structurée*.  
   
- La <xref:System.Windows.Controls.Page> classe n’implémente pas la prise en charge pour la navigation structurée. Au lieu de cela, le <xref:System.Windows.Navigation.PageFunction%601> dérive de la classe <xref:System.Windows.Controls.Page> et l’étend avec les constructions de base requises pour la navigation structurée. Cette rubrique montre comment établir à l’aide de la navigation structurée <xref:System.Windows.Navigation.PageFunction%601>.  
+ Le <xref:System.Windows.Controls.Page> classe n’implémente pas la prise en charge pour la navigation structurée. Au lieu de cela, le <xref:System.Windows.Navigation.PageFunction%601> dérive de la classe <xref:System.Windows.Controls.Page> et l’étend avec les constructions de base requises pour la navigation structurée. Cette rubrique montre comment établir à l’aide de la navigation structurée <xref:System.Windows.Navigation.PageFunction%601>.  
   
  
   
@@ -48,7 +48,7 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
  Cette rubrique montre comment implémenter les mécanismes de base de la navigation structurée impliquant un seul <xref:System.Windows.Navigation.PageFunction%601>. Dans cet exemple, un <xref:System.Windows.Controls.Page> appelle un <xref:System.Windows.Navigation.PageFunction%601> pour obtenir un <xref:System.String> à partir de l’utilisateur et le retourner.  
   
 ### <a name="creating-a-calling-page"></a>Création d’une page appelante  
- La page qui appelle un <xref:System.Windows.Navigation.PageFunction%601> peut être un <xref:System.Windows.Controls.Page> ou <xref:System.Windows.Navigation.PageFunction%601>. Dans cet exemple, il est un <xref:System.Windows.Controls.Page>, comme illustré dans le code suivant.  
+ La page qui appelle un <xref:System.Windows.Navigation.PageFunction%601> peut être soit un <xref:System.Windows.Controls.Page> ou un <xref:System.Windows.Navigation.PageFunction%601>. Dans cet exemple, il est un <xref:System.Windows.Controls.Page>, comme illustré dans le code suivant.  
   
  [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup1)]  
 [!code-xaml[StructuredNavigationSample#CallingPageDefaultMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#callingpagedefaultmarkup2)]  
@@ -61,7 +61,7 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
 [!code-vb[StructuredNavigationSample#CallingPageDefaultCODEBEHIND3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#callingpagedefaultcodebehind3)]  
   
 ### <a name="creating-a-page-function-to-call"></a>Création d’une fonction de page à appeler  
- Étant donné que la page appelante peut utiliser la page appelée pour recueillir et renvoyer des données à partir de l’utilisateur, <xref:System.Windows.Navigation.PageFunction%601> est implémenté comme une classe générique dont l’argument de type spécifie le type de la valeur de la page appelée. Le code suivant montre l’implémentation initiale de la page, à l’aide un <xref:System.Windows.Navigation.PageFunction%601>, qui retourne un <xref:System.String>.  
+ Étant donné que la page appelante peut utiliser la page appelée pour recueillir et retourner des données à partir de l’utilisateur, <xref:System.Windows.Navigation.PageFunction%601> est implémenté comme une classe générique dont l’argument de type spécifie le type de la valeur de la page appelée. Le code suivant montre l’implémentation initiale de la page, à l’aide un <xref:System.Windows.Navigation.PageFunction%601>, qui retourne un <xref:System.String>.  
   
  [!code-xaml[StructuredNavigationSample#CalledPageFunctionMARKUP](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml#calledpagefunctionmarkup)]  
   
@@ -70,9 +70,9 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
 [!code-csharp[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#calledpagefunctioncodebehind2)]
 [!code-vb[StructuredNavigationSample#CalledPageFunctionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#calledpagefunctioncodebehind2)]  
   
- La déclaration d’un <xref:System.Windows.Navigation.PageFunction%601> est similaire à la déclaration d’un <xref:System.Windows.Controls.Page> avec en plus des arguments de type. Comme vous pouvez le constater dans l’exemple de code, les arguments de type sont spécifiés à la fois dans le balisage [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (à l’aide de l’attribut `x:TypeArguments`) et dans le code-behind (à l’aide de la syntaxe d’argument de type générique standard).  
+ La déclaration d’un <xref:System.Windows.Navigation.PageFunction%601> est similaire à la déclaration d’un <xref:System.Windows.Controls.Page> avec l’ajout des arguments de type. Comme vous pouvez le constater dans l’exemple de code, les arguments de type sont spécifiés à la fois dans le balisage [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (à l’aide de l’attribut `x:TypeArguments`) et dans le code-behind (à l’aide de la syntaxe d’argument de type générique standard).  
   
- Vous n’êtes pas obligé d’utiliser uniquement des classes [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en tant qu’arguments de type. Un <xref:System.Windows.Navigation.PageFunction%601> peut être appelé pour collecter des données spécifiques à un domaine qui sont abstraites en tant qu’un type personnalisé. Le code suivant montre comment utiliser un type personnalisé en tant qu’argument de type pour un <xref:System.Windows.Navigation.PageFunction%601>.  
+ Vous n’êtes pas obligé d’utiliser uniquement des classes [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] en tant qu’arguments de type. Un <xref:System.Windows.Navigation.PageFunction%601> peut être appelée pour collecter des données spécifiques à un domaine qui sont abstraites en tant qu’un type personnalisé. Le code suivant montre comment utiliser un type personnalisé en tant qu’argument de type pour un <xref:System.Windows.Navigation.PageFunction%601>.  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  
@@ -87,9 +87,9 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
 [!code-csharp[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomTypePageFunction.xaml.cs#customtypepagefunctioncodebehind2)]
 [!code-vb[CustomTypePageFunctionSnippets#CustomTypePageFunctionCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomTypePageFunction.xaml.vb#customtypepagefunctioncodebehind2)]  
   
- Les arguments de type pour le <xref:System.Windows.Navigation.PageFunction%601> fournissent la base de la communication entre une page appelante et la page appelée, qui sont décrites dans les sections suivantes.  
+ Les arguments de type pour le <xref:System.Windows.Navigation.PageFunction%601> fournissent la fondation pour la communication entre une page appelante et la page appelée, qui sont décrites dans les sections suivantes.  
   
- Comme vous le verrez, le type qui est identifié par la déclaration d’un <xref:System.Windows.Navigation.PageFunction%601> joue un rôle important pour retourner des données d’une <xref:System.Windows.Navigation.PageFunction%601> à la page appelante.  
+ Comme vous le verrez, le type qui est identifié par la déclaration d’un <xref:System.Windows.Navigation.PageFunction%601> joue un rôle important pour retourner des données à partir d’un <xref:System.Windows.Navigation.PageFunction%601> à la page appelante.  
   
 ### <a name="calling-a-pagefunction-and-passing-parameters"></a>Appel de PageFunction et passage de paramètres  
  Pour appeler une page, la page appelante doit instancier la page appelée et accédez à l’aide de la <xref:System.Windows.Navigation.NavigationService.Navigate%2A> (méthode). Cela permet à la page appelante de passer les données initiales à la page appelée, par exemple les valeurs par défaut des données recueillies par la page appelée.  
@@ -105,7 +105,7 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
 [!code-csharp[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#acceptsinitialdatacodebehind4)]
 [!code-vb[StructuredNavigationSample#AcceptsInitialDataCODEBEHIND4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#acceptsinitialdatacodebehind4)]  
   
- Le code suivant montre la page appelante qui gère la <xref:System.Windows.Documents.Hyperlink.Click> l’événement de la <xref:System.Windows.Documents.Hyperlink> pour instancier la page appelée et lui passer une valeur de chaîne initiale.  
+ Le code suivant montre la page appelante qui gère la <xref:System.Windows.Documents.Hyperlink.Click> événements de la <xref:System.Windows.Documents.Hyperlink> pour instancier la page appelée et lui passer une valeur de chaîne initiale.  
   
  [!code-xaml[StructuredNavigationSample#PassingDataMARKUP2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml#passingdatamarkup2)]  
 [!code-csharp[StructuredNavigationSample#PassingDataCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#passingdatacodebehind1)]
@@ -119,9 +119,9 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
   
 -   À partir de la page appelante :  
   
-    1.  Instancier appelé <xref:System.Windows.Navigation.PageFunction%601> à l’aide du constructeur par défaut.  
+    1.  Instanciez l’appelée <xref:System.Windows.Navigation.PageFunction%601> en utilisant le constructeur par défaut.  
   
-    2.  Stocker les paramètres dans <xref:System.Windows.Application.Properties%2A>.  
+    2.  Store les paramètres dans <xref:System.Windows.Application.Properties%2A>.  
   
     3.  Accédez à l’appelé <xref:System.Windows.Navigation.PageFunction%601>.  
   
@@ -129,7 +129,7 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
   
     -   Récupérer et utiliser les paramètres stockés dans <xref:System.Windows.Application.Properties%2A>.  
   
- Toutefois, comme vous le verrez bientôt, vous devrez quand même utiliser du code pour instancier et accéder à la page appelée afin de recueillir les données qu’elle a retournées. Pour cette raison, le <xref:System.Windows.Navigation.PageFunction%601> doivent rester alive ; sinon, la prochaine fois que vous accédez à la <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instancie le <xref:System.Windows.Navigation.PageFunction%601> à l’aide du constructeur par défaut.  
+ Toutefois, comme vous le verrez bientôt, vous devrez quand même utiliser du code pour instancier et accéder à la page appelée afin de recueillir les données qu’elle a retournées. Pour cette raison, le <xref:System.Windows.Navigation.PageFunction%601> doit être maintenu actif ; sinon, la prochaine fois que vous accédez à la <xref:System.Windows.Navigation.PageFunction%601>, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] instancie le <xref:System.Windows.Navigation.PageFunction%601> à l’aide du constructeur par défaut.  
   
  Avant que la page appelée puisse retourner, toutefois, elle doit retourner des données qui peuvent être récupérées par la page appelante.  
   
@@ -147,9 +147,9 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
 [!code-csharp[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CalledPageFunction.xaml.cs#returncodebehind2)]
 [!code-vb[StructuredNavigationSample#ReturnCODEBEHIND2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CalledPageFunction.xaml.vb#returncodebehind2)]  
   
- Dans cet exemple, si l’utilisateur appuie sur le bouton Annuler, une valeur `null` est retournée à la page appelante. Si en revanche il appuie sur le bouton OK, la valeur de chaîne fournie par l’utilisateur est retournée. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est un `protected``virtual` que vous appelez pour retourner les données à la page appelante. Vos données doivent être empaquetées dans une instance de l’objet générique <xref:System.Windows.Navigation.ReturnEventArgs%601> type, dont l’argument de type spécifie le type de valeur <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> retourne. De cette façon, lorsque vous déclarez un <xref:System.Windows.Navigation.PageFunction%601> avec un argument de type particulier, vous indiquez qu’un <xref:System.Windows.Navigation.PageFunction%601> retourne une instance du type spécifié par l’argument de type. Dans cet exemple, l’argument de type et, par conséquent, la valeur de retour est de type <xref:System.String>.  
+ Dans cet exemple, si l’utilisateur appuie sur le bouton Annuler, une valeur `null` est retournée à la page appelante. Si en revanche il appuie sur le bouton OK, la valeur de chaîne fournie par l’utilisateur est retournée. <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est un `protected virtual` que vous appelez pour retourner les données à la page appelante. Vos données doivent être empaquetées dans une instance du générique <xref:System.Windows.Navigation.ReturnEventArgs%601> type, dont l’argument de type spécifie le type de valeur qui <xref:System.Windows.Navigation.ReturnEventArgs%601.Result%2A> retourne. De cette façon, lorsque vous déclarez un <xref:System.Windows.Navigation.PageFunction%601> avec un argument de type particulier, vous indiquez qu’un <xref:System.Windows.Navigation.PageFunction%601> retournera une instance du type spécifié par l’argument de type. Dans cet exemple, l’argument de type et, par conséquent, la valeur de retour est de type <xref:System.String>.  
   
- Lorsque <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, la page appelante doit pouvoir recevoir la valeur de retour de la <xref:System.Windows.Navigation.PageFunction%601>. Pour cette raison, <xref:System.Windows.Navigation.PageFunction%601> implémente la <xref:System.Windows.Navigation.PageFunction%601.Return> événements pour appeler des pages à gérer. Lorsque <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, <xref:System.Windows.Navigation.PageFunction%601.Return> est déclenché, ce qui la page appelante peut inscrire avec <xref:System.Windows.Navigation.PageFunction%601.Return> pour recevoir la notification.  
+ Lorsque <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, la page appelante doit pouvoir recevoir la valeur de retour de la <xref:System.Windows.Navigation.PageFunction%601>. Pour cette raison, <xref:System.Windows.Navigation.PageFunction%601> implémente le <xref:System.Windows.Navigation.PageFunction%601.Return> événements pour appeler des pages à gérer. Lorsque <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, <xref:System.Windows.Navigation.PageFunction%601.Return> est déclenché, ce qui la page appelante de s’inscrire avec <xref:System.Windows.Navigation.PageFunction%601.Return> pour recevoir les notifications.  
   
  [!code-csharp[StructuredNavigationSample#ProcessResultCODEBEHIND1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/StructuredNavigationSample/CSharp/CallingPage.xaml.cs#processresultcodebehind1)]
  [!code-vb[StructuredNavigationSample#ProcessResultCODEBEHIND1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/StructuredNavigationSample/VisualBasic/CallingPage.xaml.vb#processresultcodebehind1)]  
@@ -159,11 +159,11 @@ Contenu qui peut être hébergé par une [!INCLUDE[TLA#tla_xbap](../../../../inc
 ### <a name="removing-task-pages-when-a-task-completes"></a>Suppression de pages de tâche quand une tâche se termine  
  Quand une page appelée est retournée, et que l’utilisateur ne l’a pas annulée, la page appelante traite les données fournies par l’utilisateur et retournées par la page appelée. L’acquisition de données de cette manière est généralement une opération isolée. Quand la page appelée est retournée, la page appelante doit créer et naviguer vers une nouvelle page appelante pour capturer davantage de données.  
   
- Toutefois, sauf si une page appelée est supprimée du journal, un utilisateur pourra revenir à une instance précédente de la page appelante. Si un <xref:System.Windows.Navigation.PageFunction%601> sont conservées dans le journal est déterminé par le <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> propriété. Par défaut, une fonction de page est automatiquement supprimée lorsque <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée car <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> a la valeur `true`. Pour conserver une fonction de page dans l’historique de navigation après <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, définissez <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> à `false`.  
+ Toutefois, sauf si une page appelée est supprimée du journal, un utilisateur pourra revenir à une instance précédente de la page appelante. Si un <xref:System.Windows.Navigation.PageFunction%601> sont conservées dans le journal est déterminé par le <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> propriété. Par défaut, une fonction de page est automatiquement supprimé quand <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, car <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> est défini sur `true`. Pour conserver une fonction de page dans l’historique de navigation après <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> est appelée, définissez <xref:System.Windows.Navigation.PageFunctionBase.RemoveFromJournal%2A> à `false`.  
   
 <a name="Other_Types_of_Structured_Navigation"></a>   
 ## <a name="other-types-of-structured-navigation"></a>Autres types de navigation structurée  
- Cette rubrique illustre l’utilisation de base d’un <xref:System.Windows.Navigation.PageFunction%601> pour prendre en charge d’appel/retour de la navigation structurée. Cette base vous permet de créer des types de navigation structurée plus complexes.  
+ Cette rubrique illustre l’utilisation la plus élémentaire d’un <xref:System.Windows.Navigation.PageFunction%601> pour prendre en charge d’appel/retour de la navigation structurée. Cette base vous permet de créer des types de navigation structurée plus complexes.  
   
  Par exemple, parfois plusieurs pages sont requises par une page appelante pour recueillir suffisamment de données auprès d’un utilisateur ou pour effectuer une tâche. En cas d’utilisation de plusieurs pages, on emploie le terme « Assistant ».  
   

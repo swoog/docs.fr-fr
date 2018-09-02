@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: d9dcda6b93fbc036818ad2ad43da4bfac95f6833
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758155"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474036"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modification des données avec les procédures stockées
 Les procédures stockées peuvent accepter des données en tant que paramètres d'entrée et retourner des données en tant que paramètres de sortie, jeux de résultats et valeurs de retour. L'exemple ci-dessous montre comment ADO.NET envoie et reçoit des paramètres d'entrée, des paramètres de sortie et des valeurs de retour. L'exemple insère un nouvel enregistrement dans une table où la colonne de clé primaire est une colonne d'identité dans une base de données SQL Server.  
@@ -19,7 +19,7 @@ Les procédures stockées peuvent accepter des données en tant que paramètres 
 >  Si vous utilisez des procédures stockées SQL Server pour modifier ou supprimer des données à l'aide de <xref:System.Data.SqlClient.SqlDataAdapter>, assurez-vous que vous n'utilisez pas SET NOCOUNT ON dans la définition de procédure stockée. En effet, le nombre de lignes affectées retourné serait alors la valeur zéro, ce que `DataAdapter` interprète comme un conflit d'accès concurrentiel. Dans ce cas, l'exception <xref:System.Data.DBConcurrencyException> est levée.  
   
 ## <a name="example"></a>Exemple  
- L’exemple utilise la procédure stockée suivante pour insérer une nouvelle catégorie dans le **Northwind** **catégories** table. La procédure stockée prend la valeur de la **CategoryName** colonne en tant que paramètre d’entrée et utilise le SCOPE_IDENTITY() à récupérer la nouvelle valeur du champ d’identité, la fonction **CategoryID**et le retourner dans un paramètre de sortie. L’instruction RETURN utilise la @@ROWCOUNT fonction pour retourner le nombre de lignes insérées.  
+ L’exemple utilise la procédure stockée suivante pour insérer une nouvelle catégorie dans le **Northwind** **catégories** table. La procédure stockée prend la valeur de la **CategoryName** colonne en tant que paramètre d’entrée et utilise le SCOPE_IDENTITY() à récupérer la nouvelle valeur du champ d’identité, la fonction **CategoryID**et le retourner dans un paramètre output. L’instruction RETURN utilise la @@ROWCOUNT fonction pour retourner le nombre de lignes insérées.  
   
 ```  
 CREATE PROCEDURE dbo.InsertCategory  
@@ -34,7 +34,7 @@ RETURN @@ROWCOUNT
  L'exemple de code suivant utilise la procédure stockée `InsertCategory` présentée ci-dessus comme source pour <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> de <xref:System.Data.SqlClient.SqlDataAdapter>. Le paramètre de sortie `@Identity` se reflète dans <xref:System.Data.DataSet> après que l'enregistrement a été inséré dans la base de données lors de l'appel de la méthode `Update` de <xref:System.Data.SqlClient.SqlDataAdapter>. Le code récupère également la valeur de retour.  
   
 > [!NOTE]
->  Lorsque vous utilisez la <xref:System.Data.OleDb.OleDbDataAdapter>, vous devez spécifier des paramètres avec un <xref:System.Data.ParameterDirection> de **ReturnValue** avant les autres paramètres.  
+>  Lorsque vous utilisez le <xref:System.Data.OleDb.OleDbDataAdapter>, vous devez spécifier des paramètres avec un <xref:System.Data.ParameterDirection> de **ReturnValue** avant les autres paramètres.  
   
  [!code-csharp[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/CS/source.cs#1)]
  [!code-vb[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/VB/source.vb#1)]  
@@ -43,4 +43,4 @@ RETURN @@ROWCOUNT
  [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Exécution d’une commande](../../../../docs/framework/data/adonet/executing-a-command.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

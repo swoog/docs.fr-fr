@@ -7,11 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dfba7062d4226f3644aa6c4cc0efcd7c5fb9eab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469906"
 ---
 # <a name="getting-started-sample"></a>Getting Started, exemple
 Cet exemple montre comment implémenter un service et un client standard à l’aide de Windows Communication Foundation (WCF). Cet exemple constitue la base de tous les autres exemples de technologie de base.  
@@ -24,7 +25,7 @@ Cet exemple montre comment implémenter un service et un client standard à l’
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\GettingStarted\GettingStarted`  
   
@@ -35,7 +36,7 @@ Cet exemple montre comment implémenter un service et un client standard à l’
  Sur [!INCLUDE[wv](../../../../includes/wv-md.md)], le service est hébergé dans le service d'activation de processus de Windows (WAS). Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] et [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], il est hébergé par les services IIS (Internet Information Services) et ASP.NET. L'hébergement d'un service dans les services IIS ou WAS lui permet d'être activé automatiquement lorsqu'il est accédé pour la première fois.  
   
 > [!NOTE]
->  Si vous préférez commencer avec un exemple qui héberge le service dans une application de console au lieu d’IIS, consultez la [auto-hébergement](../../../../docs/framework/wcf/samples/self-host.md) exemple.  
+>  Si vous préférez commencer avec un exemple qui héberge le service dans une application de console au lieu d’IIS, consultez le [Self-Host](../../../../docs/framework/wcf/samples/self-host.md) exemple.  
   
  Le service et le client spécifient les détails d'accès dans les paramètres du fichier de configuration, qui fournissent la souplesse au moment du déploiement. Cela inclut une définition de point de terminaison qui spécifie une adresse, une liaison et un contrat. La liaison spécifie des détails de sécurité et de transport sur la manière dont le service doit être accédé.  
   
@@ -142,7 +143,7 @@ public class CalculatorService : ICalculator
   
  Tel qu’il est configuré, le service est accessible à http://localhost/servicemodelsamples/service.svc par un client sur le même ordinateur. Pour que les clients installés sur des ordinateurs distants puissent accéder au service, un nom de domaine complet doit être spécifié au lieu de localhost.  
   
- Par défaut, l'infrastructure n'expose pas de métadonnées. Par conséquent, le service Active le <xref:System.ServiceModel.Description.ServiceMetadataBehavior> et expose un point de terminaison (MEX) d’exchange métadonnées à http://localhost/servicemodelsamples/service.svc/mex. La configuration suivante montre comment procéder.  
+ Par défaut, l'infrastructure n'expose pas de métadonnées. Par conséquent, le service Active la <xref:System.ServiceModel.Description.ServiceMetadataBehavior> et expose un point de terminaison exchange (MEX) à http://localhost/servicemodelsamples/service.svc/mex. La configuration suivante montre comment procéder.  
   
 ```xaml  
 <system.serviceModel>  
@@ -271,15 +272,15 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
- Cet exemple présente la méthode standard utilisée pour créer un service et un client. L’autre [base](../../../../docs/framework/wcf/samples/basic-sample.md) build sur cet exemple pour illustrer les fonctionnalités de produit spécifique.  
+ Cet exemple présente la méthode standard utilisée pour créer un service et un client. L’autre [base](../../../../docs/framework/wcf/samples/basic-sample.md) appuient sur cet exemple pour illustrer les fonctionnalités de produit spécifique.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide pratique pour héberger un service WCF dans une application managée](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)  

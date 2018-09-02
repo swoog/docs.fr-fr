@@ -10,15 +10,15 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: ca989c1cd7baa1eaeb10c65bd9ebef8e400968c3
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: d53892f9823474ea14640e352548b55432e7744b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255220"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461061"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projections de requête (services de données WCF)
-Projection fournit un mécanisme dans le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] afin de réduire la quantité de données dans le flux retourné par une requête en spécifiant que seules certaines propriétés d’une entité sont retournées dans la réponse. Pour plus d’informations, consultez [OData : Select System Query Option ($select)](http://go.microsoft.com/fwlink/?LinkId=186076).  
+Projection fournit un mécanisme dans le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] afin de réduire la quantité de données dans le flux retourné par une requête en spécifiant que seules certaines propriétés d’une entité sont retournées dans la réponse. Pour plus d’informations, consultez [OData : Select System Query Option ($select)](https://go.microsoft.com/fwlink/?LinkId=186076).  
   
  Cette rubrique décrit comment définir une projection de requête, quelles sont les exigences pour les types d’entité et de non-entité, la mise à jour des résultats projetés, la création des types projetés et répertorie des considérations relatives à la projection.  
   

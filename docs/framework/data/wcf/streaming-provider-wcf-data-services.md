@@ -10,21 +10,21 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: d65ea58bc2e98ab2607ce105b496ac0a870362b0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 543d095c88670024a53fad7c865883ecaab1c6e0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805471"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474337"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Fournisseurs de diffusion en continu (WCF Data Services)
-Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et la sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
+Un service de données peut exposer des données Large Object Binary. Ces données binaires peuvent représenter des flux vidéo et audio, des images, des fichiers de document ou d'autres types de supports binaires. Lorsqu'une entité du modèle de données inclut une ou plusieurs propriétés binaires, le service de données retourne ces données binaires encodées en Base 64 au sein de l'entrée dans le flux de réponse. Étant donné que le chargement et de sérialisation des données binaires volumineuses de cette manière peuvent affecter les performances, le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit un mécanisme pour récupérer des données binaires indépendantes de l’entité à laquelle il appartient. Cela s'effectue en séparant l'entité et les données binaires de l'entité dans un ou plusieurs flux de données  
   
 -   Ressource multimédia : données binaires qui appartiennent à une entité, telle qu'une vidéo, du son, une image ou d'autres types de flux de ressources multimédias.  
   
 -   Entrée de lien média : une entité ayant une référence à un flux de ressources multimédias associé.  
   
- Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous définissez un flux de ressources binaires en implémentant un fournisseur de données en continu. L’implémentation du fournisseur de diffusion en continu fournit le service de données avec le flux de ressources multimédia associé à une entité spécifique sous un <xref:System.IO.Stream> objet. Cette implémentation permet au service de données d'accepter et de retourner les ressources multimédias sur HTTP sous forme de flux de données binaires d'un type MIME spécifié.  
+ Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous définissez un flux de ressources binaires en implémentant un fournisseur de données en continu. L’implémentation de fournisseur de diffusion en continu fournit le service de données avec le flux de ressources multimédia associé à une entité spécifique sous un <xref:System.IO.Stream> objet. Cette implémentation permet au service de données d'accepter et de retourner les ressources multimédias sur HTTP sous forme de flux de données binaires d'un type MIME spécifié.  
   
  La configuration d'un service de données afin de prendre en charge la diffusion en continu de données binaires requiert les étapes suivantes :  
   
@@ -38,7 +38,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
 5.  Activer l'accès aux ressources binaires sur le serveur ou dans une source de données.  
   
- Les exemples dans cette rubrique sont basés sur un échantillon de diffusion en continu de service de photos, qui est abordée en détail dans la publication [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](http://go.microsoft.com/fwlink/?LinkID=198989). Le code source pour cet exemple de service est disponible sur le [page exemple de Service de données Photo de diffusion en continu](http://go.microsoft.com/fwlink/?LinkID=198988) sur MSDN Code Gallery.  
+ Les exemples de cette rubrique sont basés sur un exemple de diffusion en continu de service photo, ce qui est décrit en détail dans le billet de [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Le code source pour cet exemple de service est disponible sur le [page exemple de diffusion en continu de Service des données de Photo](https://go.microsoft.com/fwlink/?LinkID=198988) dans MSDN Code Gallery.  
   
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Définition d'une entrée de lien média dans le modèle de données  
  Le fournisseur de sources de données détermine la façon dont une entité est définie comme une entrée de lien média dans le modèle de données.  
@@ -50,13 +50,13 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  Vous devez également ajouter l'espace de noms `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à l'entité ou à la racine du fichier .edmx ou .csdl qui définit le modèle de données.  
   
- Pour obtenir un exemple d’un service de données qui utilise le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur et expose une ressource multimédia, consultez le billet [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Pour obtenir un exemple d’un service de données qui utilise le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur et expose une ressource multimédia, consultez le billet [série fournisseur de Services de diffusion en continu de données : implémentation d’un fournisseur de diffusion en continu (partie 1)](https://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Fournisseur de réflexion**  
  Pour indiquer qu'une entité est une entrée de lien média, ajoutez l'objet <xref:System.Data.Services.Common.HasStreamAttribute> à la classe qui définit le type d'entité dans le fournisseur de réflexion.  
   
- **Fournisseur de services de données personnalisé**  
- Lorsque vous utilisez des fournisseurs de services personnalisés, vous implémentez l'interface <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> pour définir les métadonnées pour votre service de données. Pour plus d’informations, consultez [fournisseurs de services de données personnalisé](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Vous indiquez qu'un flux de ressources binaires appartient à <xref:System.Data.Services.Providers.ResourceType> en définissant la propriété <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> sur `true` sur le <xref:System.Data.Services.Providers.ResourceType> qui représente le type d'entité, qui est une entrée de lien média.  
+ **Fournisseur de services de données personnalisées**  
+ Lorsque vous utilisez des fournisseurs de services personnalisés, vous implémentez l'interface <xref:System.Data.Services.Providers.IDataServiceMetadataProvider> pour définir les métadonnées pour votre service de données. Pour plus d’informations, consultez [fournisseurs de services de données personnalisés](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Vous indiquez qu'un flux de ressources binaires appartient à <xref:System.Data.Services.Providers.ResourceType> en définissant la propriété <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A> sur `true` sur le <xref:System.Data.Services.Providers.ResourceType> qui représente le type d'entité, qui est une entrée de lien média.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implémentation de l'interface IDataServiceStreamProvider  
  Pour créer un service de données qui prend en charge les flux de données binaires, vous devez implémenter l'interface <xref:System.Data.Services.Providers.IDataServiceStreamProvider>. Cette implémentation permet au service de données de retourner les données binaires comme un flux de données au client et de consommer les données binaires comme un flux de données transmis par le client. Ce service de données crée une instance de cette interface chaque fois qu'il doit accéder aux données binaires sous forme de flux de données. L'interface <xref:System.Data.Services.Providers.IDataServiceStreamProvider> spécifie les membres suivants.  
@@ -89,12 +89,12 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
  Pour plus d’informations, consultez [de transfert des messages de diffusion en continu](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) et [Quotas de Transport](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Par défaut, Internet Information Services (IIS) limite également la taille des demandes à 4 Mo. Pour activer votre service de données recevoir les flux de données supérieure à 4 Mo lors de l’exécution sur IIS, vous devez également définir le `maxRequestLength` attribut de la [httpRuntime, élément (schéma des paramètres ASP.NET)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) dans la `<system.web />` section de configuration, en tant que indiqué dans l’exemple suivant :  
+ Par défaut, Internet Information Services (IIS) limite également la taille des demandes à 4 Mo. Pour activer votre service de données pour recevoir des flux supérieurs à 4 Mo lors de l’exécution sur IIS, vous devez également définir le `maxRequestLength` attribut de la [httpRuntime, élément (schéma des paramètres ASP.NET)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) dans la `<system.web />` section de configuration, en tant que indiqué dans l’exemple suivant :  
   
   
   
 ## <a name="using-data-streams-in-a-client-application"></a>Utilisation de flux de données en continu dans une application cliente  
- La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de récupérer et de mettre à jour ces ressources exposées sous la forme de flux binaires sur le client. Pour plus d’informations, consultez [fonctionne avec des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de récupérer et de mettre à jour ces ressources exposées sous la forme de flux binaires sur le client. Pour plus d’informations, consultez [utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Remarques sur l'utilisation d'un fournisseur de diffusion en continu  
  Les éléments suivants sont à prendre en compte lorsque vous implémentez un fournisseur de diffusion en continu et lorsque vous accédez aux ressources multimédias d'un service de données.  
@@ -119,7 +119,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
 -   Lorsque vous implémentez les méthodes <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>ou <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A>, vous devez utiliser les valeurs eTag et Content-Type fournies comme paramètres de méthode. Ne définissez pas d'en-tête eTag ou Content-Type dans votre implémentation de fournisseur <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.  
   
--   Par défaut, le client transmet les flux binaires volumineux à l'aide d'un encodage de transfert HTTP segmenté. Étant donné que le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement ne prend pas en charge ce type d’encodage, vous ne pouvez pas utiliser ce serveur Web pour héberger un service de données en continu qui doit accepter des flux binaires volumineux. Pour plus d’informations sur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement, consultez [serveurs Web dans Visual Studio pour les projets Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Par défaut, le client transmet les flux binaires volumineux à l'aide d'un encodage de transfert HTTP segmenté. Étant donné que le [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement ne prend pas en charge ce type d’encodage, vous ne pouvez pas utiliser ce serveur Web pour héberger un service de données de diffusion en continu qui doit accepter des flux binaires volumineux. Pour plus d’informations sur [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] serveur de développement, consultez [serveurs Web dans Visual Studio pour les projets Web ASP.NET](https://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Exigences pour le contrôle de version  
@@ -127,7 +127,7 @@ Un service de données peut exposer des données Large Object Binary. Ces donné
   
 -   Le fournisseur de diffusion en continu requiert que le client et le service de données prennent en charge les versions 2.0 et ultérieures du protocole [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] .  
   
- Pour plus d’informations, consultez [contrôle de version de Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
+ Pour plus d’informations, consultez [gestion des versions du Service de données](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fournisseurs de services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  

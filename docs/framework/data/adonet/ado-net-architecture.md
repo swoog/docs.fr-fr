@@ -2,12 +2,12 @@
 title: Architecture ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 384f2397e0e2794c4326d635db9f81fe1078f374
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759866"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472109"
 ---
 # <a name="adonet-architecture"></a>Architecture ADO.NET
 Le traitement des données repose traditionnellement sur un modèle à deux couches utilisant une connexion. Le traitement des données utilisant de plus en plus des architectures multicouches, les programmeurs s'orientent vers une approche déconnectée de façon à proposer une meilleure évolutivité pour leurs applications.  
@@ -16,7 +16,7 @@ Le traitement des données repose traditionnellement sur un modèle à deux couc
  Les deux principaux composants d'[!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)] utilisés pour l'accès et la manipulation de données sont les fournisseurs de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] et l'objet <xref:System.Data.DataSet>.  
   
 ### <a name="net-framework-data-providers"></a>Fournisseur de données .NET Framework  
- Les fournisseurs de données .NET Framework sont des composants explicitement conçus pour la manipulation des données et pour un accès aux données rapide, avant uniquement et en lecture seule. L'objet `Connection` assure la connectivité avec une source de données. L'objet `Command` permet d'accéder aux commandes de base de données en vue de retourner des données, de modifier des données, d'exécuter des procédures stockées et d'envoyer ou récupérer des informations sur les paramètres. Le `DataReader` fournit un flux très performant de données en provenance de la source de données. Enfin, le `DataAdapter` établit une passerelle entre l'objet `DataSet` et la source de données. Le `DataAdapter` utilise des objets `Command` pour exécuter des commandes SQL au niveau de la source de données afin d'une part de charger le `DataSet` avec des données, et d'autre part afin de répercuter dans la source de données les modifications apportées aux données contenues dans le `DataSet`. Pour plus d’informations, consultez [.NET Framework Data Providers](../../../../docs/framework/data/adonet/data-providers.md) et [extraction et modification des données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
+ Les fournisseurs de données .NET Framework sont des composants explicitement conçus pour la manipulation des données et pour un accès aux données rapide, avant uniquement et en lecture seule. L'objet `Connection` assure la connectivité avec une source de données. L'objet `Command` permet d'accéder aux commandes de base de données en vue de retourner des données, de modifier des données, d'exécuter des procédures stockées et d'envoyer ou récupérer des informations sur les paramètres. Le `DataReader` fournit un flux très performant de données en provenance de la source de données. Enfin, le `DataAdapter` établit une passerelle entre l'objet `DataSet` et la source de données. Le `DataAdapter` utilise des objets `Command` pour exécuter des commandes SQL au niveau de la source de données afin d'une part de charger le `DataSet` avec des données, et d'autre part afin de répercuter dans la source de données les modifications apportées aux données contenues dans le `DataSet`. Pour plus d’informations, consultez [fournisseurs de données .NET Framework](../../../../docs/framework/data/adonet/data-providers.md) et [extraction et modification des données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md).  
   
 ### <a name="the-dataset"></a>DataSet  
  Le `DataSet` ADO.NET est explicitement conçu pour un accès aux données indépendant de toute source de données. Il peut donc être utilisé avec plusieurs sources de données différentes, utilisé avec des données XML ou utilisé pour gérer des données locales de l'application. Le `DataSet` contient une collection d'un ou plusieurs objets <xref:System.Data.DataTable> constitués de lignes et de colonnes de données, ainsi que des informations concernant les contraintes de clé primaire, de clé étrangère et des informations relationnelles sur les données contenues dans les objets `DataTable`. Pour plus d’informations, consultez [DataSets, DataTables et DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md).  
@@ -27,7 +27,7 @@ Le traitement des données repose traditionnellement sur un modèle à deux couc
 Architecture ADO.NET  
   
 ### <a name="choosing-a-datareader-or-a-dataset"></a>Choix d'un DataReader ou d'un DataSet  
- Lorsque vous décidez si votre application doit utiliser un `DataReader` (consultez [la récupération des données à l’aide d’un DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) ou un `DataSet` (consultez [DataSets, DataTables et DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), tenez compte du type de fonctionnalités nécessaires à votre application. Utilisez un `DataSet` pour effectuer les opérations suivantes :  
+ Lorsque vous décidez si votre application doit utiliser un `DataReader` (consultez [extraction de données à l’aide d’un DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) ou un `DataSet` (consultez [DataSets, DataTables et DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)), tenez compte du type de fonctionnalités nécessaires à votre application. Utilisez un `DataSet` pour effectuer les opérations suivantes :  
   
 -   Mettre des données en cache localement dans votre application afin de pouvoir les manipuler. Si vous devez uniquement lire les résultats d'une requête, le `DataReader` est le meilleur choix.  
   
@@ -37,7 +37,7 @@ Architecture ADO.NET
   
 -   Réaliser un traitement complet des données sans qu'une connexion ouverte à la source de données soit nécessaire, ce qui libère la connexion pour d'autres clients.  
   
- Si vous n'avez pas besoin de la fonctionnalité fournie par le `DataSet`, vous pouvez améliorer les performances de votre application en utilisant le `DataReader` pour retourner les données avec un accès en lecture seule et avant uniquement. Bien que le `DataAdapter` utilise le `DataReader` pour remplir le contenu d’un `DataSet` (voir [remplissage d’un DataSet à partir d’un DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), à l’aide de la `DataReader`, vous pouvez améliorer les performances, car vous allez enregistrer la mémoire qui doit être consommé par le `DataSet`et d’éviter le traitement est requis pour créer et remplir le contenu de la `DataSet`.  
+ Si vous n'avez pas besoin de la fonctionnalité fournie par le `DataSet`, vous pouvez améliorer les performances de votre application en utilisant le `DataReader` pour retourner les données avec un accès en lecture seule et avant uniquement. Bien que le `DataAdapter` utilise le `DataReader` pour remplir le contenu d’un `DataSet` (consultez [remplissage d’un DataSet à partir d’un DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)), à l’aide de la `DataReader`, vous pouvez améliorer les performances, car vous économiserez la mémoire qui doit être consommé par le `DataSet`et d’éviter le traitement est requis pour créer et remplir le contenu de la `DataSet`.  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet offre des fonctionnalités de requête ainsi qu'une vérification des types à la compilation sur les données mises en cache dans un objet DataSet. Il vous permet d'écrire des requêtes dans l'un des langages de développement du .NET Framework, tels que C# ou Visual Basic. Pour plus d’informations, [consultez LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md).  
@@ -49,7 +49,7 @@ Architecture ADO.NET
  ADO.NET Entity Framework est conçu pour permettre aux développeurs de créer des applications d'accès aux données en programmant à partir d'un modèle d'application conceptuel plutôt que directement sur un schéma de stockage relationnel. L'objectif est de limiter les opérations de codage et de maintenance requises par les applications orientées données. Pour plus d’informations, consultez [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>Services de données WCF  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] est utilisé pour déployer des services de données sur le Web ou sur un intranet. Les données sont structurées sous la forme d'entités et de relations conformément aux spécifications du modèle EDM. Les données déployées sur ce modèle sont adressables par le protocole HTTP standard. Pour plus d’informations, consultez [Services de données WCF 4.5](../../../../docs/framework/data/wcf/index.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] est utilisé pour déployer des services de données sur le Web ou sur un intranet. Les données sont structurées sous la forme d'entités et de relations conformément aux spécifications du modèle EDM. Les données déployées sur ce modèle sont adressables par le protocole HTTP standard. Pour plus d’informations, consultez [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="xml-and-adonet"></a>XML et ADO.NET  
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] tire parti de la puissance de XML pour fournir un accès déconnecté aux données. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] a été conçu en relation étroite avec les classes XML du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ; les deux composants appartiennent à une même architecture.  
@@ -58,4 +58,4 @@ Architecture ADO.NET
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble d’ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

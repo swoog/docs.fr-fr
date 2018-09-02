@@ -5,19 +5,20 @@ helpviewer_keywords:
 - TileBrush [WPF], size of tilepropertys
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: 16f0a4b3a5c9b9075126ba6d8f19d65169f70921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1ba1a25281ffdd1cc00e0bed0efe4f8508780be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467833"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Comment : définir la taille de la mosaïque pour un TileBrush
-Cet exemple montre comment définir la taille des mosaïques pour un <xref:System.Windows.Media.TileBrush>. Par défaut, un <xref:System.Windows.Media.TileBrush> produit une seule mosaïque qui remplit complètement la zone qui vous sont en train de peindre. Vous pouvez substituer ce comportement en définissant le <xref:System.Windows.Media.TileBrush.Viewport%2A> et <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriétés.  
+Cet exemple montre comment définir la taille de la mosaïque pour un <xref:System.Windows.Media.TileBrush>. Par défaut, un <xref:System.Windows.Media.TileBrush> produit une seule mosaïque qui remplit complètement la zone que vous peignez. Vous pouvez substituer ce comportement en définissant le <xref:System.Windows.Media.TileBrush.Viewport%2A> et <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriétés.  
   
- Le <xref:System.Windows.Media.TileBrush.Viewport%2A> propriété spécifie la taille des mosaïques pour un <xref:System.Windows.Media.TileBrush>. Par défaut, la valeur de la <xref:System.Windows.Media.TileBrush.Viewport%2A> propriété est relative à la taille de la zone qui est peinte. Pour rendre le <xref:System.Windows.Media.TileBrush.Viewport%2A> propriété spécifier une taille de mosaïque absolue, définissez la <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriété <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
+ Le <xref:System.Windows.Media.TileBrush.Viewport%2A> propriété spécifie la taille de la mosaïque pour un <xref:System.Windows.Media.TileBrush>. Par défaut, la valeur de la <xref:System.Windows.Media.TileBrush.Viewport%2A> propriété est relative à la taille de la zone peinte. Pour rendre le <xref:System.Windows.Media.TileBrush.Viewport%2A> propriété spécifier une taille de mosaïque absolue, définissez le <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriété <xref:System.Windows.Media.BrushMappingMode.Absolute>.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise une <xref:System.Windows.Media.ImageBrush>, un type de <xref:System.Windows.Media.TileBrush>, pour peindre un rectangle avec des mosaïques. L’exemple définit chaque mosaïque à 50 % de 50 % de la zone de sortie (le rectangle). Le rectangle est donc peint avec quatre projections de l’image.  
+ L’exemple suivant utilise un <xref:System.Windows.Media.ImageBrush>, un type de <xref:System.Windows.Media.TileBrush>, pour peindre un rectangle avec des vignettes. L’exemple définit chaque mosaïque à 50 % de 50 % de la zone de sortie (le rectangle). Le rectangle est donc peint avec quatre projections de l’image.  
   
  L’illustration suivante montre le résultat obtenu avec cet exemple.
   
@@ -33,9 +34,9 @@ Cet exemple montre comment définir la taille des mosaïques pour un <xref:Syste
   
  [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]  
   
- Les exemples précédents font partie d’un exemple plus complet. Pour obtenir un exemple complet, consultez [ImageBrush, exemple](http://go.microsoft.com/fwlink/?LinkID=160005).  
+ Les exemples précédents font partie d’un exemple plus complet. Pour obtenir un exemple complet, consultez [ImageBrush, exemple](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
- Bien que cet exemple utilise le <xref:System.Windows.Media.ImageBrush> (classe), le <xref:System.Windows.Media.TileBrush.Viewport%2A> et <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriétés se comportent de façon identique pour les autres <xref:System.Windows.Media.TileBrush> des objets, autrement dit, pour <xref:System.Windows.Media.DrawingBrush> et <xref:System.Windows.Media.VisualBrush>. Pour plus d’informations sur <xref:System.Windows.Media.ImageBrush> et l’autre <xref:System.Windows.Media.TileBrush> , consultez [peinture avec des Images, des dessins et des éléments visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
+ Bien que cet exemple utilise le <xref:System.Windows.Media.ImageBrush> (classe), le <xref:System.Windows.Media.TileBrush.Viewport%2A> et <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> propriétés ont un comportement identique pour les autres <xref:System.Windows.Media.TileBrush> d’objets, autrement dit, pour <xref:System.Windows.Media.DrawingBrush> et <xref:System.Windows.Media.VisualBrush>. Pour plus d’informations sur <xref:System.Windows.Media.ImageBrush> et l’autre <xref:System.Windows.Media.TileBrush> , consultez [peinture avec des Images, de dessin et visuels](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Media.TileBrush>  

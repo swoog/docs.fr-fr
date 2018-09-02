@@ -2,12 +2,12 @@
 title: Publication du formulaire
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
-ms.openlocfilehash: 005aba6ab8a8fcbe4f4e4f79055e04cff059f47d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503761"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464932"
 ---
 # <a name="form-post"></a>Publication du formulaire
 Cet exemple montre comment étendre le modèle de programmation REST WCF pour prendre en charge de nouveaux formats de requêtes entrantes. L'exemple inclut également une implémentation de formateur capable de désérialiser une requête provenant d'une publication de formulaire HTML en type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. L'exemple utilise en outre un modèle T4 pour retourner une page HTML, qui fournit le formulaire HTML que les utilisateurs peuvent publier sur le service REST WCF.  
@@ -27,11 +27,11 @@ Cet exemple montre comment étendre le modèle de programmation REST WCF pour pr
   
  Ce projet d’application console étend la [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple. L'exemple Basic Resource Service montre comment exposer une ressource en utilisant le modèle de programmation REST WCF. Dans l'exemple Basic Resource Service, une ressource de collection de clients nommée « customer » est exposée de façon à ce que les clients qu'elle contient puissent être créés, récupérés, mis à jour et supprimés. L'exemple Basic Resource Service utilise uniquement les deux formats de requêtes entrantes pris en charge en natif : XML et JSON.  
   
- L'application console de cet exemple Form Post utilise le formateur personnalisé de la bibliothèque HtmlFormProcessing, qui permet aux utilisateurs de créer des clients en envoyant une requête provenant d'une publication de formulaire HTML à l'aide d'un navigateur. Il ajoute également une opération qui retourne une page HTML, laquelle inclut le formulaire à publier sur le service. Cette page HTML est générée à l'aide d'un modèle T4 prétraité, qui se compose d'un fichier .tt et d'un fichier .cs généré automatiquement. Le fichier .tt permet à un développeur d'écrire une réponse sous forme de modèle contenant des variables et des structures de contrôle. Pour plus d’informations sur T4, consultez [génération d’artefacts à l’aide de modèles de texte](http://go.microsoft.com/fwlink/?LinkId=178139).  
+ L'application console de cet exemple Form Post utilise le formateur personnalisé de la bibliothèque HtmlFormProcessing, qui permet aux utilisateurs de créer des clients en envoyant une requête provenant d'une publication de formulaire HTML à l'aide d'un navigateur. Il ajoute également une opération qui retourne une page HTML, laquelle inclut le formulaire à publier sur le service. Cette page HTML est générée à l'aide d'un modèle T4 prétraité, qui se compose d'un fichier .tt et d'un fichier .cs généré automatiquement. Le fichier .tt permet à un développeur d'écrire une réponse sous forme de modèle contenant des variables et des structures de contrôle. Pour plus d’informations concernant T4, consultez [génération d’artefacts par à l’aide de modèles de texte](https://go.microsoft.com/fwlink/?LinkId=178139).  
   
 #### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   
-1.  Ouvrez la solution de l'exemple Form Post. Pour que l'exemple fonctionne correctement, vous devez exécuter [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] en tant qu'administrateur. Cela en double-cliquant sur le [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icône et en sélectionnant « Exécuter en tant qu’administrateur » dans le menu contextuel.  
+1.  Ouvrez la solution de l'exemple Form Post. Pour que l'exemple fonctionne correctement, vous devez exécuter [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] en tant qu'administrateur. Cela en double-cliquant sur le [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icône et en choisissant « Exécuter en tant qu’administrateur » dans le menu contextuel.  
   
 2.  Appuyez sur CTRL+MAJ+B pour générer la solution, puis appuyez sur CTRL+F5 pour exécuter le projet FormPost.  
   
@@ -39,7 +39,7 @@ Cet exemple montre comment étendre le modèle de programmation REST WCF pour pr
   
 4.  Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle (ajout, mise à jour, suppression d'un client, ou obtention de la liste des clients actuels) du service dans la fenêtre de console.  
   
-5.  Vous êtes ensuite invité à naviguer jusqu'à l'URI du formulaire customer. Ouvrez un navigateur et naviguez jusqu'à l'URI fourni. Tapez un nom et une adresse pour le client et cliquez sur le **Submit** bouton.  
+5.  Vous êtes ensuite invité à naviguer jusqu'à l'URI du formulaire customer. Ouvrez un navigateur et naviguez jusqu'à l'URI fourni. Tapez un nom et une adresse pour le client et cliquez sur le **envoyer** bouton.  
   
 6.  Appuyez sur une touche quelconque dans la fenêtre de console pour continuer à exécuter l'exemple.  
   
@@ -52,6 +52,6 @@ Cet exemple montre comment étendre le modèle de programmation REST WCF pour pr
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Web\FormPost`

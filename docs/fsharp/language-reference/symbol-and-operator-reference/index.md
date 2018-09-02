@@ -2,12 +2,12 @@
 title: Informations de référence sur les symboles et les opérateurs (F#)
 description: 'En savoir plus sur les symboles et les opérateurs qui sont utilisés dans le langage de programmation F #.'
 ms.date: 04/04/2018
-ms.openlocfilehash: 79518b990f3a5c794f7658490bdadc2d5b985504
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52fc7539027f0cf86a82223a5970d86d7ec60c5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566702"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43457198"
 ---
 # <a name="symbol-and-operator-reference"></a>Informations de référence sur les symboles et les opérateurs
 
@@ -29,7 +29,7 @@ Le tableau suivant décrit les symboles utilisés dans le langage F#, fournit de
 |`$`|Aucune information supplémentaire n'est disponible.|<ul><li>Utilisé en interne pour certains noms de variable et de fonction générés par le compilateur.<br /></li><ul/>|
 |`%`|[Opérateurs arithmétiques](arithmetic-operators.md)<br /><br />[Quotations de code](../code-quotations.md)|<ul><li>Calcule le reste entier.<br /></li><li>Utilisée pour les expressions d'ajout dans les quotations de code typé.<br /></li><ul/>|
 |`%%`|[Quotations de code](../code-quotations.md)|<ul><li>Utilisée pour les expressions d'ajout dans les quotations de code non typé.<br /></li><ul/>|
-|`%?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule le reste entier, lorsque la partie droite est un type nullable.<br /></li><ul/>|
+|`%?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule le reste entier, lors de la partie droite est un type nullable.<br /></li><ul/>|
 |`&`|[Expressions match](../match-expressions.md)|<ul><li>Calcule l'adresse d'une valeur mutable pour une utilisation lors de l'interaction avec d'autres langages.<br /></li><li>Utilisé dans les modèles AND.<br /></li><ul/>|
 |`&&`|[Opérateurs booléens](boolean-operators.md)|<ul><li>Calcule l'opération booléenne AND.<br /></li><ul/>|
 |`&&&`|[Opérateurs au niveau du bit](bitwise-operators.md)|<ul><li>Calcule l'opération AND au niveau du bit.<br /></li><ul/>|
@@ -82,7 +82,7 @@ Le tableau suivant décrit les symboles utilisés dans le langage F#, fournit de
 |`=?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule l'opération « égal à » lorsque la partie droite est un type Nullable.<br /></li><ul/>|
 |`==`|Non applicable.|<ul><li>Non utilisé en F#. Utilisez `=` pour les opérations d'égalité.<br /></li><ul/>|
 |`>`|[Opérateurs arithmétiques](arithmetic-operators.md)|<ul><li>Retourne `true` si le côté gauche est supérieur au côté droit ; sinon, retourne `false`.<br /></li><ul/>|
-|`>?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule l'opération « supérieur à » lorsque la partie droite est un type Nullable.<br /></li><ul/>|
+|`>?`|[Opérateurs autorisant la valeur Null](nullable-operators.md)|<ul><li>Calcule l’opération « supérieure à » lorsque la partie droite est un type nullable.<br /></li><ul/>|
 |`>>`|[Fonctions](../functions/index.md)|<ul><li>Compose deux fonctions (opérateur de composition avant).<br /></li><ul/>|
 |`>>>`|[Opérateurs au niveau du bit](bitwise-operators.md)|<ul><li>Décale les bits de la quantité côté gauche vers la droite selon le nombre d'emplacements spécifié côté droit.<br /></li><ul/>|
 |`>=`|[Opérateurs arithmétiques](arithmetic-operators.md)|<ul><li>Retourne `true` si le côté gauche est supérieur ou égal au côté droit ; sinon, retourne `false`.<br /></li><ul/>|

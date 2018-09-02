@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408630"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463193"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Guide pratique pour déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF
 ## <a name="applies-to"></a>S'applique à  
@@ -77,14 +77,14 @@ ms.locfileid: "33408630"
     </system.diagnostics>  
     ```  
   
-3.  La configuration ci-dessus indique à WIF de générer des événements de suivi détaillés et de les consigner dans le fichier *WIFTrace.e2e*. Pour obtenir la liste complète des valeurs du commutateur **switchValue**, consultez le tableau Niveau de suivi dans la rubrique suivante : [Configuration du suivi](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  La configuration ci-dessus indique à WIF de générer des événements de suivi détaillés et de les consigner dans le fichier *WIFTrace.e2e*. Pour obtenir la liste complète des valeurs du commutateur **switchValue**, consultez le tableau Niveau de suivi dans la rubrique suivante : [Configuration du suivi](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Étape 2 : analyser les fichiers de suivi WIF à l'aide de l'outil Trace Viewer  
  Dans cette étape, vous allez utiliser l'outil Trace Viewer (SvcTraceViewer.exe) pour analyser les journaux de suivi WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Pour analyser les journaux de suivi WIF à l'aide de l'outil Trace Viewer (SvcTraceViewer.exe)  
   
-1.  L'outil Trace Viewer (SvcTraceViewer.exe) est fourni avec le Kit de développement logiciel (SDK) Windows. Si vous n’avez pas déjà installé le kit SDK Windows, vous pouvez le télécharger ici : [SDK Windows](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  L'outil Trace Viewer (SvcTraceViewer.exe) est fourni avec le Kit de développement logiciel (SDK) Windows. Si vous n’avez pas déjà installé le kit SDK Windows, vous pouvez le télécharger ici : [SDK Windows](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2.  Exécutez l'outil Trace Viewer (SvcTraceViewer.exe). Celui-ci se trouve généralement dans le dossier **Bin** du chemin d’installation.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408630"
   
 |**ID d’erreur**|**Message d'erreur**|**Mesure à prendre pour corriger l’erreur**|  
 |-|-|-|  
-|ID4175|L'émetteur du jeton de sécurité n'a pas été reconnu par IssuerNameRegistry.  Pour accepter les jetons de sécurité en provenance de cet émetteur, configurez IssuerNameRegistry pour qu'il retourne un nom valide pour cet émetteur.|Cette erreur peut être provoquée par la copie d’une empreinte numérique à partir du composant logiciel enfichable MMC et par son collage dans le fichier *Web.config*. Plus précisément, vous pouvez obtenir un caractère non imprimable supplémentaire dans la chaîne de texte en effectuant une copie à partir de la fenêtre de propriétés du certificat. Ce caractère supplémentaire entraîne l’échec de la correspondance de l’empreinte numérique. Vous trouverez ici la procédure de copie correctement de l’empreinte numérique : [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|L'émetteur du jeton de sécurité n'a pas été reconnu par IssuerNameRegistry.  Pour accepter les jetons de sécurité en provenance de cet émetteur, configurez IssuerNameRegistry pour qu'il retourne un nom valide pour cet émetteur.|Cette erreur peut être provoquée par la copie d’une empreinte numérique à partir du composant logiciel enfichable MMC et par son collage dans le fichier *Web.config*. Plus précisément, vous pouvez obtenir un caractère non imprimable supplémentaire dans la chaîne de texte en effectuant une copie à partir de la fenêtre de propriétés du certificat. Ce caractère supplémentaire entraîne l’échec de la correspondance d’empreinte numérique. Vous trouverez ici la procédure de copie correctement l’empreinte numérique : [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Éléments associés  
   
--   [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

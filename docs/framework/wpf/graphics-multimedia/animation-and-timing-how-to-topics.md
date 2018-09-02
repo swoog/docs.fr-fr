@@ -7,15 +7,15 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: bc14c0563be631662737b6d5f244d3c369d57901
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557639"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468665"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Rubriques "Comment" relatives à l'animation et au minutage
-Les rubriques suivantes montrent comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animation et système de minuterie dans vos applications.  
+Les rubriques suivantes montrent comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] système d’animation et minutage dans vos applications.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Accélérer ou ralentir une animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
@@ -31,7 +31,6 @@ Les rubriques suivantes montrent comment utiliser le [!INCLUDE[TLA#tla_winclient
  [Contrôler une animation avec From, To et By](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [Définir une portée de nom](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [Recevoir une notification en cas de changement d'état de l'horloge](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Comment : supprimer une table de montage séquentiel](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [Répéter une animation](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Rechercher un storyboard](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [Rechercher un storyboard de façon synchrone](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

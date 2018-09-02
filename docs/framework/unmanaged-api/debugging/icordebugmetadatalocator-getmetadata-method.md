@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c7042f7eee1ccd03d04cc20c5a0db83d986b0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421916"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470825"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData, méthode
 Indique au débogueur de retourner le chemin d’accès complet à un module dont les métadonnées sont nécessaires pour effectuer une opération demandée par le débogueur.  
@@ -43,10 +43,10 @@ HRESULT GetMetaData(
   
 #### <a name="parameters"></a>Paramètres  
  `wszImagePath`  
- [in] Chaîne terminée par le caractère null qui représente le chemin d’accès complet au fichier. Si le chemin d’accès complet n’est pas disponible, le nom et l’extension du fichier (*nom de fichier*. *extension*).  
+ [in] Chaîne terminée par le caractère null qui représente le chemin d’accès complet au fichier. Si le chemin d’accès complet n’est pas disponible, le nom et l’extension du fichier (*filename*. *extension*).  
   
  `dwImageTimeStamp`  
- [in] Horodatage des en-têtes de fichier PE de l'image. Ce paramètre peut potentiellement être utilisé pour un serveur de symboles ([SymSrv](http://msdn.microsoft.com/library/cc266470.aspx)) recherche.  
+ [in] Horodatage des en-têtes de fichier PE de l'image. Ce paramètre peut potentiellement être utilisé pour un serveur de symboles ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) recherche.  
   
  `dwImageSize`  
  [in] Taille d'image dans les en-têtes de fichier PE. Ce paramètre peut potentiellement être utilisé pour une recherche SymSrv.  
@@ -75,14 +75,14 @@ HRESULT GetMetaData(
 ## <a name="remarks"></a>Notes  
  Si `wszImagePath` contient le chemin d'accès complet d'un module dans un dump, il spécifie le chemin d'accès de l'ordinateur sur lequel le dump a été collecté. Le fichier n’existe peut-être pas à cet emplacement ou un fichier incorrect portant le même nom peut être stocké dans le chemin d’accès.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorDebugThread4, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  

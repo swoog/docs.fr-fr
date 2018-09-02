@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: a50d6c5b52b1a61d7f076f35b5887ecac486cdf2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: edbc67ddf20eee6ebbe9091faa43bc1de91809d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933541"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466252"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>Comment : héberger un service WCF dans un service Windows managé
 
@@ -138,4 +138,4 @@ Comme pour l'option d'auto-hébergement, l'environnement d'hébergement du servi
 - [Configuration simplifiée](../../../../docs/framework/wcf/simplified-configuration.md)
 - [Hébergement dans une application managée](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [Hébergement de services](../../../../docs/framework/wcf/hosting-services.md)
-- [Fonctionnalités d’hébergement de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+- [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

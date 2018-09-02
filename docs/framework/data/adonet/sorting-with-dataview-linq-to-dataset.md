@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885b3b7b-51c1-42b3-bb29-b925f4f69a6f
-ms.openlocfilehash: 41f6f56765e1a623f8f2bdc8f2322589125d123e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f69b64088093bbdd46239a26f16aeea50b6dee7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365902"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465562"
 ---
 # <a name="sorting-with-dataview-linq-to-dataset"></a>Tri avec DataView (LINQ to DataSet)
 La possibilité de trier des données en utilisant des critères spécifiques, puis de les présenter à un client via un contrôle d’interface utilisateur, est un important aspect de la liaison de données. <xref:System.Data.DataView> propose plusieurs manières de trier les données et de retourner des sous-ensembles de lignes de données triés suivant des critères de tri spécifiques. En plus de sa chaîne-en fonction des fonctionnalités, de tri <xref:System.Data.DataView> vous permet également d’utiliser [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] expressions pour les critères de tri. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] les expressions permettent des opérations de tri beaucoup plus complexes et puissantes que le tri basé sur chaîne. Cette rubrique décrit les deux approches du tri à l'aide de <xref:System.Data.DataView>.  
   
 ## <a name="creating-dataview-from-a-query-with-sorting-information"></a>Création d'un DataView à partir d'une requête avec des informations de tri  
- Un objet <xref:System.Data.DataView> peut être créé à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Si cette requête contient un <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, ou <xref:System.Linq.Enumerable.ThenByDescending%2A> clause les expressions de ces clauses sont utilisées comme base pour trier les données dans le <xref:System.Data.DataView>. Par exemple, si la requête contient le `Order By…`et `Then By…` clauses, résultant <xref:System.Data.DataView> trie les données par les deux colonnes spécifiées.  
+ Un objet <xref:System.Data.DataView> peut être créé à partir d'une requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Si cette requête contient un <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.ThenBy%2A>, ou <xref:System.Linq.Enumerable.ThenByDescending%2A> clause les expressions de ces clauses sont utilisées comme base pour trier les données dans le <xref:System.Data.DataView>. Par exemple, si la requête contient le `Order By…`et `Then By…` clauses, résultant <xref:System.Data.DataView> trie les données selon les deux colonnes spécifiées.  
   
  Le tri basé sur une expression offre un tri plus puissant et plus complexe que le tri basé sur chaîne. Notez que les tris basés sur chaîne et sur une expression s'excluent mutuellement. Si le <xref:System.Data.DataView.Sort%2A> basé sur chaîne après la création d'un <xref:System.Data.DataView> à partir d'une requête, le filtre basé sur une expression déduit de la requête est supprimé et ne peut pas être réinitialisé.  
   
- L'index d'un <xref:System.Data.DataView> est construit à la fois lors de la création du <xref:System.Data.DataView> et lorsque l'une des informations de tri ou de filtrage est modifiée. Vous obtenez des performances optimales en fournissant des critères de tri dans la requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] à partir de laquelle le <xref:System.Data.DataView> est créé et en ne modifiant pas ultérieurement les informations de tri. Pour plus d’informations, consultez [DataView Performance](../../../../docs/framework/data/adonet/dataview-performance.md).  
+ L'index d'un <xref:System.Data.DataView> est construit à la fois lors de la création du <xref:System.Data.DataView> et lorsque l'une des informations de tri ou de filtrage est modifiée. Vous obtenez des performances optimales en fournissant des critères de tri dans la requête [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] à partir de laquelle le <xref:System.Data.DataView> est créé et en ne modifiant pas ultérieurement les informations de tri. Pour plus d’informations, consultez [DataView performances](../../../../docs/framework/data/adonet/dataview-performance.md).  
   
 > [!NOTE]
 >  Dans la plupart des cas, les expressions utilisées pour le tri ne doivent pas avoir d'effets secondaires et doivent être déterministes. De plus, les expressions ne doivent pas contenir de logique dépendant d'un nombre défini d'exécutions, parce que les opérations de tri doivent pouvoir être exécutées de façon illimitée.  
@@ -48,7 +48,7 @@ La possibilité de trier des données en utilisant des critères spécifiques, p
   
  Les fonctionnalités de tri basé sur chaîne et sur une expression s'excluent mutuellement. La définition de la propriété <xref:System.Data.DataView.Sort%2A> efface le tri basé sur des expressions hérité de la requête à partir de laquelle le <xref:System.Data.DataView> a été créé.  
   
- Pour plus d’informations sur basé sur chaîne <xref:System.Data.DataView.Sort%2A> le filtrage, consultez [de tri et de filtrage des données](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
+ Pour plus d’informations sur basé sur chaîne <xref:System.Data.DataView.Sort%2A> filtrage, consultez [de tri et filtrage des données](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant crée un <xref:System.Data.DataView> à partir de la table Contact, puis trie les lignes par nom par ordre décroissant, puis les prénoms par ordre croissant :  
@@ -84,4 +84,4 @@ La possibilité de trier des données en utilisant des critères spécifiques, p
 ## <a name="see-also"></a>Voir aussi  
  [Liaison de données et LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
  [Filtrage avec DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)  
- [Tri des données](http://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)
+ [Tri des données](https://msdn.microsoft.com/library/6d76e2d7-b418-49b5-ac78-2bcd61169c48)

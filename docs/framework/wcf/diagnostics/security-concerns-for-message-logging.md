@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0ca5eee4d4a1fd0dfaabbf9160488eb2d88f3d3d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804129"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466489"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  
@@ -17,7 +17,7 @@ Cette rubrique contient des instructions permettant de protéger des données se
 ## <a name="security-concerns"></a>Problèmes de sécurité  
   
 ### <a name="logging-sensitive-information"></a>Enregistrement des informations sensibles  
- Windows Communication Foundation (WCF) ne modifie pas les données dans les en-têtes spécifiques à l’application et le corps. Également, WCF ne suit pas les informations personnelles dans les en-têtes spécifiques aux applications ou des données de corps.  
+ Windows Communication Foundation (WCF) ne modifie pas les données dans les en-têtes spécifiques aux applications et le corps. WCF ne suit pas plus de données personnelles dans les en-têtes spécifiques aux applications ou des données relatives au corps.  
   
  Lorsque la journalisation des messages est activée, les informations personnelles contenues dans les en-têtes spécifiques aux applications (par exemple, une chaîne de requête) et les données relatives au corps (par exemple, un numéro de carte de crédit) peuvent être visibles dans les journaux. Le responsable du déploiement d'applications est chargé d'appliquer le contrôle d'accès sur les fichiers journaux et de configuration. Si vous ne souhaitez pas que ce type d'informations soit visible, vous devez désactiver la journalisation, ou filtrer une partie des données en cas de partage des journaux.  
   
@@ -90,7 +90,7 @@ Cette rubrique contient des instructions permettant de protéger des données se
   
  Les modifications ne sont effectives qu'au démarrage ou redémarrage de l'application. Un événement est enregistré au démarrage lorsque les deux attributs ont la valeur `true`. Un événement est également enregistré si `logKnownPii` a la valeur `true` mais que `enableLoggingKnownPii` a la valeur `false`.  
   
- L'administrateur d'ordinateur et le responsable du déploiement d'applications doivent observer la plus grande prudence lorsqu'ils utilisent ces deux commutateurs. Si la journalisation PII est activée, les clés de sécurité et les informations personnelles sont enregistrées. Si elle est désactivée, les données sensibles et spécifiques aux applications sont toujours enregistrées dans les corps et en-têtes des messages. Pour une discussion plus approfondie sur la confidentialité et la protection des informations d’identification personnelle ne soient exposées, consultez [confidentialité de l’utilisateur](http://go.microsoft.com/fwlink/?LinkID=94647).  
+ L'administrateur d'ordinateur et le responsable du déploiement d'applications doivent observer la plus grande prudence lorsqu'ils utilisent ces deux commutateurs. Si la journalisation PII est activée, les clés de sécurité et les informations personnelles sont enregistrées. Si elle est désactivée, les données sensibles et spécifiques aux applications sont toujours enregistrées dans les corps et en-têtes des messages. Pour une discussion plus détaillée concernant la confidentialité et protection des informations d’identification personnelle empêcher l’exposition, consultez [la confidentialité des utilisateurs](https://go.microsoft.com/fwlink/?LinkID=94647).  
   
 > [!CAUTION]
 >  Les informations personnelles ne sont pas masquées dans les messages malformés. Les messages de ce type sont consignés en l'état sans aucune modification. Les attributs précédemment mentionnés n'ont aucun effet sur cela.  
@@ -105,11 +105,11 @@ Cette rubrique contient des instructions permettant de protéger des données se
   
 -   Journalisation des messages désactivée : cet événement est émis lorsque la journalisation des messages est désactivée via WMI. Le contenu de l'événement est "La journalisation des messages a été activée."  
   
--   Enregistrement des informations personnelles connues activé : cet événement est émis lorsque l'enregistrement des données personnelles connues est activé. Cela se produit lors de la la `enableLoggingKnownPii` d’attribut dans le `machineSettings` du fichier Machine.config a la valeur `true`et le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`.  
+-   Enregistrement des informations personnelles connues activé : cet événement est émis lorsque l'enregistrement des données personnelles connues est activé. Cela se produit lorsque le `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `true`et le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`.  
   
--   Enregistrement des informations personnelles connues activé non autorisé : cet événement est émis lorsque l'enregistrement des informations personnelles connues n'est pas autorisé. Cela se produit lorsque le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`, mais la `enableLoggingKnownPii` d’attribut dans le `machineSettings` du fichier Machine.config a la valeur `false`. Aucune exception n'est levée.  
+-   Enregistrement des informations personnelles connues activé non autorisé : cet événement est émis lorsque l'enregistrement des informations personnelles connues n'est pas autorisé. Cela se produit lorsque le `logKnownPii` attribut de la `source` élément dans le fichier Web.config ou App.config est défini sur `true`, mais la `enableLoggingKnownPii` d’attribut dans le `machineSettings` élément du fichier Machine.config est défini sur `false`. Aucune exception n'est levée.  
   
- Ces événements peuvent être affichés dans l'outil Observateur d'événements fourni avec Windows. Pour plus d’informations, consultez [l’enregistrement des événements](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+ Ces événements peuvent être affichés dans l'outil Observateur d'événements fourni avec Windows. Pour plus d’informations, consultez [la consignation des événements](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Journalisation des messages](../../../../docs/framework/wcf/diagnostics/message-logging.md)  

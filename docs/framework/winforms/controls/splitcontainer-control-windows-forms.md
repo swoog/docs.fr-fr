@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539199"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463692"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer, contrôle (Windows Forms)
 Le contrôle Windows Forms `SplitContainer` peut être considéré comme un composite ; il s'agit de deux panneaux séparés par une barre mobile. Quand le pointeur de la souris est sur la barre, il change de forme pour montrer que la barre est mobile.  
@@ -33,7 +33,7 @@ Le contrôle Windows Forms `SplitContainer` peut être considéré comme un comp
  [Guide pratique pour créer une interface utilisateur à plusieurs volets à l'aide des Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Crée une interface utilisateur à plusieurs volets semblable à celle utilisée dans Microsoft Outlook.  
   
- Consultez également [Comment : fractionner une fenêtre horizontalement à l’aide du concepteur](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [Comment : créer une Interface de Style Explorateur Windows sur un Windows Form](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [Comment : créer une Interface utilisateur à plusieurs volets Windows Forms à l’aide du concepteur](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
+ Consultez également [Comment : fractionner une fenêtre horizontalement à l’aide du concepteur](how-to-split-a-window-horizontally-using-the-designer.md), [Comment : créer une Interface de Style Explorateur Windows sur un formulaire Windows](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [Comment : créer une Interface utilisateur à plusieurs volets à Les formulaires Windows à l’aide du concepteur](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Référence  
  Classe <xref:System.Windows.Forms.SplitContainer>  

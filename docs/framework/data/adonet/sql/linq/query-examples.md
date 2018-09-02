@@ -2,18 +2,18 @@
 title: Exemples de requêtes
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362625"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464352"
 ---
 # <a name="query-examples"></a>Exemples de requêtes
-Cette section fournit des exemples Visual Basic et c# de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] des requêtes. Les développeurs qui utilisent Visual Studio peuvent trouver beaucoup plus d’exemples dans un exemple de solution disponible dans la section Exemples. Pour plus d’informations, consultez [exemples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Cette section fournit des exemples Visual Basic et c# de type [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] requêtes. Les développeurs qui utilisent Visual Studio peuvent trouver des nombreux autres exemples dans un exemple de solution disponible dans la section Exemples. Pour plus d’informations, consultez [exemples](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *base de données* est souvent utilisée dans les exemples de code dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation. *base de données* est supposé pour être une instance d’un *Northwind* (classe), qui hérite de <xref:System.Data.Linq.DataContext>.  
+>  *DB* est souvent utilisé dans les exemples de code dans [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation. *DB* est supposé pour être une instance d’un *Northwind* (classe), qui hérite de <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Requêtes d’agrégation](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -65,7 +65,7 @@ Cette section fournit des exemples Visual Basic et c# de [!INCLUDE[vbtecdlinq](.
  Fournit des exemples de combinaison `select` avec d’autres fonctionnalités (par exemple, *types anonymes*) pour former des projections de requête.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Vue d’ensemble des opérateurs de requête standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  Explique le concept d'opérateurs de requête standard.  
   
  [Concepts relatifs aux requêtes](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

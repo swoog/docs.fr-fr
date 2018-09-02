@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 373a7f977a9dad59cd40fd29fdd39c8fc6996ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529300"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462335"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : réorganisation du contenu WPF sur les Windows Forms au moment du design
 Cette procédure pas à pas montre comment utiliser les fonctionnalités de disposition Windows Forms, telles que l’ancrage et les lignes d’alignement, pour disposer les contrôles WPF (Windows Presentation Foundation).  
@@ -32,7 +32,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
 -   ancrer des contrôles WPF.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
@@ -47,18 +47,18 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
--   Créer un nouveau projet d’Application Windows Forms dans Visual Basic ou Visual c# nommé `ArrangeElementHost`.  
+-   Créer un nouveau projet d’Application de Windows Forms dans Visual Basic ou Visual c# nommé `ArrangeElementHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Création du contrôle WPF  
  Après avoir ajouté un contrôle WPF au projet, vous pouvez le disposer sur le formulaire.  
   
 #### <a name="to-create-wpf-controls"></a>Pour créer des contrôles WPF  
   
-1.  Ajoutez un nouveau <xref:System.Windows.Controls.UserControl> WPF au projet. Utilisez le nom par défaut pour le type de contrôle, `UserControl1.xaml`. Pour plus d’informations, consultez [procédure pas à pas : création WPF de contenu dans les Windows Forms au moment du Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Ajoutez un nouveau <xref:System.Windows.Controls.UserControl> WPF au projet. Utilisez le nom par défaut pour le type de contrôle, `UserControl1.xaml`. Pour plus d’informations, consultez [procédure pas à pas : création de nouveau contenu WPF sur les formulaires Windows au moment du Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  En mode Design, assurez-vous que `UserControl1` est sélectionné. Pour plus d’informations, consultez [Comment : sélectionner et déplacer des éléments sur l’aire de conception](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
+2.  En mode Design, assurez-vous que `UserControl1` est sélectionné. Pour plus d’informations, consultez [Comment : sélectionner et déplacer des éléments sur l’aire de conception](https://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
-3.  Dans le **propriétés** fenêtre, définissez la valeur de la <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> propriétés `200`.  
+3.  Dans le **propriétés** fenêtre, définissez la valeur de la <xref:System.Windows.FrameworkElement.Width%2A> et <xref:System.Windows.FrameworkElement.Height%2A> propriétés à `200`.  
   
 4.  Affectez à la propriété <xref:System.Windows.Controls.Control.Background%2A> la valeur `Blue`.  
   
@@ -83,7 +83,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
   
 6.  Dans le **boîte à outils**, double-cliquez sur `UserControl1` pour créer une autre instance dans la deuxième cellule de la <xref:System.Windows.Forms.TableLayoutPanel> contrôle.  
   
-7.  Dans le **structure du Document** fenêtre, sélectionnez `tableLayoutPanel1`. Pour plus d’informations, consultez [fenêtre Structure du Document](http://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
+7.  Dans le **structure du Document** fenêtre, sélectionnez `tableLayoutPanel1`. Pour plus d’informations, consultez [fenêtre Structure du Document](https://msdn.microsoft.com/library/9054f2bc-f6f8-4242-9fe0-be71089b12f8).  
   
 8.  Dans le **propriétés** fenêtre, définissez la valeur de la <xref:System.Windows.Forms.Control.Padding%2A> propriété `10, 10, 10, 10`.  
   
@@ -94,7 +94,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
   
 #### <a name="to-use-snaplines-to-align-wpf-controls"></a>Pour utiliser des lignes d'alignement pour aligner des contrôles WPF  
   
-1.  À partir de la **boîte à outils**, faites glisser une instance de `UserControl1` sur le formulaire et placez-la dans l’espace sous le <xref:System.Windows.Forms.TableLayoutPanel> contrôle.  
+1.  À partir de la **boîte à outils**, faites glisser une instance de `UserControl1` vers le formulaire et placez-le dans l’espace sous le <xref:System.Windows.Forms.TableLayoutPanel> contrôle.  
   
      L'instance de `UserControl1` est hébergée dans un nouveau contrôle <xref:System.Windows.Forms.Integration.ElementHost> nommé `elementHost3`.  
   
@@ -119,7 +119,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
   
 1.  Sélectionnez `elementHost1`.  
   
-2.  Dans le **propriétés** , configurez la <xref:System.Windows.Forms.Control.Anchor%2A> propriété **haut, bas, gauche, droite**.  
+2.  Dans le **propriétés** fenêtre, définissez la <xref:System.Windows.Forms.Control.Anchor%2A> propriété **Top, Bottom, Left, Right**.  
   
 3.  Agrandissez le contrôle <xref:System.Windows.Forms.TableLayoutPanel>.  
   
@@ -145,7 +145,7 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
   
      Les trois contrôles <xref:System.Windows.Forms.Integration.ElementHost> sont redimensionnés correctement.  
   
-     Pour plus d’informations, consultez [Comment : ancrage et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
+     Pour plus d’informations, consultez [Comment : point d’ancrage et arrimer des contrôles enfants dans un contrôle TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Integration.ElementHost>  
@@ -155,4 +155,4 @@ Cette procédure pas à pas montre comment utiliser les fonctionnalités de disp
  [Procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Utilisation de contrôles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Concepteur WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

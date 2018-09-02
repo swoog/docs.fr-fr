@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 1849fd0d81b00f1fa351d2a8cf1d2ed567e04401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529479"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462462"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DataGrid (Windows Forms)
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "33529479"
   
  La capture d'écran suivante montre un contrôle DataGrid lié à des données avec plusieurs tables.  
   
- ![Un contrôle DataGrid lié aux données par plusieurs tables](../../../../docs/framework/winforms/controls/media/vbcontrol1.gif "vbControl1")  
+ ![Un contrôle DataGrid lié aux données avec plusieurs tables](../../../../docs/framework/winforms/controls/media/vbcontrol1.gif "vbControl1")  
 Contrôle DataGrid lié aux données par plusieurs tables  
   
  Le <xref:System.Windows.Forms.DataGrid> peut fournir une interface utilisateur pour un dataset, la navigation entre des tables associées et des fonctionnalités de mise en forme et d'édition enrichies.  
@@ -52,9 +52,9 @@ Contrôle DataGrid lié aux données par plusieurs tables
 ## <a name="binding-data-to-the-control"></a>Liaison de données au contrôle  
  Pour que le contrôle <xref:System.Windows.Forms.DataGrid> fonctionne, il doit être lié à une source de données à l'aide des propriétés <xref:System.Windows.Forms.DataGrid.DataSource%2A> et <xref:System.Windows.Forms.DataGrid.DataMember%2A> au moment du design ou à la méthode <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> au moment de l'exécution. Cette liaison pointe le <xref:System.Windows.Forms.DataGrid> vers un objet de source de données instancié, tel que <xref:System.Data.DataSet> ou <xref:System.Data.DataTable>). Le contrôle <xref:System.Windows.Forms.DataGrid> affiche les résultats des actions qui sont effectuées sur les données. La plupart des actions spécifiques aux données ne sont pas effectuées par l'intermédiaire de <xref:System.Windows.Forms.DataGrid>, mais plutôt via la source de données.  
   
- Si les données du dataset lié sont mises à jour via un mécanisme quelconque, le contrôle <xref:System.Windows.Forms.DataGrid> reflète les modifications. Si la grille de données et ses styles de table et les styles de colonne ont le `ReadOnly` propriété `false`, les données dans le jeu de données peuvent être mis à jour via le <xref:System.Windows.Forms.DataGrid> contrôle.  
+ Si les données du dataset lié sont mises à jour via un mécanisme quelconque, le contrôle <xref:System.Windows.Forms.DataGrid> reflète les modifications. Si la grille de données et ses styles de table et les styles de colonne ont le `ReadOnly` propriété définie sur `false`, les données dans le jeu de données peuvent être mis à jour via le <xref:System.Windows.Forms.DataGrid> contrôle.  
   
- Une seule table à la fois peut être affichée dans le <xref:System.Windows.Forms.DataGrid>. Si une relation parent-enfant est définie entre des tables, l'utilisateur peut se déplacer entre les tables associées pour sélectionner la table à afficher dans le contrôle <xref:System.Windows.Forms.DataGrid>. Pour plus d’informations sur la liaison un <xref:System.Windows.Forms.DataGrid> le contrôle à une [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] source de données au moment du design ou au moment de l’exécution, consultez [Comment : lier le contrôle DataGrid Windows Forms à une Source de données](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+ Une seule table à la fois peut être affichée dans le <xref:System.Windows.Forms.DataGrid>. Si une relation parent-enfant est définie entre des tables, l'utilisateur peut se déplacer entre les tables associées pour sélectionner la table à afficher dans le contrôle <xref:System.Windows.Forms.DataGrid>. Pour plus d’informations sur la liaison un <xref:System.Windows.Forms.DataGrid> le contrôle à un [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] source de données au moment du design ou au moment de l’exécution, consultez [Comment : lier un contrôle DataGrid Windows Forms à une Source de données](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
  Les sources de données valides pour <xref:System.Windows.Forms.DataGrid> sont les suivantes :  
   
@@ -90,14 +90,14 @@ Contrôle DataGrid lié aux données par plusieurs tables
 |Plusieurs tables associées.|La grille peut afficher une arborescence dans laquelle sélectionner des tables ou vous pouvez spécifier que la grille affiche la table parente. Les enregistrements dans la table parente permettent aux utilisateurs d'accéder aux lignes enfants associées.|  
   
 > [!NOTE]
->  Les tables dans un dataset sont associées à l'aide d'un <xref:System.Data.DataRelation>.  Consultez également [lien hypertexte «http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)» des relations dans les jeux de données](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [des relations dans les jeux de données](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Les tables dans un dataset sont associées à l'aide d'un <xref:System.Data.DataRelation>.  Consultez également [HYPERLINK « http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)» relations dans les Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [relations dans les Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Quand le contrôle <xref:System.Windows.Forms.DataGrid> affiche une table et que la propriété <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> a la valeur `true`, vous pouvez retrier les données en cliquant sur les en-têtes de colonnes. L'utilisateur peut aussi ajouter des lignes et modifier des cellules.  
   
  Les relations entre un ensemble de tables sont présentées aux utilisateurs à l'aide d'une structure de navigation parent/enfant. Les tables parentes constituent le niveau de données le plus élevé et les tables enfants sont celles qui sont dérivées des différentes entrées dans les tables parentes. Des expanders sont affichés sur chaque ligne parente qui contient une table enfant. Un clic sur un expander génère une liste de liens web vers les tables enfants. Quand l'utilisateur sélectionne un lien, la table enfant est affichée. Un clic sur l'icône Afficher/Masquer les lignes parentes (![Icône Afficher/Masquer les lignes parentes](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")) permet de masquer les informations concernant la table parente ou de les réafficher si l'utilisateur les a précédemment masquées. L'utilisateur peut cliquer sur un bouton Précédent pour revenir à la table affichée précédemment.  
   
 ## <a name="columns-and-rows"></a>Colonnes et lignes  
- Le <xref:System.Windows.Forms.DataGrid> se compose d'une collection d'objets <xref:System.Windows.Forms.DataGridTableStyle> contenus dans la propriété <xref:System.Windows.Forms.DataGrid.TableStyles%2A> du contrôle <xref:System.Windows.Forms.DataGrid>. Un style de table peut contenir une collection d'objets <xref:System.Windows.Forms.DataGridColumnStyle> contenus dans la propriété <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> du <xref:System.Windows.Forms.DataGridTableStyle>. Vous pouvez modifier le <xref:System.Windows.Forms.DataGrid.TableStyles%2A> et <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriétés à l’aide d’éditeurs de collections accédées via les **propriétés** fenêtre.  
+ Le <xref:System.Windows.Forms.DataGrid> se compose d'une collection d'objets <xref:System.Windows.Forms.DataGridTableStyle> contenus dans la propriété <xref:System.Windows.Forms.DataGrid.TableStyles%2A> du contrôle <xref:System.Windows.Forms.DataGrid>. Un style de table peut contenir une collection d'objets <xref:System.Windows.Forms.DataGridColumnStyle> contenus dans la propriété <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> du <xref:System.Windows.Forms.DataGridTableStyle>. Vous pouvez modifier le <xref:System.Windows.Forms.DataGrid.TableStyles%2A> et <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> propriétés à l’aide d’éditeurs de collections accédés via la **propriétés** fenêtre.  
   
  Tout <xref:System.Windows.Forms.DataGridTableStyle> associé au contrôle <xref:System.Windows.Forms.DataGrid> est accessible via <xref:System.Windows.Forms.GridTableStylesCollection>. <xref:System.Windows.Forms.GridTableStylesCollection> peut être modifié dans le concepteur avec l'éditeur de collection <xref:System.Windows.Forms.DataGridTableStyle> ou par programmation via la propriété <xref:System.Windows.Forms.DataGrid.TableStyles%2A> du contrôle <xref:System.Windows.Forms.DataGrid>.  
   

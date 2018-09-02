@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Group By statement [Visual Basic]
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
-ms.openlocfilehash: 7cf688dc2e0ccd10c8bfbe5f0308f0aa808fbef0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88707ed6c0e3e5a0ecf1f0812d31634bbdca3123
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605028"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462517"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By, clause (Visual Basic)
 Regroupe les éléments d'un résultat de requête. Peut aussi être utilisée pour appliquer des fonctions d’agrégation à chaque groupe. L’opération de regroupement est basée sur une ou plusieurs clés.  
@@ -62,7 +62,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la clause `Group By` pour décomposer les résultats d’une requête en groupes. Le regroupement est basé sur une clé ou une clé composite constituée de plusieurs clés. Les éléments associés à des valeurs de clé correspondantes sont inclus dans le même groupe.  
   
- Utilisez le paramètre `aggregateList` de la clause `Into` et le mot clé `Group` pour identifier le nom de membre servant à référencer le groupe. Vous pouvez aussi inclure des fonctions d’agrégation dans la clause `Into` pour calculer les valeurs des éléments groupés. Pour une liste des fonctions d’agrégation standard, consultez [Aggregate, Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ Utilisez le paramètre `aggregateList` de la clause `Into` et le mot clé `Group` pour identifier le nom de membre servant à référencer le groupe. Vous pouvez aussi inclure des fonctions d’agrégation dans la clause `Into` pour calculer les valeurs des éléments groupés. Pour obtenir la liste des fonctions d’agrégation standards, consultez [Aggregate, Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant regroupe une liste de clients en fonction de leur situation (pays) et indique le nombre de clients dans chaque groupe. Les résultats sont triés par nom de pays. Les résultats groupés sont organisés par nom de ville.  
@@ -71,7 +71,7 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction à LINQ en Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- [Requêtes](../../../visual-basic/language-reference/queries/queries.md)  
+ [Requêtes](../../../visual-basic/language-reference/queries/index.md)  
  [Select (clause)](../../../visual-basic/language-reference/queries/select-clause.md)  
  [From (clause)](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Order By (clause)](../../../visual-basic/language-reference/queries/order-by-clause.md)  

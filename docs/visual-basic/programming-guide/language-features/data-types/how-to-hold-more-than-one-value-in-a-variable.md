@@ -11,17 +11,17 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: 783c75ed4577831b7ca444870c97063e8a057346
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 781f56c7e710f5130d821ca4796398379dfa4c6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646669"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456488"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>Comment : stocker plusieurs valeurs dans une variable (Visual Basic)
 Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *type de données composite*.  
   
- [Les Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluent des structures, des tableaux et des classes. Une variable de type de données composite peut contenir une combinaison de types de données élémentaires et d’autres types composites. Structures et des classes peuvent contenir de code, ainsi que les données.  
+ [Les Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md) incluent des structures, des tableaux et des classes. Une variable de type de données composite peut contenir une combinaison de types de données élémentaires et d’autres types composites. Structures et classes peuvent contenir du code ainsi que les données.  
   
 ### <a name="to-hold-more-than-one-value-in-a-variable"></a>Pour stocker plusieurs valeurs dans une variable  
   
@@ -29,20 +29,20 @@ Une variable contient plusieurs valeurs si vous déclarez comme étant d’un *t
   
 2.  Si le type de données composite n’est pas déjà défini, définissez-le afin que votre variable puisse l’utiliser.  
   
-    -   Pour définir une structure avec un [instruction Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
+    -   Définir une structure avec un [instruction Structure](../../../../visual-basic/language-reference/statements/structure-statement.md).  
   
     -   Définir un tableau avec un [instruction Dim](../../../../visual-basic/language-reference/statements/dim-statement.md).  
   
-    -   Définissez une classe avec un [Class, instruction](../../../../visual-basic/language-reference/statements/class-statement.md).  
+    -   Définir une classe avec un [Class, instruction](../../../../visual-basic/language-reference/statements/class-statement.md).  
   
 3.  Déclarez votre variable avec un `Dim` instruction.  
   
-4.  Suivre le nom de variable avec une `As` clause.  
+4.  Suivez le nom de variable avec une `As` clause.  
   
-5.  Suivez le `As` mot clé avec le nom du type de données composite approprié.  
+5.  Suivez le `As` mot clé par le nom du type de données composite approprié.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de données](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Types de données](../../../../visual-basic/language-reference/data-types/index.md)  
  [Caractères de type](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [Types de données composites](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)  
  [Structures](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  

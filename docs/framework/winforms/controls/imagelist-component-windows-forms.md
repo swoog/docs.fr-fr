@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms]
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
-ms.openlocfilehash: 68296328a574997d5211bbd26ea4ca40be926e75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce847507785b06874425e2efe678b86fc868507e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532936"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464919"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList, composant (Windows Forms)
 Le composant Windows Forms `ImageList` sert à stocker des images, qui peuvent ensuite être affichées par des contrôles. Une liste d'images vous permet d'écrire du code pour un catalogue d'images unique et cohérent.  
@@ -22,7 +22,7 @@ Le composant Windows Forms `ImageList` sert à stocker des images, qui peuvent e
  [Guide pratique pour ajouter ou supprimer des images avec le composant ImageList Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  
  Fournit des instructions pour ajouter et supprimer des images à partir d'une liste d'images.  
   
- Consultez également [Comment : ajouter ou supprimer des Images ImageList avec le concepteur](http://msdn.microsoft.com/library/ms233674\(v=vs.110\)).  
+ Consultez également [Comment : ajouter ou supprimer des Images ImageList avec le concepteur](how-to-add-or-remove-imagelist-images-with-the-designer.md).  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.ImageList>  

@@ -2,15 +2,15 @@
 title: Téléchargement d'exemples de base de données (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f2488b0e1bfc578679a2a2802c332439f374a341
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7830095b7c98c0926783324ee7dc2bc1eb345aca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763051"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469841"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Téléchargement d'exemples de base de données (LINQ to DataSet)
-Les exemples et procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation utilisent la base de données AdventureWorks. Vous pouvez télécharger ce produit gratuitement à partir du site de téléchargement Microsoft. Les exemples et procédures pas à pas de la documentation [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilisent SQL Server comme magasin de données. SQL Server Express Edition, disponible gratuitement, peut également être utilisé comme magasin de données à la place de SQL Server.  
+Les exemples et les procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] documentation utilisent la base de données AdventureWorks. Vous pouvez télécharger ce produit gratuitement à partir du site de téléchargement Microsoft. Les exemples et procédures pas à pas de la documentation [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] utilisent SQL Server comme magasin de données. SQL Server Express Edition, disponible gratuitement, peut également être utilisé comme magasin de données à la place de SQL Server.  
   
 ## <a name="downloading-and-installing-the-adventureworks-database"></a>Téléchargement et installation de la base de données AdventureWorks  
   
@@ -18,7 +18,7 @@ Les exemples et procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../
   
 1.  Ouvrez Internet Explorer.  
   
-2.  Accédez à la [exemples de SQL Server 2005 et les bases de données exemple](http://go.microsoft.com/fwlink/?linkid=31046) site Web.  
+2.  Accédez à la [exemples SQL Server 2005 et les bases de données exemple](https://go.microsoft.com/fwlink/?linkid=31046) site Web.  
   
 3.  Suivez les instructions pour télécharger l'exemple de base de données AdventureWorks pour votre type de processeur (AdventureWorksDB.msi par exemple), et enregistrez le fichier .MSI sur votre ordinateur local.  
   
@@ -40,13 +40,13 @@ Les exemples et procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../
   
 4.  À partir de **Bienvenue dans l’Assistant Installation de SQL Server**, cliquez sur **suivant**.  
   
-5.  À partir de **analyse de la Configuration système**, cliquez sur **suivant**.  
+5.  À partir de **System Configuration Check**, cliquez sur **suivant**.  
   
-6.  À partir de **modifier ou supprimer une Instance**, cliquez sur **changer les composants installés**.  
+6.  À partir de **changer ou supprimer l’Instance**, cliquez sur **changer les composants installés**.  
   
 7.  À partir de **sélection des fonctionnalités**, développez le **Documentation, exemples et exemples de bases de données** nœud.  
   
-8.  Sélectionnez **exemple de Code et les Applications**. Développez **Sample Databases**, sélectionnez la base de données à supprimer, puis sélectionnez **totalité de cette fonctionnalité n’est pas disponible**. Cliquez sur **Suivant**.  
+8.  Sélectionnez **exemple de Code et des Applications**. Développez **Sample Databases**, sélectionnez la base de données à supprimer, puis sélectionnez **totalité de cette fonctionnalité n’est pas disponible**. Cliquez sur **Suivant**.  
   
 9. Cliquez sur **installer** et terminez l’Assistant installation.  
   
@@ -63,13 +63,13 @@ Les exemples et procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../
      Si vous avez installé ces fichiers dans un lecteur ou un répertoire différent, vous devez modifier les chemins en conséquence avant d'exécuter la procédure stockée `sp_attach_db`.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Téléchargement de SQL Server Express Edition  
- Les exemples et procédures pas à pas dans la [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section utiliser SQL Server 2005 comme magasin de données, mais peut être modifiée pour utiliser à la place de SQL Server Express Edition. SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications. Si vous utilisez Visual Studio, SQL Server Express Edition est incluse dans les éditions professionnelles et ultérieures.  
+ Les exemples et les procédures pas à pas dans le [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] section utiliser SQL Server 2005 comme magasin de données, mais peut être modifiée pour utiliser SQL Server Express Edition, à la place. SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications. Si vous utilisez Visual Studio, SQL Server Express Edition est incluse dans les éditions professionnelles et ultérieures.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Pour télécharger et installer SQL Server Express Edition  
   
 1.  Démarrez Internet Explorer.  
   
-2.  Accédez à la [Microsoft SQL Server 2005 Express Edition](http://go.microsoft.com/fwlink/?LinkID=31070) page de téléchargement.  
+2.  Accédez à la [Microsoft SQL Server 2005 Express Edition](https://go.microsoft.com/fwlink/?LinkID=31070) page de téléchargement.  
   
 3.  Suivez les instructions d’installation indiquées sur le site web.  
   

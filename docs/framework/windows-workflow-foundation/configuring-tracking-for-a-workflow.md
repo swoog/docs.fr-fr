@@ -2,12 +2,12 @@
 title: Configuration du suivi d'un workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 23a20b014962b74b6408c8b3c9ac6764d4a42d56
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ae6b61bf572da1757920b737b03861c891637f51
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809701"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468578"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configuration du suivi d'un workflow
 Un workflow peut s'exécuter de trois façons :  
@@ -47,7 +47,7 @@ instance.Extensions.Add(trackingParticipant);
 ```  
   
 ### <a name="configuring-workflow-service-tracking"></a>Configuration du suivi de service de workflow  
- Un flux de travail peut être exposé comme service WCF lorsqu’il est hébergé dans le <xref:System.ServiceModel.Activities.WorkflowServiceHost> hôte de service. <xref:System.ServiceModel.Activities.WorkflowServiceHost> est une implémentation spécialisée de ServiceHost .NET pour un service basé sur un workflow. Cette section explique comment configurer le suivi pour un service de workflow [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] s'exécutant dans <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Il est configuré via un fichier Web.config (pour un service hébergé sur le Web) ou un fichier App.config (pour un service hébergé dans une application autonome, telle qu'une application console) en spécifiant un comportement de service ou via du code en ajoutant, à la collection <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>, un comportement spécifique au suivi pour l'hôte de service.  
+ Un workflow peut être exposé comme service WCF quand ils sont hébergés dans le <xref:System.ServiceModel.Activities.WorkflowServiceHost> hôte de service. <xref:System.ServiceModel.Activities.WorkflowServiceHost> est une implémentation spécialisée de ServiceHost .NET pour un service basé sur un workflow. Cette section explique comment configurer le suivi pour un service de workflow [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] s'exécutant dans <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Il est configuré via un fichier Web.config (pour un service hébergé sur le Web) ou un fichier App.config (pour un service hébergé dans une application autonome, telle qu'une application console) en spécifiant un comportement de service ou via du code en ajoutant, à la collection <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A>, un comportement spécifique au suivi pour l'hôte de service.  
   
  Pour un service de workflow hébergé dans <xref:System.ServiceModel.WorkflowServiceHost>, vous pouvez ajouter <xref:System.Activities.Tracking.EtwTrackingParticipant> à l'aide de l'élément <`behavior`> dans un fichier de configuration, comme indiqué dans l'exemple suivant.  
   
@@ -134,10 +134,10 @@ if (null != workflowServiceHost)
 ```  
   
 > [!NOTE]
->  Pour plus d’informations sur les profils de suivi, reportez-vous à [modèles de suivi](http://go.microsoft.com/fwlink/?LinkId=201310).  
+>  Pour plus d’informations sur les profils de suivi, consultez [modèles de suivi](https://go.microsoft.com/fwlink/?LinkId=201310).  
   
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configuration du suivi à l'aide de WorkflowInvoker  
- Pour configurer le suivi pour un workflow exécuté à l'aide de <xref:System.Activities.WorkflowInvoker>, ajoutez le fournisseur de suivi en tant qu'extension à une instance <xref:System.Activities.WorkflowInvoker>. L’exemple de code suivant est à partir de la [suivi personnalisé](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) exemple.  
+ Pour configurer le suivi pour un workflow exécuté à l'aide de <xref:System.Activities.WorkflowInvoker>, ajoutez le fournisseur de suivi en tant qu'extension à une instance <xref:System.Activities.WorkflowInvoker>. L’exemple de code suivant provient le [suivi personnalisé](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md) exemple.  
   
 ```  
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());  
@@ -156,7 +156,7 @@ invoker.Invoke();
   
 3.  Développez le **Microsoft**, **Windows**, et **serveur d’applications-Applications** nœuds.  
   
-4.  Avec le bouton droit le **déboguer** nœud sous la **serveur d’applications-Applications** nœud et sélectionnez **activer le journal**.  
+4.  Avec le bouton droit le **déboguer** nœud sous la **serveur d’applications-Applications** nœud, puis sélectionnez **activer le journal**.  
   
 5.  Exécutez votre application avec le suivi activé pour générer des événements de suivi.  
   
@@ -172,7 +172,7 @@ invoker.Invoke();
   
 3.  Développez le **Microsoft**, **Windows**, et **serveur d’applications-Applications** nœuds.  
   
-4.  Avec le bouton droit le **analyse** nœud sous la **serveur d’applications-Applications** nœud et sélectionnez **activer le journal**.  
+4.  Avec le bouton droit le **analyse** nœud sous la **serveur d’applications-Applications** nœud, puis sélectionnez **activer le journal**.  
   
 5.  Exécutez votre application avec le suivi activé pour générer des enregistrements de suivi.  
   
@@ -180,7 +180,7 @@ invoker.Invoke();
   
  L'image suivante montre des événements de suivi dans l'observateur d'événements.  
   
- ![Affichage de visionneuse d’événements des enregistrements de suivi](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")  
+ ![Affichage de visionneuse d’événement des enregistrements de suivi](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")  
   
 ### <a name="registering-an-application-specific-provider-id"></a>Enregistrement d'un ID de fournisseur spécifique à l'application  
  Si des événements doivent être écrits dans un journal des applications spécifique, procédez comme suit pour enregistrer le nouveau manifeste du fournisseur.  
@@ -193,7 +193,7 @@ invoker.Invoke();
     </system.serviceModel>  
     ```  
   
-2.  Copiez le fichier manifest %windir%\Microsoft.NET\Framework\\< version la plus récente de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man vers un emplacement temporaire et le renommer Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
+2.  Copiez le fichier manifeste de %windir%\Microsoft.NET\Framework\\< version la plus récente de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man vers un emplacement temporaire et renommez-le Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
   
 3.  Remplacez le GUID dans le fichier manifeste par le nouveau GUID.  
   
@@ -219,7 +219,7 @@ invoker.Invoke();
   
 6.  Générez la DLL de ressource en procédant comme suit.  
   
-    1.  Installez le Kit de développement logiciel (SDK) Windows. Le Kit de développement inclut le compilateur de message ([mc.exe](http://go.microsoft.com/fwlink/?LinkId=184606)) et le compilateur de ressources ([rc.exe](http://go.microsoft.com/fwlink/?LinkId=184605)).  
+    1.  Installez le Kit de développement logiciel (SDK) Windows. Le SDK Windows inclut le compilateur de messages ([mc.exe](https://go.microsoft.com/fwlink/?LinkId=184606)) et le compilateur de ressources ([rc.exe](https://go.microsoft.com/fwlink/?LinkId=184605)).  
   
     2.  Dans une invite de commandes du Kit de développement logiciel (SDK) Windows, exécutez mc.exe sur le nouveau fichier manifeste.  
   
@@ -247,12 +247,12 @@ invoker.Invoke();
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">  
         ```  
   
-    7.  Utilisez [wevtutil](http://go.microsoft.com/fwlink/?LinkId=184608) pour enregistrer le manifeste.  
+    7.  Utilisez [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) pour enregistrer le manifeste.  
   
         ```  
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man  
         ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyse de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Analyse des Applications avec AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Surveillance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Surveillance des Applications avec App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

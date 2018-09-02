@@ -5,12 +5,12 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: de291aebe3bef156dab414635c3cb2c00a2300f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce61401dec875ac1dea01e1e5a892d06974a3d36
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644457"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463504"
 ---
 # <a name="visual-basic-run-time-messages"></a>Messages d’exécution Visual Basic
 Cette section contient les messages d’erreur Visual Basic qui se produisent au moment de l’exécution.  
@@ -41,13 +41,13 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Erreur définie par l’application ou définie par l’objet](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
- [Argument '\<argument1 >' doit être inférieur ou égal à la longueur de l’argument '\<argument2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
+ [Argument '\<argument1 >' doit être inférieure ou égale à la longueur de l’argument '\<argument2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
  [Argument '\<nom_argument >' ne peut pas être un tableau multidimensionnel](../../visual-basic/misc/argument-argumentname-cannot-be-a-multidimensional-array.md)  
   
  [Argument \<nom_argument > ne peut pas être une chaîne vide ou Nothing](../../visual-basic/misc/argument-argumentname-cannot-be-an-empty-string-or-nothing.md)  
   
- [Argument '\<nom_argument >' ne peut pas être converti en valeur numérique](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
+ [Argument '\<nom_argument >' ne peut pas être convertie en valeur numérique](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-a-numeric-value.md)  
   
  [Argument '\<nom_argument >' ne peut pas être converti en type '\<nom_type >'](../../visual-basic/misc/argument-argumentname-cannot-be-converted-to-type-typename.md)  
   
@@ -57,7 +57,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Argument '\<nom_argument >' n’est pas valide pour le tableau](../../visual-basic/misc/argument-argumentname-is-not-valid-for-the-array.md)  
   
- [Argument '\<nom_argument >' a la valeur Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
+ [Argument '\<nom_argument >' est Nothing](../../visual-basic/misc/argument-argumentname-is-nothing.md)  
   
  [Argument '\<nom_argument >' a la valeur Nothing ou est vide](../../visual-basic/misc/argument-argumentname-is-nothing-or-empty.md)  
   
@@ -73,9 +73,9 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Argument '\<nom_argument >' doit être supérieure à zéro](../../visual-basic/misc/argument-argumentname-must-be-greater-than-zero.md)  
   
- [Argument '\<nom_argument >' doit être comprise entre-32 768 et 65 535.](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
+ [Argument '\<nom_argument >' doit être comprise entre-32 768 et 65 535](../../visual-basic/misc/argument-argumentname-must-be-in-the-range-of-32768-to-65535.md)  
   
- [Argument '\<nom_argument >' doit être dans la plage comprise entre 0 et 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
+ [Argument '\<nom_argument >' doit être comprise entre 0 et 99](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-0-to-99.md)  
   
  [Argument '\<nom_argument >' doit être comprise entre 1 et 255](../../visual-basic/misc/argument-argumentname-must-be-within-the-range-1-to-255.md)  
   
@@ -109,7 +109,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [L’argument 'Period' doit être inférieur ou égal à l’argument 'Life'](../../visual-basic/misc/argument-period-must-be-less-than-or-equal-to-argument-life.md)  
   
- [Valeur de l’argument '\<chemin d’accès >' contient des caractères qui ne sont pas valides dans un nom de chemin d’accès](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
+ [Valeur de l’argument '\<pathname >' contient des caractères qui ne sont pas valides dans un nom de chemin d’accès](../../visual-basic/misc/argument-value-pathname-contains-characters-that-are-not-valid-in-a-path-name.md)  
   
  [Les arguments ne sont pas valides](../../visual-basic/misc/arguments-are-not-valid.md)  
   
@@ -143,9 +143,9 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Ne peut pas convertir l’argument '\<nom_argument >' de type '\<type1 >' en type '\<type2 >'](../../visual-basic/misc/cannot-convert-argument-argumentname-of-type-type1-to-type-type2.md)  
   
- [Ne peut pas convertir la valeur de début de type '\<type1 >' et la valeur de pas de type '\<type2 >' en un type commun](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
+ [Ne peut pas convertir en valeur de départ de type '\<type1 >' et la valeur de pas de type '\<type2 >' en un type commun](../../visual-basic/misc/cannot-convert-start-value-of-type1-and-step-value-of-type2-to-a-common-type.md)  
   
- [Ne peut pas convertir la valeur de début de type '\<type1 >', valeur de limite de '\<type2 >' et la valeur de pas de '\<type3 >' en un type commun](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
+ [Ne peut pas convertir en valeur de départ de type '\<type1 >', valeur de limite de «\<type2 >' et la valeur de pas de '\<type3 >' en un type commun](../../visual-basic/misc/cannot-convert-start-value-to-a-common-type.md)  
   
  [Impossible de créer le composant ActiveX](../../visual-basic/language-reference/error-messages/cannot-create-activex-component.md)  
   
@@ -217,7 +217,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Cette fonctionnalité n’est pas encore implémentée](../../visual-basic/misc/feature-not-yet-implemented.md)  
   
- [Champ '\<nom_champ >' de type '\<nom_type >' est 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
+ [Champ «\<fieldname >' de type '\<nom_type >' est 'ReadOnly'](../../visual-basic/misc/field-fieldname-of-type-typename-is-readonly.md)  
   
  [Fichier '\<nom_fichier >' ne peut pas être supprimé car il est ouvert](../../visual-basic/misc/file-filename-cannot-be-deleted-because-it-is-open.md)  
   
@@ -233,7 +233,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Fichier e/s d’une structure avec un champ '\<fieldname >' de type '\<nom_type >' n’est pas valide](../../visual-basic/misc/file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid.md)  
   
- [E/s de fichier avec le type '\<nom_type >' n’est pas valide](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
+ [Type de fichier d’e/s '\<nom_type >' n’est pas valide](../../visual-basic/misc/file-i-o-with-type-typename-is-not-valid.md)  
   
  [Impossible d’interroger les informations du fichier si ce dernier n’existe pas](../../visual-basic/misc/file-information-cannot-be-queried-if-the-file-does-not-exist.md)  
   
@@ -269,7 +269,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Erreur interne (Visual Basic)](../../visual-basic/misc/internal-error.md)  
   
- [Erreur interne s’est produite au niveau \<emplacement >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
+ [Erreur interne s’est produite dans \<emplacement >](../../visual-basic/language-reference/error-messages/internal-error-happened-at-location.md)  
   
  [Erreur interne dans le runtime Microsoft Visual Basic](../../visual-basic/misc/internal-error-in-the-microsoft-visual-basic-runtime.md)  
   
@@ -285,7 +285,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Ligne \<numéro > ne peut pas être analysée à l’aide du FieldWidths actuel](../../visual-basic/misc/line-number-cannot-be-parsed-using-the-current-fieldwidths.md)  
   
- [Ligne \<numéro > ne peut pas être lu car il dépasse la taille maximale de la ligne.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
+ [Ligne \<numéro > ne peut pas être lu, car elle dépasse la taille de ligne maximale.](../../visual-basic/misc/line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size.md)  
   
  [ID de paramètres régionaux '\<nom >' n’est pas pris en charge sur ce système](../../visual-basic/misc/locale-id-name-is-not-supported-on-this-system.md)  
   
@@ -301,7 +301,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
- [L’argument nommé '\<nom_argument >' spécifié plusieurs fois](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
+ [Argument nommé '\<nom_argument >' spécifié plusieurs fois](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
  [Argument nommé introuvable (Visual Basic)](../../visual-basic/misc/named-argument-not-found.md)  
   
@@ -309,17 +309,17 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Index de tableau de propriétés requis](../../visual-basic/language-reference/error-messages/need-property-array-index.md)  
   
- [Surchargé accessible ne '\<nom_méthode >' peut être appelé avec ces arguments sans conversion restrictive](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
+ [Surchargé accessible ne «\<nom_méthode >' peut être appelée avec ces arguments sans conversion restrictive](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments.md)  
   
- [Surchargé accessible ne '\<nom_méthode >' peut être appelé avec ces arguments sans conversion restrictive : \<liste >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
+ [Surchargé accessible ne «\<nom_méthode >' peut être appelée avec ces arguments sans conversion restrictive : \<liste >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list-2.md)  
   
- [Surchargé accessible ne '\<nom_méthode >' peut être appelé avec ces arguments sans conversion étendue : \<liste >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
+ [Surchargé accessible ne «\<nom_méthode >' peut être appelée avec ces arguments sans conversion étendue : \<liste >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-without-widening.md)  
   
- [Surchargé accessible ne '\<nom_méthode >' peut être appelé avec ces arguments : \<liste >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
+ [Surchargé accessible ne «\<nom_méthode >' peut être appelée avec ces arguments : \<liste >](../../visual-basic/misc/no-accessible-overloaded-methodname-can-be-called-with-these-arguments-list.md)  
   
  [Aucun membre par défaut ne trouvé pour le type '\<nom_type >'](../../visual-basic/misc/no-default-member-found-for-type-typename.md)  
   
- [Aucun fichier correspondant a été trouvé '\<nom_fichier >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
+ [Aucun fichier trouvé correspondant à «\<nom_fichier >'](../../visual-basic/misc/no-files-found-matching-filename.md)  
   
  [Aucune méthode '\<nom_méthode >' peut accepter un argument de type '\<nom_type >' pour le paramètre '\<nom_paramètre >'](../../visual-basic/misc/no-method-methodname-can-accept-an-argument-of-type-typename-for-parameter.md)  
   
@@ -357,11 +357,11 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [En dehors de l’espace de pile (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-stack-space.md)  
   
- [En dehors de l’espace de chaîne (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
+ [Espace de chaîne insuffisant (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
  [Dépassement de capacité (erreur d’exécution Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
- [Chemin d’accès '\<chemin d’accès >' introuvable](../../visual-basic/misc/path-pathname-not-found.md)  
+ [Chemin d’accès '\<pathname >' introuvable](../../visual-basic/misc/path-pathname-not-found.md)  
   
  [Chemin d’accès introuvable](../../visual-basic/language-reference/error-messages/path-not-found.md)  
   
@@ -375,11 +375,11 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [Appel de procédure ou un argument n’est pas valide (Visual Basic)](../../visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md)  
   
- [Processus\<processname >' n’a été trouvé](../../visual-basic/misc/process-processname-was-not-found.md)  
+ [Processus\<nom_processus >' est introuvable](../../visual-basic/misc/process-processname-was-not-found.md)  
   
- [Propriété \<propertyname > ne peut pas être définie à une chaîne vide ou Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
+ [Propriété \<propertyname > ne peut pas être définie sur une chaîne vide ou Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-an-empty-string-or-nothing.md)  
   
- [Propriété \<propertyname > ne peut pas être la valeur Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
+ [Propriété \<propertyname > ne peut pas être définie sur Nothing](../../visual-basic/misc/property-propertyname-cannot-be-set-to-nothing.md)  
   
  [L’index de tableau de propriétés est non valide](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
@@ -453,7 +453,7 @@ Cette section contient les messages d’erreur Visual Basic qui se produisent au
   
  [TargetFilePath spécifie un dossier existant](../../visual-basic/misc/targetfilepath-specifies-an-existing-folder.md)  
   
- [TextFieldParser ne prend pas en charge les jetons de commentaires qui contiennent un espace](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
+ [TextFieldParser ne prend pas en charge les jetons de commentaires qui contiennent un espace blanc](../../visual-basic/misc/textfieldparser-does-not-support-comment-tokens-that-contain-whitespace.md)  
   
  [TextFieldParser ne prend pas en charge les délimiteurs qui contiennent des caractères de fin de ligne](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   

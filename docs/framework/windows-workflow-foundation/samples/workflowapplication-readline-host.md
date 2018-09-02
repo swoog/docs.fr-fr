@@ -2,12 +2,12 @@
 title: Hôte ReadLine WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518536"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470851"
 ---
 # <a name="workflowapplication-readline-host"></a>Hôte ReadLine WorkflowApplication
 Cet exemple est un hôte ReadLine générique. Vous pouvez charger et exécuter tout workflow à l'aide de l'activité `ReadLine` incluse (ou d'autres activités semblables qui obtiennent des données à partir de signets repris avec les chaînes). La sortie de l'activité `WriteLine` ou de tout élément qui écrit dans l'extension <xref:System.Activities.Statements.WriteLine.TextWriter%2A> est dirigée vers la fenêtre hôte. Lorsqu'une instance est inactive, les signets disponibles pour cette instance s'affichent dans une zone de liste déroulante. Si vous sélectionnez un signet, entrez un texte et appuyez sur le bouton de reprise de signet, l'exécution du workflow continue. Vous pouvez également annuler, abandonner ou arrêter un workflow sélectionné. La persistance est activée par défaut ; vous pouvez fermer et rouvrir hôte, et la liste des instances est remplie avec les instances stockées dans la base de données. Le suivi est utilisé pour générer des événements de niveau <xref:System.Activities.WorkflowApplication> pour l'hôte avec la possibilité d'ajouter un suivi détaillé au niveau de l'activité.  
@@ -33,13 +33,13 @@ Cet exemple est un hôte ReadLine générique. Vous pouvez charger et exécuter 
   
 6.  Une fois en cours d'exécution, vous pouvez activer ou désactiver la persistance. En outre, vous avez également la possibilité d'activer ou de désactiver le suivi d'activité détaillé.  
   
-7.  Appuyez sur le bouton de sélection à côté du **exécuter** bouton pour accéder à un flux de travail défini dans un fichier XAML  
+7.  Appuyez sur le bouton de sélection à côté du **exécuter** bouton pour rechercher un flux de travail défini dans un fichier XAML  
   
      Deux exemples se trouvent sous le dossier SampleWorkflows. L'exemple parallel1.xaml devient inactif.  
   
 8.  Une fois un exemple est sélectionné, appuyez sur la **exécuter** bouton.  
   
-9. Si ou lorsque le workflow est inactif, le **signets** zone de liste déroulante est remplie avec les signets disponibles.  
+9. Si ou lorsque le workflow devient inactif, le **signets** zone de liste déroulante est remplie avec les signets disponibles.  
   
 10. Les options sont à ce stade de reprendre un signet, d'annuler, d'abandonner ou de terminer le workflow. Vous pouvez également fermer l'hôte et le redémarrer. Si la persistance reste activée, les instances sont déchargées lors de l'arrêt et rechargées lors du démarrage.  
   
@@ -56,6 +56,6 @@ Cet exemple est un hôte ReadLine générique. Vous pouvez charger et exécuter 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

@@ -2,15 +2,15 @@
 title: 'Transport: WSE 3.0 TCP Interoperability'
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 8cdd88b354f2e07c84ccfda85c8552d37ca2f519
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b727da998736944afd23f7dcfbf45a1f6049d1d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808010"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461694"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>Transport: WSE 3.0 TCP Interoperability
-L’exemple de Transport de l’interopérabilité de WSE 3.0 TCP montre comment implémenter une session duplex TCP comme transport personnalisé Windows Communication Foundation (WCF). Il décrit également comment utiliser l'extensibilité de la couche du canal pour assurer l'interface sur le câble avec les systèmes déployés existants. Les étapes suivantes montrent comment générer ce transport WCF personnalisé :  
+L’exemple de Transport WSE 3.0 TCP Interoperability montre comment implémenter une session duplex TCP comme transport personnalisé Windows Communication Foundation (WCF). Il décrit également comment utiliser l'extensibilité de la couche du canal pour assurer l'interface sur le câble avec les systèmes déployés existants. Les étapes suivantes montrent comment générer ce transport WCF personnalisé :  
   
 1.  À partir d'un socket TCP, créez les implémentations serveur et client de <xref:System.ServiceModel.Channels.IDuplexSessionChannel> qui utilisent le tramage DIME pour définir les limites de message.  
   
@@ -37,7 +37,7 @@ L’exemple de Transport de l’interopérabilité de WSE 3.0 TCP montre comment
   
  `return encoder.WriteMessage(message, maxBufferSize, bufferManager);`  
   
- Une fois que <xref:System.ServiceModel.Channels.Message> est encodé en octets, il doit être transmis sur le câble. Pour cela, un système permettant de définir des limites de message est nécessaire. WSE 3.0 utilise une version de [DIME](http://go.microsoft.com/fwlink/?LinkId=94999) comme protocole de tramage. `WriteData` encapsule la logique de tramage afin d'encapsuler byte[] dans un ensemble d'enregistrements DIME.  
+ Une fois que <xref:System.ServiceModel.Channels.Message> est encodé en octets, il doit être transmis sur le câble. Pour cela, un système permettant de définir des limites de message est nécessaire. WSE 3.0 utilise une version de [DIME](https://go.microsoft.com/fwlink/?LinkId=94999) comme protocole de tramage. `WriteData` encapsule la logique de tramage afin d'encapsuler byte[] dans un ensemble d'enregistrements DIME.  
   
  La logique de réception des messages est très similaire. La principale difficulté consiste à gérer le fait qu'une lecture de socket peut retourner un nombre d'octets inférieur à celui demandé. Pour recevoir un message, `WseTcpDuplexSessionChannel` lit des octets du câble, décode le tramage DIME, puis utilise <xref:System.ServiceModel.Channels.MessageEncoder> pour transformer byte[] en <xref:System.ServiceModel.Channels.Message>.  
   
@@ -79,7 +79,7 @@ L’exemple de Transport de l’interopérabilité de WSE 3.0 TCP montre comment
 ## <a name="channel-listener"></a>Écouteur de canal  
  L'étape suivante de l'écriture du transport TCP consiste à créer une implémentation de <xref:System.ServiceModel.Channels.IChannelListener> permettant d'accepter les canaux serveur.  
   
--   `WseTcpChannelListener` dérive de <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > et remplacements [Begin] Open et On [Begin] Close pour contrôlent la durée de vie de son socket d’écoute. Dans OnOpen, un socket est créé pour écouter sur IP_ANY. Des implémentations plus avancées peuvent créer un deuxième socket pour écouter également sur IPv6. Elles permettent également de spécifier l'adresse IP dans le nom d'hôte.  
+-   `WseTcpChannelListener` dérive de <xref:System.ServiceModel.Channels.ChannelListenerBase> \<IDuplexSessionChannel > et remplacements sur [Begin] Open et On [Begin] Close pour contrôlent la durée de vie de son socket d’écoute. Dans OnOpen, un socket est créé pour écouter sur IP_ANY. Des implémentations plus avancées peuvent créer un deuxième socket pour écouter également sur IPv6. Elles permettent également de spécifier l'adresse IP dans le nom d'hôte.  
   
  `IPEndPoint localEndpoint = new IPEndPoint(IPAddress.Any, uri.Port);`  
   
@@ -172,7 +172,7 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Pour que vous puissiez exécuter cet exemple, WSE 3.0 doit être installé et vous devez disposer de l'exemple `TcpSyncStockService` WSE. Vous pouvez télécharger [WSE 3.0 à partir de MSDN](http://go.microsoft.com/fwlink/?LinkId=95000).  
+1.  Pour que vous puissiez exécuter cet exemple, WSE 3.0 doit être installé et vous devez disposer de l'exemple `TcpSyncStockService` WSE. Vous pouvez télécharger [WSE 3.0 à partir de MSDN](https://go.microsoft.com/fwlink/?LinkId=95000).  
   
 > [!NOTE]
 >  Étant donné que WSE 3.0 n'est pas pris en charge sur [!INCLUDE[lserver](../../../../includes/lserver-md.md)], vous ne pouvez pas installer ou exécuter l'exemple `TcpSyncStockService` sur ce système d'exploitation.  
@@ -183,7 +183,7 @@ Symbols:
   
     2.  Définissez StockService comme projet de démarrage.  
   
-    3.  Ouvrez StockService.cs dans le projet StockService et commentez l'attribut [Policy] sur la classe `StockService`. Cette opération désactive la sécurité de l'exemple. Alors que WCF peut interagir avec les points de terminaison sécurisés WSE 3.0, la sécurité est désactivée pour conserver cet exemple reste axé sur le transport TCP personnalisé.  
+    3.  Ouvrez StockService.cs dans le projet StockService et commentez l'attribut [Policy] sur la classe `StockService`. Cette opération désactive la sécurité de l'exemple. Bien que WCF peut interagir avec les points de terminaison sécurisés WSE 3.0, sécurité est désactivée afin que cet exemple reste axé sur le transport TCP personnalisé.  
   
     4.  Appuyez sur F5 pour démarrer `TcpSyncStockService`. Le service démarre dans une nouvelle fenêtre de console.  
   

@@ -2,12 +2,12 @@
 title: Mise à jour dynamique
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207519"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43455768"
 ---
 # <a name="dynamic-update"></a>Mise à jour dynamique
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s'agir d'une résolution de bogue, de nouvelles spécifications ou de l'adaptation à des modifications inattendues. Cette rubrique fournit une vue d'ensemble de la fonctionnalité de mise à jour dynamique introduite dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -19,9 +19,9 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
   
 2.  [Mettre à jour la définition de flux de travail pour refléter les modifications souhaitées](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)  
   
-3.  [Créer le mappage de mise à jour](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)  
+3.  [Créer la carte de mise à jour](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)  
   
-4.  [Appliquer la mise à jour de la carte pour les instances de workflow persistantes souhaitées](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
+4.  [Appliquer la mise à jour de la carte aux instances de workflow persistantes souhaitées](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
 >  Notez que les étapes 1 à 3, qui couvrent la conception de la mise à jour de la carte, peuvent être effectuées indépendamment de la mise à jour. Un scénario courant consiste pour le développeur de workflow à créer la carte de mise à jour hors connexion, puis pour un administrateur à appliquer la mise à jour ultérieurement.  
@@ -34,7 +34,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
  Pour préparer un workflow XAML pour la mise à jour dynamique, il peut être chargé dans un <xref:System.Activities.ActivityBuilder>, puis le <xref:System.Activities.ActivityBuilder> est passé dans <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Pour plus d’informations sur l’utilisation des workflows sérialisés et <xref:System.Activities.ActivityBuilder>, consultez [sérialisation de Workflows et les activités vers et depuis XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+>  Pour plus d’informations sur l’utilisation de workflows sérialisés et <xref:System.Activities.ActivityBuilder>, consultez [sérialisation de Workflows et activités vers et depuis XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
  Dans l'exemple suivant, une définition de `MortgageWorkflow` (composée de <xref:System.Activities.Statements.Sequence> avec plusieurs activités enfants) est chargée dans <xref:System.Activities.ActivityBuilder>, puis élaborée pour la mise à jour dynamique. Après le retour de la méthode, <xref:System.Activities.ActivityBuilder> contient la définition de workflow d'origine ainsi qu'une copie.  
   
@@ -57,7 +57,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  Pour télécharger l’exemple de code qui accompagne cette rubrique, consultez [exemple de code de mise à jour dynamique](http://go.microsoft.com/fwlink/?LinkId=227905).  
+>  Pour télécharger l’exemple de code qui accompagne cette rubrique, consultez [exemple de code de mise à jour dynamique](https://go.microsoft.com/fwlink/?LinkId=227905).  
   
 ###  <a name="Update"></a> Mettre à jour la définition de flux de travail pour refléter les modifications souhaitées  
  Une fois que la définition de workflow a été élaborée pour la mise à jour, les modifications souhaitées peuvent être apportées. Vous pouvez ajouter ou supprimer des activités, ajouter, déplacer ou supprimer des variables publiques, ajouter ou supprimer des arguments et apporter des modifications à la signature des délégués d'activité. Vous ne pouvez pas supprimer une activité en cours d'exécution ou modifier la signature d'un délégué en cours d'exécution. Ces modifications peuvent être effectuées à l'aide du code, ou dans un concepteur de workflow réhébergé. Dans l'exemple suivant, une activité `VerifyAppraisal` personnalisée est ajoutée à la séquence qui constitue le corps de `MortgageWorkflow` à partir de l'exemple précédent.  
@@ -77,7 +77,7 @@ Sequence s = ab.Implementation as Sequence;
 s.Activities.Insert(2, va);  
 ```  
   
-###  <a name="Create"></a> Créer le mappage de mise à jour  
+###  <a name="Create"></a> Créer la carte de mise à jour  
  Une fois que la définition de workflow élaborée pour la mise à jour a été modifiée, la mise à jour de la carte peut être créée. Pour créer une mise à jour de carte dynamique, la méthode <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> est appelée. Retourne un <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> qui contient les informations dont le runtime a besoin pour modifier une instance persistante de workflow de sorte qu'elle puisse être chargée et reprise avec la nouvelle définition de workflow. Dans l'exemple suivant, une carte dynamique est créée pour la définition modifiée de `MortgageWorkflow` de l'exemple précédent.  
   
 ```csharp  
@@ -106,7 +106,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> Appliquer la mise à jour de la carte pour les instances de workflow persistantes souhaitées  
+###  <a name="Apply"></a> Appliquer la mise à jour de la carte aux instances de workflow persistantes souhaitées  
  L'application de la mise à jour de la carte peut être effectuée à tout moment après sa création. Elle peut être effectuée immédiatement à l'aide de l'instance <xref:System.Activities.DynamicUpdate.DynamicUpdateMap> qui a été retournée par <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, ou elle peut être effectuée ultérieurement en utilisant une copie stockée de la mise à jour de la carte. Pour mettre à jour une instance du workflow, chargez-la dans <xref:System.Activities.WorkflowApplicationInstance> à l'aide de <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Ensuite, créez un <xref:System.Activities.WorkflowApplication> en utilisant la définition de workflow mise à jour et le <xref:System.Activities.WorkflowIdentity> souhaité. Ce <xref:System.Activities.WorkflowIdentity> peut être différent de celui qui a été utilisé pour rendre persistant le workflow d'origine, et est généralement utilisé pour indiquer que l'instance persistante a été modifiée. Une fois que <xref:System.Activities.WorkflowApplication> est créé, il est chargé à l'aide de la surcharge de <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType> qui prend un <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, puis déchargé avec un appel à <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. Cela applique la mise à jour dynamique et rend persistante l'instance mise à jour de workflow.  
   
 ```csharp  
@@ -191,4 +191,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  Pour télécharger l’exemple de code qui accompagne cette rubrique, consultez [exemple de code de mise à jour dynamique](http://go.microsoft.com/fwlink/?LinkId=227905).
+>  Pour télécharger l’exemple de code qui accompagne cette rubrique, consultez [exemple de code de mise à jour dynamique](https://go.microsoft.com/fwlink/?LinkId=227905).

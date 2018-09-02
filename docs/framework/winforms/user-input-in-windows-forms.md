@@ -7,11 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 2a618dae8d5f2f5ea6a6581fff2758fe8419f511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456663"
 ---
 # <a name="user-input-in-windows-forms"></a>Entrées d'utilisateur dans les Windows Forms
 Windows Forms comprend un modèle d'entrée d'utilisateur basé sur les événements qui sont déclenchés lors du traitement des messages Windows connexes. Les rubriques de cette section fournissent des informations sur l’entrée d’utilisateur avec la souris et le clavier , y compris des exemples de code qui montrent comment effectuer des tâches spécifiques.  
@@ -36,4 +37,4 @@ Windows Forms comprend un modèle d'entrée d'utilisateur basé sur les événem
  Décrit les méthodes permettant de valider l’entrée d’utilisateur dans les applications Windows Forms.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- Consultez également [création de gestionnaires d’événements dans les Windows Forms](http://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Consultez également [création de gestionnaires d’événements dans les Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).

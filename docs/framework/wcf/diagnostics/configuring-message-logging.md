@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: cea307b4e3920ff6413d6db28c2ce1e640b673f9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 80d852dd08e935d4c06e9b6d2e52b0a075849ef5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807838"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469828"
 ---
 # <a name="configuring-message-logging"></a>Configuration de la journalisation des messages
 Cette rubrique contient des instructions permettant de configurer l'enregistrement des messages en fonction de différentes situations.  
   
 ## <a name="enabling-message-logging"></a>Activation de la journalisation des messages  
- Windows Communication Foundation (WCF) n’enregistre pas les messages par défaut. Pour activer la journalisation des messages, vous devez ajouter un écouteur de suivi à la source de suivi `System.ServiceModel.MessageLogging` et définir les attributs de l'élément `<messagelogging>` dans le fichier de configuration.  
+ Windows Communication Foundation (WCF) ne consigne pas les messages par défaut. Pour activer la journalisation des messages, vous devez ajouter un écouteur de suivi à la source de suivi `System.ServiceModel.MessageLogging` et définir les attributs de l'élément `<messagelogging>` dans le fichier de configuration.  
   
  L'exemple suivant indique comment activer la journalisation et spécifier des options supplémentaires.  
   
 ```xml  
 <system.diagnostics>  
   <sources>  
-      <source name="System.ServiceModel.MessageLogging">  
-        <listeners>  
-                 <add name="messages"  
-                 type="System.Diagnostics.XmlWriterTraceListener"  
-                 initializeData="c:\logs\messages.svclog" />  
-          </listeners>  
-      </source>  
-    </sources>  
+    <source name="System.ServiceModel.MessageLogging">  
+      <listeners>  
+         <add name="messages"  
+              type="System.Diagnostics.XmlWriterTraceListener"  
+              initializeData="c:\logs\messages.svclog" />  
+        </listeners>  
+    </source>  
+  </sources>  
 </system.diagnostics>  
   
 <system.serviceModel>  
@@ -45,7 +45,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
 </system.serviceModel>  
 ```  
   
- Pour plus d’informations sur les paramètres de journalisation des messages, consultez [les paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Pour plus d’informations sur les paramètres de journalisation des messages, consultez [paramètres recommandés pour le suivi et la journalisation des messages](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
  Vous pouvez utiliser la méthode `add` afin d'indiquer le nom et type de l'écouteur de suivi à utiliser. Dans l'exemple de configuration, nous avons attribué le nom « messages » à l'écouteur et ajouté l'écouteur de suivi standard .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) comme type à utiliser. Si vous utilisez `System.Diagnostics.XmlWriterTraceListener`, vous devez spécifier l'emplacement et le nom du fichier de sortie dans le fichier de configuration. Pour ce faire, il suffit d'affecter le nom du fichier journal à `initializeData`. Si cette consigne n'est pas respectée, le système lèvera une exception. Vous pouvez également implémenter un écouteur personnalisé qui enregistrera les journaux dans un fichier par défaut.  
   
@@ -78,7 +78,7 @@ Cette rubrique contient des instructions permettant de configurer l'enregistreme
  Les messages enregistrés à ce niveau sont prêts à être encodés ou décodés pour ou après transmission. Si des filtres ont été définis, seuls les messages respectant les critères définis par ces filtres seront enregistrés. Dans le cas contraire, tous les messages de niveau transport seront enregistrés. Tous les messages d'infrastructure sont enregistrés à ce niveau, notamment les messages de messagerie fiable. Pour les messages transmis en flux continu, seuls les en-têtes sont enregistrés. Les messages sécurisés sont également enregistrés à ce niveau sous leur forme chiffrée, sauf si un transport sécurisé tel qu'HTTPS est utilisé.  
   
 ### <a name="malformed-level"></a>Niveau erreurs  
- Messages malformés sont des messages qui sont rejetées par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
+ Messages mal formés sont des messages qui ont été rejetés par la pile WCF à n’importe quel stade du traitement. Les messages mal formés sont enregistrés en l'état : sous leur forme chiffrée lorsqu'ils le sont, dans un langage XML incorrect et ainsi de suite. `maxSizeOfMessageToLog` définit la taille du message à enregistrer sous forme de CDATA. Par défaut, `maxSizeOfMessageToLog` est égal à 256K. Pour plus d’informations sur cet attribut, consultez la section autres Options.  
   
 ### <a name="other-options"></a>Autres options  
  Outre les niveaux d'enregistrement, l'utilisateur peut spécifier les options suivantes :  
