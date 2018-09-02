@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 055b77697a525fd2d94192ff5b1586c885b22f94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 290c2f58d0259d5a0df52711f63c48521891ae12
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763369"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407525"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Comment : appeler des fonctions définies par modèle comme méthodes d'objet
-Cette rubrique décrit comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> ou comme une méthode statique sur une classe personnalisée. A *fonction définie par modèle* est une fonction qui est définie dans le modèle conceptuel. Les procédures décrites dans cette rubrique montrent comment appeler directement ces fonctions au lieu de les appeler à partir de requêtes LINQ to Entities. Pour plus d’informations sur l’appel de fonctions définies par le modèle de LINQ aux requêtes d’entités, consultez [Comment : Call Model-Defined des fonctions dans les requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+Cette rubrique décrit comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> ou comme une méthode statique sur une classe personnalisée. Un *fonction définie par modèle* est une fonction qui est définie dans le modèle conceptuel. Les procédures décrites dans cette rubrique montrent comment appeler directement ces fonctions au lieu de les appeler à partir de requêtes LINQ to Entities. Pour plus d’informations sur l’appel des fonctions définies par le modèle dans LINQ aux requêtes d’entités, consultez [Comment : fonctions Call Model-Defined dans les requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Si vous appelez une fonction définie par modèle comme une méthode <xref:System.Data.Objects.ObjectContext> ou comme une méthode statique sur une classe personnalisée, vous devez mapper en premier la méthode à la fonction définie par modèle avec un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Toutefois, lorsque vous définissez une méthode sur la classe <xref:System.Data.Objects.ObjectContext>, vous devez utiliser la propriété <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> pour exposer le fournisseur LINQ, alors que lorsque vous définissez une méthode statique sur une classe personnalisée, vous devez utiliser la propriété <xref:System.Linq.IQueryable.Provider%2A> pour exposer le fournisseur LINQ. Pour plus d'informations, consultez les exemples qui suivent les procédures ci-dessous.  
   
- Les procédures suivantes fournissent une présentation de haut niveau pour l'appel d'une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> et comme une méthode statique sur une classe personnalisée. Les exemples qui suivent fournissent plus de détail sur les étapes des procédures. Les procédures supposent que vous avez défini une fonction dans le modèle conceptuel. Pour plus d’informations, consultez [Comment : définir des fonctions personnalisées dans le modèle conceptuel](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ Les procédures suivantes fournissent une présentation de haut niveau pour l'appel d'une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext> et comme une méthode statique sur une classe personnalisée. Les exemples qui suivent fournissent plus de détail sur les étapes des procédures. Les procédures supposent que vous avez défini une fonction dans le modèle conceptuel. Pour plus d’informations, consultez [Comment : définir des fonctions personnalisées dans le modèle conceptuel](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Pour appeler une fonction définie par modèle comme une méthode sur un objet ObjectContext  
   
@@ -46,9 +46,9 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
 ## <a name="example"></a>Exemple  
  **Appel d’une fonction définie par modèle comme une méthode sur un objet ObjectContext**  
   
- L'exemple suivant montre comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext>. L’exemple utilise le [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ L'exemple suivant montre comment appeler une fonction définie par modèle comme une méthode sur un objet <xref:System.Data.Objects.ObjectContext>. L’exemple utilise le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
- Considérez la fonction de modèle conceptuel ci-dessous qui retourne le revenu généré par un produit donné. (Pour plus d’informations sur l’ajout de la fonction à votre modèle conceptuel, consultez [Comment : définir des fonctions personnalisées dans le modèle conceptuel](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Considérez la fonction de modèle conceptuel ci-dessous qui retourne le revenu généré par un produit donné. (Pour plus d’informations sur l’ajout de la fonction à votre modèle conceptuel, consultez [Comment : définir des fonctions personnalisées dans le modèle conceptuel](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -84,12 +84,12 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
 ## <a name="example"></a>Exemple  
  **Appel d’une fonction définie par modèle comme une méthode statique sur une classe personnalisée**  
   
- L'exemple suivant montre comment appeler une fonction définie par modèle comme une méthode statique sur une classe personnalisée. L’exemple utilise le [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ L'exemple suivant montre comment appeler une fonction définie par modèle comme une méthode statique sur une classe personnalisée. L’exemple utilise le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
 > [!NOTE]
 >  Lorsque vous appelez une fonction définie par modèle comme une méthode statique sur une classe personnalisée, la fonction définie par modèle doit accepter une collection et retourner une agrégation de valeurs dans la collection.  
   
- Considérez la fonction de modèle conceptuel ci-dessous, qui retourne le revenu produit pour une collection SalesOrderDetail. (Pour plus d’informations sur l’ajout de la fonction à votre modèle conceptuel, consultez [Comment : définir des fonctions personnalisées dans le modèle conceptuel](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
+ Considérez la fonction de modèle conceptuel ci-dessous, qui retourne le revenu produit pour une collection SalesOrderDetail. (Pour plus d’informations sur l’ajout de la fonction à votre modèle conceptuel, consultez [Comment : définir des fonctions personnalisées dans le modèle conceptuel](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -106,6 +106,6 @@ Cette rubrique décrit comment appeler une fonction définie par modèle comme u
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [vue d’ensemble du fichier .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [vue d’ensemble du fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [Appel de fonctions dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

@@ -3,11 +3,11 @@ title: 'Comment : intercepter l’analyse des erreurs (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
 ms.openlocfilehash: aa72b914d4640410a4d47ba49e774dcee31a54c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643507"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406546"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>Comment : intercepter l’analyse des erreurs (Visual Basic)
 Cette rubrique montre comment détecter du code XML incorrect ou non valide.  

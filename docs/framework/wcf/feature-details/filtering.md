@@ -2,23 +2,24 @@
 title: Filtrage
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 5f599ac74aa63951f59c5e5c79d3fe37b2ab5100
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74915a45ed5ca1d13790f64c7921d1f750fa04d3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409128"
 ---
 # <a name="filtering"></a>Filtrage
-Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des filtres déclaratifs pour faire correspondre des messages et des décisions opérationnelles. Vous pouvez utiliser des filtres pour déterminer ce qu'il faut faire d'un message en examinant une partie du message. Par exemple, un processus de mise en file d’attente peut utiliser une requête XPath 1.0 pour vérifier l’élément prioritaire d’un en-tête connu afin de déterminer s’il faut déplacer un message au début de la file d’attente.  
+Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des filtres déclaratifs pour faire correspondre des messages et de prendre des décisions opérationnelles. Vous pouvez utiliser des filtres pour déterminer ce qu'il faut faire d'un message en examinant une partie du message. Par exemple, un processus de mise en file d’attente peut utiliser une requête XPath 1.0 pour vérifier l’élément prioritaire d’un en-tête connu afin de déterminer s’il faut déplacer un message au début de la file d’attente.  
   
  Le système de filtrage est composé d’un ensemble de classes qui peuvent efficacement déterminer parmi un ensemble de filtres sont `true` pour un message WCF particulier.  
   
- Le système de filtrage est un composant majeur de la messagerie WCF ; Il est conçu pour être extrêmement rapides. Chaque implémentation de filtre a été optimisée pour un type particulier de correspondance par rapport à des messages WCF.  
+ Le système de filtrage est un composant fondamental de la messagerie de WCF ; Il est conçu pour être extrêmement rapides. Chaque implémentation de filtre a été optimisée pour un type particulier de correspondance contre les messages WCF.  
   
  Le système de filtrage n'est pas thread-safe. L'application doit gérer toute sémantique de verrouillage. Toutefois, elle prend en charge les sémantiques writer unique/lecteurs multiples.  
   
 ## <a name="where-filtering-fits"></a>Cas dans lesquels le filtrage est applicable  
- Le filtrage est exécuté après qu'un message a été reçu et fait partie du processus de la distribution du message au composant d'application qui convient. La conception du système de filtrage répond aux exigences de plusieurs sous-systèmes WCF, y compris la messagerie, le routage, la sécurité, la gestion des événements et gestion du système.  
+ Le filtrage est exécuté après qu'un message a été reçu et fait partie du processus de la distribution du message au composant d'application qui convient. La conception du système de filtrage répond aux exigences de plusieurs sous-systèmes WCF, notamment la messagerie, routage, la sécurité, gestion des événements et gestion du système.  
   
 ## <a name="filters"></a>Filtres  
  Le moteur de filtre comporte deux composants principaux, les filtres et les tables de filtres. Un filtre prend des décisions booléennes à propos d'un message selon des conditions logiques spécifiées par l'utilisateur. Les filtres implémentent la classe <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
@@ -41,10 +42,10 @@ Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des 
   
 ### <a name="prefix-endpoint-address-filters"></a>Filtres du préfixe de l'adresse du point de terminaison  
   
-1.  Le <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> fonctionne comme le filtre <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mais la correspondance peut se faire avec le préfixe de l'URI du message. Par exemple, un filtre spécifiant l’adresse http://www.adatum.com correspond aux messages adressés à http://www.adatum.com/userA.  
+1.  Le <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> fonctionne comme le filtre <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>, mais la correspondance peut se faire avec le préfixe de l'URI du message. Par exemple, un filtre en spécifiant l’adresse http://www.adatum.com correspond aux messages adressés à http://www.adatum.com/userA.  
   
 ### <a name="xpath-message-filters"></a>Filtres de message XPath  
- Un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> utilise une expression XPath pour déterminer si un document XML contient des éléments, des attributs, du texte ou d'autre constructions syntaxiques XML spécifiques. Le filtre se révèle extrêmement efficace pour les sous-ensembles stricts de XPath. Le langage XML est décrite dans le [spécification W3C XML Path Language 1.0](http://go.microsoft.com/fwlink/?LinkId=94779).  
+ Un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> utilise une expression XPath pour déterminer si un document XML contient des éléments, des attributs, du texte ou d'autre constructions syntaxiques XML spécifiques. Le filtre se révèle extrêmement efficace pour les sous-ensembles stricts de XPath. XML Path Language est décrit dans la [W3C XML Path Language 1.0 specification](https://go.microsoft.com/fwlink/?LinkId=94779).  
   
  En général, une application utilise un <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> à un point de terminaison pour interroger le contenu d'un message SOAP puis prend la mesure appropriée en fonction des résultats de cette requête. Par exemple, un processus de mise en file d’attente peut utiliser une requête XPath pour inspecter l’élément de priorité d’un en-tête connu afin de décider s’il faut déplacer un message en haut de la file d’attente.  
   
@@ -67,7 +68,7 @@ Windows Communication Foundation (WCF) système de filtrage pouvez utiliser des 
   
  La classe <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> optimise la correspondance pour un sous-ensemble de XPath qui couvre la plupart des scénarios de messagerie et prend également en charge la grammaire XPath 1.0 complète. Elle comprend des algorithmes optimisés pour une correspondance parallèle efficace.  
   
- Cette table a plusieurs méthodes `Match` spécialisées qui fonctionnent sur un <xref:System.Xml.XPath.XPathNavigator> et un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> étend la classe <xref:System.Xml.XPath.XPathNavigator> en ajoutant une propriété <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Cette propriété permet d'enregistrer et de charger rapidement des positions dans le document XML sans devoir cloner le navigateur, ce qui représente une allocation de mémoire importante requise par le <xref:System.Xml.XPath.XPathNavigator> pour une telle opération. Le moteur WCF XPath doit fréquemment enregistrer la position du curseur au cours de l’exécution de requêtes sur des documents XML, afin que la <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> fournisse une optimisation importante pour le traitement des messages.  
+ Cette table a plusieurs méthodes `Match` spécialisées qui fonctionnent sur un <xref:System.Xml.XPath.XPathNavigator> et un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator>. Un <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> étend la classe <xref:System.Xml.XPath.XPathNavigator> en ajoutant une propriété <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A>. Cette propriété permet d'enregistrer et de charger rapidement des positions dans le document XML sans devoir cloner le navigateur, ce qui représente une allocation de mémoire importante requise par le <xref:System.Xml.XPath.XPathNavigator> pour une telle opération. Le moteur WCF XPath doit fréquemment enregistrer la position du curseur au cours de l’exécution de requêtes sur des documents XML, par conséquent, le <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> fournisse une optimisation importante pour le traitement du message.  
   
 ## <a name="customer-scenarios"></a>Scénarios de client  
  Vous pouvez utiliser le filtrage à chaque fois que vous souhaitez envoyer un message à différents modules de traitement en fonction des données contenues dans le message. Deux scénarios typiques transmettent un message en fonction de son code d'action et démultiplexent un flux de messages en fonction de l'adresse de point de terminaison des messages.  

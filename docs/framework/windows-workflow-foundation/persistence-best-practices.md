@@ -2,12 +2,12 @@
 title: Meilleures pratiques de persistance
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 68164cc937c1c718df39c96c3d6ac490ab025fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520186"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404688"
 ---
 # <a name="persistence-best-practices"></a>Meilleures pratiques de persistance
 Ce document traite des meilleures pratiques de conception et configuration de workflow associées à la persistance de workflow.  
@@ -21,7 +21,7 @@ Ce document traite des meilleures pratiques de conception et configuration de wo
   
  Si le workflow est occupé pendant longtemps, il est recommandé de rendre persistante l'instance de workflow régulièrement pendant toute cette période. Pour ce faire, vous pouvez ajouter des activités <xref:System.Activities.Statements.Persist> dans l'ensemble de la séquence des activités qui maintiennent l'instance de workflow occupée. De cette façon, un recyclage de domaine d'application, un échec de l'hôte ou de l'ordinateur n'entraîne pas la restauration au début de la période d'occupation. Soyez conscient que l'ajout d'activités <xref:System.Activities.Statements.Persist> à votre workflow peut provoquer une diminution des performances.  
   
- Windows Server AppFabric simplifie grandement la configuration et l'utilisation de la persistance. Pour plus d’informations, consultez [persistance de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server AppFabric simplifie grandement la configuration et l'utilisation de la persistance. Pour plus d’informations, consultez [persistance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuration des paramètres d'évolutivité  
  Les conditions requises en termes d'évolutivité et de performance déterminent la configuration des paramètres suivants :  

@@ -2,15 +2,15 @@
 title: 'Procédure : ajouter la détectabilité par programme à un service et un client WCF'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495481"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408257"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Procédure : ajouter la détectabilité par programme à un service et un client WCF
-Cette rubrique explique comment créer un service Windows Communication Foundation (WCF) pouvant être découvert. Il est basé sur le [auto-hébergement](http://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
+Cette rubrique explique comment rendre un service Windows Communication Foundation (WCF) détectable. Il est basé sur le [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) exemple.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Pour configurer l'exemple existant de service Self-Host pour la découverte  
   
@@ -92,7 +92,7 @@ Cette rubrique explique comment créer un service Windows Communication Foundati
     }  
     ```  
   
-     Cela indique à WCF qui la <xref:System.ServiceModel.Discovery.DiscoveryClient> classe doit-elle utiliser le point de terminaison de découverte UDP standard pour envoyer et recevoir des messages de découverte.  
+     Cela indique à WCF qui le <xref:System.ServiceModel.Discovery.DiscoveryClient> classe doit utiliser le point de terminaison de découverte UDP standard pour envoyer et recevoir des messages de découverte.  
   
 8.  Sur la ligne suivante, appelez la méthode <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> et spécifiez une instance <xref:System.ServiceModel.Discovery.FindCriteria> qui contient le contrat de service que vous souhaitez rechercher. Le contrat à spécifier dans le cas présent est `ICalculator`.  
   
@@ -124,7 +124,7 @@ Cette rubrique explique comment créer un service Windows Communication Foundati
   
      Cette méthode utilise l'adresse du point de terminaison retournée par l'objet `FindCalculatorServiceAddress` pour appeler le service de calculatrice.  
   
-11. À l'intérieur de la méthode `InvokeCalculatorService`, créez une instance de la classe `CalculatorServiceClient`. Cette classe est définie par le [auto-hébergement](http://go.microsoft.com/fwlink/?LinkId=145523) exemple. Elle a été générée à l'aide de Svcutil.exe.  
+11. À l'intérieur de la méthode `InvokeCalculatorService`, créez une instance de la classe `CalculatorServiceClient`. Cette classe est définie par le [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) exemple. Elle a été générée à l'aide de Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ Cette rubrique explique comment créer un service Windows Communication Foundati
     ```  
   
 ## <a name="example"></a>Exemple  
- L'intégralité du code utilisé dans cet exemple est présentée ci-dessous. Étant donné que ce code est basé sur le [auto-hébergement](http://go.microsoft.com/fwlink/?LinkId=145523) exemple, uniquement les fichiers modifiés sont répertoriés. Pour plus d’informations sur l’exemple d’auto-hébergement, consultez [Instructions d’installation](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ L'intégralité du code utilisé dans cet exemple est présentée ci-dessous. Étant donné que ce code est basé sur le [Self-Host](https://go.microsoft.com/fwlink/?LinkId=145523) exemple, seuls les fichiers modifiés sont répertoriés. Pour plus d’informations sur l’exemple Self-Host, consultez [Instructions d’installation](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  

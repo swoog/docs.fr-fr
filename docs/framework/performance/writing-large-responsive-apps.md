@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254351"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418963"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Conception d'applications .NET Framework complexes et réactives
 Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données. Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#.  
@@ -38,7 +38,7 @@ Cet article fournit des conseils pour améliorer les performances d'applications
  Vous devez définir des objectifs de performances pour des scénarios ou des expériences clients clés dans votre application, et écrire des tests pour mesurer les performances.  Étudiez les échecs des tests en appliquant un raisonnement scientifique : utilisez des profils pour vous guider, avancez des hypothèses concernant la nature du problème et testez vos hypothèses en faisant des expériences ou en apportant des modifications au code.  Établissez des mesures de performances de référence au fil du temps en effectuant des tests réguliers, afin de pouvoir isoler les changements qui provoquent des régressions des performances.  Grâce à une approche rigoureuse du traitement des performances, vous éviterez de perdre du temps avec des mises à jour de code inutiles.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fait n° 3 : Des outils efficaces font toute la différence  
- Des outils efficaces vous permettent de plonger directement au cœur des principaux problèmes de performances (UC, mémoire ou disque) et vous aident à localiser le code à l'origine des goulots d'étranglement.  Microsoft fournit divers outils d’analyse des performances, tels que le [profileur Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), l’[outil d’analyse de Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) et [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Des outils efficaces vous permettent de plonger directement au cœur des principaux problèmes de performances (UC, mémoire ou disque) et vous aident à localiser le code à l'origine des goulots d'étranglement.  Microsoft fournit divers outils d’analyse des performances, tels que le [profileur Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), l’[outil d’analyse de Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) et [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView est un outil gratuit et extrêmement puissant qui vous permet de porter toute votre attention sur des problèmes profonds liés par exemple aux E/S de disque, aux événements du GC et à la mémoire.  Vous pouvez capturer des événements de [suivi d’événements pour Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) liés aux performances et afficher aisément les informations pour chaque application, processus, pile et thread.  PerfView vous montre la quantité et le type de mémoire que votre application alloue, ainsi que les fonctions ou les piles d'appels qui contribuent aux allocations de mémoire, et pour quels volumes. Pour plus de détails, consultez l’ensemble complet de rubriques d’aide, de démonstrations et de vidéos fournies avec l’outil (par exemple, les [didacticiels PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) sur Channel 9).  
   
@@ -281,7 +281,7 @@ Language-Integrated Query (LINQ), conjointement avec les expressions lambda, est
   
  **Exemple 5 : expressions lambda, liste\<T> et IEnumerable\<T>**  
   
- Cet exemple utilise du [code de style opérationnel et LINQ](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) pour rechercher un symbole dans le modèle du compilateur, selon une chaîne de nom :  
+ Cet exemple utilise du [code de style opérationnel et LINQ](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) pour rechercher un symbole dans le modèle du compilateur, selon une chaîne de nom :  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Dans la première ligne, le [expression lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [se ferme par-dessus](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable locale `name`.  Cela signifie qu’en plus d’allouer un objet pour le [délégué](~/docs/csharp/language-reference/keywords/delegate.md) contenu dans `predicate`, le code alloue une classe statique pour contenir l’environnement qui capture la valeur de `name`.  Le compilateur génère un code similaire au suivant :  
+ Dans la première ligne, le [expression lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [se ferme par-dessus](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) la variable locale `name`.  Cela signifie qu’en plus d’allouer un objet pour le [délégué](~/docs/csharp/language-reference/keywords/delegate.md) contenu dans `predicate`, le code alloue une classe statique pour contenir l’environnement qui capture la valeur de `name`.  Le compilateur génère un code similaire au suivant :  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  Ce code n'utilise pas d'énumérateurs, d'expressions lambda ni de méthodes d'extension LINQ, et il n'induit pas d'allocations.  L'absence d'allocation vient du fait que le compilateur peut voir que la collection `symbols` est une classe <xref:System.Collections.Generic.List%601> et qu'elle peut lier l'énumérateur résultant (une structure) à une variable locale avec le type correct pour éviter le boxing.  La version originale de cette fonction était un exemple parfait de la puissance expressive de C# et de la productivité du .NET Framework.  Cette nouvelle version, plus efficace, conserve ces qualités sans ajouter de code complexe à tenir à jour.  
   
 ### <a name="async-method-caching"></a>Mise en cache dans les méthodes async  
- L’exemple suivant illustre un problème courant qui se produit quand vous essayez d’utiliser des résultats en cache dans une méthode [async](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
+ L’exemple suivant illustre un problème courant qui se produit quand vous essayez d’utiliser des résultats en cache dans une méthode [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).  
   
  **Exemple 6 : mise en cache dans les méthodes async**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [Vidéo de présentation de cette rubrique.](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Guide du débutant en profilage des performances](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Performances](../../../docs/framework/performance/index.md)  
- [Conseils sur les performances de .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Windows Phone Performance Analysis Tool](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Trouver les goulots d’étranglement de l’Application avec Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Conseils sur les performances de .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Windows Phone Performance Analysis Tool](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Trouver les goulots d’étranglement de l’Application avec Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 didacticiels PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Conseils sur les performances de haut niveau](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Conseils sur les performances de haut niveau](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [dépôt GitHub dotnet/roslyn](https://github.com/dotnet/roslyn)

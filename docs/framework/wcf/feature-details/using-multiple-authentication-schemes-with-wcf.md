@@ -2,18 +2,18 @@
 title: Utilisation de schémas d'authentification multiples avec WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 140211f10f7cdc88a3df8eb8ea1c30df73b0c4c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498444"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408971"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Utilisation de schémas d'authentification multiples avec WCF
-WCF vous permet maintenant de spécifier plusieurs schémas d'authentification sur un seul point de terminaison. En outre les services hébergés sur le Web peuvent hériter leurs paramètres d'authentification directement d'IIS. Les services auto-hébergés peuvent spécifier que les schémas d'authentification peuvent être utilisés. Pour plus d’informations sur la définition des paramètres d’authentification dans IIS, consultez [l’authentification IIS](http://go.microsoft.com/fwlink/?LinkId=232458)  
+WCF vous permet maintenant de spécifier plusieurs schémas d'authentification sur un seul point de terminaison. En outre les services hébergés sur le Web peuvent hériter leurs paramètres d'authentification directement d'IIS. Les services auto-hébergés peuvent spécifier que les schémas d'authentification peuvent être utilisés. Pour plus d’informations sur la définition des paramètres d’authentification dans IIS, consultez [l’authentification IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  
   
 ## <a name="iis-hosted-services"></a>Services hébergés IIS  
- Pour les services hébergés dans IIS, définissez les schémas d'authentification que vous souhaitez utiliser dans IIS. Puis dans le fichier web.config de votre service, dans la configuration de liaison spécifiez le type clientCredential en tant que « InheritedFromHost » comme indiqué dans l’extrait XML suivant :  
+ Pour les services hébergés dans IIS, définissez les schémas d'authentification que vous souhaitez utiliser dans IIS. Puis dans le fichier web.config de votre service dans votre configuration de liaison spécifier type clientCredential en tant que « InheritedFromHost » comme indiqué dans l’extrait de code XML suivant :  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ WCF vous permet maintenant de spécifier plusieurs schémas d'authentification s
     </bindings>  
 ```  
   
- Vous pouvez spécifier que vous voulez uniquement un sous-ensemble des schémas d’authentification à utiliser avec votre service à l’aide de ServiceAuthenticationBehavior ou \<serviceAuthenticationManager > élément. Lors de la configuration dans le code, utilisez ServiceAuthenticationBehavior comme indiqué dans l'extrait de code suivant.  
+ Vous pouvez spécifier que vous souhaitez uniquement un sous-ensemble des schémas d’authentification à utiliser avec votre service à l’aide de ServiceAuthenticationBehavior ou \<serviceAuthenticationManager > élément. Lors de la configuration dans le code, utilisez ServiceAuthenticationBehavior comme indiqué dans l'extrait de code suivant.  
   
 ```csharp  
 // ...  
@@ -63,7 +63,7 @@ else
  De cette façon, seul un sous-ensemble des schémas d'authentification répertoriés ici est pris en compte pour l'application sur le point de terminaison de service, selon ce qui est sélectionné dans IIS. Cela signifie qu'un développeur peut exclure l'authentification de base de la liste en l'omettant dans la liste serviceAuthenticationManager, et même si elle est activée dans IIS, elle ne sera pas appliquée sur le point de terminaison de service  
   
 ## <a name="self-hosted-services"></a>Services auto-hébergés  
- Les services auto-hébergés sont configurés un peu différemment étant donné l'absence d'IIS pour hériter des paramètres. Ici, vous utilisez le \<serviceAuthenticationManager > élément ou ServiceAuthenticationBehavior pour spécifier les paramètres d’authentification qui sont hérités. Le code présente l'aspect suivant :  
+ Les services auto-hébergés sont configurés un peu différemment étant donné l'absence d'IIS pour hériter des paramètres. Vous utilisez ici le \<serviceAuthenticationManager > élément ou ServiceAuthenticationBehavior pour spécifier les paramètres d’authentification qui seront héritées. Le code présente l'aspect suivant :  
   
 ```csharp  
 // ...  

@@ -2,12 +2,12 @@
 title: Génération SQL de modification
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071950"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417245"
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 Cette section décrit la manière de développer un module de génération SQL de modification pour votre fournisseur (base de données conforme SQL:1999). Ce module doit traduire une arborescence de commandes de modification en instructions SQL INSERT, UPDATE ou DELETE appropriées.  
@@ -29,7 +29,7 @@ Cette section décrit la manière de développer un module de génération SQL d
   
  ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree a une propriété Target qui représente le jeu de cibles pour l'opération de modification. La propriété d'expression de la cible, qui définit le jeu de données d'entrée, est toujours DbScanExpression.  Un DbScanExpression peut représenter une table ou une vue ou un jeu de données définies avec une requête si la propriété de métadonnées « Defining Query » de la cible est non null.  
+ DbModificationCommandTree a une propriété Target qui représente le jeu de cibles pour l'opération de modification. La propriété d'expression de la cible, qui définit le jeu de données d'entrée, est toujours DbScanExpression.  Un DbScanExpression peut représenter une table ou une vue, ou un jeu de données définie avec une requête si la propriété de métadonnées « Defining Query » de sa cible est non null.  
   
  Un DbScanExpression qui représente une requête peut atteindre un fournisseur en tant que cible de modification uniquement si le jeu a été défini à l'aide d'une requête de définition dans le modèle mais qu'aucune fonction n'a été fournie pour l'opération de modification correspondante. Il est possible que les fournisseurs ne puissent pas prendre en charge un tel scénario (par exemple, c'est le cas de SqlClient).  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Génération SQL de modification dans le fournisseur d'exemples  
- Le [Entity Framework Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616) présente les composants de fournisseurs de données ADO.NET qui prennent en charge la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Il cible une base de données SQL Server 2005 et est implémenté comme un wrapper sur le fournisseur de données ADO.NET 2.0 System.Data.SqlClient.  
+ Le [Entity Framework Sample Provider](https://go.microsoft.com/fwlink/?LinkId=180616) décrit les composants des fournisseurs de données ADO.NET qui prennent en charge la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Il cible une base de données SQL Server 2005 et est implémenté comme un wrapper sur le fournisseur de données ADO.NET 2.0 System.Data.SqlClient.  
   
  Le module de génération SQL de modification du fournisseur d'exemples (situé dans le fichier SQL Generation\DmlSqlGenerator.cs) prend un DbModificationCommandTree d'entrée et produit une instruction SQL de modification unique pouvant être suivie par une instruction SELECT pour retourner un lecteur, si spécifié par le DbModificationCommandTree. Notez que la forme des commandes générées est affectée par la base de données SQL Server cible.  
   
@@ -199,7 +199,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- La clause set est fausse («@i = 0 ») uniquement si aucune clause set n’est spécifiée. Ceci permet de vérifier que toutes les colonnes calculées par la banque sont recalculées.  
+ La clause set est fausse («@i = 0 ») uniquement si aucune clause set n’est spécifiés. Ceci permet de vérifier que toutes les colonnes calculées par la banque sont recalculées.  
   
  Uniquement si la propriété Returning n'a pas la valeur null, une instruction SELECT est générée pour retourner les propriétés spécifiées dans la propriété Returning.  
   

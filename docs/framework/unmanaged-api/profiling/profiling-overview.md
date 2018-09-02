@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934949"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416958"
 ---
 # <a name="profiling-overview"></a>Vue d'ensemble du profilage
 <a name="top"></a> Un profileur est un outil qui surveille l’exécution d’une autre application. Un profileur CLR (Common Language Runtime) est une bibliothèque de liens dynamiques (DLL) qui se compose de fonctions qui reçoivent des messages du CLR et qui lui en envoient à l'aide de l'API de profilage. La DLL du profileur est chargée par le CLR au moment de l'exécution.  
@@ -209,7 +209,7 @@ Architecture de profilage
 ### <a name="stack-snapshot"></a>Instantané de pile  
  Un instantané de pile est une trace de la pile d'un thread à un instant précis. L'API de profilage prend en charge le traçage des fonctions managées sur la pile, mais elle laisse le traçage des fonctions non managées au propre analyseur de pile du profileur.  
   
- Pour plus d’informations sur comment programmer le profileur permettant de remonter les piles gérées, consultez le [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) méthode dans cette documentation, et [Profiler parcours de la pile dans le .NET Framework 2.0 : Principes de base et d’autres fonctionnalités](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Pour plus d’informations sur comment programmer le profileur permettant de remonter les piles gérées, consultez le [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) méthode dans cette documentation, et [Profiler parcours de la pile dans le .NET Framework 2.0 : Principes de base et d’autres fonctionnalités](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Pile cachée  
  L'utilisation trop fréquente de la méthode d'instantané de pile peut rapidement créer un problème de performances. Si vous voulez suivre fréquemment les traces de pile, votre profileur doit générer à la place d’une pile cachée à l’aide de la [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), et [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) rappels d’exception. La pile cachée est toujours actuelle et peut rapidement être copiée vers le stockage, chaque fois qu'un instantané de pile est nécessaire.  

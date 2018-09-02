@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 498e05b7b9cfb3b7ea5e2c37e029d19ddae63b55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497501"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407623"
 ---
 # <a name="security-guidance-and-best-practices"></a>Aide sur la sécurité et meilleures pratiques
-Les rubriques de cette section présentent une assistance et des éléments à prendre en compte lors de la création d’applications sécurisées de Windows Communication Foundation (WCF). Pour plus d’informations sur Windows Server AppFabric et de sécurité, consultez [sécurité modèle pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+Les rubriques de cette section présentent une assistance et des éléments à prendre en compte lors de la création d’applications sécurisées de Windows Communication Foundation (WCF). Pour plus d’informations sur Windows Server AppFabric et de sécurité, consultez [sécurité modèle pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Bonnes pratiques pour la sécurité](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
@@ -28,4 +28,4 @@ Les rubriques de cette section présentent une assistance et des éléments à p
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

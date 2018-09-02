@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 93bf7a038a46ff6c03f89e576f3e4150cd069dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2c71af169018f272a6ca538bba9191f9ddbc0dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491473"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418127"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Service et client Internet non sécurisés
-L’illustration suivante montre un exemple de client de Windows Communication Foundation (WCF) publiques, non sécurisés et service.  
+L’illustration suivante montre un exemple de client Windows Communication Foundation (WCF) publics, non sécurisés et service.  
   
- ![Scénario non sécurisé de Internet non sécurisés et service](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![Scénario de non sécurisés et service Internet non sécurisé](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
   
 |Caractéristique|Description|  
 |--------------------|-----------------|  
@@ -114,4 +114,4 @@ L’illustration suivante montre un exemple de client de Windows Communication F
 ## <a name="see-also"></a>Voir aussi  
  [Scénarios de sécurité courants](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

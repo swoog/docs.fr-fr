@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 08e7c488d6a546f3efd6098c38ca601b5f443a26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643570"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405948"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. La plupart des logiciels actuels incluent des objets COM. Bien que les assemblys .NET représentent le meilleur choix pour les nouvelles applications, vous devrez peut-être parfois utiliser des objets COM. Cette section décrit certains des problèmes liés à la création et l’utilisation des objets COM avec Visual Basic.  
+Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. La plupart des logiciels actuels incluent des objets COM. Bien que les assemblys .NET représentent le meilleur choix pour les nouvelles applications, vous devrez peut-être parfois utiliser des objets COM. Cette section aborde certains des problèmes liés à la création et l’utilisation des objets COM avec Visual Basic.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Introduction à COM Interop](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -50,10 +50,10 @@ Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonct
  [Interopération avec du code non managé](../../../framework/interop/index.md)  
  Décrit les services d'interopérabilité fournis par le common language runtime.  
   
- [Exposition de composants COM au .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Exposition de composants COM au .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
  Décrit le processus d’appel de types COM via COM Interop.  
   
- [Exposition de composants .NET Framework à COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Exposition de composants .NET Framework à COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Décrit la préparation et l’utilisation de types managés à partir de COM.  
   
  [Application d’attributs d’interopérabilité](../../../framework/interop/applying-interop-attributes.md)  

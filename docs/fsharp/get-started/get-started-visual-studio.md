@@ -2,12 +2,12 @@
 title: 'Bien démarrer avec F # dans Visual Studio'
 description: 'Découvrez comment utiliser F # avec Visual Studio.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874713"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415732"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Bien démarrer avec F # dans Visual Studio
 
@@ -47,7 +47,7 @@ Il se trouve dans cette fonction que nous appelons le `square` fonction avec un 
 
 ## <a name="running-your-code"></a>Exécution de votre code
 
-Vous pouvez exécuter le code et afficher les résultats en appuyant sur **ctrl-f5**.  Cela exécutera le programme sans débogage et vous permet de voir les résultats.  Vous pouvez également choisir le **déboguer** menu de niveau supérieur d’élément dans Visual Studio et choisissez **démarrer sans débogage**.
+Vous pouvez exécuter le code et afficher les résultats en appuyant sur **Ctrl**+**F5**.  Cela exécute le programme sans débogage et vous permet de voir les résultats.  Vous pouvez également choisir le **déboguer** menu de niveau supérieur d’élément dans Visual Studio et choisissez **démarrer sans débogage**.
 
 Vous devez maintenant voir ce qui suit imprimé dans la fenêtre de console Visual Studio de s’afficher :
 
@@ -62,4 +62,8 @@ Félicitations !  Vous avez créé votre premier projet F # dans Visual Studio,
 Si vous n’avez pas déjà, consultez le [visite guidée de F #](../tour.md), qui aborde certaines des principales fonctionnalités du langage F #.  Il vous donner une vue d’ensemble de certaines des fonctionnalités de F # et fournissent des exemples de code suffisamment que vous pouvez copier dans Visual Studio et exécuter.  Il existe également des ressources exceptionnelles externes, vous pouvez utiliser, présentée dans le [Guide F #](../index.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Visite guidée de F #](../tour.md) [référence du langage F #](../language-reference/index.md) [l’inférence de Type](../language-reference/type-inference.md) [symbole et l’opérateur de référence](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Présentation de F#](../tour.md)
+- [Référence du langage F #](../language-reference/index.md)
+- [Inférence de type](../language-reference/type-inference.md)
+- [Référence des symboles et d’opérateur](../language-reference/symbol-and-operator-reference/index.md)

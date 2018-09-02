@@ -2,15 +2,15 @@
 title: Files d'attente avec transaction
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-ms.openlocfilehash: b125158a113079d87eb6926393d5a2b5fe326824
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519679"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408813"
 ---
 # <a name="transacted-queues"></a>Files d'attente avec transaction
-Cet exemple montre comment intégrer des files d’attente et les transactions dans Windows Workflow Foundation (WF) pour créer des services fiables et évolutifs. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` est utilisé dans le workflow client pour envoyer un message à une file d’attente sous une transaction à l’aide du <xref:System.ServiceModel.NetMsmqBinding>. Un <xref:System.ServiceModel.Activities.TransactedReceiveScope> est utilisé sur le serveur pour recevoir des messages de la file d'attente et mettre à jour l'état du workflow sous la même transaction.  
+Cet exemple montre comment intégrer des files d’attente et les transactions dans Windows Workflow Foundation (WF) pour créer des services fiables et évolutifs. Un <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` est utilisé dans le workflow client pour envoyer un message à une file d’attente sous une transaction utilisant le <xref:System.ServiceModel.NetMsmqBinding>. Un <xref:System.ServiceModel.Activities.TransactedReceiveScope> est utilisé sur le serveur pour recevoir des messages de la file d'attente et mettre à jour l'état du workflow sous la même transaction.  
   
 ## <a name="demonstrates"></a>Démonstrations  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive> et corrélation basée sur le contenu.  
@@ -24,7 +24,7 @@ Cet exemple montre comment intégrer des files d’attente et les transactions d
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Installez et configurez MSMQ. Consultez [l’installation de Message Queuing](http://go.microsoft.com/fwlink/?LinkId=178526) pour plus d’informations.  
+1.  Installez et configurez MSMQ. Consultez [l’installation de Message Queuing](https://go.microsoft.com/fwlink/?LinkId=178526) pour plus d’informations.  
   
 2.  Vérifiez que MSDTC fonctionne en exécutant la commande suivante sur une ligne de commande. `net start msdtc`  
   
@@ -35,6 +35,6 @@ Cet exemple montre comment intégrer des files d’attente et les transactions d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedQueues`

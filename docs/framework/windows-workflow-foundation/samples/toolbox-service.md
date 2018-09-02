@@ -2,12 +2,12 @@
 title: Service de boîte à outils
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516189"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406460"
 ---
 # <a name="toolbox-service"></a>Service de boîte à outils
 Cet exemple montre comment mettre à jour les activités de la boîte à outils [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] en fonction du contexte du workflow. L'exemple contient un workflow qui modifie le contenu de la boîte à outils suivant qu'une activité personnalisée est sélectionnée ou non.  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  Ouvrez le fichier Workflow.xaml.  
   
-4.  Ajouter un **CustomActivity** en faisant glisser à partir de la boîte à outils. Notez une catégorie de boîte à outils supplémentaire appelée : **nouvelle catégorie WF** avec une activité supplémentaire **affecter**.  
+4.  Ajouter un **CustomActivity** en faisant glisser à partir de la boîte à outils. Notez qu’une catégorie de boîte à outils supplémentaire appelée : **nouvelle catégorie WF** avec une activité supplémentaire **affecter**.  
   
-5.  Présent, désélectionnez la **CustomActivity** en faisant glisser une autre activité dans celui-ci.  
+5.  Présent, désélectionnez le **CustomActivity** en faisant glisser une autre activité dedans.  
   
-6.  L’élément **affecter** dans la catégorie **nouvelle catégorie WF** sous la boîte à outils est à présent supprimé. De plus, étant donné qu'il ne reste aucun élément dans la catégorie, cette dernière est également supprimée.  
+6.  L’élément **affecter** dans la catégorie **nouvelle catégorie WF** sous boîte à outils est supprimé. De plus, étant donné qu'il ne reste aucun élément dans la catégorie, cette dernière est également supprimée.  
   
-7.  Sélectionnez le **CustomActivity** à nouveau et la catégorie et **affecter** activité est à nouveau ajoutée.  
+7.  Sélectionnez le **CustomActivity** à nouveau et la catégorie et **affecter** activité est rajoutée.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

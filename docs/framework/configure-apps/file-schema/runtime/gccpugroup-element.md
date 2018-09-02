@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4461667bdb47d410c857b4ac2c9dd268438a02f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 21ab18cded2b9a16fe2520547287198d3cfe6b74
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744016"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416772"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; élément
 Indique si le garbage collection prend en charge plusieurs groupes de processeurs.  
@@ -41,8 +41,8 @@ Indique si le garbage collection prend en charge plusieurs groupes de processeur
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|`false`|Le garbage collection ne prend pas en charge plusieurs groupes de l’UC. Il s'agit de la valeur par défaut.|  
-|`true`|Le garbage collection prend en charge plusieurs groupes de l’UC, si le garbage collection côté serveur est activé.|  
+|`false`|Le garbage collection ne prend pas en charge plusieurs groupes d’UC. Il s'agit de la valeur par défaut.|  
+|`true`|Le garbage collection prend en charge plusieurs groupes d’UC, si le garbage collection côté serveur est activé.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -55,13 +55,13 @@ Indique si le garbage collection prend en charge plusieurs groupes de processeur
 |`runtime`|Contient des informations sur les liaisons d’assembly et l’opération garbage collection.|  
   
 ## <a name="remarks"></a>Notes  
- Quand un ordinateur dispose de plusieurs groupes de l’UC et de garbage collection côté serveur est activé (voir la [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) élément), l’activation de cet élément s’étend le garbage collection dans tous les groupes de l’UC et accepte tous les cœurs dans compte lors de la création et l’équilibrage des segments de mémoire.  
+ Quand un ordinateur a plusieurs groupes d’UC et de garbage collection côté serveur est activé (voir la [ \<< gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) élément), l’activation de cet élément s’étend le garbage collection dans tous les groupes d’UC et prend tous les cœurs dans compte lors de la création et l’équilibrage des segments de mémoire.  
   
 > [!NOTE]
->  Cet élément s’applique uniquement aux threads de garbage collection. Pour activer l’exécution pour distribuer des threads de l’utilisateur sur tous les groupes de l’UC, vous devez également activer le [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) élément.  
+>  Cet élément s’applique uniquement aux threads de garbage collection. Pour activer le runtime distribuer les threads utilisateur sur tous les groupes d’UC, vous devez également activer le [< Thread_UseAllCpuGroups >](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md) élément.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment activer un garbage collection pour les groupes de plusieurs UC.  
+ L’exemple suivant montre comment activer le garbage collection pour plusieurs groupes d’UC.  
   
 ```xml  
 <configuration>  
@@ -75,5 +75,5 @@ Indique si le garbage collection prend en charge plusieurs groupes de processeur
 ## <a name="see-also"></a>Voir aussi  
  [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Comment : désactiver le Garbage Collection simultané](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
- [Garbage collection de station de travail et de serveur](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)
+ [Comment : désactiver le Garbage Collection simultané](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Garbage collection de station de travail et serveur](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

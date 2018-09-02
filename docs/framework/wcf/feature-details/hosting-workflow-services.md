@@ -2,15 +2,15 @@
 title: Hébergement de services de workflow
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932831"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416363"
 ---
 # <a name="hosting-workflow-services"></a>Hébergement de services de workflow
-Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie WCF et sont donc hébergés de manière similaire. Comme les services WCF, les services de flux de travail peuvent être hébergés dans toute application managée, sous Internet Information Services (IIS), ou sous les services Internet (WAS, Windows Process Activation Services). En outre, les services de workflow peuvent être hébergés sous Windows Server AppFabric. Pour plus d’informations sur Windows Server AppFabric, consultez [documentation de Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement d’AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Pour plus d’informations sur les différentes façons d’héberger WCF services, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).
+Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie WCF et sont donc hébergés de manière similaire. Comme les services WCF, les services de flux de travail peuvent être hébergés dans toute application managée, sous Internet Information Services (IIS), ou sous les services Internet (WAS, Windows Process Activation Services). En outre, les services de workflow peuvent être hébergés sous Windows Server AppFabric. Pour plus d’informations sur Windows Server AppFabric, consultez [documentation de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement d’AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Pour plus d’informations sur les différentes façons d’héberger WCF services, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée
  Pour héberger un service de workflow dans une application managée, utilisez la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Le constructeur <xref:System.ServiceModel.Activities.WorkflowServiceHost> vous permet de spécifier une instance singleton du service de workflow, une définition du service de workflow ou une activité qui utilise les activités de messagerie du workflow. Appel de <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`>, le service commence à écouter les messages entrants.
@@ -51,7 +51,7 @@ Un service de workflow doit être hébergé pour pouvoir répondre aux messages 
  Références aux activités personnalisées doivent être ajoutées à la <`Assemblies`> sous <`System.Web.Compilation`> afin qu’elles soient chargées dans le domaine d’Application et le désérialiseur XAML est en mesure de localiser les types. Ces paramètres peuvent être effectués au niveau de l'application ou dans le Web.config racine si les paramètres doivent s'appliquer à toutes les applications sur l'ordinateur.
 
 ## <a name="deployment"></a>Déploiement
- L'outil de déploiement Web a été créé pour simplifier le travail de déploiement. Cet outil vous permet de migrer des applications entre IIS 6.0 et IIS 7.0, de synchroniser des batteries de serveurs et d’empaqueter, d’archiver et de déployer des applications Web. Pour plus d’informations, consultez [outil de déploiement MS](http://go.microsoft.com/fwlink/?LinkId=178690).
+ L'outil de déploiement Web a été créé pour simplifier le travail de déploiement. Cet outil vous permet de migrer des applications entre IIS 6.0 et IIS 7.0, de synchroniser des batteries de serveurs et d’empaqueter, d’archiver et de déployer des applications Web. Pour plus d’informations, consultez [outil de déploiement MS](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>Voir aussi
 

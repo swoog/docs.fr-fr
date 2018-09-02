@@ -1,15 +1,15 @@
 ---
-title: Synchronisation de threads (Visual Basic)
+title: Synchronisation des threads (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655089"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406622"
 ---
-# <a name="thread-synchronization-visual-basic"></a>Synchronisation de threads (Visual Basic)
+# <a name="thread-synchronization-visual-basic"></a>Synchronisation des threads (Visual Basic)
 Les sections suivantes décrivent les fonctionnalités et les classes qui peuvent être utilisées pour synchroniser l’accès aux ressources dans les applications multithread.  
   
  L’un des avantages de l’utilisation de plusieurs threads dans une application est que chaque thread s’exécute de façon asynchrone. Pour les applications Windows, cela permet d’exécuter les tâches longues en arrière-plan pendant que la fenêtre et les contrôles de l’application restent réactifs. Pour les applications serveur, le multithreading offre la possibilité de gérer chaque demande entrante avec un thread différent. Sinon, une nouvelle demande ne serait pas prise en charge tant que la demande précédente n’aurait pas été entièrement satisfaite.  
@@ -29,7 +29,7 @@ Les sections suivantes décrivent les fonctionnalités et les classes qui peuven
 ## <a name="the-lock-and-synclock-keywords"></a>Les mots-clés lock et SyncLock  
  Visual Basic `SyncLock` instruction peut être utilisée pour garantir qu’un bloc de code s’exécute jusqu'à son achèvement sans interruption par d’autres threads. Pour cela, elle obtient un verrou d’exclusion mutuelle pour un objet donné pour la durée du bloc de code.  
   
- Une instruction `SyncLock` se voit attribuer un objet comme argument et est suivie par un bloc de code qui doit être exécuté par un seul thread à la fois. Par exemple :  
+ Une instruction `SyncLock` se voit attribuer un objet comme argument et est suivie par un bloc de code qui doit être exécuté par un seul thread à la fois. Exemple :  
   
 ```vb  
 Public Class TestThreading  
@@ -54,7 +54,7 @@ End Class
 -   <xref:System.Threading.Monitor>  
   
 ## <a name="monitors"></a>Analyses  
- Comme le mot clé `SyncLock`, les moniteurs empêchent l’exécution simultanée de blocs de code par plusieurs threads. La méthode <xref:System.Threading.Monitor.Enter%2A> permet à un seul thread de passer aux instructions suivantes ; tous les autres threads sont bloqués jusqu’à ce que le thread d’exécution appelle <xref:System.Threading.Monitor.Exit%2A>. Cela équivaut à utiliser le mot clé `SyncLock`. Par exemple :  
+ Comme le mot clé `SyncLock`, les moniteurs empêchent l’exécution simultanée de blocs de code par plusieurs threads. La méthode <xref:System.Threading.Monitor.Enter%2A> permet à un seul thread de passer aux instructions suivantes ; tous les autres threads sont bloqués jusqu’à ce que le thread d’exécution appelle <xref:System.Threading.Monitor.Exit%2A>. Cela équivaut à utiliser le mot clé `SyncLock`. Exemple :  
   
 ```vb  
 SyncLock x  
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [Applications multithread (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [SyncLock (instruction)](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Mutex](../../../../standard/threading/mutexes.md)  
  [Opérations verrouillées](../../../../standard/threading/interlocked-operations.md)  

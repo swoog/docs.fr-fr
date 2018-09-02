@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour héberger et exécuter un service Windows Communication Foundation de base
+title: 'Comment : héberger et exécuter un service Windows Communication Foundation de base'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: f1c56ed83fa214cf781a833e05642635ac24b0c5
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753498"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404669"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Guide pratique pour héberger et exécuter un service Windows Communication Foundation de base
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Comment : héberger et exécuter un service Windows Communication Foundation de base
 Il s’agit de la troisième des six tâches nécessaires pour créer une application WCF (Windows Communication Foundation). Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md).  
   
  Cette rubrique explique comment héberger un service WCF (Windows Communication Foundation) dans une application console. Cette procédure se compose des étapes suivantes :  
@@ -151,7 +151,7 @@ Il s’agit de la troisième des six tâches nécessaires pour créer une applic
   
     2.  Étape 2 – Crée une instance de la classe <xref:System.ServiceModel.ServiceHost> pour héberger le service. Le constructeur prend deux paramètres, le type de la classe qui implémente le contrat de service et l'adresse de base du service.  
   
-    3.  Étape 3 - Crée une instance <xref:System.ServiceModel.Description.ServiceEndpoint>. Un point de terminaison de service est composé d’une adresse, d’une liaison et d’un contrat de service. Le constructeur <xref:System.ServiceModel.Description.ServiceEndpoint> prend donc le type d'interface de contrat de service, une liaison et une adresse. Le contrat de service est `ICalculator`, que vous définissez et implémentez dans le type de service. La liaison utilisée dans cet exemple est <xref:System.ServiceModel.WSHttpBinding>, qui est une liaison intégrée utilisée pour se connecter aux points de terminaison qui sont conformes aux spécifications WS-*. Pour plus d’informations sur les liaisons WCF, consultez [Vue d’ensemble des liaisons WCF](../../../docs/framework/wcf/bindings-overview.md). L'adresse est ajoutée à l'adresse de base pour identifier le point de terminaison. L’adresse spécifiée dans ce code est « CalculatorService ». L’adresse complète du point de terminaison est donc `"http://localhost:8000/GettingStarted/CalculatorService"`. L’ajout d’un point de terminaison de service est facultatif avec .NET Framework 4.0 ou une version ultérieure. Dans ces versions, si aucun point de terminaison n'est ajouté dans le code ou dans la configuration, WCF ajoute un point de terminaison par défaut pour chaque combinaison d'adresse de base et de contrat implémentée par le service. Pour plus d’informations sur les points de terminaison par défaut, consultez [Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Étape 3 - Crée une instance <xref:System.ServiceModel.Description.ServiceEndpoint>. Un point de terminaison de service est composé d’une adresse, d’une liaison et d’un contrat de service. Le constructeur <xref:System.ServiceModel.Description.ServiceEndpoint> prend donc le type d'interface de contrat de service, une liaison et une adresse. Le contrat de service est `ICalculator`, que vous définissez et implémentez dans le type de service. La liaison utilisée dans cet exemple est <xref:System.ServiceModel.WSHttpBinding>, qui est une liaison intégrée utilisée pour se connecter aux points de terminaison qui sont conformes aux spécifications WS-*. Pour plus d’informations sur les liaisons WCF, consultez [Vue d’ensemble des liaisons WCF](../../../docs/framework/wcf/bindings-overview.md). L'adresse est ajoutée à l'adresse de base pour identifier le point de terminaison. L’adresse spécifiée dans ce code est « CalculatorService », par conséquent, l’adresse complète du point de terminaison est `"http://localhost:8000/GettingStarted/CalculatorService"`.  
   
         > [!IMPORTANT]
         >  L'ajout d'un point de terminaison de service est facultatif lorsque vous utilisez .NET Framework 4 ou version ultérieure. Dans ces versions, si aucun point de terminaison n'est ajouté dans le code ou dans la configuration, WCF ajoute un point de terminaison par défaut pour chaque combinaison d'adresse de base et de contrat implémentée par le service. Pour plus d’informations sur les points de terminaison par défaut, consultez [Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md). Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -160,6 +160,12 @@ Il s’agit de la troisième des six tâches nécessaires pour créer une applic
   
     5.  Étape 5 - Ouvrir <xref:System.ServiceModel.ServiceHost> pour écouter les messages entrants. Notez que le code attend que l'utilisateur appuie sur Entrée. Si vous n'effectuez pas cette opération, l'application se ferme immédiatement et le service s'arrête. Notez également le bloc try/catch utilisé. Une fois que <xref:System.ServiceModel.ServiceHost> a été instancié, le reste du code est placé dans un bloc try/catch. Pour plus d’informations sur l’interception en toute sécurité des exceptions levées par <xref:System.ServiceModel.ServiceHost>, consultez la section [Éviter les problèmes avec l’instruction Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)  
   
+> [!IMPORTANT]
+> Modifiez le fichier App.config dans GettingStartedLib afin de refléter les modifications apportées dans le code : 
+> 1. Modifiez la ligne 14 pour `<service name="GettingStartedLib.CalculatorService">`
+> 2. Modifiez la ligne 17 en `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+> 3. Remplacez la ligne 22 à `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
+        
 ### <a name="to-verify-the-service-is-working"></a>Pour vérifier que le service fonctionne  
   
 1.  Exécutez l'application console GettingStartedHost à partir de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Lors de l'exécution sur [!INCLUDE[wv](../../../includes/wv-md.md)] et les systèmes d'exploitation ultérieurs, le service doit être exécuté avec des privilèges d'administrateur. Dans la mesure où Visual Studio a été exécuté avec des privilèges d’administrateur, GettingStartedHost est également exécuté avec des privilèges d’administrateur. Vous pouvez aussi démarrer une nouvelle invite de commandes qui l'exécute avec les privilèges d'administrateur et y exécuter service.exe.  

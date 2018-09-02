@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 79749f5e593fbf4ea282cc5c8000be88098b702f
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874593"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406494"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Regroupement de connexions SQL Server (ADO.NET)
 La connexion à un serveur de base de données consiste généralement en plusieurs étapes de longue durée. Un canal physique tel qu'un socket ou un canal nommé doit être établi, le contrôle initial avec le serveur doit avoir lieu, les informations de chaîne de connexion doivent être analysées, la connexion doit être authentifiée par le serveur, des contrôles doivent être effectués pour l'inscription dans la transaction en cours, etc.  
@@ -124,7 +124,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Rôles d'application et regroupement de connexions  
- Après qu'un rôle d'application SQL Server a été activé en appelant la procédure stockée système `sp_setapprole`, le contexte de sécurité de cette connexion ne peut pas être rétabli. Toutefois, lorsque le regroupement est activé, la connexion est retournée au pool et une erreur se produit en cas de réutilisation de la connexion regroupée. Pour plus d’informations, consultez l’article de la Base de connaissances, «[erreurs du rôle d’application SQL avec OLE DB resource pooling](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564). »  
+ Après qu'un rôle d'application SQL Server a été activé en appelant la procédure stockée système `sp_setapprole`, le contexte de sécurité de cette connexion ne peut pas être rétabli. Toutefois, lorsque le regroupement est activé, la connexion est retournée au pool et une erreur se produit en cas de réutilisation de la connexion regroupée. Pour plus d’informations, consultez l’article de la Base de connaissances, «[erreurs du rôle d’application SQL avec OLE DB resource pooling](https://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564). »  
   
 ### <a name="application-role-alternatives"></a>Alternatives aux rôles d'application  
  Il est recommandé de tirer parti des mécanismes de sécurité qui peuvent être employés à la place des rôles d'application. Pour plus d’informations, consultez [création de rôles d’Application dans SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  
@@ -133,4 +133,4 @@ using (SqlConnection connection = new SqlConnection(
  [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [Compteurs de performance](../../../../docs/framework/data/adonet/performance-counters.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

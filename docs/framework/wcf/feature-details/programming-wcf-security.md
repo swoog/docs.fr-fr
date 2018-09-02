@@ -9,24 +9,25 @@ helpviewer_keywords:
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3eb645dcc5b8cc1c52818e290699ebadcd0943c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a58260ecf5a4126554c23f1a5f8d7b3ba43f215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417748"
 ---
 # <a name="programming-wcf-security"></a>Programmation de la sécurité dans WCF
-Cette rubrique décrit les tâches de programmation fondamentales utilisés pour créer une application Windows Communication Foundation (WCF) sécurisée. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, appelés collectivement *sécurité de transfert*. Cette rubrique ne couvre pas d’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Cette rubrique décrit les tâches de programmation fondamentales utilisées pour créer une application Windows Communication Foundation (WCF) sécurisé. Cette rubrique couvre uniquement l’authentification, la confidentialité et l’intégrité, collectivement appelées *sécurité de transfert*. Cette rubrique ne couvre pas l’autorisation (le contrôle d’accès aux ressources ou services) ; Pour plus d’informations sur l’autorisation, consultez [autorisation](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 > [!NOTE]
->  Pour obtenir une présentation des concepts de sécurité, notamment en ce qui concerne les WCF, précieuse afficher l’ensemble de modèles et meilleures pratiques de didacticiels sur MSDN à l’adresse [scénarios, les modèles et les directives d’implémentation pour Web Services Enhancements (WSE) 3.0](http://go.microsoft.com/fwlink/?LinkID=88250).  
+>  Pour une présentation correcte des concepts de sécurité, en particulier en ce qui concerne les WCF, consultez l’ensemble de didacticiels de modèles et pratiques sur MSDN à l’adresse [scénarios, les modèles et les conseils d’implémentation pour Web Services Enhancements (WSE) 3.0](https://go.microsoft.com/fwlink/?LinkID=88250).  
   
- Programmation de la sécurité WCF est basé sur les trois étapes suivantes : le mode de sécurité, un type d’informations d’identification du client et les valeurs d’informations d’identification. Ces étapes peuvent être effectuées au choix dans le code ou la configuration.  
+ Programmation de la sécurité WCF repose sur trois étapes définissant les éléments suivants : le mode de sécurité, un type d’informations d’identification du client et les valeurs d’informations d’identification. Ces étapes peuvent être effectuées au choix dans le code ou la configuration.  
   
 ## <a name="setting-the-security-mode"></a>Définition du mode de sécurité  
  La section suivante présente les étapes générales pour la programmation avec le mode de sécurité dans WCF :  
   
-1.  Sélectionnez une liaison prédéfinie adaptée aux exigences de votre application. Pour obtenir la liste des options de liaison, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). Par défaut, la sécurité de pratiquement toutes les liaisons est activée. La seule exception concerne le <xref:System.ServiceModel.BasicHttpBinding> classe (à l’aide de la configuration, le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
+1.  Sélectionnez une liaison prédéfinie adaptée aux exigences de votre application. Pour obtenir la liste des liaisons, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Par défaut, la sécurité de pratiquement toutes les liaisons est activée. La seule exception concerne le <xref:System.ServiceModel.BasicHttpBinding> classe (à l’aide de la configuration, le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)).  
   
      Le transport dépend de la liaison sélectionnée. Par exemple, <xref:System.ServiceModel.WSHttpBinding> utilise le transport HTTP tandis que <xref:System.ServiceModel.NetTcpBinding> utilise le transport TCP.  
   
@@ -36,19 +37,19 @@ Cette rubrique décrit les tâches de programmation fondamentales utilisés pour
   
     1.  `Transport`  
   
-         La sécurité de transport dépend du mécanisme utilisé par la liaison sélectionnée. Par exemple, si vous utilisez la liaison `WSHttpBinding`, la sécurité utilisée correspondra à Secure Sockets Layer (SSL) (il s'agit également de la sécurité utilisée pour le protocole HTTPS). De manière générale, le principal avantage de la sécurité de niveau transport réside dans le fait qu'elle offre un débit relativement élevé quel que soit le transport utilisé. Elle présente cependant deux inconvénients. Le premier réside dans le fait que le mécanisme de transport impose quel type d'informations d'identification doit être utilisé pour authentifier un utilisateur. Cela pose problème uniquement lorsque le service concerné doit interagir avec d'autres services exigeant un autre type d'informations d'identification. Le second réside dans le fait que la sécurité est implémentée saut par saut plutôt que de bout en bout. Cela peut poser un problème lorsque les messages circulant entre le client et le service concernés rencontrent des intermédiaires. Pour plus d’informations sur le transport à utiliser, consultez [choisir un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Pour plus d’informations sur l’utilisation de la sécurité de transport, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
+         La sécurité de transport dépend du mécanisme utilisé par la liaison sélectionnée. Par exemple, si vous utilisez la liaison `WSHttpBinding`, la sécurité utilisée correspondra à Secure Sockets Layer (SSL) (il s'agit également de la sécurité utilisée pour le protocole HTTPS). De manière générale, le principal avantage de la sécurité de niveau transport réside dans le fait qu'elle offre un débit relativement élevé quel que soit le transport utilisé. Elle présente cependant deux inconvénients. Le premier réside dans le fait que le mécanisme de transport impose quel type d'informations d'identification doit être utilisé pour authentifier un utilisateur. Cela pose problème uniquement lorsque le service concerné doit interagir avec d'autres services exigeant un autre type d'informations d'identification. Le second réside dans le fait que la sécurité est implémentée saut par saut plutôt que de bout en bout. Cela peut poser un problème lorsque les messages circulant entre le client et le service concernés rencontrent des intermédiaires. Pour plus d’informations sur le transport à utiliser, consultez [choix d’un Transport](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Pour plus d’informations sur l’utilisation de la sécurité du transport, consultez [vue d’ensemble de sécurité de Transport](../../../../docs/framework/wcf/feature-details/transport-security-overview.md).  
   
     2.  `Message`  
   
          La sécurité de niveau message signifie que chaque message comporte les en-têtes et les données nécessaires à sa sécurisation. La composition des en-têtes variant, vous pouvez ajouter aux messages un nombre illimité d'informations d'identification. Cette possibilité est essentielle lorsque votre service doit interagir avec des services exigeant un type d'informations d'identification spécifique qu'un mécanisme de transport ne peut fournir ou lorsqu'un message doit être utilisé par plusieurs services, chacun d'eux exigeant un type d'informations d'identification différent.  
   
-         Pour plus d’informations, consultez [la sécurité des messages](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
+         Pour plus d’informations, consultez [sécurité de Message](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md).  
   
     3.  `TransportWithMessageCredential`  
   
          Ce mode utilise la couche de transport pour sécuriser le transfert des messages, tandis que chaque message inclut l'ensemble des informations d'identification requises par les autres services. Ce mode allie les avantages de la sécurité de niveau transport aux avantages présentés par la sécurité de niveau message, notamment celui d'utiliser un nombre illimité d'informations d'identification. Ce mode est disponible avec les liaisons suivantes : <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSFederationHttpBinding>, <xref:System.ServiceModel.NetPeerTcpBinding> et <xref:System.ServiceModel.WSHttpBinding>.  
   
-3.  Si vous choisissez d’utiliser la sécurité de transport pour HTTP, c’est-à-dire HTTPS, vous devez également configurer l’hôte avec un certificat SSL et activer ce certificat sur l’un des ports de votre ordinateur. Pour plus d’informations, consultez [sécurité de Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
+3.  Si vous choisissez d’utiliser la sécurité de transport pour HTTP, c’est-à-dire HTTPS, vous devez également configurer l’hôte avec un certificat SSL et activer ce certificat sur l’un des ports de votre ordinateur. Pour plus d’informations, consultez [sécurité du Transport HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
 4.  Si vous utilisez la liaison <xref:System.ServiceModel.WSHttpBinding> et que vous n'avez pas besoin d'établir une session sécurisée, affectez à la propriété <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> la valeur `false`.  
   

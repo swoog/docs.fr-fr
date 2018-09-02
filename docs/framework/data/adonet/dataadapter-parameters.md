@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: ad046e4695365780bc6059617766a488ba85f642
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41a7b5061a4a90f0b67658440e737c40295d5d5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759369"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415909"
 ---
 # <a name="dataadapter-parameters"></a>Paramètres DataAdapter
 L'objet <xref:System.Data.Common.DbDataAdapter> possède quatre propriétés qui sont utilisées pour récupérer des données dans la source de données et y mettre des données à jour : la propriété <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> retourne des données de la source de données et les propriétés <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> et <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> sont utilisées pour gérer les modifications au niveau de la source de données. La  propriété `SelectCommand` doit être définie avant d'appeler la méthode `Fill` du `DataAdapter`. Les propriétés `InsertCommand`, `UpdateCommand` ou `DeleteCommand` doivent être définies avant que la méthode `Update` du `DataAdapter` ne soit appelée, en fonction des modifications qui ont été apportées aux données dans le <xref:System.Data.DataTable>. Par exemple, si des lignes ont été ajoutées, `InsertCommand` doit être défini avant d'appeler `Update`. Lorsque `Update` traite une ligne insérée, mise à jour ou supprimée, le `DataAdapter` utilise la propriété `Command` respective pour traiter l'action. Les informations actuelles concernant la ligne modifiée sont passées à l'objet `Command` par le biais de la collection `Parameters`.  
@@ -25,7 +25,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  La syntaxe des espaces réservés des paramètres dépend de la source de données. Cet exemple montre les espaces réservés pour une source de données SQL Server. Utilisez des espaces réservés point d'interrogation (?) pour les paramètres <xref:System.Data.OleDb> et <xref:System.Data.Odbc>.  
   
- Dans cet exemple Visual Basic, le `CompanyName` est mis à jour avec la valeur de la `@CompanyName` paramètre pour la ligne où `CustomerID` est égal à la valeur de le `@CustomerID` paramètre. Les paramètres extraient les informations à partir de la ligne modifiée à l’aide de la <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> propriété de la <xref:System.Data.SqlClient.SqlParameter> objet. Les paramètres suivants sont ceux de l'instruction UPDATE de l'exemple précédent. Le code est basé sur l'hypothèse que la variable `adapter` représente un objet <xref:System.Data.SqlClient.SqlDataAdapter> valide.  
+ Dans cet exemple Visual Basic, le `CompanyName` champ est mis à jour avec la valeur de la `@CompanyName` paramètre pour la ligne où `CustomerID` est égal à la valeur de la `@CustomerID` paramètre. Les paramètres extraient les informations à partir de la ligne modifiée à l’aide de la <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> propriété de la <xref:System.Data.SqlClient.SqlParameter> objet. Les paramètres suivants sont ceux de l'instruction UPDATE de l'exemple précédent. Le code est basé sur l'hypothèse que la variable `adapter` représente un objet <xref:System.Data.SqlClient.SqlDataAdapter> valide.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  La méthode `Add` de la collection `Parameters` prend le nom du paramètre, le type de données, la taille (si elle est applicable au type) et le nom de la propriété <xref:System.Data.Common.DbParameter.SourceColumn%2A> du `DataTable`. Notez que la propriété <xref:System.Data.Common.DbParameter.SourceVersion%2A> du paramètre `@CustomerID` a la valeur `Original`. Cela garantit que la ligne existante dans la source de données est mise à jour si la valeur de la ou des colonnes d'identification a été modifiée dans l'objet <xref:System.Data.DataRow>. Dans ce cas, la valeur de ligne `Original` correspondrait à la valeur actuelle de la source de données et la valeur de ligne `Current` contiendrait la valeur mise à jour. Le `SourceVersion` du paramètre `@CompanyName` n'est pas défini et utilise la valeur de ligne `Current` par défaut.  
   
 > [!NOTE]
->  Pour les opérations `Fill` du `DataAdapter` aussi bien que pour les méthodes `Get` du `DataReader`, le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est déduit du type retourné du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. L’élément déduit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types et méthodes d’accesseur pour les types de données Microsoft SQL Server, OLE DB et ODBC sont décrits dans [des mappages de Type de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  Pour les opérations `Fill` du `DataAdapter` aussi bien que pour les méthodes `Get` du `DataReader`, le type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] est déduit du type retourné du fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Le déduit [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] types et méthodes d’accesseur pour les types de données Microsoft SQL Server, OLE DB et ODBC sont décrits dans [mappages de Type de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
  Le `SourceColumn` et `SourceVersion` peuvent être passés comme arguments au constructeur `Parameter`ou définis comme propriétés d'un `Parameter` existant. `SourceColumn` est le nom de l'objet <xref:System.Data.DataColumn> provenant de l'objet <xref:System.Data.DataRow> dans lequel la valeur de `Parameter` sera récupérée. `SourceVersion` spécifie la version du `DataRow` que le `DataAdapter` utilise pour récupérer la valeur.  
@@ -170,4 +170,4 @@ adapter.Fill(customers, "Customers");
  [Mise à jour de sources de données avec des DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Modification des données avec les procédures stockées](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  [Mappages de types de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
