@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255559"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464098"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Versions et dépendances du .NET Framework
 Chaque version du .NET Framework contient le Common Language Runtime (CLR), les bibliothèques de classes de base et d'autres bibliothèques managées. Cette rubrique décrit les principales fonctionnalités du .NET Framework par version, fournit des informations sur les versions CLR sous-jacentes et les environnements de développement associés, et identifie les versions installées par le système d'exploitation Windows.  
@@ -61,7 +61,7 @@ Chaque version du .NET Framework contient le Common Language Runtime (CLR), les 
   
      [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] et [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] sont ici utilisés à titre d’exemples uniquement. Ce principe s’applique à toute application qui cible une version du .NET Framework postérieure à celle installée sur le système sur lequel il s’exécute.  
   
- Certaines modifications du .NET Framework peuvent nécessiter des modifications au niveau du code de votre application ; consultez [Compatibilité des applications](../../../docs/framework/migration-guide/application-compatibility.md) avant d’exécuter vos applications existantes avec le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou les versions ultérieures. Pour plus d’informations sur l’installation de la version actuelle, consultez [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md). Pour plus d’informations sur la prise en charge du .NET Framework, consultez la [FAQ sur la politique de support pour Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) sur le site web Aide et Support de Microsoft.  
+ Certaines modifications du .NET Framework peuvent nécessiter des modifications au niveau du code de votre application ; consultez [Compatibilité des applications](../../../docs/framework/migration-guide/application-compatibility.md) avant d’exécuter vos applications existantes avec le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou les versions ultérieures. Pour plus d’informations sur l’installation de la version actuelle, consultez [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md). Pour plus d’informations sur la prise en charge du .NET Framework, consultez la [FAQ sur la politique de support pour Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) sur le site web Aide et Support de Microsoft.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Ciblage et exécution d'applications pour les versions antérieures  
  Les versions .NET Framework 2.0, 3.0 et 3.5 sont générées avec la même version du CLR (CLR 2.0). Ces versions représentent les couches successives d'une même installation. Chaque version est générée de façon incrémentielle par-dessus les versions antérieures. Il n'est pas possible d'exécuter les versions 2.0, 3.0 et 3.5 côte à côte sur un ordinateur. Lorsque vous installez la version 3.5, vous obtenez automatiquement les couches 2.0 et 3.0, si bien que les applications conçues pour les versions 2.0, 3.0 et 3.5 peuvent toutes s'exécuter sur la version 3.5. Toutefois, le .NET Framework 4 met fin à cette approche en couches et représente, ainsi que ses versions ultérieures (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 et 4.7.2), les couches successives d’une même installation.  Depuis .NET Framework 4, vous pouvez utiliser l'hébergement côte à côte in-process pour exécuter plusieurs versions du CLR dans un processus unique. Pour plus d’informations, consultez [Assemblys et exécution côte à côte](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
@@ -81,5 +81,5 @@ Chaque version du .NET Framework contient le Common Language Runtime (CLR), les 
 ## <a name="see-also"></a>Voir aussi
 
 [Compatibilité des versions](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Politique de support pour Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Politique de support pour Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [Résolution des problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
