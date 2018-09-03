@@ -2,12 +2,12 @@
 title: Programmes de résolution d'homologue
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 760011dda4a3059a217dcfbfc3fddaa67edc9995
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494606"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385079"
 ---
 # <a name="peer-resolvers"></a>Programmes de résolution d'homologue
 Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d'autres nœuds. Les adresses IP sont obtenues en contactant un service de résolution, qui prend l'ID de la maille et retourne une liste d'adresses correspondant aux nœuds enregistrés sous cet ID de maille particulier. Le programme de résolution conserve une liste des adresses inscrites, qu'il crée en inscrivant chaque nœud de la maille avec le service.  
@@ -17,7 +17,7 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
 ## <a name="supported-peer-resolvers"></a>Programmes de résolution de pair pris en charge  
  Le canal homologue prend en charge deux types de programmes de résolution : le protocole PNRP (Peer Name Resolution Protocol) et les services de résolution personnalisés.  
   
- Par défaut, le canal homologue utilise le service de résolution de pair PNRP pour la découverte d'homologues et de voisins dans la maille. Pour les situations/plateformes où PNRP n’est pas disponible ou possible, Windows Communication Foundation (WCF) fournit un service de découverte basée sur un serveur autre - le <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Vous pouvez également définir explicitement un service de résolution personnalisé en écrivant une classe qui implémente l'interface <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
+ Par défaut, le canal homologue utilise le service de résolution de pair PNRP pour la découverte d'homologues et de voisins dans la maille. Pour les situations/plateformes où PNRP n’est pas disponible ou possible, Windows Communication Foundation (WCF) fournit un service de découverte de remplacement, basé sur le serveur - la <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>. Vous pouvez également définir explicitement un service de résolution personnalisé en écrivant une classe qui implémente l'interface <xref:System.ServiceModel.PeerResolvers.IPeerResolverContract>.  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>Protocole PNRP (Peer Name Resolution Protocol)  
  PNRP, le programme de résolution par défaut de [!INCLUDE[wv](../../../../includes/wv-md.md)], est un service de résolution de noms distribué et sans serveur. PNRP peut également être utilisé sur [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] en installant le Pack réseau avancé. Deux clients qui exécutent la même version de PNRP peuvent se localiser mutuellement à l'aide de ce protocole, à condition qu'ils remplissent certaines conditions (telles que l'absence d'un pare-feu d'entreprise intermédiaire). Notez que la version de PNRP fournie avec [!INCLUDE[wv](../../../../includes/wv-md.md)] est plus récente que celle incluse dans le Pack réseau avancé. Reportez-vous au Centre de téléchargement Microsoft pour obtenir des mises à jour de PNRP pour [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)].  
@@ -32,7 +32,7 @@ Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d
 > [!NOTE]
 >  Lors de l'utilisation de réseaux locaux et impromptus avec un programme de résolution personnalisé, il est fortement recommandé que les applications utilisant ou prenant en charge des réseaux de liaison locale ou impromptus incluent une logique qui sélectionne une adresse de liaison locale unique à utiliser lors de la connexion. Cela empêche tout risque de confusion provoquée par des ordinateurs dotés de plusieurs adresses de liaison locale. Ainsi, le canal homologue ne peut utiliser qu'une seule adresse de liaison locale à la fois. Vous pouvez spécifier cette adresse à l'aide de la propriété `ListenIpAddress` sur <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Pour une démonstration de l’implémentation d’un programme de résolution personnalisé, consultez [homologue canal homologue programme de résolution personnalisé](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Pour une démonstration de la façon d’implémenter un programme de résolution personnalisé, consultez [homologue canal homologue programme de résolution personnalisé](https://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Dans CustomPeerResolverService : inscriptions des clients](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

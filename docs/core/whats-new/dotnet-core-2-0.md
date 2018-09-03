@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités de .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566321"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456885"
 ---
 # <a name="whats-new-in-net-core-20"></a>Nouveautés de .NET Core 2.0
 
@@ -30,7 +30,7 @@ Dans les versions précédentes de .NET Core, vous deviez exécuter la commande 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Vous pouvez également désactiver l’appel automatique de `dotnet restore` en passant le commutateur `--no-restore` sur les commandes `new`, `run`, `build`, `publish`, `pack` et `test`. 
+Vous pouvez également désactiver l’appel automatique de `dotnet restore` en passant le commutateur `--no-restore` sur les commandes `new`, `run`, `build`, `publish`, `pack` et `test`.
 
 ### <a name="retargeting-to-net-core-20"></a>Reciblage vers .NET Core 2.0
 
@@ -76,7 +76,7 @@ Par exemple, pour créer une application Visual Basic « Hello World », proc�
 
    La commande crée un fichier projet avec une extension de fichier `.vbproj` ainsi qu’un fichier de code source Visual Basic nommé *Program.vb*. Ce fichier contient le code source pour écrire la chaîne « Hello World ! » sur la fenêtre de console.
 
-1.  Entrez la commande `dotnet run`. [CLI .NET Core](../tools/index.md) compile et exécute automatiquement l’application, qui affiche le message « Hello World ! » dans la fenêtre de console.
+1. Entrez la commande `dotnet run`. [CLI .NET Core](../tools/index.md) compile et exécute automatiquement l’application, qui affiche le message « Hello World ! » dans la fenêtre de console.
 
 ### <a name="support-for-c-71"></a>Prise en charge de C#, 7.1
 
@@ -162,4 +162,5 @@ Vous pouvez maintenant installer le Kit SDK .NET Core indépendamment de Visual 
 - [Applications déployées sur le cloud avec Azure](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>Voir aussi
-[Nouveautés de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)
+
+* [Nouveautés de ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0)

@@ -5,11 +5,11 @@ ms.date: 08/08/2018
 author: jralexander
 ms.author: johalex
 ms.openlocfilehash: 3c483f4a263052eb15435775a47f514893eee049
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000867"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43397141"
 ---
 # <a name="data-transforms"></a>Transformations de données
 
@@ -32,14 +32,14 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="categorical"></a>Catégorie
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.CategoricalHashOneHotVectorizer> | Encode la variable catégorielle avec un encodage basé sur le hachage. |
 | <xref:Microsoft.ML.Transforms.CategoricalOneHotVectorizer> | Encode la variable catégorielle avec un encodage à chaud en fonction d’un dictionnaire de termes. |
 
 ## <a name="combiners-and-segregators"></a>Combinaison et ségrégation
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.CombinerByContiguousGroupId> | Regroupe les valeurs d’une colonne scalaire dans un vecteur en fonction d’un ID de groupe contigu. |
 | <xref:Microsoft.ML.Transforms.FeatureCombiner> | Combine toutes les caractéristiques dans une colonne de caractéristique. |
@@ -50,21 +50,21 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="feature-selection"></a>Sélection de caractéristique
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.FeatureSelectorByCount> | Sélectionne les emplacements pour lesquels le nombre de valeurs autres que des valeurs par défaut est supérieur ou égal à un seuil. |
 | <xref:Microsoft.ML.Transforms.FeatureSelectorByMutualInformation> | Sélectionne les k premiers emplacements parmi toutes les colonnes spécifiées, classés d’après leurs informations mutuelles avec la colonne d’étiquette. |
 
 ## <a name="featurizers"></a>Personnaliseurs
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.HashConverter> | Convertit des valeurs de colonne en hachages. Cette transformation accepte les entrées numériques et textuelles, les colonnes à la fois uniques et à valeurs vectorielles. |
 | <xref:Microsoft.ML.Transforms.TreeLeafFeaturizer> | Effectue l’apprentissage d’un ensemble d’arborescences, ou le charge à partir d’un fichier, puis mappe un vecteur de caractéristique numérique à trois sorties : 1. Un vecteur contenant les sorties d’arborescences individuelles de l’ensemble d’arborescences. 2. Un vecteur indiquant les feuilles sur lesquelles le vecteur de caractéristique tombe dans l’ensemble d’arborescences. 3. Un vecteur indiquant les chemins sur lesquels le vecteur de caractéristique tombe dans l’ensemble d’arborescences. Si vous spécifiez à la fois un fichier de modèle et un formateur, le vecteur utilise le fichier de modèle. Si vous ne spécifiez ni l’un ni l’autre, le vecteur effectue l’apprentissage d’un modèle FastTree par défaut. Cela peut permettre de gérer des étiquettes de clés en effectuant l’apprentissage d’un modèle de régression vers leurs index éventuellement permutés. |
 
 ## <a name="label-parsing"></a>Analyse d’étiquette
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Dictionarizer> | Convertit des valeurs d’entrées (mots, nombres, etc.) en index dans un dictionnaire d’entrées. |
 | <xref:Microsoft.ML.Transforms.LabelColumnKeyBooleanConverter> | Transforme l’étiquette en clé ou valeur booléenne (si nécessaire) afin de la rendre utilisable pour la classification. |
@@ -74,7 +74,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="missing-values"></a>Valeurs manquantes
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.MissingValueHandler> | Gérer les valeurs manquantes en les remplaçant par la valeur par défaut ou la valeur moyenne/min/max (pour les colonnes non textuelles uniquement). Une colonne d’indicateur peut éventuellement être concaténée, si le type de colonne d’entrée est numérique. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicator> | Créer une colonne de sortie booléenne avec le même nombre d’emplacements que la colonne d’entrée, où la valeur de sortie est true si la valeur dans la colonne d’entrée est manquante. |
@@ -84,7 +84,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="normalization"></a>Normalisation
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.BinNormalizer> | Les valeurs sont affectées à des emplacements d’équidensité et une valeur est mappée à son bin_number / number_of_bins. |
 | <xref:Microsoft.ML.Transforms.ConditionalNormalizer> | Normaliser les colonnes uniquement si nécessaire. |
@@ -97,7 +97,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="row-filters"></a>Filtres de lignes
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.RowRangeFilter> | Filtre un DataView sur une colonne de type Single, Double ou Clé (contiguë). Conserve les valeurs qui se trouvent dans la plage min/max spécifiée. Les valeurs NaN sont toujours exclues. Si l’entrée est un type Clé, les valeurs min/max sont considérées comme des pourcentages du nombre de valeurs. |
 | <xref:Microsoft.ML.Transforms.RowSkipAndTakeFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes à un décalage facultatif. Peut être utilisé pour implémenter la pagination des données. |
@@ -106,7 +106,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="schema"></a>Schéma
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.ColumnConcatenator> | Concatène deux colonnes du même type d’élément. |
 | <xref:Microsoft.ML.Transforms.ColumnCopier> | Duplique des colonnes du jeu de données.|
@@ -119,7 +119,7 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="text-processing-and-featurization"></a>Traitement de texte et personnalisation
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.CharacterTokenizer> | Générateur de jetons orienté caractère où le texte est considéré comme une séquence de caractères. |
 | <xref:Microsoft.ML.Transforms.TextFeaturizer> | Transformation qui convertit une collection de documents textuels en vecteurs de caractéristiques numériques. Les vecteurs de caractéristiques sont des décomptes normalisés de ngrams (mot et/ou caractère) dans un texte tokenisé donné. |
@@ -129,14 +129,14 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 ## <a name="miscellaneous"></a>Divers
 
-| Transformation | Définition |
+| Transformer | Définition |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.ApproximateBootstrapSampler> | Échantillonnage d’amorçage approximatif. |
 | <xref:Microsoft.ML.Transforms.BinaryPredictionScoreColumnsRenamer> | Pour la prédiction binaire, renomme les colonnes PredictedLabel et Score de façon à inclure le nom de la classe positive.|
 | <xref:Microsoft.ML.Transforms.DataCache> | Met en cache à l’aide de l’option de cache spécifiée. |
 | <xref:Microsoft.ML.Transforms.DatasetScorer> | Évalue un jeu de données avec un modèle de prédiction. |
 | <xref:Microsoft.ML.Transforms.DatasetTransformScorer> | Évalue un jeu de données avec un modèle de transformation. |
-| <xref:Microsoft.ML.Transforms.NoOperation> | Sans effet. |
+| <xref:Microsoft.ML.Transforms.NoOperation> | Sans effet |
 | <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Ajoute une colonne avec une séquence de nombres générée. |
 | <xref:Microsoft.ML.Transforms.ScoreColumnSelector> | Sélectionne uniquement les dernières colonnes de score et les colonnes supplémentaires spécifiées dans les arguments. |
 | <xref:Microsoft.ML.Transforms.Scorer> | Convertit le modèle de prédiction en modèle de transformation. |

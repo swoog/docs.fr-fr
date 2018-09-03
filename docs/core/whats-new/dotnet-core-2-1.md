@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités de .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935577"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43392847"
 ---
 # <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
 
@@ -49,7 +49,7 @@ Un certain nombre d’outils qui étaient disponibles uniquement par projet à l
    ```console
    dotnet watch -- --verbose build
    ```
-  
+
    Remarquez l’option `--` qui précède l’option `--verbose`. Elle délimite les options passées directement à la commande `dotnet watch` à partir des arguments passés au processus enfant `dotnet`. Sans elle, l’option `--verbose` s’applique à la commande `dotnet watch`, et non à la commande `dotnet build`.
   
    Pour plus d’informations, consultez [Développer des applications ASP.NET Core à l’aide de dotnet watch](/aspnet/core/tutorials/dotnet-watch)
@@ -88,7 +88,7 @@ Dans .NET Core SDK 2.1 (2.1.300), toutes les opérations avec les outils utilise
 
 ## <a name="roll-forward"></a>Restauration par progression
 
-Toutes les applications .NET Core depuis .NET Core 2.0 peuvent être restaurées par progression vers la dernière *version mineure* installée sur un système. 
+Toutes les applications .NET Core depuis .NET Core 2.0 peuvent être restaurées par progression vers la dernière *version mineure* installée sur un système.
 
 À compter de .NET Core 2.0, si la version de .NET Core avec laquelle une application a été créée n’est pas présente lors de l’exécution, l’application s’exécute automatiquement avec la dernière *version mineure* installée de .NET Core. En d’autres termes, si une application est générée avec .NET Core 2.0 et que .NET Core 2.0 n’est pas présent sur le système hôte, mais que .NET Core 2.1 l’est, l’application s’exécute avec .NET Core 2.1.
 
@@ -233,6 +233,6 @@ Sous Linux et macOS, vous pouvez uniquement configurer <xref:System.Net.Http.Htt
 
 ## <a name="see-also"></a>Voir aussi
 
-[Nouveautés de .NET Core](index.md)  
-[Nouvelles fonctionnalités d’EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
-[Nouveautés d’ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
+* [Nouveautés de .NET Core](index.md)  
+* [Nouvelles fonctionnalités d’EF Core 2.1](/ef/core/what-is-new/ef-core-2.1)  
+* [Nouveautés d’ASP.NET Core 2.1](/aspnet/core/aspnetcore-2.1)
