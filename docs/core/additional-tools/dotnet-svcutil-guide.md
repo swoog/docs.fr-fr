@@ -3,13 +3,13 @@ title: Outil dotnet-svcutil Microsoft WCF
 description: Vue d’ensemble de l’outil dotnet-svcutil Microsoft WCF, qui ajoute des fonctionnalités pour les projets .NET Core et ASP.NET Core, de manière similaire à l’outil svcutil WCF pour les projets .NET Framework.
 author: mlacouture
 ms.author: jralexander
-ms.date: 06/04/2018
-ms.openlocfilehash: c40dd9b437afe7381244b944228b6b2efe046eb2
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.date: 08/20/2018
+ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753420"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484119"
 ---
 # <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Outil dotnet-svcutil Microsoft WCF
 
@@ -61,7 +61,7 @@ dotnet new console
 
 ```xml
 <ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.0" />
+  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
 </ItemGroup>
 ```
 
