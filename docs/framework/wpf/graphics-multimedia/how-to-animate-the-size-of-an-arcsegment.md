@@ -9,29 +9,29 @@ helpviewer_keywords:
 - animation [WPF], ArcSegment size
 - ArcSegment [WPF], animating size
 ms.assetid: f93a1065-b00a-4d7e-9d4b-37023f98186a
-ms.openlocfilehash: b7c7ebcfcb9dd23f6472472be3d693740c910f9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21d9e773dc03a42e2cfba0bbe47d9831d93d5c69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560836"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470747"
 ---
-# <a name="how-to-animate-the-size-of-an-arcsegment"></a><span data-ttu-id="a312b-102">Comment : animer la taille d'un ArcSegment</span><span class="sxs-lookup"><span data-stu-id="a312b-102">How to: Animate the Size of an ArcSegment</span></span>
-<span data-ttu-id="a312b-103">Cet exemple montre comment animer la <xref:System.Windows.Media.ArcSegment.Size%2A> propriété d’un <xref:System.Windows.Media.ArcSegment>.</span><span class="sxs-lookup"><span data-stu-id="a312b-103">This example shows how to animate the <xref:System.Windows.Media.ArcSegment.Size%2A> property of an <xref:System.Windows.Media.ArcSegment>.</span></span>  
+# <a name="how-to-animate-the-size-of-an-arcsegment"></a><span data-ttu-id="f1675-102">Comment : animer la taille d'un ArcSegment</span><span class="sxs-lookup"><span data-stu-id="f1675-102">How to: Animate the Size of an ArcSegment</span></span>
+<span data-ttu-id="f1675-103">Cet exemple montre comment animer la <xref:System.Windows.Media.ArcSegment.Size%2A> propriété d’un <xref:System.Windows.Media.ArcSegment>.</span><span class="sxs-lookup"><span data-stu-id="f1675-103">This example shows how to animate the <xref:System.Windows.Media.ArcSegment.Size%2A> property of an <xref:System.Windows.Media.ArcSegment>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a312b-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="a312b-104">Example</span></span>  
- <span data-ttu-id="a312b-105">L’exemple suivant crée un <xref:System.Windows.Media.ArcSegment> qui anime sa <xref:System.Windows.Media.ArcSegment.Size%2A> lors de son chargement dans l’écran.</span><span class="sxs-lookup"><span data-stu-id="a312b-105">The following example creates an <xref:System.Windows.Media.ArcSegment> that animates its <xref:System.Windows.Media.ArcSegment.Size%2A> when it loads on the screen.</span></span>  
+## <a name="example"></a><span data-ttu-id="f1675-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="f1675-104">Example</span></span>  
+ <span data-ttu-id="f1675-105">L’exemple suivant crée un <xref:System.Windows.Media.ArcSegment> qui anime sa <xref:System.Windows.Media.ArcSegment.Size%2A> lors de son chargement à l’écran.</span><span class="sxs-lookup"><span data-stu-id="f1675-105">The following example creates an <xref:System.Windows.Media.ArcSegment> that animates its <xref:System.Windows.Media.ArcSegment.Size%2A> when it loads on the screen.</span></span>  
   
  [!code-csharp[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BasicAnimations_snip/CSharp/SizeAnimationExample.cs#sizeanimationwholepage)]
  [!code-vb[BasicAnimations_snip#SizeAnimationWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/SizeAnimationExample.vb#sizeanimationwholepage)]  
   
- <span data-ttu-id="a312b-106">Pour les géométries supplémentaires et des exemples d’animation, consultez le [géométries, exemple](http://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="a312b-106">For additional geometry and animation samples, see the [Geometries Sample](http://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="f1675-106">Pour géométriques supplémentaires et des exemples d’animation, consultez le [géométries, exemple](https://go.microsoft.com/fwlink/?LinkID=159989).</span><span class="sxs-lookup"><span data-stu-id="f1675-106">For additional geometry and animation samples, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a312b-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a312b-107">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f1675-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f1675-107">See Also</span></span>  
  <xref:System.Windows.Media.ArcSegment.Size%2A>  
  <xref:System.Windows.Media.ArcSegment>  
- [<span data-ttu-id="a312b-108">Vue d’ensemble de l’animation</span><span class="sxs-lookup"><span data-stu-id="a312b-108">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [<span data-ttu-id="a312b-109">Vue d’ensemble de Geometry</span><span class="sxs-lookup"><span data-stu-id="a312b-109">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [<span data-ttu-id="a312b-110">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="a312b-110">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
- [<span data-ttu-id="a312b-111">Animation et minutage</span><span class="sxs-lookup"><span data-stu-id="a312b-111">Animation and Timing</span></span>](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [<span data-ttu-id="a312b-112">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="a312b-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [<span data-ttu-id="f1675-108">Vue d’ensemble de l’animation</span><span class="sxs-lookup"><span data-stu-id="f1675-108">Animation Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [<span data-ttu-id="f1675-109">Vue d’ensemble de Geometry</span><span class="sxs-lookup"><span data-stu-id="f1675-109">Geometry Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [<span data-ttu-id="f1675-110">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="f1675-110">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [<span data-ttu-id="f1675-111">Animation et minutage</span><span class="sxs-lookup"><span data-stu-id="f1675-111">Animation and Timing</span></span>](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [<span data-ttu-id="f1675-112">Rubriques de guide pratique</span><span class="sxs-lookup"><span data-stu-id="f1675-112">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

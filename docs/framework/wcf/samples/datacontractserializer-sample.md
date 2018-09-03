@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 41340eeb7e68bb1951da33fb2d5d93a7218d64b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501492"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468522"
 ---
-# <a name="datacontractserializer-sample"></a><span data-ttu-id="e7618-102">DataContractSerializer, exemple</span><span class="sxs-lookup"><span data-stu-id="e7618-102">DataContractSerializer Sample</span></span>
-<span data-ttu-id="e7618-103">Cet exemple illustre l'utilisation du sérialiseur <xref:System.Runtime.Serialization.DataContractSerializer>, lequel est chargé d'effectuer des processus de sérialisation et de désérialisation standard pour les classes de contrat de données.</span><span class="sxs-lookup"><span data-stu-id="e7618-103">The DataContractSerializer sample demonstrates the <xref:System.Runtime.Serialization.DataContractSerializer>, which performs general serialization and deserialization services for the data contract classes.</span></span> <span data-ttu-id="e7618-104">L’exemple crée un `Record` de l’objet, le sérialise dans un flux de mémoire et désérialise le flux de mémoire à un autre `Record` objet pour illustrer l’utilisation de la <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="e7618-104">The sample creates a `Record` object, serializes it to a memory stream and deserializes the memory stream back to another `Record` object to demonstrate the use of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="e7618-105">L'exemple sérialise ensuite l'objet `Record` à l'aide d'un enregistreur binaire afin d'illustrer la manière dont l'utilisation d'un tel enregistreur affecte la sérialisation.</span><span class="sxs-lookup"><span data-stu-id="e7618-105">The sample then serializes the `Record` object using a binary writer to demonstrate how the writer affects serialization.</span></span>  
+# <a name="datacontractserializer-sample"></a><span data-ttu-id="a4eb0-102">DataContractSerializer, exemple</span><span class="sxs-lookup"><span data-stu-id="a4eb0-102">DataContractSerializer Sample</span></span>
+<span data-ttu-id="a4eb0-103">Cet exemple illustre l'utilisation du sérialiseur <xref:System.Runtime.Serialization.DataContractSerializer>, lequel est chargé d'effectuer des processus de sérialisation et de désérialisation standard pour les classes de contrat de données.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-103">The DataContractSerializer sample demonstrates the <xref:System.Runtime.Serialization.DataContractSerializer>, which performs general serialization and deserialization services for the data contract classes.</span></span> <span data-ttu-id="a4eb0-104">L’exemple crée un `Record` de l’objet, il sérialise vers un flux de mémoire et désérialise le flux de mémoire à un autre `Record` objet pour illustrer l’utilisation de la <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-104">The sample creates a `Record` object, serializes it to a memory stream and deserializes the memory stream back to another `Record` object to demonstrate the use of the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span> <span data-ttu-id="a4eb0-105">L'exemple sérialise ensuite l'objet `Record` à l'aide d'un enregistreur binaire afin d'illustrer la manière dont l'utilisation d'un tel enregistreur affecte la sérialisation.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-105">The sample then serializes the `Record` object using a binary writer to demonstrate how the writer affects serialization.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e7618-106">La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.</span><span class="sxs-lookup"><span data-stu-id="e7618-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="a4eb0-106">La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-106">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="e7618-107">L'exemple de code suivant contient le contrat de données de l'objet `Record`.</span><span class="sxs-lookup"><span data-stu-id="e7618-107">The data contract for `Record` is shown in the following sample code.</span></span>  
+ <span data-ttu-id="a4eb0-107">L'exemple de code suivant contient le contrat de données de l'objet `Record`.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-107">The data contract for `Record` is shown in the following sample code.</span></span>  
   
 ```  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -72,14 +72,14 @@ internal class Record
 }  
 ```  
   
- <span data-ttu-id="e7618-108">L'exemple de code crée un objet `Record` nommé `record1`, puis affiche celui-ci.</span><span class="sxs-lookup"><span data-stu-id="e7618-108">The sample code creates a `Record` object named `record1` then displays the object.</span></span>  
+ <span data-ttu-id="a4eb0-108">L'exemple de code crée un objet `Record` nommé `record1`, puis affiche celui-ci.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-108">The sample code creates a `Record` object named `record1` then displays the object.</span></span>  
   
 ```  
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
- <span data-ttu-id="e7618-109">L'exemple utilise ensuite le <xref:System.Runtime.Serialization.DataContractSerializer> pour sérialiser `record1` dans un flux de mémoire.</span><span class="sxs-lookup"><span data-stu-id="e7618-109">The sample then uses the <xref:System.Runtime.Serialization.DataContractSerializer> to serialize `record1` into a memory stream.</span></span>  
+ <span data-ttu-id="a4eb0-109">L'exemple utilise ensuite le <xref:System.Runtime.Serialization.DataContractSerializer> pour sérialiser `record1` dans un flux de mémoire.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-109">The sample then uses the <xref:System.Runtime.Serialization.DataContractSerializer> to serialize `record1` into a memory stream.</span></span>  
   
 ```  
 MemoryStream stream1 = new MemoryStream();  
@@ -89,7 +89,7 @@ DataContractSerializer serializer = new DataContractSerializer(typeof(Record));
 serializer.WriteObject(stream1, record1);  
 ```  
   
- <span data-ttu-id="e7618-110">L'exemple utilise ensuite le <xref:System.Runtime.Serialization.DataContractSerializer> pour désérialiser le flux de mémoire dans un nouvel objet `Record`, puis affiche ce nouvel objet.</span><span class="sxs-lookup"><span data-stu-id="e7618-110">Next, the sample uses the <xref:System.Runtime.Serialization.DataContractSerializer> to deserialize the memory stream back into a new `Record` object and displays it.</span></span>  
+ <span data-ttu-id="a4eb0-110">L'exemple utilise ensuite le <xref:System.Runtime.Serialization.DataContractSerializer> pour désérialiser le flux de mémoire dans un nouvel objet `Record`, puis affiche ce nouvel objet.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-110">Next, the sample uses the <xref:System.Runtime.Serialization.DataContractSerializer> to deserialize the memory stream back into a new `Record` object and displays it.</span></span>  
   
 ```  
 stream1.Position = 0;  
@@ -100,7 +100,7 @@ Record record2 = (Record)serializer.ReadObject(stream1);
 Console.WriteLine("Deserialized record: {0}", record2.ToString());  
 ```  
   
- <span data-ttu-id="e7618-111">Par défaut, le sérialiseur `DataContractSerializer` encode les objets sous la forme d'un flux de données à l'aide d'une représentation XML textuelle.</span><span class="sxs-lookup"><span data-stu-id="e7618-111">By default, the `DataContractSerializer` encodes objects into a stream using a textual representation of XML.</span></span> <span data-ttu-id="e7618-112">Toutefois, vous pouvez influencer les modalités d'encodage de la représentation XML en passant un enregistreur différent.</span><span class="sxs-lookup"><span data-stu-id="e7618-112">However, you can influence the encoding of the XML by passing in a different writer.</span></span> <span data-ttu-id="e7618-113">L'exemple crée un enregistreur binaire en appelant <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.</span><span class="sxs-lookup"><span data-stu-id="e7618-113">The sample creates a binary writer by calling <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.</span></span> <span data-ttu-id="e7618-114">Il passe ensuite l'enregistreur et l'objet Record au sérialiseur lorsqu'il appelle <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.</span><span class="sxs-lookup"><span data-stu-id="e7618-114">It then passes the writer and the record object to the serializer when it calls <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.</span></span> <span data-ttu-id="e7618-115">Enfin, l'exemple vide l'enregistreur et génère un rapport sur la longueur des flux de données.</span><span class="sxs-lookup"><span data-stu-id="e7618-115">Finally, the sample flushes the writer and reports on the length of the streams.</span></span>  
+ <span data-ttu-id="a4eb0-111">Par défaut, le sérialiseur `DataContractSerializer` encode les objets sous la forme d'un flux de données à l'aide d'une représentation XML textuelle.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-111">By default, the `DataContractSerializer` encodes objects into a stream using a textual representation of XML.</span></span> <span data-ttu-id="a4eb0-112">Toutefois, vous pouvez influencer les modalités d'encodage de la représentation XML en passant un enregistreur différent.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-112">However, you can influence the encoding of the XML by passing in a different writer.</span></span> <span data-ttu-id="a4eb0-113">L'exemple crée un enregistreur binaire en appelant <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-113">The sample creates a binary writer by calling <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>.</span></span> <span data-ttu-id="a4eb0-114">Il passe ensuite l'enregistreur et l'objet Record au sérialiseur lorsqu'il appelle <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-114">It then passes the writer and the record object to the serializer when it calls <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>.</span></span> <span data-ttu-id="a4eb0-115">Enfin, l'exemple vide l'enregistreur et génère un rapport sur la longueur des flux de données.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-115">Finally, the sample flushes the writer and reports on the length of the streams.</span></span>  
   
 ```  
 MemoryStream stream2 = new MemoryStream();  
@@ -114,7 +114,7 @@ Console.WriteLine("Text Stream is {0} bytes long", stream1.Length);
 Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);  
 ```  
   
- <span data-ttu-id="e7618-116">Lorsque vous exécutez l'exemple, l'enregistrement d'origine et l'enregistrement désérialisé s'affichent, suivis des différences de longueur entre l'encodage texte et l'encodage binaire.</span><span class="sxs-lookup"><span data-stu-id="e7618-116">When you run the sample, the original record and the deserialized record are displayed, followed by the comparison between the length of the text encoding and the binary encoding.</span></span> <span data-ttu-id="e7618-117">Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.</span><span class="sxs-lookup"><span data-stu-id="e7618-117">Press ENTER in the client window to shut down the client.</span></span>  
+ <span data-ttu-id="a4eb0-116">Lorsque vous exécutez l'exemple, l'enregistrement d'origine et l'enregistrement désérialisé s'affichent, suivis des différences de longueur entre l'encodage texte et l'encodage binaire.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-116">When you run the sample, the original record and the deserialized record are displayed, followed by the comparison between the length of the text encoding and the binary encoding.</span></span> <span data-ttu-id="a4eb0-117">Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-117">Press ENTER in the client window to shut down the client.</span></span>  
   
 ```  
 Original record: Record: 1 + 2 = 3  
@@ -125,21 +125,21 @@ Binary Stream is 156 bytes long
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="e7618-118">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="e7618-118">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="a4eb0-118">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="a4eb0-118">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="e7618-119">Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7618-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1.  <span data-ttu-id="a4eb0-119">Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a4eb0-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="e7618-120">Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="e7618-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+2.  <span data-ttu-id="a4eb0-120">Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="a4eb0-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-3.  <span data-ttu-id="e7618-121">Pour exécuter l'exemple, démarrez le client à partir d'une invite de commandes en tapant client\bin\client.exe.</span><span class="sxs-lookup"><span data-stu-id="e7618-121">To run the sample, start the client from the command prompt by typing client\bin\client.exe.</span></span>  
+3.  <span data-ttu-id="a4eb0-121">Pour exécuter l'exemple, démarrez le client à partir d'une invite de commandes en tapant client\bin\client.exe.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-121">To run the sample, start the client from the command prompt by typing client\bin\client.exe.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="e7618-122">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="e7618-122">The samples may already be installed on your machine.</span></span> <span data-ttu-id="e7618-123">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="e7618-123">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="a4eb0-122">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-122">The samples may already be installed on your machine.</span></span> <span data-ttu-id="a4eb0-123">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-123">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="e7618-124">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="e7618-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="e7618-125">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="e7618-125">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="a4eb0-124">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-124">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="a4eb0-125">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="a4eb0-125">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  
   
-## <a name="see-also"></a><span data-ttu-id="e7618-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e7618-126">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4eb0-126">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a4eb0-126">See Also</span></span>

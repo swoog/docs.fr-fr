@@ -2,39 +2,39 @@
 title: OverloadGroups
 ms.date: 03/30/2017
 ms.assetid: d1d547d2-f5fb-4de3-a959-ee6139a4f1ad
-ms.openlocfilehash: 489d27e05c96d3b3893052254a879d1c9d75788c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0773e76d36b25ad5485cc8912c7012815412de9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515621"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469867"
 ---
-# <a name="overloadgroups"></a><span data-ttu-id="3d013-102">OverloadGroups</span><span class="sxs-lookup"><span data-stu-id="3d013-102">OverloadGroups</span></span>
-<span data-ttu-id="3d013-103">Cet exemple se compose d'une activité (`CreateLocation`) qui a deux caractéristiques intéressantes :</span><span class="sxs-lookup"><span data-stu-id="3d013-103">This sample consists of an activity (`CreateLocation`), which has two interesting characteristics:</span></span>  
+# <a name="overloadgroups"></a><span data-ttu-id="b7ca1-102">OverloadGroups</span><span class="sxs-lookup"><span data-stu-id="b7ca1-102">OverloadGroups</span></span>
+<span data-ttu-id="b7ca1-103">Cet exemple se compose d'une activité (`CreateLocation`) qui a deux caractéristiques intéressantes :</span><span class="sxs-lookup"><span data-stu-id="b7ca1-103">This sample consists of an activity (`CreateLocation`), which has two interesting characteristics:</span></span>  
   
-1.  <span data-ttu-id="3d013-104">Elle comprend quelques arguments obligatoires et quelques arguments facultatifs.</span><span class="sxs-lookup"><span data-stu-id="3d013-104">It has some required arguments and some optional ones.</span></span>  
+1.  <span data-ttu-id="b7ca1-104">Elle comprend quelques arguments obligatoires et quelques arguments facultatifs.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-104">It has some required arguments and some optional ones.</span></span>  
   
-2.  <span data-ttu-id="3d013-105">Elle permet à l'utilisateur de fournir un jeu d'arguments sélectionné parmi deux jeux d'arguments différents.</span><span class="sxs-lookup"><span data-stu-id="3d013-105">It allows the user to choose to provide one of two different sets of arguments.</span></span>  
+2.  <span data-ttu-id="b7ca1-105">Elle permet à l'utilisateur de fournir un jeu d'arguments sélectionné parmi deux jeux d'arguments différents.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-105">It allows the user to choose to provide one of two different sets of arguments.</span></span>  
   
- <span data-ttu-id="3d013-106">Ces comportements sont obtenus à l'aide des deux fonctionnalités suivantes :</span><span class="sxs-lookup"><span data-stu-id="3d013-106">These behaviors are accomplished by using these two features:</span></span>  
+ <span data-ttu-id="b7ca1-106">Ces comportements sont obtenus à l'aide des deux fonctionnalités suivantes :</span><span class="sxs-lookup"><span data-stu-id="b7ca1-106">These behaviors are accomplished by using these two features:</span></span>  
   
--   <span data-ttu-id="3d013-107">`[isRequired]` valide qu'une propriété d'une activité spécifique est affectée et, dans le cas contraire, lève une exception.</span><span class="sxs-lookup"><span data-stu-id="3d013-107">`[isRequired]` validates that a property of a specific activity is assign, and if not, it throws an exception.</span></span>  
+-   <span data-ttu-id="b7ca1-107">`[isRequired]` valide qu'une propriété d'une activité spécifique est affectée et, dans le cas contraire, lève une exception.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-107">`[isRequired]` validates that a property of a specific activity is assign, and if not, it throws an exception.</span></span>  
   
--   <span data-ttu-id="3d013-108">`[OverloadGroup]` réunit un jeu d'arguments afin que l'utilisateur de l'activité puisse choisir d'utiliser l'un des deux jeux.</span><span class="sxs-lookup"><span data-stu-id="3d013-108">`[OverloadGroup]` puts together a set of arguments, so that the user of the activity can choose between using one set or another.</span></span> <span data-ttu-id="3d013-109">L'utilisateur ne peut pas utiliser d'arguments de différents groupes surchargés dans la même instance.</span><span class="sxs-lookup"><span data-stu-id="3d013-109">The user cannot use arguments from different Overload Groups in the same instance.</span></span>  
+-   <span data-ttu-id="b7ca1-108">`[OverloadGroup]` réunit un jeu d'arguments afin que l'utilisateur de l'activité puisse choisir d'utiliser l'un des deux jeux.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-108">`[OverloadGroup]` puts together a set of arguments, so that the user of the activity can choose between using one set or another.</span></span> <span data-ttu-id="b7ca1-109">L'utilisateur ne peut pas utiliser d'arguments de différents groupes surchargés dans la même instance.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-109">The user cannot use arguments from different Overload Groups in the same instance.</span></span>  
   
- <span data-ttu-id="3d013-110">Après avoir configuré des workflows différents, appelez <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> qui retourne une collection <xref:System.Activities.Validation.ValidationResults> de <xref:System.Activities.Validation.Constraint>.</span><span class="sxs-lookup"><span data-stu-id="3d013-110">After setting up different workflows, call <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> which returns a <xref:System.Activities.Validation.ValidationResults> collection of <xref:System.Activities.Validation.Constraint>.</span></span> <span data-ttu-id="3d013-111">Imprimez les objets <xref:System.Activities.Validation.Constraint> sur la console.</span><span class="sxs-lookup"><span data-stu-id="3d013-111">Print the <xref:System.Activities.Validation.Constraint> objects to the console.</span></span>  
+ <span data-ttu-id="b7ca1-110">Après avoir configuré des workflows différents, appelez <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> qui retourne une collection <xref:System.Activities.Validation.ValidationResults> de <xref:System.Activities.Validation.Constraint>.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-110">After setting up different workflows, call <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> which returns a <xref:System.Activities.Validation.ValidationResults> collection of <xref:System.Activities.Validation.Constraint>.</span></span> <span data-ttu-id="b7ca1-111">Imprimez les objets <xref:System.Activities.Validation.Constraint> sur la console.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-111">Print the <xref:System.Activities.Validation.Constraint> objects to the console.</span></span>  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3d013-112">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="3d013-112">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="b7ca1-112">Pour configurer, générer et exécuter l'exemple</span><span class="sxs-lookup"><span data-stu-id="b7ca1-112">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="3d013-113">Ouvrez le **OverloadGroups.sln** exemple de solution dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="3d013-113">Open the **OverloadGroups.sln** sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
+1.  <span data-ttu-id="b7ca1-113">Ouvrez le **OverloadGroups.sln** exemple de solution dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span><span class="sxs-lookup"><span data-stu-id="b7ca1-113">Open the **OverloadGroups.sln** sample solution in [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].</span></span>  
   
-2.  <span data-ttu-id="3d013-114">Générez et exécutez la solution.</span><span class="sxs-lookup"><span data-stu-id="3d013-114">Build and run the solution.</span></span>  
+2.  <span data-ttu-id="b7ca1-114">Générez et exécutez la solution.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-114">Build and run the solution.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="3d013-115">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="3d013-115">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3d013-116">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="3d013-116">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="b7ca1-115">Les exemples peuvent déjà être installés sur votre ordinateur.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-115">The samples may already be installed on your machine.</span></span> <span data-ttu-id="b7ca1-116">Recherchez le répertoire (par défaut) suivant avant de continuer.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-116">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="3d013-117">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="3d013-117">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3d013-118">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="3d013-118">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="b7ca1-117">Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-117">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="b7ca1-118">Cet exemple se trouve dans le répertoire suivant.</span><span class="sxs-lookup"><span data-stu-id="b7ca1-118">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\OverloadGroups`

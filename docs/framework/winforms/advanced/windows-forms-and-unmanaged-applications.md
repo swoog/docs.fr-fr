@@ -8,38 +8,38 @@ helpviewer_keywords:
 - Windows Forms, unmanaged
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
-ms.openlocfilehash: c51645fb64f512b5974000f89e8e98f884a7381d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc0c848d1c92871dacab93497c674645f3ac83fe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526199"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463937"
 ---
-# <a name="windows-forms-and-unmanaged-applications"></a><span data-ttu-id="633e3-102">Applications Windows Forms et non managées</span><span class="sxs-lookup"><span data-stu-id="633e3-102">Windows Forms and Unmanaged Applications</span></span>
-<span data-ttu-id="633e3-103">Les contrôles et les applications Windows Forms peuvent interagir avec des applications non managées, avec certaines restrictions.</span><span class="sxs-lookup"><span data-stu-id="633e3-103">Windows Forms applications and controls can interoperate with unmanaged applications, with some caveats.</span></span> <span data-ttu-id="633e3-104">Les sections suivantes décrivent les scénarios et les configurations pris en charge et non pris en charge par les applications et les contrôles Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="633e3-104">The following sections describe the scenarios and configurations that Windows Forms applications and controls support and those that they do not support.</span></span>  
+# <a name="windows-forms-and-unmanaged-applications"></a><span data-ttu-id="a99d5-102">Applications Windows Forms et non managées</span><span class="sxs-lookup"><span data-stu-id="a99d5-102">Windows Forms and Unmanaged Applications</span></span>
+<span data-ttu-id="a99d5-103">Les contrôles et les applications Windows Forms peuvent interagir avec des applications non managées, avec certaines restrictions.</span><span class="sxs-lookup"><span data-stu-id="a99d5-103">Windows Forms applications and controls can interoperate with unmanaged applications, with some caveats.</span></span> <span data-ttu-id="a99d5-104">Les sections suivantes décrivent les scénarios et les configurations pris en charge et non pris en charge par les applications et les contrôles Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="a99d5-104">The following sections describe the scenarios and configurations that Windows Forms applications and controls support and those that they do not support.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="633e3-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="633e3-105">In This Section</span></span>  
- [<span data-ttu-id="633e3-106">Vue d'ensemble des applications Windows Forms et non managées</span><span class="sxs-lookup"><span data-stu-id="633e3-106">Windows Forms and Unmanaged Applications Overview</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)  
- <span data-ttu-id="633e3-107">Propose des informations générales sur l'utilisation et l'implémentation des contrôles Windows Forms qui fonctionnent avec les applications non managées.</span><span class="sxs-lookup"><span data-stu-id="633e3-107">Offers general information about how to use and implement Windows Forms controls that work with unmanaged applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="a99d5-105">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="a99d5-105">In This Section</span></span>  
+ [<span data-ttu-id="a99d5-106">Vue d'ensemble des applications Windows Forms et non managées</span><span class="sxs-lookup"><span data-stu-id="a99d5-106">Windows Forms and Unmanaged Applications Overview</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications-overview.md)  
+ <span data-ttu-id="a99d5-107">Propose des informations générales sur l'utilisation et l'implémentation des contrôles Windows Forms qui fonctionnent avec les applications non managées.</span><span class="sxs-lookup"><span data-stu-id="a99d5-107">Offers general information about how to use and implement Windows Forms controls that work with unmanaged applications.</span></span>  
   
- [<span data-ttu-id="633e3-108">Guide pratique pour prendre en charge COM Interop en affichant un Windows Form avec la méthode ShowDialog</span><span class="sxs-lookup"><span data-stu-id="633e3-108">How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method</span></span>](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
- <span data-ttu-id="633e3-109">Fournit un exemple de code qui montre comment utiliser la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> pour exécuter un Windows Form dans une application non managée.</span><span class="sxs-lookup"><span data-stu-id="633e3-109">Provides a code example that shows how to use the <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> method to run a Windows Form in an unmanaged application.</span></span>  
+ [<span data-ttu-id="a99d5-108">Guide pratique pour prendre en charge COM Interop en affichant un Windows Form avec la méthode ShowDialog</span><span class="sxs-lookup"><span data-stu-id="a99d5-108">How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method</span></span>](../../../../docs/framework/winforms/advanced/com-interop-by-displaying-a-windows-form-shadow.md)  
+ <span data-ttu-id="a99d5-109">Fournit un exemple de code qui montre comment utiliser la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> pour exécuter un Windows Form dans une application non managée.</span><span class="sxs-lookup"><span data-stu-id="a99d5-109">Provides a code example that shows how to use the <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> method to run a Windows Form in an unmanaged application.</span></span>  
   
- [<span data-ttu-id="633e3-110">Comment : prendre en charge l’interopérabilité COM en affichant chaque Windows Form sur son propre thread</span><span class="sxs-lookup"><span data-stu-id="633e3-110">How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread</span></span>](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
- <span data-ttu-id="633e3-111">Fournit un exemple de code qui montre comment exécuter un Windows Form sur son propre thread.</span><span class="sxs-lookup"><span data-stu-id="633e3-111">Provides a code example that shows how to run a Windows Form on its own thread.</span></span>  
+ [<span data-ttu-id="a99d5-110">Comment : prendre en charge l’interopérabilité COM en affichant chaque Windows Form sur son propre thread</span><span class="sxs-lookup"><span data-stu-id="a99d5-110">How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread</span></span>](../../../../docs/framework/winforms/advanced/how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ <span data-ttu-id="a99d5-111">Fournit un exemple de code qui montre comment exécuter un Windows Form sur son propre thread.</span><span class="sxs-lookup"><span data-stu-id="a99d5-111">Provides a code example that shows how to run a Windows Form on its own thread.</span></span>  
   
- <span data-ttu-id="633e3-112">Consultez également [Procédure pas à pas : prise en charge de COM Interop en affichant chaque Windows Forms sur son propre thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="633e3-112">Also see [Walkthrough: Supporting COM Interop by Displaying Each Windows Form on Its Own Thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="a99d5-112">Consultez également [procédure pas à pas : prise en charge de COM Interop en affichant chaque Windows Form sur son propre Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="a99d5-112">Also see [Walkthrough: Supporting COM Interop by Displaying Each Windows Form on Its Own Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="633e3-113">Référence</span><span class="sxs-lookup"><span data-stu-id="633e3-113">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a99d5-113">Référence</span><span class="sxs-lookup"><span data-stu-id="a99d5-113">Reference</span></span>  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
- <span data-ttu-id="633e3-114">Permet de créer un thread distinct pour un Windows Form.</span><span class="sxs-lookup"><span data-stu-id="633e3-114">Used to create a separate thread for a Windows Form.</span></span>  
+ <span data-ttu-id="a99d5-114">Permet de créer un thread distinct pour un Windows Form.</span><span class="sxs-lookup"><span data-stu-id="a99d5-114">Used to create a separate thread for a Windows Form.</span></span>  
   
  <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>  
- <span data-ttu-id="633e3-115">Démarre une boucle de message pour un thread.</span><span class="sxs-lookup"><span data-stu-id="633e3-115">Starts a message loop for a thread.</span></span>  
+ <span data-ttu-id="a99d5-115">Démarre une boucle de message pour un thread.</span><span class="sxs-lookup"><span data-stu-id="a99d5-115">Starts a message loop for a thread.</span></span>  
   
  <xref:System.Windows.Forms.Control.Invoke%2A>  
- <span data-ttu-id="633e3-116">Marshale les appels à partir d’une application non managée vers un formulaire.</span><span class="sxs-lookup"><span data-stu-id="633e3-116">Marshals calls from an unmanaged application to a form.</span></span>  
+ <span data-ttu-id="a99d5-116">Marshale les appels à partir d’une application non managée vers un formulaire.</span><span class="sxs-lookup"><span data-stu-id="a99d5-116">Marshals calls from an unmanaged application to a form.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="633e3-117">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="633e3-117">Related Sections</span></span>  
- [<span data-ttu-id="633e3-118">Exposition de composants .NET Framework à COM</span><span class="sxs-lookup"><span data-stu-id="633e3-118">Exposing .NET Framework Components to COM</span></span>](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- <span data-ttu-id="633e3-119">Propose des informations générales sur l'utilisation de types .NET Framework dans les applications non managées.</span><span class="sxs-lookup"><span data-stu-id="633e3-119">Offers general information about how to use .NET Framework types in unmanaged applications.</span></span>
+## <a name="related-sections"></a><span data-ttu-id="a99d5-117">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="a99d5-117">Related Sections</span></span>  
+ [<span data-ttu-id="a99d5-118">Exposition de composants .NET Framework à COM</span><span class="sxs-lookup"><span data-stu-id="a99d5-118">Exposing .NET Framework Components to COM</span></span>](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
+ <span data-ttu-id="a99d5-119">Propose des informations générales sur l'utilisation de types .NET Framework dans les applications non managées.</span><span class="sxs-lookup"><span data-stu-id="a99d5-119">Offers general information about how to use .NET Framework types in unmanaged applications.</span></span>
