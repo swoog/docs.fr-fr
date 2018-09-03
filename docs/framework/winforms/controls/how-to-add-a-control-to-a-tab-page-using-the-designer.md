@@ -6,26 +6,26 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 1bd6050287df288b41f944232d36d2e77c1309d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07326156fabbb8b991538a7e3bbaff7d807a1e94
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529589"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486475"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Comment : ajouter un contrôle à une page d'onglet à l'aide du concepteur
-L’utilisation de Windows Forms <xref:System.Windows.Forms.TabControl> consiste à afficher d’autres contrôles dans une structure organisée. Vous pouvez utiliser ces instructions pour afficher une image dans la partie principale d’une page d’onglet. Pour plus d’informations sur l’ajout d’une icône à la partie de l’étiquette d’une page d’onglet, consultez [Comment : modifier l’apparence du contrôle TabControl Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
+L’utilisation des formulaires Windows <xref:System.Windows.Forms.TabControl> consiste à afficher d’autres contrôles dans une structure organisée. Vous pouvez utiliser ces instructions pour afficher une image sur la partie principale d’une page d’onglets. Pour plus d’informations sur l’ajout d’une icône dans la partie de l’étiquette d’une page d’onglet, consultez [Comment : modifier l’apparence du contrôle TabControl Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
   
- La procédure suivante requiert un **Application Windows** projet avec un formulaire contenant un <xref:System.Windows.Forms.TabControl> contrôle. Pour plus d’informations sur la configuration d’un tel projet, consultez [Comment : créer un projet d’Application Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) et [Comment : ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procédure suivante nécessite un **Windows Application** projet avec un formulaire contenant un <xref:System.Windows.Forms.TabControl> contrôle. Pour plus d’informations sur la configuration d’un tel projet, consultez [Comment : créer un projet d’Application Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) et [Comment : ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-a-control-using-the-designer"></a>Pour ajouter un contrôle à l’aide du Concepteur  
   
-1.  Cliquez sur la page de l’onglet approprié afin qu’il apparaisse en premier.  
+1.  Cliquez sur la page d’onglets appropriées afin qu’il apparaisse en haut.  
   
-2.  Dessinez le contrôle sur la page d’onglets.  
+2.  Dessiner le contrôle sur la page d’onglets.  
   
 ## <a name="see-also"></a>Voir aussi  
  [TabControl, contrôle](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  

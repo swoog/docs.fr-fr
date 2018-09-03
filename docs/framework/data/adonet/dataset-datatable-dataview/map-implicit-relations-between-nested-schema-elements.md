@@ -2,12 +2,12 @@
 title: Mapper les relations implicites entre éléments de schéma imbriqués
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 1bce0c2815ac94787055794942807777232df295
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763626"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485571"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapper les relations implicites entre éléments de schéma imbriqués
 Un schéma en langage XSD (XML Schema Definition) peut présenter des types complexes imbriqués les uns dans les autres. Dans ce cas, le processus de mappage applique le mappage par défaut et crée les différents éléments suivants dans l'objet <xref:System.Data.DataSet> :  
@@ -22,7 +22,7 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
   
 -   Une relation de données entre les tables parente et enfant.  
   
- L’exemple suivant montre un schéma dans lequel **OrderDetail** est un élément enfant de **commande**.  
+ L’exemple suivant montre un schéma où **OrderDetail** est un élément enfant de **ordre**.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -54,16 +54,16 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
 </xs:schema>  
 ```  
   
- Le processus de mappage du schéma XML crée les éléments suivants dans le **DataSet**:  
+ Le processus de mappage de schéma XML crée les éléments suivants dans le **DataSet**:  
   
--   Un **commande** et un **OrderDetail** table.  
+-   Un **ordre** et un **OrderDetail** table.  
   
     ```  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
--   Une contrainte unique sur la **commande** table. Notez que la **IsPrimaryKey** est définie sur **True**.  
+-   Une contrainte unique sur la **ordre** table. Notez que le **IsPrimaryKey** propriété est définie sur **True**.  
   
     ```  
     ConstraintName: Constraint1  
@@ -84,7 +84,7 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
     RelatedColumns: Order_Id   
     ```  
   
--   Une relation entre la **commande** et **OrderDetail** tables. Le **Nested** pour cette relation est définie sur **True** , car le **commande** et **OrderDetail** éléments sont imbriqués dans le schéma .  
+-   Une relation entre la **ordre** et **OrderDetail** tables. Le **Nested** propriété pour cette relation est définie sur **True** , car le **ordre** et **OrderDetail** éléments sont imbriqués dans le schéma .  
   
     ```  
     ParentTable: Order  
@@ -100,4 +100,4 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
 ## <a name="see-also"></a>Voir aussi  
  [Génération de relations de DataSet à partir du schéma XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

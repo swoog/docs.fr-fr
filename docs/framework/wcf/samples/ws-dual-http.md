@@ -2,12 +2,12 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: a3a941d011523a8cf778ecec70a0f44ca4663c43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16795a32aaec84ec1ae5a1c445f2bc519ef56a3b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505063"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481531"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 Cet exemple montre comment configurer la liaison `WSDualHttpBinding`. Cet exemple se compose d'un programme de console client (.exe) et d'une bibliothèque de service (.dll) hébergés par les services IIS (Internet Information Services). Le service implémente un contrat duplex. Le contrat est défini par l'interface `ICalculatorDuplex`, laquelle expose les opérations mathématiques suivantes : addition, soustraction, multiplication et division. Dans cet exemple, l'interface `ICalculatorDuplex` permet au client d'effectuer des opérations mathématiques, et notamment de calculer le résultat sur la session. Le service retourne indépendamment les résultats sur l'interface `ICalculatorDuplexCallback`. Un contrat duplex requiert une session, car un contexte doit être établi pour mettre en correspondance l'ensemble des messages échangés entre le client et le service. La liaison `WSDualHttpBinding` prend en charge la communication duplex.  
@@ -20,7 +20,7 @@ Cet exemple montre comment configurer la liaison `WSDualHttpBinding`. Cet exempl
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`  
   
@@ -80,14 +80,14 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  Lorsque vous exécutez le client dans une configuration à plusieurs ordinateurs, veillez à remplacer localhost dans les deux le `address` attribut de la [point de terminaison](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément et la `clientBaseAddress` attribut de la [ \< liaison >](../../../../docs/framework/misc/binding.md) élément de la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) élément portant le nom de l’ordinateur approprié, comme indiqué :  
+    >  Lorsque vous exécutez le client dans une configuration à plusieurs ordinateurs, veillez à remplacer localhost à la fois dans le `address` attribut de la [point de terminaison](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément et le `clientBaseAddress` attribut de la [ \< liaison >](../../../../docs/framework/misc/binding.md) élément de la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) élément portant le nom de l’ordinateur approprié, comme indiqué :  
   
     ```xml  
     <client>  

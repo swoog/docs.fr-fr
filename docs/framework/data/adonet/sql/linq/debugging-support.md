@@ -2,15 +2,15 @@
 title: Prise en charge du débogage
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
-ms.openlocfilehash: 58eb4961a31dd51aca3addc1f5aad441b2f8b51a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70823d7480d59f96f3f8f4ad2b28102917ec2d80
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361771"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486527"
 ---
 # <a name="debugging-support"></a>Prise en charge du débogage
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Fournit une prise en charge générale de débogage pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projets.  Consultez également [débogage LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.110\)) ou [débogage LINQ](http://msdn.microsoft.com/library/Bb385795\(v=vs.120\)).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Fournit une prise en charge générale de débogage pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projets.  Consultez également [débogage LINQ](/visualstudio/debugger/debugging-linq) ou [débogage LINQ](/visualstudio/debugger/debugging-linq).  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] fournit également des outils spéciaux pour consulter le code SQL. Pour plus d'informations, consultez les rubriques de cette section.  
   

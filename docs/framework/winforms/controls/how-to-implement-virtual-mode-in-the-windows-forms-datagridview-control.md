@@ -11,12 +11,12 @@ helpviewer_keywords:
 - virtual mode
 - DataGridView control [Windows Forms], large data sets
 ms.assetid: 98236267-f08e-4918-bcf9-77acf050a3ca
-ms.openlocfilehash: fc6d477c8260efbb153d32789ae4657e6375d6eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f33b210a454dddf318c2dd78ce170caa2ff1770
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532146"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488051"
 ---
 # <a name="how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control"></a>Comment : implémenter le mode virtuel dans le contrôle DataGridView Windows Forms
 L'exemple de code suivant montre comment gérer de grands ensembles de données à l'aide d'un contrôle <xref:System.Windows.Forms.DataGridView> dont la propriété <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> a la valeur `true`.  
@@ -33,7 +33,7 @@ L'exemple de code suivant montre comment gérer de grands ensembles de données 
   
 -   des références aux assemblys System et System.Windows.Forms ;  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.DataGridView>  

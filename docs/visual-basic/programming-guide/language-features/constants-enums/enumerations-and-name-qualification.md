@@ -18,11 +18,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
 ms.openlocfilehash: cd07c883c576e917cf1aa5072505854bc906eb3f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933964"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484653"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>Énumérations et qualification de noms (Visual Basic)
 Normalement, lorsque vous faites référence à un membre d’une énumération, vous devez qualifier le nom du membre avec le nom de l’énumération. Par exemple, pour faire référence à la `Sunday` membre de votre `Days` énumération, vous utiliseriez la syntaxe suivante :  

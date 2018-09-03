@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2ac3788b68626eb04a6f2cbac995b8e5b4ebf5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e47c2ac69317b2d2db489dce9a0102b5fe304c05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442580"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483053"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2, méthode
-Vérifie la signature d’un assembly portant un nom fort et fournit un mappage à partir de la clé ECMA à une clé réelle.  
+Vérifie la signature d’un assembly de nom fort et fournit un mappage à partir de la clé ECMA à une clé réelle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,16 +55,16 @@ HRESULT StrongNameSignatureVerificationEx (
  [out] `true` si la signature de nom fort a été vérifiée ; sinon, `false`. Ce paramètre est également défini sur `false` si la vérification a réussi en raison des paramètres de Registre.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` Si la vérification a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
+ `S_OK` Si la vérification a réussi ; Sinon, une valeur HRESULT qui indique un échec (consultez [valeurs HRESULT courantes](https://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [StrongNameSignatureVerification, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  

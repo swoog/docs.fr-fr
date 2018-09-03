@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: 6db75e9d8ec5aeb1a0c7310d39391f8f264649d3
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332224"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488298"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : assignation du contenu WPF sur les Windows Forms au moment du design
 Cette procédure pas à pas montre comment sélectionner les types de contrôle WPF (Windows Presentation Foundation) que vous souhaitez afficher sur votre formulaire. Vous pouvez sélectionner tout type de contrôle WPF inclus dans votre projet.  

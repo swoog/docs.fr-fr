@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 0b83369a00cdd21b64c53834a7f6e7bcea09a26a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258561"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482920"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Personnalisation des flux (services de données WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer des données en tant que flux. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats Atom et JavaScript Objet Notation (JSON) pour les flux de données. Lorsque vous utilisez un flux Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fournit une méthode standard pour sérialiser les données, telles que les entités et relations, dans un format XML qui peut être inclus dans le corps du message HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] définit un mappage de propriété d’entité par défaut entre les données contenues dans les entités et les éléments Atom. Pour plus d’informations, consultez [OData : Format Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise le [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] pour exposer des données en tant que flux. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] prend en charge les formats Atom et JavaScript Objet Notation (JSON) pour les flux de données. Lorsque vous utilisez un flux Atom, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] fournit une méthode standard pour sérialiser les données, telles que les entités et relations, dans un format XML qui peut être inclus dans le corps du message HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] définit un mappage de propriété d’entité par défaut entre les données contenues dans les entités et les éléments Atom. Pour plus d’informations, consultez [OData : Format Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Vous pouvez avoir un scénario d'application qui requiert que les données de propriété retournées par le service des données soient sérialisées de façon personnalisée plutôt qu'au format de flux standard. Avec [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], vous pouvez personnaliser la sérialisation dans un flux de données afin que les propriétés d’une entité puissent être mappées aux éléments inutilisés et les attributs d’une entrée ou aux éléments personnalisés d’une entrée dans le flux.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "43258561"
 >  Lorsque vous définissez des flux personnalisés, vous devez vérifier que toutes les propriétés de l'entité qui ont des mappages personnalisés définis sont incluses dans la projection. Lorsqu'une propriété d'entité mappée n'est pas incluse dans la projection, une perte de données peut se produire. Pour plus d’informations, consultez [Projections de requête](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Personnalisation de flux avec le fournisseur Entity Framework  
- Le modèle de données utilisé avec le fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] est représenté sous la forme de code XML dans le fichier .edmx. Dans ce cas, les attributs qui définissent des flux personnalisés sont ajoutés aux éléments `EntityType` et `Property` qui représentent des types et des propriétés d'entité dans le modèle de données. Ces attributs de personnalisation de flux ne sont pas définis dans [ \[MC-CSDL\]: Conceptual Schema Definition File Format](http://go.microsoft.com/fwlink/?LinkId=159072), qui est le format qui le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur utilise pour définir le modèle de données. Par conséquent, vous devez déclarer les attributs de personnalisation de flux dans un espace de noms de schéma spécifique défini sous la forme `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Le fragment XML suivant affiche des attributs de personnalisation de flux appliqués aux éléments `Property` du type d'entité `Products` qui définissent les propriétés `ProductName`, `ReorderLevel` et `UnitsInStock`.  
+ Le modèle de données utilisé avec le fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] est représenté sous la forme de code XML dans le fichier .edmx. Dans ce cas, les attributs qui définissent des flux personnalisés sont ajoutés aux éléments `EntityType` et `Property` qui représentent des types et des propriétés d'entité dans le modèle de données. Ces attributs de personnalisation de flux ne sont pas définis dans [ \[MC-CSDL\]: Conceptual Schema Definition File Format](https://go.microsoft.com/fwlink/?LinkId=159072), qui est le format qui le [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] fournisseur utilise pour définir le modèle de données. Par conséquent, vous devez déclarer les attributs de personnalisation de flux dans un espace de noms de schéma spécifique défini sous la forme `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Le fragment XML suivant affiche des attributs de personnalisation de flux appliqués aux éléments `Property` du type d'entité `Products` qui définissent les propriétés `ProductName`, `ReorderLevel` et `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43258561"
  Pour plus d’informations, consultez [Comment : personnaliser les flux avec le fournisseur Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Étant donné que les extensions au modèle de données ne sont pas prises en charge par le Concepteur d’entités, vous devez modifier manuellement le fichier XML qui contient le modèle de données. Pour plus d’informations sur le fichier .edmx généré par le [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] tools, consultez [présentation d’un fichier .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Étant donné que les extensions au modèle de données ne sont pas prises en charge par le Concepteur d’entités, vous devez modifier manuellement le fichier XML qui contient le modèle de données. Pour plus d’informations sur le fichier .edmx généré par le [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] tools, consultez [présentation d’un fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Attributs de flux personnalisés  
  La table suivante affiche les attributs XML qui personnalisent les flux que vous pouvez ajouter au CSDL (Conceptual Schema Definition Language) qui définit le modèle de données. Ces attributs sont équivalents aux propriétés de <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> utilisées avec le fournisseur de réflexion.  

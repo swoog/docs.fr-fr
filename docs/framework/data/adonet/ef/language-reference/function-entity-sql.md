@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: c101032aed3e94e6bbf1d16319a616131fa6b60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1c02583400f9092dcb5008239bfd1fd73c63c326
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760672"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485545"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Définit une fonction dans la portée d'une commande de requête Entity SQL.  
@@ -61,7 +61,7 @@ FUNCTION function-name
   
  `A()`  
   
- Pour plus d’informations, consultez [Comment : appeler une fonction définie par l’utilisateur](http://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02).  
+ Pour plus d’informations, consultez [Comment : appeler une fonction définie par l’utilisateur](https://msdn.microsoft.com/library/ad131b86-8b4e-4747-8605-d4fc64fb9d02).  
   
  Les fonctions peuvent également être déclarées dans le modèle lui-même. Les fonctions déclarées dans le modèle sont exécutées de la même façon que les fonctions déclarées inline dans la commande. Pour plus d’informations, consultez [les fonctions définies par l’utilisateur](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md).  
   

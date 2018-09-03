@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 67e1f8abe6872358a29ab8f6734b58c1c1bc809c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533755"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480115"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Comment : mettre en boucle la lecture d'un son dans un Windows Form
 L'exemple de code suivant joue un son de manière répétitive. Quand le code du gestionnaire d'événements `stopPlayingButton_Click` est exécuté, le son s'arrête. Si aucun son n'est joué, rien ne se produit.  
@@ -31,7 +31,7 @@ L'exemple de code suivant joue un son de manière répétitive. Quand le code du
   
 -   que vous remplaciez le nom de fichier `"c:\Windows\Media\chimes.wav"` par un nom de fichier valide.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Programmation fiable  
  Les opérations de fichiers doivent être placées dans des blocs de gestion des exceptions appropriés.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-ms.openlocfilehash: d9456926b228fadca940f6c4698829494382e237
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 043f156f96d6ebc9ac5a6487287ad327928d9bf0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355520"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481786"
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Énumération des instances de SQL Server (ADO.NET)
 SQL Server permet à des applications pour rechercher des instances de SQL Server dans le réseau actuel. La classe <xref:System.Data.Sql.SqlDataSourceEnumerator> expose ces informations au développeur d'applications, en fournissant un <xref:System.Data.DataTable> contenant des informations sur tous les serveurs visibles. Cette table retournée contient une liste d’instances de serveur disponibles sur le réseau qui correspond à la liste fournie lorsqu’un utilisateur tente de créer une nouvelle connexion et développe la liste déroulante contenant tous les serveurs disponibles sur le **connexion Propriétés** boîte de dialogue. Les résultats affichés ne sont pas toujours complets.  
@@ -48,7 +48,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Nom du serveur.|  
 |**InstanceName**|Nom de l'instance du serveur. Vide si le serveur s'exécute comme instance par défaut.|  
 |**IsClustered**|Indique si le serveur fait partie d'un cluster.|  
-|**Version**|Version du serveur. Par exemple :<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
+|**Version**|Version du serveur. Exemple :<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Limitations des énumérations  
  Tous les serveurs disponibles peuvent être répertoriés ou ne pas l'être. La liste peut varier en fonction de facteurs tels que des délais d'attente et le trafic réseau. Cela peut avoir pour effet que la liste diffère sur deux appels consécutifs. Seuls des serveurs sur le même réseau sont répertoriés. Les paquets de diffusion ne traversent généralement pas les routeurs, ce qui explique pourquoi vous pouvez ne pas voir un serveur dans la liste, alors qu'il est stable dans l'ensemble des appels.  
@@ -58,7 +58,7 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 > [!NOTE]
 >  L'énumération des serveurs n'est disponible qu'en mode d'exécution avec un niveau de confiance totale. Les assemblys s'exécutant dans un environnement bénéficiant d'un niveau de confiance partielle ne peuvent pas l'utiliser, même s'ils disposent de l'autorisation de sécurité d'accès du code CAS (Code Access Security) <xref:System.Data.SqlClient.SqlClientPermission>.  
   
- SQL Server fournit des informations pour la <xref:System.Data.Sql.SqlDataSourceEnumerator> via l’utilisation d’un service Windows externe nommé SQL Browser. Ce service est activé par défaut mais les administrateurs peuvent l'arrêter ou le désactiver, ce qui rend l'instance du serveur invisible pour cette classe.  
+ SQL Server fournit des informations pour le <xref:System.Data.Sql.SqlDataSourceEnumerator> en utilisant un service Windows externe nommé SQL Browser. Ce service est activé par défaut mais les administrateurs peuvent l'arrêter ou le désactiver, ce qui rend l'instance du serveur invisible pour cette classe.  
   
 ## <a name="example"></a>Exemple  
  L'application console suivante extrait des informations sur toutes les instances de SQL Server visibles et affiche les informations dans la fenêtre de console.  
@@ -126,4 +126,4 @@ class Program
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

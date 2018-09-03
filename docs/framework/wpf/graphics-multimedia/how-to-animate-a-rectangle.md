@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], rectangles
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
-ms.openlocfilehash: 10d9f3b99e9a2c9b9aef795a8f7108c043e4267a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2edf1bc8505b7bda2cc31ded2d2bf53a96243ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561428"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480047"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Comment : animer un rectangle
 Cet exemple montre comment animer les modifications apportées à la taille et à la position d’un rectangle.  
@@ -31,5 +31,5 @@ Cet exemple montre comment animer les modifications apportées à la taille et �
  [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Graphiques et multimédia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [Animation et minutage](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Animation et minutage](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Rubriques de guide pratique](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

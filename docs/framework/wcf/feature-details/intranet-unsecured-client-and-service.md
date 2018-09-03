@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492246"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475892"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Service et client intranet non sécurisés
-L’illustration suivante représente un service Windows Communication Foundation (WCF) simple développé pour fournir des informations sur un réseau privé sécurisé à une application WCF. Sécurité n’est pas nécessaire car les données sont d’une importance faible, le réseau doit être sécurisée par nature ou la sécurité est fournie par une couche figurant en dessous de l’infrastructure WCF.  
+L’illustration suivante représente un service Windows Communication Foundation (WCF) simple développé pour fournir des informations sur un réseau privé sécurisé à une application WCF. Sécurité n’est pas nécessaire, car les données sont d’importance basse, le réseau doit être sécurisé par nature, ou sécurité est fournie par une couche ci-dessous l’infrastructure WCF.  
   
  ![Scénario de service et client intranet non sécurisés](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -117,4 +117,4 @@ L’illustration suivante représente un service Windows Communication Foundatio
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.NetTcpBinding>  
  [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

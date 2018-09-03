@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms], about StatusStrip control
 - status bars [Windows Forms], about status bars
 ms.assetid: c0d9bcbb-f8b8-46ef-bae2-4146b8c8ce99
-ms.openlocfilehash: b915be2db6865a95d2d37afda58983dbb2edca27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e40373dd05e59325cdb6c2272d5749f3828b0755
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537906"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488311"
 ---
 # <a name="statusstrip-control-overview"></a>Vue d'ensemble du contrôle StatusStrip
 Un contrôle <xref:System.Windows.Forms.StatusStrip> affiche des informations sur un objet affiché sur un <xref:System.Windows.Forms.Form>, les composants de l'objet ou des informations contextuelles relatives au fonctionnement de cet objet dans votre application. En règle générale, un contrôle <xref:System.Windows.Forms.StatusStrip> est composé d'objets <xref:System.Windows.Forms.ToolStripStatusLabel>, chacun affichant du texte, une icône ou les deux. <xref:System.Windows.Forms.StatusStrip> peut également contenir des contrôles <xref:System.Windows.Forms.ToolStripDropDownButton>, <xref:System.Windows.Forms.ToolStripSplitButton> et <xref:System.Windows.Forms.ToolStripProgressBar>.  
@@ -21,7 +21,7 @@ Un contrôle <xref:System.Windows.Forms.StatusStrip> affiche des informations su
   
  Visual Studio offre une prise en charge complète de la gestion des éléments et des commandes courantes de <xref:System.Windows.Forms.StatusStrip>.  
   
- Consultez également [éditeur de collections d’éléments StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [Tâches StatusStrip, boîte de dialogue](http://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
+ Consultez également [éditeur de collections d’éléments StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [Tâches StatusStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
   
  Bien que <xref:System.Windows.Forms.StatusStrip> remplace et étende le contrôle <xref:System.Windows.Forms.StatusBar> des versions antérieures, <xref:System.Windows.Forms.StatusBar> est conservé à des fins de compatibilité descendante et pour une utilisation ultérieure si tel est votre choix.  
   

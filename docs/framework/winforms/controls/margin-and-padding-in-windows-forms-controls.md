@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: c3907b9eb5849c5329043323b7b2f926f48117ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f0469a879bab7aac8e572cc666dfa9d168103ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534412"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488337"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Marge et marge intérieure dans les contrôles Windows Forms
 Le positionnement précis des contrôles sur votre formulaire constitue une haute priorité pour de nombreuses applications. L'espace de noms <xref:System.Windows.Forms?displayProperty=nameWithType> propose pour cela de nombreuses fonctionnalités de disposition. Deux des plus importantes sont les propriétés <xref:System.Windows.Forms.Control.Margin%2A> et <xref:System.Windows.Forms.Control.Padding%2A>.  
@@ -25,7 +25,7 @@ Le positionnement précis des contrôles sur votre formulaire constitue une haut
   
  ![Remplissage et marge pour les Windows Forms contrôles](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Cette fonctionnalité est prise en charge au moment du design dans Visual Studio.  Consultez également [procédure pas à pas : disposition des contrôles Windows Forms avec Padding, Margins et la propriété AutoSize](http://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
+ Cette fonctionnalité est prise en charge au moment du design dans Visual Studio.  Consultez également [procédure pas à pas : disposition Out Windows Forms contrôles avec la propriété AutoSize, des marges et remplissage](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Control.AutoSize%2A>  

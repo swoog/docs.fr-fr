@@ -2,12 +2,12 @@
 title: Participants de suivi
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 34f807cd8c6c227e5e60b40d1ecc01ef693f31f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519811"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488272"
 ---
 # <a name="tracking-participants"></a>Participants de suivi
 Les participants de traçage sont des points d'extensibilité qui permettent à un développeur de workflow d'accéder aux objets <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> et de les traiter. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclut un participant de trace standard qui écrit des enregistrements de suivi en tant qu'événements de suivi d'événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé.  
@@ -60,14 +60,14 @@ Les participants de traçage sont des points d'extensibilité qui permettent à 
   
  L'illustration suivante montre le flux des données de suivi via le participant de suivi ETW. Une fois que les données de suivi ont atteint la session ETW, il est possible d'y accéder de plusieurs façons. L'observateur d'événements, un outil Windows courant utilisé pour l'affichage des journaux et des suivis provenant d'applications et de services constitue l'un des moyens les plus pratiques pour accéder à ces événements.  
   
- ![Le flux du suivi et de fournisseur de suivi ETW](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Le flux de suivi et le fournisseur de suivi ETW](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>Données d'événement des participants de suivi  
- Un participant de suivi sérialise les données d'événement ayant fait l'objet d'un suivi dans une session ETW sous la forme d'un événement par enregistrement de suivi.  Un événement est identifié à l'aide d'un ID compris entre 100 et 199. Pour les définitions de l’événement de suivi enregistrements émis par un participant de suivi, consultez le [référence de suivi des événements](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) rubrique.  
+ Un participant de suivi sérialise les données d'événement ayant fait l'objet d'un suivi dans une session ETW sous la forme d'un événement par enregistrement de suivi.  Un événement est identifié à l'aide d'un ID compris entre 100 et 199. Pour les définitions de l’événement de suivi émis par un participant de suivi, des enregistrements, consultez la [référence de suivi des événements](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md) rubrique.  
   
  La taille d'un événement ETW est limitée par la taille de la mémoire tampon ETW, ou par la charge utile maximale pour un événement ETW, selon la valeur la plus petite. Si la taille de l'événement dépasse l'une ou l'autre de ces limites ETW, l'événement est tronqué et son contenu supprimé de façon arbitraire. Les variables, arguments, annotations et données personnalisées ne sont pas supprimés de manière sélective. Dans le cas de troncation, tous ces éléments sont tronqués indépendamment de la valeur à l'origine du dépassement de la limite ETW.  Les données supprimées sont remplacées par `<item>..<item>`.  
   
- Types complexes dans les variables, arguments et éléments de données personnalisés sont sérialisés à l’enregistrement d’événement ETW à l’aide du [classe NetDataContractSerializer](http://go.microsoft.com/fwlink/?LinkId=177537). Cette classe inclut les informations de type CLR dans le flux XML sérialisé.  
+ Types complexes dans les variables, arguments et éléments de données personnalisés sont sérialisés à l’enregistrement d’événement ETW à l’aide du [classe NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Cette classe inclut les informations de type CLR dans le flux XML sérialisé.  
   
  La troncation des données de charge utile en raison de limites ETW peut provoquer l'envoi d'enregistrements de suivi en double à une session ETW. Cela peut se produire si plusieurs sessions écoutent les événements et si ces sessions ont des limites de charge utile différentes pour les événements.  
   
@@ -83,11 +83,11 @@ Les participants de traçage sont des points d'extensibilité qui permettent à 
   
 1.  Démarrez l'observateur d'événements (EVENTVWR.EXE).  
   
-2.  Sélectionnez **Observateur d’événements, les Applications et les journaux des Services Microsoft, Windows, serveur d’applications-Applications**.  
+2.  Sélectionnez **Observateur d’événements, journaux Applications et Services, Microsoft, Windows, serveur d’applications-Applications**.  
   
-3.  Avec le bouton droit et vérifiez que **affichage, afficher les journaux d’analyse et débogage** est sélectionnée. Si tel n'est pas le cas, activez cette case à cocher de façon à ce que la coche apparaisse en regard de celle-ci. Cela permet d’afficher le **analyse**, **Perf**, et **déboguer** journaux.  
+3.  Avec le bouton droit et vérifiez que **vue d’analyse et de journaux de débogage** est sélectionné. Si tel n'est pas le cas, activez cette case à cocher de façon à ce que la coche apparaisse en regard de celle-ci. Cela permet d’afficher le **analyse**, **Perf**, et **déboguer** journaux.  
   
-4.  Cliquez sur le **analyse** et sélectionnez **activer le journal**. Le journal existera dans le fichier %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
+4.  Avec le bouton droit le **analyse** et sélectionnez **activer le journal**. Le journal existera dans le fichier %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participant de suivi personnalisé  
  L'API de participant de suivi permet d'étendre l'exécution du suivi avec un participant de suivi fourni par l'utilisateur, qui peut inclure une logique personnalisée permettant de gérer les enregistrements de suivi émis par l'exécution du workflow. Pour écrire un participant de suivi personnalisé, le développeur doit implémenter la méthode `Track` sur la classe <xref:System.Activities.Tracking.TrackingParticipant>. Cette méthode est appelée lorsqu'un enregistrement de suivi est émis par l'exécution du workflow.  
@@ -141,5 +141,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Analyse de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Analyse des Applications avec AppFabric](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Surveillance de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Surveillance des Applications avec App Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)

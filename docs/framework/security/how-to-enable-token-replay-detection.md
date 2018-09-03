@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b9c187998b4af41e1a56ed9a64625da7e4f95d5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5adf39c37fce92d4caf1d85e2a6a12e9e6b59b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408058"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486514"
 ---
 # <a name="how-to-enable-token-replay-detection"></a>Guide pratique pour activer la détection de relecture de jetons
 ## <a name="applies-to"></a>S'applique à  
@@ -19,7 +19,7 @@ ms.locfileid: "33408058"
 -   Web Forms ASP.NET®  
   
 ## <a name="summary"></a>Récapitulatif  
- Cette procédure fournit des procédures pas à pas détaillées pour l’activation de la détection de relecture de jetons dans une application ASP.NET qui utilise WIF. Elle fournit également des instructions pour tester l’application afin de vérifier que la détection de relecture de jetons est activée. Cette procédure ne fournit pas d'instructions détaillées pour créer un service d'émission de jeton de sécurité (STS, Security Token Service), et utilise à la place le développement STS fourni avec l'outil Identité et accès. Le développement STS n'exécute de véritable authentification et est destiné à des fins de test uniquement. Vous devez installer l'outil Identité et accès pour exécuter cette procédure. Il peut être téléchargé à partir de l’emplacement suivant : [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ Cette procédure fournit des procédures pas à pas détaillées pour l’activation de la détection de relecture de jetons dans une application ASP.NET qui utilise WIF. Elle fournit également des instructions pour tester l’application afin de vérifier que la détection de relecture de jetons est activée. Cette procédure ne fournit pas d'instructions détaillées pour créer un service d'émission de jeton de sécurité (STS, Security Token Service), et utilise à la place le développement STS fourni avec l'outil Identité et accès. Le développement STS n'exécute de véritable authentification et est destiné à des fins de test uniquement. Vous devez installer l'outil Identité et accès pour exécuter cette procédure. Il peut être téléchargé à partir de l’emplacement suivant : [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Sommaire  
   

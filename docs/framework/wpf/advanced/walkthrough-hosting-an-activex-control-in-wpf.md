@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: c8cbc2cb60e4afce4bcb35cf1fe645068a452b1e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 671138389b471ad9b9c62bd768895832d0324591
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547210"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486553"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Procédure pas à pas : hébergement d'un contrôle ActiveX dans WPF
-Pour permettre une interaction améliorée avec les navigateurs, vous pouvez utiliser [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] des contrôles dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur. Cette procédure pas à pas montre comment vous pouvez héberger le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] comme un contrôle sur un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page.  
+Pour permettre une interaction améliorée avec les navigateurs, vous pouvez utiliser [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] des contrôles dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur. Cette procédure pas à pas montre comment vous pouvez héberger le [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] en tant que contrôle sur une [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] page.  
   
  Cette procédure pas à pas décrit notamment les tâches suivantes :  
   
@@ -26,7 +26,7 @@ Pour permettre une interaction améliorée avec les navigateurs, vous pouvez uti
   
 -   Hébergement du contrôle ActiveX sur une Page WPF.  
   
- Lorsque vous avez terminé cette procédure pas à pas, vous saurez comment utiliser [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] des contrôles dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur.  
+ Lorsque vous avez terminé cette procédure pas à pas, vous comprendrez comment utiliser [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] des contrôles dans votre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-application basée sur.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
@@ -41,15 +41,15 @@ Pour permettre une interaction améliorée avec les navigateurs, vous pouvez uti
   
 1.  Créez un projet d’Application WPF nommé `HostingAxInWpf`.  
   
-2.  Ajouter un projet de bibliothèque de contrôles Windows Forms à la solution et nommez le projet `WmpAxLib`.  
+2.  Ajouter un projet de bibliothèque de contrôles Windows Forms à la solution, puis nommez le projet `WmpAxLib`.  
   
-3.  Dans le projet WmpAxLib, ajoutez une référence à l’assembly de lecteur Windows Media nommé wmp.dll.  
+3.  Dans le projet WmpAxLib, ajoutez une référence à l’assembly Windows Media Player, nommé wmp.dll.  
   
 4.  Ouvrez le **boîte à outils**.  
   
 5.  Avec le bouton droit dans le **boîte à outils**, puis cliquez sur **choisir des éléments de**.  
   
-6.  Cliquez sur le **des composants COM** onglet, sélectionnez le **le lecteur Windows Media** contrôler, puis cliquez sur **OK**.  
+6.  Cliquez sur le **composants COM** onglet, sélectionnez le **Windows Media Player** contrôler, puis cliquez sur **OK**.  
   
      Le contrôle Windows Media Player est ajouté à la **boîte à outils**.  
   
@@ -60,25 +60,25 @@ Pour permettre une interaction améliorée avec les navigateurs, vous pouvez uti
 9. Si vous êtes invité à renommer toutes les références, cliquez sur **Oui**.  
   
 ## <a name="creating-the-activex-control"></a>Création du contrôle ActiveX  
- [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] génère automatiquement un <xref:System.Windows.Forms.AxHost> classe wrapper pour un [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] contrôle lorsque le contrôle est ajouté à une aire de conception. La procédure suivante crée un assembly managé nommé AxInterop.WMPLib.dll.  
+ [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] génère automatiquement un <xref:System.Windows.Forms.AxHost> classe wrapper pour un [!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)] contrôler quand le contrôle est ajouté à une aire de conception. La procédure suivante crée un assembly managé nommé AxInterop.WMPLib.dll.  
   
 #### <a name="to-create-the-activex-control"></a>Pour créer le contrôle ActiveX  
   
-1.  Ouvrez WmpAxControl.cs ou WmpAxControl.vb dans le Concepteur Windows Forms.  
+1.  Ouvrez WmpAxControl.cs ou WmpAxControl.vb dans le Concepteur de formulaires Windows.  
   
-2.  À partir de la **boîte à outils**, ajoutez le contrôle de lecteur Windows Media à l’aire de conception.  
+2.  À partir de la **boîte à outils**, ajoutez le contrôle Windows Media Player à l’aire de conception.  
   
-3.  Dans la fenêtre Propriétés, définissez la valeur du contrôle Lecteur Windows Media <xref:System.Windows.Forms.Control.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Fill>.  
+3.  Dans la fenêtre Propriétés, définissez la valeur du contrôle Windows Media Player <xref:System.Windows.Forms.Control.Dock%2A> propriété <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-4.  Générez le projet de bibliothèque de contrôles WmpAxLib.  
+4.  Générez le projet de bibliothèque de contrôle WmpAxLib.  
   
 ## <a name="hosting-the-activex-control-on-a-wpf-page"></a>Hébergement du contrôle ActiveX sur une Page WPF  
   
 #### <a name="to-host-the-activex-control"></a>Pour héberger le contrôle ActiveX  
   
-1.  Dans le projet HostingAxInWpf, ajoutez une référence à généré [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] assembly d’interopérabilité.  
+1.  Dans le projet HostingAxInWpf, ajoutez une référence à la generated [!INCLUDE[TLA2#tla_actx](../../../../includes/tla2sharptla-actx-md.md)] assembly d’interopérabilité.  
   
-     Cet assembly est nommé AxInterop.WMPLib.dll et a été ajouté au dossier Debug du projet WmpAxLib lorsque vous avez importé le contrôle du lecteur Windows Media.  
+     Cet assembly est nommé AxInterop.WMPLib.dll et a été ajouté au dossier Debug du projet WmpAxLib lorsque vous avez importé le contrôle Windows Media Player.  
   
 2.  Ajoutez une référence à l’assembly WindowsFormsIntegration, nommé WindowsFormsIntegration.dll.  
   
@@ -90,7 +90,7 @@ Pour permettre une interaction améliorée avec les navigateurs, vous pouvez uti
   
      [!code-xaml[HostingAxInWpf#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml#1)]  
   
-6.  En mode Création ou la vue XAML, sélectionnez le <xref:System.Windows.Window> élément.  
+6.  Dans le mode Création ou XAML, sélectionnez le <xref:System.Windows.Window> élément.  
   
 7.  Dans la fenêtre Propriétés, cliquez sur le **événements** onglet.  
   
@@ -98,7 +98,7 @@ Pour permettre une interaction améliorée avec les navigateurs, vous pouvez uti
   
 9. Insérez le code suivant pour gérer les <xref:System.Windows.FrameworkElement.Loaded> événement.  
   
-     Ce code crée une instance de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôler et ajoute une instance de la `AxWindowsMediaPlayer` contrôle enfant.  
+     Ce code crée une instance de la <xref:System.Windows.Forms.Integration.WindowsFormsHost> contrôler et ajoute une instance de la `AxWindowsMediaPlayer` contrôle en tant qu’enfant.  
   
      [!code-csharp[HostingAxInWpf#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HostingAxInWpf/CSharp/HostingAxInWpf/window1.xaml.cs#11)]
      [!code-vb[HostingAxInWpf#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HostingAxInWpf/VisualBasic/HostingAxInWpf/window1.xaml.vb#11)]  
@@ -108,6 +108,6 @@ Pour permettre une interaction améliorée avec les navigateurs, vous pouvez uti
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Concepteur WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
  [Procédure pas à pas : hébergement d'un contrôle composite Windows Forms dans WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Procédure pas à pas : Hébergement d'un contrôle composite WPF dans Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

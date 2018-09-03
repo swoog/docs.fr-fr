@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <schemaImporterExtensions> element
 ms.assetid: 465ef2a0-f909-4ac1-9a56-0ead5c849698
 ms.openlocfilehash: 8bcd8abb138c645f61bf833b49cda2631d1778dd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255627"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478011"
 ---
 # <a name="ltschemaimporterextensionsgt-element"></a>Élément &lt;schemaImporterExtensions&gt;
 Contient des types utilisés par le <xref:System.Xml.Serialization.XmlSchemaImporter> pour mapper des types XSD en types .NET Framework. Pour plus d’informations sur les fichiers de configuration, consultez [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md).  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258481"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480226"
 ---
 # <a name="delegate-statement"></a>Delegate, instruction
 Utilisé pour déclarer un délégué. Un délégué est un type référence qui fait référence à un `Shared` méthode d’un type ou à une méthode d’instance d’un objet. Toute procédure ayant des types de paramètre et de retour correspondants peut être utilisé pour créer une instance de cette classe déléguée. La procédure peut ensuite être appelée ultérieurement au moyen de l’instance de délégué.  

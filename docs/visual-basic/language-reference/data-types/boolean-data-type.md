@@ -12,27 +12,27 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 00f77fe5e98099868e02d74fe1adc7690cb95cca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbd914d8b4239bbae1de7031e68b2900cf5ad6a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590275"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478043"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Booléen, type de données (Visual Basic)
 Contient les valeurs qui peuvent être uniquement `True` ou `False`. Les mots clés `True` et `False` correspondent aux deux États de `Boolean` variables.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez le [(Visual Basic) de Type de données booléen](../../../visual-basic/language-reference/data-types/boolean-data-type.md) pour contenir des valeurs de deux États telles que true/false, Oui/Non, ou désactivez-les.  
+ Utilisez le [Type de données booléen (Visual Basic)](../../../visual-basic/language-reference/data-types/boolean-data-type.md) destiné à contenir les valeurs de deux États tels que vrai/faux, Oui/Non, ou désactivez-les.  
   
  La valeur par défaut de `Boolean` est `False`.  
   
- `Boolean` les valeurs ne sont pas stockées sous forme de nombres et les valeurs stockées ne sont pas destinées à être équivalentes en nombres. Vous devez jamais écrire du code qui s’appuie sur des valeurs numériques équivalentes pour `True` et `False`. Chaque fois que possible, vous devez limiter l’utilisation de `Boolean` variables aux valeurs logiques pour lesquelles elles sont conçues.  
+ `Boolean` les valeurs ne sont pas stockées sous forme de nombres et les valeurs stockées ne sont pas destinées à être équivalentes aux nombres. Vous devez jamais écrire du code qui s’appuie sur des valeurs numériques équivalentes pour `True` et `False`. Si possible, vous devez limiter l’utilisation de `Boolean` variables aux valeurs logiques pour lesquelles elles sont conçues.  
   
 ## <a name="type-conversions"></a>Conversions de type  
  Lorsque Visual Basic convertit les valeurs de type de données numériques à `Boolean`, 0 devient `False` et toutes les autres valeurs deviennent `True`. Lorsque Visual Basic convertit `Boolean` valeurs en types numériques, `False` devient 0 et `True` devient -1.  
   
- Lorsque vous effectuez une conversion entre `Boolean` conserver les valeurs et les types de données numériques, n’oubliez pas que les méthodes de conversion .NET Framework ne produisent pas toujours les mêmes résultats que les mots clés de conversion de Visual Basic. Il s’agit, car la conversion de Visual Basic conserve un comportement compatible avec les versions précédentes. Pour plus d’informations, consultez « Le Type Boolean ne se convertit pas correctement en Type numérique » dans [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Lorsque vous effectuez une conversion entre `Boolean` valeurs et types de données numériques, n’oubliez pas que les méthodes de conversion de .NET Framework ne produisent pas toujours les mêmes résultats que les mots clés de conversion Visual Basic. Il s’agit, car la conversion Visual Basic conserve un comportement compatible avec les versions précédentes. Pour plus d’informations, consultez « Le Type booléenne ne se convertit pas correctement en Type numérique » dans [dépannage des Types de données](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="programming-tips"></a>Conseils de programmation  
   
@@ -40,7 +40,7 @@ Contient les valeurs qui peuvent être uniquement `True` ou `False`. Les mots cl
   
 -   **Caractères de type.** `Boolean` n’a aucun caractère de type littéral ou un caractère de type identificateur.  
   
--   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Boolean?displayProperty=nameWithType>.  
+-   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.Boolean?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Exemple  
  Dans l’exemple suivant, `runningVB` est un `Boolean` variable, qui enregistre une simple valeur yes/no.  
@@ -55,7 +55,7 @@ End If
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Boolean?displayProperty=nameWithType>  
- [Types de données](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
  [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 8058f0fac8a0401f72f84e2d2e91c28c7e46d1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493361"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488168"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Comment : appeler des opérations de service WCF de façon asynchrone
-Cette rubrique présente comment un client peut accéder de façon asynchrone à une opération de service. Le service dans cette rubrique implémente l'interface `ICalculator`. Le client peut appeler les opérations sur cette interface de manière asynchrone à l'aide du modèle d'appel asynchrone commandé par événement. (Pour plus d’informations sur le modèle d’appel asynchrone basé sur des événements, consultez [programmation multithread avec le modèle asynchrone basé sur événement](http://go.microsoft.com/fwlink/?LinkId=248184)). Pour obtenir un exemple qui montre comment implémenter une opération de façon asynchrone dans un service, consultez [Comment : implémenter une opération de Service asynchrone](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Pour plus d’informations sur les opérations synchrones et asynchrones, consultez [synchrone et asynchrone des opérations](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+Cette rubrique présente comment un client peut accéder de façon asynchrone à une opération de service. Le service dans cette rubrique implémente l'interface `ICalculator`. Le client peut appeler les opérations sur cette interface de manière asynchrone à l'aide du modèle d'appel asynchrone commandé par événement. (Pour plus d’informations sur le modèle d’appel asynchrone basé sur des événements, consultez [programmation multithread avec le modèle asynchrone basé sur événement](https://go.microsoft.com/fwlink/?LinkId=248184)). Pour obtenir un exemple qui montre comment implémenter une opération de façon asynchrone dans un service, consultez [Comment : implémenter une opération de Service asynchrone](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Pour plus d’informations sur les opérations synchrones et asynchrones, consultez [synchrone et opérations asynchrones](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 > [!NOTE]
 >  Le modèle d'appel asynchrone commandé par événement n'est pas pris en charge lorsqu'il utilise un <xref:System.ServiceModel.ChannelFactory%601>. Pour plus d’informations sur les appels asynchrones à l’aide de la <xref:System.ServiceModel.ChannelFactory%601>, consultez [Comment : appeler opérations de façon asynchrone en utilisant une fabrique de canaux](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
@@ -22,7 +22,7 @@ Cette rubrique présente comment un client peut accéder de façon asynchrone à
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Pour appeler des opérations de service WCF de façon asynchrone  
   
-1.  Exécuter la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil à la fois avec la `/async` et le `/tcv:Version35` commande options ensemble, comme indiqué dans la commande suivante.  
+1.  Exécutez le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil avec les deux le `/async` et le `/tcv:Version35` commande options ensemble, comme indiqué dans la commande suivante.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
@@ -30,17 +30,17 @@ Cette rubrique présente comment un client peut accéder de façon asynchrone à
   
      Cette opération génère en plus les opérations synchrones et standards en fonction de délégué asynchrones, une classe de client WCF qui contient :  
   
-    -   Deux <`operationName` > `Async` operations pour une utilisation avec l’approche appel asynchrone basé sur des événements. Par exemple :  
+    -   Deux <`operationName` > `Async` opérations pour une utilisation avec l’approche appel asynchrone basé sur des événements. Exemple :  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   Événements d’opération s’est terminée sous la forme <`operationName` > `Completed` pour une utilisation avec l’approche appel asynchrone basé sur des événements. Par exemple :  
+    -   Événements terminés d’opérations sous la forme <`operationName` > `Completed` pour une utilisation avec l’approche appel asynchrone basé sur des événements. Exemple :  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> types pour chaque opération (sous la forme <`operationName`>`CompletedEventArgs`) pour une utilisation avec l’approche appel asynchrone basé sur des événements. Par exemple :  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> types pour chaque opération (sous la forme <`operationName`>`CompletedEventArgs`) pour une utilisation avec l’approche appel asynchrone basé sur des événements. Exemple :  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
@@ -50,7 +50,7 @@ Cette rubrique présente comment un client peut accéder de façon asynchrone à
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3.  Avant d’appeler l’opération, utilisez un nouveau générique <xref:System.EventHandler%601?displayProperty=nameWithType> de type <`operationName` > `EventArgs` pour ajouter la méthode de gestionnaire (créée à l’étape précédente) à la <`operationName` > `Completed` événement. Appelez ensuite la <`operationName` > `Async` (méthode). Par exemple :  
+3.  Avant d’appeler l’opération, utilisez un nouveau générique <xref:System.EventHandler%601?displayProperty=nameWithType> de type <`operationName` > `EventArgs` pour ajouter la méthode de gestionnaire (créée à l’étape précédente) à la <`operationName` > `Completed` événement. Appelez ensuite la <`operationName` > `Async` (méthode). Exemple :  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  

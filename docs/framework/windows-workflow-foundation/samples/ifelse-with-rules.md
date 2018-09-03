@@ -2,17 +2,17 @@
 title: IfElse With Rules
 ms.date: 03/30/2017
 ms.assetid: c4ad9bb2-9037-413a-8b14-59ed7b927a9e
-ms.openlocfilehash: 179ec29f957894433fb527a14048460f5ff6ee5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31906f04149a0ca7659201965ca565c7fa2af305
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515119"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483004"
 ---
 # <a name="ifelse-with-rules"></a>IfElse With Rules
 Cet exemple illustre l'utilisation d'une condition de règle avec une activité <xref:System.Workflow.Activities.IfElseActivity>.  
   
- L'exemple transmet un paramètre `OrderValue` depuis l'hôte. La valeur du paramètre est utilisée dans une condition de règle sur la première branche de l'activité <xref:System.Workflow.Activities.IfElseActivity>. Si la valeur est inférieure à 10 000, la première branche s’exécute et le <xref:System.Workflow.Activities.CodeActivity> activité de la première branche imprime **obtenir de l’approbation du Gestionnaire de** à la console. Si la valeur est supérieure à 10 000, le <xref:System.Workflow.Activities.CodeActivity> activité dans la deuxième branche s’exécute et imprime **obtenir de l’approbation du vice-président**.  
+ L'exemple transmet un paramètre `OrderValue` depuis l'hôte. La valeur du paramètre est utilisée dans une condition de règle sur la première branche de l'activité <xref:System.Workflow.Activities.IfElseActivity>. Si la valeur est inférieure à 10 000, la première branche s’exécute et le <xref:System.Workflow.Activities.CodeActivity> activité dans la première branche imprime **obtenir l’approbation du gestionnaire** à la console. Si la valeur est supérieure à 10 000, le <xref:System.Workflow.Activities.CodeActivity> une activité dans la deuxième branche s’exécute et imprime **obtenir l’approbation du vice-président**.  
   
 ### <a name="to-build-the-sample"></a>Pour générer l'exemple  
   
@@ -31,7 +31,7 @@ Cet exemple illustre l'utilisation d'une condition de règle avec une activité 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\IfElseWithRules`  
   

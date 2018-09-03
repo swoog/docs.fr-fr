@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 310c9549814a2686fb29e98ea81baa642b6a16bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553726"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476064"
 ---
 # <a name="label"></a>Ajouter des contrôles
-<xref:System.Windows.Controls.Label> contrôles fournissent généralement des informations dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historiquement, un <xref:System.Windows.Controls.Label> contenait que du texte, mais étant donné que la <xref:System.Windows.Controls.Label> qui est fourni avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est un <xref:System.Windows.Controls.ContentControl>, il peut contenir du texte ou un <xref:System.Windows.UIElement>.  
+<xref:System.Windows.Controls.Label> contrôles fournissent généralement des informations dans le [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historiquement, un <xref:System.Windows.Controls.Label> contenait que du texte, mais étant donné que le <xref:System.Windows.Controls.Label> qui est livré avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est un <xref:System.Windows.Controls.ContentControl>, il peut contenir du texte ou un <xref:System.Windows.UIElement>.  
   
- A <xref:System.Windows.Controls.Label> fournit la prise en charge visuelle et fonctionnelle pour les clés d’accès. Il est fréquemment utilisé pour activer les touches d’accès rapide à des contrôles comme une <xref:System.Windows.Controls.TextBox>. Pour affecter un <xref:System.Windows.Controls.Label> à un <xref:System.Windows.Controls.Control>, définissez le <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> propriété au contrôle qui doit recevoir le focus lorsque l’utilisateur appuie sur la clé d’accès.  
+ Un <xref:System.Windows.Controls.Label> prend en charge fonctionnel et visuel clés d’accès. Il est fréquemment utilisé pour activer les touches d’accès rapide aux contrôles comme un <xref:System.Windows.Controls.TextBox>. Pour affecter un <xref:System.Windows.Controls.Label> à un <xref:System.Windows.Controls.Control>, définissez le <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> propriété au contrôle qui doit obtenir le focus lorsque l’utilisateur appuie sur la clé d’accès.  
   
- L’illustration suivante montre un <xref:System.Windows.Controls.Label> « Thèmes » qui cible un <xref:System.Windows.Controls.ComboBox>.  Lorsque l’utilisateur appuie sur, la <xref:System.Windows.Controls.ComboBox> reçoit le focus.  Pour plus d’informations, consultez [Comment : définir la propriété de cible d’une étiquette](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ L’illustration suivante montre un <xref:System.Windows.Controls.Label> « Thèmes » qui cible un <xref:System.Windows.Controls.ComboBox>.  Lorsque l’utilisateur appuie sur, la <xref:System.Windows.Controls.ComboBox> reçoit le focus.  Pour plus d’informations, consultez [Comment : définir la propriété de cible d’une étiquette](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Propriétés d’affichage montrent étiquetage par utilisation](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [How to: Set the Target Property of a Label](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8) (Comment : définir la propriété Target d’une étiquette)  
+ [How to: Set the Target Property of a Label](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8) (Comment : définir la propriété Target d’une étiquette)  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Controls.Label>

@@ -2,12 +2,12 @@
 title: Sécurité Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 4e8d1502096dc452d21158e4fb3684298be9b982
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361937"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481729"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 La sécurisation d'une application est un processus permanent. Un développeur ne peut à aucun moment garantir qu'une application est à l'abri de toute attaque car il est impossible de prédire les types d'attaques futures que les nouvelles technologies permettront de faire apparaître. Inversement, le fait que personne n'a encore découvert (ou révélé) les défaillances de la sécurité d'un système ne signifie pas qu'il n'en existe pas ou qu'il ne peut pas en exister. Vous devez planifier la sécurité au cours de la phase de conception du projet, ainsi que la manière dont la sécurité sera maintenue tout au long de la durée de vie de l'application.  
@@ -18,7 +18,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
  Lorsque la sécurité est implémentée en dernière minute, cela entraîne également davantage de bogues, tels que des blocages de logiciels suite aux nouvelles restrictions ou la nécessité de réécrire du code pour la prise en charge de fonctionnalités non prévues initialement. Chaque ligne de code révisé ouvre la possibilité d'introduire un nouveau bogue. C'est pourquoi vous devez songer à la sécurité à un stade précoce du processus de développement, de façon à pouvoir la développer en même temps que les nouvelles fonctionnalités.  
   
 ### <a name="threat-modeling"></a>Modélisation des menaces  
- Vous ne pouvez pas protéger un système contre une attaque si vous ne comprenez pas toutes les attaques potentielles auxquelles il est exposé. Le processus d’évaluation des menaces de sécurité, appelé *une modélisation des menaces*, est nécessaire pour déterminer la probabilité et les ramifications des brèches de sécurité dans votre application ADO.NET.  
+ Vous ne pouvez pas protéger un système contre une attaque si vous ne comprenez pas toutes les attaques potentielles auxquelles il est exposé. Le processus d’évaluation des menaces de sécurité, appelé *la modélisation des menaces*, est nécessaire pour déterminer la probabilité et les ramifications des brèches de sécurité dans votre application ADO.NET.  
   
  La modélisation des menaces est constituée de trois étapes principales : compréhension de la perspective de l'adversaire, caractérisation de la sécurité du système et détermination des menaces.  
   
@@ -28,7 +28,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|Le [modélisation des menaces](http://go.microsoft.com/fwlink/?LinkId=98353) site sur le centre de développement sécurité MSDN|Les ressources de cette page vous aideront à comprendre le processus de modélisation des menaces et à construire des modèles de menaces que vous pouvez utiliser pour sécuriser vos propres applications|  
+|Le [de modélisation des menaces](https://go.microsoft.com/fwlink/?LinkId=98353) site sur le centre de sécurité MSDN|Les ressources de cette page vous aideront à comprendre le processus de modélisation des menaces et à construire des modèles de menaces que vous pouvez utiliser pour sécuriser vos propres applications|  
   
 ## <a name="the-principle-of-least-privilege"></a>Principe des privilèges minimum  
  Lorsque vous concevez, générez et déployez votre application, vous devez partir du principe qu'elle va être attaquée. Souvent, ces attaques proviennent de code malveillant qui s'exécute avec les autorisations de l'utilisateur exécutant le code. D'autres peuvent provenir de code bien intentionné qui a été exploité par un pirate. Lorsque vous planifiez la sécurité, supposez toujours que le pire scénario va se produire.  
@@ -67,7 +67,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Sécurité d’accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Décrit les interactions entre la sécurité d'accès du code, la sécurité basée sur les rôles et les environnements avec un niveau de confiance partielle depuis la perspective d'une application ADO.NET.|  
-|[Sécurité d’accès du code](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
+|[Sécurité d’accès du code](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
   
 ## <a name="database-security"></a>Sécurité de base de données  
  Le principe des privilèges minimum s'applique également à votre source de données. Ci-dessous figurent quelques-unes des instructions générales concernant la sécurité de la base de données :  
@@ -89,7 +89,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Fournit une vue d'ensemble de la sécurité de SQL Server avec des scénarios d'application qui fournissent des conseils pour créer des applications ADO.NET sécurisées qui ciblent SQL Server.|  
-|[Recommandations pour les stratégies d’accès aux données](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
+|[Recommandations pour les stratégies d’accès aux données](https://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Fournit des recommandations pour l'accès aux données et l'exécution d'opérations de base de données.|  
   
 ## <a name="security-policy-and-administration"></a>Stratégie et administration de sécurité  
  Une administration incorrecte de la sécurité d'accès du code peut potentiellement créer des failles en matière de sécurité. Une fois qu'une application a été déployée, des techniques de surveillance de la sécurité doivent être utilisées et les risques évalués à mesure que de nouvelles menaces émergent.  
@@ -98,11 +98,11 @@ La sécurisation d'une application est un processus permanent. Un développeur n
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[NIB : Gestion des stratégies de sécurité](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fournit des informations sur la création et l'administration de la stratégie de sécurité.|  
-|[NIB : Meilleures pratiques de la stratégie de sécurité](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Fournit des liens qui décrivent comment administrer la stratégie de sécurité.|  
+|[NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Fournit des informations sur la création et l'administration de la stratégie de sécurité.|  
+|[NIB : Meilleures pratiques de la stratégie de sécurité](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Fournit des liens qui décrivent comment administrer la stratégie de sécurité.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Sécurité PAVE dans le code natif et .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [Sécurité PAVE dans le code natif et .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

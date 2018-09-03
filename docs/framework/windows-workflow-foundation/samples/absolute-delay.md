@@ -2,12 +2,12 @@
 title: Report absolu
 ms.date: 03/30/2017
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-ms.openlocfilehash: 3a104f6b879e9cdc899bad2201ad1ed320a38a2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30719a4340b738a7462584c4dca00f6d5d90ac72
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518383"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486100"
 ---
 # <a name="absolute-delay"></a>Report absolu
 Le principal scénario de cet exemple consiste à définir un report jusqu'à un <xref:System.DateTime> spécifié, à l'aide de minuteurs durables dans une application de workflow. Cette opération n'est pas comparable à l'utilisation de l'activité <xref:System.Activities.Statements.Delay> intégrée, dans la mesure où elle vous permet seulement de définir un report pour un <xref:System.TimeSpan> donné (ou nombre de minutes/secondes).  
@@ -58,7 +58,7 @@ Le principal scénario de cet exemple consiste à définir un report jusqu'à un
     > [!NOTE]
     >  Si vous n'entrez pas d'hôte SMTP valide, l'application lèvera une exception SMTP.  
   
-7.  Générez la solution en sélectionnant **générer**, **générer la Solution**.  
+7.  Générez la solution en sélectionnant **Build**, **générer la Solution**.  
   
 8.  Exécutez la solution en appuyant sur **F5**.  
   
@@ -67,6 +67,6 @@ Le principal scénario de cet exemple consiste à définir un report jusqu'à un
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\AbsoluteDelay`

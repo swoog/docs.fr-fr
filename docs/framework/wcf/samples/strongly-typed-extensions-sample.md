@@ -2,11 +2,12 @@
 title: Strongly-Typed Extensions, exemple
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 10e5f2772b1d5cb9508f9e990cfd385d96096018
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482870"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Strongly-Typed Extensions, exemple
 L'exemple utilise la classe <xref:System.ServiceModel.Syndication.SyndicationFeed>. Toutefois, les modèles présentés dans cet exemple peuvent être utilisés avec toutes les classes Syndication qui prennent en charge les données d'extension.  
@@ -39,7 +40,7 @@ L'exemple utilise la classe <xref:System.ServiceModel.Syndication.SyndicationFee
 </entry>  
 ```  
   
- Le `<in-reply-to>` élément spécifie trois attributs requis (`ref`, `type` et `href`) en tenant également compte de la présence d’attributs d’extension supplémentaires et des éléments d’extension.  
+ Le `<in-reply-to>` élément spécifie trois attributs requis (`ref`, `type` et `href`) tout en autorisant également la présence d’attributs d’extension supplémentaires et des éléments d’extension.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>Modélisation de l'élément In-Reply-To  
  Dans cet exemple, l'élément `<in-reply-to>` est modélisé en tant que CLR qui implémente <xref:System.Xml.Serialization.IXmlSerializable>, ce qui active son utilisation avec <xref:System.Runtime.Serialization.DataContractSerializer>. Il implémente également quelques méthodes et propriétés pour accéder aux données de l'élément, comme le montre l'exemple de code suivant.  
@@ -271,18 +272,18 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
   

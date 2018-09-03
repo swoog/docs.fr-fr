@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f097a14486b9a07df867ffa5514da33f3db6d4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb2485f2ecf0426360dba80d443500a92b5a7af6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744523"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482221"
 ---
 # <a name="add-ins-and-extensibility"></a>Compléments et extensibilité
 <a name="top"></a> Les compléments fournissent des fonctionnalités ou des services étendus pour une application hôte. Le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournit un modèle de programmation que les développeurs peuvent utiliser pour développer des compléments et les activer dans leur application hôte. Le modèle permet de réaliser ceci en construisant un pipeline de communication entre l'hôte et le complément. Le modèle est implémenté à l'aide des types des espaces de noms <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>et <xref:System.AddIn.Contract> .  
@@ -35,7 +35,7 @@ ms.locfileid: "32744523"
 -   [Référence](#reference)  
   
 > [!NOTE]
->  Vous trouverez des exemples de code supplémentaires et des aperçus des technologies des clients traitant des outils pour créer des pipelines de compléments sur le [site de l’extensibilité et des compléments gérés de Framework sur CodePlex](http://go.microsoft.com/fwlink/?LinkId=121190).  
+>  Vous pouvez trouver des exemples de code supplémentaires et aperçus des technologies client des outils pour créer en complément des pipelines, à la [site Managed Extensibility and Add-In Framework sur CodePlex](https://go.microsoft.com/fwlink/?LinkId=121190).  
   
 <a name="addin_model"></a>   
 ## <a name="add-in-model"></a>Modèle de complément  
@@ -43,7 +43,7 @@ ms.locfileid: "32744523"
   
  L'illustration suivante présente le pipeline.  
   
- ![Ajoutez&#45;dans le modèle de pipeline. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Ajouter&#45;dans le modèle de pipeline. ](../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Pipeline de complément  
   
  Les assemblys pour ces segments ne doivent pas obligatoirement se trouver dans le même domaine d'application. Vous pouvez charger un complément dans son propre nouveau domaine d'application, dans un domaine d'application existant ou même dans le domaine d'application de l'hôte. Vous pouvez charger plusieurs compléments dans le même domaine d'application, ce qui permet aux compléments de partager des ressources et des contextes de sécurité.  
@@ -72,7 +72,7 @@ Pipeline de complément
 ### <a name="discovery-and-activation"></a>Découverte et activation  
  Vous pouvez activer un complément en utilisant un jeton d'une collection qui représente les compléments localisés dans une banque d'informations. Les compléments sont trouvés en recherchant le type qui définit la vue du complément de l'hôte. Vous pouvez aussi trouver un complément spécifique via le type qui définit le complément. La banque d'informations se compose de deux fichiers cache : le magasin de pipelines et le magasin de compléments.  
   
- Pour plus d’informations sur la mise à jour et la régénération de la banque d’informations, consultez [complément découverte](http://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Pour plus d’informations sur l’activation des compléments, consultez [Add-in Activation](http://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) et [Comment : activer des compléments avec une sécurité et d’Isolation différent](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Pour plus d’informations sur la mise à jour et la régénération de la banque d’informations, consultez [découverte des compléments](https://msdn.microsoft.com/library/5d268dde-11df-4c4d-a022-f58d88bbc421). Pour plus d’informations sur l’activation des compléments, consultez [Add-in Activation](https://msdn.microsoft.com/library/bedcbcdf-5964-4215-b5f3-3299798b2b3f) et [Comment : activer des compléments avec différents niveaux d’isolement et de sécurité](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="isolation-levels-and-external-processes"></a>Niveaux d'isolement et processus externes  
  Le modèle de complément prend en charge plusieurs niveaux d'isolement entre un complément et son hôte, ou entre compléments. En commençant par le moins isolé, ces niveaux sont les suivants :  
@@ -87,16 +87,16 @@ Pipeline de complément
   
 -   Chaque complément est chargé exclusivement dans son propre domaine d'application dans son processus externe. Il s'agit du scénario avec le plus d'isolement.  
   
- Pour plus d’informations sur l’utilisation de processus externes, consultez [Comment : activer des compléments avec une sécurité et d’Isolation différent](http://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
+ Pour plus d’informations sur l’utilisation de processus externes, consultez [Comment : activer des compléments avec différents niveaux d’isolement et de sécurité](https://msdn.microsoft.com/library/7afe7ec8-5158-4350-9119-5df0ecab8aa5).  
   
 ### <a name="lifetime-management"></a>Gestion de la durée de vie  
- Étant donné que le modèle de complément couvre les limites des domaines d'application et des processus, le garbage collection en lui-même n'est pas suffisant pour libérer et récupérer des objets. Le modèle de complément fournit un mécanisme de gestion de la durée de vie qui utilise des jetons et un comptage des références, et ne requiert généralement pas de programmation supplémentaire. Pour plus d’informations, consultez [gestion de la durée de vie](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Étant donné que le modèle de complément couvre les limites des domaines d'application et des processus, le garbage collection en lui-même n'est pas suffisant pour libérer et récupérer des objets. Le modèle de complément fournit un mécanisme de gestion de la durée de vie qui utilise des jetons et un comptage des références, et ne requiert généralement pas de programmation supplémentaire. Pour plus d’informations, consultez [Lifetime Management](https://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
  [Retour au début](#top)  
   
 <a name="distinguishing_between_addins_and_hosts"></a>   
 ## <a name="distinguishing-between-add-ins-and-hosts"></a>Distinction entre les hôtes et les compléments  
- La différence entre un complément et un hôte est simplement que l'hôte est celui qui active le complément. L'hôte peut être le plus important des deux, par exemple une application de traitement de texte et ses vérificateurs d'orthographe, mais l'hôte peut aussi être le moins important des deux, comme un client de messagerie instantanée qui incorpore un lecteur multimédia. Le modèle de complément prend en charge des compléments dans des scénarios client et serveur. Des compléments serveur fournissant des serveurs de messagerie avec analyse antivirus, filtres anti-spam et protection IP sont des exemples de compléments serveur. Exemples de compléments client incluent des compléments de référence pour les traitements, fonctionnalités spécialisées pour les programmes graphiques et de jeux et d’une analyse antivirus pour les clients de messagerie local.  
+ La différence entre un complément et un hôte est simplement que l'hôte est celui qui active le complément. L'hôte peut être le plus important des deux, par exemple une application de traitement de texte et ses vérificateurs d'orthographe, mais l'hôte peut aussi être le moins important des deux, comme un client de messagerie instantanée qui incorpore un lecteur multimédia. Le modèle de complément prend en charge des compléments dans des scénarios client et serveur. Des compléments serveur fournissant des serveurs de messagerie avec analyse antivirus, filtres anti-spam et protection IP sont des exemples de compléments serveur. Exemples de compléments client incluent compléments de référence pour les traitements de texte, des fonctionnalités spécialisées pour les programmes graphiques et de jeux et d’analyse antivirus pour les clients de messagerie local.  
   
  [Retour au début](#top)  
   
@@ -105,8 +105,8 @@ Pipeline de complément
   
 |Titre|Description|  
 |-----------|-----------------|  
-|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Décrit le pipeline de communication de segments de l'application hôte vers le complément. Fournit des exemples de code dans les rubriques de procédure pas à pas qui décrivent comment construire le pipeline et déployer des segments vers le pipeline dans Visual Studio.|  
-|[Domaines d'application et assemblys](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Décrit la relation entre les domaines d'application, qui fournissent une frontière d'isolement pour la sécurité, la fiabilité et le contrôle de version, et les assemblys.|  
+|[Pipeline Development](../../../docs/framework/add-ins/pipeline-development.md)|Décrit le pipeline de communication de segments de l'application hôte vers le complément. Fournit des exemples de code dans les rubriques de procédure pas à pas qui décrivent comment construire le pipeline et comment déployer des segments vers le pipeline dans Visual Studio.|  
+|[Domaines d'application et assemblys](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Décrit la relation entre les domaines d'application, qui fournissent une frontière d'isolement pour la sécurité, la fiabilité et le contrôle de version, et les assemblys.|  
   
  [Retour au début](#top)  
   

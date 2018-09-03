@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 219a806441e0f6ce501dc691f4c965168a250aeb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365746"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481681"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Intégration de System.Transactions à SQL Server
 La version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] a introduit une nouvelle infrastructure de transactions à laquelle il est possible d'accéder via l'espace de noms <xref:System.Transactions> . Cette infrastructure expose des transactions de manière totalement intégrée au [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], y compris à [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
@@ -19,7 +19,7 @@ La version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)
   
  En commençant par [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> prend en charge les transactions pouvant être promues lorsque vous travaillez avec SQL Server. Une transaction pouvant être promue n'invoque pas la charge supplémentaire d'une transaction distribuée à moins qu'elle ne soit requise. Transactions pouvant être promues sont automatiques et ne requièrent aucune intervention du développeur.  
   
- Transactions pouvant être promues sont disponibles uniquement lorsque vous utilisez la [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server (`SqlClient`) avec SQL Server.  
+ Transactions pouvant être promues sont disponibles uniquement lorsque vous utilisez le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur de données pour SQL Server (`SqlClient`) avec SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Création de transactions pouvant être promues  
  Le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] fournisseur pour SQL Server prend en charge les transactions pouvant être promues, qui sont gérées via les classes dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> espace de noms. Les transactions pouvant être promues optimisent les transactions distribuées en différant la création d'une transaction distribuée jusqu'à ce qu'elle soit nécessaire. Si un seul gestionnaire de ressources est requis, aucune transaction distribuée n'a lieu.  
@@ -28,7 +28,7 @@ La version 2.0 du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)
 >  Dans un scénario de niveau de confiance partiel, l'objet <xref:System.Transactions.DistributedTransactionPermission> est requis lorsqu'une transaction est promue en transaction distribuée.  
   
 ## <a name="promotable-transaction-scenarios"></a>Scénarios de transaction pouvant être promue  
- Les transactions distribuées consomment généralement une partie importante des ressources système, car elles sont gérées par Microsoft Distributed Transaction Coordinator (MS DTC), qui intègre tous les gestionnaires de ressources auxquels la transaction accède. Une transaction pouvant être promue est une forme particulière d’un <xref:System.Transactions> transaction qui délègue efficacement le travail à une transaction SQL Server simple. <xref:System.Transactions>, <xref:System.Data.SqlClient>, et SQL Server coordonnent le travail de gestion de la transaction, de promouvoir à une transaction entièrement distribuée en fonction des besoins.  
+ Les transactions distribuées consomment généralement une partie importante des ressources système, car elles sont gérées par Microsoft Distributed Transaction Coordinator (MS DTC), qui intègre tous les gestionnaires de ressources auxquels la transaction accède. Une transaction pouvant être promue est une forme spéciale d’un <xref:System.Transactions> transaction qui délègue efficacement le travail à une simple transaction SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>, et SQL Server coordonner le travail impliqué dans la gestion de la transaction, la promotion à une transaction entièrement distribuée en fonction des besoins.  
   
  L'avantage de l'utilisation de transactions pouvant être promues réside dans le fait que, quand une connexion est ouverte à l'aide d'une transaction <xref:System.Transactions.TransactionScope> active alors qu'aucune autre connexion n'est ouverte, la transaction est validée comme transaction légère, au lieu de générer la charge supplémentaire d'une transaction entièrement distribuée.  
   
@@ -230,4 +230,4 @@ End Function
   
 ## <a name="see-also"></a>Voir aussi  
  [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

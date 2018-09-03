@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: 11bacf436daf2a77a9cf46b4883d282143572e27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9c7a656e82198568c39b9bb58f8708f563d6caa2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756395"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482313"
 ---
 # <a name="creating-expression-columns"></a>Création de colonnes d'expressions
 Vous pouvez définir une expression pour une colonne lui permettant de contenir une valeur calculée à partir d'autres valeurs de colonne de la même ligne ou de valeurs de colonne de plusieurs lignes de la table. Pour définir l'expression à évaluer, utilisez la propriété <xref:System.Data.DataColumn.Expression%2A> de la colonne cible. Utilisez la propriété <xref:System.Data.DataColumn.ColumnName%2A> pour faire référence à d'autres colonnes dans l'expression. La propriété <xref:System.Data.DataColumn.DataType%2A> de la colonne d'expression doit être appropriée pour la valeur que l'expression retournera.  
@@ -23,7 +23,7 @@ Vous pouvez définir une expression pour une colonne lui permettant de contenir 
 |Calcul|"UnitPrice * Quantity"|  
 |Agrégation|Sum(Price)|  
   
- Vous pouvez définir le **Expression** propriété sur un **DataColumn** objet, ou vous pouvez inclure la propriété comme troisième argument passé à la <xref:System.Data.DataColumn> constructeur, comme indiqué dans l’exemple suivant.  
+ Vous pouvez définir le **Expression** propriété sur un existant **DataColumn** objet, ou vous pouvez inclure la propriété comme troisième argument passé à la <xref:System.Data.DataColumn> constructeur, comme indiqué dans l’exemple suivant.  
   
 ```vb  
 workTable.Columns.Add("Total",Type.GetType("System.Double"))  
@@ -44,4 +44,4 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  <xref:System.Data.DataTable>  
  [Définition de schéma de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

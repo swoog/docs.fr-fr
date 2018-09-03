@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95fbab459355c237157d43cee0211e42f6d26c62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432623"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480490"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Méthode ICLRStrongName::GetHashFromAssemblyFile
 Obtient un hachage du fichier d’assembly spécifié, à l’aide de l’algorithme de hachage spécifié.  
@@ -44,28 +44,28 @@ HRESULT GetHashFromAssemblyFile (
  [in] Le chemin d’accès au fichier à hacher.  
   
  `piHashAlg`  
- [dans, out] Constante qui spécifie l’algorithme de hachage. Utilisez zéro pour l’algorithme de hachage par défaut.  
+ [in, out] Constante qui spécifie l’algorithme de hachage. Utilisez zéro pour l’algorithme de hachage par défaut.  
   
  `pbHash`  
  [out] La mémoire tampon de hachage retournée.  
   
  `cchHash`  
- [in] La taille maximum demandée `pbHash`.  
+ [in] La taille maximale demandée de `pbHash`.  
   
  `pchHash`  
- [out] Le retournée, la taille, en octets, `pbHash`.  
+ [out] L’a retourné la taille, en octets, de `pbHash`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
+ `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (consultez [valeurs HRESULT courantes](https://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [GetHashFromAssemblyFileW, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  

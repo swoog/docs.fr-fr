@@ -2,12 +2,12 @@
 title: Bibliothèque d'activités
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 75a7f0203b27e331f9c33fa95be7f6fb95354b7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518513"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486566"
 ---
 # <a name="activity-library"></a>Bibliothèque d'activités
 Cette section contient des exemples qui illustrent des activités personnalisées avancées dans Windows Workflow Foundation (WF).  
@@ -50,13 +50,13 @@ Cette section contient des exemples qui illustrent des activités personnalisée
  Montre comment utiliser ADO.NET Entity Framework avec Windows Workflow Foundation pour simplifier l’accès aux données.  
   
  [Activités d’accès aux bases de données](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
- Montre comment créer des activités qui permettent l’accès aux bases de données pour récupérer ou modifier les informations et l’utiliser [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  
+ Montre comment créer des activités qui permettent l’accès aux bases de données pour récupérer ou modifier les informations et utilisez [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  
   
  [Activité CommentOut](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
  Montre comment écrire une activité personnalisée qui supprime d’autres activités du chemin d’exécution, en les transformant en fait en commentaire.  
   
  [Activité de stratégie externalisée dans .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- Montre comment l’activité ExternalizedPolicy4 permet l’exécution de Windows Workflow Foundation existant dans [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objets dans Windows Workflow Foundation dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directement à l’aide du moteur de règles qui est fourni dans WF 3.5.  
+ Montre comment l’activité ExternalizedPolicy4 permet l’exécution existantes de Windows Workflow Foundation dans [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objets dans Windows Workflow Foundation dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directement à l’aide du moteur de règles qui est fourni dans WF 3.5.  
   
  [Activité NoPersistScope](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  Montre comment manipuler un état non sérialisable et pouvant être supprimé dans un workflow.  

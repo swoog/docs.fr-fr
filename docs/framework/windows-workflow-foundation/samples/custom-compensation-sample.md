@@ -2,12 +2,12 @@
 title: Exemple de compensation personnalisée
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-ms.openlocfilehash: 55161a46bebca2cce41803ca405cb2b1df57b3fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514322"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475866"
 ---
 # <a name="custom-compensation-sample"></a>Exemple de compensation personnalisée
 Cet exemple montre comment utiliser <xref:System.Activities.Statements.CompensableActivity> et son gestionnaire de compensation pour définir une logique de compensation personnalisée. Le scénario modélisé de cet exemple est une agence de location de camions.  
@@ -48,6 +48,6 @@ Cet exemple montre comment utiliser <xref:System.Activities.Statements.Compensab
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`

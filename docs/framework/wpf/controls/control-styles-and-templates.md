@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556911"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482974"
 ---
 # <a name="control-styles-and-templates"></a>Styles et modèles Control
-Les contrôles Windows Presentation Foundation (WPF) ont un <xref:System.Windows.Controls.ControlTemplate> qui contient l’arborescence d’éléments visuels de ce contrôle. Vous pouvez modifier la structure et l’apparence d’un contrôle en modifiant le <xref:System.Windows.Controls.ControlTemplate> de ce contrôle. Il n’existe aucun moyen de remplacer uniquement une partie de l’arborescence d’éléments visuels d’un contrôle. Pour modifier l’arborescence visuelle d’un contrôle, vous devez définir le <xref:System.Windows.Controls.Control.Template%2A> propriété du contrôle à son nouveau et le complète <xref:System.Windows.Controls.ControlTemplate>.  
+Les contrôles dans Windows Presentation Foundation (WPF) ont un <xref:System.Windows.Controls.ControlTemplate> qui contient l’arborescence visuelle de ce contrôle. Vous pouvez modifier la structure et l’apparence d’un contrôle en modifiant le <xref:System.Windows.Controls.ControlTemplate> de ce contrôle. Il n’existe aucun moyen de remplacer uniquement une partie de l’arborescence visuelle d’un contrôle ; Pour modifier l’arborescence visuelle d’un contrôle, vous devez définir le <xref:System.Windows.Controls.Control.Template%2A> propriété du contrôle à son nouveau et complète <xref:System.Windows.Controls.ControlTemplate>.  
   
- Les thèmes du Bureau déterminent quel dictionnaire de ressources est utilisé. Pour obtenir les dictionnaires de ressources pour les thèmes du Bureau, consultez [Thèmes WPF par défaut](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Les thèmes du Bureau déterminent quel dictionnaire de ressources est utilisé. Pour obtenir les dictionnaires de ressources pour les thèmes du Bureau, consultez [Thèmes WPF par défaut](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
  Le tableau suivant décrit les noms de fichiers des dictionnaire de ressources et les thèmes du Bureau correspondants.  
   

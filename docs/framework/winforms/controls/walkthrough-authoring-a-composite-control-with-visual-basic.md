@@ -13,18 +13,18 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
-ms.openlocfilehash: d919112cf1a1462b4a60ef6dbdf60798d72c3e56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be2265f62092e6fdf43d8647a71d2c441beeefef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541974"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482388"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>Procédure pas à pas : création d'un contrôle composite à l'aide de Visual Basic
 Les contrôles composites permettent de créer et de réutiliser des interfaces graphiques personnalisées. Un contrôle composite est avant tout un composant doté d’une représentation visuelle. Par conséquent, il peut comporter un ou plusieurs blocs de code, composants ou contrôles Windows Forms qui peuvent en étendre les fonctionnalités en validant les entrées d’utilisateur, en modifiant les propriétés d’affichage ou en effectuant d’autres tâches requises par l’auteur. Les contrôles composites peuvent être insérés dans les Windows Forms de la même manière que les autres contrôles. Dans la première partie de cette procédure pas à pas, vous allez créer un contrôle composite simple appelé `ctlClock`. Dans la seconde partie de la procédure pas à pas, vous allez étendre les fonctionnalités de `ctlClock` via l’héritage.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Création du projet  
  Lorsque vous créez un nouveau projet, vous spécifiez son nom pour définir l’espace de noms racine, le nom de l’assembly et le nom de projet, et vous assurer que le composant par défaut sera placé dans l’espace de noms approprié.  
@@ -33,14 +33,14 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
 1.  Dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Projet** pour ouvrir la boîte de dialogue **Nouveau projet**.  
   
-2.  Dans la liste des projets Visual Basic, sélectionnez le **bibliothèque de contrôles Windows** modèle de projet, tapez `ctlClockLib` dans les **nom** zone, puis cliquez sur **OK**.  
+2.  Dans la liste des projets Visual Basic, sélectionnez le **bibliothèque de contrôles Windows** modèle de projet, tapez `ctlClockLib` dans le **nom** , puis cliquez sur **OK**.  
   
      Le nom du projet, `ctlClockLib`, est également assigné à l’espace de noms racine par défaut. L’espace de noms racine est utilisé pour qualifier les noms des composants dans l’assembly. Par exemple, si deux assemblies contiennent des composants nommés `ctlClock`, vous pouvez spécifier votre composant `ctlClock` à l’aide de `ctlClockLib.ctlClock.`.  
   
 3.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur **UserControl1.vb**, puis cliquez sur **Renommer**. Remplacez le nom de fichier par `ctlClock.vb`. Cliquez sur le bouton **Oui** lorsque l’on vous demande si vous souhaitez renommer toutes les références à l’élément de code « UserControl1 ».  
   
     > [!NOTE]
-    >  Par défaut, un contrôle composite hérite de la <xref:System.Windows.Forms.UserControl> classe fournie par le système. La <xref:System.Windows.Forms.UserControl> classe fournit les fonctionnalités requises par les contrôles composites et implémente des méthodes et propriétés standard.  
+    >  Par défaut, un contrôle composite hérite de la <xref:System.Windows.Forms.UserControl> classe fournie par le système. Le <xref:System.Windows.Forms.UserControl> classe fournit les fonctionnalités requises par les contrôles composites et implémente des méthodes et propriétés standard.  
   
 4.  Dans le menu **Fichier**, cliquez sur **Enregistrer tout** pour enregistrer le projet.  
   
@@ -53,7 +53,7 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
 2.  Dans la boîte à outils, développez le nœud **Contrôles communs**, puis double-cliquez sur **Étiquette**.  
   
-     A <xref:System.Windows.Forms.Label> contrôle nommé `Label1` est ajouté à votre contrôle sur l’aire du concepteur.  
+     Un <xref:System.Windows.Forms.Label> contrôle nommé `Label1` est ajouté à votre contrôle sur l’aire du concepteur.  
   
 3.  Dans le concepteur, cliquez sur **Label1**. Dans la fenêtre Propriétés, définissez les propriétés suivantes.  
   
@@ -66,11 +66,11 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
 4.  Dans la **boîte à outils**, développez le nœud **Composants**, puis double-cliquez sur **Minuterie**.  
   
-     Car un <xref:System.Windows.Forms.Timer> est un composant, il n’a aucune représentation visuelle au moment de l’exécution. Par conséquent, il n’apparaît pas avec les contrôles sur l’aire du concepteur, mais plutôt dans le Concepteur de composants (une barre d’état située en bas de l’aire du concepteur).  
+     Étant donné qu’un <xref:System.Windows.Forms.Timer> est un composant, il n’a aucune représentation visuelle au moment de l’exécution. Par conséquent, il n’apparaît pas avec les contrôles sur l’aire du concepteur, mais plutôt dans le Concepteur de composants (une barre d’état située en bas de l’aire du concepteur).  
   
 5.  Dans le Concepteur de composants, cliquez sur **Timer1**, puis définissez le <xref:System.Windows.Forms.Timer.Interval%2A> propriété `1000` et <xref:System.Windows.Forms.Timer.Enabled%2A> propriété `True`.  
   
-     Le <xref:System.Windows.Forms.Timer.Interval%2A> propriété contrôle la fréquence des graduations du composant timer. À chaque nouvelle graduation du composant `Timer1`, le code est exécuté dans l’événement `Timer1_Tick`. L’intervalle représente le nombre de millisecondes entre les graduations.  
+     Le <xref:System.Windows.Forms.Timer.Interval%2A> propriété détermine la fréquence des graduations du composant timer. À chaque nouvelle graduation du composant `Timer1`, le code est exécuté dans l’événement `Timer1_Tick`. L’intervalle représente le nombre de millisecondes entre les graduations.  
   
 6.  Dans le Concepteur de composants, double-cliquez sur **Timer1** pour accéder à l’événement `Timer1_Tick` pour `ctlClock`.  
   
@@ -96,7 +96,7 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
 9. Dans le menu **Fichier**, cliquez sur **Enregistrer tout** pour enregistrer le projet.  
   
 ## <a name="adding-properties-to-the-composite-control"></a>Ajout de propriétés au contrôle composite  
- Le contrôle horloge intègre à présent un <xref:System.Windows.Forms.Label> contrôle et un <xref:System.Windows.Forms.Timer> composant, chacun avec son propre jeu de propriétés inhérentes. Même si les propriétés individuelles de ces contrôles ne seront pas accessibles aux autres utilisateurs de votre contrôle, vous pouvez créer et exposer des propriétés personnalisées en écrivant les blocs de code appropriés. Dans la procédure suivante, vous allez ajouter des propriétés à votre contrôle qui permettent à l’utilisateur de modifier la couleur de l’arrière-plan et du texte.  
+ Le contrôle horloge intègre désormais un <xref:System.Windows.Forms.Label> contrôle et un <xref:System.Windows.Forms.Timer> composant, chacun avec son propre ensemble de propriétés inhérentes. Même si les propriétés individuelles de ces contrôles ne seront pas accessibles aux autres utilisateurs de votre contrôle, vous pouvez créer et exposer des propriétés personnalisées en écrivant les blocs de code appropriés. Dans la procédure suivante, vous allez ajouter des propriétés à votre contrôle qui permettent à l’utilisateur de modifier la couleur de l’arrière-plan et du texte.  
   
 #### <a name="to-add-a-property-to-your-composite-control"></a>Pour ajouter une propriété à votre contrôle composite  
   
@@ -350,7 +350,7 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
 8.  Double-cliquez sur **ctlAlarmClock** pour ajouter une instance de `ctlAlarmClock` à votre formulaire.  
   
-9. Dans le **boîte à outils**, recherchez et double-cliquez sur **DateTimePicker** pour ajouter un <xref:System.Windows.Forms.DateTimePicker> le contrôle à votre formulaire, puis ajoutez un <xref:System.Windows.Forms.Label> contrôle en double-cliquant sur **étiquette**.  
+9. Dans le **boîte à outils**, recherchez et double-cliquez sur **DateTimePicker** pour ajouter un <xref:System.Windows.Forms.DateTimePicker> le contrôle à votre formulaire et ajoutez un <xref:System.Windows.Forms.Label> contrôle en double-cliquant sur **étiquette**.  
   
 10. Utilisez la souris pour positionner les contrôles à un endroit approprié sur le formulaire.  
   
@@ -383,7 +383,7 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
   
 15. Dans le menu **Déboguer**, cliquez sur **Démarrer le débogage**.  
   
-     Le programme de test démarre. Notez que l’heure actuelle est mise à jour dans le `ctlAlarmClock` contrôle et que l’heure de début est affichée dans le <xref:System.Windows.Forms.DateTimePicker> contrôle.  
+     Le programme de test démarre. Notez que l’heure actuelle est mise à jour dans le `ctlAlarmClock` contrôle, et que l’heure de début est indiqué dans le <xref:System.Windows.Forms.DateTimePicker> contrôle.  
   
 16. Cliquez sur le <xref:System.Windows.Forms.DateTimePicker> où sont affichées les minutes de l’heure.  
   
@@ -399,4 +399,4 @@ Les contrôles composites permettent de créer et de réutiliser des interfaces 
  [Variétés de contrôles personnalisés](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  [Guide pratique pour créer des contrôles composites](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [Comment : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
- [Procédures pas à pas de la création de composants](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [Procédures pas à pas de la création de composants](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

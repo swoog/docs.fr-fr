@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542260"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484907"
 ---
 # <a name="using-keyboard-events"></a>Utilisation des événements du clavier
-La plupart des programmes Windows Forms traitent l'entrée au clavier en gérant les événements de clavier. Cette rubrique fournit une vue d'ensemble des événements de clavier, explique quand utiliser chaque événement et détaille les données fournies pour chaque événement.  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [vue d’ensemble des événements (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+La plupart des programmes Windows Forms traitent l'entrée au clavier en gérant les événements de clavier. Cette rubrique fournit une vue d'ensemble des événements de clavier, explique quand utiliser chaque événement et détaille les données fournies pour chaque événement.  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [vue d’ensemble des événements (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
   
 ## <a name="keyboard-events"></a>Événements de clavier  
  Windows Forms fournit deux événements qui se produisent quand l'utilisateur appuie sur une touche du clavier et un événement qui se produit quand l'utilisateur relâche une touche du clavier :  

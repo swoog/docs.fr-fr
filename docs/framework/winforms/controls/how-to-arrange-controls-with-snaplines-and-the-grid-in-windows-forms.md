@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253389"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488077"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Comment : organiser les contrôles à l'aide des lignes d'alignement (SnapLines) et de la grille dans les Windows Forms
 À l’aide des fonctionnalités de disposition de Visual Studio, vous pouvez déterminer précisément où les contrôles sont placés sur un formulaire. Les contrôles ajoutés à un formulaire ou déplacés sur un formulaire peuvent être alignés automatiquement pour les lignes et colonnes de grille du Concepteur de formulaires Windows, ou vous pouvez aligner des contrôles à l’aide de la fonctionnalité de lignes d’alignement.  
@@ -25,7 +25,7 @@ ms.locfileid: "43253389"
   
 -   Sélectionnez le **SnapToGrid** mode mise en page dans le Concepteur de formulaires Windows **Options** boîte de dialogue.  
   
-     Pour plus d’informations, consultez [général, le Concepteur Windows Forms, boîte de dialogue Options](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Tous les contrôles s’alignent désormais sur les flèches de la grille.  
+     Pour plus d’informations, consultez [général, le Concepteur Windows Forms, boîte de dialogue Options](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Tous les contrôles s’alignent désormais sur les flèches de la grille.  
   
      Vous pouvez aligner des contrôles individuels à la grille en verrouillant en place. Toutefois, pendant qu’ils sont verrouillés, ils ne peuvent pas être déplacés ou redimensionnés. Pour plus d’informations sur le verrouillage des contrôles, consultez [Comment : verrouiller les contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "43253389"
      Pour plus d’informations, consultez [procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Vous pouvez maintenant utiliser les lignes d’alignement pour aligner et organiser des contrôles sur votre formulaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Général, le Concepteur Windows Forms, boîte de dialogue Options](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Général, le Concepteur Windows Forms, boîte de dialogue Options](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Contrôles Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Comment : ajouter des contrôles à des Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

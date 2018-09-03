@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], drawing
 ms.assetid: beeb57ef-fab5-4446-a38a-1588f97b4c2f
-ms.openlocfilehash: 100f1a8062628e892e9a71b988bb2a8754ea6bad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f65bd11976817fe3f4d3e5d016f820a249769c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561044"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484764"
 ---
 # <a name="how-to-draw-a-rectangle"></a>Comment : dessiner un rectangle
 Cet exemple montre comment dessiner un rectangle à l’aide de la <xref:System.Windows.Shapes.Rectangle> élément.  
@@ -20,17 +20,17 @@ Cet exemple montre comment dessiner un rectangle à l’aide de la <xref:System.
   
  Le rectangle de donner des angles arrondis, spécifiez le paramètre facultatif <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> et <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> propriétés. Le <xref:System.Windows.Shapes.Rectangle.RadiusX%2A> et <xref:System.Windows.Shapes.Rectangle.RadiusY%2A> propriétés définies les rayons des axes x et y de l’ellipse utilisée pour arrondir les angles du rectangle.  
   
- Dans l’exemple suivant, deux <xref:System.Windows.Shapes.Rectangle> éléments sont dessinées dans une <xref:System.Windows.Controls.Canvas>. Le premier rectangle est un <xref:System.Windows.Media.Brushes.Blue%2A> intérieurs. Le deuxième rectangle a un <xref:System.Windows.Media.Brushes.Blue%2A> intérieurs, une <xref:System.Windows.Media.Brushes.Black%2A> plan et des angles arrondis.  
+ Dans l’exemple suivant, deux <xref:System.Windows.Shapes.Rectangle> éléments sont dessinés un <xref:System.Windows.Controls.Canvas>. Le premier rectangle est un <xref:System.Windows.Media.Brushes.Blue%2A> intérieurs. Le deuxième rectangle a une <xref:System.Windows.Media.Brushes.Blue%2A> intérieurs, une <xref:System.Windows.Media.Brushes.Black%2A> contour et angles arrondis est utilisée.  
   
 ## <a name="example"></a>Exemple  
  [!code-xaml[drawingwithshapeelements#Rectangle1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/rectangleexample.xaml#rectangle1)]  
   
- Bien que cet exemple utilise un <xref:System.Windows.Controls.Canvas> pour contenir les rectangles, vous pouvez utiliser des éléments de rectangle (et tous les autres éléments de forme) avec n’importe quelle <xref:System.Windows.Controls.Panel> ou <xref:System.Windows.Controls.Control> qui prend en charge le contenu non textuel. En fait, les rectangles sont particulièrement utiles pour fournir des arrière-plans pour certaines parties de <xref:System.Windows.Controls.Grid> panneaux. Pour obtenir un exemple, consultez la [vue d’ensemble de la Table](../../../../docs/framework/wpf/advanced/table-overview.md).  
+ Bien que cet exemple utilise un <xref:System.Windows.Controls.Canvas> pour contenir les rectangles, vous pouvez utiliser des éléments rectangle (et toutes les autres formes) avec n’importe quel <xref:System.Windows.Controls.Panel> ou <xref:System.Windows.Controls.Control> qui prend en charge le contenu non textuel. En fait, les rectangles sont particulièrement utiles pour fournir des arrière-plans pour certaines parties de <xref:System.Windows.Controls.Grid> panneaux. Pour obtenir un exemple, consultez le [vue d’ensemble de la Table](../../../../docs/framework/wpf/advanced/table-overview.md).  
   
- Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [éléments de forme, exemple](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Cet exemple fait partie d’un exemple plus complet ; Pour obtenir un exemple complet, consultez [exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Shapes.Rectangle>  
- [Éléments de forme, exemple](http://go.microsoft.com/fwlink/?LinkID=160037)  
+ [Exemples d’éléments de forme](https://go.microsoft.com/fwlink/?LinkID=160037)  
  [Vue d’ensemble des formes et dessins de base dans WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Vue d’ensemble de Table](../../../../docs/framework/wpf/advanced/table-overview.md)

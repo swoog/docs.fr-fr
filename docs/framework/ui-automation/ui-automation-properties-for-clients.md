@@ -11,16 +11,16 @@ ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1ab9a9eeae6de29fc838e263225050ec4122f2d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410070"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480240"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Propriétés UI Automation pour les clients
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette vue d’ensemble présente les propriétés [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] telles qu’elles sont exposées aux applications clientes UI Automation.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33410070"
 ## <a name="property-ids"></a>ID de propriété  
  Les [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] de propriété sont des valeurs constantes, uniques, encapsulées dans des objets <xref:System.Windows.Automation.AutomationProperty> . Les applications clientes UI Automation obtiennent ces [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] à partir de la classe <xref:System.Windows.Automation.AutomationElement> , ou de la classe de modèle de contrôle appropriée, par exemple <xref:System.Windows.Automation.ScrollPattern>. Les fournisseurs UI Automation les obtiennent à partir de <xref:System.Windows.Automation.AutomationElementIdentifiers> , ou de l’une des classes d’identificateurs de modèle de contrôle, par exemple <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
- Numérique <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> d’un <xref:System.Windows.Automation.AutomationProperty> est utilisé par les fournisseurs pour identifier les propriétés demandées dans la <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> (méthode). En général, les applications clientes n’ont pas besoin d’examiner l’ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> n’est utilisé que pour le débogage et le diagnostic.  
+ Numérique <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> d’un <xref:System.Windows.Automation.AutomationProperty> est utilisé par les fournisseurs pour identifier les propriétés qui sont demandées dans le <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> (méthode). En général, les applications clientes n’ont pas besoin d’examiner l’ <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> n’est utilisé que pour le débogage et le diagnostic.  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Conditions de propriété  
@@ -80,7 +80,7 @@ ms.locfileid: "33410070"
 ## <a name="default-property-values"></a>Valeurs de propriété par défaut  
  Si un fournisseur UI Automation n’implémente pas une propriété, le système [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] peut fournir une valeur par défaut. Par exemple, si le fournisseur d’un contrôle ne prend pas en charge la propriété identifiée par <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] retourne une chaîne vide. De même, si le fournisseur ne prend pas en charge la propriété identifiée par <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] retourne `false`.  
   
- Vous pouvez modifier ce comportement à l’aide de la <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> et <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> les surcharges de méthode. Quand vous spécifiez `true` comme second paramètre, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ne retourne pas de valeur par défaut mais la valeur spéciale <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
+ Vous pouvez modifier ce comportement à l’aide de la <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> et <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> surcharges de méthode. Quand vous spécifiez `true` comme second paramètre, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ne retourne pas de valeur par défaut mais la valeur spéciale <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
   
  L’exemple de code suivant tente de récupérer une propriété d’un élément. Si la propriété n’est pas prise en charge, une valeur définie par l’application est utilisée à la place.  
   

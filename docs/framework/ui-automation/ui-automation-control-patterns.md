@@ -10,18 +10,18 @@ ms.assetid: 1f8b5ab3-c193-4d0f-9e67-a0076225a1a5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c042be74eef5a179030e3431454c468a3b4f7aaa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 178d1d39e0301a4d2fefa17c3ffca77575c7b137
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409865"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482761"
 ---
 # <a name="ui-automation-control-patterns"></a>Modèles de contrôle UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette section fournit des informations détaillées sur l’utilisation de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] modèles de contrôle.  
+ Cette section fournit des informations détaillées sur l’utilisation [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] modèles de contrôle.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Implémentation du modèle de contrôle Dock d’UI Automation](../../../docs/framework/ui-automation/implementing-the-ui-automation-dock-control-pattern.md)  

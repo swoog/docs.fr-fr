@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: edb7074dffab23810872f4347f5339270af86bd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f58b43a870f2c85ae4349965f586a33e2f75a2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557015"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485848"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>Comment : animer une matrice à l'aide d'images clés
 Cet exemple montre comment animer la <xref:System.Windows.Media.MatrixTransform.Matrix%2A> propriété d’un <xref:System.Windows.Media.MatrixTransform> à l’aide d’images clés.  
@@ -21,18 +21,18 @@ Cet exemple montre comment animer la <xref:System.Windows.Media.MatrixTransform.
   
  Cette animation utilise la <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> classe pour créer deux images clés et effectue les opérations suivantes avec eux :  
   
-1.  Réalise une animation de la première <xref:System.Windows.Media.Matrix> pendant les premières secondes 0,2. L’exemple modifie la <xref:System.Windows.Media.Matrix.M11%2A> et <xref:System.Windows.Media.Matrix.M12%2A> propriétés de la <xref:System.Windows.Media.Matrix>. Cette modification, le bouton Étirer et être faussées. L’exemple modifie également le <xref:System.Windows.Media.Matrix.OffsetX%2A> et <xref:System.Windows.Media.Matrix.OffsetY%2A> propriétés afin que le bouton change de position.  
+1.  Anime la première <xref:System.Windows.Media.Matrix> pendant les premières secondes de 0,2. L’exemple modifie la <xref:System.Windows.Media.Matrix.M11%2A> et <xref:System.Windows.Media.Matrix.M12%2A> propriétés de la <xref:System.Windows.Media.Matrix>. Cette modification entraîne le bouton pour étirer et être faussées. L’exemple modifie également le <xref:System.Windows.Media.Matrix.OffsetX%2A> et <xref:System.Windows.Media.Matrix.OffsetY%2A> propriétés afin que le bouton change de position.  
   
 2.  Anime la deuxième <xref:System.Windows.Media.Matrix> à 1 seconde. Le bouton se déplace vers un autre alors que le bouton n’est plus incliné ni étiré.  
   
 3.  Répète l’animation indéfiniment.  
   
 > [!NOTE]
->  Images clés qui dérivent de la <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> soudains entre les valeurs de création d’objet, le déplacement de l’animation est saccadé.  
+>  Images clés qui dérivent de la <xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame> objet créent des changements soudains entre les valeurs, autrement dit, le déplacement de l’animation est saccadé.  
   
  [!code-xaml[keyframes_snip#MatrixAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/MatrixAnimationUsingKeyFramesExample.xaml#matrixanimationusingkeyframeswholepage)]  
   
- Pour l’exemple complet, consultez la page [Animation d’image clé, exemple](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Pour l’exemple complet, consultez la page [Animation d’image clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Media.MatrixTransform.Matrix%2A>  

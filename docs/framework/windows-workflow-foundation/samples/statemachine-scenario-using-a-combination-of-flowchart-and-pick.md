@@ -2,12 +2,12 @@
 title: Scénario StateMachine à l'aide d'une combinaison de FlowChart et de Pick
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-ms.openlocfilehash: 0f7fc809b2fb7107de355546ca52a4d2ba2b39f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517934"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485499"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Scénario StateMachine à l'aide d'une combinaison de FlowChart et de Pick
 Cet exemple montre comment implémenter un scénario de chronomètre simple à l'aide d'une combinaison des activités <xref:System.Activities.Statements.Flowchart> et <xref:System.Activities.Statements.Pick>. Il utilise Receive et Send dans l'activité Pick pour écouter des événements de chronomètre.  
@@ -54,6 +54,6 @@ Cet exemple montre comment implémenter un scénario de chronomètre simple à l
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540642"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486008"
 ---
 # <a name="windows-forms-data-binding"></a>Liaison de données Windows Forms
 La liaison de données dans les Windows Forms vous permet d’afficher et de modifier les informations d’une source de données dans les contrôles du formulaire. Vous pouvez établir une liaison à une source de données traditionnelle et à presque toute structure qui contient des données.  
@@ -37,7 +37,7 @@ La liaison de données dans les Windows Forms vous permet d’afficher et de mod
  Montre comment implémenter l'interface <xref:System.ComponentModel.INotifyPropertyChanged>. L'interface communique à un contrôle dépendant les modifications apportées aux propriétés d'un objet métier.  
   
  [Guide pratique pour appliquer le modèle PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- Montre comment appliquer le *PropertyName*modèle aux propriétés d’un contrôle utilisateur Windows Forms.  
+ Montre comment appliquer le *PropertyName*modèle Changed aux propriétés d’un contrôle utilisateur Windows Forms.  
   
  [Guide pratique pour implémenter l’interface ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  Montre comment activer la découverte du schéma pour une liste pouvant être liée en implémentant l'interface <xref:System.ComponentModel.ITypedList>.  
@@ -51,7 +51,7 @@ La liaison de données dans les Windows Forms vous permet d’afficher et de mod
  [Guide pratique pour s'assurer que la ligne sélectionnée dans une table enfant reste au bon emplacement](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Montre comment s'assurer que la ligne sélectionnée dans une table enfant ne change pas quand une modification est apportée à un champ de la table parente.  
   
- Consultez également [Interfaces associées à la liaison de données](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [Comment : parcourir les données dans les Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Comment : créer un contrôle à liaison Simple dans un Windows Form](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Consultez également [Interfaces associées à une liaison de données](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [Comment : parcourir les données dans les Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [Comment : créer un contrôle de liaison Simple dans un formulaire Windows](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  

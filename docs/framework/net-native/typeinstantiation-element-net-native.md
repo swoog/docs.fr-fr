@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30802eff0b960c2a19e5cebb4757bfeff809d322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9fefa302a269e08300f0393434b66ca8738a27b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394730"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481285"
 ---
 # <a name="lttypeinstantiationgt-element-net-native"></a>&lt;TypeInstantiation&gt;, élément (.NET Native)
 Applique la stratégie de réflexion runtime à un type générique construit.  
@@ -99,7 +99,7 @@ Applique la stratégie de réflexion runtime à un type générique construit.
  Si un élément `<TypeInstantiation>` est l’enfant d’un élément [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md), [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) ou [\<Type>](../../../docs/framework/net-native/type-element-net-native.md), il se substitue aux paramètres de stratégie définis par l’élément parent. Si un élément [\<Type>](../../../docs/framework/net-native/type-element-net-native.md) spécifie une définition de type générique correspondante, l’élément `<TypeInstantiation>` se substitue à la stratégie de réflexion du runtime uniquement pour les instanciations du type générique construit spécifié.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant utilise la réflexion pour récupérer la définition de type générique construit d'un objet <xref:System.Collections.Generic.Dictionary%602>. Il utilise également la réflexion pour afficher des informations sur les objets <xref:System.Type> qui représentent des types génériques construits et des définitions de type générique. La variable `b` utilisée dans l’exemple est un contrôle [TextBlock](http://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ L'exemple suivant utilise la réflexion pour récupérer la définition de type générique construit d'un objet <xref:System.Collections.Generic.Dictionary%602>. Il utilise également la réflexion pour afficher des informations sur les objets <xref:System.Type> qui représentent des types génériques construits et des définitions de type générique. La variable `b` utilisée dans l’exemple est un contrôle [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
   
  [!code-csharp[ProjectN_Reflection#2](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/makegenerictype1.cs#2)]  
   

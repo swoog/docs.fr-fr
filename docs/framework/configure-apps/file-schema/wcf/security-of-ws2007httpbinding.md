@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b7644e0cf9148cb489618b352ad09901799ceaa6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 00d1f43cb2d3f3aa67e72ee7ae405041bd2842ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751088"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480278"
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;security&gt; de &lt;ws2007HttpBinding&gt;
 Représente les paramètres de sécurité utilisés avec la [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) élément.  
@@ -81,5 +81,5 @@ Représente les paramètres de sécurité utilisés avec la [ \<ws2007HttpBindin
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<liaison >](../../../../../docs/framework/misc/binding.md)

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - entire form [Visual Basic], printing
 - scrollable form [Visual Basic], printing
 ms.assetid: 1196e1cf-b77f-4928-a3e4-85b51ba3787d
-ms.openlocfilehash: d43c2e0e564f6f0c37831cd3105a16c4bc4aaea0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a509b7c48f2bff705bc95e58fb88252cb8ca4b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584012"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486618"
 ---
 # <a name="how-to-print-a-scrollable-form-visual-basic"></a>Comment : imprimer un formulaire à défilement variable (Visual Basic)
 Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous permet d’imprimer rapidement une image d’un formulaire sans utiliser un composant <xref:System.Drawing.Printing.PrintDocument> . Par défaut, seule la partie actuellement visible du formulaire est imprimée ; si un utilisateur a redimensionné le formulaire au moment de l’exécution, l’image ne peut pas être imprimée comme prévu. La procédure suivante montre comment imprimer la zone cliente complète d’un formulaire avec défilement, même si le formulaire a été redimensionné.  
   
- Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir du [Centre de téléchargement](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Les contrôles PowerPack ne sont plus inclus dans Visual Studio, mais vous pouvez les télécharger à partir de la [centre de téléchargement](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-the-complete-client-area-of-a-scrollable-form"></a>Pour imprimer la zone cliente complète d’un formulaire avec défilement  
   

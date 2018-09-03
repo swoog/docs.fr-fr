@@ -2,11 +2,12 @@
 title: Mise en cache des canaux avec Send
 ms.date: 03/30/2017
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
-ms.openlocfilehash: c26d81b9cd85ba75189fafddd82c3fb4673c7fae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619088def1f5e443a31244516655d75d1e25c9cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475853"
 ---
 # <a name="channel-caching-with-send"></a>Mise en cache des canaux avec Send
 Le <xref:System.ServiceModel.Activities.SendMessageChannelCache> permet aux utilisateurs d'avoir différents niveaux de mise en cache des canaux avec les activités <xref:System.ServiceModel.Activities.Send> et <xref:System.ServiceModel.Activities.SendParametersContent>. La mise en cache au niveau de l'instance est activée par défaut et cet exemple illustre les fonctionnalités suivantes :  
@@ -35,6 +36,6 @@ Le <xref:System.ServiceModel.Activities.SendMessageChannelCache> permet aux util
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\ChannelCache`
