@@ -2,12 +2,12 @@
 title: Activité de promotion de propriétés
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519923"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481135"
 ---
 # <a name="property-promotion-activity"></a>Activité de promotion de propriétés
 Cet exemple fournit une solution de bout en bout qui intègre la fonctionnalité Promotion de <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> directement dans l'interface de création de workflow. Une collection d'éléments de configuration, des activités de workflow et des extensions de workflow qui simplifient l'utilisation de la fonctionnalité Promotion sont fournies. En outre, l'exemple contient un workflow simple qui montre comment utiliser cette collection.  
@@ -23,7 +23,7 @@ Cet exemple fournit une solution de bout en bout qui intègre la fonctionnalité
   
 ## <a name="sample-projects"></a>Exemples de projet  
   
--   Le **PropertyPromotionActivity** projet contient des fichiers pour les éléments de configuration spécifiques à la promotion, activités de workflow et extensions de flux de travail.  
+-   Le **PropertyPromotionActivity** projet contient des fichiers pour les éléments de configuration spécifiques à la promotion, les activités de workflow et les extensions de flux de travail.  
   
 -   Le **CounterServiceApplication** projet contient un exemple de workflow qui utilise le **SqlWorkflowInstanceStorePromotion** projet.  
   
@@ -37,11 +37,11 @@ Cet exemple fournit une solution de bout en bout qui intègre la fonctionnalité
   
     1.  Accédez au répertoire de l'exemple (\WF\Basic\Persistence\PropertyPromotionActivity) et exécutez CreateInstanceStore.cmd.  
   
-    2.  Si les privilèges d'administrateur ne sont pas disponibles, créez une connexion SQL Server. Dans SQL Server Management Studio, accédez à **sécurité**, **connexions**. Avec le bouton droit **connexions** et créez une nouvelle connexion. Ajoutez votre utilisateur ACL au rôle SQL en ouvrant **bases de données**, **InstanceStore**, **sécurité**. Avec le bouton droit **utilisateurs** et sélectionnez **nouvel utilisateur**. Définir le **nom de connexion** à l’utilisateur créé ci-dessus. Ajoutez l'utilisateur à l'appartenance au rôle de base de données System.Activities.DurableInstancing.InstanceStoreUsers (et autres). Notez qu'il est possible que l'utilisateur existe déjà (par exemple, l'utilisateur dbo).  
+    2.  Si les privilèges d'administrateur ne sont pas disponibles, créez une connexion SQL Server. Dans SQL Server Management Studio, accédez à **sécurité**, **connexions**. Avec le bouton droit **connexions** et créez une nouvelle connexion. Ajoutez votre utilisateur ACL au rôle SQL en ouvrant **bases de données**, **InstanceStore**, **sécurité**. Avec le bouton droit **utilisateurs** et sélectionnez **nouvel utilisateur**. Définir le **nom_compte_de_connexion** à l’utilisateur créé ci-dessus. Ajoutez l'utilisateur à l'appartenance au rôle de base de données System.Activities.DurableInstancing.InstanceStoreUsers (et autres). Notez qu'il est possible que l'utilisateur existe déjà (par exemple, l'utilisateur dbo).  
   
 2.  Ouvrez le fichier solution PropertyPromotionActivity.sln dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Si vous avez créé le magasin d'instances dans une base de données autre que celle d'une installation locale de SQL Server Express, mettez à jour la chaîne de connexion à la base de données. Modifiez le fichier App.config sous le **CounterServiceApplication** en définissant la valeur de la `connectionString` de l’attribut le `sqlWorkflowInstanceStorePromotion` nœud afin qu’il pointe vers la base de données de persistance qui a été initialisé dans l’étape 1.  
+3.  Si vous avez créé le magasin d'instances dans une base de données autre que celle d'une installation locale de SQL Server Express, mettez à jour la chaîne de connexion à la base de données. Modifiez le fichier App.config sous le **CounterServiceApplication** en définissant la valeur de la `connectionString` d’attribut sur le `sqlWorkflowInstanceStorePromotion` nœud afin qu’il pointe vers la base de données de persistance qui a été initialisé à l’étape 1.  
   
 4.  Générez et exécutez la solution. Le service WF Compteur et une instance du workflow démarrent ainsi automatiquement.  
   
@@ -60,9 +60,9 @@ Cet exemple fournit une solution de bout en bout qui intègre la fonctionnalité
 ## <a name="understanding-this-sample"></a>Présentation de l'exemple  
  Cet exemple contient deux projets et un fichier SQL :  
   
--   **CounterServiceApplication** est une application console qui héberge un service WF compteur simple. Lors de la réception d'un message unidirectionnel par le biais du point de terminaison `Start`, le workflow compte de 0 à 29, incrémentant une variable de compteur toutes les deux secondes. Après chaque incrément du compteur, le workflow est persistant et les propriétés promues sont mises à jour dans la vue [dbo].[CounterService]. Si l'application console s'exécute, elle héberge le service WF et envoie un message au point de terminaison `Start`, ce qui crée une instance WF Compteur.  
+-   **CounterServiceApplication** est une application de console qui héberge un service WF compteur simple. Lors de la réception d'un message unidirectionnel par le biais du point de terminaison `Start`, le workflow compte de 0 à 29, incrémentant une variable de compteur toutes les deux secondes. Après chaque incrément du compteur, le workflow est persistant et les propriétés promues sont mises à jour dans la vue [dbo].[CounterService]. Si l'application console s'exécute, elle héberge le service WF et envoie un message au point de terminaison `Start`, ce qui crée une instance WF Compteur.  
   
--   **PropertyPromotionActivity** est une bibliothèque de classes qui contient les éléments de configuration, activités de workflow et extensions de workflow qui les **CounterServiceApplication** utilise.  
+-   **PropertyPromotionActivity** est une bibliothèque de classes qui contient les éléments de configuration, les activités de workflow et les extensions de workflow qui les **CounterServiceApplication** utilise.  
   
 -   **PropertyPromotionActivitySQLSample.sql** crée et ajoute la vue [dbo]. [ CounterService] à la base de données.  
   
@@ -142,7 +142,7 @@ public class PromoteValue<T> : CodeActivity
  Supprime toutes les valeurs qui ont été promues avant cette activité.  
   
  Name (string)  
- Nom représentant cette propriété. Il doit correspondre à l’attribut de nom d’un \<promotedValue > élément dans la configuration.  
+ Nom représentant cette propriété. Cela doit correspondre à l’attribut name d’un \<promotedValue > élément dans la configuration.  
   
  Valeur (InArgument\<T >)  
  Variable/valeur à stocker dans la colonne.  
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant :  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

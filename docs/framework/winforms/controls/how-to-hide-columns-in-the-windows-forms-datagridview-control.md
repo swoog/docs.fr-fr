@@ -9,19 +9,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], hiding columns
 - columns [Windows Forms], hiding
 ms.assetid: 3f94143a-2ef0-49a5-a22a-b2e6f9289642
-ms.openlocfilehash: 65228490dd90aaf1f1d76b6a37f9cb9e8a739746
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ddf4b0701ea563465ca3023c73f588f4e0f3a5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533586"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488038"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control"></a>Comment : masquer des colonnes du contrôle DataGridView Windows Forms
 Parfois, vous souhaiterez afficher uniquement quelques-unes des colonnes qui sont disponibles dans un contrôle <xref:System.Windows.Forms.DataGridView> Windows Forms. Par exemple, vous souhaiterez peut-être afficher une colonne répertoriant les salaires des employés aux utilisateurs disposant d'informations d'identification d'administration et la masquer aux yeux des autres utilisateurs. Ou encore lier le contrôle à une source de données qui contient de nombreuses colonnes, dont vous souhaitez afficher uniquement certaines d'entre elles. Dans ce cas, vous supprimerez en général les colonnes que vous ne souhaitez pas afficher, plutôt que de les masquer.  
   
  Dans le contrôle <xref:System.Windows.Forms.DataGridView>, la valeur de propriété <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> d'une colonne détermine si cette colonne est affichée.  
   
- Cette tâche est prise en charge dans Visual Studio.  Consultez également [Comment : masquer des colonnes dans les Windows Forms DataGridView contrôle à l’aide du concepteur](http://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
+ Cette tâche est prise en charge dans Visual Studio.  Consultez également [Comment : masquer des colonnes dans les Windows Forms DataGridView contrôle à l’aide du concepteur](https://msdn.microsoft.com/library/kaswfbes\(v=vs.110\)).  
   
 ### <a name="to-hide-a-column-programmatically"></a>Pour masquer une colonne par programmation  
   
