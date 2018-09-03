@@ -1,6 +1,6 @@
 ---
-title: Supprimer la fonction (référence des API non managées)
-description: La fonction Delete supprime la propriété spécifiée et tous ses qualificateurs à partir d’une définition de classe CIM.
+title: Supprimer (fonction) (référence des API non managées)
+description: La fonction de suppression supprime la propriété spécifiée et toutes ses qualificateurs à partir d’une définition de classe CIM.
 ms.date: 11/06/2017
 api_name:
 - Delete
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 791e75aa60fd651dde1555339e31664a3523e1eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460241"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479862"
 ---
 # <a name="delete-function"></a>Supprimer (fonction)
-Supprime la propriété spécifiée et tous ses qualificateurs d’une définition de classe CIM.
+Supprime la propriété spécifiée et toutes ses qualificateurs d’une définition de classe CIM.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -41,13 +41,13 @@ HRESULT Delete (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 `wszName`  
-[in] Le nom de la propriété à supprimer. `wszName` doit être un pointeur vers une valide `LPCWSTR`.
+[in] Le nom de la propriété à supprimer. `wszName` doit être un pointeur désignant une valide `LPCWSTR`.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -63,18 +63,18 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 | `WBEM_E_PROPAGATED_PROPERTY` | 0x8004101c | La propriété est héritée d’une classe de base. |
 | `WBEM_E_SYSTEM_PROPERTY` | | La propriété est une propriété système. |
 |`WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
-| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La fonction supprimée d’une valeur par défaut de remplacement pour la classe actuelle. La valeur par défaut pour cette propriété dans la classe parente a été reactiviated. | 
+| `WBEM_E_RESET_TO_DEFAULT` | 0x80041030 | La fonction supprimée d’une valeur par défaut de remplacement pour la classe en cours. La valeur par défaut pour cette propriété dans la classe parente a été reactiviated. | 
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::Delete](https://msdn.microsoft.com/library/aa391438(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-delete) (méthode).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

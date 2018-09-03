@@ -4,24 +4,24 @@ ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 50e450f4241abc7d8b688c58a121f64c3ca0e709
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499461"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482839"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sécurisation des messages à l'aide de la sécurité de transport
 Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vous pouvez utiliser pour sécuriser des messages envoyés vers une file d'attente.  
   
 > [!NOTE]
->  Avant de lire cette rubrique, il est recommandé de lire [Concepts de sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
+>  Avant de lire cette rubrique, il est recommandé que vous lire [Concepts de sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md).  
   
- L’illustration suivante fournit un modèle conceptuel de la communication en file d’attente à l’aide de Windows Communication Foundation (WCF). Cette illustration et la terminologie sont utilisées pour expliquer les concepts de sécurité de transport.  
+ L’illustration suivante fournit un modèle conceptuel de communication en file d’attente à l’aide de Windows Communication Foundation (WCF). Cette illustration et la terminologie sont utilisées pour expliquer les concepts de sécurité de transport.  
   
- ![Diagramme d’Application de la file d’attente](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figure de file d’attente distribuée")  
+ ![En file d’attente de diagramme d’Application](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "Figure de file d’attente distribuée")  
   
- Lorsque les messages à l’aide de WCF avec la file d’attente envoi <xref:System.ServiceModel.NetMsmqBinding>, le message WCF est attaché en tant que corps du message MSMQ. La sécurité de transport sécurise le message MSMQ entier (en-têtes de message ou propriétés MSMQ et le corps du message). Comme il est le corps du message MSMQ, à l’aide de la sécurité de transport sécurise également le message WCF.  
+ Lorsque les messages à l’aide de WCF avec les mises en attente envoi <xref:System.ServiceModel.NetMsmqBinding>, le message WCF est attaché en tant que corps du message MSMQ. La sécurité de transport sécurise le message MSMQ entier (en-têtes de message ou propriétés MSMQ et le corps du message). Comme il est le corps du message MSMQ, à l’aide de la sécurité de transport sécurise également le message WCF.  
   
  Le concept clé de la sécurité de transport est que le client doit satisfaire certaines exigences de sécurité pour envoyer le message dans la file d’attente cible. Cela diffère de la sécurité de message, où le message est sécurisé pour l'application qui reçoit le message.  
   
@@ -40,19 +40,19 @@ Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vo
   
  MSMQ permet également de joindre un certificat au message qui n'est pas inscrit auprès d'Active Directory. Dans ce cas, il s'assure que le message a été signé à l'aide du certificat joint.  
   
- WCF fournit ces deux options dans le cadre de la sécurité de transport MSMQ et sont la pierre angulaire de la sécurité du transport.  
+ WCF fournit ces deux options dans le cadre de la sécurité de transport MSMQ et ils sont la pierre angulaire de la sécurité du transport.  
   
  Par défaut, la sécurité de transport est activée.  
   
  Étant donné ces principes de base, les sections suivantes détaillent les propriétés de sécurité de transport fournies avec <xref:System.ServiceModel.NetMsmqBinding> et <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>.  
   
 #### <a name="msmq-authentication-mode"></a>Mode d'authentification MSMQ  
- Le <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> indique s'il faut utiliser la sécurité de domaine Windows ou une sécurité externe basée sur certificat pour sécuriser le message. Dans les deux modes d’authentification, le canal de transport en file d’attente de WCF utilise le `CertificateValidationMode` spécifié dans la configuration du service. Le mode de validation de certificat spécifie le mécanisme utilisé pour vérifier la validation du certificat.  
+ Le <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> indique s'il faut utiliser la sécurité de domaine Windows ou une sécurité externe basée sur certificat pour sécuriser le message. Dans les deux modes d’authentification, le canal de transport en file d’attente WCF utilise le `CertificateValidationMode` spécifié dans la configuration du service. Le mode de validation de certificat spécifie le mécanisme utilisé pour vérifier la validation du certificat.  
   
  Lorsque la sécurité de transport est activée, le paramètre par défaut est <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="windows-domain-authentication-mode"></a>Mode d'authentification de domaine Windows  
- L'utilisation de la sécurité Windows requiert l'intégration Active Directory. Le mode de sécurité du transport par défaut utilisé est <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>. Lorsqu’il est défini, le canal WCF joint le SID Windows au message MSMQ et utilise son certificat interne obtenu à partir d’Active Directory. MSMQ utilise ce certificat interne pour sécuriser le message. Le gestionnaire de files d'attente de réception utilise Active Directory pour rechercher un certificat correspondant afin d'authentifier le client et vérifie que le SID correspond également à celui du client. Cette étape d'authentification est exécutée si un certificat, généré en interne en mode d'authentification `WindowsDomain` ou généré de manière externe en mode d'authentification `Certificate`, est joint au message même si la file d'attente cible n'est pas marquée comme nécessitant l'authentification.  
+ L'utilisation de la sécurité Windows requiert l'intégration Active Directory. Le mode de sécurité du transport par défaut utilisé est <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>. Lorsque cela est défini, le canal WCF attache le SID Windows au message MSMQ et utilise son certificat interne obtenu à partir d’Active Directory. MSMQ utilise ce certificat interne pour sécuriser le message. Le gestionnaire de files d'attente de réception utilise Active Directory pour rechercher un certificat correspondant afin d'authentifier le client et vérifie que le SID correspond également à celui du client. Cette étape d'authentification est exécutée si un certificat, généré en interne en mode d'authentification `WindowsDomain` ou généré de manière externe en mode d'authentification `Certificate`, est joint au message même si la file d'attente cible n'est pas marquée comme nécessitant l'authentification.  
   
 > [!NOTE]
 >  Lorsque vous créez une file d'attente, vous pouvez marquer la file d'attente comme file d'attente authentifiée pour indiquer que la file d'attente nécessite l'authentification des clients envoyant des messages à la file d'attente. Cela garantit qu'aucun message non authentifié n'est accepté dans la file d'attente.  
@@ -99,6 +99,6 @@ Cette section traite de la sécurité de transport Message Queuing (MSMQ) que vo
  Les algorithmes pris en charge sont `MD5`, `SHA1`, `SHA256` et `SHA512`. La valeur par défaut est `SHA1`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Message Queuing](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [Message Queuing](https://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [Concepts relatifs à la sécurité](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Sécurisation des services et des clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: 349cc10062cd73def0b8b3966a17ae9cbd0deab5
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 90357b96d570ec1b2f80f8809ccfde69977bbc25
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003084"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481908"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Mise en miroir de bases de données dans SQL Server
 La mise en miroir des bases de données dans SQL Server vous permet de conserver une copie, ou miroir, d'une base de données SQL Server sur un serveur en veille. La mise en miroir garantit que deux copies distinctes des données existent en permanence, en offrant une haute disponibilité et une redondance complète des données. Le fournisseur de données .NET pour SQL Server offre une prise en charge implicite de la mise en miroir de base de données, de façon à ce que le développeur ne doive pas exécuter d'action ni écrire de code une fois qu'il a été configuré pour une base de données SQL Server. En outre, l'objet <xref:System.Data.SqlClient.SqlConnection> prend en charge un mode de connexion explicite qui permet la fourniture du nom d'un serveur partenaire de basculement dans la propriété <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
@@ -64,4 +64,4 @@ string activeServer = connection.DataSource;
 |[Mise en miroir de base de données](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Décrit comment installer et configurer la mise en miroir dans SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

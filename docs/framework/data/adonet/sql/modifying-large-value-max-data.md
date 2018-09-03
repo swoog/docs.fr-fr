@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: 285803d92474efd3268816d1af06eb3ff4abbc79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ea079a0b55dde8df7b3442f3d604b2b6467ba785
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365590"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484719"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Modification de données de valeurs élevées (max) dans ADO.NET
 Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8 kilo-octets (Ko). SQL Server fournit un spécificateur `max` pour les types de données `varchar`, `nvarchar` et `varbinary` pour permettre le stockage de valeurs pouvant atteindre 2^32 octets. Les colonnes de table et les variables Transact-SQL peuvent spécifier des types de données `varchar(max)`, `nvarchar(max)` ou `varbinary(max)`. Dans ADO.NET, les types de données `max` peuvent être extraits par un `DataReader` et spécifiés comme valeurs de paramètre d'entrée ou de sortie sans que cela nécessite une manipulation particulière. Pour les types de données `varchar` volumineux, il est possible d'extraire et de mettre à jour les données de façon incrémentielle.  
@@ -21,7 +21,7 @@ Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8�
   
  **Documentation en ligne de SQL Server**  
   
-1.  [À l’aide des Types de données de valeur élevée](http://go.microsoft.com/fwlink/?LinkId=120498)  
+1.  [À l’aide des Types de données de valeur élevée](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>Restrictions relatives aux types de valeur élevée  
  Les restrictions suivantes s'appliquent aux types de données `max`, qui n'existent pas pour les types de données moins volumineux :  
@@ -37,9 +37,9 @@ Les types de données LOB sont ceux dont la taille maximale de ligne dépasse 8�
   
  La fonction `OPENROWSET` inclut le fournisseur de jeu de lignes `BULK`, qui permet de lire directement les données d'un fichier sans devoir les charger dans une table cible. Cela vous permet d'utiliser `OPENROWSET` dans une simple instruction INSERT SELECT.  
   
- Le `OPENROWSET``BULK` arguments de l’option fournissent un contrôle important sur l’emplacement où commence et se termine la lecture de données, comment gérer les erreurs et l’interprétation des données. Par exemple, vous pouvez spécifier que le fichier de données doit être lu comme une seule ligne, un jeu de lignes en une seule colonne de type `varbinary`, `varchar` ou `nvarchar`. Pour découvrir la syntaxe complète et les options, voir la documentation en ligne de SQL Server.  
+ Le `OPENROWSET BULK` arguments de l’option fournissent un contrôle important sur l’emplacement où commence et se termine la lecture des données, comment gérer les erreurs et l’interprétation des données. Par exemple, vous pouvez spécifier que le fichier de données doit être lu comme une seule ligne, un jeu de lignes en une seule colonne de type `varbinary`, `varchar` ou `nvarchar`. Pour découvrir la syntaxe complète et les options, voir la documentation en ligne de SQL Server.  
   
- L'exemple suivant insère une photo dans la table ProductPhoto de l'exemple de base de données AdventureWorks. Lorsque vous utilisez le `BULK``OPENROWSET` fournisseur, vous devez fournir la liste nommée des colonnes même si vous n’insérez pas de valeurs dans chaque colonne. Dans ce cas, la clé primaire est définie comme une colonne identité et peut être omise de la liste des colonnes. Notez que vous devez également fournir un nom de corrélation à la fin de l'instruction `OPENROWSET` ; en l'occurrence, il s'agit de ThumbnailPhoto. Cela établit une corrélation avec la colonne de la table `ProductPhoto` dans laquelle le fichier est chargé.  
+ L'exemple suivant insère une photo dans la table ProductPhoto de l'exemple de base de données AdventureWorks. Lorsque vous utilisez le `BULK OPENROWSET` fournisseur, vous devez fournir la liste nommée des colonnes même si vous n’insérez pas de valeurs dans chaque colonne. Dans ce cas, la clé primaire est définie comme une colonne identité et peut être omise de la liste des colonnes. Notez que vous devez également fournir un nom de corrélation à la fin de l'instruction `OPENROWSET` ; en l'occurrence, il s'agit de ThumbnailPhoto. Cela établit une corrélation avec la colonne de la table `ProductPhoto` dans laquelle le fichier est chargé.  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -67,8 +67,8 @@ FROM OPENROWSET
   
 |If|Then|  
 |--------|----------|  
-|La valeur de l'expression est NULL.|`@Length` est ignoré et la valeur dans *column_name* est tronqué à la position spécifiée `@Offset`.|  
-|`@Offset` a la valeur NULL|L’opération de mise à jour ajoute l’expression à la fin d’existants *column_name* valeur et `@Length` est ignoré.|  
+|La valeur de l'expression est NULL.|`@Length` est ignoré et la valeur dans *column_name* est tronquée à l’emplacement spécifié `@Offset`.|  
+|`@Offset` a la valeur NULL|L’opération de mise à jour ajoute l’expression à la fin de l’existante *column_name* valeur et `@Length` est ignoré.|  
 |`@Offset` est supérieur à la longueur de la valeur column_name.|SQL Server retourne une erreur.|  
 |`@Length` a la valeur NULL|L'opération de mise à jour supprime toutes les données à partir de `@Offset` jusqu'à la fin de la valeur `column_name`.|  
   
@@ -104,7 +104,7 @@ GO
 ```  
   
 ## <a name="working-with-large-value-types-in-adonet"></a>Utilisation de types de valeur élevée dans ADO.NET  
- Vous pouvez travailler avec les types de valeur volumineux dans ADO.NET en spécifiant les types de valeur élevée en tant que <xref:System.Data.SqlClient.SqlParameter> des objets dans une <xref:System.Data.SqlClient.SqlDataReader> pour retourner un résultat défini, ou en utilisant un <xref:System.Data.SqlClient.SqlDataAdapter> pour remplir un `DataSet` / `DataTable`. Il n'y a pas de différence d'utilisation entre un type de valeur élevée et le type de données de valeur moins élevée apparenté.  
+ Vous pouvez travailler avec les types de valeur volumineux dans ADO.NET en spécifiant les types de valeur volumineux comme <xref:System.Data.SqlClient.SqlParameter> des objets dans un <xref:System.Data.SqlClient.SqlDataReader> pour retourner un résultat défini, ou en utilisant un <xref:System.Data.SqlClient.SqlDataAdapter> pour remplir un `DataSet` / `DataTable`. Il n'y a pas de différence d'utilisation entre un type de valeur élevée et le type de données de valeur moins élevée apparenté.  
   
 ### <a name="using-getsqlbytes-to-retrieve-data"></a>Utilisation de GetSqlBytes pour extraire des données  
  La méthode `GetSqlBytes` du <xref:System.Data.SqlClient.SqlDataReader> permet d'extraire le contenu d'une colonne `varbinary(max)`. Le fragment de code suivant est basé sur l'hypothèse de l'existence d'un objet <xref:System.Data.SqlClient.SqlCommand> nommé `cmd` qui sélectionne des données `varbinary(max)` dans une table et d'un objet <xref:System.Data.SqlClient.SqlDataReader> nommé `reader` qui extrait les données comme <xref:System.Data.SqlTypes.SqlBytes>.  
@@ -253,4 +253,4 @@ WHERE   DocumentID=@DocumentID
  [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
