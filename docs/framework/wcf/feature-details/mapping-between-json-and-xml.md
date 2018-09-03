@@ -2,12 +2,12 @@
 title: Mappage entre JSON et XML
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931467"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421721"
 ---
 # <a name="mapping-between-json-and-xml"></a>Mappage entre JSON et XML
 Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> fournissent une API XML sur le contenu de JavaScript Objet Notation (JSON). JSON encode des données à l’aide d’un sous-ensemble de littéraux d’objet JavaScript. Les lecteurs et writers produits par cette fabrique sont également utilisés lorsque le contenu JSON est envoyé ou reçu par les applications Windows Communication Foundation (WCF) à l’aide de la <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> ou le <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.
  En outre, si le message JSON dans l’exemple est reçu par WCF et connecté, vous voyez le fragment XML dans le journal précédent.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Mappage entre JSON et le jeu d'informations XML  
- Formellement, le mappage se fait entre JSON comme décrit dans [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (sauf avec certaines restrictions assouplies et autres restrictions ajoutées) et le code XML infoset (et pas XML textuel) comme décrit dans [informations XML Définir](http://go.microsoft.com/fwlink/?LinkId=98809) . Consultez cette rubrique pour les définitions des *éléments d’information* et champs entre [crochets].  
+ Formellement, le mappage se fait entre JSON comme décrit dans [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (sauf avec certaines restrictions assouplies et autres restrictions ajoutées) et le code XML infoset (et pas XML textuel) comme décrit dans [informations XML Définir](https://go.microsoft.com/fwlink/?LinkId=98809) . Consultez cette rubrique pour les définitions des *éléments d’information* et champs entre [crochets].  
   
  Un document JSON vierge est mappé à un document XML vide, et un document XML vierge est mappé à un document JSON vierge. Sur le mappage XML à JSON, qui précède un espace blanc et d’espace blanc de fin après le document ne sont pas autorisés.  
   
@@ -94,7 +94,7 @@ Les lecteurs et writers produits par le <xref:System.Runtime.Serialization.Json.
   
 -   L'attribut de nom de contrat de données ("__type") décrit plus loin. Cet attribut peut être présent uniquement si l'attribut de type JSON est aussi présent et sa [valeur normalisée] est "objet." Cet attribut est utilisé par le `DataContractJsonSerializer` pour conserver des informations de type de contrat de données - par exemple, dans les cas polymorphes où un type dérivé est sérialisé et où un type de base est attendu. Si vous n'utilisez le `DataContractJsonSerializer`, dans la plupart des cas, cet attribut est ignoré.  
   
--   [espaces de noms dans l’étendue] contient la liaison de « xml » à «http://www.w3.org/XML/1998/namespace» comme mandaté par la spécification infoset.  
+-   [espaces de noms dans l’étendue] contient la liaison de « xml » à « http://www.w3.org/XML/1998/namespace» comme mandaté par la spécification infoset.  
   
 -   [enfants], [attributs] et [espaces de noms dans l'étendue] ne doivent pas avoir d'éléments autres que ceux spécifiés précédemment et [attributs d'espace de noms] ne doit pas avoir de membres, mais ne compte pas sur ces faits pour la lecture du XML mappé à partir de JSON.  
   
