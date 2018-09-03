@@ -12,21 +12,21 @@ ms.assetid: 84fc31a3-175f-4e93-90a0-dd29d89b77ce
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4f0af8eac1238c377682bd4880efb89c4d9442db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b20173e0ec814237b45eb8e53135c109c31ddcb6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403199"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486985"
 ---
 # <a name="get-the-toggle-state-of-a-check-box-using-ui-automation"></a>Obtenir l'état bascule d'une case à cocher à l'aide d'UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique montre comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour obtenir l’état bascule d’un contrôle.  
   
 ## <a name="example"></a>Exemple  
- Cet exemple utilise le <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> méthode de la <xref:System.Windows.Automation.AutomationElement> classe pour obtenir un <xref:System.Windows.Automation.TogglePattern> de l’objet d’un contrôle et de retourner sa <xref:System.Windows.Automation.ToggleState> propriété.  
+ Cet exemple utilise le <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> méthode de la <xref:System.Windows.Automation.AutomationElement> classe pour obtenir un <xref:System.Windows.Automation.TogglePattern> de l’objet d’un contrôle et retourner son <xref:System.Windows.Automation.ToggleState> propriété.  
   
  [!code-csharp[NavigatingWithTreeWalker#1200](../../../samples/snippets/csharp/VS_Snippets_Wpf/NavigatingWithTreeWalker/CSharp/ClientClass.cs#1200)]
  [!code-vb[NavigatingWithTreeWalker#1200](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/NavigatingWithTreeWalker/visualbasic/clientclass.vb#1200)]

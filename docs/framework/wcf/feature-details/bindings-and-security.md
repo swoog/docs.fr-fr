@@ -9,30 +9,31 @@ helpviewer_keywords:
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 938b04f6c612f38be41d278273aa18d41677f84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7d2e55f84ed99ccb25e9966dc72112c0113eabc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487253"
 ---
 # <a name="bindings-and-security"></a>Liaisons et sécurité
 Les liaisons fournies par le système incluses avec Windows Communication Foundation (WCF) offrent un moyen rapide de programmer des applications WCF. À une exception près, la méthode de sécurité par défaut de toutes les liaisons est activée. Cette rubrique vous permet de sélectionner la liaison appropriée à vos besoins de sécurité.  
   
  Pour une vue d’ensemble de la sécurité WCF, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md). Pour plus d’informations sur la programmation WCF à l’aide de liaisons, consultez [de programmation de sécurité de WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md).  
   
- Si vous avez déjà sélectionné une liaison, vous pouvez trouver plus d’informations sur les comportements d’exécution qui sont associés à la sécurité dans [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
+ Si vous avez déjà sélectionné une liaison, vous trouverez plus d’informations sur les comportements d’exécution qui sont associés à la sécurité dans [comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md).  
   
- Certaines fonctions de sécurité ne sont pas programmables à l’aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [les fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
+ Certaines fonctions de sécurité ne sont pas programmables à l’aide des liaisons fournies par le système. Pour plus de contrôle à l’aide d’une liaison personnalisée, consultez [des fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md).  
   
 ## <a name="security-functions-of-bindings"></a>Fonctions de sécurité des liaisons  
- WCF inclut plusieurs liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [les liaisons fournies](../../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ WCF inclut plusieurs liaisons fournies par le système qui répondent à la plupart des besoins. Si une liaison spécifique ne suffit pas, vous pouvez également créer une liaison personnalisée. Pour obtenir la liste des liaisons fournies par le système, consultez [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md). Pour plus d’informations sur les liaisons personnalisées, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
- Chaque liaison dans WCF a deux formes : comme une API et comme un élément XML utilisé dans un fichier de configuration. Par exemple, le `WSHttpBinding` (API) possède un équivalent le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Chaque liaison dans WCF a deux formes : sous la forme d’une API et un élément XML utilisé dans un fichier de configuration. Par exemple, le `WSHttpBinding` (API) a un équivalent le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  La section suivante répertorie ces deux formulaires pour chaque de liaison et récapitule les fonctionnalités de sécurité.  
   
 ### <a name="basichttp"></a>BasicHttp  
- Dans le code, utilisez la <xref:System.ServiceModel.BasicHttpBinding> classe ; dans la configuration, utilisez la [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.BasicHttpBinding> classe ; dans la configuration, utilisez le [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
  Cette liaison est conçue pour être utilisées avec une vaste gamme de technologies existantes, dont les suivantes :  
   
@@ -40,7 +41,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
   
 -   Applications WSE (Web Service Enhancements).  
   
--   Basic Profile tel que défini dans l’interopérabilité des Services Web (WS-I) spécification ([http://go.microsoft.com/fwlink/?LinkId=38955](http://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Basic Profile tel que défini dans l’interopérabilité de Services Web (WS-I) spécification ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
   
 -   Profil de sécurité de base tel que défini dans WS-I.  
   
@@ -55,7 +56,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d'informations, voir <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> et <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.WSHttpBinding> classe ; dans la configuration, utilisez la [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.WSHttpBinding> classe ; dans la configuration, utilisez le [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
   
  Par défaut, cette liaison implémente la spécification WS-Security et fournit l’interopérabilité avec les services qui implémentent les spécifications WS-*. Elle prend en charge les fonctionnalités suivantes :  
   
@@ -68,7 +69,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d’informations, consultez <xref:System.ServiceModel.WSHttpSecurity>, <xref:System.ServiceModel.MessageSecurityOverHttp>, <xref:System.ServiceModel.MessageCredentialType>, <xref:System.ServiceModel.SecurityMode>, <xref:System.ServiceModel.HttpTransportSecurity>, <xref:System.ServiceModel.HttpClientCredentialType>, et <xref:System.ServiceModel.HttpProxyCredentialType>.  
   
 ### <a name="wsdualhttpbinding"></a>WSDualHttpBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.WSDualHttpBinding> classe ; dans la configuration, utilisez la [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.WSDualHttpBinding> classe ; dans la configuration, utilisez le [ \<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md).  
   
  Cette liaison est conçue pour activer des applications de service duplex. Elle implémente la spécification WS-Security pour la sécurité de transfert basée sur les messages. La sécurité de transport n'est pas disponible. Par défaut, elle fournit les fonctionnalités suivantes :  
   
@@ -93,7 +94,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d’informations, consultez <xref:System.ServiceModel.WSDualHttpSecurity> et <xref:System.ServiceModel.WSDualHttpSecurityMode>.  
   
 ### <a name="nettcpbinding"></a>NetTcpBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.NetTcpBinding> classe ; dans la configuration, utilisez la [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.NetTcpBinding> classe ; dans la configuration, utilisez le [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
  Cette liaison est optimisée pour la communication d’un ordinateur à l’autre. Par défaut, elle présente les caractéristiques suivantes :  
   
@@ -116,7 +117,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d’informations, consultez <xref:System.ServiceModel.NetTcpSecurity>, <xref:System.ServiceModel.TcpTransportSecurity>, <xref:System.ServiceModel.TcpClientCredentialType>, <xref:System.ServiceModel.MessageSecurityOverTcp>, et <xref:System.ServiceModel.MessageCredentialType>.  
   
 ### <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.NetNamedPipeBinding> classe ; dans la configuration, utilisez la [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.NetNamedPipeBinding> classe ; dans la configuration, utilisez le [ \<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).  
   
  Cette liaison est optimisée pour la communication interprocessus (généralement sur le même ordinateur). Par défaut, elle présente les caractéristiques suivantes :  
   
@@ -135,9 +136,9 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d'informations, consultez <xref:System.ServiceModel.NetNamedPipeSecurity>, <xref:System.ServiceModel.NetNamedPipeSecurityMode> et <xref:System.ServiceModel.NamedPipeTransportSecurity>.  
   
 ### <a name="msmqintegrationbinding"></a>MsmqIntegrationBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe ; dans la configuration, utilisez la [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> classe ; dans la configuration, utilisez le [ \<msmqIntegrationBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).  
   
- Cette liaison est optimisée pour la création des clients WCF et les services qui interagissent avec les points de terminaison non - WCF MSMQ Microsoft Message Queuing.  
+ Cette liaison est optimisée pour la création des clients WCF et des services qui interagissent avec les points de terminaison non - WCF MSMQ Microsoft Message Queuing.  
   
  Par défaut, elle utilise la sécurité de transport et fournit les caractéristiques de sécurité suivantes :  
   
@@ -148,7 +149,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d’informations, consultez <xref:System.ServiceModel.NetMsmqSecurity> et <xref:System.ServiceModel.NetMsmqSecurityMode>.  
   
 ### <a name="netmsmqbinding"></a>NetMsmqBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.NetMsmqBinding> classe ; dans la configuration, utilisez la [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.NetMsmqBinding> classe ; dans la configuration, utilisez le [ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md).  
   
  Cette liaison est prévue pour une utilisation lors de la création de services WCF nécessitant MSMQ prise en charge de message en file d’attente.  
   
@@ -169,7 +170,7 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  Pour plus d’informations, consultez <xref:System.ServiceModel.MessageSecurityOverMsmq> et <xref:System.ServiceModel.MsmqTransportSecurity>.  
   
 ### <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- Dans le code, utilisez la <xref:System.ServiceModel.WSFederationHttpBinding> classe ; dans la configuration, utilisez la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ Dans le code, utilisez le <xref:System.ServiceModel.WSFederationHttpBinding> classe ; dans la configuration, utilisez le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
  Par défaut, cette liaison utilise WS-Security (sécurité au niveau de la couche de message).  
   
@@ -206,21 +207,21 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
 |Type|Description|  
 |----------|-----------------|  
 |None|Spécifie que le client n'a pas besoin de présenter d'informations d'identification. Cela se traduit en un client anonyme.|  
-|Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : authentification de base et Digest, disponible à l’adresse [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : authentification de base et Digest, disponible à l’adresse [ http://go.microsoft.com/fwlink/?LinkId=84023 ](http://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Basic|Authentification de base. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : authentification de base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Digest|Authentification Digest. Pour plus d’informations, consultez la RFC 2617 – authentification HTTP : authentification de base et Digest, disponible à l’adresse [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|Authentification NTLM (NT LAN Manager).|  
 |Windows|Authentification Windows.|  
 |Certificat|Authentification effectuée à l'aide d'un certificat.|  
-|IssuedToken|Autorise le service à imposer que le client soit authentifié à l'aide d'un jeton émis par un service d'émission de jeton de sécurité ou par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Pour plus d’informations, consultez [fédération et les jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
+|IssuedToken|Autorise le service à imposer que le client soit authentifié à l'aide d'un jeton émis par un service d'émission de jeton de sécurité ou par [!INCLUDE[infocard](../../../../includes/infocard-md.md)]. Pour plus d’informations, consultez [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="message-client-credentials-in-bindings"></a>Informations d’identification du client de message dans les liaisons  
  Le tableau suivant répertorie les types d'informations d'identification du client disponibles lors de l'utilisation d'une liaison en mode de sécurité Message.  
   
 |Type|Description|  
 |----------|-----------------|  
-|Aucun|Autorise le service à interagir avec des clients anonymes.|  
+|Aucun.|Autorise le service à interagir avec des clients anonymes.|  
 |Windows|Autorise les échanges de messages SOAP à se produire sous le contexte authentifié d'une information d'identification Windows.|  
-|UserName|Autorise le service à imposer que le client soit authentifié à l'aide d'une information d'identification de nom d'utilisateur. Notez que lorsque le mode de sécurité a la valeur `TransportWithMessageCredential`, WCF ne prend pas en charge l’envoi d’un mot de passe digest ou la dérivation de clés à l’aide du mot de passe et de l’utilisation de telles clés pour le mode de sécurité Message. Par conséquent, WCF impose que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
+|UserName|Autorise le service à imposer que le client soit authentifié à l'aide d'une information d'identification de nom d'utilisateur. Notez que lorsque le mode de sécurité est défini sur `TransportWithMessageCredential`, WCF ne prend pas en charge l’envoi d’un mot de passe digest ou des clés dérivantes à l’aide du mot de passe et à l’aide de ces clés pour le mode de sécurité Message. Par conséquent, WCF met en œuvre que le transport est sécurisé lors de l’utilisation des informations d’identification utilisateur.|  
 |Certificat|Autorise le service à exiger une authentification du client via un certificat.|  
 |IssuedToken|Autorise le service à utiliser un service d'émission de jeton de sécurité afin de fournir un jeton personnalisé.|  
   
@@ -230,4 +231,4 @@ Les liaisons fournies par le système incluses avec Windows Communication Founda
  [Sélection d’un type d’informations d’identification](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Fonctionnalités de sécurité avec des liaisons personnalisées](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
  [Comportements de sécurité](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
