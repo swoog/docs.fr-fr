@@ -2,17 +2,17 @@
 title: Vue d’ensemble des axes LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9b771e0157d1fcfbbb4643d24ccdbf096787f08b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961285"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486855"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Vue d’ensemble des axes LINQ to XML (C#)
 Après avoir créé une arborescence XML ou chargé un document XML dans une arborescence XML, vous pouvez l'interroger pour rechercher des éléments et des attributs et récupérer leurs valeurs. Vous pouvez récupérer des collections via les *méthodes d’axe*, également appelées *axes*. Certains des axes sont des méthodes dans les classes <xref:System.Xml.Linq.XElement> et <xref:System.Xml.Linq.XDocument> qui retournent des collections <xref:System.Collections.Generic.IEnumerable%601>. Certains axes sont des méthodes d'extension dans la classe <xref:System.Xml.Linq.Extensions>. Les axes qui sont implémentés en tant que méthodes d’extension opèrent sur des collections et retournent des collections.  
   
- Comme décrit dans [Vue d’ensemble de la classe XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un objet <xref:System.Xml.Linq.XElement> représente un nœud à un seul d’élément. Le contenu de l'élément peut être complexe (parfois appelé contenu structuré) ou il peut s'agir d'un simple élément. Un élément simple peut être vide ou peut contenir une valeur. Si le nœud contient du contenu structuré, vous pouvez utiliser les différentes méthodes d'axe pour récupérer des énumérations d'éléments descendants. Les méthodes d'axe les plus couramment utilisées sont <xref:System.Xml.Linq.XContainer.Elements%2A> et <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Comme décrit dans [Vue d’ensemble de la classe XElement](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), un objet <xref:System.Xml.Linq.XElement> représente un nœud à un seul d’élément. Le contenu de l'élément peut être complexe (parfois appelé contenu structuré) ou il peut s'agir d'un simple élément. Un élément simple peut être vide ou peut contenir une valeur. Si le nœud contient du contenu structuré, vous pouvez utiliser les différentes méthodes d'axe pour récupérer des énumérations d'éléments descendants. Les méthodes d'axe les plus couramment utilisées sont <xref:System.Xml.Linq.XContainer.Elements%2A> et <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  Outre les méthodes d’axe, qui retournent des collections, il existe deux autres méthodes que vous utilisez fréquemment dans les requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. La méthode <xref:System.Xml.Linq.XContainer.Element%2A> retourne un seul objet <xref:System.Xml.Linq.XElement>. La méthode <xref:System.Xml.Linq.XElement.Attribute%2A> retourne un seul objet <xref:System.Xml.Linq.XAttribute>.  
   
