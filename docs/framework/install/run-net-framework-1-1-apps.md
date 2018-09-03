@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: fb14e195-fea5-4561-b9a8-60a67283edb9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b234d4e2fe7d5efe0a6c33f61b9ba422b55803d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3a7331d4488f4a0eeac71b0b866bc4b6864eed6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386455"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43469932"
 ---
 # <a name="run-net-framework-11-apps-on-windows-8-windows-81-or-windows-10"></a>Exécuter des applications .NET Framework 1.1 sur Windows 8, Windows 8.1 ou Windows 10
 
@@ -20,7 +20,7 @@ Le .NET Framework 1.1 n’est pas pris en charge sur les systèmes d’exploita
 
 ## <a name="install-the-net-framework-11-from-a-cd-or-download-center"></a>Installer le .NET Framework 1.1 à partir d’un CD ou du Centre de téléchargement
 
-Il n’est pas possible d’installer manuellement le .NET Framework 1.1 sur [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] ou Windows 10. Elle n'est plus prise en charge. Si vous essayez d'installer le package, le message d'erreur suivant s'affiche : « Le programme d'installation ne peut pas continuer, car cette version du .NET Framework est incompatible avec une version précédemment installée. ». Pour résoudre ce problème, installez le [.NET Framework 3.5 SP1](http://www.microsoft.com/download/details.aspx?id=22). Cette version inclut le .NET Framework 2.0 (la version qui suit le .NET Framework 1.1), qui est pris en charge sur [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)] et Windows 10. Vous devez toujours essayer d’installer l’application en premier pour déterminer si elle est mise à jour automatiquement vers une version ultérieure du .NET Framework. Si ce n’est pas le cas, contactez votre ISV pour une mise à jour de l’application.
+Il n’est pas possible d’installer manuellement le .NET Framework 1.1 sur [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] ou Windows 10. Elle n'est plus prise en charge. Si vous essayez d'installer le package, le message d'erreur suivant s'affiche : « Le programme d'installation ne peut pas continuer, car cette version du .NET Framework est incompatible avec une version précédemment installée. ». Pour résoudre ce problème, installez le [.NET Framework 3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22). Cette version inclut le .NET Framework 2.0 (la version qui suit le .NET Framework 1.1), qui est pris en charge sur [!INCLUDE[win8](../../../includes/win8-md.md)], [!INCLUDE[win81](../../../includes/win81-md.md)] et Windows 10. Vous devez toujours essayer d’installer l’application en premier pour déterminer si elle est mise à jour automatiquement vers une version ultérieure du .NET Framework. Si ce n’est pas le cas, contactez votre ISV pour une mise à jour de l’application.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 1c5e8bc7ad065c4662cd489930b2226e8a4b8962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76bb008c40d84ed6048b8f960f050048319273b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215483"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43421926"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (options du compilateur C#)
 L’option **-nowarn** vous permet de désactiver l’affichage d’un ou plusieurs avertissements par le compilateur. Séparez les numéros des avertissements par une virgule.  
@@ -52,6 +52,7 @@ L’option **-nowarn** vous permet de désactiver l’affichage d’un ou plusie
  Pour plus d'informations sur la façon de définir cette option du compilateur par programme, consultez <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)  
- [Erreurs du compilateur C#](../../../csharp/language-reference/compiler-messages/index.md)
+
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)  
+- [Erreurs du compilateur C#](../../../csharp/language-reference/compiler-messages/index.md)

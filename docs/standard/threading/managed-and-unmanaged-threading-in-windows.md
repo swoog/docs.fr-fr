@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591688"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390611"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading managé et non managé dans Windows
-La gestion de tous les threads s'effectue par le biais de la classe <xref:System.Threading.Thread> , notamment les threads créés par le Common Language Runtime et ceux créés en dehors du runtime qui entrent dans l'environnement managé pour exécuter du code. Le runtime surveille tous les threads dans son processus qui ont exécuté du code dans l'environnement d'exécution managé. Il n'effectue le suivi d'aucun autre thread. Les threads peuvent entrer dans l’environnement d’exécution managé par le biais du service COM Interop (car le runtime expose les objets managés en tant qu’objets COM à l’environnement non managé), de la fonction COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) et de l’appel de code non managé.  
+La gestion de tous les threads s'effectue par le biais de la classe <xref:System.Threading.Thread> , notamment les threads créés par le Common Language Runtime et ceux créés en dehors du runtime qui entrent dans l'environnement managé pour exécuter du code. Le runtime surveille tous les threads dans son processus qui ont exécuté du code dans l'environnement d'exécution managé. Il n'effectue le suivi d'aucun autre thread. Les threads peuvent entrer dans l’environnement d’exécution managé par le biais du service COM Interop (car le runtime expose les objets managés en tant qu’objets COM à l’environnement non managé), de la fonction COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) et de l’appel de code non managé.  
   
  Quand un thread non managé entre dans le runtime via, par exemple, un wrapper CCW (COM Callable Wrapper), le système vérifie si le magasin de threads local de ce thread contient un objet <xref:System.Threading.Thread> managé interne. Si un objet de ce type est trouvé, le runtime connaît déjà ce thread. Sinon, le runtime crée quand même un objet <xref:System.Threading.Thread> et l’installe dans le magasin de threads local de ce thread.  
   
@@ -45,7 +45,7 @@ La gestion de tous les threads s'effectue par le biais de la classe <xref:System
 |Proche de **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Threads managés et cloisonnements COM  
- Un thread managé peut être marqué pour indiquer qu’il hébergera un [thread unique cloisonné](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) ou un [multithread cloisonné](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx). (Pour plus d’informations sur l’architecture des threads COM, consultez l’article [Processes, threads, and Apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx) (Processus, threads et cloisonnements).) Les méthodes <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> et <xref:System.Threading.Thread.TrySetApartmentState%2A> de la classe <xref:System.Threading.Thread> retournent et affectent l'état de cloisonnement d'un thread. Si l'état n’a pas été défini, <xref:System.Threading.Thread.GetApartmentState%2A> retourne <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Un thread managé peut être marqué pour indiquer qu’il hébergera un [thread unique cloisonné](/windows/desktop/com/single-threaded-apartments) ou un [multithread cloisonné](/windows/desktop/com/multithreaded-apartments). (Pour plus d’informations sur l’architecture des threads COM, consultez l’article [Processes, threads, and Apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx) (Processus, threads et cloisonnements).) Les méthodes <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> et <xref:System.Threading.Thread.TrySetApartmentState%2A> de la classe <xref:System.Threading.Thread> retournent et affectent l'état de cloisonnement d'un thread. Si l'état n’a pas été défini, <xref:System.Threading.Thread.GetApartmentState%2A> retourne <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La propriété ne peut être définie que quand le thread se trouve dans l’état <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> et qu’une seule fois par thread.  
   

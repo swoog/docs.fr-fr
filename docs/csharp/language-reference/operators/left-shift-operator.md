@@ -7,12 +7,12 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: bacb444c08b1f9d6e18278337015d8a427fdbe46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286173"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478102"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;, opérateur (Informations de référence sur C#)
 L’opérateur de décalage vers la gauche (`<<`) décale son premier opérande vers la gauche du nombre de bits spécifié par son deuxième opérande. Le deuxième opérande doit être de type [int](../../../csharp/language-reference/keywords/int.md) ou d’un type pour lequel une conversion numérique implicite vers `int` est prédéfinie.  
@@ -32,7 +32,8 @@ L’opérateur de décalage vers la gauche (`<<`) décale son premier opérande 
 ## <a name="comments"></a>Commentaires  
  Notez que `i<<1` et `i<<33` donnent le même résultat, car 1 et 33 possèdent les cinq mêmes bits de poids faible.  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)

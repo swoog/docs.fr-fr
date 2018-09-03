@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ea465e240a1d74b3f473316ca63b05bd0ba90777
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028030"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463219"
 ---
 # <a name="char-c-reference"></a>char (référence C#)
 
@@ -42,13 +42,13 @@ Le type <xref:System.Char?displayProperty=nameWithType> fournit plusieurs métho
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.Char>  
-[Référence C#](../../../csharp/language-reference/index.md)  
-[Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-[Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-[Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[Types Nullable](../../../csharp/programming-guide/nullable-types/index.md)  
-[Chaînes](../../../csharp/programming-guide/strings/index.md)
+- <xref:System.Char>  
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tableau des types intégraux](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Types Nullable](../../../csharp/programming-guide/nullable-types/index.md)  
+- [Chaînes](../../../csharp/programming-guide/strings/index.md)

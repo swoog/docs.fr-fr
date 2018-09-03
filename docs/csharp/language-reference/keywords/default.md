@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: fd419778742a534a5b7131ca6b22706a7c75994b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e867de9ca18508445ee77c6c05aa12fe6b973d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213986"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456316"
 ---
 # <a name="default-c-reference"></a>default (référence C#)
 
@@ -24,6 +24,6 @@ Le mot clé `default` peut être utilisé dans l’instruction `switch` ou dans 
 
 ## <a name="see-also"></a>Voir aussi
 
- [Référence C#](../index.md)  
- [Guide de programmation C#](../../programming-guide/index.md)  
- [Mots clés C#](index.md)  
+- [Référence C#](../index.md)  
+- [Guide de programmation C#](../../programming-guide/index.md)  
+- [Mots clés C#](index.md)  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 28cf2633d74f047a751ffdad11f1e1db8328cd6f
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457798"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408996"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. et ?[] (C# et Visual Basic)
 Teste si l’opérande de gauche a une valeur Null avant d’effectuer une opération d’accès au membre (`?.`) ou d’index (`?[]`) ; retourne `null` si l’opérande de gauche s’évalue à `null`. 
@@ -79,8 +79,9 @@ PropertyChanged?.Invoke(…)
   
  Pour plus d’informations, consultez [Informations de référence sur le langage Visual Basic](../../../visual-basic/language-reference/index.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [?? (opérateur de fusion Null)](null-coalescing-operator.md)  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Guide de programmation Visual Basic](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [?? (opérateur de fusion Null)](null-coalescing-operator.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Guide de programmation Visual Basic](../../../visual-basic/programming-guide/index.md)

@@ -2,12 +2,12 @@
 title: Performance des requêtes chaînées (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: b2f1d715-8946-4dc0-8d56-fb3d1bba54a6
-ms.openlocfilehash: dca2fa37a18209c5970172cb084151a58ea4ebc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e0b2ec0b73afe10e21c83499c1a3a52c923f591
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336363"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43466928"
 ---
 # <a name="performance-of-chained-queries-linq-to-xml-c"></a>Performance des requêtes chaînées (LINQ to XML) (C#)
 L'un des principaux avantages de LINQ (et LINQ to XML) est que les requêtes chaînées peuvent offrir la même performance qu'une requête unique plus grande et plus complexe.  
@@ -54,7 +54,7 @@ foreach (var i in query2)
   
  Pour plus d’informations sur les itérateurs, consultez [yield](../../../../csharp/language-reference/keywords/yield.md).  
   
- Pour obtenir un didacticiel plus détaillé sur le chaînage de requêtes, consultez [Didacticiel : Chaînage de requêtes](http://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
+ Pour obtenir un didacticiel plus détaillé sur le chaînage de requêtes, consultez [Didacticiel : Chaînage de requêtes](https://msdn.microsoft.com/library/c08d228a-f07a-4c98-810f-1bf0e8f2257c).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Performance (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

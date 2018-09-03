@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589969"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393137"
 ---
 # <a name="interlocked-operations"></a>Opérations verrouillées
 La classe <xref:System.Threading.Interlocked> fournit des méthodes qui synchronisent l’accès à une variable partagée par plusieurs threads. Les threads de processus différents peuvent utiliser ce mécanisme si la variable se trouve dans la mémoire partagée. Les opérations verrouillées sont atomiques, autrement dit, l’opération entière est une unité qui ne peut pas être interrompue par une opération verrouillée sur la même variable. Cela est important dans les systèmes d’exploitation multithreading préemptifs, où un thread peut être suspendu après le chargement d’une valeur à partir d’une adresse de mémoire, mais avant d’avoir la possibilité de la modifier et de la stocker.  
@@ -36,7 +36,7 @@ La classe <xref:System.Threading.Interlocked> fournit des méthodes qui synchron
   
  Sur les processeurs modernes, les méthodes de la classe <xref:System.Threading.Interlocked> peuvent souvent être implémentées par une seule instruction. Par conséquent, elles fournissent d’excellentes performances de synchronisation et peuvent être utilisées pour générer des mécanismes de synchronisation de niveau supérieur, comme des verrous de rotation.  
   
- Pour obtenir un exemple utilisant une combinaison des classes <xref:System.Threading.Monitor> et <xref:System.Threading.Interlocked>, consultez [Moniteurs](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Pour obtenir un exemple utilisant une combinaison des classes <xref:System.Threading.Monitor> et <xref:System.Threading.Interlocked>, consultez [Moniteurs](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="compareexchange-example"></a>Exemple de CompareExchange  
  La méthode <xref:System.Threading.Interlocked.CompareExchange%2A> peut être utilisée pour protéger des calculs qui sont plus compliqués que de simples incréments et décréments. L’exemple suivant montre une méthode thread-safe qui s’ajoute à un total d’exécution stocké comme nombre à virgule flottante. (Pour les entiers, la méthode <xref:System.Threading.Interlocked.Add%2A> est une solution plus simple.) Pour des exemples de code complet, consultez les surcharges de <xref:System.Threading.Interlocked.CompareExchange%2A> qui acceptent les arguments à virgule flottante simple précision et double précision (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> et <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>).  

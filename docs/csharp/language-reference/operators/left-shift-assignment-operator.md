@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <<= operator (left-shift assignment) [C#]
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
-ms.openlocfilehash: e5f3886670baa34b0360501ee15280b93fac36bc
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: c689aeccdf3ad6cc6c672cc101a4f0aa92f19791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34171791"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43406972"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;=, opérateur (référence C#)
 Opérateur d’assignation de décalage vers la gauche.  
@@ -37,7 +37,8 @@ x = x << y
 ## <a name="example"></a>Exemple  
  [!code-csharp[csRefOperators#12](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)

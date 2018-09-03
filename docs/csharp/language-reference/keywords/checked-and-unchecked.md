@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: f8e292a67fab49b5fc3616e438d063eca2617274
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 04f603905690497bcd4249f73c7296be2c269a60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34234371"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468809"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked et Unchecked (référence C#)
 Les instructions C# peuvent s'exécuter dans un contexte vérifié (checked) ou non vérifié (unchecked). Dans un contexte vérifié, un dépassement de capacité arithmétique lève une exception. Dans un contexte non vérifié (unchecked), ce dépassement de capacité arithmétique est ignoré et le résultat est tronqué en supprimant tous les bits de poids fort qui ne tiennent pas dans le type destinataire.  
@@ -36,7 +36,8 @@ Les instructions C# peuvent s'exécuter dans un contexte vérifié (checked) ou 
  Pour les expressions constantes (expressions pouvant être complètement évaluées au moment de la compilation), le contexte par défaut est toujours vérifié (checked). Sauf si une expression constante est placée explicitement dans un contexte non vérifié (unchecked), les dépassements de capacité qui se produisent pendant l’évaluation lors de la compilation de l’expression entraînent des erreurs au moment de la compilation.
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence C#](../index.md)  
- [Guide de programmation C#](../../programming-guide/index.md)  
- [Mots clés C#](index.md)  
- [Mots clés d’instructions](statement-keywords.md)
+
+- [Référence C#](../index.md)  
+- [Guide de programmation C#](../../programming-guide/index.md)  
+- [Mots clés C#](index.md)  
+- [Mots clés d’instructions](statement-keywords.md)

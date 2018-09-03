@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69fcd4bd8426bb349c090fc52f7a1f1a262378ea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f958af5859804cdeb382adab2f3772c42ac5b16
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570508"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483961"
 ---
 # <a name="xslt-extension-objects"></a>Objets d’extension XSLT
 Les objets d’extension permettent d’étendre les fonctionnalités des feuilles de style. Ils sont gérés par la classe <xref:System.Xml.Xsl.XsltArgumentList>.  
@@ -24,7 +24,7 @@ Les objets d’extension permettent d’étendre les fonctionnalités des feuill
  Des objets d'extension XSLT sont ajoutés à l'objet <xref:System.Xml.Xsl.XsltArgumentList> à l'aide de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Un nom qualifié et un URI d’espace de noms sont associés à l’objet d’extension à ce stade.  
   
 > [!NOTE]
->  Le jeu d'autorisations FullTrust est requis pour appeler la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Pour plus d'informations, consultez les pages [Sécurité d'accès du code](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03) et [NIB : Ensembles d'autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+>  Le jeu d'autorisations FullTrust est requis pour appeler la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Pour plus d'informations, consultez les pages [Sécurité d'accès du code](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03) et [NIB : Ensembles d'autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Les types de données retournés par les objets d'extension correspondent à l'un des quatre types de données de base XPath : `number`, `string`, `Boolean` et `node set`.  
   

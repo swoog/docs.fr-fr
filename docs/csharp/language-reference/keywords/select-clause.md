@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279982"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467339"
 ---
 # <a name="select-clause-c-reference"></a>select, clause (Référence C#)
 Dans une expression de requête, la clause `select` spécifie le type de valeurs qui sont générées quand la requête est exécutée. Le résultat est basé sur l’évaluation de toutes les clauses précédentes et sur toutes les expressions de la clause `select` elle-même. Une expression de requête doit se terminer par une clause `select` ou par une clause [group](../../../csharp/language-reference/keywords/group-clause.md).  
@@ -34,11 +34,12 @@ Dans une expression de requête, la clause `select` spécifie le type de valeurs
 ## <a name="remarks"></a>Notes  
  Au moment de la compilation, la clause `select` traduite en un appel de méthode à l’opérateur de requête standard <xref:System.Linq.Enumerable.Select%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Mots clés de requête (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [from, clause](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial, méthode (Référence C#)](../../../csharp/language-reference/keywords/partial-method.md)  
- [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Bien démarrer avec LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Mots clés de requête (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [from, clause](../../../csharp/language-reference/keywords/from-clause.md)  
+- [partial, méthode (Référence C#)](../../../csharp/language-reference/keywords/partial-method.md)  
+- [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Bien démarrer avec LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

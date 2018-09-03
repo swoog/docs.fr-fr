@@ -7,12 +7,12 @@ helpviewer_keywords:
 - String.Format method
 - Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: cc215971d63a0ee61eb25ac45834a81fbbc50b96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216910"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474292"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tableau des formats des résultats numériques (référence C#)
 Vous pouvez mettre en forme un résultat numérique à l’aide de la méthode <xref:System.String.Format%2A?displayProperty=nameWithType>, ou par l’intermédiaire des méthodes <xref:System.Console.Write%2A?displayProperty=nameWithType> ou `String.Format` qui appellent <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, ou à l’aide de [l’interpolation de chaîne](../tokens/interpolated.md). Le format est spécifié à l’aide de chaînes de format. Le tableau suivant contient les chaînes de format standard prises en charge. La chaîne de format prend la forme suivante : `Axx`, où `A` est le spécificateur de format et `xx` est le spécificateur de précision. Le spécificateur de format contrôle le type de mise en forme appliquée à la valeur numérique, tandis que le spécificateur de précision contrôle le nombre de chiffres significatifs ou de décimales de la sortie formatée. La valeur du spécificateur de précision est comprise entre 0 et 99.  
@@ -29,9 +29,10 @@ Vous pouvez mettre en forme un résultat numérique à l’aide de la méthode <
 |N ou n|nombre|Console.Write("{0:N}", 2500000);|2,500,000.00|  
 |X ou x|Hexadécimal|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Chaînes de format numériques standard](../../../standard/base-types/standard-numeric-format-strings.md)  
- [Tableaux de référence des types](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [string](../../../csharp/language-reference/keywords/string.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Chaînes de format numériques standard](../../../standard/base-types/standard-numeric-format-strings.md)  
+- [Tableaux de référence des types](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)

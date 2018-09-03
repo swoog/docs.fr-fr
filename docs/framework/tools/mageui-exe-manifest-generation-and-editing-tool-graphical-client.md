@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 0772fcb32ce4d7500b358db312241e489b3a24c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404951"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390258"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (outil Manifest Generation and Editing, client graphique)
 MageUI.exe prend en charge les mêmes fonctionnalités que l'outil de ligne de commande Mage.exe, mais avec une interface utilisateur Windows. Avec cet outil, vous pouvez créer, modifier et signer les manifestes de déploiement et d'application. Les nouveaux manifestes créés avec MageUI.exe ciblent le [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Les versions antérieures de MageUI.exe doivent être utilisées pour cibler des versions précédentes de .NET Framework. Lors de l'ajout ou de la suppression d'assemblys dans un manifeste, ou lors de la nouvelle signature de manifestes existants, MageUI.exe ne met pas à jour le manifeste pour cibler [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Pour plus d’informations, consultez [Mage.exe (outil Manifest Generation and Editing)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -65,7 +65,7 @@ MageUI.exe prend en charge les mêmes fonctionnalités que l'outil de ligne de c
 |**Nouveau**|Génère un nouveau fichier .pfx qui ne peut pas être vérifié par une Autorité de certification. Pour plus d’informations sur les types de certificats utilisés pour signer les déploiements [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], consultez [Vue d’ensemble du déploiement d’applications approuvées](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Mot de passe**|Fournit une zone dans laquelle entrer le mot de passe utilisé pour signer ce certificat. Le cas échéant, peut être vide.|  
 |**Signer avec le certificat stocké**|Affiche une liste dans laquelle sélectionner des certificats numériques stockés dans le magasin de certificats de votre ordinateur.|  
-|**URI du service d’horodatage**|Affiche l'URI (Uniform Resource Identifier) d'un service d'horodatage numérique. Horodater les manifestes vous évite d'avoir à signer de nouveau les manifestes si votre certificat numérique expire avant le déploiement de la version suivante de votre application. Pour plus d’informations, consultez [Configurer des racines de confiance et des certificats non autorisés](http://go.microsoft.com/fwlink/?LinkId=159000) et [ClickOnce et Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**URI du service d’horodatage**|Affiche l'URI (Uniform Resource Identifier) d'un service d'horodatage numérique. Horodater les manifestes vous évite d'avoir à signer de nouveau les manifestes si votre certificat numérique expire avant le déploiement de la version suivante de votre application. Pour plus d’informations, consultez [Configurer des racines de confiance et des certificats non autorisés](https://go.microsoft.com/fwlink/?LinkId=159000) et [ClickOnce et Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**Ne pas signer**|Vous permet d'enregistrer le manifeste sans ajouter une signature d'un certificat numérique.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Descriptions des onglets et des volets  
@@ -127,7 +127,7 @@ MageUI.exe prend en charge les mêmes fonctionnalités que l'outil de ligne de c
   
 |Élément d'interface utilisateur|Description|  
 |----------------|-----------------|  
-|**Type de jeu d’autorisations**|Spécifie le jeu d'autorisations minimum requis par l'application pour s'exécuter sur un client. Pour obtenir une description des jeux d’autorisations et connaître les autorisations qu’ils exigent ou non, consultez [Jeux d’autorisations nommés](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Type de jeu d’autorisations**|Spécifie le jeu d'autorisations minimum requis par l'application pour s'exécuter sur un client. Pour obtenir une description des jeux d’autorisations et connaître les autorisations qu’ils exigent ou non, consultez [Jeux d’autorisations nommés](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Détails**|Code XML créé pour le manifeste d'application pour représenter le jeu d'autorisations. À moins d'avoir une bonne compréhension du manifeste d'application au format XML, vous ne devez pas modifier ce code XML manuellement. Pour plus d’informations, consultez [Manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Onglet Manifeste de déploiement  

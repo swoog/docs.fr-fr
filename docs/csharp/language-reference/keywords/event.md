@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: b58e06c87ebf601daf231c83993ebe512f51ecd9
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 35a42692bc87da63c69d7ccbce1b49396a84f5a2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961493"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393950"
 ---
 # <a name="event-c-reference"></a>event (référence C#)
 Le mot clé `event` sert à déclarer un événement dans une classe d’éditeur.  
@@ -46,10 +46,11 @@ Le mot clé `event` sert à déclarer un événement dans une classe d’éditeu
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [add](../../../csharp/language-reference/keywords/add.md)  
- [remove](../../../csharp/language-reference/keywords/remove.md)  
- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
- [Guide pratique pour combiner des délégués (délégués multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [add](../../../csharp/language-reference/keywords/add.md)  
+- [remove](../../../csharp/language-reference/keywords/remove.md)  
+- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Guide pratique pour combiner des délégués (délégués multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)

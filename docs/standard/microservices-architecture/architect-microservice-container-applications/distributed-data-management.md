@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998682"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480663"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problématiques et solutions pour la gestion des données distribuées
 
@@ -43,7 +43,7 @@ Cependant, si la conception de votre application implique d’agréger constamme
 
 Comme indiqué précédemment, les données détenues par chaque microservice sont privées pour ce microservice et sont accessibles seulement via son API de microservice. Ainsi, le problème est de savoir comment implémenter des processus métier de bout en bout tout en conservant la cohérence entre plusieurs microservices.
 
-Pour analyser ce problème, considérons un exemple de [l’application de référence eShopOnContainers](http://aka.ms/eshoponcontainers). Le microservice Catalog (Catalogue) gère les informations sur tous les produits, notamment leur niveau de stock. Le microservice Ordering gère les commandes et doit vérifier qu’une nouvelle commande n’excède pas le stock disponible du produit dans le catalogue. (Le scénario peut impliquer une logique qui gère les produits en cours d’approvisionnement.) Dans une hypothétique version monolithique de cette application, le sous-système de commande pourrait simplement utiliser une transaction ACID pour vérifier le stock disponible, créer la commande dans la table Orders (Commandes) et mettre à jour le stock disponible dans la table Products (Produits).
+Pour analyser ce problème, considérons un exemple de [l’application de référence eShopOnContainers](https://aka.ms/eshoponcontainers). Le microservice Catalog (Catalogue) gère les informations sur tous les produits, notamment leur niveau de stock. Le microservice Ordering gère les commandes et doit vérifier qu’une nouvelle commande n’excède pas le stock disponible du produit dans le catalogue. (Le scénario peut impliquer une logique qui gère les produits en cours d’approvisionnement.) Dans une hypothétique version monolithique de cette application, le sous-système de commande pourrait simplement utiliser une transaction ACID pour vérifier le stock disponible, créer la commande dans la table Orders (Commandes) et mettre à jour le stock disponible dans la table Products (Produits).
 
 Cependant, dans une application basée sur des microservices, les tables Order et Product appartiennent à leurs microservices respectifs. Aucun microservice ne doit jamais inclure des bases de données appartenant à un autre microservice dans ses propres transactions ou ses requêtes, comme le montre la figure 4-9.
 
@@ -51,7 +51,7 @@ Cependant, dans une application basée sur des microservices, les tables Order e
 
 **Figure 4-9**. Un microservice ne peut pas accéder directement à une table dans un autre microservice
 
-Le microservice Ordering ne doit pas mettre à jour directement la table Products, car celle-ci est détenue par le microservice Catalog. Pour effectuer une mise à jour au niveau du microservice Catalog, le microservice Ordering doit toujours utiliser des communications asynchrones, comme des événements d’intégration (communication basée sur des messages et des événements). Voici comment l’application de référence [eShopOnContainers](http://aka.ms/eshoponcontainers) effectue ce type de mise à jour.
+Le microservice Ordering ne doit pas mettre à jour directement la table Products, car celle-ci est détenue par le microservice Catalog. Pour effectuer une mise à jour au niveau du microservice Catalog, le microservice Ordering doit toujours utiliser des communications asynchrones, comme des événements d’intégration (communication basée sur des messages et des événements). Voici comment l’application de référence [eShopOnContainers](https://aka.ms/eshoponcontainers) effectue ce type de mise à jour.
 
 Comme le montre le [théorème CAP](https://en.wikipedia.org/wiki/CAP_theorem), vous devez choisir entre la disponibilité et la cohérence forte d’ACID. La plupart des scénarios basés sur des microservices demandent la disponibilité et une haute scalabilité, plutôt qu’une cohérence forte. Les applications critiques doivent rester opérationnelles, et les développeurs peuvent contourner les problèmes liés à la cohérence forte en utilisant des techniques permettant de travailler avec une cohérence faible ou à terme. Il s’agit de l’approche adoptée par la plupart des architectures basée sur les microservices.
 

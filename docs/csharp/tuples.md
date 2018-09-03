@@ -3,12 +3,12 @@ title: Types tuple - Guide C#
 description: En savoir plus sur les types tuple nommés et sans nom en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208297"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404312"
 ---
 # <a name="c-tuple-types"></a>Types tuple C# #
 
@@ -71,7 +71,7 @@ Si un nom explicite est fourni, il est prioritaire sur n’importe quel nom proj
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Pour tous les champs où un nom explicite n’est pas spécifié, un nom implicite applicable est projeté. Il n’existe aucune obligation de fournir des noms sémantiques, explicitement ou implicitement. L’initialiseur suivant a des noms de champ `Item1` dont la valeur est `42`, et `StringContent` dont la valeur est « The answer to everything » :
+Pour tous les champs où un nom explicite n’est pas spécifié, un nom implicite applicable est projeté. Il n’existe aucune obligation de fournir des noms sémantiques, explicitement ou implicitement. L’initialiseur suivant a des noms de champ `Item1` dont la valeur est `42`, et `stringContent` dont la valeur est « The answer to everything » :
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -92,7 +92,7 @@ Ces cas de figure n’entraînent aucune erreur du compilateur, car ce serait un
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Il existe plusieurs règles qui rendent les tests d’égalité de tuple plus pratiques. L’égalité de tuple effectue des [conversions de type «lifted»](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators) si un des tuples est un tuple nullable, comme indiqué dans le code suivant :
+Il existe plusieurs règles qui rendent les tests d’égalité de tuple plus pratiques. L’égalité de tuple effectue des [conversions de type «lifted»](language-reference/language-specification/index.md) si un des tuples est un tuple nullable, comme indiqué dans le code suivant :
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409800"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396920"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (outil de génération de code)
 L'outil en ligne de commande SqlMetal génère le code et le mappage du composant [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En appliquant les options qui apparaissent ultérieurement dans cette rubrique, vous pouvez ordonner à SqlMetal d'exécuter plusieurs actions différentes, dont les suivantes :  
@@ -25,7 +25,7 @@ L'outil en ligne de commande SqlMetal génère le code et le mappage du composan
   
 -   À partir d'un fichier .dbml, générez du code et des attributs de mappage ou un fichier de mappage.  
   
- Cet outil est installé automatiquement avec Visual Studio. Par défaut, ce fichier se trouve à l'emplacement suivant : `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Si vous n’installez pas Visual Studio, vous pouvez également obtenir le fichier SQLMetal en téléchargeant le [SDK Windows](http://go.microsoft.com/fwlink/?LinkId=142225).  
+ Cet outil est installé automatiquement avec Visual Studio. Par défaut, ce fichier se trouve à l'emplacement suivant : `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Si vous n’installez pas Visual Studio, vous pouvez également obtenir le fichier SQLMetal en téléchargeant le [SDK Windows](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
 >  Les développeurs qui utilisent Visual Studio peuvent également utiliser [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] pour générer des classes d'entité. L'approche de ligne de commande est bien adaptée aux bases de données volumineuses. Puisque SqlMetal est un outil de ligne de commande, vous pouvez l'utiliser dans un processus de génération.  

@@ -5,12 +5,12 @@ description: Découvrez comment installer le .NET Framework sur Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 4f63bed0bad41c31bd28ae63b50440e4144a9bda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387976"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476246"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Installer le .NET Framework sur Windows 7 SP1 et Windows Server 2008 R2
 
@@ -18,14 +18,14 @@ Un grand nombre d’applications sur Windows nécessitent l’installation du .N
 
 ![Impossible de démarrer cette application](./media/this-application-could-not-be-started.png)
 
-Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version est prise en charge sur Windows 7 SP1 et Windows Server 2008 R2. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
+Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version est prise en charge sur Windows 7 SP1 et Windows Server 2008 R2. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
 [Télécharger .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) peut être utilisé pour exécuter des applications conçues pour .NET Framework version 4.0 ou ultérieure.
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) peut être utilisé pour exécuter des applications conçues pour .NET Framework version 4.0 ou ultérieure.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c448e4cd4f40865a11a23af51e134da4b8ba2f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e369f570adf51355d02c73bde5d4b1a462e59870
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575412"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43422791"
 ---
 # <a name="xslt-security-considerations"></a>XSLT et la sécurité
 Le langage XSLT possède une panoplie de fonctionnalités offrant puissance et flexibilité. Il comprend de nombreuses fonctions qui, tout en étant utiles, pourraient aussi être exploitées par des sources extérieures. Pour utiliser XSLT en toute sécurité, vous devez comprendre les types de risques pour la sécurité que pose l'utilisation de XSLT et les stratégies de base que vous pouvez employer pour minimiser ces risques.  
@@ -59,4 +59,4 @@ Le langage XSLT possède une panoplie de fonctionnalités offrant puissance et f
 ## <a name="see-also"></a>Voir aussi  
  [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  [Résolution de ressources externes lors du traitement XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
- [Sécurité d’accès du code](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+ [Sécurité d’accès du code](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)

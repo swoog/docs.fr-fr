@@ -3,12 +3,12 @@ title: Critères spéciaux - Guide C#
 description: En savoir plus sur les expressions de critères spéciaux en langage C#
 ms.date: 01/24/2017
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 635ab45c89a38f3dedac2d60ea1e31ebf394c9b2
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: fa327dafe3f924d22b5f0d459eb0b6c7ba60a684
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231474"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255339"
 ---
 # <a name="pattern-matching"></a>Critères spéciaux #
 
@@ -21,7 +21,7 @@ Pour illustrer ces nouveaux idiomes, nous allons manipuler des structures repré
 Ces techniques ne sont pas possibles avec des données qui ne sont pas structurées dans une hiérarchie de classes. Quand les données et les méthodes sont séparées, vous avez besoin d’autres outils. Les nouvelles constructions de *critères spéciaux* utilisent une syntaxe simplifiée pour examiner les données et manipuler le flux de contrôle en fonction de la condition de ces données. Vous écrivez déjà des instructions `if` et `switch` qui testent la valeur d’une variable. Vous écrivez déjà des instructions `is` qui testent le type d’une variable. Les *critères spéciaux* ajoutent de nouvelles fonctionnalités à ces instructions.
 
 Dans cette rubrique, vous allez créer une méthode qui calcule la surface de différentes formes géométriques. Pour cela, vous n’allez pas utiliser les techniques orientées objet, ni créer une hiérarchie de classes pour les différentes formes, comme vous le faites habituellement.
-Vous allez utiliser des *critères spéciaux* à la place. Pour bien illustrer le fait qu’il n’y a pas d’héritage, vous allez définir chaque forme comme un `struct` au lieu d’une classe. Notez que des types de `struct` différents ne peuvent pas spécifier un type de base commun défini par l’utilisateur, ce qui explique pourquoi l’héritage n’est pas une conception possible.
+Vous allez utiliser des *critères spéciaux* à la place.
 Tout au long de cet exemple, comparez ce code avec le même code structuré comme une hiérarchie d’objets. Quand les données à interroger et à manipuler ne sont pas une hiérarchie de classes, les critères spéciaux permettent des conceptions très élégantes.
 
 Au lieu de commencer avec une définition de forme abstraite et d’ajouter ensuite différentes classes de formes spécifiques, écrivez d’abord les définitions de données simples pour chacune des formes géométriques :

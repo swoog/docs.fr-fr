@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 68e7daac63a5f7d9bd1f48adfdee973bd695a13e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 150149453a67d8e5319461266865cb25be180347
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457214"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43421502"
 ---
 # <a name="-operator-c-reference"></a>?:, opérateur (référence C#)
 L’opérateur conditionnel (`?:`), connu sous le nom d’opérateur conditionnel ternaire, retourne une valeur parmi deux, en fonction de la valeur d’une expression booléenne. Voici la syntaxe de l'opérateur conditionnel.  
@@ -51,10 +51,11 @@ classify = (input > 0) ? "positive" : "negative";
 ## <a name="example"></a>Exemple  
  [!code-csharp[csRefOperators#41](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-operator_1.cs)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)  
- [if-else](../../../csharp/language-reference/keywords/if-else.md)  
- [Opérateurs ?. et ?[]](../../../csharp/language-reference/operators/null-conditional-operators.md)  
- [?? Opérateur](../../../csharp/language-reference/operators/null-coalescing-operator.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)  
+- [if-else](../../../csharp/language-reference/keywords/if-else.md)  
+- [Opérateurs ?. et ?[]](../../../csharp/language-reference/operators/null-conditional-operators.md)  
+- [?? Opérateur](../../../csharp/language-reference/operators/null-coalescing-operator.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: e2d788b27f54ac068922f0ebe558a2aea8a475ca
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6170be2dbb3f11906bbaa6e5c3be3e48a976246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960008"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43403432"
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Guide pratique pour analyser des chaînes à l’aide de String.Split (Guide C#)
 
@@ -32,9 +32,11 @@ Chaque instance d’un caractère de séparation génère une valeur dans le tab
 
 Ce comportement facilite l’utilisation de formats tels que les fichiers CSV (valeurs séparées par des virgules) représentant des données tabulaires. Les virgules consécutives représentent une colonne vide.
 
-Vous pouvez passer un paramètre <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> facultatif pour exclure toutes les chaînes vides dans le tableau retourné. Pour un traitement plus complexe de la collection retournée, vous pouvez utiliser [LINQ](../programming-guide/concepts/linq/index.md) pour manipuler la séquence de résultat.    
+Vous pouvez passer un paramètre <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> facultatif pour exclure toutes les chaînes vides dans le tableau retourné. Pour un traitement plus complexe de la collection retournée, vous pouvez utiliser [LINQ](../programming-guide/concepts/linq/index.md) pour manipuler la séquence de résultat.
 
-<xref:System.String.Split%2A?displayProperty=nameWithType> peut utiliser plusieurs caractères de séparation. L’exemple suivant utilise des caractères de séparation (espaces, virgules, points, deux-points et onglets) qui sont tous passés dans un tableau à <xref:System.String.Split%2A>.  La boucle en bas du code affiche chacun des mots dans le tableau retourné.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> peut utiliser plusieurs caractères de séparation.
+L’exemple suivant utilise des caractères de séparation (espaces, virgules, points, deux-points et onglets) qui sont tous passés dans un tableau à <xref:System.String.Split%2A>.
+La boucle en bas du code affiche chacun des mots dans le tableau retourné.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -48,7 +50,8 @@ Les instances consécutives d’un séparateur produisent une chaîne vide dans 
 
 Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Vous pouvez aussi télécharger les exemples [sous forme de fichier zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../programming-guide/index.md)  
- [Chaînes](../programming-guide/strings/index.md)  
- [Expressions régulières .NET](../../standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../programming-guide/index.md)  
+- [Chaînes](../programming-guide/strings/index.md)  
+- [Expressions régulières .NET](../../standard/base-types/regular-expressions.md)

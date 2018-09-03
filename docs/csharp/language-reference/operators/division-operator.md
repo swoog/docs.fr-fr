@@ -8,11 +8,11 @@ helpviewer_keywords:
 - division operator [C#]
 ms.assetid: d155e496-678f-4efa-bebe-2bd08da2c5af
 ms.openlocfilehash: bddf6d234f3536ad64f0cd876cc7ade4494916d9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935158"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43394851"
 ---
 # <a name="-operator-c-reference"></a>/, opérateur (référence C#)
 L’opérateur de division (`/`) divise son premier opérande par son deuxième opérande. Tous les types numériques ont des opérateurs de division prédéfinis.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270423"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463310"
 ---
 # <a name="types-c-reference"></a>Types (référence C#)
 Le système de types C# comporte les catégories suivantes :  
@@ -29,10 +29,11 @@ Le système de types C# comporte les catégories suivantes :
   
  Les types valeur sont également Nullable, ce qui signifie qu’ils peuvent stocker un état de non-valeur supplémentaire. Pour plus d’informations, consultez [Types Nullable](../../../csharp/programming-guide/nullable-types/index.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [Tableaux de référence des types](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Types](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tableaux de référence des types](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Cast et conversions de types](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Types](../../../csharp/programming-guide/types/index.md)

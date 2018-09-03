@@ -3,12 +3,12 @@ title: Traduction d’arborescences d’expressions
 description: Découvrez comment visiter chaque nœud dans une arborescence d’expressions lors de la génération d’une copie modifiée de cette arborescence d’expressions.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 9483cbe75b4bf5a38dd791633c852eb0b8473944
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217114"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463721"
 ---
 # <a name="translating-expression-trees"></a>Traduction d’arborescences d’expressions
 
@@ -191,7 +191,7 @@ Bien que la réponse finale soit la même, le parcours d’arborescence est comp
 
 ## <a name="learning-more"></a>En savoir plus
 
-Cet exemple montre un petit sous-ensemble du code que vous créeriez pour parcourir et interpréter les algorithmes représentés par une arborescence d’expressions. Pour obtenir une description complète de tout le travail nécessaire pour générer une bibliothèque à usage général qui traduit des arborescences d’expressions dans un autre langage, consultez [cette série](http://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) de Matt Warren. Elle décrit en détail comment traduire le code que vous pourriez rencontrer dans une arborescence d’expressions.
+Cet exemple montre un petit sous-ensemble du code que vous créeriez pour parcourir et interpréter les algorithmes représentés par une arborescence d’expressions. Pour obtenir une description complète de tout le travail nécessaire pour générer une bibliothèque à usage général qui traduit des arborescences d’expressions dans un autre langage, consultez [cette série](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx) de Matt Warren. Elle décrit en détail comment traduire le code que vous pourriez rencontrer dans une arborescence d’expressions.
 
 J’espère que cet article aura mis en évidence toute la puissance des arborescences d’expressions.
 Vous pouvez examiner un ensemble de code, y apporter les modifications souhaitées et exécuter la version modifiée. Les arborescences d’expressions étant immuables, vous pouvez créer des arborescences à l’aide de composants d’arborescences existantes. Cela réduit la quantité de mémoire nécessaire pour créer des arborescences d’expressions.

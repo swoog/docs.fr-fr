@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935391"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396114"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Création d’un microservice CRUD simple piloté par les données
 
@@ -326,7 +326,7 @@ Les métadonnées Swagger sont utilisées par Microsoft Flow, PowerApps et Azure
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Comment automatiser la génération de métadonnées d’API Swagger avec le package NuGet Swashbuckle
 
-La génération manuelle de métadonnées Swagger (dans un fichier JSON ou YAML) peut être fastidieuse. Toutefois, vous pouvez automatiser la découverte d’API des services d’API web ASP.NET à l’aide du [package NuGet Swashbuckle](http://aka.ms/swashbuckledotnetcore) afin de générer dynamiquement les métadonnées d’API Swagger.
+La génération manuelle de métadonnées Swagger (dans un fichier JSON ou YAML) peut être fastidieuse. Toutefois, vous pouvez automatiser la découverte d’API des services d’API web ASP.NET à l’aide du [package NuGet Swashbuckle](https://aka.ms/swashbuckledotnetcore) afin de générer dynamiquement les métadonnées d’API Swagger.
 
 Swashbuckle génère automatiquement les métadonnées Swagger pour vos projets d’API web ASP.NET. Il prend en charge les projets d’API web ASP.NET Core et l’API web ASP.NET traditionnelle, ainsi que toutes les autres versions, telles qu’Azure API App, Azure Mobile App ou les microservices Azure Service Fabric reposant sur ASP.NET. Il prend également en charge les API web simples déployées dans des conteneurs, comme l’application de référence.
 

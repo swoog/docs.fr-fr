@@ -2,12 +2,12 @@
 title: Guide pratique pour réorganiser les champs d’un fichier délimité (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 4b7485ff80ef02b7d12980d8ede29cf926027f93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c7dcbea938711904d42228d9c3bd24abffa4f35
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326704"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43384540"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Guide pratique pour réorganiser les champs d’un fichier délimité (LINQ) (C#)
 Un fichier de valeurs séparées par des virgules (CSV) est un fichier texte qui est souvent utilisé pour stocker des données de feuille de calcul ou autres données tabulaires qui sont représentées sous forme de lignes et de colonnes. En utilisant la méthode <xref:System.String.Split%2A> pour séparer les champs, il est très facile d’interroger et de manipuler des fichiers CSV à l’aide de LINQ. En fait, la même technique peut servir à réorganiser les sections de n’importe quelle ligne de texte structurée et ne se limite donc pas aux fichiers CSV.  
@@ -81,4 +81,4 @@ class CSVFiles
 ## <a name="see-also"></a>Voir aussi  
  [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ et répertoires de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Guide pratique : générer du code XML à partir de fichiers CSV](http://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+ [Guide pratique : générer du code XML à partir de fichiers CSV](https://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)

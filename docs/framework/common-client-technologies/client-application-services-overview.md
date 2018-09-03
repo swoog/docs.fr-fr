@@ -5,12 +5,12 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 7ec8d2423c8f9d25ef48c0f0cc0d9627864c9c27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744494"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408559"
 ---
 # <a name="client-application-services-overview"></a>Vue d'ensemble des services d'application cliente
 Les services d’application cliente fournissent un accès simplifié aux services de connexion, de rôles et de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] à partir des applications Windows Forms et WPF (Windows Presentation Foundation). Les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] sont compris dans les extensions AJAX Microsoft ASP.NET 2.0, qui sont incluses avec [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] et [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Ces services permettent à plusieurs applications web et Windows de partager des informations utilisateur et fonctionnalités de gestion des utilisateurs à partir d'un seul serveur.  
@@ -25,7 +25,7 @@ Les services d’application cliente fournissent un accès simplifié aux servic
   
 -   Intégration au concepteur de paramètres de l'application Visual Studio. Quand vous ajoutez des paramètres à votre projet dans Visual Studio, vous pouvez spécifier quels paramètres seront accessibles via le fournisseur de services de paramètres client.  
   
- Les sections suivantes décrivent ces fonctionnalités de façon plus approfondie. Pour plus d'informations sur les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d'ensemble des services d'application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ Les sections suivantes décrivent ces fonctionnalités de façon plus approfondie. Pour plus d'informations sur les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d'ensemble des services d'application ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="authentication"></a>Authentification  
  Vous pouvez utiliser les services d'application cliente pour valider un utilisateur via un service d'authentification [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Vous pouvez valider un utilisateur en utilisant l'authentification Windows ou par formulaire. L'authentification Windows signifie que l'identité de l'utilisateur est fournie par le système d'exploitation quand un utilisateur ouvre une session sur un ordinateur ou un domaine. Vous utilisez généralement l'authentification Windows avec une application déployée sur un intranet d'entreprise. L'authentification par formulaire signifie que vous devez inclure les contrôles de connexion dans votre application et transmettre les informations d'identification acquises au fournisseur d'authentification. Vous utiliserez généralement l'authentification par formulaire avec une application déployée sur Internet.  
@@ -40,17 +40,17 @@ Les services d’application cliente fournissent un accès simplifié aux servic
   
  Quand vous configurez votre application pour utiliser un fournisseur d'informations d'identification avec l'authentification par formulaire, vous devez passer des chaînes vides ou `null` comme paramètres de la méthode <xref:System.Web.Security.Membership.ValidateUser%2A>. Le fournisseur de services appelle ensuite l'implémentation de votre méthode <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType>. En général, vous implémentez cette méthode pour afficher une boîte de dialogue et retourner un objet <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> rempli.  
   
- Pour plus d'informations sur l'authentification, consultez [Authentification ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Pour plus d'informations sur la façon de configurer le service d'authentification [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation de l'authentification par formulaire avec Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
+ Pour plus d'informations sur l'authentification, consultez [Authentification ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Pour plus d'informations sur la façon de configurer le service d'authentification [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation de l'authentification par formulaire avec Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
 ## <a name="roles"></a>Rôles  
  Vous pouvez utiliser les services d'application cliente pour récupérer des informations de rôle d'un service de rôles [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Pour déterminer si l’utilisateur authentifié actuel est dans un rôle particulier, vous appelez la méthode <xref:System.Security.Principal.IPrincipal.IsInRole%2A> de la référence <xref:System.Security.Principal.IPrincipal> récupérée à partir de la propriété `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>. La méthode <xref:System.Security.Principal.IPrincipal.IsInRole%2A> prend le nom du rôle en tant que paramètre et retourne une valeur <xref:System.Boolean> indiquant si l’utilisateur actuel est dans le rôle spécifié. Cette méthode retournera `false` si l'utilisateur n'est pas authentifié ou n'est pas dans le rôle spécifié.  
   
- Pour plus d'informations sur la façon de configurer le service de rôles [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation d'informations sur les rôles avec Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
+ Pour plus d'informations sur la façon de configurer le service de rôles [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation d'informations sur les rôles avec Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Paramètres  
  Vous pouvez utiliser les services d'application cliente pour récupérer des paramètres d'application utilisateur d'un service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. La fonctionnalité des paramètres web des services d’application cliente s’intègre à la fonctionnalité de paramètres d’application fournie dans [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Pour récupérer des paramètres web, commencez par générer une classe `Settings` (accessible en tant que `Properties.Settings.Default` en C# et en tant que `My.Settings` en Visual Basic) pour votre projet à l’aide de l’onglet **Paramètres** du concepteur de projets Visual Studio. Sous l'onglet **Paramètres**, vous pouvez utiliser le bouton **Charger** les paramètres web pour récupérer des paramètres web et les ajouter à la classe `Settings` générée. Vous pouvez utiliser les paramètres web configurés pour une utilisation par tous les utilisateurs authentifiés ou par tous les utilisateurs anonymes.  
   
- Pour plus d'informations sur les paramètres d'application, consultez [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md). Pour plus d'informations sur la façon d'implémenter votre propre classe de paramètres au lieu d'en générer une dans Visual Studio, consultez [Comment : créer des paramètres d'application](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Pour plus d'informations sur la façon de configurer le service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation d'informations sur les profils avec Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
+ Pour plus d'informations sur les paramètres d'application, consultez [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md). Pour plus d'informations sur la façon d'implémenter votre propre classe de paramètres au lieu d'en générer une dans Visual Studio, consultez [Comment : créer des paramètres d'application](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Pour plus d'informations sur la façon de configurer le service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation d'informations sur les profils avec Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   
 ## <a name="client-application-services-classes"></a>Classes de services d'application cliente  
  Le tableau suivant décrit les classes qui implémentent la fonctionnalité de services d'application cliente.  
@@ -82,10 +82,10 @@ Les services d’application cliente fournissent un accès simplifié aux servic
  [Comment : implémenter la connexion utilisateur avec les services d'application cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Procédure pas à pas : utilisation des services d'application cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Vue d’ensemble des services d’application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [Utilisation de l’authentification par formulaire avec Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Utilisation des informations sur les rôles avec Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Utilisation des informations de profil avec Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [Authentification ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Gestion des autorisations à l’aide de rôles](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
- [Création et configuration de la base de données des services d'application pour SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [Vue d’ensemble des services d’application ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Utilisation de l’authentification par formulaire avec Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Utilisation des informations sur les rôles avec Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Utilisation des informations de profil avec Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Authentification ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [Gestion des autorisations à l’aide de rôles](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [Création et configuration de la base de données des services d'application pour SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

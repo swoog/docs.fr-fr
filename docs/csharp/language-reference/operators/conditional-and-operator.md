@@ -8,11 +8,11 @@ helpviewer_keywords:
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
 ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999728"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388291"
 ---
 # <a name="ampamp-operator-c-reference"></a>&amp;&amp;, opérateur (Informations de référence sur C#)
 L’opérateur AND conditionnel (`&&`) effectue une opération AND logique sur ses opérandes de type `bool`, mais évalue uniquement le second opérande, si nécessaire.  

@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: 595533b9f7c0dcc766914a1812001772d0ffa247
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54679292fb8bce16ec572e5a2fee12c1b47292a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397843"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393924"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Installer le .NET Framework sur Windows Vista et Windows Server 2008
 
@@ -18,7 +18,7 @@ Un grand nombre d’applications sur Windows nécessitent l’installation du .N
 
 ![Impossible de démarrer cette application](./media/this-application-could-not-be-started.png)
 
-Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version n’est pas prise en charge sur Windows Vista et Windows Server 2008. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
+Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version n’est pas prise en charge sur Windows Vista et Windows Server 2008. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
@@ -28,7 +28,7 @@ Le [.NET Framework 4.6](https://www.microsoft.com/en-us/download/details.aspx?id
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-Vous pouvez installer le [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) sur Windows Vista.
+Vous pouvez installer le [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) sur Windows Vista.
 
 .NET Framework 3.5 prend en charge les applications conçues pour .NET Framework 1.0 à 3.5.
 

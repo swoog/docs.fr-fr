@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7e944f224ff9bf6dc3b8cefc293182bb79f74f2
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 831c4cce14e902697d84129e54cc54f07d26b9f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457482"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417356"
 ---
 # <a name="throw-c-reference"></a>throw (référence C#)
 Signale l’occurrence d’une exception pendant l’exécution du programme.  
@@ -65,11 +65,12 @@ Les appelants de méthode utilisent alors un bloc `try-catch` ou `try-catch-fina
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [Instructions try, catch et throw en C++](../../../csharp/language-reference/keywords/try-catch.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [Instructions de gestion des exceptions](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [Guide pratique pour lever explicitement des exceptions](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [Instructions try, catch et throw en C++](../../../csharp/language-reference/keywords/try-catch.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Instructions de gestion des exceptions](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
+- [Guide pratique pour lever explicitement des exceptions](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

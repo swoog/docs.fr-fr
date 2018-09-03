@@ -5,22 +5,22 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 726a391a4a747e5446e252e669c5b16248a5e0ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48724c65de4fe71294eb5c61c1891d9d56c9b5a4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217743"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392970"
 ---
-# <a name="deconstructing-tuples-and-other-types"></a>Déconstruction de tuples et d’autres types #
+# <a name="deconstructing-tuples-and-other-types"></a>Déconstruction de tuples et d’autres types
 
 Un tuple offre un moyen léger de récupérer plusieurs valeurs à partir d’un appel de méthode. Cependant, une fois que vous récupérez le tuple, vous devez gérer ses éléments individuels. Cette gestion élément par élément est assez fastidieuse, comme le montre l’exemple suivant. La méthode `QueryCityData` retourne un tuple de 3 éléments, et chacun de ses éléments est affecté à une variable dans une opération distincte.
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 
-La récupération de plusieurs valeurs de champs et de propriétés d’un objet peut également être assez fastidieuse : vous devez affecter une valeur de champ ou de propriété à une variable membre par membre. 
+La récupération de plusieurs valeurs de champs et de propriétés d’un objet peut également être assez fastidieuse : vous devez affecter une valeur de champ ou de propriété à une variable membre par membre.
 
-À compter de C# 7.0, vous pouvez récupérer plusieurs éléments d’un tuple ou récupérer plusieurs valeurs de champ et de propriété, ainsi que des valeurs calculées, à partir d’un objet en une seule opération de *déconstruction*. Quand vous déconstruisez un tuple, vous affectez ses éléments à des variables individuelles. Quand vous déconstruisez un objet, vous affectez des valeurs sélectionnées à des variables individuelles. 
+À compter de C# 7.0, vous pouvez récupérer plusieurs éléments d’un tuple ou récupérer plusieurs valeurs de champ et de propriété, ainsi que des valeurs calculées, à partir d’un objet en une seule opération de *déconstruction*. Quand vous déconstruisez un tuple, vous affectez ses éléments à des variables individuelles. Quand vous déconstruisez un objet, vous affectez des valeurs sélectionnées à des variables individuelles.
 
 ## <a name="deconstructing-a-tuple"></a>Déconstruction d’un tuple
 
@@ -37,10 +37,10 @@ Il existe trois façons de déconstruire un tuple :
     [!code-csharp[Deconstruction-Explicit](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple2.cs#1)]
 
 - Vous pouvez utiliser le mot clé `var` pour que C# infère le type de chaque variable. Vous placez le mot clé `var` en dehors des parenthèses. L’exemple suivant utilise l’inférence de type lors de la déconstruction du tuple de 3 éléments retourné par la méthode `QueryCityData`.
- 
+
     [!code-csharp[Deconstruction-Infer](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple3.cs#1)]
 
-    Vous pouvez aussi utiliser le mot clé `var` individuellement avec tout ou partie des déclarations de variables à l’intérieur des parenthèses. 
+    Vous pouvez aussi utiliser le mot clé `var` individuellement avec tout ou partie des déclarations de variables à l’intérieur des parenthèses.
 
     [!code-csharp[Deconstruction-Infer-Some](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple4.cs#1)]
 
@@ -82,7 +82,7 @@ L’exemple suivant surcharge la méthode `Deconstruct` de façon retourner diff
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class2.cs)]
 
-Comme vous pouvez surcharger la méthode `Deconstruct` de façon à refléter les groupes de données qui sont souvent extraits d’un objet, vous devez être attentif à définir des méthodes `Deconstruct` avec des signatures qui les distinguent et ne sont pas ambiguës. Plusieurs méthodes `Deconstruct` ayant même nombre de paramètres `out`, ou le même nombre et le même type de paramètres `out` dans un ordre différent, peuvent provoquer de la confusion. 
+Comme vous pouvez surcharger la méthode `Deconstruct` de façon à refléter les groupes de données qui sont souvent extraits d’un objet, vous devez être attentif à définir des méthodes `Deconstruct` avec des signatures qui les distinguent et ne sont pas ambiguës. Plusieurs méthodes `Deconstruct` ayant même nombre de paramètres `out`, ou le même nombre et le même type de paramètres `out` dans un ordre différent, peuvent provoquer de la confusion.
 
 La méthode `Deconstruct` surchargée dans l’exemple suivant montre une source possible de confusion. La première surcharge retourne le prénom, le deuxième prénom, le nom et l’âge d’un objet `Person`, dans cet ordre. La seconde surcharge retourne les informations de nom seulement avec le revenu annuel, mais le prénom, le deuxième prénom et le nom sont dans un ordre différent. Ceci facilite la confusion dans l’ordre des arguments lors de la déconstruction d’une instance de `Person`.
 
@@ -98,12 +98,13 @@ L’exemple suivant déconstruit un objet `Person` en quatre chaînes (le préno
 
 ## <a name="deconstructing-a-user-defined-type-with-an-extension-method"></a>Déconstruction d’un type défini par l’utilisateur avec une méthode d’extension
 
-Si vous n’avez pas créé une classe, un struct ou une interface, vous pouvez néanmoins déconstruire des objets de ce type en implémentant une ou plusieurs `Deconstruct`[méthodes d’extension](programming-guide/classes-and-structs/extension-methods.md) pour retourner les valeurs qui vous intéressent. 
+Si vous n’avez pas créé une classe, un struct ou une interface, vous pouvez néanmoins déconstruire des objets de ce type en implémentant une ou plusieurs `Deconstruct`[méthodes d’extension](programming-guide/classes-and-structs/extension-methods.md) pour retourner les valeurs qui vous intéressent.
 
 L’exemple suivant définit deux méthodes d’extension `Deconstruct` pour la classe <xref:System.Reflection.PropertyInfo?displayProperty=nameWithType>. La première retourne un ensemble de valeurs qui indique les caractéristiques de la propriété, notamment son type, si elle est statique ou d’instance, si elle est en lecture seule et si elle est indexée. La seconde indique l’accessibilité de la propriété. Comme l’accessibilité des accesseurs get et set peut varier, des valeurs booléennes indiquent si la propriété a des accesseurs get et set distincts et, le cas échéant, s’ils ont la même accessibilité. S’il n’existe qu’un seul accesseur, ou si les deux accesseurs get et set ont la même accessibilité, la variable `access` indique l’accessibilité de la propriété comme un tout. Dans le cas contraire, l’accessibilité des accesseurs get et set est indiquée par les variables `getAccess` et `setAccess`.
 
 [!code-csharp[Extension-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-extension1.cs)]
- 
+
 ## <a name="see-also"></a>Voir aussi
-[Éléments ignorés](discards.md)   
-[Tuples](tuples.md)  
+
+- [Éléments ignorés](discards.md)
+- [Tuples](tuples.md)  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - . operator [C#]
 - dot operator (.) [C#]
 ms.assetid: a1f54b52-b686-4ae5-a48e-a2a9ebd0eb7b
-ms.openlocfilehash: 088f1991cafa92a69e11ca14bd2d983b36c0e3ca
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: a092c1a916e3dc4bf6d96660c532540945e57554
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244697"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43408005"
 ---
 # <a name="-operator-c-reference"></a>. , opérateur (Informations de référence sur C#)
 L’opérateur point (`.`) est l’opérateur d’accès aux membres . L’opérateur point spécifie un membre d’un type ou d’espace de noms. Par exemple, l’opérateur point est utilisé pour accéder aux méthodes spécifiques figurant dans les bibliothèques de classes du .NET Framework :  
@@ -45,7 +45,8 @@ L’opérateur point (`.`) est l’opérateur d’accès aux membres . L’opér
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)

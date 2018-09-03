@@ -5,12 +5,12 @@ ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f5affc15607ddae76ec90a90928cb42fa0ad49e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 619aa1f34b91c1a883f9c76351302880ff453c13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397908"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400166"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Changements apportés à l’authentification NTLM pour HttpWebRequest dans la version 3.5 SP1
 Des changements de sécurité apportés au .NET Framework version 3.5 SP1 et ultérieures affectent la manière dont l’intégration de l’authentification Windows est gérée par <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> et les classes associées dans l’espace de noms System.Net. Ces changements peuvent affecter les applications qui utilisent ces classes pour effectuer des requêtes web et recevoir des réponses dans lesquelles l’authentification Windows intégrée en fonction de NTLM est utilisée. Ce changement peut avoir un impact sur les serveurs web et les applications clientes configurés pour utiliser l’authentification Windows intégrée.  
@@ -51,7 +51,7 @@ Des changements de sécurité apportés au .NET Framework version 3.5 SP1 et ul
   
  7. Quittez l’Éditeur du Registre, puis redémarrez le service IISAdmin et exécutez IISReset.  
   
- Une solution de contournement moins sécurisée consiste à désactiver le contrôle de retour de boucle, comme décrit dans [http://support.microsoft.com/kb/896861](http://go.microsoft.com/fwlink/?LinkID=179657). Cette opération désactive la protection contre les attaques par réflexion. Il est donc préférable de limiter l’ensemble des autres noms aux seuls noms qui seront utilisés par l’ordinateur.  
+ Une solution de contournement moins sécurisée consiste à désactiver le contrôle de retour de boucle, comme décrit dans [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657). Cette opération désactive la protection contre les attaques par réflexion. Il est donc préférable de limiter l’ensemble des autres noms aux seuls noms qui seront utilisés par l’ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

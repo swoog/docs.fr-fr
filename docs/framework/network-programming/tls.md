@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925502"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389775"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>Configuration des protocoles Schannel dans le Registre Windows
 
-Vous pouvez utiliser le Registre pour un contrôle affiné sur les protocoles négociés par votre application client et/ou serveur. La mise en réseau de votre application passe par Schannel (qui est un autre nom pour un [Canal sécurisé](https://msdn.microsoft.com/library/windows/desktop/aa380123). En configurant `Schannel`, vous pouvez configurer le comportement de votre application.
+Vous pouvez utiliser le Registre pour un contrôle affiné sur les protocoles négociés par votre application client et/ou serveur. La mise en réseau de votre application passe par Schannel (qui est un autre nom pour un [Canal sécurisé](/windows/desktop/SecAuthN/secure-channel). En configurant `Schannel`, vous pouvez configurer le comportement de votre application.
 
 Démarrez avec la clé de Registre `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. Sous cette clé, vous pouvez créer toutes les sous-clés dans l’ensemble `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` et `TLS 1.2`. Sous chacune de ces sous-clés, vous pouvez créer des sous-clés `Client` et/ou `Server`. Sous `Client` et `Server`, vous pouvez créer des valeurs DWORD `DisabledByDefault` (0 ou 1) et `Enabled` (0 ou 0xFFFFFFFF).
 
@@ -239,8 +239,8 @@ Démarrez avec la clé de Registre `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\
 
 Lorsqu’elle est activée (par défaut, par un commutateur `AppContext`, ou par le Registre Windows), la version .NET Framework utilise l’indicateur `SCH_USE_STRONG_CRYPTO` lorsque votre application demande un protocole de sécurité TLS. L’indicateur `SCH_USE_STRONG_CRYPTO` peut être activé par défaut, avec le commutateur `AppContext` ou avec le Registre. Le système d’exploitation passe de l’indicateur sur `Schannel`pour lui demander de désactiver les algorithmes de chiffrement faibles connus, les suites de chiffrement et les versions du protocole TLS/SSL qui peuvent être également activées pour une meilleure interopérabilité. Pour plus d'informations, voir :
 
-- [Canal sécurisé](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [Structure SCHANNEL_CRED](https://msdn.microsoft.com/library/windows/desktop/aa379810)
+- [Canal sécurisé](/windows/desktop/SecAuthN/secure-channel)
+- [Structure SCHANNEL_CRED](/windows/desktop/api/schannel/ns-schannel-_schannel_cred)
 
 L’indicateur `SCH_USE_STRONG_CRYPTO` est également passé sur `Schannel` lorsque vous utilisez explicitement les valeurs énumérées `Tls` (TLS 1.0), `Tls11` ou `Tls12` de <xref:System.Net.SecurityProtocolType> ou <xref:System.Security.Authentication.SslProtocols>.
 

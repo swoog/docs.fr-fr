@@ -2,12 +2,12 @@
 title: Opérations de jointure (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: caf93848450bcef35fef492985ef9703321b1dcb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23d1432d32b22964c333640ccd3ac8dc7a2394d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325342"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480307"
 ---
 # <a name="join-operations-c"></a>Opérations de jointure (C#)
 Une *jointure* de deux sources de données est l’association des objets d’une source de données aux objets qui partagent un attribut commun dans une autre source de données.  
@@ -31,7 +31,7 @@ Une *jointure* de deux sources de données est l’association des objets d’un
  <xref:System.Linq>  
  [Présentation des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
  [Types anonymes](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Formuler des jointures et des requêtes de produit croisé](http://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
+ [Formuler des jointures et des requêtes de produit croisé](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
  [join, clause](../../../../csharp/language-reference/keywords/join-clause.md)  
  [Comment : effectuer des opérations de jointure à l’aide de clés composites](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
  [Guide pratique pour joindre du contenu issu de fichiers non similaires (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  

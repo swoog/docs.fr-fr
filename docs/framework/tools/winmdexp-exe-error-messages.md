@@ -159,20 +159,20 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0172f3895a0a1f444548bfbca877164815adc94a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407038"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43465497"
 ---
 # <a name="winmdexpexe-error-messages"></a>Messages d'erreur Winmdexp.exe
 Le processus de génération appelle [Winmdexp.exe (outil d’exportation de métadonnées Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) quand vous utilisez le modèle de composant  **[!INCLUDE[wrt](../../../includes/wrt-md.md)]** dans [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], et les messages d’erreur de Winmdexp.exe apparaissent donc dans la **liste d’erreurs**. Winmdexp.exe fonctionne sur un module compilé avec l’option `/target:winmdobj`. Comme il nécessite un module compilé en entrée, ses messages d’erreur ne s’affichent pas, sauf si la compilation réussit.  
   
- Les messages d’erreur sont conçus pour contenir toutes les informations dont vous avez besoin pour résoudre les conditions d’erreur qu’ils signalent. Toutefois, certains problèmes nécessitent plus d’informations que celles qui sont contenues dans le message. Vous pouvez trouver des informations supplémentaires dans [Diagnostic des conditions d’erreur du composant Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127) dans le Centre de développement Windows.  
+ Les messages d’erreur sont conçus pour contenir toutes les informations dont vous avez besoin pour résoudre les conditions d’erreur qu’ils signalent. Toutefois, certains problèmes nécessitent plus d’informations que celles qui sont contenues dans le message. Vous pouvez trouver des informations supplémentaires dans [Diagnostic des conditions d’erreur du composant Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127) dans le Centre de développement Windows.  
   
- Si l’erreur n’est pas abordée dans cet article et que vous pensez que le message ne contient pas suffisamment d’informations pour résoudre le problème, utilisez le lien de commentaires dans cet article et incluez-y le message d’erreur. Vous pouvez aussi rapporter un bogue sur le [site web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). Vous pouvez également rechercher plus d’informations sur les [Forums Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
+ Si l’erreur n’est pas abordée dans cet article et que vous pensez que le message ne contient pas suffisamment d’informations pour résoudre le problème, utilisez le lien de commentaires dans cet article et incluez-y le message d’erreur. Vous pouvez aussi rapporter un bogue sur le [site web Microsoft Connect](https://go.microsoft.com/fwlink/p/?LinkId=251130). Vous pouvez également rechercher plus d’informations sur les [Forums Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Winmdexp.exe (outil d’exportation de métadonnées Windows Runtime)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
- [Diagnostic des conditions d’erreur du composant Windows Runtime](http://go.microsoft.com/fwlink/p/?LinkId=251127)
+ [Diagnostic des conditions d’erreur du composant Windows Runtime](https://go.microsoft.com/fwlink/p/?LinkId=251127)

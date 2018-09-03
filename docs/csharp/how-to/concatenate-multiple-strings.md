@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: d4e57347a11b804f3ea7f4bb9736c134c4b71929
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961304"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468652"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>Guide pratique pour concaténer plusieurs chaînes (Guide C#)
 
@@ -23,7 +23,6 @@ La *concaténation* consiste à ajouter une chaîne à la fin d’une autre cha�
 L’exemple suivant utilise la concaténation pour diviser un long littéral de chaîne en plus petites chaînes pour améliorer la lisibilité du code source. Les diverses parties sont concaténées en une chaîne unique lors de la compilation. Il n’y a aucune incidence sur les performances d’exécution, quel que soit le nombre de chaînes impliquées.  
   
  [!code-csharp-interactive[Combining strings at compile time](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#1)]  
-  
 
 Pour concaténer des variables de chaîne, vous pouvez utiliser les opérateurs `+` ou `+=`, l’[interpolation de chaînes](../language-reference/tokens/interpolated.md), ou encore les méthodes <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.String.Concat%2A?displayProperty=nameWithType>, <xref:System.String.Join%2A?displayProperty=nameWithType> ou <xref:System.Text.StringBuilder.Append%2A?displayProperty=nameWithType>. L’opérateur `+` est facile à utiliser et convient au code intuitif. Même si vous utilisez plusieurs opérateurs `+` dans une instruction, le contenu de la chaîne est copié une seule fois. Le code suivant montre des exemples d’utilisation des opérateurs `+` et `+=` pour concaténer des chaînes :
 
@@ -34,7 +33,7 @@ Dans certaines expressions, il est plus facile de concaténer des chaînes à l�
 [!code-csharp-interactive[building strings using string interpolation](../../../samples/snippets/csharp/how-to/strings/Concatenate.cs#3)]  
   
 > [!NOTE]
->  Dans les opérations de concaténation de chaîne, le compilateur C# traite une chaîne null de la même manière qu’une chaîne vide.
+> Dans les opérations de concaténation de chaîne, le compilateur C# traite une chaîne null de la même manière qu’une chaîne vide.
 
 Une autre méthode permettant de concaténer des chaînes est <xref:System.String.Format%2A?displayProperty=nameWithType>. Cette méthode fonctionne bien quand vous créez une chaîne à partir d’un petit nombre de chaînes de composant.
 
@@ -54,8 +53,9 @@ Enfin, vous pouvez utiliser [LINQ](../programming-guide/concepts/linq/index.md) 
 
 Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Vous pouvez aussi télécharger les exemples [sous forme de fichier zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
-## <a name="see-also"></a>Voir aussi  
- <xref:System.String>  
- <xref:System.Text.StringBuilder>  
- [Guide de programmation C#](../programming-guide/index.md)  
- [Chaînes](../programming-guide/strings/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.String>  
+- <xref:System.Text.StringBuilder>  
+- [Guide de programmation C#](../programming-guide/index.md)  
+- [Chaînes](../programming-guide/strings/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0925f7445c4451f61bd1c878cc66300d62bdc855
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741904"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455716"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Guide pratique pour charger des assemblys dans un domaine d’application
 Il existe plusieurs façons de charger un assembly dans un domaine d’application. La procédure recommandée consiste à utiliser la méthode `static` (`Shared` en Visual Basic) <xref:System.Reflection.Assembly.Load%2A> de la classe <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Vous pouvez aussi adopter les approches suivantes :  
@@ -37,7 +37,7 @@ Il existe plusieurs façons de charger un assembly dans un domaine d’applicati
 > [!NOTE]
 >  À compter du .NET Framework version 2.0, le runtime ne charge pas un assembly qui a été compilé avec une version du .NET Framework dont le numéro de version est supérieur au runtime chargé actuellement. Cela s’applique à la combinaison des composants majeurs et mineurs du numéro de version.  
   
- Vous pouvez spécifier la façon dont le code compilé juste-à-temps (JIT) des assemblys chargés est partagé entre les domaines d’application. Pour plus d’informations, consultez [Domaines d’application et assemblys](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
+ Vous pouvez spécifier la façon dont le code compilé juste-à-temps (JIT) des assemblys chargés est partagé entre les domaines d’application. Pour plus d’informations, consultez [Domaines d’application et assemblys](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346).  
   
 ## <a name="example"></a>Exemple  
  Le code suivant charge un assembly nommé « example.exe » ou « example.dll » dans le domaine d’application actuel, obtient un type nommé `Example` à partir de l’assembly, obtient une méthode sans paramètre nommée `MethodA` pour ce type, et exécute la méthode. Pour obtenir une description complète de l’obtention d’informations à partir d’un assembly chargé, consultez [Chargement et utilisation dynamiques des types](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
@@ -52,4 +52,4 @@ Il existe plusieurs façons de charger un assembly dans un domaine d’applicati
  [Réflexion](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)  
  [Guide pratique pour charger des assemblys dans le contexte de réflexion uniquement](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [Domaines d'application et assemblys](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+ [Domaines d'application et assemblys](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744380"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43468996"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Guide pratique pour installer un assembly dans le Global Assembly Cache
 Il existe deux façons d'installer un assembly avec nom fort dans le Global Assembly Cache (GAC) :  
@@ -23,7 +23,7 @@ Il existe deux façons d'installer un assembly avec nom fort dans le Global Ass
 > [!IMPORTANT]
 >  Seuls les assemblys avec noms forts peuvent être installés dans le GAC. Pour plus d’informations sur la façon de créer un assembly avec un nom fort, consultez [Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
--   Utilisation de [Windows Installer](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).  
+-   Utilisation de [Windows Installer](/windows/desktop/Msi/windows-installer-portal).  
   
      Cela se fait dans Visual Studio 2012 et Visual Studio 2013 lorsque vous créez un projet InstallShield Limited Edition.  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [Guide pratique pour supprimer un assembly du Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (outil Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Comment : signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Déploiement de Windows Installer](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Déploiement de Windows Installer](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

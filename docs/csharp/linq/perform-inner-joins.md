@@ -3,12 +3,12 @@ title: Effectuer des jointures internes (LINQ en C#)
 description: Découvrez comment effectuer des jointures internes à l’aide de LINQ en C#.
 ms.date: 12/1/2016
 ms.assetid: 45bceed6-f549-4114-a9b1-b44feb497742
-ms.openlocfilehash: 5dedab3fe83d4c16f8f0879f564cdd39e2b2446c
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 2f6aad30dc8278ce1bb88bacc19b27deaa0288c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404198"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484168"
 ---
 # <a name="perform-inner-joins"></a>Effectuer des jointures internes
 
@@ -66,8 +66,8 @@ Le résultat de `query1` est équivalent au jeu de résultats qui aurait été o
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.Linq.Enumerable.Join%2A>  
-<xref:System.Linq.Enumerable.GroupJoin%2A>  
-[Effectuer des jointures groupées](perform-grouped-joins.md)  
-[Effectuer des jointures externes gauches](perform-left-outer-joins.md)  
-[Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>  
+- <xref:System.Linq.Enumerable.GroupJoin%2A>  
+- [Effectuer des jointures groupées](perform-grouped-joins.md)  
+- [Effectuer des jointures externes gauches](perform-left-outer-joins.md)  
+- [Types anonymes](../programming-guide/classes-and-structs/anonymous-types.md)  

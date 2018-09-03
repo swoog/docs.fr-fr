@@ -2,12 +2,12 @@
 title: Recherche du style de paragraphe par défaut (C#)
 ms.date: 07/20/2015
 ms.assetid: be102177-8ab0-444a-b671-7023e555ffdb
-ms.openlocfilehash: e29ca281e1867a72a76a28765912c39675ca0f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c81ad1aed25eea3b8363caebe0eb980ca69c557
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335950"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479823"
 ---
 # <a name="finding-the-default-paragraph-style-c"></a>Recherche du style de paragraphe par défaut (C#)
 La première tâche du didacticiel Manipulation d’informations dans un document WordprocessingML consiste à rechercher le style par défaut des paragraphes dans le document.  
@@ -89,4 +89,4 @@ The default style is: Normal
 -   [Récupération des paragraphes et de leurs styles (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel : manipulation de contenu dans un document WordprocessingML](http://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)
+ [Didacticiel : manipulation de contenu dans un document WordprocessingML](https://msdn.microsoft.com/library/2696355e-4f83-4eaf-91b2-baa721f42fb4)

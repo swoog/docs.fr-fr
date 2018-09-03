@@ -10,12 +10,12 @@ helpviewer_keywords:
 - full paths [C#]
 - -fullpaths compiler option [C#]
 ms.assetid: d2a5f857-cbb2-430b-879c-d648aaf0b8c4
-ms.openlocfilehash: 29320ae2dc4b13381ecce76fb04101f18d214bba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f23bb683067c55f5b5213065c3082b843dd7dce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215308"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388277"
 ---
 # <a name="-fullpaths-c-compiler-options"></a>-fullpaths (Options du compilateur C#)
 Si vous utilisez l’option **-fullpaths**, le compilateur spécifie le chemin complet du fichier quand il répertorie les erreurs de compilation et les avertissements.  
@@ -32,4 +32,5 @@ Si vous utilisez l’option **-fullpaths**, le compilateur spécifie le chemin c
  Cette option de compilateur n’est pas disponible dans Visual Studio et ne peut pas être changée par programmation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

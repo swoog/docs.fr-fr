@@ -17,12 +17,12 @@ helpviewer_keywords:
 - roles [.NET Framework], client application services
 - client application services, about client application services
 ms.assetid: 1487d8df-089e-4f21-abfb-a791a652b58e
-ms.openlocfilehash: d67b7467bdacdfca054d0ecd11a81c7d25b158f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d58510240593f73ff761aa669035f28598006c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743223"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401581"
 ---
 # <a name="client-application-services"></a>Services d'application cliente
 Les services d’application cliente facilitent la création d’applications Windows qui utilisent les services d’application de connexion, de rôles et de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] inclus dans les extensions AJAX Microsoft ASP.NET 2.0. Ces services permettent à plusieurs applications web et Windows de partager des informations utilisateur et fonctionnalités de gestion des utilisateurs à partir d'un seul serveur. Par exemple, vous pouvez utiliser ces services pour effectuer les tâches suivantes :  
@@ -35,7 +35,7 @@ Les services d’application cliente facilitent la création d’applications Wi
   
  Les services d'application cliente tirent parti du modèle d'extensibilité de services web via des fournisseurs de services clients que vous pouvez spécifier dans vos fichiers de configuration d'application. Ces fournisseurs de services incluent des fonctionnalités hors connexion qui utilisent un cache local pour l'authentification, les rôles et les données de paramètres quand une connexion réseau n'est pas disponible.  
   
- Pour plus d'informations sur les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d'ensemble des services d'application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ Pour plus d'informations sur les services d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d'ensemble des services d'application ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Vue d'ensemble des services d'application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
@@ -64,10 +64,10 @@ Les services d’application cliente facilitent la création d’applications Wi
  <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble des services d’application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [Utilisation de l’authentification par formulaire avec Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Utilisation des informations sur les rôles avec Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Utilisation des informations de profil avec Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [Authentification ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Gestion des autorisations à l’aide des rôles](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
+ [Vue d’ensemble des services d’application ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Utilisation de l’authentification par formulaire avec Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Utilisation des informations sur les rôles avec Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Utilisation des informations de profil avec Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Authentification ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [Gestion des autorisations à l’aide des rôles](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)    
  [Vue d'ensemble des paramètres d'application](../../../docs/framework/winforms/advanced/application-settings-overview.md)

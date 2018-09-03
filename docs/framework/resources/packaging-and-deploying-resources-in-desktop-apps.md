@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a6e6219d6449fedabe6e7cb0b349efb6fc74ee6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399689"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485701"
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetage et déploiement de ressources dans des applications de bureau
 Les applications s’appuient sur le gestionnaire des ressources du .NET Framework, représenté par la classe <xref:System.Resources.ResourceManager>, pour récupérer des ressources localisées. Le gestionnaire des ressources suppose qu’un modèle Hub and Spoke est utilisé pour empaqueter et déployer des ressources. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; il s’agit de la culture dont les ressources sont utilisées si aucune ressource localisée ne peut être trouvée. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture unique, mais ne contient pas de code.  
@@ -53,7 +53,7 @@ Les applications s’appuient sur le gestionnaire des ressources du .NET Framewo
 -   Le coût initial du test d’une application augmente, car vous devez tester plusieurs configurations. À longue échéance, il sera plus facile et moins coûteux de tester une application principale et plusieurs satellites que de tester et de tenir à jour en parallèle plusieurs versions internationales.  
   
 ## <a name="resource-naming-conventions"></a>Conventions d’affectation de noms pour les ressources  
- Quand vous empaquetez les ressources de votre application, vous devez les nommer en utilisant les conventions d’affectation de noms pour les ressources que le Common Language Runtime attend. Le runtime identifie une ressource par son nom de culture. Chaque culture a un nom unique, qui est en général une combinaison d’un nom de culture à deux lettres en minuscules associé à une langue et, si nécessaire, un nom de sous-culture à deux lettres en majuscules associé à un pays ou une région. Le nom de la sous-culture suit le nom de la culture, séparés par un tiret (-). Les exemples incluent ja-JP pour le japonais tel qu’il est parlé au Japon, en-US pour l’anglais tel qu’il est parlé aux États-Unis, de-DE pour l’allemand tel qu’il est parlé en Allemagne ou de-AT pour l’allemand tel qu’il est parlé en Autriche. Consultez [Informations de référence sur l’API NLS (National Language Support)](http://go.microsoft.com/fwlink/?LinkId=200048) sur le centre de développement Go Global pour obtenir une liste complète des noms de cultures.  
+ Quand vous empaquetez les ressources de votre application, vous devez les nommer en utilisant les conventions d’affectation de noms pour les ressources que le Common Language Runtime attend. Le runtime identifie une ressource par son nom de culture. Chaque culture a un nom unique, qui est en général une combinaison d’un nom de culture à deux lettres en minuscules associé à une langue et, si nécessaire, un nom de sous-culture à deux lettres en majuscules associé à un pays ou une région. Le nom de la sous-culture suit le nom de la culture, séparés par un tiret (-). Les exemples incluent ja-JP pour le japonais tel qu’il est parlé au Japon, en-US pour l’anglais tel qu’il est parlé aux États-Unis, de-DE pour l’allemand tel qu’il est parlé en Allemagne ou de-AT pour l’allemand tel qu’il est parlé en Autriche. Consultez [Informations de référence sur l’API NLS (National Language Support)](https://go.microsoft.com/fwlink/?LinkId=200048) sur le centre de développement Go Global pour obtenir une liste complète des noms de cultures.  
   
 > [!NOTE]
 >  Pour plus d’informations sur la création de fichiers de ressources, consultez [Création de fichiers de ressources](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md) et [Création d’assemblys satellites](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md).  

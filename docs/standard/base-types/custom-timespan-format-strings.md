@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd378798ad6909175b2342b0d79584e2667f1eea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911878"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390661"
 ---
 # <a name="custom-timespan-format-strings"></a>Chaînes de format TimeSpan personnalisées
 
@@ -67,11 +67,12 @@ Les chaînes de format <xref:System.TimeSpan> standard sont également utilisée
 |"FFFFF"|Cent millièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ne sont pas affichés.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "FFFFF"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Millionièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ne sont pas affichés.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Dix millionièmes de seconde dans un intervalle de temps. Tous les zéros de fin fractionnaires ou sept zéros ne sont pas affichés.<br /><br /> Informations supplémentaires : [Spécificateur de format personnalisé "FFFFFFF"](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|*'string*'|Délimiteur de chaîne littérale.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*chaîne*'|Délimiteur de chaîne littérale.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\|Caractère d’échappement .<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |N'importe quel autre caractère|Tout autre caractère sans séquence d’échappement est interprété comme un spécificateur de format personnalisé.<br /><br /> Informations supplémentaires : [Autres caractères](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
+<a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>Spécificateur de format personnalisé "d"
 
 Le spécificateur de format personnalisé "d" affiche la valeur de la propriété <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, qui représente le nombre de jours entiers dans l’intervalle de temps. Il affiche le nombre total de jours dans une valeur <xref:System.TimeSpan>, même si la valeur a plusieurs chiffres. Si la valeur de la propriété <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> est zéro, le spécificateur retourne "0".
@@ -89,6 +90,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>Spécificateurs de format personnalisé "dd" à "dddddddd"
 Les spécificateurs de format personnalisé "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" et "dddddddd" affichent la valeur de la propriété <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, qui représente le nombre de jours entiers dans l’intervalle de temps.
 
@@ -102,6 +104,7 @@ L’exemple suivant utilise ces spécificateurs de format pour afficher la repr�
 [Retour au tableau](#table)
 
 <a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Spécificateur de format personnalisé "h"
 Le spécificateur de format personnalisé "h" affiche la valeur de la propriété <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, qui représente le nombre d’heures entières dans l’intervalle de temps non comptabilisées dans le composant « jour ». Il retourne une valeur de chaîne à un chiffre si la valeur de la propriété <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> est comprise entre 0 et 9, ou une valeur de chaîne à deux chiffres si la valeur de la propriété <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> est comprise entre 10 et 23.
 
@@ -123,6 +126,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Spécificateur de format personnalisé "hh"
 Le spécificateur de format personnalisé "hh" affiche la valeur de la propriété <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, qui représente le nombre d’heures entières dans l’intervalle de temps non comptabilisées dans le composant « jour ». Pour les valeurs 0 à 9, la chaîne de sortie inclut un zéro non significatif.
 
@@ -139,6 +143,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Spécificateur de format personnalisé "m"
 Le spécificateur de format personnalisé "m" affiche la valeur de la propriété <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, qui représente le nombre de minutes entières dans l’intervalle de temps non comptabilisées dans le composant « jour ». Il retourne une valeur de chaîne à un chiffre si la valeur de la propriété <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> est comprise entre 0 et 9, ou une valeur de chaîne à deux chiffres si la valeur de la propriété <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> est comprise entre 10 et 59.
 
@@ -160,6 +165,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Spécificateur de format personnalisé "mm"
 Le spécificateur de format personnalisé "mm" affiche la valeur de la propriété <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, qui représente le nombre de minutes entières dans l’intervalle de temps non incluses dans les composants « jours » ou « heures ». Pour les valeurs 0 à 9, la chaîne de sortie inclut un zéro non significatif.
 
@@ -176,6 +182,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>Spécificateur de format personnalisé "s"
 Le spécificateur de format personnalisé "s" affiche la valeur de la propriété <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, qui représente le nombre de secondes entières dans l’intervalle de temps non incluses dans les composants « jours », « heures » ou « minutes ». Il retourne une valeur de chaîne à un chiffre si la valeur de la propriété <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> est comprise entre 0 et 9, ou une valeur de chaîne à deux chiffres si la valeur de la propriété <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> est comprise entre 10 et 59.
 
@@ -197,6 +204,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>Spécificateur de format personnalisé "ss"
 Le spécificateur de format personnalisé "ss" affiche la valeur de la propriété <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, qui représente le nombre de secondes entières dans l’intervalle de temps non incluses dans les composants « jours », « heures » ou « minutes ». Pour les valeurs 0 à 9, la chaîne de sortie inclut un zéro non significatif.
 
@@ -213,6 +221,7 @@ L’exemple suivant illustre l’utilisation du spécificateur de format personn
 [Retour au tableau](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="thef-custom-format-specifier"></a>Spécificateur de format personnalisé "f"
 Le spécificateur de format personnalisé "f" affiche les dixièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement un chiffre fractionnaire.
 
@@ -226,6 +235,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "f" pour a
 [Retour au tableau](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Spécificateur de format personnalisé "ff"
 Le spécificateur de format personnalisé "ff" affiche les centièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement deux chiffres fractionnaires.
 
@@ -237,6 +247,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "ff" pour 
 [Retour au tableau](#table)
 
 <a name="f3Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Spécificateur de format personnalisé "fff"
 Le spécificateur de format personnalisé "fff" (trois caractères « f ») affiche les millisecondes dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement trois chiffres fractionnaires.
 
@@ -248,6 +259,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "fff" pour
 [Retour au tableau](#table)
 
 <a name="f4Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Spécificateur de format personnalisé "ffff"
 Le spécificateur de format personnalisé "ffff" (quatre caractères « f ») affiche les dix millièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement quatre chiffres fractionnaires.
 
@@ -259,6 +271,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "ffff" pou
 [Retour au tableau](#table)
 
 <a name="f5Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Spécificateur de format personnalisé "fffff"
 Le spécificateur de format personnalisé "fffff" (cinq caractères « f ») affiche les cent millièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement cinq chiffres fractionnaires.
 
@@ -270,6 +283,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "fffff" po
 [Retour au tableau](#table)
 
 <a name="f6Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Spécificateur de format personnalisé "ffffff"
 Le spécificateur de format personnalisé "ffffff" (six caractères « f ») affiche les millionièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement six chiffres fractionnaires.
 
@@ -281,6 +295,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "ffffff" p
 [Retour au tableau](#table)
 
 <a name="f7Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Spécificateur de format personnalisé "fffffff"
 Le spécificateur de format personnalisé "fffffff" (sept caractères « f ») affiche les dix millionièmes de seconde (ou le nombre fractionnaire de graduations) dans un intervalle de temps. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la chaîne d’entrée doit contenir exactement sept chiffres fractionnaires.
 
@@ -292,6 +307,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "fffffff" 
 [Retour au tableau](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Spécificateur de format personnalisé "F"
 Le spécificateur de format personnalisé "F" affiche les dixièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Si la valeur des dixièmes de seconde de l’intervalle de temps est égale à zéro, elle n’est pas incluse dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence du chiffre des dixièmes de seconde est facultative.
 
@@ -305,6 +321,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "F" pour a
 [Retour au tableau](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Spécificateur de format personnalisé "FF"
 Le spécificateur de format personnalisé "FF" affiche les centièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Les zéros de fin fractionnaires éventuels ne sont pas inclus dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence du chiffre des dixièmes et des centièmes de seconde est facultative.
 
@@ -316,6 +333,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "FF" pour 
 [Retour au tableau](#table)
 
 <a name="F3_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Spécificateur de format personnalisé "FFF"
 Le spécificateur de format personnalisé "FFF" (trois caractères « F ») affiche les millisecondes dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Les zéros de fin fractionnaires éventuels ne sont pas inclus dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence du chiffre des dixièmes, des centièmes et des millièmes de seconde est facultative.
 
@@ -327,6 +345,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "FFF" pour
 [Retour au tableau](#table)
 
 <a name="F4_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Spécificateur de format personnalisé "FFFF"
 Le spécificateur de format personnalisé "FFFF" (quatre caractères « F ») affiche les dix millièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Les zéros de fin fractionnaires éventuels ne sont pas inclus dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence du chiffre des dixièmes, des centièmes, des millièmes et des dix millièmes de seconde est facultative.
 
@@ -338,6 +357,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "FFFF" pou
 [Retour au tableau](#table)
 
 <a name="F5_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Spécificateur de format personnalisé "FFFFF"
 Le spécificateur de format personnalisé "FFFFF" (cinq caractères « F ») affiche les cent millièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Les zéros de fin fractionnaires éventuels ne sont pas inclus dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence du chiffre des dixièmes, des centièmes, des millièmes, des dix millièmes et des cent millièmes de seconde est facultative.
 
@@ -349,6 +369,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "FFFFF" po
 [Retour au tableau](#table)
 
 <a name="F6_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Spécificateur de format personnalisé "FFFFFF"
 Le spécificateur de format personnalisé "FFFFFF" (six caractères « F ») affiche les millionièmes de seconde dans un intervalle de temps. Dans une opération de mise en forme, tous les chiffres fractionnaires restants sont tronqués. Les zéros de fin fractionnaires éventuels ne sont pas inclus dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence du chiffre des dixièmes, des centièmes, des millièmes, des dix millièmes, des cent millièmes et des millionièmes de seconde est facultative.
 
@@ -360,6 +381,7 @@ L’exemple suivant utilise le spécificateur de format personnalisé "FFFFFF" p
 [Retour au tableau](#table)
 
 <a name="F7_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Spécificateur de format personnalisé "FFFFFFF"
 Le spécificateur de format personnalisé "FFFFFFF" (sept caractères « F ») affiche les dix millionièmes de seconde (ou le nombre fractionnaire de graduations) dans un intervalle de temps. Les zéros de fin fractionnaires éventuels ne sont pas inclus dans la chaîne de résultat. Dans une opération d’analyse qui appelle la méthode <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> ou <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, la présence des sept chiffres fractionnaires dans la chaîne d’entrée est facultative.
 
@@ -370,7 +392,8 @@ L’exemple suivant utilise le spécificateur de format personnalisé "FFFFFFF" 
 
 [Retour au tableau](#table)
 
-<a name="Other"></a>
+<a name="Other"></a> 
+
 ## <a name="other-characters"></a>Autres caractères
 
 Tout autre caractère sans séquence d’échappement dans une chaîne de format, y compris un espace blanc, est interprété comme un spécificateur de format personnalisé. Dans la plupart des cas, la présence de tout autre caractère sans séquence d’échappement aboutit à une <xref:System.FormatException>.

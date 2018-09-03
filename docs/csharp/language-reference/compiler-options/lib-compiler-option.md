@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: 7db975909f498a0b84e7405a12a8f8ec1e2dd34b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c140a49de0503da1e59396f14ac1aee4c1d7d1a6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216854"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43390404"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (Options du compilateur C#)
 L’option **-lib** spécifie l’emplacement des assemblys référencés au moyen de l’option [-reference (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -67,6 +67,7 @@ L’option **-lib** spécifie l’emplacement des assemblys référencés au moy
 csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)
+## <a name="see-also"></a>Voir aussi
+
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  
+- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

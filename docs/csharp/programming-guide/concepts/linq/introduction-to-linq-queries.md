@@ -8,11 +8,11 @@ helpviewer_keywords:
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
 ms.openlocfilehash: f74b762532f0fb2795625185e59360cdfb76b124
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335521"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474049"
 ---
 # <a name="introduction-to-linq-queries-c"></a>Introduction aux requêtes LINQ (C#)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont généralement exprimées dans un langage de requête spécialisé. Les différents langages ont été développés au fil du temps pour les différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Les développeurs devaient donc apprendre un nouveau langage de requête pour chaque nouveau type de source de données ou format de données qu’ils devaient prendre en charge. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] simplifie cette situation en proposant un même modèle pour les différents types de sources données et les différents formats de données. Dans une requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], vous travaillez toujours avec des objets. Vous utilisez les mêmes modèles d’encodage de base pour interroger et transformer les données en documents XML, bases de données SQL, datasets [!INCLUDE[vstecado](~/includes/vstecado-md.md)], collections .NET, et tout autre format pour lequel un fournisseur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est disponible.  

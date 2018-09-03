@@ -2,12 +2,12 @@
 title: Démarrer plusieurs tâches Async et les traiter une fois terminées (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 29dc629abae13bb7ba3a9b0cb87300e6d1cbe2d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333721"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416396"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Démarrer plusieurs tâches Async et les traiter une fois terminées (C#)
 En utilisant <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>, vous pouvez démarrer plusieurs tâches en même temps et les traiter une par une, une fois qu’elles sont terminées, au lieu de les traiter dans l’ordre dans lequel elles ont démarré.  
@@ -37,7 +37,7 @@ En utilisant <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWi
  Si vous ne souhaitez pas télécharger le projet, vous pouvez passer en revue le fichier MainWindow.xaml.cs à la fin de cette rubrique.  
   
 ## <a name="building-the-example"></a>Génération de l’exemple  
- Cet exemple ajoute le code développé dans [Annuler les tâches Async restantes lorsque l’une d’elles est terminée (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Annuler les tâches Async restantes lorsque l’une d’elles est terminée](http://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76) et utilise la même interface utilisateur.  
+ Cet exemple ajoute le code développé dans [Annuler les tâches Async restantes lorsque l’une d’elles est terminée (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Annuler les tâches Async restantes lorsque l’une d’elles est terminée](https://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76) et utilise la même interface utilisateur.  
   
  Pour générer l’exemple vous-même, pas à pas, suivez les instructions de la section « Téléchargement de l’exemple », mais choisissez **CancelAfterOneTask** comme **Projet de démarrage**. Ajoutez les modifications de cette rubrique à la méthode `AccessTheWebAsync` dans ce projet. Les modifications sont marquées par des astérisques.  
   

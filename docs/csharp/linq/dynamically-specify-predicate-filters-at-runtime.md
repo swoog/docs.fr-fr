@@ -3,12 +3,12 @@ title: Spécifier dynamiquement des filtres de prédicat au moment de l’exécu
 description: Découvrez comment spécifier dynamiquement des filtres de prédicat au moment de l’exécution à l’aide de LINQ en C#.
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 7051d7c754a0db29771a2e03a3b624c0e434eecd
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404088"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482038"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Spécifier dynamiquement des filtres de prédicat au moment de l’exécution
 
@@ -70,5 +70,5 @@ Dans certains cas, ce n’est qu’au moment de l’exécution que vous savez co
 
 ## <a name="see-also"></a>Voir aussi
 
-[LINQ (Language Integrated Query)](index.md)  
-[where, clause](../language-reference/keywords/where-clause.md)  
+- [LINQ (Language Integrated Query)](index.md)
+- [where, clause](../language-reference/keywords/where-clause.md)

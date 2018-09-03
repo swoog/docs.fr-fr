@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
 manager: douge
-ms.openlocfilehash: faece1d7ee752e4c17f39027ff8a97fc95ed451b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77f41e696fed3d33282b6437e99129fda9e209e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514358"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472018"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Comment : ajouter des programmes d'installation à votre application de service
 Visual Studio est fourni avec des composants d’installation qui peuvent installer des ressources associées à vos applications de service. Les composants d’installation inscrivent un service auprès du système sur lequel il est installé et informent le Gestionnaire de contrôle des services de l’existence du service. Quand vous travaillez avec une application de service, vous pouvez sélectionner un lien dans la fenêtre Propriétés pour ajouter automatiquement les programmes d’installation appropriés à votre projet.  
@@ -30,7 +30,7 @@ Visual Studio est fourni avec des composants d’installation qui peuvent instal
  Les programmes d’installation ne nécessitent aucun codage spécial pour que vos services s’installent correctement. Toutefois, vous devrez parfois modifier le contenu des programmes d’installation pour ajouter des fonctionnalités spéciales au processus d’installation.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Pour ajouter des programmes d’installation à votre application de service  
   

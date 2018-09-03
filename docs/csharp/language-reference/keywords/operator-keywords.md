@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273313"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392696"
 ---
 # <a name="operator-keywords-c-reference"></a>Mots clés des opérateurs (référence C#)
 Permettent d’effectuer diverses actions comme créer des objets, vérifier le type d’un objet au moment de l’exécution, obtenir la taille d’un type, etc. Cette section présente les mots clés suivants :  
@@ -55,8 +55,9 @@ Permettent d’effectuer diverses actions comme créer des objets, vérifier le 
   
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md) : indique un contexte non vérifié.  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)

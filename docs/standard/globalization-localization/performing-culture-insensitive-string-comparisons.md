@@ -1,6 +1,6 @@
 ---
 title: Exécution de comparaisons de chaînes indépendantes de la culture
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35805d1760b0e06d33498efeeb3104979da26bc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84b1c10b655fefcd420a0c3cf038dba00e688d3e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573605"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43461655"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>Exécution de comparaisons de chaînes indépendantes de la culture
 Par défaut, la méthode <xref:System.String.Compare%2A?displayProperty=nameWithType> effectue des comparaisons dépendantes de la culture et qui respectent la casse. Cette méthode inclut également plusieurs surcharges qui fournissent un paramètre `culture` qui vous permet de spécifier la culture à utiliser et un paramètre `comparisonType` qui vous sert à spécifier les règles de comparaison à utiliser. L'appel de ces méthodes au lieu de la surcharge par défaut supprime toute ambiguïté à propos des règles utilisées dans un appel de méthode particulier et indique si une comparaison donnée est dépendante ou indépendante de la culture.  
@@ -38,9 +38,12 @@ Par défaut, la méthode <xref:System.String.Compare%2A?displayProperty=nameWith
   
  [!code-csharp[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/cs/cultureinsensitive1.cs#1)]
  [!code-vb[Conceptual.Strings.CultureInsensitiveComparison#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.cultureinsensitivecomparison/vb/cultureinsensitive1.vb#1)]  
-  
-## <a name="see-also"></a>Voir aussi  
- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
- [Exécution d'opérations de chaînes indépendantes de la culture](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
- [Bonnes pratiques pour l’utilisation de chaînes](../../../docs/standard/base-types/best-practices-strings.md)
+
+Vous pouvez télécharger les [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un ensemble de fichiers texte qui contiennent des informations sur les poids des caractères utilisés dans les opérations de tri et de comparaison pour les systèmes d’exploitation Windows.
+
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.String.Compare%2A?displayProperty=nameWithType>  
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>  
+- [Exécution d'opérations de chaînes indépendantes de la culture](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+- [Bonnes pratiques pour l’utilisation de chaînes](../../../docs/standard/base-types/best-practices-strings.md)

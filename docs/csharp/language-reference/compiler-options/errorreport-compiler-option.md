@@ -8,11 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: d7e001834d670e7c88488c6db887d1d8e671beef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcbb9467da87a82147176bb0feb00383aff2c77f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43420257"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Options du compilateur C#)
 Cette option fournit un moyen pratique de signaler une erreur interne du compilateur C# à Microsoft.  
@@ -61,4 +62,5 @@ Cette option fournit un moyen pratique de signaler une erreur interne du compila
  Pour plus d'informations sur la façon de définir cette option du compilateur par programme, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

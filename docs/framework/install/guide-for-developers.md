@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b428a23172539b959acd6fc9e9a56be3482f89d4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925088"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43394953"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Installer le .NET Framework pour les développeurs
 
@@ -37,15 +37,15 @@ Utilisez le tableau suivant pour les liens rapides ou poursuivez la lecture pour
 
 |Version du .NET Framework|Installation pour développeur|Installation du redistribuable|Plateforme prise en charge|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=874338)|[Téléchargement du programme d’installation web de la version 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Téléchargement du programme d’installation hors connexion de la version 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)|Inclus dans : <br/>Mise à jour d’avril 2018 de Windows 10<br /><br /> Vous pouvez installer sur :<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Mise à jour anniversaire Windows 10<br /> Windows 8.1 et versions antérieures<br /> Windows Server 1709 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))||
-|**4.7.1**|[NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)|[Page de téléchargement du programme d’installation web de la version 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852107)|Inclus dans : <br/>Windows 10 Fall Creators Update<br/>Windows Server, version 1709<br /><br /> Vous pouvez installer sur :<br/> Windows 10 Creators Update <br /> Mise à jour anniversaire Windows 10<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2016 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))||
-|**4.7**|[NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)|[Page de téléchargement du programme d’installation web de la version 4.7](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.7](http://go.microsoft.com/fwlink/?LinkId=825303)|Inclus dans : <br/>Windows 10 Creators Update<br /><br /> Vous pouvez installer sur :<br /> Mise à jour anniversaire Windows 10<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2016 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))||
-|**4.6.2**|[NET Framework 4.6.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=780617)|[Page de téléchargement du programme d’installation web de la version 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780601)|Inclus dans : <br /> Mise à jour anniversaire Windows 10<br /><br /> Vous pouvez installer sur :<br /> Mise à jour de novembre de Windows 10 <br/> Windows 10 <br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
-|**4.6.1**|[NET Framework 4.6.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=690706)|[Page de téléchargement du programme d’installation web de la version 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671744)|Vous pouvez installer sur :<br /> Windows 10 <br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
-|**4.6**|Inclus dans Visual Studio 2015.<br /><br /> [Pack de ciblage Microsoft .NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528261)|[Page de téléchargement du programme d’installation web de la version 4.6](http://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.6](http://go.microsoft.com/fwlink/?LinkId=528233)|Inclus dans : <br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> Vous pouvez également installer sur :<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
-|**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Pour une utilisation avec Visual Studio 2013, Visual Studio 2012 ou d’autres IDE|[Page de téléchargement du programme d’installation web de la version 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)|Vous pouvez installer sur :<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Pour une utilisation avec Visual Studio 2013, Visual Studio 2012 ou d’autres IDE|[Page de téléchargement du programme d’installation web de la version 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)|Inclus dans :<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> Vous pouvez également installer sur :<br /> [!INCLUDE[win8](../../../includes/win8-md.md)] et versions antérieures<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] et versions antérieures<br />(pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
-|**4.5**|Inclus dans Visual Studio 2012<br /><br /> Aussi disponible en tant que composant du [Kit SDK Windows 8](http://msdn.microsoft.com/windows/hardware/hh852363)|[Page de téléchargement du programme d’installation web de la version 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Inclus dans : <br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> Vous pouvez également installer sur :<br /> Windows 7 et versions antérieures<br /> Windows Server 2008 SP2 et versions antérieures<br />(pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
+|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Téléchargement du programme d’installation web de la version 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Téléchargement du programme d’installation hors connexion de la version 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|Inclus dans : <br/>Mise à jour d’avril 2018 de Windows 10<br /><br /> Vous pouvez installer sur :<br/> <br/>Windows 10 Fall Creators Update<br/>Windows 10 Creators Update <br /> Mise à jour anniversaire Windows 10<br /> Windows 8.1 et versions antérieures<br /> Windows Server 1709 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.1**|[NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Page de téléchargement du programme d’installation web de la version 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|Inclus dans : <br/>Windows 10 Fall Creators Update<br/>Windows Server, version 1709<br /><br /> Vous pouvez installer sur :<br/> Windows 10 Creators Update <br /> Mise à jour anniversaire Windows 10<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2016 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))||
+|**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Page de téléchargement du programme d’installation web de la version 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|Inclus dans : <br/>Windows 10 Creators Update<br /><br /> Vous pouvez installer sur :<br /> Mise à jour anniversaire Windows 10<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2016 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))||
+|**4.6.2**|[NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Page de téléchargement du programme d’installation web de la version 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780601)|Inclus dans : <br /> Mise à jour anniversaire Windows 10<br /><br /> Vous pouvez installer sur :<br /> Mise à jour de novembre de Windows 10 <br/> Windows 10 <br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
+|**4.6.1**|[NET Framework 4.6.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=690706)|[Page de téléchargement du programme d’installation web de la version 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671744)|Vous pouvez installer sur :<br /> Windows 10 <br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
+|**4.6**|Inclus dans Visual Studio 2015.<br /><br /> [Pack de ciblage Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Page de téléchargement du programme d’installation web de la version 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|Inclus dans : <br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> Vous pouvez également installer sur :<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
+|**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Pour une utilisation avec Visual Studio 2013, Visual Studio 2012 ou d’autres IDE|[Page de téléchargement du programme d’installation web de la version 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|Vous pouvez installer sur :<br /> Windows 8.1 et versions antérieures<br /> Windows Server 2012 R2 et versions antérieures<br /> (pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Pour une utilisation avec Visual Studio 2013, Visual Studio 2012 ou d’autres IDE|[Page de téléchargement du programme d’installation web de la version 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Page de téléchargement du programme d’installation hors connexion de la version 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|Inclus dans :<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> Vous pouvez également installer sur :<br /> [!INCLUDE[win8](../../../includes/win8-md.md)] et versions antérieures<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] et versions antérieures<br />(pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
+|**4.5**|Inclus dans Visual Studio 2012<br /><br /> Aussi disponible en tant que composant du [Kit SDK Windows 8](https://msdn.microsoft.com/windows/hardware/hh852363)|[Page de téléchargement du programme d’installation web de la version 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Inclus dans : <br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> Vous pouvez également installer sur :<br /> Windows 7 et versions antérieures<br /> Windows Server 2008 SP2 et versions antérieures<br />(pour obtenir la liste complète, consultez la [configuration requise](~/docs/framework/get-started/system-requirements.md))|
 
 S’il est disponible, vous pouvez installer le **Developer Pack** d’une version spécifique du .NET Framework sur toutes les plateformes prises en charge.
 
@@ -69,21 +69,21 @@ Un *pack de ciblage* (Targeting Pack) permet à votre application de cibler une 
 
 Le Developer Pack pour .NET Framework 4.5.1 ou 4.5.2, le pack de ciblage pour .NET Framework 4.6 et le Developer Pack pour .NET Framework 4.6.1, 4.6.2, 4.7, 4.7.1 ou 4.7.2 fournissent une version .NET Framework spécifique des assemblys de référence, des modules linguistiques et des fichiers IntelliSense à utiliser dans un environnement de développement intégré tel que Visual Studio.  Si vous utilisez Visual Studio, le Developer Pack ou le Targeting Pack ajoutent également la version installée du .NET Framework sur les cibles choisies quand vous créez un projet.  Choisissez l'une des valeurs suivantes :
 
-- [Microsoft .NET Framework 4.7.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=874338)
+- [Microsoft .NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)
 
-- [Microsoft .NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)
+- [Microsoft .NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)
 
-- [Microsoft .NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)
+- [Microsoft .NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)
 
-- [Microsoft .NET Framework 4.6.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=780617)
+- [Microsoft .NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)
 
-- [Microsoft .NET Framework 4.6.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=690706)
+- [Microsoft .NET Framework 4.6.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=690706)
 
-- [Pack de ciblage Microsoft .NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528261)
+- [Pack de ciblage Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)
 
-- [.NET Framework 4.5.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=397702) pour installer la version 4.5.2 sur Windows 8.1 ou antérieur, Visual Studio 2013, Visual Studio 2012 ou d’autres IDE.
+- [.NET Framework 4.5.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=397702) pour installer la version 4.5.2 sur Windows 8.1 ou antérieur, Visual Studio 2013, Visual Studio 2012 ou d’autres IDE.
 
-- [.NET Framework 4.5.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=324213) pour installer la version 4.5.1 sur Visual Studio 2012 ou d’autres IDE.
+- [.NET Framework 4.5.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=324213) pour installer la version 4.5.1 sur Visual Studio 2012 ou d’autres IDE.
 
 Dans la page de téléchargement du Developer Pack, choisissez **Télécharger**. Ensuite, choisissez **Exécuter** ou **Enregistrer**, puis suivez les instructions lorsque vous y êtes invité. Vous pouvez également installer le pack du développeur ou le pack de ciblage d’une version spécifique du .NET Framework en le sélectionnant dans les composants facultatifs de la charge de travail **Développement .NET Desktop** de Visual Studio Installer, comme le montre la figure suivante.
 
@@ -109,23 +109,23 @@ Les deux programmes d’installation web et hors connexion sont conçus pour les
 
 1.  Ouvrez la page de téléchargement pour la version du .NET Framework que vous souhaitez installer :
 
-    - .NET Framework 4.7.2 ([programme d’installation web](http://go.microsoft.com/fwlink/?LinkId=863262) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=863265))
+    - .NET Framework 4.7.2 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=863262) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
-    - .NET Framework 4.7.1 ([programme d’installation web](http://go.microsoft.com/fwlink/?LinkId=852095) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+    - .NET Framework 4.7.1 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=852095) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-    - .NET Framework 4.7 ([programme d’installation web](http://go.microsoft.com/fwlink/?LinkId=825299) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+    - .NET Framework 4.7 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=825299) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=825303))
 
-    - .NET Framework 4.6.2 ([programme d’installation web](http://go.microsoft.com/fwlink/?LinkId=780597) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=780601))
+    - .NET Framework 4.6.2 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=780597) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=780601))
 
-    - .NET Framework 4.6.1 ([programme d’installation web](http://go.microsoft.com/fwlink/?LinkId=671729) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=671744))
+    - .NET Framework 4.6.1 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=671729) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=671744))
 
-    - .NET Framework 4.6 ([programme d’installation web](http://go.microsoft.com/fwlink/?LinkId=528259) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=528233))
+    - .NET Framework 4.6 ([programme d’installation web](https://go.microsoft.com/fwlink/?LinkId=528259) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=528233))
 
-    - .NET Framework 4.5.2 ([programme d’installation web](http://go.microsoft.com/fwlink/p/?LinkId=397703) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=397706))
+    - .NET Framework 4.5.2 ([programme d’installation web](https://go.microsoft.com/fwlink/p/?LinkId=397703) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=397706))
 
-    - .NET Framework 4.5.1 ([programme d’installation web](http://go.microsoft.com/fwlink/p/?LinkId=310158) ou [programme d’installation hors connexion](http://go.microsoft.com/fwlink/p/?LinkId=310159))
+    - .NET Framework 4.5.1 ([programme d’installation web](https://go.microsoft.com/fwlink/p/?LinkId=310158) ou [programme d’installation hors connexion](https://go.microsoft.com/fwlink/p/?LinkId=310159))
 
-    - [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+    - [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
 
 1. Sélectionnez le langage pour la page de téléchargement. Cette option ne télécharge pas les ressources localisées du .NET Framework ; elle affecte uniquement le texte affiché sur la page de téléchargement.
 
@@ -150,11 +150,11 @@ Les deux programmes d’installation web et hors connexion sont conçus pour les
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et ses versions intermédiaires, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et ses versions intermédiaires, ainsi que .NET Framework 4.7 et ses versions intermédiaires, remplacent [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Lorsque vous installez ces versions sur un système sur lequel est installé [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] , les assemblys sont remplacés.
 
-- La désinstallation de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et de ses versions intermédiaires, de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et de ses versions intermédiaires, ou de .NET Framework 4.7 et de ses versions intermédiaires, supprime aussi les fichiers de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] existants. Si vous souhaitez revenir au [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vous devrez le réinstaller et effectuer toutes ses mises à jour. (Consultez [Installation du .NET Framework 4](http://go.microsoft.com/fwlink/p/?LinkId=230665).)
+- La désinstallation de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et de ses versions intermédiaires, de [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et de ses versions intermédiaires, ou de .NET Framework 4.7 et de ses versions intermédiaires, supprime aussi les fichiers de [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] existants. Si vous souhaitez revenir au [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], vous devrez le réinstaller et effectuer toutes ses mises à jour. (Consultez [Installation du .NET Framework 4](https://go.microsoft.com/fwlink/p/?LinkId=230665).)
 
 - Vous devez disposer d’informations d’identification d’administrateur pour installer le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ses versions intermédiaires, le .NET Framework 4.6 et ses versions intermédiaires, ainsi que le .NET Framework 4.7 et sa version intermédiaire.
 
-- Le redistribuable .NET Framework 4.5 a été mis à jour le 9 octobre 2012 pour résoudre un problème lié à un horodatage incorrect sur un certificat numérique, ce qui a provoqué l'expiration prématurée de la signature numérique des fichiers produits et signés par Microsoft. Si vous avez déjà installé le package redistribuable .NET Framework 4.5 daté du 16 août 2012, nous vous recommandons de mettre à jour votre copie avec le dernier redistribuable à partir du [Centre de téléchargement Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=245484). Pour plus d’informations sur ce problème, consultez l’[avis de sécurité Microsoft 2749655](http://technet.microsoft.com/security/advisory/2749655) et l’[article 2770445 de la Base de connaissances](http://support.microsoft.com/kb/2770445).
+- Le redistribuable .NET Framework 4.5 a été mis à jour le 9 octobre 2012 pour résoudre un problème lié à un horodatage incorrect sur un certificat numérique, ce qui a provoqué l'expiration prématurée de la signature numérique des fichiers produits et signés par Microsoft. Si vous avez déjà installé le package redistribuable .NET Framework 4.5 daté du 16 août 2012, nous vous recommandons de mettre à jour votre copie avec le dernier redistribuable à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=245484). Pour plus d’informations sur ce problème, consultez l’[avis de sécurité Microsoft 2749655](https://technet.microsoft.com/security/advisory/2749655) et l’[article 2770445 de la Base de connaissances](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Pour installer les modules linguistiques
 
@@ -165,23 +165,23 @@ Les modules linguistiques sont des exécutables contenant les ressources localis
 
 1.  Ouvrez la page de téléchargement du module linguistique de la version .NET Framework que vous avez installée :
 
-    - [Modules linguistiques .NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863258)
+    - [Modules linguistiques .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863258)
 
-    - [Modules linguistiques .NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkID=852090)
+    - [Modules linguistiques .NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkID=852090)
 
-    - [Modules linguistiques .NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkID=825306)
+    - [Modules linguistiques .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkID=825306)
 
-    - [Modules linguistiques .NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkID=780604)
+    - [Modules linguistiques .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
 
-    - [Modules linguistiques .NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkID=671747)
+    - [Modules linguistiques .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=671747)
 
-    - [Modules linguistiques .NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkID=528314)
+    - [Modules linguistiques .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkID=528314)
 
-    - [Modules linguistiques .NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397701)
+    - [Modules linguistiques .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397701)
 
-    - [Modules linguistiques .NET Framework 4.5.1](http://go.microsoft.com/fwlink/?LinkId=322101)
+    - [Modules linguistiques .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=322101)
 
-    - [Modules linguistiques .NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245451)
+    - [Modules linguistiques .NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 2.  Dans la liste des langues, choisissez la langue que vous souhaitez télécharger, et attendez quelques secondes que la page se recharge dans cette langue.
 
@@ -228,7 +228,7 @@ Le tableau suivant répertorie les langues prises en charge.
 
 - Pour plus d’informations sur la migration de votre application du .NET Framework 4 vers [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ou l’une de ses versions intermédiaires, consultez le [guide de migration](~/docs/framework/migration-guide/index.md).
 
-- Pour parcourir le code source du .NET Framework en ligne, consultez la [source de référence .NET Framework](http://referencesource.microsoft.com/). La source de référence est aussi disponible sur [GitHub](https://github.com/Microsoft/referencesource). Vous pouvez [télécharger la source de référence](http://referencesource.microsoft.com/download.html) à des fins de consultation hors connexion et parcourir les sources (y compris les correctifs et les mises à jour) pendant le débogage. Pour plus d’informations, consultez l’entrée de blog qui présente [le nouvel aspect de la source de référence .NET](http://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx).
+- Pour parcourir le code source du .NET Framework en ligne, consultez la [source de référence .NET Framework](https://referencesource.microsoft.com/). La source de référence est aussi disponible sur [GitHub](https://github.com/Microsoft/referencesource). Vous pouvez [télécharger la source de référence](https://referencesource.microsoft.com/download.html) à des fins de consultation hors connexion et parcourir les sources (y compris les correctifs et les mises à jour) pendant le débogage. Pour plus d’informations, consultez l’entrée de blog qui présente [le nouvel aspect de la source de référence .NET](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx).
 
 ## <a name="see-also"></a>Voir aussi
 

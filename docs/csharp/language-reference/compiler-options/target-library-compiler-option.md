@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 39f6ad5839f7ca12b023502a3fc1ccde52e70899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e15210d189c4a553da72b418f583e44666bac2fc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215347"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452659"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (Options du compilateur C#)
 L’option **-target:library** indique au compilateur de créer une bibliothèque de liens dynamiques (DLL) à la place d’un fichier exécutable (EXE).  
@@ -51,5 +51,6 @@ csc -target:library in.cs
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

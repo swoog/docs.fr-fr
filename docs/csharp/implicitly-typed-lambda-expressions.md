@@ -3,12 +3,12 @@ title: Expressions lambda implicitement typées
 description: Découvrez pourquoi vous ne pouvez pas utiliser une déclaration de variable implicitement typée pour déclarer une expression lambda.
 ms.date: 06/20/2016
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: f06c55f51c30c941d6d507ac8e2edd95c5152742
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a6b52ba49ea39c0cb37e72b0ad40e18986c9be0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211821"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43401498"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>Expressions lambda implicitement typées
 
@@ -17,6 +17,6 @@ car cela crée un problème de logique circulaire pour le compilateur. La décla
 
 Les deux côtés de l’assignation ne peuvent pas indiquer au compilateur d’examiner l’objet situé de l’autre côté de l’opérateur d’assignation et de vérifier si le type correspond.
 
-Pour plus d’informations sur ce comportement du langage C#, lisez [cet article](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (téléchargement PDF)
+Pour plus d’informations sur ce comportement du langage C#, lisez [cet article](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (téléchargement PDF)
 
 

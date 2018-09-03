@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 913957e6afad1d9d516a01f4bb0e377b94a40aea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924986"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43461720"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in, modificateur de paramètre (référence C#)
 
@@ -118,9 +118,10 @@ Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types d
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../index.md)  
- [Guide de programmation C#](../../programming-guide/index.md)  
- [Mots clés C#](index.md)  
- [Paramètres de méthodes](method-parameters.md)  
- [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)  
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../index.md)  
+- [Guide de programmation C#](../../programming-guide/index.md)  
+- [Mots clés C#](index.md)  
+- [Paramètres de méthodes](method-parameters.md)  
+- [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)  

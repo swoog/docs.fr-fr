@@ -3,11 +3,11 @@ title: Guide pratique pour rechercher une union de deux chemins d’emplacements
 ms.date: 07/20/2015
 ms.assetid: 069622d3-2b58-4919-8903-710a564c0788
 ms.openlocfilehash: cd98c1da2f2f8653c5db36f89a63dfdc7a7ab691
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333295"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481339"
 ---
 # <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-c"></a>Guide pratique pour rechercher une union de deux chemins d’emplacements (XPath-LINQ to XML) (C#)
 XPath vous permet de rechercher l’union des résultats de deux chemins d’emplacements XPath.  

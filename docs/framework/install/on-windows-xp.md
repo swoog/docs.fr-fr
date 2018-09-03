@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 8ac695353e36466f05bae129ff1c37ba3d8cbb69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6dafc118d9c5c68446a5c2ba4e14614396f301eb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392000"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484991"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Installer le .NET Framework sur Windows XP et Windows Server 2003
 
@@ -21,19 +21,19 @@ Un grand nombre d’applications sur Windows nécessitent l’installation du .N
 
 ![Impossible de démarrer cette application](./media/this-application-could-not-be-started.png)
 
-Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version n’est pas prise en charge sur Windows XP et Windows Server 2003. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
+Ces instructions ont pour but de vous aider à installer les versions du .NET Framework dont vous avez besoin. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) est la dernière version. Cette version n’est pas prise en charge sur Windows XP et Windows Server 2003. Elle est fournie avec la [mise à jour d’avril 2018 de Windows 10](https://www.microsoft.com/software-download/windows10).
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 
-Le [.NET Framework 4.0.3](http://go.microsoft.com/fwlink/?LinkID=213834) est la dernière version prise en charge du .NET Framework sur Windows XP et Windows Server 2003. Le .NET Framework 4.0.3 nécessite l’installation préalable du [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834). Ces deux versions du .NET Framework ne sont plus prises en charge par Microsoft.
+Le [.NET Framework 4.0.3](https://go.microsoft.com/fwlink/?LinkID=213834) est la dernière version prise en charge du .NET Framework sur Windows XP et Windows Server 2003. Le .NET Framework 4.0.3 nécessite l’installation préalable du [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834). Ces deux versions du .NET Framework ne sont plus prises en charge par Microsoft.
 
 ## <a name="net-framework-4"></a>.NET Framework 4
 
-Vous pouvez installer le [.NET Framework 4](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) sur Windows XP. Il n’est plus pris en charge par Microsoft.
+Vous pouvez installer le [.NET Framework 4](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) sur Windows XP. Il n’est plus pris en charge par Microsoft.
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
-Vous pouvez installer le [.NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) sur Windows XP.
+Vous pouvez installer le [.NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkID=213834&dotnetdocs) sur Windows XP.
 
 Le .NET Framework 3.5 peut être utilisé pour exécuter des applications créées pour le .NET Framework 1.0 à 3.5.
 

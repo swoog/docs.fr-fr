@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e54dcb585c06f2bf49c41f763e03e5624a033442
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388906"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43424075"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Réduction des redémarrages système lors des installations de .NET Framework 4.5
-Le programme d’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilise le [Gestionnaire de redémarrage](http://go.microsoft.com/fwlink/?LinkId=231425) pour empêcher le redémarrage du système autant que possible pendant l’installation. Si votre programme d’installation de l’application installe .NET Framework, il peut interagir avec le Gestionnaire de redémarrage pour tirer parti de cette fonctionnalité. Pour plus d’informations, consultez [Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
+Le programme d’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilise le [Gestionnaire de redémarrage](https://go.microsoft.com/fwlink/?LinkId=231425) pour empêcher le redémarrage du système autant que possible pendant l’installation. Si votre programme d’installation de l’application installe .NET Framework, il peut interagir avec le Gestionnaire de redémarrage pour tirer parti de cette fonctionnalité. Pour plus d’informations, consultez [Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
   
 ## <a name="reasons-for-a-restart"></a>Raisons pour un redémarrage  
  L'installation de [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] requiert un redémarrage du système si une application utilisant .NET Framework 4 est en cours d'utilisation pendant l'installation. En effet, [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] remplace les fichiers .NET Framework 4 et requiert que ces fichiers soient disponibles pendant l'installation. Dans de nombreux cas, le redémarrage peut être évité par la détection préemptive et la fermeture des applications .NET Framework 4 en cours d'utilisation. Toutefois, certaines applications de système ne doivent pas être fermées. Dans ces cas là, un redémarrage ne peut pas être évité.  

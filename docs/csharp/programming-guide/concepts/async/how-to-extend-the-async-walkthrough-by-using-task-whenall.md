@@ -2,12 +2,12 @@
 title: Guide pratique pour étendre la procédure pas à pas Async à l’aide de Task.WhenAll (C#)
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 4bdd3f32d2fa502de8ada352c522198a89a17f97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7df5c1f1ffbcc8c60fd6ed0596088f0842ef9ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339467"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482812"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>Guide pratique pour étendre la procédure pas à pas Async à l’aide de Task.WhenAll (C#)
 Vous pouvez améliorer les performances de la solution async fournie dans [Procédure pas à pas : accès au web avec Async et Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) à l’aide de la méthode <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Cette méthode attend de manière asynchrone plusieurs opérations, qui sont représentées sous la forme d’une collection de tâches.  
@@ -61,7 +61,7 @@ Vous pouvez améliorer les performances de la solution async fournie dans [Proc�
     //}  
     ```  
   
-3.  Créez une collection de tâches. Le code suivant définit une [requête](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
+3.  Créez une collection de tâches. Le code suivant définit une [requête](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
   
      Ajoutez le code suivant à la méthode `SumPageSizesAsync` après la déclaration de `urlList`.  
   
@@ -136,7 +136,7 @@ Vous pouvez améliorer les performances de la solution async fournie dans [Proc�
     //}  
     ```  
   
-3.  Définissez une [requête](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
+3.  Définissez une [requête](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d) qui, quand elle est exécutée par la méthode <xref:System.Linq.Enumerable.ToArray%2A>, crée une collection de tâches qui téléchargent le contenu de chaque site web. Les tâches sont démarrées quand la requête est évaluée.  
   
      Ajoutez le code suivant à la méthode `SumPageSizesAsync` après la déclaration de `client` et `urlList`.  
   

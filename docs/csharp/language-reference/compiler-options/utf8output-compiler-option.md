@@ -8,11 +8,12 @@ helpviewer_keywords:
 - /utf8output compiler option [C#]
 - -utf8output compiler option [C#]
 ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
-ms.openlocfilehash: 85cd06da673d0d24c936acf81765169e0778b437
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32c239f7563101cb1dddedbf868d298806353492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476259"
 ---
 # <a name="-utf8output-c-compiler-options"></a>-utf8output (Options du compilateur C#)
 L’option **-utf8output** affiche la sortie du compilateur en utilisant un encodage UTF-8.  
@@ -29,4 +30,5 @@ L’option **-utf8output** affiche la sortie du compilateur en utilisant un enco
  Cette option de compilateur n’est pas disponible dans Visual Studio et ne peut pas être changée par programmation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

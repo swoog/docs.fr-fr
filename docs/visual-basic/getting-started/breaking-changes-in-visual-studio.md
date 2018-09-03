@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - breaking changes [Visual Basic]
 ms.assetid: 708fb176-35eb-4cbc-a6e7-a04c6e3bdaff
-ms.openlocfilehash: e7f6791c56019508406448267237cf0d2d261205
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 008b887e96f077e64b012d224c7c031a9b65027e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753323"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396006"
 ---
 # <a name="visual-basic-breaking-changes-in-visual-studio"></a>Modifications avec rupture de Visual Basic dans Visual Studio
-Pour obtenir la dernière documentation sur Visual Studio 2017, consultez [Documentation Visual Studio 2017](http://docs.microsoft.com/visualstudio/).
+Pour obtenir la dernière documentation sur Visual Studio 2017, consultez [Documentation Visual Studio 2017](https://docs.microsoft.com/visualstudio/).
 
 Aucune modification au niveau de Visual Basic dans Visual Studio 2015 n’empêche une application créée en Visual Basic dans Visual Studio 2013 d’être compilée ni ne modifie le comportement à l’exécution de cette application.  
   

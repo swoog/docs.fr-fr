@@ -14,12 +14,12 @@ ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395958"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404325"
 ---
 # <a name="how-to-configure-network-tracing"></a>Guide pratique pour configurer le suivi réseau
 Le fichier de configuration de l'application ou de l'ordinateur contient les paramètres qui déterminent le format et le contenu des traces réseau. Avant d'effectuer cette procédure, assurez-vous que le traçage est activé. Pour plus d’informations sur l’activation du suivi, consultez [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -103,4 +103,4 @@ Le fichier de configuration de l'application ou de l'ordinateur contient les par
  [Interprétation du suivi réseau](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Traçage réseau dans .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Introduction à l’instrumentation et au traçage](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Introduction à l’instrumentation et au traçage](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

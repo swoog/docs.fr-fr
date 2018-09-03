@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fabf1a133ca3c3b3ba39a4898ce0aceb378f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571980"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390566"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Constructions diverses dans les expressions régulières
 Les expressions régulières dans .NET incluent trois constructions de langage diverses. L’une d’elles vous permet d’activer ou de désactiver des options de mise en correspondance particulières au milieu d’un modèle d’expression régulière. Grâce aux deux autres, vous pouvez inclure des commentaires dans une expression régulière.  
@@ -63,7 +63,7 @@ Les expressions régulières dans .NET incluent trois constructions de langage d
 ## <a name="inline-comment"></a>Commentaire inline  
  La construction `(?#` *commentaire*`)` vous permet d’inclure un commentaire inline dans une expression régulière. Le moteur d’expression régulière n’utilise aucune partie du commentaire dans la mise en correspondance du modèle, bien que le commentaire soit inclus dans la chaîne retournée par la méthode <xref:System.Text.RegularExpressions.Regex.ToString%2A?displayProperty=nameWithType>. Le commentaire se termine à la première parenthèse fermante.  
   
- L’exemple suivant répète le premier modèle d’expression régulière de l’exemple de la section précédente. Il ajoute deux commentaires inline à l’expression régulière pour indiquer si la comparaison respecte la casse. Le modèle d’expression régulière, `\b((?# case-sensitive comparison)D\w+)\s((?#case-insensitive comparison)d\w+)\b`, est défini comme suit.  
+ L’exemple suivant répète le premier modèle d’expression régulière de l’exemple de la section précédente. Il ajoute deux commentaires inline à l’expression régulière pour indiquer si la comparaison respecte la casse. Le modèle d’expression régulière, `\b((?# case-sensitive comparison)D\w+)\s(?ixn)((?#case-insensitive comparison)d\w+)\b`, est défini comme suit.  
   
 |Motif|Description|  
 |-------------|-----------------|  
@@ -92,7 +92,6 @@ Les expressions régulières dans .NET incluent trois constructions de langage d
 |`\d+`|Mettre en correspondance un ou plusieurs chiffres décimaux.|  
 |`(,-*\d+)*`|Mettre en correspondance zéro ou une occurrence d’une virgule, suivie d’un signe moins facultatif, suivi par un ou plusieurs chiffres décimaux.|  
 |`(\:\w{1,4}?)*`|Mettre en correspondance zéro ou une occurrence d’un signe deux-points, suivi par un à quatre espaces blancs, mais le moins possible.|  
-|`(?#case insensitive comparison)`|Un commentaire inline. Il n’a aucun effet sur le comportement de la mise en correspondance du modèle.|  
 |`\}`|Mettre en correspondance une accolade fermante.|  
 |`(?x)`|Activer l’option permettant d’ignorer l’espace blanc dans le modèle, afin que le commentaire de fin de ligne soit reconnu.|  
 |`# Looks for a composite format item.`|Un commentaire de fin de ligne.|  

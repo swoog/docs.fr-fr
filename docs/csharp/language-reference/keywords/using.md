@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: 46b3f6b95e3b80ab324267704ead1f0187a56385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d96301e083b5c5340bea8b04943ca90c90e71ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266566"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43471898"
 ---
 # <a name="using-c-reference"></a>using (référence C#)
 Le mot clé `using` a deux utilisations principales :  
@@ -23,10 +23,11 @@ Le mot clé `using` a deux utilisations principales :
   
 De plus, la directive [using static](using-static.md) vous permet de définir un type aux membres statiques duquel vous pouvez accéder sans spécifier un nom de type.
 
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
- [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)  
- [extern](../../../csharp/language-reference/keywords/extern.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)  
+- [extern](../../../csharp/language-reference/keywords/extern.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 1da11548e95a2eedb8a16cf27807ff59daeb2bc5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: d0a51afe61e75b750ed8bf336ca4636cb58dfbba
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566122"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43396897"
 ---
 # <a name="abstract-c-reference"></a>abstract (référence C#)
 Le modificateur `abstract` indique que l’élément en cours de modification a une implémentation manquante ou incomplète. Le modificateur abstract peut être utilisé avec des classes, des méthodes, des propriétés, des indexeurs et des événements. Dans une déclaration de classe, utilisez le modificateur `abstract` pour indiquer qu’une classe doit uniquement servir de classe de base pour d’autres classes. Les membres définis comme abstraits, ou inclus dans une classe abstraite, doivent être implémentés par des classes dérivées de la classe abstraite.  
@@ -81,9 +81,10 @@ Vous obtenez une erreur indiquant que le compilateur ne peut pas créer une inst
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)

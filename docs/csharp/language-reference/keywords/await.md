@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: e32c7007ca98ce2153386665b60c45ff9e90cc3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218918"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468026"
 ---
 # <a name="await-c-reference"></a>await (référence C#)
 L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone pour insérer un point d’interruption dans l’exécution de la méthode jusqu’à ce que la tâche attendue se termine. La tâche représente un travail en cours.  
@@ -68,6 +68,6 @@ L’exemple suivant retourne le nombre total de caractères dans les pages dont 
 Étant donné que l’utilisation de `async` et de `await` dans un point d’entrée d’application n’est pas prise en charge, nous ne pouvons pas appliquer l’attribut `async` à la méthode `Main` ni attendre l’appel à la méthode `GetPageLengthsAsync`. Nous pouvons garantir que la méthode `Main` attend la fin de l’opération asynchrone en récupérant la valeur de la propriété <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Pour les tâches qui ne retournent pas de valeur, vous pouvez appeler la méthode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. 
 
 ## <a name="see-also"></a>Voir aussi  
-[Programmation asynchrone avec async et await](../../../csharp/programming-guide/concepts/async/index.md)   
-[Procédure pas à pas : accès au web avec async et await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[async](../../../csharp/language-reference/keywords/async.md)
+- [Programmation asynchrone avec Async et Await](../../../csharp/programming-guide/concepts/async/index.md)   
+- [Procédure pas à pas : accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [async](../../../csharp/language-reference/keywords/async.md)

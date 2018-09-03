@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4deb355a7b523437ae31a1d2b9c79e3b8d4f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391223"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400501"
 ---
 # <a name="how-to-create-com-wrappers"></a>Comment : créer des wrappers COM
 Vous pouvez créer des wrappers COM (Component Object Model) à l’aide des fonctionnalités [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] ou des outils .NET Framework Tlbimp.exe et Regasm.exe. Ces deux méthodes génèrent deux types de wrappers COM :  
@@ -40,7 +40,7 @@ Vous pouvez créer des wrappers COM (Component Object Model) à l’aide des fon
  Vous pouvez maintenant écrire le code pour accéder à l’objet COM. Vous pouvez commencer par déclarer l’objet, par exemple avec une instruction `Imports` pour [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] ou une instruction `Using` pour [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
->  Si vous souhaitez programmer des composants Microsoft Office, installez d’abord les [assemblys PIA (Primary Interop Assembly) de Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) à partir du Centre de téléchargement Microsoft. À l’étape 4, sélectionnez la version la plus récente de la bibliothèque d’objets disponible pour le produit Office que vous voulez, comme la **bibliothèque d’objets Microsoft Word 11.0**.  
+>  Si vous souhaitez programmer des composants Microsoft Office, installez d’abord les [assemblys PIA (Primary Interop Assembly) de Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) à partir du Centre de téléchargement Microsoft. À l’étape 4, sélectionnez la version la plus récente de la bibliothèque d’objets disponible pour le produit Office que vous voulez, comme la **bibliothèque d’objets Microsoft Word 11.0**.  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Pour créer un wrapper RCW à l’aide des outils .NET Framework  
   
