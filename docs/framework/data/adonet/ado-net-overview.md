@@ -2,25 +2,25 @@
 title: Vue d'ensemble d'ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 50881c05c8b6f2602d19817373a16e4661d3d133
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757942"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489810"
 ---
 # <a name="adonet-overview"></a>Vue d'ensemble d'ADO.NET
 ADO.NET propose un accès cohérent à des sources de données, telles que SQL Server et XML, ainsi qu'à des sources de données exposées via OLE DB et ODBC. Des applications grand public de partage de données peuvent utiliser ADO.NET pour se connecter à des sources de données et extraire, manipuler et mettre à jour les données qu'elles contiennent.  
   
  ADO.NET sépare l'accès aux données de leur manipulation en composants distincts qui peuvent être utilisés individuellement ou en tandem. ADO.NET comprend des fournisseurs de données .NET Framework pour la connexion à une base de données, l'exécution de commandes et l'extraction de résultats. Ces résultats sont traités directement, placés dans un objet <xref:System.Data.DataSet> ADO.NET pour pouvoir être exposés à l'utilisateur de manière adéquate, combinés aux données de différentes sources ou passées entre couches. L'objet `DataSet`peut également être utilisé indépendamment d'un fournisseur de données .NET Framework pour gérer des données locales pour l'application ou provenant de XML.  
   
- Les classes ADO.NET se trouvent dans System.Data.dll et sont intégrées aux classes XML de System.Xml.dll. Pour l’exemple de code qui se connecte à une base de données, extrait les données, puis les affiche dans une fenêtre de console, consultez [exemples de Code ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
+ Les classes ADO.NET se trouvent dans System.Data.dll et sont intégrées aux classes XML de System.Xml.dll. Pour exemple de code qui se connecte à une base de données récupère des données à partir de celui-ci, puis les affiche dans une fenêtre de console, voir [exemples de Code ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md).  
   
  ADO.NET offre aux développeurs écrivant du code managé une fonctionnalité similaire à celle offerte aux développeurs de COM (Component Object Model) natif par ActiveX Data Objects (ADO). Nous vous recommandons d'utiliser ADO.NET, pas ADO, pour accéder aux données dans vos applications .NET.  
   
  ADO.NET fournit la méthode la plus directe d'accès aux données dans le .NET Framework. Pour une abstraction de haut niveau qui permet aux applications de travailler sur un modèle conceptuel au lieu du modèle de stockage sous-jacent, consultez le [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
- **Déclaration de confidentialité**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll et System.Data.DataSetExtensions.dll assemblys ne sont pas faire la distinction entre les données privées d’un utilisateur et les données non privées.  Ces assemblys ne collectent pas les données privées d'un utilisateur, ne les stockent pas et ne les transportent pas. Toutefois, les applications tierces peuvent collecter, stocker ou transporter les données privées d'un utilisateur à l'aide de ces assemblys.  
+ **Déclaration de confidentialité**: The System.Data.dll, System.Data.Design.dll, System.Data.OracleClient.dll, System.Data.SqlXml.dll, System.Data.Linq.dll, System.Data.SqlServerCe.dll et System.Data.DataSetExtensions.dll assemblys ne le faites pas faire la distinction entre les données privées et les données non privées d’un utilisateur.  Ces assemblys ne collectent pas les données privées d'un utilisateur, ne les stockent pas et ne les transportent pas. Toutefois, les applications tierces peuvent collecter, stocker ou transporter les données privées d'un utilisateur à l'aide de ces assemblys.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Architecture ADO.NET](../../../../docs/framework/data/adonet/ado-net-architecture.md)  
@@ -60,4 +60,4 @@ ADO.NET propose un accès cohérent à des sources de données, telles que SQL S
 ## <a name="see-also"></a>Voir aussi  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [Accès aux données dans Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
