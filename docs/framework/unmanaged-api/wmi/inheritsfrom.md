@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452911"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542652"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (fonction)
-Détermine si l’instance ou une classe en cours dérive d’une classe parent spécifié.
+Détermine si l’instance ou la classe active dérive d’une classe parente spécifié.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     

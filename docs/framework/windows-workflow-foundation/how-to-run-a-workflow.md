@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 704527bde2ac6bf555d40db836baf938c0c5cd96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47227bdd23efc9648da25bc879c7946dadee4594
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519517"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527941"
 ---
 # <a name="how-to-run-a-workflow"></a>Procédure : exécuter un workflow
 Cette rubrique est la suite du didacticiel de mise en route de Windows Workflow Foundation et explique comment créer un hôte de workflow et exécuter le workflow défini dans la rubrique précédente [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) .  
@@ -19,7 +19,7 @@ Cette rubrique est la suite du didacticiel de mise en route de Windows Workflow 
 >  Chaque rubrique du didacticiel de mise en route dépend des rubriques précédentes. Avant de parcourir cette rubrique, vous devez avoir parcouru [How to: Create an Activity](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) et [How to: Create a Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).  
   
 > [!NOTE]
->  Pour télécharger une version complète du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](http://go.microsoft.com/fwlink/?LinkID=248976)(Windows Workflow Foundation (WF45) - Didacticiel de mise en route).  
+>  Pour télécharger une version terminée du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow-host-project"></a>Pour créer le projet d'hôte du workflow  
   
@@ -120,7 +120,7 @@ Cette rubrique est la suite du didacticiel de mise en route de Windows Workflow 
      [!code-csharp[CFX_WF_GettingStarted#9](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#9)]
      [!code-vb[CFX_WF_GettingStarted#9](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#9)]  
   
-     Chaque fois que le workflow devient inactif dans l’attente de l’estimation suivante, ce gestionnaire est appelé et le `idleAction` <xref:System.Threading.AutoResetEvent> est défini. Le code de l'étape suivante utilise `idleEvent` et `syncEvent` pour déterminer si le workflow attend l'estimation suivante ou s'il est terminé.  
+     Chaque fois que le workflow devient inactif en attendant l’estimation suivante, ce gestionnaire est appelé et le `idleAction` <xref:System.Threading.AutoResetEvent> est défini. Le code de l'étape suivante utilise `idleEvent` et `syncEvent` pour déterminer si le workflow attend l'estimation suivante ou s'il est terminé.  
   
     > [!NOTE]
     >  Dans cet exemple, l'application hôte utilise des événements à réinitialisation automatique dans les gestionnaires <xref:System.Activities.WorkflowApplication.Completed%2A> et <xref:System.Activities.WorkflowApplication.Idle%2A> pour synchroniser l'application hôte avec la progression du workflow. Il n'est pas nécessaire de bloquer et d'attendre que le workflow devienne inactif avant de reprendre un signet mais, dans cet exemple, les événements de synchronisation sont nécessaires afin que l'hôte sache si le workflow est terminé ou s'il attend une ou plusieurs autres entrées d'utilisateur à l'aide de <xref:System.Activities.Bookmark>. Pour plus d’informations, consultez [signets](../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

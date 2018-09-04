@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: d7b57a9572a285dfdc13afb0a520de67e231a1c0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463908"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540514"
 ---
 # <a name="updating-data-in-a-data-source"></a>Mise à jour des données dans une source de données
 Les instructions SQL qui modifient les données (comme INSERT, UPDATE ou DELETE) ne retournent pas de ligne. De même, de nombreuses procédures stockées effectuent une action mais ne retournent pas de ligne. Pour exécuter des commandes qui ne retournent pas de lignes, créez un **commande** objet avec la commande SQL appropriée et un **connexion**, y compris ceux requis **paramètres**. Exécutez la commande avec le **ExecuteNonQuery** méthode de la **commande** objet.  

@@ -3,11 +3,11 @@ title: AJAX Service Using Complex Types, exemple
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
 ms.openlocfilehash: 4574e5d33ebed7184e229c71e03496db34a95575
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415651"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528283"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>AJAX Service Using Complex Types, exemple
 Cet exemple montre comment utiliser Windows Communication Foundation (WCF) pour créer un service ASP.NET Asynchronous JavaScript and XML (AJAX) qui crée des instances de types complexes et les envoie entre le service et le client au format JavaScript Objet Notation (JSON). Vous pouvez accéder à un service AJAX en utilisant le code JavaScript à partir d'un client de navigateur Web. Cet exemple s’appuie sur le [base AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemple.  

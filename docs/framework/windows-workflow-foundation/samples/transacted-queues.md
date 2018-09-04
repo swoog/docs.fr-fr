@@ -3,11 +3,11 @@ title: Files d'attente avec transaction
 ms.date: 03/30/2017
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
 ms.openlocfilehash: db6a9686334eefb02b9360827a23ca8363127eb5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408813"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535502"
 ---
 # <a name="transacted-queues"></a>Files d'attente avec transaction
 Cet exemple montre comment intégrer des files d’attente et les transactions dans Windows Workflow Foundation (WF) pour créer des services fiables et évolutifs. Un <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` est utilisé dans le workflow client pour envoyer un message à une file d’attente sous une transaction utilisant le <xref:System.ServiceModel.NetMsmqBinding>. Un <xref:System.ServiceModel.Activities.TransactedReceiveScope> est utilisé sur le serveur pour recevoir des messages de la file d'attente et mettre à jour l'état du workflow sous la même transaction.  

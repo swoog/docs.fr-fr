@@ -3,11 +3,11 @@ title: Imbrication de TransactionScope dans un service
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
 ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482902"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533823"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Imbrication de TransactionScope dans un service
 Cet exemple se compose de deux scénarios qui s'exécutent, en montrant comment gérer des instances d'activité <xref:System.Activities.Statements.TransactionScope> dans un service. En premier lieu, la transaction est initiée à l'aide de l'activité <xref:System.Activities.Statements.TransactionScope> pour créer une transaction sur le client et <xref:System.ServiceModel.Activities.TransactedReceiveScope> pour recevoir et mesurer l'étendue de la durée de vie de la transaction sur le serveur. Le premier scénario dans le service exécute une activité <xref:System.Activities.Statements.TransactionScope> secondaire pour illustrer l'imbrication des activités <xref:System.Activities.Statements.TransactionScope> dans le service. Le deuxième scénario montre comment les délais d'expiration sont respectés dans les activités <xref:System.Activities.Statements.TransactionScope> imbriquées.  

@@ -7,23 +7,24 @@ dev_langs:
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 715c813015fdb4b52444efca0bdcfc99acc92c21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10bc84cbd1d8bf2ff3a858f09909673a8848f2ef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528962"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>Modes d'authentification SecurityBindingElement
-Windows Communication Foundation (WCF) fournit plusieurs modes par lesquels les clients et services s’authentifient mutuellement. Vous pouvez créer des éléments de liaison de sécurité pour ces modes d'authentification à l'aide des méthodes statiques sur la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> ou via la configuration. Cette rubrique décrit brièvement les 18 modes d'authentification.  
+Windows Communication Foundation (WCF) fournit plusieurs modes par lequel les clients et les services de s’authentifier entre eux. Vous pouvez créer des éléments de liaison de sécurité pour ces modes d'authentification à l'aide des méthodes statiques sur la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> ou via la configuration. Cette rubrique décrit brièvement les 18 modes d'authentification.  
   
- Pour obtenir un exemple d’utilisation de l’élément pour un des modes d’authentification, consultez [Comment : créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ Pour obtenir un exemple d’utilisation de l’élément pour l’un des modes d’authentification, consultez [Comment : créer un SecurityBindingElement pour un Mode d’authentification spécifié](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="basic-configuration-programming"></a>Programmation de configuration de base  
  La procédure suivante décrit comment définir le mode d'authentification dans un fichier de configuration.  
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>Pour définir le mode d'authentification dans la configuration  
   
-1.  Pour le [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) élément, ajouter un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+1.  Pour le [ \<liaisons >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) élément, ajoutez un [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 2.  Comme un élément enfant, ajoutez un [ \<liaison >](../../../../docs/framework/misc/binding.md) élément à la `<customBinding>` élément.  
   
@@ -55,7 +56,7 @@ Windows Communication Foundation (WCF) fournit plusieurs modes par lesquels les 
 ## <a name="mode-descriptions"></a>Descriptions des modes  
   
 ### <a name="anonymousforcertificate"></a>AnonymousForCertificate  
- Avec ce mode d'authentification, le client est anonyme et le service est authentifié à l'aide d'un certificat X.509. L'élément de liaison de sécurité est un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>. Vous pouvez également définir le `authenticationMode` attribut de la <`security`> élément `AnonymousForCertificate`.  
+ Avec ce mode d'authentification, le client est anonyme et le service est authentifié à l'aide d'un certificat X.509. L'élément de liaison de sécurité est un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A>. Vous pouvez également définir le `authenticationMode` attribut de la <`security`> élément à `AnonymousForCertificate`.  
   
 ### <a name="anonymousforsslnegotiated"></a>AnonymousForSslNegotiated  
  Avec ce mode d'authentification, le client est anonyme et le service est authentifié à l'aide d'un certificat X.509 négocié au moment de l'exécution. L'élément de liaison de sécurité est un <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> lorsqu'une valeur de `false` est passée pour le premier paramètre. Vous pouvez également affecter `authenticationMode` à l'attribut `AnonymousForSslNegotiated`.  
@@ -79,7 +80,7 @@ Windows Communication Foundation (WCF) fournit plusieurs modes par lesquels les 
  Avec ce mode d'authentification, le client s'authentifie auprès du service à l'aide d'un ticket Kerberos. Ce même ticket fournit également l'authentification de serveur. L'élément de liaison de sécurité est un `SymmetricSecurityBindingElement` retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A>. Vous pouvez également affecter `authenticationMode` à l'attribut `Kerberos`.  
   
 > [!NOTE]
->  Pour utiliser ce mode d'authentification, le compte de service doit être associé à un SPN (Service Principal Name, nom de principal du service). Pour ce faire, exécutez le service sous les comptes SERVICE RÉSEAU ou SYSTÈME LOCAL. Utilisez également l'outil SetSpn.exe pour créer un SPN pour le compte de service. Dans les deux cas, le client doit utiliser le bon SPN dans le [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) élément, ou en utilisant le <xref:System.ServiceModel.EndpointAddress> constructeur. Pour plus d’informations, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Pour utiliser ce mode d'authentification, le compte de service doit être associé à un SPN (Service Principal Name, nom de principal du service). Pour ce faire, exécutez le service sous les comptes SERVICE RÉSEAU ou SYSTÈME LOCAL. Utilisez également l'outil SetSpn.exe pour créer un SPN pour le compte de service. Dans les deux cas, le client doit utiliser le SPN correct dans le [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) élément, ou en utilisant le <xref:System.ServiceModel.EndpointAddress> constructeur. Pour plus d’informations, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 > [!NOTE]
 >  Lorsque le mode d'authentification `Kerberos` est utilisé, les niveaux d'emprunt d'identité <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous> et <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> ne sont pas pris en charge.  
@@ -88,7 +89,7 @@ Windows Communication Foundation (WCF) fournit plusieurs modes par lesquels les 
  Avec ce mode d'authentification, le client s'authentifie auprès du service à l'aide d'un ticket Kerberos. Le jeton Kerberos apparaît au niveau de la couche SOAP sous forme d'un jeton de prise en charge d'endossement ; autrement dit, un jeton qui signe la signature de message. Le service est authentifié à l'aide d'un certificat X.509 au niveau de la couche de transport. L'élément de liaison de sécurité est un `TransportSecurityBindingElement` retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosOverTransportBindingElement%2A>. Vous pouvez également affecter `authenticationMode` à l'attribut `KerberosOverTransport`.  
   
 > [!NOTE]
->  Pour utiliser ce mode d'authentification, le compte de service doit être associé à un SPN. Pour ce faire, exécutez le service sous les comptes SERVICE RÉSEAU ou SYSTÈME LOCAL. Utilisez également l'outil SetSpn.exe pour créer un SPN pour le compte de service. Dans les deux cas, le client doit utiliser le bon SPN dans le [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) élément, ou en utilisant le <xref:System.ServiceModel.EndpointAddress> constructeur. Pour plus d’informations, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+>  Pour utiliser ce mode d'authentification, le compte de service doit être associé à un SPN. Pour ce faire, exécutez le service sous les comptes SERVICE RÉSEAU ou SYSTÈME LOCAL. Utilisez également l'outil SetSpn.exe pour créer un SPN pour le compte de service. Dans les deux cas, le client doit utiliser le SPN correct dans le [ \<servicePrincipalName >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceprincipalname.md) élément, ou en utilisant le <xref:System.ServiceModel.EndpointAddress> constructeur. Pour plus d’informations, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ### <a name="mutualcertificate"></a>MutualCertificate  
  Avec ce mode d'authentification, le client s'authentifie à l'aide d'un certificat X.509 qui apparaît au niveau de la couche SOAP sous forme d'un jeton de prise en charge d'endossement ; autrement dit, un jeton qui signe la signature de message. Le service est également authentifié à l'aide d'un certificat X.509. L'élément de liaison de sécurité est un `SymmetricSecurityBindingElement` retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>. Vous pouvez également affecter `authenticationMode` à l'attribut `MutualCertificate`.  
@@ -96,7 +97,7 @@ Windows Communication Foundation (WCF) fournit plusieurs modes par lesquels les 
 ### <a name="mutualcertificateduplex"></a>MutualCertificateDuplex  
  Avec ce mode d'authentification, le client s'authentifie à l'aide d'un certificat X.509 qui apparaît au niveau de la couche SOAP sous forme d'un jeton de prise en charge d'endossement ; autrement dit, un jeton qui signe la signature de message. Le service est également authentifié à l'aide d'un certificat X.509. La liaison est un `AsymmetricSecurityBindingElement` retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateDuplexBindingElement%2A>. Vous pouvez également affecter `authenticationMode` à l'attribut `MutualCertificateDuplex`.  
   
-### <a name="mutalsslnegotiation"></a>MutalSslNegotiation  
+### <a name="mutualsslnegotiated"></a>MutualSslNegotiated  
  Avec ce mode d'authentification, le client et le service s'authentifient à l'aide de certificats X.509. L'élément de liaison de sécurité est un `SymmetricSecurityBindingElement` retourné par la méthode <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSslNegotiationBindingElement%2A> lorsqu'une valeur de `true` est passée pour le premier paramètre. Vous pouvez également affecter `authenticationMode` à l'attribut `MutualSslNegotiated`.  
   
 ### <a name="secureconversation"></a>SecureConversation  

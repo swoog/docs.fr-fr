@@ -9,11 +9,11 @@ helpviewer_keywords:
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
 ms.openlocfilehash: a3c0749560d8cea1e46d96298347ce54f0bf9185
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393728"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537170"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While, clause (Visual Basic)
 Ignore les éléments d'une collection tant qu'une condition spécifiée a la valeur `true`, puis retourne les éléments restants.  

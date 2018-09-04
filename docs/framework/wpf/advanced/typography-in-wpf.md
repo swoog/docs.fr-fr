@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0ec1c227196e9118f9174feb103a3ecbf5bcb7c4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391780"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528082"
 ---
 # <a name="typography-in-wpf"></a>Typographie dans WPF
 Cette rubrique présente les principales fonctionnalités typographiques de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Ces fonctionnalités incluent l’amélioration de la qualité et des performances de rendu de texte, une prise en charge de la typographie [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)], un texte international amélioré, une prise en charge de police améliorée et de nouvelles interfaces de programmation d’applications (API, Application Programming Interface) texte.  

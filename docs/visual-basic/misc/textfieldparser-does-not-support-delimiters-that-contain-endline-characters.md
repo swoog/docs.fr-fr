@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_EndCharsInDelimiter
 ms.assetid: 0701f3b6-635b-468e-b908-867df00dd5db
 ms.openlocfilehash: f17c8fd16868950a30656657e60fabda94d7b57d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43477969"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541009"
 ---
 # <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a>TextFieldParser ne prend pas en charge les délimiteurs qui contiennent des caractères de fin de ligne
 Un délimiteur qui contient un caractère de fin de ligne ont été fourni, mais le `TextFieldParser` ne prend pas en charge les délimiteurs qui contiennent des caractères.  

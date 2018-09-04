@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
 ms.openlocfilehash: f00e2171c1adf4ff99a669085131ebc8d38f7006
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393817"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538803"
 ---
 # <a name="navigating-datatables"></a>Navigation sur les DataTable
 L'objet <xref:System.Data.DataTableReader> obtient le contenu d'un ou plusieurs objets <xref:System.Data.DataTable> sous la forme d'un ou plusieurs jeux de résultats en lecture seule et en avant uniquement.  

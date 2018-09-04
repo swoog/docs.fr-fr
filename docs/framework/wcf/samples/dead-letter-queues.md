@@ -3,11 +3,11 @@ title: Dead Letter Queues
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 4f30e9486c8798e3610e13e6abe1c2612c70b69f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417131"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536051"
 ---
 # <a name="dead-letter-queues"></a>Dead Letter Queues
 Cet exemple montre comment gérer et traiter des messages n'ayant pas pu être remis. Il est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise la liaison `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  

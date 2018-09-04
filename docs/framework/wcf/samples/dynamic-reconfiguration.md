@@ -3,11 +3,11 @@ title: Reconfiguration dynamique
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401338"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541250"
 ---
 # <a name="dynamic-reconfiguration"></a>Reconfiguration dynamique
 Cet exemple montre le service de routage de Windows Communication Foundation (WCF). Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le service de routage. Il montre comment le service de routage peut être reconfiguré dynamiquement pendant l'exécution.  

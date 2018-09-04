@@ -3,11 +3,11 @@ title: WMI Provider
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
 ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532859"
 ---
 # <a name="wmi-provider"></a>WMI Provider
 Cet exemple montre comment collecter des données à partir des services Windows Communication Foundation (WCF) lors de l’exécution en utilisant le fournisseur Windows Management Instrumentation (WMI) qui est intégré à WCF. Cet exemple montre également comment ajouter un objet WMI défini par l'utilisateur à un service. L’exemple active le fournisseur WMI pour les [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et montre comment collecter des données depuis le `ICalculator` service lors de l’exécution.  

@@ -3,11 +3,11 @@ title: Configuration client
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
 ms.openlocfilehash: eef3d4743c26a06bd114618522aff9f68e46628c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423753"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527714"
 ---
 # <a name="client-configuration"></a>Configuration client
 Vous pouvez utiliser la configuration du client Windows Communication Foundation (WCF) pour spécifier l’adresse, liaison, comportement et contrat, les propriétés « ABC » du point de terminaison client, les clients utilisent pour se connecter aux points de terminaison de service. Le [ \<client >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) élément a un [ \<point de terminaison >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) élément dont les attributs sont utilisés pour configurer l’ABC de point de terminaison. Ces attributs sont traités dans la section « Configuration des points de terminaison » de cette rubrique.  

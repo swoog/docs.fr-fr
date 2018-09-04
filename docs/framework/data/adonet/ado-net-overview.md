@@ -3,11 +3,11 @@ title: Vue d'ensemble d'ADO.NET
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 697911201171a540d6749d03c51f14efba945765
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489810"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529921"
 ---
 # <a name="adonet-overview"></a>Vue d'ensemble d'ADO.NET
 ADO.NET propose un accès cohérent à des sources de données, telles que SQL Server et XML, ainsi qu'à des sources de données exposées via OLE DB et ODBC. Des applications grand public de partage de données peuvent utiliser ADO.NET pour se connecter à des sources de données et extraire, manipuler et mettre à jour les données qu'elles contiennent.  

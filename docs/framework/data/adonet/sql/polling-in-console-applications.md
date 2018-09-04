@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416706"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537217"
 ---
 # <a name="polling-in-console-applications"></a>Interrogation dans les applications console
 Les opérations asynchrones dans ADO.NET vous permettent de lancer des opérations de base de données de longue durée sur un thread tout en exécutant d’autres tâches dans un autre thread. Toutefois, dans la plupart des scénarios, vous risquez d'atteindre un point où votre application ne doit pas continuer jusqu'à ce que l'opération de base de données soit terminée. Dans de tels cas, il est utile d'interroger l'opération asynchrone afin de déterminer si elle a été exécutée ou non.  

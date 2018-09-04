@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480891"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541841"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Dans la mesure où cet appel n'est pas attendu, la méthode actuelle continue de s'exécuter avant la fin de l'appel.
 Cet appel n’étant pas attendu, l’exécution de la méthode actuelle continue avant la fin de l’appel. Envisagez d’appliquer l’opérateur « Await » au résultat de l’appel.  

@@ -3,11 +3,11 @@ title: Spécifications CSDL, SSDL et MSL
 ms.date: 03/30/2017
 ms.assetid: bbdc9237-ff4c-4441-9565-31ebc29743e9
 ms.openlocfilehash: 793efb79cba9401b576c9ac7679600f3a4e655c9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398299"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539779"
 ---
 # <a name="csdl-ssdl-and-msl-specifications"></a>Spécifications CSDL, SSDL et MSL
 Le [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site est maintenant l’emplacement principal pour le contenu Entity Framework.  

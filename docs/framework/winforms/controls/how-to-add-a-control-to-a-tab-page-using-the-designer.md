@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: 07326156fabbb8b991538a7e3bbaff7d807a1e94
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486475"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534067"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Comment : ajouter un contrôle à une page d'onglet à l'aide du concepteur
 L’utilisation des formulaires Windows <xref:System.Windows.Forms.TabControl> consiste à afficher d’autres contrôles dans une structure organisée. Vous pouvez utiliser ces instructions pour afficher une image sur la partie principale d’une page d’onglets. Pour plus d’informations sur l’ajout d’une icône dans la partie de l’étiquette d’une page d’onglet, consultez [Comment : modifier l’apparence du contrôle TabControl Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  

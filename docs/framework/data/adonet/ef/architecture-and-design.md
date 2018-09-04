@@ -3,11 +3,11 @@ title: Architecture et conception
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419602"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530468"
 ---
 # <a name="architecture-and-design"></a>Architecture et conception
 Le module de génération SQL dans le [exemple de fournisseur](https://go.microsoft.com/fwlink/?LinkId=180616) est implémenté en tant que visiteur sur l’arborescence d’expression qui représente l’arborescence de commandes. La génération est effectuée par un unique passage sur l’arborescence de l’expression.  

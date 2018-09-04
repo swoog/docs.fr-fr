@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF content [Windows Forms], hosting in Windows Forms
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-ms.openlocfilehash: d17273f52d0cef118b79fef03af72522f6677073
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529819"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535640"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Procédure pas à pas : modification des propriétés d'un élément WPF hébergé au moment du design
 Cette procédure pas à pas montre comment modifier les valeurs de propriétés d'un contrôle Windows Presentation Foundation (WPF) hébergé sur un Windows Form.  
@@ -28,7 +28,7 @@ Cette procédure pas à pas montre comment modifier les valeurs de propriétés 
 -   utiliser le Concepteur WPF pour Visual Studio pour modifier les valeurs de propriétés.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
@@ -43,14 +43,14 @@ Cette procédure pas à pas montre comment modifier les valeurs de propriétés 
   
 #### <a name="to-create-the-project"></a>Pour créer le projet  
   
--   Créer un nouveau projet d’Application Windows Forms dans Visual Basic ou Visual c# nommé `WpfHost`.  
+-   Créer un nouveau projet d’Application de Windows Forms dans Visual Basic ou Visual c# nommé `WpfHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Création du contrôle WPF  
  Après avoir ajouté un contrôle WPF au projet, vous pouvez le disposer sur le formulaire.  
   
 #### <a name="to-create-wpf-controls"></a>Pour créer des contrôles WPF  
   
-1.  Ajoutez un nouveau <xref:System.Windows.Controls.UserControl> WPF au projet. Utilisez le nom par défaut pour le type de contrôle, `UserControl1.xaml`. Pour plus d’informations, consultez [procédure pas à pas : création WPF de contenu dans les Windows Forms au moment du Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Ajoutez un nouveau <xref:System.Windows.Controls.UserControl> WPF au projet. Utilisez le nom par défaut pour le type de contrôle, `UserControl1.xaml`. Pour plus d’informations, consultez [procédure pas à pas : création de nouveau contenu WPF sur les formulaires Windows au moment du Design](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  Dans le **propriétés** fenêtre, définissez la valeur de la <xref:System.Windows.Controls.Control.Background%2A> propriété `Blue`.  
   
@@ -87,4 +87,4 @@ Cette procédure pas à pas montre comment modifier les valeurs de propriétés 
  [Procédure pas à pas : organisation des contrôles dans les Windows Forms à l’aide des lignes d’alignement](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migration et interopérabilité](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Utilisation de contrôles WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Concepteur WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Concevoir en XAML dans Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

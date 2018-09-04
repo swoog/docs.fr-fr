@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF], creating templates
 ms.assetid: 85a4d1a7-4753-4f4a-b26d-14fa10c1ddb5
-ms.openlocfilehash: ed66d51e87a25f74e646d0d535ac9e4ee9c8a056
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a47ce896be4d1c38147584dd80b1bc841737d526
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551134"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537383"
 ---
 # <a name="how-to-define-a-groupbox-template"></a>Comment : définir un modèle GroupBox
 Cet exemple montre comment créer un modèle pour un <xref:System.Windows.Controls.GroupBox> contrôle.  
@@ -22,4 +22,4 @@ Cet exemple montre comment créer un modèle pour un <xref:System.Windows.Contro
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Controls.GroupBox>  
- [Rubriques de procédure sur la zone de groupe](http://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)
+ [Rubriques Comment relatives GroupBox](https://msdn.microsoft.com/library/7692e155-a4c6-428c-b7e0-64b3740daca7)

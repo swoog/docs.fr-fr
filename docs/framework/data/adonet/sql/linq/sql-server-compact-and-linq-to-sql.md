@@ -3,11 +3,11 @@ title: SQL Server Compact et LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 59022359-a5a2-4c42-9a6a-5c0259c3ad17
 ms.openlocfilehash: 1229fcb285038875950776a924870c9be6bef13b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43479875"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529986"
 ---
 # <a name="sql-server-compact-and-linq-to-sql"></a>SQL Server Compact et LINQ to SQL
 SQL Server Compact est la base de données par défaut installée avec Visual Studio. Pour plus d’informations, consultez [PAVE sur à l’aide de SQL Server Compact (Visual Studio)](https://msdn.microsoft.com/library/13320dd1-94e5-4077-bf76-8df253695ccc).  

@@ -2,12 +2,12 @@
 title: Prise en charge de SqlClient pour LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532707"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Prise en charge de SqlClient pour LocalDB
 À compter de SQL Server, nom de code Denali, une version légère de SQL Server, appelée LocalDB, sera disponible. Cette rubrique explique comment se connecter à une base de données LocalDB.  
@@ -31,7 +31,7 @@ ms.locfileid: "33359795"
   
  Vous ne pouvez pas utiliser`User Instance=True` lors de la connexion à une base de données LocalDB.  
   
- Vous pouvez télécharger LocalDB à partir de [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Si vous devez utiliser sqlcmd.exe pour modifier les données dans votre instance de base de données locale, vous aurez besoin de sqlcmd à partir de SQL Server 2012, vous pouvez également obtenir à partir de SQL Server 2012 Feature Pack.  
+ Vous pouvez télécharger LocalDB à partir de [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Si vous devez utiliser sqlcmd.exe pour modifier des données dans votre instance de base de données locale, vous devez sqlcmd à partir de SQL Server 2012, vous pouvez également obtenir à partir de SQL Server 2012 Feature Pack.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Créer par programme une instance nommée  
  Une application peut créer une instance nommée et spécifier une base de données comme suit :  
@@ -60,4 +60,4 @@ ms.locfileid: "33359795"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

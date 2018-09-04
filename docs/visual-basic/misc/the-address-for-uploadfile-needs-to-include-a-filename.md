@@ -5,11 +5,11 @@ f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
 ms.openlocfilehash: a3f0b02246264cb50c6f719294cb990221702ea2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483032"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542557"
 ---
 # <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a>L’adresse de UploadFile doit inclure un nom de fichier
 Lors du chargement de fichiers avec la méthode `UploadFile` , vous devez fournir un nom de fichier dans le chemin de destination.  

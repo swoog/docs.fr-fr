@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 ms.openlocfilehash: c164490464d839dacefaf570c8956bf15caeb7de
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480540"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539467"
 ---
 # <a name="enabling-query-notifications"></a>Activation de notifications de requête
 Les applications qui utilisent des notifications de requête ont un ensemble commun d’exigences. Votre source de données doit être correctement configurée pour prendre en charge les notifications de requête SQL et l'utilisateur doit disposer des autorisations appropriées côté client et côté serveur.  

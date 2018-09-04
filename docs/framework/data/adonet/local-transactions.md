@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
 ms.openlocfilehash: 17bf06864016ece571b21bee2c180b5781a62959
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480735"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528257"
 ---
 # <a name="local-transactions"></a>Transactions locales
 Dans [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], vous pouvez utiliser des transactions lorsque vous souhaitez lier plusieurs tâches entre elles afin qu'elles s'exécutent comme une seule unité de travail. Par exemple, imaginez qu'une application effectue deux tâches. Premièrement, elle met à jour une table avec des informations de commande. Deuxièmement, elle met à jour une table qui contient des informations de stock, en débitant les articles commandés. Si des tâches échoue, puis les deux mises à jour sont annulées.  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
 ms.openlocfilehash: bf0e22eab3b6517521dbe06a73f63af232746df1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404646"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540547"
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Comment : exécuter des procédures à intervalles définis à l'aide du composant Timer Windows Forms
 Il peut arriver que vous souhaitiez créer une procédure qui s'exécute à intervalles réguliers jusqu'à ce qu'une boucle soit terminée ou qu'un intervalle de temps spécifique soit écoulé. Vous pouvez pour cela utiliser le composant <xref:System.Windows.Forms.Timer>.  

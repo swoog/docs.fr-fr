@@ -2,26 +2,26 @@
 title: "Comment : verrouiller des points de terminaison dans l'entreprise"
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 4ec14193bdcc24722ad8e2259781c4c185f3ca3f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806537"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539734"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Comment : verrouiller des points de terminaison dans l'entreprise
 Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client qui peut être utilisé pour valider toutes les applications clientes de Windows Communication Foundation (WCF) installées sur les ordinateurs.  
   
- Dans ce cas, le validateur est un validateur client, car ce comportement de point de terminaison est ajouté au client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section dans le fichier machine.config. WCF charge les comportements de point de terminaison communs uniquement pour les applications clientes et les comportements de service commun uniquement pour les applications de service. Pour installer ce même validateur pour les applications de service, le validateur doit être un comportement de service. Pour plus d’informations, consultez la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section.  
+ Dans ce cas, le validateur est un validateur client car ce comportement de point de terminaison est ajouté au client [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section dans le fichier machine.config. WCF charge des comportements de point de terminaison commun uniquement pour les applications clientes et des comportements de service communs uniquement pour les applications de service. Pour installer ce même validateur pour les applications de service, le validateur doit être un comportement de service. Pour plus d’informations, consultez le [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section.  
   
 > [!IMPORTANT]
->  Comportements de service ou de point de terminaison pas marqué avec le <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribut (APTCA) qui sont ajoutés à la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section d’un fichier de configuration ne sont pas exécutés lorsque l’application s’exécute dans une confiance partielle environnement et aucune exception n’est levée lorsque cela se produit. Pour appliquer l'exécution des comportements courants tels que les validateurs, vous devez effectuer l'une des actions suivantes :  
+>  Comportements de service ou de point de terminaison non marqués avec le <xref:System.Security.AllowPartiallyTrustedCallersAttribute> attribut (APTCA) qui sont ajoutés à la [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) section d’un fichier de configuration ne sont pas exécutés lorsque l’application s’exécute dans une confiance partielle environnement et aucune exception n’est levée lorsque cela se produit. Pour appliquer l'exécution des comportements courants tels que les validateurs, vous devez effectuer l'une des actions suivantes :  
 >   
 >  -- Marquez votre comportement courant avec l'attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute> afin qu'il soit exécuté lorsqu'il est déployé comme une application de confiance partielle. Notez qu'une entrée de Registre peut être définie sur l'ordinateur pour interdire l'exécution des assemblys marqués avec l'attribut APTCA.  
 >   
->  -- Si l'application est déployée comme une application de confiance partielle, vérifiez que les utilisateurs ne peuvent pas modifier les paramètres de sécurité d'accès du code pour exécuter l'application dans un environnement de confiance partielle. S'ils peuvent le faire, le validateur personnalisé ne s'exécute pas et aucune exception n'est levée. Pour permet d’éviter cela, consultez le `levelfinal` en utilisant [Code Access Security Policy Tool (Caspol.exe)](http://go.microsoft.com/fwlink/?LinkId=248222).  
+>  -- Si l'application est déployée comme une application de confiance partielle, vérifiez que les utilisateurs ne peuvent pas modifier les paramètres de sécurité d'accès du code pour exécuter l'application dans un environnement de confiance partielle. S'ils peuvent le faire, le validateur personnalisé ne s'exécute pas et aucune exception n'est levée. Pour savoir comment garantir cette configuration, consultez le `levelfinal` option à l’aide de [Code Access Security Policy Tool (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
 >   
->  Pour plus d’informations, consultez [partielle meilleures pratiques confiance](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) et [prise en charge des scénarios de déploiement](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
+>  Pour plus d’informations, consultez [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) et [pris en charge les scénarios de déploiement](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
   
 ### <a name="to-create-the-endpoint-validator"></a>Pour créer le validateur de point de terminaison  
   
@@ -33,13 +33,13 @@ Les entreprises de grande taille exigent souvent que les applications soient dé
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  Assurez-vous que l'assembly compilé est signé avec un nom fort. Pour plus d’informations, consultez le [outil Strong Name (SN. (EXE)](http://go.microsoft.com/fwlink/?LinkId=248217) et les commandes du compilateur pour votre langue.  
+3.  Assurez-vous que l'assembly compilé est signé avec un nom fort. Pour plus d’informations, consultez le [Strong Name Tool (SN. (EXE)](https://go.microsoft.com/fwlink/?LinkId=248217) et les commandes du compilateur pour votre langue.  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>Pour installer le validateur dans l'ordinateur cible  
   
 1.  Installez le validateur de point de terminaison à l'aide du mécanisme approprié. Dans une entreprise, cela peut s'effectuer en utilisant la stratégie de groupe ou SMS (Systems Management Server).  
   
-2.  Installer l’assembly de nom fort dans le cache d’assembly global à l’aide du [Gacutil.exe (outil Global Assembly Cache)](http://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Installer l’assembly avec nom fort dans le global assembly cache en utilisant le [Gacutil.exe (outil Global Assembly Cache)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
   
 3.  Utilisez les types d'espaces de noms <xref:System.Configuration?displayProperty=nameWithType> pour :  
   
@@ -64,5 +64,5 @@ Les entreprises de grande taille exigent souvent que les applications soient dé
  Vous pouvez également chiffrer les éléments du fichier de configuration. Pour plus d'informations, consultez la section Voir aussi.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Chiffrement des éléments de fichier de configuration à l’aide de DPAPI](http://go.microsoft.com/fwlink/?LinkId=94954)  
- [Chiffrement des éléments de fichier de configuration à l’aide de RSA](http://go.microsoft.com/fwlink/?LinkId=94955)
+ [Chiffrement des éléments de fichier de configuration à l’aide de DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)  
+ [Chiffrement des éléments de fichier de configuration à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

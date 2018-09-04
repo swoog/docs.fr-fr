@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
 ms.openlocfilehash: 5807df6d11580c22f2b754faf44fb3aa63dee14e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538852"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Comment : définir des styles de ligne en alternance pour le contrôle DataGridView Windows Forms à l'aide du concepteur
 Données tabulaires sont souvent présentées dans un format de type livre comptable où les lignes en alternance ont différentes couleurs d’arrière-plan. Avec ce format, il est facile pour les utilisateurs de déterminer quelle cellule appartient à quelle ligne, en particulier dans les tableaux larges qui ont beaucoup de colonnes.  

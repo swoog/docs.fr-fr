@@ -3,11 +3,11 @@ title: Exemple de point de terminaison de gestion de workflow
 ms.date: 03/30/2017
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
 ms.openlocfilehash: 3d99cbef20895381f5e40ee939e1d94a409f1391
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416579"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536712"
 ---
 # <a name="workflow-management-endpoint-sample"></a>Exemple de point de terminaison de gestion de workflow
 Cet exemple montre comment un point de terminaison de contrôle de workflow peut être utilisé pour créer et exécuter des workflows à la fois localement et à distance. Il montre comment héberger un point de terminaison de contrôle et écrire des clients qui appellent le point de terminaison de contrôle pour créer et exécuter l'instance d'un workflow. Le workflow n'est pas un service.  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
 ms.openlocfilehash: d0bb41da69bf1cb87f052c11d3a7d1f1783320ad
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464007"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532674"
 ---
 # <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>Comment : gérer des erreurs et des exceptions qui se produisent avec Databinding
 Souvent, les exceptions et les erreurs surviennent quand vous liez des objets métier sous-jacents aux contrôles. Vous pouvez intercepter ces erreurs et ces exceptions, puis récupérer ou bien passer des informations d'erreur à l'utilisateur en gérant l'événement <xref:System.Windows.Forms.Binding.BindingComplete> pour un composant <xref:System.Windows.Forms.Binding>, <xref:System.Windows.Forms.BindingSource> ou <xref:System.Windows.Forms.CurrencyManager>.  

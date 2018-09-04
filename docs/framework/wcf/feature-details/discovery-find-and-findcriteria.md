@@ -3,11 +3,11 @@ title: Recherche de découverte et FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423321"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534033"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Recherche de découverte et FindCriteria
 Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  

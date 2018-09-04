@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: 54991234d4eaa9edab218d3b0d221a6e477d2be5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420101"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530084"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>Synchronisation DataSet et XmlDataDocument
 L'objet <xref:System.Data.DataSet> ADO.NET vous propose une représentation relationnelle des données. Pour un accès hiérarchique aux données, vous pouvez utiliser les classes XML disponibles dans le .NET Framework. Pour des raisons historiques, ces deux représentations des données ont jusqu'à présent été utilisées séparément. Toutefois, le .NET Framework permet un accès synchrone et en temps réel aux représentations relationnelles et hiérarchiques des données via le **DataSet** objet et le <xref:System.Xml.XmlDataDocument> de l’objet, respectivement.  

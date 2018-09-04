@@ -3,11 +3,11 @@ title: Exemple Announcements
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
 ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425400"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534257"
 ---
 # <a name="announcements-sample"></a>Exemple Announcements
 Cet exemple montre comment utiliser les fonctionnalités d’annonce de la découverte. Les annonces permettent aux services d'envoyer des messages d'annonce qui contiennent des métadonnées relatives au service. Par défaut, une annonce de type Hello est envoyée lorsque le service démarre et une annonce de type Bye est envoyée lorsque le service s'arrête. Ces annonces peuvent être envoyées en mode multidiffusion ou de point à point. Cet exemple se compose de deux projets : service et client.  

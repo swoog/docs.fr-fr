@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5675663-fc91-4e0d-87a9-481b25b64c0f
 ms.openlocfilehash: 2f30a578c5233e8b86a165dd220efd45348c5042
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401262"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541092"
 ---
 # <a name="handling-dataview-events"></a>Gestion des événements de DataView
 Vous pouvez utiliser l'événement <xref:System.Data.DataView.ListChanged> du <xref:System.Data.DataView> pour déterminer si une vue a été mise à jour. Les mises à jour qui déclenchent l'événement incluent l'ajout, la suppression ou la modification d'une ligne dans la table sous-jacente, l'ajout ou la suppression d'une colonne dans le schéma de la table sous-jacente et une modification d'une relation parente ou enfant. Le **ListChanged** événement vous avertit aussi si la liste des lignes que vous affichez a changé de manière significative en raison de l’application d’un nouvel ordre de tri ou un filtre.  

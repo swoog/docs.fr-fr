@@ -30,11 +30,11 @@ ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416958"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554026"
 ---
 # <a name="profiling-overview"></a>Vue d'ensemble du profilage
 <a name="top"></a> Un profileur est un outil qui surveille l’exécution d’une autre application. Un profileur CLR (Common Language Runtime) est une bibliothèque de liens dynamiques (DLL) qui se compose de fonctions qui reçoivent des messages du CLR et qui lui en envoient à l'aide de l'API de profilage. La DLL du profileur est chargée par le CLR au moment de l'exécution.  

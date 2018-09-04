@@ -6,11 +6,11 @@ helpviewer_keywords:
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
 ms.openlocfilehash: 56385d7c31465e25f19486ea5cdaa8876cdb30ff
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461629"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534410"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>Comment : mettre un élément en rotation
 Cet exemple montre comment mettre un élément en rotation à l’aide un <xref:System.Windows.Media.RotateTransform> et un <xref:System.Windows.Media.Animation.DoubleAnimation>.  

@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7855007c7566d3be0012bbff2cb124ee2681cb6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398051"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536951"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Événements ETW dans le Common Language Runtime
 Le CLR (Common Language Runtime) fournit des informations de diagnostic utiles pour le suivi d’événements pour Windows (ETW) par le biais d’une grande variété d’événements de débogage et de profilage. Les événements ETW du CLR tirent parti du système de suivi Windows (ETW) pour améliorer la prise en charge du profilage et du débogage déjà proposée par le common language runtime.  
   
- Vous trouverez des informations supplémentaires sur ETW dans l’article [Améliorez le débogage et l’optimisation des performances avec ETW](http://go.microsoft.com/fwlink/?LinkID=161142) sur MSDN. Des informations relatives à Xperf sont disponibles à la page [Windows Performance Toolkit - Xperf](http://go.microsoft.com/fwlink/?LinkID=161144) du blog NTDebugging.  
+ Vous trouverez des informations supplémentaires sur ETW dans l’article [Améliorez le débogage et l’optimisation des performances avec ETW](https://go.microsoft.com/fwlink/?LinkID=161142) sur MSDN. Des informations relatives à Xperf sont disponibles à la page [Windows Performance Toolkit - Xperf](https://go.microsoft.com/fwlink/?LinkID=161144) du blog NTDebugging.  
   
  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] ou version ultérieure est nécessaire pour tous les événements décrits dans les rubriques d’événements. Le système d’exploitation Windows Vista est le client minimal pris en charge, et Windows Server 2008 est le serveur minimal pris en charge.  
   

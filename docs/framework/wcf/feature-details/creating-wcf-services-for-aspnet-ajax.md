@@ -3,11 +3,11 @@ title: Création de services WCF pour ASP.NET AJAX
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
 ms.openlocfilehash: 4d3953046a796686a465cd8096b8f2ba930aa9fd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536649"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Création de services WCF pour ASP.NET AJAX
 Microsoft ASP.NET AJAX permet de créer rapidement des pages web d’une grande interaction pour l’utilisateur avec des éléments d’interface utilisateur réactifs et familiers. Les fonctionnalités ASP.NET AJAX fournissent des bibliothèques de client de script qui incorporent des scripts ECMAScript (JavaScript) et des technologies Dynamic HTML (DHTML) compatibles entre navigateurs ainsi qu'une intégration avec la plate-forme de développement serveur ASP.NET 2.0. Grâce à ASP.NET AJAX, vous pouvez améliorer l'expérience utilisateur et l'efficacité de vos applications Web.  

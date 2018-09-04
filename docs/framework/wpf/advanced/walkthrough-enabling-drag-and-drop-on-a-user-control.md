@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: e151eb7f428fecb330970210fd7addb1603a211f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386604"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534230"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Procédure pas à pas : activation de la fonction glisser-déplacer sur un contrôle utilisateur
 Cette procédure pas à pas montre comment créer un contrôle utilisateur personnalisé qui peut participer à un transfert de données par glisser-déplacer dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  

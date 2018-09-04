@@ -2,12 +2,12 @@
 title: Stratégie de protection étendue
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 00d1500b271625addde4499bc62b5ed4d689caf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504356"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532343"
 ---
 # <a name="extended-protection-policy"></a>Stratégie de protection étendue
 La protection étendue est une initiative de sécurité visant à se protéger des attaques de l'intercepteur (MITM, Man In The Middle). Une attaque de l'intercepteur est une atteinte à la sécurité dans laquelle un intercepteur prend les informations d'identification d'un client et les envoie à un serveur.  
@@ -26,25 +26,25 @@ La protection étendue est une initiative de sécurité visant à se protéger d
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Installez Internet Information Services à partir de **panneau**, **Ajout/Suppression de programmes**, **des fonctionnalités Windows**.  
+1.  Installer Internet Information Services à partir de **Control Panel**, **Ajout/Suppression de programmes**, **les fonctionnalités de Windows**.  
   
-2.  Installer **l’authentification Windows** dans **des fonctionnalités Windows**, **Internet Information Services**, **Services World Wide Web**,  **Sécurité**, et **l’authentification Windows**.  
+2.  Installer **l’authentification Windows** dans **les fonctionnalités de Windows**, **Internet Information Services**, **Services World Wide Web**,  **Sécurité**, et **l’authentification Windows**.  
   
-3.  Installer **Activation Windows Communication Foundation HTTP** dans **des fonctionnalités Windows**, **Microsoft .NET Framework 3.5.1**, et **Communication de Windows Activation Foundation HTTP**.  
+3.  Installer **Windows Communication Foundation HTTP Activation** dans **les fonctionnalités de Windows**, **Microsoft .NET Framework 3.5.1**, et **Communication de Windows Foundation HTTP Activation**.  
   
 4.  Cet exemple requiert l'établissement par le client d'un canal sécurisé avec le serveur et nécessite donc la présence d'un certificat de serveur qui peut être installé à partir du Gestionnaire des services Internet (IIS).  
   
-    1.  Ouvrez le gestionnaire des services Internet (IIS). Ouvrez **des certificats de serveur**, qui s’affiche dans le **affichage des fonctionnalités** onglet lorsque le nœud racine (nom de l’ordinateur) est sélectionné.  
+    1.  Ouvrez le gestionnaire des services Internet (IIS). Ouvrez **certificats de serveur**, qui s’affiche dans le **affichage des composants** onglet lorsque le nœud racine (nom de l’ordinateur) est sélectionné.  
   
     2.  À des fins de test de cet exemple, créez un certificat auto-signé. Si vous ne souhaitez pas qu'Internet Explorer vous informe que le certificat n'est pas sécurisé, installez le certificat dans le magasin d'autorités racine approuvées de certificats.  
   
-5.  Ouvrez le **Actions** volet pour le site Web par défaut. Cliquez sur **de modifier le Site**, **liaisons**. S'il n'est pas déjà présent, ajoutez le type HTTPS avec le numéro de port 443. Assignez le certificat SSL créé au cours de l'étape précédente.  
+5.  Ouvrez le **Actions** volet pour le site Web par défaut. Cliquez sur **modifier le Site**, **liaisons**. S'il n'est pas déjà présent, ajoutez le type HTTPS avec le numéro de port 443. Assignez le certificat SSL créé au cours de l'étape précédente.  
   
 6.  Générez le service. Un répertoire virtuel est alors créé dans IIS et les fichiers dll, .svc et .config requis pour l'hébergement Web du service sont copiés.  
   
-7.  Ouvrez le gestionnaire des services Internet (IIS). Cliquez sur le répertoire virtuel (**ExtendedProtection**), qui a été créé à l’étape précédente. Sélectionnez **convertir en Application**.  
+7.  Ouvrez le gestionnaire des services Internet (IIS). Cliquez sur le répertoire virtuel (**ExtendedProtection**), ce qui a été créé à l’étape précédente. Sélectionnez **convertir en Application**.  
   
-8.  Ouvrez le **authentification** module dans le Gestionnaire des services Internet pour ce répertoire virtuel et les activer **l’authentification Windows**.  
+8.  Ouvrez le **authentification** module dans le Gestionnaire des services Internet pour ce répertoire virtuel et l’activez **l’authentification Windows**.  
   
 9. Ouvrez **paramètres avancés** sous **l’authentification Windows** pour ce répertoire virtuel et affectez-lui la valeur **requis**.  
   
@@ -59,6 +59,6 @@ La protection étendue est une initiative de sécurité visant à se protéger d
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

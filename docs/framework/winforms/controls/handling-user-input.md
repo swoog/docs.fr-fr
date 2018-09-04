@@ -9,18 +9,18 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a230611bfbb0a7f21a96de22674377887cc93c2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19bb494d6f478c8cb7adda770f441470c4b2d19f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527798"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540364"
 ---
 # <a name="handling-user-input"></a>Gestion des entrées utilisateur
-Cette rubrique décrit les principaux événements de clavier et souris fournis par <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Lors de la gestion d’un événement, les auteurs de contrôle doivent substituer la méthode protégée `On`*EventName* au lieu d’attacher un délégué à l’événement. Pour un examen des événements, consultez [Déclenchement d’événements à partir d’un composant](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
+Cette rubrique décrit les principaux événements de clavier et souris fournis par <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Lors de la gestion d’un événement, les auteurs de contrôle doivent substituer la méthode protégée `On`*EventName* au lieu d’attacher un délégué à l’événement. Pour un examen des événements, consultez [Déclenchement d’événements à partir d’un composant](https://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
   
 > [!NOTE]
->  Si aucune donnée associée à un événement, une instance de la classe de base <xref:System.EventArgs> est passé comme argument à la `On` *EventName* (méthode).  
+>  Si aucune donnée associée à un événement, une instance de la classe de base <xref:System.EventArgs> est passé en tant qu’argument à la `On` *EventName* (méthode).  
   
 ## <a name="keyboard-events"></a>Événements de clavier  
  Les événements de clavier courants que votre contrôle peut gérer sont <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, et <xref:System.Windows.Forms.Control.KeyUp>.  
@@ -46,17 +46,17 @@ Cette rubrique décrit les principaux événements de clavier et souris fournis 
 |`MouseMove`|`void OnMouseMove(MouseEventArgs)`|Déclenché lorsque le pointeur se déplace dans la zone du contrôle.|  
 |`MouseUp`|`void OnMouseUp(MouseEventArgs)`|Déclenché lorsque le bouton de la souris est relâché alors que le pointeur se trouve sur le contrôle ou quitte la zone du contrôle.|  
   
- Le fragment de code suivant montre un exemple de substitution de la <xref:System.Windows.Forms.Control.MouseDown> événement.  
+ Le fragment de code suivant montre un exemple de substitution le <xref:System.Windows.Forms.Control.MouseDown> événement.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#7)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#7)]  
   
- Le fragment de code suivant montre un exemple de substitution de la <xref:System.Windows.Forms.Control.MouseMove> événement.  
+ Le fragment de code suivant montre un exemple de substitution le <xref:System.Windows.Forms.Control.MouseMove> événement.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#8](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#8)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#8](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#8)]  
   
- Le fragment de code suivant montre un exemple de substitution de la <xref:System.Windows.Forms.Control.MouseUp> événement.  
+ Le fragment de code suivant montre un exemple de substitution le <xref:System.Windows.Forms.Control.MouseUp> événement.  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#9](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#9)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#9](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#9)]  

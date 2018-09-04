@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
 ms.openlocfilehash: c2086d451af72157785796052af123cd210ee036
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400298"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542668"
 ---
 # <a name="interceptors-wcf-data-services"></a>Intercepteurs (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permet à une application d’intercepter les messages de demande afin que vous pouvez ajouter une logique personnalisée à une opération. Vous pouvez utiliser cette logique personnalisée pour valider les données dans les messages entrants. Vous pouvez également l'utiliser pour restreindre davantage l'étendue d'une requête d'interrogation, comme l'insertion d'une stratégie d'autorisation personnalisée sur la base de chaque demande.  

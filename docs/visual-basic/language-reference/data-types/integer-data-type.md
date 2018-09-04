@@ -24,11 +24,11 @@ ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532427"
 ---
 # <a name="integer-data-type-visual-basic"></a>Type de données Integer (Visual Basic)
 Contient des entiers 32 bits (4 octets) signés dont la valeur est comprise entre -2 147 483 648 et 2 147 483 647.  

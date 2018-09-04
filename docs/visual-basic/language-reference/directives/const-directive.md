@@ -1,5 +1,5 @@
 ---
-title: '##Const (directive)'
+title: '##Const (directive) (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: a3b3318f6b44f7d1798e08195be5aeb920b61c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d786c5e16b1e667f7c7c78b0f7857cd9711239
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541612"
 ---
 # <a name="const-directive"></a>#Const, directive
 Définit des constantes conditionnelles du compilateur pour Visual Basic.  
@@ -33,7 +33,7 @@ Définit des constantes conditionnelles du compilateur pour Visual Basic.
   
 ## <a name="parts"></a>Composants  
  `constname`  
- Obligatoire. Nom de la constante définie.  
+ Obligatoire. Nom de la constante qui est définie.  
   
  `expression`  
  Obligatoire. Littéral, autre constante de compilation conditionnelle ou toute combinaison qui comprend tout ou partie des opérateurs arithmétiques ou logiques à l’exception `Is`.  
@@ -41,7 +41,7 @@ Définit des constantes conditionnelles du compilateur pour Visual Basic.
 ## <a name="remarks"></a>Notes  
  Constantes de compilation conditionnelle sont toujours privées pour le fichier dans lequel elles apparaissent. Vous ne pouvez pas créer de constantes de compilation publiques à l’aide de la `#Const` directive ; vous pouvez les créer que dans l’interface utilisateur ou avec la `/define` option du compilateur.  
   
- Vous pouvez utiliser uniquement des constantes de compilation conditionnelle et des littéraux dans `expression`. À l’aide d’une constante standard définie avec `Const` provoque une erreur. À l’inverse, vous pouvez utiliser des constantes définies avec le `#Const` mot clé uniquement pour la compilation conditionnelle. Les constantes peuvent également être non, auquel cas ils ont une valeur de `Nothing`.  
+ Vous pouvez utiliser uniquement des constantes de compilation conditionnelle et des littéraux dans `expression`. À l’aide d’une constante standard définie avec `Const` provoque une erreur. À l’inverse, vous pouvez utiliser des constantes définies avec le `#Const` mot clé uniquement pour la compilation conditionnelle. Constantes peuvent également être non, auquel cas ils ont une valeur de `Nothing`.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise la directive `#Const`.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: de745633060dd4f7b1610492d0ff57ec7a4f545b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478089"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536864"
 ---
 # <a name="viewing-data-in-a-datatable"></a>Affichage des données dans un DataTable
 Vous pouvez accéder au contenu d’un <xref:System.Data.DataTable> à l’aide de la **lignes** et **colonnes** collections de la **DataTable**. Vous pouvez également utiliser le <xref:System.Data.DataTable.Select%2A> méthode pour retourner des sous-ensembles des données dans un **DataTable** en fonction des critères, y compris les critères de recherche, l’ordre de tri et l’état de la ligne. En outre, vous pouvez utiliser la <xref:System.Data.DataRowCollection.Find%2A> méthode de la **DataRowCollection** lors de la recherche pour une ligne particulière à l’aide d’une valeur de clé primaire.  

@@ -9,11 +9,12 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], moving through datasets
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 146d97be-3d97-400e-accb-860bbf47729d
-ms.openlocfilehash: 54cb04aefa8111873ca5c31ed94fe641437ae990
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 272291a6c4d8b008b9efae23f392676ae1af7180
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542814"
 ---
 # <a name="how-to-move-through-a-dataset-with-the-windows-forms-bindingnavigator-control"></a>Comment : parcourir un DataSet avec le contrôle BindingNavigator Windows Forms
 Quand vous générez des applications pilotées par les données, vous devez souvent présenter des collections de données aux utilisateurs. Le contrôle <xref:System.Windows.Forms.BindingNavigator>, associé au composant <xref:System.Windows.Forms.BindingSource>, fournit une solution pratique et extensible pour parcourir une collection et afficher des éléments de façon séquentielle.  
@@ -32,7 +33,7 @@ Quand vous générez des applications pilotées par les données, vous devez sou
   
 -   Références aux assemblys System, System.Data, System.Drawing, System.Windows.Forms et System.Xml.  
   
- Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également générer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également la page [Comment : compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Pour plus d’informations sur la création de cet exemple à partir de la ligne de commande pour Visual Basic ou Visual c#, consultez [génération à partir de la ligne de commande](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) ou [de ligne de commande avec csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Vous pouvez également créer cet exemple dans Visual Studio en collant le code dans un nouveau projet.  Consultez également [Guide pratique pour compiler et exécuter un exemple complet de code Windows Forms à l’aide de Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.BindingSource>  
