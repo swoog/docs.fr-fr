@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f9603f79992c31ad1af3b6c672b448ab031ba78d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807366"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542295"
 ---
 # <a name="configuring-tracing"></a>Configuration du traçage
 Cette rubrique décrit comment activer le suivi, configurer des sources de suivi pour émettre des suivis et définir des niveaux de suivi, définir le suivi et la propagation d'activité afin de prendre en charge la corrélation de suivi de bout en bout, et définir des écouteurs de suivi pour accéder aux suivis.  
   
- Pour les recommandations de paramètres de suivi dans l’environnement de débogage ou de production, reportez-vous à [les paramètres recommandés pour le suivi et la journalisation des messages](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
+ Pour des recommandations de paramètres de suivi dans l’environnement de production ou débogage, reportez-vous à [paramètres recommandés pour le suivi et la journalisation des messages](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md).  
   
 > [!IMPORTANT]
 >  Sur Windows 8 vous devez exécuter votre application avec élévation de privilèges (Exécuter en tant qu'administrateur) pour que votre application génère des journaux de traces.  
@@ -24,13 +24,13 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
 -   Suivis des jalons de processus dans l'ensemble des composants des applications, tels que les appels d'opération, les exceptions de code, les avertissements et d'autres événements de traitement significatifs.  
   
--   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi. Consultez [la journalisation des événements](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
+-   Événements d’erreur Windows en cas de dysfonctionnement de la fonctionnalité de suivi. Consultez [journalisation des événements](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- Le suivi WCF est construit sur <xref:System.Diagnostics>. Pour utiliser le traçage, vous devez définir des sources de trace dans le fichier de configuration ou dans le code. WCF définit une source de suivi pour chaque assembly WCF. Le `System.ServiceModel` source de trace est la source de suivi WCF plus générale et enregistre des jalons de traitement dans la pile de communication WCF, à partir de l’entrée/sortie de transport pour l’entrée/sortie de code utilisateur. La source de suivi `System.ServiceModel.MessageLogging` enregistre tous les messages qui circulent dans le système.  
+ Le suivi WCF repose sur <xref:System.Diagnostics>. Pour utiliser le traçage, vous devez définir des sources de trace dans le fichier de configuration ou dans le code. WCF définit une source de suivi pour chaque assembly WCF. Le `System.ServiceModel` source de suivi est la source de suivi WCF plus générale et enregistre des jalons de traitement dans la pile de communication WCF, à partir de l’entrée/sortie de transport pour l’entrée/sortie de code utilisateur. La source de suivi `System.ServiceModel.MessageLogging` enregistre tous les messages qui circulent dans le système.  
   
- Le suivi est désactivé par défaut. Pour activer le suivi, vous devez créer un écouteur de suivi et définir un niveau de suivi autre que « Off » pour la source de suivi sélectionnée dans la configuration ; dans le cas contraire, WCF ne génère pas de suivi. Si vous ne spécifiez pas d'écouteur, le suivi est automatiquement désactivé. Si un écouteur est défini mais qu'aucun niveau n'est spécifié, le niveau a la valeur « Désactivé » par défaut, ce qui signifie qu'aucun suivi n'est émis.  
+ Le suivi est désactivé par défaut. Pour activer le suivi, vous devez créer un écouteur de suivi et définir un niveau de trace autre que « Off » pour la source de trace sélectionné dans la configuration ; Sinon, WCF ne génère pas de suivi. Si vous ne spécifiez pas d'écouteur, le suivi est automatiquement désactivé. Si un écouteur est défini mais qu'aucun niveau n'est spécifié, le niveau a la valeur « Désactivé » par défaut, ce qui signifie qu'aucun suivi n'est émis.  
   
- Si vous utilisez des points d’extensibilité WCF tels que les appelants d’opération personnalisé, vous devez émettre vos propres suivis. Il s’agit, car si vous implémentez un point d’extensibilité, WCF ne peut ne plus émettre les suivis standard dans le chemin d’accès par défaut. Si vous n'implémentez par la prise en charge du suivi manuel à l'aide de l'émission de suivis, les suivis peuvent ne pas s'afficher comme prévu.  
+ Si vous utilisez des points d’extensibilité WCF tels que les appelants d’opération personnalisé, vous devez émettre vos propres suivis. Il s’agit, car si vous implémentez un point d’extensibilité, WCF peut ne plus émettre les suivis standard dans le chemin d’accès par défaut. Si vous n'implémentez par la prise en charge du suivi manuel à l'aide de l'émission de suivis, les suivis peuvent ne pas s'afficher comme prévu.  
   
  Vous pouvez configurer le suivi en modifiant le fichier de configuration de l'application : Web.config pour les applications hébergées sur le Web, ou Appname.exe.config pour les applications auto-hébergées. Vous trouverez ci-dessous un exemple de ce type de modification : Pour plus d’informations sur ces paramètres, consultez la section « Configuration de Trace écouteurs pour consommer des suivis ».  
   
@@ -53,12 +53,12 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 ```  
   
 > [!NOTE]
->  Pour modifier le fichier de configuration d’un projet de service WCF dans Visual Studio, cliquez avec le bouton droit sur le fichier de configuration application : Web.config pour les applications hébergées par le Web, ou Appname.exe.config pour les applications auto-hébergées dans **l’Explorateur de solutions** . Puis choisissez le **modifier la Configuration WCF** élément de menu contextuel. Cette opération lance le [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), qui vous permet de modifier les paramètres de configuration pour les services WCF à l’aide d’une interface utilisateur graphique.  
+>  Pour modifier le fichier de configuration d’un projet de service WCF dans Visual Studio, cliquez avec le bouton droit sur le fichier de configuration application : Web.config pour les applications hébergées sur le Web, ou Appname.exe.config pour les applications auto-hébergées dans **l’Explorateur de solutions** . Puis choisissez le **modifier la Configuration WCF** élément de menu contextuel. Cette opération lance le [l’outil Éditeur de Configuration (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), qui vous permet de modifier les paramètres de configuration pour les services WCF à l’aide d’une interface utilisateur graphique.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Configuration de sources de suivi de façon à émettre des suivis  
  WCF définit une source de suivi pour chaque assembly. Les écouteurs définis pour cette source accèdent aux suivis générés dans un assembly. Les sources de suivi suivantes sont définies :  
   
--   System.ServiceModel : Enregistre toutes les étapes de traitement de WCF, chaque fois que de lecture de la configuration, un message est traité dans le transport, sécurité de traitement, un message est distribuée dans le code utilisateur et ainsi de suite.  
+-   System.ServiceModel : Enregistre tous les stades du traitement de WCF, chaque fois que la configuration est lue, un message est traité dans le transport, traitement de sécurité, un message est distribuée dans le code utilisateur et ainsi de suite.  
   
 -   System.ServiceModel.MessageLogging : enregistre tous les messages qui circulent dans le système.  
   
@@ -133,7 +133,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 </system.diagnostics>  
 ```  
   
- Pour plus d’informations sur la création de sources de trace défini par l’utilisateur, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ Pour plus d’informations sur la création des sources de trace défini par l’utilisateur, consultez [extension suivi](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Configuration d'écouteurs de suivi pour consommer des suivis  
  Lors de l’exécution, WCF de flux de données de trace dans les écouteurs qui traitent les données. WCF fournit plusieurs écouteurs prédéfinis pour <xref:System.Diagnostics>, qui diffèrent dans le format qu’ils utilisent pour la sortie. Vous pouvez également ajouter des types d'écouteurs personnalisés.  
@@ -142,7 +142,7 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
  Vous pouvez configurer un écouteur de suivi personnalisé pour envoyer des suivis sur le câble, par exemple à une base de données distante. En tant que responsable du déploiement d'applications, vous devez appliquer un contrôle d'accès approprié sur les journaux de suivi sur l'ordinateur distant.  
   
- Vous pouvez également configurer un écouteur de suivi par programmation. Pour plus d’informations, consultez [Comment : créer et initialiser les écouteurs de traçage](http://go.microsoft.com/fwlink/?LinkId=94648) et [création d’un TraceListener personnalisé](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Vous pouvez également configurer un écouteur de suivi par programmation. Pour plus d’informations, consultez [Comment : créer et initialiser des écouteurs de Trace](https://go.microsoft.com/fwlink/?LinkId=94648) et [création d’un TraceListener personnalisé](https://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  `System.Diagnostics.XmlWriterTraceListener` n'étant pas thread-safe, la source de suivi peut verrouiller des ressources exclusivement lors de la sortie de suivis. Lorsque de nombreux threads sortent des suivis vers une source de suivi configurée pour utiliser cet écouteur, un conflit de ressource peut se produire, provoquant une dégradation significative des performances. Pour résoudre ce problème, vous devez implémenter un écouteur personnalisé thread-safe.  
@@ -153,10 +153,10 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
 |Niveau de suivi|Nature des événements suivis|Contenu des événements suivis|Événements suivis|Cible utilisateur|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
 |Off|N/A|N/A|Aucun suivi n'est émis.|N/A|  
-|Critique|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.||Les exceptions non prises en charge, notamment les suivantes, sont enregistrées :<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (le CLR appelle tout ThreadAbortExceptionHandler)<br />-StackOverflowException (ne peut pas être intercepté)<br />-ConfigurationErrorsException<br />-SEHException<br />-Erreurs de de l’application<br />-Événements Failfast<br />-Le système se bloque<br />-Messages incohérents : suivis de messages qui provoquent l’échec de l’application.|Administrateurs<br /><br /> Développeurs d'applications|  
+|Critique|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.||Les exceptions non prises en charge, notamment les suivantes, sont enregistrées :<br /><br /> -OutOfMemoryException<br />-ThreadAbortException (le CLR appelle tout ThreadAbortExceptionHandler)<br />-StackOverflowException (interception impossible)<br />-ConfigurationErrorsException<br />-SEHException<br />-Erreurs de de l’application<br />-Événements Failfast<br />-Blocages du système<br />-Messages incohérents : suivis de messages qui provoquent l’échec de l’application.|Administrateurs<br /><br /> Développeurs d'applications|  
 |Error|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.|Un traitement inattendu s'est produit. L'application n'a pas pu effectuer une tâche comme prévu. Toutefois, l'application s'exécute encore.|Toutes les exceptions sont enregistrées.|Administrateurs<br /><br /> Développeurs d'applications|  
-|Warning|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.|Un problème possible s'est produit ou peut se produire, mais l'application fonctionne encore correctement. Toutefois, elle risque de ne plus fonctionner correctement.|-L’application reçoit davantage de demandes que ses paramètres de limitation.<br />-La file d’attente de réception est proche de sa capacité maximale configurée.<br />-Délai d’attente a été dépassé.<br />-Informations d’identification sont rejetées.|Administrateurs<br /><br /> Développeurs d'applications|  
-|Information|Événements « Positifs » : événements qui marquent des jalons|Jalons importants et atteints relatifs à l'exécution d'application, indépendamment du fonctionnement correct de l'application.|En général, des messages d'aide au contrôle et au diagnostic de l'état système, à la mesure des performances ou au profilage sont générés. Vous pouvez utiliser ces informations pour la planification de capacité et la gestion des performances :<br /><br /> -Les canaux sont créés.<br />-Écouteurs de point de terminaison sont créés.<br />-Message pénètre/quitte le transport.<br />-Jeton de sécurité est récupérée.<br />-Paramètre de configuration est en lecture.|Administrateurs<br /><br /> Développeurs d'applications<br /><br /> Développeurs de produits.|  
+|Warning|Événements « négatifs » : événements qui indiquent un traitement inattendu ou une condition d’erreur.|Un problème possible s'est produit ou peut se produire, mais l'application fonctionne encore correctement. Toutefois, elle risque de ne plus fonctionner correctement.|-L’application reçoit davantage de demandes que ses paramètres de limitation ne l’autorisent.<br />-La file d’attente de réception est proche de sa capacité maximale configurée.<br />-Délai d’attente a été dépassé.<br />-Informations d’identification sont rejetées.|Administrateurs<br /><br /> Développeurs d'applications|  
+|Information|Événements « Positifs » : événements qui marquent des jalons|Jalons importants et atteints relatifs à l'exécution d'application, indépendamment du fonctionnement correct de l'application.|En général, des messages d'aide au contrôle et au diagnostic de l'état système, à la mesure des performances ou au profilage sont générés. Vous pouvez utiliser ces informations pour la planification de capacité et la gestion des performances :<br /><br /> -Les canaux sont créés.<br />-Écouteurs de point de terminaison sont créés.<br />-Message pénètre/quitte le transport.<br />-Jeton de sécurité est récupéré.<br />-Paramètre de configuration est en lecture.|Administrateurs<br /><br /> Développeurs d'applications<br /><br /> Développeurs de produits.|  
 |Verbose|Événements « Positifs » : événements qui marquent des jalons.|Des événements de bas niveau pour le code utilisateur et la maintenance sont émis.|En général, vous pouvez utiliser ce niveau pour le débogage ou l'optimisation d'application.<br /><br /> -En-tête de message compris.|Administrateurs<br /><br /> Développeurs d'applications<br /><br /> Développeurs de produits.|  
 |ActivityTracing||Transfert d'événements entre des activités de traitement et des composants.|Ce niveau permet aux administrateurs et aux développeurs de corréler des applications dans le même domaine d'application :<br /><br /> -Effectue le suivi des limites d’activité, tels que Démarrer/arrêter.<br />-Suivis pour les transferts.|Tous|  
 |Tous||L'application peut fonctionner correctement. Tous les événements sont émis.|Tous les événements précédents.|Tous|  
@@ -176,12 +176,12 @@ Cette rubrique décrit comment activer le suivi, configurer des sources de suivi
   
  Pour plus d’informations sur le suivi des activités et de propagation, consultez [Propagation](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
- Les deux `propagateActivity` et `ActivityTracing` valeurs booléennes s’appliquent à la System.ServiceModel TraceSource. Le `ActivityTracing` valeur s’applique également à toutes les sources de trace, y compris WCF ou ceux de défini par l’utilisateur.  
+ Les deux `propagateActivity` et `ActivityTracing` valeurs booléennes s’appliquent à System.ServiceModel TraceSource. Le `ActivityTracing` valeur s’applique également à n’importe quelle source de trace, y compris ceux définis par l’utilisateur ou WCF.  
   
  Vous ne pouvez pas utiliser l'attribut `propagateActivity` avec des sources de suivi définies par l'utilisateur. Pour la propagation d'ID d'activité de code utilisateur, assurez-vous de ne pas définir ServiceModel `ActivityTracing`, tout en ayant encore l'attribut `propagateActivity` ServiceModel défini à `true`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Administration et diagnostics](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Guide pratique pour créer et initialiser des écouteurs de suivi](http://go.microsoft.com/fwlink/?LinkId=94648)  
- [Création d’un TraceListener personnalisé](http://go.microsoft.com/fwlink/?LinkId=96239)
+ [Guide pratique pour créer et initialiser des écouteurs de suivi](https://go.microsoft.com/fwlink/?LinkId=94648)  
+ [Création d’un TraceListener personnalisé](https://go.microsoft.com/fwlink/?LinkId=96239)

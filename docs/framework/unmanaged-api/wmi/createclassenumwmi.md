@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b38e4753105932d2464bf78797a6979aeb0a0aee
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908181"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527837"
 ---
 # <a name="createclassenumwmi-function"></a>CreateClassEnumWmi (fonction)
-Retourne un énumérateur pour toutes les classes qui répondent aux critères de sélection spécifiés.  
+Retourne un énumérateur pour toutes les classes qui remplissent les critères de sélection spécifiés.  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   

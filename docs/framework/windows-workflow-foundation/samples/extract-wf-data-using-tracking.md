@@ -2,18 +2,18 @@
 title: Extraire des données WF à l'aide du suivi
 ms.date: 03/30/2017
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-ms.openlocfilehash: 22b147521d4ce0c72fadfb7adc81e05f10ce52b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef8118df2c5834e32c40760ef31f75660893d89b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501581"
 ---
 # <a name="extract-wf-data-using-tracking"></a>Extraire des données WF à l'aide du suivi
 Cet exemple montre comment utiliser le suivi de workflow pour extraire des variables de workflow et des arguments d’activités. Il montre également l'ajout d'annotations à des enregistrements de suivi et l'extraction de la charge utile de données dans des enregistrements de suivi personnalisés. L'exemple utilise le participant de suivi Suivi d'événements pour Windows (ETW, Event Tracing for Windows) pour extraire des données du workflow.  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
- Windows Workflow Foundation (WF) fournit le suivi pour gagner en visibilité dans l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Avec les enregistrements de suivi de workflow, les données dans l'instance de workflow peuvent être extraites du workflow. La liste suivante détaille les types des données qui peuvent être extraites des enregistrements de suivi :  
+ Windows Workflow Foundation (WF) fournit le suivi pour gagner en visibilité concernant l’exécution d’une instance de workflow. Le runtime de suivi émet des enregistrements de suivi de workflow lors de l'exécution du workflow. Avec les enregistrements de suivi de workflow, les données dans l'instance de workflow peuvent être extraites du workflow. La liste suivante détaille les types des données qui peuvent être extraites des enregistrements de suivi :  
   
 1.  Variables de workflow dans une activité et enregistrements de suivi pendant l'exécution de l'activité.  
   
@@ -120,7 +120,7 @@ Cet exemple montre comment utiliser le suivi de workflow pour extraire des varia
   
 13. Cliquez sur **appeler**.  
   
-14. Revenez à l’Observateur d’événements et naviguez jusqu'à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **Actualiser**. Les événements de workflow sont dans la plage d'ID d’événements comprise entre 100 et 199.  
+14. Revenez à l’Observateur d’événements et accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **Actualiser**. Les événements de workflow sont dans la plage d'ID d’événements comprise entre 100 et 199.  
   
      Les événements contiennent les annotations, variables, arguments et enregistrements de suivi personnalisés qui peuvent être affichés dans l'observateur d'événements.  
   
@@ -131,9 +131,9 @@ Cet exemple montre comment utiliser le suivi de workflow pour extraire des varia
   
 1.  Ouvrez l'observateur d'événements.  
   
-2.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Les Applications serveur**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.  
+2.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.  
   
-3.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Les Applications serveur**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.  
+3.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.  
   
      Choisissez le **effacer** option pour effacer les événements.  
   
@@ -151,9 +151,9 @@ Cet exemple montre comment utiliser le suivi de workflow pour extraire des varia
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\ExtractWfData`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

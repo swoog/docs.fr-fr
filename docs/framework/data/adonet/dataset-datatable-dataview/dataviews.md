@@ -3,11 +3,11 @@ title: DataViews
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: 75719e91daba189c1d93491a1db26acc80100bea
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409168"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514750"
 ---
 # <a name="dataviews"></a>DataViews
 Un objet <xref:System.Data.DataView> vous permet de créer différentes vues des données stockées dans un objet <xref:System.Data.DataTable>, possibilité qui est souvent utilisée dans les applications de liaison de données. À l’aide un **DataView**, vous pouvez exposer les données dans une table avec différents ordres de tri, et vous pouvez filtrer les données par état de ligne ou en fonction d’une expression de filtre.  

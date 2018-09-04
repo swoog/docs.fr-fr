@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: ab96e8f3395a78c88184872a2c78b71fb2bf7b9e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403459"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522109"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Consommation d’un DataSet à partir d’un service web XML
 L'objet <xref:System.Data.DataSet> a été conçu avec une architecture déconnectée, en partie afin de faciliter le transport des données sur Internet. Le **DataSet** est « sérialisable » dans la mesure où il peut être spécifié en tant qu’entrée ou de sortie à partir des services Web XML sans aucun codage supplémentaire requis pour transmettre le contenu de la **DataSet** à partir d’un service Web XML pour un client et le serveur. Le **DataSet** est implicitement converti en flux XML en utilisant le format DiffGram, envoyé sur le réseau, puis reconstruit à partir du flux XML en tant qu’un **DataSet** sur l’extrémité de réception. Vous disposez ainsi d’une méthode alliant simplicité et souplesse pour la transmission et le retour de données relationnelles à l’aide des services web XML. Pour plus d’informations sur le format DiffGram, consultez [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  

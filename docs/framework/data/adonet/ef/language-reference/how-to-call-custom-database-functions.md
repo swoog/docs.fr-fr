@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 790bb8d4ea1e146d94ea7cf153b8909c6cc1af7a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e7c94dce5b50fe93f00aaaa72206be3394faf62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762843"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542204"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Comment : appeler des fonctions de base de données personnalisées
 Cette rubrique décrit comment appeler des fonctions personnalisées définies dans la base de données dans des requêtes LINQ to Entities.  
@@ -23,18 +23,18 @@ Cette rubrique décrit comment appeler des fonctions personnalisées définies d
   
 1.  Créez une fonction personnalisée dans votre base de données.  
   
-     Pour plus d’informations sur la création de fonctions personnalisées dans SQL Server, consultez [CREATE FUNCTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=139871).  
+     Pour plus d’informations sur la création de fonctions personnalisées dans SQL Server, consultez [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
 2.  Déclarez une fonction dans la partie SSDL (Store Schema Definition Language) de votre fichier .edmx. Le nom de la fonction doit être le même que le nom de la fonction déclarée dans la base de données.  
   
-     Pour plus d’informations, consultez [élément (fonction) (SSDL)](http://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4).  
+     Pour plus d’informations, consultez [élément (fonction) (SSDL)](https://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4).  
   
 3.  Ajoutez une méthode correspondante à une classe dans votre code d'application et appliquez un attribut <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> à la méthode. Notez que les paramètres <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> et <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> de l'attribut sont respectivement le nom de l'espace de noms du modèle conceptuel et le nom de la fonction dans le modèle conceptuel. La résolution des noms de fonctions pour LINQ respecte la casse.  
   
 4.  Appelez la méthode dans une requête LINQ to Entities.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre comment appeler une fonction de base de données personnalisée dans une requête LINQ to Entities. L'exemple utilise le modèle School. Pour plus d’informations sur le modèle School, consultez [création de la base de données School](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) et [générer le fichier de .edmx scolaire](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ L'exemple suivant montre comment appeler une fonction de base de données personnalisée dans une requête LINQ to Entities. L'exemple utilise le modèle School. Pour plus d’informations sur le modèle School, consultez [création de la base de données School](https://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) et [générant le fichier de School .edmx](https://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
   
  Le code suivant ajoute la fonction `AvgStudentGrade` à l'exemple de base de données School.  
   
@@ -61,5 +61,5 @@ Cette rubrique décrit comment appeler des fonctions personnalisées définies d
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [vue d’ensemble du fichier .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [vue d’ensemble du fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Requêtes dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

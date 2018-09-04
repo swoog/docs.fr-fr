@@ -2,12 +2,12 @@
 title: Using the WCF Moniker with COM Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 6d47b9c655db932bb9a4243533fbd01bcf25e0df
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: f052504648d381d6fb19fb6db0ebb1dd1086ed3c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515717"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Using the WCF Moniker with COM Clients
 Cet exemple montre comment utiliser le moniker de service Windows Communication Foundation (WCF) pour intégrer des services Web dans des environnements de développement COM, tels que Microsoft Office Visual Basic pour Applications (Office VBA) ou Visual Basic 6.0. Il se compose d'un client Windows Script Host (.vbs), d'une bibliothèque de client assurant la prise en charge (.dll) et d'une bibliothèque de service (.dll) hébergée par les services IIS (Internet Information Services). Le service correspond à un service de calculatrice et le client COM appelle les opérations mathématiques suivantes sur le service : addition, soustraction, multiplication et division. L'activité du client s'affiche dans les fenêtres de message.  
@@ -20,7 +20,7 @@ Cet exemple montre comment utiliser le moniker de service Windows Communication 
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
@@ -100,7 +100,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
   
- Lorsque vous exécutez l'exemple, la réponse d'opération est affichée dans une fenêtre de message Windows Script Host. Ici, un client COM effectue des appels COM à l’aide du moniker typé pour communiquer avec un service WCF. Bien que ce client utilise COM, les communications avec le service se composent uniquement d'appels de service Web.  
+ Lorsque vous exécutez l'exemple, la réponse d'opération est affichée dans une fenêtre de message Windows Script Host. Cet exemple montre un client COM effectue des appels COM à l’aide du moniker typé pour communiquer avec un service WCF. Bien que ce client utilise COM, les communications avec le service se composent uniquement d'appels de service Web.  
   
 ## <a name="wsdl-contract"></a>Contrat WSDL  
  Pour utiliser le moniker à l'aide du contrat WSDL du service, aucune inscription de bibliothèque côté client n'est requise. Ce contrat doit cependant être récupéré via un mécanisme hors bande, par exemple à l'aide d'un navigateur permettant d'accéder au point de terminaison WSDL de ce service. Le moniker peut accéder ensuite à ce contrat pendant l'exécution.  
@@ -136,7 +136,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   Nom et espace de noms du contrat. Cette identification est requise, le WSDL étant susceptible de contenir plusieurs contrats.  
   
     > [!NOTE]
-    >  Génèrent des fichiers WSDL distincts pour chaque espace de noms par défaut, les services WCF qui l’utilisation. Ces espaces sont liés à l'utilisation de la construction d'importation WSDL. Le moniker escomptant une définition WSDL unique, le service doit utiliser un espace de noms unique comme illustré dans cet exemple ou les fichiers distincts doivent être fusionnés manuellement.  
+    >  Par défaut, les services WCF génèrent des fichiers WSDL distincts pour chaque espace de noms que l’utilisation. Ces espaces sont liés à l'utilisation de la construction d'importation WSDL. Le moniker escomptant une définition WSDL unique, le service doit utiliser un espace de noms unique comme illustré dans cet exemple ou les fichiers distincts doivent être fusionnés manuellement.  
   
  Une fois l'instance de proxy générée à l'aide du moniker de service, l'application cliente peut appeler des méthodes sur ce proxy, ce qui provoque l'appel des opérations de service correspondantes de la part de l'infrastructure du moniker.  
   
@@ -145,7 +145,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
   
- Lorsque vous exécutez l'exemple, la réponse d'opération est affichée dans une fenêtre de message Windows Script Host. Ici, un client COM effectue des appels COM à l’aide du moniker avec un contrat WSDL pour communiquer avec un service WCF.  
+ Lorsque vous exécutez l'exemple, la réponse d'opération est affichée dans une fenêtre de message Windows Script Host. Cet exemple montre un client COM effectue des appels COM à l’aide du moniker avec un contrat WSDL pour communiquer avec un service WCF.  
   
 ## <a name="metadata-exchange-contract"></a>Contrat d'échange de métadonnées  
  Pour utiliser le moniker avec un contrat MEX, comme avec le contrat WSDL, aucune inscription côté client n'est requise. Le contrat du service est récupéré pendant l'exécution via l'utilisation interne de l'échange de métadonnées.  
@@ -180,32 +180,32 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
   
- Lorsque vous exécutez l'exemple, la réponse d'opération est affichée dans une fenêtre de message Windows Script Host. Ici, un client COM effectue des appels COM à l’aide du moniker avec un contrat MEX pour communiquer avec un service WCF.  
+ Lorsque vous exécutez l'exemple, la réponse d'opération est affichée dans une fenêtre de message Windows Script Host. Cet exemple montre un client COM effectue des appels COM à l’aide du moniker avec un contrat MEX pour communiquer avec un service WCF.  
   
 #### <a name="to-set-up-and-build-the-sample"></a>Pour configurer et générer l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  À partir d’une invite de commandes Visual Studio, ouvrez le dossier \client\bin, sous le dossier de langue spécifique.  
+3.  À partir d’une invite de commandes Visual Studio, ouvrez le dossier \client\bin, sous le dossier spécifique à la langue.  
   
     > [!NOTE]
     >  Si vous utilisez [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 ou Windows Server 2008 R2, veillez à exécuter l'invite de commandes avec des privilèges d'administrateur.  
   
-4.  Tapez dans `tlbexp.exe client.dll /out:CalcProxy.tlb` pour exporter le fichier dll vers un fichier tlb. Un avertissement d'exportateur de bibliothèques de types est escompté mais ceci ne présente pas de problème dans la mesure où le type générique n'est pas requis.  
+4.  Tapez dans `tlbexp.exe client.dll /out:CalcProxy.tlb` pour exporter la dll vers un fichier tlb. Un avertissement d'exportateur de bibliothèques de types est escompté mais ceci ne présente pas de problème dans la mesure où le type générique n'est pas requis.  
   
 5.  Tapez dans `regasm.exe /tlb:CalcProxy.tlb client.dll` pour enregistrer les types avec COM. Un avertissement d'exportateur de bibliothèques de types est escompté mais ceci ne présente pas de problème dans la mesure où le type générique n'est pas requis.  
   
-6.  Tapez dans `gacutil.exe /i client.dll` pour ajouter l’assembly dans le Global Assembly Cache.  
+6.  Tapez dans `gacutil.exe /i client.dll` pour ajouter l’assembly au Global Assembly Cache.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur  
   
-1.  Test que vous pouvez accéder au service à l’aide d’un navigateur en tapant l’adresse suivante : `http://localhost/servicemodelsamples/service.svc`. Une page de confirmation doit s'afficher en réponse.  
+1.  Vérifiez que vous pouvez accéder au service à l’aide d’un navigateur en tapant l’adresse suivante : `http://localhost/servicemodelsamples/service.svc`. Une page de confirmation doit s'afficher en réponse.  
   
 2.  Exécutez ComCalcClient.vbs à partir du dossier \client figurant dans le dossier correspondant à votre langue. L'activité du client est affichée dans les fenêtres de message.  
   
-3.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -223,11 +223,11 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 7.  À partir d'une invite de commandes, naviguez jusqu'à ce répertoire de destination. Si vous utilisez [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], assurez-vous d'exécuter l'invite de commandes en tant qu'administrateur.  
   
-8.  Tapez dans `tlbexp.exe client.dll /out:CalcProxy.tlb` pour exporter le fichier dll vers un fichier tlb. Un avertissement d'exportateur de bibliothèques de types est escompté mais ceci ne présente pas de problème dans la mesure où le type générique n'est pas requis.  
+8.  Tapez dans `tlbexp.exe client.dll /out:CalcProxy.tlb` pour exporter la dll vers un fichier tlb. Un avertissement d'exportateur de bibliothèques de types est escompté mais ceci ne présente pas de problème dans la mesure où le type générique n'est pas requis.  
   
-9. Tapez dans `regasm.exe /tlb:CalcProxy.tlb client.dll` pour enregistrer les types avec COM. Assurez-vous que le chemin a été défini sur le dossier qui contient `regasm.exe` avant d’exécuter la commande.  
+9. Tapez dans `regasm.exe /tlb:CalcProxy.tlb client.dll` pour enregistrer les types avec COM. Vérifiez ce chemin d’accès a été défini sur le dossier qui contient `regasm.exe` avant d’exécuter la commande.  
   
-10. Tapez dans `gacutil.exe /i client.dll` pour ajouter l’assembly dans le Global Assembly Cache. Assurez-vous que le chemin a été défini sur le dossier qui contient `gacutil.exe` avant d’exécuter la commande.  
+10. Tapez dans `gacutil.exe /i client.dll` pour ajouter l’assembly au Global Assembly Cache. Vérifiez ce chemin d’accès a été défini sur le dossier qui contient `gacutil.exe` avant d’exécuter la commande.  
   
 11. Assurez-vous que le service est accessible depuis l'ordinateur client à l'aide d'un navigateur.  
   

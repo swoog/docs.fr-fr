@@ -3,11 +3,11 @@ title: Supporting Tokens
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
 ms.openlocfilehash: 14f1cbf628e0666f0a8e96123cafe29ba300ea78
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470864"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524813"
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
 Cet exemple montre comment ajouter des jetons supplémentaires à un message qui utilise WS-Security. L'exemple ajoute un jeton de sécurité binaire X.509 outre un jeton de sécurité de nom d'utilisateur. Le jeton est passé dans un en-tête de message WS-Security du client au service et une partie du message est signée avec la clé privée associée au jeton de sécurité X.509 pour prouver la possession du certificat X.509 au récepteur. Cela s'avère utile dans le cas où plusieurs revendications doivent être associées à un message pour authentifier ou autoriser l'expéditeur. Le service implémente un contrat qui définit un modèle de communication demande-réponse.  

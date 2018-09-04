@@ -6,11 +6,11 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: d6a121e2a95ce4005b43937f83c6c74ec7d8f1c1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474003"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514856"
 ---
 # <a name="cleartype-registry-settings"></a>Paramètres du Registre ClearType
 Cette rubrique fournit une vue d’ensemble de la [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] des paramètres de Registre qui sont utilisés par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  

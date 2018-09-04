@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
 ms.openlocfilehash: a170423a5ae132c70710e22b5d61f57c46fdfc28
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332077"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523762"
 ---
 # <a name="basic-data-contract"></a>Basic Data Contract
 Cet exemple illustre comment implémenter un contrat de données. Les contrats de données vous permettent de transférer des données structurées vers des services et à partir de ceux-ci. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) mais utilise des nombres complexes au lieu de types numériques de base.  

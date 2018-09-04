@@ -13,11 +13,11 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389623"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501613"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Procédure pas à pas : création d'une application de chiffrement
 Cette procédure pas à pas montre comment chiffrer et déchiffrer du contenu. Les exemples de code sont conçus pour une application Windows Forms. Cette application ne montre pas de scénarios du monde réel, tels que l'utilisation de cartes à puce. Elle montre les principes fondamentaux du chiffrement et du déchiffrement.  

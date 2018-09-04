@@ -2,23 +2,23 @@
 title: Informations générales
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363215"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515630"
 ---
 # <a name="background-information"></a>Informations générales
 Les rubriques de cette section présentent des concepts et des procédures plus approfondis sur l'utilisation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Suivez ces étapes pour rechercher des exemples supplémentaires de code et d'applications [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] :  
   
--   Recherchez Microsoft Docs des problèmes spécifiques.  
+-   Pour connaître les problèmes spécifiques de recherche Microsoft Docs.  
   
--   Participer à la [Forum LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), où vous pourrez aborder des sujets plus complexes avec des experts.  
+-   Participer à la [Forum LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), où vous pourrez aborder des sujets plus complexes avec des experts.  
   
--   Étudiez le livre blanc qui détaille [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologie, terminée avec des exemples de code Visual Basic et c#. Pour plus d’informations, consultez [LINQ to SQL : Language-Integrated Query for Relational Data](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Étudiez le livre blanc qui détaille [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologie, obtenir des exemples de code Visual Basic et c#. Pour plus d’informations, consultez [LINQ to SQL : Language-Integrated Query pour les données relationnelles](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [ADO.NET et LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

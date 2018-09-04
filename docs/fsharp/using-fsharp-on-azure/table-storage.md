@@ -4,11 +4,11 @@ description: Store données structurées dans le cloud à l’aide du stockage T
 author: sylvanc
 ms.date: 03/26/2018
 ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465010"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519533"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aide de F # # 
 

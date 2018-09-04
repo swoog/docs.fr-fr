@@ -2,11 +2,12 @@
 title: '&lt;add&gt; de &lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
-ms.openlocfilehash: 7973a1d759eaec06a6bd69822bbbf53ff77721ba
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552294"
 ---
 # <a name="ltaddgt-of-ltcommonparametersgt"></a>&lt;add&gt; de &lt;commonParameters&gt;
 Spécifie une paire nom-valeur de paramètres utilisés globalement dans plusieurs services. Ce paramètre inclut généralement la chaîne de connexion de base de données pouvant être partagée par les services fiables.  
@@ -46,7 +47,7 @@ Spécifie une paire nom-valeur de paramètres utilisés globalement dans plusieu
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<commonParameters>](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Collection de paramètres communs utilisée par les services. Cette collection inclut généralement la chaîne de connexion de base de données pouvant être partagée par les services fiables.|  
+|[\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|Collection de paramètres communs utilisée par les services. Cette collection inclut généralement la chaîne de connexion de base de données pouvant être partagée par les services fiables.|  
   
 ## <a name="remarks"></a>Notes  
  L'élément `<commonParameters>` définit tous les paramètres utilisés globalement dans plusieurs services, par exemple `ConnectionString` lors de l'utilisation de <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
@@ -65,9 +66,9 @@ Spécifie une paire nom-valeur de paramètres utilisés globalement dans plusieu
 </WorkflowRuntime>  
 ```  
   
- Notez que la `EnableRetries` paramètre peut être défini pour un niveau global (comme indiqué dans le *Paramètres_courants* section) ou pour des services individuels qui prennent en charge `EnableRetries` (comme indiqué dans le *Services*section).  
+ Notez que le `EnableRetries` paramètre peut être défini à un niveau global (comme indiqué dans le *Paramètres_courants* section) ou pour des services individuels qui prennent en charge `EnableRetries` (comme indiqué dans le *Services*section).  
   
- Pour plus d’informations sur l’utilisation d’un fichier de configuration pour contrôler le comportement d’un <xref:System.Workflow.Runtime.WorkflowRuntime> objet d’une application hôte Windows Workflow Foundation, consultez [les fichiers de Configuration de flux de travail](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909).  
+ Pour plus d’informations sur l’utilisation d’un fichier de configuration pour contrôler le comportement d’un <xref:System.Workflow.Runtime.WorkflowRuntime> objet d’une application hôte Windows Workflow Foundation, consultez [les fichiers de Configuration de flux de travail](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Exemple  
   
@@ -84,5 +85,5 @@ Spécifie une paire nom-valeur de paramètres utilisés globalement dans plusieu
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- [Fichiers de Configuration de flux de travail](http://msdn.microsoft.com/library/ada4bb90-6c9d-4f3d-a9d0-b559bb0f9909)  
- [\<commonParameters>](http://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+ [Fichiers de Configuration de flux de travail](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))  
+ [\<commonParameters>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)

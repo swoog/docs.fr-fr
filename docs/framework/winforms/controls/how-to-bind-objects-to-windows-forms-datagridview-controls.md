@@ -10,11 +10,11 @@ helpviewer_keywords:
 - object binding [Windows Forms], DataGridView control
 ms.assetid: cb8f29fa-577e-4e2b-883f-3a01c6189b9c
 ms.openlocfilehash: 142009bb2c845384c19e5999896afbfa2ebd0a3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511774"
 ---
 # <a name="how-to-bind-objects-to-windows-forms-datagridview-controls"></a>Comment : lier des objets aux contrôles DataGridView Windows Forms
 L'exemple de code suivant montre comment lier une collection d'objets à un contrôle <xref:System.Windows.Forms.DataGridView> pour que chaque objet soit affichée sur une ligne distincte. Cet exemple illustre également comment afficher une propriété avec un type énumération dans un <xref:System.Windows.Forms.DataGridViewComboBoxColumn> pour que la zone de liste déroulante modifiable contienne les valeurs d'énumération.  

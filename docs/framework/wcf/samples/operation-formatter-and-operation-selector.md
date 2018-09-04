@@ -2,15 +2,15 @@
 title: Operation Formatter and Operation Selector
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: db548e99c99ba6f29cc1c6e998d0e7485cd41046
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a814de7433f2d06491245dc1d6e6e637b514118a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808658"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542360"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Operation Formatter and Operation Selector
-Cet exemple illustre l’utilisation des points d’extensibilité de Windows Communication Foundation (WCF) pour autoriser les données du message dans un format différent de celui attendu par WCF. Par défaut, les formateurs WCF attendent des paramètres de méthode soient inclus sous la `soap:body` élément. L'exemple montre comment implémenter à la place un formateur d'opération personnalisé qui analyse les données de paramètre d'une chaîne de requête HTTP GET chaîne et appelle des méthodes à l'aide de ces données.  
+Cet exemple illustre l’utilisation des points d’extensibilité de Windows Communication Foundation (WCF) pour autoriser les données de message dans un format différent de ce qu’attend WCF. Par défaut, les formateurs WCF attendent des paramètres de méthode soient inclus sous le `soap:body` élément. L'exemple montre comment implémenter à la place un formateur d'opération personnalisé qui analyse les données de paramètre d'une chaîne de requête HTTP GET chaîne et appelle des méthodes à l'aide de ces données.  
   
  L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Il montre comment les messages d'ajout, de soustraction, de multiplication et de division peuvent être modifiés pour utiliser HTTP GET pour les demandes de client à serveur et HTTP POST avec messages POX pour les réponses de serveur à client.  
   
@@ -63,7 +63,7 @@ Cet exemple illustre l’utilisation des points d’extensibilité de Windows Co
  Par défaut, WCF utilise un filtre d’adresse de correspondance exacte. L'URI sur le message entrant contient un suffixe de nom d'opération suivi par une chaîne de requête qui contient des données de paramètre, donc le comportement de point de terminaison modifie également le filtre d'adresse en filtre de correspondance du préfixe. Il utilise WCF<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> à cet effet.  
   
 ### <a name="installing-operation-formatters"></a>Installation des formateurs d'opération  
- Les comportements d'opération qui spécifient des formateurs sont uniques. Un tel comportement est toujours implémenté par défaut pour chaque opération pour créer le formateur d'opération nécessaire. Toutefois, ces comportements ressemblent à tous les autres comportements d'opération ; ils ne sont pas identifiables par tout autre attribut. Pour installer un comportement de remplacement, l’implémentation doit rechercher les comportements de formateur spécifiques qui sont installés par le chargeur de type WCF par défaut, soit remplacement ou ajouter un comportement compatible à exécuter après le comportement par défaut.  
+ Les comportements d'opération qui spécifient des formateurs sont uniques. Un tel comportement est toujours implémenté par défaut pour chaque opération pour créer le formateur d'opération nécessaire. Toutefois, ces comportements ressemblent à tous les autres comportements d'opération ; ils ne sont pas identifiables par tout autre attribut. Pour installer un comportement de remplacement, l’implémentation doit rechercher des comportements de formateur spécifiques qui sont installés par le chargeur de type WCF par défaut et soit remplacement ou ajouter un comportement compatible à exécuter après le comportement par défaut.  
   
  Ces comportements de formateur d'opération peuvent être installés par programme avant d'appeler <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A?displayProperty=nameWithType> ou en spécifiant un comportement d'opération exécuté après le comportement par défaut. Cependant, ils ne peuvent pas être installés facilement par un comportement de point de terminaison (et par conséquent par la configuration) parce que le modèle de comportement ne permet pas à un comportement de remplacer d'autres comportements ou modifier de toute autre manière l'arborescence de description.  
   
@@ -166,16 +166,16 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QuieryStringFormatter`  
   
 ##### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Voir aussi

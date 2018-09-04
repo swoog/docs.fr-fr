@@ -3,11 +3,11 @@ title: Data Binding in a Windows Presentation Foundation Client
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
 ms.openlocfilehash: 69e61a52adc3d5058b9ccd65d2cde2ca7d74bbe6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514313"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Data Binding in a Windows Presentation Foundation Client
 Cet exemple illustre l’utilisation de la liaison de données dans un client Windows Presentation Foundation (WPF). L’exemple utilise un service Windows Communication Foundation (WCF) qui génère de manière aléatoire un tableau d’albums à retourner au client. Pour chaque album, un nom, un prix et une liste des pistes y figurant sont définis. Un nom et une durée sont indiqués pour chaque piste. Les informations retournées par le service sont automatiquement liées à l’interface utilisateur (IU) fourni par le client Windows Presentation Foundation (WPF).  

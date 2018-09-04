@@ -2,12 +2,12 @@
 title: Service de routage
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: e3170108ae190c08a42cc7d80d66576a7b4f8a8e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 139607614934aedbad9f76172b8e31fb02394d80
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496225"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522168"
 ---
 # <a name="routing-service"></a>Service de routage
 Le service de routage est un intermédiaire SOAP générique qui agit en tant que routeur de messages. La fonctionnalité principale du service de routage est la possibilité de router des messages en fonction du contenu des messages ; un message peut ainsi être envoyé à un point de terminaison client en fonction d'une valeur située à l'intérieur du message, soit dans l'en-tête, soit dans le corps du message.  
@@ -34,10 +34,10 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
   
  Bien qu'il soit possible de créer un service intermédiaire répondant à un ou plusieurs de ces objectifs, une telle implémentation est souvent liée à un scénario ou à une solution spécifique et ne peut pas être appliquée facilement à de nouvelles applications.  
   
- Le Service de routage fournit un intermédiaire SOAP générique, configurable de manière dynamique et connectable qui est compatible avec les modèles de Service WCF et de canal et vous permet d’effectuer le routage basé sur le contenu des messages SOAP.  
+ Le Service de routage fournit un intermédiaire SOAP générique, configurable de manière dynamique et connectable qui est compatible avec les modèles de Service WCF et de canal et vous permet d’effectuer un routage basé sur le contenu des messages SOAP.  
   
 > [!NOTE]
->  Le service de routage ne prend pas actuellement en charge le routage de services WCF REST.  Pour router des appels REST, envisagez d’utiliser <xref:System.Web.Routing> ou [Application Request Routing](http://go.microsoft.com/fwlink/?LinkId=164589) (http://go.microsoft.com/fwlink/?LinkId=164589).  
+>  Le service de routage ne prend pas actuellement en charge le routage de services WCF REST.  Pour router des appels REST, envisagez d’utiliser <xref:System.Web.Routing> ou [Application Request Routing](https://go.microsoft.com/fwlink/?LinkId=164589).  
   
 ## <a name="content-based-routing"></a>Routage basé sur le contenu  
  Le routage basé sur le contenu est la possibilité de router un message en fonction d'une ou plusieurs valeurs contenues dans le message. Le service de routage examine chaque message et le route vers le point de terminaison de destination en fonction du contenu du message et de la logique de routage que vous créez. Le routage basé sur le contenu fournit la base de l'agrégation de service, du contrôle des versions de service et du routage par priorité.  
@@ -56,7 +56,7 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
   
 -   Configuration dynamique  
   
- Pour plus d’informations sur les filtres de messages et tables de filtres, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Pour plus d’informations sur les filtres de messages et tables de filtres, consultez [Introduction routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ### <a name="service-aggregation"></a>Agrégation de service  
  En utilisant le routage basé sur le contenu, vous pouvez exposer un point de terminaison qui reçoit des messages provenant d'applications clientes externes, puis router chaque message vers le point de terminaison interne approprié en fonction d'une valeur contenue dans le message. Cela permet d'offrir un point de terminaison spécifique à diverses applications principales, et également d'offrir aux clients un point de terminaison d'application tout en développant votre application en une variété de services.  
@@ -70,7 +70,7 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
 ## <a name="dynamic-configuration"></a>Configuration Dynamique  
  Pour prendre en charge des systèmes fondamentaux, où les messages doivent être traités sans interruption de service, il est essentiel de pouvoir modifier la configuration des composants dans le système au moment de l'exécution. Pour prendre en charge ce besoin, le service de routage fournit une implémentation <xref:System.ServiceModel.IExtension%601>, l'objet <xref:System.ServiceModel.Routing.RoutingExtension>, qui permet une mise à jour dynamique de la configuration du service de routage au moment de l'exécution.  
   
- Pour plus d’informations sur la configuration dynamique, le Service de routage, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Pour plus d’informations sur la configuration dynamique du Service de routage, consultez [Introduction routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="protocol-bridging"></a>Pontage de protocoles  
  L'une des difficultés dans les scénarios intermédiaires est que les points de terminaison internes peuvent avoir besoin d'une version du transport ou SOAP différentes de celle du point de terminaison sur lequel les messages sont reçus. Pour prendre en charge ce scénario, le service de routage peut lier des protocoles, notamment le traitement de messages SOAP avec le <xref:System.ServiceModel.Channels.MessageVersion> requis par le ou les points de terminaison de destination. Un protocole peut ainsi être utilisé pour la communication interne, tandis qu'un autre peut être utilisé pour la communication externe.  
@@ -78,21 +78,21 @@ Le service de routage est un intermédiaire SOAP générique qui agit en tant qu
  Pour prendre en charge le routage de messages entre des points de terminaison avec des transports différents, le service de routage utilise des liaisons fournies par le système qui permettent au service de lier des protocoles hétérogènes. Ce pontage s'effectue automatiquement lorsque le point de terminaison de service exposé par le service de routage utilise un autre protocole que les points de terminaison clients vers lesquels les messages sont routés.  
   
 ## <a name="soap-processing"></a>Traitement SOAP  
- Un besoin de routage courant est la possibilité de router des messages entre des points de terminaison ayant des spécifications SOAP différentes. Pour prendre en charge cette exigence, le Service de routage fournit un <xref:System.ServiceModel.Routing.SoapProcessingBehavior> qui crée automatiquement une nouvelle **MessageVersion** répondant aux exigences du point de terminaison de destination avant que le message est routé vers lui. Ce comportement crée également un **MessageVersion** pour tout message de réponse avant de le renvoyer à l’application cliente demande, pour vous assurer que le **MessageVersion** de la réponse correspond à celle de la demande d’origine.  
+ Un besoin de routage courant est la possibilité de router des messages entre des points de terminaison ayant des spécifications SOAP différentes. Pour prendre en charge cette exigence, le Service de routage fournit un <xref:System.ServiceModel.Routing.SoapProcessingBehavior> qui crée automatiquement un nouveau **MessageVersion** qui répond aux exigences du point de terminaison de destination avant que le message est acheminé vers elle. Ce comportement crée également un **MessageVersion** pour n’importe quel message de réponse avant de le renvoyer à l’application cliente demandeuse, pour vous assurer que le **MessageVersion** de la réponse correspond à celle de la demande d’origine.  
   
- Pour plus d’informations sur le traitement SOAP, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Pour plus d’informations sur le traitement SOAP, consultez [Introduction routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  Dans un système composé de services distribués reposant sur des communications réseau, il est important de s'assurer que les communications dans votre système résistent aux pannes réseau temporaires.  Le service de routage implémente une gestion des erreurs qui permet de gérer de nombreux scénarios de défaillance de communication risquant de provoquer une interruption de service.  
   
  Si le service de routage rencontre une exception <xref:System.ServiceModel.CommunicationException> en essayant d'envoyer un message, la gestion des erreurs intervient.  Ces exceptions indiquent en général qu'un problème s'est produit lors de la tentative de communication avec le point de terminaison client défini ; il peut s'agir d'une exception <xref:System.ServiceModel.EndpointNotFoundException>, <xref:System.ServiceModel.ServerTooBusyException> ou <xref:System.ServiceModel.CommunicationObjectFaultedException>.  Le code de gestion des erreurs intercepte également et tentez de nouvelle tentative d’envoi quand un **TimeoutException** se produit, qui est une autre exception courante non dérivée de **CommunicationException**.  
   
- Pour plus d’informations sur la gestion des erreurs, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
+ Pour plus d’informations sur la gestion des erreurs, consultez [Introduction routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md).  
   
 ## <a name="backup-endpoints"></a>Points de terminaison de sauvegarde  
  En plus des points de terminaison clients de destination associés à chaque définition de filtre dans la table de filtres, vous pouvez également créer une liste de points de terminaison de sauvegarde, vers lesquels le message sera routé en cas d'échec de transmission. Si une erreur se produit et qu'une liste de sauvegarde est définie pour l'entrée de filtre, le service de routage essaie d'envoyer le message au premier point de terminaison défini dans la liste. Si cette tentative de transmission échoue, le service essaie le point de terminaison suivant et continue ce processus jusqu'à ce que la tentative de transmission réussisse, retourne une erreur non liée à la transmission ou que tous les points de terminaison de la liste de sauvegarde aient retourné une erreur de transmission.  
   
- Pour plus d’informations sur les points de terminaison de sauvegarde, consultez [Introduction de routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
+ Pour plus d’informations sur les points de terminaison de sauvegarde, consultez [Introduction routage](../../../../docs/framework/wcf/feature-details/routing-introduction.md) et [filtres de Message](../../../../docs/framework/wcf/feature-details/message-filters.md).  
   
 ## <a name="streaming"></a>Diffusion en continu  
  Le service de routage peut diffuser en continu les messages si vous définissez la liaison qui prend en charge la diffusion en continu.  Toutefois, dans certains cas, les messages doivent être mis en mémoire tampon :  

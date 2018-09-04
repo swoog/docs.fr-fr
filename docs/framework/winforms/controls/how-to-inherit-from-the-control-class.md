@@ -8,17 +8,18 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: da80d46f27d7cd721af7a9600d2b0cde84876d23
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43531743"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Comment : hériter de la classe du contrôle
-Si vous souhaitez créer un contrôle entièrement personnalisé à utiliser sur un Windows Form, vous devez hériter de la <xref:System.Windows.Forms.Control> classe. Lors de l’héritage à partir de la <xref:System.Windows.Forms.Control> classe exige que vous effectuez la planification et implémentation plus, il vous fournit également la plus grande plage d’options. Lorsque vous héritez de <xref:System.Windows.Forms.Control>, vous héritez de la fonctionnalité de base qui rend les contrôles. Les fonctionnalités inhérentes à la <xref:System.Windows.Forms.Control> classe gère l’entrée utilisateur via le clavier et souris, définissent les limites et la taille du contrôle, fournit un handle windows et fournit la sécurité et la gestion des messages. Elles n’intègrent pas la peinture, qui désigne ici le rendu réel de l’interface graphique du contrôle, ni les fonctionnalités d’interaction utilisateur spécifiques. Vous devez fournir tous ces aspects par le biais de code personnalisé.  
+Si vous souhaitez créer un contrôle entièrement personnalisé à utiliser sur un formulaire Windows, vous devez hériter de la <xref:System.Windows.Forms.Control> classe. Tout en héritant de la <xref:System.Windows.Forms.Control> classe nécessite que vous effectuer davantage de planification et de l’implémentation, il vous fournit également la plus grande plage d’options. Lorsque vous héritez de <xref:System.Windows.Forms.Control>, vous héritez des fonctionnalités très basique qui facilite le travail de contrôles. Les fonctionnalités inhérentes à la <xref:System.Windows.Forms.Control> classe gère l’entrée utilisateur via le clavier et de la souris, définissent les limites et la taille du contrôle, fournit un handle windows et fournit la gestion des messages et la sécurité. Elles n’intègrent pas la peinture, qui désigne ici le rendu réel de l’interface graphique du contrôle, ni les fonctionnalités d’interaction utilisateur spécifiques. Vous devez fournir tous ces aspects par le biais de code personnalisé.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-create-a-custom-control"></a>Pour créer un contrôle personnalisé  
   

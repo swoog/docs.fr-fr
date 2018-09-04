@@ -10,11 +10,11 @@ helpviewer_keywords:
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
 ms.openlocfilehash: ebc8d4c6cb36d76b70691cce183f9e6070d19822
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399425"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507045"
 ---
 # <a name="how-to-transform-a-brush"></a>Comment : transformer un pinceau
 Cet exemple montre comment transformer <xref:System.Windows.Media.Brush> objets à l’aide de leurs deux propriétés de transformation : <xref:System.Windows.Media.Brush.RelativeTransform%2A> et <xref:System.Windows.Media.Brush.Transform%2A>.  

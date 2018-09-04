@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
 ms.openlocfilehash: 5ce801a96bc4ef48934b983838dcf8578a5bc6e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405345"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503015"
 ---
 # <a name="control-type-recommendations"></a>Recommandations relatives au type du contrôle
 .NET Framework vous offre la possibilité de développer et d'implémenter de nouveaux contrôles. Outre le contrôle utilisateur familier, vous constaterez que vous pouvez désormais écrire des contrôles personnalisés qui effectuent leur propre peinture et même étendre les fonctionnalités des contrôles existants via l'héritage. Le choix du type de contrôle à créer peut être délicat. Cette section souligne les différences entre les différents types de contrôles à partir desquels vous pouvez hériter et fournit des conseils quant au type le plus adapté à votre projet.  

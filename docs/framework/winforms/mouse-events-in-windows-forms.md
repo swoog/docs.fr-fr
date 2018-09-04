@@ -15,15 +15,15 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: cd5f87b1c1e2d32a6e7fa94dfce977c7432f7f86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f457756d2266a84c4f241a1cea167af194d8b81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541208"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537157"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Événements liés à la souris dans les Windows Forms
-Quand vous gérez l'entrée de souris, vous souhaitez habituellement connaître l'emplacement du pointeur de la souris et l'état de ses boutons. Cette rubrique fournit des détails sur la façon d'obtenir des informations à partir des événements de souris et explique l'ordre dans lequel les événements de clic de souris sont déclenchés dans les contrôles Windows Forms. Pour une liste et une description de tous les événements de souris, consultez [souris entrée fonctionnement dans les Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [vue d’ensemble des événements (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
+Quand vous gérez l'entrée de souris, vous souhaitez habituellement connaître l'emplacement du pointeur de la souris et l'état de ses boutons. Cette rubrique fournit des détails sur la façon d'obtenir des informations à partir des événements de souris et explique l'ordre dans lequel les événements de clic de souris sont déclenchés dans les contrôles Windows Forms. Pour une liste et une description de tous les événements de souris, consultez [souris entrée fonctionnement dans les Windows Forms](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [vue d’ensemble des événements (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
   
 ## <a name="mouse-information"></a>Informations sur la souris  
  Un <xref:System.Windows.Forms.MouseEventArgs> est envoyé aux gestionnaires d'événements de souris liés aux clics de souris et au suivi des mouvements de souris. <xref:System.Windows.Forms.MouseEventArgs> fournit des informations sur l'état actuel de la souris, y compris l'emplacement du pointeur de la souris sous forme de coordonnées clientes, les boutons de souris qui sont enfoncés et si la roulette a défilé. Plusieurs événements de souris, tels que ceux qui indiquent simplement si le pointeur de souris pénétré ou quitté les limites d'un contrôle, envoient un <xref:System.EventArgs> au gestionnaire d'événements sans aucune information complémentaire.  
@@ -62,7 +62,7 @@ Quand vous gérez l'entrée de souris, vous souhaitez habituellement connaître 
   
 8.  Événement <xref:System.Windows.Forms.Control.MouseUp>.  
   
- Pour obtenir un exemple de code qui illustre l’ordre de la souris, cliquez sur les événements, consultez [Comment : gérer les événements d’entrée d’utilisateur dans les contrôles Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
+ Pour obtenir un exemple de code qui illustre l’ordre de la souris, cliquez sur les événements, consultez [Comment : gérer des événements d’entrée d’utilisateur dans les contrôles Windows Forms](../../../docs/framework/winforms/how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
 ### <a name="individual-controls"></a>Contrôles spécifiques  
  Les contrôles suivants n'ont pas le comportement d'événement de clic de souris standard :  

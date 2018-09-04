@@ -2,15 +2,15 @@
 title: Ajouter une référence de service à un projet de sous-ensemble portable
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: 5d094bb1d2d1155565e48850a2f41829a93cff84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: efe95a326e7c13237c7d2d74888c85bf919ed287
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460487"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542308"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Ajouter une référence de service à un projet de sous-ensemble portable
-Les projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET de maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs implémentations .NET (bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement les bibliothèques portables .NET qui sont un assembly .NET framework qui peut être utilisé sur toute implémentation du .NET.  
+Projets portables du sous-ensemble permettent aux programmeurs d’assembly .NET maintenir une arborescence source unique et le système de génération tout en prenant en charge plusieurs implémentations .NET (bureau, Silverlight, Windows Phone et XBOX). Projets portables du sous-ensemble référencent uniquement des bibliothèques portables .NET qui sont un assemblage .NET framework qui peut être utilisé sur n’importe quelle implémentation .NET.  
   
 ## <a name="add-service-reference-details"></a>Ajouter des détails de référence de service  
  Lors de l'ajout d'une référence de service dans un projet de sous-ensemble portable, les restrictions suivantes sont appliquées :  
@@ -45,4 +45,4 @@ Les projets portables du sous-ensemble permettent aux programmeurs d’assembly 
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès aux services à l’aide d’un client WCF](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)  
- [Bibliothèque de classes portable](http://msdn.microsoft.com/library/gg597391\(v=vs.110\))
+ [Bibliothèque de classes portable](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)

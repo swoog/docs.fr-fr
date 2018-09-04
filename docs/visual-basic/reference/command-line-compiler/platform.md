@@ -9,11 +9,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec3a7e01e62b60688080fee95cf70e0ed38917f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656176"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552190"
 ---
 # <a name="-platform-visual-basic"></a>-platform (Visual Basic)
 Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut exécuter le fichier de sortie.  
@@ -50,7 +50,7 @@ Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut ex�
   
 -   Utilisation d'un appel de plateforme ou de COM interop avec des composants qui n'existent pas sur toutes les plateformes.  
   
- Le **-plateforme** option atténuera certains problèmes si vous savez que vous avez fait des hypothèses sur l’architecture de votre code sera exécuté. Plus précisément :  
+ Le **-plateforme** option atténuera certains problèmes si vous savez que vous avez fait des hypothèses sur l’architecture de votre code s’exécutera sur. Plus précisément :  
   
 -   Si vous décidez de cibler une plateforme 64 bits et que l'application est exécutée sur un ordinateur 32 bits, le message d'erreur intervient bien plus tôt et est davantage axé sur le problème que sur l'erreur qui se produit quand ce commutateur n'est pas utilisé.  
   
@@ -66,9 +66,9 @@ Spécifie la version de plateforme du CLR (Common Language Runtime) qui peut ex�
   
 -   Les fichiers exécutables compilés avec `-platform:anycpu32bitpreferred` s'exécutent sur le CLR 32 bits.  
   
- Pour plus d’informations sur la façon de développer une application de s’exécuter sur une version 64 bits de Windows, consultez [Applications 64 bits](../../../framework/64-bit-apps.md).  
+ Pour plus d’informations sur la façon de développer une application à exécuter sur une version 64 bits de Windows, consultez [Applications 64 bits](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>Pour définir - plateforme dans l’IDE de Visual Studio  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Définir - plateforme dans l’IDE Visual Studio  
   
 1.  Dans **l’Explorateur de solutions**, choisissez le projet, ouvrez le **projet** menu, puis sur **propriétés**.  
   

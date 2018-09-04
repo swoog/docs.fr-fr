@@ -1,15 +1,15 @@
 ---
-title: LINQ to SQL, exemple
+title: Exemple LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515366"
 ---
-# <a name="linq-to-sql-sample"></a>LINQ to SQL, exemple
+# <a name="linq-to-sql-sample"></a>Exemple LINQ to SQL
 Cet exemple montre comment créer une activité pour utiliser des entités de requêtes LINQ to SQL de tables dans des bases de données SQL Server.  
   
 > [!IMPORTANT]
@@ -84,10 +84,10 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>Voir aussi  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [Mise en route (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [Mise en route (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

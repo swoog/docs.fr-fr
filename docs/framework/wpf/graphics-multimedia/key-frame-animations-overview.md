@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: 8a18e0637b0fea7a1a960b157123da10819b4687
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f163b71d7a33aa115a2a4600cac08b7e4b2e80e7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566559"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517404"
 ---
 # <a name="key-frame-animations-overview"></a>Vue d'ensemble des animations d'image clé
 Cette rubrique présente les animations d’image clé. Les animations d’image clé vous permettent d’effectuer des animation en utilisant plus de deux valeurs cibles et de contrôler la méthode d’interpolation d’une animation.  
@@ -22,13 +22,13 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
 <a name="whatisakeyframeanimation"></a>   
 ## <a name="what-is-a-key-frame-animation"></a>Qu’est-ce qu’une animation d’image clé ?  
- Comme une animation From/To/By, une animation d’image clé anime la valeur d’une propriété cible. Il crée une transition parmi ses valeurs cibles sur sa <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Toutefois, contrairement à une animation From/To/By qui crée une transition entre deux valeurs, une animation d’image clé unique peut créer des transitions parmi n’importe quel nombre de valeurs cibles. Contrairement à une animation From/To/By, une animation d’image clé n’a aucune propriété From, To ou By avec lesquelles définir ses valeurs cibles. Les valeurs cibles d’une animation d’image clé sont décrites à l’aide d’objets d’images clés (d’où le terme « animation d’image clé »). Pour spécifier les valeurs des cibles de l’animation, vous créez des objets d’image clé et les ajouter à l’animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection. Lorsque l’animation s’exécute, elle effectue la transition entre les images que vous avez spécifiées.  
+ Comme une animation From/To/By, une animation d’image clé anime la valeur d’une propriété cible. Elle crée une transition parmi ses valeurs cibles sur sa <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Toutefois, contrairement à une animation From/To/By qui crée une transition entre deux valeurs, une animation d’image clé unique peut créer des transitions parmi n’importe quel nombre de valeurs cibles. Contrairement à une animation From/To/By, une animation d’image clé n’a aucune propriété From, To ou By avec lesquelles définir ses valeurs cibles. Les valeurs cibles d’une animation d’image clé sont décrites à l’aide d’objets d’images clés (d’où le terme « animation d’image clé »). Pour spécifier les valeurs des cibles de l’animation, vous créez des objets d’image clé et les ajouter à l’animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection. Lorsque l’animation s’exécute, elle effectue la transition entre les images que vous avez spécifiées.  
   
  Outre la prise en charge de plusieurs valeurs cibles, certaines méthodes d’image clé prennent même en charge plusieurs méthodes d’interpolation. La méthode d’interpolation d’une animation définit la manière dont elle passe d’une valeur à l’autre. Il existe trois types d’interpolations : discrète, linéaire et spline.  
   
  Pour utiliser une animation d’image clé, procédez comme suit.  
   
--   Déclarez l’animation et spécifiez sa <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, tout comme vous le feriez pour une animation from/to/by.  
+-   Déclarez l’animation et spécifiez son <xref:System.Windows.Media.Animation.Timeline.Duration%2A>, tout comme vous le feriez pour une animation from/to/by.  
   
 -   Pour chaque valeur cible, créez une image clé du type approprié, définissez sa valeur et <xref:System.Windows.Media.Animation.KeyTime>et l’ajouter à l’animation <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A> collection.  
   
@@ -38,11 +38,11 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
- Comme un From/To/By animation, une animation d’image clé peut être appliquée à une propriété en utilisant un <xref:System.Windows.Media.Animation.Storyboard> dans le balisage et le code ou à l’aide de la <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode dans le code. Vous pouvez également utiliser une animation d’image clé pour créer un <xref:System.Windows.Media.Animation.AnimationClock> et l’appliquer à une ou plusieurs propriétés. Pour plus d’informations sur les différentes façons d’appliquer des animations, consultez la [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
+ Comme un From/To/By animation, une animation d’image clé peut être appliquée à une propriété en utilisant un <xref:System.Windows.Media.Animation.Storyboard> dans le balisage et le code ou en utilisant le <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> méthode dans le code. Vous pouvez également utiliser une animation d’image clé pour créer un <xref:System.Windows.Media.Animation.AnimationClock> et l’appliquer à une ou plusieurs propriétés. Pour plus d’informations sur les différentes façons d’appliquer des animations, consultez la [Vue d’ensemble des techniques d’animation de propriétés](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md).  
   
 <a name="animation_types"></a>   
 ## <a name="key-frame-animation-types"></a>Types d’animations d’image clé  
- Étant donné que les animations génèrent des valeurs de propriété, il existe différents types d’animation pour différents types de propriété. Pour animer une propriété qui prend un <xref:System.Double> (par exemple d’un élément <xref:System.Windows.FrameworkElement.Width%2A> propriété), utilisez une animation qui produit <xref:System.Double> valeurs. Pour animer une propriété qui prend un <xref:System.Windows.Point>, utilisez une animation qui produit <xref:System.Windows.Point> valeurs et ainsi de suite.  
+ Étant donné que les animations génèrent des valeurs de propriété, il existe différents types d’animation pour différents types de propriété. Pour animer une propriété qui accepte un <xref:System.Double> (telles que d’un élément <xref:System.Windows.FrameworkElement.Width%2A> propriété), vous utilisez une animation qui produit <xref:System.Double> valeurs. Pour animer une propriété qui accepte un <xref:System.Windows.Point>, utilisez une animation qui produit <xref:System.Windows.Point> valeurs et ainsi de suite.  
   
  Les classes d’animation d’image clé appartiennent à la <xref:System.Windows.Media.Animation> espace de noms et respecter la convention d’affectation de noms suivante :  
   
@@ -87,21 +87,21 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
 -   Le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> propriété spécifie la valeur cible pour cette image clé.  
   
--   Le <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété spécifie à quel moment (au sein de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) d’une image clé <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> est atteinte.  
+-   Le <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété spécifie à quel moment (au sein de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>) une image clé <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> est atteinte.  
   
  Lorsqu’une animation d’image clé commence, effectue une itération via ses images clés dans l’ordre défini par leurs <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriétés.  
   
--   S’il n’existe aucune image clé à 0, l’animation crée une transition entre la valeur actuelle de la propriété cible et la <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première image clé ; sinon, l’animation de sortie de valeur devient la valeur de la première image clé.  
+-   S’il n’existe aucune image clé à 0, l’animation crée une transition entre la valeur actuelle de la propriété cible et le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première image clé ; sinon, l’animation de sortie devient la valeur de la première image clé.  
   
--   L’animation crée une transition entre les <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première et deuxième image clé à l’aide de la méthode d’interpolation spécifiée par la deuxième image clé. La transition commence à la première image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> et se termine lorsque l’image clé deuxième <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> est atteinte.  
+-   L’animation crée une transition entre le <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> de la première et deuxième image clé à l’aide de la méthode d’interpolation spécifiée par la deuxième image clé. La transition commence à la première image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> et se termine lorsque la deuxième image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> est atteinte.  
   
 -   L’animation continue, en créant des transitions entre chaque image clé suivante et son image clé précédente.  
   
--   Enfin, l’animation passe à la valeur de l’image clé avec le plus de temps clé qui est égal ou inférieur de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
+-   Enfin, l’animation passe à la valeur de l’image clé avec le plus grand temps clé qui est égale ou inférieure à l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- Si de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> est <xref:System.Windows.Duration.Automatic%2A> ou son <xref:System.Windows.Media.Animation.Timeline.Duration%2A> est égal à l’heure de la dernière image clé, l’animation se termine. Sinon, si de l’animation <xref:System.Windows.Duration> est supérieur au temps clé de la dernière image clé, l’animation maintient la valeur de l’image clé jusqu'à ce qu’il atteint la fin de son <xref:System.Windows.Duration>. Comme toutes les animations, une animation d’image clé utilise sa <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriété pour déterminer si elle maintient sa dernière valeur lorsqu’elle atteint la fin de sa période active. Pour plus d’informations, consultez l’article [Vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
+ Si l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> est <xref:System.Windows.Duration.Automatic%2A> ou son <xref:System.Windows.Media.Animation.Timeline.Duration%2A> est égal à l’heure de la dernière image clé, l’animation se termine. Sinon, si l’animation <xref:System.Windows.Duration> est supérieur au temps clé de la dernière image clé, l’animation maintient la valeur de l’image clé jusqu'à ce qu’il atteint la fin de son <xref:System.Windows.Duration>. Comme toutes les animations, une animation d’image clé utilise sa <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> propriété afin de déterminer si elle maintient sa dernière valeur lorsqu’elle atteint la fin de sa période active. Pour plus d’informations, consultez l’article [Vue d’ensemble des comportements de minutage](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md).  
   
- L’exemple suivant utilise le <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> objet défini dans l’exemple précédent pour montrer comment les <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> et <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriétés du travail.  
+ L’exemple suivant utilise le <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> objet défini dans l’exemple précédent pour montrer comment la <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> et <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriétés du travail.  
   
 -   La première image clé affecte immédiatement la valeur de sortie de l’animation à 0.  
   
@@ -111,7 +111,7 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
 -   La quatrième image clé s’anime de 50 à 200. Elle démarre après la fin de la troisième image clé (au temps = 7 secondes) et est lue pendant 1 seconde, pour se terminer au temps = 0:0:8.  
   
--   Étant donné que le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété de l’animation a été définie à 10 secondes, l’animation maintient sa dernière valeur pendant deux secondes avant de terminer à = 0:0:10.  
+-   Étant donné que le <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété de l’animation a été définie sur 10 secondes, l’animation maintient sa dernière valeur pendant deux secondes avant de se terminer au temps = 0:0:10.  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -153,13 +153,13 @@ Cette rubrique présente les animations d’image clé. Les animations d’image
   
 <a name="anim_spline"></a>   
 ### <a name="splined-interpolation"></a>Interpolation spline  
- L’interpolation spline peut être utilisée pour obtenir des effets de minutage plus réalistes. Étant donné que les animations sont souvent utilisées pour imiter des effets qui se produisent dans le monde réel, les développeurs peuvent avoir à contrôler précisément l’accélération et la décélération des objets, et devoir manipuler précisément les segments de minutage. Les images clés spline vous permettent d’effectuer des animation avec une interpolation spline. Avec les autres images clés, vous spécifiez un <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> et <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>. Avec une image clé de spline, vous spécifiez également un <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>. L’exemple suivant montre une image clé de spline unique pour une <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Notez le <xref:System.Windows.Media.Animation.KeySpline> propriété ; ce qui rend une image clé de spline différente des autres types d’images clés.  
+ L’interpolation spline peut être utilisée pour obtenir des effets de minutage plus réalistes. Étant donné que les animations sont souvent utilisées pour imiter des effets qui se produisent dans le monde réel, les développeurs peuvent avoir à contrôler précisément l’accélération et la décélération des objets, et devoir manipuler précisément les segments de minutage. Les images clés spline vous permettent d’effectuer des animation avec une interpolation spline. Avec d’autres images clés, vous spécifiez un <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> et <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>. Avec une image clé spline, vous spécifiez également un <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>. L’exemple suivant montre une image clé spline unique pour un <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>. Notez que le <xref:System.Windows.Media.Animation.KeySpline> propriété ; qui est ce qui rend une image clé spline différente des autres types d’images clés.  
   
  [!code-xaml[keyframes_ovw_snippet#SingleSplineKeyFrameExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#singlesplinekeyframeexample)]  
   
- Une courbe de Bézier cubique est définie par un point de départ, un point de terminaison et deux points de contrôle. Le <xref:System.Windows.Media.Animation.KeySpline> propriété d’une image clé de spline définit les deux points de contrôle d’une courbe de Bézier qui s’étend de (0,0) à (1,1). Le premier point de contrôle permet de contrôler le facteur de courbe de la première moitié de la courbe de Bézier ; le deuxième point de contrôle permet de contrôler le facteur de courbe de la seconde moitié de la courbe de Bézier. La courbe obtenue décrit la vitesse de changement pour cette image clé spline. Plus la courbe est raide, plus vite l’image clé modifie ses valeurs. À mesure que la courbe s’aplatit, l’image clé modifie ses valeurs plus lentement.  
+ Une courbe de Bézier cubique est définie par un point de départ, un point de terminaison et deux points de contrôle. Le <xref:System.Windows.Media.Animation.KeySpline> propriété d’une image clé spline définit les deux points de contrôle d’une courbe de Bézier qui s’étend de (0,0) à (1,1). Le premier point de contrôle permet de contrôler le facteur de courbe de la première moitié de la courbe de Bézier ; le deuxième point de contrôle permet de contrôler le facteur de courbe de la seconde moitié de la courbe de Bézier. La courbe obtenue décrit la vitesse de changement pour cette image clé spline. Plus la courbe est raide, plus vite l’image clé modifie ses valeurs. À mesure que la courbe s’aplatit, l’image clé modifie ses valeurs plus lentement.  
   
- Vous pouvez utiliser <xref:System.Windows.Media.Animation.KeySpline> pour simuler des trajectoires physiques comme les chutes d’eau ou rebondissent billes de roulement, ou appliquer des autres « accélération » et les effets de « atténuation » aux animations de mouvement. Pour les effets d’interaction utilisateur comme les atténuations d’arrière-plan ou le rebond du bouton de contrôle, vous pouvez appliquer l’interpolation spline pour accélérer ou ralentir la vitesse de changement d’une animation d’une façon spécifique.  
+ Vous pouvez utiliser <xref:System.Windows.Media.Animation.KeySpline> pour simuler des trajectoires physiques comme des chutes d’eau ou balles en mouvement ou appliquer d’autres « ouvrir dans » et les effets de « décélération » aux animations de mouvement. Pour les effets d’interaction utilisateur comme les atténuations d’arrière-plan ou le rebond du bouton de contrôle, vous pouvez appliquer l’interpolation spline pour accélérer ou ralentir la vitesse de changement d’une animation d’une façon spécifique.  
   
  L’exemple suivant spécifie un <xref:System.Windows.Media.Animation.KeySpline> de 0,1 1,0, qui crée la courbe de Bézier suivante.  
   
@@ -179,11 +179,11 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
  Étant donné que la courbure de la courbe de Bézier change très peu, cette image clé s’anime à une fréquence presque constante ; elle ralentit quelque peu vers la fin.  
   
- L’exemple suivant utilise un <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> pour animer la position du rectangle. Étant donné que la <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> utilise <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> des objets, la transition entre chaque valeur d’image clé utilise l’interpolation spline.  
+ L’exemple suivant utilise un <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> pour animer la position du rectangle. Étant donné que le <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames> utilise <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame> objets, la transition entre chaque valeur d’image clé utilise l’interpolation spline.  
   
  [!code-xaml[keyframes_ovw_snippet#SplinedInterpolationExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/InterpolationMethodsExample.xaml#splinedinterpolationexample)]  
   
- L’interpolation spline peut être difficile à comprendre ; il peut être utile d’expérimenter différents paramètres. [L’exemple d’animation de courbe clé](http://go.microsoft.com/fwlink/?LinkID=160011) vous permet de modifier les valeurs de courbe clé et de voir son résultat dans une animation.  
+ L’interpolation spline peut être difficile à comprendre ; il peut être utile d’expérimenter différents paramètres. [L’exemple d’animation de courbe clé](https://go.microsoft.com/fwlink/?LinkID=160011) vous permet de modifier les valeurs de courbe clé et de voir son résultat dans une animation.  
   
 <a name="combininginterpolationmethods"></a>   
 ### <a name="combining-interpolation-methods"></a>Combinaison de méthodes d’interpolation  
@@ -195,9 +195,9 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
 <a name="keytimes"></a>   
 ## <a name="more-about-duration-and-key-times"></a>En savoir plus sur la durée et les temps clés  
- Comme les autres animations, les animations d’image clé ont une <xref:System.Windows.Duration> propriété. Outre la spécification de l’animation <xref:System.Windows.Duration>, vous devez spécifier quelle partie de cette durée est donné à chaque image clé. Pour cela, vous devez décrivant un <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> pour chacune des images clés de l’animation. Chaque image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> indique quand cette image clé se termine.  
+ Comme les autres animations, les animations d’image clé ont une <xref:System.Windows.Duration> propriété. Outre la spécification de l’animation <xref:System.Windows.Duration>, vous devez spécifier quelle partie de cette durée est donnée à chaque image clé. Pour faire en décrivant un <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> pour chacune des images clés de l’animation. Chaque image clé <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> spécifie quand cette image clé se termine.  
   
- Le <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété ne spécifie pas la lecture de la durée pendant laquelle le temps clé. La durée de lecture d’une image clé est déterminée par le moment où l’image clé se termine, par le moment où l’image clé précédente a pris fin et par la durée de l’animation. Temps clés peuvent être spécifiés comme une valeur d’heure, un pourcentage, ou comme des valeurs spéciales <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ Le <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A> propriété ne spécifie pas la durée pendant laquelle la clé lecture du temps. La durée de lecture d’une image clé est déterminée par le moment où l’image clé se termine, par le moment où l’image clé précédente a pris fin et par la durée de l’animation. Les temps clés peuvent être spécifiés comme une valeur d’heure, un pourcentage, ou comme des valeurs spéciales <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
   
  La liste suivante décrit les différentes façons de spécifier des temps clés.  
   
@@ -215,7 +215,7 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>Valeurs de pourcentage  
- Une valeur de pourcentage spécifie que l’image clé se termine à un pourcentage de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous spécifiez le pourcentage sous la forme d’un nombre suivi par le symbole `%`. Dans le code, vous utilisez la <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> méthode et lui passer un <xref:System.Double> qui indique le pourcentage. La valeur doit être supérieure ou égale à 0 et inférieure ou égale à 100 %. L’exemple suivant illustre une animation d’une durée de 10 secondes qui comporte quatre images clés dont les temps clés sont spécifiés en tant que pourcentages.  
+ Une valeur de pourcentage spécifie que l’image clé se termine à un certain pourcentage de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A>. Dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous spécifiez le pourcentage sous la forme d’un nombre suivi par le symbole `%`. Dans le code, vous utilisez le <xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A> méthode et passez-lui un <xref:System.Double> indiquant le pourcentage. La valeur doit être supérieure ou égale à 0 et inférieure ou égale à 100 %. L’exemple suivant illustre une animation d’une durée de 10 secondes qui comporte quatre images clés dont les temps clés sont spécifiés en tant que pourcentages.  
   
 -   La première image clé s’anime entre la valeur de base et 100 pendant les 3 premières secondes, et se termine au temps = 0:0:3.  
   
@@ -228,9 +228,9 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
 ### <a name="special-value-uniform"></a>Valeur spéciale, Uniform  
- Utilisez <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> à quel moment vous souhaitez que chaque image clé à prendre le même temps.  
+ Utilisez <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> à quel moment vous souhaitez que chaque image clé à prendre le même laps de temps.  
   
- A <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> temps clé divise le temps disponible équitablement par le nombre d’images clés pour déterminer l’heure de fin de chaque image clé. L’exemple suivant illustre une animation avec une durée de 10 secondes et quatre images clés dont les temps clés sont spécifiés comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
+ Un <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> temps clé divise le temps disponible équitablement par le nombre d’images clés pour déterminer l’heure de fin de chaque image clé. L’exemple suivant illustre une animation avec une durée de 10 secondes et quatre images clés dont les temps clés sont spécifiés comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>.  
   
 -   La première image clé s’anime entre la valeur de base et 100 pendant les 2,5 premières secondes, et se termine au temps = 0:0:2.5.  
   
@@ -243,19 +243,19 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
 ### <a name="special-value-paced"></a>Valeur spéciale, Paced  
- Utilisez <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> lorsque vous souhaitez animer à un rythme constant de temporisation.  
+ Utilisez <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> à quel moment vous souhaitez animer à une vitesse constante.  
   
- A <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> temps clé alloue le temps disponible en fonction de la longueur de chacune des images clés pour déterminer la durée de chaque image.  Cela permet de maintenir constante la vitesse ou la fréquence de l’animation.  L’exemple suivant illustre une animation avec une durée de 10 secondes et trois images clés dont les temps clés sont spécifiés comme <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
+ Un <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> temps clé alloue le temps disponible en fonction de la longueur de chacune des images clés pour déterminer la durée de chaque image.  Cela permet de maintenir constante la vitesse ou la fréquence de l’animation.  L’exemple suivant illustre une animation avec une durée de 10 secondes et trois images clés dont les temps clés sont spécifiés comme <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>.  
   
  [!code-xaml[keyframes_ovw_snippet#PacedKeyTimeExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#pacedkeytimeexample)]  
   
- Notez que, si le temps clé de la dernière image clé est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, son temps clé résolu est fixé à 100 pour cent. Si la première image clé dans une animation à plusieurs images est rythmée, son temps clé résolu est défini sur 0. (Si la collection d’images clé contient seulement une image clé unique et s’il s’agit d’une image clé rythmée, son temps clé résolu aura une valeur de 100 %.)  
+ Notez que, si l’heure de la dernière image clé clé est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>, son temps clé résolu est fixé à 100 pour cent. Si la première image clé dans une animation à plusieurs images est rythmée, son temps clé résolu est défini sur 0. (Si la collection d’images clé contient seulement une image clé unique et s’il s’agit d’une image clé rythmée, son temps clé résolu aura une valeur de 100 %.)  
   
  Les différentes images clés d’une même animation d’image clé peuvent utiliser des temps clés différents.  
   
 <a name="combiningkeytimes"></a>   
 ## <a name="combining-key-times-out-of-order-key-frames"></a>Combinaison de temps clés avec des images clés dans le désordre  
- Vous pouvez utiliser des images clés avec différentes <xref:System.Windows.Media.Animation.KeyTime> les types valeur dans la même animation. Et, bien qu’il soit recommandé d’ajouter des images clés dans l’ordre dans lequel elles doivent être lues, cela n’est pas forcément nécessaire. Le système d’animation et de minutage est capable de résoudre des images clés désordonnées. Les images clés avec des temps clés non valides sont ignorées.  
+ Vous pouvez utiliser des images clés avec différents <xref:System.Windows.Media.Animation.KeyTime> les types valeur dans la même animation. Et, bien qu’il soit recommandé d’ajouter des images clés dans l’ordre dans lequel elles doivent être lues, cela n’est pas forcément nécessaire. Le système d’animation et de minutage est capable de résoudre des images clés désordonnées. Les images clés avec des temps clés non valides sont ignorées.  
   
  La section suivante décrit la procédure qui permet de résoudre les temps clés pour les images clés d’une animation d’image clé.  
   
@@ -263,32 +263,32 @@ Courbe clé avec les points de contrôle (0.25, 0.5) et (0.75, 1.0)
   
 2.  Déterminez le *temps total d’interpolation* de l’animation, c’est-à-dire la durée totale nécessaire à l’animation d’image clé pour exécuter une itération avancée.  
   
-    1.  Si de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> n’est pas <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, la durée totale de l’interpolation est la valeur de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété.  
+    1.  Si l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> n’est pas <xref:System.Windows.Duration.Automatic%2A> ou <xref:System.Windows.Duration.Forever%2A>, le temps total d’interpolation est la valeur de l’animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> propriété.  
   
-    2.  Sinon, la durée totale de l’interpolation est le plus grand <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valeur spécifiée parmi ses images clés, le cas échéant.  
+    2.  Sinon, le temps total d’interpolation est le plus grand <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> valeur spécifiée parmi ses images clés, le cas échéant.  
   
     3.  Sinon, le temps total d’interpolation est de 1 seconde.  
   
-3.  Permet de résoudre la valeur de la durée totale de l’interpolation <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+3.  Utiliser la valeur de temps total d’interpolation pour résoudre <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
-4.  Résolvez la dernière image clé, si elle n’a pas déjà été résolue dans les étapes précédentes. Si le <xref:System.Windows.Media.Animation.KeyTime> de la dernière image clé est <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, sa durée résolue sera égale à la durée totale de l’interpolation.  
+4.  Résolvez la dernière image clé, si elle n’a pas déjà été résolue dans les étapes précédentes. Si le <xref:System.Windows.Media.Animation.KeyTime> de la dernière image clé est <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> ou <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, son temps résolu sera égal au temps total d’interpolation.  
   
-     Si le <xref:System.Windows.Media.Animation.KeyTime> de la première image clé est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> et cette animation a plusieurs images clés, résolvez sa <xref:System.Windows.Media.Animation.KeyTime> valeur à zéro ; s’il n'existe qu’une seule image clé et sa <xref:System.Windows.Media.Animation.KeyTime> valeur est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, il est résolu au total durée de l’interpolation, comme décrit dans l’étape précédente.  
+     Si le <xref:System.Windows.Media.Animation.KeyTime> de la première image clé est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> et cette animation a plusieurs images clés, résolvez sa <xref:System.Windows.Media.Animation.KeyTime> valeur à zéro ; s’il n'existe qu’une seule image clé et ses <xref:System.Windows.Media.Animation.KeyTime> valeur est <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, il est résolu au total heure de l’interpolation, comme décrit dans l’étape précédente.  
   
-5.  Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs : elles reçoivent chacune une part égale du temps disponible.  Pendant ce processus, non résolue <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs sont traitées temporairement comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs et obtenir une heure résolue temporaire.  
+5.  Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs : elles reçoivent chacune une part égale du temps disponible.  Pendant ce processus, non résolu <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs sont temporairement traitées comme <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs et obtenez une heure résolue temporaire.  
   
-6.  Résoudre les <xref:System.Windows.Media.Animation.KeyTime> valeurs d’images clés avec des temps clés non spécifiés à l’aide des images clés déclarées le plus proche qui ont résolu <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+6.  Résoudre les <xref:System.Windows.Media.Animation.KeyTime> valeurs des images clés avec des temps clés non spécifiés à l’aide d’images clés déclarées les plus proches qui ont résolu <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
-7.  Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Utilisez le <xref:System.Windows.Media.Animation.KeyTime> valeurs d’avoisinantes clé images afin de déterminer leur heure résolue.  L’objectif est de vous assurer que la vitesse de l’animation reste constante autour du temps résolu de cette image clé.  
+7.  Résoudre restant <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> valeurs. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> utiliser le <xref:System.Windows.Media.Animation.KeyTime> valeurs d’avoisinantes clé images afin de déterminer leur temps résolu.  L’objectif est de vous assurer que la vitesse de l’animation reste constante autour du temps résolu de cette image clé.  
   
-8.  Triez les images clés par ordre d’heure résolue (clé primaire) et ordre de déclaration (clé secondaire), c'est-à-dire, utilisez un tri stable basé sur l’image clé résolue <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
+8.  Triez les images clés dans l’ordre de temps résolu (clé primaire) et ordre de déclaration (clé secondaire), c'est-à-dire, utilisez un tri stable basé sur l’image clé résolue <xref:System.Windows.Media.Animation.KeyTime> valeurs.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Media.Animation.KeyTime>  
  <xref:System.Windows.Media.Animation.KeySpline>  
  <xref:System.Windows.Media.Animation.Timeline>  
- [Animation de Spline clé, exemple](http://go.microsoft.com/fwlink/?LinkID=160011)  
- [Animation d’image clé, exemple](http://go.microsoft.com/fwlink/?LinkID=160012)  
+ [Animation de Spline clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160011)  
+ [Exemple de l’Animation d’image clé](https://go.microsoft.com/fwlink/?LinkID=160012)  
  [Vue d’ensemble de l’animation](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Vue d'ensemble des plans conceptuels](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)  
  [Guides pratiques relatifs aux images clés](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)  

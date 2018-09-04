@@ -3,11 +3,11 @@ title: Corrélation d'échange de contexte
 ms.date: 03/30/2017
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 ms.openlocfilehash: d9de111fa08b4a398bba52bc903ea1fec8c7f298
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483695"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519730"
 ---
 # <a name="context-exchange-correlation"></a>Corrélation d'échange de contexte
 Corrélation de contexte est basée sur le mécanisme d’échange de contexte décrit dans le [.NET Context Exchange Protocol Specification](https://go.microsoft.com/fwlink/?LinkId=166059). La corrélation de contexte utilise un en-tête ou un cookie de contexte bien connu pour lier les messages à l'instance correcte. Pour utiliser la corrélation de contexte, une liaison basée sur le contexte, telle que <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding>, doit être utilisée sur le point de terminaison fourni à l'objet <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Cette rubrique explique comment utiliser la corrélation de contexte avec des activités de messagerie dans un service de workflow.  

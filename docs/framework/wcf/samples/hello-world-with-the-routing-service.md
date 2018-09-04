@@ -3,11 +3,11 @@ title: Hello World avec le service de routage
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
 ms.openlocfilehash: 490d91da22b11c269c4d3c11d376087919a608e0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401657"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519197"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World avec le service de routage
 Cet exemple montre le Service de routage de Windows Communication Foundation (WCF). Le Service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le Service de routage. Dans cet exemple, le client Calculator est configuré pour envoyer des messages à un point de terminaison exposé par le routeur. Le service de routage (Routing Service) est configuré de façon à accepter tous les messages qui lui sont envoyés et les transférer à un point de terminaison qui correspond au service Calculator. Les messages envoyés à partir du client sont donc reçus par le routeur et reroutés au véritable service Calculator. Les messages du service Calculator sont renvoyés au routeur, qui à son tour les retransmet au client Calculator.  

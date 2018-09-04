@@ -2,12 +2,12 @@
 title: Mise en mémoire tampon de la réception
 ms.date: 03/30/2017
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-ms.openlocfilehash: ee53edafc94fd5efd4e412b1b9198a8763b79462
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b95577c71493275f30703b4366fab32a51097bd2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526802"
 ---
 # <a name="buffered-receive"></a>Mise en mémoire tampon de la réception
 Cet exemple montre comment installer et configurer la fonctionnalité de mise en mémoire tampon de réception dans Windows Workflow Foundation (WF). La mise en mémoire tampon de la réception permet à l'auteur de workflow de créer un workflow sans devoir s'inquiéter de l'ordre dans lequel les messages sont reçus. La fonctionnalité de mise en mémoire tampon de la réception met les messages en mémoire tampon localement et les remet lorsque le workflow est prêt à les recevoir.  
@@ -20,12 +20,12 @@ Cet exemple montre comment installer et configurer la fonctionnalité de mise en
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`  
   
 ## <a name="discussion"></a>Discussion  
- Dans cet exemple, un service Windows Communication Foundation (WCF) est implémenté à l’aide de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] et a une séquence de <xref:System.ServiceModel.Activities.Receive> activités. Ce workflow modélise un processus d'approbation d'un emprunt simple où le workflow attend trois notifications pour qu'un emprunt soit approuvé. Une application cliente de Windows Communication Foundation (WCF) envoie trois notifications corrélées dans l’ordre inverse de celui attendu par le service. Étant donné que la fonctionnalité de mise en mémoire tampon de la réception est activée au niveau du service, chaque message dans le désordre est mis en mémoire tampon au niveau du service et traité lorsque le workflow est prêt à le recevoir.  
+ Dans cet exemple, un service Windows Communication Foundation (WCF) est implémenté à l’aide de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] et a une séquence de <xref:System.ServiceModel.Activities.Receive> activités. Ce workflow modélise un processus d'approbation d'un emprunt simple où le workflow attend trois notifications pour qu'un emprunt soit approuvé. Une application cliente de Windows Communication Foundation (WCF) envoie trois notifications corrélées dans l’ordre inverse de ce qu’attend le service. Étant donné que la fonctionnalité de mise en mémoire tampon de la réception est activée au niveau du service, chaque message dans le désordre est mis en mémoire tampon au niveau du service et traité lorsque le workflow est prêt à le recevoir.  
   
  La fonctionnalité de mise en mémoire tampon de la réception nécessitant la prise en charge de <xref:System.ServiceModel.Activities.ReceiveContent> à partir de la liaison, le service utilise <xref:System.ServiceModel.NetMsmqBinding>. Aucune configuration spéciale n'étant requise pour la liaison, les valeurs par défaut sont utilisées.  
   
@@ -81,7 +81,7 @@ Cet exemple montre comment installer et configurer la fonctionnalité de mise en
   
 7.  Accédez à **Server**, **Sites**, **site Web par défaut**, **privé**, **LoanService** et sélectionnez  **Options avancées**  
   
-8.  Modifier la **protocoles activés** être **http**, **net.msmq**.  
+8.  Modifier le **protocoles activés** être **http**, **net.msmq**.  
   
 #### <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
   
@@ -104,6 +104,6 @@ Cet exemple montre comment installer et configurer la fonctionnalité de mise en
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\BufferedReceive`

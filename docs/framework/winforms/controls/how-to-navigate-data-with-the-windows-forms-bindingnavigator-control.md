@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
 ms.openlocfilehash: 14f845e33b38da39b900b32c07297a350326350d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387527"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519611"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Comment : naviguer parmi les données avec le contrôle BindingNavigator Windows Forms
 Le contrôle <xref:System.Windows.Forms.BindingNavigator> dans Windows Forms permet aux développeurs de fournir aux utilisateurs finaux une interface utilisateur de  navigation et de manipulation de données simple sur les formulaires qu'ils créent.  

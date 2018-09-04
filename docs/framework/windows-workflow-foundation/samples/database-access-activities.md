@@ -2,15 +2,15 @@
 title: Activités d'accès aux bases de données
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e315742226ab086a865fa53d7aab9e7f15add08
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520407"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502826"
 ---
 # <a name="database-access-activities"></a>Activités d'accès aux bases de données
-Les activités d'accès aux bases de données vous permettent d'accéder à une base de données dans un workflow. Ces activités permettent l’accès aux bases de données pour récupérer ou modifier les informations et l’utiliser [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  
+Les activités d'accès aux bases de données vous permettent d'accéder à une base de données dans un workflow. Ces activités permettent l’accès aux bases de données pour récupérer ou modifier les informations et utilisez [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
   
  La requête à exécuter est configurée dans sa propriété `Sql` et les paramètres sont passés via la collection `Parameters`.  
   
- Après avoir `DbQueryScalar` est exécuté, la valeur scalaire est retourné dans le `Result``out` argument (de type `TResult`, qui est défini dans la classe de base <xref:System.Activities.AsyncCodeActivity%601>).  
+ Après avoir `DbQueryScalar` est exécuté, le scalaire est retourné dans le `Result``out` argument (de type `TResult`, qui est défini dans la classe de base <xref:System.Activities.AsyncCodeActivity%601>).  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -139,7 +139,7 @@ public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>
   
  La requête à exécuter est configurée dans sa propriété `Sql` et les paramètres sont passés via la collection `Parameters`.  
   
- Les résultats de la requête SQL sont récupérés à l'aide d'un `DbDataReader`. L'activité itère au sein de `DbDataReader` et mappe les lignes de `DbDataReader` à une instance de `TResult`. L’utilisateur de `DbQuery` doit fournir le code de mappage et cela peuvent être réalisées de deux façons : à l’aide un <xref:System.Func%601> < `DbDataReader`, `TResult`> ou un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>. Dans le premier cas, le mappage est effectué en une seule impulsion d'exécution. Par conséquent, il est plus rapide, mais ne peut pas être sérialisé en XAML. Dans le dernier cas, le mappage est effectué en plusieurs impulsions. Par conséquent, il peut être plus lent mais peut être sérialisé en XAML et créé de façon déclarative (toute activité existante peut participer au mappage).  
+ Les résultats de la requête SQL sont récupérés à l'aide d'un `DbDataReader`. L'activité itère au sein de `DbDataReader` et mappe les lignes de `DbDataReader` à une instance de `TResult`. L’utilisateur de `DbQuery` doit fournir le code de mappage et cela peuvent être effectuées de deux façons : à l’aide un <xref:System.Func%601> < `DbDataReader`, `TResult`> ou un <xref:System.Activities.ActivityFunc%601> < `DbDataReader`, `TResult`>. Dans le premier cas, le mappage est effectué en une seule impulsion d'exécution. Par conséquent, il est plus rapide, mais ne peut pas être sérialisé en XAML. Dans le dernier cas, le mappage est effectué en plusieurs impulsions. Par conséquent, il peut être plus lent mais peut être sérialisé en XAML et créé de façon déclarative (toute activité existante peut participer au mappage).  
   
 ```  
 public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult : class  
@@ -189,12 +189,12 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |CommandType|Type du <xref:System.Data.Common.DbCommand> à exécuter.|  
 |Sql|Commande SQL à exécuter.|  
 |Paramètres|Collection des paramètres de la requête SQL.|  
-|Mapper|Fonction de mappage (<xref:System.Func%601><`DbDataReader`, `TResult`>) qui prend un enregistrement dans le `DataReader` obtenu en résultat de l’exécution de la requête et retourne une instance d’un objet de type `TResult` à ajouter à la `Result` collection.<br /><br /> Dans ce cas, le mappage est effectué en seule impulsion d'exécution, mais il ne peut pas être créé de façon déclarative à l'aide du concepteur.|  
-|MapperFunc|Fonction de mappage (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) qui prend un enregistrement dans le `DataReader` obtenu en résultat de l’exécution de la requête et retourne une instance d’un objet de type `TResult` à ajouter à la `Result` collection.<br /><br /> Dans ce cas, le mappage est effectué en plusieurs impulsions d'exécution. Cette fonction peut être sérialisée en XAML et créée de façon déclarative (toute activité existante peut participer au mappage).|  
+|Mapper|Fonction de mappage (<xref:System.Func%601><`DbDataReader`, `TResult`>) qui prend un enregistrement le `DataReader` obtenu en résultat de l’exécution de la requête et retourne une instance d’un objet de type `TResult` à ajouter à la `Result` collection.<br /><br /> Dans ce cas, le mappage est effectué en seule impulsion d'exécution, mais il ne peut pas être créé de façon déclarative à l'aide du concepteur.|  
+|MapperFunc|Fonction de mappage (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>) qui prend un enregistrement le `DataReader` obtenu en résultat de l’exécution de la requête et retourne une instance d’un objet de type `TResult` à ajouter à la `Result` collection.<br /><br /> Dans ce cas, le mappage est effectué en plusieurs impulsions d'exécution. Cette fonction peut être sérialisée en XAML et créée de façon déclarative (toute activité existante peut participer au mappage).|  
 |Résultat|Liste des objets obtenus en résultat de l'exécution de la requête et de l'exécution de la fonction de mappage pour chaque d'enregistrement de `DataReader`.|  
   
 ## <a name="dbquerydataset"></a>DbQueryDataSet  
- Exécute une requête qui retourne un <xref:System.Data.DataSet>. Cette classe effectue son travail de façon asynchrone. Elle est dérivée de <xref:System.Activities.AsyncCodeActivity> < `TResult`> et utilise ses fonctionnalités asynchrones.  
+ Exécute une requête qui retourne un <xref:System.Data.DataSet>. Cette classe effectue son travail de façon asynchrone. Il dérive <xref:System.Activities.AsyncCodeActivity> < `TResult`> et utilise ses fonctionnalités asynchrones.  
   
  Les informations de connexion peuvent être configurées en définissant un nom invariant de fournisseur (`ProviderName`) et la chaîne de connexion (`ConnectionString`), ou simplement à l'aide d'un nom de configuration de chaîne de connexion (`ConfigFileSectionName`) provenant du fichier de configuration de l'application.  
   
@@ -325,6 +325,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

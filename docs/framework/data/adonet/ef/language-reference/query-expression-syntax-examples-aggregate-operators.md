@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: 56eaf4c3fce6f5b64563bc2e4a7a5b6415f545c0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4717f7fe438f67a0d40c64724700f7ea78c4c887
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763064"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522724"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>Exemples de syntaxe d'expression de requête : opérateurs d'agrégation
-Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, et <xref:System.Linq.Enumerable.Sum%2A> méthodes permettant d’interroger la [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
+Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, et <xref:System.Linq.Enumerable.Sum%2A> méthodes permettant d’interroger la [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
   
  Les exemples de cette rubrique utilisent les éléments suivants `using` / `Imports` instructions :  
   

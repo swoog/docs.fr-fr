@@ -11,11 +11,11 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 649d60a2d50237827d5f334e934103b234a42724
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506332"
 ---
 # <a name="dialog-boxes-overview"></a>Vue d'ensemble des boîtes de dialogue
 Les applications autonomes ont en général une fenêtre principale qui affiche les données principales sur lesquelles l’application fonctionne et expose les fonctionnalités pour traiter ces données via [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] des mécanismes tels que les barres de menus, barres d’outils et barres d’état. Une application non triviale peut également afficher des fenêtres supplémentaires pour effectuer les opérations suivantes :  

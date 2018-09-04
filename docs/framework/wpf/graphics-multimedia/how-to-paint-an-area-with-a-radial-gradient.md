@@ -9,15 +9,15 @@ helpviewer_keywords:
 - radial gradients [WPF], painting with
 - painting [WPF], with radial gradients
 ms.assetid: b5d0fc8a-8986-4796-b003-a75b41a48928
-ms.openlocfilehash: d794f85ce4968e1cf1759df5358834f3b4cdfb50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75c28cd19ec0423589b6485884842468b89b5e8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560639"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526789"
 ---
 # <a name="how-to-paint-an-area-with-a-radial-gradient"></a>Comment : peindre une zone avec un dégradé radial
-Cet exemple montre comment utiliser la <xref:System.Windows.Media.RadialGradientBrush> classe pour peindre une zone avec un dégradé radial.  
+Cet exemple montre comment utiliser le <xref:System.Windows.Media.RadialGradientBrush> classe pour peindre une zone avec un dégradé radial.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise un <xref:System.Windows.Media.RadialGradientBrush> pour peindre un rectangle avec un dégradé radial qui passe du jaune au rouge au bleu au citron vert.  
@@ -31,6 +31,6 @@ Cet exemple montre comment utiliser la <xref:System.Windows.Media.RadialGradient
  ![Points de dégradé dans un dégradé radial](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-4gradientstops-rg.png "wcpsdk_graphicsmm_4gradientstops_rg")  
   
 > [!NOTE]
->  Les exemples dans cette rubrique utilisent le système de coordonnées par défaut pour la définition de points de contrôle. Le système de coordonnées par défaut est relative à une zone englobante : 0 indique 0 % de la zone englobante, et 1 indique 100 % de la zone englobante. Vous pouvez modifier ce système de coordonnées en définissant le <xref:System.Windows.Media.GradientBrush.MappingMode%2A> valeur à la propriété <xref:System.Windows.Media.BrushMappingMode.Absolute>. Un système de coordonnées absolu n’est pas relatif à un rectangle englobant. Les valeurs sont interprétées directement dans l’espace local.  
+>  Les exemples de cette rubrique utilisent le système de coordonnées par défaut pour la définition des points de contrôle. Le système de coordonnées par défaut est relative à une zone englobante : 0 indique 0 % de la zone englobante, et 1 indique 100 % de la zone englobante. Vous pouvez modifier ce système de coordonnées en définissant le <xref:System.Windows.Media.GradientBrush.MappingMode%2A> valeur à la propriété <xref:System.Windows.Media.BrushMappingMode.Absolute>. Un système de coordonnées absolu n’est pas relatif à un rectangle englobant. Les valeurs sont interprétées directement dans l’espace local.  
   
- Pour plus <xref:System.Windows.Media.RadialGradientBrush> obtenir des exemples, consultez la [pinceaux, exemple](http://go.microsoft.com/fwlink/?LinkID=159973). Pour plus d’informations sur les dégradés et les autres types de pinceaux, consultez [peinture avec des couleurs unies et vue d’ensemble des dégradés](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).
+ Pour plus <xref:System.Windows.Media.RadialGradientBrush> obtenir des exemples, consultez le [pinceaux, exemple](https://go.microsoft.com/fwlink/?LinkID=159973). Pour plus d’informations sur les dégradés et les autres types de pinceaux, consultez [peinture avec des couleurs unies et vue d’ensemble des dégradés](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).

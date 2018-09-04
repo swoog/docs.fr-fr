@@ -3,11 +3,11 @@ title: Utilisation de TransactedReceiveScope
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
 ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481469"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501640"
 ---
 # <a name="use-of-transactedreceivescope"></a>Utilisation de TransactedReceiveScope
 Cet exemple montre comment passer une transaction d'un client à un serveur à l'aide de <xref:System.Activities.Statements.TransactionScope> pour créer une transaction sur le client et un <xref:System.ServiceModel.Activities.TransactedReceiveScope> pour recevoir un message avec une transaction passée et mesurer l'étendue de la durée de vie de la transaction sur le serveur. Cet exemple est composé deux projets qui jouent les rôles de client et serveur.  

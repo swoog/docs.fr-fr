@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399581"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519151"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Vue d'ensemble des convertisseurs de types pour XAML
 Les convertisseurs de type fournissent la logique nécessaire à un writer d'objet qui convertit une chaîne de balisage XAML en objets particuliers d'un graphique d'objets. Dans les services XAML .NET Framework, le convertisseur de type doit être une classe dérivée de <xref:System.ComponentModel.TypeConverter>. Certains convertisseurs prennent également en charge le chemin d'enregistrement XAML et peuvent être utilisés pour sérialiser un objet sous forme de chaîne dans le balisage de sérialisation. Cette rubrique décrit comment et quand les convertisseurs de type en XAML sont appelés, et fournit des conseils d'implémentation pour les substitutions de méthode de <xref:System.ComponentModel.TypeConverter>.  

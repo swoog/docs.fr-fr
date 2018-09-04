@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387462"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517761"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Insertion d'une image à partir d'un fichier
 Vous pouvez écrire des objets binaires volumineux (BLOB) dans une base de données sous forme de données de type binaire ou caractère en fonction du type du champ de votre source de données. BLOB est un terme générique qui fait référence aux types de données `text`, `ntext` et `image` qui contiennent généralement des documents et des images.  

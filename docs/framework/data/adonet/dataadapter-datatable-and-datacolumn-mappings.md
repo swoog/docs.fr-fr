@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d023260a-a66a-4c39-b8f4-090cd130e730
 ms.openlocfilehash: 9f33ae085bef2b611d1ce95bed1b26f9101a10b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385224"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505240"
 ---
 # <a name="dataadapter-datatable-and-datacolumn-mappings"></a>Mappages de DataAdapter DataTable et DataColumn
 Un **DataAdapter** contient une collection de zéro ou plusieurs <xref:System.Data.Common.DataTableMapping> objets dans son **TableMappings** propriété. Un **DataTableMapping** fournit un mappage principal entre les données retournées à partir d’une requête sur une source de données et un <xref:System.Data.DataTable>. Le **DataTableMapping** nom peut être passé à la place de la **DataTable** nom pour le **remplir** méthode de la **DataAdapter**. L’exemple suivant crée un **DataTableMapping** nommé **AuthorsMapping** pour le **auteurs** table.  

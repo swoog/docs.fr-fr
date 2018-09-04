@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
 ms.openlocfilehash: 207010f594959708322aed2e630935252c873cf8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466169"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510753"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Comment : héberger un service WCF dans IIS
 Cette rubrique décrit les étapes de base requises pour créer un service Windows Communication Foundation (WCF) qui est hébergé dans Internet Information Services (IIS). Dans cette rubrique, on suppose que vous connaissez IIS et que vous comprenez la manière d'utiliser l'outil d'administration IIS pour créer et gérer des applications IIS. Pour plus d’informations sur IIS, consultez [Internet Information Services](https://go.microsoft.com/fwlink/?LinkId=132449). Un service WCF qui s’exécute dans l’environnement IIS tire pleinement parti des fonctionnalités IIS, telles que le recyclage de processus, arrêt sur inactivité, processus sur l’intégrité et l’activation basée sur le message. Cette option d'hébergement requiert que les services IIS soient configurés correctement, mais n'exige pas l'écriture d'un code d'hébergement dans le cadre de l'application. Vous pouvez utiliser l'hébergement IIS uniquement avec un transport HTTP.  

@@ -3,11 +3,11 @@ title: Sécurisation des applications ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481076"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526967"
 ---
 # <a name="securing-adonet-applications"></a>Sécurisation des applications ADO.NET
 L'écriture d'une application ADO.NET sécurisée ne se limite pas à éviter les pièges de codage courants, tels que la non validation des entrées d'utilisateur. Une application qui accède à des données présente de nombreux points de défaillance possibles qu'un agresseur peut exploiter pour extraire, manipuler ou détruire des données sensibles. Il est donc important de comprendre tous les aspects de la sécurité, depuis le processus de modélisation de menace durant la phase de conception de votre application, jusqu'à son déploiement éventuel et sa maintenance en cours.  

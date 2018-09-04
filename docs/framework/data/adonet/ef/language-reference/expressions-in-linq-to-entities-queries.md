@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
 ms.openlocfilehash: dccf3ab1a619222cdf2db54673718eb103aee2fb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422267"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504869"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Expressions dans les requêtes LINQ to Entities
 Une expression est un fragment de code qui peut correspondre à une valeur, un objet, une méthode ou un espace de noms. Elle peut contenir une valeur littérale, un appel de méthode, un opérateur et ses opérandes ou un nom simple. Un nom simple peut être le nom d'une variable, d'un membre de type, d'un paramètre de méthode, d'un espace de noms ou d'un type. Les expressions peuvent utiliser des opérateurs qui à leur tour utilisent d'autres expressions comme des paramètres, ou des appels de méthode dont les paramètres sont à leur tour d'autres appels de méthode. Par conséquent, les expressions peuvent être simples ou très complexes.  

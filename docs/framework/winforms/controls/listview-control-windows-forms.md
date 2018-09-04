@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30f4b21d8b8f1a4c5a168402ce5cc386d932f86
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539687"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510609"
 ---
 # <a name="listview-control-windows-forms"></a>ListView, contrôle (Windows Forms)
 Le contrôle `ListView` Windows Forms affiche une liste d'éléments avec des icônes. Vous pouvez utiliser un affichage de liste pour créer une interface utilisateur comme le volet droit de l'Explorateur Windows.  
@@ -58,15 +58,15 @@ Le contrôle `ListView` Windows Forms affiche une liste d'éléments avec des ic
  [Guide pratique pour ajouter des fonctions de recherche à un contrôle ListView](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
  Décrit comment rechercher un élément par programmation à l'aide de coordonnées d'écran ou de la recherche de texte.  
   
--   [Guide pratique pour activer l'affichage en mosaïque dans un contrôle ListView Windows Forms à l'aide du concepteur](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))  
+-   [Guide pratique pour activer l'affichage en mosaïque dans un contrôle ListView Windows Forms à l'aide du concepteur](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Guide pratique pour ajouter et supprimer des éléments avec le contrôle ListView Windows Forms à l'aide du concepteur](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))  
+-   [Guide pratique pour ajouter et supprimer des éléments avec le contrôle ListView Windows Forms à l'aide du concepteur](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Guide pratique pour ajouter des colonnes au contrôle ListView Windows Forms à l'aide du concepteur](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))  
+-   [Guide pratique pour ajouter des colonnes au contrôle ListView Windows Forms à l'aide du concepteur](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Guide pratique pour regrouper des éléments dans un contrôle ListView Windows Forms à l'aide du concepteur](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))  
+-   [Guide pratique pour regrouper des éléments dans un contrôle ListView Windows Forms à l'aide du concepteur](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Procédure pas à pas : création d’une interface de style Explorateur avec les contrôles ListView et TreeView à l’aide du concepteur](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))  
+-   [Procédure pas à pas : création d’une interface de style Explorateur avec les contrôles ListView et TreeView à l’aide du concepteur](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Référence  
  Classe <xref:System.Windows.Forms.ListView>  
@@ -82,7 +82,7 @@ Le contrôle `ListView` Windows Forms affiche une liste d'éléments avec des ic
  [Guide pratique pour créer une interface utilisateur à plusieurs volets à l'aide des Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Fournit des instructions pour disposer un Windows Form avec plusieurs volets.  
   
- [Fonctionnalités de Windows XP et contrôles Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Fonctionnalités de Windows XP et contrôles Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  Explique comment tirer parti des fonctionnalités spécifiques à Windows XP qui s'appliquent au contrôle <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>Voir aussi  

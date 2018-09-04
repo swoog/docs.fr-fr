@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55b4fbb8785f788c9eb34f32b5078201f8253066
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d925e30786c742708f345fc23f14c79521cbc6f3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433326"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519950"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>Méthode ICLRStrongName::StrongNameKeyGen
-Crée une nouvelle paire de clés publique/privée pour l’utiliser avec un nom fort.  
+Crée une nouvelle paire de clés publique/privée pour une utilisation de nom fort.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +40,14 @@ HRESULT StrongNameKeyGen (
   
 #### <a name="parameters"></a>Paramètres  
  `wszKeyContainer`  
- [in] Le nom du conteneur de clé demandé. `wszKeyContainer` doit être une chaîne non vide ou la valeur null pour générer un nom temporaire.  
+ [in] Le nom du conteneur de clé demandé. `wszKeyContainer` doit être une chaîne non vide ou une valeur null pour générer un nom temporaire.  
   
  `dwFlags`  
  [in] Une valeur qui spécifie s’il faut laisser la clé enregistrée. Les valeurs suivantes sont prises en charge :  
   
 -   0 x 00000000 - utilisée lorsque `wszKeyContainer` a la valeur null pour générer un nom de conteneur de clé temporaire.  
   
--   0 x 00000001 (`SN_LEAVE_KEY`)-Spécifie que la clé doit rester enregistrée.  
+-   0 x 00000001 (`SN_LEAVE_KEY`)-Spécifie que la clé doit être inscrit à gauche.  
   
  `ppbKeyBlob`  
  [out] La paire de clés publique/privée retournée.  
@@ -56,19 +56,19 @@ HRESULT StrongNameKeyGen (
  [out] La taille, en octets, de `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Valeur de retour  
- `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
+ `S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (consultez [valeurs HRESULT courantes](https://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).  
   
 ## <a name="remarks"></a>Notes  
- Le [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) méthode crée une clé 1024 bits. Une fois la clé est récupérée, vous devez appeler la [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) méthode pour libérer la mémoire allouée.  
+ Le [ICLRStrongName::StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) méthode crée une clé 1024 bits. Une fois que la clé est récupérée, vous devez appeler la [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) méthode pour libérer la mémoire allouée.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** MetaHost.h  
   
  **Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [StrongNameKeyGenEx, méthode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)  

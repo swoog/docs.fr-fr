@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
 ms.openlocfilehash: bc91e3bde54eedb4d9dbcfcb9f7faa0ccc98e397
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398691"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505622"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Procédure pas à pas : démonstration de l'héritage visuel
 L'héritage visuel vous permet de visualiser les contrôles sur le formulaire de base et d'ajouter de nouveaux contrôles. Dans cette procédure pas à pas, vous allez créer un formulaire de base et le compiler dans une bibliothèque de classes. Vous importerez cette bibliothèque de classes dans un autre projet et créerez un formulaire qui hérite du formulaire de base. Pendant cette procédure pas à pas, vous allez apprendre à :  

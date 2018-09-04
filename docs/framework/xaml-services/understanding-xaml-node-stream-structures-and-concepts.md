@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: 100de0a897538527b76b1a53cf40d59a8804d3ae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423242"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519445"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Fonctionnement des concepts et structures du flux de nœud XAML
 Les lecteurs et writers XAML tels qu'ils sont implémentés dans les services XAML .NET Framework sont basés sur le concept d'un flux de nœud XAML. Le flux de nœud XAML est une conceptualisation d'un ensemble de nœuds XAML. Dans cette conceptualisation, un processeur XAML parcourt la structure des relations de nœud dans le code XAML une par une. À tout moment, il n'existe qu'un seul enregistrement actuel ou position actuelle dans un flux de nœud XAML ouvert, et de nombreux aspects de l'API ne signalent que les informations disponibles à partir de cette position. Le nœud actuel dans un flux de nœud XAML peut être un objet, un membre ou une valeur. Si les lecteurs XAML traitent le XAML en tant que flux de nœud XAML, ils peuvent communiquer avec les writers XAML et activer un programme qui permet d'afficher, de manipuler ou de modifier le contenu d'un flux de nœud XAML pendant une opération de chemin de chargement ou d'enregistrement impliquant du code XAML. La conception de l'API des lecteurs et writers XAML et le concept de flux de nœud XAML sont similaires aux conceptions et concepts des lecteurs et writers associés précédents, tels que le [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] et les classes <xref:System.Xml.XmlReader> et <xref:System.Xml.XmlWriter> . Cette rubrique aborde les concepts de flux de nœud XAML et décrit comment écrire des routines qui interagissent avec des représentations XAML au niveau des nœuds XAML.  

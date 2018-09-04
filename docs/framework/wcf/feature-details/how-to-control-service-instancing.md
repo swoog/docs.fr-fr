@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: 2f9e4f298eb95498ec8d3603624763bfd95bfda1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b9e622903f871564495796b1690ab4e3a1f66fb7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489142"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514822"
 ---
 # <a name="how-to-control-service-instancing"></a>Comment : contrôler l'instanciation de service
-La définition du mode d'instance d'un service vous permet de spécifier quand un <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (et son objet de service associé, défini par l'utilisateur) est créé. Consultez l'énumération <xref:System.ServiceModel.InstanceContextMode> pour obtenir les modes possibles. Pour plus d’informations sur les comportements, consultez [configuration et l’extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Pour obtenir des exemples fonctionnels, consultez [comportements](../../../../docs/framework/wcf/samples/behaviors.md).  
+La définition du mode d'instance d'un service vous permet de spécifier quand un <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (et son objet de service associé, défini par l'utilisateur) est créé. Consultez l'énumération <xref:System.ServiceModel.InstanceContextMode> pour obtenir les modes possibles. Pour plus d’informations sur les comportements, consultez [configuration et extension de l’exécution des comportements](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Pour obtenir des exemples fonctionnels, consultez [comportements](../../../../docs/framework/wcf/samples/behaviors.md).  
   
 ### <a name="to-control-the-service-instance-lifetime-using-code"></a>Pour contrôler la durée de vie de l'instance de service en utilisant du code  
   
@@ -34,4 +34,4 @@ La définition du mode d'instance d'un service vous permet de spécifier quand u
  <xref:System.ServiceModel.ServiceBehaviorAttribute>  
  <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>  
  <xref:System.ServiceModel.InstanceContextMode>  
- [Service : Exemples de comportements](http://msdn.microsoft.com/library/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)
+ [Service : Exemples de comportements](https://msdn.microsoft.com/library/4e3c6513-a7ff-4b35-8dcf-b5506c6f39a7)

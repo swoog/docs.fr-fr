@@ -2,12 +2,12 @@
 title: '&lt;message&gt; de &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 51cdd329-6461-471a-8747-56c2299b61e5
-ms.openlocfilehash: 7f543a91f1d11575df239267a6a8a0b244d99cb3
-ms.sourcegitcommit: 378f0e075030239d8259a92a6a0193dd6faf54b4
+ms.openlocfilehash: 9b46f69e88f441823b32b5f25330ca9a1cb62dcb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "33366045"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522894"
 ---
 # <a name="ltmessagegt-of-ltbasichttpbindinggt"></a>&lt;message&gt; de &lt;basicHttpBinding&gt;
 Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
@@ -133,5 +133,5 @@ Définit les paramètres de sécurité au niveau du message de la [ \<basicHttpB
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<liaison >](../../../../../docs/framework/misc/binding.md)

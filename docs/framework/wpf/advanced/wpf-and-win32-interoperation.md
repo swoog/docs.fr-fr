@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
 ms.openlocfilehash: 733a4d4ee7296d96a18e8ba4763dfa12e218c028
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392709"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526515"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interopérabilité WPF et Win32
 Cette rubrique fournit une vue d’ensemble de l’interopérabilité du code [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] et [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un environnement de création d'applications élaboré. Toutefois, si vous avez déjà écrit beaucoup de code [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], vous avez peut-être intérêt à réutiliser une partie de ce code.  

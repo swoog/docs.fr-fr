@@ -2,22 +2,22 @@
 title: Écriture de Dynamic SQL sécurisé dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
-ms.openlocfilehash: cbfbfd59d78cb5504679fd8ae78f79d0c180dc4d
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753472"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538185"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Écriture de Dynamic SQL sécurisé dans SQL Server
-L'injection SQL est le processus qui permet à un utilisateur malveillant d'entrer des instructions Transact-SQL au lieu d'une entrée valide. Si l’entrée est transmise directement au serveur sans validation et si l’application exécute accidentellement le code injecté, l’attaque risque d’endommager ou de détruire des données.  
+L'injection SQL est le processus qui permet à un utilisateur malveillant d'entrer des instructions Transact-SQL au lieu d'une entrée valide. Si l'entrée est transmise directement au serveur sans validation et si l'application exécute accidentellement le code injecté, l'attaque risque d'endommager ou de détruire des données.  
   
  Il est nécessaire de vérifier les vulnérabilités en matière d'injection de toute procédure qui construit des instructions SQL car SQL Server exécutera toutes les requêtes syntaxiquement valides qu'il reçoit. Même les données paramétrées peuvent être manipulées par un pirate expérimenté et déterminé. Si vous utilisez du code SQL dynamique, veillez à paramétrer vos commandes et n'incluez jamais de valeurs de paramètre directement dans la chaîne de requête.  
   
 ## <a name="anatomy-of-a-sql-injection-attack"></a>Anatomie d'une attaque par injection de code SQL  
  Le processus d'injection consiste à terminer prématurément une chaîne de texte et à ajouter une nouvelle commande. Dans la mesure où des chaînes supplémentaires peuvent être ajoutées à la commande insérée avant son exécution, le pirate termine la chaîne injectée avec une marque de commentaire "--". Le texte qui suit est ignoré au moment de l'exécution. Plusieurs commandes peuvent être insérées en utilisant le séparateur point-virgule (;).  
   
- Tant que le code SQL injecté en syntaxiquement correct, la falsification ne peut pas être détectée par programme. Vous devez par conséquent valider toutes les entrées d’utilisateur et revoir avec soin le code qui exécute des commandes SQL construites sur le serveur que vous utilisez. Ne concaténez jamais des entrées d'utilisateur qui ne sont pas validées. La concaténation de chaînes est le principal point d'entrée pour l'injection de script.  
+ Tant que le code SQL injecté en syntaxiquement correct, la falsification ne peut pas être détectée par programme. Vous devez par conséquent valider toutes les entrées d'utilisateur et revoir avec soin le code qui exécute des commandes SQL construites sur le serveur que vous utilisez. Ne concaténez jamais des entrées d'utilisateur qui ne sont pas validées. La concaténation de chaînes est le principal point d'entrée pour l'injection de script.  
   
  Voici quelques conseils utiles :  
   
@@ -53,7 +53,7 @@ L'injection SQL est le processus qui permet à un utilisateur malveillant d'entr
 ### <a name="execute-as"></a>EXECUTE AS  
  La clause EXECUTE AS remplace les autorisations de l'appelant par celles de l'utilisateur spécifié dans la clause EXECUTE AS. Les procédures stockées ou déclencheurs imbriqués s'exécutent dans le contexte de sécurité de l'utilisateur proxy. Les applications qui reposent sur la sécurité de niveau ligne ou qui nécessitent un audit risquent alors de s'arrêter. Certaines fonctions qui retournent l'identité de l'utilisateur retournent l'utilisateur spécifié dans la clause EXECUTE AS, et non l'appelant d'origine. Le contexte d'exécution de l'appelant d'origine est rétabli uniquement après exécution de la procédure ou lorsqu'une instruction REVERT est émise.  
   
-### <a name="certificate-signing"></a>Signature du certificat  
+### <a name="certificate-signing"></a>Signature par certificat  
  Lors de l'exécution d'une procédure stockée qui a été signée avec un certificat, les autorisations accordées à l'utilisateur de ce certificat sont fusionnées avec celles de l'appelant. Le contexte d'exécution reste le même ; l'utilisateur du certificat n'emprunte pas l'identité de l'appelant. Plusieurs étapes sont nécessaires pour implémenter la signature des procédures stockées. La procédure doit être de nouveau signée après chaque modification.  
   
 ### <a name="cross-database-access"></a>Accès aux bases de données croisées  
@@ -73,4 +73,4 @@ L'injection SQL est le processus qui permet à un utilisateur malveillant d'entr
  [Gestion des autorisations avec les procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  [Signature de procédures stockées dans SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

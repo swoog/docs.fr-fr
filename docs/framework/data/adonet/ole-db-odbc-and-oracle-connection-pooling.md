@@ -2,12 +2,12 @@
 title: Regroupement de connexions OLE DB, ODBC et Oracle Connection
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: 5b70f6aeeae565684158aeb135d0d3e765e694d1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3ce65036605b7693955c3a6064fca80263d3538f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803122"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527374"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>Regroupement de connexions OLE DB, ODBC et Oracle Connection
 Le regroupement de connexions peut considérablement améliorer les performances et l'évolutivité de votre application. Cette section traite du regroupement de connexions pour les fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle.  
@@ -21,7 +21,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Il est recommandé de toujours fermer ou supprimer une connexion lorsque vous avez fini de l'utiliser afin de retourner la connexion au pool. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être retournées au pool. Par exemple, une connexion devenue hors de portée mais qui n'a pas été explicitement fermée sera retournée au pool de connexion seulement si la taille maximale de celui-ci a été atteinte et si la connexion est toujours valide.  
   
- Pour plus d’informations sur la session OLE DB ou le regroupement des ressources, ainsi que comment désactiver le regroupement par substitution des services par défaut du fournisseur OLE DB, consultez le [Guide du programmeur OLE DB](http://go.microsoft.com/fwlink/?linkid=45232).  
+ Pour plus d’informations sur la session OLE DB ou le regroupement des ressources, ainsi que comment désactiver le regroupement par substitution des services par défaut du fournisseur OLE DB, consultez le [Guide du programmeur OLE DB](https://go.microsoft.com/fwlink/?linkid=45232).  
   
 ## <a name="connection-pooling-for-odbc"></a>Regroupement de connexions pour Odbc  
  Le regroupement de connexions du fournisseur de données .NET Framework pour ODBC est géré par le gestionnaire de pilotes ODBC utilisé pour la connexion et n'est pas affecté par le fournisseur de données .NET Framework pour ODBC.  
@@ -48,7 +48,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
  Si une connexion existante à un serveur a disparu, il est possible de la retirer du pool si le dispositif de regroupement n'a pas détecté d'interruption de la connexion et ne l'a pas marquée comme non valide. Dans ce cas, une exception est générée. Vous devez cependant toujours fermer la connexion afin de la libérer à nouveau vers le pool.  
   
- N'appelez pas une commande `Close` ou `Dispose` sur une `Connection`, un `DataReader` ou tout autre objet managé dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [le Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
+ N'appelez pas une commande `Close` ou `Dispose` sur une `Connection`, un `DataReader` ou tout autre objet managé dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  
   
 ### <a name="transaction-support"></a>Prise en charge des transactions  
  Les connexions sont retirées du pool et assignées en fonction du contexte de transaction. Le contexte du thread de requête et la connexion assignée doivent correspondre. Par conséquent, chaque pool de connexions est en fait sous-divisé en connexions aucun contexte de transaction associé avec eux et dans *N* sous-divisions qui contiennent chacune des connexions avec un contexte de transaction particulier.  
@@ -71,4 +71,4 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ## <a name="see-also"></a>Voir aussi  
  [Regroupement de connexions](../../../../docs/framework/data/adonet/connection-pooling.md)  
  [Compteurs de performance](../../../../docs/framework/data/adonet/performance-counters.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

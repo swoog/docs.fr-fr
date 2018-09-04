@@ -5,11 +5,11 @@ ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 5b4abd570f8bb40f2faa72f2debf2dee563d3a23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394940"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526599"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Vue d'ensemble de la protection étendue de l'authentification
 La protection étendue de l'authentification contribue à la protection contre les attaques de l'intercepteur (« man-in-the-middle ») au cours desquelles un intrus intercepte les informations d'identification d'un client et les transmet à un serveur.  

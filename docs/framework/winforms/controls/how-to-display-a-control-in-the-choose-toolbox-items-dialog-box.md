@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Choose Toolbox Items dialog box [Windows Forms], display control
 ms.assetid: 01ef6eba-d044-40f0-951d-78eff7ebd9a9
 ms.openlocfilehash: fdda72d60b0f18e76b03e9b7f05060a09763a3f7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488259"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527621"
 ---
 # <a name="how-to-display-a-control-in-the-choose-toolbox-items-dialog-box"></a>Comment : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils
 Lorsque vous développez et distribuez des contrôles, vous souhaiterez peut-être ces contrôles s’affichent dans le **Choose Toolbox Items** boîte de dialogue qui s’affiche lorsque vous cliquez sur le **boîte à outils** et sélectionnez  **Choisir des éléments**. Vous pouvez activer votre contrôle s’affiche dans cette boîte de dialogue à l’aide de la procédure d’inscription AssemblyFoldersEx.  

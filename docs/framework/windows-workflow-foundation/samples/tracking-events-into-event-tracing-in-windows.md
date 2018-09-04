@@ -2,15 +2,15 @@
 title: Événements de suivi dans Event Tracing for Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 82de8ee74c12019f815adc63f2ca4441ad95d325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b2e43e169faade06d8816d9ae517b6957fbf1ee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519504"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527094"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Événements de suivi dans Event Tracing for Windows
-Cet exemple montre comment activer le suivi sur un service de flux de travail Windows Workflow Foundation (WF) et émettre les événements de suivi dans événement le suivi pour Windows (ETW). Pour émettre des enregistrements de suivi de workflow dans ETW, l'exemple utilise le participant de suivi ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+Cet exemple montre comment activer le suivi des modifications sur un service de flux de travail Windows Workflow Foundation (WF) et émettre les événements de suivi dans Event Tracing pour Windows (ETW). Pour émettre des enregistrements de suivi de workflow dans ETW, l'exemple utilise le participant de suivi ETW (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  Le workflow dans l'exemple reçoit une demande, assigne la réciproque des données d'entrée à la variable d'entrée et retourne la réciproque au client. Lorsque les données d'entrée sont égales à 0, une exception de division par zéro qui n'est pas gérée et provoque l'abandon du workflow se produit. Lorsque le suivi est activé, l'enregistrement de suivi des erreurs est émis dans ETW, ce qui peut aider à corriger l'erreur ultérieurement. Le participant de suivi ETW est configuré avec un modèle de suivi pour s'abonner aux enregistrements de suivi. Le modèle de suivi est défini dans le fichier Web.config et fourni comme paramètre de configuration au participant de suivi ETW. Le participant de suivi ETW est configuré dans le fichier Web.config du service de workflow et appliqué au service comme comportement de service. Dans cet exemple, vous consultez les événements de suivi dans le journal des événements à l'aide de l'observateur d'événements.  
   
@@ -45,7 +45,7 @@ Cet exemple montre comment activer le suivi sur un service de flux de travail Wi
   
 3.  Pour exécuter la solution, appuyez sur F5.  
   
-     Par défaut, le service est à l’écoute sur le port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
+     Par défaut, le service écoute sur le port 53797 (http://localhost:53797/SampleWorkflowService.xamlx).  
   
 4.  À l'aide de l'[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], ouvrez le client de test WCF.  
   
@@ -75,7 +75,7 @@ Cet exemple montre comment activer le suivi sur un service de flux de travail Wi
   
 10. Observez les événements émis à partir du workflow.  
   
-     Revenez à l’Observateur d’événements et naviguez jusqu'à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **Actualiser**.  
+     Revenez à l’Observateur d’événements et accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**,  **Serveur d’applications-Applications**. Avec le bouton droit **analyse** et sélectionnez **Actualiser**.  
   
      Les événements de workflow sont affichés dans l'observateur d'événements. Notez que les événements d'exécution du workflow sont affichés et que l'un d'eux est une exception non gérée qui correspond à l'erreur dans le workflow. Par ailleurs, un événement d'avertissement est émis à partir de l'activité de workflow, qui indique que l'activité génère une erreur.  
   
@@ -125,9 +125,9 @@ Cet exemple montre comment activer le suivi sur un service de flux de travail Wi
   
 1.  Ouvrez l'observateur d'événements.  
   
-2.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Les Applications serveur**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.  
+2.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **désactiver le journal**.  
   
-3.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Les Applications serveur**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.  
+3.  Accédez à **Observateur d’événements**, **journaux des Applications et Services**, **Microsoft**, **Windows**, **Application Applications de serveur**. Avec le bouton droit **analyse** et sélectionnez **effacer le journal**.  
   
 4.  Choisissez le **effacer** option pour effacer les événements.  
   
@@ -145,9 +145,9 @@ Cet exemple montre comment activer le suivi sur un service de flux de travail Wi
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

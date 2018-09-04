@@ -7,15 +7,15 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: de568c3273d4d040c6566136e5d59e2155b86f8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 739516e86917ac24a81cd6387af5576c512ecbc2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515915"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Comment : appeler des API Windows (Visual Basic)
-Cet exemple définit et appelle la `MessageBox` fonction dans user32.dll et lui passe une chaîne.  
+Cet exemple définit et appelle le `MessageBox` fonction dans user32.dll et lui passe une chaîne.  
   
 ## <a name="example"></a>Exemple  
  [!code-vb[VbVbalrInterop#1](../../../visual-basic/programming-guide/com-interop/codesnippet/VisualBasic/how-to-call-windows-apis_1.vb)]  
@@ -35,9 +35,9 @@ Cet exemple définit et appelle la `MessageBox` fonction dans user32.dll et lui 
 -   Le type conteneur a déjà été créé à l’aide de `CreateType`. (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation détaillée de l’appel de code non managé](http://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+ [Présentation détaillée de l’appel de code non managé](https://msdn.microsoft.com/library/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
  [Exemples d'appel de code non managé](../../../framework/interop/platform-invoke-examples.md)  
  [Consommation de fonctions DLL non managées](../../../framework/interop/consuming-unmanaged-dll-functions.md)  
- [Émission de la définition d’une méthode avec la réflexion](http://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
+ [Définition d’une méthode avec la réflexion l’émission](https://msdn.microsoft.com/library/84fd3bf6-628f-41aa-83d9-b990cf926e81)  
  [Procédure pas à pas : appel des API Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)

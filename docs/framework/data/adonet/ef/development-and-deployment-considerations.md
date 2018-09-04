@@ -3,11 +3,11 @@ title: Points à prendre en considération pour le développement et le déploie
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
 ms.openlocfilehash: d516877d1fc3a064f5275e226379b7e5011fbcdf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425856"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507329"
 ---
 # <a name="development-and-deployment-considerations"></a>Points à prendre en considération pour le développement et le déploiement
 Les rubriques de cette section abordent les problèmes à prendre en compte lors du développement ou du déploiement d’une application basée sur ADO.NET Entity Framework.  

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: 6880b04a3f8a82c1e109c32674804c5241913a8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694b4faaafea62799a96aabe8f023a0d495f8d50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487070"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540203"
 ---
 # <a name="custom-bindings"></a>Liaisons personnalisées
-Vous pouvez utiliser la classe <xref:System.ServiceModel.Channels.CustomBinding> lorsque l'une des liaisons fournies par le système ne répond pas aux spécifications de votre service. Toutes les liaisons sont construites à partir d’un ensemble ordonné d’éléments de liaison. Les liaisons personnalisées peuvent être construites à partir d’un jeu d’éléments de liaison fournis par le système ou peuvent inclure des éléments de liaison personnalisés définis par l’utilisateur. Vous pouvez utiliser des éléments de liaison personnalisés pour activer, par exemple, l’utilisation de nouveaux transports ou encodeurs au niveau d’un point de terminaison de service. Pour obtenir des exemples fonctionnels, consultez [exemples de liaison personnalisés](http://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Pour plus d’informations, consultez [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
+Vous pouvez utiliser la classe <xref:System.ServiceModel.Channels.CustomBinding> lorsque l'une des liaisons fournies par le système ne répond pas aux spécifications de votre service. Toutes les liaisons sont construites à partir d’un ensemble ordonné d’éléments de liaison. Les liaisons personnalisées peuvent être construites à partir d’un jeu d’éléments de liaison fournis par le système ou peuvent inclure des éléments de liaison personnalisés définis par l’utilisateur. Vous pouvez utiliser des éléments de liaison personnalisés pour activer, par exemple, l’utilisation de nouveaux transports ou encodeurs au niveau d’un point de terminaison de service. Pour obtenir des exemples fonctionnels, consultez [exemples de liaison personnalisé](https://msdn.microsoft.com/library/657e8143-beb0-472d-9cfe-ed1a19c2ab08). Pour plus d’informations, consultez [ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
   
 ## <a name="construction-of-a-custom-binding"></a>Construction d’une liaison personnalisée  
  Une liaison personnalisée est construite à l'aide du constructeur <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> à partir d'éléments de liaison « empilés » dans un ordre spécifique :  
@@ -42,7 +42,7 @@ Vous pouvez utiliser la classe <xref:System.ServiceModel.Channels.CustomBinding>
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
- Au bas de la pile se trouve un élément de transport obligatoire. Vous pouvez utiliser votre propre transport ou l’un des éléments de liaison de transport suivant fournit des services Windows Communication Foundation (WCF) :  
+ Au bas de la pile se trouve un élément de transport obligatoire. Vous pouvez utiliser votre propre transport ou l’un des éléments de liaison de transport suivants Windows Communication Foundation (WCF) fournit :  
   
 -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   

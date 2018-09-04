@@ -3,11 +3,11 @@ title: AJAX Service with JSON and XML, exemple
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
 ms.openlocfilehash: 1beb89c11fccefec24ccbebc3fe30033a646718d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452688"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520072"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>AJAX Service with JSON and XML, exemple
 Cet exemple montre comment utiliser Windows Communication Foundation (WCF) pour créer un service Asynchronous JavaScript and XML (AJAX) qui retourne des données JavaScript Objet Notation (JSON) ou XML. Vous pouvez accéder à un service AJAX en utilisant le code JavaScript à partir d'un client de navigateur Web. Cet exemple s’appuie sur le [base AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md) exemple.  

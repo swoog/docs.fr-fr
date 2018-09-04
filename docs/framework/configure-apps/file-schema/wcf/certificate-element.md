@@ -3,11 +3,11 @@ title: '&lt;certificate&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
 ms.openlocfilehash: 5329fb276766ca2bd24f0fd3aef793fbb3b1f8b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515393"
 ---
 # <a name="ltcertificategt-element"></a>&lt;certificate&gt;, élément
 Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages pour les clients de réseau pair à pair.  

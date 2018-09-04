@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
 ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468824"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513589"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Appel des opérations de service (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] définit les opérations de service d'un service de données. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de définir ces opérations sous forme de méthodes dans le service de données. Comme les autres ressources du service de données, ces opérations de service sont adressées via les URI. Une opération de service peut retourner des collections de types d'entité, des instances uniques de type d'entité et des types primitifs, comme des entiers et des chaînes. Une opération de service peut également retourner `null` (`Nothing` en Visual Basic). La bibliothèque cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] peut être utilisée pour accéder aux opérations de service qui prennent en charge les requêtes HTTP GET. Ces types d'opérations de service sont définis en tant que méthodes ayant <xref:System.ServiceModel.Web.WebGetAttribute> appliqué. Pour plus d’informations, consultez [opérations de Service](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

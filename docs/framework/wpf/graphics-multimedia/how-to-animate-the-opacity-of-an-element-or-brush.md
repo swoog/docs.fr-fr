@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
 ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421800"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525851"
 ---
 # <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Comment : animer l'opacité d'un élément ou d'un pinceau
 Pour rendre un élément d’infrastructure apparaître et disparaître, vous pouvez animer sa <xref:System.Windows.UIElement.Opacity%2A> propriété, ou vous pouvez animer la <xref:System.Windows.Media.Brush.Opacity%2A> propriété de la <xref:System.Windows.Media.Brush> (ou pinceaux) utilisé pour peindre. Animer l’opacité de l’élément rend et ses enfants apparaître et disparaître, mais animer le pinceau utilisé pour peindre l’élément vous permet d’être plus sélectifs sur quelle partie de l’élément disparaît. Par exemple, vous pouvez animer l’opacité d’un pinceau utilisé pour peindre l’arrière-plan d’un bouton. Cela entraînerait l’arrière-plan du bouton à disparaître en fondu de la vue, tout en laissant son texte complètement opaque.  

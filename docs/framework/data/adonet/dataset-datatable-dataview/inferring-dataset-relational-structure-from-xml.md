@@ -2,17 +2,17 @@
 title: Déduction de la structure relationnelle des DataSet à partir de XML
 ms.date: 03/30/2017
 ms.assetid: cd2f41c6-6785-420e-aa43-3ceb0bdccdce
-ms.openlocfilehash: 6ded5e893ccca973f8be5f070f68d9d8c7e09678
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 13f63d416b76dbeaedbc007cd27eb2975f1efdef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759681"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515587"
 ---
 # <a name="inferring-dataset-relational-structure-from-xml"></a>Déduction de la structure relationnelle des DataSet à partir de XML
 La structure relationnelle, ou schéma, d'un objet <xref:System.Data.DataSet> est constituée de tables, de colonnes, de contraintes et de relations. Lors du chargement d'un objet <xref:System.Data.DataSet> à partir de XML, le schéma peut être prédéfini ou créé, explicitement ou par inférence, à partir du XML en cours de chargement. Pour plus d’informations sur le chargement du schéma et le contenu d’un <xref:System.Data.DataSet> à partir de XML, consultez [chargement d’un DataSet à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md) et [le chargement des informations de schéma de jeu de données à partir de XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md).  
   
- Si le schéma d’un <xref:System.Data.DataSet> est créée à partir de XML, la méthode recommandée consiste à spécifier explicitement le schéma en utilisant le langage de définition de schéma XML (XSD) (comme décrit dans [dérivant Structure relationnelle des DataSet à partir de schéma XSD (XML) ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)) ou le XML-Data Reduced (XDR). Si aucun schéma XML ou XDR n'est disponible dans le XML, le schéma de l'objet <xref:System.Data.DataSet> peut être déduit de la structure des éléments et attributs XML.  
+ Si le schéma d’un <xref:System.Data.DataSet> est en cours de création à partir de XML, la méthode recommandée consiste à spécifier explicitement le schéma en utilisant le langage de définition de schéma XML (XSD) (comme décrit dans [dérivation Structure relationnelle des DataSet à partir de XSD (XML Schema) ](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)) ou le XML-Data Reduced (XDR). Si aucun schéma XML ou XDR n'est disponible dans le XML, le schéma de l'objet <xref:System.Data.DataSet> peut être déduit de la structure des éléments et attributs XML.  
   
  Cette section décrit les règles d'inférence du schéma de l'objet <xref:System.Data.DataSet> en montrant les éléments et attributs XML et leur structure, ainsi que le schéma de l'objet <xref:System.Data.DataSet> obtenu par inférence.  
   
@@ -48,4 +48,4 @@ La structure relationnelle, ou schéma, d'un objet <xref:System.Data.DataSet> es
  Décrit l'architecture et les composants d'ADO.NET ainsi que la façon de les utiliser pour accéder à des sources de données existantes et pour gérer des données d'application.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

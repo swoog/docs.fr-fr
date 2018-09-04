@@ -12,16 +12,16 @@ ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: dc6426276d354dc3334013235cda45df8e7bb383
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05f9359aa055019b517abb1b7c86ca386d630e41
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408731"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534747"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>Accéder à des objets incorporés à l'aide d'UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique montre comment [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] peut être utilisé pour exposer des objets incorporés dans le contenu d’un contrôle de texte.  
   
@@ -30,8 +30,8 @@ ms.locfileid: "33408731"
   
  Les objets incorporés sont considérés comme des enfants du fournisseur de texte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Cela leur permet d’être exposés par la même arborescence UI Automation que tous les autres éléments d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . La fonctionnalité, à son tour, est exposée par les modèles de contrôle généralement demandés par le type de contrôle des objets incorporés (par exemple, étant donné que les liens hypertexte sont textuels, ils prennent en charge <xref:System.Windows.Automation.TextPattern>).  
   
- ![Objets incorporés dans un conteneur de texte. ] (../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
-Un exemple de document avec du contenu textuel, (« Saviez-vous ? » ...) et deux objets incorporés (image d’une baleine et lien hypertexte), utilisés comme cible pour les exemples de code.  
+ ![Objets incorporés dans un conteneur de texte. ](../../../docs/framework/ui-automation/media/uia-textpattern-embeddedobjects.PNG "UIA_TextPattern_EmbeddedObjects")  
+Un exemple de document avec contenu textuel, (« Saviez-vous ? » ...) et deux objets incorporés (image d’une baleine et lien hypertexte), utilisés en tant que cible pour les exemples de code.  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant montre comment récupérer une collection d’objets incorporés à partir d’un fournisseur de texte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . Pour l’exemple de document fourni dans l’introduction, deux objets sont retournés (un élément image et un élément de texte).  

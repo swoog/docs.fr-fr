@@ -8,11 +8,11 @@ ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: adc1bf7c51eeef715e98bb67c5f6a2e44e09b35f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466608"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522185"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Sécurité de transport avec l'authentification Windows
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et un service sécurisé par la sécurité de Windows. Pour plus d’informations sur la programmation, consultez [Comment : sécuriser un Service avec les informations d’identification Windows](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).  

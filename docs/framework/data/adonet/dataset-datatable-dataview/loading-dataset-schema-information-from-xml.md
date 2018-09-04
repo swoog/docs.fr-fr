@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
 ms.openlocfilehash: a076dcbbe79a7ec0dfbd727e0d0c752bd4675eef
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398604"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515980"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Chargement des informations de schéma de DataSet à partir de XML
 Le schéma d’une <xref:System.Data.DataSet> (ses tables, colonnes, relations et contraintes) peuvent être définis par programme, créé par le **remplir** ou **FillSchema** méthodes d’un <xref:System.Data.Common.DataAdapter>, ou chargés à partir d’un Document XML. Pour charger **DataSet** informations de schéma à partir d’un document XML, vous pouvez utiliser la **ReadXmlSchema** ou le **InferXmlSchema** méthode de la **DataSet**. **ReadXmlSchema** vous permet de charger ou de déduire **DataSet** les informations de schéma à partir du document contenant le schéma XML Schema definition language (XSD) ou un document XML avec un schéma XML inline. **InferXmlSchema** vous permet de déduire le schéma du document XML tout en ignorant certains espaces de noms XML que vous spécifiez.  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ContextMenuStrip control [Windows Forms]
 - shortcut menus
 ms.assetid: 76e070b2-65d7-457f-8300-d104e4e01e5e
-ms.openlocfilehash: 45b37a3cc542295368a9304cb49078d88c347228
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5f2246ef70ed627ecd311c1f3e5666afcd9b5ef
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525534"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552177"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip, contrôle
 Le contrôle <xref:System.Windows.Forms.ContextMenuStrip> fournit un menu contextuel que vous associez à un contrôle.  
@@ -35,7 +35,7 @@ Le contrôle <xref:System.Windows.Forms.ContextMenuStrip> fournit un menu contex
  [Guide pratique pour gérer l'événement d'ouverture ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-handle-the-contextmenustrip-opening-event.md)  
  Décrit comment personnaliser le comportement d'un contrôle <xref:System.Windows.Forms.ContextMenuStrip> en gérant l'événement <xref:System.Windows.Forms.ToolStripDropDown.Opening>.  
   
- Consultez également [Tâches ContextMenuStrip, boîte de dialogue](http://msdn.microsoft.com/library/ms233646\(v=vs.110\)) ou [éditeur de collections d’éléments ContextMenuStrip](http://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
+ Consultez également [Tâches ContextMenuStrip, boîte de dialogue](https://msdn.microsoft.com/library/ms233646\(v=vs.110\)) ou [éditeur de collections d’éléments ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\)).  
   
 ## <a name="reference"></a>Référence  
  <xref:System.Windows.Forms.MenuStrip>  

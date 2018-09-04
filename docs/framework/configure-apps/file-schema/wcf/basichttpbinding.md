@@ -5,11 +5,11 @@ helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
 ms.openlocfilehash: cde75b44f30d445a00007dac617b898ea5dcb254
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395205"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511242"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 Représente une liaison qu’un service Windows Communication Foundation (WCF) peut utiliser pour configurer et exposer des points de terminaison capables de communiquer avec des clients et services web basés sur ASMX, ainsi qu’avec d’autres services conformes au profil WS-I Basic Profile 1.1.  

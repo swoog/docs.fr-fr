@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406494"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514961"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Regroupement de connexions SQL Server (ADO.NET)
 La connexion à un serveur de base de données consiste généralement en plusieurs étapes de longue durée. Un canal physique tel qu'un socket ou un canal nommé doit être établi, le contrôle initial avec le serveur doit avoir lieu, les informations de chaîne de connexion doivent être analysées, la connexion doit être authentifiée par le serveur, des contrôles doivent être effectués pour l'inscription dans la transaction en cours, etc.  

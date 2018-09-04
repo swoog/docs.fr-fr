@@ -2,15 +2,15 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 4681dea4fd39b039346d22c02c478323ff53e240
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5c103f5a5a4f95761a5c19e6a8d6159a7439d05a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808325"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523218"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
-Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associé au jeton.  
+Cet exemple montre comment implémenter un authentificateur de jetons personnalisé. Un authentificateur de jetons dans Windows Communication Foundation (WCF) est utilisé pour valider le jeton utilisé avec le message, vérifier qu’il est cohérent, et l’authentification de l’identité associée au jeton.  
   
  Les authentificateurs de jetons personnalisés sont utiles dans un grand nombre de cas, dont les suivants :  
   
@@ -24,11 +24,11 @@ Cet exemple montre comment implémenter un authentificateur de jetons personnali
   
 -   Comment le serveur peut valider les informations d'identification du client à l'aide d'un authentificateur de jetons personnalisé.  
   
--   Comment le code de service WCF s’intègre à l’authentificateur de jetons personnalisé.  
+-   Comment le code de service WCF est lié à l’authentificateur de jetons personnalisé.  
   
 -   Comment le serveur peut être authentifié à l'aide de son certificat X.509.  
   
- Cet exemple montre également comment l’identité l’appelant est accessible à partir de WCF après le processus d’authentification du jeton personnalisé.  
+ Cet exemple montre également comment identité de l’appelant est accessible à partir de WCF après le processus d’authentification du jeton personnalisé.  
   
  Le service expose un point de terminaison unique permettant de communiquer avec le service, défini à l'aide du fichier de configuration App.config. Le point de terminaison se compose d’une adresse, d’une liaison et d’un contrat. La liaison est configurée avec un `wsHttpBinding` standard, avec le mode de sécurité du message (mode par défaut de `wsHttpBinding`). Cet exemple définit le `wsHttpBinding` standard pour permettre l'authentification du client à l'aide du nom d'utilisateur. Le service configure également le certificat de service à l'aide du comportement `serviceCredentials`. Le comportement `securityCredentials` vous permet de spécifier un certificat de service. Un certificat de service est utilisé par un client pour authentifier le service et fournir la protection des messages. La configuration suivante référence le certificat localhost installé pendant l'installation de l'exemple, tel que décrit dans les instructions d'installation suivantes.  
   
@@ -324,7 +324,7 @@ static void DisplayIdentityInformation()
   
 #### <a name="to-set-up-and-build-the-sample"></a>Pour configurer et générer l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -339,7 +339,7 @@ static void DisplayIdentityInformation()
   
 3.  Lancez client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -361,7 +361,7 @@ static void DisplayIdentityInformation()
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes.  
   
-10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

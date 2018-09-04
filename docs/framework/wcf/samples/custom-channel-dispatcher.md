@@ -3,11 +3,11 @@ title: Custom Channel Dispatcher
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
 ms.openlocfilehash: 20574b4c849f312cb2cf55709d8d5e2a9b5dbca7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462377"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519888"
 ---
 # <a name="custom-channel-dispatcher"></a>Custom Channel Dispatcher
 Cet exemple montre comment générer la pile de canaux de façon personnalisée en implémentant <xref:System.ServiceModel.ServiceHostBase> directement et comment créer un répartiteur de canal personnalisé dans un environnement avec hôte Web. Le répartiteur de canal interagit avec <xref:System.ServiceModel.Channels.IChannelListener> pour accepter des canaux et récupère des messages de la pile de canaux. Cet exemple fournit également un exemple de base pour montrer comment construire une pile de canaux dans un environnement avec hôte Web à l'aide de <xref:System.ServiceModel.Activation.VirtualPathExtension>.  

@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ccb0aef0e998ffccd7526f9f0554bceb892001b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7b2e1b08d1091e482c6b02fe015a58219ff80768
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462187"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517559"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put (fonction)
-Écrit la valeur et le qualificateur nommé. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé. 
+Écrit la valeur et le qualificateur nommés. Le nouveau qualificateur remplace la valeur précédente du même nom. Si le qualificateur n’existe pas, il est créé. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -43,17 +43,17 @@ HRESULT QualifierSet_Put (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`   
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`   
-[in] Un pointeur vers un [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.
+[in] Un pointeur vers un [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.
 
 `wszName`   
 [in] Le nom du qualificateur à écrire.
 
-`pVal` [in] Un pointeur vers un élément valide `VARIANT` qui contient le qualificateur à écrire. Ce paramètre ne peut pas être `null`.
+`pVal` [in] Un pointeur vers une valide `VARIANT` qui contient le qualificateur à écrire. Ce paramètre ne peut pas être `null`.
 
-`lFlavor` [in] Une des constantes suivantes qui définit les versions de qualificateur souhaité pour ce qualificateur. La valeur par défaut est `WBEM_FLAVOR_OVERRIDABLE` (0).
+`lFlavor` [in] Une des constantes suivantes qui définit les types de qualificateurs souhaitée pour ce qualificateur. La valeur par défaut est `WBEM_FLAVOR_OVERRIDABLE` (0).
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
@@ -69,22 +69,22 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Une tentative non conforme pour spécifier le **clé** qualificateur sur une propriété qui ne peut pas être une clé. Les clés sont spécifiées om c ; définition ass d’un objet et ne peut pas être modifié sur chaque instance. |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | Il y a une tentative non conforme pour spécifier le **clé** qualificateur sur une propriété qui ne peut pas être une clé. Les clés sont spécifiés om c ; définition ass pour un objet et ne peut pas être modifiée sur une base par instance. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
-| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Le `pVal` paramètre n’est pas un type de qualificateur autorisé. |
-| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Il n’est pas possible d’appeler le `QualifierSet_Put` méthode sur le qualificateur, car l’objet propriétaire n’autorise pas les remplacements. |
+| `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | Le `pVal` paramètre n’est pas un type de qualificateur conforme. |
+| `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | Il n’est pas possible d’appeler le `QualifierSet_Put` substitutions des méthodes sur le qualificateur parce que l’objet propriétaire n’autorise pas. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemQualifierSet::Put](https://msdn.microsoft.com/library/aa391871(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemQualifierSet::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-put) (méthode).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

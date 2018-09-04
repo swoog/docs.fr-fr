@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Reliable session
 ms.assetid: 86e914f2-060b-432b-bd17-333695317745
 ms.openlocfilehash: ec9163eded7f77053b94b7cb0ff0995dca575612
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407805"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526413"
 ---
 # <a name="ws-reliable-session"></a>WS Reliable Session
 Cet exemple montre l'utilisation des sessions fiables. Les sessions fiables fournissent la prise en charge de la messagerie et des sessions fiables. La messagerie fiable réessaie d'établir la communication en cas d'échec et permet de spécifier des assurances de remise telles que l'ordre d'arrivée des messages. Les sessions conservent l'état pour les clients entre les appels. Cet exemple implémente des sessions permettant de conserver l'état du client et spécifie des assurances de remise par ordre d'arrivée.  

@@ -3,11 +3,11 @@ title: Utilisation d’activités de collection
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
 ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43422625"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506549"
 ---
 # <a name="using-collection-activities"></a>Utilisation d’activités de collection
 Cet exemple montre comment utiliser les activités de collection (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> et <xref:System.Activities.Statements.RemoveFromCollection%601>) avec une classe qui implémente l'interface <xref:System.Collections.ICollection> et comment créer une activité personnalisée qui itère au sein d'une collection pour imprimer le contenu de chaque élément de la collection. L'activité personnalisée nommée `PrintCollection`imprime sur la console les membres d'élément d'une collection nommée `Numbers`.  

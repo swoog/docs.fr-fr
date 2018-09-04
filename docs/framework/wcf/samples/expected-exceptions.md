@@ -3,11 +3,11 @@ title: Expected Exceptions
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
 ms.openlocfilehash: ea2043826291e77a59d61077d92b59baf129af90
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425871"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528270"
 ---
 # <a name="expected-exceptions"></a>Expected Exceptions
 Cet exemple montre comment intercepter des exceptions attendues lors de l'utilisation d'un client typé. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  

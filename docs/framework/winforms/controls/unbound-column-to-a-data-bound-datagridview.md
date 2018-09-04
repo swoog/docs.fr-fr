@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
 ms.openlocfilehash: 39c637fe30ed852f7d6e9fa7a1dbbfa72af9e4b4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527928"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>Comment : ajouter une colonne indépendante à un contrôle DataGridView Windows Forms lié aux données
 Les données que vous affichez dans le contrôle <xref:System.Windows.Forms.DataGridView> proviennent normalement d'une source de données quelconque. Vous pouvez toutefois vouloir afficher une colonne de données qui ne provienne pas de la source de données. Ce type de colonne est appelé colonne indépendante. Les colonnes indépendantes peuvent prendre de nombreuses formes. Souvent, elles sont utilisées pour fournir un accès aux détails d'une ligne de données.  

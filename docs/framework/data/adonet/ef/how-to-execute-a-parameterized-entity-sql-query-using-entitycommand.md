@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: c8469f8f13178a09c636d33070fd5ad4cbb912aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 12304064a20adf66ac5db2195ae2d103ffa22c09
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767178"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542681"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>Comment : exécuter une requête paramétrée Entity SQL avec EntityCommand
-Cette rubrique montre comment exécuter une [!INCLUDE[esql](../../../../../includes/esql-md.md)] requête qui a des paramètres en utilisant un <xref:System.Data.EntityClient.EntityCommand> objet.  
+Cette rubrique montre comment exécuter un [!INCLUDE[esql](../../../../../includes/esql-md.md)] requête comportant des paramètres à l’aide un <xref:System.Data.EntityClient.EntityCommand> objet.  
   
 ### <a name="to-run-the-code-in-this-example"></a>Pour exécuter le code de cet exemple  
   
-1.  Ajouter le [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à votre projet et configurer votre projet pour utiliser le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Pour plus d’informations, consultez [Comment : utiliser l’Assistant Entity Data Model](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+1.  Ajouter le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à votre projet et configurez votre projet pour utiliser le [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Pour plus d’informations, consultez [Comment : utiliser l’Assistant Entity Data Model](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 2.  Dans la page de codes de votre application, ajoutez les instructions `using` (`Imports` en Visual Basic) suivantes :  
   
@@ -31,5 +31,5 @@ Cette rubrique montre comment exécuter une [!INCLUDE[esql](../../../../../inclu
  [!code-vb[DP EntityServices Concepts#ParameterizedQueryWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#parameterizedquerywithentitycommand)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : exécuter une requête paramétrable](http://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
+ [Comment : exécuter une requête paramétrable](https://msdn.microsoft.com/library/42048f03-c65c-4d98-b50a-3e7d537a63e8)  
  [Langage Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

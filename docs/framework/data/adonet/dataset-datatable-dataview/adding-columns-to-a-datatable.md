@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 8ee47ddce273e564673d96d2b2e276b68879373f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d5031136b48b50ef7ad34b97942b7f6d8054d340
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760464"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522314"
 ---
 # <a name="adding-columns-to-a-datatable"></a>Ajout de colonnes à un DataTable
-A <xref:System.Data.DataTable> contient une collection de <xref:System.Data.DataColumn> objets référencés par le **colonnes** propriété de la table. Cette collection de colonnes, ainsi que toute contrainte, définit le schéma, ou structure, de la table.  
+Un <xref:System.Data.DataTable> contient une collection de <xref:System.Data.DataColumn> objets référencés par le **colonnes** propriété de la table. Cette collection de colonnes, ainsi que toute contrainte, définit le schéma, ou structure, de la table.  
   
- Vous créez **DataColumn** objets au sein d’une table à l’aide de la **DataColumn** constructeur, ou en appelant le **ajouter** méthode de la **colonnes**propriété de la table, qui est un <xref:System.Data.DataColumnCollection>. Le **ajouter** méthode accepte facultatif **ColumnName**, **DataType**, et **Expression** arguments et crée un nouveau  **DataColumn** en tant que membre de la collection. Elle accepte également un existant **DataColumn** de l’objet et l’ajoute à la collection et retourne une référence à l’ajout **DataColumn** si nécessaire. Étant donné que **DataTable** objets ne sont pas spécifiques à n’importe quelle source de données, les types .NET Framework sont utilisées lorsque vous spécifiez le type de données d’une **DataColumn**.  
+ Vous créez **DataColumn** objets au sein d’une table en utilisant le **DataColumn** constructeur, ou en appelant le **ajouter** méthode de la **colonnes**propriété de la table, qui est un <xref:System.Data.DataColumnCollection>. Le **ajouter** méthode accepte facultatif **ColumnName**, **DataType**, et **Expression** arguments et crée un nouveau  **DataColumn** en tant que membre de la collection. Il accepte également un existant **DataColumn** de l’objet et l’ajoute à la collection et retourne une référence à l’ajout **DataColumn** si nécessaire. Étant donné que **DataTable** objets ne sont pas spécifiques à n’importe quelle source de données, les types .NET Framework sont utilisées lorsque vous spécifiez le type de données d’un **DataColumn**.  
   
  L’exemple suivant ajoute quatre colonnes à un **DataTable**.  
   
@@ -44,10 +44,10 @@ workTable.Columns.Add("CustFName", typeof(String));
 workTable.Columns.Add("Purchases", typeof(Double));  
 ```  
   
- Dans l’exemple, notez que les propriétés de la **CustID** colonne sont définies pour ne pas autoriser **DBNull** valeurs et à limiter les valeurs soient uniques. Toutefois, si vous définissez la **CustID** colonne en tant que la colonne de clé primaire de la table, la **AllowDBNull** propriété sera automatiquement la valeur **false** et le **Unique** propriété sera automatiquement la valeur **true**. Pour plus d’informations, consultez [définition des clés primaires](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
+ Dans l’exemple, notez que les propriétés de la **CustID** colonne sont définies pour ne pas autoriser **DBNull** valeurs et pour limiter les valeurs uniques. Toutefois, si vous définissez la **CustID** colonne comme colonne clé primaire de la table, le **AllowDBNull** propriété définira automatiquement **false** et le **Unique** propriété définira automatiquement **true**. Pour plus d’informations, consultez [définition des clés primaires](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/defining-primary-keys.md).  
   
 > [!CAUTION]
->  Si un nom de colonne n’est pas fourni pour une colonne, la colonne reçoit un nom incrémentiel par défaut de la colonne*N,* commençant par « Column1 », lorsqu’il est ajouté à la **DataColumnCollection**. Nous vous recommandons d’éviter la convention d’affectation de noms de « colonne*N*» lorsque vous fournissez un nom de colonne, car le nom fourni peut entrer en conflit avec un nom de colonne par défaut existant dans le **DataColumnCollection**. Si le nom fourni existe déjà, une exception est levée.  
+>  Si un nom de colonne n’est pas fourni pour une colonne, la colonne reçoit un nom incrémentiel par défaut de la colonne*N,* à partir de « Column1 », lorsqu’il est ajouté à la **DataColumnCollection**. Nous vous recommandons d’éviter la convention d’affectation de noms de « colonne*N*» lorsque vous fournissez un nom de colonne, étant donné que le nom fourni peut entrer en conflit avec un nom de colonne par défaut existant dans le **DataColumnCollection**. Si le nom fourni existe déjà, une exception est levée.  
   
  Si vous utilisez <xref:System.Xml.Linq.XElement> en tant que <xref:System.Data.DataColumn.DataType%2A> d'un <xref:System.Data.DataColumn> dans <xref:System.Data.DataTable>, la sérialisation XML ne fonctionnera pas lors de la lecture dans les données. Par exemple, si vous écrivez un <xref:System.Xml.XmlDocument> à l'aide de la méthode `DataTable.WriteXml`, lors de la sérialisation vers XML, un nœud parent supplémentaire est ajouté dans le <xref:System.Xml.Linq.XElement>. Pour contourner ce problème, utilisez le type <xref:System.Data.SqlTypes.SqlXml> à la place de <xref:System.Xml.Linq.XElement>. `ReadXml` et `WriteXml` fonctionnent correctement avec <xref:System.Data.SqlTypes.SqlXml>.  
   
@@ -57,4 +57,4 @@ workTable.Columns.Add("Purchases", typeof(Double));
  <xref:System.Data.DataTable>  
  [Définition de schéma de DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

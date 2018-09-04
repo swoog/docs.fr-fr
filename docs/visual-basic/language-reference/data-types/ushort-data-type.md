@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520c21d4df5c340b41a8b1e9055b3fadddfdf6e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 038aad2c41f655d0699dab33df276132a70e3ede
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590366"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535306"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort, type de données (Visual Basic)
 
@@ -35,22 +35,22 @@ Contient des entiers 16 bits (2 octets) non signés compris entre 0 et 65 535.
   
  La valeur par défaut de `UShort` est 0.  
 
-# <a name="literal-assignments"></a>Attributions de littéral
+# <a name="literal-assignments"></a>Affectations de littéraux
 
-Vous pouvez déclarer et initialiser une `UShort` variable en lui assignant un décimal littéral, un littéral hexadécimal, un littéral octal, ou (à partir de Visual Basic 2017) un littéral binaire. Si le littéral entier est en dehors de la plage de `UShort` (autrement dit, s’il est inférieur à <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit.
+Vous pouvez déclarer et initialiser une `UShort` variable en lui assignant un littéral décimal, un littéral hexadécimal, un littéral octal, ou (à partir de Visual Basic 2017) un littéral binaire. Si le littéral entier est en dehors de la plage de `UShort` (autrement dit, s’il est inférieur à <xref:System.UInt16.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.UInt16.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit.
 
-Dans l’exemple suivant, les entiers égal à 65,034 sont représentées sous forme de nombre décimal, hexadécimal, et les littéraux binaires sont affectés à `UShort` valeurs.
+Dans l’exemple suivant, les entiers égaux à 65 034 représentés comme séparateur décimal, hexadécimal, et les littéraux binaires sont affectés à `UShort` valeurs.
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
 > Vous utilisez le préfixe `&h` ou `&H` pour désigner un littéral hexadécimal, le préfixe `&b` ou `&B` pour désigner un littéral binaire et le préfixe `&o` ou `&O` pour désigner un littéral octal. Les littéraux décimaux n’ont pas de préfixe.
 
-À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur de chiffres pour améliorer la lisibilité, comme l’exemple suivant montre le.
+À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur numérique pour améliorer la lisibilité, comme dans l’exemple suivant montre.
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Par exemple :
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octaux. Exemple :
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -68,17 +68,17 @@ Dim number = &H_5826us
   
 -   **Nombres négatifs.** Étant donné que `UShort` est un type non signé, il ne peut pas représenter un nombre négatif. Si vous utilisez le moins unaire (`-`) opérateur sur une expression qui correspond au type `UShort`, Visual Basic convertit l’expression à `Integer` première.  
   
--   **Conformité CLS.** Le `UShort` type de données n’est pas dans le cadre de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), un code conforme CLS ne peut pas consommer un composant qui l’utilise.
+-   **Conformité CLS.** Le `UShort` type de données n’est pas dans le cadre de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), le code conforme CLS ne peut pas consommer un composant qui l’utilise.
   
 -   **Étendues.** Le `UShort` type de données s’étend à `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, et `Double`. Cela signifie que vous pouvez convertir `UShort` à un de ces types sans rencontrer un <xref:System.OverflowException?displayProperty=nameWithType> erreur.  
   
--   **Caractères de type.** L’ajout de caractères de type littéral `US` à un littéral force ce dernier à la `UShort` type de données. `UShort` n’a aucun caractère de type d’identificateur.  
+-   **Caractères de type.** Ajout des caractères de type littéral `US` à un littéral force ce dernier à la `UShort` type de données. `UShort` n’a aucun caractère de type d’identificateur.  
   
--   **Type .NET Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt16?displayProperty=nameWithType>.  
+-   **Type de Framework.** Le type correspondant dans le .NET Framework est la structure <xref:System.UInt16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.UInt16>  
- [Types de données](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
  [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Guide pratique : appeler une fonction Windows qui possède des types non signés](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  

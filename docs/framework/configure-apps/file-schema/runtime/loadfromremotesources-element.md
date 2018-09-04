@@ -8,11 +8,11 @@ ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484065"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509481"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; élément
 Spécifie si les assemblys chargés à partir de sources distantes doivent être accordés une confiance totale dans .NET Framework 4 et versions ultérieures.

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
 ms.openlocfilehash: 720660153cb357c11168ab45ebf8343559faf82a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514283"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>Comment : retourner un résultat de requête LINQ en tant que type spécifique (Visual Basic)
 Language-Integrated Query (LINQ) facilite l’accès aux informations de base de données et exécuter des requêtes. Par défaut, les requêtes LINQ retournent une liste d’objets comme un type anonyme. Vous pouvez également spécifier qu’une requête retourne une liste d’un type spécifique à l’aide de la `Select` clause.  

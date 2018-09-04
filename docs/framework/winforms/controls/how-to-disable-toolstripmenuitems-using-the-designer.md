@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], disabling items
 ms.assetid: 985e311e-7d67-4205-b5a3-d045b68a4a03
 ms.openlocfilehash: f97c622719c0f76fe8ce7ea34b9324110508b6e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523292"
 ---
 # <a name="how-to-disable-toolstripmenuitems-using-the-designer"></a>Comment : désactiver des ToolStripMenuItems à l'aide du concepteur
 Vous pouvez limiter ou élargir les commandes de que l’utilisateur peut effectuer par activation et désactivation des éléments de menu en réponse aux activités de l’utilisateur. Éléments de menu sont activées par défaut lorsqu’ils sont créés, mais cela peut être ajusté via la <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> propriété. Vous pouvez manipuler cette propriété au moment du design dans le **propriétés** fenêtre ou par programme en la définissant dans le code. Pour plus d’informations, consultez [Comment : désactiver des ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems.md).  

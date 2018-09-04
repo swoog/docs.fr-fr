@@ -2,12 +2,12 @@
 title: Poison Message Handling in MSMQ 4,0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: ad9f589d285cea30ecfe908239ae18e917f01c47
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 904eee34b8be02dfab560069ef5491200be9cf07
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255775"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522631"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Poison Message Handling in MSMQ 4,0
 Cet exemple montre comment assurer la gestion des messages incohérents dans un service. Cet exemple est basé sur le [transactionnel de liaison MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) exemple. Cet exemple utilise `netMsmqBinding`. Le service est une application console auto-hébergée qui permet d'observer le service qui reçoit les messages mis en file d'attente.  
@@ -314,14 +314,14 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  L'affectation de `security mode` à `None` revient à affecter `MsmqAuthenticationMode` à la sécurité `MsmqProtectionLevel`, `Message` et `None`.  
   
-3.  Pour que Meta Data Exchange fonctionne, nous enregistrons une URL avec une liaison http. Cela demande que le service soit exécuté dans une fenêtre de commande élevée. Sinon, vous obtenez une exception tels que : `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see http://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
+3.  Pour que Meta Data Exchange fonctionne, nous enregistrons une URL avec une liaison http. Cela demande que le service soit exécuté dans une fenêtre de commande élevée. Sinon, vous obtenez une exception tels que : `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Poison\MSMQ4`  
   
