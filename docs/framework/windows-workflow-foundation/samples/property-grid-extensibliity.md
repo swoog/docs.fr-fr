@@ -2,12 +2,12 @@
 title: Extensibilité de la grille des propriétés
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 50fb2fce2fa8c52942a221401f88523c7b407dab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7c3e3dbc3ccd95fc12dffd40927b3e2bbbc8226
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43660254"
 ---
 # <a name="property-grid-extensibliity"></a>Extensibilité de la grille des propriétés
 Un développeur peut personnaliser la grille des propriétés qui s'affiche lorsqu'une activité donnée est sélectionnée dans le concepteur. Cela permet de créer une expérience d'édition enrichie. Cet exemple montre comment effectuer cette opération.  
@@ -20,7 +20,7 @@ Un développeur peut personnaliser la grille des propriétés qui s'affiche lors
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`  
   
@@ -32,7 +32,7 @@ Un développeur peut personnaliser la grille des propriétés qui s'affiche lors
   
 -   Il crée un type qui dérive de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.  
   
--   Dans le constructeur, le <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> a la valeur avec un modèle de données de Windows Presentation Foundation (WPF). Il peut être lié à un modèle XAML, mais dans cet exemple, le code est utilisé pour initialiser la liaison de données.  
+-   Dans le constructeur, le <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> a la valeur avec un modèle de données Windows Presentation Foundation (WPF). Il peut être lié à un modèle XAML, mais dans cet exemple, le code est utilisé pour initialiser la liaison de données.  
   
 -   Le modèle de données a un contexte de données du <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> de l'élément restitué dans la grille des propriétés. Notez, dans le code suivant (provenant de CustomInlineEditor.cs), que ce contexte crée ensuite une liaison avec la propriété `Value`.  
   
@@ -89,7 +89,7 @@ Un développeur peut personnaliser la grille des propriétés qui s'affiche lors
     this.InlineEditorTemplate.VisualTree = stack;  
     ```  
   
-4.  Remplace le <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` méthode dans le type concepteur pour gérer l’affichage de la boîte de dialogue. Dans cet exemple, un <xref:System.Windows.Forms.FileDialog> de base est présenté.  
+4.  Remplace le <!--zz <xref:Microsoft.Windows.Design.PropertyEditing.ShowDialog%2A>--> `Microsoft.Windows.Design.PropertyEditing.ShowDialog` méthode dans le type de concepteur pour gérer l’affichage de la boîte de dialogue. Dans cet exemple, un <xref:System.Windows.Forms.FileDialog> de base est présenté.  
   
     ```  
     public override void ShowDialog(PropertyValue propertyValue, IInputElement commandSource)  
@@ -120,13 +120,13 @@ Un développeur peut personnaliser la grille des propriétés qui s'affiche lors
   
 2.  Faites glisser un **SimpleCodeActivity** à partir de la boîte à outils vers la zone de conception.  
   
-3.  Cliquez sur le **SimpleCodeActivity** et ouvrez la grille des propriétés dans lequel il existe un contrôle slider et un fichier de contrôle de sélection.  
+3.  Cliquez sur le **SimpleCodeActivity** , puis ouvrez la grille des propriétés où il existe un contrôle slider et un fichier de contrôle de sélection.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

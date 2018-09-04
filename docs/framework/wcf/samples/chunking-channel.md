@@ -3,11 +3,11 @@ title: Canal de segmentation
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: 9572ad6f88786af34252cea1f3c62d5067257b8b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470088"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661189"
 ---
 # <a name="chunking-channel"></a>Canal de segmentation
 Lors de l’envoi de messages volumineux à l’aide de Windows Communication Foundation (WCF), il est souvent souhaitable de limiter la quantité de mémoire utilisée pour mettre en mémoire tampon des messages. L'une des solutions pour ce faire consiste à transmettre en continu le corps de ces messages (possible à condition que la plus grande partie des données figurent dans le corps des messages concernés). Certains protocoles, cependant, nécessitent la mise en mémoire tampon de l'intégralité des messages. Parmi ces protocoles figurent notamment ceux de la messagerie fiable et de la sécurité. L'une des autres solutions consiste à diviser les messages de grande taille en messages plus petits appelés segments, à envoyer ces segment un par un, puis à reconstituer les grands messages initiaux à partir de ces segments, côté destinataire. L'application peut effectuer ces opérations de segmentation et désegmentation elle-même ou utiliser un canal personnalisé pour ce faire. L'exemple de canal de segmentation suivant illustre la manière dont un protocole personnalisé ou un canal superposé peuvent être utilisés afin de segmenter ou désegmenter des messages de grande taille.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 212cc229d8a496be11c84e30dbf3a0eedb952006
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b719f2112aac1292b668fe199d48de4b0b60ed21
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529377"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659136"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Comment : créer une table de correspondance pour un contrôle ComboBox, ListBox ou CheckedListBox Windows Forms
 Il est parfois utile d'afficher les données dans un format convivial dans un Windows Form, mais de les stocker dans un format plus pertinent pour votre programme. Par exemple, un formulaire de commande de produits alimentaires peut présenter les éléments de menu par leur nom dans une zone de liste. Toutefois, la table de données dans laquelle la commande est enregistrée contient alors les numéros d'ID uniques représentant les produits alimentaires. Les tableaux ci-dessous montrent un exemple de stockage et d’affichage des données du formulaire de commande des produits alimentaires.  
@@ -38,11 +38,11 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
 |12|Pomme de terre|  
 |13|Poulet|  
   
- Dans ce scénario, une table, **OrderDetailsTable**, stocke les informations d’affichage et l’enregistrement. Cependant, pour économiser de l'espace, elle procède d’une façon plutôt insolite. L’autre table, **ItemTable**, contient uniquement des informations relatives à l’apparence sur le ID de nombre équivaut au nom de produit alimentaire et rien sur les commandes de produits alimentaires réel.  
+ Dans ce scénario, une seule table, **OrderDetailsTable**, stocke les informations d’affichage et l’enregistrement. Cependant, pour économiser de l'espace, elle procède d’une façon plutôt insolite. L’autre table, **ItemTable**, contient uniquement des informations relatives à l’apparence sur quel ID de nombre équivaut au nom de produit alimentaire et rien sur les commandes de produits alimentaires réelle.  
   
- Le **ItemTable** est connecté à la <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, ou <xref:System.Windows.Forms.CheckedListBox> via trois propriétés. Le `DataSource` propriété contient le nom de la table. Le `DisplayMember` propriété contient la colonne de données de la table que vous souhaitez afficher dans le contrôle (nom de produit alimentaire). Le `ValueMember` propriété contient la colonne de données de la table contenant les informations stockées (le numéro d’ID).  
+ Le **ItemTable** est connecté à la <xref:System.Windows.Forms.ComboBox>, <xref:System.Windows.Forms.ListBox>, ou <xref:System.Windows.Forms.CheckedListBox> via trois propriétés. Le `DataSource` propriété comporte le nom de cette table. Le `DisplayMember` propriété contient la colonne de données de la table que vous souhaitez afficher dans le contrôle (nom du produit alimentaire). Le `ValueMember` propriété contient la colonne de données de la table avec les informations stockées (numéro d’identification).  
   
- Le **OrderDetailsTable** est connecté au contrôle par sa collection de liaisons, accédée via la <xref:System.Windows.Forms.Control.DataBindings%2A> propriété. Lorsque vous ajoutez un objet de liaison à la collection, vous connectez une propriété du contrôle à une donnée membre spécifique (la colonne des numéros d’ID) dans une source de données (la **OrderDetailsTable**). Quand une sélection est effectuée dans le contrôle, c’est dans cette table que l'entrée du formulaire est enregistrée.  
+ Le **OrderDetailsTable** est connecté au contrôle par sa collection de liaisons, accédée via la <xref:System.Windows.Forms.Control.DataBindings%2A> propriété. Lorsque vous ajoutez un objet de liaison à la collection, vous vous connectez une propriété du contrôle à une donnée membre spécifique (la colonne des numéros d’ID) dans une source de données (le **OrderDetailsTable**). Quand une sélection est effectuée dans le contrôle, c’est dans cette table que l'entrée du formulaire est enregistrée.  
   
 ### <a name="to-create-a-lookup-table"></a>Pour créer une table de choix  
   
@@ -50,17 +50,17 @@ Il est parfois utile d'afficher les données dans un format convivial dans un Wi
   
 2.  Connectez-vous à la source de données.  
   
-3.  Établissez une relation de données entre les deux tables. Consultez [Introduction aux objets DataRelation](http://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
+3.  Établissez une relation de données entre les deux tables. Consultez [Introduction aux objets DataRelation](https://msdn.microsoft.com/library/89d8a881-8265-41f2-a88b-61311ab06192).  
   
 4.  Définissez les propriétés ci-dessous. Elles peuvent être définies dans le code ou dans le concepteur.  
   
     |Propriété|Paramètre|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|Table qui contient des informations sur les équivalences entre les numéros d’ID et les articles. Dans le scénario précédent, il s’agit de `ItemTable`.|  
-    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Colonne de la table de source de données que vous souhaitez afficher dans le contrôle. Dans le scénario précédent, il s’agit `"Name"` (pour la définir dans le code, utilisez des guillemets doubles).|  
-    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Colonne de la table de source de données qui contient les informations stockées. Dans le scénario précédent, il s’agit `"ID"` (pour la définir dans le code, utilisez des guillemets doubles).|  
+    |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|Colonne de la table de source de données que vous souhaitez afficher dans le contrôle. Dans le scénario précédent, il s’agit de `"Name"` (pour la définir dans le code, utilisez des guillemets).|  
+    |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|Colonne de la table de source de données qui contient les informations stockées. Dans le scénario précédent, il s’agit de `"ID"` (pour la définir dans le code, utilisez des guillemets).|  
   
-5.  Dans une procédure, appelez la méthode <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> de la classe <xref:System.Windows.Forms.ControlBindingsCollection> pour lier la ppropriété <xref:System.Windows.Forms.ListControl.SelectedValue%2A> du contrôle à la table d'enregistrement de l'entrée du formulaire. Vous pouvez également le faire dans le concepteur plutôt que dans le code, en accédant à du contrôle <xref:System.Windows.Forms.Control.DataBindings%2A> propriété dans le **propriétés** fenêtre. Dans le scénario précédent, il s’agit de `OrderDetailsTable`, et la colonne est `"ItemID"`.  
+5.  Dans une procédure, appelez la méthode <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> de la classe <xref:System.Windows.Forms.ControlBindingsCollection> pour lier la ppropriété <xref:System.Windows.Forms.ListControl.SelectedValue%2A> du contrôle à la table d'enregistrement de l'entrée du formulaire. Vous pouvez également effectuer cela dans le concepteur plutôt que dans le code, en accédant à du contrôle <xref:System.Windows.Forms.Control.DataBindings%2A> propriété dans le **propriétés** fenêtre. Dans le scénario précédent, il s’agit de `OrderDetailsTable`, et la colonne est `"ItemID"`.  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

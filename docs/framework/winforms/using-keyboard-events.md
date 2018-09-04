@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484907"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658845"
 ---
 # <a name="using-keyboard-events"></a>Utilisation des événements du clavier
 La plupart des programmes Windows Forms traitent l'entrée au clavier en gérant les événements de clavier. Cette rubrique fournit une vue d'ensemble des événements de clavier, explique quand utiliser chaque événement et détaille les données fournies pour chaque événement.  Consultez également [vue d’ensemble des gestionnaires d’événements (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [vue d’ensemble des événements (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  

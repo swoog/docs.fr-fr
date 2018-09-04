@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f53174bf060938d5a55cbd196944ac11916d59cd
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258109"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661392"
 ---
 # <a name="getnames-function"></a>GetNames, fonction
-Récupère un sous-ensemble ou l’ensemble des noms des propriétés d’un objet. 
+Récupère une partie ou l’ensemble des noms des propriétés d’un objet. 
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
