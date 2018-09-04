@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753608"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403187"
 ---
 # <a name="standard-numeric-format-strings"></a>Chaînes de format numériques standard
 
@@ -33,8 +33,10 @@ Les chaînes de format numériques standard sont utilisées pour mettre en forme
   
 -   `xx` est un entier facultatif appelé *spécificateur de précision*. Le spécificateur de précision est compris entre 0 et 99 ; il affecte le nombre de chiffres dans le résultat. Notez que le spécificateur de précision contrôle le nombre de chiffres dans la représentation sous forme de chaîne d'un nombre. Il n'arrondit pas le nombre lui-même. Pour exécuter une opération d'arrondi, utilisez la méthode <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Quand un *spécificateur de précision* contrôle le nombre de décimales dans la chaîne de résultat, celle-ci donne des nombres arrondis vers le haut, en s'éloignant de zéro (c'est-à-dire avec <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
-  
+    Quand le *spécificateur de précision* contrôle le nombre de chiffres fractionnaires dans la chaîne de résultat, celle-ci reflète un nombre qui est arrondi à un résultat représentable le plus proche du résultat précis à l’infini. S’il existe deux résultats représentables aussi proches l’un que l’autre :
+    - **Sur le .NET Framework et .NET Core jusqu’à .NET Core 2.0**, le runtime sélectionne le résultat ayant le chiffre le moins significatif le plus élevé (autrement dit, à l’aide de <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **Sur .NET Core 2.1 et versions ultérieures**, le runtime sélectionne le résultat ayant un chiffre encore moins significatif (autrement dit, à l’aide de <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  Le spécificateur de précision détermine le nombre de chiffres dans la chaîne de résultat. Pour remplir une chaîne de résultat avec des espaces de début ou de fin, utilisez la fonctionnalité de [mise en forme composite](../../../docs/standard/base-types/composite-formatting.md) et définissez un *composant d’alignement* dans l’élément de mise en forme.  
   

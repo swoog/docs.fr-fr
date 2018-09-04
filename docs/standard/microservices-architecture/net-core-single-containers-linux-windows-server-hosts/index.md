@@ -4,16 +4,16 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 56c41a51cddeca6c74b09710f9536195a6a88904
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404497"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388626"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Déploiement d’applications web .NET Core basées sur un seul conteneur sur des hôtes Linux ou Windows Nano Server
 
-_Vous pouvez utiliser des conteneurs Docker pour effectuer un déploiement monolithique d’applications web simples. Cela a pour effet d’améliorer les pipelines d’intégration continue et de déploiement continu et cela contribuer à la réussite du déploiement en production. Fini les « Comment cela se fait-il que cela fonctionne sur ma machine, mais pas en production ? »_
+_Vous pouvez utiliser des conteneurs Docker pour effectuer un déploiement monolithique d’applications web simples. Cela a pour effet d’améliorer les pipelines d’intégration continue et de déploiement continu et cela contribuer à la réussite du déploiement en production. Fini les « Comment cela se fait-il que cela fonctionne sur ma machine, mais pas en production ? »_
 
 Une architecture basée sur des microservices présente de nombreux avantages, mais ces avantages se payent par une complexité accrue. Dans certains cas, les inconvénients prennent le pas sur les avantages et une application à déploiement monolithique s’exécutant dans un seul ou dans quelques conteneurs seulement est une meilleure option.
 
@@ -41,7 +41,7 @@ L’application [eShopWeb](https://github.com/dotnet-architecture/eShopOnContain
 
 L’application utilise une base de données SQL Server pour le stockage de catalogue. Dans les déploiements basés sur des conteneurs, cette application monolithique peut accéder au même magasin de données que l’application basée sur des microservices. L’application est configurée pour exécuter SQL Server dans un conteneur à côté de l’application monolithique. Dans un environnement de production, SQL Server s’exécuterait sur une machine à haute disponibilité, en dehors de l’hôte Docker. Pour des raisons pratiques, dans un environnement de développement ou de test, il est recommandé d’exécuter SQL Server dans son propre conteneur.
 
-L’ensemble initial de fonctionnalités permet uniquement la consultation du catalogue. Par des mises à jour, il serait possible d’activer l’ensemble complet de fonctionnalités de l’application en conteneur. Une architecture d’application web monolithique plus avancée est décrite dans le livre électronique [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) et [l’exemple d’application eShopOnWeb](http://aka.ms/WebAppArchitecture) associé.
+L’ensemble initial de fonctionnalités permet uniquement la consultation du catalogue. Par des mises à jour, il serait possible d’activer l’ensemble complet de fonctionnalités de l’application en conteneur. Une architecture d’application web monolithique plus avancée est décrite dans le livre électronique [ASP.NET Web Application architecture practices](https://aka.ms/webappebook) et [l’exemple d’application eShopOnWeb](https://aka.ms/WebAppArchitecture) associé.
 
 ## <a name="docker-support"></a>Prise en charge de Docker
 

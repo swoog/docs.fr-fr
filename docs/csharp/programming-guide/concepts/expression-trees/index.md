@@ -2,12 +2,12 @@
 title: Arborescences d’expressions (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 14ca5394a21b8dddb6c4431e6cabbf44a2f9add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326496"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526863"
 ---
 # <a name="expression-trees-c"></a>Arborescences d’expressions (C#)
 Les arborescences d'expressions représentent du code dans une structure de données arborescente, où chaque nœud est une expression, par exemple un appel de méthode ou une opération binaire comme `x < y`.  
@@ -147,10 +147,11 @@ Console.WriteLine(expr.Compile()(4));
   
  Pour plus d’informations, consultez [Guide pratique pour exécuter des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Linq.Expressions>  
- [Guide pratique pour exécuter des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Guide pratique pour modifier des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [Expressions lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Vue d’ensemble du Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [Concepts de programmation (C#)](../../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Linq.Expressions>  
+- [Guide pratique pour exécuter des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Guide pratique pour modifier des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+- [Expressions lambda](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Vue d’ensemble du Dynamic Language Runtime](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- [Concepts de programmation (C#)](../../../../csharp/programming-guide/concepts/index.md)

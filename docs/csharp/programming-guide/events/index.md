@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 5b844b20ac62b4cbc2a73931eecab95f22b4b1de
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 03c2ffc37bc6c2e820b8e28599f415cde1be9be5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199441"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521955"
 ---
 # <a name="events-c-programming-guide"></a>Événements (Guide de programmation C#)
 Les événements permettent à une [classe](../../../csharp/language-reference/keywords/class.md) ou à un objet de notifier d’autres classes ou objets quand quelque chose de significatif se produit. La classe qui envoie (ou *déclenche*) l’événement est appelée *publieur* et les classes qui reçoivent (ou *gèrent*) l’événement sont appelées *abonnés*.  
@@ -58,9 +58,9 @@ Les événements permettent à une [classe](../../../csharp/language-reference/k
   
  [Delegates and Events](https://msdn.microsoft.com/library/orm-9780596521066-01-17.aspx) dans [Learning C# 3.0: Master the fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.EventHandler>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Programmation multithread avec le modèle asynchrone basé sur les événements](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.EventHandler>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
+- [Création de gestionnaires d’événements dans les Windows Forms](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  

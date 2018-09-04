@@ -2,12 +2,12 @@
 title: Programmation asynchrone avec Async et Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390231"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529161"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programmation asynchrone avec async et await (C#)
 Vous pouvez éviter des goulots d'étranglement de performance et améliorer la réactivité globale de votre application à l'aide de la programmation asynchrone. Toutefois, les techniques traditionnelles pour écrire des applications asynchrones peuvent être complexes et rendre ces applications difficiles à écrire, déboguer et mettre à jour.  
@@ -251,7 +251,7 @@ Les API asynchrones dans la programmation Windows Runtime ont l’un des types d
 |[Vidéos Async sur Channel 9](https://channel9.msdn.com/search?term=async%20&type=All#pubDate=year&ch9Search&lang-en=en)|Fournit des liens vers diverses vidéos sur la programmation asynchrone.||  
   
 ##  <a name="BKMK_CompleteExample"></a> Exemple complet  
- Le code suivant est le fichier MainWindow.xaml.cs de l’application WPF (Windows Presentation Foundation) traitée dans cette rubrique. Vous pouvez télécharger l’exemple sur [Exemple async : exemple de « programmation asynchrone avec async et await »](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).  
+ Le code suivant est le fichier MainWindow.xaml.cs de l’application WPF (Windows Presentation Foundation) traitée dans cette rubrique. Vous pouvez télécharger l’exemple sur [Exemple async : exemple de « programmation asynchrone avec async et await »](https://code.msdn.microsoft.com/Async-Sample-Example-from-9b9f505c).  
   
 ```csharp  
 using System;  
@@ -333,8 +333,9 @@ namespace AsyncFirstExample
 // Length of the downloaded string: 41564.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [async](../../../../csharp/language-reference/keywords/async.md)  
- [await](../../../../csharp/language-reference/keywords/await.md)  
- [Programmation asynchrone](../../../../csharp/async.md)  
- [Vue d’ensemble asynchrone](../../../../standard/async.md)  
+## <a name="see-also"></a>Voir aussi
+
+- [async](../../../../csharp/language-reference/keywords/async.md)  
+- [await](../../../../csharp/language-reference/keywords/await.md)  
+- [Programmation asynchrone](../../../../csharp/async.md)  
+- [Vue d’ensemble asynchrone](../../../../standard/async.md)  

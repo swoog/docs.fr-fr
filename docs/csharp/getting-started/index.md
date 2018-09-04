@@ -7,14 +7,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 8c9b2803819b4ffcf0edce7994b9fdbc1c6c6951
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212627"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398065"
 ---
-# <a name="get-started-with-c"></a>Bien démarrer avec C# #
+# <a name="get-started-with-c"></a>Bien démarrer avec C\#
 
 Cette section fournit des didacticiels courts et simples qui permettent de créer rapidement une application avec C# et .NET Core. Ces rubriques de prise en main concernent Visual Studio 2017 et Visual Studio Code. Vous pouvez créer une application Hello World simple ou, si vous avez Visual Studio 2017, une bibliothèque de classes simple et utilisable par d’autres applications.
 
@@ -63,4 +63,5 @@ Les rubriques suivantes sont disponibles :
     Fournit des liens vers des procédures pas-à-pas de programmation qui utilisent C# et une brève description de chaque procédure pas-à-pas.
 
 ## <a name="see-also"></a>Voir aussi
- [Bien démarrer avec Visual C# et Visual Basic à l’aide de Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+* [Bien démarrer avec Visual C# et Visual Basic à l’aide de Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
