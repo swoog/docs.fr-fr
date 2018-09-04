@@ -18,17 +18,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97d4a6bfd7a8a7aa257ad2f52d005ccc5bcd6fb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20c5f6bbb58b85f42ec00e356eccc5fb41ce813c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432035"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560333"
 ---
-# <a name="iclrstrongnamegethashfromhandle-method"></a><span data-ttu-id="f8771-102">Méthode ICLRStrongName::GetHashFromHandle</span><span class="sxs-lookup"><span data-stu-id="f8771-102">ICLRStrongName::GetHashFromHandle Method</span></span>
-<span data-ttu-id="f8771-103">Génère un hachage sur le contenu du fichier qui a le handle de fichier spécifié, à l’aide de l’algorithme de hachage spécifié.</span><span class="sxs-lookup"><span data-stu-id="f8771-103">Generates a hash over the contents of the file that has the specified file handle, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromhandle-method"></a><span data-ttu-id="a6138-102">Méthode ICLRStrongName::GetHashFromHandle</span><span class="sxs-lookup"><span data-stu-id="a6138-102">ICLRStrongName::GetHashFromHandle Method</span></span>
+<span data-ttu-id="a6138-103">Génère un hachage sur le contenu du fichier qui a le handle de fichier spécifié, à l’aide de l’algorithme de hachage spécifié.</span><span class="sxs-lookup"><span data-stu-id="a6138-103">Generates a hash over the contents of the file that has the specified file handle, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8771-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="f8771-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6138-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a6138-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromHandle (  
@@ -40,33 +40,33 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f8771-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="f8771-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a6138-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="a6138-105">Parameters</span></span>  
  `hFile`  
- <span data-ttu-id="f8771-106">[in] Le handle du fichier à hacher.</span><span class="sxs-lookup"><span data-stu-id="f8771-106">[in] The handle of the file to be hashed.</span></span>  
+ <span data-ttu-id="a6138-106">[in] Le handle du fichier à hacher.</span><span class="sxs-lookup"><span data-stu-id="a6138-106">[in] The handle of the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="f8771-107">[dans, out] Constante qui spécifie l’algorithme de hachage.</span><span class="sxs-lookup"><span data-stu-id="f8771-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="f8771-108">Utilisez zéro pour l’algorithme par défaut.</span><span class="sxs-lookup"><span data-stu-id="f8771-108">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="a6138-107">[in, out] Constante qui spécifie l’algorithme de hachage.</span><span class="sxs-lookup"><span data-stu-id="a6138-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="a6138-108">Utilisez zéro pour l’algorithme par défaut.</span><span class="sxs-lookup"><span data-stu-id="a6138-108">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="f8771-109">[out] La mémoire tampon de hachage retournée.</span><span class="sxs-lookup"><span data-stu-id="f8771-109">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="a6138-109">[out] La mémoire tampon de hachage retournée.</span><span class="sxs-lookup"><span data-stu-id="a6138-109">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="f8771-110">[in] La taille maximum demandée `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="f8771-110">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="a6138-110">[in] La taille maximale demandée de `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="a6138-110">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="f8771-111">[out] La taille, en octets, de retourné `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="f8771-111">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="a6138-111">[out] La taille, en octets, de retourné `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="a6138-111">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f8771-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="f8771-112">Return Value</span></span>  
- <span data-ttu-id="f8771-113">`S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (voir [valeurs HRESULT courantes](http://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).</span><span class="sxs-lookup"><span data-stu-id="f8771-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](http://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a6138-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="a6138-112">Return Value</span></span>  
+ <span data-ttu-id="a6138-113">`S_OK` Si la méthode a réussi ; Sinon, une valeur HRESULT qui indique un échec (consultez [valeurs HRESULT courantes](https://go.microsoft.com/fwlink/?LinkId=213878) pour obtenir la liste).</span><span class="sxs-lookup"><span data-stu-id="a6138-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8771-114">Spécifications</span><span class="sxs-lookup"><span data-stu-id="f8771-114">Requirements</span></span>  
- <span data-ttu-id="f8771-115">**Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8771-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6138-114">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="a6138-114">Requirements</span></span>  
+ <span data-ttu-id="a6138-115">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6138-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8771-116">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="f8771-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="a6138-116">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="a6138-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="f8771-117">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f8771-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a6138-117">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="a6138-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f8771-118">**Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8771-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="a6138-118">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6138-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8771-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f8771-119">See Also</span></span>  
- [<span data-ttu-id="f8771-120">ICLRStrongName, interface</span><span class="sxs-lookup"><span data-stu-id="f8771-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a6138-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a6138-119">See Also</span></span>  
+ [<span data-ttu-id="a6138-120">ICLRStrongName, interface</span><span class="sxs-lookup"><span data-stu-id="a6138-120">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
