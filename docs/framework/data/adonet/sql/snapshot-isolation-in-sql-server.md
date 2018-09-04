@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: b9167d7a92ba1b4951d0a9e3c9eea3565bbdc196
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365013"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562768"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolation d'instantanés dans SQL Server
 L'isolation de capture instantanée améliore l'accès concurrentiel aux applications OLTP.  
   
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Présentation de l'isolation d'instantané et gestion des versions de ligne  
- Une fois l’isolation d’instantané est activée, les versions de ligne mise à jour pour chaque transaction sont maintenues dans **tempdb**. Un numéro de séquence de transaction unique identifie chaque transaction et ces numéros uniques sont enregistrés pour chaque version de ligne. La transaction opère avec les versions de ligne les plus récentes dont le numéro de séquence est antérieur au numéro de séquence de la transaction. Les versions de ligne plus récentes, créées après que la transaction a commencé sont ignorées par la transaction.  
+ Une fois que l’isolation d’instantané est activée, les versions de ligne mise à jour pour chaque transaction sont conservées dans **tempdb**. Un numéro de séquence de transaction unique identifie chaque transaction et ces numéros uniques sont enregistrés pour chaque version de ligne. La transaction opère avec les versions de ligne les plus récentes dont le numéro de séquence est antérieur au numéro de séquence de la transaction. Les versions de ligne plus récentes, créées après que la transaction a commencé sont ignorées par la transaction.  
   
  Le terme « instantané » reflète le fait que toutes les requêtes de la transaction voient la même version, ou instantané, de la base de données, en fonction de l'état de la base de données au moment où la transaction commence. Aucun verrou n'est acquis sur les lignes de données ou les pages de données sous-jacentes dans une transaction d'instantané, ce qui permet à d'autres transactions de s'exécuter sans être bloquées par une transaction inachevée antérieure. Les transactions qui modifient des données ne bloquent pas les transactions qui lisent des données et celles qui lisent des données ne bloquent pas celles qui en écrivent, comme c'est normalement le cas avec le niveau d'isolation READ COMMITTED par défaut dans SQL Server. Ce comportement non bloquant réduit également sensiblement la probabilité d'interblocages pour les transactions complexes.  
   
  L'isolation d'instantané utilise un modèle d'accès simultané optimiste. Si une transaction d'instantané tente de valider des modifications apportées à des données ayant changé depuis le début de la transaction, la transaction est annulée et une erreur est déclenchée. Vous pouvez éviter cela en utilisant les indicateurs UPDLOCK pour les instructions SELECT qui accèdent à des données à modifier. Pour plus d'informations, voir « Locking Hints » dans la documentation en ligne de SQL Server.  
   
- L’isolation d’instantané doit être activée en définissant l’option de base de données ALLOW_SNAPSHOT_ISOLATION ON avant de l’utiliser dans des transactions. Cela active le mécanisme de stockage des versions de ligne dans la base de données temporaire (**tempdb**). Vous devez activer l'isolation d'instantané dans chaque base de données qui l'utilise avec l'instruction Transact-SQL ALTER DATABASE. À cet égard, l'isolation d'instantané diffère de niveaux d'isolation traditionnels des instructions READ COMMITTED, REPEATABLE READ, SERIALIZABLE et READ UNCOMMITTED qui ne requièrent aucune configuration. Les instructions suivantes activent l'isolation d'instantané et remplacent le comportement READ COMMITTED par défaut par SNAPSHOT :  
+ L’isolation d’instantané doit être activée en définissant l’option de base de données ALLOW_SNAPSHOT_ISOLATION ON avant de l’utiliser dans des transactions. Cela permet d’activer le mécanisme de stockage des versions de ligne dans la base de données temporaire (**tempdb**). Vous devez activer l'isolation d'instantané dans chaque base de données qui l'utilise avec l'instruction Transact-SQL ALTER DATABASE. À cet égard, l'isolation d'instantané diffère de niveaux d'isolation traditionnels des instructions READ COMMITTED, REPEATABLE READ, SERIALIZABLE et READ UNCOMMITTED qui ne requièrent aucune configuration. Les instructions suivantes activent l'isolation d'instantané et remplacent le comportement READ COMMITTED par défaut par SNAPSHOT :  
   
 ```  
 ALTER DATABASE MyDatabase  
@@ -59,15 +59,15 @@ SET READ_COMMITTED_SNAPSHOT ON
 -   L'option de base de données READ_COMMITTED_SNAPSHOT détermine le comportement du niveau d'isolation READ COMMITTED par défaut lorsque l'isolation d'instantané est activée dans une base de données. Si vous ne spécifiez pas explicitement READ_COMMITTED_SNAPSHOT ON, READ COMMITTED est appliqué à toutes les transactions implicites. Cela produit le même comportement que définir READ_COMMITTED_SNAPSHOT OFF (par défaut). Lorsque READ_COMMITTED_SNAPSHOT OFF est effectif, le moteur de base de données utilise des verrous partagés pour appliquer le niveau d'isolation par défaut. Si vous définissez l'option de base de données READ_COMMITTED_SNAPSHOT sur ON, le moteur de base de données utilise par défaut la gestion de versions de ligne et l'isolation d'instantané, au lieu d'utiliser des verrous pour protéger les données.  
   
 ## <a name="how-snapshot-isolation-and-row-versioning-work"></a>Fonctionnement de l'isolation d'instantané et de la gestion des versions de ligne  
- Lorsque le niveau d’isolation SNAPSHOT est activé, chaque fois, une ligne est mise à jour, le moteur de base de données SQL Server stocke une copie de la ligne d’origine dans **tempdb**et ajoute un numéro de séquence de transaction à la ligne. La section suivante présente la séquence des événements qui se produit :  
+ Lorsque le niveau d’isolation SNAPSHOT est activé, chaque fois une ligne est mise à jour, le moteur de base de données SQL Server stocke une copie de la ligne d’origine dans **tempdb**et ajoute un numéro de séquence de transaction à la ligne. La section suivante présente la séquence des événements qui se produit :  
   
 -   Une nouvelle transaction est initiée, qui reçoit un numéro de séquence de transaction.  
   
--   Le moteur de base de données lit une ligne de la transaction et extrait la version de ligne de **tempdb** dont le numéro de séquence est le plus proche et inférieur à, le numéro de séquence de transaction.  
+-   Le moteur de base de données lit une ligne dans la transaction et récupère la version de ligne à partir de **tempdb** dont le numéro de séquence est le plus proche et inférieur à, le numéro de séquence de transaction.  
   
 -   Le moteur de base de données vérifie si le numéro de séquence de la transaction ne figure pas dans la liste des numéros de séquence de transaction des transactions non validées actives au démarrage de la transaction d’instantané.  
   
--   La transaction lit la version de la ligne à partir de **tempdb** qui était actif au début de la transaction. Elle ne voit pas de nouvelles lignes insérées après le démarrage de la transaction parce que ces valeurs de numéro de séquence sont supérieures à la valeur du numéro de séquence de la transaction.  
+-   La transaction lit la version de la ligne à partir de **tempdb** qui était en cours depuis le début de la transaction. Elle ne voit pas de nouvelles lignes insérées après le démarrage de la transaction parce que ces valeurs de numéro de séquence sont supérieures à la valeur du numéro de séquence de la transaction.  
   
 -   La transaction en cours voit les lignes qui ont été supprimées après le début de la transaction, car il y aura une version de ligne dans **tempdb** avec une valeur de numéro de séquence inférieure.  
   
@@ -76,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT ON
  Une transaction d'instantané utilise toujours un contrôle d'accès simultané optimiste, rejetant tous les verrous qui empêcheraient d'autres transactions de mettre à jour les lignes. Si une transaction d'instantané tente de valider la mise à jour d'une ligne modifiée après le début de la transaction, la transaction est annulée et une erreur est déclenchée.  
   
 ## <a name="working-with-snapshot-isolation-in-adonet"></a>Utilisation de l'isolation d'instantané dans ADO.NET  
- L'isolation d'instantané est prise en charge dans ADO.NET par la classe <xref:System.Data.SqlClient.SqlTransaction>. Si une base de données a été activée pour l’isolation d’instantané mais n’est pas configurée pour READ_COMMITTED_SNAPSHOT ON, vous devez lancer une <xref:System.Data.SqlClient.SqlTransaction> à l’aide de la **IsolationLevel.Snapshot** valeur d’énumération lors de l’appel du <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> méthode. Ce fragment de code est basé sur l'hypothèse que la connexion est un objet <xref:System.Data.SqlClient.SqlConnection> ouvert.  
+ L'isolation d'instantané est prise en charge dans ADO.NET par la classe <xref:System.Data.SqlClient.SqlTransaction>. Si une base de données a été activée pour l’isolation d’instantané mais n’est pas configurée pour READ_COMMITTED_SNAPSHOT ON, vous devez lancer une <xref:System.Data.SqlClient.SqlTransaction> à l’aide de la **IsolationLevel.Snapshot** valeur d’énumération lorsque vous appelez le <xref:System.Data.SqlClient.SqlConnection.BeginTransaction%2A> méthode. Ce fragment de code est basé sur l'hypothèse que la connexion est un objet <xref:System.Data.SqlClient.SqlConnection> ouvert.  
   
 ```vb  
 Dim sqlTran As SqlTransaction = _  
@@ -101,7 +101,7 @@ SqlTransaction sqlTran =
   
 -   Il ouvre une quatrième connexion et initie une transaction à l'aide du niveau d'isolation READ UNCOMMITTED qui effectue une lecture modifiée de la valeur non validée dans sqlTransaction1. Il se peut que cette valeur n’existe en réalité jamais dans la base de données si la première transaction n’est pas validée.  
   
--   Elle annule la première transaction et nettoie en supprimant la **TestSnapshot** table et en désactivant isolation d’instantané pour la **AdventureWorks** base de données.  
+-   Elle annule la première transaction et nettoie en supprimant le **TestSnapshot** table et en désactivant isolation d’instantané pour la **AdventureWorks** base de données.  
   
 > [!NOTE]
 >  Les exemples ci-dessous utilisent la même chaîne de connexion avec la mise en pool des connexions désactivée. Si une connexion est mise en pool, la réinitialisation de son niveau d'isolement ne réinitialise pas le niveau d'isolement sur le serveur. Par conséquent, les connexions suivantes qui utilisent la même connexion interne regroupée démarrent avec leurs niveaux d'isolement définis sur celui de la connexion regroupée. Une alternative à la désactivation de la mise en pool des connexions consiste à définir le niveau d'isolement de manière explicite pour chaque connexion.  
@@ -124,7 +124,7 @@ SqlTransaction sqlTran =
   
 -   Retourne à sqlTransaction1 et tente de mettre à jour la ligne déjà validée par sqlTransaction1. Une erreur 3960 est déclenchée et sqlTransaction1 est automatiquement annulé. Le **SqlException.Number** et **SqlException.Message** sont affichés dans la fenêtre de Console.  
   
--   Exécute le code de nettoyage pour désactiver d’isolement d’instantané dans **AdventureWorks** et supprimer les **TestSnapshotUpdate** table.  
+-   Exécute le code de nettoyage pour désactiver d’isolement d’instantané dans **AdventureWorks** et supprimer le **TestSnapshotUpdate** table.  
   
  [!code-csharp[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/CS/source.cs#1)]
  [!code-vb[DataWorks SnapshotIsolation.DemoUpdate#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SnapshotIsolation.DemoUpdate/VB/source.vb#1)]  
@@ -143,4 +143,4 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

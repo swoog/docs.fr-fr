@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd571255f924c9f3878c00a2bc01397d63e6d777
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394444"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556515"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;Directives&gt;, élément (.NET Native)
-Élément racine de chaque fichier de directives runtime pour [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
+L’élément racine dans chaque fichier de directives runtime pour .NET Native.  
   
- **\<Directives xmlns = »http://schemas.microsoft.com/netfx/2013/01/metadata« >**  
+ `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-      <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
+<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
    <!-- child elements -->   
 </Directives>  
 ```  
@@ -28,7 +28,7 @@ ms.locfileid: "33394444"
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`xmlns`|Espace de noms XML. Sa valeur est toujours **»http://schemas.microsoft.com/netfx/2013/01/metadata»**.|  
+|`xmlns`|Espace de noms XML. Sa valeur est toujours **» http://schemas.microsoft.com/netfx/2013/01/metadata»**.|  
   
 ## <a name="child-elements"></a>Éléments enfants  
   

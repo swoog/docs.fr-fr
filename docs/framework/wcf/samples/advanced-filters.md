@@ -2,22 +2,22 @@
 title: Filtres avancés
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805614"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564198"
 ---
 # <a name="advanced-filters"></a>Filtres avancés
-Cet exemple montre un service de routage de Windows Communication Foundation (WCF). Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple WCF Calculator standard pour communiquer à l’aide du service de routage. Il montre comment définir une logique de routage basé sur le contenu via l'utilisation de filtres de messages et de tables de filtres de messages.  
+Cet exemple montre un service de routage de Windows Communication Foundation (WCF). Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice de WCF standard pour communiquer à l’aide du service de routage. Il montre comment définir une logique de routage basé sur le contenu via l'utilisation de filtres de messages et de tables de filtres de messages.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Le troisième filtre est un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Il accepte comme correspondance tout message apparu sur un point de terminaison avec une adresse qui correspond au préfixe (ou première partie) d'adresse fourni. Dans cet exemple, le préfixe d’adresse est défini comme «http://localhost/routingservice/router/rounding/». Cela signifie que tous les messages entrants adressés à «http://localhost/routingservice/router/rounding/* » sont mis en correspondance par ce filtre. Dans ce cas, il concerne les messages qui apparaissent sur le point de terminaison Rounding Calculator, qui a l’adresse de «http://localhost/routingservice/router/rounding/calculator».  
+ Le troisième filtre est un <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Il accepte comme correspondance tout message apparu sur un point de terminaison avec une adresse qui correspond au préfixe (ou première partie) d'adresse fourni. Dans cet exemple, le préfixe d’adresse est défini comme « http://localhost/routingservice/router/rounding/». Cela signifie que tous les messages entrants sont adressés à « http://localhost/routingservice/router/rounding/* » sont mis en correspondance par ce filtre. Dans ce cas, il est de messages qui s’affichent sur le point de terminaison Rounding Calculator, qui a l’adresse de « http://localhost/routingservice/router/rounding/calculator».  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -154,4 +154,4 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
  Contoso souhaite virtualiser tous ses services afin de n'exposer publiquement qu'un seul point de terminaison via lequel donner accès à différents types de services. Dans ce cas, la société utilise les fonctions de routage basé sur le contenu du service de routage afin de déterminer l'endroit où doivent être envoyées les demandes entrantes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

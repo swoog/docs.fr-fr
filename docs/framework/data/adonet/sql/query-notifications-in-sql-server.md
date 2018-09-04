@@ -2,12 +2,12 @@
 title: Notifications de requête dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 60ab686437f764a006fca5a2043d02288ea46d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4e58a3eecc18fb5693e9850163533b0a1a6a574
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563656"
 ---
 # <a name="query-notifications-in-sql-server"></a>Notifications de requête dans SQL Server
 Basées sur l'infrastructure Service Broker, les notifications de requête permettent de notifier des applications en cas de modification de données. Cette fonction est particulièrement utile pour les applications qui génèrent un cache d'informations à partir d'une base de données, telles que les applications Web, et qui doivent être informées en cas de modification des données sources.  
@@ -24,19 +24,19 @@ Basées sur l'infrastructure Service Broker, les notifications de requête perme
   
  Vous pouvez configurer des notifications pour les instructions SELECT et EXECUTE. Avec une instruction EXECUTE, SQL Server enregistre une notification pour la commande exécutée et non l'instruction EXECUTE elle-même. La commande doit répondre aux spécifications et aux limitations d'une instruction SELECT. Lorsqu'une commande qui enregistre une notification contient plusieurs instructions, le moteur de base de données crée une notification pour chaque instruction du lot.  
   
- Si vous développez une application où vous avez besoin des notifications de seconde fiable lorsque les données modifiées, consultez les sections **planification d’une stratégie de Notifications de requête efficace** et **Alternatives à la requête Notifications** dans les [planification des Notifications](http://go.microsoft.com/fwlink/?LinkId=211984) rubrique dans la documentation en ligne de SQL Server. Pour plus d'informations sur les notifications de requête et Service Broker de SQL Server, voir les liens aux rubriques ci-dessous dans la documentation en ligne de SQL Server.  
+ Si vous développez une application où vous avez besoin des notifications de fraction de seconde fiables lorsque les données sont modifiées, consultez les sections **planification d’une stratégie de Notifications de requête efficace** et **Alternatives à la requête Notifications** dans le [planification des Notifications](https://go.microsoft.com/fwlink/?LinkId=211984) rubrique dans la documentation en ligne de SQL Server. Pour plus d'informations sur les notifications de requête et Service Broker de SQL Server, voir les liens aux rubriques ci-dessous dans la documentation en ligne de SQL Server.  
   
  **Documentation en ligne de SQL Server**  
   
--   [À l’aide de Notifications de requête](http://msdn.microsoft.com/library/ms175110.aspx)  
+-   [À l’aide de Notifications de requête](https://msdn.microsoft.com/library/ms175110.aspx)  
   
--   [Création d’une requête de Notification](http://msdn.microsoft.com/library/ms181122.aspx)  
+-   [Création d’une requête pour Notification](https://msdn.microsoft.com/library/ms181122.aspx)  
   
--   [Service Broker](http://msdn.microsoft.com/library/bb522889.aspx)  
+-   [Service Broker](https://msdn.microsoft.com/library/bb522889.aspx)  
   
--   [Centre d’informations du développeur Service Broker](http://msdn.microsoft.com/library/ms166100.aspx)  
+-   [Centre d’informations du développeur Service Broker](https://msdn.microsoft.com/library/ms166100.aspx)  
   
--   [Développement (Service Broker)](http://msdn.microsoft.com/library/bb522908.aspx)  
+-   [Développement (Service Broker)](https://msdn.microsoft.com/library/bb522908.aspx)  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Activation de notifications de requête](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -63,4 +63,4 @@ Basées sur l'infrastructure Service Broker, les notifications de requête perme
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

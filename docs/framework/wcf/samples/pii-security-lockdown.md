@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ec8af8c7df9335774b1f3953f88c2aad438963b6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ca85a620638509e183703f7e80c01ea20fadbc81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809028"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555194"
 ---
 # <a name="pii-security-lockdown"></a>PII Security Lockdown
-Cet exemple montre comment contrôler diverses fonctionnalités de sécurité d’un service Windows Communication Foundation (WCF) par :  
+Cet exemple montre comment contrôler plusieurs fonctionnalités liées à la sécurité d’un service Windows Communication Foundation (WCF) par :  
   
 -   Chiffrement des informations sensibles dans le fichier de configuration du service.  
   
@@ -25,18 +25,18 @@ Cet exemple montre comment contrôler diverses fonctionnalités de sécurité d�
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\SecurityLockdown`  
   
 ## <a name="discussion"></a>Discussion  
- Chacune de ces fonctionnalités peut être utilisée séparément ou simultanément afin de contrôler les divers aspects relatifs à la sécurité des services. Ce n’est pas un guide de référence pour la sécurisation d’un service WCF.  
+ Chacune de ces fonctionnalités peut être utilisée séparément ou simultanément afin de contrôler les divers aspects relatifs à la sécurité des services. Cela n’est pas un guide de référence pour la sécurisation d’un service WCF.  
   
  Les fichiers de configuration .NET Framework peuvent contenir des informations sensibles telles que les chaînes de connexion permettant de se connecter aux bases de données. Dans le cadre de services partagés et hébergés par le Web, le chiffrement de ces informations dans le fichier de configuration des services concernés peut s'avérer souhaitable pour assurer leur protection en cas de consultation informelle. .NET Framework 2.0 et ses versions ultérieures permettent de chiffrer certains passages des fichiers de configuration à l'aide de l'interface de programmation d'applications de protection des données Windows (Data Protection Application Programming Interface, DPAPI) ou du fournisseur de services de chiffrement RSA. Le programme aspnet_regiis.exe peut chiffrer les sections choisies d'un fichier de configuration donné à l'aide de l'interface ou du fournisseur ci-dessus.  
   
- Dans le cadre de scénarios hébergés par le Web, il est possible de placer ces services dans les sous-répertoires d'autres services. La valeur par défaut sémantique définissant les valeurs de configuration permet aux fichiers de configuration figurant dans les répertoires imbriqués de se substituer aux valeurs de configuration figurant dans le répertoire parent. Dans certaines situations et pour diverses raisons, il peut s'avérer préférable qu'une telle substitution ne soit pas possible. WCF service configuration prend en charge le verrouillage des valeurs de configuration configuration imbriquée génère des exceptions lorsqu’un service imbriqué s’exécute à l’aide de substitution des valeurs de configuration.  
+ Dans le cadre de scénarios hébergés par le Web, il est possible de placer ces services dans les sous-répertoires d'autres services. La valeur par défaut sémantique définissant les valeurs de configuration permet aux fichiers de configuration figurant dans les répertoires imbriqués de se substituer aux valeurs de configuration figurant dans le répertoire parent. Dans certaines situations et pour diverses raisons, il peut s'avérer préférable qu'une telle substitution ne soit pas possible. WCF service configuration prend en charge le verrouillage de valeurs de configuration afin que la configuration imbriquée génère des exceptions lorsqu’un service imbriqué s’exécute à l’aide des valeurs de configuration substituées.  
   
- Cet exemple illustre comment contrôler la fonctionnalité d'enregistrement des informations d'identification personnelle connues, telles que le nom d'utilisateur et le mot de passe, dans les journaux de suivi et de message. Par défaut, l'enregistrement des PII connues est désactivé. Toutefois, dans certaines situations, leur enregistrement peut s'avérer essentiel lors du débogage des applications. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). En outre, cet exemple utilise l'enregistrement des suivis et des messages. Pour plus d’informations, consultez la [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemple.  
+ Cet exemple illustre comment contrôler la fonctionnalité d'enregistrement des informations d'identification personnelle connues, telles que le nom d'utilisateur et le mot de passe, dans les journaux de suivi et de message. Par défaut, l'enregistrement des PII connues est désactivé. Toutefois, dans certaines situations, leur enregistrement peut s'avérer essentiel lors du débogage des applications. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). En outre, cet exemple utilise l'enregistrement des suivis et des messages. Pour plus d’informations, consultez le [Tracing and Message Logging](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md) exemple.  
   
 ## <a name="encrypting-configuration-file-elements"></a>Chiffrement des éléments de fichier de configuration  
  Pour des raisons de sécurité, dans le cadre d'un environnement partagé avec hébergement Web, le chiffrement de certains éléments de configuration tels que les chaînes de connexion aux bases de données, susceptibles de contenir des informations sensibles, peut s'avérer souhaitable. De tels éléments peuvent être chiffrés à l'aide de l'outil aspnet_regiis.exe figurant dans le dossier .NET Framework, WINDIR%\Micrsoft.NET\Framework\v4.0.20728.  
@@ -49,7 +49,7 @@ Cet exemple montre comment contrôler diverses fonctionnalités de sécurité d�
   
 3.  Chiffrez les paramètres de configuration appSettings du dossier Web.config en publiant la commande suivante : `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
- Vous trouverez plus d’informations sur le chiffrement des sections des fichiers de configuration en lisant un savoir-faire sur DPAPI dans la configuration d’ASP.NET ([création d’Applications ASP.NET sécurisées : authentification, autorisation et Communication sécurisée](http://go.microsoft.com/fwlink/?LinkId=95137)) et une procédure RSA dans la configuration d’ASP.NET ([Comment : chiffrer des Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](http://go.microsoft.com/fwlink/?LinkId=95138)).  
+ Vous trouverez plus d’informations sur le chiffrement des sections des fichiers de configuration en lisant un savoir-faire sur DPAPI dans la configuration d’ASP.NET ([génération d’Applications ASP.NET sécurisées : authentification, autorisation et Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)) et un savoir-faire RSA dans la configuration d’ASP.NET ([Comment : chiffrer des Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
 ## <a name="locking-configuration-file-elements"></a>Verrouillage des éléments de fichier de configuration  
  Dans le cadre de services hébergés par le Web, il est possible de placer ces services dans les sous-répertoires d'autres services. Dans ce genre de situation, les valeurs de configuration des services placés dans ces sous-répertoires sont calculées en examinant les valeurs du fichier Machine.config. Ces valeurs sont ensuite fusionnées avec les valeurs des éventuels fichiers Web.config figurant dans les répertoires parents en descendant la hiérarchie de l'arborescence de répertoires jusqu'au fichier Web.config du répertoire contenant les services concernés. Le comportement par défaut de la plupart des éléments de configuration permet aux fichiers de configuration des sous-répertoires de se substituer aux valeurs définies dans leurs répertoires parents. Dans certains cas, il peut s'avérer préférable d'empêcher une telle substitution.  
@@ -126,23 +126,23 @@ Cet exemple montre comment contrôler diverses fonctionnalités de sécurité d�
   
  Les éléments de fichier de configuration peuvent également être chiffrés à l'aide de DPAPI et RSA. Pour plus d'informations, consultez les liens suivants :  
   
--   [Génération d’Applications ASP.NET sécurisées : Authentification, l’autorisation et Communication sécurisée](http://go.microsoft.com/fwlink/?LinkId=95137)  
+-   [Création d’Applications ASP.NET sécurisées : Authentification, autorisation et une Communication sécurisée](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [Comment : Chiffrer des Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](http://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [Comment : Chiffrer des Sections de Configuration dans ASP.NET 2.0 à l’aide de RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Modifiez le fichier Machine.config pour affecter à l'attribut `enableLoggingKnownPii` la valeur `true` en ajoutant les nœuds parents, si nécessaire.  
   
 3.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
 1.  Modifiez le fichier Machine.config pour affecter à l'attribut `enableLoggingKnownPii` la valeur `false`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples d’analyse AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Exemples d’analyse AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

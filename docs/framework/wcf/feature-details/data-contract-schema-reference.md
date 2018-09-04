@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554691"
 ---
 # <a name="data-contract-schema-reference"></a>Référence des schémas de contrats de données
 Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:System.Runtime.Serialization.DataContractSerializer> pour décrire les types CLR (Common Language Run-time) pour la sérialisation XML.  
   
 ## <a name="datacontractserializer-mappings"></a>Mappages DataContractSerializer  
- Le `DataContractSerializer` mappe les types CLR à XSD lorsque les métadonnées sont exportées à partir d’un service Windows Communication Foundation (WCF) à l’aide d’un point de terminaison de métadonnées ou le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Pour plus d’informations, consultez [sérialiseur de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ Le `DataContractSerializer` mappe des types CLR à XSD lorsque les métadonnées sont exportées à partir d’un service Windows Communication Foundation (WCF) à l’aide d’un point de terminaison de métadonnées ou le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Pour plus d’informations, consultez [Data Contract Serializer](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` mappe également XSD aux types CLR lorsque Svcutil.exe est utilisé pour accéder à Web Services Description Language (WSDL) ou aux documents XSD et génère des contrats de données pour les services ou les clients.  
   
@@ -32,7 +32,7 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
   
 ## <a name="general-information"></a>Informations générales  
   
--   L’espace de noms du schéma est décrit sur la page [XML Schema](http://go.microsoft.com/fwlink/?LinkId=95475)(Schéma XML). Le préfixe "xs" est utilisé dans ce document.  
+-   L’espace de noms du schéma est décrit dans [schéma XML](https://go.microsoft.com/fwlink/?LinkId=95475). Le préfixe "xs" est utilisé dans ce document.  
   
 -   Les attributs avec un espace de noms qui n'est pas un schéma sont ignorés.  
   
@@ -44,7 +44,7 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
 |---------------|------------------|  
 |`attributeFormDefault`|Ignoré.|  
 |`blockDefault`|Ignoré.|  
-|`elementFormDefault`|Doit être qualifié. Tous les éléments doivent être qualifiés pour qu'un schéma soit pris en charge par `DataContractSerializer`. Cela peut être accompli soit en définissant xs:schema/@elementFormDefault sur « qualified », ou en définissant xs:element/@form « qualified » sur chaque déclaration d’élément individuelle.|  
+|`elementFormDefault`|Doit être qualifié. Tous les éléments doivent être qualifiés pour qu'un schéma soit pris en charge par `DataContractSerializer`. Cela est possible en affectant xs:schema/@elementFormDefault sur « qualified » ou en définissant xs:element/@form « qualified » sur chaque déclaration d’élément individuelle.|  
 |`finalDefault`|Ignoré.|  
 |`Id`|Ignoré.|  
 |`targetNamespace`|Pris en charge et mappé à l'espace de noms du contrat de données. Si cet attribut n'est pas spécifié, l'espace de noms vierge est utilisé. Ne peut pas être l’espace de noms réservé http://schemas.microsoft.com/2003/10/Serialization/.|  
@@ -200,17 +200,17 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
 |`keyref`|Ignoré.|  
 |(vide)|Prise en charge.|  
   
- \* Lorsque vous utilisez la `simpleType` et `complexType,` mappage pour les types anonymes est le même que pour les types non anonymes, sauf qu’il n’existe aucun contrat de données anonymes, et un contrat de données nommé est créé, avec un nom généré dérivé du nom de l’élément. Les règles pour les types anonymes sont les suivantes :  
+ \* Lorsque vous utilisez le `simpleType` et `complexType,` mappage pour les types anonymes est le même que pour les types non anonymes, à ceci près qu’il n’existe aucun contrat de données anonymes, et donc un contrat de données nommé est créé, avec un nom généré dérivé du nom de l’élément. Les règles pour les types anonymes sont les suivantes :  
   
--   Détail d’implémentation de WCF : si le `xs:element` nom ne contienne pas de points, le type anonyme mappe à un type interne du type de contrat de données externe. Si le nom contient des points, le type de contrat de données résultant est indépendant (n'est pas un type interne).  
+-   Détail d’implémentation WCF : si le `xs:element` nom ne contient pas de périodes, le type anonyme mappe à un type interne du type de contrat de données externe. Si le nom contient des points, le type de contrat de données résultant est indépendant (n'est pas un type interne).  
   
 -   Le nom de contrat de données généré du type interne est le nom de contrat de données du type externe suivi par un point, le nom de l'élément et la chaîne "Type".  
   
 -   Si un contrat de données avec un tel nom existe déjà, le nom est rendu unique en ajoutant "1", "2", "3" et ainsi de suite jusqu'à ce qu'un nom unique soit créé.  
   
-## <a name="simple-types---xssimpletype"></a>Les Types simples - \<simpleType >  
+## <a name="simple-types---xssimpletype"></a>Les Types simples - \<xs : simpleType >  
   
-### <a name="xssimpletype-attributes"></a>\<simpleType > : attributs  
+### <a name="xssimpletype-attributes"></a>\<xs : simpleType > : attributs  
   
 |Attribut|Schéma|  
 |---------------|------------|  
@@ -218,7 +218,7 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
 |`id`|Ignoré.|  
 |`name`|Pris en charge, mappe au nom du contrat de données.|  
   
-### <a name="xssimpletype-contents"></a>\<simpleType > : contenu  
+### <a name="xssimpletype-contents"></a>\<xs : simpleType > : contenu  
   
 |Sommaire|Schéma|  
 |--------------|------------|  
@@ -437,28 +437,28 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
-### <a name="xscomplexcontent-attributes"></a>\<complexContent > : attributs  
+### <a name="xscomplexcontent-attributes"></a>\<xs : complexContent > : attributs  
   
 |Attribut|Schéma|  
 |---------------|------------|  
 |`id`|Ignoré.|  
 |`mixed`|Doit être faux.|  
   
-### <a name="xscomplexcontent-contents"></a>\<complexContent > : contenu  
+### <a name="xscomplexcontent-contents"></a>\<xs : complexContent > : contenu  
   
 |Sommaire|Schéma|  
 |--------------|------------|  
 |`restriction`|Interdit, sauf lorsque la base = "`xs:anyType`". Ce qui précède équivaut à placer directement le contenu de `xs:restriction` sous le conteneur de `xs:complexContent`.|  
 |`extension`|Prise en charge. Mappe à l'héritage de contrat de données.|  
   
-### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs : extension > dans \<complexContent > : attributs  
+### <a name="xsextension-in-xscomplexcontent-attributes"></a>\<xs : extension > dans \<xs : complexContent > : attributs  
   
 |Attribut|Schéma|  
 |---------------|------------|  
 |`id`|Ignoré.|  
 |`base`|Prise en charge. Mappe au type de contrat de données de base de qui ce type hérite.|  
   
-### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs : extension > dans \<complexContent > : contenu  
+### <a name="xsextension-in-xscomplexcontent-contents"></a>\<xs : extension > dans \<xs : complexContent > : contenu  
  Les règles sont les mêmes que pour le contenu `<xs:complexType>` .  
   
  Si un `<xs:sequence>` est fourni, ses éléments membres mappent aux membres de données supplémentaires qui sont présents dans le contrat de données dérivé.  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Mappage de types ISerializable  
- Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, `ISerializable` a été introduit comme mécanisme général pour sérialiser des objets pour la persistance ou le transfert de données. Il existe de nombreux types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui implémentent `ISerializable` et qui peuvent être passés entre les applications. `DataContractSerializer` fournit naturellement le support pour les classes `ISerializable` . `DataContractSerializer` mappe des types de schéma d'implémentation `ISerializable` qui diffèrent uniquement par le QName (nom qualifié) du type et sont des collections de propriétés. Par exemple, le `DataContractSerializer` mappe <xref:System.Exception> au type XSD suivant dans la http://schemas.datacontract.org/2004/07/System espace de noms.  
+ Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.0, `ISerializable` a été introduit comme mécanisme général pour sérialiser des objets pour la persistance ou le transfert de données. Il existe de nombreux types [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] qui implémentent `ISerializable` et qui peuvent être passés entre les applications. `DataContractSerializer` fournit naturellement le support pour les classes `ISerializable` . `DataContractSerializer` mappe des types de schéma d'implémentation `ISerializable` qui diffèrent uniquement par le QName (nom qualifié) du type et sont des collections de propriétés. Par exemple, le `DataContractSerializer` mappe <xref:System.Exception> au type XSD suivant dans le http://schemas.datacontract.org/2004/07/System espace de noms.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -536,7 +536,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- L'attribut facultatif `ser:FactoryType` déclaré dans le schéma de sérialisation du contrat de données référence une classe de fabrique qui peut désérialiser le type. La classe de fabrique doit faire partie de la collection de types connus de l'instance `DataContractSerializer` qui est utilisée. Pour plus d’informations sur les types connus, consultez [Types connus de contrat de données](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ L'attribut facultatif `ser:FactoryType` déclaré dans le schéma de sérialisation du contrat de données référence une classe de fabrique qui peut désérialiser le type. La classe de fabrique doit faire partie de la collection de types connus de l'instance `DataContractSerializer` qui est utilisée. Pour plus d’informations sur les types connus, consultez [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>Schéma de sérialisation DataContract  
  Plusieurs schémas exportés par `DataContractSerializer` , utilisent des types, des éléments et des attributs d'un espace de noms spécial de la sérialisation du contrat de données :  

@@ -6,14 +6,15 @@ helpviewer_keywords:
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e4219553f97f272577e8efdeb106b43e5f76ee59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad963db8d0e3644204824645f702c7b7b84963d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558382"
 ---
 # <a name="auditing-security-events"></a>Audit des événements de sécurité
-Les applications créées avec Windows Communication Foundation (WCF) peuvent enregistrer des événements de sécurité (succès, échec ou les deux) avec la fonctionnalité d’audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
+Les applications créées avec Windows Communication Foundation (WCF) peuvent enregistrer des événements de sécurité (réussite, échec ou les deux) avec la fonctionnalité d’audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
   
  L'audit permet à un administrateur de détecter une attaque que s'est déjà produite ou qui est en cours. En outre, l'audit permet de déboguer des problèmes relatifs à la sécurité. Par exemple, si une erreur dans la configuration de la stratégie d'autorisation ou de vérification refuse accidentellement l'accès à un utilisateur autorisé, un développeur peut la détecter rapidement et en isoler la cause en examinant le journal des événements.  
   
@@ -24,9 +25,9 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
   
 -   Niveau d'autorisation de service, dans lequel un appelant est autorisé.  
   
--   Niveau du message, dans lequel, WCF vérifie la validité du message et authentifie l’appelant.  
+-   Niveau du message, dans lequel WCF vérifie la validité du message et authentifie l’appelant.  
   
- Vous pouvez vérifier les deux niveaux d’audit pour réussite ou l’échec, ce qui est appelé le *comportement de vérification*.  
+ Vous pouvez vérifier les deux niveaux d’audit pour réussite ou l’échec, ce qui est appelé le *audit comportement*.  
   
 ## <a name="audit-log-location"></a>Emplacement du journal d'audit  
  Après avoir déterminé un niveau et un comportement d'audit, vous (ou un administrateur) pouvez spécifier l'emplacement du journal d'audit. Vous disposez pour cela de trois options : Default, Application et Security. Lorsque vous spécifiez Default, le journal réel dépend du système que vous utilisez et du fait que celui-ci prend ou non en charge l'écriture dans le journal Security. Pour plus d’informations, consultez la section « Système d’exploitation » plus loin dans cette rubrique.  
@@ -77,7 +78,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
  Si l'audit est activé et que `auditLogLocation` n'est pas spécifié, le nom de journal par défaut est "Security" pour la plateforme qui prend en charge l'écriture dans le journal Security, sinon il s'agit de "Application". Seuls les systèmes d'exploitation [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)] prennent en charge l'écriture dans le journal Security. Pour plus d’informations, consultez la section « Système d’exploitation » plus loin dans cette rubrique.  
   
 ## <a name="security-considerations"></a>Considérations relatives à la sécurité  
- Si un utilisateur malveillant sait que l'audit est activé, cet intrus peut envoyer des messages non valides pour provoquer l'écriture d'entrées d'audit. Si le journal d'audit se remplit de cette manière, le système d'audit échoue. Pour minimiser ce problème, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` et utilisez les propriétés de l'Observateur d'événements pour contrôler le comportement d'audit. Pour plus d’informations, consultez l’article de Support technique de Microsoft sur l’affichage et la gestion des journaux des événements à l’aide de l’Observateur d’événements dans Windows XP disponible à l’adresse [comment afficher et gérer les journaux des événements dans l’Observateur d’événements de Windows XP](http://go.microsoft.com/fwlink/?LinkId=89150).  
+ Si un utilisateur malveillant sait que l'audit est activé, cet intrus peut envoyer des messages non valides pour provoquer l'écriture d'entrées d'audit. Si le journal d'audit se remplit de cette manière, le système d'audit échoue. Pour minimiser ce problème, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` et utilisez les propriétés de l'Observateur d'événements pour contrôler le comportement d'audit. Pour plus d’informations, consultez l’article du Support de Microsoft sur l’affichage et la gestion des journaux des événements à l’aide de l’Observateur d’événements dans Windows XP disponible à l’adresse [comment afficher et gérer les journaux des événements dans l’Observateur d’événements de Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
   
  Les événements d'audit écrits dans le journal Application sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] sont accessibles aux utilisateurs authentifiés.  
   
@@ -107,4 +108,4 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
  [Guide pratique pour auditer des événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

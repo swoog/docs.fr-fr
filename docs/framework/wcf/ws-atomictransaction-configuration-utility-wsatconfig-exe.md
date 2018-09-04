@@ -2,11 +2,12 @@
 title: Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: ef2f34a6700d72c01977ea449041669a88c35e6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31b2b3cf16857bf08a4f8d09f47f80d9b34a53b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659958"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe)
 L'utilitaire de configuration WS-AtomicTransaction permet de configurer les paramètres de prise en charge WS-AtomicTransaction.  
@@ -24,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Si vous utilisez [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], vous devez télécharger une mise à jour avant d'exécuter WsatConfig.exe. Pour plus d’informations sur cette mise à jour, consultez [mise à jour pour Commerce Server 2007 (KB912817)](http://go.microsoft.com/fwlink/?LinkId=95340) et [disponibilité de Windows XP COM + Hotfix Rollup Package 13](http://go.microsoft.com/fwlink/?LinkId=95341).  
+ Si vous utilisez [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], vous devez télécharger une mise à jour avant d'exécuter WsatConfig.exe. Pour plus d’informations sur cette mise à jour, consultez [mettre à jour pour Commerce Server 2007 (KB912817)](https://go.microsoft.com/fwlink/?LinkId=95340) et [disponibilité de Windows XP COM + Hotfix Rollup Package 13](https://go.microsoft.com/fwlink/?LinkId=95341).  
   
  Le tableau suivant affiche les options qui peuvent être utilisées avec l'utilitaire de configuration WS-AtomicTransaction (wsatConfig.exe).  
   
@@ -35,11 +36,11 @@ wsatConfig [Options]
 |-------------|-----------------|  
 |-comptes :\<compte >|Spécifie la liste des comptes, séparés par une virgule, qui peuvent participer à WS-AtomicTransaction. La validation de ces comptes n'est pas vérifiée.|  
 |-accountsCerts :\<thumb >&#124;« Issuer\SubjectName », >|Spécifie la liste des certificats, séparés par une virgule, qui peuvent participer à WS-AtomicTransaction. Les certificats sont indiqués par empreinte numérique ou par la paire Issuer\SubjectName. Utilisez{EMPTY} pour le nom de sujet, s'il est vide.|  
-|-endpointCert : < ordinateur&#124;\<thumb >&#124;« Issuer\SubjectName » >|Utilise le certificat d'ordinateur ou un autre certificat de point de terminaison local spécifié par l'empreinte numérique ou par la paire Issuer\SubjectName. Utilise {EMPTY} pour le nom de sujet, s'il est vide.|  
+|-endpointCert : < machine&#124;\<thumb >&#124;« Issuer\SubjectName » >|Utilise le certificat d'ordinateur ou un autre certificat de point de terminaison local spécifié par l'empreinte numérique ou par la paire Issuer\SubjectName. Utilise {EMPTY} pour le nom de sujet, s'il est vide.|  
 |-maxTimeout :\<s >|Spécifie le délai d'attente maximal, exprimé en secondes. Les valeurs valides vont de 0 à 3 600.|  
 |-réseau :\<activer&#124;désactiver >|Active ou désactive la gestion réseau WS-AtomicTransaction.|  
 |-port :\<portNum >|Définit le port HTTPS pour WS-AtomicTransaction.<br /><br /> Si vous avez déjà activé le pare-feu avant d'exécuter cet outil, le port est enregistré automatiquement dans la liste d'exceptions. Si le pare-feu est désactivé avant l'exécution de cet outil, aucun élément supplémentaire n'est configuré concernant le pare-feu.<br /><br /> Si vous activez le pare-feu après avoir configuré WS-AT, vous devez exécuter de nouveau cet outil et fournir le numéro de port à l'aide de ce paramètre. Si vous désactivez le pare-feu après la configuration, WS-AT continue à fonctionner sans entrée supplémentaire.|  
-|-timeout :\<s >|Spécifie le délai d'attente par défaut, exprimé en secondes. Les valeurs valides sont comprises entre 1et 3 600.|  
+|-délai d’expiration :\<s >|Spécifie le délai d'attente par défaut, exprimé en secondes. Les valeurs valides sont comprises entre 1et 3 600.|  
 |-traceActivity :\<activer&#124;désactiver >|Active ou désactive le suivi d'événements d'activité.|  
 |-traceLevel :\<hors&#124;erreur&#124;critique&#124;avertissement&#124;informations&#124; Verbose&#124;tous les >}|Spécifie le niveau de suivi.|  
 |-tracePII :\<activer&#124;désactiver >|Active ou désactive le suivi des informations d'identification personnelle.|  

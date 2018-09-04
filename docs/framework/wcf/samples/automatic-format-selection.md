@@ -2,12 +2,12 @@
 title: Sélection automatique du format
 ms.date: 03/30/2017
 ms.assetid: dab51e56-8517-4a6a-bb54-b55b15ab37bb
-ms.openlocfilehash: 8c26253bee069bf9bbc009ea219e6c12cab034ef
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 4fd695195f5c7c13bc088248a6b3c12388328d37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803944"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659759"
 ---
 # <a name="automatic-format-selection"></a>Sélection automatique du format
 Cet exemple montre comment activer la sélection automatique du format (XML ou JSON) avec le reste de Windows Communication Foundation (WCF) modèle, ainsi que comment définir explicitement le format dans le code d’opération de programmation.  
@@ -15,7 +15,7 @@ Cet exemple montre comment activer la sélection automatique du format (XML ou J
 ## <a name="sample-details"></a>Détails de l'exemple  
  L'exemple se compose d'un service et du code client qui adresse des requêtes au service. Le service prend en charge une seule opération HTTP `GET` (`EchoWithGet`) et une seule opération HTTP `POST` (`EchoWithPost`). Les deux opérations attendent une chaîne, qu'elles retournent dans la réponse. Avec l'opération `GET`, la chaîne est fournie dans un paramètre de chaîne de requête URI. Avec l'opération `POST`, la chaîne est fournie dans le corps de la requête, sérialisé en XML. Le service est en mesure de retourner des réponses au format XML ou JSON, en utilisant les nouvelles fonctionnalités de sélection automatique du format et de sélection impérative du format de [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
   
- Dans l'exemple, la sélection automatique du format est activée au moyen du fichier App.config. Sur le point de terminaison HTTP Web par défaut, la valeur `automaticFormatSelectionEnabled` a été affectée à l'attribut `true`. La sélection automatique du format activée, l’infrastructure WCF sélectionne le plus approprié format de réponse (XML ou JSON) étant donné les en-têtes HTTP Accept ou Content-Type de la demande. Le développeur n'est pas obligé de fournir de code ou de configuration supplémentaire ; il lui suffit d'affecter à l'attribut `automaticFormatSelectionEnabled` la valeur `true` pour utiliser cette nouvelle fonctionnalité. Dans le code client dans le fichier Program.cs, les demandes sont envoyées dans le `GET` et `POST` les opérations du service avec l’en-tête HTTP Accept spécifié comme « application/xml » ou « application/json » et le service renvoie une réponse qui format en question.  
+ Dans l'exemple, la sélection automatique du format est activée au moyen du fichier App.config. Sur le point de terminaison HTTP Web par défaut, la valeur `automaticFormatSelectionEnabled` a été affectée à l'attribut `true`. Avec la sélection automatique du format activée, l’infrastructure WCF sélectionne le plus approprié format de réponse (XML ou JSON) étant donné les en-têtes HTTP Accept ou Content-Type de la demande. Le développeur n'est pas obligé de fournir de code ou de configuration supplémentaire ; il lui suffit d'affecter à l'attribut `automaticFormatSelectionEnabled` la valeur `true` pour utiliser cette nouvelle fonctionnalité. Dans le code client dans le fichier Program.cs, les demandes sont envoyées dans le `GET` et `POST` opérations du service avec l’en-tête HTTP Accept spécifié comme « application/xml » ou « application/json » et le service renvoie une réponse qui format en question.  
   
  La sélection impérative du format est aussi utilisée dans l'opération `GET`. L'opération `GET` recherche un paramètre de chaîne de requête `format` facultatif et si elle en trouve, définit le format de réponse dans la propriété <xref:System.ServiceModel.Web.WebOperationContext.OutgoingResponse%2A>. Définir impérativement le format de réponse de cette façon substitue la sélection automatique du format effectuée par l’infrastructure WCF.  
   
@@ -36,7 +36,7 @@ Cet exemple montre comment activer la sélection automatique du format (XML ou J
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\AutomaticFormatSelection`  
   

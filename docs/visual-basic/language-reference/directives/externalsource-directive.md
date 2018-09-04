@@ -1,5 +1,5 @@
 ---
-title: '#ExternalSource (Directive)'
+title: '#ExternalSource, Directive (Visual Basic)'
 ms.date: 07/20/2015
 f1_keywords:
 - '#Externalsource'
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ExternalSource directive (#ExternalSource)
 - '#ExternalSource directive'
 ms.assetid: 243bc6a2-34c3-4eeb-a776-9fd2bf988149
-ms.openlocfilehash: 146ab41d74b45acc4063e2463baca26c7caa4652
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcde8507eb033d0a47d5c5d3fa36176cd63b0856
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586589"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556316"
 ---
 # <a name="externalsource-directive"></a>#ExternalSource, directive
 Indique un mappage entre des lignes spécifiques de code source et du texte externe à la source.  

@@ -2,17 +2,17 @@
 title: Extraction des informations de schéma de base de données
 ms.date: 03/30/2017
 ms.assetid: 79038d52-f122-4fd4-9bfb-aaa22d6a114b
-ms.openlocfilehash: 1ac39a556fd7539550b12cb71b701c4bd3224a0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00cf0e36dd7886897c26adf50102f32892ebb18e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359687"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562702"
 ---
 # <a name="retrieving-database-schema-information"></a>Extraction des informations de schéma de base de données
-L'obtention des informations de schéma à partir d'une base de données est effectuée avec le processus de découverte de schéma. La découverte de schéma permet aux applications de demander que les fournisseurs managés trouvent et retournent des informations sur le schéma de base de données, également appelé *métadonnées*, d’une base de données. Différents éléments de schéma de base de données tels que des tables, des colonnes et des procédures stockées, sont exposés à l’aide de collections de schémas. Chaque collection de schémas contient une série d’informations de schéma spécifiques au fournisseur utilisé.  
+L'obtention des informations de schéma à partir d'une base de données est effectuée avec le processus de découverte de schéma. Découverte de schéma permet aux applications de demander que les fournisseurs managés trouvent et retournent des informations sur le schéma de base de données, également appelé *métadonnées*, d’une base de données. Différents éléments de schéma de base de données tels que des tables, des colonnes et des procédures stockées, sont exposés à l’aide de collections de schémas. Chaque collection de schémas contient une série d’informations de schéma spécifiques au fournisseur utilisé.  
   
- Chacune de l’implémentation de fournisseurs managés .NET Framework le **GetSchema** méthode dans le **connexion** classe et les informations de schéma qui sont retournées à partir de la **GetSchema**méthode se présente sous la forme d’un <xref:System.Data.DataTable>. Le **GetSchema** méthode est une méthode surchargée qui fournit des paramètres facultatifs pour spécifier la collection de schémas à retourner et restreindre la quantité d’informations retournées.  
+ Chacun de l’implémentation de fournisseurs managés .NET Framework le **GetSchema** méthode dans le **connexion** classe et les informations de schéma qui sont retournées à partir de la **GetSchema**méthode est fourni sous la forme d’un <xref:System.Data.DataTable>. Le **GetSchema** méthode est une méthode surchargée qui fournit des paramètres facultatifs pour spécifier la collection de schémas à retourner et restreindre la quantité d’informations retournées.  
   
  Les fournisseurs de données .NET Framework pour OLE DB, ODBC, Oracle et SqlClient fournissent un **GetSchemaTable** méthode qui retourne un objet DataTable décrivant les métadonnées de colonne de la **DataReader**.  
   
@@ -20,7 +20,7 @@ L'obtention des informations de schéma à partir d'une base de données est eff
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Collections GetSchema et Schema](../../../../docs/framework/data/adonet/getschema-and-schema-collections.md)  
- Décrit la **GetSchema** méthode et comment il peut être utilisé pour extraire et restreindre les informations de schéma à partir d’une base de données.  
+ Décrit le **GetSchema** (méthode) et comment elle peut être utilisée pour extraire et restreindre les informations de schéma à partir d’une base de données.  
   
  Restrictions de schéma  
  Décrit les restrictions de schéma qui peuvent être utilisées avec **GetSchema**.  
@@ -42,35 +42,35 @@ L'obtention des informations de schéma à partir d'une base de données est eff
   
 ## <a name="reference"></a>Référence  
  <xref:System.Data.Common.DbConnection.GetSchema%2A>  
- Décrit la **GetSchema** méthode de la <xref:System.Data.Common.DbConnection> classe.  
+ Décrit le **GetSchema** méthode de la <xref:System.Data.Common.DbConnection> classe.  
   
  <xref:System.Data.Odbc.OdbcConnection.GetSchema%2A>  
- Décrit la **GetSchema** méthode de la <xref:System.Data.Odbc.OdbcConnection> classe.  
+ Décrit le **GetSchema** méthode de la <xref:System.Data.Odbc.OdbcConnection> classe.  
   
  <xref:System.Data.OleDb.OleDbConnection.GetSchema%2A>  
- Décrit la **GetSchema** méthode de la <xref:System.Data.OleDb.OleDbConnection> classe.  
+ Décrit le **GetSchema** méthode de la <xref:System.Data.OleDb.OleDbConnection> classe.  
   
  <xref:System.Data.OracleClient.OracleConnection.GetSchema%2A>  
- Décrit la **GetSchema** méthode de la <xref:System.Data.OracleClient.OracleConnection> classe.  
+ Décrit le **GetSchema** méthode de la <xref:System.Data.OracleClient.OracleConnection> classe.  
   
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>  
- Décrit la **GetSchema** méthode de la <xref:System.Data.SqlClient.SqlConnection> classe.  
+ Décrit le **GetSchema** méthode de la <xref:System.Data.SqlClient.SqlConnection> classe.  
   
  <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A>  
- Décrit la **GetSchemaTable** méthode de la <xref:System.Data.Common.DbDataReader> classe.  
+ Décrit le **GetSchemaTable** méthode de la <xref:System.Data.Common.DbDataReader> classe.  
   
  <xref:System.Data.Odbc.OdbcDataReader.GetSchemaTable%2A>  
- Décrit la **GetSchemaTable** méthode de la <xref:System.Data.Odbc.OdbcDataReader> classe.  
+ Décrit le **GetSchemaTable** méthode de la <xref:System.Data.Odbc.OdbcDataReader> classe.  
   
  <xref:System.Data.OleDb.OleDbDataReader.GetSchemaTable%2A>  
- Décrit la **GetSchemaTable** méthode de la <xref:System.Data.OleDb.OleDbDataReader> classe.  
+ Décrit le **GetSchemaTable** méthode de la <xref:System.Data.OleDb.OleDbDataReader> classe.  
   
  <xref:System.Data.OracleClient.OracleDataReader.GetSchemaTable%2A>  
- Décrit la **GetSchemaTable** méthode de la <xref:System.Data.OracleClient.OracleDataReader> classe.  
+ Décrit le **GetSchemaTable** méthode de la <xref:System.Data.OracleClient.OracleDataReader> classe.  
   
  <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A>  
- Décrit la **GetSchemaTable** méthode de la <xref:System.Data.SqlClient.SqlDataReader> classe.  
+ Décrit le **GetSchemaTable** méthode de la <xref:System.Data.SqlClient.SqlDataReader> classe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extraction et modification de données dans ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
