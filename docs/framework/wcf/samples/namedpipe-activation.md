@@ -2,12 +2,12 @@
 title: NamedPipe Activation
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 46b59dab0f67c66ca364d9e880ef519386d0df94
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806381"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504270"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Activation
 Cet exemple illustre l'hébergement d'un service qui utilise le service d'activation des processus Windows (WAS) pour activer un service qui communique sur des canaux nommés. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et nécessite [!INCLUDE[wv](../../../../includes/wv-md.md)] à exécuter.  
@@ -20,7 +20,7 @@ Cet exemple illustre l'hébergement d'un service qui utilise le service d'activa
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\NamedPipeActivation`  
   
@@ -159,17 +159,17 @@ Press <ENTER> to terminate client.
   
 1.  Vérifiez que [!INCLUDE[iisver](../../../../includes/iisver-md.md)] est installé. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] est requis pour l'activation du service WAS.  
   
-2.  Vérifiez que vous avez exécuté le [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-     En outre, vous devez installer les composants d’activation non-HTTP WCF :  
+     En outre, vous devez installer les composants d’activation non-HTTP de WCF :  
   
     1.  À partir de la **Démarrer** menu, choisissez **le panneau de configuration**.  
   
     2.  Sélectionnez **programmes et fonctionnalités**.  
   
-    3.  Cliquez sur **activer ou désactiver les composants Windows**.  
+    3.  Cliquez sur **activer ou désactiver les composants de Windows**.  
   
-    4.  Développez le **Microsoft .NET Framework 3.0** nœud et cocher la **Activation Non-HTTP de Windows Communication Foundation** fonctionnalité.  
+    4.  Développez le **Microsoft .NET Framework 3.0** nœud et vérifiez la **Activation Non-HTTP de Windows Communication Foundation** fonctionnalité.  
   
 3.  Configurez le service d'activation des processus Windows pour prendre en charge l'activation de canal nommé.  
   
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Cette commande est une ligne unique de texte.  
   
-         Cette commande permet d’accéder à la fois à l’aide de l’application http://localhost/servicemodelsamples et via NET.TCP://localhost/servicemodelsamples.  
+         Cette commande active l’application accessible à l’aide à la fois http://localhost/servicemodelsamples et via NET.TCP://localhost/servicemodelsamples.  
   
 4.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -223,4 +223,4 @@ Press <ENTER> to terminate client.
         >  Cette commande doit être tapée comme une ligne unique de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

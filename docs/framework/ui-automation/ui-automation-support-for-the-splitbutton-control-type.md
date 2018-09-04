@@ -9,16 +9,16 @@ ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 78979573b134df7fd174c93a05f14f80a494d0ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e20f39d0c1b35017afa1d50e3ffef85a7743b8f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408923"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502193"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle SplitButton
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle SplitButton. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit réunir pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Les conditions incluent des indications spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] et les modèles de contrôle.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33408923"
   
 |Affichage de contrôle|Affichage de contenu|  
 |------------------|------------------|  
-|SplitButton<br /><br /> <ul><li>Image (0 ou 1)</li><li>Text (0 ou 1)</li><li>Button (1 ou 2)<br /><br /> <ul><li>Menu (0 ou 1. S’affiche en tant qu’enfant du bouton qui prend en charge le modèle ExpandCollapse)</li><li>MenuItem (1 et plus)</li></ul></li></ul>|SplitButton<br /><br /> -MenuItem (1 à-plusieurs)|  
+|SplitButton<br /><br /> <ul><li>Image (0 ou 1)</li><li>Text (0 ou 1)</li><li>Button (1 ou 2)<br /><br /> <ul><li>Menu (0 ou 1. S’affiche en tant qu’enfant du bouton qui prend en charge le modèle ExpandCollapse)</li><li>MenuItem (1 et plus)</li></ul></li></ul>|SplitButton<br /><br /> -MenuItem (1 à plusieurs)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propriétés UI Automation requises  
@@ -67,19 +67,19 @@ ms.locfileid: "33408923"
   
 |Événement[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Assistance|Notes|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Obligatoire|Aucun|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun|  
-|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun|  
-|Événement de modification de propriété<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> |Obligatoire|Aucun|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> |Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> .|Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> .|Obligatoire|Aucun.|  
+|Événement de modification de propriété<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> |Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obligatoire|Aucun.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obligatoire|Aucun.|  
   
 <a name="Split_Button_Control_Example"></a>   
 ## <a name="splitbutton-control-example"></a>Exemple de contrôle SplitButton  
  L’image suivante illustre un contrôle de type SplitButton dans un contrôle de grille de données.  
   
- ![Bouton Fractionner](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")  
+ ![Bouton partagé](../../../docs/framework/ui-automation/media/uiauto-splitbutton-detailed.gif "uiauto_splitbutton_detailed")  
   
  L’affichage de contrôle et l’affichage du contenu de l’arborescence UI Automation relative au contrôle de grille de données et au contrôle bouton partagé sont indiqués ci-dessous. Les modèles de contrôle de chaque élément Automation sont indiqués entre parenthèses.  
   

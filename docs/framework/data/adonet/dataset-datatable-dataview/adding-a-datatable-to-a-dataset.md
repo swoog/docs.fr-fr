@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
 ms.openlocfilehash: 5f2282b7aea8adf9e7574e2abe86af7cc5a487e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392291"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505919"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>Ajout d'un nouveau DataTable à un DataSet
 ADO.NET vous permet de créer des objets <xref:System.Data.DataTable> et de les ajouter à un objet <xref:System.Data.DataSet> existant. Vous pouvez définir des informations de contrainte pour un objet <xref:System.Data.DataTable> en utilisant les propriétés <xref:System.Data.DataTable.PrimaryKey%2A> et <xref:System.Data.DataColumn.Unique%2A>.  

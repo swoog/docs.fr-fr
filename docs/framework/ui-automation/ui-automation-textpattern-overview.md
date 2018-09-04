@@ -9,23 +9,23 @@ ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e8358a4a4e0b4933670a2f01dfdf4dd9a7aa43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 522caed7e8006157f99e65e99bf52743871444ad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409878"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43498972"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Vue d'ensemble de TextPattern d'UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette présentation décrit comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour exposer le contenu textuel, y compris les attributs de mise en forme et de style, des contrôles de texte dans les plateformes prises en charge par [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Ces contrôles incluent, mais ne sont pas limités à, Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.RichTextBox> , ainsi que leurs [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] équivalents.  
+ Cette présentation décrit comment utiliser [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] pour exposer le contenu textuel, y compris les attributs de mise en forme et de style, des contrôles de texte dans les plateformes prises en charge par [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Ces contrôles incluent, mais ne sont pas limités à Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> et <xref:System.Windows.Controls.RichTextBox> , ainsi que leurs [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] équivalents.  
   
  L’exposition du contenu textuel d’un contrôle s’effectue via l’utilisation du modèle de contrôle <xref:System.Windows.Automation.TextPattern> , qui représente le contenu d’un conteneur de texte sous forme d’un flux de texte. En retour, <xref:System.Windows.Automation.TextPattern> requiert la prise en charge de la classe <xref:System.Windows.Automation.Text.TextPatternRange> pour exposer les attributs de mise en forme et de style. <xref:System.Windows.Automation.Text.TextPatternRange> prend en charge <xref:System.Windows.Automation.TextPattern> en représentant les étendues de texte disjointes contiguës ou multiples dans un conteneur de texte par une collection de points de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> et <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> . <xref:System.Windows.Automation.Text.TextPatternRange> prend en charge des fonctionnalités telles que la sélection, la comparaison, la récupération et la traversée.  
   
 > [!NOTE]
->  Les classes <xref:System.Windows.Automation.TextPattern> ne permettent pas d'insérer ou de modifier du texte. Toutefois, selon le contrôle, ces opérations peuvent être effectuées par la classe [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> ou via une entrée directe au clavier directe. Consultez le [TextPattern insérer un exemple de texte](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) pour obtenir un exemple.  
+>  Les classes <xref:System.Windows.Automation.TextPattern> ne permettent pas d'insérer ou de modifier du texte. Toutefois, selon le contrôle, ces opérations peuvent être effectuées par la classe [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> ou via une entrée directe au clavier directe. Consultez le [TextPattern Insert Text Sample](https://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) pour obtenir un exemple.  
   
  Les fonctionnalités décrites dans cette vue d'ensemble sont indispensables aux fournisseurs de technologie d'assistance et à leurs utilisateurs finaux. Les technologies d'assistance peuvent utiliser [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] afin de collecter des informations complètes sur la mise en forme du texte pour l'utilisateur et offrir une navigation par programmation et une sélection de texte par <xref:System.Windows.Automation.Text.TextUnit> (caractère, mot, ligne ou paragraphe).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "33409878"
  **Point de terminaison**  
  Point <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> ou <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> absolu d'une plage de texte dans un conteneur de texte.  
   
- ![TextPatternRangeEndpoints &#40;commencer et se terminer&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![TextPatternRangeEndpoints &#40;commencer et se terminer&#41;. ](../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 L'exemple suivant illustre un ensemble de points de début et de terminaison.  
   
  **TextRange**  
@@ -137,4 +137,4 @@ L'exemple suivant illustre un ensemble de points de début et de terminaison.
  [Utiliser la mise en cache dans UI Automation](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)  
  [Prendre en charge des modèles de contrôle dans un fournisseur UI Automation](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
  [Mappage de modèle de contrôle pour les clients UI Automation](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)  
- [Infrastructure de Services de texte](http://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)
+ [Text Services Framework](https://msdn.microsoft.com/library/default.asp?url=/library/tsf/tsf/text_services_framework.asp)

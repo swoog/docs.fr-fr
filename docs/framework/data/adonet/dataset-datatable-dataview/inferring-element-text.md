@@ -3,11 +3,11 @@ title: Déduction du texte d'un élément
 ms.date: 03/30/2017
 ms.assetid: 789799e5-716f-459f-a168-76c5cf22178b
 ms.openlocfilehash: b70f76d2702ebcb098c64ea84900b723fbc137ab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405786"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516492"
 ---
 # <a name="inferring-element-text"></a>Déduction du texte d'un élément
 Si un élément contient du texte et ne contient aucun élément enfant à déduire en tant que tables telles que (éléments avec attributs) ou des éléments répétés, une nouvelle colonne portant le nom **TableName_Text** sera ajouté à la table qui est déduite pour l’élément. Le texte contenu dans l'élément sera ajouté à une ligne de la table et stocké dans la nouvelle colonne. Le **ColumnMapping** propriété de la nouvelle colonne est définie **MappingType.SimpleContent**.  

@@ -3,11 +3,11 @@ title: Demande-réponse non typée
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
 ms.openlocfilehash: 55692282aa06b8e988f44806394bdfcbb6e2f3ec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463656"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528591"
 ---
 # <a name="untyped-requestreply"></a>Untyped Request/Reply
 Cet exemple montre comment définir des contrats d'opération qui utilisent la classe Message.  

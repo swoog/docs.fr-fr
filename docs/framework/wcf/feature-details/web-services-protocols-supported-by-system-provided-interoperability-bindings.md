@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 ms.openlocfilehash: f4967a29b28f1862f5799f6935083ed12cb81ead
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399048"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504336"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protocoles de services Web pris en charge par des liaisons d’interopérabilité fournies par le système
 Windows Communication Foundation (WCF) est conçu pour interagir avec les services Web qui prennent en charge un ensemble de spécifications appelées des spécifications de services Web. Pour simplifier la configuration de service pour les meilleures pratiques de l’interopérabilité, WCF introduit trois liaisons interopérables fournies par le système : <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, et <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Pour une interopérabilité avec l’organisation pour les normes de l’avancement de structurées informations normes OASIS (), WCF inclut une liaison interopérable fournie par le système : <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Pour la publication de métadonnées, WCF inclut deux liaisons interopérables fournies par le système : [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) et [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). Cette rubrique répertorie les spécifications prises en charge par les liaisons interopérable fournies par le système.  

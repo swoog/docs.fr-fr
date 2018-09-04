@@ -2,12 +2,12 @@
 title: '&lt;binaryMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: 298f211eca12d0e76821a2172d93d432dc830507
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b3b359c9d3e80186e0296e6fbb0ba5683210f2a6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746265"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510244"
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 Définit un encodeur de message binaire qui encode des messages de Windows Communication Foundation (WCF) en binaire sur le câble.  
@@ -43,7 +43,7 @@ Définit un encodeur de message binaire qui encode des messages de Windows Commu
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Définit les contraintes sur la complexité des messages SOAP pouvant être traités par les points de terminaison configurés avec cette liaison. Cet élément est de type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   

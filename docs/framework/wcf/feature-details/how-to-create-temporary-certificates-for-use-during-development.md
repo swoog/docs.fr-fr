@@ -6,11 +6,11 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: d3b051c7ea152606721388ea35b6f508eada1c5d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385175"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524363"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Comment : créer des certificats temporaires à utiliser au cours du développement
 Lorsque vous développez un service sécurisé ou un client à l’aide de Windows Communication Foundation (WCF), il est souvent nécessaire de fournir un certificat X.509 à utiliser comme informations d’identification. Le certificat fait en général partie d'une chaîne de certificats dont l'autorité racine est présente dans le magasin d'Autorités de certification racines de confiance de l'ordinateur. Une chaîne de certificats vous permet de définir la portée d'un jeu de certificats où en général l'autorité racine provient de votre organisation ou votre division. Pour émuler ce scénario au moment du développement, vous pouvez créer deux certificats pour satisfaire les conditions de sécurité. Le premier est un certificat auto-signé placé dans le magasin d'Autorités de certification racines de confiance. Le deuxième certificat est créé à partir du premier et placé dans le magasin personnel de l'emplacement de l'ordinateur local ou dans le magasin personnel de l'emplacement de l'utilisateur actif. Cette rubrique décrit les étapes pour créer ces deux certificats à l’aide de la [outil Certificate Creation Tool (MakeCert.exe)](https://go.microsoft.com/fwlink/?LinkId=248185), qui est fournie par le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SDK.  

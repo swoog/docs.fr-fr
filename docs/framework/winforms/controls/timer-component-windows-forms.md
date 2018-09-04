@@ -6,12 +6,12 @@ helpviewer_keywords:
 - timers
 - timers [Windows Forms], creating
 ms.assetid: 6700e534-6382-43d5-98ed-14205435fff7
-ms.openlocfilehash: 77ff87bcb8c325e87564dfbadf87729ed8a28209
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a00bfa0772273f9374d292e27f5fba174172ca6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537848"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499872"
 ---
 # <a name="timer-component-windows-forms"></a>Timer, composant (Windows Forms)
 <xref:System.Windows.Forms.Timer> est un composant Windows Forms qui déclenche un événement à intervalles réguliers. Ce composant est conçu pour un environnement Windows Forms.  
@@ -37,5 +37,5 @@ ms.locfileid: "33537848"
  [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.  
   
- [Contrôle Timer pour les utilisateurs de Visual Basic 6.0](http://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
+ [Contrôle Timer pour les utilisateurs de Visual Basic 6.0](https://msdn.microsoft.com/library/38e5184a-1e50-45cf-b936-dae566c0cfc5)  
  Décrit les changements apportés à la fonctionnalité de minuteur dans Visual Basic, par rapport aux versions précédentes.

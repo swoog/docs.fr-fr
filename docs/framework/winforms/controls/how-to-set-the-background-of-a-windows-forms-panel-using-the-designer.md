@@ -7,26 +7,26 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: db83cf54-3c69-4b08-ac6c-25b9b5abb1b0
-ms.openlocfilehash: 896aa61f3f0900760dffd09bcab6a08bbc01628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86ab8bc979765fe79ccc76db9a0566459fde6e46
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535716"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499911"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Comment : définir l'arrière-plan d'un contrôle Panel Windows Forms à l'aide du concepteur
-Windows Forms <xref:System.Windows.Forms.Panel> contrôle peut afficher une couleur d’arrière-plan et une image d’arrière-plan. Le <xref:System.Windows.Forms.Control.BackColor%2A> propriété définit la couleur d’arrière-plan pour les contrôles qui sont contenus dans le panneau de configuration, notamment les étiquettes et cases d’option. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété n’est pas définie, la <xref:System.Windows.Forms.Control.BackColor%2A> sélection remplit tout le panneau de configuration. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété est définie, l’image est affichée derrière les contrôles qui sont contenus dans le panneau de configuration.  
+Un formulaire Windows <xref:System.Windows.Forms.Panel> contrôle peut afficher une couleur d’arrière-plan et une image d’arrière-plan. Le <xref:System.Windows.Forms.Control.BackColor%2A> propriété définit la couleur d’arrière-plan pour les contrôles qui sont contenus dans le panneau de configuration, tels que des étiquettes et cases d’option. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété n’est pas définie, le <xref:System.Windows.Forms.Control.BackColor%2A> sélectionnée remplit tout le panneau. Si le <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété est définie, l’image est affichée derrière les contrôles qui sont contenus dans le panneau de configuration.  
   
- La procédure suivante requiert un **Application Windows** projet avec un formulaire qui contient un <xref:System.Windows.Forms.Panel> contrôle. Pour plus d’informations sur la façon de configurer un tel projet, consultez [Comment : créer un projet d’Application Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) et [Comment : ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ La procédure suivante nécessite un **Windows Application** projet avec un formulaire qui contient un <xref:System.Windows.Forms.Panel> contrôle. Pour plus d’informations sur la façon de configurer un tel projet, consultez [Comment : créer un projet d’Application Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) et [Comment : ajouter des contrôles aux Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Pour définir l’arrière-plan dans le Concepteur Windows Forms  
+### <a name="to-set-the-background-in-the-windows-forms-designer"></a>Pour définir l’arrière-plan dans le Concepteur de formulaires Windows  
   
 1.  Sélectionnez le contrôle <xref:System.Windows.Forms.Panel>.  
   
-2.  Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackColor%2A> propriété pour afficher une fenêtre à trois onglets.  
+2.  Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackColor%2A> propriété pour afficher une fenêtre avec trois onglets.  
   
 3.  Sélectionnez le **personnalisé** onglet pour afficher une palette de couleurs.  
   
@@ -34,7 +34,7 @@ Windows Forms <xref:System.Windows.Forms.Panel> contrôle peut afficher une coul
   
 5.  Dans le **propriétés** fenêtre, cliquez sur la flèche située en regard du <xref:System.Windows.Forms.Control.BackgroundImage%2A> propriété.  
   
-6.  Dans le **ouvrir** boîte de dialogue, sélectionnez le fichier que vous souhaitez afficher.  
+6.  Dans le **Open** boîte de dialogue, sélectionnez le fichier que vous souhaitez afficher.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Control.BackColor%2A>  

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 9e8bcd4503ec840e46022a55cc08dc0610eaa60b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468209"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512464"
 ---
 # <a name="threading-model"></a>Modèle de thread
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] est conçu pour épargner aux développeurs les difficultés d’utilisation des threads. Par conséquent, la majorité des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auront pas les développeurs à écrire une interface qui utilise plusieurs threads. Comme les programmes multithreads sont complexes et difficiles à déboguer, il est préférable de les éviter quand des solutions à thread unique existent.  

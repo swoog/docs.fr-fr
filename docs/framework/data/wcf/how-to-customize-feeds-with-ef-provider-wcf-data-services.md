@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: bd29f6154297c2410294af14952d3d79201966ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41bbeb6536bbba3e107707ba2805a36a2c76c636
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359476"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526109"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Comment : personnaliser les flux avec le fournisseur Entity Framework (services de données WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] vous permet de personnaliser la sérialisation Atom dans une réponse du service de données pour pouvoir mapper les propriétés d'une entité aux éléments inutilisés définis dans le protocole AtomPub. Cette rubrique montre comment définir des attributs de mappage pour les types d’entité dans un modèle de données défini dans un fichier .edmx à l’aide du fournisseur Entity Framework. Pour plus d’informations, consultez [personnalisation de flux](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
   
- Dans cette rubrique vous modifierez manuellement le fichier .edmx généré par un outil qui contient le modèle de données. Vous devez modifier manuellement le fichier car les extensions vers le modèle de données ne sont pas prises en charge par le Concepteur d’entités. Pour plus d’informations sur le fichier .edmx qui génèrent des outils Entity Data Model, consultez [présentation d’un fichier .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4). L'exemple dans cette rubrique utilise l'exemple de service de données Northwind et des classes de service de données clientes générées automatiquement. Ce service et les classes de données clientes sont créés lorsque vous complétez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
+ Dans cette rubrique vous modifierez manuellement le fichier .edmx généré par un outil qui contient le modèle de données. Vous devez modifier manuellement le fichier car les extensions vers le modèle de données ne sont pas prises en charge par le Concepteur d’entités. Pour plus d’informations sur le fichier .edmx qui génèrent les outils Entity Data Model, consultez [présentation d’un fichier .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4). L'exemple dans cette rubrique utilise l'exemple de service de données Northwind et des classes de service de données clientes générées automatiquement. Ce service et les classes de données client sont créés lorsque vous complétez le [démarrage rapide WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).  
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>Pour modifier manuellement le fichier Northwind.edmx pour ajouter des attributs de personnalisation de flux  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33359476"
   
 4.  Enregistrez les modifications et fermez le fichier Northwind.edmx.  
   
-5.  (Facultatif) Cliquez sur le fichier Northwind.edmx, puis sur **exécuter un outil personnalisé**.  
+5.  (Facultatif) Cliquez sur le fichier Northwind.edmx, puis cliquez sur **exécuter un outil personnalisé**.  
   
      Cette opération régénère le fichier de couche objet qui peut être obligatoire.  
   

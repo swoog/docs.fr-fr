@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: fdda1bd4d3aca440558998231f411b614bd5542e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392089"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506174"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>Obtention d'un DbProviderFactory
 Le processus d'obtention d'un objet <xref:System.Data.Common.DbProviderFactory> implique de passer des informations à propos d'un fournisseur de données à la classe <xref:System.Data.Common.DbProviderFactories>. En fonction de ces informations, la méthode <xref:System.Data.Common.DbProviderFactories.GetFactory%2A> crée une fabrique de fournisseurs fortement typée. Par exemple, pour créer un objet <xref:System.Data.SqlClient.SqlClientFactory>, vous pouvez passer à `GetFactory` une chaîne avec le nom du fournisseur spécifié comme « System.Data.SqlClient ». L'autre surcharge de `GetFactory` prend un objet <xref:System.Data.DataRow>. Une fois que vous avez créé la fabrique de fournisseurs, vous pouvez ensuite utiliser ses méthodes pour créer des objets supplémentaires. Parmi les méthodes d'un `SqlClientFactory`, citons <xref:System.Data.SqlClient.SqlClientFactory.CreateConnection%2A>, <xref:System.Data.SqlClient.SqlClientFactory.CreateCommand%2A> et <xref:System.Data.SqlClient.SqlClientFactory.CreateDataAdapter%2A>.  

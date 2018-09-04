@@ -5,11 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514001"
 ---
 # <a name="date-and-time-data"></a>Données de date et d'heure
 SQL Server 2008 introduit de nouveaux types de manipulation de données de date et d'heure. Ces nouveaux types de données incluent des types distincts pour la date et l'heure, ainsi que des types de données étendus prenant en charge une plage plus vaste de valeurs, la précision et les fuseaux horaires. À partir du .NET Framework version 3.5 Service Pack (SP) 1, le fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient>) assure la prise en charge complète de l'ensemble des nouvelles fonctionnalités du moteur de base de données SQL Server 2008. Vous devez installer le .NET Framework 3.5 SP1 (ou version ultérieure) pour utiliser ces nouvelles fonctionnalités avec SqlClient.  
@@ -20,7 +21,7 @@ SQL Server 2008 introduit de nouveaux types de manipulation de données de date
   
  **Documentation en ligne de SQL Server**  
   
-1.  [À l’aide des données de Date et heure](http://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [À l’aide des données de Date et heure](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Types de données de date et d'heure introduits dans SQL Server 2008  
  Le tableau suivant décrit les nouveaux types de données de date et d'heure.  
@@ -40,12 +41,12 @@ SQL Server 2008 introduit de nouveaux types de manipulation de données de date
   
  L'instruction Transact-SQL SET LANGUAGE définit implicitement le DATEFORMAT qui détermine l'ordre des parties de la date. Vous pouvez utiliser l'instruction SET DATEFORMAT Transact-SQL sur une connexion pour lever l'ambiguïté pour des valeurs de date en classant les parties de date dans l'ordre MDY, DMY, YMD, YDM, MYD ou DYM.  
   
- Si vous ne spécifiez pas de DATEFORMAT pour la connexion, SQL Server utilise la langue par défaut associée à la connexion. Par exemple, une chaîne de date '01/02/03' serait interprétée sous la forme MDY (2 janvier 2003) sur un serveur dont le paramètre de langue est Anglais États-Unis, et sous la forme DMY (1er février 2003) sur un serveur dont le paramètre de langue est Anglais britannique. L'année est déterminée en utilisant la règle de l'année de troncature de SQL Server, qui définit la date de troncature pour l'assignation de la valeur relative au siècle. Pour plus d’informations, consultez [option two digit year cutoff Option](http://go.microsoft.com/fwlink/?LinkId=120473) dans la documentation en ligne de SQL Server.  
+ Si vous ne spécifiez pas de DATEFORMAT pour la connexion, SQL Server utilise la langue par défaut associée à la connexion. Par exemple, une chaîne de date '01/02/03' serait interprétée sous la forme MDY (2 janvier 2003) sur un serveur dont le paramètre de langue est Anglais États-Unis, et sous la forme DMY (1er février 2003) sur un serveur dont le paramètre de langue est Anglais britannique. L'année est déterminée en utilisant la règle de l'année de troncature de SQL Server, qui définit la date de troncature pour l'assignation de la valeur relative au siècle. Pour plus d’informations, consultez [Option two digit year cutoff](https://go.microsoft.com/fwlink/?LinkId=120473) dans la documentation en ligne de SQL Server.  
   
 > [!NOTE]
 >  Le format de date YDM n'est pas pris en charge lors de la conversion d'un format de chaîne en `date`, `time`, `datetime2` ou `datetimeoffset`.  
   
- Pour plus d’informations sur l’interprétation des données de date et d’heure SQL Server, consultez [à l’aide de données de Date et heure](http://go.microsoft.com/fwlink/?LinkID=98361) dans la documentation en ligne de SQL Server 2008.  
+ Pour plus d’informations sur comment SQL Server interprète les données de date et d’heure, consultez [à l’aide de données de Date et heure](https://go.microsoft.com/fwlink/?LinkID=98361) dans la documentation en ligne de SQL Server 2008.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Types de données et paramètres de date/heure  
  Les énumérations suivantes ont été ajoutées à l'objet <xref:System.Data.SqlDbType> pour prendre en charge les nouveaux types de données de date et d'heure.  
@@ -58,7 +59,7 @@ SQL Server 2008 introduit de nouveaux types de manipulation de données de date
   
 -   `SqlDbType.DateTimeOffSet`  
 
-Vous pouvez spécifier le type de données d’une <xref:System.Data.SqlClient.SqlParameter> à l’aide d’une des précédentes <xref:System.Data.SqlDbType> énumérations. 
+Vous pouvez spécifier le type de données d’un <xref:System.Data.SqlClient.SqlParameter> en utilisant l’une des précédentes <xref:System.Data.SqlDbType> énumérations. 
 
 > [!NOTE]
 > Vous ne pouvez pas définir le `DbType` propriété d’un `SqlParameter` à `SqlDbType.Date`.
@@ -87,9 +88,9 @@ Vous pouvez spécifier le type de données d’une <xref:System.Data.SqlClient.S
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtient ou définit si une valeur peut être nulle. Lorsque vous envoyez une valeur de paramètre null au serveur, vous devez spécifier <xref:System.DBNull>, plutôt que `null` (`Nothing` dans Visual Basic). Pour plus d’informations sur les valeurs NULL de la base de données, consultez [gestion des valeurs Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Obtient ou définit si une valeur peut être nulle. Lorsque vous envoyez une valeur de paramètre null au serveur, vous devez spécifier <xref:System.DBNull>, plutôt que `null` (`Nothing` dans Visual Basic). Pour plus d’informations sur les valeurs NULL de la base de données, consultez [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Obtient ou définit le nombre maximal de chiffres utilisés pour représenter la valeur. Ce paramètre est ignoré pour les types de données de date et d'heure.|  
-|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Obtient ou définit le nombre de décimales auquel la partie heure de la valeur est résolue pour `Time`, `DateTime2`, et `DateTimeOffset`. La valeur par défaut est 0, ce qui signifie que l'échelle réelle est déduite de la valeur et envoyée au serveur.|  
+|<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Obtient ou définit le nombre de décimales à laquelle la partie heure de la valeur est résolue pour `Time`, `DateTime2`, et `DateTimeOffset`. La valeur par défaut est 0, ce qui signifie que l'échelle réelle est déduite de la valeur et envoyée au serveur.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Ignoré pour les types de données de date et d'heure|  
 |<xref:System.Data.SqlClient.SqlParameter.Value%2A>|Obtient ou définit la valeur de paramètre.|  
 |<xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>|Obtient ou définit la valeur de paramètre.|  
@@ -100,7 +101,7 @@ Vous pouvez spécifier le type de données d’une <xref:System.Data.SqlClient.S
 ### <a name="creating-parameters"></a>Création de paramètres  
  Vous pouvez créer un objet <xref:System.Data.SqlClient.SqlParameter> à l'aide de son constructeur ou en l'ajoutant à une collection <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> en appelant la méthode `Add` de <xref:System.Data.SqlClient.SqlParameterCollection>. La méthode `Add` prendra comme entrée les arguments de constructeur ou un objet paramètre existant.  
   
- Les sections suivantes présentées dans cette rubrique fournissent des exemples montrant comment spécifier des paramètres de date et d'heure. Pour obtenir des exemples supplémentaires de l’utilisation de paramètres, consultez [configuration des paramètres et des Types de données de paramètre](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) et [paramètres DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ Les sections suivantes présentées dans cette rubrique fournissent des exemples montrant comment spécifier des paramètres de date et d'heure. Pour obtenir des exemples supplémentaires d’utilisation de paramètres, consultez [configuration des paramètres et Types de données de paramètre](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) et [paramètres DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Exemple relatif au paramètre date  
  Le fragment de code suivant montre comment spécifier un paramètre `date`.  
@@ -183,7 +184,7 @@ command.Parameters.AddWithValue( _
     "@date", DateTimeOffset.Parse("16660902"))  
 ```  
   
- Le `@date` paramètre peut mapper à un `date`, `datetime`, ou `datetime2` type de données sur le serveur. Lors de l'utilisation de nouveaux types de données `datetime`, vous devez affecter explicitement le type de données de l'instance à la propriété <xref:System.Data.SqlDbType> du paramètre. L'utilisation de <xref:System.Data.SqlDbType.Variant> ou la fourniture implicite de valeurs de paramètre peut provoquer des problèmes de compatibilité descendante avec les types de données `datetime` et `smalldatetime`.  
+ Le `@date` paramètre peut correspondre à un `date`, `datetime`, ou `datetime2` type de données sur le serveur. Lors de l'utilisation de nouveaux types de données `datetime`, vous devez affecter explicitement le type de données de l'instance à la propriété <xref:System.Data.SqlDbType> du paramètre. L'utilisation de <xref:System.Data.SqlDbType.Variant> ou la fourniture implicite de valeurs de paramètre peut provoquer des problèmes de compatibilité descendante avec les types de données `datetime` et `smalldatetime`.  
   
  Le tableau suivant indique les `SqlDbTypes` déduits selon les types CLR :  
   
@@ -234,12 +235,12 @@ command.Parameters.AddWithValue( _
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Données de date et heure Types et fonctions (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Fournit une vue d'ensemble des tous les types de données et fonctions de date et d'heure Transact-SQL.|  
-|[À l’aide des données de Date et heure](http://go.microsoft.com/fwlink/?LinkId=98361)|Fournit des informations sur les types de données et les fonctions de date et d'heure, ainsi que des exemples sur leur utilisation.|  
-|[Types de données (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Décrit les types de données système dans SQL Server 2008.|  
+|[Données de date et heure Types et fonctions (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Fournit une vue d'ensemble des tous les types de données et fonctions de date et d'heure Transact-SQL.|  
+|[À l’aide des données de Date et heure](https://go.microsoft.com/fwlink/?LinkId=98361)|Fournit des informations sur les types de données et les fonctions de date et d'heure, ainsi que des exemples sur leur utilisation.|  
+|[Types de données (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Décrit les types de données système dans SQL Server 2008.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappages de types de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Configuration des paramètres et des types de données des paramètres](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Types de données SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

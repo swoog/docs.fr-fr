@@ -5,16 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 1974ac71e367203b8b94375e43d4fde13f2df51f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513145"
 ---
 # <a name="annotating-typed-datasets"></a>Annotation de DataSet typés
-Les annotations vous permettent de modifier le nom des éléments de votre objet <xref:System.Data.DataSet> typé sans pour autant modifier le schéma sous-jacent. Modifier les noms des éléments de votre schéma sous-jacent provoquerait typées **DataSet** pour faire référence aux objets que vous ne pas exister dans la source de données, ainsi que perdrait des références aux objets qui existent dans la source de données.  
+Les annotations vous permettent de modifier le nom des éléments de votre objet <xref:System.Data.DataSet> typé sans pour autant modifier le schéma sous-jacent. Modifier les noms des éléments de votre schéma sous-jacent entraînerait typée **DataSet** pour faire référence aux objets qui n'effectuer pas exister dans la source de données, ainsi que perdrait des références aux objets qui existent dans la source de données.  
   
- À l’aide des annotations, vous pouvez personnaliser les noms des objets dans votre typé **DataSet** avec des noms plus explicites, rendre le code plus lisible et votre typé **DataSet** plus facile pour les clients à utiliser, en laissant schéma sous-jacent intact. Par exemple, l’élément de schéma suivant pour la **clients** table de la **Northwind** entraînerait la base de données un **DataRow** nom d’objet du  **CustomersRow** et un <xref:System.Data.DataRowCollection> nommé **clients**.  
+ À l’aide des annotations, vous pouvez personnaliser les noms des objets dans votre typé **DataSet** avec des noms plus explicites, rendre le code plus lisible et votre typé **DataSet** plus facile pour les clients à utiliser, tout en laissant schéma sous-jacente intacte. Par exemple, l’élément de schéma suivant pour la **clients** table de la **Northwind** entraînerait des base de données un **DataRow** nom d’objet du  **CustomersRow** et un <xref:System.Data.DataRowCollection> nommé **clients**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -26,7 +27,7 @@ Les annotations vous permettent de modifier le nom des éléments de votre objet
 </xs:element>  
 ```  
   
- A **DataRowCollection** nom de **clients** est significative dans le code client, mais un **DataRow** nom de **CustomersRow** est trompeur s’agissant d’un objet unique. En outre, en commun des scénarios, l’objet est désigné sans le **ligne** identificateur et à la place est simplement désigné comme un **client** objet. La solution consiste à annoter le schéma et à identifier de nouveaux noms pour les **DataRow** et **DataRowCollection** objets. Voici une version annotée du précédent schéma.  
+ Un **DataRowCollection** nom de **clients** est significative dans le code client, mais un **DataRow** nom de **CustomersRow** est trompeur s’agissant d’un seul objet. En outre, en commun des scénarios, l’objet est désigné sans le **ligne** identificateur et à la place aurait simplement appelé un **client** objet. La solution consiste à annoter le schéma et à identifier de nouveaux noms pour le **DataRow** et **DataRowCollection** objets. Voici une version annotée du précédent schéma.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -50,36 +51,36 @@ Les annotations vous permettent de modifier le nom des éléments de votre objet
 |**typedChildren**|Nom de la méthode permettant de retourner des objets d'une relation enfant.|  
 |**nullValue**|Valeur si la valeur sous-jacente est **DBNull**. Consultez le tableau suivant pour **nullValue** annotations. La valeur par défaut est **_throw**.|  
   
- Le tableau suivant montre les valeurs qui peuvent être spécifiés pour le **nullValue** annotation.  
+ Le tableau suivant présente les valeurs qui peuvent être spécifiées pour le **nullValue** annotation.  
   
 |Valeur nullValue|Description|  
 |---------------------|-----------------|  
 |*Valeur de remplacement*|Spécifier une valeur à retourner. La valeur retournée doit correspondre au type de l'élément. Par exemple, utilisez `nullValue="0"` pour retourner 0 pour les champs de type null integer (entier nul).|  
 |**_throw**|Levée d'une exception. Il s'agit de la valeur par défaut.|  
 |**_null**|Retourner une référence null ou lever une exception si un type primitif est rencontré.|  
-|**_empty**|Pour les chaînes, retourner **String.Empty**, sinon retourne un objet créé à partir d’un constructeur vide. Si un type primitif est rencontré, lever une exception.|  
+|**vid_e**|Pour les chaînes, retourner **String.Empty**, sinon retourne un objet créé à partir d’un constructeur vide. Si un type primitif est rencontré, lever une exception.|  
   
- Le tableau suivant présente les valeurs par défaut pour les objets dans un typé **DataSet** et les annotations disponibles.  
+ Le tableau suivant présente les valeurs par défaut pour les objets dans un **DataSet** et les annotations disponibles.  
   
 |Objet/méthode/événement|Par défaut|Annotation|  
 |---------------------------|-------------|----------------|  
 |**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** méthodes|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**dataRow**|TableNameRow|typedName|  
+|**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Property**|PropertyName|typedName|  
 |**Enfant** accesseur|GetChildTableNameRows|typedChildren|  
 |**Parent** accesseur|TableNameRow|typedParent|  
 |**Jeu de données** événements|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Pour utiliser typées **DataSet** annotations, vous devez inclure les éléments suivants **xmlns** référence dans votre schéma XML Schema definition language (XSD). (Pour créer un schéma xsd à partir des tables de base de données, consultez <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [utilisation de Datasets dans Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Pour utiliser automatiquement **DataSet** annotations, vous devez inclure ce qui suit **xmlns** référence dans votre schéma de langage (XSD XML) de définition de schéma XML. (Pour créer un xsd à partir des tables de base de données, consultez <xref:System.Data.DataSet.WriteXmlSchema%2A> ou [utilisation de Datasets dans Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Voici un exemple de schéma annoté qui expose la **clients** table de la **Northwind** base de données avec une relation à la **commandes** table incluse.  
+ Voici un exemple de schéma annoté qui expose le **clients** table du **Northwind** base de données avec une relation avec le **Orders** table incluse.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -158,7 +159,7 @@ AddHandler customers.Customers.CustomerChanged, &
   
 ' Add a strongly typed DataRow.  
 Dim newCustomer As CustomerDataSet.Customer = _  
-    customers.Customers.NewCustomeromer()  
+    customers.Customers.NewCustomer()  
 newCustomer.CustomerID = "NEW01"  
 newCustomer.CompanyName = "My New Company"  
 customers.Customers.AddCustomer(newCustomer)  
@@ -202,7 +203,7 @@ customers.Customers.CustomerChanged += new
   
 // Add a strongly typed DataRow.  
 CustomerDataSet.Customer newCustomer =   
-    customers.Customers.NewCustomeromer();  
+    customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  
 customers.Customers.AddCustomer(newCustomer);  
@@ -226,4 +227,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
  <xref:System.Data.DataSet>  
  [Datasets typés](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

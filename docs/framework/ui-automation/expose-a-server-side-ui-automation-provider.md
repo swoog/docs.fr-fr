@@ -12,16 +12,16 @@ ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9700b9cfef92da48a61b033ecf7b7357c113a994
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6180a5091b6072af97fd108b27a8dbe6cfd71324
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400378"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501271"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Exposer un fournisseur UI Automation côté serveur
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique contient des exemples de code qui montre comment exposer un fournisseur UI Automation côté serveur qui est hébergé dans un <xref:System.Windows.Forms.Control?displayProperty=nameWithType> fenêtre.  
   

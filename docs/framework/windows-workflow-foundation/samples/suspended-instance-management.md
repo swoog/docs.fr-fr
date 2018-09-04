@@ -3,11 +3,11 @@ title: Gestion de l'instance interrompue
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394598"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524913"
 ---
 # <a name="suspended-instance-management"></a>Gestion de l'instance interrompue
 Cet exemple montre comment gérer des instances de workflow qui ont été interrompues.  L'action par défaut pour <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> est `AbandonAndSuspend`. Cela signifie que, par défaut, les exceptions non gérées levées à partir d'une instance de workflow hébergée dans le <xref:System.ServiceModel.WorkflowServiceHost> provoqueront la suppression de l'instance de la mémoire (abandon), et la version durable/persistante de l'instance sera marquée comme interrompue. Une instance de workflow interrompue ne sera pas en mesure de fonctionner tant que l'interruption n'a pas été annulée.  

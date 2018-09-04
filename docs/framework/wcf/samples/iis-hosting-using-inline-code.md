@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 760607bc7ebf2662a7a3a93b2ebf76114580f42b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30e50d39b0edb34bcda1bec6d1848a09eabd34fa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502388"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524935"
 ---
 # <a name="iis-hosting-using-inline-code"></a>IIS Hosting Using Inline Code
 Cet exemple montre comment implémenter un service hébergé par les services IIS (Internet Information Services), où le code de service est contenu en ligne dans un fichier .svc et est compilé à la demande. Le code de service peut également être implémenté directement dans les fichiers de code source localisés dans le répertoire de \App_Code de l'application, ou être compilé dans l'assembly déployé dans \bin. Cet exemple ne présente pas ces techniques.  
@@ -23,7 +23,7 @@ Cet exemple montre comment implémenter un service hébergé par les services II
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebHost\InlineCode`  
   
@@ -85,13 +85,13 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Une fois la solution générée, exécutez setup.bat pour installer l'application ServiceModelSamples dans [!INCLUDE[iisver](../../../../includes/iisver-md.md)]. Le répertoire ServiceModelSamples doit maintenant apparaître en tant qu'application [!INCLUDE[iisver](../../../../includes/iisver-md.md)].  
   
-4.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Pour obtenir un exemple sur la façon de créer une application cliente qui peut appeler ce service, consultez [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md). Pour obtenir un exemple sur la création d’une application cliente qui peut appeler ce service, consultez [Comment : créer un Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

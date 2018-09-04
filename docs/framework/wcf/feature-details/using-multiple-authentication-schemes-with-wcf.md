@@ -3,11 +3,11 @@ title: Utilisation de schémas d'authentification multiples avec WCF
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
 ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408971"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521697"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>Utilisation de schémas d'authentification multiples avec WCF
 WCF vous permet maintenant de spécifier plusieurs schémas d'authentification sur un seul point de terminaison. En outre les services hébergés sur le Web peuvent hériter leurs paramètres d'authentification directement d'IIS. Les services auto-hébergés peuvent spécifier que les schémas d'authentification peuvent être utilisés. Pour plus d’informations sur la définition des paramètres d’authentification dans IIS, consultez [l’authentification IIS](https://go.microsoft.com/fwlink/?LinkId=232458)  

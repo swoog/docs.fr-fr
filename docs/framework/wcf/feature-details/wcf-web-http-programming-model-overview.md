@@ -3,11 +3,11 @@ title: Vue d'ensemble du modèle de programmation Web HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: f1185e7f8d455a59edf2b11e4e77ac6470d768fc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417336"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517073"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Vue d'ensemble du modèle de programmation Web HTTP WCF
 Le modèle de programmation HTTP WEB de Windows Communication Foundation (WCF) fournit les éléments de base requis pour générer des services WEB HTTP avec WCF. Les services HTTP WEB WCF sont conçus pour être accessibles par la majorité des clients possibles, y compris les navigateurs Web et ont les spécifications uniques suivantes :  

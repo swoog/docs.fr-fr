@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ed6a7fbe550dad85cf505eaf20a446803b84c96f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365416a82881c32b8fdcd3211aa42acb9f273483
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410414"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502727"
 ---
 # <a name="wif-and-web-farms"></a>WIF et batteries de serveurs web
 Si vous utilisez WIF (Windows Identity Foundation) pour sécuriser les ressources d’une application par partie de confiance déployée dans une batterie de serveurs web, vous devez définir des paramètres spécifiques pour vous assurer que WIF peut traiter les jetons provenant d’instances de l’application par partie de confiance qui sont exécutées sur les différents ordinateurs de la batterie de serveurs. Ces paramètres incluent la validation des signatures de jetons de session, le chiffrement et le déchiffrement des jetons de session, la mise en cache des jetons de session et la détection des jetons de sécurité relus.  
@@ -56,7 +56,7 @@ Si vous utilisez WIF (Windows Identity Foundation) pour sécuriser les ressource
 -   Si votre application détecte la présence de jetons relus, vous devez appliquer une stratégie de mise en cache distribuée similaire pour le cache de relecture de jetons. Pour cela, le cache doit être dérivé de <xref:System.IdentityModel.Tokens.TokenReplayCache> et pointer vers votre service caching de relecture de jetons dans l’élément de configuration [\<tokenReplayCache>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md).  
   
 > [!IMPORTANT]
->  Tous le fichier XML d’exemple et le code dans cette rubrique est extraite la [ClaimsAwareWebFarm](http://go.microsoft.com/fwlink/?LinkID=248408) (http://go.microsoft.com/fwlink/?LinkID=248408) exemple.  
+>  De l’exemple XML, le code de cette rubrique est tirés du [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408) exemple.  
   
 > [!IMPORTANT]
 >  Les exemples de cette rubrique sont fournis en l’état et ne sont pas destinés à être utilisés tels quels dans du code de production.  

@@ -2,16 +2,16 @@
 title: Activité de stratégie externalisée dans .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: a98dedace72ef9d43d9b65335b462f6ad4f649b0
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4d107188bbcb46006ba6a6eab491ccb97aa4a83d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503405"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Activité de stratégie externalisée dans .NET Framework 4.5
 
-Cet exemple montre comment l’activité ExternalizedPolicy4 permet l’exécution existant [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> dans des objets [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) directement à l’aide du moteur de règles qui est fourni dans WF 3.5. À l'aide de cette activité, vous pouvez ouvrir et exécuter n'importe quel <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5 existant. Pour plus d’informations sur le moteur de règles WF 3.5 inclus dans le cadre de Windows Workflow Foundation, veuillez lire [Introduction au moteur de règles Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=166079). Pour plus d’informations sur la migration de règles à [!INCLUDE[wf1](../../../../includes/wf1-md.md)] dans [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], veuillez lire les conseils de migration sur [conseils de Migration](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
+Cet exemple montre comment l’activité ExternalizedPolicy4 permet l’exécution existant [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Windows Workflow Foundation (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> dans des objets [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Windows Workflow Foundation (WF 4.5) directement à l’aide du moteur de règles qui est fourni dans WF 3.5. À l'aide de cette activité, vous pouvez ouvrir et exécuter n'importe quel <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5 existant. Pour plus d’informations sur le moteur de règles WF 3.5 inclus dans le cadre de Windows Workflow Foundation, veuillez lire [Introduction au moteur de règles Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=166079). Pour plus d’informations sur la migration de règles à [!INCLUDE[wf1](../../../../includes/wf1-md.md)] dans [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], veuillez lire les conseils de migration sur [conseils de Migration](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).
 
 ## <a name="projects-in-this-sample"></a>Projets dans cet exemple
 
@@ -87,7 +87,7 @@ Cet exemple contient deux applications clientes : ImperativeCodeClientSample et
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.
+> Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples.
 >
 > Cet exemple se trouve dans le répertoire suivant :
 >

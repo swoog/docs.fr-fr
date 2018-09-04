@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
 ms.openlocfilehash: 40a2ff3dcde9d0fbbc9a7e6c67430eb8313614e4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408945"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521184"
 ---
 # <a name="how-to-resize-windows-forms"></a>Comment : redimensionner des Windows Forms
 Vous pouvez spécifier la taille de votre Windows Form de plusieurs façons. Vous pouvez modifier à la fois la hauteur et la largeur du formulaire par programmation en affectant une nouvelle valeur à la propriété <xref:System.Windows.Forms.Form.Size%2A>, ou ajuster les propriétés <xref:System.Windows.Forms.Control.Height%2A> et <xref:System.Windows.Forms.Control.Width%2A> individuellement. Si vous utilisez Visual Studio, vous pouvez modifier la taille à l’aide du Concepteur de formulaires Windows. Consultez également [Comment : redimensionner des Windows Forms en utilisant le concepteur](https://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  

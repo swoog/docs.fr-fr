@@ -3,11 +3,11 @@ title: '&lt;netTcpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1d4715e1-5fff-4c3d-a226-18f21d0b30c4
 ms.openlocfilehash: 6cb29638e6a8c71371ce230ec3e08f2daedaaa44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406511"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516354"
 ---
 # <a name="ltnettcpcontextbindinggt"></a>&lt;netTcpContextBinding&gt;
 Indique un contexte pour le <xref:System.ServiceModel.NetTcpBinding> qui requiert la signature du niveau de protection. Le contextExchangeMechanism pour NetTcpContextBinding est SOAPHeader.  

@@ -3,11 +3,11 @@ title: CustomDiscoveryMetadata
 ms.date: 03/30/2017
 ms.assetid: c42455fd-3652-4b7e-b698-ab3a2bb52e48
 ms.openlocfilehash: 181910db3f1dd6da892f6ae2ddcbf7bd5859ff17
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465575"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525419"
 ---
 # <a name="customdiscoverymetadata"></a>CustomDiscoveryMetadata
 Cet exemple montre comment insérer des métadonnées XML personnalisées dans les métadonnées de découverte pour un point de terminaison détectable exposé par un service. Il montre ensuite comment un client peut rechercher le service et extraire ces données personnalisées. Cet exemple se compose de deux projets : service et client.  

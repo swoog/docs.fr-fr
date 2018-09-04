@@ -8,16 +8,16 @@ ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: cf3d9aafa428b82b9e8817bcd31b9a6bd2cfeba4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b451e0c66d2c595826e90debfcb0fb3a2602fec
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502424"
 ---
 # <a name="accessibility-best-practices"></a>Meilleures pratiques d'accessibilité
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  L'implémentation des meilleures pratiques suivantes dans les contrôles ou les applications améliore leur accessibilité pour les personnes qui utilisent des appareils de [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] . Une grande partie de ces meilleures pratiques se concentrent sur une bonne conception de l' [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] . Chaque meilleure pratique inclut des informations d'implémentation des contrôles ou applications [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] . Dans de nombreux cas, le travail nécessaire pour appliquer ces meilleures pratiques est déjà inclus dans les contrôles [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] .  
   
@@ -135,5 +135,5 @@ ms.locfileid: "33400967"
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Automation.Peers>  
- [Contrôle personnalisé NumericUpDown avec thème et prise en charge d’UI Automation, exemple](http://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
+ [Contrôle personnalisé NumericUpDown avec thème et prise en charge d’UI Automation, exemple](https://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
  [Instructions pour la conception de l’Interface utilisateur clavier](http://msdn2.microsoft.com/library/ms971323.aspx)

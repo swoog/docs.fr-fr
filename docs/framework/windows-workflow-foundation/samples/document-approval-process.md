@@ -2,12 +2,12 @@
 title: Processus d'approbation des documents
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: c28dafd3b0a1cb6dbee37fed2b3df8923ccd82c8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809490"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508928"
 ---
 # <a name="document-approval-process"></a>Processus d'approbation des documents
 Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Workflow Foundation (WF) et Windows Communication Foundation (WCF) ensemble. Ensemble, elles implémentent un scénario de processus d'approbation des documents. Une application cliente peut soumettre des documents pour approbation et approuver des documents. Une application du responsable des approbations existe pour faciliter les communications entre les clients et mettre en vigueur les règles du processus d'approbation. Le processus d'approbation est un workflow qui peut exécuter plusieurs types d'approbation. Il existe des activités pour obtenir une approbation unique, une approbation de quorum (pourcentage de l'ensemble d'approbateurs) et un processus d'approbation complexe qui se compose d'une approbation unique et de quorum dans une séquence.  
@@ -17,20 +17,20 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le graphique suivant illustre le workflow de processus d'approbation des documents.  
   
- ![Un workflow de processus d’approbation document](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![Un flux de travail du processus d’approbation document](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
   
  Du point de vue du client, le processus d'approbation fonctionne comme suit :  
   
 1.  Un client s'abonne pour être un utilisateur dans le système du processus d'approbation.  
   
-2.  Un client WCF envoie à un service WCF hébergé par l’application du Gestionnaire de réception.  
+2.  Un client WCF envoie à un service WCF hébergé par l’application de gestionnaire d’approbation.  
   
 3.  Un ID d'utilisateur unique est retourné au client. Le client peut maintenant participer aux processus d'approbation.  
   
@@ -48,19 +48,19 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 10. Un client peut recevoir une demande d'approbation et y répondre à tout moment.  
   
-11. Un service WCF hébergé sur le client peut recevoir une demande d’approbation de l’application du Gestionnaire de réception.  
+11. Un service WCF hébergé sur le client peut recevoir une demande d’approbation à partir du Gestionnaire d’approbation.  
   
 12. Les informations concernant les documents sont présentées sur le client à des fins de revue.  
   
 13. L'utilisateur peut approuver ou rejeter le document.  
   
-14. Un client WCF permet d’envoyer une réponse d’approbation à l’application du Gestionnaire de réception.  
+14. Un client WCF est utilisé pour envoyer une réponse d’approbation à l’application de gestionnaire d’approbation.  
   
  Du point de vue de l'application du responsable des approbations, le processus d'approbation fonctionne comme suit :  
   
 1.  Un client demande à participer au système du processus d'approbation.  
   
-2.  Un service WCF dans le Gestionnaire de réception reçoit une demande de faire partie du système du processus d’approbation.  
+2.  Un service WCF sur le responsable des approbations reçoit une demande de faire partie du système de processus d’approbation.  
   
 3.  Un ID unique est généré pour le client. Les informations utilisateur sont stockées dans une base de données.  
   
@@ -88,7 +88,7 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.  
   
-3.  Pour exécuter la solution, lancez l’Application du responsable des approbations en cliquant sur le projet ApprovalManager dans le **l’Explorateur de solutions** et en cliquant sur **déboguer**->**Démarrer**  nouvelle instance dans le menu contextuel.  
+3.  Pour exécuter la solution, lancez l’Application responsable des approbations en double-cliquant sur le projet ApprovalManager dans le **l’Explorateur de solutions** et en cliquant sur **déboguer**->**Démarrer**  nouvelle instance dans le menu contextuel.  
   
      Attendez que la sortie du responsable vous indique qu'il est prêt.  
   
@@ -102,11 +102,11 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 4.  Cliquez sur **découvrir**, attendez que le **s’abonner** bouton est activé.  
   
-5.  Tapez un nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1` et pour l'autre, tapez `UserType2`.  
+5.  Tapez le nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1` et pour l'autre, tapez `UserType2`.  
   
 6.  Dans le client `UserType1`, sélectionnez le type d'approbation unique dans le menu déroulant et tapez un nom de document ainsi qu'un contenu. Cliquez sur **demander l’approbation**.  
   
-7.  Dans le client `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-le et appuyez sur **approuver** ou **rejeter**. Les résultats doivent s'afficher dans le client `UserType1`.  
+7.  Dans le client `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-la, puis appuyez sur **approuver** ou **rejeter**. Les résultats doivent s'afficher dans le client `UserType1`.  
   
 ##### <a name="to-run-the-quorum-approval-scenario"></a>Pour exécuter le scénario avec approbation de quorum  
   
@@ -118,11 +118,11 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 4.  Cliquez sur **découvrir**, attendez que le **s’abonner** bouton est activé.  
   
-5.  Tapez un nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1` et pour les deux autres, tapez `UserType2`.  
+5.  Tapez le nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1` et pour les deux autres, tapez `UserType2`.  
   
 6.  Dans le client `UserType1`, sélectionnez le type d'approbation de quorum dans le menu déroulant et tapez un nom de document ainsi qu'un contenu. Cliquez sur **demander l’approbation**. Ceci nécessite que les deux clients `UserType2` approuvent ou rejettent le document. Alors que les deux clients `UserType2` doivent répondre, un seul client doit approuver le document pour qu'il le soit.  
   
-7.  Dans les clients `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-le et appuyez sur **approuver** ou **rejeter**. Les résultats doivent s'afficher dans le client `UserType1`.  
+7.  Dans les clients `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-la, puis appuyez sur **approuver** ou **rejeter**. Les résultats doivent s'afficher dans le client `UserType1`.  
   
 ##### <a name="to-run-the-complex-approval-scenario"></a>Pour exécuter le scénario avec approbation complexe  
   
@@ -134,11 +134,11 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 4.  Cliquez sur **découvrir**, attendez que le **s’abonner** bouton est activé.  
   
-5.  Tapez un nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1`, pour deux utilisations, tapez `UserType2` et, pour le dernier, utilisez `UserType3`.  
+5.  Tapez le nom d’utilisateur et cliquez sur **s’abonner**. Pour un client, utilisez `UserType1`, pour deux utilisations, tapez `UserType2` et, pour le dernier, utilisez `UserType3`.  
   
 6.  Dans le client `UserType1`, sélectionnez le type d'approbation unique dans le menu déroulant et tapez un nom de document ainsi qu'un contenu. Cliquez sur **demander l’approbation**.  
   
-7.  Dans les clients `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-le et appuyez sur **approuver**, le document est transmis à la `UserType3` client.  
+7.  Dans les clients `UserType2`, un document en attente d'approbation apparaît. Sélectionnez-la, puis appuyez sur **approuver**, le document est transmis à la `UserType3` client.  
   
      Si le document est approuvé par le premier quorum `UserType2`, le document est passé au client `UserType3`.  
   

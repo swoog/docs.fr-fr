@@ -2,23 +2,25 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: HT
+ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748904"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525004"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
-Représente une section de configuration pour définir un ensemble de mappage de protocole par défaut entre les schémas de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et des liaisons WCF. Lors de la création de points de terminaison par défaut lors de l’exécution, Windows Communication Foundation (WCF) examine les mappages configurés et décide de liaison à utiliser en une adresse de base.  
+Représente une section de configuration pour définir un ensemble de mappage de protocole par défaut entre les schémas de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et des liaisons WCF. Lorsque vous créez des points de terminaison par défaut lors de l’exécution, Windows Communication Foundation (WCF) examine les mappages configurés et décide de liaison à utiliser en tant qu’adresse de base.  
   
- \<system.serviceModel>  
-\<protocolMapping >  
+[**\<system.serviceModel >**](system-servicemodel.md)  
+&nbsp;&nbsp;**\<protocolMapping >**  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml
-   <protocolMapping>    <add binding="String"         bindingConfiguration="String"         scheme="http/net.msmq/net.pipe/net.tcp"/></protocolMapping>  
+<protocolMapping>
+   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
+</protocolMapping>  
 ```
 
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -31,13 +33,13 @@ Représente une section de configuration pour définir un ensemble de mappage de
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<filtres>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Contient un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et une liaison WCF.|  
+|[\<filtres>](filters-of-routing.md)|Contient un mappage de protocole par défaut entre un schéma de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et une liaison WCF.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|system.ServiceModel|Élément racine de tous les éléments de configuration WCF.|  
+|[\<system.serviceModel>](system-servicemodel.md)|Élément racine de tous les éléments de configuration WCF.|  
   
 ## <a name="example"></a>Exemple  
  L'exemple de configuration suivant montre le mappage de protocole par défaut dans le fichier machine.config. Vous pouvez remplacer ce mappage par défaut au niveau de l'ordinateur en modifiant le fichier machine.config. Ou, si vous souhaitez uniquement le remplacer dans la portée d'une application, vous pouvez remplacer cette section dans le fichier de configuration de votre application et modifier le mappage pour les schémas de protocole individuels.  

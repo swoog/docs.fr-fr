@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 29bfb88d638f68b2f9a3ba983a5c38fe49edb9a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504183"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502657"
 ---
 # <a name="default-message-contract"></a>Default Message Contract
-Cet exemple présente un service dans lequel un message personnalisé défini par l'utilisateur est passé à et depuis des opérations de service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente une interface de calculatrice comme un service typé. Au lieu des opérations de service individuels pour l’addition, soustraction, multiplication et division utilisée dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), cet exemple transmet un message personnalisé qui contient des opérandes et l’opérateur et retourne le résultat du calcul arithmétique.  
+Cet exemple présente un service dans lequel un message personnalisé défini par l'utilisateur est passé à et depuis des opérations de service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente une interface de calculatrice comme un service typé. Au lieu d’opérations de service individuelles pour l’addition, soustraction, multiplication et division utilisées dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), cet exemple transmet un message personnalisé qui contient les opérandes et l’opérateur et retourne le résultat du calcul arithmétique.  
   
  Le client est un programme de console (.exe) et la bibliothèque de service (.dll) est hébergée par les services IIS. L'activité du client est affichée dans la fenêtre de console.  
   
@@ -168,18 +168,18 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   

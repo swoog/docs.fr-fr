@@ -3,11 +3,11 @@ title: Sécurité
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
 ms.openlocfilehash: 6c4e64e928e3ada4210138878426fea9ffe5bdec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466680"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519247"
 ---
 # <a name="security"></a>Sécurité
 Le magasin d'instances de workflow SQL utilise les rôles de sécurité de base de données suivants pour sécuriser l'accès aux informations d'état de l'instance dans la base de données de persistance.  

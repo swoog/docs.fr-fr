@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: e7e687dfa6af47161be9d26054eb58f319a5099d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502698"
 ---
 # <a name="datarow-deletion"></a>Suppression de DataRow
 Il existe deux méthodes que vous pouvez utiliser pour supprimer un <xref:System.Data.DataRow> à partir de l’objet une <xref:System.Data.DataTable> objet : le **supprimer** méthode de la <xref:System.Data.DataRowCollection> objet et le <xref:System.Data.DataRow.Delete%2A> méthode de la **DataRow**objet. Tandis que le <xref:System.Data.DataRowCollection.Remove%2A> supprime de la méthode un **DataRow** à partir de la **DataRowCollection**, le <xref:System.Data.DataRow.Delete%2A> méthode marque seulement la ligne pour suppression. La suppression réelle se produit lorsque l’application appelle le **AcceptChanges** (méthode). En utilisant <xref:System.Data.DataRow.Delete%2A>, vous pouvez vérifier par programme les lignes marquées pour suppression avant de les supprimer. Lorsqu'une ligne est marquée pour suppression, sa propriété <xref:System.Data.DataRow.RowState%2A> prend la valeur <xref:System.Data.DataRow.Delete%2A>.  

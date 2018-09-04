@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
 ms.openlocfilehash: 72dc0c55a946bfa8ffc6f87bdbf353a20205185e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462530"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500597"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>Comment : accéder à des objets liés à des lignes DataGridView Windows Forms
 Il est parfois utile d’afficher une table d’informations stockée dans une collection d’objets métier. Quand vous liez un contrôle <xref:System.Windows.Forms.DataGridView> à une telle collection, chaque propriété publique est affichée dans sa propre colonne, à moins que la propriété n'ait été marquée comme non consultable avec un <xref:System.ComponentModel.BrowsableAttribute>. Par exemple, une collection d’objets `Customer` aurait des colonnes telles que **Nom** et **Adresse**.  

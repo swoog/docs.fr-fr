@@ -3,11 +3,11 @@ title: Bookmarks2
 ms.date: 03/30/2017
 ms.assetid: 035fadb2-49fa-4ac7-b398-daf138f66e87
 ms.openlocfilehash: 6bcc4e27566b9c8553e0792558c281a6b1f1caf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387387"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528988"
 ---
 # <a name="bookmarks"></a>Signets
 Cet exemple montre comment écrire une activité personnalisée qui crée un signet destiné à recevoir une entrée externe. Il inclut également une application console de base qui utilise l'activité personnalisée dans un workflow et montre comment découvrir et reprendre des signets associés à une instance de workflow en cours d'exécution. Pour plus d’informations sur les signets, consultez [signets](../../../../docs/framework/windows-workflow-foundation/bookmarks.md).  

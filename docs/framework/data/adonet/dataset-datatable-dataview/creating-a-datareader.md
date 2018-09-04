@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
 ms.openlocfilehash: 1ede51ed9119051a647fd27d8d02cd2c93e61bbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442718"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510035"
 ---
 # <a name="creating-a-datareader"></a>Création d'un DataReader
 Les classes <xref:System.Data.DataTable> et <xref:System.Data.DataSet> ont une méthode <xref:System.Data.DataTable.CreateDataReader%2A> qui retourne le contenu de la collection <xref:System.Data.DataTable> de l'objet <xref:System.Data.DataSet> ou de l'objet <xref:System.Data.DataSet.Tables%2A> sous la forme d'un ou plusieurs jeux de résultats en lecture seule et en avant uniquement.  

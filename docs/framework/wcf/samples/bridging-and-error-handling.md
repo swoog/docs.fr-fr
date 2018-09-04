@@ -3,11 +3,11 @@ title: Débogage et gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: 4ae87d1a-b615-4014-a494-a53f63ff0137
 ms.openlocfilehash: 6afaddc75855b7e95ad708b2179cabb9aee35001
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389066"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514540"
 ---
 # <a name="bridging-and-error-handling"></a>Débogage et gestion des erreurs
 Cet exemple montre comment le service de routage de Windows Communication Foundation (WCF) est utilisé pour le pontage de communication entre un client et un service qui utilisent des liaisons différentes. Il montre également comment utiliser un service de sauvegarde pour les scénarios de basculement. Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le service de routage.  

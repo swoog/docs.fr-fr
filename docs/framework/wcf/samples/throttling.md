@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
 ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481590"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519164"
 ---
 # <a name="throttling"></a>Throttling
 L'exemple Throttling illustre l'utilisation des contrôles de limitation. Les contrôles de limitation de requêtes limitent le nombre d'appels, d'instances ou de sessions simultanés pour empêcher une surconsommation des ressources. La fonctionnalité de limitation est spécifiée dans les paramètres du fichier de configuration du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.  

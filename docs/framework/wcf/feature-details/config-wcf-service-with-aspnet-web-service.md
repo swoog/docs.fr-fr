@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 12c5645b53e8e931edabc1a13fc1749e40538044
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4c4a66de1b50f7953d76e0e9a0ab8b0e030df09
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490374"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513897"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Comment : configurer le service WCF pour interagir avec des clients du service Web ASP.NET
-Pour configurer un point de terminaison de service Windows Communication Foundation (WCF) pour qu’il puisse interagir avec [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les clients du service Web, utilisez le <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type que le type de liaison pour votre point de terminaison de service.  
+Pour configurer un point de terminaison de service Windows Communication Foundation (WCF) pour être interopérable avec [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les clients du service Web, utilisez le <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> type que le type de liaison pour votre point de terminaison de service.  
   
  Vous pouvez éventuellement activer la prise en charge du protocole HTTPS et de l’authentification du client au niveau du transport sur la liaison. Les clients du service Web [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ne prennent pas en charge l'encodage de messages MTOM, donc la propriété <xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType> doit conserver sa valeur par défaut, soit <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType>. Les clients du service Web ASP.NET ne prennent pas en charge la spécification WS-Security, donc <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> doit avoir la valeur <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
   
- Pour rendre les métadonnées pour un service WCF disponibles aux [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web des outils de génération de proxy de service (autrement dit, [Web Services Description Language Tool (Wsdl.exe)](http://go.microsoft.com/fwlink/?LinkId=73833), [Web Services Discovery Tool (Disco.exe)](http://go.microsoft.com/fwlink/?LinkId=73834)et la fonctionnalité Ajouter une référence Web dans Visual Studio), vous devez exposer un point de terminaison de métadonnées HTTP/GET.  
+ Pour rendre les métadonnées pour un service WCF disponibles pour [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] outils de génération de proxy de service Web (autrement dit, [outil Web Services Description Language Tool (Wsdl.exe)](https://go.microsoft.com/fwlink/?LinkId=73833), [outil Web Services Discovery Tool (Disco.exe)](https://go.microsoft.com/fwlink/?LinkId=73834)et la fonctionnalité Ajouter une référence Web dans Visual Studio), vous devez exposer un point de terminaison de métadonnées HTTP/GET.  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>Pour ajouter un point de terminaison WCF compatible avec les clients du service Web ASP.NET dans du code  
   
@@ -25,19 +25,19 @@ Pour configurer un point de terminaison de service Windows Communication Foundat
   
 2.  Vous pouvez éventuellement activer la sécurité de transport pour cette liaison de point de terminaison de service en affectant au mode de sécurité de la liaison la valeur <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Pour plus d’informations, consultez [sécurité du Transport](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
-3.  Ajoutez un nouveau point de terminaison d’application à votre hôte de service à l’aide de l’instance de liaison que vous venez de créer. Pour plus d’informations sur l’ajout d’un point de terminaison de service dans le code, consultez la [Comment : créer un point de terminaison de Service dans le Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
+3.  Ajoutez un nouveau point de terminaison d’application à votre hôte de service à l’aide de l’instance de liaison que vous venez de créer. Pour plus d’informations sur l’ajout d’un point de terminaison de service dans le code, consultez le [Comment : créer un point de terminaison de Service dans le Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md).  
   
-4.  Activez un point de terminaison de métadonnées HTTP/GET pour votre service. Pour plus d’informations, consultez [Comment : publier des métadonnées pour un Code à l’aide du Service](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
+4.  Activez un point de terminaison de métadonnées HTTP/GET pour votre service. Pour plus d’informations, consultez [Comment : publier des métadonnées pour un Service à l’aide de Code](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md).  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>Pour ajouter un point de terminaison WCF compatible avec les clients du service Web ASP.NET dans un fichier de configuration  
   
-1.  Créez une configuration de liaison <xref:System.ServiceModel.BasicHttpBinding>. Pour plus d’informations, consultez la [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
+1.  Créez une configuration de liaison <xref:System.ServiceModel.BasicHttpBinding>. Pour plus d’informations, consultez le [Comment : spécifier une liaison de Service dans la Configuration](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md).  
   
 2.  Vous pouvez éventuellement activer la sécurité de transport pour la configuration de cette liaison de point de terminaison de service en affectant au mode de sécurité de la liaison la valeur <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>. Pour plus d’informations, consultez [sécurité du Transport](../../../../docs/framework/wcf/feature-details/transport-security.md).  
   
 3.  Configurez un nouveau point de terminaison d’application pour votre service à l’aide de la configuration de liaison que vous venez de créer. Pour plus d’informations sur l’ajout d’un point de terminaison de service dans un fichier de configuration, consultez le [Comment : créer un point de terminaison de Service dans la Configuration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md).  
   
-4.  Activez un point de terminaison de métadonnées HTTP/GET pour votre service. Pour plus d’informations, consultez la [Comment : publier les métadonnées pour un Service à l’aide d’un fichier de Configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
+4.  Activez un point de terminaison de métadonnées HTTP/GET pour votre service. Pour plus d’informations, consultez le [Comment : publier des métadonnées pour un Service à l’aide d’un fichier de Configuration](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant montre comment ajouter un point de terminaison WCF compatible avec [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] les clients dans le code du service Web et également dans les fichiers de configuration.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
 ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463692"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518805"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer, contrôle (Windows Forms)
 Le contrôle Windows Forms `SplitContainer` peut être considéré comme un composite ; il s'agit de deux panneaux séparés par une barre mobile. Quand le pointeur de la souris est sur la barre, il change de forme pour montrer que la barre est mobile.  

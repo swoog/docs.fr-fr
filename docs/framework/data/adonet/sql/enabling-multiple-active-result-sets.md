@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 073cd3a57f254f639fac44900ff6bf022e1fb165
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408397"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504304"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Activation de MARS (Multiple Active Result Sets)
 MARS est une fonctionnalité qui opère avec SQL Server pour permettre l’exécution de plusieurs lots sur une seule connexion. Lorsque MARS est activé pour une utilisation avec SQL Server, chaque objet de commande utilisé ajoute une session à la connexion.  

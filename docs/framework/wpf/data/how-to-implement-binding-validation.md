@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 5e91ab9fbd2fdeb0aa5d836a1eedfb5e0b45ecba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425795"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510450"
 ---
 # <a name="how-to-implement-binding-validation"></a>Comment : implémenter la validation de la liaison
 Cet exemple montre comment utiliser un <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> et un déclencheur de style pour fournir des commentaires visuels afin d’informer l’utilisateur lorsqu’une valeur non valide est entrée, basée sur une règle de validation personnalisée.  

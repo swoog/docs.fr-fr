@@ -2,11 +2,12 @@
 title: Route by Body
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef463f7a7c46387ba3779ef6c674d9c3b022116e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521837"
 ---
 # <a name="route-by-body"></a>Route by Body
 Cet exemple montre comment implémenter un service qui accepte des objets de message avec toute action SOAP. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice. Le service implémente une opération `Calculate` unique qui accepte un paramètre de demande <xref:System.ServiceModel.Channels.Message> et retourne une réponse <xref:System.ServiceModel.Channels.Message>.  
@@ -16,7 +17,7 @@ Cet exemple montre comment implémenter un service qui accepte des objets de mes
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
- L'exemple illustre la distribution des messages selon le contenu du corps. Le mécanisme de distribution message intégré Windows Communication Foundation (WCF) service modèle est basé sur les Actions de message. Toutefois, il existe de nombreux services Web qui définissent toutes leurs opérations avec l'action="". Il est impossible de générer un service reposant sur WSDL qui continue à distribuer des messages de demande selon les informations d'action. Cet exemple montre un contrat de service basé sur WSDL (WSDL est contenu dans Service.wsdl, lui-même inclus dans l'exemple). Le contrat de service est la Calculatrice, similaire à celui utilisé dans [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Toutefois, le `[OperationContract]` spécifie `Action=""` pour toutes les opérations.  
+ L'exemple illustre la distribution des messages selon le contenu du corps. Le mécanisme de distribution message intégré Windows Communication Foundation (WCF) service modèle repose sur les Actions de message. Toutefois, il existe de nombreux services Web qui définissent toutes leurs opérations avec l'action="". Il est impossible de générer un service reposant sur WSDL qui continue à distribuer des messages de demande selon les informations d'action. Cet exemple montre un contrat de service basé sur WSDL (WSDL est contenu dans Service.wsdl, lui-même inclus dans l'exemple). Le contrat de service est la Calculatrice, semblable à celui utilisé dans [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Toutefois, le `[OperationContract]` spécifie `Action=""` pour toutes les opérations.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -36,7 +37,7 @@ Cet exemple montre comment implémenter un service qui accepte des objets de mes
   
  Selon le contrat, le service requiert le comportement de distribution personnalisé `DispatchByBodyBehavior` pour autoriser les messages à être distribués entre des opérations. Ce comportement de distribution initialise le `DispatchByBodyElementOperationSelector` sélecteur d’opération personnalisé avec un tableau des noms d’opération indexés par le QName des éléments wrapper respectifs. `DispatchByBodyElementOperationSelector` examine la balise de début du premier enfant du corps et sélectionne l'opération à l'aide du tableau mentionné précédemment.  
   
- Le client utilise un proxy généré automatiquement à partir du WSDL exporté par le service à l’aide de [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Le client utilise un proxy généré automatiquement à partir du WSDL exporté par le service à l’aide [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ```  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  
@@ -57,18 +58,18 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

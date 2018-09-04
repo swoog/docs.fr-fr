@@ -2,12 +2,12 @@
 title: Exécuter un workflow dans un TransactionScope impératif
 ms.date: 03/30/2017
 ms.assetid: bd0e8686-c1d0-4400-a541-da94ed03afc7
-ms.openlocfilehash: 44efc13efaa45274068fb44cc154b515bd774a35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744434e807664ca93b4f5bc27a1f3b89716ce87
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520168"
 ---
 # <a name="execute-a-workflow-in-an-imperative-transactionscope"></a>Exécuter un workflow dans un TransactionScope impératif
 Cet exemple montre comment exécuter un workflow à l'aide de <xref:System.Activities.WorkflowInvoker> sous un <xref:System.Transactions.Transaction> à partir de code C# impératif.  
@@ -34,6 +34,6 @@ Cet exemple montre comment exécuter un workflow à l'aide de <xref:System.Activ
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\ImperativeTransaction`

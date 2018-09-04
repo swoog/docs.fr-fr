@@ -3,11 +3,11 @@ title: 'Comment : utiliser EdmGen.exe pour valider les fichiers de modèle et le
 ms.date: 03/30/2017
 ms.assetid: 2641906a-971a-4d0b-8aee-13fabc02a1cc
 ms.openlocfilehash: fda8698381e98c64318f1a26f77f0263e9085074
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43471924"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512443"
 ---
 # <a name="how-to-use-edmgenexe-to-validate-model-and-mapping-files"></a>Comment : utiliser EdmGen.exe pour valider les fichiers de modèle et les fichiers de mappage
 Cette rubrique montre comment utiliser le [EDM Generator (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md) outil pour valider le modèle et les fichiers de mappage. Pour plus d’informations, consultez [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  

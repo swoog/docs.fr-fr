@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 4370a7a700a01943548bf067827e6640245caf4e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482162"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516789"
 ---
 # <a name="retrieving-data-using-a-datareader"></a>Récupération de données à l'aide d'un DataReader
 Récupération des données à l’aide un **DataReader** implique la création d’une instance de la **commande** objet, puis en créant un **DataReader** en appelant  **Command.ExecuteReader** pour extraire des lignes à partir d’une source de données. L’exemple suivant illustre l’utilisation un **DataReader** où `reader` représente un DataReader valid et `command` représente un objet de commande valide.  

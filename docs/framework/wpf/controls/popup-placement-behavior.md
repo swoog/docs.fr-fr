@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 6f1fb6fa7702d36aa7ddf4c12fe4a370f4e66e23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486777"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528790"
 ---
 # <a name="popup-placement-behavior"></a>Comportement de positionnement de Popup
 Un <xref:System.Windows.Controls.Primitives.Popup> contrôle affiche le contenu dans une fenêtre distincte qui flotte au-dessus d’une application. Vous pouvez spécifier la position d’un <xref:System.Windows.Controls.Primitives.Popup> par rapport à un contrôle, la souris ou l’écran à l’aide de la <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, et <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> propriétés.  Ces propriétés fonctionnent ensemble pour vous permettent une grande souplesse en spécifiant la position de la <xref:System.Windows.Controls.Primitives.Popup>.  

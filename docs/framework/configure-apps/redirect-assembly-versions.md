@@ -11,12 +11,12 @@ ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aad369b35837089d05f5d7517e023671f0178011
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759268"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507802"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirection des versions d'assemblys
 Vous pouvez rediriger des références de liaison de compilation vers des assemblys .NET Framework, des assemblys tiers ou des assemblys de votre propre application. Vous pouvez rediriger votre application pour utiliser une autre version d’un assembly de plusieurs manières : via une stratégie d’éditeur, un fichier de configuration d’application ou le fichier de configuration de l’ordinateur. Cet article explique comment la liaison d’assembly fonctionne dans le .NET Framework et comment la configurer.  
@@ -70,7 +70,7 @@ Vous pouvez rediriger des références de liaison de compilation vers des assemb
   
 <a name="bypass_PP"></a>   
 ### <a name="bypassing-publisher-policy"></a>Contournement de la stratégie d’éditeur  
- Vous pouvez remplacer la stratégie d’éditeur dans le fichier de configuration d’application, si nécessaire. Par exemple, les nouvelles versions d’assemblys se déclarant à compatibilité descendante peuvent quand même bloquer une application. Si vous souhaitez ignorer la stratégie d’éditeur, ajoutez un [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) élément à la [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) élément dans le fichier de configuration d’application et ensemble le **appliquer** attribut **aucun**, qui substitue précédent **Oui** paramètres.  
+ Vous pouvez remplacer la stratégie d’éditeur dans le fichier de configuration d’application, si nécessaire. Par exemple, les nouvelles versions d’assemblys se déclarant à compatibilité descendante peuvent quand même bloquer une application. Si vous souhaitez ignorer la stratégie d’éditeur, ajoutez un [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) élément à la [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) élément dans le fichier de configuration d’application et ensemble la **appliquer** attribut **aucun**, qui remplace précédent **Oui** paramètres.  
   
  `<publisherPolicy apply="no" />`  
   
@@ -120,7 +120,7 @@ Vous pouvez rediriger des références de liaison de compilation vers des assemb
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Limitation des liaisons d’assembly à une version spécifique  
- Vous pouvez utiliser la **appliesTo** de l’attribut le [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) élément dans un fichier de configuration d’application pour rediriger les références de liaison d’assembly vers une version spécifique du .NET Framework Framework. Cet attribut facultatif utilise un numéro de version .NET Framework pour indiquer la version à laquelle il s'applique. Si l’attribut **appliesTo** n’est pas spécifié, l’élément [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) s’applique à toutes les versions du .NET Framework.  
+ Vous pouvez utiliser la **appliesTo** d’attribut sur le [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) élément dans un fichier de configuration d’application pour rediriger les références de liaison d’assembly vers une version spécifique du .NET Framework. Cet attribut facultatif utilise un numéro de version .NET Framework pour indiquer la version à laquelle il s'applique. Si l’attribut **appliesTo** n’est pas spécifié, l’élément [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) s’applique à toutes les versions du .NET Framework.  
   
  Par exemple, pour rediriger la liaison d’assembly pour un assembly .NET Framework 3.5, vous devez inclure le code XML suivant dans le fichier de configuration d’application.  
   
@@ -161,7 +161,7 @@ Vous pouvez rediriger des références de liaison de compilation vers des assemb
  [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Configuration d'applications](../../../docs/framework/configure-apps/index.md)  
- [Configuration des applications .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Configuration des applications .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Comment : créer une stratégie d'éditeur](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

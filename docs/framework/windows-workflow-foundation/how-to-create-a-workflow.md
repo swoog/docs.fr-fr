@@ -3,11 +3,11 @@ title: 'Procédure : créer un workflow'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462296"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502482"
 ---
 # <a name="how-to-create-a-workflow"></a>Procédure : créer un workflow
 Les workflows peuvent être construits aussi bien à partir d'activités intégrées que d'activités personnalisées. Les rubriques de cette section vous guident création d’un workflow qui utilise les deux activités intégrées telles que la <xref:System.Activities.Statements.Flowchart> activité et les activités personnalisées de la précédente [Comment : créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) rubrique. Le workflow modélise un jeu d'estimation de nombre. Une seule des rubriques de cette section est nécessaire pour terminer le didacticiel ; vous devez choisir le style qui vous intéresse et suivre cette étape. Toutefois, vous pouvez terminer toutes les rubriques si vous le souhaitez.  

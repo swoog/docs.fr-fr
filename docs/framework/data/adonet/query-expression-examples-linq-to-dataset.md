@@ -2,15 +2,15 @@
 title: Exemples d'expression de requête (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: f743fbc7-faff-45e5-af1e-61577d87f0cc
-ms.openlocfilehash: 7e095d946f3284bae72290c65e7d35aedd4c386b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3c3d861ab13fe974b1846ae3351cab50000e168
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358763"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529001"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Exemples d'expression de requête (LINQ to DataSet)
-Cette section fournit des exemples de programmation [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dans une syntaxe d'expression de requête qui utilise des opérateurs de requête standard. Le <xref:System.Data.DataSet> utilisé dans ces exemples est rempli à l’aide de la `FillDataSet` (méthode), qui est spécifié dans [chargement des données dans un groupe de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Cette section fournit des exemples de programmation [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dans une syntaxe d'expression de requête qui utilise des opérateurs de requête standard. Le <xref:System.Data.DataSet> utilisé dans ces exemples est rempli à l’aide de la `FillDataSet` (méthode), qui est spécifié dans [chargement des données dans un jeu de données](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Pour plus d’informations, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Projection](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  

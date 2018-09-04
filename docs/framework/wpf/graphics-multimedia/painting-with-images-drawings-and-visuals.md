@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423687"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510022"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Peinture avec des objets d'image, de dessin et visuels
 Cette rubrique explique comment utiliser <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, et <xref:System.Windows.Media.VisualBrush> objets pour peindre une zone avec une image, un <xref:System.Windows.Media.Drawing>, ou un <xref:System.Windows.Media.Visual>.  

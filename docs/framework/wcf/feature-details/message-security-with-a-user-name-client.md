@@ -8,11 +8,11 @@ ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 215d23be53fad330b6ab056af83ad907f207259e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386543"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503970"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Sécurité de message avec un client de type Nom d'utilisateur
 L’illustration suivante montre un service Windows Communication Foundation (WCF) et le client sécurisé à l’aide de la sécurité au niveau du message. Le service est authentifié à l'aide d'un certificat X.509. Le client s'authentifie à l'aide d'un nom d'utilisateur et d'un mot de passe.  

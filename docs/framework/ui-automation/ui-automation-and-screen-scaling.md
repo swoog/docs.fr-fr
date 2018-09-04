@@ -13,16 +13,16 @@ ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c34c10ee1701adba2dfb64be8ef39d6bf9f203e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b5f3f42158a8b86a247a0e8a1ada3a37edc0df1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399676"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499963"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Mise à l'échelle de l'écran et UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] permet aux utilisateurs de modifier le paramètre [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] afin que la plupart des éléments [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] apparaissent plus grands à l’écran. Cette fonctionnalité est disponible depuis longtemps dans [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], mais la mise à l’échelle devait être implémentée par les applications dans les versions précédentes. Dans [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)], le Gestionnaire de fenêtrage effectue une mise à l’échelle par défaut pour toutes les applications qui ne gèrent pas leur propre mise à l’échelle. Les applications clientes UI Automation doivent prendre en compte cette fonctionnalité.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "33399676"
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Cette fonction active la prise en charge [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]pour l’ensemble du processus, ce qui signifie que toutes les fenêtres qui appartiennent au processus ne sont pas mises à l’échelle. Dans le [Highlighter Sample](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), par exemple, les quatre fenêtres qui composent le rectangle de sélection sont situés aux coordonnées physiques obtenues à partir de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], pas les coordonnées logiques. Si l’exemple ne prenait pas en charge [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], la sélection serait placée aux coordonnées logiques sur le bureau, ce qui entraînerait un positionnement incorrect dans un environnement doté d’un paramètre [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] différent de 96.  
+     Cette fonction active la prise en charge [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]pour l’ensemble du processus, ce qui signifie que toutes les fenêtres qui appartiennent au processus ne sont pas mises à l’échelle. Dans le [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), par exemple, les quatre fenêtres qui composent le rectangle de sélection sont situés aux coordonnées physiques obtenues à partir de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], pas les coordonnées logiques. Si l’exemple ne prenait pas en charge [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], la sélection serait placée aux coordonnées logiques sur le bureau, ce qui entraînerait un positionnement incorrect dans un environnement doté d’un paramètre [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] différent de 96.  
   
 2.  Pour obtenir les coordonnées du curseur, appelez la fonction [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. L’exemple suivant montre comment déclarer et utiliser cette fonction.  
   
@@ -79,4 +79,4 @@ ms.locfileid: "33399676"
  Si votre application effectue une communication interprocessus directe avec des applications sans prise en charge [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)], vous pouvez être tenu d’effectuer des conversions entre les coordonnées logiques et physiques à l’aide des fonctions [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` et `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de Highlighter](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Highlighter Sample](https://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

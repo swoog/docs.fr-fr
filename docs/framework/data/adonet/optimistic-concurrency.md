@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: 0b4cdfa7bab1f41f80926b20da3e63a72a2d165d
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 641a1cc0fd0ec53872ee3312e7da06923b82ddd7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911998"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507603"
 ---
 # <a name="optimistic-concurrency"></a>Accès concurrentiel optimiste
 Dans un environnement multi-utilisateur, il existe deux modèles pour la mise à jour de données dans une base de données : l'accès simultané optimiste et l'accès simultané pessimiste. L'objet <xref:System.Data.DataSet> est conçu pour privilégier l'utilisation de l'accès simultané optimiste pour les activités longues, comme lors de la communication à distance de données ou de l'interaction avec ces dernières.  
@@ -211,4 +211,4 @@ protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
  [Mise à jour de sources de données avec des DataAdapters](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Informations sur l’erreur de ligne](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)  
  [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

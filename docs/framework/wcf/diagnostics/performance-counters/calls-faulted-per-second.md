@@ -2,12 +2,12 @@
 title: Appels ayant renvoyé une erreur par seconde
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
-ms.openlocfilehash: af84a379a36324131861aaa7e8577b5a44273917
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03ee2155504a021efadac00df6f7b9271baa5a65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471339"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505777"
 ---
 # <a name="calls-faulted-per-second"></a>Appels ayant renvoyé une erreur par seconde
 Nom du compteur : appels ayant renvoyé une erreur par seconde  
@@ -15,7 +15,7 @@ Nom du compteur : appels ayant renvoyé une erreur par seconde
 ## <a name="description"></a>Description  
  Nombre d'appels qui ont retourné des erreurs pour cette opération en une seconde.  
   
- Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.  
+ Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   

@@ -2,11 +2,12 @@
 title: Divulgation d'informations
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 1f6c33787f920fbe7e795e27ff10d7a0c83db21e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 057984dada86019cd8e0a619523d717d0045062f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508008"
 ---
 # <a name="information-disclosure"></a>Divulgation d'informations
 La divulgation d'informations permet à un intrus d'obtenir des informations précieuses à propos d'un système. Par conséquent, examinez toujours les informations que vous révélez et demandez-vous si elles peuvent être utilisées par un utilisateur malveillant. Vous trouverez ci-dessous la liste des attaques par divulgation d’informations possibles et les moyens d’atténuation pour chacune d’elles.  
@@ -18,7 +19,7 @@ La divulgation d'informations permet à un intrus d'obtenir des informations pr�
  Il est important de sécuriser la stratégie, surtout dans les scénarios de fédération dans lesquels les spécifications sensibles des jetons émis ou les informations de l'émetteur de jetons sont exposées dans la stratégie. Dans ces cas, il est recommandé de sécuriser le point de terminaison de stratégie du service fédéré pour empêcher les intrus d'obtenir des informations à propos du service, tel que le type de revendications à placer dans le jeton émis, ou de rediriger les clients vers des émetteurs de jetons malveillants. Par exemple, un intrus pourrait découvrir des paires de nom d'utilisateur/mot de passe en reconfigurant la chaîne de confiance fédérée afin qu'elle se termine dans un émetteur qui exécute une attaque de « l'homme du milieu » (« man-in-the-middle »). Il est également recommandé que les clients fédérés qui obtiennent leurs liaisons grâce à la récupération de la stratégie vérifient qu’ils approuvent les émetteurs de la chaîne de confiance fédérée obtenue. Pour plus d’informations sur les scénarios de fédération, consultez [fédération](../../../../docs/framework/wcf/feature-details/federation.md).  
   
 ## <a name="memory-dumps-can-reveal-claim-information"></a>Les images mémoire peuvent révéler des informations de revendication  
- Lorsqu'une application échoue, des fichiers journaux, tels que ceux générés par Dr. Watson, peut contenir des informations de revendication. Ces informations ne doivent pas être exportées à d’autres entités, telles que les équipes de support ; sinon, les informations de revendication qui contiennent des données privées sont également exportées. Vous pouvez atténuer cet aspect en n'envoyant pas les fichiers journaux à des entités inconnues. Pour plus d’informations, consultez [Windows Server 2003](http://go.microsoft.com/fwlink/?LinkId=89160).  
+ Lorsqu'une application échoue, des fichiers journaux, tels que ceux générés par Dr. Watson, peut contenir des informations de revendication. Ces informations ne doivent pas être exportées à d’autres entités, telles que les équipes de support ; sinon, les informations de revendication qui contiennent des données privées sont également exportées. Vous pouvez atténuer cet aspect en n'envoyant pas les fichiers journaux à des entités inconnues. Pour plus d’informations, consultez [Windows Server 2003](https://go.microsoft.com/fwlink/?LinkId=89160).  
   
 ## <a name="endpoint-addresses"></a>Adresses de point de terminaison  
  Une adresse de point de terminaison contient les informations nécessaires pour communiquer avec un point de terminaison. La sécurité SOAP doit inclure l'adresse complète dans les messages de négociation de la sécurité qui sont échangés afin de négocier une clé symétrique entre un client et un serveur. Vu que la négociation de sécurité est un processus d'amorçage, les en-têtes d'adresse ne peuvent pas être chiffrés pendant ce processus. Par conséquent, l'adresse ne doit pas contenir de données confidentielles ; sinon, il existe un risque d'attaque par divulgation d'informations.  
@@ -53,7 +54,7 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
   
  Le code ne spécifie pas de nom de domaine, et par conséquent, NTLM sera utilisé.  
   
- Si le domaine est spécifié, mais qu’un nom de principal du service non valide est spécifié à l’aide de la fonctionnalité d’identité du point de terminaison, alors NTLM est utilisé. Pour plus d’informations sur la façon dont l’identité du point de terminaison est spécifiée, consultez [l’identité du Service et l’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Si le domaine est spécifié, mais qu’un nom de principal du service non valide est spécifié à l’aide de la fonctionnalité d’identité du point de terminaison, alors NTLM est utilisé. Pour plus d’informations sur la façon dont l’identité du point de terminaison est spécifiée, consultez [identité de Service et d’authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations relatives à la sécurité](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  

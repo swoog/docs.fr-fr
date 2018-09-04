@@ -10,12 +10,12 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531428"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502346"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Comment : créer un contrôle Windows Forms qui affiche la progression
 L’exemple de code suivant illustre un contrôle personnalisé appelé `FlashTrackBar` qui peut être utilisé pour afficher le niveau ou la progression d’une application. Il utilise un dégradé pour représenter visuellement la progression.  
@@ -26,7 +26,7 @@ L’exemple de code suivant illustre un contrôle personnalisé appelé `FlashTr
   
 -   Définition d’événements personnalisés. (`FlashTrackBar` définit l’événement `ValueChanged`.)  
   
--   Substitution de la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode pour fournir la logique permettant de dessiner le contrôle.  
+-   Substitution de la <xref:System.Windows.Forms.Control.OnPaint%2A> méthode pour fournir une logique pour dessiner le contrôle.  
   
 -   Calcul de la zone disponible pour dessiner le contrôle à l’aide de son <xref:System.Windows.Forms.Control.ClientRectangle%2A> propriété. `FlashTrackBar` procède de cette manière dans sa méthode `OptimizedInvalidate`.  
   
@@ -57,7 +57,7 @@ L’exemple de code suivant illustre un contrôle personnalisé appelé `FlashTr
 > [!NOTE]
 >  `FlashTrackBar` utilise le <xref:System.EventArgs> classe pour les données d’événement et <xref:System.EventHandler> pour le délégué d’événement.  
   
- Pour gérer le correspondant *EventName* événements, `FlashTrackBar` substitue les méthodes suivantes qu’il hérite <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Pour gérer le correspondantes *EventName* événements, `FlashTrackBar` substitue les méthodes suivantes qu’il hérite <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -93,5 +93,5 @@ L’exemple de code suivant illustre un contrôle personnalisé appelé `FlashTr
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extension de la prise en charge au moment du design](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Extension de la prise en charge au moment du design](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [Concepts de base du développement de contrôles Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

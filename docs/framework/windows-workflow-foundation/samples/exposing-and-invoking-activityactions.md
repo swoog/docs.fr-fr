@@ -3,11 +3,11 @@ title: Exposition et appel d'ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
 ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387592"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520121"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Exposition et appel d'ActivityActions
 Cet exemple montre comment développer une activité personnalisée qui a un <xref:System.Activities.ActivityAction>. Il montre également comment utiliser cette activité en fournissant une implémentation d'<xref:System.Activities.ActivityAction>.  

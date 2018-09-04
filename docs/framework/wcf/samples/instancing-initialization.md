@@ -3,11 +3,11 @@ title: Instancing Initialization
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 651029783f4632fc0b404bea8df8bd3790622bfd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388259"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516136"
 ---
 # <a name="instancing-initialization"></a>Instancing Initialization
 Cet exemple étend la [Pooling](../../../../docs/framework/wcf/samples/pooling.md) exemple en définissant une interface, `IObjectControl`, qui personnalise l’initialisation d’un objet par l’activation et à le désactiver. Le client appelle des méthodes qui retournent l'objet au pool et d'autres qui ne retournent pas l'objet au pool.  

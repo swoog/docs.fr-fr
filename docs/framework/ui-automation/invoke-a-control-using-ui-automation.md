@@ -12,16 +12,16 @@ ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 89e528e7ff3dbeeba30307adf83434b83f540221
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f023a16d431e0a92d7d0068b9a6a014b6f17db8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521655"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>Appeler un contrôle à l'aide d'UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique montre comment effectuer les tâches suivantes :  
   
@@ -42,4 +42,4 @@ ms.locfileid: "33408322"
 [!code-vb[InvokePatternApp#1102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1102)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [InvokePattern et ExpandCollapsePattern Menu exemple d’élément](http://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)
+ [InvokePattern et ExpandCollapsePattern Menu exemple d’élément](https://msdn.microsoft.com/library/b7fa141c-e2d1-4da2-a27f-81a7d1172210)

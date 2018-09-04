@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 314ceb86219ce143e84a00392727d610c0779e48
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bdec49d077a41ea0b578aaff9ce7fcf9e0c7dc8c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258067"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505830"
 ---
 # <a name="securing-method-access"></a>Sécurisation de l'accès à la méthode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "43258067"
   
 -   Limitez l'étendue de l'accessibilité à la classe, à l'assembly ou aux classes dérivées, s'ils sont de confiance. C'est la façon la plus simple de limiter l'accès à la méthode. Notez que, en général, les classes dérivées peuvent être moins fiables que la classe dont elles dérivent, même si dans certains cas elles partagent l'identité de la classe parente. En particulier, ne déduisez pas un niveau de confiance du mot clé **protégé**, qui n’est pas nécessairement utilisé dans le contexte de sécurité.  
   
--   Limiter l’accès à la méthode aux appelants d’une identité spécifiée--essentiellement, n’importe quel [preuve](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nom fort, éditeur, zone, etc.) que vous choisissez.  
+-   Limiter l’accès à la méthode aux appelants d’une identité spécifiée--essentiellement, n’importe quel [preuve](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nom fort, éditeur, zone, etc.) que vous choisissez.  
   
 -   Limitez l'accès à la méthode aux appelants dont les autorisations correspondent à celles que vous choisissez.  
   

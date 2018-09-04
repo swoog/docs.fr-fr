@@ -9,11 +9,11 @@ helpviewer_keywords:
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
 ms.openlocfilehash: d27e1bda296a153343b450c84c65fa35d55d72f2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483721"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520590"
 ---
 # <a name="3-d-transformations-overview"></a>Vue d'ensemble des transformations 3D
 Cette rubrique décrit comment appliquer des transformations à des modèles 3D dans le système graphique [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Les transformations permettent au développeur de repositionner, redimensionner et réorienter des modèles sans modifier les valeurs de base qui les définissent.  

@@ -2,12 +2,12 @@
 title: Chiffrement des données dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: d662f04cb54e12abfc481487cb5172f63edf0316
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 4d02e93cddef57cc42e03ecc6b094b34c24b3f93
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932742"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509093"
 ---
 # <a name="data-encryption-in-sql-server"></a>Chiffrement des données dans SQL Server
 SQL Server fournit des fonctions de chiffrement et déchiffrement de données à l'aide d'un certificat, d'une clé asymétrique ou d'une clé symétrique. Il gère tous ces éléments dans un magasin de certificats interne. Le magasin utilise une hiérarchie de chiffrement qui sécurise les certificats et les clés sur un niveau à l'aide de la couche située au-dessus dans la hiérarchie. Ce domaine de fonctionnalités de SQL Server est appelé stockage secret.  
@@ -36,4 +36,4 @@ SQL Server fournit des fonctions de chiffrement et déchiffrement de données à
  [Serveur et rôles de base de données dans SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Propriété et séparation des schémas utilisateur dans SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [Autorisation et permissions dans SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

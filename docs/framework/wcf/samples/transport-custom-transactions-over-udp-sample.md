@@ -3,11 +3,11 @@ title: 'Transport: Custom Transactions over UDP Sample'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: b3a105194ceef9d9091dfbc9521fd47978517f89
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452714"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521090"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Custom Transactions over UDP Sample
 Cet exemple est basé sur le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple dans Windows Communication Foundation (WCF)[extensibilité du Transport](../../../../docs/framework/wcf/samples/transport-extensibility.md). Il étend l'exemple UDP Transport afin de prendre en charge le flux de transactions personnalisé et présente l'utilisation de la propriété <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  

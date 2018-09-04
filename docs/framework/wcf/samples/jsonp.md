@@ -2,15 +2,15 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 9002597ef662c78b6519ab0c04700cddf7ee3714
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: bd5d9afcfa35e598191db1d125418686f5dd0af1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804569"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510356"
 ---
 # <a name="jsonp"></a>JSONP
-Cet exemple montre comment prendre en charge JSON with Padding (JSONP) dans les services WCF REST. JSONP est une convention servant à appeler des scripts entre domaines en générant des balises de script dans le document actif. Le résultat est retourné dans une fonction de rappel spécifiée. JSONP repose sur le principe que les balises telles que `<script src="http://..." >` peuvent évaluer des scripts à partir de n’importe quel domaine, et le script récupéré par ces balises est évalué dans une portée dans laquelle d’autres fonctions peuvent déjà être définies.  
+Cet exemple montre comment prendre en charge JSON with Padding (JSONP) dans les services WCF REST. JSONP est une convention servant à appeler des scripts entre domaines en générant des balises de script dans le document actif. Le résultat est retourné dans une fonction de rappel spécifiée. JSONP repose sur l’idée que les balises telles que `<script src="http://..." >` peuvent évaluer des scripts à partir de n’importe quel domaine et le script récupéré par ces balises est évalué dans une étendue dans laquelle d’autres fonctions peuvent déjà être définies.  
   
 ## <a name="demonstrates"></a>Démonstrations  
  Script entre domaines avec JSONP.  
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);  
 ```  
   
- La page Web peut appeler le service WCF REST, car le service utilise le <xref:System.ServiceModel.Description.WebScriptEndpoint> avec `crossDomainScriptAccessEnabled` ayant la valeur `true`. Ces deux configurations sont effectuent dans le fichier Web.config sous le \<system.serviceModel > élément.  
+ La page Web peut appeler le service WCF REST, car le service utilise le <xref:System.ServiceModel.Description.WebScriptEndpoint> avec `crossDomainScriptAccessEnabled` ayant la valeur `true`. Deux de ces configurations s’effectuent dans le fichier Web.config sous la \<system.serviceModel > élément.  
   
 ```xml  
 <system.serviceModel>  
@@ -58,7 +58,7 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
@@ -68,4 +68,4 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 2.  Appuyez sur F5 pour lancer `http://localhost:26648/JSONPClientPage.aspx` dans le navigateur.  
   
-3.  Notez qu’après le chargement de la page, les entrées de texte pour le « Nom » et « Address » sont remplies par les valeurs.  Ces valeurs ont été fournies à partir d’un appel au service WCF après le rendu de la page du navigateur.
+3.  Notez qu’une fois la page chargée, les entrées de texte pour « Name » et « Address » sont remplies par les valeurs.  Ces valeurs ont été fournies à partir d’un appel au service WCF une fois que le navigateur a terminé le rendu de la page.

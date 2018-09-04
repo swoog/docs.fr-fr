@@ -2,12 +2,12 @@
 title: Modèle de configuration hiérarchique
 ms.date: 03/30/2017
 ms.assetid: 28dcc698-226c-4b77-9e51-8bf45a36216c
-ms.openlocfilehash: ce0bc69424495594e0ee9c6b950a5fa9c4d5f993
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 8ca9b01eb022e2e2ab940866a6230e8227ceb2dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000099"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499339"
 ---
 # <a name="hierarchical-configuration-model"></a>Modèle de configuration hiérarchique
 Cet exemple montre comment implémenter une hiérarchie de fichiers de configuration pour les services. Il montre également comment les liaisons, comportements de service et comportements de point de terminaison sont hérités des niveaux supérieurs de la hiérarchie.  
@@ -69,9 +69,9 @@ public interface IDesc
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigHierarchicalModel`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de gestion AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)
+ [Exemples de gestion AppFabric](https://go.microsoft.com/fwlink/?LinkId=193960)

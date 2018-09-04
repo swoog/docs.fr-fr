@@ -3,11 +3,11 @@ title: Options et instructions de technologie ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 7312b2eae0e307fa50c89d37918403ee33412ec3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403933"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507990"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Options et instructions de technologie ADO.NET
 La plateforme de données ADO.NET est une stratégie multiversion visant à limiter le codage et la maintenance requis des développeurs, en permettant à ces derniers de concevoir des programmes à partir de modèles de données d’entité conceptuels. Cette plateforme inclut ADO.NET Entity Framework et les technologies associées.  

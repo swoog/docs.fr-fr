@@ -2,28 +2,28 @@
 title: Mapper les contraintes clés de schéma XML (XSD) aux contraintes de DataSet
 ms.date: 03/30/2017
 ms.assetid: 22664196-f270-4ebc-a169-70e16a83dfa1
-ms.openlocfilehash: ad39fd75a3f8872ed2c24a65481209e3c772a638
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fcc2799a929340f68d8a8740512ed061fd51090e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757864"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501455"
 ---
 # <a name="map-key-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapper les contraintes clés de schéma XML (XSD) aux contraintes de DataSet
-Dans un schéma, vous pouvez spécifier une contrainte de clé sur un élément ou d’attribut à l’aide de la **clé** élément. L'élément ou attribut sur lequel une contrainte de clé est spécifiée doit avoir des valeurs uniques dans toute instance du schéma et ne peut pas avoir de valeurs null.  
+Dans un schéma, vous pouvez spécifier une contrainte de clé sur un élément ou attribut à l’aide de la **clé** élément. L'élément ou attribut sur lequel une contrainte de clé est spécifiée doit avoir des valeurs uniques dans toute instance du schéma et ne peut pas avoir de valeurs null.  
   
  La contrainte de clé est similaire à la contrainte unique, si ce n'est que la colonne sur laquelle une contrainte de clé est définie ne peut pas comporter de valeurs null.  
   
- Le tableau suivant décrit les **msdata** les attributs que vous pouvez spécifier dans le **clé** élément.  
+ Le tableau suivant présente le **msdata** attributs que vous pouvez spécifier dans le **clé** élément.  
   
 |Nom d'attribut|Description|  
 |--------------------|-----------------|  
-|**msdata:ConstraintName**|Si cet attribut est spécifié, sa valeur est utilisée comme nom de la contrainte. Dans le cas contraire, le **nom** attribut fournit la valeur de la contrainte.|  
-|**msdata:PrimaryKey**|Si `PrimaryKey="true"` est présent, le **IsPrimaryKey** contrainte est définie sur **true**, ce qui rend une clé primaire. Le **AllowDBNull** colonne est définie sur **false**, car les clés primaires ne peuvent pas avoir de valeurs null.|  
+|**msdata:ConstraintName**|Si cet attribut est spécifié, sa valeur est utilisée comme nom de la contrainte. Sinon, le **nom** attribut fournit la valeur de la contrainte.|  
+|**msdata:PrimaryKey**|Si `PrimaryKey="true"` est présent, le **IsPrimaryKey** propriété de contrainte est définie sur **true**, ce qui rend une clé primaire. Le **AllowDBNull** propriété de colonne est définie sur **false**, car les clés primaires ne peuvent pas avoir de valeurs null.|  
   
- En convertissant un schéma dans lequel une contrainte de clé est spécifiée, le processus de mappage crée une contrainte unique sur la table avec la **AllowDBNull** propriété column définie sur **false** pour chaque colonne dans le contrainte. Le **IsPrimaryKey** de la contrainte unique est également définie sur **false** , sauf si vous avez spécifié `msdata:PrimaryKey="true"` sur la **clé** élément. Ce mode de fonctionnement est identique à celui d'une contrainte unique dans le schéma faisant apparaître `PrimaryKey="true"`.  
+ En convertissant un schéma dans lequel une contrainte de clé est spécifiée, le processus de mappage crée une contrainte unique sur la table avec la **AllowDBNull** propriété column définie sur **false** pour chaque colonne dans le contrainte. Le **IsPrimaryKey** propriété de la contrainte unique est également définie sur **false** , sauf si vous avez spécifié `msdata:PrimaryKey="true"` sur le **clé** élément. Ce mode de fonctionnement est identique à celui d'une contrainte unique dans le schéma faisant apparaître `PrimaryKey="true"`.  
   
- Dans l’exemple qui suit, la **clé** élément spécifie la contrainte de clé sur le **CustomerID** élément.  
+ Dans l’exemple de schéma suivant, le **clé** élément spécifie la contrainte de clé sur le **CustomerID** élément.  
   
 ```xml  
 <xs:schema id="cod"  
@@ -54,13 +54,13 @@ Dans un schéma, vous pouvez spécifier une contrainte de clé sur un élément 
 </xs:schema>   
 ```  
   
- Le **clé** élément spécifie que les valeurs de la **CustomerID** élément enfant de le **clients** élément doivent avoir des valeurs uniques et ne peut pas avoir de valeurs null. En convertissant le schéma en langage XSD (XML Schema Definition), le processus de mappage crée la table suivante :  
+ Le **clé** élément spécifie que les valeurs de la **CustomerID** élément enfant de le **clients** élément doit avoir des valeurs uniques et ne peut pas avoir de valeurs null. En convertissant le schéma en langage XSD (XML Schema Definition), le processus de mappage crée la table suivante :  
   
 ```  
 Customers(CustomerID, CompanyName, Phone)  
 ```  
   
- Le mappage de schéma XML crée également un **UniqueConstraint** sur la **CustomerID** colonne, comme le montre l’exemple suivant <xref:System.Data.DataSet>. (Par souci de simplicité, seules les propriétés pertinentes sont représentées.)  
+ Le mappage de schéma XML crée également un **UniqueConstraint** sur le **CustomerID** colonne, comme indiqué dans le code suivant <xref:System.Data.DataSet>. (Par souci de simplicité, seules les propriétés pertinentes sont représentées.)  
   
 ```  
       DataSetName: MyDataSet  
@@ -74,11 +74,11 @@ TableName: customers
       IsPrimaryKey: True  
 ```  
   
- Dans le **DataSet** qui est généré, le **IsPrimaryKey** propriété de la **UniqueConstraint** a la valeur **true** , car le schéma Spécifie `msdata:PrimaryKey="true"` dans les **clé** élément.  
+ Dans le **DataSet** qui est généré, le **IsPrimaryKey** propriété de la **UniqueConstraint** a la valeur **true** , car le schéma Spécifie `msdata:PrimaryKey="true"` dans le **clé** élément.  
   
- La valeur de la **ConstraintName** propriété de la **UniqueConstraint** dans les **DataSet** est la valeur de la **msdata : ConstraintName** attribut spécifié dans le **clé** élément dans le schéma.  
+ La valeur de la **ConstraintName** propriété de la **UniqueConstraint** dans le **DataSet** est la valeur de la **msdata : ConstraintName** attribut spécifié dans le **clé** élément dans le schéma.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  [Génération de relations de DataSet à partir du schéma XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

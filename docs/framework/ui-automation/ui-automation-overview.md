@@ -9,23 +9,23 @@ ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b4752bf8f5fb75115618f95c4dab8b1359a1eb5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40656fb2617b4863994c1dafd8f0f4b3c46ef427
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409478"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502269"
 ---
 # <a name="ui-automation-overview"></a>Vue d'ensemble d'UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] est la nouvelle infrastructure d’accessibilité pour [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)], disponible sur tous les systèmes d’exploitation qui prennent en charge [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)].  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] fournit un accès par programmation à la plupart des éléments d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] du bureau, permettant ainsi aux produits de technologie d’assistance tels que les lecteurs d’écran de fournir aux utilisateurs finaux des informations sur l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] et de manipuler l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] par d’autres moyens que l’entrée standard. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permet également aux scripts de test automatisés d’interagir avec l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ne pas activer la communication entre les processus démarrés par différents utilisateurs via la **exécuter en tant que** commande.  
+>  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] n’active pas la communication entre les processus démarrés par différents utilisateurs via la **exécuter en tant que** commande.  
   
  Les applications clientes UI Automation peuvent être écrites avec l’assurance qu’elles fonctionneront sur plusieurs infrastructures. Le noyau [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] masque toute les différences des infrastructures sous-jacentes à plusieurs parties de l’ [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Par exemple, la propriété `Content` d’un bouton [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] , la propriété `Caption` d’un bouton [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] et la propriété `ALT` d’une image HTML sont toutes mappées à une seule propriété, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, dans la vue [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   

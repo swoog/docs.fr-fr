@@ -3,11 +3,11 @@ title: Activités de messagerie
 ms.date: 03/30/2017
 ms.assetid: 8498f215-1823-4aba-a6e1-391407f8c273
 ms.openlocfilehash: 5ccace3ebea42957e1cc66602579d85cd8634435
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43461772"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502711"
 ---
 # <a name="messaging-activities"></a>Activités de messagerie
 Les activités de messagerie permettent aux workflows d'envoyer et de recevoir des messages WCF. En ajoutant des activités de messagerie à un workflow, vous pouvez modéliser n’importe quel modèle d’échange de messages (MEP) arbitrairement complexe.

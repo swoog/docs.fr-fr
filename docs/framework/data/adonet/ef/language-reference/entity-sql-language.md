@@ -3,11 +3,11 @@ title: Langage d'Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 9e7d8837-28c5-429d-a824-7bafb59724cf
 ms.openlocfilehash: 1df5372bed2c4c4b026662e0d1912683dd8752e9
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43331952"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509607"
 ---
 # <a name="entity-sql-language"></a>Langage d'Entity SQL
 Entity SQL est un langage de requête indépendant du stockage et semblable à SQL. Entity SQL vous permet d'interroger des données d'entité, en tant qu'objets ou sous une forme tabulaire. Vous devez envisager d'utiliser Entity SQL dans les cas suivants :  

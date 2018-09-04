@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
 ms.openlocfilehash: 6a1f4d13a75f787730d6155161296c3307b845f6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395351"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528356"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>Exemples de syntaxe de requête fondée sur une méthode : partition
 Les exemples de cette rubrique montrent comment utiliser le <xref:System.Linq.Enumerable.Skip%2A>, et <xref:System.Linq.Enumerable.Take%2A> méthodes permettant d’interroger la [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe d’expression de requête. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  

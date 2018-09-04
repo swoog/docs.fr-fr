@@ -9,11 +9,11 @@ ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384926"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503330"
 ---
 # <a name="windows-communication-foundation-security"></a>Sécurité dans Windows Communication Foundation
 Les rubriques de cette section décrivent les fonctionnalités de sécurité de Windows Communication Foundation (WCF) et comment les utiliser pour sécuriser les messages.  

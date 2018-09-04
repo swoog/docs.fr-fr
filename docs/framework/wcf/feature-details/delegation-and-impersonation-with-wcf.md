@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: 08b78a2a6e7d27f28ddd5c9b771f690bc16b1717
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484585"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505415"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Délégation et emprunt d'identité avec WCF
 L'*emprunt d'identité* est une technique courante utilisée par les services pour restreindre l'accès du client aux ressources d'un domaine de service. Les ressources de domaine de service peuvent être des ressources d'ordinateur, telles que des fichiers locaux (emprunt d'identité), ou une ressource sur un autre ordinateur, tel qu'un partage de fichiers (délégation). Pour obtenir un exemple d'application, consultez [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Pour obtenir un exemple sur l’utilisation de l’emprunt d’identité, consultez [Comment : emprunter l'identité d'un client sur un service](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  

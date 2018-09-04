@@ -2,12 +2,12 @@
 title: Collections (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 563cef59c0e52d41dcdeaa51b5bc4d7b8f9554f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644314"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504442"
 ---
 # <a name="collections-visual-basic"></a>Collections (Visual Basic)
 Pour de nombreuses applications, vous voulez créer et gérer des groupes d’objets connexes. Il existe deux manières de grouper des objets : en créant des tableaux d’objets ou des collections d’objets.  
@@ -21,7 +21,7 @@ Pour de nombreuses applications, vous voulez créer et gérer des groupes d’ob
  Si votre collection contient des éléments d’un seul type de données, vous pouvez utiliser une des classes dans l’espace de noms <xref:System.Collections.Generic?displayProperty=nameWithType>. Une collection générique applique la cohérence des types pour éviter qu’un autre type puisse y être ajouté. Quand vous récupérez un élément d’une collection générique, il n’est pas utile de déterminer son type de données ou de le convertir.  
   
 > [!NOTE]
->  Pour les exemples de cette rubrique, vous devez inclure [importations](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instructions pour le `System.Collections.Generic` et `System.Linq` espaces de noms.  
+>  Pour les exemples dans cette rubrique, ajoutez [importations](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) instructions pour le `System.Collections.Generic` et `System.Linq` espaces de noms.  
   
  **Dans cette rubrique**  
   
@@ -51,7 +51,7 @@ Pour de nombreuses applications, vous voulez créer et gérer des groupes d’ob
 ## <a name="using-a-simple-collection"></a>Utilisation d’une collection simple  
  Les exemples de cette section utilisent la classe <xref:System.Collections.Generic.List%601> générique, qui vous permet d’utiliser une liste d’objets fortement typée.  
   
- L’exemple suivant crée une liste de chaînes et itère ensuite les chaînes à l’aide un [For Each... Suivant](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instruction.  
+ L’exemple suivant crée une liste de chaînes et itère ensuite les chaînes en utilisant un [For Each... Suivant](../../../visual-basic/language-reference/statements/for-each-next-statement.md) instruction.  
   
 ```vb  
 ' Create a list of strings.  
@@ -84,7 +84,7 @@ Next
 'Output: chinook coho pink sockeye  
 ```  
   
- Vous pouvez utiliser un [pour... Suivant](../../../visual-basic/language-reference/statements/for-next-statement.md) instruction au lieu d’un `For Each` instruction pour effectuer une itération au sein d’une collection. Pour cela, accédez aux éléments de la collection à la position d’index. L’index des éléments commence à 0 et se termine au nombre d’éléments moins 1.  
+ Vous pouvez utiliser un [pour... Suivant](../../../visual-basic/language-reference/statements/for-next-statement.md) instruction au lieu d’un `For Each` instruction pour itérer une collection. Pour cela, accédez aux éléments de la collection à la position d’index. L’index des éléments commence à 0 et se termine au nombre d’éléments moins 1.  
   
  L’exemple suivant itère au sein des éléments d’une collection à l’aide de `For…Next` au lieu de `For Each`.  
   
@@ -116,7 +116,7 @@ Next
 'Output: chinook pink sockeye  
 ```  
   
- L’exemple suivant supprime les éléments d’une liste générique. Au lieu d’un `For Each` instruction, un [pour... Suivant](../../../visual-basic/language-reference/statements/for-next-statement.md) qui itère dans l’ordre décroissant est utilisée. En effet, avec la méthode <xref:System.Collections.Generic.List%601.RemoveAt%2A>, les éléments après l’élément supprimé ont une valeur d’index moins élevée.  
+ L’exemple suivant supprime les éléments d’une liste générique. Au lieu d’un `For Each` instruction, un [pour... Suivant](../../../visual-basic/language-reference/statements/for-next-statement.md) qui itère dans l’ordre décroissant est utilisé. En effet, avec la méthode <xref:System.Collections.Generic.List%601.RemoveAt%2A>, les éléments après l’élément supprimé ont une valeur d’index moins élevée.  
   
 ```vb  
 Dim numbers As New List(Of Integer) From  
@@ -228,7 +228,7 @@ End Class
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Classe de la collection Visual Basic  
- Vous pouvez utiliser Visual Basic <xref:Microsoft.VisualBasic.Collection> accès à une collection d’éléments à l’aide d’un index numérique ou d’une classe `String` clé. Vous pouvez ajouter des éléments à un objet de collection en spécifiant ou non une clé. Si vous ajoutez un élément sans clé, vous devez utiliser son index numérique pour y accéder.  
+ Vous pouvez utiliser Visual Basic <xref:Microsoft.VisualBasic.Collection> classe d’accéder à une collection d’éléments à l’aide d’un index numérique ou une `String` clé. Vous pouvez ajouter des éléments à un objet de collection en spécifiant ou non une clé. Si vous ajoutez un élément sans clé, vous devez utiliser son index numérique pour y accéder.  
   
  Visual Basic `Collection` classe stocke tous ses éléments en tant que type `Object`, de sorte que vous pouvez ajouter un élément de n’importe quel type de données. Il n’existe aucun dispositif de protection contre l’ajout de types de données inappropriés.  
   
@@ -306,7 +306,7 @@ Private Function BuildDictionary2() As Dictionary(Of String, Element)
 End Function  
 ```  
   
- L’exemple suivant utilise la méthode <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> et la propriété <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` pour rechercher rapidement un élément par clé. Le `Item` propriété permet d’accéder à un élément dans le `elements` collection à l’aide de la `elements(symbol)` code en Visual Basic.  
+ L’exemple suivant utilise la méthode <xref:System.Collections.Generic.Dictionary%602.ContainsKey%2A> et la propriété <xref:System.Collections.Generic.Dictionary%602.Item%2A> de `Dictionary` pour rechercher rapidement un élément par clé. Le `Item` propriété vous permet d’accéder à un élément dans le `elements` collection à l’aide de la `elements(symbol)` code en Visual Basic.  
   
 ```vb  
 Private Sub FindInDictionary(ByVal symbol As String)  
@@ -338,7 +338,7 @@ End Sub
   
 <a name="BKMK_LINQ"></a> 
 ##  <a name="using-linq-to-access-a-collection"></a>Utilisation de LINQ pour accéder à une collection  
- LINQ (Language-Integrated Query) peut être utilisé pour accéder aux collections. Les requêtes LINQ fournissent des fonctionnalités de filtrage, de classement et de regroupement. Pour plus d’informations, consultez [mise en route de LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
+ LINQ (Language-Integrated Query) peut être utilisé pour accéder aux collections. Les requêtes LINQ fournissent des fonctionnalités de filtrage, de classement et de regroupement. Pour plus d’informations, consultez [mise en route avec LINQ en Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md).  
   
  L’exemple suivant exécute une requête LINQ sur un `List` générique. La requête LINQ retourne une autre collection qui contient les résultats.  
   
@@ -462,9 +462,9 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Définition d’une collection personnalisée  
- Vous pouvez définir une collection en implémentant l’interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Pour plus d’informations, consultez [l’énumération d’une Collection](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Vous pouvez définir une collection en implémentant l’interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Pour plus d’informations, consultez [énumération d’une Collection](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Même si vous pouvez définir une collection personnalisée, il est généralement préférable d’utiliser les collections comprises dans le .NET Framework, lesquelles sont décrites dans [Types de collections](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b), plus haut dans cette rubrique.  
+ Même si vous pouvez définir une collection personnalisée, il est généralement préférable d’utiliser les collections comprises dans le .NET Framework, lesquelles sont décrites dans [Types de collections](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b), plus haut dans cette rubrique.  
   
  L’exemple suivant définit une classe de collection personnalisée nommée `AllColors`. Cette classe implémente l’interface <xref:System.Collections.IEnumerable>, ce qui implique l’implémentation de la méthode <xref:System.Collections.IEnumerable.GetEnumerator%2A>.  
   
@@ -577,7 +577,7 @@ End Function
  [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Collections et structures de données](../../../standard/collections/index.md)  
- [Création et manipulation de collections](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Création et manipulation de collections](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Sélection d’une classe de collection](../../../standard/collections/selecting-a-collection-class.md)  
  [Comparaisons et tris dans les collections](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)

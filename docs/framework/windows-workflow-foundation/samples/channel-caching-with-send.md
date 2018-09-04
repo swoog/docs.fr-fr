@@ -3,11 +3,11 @@ title: Mise en cache des canaux avec Send
 ms.date: 03/30/2017
 ms.assetid: e69a2502-25cb-43bf-b8d2-95fbdecb41cb
 ms.openlocfilehash: 619088def1f5e443a31244516655d75d1e25c9cb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43475853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503813"
 ---
 # <a name="channel-caching-with-send"></a>Mise en cache des canaux avec Send
 Le <xref:System.ServiceModel.Activities.SendMessageChannelCache> permet aux utilisateurs d'avoir différents niveaux de mise en cache des canaux avec les activités <xref:System.ServiceModel.Activities.Send> et <xref:System.ServiceModel.Activities.SendParametersContent>. La mise en cache au niveau de l'instance est activée par défaut et cet exemple illustre les fonctionnalités suivantes :  

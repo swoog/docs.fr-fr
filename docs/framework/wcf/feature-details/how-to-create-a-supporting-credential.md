@@ -2,29 +2,30 @@
 title: "Comment : créer une information d'identification de prise en charge"
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 6ec7412d1de2bca349c7cfbf4a37c98ca60cc78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef4d9a406e6fc929e4ad59911d587e462c9b2b65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43499989"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Comment : créer une information d'identification de prise en charge
-Il est possible d'avoir un modèle de sécurité personnalisé qui requiert plusieurs informations d'identification. Par exemple, un service peut exiger du client non seulement un nom d'utilisateur et un mot de passe, mais également une information d'identification qui prouve que le client a plus de 18 ans. Les informations d’identification deuxième sont un *prise en charge des informations d’identification*. Cette rubrique explique comment implémenter ces informations d’identification dans un client Windows Communication Foundation (WCF).  
+Il est possible d'avoir un modèle de sécurité personnalisé qui requiert plusieurs informations d'identification. Par exemple, un service peut exiger du client non seulement un nom d'utilisateur et un mot de passe, mais également une information d'identification qui prouve que le client a plus de 18 ans. La deuxième information d’identification est un *prenant en charge les informations d’identification*. Cette rubrique explique comment implémenter ces informations d’identification dans un client Windows Communication Foundation (WCF).  
   
 > [!NOTE]
->  La spécification pour la prise en charge d'informations d'identification fait partie de la spécification WS-SecurityPolicy. Pour plus d’informations, consultez [spécifications de sécurité des Services Web](http://go.microsoft.com/fwlink/?LinkId=88537).  
+>  La spécification pour la prise en charge d'informations d'identification fait partie de la spécification WS-SecurityPolicy. Pour plus d’informations, consultez [spécifications Web Services Security](https://go.microsoft.com/fwlink/?LinkId=88537).  
   
 ## <a name="supporting-tokens"></a>Supporting Tokens  
- En bref, lorsque vous utilisez la sécurité de message, un *les informations d’identification principale* est toujours utilisé pour sécuriser le message (par exemple, un certificat X.509 ou un ticket Kerberos).  
+ En bref, lorsque vous utilisez la sécurité des messages, un *les informations d’identification principale* est toujours utilisé pour sécuriser le message (par exemple, un certificat X.509 ou un ticket Kerberos).  
   
- Comme défini par la spécification, une liaison de sécurité utilise *jetons* pour sécuriser l’échange de messages. A *jeton* est une représentation d’une information d’identification de sécurité.  
+ Comme défini par la spécification, une liaison de sécurité utilise *jetons* pour sécuriser l’échange de messages. Un *jeton* est une représentation d’une information d’identification de sécurité.  
   
- La liaison de sécurité utilise un jeton principal identifié dans la stratégie de liaison de sécurité pour créer une signature. Cette signature est appelée le *signature de message*.  
+ La liaison de sécurité utilise un jeton principal identifié dans la stratégie de liaison de sécurité pour créer une signature. Cette signature est appelée le *signature du message*.  
   
  Des jetons supplémentaires peuvent être spécifiés afin d'augmenter les revendications fournies par le jeton associé à la signature de message.  
   
 ## <a name="endorsing-signing-and-encrypting"></a>Endossement, signature et chiffrement  
- Les informations d’identification de prise en charge des résultats dans un *jeton de prise en charge* transmis à l’intérieur du message. La spécification WS-SecurityPolicy définit quatre façons de joindre un jeton de prise en charge au message, comme décrit dans le tableau suivant.  
+ Les informations d’identification de prise en charge entraîne un *jeton prise en charge* transmis dans le message. La spécification WS-SecurityPolicy définit quatre façons de joindre un jeton de prise en charge au message, comme décrit dans le tableau suivant.  
   
 |Objectif|Description|  
 |-------------|-----------------|  
@@ -57,9 +58,9 @@ Il est possible d'avoir un modèle de sécurité personnalisé qui requiert plus
 #### <a name="scopes"></a>Étendues  
  Il existe deux étendues pour les informations d'identification de prise en charge :  
   
--   *Point de terminaison prenant en charge les jetons* prend en charge toutes les opérations d’un point de terminaison. Autrement dit, l'information d'identification que le jeton de prise en charge représente peut être utilisée chaque fois qu'une opération de point de terminaison est appelée.  
+-   *Point de terminaison prenant en charge les jetons* prennent en charge toutes les opérations de point de terminaison. Autrement dit, l'information d'identification que le jeton de prise en charge représente peut être utilisée chaque fois qu'une opération de point de terminaison est appelée.  
   
--   *Opération prise en charge des jetons* prend en charge qu’une opération de point de terminaison spécifique.  
+-   *Opération prenant en charge les jetons* prennent en charge qu’une opération de point de terminaison spécifique.  
   
  Comme indiqué par les noms de propriétés, les informations d'identification de prise en charge peuvent être obligatoires ou facultatives. Autrement dit, l'information d'identification de prise en charge est utilisée si elle est présente, bien que cela ne soit pas nécessaire, mais l'authentification n'échouera pas si elle n'est pas présente.  
   

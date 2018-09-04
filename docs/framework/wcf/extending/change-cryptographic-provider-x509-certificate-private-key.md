@@ -1,5 +1,5 @@
 ---
-title: 'Comment : modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée de s'
+title: 'Comment : modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée s'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-ms.openlocfilehash: 633e87bca302adc0963e1bf52d2470c9dbae81a5
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: bb345b3106895a75c00a0d80b8665a0e9239598f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808089"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510477"
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Comment : modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée de s
-Cette rubrique montre comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d’un certificat X.509 et comment intégrer le fournisseur de l’infrastructure de sécurité Windows Communication Foundation (WCF). Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Comment : modifier le fournisseur de services de chiffrement pour un certificat X.509&#39;clé privée s
+Cette rubrique montre comment modifier le fournisseur de services de chiffrement utilisé pour fournir la clé privée d’un certificat X.509 et comment intégrer le fournisseur dans l’infrastructure de sécurité de Windows Communication Foundation (WCF). Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  L’infrastructure de sécurité WCF fournit un moyen d’introduire de nouveaux types de jetons de sécurité comme décrit dans [Comment : créer un jeton personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Vous pouvez aussi utiliser un jeton personnalisé pour remplacer les types de jeton existants fournis par le système.  
   
@@ -33,9 +33,9 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
   
 2.  Substituez la propriété en lecture seule <xref:System.IdentityModel.Tokens.SecurityKey.KeySize%2A>. Cette propriété retourne la taille de clé réelle de la paire de clés publique/privée du certificat.  
   
-3.  Remplacez la méthode <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Cette méthode est appelée par l’infrastructure de sécurité WCF pour déchiffrer une clé symétrique avec la clé du certificat privé. (La clé a été chiffrée précédemment avec la clé publique du certificat.)  
+3.  Remplacez la méthode <xref:System.IdentityModel.Tokens.SecurityKey.DecryptKey%2A>. Cette méthode est appelée par l’infrastructure de sécurité WCF pour déchiffrer une clé symétrique avec la clé privée du certificat. (La clé a été chiffrée précédemment avec la clé publique du certificat.)  
   
-4.  Remplacez la méthode <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Cette méthode est appelée par l’infrastructure de sécurité WCF pour obtenir une instance de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe qui représente le fournisseur de services de chiffrement pour soit la clé du certificat privé ou public, selon les paramètres passés à la méthode.  
+4.  Remplacez la méthode <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetAsymmetricAlgorithm%2A>. Cette méthode est appelée par l’infrastructure de sécurité WCF pour obtenir une instance de la <xref:System.Security.Cryptography.AsymmetricAlgorithm> classe qui représente le fournisseur de chiffrement pour soit la clé du certificat privé ou public, selon les paramètres transmis à la méthode.  
   
 5.  Facultatif. Remplacez la méthode <xref:System.IdentityModel.Tokens.AsymmetricSecurityKey.GetHashAlgorithmForSignature%2A>. Substituez cette méthode si une implémentation différente de la classe <xref:System.Security.Cryptography.HashAlgorithm> est requise.  
   
@@ -46,7 +46,7 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
      [!code-csharp[c_CustomX509Token#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#1)]
      [!code-vb[c_CustomX509Token#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#1)]  
   
- La procédure suivante montre comment intégrer le X.509 sécurité asymétrique clée implémentation personnalisée créée dans la procédure précédente avec l’infrastructure de sécurité WCF afin de remplacer la sécurité X.509 fourni par le système jeton.  
+ La procédure suivante montre comment intégrer le X.509 sécurité asymétrique clé implémentation personnalisée créée dans la procédure précédente avec l’infrastructure de sécurité WCF pour remplacer la sécurité X.509 fourni par le système de jeton.  
   
 #### <a name="to-replace-the-system-provided-x509-security-token-with-a-custom-x509-asymmetric-security-key-token"></a>Pour remplacer le jeton de sécurité X.509 fourni par le système par un jeton de clé de sécurité asymétrique X.509 personnalisé  
   
@@ -60,7 +60,7 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
      [!code-csharp[c_CustomX509Token#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#3)]
      [!code-vb[c_CustomX509Token#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#3)]  
   
-3.  Si la clé de sécurité personnalisée doit être utilisée sur le côté d'initiateur, créez un gestionnaire de jetons de sécurité client personnalisé et des classes d'informations d'identification du client personnalisées, comme indiqué dans l'exemple suivant. Pour plus d’informations sur les informations d’identification client personnalisées et des gestionnaires de jetons de sécurité client, consultez [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+3.  Si la clé de sécurité personnalisée doit être utilisée sur le côté d'initiateur, créez un gestionnaire de jetons de sécurité client personnalisé et des classes d'informations d'identification du client personnalisées, comme indiqué dans l'exemple suivant. Pour plus d’informations sur les informations d’identification client personnalisées et les gestionnaires de jetons de sécurité client, consultez [procédure pas à pas : création d’un Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#4)]
      [!code-vb[c_CustomX509Token#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#4)]  
@@ -68,7 +68,7 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
      [!code-csharp[c_CustomX509Token#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#6)]
      [!code-vb[c_CustomX509Token#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#6)]  
   
-4.  Si la clé de sécurité personnalisée doit être utilisée sur le côté destinataire, créez un gestionnaire de jetons de sécurité client personnalisé et des classes personnalisées d'informations d'identification du client, comme indiqué dans l'exemple suivant. Pour plus d’informations sur les informations d’identification de service personnalisées et des gestionnaires de jetons de sécurité de service, consultez [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+4.  Si la clé de sécurité personnalisée doit être utilisée sur le côté destinataire, créez un gestionnaire de jetons de sécurité client personnalisé et des classes personnalisées d'informations d'identification du client, comme indiqué dans l'exemple suivant. Pour plus d’informations sur les informations d’identification de service personnalisées et les gestionnaires de jetons de sécurité de service, consultez [procédure pas à pas : création d’un Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
      [!code-csharp[c_CustomX509Token#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customx509token/cs/source.cs#5)]
      [!code-vb[c_CustomX509Token#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customx509token/vb/source.vb#5)]  
@@ -87,4 +87,4 @@ Cette rubrique montre comment modifier le fournisseur de services de chiffrement
  [Guide pratique pour créer un authentificateur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [Guide pratique pour créer un fournisseur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [Guide pratique pour créer un jeton personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)  
- [Architecture de sécurité](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

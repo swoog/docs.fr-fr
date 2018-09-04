@@ -10,11 +10,11 @@ helpviewer_keywords:
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
 ms.openlocfilehash: fdf2134d487787404cccbde1ba0f8c95cb6a4a3d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385567"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503903"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>Comment : lier un contrôle Windows Forms à un type
 Quand vous créez des contrôles qui interagissent avec des données, vous devez parfois lier un contrôle à un type plutôt qu'à un objet. Cette situation se présente surtout au moment du design, quand les données peuvent ne pas être disponibles mais que vos contrôles liés aux données ont quand même besoin d'afficher des informations à partir de l'interface publique d'un type. Par exemple, vous pouvez lier un contrôle <xref:System.Windows.Forms.DataGridView> à un objet exposé par un service web et vouloir que le contrôle <xref:System.Windows.Forms.DataGridView> étiquette ses colonnes au moment du design avec les noms de membres d'un type personnalisé.  

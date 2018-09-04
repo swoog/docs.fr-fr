@@ -2,12 +2,12 @@
 title: Collections de schémas OLE DB
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f1cb5e1fe967088b44fa4045dfe50c1c57d963eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1ab6426875b73b400a59b7e4cf155615d7472d05
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766931"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514487"
 ---
 # <a name="ole-db-schema-collections"></a>Collections de schémas OLE DB
 Cette section traite de la prise en charge des collections de schémas pour les fournisseurs OLE DB de Microsoft SQL Server, Oracle et Microsoft Jet.  
@@ -412,4 +412,4 @@ Cette section traite de la prise en charge des collections de schémas pour les 
 |INTEGRATED|Booléen|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

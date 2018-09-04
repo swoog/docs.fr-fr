@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404408"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504816"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Comment : créer une stratégie d'éditeur
 Les fournisseurs d’assemblys peuvent indiquer que les applications doivent utiliser une version plus récente d’un assembly en incluant un fichier de stratégie de serveur de publication avec l’assembly mis à niveau. Le fichier de stratégie d’éditeur spécifie la redirection d’assembly et les paramètres de base de code et utilise le même format qu’un fichier de configuration d’application. Le fichier de stratégie d’éditeur est compilé dans un assembly et placé dans le global assembly cache.  
@@ -92,7 +92,7 @@ Les fournisseurs d’assemblys peuvent indiquer que les applications doivent uti
   
 1.  Tapez la commande suivante à l’invite de commandes :  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i***publisherPolicyAssemblyFile*  
   
      La commande suivante ajoute `policy.1.0.myAssembly.dll` dans le global assembly cache.  
   

@@ -3,11 +3,11 @@ title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
 ms.openlocfilehash: 19b82500c1d24dbbf3e630e3021f195149e19b92
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399617"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516945"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Définit un élément de liaison qui est utilisé pour configurer des points de terminaison pour les services Web de Windows Communication Foundation (WCF) qui répondent aux requêtes HTTP au lieu de messages SOAP.  

@@ -3,11 +3,11 @@ title: Réseaux homologues
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 ms.openlocfilehash: 16416ec467caa10216930ae3c961869cbfcd59d8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43456983"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516330"
 ---
 # <a name="peer-to-peer-networking"></a>Réseaux homologues
 Canal homologue est un à plusieurs participants, peer-to-peer (P2P) technologie de communication dans Windows Communication Foundation (WCF). Elle fournit un canal de communication P2P basé sur des messages sécurisé et évolutif pour les développeurs d'applications. Un exemple courant d'application entre plusieurs parties pouvant bénéficier du canal homologue concerne une application collaborative telle que la conversation, dans le cadre de laquelle un groupe de personnes discutent les unes avec les autres d'égal à égal sans qu'un serveur soit nécessaire. Le canal homologue permet la collaboration P2P, la distribution de contenu, l'équilibrage de charge et le traitement distribué des scénarios consommateur et d'entreprise.  
