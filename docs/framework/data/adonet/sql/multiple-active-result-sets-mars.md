@@ -3,11 +3,11 @@ title: MARS (Multiple Active Result Sets)
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480751"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564407"
 ---
 # <a name="multiple-active-result-sets-mars"></a>MARS (Multiple Active Result Sets)
 MARS (Multiple Active Result Set) est une fonctionnalité qui permet d’exécuter plusieurs lots sur une seule connexion. Les versions précédentes ne permettaient l'exécution que d'un seul lot à la fois pour une seule connexion. L'exécution de plusieurs lots avec MARS n'implique pas l'exécution simultanée de plusieurs opérations.  

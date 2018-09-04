@@ -3,11 +3,11 @@ title: 'Qu’est F #'
 description: 'Découvrez quels le F # est langage de programmation et nouveautés de programmation F #. En savoir plus sur les types de données enrichis, fonctions et comment ils s’imbriquent.'
 ms.date: 08/03/2018
 ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256708"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564562"
 ---
 # <a name="what-is-f"></a>Qu’est F # #
 

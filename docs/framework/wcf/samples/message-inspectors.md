@@ -3,11 +3,11 @@ title: Message Inspectors
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
 ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385842"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554182"
 ---
 # <a name="message-inspectors"></a>Message Inspectors
 Cet exemple montre comment implémenter et configurer des inspecteurs de message de service et client.  

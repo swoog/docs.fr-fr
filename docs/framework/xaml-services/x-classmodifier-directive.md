@@ -10,15 +10,15 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: 67b53a63dbd6e1377d5684d64ed32b0374c84b5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5a3bbd1d4d75c84dda741d382c8dd7568dbb474b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564376"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561124"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier, directive
-Modifie le comportement de compilation XAML lorsque `x:Class` est également fourni. Plus précisément, au lieu de la création d’un partiel `class` qui a un `Public` (la valeur par défaut), de niveau d’accès fourni `x:Class` est créé avec un `NotPublic` niveau d’accès. Ce comportement affecte le niveau d’accès de la classe dans les assemblys générés.  
+Modifie le comportement de compilation XAML lorsque `x:Class` est également fourni. Plus précisément, au lieu de la création d’un partiel `class` qui a un `Public` (la valeur par défaut), de niveau d’accès fourni `x:Class` est créé avec un `NotPublic` niveau d’accès. Ce comportement affecte le niveau d’accès pour la classe dans les assemblys générés.  
   
 ## <a name="xaml-attribute-usage"></a>Utilisation d'attributs XAML  
   
@@ -35,23 +35,23 @@ Modifie le comportement de compilation XAML lorsque `x:Class` est également fou
 |*NotPublic*|La chaîne exacte à passer pour spécifier <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> et <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> varie selon le langage de programmation de code-behind que vous utilisez. Consultez la section Notes.|  
   
 ## <a name="dependencies"></a>Dépendances  
- [x : Class](../../../docs/framework/xaml-services/x-class-directive.md) doit également être fourni sur le même élément, et cet élément doit être l’élément racine dans une page. Pour plus d’informations, consultez [ \[MS-XAML\] Section 4.3.1.8](http://go.microsoft.com/fwlink/?LinkId=114525).  
+ [x : Class](../../../docs/framework/xaml-services/x-class-directive.md) doit également être fourni dans le même élément, et cet élément doit être l’élément racine dans une page. Pour plus d’informations, consultez [ \[MS-XAML\] Section 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
 ## <a name="remarks"></a>Notes  
- La valeur de `x:ClassModifier` dans les Services XAML .NET Framework utilisation varie selon le langage de programmation. La chaîne à utiliser dépend de la façon dont chaque langage implémente ses <xref:System.CodeDom.Compiler.CodeDomProvider> et les convertisseurs de type qu’il retourne pour définir les significations de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> et <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, et si cette langue est respecte la casse.  
+ La valeur de `x:ClassModifier` dans les Services XAML .NET Framework, l’utilisation varie par langage de programmation. La chaîne à utiliser dépend de la façon dont chaque langage implémente son <xref:System.CodeDom.Compiler.CodeDomProvider> et les convertisseurs de type qu’il retourne pour définir les significations de <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> et <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, et si cette langue est sensible à la casse.  
   
 -   Pour c#, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> est `internal`.  
   
 -   Pour Microsoft Visual Basic .NET, la chaîne à passer pour désigner <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> est `Friend`.  
   
--   Pour [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], qui prennent en charge la compilation XAML n’existe aucune cible ; par conséquent, la valeur à passer n’est pas spécifiée.  
+-   Pour [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], qui prennent en charge compilation XAML n’existe aucune cible ; par conséquent, la valeur à passer n’est pas spécifiée.  
   
- Vous pouvez également spécifier <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` en c#, `Public` en Visual Basic) ; Cependant, en spécifiant <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est rarement car <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est déjà le comportement par défaut.  
+ Vous pouvez également spécifier <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` en c#, `Public` en Visual Basic) ; Toutefois, en spécifiant <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est rarement car <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> est déjà le comportement par défaut.  
   
- Autres valeurs avec le code utilisateur équivalente-niveau d’accès restrictions, tel que `private` en c#, ne sont pas pertinents pour `x:ClassModifier` , car les références de classe imbriquées ne sont pas pris en charge dans XAML et par conséquent, le <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modificateur a le même effet.  
+ Autres valeurs avec le code utilisateur équivalente-niveau d’accès restrictions, telles que `private` en c#, ne sont pas pertinentes pour `x:ClassModifier` , car les références de classe imbriquées ne sont pas pris en charge dans XAML et par conséquent, le <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> modificateur a le même effet.  
   
 ## <a name="security-notes"></a>Notes de sécurité  
- Le niveau d’accès tel que déclaré dans `x:ClassModifier` est toujours soumis à l’interprétation par les infrastructures particulières et leurs fonctionnalités. WPF inclut des fonctions pour charger et instancier des types où `x:ClassModifier` est `internal`, si cette classe est référencée par une ressource WPF via une référence URI à en-tête pack. En raison de ce cas et potentiellement d’autres similaires implémentés par d’autres infrastructures, ne comptez pas exclusivement sur `x:ClassModifier` pour bloquer l’instanciation possible toutes les tentatives.  
+ Le niveau d’accès tel que déclaré dans `x:ClassModifier` est toujours soumis à l’interprétation par les infrastructures particulières et leurs fonctionnalités. WPF inclut des fonctions pour charger et instancier des types où `x:ClassModifier` est `internal`, si cette classe est référencée à partir d’une ressource WPF via une référence URI à en-tête pack. En raison de ce cas et potentiellement d’autres similaires implémentés par d’autres infrastructures, ne comptez pas exclusivement sur `x:ClassModifier` pour bloquer l’instanciation de toutes les tentatives.  
   
 ## <a name="see-also"></a>Voir aussi  
  [x:Class, directive](../../../docs/framework/xaml-services/x-class-directive.md)  

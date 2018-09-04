@@ -2,15 +2,15 @@
 title: Extraction et modification de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 0c970c01352aecf6a25bac1b89b9f79c96f80d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ef5191cf89f22fbaf0bb1bf4fbf47db1d4c06a1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562561"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Extraction et modification de données dans ADO.NET
-Une fonction principale de toute application de base de données consiste à se connecter à une source de données et extraire les données qu'elle contient. Les fournisseurs de données .NET Framework d’ADO.NET font Office de passerelle entre une application et une source de données, ce qui vous permet d’exécuter des commandes et d’extraire des données à l’aide un **DataReader** ou un **DataAdapter** . Une fonction clé de toute application de base de données est la capacité à mettre à jour les données stockées dans la base de données. Dans ADO.NET, la mise à jour des données implique l’utilisation de la **DataAdapter** et <xref:System.Data.DataSet>, et **commande** objets ; elle peut également impliquer l’utilisation de transactions.  
+Une fonction principale de toute application de base de données consiste à se connecter à une source de données et extraire les données qu'elle contient. Les fournisseurs de données .NET Framework d’ADO.NET font Office de passerelle entre une application et une source de données, ce qui vous permet d’exécuter des commandes et d’extraire des données à l’aide un **DataReader** ou un **DataAdapter** . Une fonction clé de toute application de base de données est la capacité à mettre à jour les données stockées dans la base de données. Dans ADO.NET, la mise à jour des données implique l’utilisation de la **DataAdapter** et <xref:System.Data.DataSet>, et **commande** objets ; et il peuvent également impliquer l’utilisation de transactions.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Connexion à une source de données](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
@@ -56,11 +56,11 @@ Une fonction principale de toute application de base de données consiste à se 
  Décrit la prise en charge [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] de la programmation asynchrone.  
   
  [Prise en charge du streaming pour SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- Explique comment écrire des applications ces flux de données à partir de SQL Server sans que celle-ci n’est entièrement chargée en mémoire.  
+ Explique comment écrire des applications ces flux de données à partir de SQL Server sans avoir à charger entièrement en mémoire.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappages de types de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [DataSets, DataTables et DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server et ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

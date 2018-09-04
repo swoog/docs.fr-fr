@@ -3,11 +3,11 @@ title: Service Debug Behavior
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: b87911426b6d4edf8a6f9b0172f4872fac7b9b6f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465549"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555095"
 ---
 # <a name="service-debug-behavior"></a>Service Debug Behavior
 Cet exemple montre comment configurer les paramètres de comportement de débogage de service. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit explicitement le comportement de débogage de service dans le fichier de configuration. Cela peut également être fait de façon impérative dans le code.  

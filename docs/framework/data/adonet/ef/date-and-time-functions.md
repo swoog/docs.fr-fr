@@ -3,11 +3,11 @@ title: Fonctions de date et d'heure
 ms.date: 03/30/2017
 ms.assetid: 971762d0-663b-4b64-8c61-352a8e6d3949
 ms.openlocfilehash: 56ef2f0b0a62f6b2cf6db5fe2c6713c58228ff6f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43451634"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556870"
 ---
 # <a name="date-and-time-functions"></a>Fonctions de date et d'heure
 Le fournisseur de données .NET Framework pour SQL Server (SqlClient) propose des fonctions de date et d'heure qui effectuent des opérations sur une valeur d'entrée `System.DateTime` et retournent une valeur `string`, numérique ou `System.DateTime` comme résultat. Ces fonctions se trouvent dans l'espace de noms SqlServer, lequel est disponible lorsque vous utilisez SqlClient. La propriété d'espace de noms d'un fournisseur permet à Entity Framework de découvrir le préfixe attribué par ce fournisseur à des constructions spécifiques, telles que des types et des fonctions. Le tableau suivant présente les fonctions de date et d'heure SqlClient.  

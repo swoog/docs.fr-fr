@@ -6,26 +6,26 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], getting started
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 64d9fc09d56c417c2226d030ef6f5ee7204c4eb6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806017"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553075"
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
-Les rubriques contenues dans cette section sont destinées à vous donner l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. Ce didacticiel vous donne une compréhension de base des étapes requises pour créer des applications client et le service WCF. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fournie par le service pour ses clients.  
+Les rubriques contenues dans cette section sont conçues pour vous permettre l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. Ce didacticiel vous offre une compréhension de base des étapes requises pour créer des applications client et le service WCF. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fourni par le service à ses clients.  
   
- Une fois que vous aurez terminé la séquence de rubriques de ce didacticiel, vous disposerez d'un service opérationnel et d'un client qui appelle le service. Les trois premières rubriques décrivent comment définir un contrat de service, comment implémenter le contrat de service et comment héberger le service. Le service créé est auto-hébergé dans une application console. Les services peuvent également être hébergés sous IIS (Internet Information Services). Pour plus d’informations, consultez [Comment : héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Le service est configuré dans le code ; toutefois, les services peuvent également être configurés dans un fichier de configuration. Pour plus d’informations sur l’utilisation d’un fichier de configuration, consultez [fichiers de configuration des Services à l’aide de la Configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
+ Une fois que vous aurez terminé la séquence de rubriques de ce didacticiel, vous disposerez d'un service opérationnel et d'un client qui appelle le service. Les trois premières rubriques décrivent comment définir un contrat de service, comment implémenter le contrat de service et comment héberger le service. Le service créé est auto-hébergé dans une application console. Les services peuvent également être hébergés sous IIS (Internet Information Services). Pour plus d’informations sur la procédure à suivre, consultez [Comment : héberger un Service WCF dans IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md). Le service est configuré dans le code ; toutefois, les services peuvent également être configurés dans un fichier de configuration. Pour plus d’informations sur l’utilisation d’un fichier de configuration, consultez [fichiers de configuration des Services à l’aide de la Configuration](../../../docs/framework/wcf/configuring-services-using-configuration-files.md).  
   
  Les trois rubriques suivantes décrivent comment créer un proxy client, comment configurer l'application cliente et comment utiliser le proxy client pour appeler l'opération de service exposée par le service. Les services publient les métadonnées qui définissent les informations dont une application cliente a besoin pour communiquer avec le service. [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] automatise le processus d'accès à ces métadonnées et l'utilise pour créer et configurer l'application cliente pour le service. Si vous n’utilisez pas [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], vous pouvez utiliser la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer et configurer l’application cliente pour le service.  
   
- Toutes les rubriques de cette section partent du principe que vous utilisez Visual Studio 2011 comme environnement de développement. Si vous utilisez un autre environnement de développement, ignorez les instructions spécifiques de Visual Studio.  
+ Toutes les rubriques de cette section partent du principe que vous utilisez Visual Studio 2011 comme environnement de développement. Si vous utilisez un autre environnement de développement, ignorer les instructions spécifiques de Visual Studio.  
   
 > [!NOTE]
->  Si vous exécutez [!INCLUDE[wv](../../../includes/wv-md.md)] ou versions ultérieures du système d’exploitation Windows, vous devez démarrer Visual Studio en allant dans le menu Démarrer et en cliquant avec le bouton droit sur Visual Studio 2011 et en sélectionnant **exécuter en tant qu’administrateur**. Pour toujours lancer Visual Studio 2011 en tant qu’un administrateur, vous pouvez créer un raccourci, cliquez avec le bouton droit sur le raccourci, sélectionnez Propriétés, sélectionnez le **compatibilité** et vérifiez la **exécuter ce programme en tant qu’administrateur** case à cocher. Lorsque vous démarrez Visual Studio 2011 à partir de ce raccourci, l'application s'exécute systématiquement en tant qu'administrateur.  
+>  Si vous exécutez [!INCLUDE[wv](../../../includes/wv-md.md)] ou versions ultérieures du système d’exploitation Windows, vous devez démarrer Visual Studio en accédant au menu Démarrer et en cliquant avec le bouton droit sur Visual Studio 2011 et en sélectionnant **exécuter en tant qu’administrateur**. Pour toujours lancer Visual Studio 2011 en tant qu’un administrateur, vous pouvez créer un raccourci, cliquez avec le bouton droit sur le raccourci, sélectionnez Propriétés, sélectionnez le **compatibilité** et vérifiez la **exécuter ce programme en tant qu’administrateur** case à cocher. Lorsque vous démarrez Visual Studio 2011 à partir de ce raccourci, l'application s'exécute systématiquement en tant qu'administrateur.  
   
- Pour des exemples d’applications qui peuvent être téléchargés sur votre disque dur et s’exécutent, consultez les rubriques de [exemples Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Cette rubrique, consultez en particulier, la [mise en route](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Pour des exemples d’applications qui peuvent être téléchargés sur votre disque dur et exécuter, consultez les rubriques dans [exemples Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Pour cette rubrique, consultez, en particulier, le [mise en route](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Pour plus d’informations sur la création de services et les clients, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -54,7 +54,7 @@ Les rubriques contenues dans cette section sont destinées à vous donner l’ex
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Exemples Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Exemples Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Cycle de vie de la programmation de base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

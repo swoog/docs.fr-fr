@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425841"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554404"
 ---
 # <a name="transforms-overview"></a>Vue d'ensemble des transformations
 Cette rubrique explique comment utiliser le [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> classes pour faire pivoter, mettre à l’échelle, déplacer (translater) et incliner des <xref:System.Windows.FrameworkElement> objets.  

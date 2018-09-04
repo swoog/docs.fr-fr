@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: e12fccf7426ae130cd2aaf120eafb19ac3909659
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925753"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561231"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Paramètres du Registre pour le rendu des graphiques
 Cette rubrique fournit une vue d’ensemble des paramètres du Registre pour le rendu des graphiques [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] qui affectent les applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -26,7 +26,7 @@ Cette rubrique fournit une vue d’ensemble des paramètres du Registre pour le 
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Que sont XPDM et WDDM ?  
- Certains paramètres du Registre pour le rendu des graphiques ont des valeurs par défaut différentes selon que votre carte vidéo utilise un pilote XPDM ou WDDM. XPDM est le [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model et WDDM est le Windows Display Driver Model. WDDM est disponible sur les ordinateurs exécutant [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] et [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM est disponible sur les ordinateurs exécutant [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] et [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Pour plus d'informations sur le modèle WDDM, consultez [Guide de conception Windows Vista Display Driver Model](http://go.microsoft.com/fwlink/?LinkId=178394).  
+ Certains paramètres du Registre pour le rendu des graphiques ont des valeurs par défaut différentes selon que votre carte vidéo utilise un pilote XPDM ou WDDM. XPDM est le [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] Display Driver Model et WDDM est le Windows Display Driver Model. WDDM est disponible sur les ordinateurs exécutant [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] et [!INCLUDE[win7](../../../../includes/win7-md.md)]. XPDM est disponible sur les ordinateurs exécutant [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] et [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Pour plus d'informations sur le modèle WDDM, consultez [Guide de conception Windows Vista Display Driver Model](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Paramètres du Registre  

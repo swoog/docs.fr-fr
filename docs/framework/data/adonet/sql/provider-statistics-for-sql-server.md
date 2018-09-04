@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: f32b1c9f800a1ec2d80511cbbf46aba9840075d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d52c6bfdadf0a53ac4c5f62c37f1056c6702a82c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553762"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Fournisseur de statistiques pour SQL Server
 À partir du .NET Framework version 2.0, le fournisseur de données .NET Framework pour SQL Server prend en charge des statistiques d'exécution. Vous devez activer les statistiques en attribuant à la propriété <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection> la valeur `True` après la création d'un objet de connexion valide. Une fois les statistiques activées, vous pouvez les consulter comme « instantané dans le temps » en extrayant une référence <xref:System.Collections.IDictionary> via la méthode <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection>. Vous détaillez la liste comme un ensemble d'entrées de dictionnaire de paires nom-valeur. Ces paires nom-valeur ne sont triées. À tout moment, vous pouvez appeler la méthode <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> de l'objet <xref:System.Data.SqlClient.SqlConnection> pour réinitialiser les compteurs. Si la collecte de statistiques n'est pas activée, aucune exception n'est générée. En outre, si <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> est appelé sans que <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> ait été appelé précédemment, les valeurs extraites sont les valeurs initiales de chaque entrée. Si vous activez les statistiques, exécutez votre application pendant un moment, puis désactivez les statistiques, les valeurs extraites reflètent celles collectées jusqu'au point où les statistiques étaient désactivées. Toutes les valeurs statistiques sont collectées par connexion.  
@@ -340,4 +340,4 @@ namespace CS_Stats_Console_GetAll
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

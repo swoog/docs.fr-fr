@@ -2,22 +2,22 @@
 title: 'Comment : héberger un service WCF dans WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 7050d866233b248c7c8f9f41337ce451b5510c30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fd48957f7f8410b4b0df39fe125c35e4fc98cb8e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492666"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560293"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Comment : héberger un service WCF dans WAS
-Cette rubrique décrit les étapes de base requises pour créer un ordinateur Windows Process Activation Services (également appelé WAS) hébergé service Windows Communication Foundation (WCF). WAS est le nouveau service d’activation de processus généralisant les fonctionnalités des services IIS (Internet Information Services) qui fonctionnent avec des protocoles de transport non-HTTP. WCF utilise cette interface pour communiquer les demandes d’activation qui sont reçues sur les protocoles non HTTP pris en charge par WCF, tel que TCP, canaux nommés et Message Queuing.  
+Cette rubrique explique les étapes de base requises pour créer un ordinateur Windows Process Activation Services (également appelé WAS) hébergé le service Windows Communication Foundation (WCF). WAS est le nouveau service d’activation de processus généralisant les fonctionnalités des services IIS (Internet Information Services) qui fonctionnent avec des protocoles de transport non-HTTP. WCF utilise l’interface d’adaptateur d’écouteur pour communiquer les demandes d’activation qui sont reçus sur les protocoles non-HTTP pris en charge par WCF, tels que TCP, canaux nommés et Message Queuing.  
   
  Cette option d'hébergement requiert que les composants d'activation WAS soient installés et configurés correctement, mais ne requiert pas l'écriture du code d'hébergement dans le cadre de l'application. Pour plus d’informations sur l’installation et configuration du service WAS, consultez [Comment : installer et configurer les composants d’Activation WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 >  L’activation de WAS n’est pas prise en charge si le pipeline de traitement de demande du serveur web est en mode classique. Le pipeline de traitement de demande du serveur web doit être en mode intégré si l’activation de WAS doit être utilisée.  
   
- Lorsqu’un service WCF est hébergé dans WAS, les liaisons standards sont utilisées de manière habituelle. Toutefois, lors de l'utilisation de <xref:System.ServiceModel.NetTcpBinding> et de <xref:System.ServiceModel.NetNamedPipeBinding> pour configurer un service hébergé WAS, une contrainte doit être satisfaite. Lorsque des points de terminaison différents utilisent le même transport, les paramètres de liaison doivent correspondre dans les sept propriétés suivantes :  
+ Lorsqu’un service WCF est hébergé dans WAS, les liaisons standards sont utilisées à l’accoutumée. Toutefois, lors de l'utilisation de <xref:System.ServiceModel.NetTcpBinding> et de <xref:System.ServiceModel.NetNamedPipeBinding> pour configurer un service hébergé WAS, une contrainte doit être satisfaite. Lorsque des points de terminaison différents utilisent le même transport, les paramètres de liaison doivent correspondre dans les sept propriétés suivantes :  
   
 -   ConnectionBufferSize  
   
@@ -100,4 +100,4 @@ Cette rubrique décrit les étapes de base requises pour créer un ordinateur Wi
   
 ## <a name="see-also"></a>Voir aussi  
  [Activation TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [Fonctionnalités d’hébergement de Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)

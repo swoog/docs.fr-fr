@@ -2,15 +2,15 @@
 title: Opérateurs de requête standard dans les requêtes LINQ to Entities
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 1085e43ef1db8eb0017f9ff87acba2da4be46377
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: 302fa281767fc95e9a9a2192382034b3a519cd92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238561"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560486"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Opérateurs de requête standard dans les requêtes LINQ to Entities
-Dans une requête, vous indiquez les informations que vous voulez extraire de la source de données. Une requête peut également spécifier la manière dont ces informations doivent être triées, regroupées et mises en forme avant d'être retournées. LINQ fournit un ensemble de méthodes de requête standard utilisables dans une requête. La plupart de ces méthodes fonctionne sur des séquences ; Dans ce contexte, une séquence est un objet dont le type implémente le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Les fonctionnalités de requête des opérateurs de requête standard incluent le filtrage, la projection, l'agrégation, le tri, le regroupement, la pagination, etc. Certains des opérateurs de requête standard les plus couramment utilisés ont une syntaxe de mots clés dédiée qui leur permet d'être appelés à l'aide d'une syntaxe d'expression de requête. Une expression de requête est une façon différente et plus lisible d'exprimer une requête que son équivalent fondé sur une méthode. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation. Pour obtenir la liste des opérateurs de requête standard qui comportent des clauses d’expression de requête équivalente, consultez [vue d’ensemble des opérateurs de requête Standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
+Dans une requête, vous indiquez les informations que vous voulez extraire de la source de données. Une requête peut également spécifier la manière dont ces informations doivent être triées, regroupées et mises en forme avant d'être retournées. LINQ fournit un ensemble de méthodes de requête standard utilisables dans une requête. La plupart de ces méthodes fonctionne sur des séquences ; Dans ce contexte, une séquence est un objet dont le type implémente le <xref:System.Collections.Generic.IEnumerable%601> interface ou le <xref:System.Linq.IQueryable%601> interface. Les fonctionnalités de requête des opérateurs de requête standard incluent le filtrage, la projection, l'agrégation, le tri, le regroupement, la pagination, etc. Certains des opérateurs de requête standard les plus couramment utilisés ont une syntaxe de mots clés dédiée qui leur permet d'être appelés à l'aide d'une syntaxe d'expression de requête. Une expression de requête est une façon différente et plus lisible d'exprimer une requête que son équivalent fondé sur une méthode. Les clauses d'expression de requête sont traduites en appels aux méthodes de requête lors de la compilation. Pour obtenir la liste des opérateurs de requête standard qui comportent des clauses d’expression de requête équivalente, consultez [vue d’ensemble des opérateurs de requête Standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
   
  Certains opérateurs de requête standard ne sont pas pris en charge dans les requêtes [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Pour plus d’informations, consultez [pris en charge et les méthodes LINQ non prises en charge (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md). Cette rubrique fournit des informations sur les opérateurs de requête standard qui sont spécifiques à [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]. Pour plus d’informations sur les problèmes connus dans [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de requêtes, consultez [problèmes connus et des considérations dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md).  
   
@@ -67,7 +67,7 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
 |`Sum`|Retourne la valeur NULL.|Retourne la valeur NULL.|Retourne la somme de la valeur non NULL dans une séquence.|Calcule la somme d'une séquence de valeurs numériques.|  
   
 ## <a name="type-methods"></a>Méthodes de type  
- Les deux méthodes LINQ qui traitent de la conversion et des tests de types sont prises en charge dans le contexte d'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Cela signifie que les seuls types pris en charge sont les types qui correspondent au type [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] approprié. Pour obtenir la liste de ces types, consultez [Types du modèle conceptuel (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Les méthodes de type sont `Convert` et `OfType`.  
+ Les deux méthodes LINQ qui traitent de la conversion et des tests de types sont prises en charge dans le contexte d'[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Cela signifie que les seuls types pris en charge sont les types qui correspondent au type [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] approprié. Pour obtenir la liste de ces types, consultez [Types du modèle conceptuel (CSDL)](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Les méthodes de type sont `Convert` et `OfType`.  
   
  La méthode `OfType` est prise en charge pour les types d'entités. La méthode `Convert` est prise en charge pour les types primitifs de modèle conceptuel.  Les méthodes C# `is` et `as` sont également prises en charge.  
   
@@ -78,4 +78,4 @@ Dans une requête, vous indiquez les informations que vous voulez extraire de la
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodes LINQ prises en charge et non prises en charge (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
- [Vue d’ensemble des opérateurs de requête standard](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)
+ [Vue d’ensemble des opérateurs de requête standard](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)

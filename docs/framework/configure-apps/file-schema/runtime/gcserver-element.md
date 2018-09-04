@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d25b80e-2581-4803-bd87-a59528e3cb03
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 027176bdff644a6ff3314df7484ed88ace93001b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8bfe0db3d6fcbdbbcfb90ff488ab19cdbfaab75e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658806"
 ---
 # <a name="ltgcservergt-element"></a>&lt;gcServer&gt; élément
 Spécifie si le common language runtime exécute le garbage collection côté serveur.  
@@ -64,7 +65,7 @@ Spécifie si le common language runtime exécute le garbage collection côté se
  Cet élément peut être défini uniquement dans le fichier de configuration de l'application (il est ignoré s'il est défini dans le fichier de configuration de l'ordinateur).  
   
 > [!NOTE]
->  Dans .NET Framework 4 et les versions antérieures, le garbage collection simultané n'est pas disponible si le garbage collection côté serveur est activé. Depuis [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], le garbage collection côté serveur est simultané. Pour utiliser le garbage collection de serveur non simultané, définissez la `<gcServer>` élément `true` et [ \<gcConcurrent > élément](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) à `false`.  
+>  Dans .NET Framework 4 et les versions antérieures, le garbage collection simultané n'est pas disponible si le garbage collection côté serveur est activé. Depuis [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], le garbage collection côté serveur est simultané. Pour utiliser le garbage collection de serveur non simultané, définissez le `<gcServer>` élément `true` et [ \<gcConcurrent > élément](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) à `false`.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant active le garbage collection côté serveur.  
@@ -81,4 +82,4 @@ Spécifie si le common language runtime exécute le garbage collection côté se
  <xref:System.Runtime.GCSettings.IsServerGC%2A?displayProperty=nameWithType>  
  [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Comment : désactiver le Garbage Collection simultané](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)
+ [Comment : désactiver le Garbage Collection simultané](https://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)

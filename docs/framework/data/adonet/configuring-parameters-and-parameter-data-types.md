@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759541"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659387"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Configuration des paramètres et des types de données des paramètres
 Les objets de commande utilisent des paramètres pour passer des valeurs à des instructions SQL ou à des procédures stockées, en fournissant la vérification et la validation des types. Contrairement au texte de la commande, l'entrée de paramètre est traitée comme une valeur littérale et non pas comme du code exécutable. Cela vous permet de vous protéger des attaques « par injection de code SQL », dans lesquelles un attaquant insère une commande qui compromet la sécurité sur le serveur dans une instruction SQL.  
   
- Les commandes paramétrées améliorent également les performances d'exécution des requêtes car elles permettent au serveur de base de données de faire correspondre la commande entrante avec un plan de requête mis en cache approprié. Pour plus d’informations, consultez [Mise en mémoire cache et réutilisation du plan d’exécution](http://go.microsoft.com/fwlink/?LinkId=120424) et [Réutilisation des paramètres et des plans d’exécution](http://go.microsoft.com/fwlink/?LinkId=120423) dans la documentation en ligne de SQL Server. Outre les avantages relatifs à la sécurité et aux performances, les commandes paramétrées fournissent une méthode pratique d'organisation des valeurs passées à une source de données.  
+ Les commandes paramétrées améliorent également les performances d'exécution des requêtes car elles permettent au serveur de base de données de faire correspondre la commande entrante avec un plan de requête mis en cache approprié. Pour plus d’informations, consultez [l’exécution de planifier la mise en cache et réutilisation](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) et [paramètres et la réutilisation du Plan d’exécution](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Outre les avantages relatifs à la sécurité et aux performances, les commandes paramétrées fournissent une méthode pratique d'organisation des valeurs passées à une source de données.  
   
  Un objet <xref:System.Data.Common.DbParameter> peut être créé à l'aide de son constructeur ou en l'ajoutant à la propriété <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> en appelant la méthode `Add` de la collection <xref:System.Data.Common.DbParameterCollection> . La méthode `Add` prendra comme entrée des arguments de constructeur ou un objet Parameter existant, selon le fournisseur de données.  
   
@@ -48,7 +48,7 @@ Les objets de commande utilisent des paramètres pour passer des valeurs à des 
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Bit|Booléen|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|Binaire|VarBinary`.` cette conversion implicite échouera si le tableau d’octets est supérieur à la taille maximale de VarBinary, soit 8 000 octets. Pour les tableaux d’octets supérieurs à 8 000 octets, définissez explicitement la <xref:System.Data.SqlDbType>.|VarBinary|Binaire|Raw|  
+|byte[]|Binaire|VarBinary`.` cette conversion implicite échouera si le tableau d’octets est supérieur à la taille maximale d’un VarBinary, soit 8 000 octets. Pour des tableaux d’octets supérieurs à 8 000 octets, définissez explicitement le <xref:System.Data.SqlDbType>.|VarBinary|Binaire|Raw|  
 |<xref:System.Char>|``|La déduction de <xref:System.Data.SqlDbType> à partir de char n'est pas prise en charge.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset dans SQL Server 2008. La déduction de <xref:System.Data.SqlDbType> à partir de DateTimeOffset n'est pas prise en charge dans les versions de SQL Server antérieures à SQL Server 2008.|||DateTime|  
@@ -56,7 +56,7 @@ Les objets de commande utilisent des paramètres pour passer des valeurs à des 
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Nombre|  
 |<xref:System.Object>|Objet|Variante|Variante|La déduction d'OdbcType à partir d'Object n'est pas prise en charge.|Blob|  
@@ -87,13 +87,13 @@ Les objets de commande utilisent des paramètres pour passer des valeurs à des 
 > [!NOTE]
 >  La dérivation des informations de paramètre entraîne une baisse des performances car elle requiert un aller-retour supplémentaire vers la source de données pour extraire les informations. Si les informations sur les paramètres sont connues au moment du design, vous pouvez améliorer la performance de votre application en définissant les paramètres de manière explicite.  
   
- Pour plus d’informations, consultez [génération de commandes avec CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Pour plus d’informations, consultez [générant des commandes avec CommandBuilders](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Utilisation des paramètres avec un objet SqlCommand ou une procédure stockée  
  Les procédures stockées offrent de nombreux avantages dans les applications pilotées par des données. En utilisant les procédures stockées, les opérations de base de données peuvent être encapsulées dans une commande unique, optimisées pour de meilleures performances et améliorées grâce à une sécurité supplémentaire. Bien qu'une procédure stockée puisse être appelée en passant son nom suivi des arguments de paramètre comme instruction SQL, l'utilisation de la collection <xref:System.Data.Common.DbCommand.Parameters%2A> de l'objet [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.Common.DbCommand> vous permet de définir plus explicitement les paramètres de procédure stockée et d'accéder aux paramètres de sortie et aux valeurs de retour.  
   
 > [!NOTE]
->  Les instructions paramétrées sont exécutées sur le serveur à l'aide de `sp_executesql,` , ce qui permet la réutilisation des plans de requête. Les curseurs ou variables locaux dans le lot `sp_executesql` ne sont pas visibles pour le lot qui appelle `sp_executesql`. Les modifications dans le contexte de la base de données durent uniquement jusqu'à la fin de l'instruction `sp_executesql` . Pour plus d'informations, voir la documentation en ligne de SQL Server.  
+> Les instructions paramétrées sont exécutées sur le serveur à l'aide de `sp_executesql,` , ce qui permet la réutilisation des plans de requête. Les curseurs ou variables locaux dans le lot `sp_executesql` ne sont pas visibles pour le lot qui appelle `sp_executesql`. Les modifications dans le contexte de la base de données durent uniquement jusqu'à la fin de l'instruction `sp_executesql` . Pour plus d’informations, consultez [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
   
  Lorsque vous utilisez des paramètres avec un objet <xref:System.Data.SqlClient.SqlCommand> pour exécuter une procédure stockée SQL Server, les noms des paramètres ajoutés à la collection <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> doivent correspondre à ceux des marqueurs de paramètres dans la procédure stockée. Le fournisseur de données [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pour SQL Server ne prend pas en charge l'espace réservé de point d'interrogation (?) pour le passage des paramètres à une instruction SQL ou une procédure stockée. Il traite les paramètres de la procédure stockée comme des paramètres nommés et recherche les marqueurs de paramètres correspondants. Par exemple, la procédure stockée `CustOrderHist` est définie à l'aide d'un paramètre nommé `@CustomerID`. Lorsque votre code exécute la procédure stockée, il doit également utiliser un paramètre nommé `@CustomerID`.  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Paramètres DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Mappages de types de données dans ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

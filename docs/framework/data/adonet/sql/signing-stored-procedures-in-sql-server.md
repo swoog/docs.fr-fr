@@ -2,12 +2,12 @@
 title: Signature de procédures stockées dans SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253642"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555162"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signature de procédures stockées dans SQL Server
  Une signature numérique est un condensat des données qui est chiffré avec la clé privée du signataire. La clé privée garantit que la signature numérique est unique à son porteur ou propriétaire. Vous pouvez signer les assemblys, les fonctions (à l’exception des fonctions table inline), les déclencheurs et les procédures stockées.  
@@ -51,7 +51,7 @@ Si le module a besoin des autorisations supplémentaires au niveau du serveur :
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Signature de module](http://go.microsoft.com/fwlink/?LinkId=98590) dans la documentation en ligne de SQL Server|Décrit la signature de module, en fournissant un exemple de scénario et des liens vers les rubriques pertinentes relatives à Transact-SQL.|  
+|[Signature de module](https://go.microsoft.com/fwlink/?LinkId=98590) dans la documentation en ligne de SQL Server|Décrit la signature de module, en fournissant un exemple de scénario et des liens vers les rubriques pertinentes relatives à Transact-SQL.|  
 |[Signature de procédures stockées avec un certificat](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) dans la documentation en ligne de SQL Server|Propose un didacticiel de signature d'une procédure stockée à l'aide d'un certificat.|  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -62,4 +62,4 @@ Si le module a besoin des autorisations supplémentaires au niveau du serveur :
  [Écriture de code SQL dynamique sécurisé dans SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Personnalisation des autorisations avec l’emprunt d’identité dans SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Modification des données avec les procédures stockées](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

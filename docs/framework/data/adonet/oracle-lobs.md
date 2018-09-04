@@ -2,28 +2,28 @@
 title: LOB Oracle
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 04789b385d7a956b65b7cd99594fc92001183af3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39ff8f1c21fc1161f4f3726548713d384c7d7400
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758774"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560215"
 ---
 # <a name="oracle-lobs"></a>LOB Oracle
-Le fournisseur de données .NET Framework pour Oracle inclut la <xref:System.Data.OracleClient.OracleLob> (classe), qui est utilisée pour travailler avec Oracle **LOB** des types de données.  
+Le fournisseur de données .NET Framework pour Oracle inclut la <xref:System.Data.OracleClient.OracleLob> (classe), qui est utilisée pour travailler avec Oracle **LOB** types de données.  
   
- Un **OracleLob** peut être un de ces <xref:System.Data.OracleClient.OracleType> les types de données :  
+ Un **OracleLob** peut être un de ces <xref:System.Data.OracleClient.OracleType> types de données :  
   
 |Type de données|Description|  
 |---------------|-----------------|  
-|**Objet BLOB**|Oracle **BLOB** type de données qui contient des données binaires d’une taille maximale de 4 giga-octets. Correspond à un **tableau** de type **octets**.|  
+|**Objet BLOB**|Oracle **BLOB** type de données qui contient des données binaires d’une taille maximale de 4 gigaoctets. Correspond à un **tableau** de type **octets**.|  
 |**CLOB**|Oracle **CLOB** type de données qui contient des données caractères, selon le caractère par défaut défini sur le serveur, avec une taille maximale de 4 gigaoctets. Correspond à **chaîne**.|  
 |**NClob**|Oracle **NCLOB** type de données qui contient des données caractères, selon le jeu sur le serveur avec une taille maximale de 4 gigaoctets de caractères nationaux. Correspond à **chaîne**.|  
   
- Un **OracleLob** diffère d’une <xref:System.Data.OracleClient.OracleBFile> dans la mesure où les données sont stockées sur le serveur et non dans un fichier physique dans le système d’exploitation. Il peut également être un objet en lecture-écriture, contrairement à un **OracleBFile**, qui est toujours en lecture seule.  
+ Un **OracleLob** diffère d’un <xref:System.Data.OracleClient.OracleBFile> car les données sont stockées sur le serveur au lieu de dans un fichier physique dans le système d’exploitation. Il peut également être un objet en lecture-écriture, contrairement à un **OracleBFile**, qui est toujours en lecture seule.  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>Création d'un LOB, extraction à partir d'un LOB et écriture dans un LOB  
- L’exemple c# suivant montre comment vous pouvez créer des LOB dans une table Oracle, puis récupérer et écrire sous la forme de **OracleLob** objets. L’exemple montre comment utiliser le <xref:System.Data.OracleClient.OracleDataReader> objet et la **OracleLob** **en lecture** et **écrire** méthodes. L’exemple utilise Oracle **BLOB**, **CLOB**, et **NCLOB** des types de données.  
+ L’exemple c# suivant montre comment vous pouvez créer des LOB dans une table Oracle, puis récupérer et y écrire sous la forme de **OracleLob** objets. L’exemple montre comment utiliser le <xref:System.Data.OracleClient.OracleDataReader> objet et le **OracleLob** **en lecture** et **écrire** méthodes. L’exemple utilise Oracle **BLOB**, **CLOB**, et **NCLOB** types de données.  
   
 ```csharp  
 using System;  
@@ -249,4 +249,4 @@ tx.Commit();
   
 ## <a name="see-also"></a>Voir aussi  
  [Oracle et ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

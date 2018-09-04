@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 4f9de7736851027c9f6b851984953e37b96d456a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fb24e13ab684170baf5ac3001d3a2d4bcd6df7e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33547893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563262"
 ---
 # <a name="graphics-rendering-tiers"></a>Couches de rendu graphiques
 Une couche de rendu définit un niveau des capacités et des performances du matériel graphique pour un appareil qui exécute une application [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -42,7 +42,7 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
   
 -   **Couche de rendu 2** La plupart des fonctionnalités graphiques utilisent l’accélération matérielle graphique. Le niveau de version [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] est supérieur ou égal à la version 9.0.  
   
- Le <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> propriété vous permet de récupérer la couche de rendu au moment de l’exécution de l’application. La couche de rendu permet de déterminer si l’appareil prend en charge certaines fonctionnalités graphiques à accélération matérielle. Votre application peut alors prendre des chemins de code différents au moment de l’exécution selon la couche de rendu prise en charge par l’appareil.  
+ Le <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> propriété vous permet de récupérer la couche de rendu au moment de l’exécution des applications. La couche de rendu permet de déterminer si l’appareil prend en charge certaines fonctionnalités graphiques à accélération matérielle. Votre application peut alors prendre des chemins de code différents au moment de l’exécution selon la couche de rendu prise en charge par l’appareil.  
   
 ### <a name="rendering-tier-0"></a>Couche de rendu 0  
  La valeur de couche de rendu 0 signifie qu’aucune accélération matérielle graphique n’est disponible pour l’application sur l’appareil. À ce niveau de la couche, vous devez supposer que tous les graphiques seront restitués par le logiciel sans accélération matérielle. Les fonctionnalités de cette couche correspondent à une version [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] qui est inférieure à la version 9.0.  
@@ -71,8 +71,8 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 |Rendu 2D|La plupart des types de rendu 2D sont pris en charge.|  
 |Rastérisation 3D|La plupart des types de rastérisation 3D sont pris en charge.|  
 |Filtrage anisotropique 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le filtrage anisotropique lors de l’affichage du contenu 3D. Le filtrage anisotropique correspond à l’amélioration de la qualité d’image des textures des surfaces éloignées et en biais par rapport à l’appareil photo.|  
-|Mappage MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le mappage MIP lors de l’affichage du contenu 3D. Mappage MIP améliore la qualité de rendu de la texture lorsque celle-ci occupe un champ plus petites de la vue dans un <xref:System.Windows.Controls.Viewport3D>.|  
-|Dégradés radiaux|Lors de la prise en charge, évitez d’utiliser <xref:System.Windows.Media.RadialGradientBrush> sur des objets volumineux.|  
+|Mappage MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tente d’utiliser le mappage MIP lors de l’affichage du contenu 3D. Le mappage MIP améliore la qualité de rendu de la texture lorsque celle-ci occupe un champ plus restreint dans un <xref:System.Windows.Controls.Viewport3D>.|  
+|Dégradés radiaux|Bien que la prise en charge, évitez d’utiliser <xref:System.Windows.Media.RadialGradientBrush> sur des objets volumineux.|  
 |Calculs d’éclairage 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] exécute l’éclairage par sommet, ce qui signifie qu’une intensité légère doit être calculée à chaque sommet pour chaque matériel appliqué à un maillage.|  
 |Rendu de texte|Le rendu de police de sous-pixel utilise les nuanceurs de pixels disponibles sur le matériel graphique.|  
   
@@ -87,10 +87,10 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 |Fonctionnalité|Notes|  
 |-------------|-----------|  
 |Contenu imprimé|Tout le contenu imprimé est restitué à l’aide du pipeline logiciel [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].|  
-|Contenu rastérisé qui utilise <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Tout le contenu restitué à l’aide de la <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> méthode <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Contenu en mosaïque qui utilise <xref:System.Windows.Media.TileBrush>|Tout en mosaïque contenu dans lequel le <xref:System.Windows.Media.TileBrush.TileMode%2A> propriété de la <xref:System.Windows.Media.TileBrush> a la valeur <xref:System.Windows.Media.TileMode.Tile>.|  
+|Contenu rastérisé qui utilise <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Tout le contenu restitué à l’aide de la <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> méthode de <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Contenu en mosaïque qui utilise <xref:System.Windows.Media.TileBrush>|Un contenu en mosaïque dans lequel la <xref:System.Windows.Media.TileBrush.TileMode%2A> propriété de la <xref:System.Windows.Media.TileBrush> est défini sur <xref:System.Windows.Media.TileMode.Tile>.|  
 |Surfaces qui dépassent la taille de texture maximale du matériel graphique|Pour la plupart des matériels graphiques, les grandes surfaces ont une taille de 2048 x 2048 ou 4096 x 4096 pixels.|  
-|Toute opération dont la spécification de RAM vidéo dépasse la mémoire du matériel graphique|Vous pouvez surveiller l’utilisation de la RAM vidéo par l’application à l’aide de l’outil Perforator compris dans la suite [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) du SDK Windows.|  
+|Toute opération dont la spécification de RAM vidéo dépasse la mémoire du matériel graphique|Vous pouvez surveiller l’utilisation de la RAM vidéo par l’application à l’aide de l’outil Perforator compris dans la suite [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e) du SDK Windows.|  
 |Fenêtres superposées|Les fenêtres superposées permettent aux applications [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] de restituer le contenu à l’écran dans une fenêtre non rectangulaire. Sur les systèmes d’exploitation qui prennent en charge WDDM (Windows Display Driver Model), tels que [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] et [!INCLUDE[win7](../../../../includes/win7-md.md)], les fenêtres superposées sont à accélération matérielle. Sur d’autres systèmes, tels que [!INCLUDE[winxp](../../../../includes/winxp-md.md)], les fenêtres superposées sont restituées par logiciel sans accélération matérielle.<br /><br /> Vous pouvez activer des fenêtres superposées dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en définissant les éléments suivants <xref:System.Windows.Window> propriétés :<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
@@ -112,12 +112,12 @@ Une couche de rendu définit un niveau des capacités et des performances du mat
 ### <a name="wpf-performance-profiling-tools"></a>Outils de profilage des performances WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit une suite d’outils de profilage des performances qui vous permettent d’analyser le comportement au moment de l’exécution de votre application et de déterminer les types d’optimisations des performances que vous pouvez appliquer. Le tableau suivant répertorie les outils de profilage des performances qui sont inclus dans l’outil [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)], WPF Performance Suite :  
   
-|Outil|Description|  
+|Tool|Description|  
 |----------|-----------------|  
 |Perforator|À utiliser pour analyser le comportement de rendu.|  
 |Visual Profiler|À utiliser pour le profilage de l’utilisation des services [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tels que la disposition et la gestion des événements, pour chaque élément de l’arborescence d’éléments visuels.|  
   
- L’outil WPF Performance Suite fournit une vue graphique détaillée des données de performances. Pour plus d’informations sur les outils de performances WPF, consultez [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
+ L’outil WPF Performance Suite fournit une vue graphique détaillée des données de performances. Pour plus d’informations sur les outils de performances WPF, consultez [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e).  
   
 ### <a name="directx-diagnostic-tool"></a>Outil de diagnostic DirectX  
  L’outil de diagnostic [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)], Dxdiag.exe, est conçu pour vous aider à résoudre les problèmes liés à [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]. Le dossier d’installation par défaut de l’outil de diagnostic [!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] est :  
@@ -133,6 +133,6 @@ Fenêtre principale de l’outil de diagnostic DirectX
  <xref:System.Windows.Media.RenderCapability>  
  <xref:System.Windows.Media.RenderOptions>  
  [Optimisation des performances des applications WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [WPF Performance Suite](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
+ [WPF Performance Suite](https://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)  
  [Paramètres du Registre pour le rendu des graphiques](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
  [Conseils et astuces sur les animations](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)

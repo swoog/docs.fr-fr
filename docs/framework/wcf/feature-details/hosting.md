@@ -3,11 +3,11 @@ title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 ms.openlocfilehash: 9237518f5bfa48401e60e47ccc40e4ee303dec35
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43397423"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557060"
 ---
 # <a name="hosting"></a>Hébergement
 Les rubriques de cette section décrivent l'hébergement de service. Un service peut être hébergé par Internet Information Services (IIS), Service d’Activation des processus Windows (WAS), Windows Server AppFabric, un service Windows, ou par une application managée, cette option est souvent appelée *auto-hébergement*.  

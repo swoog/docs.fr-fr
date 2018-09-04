@@ -5,11 +5,11 @@ helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
 ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419282"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659403"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a>Comment : imprimer la zone cliente d'un formulaire (Visual Basic)
 Le composant <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> vous permet d’imprimer rapidement une image d’un formulaire sans utiliser un composant <xref:System.Drawing.Printing.PrintDocument> . La procédure suivante montre comment imprimer uniquement la zone cliente d’un formulaire, sans la barre de titre, les bordures et les barres de défilement.  

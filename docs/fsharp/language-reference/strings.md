@@ -2,12 +2,12 @@
 title: Chaînes (F#)
 description: "Découvrez comment le type 'string' F # représente le texte immuable sous la forme d’une séquence de caractères Unicode."
 ms.date: 05/16/2016
-ms.openlocfilehash: d8bfce9ac47cb137456e02b1b213fd2c6a53594d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404270"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561289"
 ---
 # <a name="strings"></a>Chaînes
 
@@ -42,7 +42,7 @@ let xmlFragment1 = @"<book author=""Milton, John"" title=""Paradise Lost"">"
 let xmlFragment2 = """<book author="Milton, John" title="Paradise Lost">"""
 ```
 
-Dans le code, les chaînes qui ont des sauts de ligne sont acceptées et les sauts de ligne sont interprétés littéralement comme des sauts de ligne, sauf si un caractère de barre oblique inverse est le dernier caractère avant le saut de ligne. Espaces de début sur la ligne suivante est ignoré lorsque le caractère barre oblique inverse est utilisé. Le code suivant produit une chaîne `str1` qui a la valeur `"abc\ndef"` et une chaîne `str2` qui a la valeur `"abcdef"`.
+Dans le code, les chaînes qui ont des sauts de ligne sont acceptées et les sauts de ligne sont interprétés littéralement comme des sauts de ligne, sauf si un caractère de barre oblique inverse est le dernier caractère avant le saut de ligne. Espace blanc de début sur la ligne suivante est ignoré lorsque le caractère barre oblique inverse est utilisé. Le code suivant produit une chaîne `str1` qui a la valeur `"abc\ndef"` et une chaîne `str2` qui a la valeur `"abcdef"`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1001.fs)]
 

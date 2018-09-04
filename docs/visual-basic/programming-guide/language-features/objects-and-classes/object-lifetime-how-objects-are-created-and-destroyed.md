@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754042"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556053"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durée de vie d’un objet : création et destruction des objets (Visual Basic)
 Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâches d'initialisation doivent souvent être exécutées sur les nouveaux objets préalablement à leur utilisation. Ces tâches d’initialisation consistent généralement à ouvrir des fichiers, à se connecter à des bases de données et à lire des valeurs de clés de Registre. Visual Basic contrôle l’initialisation des nouveaux objets à l’aide de procédures appelées *constructeurs* (méthodes spéciales permettant de contrôler l’initialisation).  
@@ -148,7 +148,7 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.IDisposable.Dispose%2A>  
- [Initialisation et suppression des composants](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [Initialisation et suppression des composants](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [New (opérateur)](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Nettoyage de ressources non managées](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

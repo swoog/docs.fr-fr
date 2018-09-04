@@ -5,11 +5,11 @@ ms.assetid: 48cb104a-532d-40ae-aa57-769dae103fda
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d44a132f4bc4982ba0df437a56859de1a6fe441a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391956"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554649"
 ---
 # <a name="secure-conversations-and-secure-sessions"></a>Conversations sécurisées et sessions sécurisées
 Une fonctionnalité de Windows Communication Foundation (WCF) est la capacité d’établir des sessions sécurisées entre deux points de terminaison qui s’authentifient mutuellement et mettez-vous d’accord à un processus de signature numérique et le chiffrement. Par exemple, le point de terminaison de service peut demander qu'un point de terminaison de client envoie un jeton de sécurité basé sur un certificat X.509 pour l'authentification. Une fois que le client est authentifié, le point de terminaison de service renvoie un jeton de contexte de sécurité (SCT) au client, utilisé ensuite pour sécuriser tous les messages suivants dans la session. L'établissement de cette session sécurisée permet d'améliorer l'ensemble des messages échangés entre les deux points de terminaison, parce que le SCT a une clé symétrique. Les clés asymétriques, sur lesquelles les certificats X.509 sont basés, requièrent beaucoup plus de puissance de calcul que les clés symétriques pour générer une signature numérique ou chiffrer un jeu de données.  

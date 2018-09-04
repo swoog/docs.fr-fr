@@ -9,18 +9,18 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 3e616b3b61b4b1b561d5bdb7e51525f391901a22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf45d6fb3fb161ca5171e94b9ab7af1e0e6f0c3d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543587"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562067"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Comment : énumérer un sous-ensemble de files d'attente à l'impression
-Une situation courante rencontrée par les professionnels informatiques (IT) de la gestion d’un ensemble d’échelle de la société d’imprimantes est pour générer une liste des imprimantes présentant certaines caractéristiques. Cette fonctionnalité est fournie par le <xref:System.Printing.PrintServer.GetPrintQueues%2A> méthode d’un <xref:System.Printing.PrintServer> objet et le <xref:System.Printing.EnumeratedPrintQueueTypes> énumération.  
+Une situation courante rencontrée par les professionnels de l’informatique (IT) gère un ensemble d’échelle de la société des imprimantes consiste à générer une liste des imprimantes présentant certaines caractéristiques. Cette fonctionnalité est fournie par le <xref:System.Printing.PrintServer.GetPrintQueues%2A> méthode d’un <xref:System.Printing.PrintServer> objet et le <xref:System.Printing.EnumeratedPrintQueueTypes> énumération.  
   
 ## <a name="example"></a>Exemple  
- Dans l’exemple ci-dessous, le code commence par créer un tableau d’indicateurs qui spécifient les caractéristiques des files d’attente, que nous souhaitons liste. Dans cet exemple, nous recherchons les files d’attente qui sont installées localement sur le serveur d’impression et sont partagés. Le <xref:System.Printing.EnumeratedPrintQueueTypes> énumération offre de nombreuses autres possibilités.  
+ Dans l’exemple ci-dessous, le code commence par créer un tableau d’indicateurs qui spécifient les caractéristiques des files d’attente que nous souhaitons liste. Dans cet exemple, nous recherchons des files d’attente à l’impression qui sont installées localement sur le serveur d’impression et sont partagés. Le <xref:System.Printing.EnumeratedPrintQueueTypes> énumération offre de nombreuses autres possibilités.  
   
  Le code crée ensuite un <xref:System.Printing.LocalPrintServer> de l’objet, une classe dérivée de <xref:System.Printing.PrintServer>. Le serveur d’impression local est l’ordinateur sur lequel l’application est en cours d’exécution.  
   
@@ -32,7 +32,7 @@ Une situation courante rencontrée par les professionnels informatiques (IT) de 
  [!code-csharp[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/CSharp/Program.cs#listsubsetofprintqueues)]
  [!code-vb[EnumerateSubsetOfPrintQueues#ListSubsetOfPrintQueues](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EnumerateSubsetOfPrintQueues/visualbasic/program.vb#listsubsetofprintqueues)]  
   
- Vous pouvez étendre cet exemple en ayant la `foreach` boucle parcourt chaque file d’attente d’impression faire davantage de filtrage. Par exemple, vous pourriez filtrer les imprimantes qui ne gèrent pas l’impression recto-verso en demandant à l’appel de la boucle chaque file d’attente à l’impression <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> (méthode) et test, la valeur retournée pour la présence de duplex.  
+ Vous pouvez étendre cet exemple en ayant la `foreach` boucle qui parcourt chaque file d’attente d’impression faire davantage de filtrage. Par exemple, vous pourriez filtrer les imprimantes qui ne prennent pas en charge impression recto-verso en demandant à l’appel de la boucle chaque file d’attente à l’impression <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> (méthode) et test, la valeur retournée pour la présence de l’impression recto verso.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Printing.PrintServer.GetPrintQueues%2A>  
@@ -43,4 +43,4 @@ Une situation courante rencontrée par les professionnels informatiques (IT) de 
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [Documents dans WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Vue d’ensemble de l’impression](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Microsoft XPS Document Writer](http://go.microsoft.com/fwlink/?LinkId=147319)
+ [Microsoft XPS Document Writer](https://go.microsoft.com/fwlink/?LinkId=147319)

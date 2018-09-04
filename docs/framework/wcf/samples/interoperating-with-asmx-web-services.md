@@ -3,11 +3,11 @@ title: Interoperating with ASMX Web Services
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
 ms.openlocfilehash: ff1b497dde615e5c14417bd0ad14f1dbfd80d5e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483838"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658884"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperating with ASMX Web Services
 Cet exemple montre comment intégrer une application cliente de Windows Communication Foundation (WCF) à un service Web ASMX existant.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398985"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564715"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Comment : activer WIF pour une application de service web WCF
 ## <a name="applies-to"></a>S'applique à  
@@ -19,7 +19,7 @@ ms.locfileid: "33398985"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Récapitulatif  
- Cette procédure fournit des informations détaillées pour activer WIF dans un service Web WCF. Elle fournit également des instructions décrivant comment tester l'application pour vérifier que le service Web répertorie correctement les revendications lorsque l'application est exécutée. Cette procédure ne fournit pas d'instructions détaillées pour créer un service d'émission de jeton de sécurité (STS, Security Token Service), et utilise à la place le développement STS fourni avec l'outil Identité et accès. Le développement STS n'exécute de véritable authentification et est destiné à des fins de test uniquement. Vous devez installer l'outil Identité et accès pour exécuter cette procédure. Il peut être téléchargé à partir de l’emplacement suivant : [Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ Cette procédure fournit des informations détaillées pour activer WIF dans un service Web WCF. Elle fournit également des instructions décrivant comment tester l'application pour vérifier que le service Web répertorie correctement les revendications lorsque l'application est exécutée. Cette procédure ne fournit pas d'instructions détaillées pour créer un service d'émission de jeton de sécurité (STS, Security Token Service), et utilise à la place le développement STS fourni avec l'outil Identité et accès. Le développement STS n'exécute de véritable authentification et est destiné à des fins de test uniquement. Vous devez installer l'outil Identité et accès pour exécuter cette procédure. Il peut être téléchargé à partir de l’emplacement suivant : [Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Sommaire  
   

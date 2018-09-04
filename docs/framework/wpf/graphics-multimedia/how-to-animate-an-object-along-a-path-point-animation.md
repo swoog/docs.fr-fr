@@ -9,11 +9,11 @@ helpviewer_keywords:
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
 ms.openlocfilehash: d6dc79cd7a15aef2a4168fffb293c5e1f33cde08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416618"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552664"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Comment : animer un objet sur un tracé (animation de point)
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.Animation.PointAnimationUsingPath> objet à animer un <xref:System.Windows.Point> sur un tracé courbé.  

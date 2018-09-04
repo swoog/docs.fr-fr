@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468474"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553723"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Procédure pas à pas : organisation des contrôles dans les Windows Forms à l'aide des lignes d'alignement (SnapLines)
 Le positionnement précis des contrôles sur votre formulaire constitue une haute priorité pour de nombreuses applications. Le Concepteur de formulaires Windows offre de nombreux outils de disposition pour effectuer cette opération. Une des plus importantes est la <xref:System.Windows.Forms.Design.Behavior.SnapLine> fonctionnalité.  

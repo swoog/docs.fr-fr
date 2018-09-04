@@ -21,14 +21,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481967"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560586"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo, fonction
-Obtient le dernier code d’erreur qui a été déclenché par une des fonctions à nom fort.  
+Obtient le dernier code d’erreur déclenché par l’une des fonctions de nom fort.  
   
  Cette fonction a été déconseillée.  
   
@@ -54,4 +54,4 @@ HRESULT StrongNameErrorInfo ();
  **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions statiques globales d’affectation de noms fortes](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Fonctions statiques globales des noms forts](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

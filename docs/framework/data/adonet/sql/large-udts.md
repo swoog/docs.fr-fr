@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389573"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559817"
 ---
 # <a name="large-udts"></a>Grands types définis par l'utilisateur
 Les types définis par l'utilisateur (UDT, User-Defined Types) permettent à un développeur d'étendre le système de type scalaire du serveur, en stockant des objets CLR (Common Language Runtime) dans une base de données SQL Server. Les UDT peuvent contenir plusieurs éléments et, contrairement aux types de données alias traditionnels, avoir des comportements qui consistent en un unique type de données système SQL Server.  

@@ -3,11 +3,11 @@ title: Génération SQL de modification
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417245"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560754"
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 Cette section décrit la manière de développer un module de génération SQL de modification pour votre fournisseur (base de données conforme SQL:1999). Ce module doit traduire une arborescence de commandes de modification en instructions SQL INSERT, UPDATE ou DELETE appropriées.  

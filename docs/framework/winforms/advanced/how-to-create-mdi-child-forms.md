@@ -10,11 +10,11 @@ helpviewer_keywords:
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
 ms.openlocfilehash: bdfbe59ef779de242e32be11ca28c84f68437240
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486790"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658923"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Comment : créer des formulaires MDI enfants
 Formulaires MDI enfants constituent un élément essentiel de [Applications d’Interface multidocument (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), car ils représentent le centre d’intervention de l’utilisateur.  

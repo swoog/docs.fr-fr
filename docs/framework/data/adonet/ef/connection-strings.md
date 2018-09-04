@@ -2,19 +2,19 @@
 title: Chaînes de connexion
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: ac9c3b3b0fce4d6b7e0eb74e23c07c82faf9f722
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792417"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552504"
 ---
 # <a name="connection-strings"></a>Chaînes de connexion
 Une chaîne de connexion contient des informations d'initialisation qui sont passées en tant que paramètre d'un fournisseur de données à une source de données. La syntaxe dépend du fournisseur de données et la chaîne de connexion est analysée lors de la tentative d'ouverture d'une connexion. Les chaînes de connexion utilisées par Entity Framework contiennent des informations utilisées pour la connexion au fournisseur de données ADO.NET sous-jacent qui prend en charge Entity Framework. Elles contiennent également des informations sur les fichiers de modèle et de mappage requis.  
   
  La chaîne de connexion est utilisée par le fournisseur EntityClient lors de l'accès aux métadonnées de modèle et de mappage et de la connexion à la source de données. Il est possible d'accéder à cette chaîne ou de la définir via la propriété <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> peut être utilisée pour construire par programme des paramètres dans la chaîne de connexion ou y accéder par programme. Pour plus d’informations, consultez [Comment : créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
- Le [outils Entity Data Model](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) génèrent une chaîne de connexion qui est stockée dans le fichier de configuration de l’application. <xref:System.Data.Objects.ObjectContext> récupère automatiquement ces informations de connexion lors de la création de requêtes d'objet. Il est possible d'accéder au <xref:System.Data.EntityClient.EntityConnection> utilisé par une instance de <xref:System.Data.Objects.ObjectContext> à partir de la propriété <xref:System.Data.Objects.ObjectContext.Connection%2A>. Pour plus d’informations, consultez [gestion des connexions et Transactions](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
+ Le [outils Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) génèrent une chaîne de connexion qui est stockée dans le fichier de configuration de l’application. <xref:System.Data.Objects.ObjectContext> récupère automatiquement ces informations de connexion lors de la création de requêtes d'objet. Il est possible d'accéder au <xref:System.Data.EntityClient.EntityConnection> utilisé par une instance de <xref:System.Data.Objects.ObjectContext> à partir de la propriété <xref:System.Data.Objects.ObjectContext.Connection%2A>. Pour plus d’informations, consultez [gestion des connexions et Transactions](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
   
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion  
  Le format d'une chaîne de connexion est une liste délimitée par des points-virgules de paires de paramètres clé/valeur :  
@@ -30,7 +30,7 @@ Une chaîne de connexion contient des informations d'initialisation qui sont pas
 |`Metadata`|Obligatoire si le mot clé `Name` n'est pas spécifié. Liste de répertoires, de fichiers et d'emplacements de ressources délimités par des barres verticales (|) où rechercher les métadonnées et les informations de mappage. Voici un exemple :<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Les espaces situés de part et d'autre de la barre verticale sont ignorés.<br /><br /> Ce mot clé et le mot clé `Name` s'excluent mutuellement.|  
 |`Name`|L'application peut éventuellement spécifier le nom de la connexion dans un fichier de configuration d'application qui fournit les valeurs de chaîne de connexion mot clé/valeur requises. Dans ce cas, vous ne pouvez pas les fournir directement dans la chaîne de connexion. Le mot clé `Name` n'est pas autorisé dans un fichier de configuration.<br /><br /> Lorsque le mot clé `Name` n'est pas inclus dans la chaîne de connexion, des valeurs non vides pour le mot clé Provider sont requises.<br /><br /> Ce mot clé est incompatible avec tous les autres mots clés de chaîne de connexion, et inversement.|  
   
- Voici un exemple de chaîne de connexion pour le [AdventureWorks Sales Model](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) stockées dans le fichier de configuration d’application :  
+ Voici un exemple de chaîne de connexion pour le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) stockées dans le fichier de configuration d’application :  
   
   
   
@@ -110,5 +110,5 @@ Metadata=.\
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des fournisseurs de données](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [Points à prendre en considération pour le déploiement](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
- [Gestion des connexions et Transactions](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Gestion des connexions et Transactions](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [Chaînes de connexion](../../../../../docs/framework/data/adonet/connection-strings.md)

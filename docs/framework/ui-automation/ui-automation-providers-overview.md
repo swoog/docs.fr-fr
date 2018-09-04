@@ -8,16 +8,16 @@ ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e48e2eb0df8fbc4daf4db68b0c27493b122adfa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40ad2eb09b4e3a8f78f493311cdb5c0da410943b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407491"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560526"
 ---
 # <a name="ui-automation-providers-overview"></a>Vue d'ensemble des fournisseurs UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Les fournisseurs UI Automation permettent aux contrôles de communiquer avec les applications clientes UI Automation. En général, chaque contrôle ou autre élément distinct d’une [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] est représenté par un fournisseur. Le fournisseur expose des informations sur l’élément et peut implémenter des modèles de contrôle pour permettre à l’application cliente d’interagir avec le contrôle.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "33407491"
  Les fournisseurs UI Automation sont divisés en deux catégories : les fournisseurs côté client et les fournisseurs côté serveur.  
   
 ### <a name="client-side-providers"></a>Fournisseurs côté client  
- Les fournisseurs côté client sont implémentés par les clients UI Automation pour communiquer avec une application qui ne prend pas en charge, ou ne prend pas entièrement en charge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Fournisseurs côté client généralement communiquent avec le serveur sur la limite de processus en envoyant et en recevant des messages de Windows.  
+ Les fournisseurs côté client sont implémentés par les clients UI Automation pour communiquer avec une application qui ne prend pas en charge, ou ne prend pas entièrement en charge, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Fournisseurs côté client communiquent généralement avec le serveur sur la limite de processus par envoi et réception de messages de Windows.  
   
- Étant donné que les fournisseurs UI Automation pour les contrôles dans [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applications sont fournies en tant que partie du système d’exploitation et applications clientes ont rarement à implémenter leurs propres fournisseurs de cette vue d’ensemble ne couvre pas les d’autres.  
+ Étant donné que les fournisseurs UI Automation pour les contrôles dans [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] applications sont fournies en tant que partie du système d’exploitation, les applications clientes ont rarement d’implémenter leurs propres fournisseurs, et cette vue d’ensemble ne couvre pas les d’autres.  
   
 ### <a name="server-side-providers"></a>Fournisseurs côté serveur  
  Fournisseurs côté serveur sont implémentés par les contrôles personnalisés ou par les applications qui reposent sur une infrastructure d’interface utilisateur autre que [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: 95f375d8845c60441aa5eefdd37e32541ea2d5a7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418595"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43565679"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>Comment : lier des contrôles Windows Forms au composant BindingSource à l'aide du concepteur
 Après avoir ajouté des contrôles à votre formulaire et de déterminer l’interface utilisateur pour votre application, vous pouvez lier les contrôles à une source de données, afin que, au moment de l’exécution, les utilisateurs peuvent modifier et enregistrer des données relatives à l’application.  
