@@ -11,16 +11,16 @@ ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c10d5f363d454a64f9052315514e896f90f7081
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386140"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43541118"
 ---
-# <a name="certverifyauthenticodelicense-function"></a><span data-ttu-id="df737-102">CertVerifyAuthenticodeLicense, fonction</span><span class="sxs-lookup"><span data-stu-id="df737-102">CertVerifyAuthenticodeLicense Function</span></span>
-<span data-ttu-id="df737-103">Vérifie la validité d'une licence XrML Authenticode.</span><span class="sxs-lookup"><span data-stu-id="df737-103">Verifies the validity of an Authenticode XrML license.</span></span>  
+# <a name="certverifyauthenticodelicense-function"></a><span data-ttu-id="5c21c-102">CertVerifyAuthenticodeLicense, fonction</span><span class="sxs-lookup"><span data-stu-id="5c21c-102">CertVerifyAuthenticodeLicense Function</span></span>
+<span data-ttu-id="5c21c-103">Vérifie la validité d'une licence XrML Authenticode.</span><span class="sxs-lookup"><span data-stu-id="5c21c-103">Verifies the validity of an Authenticode XrML license.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="df737-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="df737-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c21c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5c21c-104">Syntax</span></span>  
   
 ```  
 HRESULT CertVerifyAuthenticodeLicense (  
@@ -31,41 +31,41 @@ HRESULT CertVerifyAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="df737-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="df737-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="5c21c-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="5c21c-105">Parameters</span></span>  
  `pLicenseBlob`  
- <span data-ttu-id="df737-106">[en entrée] La licence XrML Authenticode à vérifier.</span><span class="sxs-lookup"><span data-stu-id="df737-106">[in] The Authenticode XrML license to be verified.</span></span>  
+ <span data-ttu-id="5c21c-106">[en entrée] La licence XrML Authenticode à vérifier.</span><span class="sxs-lookup"><span data-stu-id="5c21c-106">[in] The Authenticode XrML license to be verified.</span></span>  
   
- <span data-ttu-id="df737-107">Consultez le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span><span class="sxs-lookup"><span data-stu-id="df737-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
+ <span data-ttu-id="5c21c-107">Consultez le [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span><span class="sxs-lookup"><span data-stu-id="5c21c-107">See the [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) structure.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="df737-108">[in] Facultatif.</span><span class="sxs-lookup"><span data-stu-id="df737-108">[in] Optional.</span></span> <span data-ttu-id="df737-109">Une combinaison des valeurs suivantes :</span><span class="sxs-lookup"><span data-stu-id="df737-109">A combination of following values:</span></span>  
+ <span data-ttu-id="5c21c-108">[in] Facultatif.</span><span class="sxs-lookup"><span data-stu-id="5c21c-108">[in] Optional.</span></span> <span data-ttu-id="5c21c-109">Une combinaison des valeurs suivantes :</span><span class="sxs-lookup"><span data-stu-id="5c21c-109">A combination of following values:</span></span>  
   
--   <span data-ttu-id="df737-110">AXL_REVOCATION_NO_CHECK</span><span class="sxs-lookup"><span data-stu-id="df737-110">AXL_REVOCATION_NO_CHECK</span></span>  
+-   <span data-ttu-id="5c21c-110">AXL_REVOCATION_NO_CHECK</span><span class="sxs-lookup"><span data-stu-id="5c21c-110">AXL_REVOCATION_NO_CHECK</span></span>  
   
--   <span data-ttu-id="df737-111">AXL_REVOCATION_CHECK_END_CERT_ONLY</span><span class="sxs-lookup"><span data-stu-id="df737-111">AXL_REVOCATION_CHECK_END_CERT_ONLY</span></span>  
+-   <span data-ttu-id="5c21c-111">AXL_REVOCATION_CHECK_END_CERT_ONLY</span><span class="sxs-lookup"><span data-stu-id="5c21c-111">AXL_REVOCATION_CHECK_END_CERT_ONLY</span></span>  
   
--   <span data-ttu-id="df737-112">AXL_REVOCATION_CHECK_ENTIRE_CHAIN</span><span class="sxs-lookup"><span data-stu-id="df737-112">AXL_REVOCATION_CHECK_ENTIRE_CHAIN</span></span>  
+-   <span data-ttu-id="5c21c-112">AXL_REVOCATION_CHECK_ENTIRE_CHAIN</span><span class="sxs-lookup"><span data-stu-id="5c21c-112">AXL_REVOCATION_CHECK_ENTIRE_CHAIN</span></span>  
   
--   <span data-ttu-id="df737-113">AXL_URL_CACHE_ONLY_RETRIEVAL</span><span class="sxs-lookup"><span data-stu-id="df737-113">AXL_URL_CACHE_ONLY_RETRIEVAL</span></span>  
+-   <span data-ttu-id="5c21c-113">AXL_URL_CACHE_ONLY_RETRIEVAL</span><span class="sxs-lookup"><span data-stu-id="5c21c-113">AXL_URL_CACHE_ONLY_RETRIEVAL</span></span>  
   
--   <span data-ttu-id="df737-114">AXL_LIFETIME_SIGNING</span><span class="sxs-lookup"><span data-stu-id="df737-114">AXL_LIFETIME_SIGNING</span></span>  
+-   <span data-ttu-id="5c21c-114">AXL_LIFETIME_SIGNING</span><span class="sxs-lookup"><span data-stu-id="5c21c-114">AXL_LIFETIME_SIGNING</span></span>  
   
--   <span data-ttu-id="df737-115">AXL_TRUST_MICROSOFT_ROOT_ONLY</span><span class="sxs-lookup"><span data-stu-id="df737-115">AXL_TRUST_MICROSOFT_ROOT_ONLY</span></span>  
+-   <span data-ttu-id="5c21c-115">AXL_TRUST_MICROSOFT_ROOT_ONLY</span><span class="sxs-lookup"><span data-stu-id="5c21c-115">AXL_TRUST_MICROSOFT_ROOT_ONLY</span></span>  
   
  `pSignerInfo`  
- <span data-ttu-id="df737-116">[en sortie] Pour recevoir les informations du signataire.</span><span class="sxs-lookup"><span data-stu-id="df737-116">[out] To receive the signer's information.</span></span> <span data-ttu-id="df737-117">Si la licence n'était pas signée, `dwError` est défini à TRUST_E_NOSIGNATURE.</span><span class="sxs-lookup"><span data-stu-id="df737-117">If the license wasn't signed, `dwError` is set to TRUST_E_NOSIGNATURE.</span></span> <span data-ttu-id="df737-118">Il incombe l’appelant de libérer des ressources à l’aide de la [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) fonction après utilisation.</span><span class="sxs-lookup"><span data-stu-id="df737-118">It is the caller's responsibility to free resources by using the [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) function after use.</span></span>  
+ <span data-ttu-id="5c21c-116">[en sortie] Pour recevoir les informations du signataire.</span><span class="sxs-lookup"><span data-stu-id="5c21c-116">[out] To receive the signer's information.</span></span> <span data-ttu-id="5c21c-117">Si la licence n'était pas signée, `dwError` est défini à TRUST_E_NOSIGNATURE.</span><span class="sxs-lookup"><span data-stu-id="5c21c-117">If the license wasn't signed, `dwError` is set to TRUST_E_NOSIGNATURE.</span></span> <span data-ttu-id="5c21c-118">Il incombe l’appelant de libérer des ressources à l’aide de la [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) fonction après utilisation.</span><span class="sxs-lookup"><span data-stu-id="5c21c-118">It is the caller's responsibility to free resources by using the [CertFreeAuthenticodeSignerInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md) function after use.</span></span>  
   
- <span data-ttu-id="df737-119">Consultez [axl_authenticode_signer_info, Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).</span><span class="sxs-lookup"><span data-stu-id="df737-119">See [AXL_AUTHENTICODE_SIGNER_INFO Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).</span></span>  
+ <span data-ttu-id="5c21c-119">Consultez [axl_authenticode_signer_info, Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).</span><span class="sxs-lookup"><span data-stu-id="5c21c-119">See [AXL_AUTHENTICODE_SIGNER_INFO Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md).</span></span>  
   
  `pTimestamperInfo`  
- <span data-ttu-id="df737-120">[en sortie] Pour recevoir les informations de l'horodateur, si elles sont disponibles.</span><span class="sxs-lookup"><span data-stu-id="df737-120">[out] To receive time stamper's information, if available.</span></span> <span data-ttu-id="df737-121">Si la licence n'était pas horodatée, `dwError` est défini à TRUST_E_NOSIGNATURE.</span><span class="sxs-lookup"><span data-stu-id="df737-121">If the license was not time-stamped, `dwError` is set to TRUST_E_NOSIGNATURE.</span></span> <span data-ttu-id="df737-122">Il incombe l’appelant de libérer des ressources à l’aide de la [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) fonction après utilisation.</span><span class="sxs-lookup"><span data-stu-id="df737-122">It is the caller's responsibility to free resources by using the [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) function after use.</span></span>  
+ <span data-ttu-id="5c21c-120">[en sortie] Pour recevoir les informations de l'horodateur, si elles sont disponibles.</span><span class="sxs-lookup"><span data-stu-id="5c21c-120">[out] To receive time stamper's information, if available.</span></span> <span data-ttu-id="5c21c-121">Si la licence n'était pas horodatée, `dwError` est défini à TRUST_E_NOSIGNATURE.</span><span class="sxs-lookup"><span data-stu-id="5c21c-121">If the license was not time-stamped, `dwError` is set to TRUST_E_NOSIGNATURE.</span></span> <span data-ttu-id="5c21c-122">Il incombe l’appelant de libérer des ressources à l’aide de la [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) fonction après utilisation.</span><span class="sxs-lookup"><span data-stu-id="5c21c-122">It is the caller's responsibility to free resources by using the [CertFreeAuthenticodeTimestamperInfo](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodetimestamperinfo-function.md) function after use.</span></span>  
   
- <span data-ttu-id="df737-123">Consultez [axl_authenticode_timestamper_info, Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).</span><span class="sxs-lookup"><span data-stu-id="df737-123">See [AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).</span></span>  
+ <span data-ttu-id="5c21c-123">Consultez [axl_authenticode_timestamper_info, Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).</span><span class="sxs-lookup"><span data-stu-id="5c21c-123">See [AXL_AUTHENTICODE_TIMESTAMPER_INFO Structure](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="df737-124">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="df737-124">Return Value</span></span>  
- <span data-ttu-id="df737-125">Retourne `S_OK` en cas de réussite.</span><span class="sxs-lookup"><span data-stu-id="df737-125">Returns `S_OK` if successful.</span></span> <span data-ttu-id="df737-126">Sinon, retourne un code d'erreur.</span><span class="sxs-lookup"><span data-stu-id="df737-126">Otherwise, returns an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5c21c-124">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="5c21c-124">Return Value</span></span>  
+ <span data-ttu-id="5c21c-125">Retourne `S_OK` en cas de réussite.</span><span class="sxs-lookup"><span data-stu-id="5c21c-125">Returns `S_OK` if successful.</span></span> <span data-ttu-id="5c21c-126">Sinon, retourne un code d'erreur.</span><span class="sxs-lookup"><span data-stu-id="5c21c-126">Otherwise, returns an error code.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df737-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="df737-127">See Also</span></span>  
- [<span data-ttu-id="df737-128">Authenticode</span><span class="sxs-lookup"><span data-stu-id="df737-128">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)  
- [<span data-ttu-id="df737-129">GetHashFromHandle, méthode</span><span class="sxs-lookup"><span data-stu-id="df737-129">GetHashFromHandle Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
- [<span data-ttu-id="df737-130">ICLRStrongName, interface</span><span class="sxs-lookup"><span data-stu-id="df737-130">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5c21c-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5c21c-127">See Also</span></span>  
+ [<span data-ttu-id="5c21c-128">Authenticode</span><span class="sxs-lookup"><span data-stu-id="5c21c-128">Authenticode</span></span>](../../../../docs/framework/unmanaged-api/authenticode/index.md)  
+ [<span data-ttu-id="5c21c-129">GetHashFromHandle, méthode</span><span class="sxs-lookup"><span data-stu-id="5c21c-129">GetHashFromHandle Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)  
+ [<span data-ttu-id="5c21c-130">ICLRStrongName, interface</span><span class="sxs-lookup"><span data-stu-id="5c21c-130">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
