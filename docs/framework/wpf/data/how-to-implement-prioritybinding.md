@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf0ed5c2b55358d3a583ac89e307b23b3ab08a9a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557756"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671694"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Comment : implémenter PriorityBinding
-<xref:System.Windows.Data.PriorityBinding> dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fonctionne en spécifiant une liste de liaisons. La liste de liaisons est classée de priorité la plus élevée à la priorité la plus faible. Si la liaison de priorité la plus élevée retourne une valeur avec succès lorsqu’il est traité puis il est jamais nécessaire pour traiter les autres liaisons dans la liste. Il peut être le cas de la liaison de priorité la plus élevée prend beaucoup de temps à évaluer, la priorité la plus élevée suivante qui retourne une valeur avec succès est utilisée jusqu'à ce qu’une liaison d’une priorité plus élevée retourne une valeur avec succès.  
+<xref:System.Windows.Data.PriorityBinding> dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fonctionne en spécifiant une liste de liaisons. La liste des liaisons est classée de priorité la plus élevée à la priorité la plus basse. Si la liaison de priorité la plus élevée retourne une valeur avec succès lorsqu’il est traité puis il n’est jamais nécessaire de traiter les autres liaisons dans la liste. Il peut arriver que la liaison de priorité la plus élevée prend beaucoup de temps à évaluer, la priorité la plus élevée suivante qui retourne une valeur avec succès est utilisée jusqu'à ce qu’une liaison d’une priorité plus élevée retourne une valeur avec succès.  
   
 ## <a name="example"></a>Exemple  
  Pour illustrer comment <xref:System.Windows.Data.PriorityBinding> fonctionne, le `AsyncDataSource` objet a été créé avec les trois propriétés suivantes : `FastDP`, `SlowerDP`, et `SlowestDP`.  
@@ -24,25 +24,25 @@ ms.locfileid: "33557756"
   
  L’accesseur get de `SlowerDP` attend trois secondes avant de retourner la valeur de la `_slowerDP` membre de données.  
   
- L’accesseur get de `SlowestDP` attend 5 secondes avant de retourner la valeur de la `_slowestDP` membre de données.  
+ L’accesseur get de `SlowestDP` attend cinq secondes avant de retourner la valeur de la `_slowestDP` membre de données.  
   
 > [!NOTE]
->  L’exemple est uniquement fourni à des fins de démonstration. Le [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] recommandé par rapport à la définition des propriétés qui sont beaucoup plus lente qu’un ensemble de champs. Pour plus d’informations, consultez [NIB : choix entre les propriétés et méthodes](http://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
+>  L’exemple est uniquement fourni à des fins de démonstration. Le [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] est recommandé de définir de propriétés qui sont beaucoup plus lent qu’un ensemble de champs serait. Pour plus d’informations, consultez [NIB : choix entre les propriétés et méthodes](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af).  
   
  [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
  [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- Le <xref:System.Windows.Controls.TextBlock.Text%2A> propriété est liée à la liste ci-dessus `AsyncDS` à l’aide de <xref:System.Windows.Data.PriorityBinding>:  
+ Le <xref:System.Windows.Controls.TextBlock.Text%2A> propriété est liée à la méthode ci-dessus `AsyncDS` à l’aide de <xref:System.Windows.Data.PriorityBinding>:  
   
  [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- Lorsque le moteur de liaison traite les <xref:System.Windows.Data.Binding> des objets, il commence par la première <xref:System.Windows.Data.Binding>, qui est lié à la `SlowestDP` propriété. Lorsque cela <xref:System.Windows.Data.Binding> est traité, il ne retourne pas de valeur avec succès, car il est en veille pendant 5 secondes, par conséquent, la prochaine <xref:System.Windows.Data.Binding> élément est traité. La prochaine <xref:System.Windows.Data.Binding> ne retourne pas de valeur avec succès, car il est en veille pendant 3 secondes. Le moteur de liaison, puis déplace sur la prochaine <xref:System.Windows.Data.Binding> élément, qui est lié à la `FastDP` propriété. Cela <xref:System.Windows.Data.Binding> retourne la valeur « rapide ». Le <xref:System.Windows.Controls.TextBlock> affiche maintenant la valeur « rapide ».  
+ Lorsque le moteur de liaison traite les <xref:System.Windows.Data.Binding> objets, il commence par la première <xref:System.Windows.Data.Binding>, qui est lié à la `SlowestDP` propriété. Lorsque cela <xref:System.Windows.Data.Binding> est traité, il ne retourne pas de valeur avec succès, car il est en veille pendant 5 secondes, par conséquent, la prochaine <xref:System.Windows.Data.Binding> élément est traité. La prochaine <xref:System.Windows.Data.Binding> ne retourne pas de valeur avec succès, car il est en état de veille pour 3 secondes. Le moteur de liaison se place ensuite sur la prochaine <xref:System.Windows.Data.Binding> élément, qui est lié à la `FastDP` propriété. Cela <xref:System.Windows.Data.Binding> retourne la valeur « Fast Value ». Le <xref:System.Windows.Controls.TextBlock> affiche désormais la valeur « Fast Value ».  
   
- Après 3 secondes, la `SlowerDP` propriété retourne la valeur « Valeur plus lent ». Le <xref:System.Windows.Controls.TextBlock> puis affiche la valeur « Valeur plus lent ».  
+ Après 3 secondes, le `SlowerDP` propriété retourne la valeur « Valeur plus lent ». Le <xref:System.Windows.Controls.TextBlock> puis affiche la valeur « Valeur plus lent ».  
   
- Après 5 secondes, la `SlowestDP` propriété retourne la valeur « Les plus lents Value ». Cette liaison a la priorité la plus élevée, car elle est répertoriée en premier. Le <xref:System.Windows.Controls.TextBlock> affiche maintenant la valeur « Les plus lents Value ».  
+ Après 5 secondes, le `SlowestDP` propriété retourne la valeur « Slowest Value ». Cette liaison a la priorité la plus élevée, car elle est répertoriée en premier. Le <xref:System.Windows.Controls.TextBlock> affiche désormais la valeur « Slowest Value ».  
   
- Consultez <xref:System.Windows.Data.PriorityBinding> pour plus d’informations sur ce qui est considéré comme une valeur de retour réussite d’une liaison.  
+ Consultez <xref:System.Windows.Data.PriorityBinding> pour plus d’informations sur ce qui est considéré comme valeur de retournée avec succès à partir d’une liaison.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  

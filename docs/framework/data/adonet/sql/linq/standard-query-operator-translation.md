@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: fb4910e48af58463c5c851173f8e3caf4594cc3a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424228"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672773"
 ---
 # <a name="standard-query-operator-translation"></a>Traduction des opérateurs de requête standard
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traduit les opérateurs de requête standard en commandes SQL. Le processeur de requêtes de la base de données détermine la sémantique d’exécution de la traduction SQL.  

@@ -2,15 +2,15 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: c7219b94861cd23f27b331d1d3e5509654263430
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 03472f76310fa99568f13f0aa49d9e2a3453ac30
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671097"
 ---
 # <a name="custom-token"></a>Custom Token
-Cet exemple montre comment ajouter une implémentation personnalisée de jeton dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
+Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
@@ -21,7 +21,7 @@ Cet exemple montre comment ajouter une implémentation personnalisée de jeton d
   
 -   Comment le service peut consommer et valider un jeton de sécurité personnalisé.  
   
--   Comment le code de service WCF peut obtenir les informations sur les jetons de sécurité reçu incluant le jeton de sécurité personnalisé.  
+-   Comment le code de service WCF peut obtenir les informations sur les jetons de sécurité reçu, y compris le jeton de sécurité personnalisé.  
   
 -   Comment le certificat X.509 du serveur permet de protéger la clé symétrique utilisée pour la signature et le chiffrement des messages.  
   
@@ -117,7 +117,7 @@ channelFactory.Close();
 ## <a name="custom-security-token-implementation"></a>Implémentation du jeton de sécurité personnalisé  
  Pour activer un jeton de sécurité personnalisé dans WCF, créez une représentation d’objet du jeton de sécurité personnalisé. Dans l'exemple, cette représentation figure dans la classe `CreditCardToken`. La représentation d'objet est chargée de conserver toutes les informations de jeton de sécurité pertinentes et de fournir la liste des clés de sécurité contenues dans le jeton de sécurité. Dans ce cas de figure, le jeton de sécurité de carte de crédit ne contient pas de clé de sécurité.  
   
- La section suivante décrit ce qui doit être fait pour permettre un jeton personnalisé d’être transmises sur le câble et consommé par un point de terminaison WCF.  
+ La section suivante décrit ce qui doit être fait pour activer un jeton personnalisé d’être transmises sur le câble et consommé par un point de terminaison WCF.  
   
 ```  
 class CreditCardToken : SecurityToken  
@@ -593,7 +593,7 @@ string GetCallerCreditCardNumber()
   
 #### <a name="to-set-up-and-build-the-sample"></a>Pour configurer et générer l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -606,7 +606,7 @@ string GetCallerCreditCardNumber()
   
 1.  Lancez Client.exe à partir du répertoire \client\bin. L'activité du client s'affiche sur son application de console.  
   
-2.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -628,7 +628,7 @@ string GetCallerCreditCardNumber()
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.  
   
-10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

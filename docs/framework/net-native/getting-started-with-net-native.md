@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90469469c864e235ff96e7dd2f0f3ebfcef9d7b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395464"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672173"
 ---
 # <a name="getting-started-with-net-native"></a>Prise en main de .NET Native
 Que vous écriviez une nouvelle application Windows pour Windows 10 ou que vous migriez une application du Windows Store existante, vous pouvez suivre le même ensemble de procédures. Pour créer une application [!INCLUDE[net_native](../../../includes/net-native-md.md)] , procédez comme suit :  
@@ -114,7 +114,7 @@ Que vous écriviez une nouvelle application Windows pour Windows 10 ou que vous 
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence du fichier de configuration des directives runtime (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB : Installation de .NET Native et la Configuration](http://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [NIB : Installation et .NET Native Configuration](https://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [.NET Native et compilation](../../../docs/framework/net-native/net-native-and-compilation.md)  
  [Réflexion et .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [API qui s’appuient sur la réflexion](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480490"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673878"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Méthode ICLRStrongName::GetHashFromAssemblyFile
 Obtient un hachage du fichier d’assembly spécifié, à l’aide de l’algorithme de hachage spécifié.  

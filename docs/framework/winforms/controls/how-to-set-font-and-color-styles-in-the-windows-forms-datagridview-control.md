@@ -10,18 +10,19 @@ helpviewer_keywords:
 - data grids [Windows Forms], font styles
 - data grids [Windows Forms], color styles
 ms.assetid: 588f2c57-d963-41b1-9c1d-d02d71818113
-ms.openlocfilehash: e8aec1915fabb7e18d6dc3ed584d041c273cb78d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 739f49caa50a3cff85fcac98506d82f01c23af75
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674068"
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Comment : définir des styles de police et de couleur dans le contrôle DataGridView Windows Forms
 Vous pouvez spécifier l'apparence visuelle des cellules dans un contrôle <xref:System.Windows.Forms.DataGridView> en définissant les propriétés de la classe <xref:System.Windows.Forms.DataGridViewCellStyle>. Vous pouvez récupérer des instances de cette classe à partir de différentes propriétés de la classe <xref:System.Windows.Forms.DataGridView> et de ses classes auxiliaires ou vous pouvez instancier des objets <xref:System.Windows.Forms.DataGridViewCellStyle> à assigner à ces propriétés.  
   
- Les procédures suivantes illustrent la personnalisation de base de l'apparence des cellules à l'aide de la propriété <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>. Chaque cellule du contrôle hérite des styles spécifiés via cette propriété, sauf s'ils sont substitués au niveau de la cellule, de la ligne ou de la colonne. Pour obtenir un exemple d’héritage de style, consultez [Comment : définir des Styles de cellule par défaut pour le contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Pour plus d'informations sur les autres utilisations de la classe <xref:System.Windows.Forms.DataGridViewCellStyle>, consultez les rubriques répertoriées dans la section Voir aussi.  
+ Les procédures suivantes illustrent la personnalisation de base de l'apparence des cellules à l'aide de la propriété <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>. Chaque cellule du contrôle hérite des styles spécifiés via cette propriété, sauf s'ils sont substitués au niveau de la cellule, de la ligne ou de la colonne. Pour obtenir un exemple d’héritage de style, consultez [Comment : définir des Styles de cellule par défaut pour le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Pour plus d'informations sur les autres utilisations de la classe <xref:System.Windows.Forms.DataGridViewCellStyle>, consultez les rubriques répertoriées dans la section Voir aussi.  
   
- Cette tâche est très bien prise en charge dans Visual Studio.  Consultez également [Comment : définir des Styles de cellules par défaut et les Formats de données pour les Windows Forms DataGridView contrôle à l’aide du concepteur](http://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
+ Cette tâche est très bien prise en charge dans Visual Studio.  Consultez également [Comment : définir des Styles de cellules par défaut et les Formats de données pour les Windows Forms DataGridView contrôle à l’aide du concepteur](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
   
 ### <a name="to-specify-the-font-used-by-datagridview-cells"></a>Pour spécifier la police utilisée par les cellules DataGridView  
   
@@ -56,7 +57,7 @@ Vous pouvez spécifier l'apparence visuelle des cellules dans un contrôle <xref
 -   des références aux assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType> et <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="robust-programming"></a>Programmation fiable  
- Pour bénéficier d'une extensibilité maximale, vous devez partager des objets <xref:System.Windows.Forms.DataGridViewCellStyle> sur plusieurs lignes, colonnes ou cellules qui utilisent les mêmes styles, plutôt que définir séparément les propriétés de style pour chaque élément séparément. Pour plus d’informations, consultez [meilleures pratiques pour la mise à l’échelle du contrôle DataGridView Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
+ Pour bénéficier d'une extensibilité maximale, vous devez partager des objets <xref:System.Windows.Forms.DataGridViewCellStyle> sur plusieurs lignes, colonnes ou cellules qui utilisent les mêmes styles, plutôt que définir séparément les propriétés de style pour chaque élément séparément. Pour plus d’informations, consultez [meilleures pratiques pour la mise à l’échelle le contrôle de DataGridView Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  

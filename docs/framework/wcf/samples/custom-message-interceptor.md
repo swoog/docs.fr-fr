@@ -3,11 +3,11 @@ title: Custom Message Interceptor
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
 ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486738"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670741"
 ---
 # <a name="custom-message-interceptor"></a>Custom Message Interceptor
 Cet exemple montre l'utilisation du modèle d'extensibilité des canaux. Indique en particulier comment implémenter un élément de liaison personnalisé qui crée des fabrications de canaux et des écouteurs de canal pour intercepter tous les messages entrants et sortants à un point particulier dans la pile d’exécution. L'exemple inclut également un client et serveur qui montrent l'utilisation de ces fabrications personnalisées.  

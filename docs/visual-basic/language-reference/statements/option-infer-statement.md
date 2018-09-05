@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245789"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672583"
 ---
 # <a name="option-infer-statement"></a>Instruction Option Infer
 Permet l'utilisation de l'inférence de type de variable locale dans les variables déclaratives.  
@@ -41,12 +41,12 @@ Option Infer { On | Off }
   
  Dans l'illustration suivante, `Option Infer` est activé. La variable contenue dans la déclaration `Dim someVar = 2` est déclarée en tant qu'entier par l'inférence de type.  
   
- ![Vue IntelliSense de la déclaration. ] (../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
+ ![Vue IntelliSense de la déclaration. ](../../../visual-basic/language-reference/statements/media/optioninferasinteger.png "optionInferAsInteger")  
 IntelliSense quand Option Infer est activé  
   
  Dans l'illustration suivante, `Option Infer` est désactivé. La variable contenue dans la déclaration `Dim someVar = 2` est déclarée comme `Object` par l'inférence de type. Dans cet exemple, le **Option Strict** est défini sur **hors** sur le [Page Compiler, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
- ![Vue IntelliSense de la déclaration. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
+ ![Vue IntelliSense de la déclaration. ](../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
 IntelliSense quand Option Infer est désactivé  
   
 > [!NOTE]

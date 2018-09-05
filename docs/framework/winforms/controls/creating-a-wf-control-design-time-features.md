@@ -11,11 +11,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486881"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671865"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Procédure pas à pas : création d’un contrôle Windows Forms qui tire parti des fonctionnalités au moment du design de Visual Studio
 L’expérience au moment du design pour un contrôle personnalisé peut être améliorée en créant un concepteur personnalisé associé.  

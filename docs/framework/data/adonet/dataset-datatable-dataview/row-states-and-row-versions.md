@@ -1,16 +1,16 @@
 ---
 title: États des lignes et versions des lignes
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759411"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672812"
 ---
 # <a name="row-states-and-row-versions"></a>États des lignes et versions des lignes
 ADO.NET gère les lignes des tables à l'aide des états et des versions de ligne. Un état de ligne indique le statut d'une ligne ; les versions de ligne conservent les valeurs stockées dans une ligne pendant leur modification, notamment les valeurs actuelles, d'origine et par défaut. Par exemple, une fois qu'une modification a été apportée à une colonne dans une ligne, la ligne possède un état de ligne `Modified` et deux versions de ligne : `Current`, qui contient les valeurs de ligne actuelles et `Original`, qui renferme les valeurs de ligne avant la modification de la colonne.  
@@ -44,7 +44,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
 |Valeur DataRowVersion|Description|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|Les valeurs actuelles de la ligne. Cette version de ligne n'existe pas pour les lignes ayant un `RowState` `Deleted`.|  
-|<xref:System.Data.DataRowVersion.Default>|Version de ligne par défaut d'une ligne particulière. La version de ligne par défaut d'une ligne `Added`, `Modified` ou `Unchanged` est `Current`. La version de ligne par défaut d'une ligne `Deleted` est `Original`. La version de ligne par défaut d'une ligne `Detached` est `Proposed`.|  
+|<xref:System.Data.DataRowVersion.Default>|Version de ligne par défaut d'une ligne particulière. La version de ligne par défaut d'une ligne `Added`, `Modified` ou `Deleted` est `Current`. La version de ligne par défaut d'une ligne `Detached` est `Proposed`.|  
 |<xref:System.Data.DataRowVersion.Original>|Les valeurs d'origine de la ligne. Cette version de ligne n'existe pas pour les lignes ayant un `RowState` `Added`.|  
 |<xref:System.Data.DataRowVersion.Proposed>|Les valeurs proposées de la ligne. Cette version de ligne existe pendant une opération de modification sur une ligne ou pour une ligne qui ne fait pas partie d'un `DataRowCollection`.|  
   
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [Manipulation des données dans un DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [DataSets, DataTables et DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [DataAdapters et DataReaders](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

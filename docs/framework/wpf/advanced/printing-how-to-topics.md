@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421708"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674212"
 ---
 # <a name="printing-how-to-topics"></a>Rubriques "Comment" relatives à l'impression
 Les rubriques de cette section montrent comment utiliser l’impression et les fonctionnalités de gestion de système d’impression inclus avec [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] , ainsi que la nouvelle [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] chemin d’impression.  

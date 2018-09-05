@@ -3,11 +3,11 @@ title: Programmes de résolution d'homologue
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
 ms.openlocfilehash: 01320d98953c8fdc057aeec840ace4b818fcf115
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385079"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43670595"
 ---
 # <a name="peer-resolvers"></a>Programmes de résolution d'homologue
 Pour se connecter à une maille, un nœud d'homologue requiert les adresses IP d'autres nœuds. Les adresses IP sont obtenues en contactant un service de résolution, qui prend l'ID de la maille et retourne une liste d'adresses correspondant aux nœuds enregistrés sous cet ID de maille particulier. Le programme de résolution conserve une liste des adresses inscrites, qu'il crée en inscrivant chaque nœud de la maille avec le service.  

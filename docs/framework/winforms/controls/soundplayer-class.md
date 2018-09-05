@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538811"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672889"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer, classe
 La classe `SoundPlayer` vous permet d'inclure facilement des sons dans vos applications.  
@@ -51,4 +51,4 @@ La classe `SoundPlayer` vous permet d'inclure facilement des sons dans vos appli
  [Contrôles à utiliser dans les Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Fournit une liste complète de contrôles Windows Forms, avec des liens vers des informations sur leur utilisation.  
   
- Consultez également [lien hypertexte «http://msdn.microsoft.com/library/11bxex12(v=vs.110)« My.Computer, objet](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) ou [My.Computer, objet](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ Consultez également [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)« My.Computer (objet)](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) ou [My.Computer (objet)](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

@@ -12,11 +12,11 @@ ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f587d45f046a3f7b8556052df63220f9f1cac42
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482405"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672719"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime
 Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieurs scénarios de développement de logiciel avec le [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ces scénarios se répartissent en trois catégories :  

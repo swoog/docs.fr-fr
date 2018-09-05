@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 67a9fd51377294ab6afb5a3d7deaec19fb134b21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25afbb268a0ef7772585a0f3829b56f135758b61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490745"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672318"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>Comment : utiliser plusieurs jetons de sécurité du même type
 -   Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, un message client ne pouvait contenir qu'un jeton d'un type donné. Désormais, les messages peuvent contenir plusieurs jetons d'un type donné. Cette rubrique explique comment inclure plusieurs jetons du même type dans un message client.  
@@ -52,4 +52,4 @@ ms.locfileid: "33490745"
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture de sécurité](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

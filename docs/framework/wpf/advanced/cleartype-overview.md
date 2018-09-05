@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: 1d434fa913d077d72f0f889dc69eccc8a9ed0e9b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 236d6dec444c8169c164e9f096c7f81a336fdca4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540802"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43674376"
 ---
 # <a name="cleartype-overview"></a>Vue d'ensemble de ClearType
 Cette rubrique propose une vue d’ensemble de la technologie [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] rencontrée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -45,7 +45,7 @@ Texte avec l’ancienne et la nouvelle version de ClearType
  ![Texte avec bords dentelés sur les courbes marquées](../../../../docs/framework/wpf/advanced/media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Texte avec bords dentelés sur les courbes marquées  
   
- La version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utilisée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise l’anticrénelage de direction y pour lisser les bords dentelés. Cette fonctionnalité est particulièrement importante pour améliorer la lisibilité des langues Asie de l'Est, dont les idéogrammes comptent quasiment autant de courbes marquées horizontales que verticales.  
+ La version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] utilisée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] utilise l’anticrénelage de direction y pour lisser les bords dentelés. Cette fonctionnalité est particulièrement importante pour améliorer la lisibilité des langues d’Extrême-Orient, dont les idéogrammes comptent quasiment autant de courbes marquées horizontales que verticales.  
   
  L’exemple suivant montre le résultat de l’anticrénelage de direction y. Dans ce cas, le haut et le bas de la lettre affichent une courbe lissée.  
   
@@ -56,15 +56,15 @@ Texte avec anticrénelage ClearType dans la direction y
 ## <a name="hardware-acceleration"></a>Accélération matérielle  
  La version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] disponible dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] peut tirer parti de l’accélération matérielle pour améliorer les performances et réduire la charge de l’UC et les exigences concernant la mémoire système. Grâce à l’utilisation des nuanceurs de pixels et de la mémoire vidéo d’une carte graphique, [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] accélère le rendu du texte, en particulier quand une animation est utilisée.  
   
- La version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ne modifie pas les paramètres de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] à l’échelle du système. La désactivation de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] fait basculer l’anticrénelage de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dans le mode nuances de gris. En outre, la version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ne modifie pas les paramètres de [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ La version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ne modifie pas les paramètres de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] à l’échelle du système. La désactivation de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] fait basculer l’anticrénelage de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dans le mode nuances de gris. En outre, la version de [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ne modifie pas les paramètres de [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  En ce qui concerne la conception architecturale de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], il a notamment été décidé d’améliorer la prise en charge par la disposition indépendante de la résolution des moniteurs DPI de résolution supérieure, qui sont de plus en plus répandus. De ce fait, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ne prend pas en charge le rendu de texte crénelé ni les bitmaps de certaines polices d’Extrême-Orient, qui sont tous deux dépendants de la résolution.  
   
 <a name="further_information"></a>   
 ## <a name="further-information"></a>Informations complémentaires  
- [Informations sur ClearType](http://www.microsoft.com/typography/ClearTypeInfo.mspx)  
+ [Informations sur ClearType](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
- [ClearType Tuner PowerToy](http://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
+ [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres du Registre ClearType](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: c78bcc8d784fc481af2449f2d81cfde42891e7fe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0d8dfd4a19b31be790d2643847396d136098278
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43673533"
 ---
 # <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>Comment : prendre en charge l'interopérabilité COM en affichant chaque Windows Form sur son propre thread
 Vous pouvez résoudre les problèmes d'interopérabilité COM en affichant votre formulaire sur une boucle de message [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], que vous pouvez créer à l'aide de la méthode <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
@@ -28,7 +28,7 @@ Vous pouvez résoudre les problèmes d'interopérabilité COM en affichant votre
   
  Il existe une prise en charge étendue pour cette fonctionnalité dans Visual Studio.  
   
- Consultez également [Procédure pas à pas : prise en charge de COM Interop en affichant chaque Windows Forms sur son propre thread](http://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
+ Consultez également [procédure pas à pas : prise en charge de COM Interop en affichant chaque Windows Form sur son propre Thread](https://msdn.microsoft.com/library/ms233639\(v=vs.110\)).  
   
 ## <a name="example"></a>Exemple  
  L'exemple de code suivant montre comment afficher le formulaire sur un thread distinct et appeler la méthode <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> pour démarrer une pompe de messages Windows Forms sur ce thread. Pour utiliser cette approche, vous devez marshaler tous les appels au formulaire à partir de l'application non managée à l'aide de la méthode <xref:System.Windows.Forms.Control.Invoke%2A> .  
