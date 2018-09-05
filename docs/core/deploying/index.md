@@ -4,12 +4,12 @@ description: Déploiement d’une application .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792424"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562004"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 
@@ -21,7 +21,7 @@ Vous pouvez créer deux types de déploiement pour les applications .NET Core :
 
 ## <a name="framework-dependent-deployments-fdd"></a>Déploiements dépendant du framework
 
-Pour un déploiement dépendant du framework, vous déployez seulement votre application et les dépendances tierces. Vous ne devez pas déployer .NET Core car votre application utilise la version de .NET Core qui est présente sur le système cible. Il s’agit du modèle de déploiement par défaut pour les applications .NET Core.
+Pour un déploiement dépendant du framework, vous déployez seulement votre application et les dépendances tierces. Vous ne devez pas déployer .NET Core car votre application utilise la version de .NET Core qui est présente sur le système cible. Il s’agit du modèle de déploiement par défaut pour les applications .NET Core et ASP.NET Core qui ciblent .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Pourquoi créer un déploiement dépendant du framework ?
 
@@ -70,9 +70,9 @@ Pour obtenir des exemples étape par étape de déploiement d’applications .NE
 - Déploiement autonome
 - Déploiement autonome avec des dépendances tierces
 
-# <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
-[Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md)   
-[Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md)   
-[Packages, métapackages et frameworks](../packages.md)   
-[Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)
+* [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md)
+* [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md)
+* [Packages, métapackages et frameworks](../packages.md)
+* [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)
