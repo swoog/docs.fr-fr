@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
 ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407875"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723767"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI (Windows Management Instrumentation) et compteurs de performances (référence des API non managées)
 
@@ -55,7 +55,7 @@ L’API comprend les fonctions suivantes :
 | [Initialize, fonction](initialize.md) | Effectue l’initialisation WMI. |
 | [Next, fonction](next.md) | Récupère la propriété suivante dans une énumération. | 
 | [NextMethod, fonction](nextmethod.md) | Récupère la méthode suivante dans une énumération. |
-| [Put, fonction](put.md) | Affecte une nouvelle valeur à une propriété nommée. |
+| [Fonction Put](put.md) | Affecte une nouvelle valeur à une propriété nommée. |
 | [PutClassWmi, fonction](putclasswmi.md) | Crée une classe ou met à jour une classe existante. |
 | [PutInstanceWmi, fonction](putinstancewmi.md) | Crée ou met à jour une instance d’une classe existante. L’instance est écrite dans le référentiel WMI. |
 | [PutMethod, fonction](putmethod.md) | Crée une méthode. |

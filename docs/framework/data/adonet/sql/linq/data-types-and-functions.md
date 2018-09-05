@@ -3,11 +3,11 @@ title: Fonctions et types de données
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: 34f8f0a59f1a962eaa6a747e124f47d1570ca455
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520737"
 ---
 # <a name="data-types-and-functions"></a>Fonctions et types de données
 Les rubriques répertoriées dans le tableau suivant décrivent la prise en charge de LINQ to SQL pour les membres, les constructions et les casts du Common Language Runtime (CLR). Les membres et constructions pris en charge peuvent être utilisés dans vos requêtes LINQ to SQL.  

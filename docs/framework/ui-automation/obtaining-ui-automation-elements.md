@@ -8,16 +8,16 @@ ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 3e700e7e726b5cb71d3b7d863bdb31951aacd885
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 9994f6a3026c790acdb35af3300379786f615607
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399200"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481982"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtention d'éléments UI Automation
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette rubrique décrit les différentes façons d’obtenir des objets <xref:System.Windows.Automation.AutomationElement> pour les éléments d’ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] .  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33399200"
 ## <a name="root-element"></a>Élément racine  
  Toutes les recherches d’objets <xref:System.Windows.Automation.AutomationElement> doivent avoir un point de départ. Cela peut être n’importe quel élément, y compris le bureau, une fenêtre d’application ou un contrôle.  
   
- L’élément racine pour le bureau, à partir de laquelle tous les éléments descendent, est obtenu à partir de la méthode statique <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> propriété.  
+ L’élément racine pour le bureau, à partir de laquelle tous les éléments proviennent, est obtenu à partir de la méthode statique <xref:System.Windows.Automation.AutomationElement.RootElement%2A?displayProperty=nameWithType> propriété.  
   
 > [!CAUTION]
 >  En général, vous devez essayer d’obtenir uniquement les enfants directs de <xref:System.Windows.Automation.AutomationElement.RootElement%2A>. Une recherche des descendants peut itérer au sein de centaines ou de milliers d’éléments, ce qui peut provoquer un dépassement de capacité de la pile. Si vous tentez d’obtenir un élément spécifique de niveau inférieur, vous devez commencer votre recherche à partir de la fenêtre d’application ou d’un conteneur de niveau inférieur.  
@@ -39,7 +39,7 @@ ms.locfileid: "33399200"
   
  La condition la plus simple est <xref:System.Windows.Automation.Condition.TrueCondition>, un objet prédéfini spécifiant que tous les éléments dans la zone de recherche doivent être retournés. La condition<xref:System.Windows.Automation.Condition.FalseCondition>, inverse de <xref:System.Windows.Automation.Condition.TrueCondition>, est moins utile, car elle empêche certains éléments d’être recherchés.  
   
- Trois autres conditions prédéfinies peuvent être utilisées seules ou combinées à d’autres conditions : <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>et <xref:System.Windows.Automation.Automation.RawViewCondition>. La condition<xref:System.Windows.Automation.Automation.RawViewCondition>, utilisée par elle-même, est équivalente à <xref:System.Windows.Automation.Condition.TrueCondition>, car elle ne filtre pas les éléments par leurs propriétés <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> .  
+ Trois autres conditions prédéfinies peuvent être utilisées seules ou combinées à d’autres conditions : <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>et <xref:System.Windows.Automation.Automation.RawViewCondition>. La condition<xref:System.Windows.Automation.Automation.RawViewCondition>, utilisée par elle-même, est équivalente à <xref:System.Windows.Automation.Condition.TrueCondition>, car elle ne filtre pas les éléments par leurs propriétés <xref:System.Windows.Automation.AutomationElement.AutomationElementInfoumation.IsControlElement%2A> ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInfoumation.IsContentElement%2A> .  
   
  D’autres conditions sont développées à partir d’un ou plusieurs objets <xref:System.Windows.Automation.PropertyCondition> , chacun spécifiant une valeur de propriété. Par exemple, une condition <xref:System.Windows.Automation.PropertyCondition> peut spécifier que l’élément est activé ou qu’il prend en charge un certain modèle de contrôle.  
   
