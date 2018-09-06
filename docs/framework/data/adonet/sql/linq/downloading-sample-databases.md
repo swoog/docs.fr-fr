@@ -2,55 +2,55 @@
 title: Téléchargement d'exemples de base de données
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 4f5799b395abbbb5a4e61bac9572c808bb4ad5a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359674"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741700"
 ---
-# <a name="downloading-sample-databases"></a><span data-ttu-id="9f889-102">Téléchargement d'exemples de base de données</span><span class="sxs-lookup"><span data-stu-id="9f889-102">Downloading Sample Databases</span></span>
-<span data-ttu-id="9f889-103">Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilisent l'exemple de base de données Northwind et SQL Server Express Edition.</span><span class="sxs-lookup"><span data-stu-id="9f889-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="9f889-104">Vous pouvez télécharger ces produits gratuitement à partir du site de téléchargement Microsoft.</span><span class="sxs-lookup"><span data-stu-id="9f889-104">You can download these products free of charge from the Microsoft download site.</span></span>  
+# <a name="downloading-sample-databases"></a><span data-ttu-id="1d1bc-102">Téléchargement d'exemples de base de données</span><span class="sxs-lookup"><span data-stu-id="1d1bc-102">Downloading Sample Databases</span></span>
+<span data-ttu-id="1d1bc-103">Plusieurs exemples et procédures pas à pas dans la documentation de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] utilisent l'exemple de base de données Northwind et SQL Server Express Edition.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-103">A number of samples and walkthroughs in the [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation use the Northwind sample database and SQL Server Express Edition.</span></span> <span data-ttu-id="1d1bc-104">Vous pouvez télécharger ces produits gratuitement à partir du site de téléchargement Microsoft.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-104">You can download these products free of charge from the Microsoft download site.</span></span>  
   
-## <a name="downloading-the-northwind-database"></a><span data-ttu-id="9f889-105">Téléchargement de la base de données Northwind</span><span class="sxs-lookup"><span data-stu-id="9f889-105">Downloading the Northwind Database</span></span>  
+## <a name="downloading-the-northwind-database"></a><span data-ttu-id="1d1bc-105">Téléchargement de la base de données Northwind</span><span class="sxs-lookup"><span data-stu-id="1d1bc-105">Downloading the Northwind Database</span></span>  
   
-#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="9f889-106">Pour télécharger et installer l'exemple de base de données Northwind pour SQL Server</span><span class="sxs-lookup"><span data-stu-id="9f889-106">To download and install the Northwind sample database for SQL Server</span></span>  
+#### <a name="to-download-and-install-the-northwind-sample-database-for-sql-server"></a><span data-ttu-id="1d1bc-106">Pour télécharger et installer l'exemple de base de données Northwind pour SQL Server</span><span class="sxs-lookup"><span data-stu-id="1d1bc-106">To download and install the Northwind sample database for SQL Server</span></span>  
   
-1.  <span data-ttu-id="9f889-107">Démarrez Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="9f889-107">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="1d1bc-107">Démarrez Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-107">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="9f889-108">Accédez à la [Northwind et Pubs Sample Databases](http://go.microsoft.com/fwlink?linkid=64296) site Web.</span><span class="sxs-lookup"><span data-stu-id="9f889-108">Go to the [Northwind and Pubs Sample Databases](http://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
+2.  <span data-ttu-id="1d1bc-108">Accédez à la [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) site Web.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-108">Go to the [Northwind and Pubs Sample Databases](https://go.microsoft.com/fwlink?linkid=64296) Web site.</span></span>  
   
-3.  <span data-ttu-id="9f889-109">Cliquez sur **Télécharger**.</span><span class="sxs-lookup"><span data-stu-id="9f889-109">Click **Download**.</span></span>  
+3.  <span data-ttu-id="1d1bc-109">Cliquez sur **Télécharger**.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-109">Click **Download**.</span></span>  
   
-4.  <span data-ttu-id="9f889-110">Dans le **télécharger le fichier** boîte de dialogue, sélectionnez **enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="9f889-110">In the **File Download** dialog box, select **Save**.</span></span>  
+4.  <span data-ttu-id="1d1bc-110">Dans le **téléchargement de fichier** boîte de dialogue, sélectionnez **enregistrer**.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-110">In the **File Download** dialog box, select **Save**.</span></span>  
   
-5.  <span data-ttu-id="9f889-111">Une fois le fichier téléchargé, double-cliquez sur le **Nwind.exe** pour installer la base de données.</span><span class="sxs-lookup"><span data-stu-id="9f889-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
+5.  <span data-ttu-id="1d1bc-111">Une fois le fichier téléchargé, double-cliquez sur le **Nwind.exe** fichier pour installer la base de données.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-111">After the file has downloaded, double-click the **Nwind.exe** file to install the database.</span></span>  
   
-     <span data-ttu-id="9f889-112">Par défaut, la base de données est installé à *lecteur*: \SQL Server 2000 Sample Databases.</span><span class="sxs-lookup"><span data-stu-id="9f889-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
+     <span data-ttu-id="1d1bc-112">Par défaut, la base de données est installée sur *lecteur*: \SQL Server 2000 Sample Databases.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-112">By default, the database is installed at *drive*:\SQL Server 2000 Sample Databases.</span></span>  
   
-## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="9f889-113">Téléchargement de SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="9f889-113">Downloading SQL Server Express Edition</span></span>  
- <span data-ttu-id="9f889-114">SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications.</span><span class="sxs-lookup"><span data-stu-id="9f889-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="9f889-115">Si vous utilisez Visual Studio, SQL Server Express Edition est incluse dans les éditions professionnelles et supérieures.</span><span class="sxs-lookup"><span data-stu-id="9f889-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
+## <a name="downloading-sql-server-express-edition"></a><span data-ttu-id="1d1bc-113">Téléchargement de SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="1d1bc-113">Downloading SQL Server Express Edition</span></span>  
+ <span data-ttu-id="1d1bc-114">SQL Server Express Edition est disponible gratuitement et vous pouvez le redistribuer avec les applications.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-114">SQL Server Express Edition is available without charge, and you can redistribute it with applications.</span></span> <span data-ttu-id="1d1bc-115">Si vous utilisez Visual Studio, SQL Server Express Edition est incluse dans les éditions professionnelles et supérieures.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-115">If you are using Visual Studio, SQL Server Express Edition is included in the Pro and greater editions.</span></span>  
   
-#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="9f889-116">Pour télécharger et installer SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="9f889-116">To download and install SQL Server Express Edition</span></span>  
+#### <a name="to-download-and-install-sql-server-express-edition"></a><span data-ttu-id="1d1bc-116">Pour télécharger et installer SQL Server Express Edition</span><span class="sxs-lookup"><span data-stu-id="1d1bc-116">To download and install SQL Server Express Edition</span></span>  
   
-1.  <span data-ttu-id="9f889-117">Démarrez Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="9f889-117">Start Internet Explorer.</span></span>  
+1.  <span data-ttu-id="1d1bc-117">Démarrez Internet Explorer.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-117">Start Internet Explorer.</span></span>  
   
-2.  <span data-ttu-id="9f889-118">Accédez à la [Microsoft Download Center](http://go.microsoft.com/fwlink?linkid=74602) site Web.</span><span class="sxs-lookup"><span data-stu-id="9f889-118">Go to the [Microsoft Download Center](http://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
+2.  <span data-ttu-id="1d1bc-118">Accédez à la [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) site Web.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-118">Go to the [Microsoft Download Center](https://go.microsoft.com/fwlink?linkid=74602) Web site.</span></span>  
   
-3.  <span data-ttu-id="9f889-119">Dans la zone des mots clés, tapez **SQL Server Express**.</span><span class="sxs-lookup"><span data-stu-id="9f889-119">In the keywords box, type **SQL Server Express**.</span></span>  
+3.  <span data-ttu-id="1d1bc-119">Dans la zone des mots clés, tapez **SQL Server Express**.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-119">In the keywords box, type **SQL Server Express**.</span></span>  
   
-4.  <span data-ttu-id="9f889-120">Cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="9f889-120">Click **Go**.</span></span>  
+4.  <span data-ttu-id="1d1bc-120">Cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-120">Click **Go**.</span></span>  
   
-5.  <span data-ttu-id="9f889-121">Dans la page de résultats, cliquez sur le lien vers le **Microsoft SQL Server 2005 Express Edition** page de téléchargement.</span><span class="sxs-lookup"><span data-stu-id="9f889-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
+5.  <span data-ttu-id="1d1bc-121">Dans la page de résultats, cliquez sur le lien vers le **Microsoft SQL Server 2005 Express Edition** page de téléchargement.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-121">On the results page, click the link to the **Microsoft SQL Server 2005 Express Edition** download page.</span></span>  
   
-6.  <span data-ttu-id="9f889-122">Suivez les instructions d’installation indiquées sur le site web.</span><span class="sxs-lookup"><span data-stu-id="9f889-122">Follow the installation instructions on the Web site.</span></span>  
+6.  <span data-ttu-id="1d1bc-122">Suivez les instructions d’installation indiquées sur le site web.</span><span class="sxs-lookup"><span data-stu-id="1d1bc-122">Follow the installation instructions on the Web site.</span></span>  
   
-## <a name="downloading-management-studio-express"></a><span data-ttu-id="9f889-123">Téléchargement de Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="9f889-123">Downloading Management Studio Express</span></span>  
- <span data-ttu-id="9f889-124">Si vous souhaitez modifier une base de données que vous avez téléchargé, vous pouvez accéder à la base de données à partir de **l’Explorateur de serveurs** dans Visual Studio development environnement intégré (IDE), ou utiliser Microsoft SQL Server Management Studio Express (SSMSE) .</span><span class="sxs-lookup"><span data-stu-id="9f889-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
+## <a name="downloading-management-studio-express"></a><span data-ttu-id="1d1bc-123">Téléchargement de Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="1d1bc-123">Downloading Management Studio Express</span></span>  
+ <span data-ttu-id="1d1bc-124">Si vous souhaitez modifier une base de données que vous avez téléchargé, vous pouvez accéder à la base de données à partir de **Explorateur de serveurs** dans Visual Studio development environnement intégré (IDE), ou utiliser Microsoft SQL Server Management Studio Express (SSMSE) .</span><span class="sxs-lookup"><span data-stu-id="1d1bc-124">If you want to modify a database that you have downloaded, you can access the database from **Server Explorer** in the Visual Studio integrated development environment (IDE), or use Microsoft SQL Server Management Studio Express (SSMSE).</span></span>  
   
-#### <a name="to-download-management-studio-express"></a><span data-ttu-id="9f889-125">Pour télécharger Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="9f889-125">To download Management Studio Express</span></span>  
+#### <a name="to-download-management-studio-express"></a><span data-ttu-id="1d1bc-125">Pour télécharger Management Studio Express</span><span class="sxs-lookup"><span data-stu-id="1d1bc-125">To download Management Studio Express</span></span>  
   
--   <span data-ttu-id="9f889-126">Suivez les instructions à le [site SSMSE](http://go.microsoft.com/fwlink/?LinkId=95933).</span><span class="sxs-lookup"><span data-stu-id="9f889-126">Follow the instructions at the [SSMSE site](http://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
+-   <span data-ttu-id="1d1bc-126">Suivez les instructions de la [site SSMSE](https://go.microsoft.com/fwlink/?LinkId=95933).</span><span class="sxs-lookup"><span data-stu-id="1d1bc-126">Follow the instructions at the [SSMSE site](https://go.microsoft.com/fwlink/?LinkId=95933).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f889-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9f889-127">See Also</span></span>  
- [<span data-ttu-id="9f889-128">Prise en main</span><span class="sxs-lookup"><span data-stu-id="9f889-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+## <a name="see-also"></a><span data-ttu-id="1d1bc-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1d1bc-127">See Also</span></span>  
+ [<span data-ttu-id="1d1bc-128">Prise en main</span><span class="sxs-lookup"><span data-stu-id="1d1bc-128">Getting Started</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
