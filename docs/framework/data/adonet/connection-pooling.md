@@ -2,23 +2,23 @@
 title: Regroupement de connexions
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-ms.openlocfilehash: 47143e1d08f6a910b82b435303c164729b6ad3a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755524"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876601"
 ---
-# <a name="connection-pooling"></a><span data-ttu-id="a9175-102">Regroupement de connexions</span><span class="sxs-lookup"><span data-stu-id="a9175-102">Connection Pooling</span></span>
-<span data-ttu-id="a9175-103">Se connecter à une source de données peut prendre beaucoup de temps.</span><span class="sxs-lookup"><span data-stu-id="a9175-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="a9175-104">Pour réduire le coût de l’ouverture de connexions, ADO.NET utilise une technique d’optimisation nommée *le regroupement de connexions*, ce qui réduit le coût de l’ouverture et la fermeture des connexions.</span><span class="sxs-lookup"><span data-stu-id="a9175-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="a9175-105">Le regroupement de connexions est géré différemment pour les fournisseurs de données .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a9175-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
+# <a name="connection-pooling"></a><span data-ttu-id="6ba52-102">Regroupement de connexions</span><span class="sxs-lookup"><span data-stu-id="6ba52-102">Connection Pooling</span></span>
+<span data-ttu-id="6ba52-103">Se connecter à une source de données peut prendre beaucoup de temps.</span><span class="sxs-lookup"><span data-stu-id="6ba52-103">Connecting to a data source can be time consuming.</span></span> <span data-ttu-id="6ba52-104">Pour réduire le coût de l’ouverture de connexions, ADO.NET utilise une technique d’optimisation nommée *le regroupement de connexions*, ce qui réduit le coût des ouvertures et fermeture des connexions.</span><span class="sxs-lookup"><span data-stu-id="6ba52-104">To minimize the cost of opening connections, ADO.NET uses an optimization technique called *connection pooling*, which minimizes the cost of repeatedly opening and closing connections.</span></span> <span data-ttu-id="6ba52-105">Le regroupement de connexions est géré différemment pour les fournisseurs de données .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="6ba52-105">Connection pooling is handled differently for the .NET Framework data providers.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a9175-106">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="a9175-106">In This Section</span></span>  
- [<span data-ttu-id="a9175-107">Regroupement de connexions SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="a9175-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
- <span data-ttu-id="a9175-108">Fournit une vue d’ensemble du regroupement de connexions et décrit le fonctionne du regroupement de connexions dans SQL Server.</span><span class="sxs-lookup"><span data-stu-id="a9175-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="6ba52-106">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="6ba52-106">In This Section</span></span>  
+ [<span data-ttu-id="6ba52-107">Regroupement de connexions SQL Server (ADO.NET)</span><span class="sxs-lookup"><span data-stu-id="6ba52-107">SQL Server Connection Pooling (ADO.NET)</span></span>](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+ <span data-ttu-id="6ba52-108">Fournit une vue d’ensemble du regroupement de connexions et décrit le fonctionne du regroupement de connexions dans SQL Server.</span><span class="sxs-lookup"><span data-stu-id="6ba52-108">Provides an overview of connection pooling and describes how connection pooling works in SQL Server.</span></span>  
   
- [<span data-ttu-id="a9175-109">Regroupement de connexions OLE DB, ODBC et Oracle</span><span class="sxs-lookup"><span data-stu-id="a9175-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- <span data-ttu-id="a9175-110">Décrit le regroupement de connexions pour les fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle.</span><span class="sxs-lookup"><span data-stu-id="a9175-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
+ [<span data-ttu-id="6ba52-109">Regroupement de connexions OLE DB, ODBC et Oracle</span><span class="sxs-lookup"><span data-stu-id="6ba52-109">OLE DB, ODBC, and Oracle Connection Pooling</span></span>](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ <span data-ttu-id="6ba52-110">Décrit le regroupement de connexions pour les fournisseurs de données .NET Framework pour OLE DB, ODBC et Oracle.</span><span class="sxs-lookup"><span data-stu-id="6ba52-110">Describes connection pooling for the .NET Framework Data Provider for OLE DB, the .NET Framework Data Provider for ODBC, and the .NET Framework Data Provider for Oracle.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a9175-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a9175-111">See Also</span></span>  
- [<span data-ttu-id="a9175-112">Extraction et modification de données dans ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a9175-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [<span data-ttu-id="a9175-113">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="a9175-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="6ba52-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6ba52-111">See Also</span></span>  
+ [<span data-ttu-id="6ba52-112">Extraction et modification de données dans ADO.NET</span><span class="sxs-lookup"><span data-stu-id="6ba52-112">Retrieving and Modifying Data in ADO.NET</span></span>](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [<span data-ttu-id="6ba52-113">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="6ba52-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
