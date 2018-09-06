@@ -2,12 +2,12 @@
 title: Concepts de programmation (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: 965ce386bcf6ff8d11c9e20616c1ca44640ddaf2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511110"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738369"
 ---
 # <a name="programming-concepts-c"></a>Concepts de programmation (C#)
 Cette section explique les concepts de programmation du langage C#.  
@@ -27,7 +27,7 @@ Cette section explique les concepts de programmation du langage C#.
 |[LINQ (Language-Integrated Query) (C#)](../../../csharp/programming-guide/concepts/linq/index.md)|Décrit les puissantes capacités de requêtage de la syntaxe du langage C# et le modèle d’interrogation de bases de données relationnelles, de documents XML, de jeux de données et de collections en mémoire.|  
 |[Programmation orientée objet (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Décrit les concepts orientés objet courants, notamment l’encapsulation, l’héritage et le polymorphisme.|  
 |[Réflexion (C#)](../../../csharp/programming-guide/concepts/reflection.md)|Explique comment utiliser la réflexion pour créer dynamiquement une instance d’un type, pour lier le type à un objet existant ou pour obtenir le type d’un objet existant, et comment invoquer ses méthodes ou accéder à ses champs et propriétés.|  
-|[Sérialisation (C# )](../../../csharp/programming-guide/concepts/serialization/index.md)|Décrit les concepts clés de la sérialisation binaire, XML et SOAP.|  
+|[Sérialisation (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|Décrit les concepts clés de la sérialisation binaire, XML et SOAP.|  
 |[Threading (C#)](../../../csharp/programming-guide/concepts/threading/index.md)|Fournit une vue d’ensemble du modèle de thread .NET et montre comment écrire du code qui effectue plusieurs tâches en même temps pour améliorer les performances et la réactivité des applications.|  
   
 ## <a name="related-sections"></a>Rubriques connexes  
