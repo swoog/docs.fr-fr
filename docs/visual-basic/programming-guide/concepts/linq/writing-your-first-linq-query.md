@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387632"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798896"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Écriture de votre première requête LINQ (Visual Basic)
 Une *requête* est une expression qui récupère des données d’une source de données. Les requêtes sont exprimées dans un langage de requête dédié. Au fil du temps, différents langages ont été développées pour différents types de sources de données, par exemple, SQL pour les bases de données relationnelles et XQuery pour XML. Cela rend nécessaire pour le développeur d’applications à apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qui est pris en charge.  

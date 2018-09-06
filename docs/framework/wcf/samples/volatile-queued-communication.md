@@ -3,11 +3,11 @@ title: Volatile Queued Communication
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560663"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798555"
 ---
 # <a name="volatile-queued-communication"></a>Volatile Queued Communication
 Cet exemple montre comment procéder à la communication de messages volatils mis en file d'attente sur le transport MSMQ (Message Queuing). Il utilise <xref:System.ServiceModel.NetMsmqBinding>. Dans le cas présent, le service est une application console auto-hébergée qui vous permet d'observer le service qui reçoit les messages mis en file d'attente.  

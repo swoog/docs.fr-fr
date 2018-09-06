@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
 ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539405"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858107"
 ---
 # <a name="service-transaction-behavior"></a>Service Transaction Behavior
 Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais est étendu pour maintenir un journal de serveur des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calculatrice. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d’une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  

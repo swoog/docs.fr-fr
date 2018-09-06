@@ -10,11 +10,11 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
 ms.openlocfilehash: 328970c5cc14669770793070942dd32f0144c159
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562876"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868755"
 ---
 # <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Comment : créer un formulaire maître/détail utilisant deux contrôles DataGridView Windows Form
 L'exemple de code suivant crée un formulaire maître/détail avec deux contrôles <xref:System.Windows.Forms.DataGridView> liés à deux composants <xref:System.Windows.Forms.BindingSource>. La source de données est un <xref:System.Data.DataSet> qui contient les tables `Customers` et `Orders` de l'exemple de base de données Northwind SQL Server, ainsi qu'un <xref:System.Data.DataRelation> qui associe les deux par l'intermédiaire de la colonne `CustomerID`.  

@@ -3,11 +3,11 @@ title: Apprentissage par les procédures pas à pas
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 1386d0e8fadddab5cd15818cb616bf331262e654
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385456"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872489"
 ---
 # <a name="learning-by-walkthroughs"></a>Apprentissage par les procédures pas à pas
 Le [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] documentation fournit plusieurs procédures pas à pas. Cette rubrique aborde certains problèmes généraux de procédure pas à pas (y compris leur résolution) et fournit des liens vers plusieurs procédures pas à pas de base pour découvrir [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  

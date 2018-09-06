@@ -3,11 +3,11 @@ title: Transacted Batching
 ms.date: 03/30/2017
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
 ms.openlocfilehash: abada9aaf5fac8f05599467f385e708e1898832f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558506"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856061"
 ---
 # <a name="transacted-batching"></a>Transacted Batching
 Cet exemple montre comment traiter les lectures transactionnelles à l'aide de Message Queuing (MSMQ). Le traitement transactionnel par lots est une fonctionnalité d'optimisation des performances pour les lectures transactionnelles dans les communications mises en file d'attente.  

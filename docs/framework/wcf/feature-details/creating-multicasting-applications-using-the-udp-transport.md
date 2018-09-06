@@ -3,11 +3,11 @@ title: Création d'applications multidiffusion en utilisant le transport UDP
 ms.date: 03/30/2017
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 ms.openlocfilehash: 89ac99ffec614eeebd076f9868568dcf2c7b04fd
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776286"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867918"
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Création d'applications multidiffusion en utilisant le transport UDP
 Les applications de multidiffusion envoient de petits messages à un grand nombre de destinataires à la fois sans établir de connexion point à point. Ces applications mettent l'accent sur la vitesse par rapport à la fiabilité. En d'autres termes, il est plus important d'envoyer des données en temps voulu pour garantir que tout message spécifique est reçu. WCF prend désormais en charge des applications de multidiffusion à l'aide de <xref:System.ServiceModel.UdpBinding>. Ce transport est utile dans les scénarios où un service doit envoyer de petits messages à plusieurs clients simultanément. Une application de cotations boursières est un exemple de ce service.  

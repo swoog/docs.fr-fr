@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: 57390700ab0ef47cc7e6b5521a3691a8e5812a9e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534201"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861527"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Ligne &lt;nombre&gt; ne peut pas être analysée à l’aide du FieldWidths actuel
 La ligne spécifiée ne peut pas être analysée, car ses champs ont des largeurs différentes de celles spécifiées.  

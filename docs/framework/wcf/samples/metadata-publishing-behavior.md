@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
 ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734117"
+ms.locfileid: "43804772"
 ---
 # <a name="metadata-publishing-behavior"></a>Metadata Publishing Behavior
 Cet exemple montre comment contrôler les fonctionnalités de publication des métadonnées d’un service. Pour empêcher toute divulgation non intentionnelle de métadonnées de service potentiellement sensibles, la configuration par défaut pour les services Windows Communication Foundation (WCF) désactive la publication des métadonnées. Ce comportement est sécurisé par défaut, mais il signifie également que vous ne pouvez pas utiliser d'outil d'importation de métadonnées (tel que Svcutil.exe) pour générer le code client requis pour appeler le service, à moins que le comportement de publication des métadonnées du service soit activé explicitement dans la configuration.  

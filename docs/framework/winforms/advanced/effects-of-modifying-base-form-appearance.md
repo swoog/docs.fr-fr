@@ -9,11 +9,11 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
 ms.openlocfilehash: adaf9224fd340c6ea4342e2591806a7c877e83ff
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746170"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871223"
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Conséquences de la modification de l’aspect d’un formulaire de base
 Pendant le développement d’applications, vous êtes souvent amené à modifier l’apparence du formulaire de base dont héritent d’autres formulaires du projet (ou d’autres projets).  

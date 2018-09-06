@@ -3,11 +3,11 @@ title: Weakly-typed JSON Serialization, exemple
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: 07166b89729fed7911cb842313269e420ae401b7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43417810"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857665"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization, exemple
 Lors de la sérialisation d'un type défini par l'utilisateur dans un format de transmission donné, ou de la désérialisation d'un format de transmission dans un type défini par l'utilisateur, le type défini par l'utilisateur donné doit être disponible à la fois sur le service et sur le client. En général, l'attribut <xref:System.Runtime.Serialization.DataContractAttribute> est alors appliqué à ces types définis par l'utilisateur, et l'attribut <xref:System.Runtime.Serialization.DataMemberAttribute> est appliqué à leurs membres. Ce mécanisme s’applique également à l’utilisation d’objets JSON (JavaScript Object Notation), comme le décrit la rubrique [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  

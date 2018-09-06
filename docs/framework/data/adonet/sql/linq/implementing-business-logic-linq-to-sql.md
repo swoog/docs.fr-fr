@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: d739e4bba96873740c53c07eccf687b060d82003
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552229"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43798867"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>Implémentation de la logique métier (LINQ to SQL)
 Le terme "logique métier" utilisé dans cette rubrique désigne toutes les règles ou tests de validation personnalisés que vous appliquez aux données avant de les insérer, de les mettre à jour ou de les supprimer de la base de données. La logique métier est parfois également désignée par le terme "règles métier" ou "logique de domaine". Dans les applications multicouches, elle est généralement conçue comme une couche logique de manière à ce qu'elle puisse être modifiée indépendamment de la couche Présentation ou de la couche Data Access. La logique métier peut être appelée par la couche Data Access avant ou après toute mise à jour, insertion ou suppression de données dans la base de données.  

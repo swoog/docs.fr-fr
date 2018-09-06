@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 8030c0323a2f742de19a4761e24c66294c6dd5d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405973"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865824"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Chaînes de connexion et fichiers de configuration
 L'incorporation de chaînes de connexion dans le code de votre application peut entraîner des vulnérabilités de sécurité et des problèmes de maintenance. Les chaînes de connexion non chiffrées compilées dans le code source d’une application peuvent être affichées à l’aide de l’outil [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md). En outre, si la chaîne de connexion change, votre application doit être recompilée. Pour ces raisons, nous vous recommandons de stocker les chaînes de connexion dans un fichier de configuration de l'application.  

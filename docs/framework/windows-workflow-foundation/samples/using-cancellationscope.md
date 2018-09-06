@@ -3,11 +3,11 @@ title: Utilisation de CancellationScope
 ms.date: 03/30/2017
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
 ms.openlocfilehash: 82d44fff869f207c09dc7685fc3470630e001a59
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43731519"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854981"
 ---
 # <a name="using-cancellationscope"></a>Utilisation de CancellationScope
 Cet exemple montre comment utiliser l'activité <xref:System.Activities.Statements.CancellationScope> pour annuler un travail dans une application.  

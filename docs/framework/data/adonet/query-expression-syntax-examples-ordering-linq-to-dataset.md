@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
 ms.openlocfilehash: 1e3ee4372c1c2173cff0d93dfdf84c96c60130d4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778809"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871791"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>Exemples de syntaxe d'expression de requête : classement (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.OrderBy%2A>, <xref:System.Linq.Enumerable.OrderByDescending%2A>, <xref:System.Linq.Enumerable.Reverse%2A> et <xref:System.Linq.Enumerable.ThenByDescending%2A> pour interroger un <xref:System.Data.DataSet> et classer les résultats à l'aide de la syntaxe d'expression de requête.  

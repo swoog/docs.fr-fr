@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27e4abcd5e8dfe253ba8a7ea1ba5022561ed9ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581571"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874990"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Garantie de l'intégrité des données à l'aide des codes de hachage
 Une valeur de hachage est une valeur numérique de longueur fixe qui identifie les données de manière unique. Les valeurs de hachage permettent de représenter les grandes quantités de données sous forme de valeurs numériques beaucoup plus petites pour qu'elles puissent être utilisées avec des signatures numériques. Il est plus efficace de signer une valeur de hachage que de signer une valeur élevée. De même, les valeurs de hachage s'avèrent utiles pour vérifier l'intégrité des données envoyées via des canaux non sécurisés. La valeur de hachage des données reçues peut être comparée à celle des données envoyées pour déterminer si les données ont été modifiées.  
@@ -58,5 +58,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

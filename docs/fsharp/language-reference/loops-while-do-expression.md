@@ -1,18 +1,17 @@
 ---
 title: 'Boucles : expression while...do (F#)'
-description: Voir comment l’instruction while... procédez comme expression est utilisée pour effectuer une exécution itérative (boucle) lorsqu’une condition de test spécifié a la valeur true.
+description: Voir comment l’instruction while... faire expression est utilisée pour effectuer une exécution itérative (boucle) pendant une condition de test spécifiée a la valeur true.
 ms.date: 05/16/2016
-ms.openlocfilehash: e3198246e44bbb11b226f04da6795f3da22626e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562230"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868592"
 ---
 # <a name="loops-whiledo-expression"></a>Boucles : expression while...do
 
-Le `while...do` expression est utilisée pour effectuer une exécution itérative (boucle) lorsqu’une condition de test spécifié a la valeur true.
-
+Le `while...do` expression est utilisée pour effectuer une exécution itérative (boucle) pendant une condition de test spécifiée a la valeur true.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -22,26 +21,25 @@ while test-expression do
 ```
 
 ## <a name="remarks"></a>Notes
-Le *test-expression* est évaluée ; si elle est `true`, le *expression de corps* est exécuté et l’expression de test est réévaluée. Le *expression de corps* doit avoir un type `unit`. Si l’expression de test est `false`, l’itération se termine.
+
+Le *expression de test* est évaluée ; si elle est `true`, le *expression de corps* est exécutée et l’expression de test est de nouveau évaluée. Le *expression de corps* doit avoir de type `unit`. Si l’expression de test est `false`, l’itération se termine.
 
 L’exemple suivant illustre l’utilisation de la `while...do` expression.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5301.fs)]
 
-La sortie du code précédent est un flux de nombres aléatoires compris entre 1 et 20, le dernier est 10.
+La sortie du code précédent est un flux de nombres aléatoires compris entre 1 et 20, la dernière qui est 10.
 
 ```
 13 19 8 18 16 2 10
 Found a 10!
 ```
 
->[!NOTE] 
-Vous pouvez utiliser `while...do` dans les expressions de séquence et autres expressions de calcul, auquel cas une version personnalisée de la `while...do` expression est utilisée. Pour plus d’informations, consultez [séquences](sequences.md), [Workflows asynchrones](asynchronous-workflows.md), et [Expressions de calcul](computation-expressions.md).
-
+>[!NOTE]
+Vous pouvez utiliser `while...do` dans les expressions de séquence et autres expressions de calcul, auquel cas une version personnalisée de la `while...do` expression est utilisée. Pour plus d’informations, consultez [séquences](sequences.md), [flux de travail asynchrones](asynchronous-workflows.md), et [Expressions de calcul](computation-expressions.md).
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Boucles : expression `for...in`](loops-for-in-expression.md)
-
-[Boucles : expression `for...to`](loops-for-to-expression.md)
+- [Informations de référence du langage F#](index.md)
+- [Boucles : expression `for...in`](loops-for-in-expression.md)
+- [Boucles : expression `for...to`](loops-for-to-expression.md)

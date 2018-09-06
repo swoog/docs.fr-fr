@@ -1,18 +1,17 @@
 ---
 title: 'Champs explicites : mot clé val (F#)'
-description: "En savoir plus sur F # 'val' mot clé, qui est utilisé pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans l’initialisation du type."
+description: "En savoir plus sur F # 'val' mot clé, qui est utilisé pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans initialiser le type."
 ms.date: 05/16/2016
-ms.openlocfilehash: 2bd1aae24a5823ddcd6bb8f121d8110f4a211a6a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876237"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Champs explicites : mot clé val
 
-Le mot clé `val` est utilisé pour déclarer un emplacement pour stocker une valeur dans un type de classe ou de structure sans l'initialiser. Les emplacements de stockage déclarés de cette manière sont appelés *champs explicites*. Une autre utilisation du mot clé `val` consiste à l'associer avec le mot clé `member` pour déclarer une propriété implémentée automatiquement. Pour plus d’informations sur les propriétés implémentées automatiquement, consultez [propriétés](properties.md).
-
+Le mot clé `val` est utilisé pour déclarer un emplacement pour stocker une valeur dans un type de classe ou de structure sans l'initialiser. Emplacements de stockage déclarés de cette manière sont appelés *champs explicites*. Une autre utilisation du mot clé `val` consiste à l'associer avec le mot clé `member` pour déclarer une propriété implémentée automatiquement. Pour plus d’informations sur les propriétés implémentées automatiquement, consultez [propriétés](properties.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -21,11 +20,12 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 ```
 
 ## <a name="remarks"></a>Notes
+
 La façon habituelle de définir des champs dans un type de classe ou de structure consiste à utiliser une liaison `let`. Toutefois, les liaisons `let` doivent être initialisées dans le cadre du constructeur de classe, ce qui n'est pas toujours possible, nécessaire ou souhaitable. Vous pouvez utiliser le mot clé `val` quand vous voulez un champ qui n'est pas initialisé.
 
 Les champs explicites peuvent être statiques ou non statiques. Le *modificateur d’accès* peut être `public`, `private`, ou `internal`. Par défaut, les champs explicites sont publics. À la différence des liaisons `let` dans les classes, qui elles sont toujours privées.
 
-Le [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) l’attribut est nécessaire pour les champs explicites dans les types de classe qui ont un constructeur principal. Cet attribut spécifie que le champ est initialisé à zéro. Le type du champ doit prendre en charge l'initialisation à zéro. Un type prend en charge l'initialisation à zéro s'il s'agit d'un type suivant :
+Le [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58) attribut est requis sur les champs explicites dans les types de classe qui ont un constructeur principal. Cet attribut spécifie que le champ est initialisé à zéro. Le type du champ doit prendre en charge l'initialisation à zéro. Un type prend en charge l'initialisation à zéro s'il s'agit d'un type suivant :
 
 - Type primitif qui a une valeur zéro.
 
@@ -35,15 +35,12 @@ Le [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245
 
 - Structure dont les champs prennent tous en charge une valeur zéro par défaut.
 
-
 Par exemple, un champ immuable appelé `someField` a un champ de stockage dans la représentation compilée .NET portant le nom `someField@` et vous accédez à la valeur stockée à l'aide d'une propriété nommée `someField`.
 
 Pour un champ mutable, la représentation compilée .NET est un champ .NET.
 
-
->[!WARNING] 
+>[!WARNING]
 `Note` L’espace de noms .NET Framework `System.ComponentModel` contient un attribut qui porte le même nom. Pour plus d'informations sur cet attribut, consultez `System.ComponentModel.DefaultValueAttribute`.
-
 
 Le code suivant illustre l'utilisation de champs explicites et, à titre de comparaison, d'une liaison `let` dans une classe qui a un constructeur principal. Notez que le champ lié à `let` `myInt1` est privé. Quand le champ lié à `let` `myInt1` est référencé à partir d'une méthode membre, l'auto-identificateur `this` n'est pas requis. Mais quand vous référencez les champs explicites `myInt2` et `myString`, l'auto-identificateur est requis.
 
@@ -72,10 +69,8 @@ Les champs explicites n'ont pas vocation à être utilisés dans le cadre d'une 
 
 Quand les mots clés `member val` apparaissent ensemble dans une définition de type, il s'agit de la définition d'une propriété implémentée automatiquement. Pour plus d’informations, consultez [propriétés](properties.md).
 
-
 ## <a name="see-also"></a>Voir aussi
-[Propriétés](properties.md)
 
-[Membres](index.md)
-
-[Liaisons `let` dans des classes](let-bindings-in-classes.md)
+- [Propriétés](properties.md)
+- [Membres](index.md)
+- [Liaisons `let` dans des classes](let-bindings-in-classes.md)

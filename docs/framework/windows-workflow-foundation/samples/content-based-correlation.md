@@ -3,11 +3,11 @@ title: Corrélation basée sur le contenu
 ms.date: 03/30/2017
 ms.assetid: 8638b5d6-1d59-456d-8acd-179a5b39b260
 ms.openlocfilehash: c0367f480701468dcd5024ea3439bdcd38acc78f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785815"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865769"
 ---
 # <a name="content-based-correlation"></a>Corrélation basée sur le contenu
 Cet exemple montre comment les activités de messagerie (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply> et <xref:System.ServiceModel.Activities.ReceiveReply>) peuvent être utilisées avec plusieurs corrélations basées sur le contenu et une corrélation basée sur le contenu. Dans ce scénario, une corrélation est d'abord initialisée en fonction d'un ID de bon de commande, puis une autre corrélation est créée ultérieurement en fonction de l'ID du client. Cela montre comment une activité <xref:System.ServiceModel.Activities.Receive> peut à la fois suivre une corrélation existante et initialiser une nouvelle corrélation en fonction du même message entrant.  

@@ -3,11 +3,11 @@ title: Accès au service à partir d'un navigateur Web (démarrage rapide des se
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 ms.openlocfilehash: 01184969b7bfcc0f68351db7c8daeebe79be583c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660125"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43799328"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Accès au service à partir d'un navigateur Web (démarrage rapide des services de données WCF)
 

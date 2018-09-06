@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998464"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875585"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory et WSTrustChannel
 Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous savez probablement que les clients WCF prennent déjà en charge la fédération. En configurant un client WCF avec une liaison <xref:System.ServiceModel.WSFederationHttpBinding> ou une liaison personnalisée similaire, vous pouvez utiliser l’authentification fédérée auprès d’un service.  
@@ -24,7 +24,7 @@ Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous sav
   
 -   Activation de WIF sur un client WCF pour insérer un élément ActAs ou OnBehalfOf dans le RST pour le STS  
   
--   Utilisation de WIF seul pour obtenir un jeton du STS et permettre à un client WCF de s’authentifier avec ce jeton. Pour plus d’informations, consultez l’exemple [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406).  
+-   Utilisation de WIF seul pour obtenir un jeton du STS et permettre à un client WCF de s’authentifier avec ce jeton. Pour plus d’informations, consultez l’exemple [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).  
   
  Le premier scénario est évident : les clients WCF existants continueront à utiliser les STS et parties de confiance de WIF. Cette rubrique explique les deux autres scénarios.  
   

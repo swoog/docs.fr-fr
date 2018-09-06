@@ -11,11 +11,11 @@ helpviewer_keywords:
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
 ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556416"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858328"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Étendre le cadre de transparence dans une application WPF
 Cette rubrique montre comment étendre le [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] cadre de transparence dans la zone cliente d’une application Windows Presentation Foundation (WPF).  

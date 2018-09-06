@@ -8,11 +8,11 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b92592500f0babf29891710cedf1228b0ddcb0e4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739127"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873274"
 ---
 # <a name="enabling-jit-attach-debugging"></a>Activation du débogage JIT-attach
 Débogage JIT-attach est l’expression utilisée pour décrire l’attachement d’un débogueur à un processus quand vous rencontrez des erreurs. Le débogage JIT-attach peut aussi être déclenché par des méthodes ou des fonctions spécifiques.  

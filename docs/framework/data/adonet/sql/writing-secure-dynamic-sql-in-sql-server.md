@@ -3,11 +3,11 @@ title: Écriture de Dynamic SQL sécurisé dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538185"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857912"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Écriture de Dynamic SQL sécurisé dans SQL Server
 L'injection SQL est le processus qui permet à un utilisateur malveillant d'entrer des instructions Transact-SQL au lieu d'une entrée valide. Si l'entrée est transmise directement au serveur sans validation et si l'application exécute accidentellement le code injecté, l'attaque risque d'endommager ou de détruire des données.  

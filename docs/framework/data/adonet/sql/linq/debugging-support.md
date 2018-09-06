@@ -3,11 +3,11 @@ title: Prise en charge du débogage
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
 ms.openlocfilehash: 70823d7480d59f96f3f8f4ad2b28102917ec2d80
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486527"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856827"
 ---
 # <a name="debugging-support"></a>Prise en charge du débogage
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Fournit une prise en charge générale de débogage pour [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projets.  Consultez également [débogage LINQ](/visualstudio/debugger/debugging-linq) ou [débogage LINQ](/visualstudio/debugger/debugging-linq).  

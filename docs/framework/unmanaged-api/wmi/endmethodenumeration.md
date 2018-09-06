@@ -1,6 +1,6 @@
 ---
-title: EndMethodEnumeration (fonction) (référence des API non managées)
-description: La fonction EndMethodEnumeration met fin à une séquence d’énumération de méthode.
+title: Endmethodenumeration, fonction (référence des API non managées)
+description: Endmethodenumeration, de la fonction termine une séquence d’énumération de méthode.
 ms.date: 11/06/2017
 api_name:
 - EndMethodEnumeration
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d09a2ee278dba7e711891bc6d72043bb3a499dd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 42ee188c2a622d0bed2985e56e49997d2934686f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458488"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873300"
 ---
-# <a name="endmethodenumeration-function"></a>EndMethodEnumeration (fonction)
-Met fin à une séquence d’énumération démarrée avec un appel à la [BeginMethodEnumeration fonction](beginmethodenumeration.md).  
+# <a name="endmethodenumeration-function"></a>Endmethodenumeration, fonction
+Met fin à une séquence d’énumération démarrée avec un appel à la [beginmethodenumeration, fonction](beginmethodenumeration.md).  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -40,10 +40,10 @@ HRESULT EndMethodEnumeration (
 ## <a name="parameters"></a>Paramètres
 
 `vFunc`  
-[in] Ce paramètre est inutilisé.
+[in] Ce paramètre n’est pas utilisé.
 
 `ptr`  
-[in] Un pointeur vers un [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) instance.
+[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -56,16 +56,16 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemClassObject::EndMethodEnumeration](https://msdn.microsoft.com/library/aa391441(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemClassObject::EndMethodEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-endmethodenumeration) (méthode).
 
-L’appelant commence la séquence d’énumération à l’aide [BeginMethodEnumeration fonction](beginmethodenumeration.md), puis appelle la [NextMethod fonction](nextmethod.md )jusqu'à ce que la méthode retourne `WBEM_S_NO_MORE_DATA`. L’appelant éventuellement termine la séquence en appelant `EndMethodEnumeration`. L’appelant peut terminer l’énumération au début en appelant `EndMethodEnumeration` à tout moment.
+L’appelant commence la séquence d’énumération à l’aide [beginmethodenumeration, fonction](beginmethodenumeration.md), puis appelle la [NextMethod fonction](nextmethod.md )jusqu'à ce que la méthode retourne `WBEM_S_NO_MORE_DATA`. L’appelant éventuellement termine la séquence en appelant `EndMethodEnumeration`. L’appelant peut arrêter l’énumération au début en appelant `EndMethodEnumeration` à tout moment.
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)

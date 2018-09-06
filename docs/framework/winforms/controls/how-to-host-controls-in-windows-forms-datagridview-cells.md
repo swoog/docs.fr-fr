@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cells [Windows Forms], hosting controls
 ms.assetid: e79a9d4e-64ec-41f5-93ec-f5492633cbb2
 ms.openlocfilehash: 29ffcc205d8175551aee5184cf44306fa5d3b5a0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799812"
 ---
 # <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>Comment : héberger des contrôles dans des cellules DataGridView Windows Forms
 Le contrôle <xref:System.Windows.Forms.DataGridView> fournit plusieurs types de colonnes, ce qui permet à vos utilisateurs d'entrer et de modifier des valeurs de plusieurs façons. Toutefois, si ces types de colonnes ne répondent pas à vos besoins de saisie de données, vous pouvez créer vos propres types de colonnes avec des cellules qui hébergent les contrôles de votre choix. Pour cela, vous devez définir des classes qui dérivent de <xref:System.Windows.Forms.DataGridViewColumn> et <xref:System.Windows.Forms.DataGridViewCell>. Vous devez aussi définir une classe qui dérive de <xref:System.Windows.Forms.Control> et implémente l'interface <xref:System.Windows.Forms.IDataGridViewEditingControl>.  

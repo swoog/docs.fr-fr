@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF clients [WCF], configuring
 ms.assetid: d067b86d-afb0-47bf-94f6-45180a3d8d78
 ms.openlocfilehash: 2866cbd5862bf55286fc771823488cf913863de2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466569"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855853"
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Comment : configurer un client Windows Communication Foundation de base
 Il s’agit de la cinquième des six tâches requises pour créer une application Windows Communication Foundation (WCF) de base. Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md).  

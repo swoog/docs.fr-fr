@@ -3,11 +3,11 @@ title: Vue d'ensemble de Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749513"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869170"
 ---
 # <a name="windows-workflow-overview"></a>Vue d'ensemble de Windows Workflow
 Un flux de travail est un ensemble d’unités élémentaires appelé *activités* qui sont stockés sous la forme d’un modèle qui décrit un processus réel. Les workflows offrent un moyen de décrire l'ordre d'exécution et les relations de dépendance entre des éléments de travail de courte ou longue durée. Ce travail s'effectue à travers le modèle de démarrage à l'arrêt et les activités peuvent être exécutées par des utilisateurs ou par les fonctions système.  

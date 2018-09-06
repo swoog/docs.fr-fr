@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: a29a645a05f0d3b0e8611dd722c5018f295f3070
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43565344"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856190"
 ---
 # <a name="xclass-directive"></a>x:Class, directive
 Configure la compilation du balisage XAML pour joindre des classes partielles entre le balisage et code-behind. La classe partielle du code est définie dans un fichier de code séparé dans un [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] language, tandis que la classe partielle du balisage est créée par la génération de code pendant la compilation de XAML.  

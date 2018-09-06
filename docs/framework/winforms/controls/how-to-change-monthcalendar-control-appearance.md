@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 4f91363764099cabfa1a7939ff07e627aeb6c815
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467663"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802013"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Comment : modifier le contrôle MonthCalendar Windows Forms&#39;s apparence
 Les formulaires Windows <xref:System.Windows.Forms.MonthCalendar> contrôle vous permet de personnaliser l’apparence du calendrier de nombreuses façons. Par exemple, vous pouvez définir le jeu de couleurs et choisir d’afficher ou masquer les numéros de semaine et la date actuelle.  

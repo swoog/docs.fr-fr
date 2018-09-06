@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: 89f9cc572a6613efba19a93c8d5e441c46a660ac
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43783896"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864736"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hébergement du service de données (services de données WCF)
 À l’aide de WCF Data Services, vous pouvez créer un service qui expose des données sous un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Ce service de données est défini comme une classe qui hérite de <xref:System.Data.Services.DataService%601>. Cette classe fournit les fonctionnalités requises pour traiter les messages de demande, d’effectuer des mises à jour par rapport à la source de données et de générer des messages de réponses, comme requis par OData. Toutefois, un service de données ne peut pas lier à et écouter sur un socket réseau pour les requêtes HTTP entrantes. Pour ces fonctionnalités requises, le service de données s'appuie sur un composant d'hébergement.

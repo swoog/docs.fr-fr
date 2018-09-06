@@ -2,16 +2,16 @@
 title: Enregistrements (F#)
 description: 'Découvrez comment F # enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.'
 ms.date: 05/16/2016
-ms.openlocfilehash: ffb853ee11ff8cacb45dadf6ef14a4f29400aad4
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549605"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882361"
 ---
 # <a name="records"></a>Enregistrements
 
-Les enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.  Depuis 4.1 F #, ils peuvent être soit structs ou référence des types.  Ils sont des types de référence par défaut.
+Les enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.  À partir de F # 4.1, ils peuvent être soit types structs ou référence.  Ils sont des types de référence par défaut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ type [accessibility-modifier] typename =
 
 ## <a name="remarks"></a>Notes
 
-Dans la syntaxe précédente, *typename* est le nom du type d’enregistrement, *label1* et *label2* sont des noms de valeurs, appelés *étiquettes*, et *type1* et *type2* sont les types de ces valeurs. *liste des membres* est la liste facultative de membres pour le type.  Vous pouvez utiliser la `[<Struct>]` attribut pour créer un enregistrement de struct plutôt qu’un enregistrement qui est un type référence.
+Dans la syntaxe précédente, *typename* est le nom du type d’enregistrement, *label1* et *label2* sont des noms de valeurs, appelés *étiquettes*, et *type1* et *type2* sont les types de ces valeurs. *liste des membres* est la liste facultative de membres pour le type.  Vous pouvez utiliser le `[<Struct>]` attribut pour créer un enregistrement struct plutôt qu’un enregistrement qui est un type référence.
 
 Voici quelques exemples.
 
@@ -34,7 +34,7 @@ Voici quelques exemples.
 
 Lorsque chaque étiquette se trouve sur une ligne distincte, le point-virgule est facultatif.
 
-Vous pouvez définir des valeurs dans les expressions appelées *enregistrer expressions*. Le compilateur déduit le type à partir des étiquettes utilisées (si les étiquettes sont suffisamment distinctes de celles des autres types d’enregistrements). L’expression d’enregistrement placez-le entre accolades ({}). Le code suivant montre une expression d’enregistrement qui initialise un enregistrement avec trois éléments flottants avec étiquettes `x`, `y` et `z`.
+Vous pouvez définir des valeurs dans les expressions appelées *enregistrer expressions*. Le compilateur déduit le type à partir des étiquettes utilisées (si les étiquettes sont suffisamment différents de ceux des autres types d’enregistrements). Accolades ({}) placez l’expression d’enregistrement. Le code suivant montre une expression d’enregistrement qui initialise un enregistrement avec trois éléments flottants avec des étiquettes `x`, `y` et `z`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1907.fs)]
 
@@ -42,39 +42,39 @@ S’il peut y avoir un autre type qui possède également les étiquettes de mê
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1903.fs)]
 
-Les étiquettes du type plus récemment déclaré ont priorité sur ceux du type déclaré précédemment, c’est le cas dans l’exemple précédent, `mypoint3D` est déduit que `Point3D`. Vous pouvez spécifier explicitement le type d’enregistrement, comme dans le code suivant.
+Les étiquettes de type le plus récemment déclaré ont priorité sur ceux du type déclaré précédemment, c’est le cas dans l’exemple précédent, `mypoint3D` est déduite comme étant `Point3D`. Vous pouvez spécifier explicitement le type d’enregistrement, comme dans le code suivant.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1908.fs)]
 
-Méthodes peuvent être définies pour les types d’enregistrements, comme pour des types de classe.
+Méthodes peuvent être définies pour les types d’enregistrements comme pour les types de classe.
 
 ## <a name="creating-records-by-using-record-expressions"></a>Création d’enregistrements à l’aide d’Expressions d’enregistrement
 
-Vous pouvez initialiser des enregistrements en utilisant les étiquettes qui sont définis dans l’enregistrement. Une expression qui effectue l’opération est appelée un *enregistrer expression*. Utiliser des accolades pour encadrer l’expression d’enregistrement et le point-virgule comme délimiteur.
+Vous pouvez initialiser des enregistrements en utilisant les étiquettes qui sont définis dans l’enregistrement. Une expression qui s’en charge est appelée un *enregistrement expression*. Utiliser des accolades pour encadrer l’expression d’enregistrement et le point-virgule comme délimiteur.
 
 L’exemple suivant montre comment créer un enregistrement.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1904.fs)]
 
-Les points-virgules après le dernier champ dans l’expression d’enregistrement et la définition de type sont facultatifs, que les champs soient tous sur une ligne.
+Les points-virgules après le dernier champ dans l’expression d’enregistrement et dans la définition de type sont facultatifs, que les champs soient tous sur une ligne.
 
-Lorsque vous créez un enregistrement, vous devez fournir des valeurs pour chaque champ. Vous ne pouvez pas référencer les valeurs des autres champs dans l’expression d’initialisation d’un champ.
+Lorsque vous créez un enregistrement, vous devez fournir des valeurs pour chaque champ. Vous ne pouvez pas référencer les valeurs des autres champs dans l’expression d’initialisation pour n’importe quel champ.
 
 Dans le code suivant, le type de `myRecord2` est déduit des noms des champs. Si vous le souhaitez, vous pouvez spécifier le nom de type explicitement.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1905.fs)]
 
-Une autre forme de construction d’enregistrement peut être utile lorsque vous devez copier un enregistrement existant et éventuellement modifier certaines des valeurs du champ. La ligne de code suivante illustre ce comportement.
+Une autre forme de construction d’enregistrement peut être utile lorsque vous devez copier un enregistrement existant et éventuellement modifier certaines valeurs de champ. La ligne de code suivante illustre cela.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1906.fs)]
 
-Cette forme de l’expression d’enregistrement est appelée le *copier et mettre à jour des enregistrement expression*.
+Cette forme de l’expression d’enregistrement est appelée le *copier et mettre à jour d’expression d’enregistrement*.
 
-Les enregistrements sont immuables par défaut ; Toutefois, vous pouvez facilement créer des enregistrements modifiés à l’aide d’une expression de copie et de mise à jour. Vous pouvez également spécifier explicitement un champ mutable.
+Les enregistrements sont immuables par défaut ; Toutefois, vous pouvez créer facilement des enregistrements modifiés à l’aide d’une expression de copie et de mise à jour. Vous pouvez également spécifier explicitement un champ mutable.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1909.fs)]
 
-N’utilisez pas l’attribut DefaultValue avec les champs d’enregistrement. Une meilleure approche consiste à définir des instances par défaut des enregistrements avec des champs qui sont initialisés les valeurs par défaut puis utiliser une copie et mise à jour d’expression d’enregistrement pour définir les champs qui diffèrent des valeurs par défaut.
+N’utilisez pas l’attribut DefaultValue avec des champs d’enregistrement. Une meilleure approche consiste à définir les instances par défaut des enregistrements avec des champs qui sont initialisées aux valeurs par défaut et utiliser une copie, puis mettre à jour d’expression d’enregistrement pour définir tous les champs qui diffèrent des valeurs par défaut.
 
 ```fsharp
 // Rather than use [<DefaultValue>], define a default record.
@@ -90,9 +90,9 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
 
-## <a name="pattern-matching-with-records"></a>Mise en correspondance avec des enregistrements
+## <a name="pattern-matching-with-records"></a>Critères spéciaux avec enregistrements
 
-Enregistrements peuvent être utilisés avec les critères spéciaux. Vous pouvez spécifier des champs explicitement et fournir des variables pour les autres champs qui seront attribués lorsqu’une correspondance se produit. L'exemple de code suivant illustre ceci.
+Enregistrements peuvent être utilisés avec les critères spéciaux. Vous pouvez spécifier des champs explicitement et fournir des variables pour les autres champs qui seront affectés lors d’une correspondance est trouvée. L'exemple de code suivant illustre ceci.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1910.fs)]
 
@@ -106,30 +106,26 @@ Point is at (10.000000, 0.000000, -1.000000).
 
 ## <a name="differences-between-records-and-classes"></a>Différences entre les Classes et les enregistrements
 
-Champs d’enregistrement diffèrent des classes dans la mesure où ils sont automatiquement exposés en tant que propriétés, et ils sont utilisés lors de la création et de copie d’enregistrements. La construction d’enregistrement diffère également de construction de la classe. Dans un type d’enregistrement, vous ne pouvez pas définir un constructeur. Au lieu de cela, la syntaxe de construction décrite dans cette rubrique s’applique. Classes ont aucune relation directe entre les paramètres du constructeur, des champs et propriétés.
+Champs d’enregistrement diffèrent des classes dans la mesure où ils sont automatiquement exposés en tant que propriétés, et ils sont utilisés dans la création et de copie d’enregistrements. Construction d’enregistrement diffère également de construction de classe. Dans un type d’enregistrement, vous ne pouvez pas définir un constructeur. Au lieu de cela, la syntaxe de construction décrite dans cette rubrique s’applique. Classes n’ont aucune relation directe entre les paramètres du constructeur, des champs et propriétés.
 
 Comme les types d’union et de structure, les enregistrements ont une sémantique d’égalité structurelle. Classes ont référence une sémantique d’égalité. L'exemple de code suivant illustre cette tâche.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1911.fs)]
 
-La sortie de ce code est la suivante :
+La sortie de ce code est comme suit :
 
 ```
 The records are equal.
 ```
 
-Si vous écrivez le même code avec les classes, les deux objets de classe seraient inégaux parce que les deux valeurs représenteraient deux objets sur le tas et seules les adresses seraient comparées (à moins que le type de classe substitue le `System.Object.Equals` méthode).
+Si vous écrivez le même code avec les classes, les deux objets de classe seraient inégaux, car les deux valeurs représenteraient deux objets sur le tas et seules les adresses seraient comparées (à moins que le type de la classe substitue la `System.Object.Equals` méthode).
 
-Si vous avez besoin de l’égalité pour les enregistrements de référence, ajoutez l’attribut `[<ReferenceEquality>]` au-dessus de l’enregistrement.
+Si vous avez besoin de référencer l’égalité des enregistrements, ajoutez l’attribut `[<ReferenceEquality>]` au-dessus de l’enregistrement.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Types F#](fsharp-types.md)
-
-[Classes](classes.md)
-
-[Informations de référence du langage F#](index.md)
-
-[Égalité des références](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
-
-[Critères spéciaux](pattern-matching.md)
+- [Types F#](fsharp-types.md)
+- [Classes](classes.md)
+- [Informations de référence du langage F#](index.md)
+- [Égalité de référence](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.referenceequalityattribute-class-%5bfsharp%5d)
+- [Critères spéciaux](pattern-matching.md)

@@ -3,11 +3,11 @@ title: Custom Demux
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
 ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732366"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803419"
 ---
 # <a name="custom-demux"></a>Custom Demux
 Cet exemple montre comment les en-têtes de message MSMQ peuvent être mappés à différentes opérations de service afin que les services Windows Communication Foundation (WCF) qui utilisent <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> ne sont pas limités à l’utilisation d’une opération de service comme illustré dans le [ Message Queuing vers Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) et [Windows Communication Foundation vers Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) exemples.  

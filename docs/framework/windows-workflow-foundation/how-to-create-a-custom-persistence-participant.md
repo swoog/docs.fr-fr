@@ -3,11 +3,11 @@ title: 'Procédure : créer un participant de persistance personnalisé'
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558524"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855840"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Procédure : créer un participant de persistance personnalisé
 La procédure suivante permet de créer un participant de persistance. Consultez le [participant de persistance](https://go.microsoft.com/fwlink/?LinkID=177735) exemple et [Store extensibilité](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) rubrique pour des exemples d’implémentations de participants de persistance.  

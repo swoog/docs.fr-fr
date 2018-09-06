@@ -3,11 +3,11 @@ title: Membership and Role Provider
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
 ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553147"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864026"
 ---
 # <a name="membership-and-role-provider"></a>Membership and Role Provider
 L'exemple Membership and Role Provider montre comment un service peut utiliser les fournisseurs d'appartenances et de rôles [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] pour authentifier et autoriser des clients.  

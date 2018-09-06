@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 48b55c60-495f-4089-9396-97f9122bba7c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90cc40024de627f151a4d0df879a65e5900004b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 390c12af7107bb78fc261c55ea15390cf9eaa5b7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573631"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862947"
 ---
 # <a name="events-and-callbacks"></a>Événements et rappels
-Les rappels sont des points d’extensibilité qui autorisent une infrastructure rappeler dans le code de l’utilisateur via un délégué. Ces délégués sont généralement transmis à l’infrastructure via un paramètre d’une méthode.  
+Les rappels sont des points d’extensibilité qui permettent une infrastructure effectuer un rappel dans le code de l’utilisateur via un délégué. Ces délégués sont généralement transmises à l’infrastructure à un paramètre d’une méthode.  
   
- Les événements sont un cas spécial de rappels qui prend en charge la syntaxe pratique et cohérente pour fournir le délégué (un gestionnaire d’événements). En outre, saisie semi-automatique des instructions et les concepteurs de Visual Studio fournissent de l’aide à l’aide d’API basées sur des événements. (Consultez [événement conception](../../../docs/standard/design-guidelines/event.md).)  
+ Les événements sont un cas spécial de rappels qui prend en charge la syntaxe pratique et cohérente pour fournir le délégué (un gestionnaire d’événements). En outre, saisie semi-automatique des instructions et les concepteurs de Visual Studio fournissent de l’aide à l’aide des API basées sur des événements. (Consultez [conception d’événements](../../../docs/standard/design-guidelines/event.md).)  
   
  **✓ CONSIDER** à l’aide des rappels pour permettre aux utilisateurs de fournir un code personnalisé doit être exécuté par l’infrastructure.  
   
@@ -32,18 +32,19 @@ Les rappels sont des points d’extensibilité qui autorisent une infrastructure
   
  **✓ DO** utiliser la nouvelle `Func<...>`, `Action<...>`, ou `Expression<...>` types à la place des délégués personnalisés lors de la définition d’API avec des rappels.  
   
- `Func<...>` et `Action<...>` représentent des délégués génériques. `Expression<...>` représente les définitions de fonction qui peuvent être compilées et appelées par la suite lors de l’exécution, mais peut également être sérialisées et passées à des processus à distance.  
+ `Func<...>` et `Action<...>` représentent les délégués génériques. `Expression<...>` représente les définitions de fonction qui peuvent être compilées et appelées par la suite lors de l’exécution, mais peut également être sérialisées et transmies aux processus à distance.  
   
  **✓ DO** mesurer et comprendre les implications en matière de performances de l’utilisation de `Expression<...>`, au lieu d’utiliser `Func<...>` et `Action<...>` délégués.  
   
- `Expression<...>` les types sont dans la plupart des cas logiquement équivalente à `Func<...>` et `Action<...>` délégués. La principale différence est que les délégués sont destinées à être utilisée dans des scénarios de processus locale. les expressions sont destinées aux cas où il est bénéfique et permet d’évaluer l’expression dans un processus distant ou un ordinateur.  
+ `Expression<...>` les types sont dans la plupart des cas logiquement équivalente à `Func<...>` et `Action<...>` délégués. La principale différence est que les délégués sont destinées à être utilisées dans des scénarios de processus local. les expressions sont conçues pour les cas où il est possible d’évaluer l’expression dans un processus à distance ou de la machine et profitable.  
   
  **✓ DO** comprendre que par l’appel d’un délégué, vous exécutez du code arbitraire et qui pourraient avoir des répercussions de sécurité, d’exactitude et de compatibilité.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Conception en vue de l’extensibilité](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Conception en vue de l’extensibilité](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

@@ -3,11 +3,11 @@ title: 'Comment : choisir entre des demandes HTTP POST et HTTP GET pour des poi
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
 ms.openlocfilehash: 079bbd98b3fc3d5538f87cad39a4a83a0dc1e242
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481840"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863333"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Comment : choisir entre des demandes HTTP POST et HTTP GET pour des points de terminaison AJAX ASP.NET
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un point de terminaison compatible ASP.NET AJAX qui peut être appelée à partir de JavaScript sur un site Web client. Les procédures de base pour la création de ces services est abordé dans [Comment : utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) et [Comment : ajouter un point de terminaison du AJAX ASP.NET sans Configuration à l’aide de](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  

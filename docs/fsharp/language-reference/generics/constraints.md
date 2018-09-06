@@ -2,17 +2,16 @@
 title: Contraintes (F#)
 description: 'En savoir plus sur les contraintes F # qui s’appliquent aux paramètres de type générique pour spécifier la configuration requise pour un argument de type dans un type générique ou une fonction.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 0e79cf5b1a25ada49bf30416f85c1d59f8f2fd23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525603"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867827"
 ---
 # <a name="constraints"></a>Contraintes
 
 Cette rubrique décrit les contraintes que vous pouvez appliquer à générique paramètres pour spécifier la configuration requise pour un argument de type dans un type générique ou une fonction de type.
-
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -21,6 +20,7 @@ type-parameter-list when constraint1 [ and constraint2]
 ```
 
 ## <a name="remarks"></a>Notes
+
 Il existe plusieurs contraintes différentes que vous pouvez appliquer pour limiter les types qui peuvent être utilisés dans un type générique. Le tableau suivant répertorie et décrit ces contraintes.
 
 |Contrainte|Syntaxe|Description|
@@ -115,6 +115,6 @@ class end
 ```
 
 ## <a name="see-also"></a>Voir aussi
-[Génériques](index.md)
 
-[Contraintes](constraints.md)
+- [Génériques](index.md)
+- [Contraintes](constraints.md)

@@ -3,11 +3,11 @@ title: Types déconseillés dans Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: 4aebe928-a964-4c1c-abf7-0dbbd3604b13
 ms.openlocfilehash: b25be26d4c0ad6c423b011cd7cad24a8728333f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658897"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857640"
 ---
 # <a name="deprecated-types-in-windows-workflow-foundation"></a>Types déconseillés dans Windows Workflow Foundation
 Dans le .NET 4, l'équipe de workflow a mis à disposition un nouveau au moteur de workflow dans l'espace de noms <xref:System.Activities>. Avec la version de .NET 4.5 Beta, nous sommes marquant la plupart des types dans le « WF 3 » <xref:System.Workflow.Activities>, <xref:System.Workflow.ComponentModel>, et <xref:System.Workflow.Runtime> espaces de noms comme obsolète.  

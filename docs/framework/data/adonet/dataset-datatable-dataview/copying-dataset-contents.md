@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: b85fb6ebf56b110330be121c87d2492b0cfac536
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535370"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804066"
 ---
 # <a name="copying-dataset-contents"></a>Copie de contenu de DataSet
 Vous pouvez créer une copie d’un <xref:System.Data.DataSet> afin que vous pouvez travailler avec des données sans affecter les données d’origine, ou travailler avec un sous-ensemble des données à partir d’un **jeu de données**. Lorsque vous copiez un **DataSet**, vous pouvez :  

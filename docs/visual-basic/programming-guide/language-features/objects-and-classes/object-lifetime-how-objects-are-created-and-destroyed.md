@@ -23,11 +23,11 @@ helpviewer_keywords:
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
 ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556053"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864496"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Durée de vie d’un objet : création et destruction des objets (Visual Basic)
 Une instance de classe (objet) est créée à l'aide du mot clé `New`. Des tâches d'initialisation doivent souvent être exécutées sur les nouveaux objets préalablement à leur utilisation. Ces tâches d’initialisation consistent généralement à ouvrir des fichiers, à se connecter à des bases de données et à lire des valeurs de clés de Registre. Visual Basic contrôle l’initialisation des nouveaux objets à l’aide de procédures appelées *constructeurs* (méthodes spéciales permettant de contrôler l’initialisation).  

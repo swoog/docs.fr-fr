@@ -16,11 +16,11 @@ ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ff2be73b2cea563066f70ea2fe6d53840f718e75
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43674293"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855281"
 ---
 # <a name="debugging-tracing-and-profiling"></a>Débogage, traçage et profilage
 Pour déboguer une application .NET Framework, le compilateur et l'environnement d'exécution doivent être configurés pour permettre l'attachement d'un débogueur à l'application et la génération de cartes à la fois de symboles et de lignes, si possible, pour l'application et son langage MSIL (Microsoft Intermediate Language) correspondant. Une fois déboguée, une application managée peut être profilée en vue d'améliorer ses performances. Le profilage évalue et décrit les lignes de code source qui génèrent le code le plus fréquemment exécuté, et le temps que demande leur exécution.  

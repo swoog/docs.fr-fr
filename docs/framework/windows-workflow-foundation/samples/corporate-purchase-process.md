@@ -2,19 +2,19 @@
 title: Processus d'achat d'entreprise
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 34d9280fb1d4009aa729cb2eba55b817db9fff56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520040"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43802909"
 ---
 # <a name="corporate-purchase-process"></a>Processus d'achat d'entreprise
 Cet exemple montre comment créer un processus d'achat basé sur des appels d'offres très simples avec sélection automatique de la meilleure proposition. Il combine <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> et <xref:System.Activities.Statements.ForEach%601> ainsi qu'une activité personnalisée pour créer un workflow qui représente le processus.  
   
  Cet exemple contient une application cliente [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] qui permet l'interaction avec le processus en tant que participants différents (en tant que demandeur d'origine ou fournisseur particulier).  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 -   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
@@ -43,12 +43,12 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Description du processus  
- Cet exemple illustre une implémentation d’un programme Windows Workflow Foundation (WF) pour rassembler des propositions de fournisseurs pour une société générique.  
+ Cet exemple illustre une implémentation d’un programme de Windows Workflow Foundation (WF) pour rassembler des propositions de fournisseurs pour une société générique.  
   
 1.  Un employé de la Société X crée un appel d'offres.  
   
@@ -155,20 +155,20 @@ Cet exemple montre comment créer un processus d'achat basé sur des appels d'of
   
 ### <a name="web-client-options"></a>Options de Web Client  
   
--   **Créer un nouvel appel d’offres**: crée une nouvelle demande d’appel d’offres et démarre un workflow de processus d’achat.  
+-   **Créer un nouvel appel d’offres**: crée une nouvelle demande (offres) et démarre un workflow de processus d’achat.  
   
 -   **Actualiser**: actualise la liste des actifs et terminés dans la fenêtre principale.  
   
 -   **Vue**: affiche le contenu d’un appel d’offres existant. Les fournisseurs peuvent soumettre leurs propositions (s'ils y sont invités ou si l'appel d'offres n'est pas terminé).  
   
--   Afficher en tant que : L’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans le **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.  
+-   Vue en tant que : L’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans la **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.  
   
 ### <a name="winforms-client-options"></a>Options de WinForms Client  
   
--   **Créer l’appel d’offres**: crée une nouvelle demande d’appel d’offres et démarre un workflow de processus d’achat.  
+-   **Créer l’appel d’offres**: crée une nouvelle demande (offres) et démarre un workflow de processus d’achat.  
   
 -   **Actualiser**: actualise la liste des actifs et terminés dans la fenêtre principale.  
   
 -   **Afficher l’appel d’offres**: affiche le contenu d’un appel d’offres existant. Les fournisseurs peuvent soumettre leurs propositions (s'ils y sont invités ou si l'appel d'offres n'est pas terminé).  
   
--   **Se connecter en tant que**: l’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans le **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.
+-   **Se connecter en tant que**: l’utilisateur peut accéder à l’appel d’offres à l’aide de différentes identités en sélectionnant le participant voulu dans la **afficher en tant que** zone de liste déroulante dans la grille des appels d’offres actifs.

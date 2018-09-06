@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a493e6591d90ce05a652e48807f63fa90764a91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573719"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869952"
 ---
 # <a name="exception-throwing"></a>Levée d'exceptions
-Levée d’exceptions des indications décrites dans cette section nécessitent une bonne définition de la signification de l’échec d’exécution. Échec d’exécution se produit chaque fois qu’un membre ne peut pas faire, il a été conçu pour faire (ce que le nom de membre implique). Par exemple, si le `OpenFile` méthode ne peut pas retourner un handle de fichier ouvert à l’appelant, il est considéré comme un échec d’exécution.  
+Levée d’exceptions des indications décrites dans cette section nécessitent une bonne définition de la signification de l’échec d’exécution. Échec d’exécution se produit chaque fois qu’un membre ne peut pas qu’il a été conçu pour faire (ce que le nom du membre indique). Par exemple, si le `OpenFile` méthode ne peut pas retourner un handle de fichier ouvert à l’appelant, il est considéré comme un échec d’exécution.  
   
- La plupart des développeurs sont à l’aise avec l’utilisation d’exceptions pour les erreurs d’utilisation telles que la division par zéro ou des références null. Dans le Framework, les exceptions sont utilisées pour toutes les conditions d’erreur, y compris les erreurs d’exécution.  
+ La plupart des développeurs sont devenus à l’aise avec utilisation d’exceptions pour les erreurs d’utilisation telles que la division par zéro ou de références null. Dans le Framework, les exceptions sont utilisées pour toutes les conditions d’erreur, y compris les erreurs d’exécution.  
   
  **X DO NOT** codes d’erreur.  
   
@@ -31,13 +31,13 @@ Levée d’exceptions des indications décrites dans cette section nécessitent 
   
  **X DO NOT** utiliser des exceptions pour le flux normal de contrôle, si possible.  
   
- À l’exception des défaillances du système et les opérations avec des conditions de concurrence potentielle, les concepteurs de framework doivent concevoir les API pour les utilisateurs peuvent écrire du code qui ne lève pas d’exceptions. Par exemple, vous pouvez fournir un moyen de vérifier les conditions préalables avant d’appeler un membre pour les utilisateurs peuvent écrire du code qui ne lève pas d’exceptions.  
+ À l’exception des défaillances du système et des opérations avec des conditions de concurrence potentielle, les concepteurs de framework doivent concevoir les API pour les utilisateurs peuvent écrire du code qui ne lève pas d’exceptions. Par exemple, vous pouvez fournir un moyen de vérifier les conditions préalables avant d’appeler un membre pour les utilisateurs peuvent écrire du code qui ne lève pas d’exceptions.  
   
- Le membre utilisé pour vérifier des conditions préalables d’un autre membre est communément appelée un testeur et le membre qui effectue réellement le travail est appelé un exécuteur.  
+ Le membre utilisé pour vérifier des conditions préalables d’un autre membre est souvent appelé un testeur, et le membre qui effectue réellement le travail est appelé un exécuteur.  
   
- Il existe des cas lorsque le modèle utilisateur testeur peut avoir une surcharge de performances inacceptables. Dans ce cas, le modèle d’analyse de Try soi-disant doit être considérée comme (consultez [Exceptions et les performances](../../../docs/standard/design-guidelines/exceptions-and-performance.md) pour plus d’informations).  
+ Il existe des cas lorsque le modèle Doer peut avoir une surcharge de performances inacceptables. Dans ce cas, le modèle d’essayer d’analyser ce que l'on appelle doit être considéré comme (consultez [Exceptions et performances](../../../docs/standard/design-guidelines/exceptions-and-performance.md) pour plus d’informations).  
   
- **✓ CONSIDER** l’impact sur les performances de lever des exceptions. Taux de throw supérieure à 100 par seconde sont susceptibles de considérablement affecter les performances de la plupart des applications.  
+ **✓ CONSIDER** l’impact sur les performances de lever des exceptions. Taux de throw au-dessus de 100 par seconde sont susceptibles d’impacter les performances de la plupart des applications.  
   
  **✓ DO** document toutes les exceptions levées par les membres pouvant être appelés publiquement en raison d’une violation du membre de contrat (au lieu d’une défaillance du système) et les traitent en tant que partie de votre contrat.  
   
@@ -47,24 +47,25 @@ Levée d’exceptions des indications décrites dans cette section nécessitent 
   
  **X DO NOT** des membres publics de retournent des exceptions comme valeur de retour ou un `out` paramètre.  
   
- Retourner des exceptions à partir des API publiques, au lieu de lever les va à l’encontre de nombreux avantages de l’erreur de type exception.  
+ Retourner des exceptions à partir des API publiques, au lieu de lever les va à l’encontre de nombreux avantages de rapport d’erreurs basée sur l’exception.  
   
  **✓ CONSIDER** à l’aide des méthodes de générateur d’exceptions.  
   
- Il est courant de lève la même exception à partir d’emplacements différents. Pour éviter l’excès de code, utilisez les méthodes d’assistance qui créent des exceptions et initialisent leurs propriétés.  
+ Il est courant pour lever l’exception même à partir de différents endroits. Pour éviter les excès de code, utilisez les méthodes d’assistance qui créent des exceptions et initialisent leurs propriétés.  
   
- En outre, les membres qui lèvent des exceptions n’obtiennent pas inline. Déplacement de l’instruction throw à l’intérieur du Générateur de peut permettre au membre être inline.  
+ En outre, les membres qui lèvent des exceptions ne reçoivent inline. Déplacement de l’instruction throw dans le générateur peut autoriser le membre permet d’être incorporée.  
   
  **X DO NOT** lever des exceptions à partir de blocs de filtre d’exception.  
   
- Lorsqu’un filtre d’exceptions lève une exception, l’exception est interceptée par le CLR, et le filtre retourne false. Ce comportement est indiscernable le filtre exécute et retourne explicitement la valeur false et est donc très difficile à déboguer.  
+ Lorsqu’un filtre d’exceptions lève une exception, l’exception est interceptée par le CLR, et le filtre retourne false. Ce comportement est indiscernable du filtre de l’exécution et en retournant la valeur false explicitement et est donc très difficile à déboguer.  
   
- **X AVOID** lever explicitement des exceptions à partir de blocs finally. Les exceptions levées implicitement résultant d’appels de méthodes sont acceptables.  
+ **X AVOID** lever explicitement des exceptions à partir de blocs finally. Résultant de l’appel des méthodes qui lèvent les exceptions levées implicitement sont acceptables.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Instructions de conception pour les exceptions](../../../docs/standard/design-guidelines/exceptions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Instructions de conception pour les exceptions](../../../docs/standard/design-guidelines/exceptions.md)

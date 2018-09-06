@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: 1f7da963db34434ee2631e9e2c0367abbd628656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7d99cf87507237b23cb40c58b2308643f7f1056
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749166"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872190"
 ---
 # <a name="backgroundworker-component-overview"></a>Vue d'ensemble du composant BackgroundWorker
 De nombreuses opérations couramment exécutées peuvent être longues à s'éxécuter. Par exemple :  
@@ -60,6 +60,8 @@ De nombreuses opérations couramment exécutées peuvent être longues à s'éx�
   
  Pour plus d’informations sur l’utilisation de la <xref:System.ComponentModel.BackgroundWorker> de classe, consultez [Comment : exécuter une opération en arrière-plan](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [ABSENT DE LA BUILD : Multithreading en Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Comment : implémenter un formulaire qui utilise une opération d’arrière-plan](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Threading managé](../../../../docs/standard/threading/index.md)
+- [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Comment : implémenter un formulaire qui utilise une opération d’arrière-plan](how-to-implement-a-form-that-uses-a-background-operation.md)

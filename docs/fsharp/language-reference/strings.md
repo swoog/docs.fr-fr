@@ -2,12 +2,12 @@
 title: Chaînes (F#)
 description: "Découvrez comment le type 'string' F # représente le texte immuable sous la forme d’une séquence de caractères Unicode."
 ms.date: 05/16/2016
-ms.openlocfilehash: 7309e93bf0a6518d03a9f850804a4f580e2c96b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561289"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43799341"
 ---
 # <a name="strings"></a>Chaînes
 
@@ -17,6 +17,7 @@ Les liens des informations de référence sur les API qui figurent dans cet arti
 Le `string` type représente le texte immuable sous la forme d’une séquence de caractères Unicode. `string` est un alias pour `System.String` dans le .NET Framework.
 
 ## <a name="remarks"></a>Notes
+
 Littéraux de chaîne sont délimitées par le caractère guillemet ("). Le caractère barre oblique inverse ( \\ ) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés une *séquence d’échappement*. Prise en charge par F # littéraux sont affichés dans le tableau suivant de chaîne de séquences d’échappement.
 
 |Caractère|Séquence d'échappement|
@@ -66,23 +67,27 @@ def
 Vous pouvez représenter les chaînes ASCII par des tableaux d’octets non signés, type `byte[]`. Vous ajoutez le suffixe `B` à un littéral de chaîne pour indiquer qu’il s’agit d’une chaîne ASCII. Les littéraux de chaîne ASCII utilisés avec les tableaux d’octets prend en charge les mêmes séquences d’échappement sous forme de chaînes Unicode à l’exception des séquences d’échappement Unicode.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1004.fs)]
-    
+
 ## <a name="string-operators"></a>Opérateurs de chaîne
+
 Il existe deux façons de concaténer des chaînes : à l’aide de la `+` opérateur ou à l’aide de la `^` opérateur. Le `+` opérateur assure la compatibilité avec la chaîne de .NET Framework gère les fonctionnalités.
 
 L’exemple suivant illustre la concaténation de chaînes.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1006.fs)]
-    
+
 ## <a name="string-class"></a>Classe de chaîne
+
 Étant donné que le type de chaîne en F # est en fait un .NET Framework `System.String` taper, tout le `System.String` membres sont disponibles. Cela inclut la `+` opérateur, qui est utilisé pour concaténer des chaînes, la `Length` propriété et le `Chars` propriété, qui retourne la chaîne sous la forme d’un tableau de caractères Unicode. Pour plus d’informations sur les chaînes, consultez `System.String`.
 
 À l’aide de la `Chars` propriété du `System.String`, vous pouvez accéder à différents caractères dans une chaîne en spécifiant un index, comme indiqué dans le code suivant.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1005.fs)]
-    
+
 ## <a name="string-module"></a>Module de chaîne
+
 Des fonctionnalités supplémentaires pour la gestion des chaînes sont incluses dans le `String` module dans le `FSharp.Core` espace de noms. Pour plus d’informations, consultez [Core.String, Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d).
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
+
+- [Informations de référence du langage F#](index.md)

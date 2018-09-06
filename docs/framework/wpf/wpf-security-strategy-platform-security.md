@@ -18,11 +18,11 @@ helpviewer_keywords:
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
 ms.openlocfilehash: 905092cfdcbcbeb95fdfa689c09a847491595d9d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560390"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857321"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Stratégie de sécurité de WPF - sécurité de la plateforme
 Bien que Windows Presentation Foundation (WPF) offre une variété de services de sécurité, il s’appuie également sur les fonctionnalités de sécurité de la plateforme sous-jacente, qui inclut le système d’exploitation, le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], et [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Ces couches se combinent pour fournir à [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modèle de sécurité de défense en profondeur renforcé qui essaie d'éviter le moindre point de défaillance, comme cela est illustré dans l'image suivante :  

@@ -2,12 +2,12 @@
 title: Référence des mots clés (F#)
 description: 'Trouvez des liens vers des informations sur tous les mots-clés du langage F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 18bf5f00cdd5250c0fbd503d096e5415a8b9feea
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526187"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856022"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
@@ -132,8 +132,7 @@ Les jetons suivants sont réservés en tant que mots clés pour l’expansion fu
 * `volatile`
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Informations de référence des symboles et opérateurs](symbol-and-operator-reference/index.md)
-
-[Options du compilateur](compiler-options.md)
+- [Informations de référence du langage F#](index.md)
+- [Informations de référence des symboles et opérateurs](symbol-and-operator-reference/index.md)
+- [Options du compilateur](compiler-options.md)

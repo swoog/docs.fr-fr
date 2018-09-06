@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
 ms.openlocfilehash: 556b1cc31f42cecc19492412120b31da83eff609
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43733834"
+ms.locfileid: "43800555"
 ---
 # <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>Exemples de syntaxe de requête d'expression de requête : restriction (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser la méthode <xref:System.Linq.Enumerable.Where%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe d'expression de requête.  

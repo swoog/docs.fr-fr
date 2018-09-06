@@ -10,11 +10,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
 ms.openlocfilehash: 3a35f6dda05cfe65811de16d76b288c8fbd618a7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542321"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874914"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Comment : faire pivoter un objet à l'aide d'un tracé géométrique (animation de matrice)
 Cet exemple montre comment utiliser un <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> et un <xref:System.Windows.Media.MatrixTransform> à faire tourner (pivoter) un objet le long d’un tracé géométrique défini par un <xref:System.Windows.Media.PathGeometry> objet.  

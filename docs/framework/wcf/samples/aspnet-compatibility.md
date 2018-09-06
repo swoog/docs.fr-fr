@@ -3,11 +3,11 @@ title: ASP.NET Compatibility
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
 ms.openlocfilehash: eeb09914fc90848c987127c789379549917063f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659511"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43800178"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET Compatibility
 Cet exemple montre comment activer le mode de compatibilité ASP.NET dans Windows Communication Foundation (WCF). Utilisent des services qui s’exécutent dans la compatibilité ASP.NET participent pleinement le pipeline d’application ASP.NET de mode et peut rendre des fonctionnalités ASP.NET telles que l’autorisation de fichier/URL, l’état de session et le <xref:System.Web.HttpContext> classe. Le <xref:System.Web.HttpContext> classe permet d’accéder aux cookies, les sessions et les autres fonctionnalités ASP.NET. Dans ce mode, les liaisons doivent utiliser le transport HTTP et le service lui-même doit être hébergé dans les services IIS.  

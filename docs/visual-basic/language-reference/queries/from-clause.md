@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: 71573de48cc51c48291fc4b82a0628d2d0f96caa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556807"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870157"
 ---
 # <a name="from-clause-visual-basic"></a>From, clause (Visual Basic)
 Spécifie une ou plusieurs variables de plage et une collection à interroger.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77d86e2ade841b715fc4bea8350d4e043bcb91b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 016f19c7141ebaf9b5c1f03adc263b689489119b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581789"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874207"
 ---
 # <a name="how-to-create-a-windowsprincipal-object"></a>Comment : créer un objet WindowsPrincipal
 Il existe deux façons de créer un objet <xref:System.Security.Principal.WindowsPrincipal>, selon que le code doit effectuer une ou plusieurs validations basées sur les rôles.  
@@ -77,5 +77,6 @@ Il existe deux façons de créer un objet <xref:System.Security.Principal.Window
   
 3.  Quand l'objet principal a été créé, vous pouvez utiliser plusieurs méthodes pour le valider.  
   
-## <a name="see-also"></a>Voir aussi  
- [Objets Principal et Identity](../../../docs/standard/security/principal-and-identity-objects.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Objets Principal et Identity](../../../docs/standard/security/principal-and-identity-objects.md)

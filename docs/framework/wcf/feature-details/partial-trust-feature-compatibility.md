@@ -3,11 +3,11 @@ title: Compatibilité des fonctionnalités dans un environnement de confiance pa
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745594"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864522"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Compatibilité des fonctionnalités dans un environnement de confiance partielle
 Windows Communication Foundation (WCF) prend en charge un sous-ensemble limité de fonctionnalités lors de l’exécution dans un environnement de confiance partielle. Les fonctionnalités de confiance partielle prises en charge sont conçues autour d’un ensemble spécifique de scénarios, comme décrit dans la rubrique [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  

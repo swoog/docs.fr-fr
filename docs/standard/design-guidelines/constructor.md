@@ -14,60 +14,60 @@ helpviewer_keywords:
 ms.assetid: b4496afe-5fa7-4bb0-85ca-70b0ef21e6fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d7ca279dc1626cd526910af93326280bcd8301d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ad920c8028b102a13fdfe928d21768538e25b0f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575555"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868152"
 ---
 # <a name="constructor-design"></a>Conception de constructeurs
-Il existe deux types de constructeurs : constructeurs et les constructeurs d’instance de type.  
+Il existe deux types de constructeurs : tapez des constructeurs et des constructeurs d’instance.  
   
- Constructeurs de type sont statiques et sont exécutées par le CLR, avant que le type est utilisé. Constructeurs d’instance exécuté lorsqu’une instance d’un type est créée.  
+ Constructeurs de type sont statiques et sont exécutés par le CLR avant que le type est utilisé. Constructeurs d’instance exécuté lorsqu’une instance d’un type est créée.  
   
- Constructeurs de type ne peut pas prendre des paramètres. Constructeurs d’instance peuvent. Constructeurs d’instance qui n’acceptent aucun paramètre sont souvent appelés des constructeurs par défaut.  
+ Constructeurs de type ne peut pas prendre tous les paramètres. Constructeurs d’instance peuvent. Constructeurs d’instance qui ne prennent pas tous les paramètres sont souvent appelées des constructeurs par défaut.  
   
- Les constructeurs sont la façon la plus naturelle pour créer des instances d’un type. La plupart des développeurs recherche et essayez d’utiliser un constructeur avant d’autres méthodes pour créer des instances (par exemple, les méthodes de fabrique).  
+ Constructeurs sont le moyen le plus naturel pour créer des instances d’un type. La plupart des développeurs recherche et essayez d’utiliser un constructeur avant d’autres méthodes de création d’instances (par exemple, les méthodes de fabrique).  
   
  **✓ CONSIDER** fournissant simple, dans l’idéal, par défaut, les constructeurs.  
   
- Un constructeur simple possède un très petit nombre de paramètres, et tous les paramètres sont des primitives ou enums. Ces constructeurs simples faciliter l’utilisation de l’infrastructure.  
+ Un constructeur simple possède un très petit nombre de paramètres, et tous les paramètres sont des primitives ou des énumérations. Ces constructeurs simples faciliter l’utilisation de l’infrastructure.  
   
  **✓ CONSIDER** à l’aide d’une méthode de fabrique statique au lieu d’un constructeur si la sémantique de l’opération requise ne correspond pas directement à la construction d’une nouvelle instance, ou si les règles de conception du constructeur vous semblent pas naturelles.  
   
  **✓ DO** utiliser les paramètres du constructeur en tant que raccourcis pour définir les propriétés principales.  
   
- Il ne doit y avoir aucune différence de sémantique entre l’utilisation du constructeur vide suivi de certains jeux de propriétés et à l’aide d’un constructeur avec plusieurs arguments.  
+ Il doit y avoir aucune différence sémantique entre l’utilisation du constructeur vide suivi de certains jeux de propriétés et à l’aide d’un constructeur avec plusieurs arguments.  
   
  **✓ DO** utiliser le même nom pour les paramètres du constructeur et une propriété si les paramètres du constructeur sont utilisés pour définir simplement la propriété.  
   
- La seule différence entre ces paramètres et les propriétés est la casse.  
+ Doit être la seule différence entre ces paramètres et les propriétés de mise en majuscules.  
   
  **✓ DO** travail minimal dans le constructeur.  
   
- Les constructeurs ne quantité de travail autre que capture les paramètres du constructeur. Le coût de tout autre traitement doit être différé jusqu'à ce que nécessaire.  
+ Constructeurs doivent rien faire d’autre que de capture les paramètres du constructeur. Le coût de tout autre traitement doit être différé jusqu'à ce que nécessaire.  
   
  **✓ DO** lever des exceptions à partir des constructeurs d’instance, le cas échéant.  
   
  **✓ DO** déclarer explicitement le constructeur public par défaut dans les classes, si un tel constructeur est nécessaire.  
   
- Si vous ne déclarez explicitement de constructeur sur un type, plusieurs langues (par exemple, en c#) ajoute automatiquement un constructeur public par défaut. (Les classes abstraites obtenir un constructeur protégé.)  
+ Si vous ne déclarez explicitement tous les constructeurs sur un type, nombreux langages (tel que c#) ajoute automatiquement un constructeur public par défaut. (Les classes abstraites obtenir un constructeur protégé.)  
   
- Ajout d’un constructeur paramétrable à une classe d’empêche le compilateur d’ajouter le constructeur par défaut. Cela entraîne souvent des modifications avec rupture accidentelle.  
+ Ajout d’un constructeur paramétrable à une classe empêche le compilateur d’ajouter le constructeur par défaut. Cela entraîne souvent des modifications avec rupture accidentelle.  
   
  **X AVOID** définition explicite des constructeurs par défaut sur les structures.  
   
- Cela rend la création de tableau plus rapide, car si le constructeur par défaut n’est pas défini, il n’a pas à être exécuté sur tous les emplacements dans le tableau. Notez que de nombreux compilateurs, notamment c#, ne pas autoriser les structs peuvent avoir des constructeurs sans paramètre pour cette raison.  
+ Cela accélère la création de tableau, car si le constructeur par défaut n’est pas défini, il n’a pas à être exécuté sur tous les emplacements dans le tableau. Notez que de nombreux compilateurs, y compris C#, ne pas autoriser les structs peuvent avoir des constructeurs sans paramètre pour cette raison.  
   
  **X AVOID** appel des membres virtuels sur un objet à l’intérieur de son constructeur.  
   
- Appel d’un membre virtuel entraînera le remplacement de la plus dérivé à appeler, même si le constructeur du type plus dérivé a été entièrement s’exécute pas encore.  
+ Appeler un membre virtuel entraîne le remplacement de la plus dérivé à appeler, même si le constructeur du type plus dérivé n'a pas été entièrement encore été exécuté.  
   
 ### <a name="type-constructor-guidelines"></a>Instructions de constructeur de type  
  **✓ DO** rendre les constructeurs statiques privé.  
   
- Un constructeur statique, également appelé constructeur de classe, est utilisé pour initialiser un type. Le CLR appelle le constructeur statique avant la création de la première instance du type ou de tout membre statique de ce type est appelées. L’utilisateur n’a aucun contrôle sur lorsque le constructeur statique est appelé. Si un constructeur statique n’est pas privé, il peut être appelé par du code autre que le CLR. Selon les opérations effectuées dans le constructeur, cela peut provoquer un comportement inattendu. Le compilateur c# force les constructeurs statiques privé.  
+ Un constructeur statique, également appelé constructeur de classe, est utilisé pour initialiser un type. Le CLR appelle le constructeur statique avant la création de la première instance du type ou de tous les membres statiques sur ce type sont appelées. L’utilisateur n’a aucun contrôle sur quand le constructeur statique est appelé. Si un constructeur statique n’est pas privé, elle peut être appelée par du code autre que le CLR. Selon les opérations effectuées dans le constructeur, cela peut provoquer un comportement inattendu. Le compilateur c# force les constructeurs statiques privées.  
   
  **X DO NOT** lever des exceptions à partir des constructeurs statiques.  
   
@@ -77,8 +77,9 @@ Il existe deux types de constructeurs : constructeurs et les constructeurs d’
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

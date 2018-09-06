@@ -3,11 +3,11 @@ title: MTOM Encoding
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
 ms.openlocfilehash: f54a22b0004623c8aef8f2788ed7d59f7d777ce7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400098"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875552"
 ---
 # <a name="mtom-encoding"></a>MTOM Encoding
 Cet exemple montre l'utilisation de l'encodage de message MTOM (Message Transmission Optimization Mechanism) à l'aide de WSHttpBinding. MTOM est un mécanisme permettant de transmettre des pièces jointes binaires de grande taille avec des messages SOAP sous forme d'octets bruts, et d'obtenir ainsi des messages plus petits.  

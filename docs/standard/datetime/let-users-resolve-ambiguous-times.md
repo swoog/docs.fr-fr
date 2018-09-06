@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4083871dd97a36529351aacbdcd39980bdde74a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91e80f44934092007f6f842f0694789d49321446
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572825"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863549"
 ---
 # <a name="how-to-let-users-resolve-ambiguous-times"></a>Comment : permettre aux utilisateurs de résoudre des heures ambiguës
 
@@ -37,7 +37,7 @@ Cette rubrique montre comment permettre à un utilisateur de résoudre une heure
 
 5. Obtenez la date et l’heure UTC en soustrayant de l’heure locale le décalage sélectionné par l’utilisateur.
 
-6. Appelez le `static` (`Shared` dans Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> pour définir la date et l’heure valeur UTC <xref:System.DateTime.Kind%2A> propriété <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
+6. Appelez le `static` (`Shared` dans Visual Basic .NET) <xref:System.DateTime.SpecifyKind%2A> méthode pour définir la date et l’heure valeur UTC <xref:System.DateTime.Kind%2A> propriété <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Exemple
 
@@ -46,19 +46,19 @@ L’exemple suivant invite l’utilisateur à entrer une date et une heure et, s
 [!code-csharp[System.TimeZone2.Concepts#11](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#11)]
 [!code-vb[System.TimeZone2.Concepts#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#11)]
 
-Le cœur de l’exemple de code utilise un tableau de <xref:System.TimeSpan> objets pour indiquer les offsets possibles de l’heure ambiguë à l’heure UTC. Toutefois, ces décalages ne seront probablement pas significatifs pour l’utilisateur. Pour clarifier leur signification, le code note également si un décalage représente l’heure d’hiver du fuseau horaire local ou son heure d’été. Le code détermine quelle heure standard et dont le temps est l’heure d’été en comparant le décalage de la valeur de la <xref:System.TimeZoneInfo.BaseUtcOffset%2A> propriété. Cette propriété indique la différence entre l’heure UTC et l’heure d’hiver du fuseau horaire.
+Le cœur de l’exemple de code utilise un tableau de <xref:System.TimeSpan> objets pour indiquer les décalages possibles de l’heure ambiguë à l’heure UTC. Toutefois, ces décalages ne seront probablement pas significatifs pour l’utilisateur. Pour clarifier leur signification, le code note également si un décalage représente l’heure d’hiver du fuseau horaire local ou son heure d’été. Le code détermine l’heure et l’heure l’heure d’été en comparant le décalage avec la valeur de la <xref:System.TimeZoneInfo.BaseUtcOffset%2A> propriété. Cette propriété indique la différence entre l’heure UTC et l’heure d’hiver du fuseau horaire.
 
-Dans cet exemple, toutes les références dans le fuseau horaire local sont effectuées via le <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> propriété ; l’heure locale zone n’est jamais assigné à une variable objet. Ceci est une pratique recommandée, car un appel à la <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> méthode invalide le fuseau horaire local est attribué à tous les objets.
+Dans cet exemple, toutes les références dans le fuseau horaire local sont faites via la <xref:System.TimeZoneInfo.Local%2A?displayProperty=nameWithType> propriété ; l’heure locale zone n’est jamais assignée à une variable objet. Ceci est une pratique recommandée, car un appel à la <xref:System.TimeZoneInfo.ClearCachedData%2A?displayProperty=nameWithType> méthode invalide tous les objets du fuseau horaire local est assigné à.
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
 Cet exemple nécessite :
 
-* Une référence à System.Core.dll à ajouter au projet.
+* Qu’une référence à System.Core.dll être ajoutée au projet.
 
 * Que le <xref:System> espace de noms importés avec le `using` instruction (requise en code c#).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-[Comment : résoudre des heures ambiguës](../../../docs/standard/datetime/resolve-ambiguous-times.md)
+* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+* [Guide pratique pour résoudre des heures ambiguës](../../../docs/standard/datetime/resolve-ambiguous-times.md)

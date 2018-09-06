@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589803"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869991"
 ---
 # <a name="cryptographic-signatures"></a>Signatures de chiffrement
 <a name="top"></a> Les signatures numériques de chiffrement utilisent des algorithmes de clé publique pour assurer l'intégrité des données. Quand vous signez des données avec une signature numérique, un tiers peut vérifier la signature et prouver que les données viennent bien de vous et qu'elles n'ont pas été modifiées après que vous les avez signées. Pour plus d’informations sur les signatures numériques, consultez [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Signature des fichiers XML  
  Le .NET Framework fournit l’espace de noms <xref:System.Security.Cryptography.Xml> , qui vous permet de signer le XML. Il est important de signer le XML quand vous voulez vérifier qu'il provient bien d'une certaine source. Par exemple, si vous utilisez un service de cotation boursière qui utilise du XML, vous pouvez vérifier la source de ce dernier s'il est signé.  
   
- Les classes de cet espace de noms suivent les [recommandation XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/) à partir du World Wide Web Consortium.  
+ Les classes de cet espace de noms suivent le [recommandation XML-Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/) le Consortium World Wide Web.  
   
  [Retour au début](#top)  
   
@@ -121,7 +121,7 @@ class Class1
   
 -   l'algorithme de hachage utilisé par le signataire.  
   
- Pour vérifier une signature signée par la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , utilisez la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . La clé publique du signataire doit être fournie à la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Vous aurez besoin des valeurs du modulo et de l'exposant pour spécifier la clé publique. (Le tiers qui a généré la paire de clés publique/privée doit fournir ces valeurs.) Tout d’abord créer un <xref:System.Security.Cryptography.RSACryptoServiceProvider> objet pour contenir la clé publique qui vérifie la signature, puis initialisez une <xref:System.Security.Cryptography.RSAParameters> structure et les valeurs du modulo et exposant qui spécifient la clé publique.  
+ Pour vérifier une signature signée par la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , utilisez la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . La clé publique du signataire doit être fournie à la classe <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Vous aurez besoin des valeurs du modulo et de l'exposant pour spécifier la clé publique. (Le tiers qui a généré la paire de clés publique/privée doit fournir ces valeurs.) Tout d’abord créer un <xref:System.Security.Cryptography.RSACryptoServiceProvider> objet pour contenir la clé publique qui vérifie la signature, puis initialisez une <xref:System.Security.Cryptography.RSAParameters> structure pour les valeurs du modulo et exposant qui spécifient la clé publique.  
   
  Le code suivant illustre la création d’une structure <xref:System.Security.Cryptography.RSAParameters> . La propriété `Modulus` est définie avec la valeur d'un tableau d'octets nommé `ModulusData` , tandis que la propriété `Exponent` est définie avec la valeur d'un tableau d'octets nommé `ExponentData`.  
   
@@ -172,5 +172,6 @@ else
   
  Ce fragment de code affiche «`The signature is valid`» si la signature est valide et «`The signature is not valid`» si elle ne l'est pas.  
   
-## <a name="see-also"></a>Voir aussi  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

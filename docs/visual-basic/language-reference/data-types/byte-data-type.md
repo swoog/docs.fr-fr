@@ -10,11 +10,11 @@ ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3b106005ff07f55e05ae66dba94041cd8b5c24bb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732142"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869368"
 ---
 # <a name="byte-data-type-visual-basic"></a>Type de données Byte (Visual Basic)
 Blocages entiers non signés 8 bits (1 octet) comprises dans une valeur comprise entre 0 et 255.

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - insertion marks
 ms.assetid: 88d0a15b-25fd-4dc3-a685-297351311940
 ms.openlocfilehash: b9b6e1911d3e372861ebcdc5a175314d69c89175
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555303"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855007"
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Comment : afficher une marque d'insertion dans un contrôle ListView Windows Forms
 La marque d'insertion dans le contrôle <xref:System.Windows.Forms.ListView> indique aux utilisateurs l'emplacement où les éléments déplacés seront insérés. Quand un utilisateur fait glisser un élément vers un point entre deux autres éléments, la marque d'insertion indique le nouvel emplacement prévu de l'élément.  

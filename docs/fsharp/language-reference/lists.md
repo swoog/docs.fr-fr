@@ -1,13 +1,13 @@
 ---
 title: Listes (F#)
-description: 'En savoir plus sur les listes de F #, une série chronologique, immuable d’éléments du même type.'
+description: 'En savoir plus sur les listes F #, une série chronologique, immuable d’éléments du même type.'
 ms.date: 05/16/2016
-ms.openlocfilehash: ea86b3ca94c6414bf5ab60406452f3604838075a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566628"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43798847"
 ---
 # <a name="lists"></a>Listes
 
@@ -16,8 +16,8 @@ Les liens des informations de référence sur les API qui figurent dans cet arti
 
 En F#, une liste est une série immuable et ordonnée d'éléments du même type. Pour effectuer des opérations de base sur les listes, utilisez les fonctions dans le [module List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788).
 
-
 ## <a name="creating-and-initializing-lists"></a>Création et initialisation de listes
+
 Vous pouvez définir une liste en répertoriant de manière explicite les éléments, séparés par des points-virgules et placés entre crochets, comme indiqué dans la ligne de code suivante.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1301.fs)]
@@ -43,6 +43,7 @@ Vous pouvez également utiliser une expression de séquence pour créer une list
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1303.fs)]
 
 ## <a name="operators-for-working-with-lists"></a>Opérateurs utilisés avec les listes
+
 Vous pouvez joindre des éléments à une liste en utilisant l'opérateur (cons) `::`. Si `list1` est `[2; 3; 4]`, le code suivant crée `list2` sous la forme `[100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
@@ -57,27 +58,28 @@ En F#, les listes étant immuables, toute opération de changement a pour effet 
 
 Listes dans F # sont implémentées comme des listes liées uniques, ce qui signifie que les opérations qui accèdent seulement au début de la liste sont o (1), et l’accès aux éléments est O (*n*).
 
+## <a name="properties"></a>Properties
 
-## <a name="properties"></a>Propriétés
 Le type de liste prend en charge les propriétés suivantes :
 
 |Propriété|Type|Description|
 |--------|----|-----------|
-|[Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Premier élément.|
+|[head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Premier élément.|
 |[vide](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Propriété statique qui retourne une liste vide du type approprié.|
-|[La fonction IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` si la liste ne comporte aucun élément.|
+|[IsEmpty](https://msdn.microsoft.com/library/3ba087b2-2fc2-406d-b10a-cff6a19322da)|`bool`|`true` si la liste ne comporte aucun élément.|
 |[Item](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Élément au niveau de l'index spécifié (de base zéro).|
 |[Longueur](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Nombre d'éléments.|
-|[Fin du](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Liste sans premier élément.|
+|[fin du](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Liste sans premier élément.|
 Voici quelques exemples d'utilisation de ces propriétés.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]
-    
+
 ## <a name="using-lists"></a>Utilisation de listes
+
 La programmation à l'aide de listes vous permet d'effectuer des opérations complexes avec peu de code. Cette section décrit des opérations courantes sur des listes qui sont importantes pour la programmation fonctionnelle.
 
-
 ### <a name="recursion-with-lists"></a>Récursivité avec des listes
+
 Les listes sont particulièrement adaptées aux techniques de programmation récursive. Prenons en compte une opération à effectuer sur chaque élément d'une liste. Vous pouvez procéder de manière récursive en effectuant l'opération sur le début de la liste, puis en passant à la fin de la liste, qui est une liste plus petite comprenant la liste d'origine sans le premier élément, et en revenant au niveau suivant de récursivité.
 
 Pour écrire ce type de fonction récursive, utilisez l'opérateur cons (`::`) dans les critères spéciaux, qui vous permet de séparer le début d'une liste de sa fin.
@@ -102,13 +104,14 @@ Primes Up To 100:
 ```
 
 ## <a name="module-functions"></a>Fonctions de module
-Le [module List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) fournit des fonctions qui accèdent aux éléments d’une liste. L'élément de début offre l'accès le plus simple et rapide. Utilisez la propriété [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) ou la fonction module [List.head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Vous pouvez accéder à la fin d’une liste à l’aide de la [fin](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) propriété ou le [List.tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) (fonction). Pour rechercher un élément par index, utilisez la [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) (fonction). `List.nth` parcourt la liste. Par conséquent, il est O (*n*). Si votre code utilise fréquemment `List.nth`, envisagez d'utiliser un tableau à la place d'une liste. L'accès aux éléments des tableaux est O(1).
 
+Le [module List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788) fournit des fonctions qui accèdent aux éléments d’une liste. L'élément de début offre l'accès le plus simple et rapide. Utilisez la propriété [Head](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740) ou la fonction module [List.head](https://msdn.microsoft.com/library/22514cc5-0511-498b-a2cc-837b688a6da2). Vous pouvez accéder à la fin d’une liste à l’aide de la [Tail](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91) propriété ou le [List.tail](https://msdn.microsoft.com/library/da0a0638-4420-4571-84b6-d09ae601f601) (fonction). Pour rechercher un élément par index, utilisez la [List.nth](https://msdn.microsoft.com/library/1f717d57-89be-4007-a971-9cf5a28d83b1) (fonction). `List.nth` parcourt la liste. Par conséquent, il est O (*n*). Si votre code utilise fréquemment `List.nth`, envisagez d'utiliser un tableau à la place d'une liste. L'accès aux éléments des tableaux est O(1).
 
 ### <a name="boolean-operations-on-lists"></a>Opérations booléennes sur des listes
+
 Le [List.isEmpty](https://msdn.microsoft.com/library/a7941d44-9e92-427c-b806-c378f4558107) fonction détermine si une liste comporte tous les éléments.
 
-Le [List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) fonction s’applique à une valeur booléenne test à des éléments d’une liste et retourne `true` si un élément satisfait au test. [List.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) est semblable, mais fonctionne sur des paires d’éléments dans deux listes successives.
+Le [List.exists](https://msdn.microsoft.com/library/15a3ebd5-98f0-44c0-8220-7dedec3e68a8) fonction s’applique à une valeur booléenne test aux éléments d’une liste et retourne `true` si n’importe quel élément satisfait au test. [List.exists2](https://msdn.microsoft.com/library/7532b39e-3f4f-4534-a60b-d7721dc6fa7e) est similaire, mais fonctionne sur des paires d’éléments dans deux listes successives.
 
 Le code suivant montre l'utilisation de `List.exists`.
 
@@ -141,7 +144,7 @@ true
 false
 ```
 
-De même, [List.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) détermine si tous les éléments des positions correspondantes dans les deux listes satisfont à une expression booléenne qui implique chaque paire d’éléments.
+De même, [List.forall2](https://msdn.microsoft.com/library/bb611f02-8277-48f5-9af3-6194ae27d07e) détermine si tous les éléments aux positions correspondantes dans deux listes satisfont à une expression booléenne qui implique chaque paire d’éléments.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet4.fs)]
 
@@ -153,6 +156,7 @@ false
 ```
 
 ### <a name="sort-operations-on-lists"></a>Opérations de tri sur des listes
+
 Le [List.sort](https://msdn.microsoft.com/library/17f1030e-aa7e-41dd-94ea-72cb6c04fd3d), [List.sortBy](https://msdn.microsoft.com/library/955bfc5f-ad9c-4f2d-a7ab-91e43eb21359), et [List.sortWith](https://msdn.microsoft.com/library/1d806a54-9166-4198-906d-15101f7916c7) fonctions trient les listes. La fonction de tri détermine laquelle de ces trois fonctions utiliser. `List.sort` utilise la comparaison générique par défaut. Celle-ci compare des valeurs à l'aide d'opérateurs globaux reposant sur la fonction de comparaison générique. Elle est efficace avec une large gamme de types d'éléments, tels que les types numériques simples, les tuples, les enregistrements, les unions discriminées, les listes, les tableaux et tout type qui implémente `System.IComparable`. Dans le cas des types implémentant `System.IComparable`, la comparaison générique utilise la fonction `System.IComparable.CompareTo()`. La comparaison générique fonctionne aussi avec les chaînes, mais utilise un ordre de tri indépendant de la culture. Elle ne doit pas être utilisée sur les types non pris en charge, tels que les types de fonction. De plus, les performances de la comparaison générique par défaut sont meilleures dans le cas de petits types structurés. Dans le cas de types structurés plus importants qui impliquent une fréquence de comparaison et de tri plus soutenue, envisagez d'implémenter `System.IComparable` et de fournir une implémentation efficace de la méthode `System.IComparable.CompareTo()`.
 
 `List.sortBy` accepte une fonction qui retourne une valeur utilisée comme critère de tri, et `List.sortWith` accepte une fonction de comparaison comme argument. Ces deux fonctions sont utiles quand les types ne prennent pas en charge la comparaison ou quand la comparaison nécessite une sémantique plus complexe, comme avec les chaînes prenant en compte la culture.
@@ -193,7 +197,8 @@ Rev = 1;}]
 ```
 
 ### <a name="search-operations-on-lists"></a>Opérations de recherche sur des listes
-Les listes prennent en charge plusieurs opérations de recherche. La plus simple, [List.find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06), vous permet de rechercher le premier élément qui correspond à une condition donnée.
+
+Les listes prennent en charge plusieurs opérations de recherche. La plus simple, [List.find](https://msdn.microsoft.com/library/0594593e-9c75-44c1-8f5a-a37b2e561c06), vous pouvez ainsi rechercher le premier élément qui correspond à une condition donnée.
 
 L'exemple de code suivant montre l'utilisation de `List.find` pour rechercher le premier nombre divisible par 5 dans une liste.
 
@@ -201,7 +206,7 @@ L'exemple de code suivant montre l'utilisation de `List.find` pour rechercher le
 
 Le résultat est 5.
 
-Si les éléments doivent être transformés au préalable, appelez [List.pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2), qui prend une fonction retournant une option, et que la valeur de recherche pour la première option qui est `Some(x)`. Au lieu de renvoyer l'élément, `List.pick` retourne le résultat `x`. Si aucun élément correspondant n'est trouvé, `List.pick` lève `System.Collections.Generic.KeyNotFoundException`. Le code suivant illustre l'utilisation de `List.pick`.
+Si les éléments doivent être transformés au préalable, appelez [List.pick](https://msdn.microsoft.com/library/0430b515-7fe4-49a1-a616-d2286d8b08b2), qui prend une fonction qui retourne une option et valeur de recherche pour la première option est `Some(x)`. Au lieu de renvoyer l'élément, `List.pick` retourne le résultat `x`. Si aucun élément correspondant n'est trouvé, `List.pick` lève `System.Collections.Generic.KeyNotFoundException`. Le code suivant illustre l'utilisation de `List.pick`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet9.fs)]
 
@@ -223,7 +228,8 @@ The first even value is at position 8.
 ```
 
 ### <a name="arithmetic-operations-on-lists"></a>Opérations arithmétiques sur des listes
-Les opérations arithmétiques courantes telles que la somme et moyenne sont générées dans le [module List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Pour travailler avec [List.sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9), le type d’élément de liste doit prendre en charge la `+` opérateur et ont une valeur zéro. Tous les types arithmétiques intégrés remplissent ces conditions. Pour travailler avec [List.average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1), le type d’élément doit prendre en charge la division sans reste, ce qui exclut les types intégraux, mais autorise les types à virgule flottante. Le [List.sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) et [List.averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) fonctions acceptent une fonction en tant que paramètre, et les résultats de cette fonction sont utilisés pour calculer les valeurs de la somme ou la moyenne.
+
+Des opérations arithmétiques courantes telles que la somme et moyenne sont intégrées dans le [module List](https://msdn.microsoft.com/library/a2264ba3-2d45-40dd-9040-4f7aa2ad9788). Pour travailler avec [List.sum](https://msdn.microsoft.com/library/54d47fe3-5ecf-4883-beb5-e915342a17f9), le type d’élément de liste doit prendre en charge la `+` opérateur et avoir la valeur zéro. Tous les types arithmétiques intégrés remplissent ces conditions. Pour travailler avec [List.average](https://msdn.microsoft.com/library/2b9a627b-106d-4548-8c4c-ab5058b8f8e1), le type d’élément doit prendre en charge la division sans reste, ce qui exclut les types intégraux, mais autorise les types à virgule flottante. Le [List.sumBy](https://msdn.microsoft.com/library/b7623389-0fe1-4762-9c67-51079903ab7d) et [List.averageBy](https://msdn.microsoft.com/library/936cc9ec-62af-464d-8726-7999c2f48403) fonctions prennent une fonction en tant que paramètre, et les résultats de cette fonction sont utilisés pour calculer les valeurs pour les fonctions sum ou average.
 
 Le code suivant montre l'utilisation de `List.sum`, `List.sumBy` et `List.average`.
 
@@ -237,9 +243,9 @@ Le code suivant illustre l'utilisation de `List.averageBy`.
 
 Le résultat est `5.5`.
 
-
 ### <a name="lists-and-tuples"></a>Listes et tuples
-Les listes qui contiennent des tuples peuvent être manipulées par des fonctions de compression et de décompression. Ces fonctions combinent deux listes de valeurs uniques en une seule liste de tuples ou séparent une liste de tuples en deux listes de valeurs uniques. Le plus simple [List.zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) fonction prend deux listes d’éléments uniques et produit une seule liste de paires de tuples. Une autre version, [List.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), prend trois listes d’éléments uniques et produit une seule liste de tuples comportant trois éléments. L'exemple de code suivant montre l'utilisation de `List.zip`.
+
+Les listes qui contiennent des tuples peuvent être manipulées par des fonctions de compression et de décompression. Ces fonctions combinent deux listes de valeurs uniques en une seule liste de tuples ou séparent une liste de tuples en deux listes de valeurs uniques. La plus simple [List.zip](https://msdn.microsoft.com/library/3028d790-8f48-4c94-bf08-b058bec3689c) fonction prend deux listes d’éléments uniques et produit une seule liste de paires de tuples. Une autre version, [List.zip3](https://msdn.microsoft.com/library/003cc28e-0de3-4d99-89ed-cb19028e3c5b), prend trois listes d’éléments uniques et produit une seule liste de tuples comportant trois éléments. L'exemple de code suivant montre l'utilisation de `List.zip`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet13.fs)]
 
@@ -259,7 +265,7 @@ La sortie est la suivante :
 [(1, -1, 0); (2, -2, 0); (3, -3, 0)]
 ```
 
-Correspondants versions de décompression, [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) et [List.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4), prennent des listes de tuples et retournent les listes dans un tuple, où la première liste contienne tous les éléments qui étaient initialement dans chaque tuple et seconde liste contient le deuxième élément de chaque tuple et ainsi de suite.
+Versions, de décompression le correspondantes [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21) et [List.unzip3](https://msdn.microsoft.com/library/43078c77-32ec-4342-85b3-c31ccf984db4), prennent des listes de tuples et retournent les listes dans un tuple, où la première liste contienne tous les éléments qui étaient initialement dans chaque tuple et le seconde liste contient le deuxième élément de chaque tuple et ainsi de suite.
 
 L’exemple de code suivant illustre l’utilisation de [List.unzip](https://msdn.microsoft.com/library/639db80c-41b5-45bb-a6b4-1eaa04d61d21).
 
@@ -283,7 +289,8 @@ La sortie est la suivante :
 ```
 
 ### <a name="operating-on-list-elements"></a>Opérations sur les éléments de liste
-F# prend en charge un éventail d'opérations sur des éléments de liste. La plus simple est [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), ce qui vous permet d’appeler une fonction sur chaque élément d’une liste. Incluent des variations [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), ce qui vous permet d’effectuer une opération sur les éléments de deux listes, [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), ce qui revient à `List.iter` , sauf que l’index de chaque élément est passé en tant qu’un l’argument de la fonction qui est appelée pour chaque élément, et [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), qui est une combinaison des fonctionnalités de `List.iter2` et `List.iteri`. L'exemple de code suivant illustre ces fonctions.
+
+F# prend en charge un éventail d'opérations sur des éléments de liste. La plus simple est [List.iter](https://msdn.microsoft.com/library/f778d075-81a9-4994-af60-cddcc53a201f), ce qui vous permet d’appeler une fonction sur chaque élément d’une liste. Incluent des variations [List.iter2](https://msdn.microsoft.com/library/ea3b7761-916c-4016-9bd8-651124c98b40), ce qui vous permet d’effectuer une opération sur les éléments de deux listes, [List.iteri](https://msdn.microsoft.com/library/6dd21ae6-5c00-41cd-8306-821e513d8f60), ce qui revient à `List.iter` , à ceci près que l’index de chaque élément est passé comme un argument de la fonction est appelée pour chaque élément, et [List.iteri2](https://msdn.microsoft.com/library/9658d740-9be5-4bf7-b663-c8ab2b3e196c), qui est une combinaison des fonctionnalités de `List.iter2` et `List.iteri`. L'exemple de code suivant illustre ces fonctions.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet17.fs)]
 
@@ -304,7 +311,7 @@ List.iteri2: element 1 of list1 is 2; element 1 of list2 is 5
 List.iteri2: element 2 of list1 is 3; element 2 of list2 is 6
 ```
 
-Une autre fonction fréquemment utilisée qui transforme des éléments de liste est [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6), qui permet d’appliquer une fonction à chaque élément d’une liste et de placer tous les résultats dans une nouvelle liste. [List.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) et [List.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) sont des variations qui prennent plusieurs listes. Vous pouvez également utiliser [List.mapi](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) et [List.mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49), si, en plus de l’élément, la fonction doit être passée à l’index de chaque élément. La seule différence entre `List.mapi2` et `List.mapi` est le fait que `List.mapi2` fonctionne avec les deux listes. L’exemple suivant illustre [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6).
+Une autre fonction fréquemment utilisée qui transforme des éléments de liste est [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6), ce qui vous permet à appliquer une fonction à chaque élément d’une liste et tous les résultats dans une nouvelle liste. [List.map2](https://msdn.microsoft.com/library/5f48cce7-6eaf-4e54-8996-2b04d3c31e57) et [List.map3](https://msdn.microsoft.com/library/dd9fb190-6980-4537-be96-5645a64908f8) sont des variations qui prennent plusieurs listes. Vous pouvez également utiliser [List.mapi](https://msdn.microsoft.com/library/284b9234-3d26-409b-b328-ac79638d9e14) et [List.mapi2](https://msdn.microsoft.com/library/680643af-233c-40a3-82f2-43d5af27ec49), si, en plus de l’élément, la fonction doit être transmis à l’index de chaque élément. La seule différence entre `List.mapi2` et `List.mapi` est le fait que `List.mapi2` fonctionne avec les deux listes. L’exemple suivant illustre [List.map](https://msdn.microsoft.com/library/c6b49c99-d4f3-4ba3-b1d0-85a312683dc6).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet18.fs)]
 
@@ -383,12 +390,14 @@ La sortie est la suivante :
 ```
 
 ### <a name="operating-on-multiple-lists"></a>Opérations sur plusieurs listes
+
 Les listes peuvent être jointes. Pour joindre deux listes, utilisez [List.append](https://msdn.microsoft.com/library/2954da80-3f4a-4a4b-9371-794645c03426). Pour joindre plus de deux listes, utilisez [List.concat](https://msdn.microsoft.com/library/c5afd433-8764-4ea8-a6a8-937fb4d77c4c).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet26.fs)]
-    
+
 ### <a name="fold-and-scan-operations"></a>Opérations de pliage et d’analyse
-Certaines opérations de liste impliquent l'interdépendance entre tous les éléments de la liste. Les opérations de repli et d’analyse sont comme `List.iter` et `List.map` dans la mesure où vous appelez une fonction sur chaque élément, mais ces opérations fournissent un paramètre supplémentaire, appelé le *accumulation* qui achemine des informations le calcul.
+
+Certaines opérations de liste impliquent l'interdépendance entre tous les éléments de la liste. Les opérations de pliage et d’analyse sont comme `List.iter` et `List.map` dans la mesure où vous appelez une fonction sur chaque élément, mais ces opérations fournissent un paramètre supplémentaire, appelé le *accumulation* qui achemine des informations le calcul.
 
 Utilisez `List.fold` pour effectuer un calcul sur une liste.
 
@@ -406,7 +415,7 @@ L'exemple suivant montre l'utilisation de `List.fold2`.
 
 `List.fold` et [List.scan](https://msdn.microsoft.com/library/21f636db-885c-4a72-970e-e3841f33a1b8) diffèrent en ce que `List.fold` retourne la valeur finale du paramètre supplémentaire, mais `List.scan` retourne la liste des valeurs intermédiaires (avec la valeur finale) du paramètre supplémentaire.
 
-Chacune de ces fonctions inclut une variation inverse, par exemple, [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), qui diffère de l’ordre dans lequel la liste est parcourue et l’ordre des arguments. En outre, `List.fold` et `List.foldBack` présentent des variations, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) et [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), qui acceptent deux listes de longueur égale. La fonction qui s'exécute sur chaque élément peut utiliser des éléments correspondants aux deux listes pour effectuer une action. Les types d'éléments des deux listes peuvent être différents, comme dans l'exemple suivant, où une liste contient des montants de transactions sur un compte bancaire et l'autre contient le type de transaction : dépôt ou retrait.
+Chacune de ces fonctions inclut une variation inverse, par exemple, [List.foldBack](https://msdn.microsoft.com/library/b9a58e66-efe1-445f-a90c-ac9ffb9d40c7), ce qui diffère dans l’ordre dans lequel la liste est parcourue et l’ordre des arguments. En outre, `List.fold` et `List.foldBack` présentent des variations, [List.fold2](https://msdn.microsoft.com/library/6cfcd043-a65d-4423-805a-2ab234cb5343) et [List.foldBack2](https://msdn.microsoft.com/library/56371d3e-5271-4183-9e8c-15a02eda9aa2), qui acceptent deux listes de longueur égale. La fonction qui s'exécute sur chaque élément peut utiliser des éléments correspondants aux deux listes pour effectuer une action. Les types d'éléments des deux listes peuvent être différents, comme dans l'exemple suivant, où une liste contient des montants de transactions sur un compte bancaire et l'autre contient le type de transaction : dépôt ou retrait.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet29.fs)]
 
@@ -418,27 +427,24 @@ Voici à nouveau l'exemple du compte bancaire. Cette fois, un nouveau type de tr
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet34.fs)]
 
-La fonction [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) s’apparente à `List.fold` et `List.scan`, mais au lieu de passer un accumulateur séparé, `List.reduce` prend une fonction qui accepte deux arguments du type d’élément à la place de seul et que l’autre de ces arguments joue le rôle d’accumulateur, ce qui signifie qu’il stocke le résultat intermédiaire du calcul. `List.reduce` commence par fonctionner sur les deux premiers éléments de liste, puis utilise le résultat de l'opération avec l'élément suivant. Comme aucun accumulateur distinct ne possède son propre type, `List.reduce` ne peut être utilisé à la place de `List.fold` si l'accumulateur et le type d'élément ont le même type. Le code suivant montre l'utilisation de `List.reduce`. `List.reduce` lève une exception si la liste fournie ne comporte aucun élément.
+La fonction [List.reduce](https://msdn.microsoft.com/library/048e1f95-691b-49cb-bb99-fb85f68f3d8b) est un peu comme `List.fold` et `List.scan`, sauf qu’au lieu de passer un accumulateur séparé, `List.reduce` prend une fonction qui accepte deux arguments du type d’élément à la place de une seule instance et l’autre de ces arguments joue le rôle d’accumulateur, ce qui signifie qu’il stocke le résultat intermédiaire du calcul. `List.reduce` commence par fonctionner sur les deux premiers éléments de liste, puis utilise le résultat de l'opération avec l'élément suivant. Comme aucun accumulateur distinct ne possède son propre type, `List.reduce` ne peut être utilisé à la place de `List.fold` si l'accumulateur et le type d'élément ont le même type. Le code suivant montre l'utilisation de `List.reduce`. `List.reduce` lève une exception si la liste fournie ne comporte aucun élément.
 
 Dans le code suivant, le premier appel à l'expression lambda reçoit les arguments 2 et 4, et retourne 6. L'appel suivant reçoit les arguments 6 et 10, le résultat est donc 16.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lists/snippet33.fs)]
-    
+
 ### <a name="converting-between-lists-and-other-collection-types"></a>Conversion entre listes et autres types de collections
+
 Le module `List` fournit des fonctions pour convertir vers et depuis des séquences et des tableaux. Pour convertir vers ou à partir d’une séquence, utilisez [List.toSeq](https://msdn.microsoft.com/library/7024be4b-ee70-43cc-8d0a-e6564a4ff7c0) ou [List.ofSeq](https://msdn.microsoft.com/library/74ab9289-4a59-4433-92eb-3f662d7f7db0). Pour convertir vers ou à partir d’un tableau, utilisez [List.toArray](https://msdn.microsoft.com/library/ac87dd82-a0cd-40b3-b1fa-dd3168134547) ou [List.ofArray](https://msdn.microsoft.com/library/f4bddc26-8c8f-4307-a6d7-a49dceb97032).
 
-
 ### <a name="additional-operations"></a>Opérations supplémentaires
+
 Pour plus d’informations sur d’autres opérations sur les listes, consultez la rubrique de référence de bibliothèque [Collections.List, Module](https://msdn.microsoft.com/visualfsharpdocs/conceptual/collections.list-module-%5bfsharp%5d).
 
-
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Types F#](fsharp-types.md)
-
-[Séquences](sequences.md)
-
-[Tableaux](arrays.md)
-
-[Options](options.md)
+- [Informations de référence du langage F#](index.md)
+- [Types F#](fsharp-types.md)
+- [Séquences](sequences.md)
+- [Tableaux](arrays.md)
+- [Options](options.md)

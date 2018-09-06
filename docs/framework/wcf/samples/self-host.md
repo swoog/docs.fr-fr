@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Self Host Sample [Windows Communication Foundation]
 ms.assetid: 05e68661-1ddf-4abf-a899-9bb1b8272a5b
 ms.openlocfilehash: c413a26e8e7a0e76712eb98c5ad1bb822d75ae6f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659463"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862155"
 ---
 # <a name="self-host"></a>Self-Host
 Cet exemple montre comment implémenter un service auto-hébergé dans une application console. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Le fichier de configuration de service Web.config a été renommé App.config et modifié pour configurer une adresse de base que l'hôte utilise. Le code source du service a été modifié pour implémenter une fonction `Main` statique qui crée et ouvre un hôte de service qui fournit l'adresse de base configurée. L'implémentation du service a été modifiée pour écrire la sortie dans la console à chaque opération. Le client n'a été pas modifié, excepté pour configurer l'adresse de point de terminaison correcte du service.  

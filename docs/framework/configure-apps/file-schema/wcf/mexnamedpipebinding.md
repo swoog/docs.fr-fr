@@ -3,11 +3,11 @@ title: '&lt;mexNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 193412fa-3260-414c-92c6-b32ed3b94a34
 ms.openlocfilehash: 7144584f1bf64048f94d6172cfee887362813639
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535567"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861467"
 ---
 # <a name="ltmexnamedpipebindinggt"></a>&lt;mexNamedPipeBinding&gt;
 Spécifie les paramètres pour une liaison utilisée pour l’échange de messages WS-MetadataExchange (WS-MEX) sur le canal nommé.  

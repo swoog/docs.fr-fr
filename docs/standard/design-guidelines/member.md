@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c04b431224a1d4f03e85397b854a52856e114e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571395"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871016"
 ---
 # <a name="member-design-guidelines"></a>Instructions de conception des membres
-Méthodes, propriétés, événements, constructeurs et les champs sont collectivement en tant que membres. Les membres sont finalement les moyens par lesquels les fonctionnalités de framework sont exposées aux utilisateurs finaux d’une infrastructure.  
+Méthodes, propriétés, événements, constructeurs et les champs sont collectivement en tant que membres. Les membres sont finalement les moyens par lequel les fonctionnalités de framework sont exposées aux utilisateurs finaux d’une infrastructure.  
   
- Les membres peuvent être virtuel ou non virtuelle, concret ou abstrait, statique ou instance et peuvent avoir plusieurs étendues différentes d’accessibilité. Tous les différents fournit incroyable simplicité, mais en même temps requiert soins par le Concepteur de framework.  
+ Membres peuvent être virtuel ou non virtuelle, concret ou abstrait, statique ou instance et peuvent avoir plusieurs différentes portées d’accessibilité. Tous les cette variété offre expressivité incroyable, mais en même temps nécessite que soins part le Concepteur de framework.  
   
- Ce chapitre propose des conseils de base qui doivent être suivies lors de la conception des membres de n’importe quel type.  
+ Ce chapitre offre des conseils de base qui doivent être suivies lors de la conception des membres de n’importe quel type.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Surcharge de membre](../../../docs/standard/design-guidelines/member-overloading.md)  
@@ -35,7 +35,8 @@ Méthodes, propriétés, événements, constructeurs et les champs sont collecti
  [Conception de paramètres](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
