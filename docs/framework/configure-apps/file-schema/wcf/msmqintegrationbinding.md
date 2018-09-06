@@ -1,17 +1,17 @@
 ---
-title: '&lt;msmqIntegrationBinding&gt;'
+title: '&lt;MsmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: bae6b4e6bd11074b47c55bf310215f296394c90d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 29caae11c72ff230d738e9dab1cd763899710843
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751660"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724654"
 ---
-# <a name="ltmsmqintegrationbindinggt"></a>&lt;msmqIntegrationBinding&gt;
+# <a name="ltmsmqintegrationbindinggt"></a>&lt;MsmqIntegrationBinding&gt;
 Définit une liaison qui prend en charge la mise en file d’attente par routage des messages via MSMQ.  
   
  \<system.ServiceModel>  
@@ -59,12 +59,12 @@ msmqIntegrationBinding
 |exactlyOnce|Valeur booléenne indiquant si chaque message est remis une seule fois. L'expéditeur est ensuite notifié des échecs de remise. Lorsque `durable` a pour valeur `false`, cet attribut est ignoré et les messages sont transférés sans garantie de remise. La valeur par défaut est `true`. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Entier positif qui définit la taille maximale du message (en octets, en-têtes compris), qui est traité par cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65536. Cette limite de taille des messages a pour but d'atténuer l'exposition aux attaques par déni de service (DoS).|  
 |maxRetryCycles|Entier indiquant le nombre de cycles de tentatives utilisés par la fonctionnalité de détection de messages incohérents. Un message devient incohérent lorsque toutes les tentatives de remise de tous les cycles échouent. La valeur par défaut est 2. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|name|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et nommées liaisons et comportements, consultez [Configuration simplifiée](../../../../../docs/framework/wcf/simplified-configuration.md) et [simplifié la Configuration des Services WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |receiveErrorHandling|Valeur <xref:System.ServiceModel.ReceiveErrorHandling> qui spécifie la façon dont sont gérés les messages incohérents et ne pouvant être distribués.|  
 |receiveRetryCount|Entier indiquant le nombre maximal de nouvelles tentatives immédiates devant être effectuées par le gestionnaire de files d'attente si la transmission d'un message entre la file d'attente de l'application et l'application échoue.<br /><br /> Si le nombre maximal de tentatives de remise est atteint sans que l'application accède au message, ce dernier est envoyé à une file d'attente de nouvelles tentatives. La durée qui s'écoule avant que le message ne soit renvoyé à la file d'attente émettrice est contrôlée par `retryCycleDelay`. Si les cycles de nouvelles tentatives atteignent la valeur `maxRetryCycles`, soit le message est envoyé à la file d'attente de messages incohérents, soit un accusé de réception négatif est renvoyé à l'expéditeur.|  
 |receiveTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:10:00.|  
-|receiveContextEnabled|Valeur booléenne qui spécifie si le contexte de réception pour le traitement des messages dans les files d'attente est activé. Lorsque cela est défini sur `true`, un service peut « aperçu » un message dans la file d’attente pour commencer à le traiter et, si une erreur se produit et une exception est levée, il reste dans la file d’attente. Services peuvent également « verrouiller » messages afin de nouvelle tentative de traitement à un moment ultérieur dans le temps. ReceiveContext fournit un mécanisme pour « achever » le message une fois traité, il peut être supprimée à partir de la file d’attente. Les messages sont n’est plus files d’attente de lecture et ré-écrits dans sur le réseau, et des messages individuels ne sont pas rebondissent entre les instances de service différent au cours du traitement.|  
+|receiveContextEnabled|Valeur booléenne qui spécifie si le contexte de réception pour le traitement des messages dans les files d'attente est activé. Quand cela est définie sur `true`, un service peut « lire » un message dans la file d’attente pour commencer à le traiter, et, en cas de problème et une exception est levée, il reste dans la file d’attente. Services peuvent également « verrouiller » les messages afin de nouvelle tentative de traitement à un moment ultérieur dans le temps. ReceiveContext fournit un mécanisme pour « achever » le message une fois traitées, il peut être supprimée à partir de la file d’attente. Les messages sont ne sont plus lus ni ré-écrits dans files d’attente sur le réseau, et ne sont pas messages individuels ne rebondissent sur différentes instances de service au cours du traitement.|  
 |retryCycleDelay|Valeur TimeSpan qui spécifie l'intervalle entre les cycles de nouvelles tentatives de remise d'un message n'ayant pas pu être remis immédiatement. Cette valeur définit uniquement le délai d'attente minimum, car le temps d'attente réel peut être plus long. La valeur par défaut est 00:30:00. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A>.|  
 |sendTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |serializationFormat|Définit le format utilisé pour la sérialisation du corps du message. Cet attribut est de type <xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat>.|  
@@ -95,7 +95,7 @@ msmqIntegrationBinding
 |[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément de liaison peut être utilisé pour permettre aux applications de Windows Communication Foundation (WCF) envoyer des messages à et recevoir des messages à partir des applications MSMQ existantes qui utilisent MSMQ des API natives COM ou les types définis dans le <xref:System.Messaging?displayProperty=nameWithType> espace de noms vous peut utiliser cet élément de configuration pour spécifier les façons de régler la file d’attente, les assurances de transfert, si les messages doivent être stockés de façon durable, et comment les messages doivent être protégés et authentifiés. Pour plus d’informations, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
+ Cet élément de liaison peut être utilisé pour permettre aux applications Windows Communication Foundation (WCF) envoyer des messages à et de recevoir des messages à partir des applications MSMQ existantes qui utilisent COM, MSMQ des API natives ou les types définis dans le <xref:System.Messaging?displayProperty=nameWithType> espace de noms vous peut utiliser cet élément de configuration pour spécifier les moyens de résoudre la file d’attente, le transfert des garanties, si les messages doivent être stockés et comment les messages doivent être protégés et authentifiés. Pour plus d’informations, consultez [Comment : échanger des Messages avec les points de terminaison WCF et les Applications Message Queuing](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
   
 ## <a name="example"></a>Exemple  
   
@@ -137,5 +137,5 @@ msmqIntegrationBinding
  [\<liaison >](../../../../../docs/framework/misc/binding.md)  
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

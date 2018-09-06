@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365058"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735525"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Scénarios d'application (services de données WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge un ensemble de scénarios pour exposer et consommer des données en tant que [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Cette rubrique vous oriente vers les rubriques concernées par ces scénarios.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] prend en charge un ensemble principal de scénarios pour exposer et consommer des données en tant que [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Cette rubrique vous oriente vers les rubriques concernées par ces scénarios.  
   
- Exposer des données relationnelles à partir de la base de données comme un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux.  
+ Exposer des données relationnelles à partir d’une base de données comme un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux.  
  -   [Démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [Exposition de vos données comme service](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -37,20 +37,20 @@ ms.locfileid: "33365058"
 -   [Bibliothèque cliente WCF Data Services](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Consommer un flux [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dans une application Silverlight cliente.  
- -   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Opérations asynchrones](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Comment : lier des données de Service de données aux contrôles (WCF Data Services/Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Comment : lier des données de Service de données aux contrôles (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Consommer un flux [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dans une application AJAX cliente.  
  -   [Utilisation d’un service de données dans une application cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData : Conventions d’URI](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData : Conventions d’URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData : JavaScript Objet Notation (JSON) Format](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData : Format JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
- Créer une solution de données de bout en bout qui utilise [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pour transférer des données entre le client et le serveur.  
+ Créer une solution de données de bout en bout qui utilise [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] pour transférer des données entre client et serveur.  
  -   [Démarrage rapide](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [Utilisation d’un service de données dans une application cliente](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,9 +62,9 @@ ms.locfileid: "33365058"
   
 -   [Opérations asynchrones](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- Exposer et consommer une [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux associé à un objet binaire volumineux qui est accessible et modifié en tant que flux.  
+ Exposer et consommer un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux avec un objet binaire volumineux qui est accessibles et modifiables sous forme de flux.  
  -   [Fournisseur de streaming](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [Utilisation des données binaires](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  

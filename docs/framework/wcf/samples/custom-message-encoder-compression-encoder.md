@@ -2,12 +2,12 @@
 title: 'Custom Message Encoder: Compression Encoder'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 5dc665da3b28a98f1b3016d38ce706bf77dce06f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808739"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735872"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Custom Message Encoder: Compression Encoder
 Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de la plateforme Windows Communication Foundation (WCF).  
@@ -17,7 +17,7 @@ Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
@@ -57,13 +57,13 @@ Cet exemple montre comment implémenter un encodeur personnalisé à l’aide de
   
 5.  La couche d'encodeur est implémentée sous forme de fabrique de classe. Seule la fabrique de classe d'encodeur doit être exposée publiquement pour l'encodeur personnalisé. L'objet de fabrique est retourné par l'élément de liaison lorsque l'objet <xref:System.ServiceModel.ServiceHost> ou <xref:System.ServiceModel.ChannelFactory%601> est créé. Les encodeurs de message peuvent fonctionner en mode de mise en mémoire tampon ou en mode de diffusion en continu. Cet exemple présente ces deux modes.  
   
- Chaque mode est associée à une méthode `ReadMessage` et `WriteMessage` sur la classe abstraite `MessageEncoder`. La majeure partie de l'encodage a lieu dans ces méthodes. L'exemple encapsule les encodeurs de message texte et binaire existants. Cela permet à l'exemple de déléguer la lecture et l'écriture de la représentation de câble des messages à l'encodeur interne, et à l'encodeur de compression de compresser ou décompresser les résultats. Étant donné qu’aucun pipeline pour l’encodage de message, il s’agit du modèle uniquement pour l’utilisation de plusieurs encodeurs dans WCF. Une fois que le message a été décompressé, le message résultant est passé en haut de la pile pour être géré par la pile de canaux. Pendant la compression, le message compressé résultant est écrit directement dans le flux fourni.  
+ Chaque mode est associée à une méthode `ReadMessage` et `WriteMessage` sur la classe abstraite `MessageEncoder`. La majeure partie de l'encodage a lieu dans ces méthodes. L'exemple encapsule les encodeurs de message texte et binaire existants. Cela permet à l'exemple de déléguer la lecture et l'écriture de la représentation de câble des messages à l'encodeur interne, et à l'encodeur de compression de compresser ou décompresser les résultats. Car il n’existe aucun pipeline pour l’encodage de message, il s’agit du seul modèle pour l’utilisation de plusieurs encodeurs dans WCF. Une fois que le message a été décompressé, le message résultant est passé en haut de la pile pour être géré par la pile de canaux. Pendant la compression, le message compressé résultant est écrit directement dans le flux fourni.  
   
  Cet exemple utilise des méthodes d'assistance (`CompressBuffer` et `DecompressBuffer`) permettant d'effectuer la conversion des mémoires tampon en flux afin d'utiliser la classe `GZipStream`.  
   
  Les classes `ReadMessage` et `WriteMessage` mises en mémoire tampon utilisent la classe `BufferManager`. L'encodeur est uniquement accessible via la fabrique d'encodeur. La classe abstraite `MessageEncoderFactory` fournit la propriété `Encoder` permettant d'accéder à l'encodeur actuel et la méthode `CreateSessionEncoder` permettant de créer un encodeur qui prend en charge les sessions. Un encodeur de ce type peut être utilisé dans le scénario où le canal prend en charge des sessions, est ordonné et est fiable. Ce scénario permet d'optimiser dans chaque session les données écrites sur le câble. Si cet objectif n'est pas souhaité, la méthode de base ne doit pas être surchargée. La propriété `Encoder` fournit un mécanisme permettant d'accéder à l'encodeur sans session, et l'implémentation par défaut de la méthode `CreateSessionEncoder` retourne la valeur de la propriété. Cet exemple encapsulant un encodeur existant pour fournir la compression, l'implémentation `MessageEncoderFactory` accepte un `MessageEncoderFactory` qui représente la fabrique d'encodeur interne.  
   
- Maintenant que l’encodeur et la fabrique d’encodeur sont définies, ils peuvent être utilisés avec un client WCF et un service. Toutefois, ces encodeurs doivent être ajoutés à la pile de canaux. Vous pouvez dériver des classes des classes <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.ChannelFactory%601>, et substituer les méthodes `OnInitialize` pour ajouter cette fabrique d'encodeur manuellement. Vous pouvez également exposer la fabrique d'encodeur via un élément de liaison personnalisé.  
+ Maintenant que l’encodeur et la fabrique sont définis, ils peuvent être utilisés avec un client WCF et un service. Toutefois, ces encodeurs doivent être ajoutés à la pile de canaux. Vous pouvez dériver des classes des classes <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.ChannelFactory%601>, et substituer les méthodes `OnInitialize` pour ajouter cette fabrique d'encodeur manuellement. Vous pouvez également exposer la fabrique d'encodeur via un élément de liaison personnalisé.  
   
  Pour créer un élément de liaison personnalisé, dérivez une classe de la classe <xref:System.ServiceModel.Channels.BindingElement>. Cependant, il existe plusieurs types d’éléments de liaison. Pour s'assurer que l'élément de liaison personnalisé est reconnu en tant qu'élément de liaison d'encodage de message, vous devez également implémenter <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> expose une méthode permettant de créer une nouvelle fabrique d'encodeur de message (`CreateMessageEncoderFactory`), laquelle est implémentée pour retourner une instance de la fabrique d'encodeur de message correspondante. En outre, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> possède une propriété permettant d'indiquer la version d'adressage. Cet exemple encapsulant les encodeurs existants, l'implémentation encapsule également les éléments de liaison d'encodeur existants et fournit un élément de liaison d'encodeur interne comme paramètre au constructeur, puis l'expose via une propriété. L'exemple de code suivant présente l'implémentation de la classe `GZipMessageEncodingBindingElement`.  
   
@@ -293,7 +293,7 @@ public class GZipMessageEncodingElement : BindingElementExtensionElement
 <gzipMessageEncoding innerMessageEncoding="textMessageEncoding" />  
 ```  
   
- Pour utiliser ce gestionnaire de configuration, elle doit être inscrite dans le [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément, comme indiqué dans l’exemple de configuration suivantes.  
+ Pour utiliser ce gestionnaire de configuration, il doit être enregistré dans le [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément, comme indiqué dans l’exemple de configuration suivant.  
   
 ```xml  
 <extensions>  
@@ -340,18 +340,18 @@ Press <ENTER> to terminate client.
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+2.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 3.  Pour générer la solution, suivez les instructions de [génération des exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   

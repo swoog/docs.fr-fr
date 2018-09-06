@@ -5,24 +5,24 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: e94553a31ecdbf325c12815aa7a782cb68b95f19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: faffeafc0cbe67c3b40297144ec85acd94956da9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526137"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778371"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>Comment : désigner un bouton Windows Forms comme bouton Annuler à l'aide du concepteur
-Sur un Windows Form, vous pouvez désigner un <xref:System.Windows.Forms.Button> contrôle soit le bouton Annuler. Un bouton cancel chaque fois que l’utilisateur appuie sur la touche ÉCHAP, quels que soient les autres contrôles du formulaire a le focus. Ce bouton est généralement programmé pour permettre à l’utilisateur de quitter rapidement une opération sans valider aucune action.  
+Sur n’importe quel formulaire Windows, vous pouvez désigner un <xref:System.Windows.Forms.Button> contrôle soit le bouton Annuler. Un bouton Annuler est activé chaque fois que l’utilisateur appuie sur la touche ÉCHAP, quels que soient les autres contrôles du formulaire a le focus. Ce bouton est généralement programmé pour permettre à l’utilisateur à quitter rapidement une opération sans effectuer d’action.  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-designate-the-cancel-button"></a>Pour désigner le bouton Annuler  
   
-1.  Sélectionnez le formulaire sur lequel se trouve le bouton.  
+1.  Sélectionnez le formulaire sur lequel réside le bouton.  
   
-2.  Dans le **propriétés** , configurez du formulaire <xref:System.Windows.Forms.Form.CancelButton%2A> propriété le <xref:System.Windows.Forms.Button> nom du contrôle.  
+2.  Dans le **propriétés** fenêtre, définissez le formulaire <xref:System.Windows.Forms.Form.CancelButton%2A> propriété le <xref:System.Windows.Forms.Button> nom du contrôle.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Forms.Form.CancelButton%2A>  

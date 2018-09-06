@@ -2,22 +2,22 @@
 title: Activation basée sur la configuration
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e016dffdaf93b222c1fd2380bfa175256b009068
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809912"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742314"
 ---
 # <a name="configuration-based-activation"></a>Activation basée sur la configuration
-Cet exemple montre comment activer les services Windows Communication Foundation (WCF) sans nécessiter un fichier .svc.  
+Cet exemple montre comment activer les services Windows Communication Foundation (WCF) sans avoir besoin d’un fichier .svc.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -60,7 +60,7 @@ Cet exemple montre comment activer les services Windows Communication Foundation
   
 7.  Appuyez sur CTRL+MAJ+A pour définir l'adresse du service.  
   
-8.  Définissez l’adresse sur http://localhost/ServiceModelSamples/Calculator.svc.  
+8.  La valeur est l’adresse http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Effectuez l'opération `Add`. Affectez au paramètre `n1` la valeur 10 et au paramètre `n2` la valeur 15.  
   
@@ -70,13 +70,13 @@ Cet exemple montre comment activer les services Windows Communication Foundation
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Vérifiez que vous avez effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
 3.  Une fois la solution générée, exécutez Setup.bat pour installer l'application ServiceModelSamples dans IIS. Le répertoire ServiceModelSamples doit maintenant apparaître en tant qu'application IIS.  
   
-4.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement de AppFabric et exemples de persistance](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Hébergement AppFabric et exemples de persistance](https://go.microsoft.com/fwlink/?LinkId=193961)

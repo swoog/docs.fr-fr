@@ -2,12 +2,12 @@
 title: '&lt;custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 19f960c14b6171557ec0f353dae34f26d7a7686c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748358"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776221"
 ---
 # <a name="ltcustomgt"></a>&lt;custom&gt;
 Spécifie les paramètres pour un service de programme de résolution d'homologue personnalisé.  
@@ -53,7 +53,7 @@ Spécifie les paramètres pour un service de programme de résolution d'homologu
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Un programme de résolution d'homologue est utilisé pour résoudre un ID de maille d'homologues en un jeu d'adresses de nœuds homologues représentant plusieurs nœuds faisant partie de la maille.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément définit les paramètres de base pour un service de programme de résolution d’homologue personnalisé, y compris l’adresse de point de terminaison de l’homologue qui héberge le service et tous les paramètres de liaison spécifiques. Pour plus d’informations sur la création d’un programme de résolution personnalisé, consultez [Ajout d’un programme de résolution personnalisé à une Application PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
+ Cet élément définit les paramètres de base pour un service de programme de résolution d’homologue personnalisé, y compris l’adresse de point de terminaison de l’homologue qui héberge le service et tous les paramètres de liaison spécifiques. Pour plus d’informations sur la création d’un programme de résolution personnalisé, consultez [Ajout d’un programme de résolution personnalisé à une Application PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
@@ -61,4 +61,4 @@ Spécifie les paramètres pour un service de programme de résolution d'homologu
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
  [Programmes de résolution d’homologue](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Ajout d’un programme de résolution personnalisé à une Application PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Ajout d’un programme de résolution personnalisé à une Application PeerChannel](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

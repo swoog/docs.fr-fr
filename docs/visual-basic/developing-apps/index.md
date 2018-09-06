@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584195"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748487"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Développement d’applications avec Visual Basic
 Cette section décrit la documentation conceptuelle du langage Visual Basic.  
@@ -28,13 +28,13 @@ Cette section décrit la documentation conceptuelle du langage Visual Basic.
  [Création et utilisation de composants dans Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Définit le terme *composant* et explique quand et comment créer des composants.  
   
- [Impression et création de rapports](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
+ [Impression et création de rapports](../../visual-basic/developing-apps/printing/index.md)  
  Fournit des vues d’ensemble et des liens vers la documentation relative à l’impression et à la création de rapports.  
   
- [Concepts de base de l’application Windows Forms](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
+ [Concepts de base de l’application Windows Forms](../../visual-basic/developing-apps/windows-forms/index.md)  
  Fournit des informations sur la création d’applications Windows Forms à l’aide de Visual Studio.  
   
- [Personnalisation des projets et extension de My](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
+ [Personnalisation des projets et extension de My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
  Décrit comment personnaliser des modèles de projet pour fournir des objets `My` supplémentaires.  
   
 ## <a name="related-sections"></a>Rubriques connexes  

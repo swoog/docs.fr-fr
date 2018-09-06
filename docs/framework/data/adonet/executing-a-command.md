@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: 5ffa32b13330d61e450a42e35b933ce05d69b041
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ed5ae1cbab40b57676219ffbe7d1d5696ac3bec4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765176"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733181"
 ---
 # <a name="executing-a-command"></a>Exécution d'une commande
 Chaque fournisseur de données .NET Framework inclus avec le .NET Framework possède son propre objet de commande qui hérite de <xref:System.Data.Common.DbCommand>. Le fournisseur de données .NET Framework pour OLE DB inclut un objet <xref:System.Data.OleDb.OleDbCommand>, le fournisseur de données .NET Framework pour SQL Server inclut un objet <xref:System.Data.SqlClient.SqlCommand>, le fournisseur de données .NET Framework pour ODBC inclut un objet <xref:System.Data.Odbc.OdbcCommand> et le fournisseur de données .NET Framework pour Oracle inclut un objet <xref:System.Data.OracleClient.OracleCommand>. Chacun de ces objets expose des méthodes pour exécuter les commandes en fonction du type de commande et de la valeur de retour souhaitée, comme cela est décrit dans le tableau ci-dessous.  
@@ -42,5 +42,5 @@ Chaque fournisseur de données .NET Framework inclus avec le .NET Framework poss
 ## <a name="see-also"></a>Voir aussi  
  [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Utilisation de DataReaders](http://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Utilisation de DataReaders](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

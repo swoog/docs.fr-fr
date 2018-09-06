@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 581dc89d21091ad0ce856d7a7ced84fd7bcea9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b4a620ea58026c3be1b09d01a595e965e4c2b45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559280"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43722929"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Comment : animer une géométrie rectangle à l'aide d'images clés
 Cet exemple montre comment animer la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propriété d’un <xref:System.Windows.Media.RectangleGeometry> à l’aide d’images clés.  
@@ -22,17 +22,17 @@ Cet exemple montre comment animer la <xref:System.Windows.Media.RectangleGeometr
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> classe pour animer la <xref:System.Windows.Media.RectangleGeometry.Rect%2A> propriété d’un <xref:System.Windows.Media.RectangleGeometry>. Cette animation utilise trois images clés de la manière suivante :  
   
-1.  Pendant les deux premières secondes, utilise une instance de la <xref:System.Windows.Media.Animation.LinearRectKeyFrame> classe pour animer une modification graduelle de la position, la largeur et la hauteur d’un rectangle. Images clés linéaires comme <xref:System.Windows.Media.Animation.LinearRectKeyFrame> créer une transition linéaire fluide entre les valeurs.  
+1.  Pendant les deux premières secondes, utilise une instance de la <xref:System.Windows.Media.Animation.LinearRectKeyFrame> classe pour animer un changement graduel de position, la largeur et hauteur d’un rectangle. Images clés linéaires comme <xref:System.Windows.Media.Animation.LinearRectKeyFrame> créent une transition linéaire fluide entre les valeurs.  
   
-2.  À la fin de la prochaine demi-seconde, utilise une instance de la <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> classe pour diminuer soudainement la hauteur du rectangle. Les images clés discrètes telles que <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> créer des changements soudains entre les valeurs, autrement dit, la diminution de la hauteur se produit rapidement et n’est pas subtile.  
+2.  Lors de la fin de la prochaine demi-seconde, elle utilise une instance de la <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> classe pour réduire soudainement la hauteur du rectangle. Images clés discrètes comme <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> créent des changements soudains entre les valeurs, autrement dit, la diminution de la hauteur se produit rapidement et n’est pas subtile.  
   
-3.  Pendant les deux dernières secondes, utilise une instance de la <xref:System.Windows.Media.Animation.SplineRectKeyFrame> classe pour modifier le rectangle à sa taille et la position d’origine. Les images clés spline comme <xref:System.Windows.Media.Animation.SplineRectKeyFrame> créer une transition entre des valeurs en fonction des valeurs de la <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> propriété. Dans cet exemple, le changement commence lentement, puis accélère de façon exponentielle jusqu’à la fin du segment temporel.  
+3.  Pendant les deux dernières secondes, utilise une instance de la <xref:System.Windows.Media.Animation.SplineRectKeyFrame> classe pour modifier le rectangle à sa taille et sa position d’origine. Les images clés spline comme <xref:System.Windows.Media.Animation.SplineRectKeyFrame> créent une transition variable entre des valeurs en fonction de la <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> propriété. Dans cet exemple, le changement commence lentement, puis accélère de façon exponentielle jusqu’à la fin du segment temporel.  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- Pour l’exemple complet, consultez la page [Animation d’image clé, exemple](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Pour l’exemple complet, consultez la page [Animation d’image clé, exemple](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Media.RectangleGeometry>  

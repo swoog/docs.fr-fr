@@ -2,12 +2,12 @@
 title: Collections de schémas Oracle
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
-ms.openlocfilehash: b86de542e425d6fdc56f238f90063988bee95ffa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 342c4cbe994eb983713be0f258e3a029df6739f8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766853"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745344"
 ---
 # <a name="oracle-schema-collections"></a>Collections de schémas Oracle
 Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge les collections de schémas spécifiques suivantes en plus des collections de schémas courantes.  
@@ -101,7 +101,7 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |LAST_ANALYZED|DateTime|Date à laquelle cet index a été analysé pour la dernière fois.|  
 |DEGREE|Chaîne|Nombre de threads par instance pour l'analyse de l'index.|  
 |INSTANCES|Chaîne|Nombre d'instances via lesquelles les index doivent être analysés.|  
-|PARTITIONED|Chaîne|Indique si l’index est partitionné (YES &#124; non).|  
+|PARTITIONED|Chaîne|Indique si cet index est partitionné (YES &#124; non).|  
 |TEMPORARY|Chaîne|Indique si l'index figure dans une table temporaire.|  
 |GENERATED|Chaîne|Si le nom de l’index est générée par le système (Y&#124;N).|  
 |SECONDARY|Chaîne|Indique si l’index est un objet secondaire créé par la méthode ODCIIndexCreate de la cartouche de données Oracle9i (Y&#124;N).|  
@@ -380,4 +380,4 @@ Le fournisseur de données Microsoft .NET Framework pour Oracle prend en charge 
 |CHAR_USED|Chaîne|Indique si la limite d'octets (B) ou la limite de caractères (C) est officielle pour la chaîne.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

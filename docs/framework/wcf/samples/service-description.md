@@ -2,15 +2,15 @@
 title: Service Description
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: d86a6a78995042f0c6a45cf6e40e31c3e515e8eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504209"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734328"
 ---
 # <a name="service-description"></a>Service Description
-Cet exemple montre comment un service peut récupérer ses informations de description de service pendant l'exécution. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), avec une opération de service supplémentaires définie pour retourner des informations descriptives sur le service. Les informations retournées répertorient les points de terminaison et les adresses de base du service. Le service fournit ces informations à l'aide des classes <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.Description.ServiceDescription>.  
+Cet exemple montre comment un service peut récupérer ses informations de description de service pendant l'exécution. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), avec une opération de service supplémentaire définie pour retourner des informations descriptives sur le service. Les informations retournées répertorient les points de terminaison et les adresses de base du service. Le service fournit ces informations à l'aide des classes <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> et <xref:System.ServiceModel.Description.ServiceDescription>.  
   
  Dans cet exemple, le client est une application console (.exe) et le service est hébergé par les services IIS (Internet Information Services).  
   
@@ -87,18 +87,18 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
-1.  Assurez-vous d’avoir effectué la [procédure d’installation d’à usage unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
 2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Pour exécuter l’exemple dans une configuration à un ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples Windows Workflow Foundation (WF) pour .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) pour télécharger tous les Windows Communication Foundation (WCF) et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
   

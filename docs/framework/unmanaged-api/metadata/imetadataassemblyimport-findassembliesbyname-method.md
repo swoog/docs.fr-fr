@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c9babd5e50166be2c2d1b7bc32a5fc11d1ad8ba9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42930562"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43723475"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName, méthode
 Obtient un tableau d’assemblys avec la valeur `szAssemblyName` paramètre, à l’aide de règles standard employées par le common language runtime (CLR) pour la résolution des références.  

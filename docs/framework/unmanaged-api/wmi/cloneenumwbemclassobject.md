@@ -1,6 +1,6 @@
 ---
-title: CloneEnumWbemClassObject (fonction) (référence des API non managées)
-description: La fonction CloneEnumWbemClassObject effectue une copie logique d’un énumérateur.
+title: Cloneenumwbemclassobject, fonction (référence des API non managées)
+description: Cloneenumwbemclassobject, de la fonction effectue une copie logique d’un énumérateur.
 ms.date: 11/06/2017
 api_name:
 - CloneEnumWbemClassObject
@@ -16,14 +16,14 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 35bd458eb6046f57d37764e0a8e58616f2c2c3a1
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460604"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778530"
 ---
-# <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject (fonction)
+# <a name="cloneenumwbemclassobject-function"></a>Cloneenumwbemclassobject, fonction
 Effectue une copie logique d’un énumérateur, en conservant sa position actuelle dans une énumération.  
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
@@ -45,7 +45,7 @@ HRESULT CloneEnumWbemClassObject (
 ## <a name="parameters"></a>Paramètres
 
 `ppEnum`  
-[out] Reçoit un pointeur vers un nouveau [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx).
+[out] Reçoit un pointeur vers un nouveau [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject).
 
 `authLevel`  
 [in] Le niveau d’autorisation.
@@ -53,7 +53,7 @@ HRESULT CloneEnumWbemClassObject (
 `impLevel` [in] Le niveau d’emprunt d’identité.
 
 `pCurrentEnumWbemClassObject`  
-[out] Un pointeur vers le [IEnumWbemClassObject](https://msdn.microsoft.com/library/aa390857(v=vs.85).aspx) instance à cloner.
+[out] Un pointeur vers le [IEnumWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-ienumwbemclassobject) instance à cloner.
 
 `strUser`   
 [in] Le nom d’utilisateur. Consultez le [ConnectServerWmi](connectserverwmi.md) (fonction) pour plus d’informations.
@@ -70,30 +70,30 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 |Constante  |Value  |Description  |
 |---------|---------|---------|
-| `WBEM_E_FAILED` | 0 x 80041001 | Il a été un échec général. |
+| `WBEM_E_FAILED` | 0 x 80041001 | Il y a eu une défaillance générale. |
 | `WBEM_E_INVALID_PARAMETER` | 0 x 80041008 | Un paramètre n’est pas valide. |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible terminer l’opération. |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Le lien de remote procedure call (RPC) entre les processus en cours et WMI a échoué. |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Pas assez de mémoire est disponible d’effectuer l’opération. |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | Le lien remote procedure call (RPC) entre les processus en cours et WMI a échoué. |
 | `WBEM_S_NO_ERROR` | 0 | L’appel de fonction a réussi.  |
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) (méthode).
+Cette fonction encapsule un appel à la [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) (méthode).
 
-Cette méthode ne permet qu’une copie « meilleur effort ». En raison de la nature dynamique de nombreux objets CIM, il est possible que le nouvel énumérateur n’énumère pas le même jeu d’objets que l’énumérateur de la source.  
+Cette méthode effectue une copie « meilleur effort ». En raison de la nature dynamique de nombreux objets CIM, il est possible que le nouvel énumérateur n’énumère pas le même jeu d’objets que l’énumérateur de source.  
 
 Si l’appel de fonction échoue, vous pouvez obtenir des informations d’erreur supplémentaires en appelant le [GetErrorInfo](geterrorinfo.md) (fonction).
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple, consultez la [IEnumWbemClassObject::Clone](https://msdn.microsoft.com/library/aa390859(v=vs.85).aspx) (méthode).
+Pour obtenir un exemple, consultez le [IEnumWbemClassObject::Clone](/windows/desktop/api/wbemcli/nf-wbemcli-ienumwbemclassobject-clone) (méthode).
 
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** WMINet_Utils.idl  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
-[WMI et les compteurs de Performance (référence des API non managées)](index.md)
+[WMI et compteurs de performances (référence des API non managées)](index.md)
