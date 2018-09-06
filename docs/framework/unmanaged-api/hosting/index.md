@@ -9,11 +9,11 @@ ms.assetid: 14295c28-1da8-408b-a656-9584abcd9896
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ca2eb93fb2b75f043d33d376a5650092030cac
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387099"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43797415"
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hébergement (Informations de référence sur les API non managées)
 L'API d'hébergement permet aux hôtes non managés d'intégrer le Common Language Runtime (CLR) dans leurs applications.  

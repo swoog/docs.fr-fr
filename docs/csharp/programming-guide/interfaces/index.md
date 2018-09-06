@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fdbb220cd856fd7309d54c41a39f91a9316fe434
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408878"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805154"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guide de programmation C#)
 Une interface contient des définitions pour un groupe de fonctionnalités connexes qu'une [classe](../../../csharp/language-reference/keywords/class.md) ou un [struct](../../../csharp/language-reference/keywords/struct.md) peuvent implémenter.  
@@ -93,6 +93,7 @@ Une interface contient des définitions pour un groupe de fonctionnalités conne
 ## <a name="featured-book-chapter"></a>Chapitre proposé  
  [Interfaces](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) dans [Learning C# 3.0: Master the Fundamentals of C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Héritage](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

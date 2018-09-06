@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/27/2018
 ms.openlocfilehash: 45be99a86a52ed450b795ca5f91c01ab82c7da47
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43539697"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43778001"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Déploiement d’applications web .NET Core basées sur un seul conteneur sur des hôtes Linux ou Windows Nano Server
 
@@ -118,7 +118,7 @@ services:
 
 Notez que l’image est une image de build ASP.NET Core. Cette image comprend le kit SDK et les outils de génération permettant de générer votre application et de créer les images nécessaires. Le fait d’exécuter le projet **docker-composer** avec ce fichier a pour effet de démarrer le conteneur de build à partir de l’image, puis de générer l’image de votre application dans ce conteneur. Vous spécifiez ce fichier *docker-compose* dans la ligne de commande pour générer votre application dans un conteneur Docker, puis vous la lancez.
 
-Dans Visual Studio, vous pouvez exécuter votre application dans des conteneurs Docker en sélectionnant le projet **docker-composer** comme projet de démarrage, puis en appuyant sur Ctrl+F5 (F5 pour déboguer), comme vous le feriez avec n’importe quelle autre application. Quand vous démarrez le projet **docker-compose**, Visual Studio exécute **docker-compose** en utilisant le fichier *docker-compose.yml*, le fichier *docker-compose.override.yml* et un des fichiers docker-compose.vs.\*. Une fois que l’application a démarré, Visual Studio lance automatiquement le navigateur.
+Dans Visual Studio, vous pouvez exécuter votre application dans des conteneurs Docker en sélectionnant le projet **docker-composer** comme projet de démarrage, puis en appuyant sur Ctrl+F5 (F5 pour déboguer), comme vous le feriez avec n’importe quelle autre application. Quand vous démarrez le projet **docker-compose**, Visual Studio exécute **docker-compose** en utilisant le fichier *docker-compose.yml*, le fichier *docker-compose.override.yml* et un des fichiers docker-compose.vs.\* Une fois que l’application a démarré, Visual Studio lance automatiquement le navigateur.
 
 Si vous lancez l’application dans le débogueur, Visual Studio s’attache à l’application en cours d’exécution dans Docker.
 
