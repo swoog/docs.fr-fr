@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser des fuseaux horaires de date et heure'
+title: 'Comment : utiliser des fuseaux horaires dans les date et heure arithmétique'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f9d326750cdef96be1aa6055d46b4ac08ec7a0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c9f7b2623b4ed766fb44b46c3f54caa962c07eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574580"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041513"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Comment : utiliser des fuseaux horaires de date et heure
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>Comment : utiliser des fuseaux horaires dans les date et heure arithmétique
 
-En règle générale, lorsque vous effectuez date et d’heure arithmétique à l’aide de <xref:System.DateTime> ou <xref:System.DateTimeOffset> des valeurs, le résultat ne reflète pas les règles d’ajustement de fuseau horaire. Cela est vrai même lorsque le fuseau horaire de la valeur de date et d’heure est clairement identifiable (par exemple, lors de la <xref:System.DateTime.Kind%2A> est définie sur <xref:System.DateTimeKind.Local>). Cette rubrique montre comment effectuer des opérations arithmétiques sur les valeurs de date et d’heure qui appartiennent à un fuseau horaire particulier. Les résultats de ces opérations arithmétiques reflètent les règles d’ajustement du fuseau horaire.
+En règle générale, lorsque vous effectuer la date et l’heure à l’aide d’arithmétique <xref:System.DateTime> ou <xref:System.DateTimeOffset> valeurs, le résultat ne reflète pas les règles d’ajustement de fuseau horaire. Cela est vrai même lorsque le fuseau horaire de la valeur de date et d’heure est clairement identifiable (par exemple, lors de la <xref:System.DateTime.Kind%2A> propriété est définie sur <xref:System.DateTimeKind.Local>). Cette rubrique montre comment effectuer des opérations arithmétiques sur les valeurs de date et d’heure qui appartiennent à un fuseau horaire particulier. Les résultats de ces opérations arithmétiques reflètent les règles d’ajustement du fuseau horaire.
 
 ### <a name="to-apply-adjustment-rules-to-date-and-time-arithmetic"></a>Pour appliquer des règles d’ajustement dans les opérations arithmétiques de date et d’heure
 
-1. Implémentez une méthode de couplage étroit d’une valeur de date et d’heure avec le fuseau horaire auquel elle appartient. Par exemple, déclarez une structure qui inclut à la fois la valeur de date et d’heure et son fuseau horaire. L’exemple suivant utilise cette approche pour lier une <xref:System.DateTime> valeur avec son fuseau horaire.
+1. Implémentez une méthode de couplage étroit d’une valeur de date et d’heure avec le fuseau horaire auquel elle appartient. Par exemple, déclarez une structure qui inclut à la fois la valeur de date et d’heure et son fuseau horaire. L’exemple suivant utilise cette approche pour lier un <xref:System.DateTime> valeur avec son fuseau horaire.
 
    [!code-csharp[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#6)]
    [!code-vb[System.DateTimeOffset.Conceptual#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#6)]
 
-2. Convertir une heure en temps universel coordonné (UTC), en appelant le <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> méthode ou la <xref:System.TimeZoneInfo.ConvertTime%2A> (méthode).
+2. Convertir une heure en temps universel coordonné (UTC) en appelant le <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A> méthode ou le <xref:System.TimeZoneInfo.ConvertTime%2A> (méthode).
 
 3. Effectuez l’opération arithmétique sur l’heure UTC.
 
-4. Convertir l’heure UTC sur fuseau horaire associé de l’heure d’origine en appelant le <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> (méthode).
+4. Convertissez l’heure UTC au fuseau horaire associé de l’heure d’origine en appelant le <xref:System.TimeZoneInfo.ConvertTime%28System.DateTime%2CSystem.TimeZoneInfo%29?displayProperty=nameWithType> (méthode).
 
 ## <a name="example"></a>Exemple
 
@@ -49,22 +49,22 @@ Les deux <xref:System.DateTime> et <xref:System.DateTimeOffset> valeurs sont dis
 
 * Définissez un type qui couple étroitement une valeur de date et d’heure avec son fuseau horaire associé en incluant les deux comme champs. Cette approche est utilisée dans l’exemple de code qui définit une structure pour stocker la date et l’heure, et le fuseau horaire, dans deux champs membres.
 
-L’exemple montre comment effectuer des opérations arithmétiques sur <xref:System.DateTime> valeurs afin que les règles d’ajustement de fuseau horaire sont appliquées au résultat. Toutefois, <xref:System.DateTimeOffset> valeurs peuvent être utilisées avec tout aussi facilement. L’exemple suivant illustre comment le code dans l’exemple d’origine peut-être être adapté pour utiliser <xref:System.DateTimeOffset> au lieu de <xref:System.DateTime> valeurs.
+L’exemple montre comment effectuer des opérations arithmétiques sur <xref:System.DateTime> valeurs afin que les règles d’ajustement de fuseau horaire sont appliquées au résultat. Toutefois, <xref:System.DateTimeOffset> valeurs peuvent être utilisées tout aussi facilement. L’exemple suivant illustre la façon dont le code dans l’exemple d’origine peut être adapté pour utiliser <xref:System.DateTimeOffset> au lieu de <xref:System.DateTime> valeurs.
 
 [!code-csharp[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual6.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual6.vb#7)]
 
-Notez que si cet ajout est appliqué à la <xref:System.DateTimeOffset> valeur sans tout d’abord convertir au format UTC, le résultat indique le point correct dans le temps, mais son offset ne reflète pas celui du fuseau horaire désigné pour cette heure.
+Notez que si cet ajout est effectué simplement sur le <xref:System.DateTimeOffset> valeur sans tout d’abord sa conversion en heure UTC, le résultat indique le point correct dans le temps, mais son décalage ne reflète pas celui du fuseau horaire désigné pour cette heure.
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
 Cet exemple nécessite :
 
-* Une référence à System.Core.dll à ajouter au projet.
+* Qu’une référence à System.Core.dll être ajoutée au projet.
 
 * Que le <xref:System> espace de noms importés avec le `using` instruction (requise en code c#).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-[des opérations arithmétiques avec des dates et heures](../../../docs/standard/datetime/performing-arithmetic-operations.md)
+* [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+* [Exécution d’opérations arithmétiques avec des dates et heures](../../../docs/standard/datetime/performing-arithmetic-operations.md)
