@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404565"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855713"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
 Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient un texte facultatif <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  

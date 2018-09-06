@@ -3,11 +3,11 @@ title: Délai durable en XAMLX
 ms.date: 03/30/2017
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
 ms.openlocfilehash: 1eef9211c67d190ecb5f329c481fa2e3d1763353
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389255"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873927"
 ---
 # <a name="durable-delay-in-xamlx"></a>Délai durable en XAMLX
 Cet exemple montre comment utiliser un délai durable, qui est un délai rendant le workflow persistant sur un périphérique durable pendant le délai.  

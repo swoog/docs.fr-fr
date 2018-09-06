@@ -1,121 +1,121 @@
 ---
-title: Vulnérabilités de temporisation avec le déchiffrement symétrique en mode CBC à l’aide du remplissage
-description: Découvrez comment détecter et atténuer les vulnérabilités de minutage avec déchiffrement symétrique sur le mode Cipher Block Chaining (CBC) à l’aide du remplissage.
+title: Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
+description: Apprenez à détecter et atténuer les vulnérabilités de minutage avec déchiffrement symétrique sur le mode Cipher Block Chaining (CBC) à l’aide de la marge intérieure.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 26f4d19f591ac02d792bebbd648e90b07d84de56
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208685"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881367"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de temporisation avec le déchiffrement symétrique en mode CBC à l’aide du remplissage
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
 
-Microsoft estime qu’il n’est plus sûr déchiffrer les données chiffrées avec le mode Cipher Block Chaining (CBC) de chiffrement symétrique lorsque vérifiable remplissage a été appliqué sans première vérification de l’intégrité du texte chiffré, à l’exception de très spécifique les circonstances. Cette décision est basée sur les recherches connus sur le chiffrement. 
+Microsoft est convaincu qu’il n’est plus sûr déchiffrer les données chiffrées avec le mode Cipher Block Chaining (CBC) de chiffrement symétrique lors de la marge intérieure vérifiable a été appliqué sans d’abord vérifié que l’intégrité du texte chiffré, à l’exception de très spécifique circonstances. Cette opinion est basée sur les recherches sur le chiffrement connus. 
 
 ## <a name="introduction"></a>Introduction
 
-Une attaque d’oracle de remplissage est un type d’attaque contre les données chiffrées qui permet à la personne malveillante déchiffrer le contenu des données, sans connaître la clé.
+Une attaque d’oracle de remplissage est un type d’attaque sur les données chiffrées qui permet à un attaquant déchiffrer le contenu des données, sans connaître la clé.
 
-Oracle fait référence à un « en savoir » qui donne une personne malveillante d’informations que l’action qu’ils l’exécution est correcte ou non. Imaginez la lecture d’un tableau ou une carte de jeu avec un enfant. Lorsque son face allume avec un grand sourire, car elle pense qu’il est sur le point d’effectuer un mouvement bon, ce qui est d’oracle. Vous, en tant que l’adversaire, pourrez utiliser cette oracle pour planifier votre prochain déplacement correctement.
+Oracle fait référence à un « savoir » qui donne une personne malveillante d’informations sur si l’action qu’ils exécutent est correcte ou non. Imaginez un plateau de jeu ou une carte de jeu avec un enfant. Lorsque sa face s’allume avec un sourire volumineux, car elle pense qu’elle est sur le point d’effectuer un mouvement bon, ce qui est oracle. Vous, en tant que l’adversaire, pourrez utiliser cette oracle pour bien planifier votre prochain déplacement.
 
-Le remplissage est un terme de chiffrement spécifique. Des chiffrements qui sont les algorithmes utilisés pour chiffrer vos données, fonctionnent sur des blocs de données où chaque bloc est de taille fixe. Si les données que vous souhaitez chiffrer n’est pas la bonne taille pour remplir les blocs, vos données sont complétées jusqu'à ce qu’il effectue. De nombreux formulaires de remplissage nécessitent ce remplissage soit toujours présent, même si l’entrée d’origine était la taille appropriée. Ainsi, la marge intérieure à toujours être supprimée sans risque sur le déchiffrement.
+Marge intérieure est un terme de chiffrement spécifique. Certains chiffrements qui sont les algorithmes utilisés pour chiffrer vos données, travailler sur des blocs de données où chaque bloc est de taille fixe. Si les données que vous souhaitez chiffrer n’est pas la bonne taille pour remplir les blocs, vos données sont complétées jusqu'à ce que c’est le cas. Différentes formes de la marge intérieure nécessitent ce remplissage soit toujours présents, même si l’entrée d’origine était de la taille appropriée. Ainsi, la marge intérieure à toujours être supprimés lors de déchiffrement.
 
-Assembler les deux tâches, une implémentation logicielle avec un remplissage d’oracle révèle si les données déchiffrées ont remplissage valid. Oracle peut être simplement retourner une valeur qui indique « Remplissage non valide » ou plus complexe à prendre une heure sensiblement différente pour traiter un bloc valide, par opposition à un bloc non valide.
+Assembler les deux tâches, une implémentation logicielle avec une marge intérieure d’oracle révèle si les données déchiffrées ont remplissage valide. Oracle peut être quelque chose d’aussi simple que retournant une valeur qui indique « Remplissage non valide » ou quelque chose de plus compliqué à prendre une heure sensiblement différente pour traiter un bloc valide par opposition à un bloc non valide.
 
-Le chiffrement par bloc par une autre propriété, appelée le mode qui détermine la relation de données dans le premier bloc de données dans le deuxième bloc, et ainsi de suite. Un des modes couramment utilisées est CBC. CBC introduit un bloc aléatoire initial, connu en tant que le vecteur d’initialisation (IV) et associe le bloc précédent le résultat d’un chiffrement statique pour le rendre telle que le chiffrement du message de même avec la même clé ne produire toujours le même résultat crypté.
+Les chiffrements par bloc ont une autre propriété, appelée le mode, qui détermine la relation de données dans le premier bloc de données dans le deuxième bloc, et ainsi de suite. Un des modes plus couramment utilisées est CBC. CBC introduit un bloc aléatoire initial, connu en tant que le vecteur d’initialisation (IV) et combine le bloc précédent avec le résultat du chiffrement statique pour le rendre telles que le chiffrement du message même avec la même clé ne produire toujours la même sortie chiffrée.
 
-Une personne malveillante peut utiliser une marge intérieure oracle, en association avec la structure des données de CBC, pour envoyer des messages légèrement modifiés pour le code qui expose l’oracle et conserver envoi de données jusqu'à ce qu’oracle leur indique les données sont correctes. À partir de cette réponse, l’attaquant peut déchiffrer le message octet par octet.
+Une personne malveillante peut utiliser une oracle de remplissage, en association avec la structure des données de CBC, pour envoyer des messages légèrement modifiés pour le code qui expose l’oracle et envoyer des données jusqu'à ce que l’oracle lui indiquant les données sont correctes. À partir de cette réponse, l’attaquant peut déchiffrer le message octet par octet.
 
-Réseaux d’ordinateurs modernes sont d’une qualité élevée qu’un attaquant peut détecter très faible (inférieure à 0,1 ms) les différences dans l’exécution de temps sur les systèmes distants. Les applications qui sont en supposant que le déchiffrement réussi ne peut se produire lorsque les données n’a pas été falsifiées peuvent être vulnérables aux attaques à partir d’outils sont conçus pour observer les différences de déchiffrement réussi et ayant échoué. Cette différence de minuterie peut être plus importante dans certaines langues ou des bibliothèques que d’autres, il est désormais croire qu’il s’agit d’une menace pratique pour tous les langages et les bibliothèques lors de la réponse de l’application à la défaillance est pris en compte.
+Réseaux informatiques modernes sont de ce type haute qualité qu’une personne malveillante peut détecter très petite (inférieure à 0,1 ms) les différences dans l’exécution de temps sur des systèmes distants. Les applications qui sont en supposant que le déchiffrement réussi ne peut se produire lorsque les données n’a pas été falsifiées peuvent être vulnérables aux attaques à partir d’outils sont conçus pour observer les différences de déchiffrement ayant réussi ou échoué. Cette différence de minutage peut être plus importante dans certains langages ou des bibliothèques que d’autres, il est désormais croire qu’il s’agit d’une menace pratique pour tous les langages et bibliothèques lors de la réponse de l’application aux défaillances est pris en compte.
 
-Cette attaque s’appuie sur la possibilité de modifier les données chiffrées et de tester le résultat avec oracle. La seule façon entièrement atténuer l’attaque consiste à détecter les modifications apportées aux données chiffrées et refuse d’effectuer des actions sur celui-ci. Pour ce faire, la standard consiste à créer une signature pour les données et valider la signature avant que toutes les opérations sont effectuées. La signature doit être vérifiable, il ne peut pas être créé par la personne malveillante, sinon ils seraient modifier les données chiffrées, puis calculer une nouvelle signature basée sur les données modifiées. Un type courant de la signature appropriée est appelé un code d’authentification de message de hachage à clé (HMAC). Un code HMAC diffère une somme de contrôle dans la mesure où il prend une clé secrète, connu uniquement à la personne produisant le code HMAC et à la personne sa validation. Sans la possession de la clé, vous ne peut pas produire un code HMAC correct. Lorsque vous recevez vos données, vous serait prendre les données chiffrées, indépendamment de calcul du code HMAC à l’aide de la clé secrète vous et le partage de l’expéditeur, puis compare le HMAC ils envoyés par rapport à celle calculé. Cette comparaison doit être temps constant, sinon vous avez ajouté un autre oracle détectable, ce qui permet un autre type d’attaque.
+Cette attaque s’appuie sur la possibilité de modifier les données chiffrées et testez le résultat avec oracle. La seule façon d’atténuer entièrement l’attaque consiste à détecter les modifications apportées aux données chiffrées et refuse d’effectuer des actions sur celui-ci. Pour ce faire, le standard consiste à créer une signature pour les données et valider la signature avant que toutes les opérations sont effectuées. La signature doit être vérifiable, il ne peut pas être créé par l’attaquant, sinon ils seraient modifier les données chiffrées, puis calculer une nouvelle signature basée sur les données modifiées. Un type courant de la signature appropriée est appelé un code d’authentification de message de hachage à clé (HMAC). Un HMAC diffère d’une somme de contrôle dans la mesure où il prend une clé secrète, connu uniquement à la personne produisant le code HMAC et à la personne validant. Sans la possession de la clé, vous ne peuvent pas produire un code HMAC correct. Lorsque vous recevez vos données, vous prendre les données chiffrées, calculer indépendamment le HMAC à l’aide de la clé secrète vous et le partage de l’expéditeur, puis compare le HMAC ils vous avons envoyé par rapport à celle calculé. Cette comparaison doit être temps constant, sinon vous avez ajouté un autre oracle détectable, ce qui permet un autre type d’attaque.
 
-En résumé, pour utiliser complété le chiffrement par blocs CBC en toute sécurité, vous devez les combiner avec un code HMAC (ou un autre contrôle d’intégrité de données) que vous validez à l’aide d’une comparaison de temps avant d’essayer de déchiffrer les données. Étant donné que tous les messages modifiées de temps la même quantité pour produire une réponse, l’attaque est bloqué.
+En résumé, pour utiliser complété les chiffrements par bloc CBC en toute sécurité, vous devez les combiner avec un code HMAC (ou une autre vérification de l’intégrité des données) que vous validez à l’aide d’une comparaison de temps constant avant d’essayer de déchiffrer les données. Étant donné que tous les messages modifiés prennent le même volume de temps pour produire une réponse, l’attaque est empêchée.
 
 ## <a name="who-is-vulnerable"></a>Qui est vulnérable
 
 Cette vulnérabilité s’applique aux applications gérées et natives qui effectuent leur propre chiffrement et le déchiffrement. Cela inclut, par exemple :
 
-- Une application qui chiffre un cookie pour le déchiffrement de version ultérieure sur le serveur.
+- Une application qui chiffre un cookie pour le déchiffrement ultérieure sur le serveur.
 - Une application de base de données qui offre la possibilité aux utilisateurs d’insérer des données dans une table dont les colonnes sont déchiffrées.
 - Une application de transfert de données qui s’appuie sur le chiffrement à l’aide d’une clé partagée pour protéger les données en transit.
-- Une application qui chiffre et déchiffre les messages « à l’intérieur » du tunnel TLS.
+- Une application qui chiffre et déchiffre les messages « interne » le tunnel TLS.
 
 Notez qu’à l’aide de TLS seul ne peut pas protéger dans ces scénarios.
 
 Une application vulnérable :
 
 - Déchiffre les données à l’aide du mode de chiffrement CBC avec un mode de remplissage vérifiable, tels que PKCS #7 ou ANSI X.923.
-- Effectue le déchiffrement sans avoir effectué une vérification de l’intégrité des données (via un MAC ou une signature numérique asymétrique).
+- Exécute le déchiffrement sans avoir effectué une vérification de l’intégrité des données (via un MAC ou une signature numérique asymétrique).
 
-Cela s’applique également aux applications reposant sur les abstractions au-dessus de ces primitives, tels que la structure de DonnéesEnveloppées Cryptographic Message Syntax (PKCS #7/CMS).
+Cela s’applique également aux applications reposant sur les abstractions par-dessus ces primitives, telles que la structure de EnvelopedData Cryptographic Message Syntax (PKCS #7/CMS).
 
-## <a name="related-areas-of-concern"></a>Zones posant problème connexes
+## <a name="related-areas-of-concern"></a>Domaines de préoccupation connexes
 
-Research a conduit Microsoft plus concernées sur les messages CBC sont complétées avec équivalent ISO 10126 remplissage lorsque le message a une structure de pied de page connus ou prévisibles. Par exemple, le contenu préparé selon les règles de la syntaxe du chiffrement XML W3C et la recommandation de traitement (xmlenc EncryptedXml). Bien que les recommandations du W3C pour signer le message, puis chiffrer a été considéré comme appropriée en temps, Microsoft maintenant recommande toujours signer puis chiffrer.
+Research a conduit Microsoft à se préoccuper davantage de messages de CBC sont complétées par ISO 10126-équivalent de remplissage lorsque le message a une structure de pied de page connu ou prévisibles. Par exemple, le contenu préparé conformément aux règles de W3C XML Encryption Syntax et de la recommandation de traitement (xmlenc, EncryptedXml). Tandis que les recommandations du W3C pour signer le message, puis chiffrer a été considérée comme appropriée en temps, Microsoft recommande toujours fait encrypt-then-sign.
 
-Les développeurs d’applications doivent toujours être conscients de vérification de la mise en application d’une clé de signature asymétrique, car il n’existe aucune relation d’approbation inhérente entre une clé asymétrique et un message arbitraire.
+Les développeurs d’applications doivent toujours être conscients de la vérification de la mise en application d’une clé de signature asymétrique, car il n’existe aucune relation d’approbation inhérente entre une clé asymétrique et un message arbitraire.
 
 ## <a name="details"></a>Détails
 
-Historiquement, il a été consensus qu’il est important de chiffrer et authentifier des données importantes, à l’aide de moyens tels que les signatures HMAC ou RSA. Toutefois, il a été inférieur des indications précises sur la procédure pour séquencer les opérations de chiffrement et d’authentification. En raison de la vulnérabilité détaillée dans cet article, les conseils de Microsoft est désormais à toujours utiliser le paradigme « encrypt-then-sign ». Autrement dit, chiffrer les données à l’aide d’une clé symétrique avant le calcul de signature asymétrique MAC sur le texte chiffré (données chiffrées). Lors du déchiffrement des données, effectuer l’inverse. Tout d’abord, vérifiez l’adresse MAC ou signature du texte chiffré, puis le déchiffrer.
+Historiquement, il a été consensus qu’il est important de chiffrer et authentifier des données importantes, à l’aide de moyens par exemple, les signatures HMAC ou RSA. Toutefois, il a été moins des conseils éclairés concernant la procédure pour séquencer les opérations de chiffrement et d’authentification. En raison de la vulnérabilité décrites dans cet article, les conseils de Microsoft est désormais à toujours utiliser le paradigme « encrypt-then-sign ». Autrement dit, tout d’abord chiffrer des données à l’aide d’une clé symétrique, puis un MAC ou signature asymétrique de calcul sur le texte chiffré (données chiffrées). Lors du déchiffrage des données, effectuer l’inverse. Tout d’abord, vérifiez le MAC ou la signature du texte chiffré, puis le déchiffrer.
 
-Une classe de vulnérabilités appelé « remplissage oracle attaques » ont été identifiés existe depuis plus de 10 ans. Ces vulnérabilités permettent une personne malveillante de déchiffrer les données chiffrées par les algorithmes symétrique, tel que AES et 3DES, à l’aide de 4096 pas plus de tentatives par bloc de données. Ces vulnérabilités rendre l’utilisation du fait que les chiffrements par bloc les plus fréquemment utilisés avec des données de remplissage vérifiable à la fin. Il a été constaté que si une personne malveillante peut falsifier le texte chiffré et savoir si la falsification a provoqué une erreur dans le format de la marge intérieure à la fin, la personne malveillante peut déchiffrer les données.
+Une classe de vulnérabilités appelé « remplissage oracle attaques » ont été identifiés existe depuis plus de 10 ans. Ces vulnérabilités permettent à une personne malveillante de déchiffrer les données chiffrées par bloc symétriques algorithmes, tels que AES et 3DES, à l’aide de tentatives de ne plus de 4 096 par bloc de données. Assurez-vous de supprimer ces vulnérabilités utilisation du fait que les chiffrements par bloc les plus fréquemment utilisés avec des données de remplissage vérifiable à la fin. Il a été trouvé si une personne malveillante peut falsifier le texte chiffré et déterminer si les risques de falsification a entraîné une erreur dans le format de la marge intérieure à la fin, l’attaquant peut déchiffrer les données.
 
-Au départ, attaques pratiques étaient basées sur les services qui doit retourner des codes d’erreur différents selon si le remplissage était valide, telle que la vulnérabilité dans ASP.NET [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Toutefois, Microsoft estime maintenant qu’il est possible d’effectuer des attaques similaires à l’aide uniquement les différences dans la synchronisation entre le traitement de remplissage valide et non valide.
+Initialement, les attaques pratiques étaient basés sur les services qui retournent les codes d’erreur différents en fonction de remplissage intervenue valide, telle que la vulnérabilité ASP.NET [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Toutefois, Microsoft estime maintenant qu’il est pratique de mener des attaques similaires à l’aide uniquement les différences de minutage entre le traitement de remplissage valide et non valide.
 
-Si le schéma de chiffrement utilise une signature et vérification de la signature est effectué avec un runtime fixe pour une période donnée de données (quel que soit le contenu), l’intégrité des données peuvent être vérifié sans l’émission de toutes les informations à un intrus via un [canal latéral](https://en.wikipedia.org/wiki/Side-channel_attack). Étant donné que le contrôle d’intégrité rejette les messages falsifiés, la remplissage une menace pour oracle est atténuée.
+Condition que le schéma de chiffrement utilise une signature et que la vérification de signature est effectuée avec un runtime fixe pour une longueur donnée de données (quel que soit le contenu), l’intégrité des données peut être vérifiée sans émettre de toutes les informations à un attaquant via un [canal latéral](https://en.wikipedia.org/wiki/Side-channel_attack). Étant donné que la vérification d’intégrité rejette les messages falsifiés, la menace d’oracle de remplissage est atténuée.
 
 ## <a name="guidance"></a>Conseils
 
 Tout d’abord, Microsoft recommande que les données ayant la confidentialité doivent être transmises sur sécurité TLS (Transport Layer), le successeur de couche SSL (Secure Sockets).
 
-Ensuite, analyser votre application pour :
+Ensuite, analysez votre application :
 
-- Comprendre précisément quelles chiffrement que vous effectuez et le chiffrement est fourni par les plateformes et les API que vous utilisez.
-- Être certain que chaque utilisation au niveau de chaque couche d’un [algorithme de chiffrement en bloc](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), tel que AES et 3DES, en mode CBC incorporer l’utilisation d’une vérification de l’intégrité des données secret (une signature asymétrique, un code HMAC, ou pour modifier le mode de chiffrement pour un [authentifié chiffrement](https://en.wikipedia.org/wiki/Authenticated_encryption) mode (AE) comme GCM ou CCM).
+- Comprendre et avec précision quelles chiffrement que vous effectuez le chiffrement est fourni par les plateformes et les API que vous utilisez.
+- Être certain que chaque utilisation au niveau de chaque couche de symétrique [algorithme de chiffrement par bloc](https://en.wikipedia.org/wiki/Block_cipher#Notable_block_ciphers), tel que AES et 3DES, en mode CBC incorporer l’utilisation d’une vérification de l’intégrité des données à la clé de secret (une signature asymétrique, un code HMAC, ou pour modifier le mode de chiffrement à un [authentifié chiffrement](https://en.wikipedia.org/wiki/Authenticated_encryption) mode (AE) telles que GCM ou CCM).
 
-En fonction de la recherche en cours, il est généralement considérée comme que lorsque les opérations de chiffrement et d’authentification sont effectuées indépendamment pour les modes non AE de chiffrement, l’authentification le texte chiffré (encrypt-then-sign) est la meilleure option générale. Toutefois, aucune réponse conséquente correct pour le chiffrement et cette généralisation n’est pas aussi bonne qualité que dirigée conseils à partir d’un cryptographe Professionnel.
+En fonction de la recherche en cours, il est de croire que lorsque les étapes de l’authentification et le chiffrement sont effectuées indépendamment pour les modes non AE de chiffrement, l’authentification le texte chiffré (encrypt-then-sign) est la meilleure option générale. Toutefois, il n’existe aucune réponse correcte uniformisée au chiffrement et cette généralisation n’est pas aussi bonne qualité qu’orienté conseils à partir d’un cryptographe Professionnel.
 
-Les applications qui ne peuvent pas modifier leur format de messagerie mais effectuer un déchiffrement CBC non authentifié sont invitées pour tenter d’intégrer les solutions d’atténuation tels que :
+Les applications qui ne peuvent pas modifier leur format de messagerie mais effectuer un déchiffrement CBC non authentifié sont invitées à tentez d’incorporer des solutions d’atténuation telles que :
 
-- Déchiffrer sans autoriser le déchiffreur vérifier ou supprimer des marges intérieures :
-  - Tout remplissage a été appliqué doive toujours être supprimées ou ignorées, vous déplacez la charge dans votre application.
-  - L’avantage est que la vérification de la marge intérieure et la suppression peuvent être incorporés dans une autre logique de vérification de données application. Si la vérification de la marge intérieure et la vérification des données peuvent être effectuées dans le temps, la menace est réduite.
-  - Étant donné que l’interprétation de la marge intérieure change la longueur du message ne soit perçu, peut-être encore être émises à partir de cette approche des informations de minutage.
+- Déchiffrer sans autoriser le déchiffreur vérifier ou supprimer le remplissage :
+  - Tout remplissage a été appliqué doit toujours être supprimés ou ignorés, que vous déplacez le fardeau dans votre application.
+  - L’avantage est que la vérification de la marge intérieure et la suppression peuvent être incorporés dans une autre logique de vérification de données application. Si la vérification de la marge intérieure et la vérification des données peuvent être effectuées en temps constant, la menace est réduite.
+  - Étant donné que l’interprétation de la marge intérieure change la longueur du message perçue, il peut toujours être émises à partir de cette approche des informations de minutage.
 - Modifiez le mode de remplissage de déchiffrement ISO10126 :
-  - Remplissage de déchiffrement ISO10126 est compatible avec remplissage PKCS7 et remplissage de chiffrement ANSIX923.
-  - Modification du mode permet de réduire la base de connaissances oracle remplissage à 1 octet, au lieu de l’intégralité du bloc. Toutefois, si le contenu a un pied de page bien connu, par exemple un élément XML de fermeture attaques associées peuvent continuer attaquer le reste du message.
-  - Cela n’également empêche la récupération en texte clair dans les situations où la personne malveillante peut forcer le même texte en clair pour être chiffré plusieurs fois avec un décalage de message différent.
-- Portail de l’évaluation d’un appel de déchiffrement à mouiller le signal de synchronisation :
-  - Le calcul du temps d’attente doit avoir un minimum dépassant la quantité maximale de temps que l’opération de déchiffrement faudrait pour n’importe quel segment de données qui contient le remplissage.
-  - Calculs de temps doivent être effectuées selon les instructions de [lors de l’acquisition des horodatages haute résolution](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), ne pas à l’aide de <xref:System.Environment.TickCount?displayProperty=nameWithType> (sujet à la restauration sur/dépassement) ou la soustraction de deux horodatages système (susceptibles d’être modifiés de NTP erreurs).
-  - Calculs de temps doivent être qui inclut l’opération de déchiffrement, y compris toutes les exceptions éventuelles dans géré ou des applications C++, pas seulement complétées à la fin.
-  - Si la réussite ou l’échec a encore été déterminé, la porte de la minuterie doit renvoient une erreur lors de son expiration.
-- Les services qui exécutent le déchiffrement non authentifié doivent avoir en place pour détecter qu’un flux excessif de messages « non valides » n’a rien par le biais du contrôle.
-  - N’oubliez pas que ce signal comporte des faux positifs (données en toute légitimité endommagées) et des faux négatifs (propagation de l’attaque sur une période suffisamment longue pour échapper à la détection).
+  - Remplissage de déchiffrement ISO10126 est compatible avec remplissage de chiffrement PKCS7 et remplissage ANSIX923.
+  - Modification du mode réduit les connaissances d’oracle de remplissage à 1 octet au lieu de l’intégralité du bloc. Toutefois, si le contenu a un pied de page bien connu, tels que d’un élément XML, de fermeture attaques connexes peuvent continuer attaquer le reste du message.
+  - Cela n’empêche également pas récupération en texte clair dans les situations où l’attaquant peut forcer le même texte en clair à chiffrer plusieurs fois avec un décalage de message différent.
+- L’évaluation d’un appel de déchiffrement à mouiller le signal de minutage de la grille :
+  - Le calcul de la durée de conservation doit avoir un minimum dépassant la quantité maximale de temps que l’opération de déchiffrement serait nécessaire pour n’importe quel segment de données qui contient le remplissage.
+  - Calculs de temps doivent être effectuées selon les instructions de [l’acquisition des horodatages haute résolution](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx), ne pas à l’aide <xref:System.Environment.TickCount?displayProperty=nameWithType> (susceptibles d’être roll-over/dépassement de capacité) ou la soustraction de deux horodatages système (susceptibles d’être modifiés de NTP erreurs).
+  - Calculs de temps doivent être qui inclut l’opération de déchiffrement, y compris toutes les exceptions potentielles dans géré ou des applications C++, pas seulement complétées à la fin.
+  - Si la réussite ou l’échec a encore été déterminé, la porte de minutage doit renvoient une erreur lorsqu’il arrive à expiration.
+- Les services qui effectuent de déchiffrement non authentifié doivent avoir en place pour détecter qu’un flux de messages « non valides » est venue par le biais du contrôle.
+  - N’oubliez pas que ce signal comporte des faux positifs (données endommagées légitimement) et faux négatifs (répartir l’attaque sur une période suffisamment longue pour échapper à la détection).
 
 ## <a name="finding-vulnerable-code---native-applications"></a>Recherche de code vulnérable - applications natives
 
-Pour les programmes basés sur la cryptographie Windows : bibliothèque de génération (CNG) :
+Pour les programmes basées sur la cryptographie Windows : bibliothèque de Next Generation (CNG) :
 
-- L’appel de déchiffrement concerne [BCryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa375391.aspx), en spécifiant le `BCRYPT_BLOCK_PADDING` indicateur.
-- Le handle de clé a été initialisé en appelant [BCryptSetProperty](https://msdn.microsoft.com/library/windows/desktop/aa375504.aspx) avec [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) la valeur `BCRYPT_CHAIN_MODE_CBC`.
-  - Étant donné que `BCRYPT_CHAIN_MODE_CBC` est la valeur par défaut, affectée code avez ne peut-être pas affecté la valeur de `BCRYPT_CHAINING_MODE`.
+- L’appel de déchiffrement concerne [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt), en spécifiant le `BCRYPT_BLOCK_PADDING` indicateur.
+- Le handle de clé a été initialisé en appelant [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) avec [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) défini sur `BCRYPT_CHAIN_MODE_CBC`.
+  - Dans la mesure où `BCRYPT_CHAIN_MODE_CBC` est la valeur par défaut, affectée code a ne peut-être pas attribué la valeur de `BCRYPT_CHAINING_MODE`.
 
-Pour les programmes basés sur l’API de chiffrement Windows plus anciens :
+Pour les programmes développés à l’API de chiffrement Windows plus anciens :
 
-- L’appel de déchiffrement concerne [CryptDecrypt](https://msdn.microsoft.com/library/windows/desktop/aa379913.aspx) avec `Final=TRUE`.
-- Le handle de clé a été initialisé en appelant [CryptSetKeyParam](https://msdn.microsoft.com/library/windows/desktop/aa380272.aspx) avec [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) la valeur `CRYPT_MODE_CBC`.
-  - Étant donné que `CRYPT_MODE_CBC` est la valeur par défaut, affectée code avez ne peut-être pas affecté la valeur de `KP_MODE`.
+- L’appel de déchiffrement concerne [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) avec `Final=TRUE`.
+- Le handle de clé a été initialisé en appelant [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) avec [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) défini sur `CRYPT_MODE_CBC`.
+  - Dans la mesure où `CRYPT_MODE_CBC` est la valeur par défaut, affectée code a ne peut-être pas attribué la valeur de `KP_MODE`.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>Code vulnérable recherche - applications managées
 
 - L’appel de déchiffrement concerne le <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor> ou <xref:System.Security.Cryptography.SymmetricAlgorithm.CreateDecryptor(System.Byte[],System.Byte[])> méthodes sur <xref:System.Security.Cryptography.SymmetricAlgorithm?displayProperty=nameWithType>.
-  - Cela inclut les types dérivés suivants dans .NET, mais peut-être également inclure des types tiers :
+  - Cela inclut les types dérivés suivants dans le .NET, mais peut également inclure les types de fournisseurs tiers :
     - <xref:System.Security.Cryptography.Aes>
     - <xref:System.Security.Cryptography.AesCng>
     - <xref:System.Security.Cryptography.AesCryptoServiceProvider>
@@ -129,24 +129,24 @@ Pour les programmes basés sur l’API de chiffrement Windows plus anciens :
     - <xref:System.Security.Cryptography.TripleDES>
     - <xref:System.Security.Cryptography.TripleDESCng>
     - <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
-- Le <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> a pris la valeur de propriété <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, ou <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
-  - Étant donné que <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> est la valeur par défaut, affectée code ne peut jamais avoir affecté le <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propriété.
-- Le <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> a pris la valeur de propriété <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
-  - Étant donné que <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> est la valeur par défaut, affectée code ne peut jamais avoir affecté le <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propriété.
+- Le <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propriété a été définie sur <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType>, <xref:System.Security.Cryptography.PaddingMode.ANSIX923?displayProperty=nameWithType>, ou <xref:System.Security.Cryptography.PaddingMode.ISO10126?displayProperty=nameWithType>.
+  - Dans la mesure où <xref:System.Security.Cryptography.PaddingMode.PKCS7?displayProperty=nameWithType> est la valeur par défaut, affectée code ne peut jamais avoir attribué la <xref:System.Security.Cryptography.SymmetricAlgorithm.Padding?displayProperty=nameWithType> propriété.
+- Le <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> a la valeur de propriété <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType>
+  - Dans la mesure où <xref:System.Security.Cryptography.CipherMode.CBC?displayProperty=nameWithType> est la valeur par défaut, affectée code ne peut jamais avoir attribué la <xref:System.Security.Cryptography.SymmetricAlgorithm.Mode?displayProperty=nameWithType> propriété.
 
-## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Recherche de code vulnérable - syntaxe de message
+## <a name="finding-vulnerable-code---cryptographic-message-syntax"></a>Recherche de code vulnérable - syntaxe de message de chiffrement
 
-Un message CMS DonnéesEnveloppées non authentifié dont le contenu chiffré utilise le mode CBC AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) ou RC2 (1.2.840.113549.3.2) est vulnérables, ainsi que des messages à l’aide de toutes les autres algorithmes de chiffrement par bloc en mode CBC.
+Un message CMS EnvelopedData non authentifié dont le contenu chiffré utilise le mode CBC AES (2.16.840.1.101.3.4.1.2, 2.16.840.1.101.3.4.1.22, 2.16.840.1.101.3.4.1.42), DES (1.3.14.3.2.7), 3DES (1.2.840.113549.3.7) ou RC2 (1.2.840.113549.3.2) est vulnérable, ainsi que des messages à l’aide de n’importe quel autres algorithmes de chiffrement par bloc en mode CBC.
 
-Tandis que les chiffrements de flux ne sont pas sensibles à cette vulnérabilité, Microsoft vous recommande de toujours authentifier les données sur l’inspection de la valeur ContentEncryptionAlgorithm.
+Tandis que les chiffrements de flux ne sont pas sensibles à cette vulnérabilité, Microsoft vous recommande de toujours authentifier les données au fil de l’inspection de la valeur ContentEncryptionAlgorithm.
 
-Pour les applications managées, un DonnéesEnveloppées CMS blob peut être détecté comme n’importe quelle valeur est passée à <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
+Pour les applications managées, un EnvelopedData CMS blob peut être détecté comme n’importe quelle valeur passée à <xref:System.Security.Cryptography.Pkcs.EnvelopedCms.Decode(System.Byte[])?displayProperty=fullName>.
 
-Pour les applications natives, un objet blob CMS DonnéesEnveloppées peut être détecté en tant que la valeur fournie pour un handle CMS via [CryptMsgUpdate](https://msdn.microsoft.com/library/windows/desktop/aa380231.aspx) dont résultant [CMSG_TYPE_PARAM](https://msdn.microsoft.com/library/windows/desktop/aa380227.aspx) est `CMSG_ENVELOPED` et/ou le handle CMS est envoyées ultérieurement un `CMSG_CTRL_DECRYPT` instruction via [CryptMsgControl](https://msdn.microsoft.com/library/windows/desktop/aa380220.aspx).
+Pour les applications natives, un objet blob CMS EnvelopedData peut être détecté en tant que la valeur fournie pour un handle CMS via [CryptMsgUpdate](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgupdate) dont résultant [CMSG_TYPE_PARAM](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsggetparam) est `CMSG_ENVELOPED` et/ou le handle CMS est envoyées ultérieurement un `CMSG_CTRL_DECRYPT` instruction via [CryptMsgControl](/windows/desktop/api/wincrypt/nf-wincrypt-cryptmsgcontrol).
 
 ## <a name="vulnerable-code-example---managed"></a>Exemple de code vulnérable - géré
 
-Cette méthode lit un cookie et la déchiffre et aucune vérification de l’intégrité des données n’est visible. Par conséquent, le contenu d’un cookie qui est lu par cette méthode peut être attaqué par l’utilisateur qui a reçu ou par un pirate a obtenu la valeur de cookie chiffré.
+Cette méthode lit un cookie et la déchiffre et aucune vérification de l’intégrité des données est visible. Par conséquent, le contenu d’un cookie qui est lu par cette méthode peut être attaqué par l’utilisateur qui les ont reçues, ou par n’importe quel agresseur a obtenu la valeur du cookie chiffré.
 
 ```csharp
 private byte[] DecryptCookie(string cookieName)
@@ -171,17 +171,17 @@ private byte[] DecryptCookie(string cookieName)
 }
 ```
 
-## <a name="example-code-following-recommended-practices---managed"></a>Exemple suivant de code pratiques - géré
+## <a name="example-code-following-recommended-practices---managed"></a>Exemple suivant de code recommandées - géré
 
 L’exemple de code suivant utilise un format de message non standard de
 
 `cipher_algorithm_id || hmac_algorithm_id || hmac_tag || iv || ciphertext`
 
-où les `cipher_algorithm_id` et `hmac_algorithm_id` identificateurs d’algorithme sont des représentations de (non standard) local de l’application de ces algorithmes. Ces identificateurs peuvent être judicieuse dans d’autres parties de votre protocole de messagerie existant et non comme un flux d’octets concaténée nu.
+où les `cipher_algorithm_id` et `hmac_algorithm_id` identificateurs d’algorithme sont des représentations de (non standard) local de l’application de ces algorithmes. Ces identificateurs peuvent être judicieux dans d’autres parties de votre protocole de messagerie existant et non comme un flux d’octets concaténée strict.
 
-Cet exemple utilise également une clé principale unique pour dériver une clé de chiffrement et une clé HMAC. Cela est dû à la fois pour des raisons pratiques permettant d’activer une application séparément indexés dans une application de clés en double et visant à encourager la conservation des valeurs d’autre que les deux clés. Plus, elle garantit que la clé HMAC et la clé de chiffrement ne peuvent pas tirer parti de synchronisation.
+Cet exemple utilise également une clé principale unique pour dériver une clé de chiffrement et une clé HMAC. Ceci est fourni à la fois comme une commodité pour l’activation d’une application indexé séparément dans une application de clés en double et à encourager la conservation des valeurs d’autre que les deux clés. Elle garantit davantage que la clé HMAC et la clé de chiffrement ne peut pas tirer parti de synchronisation.
 
-Cet exemple n’accepte pas un <xref:System.IO.Stream> pour le chiffrement ou le déchiffrement. Une étape du fait de format de données en cours chiffrer difficile, car le `hmac_tag` valeur précède le texte chiffré. Toutefois, ce format a été choisi car il conserve tous les éléments de taille fixe au début de conserver la plus simple de l’analyseur. Avec ce format de données, une seule passe decrypt est possible, si un implémenteur est indispensable pour appeler GetHashAndReset et avant d’appeler TransformFinalBlock de vérifier le résultat. Si le chiffrement de diffusion en continu est important, un autre mode AE peut être requis.
+Cet exemple n’accepte pas un <xref:System.IO.Stream> pour le chiffrement ou déchiffrement. Une étape du fait de format de données actuelle chiffrer difficile, car le `hmac_tag` valeur précède le texte chiffré. Toutefois, ce format a été choisi, car il conserve tous les éléments de taille fixe au début pour conserver la plus simple de l’analyseur. Avec ce format de données, une seule passe decrypt est possible, même si un implémenteur est imminente pour appeler GetHashAndReset et vérifier le résultat avant d’appeler TransformFinalBlock. Si le chiffrement de diffusion en continu est important, un autre mode AE peut être requis.
 
 ```csharp
 // ==++==
