@@ -2,12 +2,12 @@
 title: Expressions de calcul (F#)
 description: 'Découvrez comment créer une syntaxe pratique pour l’écriture de calculs en F # qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle.'
 ms.date: 07/27/2018
-ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "36207431"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43800908"
 ---
 # <a name="computation-expressions"></a>Expressions de calcul
 
@@ -229,8 +229,6 @@ builder.Run(builder.Delay(fun () -> {| cexpr |}))
 
 Dans le code ci-dessus, les appels à `Run` et `Delay` sont omis s’ils ne sont pas définis dans la classe de générateur d’expression calcul. Le corps de l’expression de calcul, désignée ici comme `{| cexpr |}`, est convertie en appels impliquant les méthodes de la classe de générateur de rapports par les traductions décrites dans le tableau suivant. L’expression de calcul `{| cexpr |}` est définie de manière récursive en fonction de ces traductions où `expr` est une expression F # et `cexpr` est une expression de calcul.
 
-
-
 |Expression|Traduction|
 |----------|-----------|
 |<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
@@ -361,7 +359,7 @@ let comp = eventually {
         printfn " x = %d" x
     return 3 + 4 }
 
-// Try the remaining lines in F# interactive to see how this 
+// Try the remaining lines in F# interactive to see how this
 // computation expression works in practice.
 let step x = Eventually.step x
 
@@ -386,9 +384,11 @@ comp |> step |> step |> step |> step |> step |> step |> step |> step
 Une expression de calcul a un type sous-jacent, ce qui retourne l’expression. Le type sous-jacent peut représenter un résultat du calcul ou un calcul retardé qui peut être effectué, ou elle peut fournir un moyen pour effectuer une itération dans un type de collection. Dans l’exemple précédent, le type sous-jacent a été **finalement**. Pour une expression de séquence, le type sous-jacent est <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Pour une expression de requête, le type sous-jacent est <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Pour un flux de travail asynchrone, le type sous-jacent est [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Le `Async` objet représente le travail à effectuer pour calculer le résultat. Par exemple, vous appelez [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) pour effectuer un calcul et de retourner le résultat.
 
 ## <a name="custom-operations"></a>Opérations personnalisées
+
 Vous pouvez définir une opération personnalisée sur une expression de calcul et utiliser une opération personnalisée en tant qu’opérateur dans une expression de calcul. Par exemple, vous pouvez inclure un opérateur de requête dans une expression de requête. Lorsque vous définissez une opération personnalisée, vous devez définir le rendement et les méthodes dans l’expression de calcul. Pour définir une opération personnalisée, placez-le dans une classe de générateur pour l’expression de calcul, puis appliquer le [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Cet attribut prend une chaîne en tant qu’argument, qui est le nom à utiliser dans une opération personnalisée. Ce nom est fourni dans la portée au début de l’accolade ouvrante de l’expression de calcul. Par conséquent, vous ne devez pas utiliser des identificateurs qui ont le même nom qu’une opération personnalisée dans ce bloc. Par exemple, évitez l’utilisation des identificateurs comme `all` ou `last` dans les expressions de requête.
 
 ### <a name="extending-existing-builders-with-new-custom-operations"></a>Extension des générateurs existants avec les nouvelles opérations personnalisé
+
 Si vous avez déjà une classe de générateur, ses opérations personnalisées peuvent être étendues d’en dehors de cette classe de générateur de rapports. Les extensions doivent être déclarées dans des modules. Espaces de noms ne peut pas contenir de membres d’extension à l’exception dans le même fichier et le même groupe de déclaration d’espace de noms dans lequel le type est défini.
 
 L’exemple suivant montre l’extension existants `Microsoft.FSharp.Linq.QueryBuilder` classe.
@@ -402,10 +402,8 @@ type Microsoft.FSharp.Linq.QueryBuilder with
 ```
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Flux de travail asynchrones](asynchronous-workflows.md)
-
-[Séquences](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
-
-[Expressions de requête](query-expressions.md)
+- [Informations de référence du langage F#](index.md)
+- [Flux de travail asynchrones](asynchronous-workflows.md)
+- [Séquences](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
+- [Expressions de requête](query-expressions.md)

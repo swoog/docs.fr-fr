@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
 ms.openlocfilehash: 189cb92d581ccc9209ebdb4de18487951d17818a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43535614"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43779982"
 ---
 # <a name="how-to-crop-an-image"></a>Comment : rogner une image
 Cet exemple montre comment rogner une image à l’aide <xref:System.Windows.Media.Imaging.CroppedBitmap>.  
