@@ -3,11 +3,11 @@ title: Stratégie de protection étendue
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532343"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785451"
 ---
 # <a name="extended-protection-policy"></a>Stratégie de protection étendue
 La protection étendue est une initiative de sécurité visant à se protéger des attaques de l'intercepteur (MITM, Man In The Middle). Une attaque de l'intercepteur est une atteinte à la sécurité dans laquelle un intercepteur prend les informations d'identification d'un client et les envoie à un serveur.  

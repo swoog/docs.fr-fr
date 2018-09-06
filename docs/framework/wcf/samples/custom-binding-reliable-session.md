@@ -3,11 +3,11 @@ title: Custom Binding Reliable Session
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
 ms.openlocfilehash: 55ffdd741bf26c1a906c7b09dfa05839b25f1645
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557489"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773574"
 ---
 # <a name="custom-binding-reliable-session"></a>Custom Binding Reliable Session
 Une liaison personnalisée est définie par une liste ordonnée d’éléments de liaison discrets. Cet exemple indique comment configurer une liaison personnalisée avec plusieurs éléments d'encodage de transport et de message, notamment en activant des sessions fiables.  

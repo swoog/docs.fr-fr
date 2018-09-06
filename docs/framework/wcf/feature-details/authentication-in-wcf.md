@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authentication [WCF]
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
-ms.openlocfilehash: a4f9b719024db1334b599f0f02fe01bc083bf3c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 401bd8901f4d8b9292e83d3e54d0afce30c9584f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489108"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785828"
 ---
 # <a name="authentication-in-wcf"></a>Authentification dans WCF
 Les rubriques suivantes montrent un nombre de mécanismes différents dans Windows Communication Foundation (WCF) qui fournissent l’authentification, par exemple, l’authentification Windows, les certificats X.509 et nom d’utilisateur et mots de passe.  
@@ -23,7 +23,7 @@ Les rubriques suivantes montrent un nombre de mécanismes différents dans Windo
  Montre comment intégrer un validateur personnalisé de nom d'utilisateur/mot de passe.  
   
  [Identité du service et authentification](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- En tant qu’une sécurité supplémentaire, un client peut authentifier le service en spécifiant attendu *identité* du service. Si l'identité attendue et l'identité retournée par le service ne correspondent pas, l'authentification échoue.  
+ En tant que dispositif de protection supplémentaire, un client peut authentifier le service en spécifiant attendu *identité* du service. Si l'identité attendue et l'identité retournée par le service ne correspondent pas, l'authentification échoue.  
   
  [Négociation et délais de sécurité](../../../../docs/framework/wcf/feature-details/security-negotiation-and-timeouts.md)  
  Décrit comment utiliser la propriété <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NegotiationTimeout%2A> de la classe <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>.  
@@ -39,4 +39,4 @@ Les rubriques suivantes montrent un nombre de mécanismes différents dans Windo
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Modèle de sécurité pour Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

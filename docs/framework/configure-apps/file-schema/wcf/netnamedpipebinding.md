@@ -3,11 +3,11 @@ title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
 ms.openlocfilehash: f3b6771d5a1a07a35bdf3f0ffa92c837aa202e4d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554243"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785311"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Définit une liaison qui est sécurisée, fiable, optimisée pour la communication interprocessus sur l’ordinateur. Par défaut, elle génère une pile de communication du runtime avec WS-ReliableMessaging pour la fiabilité, la sécurité du transport pour la sécurité du transfert, des canaux nommés pour la remise de messages et l'encodage binaire de messages.  

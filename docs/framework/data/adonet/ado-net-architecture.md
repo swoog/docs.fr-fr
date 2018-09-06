@@ -3,11 +3,11 @@ title: Architecture ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43472109"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43773394"
 ---
 # <a name="adonet-architecture"></a>Architecture ADO.NET
 Le traitement des données repose traditionnellement sur un modèle à deux couches utilisant une connexion. Le traitement des données utilisant de plus en plus des architectures multicouches, les programmeurs s'orientent vers une approche déconnectée de façon à proposer une meilleure évolutivité pour leurs applications.  

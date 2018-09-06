@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
 ms.openlocfilehash: 1819d468d12c03ce0c4faac11f4b20b8fe0f9c33
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482004"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731272"
 ---
 # <a name="navigating-datarelations"></a>Parcours des DataRelations
 L'une des principales fonctions d'un objet <xref:System.Data.DataRelation> est de permettre de passer d'un objet <xref:System.Data.DataTable> à un autre à l'intérieur d'un objet <xref:System.Data.DataSet>. Cela vous permet de récupérer tous les connexe <xref:System.Data.DataRow> les objets **DataTable** lorsqu’un **DataRow** à partir d’un connexes **DataTable**. Par exemple, après avoir établi un **DataRelation** entre une table de clients et une table de commandes, vous pouvez récupérer toutes les lignes de commande pour une ligne de client spécifique à l’aide **GetChildRows**.  

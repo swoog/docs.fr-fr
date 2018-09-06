@@ -2,12 +2,12 @@
 title: Nombre d'appels ayant échoué par seconde
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: 19f09b2a2132cab56da5dec49bdc8d5f5e4c8b8b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccb5908e9036650e3f21a9496649c8090c2e47b2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474452"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43736320"
 ---
 # <a name="calls-failed-per-second"></a>Nombre d'appels ayant échoué par seconde
 Nom du compteur : appels ayant échoué par seconde  
@@ -15,7 +15,7 @@ Nom du compteur : appels ayant échoué par seconde
 ## <a name="description"></a>Description  
  Nombre d'appels à cette opération avec des exceptions non prises en charge par seconde.  
   
- Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](http://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.  
+ Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   

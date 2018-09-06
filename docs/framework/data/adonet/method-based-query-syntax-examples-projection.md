@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0fc2c8f0-1967-4f30-8b20-39b8dccfb82f
 ms.openlocfilehash: 8d18ed04ad33fe88fb14fd7436ddfd7a164c4303
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554275"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744996"
 ---
 # <a name="method-based-query-syntax-examples-projection-linq-to-dataset"></a>Exemples de syntaxe de requête fondée sur une méthode : projection (LINQ to DataSet)
 Les exemples de cette rubrique montrent comment utiliser les méthodes <xref:System.Linq.Enumerable.Select%2A> et <xref:System.Linq.Enumerable.SelectMany%2A> pour interroger un <xref:System.Data.DataSet> à l'aide de la syntaxe de requête fondée sur une méthode.  

@@ -5,11 +5,11 @@ ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 6da641ec5da20c80f4c1034ded8a3be7d036b5a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466489"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785542"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problèmes de sécurité relatifs à la journalisation des messages
 Cette rubrique contient des instructions permettant de protéger des données sensibles afin d'éviter qu'elles ne soient visibles dans les journaux des messages et de protéger les événements générés par l'enregistrement des messages.  

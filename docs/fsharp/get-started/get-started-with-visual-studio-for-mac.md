@@ -2,12 +2,12 @@
 title: 'Bien démarrer avec F # dans Visual Studio pour Mac'
 description: 'Découvrez comment utiliser F # avec Visual Studio pour Mac.'
 ms.date: 07/03/2018
-ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874651"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785529"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Bien démarrer avec F # dans Visual Studio pour Mac
 
@@ -114,8 +114,9 @@ Il s’agit uniquement d’un aperçu dans ce que vous pouvez faire avec F # Int
 Si vous n’avez pas déjà, consultez le [visite guidée de F #](../tour.md), qui aborde certaines des principales fonctionnalités du langage F #.  Il vous donner une vue d’ensemble de certaines des fonctionnalités de F # et fournissent des exemples de code suffisamment que vous pouvez copier dans Visual Studio pour Mac et l’exécuter.  Il existe également des ressources exceptionnelles externes, vous pouvez utiliser, présentée dans le [Guide F #](../index.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Visual F#](../index.md)  
- [Présentation de F#](../tour.md)  
- [Référence du langage F #](../language-reference/index.md)  
- [Inférence de type](../language-reference/type-inference.md)  
- [Référence des symboles et d’opérateur](../language-reference/symbol-and-operator-reference/index.md)  
+
+- [Visual F#](../index.md)  
+- [Présentation de F#](../tour.md)  
+- [Référence du langage F #](../language-reference/index.md)  
+- [Inférence de type](../language-reference/type-inference.md)  
+- [Référence des symboles et d’opérateur](../language-reference/symbol-and-operator-reference/index.md)  

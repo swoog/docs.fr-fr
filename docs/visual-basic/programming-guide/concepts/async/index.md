@@ -2,12 +2,12 @@
 title: Programmation asynchrone avec Async et Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 5a0d2d40b815037e6eb3ed47c500c135ad116aaf
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 9798136bfa88e19764a064732637783620f77a73
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925240"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43739540"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Programmation asynchrone avec Async et Await (Visual Basic)
 Vous pouvez éviter des goulots d'étranglement de performance et améliorer la réactivité globale de votre application à l'aide de la programmation asynchrone. Toutefois, les techniques traditionnelles pour écrire des applications asynchrones peuvent être complexes et rendre ces applications difficiles à écrire, déboguer et mettre à jour.  
@@ -99,7 +99,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  Dans les méthodes async, vous utilisez les mots clés et les types fournis pour indiquer ce que vous souhaitez faire, et le compilateur effectue le reste, notamment le suivi de ce qui doit se produire lorsque le contrôle retourne à un point d'attente dans une méthode interrompue. Il peut être difficile de gérer des processus de routine, tels que les boucles et la gestion des exceptions, dans le code asynchrone traditionnel. Dans une méthode async, vous écrivez ces éléments comme vous l’auriez fait dans une solution synchrone, et le problème est résolu.  
   
- Pour plus d’informations sur le comportement asynchrone dans les versions antérieures de .NET Framework, consultez la page [Programmation asynchrone .NET Framework traditionnelle et TPL](http://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f).  
+ Pour plus d’informations sur le comportement asynchrone dans les versions antérieures de .NET Framework, consultez la page [Programmation asynchrone .NET Framework traditionnelle et TPL](https://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f).  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> Ce qui se produit dans une méthode Async  
  La chose la plus importante à comprendre en programmation asynchrone est le déplacement du flux de contrôle d'une méthode à l'autre. Le diagramme suivant vous guide à travers le processus.  
@@ -246,7 +246,7 @@ Await Task_MethodAsync()
 |[WhenAny : transition entre .NET Framework et Windows Runtime](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Montre comment établir un pont entre les types de tâches du .NET Framework et IAsyncOperations dans [!INCLUDE[wrt](~/includes/wrt-md.md)] pour pouvoir utiliser <xref:System.Threading.Tasks.Task.WhenAny%2A> avec une méthode [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemple Async : transition entre .NET et Windows Runtime (AsTask et WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120))|  
 |Annulation Asynch : combler l'écart entre .NET Framework et Windows Runtime|Montre comment établir un pont entre les types de tâches du .NET Framework et IAsyncOperations dans [!INCLUDE[wrt](~/includes/wrt-md.md)] pour pouvoir utiliser <xref:System.Threading.CancellationTokenSource> avec une méthode [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Exemple Async : transition entre .NET et Windows Runtime (AsTask & Annulation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3)|  
 |[Utiliser async pour l’accès aux fichiers (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md)|Répertorie et explique les avantages de l'utilisation d'async et d'await pour accéder aux fichiers.||  
-|[Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](http://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007)|Décrit un nouveau modèle pour le comportement asynchrone dans le .NET Framework. Le modèle est basé sur les types <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601>.||  
+|[Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](https://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007)|Décrit un nouveau modèle pour le comportement asynchrone dans le .NET Framework. Le modèle est basé sur les types <xref:System.Threading.Tasks.Task> et <xref:System.Threading.Tasks.Task%601>.||  
 |[Vidéos Async sur Channel 9](https://channel9.msdn.com/search?term=async+&type=All)|Fournit des liens vers diverses vidéos sur la programmation asynchrone.||  
   
 ##  <a name="BKMK_CompleteExample"></a> Exemple complet  

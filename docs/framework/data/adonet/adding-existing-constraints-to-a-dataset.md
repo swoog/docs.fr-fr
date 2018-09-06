@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
 ms.openlocfilehash: 90aa1e5dceb3cac87d330837496b9dc467dc1876
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555470"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744872"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Ajout de contraintes existantes à un DataSet
 Le **remplir** méthode de la **DataAdapter** remplit un <xref:System.Data.DataSet> uniquement avec les colonnes de table et de lignes à partir d’une source de données ; cependant les contraintes soient généralement définies par la source de données, le **remplir** méthode n’ajoute pas ces informations de schéma pour le **DataSet** par défaut. Pour remplir un **DataSet** avec les informations existantes de contrainte de clé primaire à partir d’une source de données, vous pouvez appeler la **FillSchema** méthode de la **DataAdapter**, ou définir le **MissingSchemaAction** propriété de la **DataAdapter** à **AddWithKey** avant d’appeler **remplir**. Cela garantit que clé primaire contraintes dans le **DataSet** reflètent celles de la source de données. Informations de contrainte de clé étrangère n’est pas incluses et doit être explicitement créées, comme indiqué dans [contraintes de DataTable](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

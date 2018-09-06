@@ -3,11 +3,11 @@ title: AspNetRouteIntegration
 ms.date: 03/30/2017
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
 ms.openlocfilehash: 8d9a0710e5106cbc3d02a06e81f4f8ed9ae3e03b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561830"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788809"
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 Cet exemple montre comment héberger un service REST Windows Communication Foundation (WCF) à l’aide d’itinéraires ASP.NET. Le [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple montre une version auto-hébergée de ce scénario et traite en détail l’implémentation de service. Cette rubrique met l’accent sur la fonctionnalité d’intégration ASP.NET. Pour plus d’informations sur le routage ASP.NET, consultez <xref:System.Web.Routing>.  

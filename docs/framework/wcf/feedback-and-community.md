@@ -6,11 +6,11 @@ helpviewer_keywords:
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
 ms.openlocfilehash: 5067495aa24d5ae7e60633ed6a0ce5c0af081367
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538621"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748750"
 ---
 # <a name="feedback-and-community"></a>Commentaires et communauté
 Nous apprécions vos commentaires et suggestions sur Windows Communication Foundation (WCF) ou [!INCLUDE[infocard](../../../includes/infocard-md.md)] documentation. En bas de chaque page dans le Kit de développement logiciel figure la phrase « Envoyer des commentaires sur cette rubrique à Microsoft ». Cliquez sur le lien « Commentaires » pour envoyer votre opinion ou vos suggestions sur la rubrique spécifique.  

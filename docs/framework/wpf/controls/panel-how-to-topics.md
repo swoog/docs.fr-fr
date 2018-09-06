@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: 5b0fbf50455545a12adbc03bf2cd05d52de69936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553784"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43746244"
 ---
 # <a name="panel-how-to-topics"></a>Rubriques "Comment utiliser le Panel"
 Les rubriques de cette section décrivent comment utiliser le <xref:System.Windows.Controls.Panel> élément et connexes [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comment : appliquer un LayoutTransform à un élément](http://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
+ [Comment : appliquer un LayoutTransform à un élément](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
  [Créer un élément Panel personnalisé](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
  [Substituer la méthode OnRender de Panel](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
  [Définir les propriétés Height d’un élément](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  

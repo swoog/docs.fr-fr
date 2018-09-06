@@ -5,11 +5,11 @@ ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: d895524d36895ad087f7394fcc3380573355eaad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724179"
+ms.locfileid: "43785142"
 ---
 # <a name="securing-messages-using-message-security"></a>Sécurisation des messages à l'aide de la sécurité de message
 Cette section traite de la sécurité de message WCF lors de l’utilisation <xref:System.ServiceModel.NetMsmqBinding>.  

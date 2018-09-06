@@ -1,17 +1,17 @@
 ---
 title: 'Résultats (F #)'
-description: 'Découvrez comment utiliser le type « Résultat ») (F # pour vous aider à écrire du code à tolérance d’erreur.'
+description: "Découvrez comment utiliser le type 'Entraîner' F # pour vous aider à écrire du code à tolérance d’erreur."
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563006"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749247"
 ---
 # <a name="results"></a>Résultats
 
-À compter de F # 4.1, il existe un `Result<'T,'TFailure>` type que vous pouvez utiliser pour écrire du code à tolérance d’erreur qui peut être composée.
+À partir de F # 4.1, il existe un `Result<'T,'TFailure>` type que vous pouvez utiliser pour l’écriture de code à tolérance d’erreur qui peut être composée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ type Result<'T,'TError> =
 
 Notez que le type de résultat est un [union discriminée de struct](discriminated-unions.md#struct-discriminated-unions), qui est une autre fonctionnalité introduite dans F # 4.1.  Sémantique d’égalité structurelle s’appliquent ici.
 
-Le `Result` type est généralement utilisé dans monadic gestion des erreurs, qui sont souvent appelée [fer une programmation orientée](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) au sein de la Communauté F #.  L’exemple simple suivant illustre cette approche.
+Le `Result` type est généralement utilisé dans monadic-gestion des erreurs, qui sont souvent appelée [programmation orientée sur les chemins de fer](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) au sein de la Communauté F #.  L’exemple simple suivant illustre cette approche.
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-Comme vous pouvez le voir, il est très facile de chaîner les diverses fonctions de validation si vous forcez toutes les pour retourner un `Result`.  Ce permet de diviser des fonctionnalités de ce genre en petits éléments qui sont comme composable que vous le souhaitez.  Cela a également la valeur ajoutée de *en appliquant* l’utilisation de [recherche de correspondance](pattern-matching.md) à la fin d’un arrondi de validation, qui applique un degré plus élevé de l’exactitude du programme.
+Comme vous pouvez le voir, il est assez facile de chaîner les diverses fonctions de validation si vous tous les forcez à retourner un `Result`.  Vous pouvez ainsi vous décomposez les fonctionnalités de ce genre en petits éléments qui sont aussi composables comme vous le souhaitez.  Cela a également la valeur ajoutée de *en appliquant* l’utilisation de [critères spéciaux](pattern-matching.md) à la fin d’un cycle de validation, ce qui réduit applique un degré plus élevé de l’exactitude du programme.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Unions discriminées](discriminated-unions.md)
-
-[Critères spéciaux](pattern-matching.md)
+- [Unions discriminées](discriminated-unions.md)
+- [Critères spéciaux](pattern-matching.md)

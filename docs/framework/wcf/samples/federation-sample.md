@@ -3,11 +3,11 @@ title: Federation, exemple
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: 49a13b292a627c054510a10445e1e64ab869162c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532485"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43744639"
 ---
 # <a name="federation-sample"></a>Federation, exemple
 Cet exemple présente la sécurité fédérée :  

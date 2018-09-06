@@ -2,18 +2,19 @@
 title: Opérateurs au niveau du bit (F#)
 description: 'En savoir plus sur les opérateurs au niveau du bit qui sont disponibles dans le langage de programmation F #.'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559554"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784366"
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
 
 Cette rubrique décrit les opérateurs au niveau du bit qui sont disponibles dans le langage F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Résumé des opérateurs au niveau du bit
+
 Le tableau suivant décrit les opérateurs au niveau du bit qui sont prises en charge pour les types intégrés unboxed dans le langage F #.
 
 |Opérateur|Notes|
@@ -28,9 +29,7 @@ Le tableau suivant décrit les opérateurs au niveau du bit qui sont prises en c
 Les types suivants peuvent être utilisés avec des opérateurs au niveau du bit : `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, et `unativeint`.
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence des symboles et opérateurs](index.md)
 
-[Opérateurs arithmétiques](arithmetic-operators.md)
-
-[Opérateurs booléens](boolean-operators.md)
-
+- [Informations de référence des symboles et opérateurs](index.md)
+- [Opérateurs arithmétiques](arithmetic-operators.md)
+- [Opérateurs booléens](boolean-operators.md)

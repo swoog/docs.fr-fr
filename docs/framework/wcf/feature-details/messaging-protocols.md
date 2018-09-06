@@ -3,11 +3,11 @@ title: Protocoles de messagerie
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563276"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747757"
 ---
 # <a name="messaging-protocols"></a>Protocoles de messagerie
 La pile de canal Windows Communication Foundation (WCF) utilise des canaux de transport et de codage pour transformer la représentation interne de message dans son format câble et l’envoyer à l’aide d’un transport particulier. Le transport le plus couramment utilisé pour l'interopérabilité des services Web est le HTTP, et les encodages les plus couramment utilisés par les services Web sont SOAP 1.1 basé sur XML, SOAP 1.2 et MTOM (Message Transmission Optimization Mechanism).  

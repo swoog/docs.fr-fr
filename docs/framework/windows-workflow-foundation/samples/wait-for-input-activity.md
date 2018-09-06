@@ -3,11 +3,11 @@ title: Activité Wait For Input
 ms.date: 03/30/2017
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
 ms.openlocfilehash: 2e878e8c91c5da12a68da848694ce790896517c7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401207"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741170"
 ---
 # <a name="wait-for-input-activity"></a>Activité Wait For Input
 Cet exemple montre comment créer des signets nommés dans un workflow. Windows Workflow Foundation (WF) ne fournit pas d’activité pour la création de signets déclarative. Par conséquent, lorsque vous souhaitez créer un signet dans votre workflow, vous devez écrire une activité personnalisée pour ce faire. L'activité `WaitForInput` définie dans cet exemple fournit cette fonctionnalité afin que les utilisateurs puissent créer des signets de façon déclarative dans un workflow.  

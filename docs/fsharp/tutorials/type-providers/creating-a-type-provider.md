@@ -2,12 +2,12 @@
 title: 'Didacticiel : Créer un fournisseur de Type (F #)'
 description: 'Découvrez comment créer vos propres fournisseurs de type F # dans F # 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 25b11a0c6328fc74832e13b6380c983fb14a74a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499326"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745724"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Didacticiel : Créer un fournisseur de Type
 
@@ -24,7 +24,6 @@ L’écosystème F # contient une plage de fournisseurs de type pour les service
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) est un ancien ensemble de fournisseurs de type pour une utilisation uniquement avec la programmation de .NET Framework pour accéder aux services de données SQL, Entity Framework, OData et WSDL.
 
 Lorsque cela est nécessaire, vous pouvez créer des fournisseurs de type personnalisé, ou vous pouvez référencer des fournisseurs de type qu’ils ont créées. Par exemple, votre organisation peut avoir un service de données qui fournit un nombre important et croissant de jeux de données nommés, chacun avec son propre schéma stable de données. Vous pouvez créer un fournisseur de type qui lit les schémas et présente les jeux de données en cours pour le programmeur de manière fortement typée.
-
 
 ## <a name="before-you-start"></a>Avant de commencer
 
@@ -51,7 +50,6 @@ Avant de commencer, vous pouvez poser les questions suivantes :
 - Il va changer pendant l’exécution du programme ?
 
 Fournisseurs de type sont mieux adaptées aux situations où le schéma est stable lors de l’exécution et pendant la durée de vie du code compilé.
-
 
 ## <a name="a-simple-type-provider"></a>Un fournisseur de Type Simple
 
@@ -93,8 +91,7 @@ type Type100 =
 
 Notez que le jeu de types et membres fournis est statiquement connu. Cet exemple n’exploite pas la possibilité de fournisseurs pour fournir des types qui dépendent d’un schéma. L’implémentation du fournisseur de type est décrite dans le code suivant, et les détails sont traités dans les sections suivantes de cette rubrique.
 
-
->[!WARNING] 
+>[!WARNING]
 Il peut exister des différences entre ce code et les exemples en ligne.
 
 ```fsharp
@@ -168,7 +165,6 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 Comme alternative, ouvrez Visual Studio, ouvrez le menu Déboguer, choisissez `Debug/Attach to process…`et l’attacher à un autre `devenv` processus où vous modifiez votre script. À l’aide de cette méthode, vous pouvez plus facilement cibler une logique spécifique dans le fournisseur de type en tapant interactivement des expressions dans la deuxième instance (avec des fonctionnalités IntelliSense complètes et d’autres fonctionnalités).
 
 Vous pouvez désactiver uniquement mon Code de débogage pour mieux identifier les erreurs dans le code généré. Pour plus d’informations sur la façon d’activer ou désactiver cette fonctionnalité, consultez [naviguer dans le Code avec le débogueur](/visualstudio/debugger/navigating-through-code-with-the-debugger). En outre, vous pouvez également définir des exceptions de première chance interception en ouvrant le `Debug` menu, puis en choisissant `Exceptions` ou en appuyant sur les touches Ctrl + Alt + E pour ouvrir le `Exceptions` boîte de dialogue. Dans cette boîte de dialogue, sous `Common Language Runtime Exceptions`, sélectionnez le `Thrown` case à cocher.
-
 
 ### <a name="implementation-of-the-type-provider"></a>Implémentation du fournisseur de Type
 
@@ -376,7 +372,6 @@ L’exemple dans cette section fournit uniquement *effacées des types fournis*,
 
 Dans cet exemple, chaque fournie type est effacé en type `obj`, et toutes les utilisations du type apparaîtront en tant que type `obj` dans le code compilé. En fait, les objets sous-jacents dans ces exemples sont des chaînes, mais le type apparaîtra comme `System.Object` dans .NET code compilé. Comme avec toutes les utilisations d’effacement de type, vous pouvez utiliser la conversion boxing explicite, unboxing et de cast de corrompre l’effacées types. Dans ce cas, une exception de cast n’est pas valide peut entraîner lorsque l’objet est utilisé. Un fournisseur runtime peut définir son propre type de représentation privée pour vous protéger contre les représentations sous forme de valeur false. Vous ne pouvez pas définir types effacées en F # lui-même. Uniquement les types fournis peuvent être effacées. Vous devez comprendre les ramifications, à la fois pratiques et sémantiques, en utilisant l’une types effacées pour votre fournisseur de type ou un fournisseur qui fournit contient types effacées. Un type effacé n’a aucun type .NET réel. Par conséquent, vous ne pouvez pas faire image précise sur le type, et pouvant perturber les types effacées si vous utilisez des casts de runtime et d’autres techniques qui s’appuient sur la sémantique de type exacte du runtime. Subversion des types effacés entraîne fréquemment des exceptions de cast de type lors de l’exécution.
 
-
 ### <a name="choosing-representations-for-erased-provided-types"></a>Choix des représentations pour effacer des Types fournis
 
 Pour certaines utilisations des types fournis effacés, aucune représentation n’est requise. Par exemple, l’effacé fourni type peut contenir uniquement des propriétés statiques et des membres et aucun constructeur, et aucune méthode ou propriété ne retournerait une instance du type. Si vous pouvez atteindre des instances d’un élément effacé fournie de type, vous devez prendre en compte les questions suivantes :
@@ -435,11 +430,9 @@ ProvidedConstructor(…, InvokeCode = (fun args -> <@@ new DataObject() @@>), �
 
 La section précédente a expliqué comment créer un fournisseur de type effacement simple qui fournit une gamme de types, propriétés et méthodes. Cette section également expliqué le concept d’effacement de type, y compris quelques-uns des avantages et inconvénients de fournir des types effacés à partir d’un fournisseur de type et décrit les représentations de types effacés.
 
-
 ## <a name="a-type-provider-that-uses-static-parameters"></a>Un fournisseur de Type qui utilise des paramètres statiques
 
 La possibilité de paramétrer des fournisseurs de type en données statiques permet de nombreux scénarios intéressants, même dans les cas où le fournisseur n’a pas besoin accéder aux données locales ou distantes. Dans cette section, vous allez découvrir quelques techniques de base pour l’assemblage de ce type de fournisseur.
-
 
 ### <a name="type-checked-regex-provider"></a>Type contrôlé de fournisseur de l’expression régulière
 
@@ -737,16 +730,13 @@ do ()
 
 Cette section explique comment créer un fournisseur de type qui opère sur ses paramètres statiques. Le fournisseur vérifie le paramètre static et fournit des opérations en fonction de sa valeur.
 
-
 ## <a name="a-type-provider-that-is-backed-by-local-data"></a>Un fournisseur de Type qui est sauvegardé par les données locales
 
 Vous souhaiterez souvent des fournisseurs de type pour présenter des API basés sur les paramètres statiques, mais également des informations à partir des systèmes locaux ou distants. Cette section traite des fournisseurs de type qui sont basées sur des données locales, telles que des fichiers de données locaux.
 
-
 ### <a name="simple-csv-file-provider"></a>Fournisseur du fichier CSV simple
 
 À titre d’exemple, considérez un fournisseur de type pour accéder aux données scientifiques au format de valeurs séparées par des virgules (CSV). Cette section part du principe que les fichiers CSV contiennent une ligne d’en-tête suivie de données à virgule flottante, comme l’illustre le tableau suivant :
-
 
 |Distance (compteur)|Heure (seconde)|
 |----------------|-------------|
@@ -893,11 +883,9 @@ Notez les points suivants concernant l’implémentation :
 
 Cette section explique comment créer un fournisseur de type pour une source de données locale avec un schéma simple qui est contenu dans la source de données elle-même.
 
-
 ## <a name="going-further"></a>Pour aller plus loin
 
 Les sections suivantes incluent des suggestions pour approfondir ce sujet.
-
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Examinons le Code compilé pour les Types effacés
 
@@ -939,8 +927,8 @@ IL_0017:  ret
 
 Comme le montre l’exemple, toutes les mentions du type `Type1` et `InstanceProperty` propriété ont été effacés, en laissant uniquement les opérations sur les types de runtime impliqués.
 
-
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Conception et les Conventions de nommage pour les fournisseurs de Type
+
 Observez les conventions suivantes lors de la création de fournisseurs de type.
 
 **Les fournisseurs de protocoles de connexion** en général, les noms du fournisseur de la plupart des DLL pour des protocoles de connexion de données et de service, telles que les connexions OData ou SQL, doivent se terminer par `TypeProvider` ou `TypeProviders`. Par exemple, utilisez un nom de la DLL qui ressemble à la chaîne suivante :
@@ -980,13 +968,12 @@ let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 
 Pour plus d’informations, consultez le `GetConnection` concevoir la convention est décrite plus loin dans cette rubrique.
 
-
 ### <a name="design-patterns-for-type-providers"></a>Modèles de conception pour les fournisseurs de Type
 
 Les sections suivantes décrivent les modèles de conception que vous pouvez utiliser lors de la création de fournisseurs de type.
 
-
 #### <a name="the-getconnection-design-pattern"></a>Le modèle de conception de GetConnection
+
 La plupart des fournisseurs de type doivent être écrit pour utiliser le `GetConnection` modèle est utilisé par les fournisseurs de type dans FSharp.Data.TypeProviders.dll, comme le montre l’exemple suivant :
 
 ```fsharp
@@ -1147,10 +1134,7 @@ Vous pouvez souvent de déboguer plus facilement les fournisseurs de type à l�
 
   Vous pouvez utiliser la journalisation d’imprimer vers stdout.
 
-
 ## <a name="see-also"></a>Voir aussi
 
-* [Fournisseurs de type](index.md)
-
-* [Le Kit de développement logiciel du fournisseur de Type](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
-
+- [Fournisseurs de type](index.md)
+- [Le Kit de développement logiciel du fournisseur de Type](https://github.com/fsprojects/FSharp.TypeProviders.SDK)
