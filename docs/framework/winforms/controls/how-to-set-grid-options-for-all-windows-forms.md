@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
 ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420982"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776672"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Comment : définir des options de grille pour tous les Windows Forms
 Comme vous deviennent habitué à utiliser dans l’environnement de développement Visual Studio, vous pouvez définir les préférences pour tous les formulaires et les projets que vous utilisez dans le Concepteur de formulaires Windows.  

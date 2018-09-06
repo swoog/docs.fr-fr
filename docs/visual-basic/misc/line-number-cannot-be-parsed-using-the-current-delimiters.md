@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedDelimitedLine
 ms.assetid: 1f8d4c2d-0334-4da8-acff-5460159835b3
 ms.openlocfilehash: 123040e38cfc42d7a6b00e12dd2c2555b0b149d7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398656"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776773"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-delimiters"></a>Ligne &lt;nombre&gt; ne peut pas être analysée à l’aide du Delimiters actuel
 La ligne spécifiée ne peut pas être analysée parce qu’elle utilise des délimiteurs autres que ceux spécifiés.  

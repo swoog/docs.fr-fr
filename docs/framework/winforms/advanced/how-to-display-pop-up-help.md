@@ -11,24 +11,24 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
-ms.openlocfilehash: 5751bcdb9fe7a16138680f34a4fcc1760f85a1d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523872"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725005"
 ---
 # <a name="how-to-display-pop-up-help"></a>Comment : afficher l'aide contextuelle
-Permet d’afficher l’aide dans les Windows Forms s’effectue via le **aide** bouton situé sur le côté droit de la barre de titre, accessible via la <xref:System.Windows.Forms.Form.HelpButton%2A> propriété. Ce type d’affichage de l’aide convient parfaitement aux boîtes de dialogue. Les boîtes de dialogue modales (affichées avec la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A>) ont des difficultés à afficher les systèmes d'aide externes, car elles doivent être fermées pour que le focus puisse basculer vers une autre fenêtre. En outre, à l’aide de la **aide** bouton nécessite qu’il y a aucune **réduire** bouton ou **agrandir** affiché dans la barre de titre. Il s’agit une convention de la boîte de dialogue standard, tandis que les formulaires possèdent généralement **réduire** et **agrandir** boutons.  
+Pour afficher l’aide dans les Windows Forms offre un moyen du **aide** bouton situé sur le côté droit de la barre de titre, accessible via la <xref:System.Windows.Forms.Form.HelpButton%2A> propriété. Ce type d’affichage de l’aide convient parfaitement aux boîtes de dialogue. Les boîtes de dialogue modales (affichées avec la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A>) ont des difficultés à afficher les systèmes d'aide externes, car elles doivent être fermées pour que le focus puisse basculer vers une autre fenêtre. En outre, à l’aide de la **aide** bouton requiert l’existence aucun **réduire** bouton ou **agrandir** affiché dans la barre de titre. Il s’agit une convention de boîte de dialogue standard, tandis que les formulaires possèdent généralement **réduire** et **agrandir** boutons.  
   
  Sachez que vous pouvez également utiliser le composant <xref:System.Windows.Forms.HelpProvider> pour lier des contrôles à des fichiers d'un système d'aide, même si vous avez implémenté l'aide contextuelle. Pour plus d’informations, consultez [fourniture d’aide dans une Application Windows](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md).  
   
 > [!NOTE]
->  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnalisation des paramètres de développement dans Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-display-pop-up-help"></a>Pour afficher une aide contextuelle  
   
-1.  Faites glisser un [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) composant à partir de la boîte à outils vers votre formulaire.  
+1.  Faites glisser un [HelpProvider](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md) composant à partir de la boîte à outils à votre formulaire.  
   
      Il sera placé dans la barre d'état en bas du Concepteur Windows Forms.  
   
@@ -40,7 +40,7 @@ Permet d’afficher l’aide dans les Windows Forms s’effectue via le **aide**
   
 5.  Appuyez sur **F5**.  
   
-6.  Appuyez sur la **aide** sur la barre de titre, puis cliquez sur le contrôle sur lequel vous définissez la chaîne d’aide.  
+6.  Appuyez sur la **aide** sur la barre de titre, puis cliquez sur le contrôle sur lequel vous avez défini la chaîne d’aide.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichage sous forme d’info-bulles de l’aide relative aux contrôles](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  

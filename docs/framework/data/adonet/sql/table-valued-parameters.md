@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 2cf517e3bd10dbed51c8a98d150bafcb023e438b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365941"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742516"
 ---
 # <a name="table-valued-parameters"></a>Paramètres table
 Les paramètres table fournissent un moyen simple de marshaler plusieurs lignes de données d'une application cliente vers SQL Server sans avoir recours à plusieurs allers-retours ou à une logique côté serveur spéciale pour le traitement des données. Les paramètres table vous permettent d'encapsuler des lignes de données dans une application cliente et d'envoyer les données au serveur dans une commande paramétrée unique. Les lignes de données entrantes sont stockées dans une variable de table qui peut ensuite être traitée en utilisant [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -24,8 +24,8 @@ Les paramètres table fournissent un moyen simple de marshaler plusieurs lignes 
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Paramètres table (moteur de base de données)](http://go.microsoft.com/fwlink/?LinkId=98363) dans la documentation en ligne de SQL Server|Décrit comment créer et utiliser des paramètres table.|  
-|[Types de tables définis par l’utilisateur](http://go.microsoft.com/fwlink/?LinkId=98364) dans la documentation en ligne de SQL Server|Décrit les types de tables définis par l'utilisateur qui permettent de déclarer des paramètres table.|  
+|[Paramètres table (moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=98363) dans la documentation en ligne de SQL Server|Décrit comment créer et utiliser des paramètres table.|  
+|[Types de tables définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkId=98364) dans la documentation en ligne de SQL Server|Décrit les types de tables définis par l'utilisateur qui permettent de déclarer des paramètres table.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passage de plusieurs lignes dans les versions précédentes de SQL Server  
  Avant que les paramètres table ont été introduites dans SQL Server 2008, les options pour passer plusieurs lignes de données à une procédure stockée ou une commande SQL paramétrée étaient limitées. Un développeur pouvait choisir parmi les options suivantes pour passer plusieurs lignes au serveur :  
@@ -39,7 +39,7 @@ Les paramètres table fournissent un moyen simple de marshaler plusieurs lignes 
 -   Utiliser l'utilitaire `bcp` ou l'objet <xref:System.Data.SqlClient.SqlBulkCopy> pour charger plusieurs lignes de données dans une table. Même si cette technique est très efficace, elle ne prend pas en charge le traitement côté serveur sauf si les données sont chargées dans une table temporaire ou dans une variable de table.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Création de types de paramètre table  
- Les paramètres table sont basés sur des structures de table fortement typées qui sont définies à l'aide des instructions  [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE. Vous devez créer un type de table et définir la structure dans SQL Server avant de pouvoir utiliser les paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de tables, consultez [les Types de tables définis par l’utilisateur](http://go.microsoft.com/fwlink/?LinkID=98364) dans la documentation en ligne de SQL Server.  
+ Les paramètres table sont basés sur des structures de table fortement typées qui sont définies à l'aide des instructions  [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] CREATE TYPE. Vous devez créer un type de table et définir la structure dans SQL Server avant de pouvoir utiliser les paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de tables, consultez [les Types de tables définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkID=98364) dans la documentation en ligne de SQL Server.  
   
  L'instruction suivante crée un type de table nommé CategoryTableType qui se compose des colonnes CategoryID et CategoryName :  
   
@@ -77,7 +77,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 ## <a name="limitations-of-table-valued-parameters"></a>Limites des paramètres table  
  Les paramètres table présentent plusieurs limites :  
   
--   Vous ne pouvez pas passer des paramètres table à [fonctions CLR définies par l’utilisateur](http://msdn.microsoft.com/library/ms131077.aspx).  
+-   Vous ne pouvez pas passer des paramètres table à [fonctions CLR définies par l’utilisateur](/sql/relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions).  
   
 -   Les paramètres table peuvent uniquement être indexés pour prendre en charge les contraintes UNIQUE ou PRIMARY KEY. SQL Server ne gère pas les statistiques sur les paramètres table.  
   
@@ -275,4 +275,4 @@ insertCommand.ExecuteNonQuery()
  [Commandes et paramètres](../../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Paramètres DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Opérations sur les données SQL Server dans ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

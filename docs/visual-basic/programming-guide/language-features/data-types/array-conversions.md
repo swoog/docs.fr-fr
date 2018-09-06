@@ -13,11 +13,11 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396547"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734302"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversion des tableaux (Visual Basic)
 Vous pouvez convertir un type tableau vers un autre type fournie par les conditions suivantes :  

@@ -1,18 +1,17 @@
 ---
 title: Identificateurs de ligne, de fichier et de chemin d’accès source (F#)
-description: 'Découvrez comment utiliser F # identificateur valeurs intégrées qui vous permettent d’accéder à la source de numéro de ligne, un répertoire et un nom de fichier dans votre code.'
+description: 'Découvrez comment utiliser F # identificateur valeurs intégrées qui vous permettent d’accéder à la source de numéro de ligne, le répertoire et le nom de fichier dans votre code.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 76b705fec0d951b12655edbe69e7c9212f50779d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565215"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777427"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Identificateurs de ligne, de fichier et de chemin d’accès source
 
-Les identificateurs `__LINE__`, `__SOURCE_DIRECTORY__` et `__SOURCE_FILE__` sont des valeurs intégrées qui vous permettent d’accéder à la ligne source nombre, les répertoires et les fichiers nom dans votre code.
-
+Les identificateurs `__LINE__`, `__SOURCE_DIRECTORY__` et `__SOURCE_FILE__` sont des valeurs intégrées qui vous permettent d’accéder à la ligne numéro, répertoire et fichier nom source dans votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,16 +22,17 @@ __SOURCE_FILE__
 ```
 
 ## <a name="remarks"></a>Notes
+
 Chacune de ces valeurs a le type `string`.
 
 Le tableau suivant récapitule la ligne source, fichier et les identificateurs de chemin d’accès qui sont disponibles en F #. Ces identificateurs ne sont pas des macros de préprocesseur ; ils sont des valeurs intégrées qui sont reconnus par le compilateur.
 
 |Identificateur prédéfini|Description|
 |---------------------|-----------|
-|`__LINE__`|Prend la valeur de numéro de ligne active, vous envisagez de `#line` directives.|
-|`__SOURCE_DIRECTORY__`|Prend la valeur de chemin d’accès complet en cours du répertoire source, envisagez `#line` directives.|
-|`__SOURCE_FILE__`|Donne le nom du fichier source et son chemin d’accès, vous envisagez de `#line` directives.|
-Pour plus d’informations sur la `#line` directive, voir [Directives de compilateur](compiler-directives.md).
+|`__LINE__`|Prend la valeur de numéro de ligne en cours, vous envisagez `#line` directives.|
+|`__SOURCE_DIRECTORY__`|Prend la valeur actuelle chemin d’accès complet du répertoire source, envisagez `#line` directives.|
+|`__SOURCE_FILE__`|A pour valeur le nom de fichier source actuel et son chemin d’accès, vous envisagez `#line` directives.|
+Pour plus d’informations sur la `#line` directive, consultez [Directives de compilateur](compiler-directives.md).
 
 ## <a name="example"></a>Exemple
 
@@ -49,6 +49,6 @@ Source File: C:\Users\username\Documents\Visual Studio 2017\Projects\SourceInfo\
 ```
 
 ## <a name="see-also"></a>Voir aussi
-[Directives de compilateur](compiler-directives.md)
 
-[Informations de référence du langage F#](index.md)
+- [Directives de compilateur](compiler-directives.md)
+- [Informations de référence du langage F#](index.md)

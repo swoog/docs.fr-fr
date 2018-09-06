@@ -2,12 +2,12 @@
 title: 'Options de valeur (F #)'
 description: 'En savoir plus sur le type d’Option de valeur F #, qui est une version de la structure du type d’Option.'
 ms.date: 06/16/2018
-ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527581"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747497"
 ---
 # <a name="value-options"></a>Options de valeur
 
@@ -80,4 +80,4 @@ Comme avec la `defaultArg` (fonction), `defaultValueArg` retourne la valeur sous
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options](options.md)
+- [Options](options.md)

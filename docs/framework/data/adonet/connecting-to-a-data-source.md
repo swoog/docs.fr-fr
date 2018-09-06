@@ -2,12 +2,12 @@
 title: Connexion à une source de données dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 27653c3e1f14e08fc8b5e1225a441072778a0cc8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f5788b9b0b19f32d03c917575db7b3f40324c0a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757110"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724602"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Connexion à une source de données dans ADO.NET
 Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une source de données spécifique en fournissant des informations d’authentification nécessaires dans une chaîne de connexion. Le **connexion** objet que vous utilisez varie selon le type de source de données.  
@@ -19,7 +19,7 @@ Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une sour
  Décrit comment utiliser un **connexion** objet pour établir une connexion à une source de données.  
   
  [Événements de connexion](../../../../docs/framework/data/adonet/connection-events.md)  
- Décrit comment utiliser un **InfoMessage** événements pour récupérer des messages d’information à partir d’une source de données.  
+ Décrit comment utiliser un **InfoMessage** événement afin de récupérer les messages d’information à partir d’une source de données.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Chaînes de connexion](../../../../docs/framework/data/adonet/connection-strings.md)  
@@ -27,4 +27,4 @@ Dans ADO.NET, vous utilisez un **connexion** objet pour se connecter à une sour
  [Commandes et paramètres](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [DataAdapters et DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Transactions et accès concurrentiel](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

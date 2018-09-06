@@ -2,12 +2,12 @@
 title: 'Types de base (F #)'
 description: 'Découvrir les types de base fondamentales qui sont utilisés dans le langage F #.'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937196"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777205"
 ---
 # <a name="basic-types"></a>Types de base
 
@@ -38,4 +38,5 @@ Cette rubrique répertorie les types de base qui sont définies dans le langage 
 Vous pouvez effectuer des calculs avec des entiers trop grandes pour le type d’entier 64 bits à l’aide de la [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) type. `bigint` n’est pas considéré comme un type de base ; Il est l’abréviation de `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
+
+- [Informations de référence du langage F#](index.md)
