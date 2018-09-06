@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un authentificateur de jetons de sécurité personnalisé'
+title: 'Comment : créer un authentificateur de jeton de sécurité personnalisé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: cbd45580e84a0723d28bab538bc0ffe388899d61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724420"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892319"
 ---
-# <a name="how-to-create-a-custom-security-token-authenticator"></a>Comment : créer un authentificateur de jetons de sécurité personnalisé
+# <a name="how-to-create-a-custom-security-token-authenticator"></a>Comment : créer un authentificateur de jeton de sécurité personnalisé
 Cette rubrique indique comment créer un authentificateur de jetons de sécurité personnalisé et comment l'intégrer à un gestionnaire de jetons de sécurité personnalisé. Un authentificateur de jetons de sécurité valide le contenu du jeton de sécurité fourni par le message entrant. Lorsque le processus de validation réussit, l'authentificateur retourne une collection d'instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui, après évaluation, retourne un ensemble de revendications.  
   
  Pour utiliser un authentificateur de jeton de sécurité personnalisé dans Windows Communication Foundation (WCF), vous devez d’abord créer les informations d’identification personnalisées et de la sécurité des implémentations de gestionnaire de jetons. Pour plus d’informations sur la création des informations d’identification personnalisées et une sécurité Gestionnaire de jetons, consultez [procédure pas à pas : création d’un Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Pour plus d’informations sur les informations d’identification, Gestionnaire de jetons de sécurité et les classes de fournisseur et authentificateur, consultez [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
@@ -46,9 +46,9 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
   
 4.  Implémentez la méthode <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>. Cette méthode remplit une instance de la classe <xref:System.IdentityModel.Policy.EvaluationContext> (passée sous forme d'argument) avec les revendications basées sur le contenu des jetons de sécurité entrants. Cette méthode retourne la valeur `true` lorsque ce processus se déroule dans le cadre d'une évaluation. Lorsque l'implémentation s'appuie sur des stratégies d'autorisation fournissant des informations supplémentaires au contexte d'évaluation, cette méthode peut retourner la valeur `false` si les informations requises ne figurent pas encore dans le contexte d'évaluation. Dans ce cas, WCF appelle la méthode à nouveau après l’évaluation de toutes les autres stratégies d’autorisation générés pour le message entrant si au moins un de ces stratégies d’autorisation modifié le contexte d’évaluation.  
   
-     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
-     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
+     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
+
  [Procédure pas à pas : Création de Client personnalisées et les informations d’identification de Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) décrit comment créer des informations d’identification personnalisées et un sécurité personnalisée Gestionnaire de jetons. Pour utiliser l'authentificateur de jetons de sécurité personnalisés créé ici, une implémentation du gestionnaire de jetons de sécurité est modifiée pour retourner l'authentificateur personnalisé à partir de la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. La méthode retourne un authentificateur lorsqu’une exigence de jeton de sécurité appropriée est passée.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Pour intégrer un authentificateur de jetons de sécurité personnalisés à un gestionnaire de jetons de sécurité personnalisés  
@@ -57,9 +57,9 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
   
 2.  Ajoutez de la logique à la méthode pour lui permettre de retourner votre authentificateur de jetons de sécurité personnalisés basée sur le paramètre <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. L'exemple suivant retourne un authentificateur de jetons de sécurité personnalisé si le type du jeton correspond à un nom d'utilisateur (représenté par la propriété <xref:System.IdentityModel.Tokens.SecurityTokenTypes.UserName%2A>) et si la direction de message pour laquelle l'authentificateur de jetons de sécurité est demandé correspond à entrée (représentée par le champ <xref:System.ServiceModel.Description.MessageDirection.Input> ).  
   
-     [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
-     [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
-  
+     [!code-csharp[c_CustomTokenAuthenticator#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#2)]
+     [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
+ 
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>  
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  

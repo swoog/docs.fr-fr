@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 544f617ca3a352814504125d7a61d70db5a81566
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579247"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891231"
 ---
 # <a name="enum-design"></a>Conception d'énumérations
-Les énumérations sont un type spécial de type valeur. Il existe deux genres d’enums : les enums enums et indicateur simples.  
+Les enums sont un type spécial de type valeur. Il existe deux types d’énumérations : les enums enums et indicateur simples.  
   
- Les énumérations simples représentent des petits ensembles fermés de choix. Un exemple courant de l’enum simple est un jeu de couleurs.  
+ Énumérations simples représentent des petits ensembles fermés de choix. Un exemple courant de l’enum simple est un jeu de couleurs.  
   
- Les énumérations d’indicateur sont conçues pour prendre en charge les opérations de bits des valeurs enum. Un exemple courant de l’énumération d’indicateurs est une liste d’options.  
+ Énumérations d’indicateur sont conçues pour prendre en charge des opérations au niveau du bit sur les valeurs d’énumération. Un exemple courant de l’énumération d’indicateurs est une liste d’options.  
   
  **✓ DO** permet un enum de type fort aux paramètres, propriétés et retourner des valeurs qui représentent les ensembles de valeurs.  
   
@@ -33,51 +33,51 @@ Les énumérations sont un type spécial de type valeur. Il existe deux genres d
   
  **X DO NOT** fournissent des valeurs d’enum réservé qui sont destinés à un usage ultérieur.  
   
- Vous pouvez toujours simplement ajouter des valeurs à l’énumération existante à un stade ultérieur. Consultez [Ajout de valeurs pour les Enums](#add_value) pour plus d’informations sur l’ajout de valeurs pour les enums. Valeurs réservées simplement pollue pas l’ensemble de valeurs réelles et sont susceptibles d’entraîner des erreurs de l’utilisateur.  
+ Vous pouvez toujours simplement ajouter des valeurs à l’énumération existante à un stade ultérieur. Consultez [Ajout de valeurs aux Enums](#add_value) pour plus d’informations sur l’ajout de valeurs aux enums. Simplement les valeurs réservées polluent l’ensemble de valeurs réelles et ont tendance à provoquer des erreurs de l’utilisateur.  
   
  **X AVOID** exposer publiquement des énumérations avec une seule valeur.  
   
- Une pratique courante pour assurer une extensibilité future d’API C consiste à ajouter des paramètres réservés pour les signatures de méthode. Ces paramètres réservés peuvent être exprimées comme les enums avec une valeur par défaut. Cela ne doit pas être effectuée dans les API managées. La surcharge de méthode permet d’ajouter des paramètres dans les futures versions.  
+ Une pratique courante pour assurer une extensibilité future de l’API C consiste à ajouter des paramètres réservés aux signatures de méthode. Ces paramètres réservés peuvent être exprimées en tant qu’énumérations avec une valeur unique par défaut. Cela ne doit pas être effectuée dans les API gérées. La surcharge de méthode permet d’ajouter des paramètres dans les versions futures.  
   
  **X DO NOT** inclure des valeurs de sentinelle dans les énumérations.  
   
- Même s’ils sont parfois utiles aux développeurs de framework, les valeurs de sentinelle sont source de confusion pour les utilisateurs de l’infrastructure. Ils sont utilisés pour suivre l’état de l’enum plutôt que d’être l’une des valeurs à partir de l’ensemble représenté par l’énumération.  
+ Même s’ils sont parfois utiles aux développeurs de framework, les valeurs de sentinelle sont confus pour les utilisateurs du framework. Ils sont utilisés pour effectuer le suivi de l’état de l’enum plutôt que d’être une des valeurs à partir de l’ensemble représenté par l’énumération.  
   
  **✓ DO** fournir une valeur de zéro sur les énumérations simples.  
   
- La valeur, appelez quelque chose comme « None ». Si une telle valeur n’est pas appropriée pour cet enum particulier, la valeur par défaut plus courante pour l’énumération doit avoir la valeur sous-jacente égale à zéro.  
+ La valeur, appelez quelque chose comme « None ». Si une telle valeur n’est pas appropriée pour cet enum particulier, la valeur par défaut courante pour l’énumération doit avoir la valeur sous-jacente égale à zéro.  
   
  **✓ CONSIDER** à l’aide de <xref:System.Int32> (la valeur par défaut dans la plupart des langages de programmation) en tant que le type sous-jacent d’une énumération, sauf si une des opérations suivantes est vraie :  
   
--   L’enum est un enum et que vous disposez de plus de 32 indicateurs ou est censé avoir plus d’informations à l’avenir.  
+-   L’énumération est une énumération d’indicateurs, et vous disposez de plus de 32 indicateurs ou souhaitez avoir plus d’informations à l’avenir.  
   
--   Le type sous-jacent doit être différent de celui <xref:System.Int32> pour simplifier l’interopérabilité avec du code non managé attendu enums de taille différente.  
+-   Le type sous-jacent doit être différent de celui <xref:System.Int32> pour simplifier l’interopérabilité avec le code non managé attendu des énumérations de taille différente.  
   
--   Un type sous-jacent plus petit entraînerait des économies substantielles en espace. Si vous pensez que l’énumération sera principalement utilisée comme argument d’un flux de contrôle, la taille importe peu. Les économies de taille peuvent être importantes si :  
+-   Un type sous-jacent plus petit entraînerait des économies substantielles dans l’espace. Si vous pensez que l’énumération à utiliser principalement en tant qu’argument pour le flux de contrôle, la taille importe peu. Les économies de taille peuvent être importantes si :  
   
-    -   Vous vous attendez l’enum à utiliser en tant que champ dans une structure très fréquemment instanciée ou une classe.  
+    -   Vous pensez que l’énumération à utiliser en tant que champ dans une structure très fréquemment instanciée ou une classe.  
   
-    -   Vous pensez que les utilisateurs à créer des tableaux volumineux ou des collections d’instances de l’enum.  
+    -   Vous prévoyez que les utilisateurs à créer des grands tableaux ou collections d’instances de l’enum.  
   
-    -   Vous prévoyez un grand nombre d’instances de l’enum doit être sérialisé.  
+    -   Vous prévoyez un grand nombre d’instances de l’énumération à sérialiser.  
   
- Pour l’utilisation de mémoire, gardez à l’esprit que les objets managés sont toujours `DWORD`-alignés, vous devez efficacement plusieurs énumérations ou autres structures de petite dans une instance compresser un enum plus petit avec afin de faire la différence, car la taille du nombre total d’instances est toujours continue à être arrondi à un `DWORD`.  
+ Pour une utilisation en mémoire, n’oubliez pas que les objets managés sont toujours `DWORD`-alignés, vous devez efficacement plusieurs énumérations ou autres petites structures dans une instance de compresser un enum plus petits avec afin de faire la différence, car la taille du nombre total d’instances est toujours sera arrondie à un `DWORD`.  
   
  **✓ DO** nommer les énumérations d’indicateur avec des noms au pluriel ou des expressions nominales et énumérations simples avec des noms au singulier ou des expressions nominales.  
   
  **X DO NOT** étendre <xref:System.Enum?displayProperty=nameWithType> directement.  
   
- <xref:System.Enum?displayProperty=nameWithType> est un type spécial utilisé par le CLR pour créer des énumérations de défini par l’utilisateur. La plupart des langages de programmation fournissent un élément de programmation qui vous permet d’accéder à cette fonctionnalité. Par exemple, en c# le `enum` est utilisé pour définir une énumération.  
+ <xref:System.Enum?displayProperty=nameWithType> est un type spécial utilisé par le CLR pour créer des énumérations définies par l’utilisateur. La plupart des langages de programmation fournissent un élément de programmation qui vous permet d’accéder à cette fonctionnalité. Par exemple, en c# le `enum` mot clé est utilisé pour définir une énumération.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Conception énumérations d’indicateur  
- **✓ DO** appliquer le <xref:System.FlagsAttribute?displayProperty=nameWithType> pour les énumérations d’indicateur. N’appliquez pas cet attribut pour les énumérations simples.  
+ **✓ DO** appliquer le <xref:System.FlagsAttribute?displayProperty=nameWithType> pour les énumérations d’indicateur. N’appliquez pas cet attribut aux enums simples.  
   
  **✓ DO** utiliser des puissances de deux pour les valeurs d’énumération indicateur afin qu’ils peuvent être combinés librement à l’aide de l’opération OR au niveau du bit.  
   
  **✓ CONSIDER** fournissant des valeurs enum spécial pour couramment utilisé les combinaisons d’indicateurs.  
   
- Opérations de bits sont un concept avancé et ne doivent pas être requises pour les tâches simples. <xref:System.IO.FileAccess.ReadWrite> est un exemple d’une telle valeur spéciale.  
+ Opérations de bits sont un concept avancé et ne doivent pas être requises pour des tâches simples. <xref:System.IO.FileAccess.ReadWrite> est un exemple d’une telle valeur spéciale.  
   
  **X AVOID** création enums indicateur où certaines combinaisons de valeurs ne sont pas valides.  
   
@@ -86,17 +86,18 @@ Les énumérations sont un type spécial de type valeur. Il existe deux genres d
  **✓ DO** nom de la valeur zéro des énumérations d’indicateur `None`. Pour une énumération d’indicateur, la valeur doit toujours signifier « tous les indicateurs sont effacés. »  
   
 <a name="add_value"></a>   
-### <a name="adding-value-to-enums"></a>L’ajout de valeur pour les Enums  
- Il est très courant pour découvrir que vous devez ajouter des valeurs à une énumération une fois que vous l’avez déjà expédié. A un problème de compatibilité d’application potentiel la valeur nouvellement ajoutée est retournée à partir d’une API existante, car des applications mal écrites peut ne pas gérer correctement la nouvelle valeur.  
+### <a name="adding-value-to-enums"></a>Ajout de valeur aux Enums  
+ Il est très courant pour découvrir que vous avez besoin ajouter des valeurs à un enum une fois que vous l’avez déjà expédié. Il est un problème de compatibilité d’application potentiel que quand la valeur nouvellement ajoutée est retournée à partir d’une API existante, car des applications mal écrites peut ne pas gérer correctement la nouvelle valeur.  
   
  **✓ CONSIDER** Ajout de valeurs pour les enums, en dépit d’un léger risque de compatibilité.  
   
- Si vous avez des données réelles concernant les incompatibilités application dus à des ajouts à un enum, envisagez d’ajouter une nouvelle API qui renvoie les valeurs anciennes et nouvelles et désapprouver l’ancien API, ce qui doit continuer à retourner uniquement les anciennes valeurs. Cela garantit que vos applications existantes restent compatibles.  
+ Si vous avez des données réelles concernant les incompatibilités d’application a provoqué par des ajouts à un enum, envisagez d’ajouter une nouvelle API qui retourne les valeurs anciennes et nouvelles et déprécier l’ancienne API, qui doit continuer à retourner simplement les anciennes valeurs. Cela garantit que vos applications existantes restent compatibles.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Instructions pour la conception des types](../../../docs/standard/design-guidelines/type.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

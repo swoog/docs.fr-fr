@@ -1,23 +1,23 @@
 ---
 title: Opérateurs autorisant la valeur Null (F#)
-description: 'En savoir plus sur les opérateurs autorisant la valeur null qui sont disponibles dans le langage de programmation F #.'
+description: 'En savoir plus sur les opérateurs nullables qui sont disponibles dans le langage de programmation F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 63ad7da2d584b96eee8765b57fc671befbcbd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566348"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036777"
 ---
 # <a name="nullable-operators"></a>Opérateurs autorisant la valeur Null
 
-Opérateurs autorisant la valeur NULL sont des opérateurs arithmétiques ou de comparaison binaire qui fonctionnent avec les types nullable arithmétiques sur un ou deux côtés. Types Nullable surviennent fréquemment lorsque vous travaillez avec des données à partir de sources telles que les bases de données qui autorise les valeurs NULL à la place des valeurs réelles. Opérateurs autorisant la valeur NULL sont fréquemment utilisées dans les expressions de requête. En plus des opérateurs autorisant la valeur NULL pour les opérations arithmétiques et de comparaison, les opérateurs de conversion peuvent être utilisés pour effectuer une conversion entre les types nullable. Il existe également des versions nullables de certains opérateurs de requête.
+Opérateurs nullables sont des opérateurs arithmétiques ou de comparaison binaires qui fonctionnent avec les types arithmétiques nullable sur un ou deux côtés. Types Nullable surviennent fréquemment lorsque vous travaillez avec des données à partir de sources telles que les bases de données acceptant les valeurs NULL à la place des valeurs réelles. Opérateurs nullables sont fréquemment utilisées dans les expressions de requête. Outre les opérateurs nullables pour les opérations arithmétiques et de comparaison, les opérateurs de conversion utilisable pour effectuer des conversions entre types nullable. Il existe également des versions nullables de certains opérateurs de requête.
 
+## <a name="table-of-nullable-operators"></a>Tableau d’opérateurs Nullable
 
-## <a name="table-of-nullable-operators"></a>Tableau d’opérateurs autorisant la valeur null
-Le tableau suivant répertorie les opérateurs autorisant la valeur null pris en charge dans le langage F #.
+Le tableau suivant répertorie les opérateurs nullables pris en charge dans le langage F #.
 
-|Accepte la valeur NULL sur la gauche|Accepte la valeur NULL sur la droite|Les deux côtés nullables|
+|Nullable sur la gauche|Nullable sur la droite|Les deux côtés nullables|
 |---|---|---|
 |[?>=](https://msdn.microsoft.com/library/94d29e32-a204-4f60-a527-6b0af86268f3)|[>=?](https://msdn.microsoft.com/library/0a255d8e-8cae-4160-ae61-243a5d96583f)|[?>=?](https://msdn.microsoft.com/library/3051a50f-d276-4c84-9d73-bf2efeddef94)|
 |[?>](https://msdn.microsoft.com/library/62dc0021-1312-4ac3-be87-798b60b81bb6)|[>?](https://msdn.microsoft.com/library/0ad1284b-de48-4a04-83d8-b6f13c9c8936)|[?>?](https://msdn.microsoft.com/library/dc18b6fa-30c4-47b0-9057-794439378a05)|
@@ -32,11 +32,12 @@ Le tableau suivant répertorie les opérateurs autorisant la valeur null pris en
 |[?%](https://msdn.microsoft.com/library/44297bba-1bd9-4ed2-a848-f1e1e598db87)|[%?](https://msdn.microsoft.com/library/a4c178e5-eec4-42e8-847f-90b24fc609fe)|[?%?](https://msdn.microsoft.com/library/dd555f20-1be3-4b8d-81f1-bf1921e62fda)|
 
 ## <a name="remarks"></a>Notes
-Les opérateurs nullables sont inclus dans le [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) module dans l’espace de noms [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Le type de données accepte les valeurs NULL est `System.Nullable<'T>`.
 
-Dans les expressions de requête, les types nullable se produisent lors de la sélection des données à partir d’une source de données qui autorise des valeurs NULL au lieu de valeurs. Dans une base de données SQL Server, chaque colonne de données dans une table possède un attribut qui indique si les valeurs NULL sont autorisées. Si les valeurs NULL sont autorisées, les données retournées à partir de la base de données peuvent contenir des valeurs NULL ne peut pas être représenté par un type de données primitif tel que `int`, `float`, et ainsi de suite. Par conséquent, les données sont retournées en tant qu’un `System.Nullable<int>` au lieu de `int`, et `System.Nullable<float>` au lieu de `float`. La valeur réelle peut être obtenue à partir un `System.Nullable<'T>` objet à l’aide de la `Value` propriété et vous pouvez déterminer si un `System.Nullable<'T>` objet a une valeur en appelant le `HasValue` (méthode). Une autre méthode utile est la `System.Nullable<'T>.GetValueOrDefault` (méthode), ce qui vous permet d’obtenir la valeur ou une valeur par défaut du type approprié. La valeur par défaut est une forme de valeur « zéro », telle que 0, 0,0, ou `false`.
+Les opérateurs nullables sont inclus dans le [NullableOperators](https://msdn.microsoft.com/library/2c3633c5-3f31-4d62-a9f8-272ad6b19007) module dans l’espace de noms [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d). Le type de données nullables est `System.Nullable<'T>`.
 
-Types Nullable peuvent être convertis en à l’aide des opérateurs de conversion habituelles telles que les types primitifs non nullable `int` ou `float`. Il est également possible de convertir d’un type nullable à un autre type nullable à l’aide des opérateurs de conversion pour les types nullable. Les opérateurs de conversion appropriée ont le même nom que ceux qui sont standard, mais ils sont dans un module distinct, la [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) module dans le [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) espace de noms. En règle générale, vous ouvrez cet espace de noms lorsque vous travaillez avec des expressions de requête. Dans ce cas, vous pouvez utiliser les opérateurs de conversion acceptant les valeurs NULL en ajoutant le préfixe `Nullable.` à l’opérateur de conversion appropriée, comme indiqué dans le code suivant.
+Dans les expressions de requête, les types nullable surviennent lors de la sélection des données à partir d’une source de données qui autorise des valeurs NULL au lieu de valeurs. Dans une base de données SQL Server, chaque colonne de données dans une table possède un attribut qui indique si les valeurs NULL sont autorisées. Si les valeurs NULL sont autorisées, les données retournées à partir de la base de données peuvent contenir les valeurs NULL ne peut pas être représentées par un type de données primitifs comme `int`, `float`, et ainsi de suite. Par conséquent, les données sont retournées en tant qu’un `System.Nullable<int>` au lieu de `int`, et `System.Nullable<float>` au lieu de `float`. La valeur réelle peut être obtenue à partir une `System.Nullable<'T>` objet à l’aide de la `Value` propriété et vous pouvez déterminer si un `System.Nullable<'T>` objet a une valeur en appelant le `HasValue` (méthode). Une autre méthode utile est la `System.Nullable<'T>.GetValueOrDefault` (méthode), ce qui vous permet d’obtenir la valeur ou une valeur par défaut du type approprié. La valeur par défaut est une forme de valeur « zéro », telle que 0, 0.0, ou `false`.
+
+Types Nullable peuvent être convertis en des types primitifs non nullable à l’aide des opérateurs de conversion habituelles comme `int` ou `float`. Il est également possible de convertir d’un type nullable à un autre type nullable à l’aide des opérateurs de conversion pour les types nullables. Les opérateurs de conversion appropriée ont le même nom que la norme ceux, mais elles se trouvent dans un module séparé, la [Nullable](https://msdn.microsoft.com/library/e7a4ea13-28cc-462e-bc3a-33131ace976e) module dans le [Microsoft.FSharp.Linq](https://msdn.microsoft.com/library/4765b4e8-4006-4d8c-a405-39c218b3c82d) espace de noms. En règle générale, vous ouvrir cet espace de noms lorsque vous travaillez avec des expressions de requête. Dans ce cas, vous pouvez utiliser les opérateurs de conversion nullable en ajoutant le préfixe `Nullable.` à l’opérateur de conversion appropriée, comme indiqué dans le code suivant.
 
 ```fsharp
 open Microsoft.FSharp.Linq
@@ -52,9 +53,9 @@ printfn "%f" (float nullableFloat)
 
 Le résultat est `10.000000`.
 
-Sur les champs de données accepte les valeurs NULL, les opérateurs de requête tels que `sumByNullable`, il existe également pour utilisation dans des expressions de requête. Les opérateurs de requête pour les types non nullable n’étant pas compatible avec le type avec les types nullable, vous devez utiliser la version nullable de l’opérateur de requête appropriée lorsque vous travaillez avec des valeurs de données accepte les valeurs NULL. Pour plus d’informations, consultez [les Expressions de requête](../query-expressions.md).
+Sur les champs de données autorise la valeur null, les opérateurs de requête comme `sumByNullable`, existent également pour une utilisation dans les expressions de requête. Les opérateurs de requête pour les types non nullables ne sont pas compatible avec le type avec les types nullable, vous devez donc utiliser la version nullable de l’opérateur de requête approprié lorsque vous travaillez avec des valeurs de données autorise la valeur null. Pour plus d’informations, consultez [Expressions de requête](../query-expressions.md).
 
-L’exemple suivant illustre l’utilisation des opérateurs autorisant la valeur NULL dans une expression de requête F #. La première requête montre comment écrire une requête sans opérateur nullable ; la deuxième requête montre une requête équivalente qui utilise un opérateur nullable. Pour le contexte complet, y compris comment configurer la base de données pour utiliser cet exemple de code, consultez [procédure pas à pas : accès à une base de données SQL à l’aide des fournisseurs de Type](../../tutorials/type-providers/accessing-a-sql-database.md).
+L’exemple suivant illustre l’utilisation d’opérateurs nullables dans une expression de requête F #. La première requête montre comment écrire une requête sans opérateur nullable ; la deuxième requête montre une requête équivalente qui utilise un opérateur nullable. Pour le contexte complet, y compris comment configurer la base de données à utiliser cet exemple de code, consultez [procédure pas à pas : accès à une base de données SQL à l’aide des fournisseurs de Type](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System
@@ -84,6 +85,5 @@ query {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fournisseurs de type](../../tutorials/type-providers/index.md)
-
-[Expressions de requête](../query-expressions.md)
+- [Fournisseurs de type](../../tutorials/type-providers/index.md)
+- [Expressions de requête](../query-expressions.md)

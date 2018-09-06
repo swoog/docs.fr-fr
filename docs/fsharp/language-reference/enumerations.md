@@ -2,17 +2,16 @@
 title: Énumérations (F#)
 description: 'Découvrez comment utiliser les énumérations F # à la place de littéraux pour rendre votre code plus lisible et plus facile à gérer.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b51df53caf2e193496cb3694c913cbae08f7eaf5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518835"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891640"
 ---
 # <a name="enumerations"></a>Énumérations
 
 *Énumérations*, également appelé *enums*,, sont des types intégraux où les étiquettes sont affectées à un sous-ensemble des valeurs. Vous pouvez les utiliser à la place de littéraux pour rendre le code plus lisible et plus facile à gérer.
-
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,6 +23,7 @@ type enum-name =
 ```
 
 ## <a name="remarks"></a>Notes
+
 Une énumération ressemble beaucoup à une union discriminée qui a des valeurs simples, à ceci près que les valeurs peuvent être spécifiées. Les valeurs sont généralement des entiers qui commencent à 0 ou 1, ou des entiers qui représentent des positions de bits. Si une énumération est destinée à représenter des positions de bits, vous devez également utiliser le [indicateurs](xref:System.FlagsAttribute) attribut.
 
 Le type sous-jacent de l’énumération est déterminé à partir du littéral est utilisé, afin que, par exemple, vous pouvez utiliser des littéraux avec un suffixe, tel que `1u`, `2u`, et ainsi de suite, pour un entier non signé (`uint32`) type.
@@ -49,8 +49,8 @@ La valeur par défaut `enum` fonction fonctionne avec le type `int32`. Par cons�
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2104.fs)]
 
 En outre, les cas pour les enums sont toujours émis en tant que `public`. Il s’agit afin qu’ils s’intègrent avec c# et le reste de la plate-forme .NET.
-    
-## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Casts et conversions](casting-and-conversions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Informations de référence du langage F#](index.md)
+- [Casts et conversions](casting-and-conversions.md)

@@ -3,11 +3,11 @@ title: Vue d'ensemble de la corrélation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
 ms.openlocfilehash: 8ac5d39866b23bc134f009fdb0df6ebf56c6d234
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43553459"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44035916"
 ---
 # <a name="correlation-overview"></a>Vue d'ensemble de la corrélation
 La corrélation est le mécanisme qui permet de lier les messages de service de workflow entre eux ou à l'état de l'instance d'application, par exemple une réponse à une demande initiale ou un ID de commande particulier à l'état persistant d'un workflow de traitement de commandes. Cette rubrique offre une vue d'ensemble de la corrélation. Les autres rubriques de cette section fournissent des informations supplémentaires sur chaque type de corrélation.  

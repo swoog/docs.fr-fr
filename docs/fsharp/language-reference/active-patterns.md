@@ -2,12 +2,12 @@
 title: Modèles actifs (F#)
 description: 'Découvrez comment utiliser des modèles actifs pour définir des partitions nommées qui subdivisent les données d’entrée dans le langage de programmation F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 964ae8eb6db0191fab1e5a816e29bd0819605f2c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786485"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881874"
 ---
 # <a name="active-patterns"></a>Modèles actifs
 
@@ -44,7 +44,7 @@ La sortie de ce programme est comme suit :
 
 Une autre utilisation de modèles actifs consiste à décomposer les types de données de plusieurs façons, par exemple lorsque les mêmes données sous-jacentes ont différentes représentations possible. Par exemple, un `Color` objet peut être décomposé en représentation RVB ou en représentation TSL.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
 La sortie du programme ci-dessus est la suivante :
 
@@ -72,9 +72,9 @@ Les expressions de critères spéciaux qui en résulte activer les données à �
 
 ## <a name="partial-active-patterns"></a>Modèles actifs partiels
 
-Parfois, vous devez uniquement une partie de l’espace d’entrée de partition. Dans ce cas, vous écrivez un jeu de modèles partiels, chacun d'entre eux correspondant à certaines entrées mais pas à d’autres entrées. Modèles actifs qui ne produisent pas toujours une valeur sont appelées *modèles actifs partiels*; ils ont une valeur de retour est un type d’option. Pour définir un modèle actif partiel, vous utilisez un caractère générique (_) à la fin de la liste des modèles à l’intérieur des « banana clips ». Le code suivant illustre l’utilisation d’un modèle actif partiel.
+Parfois, vous devez uniquement une partie de l’espace d’entrée de partition. Dans ce cas, vous écrivez un jeu de modèles partiels, chacun d'entre eux correspondant à certaines entrées mais pas à d’autres entrées. Modèles actifs qui ne produisent pas toujours une valeur sont appelées *modèles actifs partiels*; ils ont une valeur de retour est un type d’option. Pour définir un modèle actif partiel, vous utilisez un caractère générique (\_) à la fin de la liste des modèles à l’intérieur des « banana clips ». Le code suivant illustre l’utilisation d’un modèle actif partiel.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5004.fs)]
 
 La sortie de l’exemple précédent est comme suit :
 
@@ -88,7 +88,7 @@ Something else : Not matched.
 
 Lorsque vous utilisez des modèles actifs partiels, parfois les choix individuels peuvent être disjoints ou mutuellement exclusifs, mais ils ne sont pas nécessairement. Dans l’exemple suivant, le carré de modèle et le modèle de Cube ne sont pas disjoints, car certains nombres sont des carrés et des cubes, tels que 64. Le programme suivant imprime tous les entiers jusqu'à 1 000 000 qui sont des carrés et des cubes.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 La sortie est la suivante :
 
@@ -109,7 +109,7 @@ La sortie est la suivante :
 
 Modèles actifs prennent toujours au moins un argument pour l’élément en cours de mise en correspondance, mais ils peuvent également prendre des arguments supplémentaires, auquel cas le nom *modèle actif paramétrable* s’applique. Arguments supplémentaires permettent de spécialiser un modèle général. Par exemple, des modèles actifs qui utilisent des expressions régulières pour analyser des chaînes souvent incluent l’expression régulière comme paramètre supplémentaire, comme dans le code suivant, qui utilise également le modèle actif partiel `Integer` défini dans l’exemple de code précédent. Dans cet exemple, les chaînes qui utilisent des expressions régulières pour différents formats de date sont données pour personnaliser le modèle actif ParseRegex général. Le modèle actif Integer est utilisé pour convertir les chaînes de mise en correspondance en entiers qui peuvent être passés au constructeur DateTime.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 
 La sortie du code précédent est comme suit :
 
@@ -119,7 +119,7 @@ La sortie du code précédent est comme suit :
 
 Modèles actifs ne sont pas limitées uniquement aux expressions de correspondance de modèle, vous pouvez également les utiliser sur les liaisons de let.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5007.fs)]
 
 La sortie du code précédent est comme suit :
 

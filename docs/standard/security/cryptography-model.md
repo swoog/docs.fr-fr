@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ced7ed2cb8d3ae3bb24211c6e7dafd1744fb9559
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587454"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43885745"
 ---
 # <a name="net-framework-cryptography-model"></a>Modèle de chiffrement de .NET Framework
 .NET Framework fournit des implémentations de nombreux algorithmes de chiffrement standard. Ces algorithmes sont faciles à utiliser et leurs propriétés par défaut sont les plus sûres possible. En outre, le modèle de chiffrement .NET Framework de l'héritage d'objets, de la conception orientée flux et de la configuration, est très extensible.  
@@ -50,7 +50,7 @@ ms.locfileid: "33587454"
  Le Common Language Runtime utilise une conception orientée flux pour implémenter les algorithmes symétriques et les algorithmes de hachage. La base de cette conception est la classe <xref:System.Security.Cryptography.CryptoStream> qui dérive de la classe <xref:System.IO.Stream>. Les objets de chiffrement basés sur les flux prennent en charge une seule interface standard (`CryptoStream`) pour la gestion du transfert des données de l'objet. Comme tous les objets sont créés à l'aide d'une interface standard, vous pouvez chaîner plusieurs objets (par exemple, un objet de hachage suivi d'un objet de chiffrement), ainsi qu'effectuer plusieurs opérations sur les données sans avoir besoin de stockage intermédiaire. Le modèle basé sur les flux vous permet également de créer des objets à partir d'objets plus petits. Par exemple, un algorithme combinant hachage et chiffrement peut être affiché comme un objet de flux unique, même si cet objet a été créé à partir d'un ensemble d'objets de flux.  
   
 ## <a name="cryptographic-configuration"></a>Configuration du chiffrement  
- La configuration du chiffrement vous permet de résoudre une implémentation d'un algorithme en un nom d'algorithme. De cette façon, les classes de chiffrement .NET Framework peuvent être étendues. Vous pouvez ajouter votre propre implémentation logicielle ou matérielle d'un algorithme, puis la mapper vers le nom d'algorithme de votre choix. Si un algorithme n'est pas spécifié dans le fichier de configuration, les paramètres par défaut sont utilisés. Pour plus d’informations sur la configuration de chiffrement, consultez [configuration de Classes de chiffrement](../../../docs/framework/configure-apps/configure-cryptography-classes.md).  
+ La configuration du chiffrement vous permet de résoudre une implémentation d'un algorithme en un nom d'algorithme. De cette façon, les classes de chiffrement .NET Framework peuvent être étendues. Vous pouvez ajouter votre propre implémentation logicielle ou matérielle d'un algorithme, puis la mapper vers le nom d'algorithme de votre choix. Si un algorithme n'est pas spécifié dans le fichier de configuration, les paramètres par défaut sont utilisés. Pour plus d’informations sur la configuration du chiffrement, consultez [configuration des Classes de chiffrement](../../../docs/framework/configure-apps/configure-cryptography-classes.md).  
   
 ## <a name="choosing-an-algorithm"></a>Choix d'un algorithme  
  Vous pouvez sélectionner un algorithme pour différentes raisons. Par exemple, pour l'intégrité ou la confidentialité des données, ou pour générer une clé. Les algorithmes symétriques et les algorithmes de hachage sont conçus pour protéger les données pour des raisons d'intégrité (empêcher leur modification) ou pour des raisons de confidentialité (empêcher leur affichage). Les algorithmes de hachage sont principalement utilisés pour l'intégrité des données.  
@@ -87,6 +87,6 @@ ms.locfileid: "33587454"
   
     -   <xref:System.Security.Cryptography.Rfc2898DeriveBytes>  
   
-## <a name="see-also"></a>Voir aussi  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  
- 
+## <a name="see-also"></a>Voir aussi
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  

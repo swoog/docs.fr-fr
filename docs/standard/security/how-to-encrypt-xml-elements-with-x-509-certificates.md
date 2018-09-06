@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcb2d344e1baae259cebbf8426bfd10de19bf925
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 674a4c917df20f58a509e92465e756c4615118ca
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591471"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43878936"
 ---
 # <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Comment : chiffrer des éléments XML avec les certificats X.509
 Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour chiffrer un élément d'un document XML.  Le chiffrement XML est une méthode normalisée qui permet d'échanger et de stocker des données XML chiffrées sans que celles-ci ne puissent être lues facilement.  Pour plus d’informations sur la norme de chiffrement XML, consultez la spécification du World Wide Web Consortium (W3C) pour le chiffrement XML situé dans http://www.w3.org/TR/xmldsig-core/.  
@@ -116,6 +116,7 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Le certificat X.509 utilisé dans cet exemple sert à des fins de test uniquement.  Les applications doivent utiliser un certificat X.509 généré par une autorité de certification approuvée ou utiliser un certificat généré par le serveur de certificats Microsoft Windows.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Security.Cryptography.Xml>  
- [Comment : déchiffrer des éléments XML avec les certificats X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Comment : déchiffrer des éléments XML avec les certificats X.509](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

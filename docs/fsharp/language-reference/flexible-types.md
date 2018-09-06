@@ -2,15 +2,16 @@
 title: Types flexibles (F#)
 description: 'Découvrez comment utiliser F # annotation de type flexible, ce qui indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a54d462d04e4e65680a4612f58da72173f04d1f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43886368"
 ---
 # <a name="flexible-types"></a>Types flexibles
 
-A *annotation de type flexible* indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié, où la compatibilité est déterminée par la position dans une hiérarchie orientée objet de classes ou des interfaces. Types flexibles sont particulièrement utiles lorsque la conversion automatique en types de niveau supérieurs dans la hiérarchie des types ne se produit pas, mais vous souhaitez activer votre fonctionnalité de fonctionner avec n’importe quel type dans la hiérarchie ou n’importe quel type qui implémente une interface.
+Un *annotation de type flexible* indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié, où la compatibilité est déterminée par la position dans une hiérarchie orientée objet de classes ou interfaces. Types flexibles sont particulièrement utiles lorsque la conversion automatique en types plus hauts dans la hiérarchie de type ne se produit pas, mais vous souhaitez toujours activer votre fonctionnalité de fonctionner avec n’importe quel type dans la hiérarchie ou n’importe quel type qui implémente une interface.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -22,7 +23,7 @@ A *annotation de type flexible* indique qu’un paramètre, une variable ou une 
 
 Dans la syntaxe précédente, *type* représente un type de base ou une interface.
 
-Un type flexible équivaut à un type générique qui a une contrainte qui limite les types autorisés en types compatibles avec le type de base ou interface. Autrement dit, les deux lignes de code suivantes sont équivalentes.
+Un type flexible est équivalent à un type générique qui a une contrainte qui limite les types autorisés pour les types qui sont compatibles avec le type de base ou interface. Autrement dit, les deux lignes de code suivantes sont équivalentes.
 
 ```fsharp
 #SomeType
@@ -30,7 +31,7 @@ Un type flexible équivaut à un type générique qui a une contrainte qui limit
 'T when 'T :> SomeType
 ```
 
-Types flexibles sont utiles dans plusieurs types de situations. Par exemple, lorsque vous disposez d’une fonction d’ordre supérieur (une fonction qui accepte une fonction en tant qu’argument), il est souvent utile de disposer de la fonction retourne un type flexible. Dans l’exemple suivant, l’utilisation d’un type flexible avec un argument de séquence dans `iterate2` permet à la fonction d’ordre supérieure d’utiliser des fonctions qui génèrent des séquences, tableaux, listes et autres types énumérables.
+Types flexibles sont utiles dans plusieurs types de situations. Par exemple, lorsque vous avez une fonction d’ordre supérieur (une fonction qui accepte une fonction comme argument), il est souvent utile d’avoir la fonction retourne un type flexible. Dans l’exemple suivant, l’utilisation d’un type flexible avec un argument de séquence dans `iterate2` permet à la fonction d’ordre plus élevée travailler avec des fonctions qui génèrent des séquences, tableaux, listes et autres types énumérables.
 
 Considérez les deux fonctions suivantes, une retourne une séquence, l’autre qui retourne un type flexible.
 
@@ -64,10 +65,9 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-En F #, comme dans d’autres langages orientés objet, sont les contextes dans lesquels les types dérivés ou les types qui implémentent les interfaces sont converties automatiquement en un type de base ou interface. Ces conversions automatiques se produisent dans les arguments directs, mais pas lorsque le type est dans une position subordonnée, dans le cadre d’un type plus complexe comme un type de retour d’un type de fonction, ou un argument de type. Par conséquent, la notation de type flexible est particulièrement utile lorsque le type que vous l’appliquez fait partie d’un type plus complexe.
+En F #, comme dans d’autres langages orientés objet, il existe les contextes dans lequel types dérivés ou des types qui implémentent les interfaces sont automatiquement convertis en un type de base ou d’un type d’interface. Ces conversions automatiques se produisent dans les arguments directs, mais pas lorsque le type est dans une position subordonnée, dans le cadre d’un type plus complexe comme un type de retour d’un type de fonction, ou un argument de type. Par conséquent, la notation de type flexible est particulièrement utile lorsque le type que vous l’appliquez fait partie d’un type plus complexe.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence du langage F#](index.md)
-
-[Génériques](generics/index.md)
+- [Informations de référence du langage F#](index.md)
+- [Génériques](generics/index.md)

@@ -3,11 +3,11 @@ title: Débogage des requêtes LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481049"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892663"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Débogage des requêtes LINQ to DataSet
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] prend en charge le débogage du code  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Il y a cependant certaines différences entre le débogage de code managé [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] et non-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La plupart des fonctionnalités de débogage sont compatibles avec les instructions [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], notamment l'exécution pas à pas, la définition de points d'arrêt et la consultation des résultats dans les fenêtres du débogueur. Toutefois, différée des requêtes que l’exécution dans a des effets dont vous devez tenir compte lors du débogage [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] de code et il existe certaines limitations à l’utilisation de modifier & Continuer. Cette rubrique traite des aspects du débogage qui sont uniques à [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] par rapport aux non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] du code managé.  

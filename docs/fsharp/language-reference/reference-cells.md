@@ -1,13 +1,13 @@
 ---
 title: Cellules de référence (F#)
-description: 'Découvrez comment les cellules de référence de F # sont les emplacements de stockage qui vous permettent de créer des valeurs mutables avec la sémantique de référence.'
+description: 'Découvrez comment les cellules de référence F # sont des emplacements de stockage qui vous permettent de créer des valeurs mutables avec la sémantique de référence.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3a632425356a250f07e5babd2751b9923eec6552
-ms.sourcegitcommit: e5bb395ec86f536e114314184288f40a8c745e2e
+ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34149060"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892417"
 ---
 # <a name="reference-cells"></a>Cellules de référence
 
@@ -20,6 +20,7 @@ ref expression
 ```
 
 ## <a name="remarks"></a>Notes
+
 Pour créer une cellule de référence qui encapsule la valeur, utilisez l'opérateur `ref`. Vous pouvez ensuite modifier la valeur sous-jacente, car elle est mutable.
 
 Une cellule de référence contient une valeur réelle, et pas uniquement une adresse. Lorsque vous créez une cellule de référence à l'aide de l'opérateur `ref`, vous créez une copie de la valeur sous-jacente en tant que valeur mutable encapsulée.
@@ -73,21 +74,21 @@ La sortie est la suivante.
 
 Le champ `contents` est fourni à des fins de compatibilité avec d'autres versions de ML et produit un avertissement au cours de la compilation. Pour désactiver l'avertissement, utilisez l'option de compilateur `--mlcompatibility`. Pour plus d’informations, consultez l’article [Options du compilateur](compiler-options.md).
 
-Le code suivant illustre l'utilisation de cellules de référence dans le cadre du passage de paramètres. Le type de l’incrémentation du a une méthode incrément qui prend un paramètre qui inclut le type de paramètre byref. Dans le type de paramètre byref indique que les appelants doivent passer une cellule de référence ou l’adresse d’une variable normale du type spécifié, dans ce cas int : Le code restant illustre comment appeler un incrément avec ces deux types d’arguments et illustre l’utilisation de l’opérateur ref sur une variable pour créer une cellule de référence (ref myDelta1). Il montre ensuite l'utilisation de l'opérateur d'adresse (&amp;) pour générer un argument approprié. Enfin, la méthode de l’incrément est appelée à nouveau à l’aide d’une cellule de référence déclarée à l’aide d’une liaison let. La dernière ligne de code illustre l’utilisation de la ! opérateur pour déréférencer la cellule de référence pour l’impression.
+Le code suivant illustre l'utilisation de cellules de référence dans le cadre du passage de paramètres. Le type de l’incrémentation du possède une méthode incrément qui prend un paramètre qui inclut le type de paramètre byref. Dans le type de paramètre byref indique que les appelants doivent passer une cellule de référence ou l’adresse d’une variable normale du type spécifié, dans ce cas type int. Le code restant illustre comment appeler incrément avec ces deux types d’arguments et illustre l’utilisation de l’opérateur ref sur une variable pour créer une cellule de référence (ref myDelta1). Il montre ensuite l'utilisation de l'opérateur d'adresse (&amp;) pour générer un argument approprié. Enfin, la méthode de l’incrément est appelée à nouveau à l’aide d’une cellule de référence est déclarée à l’aide d’une liaison let. La dernière ligne de code illustre l’utilisation de la ! opérateur pour déréférencer la cellule de référence pour l’impression.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
 
 Pour plus d’informations sur le passage par référence, consultez [paramètres et Arguments](parameters-and-arguments.md).
 
 >[!NOTE]
-Les programmeurs c# doivent savoir que ref différemment en F # fonctionne et en c#. Par exemple, l’utilisation de ref lorsque vous passez un argument n’a pas le même effet en F # et en c#.
+Les programmeurs c# doivent savoir que ref différemment en F # fonctionne et en c#. Par exemple, l’utilisation de ref lorsque vous passez un argument n’a pas le même effet en F # comme il le fait en c#.
 
 >[!NOTE]
-`mutable` les variables peuvent être automatiquement promues en `'a ref` si capturée par une fermeture ; consultez [valeurs](values/index.md).
+`mutable` les variables peuvent être automatiquement promues en `'a ref` si capturées par une fermeture ; consultez [valeurs](values/index.md).
 
 ## <a name="consuming-c-ref-returns"></a>Utilisation de c# `ref` retourne
 
-À compter de F # 4.1, vous pouvez utiliser `ref` retourne généré en c#.  Le résultat de cet appel est un `byref<_>` pointeur.
+À partir de F # 4.1, vous pouvez consommer `ref` retourne généré en c#.  Le résultat de cet appel est un `byref<_>` pointeur.
 
 La méthode c# suivante :
 
@@ -112,7 +113,7 @@ namespace RefReturns
 }
 ```
 
-Peut être appelée en toute transparence par F # avec aucune syntaxe particulière :
+Peut être appelée en toute transparence par F # avec aucune syntaxe spéciale :
 
 ```fsharp
 open RefReturns
@@ -122,19 +123,17 @@ let consumeRefReturn() =
     ()
 ```
 
-Vous pouvez également déclarer des fonctions, ce qui peut prendre un `ref` retourner en tant qu’entrée, par exemple :
+Vous pouvez également déclarer des fonctions qui peut prendre un `ref` renvoyer en tant qu’entrée, par exemple :
 
 ```fsharp
 let f (x: byref<int>) = &x
 ```
 
-Il n’existe actuellement aucun moyen de générer un `ref` retour en F #, qui peut être consommé en c#.
+Il n’existe actuellement aucun moyen de générer un `ref` retour dans F #, qui peut être utilisée dans c#.
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Paramètres et arguments](parameters-and-arguments.md)
-
-[Informations de référence des symboles et opérateurs](symbol-and-operator-reference/index.md)
-
-[Valeurs](values/index.md)
+- [Informations de référence du langage F#](index.md)
+- [Paramètres et arguments](parameters-and-arguments.md)
+- [Informations de référence des symboles et opérateurs](symbol-and-operator-reference/index.md)
+- [Valeurs](values/index.md)

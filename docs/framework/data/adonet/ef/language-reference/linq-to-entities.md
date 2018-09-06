@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 7e04155c3129fd3b70977dd2960ccdc99c194cab
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0a02899ab9dc751cfee1127a092854b81b8360db
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760776"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037017"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities assure une prise en charge de la technologie LINQ (Language Integrated Query), ce qui permet aux développeurs d’écrire des requêtes par rapport au modèle conceptuel Entity Framework à l’aide du langage Visual Basic ou Visual C#. Les requêtes exécutées avec Entity Framework sont représentées par des requêtes d'arborescence de commandes, lesquelles s'exécutent par rapport au contexte de l'objet. LINQ to Entities convertit les requêtes LINQ (Language-Integrated Query) en requêtes d'arborescence de commandes, exécute les requêtes avec Entity Framework, puis retourne les objets qui peuvent être utilisés aussi bien par Entity Framework que par LINQ. Voici le processus de création et d'exécution d'une requête LINQ to Entities :  
@@ -39,7 +39,7 @@ LINQ to Entities assure une prise en charge de la technologie LINQ (Language Int
   
  Dans Entity Framework, les opérateurs et les expressions sont représentés par une seule hiérarchie des types, qui sont ensuite placés dans une arborescence de commandes. L'arborescence de commandes est utilisée par Entity Framework pour exécuter la requête. Si la requête LINQ ne peut pas être exprimée sous la forme d'une arborescence de commandes, une exception est levée au moment de la conversion de la requête. La conversion de requêtes LINQ to Entities implique deux sous-conversions : la conversion des opérateurs de requête standard et la conversion des expressions.  
   
- Plusieurs opérateurs de requête standard LINQ n'ont pas de traduction valide dans LINQ to Entities. Les tentatives d'utilisation de ces opérateurs provoquent une exception au moment de la traduction de la requête. Pour obtenir la liste de prise en charge opérateurs LINQ to Entities, consultez [pris en charge et les méthodes non prises en charge de LINQ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).  
+ Plusieurs opérateurs de requête standard LINQ n'ont pas de traduction valide dans LINQ to Entities. Les tentatives d'utilisation de ces opérateurs provoquent une exception au moment de la traduction de la requête. Pour obtenir la liste de prise en charge opérateurs LINQ to Entities, consultez [pris en charge et les méthodes LINQ non prises en charge (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md).  
   
  Pour plus d’informations sur l’utilisation des opérateurs de requête standard dans LINQ to Entities, consultez [des opérateurs de requête Standard dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md).  
   
@@ -47,10 +47,10 @@ LINQ to Entities assure une prise en charge de la technologie LINQ (Language Int
   
  Pour plus d’informations sur la façon dont les appels de méthode CLR sont mappés aux fonctions canoniques dans la source de données, consultez [méthode CLR pour le mappage de fonction canonique](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md).  
   
- Pour plus d’informations sur la façon d’appeler canonique et la base de données et des fonctions personnalisées à partir [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de requêtes, consultez [appel à des fonctions dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
+ Pour plus d’informations sur comment appeler canonique, base de données et de fonctions personnalisées depuis [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] de requêtes, consultez [appel à des fonctions dans les requêtes LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md).  
   
 ## <a name="query-execution"></a>Exécution de la requête  
- Une fois la requête LINQ créée par l'utilisateur, elle est convertie en une représentation compatible avec Entity Framework (sous la forme d'arborescences de commandes), qui est ensuite exécutée sur la source de données. Au moment de l'exécution de la requête, l'ensemble des expressions de requête (ou des composants de la requête) sont évalués sur le client ou sur le serveur. Cela comprend les expressions qui sont utilisées dans la matérialisation des résultats ou les projections d'entités. Pour plus d’informations, consultez [l’exécution de requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Pour plus d’informations sur la façon d’améliorer les performances en compilant une requête une seule fois et puis l’exécuter plusieurs fois avec des paramètres différents, consultez [requêtes compilées (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
+ Une fois la requête LINQ créée par l'utilisateur, elle est convertie en une représentation compatible avec Entity Framework (sous la forme d'arborescences de commandes), qui est ensuite exécutée sur la source de données. Au moment de l'exécution de la requête, l'ensemble des expressions de requête (ou des composants de la requête) sont évalués sur le client ou sur le serveur. Cela comprend les expressions qui sont utilisées dans la matérialisation des résultats ou les projections d'entités. Pour plus d’informations, consultez [l’exécution des requêtes](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md). Pour plus d’informations sur la façon d’améliorer les performances en compilant une requête une seule fois et puis l’exécuter plusieurs fois avec des paramètres différents, consultez [requêtes compilées (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md).  
   
 ## <a name="materialization"></a>Matérialisation  
  La matérialisation est le processus qui consiste à retourner les résultats d'une requête au client sous forme de types CLR. Dans LINQ to Entities, les enregistrements de données de résultats de requête ne sont jamais retournés ; il y a toujours un type CLR de sauvegarde, défini par l'utilisateur ou par Entity Framework, ou généré par le compilateur (types anonymes). Toute matérialisation d'objets est effectuée par Entity Framework. Toute erreur qui résulte d'une impossibilité d'effectuer un mappage entre Entity Framework et le CLR lève une exception à lever pendant la matérialisation d'objets.  
@@ -90,6 +90,6 @@ LINQ to Entities assure une prise en charge de la technologie LINQ (Language Int
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes connus et éléments à prendre en compte dans LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
- [LINQ (Language Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (Language Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ et ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

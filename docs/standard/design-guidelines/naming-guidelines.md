@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53ffb641d3e507a937c304725b3c8590d046338e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572968"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44031833"
 ---
 # <a name="naming-guidelines"></a>Indications concernant l'attribution d'un nom
-Après un jeu cohérent de conventions d’affectation de noms dans le développement d’une infrastructure peut être une contribution importante à la facilité d’utilisation de l’infrastructure. Il permet à l’infrastructure être utilisé par de nombreux développeurs sur projets largement séparés. Au-delà de la cohérence du formulaire, les noms d’éléments d’infrastructure doivent être compréhensible et doivent communiquer la fonction de chaque élément.  
+Suivant un ensemble cohérent de conventions d’affectation de noms dans le développement d’une infrastructure peut être une contribution importante à la facilité d’utilisation de l’infrastructure. Il permet à l’infrastructure à utiliser par de nombreux développeurs sur les projets largement séparés. Au-delà de la cohérence du formulaire, les noms d’éléments d’infrastructure doivent être compréhensible et doivent transmettre à la fonction de chaque élément.  
   
- L’objectif de ce chapitre est pour fournir un jeu cohérent de conventions d’affectation de noms qui aboutit à des noms qui sens immédiate aux développeurs.  
+ L’objectif de ce chapitre consiste à fournir un jeu cohérent de conventions d’affectation de noms qui résulte dans les noms appropriés immédiat pour les développeurs.  
   
- Bien que l’adoption de ces conventions d’affectation de noms comme indications de développement général du code entraînerait la désignation plus cohérente dans tout votre code, vous devez uniquement pour les appliquer à des API qui est exposés publiquement (publics ou protégés des types et membres, et implémenté explicitement les interfaces).  
+ Bien que l’adoption de ces conventions d’affectation de noms comme directives de développement de code général entraînerait plus cohérent d’affectation de noms dans votre code, vous devez uniquement pour les appliquer à des API qui sont exposés publiquement (publics ou protégés des types et membres, et implémenté explicitement interfaces).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Conventions de mise en majuscules](../../../docs/standard/design-guidelines/capitalization-conventions.md)  
@@ -38,7 +38,8 @@ Après un jeu cohérent de conventions d’affectation de noms dans le développ
  [Nommage des ressources](../../../docs/standard/design-guidelines/naming-resources.md)  
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
