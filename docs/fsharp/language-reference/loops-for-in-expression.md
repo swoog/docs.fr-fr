@@ -1,18 +1,17 @@
 ---
 title: 'Boucles : expression for...in (F#)'
-description: 'Voir comment la boucle for) (F #... dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.'
+description: 'Voir comment le F # for.. dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 926f0a9940021b3dc0deefc12ea158c35975e949
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564072"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869117"
 ---
 # <a name="loops-forin-expression"></a>Boucles : expression for...in
 
-Cette construction de bouclage est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable comme une expression de plage, séquence, liste, tableau ou autre construction qui prend en charge d’énumération.
-
+Cette construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable comme une expression de plage, séquence, liste, tableau ou autre construction qui prend en charge l’énumération.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -22,11 +21,12 @@ for pattern in enumerable-expression do
 ```
 
 ## <a name="remarks"></a>Notes
-Le `for...in` expression peut être comparée à la `for each` instruction dans d’autres langages .NET, car il est utilisé pour effectuer une boucle sur les valeurs d’une collection énumérable. Toutefois, `for...in` prend également en charge la mise en correspondance sur la collection au lieu de simplement itération sur la collection entière.
 
-L’expression énumérable peut être spécifiée comme une collection énumérable ou, à l’aide de la `..` opérateur, comme une plage sur un type intégral. Les collections énumérables incluent les listes, séquences, tableaux, jeux, mappages et ainsi de suite. Tout type qui implémente `System.Collections.IEnumerable` peut être utilisé.
+Le `for...in` expression peut être comparée à la `for each` instruction dans d’autres langages .NET, car il est utilisé pour effectuer une boucle sur les valeurs dans une collection énumérable. Toutefois, `for...in` prend également en charge les critères spéciaux à la collection au lieu de simplement itération sur la collection entière.
 
-Lorsque vous exprimez une plage à l’aide de la `..` (opérateur), vous pouvez utiliser la syntaxe suivante.
+L’expression énumérable peut être spécifiée en tant que collection énumérable ou, à l’aide de la `..` opérateur, sous forme de plage sur un type intégral. Collections énumérables incluent des listes, séquences, tableaux, jeux, mappages et ainsi de suite. Tout type qui implémente `System.Collections.IEnumerable` peut être utilisé.
+
+Lorsque vous exprimer une plage en utilisant le `..` opérateur, vous pouvez utiliser la syntaxe suivante.
 
 *Démarrer* ... *Terminer*
 
@@ -34,9 +34,9 @@ Vous pouvez également utiliser une version qui inclut un incrément appelé le 
 
 *Démarrer* ... *Ignorer* ... *Terminer*
 
-Lorsque vous utilisez des plages intégrales et une variable de compteur simple comme modèle, le comportement par défaut est pour incrémenter la variable de compteur de 1 à chaque itération, mais si la plage comprend une valeur à ignorer, le compteur est incrémenté par la valeur skip à la place.
+Lorsque vous utilisez des plages intégrales et une variable de compteur simple comme modèle, le comportement standard consiste à incrémenter la variable de compteur de 1 à chaque itération, mais si la plage inclut une valeur de l’ignorer, le compteur est incrémenté par la valeur Ignorer à la place.
 
-Les valeurs correspondantes dans le modèle peuvent également servir dans l’expression de corps.
+Valeurs correspondantes dans le modèle peuvent également être utilisées dans l’expression de corps.
 
 Les exemples de code suivants illustrent l’utilisation de la `for...in` expression.
 
@@ -52,7 +52,7 @@ La sortie est la suivante.
 788
 ```
 
-L’exemple suivant montre comment effectuer une boucle sur une séquence et comment utiliser un modèle de tuple au lieu d’une simple variable.
+L’exemple suivant montre comment effectuer une boucle sur une séquence et comment utiliser un modèle de tuple au lieu d’une variable simple.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5202.fs)]
 
@@ -75,7 +75,7 @@ L’exemple suivant montre comment effectuer une boucle sur une plage d’entier
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5203.fs)]
 
-La sortie de function1 est la suivante.
+La sortie de function1 est comme suit.
 
 ```
 1 2 3 4 5 6 7 8 9 10
@@ -85,7 +85,7 @@ L’exemple suivant montre comment effectuer une boucle sur une plage avec un sa
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5204.fs)]
 
-La sortie de `function2` est comme suit.
+La sortie de `function2` se présente comme suit.
 
 ```
 1 3 5 7 9
@@ -95,17 +95,17 @@ L’exemple suivant montre comment utiliser une plage de caractères.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5205.fs)]
 
-La sortie de `function3` est comme suit.
+La sortie de `function3` se présente comme suit.
 
 ```
 a b c d e f g h i j k l m n o p q r s t u v w x y z
 ```
 
-L’exemple suivant montre comment utiliser une valeur de saut négative pour effectuer une itération inverse.
+L’exemple suivant montre comment utiliser une valeur négative skip pour une itération inverse.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5208.fs)]
 
-La sortie de `function4` est comme suit.
+La sortie de `function4` se présente comme suit.
 
 ```
 10 9 8 7 6 5 4 3 2 1 ... Lift off!
@@ -121,7 +121,7 @@ La sortie de `function5` avec cette entrée est la suivante.
 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
 ```
 
-L’exemple suivant illustre l’utilisation d’un caractère générique (_) lorsque l’élément n’est pas nécessaire dans la boucle.
+L’exemple suivant illustre l’utilisation d’un caractère générique (\_) lorsque l’élément n’est pas nécessaire dans la boucle.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5207.fs)]
 
@@ -131,12 +131,10 @@ La sortie est la suivante.
 Number of elements in list1: 5
 ```
 
-`Note` Vous pouvez utiliser `for...in` dans les expressions de séquence et autres expressions de calcul, auquel cas une version personnalisée de la `for...in` expression est utilisée. Pour plus d’informations, consultez [séquences](sequences.md), [Workflows asynchrones](asynchronous-workflows.md), et [Expressions de calcul](computation-expressions.md).
-
+`Note` Vous pouvez utiliser `for...in` dans les expressions de séquence et autres expressions de calcul, auquel cas une version personnalisée de la `for...in` expression est utilisée. Pour plus d’informations, consultez [séquences](sequences.md), [flux de travail asynchrones](asynchronous-workflows.md), et [Expressions de calcul](computation-expressions.md).
 
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Boucles : expression `for...to`](loops-for-to-expression.md)
-
-[Boucles : expression `while...do`](loops-while-do-expression.md)
+- [Informations de référence du langage F#](index.md)
+- [Boucles : expression `for...to`](loops-for-to-expression.md)
+- [Boucles : expression `while...do`](loops-while-do-expression.md)
