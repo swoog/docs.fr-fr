@@ -15,12 +15,12 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: d97798dd44e9661e82a303023e041f5af2f43711
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501776"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44048336"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Contrôle de la sérialisation XML à l'aide d'attributs
 
@@ -317,10 +317,10 @@ Dans certains cas, une propriété ou un champ public ne doit pas être sériali
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs qui contrôlent la sérialisation XML](attributes-that-control-xml-serialization.md)  
-[Attributs qui contrôlent la sérialisation encodée selon le protocole SOAP](attributes-that-control-encoded-soap-serialization.md)  
-[Introduction à la sérialisation XML](introducing-xml-serialization.md)  
-[Exemples de sérialisation XML](examples-of-xml-serialization.md)  
-[Guide pratique pour spécifier un nom d’élément différent pour un flux XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-[Guide pratique pour sérialiser un objet](how-to-serialize-an-object.md)  
-[Guide pratique pour désérialiser un objet](how-to-deserialize-an-object.md)  
+- [Attributs qui contrôlent la sérialisation XML](attributes-that-control-xml-serialization.md)  
+- [Attributs qui contrôlent la sérialisation encodée selon le protocole SOAP](attributes-that-control-encoded-soap-serialization.md)  
+- [Introduction à la sérialisation XML](introducing-xml-serialization.md)  
+- [Exemples de sérialisation XML](examples-of-xml-serialization.md)  
+- [Guide pratique pour spécifier un nom d’élément différent pour un flux XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+- [Guide pratique pour sérialiser un objet](how-to-serialize-an-object.md)  
+- [Guide pratique pour désérialiser un objet](how-to-deserialize-an-object.md)  

@@ -1,13 +1,13 @@
 ---
-title: 'Expressions Match (F #)'
+title: 'Expressions de correspondance (F #)'
 description: 'Découvrez comment l’expression de correspondance F # fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.'
 ms.date: 04/19/2018
-ms.openlocfilehash: 22cc4b7a87a60d8a5dcbe05ac5abec5560a37516
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565176"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44047673"
 ---
 # <a name="match-expressions"></a>Expressions de correspondance
 
@@ -31,9 +31,9 @@ function
 
 ## <a name="remarks"></a>Notes
 
-Les expressions de critères spéciaux autorisent des branchements complexes basés sur la comparaison d’une expression de test avec un jeu de modèles. Dans le `match` expression, le *test-expression* est comparé à chaque modèle à son tour, lorsqu’une correspondance est trouvée, correspondant *expression de résultat* est évaluée et la valeur résultante est retourné en tant que la valeur de l’expression de correspondance.
+Les expressions de critères spéciaux permettent des branchements complexes basés sur la comparaison d’une expression de test avec un jeu de modèles. Dans le `match` expression, le *expression de test* est comparée à chaque modèle à son tour, et lorsqu’une correspondance est trouvée, correspondants *expression de résultat* est évaluée et la valeur résultante est retourné en tant que la valeur de l’expression de correspondance.
 
-La fonction présentée dans la syntaxe précédente mise en correspondance est une expression lambda dans le modèle de recherche est effectuée immédiatement sur l’argument. Les critères spéciaux de fonction présentée dans la syntaxe précédente est équivalente à la suivante.
+Les critères spéciaux (fonction) indiquée dans la syntaxe précédente est une expression lambda dans laquelle des critères spéciaux sont exécutés immédiatement sur l’argument. Les critères spéciaux (fonction) indiquée dans la syntaxe précédente est équivalente à la suivante.
 
 ```fsharp
 fun arg ->
@@ -45,25 +45,25 @@ fun arg ->
 
 Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda : le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md).
 
-L’ensemble de modèles doit couvrir toutes les correspondances possibles de la variable d’entrée. Souvent, vous utilisez le modèle de caractère générique (`_`) comme dernier modèle pour faire correspondre les valeurs d’entrée précédemment sans correspondance.
+L’ensemble de modèles doit couvrir toutes les correspondances possibles de la variable d’entrée. Vous utilisez fréquemment, le modèle de caractère générique (`_`) en tant que le dernier modèle pour faire correspondre les valeurs d’entrée précédemment sans correspondance.
 
-Le code suivant illustre quelques-unes des façons d’utiliser le `match` expression est utilisée. Pour une référence et des exemples de tous les modèles qui peuvent être utilisés, consultez [recherche de correspondance](pattern-matching.md).
+Le code suivant illustre quelques-unes des façons dans lequel le `match` expression est utilisée. Pour une référence et des exemples de tous les modèles qui peuvent être utilisées, consultez [critères spéciaux](pattern-matching.md).
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4601.fs)]
 
 ## <a name="guards-on-patterns"></a>Gardes sur des modèles
 
-Vous pouvez utiliser un `when` clause pour spécifier une condition supplémentaire répondant à la variable doit correspondre à un modèle. Une telle clause est appelée un *protection*. L’expression qui suit le `when` mot clé n’est pas évaluée, sauf si une correspondance est établie pour le modèle associé à ce garde.
+Vous pouvez utiliser un `when` clause pour spécifier une condition supplémentaire que la variable doit satisfaire pour correspondre à un modèle. Une telle clause est appelée un *protéger*. L’expression qui suit le `when` mot clé n’est pas évaluée, sauf si une correspondance est établie pour le modèle associé à ce garde.
 
 L’exemple suivant illustre l’utilisation d’un garde pour spécifier une plage numérique pour un modèle de variable. Notez que plusieurs conditions sont combinées à l’aide d’opérateurs booléens.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Notez qu’étant donné que les valeurs autres que des littéraux ne peut pas être utilisés dans le modèle, vous devez utiliser un `when` clause si vous devez comparer une partie de l’entrée à une valeur. Ceci est illustré dans le code suivant :
+Notez qu’étant donné que les valeurs autres que des littéraux ne peut pas être utilisés dans le modèle, vous devez utiliser un `when` clause si vous devez comparer une partie de l’entrée par rapport à une valeur. Ceci est illustré dans le code suivant :
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-Notez que lorsqu’un modèle d’union est couverte par un module de protection, la protection s’applique aux **tous les** des modèles, et pas seulement le dernier. Par exemple, prenons le code suivant, le module de protection `when a > 12` s’applique aux deux `A a` et `B a`:
+Notez que lorsqu’un modèle d’union est couvert par un garde, le module de protection s’applique à **tous les** des modèles, pas seulement celui dernier. Par exemple, prenons le code suivant, le module de protection `when a > 12` s’applique aux deux `A a` et `B a`:
 
 ```fsharp
 type Union =
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence du langage F#](index.md)  
-[Modèles actifs](active-patterns.md)  
-[Critères spéciaux](pattern-matching.md)  
+- [Informations de référence du langage F#](index.md)  
+- [Modèles actifs](active-patterns.md)  
+- [Critères spéciaux](pattern-matching.md)  

@@ -1,23 +1,21 @@
 ---
 title: Syntaxe détaillée (F#)
-description: 'Découvrez la différence entre la syntaxe documentée et léger dans le langage de programmation F #.'
+description: 'Découvrez la différence entre la syntaxe détaillée et légère dans le langage de programmation F #.'
 ms.date: 05/16/2016
-ms.openlocfilehash: b0bed66b4a76c5ab11e6c9e7aaf695f864e74ca0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4f2354738da4692cb444e5e7dd9531d80d26664
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563782"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44063116"
 ---
 # <a name="verbose-syntax"></a>Syntaxe détaillée
 
-Il existe deux formes de syntaxe pour de nombreuses constructions dans le langage F # : *syntaxe détaillée* et *syntaxe simplifiée*. La syntaxe détaillée n’est pas aussi couramment utilisée, mais présente l’avantage d’être moins sensible à la mise en retrait. La syntaxe simplifiée est plus courte et utilise la mise en retrait pour signaler le début et la fin de constructions, plutôt que des mots clés supplémentaires comme `begin`, `end`, `in`, et ainsi de suite. La syntaxe de la valeur par défaut est la syntaxe simplifiée. Cette rubrique décrit la syntaxe des constructions F # lorsque la syntaxe simplifiée n’est pas activé. La syntaxe détaillée est toujours activée, même si vous activez la syntaxe simplifiée, vous pouvez toujours utiliser la syntaxe détaillée pour certaines constructions. Vous pouvez désactiver la syntaxe simplifiée à l’aide de la `#light "off"` la directive.
-
+Il existe deux formes de syntaxe disponibles pour de nombreuses constructions dans le langage F # : *syntaxe détaillée* et *syntaxe simplifiée*. La syntaxe détaillée n’est pas aussi couramment utilisée, mais présente l’avantage d’être moins sensibles à la mise en retrait. La syntaxe simplifiée est plus courte et utilise la mise en retrait pour signaler le début et la fin de constructions, plutôt que mots clés supplémentaires comme `begin`, `end`, `in`, et ainsi de suite. La syntaxe par défaut est la syntaxe simplifiée. Cette rubrique décrit la syntaxe des constructions F # lorsque la syntaxe simplifiée n’est pas activée. La syntaxe détaillée est toujours activée, même si vous activez la syntaxe simplifiée, vous pouvez toujours utiliser la syntaxe détaillée pour certaines constructions. Vous pouvez désactiver la syntaxe simplifiée à l’aide de la `#light "off"` directive.
 
 ## <a name="table-of-constructs"></a>Tableau de constructions
-Le tableau suivant montre la syntaxe simplifiée et détaillée pour les constructions de langage F # dans les contextes où il existe une différence entre les deux formes. Dans ce tableau, les crochets pointus (&lt;&gt;) contenir les éléments de syntaxe fournis par l’utilisateur. Reportez-vous à la documentation pour chaque construction de langage pour plus d’informations sur la syntaxe utilisée dans ces constructions.
 
-
+Le tableau suivant présente la syntaxe simplifiée et détaillée pour les constructions de langage F # dans des contextes où il existe une différence entre les deux formes. Dans ce tableau, les crochets pointus (&lt;&gt;) placez des éléments de syntaxe fourni par l’utilisateur. Reportez-vous à la documentation pour chaque construction de langage pour des informations plus détaillées sur la syntaxe utilisée dans ces constructions.
 
 <table>
 <tr>
@@ -343,11 +341,8 @@ module <module-name> =
 </tr>
 </table>
 
-
-
 ## <a name="see-also"></a>Voir aussi
-[Informations de référence du langage F#](index.md)
 
-[Directives de compilateur](compiler-directives.md)
-
-[Indications pour la mise en forme du code](code-formatting-guidelines.md)
+- [Informations de référence du langage F#](index.md)
+- [Directives de compilateur](compiler-directives.md)
+- [Indications pour la mise en forme du code](code-formatting-guidelines.md)

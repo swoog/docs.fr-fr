@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8cb620e5-c6a6-4267-a52e-beeb73cd1a34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e15e7f8968d7edf87ae3cd709d8fb26a2f49826a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c8ff38325e26dd1bc946f6f12c365b6dea3e228
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572045"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44047332"
 ---
 # <a name="how-to-instantiate-a-timezoneinfo-object"></a>Comment : instancier un objet TimeZoneInfo
 
@@ -45,6 +45,6 @@ Si votre application repose sur un fuseau horaire qui doit être présent, vous 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
-[recherche des fuseaux horaires définis sur un système local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
-[Comment : accéder aux objets de zone prédéfinis UTC et l’heure locale](../../../docs/standard/datetime/access-utc-and-local.md)
+- [Dates, heures et fuseaux horaires](../../../docs/standard/datetime/index.md)
+- [Recherche des fuseaux horaires définis sur un système local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md)
+- [Guide pratique pour accéder aux objets UTC et aux objets de fuseau horaire local prédéfinis](../../../docs/standard/datetime/access-utc-and-local.md)

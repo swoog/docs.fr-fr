@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 51d561009a2f497cf4cf720abd5a414cbbbb2e64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592091"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060331"
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
 Ce document répertorie les indications à prendre en compte lors de la conception d'une API à sérialiser.  
@@ -138,11 +138,12 @@ Ce document répertorie les indications à prendre en compte lors de la concepti
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [Types pris en charge par le sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Sérialisation binaire](binary-serialization.md)  
- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [Sérialisation XML et SOAP](xml-and-soap-serialization.md)  
- [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Utilisation de contrats de données](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+- [Sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+- [Types pris en charge par le sérialiseur de contrat de données](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+- [Sérialisation binaire](binary-serialization.md)  
+- [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+- [Sérialisation XML et SOAP](xml-and-soap-serialization.md)  
+- [Sécurité et sérialisation](../../../docs/framework/misc/security-and-serialization.md)
