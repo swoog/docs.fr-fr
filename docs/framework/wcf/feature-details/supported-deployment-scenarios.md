@@ -3,11 +3,11 @@ title: Scénarios de déploiement pris en charge
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787933"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44074655"
 ---
 # <a name="supported-deployment-scenarios"></a>Scénarios de déploiement pris en charge
 Le sous-ensemble de fonctionnalités de Windows Communication Foundation (WCF) prises en charge pour une utilisation dans les applications de confiance partielle est conçu pour répondre aux exigences de certains, mais pas tous, scénarios pour l’utilisation de WCF. Sur le serveur, WCF répond aux exigences de l’échelle d’Internet partagé des fournisseurs d’hébergement qui exécutent des applications tierces dans le [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] Medium Trust jeu d’autorisations pour des raisons de sécurité. Sur le client, prise en charge de la confiance partielle WCF est conçu pour répondre aux exigences de technologies de déploiement telles que [déploiement ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) ou [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]de technologie d’Application de navigateur XAML permettant transparentes et sécurisées déploiement d’applications bureautiques à partir de sites non approuvés.  

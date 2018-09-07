@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48d1ad0f02ae34675c0a910d7651d718c060db60
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575388"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064067"
 ---
 # <a name="event-design"></a>Conception d'événements
-Les événements sont la forme couramment utilisée de rappels (les constructions qui autorisent l’infrastructure pour appeler dans du code de l’utilisateur). Autres mécanismes de rappel incluent les membres avec les délégués, les membres virtuels et basée sur l’interface de plug-ins. Les données à partir des études de convivialité indiquent que la majorité des développeurs sont plus à l’aise avec les événements qu’ils utilisent d’autres méthodes de rappel. Les événements sont bien intégrés à Visual Studio et de nombreux langages.  
+Les événements sont le plus couramment utilisé formulaire des rappels (constructions qui permettent l’infrastructure d’appeler dans le code utilisateur). Autres mécanismes de rappel incluent les membres en prenant les délégués, les membres virtuels et basée sur l’interface de plug-ins. Données à partir des études de convivialité indiquent que la majorité des développeurs sont plus à l’aise avec les événements qu’ils sont à l’aide des autres méthodes de rappel. Les événements sont bien intégrées à Visual Studio et de nombreux langages.  
   
- Il est important de noter qu’il n’y a deux groupes d’événements : événements déclenchés avant un état des modifications système, appelé pré-événements et les événements déclenchés après le change d’un état, appelée post événements. Un exemple d’un événement avant serait `Form.Closing`, qui est déclenché avant la fermeture d’un formulaire. Un exemple d’un post-événement `Form.Closed`, qui est déclenché lorsqu’un formulaire est fermé.  
+ Il est important de noter qu’il existe deux groupes d’événements : événements déclenchés avant un état des modifications système, appelé pré-événements et les événements déclenchés après un état change, appelés post événements. Voici un exemple d’un événement pre `Form.Closing`, qui est déclenché avant la fermeture d’un formulaire. Voici un exemple d’un post-événement `Form.Closed`, qui est déclenché après qu’un formulaire est fermé.  
   
  **✓ DO** utiliser le terme « r » pour les événements plutôt que « fire » ou « déclenche ».  
   
@@ -30,13 +30,13 @@ Les événements sont la forme couramment utilisée de rappels (les construction
   
  **✓ CONSIDER** à l’aide d’une sous-classe de <xref:System.EventArgs> comme argument d’événement, sauf si vous êtes absolument que l’événement n’est jamais nécessaire de transporter des données à l’événement de gestion de la méthode, auquel cas vous pouvez utiliser la `EventArgs` taper directement.  
   
- Si vous livrez une à l’aide de l’API `EventArgs` directement, vous ne pourrez jamais ajouter des données à effectuer sans rompre la compatibilité avec l’événement. Si vous utilisez une sous-classe, même si initialement vide, vous serez en mesure d’ajouter des propriétés à la sous-classe si nécessaire.  
+ Si vous envoyez un à l’aide de l’API `EventArgs` directement, vous ne serez jamais en mesure d’ajouter des données à effectuer avec l’événement sans perdre la compatibilité. Si vous utilisez une sous-classe, même si initialement vide, vous serez en mesure d’ajouter des propriétés à la sous-classe lorsque nécessaire.  
   
- **✓ DO** utiliser une méthode virtuelle protégée pour déclencher chaque événement. Cela s’applique uniquement aux événements non statiques sur les classes non scellés, pas pour les structures, les classes sealed ou aux événements statiques.  
+ **✓ DO** utiliser une méthode virtuelle protégée pour déclencher chaque événement. Cela s’applique uniquement aux événements non statiques sur des classes unsealed, pas pour les structs, les classes sealed ou des événements statiques.  
   
- L’objectif de la méthode est d’offrir un moyen d’une classe dérivée gérer l’événement à l’aide d’un remplacement. La substitution est un moyen plus naturel, plus rapide et plus souple pour gérer les événements de la classe de base dans les classes dérivées. Par convention, le nom de la méthode doit commencer par « On » et être suivi par le nom de l’événement.  
+ L’objectif de la méthode est de fournir un moyen d’une classe dérivée gérer l’événement à l’aide d’un remplacement. Substitution est un moyen plus flexible, plus rapide et plus naturel pour gérer les événements de classe de base dans les classes dérivées. Par convention, le nom de la méthode doit commencer par « On » et être suivi par le nom de l’événement.  
   
- La classe dérivée peut choisissez de ne pas appeler l’implémentation de la méthode de base dans son remplacement. Attendez-vous à cela en n’incluant aucun traitement dans la méthode qui est requise pour la classe de base fonctionne correctement.  
+ La classe dérivée peut choisissez de ne pas appeler l’implémentation de base de la méthode dans son remplacement. Face à cette situation en n’incluant ne pas de traitement dans la méthode qui est requise pour la classe de base fonctionne correctement.  
   
  **✓ DO** doit accepter un paramètre à la méthode protégée qui déclenche un événement.  
   
@@ -50,12 +50,12 @@ Les événements sont la forme couramment utilisée de rappels (les construction
   
  Vous devez passer `EventArgs.Empty` si vous ne souhaitez pas passer des données à la méthode de gestion d’événements. Les développeurs s’attendent à ce paramètre ne pas pour avoir la valeur null.  
   
- **✓ CONSIDER** le déclenchement d’événements de l’utilisateur final peut annuler. Cela s’applique uniquement aux événements antérieurs.  
+ **✓ CONSIDER** le déclenchement d’événements de l’utilisateur final peut annuler. Cela s’applique uniquement aux pré-événements.  
   
  Utilisez <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType> ou sa sous-classe comme argument d’événement pour autoriser l’utilisateur final d’annuler des événements.  
   
-### <a name="custom-event-handler-design"></a>Conception de gestionnaires d’événements personnalisés  
- Il existe des cas dans lequel `EventHandler<T>` ne peut pas être utilisé, tel que lorsque l’infrastructure a besoin travailler avec les versions antérieures du CLR, ce qui ne prend pas en charge les génériques. Dans ce cas, vous devrez peut-être concevoir et développer un délégué de gestionnaire d’événements personnalisé.  
+### <a name="custom-event-handler-design"></a>Conception de gestionnaire d’événements personnalisés  
+ Il existe des cas dans lesquels `EventHandler<T>` ne peut pas être utilisées, comme lorsque le framework doit fonctionner avec les versions antérieures du CLR, qui ne prenait pas en charge des génériques. Dans ce cas, vous devez concevoir et développer un délégué de gestionnaire d’événements personnalisé.  
   
  **✓ DO** utiliser un type de retour void pour les gestionnaires d’événements.  
   
@@ -69,8 +69,9 @@ Les événements sont la forme couramment utilisée de rappels (les construction
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Instructions de conception des membres](../../../docs/standard/design-guidelines/member.md)  
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)

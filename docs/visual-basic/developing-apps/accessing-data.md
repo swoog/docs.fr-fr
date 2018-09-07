@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198838"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098535"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Accès aux données dans les applications Visual Basic
 Visual Basic inclut plusieurs nouvelles fonctionnalités conçues pour vous aider à développer des applications qui accèdent à des données. Vous pouvez créer des formulaires liés aux données pour des applications Windows en faisant glisser des éléments de la [fenêtre Sources de données](/visualstudio/data-tools/add-new-data-sources) sur les formulaires. Vous pouvez également lier des contrôles aux données en faisant glisser des éléments de la **fenêtre Sources de données** sur des contrôles existants.  
@@ -55,5 +55,4 @@ Visual Basic inclut plusieurs nouvelles fonctionnalités conçues pour vous aide
  [ADO.NET](../../framework/data/adonet/index.md)  
  Décrit les classes ADO.NET, qui exposent des services d’accès aux données au programmeur .NET Framework.
 
- [Données dans les solutions Office](https://msdn.microsoft.com/library/xx069ybh)  
- Contient des liens vers des pages qui expliquent de quelle façon les données sont utilisées dans les solutions Office, notamment des informations sur la programmation orientée schéma, la mise en cache des données et l’accès aux données côté serveur.
+ [Les données dans les Solutions Office](/visualstudio/vsto/data-in-office-solutions) contient des liens vers des pages qui expliquent comment fonctionnent les données dans les solutions Office, notamment des informations sur la programmation orientée schéma, la mise en cache des données et accès aux données côté serveur.

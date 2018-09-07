@@ -3,11 +3,11 @@ title: 'Point de terminaison : transactions passées par seconde'
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660155"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064957"
 ---
 # <a name="endpoint-transactions-flowed-per-second"></a>Point de terminaison : transactions passées par seconde
 Nom du compteur : transactions passées par seconde.  

@@ -2,12 +2,12 @@
 title: Cellules de référence (F#)
 description: 'Découvrez comment les cellules de référence F # sont des emplacements de stockage qui vous permettent de créer des valeurs mutables avec la sémantique de référence.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 133aec6b162a13306a05c9afa172f859890565eb
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892417"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079294"
 ---
 # <a name="reference-cells"></a>Cellules de référence
 
@@ -74,62 +74,9 @@ La sortie est la suivante.
 
 Le champ `contents` est fourni à des fins de compatibilité avec d'autres versions de ML et produit un avertissement au cours de la compilation. Pour désactiver l'avertissement, utilisez l'option de compilateur `--mlcompatibility`. Pour plus d’informations, consultez l’article [Options du compilateur](compiler-options.md).
 
-Le code suivant illustre l'utilisation de cellules de référence dans le cadre du passage de paramètres. Le type de l’incrémentation du possède une méthode incrément qui prend un paramètre qui inclut le type de paramètre byref. Dans le type de paramètre byref indique que les appelants doivent passer une cellule de référence ou l’adresse d’une variable normale du type spécifié, dans ce cas type int. Le code restant illustre comment appeler incrément avec ces deux types d’arguments et illustre l’utilisation de l’opérateur ref sur une variable pour créer une cellule de référence (ref myDelta1). Il montre ensuite l'utilisation de l'opérateur d'adresse (&amp;) pour générer un argument approprié. Enfin, la méthode de l’incrément est appelée à nouveau à l’aide d’une cellule de référence est déclarée à l’aide d’une liaison let. La dernière ligne de code illustre l’utilisation de la ! opérateur pour déréférencer la cellule de référence pour l’impression.
+Les programmeurs c# doivent savoir que `ref` en c# n’est pas la même chose que `ref` en F #. Les constructions équivalentes en F # sont [ByRef](byrefs.md), qui sont un concept différent à partir de cellules de référence.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2204.fs)]
-
-Pour plus d’informations sur le passage par référence, consultez [paramètres et Arguments](parameters-and-arguments.md).
-
->[!NOTE]
-Les programmeurs c# doivent savoir que ref différemment en F # fonctionne et en c#. Par exemple, l’utilisation de ref lorsque vous passez un argument n’a pas le même effet en F # comme il le fait en c#.
-
->[!NOTE]
-`mutable` les variables peuvent être automatiquement promues en `'a ref` si capturées par une fermeture ; consultez [valeurs](values/index.md).
-
-## <a name="consuming-c-ref-returns"></a>Utilisation de c# `ref` retourne
-
-À partir de F # 4.1, vous pouvez consommer `ref` retourne généré en c#.  Le résultat de cet appel est un `byref<_>` pointeur.
-
-La méthode c# suivante :
-
-```csharp
-namespace RefReturns
-{
-    public static class RefClass
-    {
-        public static ref int Find(int val, int[] vals)
-        {
-            for (int i = 0; i < vals.Length; i++)
-            {
-                if (vals[i] == val)
-                {
-                    return ref numbers[i]; // Returns the location, not the value
-                }
-            }
-
-            throw new IndexOutOfRangeException($"{nameof(number)} not found");
-        }
-    }
-}
-```
-
-Peut être appelée en toute transparence par F # avec aucune syntaxe spéciale :
-
-```fsharp
-open RefReturns
-
-let consumeRefReturn() =
-    let result = RefClass.Find(3, [| 1; 2; 3; 4; 5 |]) // 'result' is of type 'byref<int>'.
-    ()
-```
-
-Vous pouvez également déclarer des fonctions qui peut prendre un `ref` renvoyer en tant qu’entrée, par exemple :
-
-```fsharp
-let f (x: byref<int>) = &x
-```
-
-Il n’existe actuellement aucun moyen de générer un `ref` retour dans F #, qui peut être utilisée dans c#.
+Les valeurs marquées en tant que `mutable`peut être promue automatiquement en `'a ref` si capturées par une fermeture ; consultez [valeurs](values/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 

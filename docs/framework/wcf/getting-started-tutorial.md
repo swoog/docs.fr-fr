@@ -7,11 +7,11 @@ helpviewer_keywords:
 - getting started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
 ms.openlocfilehash: e5a07e5264c715f568121403721a3c844b903d99
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886316"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085660"
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
 Les rubriques contenues dans cette section sont conçues pour vous permettre l’exposition rapide pour le Windows Communication Foundation (WCF) expérience de programmation. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. Ce didacticiel vous offre une compréhension de base des étapes requises pour créer des applications client et le service WCF. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fourni par le service à ses clients.  

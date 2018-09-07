@@ -3,11 +3,11 @@ title: Transformation fonctionnelle de données XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800693"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070561"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Transformation fonctionnelle de données XML (Visual Basic)
 Cette rubrique traite de l'approche de transformation fonctionnelle pure permettant de modifier des documents XML et l'oppose à une approche procédurale.  

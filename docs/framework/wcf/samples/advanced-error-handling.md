@@ -3,11 +3,11 @@ title: Gestion avancée des erreurs
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
 ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873914"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084141"
 ---
 # <a name="advanced-error-handling"></a>Gestion avancée des erreurs
 Cet exemple montre le service de routage de Windows Communication Foundation (WCF). Le service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple montre comment le service de routage récupère intelligemment suite à des erreurs, en utilisant des transactions et d’autres concepts de messagerie plus complexes, comme la multidiffusion.  

@@ -3,11 +3,11 @@ title: OperationScope
 ms.date: 03/30/2017
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
 ms.openlocfilehash: 562fd9c8ff964cb997012d49600bce73d4441465
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871135"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075629"
 ---
 # <a name="operationscope"></a>OperationScope
 Cet exemple montre comment les activités de messagerie, <xref:System.ServiceModel.Activities.Receive> et <xref:System.ServiceModel.Activities.SendReply>, peuvent être utilisées pour exposer une activité personnalisée existante en tant qu'opération dans un service de workflow. Cet exemple inclut une nouvelle activité personnalisée appelée `OperationScope`. Elle est destinée à faciliter le développement d'un service de workflow en permettant aux utilisateurs de créer le corps de leurs opérations séparément en tant qu'activités personnalisées et de les exposer facilement en tant qu'opérations de service à l'aide de l'activité `OperationScope`. Par exemple, une activité `Add` personnalisée que prend deux arguments `in` et qui retourne un argument `out` pourrait être exposée en tant qu'opération `Add` sur le service de workflow en le déposant dans un `OperationScope`.  

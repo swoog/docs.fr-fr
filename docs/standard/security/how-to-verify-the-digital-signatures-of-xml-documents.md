@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b2cb61f2cc7129153a71398c6fb219c4e3990a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ec813e50bb4dca33c8dda8b41914cfa5d5596c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590648"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44067615"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>Comment : vérifier les signatures numériques de documents XML
 Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour vérifier les données XML signées avec une signature numérique.  Les signatures numériques XML (XMLDSIG) vous permettent de vérifier que les données n'ont pas été modifiées après leur signature.  Pour plus d’informations sur la norme XMLDSIG, consultez la spécification du World Wide Web Consortium (W3C) à http://www.w3.org/TR/xmldsig-core/.  
@@ -84,6 +84,7 @@ Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Crypt
   
  N'incorporez jamais une clé privée directement dans votre code source.  Les clés incorporées peuvent être lues facilement à partir d’un assembly à l’aide de la [Ildasm.exe (désassembleur IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ou en ouvrant l’assembly dans un éditeur de texte tel que le bloc-notes.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Security.Cryptography.Xml>  
- [Comment : signer des documents XML avec des signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Comment : signer des documents XML avec des signatures numériques](../../../docs/standard/security/how-to-sign-xml-documents-with-digital-signatures.md)

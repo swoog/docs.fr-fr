@@ -3,11 +3,11 @@ title: Service uniquement en XAML de base
 ms.date: 03/30/2017
 ms.assetid: c106feb0-0245-43b5-aefe-93ce0e4d38eb
 ms.openlocfilehash: f4f296a97b9c3093874c5ec8e05023e84b0af44a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43783944"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081006"
 ---
 # <a name="basic-xaml-only-service"></a>Service uniquement en XAML de base
 Cet exemple montre comment créer un service uniquement en XAML. Le scénario est un service de diagnostic pour les problèmes liés à la voiture. Le service est implémenté comme un workflow qui pose une série de questions au client afin de diagnostiquer le problème. Il existe deux types de problèmes que le service peut diagnostiquer (la voiture ne démarre pas ou l'air conditionné ne fonctionne pas). Le workflow utilise le modèle Demande/réponse du concepteur pour exposer trois opérations de service simples. Le service est hébergé dans IIS en créant un répertoire virtuel dans IIS et en copiant le service1.xamlx et les fichiers Web.config dans le répertoire virtuel ; aucun code compilé n'est requis. Par défaut cet exemple copie automatiquement les fichiers nécessaires dans le répertoire virtuel créé lorsque vous suivez les instructions d’installation pour les exemples WCF et WF : [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md) lors de la génération dans Visual Studio 2010.  

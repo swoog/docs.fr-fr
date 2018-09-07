@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43725005"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44076379"
 ---
 # <a name="how-to-display-pop-up-help"></a>Comment : afficher l'aide contextuelle
 Pour afficher l’aide dans les Windows Forms offre un moyen du **aide** bouton situé sur le côté droit de la barre de titre, accessible via la <xref:System.Windows.Forms.Form.HelpButton%2A> propriété. Ce type d’affichage de l’aide convient parfaitement aux boîtes de dialogue. Les boîtes de dialogue modales (affichées avec la méthode <xref:System.Windows.Forms.Form.ShowDialog%2A>) ont des difficultés à afficher les systèmes d'aide externes, car elles doivent être fermées pour que le focus puisse basculer vers une autre fenêtre. En outre, à l’aide de la **aide** bouton requiert l’existence aucun **réduire** bouton ou **agrandir** affiché dans la barre de titre. Il s’agit une convention de boîte de dialogue standard, tandis que les formulaires possèdent généralement **réduire** et **agrandir** boutons.  

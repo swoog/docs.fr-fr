@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879843"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080606"
 ---
 # <a name="code-contracts"></a>Contrats de code
 Les contrats de code offrent un moyen de spécifier des conditions préalables, des post-conditions et des invariants d'objet dans votre code. Les conditions préalables sont des exigences qui doivent être satisfaites à l'entrée d'une méthode ou d'une propriété. Les post-conditions décrivent les attentes à la sortie de la méthode ou de la propriété. Les invariants d'objet décrivent l'état attendu pour une classe présentant un état correct.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743870"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066439"
 ---
 # <a name="childviews-and-relations"></a>ChildView et relations
 S'il existe une relation entre différentes tables d'un objet <xref:System.Data.DataSet>, vous pouvez créer un objet <xref:System.Data.DataView> contenant des lignes de la table enfant connexe à l'aide de la méthode <xref:System.Data.DataRowView.CreateChildView%2A> de l'objet <xref:System.Data.DataRowView> pour les lignes de la table parente. Par exemple, le code suivant affiche **catégories** et leur sont associées **produits** par ordre alphabétique triés par **CategoryName** et **ProductName** .  

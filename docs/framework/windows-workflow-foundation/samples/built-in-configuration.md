@@ -3,11 +3,11 @@ title: Configuration intégrée
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
 ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867840"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084791"
 ---
 # <a name="built-in-configuration"></a>Configuration intégrée
 Cet exemple illustre l'utilisation et la configuration du magasin d'instances de workflow SQL. Le magasin d'instances de workflow SQL est une implémentation basée sur SQL d'un magasin d'instances. Il permet à une instance d'enregistrer et de charger son état vers et à partir d'une base de données SQL Server ou SQL Server Express.  

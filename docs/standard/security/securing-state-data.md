@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe941fff7091fb579e41a3c417dbb2129bcf3e8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580781"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062571"
 ---
 # <a name="securing-state-data"></a>Sécurisation des données d'état
 Les applications qui gèrent des données sensibles ou participent aux processus décisionnels de sécurité doivent conserver le contrôle des données. Elles doivent absolument empêcher tout code potentiellement malveillant d’accéder directement aux données. La meilleure façon de protéger les données en mémoire est de les déclarer en tant que variables privées ou internes (avec une portée limitée au même assembly). Toutefois, même ces données sont soumises à un accès dont vous devez avoir conscience :  
@@ -28,5 +28,6 @@ Les applications qui gèrent des données sensibles ou participent aux processus
   
  Assurez-vous qu’aucune de vos méthodes ou propriétés n’expose involontairement ces valeurs.  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)

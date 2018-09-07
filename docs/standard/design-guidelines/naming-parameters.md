@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6b96bb05c52de4bfd8b6ad6b972c9d22ca66da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e6a8a1dcdcb8fa3311b040c72987f0f76e681fc
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570484"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086470"
 ---
 # <a name="naming-parameters"></a>Attribution d'un nom à des paramètres
 Au-delà de la raison évidente de lisibilité, il est important de suivre les instructions pour les noms de paramètre, car les paramètres sont affichés dans la documentation et dans le concepteur lorsque les outils de conception visuelle fournissent Intellisense et la classe de fonctionnalités de navigation.  
@@ -35,8 +35,9 @@ Au-delà de la raison évidente de lisibilité, il est important de suivre les i
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimées avec l’autorisation de Pearson éducation, Inc. à partir de [règles de conception d’infrastructure : Conventions, idiomes et des modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)

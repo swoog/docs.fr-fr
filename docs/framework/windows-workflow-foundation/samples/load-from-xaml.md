@@ -3,11 +3,11 @@ title: Charge à partir du XAML
 ms.date: 03/30/2017
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
 ms.openlocfilehash: 3344f8d35400835ed022ba507954f7f962ff75c8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035971"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086503"
 ---
 # <a name="load-from-xaml"></a>Charge à partir du XAML
 Cet exemple montre comment charger dynamiquement un workflow XAML sans devoir exécuter l'outil XamlBuildTask. Au lieu de cela, l'exemple appelle la méthode <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A>. L’exemple est une application cliente Windows Presentation Foundation (WPF) qui charge les workflows XAML à l’aide la <xref:System.Activities.XamlIntegration.ActivityXamlServices> classe et les exécute. Une fois qu'ils ont été chargés à l'aide de la classe <xref:System.Activities.XamlIntegration.ActivityXamlServices>, un <xref:System.Activities.DynamicActivity%601> pouvant être exécuté est retourné.  

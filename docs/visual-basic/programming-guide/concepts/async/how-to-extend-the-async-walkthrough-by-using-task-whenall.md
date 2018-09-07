@@ -3,11 +3,11 @@ title: 'Comment : étendre la procédure pas à pas Async à l’aide de Task.W
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 650b96926cf66810a93b003b1ebc09ca16212b00
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778215"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064931"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Comment : étendre la procédure pas à pas Async à l’aide de Task.WhenAll (Visual Basic)
 Vous pouvez améliorer les performances de la solution async dans [procédure pas à pas : accès au Web avec Async et Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) à l’aide de la <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> (méthode). Cette méthode attend de manière asynchrone plusieurs opérations, qui sont représentées sous la forme d’une collection de tâches.  

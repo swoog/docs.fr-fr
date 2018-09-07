@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749070"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086217"
 ---
 # <a name="commanding-overview"></a>Vue d'ensemble des commandes
 <a name="introduction"></a> L’exécution de commandes est un mécanisme d’entrée dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] qui fournit la gestion des entrées à un niveau plus sémantique que l’entrée de périphérique. Les opérations **Copier**, **Couper** et **Coller** sont des exemples de commandes figurant dans de nombreuses applications.  

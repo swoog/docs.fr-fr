@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 858ee30479c959f30673725b4ba8088fcc2d8f3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27818d5e1779cd6e10e11830f91a20a3e638639a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581753"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44066514"
 ---
 # <a name="security-and-user-input"></a>Sécurité et entrées d'utilisateur
 Les données utilisateurs, quel que soit le type d’entrée (données d’une demande web ou URL, entrée de commandes d’une application Windows Forms, etc.), peuvent affecter négativement le code, dans la mesure où ces données sont souvent utilisées directement en tant que paramètres pour appeler un autre code. Cette situation, similaire à l’appel de votre code par du code malveillant à l’aide de paramètres étranges, nécessite les mêmes précautions. En réalité, une entrée utilisateur est plus difficile à sécuriser, car il n’existe aucune frame de pile permettant de détecter la présence de données potentiellement non fiables.  
@@ -58,5 +58,6 @@ Les données utilisateurs, quel que soit le type d’entrée (données d’une d
   
 -   Méfiez-vous des noms utilisateur pouvant présenter plusieurs formats canoniques. Par exemple, bien souvent, vous pouvez utiliser le format MONDOMAINE\\*nomutilisateur* ou le format *nomutilisateur*@mydomain.example.com.  
   
-## <a name="see-also"></a>Voir aussi  
- [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Instructions de codage sécurisé](../../../docs/standard/security/secure-coding-guidelines.md)

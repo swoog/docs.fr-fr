@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: 1b34b3369e5a045f45251d3285f10bf74b6f0d33
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43778079"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080850"
 ---
 # <a name="data-binding-overview"></a>Vue d’ensemble de la liaison de données
 La liaison de données [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] offre un moyen simple et cohérent aux applications de présenter et d’interagir avec les données. Les éléments peuvent être liés à des données émanant de diverses sources de données sous la forme d’objets [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] et de [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s comme <xref:System.Windows.Controls.Button> et <xref:System.Windows.Controls.ItemsControl>s comme <xref:System.Windows.Controls.ListBox> et <xref:System.Windows.Controls.ListView> possèdent des fonctionnalités intégrées permettant de style flexible des éléments de données uniques ou des collections d’éléments de données. Des vues de tri, filtrage et groupage peuvent être générées sur la base des données.  

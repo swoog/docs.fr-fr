@@ -3,11 +3,11 @@ title: Publication du formulaire
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890826"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077013"
 ---
 # <a name="form-post"></a>Publication du formulaire
 Cet exemple montre comment étendre le modèle de programmation REST WCF pour prendre en charge de nouveaux formats de requêtes entrantes. L'exemple inclut également une implémentation de formateur capable de désérialiser une requête provenant d'une publication de formulaire HTML en type [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. L'exemple utilise en outre un modèle T4 pour retourner une page HTML, qui fournit le formulaire HTML que les utilisateurs peuvent publier sur le service REST WCF.  

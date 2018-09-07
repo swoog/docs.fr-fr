@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
 ms.openlocfilehash: 46e8b41567820df24c5206a2acd8ac661faeed28
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670517"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087412"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>Impossible de recevoir des événements de l’objet, car le nombre maximal de récepteurs d’événements pris en charge est déjà atteint.
 Le nombre maximal de récepteurs d’événements pris en charge par l’objet a été dépassé.  

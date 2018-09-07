@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: 092f073a138a09fc25b96fbddde5b73992056981
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732246"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087781"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Utilisation d'un service de données dans une application cliente (services de données WCF)
 Vous pouvez accéder à un service qui expose un [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux en fournissant un URI à un navigateur Web. L'URI fournit l'adresse d'une ressource, et les messages de demande sont envoyés à ces adresses pour accéder ou modifier les données sous-jacentes que représente la ressource. Le navigateur émet une commande HTTP GET et retourne la ressource demandée sous forme d'un flux [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Pour plus d’informations, consultez [l’accès au Service à partir d’un navigateur Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  

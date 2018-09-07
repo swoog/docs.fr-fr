@@ -3,11 +3,11 @@ title: Activité LINQ to Objects
 ms.date: 03/30/2017
 ms.assetid: 403c82e8-7f2b-42f6-93cd-95c35bc76ead
 ms.openlocfilehash: fca4a94a951c9713a61914de6ef33e0cbb74f75e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891578"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098857"
 ---
 # <a name="linq-to-objects-activity"></a>Activité LINQ to Objects
 Cet exemple montre comment créer une activité pour utiliser LINQ to Objects pour interroger des éléments d’une collection.  

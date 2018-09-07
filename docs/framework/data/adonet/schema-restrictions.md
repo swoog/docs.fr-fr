@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 ms.openlocfilehash: 040ecd8a2ce223f89601de735b77ccc81638c7af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884729"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079706"
 ---
 # <a name="schema-restrictions"></a>Restrictions de schéma
 Le deuxième paramètre facultatif de la **GetSchema** méthode est retournée les restrictions qui sont utilisées pour limiter la quantité d’informations de schéma, et il est transmis à la **GetSchema** sous forme de tableau de chaînes (méthode) . La position dans le tableau détermine les valeurs que vous pouvez passer et équivaut au numéro de restriction.  

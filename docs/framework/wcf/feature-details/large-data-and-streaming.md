@@ -3,11 +3,11 @@ title: Données volumineuses et diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
 ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44033139"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079758"
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
 Windows Communication Foundation (WCF) est une infrastructure de communications basées sur XML. Étant donné que les données XML sont généralement codées au format texte standard défini dans le [spécification XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), connecté les architectes et développeurs de systèmes sont généralement concernées par l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte du XML pose des défis particuliers pour le transfert efficace de données binaires.  

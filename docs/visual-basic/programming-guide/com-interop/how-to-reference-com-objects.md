@@ -8,12 +8,12 @@ helpviewer_keywords:
 - COM objects, referencing
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
-ms.openlocfilehash: 34f46a1ea9c728cbaeb0456f8a6751ff529f2903
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 293bf76b1520f50e67837942eab2f27a49e330e3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801688"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081572"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Comment : référencer les objets COM à partir de Visual Basic
 En Visual Basic, l’ajout de références aux objets COM qui ont des bibliothèques de types requiert la création d’un assembly d’interopérabilité pour la bibliothèque COM. Les références aux membres de l’objet COM sont routées vers l’assembly d’interopérabilité et ensuite transmis à l’objet COM réel. Les réponses de l’objet COM sont routées vers l’assembly d’interopérabilité et transmis à votre [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] application.  
@@ -52,10 +52,11 @@ En Visual Basic, l’ajout de références aux objets COM qui ont des bibliothè
   
      Vous pouvez utiliser Tlbimp pour créer des assemblys PIA pour les bibliothèques de types, même pour les objets COM non inscrits. Toutefois, les objets COM référencés par les assemblys PIA doivent être correctement inscrits sur l’ordinateur où ils doivent être utilisées. Vous pouvez inscrire un objet COM à l’aide de l’utilitaire Regsvr32 inclus avec le système d’exploitation Windows.  
   
-## <a name="see-also"></a>Voir aussi  
- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe (importateur de bibliothèques de types)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (exportateur de bibliothèques de types)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [Procédure pas à pas : implémentation de l’héritage avec les objets COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Dépannage des problèmes liés à l’interopérabilité](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- [Imports (instruction) (espace de noms et type .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+## <a name="see-also"></a>Voir aussi
+
+- [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Tlbimp.exe (importateur de bibliothèques de types)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tlbexp.exe (exportateur de bibliothèques de types)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
+- [Procédure pas à pas : implémentation de l’héritage avec les objets COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+- [Dépannage des problèmes liés à l’interopérabilité](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+- [Imports (instruction) (espace de noms et type .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
