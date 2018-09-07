@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298342"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43883779"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Gestion et levée d’exceptions dans .NET
 
@@ -60,13 +60,13 @@ Le tableau suivant répertorie certaines exceptions courantes avec des exemples 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe et propriétés d’exception](exception-class-and-properties.md)  
-[Guide pratique pour utiliser le bloc try/catch pour intercepter des exceptions](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-[Guide pratique : utiliser des exceptions spécifiques dans un bloc Catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
-[Guide pratique pour lever explicitement des exceptions](how-to-explicitly-throw-exceptions.md)  
-[Guide pratique : créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md)  
-[Utilisation de gestionnaires filtrés par l'utilisateur](using-user-filtered-exception-handlers.md)  
-[Guide pratique pour utiliser des blocs Finally](how-to-use-finally-blocks.md)  
-[Gestion des exceptions COM Interop](handling-com-interop-exceptions.md)  
-[Meilleures pratiques pour les exceptions](best-practices-for-exceptions.md)  
-[What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tout ce que doit savoir un développeur sur les exceptions dans le runtime).
+- [Classe et propriétés d’exception](exception-class-and-properties.md)  
+- [Guide pratique pour utiliser le bloc try/catch pour intercepter des exceptions](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+- [Guide pratique : utiliser des exceptions spécifiques dans un bloc Catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
+- [Guide pratique pour lever explicitement des exceptions](how-to-explicitly-throw-exceptions.md)  
+- [Guide pratique : créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md)  
+- [Utilisation de gestionnaires filtrés par l'utilisateur](using-user-filtered-exception-handlers.md)  
+- [Guide pratique pour utiliser des blocs Finally](how-to-use-finally-blocks.md)  
+- [Gestion des exceptions COM Interop](handling-com-interop-exceptions.md)  
+- [Meilleures pratiques pour les exceptions](best-practices-for-exceptions.md)  
+- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Tout ce que doit savoir un développeur sur les exceptions dans le runtime).

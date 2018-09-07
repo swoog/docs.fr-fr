@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d820783b931195bf62b75ea76d7d0573289bab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f61b63f78ea3c6131d4d1ab4e421be25149035b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573683"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876117"
 ---
 # <a name="garbage-collection"></a>Garbage Collection
 Le « garbage collector » du .NET gère l’allocation et la libération de mémoire pour votre application. Chaque fois que vous créez un objet, le Common Language Runtime alloue de la mémoire pour l’objet à partir du tas managé. Aussi longtemps que de l'espace d'adressage est disponible dans le tas managé, le Runtime continue à allouer de l'espace pour de nouveaux objets. Toutefois, la mémoire n’est pas infinie. Pour finir, le garbage collector doit exécuter une collecte afin de libérer de la mémoire. Le moteur d'optimisation du « garbage collector » détermine le meilleur moment pour lancer une opération garbage collection sur base des allocations de mémoire effectuées. Lorsque le garbage collector effectue une collecte, il recherche les objets dans le tas managé qui ne sont plus utilisés par l’application et effectue les opérations nécessaires pour récupérer leur mémoire.  
@@ -61,5 +61,6 @@ Le « garbage collector » du .NET gère l’allocation et la libération de m
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>Voir aussi  
- [Nettoyage de ressources non managées](../../../docs/standard/garbage-collection/unmanaged.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Nettoyage de ressources non managées](../../../docs/standard/garbage-collection/unmanaged.md)
