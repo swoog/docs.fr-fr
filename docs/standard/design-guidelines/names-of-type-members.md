@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: b6baf91310f6867223f0f32d596b451592b917b5
+ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "33575347"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077107"
 ---
 # <a name="names-of-type-members"></a>Noms de membres de type
 Les types se composent de membres, de méthodes, de propriétés, d’événements, de constructeurs et de champs. Les sections suivantes décrivent les règles de nommage des membres de type.  
@@ -102,6 +102,7 @@ public class Control {
   
  *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
   
-## <a name="see-also"></a>Voir aussi  
- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
- [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Règles de conception de .NET Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)
