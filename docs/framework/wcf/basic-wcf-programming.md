@@ -9,62 +9,62 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
 ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558889"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060513"
 ---
-# <a name="basic-wcf-programming"></a><span data-ttu-id="48a82-102">Programmation WCF de base</span><span class="sxs-lookup"><span data-stu-id="48a82-102">Basic WCF Programming</span></span>
-<span data-ttu-id="48a82-103">Cette section présente les notions de base pour la création d’applications Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="48a82-103">This section presents the fundamentals for creating Windows Communication Foundation (WCF) applications.</span></span>  
+# <a name="basic-wcf-programming"></a><span data-ttu-id="d2840-102">Programmation WCF de base</span><span class="sxs-lookup"><span data-stu-id="d2840-102">Basic WCF Programming</span></span>
+<span data-ttu-id="d2840-103">Cette section présente les notions de base pour la création d’applications Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d2840-103">This section presents the fundamentals for creating Windows Communication Foundation (WCF) applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="48a82-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="48a82-104">In This Section</span></span>  
- [<span data-ttu-id="48a82-105">Cycle de vie de la programmation de base</span><span class="sxs-lookup"><span data-stu-id="48a82-105">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- <span data-ttu-id="48a82-106">Décrit le cycle de vie de la conception, de création et de déploiement d’applications clientes et de service WCF.</span><span class="sxs-lookup"><span data-stu-id="48a82-106">Describes the lifecycle of designing, building, and deploying WCF service and client applications.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d2840-104">Dans cette section</span><span class="sxs-lookup"><span data-stu-id="d2840-104">In This Section</span></span>  
+ [<span data-ttu-id="d2840-105">Cycle de vie de la programmation de base</span><span class="sxs-lookup"><span data-stu-id="d2840-105">Basic Programming Lifecycle</span></span>](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
+ <span data-ttu-id="d2840-106">Décrit le cycle de vie de la conception, de création et de déploiement d’applications clientes et de service WCF.</span><span class="sxs-lookup"><span data-stu-id="d2840-106">Describes the lifecycle of designing, building, and deploying WCF service and client applications.</span></span>  
   
- [<span data-ttu-id="48a82-107">Conception et implémentation de services</span><span class="sxs-lookup"><span data-stu-id="48a82-107">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
- <span data-ttu-id="48a82-108">Décrit comment concevoir et implémenter un contrat de service, choisir un modèle d’échange de messages, spécifier un contrat d’erreur, et d’autres aspects de base des services.</span><span class="sxs-lookup"><span data-stu-id="48a82-108">Describes how to design and implement a service contract, choose a message exchange pattern, specify a fault contract, and other basic aspects of services.</span></span>  
+ [<span data-ttu-id="d2840-107">Conception et implémentation de services</span><span class="sxs-lookup"><span data-stu-id="d2840-107">Designing and Implementing Services</span></span>](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ <span data-ttu-id="d2840-108">Décrit comment concevoir et implémenter un contrat de service, choisir un modèle d’échange de messages, spécifier un contrat d’erreur, et d’autres aspects de base des services.</span><span class="sxs-lookup"><span data-stu-id="d2840-108">Describes how to design and implement a service contract, choose a message exchange pattern, specify a fault contract, and other basic aspects of services.</span></span>  
   
- [<span data-ttu-id="48a82-109">Configuration des services</span><span class="sxs-lookup"><span data-stu-id="48a82-109">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
- <span data-ttu-id="48a82-110">Décrit comment configurer un service WCF pour prendre en charge les exigences de contrat, personnaliser le comportement d’exécution locale et indiquer l’adresse pour publier le service.</span><span class="sxs-lookup"><span data-stu-id="48a82-110">Describes how to configure a WCF service to support the contract requirements, customize local runtime behavior, and indicate the address to publish the service.</span></span>  
+ [<span data-ttu-id="d2840-109">Configuration des services</span><span class="sxs-lookup"><span data-stu-id="d2840-109">Configuring Services</span></span>](../../../docs/framework/wcf/configuring-services.md)  
+ <span data-ttu-id="d2840-110">Décrit comment configurer un service WCF pour prendre en charge les exigences de contrat, personnaliser le comportement d’exécution locale et indiquer l’adresse pour publier le service.</span><span class="sxs-lookup"><span data-stu-id="d2840-110">Describes how to configure a WCF service to support the contract requirements, customize local runtime behavior, and indicate the address to publish the service.</span></span>  
   
- [<span data-ttu-id="48a82-111">Hébergement de services</span><span class="sxs-lookup"><span data-stu-id="48a82-111">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
- <span data-ttu-id="48a82-112">Décrit les notions de base d'hébergement des services dans une application.</span><span class="sxs-lookup"><span data-stu-id="48a82-112">Describes the basics of hosting services in an application.</span></span>  
+ [<span data-ttu-id="d2840-111">Hébergement de services</span><span class="sxs-lookup"><span data-stu-id="d2840-111">Hosting Services</span></span>](../../../docs/framework/wcf/hosting-services.md)  
+ <span data-ttu-id="d2840-112">Décrit les notions de base d'hébergement des services dans une application.</span><span class="sxs-lookup"><span data-stu-id="d2840-112">Describes the basics of hosting services in an application.</span></span>  
   
- [<span data-ttu-id="48a82-113">Génération de clients</span><span class="sxs-lookup"><span data-stu-id="48a82-113">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
- <span data-ttu-id="48a82-114">Décrit comment obtenir les métadonnées à partir des services, convertir en code de client WCF, gérer les problèmes de sécurité, créer, configurer et héberger un client WCF.</span><span class="sxs-lookup"><span data-stu-id="48a82-114">Describes how to obtain metadata from services, convert that into WCF client code, handle security issues, and build, configure, and host an WCF client.</span></span>  
+ [<span data-ttu-id="d2840-113">Génération de clients</span><span class="sxs-lookup"><span data-stu-id="d2840-113">Building Clients</span></span>](../../../docs/framework/wcf/building-clients.md)  
+ <span data-ttu-id="d2840-114">Décrit comment obtenir les métadonnées à partir des services, convertir en code de client WCF, gérer les problèmes de sécurité, créer, configurer et héberger un client WCF.</span><span class="sxs-lookup"><span data-stu-id="d2840-114">Describes how to obtain metadata from services, convert that into WCF client code, handle security issues, and build, configure, and host an WCF client.</span></span>  
   
- [<span data-ttu-id="48a82-115">Introduction à l’extensibilité</span><span class="sxs-lookup"><span data-stu-id="48a82-115">Introduction to Extensibility</span></span>](../../../docs/framework/wcf/introduction-to-extensibility.md)  
- <span data-ttu-id="48a82-116">Décrit comment étendre WCF pour créer des solutions personnalisées.</span><span class="sxs-lookup"><span data-stu-id="48a82-116">Describes how to extend WCF to create custom solutions.</span></span>  
+ [<span data-ttu-id="d2840-115">Introduction à l’extensibilité</span><span class="sxs-lookup"><span data-stu-id="d2840-115">Introduction to Extensibility</span></span>](../../../docs/framework/wcf/introduction-to-extensibility.md)  
+ <span data-ttu-id="d2840-116">Décrit comment étendre WCF pour créer des solutions personnalisées.</span><span class="sxs-lookup"><span data-stu-id="d2840-116">Describes how to extend WCF to create custom solutions.</span></span>  
   
- [<span data-ttu-id="48a82-117">Démarrage rapide de la résolution des problèmes WCF</span><span class="sxs-lookup"><span data-stu-id="48a82-117">WCF Troubleshooting Quickstart</span></span>](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
- <span data-ttu-id="48a82-118">Décrit quelques-uns des problèmes les plus courants, les actions possibles pour les résoudre et où trouver davantage d'informations sur le problème rencontré.</span><span class="sxs-lookup"><span data-stu-id="48a82-118">Describes some of the most common issues that occur, what you can do to solve them, and where to locate more information about the issue.</span></span>  
+ [<span data-ttu-id="d2840-117">Démarrage rapide de la résolution des problèmes WCF</span><span class="sxs-lookup"><span data-stu-id="d2840-117">WCF Troubleshooting Quickstart</span></span>](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
+ <span data-ttu-id="d2840-118">Décrit quelques-uns des problèmes les plus courants, les actions possibles pour les résoudre et où trouver davantage d'informations sur le problème rencontré.</span><span class="sxs-lookup"><span data-stu-id="d2840-118">Describes some of the most common issues that occur, what you can do to solve them, and where to locate more information about the issue.</span></span>  
   
- [<span data-ttu-id="48a82-119">WCF et API web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="48a82-119">WCF and ASP.NET Web API</span></span>](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
- <span data-ttu-id="48a82-120">Traite des deux technologies, de la manière dont elles sont en rapport l'une avec l'autre et indique quand les utiliser.</span><span class="sxs-lookup"><span data-stu-id="48a82-120">Discusses the two technologies, how they relate to each other, and when to use them.</span></span>  
+ [<span data-ttu-id="d2840-119">WCF et API web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="d2840-119">WCF and ASP.NET Web API</span></span>](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ <span data-ttu-id="d2840-120">Traite des deux technologies, de la manière dont elles sont en rapport l'une avec l'autre et indique quand les utiliser.</span><span class="sxs-lookup"><span data-stu-id="d2840-120">Discusses the two technologies, how they relate to each other, and when to use them.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="48a82-121">Référence</span><span class="sxs-lookup"><span data-stu-id="48a82-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d2840-121">Référence</span><span class="sxs-lookup"><span data-stu-id="d2840-121">Reference</span></span>  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Description>  
   
-## <a name="related-sections"></a><span data-ttu-id="48a82-122">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="48a82-122">Related Sections</span></span>  
- [<span data-ttu-id="48a82-123">Configuration système requise</span><span class="sxs-lookup"><span data-stu-id="48a82-123">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
+## <a name="related-sections"></a><span data-ttu-id="d2840-122">Rubriques connexes</span><span class="sxs-lookup"><span data-stu-id="d2840-122">Related Sections</span></span>  
+ [<span data-ttu-id="d2840-123">Configuration système requise</span><span class="sxs-lookup"><span data-stu-id="d2840-123">System Requirements</span></span>](../../../docs/framework/wcf/wcf-system-requirements.md)  
   
- [<span data-ttu-id="48a82-124">Vue d’ensemble conceptuelle</span><span class="sxs-lookup"><span data-stu-id="48a82-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
+ [<span data-ttu-id="d2840-124">Vue d’ensemble conceptuelle</span><span class="sxs-lookup"><span data-stu-id="d2840-124">Conceptual Overview</span></span>](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [<span data-ttu-id="48a82-125">Didacticiel Bien démarrer</span><span class="sxs-lookup"><span data-stu-id="48a82-125">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [<span data-ttu-id="d2840-125">Didacticiel Bien démarrer</span><span class="sxs-lookup"><span data-stu-id="d2840-125">Getting Started Tutorial</span></span>](../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [<span data-ttu-id="48a82-126">Conseils et bonnes pratiques</span><span class="sxs-lookup"><span data-stu-id="48a82-126">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
+ [<span data-ttu-id="d2840-126">Conseils et bonnes pratiques</span><span class="sxs-lookup"><span data-stu-id="d2840-126">Guidelines and Best Practices</span></span>](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
   
- [<span data-ttu-id="48a82-127">Outils Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="48a82-127">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
+ [<span data-ttu-id="d2840-127">Outils Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d2840-127">Windows Communication Foundation Tools</span></span>](../../../docs/framework/wcf/tools.md)  
   
- [<span data-ttu-id="48a82-128">Exemples Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="48a82-128">Windows Communication Foundation Samples</span></span>](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [<span data-ttu-id="d2840-128">Exemples Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="d2840-128">Windows Communication Foundation Samples</span></span>](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
- [<span data-ttu-id="48a82-129">Prise en main</span><span class="sxs-lookup"><span data-stu-id="48a82-129">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
+ [<span data-ttu-id="d2840-129">Prise en main</span><span class="sxs-lookup"><span data-stu-id="d2840-129">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   
- [<span data-ttu-id="48a82-130">Hébergement IIS à l’aide de code en ligne</span><span class="sxs-lookup"><span data-stu-id="48a82-130">IIS Hosting Using Inline Code</span></span>](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
+ [<span data-ttu-id="d2840-130">Hébergement IIS à l’aide de code en ligne</span><span class="sxs-lookup"><span data-stu-id="d2840-130">IIS Hosting Using Inline Code</span></span>](../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)  
   
- [<span data-ttu-id="48a82-131">Auto-hébergement</span><span class="sxs-lookup"><span data-stu-id="48a82-131">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+ [<span data-ttu-id="d2840-131">Auto-hébergement</span><span class="sxs-lookup"><span data-stu-id="d2840-131">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
