@@ -3,11 +3,11 @@ title: Cette opération ne peut avoir lieu que lorsque le File est fermé
 ms.date: 07/20/2015
 ms.assetid: 79fe95ae-4aff-469f-beda-d5a85c91d421
 ms.openlocfilehash: 0a7f6afc7f9ecb232e24d5536d2274db57d1d820
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138199"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185452"
 ---
 # <a name="this-operation-can-only-be-done-when-the-file-is-closed"></a>Cette opération ne peut avoir lieu que lorsque le File est fermé
 Quand un fichier est ouvert, une tentative d’exécution d’une opération qui ne peut être effectuée que quand le fichier est fermé a été effectuée.  

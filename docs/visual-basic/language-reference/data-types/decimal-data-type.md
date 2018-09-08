@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036192"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180460"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal, type de données (Visual Basic)
 Contient des valeurs (16 octets) de 128 bits représentant des nombres entier de 96 bits (12 octets) mis à l’échelle par une puissance de 10 variable signés. Le facteur d’échelle spécifie le nombre de chiffres à droite de la virgule décimale ; Il est compris entre 0 et 28. Avec une échelle de 0 (pas de décimales), la plus grande valeur possible est +/-79,228,162,514,264,337,593,543,950,335 (+/-7 9228162514264337593543950335E + 28). La plus grande valeur est +/-7,9228162514264337593543950335 avec 28 décimales, et la plus petite valeur différente de zéro est +/-0,0000000000000000000000000001 (+/-1E-28).  

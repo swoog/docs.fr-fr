@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871057"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183169"
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonctionnalités à d’autres composants et d’héberger des applications. La plupart des logiciels actuels incluent des objets COM. Bien que les assemblys .NET représentent le meilleur choix pour les nouvelles applications, vous devrez peut-être parfois utiliser des objets COM. Cette section aborde certains des problèmes liés à la création et l’utilisation des objets COM avec Visual Basic.  
@@ -50,10 +50,10 @@ Le modèle COM (Component Object Model) permet à un objet d’exposer ses fonct
  [Interopération avec du code non managé](../../../framework/interop/index.md)  
  Décrit les services d'interopérabilité fournis par le common language runtime.  
   
- [Exposition de composants COM au .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Exposition de composants COM au .NET Framework](../../../framework/interop/exposing-com-components.md)  
  Décrit le processus d’appel de types COM via COM Interop.  
   
- [Exposition de composants .NET Framework à COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Exposition de composants .NET Framework à COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Décrit la préparation et l’utilisation de types managés à partir de COM.  
   
  [Application d’attributs d’interopérabilité](../../../framework/interop/applying-interop-attributes.md)  

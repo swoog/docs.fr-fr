@@ -3,11 +3,11 @@ title: Opérateurs booléens (F#)
 description: 'En savoir plus sur les opérateurs booléens sont disponibles dans le langage de programmation F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43784512"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172727"
 ---
 # <a name="boolean-operators"></a>Opérateurs booléens
 

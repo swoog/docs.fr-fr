@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60cd661fe321c7bc3346f4d20e373240d6c35b5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13bce09ca9fd1ae9ebb919a9245d8ccf87fbde1d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653158"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174157"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 Spécifie un espace de noms pour toutes les déclarations de type.  
@@ -31,16 +31,16 @@ Spécifie un espace de noms pour toutes les déclarations de type.
   
 |Terme|Définition|  
 |---|---|  
-|`namespace`|Le nom de l’espace de noms dans lequel placer toutes les déclarations de type pour le projet actuel.|  
+|`namespace`|Le nom de l’espace de noms dans lequel encadrer toutes les déclarations de type pour le projet actuel.|  
   
 ## <a name="remarks"></a>Notes  
- Si vous utilisez le fichier exécutable Visual Studio (Devenv.exe) pour compiler un projet créé dans l’environnement de développement intégré Visual Studio, utilisez `-rootnamespace` pour spécifier la valeur de la <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> propriété. Consultez [commutateurs de ligne de commande Devenv](/visualstudio/ide/reference/devenv-command-line-switches) pour plus d’informations.  
+ Si vous utilisez le fichier exécutable de Visual Studio (Devenv.exe) pour compiler un projet créé dans l’environnement de développement intégré Visual Studio, utilisez `-rootnamespace` pour spécifier la valeur de la <xref:VSLangProj80.VBProjectProperties3.RootNamespace%2A> propriété. Consultez [commutateurs de ligne de commande Devenv](/visualstudio/ide/reference/devenv-command-line-switches) pour plus d’informations.  
   
- Utilisez le désassembleur MSIL du common language runtime (`Ildasm.exe`) pour afficher les noms de l’espace de noms dans votre fichier de sortie.  
+ Utiliser le common language runtime MSIL Disassembler (`Ildasm.exe`) pour afficher les noms d’espace de noms dans votre fichier de sortie.  
   
-|Pour définir des - rootnamespace dans l’environnement de développement intégré Visual Studio|  
+|Pour définir - rootnamespace dans l’environnement de développement intégré Visual Studio|  
 |---|  
-|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Application** .<br />3.  Modifiez la valeur dans la **racine Namespace** boîte.|  
+|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Application** .<br />3.  Modifiez la valeur dans le **racine Namespace** boîte.|  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `In.vb` et englobe toutes les déclarations de type dans l’espace de noms `mynamespace`.  
@@ -49,7 +49,8 @@ Spécifie un espace de noms pour toutes les déclarations de type.
 vbc -rootnamespace:mynamespace in.vb  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Ildasm.exe (désassembleur IL)](https://msdn.microsoft.com/library/f7dy01k1)  
- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [Ildasm.exe (désassembleur IL)](../../../framework/tools/ildasm-exe-il-disassembler.md)  
+- [Exemples de lignes de commande de compilation](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

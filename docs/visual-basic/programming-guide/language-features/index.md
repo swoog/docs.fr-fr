@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879602"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185361"
 ---
 # <a name="visual-basic-language-features"></a>Fonctionnalités du langage Visual Basic
 Les rubriques suivantes présentent et décrivent les composants essentiels de Visual Basic, un langage de programmation orientée objet. Après avoir créé l’interface utilisateur de votre application à l’aide des formulaires et des contrôles, vous avez besoin d’écrire le code qui définit le comportement de l’application. Comme avec n’importe quel langage de programmation modern, Visual Basic prend en charge un nombre de constructions de programmation courants et les éléments de langage.  
@@ -77,8 +77,9 @@ Les rubriques suivantes présentent et décrivent les composants essentiels de V
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Fournit des liens vers des rubriques qui expliquent comment utiliser XML en Visual Basic.  
   
-## <a name="related-sections"></a>Rubriques connexes  
- [Collections](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>Rubriques connexes
+
+ [Collections](../../../visual-basic/programming-guide/concepts/collections.md)  
  Décrit quelques-uns des types de collections fournis par .NET Framework. Montre comment utiliser des collections simples et des collections de paires clé/valeur.  
   
  [Informations de référence sur le langage Visual Basic](../../../visual-basic/language-reference/index.md)  
