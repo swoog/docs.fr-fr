@@ -5,21 +5,21 @@ f1_keywords:
 - vbrNetwork_UploadAddressNeedsFilename
 ms.assetid: 0ee11749-0432-4ccb-8c08-1663a4a55ad0
 ms.openlocfilehash: a3f0b02246264cb50c6f719294cb990221702ea2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44130784"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212267"
 ---
-# <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a><span data-ttu-id="0b56e-102">L’adresse de UploadFile doit inclure un nom de fichier</span><span class="sxs-lookup"><span data-stu-id="0b56e-102">The address for UploadFile needs to include a filename</span></span>
-<span data-ttu-id="0b56e-103">Lors du chargement de fichiers avec la méthode `UploadFile` , vous devez fournir un nom de fichier dans le chemin de destination.</span><span class="sxs-lookup"><span data-stu-id="0b56e-103">When uploading files with the `UploadFile` method, you must supply a file name in the destination path.</span></span>  
+# <a name="the-address-for-uploadfile-needs-to-include-a-filename"></a><span data-ttu-id="ecfed-102">L’adresse de UploadFile doit inclure un nom de fichier</span><span class="sxs-lookup"><span data-stu-id="ecfed-102">The address for UploadFile needs to include a filename</span></span>
+<span data-ttu-id="ecfed-103">Lors du chargement de fichiers avec la méthode `UploadFile` , vous devez fournir un nom de fichier dans le chemin de destination.</span><span class="sxs-lookup"><span data-stu-id="ecfed-103">When uploading files with the `UploadFile` method, you must supply a file name in the destination path.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="0b56e-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="0b56e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ecfed-104">Pour corriger cette erreur</span><span class="sxs-lookup"><span data-stu-id="ecfed-104">To correct this error</span></span>  
   
--   <span data-ttu-id="0b56e-105">Fournissez un nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="0b56e-105">Supply a file name.</span></span>  
+-   <span data-ttu-id="ecfed-105">Fournissez un nom de fichier.</span><span class="sxs-lookup"><span data-stu-id="ecfed-105">Supply a file name.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b56e-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="0b56e-106">See Also</span></span>  
- [<span data-ttu-id="0b56e-107">Opérations de réseau dans le .NET Framework avec Visual Basic</span><span class="sxs-lookup"><span data-stu-id="0b56e-107">Network Operations in the .NET Framework with Visual Basic</span></span>](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
- [<span data-ttu-id="0b56e-108">My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="0b56e-108">My.Computer.Network</span></span>](xref:Microsoft.VisualBasic.Devices.Network)  
- [<span data-ttu-id="0b56e-109">Guide pratique : charger un fichier</span><span class="sxs-lookup"><span data-stu-id="0b56e-109">How to: Upload a File</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
- [<span data-ttu-id="0b56e-110">My.Computer.Network.UploadFile</span><span class="sxs-lookup"><span data-stu-id="0b56e-110">My.Computer.Network.UploadFile</span></span>](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)
+## <a name="see-also"></a><span data-ttu-id="ecfed-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ecfed-106">See Also</span></span>  
+ [<span data-ttu-id="ecfed-107">Opérations de réseau dans le .NET Framework avec Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ecfed-107">Network Operations in the .NET Framework with Visual Basic</span></span>](https://msdn.microsoft.com/library/c5379021-44ef-4d6a-acf5-e951fdcab6b2)  
+ [<span data-ttu-id="ecfed-108">My.Computer.Network</span><span class="sxs-lookup"><span data-stu-id="ecfed-108">My.Computer.Network</span></span>](xref:Microsoft.VisualBasic.Devices.Network)  
+ [<span data-ttu-id="ecfed-109">Guide pratique : charger un fichier</span><span class="sxs-lookup"><span data-stu-id="ecfed-109">How to: Upload a File</span></span>](../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)  
+ [<span data-ttu-id="ecfed-110">My.Computer.Network.UploadFile</span><span class="sxs-lookup"><span data-stu-id="ecfed-110">My.Computer.Network.UploadFile</span></span>](xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A)

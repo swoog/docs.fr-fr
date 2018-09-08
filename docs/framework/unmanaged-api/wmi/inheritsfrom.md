@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44133256"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222105"
 ---
-# <a name="inheritsfrom-function"></a><span data-ttu-id="b0b14-103">InheritsFrom (fonction)</span><span class="sxs-lookup"><span data-stu-id="b0b14-103">InheritsFrom function</span></span>
-<span data-ttu-id="b0b14-104">Détermine si l’instance ou la classe active dérive d’une classe parente spécifié.</span><span class="sxs-lookup"><span data-stu-id="b0b14-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
+# <a name="inheritsfrom-function"></a><span data-ttu-id="ce3b7-103">InheritsFrom (fonction)</span><span class="sxs-lookup"><span data-stu-id="ce3b7-103">InheritsFrom function</span></span>
+<span data-ttu-id="ce3b7-104">Détermine si l’instance ou la classe active dérive d’une classe parente spécifié.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="b0b14-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b0b14-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce3b7-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ce3b7-105">Syntax</span></span>  
   
 ```
 HRESULT InheritsFrom (
@@ -38,37 +38,37 @@ HRESULT InheritsFrom (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="b0b14-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b0b14-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="ce3b7-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ce3b7-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="b0b14-107">[in] Ce paramètre n’est pas utilisé.</span><span class="sxs-lookup"><span data-stu-id="b0b14-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="ce3b7-107">[in] Ce paramètre n’est pas utilisé.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="b0b14-108">[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span><span class="sxs-lookup"><span data-stu-id="b0b14-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="ce3b7-108">[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszAncestor`  
-<span data-ttu-id="b0b14-109">[in] Le nom de la classe.</span><span class="sxs-lookup"><span data-stu-id="b0b14-109">[in] The name of the class.</span></span> <span data-ttu-id="b0b14-110">`wszAncestor` doit pointer vers un valide `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="b0b14-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="ce3b7-109">[in] Le nom de la classe.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-109">[in] The name of the class.</span></span> <span data-ttu-id="ce3b7-110">`wszAncestor` doit pointer vers un valide `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="b0b14-111">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="b0b14-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="ce3b7-111">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ce3b7-111">Return value</span></span>
 
-<span data-ttu-id="b0b14-112">Les valeurs suivantes est retournées par cette fonction sont définies dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code :</span><span class="sxs-lookup"><span data-stu-id="b0b14-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="ce3b7-112">Les valeurs suivantes est retournées par cette fonction sont définies dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code :</span><span class="sxs-lookup"><span data-stu-id="ce3b7-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="b0b14-113">Constante</span><span class="sxs-lookup"><span data-stu-id="b0b14-113">Constant</span></span>  |<span data-ttu-id="b0b14-114">Value</span><span class="sxs-lookup"><span data-stu-id="b0b14-114">Value</span></span>  |<span data-ttu-id="b0b14-115">Description</span><span class="sxs-lookup"><span data-stu-id="b0b14-115">Description</span></span>  |
+|<span data-ttu-id="ce3b7-113">Constante</span><span class="sxs-lookup"><span data-stu-id="ce3b7-113">Constant</span></span>  |<span data-ttu-id="ce3b7-114">Value</span><span class="sxs-lookup"><span data-stu-id="ce3b7-114">Value</span></span>  |<span data-ttu-id="ce3b7-115">Description</span><span class="sxs-lookup"><span data-stu-id="ce3b7-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="b0b14-116">0</span><span class="sxs-lookup"><span data-stu-id="b0b14-116">0</span></span> | <span data-ttu-id="b0b14-117">L’objet actuel hérite `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="b0b14-117">The current object inherits from `wszAncestor`.</span></span>  |
-| `WBEM_S_FALSE` | <span data-ttu-id="b0b14-118">1</span><span class="sxs-lookup"><span data-stu-id="b0b14-118">1</span></span> | <span data-ttu-id="b0b14-119">L’objet en cours n’hérite pas de `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="b0b14-119">The current object does not inherit from `wszAncestor`.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="b0b14-120">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="b0b14-120">0x80041008</span></span> | <span data-ttu-id="b0b14-121">`wszAncestor` a la valeur `null`.</span><span class="sxs-lookup"><span data-stu-id="b0b14-121">`wszAncestor` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="ce3b7-116">0</span><span class="sxs-lookup"><span data-stu-id="ce3b7-116">0</span></span> | <span data-ttu-id="ce3b7-117">L’objet actuel hérite `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-117">The current object inherits from `wszAncestor`.</span></span>  |
+| `WBEM_S_FALSE` | <span data-ttu-id="ce3b7-118">1</span><span class="sxs-lookup"><span data-stu-id="ce3b7-118">1</span></span> | <span data-ttu-id="ce3b7-119">L’objet en cours n’hérite pas de `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-119">The current object does not inherit from `wszAncestor`.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="ce3b7-120">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="ce3b7-120">0x80041008</span></span> | <span data-ttu-id="ce3b7-121">`wszAncestor` a la valeur `null`.</span><span class="sxs-lookup"><span data-stu-id="ce3b7-121">`wszAncestor` is `null`.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="b0b14-122">Notes</span><span class="sxs-lookup"><span data-stu-id="b0b14-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="ce3b7-122">Notes</span><span class="sxs-lookup"><span data-stu-id="ce3b7-122">Remarks</span></span>
 
-<span data-ttu-id="b0b14-123">Cette fonction encapsule un appel à la [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) (méthode).</span><span class="sxs-lookup"><span data-stu-id="b0b14-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
+<span data-ttu-id="ce3b7-123">Cette fonction encapsule un appel à la [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) (méthode).</span><span class="sxs-lookup"><span data-stu-id="ce3b7-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="b0b14-124">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b0b14-124">Requirements</span></span>  
- <span data-ttu-id="b0b14-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b0b14-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce3b7-124">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="ce3b7-124">Requirements</span></span>  
+ <span data-ttu-id="ce3b7-125">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ce3b7-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b0b14-126">**En-tête :** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="b0b14-126">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="ce3b7-126">**En-tête :** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ce3b7-126">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="b0b14-127">**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b0b14-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="ce3b7-127">**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ce3b7-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0b14-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b0b14-128">See also</span></span>  
-[<span data-ttu-id="b0b14-129">WMI et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="b0b14-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="ce3b7-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ce3b7-128">See also</span></span>  
+[<span data-ttu-id="ce3b7-129">WMI et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="ce3b7-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
