@@ -2,12 +2,12 @@
 title: 'Comment : partager un Assembly avec d’autres Applications (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3d29a3558a64c02fc8c59035f2fee5c64c4a776f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062895"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200140"
 ---
 # <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Comment : partager un Assembly avec d’autres Applications (Visual Basic)
 Les assemblys peuvent être privés ou partagés. Par défaut, la plupart des programmes simples se composent d’un assembly privé, car ils ne sont pas destinés à être utilisés par d’autres applications.  
@@ -24,8 +24,10 @@ Les assemblys peuvent être privés ou partagés. Par défaut, la plupart des pr
   
 4.  Ajoutez votre assembly au Global Assembly Cache. Pour plus d’informations, consultez [Guide pratique pour installer un assembly dans le Global Assembly Cache](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Accédez aux types contenus dans l’assembly à partir d’autres applications. Pour plus d’informations, consultez [Guide pratique pour référencer un assembly avec un nom fort](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Accédez aux types contenus dans l’assembly à partir d’autres applications. Pour plus d’informations, consultez [Guide pratique pour référencer un assembly avec un nom fort](../../../../framework/app-domains/how-to-reference-a-strong-named-assembly.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md) [assemblys et le Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Concepts de programmation](../../../../visual-basic/programming-guide/concepts/index.md)
+- [Assemblys et le Global Assembly Cache (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)

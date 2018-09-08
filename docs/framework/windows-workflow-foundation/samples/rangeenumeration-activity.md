@@ -3,11 +3,11 @@ title: Activité RangeEnumeration
 ms.date: 03/30/2017
 ms.assetid: ca5b78f4-94fa-4aa7-830d-26039ac422c8
 ms.openlocfilehash: c9cf522227620422b414adc26cbc0bf338bf57d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868716"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207588"
 ---
 # <a name="rangeenumeration-activity"></a>Activité RangeEnumeration
 Cet exemple montre comment créer une activité personnalisée qui itère au sein d'une collection de nombres. Le tableau suivant détaille les fichiers principaux inclus dans l'exemple.  

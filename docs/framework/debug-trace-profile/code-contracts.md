@@ -1,6 +1,6 @@
 ---
 title: Contrats de code
-ms.date: 03/30/2017
+ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080606"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222121"
 ---
 # <a name="code-contracts"></a>Contrats de code
 Les contrats de code offrent un moyen de spécifier des conditions préalables, des post-conditions et des invariants d'objet dans votre code. Les conditions préalables sont des exigences qui doivent être satisfaites à l'entrée d'une méthode ou d'une propriété. Les post-conditions décrivent les attentes à la sortie de la méthode ou de la propriété. Les invariants d'objet décrivent l'état attendu pour une classe présentant un état correct.  
@@ -148,7 +148,7 @@ Contract.Invariant(this.x > this.y);
 }  
 ```  
   
- Les invariants sont définis de façon conditionnelle par le symbole de préprocesseur CONTRACTS_FULL. Ils sont vérifiés au moment de l'exécution à la fin de chaque méthode publique. Si un invariant spécifie une méthode publique dans la même classe, la vérification d'invariant prévue normalement à la fin de cette méthode publique est désactivée. À la place, la vérification se produit uniquement à la fin de l'appel de méthode le plus à l'extérieur de cette classe. Cela se produit également si la classe est à nouveau entrée à cause d'un appel à une méthode sur une autre classe. Les invariants ne sont pas vérifiés pour les finaliseurs d'objets ni pour les méthodes qui implémentent la méthode <xref:System.IDisposable.Dispose%2A>.  
+ Les invariants sont définis de façon conditionnelle par le symbole de préprocesseur CONTRACTS_FULL. Ils sont vérifiés au moment de l'exécution à la fin de chaque méthode publique. Si un invariant spécifie une méthode publique dans la même classe, la vérification d'invariant prévue normalement à la fin de cette méthode publique est désactivée. À la place, la vérification se produit uniquement à la fin de l'appel de méthode le plus à l'extérieur de cette classe. Cela se produit également si la classe est à nouveau entrée à cause d'un appel à une méthode sur une autre classe. Ils ne sont pas vérifiés pour un finaliseur d’objet et un <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> implémentation.  
   
 <a name="usage_guidelines"></a>   
 ## <a name="usage-guidelines"></a>Indications relatives à l'utilisation  

@@ -3,11 +3,11 @@ title: Calculs tardifs (F#)
 description: 'Découvrez comment les calculs tardifs F # peuvent améliorer les performances de vos applications et les bibliothèques.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44037066"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201624"
 ---
 # <a name="lazy-computations"></a>Calculs tardifs
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5120823f4e001fc3aff71f267176311e2465597a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604846"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201229"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod, opérateur (Visual Basic)
 Divise deux nombres et retourne uniquement le reste.  
@@ -42,12 +42,12 @@ number1 Mod number2
   
 ## <a name="result"></a>Résultat
 
-Le résultat est le reste après `number1` divisé par `number2`. Par exemple, l’expression `14 Mod 4` prend la valeur 2.  
+Le résultat est le reste après `number1` est divisé par `number2`. Par exemple, l’expression `14 Mod 4` renvoie la valeur 2.  
 
 > [!NOTE]
-> Il existe une différence entre *reste* et *modulo* en mathématiques, avec des résultats différents pour les nombres négatifs. Le `Mod` opérateur en Visual Basic, le .NET Framework `op_Modulus` opérateur et sous-jacent [rem]<xref:System.Reflection.Emit.OpCodes.Rem> instruction IL tous effectuer une opération de reste.
+> Il existe une différence entre *reste* et *modulo* en mathématiques, avec des résultats différents pour les nombres négatifs. Le `Mod` opérateur en Visual Basic, le .NET Framework `op_Modulus` opérateur et sous-jacent [rem](<xref:System.Reflection.Emit.OpCodes.Rem>) instruction IL tous effectuer une opération de reste.
 
-Le résultat d’une `Mod` opération conserve le signe du dividende, `number1`, et par conséquent, il peut être positif ou négatif. Le résultat est toujours dans la plage (-`number2`, `number2`), exclusif. Par exemple :
+Le résultat d’une `Mod` opération conserve le signe du dividende, `number1`, et par conséquent, il peut être positif ou négatif. Le résultat est toujours dans la plage (-`number2`, `number2`), de manière exclusive. Exemple :
 
 ```vb
 Public Module Example
@@ -66,18 +66,18 @@ End Module
 ```
 
 ## <a name="remarks"></a>Notes  
- Si le paramètre `number1` ou `number2` est une valeur à virgule flottante, le reste à virgule flottante de la division est retourné. Le type de données du résultat est le plus petit type de données qui peut contenir toutes les valeurs possibles qui résultent de la division avec les types de données de `number1` et `number2`.  
+ Si `number1` ou `number2` est une valeur à virgule flottante, le reste de la division à virgule flottante est retourné. Le type de données du résultat est le plus petit type de données qui peut contenir toutes les valeurs possibles qui résultent de la division avec les types de données de `number1` et `number2`.  
   
- Si `number1` ou `number2` prend la valeur de [rien](../../../visual-basic/language-reference/nothing.md), il est traité en tant que zéro.  
+ Si `number1` ou `number2` prend la valeur [rien](../../../visual-basic/language-reference/nothing.md), il est considéré comme égal à zéro.  
   
  Les opérateurs connexes sont les suivantes :  
   
--   Le [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) renvoie le quotient entier d’une division. Par exemple, l’expression `14 \ 4` renvoie la valeur 3.  
+-   Le [\, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) renvoie le quotient entier d’une division. Par exemple, l’expression `14 \ 4` prend la valeur 3.  
   
--   Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retourne le quotient complet, y compris le reste, en tant que nombre à virgule flottante. Par exemple, l’expression `14 / 4` prend la valeur 3,5.  
+-   Le [/, opérateur (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) retourne le quotient complet, y compris le reste, comme un nombre à virgule flottante. Par exemple, l’expression `14 / 4` prend la valeur 3.5.  
   
 ## <a name="attempted-division-by-zero"></a>Tentative de division par zéro  
- Si `number2` correspond à zéro, le comportement de la `Mod` opérateur varie selon le type de données des opérandes. Une division intégrale lève une <xref:System.DivideByZeroException> exception. Une division à virgule flottante retourne <xref:System.Double.NaN>.  
+ Si `number2` prend la valeur zéro, le comportement de la `Mod` opérateur varie selon le type de données des opérandes. Une division intégrale lève un <xref:System.DivideByZeroException> exception. Retourne une division à virgule flottante <xref:System.Double.NaN>.  
   
 ## <a name="equivalent-formula"></a>Formule équivalente  
  L’expression `a Mod b` correspond à une des formules suivantes :  
@@ -87,13 +87,13 @@ End Module
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>À virgule flottante imprécision  
- Lorsque vous travaillez avec des nombres à virgule flottante, n’oubliez pas qu’ils n’ont pas toujours de représentation décimale précise dans la mémoire. Cela peut entraîner des résultats inattendus à partir de certaines opérations, telles que la comparaison de valeurs et les `Mod` opérateur. Pour plus d’informations, consultez [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+ Lorsque vous travaillez avec des nombres à virgule flottante, n’oubliez pas qu’ils n’ont pas toujours de représentation décimale précise dans la mémoire. Cela peut entraîner des résultats inattendus à partir de certaines opérations, comme la comparaison de valeurs et les `Mod` opérateur. Pour plus d’informations, consultez [dépannage des Types de données](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Surcharge  
- Le `Mod` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement. Si votre code applique `Mod` à une instance d’une classe ou une structure qui inclut une telle surcharge, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Le `Mod` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement. Si votre code s’applique `Mod` à une instance d’une classe ou une structure qui inclut une telle surcharge, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant utilise le `Mod` opérateur diviser deux nombres et retourner uniquement le reste. Si un nombre est un nombre à virgule flottante, le résultat est un nombre à virgule flottante qui représente le reste.  
+ L’exemple suivant utilise le `Mod` opérateur diviser deux nombres et retourner uniquement le reste. Si des nombres sont un nombre à virgule flottante, le résultat est un nombre à virgule flottante qui représente le reste.  
   
  [!code-vb[VbVbalrOperators#31](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/mod-operator_1.vb)]  
   

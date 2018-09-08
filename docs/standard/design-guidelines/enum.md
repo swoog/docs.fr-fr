@@ -12,11 +12,11 @@ ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9dea187b5f3911114e551d640e0bb0aa6fac1143
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137211"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213288"
 ---
 # <a name="enum-design"></a>Conception d'énumérations
 Les enums sont un type spécial de type valeur. Il existe deux types d’énumérations : les enums enums et indicateur simples.  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d0e54aeda1ee51fe7ba87c3ac69c556ea25e320f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43870209"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198931"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -85,12 +85,12 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
   
  Lorsque vous créez un authentificateur personnalisé, la méthode la plus importante à substituer correspond à la méthode <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A>. Pour obtenir un exemple d’authentification personnalisée, consultez [Validateur de certificat X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md). Pour plus d’informations, consultez [Informations d’identification personnalisées et validation d’informations d’identification](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
-## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Utilisation de l'outil Makecert.exe pour construire une chaîne de certificat  
- L'outil de création de certificat (Makecert.exe) crée des certificats X.509 ainsi que des paires de clés publique/privée. Vous pouvez enregistre les clés privées sur votre disque, puis les utiliser pour émettre et signer de nouveaux certificats, instaurant ainsi une hiérarchie de certificats sous forme de chaîne. Cet outil est conçu uniquement pour vous assister lors du développement des services et ne doit en aucun cas être utilisé pour créer des certificats devant être effectivement déployés. Quand vous développez un service WCF, effectuez les étapes suivantes pour générer une chaîne d’approbation avec Makecert.exe.  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>À l’aide de l’applet de commande Powershell nouveau-SelfSignedCertificate pour générer une chaîne de certificat  
+ L’applet de commande Powershell New-SelfSignedCertificate crée des certificats X.509 et des paires de clés publique/privées. Vous pouvez enregistre les clés privées sur votre disque, puis les utiliser pour émettre et signer de nouveaux certificats, instaurant ainsi une hiérarchie de certificats sous forme de chaîne. L’applet de commande est destinée uniquement comme une aide lors du développement de services et ne doit jamais être utilisé pour créer des certificats pour le déploiement réel. Lorsque vous développez un service WCF, procédez comme suit pour créer une chaîne d’approbation avec l’applet de commande New-SelfSignedCertificate.  
   
-#### <a name="to-build-a-chain-of-trust-with-makecertexe"></a>Pour construire une chaîne d'approbation à l'aide de l'outil Makecert.exe  
+#### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Pour construire une chaîne d’approbation avec l’applet de commande New-SelfSignedCertificate  
   
-1.  Créez un certificat d'autorité racine temporaire (auto-signé) à l'aide de l'outil MakeCert.exe. Enregistrez la clé privée sur le disque.  
+1.  Créez un certificat (auto-signé) d’autorité racine temporaire à l’aide de l’applet de commande New-SelfSignedCertificate. Enregistrez la clé privée sur le disque.  
   
 2.  Utilisez ce nouveau certificat pour émettre un autre certificat contenant la clé publique.  
   

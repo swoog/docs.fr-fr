@@ -3,11 +3,11 @@ title: 'Procédure : créer un service de workflow qui appelle un autre service
 ms.date: 03/30/2017
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
 ms.openlocfilehash: 1b30da34f7c85cccd98b18cd32b81c83630989b2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44080213"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216130"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Procédure : créer un service de workflow qui appelle un autre service de workflow
 

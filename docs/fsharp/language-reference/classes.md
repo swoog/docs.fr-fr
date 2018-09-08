@@ -3,11 +3,11 @@ title: Classes (F#)
 description: 'Découvrez comment F # Classes sont des types qui représentent des objets qui peuvent avoir des propriétés, méthodes et événements.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138823"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44199828"
 ---
 # <a name="classes"></a>Classes
 

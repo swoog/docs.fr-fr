@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872417"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202269"
 ---
 # <a name="merging-dataset-contents"></a>Fusion de contenu de DataSet
 Vous pouvez utiliser la méthode <xref:System.Data.DataSet.Merge%2A> pour fusionner le contenu d'un tableau <xref:System.Data.DataSet>, <xref:System.Data.DataTable> ou <xref:System.Data.DataRow> dans un `DataSet` existant. La façon dont les nouvelles données sont fusionnées dans un `DataSet` existant dépend de plusieurs facteurs et options.  

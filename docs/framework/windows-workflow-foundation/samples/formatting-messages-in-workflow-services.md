@@ -3,11 +3,11 @@ title: Mise en forme des messages dans les services de workflow
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
 ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: HT
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134790"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198970"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Mise en forme des messages dans les services de workflow
 Cet exemple montre comment différents types utilisateur peuvent être utilisés dans des activités de messagerie (services WF). L'exemple de service est un service d'approbation des dépenses simple qui expose trois opérations. `ApproveExpense` prend un type de contrat de données et montre comment utiliser des types connus. L'opération retourne `true` ou `false` selon le montant de la dépense. `ApprovePO` prend un type XmlSerializer et retourne `true` ou `false` selon le montant des dépenses.`ApprovedVendor` prend un type de contrat de message et retourne `true` ou `false` si le fournisseur est dans la liste des fournisseurs approuvés ou si la demande provient du service financier (le service financier peut utiliser n’importe quel fournisseur).  
