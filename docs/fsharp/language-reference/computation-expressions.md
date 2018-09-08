@@ -3,11 +3,11 @@ title: Expressions de calcul (F#)
 description: 'Découvrez comment créer une syntaxe pratique pour l’écriture de calculs en F # qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle.'
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44048268"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200062"
 ---
 # <a name="computation-expressions"></a>Expressions de calcul
 

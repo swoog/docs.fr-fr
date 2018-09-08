@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579806"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207640"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Chaînes de format de date et d'heure standard
 Une chaîne de format de date et d'heure standard utilise un spécificateur de format unique pour définir la représentation textuelle d'une valeur de date et d'heure. Toute chaîne de format de date et d’heure contenant plusieurs caractères, y compris un espace, est interprétée comme une chaîne de format de date et d’heure personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Une chaîne de format standard ou personnalisée peut être utilisée de deux façons :  
@@ -413,9 +413,10 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
 ### <a name="datetimeformatinfo-properties"></a>Propriétés DateTimeFormatInfo  
  La mise en forme dépend des propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> actif, qui est fourni implicitement par la culture actuelle du thread ou explicitement par le paramètre <xref:System.IFormatProvider> de la méthode qui appelle la mise en forme. Pour le paramètre <xref:System.IFormatProvider>, votre application doit spécifier un objet <xref:System.Globalization.CultureInfo>, qui représente une culture, ou un objet <xref:System.Globalization.DateTimeFormatInfo>, qui représente les conventions de présentation de la date et de l'heure d'une culture particulière. La plupart des spécificateurs de format de date et d'heure standard sont des alias des modèles de mise en forme définis par les propriétés de l'objet <xref:System.Globalization.DateTimeFormatInfo> en cours. Votre application peut modifier le résultat produit par certains spécificateurs de format de date et d'heure standard en modifiant les modèles de format de date et d'heure correspondants de la propriété <xref:System.Globalization.DateTimeFormatInfo> correspondante.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Exemple : utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Mise en forme des types](../../../docs/standard/base-types/formatting-types.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Exemple : utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
