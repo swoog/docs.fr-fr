@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3e613ad4823254a6bed43cb95294e6b8d3674b6d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881747"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138940"
 ---
 # <a name="security-and-race-conditions"></a>Sécurité et conditions de concurrence
 Un autre problème concerne le risque de failles de sécurité exploité par les conditions de concurrence. Il existe plusieurs façons dans lequel cela peut se produire. Les sous-rubriques qui suivent décrivent certains des principaux pièges que le développeur doit éviter.  
@@ -38,7 +38,7 @@ End Sub
 ```csharp  
 void Dispose()   
 {  
-    if( myObj != null )   
+    if (myObj != null)   
     {  
         Cleanup(myObj);  
         myObj = null;  
@@ -59,7 +59,7 @@ Sub SomeSecureFunction()
     If SomeDemandPasses() Then  
         fCallersOk = True  
         DoOtherWork()  
-        fCallersOk = False()  
+        fCallersOk = False  
     End If  
 End Sub  
   
@@ -76,16 +76,16 @@ End Sub
 ```csharp  
 void SomeSecureFunction()   
 {  
-    if(SomeDemandPasses())   
+    if (SomeDemandPasses())   
     {  
         fCallersOk = true;  
         DoOtherWork();  
-        fCallersOk = false();  
+        fCallersOk = false;  
     }  
 }  
 void DoOtherWork()   
 {  
-    if( fCallersOK )   
+    if (fCallersOK)   
     {  
         DoSomethingTrusted();  
     }  

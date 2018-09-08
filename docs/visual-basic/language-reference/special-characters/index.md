@@ -3,19 +3,19 @@ title: Caractères spéciaux (référence Visual Basic)
 ms.date: 10/31/2017
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04cc2ca4efe91ecfefce69583e0102823d11a5a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bbe3213030f8b8964de0e415cba5eaff61ba028
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596666"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137276"
 ---
 # <a name="special-characters-visual-basic-reference"></a>Caractères spéciaux (référence Visual Basic)
 
-Caractères spéciaux sont des caractères prédéfinis, contextuelles qui modifie l’élément de programme dans lequel ils sont ajoutés. Visual Basic prend en charge les caractères spéciaux suivants : 
+Caractères spéciaux sont des caractères contextuels prédéfinis qui modifie l’élément de programme auquel ils sont ajoutés. Visual Basic prend en charge le caractère spécial suivant : 
 
 - [$](interpolated.md), le caractère de chaîne interpolé.
 
 ## <a name="see-also"></a>Voir aussi  
-[Informations de référence sur Visual Basic](../../../csharp/language-reference/index.md)   
- 
+
+- [Informations de référence sur Visual Basic](../../../visual-basic/language-reference/index.md)

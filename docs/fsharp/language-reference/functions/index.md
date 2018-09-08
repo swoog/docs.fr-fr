@@ -2,12 +2,12 @@
 title: Fonctions (F#)
 description: 'En savoir plus sur les fonctions en F # et comment F # prend en charge les constructions de programmation fonctionnelles courants.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 7a5b54b7bcfdeee7018dba38016db6182ef95ff0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43803910"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140916"
 ---
 # <a name="functions"></a>Fonctions
 
@@ -112,7 +112,7 @@ Vous fournissez ensuite, selon vos besoins, l’argument supplémentaire pour le
 
 ## <a name="recursive-functions"></a>Fonctions récursives
 
-Les *fonctions récursives* sont des fonctions qui s’appellent. Elles nécessitent la spécification du mot clé **rec** après le mot clé **let**. Appelez la fonction récursive à partir du corps de la fonction, comme vous le feriez pour tout autre appel de fonction. La fonction récursive suivante calcule le *n*e nombre de Fibonacci. La séquence de nombres de Fibonacci est connue depuis l’antiquité ; il s’agit d’une séquence dans laquelle chaque nombre consécutif est la somme des deux nombres précédents dans la séquence.
+Les *fonctions récursives* sont des fonctions qui s’appellent. Elles nécessitent la spécification du mot clé **rec** après le mot clé **let**. Appelez la fonction récursive à partir du corps de la fonction, comme vous le feriez pour tout autre appel de fonction. La fonction récursive suivante calcule le *n*<sup>th</sup> nombre Fibonacci. La séquence de nombres de Fibonacci est connue depuis l’antiquité ; il s’agit d’une séquence dans laquelle chaque nombre consécutif est la somme des deux nombres précédents dans la séquence.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 

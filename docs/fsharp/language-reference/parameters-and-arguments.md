@@ -2,12 +2,12 @@
 title: Paramètres et arguments (F#)
 description: 'En savoir plus sur F # prise en charge linguistique pour la définition de paramètres et en transmettant des arguments aux fonctions, méthodes et propriétés.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a3418ec814e0419d08758cf035ecc0f402b5db1a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062635"
+ms.locfileid: "44131974"
 ---
 # <a name="parameters-and-arguments"></a>Paramètres et arguments
 
@@ -127,15 +127,32 @@ Baud Rate: 300 Duplex: Half Parity: true
 
 ## <a name="passing-by-reference"></a>Passage par référence
 
-Passage d’une valeur de F # par référence implique la `byref` mot clé, qui spécifie que le paramètre est en fait un pointeur vers la valeur passée par référence. Toute valeur passée dans une méthode avec un `byref` comme l’argument doit être `mutable`.
+Passage d’une valeur de F # par référence implique [ByRef](byrefs.md), qui sont des types de pointeur managé. Conseils pour le type à utiliser sont la suivante :
+
+* Utilisez `inref<'T>` si vous avez besoin uniquement de lire le pointeur.
+* Utilisez `outref<'T>` si vous avez besoin uniquement d’écrire dans le pointeur.
+* Utilisez `byref<'T>` si vous avez besoin à la fois lire et écrire dans le pointeur.
+
+```fsharp
+let example1 (x: inref<int>) = printfn "It's %d" x
+
+let example2 (x: outref<int>) = x <- x + 1
+
+let example3 (x: byref<int>) =
+    printfn "It'd %d" x
+    x <- x + 1
+
+// No need to make it mutable, since it's read-only
+let x = 1
+example1 &x
+
+// Needs to be mutable, since we write to it
+let mutable y = 2
+example2 &y
+example3 &y // Now 'y' is 3
+```
 
 Étant donné que le paramètre est un pointeur et la valeur est mutable, les modifications apportées à la valeur sont conservées après l’exécution de la fonction.
-
-Vous pouvez accomplir la même chose avec [cellules de référence](reference-cells.md), mais il est important de noter que **cellules de référence et `byref`s ne sont pas la même chose**. Une cellule de référence est un conteneur pour une valeur que vous pouvez examiner et modifier le contenu de, mais cette valeur se trouve sur le tas et équivaut à disposer d’un enregistrement avec une valeur mutable qu’il contient. Un `byref` un pointeur réels, il s’agit donc une sémantique sous-jacente différente et des règles d’utilisation (ce qui peuvent être assez restrictives).
-
-Les exemples suivants illustrent l’utilisation de la `byref` mot clé. Notez que lorsque vous utilisez une cellule de référence en tant que paramètre, vous devez créer une cellule de référence comme une valeur nommée et l’utiliser comme paramètre, pas seulement ajouter la `ref` comme indiqué dans le premier appel à `Increment` dans le code suivant. Étant donné que la création d’une cellule de référence crée une copie de la valeur sous-jacente, le premier appel incrémente simplement une valeur temporaire.
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-1/snippet3809.fs)]
 
 Vous pouvez utiliser un tuple comme valeur de retour pour stocker les `out` paramètres dans les méthodes de la bibliothèque .NET. Vous pouvez également traiter les `out` paramètre comme un `byref` paramètre. L’exemple de code suivant illustre les deux sens.
 
@@ -155,7 +172,7 @@ Le code suivant illustre l’appel à une méthode .NET qui prend un tableau de 
 
 Lorsque vous exécutez dans un projet, la sortie du code précédent est comme suit :
 
-```
+```console
 a 1 10 Hello world 1 True
 "a"
 1

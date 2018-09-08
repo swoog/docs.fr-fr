@@ -2,12 +2,12 @@
 title: Collections (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 510abe7d818b3a45869824bc52dc4fde38238f7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504442"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129100"
 ---
 # <a name="collections-visual-basic"></a>Collections (Visual Basic)
 Pour de nombreuses applications, vous voulez créer et gérer des groupes d’objets connexes. Il existe deux manières de grouper des objets : en créant des tableaux d’objets ou des collections d’objets.  
@@ -464,7 +464,7 @@ End Class
 ## <a name="defining-a-custom-collection"></a>Définition d’une collection personnalisée  
  Vous pouvez définir une collection en implémentant l’interface <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.IEnumerable>. Pour plus d’informations, consultez [énumération d’une Collection](https://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
- Même si vous pouvez définir une collection personnalisée, il est généralement préférable d’utiliser les collections comprises dans le .NET Framework, lesquelles sont décrites dans [Types de collections](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b), plus haut dans cette rubrique.  
+ Même si vous pouvez définir une collection personnalisée, il est généralement préférable d’utiliser les collections comprises dans le .NET Framework, lesquelles sont décrites dans [Types de collections](#kinds-of-collections), plus haut dans cette rubrique.  
   
  L’exemple suivant définit une classe de collection personnalisée nommée `AllColors`. Cette classe implémente l’interface <xref:System.Collections.IEnumerable>, ce qui implique l’implémentation de la méthode <xref:System.Collections.IEnumerable.GetEnumerator%2A>.  
   
@@ -570,14 +570,15 @@ As IEnumerable(Of Integer)
 End Function  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Concepts de programmation (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
- [Collections et structures de données](../../../standard/collections/index.md)  
- [Création et manipulation de collections](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
- [Sélection d’une classe de collection](../../../standard/collections/selecting-a-collection-class.md)  
- [Comparaisons et tris dans les collections](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
- [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Initialiseurs de collection](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [Concepts de programmation (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
+- [Option Strict (instruction)](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+- [LINQ to Objects (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- [Parallel LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
+- [Collections et structures de données](../../../standard/collections/index.md)  
+- [Création et manipulation de collections](https://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
+- [Sélection d’une classe de collection](../../../standard/collections/selecting-a-collection-class.md)  
+- [Comparaisons et tris dans les collections](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+- [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)

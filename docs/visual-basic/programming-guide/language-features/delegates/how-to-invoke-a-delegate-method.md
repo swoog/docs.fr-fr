@@ -2,12 +2,12 @@
 title: 'Comment : appeler une méthode déléguée (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c50a32d300aaf52efe0c55cef69d5793a98305ac
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392436"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129209"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Comment : appeler une méthode déléguée (Visual Basic)
 Cet exemple montre comment associer une méthode à un délégué, puis appelez cette méthode via le délégué.  
@@ -42,8 +42,9 @@ Cet exemple montre comment associer une méthode à un délégué, puis appelez 
     End Sub  
     ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Delegate (instruction)](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Délégués](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Applications multithread](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+## <a name="see-also"></a>Voir aussi
+
+- [Delegate (instruction)](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Délégués](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+- [Événements](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+- [Applications multithread](../../../../standard/threading/using-threads-and-threading.md)

@@ -3,11 +3,11 @@ title: Exemple Discovery Proxy
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
 ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892371"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44127798"
 ---
 # <a name="discovery-proxy-sample"></a>Exemple Discovery Proxy
 Cet exemple montre comment créer une implémentation d'un proxy de découverte pour stocker des informations sur des services existants et comment des clients peuvent interroger ce proxy afin d'obtenir les informations. Cet exemple est composé de trois projets :  

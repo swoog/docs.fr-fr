@@ -2,12 +2,12 @@
 title: 'Bien démarrer avec F # avec les outils de ligne de commande'
 description: 'Découvrez comment créer une solution à projets multiples simple sur F # à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).'
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875012"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134803"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Bien démarrer avec F # avec l’interface CLI .NET Core
 
@@ -41,7 +41,7 @@ Remplacez les répertoires par *FSNetCore*.
 Utilisez le `dotnet new` de commande, créez un projet de bibliothèque de classes dans le **src** dossier nommé bibliothèque.
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 La structure de répertoire suivante est générée après avoir exécuté la commande précédente :
