@@ -5,18 +5,18 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: MT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43800191"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130209"
 ---
-# <a name="ltdirectivesgt-element-net-native"></a><span data-ttu-id="69c83-102">&lt;Directives&gt;, élément (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="69c83-102">&lt;Directives&gt; Element (.NET Native)</span></span>
-<span data-ttu-id="69c83-103">L’élément racine dans chaque fichier de directives runtime pour .NET Native.</span><span class="sxs-lookup"><span data-stu-id="69c83-103">The root element in every runtime directives file for .NET Native.</span></span>  
+# <a name="ltdirectivesgt-element-net-native"></a><span data-ttu-id="b9e6f-102">&lt;Directives&gt;, élément (.NET Native)</span><span class="sxs-lookup"><span data-stu-id="b9e6f-102">&lt;Directives&gt; Element (.NET Native)</span></span>
+<span data-ttu-id="b9e6f-103">L’élément racine dans chaque fichier de directives runtime pour .NET Native.</span><span class="sxs-lookup"><span data-stu-id="b9e6f-103">The root element in every runtime directives file for .NET Native.</span></span>  
   
  `<Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">` 
   
-## <a name="syntax"></a><span data-ttu-id="69c83-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="69c83-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9e6f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b9e6f-104">Syntax</span></span>  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -24,24 +24,24 @@ ms.locfileid: "43800191"
 </Directives>  
 ```  
   
-## <a name="attributes"></a><span data-ttu-id="69c83-105">Attributs</span><span class="sxs-lookup"><span data-stu-id="69c83-105">Attributes</span></span>  
+## <a name="attributes"></a><span data-ttu-id="b9e6f-105">Attributs</span><span class="sxs-lookup"><span data-stu-id="b9e6f-105">Attributes</span></span>  
   
-|<span data-ttu-id="69c83-106">Attribut</span><span class="sxs-lookup"><span data-stu-id="69c83-106">Attribute</span></span>|<span data-ttu-id="69c83-107">Description</span><span class="sxs-lookup"><span data-stu-id="69c83-107">Description</span></span>|  
+|<span data-ttu-id="b9e6f-106">Attribut</span><span class="sxs-lookup"><span data-stu-id="b9e6f-106">Attribute</span></span>|<span data-ttu-id="b9e6f-107">Description</span><span class="sxs-lookup"><span data-stu-id="b9e6f-107">Description</span></span>|  
 |---------------|-----------------|  
-|`xmlns`|<span data-ttu-id="69c83-108">Espace de noms XML.</span><span class="sxs-lookup"><span data-stu-id="69c83-108">The XML namespace.</span></span> <span data-ttu-id="69c83-109">Sa valeur est toujours **» http://schemas.microsoft.com/netfx/2013/01/metadata»**.</span><span class="sxs-lookup"><span data-stu-id="69c83-109">Its value is always **"http://schemas.microsoft.com/netfx/2013/01/metadata"**.</span></span>|  
+|`xmlns`|<span data-ttu-id="b9e6f-108">Espace de noms XML.</span><span class="sxs-lookup"><span data-stu-id="b9e6f-108">The XML namespace.</span></span> <span data-ttu-id="b9e6f-109">Sa valeur est toujours **» http://schemas.microsoft.com/netfx/2013/01/metadata»**.</span><span class="sxs-lookup"><span data-stu-id="b9e6f-109">Its value is always **"http://schemas.microsoft.com/netfx/2013/01/metadata"**.</span></span>|  
   
-## <a name="child-elements"></a><span data-ttu-id="69c83-110">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="69c83-110">Child elements</span></span>  
+## <a name="child-elements"></a><span data-ttu-id="b9e6f-110">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="b9e6f-110">Child elements</span></span>  
   
-|<span data-ttu-id="69c83-111">Élément</span><span class="sxs-lookup"><span data-stu-id="69c83-111">Element</span></span>|<span data-ttu-id="69c83-112">Description</span><span class="sxs-lookup"><span data-stu-id="69c83-112">Description</span></span>|  
+|<span data-ttu-id="b9e6f-111">Élément</span><span class="sxs-lookup"><span data-stu-id="b9e6f-111">Element</span></span>|<span data-ttu-id="b9e6f-112">Description</span><span class="sxs-lookup"><span data-stu-id="b9e6f-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="69c83-113">\<Application></span><span class="sxs-lookup"><span data-stu-id="69c83-113">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="69c83-114">Sert de conteneur pour des types à l'échelle de l'application et pour des membres de types dont les métadonnées sont disponibles pour la réflexion.</span><span class="sxs-lookup"><span data-stu-id="69c83-114">Serves as a container for application-wide types and type members whose metadata is available for reflection.</span></span>|  
-|[<span data-ttu-id="69c83-115">\<Library></span><span class="sxs-lookup"><span data-stu-id="69c83-115">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="69c83-116">Définit l'assembly dont les types enfants et les membres de type nécessitent des métadonnées au moment de l'exécution.</span><span class="sxs-lookup"><span data-stu-id="69c83-116">Defines the assembly whose child types and type members require metadata at run time.</span></span>|  
+|[<span data-ttu-id="b9e6f-113">\<Application></span><span class="sxs-lookup"><span data-stu-id="b9e6f-113">\<Application></span></span>](../../../docs/framework/net-native/application-element-net-native.md)|<span data-ttu-id="b9e6f-114">Sert de conteneur pour des types à l'échelle de l'application et pour des membres de types dont les métadonnées sont disponibles pour la réflexion.</span><span class="sxs-lookup"><span data-stu-id="b9e6f-114">Serves as a container for application-wide types and type members whose metadata is available for reflection.</span></span>|  
+|[<span data-ttu-id="b9e6f-115">\<Library></span><span class="sxs-lookup"><span data-stu-id="b9e6f-115">\<Library></span></span>](../../../docs/framework/net-native/library-element-net-native.md)|<span data-ttu-id="b9e6f-116">Définit l'assembly dont les types enfants et les membres de type nécessitent des métadonnées au moment de l'exécution.</span><span class="sxs-lookup"><span data-stu-id="b9e6f-116">Defines the assembly whose child types and type members require metadata at run time.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="69c83-117">Notes</span><span class="sxs-lookup"><span data-stu-id="69c83-117">Remarks</span></span>  
- <span data-ttu-id="69c83-118">Chaque fichier de directives runtime ne peut contenir qu'un seul élément `<Directives>`.</span><span class="sxs-lookup"><span data-stu-id="69c83-118">Each runtime directives file can contain only one `<Directives>` element.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b9e6f-117">Notes</span><span class="sxs-lookup"><span data-stu-id="b9e6f-117">Remarks</span></span>  
+ <span data-ttu-id="b9e6f-118">Chaque fichier de directives runtime ne peut contenir qu'un seul élément `<Directives>`.</span><span class="sxs-lookup"><span data-stu-id="b9e6f-118">Each runtime directives file can contain only one `<Directives>` element.</span></span>  
   
- <span data-ttu-id="69c83-119">L’élément `<Directives>` peut contenir zéro ou un élément [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), ainsi que zéro, un ou plusieurs éléments [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="69c83-119">The `<Directives>` element can contain zero or one [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) element, and zero, one, or more [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) elements.</span></span>  
+ <span data-ttu-id="b9e6f-119">L’élément `<Directives>` peut contenir zéro ou un élément [\<Application>](../../../docs/framework/net-native/application-element-net-native.md), ainsi que zéro, un ou plusieurs éléments [\<Library>](../../../docs/framework/net-native/library-element-net-native.md).</span><span class="sxs-lookup"><span data-stu-id="b9e6f-119">The `<Directives>` element can contain zero or one [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) element, and zero, one, or more [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) elements.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69c83-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="69c83-120">See Also</span></span>  
- [<span data-ttu-id="69c83-121">Guide de référence du fichier de configuration des directives runtime (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="69c83-121">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [<span data-ttu-id="69c83-122">Éléments de directive runtime</span><span class="sxs-lookup"><span data-stu-id="69c83-122">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
+## <a name="see-also"></a><span data-ttu-id="b9e6f-120">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b9e6f-120">See Also</span></span>  
+ [<span data-ttu-id="b9e6f-121">Guide de référence du fichier de configuration des directives runtime (rd.xml)</span><span class="sxs-lookup"><span data-stu-id="b9e6f-121">Runtime Directives (rd.xml) Configuration File Reference</span></span>](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [<span data-ttu-id="b9e6f-122">Éléments de directive runtime</span><span class="sxs-lookup"><span data-stu-id="b9e6f-122">Runtime Directive Elements</span></span>](../../../docs/framework/net-native/runtime-directive-elements.md)
