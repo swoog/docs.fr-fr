@@ -3,11 +3,11 @@ title: Méthodes (F#)
 description: 'Découvrez comment une méthode F # est une fonction associée à un type qui sont utilisées pour exposer et implémenter les fonctionnalités et le comportement des objets et des types.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871236"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253206"
 ---
 # <a name="methods"></a>Méthodes
 

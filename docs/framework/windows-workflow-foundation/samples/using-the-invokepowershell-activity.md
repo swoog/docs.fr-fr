@@ -3,11 +3,11 @@ title: Utilisation de l'activité InvokePowerShell
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
 ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137731"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227699"
 ---
 # <a name="using-the-invokepowershell-activity"></a>Utilisation de l'activité InvokePowerShell
 L'exemple InvokePowerShell montre comment appeler des commandes Windows PowerShell à l'aide de l'activité `InvokePowerShell`.  
