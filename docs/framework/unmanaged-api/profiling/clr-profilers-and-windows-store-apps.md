@@ -15,11 +15,11 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1747d99fbfbc31fb592aee570d10d574b8480b0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43801370"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184220"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profileurs CLR et les applications du Windows Store
 
