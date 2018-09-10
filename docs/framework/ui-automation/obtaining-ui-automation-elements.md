@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 9994f6a3026c790acdb35af3300379786f615607
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481982"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518881"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Obtention d'éléments UI Automation
 > [!NOTE]
@@ -39,7 +39,7 @@ ms.locfileid: "43481982"
   
  La condition la plus simple est <xref:System.Windows.Automation.Condition.TrueCondition>, un objet prédéfini spécifiant que tous les éléments dans la zone de recherche doivent être retournés. La condition<xref:System.Windows.Automation.Condition.FalseCondition>, inverse de <xref:System.Windows.Automation.Condition.TrueCondition>, est moins utile, car elle empêche certains éléments d’être recherchés.  
   
- Trois autres conditions prédéfinies peuvent être utilisées seules ou combinées à d’autres conditions : <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>et <xref:System.Windows.Automation.Automation.RawViewCondition>. La condition<xref:System.Windows.Automation.Automation.RawViewCondition>, utilisée par elle-même, est équivalente à <xref:System.Windows.Automation.Condition.TrueCondition>, car elle ne filtre pas les éléments par leurs propriétés <xref:System.Windows.Automation.AutomationElement.AutomationElementInfoumation.IsControlElement%2A> ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInfoumation.IsContentElement%2A> .  
+ Trois autres conditions prédéfinies peuvent être utilisées seules ou combinées à d’autres conditions : <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>et <xref:System.Windows.Automation.Automation.RawViewCondition>. La condition<xref:System.Windows.Automation.Automation.RawViewCondition>, utilisée par elle-même, est équivalente à <xref:System.Windows.Automation.Condition.TrueCondition>, car elle ne filtre pas les éléments par leurs propriétés <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> ou <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>.  
   
  D’autres conditions sont développées à partir d’un ou plusieurs objets <xref:System.Windows.Automation.PropertyCondition> , chacun spécifiant une valeur de propriété. Par exemple, une condition <xref:System.Windows.Automation.PropertyCondition> peut spécifier que l’élément est activé ou qu’il prend en charge un certain modèle de contrôle.  
   
