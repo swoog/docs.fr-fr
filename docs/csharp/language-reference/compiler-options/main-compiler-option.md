@@ -9,49 +9,49 @@ helpviewer_keywords:
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 ms.openlocfilehash: 2f3c9daf98bfe77ea9462c8126f7a8368016875c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468863"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516664"
 ---
-# <a name="-main-c-compiler-options"></a><span data-ttu-id="a2918-102">-main (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="a2918-102">-main (C# Compiler Options)</span></span>
-<span data-ttu-id="a2918-103">Cette option spécifie la classe qui contient le point d’entrée du programme dans le cas où plusieurs classes contiennent une méthode **Main**.</span><span class="sxs-lookup"><span data-stu-id="a2918-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  
+# <a name="-main-c-compiler-options"></a><span data-ttu-id="d0c24-102">-main (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="d0c24-102">-main (C# Compiler Options)</span></span>
+<span data-ttu-id="d0c24-103">Cette option spécifie la classe qui contient le point d’entrée du programme dans le cas où plusieurs classes contiennent une méthode **Main**.</span><span class="sxs-lookup"><span data-stu-id="d0c24-103">This option specifies the class that contains the entry point to the program, if more than one class contains a **Main** method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2918-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a2918-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0c24-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d0c24-104">Syntax</span></span>  
   
 ```console  
 -main:class  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a2918-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="a2918-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="d0c24-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="d0c24-105">Arguments</span></span>  
  `class`  
- <span data-ttu-id="a2918-106">Type contenant la méthode **Main**.</span><span class="sxs-lookup"><span data-stu-id="a2918-106">The type that contains the **Main** method.</span></span>  
- <span data-ttu-id="a2918-107">Le nom de classe fourni doit être complet, c’est-à-dire qu’il doit inclure l’espace de noms complet contenant la classe, suivi du nom de classe.</span><span class="sxs-lookup"><span data-stu-id="a2918-107">The provided class name must be fully qualified; it must include the full namespace containing the class, followed by the class name.</span></span> <span data-ttu-id="a2918-108">Par exemple, si la méthode `Main` se trouve dans la classe `Program` dans l’espace de noms `MyApplication.Core`, l’option du compilateur doit être `-main:MyApplication.Core.Program`.</span><span class="sxs-lookup"><span data-stu-id="a2918-108">For example, when the `Main` method is located inside the `Program` class in the `MyApplication.Core` namespace, the compiler option has to be `-main:MyApplication.Core.Program`.</span></span>
+ <span data-ttu-id="d0c24-106">Type contenant la méthode **Main**.</span><span class="sxs-lookup"><span data-stu-id="d0c24-106">The type that contains the **Main** method.</span></span>  
+ <span data-ttu-id="d0c24-107">Le nom de classe fourni doit être complet, c’est-à-dire qu’il doit inclure l’espace de noms complet contenant la classe, suivi du nom de classe.</span><span class="sxs-lookup"><span data-stu-id="d0c24-107">The provided class name must be fully qualified; it must include the full namespace containing the class, followed by the class name.</span></span> <span data-ttu-id="d0c24-108">Par exemple, si la méthode `Main` se trouve dans la classe `Program` dans l’espace de noms `MyApplication.Core`, l’option du compilateur doit être `-main:MyApplication.Core.Program`.</span><span class="sxs-lookup"><span data-stu-id="d0c24-108">For example, when the `Main` method is located inside the `Program` class in the `MyApplication.Core` namespace, the compiler option has to be `-main:MyApplication.Core.Program`.</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="a2918-109">Notes</span><span class="sxs-lookup"><span data-stu-id="a2918-109">Remarks</span></span>  
- <span data-ttu-id="a2918-110">Si votre compilation comprend plusieurs types avec une méthode [Main](../../../csharp/programming-guide/main-and-command-args/index.md), vous pouvez spécifier le type qui contient la méthode **Main** à utiliser comme point d’entrée dans le programme.</span><span class="sxs-lookup"><span data-stu-id="a2918-110">If your compilation includes more than one type with a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method, you can specify which type contains the **Main** method that you want to use as the entry point into the program.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0c24-109">Notes</span><span class="sxs-lookup"><span data-stu-id="d0c24-109">Remarks</span></span>  
+ <span data-ttu-id="d0c24-110">Si votre compilation comprend plusieurs types avec une méthode [Main](../../../csharp/programming-guide/main-and-command-args/index.md), vous pouvez spécifier le type qui contient la méthode **Main** à utiliser comme point d’entrée dans le programme.</span><span class="sxs-lookup"><span data-stu-id="d0c24-110">If your compilation includes more than one type with a [Main](../../../csharp/programming-guide/main-and-command-args/index.md) method, you can specify which type contains the **Main** method that you want to use as the entry point into the program.</span></span>  
   
- <span data-ttu-id="a2918-111">Cette option est à utiliser lors de la compilation d’un fichier .exe.</span><span class="sxs-lookup"><span data-stu-id="a2918-111">This option is for use when compiling an .exe file.</span></span>  
+ <span data-ttu-id="d0c24-111">Cette option est à utiliser lors de la compilation d’un fichier .exe.</span><span class="sxs-lookup"><span data-stu-id="d0c24-111">This option is for use when compiling an .exe file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="a2918-112">Pour définir cette option du compilateur dans l'environnement de développement Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a2918-112">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="d0c24-112">Pour définir cette option du compilateur dans l'environnement de développement Visual Studio</span><span class="sxs-lookup"><span data-stu-id="d0c24-112">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="a2918-113">Ouvrez la page **Propriétés** du projet.</span><span class="sxs-lookup"><span data-stu-id="a2918-113">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="d0c24-113">Ouvrez la page **Propriétés** du projet.</span><span class="sxs-lookup"><span data-stu-id="d0c24-113">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="a2918-114">Cliquez sur la page de propriétés **Application**.</span><span class="sxs-lookup"><span data-stu-id="a2918-114">Click the **Application** property page.</span></span>  
+2.  <span data-ttu-id="d0c24-114">Cliquez sur la page de propriétés **Application**.</span><span class="sxs-lookup"><span data-stu-id="d0c24-114">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="a2918-115">Modifiez la propriété **Objet de démarrage**.</span><span class="sxs-lookup"><span data-stu-id="a2918-115">Modify the **Startup object** property.</span></span>  
+3.  <span data-ttu-id="d0c24-115">Modifiez la propriété **Objet de démarrage**.</span><span class="sxs-lookup"><span data-stu-id="d0c24-115">Modify the **Startup object** property.</span></span>  
   
-     <span data-ttu-id="a2918-116">Pour définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="a2918-116">To set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span></span>  
+     <span data-ttu-id="d0c24-116">Pour définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span><span class="sxs-lookup"><span data-stu-id="d0c24-116">To set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.StartupObject%2A>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a2918-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="a2918-117">Example</span></span>  
- <span data-ttu-id="a2918-118">Compilez `t2.cs` et `t3.cs`, en spécifiant que la **Main** se trouve dans `Test2` :</span><span class="sxs-lookup"><span data-stu-id="a2918-118">Compile `t2.cs` and `t3.cs`, specifying that the **Main** method will be found in `Test2`:</span></span>  
+## <a name="example"></a><span data-ttu-id="d0c24-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="d0c24-117">Example</span></span>  
+ <span data-ttu-id="d0c24-118">Compilez `t2.cs` et `t3.cs`, en spécifiant que la **Main** se trouve dans `Test2` :</span><span class="sxs-lookup"><span data-stu-id="d0c24-118">Compile `t2.cs` and `t3.cs`, specifying that the **Main** method will be found in `Test2`:</span></span>  
   
 ```console  
 csc t2.cs t3.cs -main:Test2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a2918-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a2918-119">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0c24-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d0c24-119">See Also</span></span>
 
-- [<span data-ttu-id="a2918-120">Options du compilateur C#</span><span class="sxs-lookup"><span data-stu-id="a2918-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="a2918-121">Gestion des propriétés des projets et des solutions</span><span class="sxs-lookup"><span data-stu-id="a2918-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="d0c24-120">Options du compilateur C#</span><span class="sxs-lookup"><span data-stu-id="d0c24-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="d0c24-121">Gestion des propriétés des projets et des solutions</span><span class="sxs-lookup"><span data-stu-id="d0c24-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
