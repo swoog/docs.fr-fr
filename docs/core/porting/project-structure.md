@@ -4,12 +4,12 @@ description: Aide destinée aux propriétaires de projet qui souhaitent compiler
 author: conniey
 ms.author: mairaw
 ms.date: 04/06/2017
-ms.openlocfilehash: e6cd9c6d66996d9fd24fe71d48091723143e5849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211437"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512264"
 ---
 # <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>Organisation de votre projet pour prendre en charge le .NET Framework et .NET Core
 
@@ -51,6 +51,7 @@ Réorganisez le dépôt de sorte que tous les fichiers *\*.csproj* existants soi
 [**Code source**][example-csproj-code]
 
 Les modifications à noter sont :
+
 * Remplacement de *packages.config* et de *\*.csproj* par un nouveau [.csproj *\*.NET Core*][example-csproj-netcore]. Les packages NuGet sont spécifiés avec `<PackageReference> ItemGroup`.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>Conserver les projets existants et créer un projet .NET Core
@@ -62,12 +63,13 @@ Si des projets existants ciblent des frameworks plus anciens, vous pouvez laisse
 [**Code source**][example-csproj-different-code]
 
 Les modifications à noter sont :
+
 * Le projet .NET Core et les projets existants sont conservés dans des dossiers distincts.
-    * Le fait de conserver les projets dans des dossiers distincts vous évite de devoir installer Visual Studio 2017. Vous pouvez créer une solution distincte qui ouvre seulement les anciens projets.
+  * Le fait de conserver les projets dans des dossiers distincts vous évite de devoir installer Visual Studio 2017. Vous pouvez créer une solution distincte qui ouvre seulement les anciens projets.
 
 ## <a name="see-also"></a>Voir aussi
 
-Consultez la [documentation relative au portage vers .NET Core][porting-doc] pour obtenir de l’aide sur la migration vers .NET Core.
+* Consultez la [documentation relative au portage vers .NET Core][porting-doc] pour obtenir de l’aide sur la migration vers .NET Core.
 
 [porting-doc]: index.md
 [example-initial-project]: media/project-structure/project.png "Projet existant"
