@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70b2d04f381fdbc1ae47b1c90649df045e111afa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484777"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180629"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Comment : écrire du texte dans un fichier
 Cette rubrique présente différentes façons d’écrire du texte dans un fichier pour les applications .NET Framework ou pour les applications du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Les classes et méthodes suivantes sont généralement utilisées pour écrire du texte dans un fichier :  
@@ -86,12 +86,13 @@ Cette rubrique présente différentes façons d’écrire du texte dans un fichi
  [!code-csharp[OpenFileWindowsStore#Code](../../../samples/snippets/csharp/VS_Snippets_CLR/openfilewindowsstore/cs/mainpage.xaml.cs#code)]
  [!code-vb[OpenFileWindowsStore#Code](../../../samples/snippets/visualbasic/VS_Snippets_CLR/openfilewindowsstore/vb/mainpage.xaml.vb#code)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.StreamWriter>  
- <xref:System.IO.Path>  
- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
- [Guide pratique pour énumérer des répertoires et des fichiers](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
- [Comment : lire et écrire dans un fichier de données créé récemment](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [Comment : ouvrir un fichier journal et y ajouter des éléments](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [Comment : lire du texte dans un fichier](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IO.StreamWriter>  
+- <xref:System.IO.Path>  
+- <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
+- [Guide pratique pour énumérer des répertoires et des fichiers](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [Comment : lire et écrire dans un fichier de données créé récemment](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Comment : ouvrir un fichier journal et y ajouter des éléments](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [Comment : lire du texte dans un fichier](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)

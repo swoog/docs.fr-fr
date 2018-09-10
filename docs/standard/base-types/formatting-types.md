@@ -28,11 +28,11 @@ ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484862"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502213"
 ---
 # <a name="formatting-types-in-net"></a>Mettre en forme des types dans .NET
 <a name="Introduction"></a> La mise en forme est le processus de conversion d'une instance d'une classe, d'une structure ou d'une valeur d'énumération en représentation sous forme de chaîne, généralement pour exposer la chaîne obtenue aux utilisateurs ou pour qu'elle soit désérialisée afin de restaurer le type de données d'origine. Cette conversion peut présenter plusieurs difficultés :  

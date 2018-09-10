@@ -5,11 +5,11 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
 ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43404293"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507828"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Effectuer des tests unitaires de C# dans .NET Core à l’aide de dotnet test et de xUnit
 

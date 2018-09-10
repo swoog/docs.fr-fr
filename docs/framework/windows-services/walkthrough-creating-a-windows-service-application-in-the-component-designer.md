@@ -11,11 +11,11 @@ ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
 ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43417859"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509851"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Procédure pas à pas : création d'une application de service Windows dans le Concepteur de composants
 Cet article explique comment créer, dans Visual Studio, une application de service Windows simple qui écrit des messages dans un journal des événements. La création et l'utilisation de votre service comportent les étapes de base suivantes :  

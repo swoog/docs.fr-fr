@@ -17,11 +17,11 @@ ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182997"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277178"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Constructions d'alternative dans les expressions régulières
 <a name="top"></a> Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif ou conditionnelle. .NET prend en charge trois constructions d’alternative :  

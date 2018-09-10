@@ -4,18 +4,18 @@ description: Découvrez le modèle de programmation asynchrone au niveau du lang
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: ae1c9b1569b5fb6784f50ec9d78a44380242fcd8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 971295b85e5f2763eef87bfe9109524db2630120
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484965"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865148"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
 Si vous avez besoin d’écrire du code qui utilise les E/S de manière intensive (par exemple, pour récupérer des données d’un réseau ou accéder à une base de données), optez pour la programmation asynchrone.  L’écriture de code asynchrone est également indiquée si votre code utilise le processeur de manière intensive, notamment pour effectuer un calcul complexe.
 
-C# fournit un modèle de programmation asynchrone de niveau de langage. Ce modèle facilite l’écriture de code asynchrone, en vous évitant d’effectuer des rappels multiples ou de vous conformer à une bibliothèque qui prend en charge l’asynchronisme. Il suit ce que l’on appelle le [modèle asynchrone basé sur des tâches (TAP)](https://msdn.microsoft.com/library/hh873175.aspx).
+C# fournit un modèle de programmation asynchrone de niveau de langage. Ce modèle facilite l’écriture de code asynchrone, en vous évitant d’effectuer des rappels multiples ou de vous conformer à une bibliothèque qui prend en charge l’asynchronisme. Il suit ce que l’on appelle le [modèle asynchrone basé sur des tâches (TAP)](../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).
 
 ## <a name="basic-overview-of-the-asynchronous-model"></a>Vue d’ensemble du modèle asynchrone
 

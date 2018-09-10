@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 87d361b1-daa9-4fd4-a53a-cbfa40111ad3
-ms.openlocfilehash: f41aa19c89365c9236ca0b8d385ffa6fbaf6be1c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e27fbe2c45e331a90261da3c0c575f1a472db88f
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391734"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087376"
 ---
 # <a name="comparison-of-xpath-and-linq-to-xml"></a>Comparaison de XPath et LINQ to XML
 XPath et LINQ to XML offrent certaines fonctionnalités similaires. Tous deux peuvent être utilisés pour interroger une arborescence XML et retourner des résultats tels qu'une collection d'élément, une collection d'attributs, une collection de nœuds ou la valeur d'un élément ou attribut. Il existe toutefois certaines différences.  
@@ -104,5 +104,6 @@ customers.Elements("Customer").Elements("CompanyName")
 |suivant|Aucun équivalent direct.|  
 |précédent|Aucun équivalent direct.|  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ to XML pour les utilisateurs XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Voir aussi
+
+- [LINQ to XML pour les utilisateurs XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

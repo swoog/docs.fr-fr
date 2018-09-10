@@ -9,11 +9,11 @@ ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483656"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039327"
 ---
 # <a name="threading-objects-and-features"></a>Fonctionnalités et objets de threading
 
@@ -27,7 +27,7 @@ En plus de la classe <xref:System.Threading.Thread?displayProperty=nameWithType>
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Décrit les handles d’attente d’événements managés qui sont utilisés pour synchroniser les activités de thread en signalant et en attendant des signaux.|
 |[Mutex](mutexes.md)|Décrit comment utiliser un <xref:System.Threading.Mutex?displayProperty=nameWithType> pour synchroniser l’accès à un objet ou créer vos propres mécanismes de synchronisation.|
 |[Opérations verrouillées](interlocked-operations.md)|Décrit la classe <xref:System.Threading.Interlocked?displayProperty=nameWithType>, qui fournit des opérations atomiques pour les variables partagées par plusieurs threads.|
-|[Verrous Reader-Writer](reader-writer-locks.md)|Décrit la classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, qui fournit une sémantique writer unique/lecteurs multiples.|
+|[Verrous de lecteur-writer](reader-writer-locks.md)|Décrit la classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, qui fournit une sémantique writer unique/lecteurs multiples.|
 |[Semaphore et SemaphoreSlim](semaphore-and-semaphoreslim.md)|Décrit la classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> et explique comment l’utiliser pour contrôler l’accès aux ressources limitées.|
 |[Barrier](barrier.md)|Décrit la classe <xref:System.Threading.Barrier?displayProperty=nameWithType> qui implémentent le modèle de cloisonnement pour la coordination des threads dans les opérations planifiées.|
 |[SpinLock](spinlock.md)|Décrit la classe <xref:System.Threading.SpinLock?displayProperty=nameWithType>, une alternative légère à la classe <xref:System.Threading.Monitor?displayProperty=nameWithType> pour certains scénarios de bas niveau.|

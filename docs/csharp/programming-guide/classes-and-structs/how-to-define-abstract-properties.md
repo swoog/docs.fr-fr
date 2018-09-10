@@ -6,11 +6,11 @@ helpviewer_keywords:
 - abstract properties [C#]
 ms.assetid: 672a90eb-47b9-4ae0-9914-af53852fddcb
 ms.openlocfilehash: 549867cac99784ce885b8fce8a1638c40ad88cec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180768"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274117"
 ---
 # <a name="how-to-define-abstract-properties-c-programming-guide"></a>Comment : définir des propriétés abstraites (Guide de programmation C#)
 L’exemple suivant montre comment définir des propriétés [abstract](../../../csharp/language-reference/keywords/abstract.md). Une déclaration de propriété abstraite ne fournit pas une implémentation des accesseurs de propriété ; elle déclare que la classe prend en charge des propriétés, mais laisse l’implémentation de l’accesseur aux classes dérivées. L’exemple suivant montre comment implémenter les propriétés abstraites héritées d’une classe de base.  

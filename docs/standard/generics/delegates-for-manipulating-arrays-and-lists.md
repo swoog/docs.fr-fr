@@ -13,11 +13,11 @@ ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44174989"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276772"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Délégués génériques pour la manipulation de tableaux et de listes
 Cette rubrique donne une vue d’ensemble des délégués génériques pour les conversions, des prédicats de recherche et des actions à effectuer sur les éléments d’un tableau ou d’une collection.  

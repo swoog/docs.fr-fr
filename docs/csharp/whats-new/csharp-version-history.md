@@ -4,11 +4,11 @@ description: À quoi ressemblait le langage dans ses versions antérieures et co
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391246"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504411"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 

@@ -9,11 +9,11 @@ ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187609"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273815"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Procédure : transformation d'un fragment de nœud
 Lorsque vous transformez des données contenues dans un objet <xref:System.Xml.XmlDocument> ou <xref:System.Xml.XPath.XPathDocument>, les transformations XSLT s'appliquent à l'ensemble du document. En d'autres termes, si vous passez dans un autre nœud que le nœud racine du document, cela n'empêche pas le processus de transformation d'accéder à tous les nœuds dans le document chargé. Pour transformer un fragment de nœud, vous devez créer un objet séparé contenant uniquement le fragment de nœud et transmettre cet objet à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  

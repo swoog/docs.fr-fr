@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c9fb03560e30bab3cc71a6171c731d887e859f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bc31ae202ccbfee467dc0f6fa2cf515c751825ed
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43423580"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201300"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out, modificateur de paramètre (référence C#)
 Le mot clé `out` entraîne le passage des arguments par référence. Il est similaire au mot clé [ref](ref.md), à la différence que `ref` nécessite que la variable soit initialisée avant d’être passée. Il est également similaire au mot clé [in](in-parameter-modifier.md), à la différence que `in` n’autorise pas la méthode appelée à modifier la valeur d’argument. Pour utiliser un paramètre `out`, la définition de la méthode et la méthode d'appel doivent utiliser explicitement le mot clé `out`. Exemple :  
@@ -41,9 +41,7 @@ Le compilateur choisit la meilleure surcharge en mettant en correspondance les m
  
 Les propriétés ne sont pas des variables et, par conséquent, ne peuvent pas être passées en tant que paramètres `out`.
   
- Pour plus d’informations sur le passage de tableaux, consultez [Passage de tableaux à l’aide de paramètres ref et out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
-  
- Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types de méthodes suivants :  
+Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types de méthodes suivants :  
   
 -   Méthodes async, que vous définissez à l’aide du modificateur [async](../../../csharp/language-reference/keywords/async.md).  
   

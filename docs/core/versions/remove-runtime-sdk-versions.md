@@ -5,11 +5,11 @@ ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
 ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409141"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204914"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Guide pratique pour supprimer un SDK et un Runtime .NET Core
 
@@ -17,7 +17,7 @@ Si vous avez installé plusieurs versions mises à jour du SDK et du Runtime .NE
 
 À compter de .NET Core 2.1, l’interface CLI .NET fournit des commandes qui vous permettent de répertorier toutes les versions du SDK et du Runtime installées sur votre machine.  Utilisez la commande [`dotnet --list-sdks`](../tools/dotnet.md#options) pour afficher la liste des SDK installés sur votre machine. Utilisez la commande [`dotnet --list-runtimes`](../tools/dotnet.md#options) pour afficher la liste des Runtimes installés sur votre machine. Voici une sortie standard des commandes pour Windows, macOS ou Linux :
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Fenêtres](#tab/Windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -127,7 +127,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstalling-net-core"></a>Désinstallation de .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Fenêtres](#tab/Windows)
 
 .NET Core utilise la boîte de dialogue **Ajout/Suppression de programmes** de Windows pour supprimer des versions du SDK et du Runtime .NET Core. L’illustration suivante montre la boîte de dialogue **Ajout/Suppression de programmes** qui répertorie les différentes versions du SDK et du Runtime .NET installées.
 

@@ -11,11 +11,11 @@ ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212397"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274766"
 ---
 # <a name="barrier-net-framework"></a>Cloisonnement (.NET Framework)
 Un *cloisonnement* est une primitive de synchronisation définie par l'utilisateur qui permet à plusieurs threads (appelés *participants*) de travailler simultanément sur un algorithme en plusieurs phases. Chaque participant s'exécute jusqu'à ce qu'il atteigne le point de cloisonnement dans le code. Le cloisonnement représente la fin d'une phase de travail. Quand un participant atteint le cloisonnement, il se bloque jusqu'à ce que tous les participants aient atteint le même cloisonnement. Une fois que tous les participants ont atteint le cloisonnement, vous pouvez éventuellement appeler une action post-phase. Cette action post-phase peut être utilisée pour effectuer des actions avec un thread unique alors que tous les autres threads sont encore bloqués. Une fois l'action exécutée, tous les participants sont débloqués.  

@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251652"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276118"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Constructions diverses dans les expressions régulières
 Les expressions régulières dans .NET incluent trois constructions de langage diverses. L’une d’elles vous permet d’activer ou de désactiver des options de mise en correspondance particulières au milieu d’un modèle d’expression régulière. Grâce aux deux autres, vous pouvez inclure des commentaires dans une expression régulière.  

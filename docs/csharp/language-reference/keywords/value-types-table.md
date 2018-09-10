@@ -7,17 +7,17 @@ helpviewer_keywords:
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
 ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43418420"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262005"
 ---
 # <a name="value-types-table-c-reference"></a>Tableau des types valeur (référence C#)
 
 Le tableau suivant présente les types valeur dans C#.  
   
-|Type valeur|Catégorie|Suffixe du type|  
+|Type de valeur|Category|Suffixe du type|  
 |----------------|--------------|-----------------|  
 |[bool](bool.md)|Booléen||  
 |[byte](byte.md)|Non signé, numérique, [intégral](integral-types-table.md)||  

@@ -2,12 +2,12 @@
 title: Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0fa19af47847b0d6b804528af3f766c9775e74f3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43478024"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863685"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)
 Cette rubrique montre comment créer des documents avec des espaces de noms.  
@@ -142,5 +142,6 @@ Console.WriteLine(root);
 </aw:Root>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des espaces de noms XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Utilisation des espaces de noms XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

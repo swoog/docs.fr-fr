@@ -13,11 +13,11 @@ ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b74e60daced88050413855070c880cd6c1cebfb1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214704"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272550"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Procédure pas à pas : création d'un pipeline de flux de données
 Bien que vous puissiez utiliser les méthodes <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> et <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> pour recevoir des messages des blocs sources, vous pouvez également connecter des blocs de messages pour former un *pipeline de flux de données*. Un pipeline de flux de données est une série de composants, ou de *blocs de flux de données*, qui effectuent chacun une tâche spécifique qui contribue à un plus grand objectif. Chaque bloc de flux de données d'un pipeline de flux de données effectue un travail lorsqu'il reçoit un message d'un autre bloc de flux de données. Ce processus s'apparente à une chaîne de montage en construction automobile. Comme chaque véhicule passe via la ligne de montage, un poste assemble le châssis, le suivant installe le moteur, et ainsi de suite. Étant donné qu'une ligne d'assemblage permet à plusieurs véhicules d'être assemblés en même temps, cela fournit une productivité supérieure à l'assemblage un par un des véhicules.

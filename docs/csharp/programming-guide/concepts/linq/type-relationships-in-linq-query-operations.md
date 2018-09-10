@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 154501d666b467c94f5d1dd721f1e2303189c908
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 574021f09948f2358eb0023588ee0fab9c142687
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484822"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084051"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relations des types dans des opérations de requête LINQ (C#)
 Pour écrire efficacement des requêtes, vous devez comprendre comment les types des variables dans une opération de requête complète sont liés les uns aux autres. Si vous comprenez ces relations, vous comprendrez plus facilement les exemples de code et les exemples [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dans la documentation. En outre, vous comprendrez ce qui se passe en arrière-plan lorsque des variables sont implicitement typées à l’aide de `var`.  
@@ -65,5 +65,6 @@ Pour écrire efficacement des requêtes, vous devez comprendre comment les types
   
  Pour plus d’informations sur `var`, consultez [Variables locales implicitement typées](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Bien démarrer avec LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Bien démarrer avec LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

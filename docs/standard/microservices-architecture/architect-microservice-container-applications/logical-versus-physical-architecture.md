@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ebbae336761c6fa7954862cd41052e8832bf8e77
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43238414"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213340"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architecture logique et architecture physique
 
@@ -17,7 +17,7 @@ Il est utile à ce stade de s’arrêter et d’expliquer la distinction entre l
 
 Pour commencer, la création de microservices ne nécessite l’utilisation d’aucune technologie spécifique. Par exemple, les conteneurs Docker ne sont pas obligatoires pour créer une architecture basée sur des microservices. Ces microservices peuvent également être exécutés comme processus ordinaires. Les microservices constituent une architecture logique.
 
-De plus, même si un microservice peut être physiquement implémenté sous la forme d’un simple service, processus ou conteneur (par souci de simplicité, c’est l’approche adoptée dans la version initiale de [eShopOnContainers](http://aka.ms/MicroservicesArchitecture)), cette parité entre un microservice métier et un service ou un conteneur physique n’est pas nécessairement obligatoire dans tous les cas quand vous créez une grande application complexe composée de plusieurs dizaines ou même plusieurs centaines de services.
+De plus, même si un microservice peut être physiquement implémenté sous la forme d’un simple service, processus ou conteneur (par souci de simplicité, c’est l’approche adoptée dans la version initiale de [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), cette parité entre un microservice métier et un service ou un conteneur physique n’est pas nécessairement obligatoire dans tous les cas quand vous créez une grande application complexe composée de plusieurs dizaines ou même plusieurs centaines de services.
 
 C’est là où il y a une différence entre l’architecture logique et l’architecture physique d’une application. L’architecture logique et les limites logiques d’un système ne correspondent pas nécessairement selon une relation un-à-un à l’architecture physique ou du déploiement. Cela peut se produire, mais ce n’est pas souvent le cas.
 

@@ -15,11 +15,11 @@ ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44193261"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277638"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Comment : effectuer un aller-retour de valeurs de date et d'heure
 Dans de nombreuses applications, une valeur de date et d’heure est destinée à identifier clairement un point unique dans le temps. Cette rubrique montre comment enregistrer et restaurer une valeur <xref:System.DateTime>, une valeur <xref:System.DateTimeOffset> et une valeur de date et d’heure avec des informations de fuseau horaire pour que la valeur restaurée identifie la même heure que la valeur enregistrée.  

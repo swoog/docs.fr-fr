@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485532"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195708"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Vue d’ensemble des primitives de synchronisation
 <a name="top"></a> Le .NET Framework fournit une plage de primitives de synchronisation pour contrôler les interactions de threads et éviter des conditions de concurrence. Celles-ci peuvent être divisées approximativement en trois catégories : le verrouillage, la signalisation et les opérations verrouillées.  
@@ -165,15 +165,16 @@ ms.locfileid: "43485532"
   
  Pour bénéficier d’une vue d’ensemble conceptuelle, consultez [Opérations verrouillées](../../../docs/standard/threading/interlocked-operations.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Synchronisation des données pour le multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Moniteurs](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Mutex](../../../docs/standard/threading/mutexes.md)  
- [Semaphore et SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Descripteurs d’attente](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [Opérations verrouillées](../../../docs/standard/threading/interlocked-operations.md)  
- [Verrous de lecteur-writer](../../../docs/standard/threading/reader-writer-locks.md)  
- [Barrier](../../../docs/standard/threading/barrier.md)  
- [SpinWait](../../../docs/standard/threading/spinwait.md)  
- [SpinLock](../../../docs/standard/threading/spinlock.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Synchronisation des données pour le multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [Moniteurs](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Mutex](../../../docs/standard/threading/mutexes.md)  
+- [Semaphore et SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [Descripteurs d’attente](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+- [Opérations verrouillées](../../../docs/standard/threading/interlocked-operations.md)  
+- [Verrous de lecteur-writer](../../../docs/standard/threading/reader-writer-locks.md)  
+- [Barrier](../../../docs/standard/threading/barrier.md)  
+- [SpinWait](../../../docs/standard/threading/spinwait.md)  
+- [SpinLock](../../../docs/standard/threading/spinlock.md)

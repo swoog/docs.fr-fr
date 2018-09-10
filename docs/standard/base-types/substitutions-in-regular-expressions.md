@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53fd4ee63d49b3943fa0b1164591aaddaa764abc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579416"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277742"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substitutions dans les expressions régulières
 <a name="Top"></a> Les substitutions sont des éléments de langage reconnus uniquement dans des modèles de remplacement. Elles utilisent un modèle d'expression régulière pour définir tout ou partie du texte qui doit remplacer le texte correspondant dans la chaîne d'entrée. Le modèle de remplacement peut se composer d'une ou plusieurs substitutions avec des caractères littéraux. Les modèles de remplacement sont fournis aux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> qui a un paramètre `replacement` et à la méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Les méthodes remplacent le modèle correspondant par le modèle défini par le paramètre `replacement` .  
@@ -219,5 +219,6 @@ ms.locfileid: "33579416"
 |1|3|123|ABC**ABC123DEF456**DEF456|  
 |2|5|456|ABCABC123DEF456DEF**ABC123DEF456**|  
   
-## <a name="see-also"></a>Voir aussi  
- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
