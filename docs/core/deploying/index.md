@@ -3,13 +3,13 @@ title: Déploiement d’applications .NET Core
 description: Déploiement d’une application .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 09/03/2018
+ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562004"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891309"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 
@@ -41,7 +41,9 @@ Il existe également quelques inconvénients :
 
 ## <a name="self-contained-deployments-scd"></a>Déploiements autonomes
 
-Pour un déploiement autonome, vous déployez votre application et les dépendances tierces requises, ainsi que la version de .NET Core utilisée pour générer l’application. La création d’un déploiement autonome n’inclut pas les [dépendances natives de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) sur les différentes plateformes. Ces services doivent donc être présents avant l’exécution de l’application. Pour plus d’informations sur la liaison de version lors de l’exécution, consultez l’article sur la [liaison de version dans .NET Core](../versions/selection.md)
+Pour un déploiement autonome, vous déployez votre application et les dépendances tierces requises, ainsi que la version de .NET Core utilisée pour générer l’application. La création d’un déploiement autonome n’inclut pas les [dépendances natives de .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) sur les différentes plateformes. Ces services doivent donc être présents avant l’exécution de l’application. Pour plus d’informations sur la liaison de version lors de l’exécution, consultez l’article sur la [liaison de version dans .NET Core](../versions/selection.md).
+
+À compter du SDK (version 2.1.300) de NET Core 2.1, .NET Core prend en charge la *restauration par progression d’une version de correctif*. Lorsque vous créez un déploiement autonome, les outils .NET Core incluent automatiquement le dernier runtime pris en charge de la version .NET Core que votre application cible. (Le dernier runtime pris en charge inclut des correctifs de sécurité et d’autres correctifs de bogues.) Le runtime pris en charge ne doit pas nécessairement être présent sur votre système de génération. Il est automatiquement téléchargé à partir de NuGet.org. Pour plus d’informations, notamment des instructions sur la façon de refuser la restauration par progression d’une version de correctif, consultez [Restaurer par progression un runtime à déploiement autonome](runtime-patch-selection.md).
 
 Les déploiements dépendant de l’infrastructure (FDD) et les déploiements autonomes (SCD) utilisent des exécutables d’hôte distincts : vous pouvez donc signer un exécutable d’hôte pour un déploiement SCD avec votre signature de publieur.
 
@@ -58,6 +60,8 @@ Elle a également plusieurs inconvénients :
 - Comme .NET Core est inclus dans votre package de déploiement, vous devez choisir à l’avance les plateformes cibles pour lesquels vous générez des packages de déploiement.
 
 - La taille de votre package de déploiement est relativement importante car vous devez inclure .NET Core ainsi que votre application et ses dépendances tierces.
+
+  À compter de .NET Core 2.0, vous pouvez réduire la taille de votre déploiement sur les systèmes Linux d’environ 28 Mo à l’aide du [*mode de globalisation invariant*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) de .NET Core. En règle générale, .NET Core sur Linux s’appuie sur les [bibliothèques ICU](https://github.com/dotnet/docs/issues/http%22//icu-project.org) pour la prise en charge de la globalisation. En mode invariant, les bibliothèques ne sont pas incluses dans votre déploiement, et toutes les cultures se comportent comme la [culture invariante](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Le déploiement de nombreuses applications .NET Core autonomes sur un système peut consommer une quantité significative d’espace disque car chaque application duplique les fichiers de .NET Core.
 
