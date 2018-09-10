@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: 03912a71aba883ec9127d265e6f1a2b05e1e60fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09d19f708570b55509a3ec2a41e439cb9c9de973
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313220"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43739693"
 ---
 # <a name="how-to-define-constants-in-c"></a>Comment : définir des constantes en C#
 Les constantes sont des champs dont les valeurs sont définies au moment de la compilation et ne sont pas modifiables. Utilisez des constantes pour fournir des noms explicites au lieu de littéraux numériques (« nombres magiques ») pour les valeurs spéciales.  
@@ -27,5 +27,6 @@ Les constantes sont des champs dont les valeurs sont définies au moment de la c
   
  L’utilisation du qualificateur de nom de classe permet de garantir que les personnes qui utilisent la constante, dont vous-même, comprennent qu’il s’agit d’une valeur constante et qu’elle ne peut pas être modifiée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)

@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6730e621a85dc8e656723647f949449241c407
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207454"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216618"
 ---
 # <a name="net-class-library-overview"></a>Présentation des bibliothèques de classes .NET
 
@@ -110,7 +110,8 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
   
  Pour plus d’informations sur les espaces de noms, utilisez le [Navigateur d’API .NET](https://docs.microsoft.com/dotnet/api) pour parcourir la bibliothèque de classes .NET. La documentation de référence sur les API fournit des informations sur chaque espace de noms, ses types et chacun de ses membres.  
   
-## <a name="see-also"></a>Voir aussi  
- [Système de type commun](../../docs/standard/base-types/common-type-system.md)  
- [Navigateur d’API .NET](https://docs.microsoft.com/dotnet/api)  
- [Vue d’ensemble](../../docs/framework/get-started/overview.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Système de type commun](../../docs/standard/base-types/common-type-system.md)  
+- [Navigateur d’API .NET](https://docs.microsoft.com/dotnet/api)  
+- [Vue d’ensemble](../../docs/framework/get-started/overview.md)

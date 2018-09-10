@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d21a3a315b7dc63a84f7b5d43d55c06eb2d5188
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579585"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262605"
 ---
 # <a name="common-type-system"></a>Système de type commun
 Le système de type commun (CTS, Common Type System) définit la façon dont les types sont déclarés, utilisés et managés dans le Common Language Runtime ; il constitue également une partie importante de la prise en charge, par le runtime, de l'intégration interlangage. Le système de type commun met en œuvre les fonctions suivantes :  
@@ -320,7 +320,8 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
   
 -   Un type dérivé peut substituer une méthode virtuelle héritée. La méthode de substitution fournit une nouvelle définition de la méthode qui sera appelée en fonction du type de la valeur au moment de l'exécution et non du type de la variable connue au moment de la compilation. Une méthode peut substituer une méthode virtuelle uniquement si la méthode virtuelle n'est pas marquée comme `final` et si la nouvelle méthode est au moins aussi accessible que la méthode virtuelle.  
   
-## <a name="see-also"></a>Voir aussi  
- [Navigateur d’API .NET](/dotnet/api)  
- [Common Language Runtime](../../../docs/standard/clr.md)  
- [Conversion de type dans .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Navigateur d’API .NET](/dotnet/api)  
+- [Common Language Runtime](../../../docs/standard/clr.md)  
+- [Conversion de type dans .NET](../../../docs/standard/base-types/type-conversion.md)

@@ -8,11 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788926"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Procédure pas à pas : utilisation des services d'application cliente
 Cette rubrique décrit comment créer une application Windows qui utilise des services d'application cliente pour authentifier les utilisateurs et récupérer des rôles d'utilisateur et des paramètres.  
@@ -68,7 +69,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
  À ce stade, l'application est configurée pour accéder aux trois services du même hôte. Dans la section suivante, vous allez créer l'hôte comme une application de service web simple, ce qui vous permettra de tester votre configuration client.  
   
 ## <a name="creating-the-application-services-host"></a>Création de l'hôte de services d'application  
- Dans cette section, vous allez créer une application de service web simple qui accède aux données utilisateur à partir d'un fichier de base de données SQL Server Compact local. Vous allez ensuite renseigner la base de données à l’aide de l’ [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Cette configuration simple vous permet de tester rapidement votre application cliente. Vous pouvez également configurer l'hôte de service web de façon à ce qu'il accède aux données utilisateur d'une base de données SQL Server complète ou via les classes <xref:System.Web.Security.MembershipProvider> et <xref:System.Web.Security.RoleProvider> personnalisées. Pour plus d'informations, consultez [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ Dans cette section, vous allez créer une application de service web simple qui accède aux données utilisateur à partir d'un fichier de base de données SQL Server Compact local. Vous allez ensuite renseigner la base de données à l’aide de l’ [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Cette configuration simple vous permet de tester rapidement votre application cliente. Vous pouvez également configurer l'hôte de service web de façon à ce qu'il accède aux données utilisateur d'une base de données SQL Server complète ou via les classes <xref:System.Web.Security.MembershipProvider> et <xref:System.Web.Security.RoleProvider> personnalisées. Pour plus d'informations, consultez [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  Dans la procédure suivante, vous créez et configurez le service web AppServices.  
   
@@ -104,7 +105,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
      Les éléments `authenticationService`, `profileService`et `roleService` de ce balisage activent et configurent les services d'application. À des fins de test, la valeur « false » est affectée à l'attribut `requireSSL` de l'élément `authenticationService` . Les attributs `readAccessProperties` et `writeAccessProperties` de l'élément `profileService` indiquent que la propriété `WebSettingsTestText` est en lecture/écriture.  
   
     > [!NOTE]
-    >  Dans le code de production, vous devez toujours accéder au service d'authentification via le protocole SSL (Secure Sockets Layer, en utilisant le protocole HTTPS). Pour plus d’informations sur la configuration de SSL, consultez [Configuration de SSL (Secure Sockets Layer) (Guide des opérations IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=91844).  
+    >  Dans le code de production, vous devez toujours accéder au service d'authentification via le protocole SSL (Secure Sockets Layer, en utilisant le protocole HTTPS). Pour plus d’informations sur la configuration de SSL, consultez [Configuration de SSL (Secure Sockets Layer) (Guide des opérations IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=91844).  
   
     ```xml  
     <system.web.extensions>  
@@ -363,7 +364,7 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
   
 3.  Dans la fenêtre **Propriétés** , définissez les propriétés suivantes pour le bouton.  
   
-  	|Propriété|Value|  
+  	|Property|Value|  
   	|--------------|-----------|  
   	|**(Name)**|managerOnlyButton|  
   	|**Text**|&Manager task|  
@@ -537,6 +538,6 @@ Cette rubrique décrit comment créer une application Windows qui utilise des se
  [Services d’application cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Vue d'ensemble des services d'application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Comment : configurer les services d’application cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Outil Administration de site web ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [Création et configuration de la base de données des services d'application pour SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [Procédure pas à pas : utilisation des services d’application ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [Outil Administration de site web ASP.NET](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Création et configuration de la base de données des services d'application pour SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [Procédure pas à pas : utilisation des services d’application ASP.NET](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

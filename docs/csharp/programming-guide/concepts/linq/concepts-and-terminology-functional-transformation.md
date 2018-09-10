@@ -2,12 +2,12 @@
 title: Concepts et terminologie (transformation fonctionnelle) (C#)
 ms.date: 07/20/2015
 ms.assetid: 03defb3a-7e17-4ab1-8efa-4dd66621e860
-ms.openlocfilehash: f0d09f8846556dfa0ce70f253d59ddd41f254363
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e42c14965ba3341c812811f6c27ece386c42d7c2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339288"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526993"
 ---
 # <a name="concepts-and-terminology-functional-transformation-c"></a>Concepts et terminologie (transformation fonctionnelle) (C#)
 Cette rubrique présente les concepts et la terminologie des transformations fonctionnelles pures. L'approche de transformation fonctionnelle pour la transformation des données génère du code qui est souvent plus rapide à programmer, plus expressif et plus facile à déboguer et à maintenir que le code de programmation impératif plus traditionnel.  
@@ -71,6 +71,7 @@ Cette rubrique présente les concepts et la terminologie des transformations fon
   
  Ces fonctionnalités de langage seront utilisées dans les exemples de code tout au long de cette section.  
   
-## <a name="see-also"></a>Voir aussi  
- [Introduction aux transformations fonctionnelles pures (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
- [Comparaison de la programmation fonctionnelle et de la programmation impérative (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Introduction aux transformations fonctionnelles pures (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
+- [Comparaison de la programmation fonctionnelle et de la programmation impérative (C#)](../../../../csharp/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

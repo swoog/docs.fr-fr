@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd00c91daf2811ecba01b77d51a74740027ced5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c49f7ad5162c9e2759ec8afed217451b4bcf04ff
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581584"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227621"
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Comment : utiliser JoinBlock pour lire des données issues de plusieurs sources
 Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> pour effectuer une opération lorsque des données sont disponibles à partir de plusieurs sources. Il présente aussi comment utiliser le mode non gourmand pour permettre à plusieurs blocs de jointure de partager plus efficacement une source de données.
@@ -46,5 +46,6 @@ Ce document explique comment utiliser la classe <xref:System.Threading.Tasks.Dat
 ## <a name="robust-programming"></a>Programmation fiable  
  L'utilisation de jointures non gourmandes peut également vous aider à empêcher tout interblocage dans votre application. Dans une application logicielle, un *blocage* se produit lorsque au moins deux processus comportent chacun une ressource et attendent mutuellement qu’un autre processus en libère une autre. Examinez la requête qui définit deux objets <xref:System.Threading.Tasks.Dataflow.JoinBlock%602>. Les deux objets lisent chacun des données de deux blocs sources partagés. En mode gourmand, si un bloc de jointure lit depuis la première source et le deuxième bloc de jointure lit depuis la seconde source, l’application peut être interbloquée car les deux blocs de jointure attendent mutuellement l’autre pour libérer sa ressource. En mode non gourmand, chaque bloc de jointure lit uniquement à partir de ses sources lorsque toutes les données sont disponibles, éliminant par conséquent, le risque d'interblocage.  
   
-## <a name="see-also"></a>Voir aussi  
- [Le flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Le flux de données](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

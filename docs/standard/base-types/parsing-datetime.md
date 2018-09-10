@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576101"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207614"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analyse des chaînes de date et d’heure dans .NET
 
@@ -87,9 +87,10 @@ Dans l’exemple suivant, la méthode <xref:System.DateTime.ParseExact%2A?displa
 
 Chaque surcharge des méthodes <xref:System.DateTime.Parse%2A> et <xref:System.DateTime.ParseExact%2A> a un paramètre <xref:System.IFormatProvider> qui fournit des informations spécifiques à la culture sur la mise en forme de la chaîne. Cet objet <xref:System.IFormatProvider> est un objet <xref:System.Globalization.CultureInfo> qui représente une culture standard ou un objet <xref:System.Globalization.DateTimeFormatInfo> qui est renvoyé par la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  <xref:System.DateTime.ParseExact%2A> utilise également une chaîne supplémentaire ou un argument de tableau de chaînes qui définit un ou plusieurs formats de date et d’heure.  
 
-## <a name="see-also"></a>Voir aussi  
- [Analyse de chaînes](parsing-strings.md)  
- [Mise en forme des types](formatting-types.md)  
- [Conversion de type dans .NET](type-conversion.md)  
- [Formats de date et d’heure standard](standard-date-and-time-format-strings.md)  
- [Chaînes de format de date et d'heure personnalisées](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Analyse de chaînes](parsing-strings.md)  
+- [Mise en forme des types](formatting-types.md)  
+- [Conversion de type dans .NET](type-conversion.md)  
+- [Formats de date et d’heure standard](standard-date-and-time-format-strings.md)  
+- [Chaînes de format de date et d'heure personnalisées](custom-date-and-time-format-strings.md)

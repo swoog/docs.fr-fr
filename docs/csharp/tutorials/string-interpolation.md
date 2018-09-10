@@ -3,12 +3,12 @@ title: Interpolation de chaîne en C#
 description: Découvrez comment inclure des résultats d’expressions mises en forme dans une chaîne de résultat en C# avec une interpolation de chaîne.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 447e87cd4aae49896f0efbb8ece6097181079266
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43419097"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086701"
 ---
 # <a name="string-interpolation-in-c"></a>Interpolation de chaîne en C# #
 
@@ -108,7 +108,7 @@ Ce tutoriel décrit des scénarios courants d’utilisation de l’interpolation
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.String.Format%2A?displayProperty=nameWithType>  
-<xref:System.FormattableString?displayProperty=nameWithType>  
-<xref:System.IFormattable?displayProperty=nameWithType>  
-[Chaînes](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>  
+- <xref:System.FormattableString?displayProperty=nameWithType>  
+- <xref:System.IFormattable?displayProperty=nameWithType>  
+- [Chaînes](../programming-guide/strings/index.md)  

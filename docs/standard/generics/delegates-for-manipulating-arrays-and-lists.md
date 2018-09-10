@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 566a2e5e8587dc6d6d2259a5f79f5c59c2e60c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576293"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174989"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Délégués génériques pour la manipulation de tableaux et de listes
 Cette rubrique donne une vue d’ensemble des délégués génériques pour les conversions, des prédicats de recherche et des actions à effectuer sur les éléments d’un tableau ou d’une collection.  
@@ -41,10 +41,11 @@ Cette rubrique donne une vue d’ensemble des délégués génériques pour les 
 ### <a name="chaining-delegates"></a>Chaînage de délégués  
  La plupart des méthodes qui utilisent ces délégués retournent un tableau ou une liste, qui peut être passé à une autre méthode. Par exemple, si vous voulez sélectionner certains éléments d'un tableau, convertir ces éléments en un nouveau type, puis les enregistrer dans un nouveau tableau, vous pouvez passer le tableau retourné par la méthode générique <xref:System.Array.FindAll%2A> à la méthode générique <xref:System.Array.ConvertAll%2A>. Si le nouveau type d'élément n'a pas un ordre de tri naturel, vous pouvez passer le tableau retourné par la méthode générique <xref:System.Array.ConvertAll%2A> à la méthode générique <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Génériques](../../../docs/standard/generics/index.md)  
- [Collections génériques dans le .NET Framework](../../../docs/standard/generics/collections.md)  
- [Interfaces génériques](../../../docs/standard/generics/interfaces.md)  
- [Covariance et contravariance](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Génériques](../../../docs/standard/generics/index.md)  
+- [Collections génériques dans le .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Interfaces génériques](../../../docs/standard/generics/interfaces.md)  
+- [Covariance et contravariance](../../../docs/standard/generics/covariance-and-contravariance.md)

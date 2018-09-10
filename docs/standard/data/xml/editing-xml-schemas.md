@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38519ee90578d0bc13689216fb5674653ead4c19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577213"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087671"
 ---
 # <a name="editing-xml-schemas"></a>Modification de schémas XML
 La modification d’un schéma XML est l’une des fonctionnalités les plus importantes du SOM (Schema Object Model). Toutes les propriétés de pré-compilation de schéma du SOM peuvent être utilisées pour changer les valeurs existantes d'un schéma XML. Le schéma XML peut ensuite être recompilé pour que les changements prennent effet.  
@@ -135,11 +135,12 @@ La modification d’un schéma XML est l’une des fonctionnalités les plus imp
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Parcours des schémas XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

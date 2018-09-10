@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7b964ebd-7a4f-4d28-8194-7841f9e4c702
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e0d2747abbacf766ddeda6f41404d8701cbc273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fdc12091a377a118dc533e5f299fa4833af64baf
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574364"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081867"
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>Opérations de canal dans le .NET Framework
 Les canaux sont un moyen de communication entre processus. Il existe deux types de canaux :  
@@ -36,7 +36,8 @@ Les canaux sont un moyen de communication entre processus. Il existe deux types 
   
      Consultez [Comment : utiliser des canaux nommés pour la communication entre processus en réseau](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
- [Guide pratique pour utiliser des canaux anonymes pour la communication entre processus en local](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
- [Guide pratique pour utiliser des canaux nommés pour la communication entre processus en réseau](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
+- [Guide pratique pour utiliser des canaux anonymes pour la communication entre processus en local](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+- [Guide pratique pour utiliser des canaux nommés pour la communication entre processus en réseau](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

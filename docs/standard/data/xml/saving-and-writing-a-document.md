@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 389ae0d95f3d612ca9c81ce69b74f8b58534d679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83aad5d45dda1784069839662486f7dbcc307542
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573592"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879514"
 ---
 # <a name="saving-and-writing-a-document"></a>Enregistrement et écriture d'un document
 Lorsque vous chargez et enregistrez un objet <xref:System.Xml.XmlDocument>, le document sauvegardé peut varier de l'original dans les points suivants :  
@@ -90,5 +90,6 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  En revanche, vous pouvez utiliser la propriété <xref:System.Xml.XmlNode.InnerText%2A> pour obtenir le contenu des nœuds enfants.  
   
-## <a name="see-also"></a>Voir aussi  
- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Voir aussi
+
+- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

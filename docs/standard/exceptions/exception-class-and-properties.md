@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cdc464234871fc07feeeb8dd02635ebdd151d76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573195"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44216540"
 ---
 # <a name="exception-class-and-properties"></a>Classe et propriétés d’exception
 
@@ -41,5 +41,6 @@ La plupart des classes qui héritent de <xref:System.Exception> n’implémenten
 
 Nous vous recommandons de lever et d’intercepter uniquement des objets qui dérivent de <xref:System.Exception>, mais vous pouvez lever comme exception n’importe quel objet qui dérive de la classe <xref:System.Object>. Notez que tous les langages ne prennent pas forcément en charge la levée et l’interception d’objets qui ne dérivent pas de <xref:System.Exception>.
   
-## <a name="see-also"></a>Voir aussi  
-[Exceptions](index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Exceptions](index.md)

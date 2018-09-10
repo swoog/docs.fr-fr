@@ -2,12 +2,12 @@
 title: Guide pratique pour écrire des données d’objet dans un fichier XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320546"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259754"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Guide pratique pour écrire des données d’objet dans un fichier XML (C#)
 Cet exemple écrit l’objet d’une classe dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,7 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Cet exemple crée un fichier s’il n’existe pas déjà. Si une application doit créer un fichier, elle doit disposer de l’autorisation `Create` pour accéder au dossier. Si le fichier existe déjà, l’application a uniquement besoin de l’autorisation `Write`, qui est une autorisation de niveau inférieur. Quand cela est possible, il est plus sûr de créer le fichier au cours du déploiement et de n’accorder l’autorisation `Read` que sur un seul fichier, plutôt que l’autorisation `Create` sur un dossier.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.StreamWriter>  
- [Guide pratique : lire des données d’objet à partir d’un fichier XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
- [Sérialisation (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IO.StreamWriter>  
+- [Guide pratique : lire des données d’objet à partir d’un fichier XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)  
+- [Sérialisation (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

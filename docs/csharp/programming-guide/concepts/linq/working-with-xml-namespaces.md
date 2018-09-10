@@ -2,12 +2,12 @@
 title: Utilisation des espaces de noms XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416239"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269005"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Utilisation des espaces de noms XML (C#)
 Les rubriques de cette section décrivent comment [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] prend en charge les espaces de noms.  
@@ -22,5 +22,6 @@ Les rubriques de cette section décrivent comment [!INCLUDE[sqltecxlinq](~/inclu
 |[Portée des espaces de noms par défaut en C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Illustre la procédure appropriée pour écrire des requêtes pour du code XML dans l'espace de noms par défaut.|  
 |[Guide pratique pour écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Montre comment spécifier des espaces de noms XML dans des requêtes C# LINQ to XML.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

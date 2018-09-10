@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c1e1b476a1de1f0c348e264c9dc6b42ceb81eff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574048"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869339"
 ---
 # <a name="culture-insensitive-string-operations"></a>Opérations de chaînes indépendantes de la culture
 Les opérations de chaînes dépendantes de la culture peuvent présenter un avantage si vous créez des applications conçues pour afficher des résultats en fonction de la culture des utilisateurs. Par défaut, les méthodes dépendantes de la culture obtiennent la culture à utiliser à partir de la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A> du thread.  
@@ -32,5 +32,6 @@ Les opérations de chaînes dépendantes de la culture peuvent présenter un ava
   
  Que vous développiez ou non une application incluant du code pour gérer des problèmes de localisation et de globalisation, vous devez connaître les méthodes de .NET Framework qui retournent les résultats dépendants de la culture par défaut. L'objectif de cette rubrique est d'illustrer d'une manière appropriée l'utilisation de ces méthodes lorsque votre application désire obtenir des résultats indépendants de la culture.  
   
-## <a name="see-also"></a>Voir aussi  
- [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)

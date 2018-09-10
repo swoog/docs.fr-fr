@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 86b69a08-3bfa-4e5f-b4e1-3b7cb8478215
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cd7b7542e5cf9352e965717368399dcf4a9ecd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de83395df9e8c89a92e85b96ddd15e9f0be6ad5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575848"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207692"
 ---
 # <a name="how-to-enumerate-directories-and-files"></a>Comment : énumérer des répertoires et des fichiers
 Vous pouvez énumérer des répertoires et des fichiers à l’aide de méthodes qui retournent une collection énumérable de chaînes de leurs noms. Vous pouvez également utiliser des méthodes qui retournent une collection énumérable d’objets <xref:System.IO.DirectoryInfo>, <xref:System.IO.FileInfo> ou <xref:System.IO.FileSystemInfo>. Les collections énumérables offrent de meilleures performances que les tableaux lorsque vous travaillez avec collections volumineuses de fichiers et de répertoires.  
@@ -65,5 +65,6 @@ Vous pouvez énumérer des répertoires et des fichiers à l’aide de méthodes
      [!code-csharp[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/cs/program.cs#1)]
      [!code-vb[System.IO.DirectoryInfo.EnumerateDirectories#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.directoryinfo.enumeratedirectories/vb/program.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)

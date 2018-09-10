@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: b67a3d7b6d2e10519363a273b7dd1d8b61317d1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74503c510007b132a7bbb14da7eade4c379b2179
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338069"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856575"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Guide pratique pour gérer une exception à l'aide de try/catch (Guide de programmation C#)
 L’objectif d’un bloc [try-catch](../../../csharp/language-reference/keywords/try-catch.md) est d’intercepter et de gérer une exception générée par du code opérationnel. Certaines exceptions peuvent être gérées dans un bloc `catch` et le problème résolu sans que l’exception soit levée à nouveau, mais le plus souvent la seule chose que vous puissiez faire est de vous assurer que l’exception appropriée est levée.  
@@ -24,7 +24,8 @@ L’objectif d’un bloc [try-catch](../../../csharp/language-reference/keywords
 ## <a name="comments"></a>Commentaires  
  Le code qui provoque une exception est cloisonné dans le bloc `try`. Une instruction `catch` est ajoutée juste après pour gérer `IndexOutOfRangeException`, si elle se produit. Le bloc `catch` gère `IndexOutOfRangeException` et lève l’exception plus appropriée `ArgumentOutOfRangeException` à la place. Pour fournir à l’appelant autant d’informations que possible, pensez à spécifier l’exception d’origine comme <xref:System.Exception.InnerException%2A> de la nouvelle exception. Comme la propriété <xref:System.Exception.InnerException%2A> a la valeur [readonly](../../../csharp/language-reference/keywords/readonly.md), vous devez l’affecter dans le constructeur de la nouvelle exception.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Exceptions et gestion des exceptions](../../../csharp/programming-guide/exceptions/index.md)  
- [Gestion des exceptions](../../../csharp/programming-guide/exceptions/exception-handling.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Exceptions et gestion des exceptions](../../../csharp/programming-guide/exceptions/index.md)  
+- [Gestion des exceptions](../../../csharp/programming-guide/exceptions/exception-handling.md)

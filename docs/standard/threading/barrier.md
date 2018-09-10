@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584296"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212397"
 ---
 # <a name="barrier-net-framework"></a>Cloisonnement (.NET Framework)
 Un *cloisonnement* est une primitive de synchronisation définie par l'utilisateur qui permet à plusieurs threads (appelés *participants*) de travailler simultanément sur un algorithme en plusieurs phases. Chaque participant s'exécute jusqu'à ce qu'il atteigne le point de cloisonnement dans le code. Le cloisonnement représente la fin d'une phase de travail. Quand un participant atteint le cloisonnement, il se bloque jusqu'à ce que tous les participants aient atteint le même cloisonnement. Une fois que tous les participants ont atteint le cloisonnement, vous pouvez éventuellement appeler une action post-phase. Cette action post-phase peut être utilisée pour effectuer des actions avec un thread unique alors que tous les autres threads sont encore bloqués. Une fois l'action exécutée, tous les participants sont débloqués.  
@@ -49,6 +49,7 @@ Un *cloisonnement* est une primitive de synchronisation définie par l'utilisate
   
  Pour plus d’informations, consultez [Chaînage des tâches à l’aide de tâches de continuation](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Guide pratique pour synchroniser des opérations simultanées avec un objet Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Guide pratique pour synchroniser des opérations simultanées avec un objet Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

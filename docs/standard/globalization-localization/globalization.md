@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579572"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221907"
 ---
 # <a name="globalization"></a>Globalisation
 La globalisation a trait à la conception et au développement d’applications universelles qui prennent en charge les interfaces localisées et les données régionales pour les utilisateurs de diverses cultures. Avant d’entreprendre la phase de conception, vous devez déterminer les cultures que votre application devra prendre en charge. Bien qu’une application cible par défaut une seule et même culture ou région, vous pouvez la concevoir et l’écrire de façon à faciliter son extension à d’autres cultures ou régions.  
@@ -369,6 +369,7 @@ La globalisation a trait à la conception et au développement d’applications 
   
 -   L’utilisateur peut personnaliser les paramètres propres à une culture à l’aide de l’application **Région et langue** du Panneau de configuration. Quand vous instanciez un objet <xref:System.Globalization.CultureInfo>, vous pouvez déterminer s’il reflète ces personnalisations utilisateur en appelant le constructeur <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. En règle générale, pour les applications destinées aux utilisateurs finals, veillez à respecter les préférences de mise en forme des utilisateurs de sorte que les données leur soient présentées comme attendu.  
   
-## <a name="see-also"></a>Voir aussi  
- [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)  
- [Bonnes pratiques pour l’utilisation de chaînes](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Globalisation et localisation](../../../docs/standard/globalization-localization/index.md)  
+- [Bonnes pratiques pour l’utilisation de chaînes](../../../docs/standard/base-types/best-practices-strings.md)

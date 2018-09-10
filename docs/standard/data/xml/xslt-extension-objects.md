@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f958af5859804cdeb382adab2f3772c42ac5b16
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 40a530190ee4b19d72399ab877cf26bad1090b9f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483961"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264114"
 ---
 # <a name="xslt-extension-objects"></a>Objets d’extension XSLT
 Les objets d’extension permettent d’étendre les fonctionnalités des feuilles de style. Ils sont gérés par la classe <xref:System.Xml.Xsl.XsltArgumentList>.  
@@ -38,6 +38,7 @@ Les objets d’extension permettent d’étendre les fonctionnalités des feuill
   
 3.  Transmettez l'objet <xref:System.Xml.Xsl.XsltArgumentList> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Considérations sur la sécurité de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [Considérations sur la sécurité de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

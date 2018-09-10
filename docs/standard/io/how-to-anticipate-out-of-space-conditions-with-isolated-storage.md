@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575578"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207718"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Comment : anticiper des conditions d'espace insuffisant avec le stockage isolé
 Le code qui utilise le stockage isolé est limité par un [quota](../../../docs/standard/io/isolated-storage.md#quotas) qui spécifie la taille maximale du compartiment de données dans lequel des fichiers et répertoires de stockage isolé existent. Le quota est défini par la stratégie de sécurité et peut être configuré par les administrateurs. Si la taille maximale autorisée est dépassée lorsque vous tenez d’écrire des données, une exception <xref:System.IO.IsolatedStorage.IsolatedStorageException> est levée et l’opération échoue. Cela permet d’éviter des attaques malveillantes par déni de service, qui pourraient amener l’application à refuser des requêtes parce que le stockage des données est rempli.  
@@ -45,7 +45,8 @@ Le code qui utilise le stockage isolé est limité par un [quota](../../../docs/
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Stockage isolé](../../../docs/standard/io/isolated-storage.md)  
- [Obtention de magasins](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Stockage isolé](../../../docs/standard/io/isolated-storage.md)  
+- [Obtention de magasins](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

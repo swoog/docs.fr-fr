@@ -2,12 +2,12 @@
 title: Introduction aux transformations fonctionnelles pures (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
-ms.openlocfilehash: 278b3afc66e4c4f222e27e648274cb8cea814d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329099"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183182"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introduction aux transformations fonctionnelles pures (C#)
 Cette section présente les transformations fonctionnelles, y compris les concepts sous-jacents et les constructions de prise en charge. Elle décrit le contraste qu'il existe entre la programmation orientée objet et la programmation avec transformation fonctionnelle, et fournit des conseils pour aider les programmeurs à passer de l'une à l'autre. Bien que les transformations fonctionnelles puissent être utilisées dans de nombreux scénarios de programmation, la transformation XML est utilisée ici comme exemple concret.  
@@ -22,5 +22,6 @@ Cette section présente les transformations fonctionnelles, y compris les concep
 |[Applicabilité des transformations fonctionnelles (C#)](../../../../csharp/programming-guide/concepts/linq/applicability-of-functional-transformation.md)|Décrit des scénarios de transformation fonctionnelle courants.|  
 |[Transformation fonctionnelle de données XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)|Décrit les transformations fonctionnelles dans le contexte de la transformation d’arborescences XML.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformations fonctionnelles pures de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Transformations fonctionnelles pures de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

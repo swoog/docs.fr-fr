@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db1c952003e73beb756567be74ed4eb72612c989
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7e7892289248c9651b529bcc68d7228b8babb28a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569627"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083817"
 ---
 # <a name="post-schema-compilation-infoset"></a>Jeu d'informations de post-compilation de schéma
 La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](https://www.w3.org/XML/Schema) décrit le jeu d'informations qui doit être exposé pour la pré-validation de schéma et la post-compilation de schéma. Le Modèle Objet du schéma (SOM) XML observe cette exposition avant et après l'appel à la méthode <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> de l'objet <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -23,7 +23,7 @@ La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](https:
   
  Le SOM est le modèle d'objet qui représente les jeux d'informations de pré-validation de schéma et de post-compilation de schéma. Il est composé de classes dans l'espace de noms <xref:System.Xml.Schema?displayProperty=nameWithType>. Toutes les propriétés de lecture et d'écriture des classes de l'espace de noms <xref:System.Xml.Schema> appartiennent au jeu d'informations de pré-validation de schéma, alors que toutes les propriétés en lecture seule des classes de l'espace de noms <xref:System.Xml.Schema> appartiennent au jeu d'informations de post-compilation de schéma. Les propriétés suivantes, qui sont des propriétés des jeux d'informations de pré-validation de schéma et de post-compilation de schéma, constituent une exception à la règle.  
   
-|Classe|Propriété|  
+|Classe|Property|  
 |-----------|--------------|  
 |<xref:System.Xml.Schema.XmlSchemaObject>|<xref:System.Xml.Schema.XmlSchemaObject.Parent%2A>|  
 |<xref:System.Xml.Schema.XmlSchema>|<xref:System.Xml.Schema.XmlSchema.AttributeFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.BlockDefault%2A>, <xref:System.Xml.Schema.XmlSchema.ElementFormDefault%2A>, <xref:System.Xml.Schema.XmlSchema.FinalDefault%2A>, <xref:System.Xml.Schema.XmlSchema.TargetNamespace%2A>|  
@@ -40,5 +40,6 @@ La [recommandation du World Wide Web Consortium (W3C) sur le schéma XML](https:
  [!code-csharp[PsciSample#1](../../../../samples/snippets/csharp/VS_Snippets_Data/PsciSample/CS/PsciSample.cs#1)]
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

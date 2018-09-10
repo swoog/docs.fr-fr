@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591294"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877805"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Gestion des exceptions (bibliothèque parallèle de tâches)
 Les exceptions non gérées levées par le code utilisateur s’exécutant à l’intérieur d’une tâche sont propagées vers le thread appelant, sauf dans certains scénarios décrits plus loin dans cette rubrique. Les exceptions sont propagées quand vous utilisez l’une des méthodes statiques ou d’instance <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> ou <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` et que vous les gérez en incluant l’appel dans une instruction `try`/`catch`. Si une tâche est le parent de tâches enfants attachées ou si vous attendez plusieurs tâches, plusieurs exceptions peuvent être levées.  
@@ -91,5 +91,6 @@ Les exceptions non gérées levées par le code utilisateur s’exécutant à l�
 ## <a name="unobservedtaskexception-event"></a>Événement UnobservedTaskException  
  Dans certains scénarios, tels que l’hébergement de plug-ins non approuvés, des exceptions sans gravité sont courantes. Il peut s’avérer trop difficile de toutes les observer manuellement. Dans de tels cas, vous pouvez gérer l’événement <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. Il est possible d’utiliser l’instance <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType> passée à votre gestionnaire pour empêcher la propagation de l’exception non prise en charge vers le thread joint.  
   
-## <a name="see-also"></a>Voir aussi  
- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Voir aussi
+
+- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

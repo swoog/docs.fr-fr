@@ -2,12 +2,12 @@
 title: Analyse de code XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 7ea83f83-a779-423a-9875-4ea4e51f97fc
-ms.openlocfilehash: 876cfdf7bd5a82aba75d456d6d5cda57e080fdf0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a2dc3043c8cbf8138a164ab06d8394e4c859fa50
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933980"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523026"
 ---
 # <a name="parsing-xml-c"></a>Analyse de code XML (C#)
 Les rubriques de cette section décrivent comment analyser des documents XML.  
@@ -23,5 +23,6 @@ Les rubriques de cette section décrivent comment analyser des documents XML.
 |[Guide pratique pour créer une arborescence à partir d’un XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-create-a-tree-from-an-xmlreader.md)|Montre comment créer une arborescence XML directement à partir d'un objet <xref:System.Xml.XmlReader>.|  
 |[Guide pratique pour diffuser des fragments XML en continu à partir d’un XmlReader (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|Montre comment diffuser des fragments XML en continu à l'aide d'un objet <xref:System.Xml.XmlReader>.<br /><br /> Lorsque vous devez traiter des fichiers XML arbitrairement grands, il peut être impossible de charger l'intégralité de l'arborescence XML en mémoire. Au lieu de cela, vous pouvez diffuser des fragments XML en continu.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Création d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Création d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

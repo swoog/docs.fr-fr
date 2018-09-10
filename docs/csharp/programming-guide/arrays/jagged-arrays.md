@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297366"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261667"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Tableaux en escalier (Guide de programmation C#)
+
 Un tableau en escalier est un tableau dont les éléments sont des tableaux. Les éléments d’un tableau en escalier peuvent être de dimensions et de tailles différentes. Un tableau en escalier est parfois appelé « tableau de tableaux ». Les exemples suivants montrent comment déclarer, initialiser et accéder aux tableaux en escalier.  
   
  Voici une déclaration d’un tableau unidimensionnel qui comporte trois éléments, chacun d’eux étant un tableau unidimensionnel d’entiers :  
@@ -57,14 +58,16 @@ Un tableau en escalier est un tableau dont les éléments sont des tableaux. Les
   
  retourne la valeur 3.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a>Exemple
+
  Cet exemple génère un tableau dont les éléments sont eux-mêmes des tableaux. Chacun des éléments de tableau ont une taille différente.  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Array>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Tableaux](../../../csharp/programming-guide/arrays/index.md)  
- [Tableaux unidimensionnels](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Tableaux multidimensionnels](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Array>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Tableaux](../../../csharp/programming-guide/arrays/index.md)  
+- [Tableaux unidimensionnels](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Tableaux multidimensionnels](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

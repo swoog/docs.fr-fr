@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe12f67814b2fc049ec26c745b43aa85627d555
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744273"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748088"
 ---
 # <a name="64-bit-applications"></a>Applications 64 bits
 Lorsque vous compilez une application, vous pouvez spécifier si elle doit être exécutée sur un système d'exploitation Windows 64 bits comme une application native ou sous WOW64 (Windows 32 bits sur Windows 64 bits). WOW64 est un environnement de compatibilité qui permet à une application 32 bits de s'exécuter sur un système 64 bits. WOW64 est inclus dans toutes les versions 64 bits du système d'exploitation Windows.  
@@ -43,13 +43,13 @@ Lorsque vous compilez une application, vous pouvez spécifier si elle doit être
 ## <a name="general-64-bit-programming-information"></a>Informations générales sur la programmation 64 bits  
  Pour obtenir des informations générales sur la programmation 64 bits, consultez les documents suivants :  
   
--   Pour plus d'informations sur la version 64 bits du CLR sur un ordinateur Windows 64 bits, consultez le [Centre de développement .NET Framework](http://go.microsoft.com/fwlink/?LinkId=37079) sur le site Web MSDN.  
+-   Pour plus d'informations sur la version 64 bits du CLR sur un ordinateur Windows 64 bits, consultez le [Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) sur le site Web MSDN.  
   
--   Dans la documentation [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)], consultez le [Guide de programmation pour Windows 64 bits](http://go.microsoft.com/fwlink/p/?LinkId=253512).  
+-   Dans la documentation [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)], consultez le [Guide de programmation pour Windows 64 bits](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
--   Pour plus d'informations sur le téléchargement d'une version 64 bits du CLR, consultez la rubrique [Téléchargements du Centre de développement .NET Framework](http://go.microsoft.com/fwlink/?LinkId=50953) sur le site Web MSDN.  
+-   Pour plus d'informations sur le téléchargement d'une version 64 bits du CLR, consultez la rubrique [Téléchargements du Centre de développement .NET Framework](https://go.microsoft.com/fwlink/?LinkId=50953) sur le site Web MSDN.  
   
--   Pour plus d'informations sur la prise en charge de Visual Studio pour créer des applications 64 bits, consultez [Prise en charge des applications 64 bits par l'IDE Visual Studio](http://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
+-   Pour plus d'informations sur la prise en charge de Visual Studio pour créer des applications 64 bits, consultez [Prise en charge des applications 64 bits par l'IDE Visual Studio](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>Prise en charge de la création d'applications 64 bits par les compilateurs  
  Par défaut, lorsque vous utilisez .NET Framework pour générer une application sur un ordinateur 32 bits ou 64 bits, l'application s'exécute sur un ordinateur 64 bits en tant qu'application native (en d'autres termes, pas sous WOW64). Le tableau suivant répertorie les documents qui permettent d'expliquer comment utiliser les compilateurs Visual Studio pour créer des applications 64 bits qui s'exécutent en tant qu'applications natives ou sous WOW64, ou les deux à la fois.  
@@ -58,7 +58,7 @@ Lorsque vous compilez une application, vous pouvez spécifier si elle doit être
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/platform (Options du compilateur C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Vous pouvez créer des applications MSIL (Microsoft Intermediate Language) indépendantes des plateformes en utilisant **/clr:safe**. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ inclut un compilateur distinct pour chaque système d'exploitation 64 bits. Pour plus d'informations sur l'utilisation de Visual C++ pour créer des applications natives qui s'exécutent sur un système d'exploitation Windows 64 bits, consultez [Programmation 64 bits](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Vous pouvez créer des applications MSIL (Microsoft Intermediate Language) indépendantes des plateformes en utilisant **/clr:safe**. Pour plus d’informations, consultez l’article [/clr (Compilation pour le Common Language Runtime)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ inclut un compilateur distinct pour chaque système d'exploitation 64 bits. Pour plus d'informations sur l'utilisation de Visual C++ pour créer des applications natives qui s'exécutent sur un système d'exploitation Windows 64 bits, consultez [Programmation 64 bits](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Détermination de l'état d'un fichier .exe ou .dll  
  Pour déterminer si un fichier .exe ou .dll est destiné à être exécuté uniquement sur une plateforme spécifique ou sous WOW64, utilisez [CorFlags.exe (Outil de conversion CorFlags)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md) sans options. Vous pouvez également utiliser CorFlags.exe pour modifier l'état de plateforme d'un fichier .exe ou .dll. L'en-tête CLR (ou en-tête COM+ Runtime) d'un assembly Visual Studio possède un numéro de version de runtime majeur ayant 2 pour valeur et un numéro de version de runtime mineur ayant 5 pour valeur. Les applications dont la version de runtime mineure est définie à 0 sont traitées comme des applications héritées et sont toujours exécutées sous WOW64.  

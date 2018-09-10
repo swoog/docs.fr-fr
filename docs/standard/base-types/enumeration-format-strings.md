@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4402bf58ea853d8a373592eec274a8bf75e7e90c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 956dc7daad91d9daa3ac950d7f5897404dd314c2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925740"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041263"
 ---
 # <a name="enumeration-format-strings"></a>Chaînes de format d'énumération
 Vous pouvez utiliser la méthode <xref:System.Enum.ToString%2A?displayProperty=nameWithType> pour créer un objet de chaîne qui représente la valeur numérique, hexadécimale ou de chaîne d’un membre d’énumération. Cette méthode prend l’une des chaînes de mise en forme d’énumération pour spécifier la valeur à retourner.
@@ -50,4 +50,4 @@ La méthode `Color.ToString(System.String)` peut ensuite être utilisée pour af
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mise en forme des types](formatting-types.md)
+- [Mise en forme des types](formatting-types.md)

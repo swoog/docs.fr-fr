@@ -2,12 +2,12 @@
 title: Guide pratique pour exécuter des arborescences d’expressions (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 0ebdcb603a1adf3602e897db284faa2f75b7de7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322089"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192520"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>Guide pratique pour exécuter des arborescences d’expressions (C#)
 Cette rubrique montre comment exécuter une arborescence d’expressions. L’exécution d’une arborescence d’expressions peut retourner une valeur, ou elle peut simplement effectuer une action telle que l’appel d’une méthode.  
@@ -48,6 +48,7 @@ Console.WriteLine(result);
   
 -   Incluez l’espace de noms System.Linq.Expressions.  
   
-## <a name="see-also"></a>Voir aussi  
- [Arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Guide pratique pour modifier des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Guide pratique pour modifier des arborescences d’expressions (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

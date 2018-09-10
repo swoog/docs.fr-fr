@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571912"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204953"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Comment : convertir des entrées d'utilisateur numériques figurant dans des contrôles Web en nombres
 Étant donné qu’une page web peut être affichée n’importe où dans le monde, les utilisateurs peuvent entrer des données numériques dans un contrôle <xref:System.Web.UI.WebControls.TextBox> dans un nombre de formats pratiquement illimité. Il est par conséquent très important de déterminer les paramètres régionaux et la culture de l’utilisateur d’une page web. Après avoir analysé une entrée d’utilisateur, vous pouvez appliquer les conventions de mise en forme définies par les paramètres régionaux et la culture de l’utilisateur.  
@@ -71,6 +71,7 @@ ms.locfileid: "33571912"
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Pour empêcher un utilisateur d’injecter un script dans le flux de données HTML, l’entrée de l’utilisateur ne doit jamais être renvoyée directement dans la réponse du serveur. Elle doit être encodée à l’aide de la méthode <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Analyse de chaînes numériques](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Analyse de chaînes numériques](../../../docs/standard/base-types/parsing-numeric.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: afa22ed1fe1986712493c2aaa844d7f2c6ffd5bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583128"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44178562"
 ---
 # <a name="how-to-listen-for-multiple-cancellation-requests"></a>Comment : écouter plusieurs demandes d'annulation
 Cet exemple montre comment écouter simultanément deux jetons d’annulation afin de pouvoir annuler une opération si un des jetons le demande.  
@@ -34,5 +34,6 @@ Cet exemple montre comment écouter simultanément deux jetons d’annulation af
   
  Dans cet exemple, <xref:System.AggregateException> ne doit jamais être levée, mais elle est interceptée ici car, dans les scénarios réels, toutes les autres exceptions, hormis <xref:System.OperationCanceledException>, levées à partir du délégué de tâche sont encapsulées dans une <xref:System.OperationCanceledException>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Annulation dans les threads managés](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Annulation dans les threads managés](../../../docs/standard/threading/cancellation-in-managed-threads.md)

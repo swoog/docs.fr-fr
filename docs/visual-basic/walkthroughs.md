@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43452792"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086762"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Procédures pas à pas relatives au langage Visual Basic
 Les procédures pas à pas fournissent des instructions détaillées pour les scénarios courants, ce qui en fait un bon point de départ pour apprendre à utiliser le produit ou une fonctionnalité particulière.  
@@ -62,7 +62,7 @@ Les procédures pas à pas fournissent des instructions détaillées pour les sc
  [Création d’écouteurs de journalisation personnalisés](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  Illustre comment créer un écouteur de journalisation personnalisé et le configurer pour écouter la sortie de l’objet `My.Application.Log`.  
   
- [Incorporation de types provenant d’assemblys managés](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Incorporation de types provenant d’assemblys managés](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  Décrit comment créer un assembly et un programme client qui incorpore des types à partir de celui-ci.  
   
  [Validation de la complexité des mots de passe (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,7 +77,7 @@ Les procédures pas à pas fournissent des instructions détaillées pour les sc
  [Manipulation de fichiers à l’aide de méthodes du .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  Montre comment utiliser les méthodes du [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] pour déterminer les informations relatives à un fichier, rechercher une chaîne dans un fichier et écrire dans un fichier.  
   
- [Persistance d’un objet en Visual Basic](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Persistance d’un objet en Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  Montre comment créer un objet simple et rendre ses données persistantes dans un fichier.  
   
  [Prise en charge du développement basé d’abord sur les tests avec la fonctionnalité Générer à partir de l’utilisation](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  

@@ -2,12 +2,12 @@
 title: Création d’arborescences XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: a9e9cfd82434de0fabc8119aa500ad9d9ef8155a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1245c0f087bb63f12d9f17389bf752330ccc7670
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481373"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521536"
 ---
 # <a name="creating-xml-trees-c"></a>Création d’arborescences XML (C#)
 L'une des tâches XML les plus courantes consiste à construire une arborescence XML. Cette section décrit plusieurs manières de procéder.  
@@ -23,5 +23,6 @@ L'une des tâches XML les plus courantes consiste à construire une arborescence
 |[Guide pratique pour valider à l’aide de XSD (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Montre comment valider une arborescence XML à l’aide de XSD.|  
 |[Contenu valide des objets XElement et XDocument](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|Décrit les arguments valides qui peuvent être passés aux constructeurs et méthodes utilisés pour ajouter du contenu aux éléments et aux documents.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

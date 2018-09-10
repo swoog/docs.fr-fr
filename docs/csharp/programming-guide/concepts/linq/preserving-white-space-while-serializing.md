@@ -2,12 +2,12 @@
 title: Conservation des espaces blancs lors de la sérialisation3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: 48e654c2b7992544cdc2c67dfc5a5136d6a9bb33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7fd0a38d2a9ed8c4712b8e9a03a24a23b408f38a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329879"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267087"
 ---
 # <a name="preserving-white-space-while-serializing"></a>Conservation des espaces blancs lors de la sérialisation
 Cette rubrique décrit comment contrôler les espaces blancs lors de la sérialisation d'une arborescence XML.  
@@ -31,5 +31,6 @@ Cette rubrique décrit comment contrôler les espaces blancs lors de la sériali
   
  Si la méthode prend l'objet <xref:System.Xml.Linq.SaveOptions> comme argument, vous pouvez spécifier qu'elle ne mettra pas en forme (en retrait) le code XML sérialisé. Dans ce cas, tous les espaces blancs dans l’arborescence XML seront conservés.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sérialisation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Sérialisation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)

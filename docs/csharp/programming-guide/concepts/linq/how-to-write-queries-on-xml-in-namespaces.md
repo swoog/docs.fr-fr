@@ -2,12 +2,12 @@
 title: Guide pratique pour écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: a5de5ffdafc2dd191a35860150e48a86a3603f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29c4b01bfce75ce71d5214fef0cc55cd82c4e776
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320328"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525641"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>Guide pratique pour écrire des requêtes à exécuter sur du code XML dans des espaces de noms (C#)
 Pour écrire des requêtes sur du code XML qui est dans un espace de noms, vous devez utiliser des objets <xref:System.Xml.Linq.XName> qui ont l'espace de noms correct.  
@@ -76,5 +76,6 @@ foreach (XElement el in c1)
 3  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des espaces de noms XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Utilisation des espaces de noms XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)

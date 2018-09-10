@@ -2,12 +2,12 @@
 title: Guide pratique pour lire des données d’objet à partir d’un fichier XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 59110a5bd0fe738239c0ca8b177a8c775db99ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336152"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083934"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Guide pratique pour lire des données d’objet à partir d’un fichier XML (C#)
 Cet exemple lit des données d’objet écrites précédemment dans un fichier XML en utilisant la classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,8 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Vérifiez toujours les entrées et ne désérialisez jamais les données provenant d’une source non fiable. L’objet recréé s’exécute sur un ordinateur local avec les autorisations du code qui l’a désérialisé. Vérifiez toutes les entrées avant d'utiliser les données dans votre application.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.StreamWriter>  
- [Guide pratique : écrire des données d’objet dans un fichier XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
- [Sérialisation (C# )](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IO.StreamWriter>  
+- [Guide pratique : écrire des données d’objet dans un fichier XML (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md)  
+- [Sérialisation (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)

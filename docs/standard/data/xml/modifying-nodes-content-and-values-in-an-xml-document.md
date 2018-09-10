@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571434"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208580"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modification de nœuds, de contenu et de valeurs dans un document XML
 Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. Vous pouvez :  
@@ -46,5 +46,6 @@ Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. 
   
  L'ajout ou la suppression d'un enfant en lecture seule d'un nœud modifiable est une opération valide. Cependant, toute tentative de modification de ce nœud en lecture seule à proprement parler lève un objet <xref:System.InvalidOperationException>. C'est le cas, par exemple, lorsque vous modifiez les enfants du nœud <xref:System.Xml.XmlEntityReference>. Ces enfants sont en lecture seule et ne peuvent donc pas être modifiés. Si vous tentez de les modifier, un objet <xref:System.InvalidOperationException> est levé.  
   
-## <a name="see-also"></a>Voir aussi  
- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Voir aussi
+
+- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

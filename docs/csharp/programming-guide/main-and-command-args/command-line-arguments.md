@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464335"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083947"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Arguments de ligne de commande (Guide de programmation C#)
 Vous pouvez envoyer des arguments à la méthode `Main` en définissant la méthode de l’une des manières suivantes :  
@@ -71,13 +71,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  Quand vous exécutez une application dans Visual Studio, vous pouvez spécifier des arguments de ligne de commande dans la [page Déboguer du Concepteur de projet](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Pour obtenir d’autres exemples d’utilisation des arguments de ligne de commande, consultez [Guide pratique pour créer et utiliser des assemblys à l’aide de la ligne de commande](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Pour obtenir d’autres exemples d’utilisation des arguments de ligne de commande, consultez [Guide pratique pour créer et utiliser des assemblys à l’aide de la ligne de commande](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Environment?displayProperty=nameWithType>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Comment : afficher les arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Comment : accéder à des arguments de ligne de commande à l’aide de foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Valeurs de retour Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Comment : afficher les arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Comment : accéder à des arguments de ligne de commande à l’aide de foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Valeurs de retour Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)

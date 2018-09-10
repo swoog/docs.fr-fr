@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 38f7302a-ddf6-4179-ba19-f49e00395b9f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 016229ea1b80c82ed9174e19bb08adfa67f016fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4649f33fe07e7780630fbd11170bb54046617c14
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580521"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201398"
 ---
 # <a name="parallel-diagnostic-tools"></a>Outils de diagnostic parallèles
 Visual Studio fournit une prise en charge complète des applications de débogage et de profilage multithread.  
@@ -29,5 +29,6 @@ Visual Studio fournit une prise en charge complète des applications de débogag
 ## <a name="profiling"></a>Profilage  
  Les vues de rapport du visualiseur concurrentiel permettent de visualiser la façon dont les threads d’un programme parallèle interagissent entre eux et avec les threads d’autres processus sur le système. Pour plus d’informations, consultez [Visualiseur concurrentiel](/visualstudio/profiling/concurrency-visualizer).  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572094"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183484"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Options de sortie de la classe XslCompiledTransform
 Cette rubrique présente les options de sortie XSLT disponibles. Vous pouvez spécifier des options de sortie dans la feuille de style ou dans la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -57,5 +57,6 @@ Cette rubrique présente les options de sortie XSLT disponibles. Vous pouvez sp�
   
 -   Lorsque vous écrivez des chaînes vides, un espace est inséré entre le dernier caractère du nom de l'élément et la barre oblique inverse, par exemple `<myElement />`. Cela permet aux anciens navigateurs d'afficher correctement les pages HTML générées.  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

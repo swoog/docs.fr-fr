@@ -2,12 +2,12 @@
 title: 'Exemple de fichier XML : Plusieurs commandes fournisseur dans un espace de noms2'
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
-ms.openlocfilehash: 03ca5cfbf198f576a52e6ceb5eb085195d599d3b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2c4812aa1c15223c7d2a65fa21f6c505e21e0bae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470010"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43523542"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Exemple de fichier XML : Plusieurs commandes fournisseur dans un espace de noms
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Ce fichier contient plusieurs commandes fournisseur. Le code XML se trouve dans un espace de noms.  
@@ -109,5 +109,6 @@ Le fichier XML suivant est utilisé dans différents exemples dans la documentat
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de documents XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Exemples de documents XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

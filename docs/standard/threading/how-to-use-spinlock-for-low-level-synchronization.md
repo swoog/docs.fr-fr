@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582754"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190700"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Comment : utiliser le verrouillage spinlock pour une synchronisation de bas niveau
 L'exemple suivant montre comment utiliser un verrouillage <xref:System.Threading.SpinLock>.  
@@ -32,5 +32,6 @@ L'exemple suivant montre comment utiliser un verrouillage <xref:System.Threading
   
  Notez l’utilisation de `false` (`False` en Visual Basic) dans l’appel à <xref:System.Threading.SpinLock.Exit%2A>. Cela fournit les meilleures performances. Dans les architectures IA64, spécifiez `true` (`True`) pour utiliser la barrière mémoire, qui vide les tampons d’écriture pour garantir que le verrouillage est disponible pour la sortie des autres threads.  
   
-## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)

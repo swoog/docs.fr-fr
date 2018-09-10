@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574746"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079459"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Comment : afficher des dates dans des calendriers non grégoriens
 Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le calendrier grégorien comme calendrier par défaut. Cela signifie que l’appel de la méthode `ToString` d’une valeur de date et d’heure affiche la représentation sous forme de chaîne de la date et de l’heure dans le calendrier grégorien, même si ces date et heure ont été créées à l’aide d’un autre calendrier. Cela est illustré dans l’exemple suivant, qui utilise deux méthodes différentes pour créer une valeur de date et d’heure avec le calendrier persan, mais affiche toujours ces valeurs de date et d’heure dans le calendrier grégorien quand il appelle la méthode <xref:System.DateTime.ToString%2A>. Cet exemple reflète deux techniques couramment utilisées, mais incorrectes, pour l’affichage de la date dans un calendrier particulier.  
@@ -90,5 +90,6 @@ Les types <xref:System.DateTime> et <xref:System.DateTimeOffset> utilisent le ca
   
  Compilez le code sur la ligne de commande à l’aide de csc.exe ou vb.exe. Pour compiler le code dans Visual Studio, mettez-le dans un modèle de projet d’application console.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)

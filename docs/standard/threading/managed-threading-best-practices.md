@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15261291f40b6a41e0d6033fb92e1b23b4042019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f95fb3ccab7362021a7a195ea199a1370e003dd2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592468"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204979"
 ---
 # <a name="managed-threading-best-practices"></a>Meilleures pratiques pour le threading managé
 Le multithreading nécessite une programmation attentive. Pour réduire la complexité de la plupart des tâches, il vous suffit de mettre en file d’attente les requêtes à exécuter par les threads d’un pool de threads. Cet article vous permet de remédier aux situations plus complexes, telles que la coordination du travail de plusieurs threads ou la gestion des threads bloqués.  
@@ -196,6 +196,7 @@ else {
   
 -   Évitez de fournir des méthodes statiques qui modifient l’état statique. Dans les scénarios de serveur courants, l’état statique est partagé entre les requêtes, ce qui signifie que plusieurs threads peuvent exécuter ce code en même temps. Ceci occasionne un risque de bogues de threading. Envisagez d’utiliser un modèle de conception qui encapsule les données dans des instances non partagées entre les requêtes. En outre, si les données static sont synchronisées, les appels entre les méthodes statiques qui modifient l’état peuvent entraîner des interblocages ou une synchronisation redondante et dégrader ainsi les performances.  
   
-## <a name="see-also"></a>Voir aussi  
- [Thread](../../../docs/standard/threading/index.md)  
- [Threads et threading](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Thread](../../../docs/standard/threading/index.md)  
+- [Threads et threading](../../../docs/standard/threading/threads-and-threading.md)

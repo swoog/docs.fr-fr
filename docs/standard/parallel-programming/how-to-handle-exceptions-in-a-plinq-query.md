@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8d56ff9b-a571-4d31-b41f-80c0b51b70a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 162ef3849f025cae9196c2f595634f82cfc782df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40b98e01d6c34fb01a1f508f2ea52309f2f7938b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580742"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266720"
 ---
 # <a name="how-to-handle-exceptions-in-a-plinq-query"></a>Comment : gérer des exceptions dans une requête PLINQ
 Le premier exemple de cette rubrique montre comment gérer l’exception <xref:System.AggregateException?displayProperty=nameWithType> qui peut être levée à partir d’une requête PLINQ au cours de son exécution. Le deuxième exemple montre comment placer des blocs try-catch dans des délégués, le plus près possible de l’emplacement où l’exception sera levée. Vous pouvez ainsi les intercepter dès qu’ils se produisent et éventuellement poursuivre l’exécution de la requête. Lorsque les exceptions sont autorisées à se propager vers le thread lié, il est possible qu'une requête puisse continuer à traiter des éléments après que l'exception ait été levée.  
@@ -48,6 +48,7 @@ Le premier exemple de cette rubrique montre comment gérer l’exception <xref:S
 ## <a name="robust-programming"></a>Programmation fiable  
  N’interceptez pas d’exceptions, sauf si vous savez comment les gérer pour ne pas endommager l’état de votre programme.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Linq.ParallelEnumerable>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

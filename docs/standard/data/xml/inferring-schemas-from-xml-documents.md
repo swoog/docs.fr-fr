@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8640a951acab512cbe2397df831a74700b5ad6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574818"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042177"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Inférence de schémas à partir de documents XML
 Cette rubrique décrit comment utiliser la classe <xref:System.Xml.Schema.XmlSchemaInference> pour déduire un schéma en langage XSD (XML Schema Definition) à partir de la structure d'un document XML.  
@@ -82,9 +82,10 @@ Cette rubrique décrit comment utiliser la classe <xref:System.Xml.Schema.XmlSch
 ## <a name="schemas-that-cannot-be-refined"></a>Schémas qui ne peuvent pas être affinés  
  Il y a trois constructions de schéma XML conformes aux spécifications du W3C que le processus <xref:System.Xml.Schema.XmlSchemaInference> de schéma en langage XSD ne peut pas gérer s'il reçoit un type particulier à affiner, et qui entraînent la levée d'une exception. Il peut s'agir, par exemple, d'un type complexe dont le constructeur de niveau supérieur n'est pas une séquence. Dans le Modèle Objet du schéma (SOM), cela correspond à un objet <xref:System.Xml.Schema.XmlSchemaComplexType> dont la propriété <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> n'est pas une instance de l'objet <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Inférence d’un schéma XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Règles pour l’inférence de types et de structure de nœud de schéma](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
- [Règles pour l’inférence de types simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [Modèle Objet du schéma (SOM) XML](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Inférence d’un schéma XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [Règles pour l’inférence de types et de structure de nœud de schéma](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- [Règles pour l’inférence de types simples](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

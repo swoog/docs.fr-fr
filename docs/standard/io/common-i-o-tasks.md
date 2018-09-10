@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bf00c380-706a-4e38-b829-454a480629fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf0caa0513881d5a1096478d8b29fc708ac3d3ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f205040e0f044ab04112683c7bdb8edccdfb9f71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577653"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210219"
 ---
 # <a name="common-io-tasks"></a>Tâches d’E/S courantes
 L'espace de noms <xref:System.IO> fournit plusieurs classes qui permettent d'exécuter différentes actions, telles que la lecture et l'écriture, sur des fichiers, des répertoires et des flux de données. Pour plus d’informations, consultez [E/S de fichier et de flux](../../../docs/standard/io/index.md).  
@@ -53,7 +53,8 @@ L'espace de noms <xref:System.IO> fournit plusieurs classes qui permettent d'ex�
 |Rechercher la taille d'un répertoire|Classe <xref:System.IO.Directory?displayProperty=nameWithType>|  
 |Déterminer si un répertoire existe|Méthode <xref:System.IO.Directory.Exists%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>Voir aussi  
- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
- [Composition de flux](../../../docs/standard/io/composing-streams.md)  
- [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
+- [Composition de flux](../../../docs/standard/io/composing-streams.md)  
+- [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)

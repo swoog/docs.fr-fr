@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f291bc91575ccde346f16552636d44951a0e6eac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574853"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202399"
 ---
 # <a name="how-to-implement-an-observer"></a>Comment : implémenter une méthode Observer
 Le modèle de design observateur requiert une division entre un observateur, qui s’inscrit pour recevoir des notifications, et un fournisseur, qui surveille les données et envie des notifications à un ou plusieurs observateurs. Cette rubrique décrit comment créer un observateur. Une rubrique connexe, [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md), explique comment créer un fournisseur.  
@@ -49,8 +49,9 @@ Le modèle de design observateur requiert une division entre un observateur, qui
  [!code-csharp[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesign.howto/cs/observer.cs#12)]
  [!code-vb[Conceptual.ObserverDesign.HowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesign.howto/vb/observer.vb#12)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IObserver%601>  
- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)  
- [Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IObserver%601>  
+- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
+- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)  
+- [Meilleures pratiques du modèle de design observateur](../../../docs/standard/events/observer-design-pattern-best-practices.md)

@@ -2,12 +2,12 @@
 title: Techniques de requêtes avancées (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 028d978e-215b-4d50-ba70-adce0659386d
-ms.openlocfilehash: b1045308d18afb46c5f3bb0da9d02b07f17db95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d33677be318275eb9c9cc427129caec6edddb2d9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326314"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44141189"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-c"></a>Techniques de requêtes avancées (LINQ to XML) (C#)
 Cette section fournit des exemples de techniques de requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] plus avancées.  
@@ -26,5 +26,6 @@ Cette section fournit des exemples de techniques de requêtes [!INCLUDE[sqltecxl
 |[Guide pratique pour modifier un document Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-modify-an-office-open-xml-document.md)|Présente du code qui ouvre, modifie et enregistre un document Office Open XML.|  
 |[Guide pratique pour remplir une arborescence XML à partir du système de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|Présente du code qui crée une arborescence XML à partir du système de fichiers.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Interrogation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Interrogation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

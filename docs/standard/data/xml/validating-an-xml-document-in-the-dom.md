@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b77d26a79796a9de87c07e366929cb516169907b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576309"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264387"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validation d'un document XML dans le DOM
 La classe <xref:System.Xml.XmlDocument> ne valide pas le XML dans le DOM (Document Object Model) par rapport à un schéma de langage XSD (XML Schema Definition) ou à une définition de type de document (DTD) par défaut ; il est seulement vérifié que le XML est correctement construit.  
@@ -82,10 +82,11 @@ La classe <xref:System.Xml.XmlDocument> ne valide pas le XML dans le DOM (Docume
   
  Pour obtenir des exemples illustrant l'objet <xref:System.Xml.Schema.ValidationEventHandler>, consultez les sections « Validation d'un document XML lors de son chargement dans le DOM » et « Validation d'un document XML dans le DOM » ci-dessus.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XmlReader>  
- <xref:System.Xml.Schema.ValidationEventHandler>  
- <xref:System.Xml.XmlReaderSettings>  
- [Traitement de données XML à l’aide du modèle DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [Utilisation de schémas XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XmlReader>  
+- <xref:System.Xml.Schema.ValidationEventHandler>  
+- <xref:System.Xml.XmlReaderSettings>  
+- [Traitement de données XML à l’aide du modèle DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [Utilisation de schémas XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

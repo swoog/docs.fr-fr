@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 98aee307-dde6-4cad-bb58-078497b8064f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5cde1af00fb10f7a2ec7dd340575b3cfb4814f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78be13bcc02d2df16c4dc6b0b7fb8479d62afbe5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580157"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087448"
 ---
 # <a name="for-further-reading-parallel-programming"></a>Pour obtenir des informations supplémentaires (programmation parallèle)
 
@@ -26,6 +26,7 @@ Les ressources suivantes contiennent des informations supplémentaires sur la pr
 
 - La page [Samples for Parallel Programming with the .NET Framework](https://code.msdn.microsoft.com/ParExtSamples) contient de nombreux exemples qui illustrent les techniques de programmation parallèle intermédiaires et avancées.
 
-## <a name="see-also"></a>Voir aussi  
- [Parallel Computing Developer Center](https://msdn.microsoft.com/vstudio/bb964701)  
- [Programmation parallèle en Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)  
+## <a name="see-also"></a>Voir aussi
+
+- [Parallel Computing Developer Center](https://msdn.microsoft.com/vstudio/bb964701)  
+- [Programmation parallèle en Visual C++](/cpp/parallel/parallel-programming-in-visual-cpp)  

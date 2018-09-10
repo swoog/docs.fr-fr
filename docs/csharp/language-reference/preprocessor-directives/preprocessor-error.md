@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '#error directive [C#]'
 ms.assetid: f2a7f3af-4cf9-4111-b369-70204d24b26b
 ms.openlocfilehash: ed43c1f85142ec6c54e44db5e3b0b7de3ef36bb8
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935292"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259877"
 ---
 # <a name="error-c-reference"></a>#error (référence C#)
 `#error` vous permet de générer une erreur définie par l’utilisateur [CS1029](../compiler-messages/cs1029.md) à partir d’un emplacement spécifique dans votre code. Exemple :  

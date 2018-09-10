@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f4429d50f6b7646cb75fad44957a98812282928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571262"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225199"
 ---
 # <a name="handling-com-interop-exceptions"></a>Gestion des exceptions COM Interop
 Le code managé et le code non managé peuvent collaborer pour gérer les exceptions. Si une méthode lève une exception dans du code managé, le common language runtime peut passer HRESULT à un objet COM. Si une méthode échoue dans du code non managé en retournant un échec HRESULT, le runtime lève une exception qui peut être interceptée par du code managé.  
@@ -31,4 +31,5 @@ Le code managé et le code non managé peuvent collaborer pour gérer les except
  Si une méthode échoue dans du code non managé, une exception peut être passée à un segment de code managé. La rubrique [Valeurs HRESULT et exceptions](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) contient un tableau montrant comment les valeurs HRESULT sont mappées aux objets exception du runtime.  
 
 ## <a name="see-also"></a>Voir aussi
-[Exceptions](index.md) 
+
+- [Exceptions](index.md)

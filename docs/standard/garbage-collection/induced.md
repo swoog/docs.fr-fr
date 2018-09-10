@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436953782049800e89298932278af4e450fc10de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575861"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192546"
 ---
 # <a name="induced-collections"></a>Collections forcées
 Dans la plupart des cas, le Garbage collector peut déterminer le meilleur moment pour exécuter une collection. En outre, vous devez lui permettre de s’exécuter de façon indépendante. Dans de rares cas, une collection forcée peut toutefois améliorer les performances de votre application. Vous pouvez alors induire le garbage collection à l’aide de la méthode <xref:System.GC.Collect%2A?displayProperty=nameWithType> pour forcer un garbage collection.  
@@ -36,6 +36,7 @@ Dans la plupart des cas, le Garbage collector peut déterminer le meilleur momen
 |<xref:System.GCCollectionMode.Forced> ou <xref:System.GCCollectionMode.Default>|Une collection de blocage est exécutée dès que possible. Si une collection d’arrière-plan est en cours et que la génération a la valeur 0 ou 1, la méthode <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> déclenche immédiatement une collection de blocage et retourne une valeur quand la collection est terminée. Si une collection d’arrière-plan est en cours et que le paramètre `generation` a la valeur 2, la méthode attend la fin de la collection d’arrière-plan, déclenche une collection de blocage de génération 2, puis retourne une valeur.|Une collection est exécutée dès que possible. La méthode <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> demande une collection d'arrière-plan, mais cela n'est pas garanti ; selon les cas, une collection bloquante peut toujours être exécutée. Si une collection d’arrière-plan est déjà en cours, la méthode retourne immédiatement une valeur.|  
 |<xref:System.GCCollectionMode.Optimized>|Une collecte bloquante peut être exécutée, selon l'état du récupérateur de mémoire et du paramètre `generation`. Le Garbage collector tente de fournir des performances optimales.|Une collection de blocage peut être effectuée, en fonction de l’état du Garbage collector. La méthode <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> demande une collection d'arrière-plan, mais cela n'est pas garanti ; selon les cas, une collection bloquante peut toujours être exécutée. Le Garbage collector tente de fournir des performances optimales. Si une collection d’arrière-plan est déjà en cours, la méthode retourne immédiatement une valeur.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Modes de latence](../../../docs/standard/garbage-collection/latency.md)  
- [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Modes de latence](../../../docs/standard/garbage-collection/latency.md)  
+- [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)

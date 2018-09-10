@@ -3,12 +3,12 @@ title: Gestion de version C# - Guide C#
 description: Comprendre le fonctionnement de la gestion de version C# et .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 4dc8e7e521bf209d6ca69a84534d277fb8a93ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351782"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269296"
 ---
 # <a name="versioning-in-c"></a>Gestion de version en C# #
 
@@ -24,7 +24,7 @@ La [gestion sémantique de version](http://semver.org/) (SemVer en abrégé) est
 Dans l’idéal, les informations de version ajoutées à votre bibliothèque doivent aider les développeurs à déterminer la compatibilité avec les projets qui utilisent des versions antérieures de cette même bibliothèque.
 
 L’approche la plus simple de SemVer est le format à 3 composants `MAJOR.MINOR.PATCH`, où :
- 
+
 * `MAJOR` est incrémenté quand vous apportez des changements d’API incompatibles
 * `MINOR` est incrémenté quand vous ajoutez des fonctionnalités à compatibilité descendante
 * `PATCH` est incrémenté quand vous apportez des correctifs de bogues à compatibilité descendante
@@ -51,7 +51,7 @@ Plus il est facile pour vos utilisateurs d’effectuer la mise à niveau vers la
 
 ### <a name="application-configuration-file"></a>Fichier de configuration de l'application
 
-En tant que développeur .NET, il est très probable que vous ayez rencontré [le fichier `app.config`](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx), présent dans la plupart des types de projets.
+En tant que développeur .NET, il est très probable que vous ayez rencontré [le fichier `app.config`](../framework/configure-apps/file-schema/index.md), présent dans la plupart des types de projets.
 Ce simple fichier de configuration peut s’avérer très utile pour améliorer le déploiement de nouvelles mises à jour. Vous devez généralement concevoir vos bibliothèques de sorte que les informations qui sont susceptibles de changer régulièrement soient stockées dans le fichier `app.config` ; ainsi, quand ces informations sont mises à jour, le fichier de configuration des anciennes versions doit uniquement être remplacé par le nouveau sans que la recompilation de la bibliothèque ne soit nécessaire.
 
 ## <a name="consuming-libraries"></a>Utilisation des bibliothèques
@@ -62,7 +62,7 @@ Heureusement pour vous, C# et l’écosystème .NET sont fournis avec des foncti
 
 ### <a name="assembly-binding-redirection"></a>Redirection des liaisons d'assembly
 
-Vous pouvez utiliser le fichier `app.config` pour mettre à jour la version d’une bibliothèque que votre application emploie. En ajoutant un élément nommé [*redirection de liaison*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx), vous pouvez utiliser la nouvelle version de bibliothèque sans avoir à recompiler votre application. L’exemple suivant montre comment vous devez mettre à jour le fichier `app.config` de votre application pour utiliser la version corrective `1.0.1` de `ReferencedLibrary` au lieu de la version `1.0.0` avec laquelle il a été compilé à l’origine.
+Vous pouvez utiliser le fichier `app.config` pour mettre à jour la version d’une bibliothèque que votre application emploie. En ajoutant un élément nommé [*redirection de liaison*](../framework/configure-apps/redirect-assembly-versions.md), vous pouvez utiliser la nouvelle version de bibliothèque sans avoir à recompiler votre application. L’exemple suivant montre comment vous devez mettre à jour le fichier `app.config` de votre application pour utiliser la version corrective `1.0.1` de `ReferencedLibrary` au lieu de la version `1.0.0` avec laquelle il a été compilé à l’origine.
 
 ```xml
 <dependentAssembly>

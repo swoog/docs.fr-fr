@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591753"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225592"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Bibliothèque parallèle de tâches (TPL) et programmation asynchrone .NET Framework
 Le .NET Framework fournit les deux modèles standard suivants pour l’exécution d’opérations asynchrones liées aux E/S et orientées calculs :  
@@ -119,5 +119,6 @@ Le .NET Framework fournit les deux modèles standard suivants pour l’exécutio
 ## <a name="using-the-streamextensions-sample-code"></a>Utilisation de l'exemple de code StreamExtensions  
  Le fichier Streamextensions.cs, dans [Exemples de programmation parallèle avec .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples), contient plusieurs implémentations de référence qui utilisent des objets Task pour des opérations d’E/S réseau ou de fichier asynchrones.  
   
-## <a name="see-also"></a>Voir aussi  
- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>Voir aussi
+
+- [La bibliothèque parallèle de tâches](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

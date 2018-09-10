@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: d1e132093cc59c7b41a3f7d5b522fca2e224f779
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961217"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857152"
 ---
 # <a name="how-to-search-strings"></a>Guide pratique pour faire des recherches dans des chaînes
 
@@ -68,7 +68,6 @@ Le code suivant utilise des expressions régulières pour valider le format de c
 | \d{4}    | correspond à exactement 4 caractères numériques  |
 | $        | correspond à la fin de la chaîne       |
 
-
 [!code-csharp-interactive[csProgGuideStrings#4](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#4)]
 
 Ce seul modèle de recherche correspond à de nombreuses chaînes valides. Les expressions régulières sont mieux adaptées pour rechercher un modèle ou pour effectuer une validation par rapport à un modèle, et le sont moins pour une seule chaîne de texte.
@@ -77,10 +76,10 @@ Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub
 
 ## <a name="see-also"></a>Voir aussi  
 
- [Guide de programmation C#](../programming-guide/index.md)  
- [Chaînes](../programming-guide/strings/index.md)  
- [LINQ et chaînes](../programming-guide/concepts/linq/linq-and-strings.md)   
- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>     
- [.NET Framework (expressions régulières)](../../standard/base-types/regular-expressions.md)   
- [Langage des expressions régulières - Aide-mémoire](../../standard/base-types/regular-expression-language-quick-reference.md)   
- [Bonnes pratiques pour l’utilisation de chaînes dans .NET](../../standard/base-types/best-practices-strings.md)  
+- [Guide de programmation C#](../programming-guide/index.md)  
+- [Chaînes](../programming-guide/strings/index.md)  
+- [LINQ et chaînes](../programming-guide/concepts/linq/linq-and-strings.md)
+- <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
+- [.NET Framework (expressions régulières)](../../standard/base-types/regular-expressions.md)
+- [Langage des expressions régulières - Aide-mémoire](../../standard/base-types/regular-expression-language-quick-reference.md)
+- [Bonnes pratiques pour l’utilisation de chaînes dans .NET](../../standard/base-types/best-practices-strings.md)  

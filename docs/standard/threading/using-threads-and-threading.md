@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934129"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864227"
 ---
 # <a name="using-threads-and-threading"></a>Utilisation des threads et du threading
 
@@ -44,7 +44,7 @@ Vous utilisez la méthode <xref:System.Threading.Thread.Sleep%2A?displayProperty
 
 Le tableau suivant présente certaines des propriétés de <xref:System.Threading.Thread> :  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|Retourne `true` si un thread a été démarré et ne s’est pas encore arrêté normalement ou n’a pas été abandonné.|  
 |<xref:System.Threading.Thread.IsBackground%2A>|Obtient ou définit une valeur booléenne qui indique si un thread est un thread d’arrière-plan. Les threads d’arrière-plan ressemblent aux threads de premier plan, mais un thread d’arrière-plan n’empêche pas un processus de s’arrêter. Une fois que tous les threads de premier plan appartenant à un processus sont arrêtés, le common language runtime met fin au processus en appelant la méthode <xref:System.Threading.Thread.Abort%2A> sur les threads d’arrière-plan encore actifs. Pour plus d’informations, consultez [Threads de premier plan et d’arrière-plan](foreground-and-background-threads.md).|  
@@ -54,6 +54,6 @@ Le tableau suivant présente certaines des propriétés de <xref:System.Threadin
 
 ## <a name="see-also"></a>Voir aussi
 
- <xref:System.Threading.Thread?displayProperty=nameWithType>  
- [Threads et threading](threads-and-threading.md)  
- [Programmation parallèle](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>  
+- [Threads et threading](threads-and-threading.md)  
+- [Programmation parallèle](../parallel-programming/index.md)  

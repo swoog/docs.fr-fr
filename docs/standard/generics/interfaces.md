@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575971"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198476"
 ---
 # <a name="generic-interfaces"></a>Interfaces génériques
 Cette rubrique donne une vue d'ensemble des interfaces génériques qui fournissent des fonctionnalités communes à plusieurs familles de types génériques.  
@@ -42,10 +42,11 @@ Cette rubrique donne une vue d'ensemble des interfaces génériques qui fourniss
   
  L'interface générique <xref:System.Collections.Generic.IEnumerable%601> fournit une structure d'énumérateur générique. L'interface générique <xref:System.Collections.Generic.IEnumerator%601> implémentée par les énumérateurs génériques hérite de l'interface non générique <xref:System.Collections.IEnumerator> ; les membres <xref:System.Collections.IEnumerator.MoveNext%2A> et <xref:System.Collections.IEnumerator.Reset%2A>, qui ne dépendent pas du paramètre de type `T`, apparaissent seulement sur l'interface non générique. Cela signifie que tout consommateur de l'interface non générique peut également consommer l'interface générique.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Génériques](../../../docs/standard/generics/index.md)  
- [Collections génériques dans le .NET Framework](../../../docs/standard/generics/collections.md)  
- [Délégués génériques pour la manipulation de tableaux et de listes](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Covariance et contravariance](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Génériques](../../../docs/standard/generics/index.md)  
+- [Collections génériques dans le .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Délégués génériques pour la manipulation de tableaux et de listes](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [Covariance et contravariance](../../../docs/standard/generics/covariance-and-contravariance.md)

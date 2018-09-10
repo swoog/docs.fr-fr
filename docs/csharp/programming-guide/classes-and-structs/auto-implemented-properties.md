@@ -5,12 +5,12 @@ helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: aa55fa97-ccec-431f-b5e9-5ac789fd32b7
-ms.openlocfilehash: 756e235dacc3fcb2bf741d1d426e8dfcb53bf19b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d32dfd626cb8484e935dd0e8608c2e29d3ecbde
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313798"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44228076"
 ---
 # <a name="auto-implemented-properties-c-programming-guide"></a>Propriétés implémentées automatiquement (Guide de programmation C#)
 En C# 3.0 et versions ultérieures, les propriétés implémentées automatiquement rendent la déclaration de propriété plus concise quand aucune logique supplémentaire n’est requise dans les accesseurs de propriété. Elles permettent également au code client de créer des objets. Quand vous déclarez une propriété comme indiqué dans l'exemple suivant, le compilateur crée un champ de stockage privé et anonyme uniquement accessible via les accesseurs `get` et `set` de la propriété.  
@@ -30,6 +30,7 @@ public string FirstName { get; set; } = "Jane";
   
  Les attributs sont autorisés sur les propriétés implémentées automatiquement, mais évidemment pas sur les champs de stockage puisque ces derniers ne sont pas accessibles à partir de votre code source. Si vous devez utiliser un attribut sur le champ de stockage d'une propriété, créez simplement une propriété normale.  
   
-## <a name="see-also"></a>Voir aussi  
- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)

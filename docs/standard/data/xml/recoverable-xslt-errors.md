@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ef88add49cb4a269612965d14dfbca6b3263533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579273"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252354"
 ---
 # <a name="recoverable-xslt-errors"></a>Erreurs XSLT récupérables
 La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend des zones dans lesquelles le fournisseur d'implémentation peut décider de la manière de gérer une situation. Ces zones sont considérées comme discrétionnaires en termes de comportement. Par exemple, dans la section 7.3 sur la création d'instructions de traitement, la recommandation sur XSLT 1.0 précise que la création de nœuds autres que des nœuds de texte lors d'une instanciation du contenu de `xsl:processing-instruction` génère une erreur. Pour certains problèmes, la recommandation sur XSLT 1.0 indique la décision à prendre si le processeur décide de récupérer l'erreur. Pour le problème donné dans la section 7.3, le W3C indique que l'implémentation peut récupérer cette erreur en ignorant les nœuds et leur contenu.  
@@ -54,5 +54,6 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
   
  <sup>*</sup> Ce comportement diffère de celui de la classe <xref:System.Xml.Xsl.XslTransform>. Pour plus d’informations, consultez [Implémentation de comportements discrétionnaires dans la classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 377fe93c-32be-421a-a30a-be639a46ede8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63775d48ca2e11cfa121f3b7aeaff708d86e50de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27e9306164e3d0e008f38f2d94e1f9c11c0d7d3d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578155"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085223"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Comment : afficher des informations de date et d'heure localisées pour les utilisateurs du Web
 Une page Web pouvant être affichée n’importe où dans le monde, les opérations qui analysent et mettent en forme les valeurs de date et d’heure ne doivent pas s’appuyer sur un format par défaut (généralement le format de la culture locale du serveur Web) lors de l’interaction avec l’utilisateur. Au lieu de cela, les formulaires Web qui gèrent les chaînes de date et d’heure saisies par l’utilisateur doivent analyser les chaînes en utilisant la culture préférée de l’utilisateur. De même, les données de date et d’heure doivent être affichées à l’utilisateur dans un format conforme à sa culture. Cette rubrique montre comment procéder.  
@@ -108,8 +108,9 @@ Une page Web pouvant être affichée n’importe où dans le monde, les opérati
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Pour empêcher un utilisateur d’injecter un script dans le flux de données HTML, l’entrée de l’utilisateur ne doit jamais être renvoyée directement dans la réponse du serveur. Elle doit être encodée à l’aide de la méthode <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Analyse de chaînes de date et d’heure](../../../docs/standard/base-types/parsing-datetime.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Exécution d’opérations de mise en forme](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Analyse de chaînes de date et d’heure](../../../docs/standard/base-types/parsing-datetime.md)

@@ -2,12 +2,12 @@
 title: Performances (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 43c9f1b7-9bd3-489c-b45c-cb09173a3718
-ms.openlocfilehash: 93c753c9bc408abb3db652f435ac1b0c87f93898
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 340be61f55f2b77ed22d608ec151daa737389771
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245412"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857126"
 ---
 # <a name="performance-linq-to-xml-c"></a>Performances (LINQ to XML) (C#)
 Cette section contient des informations relatives aux performances dans [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], et notamment aux performances des requêtes et de la construction fonctionnelle.  
@@ -25,5 +25,6 @@ Cette section contient des informations relatives aux performances dans [!INCLUD
  [Requêtes compilées statiquement (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  Fournit des informations de performance sur les requêtes compilées statistiquement, par rapport à l’analyse et au traitement qui doivent être effectués par un évaluateur d’expression XPath.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

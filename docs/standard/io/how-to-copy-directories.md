@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cfe07af216da1c35b093a1ca23e4d48c60a7bfe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6f2c2fbd58b10af80a2a233cbd4211befe2dbd33
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571233"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216052"
 ---
 # <a name="how-to-copy-directories"></a>Comment : copier des répertoires
 Cet exemple montre comment utiliser les classes d’E/S pour copier de manière synchrone le contenu d’un répertoire vers un autre emplacement. Dans cet exemple, l’utilisateur peut spécifier s’il veut aussi copier les sous-répertoires. Si les sous-répertoires sont copiés, la méthode utilisée dans cet exemple le fait de manière récursive en s’appelant elle-même sur chaque sous-répertoire suivant jusqu’à ce qu’il n’y ait plus rien à copier.  
@@ -30,10 +30,11 @@ Cet exemple montre comment utiliser les classes d’E/S pour copier de manière 
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO.FileInfo>  
- <xref:System.IO.DirectoryInfo>  
- <xref:System.IO.FileStream>  
- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
- [Tâches d’E/S courantes](../../../docs/standard/io/common-i-o-tasks.md)  
- [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IO.FileInfo>  
+- <xref:System.IO.DirectoryInfo>  
+- <xref:System.IO.FileStream>  
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)  
+- [Tâches d’E/S courantes](../../../docs/standard/io/common-i-o-tasks.md)  
+- [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 67e4a0eb-3095-4ea7-b20f-908faa476277
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a382dbea239b66e60d666a0e2e7add01d6d7bd54
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 811a75c9f0350eefc98c32181e859b7583ff74ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753823"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186290"
 ---
 # <a name="scheduling-threads"></a>Planification de threads
 
@@ -21,6 +21,7 @@ Chaque thread se voit attribuer une priorité. Les threads créés dans le Commo
   
  Les threads sont planifiés pour être exécutés selon leur priorité. Même si les threads s’exécutent dans le runtime, tous les threads se voient attribuer des tranches horaires de processeur par le système d’exploitation. Les détails de l’algorithme de planification utilisés pour déterminer l’ordre d’exécution des threads varient selon chaque système d’exploitation. Sous certains systèmes d’exploitation, le thread avec la priorité la plus élevée (parmi les threads qui peuvent être exécutés) est toujours planifié pour s’exécuter en premier. Si plusieurs threads de même priorité sont disponibles, le planificateur parcourt les threads affichant cette priorité et attribue à chacun d’eux une tranche horaire fixe dans laquelle ils peuvent s’exécuter. Tant qu’un thread avec une priorité plus élevée est disponible pour être exécuté, les threads de priorité inférieure ne sont pas exécutés. Lorsqu’il n’y a plus aucun thread exécutable avec une priorité donnée, le planificateur passe à la priorité inférieure suivante et planifie l’exécution des threads avec cette priorité. Si un thread de priorité supérieure est exécutable, le thread de priorité inférieure est devancé pour permettre au thread de priorité plus élevé de s’exécuter de nouveau. Par ailleurs, le système d’exploitation peut également ajuster dynamiquement les priorités des threads lorsque l’interface utilisateur d’une application est déplacée du premier plan à l’arrière-plan. D’autres systèmes d’exploitation peuvent opter pour un autre algorithme de planification.  
   
-## <a name="see-also"></a>Voir aussi  
- [Utilisation des threads et du threading](../../../docs/standard/threading/using-threads-and-threading.md)  
- [Threading managé et non managé dans Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Utilisation des threads et du threading](../../../docs/standard/threading/using-threads-and-threading.md)  
+- [Threading managé et non managé dans Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)

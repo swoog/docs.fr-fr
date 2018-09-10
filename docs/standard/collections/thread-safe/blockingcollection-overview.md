@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e752b9997301fcb3140539255fc32572bfd6e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573618"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262137"
 ---
 # <a name="blockingcollection-overview"></a>Vue d'ensemble de BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> est une classe de collection thread-safe qui fournit les fonctionnalités suivantes :  
@@ -80,7 +80,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>Utilisation de nombreux BlockingCollections comme un seul  
  Pour les scénarios dans lesquels un consommateur doit prendre simultanément des éléments à partir de plusieurs collections, vous pouvez créer des tableaux de <xref:System.Collections.Concurrent.BlockingCollection%601> et utiliser les méthodes statiques telles que <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> et <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> qui effectuent un ajout ou une prise dans n’importe laquelle des collections du tableau. Si une collection bloque, la méthode en essaie immédiatement une autre jusqu’à ce qu’elle en trouve une qui peut effectuer l’opération. Pour plus d’informations, consultez [Guide pratique : utiliser des tableaux de collections de blocage dans un pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Collections et structures de données](../../../../docs/standard/collections/index.md)  
- [Collections thread-safe](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Collections et structures de données](../../../../docs/standard/collections/index.md)  
+- [Collections thread-safe](../../../../docs/standard/collections/thread-safe/index.md)

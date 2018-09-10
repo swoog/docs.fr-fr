@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579390"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195050"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Meilleures pratiques du modèle de design observateur
 Dans le .NET Framework, le modèle de conception observateur est implémenté comme un ensemble d’interfaces. L'interface <xref:System.IObservable%601?displayProperty=nameWithType> représente le fournisseur de données, qui est également chargé de fournir une implémentation <xref:System.IDisposable> permettant aux observateurs d'annuler leur abonnement aux notifications. L'interface <xref:System.IObserver%601?displayProperty=nameWithType> représente l'observateur. Cette rubrique décrit les meilleures pratiques que les développeurs doivent suivre quand ils implémentent le modèle de conception observateur à l'aide de ces interfaces.  
@@ -53,7 +53,8 @@ Dans le .NET Framework, le modèle de conception observateur est implémenté co
   
  Même s'il est possible d'attacher un observateur à plusieurs fournisseurs, le modèle recommandé consiste à attacher une instance <xref:System.IObserver%601> à une seule et même instance <xref:System.IObservable%601>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
- [Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Modèle de conception Observateur](../../../docs/standard/events/observer-design-pattern.md)  
+- [Guide pratique pour implémenter une méthode Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md)

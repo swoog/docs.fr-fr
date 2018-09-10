@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313951"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128548"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Tableaux unidimensionnels (Guide de programmation C#)
+
 Vous pouvez déclarer un tableau unidimensionnel de cinq entiers comme indiqué dans l’exemple suivant :  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ Vous pouvez déclarer un tableau unidimensionnel de cinq entiers comme indiqué 
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Initialisation du tableau  
+## <a name="array-initialization"></a>Initialisation du tableau
+
  Il est possible d’initialiser un tableau lors de sa déclaration, auquel cas le spécificateur de rang n’est pas nécessaire, car il est déjà fourni par le nombre d’éléments figurant dans la liste d’initialisation. Exemple :  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ Vous pouvez déclarer un tableau unidimensionnel de cinq entiers comme indiqué 
   
  C# 3.0 introduit les tableaux implicitement typés. Pour plus d’informations, consultez [Tableaux implicitement typés](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
-## <a name="value-type-and-reference-type-arrays"></a>Tableaux de types valeur et de types référence  
+## <a name="value-type-and-reference-type-arrays"></a>Tableaux de types valeur et de types référence
+
  Considérons la déclaration de tableau suivante :  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ Vous pouvez déclarer un tableau unidimensionnel de cinq entiers comme indiqué 
   
  Pour plus d’informations sur les types valeur et les types références, consultez [Types](../../../csharp/language-reference/keywords/types.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Array>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Tableaux](../../../csharp/programming-guide/arrays/index.md)  
- [Tableaux multidimensionnels](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Tableaux en escalier](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Array>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Tableaux](../../../csharp/programming-guide/arrays/index.md)  
+- [Tableaux multidimensionnels](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [Tableaux en escalier](../../../csharp/programming-guide/arrays/jagged-arrays.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f045f2137d65a66ac025c81e58e66c96bcaca031
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 669936d15cfe1ea125ed36ffdfcfd093b6aacbe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827122"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225079"
 ---
 # <a name="how-to-compress-and-extract-files"></a>Guide pratique pour compresser et extraire des fichiers
 
@@ -70,9 +70,9 @@ Vous pouvez également utiliser les classes <xref:System.IO.Compression.GZipStre
 
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.IO.Compression.ZipArchive>  
-<xref:System.IO.Compression.ZipFile>  
-<xref:System.IO.Compression.ZipArchiveEntry>  
-<xref:System.IO.Compression.DeflateStream>  
-<xref:System.IO.Compression.GZipStream>  
-[Fichier et flux de données E/S](../../../docs/standard/io/index.md)
+- <xref:System.IO.Compression.ZipArchive>  
+- <xref:System.IO.Compression.ZipFile>  
+- <xref:System.IO.Compression.ZipArchiveEntry>  
+- <xref:System.IO.Compression.DeflateStream>  
+- <xref:System.IO.Compression.GZipStream>  
+- [Fichier et flux de données E/S](../../../docs/standard/io/index.md)

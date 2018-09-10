@@ -2,12 +2,12 @@
 title: Exemples de documents XML (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
-ms.openlocfilehash: 1d9e45e3d7e3131cf37b3373156a6a136d0a5cfd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2d13b1e42cd41d4ea54cdf1f585c29ddf71f6396
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43420221"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261981"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Exemples de documents XML (LINQ to XML)
 Les exemples de fichiers suivants sont utilisés dans les exemples de code et les extraits de code figurant dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -26,12 +26,13 @@ Les exemples de fichiers suivants sont utilisés dans les exemples de code et le
 |[Exemple de fichier XML : Configuration test (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|Document XML qui contient des pseudo-données de configuration de test.|  
 |[Exemple de fichier XML : Configuration test dans un espace de noms](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|Document XML dans un espace de noms qui contient des pseudo-données de configuration de test.|  
 |[Exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|Document XML qui contient des clients et des commandes.|  
-|[Exemple de fichier XSD : Clients et commandes](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Définition de schéma XML (XSD) qui valide l’[exemple de fichier XML : Clients et commandes (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[Exemple de fichier XSD : Clients et commandes](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Définition de schéma XML (XSD) qui valide l’[exemple de fichier XML : Clients et commandes (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).|  
 |[Exemple de fichier XML : Clients et commandes dans un espace de noms](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|Document XML dans un espace de noms qui contient des clients et des commandes.|  
 |[Exemple de fichier XML : Données numériques (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|Document XML qui contient des données adaptées à l'addition et au regroupement.|  
 |[Exemple de fichier XML : Données numériques dans un espace de noms](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|Document XML dans un espace de noms qui contient des données adaptées à l'addition et au regroupement.|  
 |[Exemple de fichier XML : Livres (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)|Document XML qui contient un catalogue de livres.|  
 |[Exemple de fichiers XML : Commandes fournisseur consolidées](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md)|Présente un document XML qui contient des commandes fournisseur qui se trouvent dans des espaces de noms différents.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

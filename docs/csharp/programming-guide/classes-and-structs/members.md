@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318222"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087553"
 ---
 # <a name="members-c-programming-guide"></a>Membres (Guide de programmation C#)
 Les classes et les structs ont des membres qui représentent leurs données et leur comportement. Les membres d’une classe incluent tous les membres déclarés de la classe, ainsi que tous les membres (à l’exception des constructeurs et des finaliseurs) déclarés dans toutes les classes de sa hiérarchie d’héritage. Les membres privés dans les classes de base sont hérités, mais ne sont pas accessibles à partir des classes dérivées.  
@@ -30,16 +30,17 @@ Les classes et les structs ont des membres qui représentent leurs données et l
 |[Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Les finaliseurs sont très rarement utilisés en C#. Ce sont des méthodes appelées par le moteur d’exécution quand l’objet est sur le point d’être supprimé de la mémoire. Ils sont généralement utilisés pour vérifier que toutes les ressources qui doivent être libérées sont gérées correctement.|  
 |[Types imbriqués](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Les types imbriqués sont des types déclarés dans un autre type. Les types imbriqués sont souvent utilisés pour décrire les objets utilisés uniquement par les types qui les contiennent.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Champs](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)  
- [Événements](../../../csharp/programming-guide/events/index.md)  
- [Types imbriqués](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
- [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Opérateurs surchargeables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Classes](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Champs](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)  
+- [Événements](../../../csharp/programming-guide/events/index.md)  
+- [Types imbriqués](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Opérateurs surchargeables](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

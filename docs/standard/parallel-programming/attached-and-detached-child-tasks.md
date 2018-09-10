@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590764"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188265"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Tâches enfants attachées et détachées
 Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> créée dans le délégué utilisateur d’une autre tâche, appelée *tâche parent*. Une tâche enfant peut être détachée ou attachée. Une *tâche enfant détachée* est une tâche qui s’exécute indépendamment de son parent. Une *tâche enfant attachée* est une tâche imbriquée créée avec l’option <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> dont le parent ne l’empêche pas explicitement ou par défaut d’être attachée. Une tâche peut créer autant de tâches enfants attachées et détachées que le permettent les ressources système.  
@@ -78,6 +78,7 @@ Une *tâche enfant* (ou *tâche imbriquée*) est une instance <xref:System.Threa
   
  Vous pourriez également empêcher une tâche enfant de s'attacher à son parent quand la tâche enfant ne se termine pas en temps voulu. Étant donné qu’une tâche parente ne se termine pas tant que toutes les tâches enfants ne sont pas achevées, une tâche enfant à exécution longue peut entraîner des performances médiocres de la part de l’application globale. Pour obtenir un exemple qui montre comment améliorer les performances de l’application en empêchant une tâche de s’attacher à sa tâche parente, consultez [Procédure : empêcher une tâche enfant de s’attacher à son parent](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)  
- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)  
+- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

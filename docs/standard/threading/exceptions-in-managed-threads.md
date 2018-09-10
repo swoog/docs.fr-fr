@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591571"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865177"
 ---
 # <a name="exceptions-in-managed-threads"></a>Exceptions dans les threads managés
 À partir du .NET Framework version 2.0, le common language runtime permet à la plupart des exceptions non prises en charge dans les threads de poursuivre naturellement. Dans la plupart des cas, cela signifie que l’exception non prise en charge provoque l’arrêt de l’application.  
@@ -78,5 +78,6 @@ ms.locfileid: "33591571"
 ## <a name="host-override"></a>Remplacement de l’hôte  
  Dans le .NET Framework version 2.0, un hôte non managé peut utiliser l’interface [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) dans l’API d’hébergement pour remplacer la stratégie d’exceptions non prises en charge par défaut du common language runtime. La fonction [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) est utilisée pour définir la stratégie des exceptions non prises en charge .  
   
-## <a name="see-also"></a>Voir aussi  
- [Éléments fondamentaux du threading managé](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Éléments fondamentaux du threading managé](../../../docs/standard/threading/managed-threading-basics.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92d7a50d2db25f5e4d32734d550ce2d55a02e3c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568678"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44177417"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Espaces de noms et DTD dans le DOM
 Les définitions de type de document (DTD) compliquent la prise en charge des espaces de noms. Par exemple, le code XML suivant contient des attributs par défaut, et un de ces noms comporte le signe deux-points.  
@@ -33,5 +33,6 @@ Les définitions de type de document (DTD) compliquent la prise en charge des es
   
  Le langage XML dans Microsoft .NET Framework implémente la deuxième option pour optimiser la compatibilité W3C.  
   
-## <a name="see-also"></a>Voir aussi  
- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Voir aussi
+
+- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

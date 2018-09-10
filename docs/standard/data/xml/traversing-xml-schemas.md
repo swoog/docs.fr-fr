@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575360"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198255"
 ---
 # <a name="traversing-xml-schemas"></a>Traversée de schémas XML
 Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'accéder aux éléments, attributs et types stockés dans le SOM. Traverser un schéma XML chargé dans le SOM est également la première étape de l'édition d'un schéma XML avec l'API SOM.  
@@ -22,7 +22,7 @@ Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'a
 ## <a name="traversing-an-xml-schema"></a>Traversée d'un schéma XML  
  Les propriétés suivantes de la classe <xref:System.Xml.Schema.XmlSchema> fournissent un accès à la collection de tous les éléments globaux ajoutés au schéma XML.  
   
-|Propriété|Type d’objet stocké dans la collection ou le tableau|  
+|Property|Type d’objet stocké dans la collection ou le tableau|  
 |--------------|---------------------------------------------------|  
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|  
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|  
@@ -67,11 +67,12 @@ Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'a
   
  L'exemple de code de la rubrique [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md) utilisait la collection <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> pour ajouter l'attribut `CustomerId` à l'élément `Customer`. C'est une propriété de pré-compilation de schéma. La propriété PSCI correspondante est la collection <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, qui contient tous les attributs du type complexe, y compris ceux qui sont hérités par dérivation de type.  
   
-## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Modification de schémas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Vue d’ensemble du modèle d’objet de schéma XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Lecture et écriture de schémas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Création de schémas XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Modification de schémas XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Inclusion ou importation de schémas XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet pour la compilation de schémas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Infoset de post-compilation de schéma](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

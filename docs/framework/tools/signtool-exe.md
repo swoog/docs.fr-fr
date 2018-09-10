@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1728dee4d0d8d90b8a1e2b2a3f92fc256c6267c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409813"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197457"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (outil Sign Tool)
 L'outil Signature est un outil en ligne de commande qui signe numériquement les fichiers, vérifie les signatures dans les fichiers et horodate les fichiers.  
@@ -97,7 +97,7 @@ signtool [command] [options] [file_name | ...]
 |`/u`  *Usage*|Spécifie l'utilisation améliorée de la clé (EKU) qui doit être présente dans le certificat de signature. La valeur de l'utilisation peut être spécifiée par un OID ou une chaîne. L'utilisation par défaut est « Signature du code » (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Spécifie l'utilisation « Windows System Component Verification » (1.3.6.1.4.1.311.10.3.6).|  
   
- Pour obtenir des exemples, consultez [Utilisation de SignTool pour signer un fichier](http://msdn.microsoft.com/library/windows/desktop/aa388170.aspx).  
+ Pour obtenir des exemples, consultez [Utilisation de SignTool pour signer un fichier](/windows/desktop/SecCrypto/using-signtool-to-sign-a-file).  
   
 <a name="TimeStamp"></a>   
 ## <a name="timestamp-command-options"></a>Options de commande TimeStamp  
@@ -111,7 +111,7 @@ signtool [command] [options] [file_name | ...]
 |`/tp` *index*|Horodate la signature à l’*index*.|  
 |`/tr`  *URL*|Spécifie l'URL du serveur d'horodatage RFC 3161. Le fichier en cours d'horodatage doit avoir été signé au préalable. L'option `/tr` ou `/t` est obligatoire.|  
   
- Pour obtenir un exemple, consultez [Ajout d’horodatages à des fichiers précédemment signés](http://msdn.microsoft.com/library/windows/desktop/aa375542.aspx).  
+ Pour obtenir un exemple, consultez [Ajout d’horodatages à des fichiers précédemment signés](/windows/desktop/SecCrypto/adding-time-stamps-to-previously-signed-files).  
   
 <a name="Verify"></a>   
 ## <a name="verify-command-options"></a>Options de commande Verify  
@@ -128,7 +128,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|Vérifie la signature à un emplacement spécifié.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Spécifie un algorithme de hachage facultatif à utiliser lors de la recherche d'un fichier dans un catalogue.|  
 |`/kp`|Spécifie que la vérification doit être effectuée avec la stratégie de signature de pilotes en mode noyau.|  
-|`/ms`|Utilise plusieurs sémantiques de vérification. Il s’agit du comportement par défaut d’un appel [WinVerifyTrust](http://msdn.microsoft.com/library/windows/desktop/aa388208.aspx) sur [!INCLUDE[win8](../../../includes/win8-md.md)] et ultérieur.|  
+|`/ms`|Utilise plusieurs sémantiques de vérification. Il s’agit du comportement par défaut d’un appel [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) sur [!INCLUDE[win8](../../../includes/win8-md.md)] et ultérieur.|  
 |`/o` *Version*|Vérifie le fichier par version du système d'exploitation. *Version* a le format suivant : *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* représente la valeur sous-jacente d’un membre de l’énumération <xref:System.PlatformID>. **Important :** L’utilisation du commutateur `/o` est recommandée. Si `/o` n'est pas spécifié, SignTool.exe peut retourner des résultats inattendus. Par exemple, si vous n'incluez pas le commutateur `/o`, les catalogues système qui valident correctement sur un système d'exploitation plus ancien peuvent ne pas valider correctement sur un système d'exploitation plus récent.|  
 |`/p7`|Vérifie les fichiers PKCS #7. Aucune stratégie existante n'est utilisée pour la validation PKCS #7. La signature est vérifiée et une chaîne est générée pour le certificat de signature.|  
 |`/pa`|Spécifie que la stratégie de vérification Authenticode par défaut doit être utilisée. Si l'option `/pa` n'est pas spécifiée, l'outil Signature utilise la stratégie de vérification des pilotes Windows. Cette option ne peut pas être utilisée avec les options `catdb`.|  
@@ -137,7 +137,7 @@ signtool [command] [options] [file_name | ...]
 |`/r` *RootSubjectName*|Spécifie le nom de l'objet du certificat racine auquel le certificat de signature doit être lié. Cette valeur peut être une sous-chaîne du nom de l'objet entier du certificat racine.|  
 |`/tw`|Spécifie qu'un avertissement doit être généré si la signature n'est pas horodatée.|  
   
- Pour obtenir des exemples, consultez [Utilisation de SignTool pour vérifier la signature d’un fichier](http://msdn.microsoft.com/library/windows/desktop/aa388171.aspx).  
+ Pour obtenir des exemples, consultez [Utilisation de SignTool pour vérifier la signature d’un fichier](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature).  
   
 ## <a name="return-value"></a>Valeur de retour  
  L'outil Signature retourne l'un des codes de sortie suivants lorsqu'il se termine.  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 369850e9-004a-45d2-b5c3-5060d9135adb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5757a3a0175fc1ba65f0d2e29b3b24714e460ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b5ff264f9a781c95ccf9bdbabf4b29806016362
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570419"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890839"
 ---
 # <a name="xslt-transformations-over-different-stores"></a>Transformations XSLT sur différents magasins
 > [!NOTE]
@@ -20,5 +20,6 @@ ms.locfileid: "33570419"
   
  Le DOM XML fournit l'accès aux données des documents XML et des classes supplémentaires pour lire et écrire des documents XML, ainsi que pour naviguer dans ceux-ci. Ces classes sont prises en charge dans l'espace de noms <xref:System.Xml> qui unifie également le DOM XML avec les services d'accès aux données fournis par ADO.NET. L'objet <xref:System.Xml.XmlDataDocument> fournit un accès relationnel aux données. L'objet <xref:System.Xml.XmlDataDocument> mappe les données XML à des données relationnelles dans un objet <xref:System.Data.DataSet> ADO.NET. Toute application [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] peut utiliser les classes de l'espace de noms <xref:System.Xml> pour accéder à des documents XML et à des données relationnelles et les manipuler dans l'objet <xref:System.Xml.XmlDataDocument>. Cette implémentation prend en charge les architectures multicouches pour la collecte et la distribution de données. Pour plus d'informations, voir [Intégration de XML aux données relationnelles et à ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Implémentation du processeur XSLT par la classe XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0830ec4022ca789d9aac0d1ae2c10ae6f76cc75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4e6a0b0a6fbad1c01ed26b5090cd18dcce3be057
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579819"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041598"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Constructions de regroupement dans les expressions régulières
 Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent les sous-chaînes d'une chaîne d'entrée. Utilisez les constructions de regroupement pour effectuer les opérations suivantes :  
@@ -167,8 +167,8 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
 |Motif|Description|  
 |-------------|-----------------|  
 |`\D+`|Mettre en correspondance un ou plusieurs caractères non décimaux.|  
-|`(?<digit>\d+)`|Mettre en correspondance un ou plusieurs caractères décimaux. Affecter la correspondance au groupe nommé `digit` .|  
-|\D+|Mettre en correspondance un ou plusieurs caractères non décimaux.|  
+|`(?<digit>\d+)`|Mettre en correspondance un ou plusieurs caractères décimaux. Affecter la correspondance au groupe nommé `digit`.|  
+|`\D+`|Mettre en correspondance un ou plusieurs caractères non décimaux.|  
 |`(?<digit>\d+)?`|Mettre en correspondance zéro ou une occurrence d'un ou plusieurs caractères numériques décimaux. Affecter la correspondance au groupe nommé `digit` .|  
   
 <a name="balancing_group_definition"></a>   
@@ -470,6 +470,7 @@ Les constructions de regroupement délimitent les sous-expressions d'une express
   
  Le premier groupe de capture met en correspondance chaque mot de la phrase. Le second groupe de capture met en correspondance chaque mot, ainsi que la ponctuation et l'espace blanc qui suivent le mot. L'objet <xref:System.Text.RegularExpressions.Group> dont l'index a pour valeur 2 fournit des informations sur le texte mis en correspondance par le second groupe de capture. Tous les mots capturés par le groupe de capture sont récupérables de l'objet <xref:System.Text.RegularExpressions.CaptureCollection> retourné par la propriété <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>Voir aussi  
- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Rétroaction](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Rétroaction](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

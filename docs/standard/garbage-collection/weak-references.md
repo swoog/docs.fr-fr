@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03da36090c255f635036a9bd518bdacd99404ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264949"
 ---
 # <a name="weak-references"></a>Références faibles
 Le Garbage collector ne peut pas collecter un objet actuellement utilisé par une application, tandis que le code de l’application peut accéder à cet objet. On dit de l’application qu’elle a une référence forte à l’objet.  
@@ -51,5 +52,6 @@ Le Garbage collector ne peut pas collecter un objet actuellement utilisé par un
   
  Évitez d’utiliser les références faibles comme solution automatique aux problèmes de gestion de la mémoire. Développez plutôt une stratégie de mise en cache efficace pour gérer les objets de votre application.  
   
-## <a name="see-also"></a>Voir aussi  
- [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Nettoyage de la mémoire](../../../docs/standard/garbage-collection/index.md)

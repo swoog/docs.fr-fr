@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480663"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268849"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problématiques et solutions pour la gestion des données distribuées
 
@@ -79,7 +79,7 @@ En fait, si vos microservices internes communiquent en créant des chaînes de r
 
 Par conséquent, pour atteindre à l’autonomie des microservices et avoir une meilleure résilience, vous devez minimiser l’utilisation de chaînes de communication de demande/réponse entre les microservices. Il est recommandé d’utiliser seulement une interaction asynchrone pour la communication entre les microservices, via une communication asynchrone basée sur des messages et des événements, ou via des interrogations HTTP indépendantes du cycle de demande/réponse HTTP d’origine.
 
-L’utilisation d’une communication asynchrone est expliquée plus en détails plus loin dans ce guide, dans les sections [L’intégration de microservices asynchrones permet d’atteindre l’autonomie des microservices](#asynchronous-microservice-integration-enforce-microservices-autonomy) et [Communication asynchrone basée sur des messages](#asynchronous-message-based-communication).
+L’utilisation d’une communication asynchrone est expliquée plus en détails plus loin dans ce guide, dans les sections [L’intégration de microservices asynchrones permet d’atteindre l’autonomie des microservices](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) et [Communication asynchrone basée sur des messages](asynchronous-message-based-communication.md).
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 

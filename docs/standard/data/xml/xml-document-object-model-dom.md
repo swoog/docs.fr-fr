@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579364"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087189"
 ---
 # <a name="xml-document-object-model-dom"></a>DOM (Document Object Model) XML
 La classe DOM (Document Object Model) XML fournit une représentation en mémoire d'un document XML. Le DOM vous permet de lire, de manipuler et de modifier un document XML par programme. La classe **XmlReader** lit également le code XML, mais elle garantit seulement un accès en lecture seule, en avant uniquement et non mis en cache. Cela signifie que **XmlReader** n'offre pas la possibilité de modifier les valeurs d'un attribut ou le contenu d'un élément, ni d'insérer ou de supprimer des nœuds. La modification est la fonction principale du DOM. Ce dernier régit la représentation en mémoire commune et structurée des données XML, bien que les données XML véritables soient stockées de façon linéaire lorsqu'elles se trouvent dans un fichier ou qu'elles proviennent d'un autre objet. Voici des données XML :  
@@ -76,6 +76,7 @@ Structure d'un document XML
   
  Le DOM revêt un intérêt tout particulier pour la lecture de données XML et leur chargement en mémoire afin d'en modifier la structure, d'y ajouter ou d'en supprimer des nœuds, ou encore de modifier les données contenues dans un nœud tout comme dans le texte contenu dans un élément. Cependant, d'autres classes sont disponibles et offrent de meilleures performances que le DOM dans d'autres scénarios. Pour un accès rapide en flux continu non mis en cache et en avant uniquement au code XML, utilisez **XmlReader** et **XmlWriter**. Si vous avez besoin d’un accès aléatoire avec un modèle de curseur et **XPath**, utilisez la classe **XPathNavigator**.  
   
-## <a name="see-also"></a>Voir aussi  
- [Types de nœuds XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [Mappage de la hiérarchie d’objets à des données XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Types de nœuds XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Mappage de la hiérarchie d’objets à des données XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

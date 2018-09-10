@@ -2,12 +2,12 @@
 title: Transformations fonctionnelles pures de données XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-ms.openlocfilehash: 7bbe5735541432108794959a7889976d4951fffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336708"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252127"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Transformations fonctionnelles pures de données XML (C#)
 Cette section fournit un didacticiel sur les transformations fonctionnelles de données XML. Elle contient des explications des principaux concepts et constructions que vous devez comprendre pour utiliser des transformations fonctionnelles, ainsi que des exemples d'utilisation de transformations fonctionnelles pour manipuler un document XML. Bien que ce didacticiel contienne des exemples de code LINQ to XML, tous les concepts sous-jacents s'appliquent également à d'autres technologies LINQ.  
@@ -26,5 +26,6 @@ Cette section fournit un didacticiel sur les transformations fonctionnelles de d
 |[Didacticiel : Chaînage de requêtes (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Décrit l'évaluation et l'exécution différées en détail.|  
 |[Didacticiel : Manipulation de contenu dans un document WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Didacticiel qui illustre une transformation fonctionnelle.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Interrogation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Interrogation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591310"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199763"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore et SemaphoreSlim
 La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> représente un sémaphore local ou nommé (visible à l'échelle du système). Il s'agit d'un wrapper mince entourant l'objet sémaphore Win32. Les sémaphores Win32 sont des sémaphores de comptage qui peuvent être utilisés pour contrôler l'accès à un pool de ressources.  
@@ -46,7 +46,8 @@ La classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> représ
   
  Utilisez la sécurité de contrôle d'accès pour protéger un objet <xref:System.Threading.Semaphore> qui représente un sémaphore nommé, de préférence en utilisant un constructeur qui spécifie un objet <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Vous pouvez également appliquer la sécurité de contrôle d'accès à l'aide de la méthode <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>. Sachez toutefois que cela crée une vulnérabilité entre le moment où le sémaphore est créé et celui où il est protégé. La protection des sémaphores grâce à la sécurité de contrôle d'accès empêche les attaques malveillantes, mais ne résout pas le problème des conflits de noms involontaires.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)

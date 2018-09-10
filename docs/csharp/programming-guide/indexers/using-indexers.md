@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337611"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253219"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utilisation d'indexeurs (Guide de programmation C#)
 Les indexeurs simplifient, d’un point de vue syntaxique, la création d’une [classe](../../../csharp/language-reference/keywords/class.md), d’un [struct](../../../csharp/language-reference/keywords/struct.md) ou d’une [interface](../../../csharp/language-reference/keywords/interface.md) auxquels les applications clientes peuvent accéder exactement comme à un tableau. Le plus souvent, les indexeurs sont implémentés dans les types dont l’objectif premier est d’encapsuler une collection ou un tableau interne. Par exemple, supposons que vous avez une classe nommée TempRecord qui représente la température, en Farenheit, enregistrée à 10 moments différents sur une période de 24 heures. La classe contient un tableau de type float nommé « temps » pour représenter les températures, et un <xref:System.DateTime> qui représente la date à laquelle les températures ont été enregistrées. En implémentant un indexeur dans cette classe, les clients peuvent accéder aux températures dans une instance TempRecord sous la forme `float temp = tr[4]` et non sous la forme `float temp = tr.temps[4]`. La notation d’indexeur simplifie non seulement la syntaxe pour les applications clientes, mais elle permet également aux autres développeurs de comprendre de façon plus intuitive l’objectif de la classe.  
@@ -71,7 +71,8 @@ public int this [int index]   // Indexer declaration
   
 -   Définissez l’accessibilité des accesseurs `get` et [set](../../../csharp/language-reference/keywords/set.md) afin qu’elle soit aussi restrictive que possible. Cela est particulièrement important dans le cas de l’accesseur `set`. Pour plus d’informations, consultez [Restriction d’accessibilité de l’accesseur](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)  
- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Indexeurs](../../../csharp/programming-guide/indexers/index.md)  
+- [Propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: d3922d9a81e350fd9ce95ffaa51dc3534873fb97
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 8f4e60eef443f772de3574d988ce48470f8c2017
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754990"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856177"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (outil Manifest Generation and Editing)
 
@@ -63,7 +63,7 @@ Le tableau suivant affiche les options prises en charge par les commandes `-New`
 |**-pu,** **-ProviderURL** `url`||Manifestes de déploiement.|Spécifie l'URL vérifiée par ClickOnce pour les mises à jour d'application.|
 |**-pub, -Publisher** `publisherName`||Manifestes d'application.<br /><br /> Manifestes de déploiement.|Ajoute le nom de l'éditeur à l'élément de description du manifeste de déploiement ou d'application. Quand il est utilisé sur un manifeste d’application, **-UseManifestForTrust** doit également être spécifié avec la valeur « true » ou « t » ; sinon, ce paramètre génère une erreur.|
 |**-s, -SupportURL**  `url`||Manifestes d'application.<br /><br /> Manifestes de déploiement.|Spécifie le lien dans lequel s'affiche Ajout/Suppression de programmes pour l'application ClickOnce.|
-|**-ti, -TimestampUri** `uri`||Manifestes d'application.<br /><br /> Manifestes de déploiement.|L'URL d'un service d'horodatage numérique. Horodater les manifestes vous évite d'avoir à signer de nouveau les manifestes si votre certificat numérique expire avant le déploiement de la version suivante de votre application. Pour plus d’informations, consultez [Configurer des racines de confiance et des certificats non autorisés](http://go.microsoft.com/fwlink/?LinkId=159000).|
+|**-ti, -TimestampUri** `uri`||Manifestes d'application.<br /><br /> Manifestes de déploiement.|L'URL d'un service d'horodatage numérique. Horodater les manifestes vous évite d'avoir à signer de nouveau les manifestes si votre certificat numérique expire avant le déploiement de la version suivante de votre application. Pour plus d’informations, consultez [Configurer des racines de confiance et des certificats non autorisés](https://go.microsoft.com/fwlink/?LinkId=159000).|
 |**-t, -ToFile** `filePath`|-   New :<br />-   Déploiement : deploy.application<br />-   Application : application.exe.manifest<br />-   Update :<br />-   Fichier d'entrée.|Tous les types de fichiers.|Spécifie le chemin de sortie du fichier créé ou modifié.<br /><br /> Si **-ToFile** n’est pas fourni quand vous utilisez **-New**, la sortie est écrite dans le répertoire de travail actuel. Si **-ToFile** n’est pas fourni quand vous utilisez **-Update**, *Mage.exe* réécrit le fichier dans le fichier d’entrée.|
 |**-tr, -TrustLevel** `level`|Selon la zone dans laquelle réside l'URL de l'application.|Manifestes d'application.|Niveau de confiance à accorder à l'application sur les ordinateurs clients. Les valeurs possibles sont "Internet", "Intranet" et "FullTrust".|
 |**-um, -UseManifestForTrust** `willUseForTrust`|False|Manifestes d'application.|Spécifie si la signature numérique du manifeste d'application sera utilisée pour prendre des décisions d'approbation lorsque l'application s'exécute sur le client. Spécifier "true" ou "t" indique que le manifeste d'application sera utilisé pour les décisions d'approbation. Spécifier "false" ou "f" indique que la signature du manifeste de déploiement sera utilisée.|

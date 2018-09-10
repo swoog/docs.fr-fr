@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43a7ac57e90b60679f29e9a5635be6ee8b8f8d93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580716"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189359"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Comment : itérer les répertoires de fichiers avec la classe parallèle
 Dans de nombreux cas, l’itération de fichiers est une opération facile à mettre en parallèle. La rubrique [Guide pratique : itérer les répertoires de fichiers avec PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) présente le moyen le plus simple d’effectuer cette tâche dans de nombreux scénarios. Toutefois, des problèmes risquent de survenir si le code doit gérer les différents types d’exceptions susceptibles de se produire avec l’accès au système de fichiers. L'exemple suivant montre une approche du problème. Il utilise une itération de type pile pour parcourir tous les fichiers et tous les dossiers situés sous un répertoire spécifié, et permet au code d’intercepter et de gérer différentes exceptions. Bien entendu, vous pouvez gérer les exceptions comme vous le souhaitez.  
@@ -32,5 +32,6 @@ Dans de nombreux cas, l’itération de fichiers est une opération facile à me
   
  Sachez que, si une exception est levée sur le thread principal, les threads lancés par la méthode <xref:System.Threading.Tasks.Parallel.ForEach%2A> risquent de continuer à s’exécuter. Pour les arrêter, vous pouvez définir une variable booléenne dans vos gestionnaires d’exceptions et vérifier sa valeur à chaque itération de la boucle parallèle. Si la valeur indique qu’une exception a été levée, utilisez la variable <xref:System.Threading.Tasks.ParallelLoopState> pour arrêter ou sortir de la boucle. Pour plus d’informations, consultez la page [Guide pratique : arrêter ou sortir d’une boucle Parallel.For](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e).  
   
-## <a name="see-also"></a>Voir aussi  
- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Parallélisme de données](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

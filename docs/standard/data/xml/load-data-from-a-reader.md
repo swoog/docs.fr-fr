@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569972"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207224"
 ---
 # <a name="load-data-from-a-reader"></a>Chargement de données à partir d'un lecteur
 Si un document XML est chargé à l'aide de la méthode <xref:System.Xml.XmlDocument.Load%2A> et d'un paramètre d'objet <xref:System.Xml.XmlReader>, il existe des différences entre le comportement qui se produit et celui du chargement de données d'autres formats. Si le lecteur est dans son état initial, <xref:System.Xml.XmlDocument.Load%2A> utilise l'ensemble du contenu du lecteur et crée le DOM (Document Object Model) XML à partir de toutes les données du lecteur.  
@@ -29,5 +29,6 @@ Si un document XML est chargé à l'aide de la méthode <xref:System.Xml.XmlDocu
   
  Par défaut, <xref:System.Xml.XmlDocument.Load%2A> ne vérifie pas si le XML est valide à l'aide de la définition de type de document (DTD) ou la validation de schéma. Il vérifie uniquement si le XML est correctement construit. Pour effectuer la validation, vous devez créer un objet <xref:System.Xml.XmlReader> à l'aide de la classe <xref:System.Xml.XmlReaderSettings>. La classe <xref:System.Xml.XmlReader> peut effectuer la validation à l'aide d'une DTD ou d'un schéma XSD (Schema definition language). La propriété <xref:System.Xml.ValidationType> de la classe <xref:System.Xml.XmlReaderSettings> détermine si l'instance de l'objet <xref:System.Xml.XmlReader> effectue la validation. Pour plus d'informations sur la validation des données XML, consultez la section Notes de la page de référence <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>Voir aussi  
- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Voir aussi
+
+- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

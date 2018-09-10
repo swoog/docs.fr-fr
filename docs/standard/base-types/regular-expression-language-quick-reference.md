@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948603"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041614"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -214,13 +214,14 @@ ms.locfileid: "36948603"
 |---------------|----------------|-------------|  
 |`(?imnsx-imnsx)`|Active ou désactive des options telles que le non-respect de la casse au milieu d’un modèle. Pour plus d’informations, consultez [Options des expressions régulières](regular-expression-options.md).|`\bA(?i)b\w+\b` correspond à "ABA", "Able" dans "ABA Able Act"|  
 |`(?#` *commentaire* `)`|Commentaire inline. Le commentaire se termine à la première parenthèse fermante.|`\bA(?#Matches words starting with A)\w+\b`|  
-|`#` [to end of line]|Commentaire en mode X. Le commentaire commence au caractère `#` sans séquence d'échappement et se poursuit jusqu'à la fin de la ligne.|`(?x)\bA\w+\b#Matches words starting with A`|  
+|`#` [to end of line]|Commentaire en mode X. Le commentaire commence au caractère `#` sans séquence d'échappement et se poursuit jusqu'à la fin de la ligne.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [Expressions régulières](regular-expressions.md)  
- [Classes d'expressions régulières](the-regular-expression-object-model.md)  
- [Exemples d'expressions régulières](regular-expression-examples.md)  
- [Expressions régulières - Aide-mémoire (téléchargement au format Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [Expressions régulières](regular-expressions.md)  
+- [Classes d'expressions régulières](the-regular-expression-object-model.md)  
+- [Exemples d'expressions régulières](regular-expression-examples.md)  
+- [Expressions régulières - Aide-mémoire (téléchargement au format Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
