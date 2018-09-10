@@ -10,48 +10,48 @@ helpviewer_keywords:
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
 ms.openlocfilehash: 96b0b089843495d35a54db43018688dbb4ffba2b
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43330891"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507508"
 ---
-# <a name="-win32res-c-compiler-options"></a><span data-ttu-id="b0c58-102">-win32res (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="b0c58-102">-win32res (C# Compiler Options)</span></span>
-<span data-ttu-id="b0c58-103">L’option **-win32res** insère une ressource Win32 dans le fichier de sortie.</span><span class="sxs-lookup"><span data-stu-id="b0c58-103">The **-win32res** option inserts a Win32 resource in the output file.</span></span>  
+# <a name="-win32res-c-compiler-options"></a><span data-ttu-id="50ca6-102">-win32res (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="50ca6-102">-win32res (C# Compiler Options)</span></span>
+<span data-ttu-id="50ca6-103">L’option **-win32res** insère une ressource Win32 dans le fichier de sortie.</span><span class="sxs-lookup"><span data-stu-id="50ca6-103">The **-win32res** option inserts a Win32 resource in the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0c58-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b0c58-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50ca6-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="50ca6-104">Syntax</span></span>  
   
 ```console  
 -win32res:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="b0c58-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="b0c58-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="50ca6-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="50ca6-105">Arguments</span></span>  
  `filename`  
- <span data-ttu-id="b0c58-106">Fichier de ressources que vous voulez ajouter à votre fichier de sortie.</span><span class="sxs-lookup"><span data-stu-id="b0c58-106">The resource file that you want to add to your output file.</span></span>  
+ <span data-ttu-id="50ca6-106">Fichier de ressources que vous voulez ajouter à votre fichier de sortie.</span><span class="sxs-lookup"><span data-stu-id="50ca6-106">The resource file that you want to add to your output file.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0c58-107">Notes</span><span class="sxs-lookup"><span data-stu-id="b0c58-107">Remarks</span></span>  
- <span data-ttu-id="b0c58-108">Un fichier de ressources Win32 peut être créé avec le [compilateur de ressources](../../language-reference/compiler-options/resource-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="b0c58-108">A Win32 resource file can be created with the [Resource Compiler](../../language-reference/compiler-options/resource-compiler-option.md).</span></span> <span data-ttu-id="b0c58-109">Le compilateur de ressources est appelé lorsque vous compilez un programme Visual C++ ; un fichier .res est alors créé à partir du fichier .rc.</span><span class="sxs-lookup"><span data-stu-id="b0c58-109">The Resource Compiler is invoked when you compile a Visual C++ program; a .res file is created from the .rc file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50ca6-107">Notes</span><span class="sxs-lookup"><span data-stu-id="50ca6-107">Remarks</span></span>  
+ <span data-ttu-id="50ca6-108">Un fichier de ressources Win32 peut être créé avec le [compilateur de ressources](../../language-reference/compiler-options/resource-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="50ca6-108">A Win32 resource file can be created with the [Resource Compiler](../../language-reference/compiler-options/resource-compiler-option.md).</span></span> <span data-ttu-id="50ca6-109">Le compilateur de ressources est appelé lorsque vous compilez un programme Visual C++ ; un fichier .res est alors créé à partir du fichier .rc.</span><span class="sxs-lookup"><span data-stu-id="50ca6-109">The Resource Compiler is invoked when you compile a Visual C++ program; a .res file is created from the .rc file.</span></span>  
   
- <span data-ttu-id="b0c58-110">Une ressource Win32 peut contenir des informations sur la version ou le fichier bitmap (icône) qui permettent d’identifier votre application dans l’Explorateur de fichiers.</span><span class="sxs-lookup"><span data-stu-id="b0c58-110">A Win32 resource can contain version or bitmap (icon) information that would help identify your application in the File Explorer.</span></span> <span data-ttu-id="b0c58-111">Si vous ne spécifiez pas l’option **-win32res**, le compilateur génère des informations de version en fonction de la version de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="b0c58-111">If you do not specify **-win32res**, the compiler will generate version information based on the assembly version.</span></span>  
+ <span data-ttu-id="50ca6-110">Une ressource Win32 peut contenir des informations sur la version ou le fichier bitmap (icône) qui permettent d’identifier votre application dans l’Explorateur de fichiers.</span><span class="sxs-lookup"><span data-stu-id="50ca6-110">A Win32 resource can contain version or bitmap (icon) information that would help identify your application in the File Explorer.</span></span> <span data-ttu-id="50ca6-111">Si vous ne spécifiez pas l’option **-win32res**, le compilateur génère des informations de version en fonction de la version de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="50ca6-111">If you do not specify **-win32res**, the compiler will generate version information based on the assembly version.</span></span>  
   
- <span data-ttu-id="b0c58-112">Consultez [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) pour référencer ou [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) pour attacher un fichier de ressources .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="b0c58-112">See [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (to reference) or [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (to attach) a .NET Framework resource file.</span></span>  
+ <span data-ttu-id="50ca6-112">Consultez [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) pour référencer ou [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) pour attacher un fichier de ressources .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="50ca6-112">See [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (to reference) or [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (to attach) a .NET Framework resource file.</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="b0c58-113">Pour définir cette option du compilateur dans l'environnement de développement Visual Studio</span><span class="sxs-lookup"><span data-stu-id="b0c58-113">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="50ca6-113">Pour définir cette option du compilateur dans l'environnement de développement Visual Studio</span><span class="sxs-lookup"><span data-stu-id="50ca6-113">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="b0c58-114">Ouvrez la page **Propriétés** du projet.</span><span class="sxs-lookup"><span data-stu-id="b0c58-114">Open the project's **Properties** page.</span></span>  
+1.  <span data-ttu-id="50ca6-114">Ouvrez la page **Propriétés** du projet.</span><span class="sxs-lookup"><span data-stu-id="50ca6-114">Open the project's **Properties** page.</span></span>  
   
-2.  <span data-ttu-id="b0c58-115">Cliquez sur la page de propriétés **Application**.</span><span class="sxs-lookup"><span data-stu-id="b0c58-115">Click the **Application** property page.</span></span>  
+2.  <span data-ttu-id="50ca6-115">Cliquez sur la page de propriétés **Application**.</span><span class="sxs-lookup"><span data-stu-id="50ca6-115">Click the **Application** property page.</span></span>  
   
-3.  <span data-ttu-id="b0c58-116">Cliquez sur le bouton **Fichier de ressources** et choisissez un fichier à l’aide de la zone de liste modifiable.</span><span class="sxs-lookup"><span data-stu-id="b0c58-116">Click on the **Resource File** button and choose a file by using the combo box.</span></span>  
+3.  <span data-ttu-id="50ca6-116">Cliquez sur le bouton **Fichier de ressources** et choisissez un fichier à l’aide de la zone de liste modifiable.</span><span class="sxs-lookup"><span data-stu-id="50ca6-116">Click on the **Resource File** button and choose a file by using the combo box.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0c58-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="b0c58-117">Example</span></span>  
- <span data-ttu-id="b0c58-118">Compilez `in.cs` et attachez un fichier de ressources Win32 `rf.res` afin de générer le fichier `in.exe` :</span><span class="sxs-lookup"><span data-stu-id="b0c58-118">Compile `in.cs` and attach a Win32 resource file `rf.res` to produce `in.exe`:</span></span>  
+## <a name="example"></a><span data-ttu-id="50ca6-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="50ca6-117">Example</span></span>  
+ <span data-ttu-id="50ca6-118">Compilez `in.cs` et attachez un fichier de ressources Win32 `rf.res` afin de générer le fichier `in.exe` :</span><span class="sxs-lookup"><span data-stu-id="50ca6-118">Compile `in.cs` and attach a Win32 resource file `rf.res` to produce `in.exe`:</span></span>  
   
 ```console  
 csc -win32res:rf.res in.cs  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b0c58-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b0c58-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="50ca6-119">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="50ca6-119">See Also</span></span>  
 
-- [<span data-ttu-id="b0c58-120">Options du compilateur C#</span><span class="sxs-lookup"><span data-stu-id="b0c58-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="b0c58-121">Gestion des propriétés des projets et des solutions</span><span class="sxs-lookup"><span data-stu-id="b0c58-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="50ca6-120">Options du compilateur C#</span><span class="sxs-lookup"><span data-stu-id="50ca6-120">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="50ca6-121">Gestion des propriétés des projets et des solutions</span><span class="sxs-lookup"><span data-stu-id="50ca6-121">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

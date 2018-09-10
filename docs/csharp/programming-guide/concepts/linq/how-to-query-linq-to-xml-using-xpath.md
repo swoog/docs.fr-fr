@@ -2,20 +2,20 @@
 title: Guide pratique pour interroger LINQ to XML à l’aide de XPath (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: a02149719afa19350a9baf15c41bd3548daa1344
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3d4a75e4688725f2444d3bbc4d55bec828485a5d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511189"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="8ac84-102">Guide pratique pour interroger LINQ to XML à l’aide de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="8ac84-102">How to: Query LINQ to XML Using XPath (C#)</span></span>
-<span data-ttu-id="8ac84-103">Cette rubrique présente les méthodes d’extension qui vous permettent d’interroger une arborescence XML à l’aide de XPath.</span><span class="sxs-lookup"><span data-stu-id="8ac84-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="8ac84-104">Pour plus d'informations sur l'utilisation de ces méthodes d'extension, consultez <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8ac84-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a><span data-ttu-id="7dac5-102">Guide pratique pour interroger LINQ to XML à l’aide de XPath (C#)</span><span class="sxs-lookup"><span data-stu-id="7dac5-102">How to: Query LINQ to XML Using XPath (C#)</span></span>
+<span data-ttu-id="7dac5-103">Cette rubrique présente les méthodes d’extension qui vous permettent d’interroger une arborescence XML à l’aide de XPath.</span><span class="sxs-lookup"><span data-stu-id="7dac5-103">This topic introduces the extension methods that enable you to query an XML tree by using XPath.</span></span> <span data-ttu-id="7dac5-104">Pour plus d'informations sur l'utilisation de ces méthodes d'extension, consultez <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7dac5-104">For detailed information about using these extension methods, see <xref:System.Xml.XPath.Extensions?displayProperty=nameWithType>.</span></span>  
   
- <span data-ttu-id="8ac84-105">À moins que vous n’ayez une raison spécifique pour interroger à l’aide de XPath, par exemple en cas d’utilisation intensive de code hérité, l’utilisation de XPath avec LINQ to XML n’est pas recommandée.</span><span class="sxs-lookup"><span data-stu-id="8ac84-105">Unless you have a very specific reason for querying using XPath, such as extensive use of legacy code, using XPath with LINQ to XML is not recommended.</span></span> <span data-ttu-id="8ac84-106">Les requêtes XPath présentent des performances inférieures à celles des requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8ac84-106">XPath queries will not perform as well as [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
+ <span data-ttu-id="7dac5-105">À moins que vous n’ayez une raison spécifique pour interroger à l’aide de XPath, par exemple en cas d’utilisation intensive de code hérité, l’utilisation de XPath avec LINQ to XML n’est pas recommandée.</span><span class="sxs-lookup"><span data-stu-id="7dac5-105">Unless you have a very specific reason for querying using XPath, such as extensive use of legacy code, using XPath with LINQ to XML is not recommended.</span></span> <span data-ttu-id="7dac5-106">Les requêtes XPath présentent des performances inférieures à celles des requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7dac5-106">XPath queries will not perform as well as [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8ac84-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="8ac84-107">Example</span></span>  
- <span data-ttu-id="8ac84-108">L'exemple suivant crée une petite arborescence XML et utilise <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> pour sélectionner un ensemble d'éléments.</span><span class="sxs-lookup"><span data-stu-id="8ac84-108">The following example creates a small XML tree and uses <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to select a set of elements.</span></span>  
+## <a name="example"></a><span data-ttu-id="7dac5-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="7dac5-107">Example</span></span>  
+ <span data-ttu-id="7dac5-108">L'exemple suivant crée une petite arborescence XML et utilise <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> pour sélectionner un ensemble d'éléments.</span><span class="sxs-lookup"><span data-stu-id="7dac5-108">The following example creates a small XML tree and uses <xref:System.Xml.XPath.Extensions.XPathSelectElements%2A> to select a set of elements.</span></span>  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -31,7 +31,7 @@ foreach (XElement el in list)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="8ac84-109">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="8ac84-109">This example produces the following output:</span></span>  
+ <span data-ttu-id="7dac5-109">Cet exemple génère la sortie suivante :</span><span class="sxs-lookup"><span data-stu-id="7dac5-109">This example produces the following output:</span></span>  
   
 ```xml  
 <Child2>4</Child2>  
@@ -39,5 +39,6 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ac84-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8ac84-110">See Also</span></span>  
- [<span data-ttu-id="8ac84-111">Techniques de requêtes avancées (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="8ac84-111">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="7dac5-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7dac5-110">See Also</span></span>
+
+- [<span data-ttu-id="7dac5-111">Techniques de requêtes avancées (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="7dac5-111">Advanced Query Techniques (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
