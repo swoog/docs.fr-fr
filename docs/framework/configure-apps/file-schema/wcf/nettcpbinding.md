@@ -5,11 +5,11 @@ helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
 ms.openlocfilehash: e8ac320c1edde05074d42652a708320d10690550
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: MT
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891757"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128603"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Spécifie une liaison sécurisée, fiable et optimisée, adaptée à la communication entre ordinateurs. Par défaut, elle génère une pile de communication du runtime avec Windows Security pour la sécurité et l'authentification des messages, TCP pour la remise de messages et un encodage de message binaire.  
