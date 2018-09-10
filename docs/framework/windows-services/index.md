@@ -13,11 +13,11 @@ ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
 ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43886407"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207094"
 ---
 # <a name="developing-windows-service-applications"></a>Développement des applications de service Windows
 Utilisez Microsoft Visual Studio ou le SDK Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] pour créer facilement des services. En fait, vous créez une application qui est installée comme service. Ce type d’application est appelé un service Windows. Grâce aux fonctionnalités du framework, vous pouvez non seulement créer des services, les installer, les démarrer et les arrêter, mais aussi contrôler leur comportement.  
