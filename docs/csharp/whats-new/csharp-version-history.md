@@ -3,12 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752116"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391246"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -34,6 +34,10 @@ Les principales fonctionnalités du langage C# 1.0 étaient les suivantes :
 - [Instructions](../programming-guide/statements-expressions-operators/statements.md)
 - [Attributs](../programming-guide/concepts/attributes/index.md)
 - Littéraux
+
+## <a name="c-version-12"></a>C# version 1.2
+
+C# version 1.2 était fourni avec Visual Studio 2003. Cette version contenait quelques améliorations mineures du langage. La principale est que, à compter de cette version, le code était généré dans une boucle `foreach` (appelée <xref:System.IDisposable.Dispose%2A>) sur un <xref:System.Collections.IEnumerator> quand ce <xref:System.Collections.IEnumerator> implémentait <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# version 2.0
 

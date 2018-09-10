@@ -4,12 +4,12 @@ description: Ce didacticiel explique comment organiser et tester des projets .NE
 author: cartermp
 ms.author: mairaw
 ms.date: 05/16/2017
-ms.openlocfilehash: a49eb1d398ab80a4ece703b7889083ea967df862
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 5fdbdc115ea5cd6da54f7c43bec2aa6f82e71310
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960981"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400281"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organiser et tester des projets avec la ligne de commande .NET Core
 
@@ -162,7 +162,7 @@ public class PetTests
 Exercice facultatif : Si vous avez précédemment ajouté un type `Bird` qui envoie un `Tweet!` au propriétaire, ajoutez une méthode de test au fichier *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, pour vérifier que la méthode `TalkToOwner` fonctionne correctement pour le type `Bird`.
 
 > [!NOTE]
-> Bien que l’on s’attende à ce que les valeurs `expected` et `actual` soient identiques, les assertions initiales avec les vérifications `Assert.NotEqual` spécifient qu’elles *ne sont pas égales*. Commencez toujours par créer vos tests en les faisant échouer une fois pour vérifier leur logique. Il s’agit d’une étape importante de la méthodologie de conception conduite par les tests. Après avoir confirmé l’échec des tests, ajustez les assertions pour leur permettre de réussir.
+> Bien que l’on s’attende à ce que les valeurs `expected` et `actual` soient identiques, une assertion initiale avec les vérifications `Assert.NotEqual` spécifie que ces valeurs *ne sont pas égales*. Commencez toujours par créer un test en le faisant échouer pour vérifier sa logique. Après avoir vérifié que le test échoue, modifiez l’assertion pour que le test réussisse.
 
 Le code suivant montre la structure complète du projet :
 

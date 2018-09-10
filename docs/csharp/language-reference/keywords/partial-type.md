@@ -7,33 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 362a02815cb249d57c0bd19706714df1d71644f4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 365d00d2c53d3efe1cd4330bdd3ec48740a49c53
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929661"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43422327"
 ---
 # <a name="partial-type-c-reference"></a>partial, type (référence C#)
-Les définitions de type partiel permettent le fractionnement de la définition d’une classe, d’un struct ou d’une interface entre plusieurs fichiers.  
-  
- Dans File1.cs :  
-  
- [!code-csharp[csrefKeywordsContextual#3](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_1.cs)]  
-  
- Déclaration dans File2.cs :  
-  
- [!code-csharp[csrefKeywordsContextual#4](../../../csharp/language-reference/keywords/codesnippet/CSharp/partial-type_2.cs)]  
-  
-## <a name="remarks"></a>Notes  
- Fractionner un type de classe, de struct ou d’interface entre plusieurs fichiers peut être utile si vous travaillez sur des projets volumineux ou des projets contenant du code généré automatiquement, comme celui fourni par le [Concepteur Windows Forms](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Un type partiel peut contenir une [méthode partielle](../../../csharp/language-reference/keywords/partial-method.md). Pour plus d’informations, consultez [Classes et méthodes partielles](../../../csharp/programming-guide/classes-and-structs/partial-classes-and-methods.md).  
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Les définitions de type partiel permettent le fractionnement de la définition d’une classe, d’un struct ou d’une interface entre plusieurs fichiers.
+
+Dans *File1.cs* :
+
+[!code-csharp[csrefKeywordsContextual#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#3)]  
+
+Déclaration dans *File2.cs* :
+
+[!code-csharp[csrefKeywordsContextual#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#4)]  
+
+## <a name="remarks"></a>Notes
+
+Fractionner un type de classe, de struct ou d’interface entre plusieurs fichiers peut être utile si vous travaillez sur des projets volumineux ou des projets contenant du code généré automatiquement, comme celui fourni par le [Concepteur Windows Forms](../../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Un type partiel peut contenir une [méthode partielle](partial-method.md). Pour plus d’informations, consultez [Classes et méthodes partielles](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Modificateurs](../../../csharp/language-reference/keywords/modifiers.md)  
-- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Modificateurs](modifiers.md)
+- [Introduction aux génériques](../../programming-guide/generics/introduction-to-generics.md)

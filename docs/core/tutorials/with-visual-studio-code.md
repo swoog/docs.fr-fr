@@ -4,12 +4,12 @@ description: Découvrez comment créer et déboguer votre première application 
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213614"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484666"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Bien démarrer avec C# et Visual Studio Code
 
@@ -50,7 +50,7 @@ Commençons par un programme « Hello World » simple sur .NET Core :
 
 4. Exécutez le programme Hello World :
 
-    * Tapez `dotnet run`. 
+    * Tapez `dotnet run`.
 
       ![La commande dotnet run](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 
     ![Ouvrez le fichier Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code doit vous inviter à ajouter les ressources manquantes pour générer et déboguer votre application. Sélectionnez **Oui**. 
+2. Visual Studio Code doit vous inviter à ajouter les ressources manquantes pour générer et déboguer votre application. Sélectionnez **Oui**.
 
     ![Invite pour les fichiers manquants](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 
     ![Sélection de .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Ajoutez un point d’arrêt à votre projet en cliquant sur la **marge de l’éditeur**, qui est l’espace à gauche des numéros de ligne dans l’éditeur, à côté de la ligne 9.
+5. Ajoutez un point d’arrêt à votre projet en cliquant sur la **marge de l’éditeur**, qui est l’espace à gauche des numéros de ligne dans l’éditeur, à côté de la ligne 9, ou déplacez le curseur texte vers la ligne 9 dans l’éditeur et appuyez sur <kbd>F9</kbd>.
 
     ![Définition d'un point d'arrêt](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 
 7. Cliquez sur la flèche verte en haut pour continuer le débogage, ou sélectionnez le carré rouge en haut pour arrêter.
 
-> [!TIP] 
+> [!TIP]
 > Pour obtenir plus d’informations et de conseils de dépannage sur le débogage de .NET Core avec OmniSharp dans Visual Studio Code, consultez [Instructions de configuration du débogueur .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
+## <a name="faq"></a>FAQ
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Je n’ai pas les ressources nécessaires pour générer et déboguer du code C# dans Visual Studio Code. Mon débogueur indique « Aucune configuration ».
+
+L’extension Visual Studio Code C# peut générer automatiquement les ressources dont vous avez besoin pour les builds et le débogage. Visual Studio Code vous invite à générer ces ressources à la première ouverture d’un projet C#. Si vous n’avez pas généré ces ressources au départ, vous pouvez le faire à tout moment en exécutant cette commande : ouvrez la palette de commandes (**Affichage > Palette de commandes**) et tapez « >.NET: Generate Assets for Build and Debug ». Cette commande génère les fichiers de configuration .vscode, launch.json et tasks.json dont vous avez besoin.
+
 ## <a name="see-also"></a>Voir aussi
-[Configuration de Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[Débogage dans Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)
+
+* [Configuration de Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+* [Débogage dans Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

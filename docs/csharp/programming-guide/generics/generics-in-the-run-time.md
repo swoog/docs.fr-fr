@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], at run time
 ms.assetid: 119df7e6-9ceb-49df-af36-24f8f8c0747f
-ms.openlocfilehash: c7cc0580398eeb5c70422cba3569340133107b12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5eb0ed02b1462aa126e55d688f4166aa741353a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334533"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513804"
 ---
 # <a name="generics-in-the-run-time-c-programming-guide"></a>Génériques dans le runtime (Guide de programmation C#)
 Quand une méthode ou un type générique est compilé dans le langage intermédiaire Microsoft (MSIL), il ou elle contient des métadonnées qui l’identifient comme ayant des paramètres de type. La façon dont le langage MSIL d’un type générique est utilisé diffère selon que le paramètre de type fourni est un type valeur ou référence.  
@@ -46,8 +46,9 @@ Quand une méthode ou un type générique est compilé dans le langage interméd
   
  De plus, quand une classe C# générique est instanciée à l’aide d’un paramètre de type valeur ou référence, la réflexion peut l’interroger au moment de l’exécution, et son type réel ainsi que son paramètre de type peuvent être vérifiés.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Collections.Generic>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Génériques](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Collections.Generic>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Génériques](~/docs/standard/generics/index.md)

@@ -4,12 +4,12 @@ description: Apprenez les concepts des tests unitaires dans C# et .NET Core de m
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 6f3b041bf690183f60b687699d878a4d5006be6f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213328"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43404293"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Effectuer des tests unitaires de C# dans .NET Core à l’aide de dotnet test et de xUnit
 
@@ -134,7 +134,7 @@ namespace Prime.UnitTests.Services
 
 L’attribut `[Fact]` désigne une méthode de test qui est exécutée par le Test Runner. À partir du dossier *PrimeService.Tests*, exécutez [`dotnet test`](../tools/dotnet-test.md) pour générer les tests et la bibliothèque de classes, puis exécutez les tests. Le Test Runner xUnit contient le point d’entrée de programme qui permet d’exécuter vos tests. `dotnet test` démarre le Test Runner à l’aide du projet de test unitaire que vous avez créé.
 
-Votre test échoue. Vous n’avez pas encore créé l’implémentation. Pour créer ce test, écrivez le code le plus simple dans la classe `PrimeService` qui fonctionne. Remplacez l’implémentation de la méthode `IsPrime` existante par le code suivant :
+Votre test échoue. Vous n’avez pas encore créé l’implémentation. Pour que ce test réussisse, écrivez le code le plus simple dans la classe `PrimeService` qui fonctionne. Remplacez l’implémentation de la méthode `IsPrime` existante par le code suivant :
 
 ```csharp
 public bool IsPrime(int candidate)
@@ -171,4 +171,4 @@ Poursuivez l’itération en ajoutant plus de tests, plus de théories et plus d
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
-[Test de la logique de contrôleur dans ASP.NET Core](/aspnet/core/mvc/controllers/testing)
+- [Test de la logique de contrôleur dans ASP.NET Core](/aspnet/core/mvc/controllers/testing)

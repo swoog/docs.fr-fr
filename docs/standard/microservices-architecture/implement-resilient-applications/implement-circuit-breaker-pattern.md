@@ -4,18 +4,18 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: d5902c5a0744d74ae5086a4df3aee606b24b6030
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875165"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403525"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implémenter le modèle Disjoncteur
 
-Comme indiqué précédemment, vous devez gérer des erreurs dont le temps de récupération est variable, comme cela peut être le cas quand vous essayez de vous connecter à une ressource ou à un service distant. La gestion de ce type d’erreur peut améliorer la stabilité et la résilience d’une application.
+Comme indiqué précédemment, vous devez gérer des erreurs dont le temps de récupération peut être variable, comme ça peut être le cas quand vous essayez de vous connecter à une ressource ou à un service distant. La gestion de ce type d’erreur peut améliorer la stabilité et la résilience d’une application.
 
-Dans un environnement distribué, les appels à des ressources et services distants peuvent échouer en raison d’erreurs temporaires, telles que des connexions réseau lentes, l’expiration de délais d’attente, ou si des ressources sont lentes ou temporairement indisponibles. En général, ces erreurs se corrigent d’elles-mêmes après un bref laps de temps, et une application cloud fiable doit être prête à les gérer à l’aide d’une stratégie comme le « modèle Nouvelle tentative ». 
+Dans un environnement distribué, les appels à des ressources et services distants peuvent échouer en raison d’erreurs temporaires, telles que des connexions réseau lentes, l’expiration de délais d’attente, ou si des ressources ont un temps de réponse trop long ou sont temporairement indisponibles. En général, ces erreurs se corrigent d’elles-mêmes après un bref laps de temps, et une application cloud fiable doit être prête à les gérer à l’aide d’une stratégie comme le « modèle Nouvelle tentative ». 
 
 Toutefois, dans certaines situations, les erreurs sont dues à des événements imprévus dont la correction peut prendre beaucoup plus de temps. La gravité de ces erreurs peut aller d’une perte partielle de connectivité à la défaillance complète d’un service. Dans ces cas de figure, il peut être inutile qu’une application effectue de nouvelles tentatives dont la réussite sera peu probable. 
 
@@ -23,7 +23,7 @@ L’application doit plutôt être codée pour reconnaître que l’opération a
 
 L’utilisation désinvolte des nouvelles tentatives Http peut entraîner la création d’une attaque par déni de service ([DoS](https://en.wikipedia.org/wiki/Denial-of-service_attack)) au sein de votre propre logiciel. Lorsqu’un microservice échoue ou s’exécute lentement, plusieurs clients peuvent répéter à plusieurs reprises les demandes ayant échoué. Ceci crée un risque dangereux d’augmentation exponentielle du trafic ciblé vers le service défaillant.
 
-Par conséquent, vous avez besoin d’une sorte de barrière de défense afin que les nouvelles tentatives arrêtent les demandes lorsqu’il ne vaut pas la peine de continuer à essayer. Cette barrière de défense est précisément le disjoncteur.
+Par conséquent, vous avez besoin d’une sorte de barrière de défense afin d’empêcher de nouvelles tentatives inutiles après un nombre excessif de requêtes. Cette barrière de défense est précisément le disjoncteur.
 
 L’objectif du modèle Disjoncteur est différent de celui du « modèle Nouvelle tentative ». Le « modèle Nouvelle tentative » permet à une application de retenter une opération en partant du principe qu’elle finira par réussir. Le modèle Disjoncteur empêche une application d’effectuer une opération qui échouera probablement. Une application peut combiner ces deux modèles. Toutefois, la logique de nouvelle tentative doit être sensible aux exceptions retournées par le disjoncteur et doit abandonner les nouvelles tentatives si le disjoncteur indique qu’une erreur n’est pas temporaire.
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-Dans l’exemple de code ci-dessus, la stratégie Disjoncteur est configurée de manière à rompre ou ouvrir le circuit après cinq exceptions lors des nouvelles tentatives de requêtes Http. Ensuite, la durée de l’arrêt passe à 30 secondes.
+Dans l’exemple de code ci-dessus, la stratégie Disjoncteur est configurée de manière à rompre ou ouvrir le circuit après cinq erreurs consécutives lors des nouvelles tentatives de requêtes HTTP. Quand cela se produit, le circuit est rompu pendant 30 secondes : durant ce laps de temps, le disjoncteur met immédiatement les appels en échec au lieu de les transmettre.  La stratégie interprète automatiquement [les exceptions et les codes d’état HTTP correspondants](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults) comme des erreurs.  
 
 Les disjoncteurs doivent également être utilisés pour rediriger les demandes vers une infrastructure de secours si vous rencontrez des problèmes dans une ressource particulière déployée dans un environnement autre que l’application cliente ou le service qui effectue l’appel HTTP. De cette façon, si le centre de données subit une panne qui a un impact uniquement sur vos microservices backend, mais pas sur vos applications clientes, ces dernières peuvent effectuer une redirection vers les services de secours. Polly planifie une nouvelle stratégie pour automatiser ce scénario de [stratégie de basculement](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy). 
 
@@ -65,7 +65,6 @@ Toutes ces fonctionnalités sont appropriées pour les cas où vous gérez le ba
 Du point de vue de l’utilisation, lorsque vous utilisez HttpClient, il est inutile d’ajouter quoi que ce soit de nouveau ici, car le code est le même que lors de l’utilisation de HttpClient avec HttpClientFactory, comme indiqué dans les sections précédentes. 
 
 ## <a name="testing-http-retries-and-circuit-breakers-in-eshoponcontainers"></a>Test des disjoncteurs et des nouvelles tentatives Http dans eShopOnContainers
-
 
 Chaque fois que vous démarrez la solution eShopOnContainers sur un hôte Docker, celle-ci doit démarrer plusieurs conteneurs. Certains des conteneurs sont plus lents à démarrer et à initialiser, comme le conteneur SQL Server. Cela est particulièrement vrai la première fois que vous déployez l’application eShopOnContainers dans Docker, car elle doit configurer les images et la base de données. Le fait que certains conteneurs démarrent plus lentement que d’autres peut entraîner la levée d’exceptions HTTP par le reste des services, même si vous définissez des dépendances entre les conteneurs au niveau de Docker Compose, comme expliqué dans les sections précédentes. Ces dépendances Docker Compose entre les conteneurs sont uniquement au niveau processus. Il est possible que le processus de point d’entrée du conteneur soit démarré alors que SQL Server n’est pas prêt pour les requêtes. Cela peut avoir pour conséquence une cascade d’erreurs, et l’application peut recevoir une exception lors d’une tentative d’utilisation de ce conteneur particulier. 
 

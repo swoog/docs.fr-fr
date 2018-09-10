@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 298ee915bbe11313f3b33ea7dae9353ef956a231
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549453"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509533"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Utilisation de foreach avec des tableaux (Guide de programmation C#)
 
@@ -26,10 +26,11 @@ Pour les tableaux multidimensionnels, les éléments sont traités de sorte que 
 
 Cependant, dans le cas de tableaux multidimensionnels, l’utilisation d’une boucle [for](../../language-reference/keywords/for.md) imbriquée vous permet de mieux contrôler l’ordre dans lequel les éléments du tableau sont traités.
 
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Array>  
- [Guide de programmation C#](../index.md)  
- [Tableaux](index.md)  
- [Tableaux unidimensionnels](single-dimensional-arrays.md)  
- [Tableaux multidimensionnels](multidimensional-arrays.md)  
- [Tableaux en escalier](jagged-arrays.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Array>  
+- [Guide de programmation C#](../index.md)  
+- [Tableaux](index.md)  
+- [Tableaux unidimensionnels](single-dimensional-arrays.md)  
+- [Tableaux multidimensionnels](multidimensional-arrays.md)  
+- [Tableaux en escalier](jagged-arrays.md)

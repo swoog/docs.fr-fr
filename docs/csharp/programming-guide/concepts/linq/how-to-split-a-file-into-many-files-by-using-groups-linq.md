@@ -2,12 +2,12 @@
 title: Guide pratique pour fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: 8cce9176c303efe0da4b546afabe2bf6d491e167
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326971"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512251"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>Guide pratique pour fractionner un fichier en plusieurs fichiers à l’aide de groupes (LINQ) (C#)
 Cet exemple montre comment fusionner le contenu de deux fichiers, puis créer un ensemble de fichiers qui organisent les données d’une nouvelle façon.  
@@ -124,9 +124,11 @@ class SplitWithGroups
   
  Le programme écrit un fichier distinct pour chaque groupe, dans le même dossier que les fichiers de données.  
   
-## <a name="compiling-the-code"></a>Compilation du code  
+## <a name="compiling-the-code"></a>Compilation du code
+
  Créez un projet qui cible le .NET Framework version 3.5 ou version ultérieure, avec une référence à System.Core.dll et des directives `using` pour les espaces de noms System.Linq et System.IO.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ et répertoires de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>Voir aussi
+
+- [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ et répertoires de fichiers (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

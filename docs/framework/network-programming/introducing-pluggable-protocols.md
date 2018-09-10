@@ -25,12 +25,12 @@ ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ef674855d1b9d6538e08ea2bb95f1f63e602d61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aad12f48409216e8833b9cb6bffbd35b84f40091
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396388"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513770"
 ---
 # <a name="introducing-pluggable-protocols"></a>Introduction aux protocoles enfichables
 Microsoft .NET Framework fournit une implémentation en couche, extensible et managée de services Internet que vous pouvez intégrer rapidement et facilement à vos applications. Les classes d’accès à Internet disponibles dans les espaces de noms <xref:System.Net> et <xref:System.Net.Sockets> permettent d’implémenter des applications Internet et web.  
@@ -73,4 +73,4 @@ Microsoft .NET Framework fournit une implémentation en couche, extensible et ma
  [Programmation de protocoles enfichables](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Programmation réseau dans le .NET Framework](../../../docs/framework/network-programming/index.md)  
  [Exemples de programmation réseau](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)
+ [Exemples de mise en réseau pour .NET dans MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

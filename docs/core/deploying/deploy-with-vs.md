@@ -4,12 +4,12 @@ description: Découvrir comment déployer des applications .NET Core avec Visual
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: dedf04a872faf1b35a05f9da0c61b80713fdce51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218675"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407447"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Déploiement d’applications .NET Core avec Visual Studio
 
@@ -72,11 +72,11 @@ Pour exécuter un déploiement dépendant du framework avec une ou plusieurs dé
 
 1. Si `Newtonsoft.Json` est déjà installé sur votre système, ajoutez-le à votre projet. Pour cela, sélectionnez votre projet dans le volet droit de l’onglet **Gérer les packages de la solution**.
 
-Notez qu’un déploiement dépendant du framework avec des dépendances tierces n’est portable que dans la mesure de la portabilité de ses dépendances tierces. Par exemple, si une bibliothèque tierce prend uniquement en charge macOS, l’application n’est pas portable sur des systèmes Windows. Cela se produit si la dépendance tierce elle-même dépend du code natif. Un [serveur Kestrel](http://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) constitue un bon exemple, car il nécessite une dépendance native à [libuv](https://github.com/libuv/libuv). Quand un déploiement dépendant du framework est créé pour une application avec ce type de dépendance tierce, le résultat publié contient un dossier pour chaque [identificateur de runtime](../rid-catalog.md) pris en charge par la dépendance native (et qui existe dans le package NuGet).
+Notez qu’un déploiement dépendant du framework avec des dépendances tierces n’est portable que dans la mesure de la portabilité de ses dépendances tierces. Par exemple, si une bibliothèque tierce prend uniquement en charge macOS, l’application n’est pas portable sur des systèmes Windows. Cela se produit si la dépendance tierce elle-même dépend du code natif. Un [serveur Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) constitue un bon exemple, car il nécessite une dépendance native à [libuv](https://github.com/libuv/libuv). Quand un déploiement dépendant du framework est créé pour une application avec ce type de dépendance tierce, le résultat publié contient un dossier pour chaque [identificateur de runtime](../rid-catalog.md) pris en charge par la dépendance native (et qui existe dans le package NuGet).
 
 ## <a name="simpleSelf"></a> Déploiement autonome sans dépendances tierces
 
-L’exécution d’un déploiement autonome sans aucune dépendance tierce implique la création du projet, la modification du fichier *csproj*, la génération, le test et la publication de l’application. Un exemple simple écrit en C# illustre le processus. 
+L’exécution d’un déploiement autonome sans aucune dépendance tierce implique la création du projet, la modification du fichier *csproj*, la génération, le test et la publication de l’application. Un exemple simple écrit en C# illustre le processus.
 
 1. créer le projet ;
 
@@ -92,7 +92,7 @@ L’exécution d’un déploiement autonome sans aucune dépendance tierce impli
 
    1. Cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Modifier SCD.csproj**.
 
-   1. Créez une balise `<RuntimeIdentifiers>` dans la section `<PropertyGroup>` de votre fichier *csproj* qui définit les plateformes ciblées par votre application, et spécifiez l’identificateur de runtime de chaque plateforme ciblée. Notez que vous devez également ajouter un point-virgule pour séparer les identificateurs de runtime. Consultez [Catalogue des identificateurs de runtime](../rid-catalog.md) pour obtenir une liste des identificateurs de runtime. 
+   1. Créez une balise `<RuntimeIdentifiers>` dans la section `<PropertyGroup>` de votre fichier *csproj* qui définit les plateformes ciblées par votre application, et spécifiez l’identificateur de runtime de chaque plateforme ciblée. Notez que vous devez également ajouter un point-virgule pour séparer les identificateurs de runtime. Consultez [Catalogue des identificateurs de runtime](../rid-catalog.md) pour obtenir une liste des identificateurs de runtime.
 
    Dans l’exemple suivant, l’application s’exécute sur les systèmes d’exploitation Windows 10 64 bits et sur le système d’exploitation OS X 64 bits version 10.11.
 
@@ -101,6 +101,7 @@ L’exécution d’un déploiement autonome sans aucune dépendance tierce impli
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
 </PropertyGroup>
 ```
+
    Notez que l’élément `<RuntimeIdentifiers>` peut être placé dans n’importe quelle section `<PropertyGroup>` de votre fichier *csproj*. Un exemple complet de fichier *csproj* figure plus loin dans cette section.
 
 1. Créez une build Debug de votre application.
@@ -115,7 +116,7 @@ L’exécution d’un déploiement autonome sans aucune dépendance tierce impli
 
       1. Remplacez la configuration de solution **Debug** par **Release** dans la barre d’outils pour générer une build Release (et non une build Debug) de votre application.
 
-      1. Cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Publier**. 
+      1. Cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Publier**.
 
       1. Sous l’onglet **Publier**, sélectionnez **Publier**. Visual Studio écrit les fichiers qui composent votre application dans le système de fichiers local.
 
@@ -180,6 +181,7 @@ Quand vous déployez votre application, toutes les dépendances tierces utilisé
 
 Notez que vous pouvez déployer un déploiement autonome avec une bibliothèque tierce seulement sur des plateformes prises en charge par cette bibliothèque. Cela revient à avoir des dépendances tierces avec des dépendances natives dans votre déploiement dépendant du framework, où les dépendances natives n’existent pas sur la plateforme cible, sauf si elles y ont été installées précédemment.
 
-# <a name="see-also"></a>Voir aussi
-[Déploiement d’applications .NET Core](index.md)   
-[Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)   
+## <a name="see-also"></a>Voir aussi
+
+* [Déploiement d’applications .NET Core](index.md)
+* [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)

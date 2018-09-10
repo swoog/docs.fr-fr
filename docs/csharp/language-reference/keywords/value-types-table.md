@@ -1,44 +1,57 @@
 ---
 title: Tableau des types valeur (référence C#)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 helpviewer_keywords:
 - value types [C#], table
-- Visual C#, types
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: a3979a9c269c6268ef679d0494cf4da501201c97
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33280892"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43418420"
 ---
 # <a name="value-types-table-c-reference"></a>Tableau des types valeur (référence C#)
-Le tableau suivant répertorie les types valeur C# par catégorie.  
+
+Le tableau suivant présente les types valeur dans C#.  
   
-|Type de valeur|Category|Suffixe du type|  
+|Type valeur|Catégorie|Suffixe du type|  
 |----------------|--------------|-----------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|Booléen||  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|Non signé, numérique, intégral||  
-|[char](../../../csharp/language-reference/keywords/char.md)|Non signé, numérique, intégral||  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|Numérique, décimal|M ou m|  
-|[double](../../../csharp/language-reference/keywords/double.md)|Numérique, virgule flottante|D ou d|  
-|[enum](../../../csharp/language-reference/keywords/enum.md)|Énumération||  
-|[float](../../../csharp/language-reference/keywords/float.md)|Numérique, virgule flottante|F ou f|  
-|[int](../../../csharp/language-reference/keywords/int.md)|Signé, numérique, intégral||  
-|[long](../../../csharp/language-reference/keywords/long.md)|Signé, numérique, intégral|L ou l|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|Signé, numérique, intégral||  
-|[short](../../../csharp/language-reference/keywords/short.md)|Signé, numérique, intégral||  
-|[struct](../../../csharp/language-reference/keywords/struct.md)|Structure définie par l’utilisateur||  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|Non signé, numérique, intégral|U ou u|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|Non signé, numérique, intégral|UL ou ul|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|Non signé, numérique, intégral||  
-  
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Types valeur](../../../csharp/language-reference/keywords/value-types.md)  
- [Tableau des formats des résultats numériques](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [Tableaux de référence des types](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+|[bool](bool.md)|Booléen||  
+|[byte](byte.md)|Non signé, numérique, [intégral](integral-types-table.md)||  
+|[char](char.md)|Non signé, numérique, [intégral](integral-types-table.md)||  
+|[decimal](decimal.md)|Numérique, [virgule flottante](floating-point-types-table.md)|M ou m|  
+|[double](double.md)|Numérique, [virgule flottante](floating-point-types-table.md)|D ou d|  
+|[enum](enum.md)|Énumération||  
+|[float](float.md)|Numérique, [virgule flottante](floating-point-types-table.md)|F ou f|  
+|[int](int.md)|Signé, numérique, [intégral](integral-types-table.md)||  
+|[long](long.md)|Signé, numérique, [intégral](integral-types-table.md)|L ou l|  
+|[sbyte](sbyte.md)|Signé, numérique, [intégral](integral-types-table.md)||  
+|[short](short.md)|Signé, numérique, [intégral](integral-types-table.md)||  
+|[struct](struct.md)|Structure définie par l’utilisateur||  
+|[uint](uint.md)|Non signé, numérique, [intégral](integral-types-table.md)|U ou u|  
+|[ulong](ulong.md)|Non signé, numérique, [intégral](integral-types-table.md)|UL, Ul, uL, ul, LU, Lu, lU ou lu|  
+|[ushort](ushort.md)|Non signé, numérique, [intégral](integral-types-table.md)||  
+
+## <a name="remarks"></a>Notes
+
+Utilisez un suffixe de type pour spécifier un type d’un littéral numérique. Exemple :
+
+```csharp
+decimal a = 0.1M;
+```
+
+Quand un [littéral numérique entier](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals) n’a pas de suffixe, il a le premier type parmi les types suivants où sa valeur peut être représentée : `int`, `uint`, `long`, `ulong`.
+
+Si un [littéral numérique réel](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals) n’a pas de suffixe, il a le type `double`.
+
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Tableaux de référence des types](reference-tables-for-types.md)
+- [Tableau des valeurs par défaut](default-values-table.md)
+- [Types valeur](value-types.md)
+- [Tableau des formats des résultats numériques](formatting-numeric-results-table.md)

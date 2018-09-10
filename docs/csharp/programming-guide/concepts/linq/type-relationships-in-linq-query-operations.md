@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 274c5eaee2b4bf0e1331fb7a4a1a89a432a567c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 154501d666b467c94f5d1dd721f1e2303189c908
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339577"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484822"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Relations des types dans des opérations de requête LINQ (C#)
 Pour écrire efficacement des requêtes, vous devez comprendre comment les types des variables dans une opération de requête complète sont liés les uns aux autres. Si vous comprenez ces relations, vous comprendrez plus facilement les exemples de code et les exemples [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dans la documentation. En outre, vous comprendrez ce qui se passe en arrière-plan lorsque des variables sont implicitement typées à l’aide de `var`.  
@@ -33,7 +33,7 @@ Pour écrire efficacement des requêtes, vous devez comprendre comment les types
   
 1.  L’argument de type de la source de données détermine le type de la variable de portée.  
   
-2.  Le type de l’objet sélectionné détermine le type de la variable de requête. Ici, `name` est une chaîne. Par conséquent, la variable de requête est un `IEnumerable`\<string>.  
+2.  Le type de l’objet sélectionné détermine le type de la variable de requête. Ici, `name` est une chaîne. Par conséquent, la variable de requête est un `IEnumerable<string>`.  
   
 3.  La variable de requête fait l’objet d’une itération dans l’instruction `foreach`. Comme la variable de requête est une séquence de chaînes, la variable d’itération est également une chaîne.  
   

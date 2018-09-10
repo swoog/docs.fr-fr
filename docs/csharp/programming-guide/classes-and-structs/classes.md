@@ -6,30 +6,34 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 688736aa8556719789b02d7db25858f442b4309e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 5f4bcf9957f91fe3ee8a62a8dc68448188df4188
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245713"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467040"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guide de programmation C#)
 Une *classe* est une construction qui vous permet de créer vos propres types personnalisés en regroupant des variables d’autres types, méthodes et événements. Une classe s’apparente à un plan. Elle définit les données et le comportement d’un type. Si la classe n’est pas déclarée comme statique, le code client peut créer des *instances* de cette classe. Ces instances sont des *objets* qui sont assignés à une variable. L’instance d’une classe reste en mémoire jusqu’à ce que toutes les références à celle-ci soient hors de portée. À ce stade, le CLR la marque comme admissible pour le garbage collection. Si la classe est déclarée comme [static](../../../csharp/language-reference/keywords/static.md), vous ne pouvez pas créer d’instances, et le code client peut y accéder uniquement par le biais de la classe elle-même. Pour plus d’informations, consultez [Classes statiques et membres de classe statique](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md).  
 
 ## <a name="reference-types"></a>Types référence  
-Un type défini comme [class](../../../csharp/language-reference/keywords/class.md) est un *type référence*. Au moment de l’exécution, quand vous déclarez une variable de type référence, celle-ci contient la valeur [Null](../../../csharp/language-reference/keywords/null.md) tant que vous n’avez pas explicitement créé une instance de la classe à l’aide de l’opérateur [new](../../../csharp/language-reference/keywords/new.md) ou que vous ne lui avez pas assigné un objet créé ailleurs, comme indiqué dans l’exemple suivant :
+Un type défini comme [class](../../../csharp/language-reference/keywords/class.md) est un *type référence*. Au moment de l’exécution, quand vous déclarez une variable de type référence, celle-ci contient la valeur [Null](../../../csharp/language-reference/keywords/null.md) tant que vous n’avez pas explicitement créé une instance de la classe à l’aide de l’opérateur [new](../../../csharp/language-reference/keywords/new.md), ou que vous ne lui avez pas assigné un objet existant d’un type compatible, comme indiqué dans l’exemple suivant :
 
 ```csharp
+//Declaring a object of type MyClass.
 MyClass mc = new MyClass();
+
+//Declaring another object of the same type, assigning it the value of the first object.
 MyClass mc2 = mc;
 ```
 
-Quand l’objet est créé, la mémoire est allouée sur le tas managé et la variable contient uniquement une référence à l’emplacement de l’objet. Les types sur le tas managé entraînent une surcharge quand ils sont alloués et récupérés par la fonctionnalité de gestion automatique de la mémoire du CLR (appelée *garbage collection*). Toutefois, le garbage collection est également optimisé, et dans la plupart des cas, ne nuit pas aux performances. Pour plus d’informations sur le garbage collection, consultez [Gestion automatique de la mémoire et garbage collection](../../../standard/garbage-collection/gc.md).  
+Quand l’objet est créé, une quantité de mémoire suffisante est allouée sur le tas managé de l’objet spécifié, et la variable contient uniquement une référence à l’emplacement de cet objet. Les types sur le tas managé entraînent une surcharge quand ils sont alloués et récupérés par la fonctionnalité de gestion automatique de la mémoire du CLR (appelée *garbage collection*). Toutefois, le garbage collection est également optimisé et, dans la plupart des cas, ne nuit pas aux performances. Pour plus d’informations sur le garbage collection, consultez [Gestion automatique de la mémoire et garbage collection](../../../standard/garbage-collection/gc.md).  
   
 ## <a name="declaring-classes"></a>Déclaration de classes  
- Les classes sont déclarées à l’aide du mot clé [class](../../../csharp/language-reference/keywords/class.md), comme l’illustre l’exemple suivant :
+ Les classes sont déclarées à l’aide du mot clé [class](../../../csharp/language-reference/keywords/class.md) suivi d’un identificateur unique, comme l’illustre l’exemple suivant :
 
  ```csharp
+//[access modifier] - [class] - [identifier]
  public class Customer
  {
     // Fields, properties, methods and events go here...

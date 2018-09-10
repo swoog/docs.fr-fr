@@ -2,12 +2,12 @@
 title: Guide pratique pour trier ou filtrer des données texte par mot ou par champ (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c04d42f-4a78-42c8-9ec8-57ef18fe13a9
-ms.openlocfilehash: dc541d7cc8a4fb5978fb2ed9cc43a548e8f8b253
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 46a6c81a2f6e937bbd567dd4ce1b1e448ca073db
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502616"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-c"></a>Guide pratique pour trier ou filtrer des données texte par mot ou par champ (LINQ) (C#)
 L’exemple suivant montre comment trier les lignes d’un texte structuré, telles que des valeurs séparées par des virgules, à l’aide d’un champ de la ligne. Le champ peut être spécifié de manière dynamique lors de l’exécution. Supposons que les champs du fichier scores.csv correspondent au numéro d’identification d’un étudiant, suivi d’une série de quatre notes d’examen.  
@@ -75,7 +75,9 @@ public class SortLines
  Cet exemple montre également comment retourner une variable de requête à partir d’une méthode.  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
+
  Créez un projet qui cible le .NET Framework version 3.5 ou version ultérieure, avec une référence à System.Core.dll et des directives `using` pour les espaces de noms System.Linq et System.IO.  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>Voir aussi
+
+- [LINQ et chaînes (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

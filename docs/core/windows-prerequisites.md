@@ -1,15 +1,15 @@
 ---
 title: Configuration requise pour .NET Core sur Windows
 description: Découvrez les dépendances nécessaires sur votre machine Windows pour développer et exécuter des applications .NET Core.
-author: JRAlexander
-ms.author: johalex
-ms.date: 05/18/2018
-ms.openlocfilehash: 3d172c83f0a79744afbaeeff52d7fea62d9b98b6
-ms.sourcegitcommit: 895c7602386a6dfe7ca4facce3d965b27e5c6e87
+author: mairaw
+ms.author: mairaw
+ms.date: 08/31/2018
+ms.openlocfilehash: bbf54c8d215783656830f0fa035708be82a7c39c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34311986"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482608"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Configuration requise pour .NET Core sur Windows
 
@@ -63,32 +63,56 @@ Vous pouvez utiliser l’éditeur de votre choix pour développer des applicatio
 
 Vous trouverez plus d’informations sur les modifications apportées à Visual Studio 2017 dans les [notes de publication](/visualstudio/releasenotes/vs2017-relnotes).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-Pour développer des applications .NET Core 2.x dans Visual Studio 2017 :
+Pour développer des applications .NET Core 2.1 dans Visual Studio 2017 :
+
+ 1. [Téléchargez et installez Visual Studio 2017 version 15.7.0 ou version ultérieure](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
+
+![Capture d’écran de l’installation de Visual Studio 2017 avec la charge de travail « Développement multiplateforme .NET Core » sélectionnée](./media/windows-prerequisites/vs-15-8-workloads.jpg)
+
+Une fois installé l’ensemble d’outils **Développement multiplateforme .NET Core**, par défaut, Visual Studio 2017 15.7 utilise le SDK .NET Core 2.0, et Visual Studio 2017 15.8 utilise le SDK 2.1.
+
+ 2. Si vous utilisez Visual Studio 2017 15.7, installez le [SDK .NET Core 2.1](https://www.microsoft.com/net/download/core) ou effectuez la mise à niveau vers Visual Studio 2017 15.8.
+
+ 3. Reciblez vos projets .NET Core existants ou nouveaux vers .NET Core 2.1 en vous aidant des instructions suivantes :
+    * Dans le menu **Projet**, choisissez **Propriétés**.
+    * Dans le menu de sélection du **framework cible**, choisissez **.NET Core 2.1**.
+
+![Capture d’écran de la propriété de projet Application Visual Studio 2017 avec définition de l’élément de menu framework cible sur « .NET Core 2.0 »](./media/windows-prerequisites/Targeting-dotnetCore2.png)
+
+Une fois que vous avez configuré Visual Studio avec le SDK .NET Core 2.1, vous pouvez effectuer les actions suivantes :
+
+* Ouvrir, générer et exécuter les projets .NET Core 1.x et 2.x existants.
+* Recibler les projets .NET Core 1.x et 2.0 vers .NET Core 2.1, les générer et les exécuter.
+* Créer des projets .NET Core 2.1.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+Pour développer des applications .NET Core 2.0 dans Visual Studio 2017 :
 
  1. [Téléchargez et installez Visual Studio 2017 version 15.3.0 ou version ultérieure](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
 
 ![Capture d’écran de l’installation de Visual Studio 2017 avec la charge de travail « Développement multiplateforme .NET Core » sélectionnée](./media/windows-prerequisites/vs-15-3-workloads.jpg)
 
-Une fois installé l’ensemble d’outils **Développement multiplateforme .NET Core**, Visual Studio 2017 utilise .NET Core 1.x par défaut. Installez le SDK .NET Core 2.x pour obtenir la prise en charge de .NET Core 2.x dans Visual Studio 2017.
+Une fois installé l’ensemble d’outils **Développement multiplateforme .NET Core**, Visual Studio 2017 utilise .NET Core 1.x par défaut. Installez le SDK .NET Core 2.0 pour bénéficier de la prise en charge de .NET Core 2.0 dans Visual Studio 2017.
 
- 2. Installez le [SDK .NET Core 2.x](https://www.microsoft.com/net/download/core).
- 3. Reciblez les projets .NET Core 1.x existants ou nouveaux sur .NET Core 2.x en suivant les instructions suivantes :
+ 2. Installez le [SDK .NET Core 2.0](https://www.microsoft.com/net/download/dotnet-core/2.0).
+ 3. Reciblez vos projets .NET Core 1.x existants ou nouveaux vers .NET Core 2.0 en vous aidant des instructions suivantes :
     * Dans le menu **Projet**, choisissez **Propriétés**.
     * Dans le menu de sélection **framework cible**, choisissez **.NET Core 2.0**.
 
 ![Capture d’écran de la propriété de projet Application Visual Studio 2017 avec définition de l’élément de menu framework cible sur « .NET Core 2.0 »](./media/windows-prerequisites/Targeting-dotnetCore2.png)
 
-Une fois installé le SDK .NET Core 2.x, Visual Studio 2017 l’utilise par défaut et prend en charge les actions suivantes :
+Une fois le SDK .NET Core 2.0 installé, Visual Studio 2017 l’utilise par défaut et prend en charge les actions suivantes :
 
 * Ouvrir, générer et exécuter les projets .NET Core 1.x existants.
-* Recibler les projets .NET Core 1.x vers .NET Core 2.x, les générer et les exécuter.
-* Créer des projets .NET Core 2.x.
+* Recibler les projets .NET Core 1.x vers .NET Core 2.0, les générer et les exécuter.
+* Créer des projets .NET Core 2.0.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-Pur développer des applications .NET Core 1.x dans Visual Studio, [téléchargez et installez Visual Studio 2017 RTM (version 15.0.26228.4) ou version ultérieure](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
+Pur développer des applications .NET Core 1.x dans Visual Studio, [téléchargez et installez Visual Studio 2017](/visualstudio/install/install-visual-studio) en sélectionnant la charge de travail **Développement multiplateforme .NET Core** (dans la section **Autres ensembles d’outils**).
 
 ![Capture d’écran de l’installation de Visual Studio 2017 avec la charge de travail « Développement multiplateforme .NET Core » sélectionnée](./media/windows-prerequisites/vs_workloads.jpg)
 
@@ -100,11 +124,14 @@ Pur développer des applications .NET Core 1.x dans Visual Studio, [télécharge
 > Pour plus d’informations sur les changements de format de projet, consultez la page [Vue d’ensemble des modifications](./tools/cli-msbuild-architecture.md).
 ---
 
+<a name="vs-mapping"></a>
+
 > [!TIP]
 > Pour vérifier votre version de Visual Studio 2017 :
 >
 > * Dans le menu **Aide**, choisissez **À propos de Microsoft Visual Studio**.
 > * Dans la boîte de dialogue **À propos de Microsoft Visual Studio**, vérifiez le numéro de version.
->   * Pour les applications .NET Core 2.1 RC, Visual Studio 2017 version 15.7 ou ultérieure.
+>   * Pour les applications .NET Core 2.2 Preview 1, Visual Studio 2017 version 15.9 (disponible en préversion) ou une version ultérieure.
+>   * Pour les applications .NET Core 2.1, Visual Studio 2017 version 15.7 ou ultérieure.
 >   * Pour les applications .NET Core 2.0, Visual Studio 2017 version 15.3 ou ultérieure.
 >   * Pour les applications .NET Core 1.x, Visual Studio 2017 version 15.0 ou ultérieure.

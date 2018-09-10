@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bb8b0305e47ca7b354db03c7a9a3dd02f62d41
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: aedc7b1941268184b71713d31913dbfbd8b74643
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028069"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504257"
 ---
 # <a name="default-marshaling-behavior"></a>comportement de marshaling par défaut
 Le marshaling d’interopérabilité agit sur les règles qui définissent le comportement des données associées aux paramètres de méthode quand elles sont passées de la mémoire managée à la mémoire non managée. Ces règles intégrées contrôlent les activités de marshaling telles que les transformations de types de données, le fait qu'un appelant puisse modifier les données transmises et renvoyer ces modifications à l'appelant, ainsi que les circonstances dans lesquelles le marshaleur fournit des optimisations de performances.  
@@ -41,7 +41,7 @@ BSTR MethodOne (BSTR b) {
   
  Toutefois, si vous définissez la méthode comme un prototype d’appel de code non managé, puis remplacez chaque type **BSTR** par un type <xref:System.String> et appelez `MethodOne`, le common language runtime tentera de libérer `b` deux fois. Vous pouvez modifier le comportement de marshaling en utilisant les types <xref:System.IntPtr> plutôt que les types **String**.  
   
- Le runtime utilise toujours la méthode **CoTaskMemFree** pour libérer de la mémoire. Si la mémoire que vous utilisez n’a pas été allouée avec la méthode **CoTaskMemAlloc**, vous devez utiliser un **IntPtr** et libérer la mémoire manuellement à l’aide de la méthode appropriée. De même, vous pouvez éviter la libération automatique de mémoire dans les cas où celle-ci ne doit jamais être libérée, par exemple quand vous utilisez la fonction **GetCommandLine** depuis Kernel32.dll qui retourne un pointeur à la mémoire du noyau. Pour plus d’informations sur la libération manuelle de mémoire, consultez [Mémoires tampons, exemple](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
+ Le runtime utilise toujours la méthode **CoTaskMemFree** pour libérer de la mémoire. Si la mémoire que vous utilisez n’a pas été allouée avec la méthode **CoTaskMemAlloc**, vous devez utiliser un **IntPtr** et libérer la mémoire manuellement à l’aide de la méthode appropriée. De même, vous pouvez éviter la libération automatique de mémoire dans les cas où celle-ci ne doit jamais être libérée, par exemple quand vous utilisez la fonction **GetCommandLine** depuis Kernel32.dll qui retourne un pointeur à la mémoire du noyau. Pour plus d’informations sur la libération manuelle de mémoire, consultez [Mémoires tampons, exemple](https://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Marshaling par défaut pour les classes  
  Les classes ne peuvent être marshalées que par COM Interop et sont toujours marshalées en tant qu'interfaces. Dans certains cas, l’interface utilisée pour marshaler la classe est appelée interface de classe. Pour plus d’informations sur la substitution de l’interface de classe par une interface de votre choix, consultez [Présentation de l’interface de classe](com-callable-wrapper.md#introducing-the-class-interface).  

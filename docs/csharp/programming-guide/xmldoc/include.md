@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: a681a2fcbb874d67b82c8bda73d92dd993928bbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3c9adda4ca3a58edca48d6df3d2f5e4d5783187
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334507"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389149"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (Guide de programmation C#)
 ## <a name="syntax"></a>Syntaxe  
@@ -24,7 +24,7 @@ ms.locfileid: "33334507"
   
 #### <a name="parameters"></a>Paramètres  
  `filename`  
- Nom du fichier XML contenant la documentation. Le nom de fichier peut être qualifié avec un chemin. Mettez `filename` entre guillemets simples (' ').  
+ Nom du fichier XML contenant la documentation. Le nom de fichier peut être qualifié avec un chemin relatif au fichier de code source. Mettez `filename` entre guillemets simples (' ').  
   
  `tagpath`  
  Chemin des balises contenues dans `filename` qui mène à la balise `name`. Mettez le chemin entre guillemets simples (' ').  

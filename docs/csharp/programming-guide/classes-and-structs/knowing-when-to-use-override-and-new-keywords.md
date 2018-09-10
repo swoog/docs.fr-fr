@@ -6,12 +6,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 61bfa87b7aaa7c17d4ba67c69fa1e57ee7415dc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b13ee695ef2a63332b01b504458453885160039
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340266"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513817"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Savoir quand utiliser les mots clés override et new (Guide de programmation C#)
 En C#, une méthode dans une classe dérivée peut avoir le même nom qu’une méthode dans la classe de base. Vous pouvez spécifier le mode d’interaction des méthodes avec les mots clés [new](../../../csharp/language-reference/keywords/new.md) et [override](../../../csharp/language-reference/keywords/override.md). Le modificateur `override` *étend* la méthode de classe de base et le modificateur `new` la *masque*. La différence est illustrée dans les exemples de cette rubrique.  
@@ -541,9 +541,10 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Versioning avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
- [base](../../../csharp/language-reference/keywords/base.md)  
- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Versioning avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [base](../../../csharp/language-reference/keywords/base.md)  
+- [abstract](../../../csharp/language-reference/keywords/abstract.md)

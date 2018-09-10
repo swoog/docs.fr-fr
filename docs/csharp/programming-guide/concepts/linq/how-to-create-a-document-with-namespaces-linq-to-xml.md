@@ -2,11 +2,12 @@
 title: Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: ab572e0af79d51205167ad60b1b80e8ba6b43707
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5937639fc48b82ee155450a3eaa1c7715ee3f9b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478024"
 ---
 # <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>Guide pratique pour créer un document avec des espaces de noms (C#) (LINQ to XML)
 Cette rubrique montre comment créer des documents avec des espaces de noms.  
@@ -57,7 +58,7 @@ Console.WriteLine(root);
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre la création d'un document qui contient deux espaces de noms. L'un est l'espace de noms par défaut. L'autre est un espace de noms avec un préfixe.  
   
- Grâce à l’inclusion d’attributs d’espaces de noms dans l’élément racine, les espaces de noms sont sérialisés de façon que http://www.adventure-works.com soit l’espace de noms par défaut, et www.fourthcoffee.com est sérialisé avec le préfixe « fc ». Pour créer un attribut qui déclare un espace de noms par défaut, vous devez créer un attribut avec le nom « xmlns », sans espace de noms. La valeur de l'attribut est l'URI de l'espace de noms par défaut.  
+ Grâce à l’inclusion d’attributs d’espaces de noms dans l’élément racine, les espaces de noms sont sérialisés de sorte que `http://www.adventure-works.com` soit l’espace de noms par défaut et `www.fourthcoffee.com` soit sérialisé avec le préfixe « fc ». Pour créer un attribut qui déclare un espace de noms par défaut, vous devez créer un attribut avec le nom « xmlns », sans espace de noms. La valeur de l'attribut est l'URI de l'espace de noms par défaut.  
   
 ```csharp  
 // The http://www.adventure-works.com namespace is forced to be the default namespace.  

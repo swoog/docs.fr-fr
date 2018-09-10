@@ -2,12 +2,12 @@
 title: Utilisation de la variance dans les délégués (C#)
 ms.date: 07/20/2015
 ms.assetid: 1638c95d-dc8b-40c1-972c-c2dcf84be55e
-ms.openlocfilehash: 46c09da9adac7ed47c32b1fed4311dfedbf5764e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5be4f786d2e1b8a0ead3fd58fe056e188faa916a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326057"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501722"
 ---
 # <a name="using-variance-in-delegates-c"></a>Utilisation de la variance dans les délégués (C#)
 Quand vous assignez une méthode à un délégué, la *covariance* et la *contravariance* offrent une grande flexibilité pour la mise en correspondance d’un type délégué avec une signature de méthode. La covariance permet à une méthode d’avoir un type de retour qui est plus dérivé que celui défini dans le délégué. La contravariance autorise une méthode qui a des types de paramètres moins dérivés que ceux du type délégué.  
@@ -20,8 +20,8 @@ Quand vous assignez une méthode à un délégué, la *covariance* et la *contra
 ### <a name="code"></a>Code  
   
 ```csharp  
-class Mammals{}  
-class Dogs : Mammals{}  
+class Mammals {}  
+class Dogs : Mammals {}  
   
 class Program  
 {  
@@ -77,6 +77,7 @@ public Form1()
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Variance dans les délégués (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
- [Utilisation de la variance pour les délégués génériques Func et Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Variance dans les délégués (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)  
+- [Utilisation de la variance pour les délégués génériques Func et Action (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)

@@ -4,18 +4,18 @@ description: Découvrez comment .NET Core recherche et choisit les versions du r
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: d1b885ebbade4736d5f592d1dc1d4ba25a321a16
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874468"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395115"
 ---
 # <a name="net-core-version-selection"></a>Sélection de la version de .NET Core
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
-Cet article explique les stratégies utilisées par les outils .NET Core, le kit SDK et le runtime pour sélectionner les versions. Ces stratégies concilient l’exécution des applications avec les versions spécifiées et la facilité de mise à niveau des machines des développeurs et des utilisateurs finaux. Voici les objectifs visés par ces stratégies :
+Cet article explique les stratégies utilisées par les outils .NET Core, le kit SDK et le runtime pour sélectionner les versions. Ces stratégies concilient l’exécution des applications avec les versions spécifiées et la facilité de mise à niveau des machines des développeurs et des utilisateurs finaux. Voici les actions effectuées par ces stratégies :
 
 - Déploiement facile et efficace de .NET Core, notamment des mises à jour de sécurité et de fiabilité.
 - Utilisation des outils et des commandes les plus récents, indépendamment du runtime cible.
@@ -31,11 +31,11 @@ Le reste de ce document examine ces quatre scénarios.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>Le kit SDK utilise la dernière version installée
 
-Les commandes du kit SDK incluent `dotnet new`, `dotnet build` et `dotnet run`. L’interface CLI `dotnet` doit choisir une version du kit SDK pour n’importe quelle commande. Par défaut, l’interface CLI .NET Core utilise le dernier kit SDK installé sur la machine. S’il est installé, le kit SDK .NET Core v2.1.301 est utilisé, même si le projet sur lequel vous travaillez cible .NET Core Runtime 2.0. Cela vaut aussi bien pour les préversions que pour les versions publiées. Vous pouvez tirer parti des fonctionnalités et des améliorations du dernier kit SDK tout en ciblant des versions antérieures du runtime .NET Core. Vous pouvez cibler plusieurs versions du runtime de .NET Core dans différents projets en utilisant les mêmes outils du kit SDK pour tous les projets.
+Les commandes du kit SDK incluent `dotnet new`,  , ou `dotnet run`. L’interface CLI `dotnet` doit choisir une version du kit SDK pour n’importe quelle commande. Par défaut, l’interface CLI .NET Core utilise le dernier kit SDK installé sur la machine. S’il est installé, le kit SDK .NET Core v2.1.301 est utilisé, même si le projet sur lequel vous travaillez cible .NET Core Runtime 2.0. Vous allez utiliser les dernières préversions ainsi que des versions publiées. Vous pouvez tirer parti des fonctionnalités et des améliorations du dernier kit SDK tout en ciblant des versions antérieures du runtime .NET Core. Vous pouvez cibler plusieurs versions du runtime de .NET Core dans différents projets en utilisant les mêmes outils du kit SDK pour tous les projets.
 
 À de rares occasions, vous pouvez être amené à utiliser une version antérieure du kit SDK. Vous devez dans ce cas spécifier cette version dans un [ fichier *global.json*](../tools/global-json.md). La stratégie « utiliser la dernière version » signifie que vous utilisez uniquement *global.json* pour spécifier une version du kit SDK .NET Core antérieure à la dernière version installée.
 
-*global.json* peut être placé n’importe où dans la hiérarchie des fichiers. L’interface CLI effectue une recherche vers le haut dans le répertoire du projet et s’arrête au premier fichier *global.json* trouvé. Vous pouvez contrôler les projets auxquels un fichier *global.json* donné s’applique par son emplacement dans le système de fichiers. L’interface CLI .NET recherche un fichier *global.json* de manière itérative en parcourant le chemin de bas en haut dans le répertoire de travail actif. Le premier fichier *global.json* trouvé spécifie la version utilisée. Si cette version est installée, elle est utilisée. Si le kit SDK spécifié dans le fichier *global.json* est introuvable, l’interface CLI .NET restaure par progression le dernier kit SDK installé. Cela correspond au comportement par défaut, quand aucun fichier *global.json* n’est trouvé.
+*global.json* peut être placé n’importe où dans la hiérarchie des fichiers. L’interface CLI effectue une recherche vers le haut dans le répertoire du projet et s’arrête au premier fichier *global.json* trouvé. Vous pouvez contrôler les projets auxquels un fichier *global.json* donné s’applique par son emplacement dans le système de fichiers. L’interface CLI .NET recherche un fichier *global.json* de manière itérative en parcourant le chemin de bas en haut dans le répertoire de travail actif. Le premier fichier *global.json* trouvé spécifie la version utilisée. Si cette version est installée, elle est utilisée. Si le kit SDK spécifié dans le fichier *global.json* est introuvable, l’interface CLI .NET restaure par progression le dernier kit SDK installé. La restauration par progression correspond au comportement par défaut, quand aucun fichier *global.json* n’est trouvé.
 
 L’exemple suivant présente la syntaxe du fichier *global.json* :
 
@@ -53,7 +53,7 @@ Le processus de sélection d’une version du kit SDK est le suivant :
 1. `dotnet` utilise le kit SDK spécifié dans le premier fichier *global.json* trouvé.
 1. `dotnet` utilise la dernière version du kit SDK installé si aucun fichier *global.json* n’est trouvé.
 
-Pour plus d’informations sur la sélection d’une version du kit SDK, consultez la section [Règles de correspondance](../tools/global-json.md) de la rubrique relative à *global.json*.
+Pour plus d’informations sur la sélection d’une version du kit SDK, consultez la section [Règles de correspondance](../tools/global-json.md#matching-rules) dans l’article sur *global.json*.
 
 ## <a name="target-framework-monikers-define-build-time-apis"></a>Les monikers de framework cible définissent les API au moment de la génération
 
@@ -109,4 +109,4 @@ Les déploiements autonomes peuvent nécessiter une version de correctif spécif
 <RuntimeFrameworkVersion>2.0.4</RuntimeFrameworkVersion>
 ```
 
-L’élément `RuntimeFrameworkVersion` remplace la stratégie de version par défaut. Pour les déploiements autonomes, `RuntimeFrameworkVersion` spécifie la version *exacte* du framework du runtime. Pour les applications dépendantes du framework, `RuntimeFrameworkVersion` spécifie la version *minimale* requise du framework du runtime.
+L’élément `RuntimeFrameworkVersion` remplace la stratégie de version par défaut. Pour les déploiements autonomes, `RuntimeFrameworkVersion` spécifie la version *exacte* du framework du runtime. Pour les applications dépendantes du framework, `RuntimeFrameworkVersion` spécifie la version *minimale* requise pour le framework du runtime.

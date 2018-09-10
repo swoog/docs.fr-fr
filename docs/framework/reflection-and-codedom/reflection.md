@@ -24,11 +24,11 @@ ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6a03e6760fbb233c656909fb99b48a84bddedef8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405570"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509020"
 ---
 # <a name="reflection-in-the-net-framework"></a>Réflexion dans le .NET Framework
 Les classes de l’espace de noms <xref:System.Reflection> avec <xref:System.Type?displayProperty=nameWithType> vous permettent d’obtenir des informations sur les [assemblys](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) chargés et sur les types définis dans ceux-ci, comme les types des [classes](https://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), des[interfaces](https://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5) et des [valeurs](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Vous pouvez également utiliser la réflexion pour créer des instances de types au moment de l'exécution, et pour les appeler et y accéder. Pour obtenir des informations sur des aspects spécifiques de la réflexion, consultez [Rubriques connexes](#related_topics) à la fin de cette vue d’ensemble.  

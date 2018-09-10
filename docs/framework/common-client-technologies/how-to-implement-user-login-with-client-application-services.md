@@ -9,15 +9,15 @@ helpviewer_keywords:
 - validation [.NET Framework], client application services
 - client application services, authenticate users
 ms.assetid: 5431a671-eb02-4e18-a651-24764fccec9a
-ms.openlocfilehash: 1b1c5bebb5bd94f0a56dc6da303ef2503ab6dd4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a878b12620faf9a6e9fecbd2e76644aea3d80611
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504794"
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Comment : implémenter la connexion utilisateur avec les services d'application cliente
-Vous pouvez utiliser les services d’application cliente pour valider des utilisateurs via un service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Pour plus d’informations sur la façon de configurer le service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation de l’authentification par formulaire avec ASP.NET AJAX](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
+Vous pouvez utiliser les services d’application cliente pour valider des utilisateurs via un service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Pour plus d’informations sur la façon de configurer le service de profil [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Utilisation de l’authentification par formulaire avec ASP.NET AJAX](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
  Les procédures suivantes décrivent comment valider des utilisateurs par le biais du service d'authentification lorsque votre application est configurée pour utiliser l'un des fournisseurs de services d'authentification du client. Pour plus d'informations, consultez [How to: Configure Client Application Services](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
@@ -59,4 +59,4 @@ Vous pouvez utiliser les services d’application cliente pour valider des utili
  [Vue d'ensemble des services d'application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Comment : configurer les services d’application cliente](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [Procédure pas à pas : utilisation des services d'application cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
- [Utilisation de l’authentification par formulaire avec Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)
+ [Utilisation de l’authentification par formulaire avec Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)

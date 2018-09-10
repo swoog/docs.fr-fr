@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 manager: douge
-ms.openlocfilehash: 5de4c90361033df603bb63fbb365514d6bb5ea0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a0c57ab049fff699d5bb12004fd48d90a226e514
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935685"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525020"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Comment : déboguer les applications de service Windows
 Un service doit être exécuté à partir du Gestionnaire de contrôle des services plutôt qu'à partir de Visual Studio. C'est pourquoi le débogage d'un service n'est pas aussi simple que le débogage d'autres types d'applications Visual Studio. Pour déboguer un service, vous devez le démarrer et attacher un débogueur au processus dans lequel il s'exécute. Vous pouvez alors déboguer votre application à l'aide de toutes les fonctionnalités de débogage standard de Visual Studio.  
@@ -33,7 +33,7 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
 >  Le débogage de la méthode <xref:System.ServiceProcess.ServiceBase.OnStart%2A> peut s'avérer difficile, car le Gestionnaire de contrôle des services impose un délai de 30 secondes pour toute tentative de démarrage d'un service. Pour plus d’informations, consultez [Résolution des problèmes : débogage des services Windows](../../../docs/framework/windows-services/troubleshooting-debugging-windows-services.md).  
   
 > [!WARNING]
->  Pour obtenir des informations significatives pour le débogage, le débogueur Visual Studio doit rechercher les fichiers de symboles pour les fichiers binaires qui sont en cours de débogage. Si vous déboguez un service que vous avez généré dans Visual Studio, les fichiers de symboles (fichiers .pdb) se trouvent dans le même dossier que l’exécutable ou la bibliothèque, et le débogueur les charge automatiquement. Si vous déboguez un service que vous n'avez pas généré, vous devez d'abord rechercher des symboles pour le service, puis vous assurer qu'ils sont accessibles par le débogueur. Consultez [Spécifier les fichiers de symbole (.pdb) et les fichiers sources](http://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si vous déboguez un processus système ou que vous voulez disposer de symboles pour les appels système dans vos services, vous devez ajouter des serveurs de symboles Microsoft. Consultez [Symboles de débogage](/windows/desktop/DxTechArts/debugging-with-symbols).  
+>  Pour obtenir des informations significatives pour le débogage, le débogueur Visual Studio doit rechercher les fichiers de symboles pour les fichiers binaires qui sont en cours de débogage. Si vous déboguez un service que vous avez généré dans Visual Studio, les fichiers de symboles (fichiers .pdb) se trouvent dans le même dossier que l’exécutable ou la bibliothèque, et le débogueur les charge automatiquement. Si vous déboguez un service que vous n'avez pas généré, vous devez d'abord rechercher des symboles pour le service, puis vous assurer qu'ils sont accessibles par le débogueur. Consultez [Spécifier les fichiers de symbole (.pdb) et les fichiers sources](https://msdn.microsoft.com/library/1105e169-5272-4e7c-b3e7-cda1b7798a6b). Si vous déboguez un processus système ou que vous voulez disposer de symboles pour les appels système dans vos services, vous devez ajouter des serveurs de symboles Microsoft. Consultez [Symboles de débogage](/windows/desktop/DxTechArts/debugging-with-symbols).  
   
 ### <a name="to-debug-a-service"></a>Pour déboguer un service  
   
@@ -112,7 +112,7 @@ Un service doit être exécuté à partir du Gestionnaire de contrôle des servi
   
 5.  Pour exécuter à nouveau le programme en tant que service Windows, installez-le et démarrez-le comme vous le faites habituellement pour un service Windows. Il n'est pas nécessaire d'annuler les modifications apportées.  
   
- Dans certains cas, notamment lorsque vous souhaitez déboguer un problème qui se produit uniquement au démarrage du système, vous devez utiliser le débogueur Windows. Installez les [outils de débogage pour Windows](http://msdn.microsoft.com/windows/hardware/hh852365) et consultez [Guide pratique pour déboguer des services Windows](http://support.microsoft.com/kb/824344).  
+ Dans certains cas, notamment lorsque vous souhaitez déboguer un problème qui se produit uniquement au démarrage du système, vous devez utiliser le débogueur Windows. Installez les [outils de débogage pour Windows](https://msdn.microsoft.com/windows/hardware/hh852365) et consultez [Guide pratique pour déboguer des services Windows](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Introduction aux applications de service Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  

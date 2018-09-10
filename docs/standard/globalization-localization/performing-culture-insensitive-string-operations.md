@@ -1,6 +1,6 @@
 ---
 title: Exécution d'opérations de chaînes indépendantes de la culture
-ms.date: 03/30/2017
+ms.date: 08/22/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - case mappings
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9500550fe415d77bacb44011622ddd83ffc8a9ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575373"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254643"
 ---
-# <a name="performing-culture-insensitive-string-operations"></a>Exécution d'opérations de chaînes indépendantes de la culture
+# <a name="performing-culture-insensitive-string-operations"></a>Exécution d’opérations de chaînes indépendantes de la culture
 La plupart des méthodes .NET Framework qui exécutent des opérations de chaînes dépendantes de la culture fournissent par défaut des surcharges de méthode qui vous permettent de spécifier explicitement la culture à utiliser en passant un paramètre <xref:System.Globalization.CultureInfo>. Ces surcharges vous permettent d’éliminer les différences culturelles dans les règles de mappages et de tri de casse et de garantir des résultats indépendants de la culture.  
   
  Cette section fournit les rubriques suivantes pour montrer comment exécuter des opérations de chaînes indépendantes de la culture à l’aide de méthodes .NET Framework qui sont dépendantes de la culture par défaut.  
@@ -41,3 +41,7 @@ La plupart des méthodes .NET Framework qui exécutent des opérations de chaîn
 ## <a name="related-sections"></a>Rubriques connexes  
  [Opérations de chaînes indépendantes de la culture](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  Décrit pourquoi vous devez connaître la culture lorsque vous exécutez des opérations sur des chaînes et fournit des recommandations sur l’exécution d’opérations dépendantes de la culture et l’exécution d’opérations indépendantes de la culture.
+
+## <a name="see-also"></a>Voir aussi
+
+- [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

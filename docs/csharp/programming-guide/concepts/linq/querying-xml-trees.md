@@ -2,12 +2,12 @@
 title: Interrogation d’arborescences XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0913d81b-541a-4fd4-9cbf-7ec89fd817ea
-ms.openlocfilehash: 5d2e40da26f30a0ece570acf2fd25684d1cba40f
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 349235689dba125f697d0df5ff90bd10a69432c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925583"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501049"
 ---
 # <a name="querying-xml-trees-c"></a>Interrogation d’arborescences XML (C#)
 Cette section fournit des exemples de requêtes [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -26,6 +26,7 @@ Cette section fournit des exemples de requêtes [!INCLUDE[sqltecxlinq](~/include
 |[LINQ to XML pour les utilisateurs XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)|Présente un certain nombre d’expressions XPath et leurs équivalents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
 |[Transformations fonctionnelles pures de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)|Présente un petit didacticiel sur l'écriture des requêtes dans le style de programmation fonctionnelle.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
- [Bien démarrer avec LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+- [Bien démarrer avec LINQ en C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -1,5 +1,5 @@
 ---
-title: foreach, in (référence C#)
+title: foreach, instruction (C#)
 ms.date: 06/29/2018
 f1_keywords:
 - foreach
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874960"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405848"
 ---
-# <a name="foreach-in-c-reference"></a>foreach, in (référence C#)
+# <a name="foreach-in-c-reference"></a>foreach, instruction (C#)
 
 L’instruction `foreach` exécute une instruction ou un bloc d’instructions pour chaque élément d’une instance du type qui implémente l’interface <xref:System.Collections.IEnumerable?displayProperty=nameWithType> ou <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. L’instruction `foreach` n’est pas limitée à ces types et peut être appliquée à une instance de n’importe quel type répondant aux conditions suivantes :
 
@@ -47,10 +47,10 @@ L’exemple suivant utilise l’instruction `foreach` avec une instance de type 
 
 ## <a name="see-also"></a>Voir aussi
 
-[L’instruction foreach (spécification du langage C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
-[Utilisation de foreach avec des tableaux](../../programming-guide/arrays/using-foreach-with-arrays.md)  
-[for](for.md)  
-[Instructions d’itération](iteration-statements.md)  
-[Mots clés C#](index.md)  
-[Référence C#](../index.md)  
-[Guide de programmation C#](../../programming-guide/index.md)  
+- [L’instruction foreach (spécification du langage C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [Utilisation de foreach avec des tableaux](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for](for.md)
+- [Instructions d’itération](iteration-statements.md)
+- [Mots clés C#](index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)

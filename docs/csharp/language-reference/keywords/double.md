@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - double data type [C#]
 ms.assetid: 0980e11b-6004-4102-abcf-cfc280fc6991
-ms.openlocfilehash: 8e3a94bb79d46f2815e46b86f1aca92acc73e5c2
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 4c11065d9354d44c1da8354c6f7b4f52d7b84c10
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027848"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401322"
 ---
 # <a name="double-c-reference"></a>double (référence C#)
 
@@ -34,9 +34,9 @@ double x = 3D;
 
 Vous pouvez combiner des types numériques intégraux et des types virgule flottante dans une expression. Dans ce cas, les types intégraux sont convertis en types virgule flottante. L’évaluation de l’expression est exécutée d’après les règles suivantes :
 
-- Si l’un des types virgule flottante est `double`, l’expression prend la valeur `double`, ou [bool](../../../csharp/language-reference/keywords/bool.md) dans les expressions relationnelles ou booléennes.
+- Si l’un des types virgule flottante est `double`, l’expression prend la valeur `double`, ou [bool](../../../csharp/language-reference/keywords/bool.md) dans les comparaisons relationnelles et les comparaisons d’égalité.
 
-- S’il n’existe aucun type `double` dans l’expression, elle prend la valeur [float](../../../csharp/language-reference/keywords/float.md), ou [bool](../../../csharp/language-reference/keywords/bool.md) dans les expressions relationnelles ou booléennes.
+- Si l’expression n’a pas de type `double`, elle prend la valeur [float](../../../csharp/language-reference/keywords/float.md), ou [bool](../../../csharp/language-reference/keywords/bool.md) dans les comparaisons relationnelles et les comparaisons d’égalité.
 
  Une expression à virgule flottante peut contenir les ensembles de valeurs suivants :
 
@@ -62,11 +62,11 @@ Dans l’exemple suivant, un [int](../../../csharp/language-reference/keywords/i
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence C#](../../../csharp/language-reference/index.md)  
-[Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-[Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-[Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md)  
-[Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Tableau des types virgule flottante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-[Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
+- [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Tableau des types virgule flottante](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
+- [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

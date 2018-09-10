@@ -6,15 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 08ba94ec3f1799f858e098bd2c0e059b7f45af2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289267"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395135"
 ---
 # <a name="line-c-reference"></a>#line (référence C#)
-`#line` vous permet de modifier le numéro de ligne du compilateur et (éventuellement) la sortie du nom de fichier pour les erreurs et les avertissements. Cet exemple montre comment signaler deux avertissements associés à des numéros de ligne. La directive `#line 200` affecte de force la valeur 200 au numéro de ligne (bien que la valeur par défaut soit #7) et jusqu’à la prochaine directive #line, le nom de fichier indiqué est « Special ». La directive par défaut #line rétablit la numérotation de lignes par défaut, qui compte le nombre de lignes qui ont été renumérotés par la directive précédente.  
+`#line` vous permet de changer la numérotation de lignes du compilateur et (éventuellement) le nom de fichier pour les erreurs et les avertissements.
+
+L’exemple suivant montre comment signaler deux avertissements associés à des numéros de ligne. La directive `#line 200` assigne de force le numéro 200 à la ligne suivante (bien que le numéro par défaut soit 6) et jusqu’à la prochaine directive #line, le nom de fichier indiqué est « Special ». La directive par défaut #line rétablit la numérotation de lignes par défaut, qui compte le nombre de lignes qui ont été renumérotés par la directive précédente.  
   
 ```csharp
 class MainClass  
@@ -22,18 +24,28 @@ class MainClass
     static void Main()  
     {  
 #line 200 "Special"  
-        int i;    // CS0168 on line 200  
-        int j;    // CS0168 on line 201  
+        int i;
+        int j;
 #line default  
-        char c;   // CS0168 on line 9  
-        float f;  // CS0168 on line 10  
+        char c;
+        float f;
 #line hidden // numbering not affected  
         string s;   
-        double d; // CS0168 on line 13  
+        double d;
     }  
 }  
 ```  
-  
+La compilation produit la sortie suivante :
+
+```console
+Special(200,13): warning CS0168: The variable 'i' is declared but never used
+Special(201,13): warning CS0168: The variable 'j' is declared but never used
+MainClass.cs(9,14): warning CS0168: The variable 'c' is declared but never used
+MainClass.cs(10,15): warning CS0168: The variable 'f' is declared but never used
+MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
+MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
+```
+
 ## <a name="remarks"></a>Notes  
  La directive `#line` peut être utilisée dans une étape intermédiaire automatisée du processus de génération. Par exemple, si des lignes ont été supprimées du fichier de code source d’origine, mais que vous voulez que le compilateur continue de générer une sortie sur la base de la numérotation de lignes d’origine du fichier, vous pouvez supprimer les lignes et simuler ensuite la numérotation de lignes d’origine avec `#line`.  
   
@@ -64,7 +76,8 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Directives de préprocesseur C#](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Directives de préprocesseur C#](../../../csharp/language-reference/preprocessor-directives/index.md)

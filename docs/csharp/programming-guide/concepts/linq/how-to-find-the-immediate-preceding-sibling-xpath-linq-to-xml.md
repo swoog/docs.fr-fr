@@ -2,12 +2,12 @@
 title: Guide pratique pour rechercher le frère précédent (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 82c0ee6e7340ada18fb2077c0b8b04fb6a41671a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: c610ce4884e0760a03ec77aae4f38cf9c84a797a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507131"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>Guide pratique pour rechercher le frère précédent (XPath-LINQ to XML) (C#)
 Il peut arriver que vous souhaitiez rechercher le frère précédent d'un nœud. Étant donné la différence de sémantique des prédicats de position pour les axes enfants précédents dans XPath par opposition à [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], il s'agit de l'une des comparaisons les plus intéressantes.  
@@ -52,5 +52,6 @@ Results are identical
 <Child3 />  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ to XML pour les utilisateurs XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>Voir aussi
+
+- [LINQ to XML pour les utilisateurs XPath (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

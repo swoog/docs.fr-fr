@@ -2,12 +2,12 @@
 title: Conservation des espaces pendant le chargement ou l’analyse de code XML1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: f863a80d3e949ddc2cfe630ae3c309009315d020
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 019b4452bcd76fff462edab6a584cf5ae0276ee7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220969"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514446"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Conservation des espaces blancs lors du chargement ou de l’analyse de code XML
 Cette rubrique décrit comment contrôler la gestion des espaces blancs par [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -37,5 +37,6 @@ Cette rubrique décrit comment contrôler la gestion des espaces blancs par [!IN
   
  Vous pouvez créer une arborescence XML à l'aide d'un objet <xref:System.Xml.XmlWriter>. Les nœuds écrits dans l'objet <xref:System.Xml.XmlWriter> sont remplis dans l'arborescence. Toutefois, lorsque vous générez une arborescence XML à l’aide de cette méthode, tous les nœuds sont conservés, qu’ils soient constitués d’espaces ou non et que ces espaces soient significatifs ou non.  
   
-## <a name="see-also"></a>Voir aussi  
- [Analyse de code XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Analyse de code XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

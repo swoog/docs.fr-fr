@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
 ms.openlocfilehash: eb93e53e7b77ee2747bce3fb9a45d7061450e65c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390258"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501659"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (outil Manifest Generation and Editing, client graphique)
 MageUI.exe prend en charge les mêmes fonctionnalités que l'outil de ligne de commande Mage.exe, mais avec une interface utilisateur Windows. Avec cet outil, vous pouvez créer, modifier et signer les manifestes de déploiement et d'application. Les nouveaux manifestes créés avec MageUI.exe ciblent le [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Les versions antérieures de MageUI.exe doivent être utilisées pour cibler des versions précédentes de .NET Framework. Lors de l'ajout ou de la suppression d'assemblys dans un manifeste, ou lors de la nouvelle signature de manifestes existants, MageUI.exe ne met pas à jour le manifeste pour cibler [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Pour plus d’informations, consultez [Mage.exe (outil Manifest Generation and Editing)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  

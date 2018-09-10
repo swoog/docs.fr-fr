@@ -2,12 +2,12 @@
 title: 'Exemple de fichier XML : Configuration de test dans un espace de noms1'
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
-ms.openlocfilehash: 04d66eaa7fd134fdf368614ca94261b80c16d4d9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 01470a66ac42eb9fd68fdcde0d0a4bf9150e3d5f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932078"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506499"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Exemple de fichier XML : Configuration test dans un espace de noms
 Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Il s'agit d'un fichier de configuration test. Le code XML se trouve dans un espace de noms.  
@@ -56,5 +56,6 @@ Le fichier XML suivant est utilisé dans différents exemples dans la documentat
 </Tests>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Exemples de documents XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Exemples de documents XML (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

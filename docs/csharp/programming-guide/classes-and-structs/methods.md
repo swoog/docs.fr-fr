@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: d3fc4107c10d098d40e4021bef9f6acd06311fab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c6315daf08ce9931263aa5fb27c80a0bf41ef79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336396"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43473984"
 ---
 # <a name="methods-c-programming-guide"></a>Méthodes (Guide de programmation C#)
 Une méthode est un bloc de code qui contient une série d'instructions. Un programme provoque l'exécution des instructions en appelant la méthode et en spécifiant les éventuels arguments de méthode requis. En C#, chaque instruction exécutée est effectuée dans le contexte d'une méthode. La méthode Main est le point d'entrée de chaque application C# et elle est appelée par le Common Language Runtime (CLR) au démarrage du programme.  
@@ -24,7 +24,7 @@ Une méthode est un bloc de code qui contient une série d'instructions. Un prog
 > [!NOTE]
 >  Un type de retour d'une méthode ne fait pas partie de la signature de la méthode à des fins de surcharge de méthode. Toutefois, il fait partie de la signature de la méthode lors de la détermination de la compatibilité entre un délégué et la méthode vers laquelle il pointe.  
   
- Les paramètres de méthode sont placés entre parenthèses et séparés par des virgules. Des parenthèses vides indiquent que la méthode ne requiert aucun paramètre. Cette classe contient trois méthodes :  
+ Les paramètres de méthode sont placés entre parenthèses et séparés par des virgules. Des parenthèses vides indiquent que la méthode ne requiert aucun paramètre. Cette classe contient quatre méthodes :  
   
  [!code-csharp[csProgGuideObjects#40](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_1.cs)]  
   
@@ -88,23 +88,23 @@ ref int distance = plant
 Le retour d’un tableau multidimensionnel à partir d’une méthode, `M`, qui modifie le contenu du tableau n’est pas nécessaire si la fonction appelante a passé le tableau à `M`.  Vous pouvez retourner le tableau obtenu à partir de `M` pour bénéficier d’un style approprié ou d’un flux fonctionnel de valeurs, mais cela n’est pas nécessaire, car C# passe tous les types de référence par valeur, et la valeur d’une référence de tableau est le pointeur qui désigne le tableau. Dans la méthode `M`, les modifications apportées au contenu du tableau sont observables par tout code ayant une référence au tableau, comme dans l’exemple suivant.  
   
 ```csharp  
-static void Main(string[] args)  
-        {  
-            int[,] matrix = new int[2, 2];  
-            FillMatrix(matrix);  
-            // matrix is now full of -1  
-        }  
-  
-        public static void FillMatrix(int[,] matrix)  
-        {  
-            for (int i = 0; i < matrix.GetLength(0); i++)  
-            {  
-                for (int j = 0; j < matrix.GetLength(1); j++)  
-                {  
-                    matrix[i, j] = -1;  
-                }  
-            }  
-        }  
+static void Main(string[] args)
+{
+    int[,] matrix = new int[2, 2];
+    FillMatrix(matrix);
+    // matrix is now full of -1
+}
+
+public static void FillMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            matrix[i, j] = -1;
+        }
+    }
+}
 ```  
   
  Pour plus d'informations, consultez [return](../../../csharp/language-reference/keywords/return.md).  
@@ -150,7 +150,7 @@ public Customer this[long id] => store.LookupCustomer(id);
   
  Le type de retour d'un itérateur peut être <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>ou <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Pour plus d'informations, consultez [Itérateurs](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Pour plus d'informations, consultez [Itérateurs](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

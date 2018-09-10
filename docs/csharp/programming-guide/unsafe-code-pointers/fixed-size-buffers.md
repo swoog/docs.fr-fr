@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 310c5eed5507f75239efc78b6132fbc91211d29e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0691c33b551e39b2384950cfcd0be6e8a3a29cee
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339590"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506899"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Mémoires tampons de taille fixe (Guide de programmation C#)
 
@@ -50,7 +50,7 @@ Les mémoires tampons unsafe diffèrent des tableaux normaux à différents nive
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide de programmation C#](../index.md)  
-[Pointeurs et code unsafe](index.md)  
-[fixed, instruction](../../language-reference/keywords/fixed-statement.md)  
-[Interopérabilité](../interop/index.md)
+- [Guide de programmation C#](../index.md)  
+- [Pointeurs et code unsafe](index.md)  
+- [fixed, instruction](../../language-reference/keywords/fixed-statement.md)  
+- [Interopérabilité](../interop/index.md)

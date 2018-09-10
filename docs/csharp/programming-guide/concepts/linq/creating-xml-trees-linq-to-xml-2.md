@@ -1,20 +1,20 @@
 ---
 title: Création d’arborescences XML en C# (LINQ to XML)
-ms.date: 07/20/2015
+ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 4fcd0c14970dd4aabe4d51335f9a0a0a991ef019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41da4de20558508844b56a492b603f947ae04b81
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335461"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43399249"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Création d’arborescences XML en C# (LINQ to XML)
 Cette section fournit des informations sur la création d’arborescences XML en C#.  
   
  Pour plus d’informations sur l’utilisation des résultats de requêtes LINQ comme contenu d’un <xref:System.Xml.Linq.XElement>, consultez [Construction fonctionnelle (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md).  
   
-## <a name="constructing-elements"></a>Construction d'éléments  
+## <a name="constructing-elements"></a>Construction d’éléments
  Les signatures des constructeurs <xref:System.Xml.Linq.XElement> et <xref:System.Xml.Linq.XAttribute> vous permettent de passer le contenu de l'élément ou attribut en tant qu'arguments du constructeur. Étant donné que l'un des constructeurs prend une quantité variable d'arguments, vous pouvez passer une quantité quelconque d'éléments enfants. Bien entendu, chacun de ces éléments enfants peut contenir ses propres éléments enfants. Pour tout élément, vous pouvez ajouter une quantité quelconque d'attributs.  
   
  Lors de l'ajout d'objets <xref:System.Xml.Linq.XNode> (y compris <xref:System.Xml.Linq.XElement>) ou <xref:System.Xml.Linq.XAttribute>, si le contenu n'a pas de parent, les objets sont simplement attachés à l'arborescence XML. Si le nouveau contenu a déjà un parent et fait partie d’une autre arborescence XML, il est cloné et le nouveau contenu cloné est attaché à l’arborescence XML. Ceci est illustré dans le dernier exemple de cette rubrique.  
@@ -62,7 +62,7 @@ XElement contacts =
   
 -   Pour tout autre type, sa méthode `ToString` est appelée et le résultat est ajouté en tant que contenu texte.  
   
-### <a name="creating-an-xelement-with-content"></a>Création d'un XElement avec du contenu  
+### <a name="creating-an-xelement-with-content"></a>Création d’un XElement avec du contenu  
  Vous pouvez créer un objet <xref:System.Xml.Linq.XElement> qui contient du contenu simple avec un appel de méthode unique. Pour cela, spécifiez le contenu comme second paramètre, comme suit :  
   
 ```csharp  
@@ -91,7 +91,7 @@ Console.WriteLine(n);
   
  Le nombre à virgule flottante est boxed et passé au constructeur. Le nombre boxed est converti en une chaîne et utilisé comme contenu de l'élément.  
   
-### <a name="creating-an-xelement-with-a-child-element"></a>Création d'un XElement avec un élément enfant  
+### <a name="creating-an-xelement-with-a-child-element"></a>Création d’un XElement avec un élément enfant  
  Si vous passez une instance de la classe <xref:System.Xml.Linq.XElement> comme argument de contenu, le constructeur crée un élément avec un élément enfant :  
   
 ```csharp  
@@ -109,7 +109,7 @@ Console.WriteLine(shippingUnit);
 </ShippingUnit>  
 ```  
   
-### <a name="creating-an-xelement-with-multiple-child-elements"></a>Création d'un XElement avec plusieurs éléments enfants  
+### <a name="creating-an-xelement-with-multiple-child-elements"></a>Création d’un XElement avec plusieurs éléments enfants  
  Vous pouvez passer une quantité quelconque d'objets <xref:System.Xml.Linq.XElement> comme contenu. Chacun des objets <xref:System.Xml.Linq.XElement> est inclus en tant qu'élément enfant.  
   
 ```csharp  
@@ -169,7 +169,7 @@ Console.WriteLine(contacts);
 </Contacts>  
 ```  
   
-### <a name="creating-an-empty-element"></a>Création d'un élément vide  
+### <a name="creating-an-empty-element"></a>Création d’un élément vide  
  Pour créer un objet <xref:System.Xml.Linq.XElement> vide, vous ne passez aucun contenu au constructeur. L'exemple suivant crée un élément vide :  
   
 ```csharp  
@@ -183,9 +183,11 @@ Console.WriteLine(n);
 <Customer />  
 ```  
   
-### <a name="attaching-vs-cloning"></a>attachement et clonage  
+### <a name="attaching-vs-cloning"></a>Attachement et clonage  
  Comme mentionné précédemment, lors de l'ajout d'objets <xref:System.Xml.Linq.XNode> (y compris <xref:System.Xml.Linq.XElement>) ou <xref:System.Xml.Linq.XAttribute>, si le contenu n'a pas de parent, les objets sont simplement attachés à l'arborescence XML. Si le nouveau contenu a déjà un parent et fait partie d’une autre arborescence XML, il est cloné et le nouveau contenu cloné est attaché à l’arborescence XML.  
-  
+
+L’exemple suivant illustre le comportement lorsque vous ajoutez un élément apparenté à une arborescence et lorsque vous ajoutez un élément non apparenté à une arborescence.
+
 ```csharp  
 // Create a tree with a child element.  
 XElement xmlTree1 = new XElement("Root",  
@@ -210,14 +212,12 @@ Console.WriteLine("Child1 was {0}",
 Console.WriteLine("Child2 was {0}",  
     child2 == xmlTree2.Element("Child2") ?  
     "attached" : "cloned");  
-```  
-  
- Cet exemple génère la sortie suivante :  
-  
-```  
-Child1 was cloned  
-Child2 was attached  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [Création d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+
+// The example displays the following output:  
+//    Child1 was cloned  
+//    Child2 was attached  
+```
+
+## <a name="see-also"></a>Voir aussi
+
+- [Création d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)

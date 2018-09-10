@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961300"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484100"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Comment comparer des chaînes en C# #
+# <a name="how-to-compare-strings-in-c"></a>Comment comparer des chaînes en C\#
 
 Vous comparez des chaînes pour répondre à une des deux questions : « Ces chaînes sont-elle égales ? » ou « Dans quel ordre ces chaînes doivent-elles être placées pendant le tri ? »
 
-Ces deux questions sont compliquées en raison des facteurs qui affectent les comparaisons de chaînes : 
+Ces deux questions sont compliquées en raison des facteurs qui affectent les comparaisons de chaînes :
+
 - Vous pouvez choisir une comparaison ordinale ou linguistique.
 - Vous pouvez choisir si la casse a une incidence.
 - Vous pouvez choisir des comparaisons propres à la culture.
@@ -36,14 +37,15 @@ Les comparaisons ordinales ne prennent pas en compte les règles linguistiques p
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Comparaisons ordinales ne respectant pas la casse
 
-La méthode <xref:System.String.Equals%2A?displayProperty=nameWithType> vous permet d’indiquer une valeur <xref:System.StringComparison> de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> pour spécifier une comparaison ne respectant pas la casse. Par ailleurs, une méthode statique <xref:System.String.Compare%2A> comprend un argument booléen pour spécifier les comparaisons ne respectant pas la casse. Elles sont représentées dans le code suivant :
+La méthode <xref:System.String.Equals%2A?displayProperty=nameWithType> vous permet d’indiquer une valeur <xref:System.StringComparison> de <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+afin de spécifier une comparaison ne respectant pas la casse. Par ailleurs, une méthode statique <xref:System.String.Compare%2A> comprend un argument booléen pour spécifier les comparaisons ne respectant pas la casse. Elles sont représentées dans le code suivant :
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>Comparaisons linguistiques
 
 Les chaînes peuvent aussi être triées à l’aide de règles linguistiques pour la culture actuelle.
-C'est ce qu’on appelle parfois « Ordre de tri par mot ». Quand vous effectuez une comparaison linguistique, certains caractères Unicode non alphanumériques peuvent avoir une pondération spéciale. Par exemple, le trait d’union « - » peut avoir une très petite pondération pour que « co-op » et « coop » apparaissent à côté dans l’ordre de tri. Par ailleurs, certains caractères Unicode peuvent être équivalents à une séquence de caractères alphanumériques. L’exemple suivant utilise la phrase « Ils dansent dans la rue » en allemand avec « ss » et « ß ». Du point de vue linguistique (dans Windows), « ss » équivaut à l’Essetz allemand : le caractère « ß » dans les cultures « en-US » et « de-DE ». 
+C'est ce qu’on appelle parfois « Ordre de tri par mot ». Quand vous effectuez une comparaison linguistique, certains caractères Unicode non alphanumériques peuvent avoir une pondération spéciale. Par exemple, le trait d’union « - » peut avoir une très petite pondération pour que « co-op » et « coop » apparaissent à côté dans l’ordre de tri. Par ailleurs, certains caractères Unicode peuvent être équivalents à une séquence de caractères alphanumériques. L’exemple suivant utilise la phrase « Ils dansent dans la rue » en allemand avec « ss » et « ß ». Du point de vue linguistique (dans Windows), « ss » équivaut à l’Essetz allemand : le caractère « ß » dans les cultures « en-US » et « de-DE ».
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ Les comparaisons linguistiques sont dépendantes de la culture actuelle et du sy
 
 Les exemples suivants montrent comment trier et rechercher des chaînes dans un tableau à l’aide d’une comparaison linguistique dépendante de la culture actuelle. Vous utilisez les méthodes statiques <xref:System.Array> qui prennent un paramètre <xref:System.StringComparer?displayProperty=nameWithType>.
 
-Cet exemple montre comment trier un tableau de chaînes à l’aide de la culture actuelle : 
+Cet exemple montre comment trier un tableau de chaînes à l’aide de la culture actuelle :
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ Une fois triée, la liste de chaînes peut être parcourue à l’aide d’une r
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Vérifiez toujours que vous utilisez le même type de comparaison pour le tri et la recherche. L’utilisation de différents types de comparaison pour le tri et la recherche produit des résultats inattendus. 
+Vérifiez toujours que vous utilisez le même type de comparaison pour le tri et la recherche. L’utilisation de différents types de comparaison pour le tri et la recherche produit des résultats inattendus.
 
 Les classes de collection telles que <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> et <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> ont des constructeurs qui prennent un paramètre <xref:System.StringComparer?displayProperty=nameWithType> quand le type des éléments ou des clés est `string`. En général, vous devez utiliser ces constructeurs chaque fois que cela vous est possible, et spécifier <xref:System.StringComparer.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
@@ -118,8 +120,9 @@ Aucun des exemples n’a utilisé <xref:System.Object.ReferenceEquals%2A>. Cette
 > Quand vous recherchez l’égalité des chaînes, vous devez utiliser les méthodes qui spécifient explicitement le type de comparaison que vous souhaitez effectuer. Votre code est plus lisible et plus facile à gérer. Utilisez les surcharges des méthodes des classes <xref:System.String?displayProperty=nameWithType> et <xref:System.Array?displayProperty=nameWithType> qui prennent un paramètre d’énumération <xref:System.StringComparison>. Vous spécifiez le type de comparaison à effectuer. Évitez d’utiliser les opérateurs `==` et `!=` dans la recherche d’égalité. Les méthodes d’instance <xref:System.String.CompareTo%2A?displayProperty=nameWithType> effectuent toujours une comparaison ordinale respectant la casse. Elles sont principalement adaptées au classement des chaînes par ordre alphabétique.
 
 ## <a name="see-also"></a>Voir aussi
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [Chaînes](../programming-guide/strings/index.md)  
- [Comparaison de chaînes](../../standard/base-types/comparing.md)  
- [Globalisation et localisation d’applications](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [Chaînes](../programming-guide/strings/index.md)  
+- [Comparaison de chaînes](../../standard/base-types/comparing.md)  
+- [Globalisation et localisation d’applications](/visualstudio/ide/globalizing-and-localizing-applications)

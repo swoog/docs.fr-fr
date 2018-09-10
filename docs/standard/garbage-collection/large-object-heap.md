@@ -11,12 +11,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: abb1f72a10a4aff448dea22b5c9415111c25eaab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 852efc14af02eec4608e133e4c75507cd881b80e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457389"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469945"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Tas de grands objets sur les systèmes Windows
 
@@ -40,21 +40,21 @@ Les grands objets appartiennent à la génération 2 parce qu’ils sont nettoy�
 Les générations fournissent une vue logique du tas du récupérateur de mémoire. Physiquement, les objets vivent dans des segments de tas managés. Un *segment de tas managé* est un bloc de mémoire que le récupérateur de mémoire réserve sur le système d’exploitation en appelant la [fonction VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) pour le compte du code managé. Quand le CLR est chargé, le récupérateur de mémoire alloue deux segments de tas initiaux : un pour les petits objets (le tas de petits objets ou SOH (Small Object Heap)) et un pour les grands objets (le tas de grands objets ou LOH (Large Object Heap)).
 
 Les demandes d’allocation sont alors traitées en plaçant des objets managés sur ces segments de tas managés. Si l’objet est inférieur à 85 000 octets, il est placé sur un segment SOH, sinon, sur un segment LOH. Les segments sont réservés (en blocs plus petits) à mesure que leur nombre d’objets alloués augmente.
-Pour le SOH, les objets qui survivent à un GC sont promus à la génération suivante. Les objets qui survivent à un nettoyage de la génération 0 sont considérés comme des objets de génération 1, et ainsi de suite. Toutefois, les objets qui survivent à la plus vieille génération sont toujours considérés comme des objets de cette génération. En d’autres termes, les survivants de la génération 2 sont des objets de la génération 2 et les survivants du LOH sont des objets du LOH (qui sont nettoyés avec la génération 2). 
+Pour le SOH, les objets qui survivent à un GC sont promus à la génération suivante. Les objets qui survivent à un nettoyage de la génération 0 sont considérés comme des objets de génération 1, et ainsi de suite. Toutefois, les objets qui survivent à la plus vieille génération sont toujours considérés comme des objets de cette génération. En d’autres termes, les survivants de la génération 2 sont des objets de la génération 2 et les survivants du LOH sont des objets du LOH (qui sont nettoyés avec la génération 2).
 
 Le code d’utilisateur peut seulement allouer dans la génération 0 (petits objets) ou le LOH (grands objets). Seul le récupérateur de mémoire peut « allouer » des objets dans la génération 1 (en promouvant les survivants de la génération 0) et la génération 2 (en promouvant les survivants des générations 1 et 2).
 
 Quand un nettoyage de la mémoire est déclenché, le récupérateur de mémoire repère les objets en vie et les compacte. Parce que le compactage coûte cher, le récupérateur de mémoire *balaye* le LOH et dresse une liste des objets morts qui peuvent être réutilisés plus tard pour répondre aux demandes d’allocation des grands objets. Les objets morts adjacents sont transformés en un seul objet libre.
 
-Le .NET Framework (à partir de .NET Framework 4.5.1) et .NET Core intègrent la propriété <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty="fullname"> qui permet aux utilisateurs de spécifier que le LOH doit être compacté au prochain GC bloquant complet. Par la suite, .NET peut décider de compacter le LOH automatiquement. Donc, si vous allouez des grands objets et voulez garantir qu'ils ne bougent pas, vous devez quand même les épingler.
+Le .NET Framework (à partir de .NET Framework 4.5.1) et .NET Core intègrent la propriété <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode?displayProperty=nameWithType> qui permet aux utilisateurs de spécifier que le LOH doit être compacté au prochain GC bloquant complet. Par la suite, .NET peut décider de compacter le LOH automatiquement. Donc, si vous allouez des grands objets et voulez garantir qu'ils ne bougent pas, vous devez quand même les épingler.
 
 La figure 1 illustre un scénario dans lequel le récupérateur de mémoire forme la génération 1 après le premier GC de la génération 0 où `Obj1` et `Obj3` sont morts, et forme la génération 2 après le premier GC de la génération 1 où `Obj2` et `Obj5` sont morts. Notez que cette figure et les suivantes sont uniquement à titre d’illustration. Elles contiennent très peu d’objets pour mieux montrer ce qui se passe sur le tas. En réalité, un GC implique généralement bien plus d’objets.
 
-![Figure 1 : GC de la génération 0 et GC de la génération 1](media/loh/loh-figure-1.jpg)   
+![Figure 1 : GC de la génération 0 et GC de la génération 1](media/loh/loh-figure-1.jpg)  
 Figure 1 : GC des générations 0 et 1.
 
 La figure 2 montre qu’après un GC de la génération 2 qui a vu que `Obj1` et `Obj2` étaient morts, le récupérateur de mémoire forme un espace libre contigu dans la mémoire qui était auparavant occupée par `Obj1` et `Obj2`, lequel est ensuite utilisé pour répondre à une demande d’allocation concernant `Obj4`. L’espace entre le dernier objet `Obj3` et la fin du segment peut aussi être utilisé pour répondre aux demandes d’allocation.
- 
+
 ![Figure 2 : Après un GC de la génération 2](media/loh/loh-figure-2.jpg)  
 Figure 2 : Après un GC de la génération 2
 
@@ -63,7 +63,7 @@ Si l’espace libre est insuffisant pour répondre aux demandes d’allocation d
 Pendant un GC de la génération 1 ou 2, le récupérateur de mémoire libère les segments qui n’ont pas d’objet en vie et les rend au système d’exploitation en appelant la [fonction VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx). La réservation de l’espace entre le dernier objet en vie et la fin du segment est annulée (sauf sur le segment éphémère, où vivent les générations 0 et 1, sur lequel le récupérateur de mémoire maintient la réservation pour que votre application puisse l’utiliser immédiatement). Par ailleurs, les espaces libres restent réservés bien qu’ils soient réinitialisés, ce qui signifie que le système d’exploitation n’a pas besoin d’écrire de données dans ces espaces une fois revenus sur le disque.
 
 Comme que le LOH est collecté uniquement pendant le GC de la génération 2, le segment LOH peut seulement être libéré pendant ce GC. La figure 3 illustre un scénario où le récupérateur de mémoire rend un segment (segment 2) au système d’exploitation et annule la réservation d’espace supplémentaire sur les segments restants. S’il doit utiliser l’espace libéré à la fin du segment pour répondre aux demandes d’allocation de grands objets, il réserve de nouveau la mémoire. (Pour obtenir une explication de la réservation/libération, consultez la documentation de [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx).
- 
+
 ![Figure 3 : LOH après un GC de la génération 2](media/loh/loh-figure-3.jpg)  
 Figure 3 : LOH après un GC de la génération 2
 
@@ -73,17 +73,17 @@ En règle générale, un GC est déclenché quand l’une des 3 conditions suiva
 
 - L’allocation dépasse le seuil des grands objets ou de la génération 0.
 
-   Le seuil est une propriété des générations. Le seuil d’une génération est défini quand le récupérateur de mémoire lui alloue des objets. Quand le seuil est dépassé, un GC est déclenché sur cette génération. Quand vous allouez des petits ou des grands objets, vous consommez les seuils de la génération 0 et du LOH, respectivement. Quand le récupérateur de mémoire alloue des objets dans les générations 1 et 2, il consomme leurs seuils. Ces seuils sont réglés dynamiquement pendant l’exécution du programme.
+  Le seuil est une propriété des générations. Le seuil d’une génération est défini quand le récupérateur de mémoire lui alloue des objets. Quand le seuil est dépassé, un GC est déclenché sur cette génération. Quand vous allouez des petits ou des grands objets, vous consommez les seuils de la génération 0 et du LOH, respectivement. Quand le récupérateur de mémoire alloue des objets dans les générations 1 et 2, il consomme leurs seuils. Ces seuils sont réglés dynamiquement pendant l’exécution du programme.
 
-   C’est le cas par défaut. La plupart des GC se produisent suite à des allocations sur le tas managé.
+  C’est le cas par défaut. La plupart des GC se produisent suite à des allocations sur le tas managé.
 
 - La méthode <xref:System.GC.Collect%2A?displayProperty=nameWithType> est appelée.
 
-   Si la méthode <xref:System.GC.Collect?displayProperty=nameWithType> sans paramètre est appelée ou qu’une autre surcharge reçoit <xref:System.GC.MaxGeneration?displayProperty=nameWithType> comme argument, le LOH est nettoyé avec le reste du tas managé.
+  Si la méthode <xref:System.GC.Collect?displayProperty=nameWithType> sans paramètre est appelée ou qu’une autre surcharge reçoit <xref:System.GC.MaxGeneration?displayProperty=nameWithType> comme argument, le LOH est nettoyé avec le reste du tas managé.
 
 - Le système est en situation d’insuffisance de mémoire.
 
-   Cela se produit quand le récupérateur de mémoire reçoit une notification de mémoire haute du système d’exploitation. Si le récupérateur de mémoire pense qu’un GC de la génération 2 peut être productif, il le déclenche.
+  Cela se produit quand le récupérateur de mémoire reçoit une notification de mémoire haute du système d’exploitation. Si le récupérateur de mémoire pense qu’un GC de la génération 2 peut être productif, il le déclenche.
 
 ## <a name="loh-performance-implications"></a>Implications sur les performances du LOH
 
@@ -91,41 +91,41 @@ Les allocations sur le tas de grands objets impacte les performances des façons
 
 - Coût d’allocation.
 
-   Le CLR garantit que la mémoire allouée pour chaque nouvel objet est libérée. Cela signifie que le coût d’allocation d’un grand objet est complètement dominé par la libération de la mémoire (sauf s’il déclenche un GC). S’il faut 2 cycles pour libérer un octet, il faut 170 000 cycles pour libérer le plus petit des grands objets. Pour libérer la mémoire d’un objet de 16 Mo sur une machine de 2 GHz, il faut environ 16 ms. C’est un coût plutôt élevé.
+  Le CLR garantit que la mémoire allouée pour chaque nouvel objet est libérée. Cela signifie que le coût d’allocation d’un grand objet est complètement dominé par la libération de la mémoire (sauf s’il déclenche un GC). S’il faut 2 cycles pour libérer un octet, il faut 170 000 cycles pour libérer le plus petit des grands objets. Pour libérer la mémoire d’un objet de 16 Mo sur une machine de 2 GHz, il faut environ 16 ms. C’est un coût plutôt élevé.
 
 - Coût de nettoyage.
 
-   Comme le LOH et la génération 2 sont nettoyés ensemble, si le seuil de l’un des deux est dépassé, un nettoyage de la génération 2 est déclenché. Si le nettoyage de la génération 2 est déclenché à cause du LOH, la génération 2 n’est pas forcément plus petite après le GC. Si la génération 2 n’a pas beaucoup de données, l’impact est minime. En revanche, si la génération 2 est grande, le nettoyage peut entraîner des problèmes de performances s’il faut déclencher plusieurs GC sur la génération 2. Si de nombreux grands objets sont alloués de façon très temporaire et que vous avez un grand SOH, vous risquez de passer trop de temps sur les GC. Par ailleurs, le coût d’allocation vient s’ajouter si vous continuez d’allouer et de libérer de très grands objets.
+  Comme le LOH et la génération 2 sont nettoyés ensemble, si le seuil de l’un des deux est dépassé, un nettoyage de la génération 2 est déclenché. Si le nettoyage de la génération 2 est déclenché à cause du LOH, la génération 2 n’est pas forcément plus petite après le GC. Si la génération 2 n’a pas beaucoup de données, l’impact est minime. En revanche, si la génération 2 est grande, le nettoyage peut entraîner des problèmes de performances s’il faut déclencher plusieurs GC sur la génération 2. Si de nombreux grands objets sont alloués de façon très temporaire et que vous avez un grand SOH, vous risquez de passer trop de temps sur les GC. Par ailleurs, le coût d’allocation vient s’ajouter si vous continuez d’allouer et de libérer de très grands objets.
 
 - Éléments de tableau avec des types référence.
 
-   Les très grands objets sur le LOH sont généralement des tableaux (il est très rare d’avoir un objet d’instance très grand). Si les éléments d’un tableau ont beaucoup de références, le coût est plus élevé. Si l’élément n’a aucune référence, le récupérateur de mémoire n’a pas besoin de traiter le tableau. Par exemple, si vous utilisez un tableau pour stocker des nœuds dans une arborescence binaire, vous pouvez l’implémenter en référençant les nœuds droit et gauche d’un nœud comme étant les nœuds eux-mêmes :
+  Les très grands objets sur le LOH sont généralement des tableaux (il est très rare d’avoir un objet d’instance très grand). Si les éléments d’un tableau ont beaucoup de références, le coût est plus élevé. Si l’élément n’a aucune référence, le récupérateur de mémoire n’a pas besoin de traiter le tableau. Par exemple, si vous utilisez un tableau pour stocker des nœuds dans une arborescence binaire, vous pouvez l’implémenter en référençant les nœuds droit et gauche d’un nœud comme étant les nœuds eux-mêmes :
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      Node left;
-      Node right;
-   };
+  ```csharp
+  class Node
+  {
+     Data d;
+     Node left;
+     Node right;
+  };
 
-   Node[] binary_tr = new Node [num_nodes];
-   ```
+  Node[] binary_tr = new Node [num_nodes];
+  ```
 
-   Si `num_nodes` est grand, le récupérateur de mémoire doit traiter au moins deux références par élément. Une autre méthode est de stocker l’index des nœuds droit et gauche :
+  Si `num_nodes` est grand, le récupérateur de mémoire doit traiter au moins deux références par élément. Une autre méthode est de stocker l’index des nœuds droit et gauche :
 
-   ```csharp
-   class Node
-   {
-      Data d;
-      uint left_index;
-      uint right_index;
-   } ;
-   ```
+  ```csharp
+  class Node
+  {
+     Data d;
+     uint left_index;
+     uint right_index;
+  } ;
+  ```
 
-   Au lieu de référencer les données du nœud gauche comme `left.d`, vous les référencez comme `binary_tr[left_index].d`. Ainsi, le récupérateur de mémoire n’a pas besoin d’examiner les références des nœuds gauche et droit.
+  Au lieu de référencer les données du nœud gauche comme `left.d`, vous les référencez comme `binary_tr[left_index].d`. Ainsi, le récupérateur de mémoire n’a pas besoin d’examiner les références des nœuds gauche et droit.
 
-Des trois facteurs, les deux premiers ont généralement plus d’impact que le troisième. Pour cette raison, nous vous recommandons d’allouer un pool de grands objets que vous réutilisez au lieu d’allouer des objets temporaires. 
+Des trois facteurs, les deux premiers ont généralement plus d’impact que le troisième. Pour cette raison, nous vous recommandons d’allouer un pool de grands objets que vous réutilisez au lieu d’allouer des objets temporaires.
 
 ## <a name="collecting-performance-data-for-the-loh"></a>Collection de données de performances pour le LOH
 
@@ -133,7 +133,7 @@ Avant de collecter des données de performances pour une zone spécifique, vous 
 
 1. Rechercher les raisons d’examiner cette zone.
 
-1. Examiner toutes les autres zones connues sans trouver ce qui pourrait expliquer le problème de performances rencontré.
+2. Examiner toutes les autres zones connues sans trouver ce qui pourrait expliquer le problème de performances rencontré.
 
 Consultez le blog [Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) (Comprendre le problème avant d’essayer de chercher une solution) pour plus d’informations sur les principes fondamentaux de la mémoire et du processeur.
 
@@ -159,7 +159,7 @@ Ces compteurs de performances sont une bonne première étape pour rechercher le
 
 En général, vous surveillez les compteurs de performances par le biais du moniteur de performances (PerfMon.exe). Utilisez « Ajouter des compteurs » pour ajouter le compteur de votre choix pour les processus qui vous intéressent. Vous pouvez enregistrer les données des compteurs de performances dans un fichier journal, comme illustré dans la figure 4.
 
-![Figure 4 : Ajout de compteurs de performance.](media/loh/perfcounter.png)    
+![Figure 4 : Ajout de compteurs de performance.](media/loh/perfcounter.png)  
 Figure 4 : LOH après un GC de la génération 2
 
 Les compteurs de performances peuvent également être interrogés par programmation. Beaucoup d’utilisateurs les collectent de cette façon dans le cadre de leur processus de test normal. S’ils repèrent des compteurs avec des valeurs anormales, ils utilisent d’autres moyens d’obtenir des données plus détaillées pour les aider dans leurs recherches.
@@ -171,13 +171,13 @@ Les compteurs de performances peuvent également être interrogés par programma
 
 Le récupérateur de mémoire fournit un riche ensemble d’événements ETW pour vous aider à comprendre ce que fait le tas et pourquoi. Les billets de blog suivants décrivent comment collecter et comprendre les événements GC avec ETW :
 
-- [Événements ETW de GC - 1](http://blogs.msdn.com/b/maoni/archive/2014/12/22/gc-etw-events.aspx)
+- [Événements ETW de GC - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
 
-- [Événements ETW de GC - 2](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-2.aspx)
+- [Événements ETW de GC - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
 
-- [Événements ETW de GC - 3](http://blogs.msdn.com/b/maoni/archive/2014/12/25/gc-etw-events-3.aspx) 
+- [Événements ETW de GC - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
 
-- [Événements ETW de GC - 4](http://blogs.msdn.com/b/maoni/archive/2014/12/30/gc-etw-events-4.aspx)
+- [Événements ETW de GC - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
 
 Pour identifier le nombre excessif de GC de la génération 2 dus à des allocations de LOH temporaires, observez la colonne Raison du déclencheur pour les GC. Pour un test simple qui alloue uniquement des grands objets temporaires, vous pouvez collecter des informations sur les événements ETW avec la ligne de commande [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) suivante :
 
@@ -186,7 +186,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 ```
 
 Le résultat ressemble à ceci :
- 
+
 ![Figure 5 : Examen des événements ETW à l’aide de PerfView](media/loh/perfview.png)  
 Figure 5 : Événements ETW affichés à l’aide de PerfView
 
@@ -199,18 +199,18 @@ perfview /GCOnly /AcceptEULA /nogui collect
 ```
 
 collecte un événement AllocationTick qui est déclenché toutes les 100 000 allocations environ. En d’autres termes, un événement est déclenché chaque fois qu’un grand objet est alloué. Vous pouvez alors examiner une des vues d’allocation de tas du récupérateur de mémoire qui indique les pile d’appels qui ont alloué des grands objets :
- 
+
 ![Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire](media/loh/perfview2.png)  
 Figure 6 : Une vue d’allocation de tas du récupérateur de mémoire
- 
+
 Comme vous pouvez le voir, il s’agit d’un test très simple qui alloue simplement de grands objets à partir de sa méthode `Main`.
 
 ### <a name="a-debugger"></a>Débogueur
 
-Si tout ce que vous avez est un vidage de mémoire et que vous devez examiner les objets qui se trouvent sur le LOH, vous pouvez utiliser [l’extension de débogueur SoS](http://msdn2.microsoft.com/ms404370.aspx) fournie par .NET. 
+Si tout ce que vous avez est un vidage de mémoire et que vous devez examiner les objets qui se trouvent sur le LOH, vous pouvez utiliser [l’extension de débogueur SoS](http://msdn2.microsoft.com/ms404370.aspx) fournie par .NET.
 
 > [!NOTE]
-> Les commandes de débogage indiquées dans cette section sont applicables aux [débogueurs Windows](http://www.microsoft.com/whdc/devtools/debugging/default.mspx).
+> Les commandes de débogage indiquées dans cette section sont applicables aux [débogueurs Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).
 
 Le code suivant illustre un exemple de sortie de l’analyse du LOH :
 
@@ -243,7 +243,7 @@ MT   Count   TotalSize Class Name
 Total 133 objects
 ```
 
-La taille du tas LOH est (16 754 224 + 16 699 288 + 16 284 504) = 49 738 016 octets. Entre les adresses 023e1000 et 033db630, 8 008 736 octets sont occupés par un tableau d’objets <xref:System.Object?displayProperty=fullName>, 6 663 696 octets sont occupés par un tableau d’objets <xref:System.Byte?displayProperty=nameWithType> et 2 081 792 octets sont occupés par de l’espace libre.
+La taille du tas LOH est (16 754 224 + 16 699 288 + 16 284 504) = 49 738 016 octets. Entre les adresses 023e1000 et 033db630, 8 008 736 octets sont occupés par un tableau d’objets <xref:System.Object?displayProperty=nameWithType>, 6 663 696 octets sont occupés par un tableau d’objets <xref:System.Byte?displayProperty=nameWithType> et 2 081 792 octets sont occupés par de l’espace libre.
 
 Parfois, le débogueur montre que la taille totale du LOH est inférieure à 85 000 octets. C’est parce que le runtime lui-même utilise le LOH pour allouer des objets dont la taille est inférieure à celle d’un grand objet.
 

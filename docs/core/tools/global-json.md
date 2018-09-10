@@ -3,14 +3,14 @@ title: Vue d’ensemble de global.json
 description: Découvrez comment utiliser le fichier global.json pour définir la version du kit SDK .NET Core pendant l’exécution de commandes CLI .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/02/2018
+ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: a7c9301e1beea49eebace5c8f8a7d159a8c12466
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936969"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252958"
 ---
 # <a name="globaljson-overview"></a>Vue d’ensemble de global.json
 
@@ -26,7 +26,7 @@ Le kit SDK .NET Core recherche un fichier *global.json* dans le répertoire de t
 
 ### <a name="sdk"></a>sdk
 
-Type : objet
+Type : object
 
 Spécifie des informations sur le kit SDK .NET Core à sélectionner.
 
@@ -103,8 +103,8 @@ Cet avertissement indique que votre projet est compilé à partir d’une préve
 > [!WARNING]
 > Le projet de démarrage '{startupProject}' cible le framework '.NETCoreApp' version '{targetFrameworkVersion}'. Cette version des outils en ligne de commande Entity Framework Core .NET prend uniquement en charge la version 2.0 ou supérieure. Pour plus d’informations sur l’utilisation d’anciennes versions des outils, consultez https://go.microsoft.com/fwlink/?linkid=871254.
 
-À partir du kit SDK .NET Core 2.1 (v. 2.1.300), la commande `dotnet ef` est incluse dans le kit SDK. Cet avertissement indique que votre projet cible EF Core 1.0 ou 1.1, qui n’est pas compatible avec le kit SDK .NET Core 2.1 et ultérieur. Pour compiler votre projet, installez le kit SDK .NET Core 2.0 (v. 2.1.201) ou les versions antérieures sur votre machine. Pour plus d’informations, consultez [Outils en ligne de commande EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
+À partir du kit SDK .NET Core 2.1 (v. 2.1.300), la commande `dotnet ef` est incluse dans le kit SDK. Cet avertissement indique que votre projet cible EF Core 1.0 ou 1.1, qui n’est pas compatible avec le kit SDK .NET Core 2.1 et ultérieur. Pour compiler votre projet, installez le kit SDK .NET Core 2.0 (v. 2.1.201) ou version antérieure sur votre machine et définissez la version du SDK à utiliser dans le fichier *global.json*. Pour plus d’informations sur la commande `dotnet ef`, consultez [Outils en ligne de commande EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Méthode de résolution des kits SDK de projet](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+* [Méthode de résolution des kits SDK de projet](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592013"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485532"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Vue d’ensemble des primitives de synchronisation
 <a name="top"></a> Le .NET Framework fournit une plage de primitives de synchronisation pour contrôler les interactions de threads et éviter des conditions de concurrence. Celles-ci peuvent être divisées approximativement en trois catégories : le verrouillage, la signalisation et les opérations verrouillées.  
@@ -40,7 +40,7 @@ ms.locfileid: "33592013"
  Les verrous donnent le contrôle d'une ressource à un seul thread à la fois ou à un nombre spécifié de threads. Un thread qui demande un verrou exclusif alors que ce verrou est en cours d'utilisation se bloque jusqu'à ce que le verrou soit de nouveau disponible.  
   
 ### <a name="exclusive-locks"></a>Verrous exclusifs  
- La forme la plus simple de verrouillage est l’instruction `lock` en C# et l’instruction `SyncLock` en Visual Basic, qui contrôle l’accès à un bloc de code. Ce type de bloc est souvent appelé « section critique ». L’instruction `lock` est implémentée à l’aide des méthodes <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> et <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> et utilise le bloc `try…catch…finally` pour garantir la libération du verrou.  
+ La forme la plus simple de verrouillage est l’instruction `lock` en C# et l’instruction `SyncLock` en Visual Basic, qui contrôle l’accès à un bloc de code. Ce type de bloc est souvent appelé « section critique ». L’instruction `lock` est implémentée à l’aide des méthodes <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> et <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>, et utilise un bloc `try…finally` pour garantir la libération du verrou.  
   
  En général, l’utilisation de l’instruction `lock` ou `SyncLock` pour protéger de petits blocs de code sans jamais englober plus d'une méthode est la meilleure façon d'utiliser la classe <xref:System.Threading.Monitor>. Bien que puissante, la classe <xref:System.Threading.Monitor> est susceptible de rendre orphelins des verrous et des blocages.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592013"
   
  Il est impossible d’instancier la classe <xref:System.Threading.Monitor>. Ses méthodes sont statiques (`Shared` en Visual Basic) et agissent sur un objet verrou instanciable.  
   
- Pour bénéficier d’une vue d’ensemble conceptuelle, consultez [Moniteurs](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Pour bénéficier d’une vue d’ensemble conceptuelle, consultez [Moniteurs](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 #### <a name="mutex-class"></a>Mutex, classe  
  Les threads demandent un <xref:System.Threading.Mutex> en appelant une surcharge de sa méthode <xref:System.Threading.WaitHandle.WaitOne%2A>. Des surcharges avec délais d'attente sont fournies, afin de permettre aux threads d'abandonner l'attente. À la différence de la classe <xref:System.Threading.Monitor>, un mutex peut être local ou global. Les mutex globaux, appelés également mutex nommés, sont visibles dans tout le système d'exploitation et peuvent être utilisés pour synchroniser des threads dans plusieurs domaines d'application ou processus. Les mutex locaux dérivent de <xref:System.MarshalByRefObject> et peuvent être utilisés au-delà des limites des domaines d'application.  
@@ -109,7 +109,7 @@ ms.locfileid: "33592013"
   
  Les threads se bloquent sur les handles d’attente en appelant la méthode d'instance <xref:System.Threading.WaitHandle.WaitOne%2A> ou l'une des méthodes statiques <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> ou <xref:System.Threading.WaitHandle.SignalAndWait%2A>. La façon dont ils sont libérés dépend de la méthode appelée et du type de handles d’attente.  
   
- Pour bénéficier d’une vue d’ensemble conceptuelle, consultez [Handles d’attente](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
+ Pour bénéficier d’une vue d’ensemble conceptuelle, consultez [Handles d’attente](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
   
 #### <a name="event-wait-handles"></a>Handles d'attente d'événement  
  Les handles d'attente d'événement incluent la classe <xref:System.Threading.EventWaitHandle> et ses classes dérivées <xref:System.Threading.AutoResetEvent> et <xref:System.Threading.ManualResetEvent>. Les threads sont libérés d'un handle d'attente d'événement quand ce dernier en reçoit le signal par l’appel à sa méthode <xref:System.Threading.EventWaitHandle.Set%2A> ou à l'aide de la méthode <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
@@ -167,11 +167,11 @@ ms.locfileid: "33592013"
   
 ## <a name="see-also"></a>Voir aussi  
  [Synchronisation des données pour le multithreading](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Moniteurs](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [Moniteurs](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Mutex](../../../docs/standard/threading/mutexes.md)  
  [Semaphore et SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Descripteurs d’attente](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [Descripteurs d’attente](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [Opérations verrouillées](../../../docs/standard/threading/interlocked-operations.md)  
  [Verrous de lecteur-writer](../../../docs/standard/threading/reader-writer-locks.md)  
  [Barrier](../../../docs/standard/threading/barrier.md)  

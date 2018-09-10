@@ -2,12 +2,12 @@
 title: Synchronisation des threads (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463154"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509384"
 ---
 # <a name="thread-synchronization-c"></a>Synchronisation des threads (C#)
 Les sections suivantes décrivent les fonctionnalités et les classes qui peuvent être utilisées pour synchroniser l’accès aux ressources dans les applications multithread.  
@@ -142,26 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>Interblocages (deadlocks)  
  La synchronisation des threads est précieuse dans les applications multithread, mais implique toujours un risque de créer un interblocage (`deadlock`), lorsque plusieurs threads s’attendent mutuellement et que l’application s’arrête. Un interblocage s’apparente au cas d’un carrefour où chaque voie est munie d’un stop et où chaque automobiliste attend que l’autre passe. Il est important d’éviter les interblocages et seule une planification rigoureuse le permet. Vous pouvez souvent prévoir un interblocage en représentant graphiquement les applications multithread avant de commencer le codage.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [lock, instruction](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [Mutex](../../../../standard/threading/mutexes.md)  
- [Opérations verrouillées](../../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [Synchronisation des données pour le multithreading](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [lock, instruction](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [Mutex](../../../../standard/threading/mutexes.md)  
+- [Opérations verrouillées](../../../../standard/threading/interlocked-operations.md)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [Synchronisation des données pour le multithreading](../../../../standard/threading/synchronizing-data-for-multithreading.md)

@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10dd7e007ecd24ec3f127ab9c102cd758dfc7d75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579845"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484862"
 ---
 # <a name="formatting-types-in-net"></a>Mettre en forme des types dans .NET
 <a name="Introduction"></a> La mise en forme est le processus de conversion d'une instance d'une classe, d'une structure ou d'une valeur d'énumération en représentation sous forme de chaîne, généralement pour exposer la chaîne obtenue aux utilisateurs ou pour qu'elle soit désérialisée afin de restaurer le type de données d'origine. Cette conversion peut présenter plusieurs difficultés :  
@@ -120,7 +120,7 @@ ms.locfileid: "33579845"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  À partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclut une interface [IStringable](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) avec une méthode unique, [IStringable.ToString](http://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), qui fournit la prise en charge par défaut de la mise en forme. Toutefois, nous recommandons que les types managés n'implémentent pas l'interface `IStringable` . Pour plus d'informations, consultez la section « [!INCLUDE[wrt](../../../includes/wrt-md.md)] et interface `IStringable` » à la page de référence de <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+>  À partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclut une interface [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) avec une méthode unique ([IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx)) qui fournit la prise en charge par défaut de la mise en forme. Toutefois, nous recommandons que les types managés n'implémentent pas l'interface `IStringable` . Pour plus d'informations, consultez la section « [!INCLUDE[wrt](../../../includes/wrt-md.md)] et interface `IStringable` » à la page de référence de <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
   
  Étant donné que tous les types autres que les interfaces sont dérivés de <xref:System.Object>, ces fonctionnalités sont fournies automatiquement à vos classes ou structures personnalisées. Toutefois, les fonctionnalités offertes par la méthode `ToString` par défaut sont limitées : Bien qu'elle identifie le type, elle ne fournit aucune information relative à une instance du type. Pour fournir une représentation sous forme de chaîne d'un objet qui donne des informations sur cet objet, vous devez substituer la méthode `ToString` .  
   

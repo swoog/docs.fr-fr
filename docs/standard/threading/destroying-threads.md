@@ -1,5 +1,5 @@
 ---
-title: Destruction de threads
+title: Détruire des threads
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e6eff0caa76349ce441a662428e37e25e2a6518
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cd6e85dca7c4c32361b964573f318b165e8d683
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582930"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385017"
 ---
-# <a name="destroying-threads"></a>Destruction de threads
-La méthode <xref:System.Threading.Thread.Abort%2A> permet d’arrêter définitivement un thread managé. Quand vous appelez <xref:System.Threading.Thread.Abort%2A>, le Common Language Runtime lève une exception <xref:System.Threading.ThreadAbortException> dans le thread cible, que ce dernier peut intercepter. Pour plus d'informations, consultez <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
+# <a name="destroying-threads"></a>Détruire des threads
+La méthode <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> permet d’arrêter définitivement un thread managé. Quand vous appelez <xref:System.Threading.Thread.Abort%2A>, le Common Language Runtime lève une exception <xref:System.Threading.ThreadAbortException> dans le thread cible, que ce dernier peut intercepter. Pour plus d'informations, consultez <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
 >  Si un thread est en train d’exécuter du code non managé quand sa méthode <xref:System.Threading.Thread.Abort%2A> est appelée, le runtime le marque comme <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>. L’exception est levée quand le thread retourne au code managé.  

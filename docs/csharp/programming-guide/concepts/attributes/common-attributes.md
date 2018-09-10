@@ -2,12 +2,12 @@
 title: Attributs courants (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332528"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504393"
 ---
 # <a name="common-attributes-c"></a>Attributs courants (C#)
 Cette rubrique décrit les attributs le plus couramment utilisés dans les programmes C#.  
@@ -229,10 +229,11 @@ class SampleClass
   
  Pour plus d’informations sur les attributs d’informations de l’appelant, consultez [Informations relatives à l’appelant (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
- [Attributs](../../../../../docs/standard/attributes/index.md)  
- [Réflexion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
- [Accès à des attributs à l’aide de la réflexion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
+- [Attributs](../../../../../docs/standard/attributes/index.md)  
+- [Réflexion (C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
+- [Accès à des attributs à l’aide de la réflexion (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104567"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43395674"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validation côté client (validation dans les couches de présentation)
 
@@ -23,7 +23,7 @@ Même quand vous utilisez la validation côté client, vous devez toujours valid
 
 Par conséquent, dans le code côté client, vous validez généralement les ViewModels. Vous pouvez également valider les commandes ou DTO de sortie clients avant de les envoyer aux services.
 
-L’implémentation de la validation côté client dépend du type d’application cliente que vous créez. Elle sera différente si vous validez des données dans une application web MVC avec la plupart du code en .NET, une application web SPA avec cette validation codée en JavaScript ou TypeScript, ou une application mobile codée avec Xamarin et C\#.
+L’implémentation de la validation côté client dépend du type d’application cliente que vous créez. Elle sera différente si vous validez des données dans une application web MVC avec la plupart du code en .NET, une application web SPA avec cette validation codée en JavaScript ou TypeScript, ou une application mobile codée avec Xamarin et C#.
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
@@ -42,8 +42,8 @@ L’implémentation de la validation côté client dépend du type d’applicati
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validation dans les applications web SPA (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation** **
-    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Angular 2 Form Validation**
+    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
 -   **Form Validation**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
@@ -53,16 +53,15 @@ L’implémentation de la validation côté client dépend du type d’applicati
 
 En résumé, voici les concepts les plus importants en ce qui concerne la validation :
 
--   Les entités et les agrégats doivent appliquer leur propre cohérence et être « toujours valides ». Les racines d’agrégat sont responsables de la cohérence de plusieurs entités dans le même agrégat.
+- Les entités et les agrégats doivent appliquer leur propre cohérence et être « toujours valides ». Les racines d’agrégat sont responsables de la cohérence de plusieurs entités dans le même agrégat.
 
--   Si vous pensez qu’une entité doit entrer dans un état non valide, envisagez d’utiliser un modèle d’objet différent, par exemple un DTO temporaire jusqu’à ce que l’entité de domaine finale soit créée.
+- Si vous pensez qu’une entité doit entrer dans un état non valide, envisagez d’utiliser un modèle d’objet différent, par exemple un DTO temporaire jusqu’à ce que l’entité de domaine finale soit créée.
 
--   Si vous devez créer plusieurs objets associés, comme un agrégat, et qu’ils ne sont valides qu’une fois que tous ont été créés, envisagez d’utiliser le modèle de fabrique.
+- Si vous devez créer plusieurs objets associés, comme un agrégat, et qu’ils ne sont valides qu’une fois que tous ont été créés, envisagez d’utiliser le modèle de fabrique.
 
--   Les frameworks de validation sont utilisés de façon optimale dans des couches spécifiques, telles que la couche de présentation ou la couche de service/d’application, mais généralement pas dans la couche de modèle de domaine, car cela implique une dépendance forte sur un framework d’infrastructure.
+- Les frameworks de validation sont utilisés de façon optimale dans des couches spécifiques, telles que la couche de présentation ou la couche de service/d’application, mais généralement pas dans la couche de modèle de domaine, car cela implique une dépendance forte sur un framework d’infrastructure.
 
--   Dans la plupart des cas, une validation redondante côté client est appropriée, car l’application peut être proactive.
-
+- Dans la plupart des cas, une validation redondante côté client est appropriée, car l’application peut être proactive.
 
 >[!div class="step-by-step"]
 [Précédent](domain-model-layer-validations.md)

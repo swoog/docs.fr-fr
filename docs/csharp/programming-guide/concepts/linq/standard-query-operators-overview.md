@@ -2,12 +2,12 @@
 title: Présentation des opérateurs de requête standard (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: 36bd5927e64ffacb97beac28b8e7790204e08c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 397d1368a3c4e0b20a0bc9c694421ed60119d1aa
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337322"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502437"
 ---
 # <a name="standard-query-operators-overview-c"></a>Présentation des opérateurs de requête standard (C#)
 Les *opérateurs de requête standard* sont les méthodes qui forment le modèle de requête LINQ. La plupart de ces méthodes fonctionnent sur des séquences, où une séquence est un objet dont le type implémente l’interface <xref:System.Collections.Generic.IEnumerable%601> ou l’interface <xref:System.Linq.IQueryable%601>. Les opérateurs de requête standard fournissent des fonctionnalités de requête, dont notamment le filtrage, la projection, l’agrégation, le tri, etc.  
@@ -103,10 +103,11 @@ foreach (var obj in query)
   
  [Opérations d’agrégation (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [Introduction aux requêtes LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
- [Syntaxe des expressions de requête pour les opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [Classification des opérateurs de requête standard en fonction de leur mode d’exécution](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [Méthodes d’extension](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Linq.Enumerable>  
+- <xref:System.Linq.Queryable>  
+- [Introduction aux requêtes LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)  
+- [Syntaxe des expressions de requête pour les opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
+- [Classification des opérateurs de requête standard en fonction de leur mode d’exécution](../../../../csharp/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
+- [Méthodes d’extension](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

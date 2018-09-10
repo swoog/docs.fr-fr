@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: 6d3f1bc238bd3129a25d4af29341c27d52b71ed8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca08651bfce1a92f65a3e6fec7da3411a22bffb2
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333841"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43780073"
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Guide pratique pour écrire dans un fichier texte (Guide de programmation C#)
 Ces exemples montrent différentes manières d'écrire du texte dans un fichier. Les deux premiers exemples utilisent des méthodes pratiques statiques au niveau de la classe <xref:System.IO.File?displayProperty=nameWithType> pour écrire chaque élément de tout `IEnumerable<string>` et une chaîne dans un fichier texte. L'exemple 3 indique comment ajouter du texte à un fichier quand vous devez traiter chaque ligne individuellement pendant que vous écrivez dans le fichier. Les exemples 1 à 3 remplacent tout le contenu existant dans le fichier, alors que l'exemple 4 montre comment ajouter du texte à un fichier existant.  
@@ -32,7 +32,8 @@ Ces exemples montrent différentes manières d'écrire du texte dans un fichier.
   
 -   Le disque est peut-être plein.  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)  
- [Exemple : Enregistrer une collection sur un emplacement de stockage d’application](http://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)  
+- [Exemple : Enregistrer une collection sur un emplacement de stockage d’application](https://code.msdn.microsoft.com/CSWinStoreAppSaveCollection-bed5d6e6)

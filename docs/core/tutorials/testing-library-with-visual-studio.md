@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 8ea958ad5d3eba394eb914da81111a0eaf707cf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483471"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43398876"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017
 
@@ -38,11 +38,11 @@ Pour créer le projet de test unitaire, procédez comme suit :
 
    Le code source créé par le modèle de test unitaire effectue les opérations suivantes :
 
-   * Il importe l’espace de noms [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx) qui contient les types utilisés pour les tests unitaires.
+   * Il importe l’espace de noms <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, qui contient les types utilisés pour les tests unitaires.
 
-   * Il applique l’attribut [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) à la classe `UnitTest1`. Chaque méthode de test dans une classe de test marquée avec l’attribut \[TestMethod\] est exécutée automatiquement quand le test unitaire est exécuté.
+   * Il applique l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> à la classe `UnitTest1`. Chaque méthode de test dans une classe de test marquée avec l’attribut \[TestMethod\] est exécutée automatiquement quand le test unitaire est exécuté.
 
-   * Elle applique l’attribut [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) pour définir `TestMethod1` comme une méthode de test qui doit être exécutée automatiquement quand le test unitaire est exécuté.
+   * Il applique l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> pour définir `TestMethod1` comme une méthode de test qui doit être exécutée automatiquement quand le test unitaire est exécuté.
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Dépendances** du projet **StringLibraryTest** puis sélectionnez **Ajouter une référence** dans le menu contextuel.
 
@@ -67,11 +67,11 @@ Pour créer le projet de test unitaire, procédez comme suit :
 
    Le code source créé par le modèle de test unitaire effectue les opérations suivantes :
 
-   * Il importe l’espace de noms [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx) qui contient les types utilisés pour les tests unitaires.
+   * Il importe l’espace de noms [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, qui contient les types utilisés pour les tests unitaires.
 
-   * Il applique l’attribut [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) à la classe `UnitTest1`. Chaque méthode de test dans une classe de test marquée avec l’attribut \[TestMethod\] est exécutée automatiquement quand le test unitaire est exécuté.
+   * Il applique l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) à la classe `UnitTest1`. Chaque méthode de test dans une classe de test marquée avec l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> est exécutée automatiquement quand le test unitaire est exécuté.
 
-   * Elle applique l’attribut [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) pour définir `TestMethod1` comme une méthode de test qui doit être exécutée automatiquement quand le test unitaire est exécuté.
+   * Il applique l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> pour définir `TestMethod1` comme une méthode de test qui doit être exécutée automatiquement quand le test unitaire est exécuté.
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Dépendances** du projet **StringLibraryTest** puis sélectionnez **Ajouter une référence** dans le menu contextuel.
 
@@ -84,9 +84,9 @@ Pour créer le projet de test unitaire, procédez comme suit :
 
 ## <a name="adding-and-running-unit-test-methods"></a>Ajout et exécution de méthodes de test unitaire
 
-Quand Visual Studio exécute un test unitaire, il exécute chaque méthode marquée avec l’attribut [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) dans une classe de test unitaire, la classe à laquelle l’attribut [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) est appliqué. Une méthode de test se termine quand la première défaillance survient, ou quand tous les tests contenus dans la méthode ont réussi.
+Quand Visual Studio exécute un test unitaire, il exécute chaque méthode marquée avec l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> dans une classe de test unitaire, la classe à laquelle l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> est appliqué. Une méthode de test se termine quand la première défaillance survient, ou quand tous les tests contenus dans la méthode ont réussi.
 
-Les tests les plus courants appellent des membres de la classe [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx). De nombreuses méthodes d’assertion incluent au moins deux paramètres, à savoir le résultat attendu pour le test et résultat réel du test. Certaines de ses méthodes les plus fréquemment appelées figurent dans le tableau ci-dessous.
+Les tests les plus courants appellent des membres de la classe <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. De nombreuses méthodes d’assertion incluent au moins deux paramètres, à savoir le résultat attendu pour le test et résultat réel du test. Certaines de ses méthodes les plus fréquemment appelées figurent dans le tableau ci-dessous.
 
 Méthodes d’assertion | Fonction
 --- | ---
@@ -95,13 +95,13 @@ Méthodes d’assertion | Fonction
 `Assert.IsFalse` | Vérifie qu’une condition est `false`. L’assertion échoue si la condition est `true`.
 `Assert.IsNotNull` | Vérifie qu’un objet n’est pas `null`. L’assertion échouera si l’objet est `null`.
 
-Vous pouvez également appliquer l’attribut [\[ExpectedException\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx) à une méthode de test. Il indique le type d’exception qu’une méthode de test est supposée lever. Le test échoue si l’exception spécifiée n’est pas levée.
+Vous pouvez également appliquer l’attribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute> à une méthode de test. Il indique le type d’exception qu’une méthode de test est supposée lever. Le test échoue si l’exception spécifiée n’est pas levée.
 
-Dans le test de la méthode `StringLibrary.StartsWithUpper`, vous voulez fournir une série de chaînes qui commencent par une majuscule. Vous attendez que la méthode retourne `true` dans de tels cas, et vous pouvez donc appeler la méthode [Assert.IsTrue(Booléen, Chaîne)](https://msdn.microsoft.com/library/ms243754.aspx). De même, vous voulez fournir des chaînes qui commencent par autre chose qu’un caractère majuscule. Vous attendez que la méthode retourne `false` dans de tels cas, et vous pouvez donc appeler la méthode [Assert.IsFalse(Booléen, Chaîne)](https://msdn.microsoft.com/library/ms243805.aspx).
+Dans le test de la méthode `StringLibrary.StartsWithUpper`, vous voulez fournir une série de chaînes qui commencent par une majuscule. Vous attendez que la méthode retourne `true` dans de tels cas, et vous pouvez donc appeler la méthode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A>. De même, vous voulez fournir des chaînes qui commencent par autre chose qu’un caractère majuscule. Vous attendez que la méthode retourne `false` dans de tels cas, et vous pouvez donc appeler la méthode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A>.
 
 Dans la mesure où votre méthode de bibliothèque gère les chaînes, vous voulez également vous assurer qu’elle gère correctement une [chaîne vide (`String.Empty`)](xref:System.String.Empty), une chaîne valide sans caractères et dont <xref:System.String.Length> a la valeur 0 et une chaîne `null` qui n’a pas été initialisée. Si vous appelez `StartsWithUpper` comme méthode d’extension sur une instance <xref:System.String>, il n’est pas possible de lui passer une chaîne `null`. Toutefois, vous pouvez également l’appeler directement comme méthode statique et passer un seul argument <xref:System.String>.
 
-Vous allez définir trois méthodes, chacune appelant sa méthode [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) de façon répétée pour chaque élément d’un tableau de chaînes. Comme la méthode de test échoue dès qu’elle rencontre le premier échec, vous appelez une surcharge de méthode qui permet de passer une chaîne indiquant la valeur de chaîne utilisée dans l’appel de méthode.
+Vous allez définir trois méthodes, chacune appelant sa méthode <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> de façon répétée pour chaque élément d’un tableau de chaînes. Comme la méthode de test échoue dès qu’elle rencontre le premier échec, vous appelez une surcharge de méthode qui permet de passer une chaîne indiquant la valeur de chaîne utilisée dans l’appel de méthode.
 
 Pour créer les méthodes de test:
 

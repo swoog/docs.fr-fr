@@ -2,12 +2,12 @@
 title: Guide pratique pour écrire une méthode d’axe LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 51adbc9f0771f8925e5e16c61f48bbb5f8bedf05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74ed60fa3c78bcbc233e27868b1abe357a85c62a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322781"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510531"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>Guide pratique pour écrire une méthode d’axe LINQ to XML (C#)
 Vous pouvez écrire vos propres méthodes d’axe pour récupérer des collections à partir d’une arborescence XML. Pour cela, l'un des meilleurs moyens consiste à écrire une méthode d'extension qui retourne une collection d'éléments ou d'attributs. Vous pouvez écrire votre méthode d’extension de façon à retourner des sous-ensembles spécifiques d’éléments ou d’attributs, selon les exigences de votre application.  
@@ -291,5 +291,6 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Techniques de requêtes avancées (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Techniques de requêtes avancées (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

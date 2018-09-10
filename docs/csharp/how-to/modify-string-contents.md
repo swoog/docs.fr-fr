@@ -3,14 +3,14 @@ title: Guide pratique pour modifier du contenu de chaîne - C#
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 99102fe90f5f675235e2993b7dd99f59214862d2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 23d52a52291b3d5c36fc2ed0f299ab82aa5ffabd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243746"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482278"
 ---
-# <a name="how-to-modify-string-contents-in-c"></a>Guide pratique pour modifier du contenu de chaîne en C# #
+# <a name="how-to-modify-string-contents-in-c"></a>Guide pratique pour modifier du contenu de chaîne en C\#
 
 Cet article présente plusieurs techniques pour produire un `string` en modifiant un `string` existant. Toutes les techniques présentées retournent le résultat des modifications sous la forme d’un nouvel objet `string`. Pour illustrer clairement ceci, tous les exemples stockent le résultat dans une nouvelle variable. Vous pouvez ensuite examiner le `string` d’origine et le `string` résultant de la modification quand vous exécutez chaque exemple.
 
@@ -73,5 +73,5 @@ Vous pouvez essayer ces exemples en examinant le code dans notre [dépôt GitHub
 
 ## <a name="see-also"></a>Voir aussi
 
-[.NET Framework (expressions régulières)](../../standard/base-types/regular-expressions.md)  
- [Langage des expressions régulières - Aide-mémoire](../../standard/base-types/regular-expression-language-quick-reference.md)  
+- [.NET Framework (expressions régulières)](../../standard/base-types/regular-expressions.md)  
+- [Langage des expressions régulières - Aide-mémoire](../../standard/base-types/regular-expression-language-quick-reference.md)  

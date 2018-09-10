@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13fa71487f143b1054cd2014fa74a1c7245ab31b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70b2d04f381fdbc1ae47b1c90649df045e111afa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577114"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484777"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Comment : écrire du texte dans un fichier
 Cette rubrique présente différentes façons d’écrire du texte dans un fichier pour les applications .NET Framework ou pour les applications du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Les classes et méthodes suivantes sont généralement utilisées pour écrire du texte dans un fichier :  
@@ -59,7 +59,7 @@ Cette rubrique présente différentes façons d’écrire du texte dans un fichi
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre comment écrire de façon asynchrone une entrée utilisateur vers un fichier texte dans une application du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Pour des raisons de sécurité, l’ouverture d’un fichier à partir d’une application du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] requiert généralement l’utilisation d’un contrôle [FileOpenPicker](http://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx) . Dans cet exemple, le `FileOpenPicker` est filtré pour afficher les fichiers texte.  
+ L'exemple suivant montre comment écrire de façon asynchrone une entrée utilisateur vers un fichier texte dans une application du [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Pour des raisons de sécurité, l’ouverture d’un fichier à partir d’une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] nécessite généralement l’utilisation d’un contrôle [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). Dans cet exemple, le `FileOpenPicker` est filtré pour afficher les fichiers texte.  
   
 ```xaml  
 <Page  

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577421"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385694"
 ---
 # <a name="async-in-depth"></a>Async en détail
 
@@ -114,7 +114,7 @@ Plus important encore, parce que le travail utilisant des E/S ne se sert pratiqu
 
 Par ailleurs, la répartition du travail sur le thread d’interface utilisateur (par exemple, la mise à jour d’une interface utilisateur) est très simple avec des méthodes `async` et n’engendre pas de travail supplémentaire (par exemple, l’appel d’un délégué thread-safe).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Approfondissement : Task et Task<T> pour une opération utilisant le processeur
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Approfondissement : Task et Task&lt;T&gt; pour une opération utilisant le processeur
 
 Le code `async` utilisant le processeur est un peu différent du code `async` utilisant des E/S.  Comme le travail est effectué sur le processeur, il n’est pas possible de dédier un thread au calcul.  L’utilisation de `async` et `await` est un moyen d’interagir avec un thread en arrière-plan et de faire en sorte que l’appelant de la méthode async reste réactif.  Notez que cela ne protège en rien les données partagées.  Si vous utilisez des données partagées, vous devez quand même appliquer une stratégie de synchronisation appropriée.
 

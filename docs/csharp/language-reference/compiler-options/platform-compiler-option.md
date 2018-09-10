@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: d4cb4e219189deb6048692822c9245c5a03c5675
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52192087eb7b73ee930eea073e0c5716ad8c636
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216510"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507590"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (Options du compilateur C#)
 Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’assembly.  
@@ -76,5 +76,6 @@ csc -platform:anycpu filename.cs
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Options du compilateur C#](index.md)  
- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Options du compilateur C#](index.md)  
+- [Gestion des propriétés des projets et des solutions](/visualstudio/ide/managing-project-and-solution-properties)

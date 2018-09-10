@@ -2,12 +2,12 @@
 title: Détails des documents WordprocessingML Office Open XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 40c9ed57-b827-4c9e-a3e7-8b2163122106
-ms.openlocfilehash: 885286a87cf50a12e130deec161aa472ac141b71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 20dd5dcb6a76987ce9f3df22a0f2b867dc3ac3e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43505050"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-c"></a>Détails des documents WordprocessingML Office Open XML (C#)
 Cette section fournit des détails concernant les documents WordprocessingML Office Open XML. Elle montre des exemples des parties de document et de style d'un document Open XML.  
@@ -20,5 +20,6 @@ Cette section fournit des détails concernant les documents WordprocessingML Off
 |[Partie de style d'un document WordprocessingML](../../../../csharp/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Illustre la partie de style d'un document WordprocessingML Office Open XML.|  
 |[Exemple qui imprime des parties de document Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Fournit un exemple qui ouvrez un document WordprocessingML Office Open XML et qui affiche les parties sur la console.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Didacticiel : manipulation de contenu dans un document WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Didacticiel : manipulation de contenu dans un document WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

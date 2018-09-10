@@ -2,12 +2,12 @@
 title: Sérialisation vers des fichiers, TextWriters et XmlWriters1
 ms.date: 07/20/2015
 ms.assetid: bd3ea6f7-895b-4ff4-a625-fe2bb55b1886
-ms.openlocfilehash: 903e6f5b6a8cd88c140e6759136301a6305cee2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 011e32054e39ee0f7f70baf9867f7cab6fe34540
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330208"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507003"
 ---
 # <a name="serializing-to-files-textwriters-and-xmlwriters"></a>Sérialisation vers des fichiers, TextWriters et XmlWriters
 Vous pouvez sérialiser des arborescences XML vers un objet <xref:System.IO.File>, <xref:System.IO.TextWriter> ou <xref:System.Xml.XmlWriter>.  
@@ -30,5 +30,6 @@ Vous pouvez sérialiser des arborescences XML vers un objet <xref:System.IO.File
   
  Pour obtenir des exemples, consultez la rubrique de référence appropriée.  
   
-## <a name="see-also"></a>Voir aussi  
- [Sérialisation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Sérialisation d’arborescences XML (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
