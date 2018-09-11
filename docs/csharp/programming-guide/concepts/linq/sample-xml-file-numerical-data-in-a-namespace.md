@@ -2,17 +2,17 @@
 title: 'Exemple de fichier XML : Données numériques dans un espace de noms3'
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: 5a752f477d17cee50b98bc88bd39cabda2bd3bf6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 114657087a0aee69bc9be298025eac58923294b0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43393566"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44185608"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="98be7-102">Exemple de fichier XML : Données numériques dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="98be7-102">Sample XML File: Numerical Data in a Namespace</span></span>
-<span data-ttu-id="98be7-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="98be7-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="98be7-104">Ce fichier contient des données numériques pour effectuer des additions, des moyennes et des regroupements.</span><span class="sxs-lookup"><span data-stu-id="98be7-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="98be7-105">Le code XML se trouve dans un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="98be7-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a><span data-ttu-id="ffdc0-102">Exemple de fichier XML : Données numériques dans un espace de noms</span><span class="sxs-lookup"><span data-stu-id="ffdc0-102">Sample XML File: Numerical Data in a Namespace</span></span>
+<span data-ttu-id="ffdc0-103">Le fichier XML suivant est utilisé dans différents exemples dans la documentation [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="ffdc0-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="ffdc0-104">Ce fichier contient des données numériques pour effectuer des additions, des moyennes et des regroupements.</span><span class="sxs-lookup"><span data-stu-id="ffdc0-104">This file contains numerical data for summing, averaging, and grouping.</span></span> <span data-ttu-id="ffdc0-105">Le code XML se trouve dans un espace de noms.</span><span class="sxs-lookup"><span data-stu-id="ffdc0-105">The XML is in a namespace.</span></span>  
   
-## <a name="data"></a><span data-ttu-id="98be7-106">Données</span><span class="sxs-lookup"><span data-stu-id="98be7-106">Data</span></span>  
+## <a name="data"></a><span data-ttu-id="ffdc0-106">Données</span><span class="sxs-lookup"><span data-stu-id="ffdc0-106">Data</span></span>  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -55,5 +55,6 @@ ms.locfileid: "43393566"
 </Root>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="98be7-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="98be7-107">See Also</span></span>  
- [<span data-ttu-id="98be7-108">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="98be7-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="ffdc0-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ffdc0-107">See Also</span></span>
+
+- [<span data-ttu-id="ffdc0-108">Exemples de documents XML (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="ffdc0-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
