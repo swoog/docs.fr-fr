@@ -3,18 +3,18 @@ title: 'Point de terminaison : sessions de messagerie fiable ayant renvoyé une
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
 ms.openlocfilehash: f6b48ec4c37c28588dd874a5bfa94a01a2f43b0c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44190817"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338946"
 ---
-# <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="2092a-102">Point de terminaison : sessions de messagerie fiable ayant renvoyé une erreur par seconde</span><span class="sxs-lookup"><span data-stu-id="2092a-102">Endpoint: Reliable Messaging Sessions Faulted Per Second</span></span>
-<span data-ttu-id="2092a-103">Nom du compteur : Sessions de messagerie fiable ayant renvoyé une erreur par seconde.</span><span class="sxs-lookup"><span data-stu-id="2092a-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
+# <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="8ddf3-102">Point de terminaison : sessions de messagerie fiable ayant renvoyé une erreur par seconde</span><span class="sxs-lookup"><span data-stu-id="8ddf3-102">Endpoint: Reliable Messaging Sessions Faulted Per Second</span></span>
+<span data-ttu-id="8ddf3-103">Nom du compteur : Sessions de messagerie fiable ayant renvoyé une erreur par seconde.</span><span class="sxs-lookup"><span data-stu-id="8ddf3-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2092a-104">Description</span><span class="sxs-lookup"><span data-stu-id="2092a-104">Description</span></span>  
- <span data-ttu-id="2092a-105">Nombre de sessions de messagerie fiable ayant renvoyé une erreur au niveau de ce point de terminaison par seconde.</span><span class="sxs-lookup"><span data-stu-id="2092a-105">Number of reliable messaging sessions that are faulted at this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="8ddf3-104">Description</span><span class="sxs-lookup"><span data-stu-id="8ddf3-104">Description</span></span>  
+ <span data-ttu-id="8ddf3-105">Nombre de sessions de messagerie fiable ayant renvoyé une erreur au niveau de ce point de terminaison par seconde.</span><span class="sxs-lookup"><span data-stu-id="8ddf3-105">Number of reliable messaging sessions that are faulted at this endpoint in a second.</span></span>  
   
- <span data-ttu-id="2092a-106">Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.</span><span class="sxs-lookup"><span data-stu-id="2092a-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="8ddf3-106">Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.</span><span class="sxs-lookup"><span data-stu-id="8ddf3-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="2092a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="2092a-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="8ddf3-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="8ddf3-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
