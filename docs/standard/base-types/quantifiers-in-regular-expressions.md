@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579091"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192263"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>quantificateurs dans les expressions régulières
 Les quantificateurs spécifient le nombre d’instances d’un caractère, groupe ou classe de caractères devant être présentes dans l’entrée pour qu’une correspondance soit trouvée.  Le tableau suivant répertorie les quantificateurs pris en charge par .NET.  
@@ -115,7 +115,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\b`|Terminer à une limite de mot.|  
   
 ### <a name="match-at-least-n-times-n"></a>Mettre en correspondance au moins n occurrences : {n,}  
- Le quantificateur `{`*n*`,}` met en correspondance au moins *n* occurrences de l’élément qui précède, où *n* est un entier. `{`*n*`,}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`}?`.  
+ Le quantificateur `{`*n*`,}` met en correspondance au moins *n* occurrences de l’élément qui précède, où *n* est un entier. `{`*n*`,}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`,}?`.  
   
  Par exemple, l’expression régulière `\b\d{2,}\b\D+` tente d’établir une correspondance avec une limite de mot suivie d’au moins deux chiffres suivis d’une limite de mot et d’un caractère non numérique. L’exemple suivant illustre cette expression régulière. L’expression régulière ne peut pas établir de correspondance avec l’expression `"7 days"`, car elle ne contient qu’un chiffre. En revanche, une correspondance est établie les expressions `"10 weeks and 300 years"`.  
   
@@ -131,7 +131,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
 |`\b`|Mettre en correspondance la limite d'un mot.|  
 |`\D+`|Mettre en correspondance au moins un chiffre non décimal.|  
   
-### <a name="match-between-n-and-m-times-nm"></a>Mettre en correspondance entre n et m occurrences : {n, m}  
+### <a name="match-between-n-and-m-times-nm"></a>Mettre en correspondance entre n et m fois : {n, m}  
  Le quantificateur `{`*n*`,`*m*`}` met en correspondance au moins *n* occurrences de l’élément qui précède, mais pas plus de *m* occurrences, où *n* et *m* sont des entiers. `{`*n*`,`*m*`}` est un quantificateur gourmand dont l’équivalent paresseux est `{`*n*`,`*m*`}?`.  
   
  Dans l’exemple suivant, l’expression régulière `(00\s){2,4}` tente d’établir une correspondance entre deux et quatre occurrences de deux zéros suivis d’un espace. Notez que la partie finale de la chaîne d’entrée inclut ce modèle cinq fois au lieu du maximum de quatre. Toutefois, seule la partie initiale de cette sous-chaîne (jusqu’à l’espace et la cinquième paire de zéros) correspond au modèle d’expression régulière.  
@@ -271,6 +271,7 @@ Les quantificateurs spécifient le nombre d’instances d’un caractère, group
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Rétroaction](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Rétroaction](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

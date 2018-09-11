@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196918"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267006"
 ---
 # <a name="naming-guidelines"></a>Indications concernant l'attribution d'un nom
 Suivant un ensemble cohérent de conventions d’affectation de noms dans le développement d’une infrastructure peut être une contribution importante à la facilité d’utilisation de l’infrastructure. Il permet à l’infrastructure à utiliser par de nombreux développeurs sur les projets largement séparés. Au-delà de la cohérence du formulaire, les noms d’éléments d’infrastructure doivent être compréhensible et doivent transmettre à la fonction de chaque élément.  

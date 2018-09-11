@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071862"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039499"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Rétroaction dans les expressions régulières
 <a name="top"></a> La rétroaction se produit lorsqu'un modèle d'expression régulière contient des quantificateurs [facultatifs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) ou des [constructions d'alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), et que le moteur des expressions régulières retourne à l'état enregistré précédent pour poursuivre la recherche d'une correspondance. La rétroaction est essentielle à la puissance des expressions régulières ; elle permet aux expressions d'être puissantes et flexibles et de correspondre à des modèles très complexes. Cependant, cette puissance a un coût. La rétroaction est souvent le facteur le plus important qui affecte les performances du moteur des expressions régulières. Heureusement, le développeur contrôle le comportement du moteur des expressions régulières et comment il utilise la rétroaction. Cette rubrique explique comment la rétroaction fonctionne et comment elle peut être activée.  
@@ -215,9 +215,10 @@ ms.locfileid: "37071862"
   
  [Retour au début](#top)  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [Constructions d’alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [Constructions de regroupement](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- [Constructions d’alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Constructions de regroupement](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43396453"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262251"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Caractères d'échappement dans les expressions régulières
 La barre oblique inverse (\\) dans une expression régulière indique une des possibilités suivantes :  
@@ -69,5 +69,6 @@ La barre oblique inverse (\\) dans une expression régulière indique une des po
 |`(.+)`|Faire correspondre à n'importe quel caractère une ou plusieurs fois. Il s'agit du deuxième groupe de capture.|  
 |`\r?\n`|Faire correspondre à zéro ou à une occurrence d'un retour chariot suivi d'une nouvelle ligne.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
