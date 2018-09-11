@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204940"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272943"
 ---
 # <a name="guidelines-for-collections"></a>Instructions relatives aux collections
 Une collection peut être considéré comme n’importe quel type spécifiquement conçu pour manipuler un groupe d’objets ayant des caractéristiques communes. C’est presque toujours approprié pour ces types d’implémenter <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, de sorte que dans cette section, nous considérons uniquement types implémentant une ou deux de ces interfaces doivent être des collections.  

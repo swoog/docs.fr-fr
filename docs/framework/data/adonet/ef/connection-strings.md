@@ -3,11 +3,11 @@ title: Chaînes de connexion
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192091"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274227"
 ---
 # <a name="connection-strings"></a>Chaînes de connexion
 Une chaîne de connexion contient des informations d'initialisation qui sont passées en tant que paramètre d'un fournisseur de données à une source de données. La syntaxe dépend du fournisseur de données et la chaîne de connexion est analysée lors de la tentative d'ouverture d'une connexion. Les chaînes de connexion utilisées par Entity Framework contiennent des informations utilisées pour la connexion au fournisseur de données ADO.NET sous-jacent qui prend en charge Entity Framework. Elles contiennent également des informations sur les fichiers de modèle et de mappage requis.  
@@ -96,7 +96,7 @@ Metadata=.\
   
 |Terme|Description|  
 |----------|-----------------|  
-|`&#124;DataDirectory&#124;`|Correspond à un chemin d'accès relatif aux fichiers de mappage et de métadonnées. Il s'agit de la valeur définie via la méthode `AppDomain.SetData("DataDirectory", objValue)`. Le `DataDirectory` chaîne de substitution doit être entourée de barres verticales et il ne peut pas être n’importe quel espace blanc entre son nom et les barres verticales. Le nom `DataDirectory` ne respecte pas la casse.<br /><br /> Si un répertoire physique nommé « DataDirectory » doit être passé en tant que membre de la liste des chemins d’accès des métadonnées, ajoutez un espace blanc à un ou les deux côtés du nom. Par exemple : `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Une application ASP.NET &#124;DataDirectory&#124; à la «\<racine de l’application > / app_data » dossier.|  
+|`&#124;DataDirectory&#124;`|Correspond à un chemin d'accès relatif aux fichiers de mappage et de métadonnées. Il s'agit de la valeur définie via la méthode `AppDomain.SetData("DataDirectory", objValue)`. Le `DataDirectory` chaîne de substitution doit être entourée de barres verticales et il ne peut pas être n’importe quel espace blanc entre son nom et les barres verticales. Le nom `DataDirectory` ne respecte pas la casse.<br /><br /> Si un répertoire physique nommé « DataDirectory » doit être passé en tant que membre de la liste des chemins d’accès des métadonnées, ajoutez un espace blanc à un ou les deux côtés du nom. Par exemple : `Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`. Une application ASP.NET &#124;DataDirectory&#124; à la «\<racine de l’application > / app_data » dossier.|  
 |~|Correspond à la racine de l'application Web. Le caractère ~ placé en première position est toujours interprété comme l'opérateur de racine de l'application Web (~), même s'il peut représenter un sous-répertoire local valide. Pour faire référence à un tel sous-répertoire local, l'utilisateur doit passer explicitement `./~`.|  
   
  `DataDirectory` et l'opérateur ~ doivent être spécifiés uniquement au début d'un chemin d'accès ; ils ne sont pas résolus s'ils se trouvent à toute autre position. Entity Framework essaiera de résoudre `~/data`, mais il traitera `/data/~` comme un chemin d'accès physique.  

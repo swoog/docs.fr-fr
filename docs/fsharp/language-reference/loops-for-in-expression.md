@@ -3,11 +3,11 @@ title: 'Boucles : expression for...in (F#)'
 description: 'Voir comment le F # for.. dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44202321"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271687"
 ---
 # <a name="loops-forin-expression"></a>Boucles : expression for...in
 

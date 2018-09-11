@@ -3,11 +3,11 @@ title: ASP.NET Caching Integration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183156"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271181"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Caching Integration
 Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle de programmation HTTP Web WCF. Veuillez consulter la [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple pour une version auto-hébergée de ce scénario traite en détail l’implémentation de service. Cette rubrique met l’accent sur la fonctionnalité d’intégration du cache de sortie ASP.NET.  

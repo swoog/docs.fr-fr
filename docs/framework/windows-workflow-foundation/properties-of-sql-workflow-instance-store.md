@@ -3,11 +3,11 @@ title: Propriétés du magasin d'instances de workflow SQL
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44182906"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264166"
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Propriétés du magasin d'instances de workflow SQL
 Les rubriques de cette section fournissent des détails à propos des propriétés du magasin d'instances de workflow SQL.  
