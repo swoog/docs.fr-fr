@@ -2,12 +2,12 @@
 title: 'Procédure pas à pas : incorporation de types provenant d’assemblys managés dans Visual Studio (C#)'
 ms.date: 07/20/2015
 ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
-ms.openlocfilehash: 90bb523e3eb42cea2cd0a9d1e753e4d9b9873c0c
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1900c62d1ebaf611f141f8f1bdf95f8d11f82140
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932093"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201255"
 ---
 # <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-c"></a>Procédure pas à pas : incorporation de types provenant d’assemblys managés dans Visual Studio (C#)
 Si vous incorporez des informations de type d’un assembly managé avec nom fort, vous pouvez coupler faiblement des types dans une application pour obtenir une indépendance de version. Autrement dit, votre programme peut être écrit de façon à ce qu’il utilise des types de plusieurs versions d’une bibliothèque managée sans que vous n’ayez à effectuer de recompilation pour chaque version.  
@@ -232,8 +232,9 @@ Si vous incorporez des informations de type d’un assembly managé avec nom for
   
 6.  Dans l’Explorateur de fichiers, ouvrez le dossier du chemin de sortie (par exemple, C:\TypeEquivalenceSample). Double-cliquez sur le fichier TypeEquivalenceClient.exe pour exécuter le programme. Le programme reflète la nouvelle version de l’assembly TypeEquivalenceRuntime sans aucune recompilation.  
   
-## <a name="see-also"></a>Voir aussi  
- [/link (Options du compilateur C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
- [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [/link (Options du compilateur C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+- [Guide de programmation C#](../../../../csharp/programming-guide/index.md)  
+- [Programmation à l’aide d’assemblys](../../../../framework/app-domains/programming-with-assemblies.md)  
+- [Assemblys et le Global Assembly Cache (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

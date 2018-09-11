@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 97e93230658b5d1da676b029169b63bc9006ddb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334712"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183312"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Opérateurs de conversion (Guide de programmation C#)
 C# permet aux programmeurs de déclarer des conversions sur des classes ou structs afin d’autoriser les conversions dans les deux sens entre ces derniers et d’autres classes ou structs, ou des types de base. Les conversions sont définies comme des opérateurs et nommées en fonction du type vers lequel s’effectue l’opération. Soit le type de l’argument à convertir, soit le type du résultat de la conversion, mais pas les deux, doit être le type conteneur.  
@@ -43,7 +43,8 @@ C# permet aux programmeurs de déclarer des conversions sur des classes ou struc
   
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Convert>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Conversions explicites définies par l’utilisateur chaînées en C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Convert>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Conversions explicites définies par l’utilisateur chaînées en C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

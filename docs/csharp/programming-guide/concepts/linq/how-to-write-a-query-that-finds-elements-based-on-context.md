@@ -2,12 +2,12 @@
 title: Guide pratique pour écrire une requête qui recherche des éléments en fonction du contexte (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 3b09be121c3e1da12614d1c09a806b09386732df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322011"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210115"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Guide pratique pour écrire une requête qui recherche des éléments en fonction du contexte (C#)
 Parfois, vous devez écrire une requête qui sélectionne des éléments en fonction de leur contexte. Vous souhaiterez peut-être filtrer en fonction des éléments frères qui précèdent ou qui suivent. Vous souhaiterez peut-être filtrer en fonction des éléments enfants ou ancêtres.  
@@ -98,9 +98,10 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Xml.Linq.XElement.Parse%2A>  
- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
- [Requêtes de base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Xml.Linq.XElement.Parse%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
+- [Requêtes de base (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

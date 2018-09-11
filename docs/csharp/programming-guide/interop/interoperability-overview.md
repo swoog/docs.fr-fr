@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d14c196babb03b7f13dde6ab5b46508a30ba26d6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43394528"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208794"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Vue d'ensemble de l'interopérabilité (Guide de programmation C#)
 Cette rubrique décrit les méthodes qui permettent une interopérabilité entre le code managé C# et le code non managé.  
@@ -57,10 +57,11 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
  Pour plus d’informations, consultez [Exposition de composants .NET Framework à COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) et [Exemple de classe COM](../../../csharp/programming-guide/interop/example-com-class.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [Amélioration des performances d’interopérabilité](https://msdn.microsoft.com/library/ms998551.aspx)  
- [Introduction à l’interopérabilité entre COM et .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
- [Introduction à COM Interop dans Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
- [Marshaling entre du code managé et non managé](../../../../docs/framework/interop/interop-marshaling.md)  
- [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Amélioration des performances d’interopérabilité](https://msdn.microsoft.com/library/ms998551.aspx)  
+- [Introduction à l’interopérabilité entre COM et .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Introduction à COM Interop dans Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+- [Marshaling entre du code managé et non managé](../../../../docs/framework/interop/interop-marshaling.md)  
+- [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)

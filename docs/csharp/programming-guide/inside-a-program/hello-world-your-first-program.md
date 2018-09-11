@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43463115"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213843"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- Votre premier programme (guide de programmation C#)
 La procédure suivante crée une version C# du traditionnel programme « Hello World ! » . Le programme affiche la chaîne `Hello World!`  
@@ -78,7 +78,7 @@ La procédure suivante crée une version C# du traditionnel programme « Hello
   
  Le paramètre `args` de la méthode `Main` est un tableau `string` qui contient les arguments de la ligne de commande utilisés pour appeler le programme. Contrairement au langage C++, le tableau n’inclut pas le nom du fichier exécutable (exe).  
   
- Pour plus d’informations sur l’utilisation des arguments de ligne de commande, consultez les exemples des rubriques [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md) et [Guide pratique pour créer et utiliser des assemblys à l’aide de la ligne de commande](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Pour plus d’informations sur l’utilisation des arguments de ligne de commande, consultez les exemples des rubriques [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md) et [Guide pratique pour créer et utiliser des assemblys à l’aide de la ligne de commande](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
  L’appel à <xref:System.Console.ReadKey%2A> à la fin de la méthode `Main` empêche la fenêtre de console de se fermer avant que vous ayez pu lire la sortie quand vous exécutez votre programme en mode débogage, avec la touche F5.  
   
@@ -126,11 +126,12 @@ La procédure suivante crée une version C# du traditionnel programme « Hello
   
  Pour plus d’informations sur le compilateur C# et ses options, consultez [Options du compilateur C #](../../../csharp/language-reference/compiler-options/index.md).
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [À l’intérieur d’un programme C#](../../../csharp/programming-guide/inside-a-program/index.md)  
- [Chaînes](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>Exemples d’applications C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
- [Référence C#](../../../csharp/language-reference/index.md)  
- [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Bien démarrer avec Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [À l’intérieur d’un programme C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+- [Chaînes](../../../csharp/programming-guide/strings/index.md)  
+- [\<paveover>Exemples d’applications C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+- [Référence C#](../../../csharp/language-reference/index.md)  
+- [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Bien démarrer avec Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

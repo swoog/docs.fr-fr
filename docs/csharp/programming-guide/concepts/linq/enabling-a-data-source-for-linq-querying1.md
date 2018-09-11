@@ -2,12 +2,12 @@
 title: Activation d’une source de données pour l’interrogation LINQ
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 5b67995f40bc0cb703003aa80b511268f21da8b8
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220995"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253180"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Activation d'une source de données pour l'interrogation LINQ
 Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour permettre l’interrogation de toute source de données dans le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. La source de données peut être une structure de données, un service Web, un système de fichiers ou une base de données, par exemple. Le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] permet aux clients d'interroger facilement une source de données pour laquelle l'interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est activée, car la syntaxe et le modèle de la requête ne changent pas. Il existe différentes manières d’étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] à ces sources de données, dont les suivantes :  
@@ -39,9 +39,10 @@ Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbte
   
  Un fournisseur complexe `IQueryable`, tel que le fournisseur [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], peut convertir les requêtes terminées [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] en un langage de requête expressif, par exemple SQL. Un fournisseur complexe est plus général qu'un fournisseur moins complexe, car il peut gérer une plus grande gamme de questions dans la requête. Il possède également un système de type ouvert et doit donc contenir une infrastructure étendue pour mapper les types définis par l'utilisateur. Développer un fournisseur complexe est une tâche difficile.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.Linq.IQueryable%601>  
- <xref:System.Collections.Generic.IEnumerable%601>  
- <xref:System.Linq.Enumerable>  
- [Présentation des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.Linq.IQueryable%601>  
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- <xref:System.Linq.Enumerable>  
+- [Présentation des opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)

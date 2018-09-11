@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334832"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207458"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Guide pratique pour créer un fichier ou un dossier (Guide de programmation C#)
 Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un sous-dossier, créer un fichier dans le sous-dossier et écrire des données dans le fichier.  
@@ -67,7 +67,8 @@ Vous pouvez par programmation créer un dossier sur votre ordinateur, créer un 
   
  Si vous n’êtes pas autorisé à créer le dossier, l’exemple lève une instance de la classe <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>Voir aussi  
- <xref:System.IO?displayProperty=nameWithType>  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Système de fichiers et Registre (Guide de programmation C#)](../../../csharp/programming-guide/file-system/index.md)

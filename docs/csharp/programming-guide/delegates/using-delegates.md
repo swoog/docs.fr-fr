@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: b27c94570fdf76808e8a7df67b34466bde20de7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07bc0e38455335e068719137c349daf65f8fab6b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337403"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042203"
 ---
 # <a name="using-delegates-c-programming-guide"></a>Utilisation de délégués (guide de programmation C#)
 Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un type qui encapsule sans risque une méthode ; il est similaire à un pointeur de fonction en C et C++. Toutefois, à la différence des pointeurs de fonction C, les délégués sont orientés objet, de type sécurisé et sûrs. Le type d'un délégué est défini par le nom du délégué. L’exemple suivant déclare un délégué nommé `Del` qui peut encapsuler une méthode acceptant une chaîne ([string](../../../csharp/language-reference/keywords/string.md)) comme argument et qui retourne [void](../../../csharp/language-reference/keywords/void.md) :  
@@ -64,10 +64,11 @@ Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un 
   
  [!code-csharp[csProgGuideDelegates#30](../../../csharp/programming-guide/delegates/codesnippet/CSharp/using-delegates_10.cs)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Délégués](../../../csharp/programming-guide/delegates/index.md)  
- [Utilisation de la variance dans les délégués](http://msdn.microsoft.com/library/e6acad03-93e0-4efb-a158-8696d5eb4ecf)  
- [Variance dans les délégués](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)  
- [Utilisation de la variance pour les délégués génériques Func et Action](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290)  
- [Événements](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+- [Délégués](../../../csharp/programming-guide/delegates/index.md)
+- [Utilisation de la variance dans les délégués](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)
+- [Variance dans les délégués](../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Utilisation de la variance pour les délégués génériques Func et Action](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Événements](../../../csharp/programming-guide/events/index.md)

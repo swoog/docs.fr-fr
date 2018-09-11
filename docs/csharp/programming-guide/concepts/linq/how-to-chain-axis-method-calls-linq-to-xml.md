@@ -2,12 +2,12 @@
 title: Guide pratique pour chaîner des appels à des méthodes d’axe (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 067e6da2-ee32-486d-803c-e611b328e39a
-ms.openlocfilehash: 36160a9dd4cc26b0b1d54e6e8b91d2880dd23abf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b486ef5cbf1f9752077cfa8d774184c7be90f6f2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333774"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44212098"
 ---
 # <a name="how-to-chain-axis-method-calls-linq-to-xml-c"></a>Guide pratique pour chaîner des appels à des méthodes d’axe (LINQ to XML) (C#)
 Un schéma courant que vous utiliserez dans votre code consiste à appeler une méthode d’axe, puis à appeler l’un des axes de méthode d’extension.  
@@ -116,5 +116,6 @@ foreach (XElement e in names)
 <aw:Name xmlns:aw="http://www.adventure-works.com">Jessica Arnold</aw:Name>  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Axes LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Axes LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
