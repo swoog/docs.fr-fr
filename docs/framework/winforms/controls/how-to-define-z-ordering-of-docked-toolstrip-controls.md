@@ -11,11 +11,11 @@ helpviewer_keywords:
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
 ms.openlocfilehash: 34d600454a7fa63c7ba59bebded6365cd5401cb4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266733"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360899"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>Comment : définir l'ordre de plan de contrôles ToolStrip ancrés
 Pour positionner un contrôle <xref:System.Windows.Forms.ToolStrip> correctement avec l'ancrage, vous devez positionner le contrôle correctement dans l'ordre de plan du formulaire.  

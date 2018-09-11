@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 938998a2316af28071e54e909fa60b5edbda0f35
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198931"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361600"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -55,7 +55,7 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
  Les magasins sont protégés par des listes de contrôle d'accès à l'instar des dossiers figurant sur un ordinateur. Lors de la création d'un service hébergé par les services Internet (IIS), le processus [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] s'exécute sous le compte [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]. Ce compte doit avoir accès au magasin contenant les certificats utilisés par le service considéré. Chacun des principaux magasins est protégé par une liste d'accès par défaut, mais cette liste peut être modifiée. Si vous créez un rôle distinct pour l'accès à un magasin donné, vous devez accorder à ce rôle des droits d'accès. Pour apprendre à modifier la liste d’accès à l’aide de l’outil WinHttpCertConfig.exe, consultez [Guide pratique pour créer des certificats temporaires à utiliser au cours du développement](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). Pour plus d’informations sur l’utilisation de certificats clients avec IIS, consultez [Guide pratique pour appeler un service web à l’aide d’un certificat client permettant l’authentification dans une application web ASP.NET](https://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Chaîne d'approbation et autorités de certification  
- Les certificats sont créés selone une hiérarchie où chaque certificat individuel est lié à l'autorité de certification qui l'a émis. Ce lien renvoie au certificat de l'autorité de certification. Le certificat de l'autorité de certification renvoie ensuite à l'autorité de certification qui a émis le certificat de l'autorité de certification d'origine. Ce processus se répète jusqu'à ce que le certificat de l'autorité de certification racine soit atteint. Le certificat de l'autorité de certification racine est approuvé de manière inhérente.  
+ Les certificats sont créés selone une hiérarchie où chaque certificat individuel est lié à l'autorité de certification qui l'a émis. Ce lien renvoie au certificat de l'autorité de certification. L’autorité de certification du certificat puis des liens vers l’autorité de certification qui a émis le certificat de l’autorité de certification d’origine. Ce processus se répète jusqu'à ce que le certificat de l'autorité de certification racine soit atteint. Le certificat de l'autorité de certification racine est approuvé de manière inhérente.  
   
  Les certificats numériques sont utilisés pour authentifier une entité en s’appuyant sur cette hiérarchie, également appelée *chaîne de confiance*. Vous pouvez afficher une chaîne de certificat à l’aide du composant logiciel enfichable MMC en double-cliquant sur le certificat de votre choix, puis en cliquant sur l’onglet **Chemin de certificat**. Pour plus d’informations sur l’importation de chaînes de certificats pour une autorité de certification, consultez [Guide pratique pour spécifier la chaîne de certificats d’autorité de certification utilisée pour vérifier des signatures](../../../../docs/framework/wcf/feature-details/specify-the-certificate-authority-chain-verify-signatures-wcf.md).  
   

@@ -8,11 +8,11 @@ ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7f46ea28fe0827e7919b62550492d66a51a125fc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271661"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365911"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Sécurité de message avec un client Windows sans négociation d'informations d'identification
 Le scénario suivant montre un client Windows Communication Foundation (WCF) et le service sécurisé par le protocole Kerberos.  

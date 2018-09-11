@@ -3,11 +3,11 @@ title: "Procédure : accéder à un service à partir d'une application de work
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
 ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222433"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361390"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Procédure : accéder à un service à partir d'une application de workflow
 Cette rubrique décrit comment appeler un service de workflow à partir d'une application console de workflow. Cela dépend à la fin de la [Comment : créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) rubrique. Bien que cette rubrique décrit comment appeler un service de workflow à partir d’une application de workflow, les mêmes méthodes peuvent servir à appeler n’importe quel service Windows Communication Foundation (WCF) à partir d’une application de workflow.

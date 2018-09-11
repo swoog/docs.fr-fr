@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338933"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361668"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configuration du service de données (services de données WCF)
 Avec [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], vous pouvez créer des services de données qui exposent [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] flux. Les données de ces flux peuvent provenir de diverses sources. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] utilise des fournisseurs de données pour exposer ces données comme un [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] flux. Ces fournisseurs comprennent un fournisseur [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], un fournisseur de réflexion et un jeu d'interfaces de fournisseur de services de données personnalisé. L'implémentation de fournisseur définit le modèle de données du service. Pour plus d’informations, consultez [fournisseurs de Services de données](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270377"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360750"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>Exécution d’une requête XPath sur un DataSet
 La relation entre un synchronisé <xref:System.Data.DataSet> et <xref:System.Xml.XmlDataDocument> vous permet d’utiliser XML, services, tels que la requête XML Path Language (XPath), qui accèdent à la **XmlDataDocument** et peuvent réaliser certaines opérations plus facilement qu’en accédant le **DataSet** directement. Par exemple, au lieu d’utiliser le **sélectionnez** méthode d’un <xref:System.Data.DataTable> Explorer des relations à d’autres tables dans un **jeu de données**, vous pouvez effectuer une requête XPath sur un **XmlDataDocument**  qui est synchronisée avec la **DataSet**, afin d’obtenir une liste d’éléments XML sous la forme d’un <xref:System.Xml.XmlNodeList>. Les nœuds dans le **XmlNodeList**, effectuez un cast en tant que <xref:System.Xml.XmlElement> nœuds, peut ensuite être transmis à la **GetRowFromElement** méthode de la **XmlDataDocument**pour retourner la mise en correspondance <xref:System.Data.DataRow> références aux lignes de la table dans la liste synchronisé **DataSet**.  

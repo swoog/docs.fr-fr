@@ -3,11 +3,11 @@ title: Détails relatifs à l'implémentation du protocole WCF Data Services
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
 ms.openlocfilehash: 1d68e278fbac0137d1a5b2dca2daedba2294a7ee
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272343"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44364411"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Détails relatifs à l'implémentation du protocole WCF Data Services
 ## <a name="odata-protocol-implementation-details"></a>Détails de l'implémentation du protocole OData  

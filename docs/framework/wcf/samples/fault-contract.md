@@ -3,11 +3,11 @@ title: Contrat d'erreur
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270982"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361301"
 ---
 # <a name="fault-contract"></a>Contrat d'erreur
 Cet exemple illustre comment transmettre les informations relatives à une erreur d'un service à un client. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), avec du code supplémentaire ajouté au service pour convertir une exception interne en erreur. Le client tente d'effectuer une opération de division par zéro pour imposer la génération d'une erreur sur le service.  

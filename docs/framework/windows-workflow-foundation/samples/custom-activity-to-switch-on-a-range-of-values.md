@@ -3,11 +3,11 @@ title: Activité personnalisée pour commuter une plage de valeurs
 ms.date: 03/30/2017
 ms.assetid: 441e0a17-421f-430c-ba97-59e4cc6c88e3
 ms.openlocfilehash: cfaf4318b1557a9fc217de8254e164243ea54569
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338192"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44360698"
 ---
 # <a name="custom-activity-to-switch-on-a-range-of-values"></a>Activité personnalisée pour commuter une plage de valeurs
 Cet exemple montre comment créer une activité personnalisée qui étend l'utilisation d'un <xref:System.Activities.Statements.Switch%601>. Une instruction <xref:System.Activities.Statements.Switch%601> classique autorise la commutation basée sur une valeur unique. Mais dans certains scénarios d'application professionnelle, la commutation d'une activité est basée sur une plage de valeurs. Par exemple, une activité peut exécuter une action lorsque la valeur de commutation est comprise entre 1 et 5, une autre action lorsque la valeur est comprise entre 6 et 10, et une action par défaut pour toutes les autres valeurs. Cette activité personnalisée permet exactement ce scénario.  

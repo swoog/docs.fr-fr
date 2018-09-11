@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44128428"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44367926"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Génération de commandes avec CommandBuilders
 Lorsque la propriété `SelectCommand` est spécifiée de manière dynamique au moment de l'exécution, par l'intermédiaire d'un outil de requête qui prend une commande textuelle provenant de l'utilisateur par exemple, il est possible que vous ne puissiez pas spécifier les propriétés `InsertCommand`, `UpdateCommand` ou `DeleteCommand` appropriées au moment de la conception. Si l'objet <xref:System.Data.DataTable> est mappé à une table de base de données unique ou est généré par elle, vous pouvez tirer parti de l'objet <xref:System.Data.Common.DbCommandBuilder> pour générer automatiquement les propriétés `DeleteCommand`, `InsertCommand` et `UpdateCommand` de l'objet <xref:System.Data.Common.DbDataAdapter>.  

@@ -3,11 +3,11 @@ title: Création de workflows, d'activités et d'expressions à l'aide du code i
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265128"
+ms.locfileid: "44342627"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Création de workflows, d'activités et d'expressions à l'aide du code impératif
 Une définition de workflow est une arborescence d’objets d’activité configurés. Cette arborescence d'activités peut être définie de nombreuses façons, notamment en modifiant manuellement des données XAML ou en utilisant le Workflow Designer pour produire  des données XAML. L'utilisation de XAML n'est toutefois pas impérative. Les définitions de workflow peuvent également être créées par programmation. Cette rubrique fournit une vue d'ensemble de la création des définitions, des activités et des expressions de workflow à l'aide du code. Pour obtenir des exemples d’utilisation de workflows XAML à l’aide de code, consultez [sérialisation de Workflows et activités vers et depuis XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
