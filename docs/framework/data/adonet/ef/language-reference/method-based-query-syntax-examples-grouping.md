@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
 ms.openlocfilehash: 2fd64cb16224290d76efe327978083b1e834d6cb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273724"
+ms.locfileid: "44342288"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>Exemples de syntaxe de requête fondée sur une méthode : groupement
 Les exemples de cette rubrique vous montrent comment utiliser le `GroupBy` méthode pour interroger le [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) à l’aide de la syntaxe de requête fondée sur une méthode. Le modèle de vente AdventureWorks Sales Model utilisé dans ces exemples est construit à partir des tables Contact, Address, Product, SalesOrderHeader et SalesOrderDetail de l'exemple de base de données AdventureWorks.  
