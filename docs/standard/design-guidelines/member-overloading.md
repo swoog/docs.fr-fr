@@ -12,11 +12,11 @@ ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44129800"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353172"
 ---
 # <a name="member-overloading"></a>Surcharge de membre
 Surcharge de membre signifie que la création de deux ou plusieurs membres sur le même type qui diffèrent uniquement par le nombre ou le type de paramètres mais qui ont le même nom. Par exemple, dans la commande suivante, le `WriteLine` méthode est surchargée :  
