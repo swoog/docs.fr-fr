@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353851"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44709694"
 ---
 # <a name="event-design"></a>Conception d'événements
 Les événements sont le plus couramment utilisé formulaire des rappels (constructions qui permettent l’infrastructure d’appeler dans le code utilisateur). Autres mécanismes de rappel incluent les membres en prenant les délégués, les membres virtuels et basée sur l’interface de plug-ins. Données à partir des études de convivialité indiquent que la majorité des développeurs sont plus à l’aise avec les événements qu’ils sont à l’aide des autres méthodes de rappel. Les événements sont bien intégrées à Visual Studio et de nombreux langages.  

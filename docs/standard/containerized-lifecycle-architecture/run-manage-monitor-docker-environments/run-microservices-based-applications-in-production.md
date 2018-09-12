@@ -1,37 +1,37 @@
 ---
-title: Exécuter les applications composées et microservices dans les environnements de production
+title: Exécuter des applications composées et basées sur des microservices dans des environnements de production
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: b4192ff1d67a3f70bb5eeb9a36245cfd35bafb53
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105629"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44706039"
 ---
-# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Exécuter les applications composées et microservices dans les environnements de production
+# <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Exécuter des applications composées et basées sur des microservices dans des environnements de production
 
-Les applications composées par plusieurs microservices n’avez pas besoin être déployée dans des clusters orchestrator afin de simplifier la complexité du déploiement et de rendre viable du point de vue d’informatique. Sans un cluster orchestrator, il serait très difficile de déployer et d’une application complexe microservices montée en puissance parallèle.
+Applications composées par plusieurs microservices n’avez pas besoin d’être déployés dans des clusters orchestrator afin de simplifier la complexité du déploiement et le rendre viable du point de vue informatique. Sans un cluster orchestrateur, il serait très difficile de déployer et de montée en puissance une application de microservices complexes.
 
-## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Introduction à orchestrators, les planificateurs et les clusters de conteneur
+## <a name="introduction-to-orchestrators-schedulers-and-container-clusters"></a>Introduction aux orchestrateurs, les planificateurs et les clusters de conteneurs
 
-Plus haut dans ce livre électronique, nous avons présenté *clusters* et *planificateurs* dans le cadre de la discussion sur l’architecture logicielle et de développement. Docker Swarm et système d’exploitation de centre de données mésosphère (contrôleur de domaine/système d’exploitation) sont des exemples de clusters de Docker. Ces deux éléments peuvent fonctionner comme une partie de l’infrastructure fournie par le Service de conteneur Microsoft Azure.
+Plus haut dans ce livre électronique, nous avons introduit *clusters* et *planificateurs* dans le cadre de la discussion sur l’architecture logicielle et le développement. Exemples de clusters Docker sont Docker Swarm et Mesosphere Datacenter Operating System (DC/OS). Ces deux éléments peuvent fonctionner comme une partie de l’infrastructure fournie par Microsoft Azure Container Service.
 
-Lorsque les applications sont montés sur plusieurs systèmes hôtes, la possibilité de gérer chaque système hôte et d’abstraire la complexité de la plateforme sous-jacente devient intéressante. C’est précisément ce que fournissent orchestrators et des planificateurs. Examinons une brève les ici :
+Lorsque les applications sont montés sur plusieurs systèmes d’hôte, la possibilité de gérer chaque système hôte et clarifient la complexité de la plateforme sous-jacente devient intéressante. C’est précisément ce que fournissent les orchestrateurs et des planificateurs. Examinons une brève les ici :
 
--   **Planificateurs *** *« Planification » désigne la capacité d’un administrateur pour charger un fichier de service sur un système hôte qui établit la façon d’exécuter un conteneur spécifique. Lancement des conteneurs dans un cluster de Docker a tendance à être appelée à la planification. Bien que la planification fait référence à l’acte spécifique du chargement de la définition de service, dans un sens plus général, les planificateurs sont responsables de se connecter à un système de l’hôte init pour gérer les services de la capacité nécessaire.
+- **Planificateurs**. « Planification » désigne la capacité d’un administrateur pour charger un fichier de service sur un système hôte qui établit la façon d’exécuter un conteneur spécifique. Lancement de conteneurs dans un cluster Docker a tendance à être appelé de planification. Bien que la planification fait référence à l’acte spécifique du chargement de la définition de service, dans un sens plus général, les planificateurs sont responsables de raccordement au système d’initialisation d’un ordinateur hôte pour gérer les services dans la capacité nécessaire.
 
-Un planificateur de cluster a plusieurs objectifs : utilisation efficace des ressources du cluster, l’utilisation des contraintes de placement de fourni par l’utilisateur, applications rapidement à ne pas les laisser dans un état d’attente, ayant un degré de « respect, « en cours fiables pour les erreurs, de planification et être toujours disponibles.
+   Un planificateur de cluster a plusieurs objectifs : utilisation efficace des ressources du cluster, l’utilisation des contraintes de positionnement fournie par l’utilisateur, des applications rapidement le point de ne pas les laisser dans un état d’attente, ayant un degré de « équité, « en cours robuste aux erreurs, et toujours être disponible.
 
--   **Orchestration *** *plateformes étendent les capacités de gestion du cycle de vie des charges de travail complexes, multicontainer déployées sur un cluster d’hôtes. En faisant abstraction de l’infrastructure de l’hôte, outils d’orchestration de permettent aux utilisateurs de traiter l’intégralité du cluster comme cible de déploiement unique.
+- **Orchestration**. Plateformes d’étendent les fonctionnalités de gestion de cycle de vie à complexes, des charges de travail déployées sur un cluster d’hôtes. En faisant abstraction de l’infrastructure hôte, outils d’orchestration de permettent aux utilisateurs de traiter l’ensemble du cluster comme une cible de déploiement unique.
 
-Le processus d’orchestration implique des outils et une plateforme qui automatise tous les aspects de la gestion des applications à partir de la sélection élective initiale ou de déploiement par conteneur ; déplacement de conteneurs sur différents hôtes selon l’intégrité de son hôte ou des performances ; le contrôle de version et enchaînée mises à jour et l’intégrité de la surveillance des fonctions qui prennent en charge la mise à l’échelle et basculement ; et bien plus encore.
+   Le processus d’orchestration implique des outils et une plateforme qui peut automatiser tous les aspects de gestion des applications à partir de placement initial ou le déploiement par conteneur ; déplacement des conteneurs vers des hôtes différents en fonction de la santé de son hôte ou les performances ; le contrôle de version et propagée mises à jour et l’intégrité de la surveillance des fonctions qui prennent en charge la mise à l’échelle et basculement ; et bien plus encore.
 
-Orchestration est un terme général qui fait référence à la planification du conteneur gestion du cluster et éventuellement la configuration des hôtes supplémentaires.
+   Orchestration est un terme général qui fait référence à la planification du conteneur gestion du cluster et éventuellement l’approvisionnement des hôtes supplémentaires.
 
-Les capacités offertes par orchestrators et des planificateurs sont très complexes à développer et créer à partir de zéro, et par conséquent vous souhaite apporter utilisation des solutions d’orchestration offertes par les fournisseurs.
+Les fonctionnalités fournies par les orchestrateurs et des planificateurs sont très complexes à développer et créer à partir de zéro, et par conséquent vous souhaite rendre utilisation d’orchestration solutions offertes par les fournisseurs.
 
 
 >[!div class="step-by-step"]
