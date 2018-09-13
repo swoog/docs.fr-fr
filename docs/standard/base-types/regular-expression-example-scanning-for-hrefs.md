@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728678"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271928"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Exemple d'expression régulière : recherche de valeurs HREF
 L’exemple suivant recherche une chaîne d’entrée et affiche toutes les valeurs href="…" et leurs emplacements dans la chaîne.  
@@ -56,5 +56,6 @@ L’exemple suivant recherche une chaîne d’entrée et affiche toutes les vale
   
  Pour résoudre ces problèmes, la classe <xref:System.Text.RegularExpressions.Regex> prend en charge la syntaxe `(?<name>…)` pour capturer une correspondance dans un emplacement spécifié (l’emplacement peut être nommé à l’aide d’une chaîne ou d’un entier ; les entiers peuvent être rappelés plus rapidement). Ainsi, les autres correspondances de la même chaîne peuvent toutes être dirigées vers le même emplacement. En cas de conflit, la dernière correspondance placée dans un emplacement est la correspondance correcte. (Toutefois, la liste complète des différentes correspondances pour un seul emplacement est disponible. Consultez la collection <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> pour plus d’informations.)  
   
-## <a name="see-also"></a>Voir aussi  
- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md)
