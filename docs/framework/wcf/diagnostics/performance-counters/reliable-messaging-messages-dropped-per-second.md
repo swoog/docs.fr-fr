@@ -3,18 +3,18 @@ title: Messages de messagerie fiable déposés par seconde
 ms.date: 03/30/2017
 ms.assetid: a11b0b80-b242-48e1-b0bb-7f756db5486b
 ms.openlocfilehash: 7722b32f99b302c5c272e095033879c9e04c7ee1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188918"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45518985"
 ---
-# <a name="reliable-messaging-messages-dropped-per-second"></a><span data-ttu-id="0b926-102">Messages de messagerie fiable déposés par seconde</span><span class="sxs-lookup"><span data-stu-id="0b926-102">Reliable Messaging Messages Dropped Per Second</span></span>
-<span data-ttu-id="0b926-103">Nom du compteur : messages de messagerie fiable déposés par seconde.</span><span class="sxs-lookup"><span data-stu-id="0b926-103">Counter Name: Reliable Messaging Sessions Dropped Per Second.</span></span>  
+# <a name="reliable-messaging-messages-dropped-per-second"></a><span data-ttu-id="463f0-102">Messages de messagerie fiable déposés par seconde</span><span class="sxs-lookup"><span data-stu-id="463f0-102">Reliable Messaging Messages Dropped Per Second</span></span>
+<span data-ttu-id="463f0-103">Nom du compteur : messages de messagerie fiable déposés par seconde.</span><span class="sxs-lookup"><span data-stu-id="463f0-103">Counter Name: Reliable Messaging Sessions Dropped Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0b926-104">Description</span><span class="sxs-lookup"><span data-stu-id="0b926-104">Description</span></span>  
- <span data-ttu-id="0b926-105">Nombre total de messages de messagerie fiable déposés dans ce service en une seconde.</span><span class="sxs-lookup"><span data-stu-id="0b926-105">Total number of reliable messaging messages that have been dropped in this service in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="463f0-104">Description</span><span class="sxs-lookup"><span data-stu-id="463f0-104">Description</span></span>  
+ <span data-ttu-id="463f0-105">Nombre total de messages de messagerie fiable déposés dans ce service en une seconde.</span><span class="sxs-lookup"><span data-stu-id="463f0-105">Total number of reliable messaging messages that have been dropped in this service in a second.</span></span>  
   
- <span data-ttu-id="0b926-106">Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.</span><span class="sxs-lookup"><span data-stu-id="0b926-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="463f0-106">Ce compteur est de type de compteur de performances [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), dont la valeur est calculée à l’aide de la formule suivante.</span><span class="sxs-lookup"><span data-stu-id="463f0-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="0b926-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="0b926-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="463f0-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="463f0-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
