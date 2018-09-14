@@ -5,22 +5,22 @@ ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 45000554226fcde753041fca283bfc8b1eeba5ce
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196567"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45561121"
 ---
-# <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a><span data-ttu-id="86c03-102">&lt;security&gt; de &lt;netPeerBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="86c03-102">&lt;security&gt; of &lt;netPeerBinding&gt;</span></span>
-<span data-ttu-id="86c03-103">Définit les paramètres de sécurité de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), y compris le type d’authentification utilisé et la sécurité utilisée pour le transport de messages.</span><span class="sxs-lookup"><span data-stu-id="86c03-103">Defines the security settings of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), including the type of authentication used and the security used for the message transport.</span></span>  
+# <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a><span data-ttu-id="5c46e-102">&lt;security&gt; de &lt;netPeerBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="5c46e-102">&lt;security&gt; of &lt;netPeerBinding&gt;</span></span>
+<span data-ttu-id="5c46e-103">Définit les paramètres de sécurité de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), y compris le type d’authentification utilisé et la sécurité utilisée pour le transport de messages.</span><span class="sxs-lookup"><span data-stu-id="5c46e-103">Defines the security settings of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), including the type of authentication used and the security used for the message transport.</span></span>  
   
- <span data-ttu-id="86c03-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="86c03-104">\<system.ServiceModel></span></span>  
-<span data-ttu-id="86c03-105">\<liaisons ></span><span class="sxs-lookup"><span data-stu-id="86c03-105">\<bindings></span></span>  
-<span data-ttu-id="86c03-106">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="86c03-106">\<netPeerBinding></span></span>  
-<span data-ttu-id="86c03-107">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="86c03-107">\<binding></span></span>  
-<span data-ttu-id="86c03-108">\<sécurité ></span><span class="sxs-lookup"><span data-stu-id="86c03-108">\<security></span></span>  
+ <span data-ttu-id="5c46e-104">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="5c46e-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="5c46e-105">\<liaisons ></span><span class="sxs-lookup"><span data-stu-id="5c46e-105">\<bindings></span></span>  
+<span data-ttu-id="5c46e-106">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="5c46e-106">\<netPeerBinding></span></span>  
+<span data-ttu-id="5c46e-107">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="5c46e-107">\<binding></span></span>  
+<span data-ttu-id="5c46e-108">\<sécurité ></span><span class="sxs-lookup"><span data-stu-id="5c46e-108">\<security></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="86c03-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="86c03-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5c46e-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="5c46e-109">Syntax</span></span>  
   
 ```xml  
 <netPeerBinding>  
@@ -32,47 +32,47 @@ ms.locfileid: "44196567"
 </netPeerBinding>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="86c03-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="86c03-110">Attributes and Elements</span></span>  
- <span data-ttu-id="86c03-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="86c03-111">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="5c46e-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="5c46e-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="5c46e-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="5c46e-111">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="86c03-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="86c03-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="5c46e-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="5c46e-112">Attributes</span></span>  
   
-|<span data-ttu-id="86c03-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="86c03-113">Attribute</span></span>|<span data-ttu-id="86c03-114">Description</span><span class="sxs-lookup"><span data-stu-id="86c03-114">Description</span></span>|  
+|<span data-ttu-id="5c46e-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="5c46e-113">Attribute</span></span>|<span data-ttu-id="5c46e-114">Description</span><span class="sxs-lookup"><span data-stu-id="5c46e-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="86c03-115">mode</span><span class="sxs-lookup"><span data-stu-id="86c03-115">mode</span></span>|<span data-ttu-id="86c03-116">Facultatif.</span><span class="sxs-lookup"><span data-stu-id="86c03-116">Optional.</span></span> <span data-ttu-id="86c03-117">Spécifie le type de sécurité utilisé par les homologues configurés avec cette liaison.</span><span class="sxs-lookup"><span data-stu-id="86c03-117">Specifies the type of security used by peers configured with this binding.</span></span> <span data-ttu-id="86c03-118">La valeur par défaut est `Message`.</span><span class="sxs-lookup"><span data-stu-id="86c03-118">The default value is `Message`.</span></span> <span data-ttu-id="86c03-119">Cet attribut est de type <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="86c03-119">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
+|<span data-ttu-id="5c46e-115">mode</span><span class="sxs-lookup"><span data-stu-id="5c46e-115">mode</span></span>|<span data-ttu-id="5c46e-116">Facultatif.</span><span class="sxs-lookup"><span data-stu-id="5c46e-116">Optional.</span></span> <span data-ttu-id="5c46e-117">Spécifie le type de sécurité utilisé par les homologues configurés avec cette liaison.</span><span class="sxs-lookup"><span data-stu-id="5c46e-117">Specifies the type of security used by peers configured with this binding.</span></span> <span data-ttu-id="5c46e-118">La valeur par défaut est `Message`.</span><span class="sxs-lookup"><span data-stu-id="5c46e-118">The default value is `Message`.</span></span> <span data-ttu-id="5c46e-119">Cet attribut est de type <xref:System.ServiceModel.SecurityMode>.</span><span class="sxs-lookup"><span data-stu-id="5c46e-119">This attribute is of type <xref:System.ServiceModel.SecurityMode>.</span></span>|  
   
-## <a name="mode-attribute"></a><span data-ttu-id="86c03-120">Attribut Mode</span><span class="sxs-lookup"><span data-stu-id="86c03-120">mode Attribute</span></span>  
+## <a name="mode-attribute"></a><span data-ttu-id="5c46e-120">Attribut Mode</span><span class="sxs-lookup"><span data-stu-id="5c46e-120">mode Attribute</span></span>  
   
-|<span data-ttu-id="86c03-121">Valeur</span><span class="sxs-lookup"><span data-stu-id="86c03-121">Value</span></span>|<span data-ttu-id="86c03-122">Description</span><span class="sxs-lookup"><span data-stu-id="86c03-122">Description</span></span>|  
+|<span data-ttu-id="5c46e-121">Valeur</span><span class="sxs-lookup"><span data-stu-id="5c46e-121">Value</span></span>|<span data-ttu-id="5c46e-122">Description</span><span class="sxs-lookup"><span data-stu-id="5c46e-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="86c03-123">Message</span><span class="sxs-lookup"><span data-stu-id="86c03-123">Message</span></span>|<span data-ttu-id="86c03-124">La sécurité SOAP assure l'authentification, l'intégrité et la confidentialité.</span><span class="sxs-lookup"><span data-stu-id="86c03-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
-|<span data-ttu-id="86c03-125">None</span><span class="sxs-lookup"><span data-stu-id="86c03-125">None</span></span>|<span data-ttu-id="86c03-126">La sécurité est désactivée.</span><span class="sxs-lookup"><span data-stu-id="86c03-126">Security is disabled.</span></span>|  
-|<span data-ttu-id="86c03-127">Transport</span><span class="sxs-lookup"><span data-stu-id="86c03-127">Transport</span></span>|<span data-ttu-id="86c03-128">La sécurité est fournie à l'aide de HTTPS.</span><span class="sxs-lookup"><span data-stu-id="86c03-128">Security is provided using HTTPS.</span></span>|  
-|<span data-ttu-id="86c03-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="86c03-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="86c03-130">Le protocole HTTPS assure l'authentification et la confidentialité.</span><span class="sxs-lookup"><span data-stu-id="86c03-130">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="86c03-131">Les messages SOAP fournissent des types d'informations d'identification enrichies.</span><span class="sxs-lookup"><span data-stu-id="86c03-131">SOAP messages provide rich credential types.</span></span>|  
+|<span data-ttu-id="5c46e-123">Message</span><span class="sxs-lookup"><span data-stu-id="5c46e-123">Message</span></span>|<span data-ttu-id="5c46e-124">La sécurité SOAP assure l'authentification, l'intégrité et la confidentialité.</span><span class="sxs-lookup"><span data-stu-id="5c46e-124">SOAP security provides authentication, integrity and confidentiality.</span></span>|  
+|<span data-ttu-id="5c46e-125">None</span><span class="sxs-lookup"><span data-stu-id="5c46e-125">None</span></span>|<span data-ttu-id="5c46e-126">La sécurité est désactivée.</span><span class="sxs-lookup"><span data-stu-id="5c46e-126">Security is disabled.</span></span>|  
+|<span data-ttu-id="5c46e-127">Transport</span><span class="sxs-lookup"><span data-stu-id="5c46e-127">Transport</span></span>|<span data-ttu-id="5c46e-128">La sécurité est fournie à l'aide de HTTPS.</span><span class="sxs-lookup"><span data-stu-id="5c46e-128">Security is provided using HTTPS.</span></span>|  
+|<span data-ttu-id="5c46e-129">TransportWithMessageCredential</span><span class="sxs-lookup"><span data-stu-id="5c46e-129">TransportWithMessageCredential</span></span>|<span data-ttu-id="5c46e-130">Le protocole HTTPS assure l'authentification et la confidentialité.</span><span class="sxs-lookup"><span data-stu-id="5c46e-130">HTTPS provides authentication and confidentiality.</span></span> <span data-ttu-id="5c46e-131">Les messages SOAP fournissent des types d'informations d'identification enrichies.</span><span class="sxs-lookup"><span data-stu-id="5c46e-131">SOAP messages provide rich credential types.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="86c03-132">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="86c03-132">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="5c46e-132">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="5c46e-132">Child Elements</span></span>  
   
-|<span data-ttu-id="86c03-133">Élément</span><span class="sxs-lookup"><span data-stu-id="86c03-133">Element</span></span>|<span data-ttu-id="86c03-134">Description</span><span class="sxs-lookup"><span data-stu-id="86c03-134">Description</span></span>|  
+|<span data-ttu-id="5c46e-133">Élément</span><span class="sxs-lookup"><span data-stu-id="5c46e-133">Element</span></span>|<span data-ttu-id="5c46e-134">Description</span><span class="sxs-lookup"><span data-stu-id="5c46e-134">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="86c03-135">\<transport></span><span class="sxs-lookup"><span data-stu-id="86c03-135">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|<span data-ttu-id="86c03-136">Définit le type de transport pour les messages sécurisés envoyés par des homologues configurés avec cette liaison.</span><span class="sxs-lookup"><span data-stu-id="86c03-136">Defines the transport type for secured messages sent by peers configured with this binding.</span></span> <span data-ttu-id="86c03-137">Cet élément est de type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="86c03-137">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
+|[<span data-ttu-id="5c46e-135">\<transport></span><span class="sxs-lookup"><span data-stu-id="5c46e-135">\<transport></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-netpeertcpbinding.md)|<span data-ttu-id="5c46e-136">Définit le type de transport pour les messages sécurisés envoyés par des homologues configurés avec cette liaison.</span><span class="sxs-lookup"><span data-stu-id="5c46e-136">Defines the transport type for secured messages sent by peers configured with this binding.</span></span> <span data-ttu-id="5c46e-137">Cet élément est de type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="5c46e-137">This element is of type <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="86c03-138">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="86c03-138">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="5c46e-138">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="5c46e-138">Parent Elements</span></span>  
   
-|<span data-ttu-id="86c03-139">Élément</span><span class="sxs-lookup"><span data-stu-id="86c03-139">Element</span></span>|<span data-ttu-id="86c03-140">Description</span><span class="sxs-lookup"><span data-stu-id="86c03-140">Description</span></span>|  
+|<span data-ttu-id="5c46e-139">Élément</span><span class="sxs-lookup"><span data-stu-id="5c46e-139">Element</span></span>|<span data-ttu-id="5c46e-140">Description</span><span class="sxs-lookup"><span data-stu-id="5c46e-140">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="86c03-141">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="86c03-141">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="86c03-142">Définit toutes les fonctions de liaison de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="86c03-142">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="5c46e-141">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="5c46e-141">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="5c46e-142">Définit toutes les fonctions de liaison de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="5c46e-142">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="86c03-143">Notes</span><span class="sxs-lookup"><span data-stu-id="86c03-143">Remarks</span></span>  
- <span data-ttu-id="86c03-144">La sécurité peut être spécifique au message ou au transport.</span><span class="sxs-lookup"><span data-stu-id="86c03-144">Security can be either message- or transport-specific.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5c46e-143">Notes</span><span class="sxs-lookup"><span data-stu-id="5c46e-143">Remarks</span></span>  
+ <span data-ttu-id="5c46e-144">La sécurité peut être spécifique au message ou au transport.</span><span class="sxs-lookup"><span data-stu-id="5c46e-144">Security can be either message- or transport-specific.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86c03-145">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="86c03-145">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5c46e-145">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="5c46e-145">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.PeerSecurityElement>  
  <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>  
  <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>  
  <xref:System.ServiceModel.PeerSecuritySettings>  
- [<span data-ttu-id="86c03-146">Sécurisation des services et des clients</span><span class="sxs-lookup"><span data-stu-id="86c03-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [<span data-ttu-id="86c03-147">Sélection d’un type d’informations d’identification</span><span class="sxs-lookup"><span data-stu-id="86c03-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
- [<span data-ttu-id="86c03-148">Liaisons</span><span class="sxs-lookup"><span data-stu-id="86c03-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="86c03-149">Configuration des liaisons fournies par le système</span><span class="sxs-lookup"><span data-stu-id="86c03-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="86c03-150">Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="86c03-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
- [<span data-ttu-id="86c03-151">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="86c03-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)
+ [<span data-ttu-id="5c46e-146">Sécurisation des services et des clients</span><span class="sxs-lookup"><span data-stu-id="5c46e-146">Securing Services and Clients</span></span>](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [<span data-ttu-id="5c46e-147">Sélection d’un type d’informations d’identification</span><span class="sxs-lookup"><span data-stu-id="5c46e-147">Selecting a Credential Type</span></span>](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
+ [<span data-ttu-id="5c46e-148">Liaisons</span><span class="sxs-lookup"><span data-stu-id="5c46e-148">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="5c46e-149">Configuration des liaisons fournies par le système</span><span class="sxs-lookup"><span data-stu-id="5c46e-149">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="5c46e-150">Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="5c46e-150">Using Bindings to Configure Windows Communication Foundation Services and Clients</span></span>](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [<span data-ttu-id="5c46e-151">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="5c46e-151">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)

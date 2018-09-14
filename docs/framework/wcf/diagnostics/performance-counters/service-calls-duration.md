@@ -3,17 +3,17 @@ title: 'Service : Durée des appels'
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
 ms.openlocfilehash: 660a36844c2b48324447616aa0f2530127cef94f
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: MT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44777871"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587413"
 ---
-# <a name="service-calls-duration"></a><span data-ttu-id="22934-102">Service : Durée des appels</span><span class="sxs-lookup"><span data-stu-id="22934-102">Service: Calls Duration</span></span>
-<span data-ttu-id="22934-103">Nom du compteur : Durée des appels</span><span class="sxs-lookup"><span data-stu-id="22934-103">Counter Name: Calls Duration</span></span>  
+# <a name="service-calls-duration"></a><span data-ttu-id="201cd-102">Service : Durée des appels</span><span class="sxs-lookup"><span data-stu-id="201cd-102">Service: Calls Duration</span></span>
+<span data-ttu-id="201cd-103">Nom du compteur : Durée des appels</span><span class="sxs-lookup"><span data-stu-id="201cd-103">Counter Name: Calls Duration</span></span>  
   
-## <a name="description"></a><span data-ttu-id="22934-104">Description</span><span class="sxs-lookup"><span data-stu-id="22934-104">Description</span></span>  
- <span data-ttu-id="22934-105">Durée moyenne des appels à ce service.</span><span class="sxs-lookup"><span data-stu-id="22934-105">The average duration of calls to this service.</span></span> <span data-ttu-id="22934-106">La durée moyenne est calculée selon cette équation : (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="22934-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
+## <a name="description"></a><span data-ttu-id="201cd-104">Description</span><span class="sxs-lookup"><span data-stu-id="201cd-104">Description</span></span>  
+ <span data-ttu-id="201cd-105">Durée moyenne des appels à ce service.</span><span class="sxs-lookup"><span data-stu-id="201cd-105">The average duration of calls to this service.</span></span> <span data-ttu-id="201cd-106">La durée moyenne est calculée selon cette équation : (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="201cd-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="22934-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="22934-107">See Also</span></span>  
- [<span data-ttu-id="22934-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="22934-108">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkID=95015)
+## <a name="see-also"></a><span data-ttu-id="201cd-107">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="201cd-107">See Also</span></span>  
+ [<span data-ttu-id="201cd-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="201cd-108">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkID=95015)
