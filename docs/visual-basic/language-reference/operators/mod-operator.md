@@ -15,11 +15,11 @@ ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44756897"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45585862"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod, opérateur (Visual Basic)
 Divise deux nombres et retourne uniquement le reste.  

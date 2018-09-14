@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45517929"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597004"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory et WSTrustChannel
 Si vous êtes familiarisé avec Windows Communication Foundation (WCF), vous savez probablement que les clients WCF prennent déjà en charge la fédération. En configurant un client WCF avec une liaison <xref:System.ServiceModel.WSFederationHttpBinding> ou une liaison personnalisée similaire, vous pouvez utiliser l’authentification fédérée auprès d’un service.  

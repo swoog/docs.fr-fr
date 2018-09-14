@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262003"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45587471"
 ---
 # <a name="common-design-patterns"></a>Modèles de design courants
 Il existe de nombreux ouvrages sur les modèles logiciels, des langages de modèle et des anti-modèles que le sujet très large de modèles d’adresses. Par conséquent, ce chapitre fournit des instructions et discussion liée à un ensemble très limité de modèles qui sont fréquemment utilisées dans la conception de l’API .NET Framework.  

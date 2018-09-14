@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
 ms.openlocfilehash: f085e7b7d20f958a90777ddb820924a07a5e2d8d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510362"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597879"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Comment : lier un contrôle Windows Forms à un objet Factory
 Quand vous créez des contrôles qui interagissent avec des données, vous devez parfois lier un contrôle à un objet ou à une méthode qui génère d'autres objets. Un tel objet ou une telle méthode porte le nom de fabrique. Votre source de données peut par exemple être la valeur de retour d'un appel de méthode, plutôt qu'un objet en mémoire ou un type. Vous pouvez lier un contrôle à ce genre de source de données tant que la source retourne une collection.  

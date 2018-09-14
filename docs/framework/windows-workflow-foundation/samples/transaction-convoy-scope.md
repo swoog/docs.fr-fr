@@ -3,11 +3,11 @@ title: Étendue du convoi des transactions
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44705282"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597212"
 ---
 # <a name="transaction-convoy-scope"></a>Étendue du convoi des transactions
 Cet exemple montre comment créer un modèle d'activité de messagerie de convoi parallèle conjointement avec un <xref:System.ServiceModel.Activities.TransactedReceiveScope> pour modéliser un protocole où un certain nombre d'opérations peuvent se produire dans n'importe quel ordre dans le cadre de la même transaction. Cet exemple montre également comment un <xref:System.ServiceModel.Activities.TransactedReceiveScope> crée automatiquement une transaction lorsque aucune transaction n'est passée au serveur, de sorte que le client n'utilise aucune transaction.  
