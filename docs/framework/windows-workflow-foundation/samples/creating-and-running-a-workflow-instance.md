@@ -3,11 +3,11 @@ title: Création et exécution d'une instance de workflow
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516579"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45619041"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Création et exécution d'une instance de workflow
 Cet exemple montre comment exécuter une instance de workflow. Il indique comment l’exécuter de façon synchrone et de façon asynchrone.  

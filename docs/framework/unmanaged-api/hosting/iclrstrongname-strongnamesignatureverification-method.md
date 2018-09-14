@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49041031742332fbc275a9dbde91e640eb428c28
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44756612"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609643"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>Méthode ICLRStrongName::StrongNameSignatureVerification
 Obtient une valeur qui indique si le manifeste d’assembly dans le chemin d’accès fourni contient une signature de nom fort, ce qui est vérifiée en fonction des indicateurs spécifiés.  

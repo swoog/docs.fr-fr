@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: fe54578407e881ec7d6782ec21100b29eded07a3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44365979"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45618777"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Test de positionnement dans la couche visuelle
 Cette rubrique fournit une vue d’ensemble de la fonctionnalité de test de positionnement fournie par la couche visuelle. En charge du test d’atteinte vous permet de déterminer si une valeur de géométrie ou un point se trouve dans le contenu rendu d’un <xref:System.Windows.Media.Visual>, ce qui vous permet d’implémenter le comportement de l’interface utilisateur comme un rectangle de sélection pour sélectionner plusieurs objets.  

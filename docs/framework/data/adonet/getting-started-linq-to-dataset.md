@@ -3,11 +3,11 @@ title: Mise en route (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
 ms.openlocfilehash: 8a9c49edfcc43b1862745240ca4e4607bbe27f21
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45512775"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615740"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Mise en route (LINQ to DataSet)
 Cette section fournit des informations introductives sur la programmation avec [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  

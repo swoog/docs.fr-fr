@@ -4,12 +4,12 @@ description: Découvrir comment définir et utiliser des valeurs de retour de r�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: a869cd50c5512c9893b6e5056aa58e1f92ee26f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6250d2b0c3490cce18623d6b06d5e1a352f22c09
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510563"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616138"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Retours ref et variables locales ref
 
@@ -58,7 +58,7 @@ La valeur de retour de référence est l’alias vers une autre variable dans l�
 - Quand vous lisez sa valeur, vous lisez la valeur de la variable dont elle est l’alias.
 - Si vous la retournez *par référence*, vous retournez un alias vers cette même variable.
 - Si vous la passez à une autre méthode *par référence*, vous passez une référence à la variable dont elle est l’alias.
-- Quand vous créez un alias de [variable locale ref](#ref-local), vous créez un nouvel alias vers la même variable.
+- Quand vous créez un alias de [variable locale ref](#ref-locals), vous créez un nouvel alias vers la même variable.
 
 
 ## <a name="ref-locals"></a>Variables locales ref

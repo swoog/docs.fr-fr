@@ -15,11 +15,11 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588382"
+ms.locfileid: "45614978"
 ---
 # <a name="names-of-type-members"></a>Noms de membres de type
 Les types se composent de membres, de méthodes, de propriétés, d’événements, de constructeurs et de champs. Les sections suivantes décrivent les règles de nommage des membres de type.  
