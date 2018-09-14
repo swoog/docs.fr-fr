@@ -3,16 +3,16 @@ title: Spécifier les relations entre éléments sans imbrication
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45526556"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45609591"
 ---
-# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="96651-102">Spécifier les relations entre éléments sans imbrication</span><span class="sxs-lookup"><span data-stu-id="96651-102">Specify Relations Between Elements with No Nesting</span></span>
-<span data-ttu-id="96651-103">Lorsque des éléments ne sont pas imbriqués, aucune relation implicite n'est créée.</span><span class="sxs-lookup"><span data-stu-id="96651-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="96651-104">Toutefois, vous pouvez spécifier explicitement des relations entre les éléments qui ne sont pas imbriqués à l’aide de la **msdata : Relationship** annotation.</span><span class="sxs-lookup"><span data-stu-id="96651-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
+# <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="b431d-102">Spécifier les relations entre éléments sans imbrication</span><span class="sxs-lookup"><span data-stu-id="b431d-102">Specify Relations Between Elements with No Nesting</span></span>
+<span data-ttu-id="b431d-103">Lorsque des éléments ne sont pas imbriqués, aucune relation implicite n'est créée.</span><span class="sxs-lookup"><span data-stu-id="b431d-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="b431d-104">Toutefois, vous pouvez spécifier explicitement des relations entre les éléments qui ne sont pas imbriqués à l’aide de la **msdata : Relationship** annotation.</span><span class="sxs-lookup"><span data-stu-id="b431d-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  
   
- <span data-ttu-id="96651-105">L’exemple suivant montre un schéma XML dans lequel le **msdata : Relationship** annotation est spécifiée entre la **ordre** et **OrderDetail** éléments qui ne sont pas imbriquées.</span><span class="sxs-lookup"><span data-stu-id="96651-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="96651-106">Le **msdata : Relationship** annotation est spécifiée comme élément enfant de le **schéma** élément.</span><span class="sxs-lookup"><span data-stu-id="96651-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
+ <span data-ttu-id="b431d-105">L’exemple suivant montre un schéma XML dans lequel le **msdata : Relationship** annotation est spécifiée entre la **ordre** et **OrderDetail** éléments qui ne sont pas imbriquées.</span><span class="sxs-lookup"><span data-stu-id="b431d-105">The following example shows an XML Schema in which the **msdata:Relationship** annotation is specified between the **Order** and **OrderDetail** elements, which are not nested.</span></span> <span data-ttu-id="b431d-106">Le **msdata : Relationship** annotation est spécifiée comme élément enfant de le **schéma** élément.</span><span class="sxs-lookup"><span data-stu-id="b431d-106">The **msdata:Relationship** annotation is specified as the child element of the **Schema** element.</span></span>  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -53,7 +53,7 @@ ms.locfileid: "45526556"
 </xs:schema>  
 ```  
   
- <span data-ttu-id="96651-107">Le processus de mappage de schéma XML Schema definition langage (XSD XML) crée un <xref:System.Data.DataSet> avec **ordre** et **OrderDetail** tables et une relation spécifiée entre ces deux tables, comme indiqué ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="96651-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
+ <span data-ttu-id="b431d-107">Le processus de mappage de schéma XML Schema definition langage (XSD XML) crée un <xref:System.Data.DataSet> avec **ordre** et **OrderDetail** tables et une relation spécifiée entre ces deux tables, comme indiqué ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="b431d-107">The XML Schema definition language (XSD) schema mapping process creates a <xref:System.Data.DataSet> with **Order** and **OrderDetail** tables and a relationship specified between these two tables, as shown below.</span></span>  
   
 ```  
 RelationName: OrdOrderDetailRelation  
@@ -64,7 +64,7 @@ ChildColumns: OrderNo
 Nested: False  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="96651-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="96651-108">See Also</span></span>  
- [<span data-ttu-id="96651-109">Génération de relations de DataSet à partir du schéma XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="96651-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- [<span data-ttu-id="96651-110">Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet</span><span class="sxs-lookup"><span data-stu-id="96651-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [<span data-ttu-id="96651-111">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="96651-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="b431d-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b431d-108">See Also</span></span>  
+ [<span data-ttu-id="b431d-109">Génération de relations de DataSet à partir du schéma XML (XSD)</span><span class="sxs-lookup"><span data-stu-id="b431d-109">Generating DataSet Relations from XML Schema (XSD)</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
+ [<span data-ttu-id="b431d-110">Mappage des contraintes de schéma XML (XSD) aux contraintes de DataSet</span><span class="sxs-lookup"><span data-stu-id="b431d-110">Mapping XML Schema (XSD) Constraints to DataSet Constraints</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [<span data-ttu-id="b431d-111">Fournisseurs managés ADO.NET et centre de développement DataSet</span><span class="sxs-lookup"><span data-stu-id="b431d-111">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
