@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104636"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778420"
 ---
 # <a name="key-takeaways"></a>Points importants à retenir
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104636"
 
 -   Un environnement DevOps de bout en bout qui prend en charge l’intégration continue ou le déploiement continu et qui se connecte aux environnements Docker de production améliore l’agilité et, en fin de compte, réduit le délai de mise sur le marché de vos applications.
 
-Visual Studio Team Services simplifie considérablement votre environnement DevOps désigné aux environnements Docker à partir de vos pipelines de déploiement continu, notamment les environnements Docker simples ou d’autres orchestrateurs de microservices et de conteneurs plus avancés basés sur Azure.
+Azure DevOps Services simplifie considérablement votre environnement DevOps désigné aux environnements Docker à partir de vos pipelines de déploiement continu, y compris les environnements Docker simples ou des orchestrateurs de microservices et de conteneurs plus avancées basées sur Azure.
 
 >[!div class="step-by-step"]
 [Précédent](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

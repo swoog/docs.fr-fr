@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8f806a1f1f7840f21e82d77d1b639b9318259e7
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: ab01005b6f73cf1dbae5d0e44df4440bf6a1d7e6
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44366122"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45527497"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Procédure pas à pas : ma première application de bureau WPF
 
@@ -42,9 +42,9 @@ Cette procédure pas à pas comprend les étapes suivantes :
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Visual Studio 2012 ou version ultérieure
+- Visual Studio 2012 ou version ultérieure (cet article est basé sur Visual Studio 2017)
 
-Pour plus d’informations sur l’installation de la dernière version de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
+   Pour plus d’informations sur l’installation de la dernière version de Visual Studio, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
 ## <a name="create-the-application-project"></a>Créer le projet d’application
 

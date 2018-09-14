@@ -3,11 +3,11 @@ title: Valeurs (F#)
 description: 'Découvrez comment les valeurs en F # sont des quantités qui ont un type spécifique.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367951"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45515566"
 ---
 # <a name="values"></a>Valeurs
 
