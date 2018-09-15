@@ -3,11 +3,11 @@ title: Chaînes de connexion dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583396"
+ms.locfileid: "45617030"
 ---
 # <a name="connection-strings-in-adonet"></a>Chaînes de connexion dans ADO.NET
 Le .NET Framework 2.0 a introduit de nouvelles fonctionnalités permettant d'utiliser des chaînes de connexion, y compris l'intégration de nouveaux mots clés aux classes de générateur de chaînes de connexion, qui facilitent la création de chaînes de connexion valides au moment de l'exécution.  

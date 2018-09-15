@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
 ms.openlocfilehash: 26bc136ea2b7e5bda4a57c5dad65ec3522efcd3d
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513581"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624617"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Comment : créer un contrôle à liaison simple dans un Windows Form
 Avec *liaison simple*, vous pouvez afficher un seul élément de données, telle qu’une valeur de colonne à partir d’une table de dataset dans un contrôle. Vous pouvez créer une liaison simple n’importe quelle propriété d’un contrôle à une valeur de données.  

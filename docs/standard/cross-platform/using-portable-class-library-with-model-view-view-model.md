@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d2f07e471d4f0173f768b0d2a463d756b5be0682
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583568"
+ms.locfileid: "45625841"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Utilisation de la Bibliothèque de classes portable avec le modèle d'affichage Modèle-Affichage
 Vous pouvez utiliser le .NET Framework [bibliothèque de classes Portable](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) pour implémenter le modèle modèle modèle-vue-vue (MVVM) et de partager des assemblages entre plusieurs plateformes.  

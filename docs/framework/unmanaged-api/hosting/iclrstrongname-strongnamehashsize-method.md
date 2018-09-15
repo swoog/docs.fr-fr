@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521356"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624591"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>Méthode ICLRStrongName::StrongNameHashSize
 Obtient la taille de mémoire tampon requise pour un hachage, à l’aide de l’algorithme de hachage spécifié.  

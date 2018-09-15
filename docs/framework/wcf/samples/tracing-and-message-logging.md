@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 7f729e845fe552d523a46a1783404baf4e0bbfca
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
-ms.translationtype: HT
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569409"
+ms.locfileid: "45618677"
 ---
 # <a name="tracing-and-message-logging"></a>Tracing and Message Logging
 Cet exemple illustre comment activer l'enregistrement des suivis et des messages. Les traces qui en résulte et les journaux de messages sont affichés à l’aide de la [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528281"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45624578"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>IMetaDataTables::GetNextUserString, méthode
 Obtient l’index de la ligne qui contient la chaîne codée en dur suivante dans la colonne de table actuelle.  
