@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: c334fb695f80bcac19167e9347d27d40f5139580
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508788"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45658663"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Mise à jour des sources de données avec les DataAdapter
 La méthode `Update` de l'objet <xref:System.Data.Common.DataAdapter> est appelée pour répercuter les modifications d'un objet <xref:System.Data.DataSet> dans la source de données. La méthode `Update`, comme la méthode `Fill`, prend comme arguments une instance d'un `DataSet` et un objet <xref:System.Data.DataTable> optionnel ou un nom de `DataTable`. L'instance `DataSet` est le `DataSet` qui contient les modifications apportées et le `DataTable` identifie la table de laquelle les modifications doivent être récupérées. Si aucun `DataTable` n'est spécifié, le premier `DataTable` du `DataSet` est utilisé.  
