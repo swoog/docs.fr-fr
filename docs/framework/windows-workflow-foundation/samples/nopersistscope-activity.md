@@ -3,11 +3,11 @@ title: Activité NoPersistScope
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529242"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649547"
 ---
 # <a name="nopersistscope-activity"></a>Activité NoPersistScope
 Cet exemple montre comment manipuler un état non sérialisable et supprimable dans un workflow. Il est important que les workflows n'essaient pas de rendre l'état non sérialisable persistant et il est également important de nettoyer les objets supprimables après qu'ils ont été utilisés dans le workflow.  

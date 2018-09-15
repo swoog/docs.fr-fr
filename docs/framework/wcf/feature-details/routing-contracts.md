@@ -3,11 +3,11 @@ title: Contrats de routage
 ms.date: 03/30/2017
 ms.assetid: 9ceea7ae-ea19-4cf9-ba4f-d071e236546d
 ms.openlocfilehash: 73d303c95a636f5e90f256272726c08c581d6fdf
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45567888"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649183"
 ---
 # <a name="routing-contracts"></a>Contrats de routage
 Les contrats de routage définissent les modèles de messages que le service de routage peut traiter.  Chaque contrat est sans type et permet au service de recevoir un message sans connaissance du schéma ni de l'action du message. Cela permet au service de routage de router des messages de manière générique, sans configuration supplémentaire pour les caractéristiques sous-jacentes des messages routés.  

@@ -3,11 +3,11 @@ title: La clé ne peut pas être supprimée, car elle a des sous-clés
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44265141"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648445"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>La clé ne peut pas être supprimée, car elle a des sous-clés
 La clé ne peut pas être supprimée, car elle possède des sous-clés.  

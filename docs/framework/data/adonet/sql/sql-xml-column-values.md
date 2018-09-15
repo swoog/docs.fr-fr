@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516318"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45648172"
 ---
 # <a name="sql-xml-column-values"></a>Valeurs des colonnes SQL XML
 SQL Server prend en charge la `xml` type de données, et les développeurs peuvent extraire des ensembles de résultats incluant ce type à l’aide d’un comportement standard de la <xref:System.Data.SqlClient.SqlCommand> classe. Une colonne `xml` peut être extraite comme toute colonne (par exemple, dans un <xref:System.Data.SqlClient.SqlDataReader>) mais si vous souhaitez utiliser le contenu de la colonne comme XML, vous devez utiliser un <xref:System.Xml.XmlReader>.  

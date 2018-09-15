@@ -3,11 +3,11 @@ title: Utilisation de System.Transactions dans ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
 ms.openlocfilehash: 7b73ec970776f39a0c056e2a706d4818cda6cd72
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511420"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641376"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Utilisation de System.Transactions dans ASP.NET
 Cette rubrique explique comment utiliser <xref:System.Transactions> dans une application [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] .  
