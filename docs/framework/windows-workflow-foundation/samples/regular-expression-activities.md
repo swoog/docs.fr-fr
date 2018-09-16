@@ -3,11 +3,11 @@ title: Activités d'expression régulière
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45588265"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668949"
 ---
 # <a name="regular-expression-activities"></a>Activités d'expression régulière
 Cet exemple montre comment créer un ensemble d'activités qui exposent la fonctionnalité d'expression régulière de l'espace de noms <xref:System.Text.RegularExpressions>. Ces activités personnalisées peuvent être utilisées dans une application de workflow. Pour plus d’informations sur les expressions régulières, consultez [System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) Namespace.  

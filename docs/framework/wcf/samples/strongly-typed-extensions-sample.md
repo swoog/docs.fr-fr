@@ -3,11 +3,11 @@ title: Strongly-Typed Extensions, exemple
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 ms.openlocfilehash: eccb0ce240d01ab8592a44daddcfa7aa3d2023fb
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45568414"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45678397"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Strongly-Typed Extensions, exemple
 L'exemple utilise la classe <xref:System.ServiceModel.Syndication.SyndicationFeed>. Toutefois, les modèles présentés dans cet exemple peuvent être utilisés avec toutes les classes Syndication qui prennent en charge les données d'extension.  

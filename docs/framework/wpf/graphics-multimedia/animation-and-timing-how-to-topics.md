@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
 ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45521039"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677004"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Rubriques "Comment" relatives à l'animation et au minutage
 Les rubriques suivantes montrent comment utiliser le [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] système d’animation et minutage dans vos applications.  

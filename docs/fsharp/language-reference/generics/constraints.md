@@ -3,11 +3,11 @@ title: Contraintes (F#)
 description: 'En savoir plus sur les contraintes F # qui s’appliquent aux paramètres de type générique pour spécifier la configuration requise pour un argument de type dans un type générique ou une fonction.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707774"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675884"
 ---
 # <a name="constraints"></a>Contraintes
 

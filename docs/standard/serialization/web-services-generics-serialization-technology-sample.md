@@ -3,11 +3,11 @@ title: Sérialisation de génériques de services Web, exemple de technologie
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
 ms.openlocfilehash: b233ed4374231c7e7ff2b6617a63c4e4c94612c2
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515533"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686261"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Sérialisation de génériques de services Web, exemple de technologie
 [Télécharger l’exemple](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  

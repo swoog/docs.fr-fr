@@ -3,11 +3,11 @@ title: Point d'entrée (F#)
 description: 'Découvrez comment définir le point d’entrée à un programme F # compilé en un fichier exécutable, où l’exécution démarre formellement.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515209"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675936"
 ---
 # <a name="entry-point"></a>Point d'entrée
 
