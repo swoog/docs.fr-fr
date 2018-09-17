@@ -3,12 +3,12 @@ title: Crée un client REST à l’aide de .NET Core
 description: Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core et du langage C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc3c23b277b233efba9f32cc49b29ac905f3abc8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480154"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227257"
 ---
 # <a name="rest-client"></a>Client REST
 
@@ -37,7 +37,7 @@ Avant d’apporter des modifications, examinons les étapes nécessaires pour ex
 Après la restauration des packages, vous exécutez `dotnet build`. Cela exécute le moteur de génération et crée votre application. Enfin, vous exécutez `dotnet run` pour lancer votre application.
 
 ## <a name="adding-new-dependencies"></a>Ajout de nouvelles dépendances
-Un des objectifs de conception clés de .NET Core est de réduire la taille de l’installation du framework .NET. Le framework d’application .NET Core contient uniquement les éléments les plus courants du framework .NET complet. Si une application a besoin de bibliothèques supplémentaires pour certaines de ses fonctionnalités, vous ajoutez ces dépendances dans votre fichier projet (\*.csproj) en C#. Dans notre exemple, vous devez ajouter le package `System.Runtime.Serialization.Json` pour que votre application puisse traiter les réponses JSON.
+L’un des objectifs de conception clés de .NET Core consiste à réduire la taille de l’installation .NET. Si une application a besoin de bibliothèques supplémentaires pour certaines de ses fonctionnalités, vous ajoutez ces dépendances dans votre fichier projet (\*.csproj) en C#. Dans notre exemple, vous devez ajouter le package `System.Runtime.Serialization.Json` pour que votre application puisse traiter les réponses JSON.
 
 Ouvrez votre fichier projet `csproj`. La première ligne du fichier devrait s’afficher comme :
 

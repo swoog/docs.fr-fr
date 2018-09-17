@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b98fdcd425ae62aca0149df5136c28edc023bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591623"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45615022"
 ---
 # <a name="order-preservation-in-plinq"></a>Conservation de l'ordre en PLINQ
 Dans PLINQ, l’objectif est d’augmenter les performances tout en préservant l’exactitude. Une requête doit s’exécuter aussi rapidement que possible, mais toujours générer des résultats corrects. Dans certains cas, l’exactitude requiert que l’ordre de la séquence source soit conservé ; toutefois, le classement peut coûter cher en calcul. Par conséquent, par défaut, PLINQ ne conserve pas l’ordre de la séquence source. À cet égard, PLINQ est similaire à [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], mais pas à LINQ to Objects, qui conserve le classement.  
@@ -122,6 +122,7 @@ Dans PLINQ, l’objectif est d’augmenter les performances tout en préservant 
   
  Les résultats non classés ne sont pas mélangés de manière active ; aucune logique de classement spéciale ne leur est appliquée. Dans certains cas, une requête non classée peut conserver le classement de la séquence source. Pour les requêtes utilisant l’opérateur Select indexé, PLINQ garantit que les éléments de sortie arriveront dans l’ordre des indices croissant, mais n’offre aucune garantie quant aux index qui seront affectés aux éléments respectifs.  
   
-## <a name="see-also"></a>Voir aussi  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Programmation parallèle](../../../docs/standard/parallel-programming/index.md)

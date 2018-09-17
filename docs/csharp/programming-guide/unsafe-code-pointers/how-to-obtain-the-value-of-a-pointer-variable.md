@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [C#], pointers
 - pointers [C#], * operator
 ms.assetid: 460a813a-4995-44c1-9de2-213b91dc7668
-ms.openlocfilehash: c53026149837681235c6d1001707a25b9c8b40b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66f341e193a0f018adb76a40617f85266519e602
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322950"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267200"
 ---
 # <a name="how-to-obtain-the-value-of-a-pointer-variable-c-programming-guide"></a>Comment : obtenir la valeur d'une variable de pointeur (Guide de programmation C#)
 Utilisez l’opérateur d’indirection de pointeur pour obtenir la variable à l’emplacement désigné par un pointeur. L’expression prend la forme suivante, `p` étant un type de pointeur :  
@@ -32,15 +32,17 @@ Utilisez l’opérateur d’indirection de pointeur pour obtenir la variable à 
   
  [!code-csharp[csProgGuidePointers#6](../../../csharp/programming-guide/unsafe-code-pointers/codesnippet/CSharp/how-to-obtain-the-value-of-a-pointer-variable_2.cs)]  
   
- **Valeur de theChar = Z**  
-**Address of theChar = 12F718**  
-**Value of pChar = Z**   
-**Value of pInt = 90**    
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Expressions de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [Types de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
- [Types](../../../csharp/language-reference/keywords/types.md)  
- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [fixed, instruction](../../../csharp/language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+**Valeur de theChar = Z**
+**Adresse de theChar = 12F718**
+**Valeur de pChar = Z**
+**Valeur de pInt = 90**
+
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Expressions de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
+- [Types de pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+- [Types](../../../csharp/language-reference/keywords/types.md)  
+- [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
+- [fixed, instruction](../../../csharp/language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: c0105371bd39c3999aafca867a7bb7a59fd367c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339603"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042619"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Guide pratique pour définir une égalité de valeurs pour un type (Guide de programmation C#)
 Quand vous définissez une classe ou un struct, vous décidez s’il est judicieux de créer une définition personnalisée de l’égalité des valeurs (ou équivalence) pour le type. En général, vous implémentez l’égalité des valeurs quand des objets du type sont supposés être ajoutés à une collection quelconque, ou quand leur objectif principal est de stocker un ensemble de champs ou propriétés. Vous pouvez baser votre définition de l’égalité des valeurs sur une comparaison de tous les champs et propriétés du type, ou vous pouvez la baser sur un sous-ensemble. Dans les deux cas, et dans les classes et les structs, votre implémentation doit respecter les cinq garanties d’équivalence :  
   
-1.  x.`Equals`(x) retourne `true.` Il s’agit de la propriété réflexive.  
+1.  `x.Equals(x)` retourne `true`. Il s’agit de la propriété réflexive.  
   
-2.  x.`Equals`(y) retourne la même valeur que y.`Equals`(x). Il s’agit de la propriété symétrique.  
+2.  `x.Equals(y)` retourne la même valeur que `y.Equals(x)`. Il s’agit de la propriété symétrique.  
   
-3.  Si (x.`Equals`(y) && y.`Equals`(z)) retourne `true`, x.`Equals`(z) retourne `true`. Il s’agit de la propriété transitive.  
+3.  si `(x.Equals(y) && y.Equals(z))` retourne `true`, `x.Equals(z)` retourne `true`. Il s’agit de la propriété transitive.  
   
-4.  Les appels successifs de x.`Equals`(y) retournent la même valeur tant que les objets référencés par x et y ne sont pas modifiés.  
+4.  Les appels successifs de `x.Equals(y)` retournent la même valeur tant que les objets référencés par x et y ne sont pas modifiés.  
   
-5.  x.`Equals`(null) retourne `false`. Toutefois, null.Equals(null) lève une exception. Elle ne respecte pas la règle n°2 ci-dessus.  
+5.  `x.Equals(null)` retourne `false`. Toutefois, `null.Equals(null)` lève une exception. Il ne respecte pas la règle numéro deux ci-dessus.  
   
  Tout struct que vous définissez a déjà une implémentation par défaut de l’égalité des valeurs dont il hérite de la substitution <xref:System.ValueType?displayProperty=nameWithType> de la méthode <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Cette implémentation utilise la réflexion pour examiner tous les champs et propriétés du type. Bien que cette implémentation produise des résultats corrects, elle est relativement lente par rapport à une implémentation personnalisée que vous écrivez spécifiquement pour le type.  
   
@@ -62,6 +62,7 @@ Quand vous définissez une classe ou un struct, vous décidez s’il est judicie
   
  Les opérateurs [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) et [!=](../../../csharp/language-reference/operators/not-equal-operator.md) ne peuvent pas opérer sur un struct, sauf si le struct les surcharge explicitement.  
   
-## <a name="see-also"></a>Voir aussi  
- [Comparaisons d’égalité](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Comparaisons d’égalité](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)  
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932040"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857980"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Arguments nommés et facultatifs (Guide de programmation C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduit des arguments nommés et facultatifs. Les *arguments nommés* vous permettent de spécifier un argument pour un paramètre particulier en associant l’argument avec le nom du paramètre plutôt qu’avec la position du paramètre dans la liste de paramètres. Les *arguments facultatifs* vous permettent d’omettre des arguments pour certains paramètres. Les deux techniques peuvent être utilisées avec les méthodes, les indexeurs, les constructeurs et les délégués.  
@@ -101,7 +101,7 @@ Paramètres facultatifs dans ExampleMethod
 ## <a name="com-interfaces"></a>Interfaces COM  
  Avec la prise en charge des objets dynamiques et d’autres améliorations, les arguments nommés et facultatifs améliorent nettement l’interopérabilité avec les API COM, telles que les API Office Automation.  
   
- Par exemple, la méthode [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) dans l’interface [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) de Microsoft Office Excel comporte sept paramètres, qui sont tous facultatifs. Ces paramètres sont indiqués dans l’illustration suivante.  
+ Par exemple, la méthode <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> de l’interface <xref:Microsoft.Office.Interop.Excel.Range> de Microsoft Office Excel comporte sept paramètres, tous facultatifs. Ces paramètres sont indiqués dans l’illustration suivante.  
   
  ![Info express IntelliSense pour la méthode AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Paramètres AutoFormat  
@@ -128,8 +128,9 @@ Paramètres AutoFormat
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Comment : utiliser des arguments nommés et facultatifs dans la programmation Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
- [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Utilisation de constructeurs](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [Utilisation d’indexeurs](../../../csharp/programming-guide/indexers/using-indexers.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Comment : utiliser des arguments nommés et facultatifs dans la programmation Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Utilisation de constructeurs](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Utilisation d’indexeurs](../../../csharp/programming-guide/indexers/using-indexers.md)

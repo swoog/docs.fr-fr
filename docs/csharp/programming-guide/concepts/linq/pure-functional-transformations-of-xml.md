@@ -3,11 +3,11 @@ title: Transformations fonctionnelles pures de données XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
 ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252127"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591349"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Transformations fonctionnelles pures de données XML (C#)
 Cette section fournit un didacticiel sur les transformations fonctionnelles de données XML. Elle contient des explications des principaux concepts et constructions que vous devez comprendre pour utiliser des transformations fonctionnelles, ainsi que des exemples d'utilisation de transformations fonctionnelles pour manipuler un document XML. Bien que ce didacticiel contienne des exemples de code LINQ to XML, tous les concepts sous-jacents s'appliquent également à d'autres technologies LINQ.  

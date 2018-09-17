@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c586c725a385029db80763ba13915be79c6cd7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70955d496f5cf9e3bf44b9bc03a054d1c96efe98
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576322"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260017"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>Utilisation d’objets implémentant IDisposable
 
@@ -62,6 +62,6 @@ Vous pouvez suivre ce modèle de base si vous choisissez d’implémenter (ou qu
   
 ## <a name="see-also"></a>Voir aussi
 
-[Nettoyage de ressources non managées](../../../docs/standard/garbage-collection/unmanaged.md)   
-[using, instruction (référence C#)](~/docs/csharp/language-reference/keywords/using-statement.md)   
-[Using, instruction (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+* [Nettoyage de ressources non managées](../../../docs/standard/garbage-collection/unmanaged.md)   
+* [using, instruction (référence C#)](~/docs/csharp/language-reference/keywords/using-statement.md)   
+* [Using, instruction (Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)

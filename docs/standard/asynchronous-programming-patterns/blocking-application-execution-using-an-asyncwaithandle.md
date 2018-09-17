@@ -16,11 +16,11 @@ ms.assetid: 3e32daf2-8161-4e8f-addd-9fd9ff101b03
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 054af36987d60c8aeb752c9c711f1cce19733efc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227072"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624468"
 ---
 # <a name="blocking-application-execution-using-an-asyncwaithandle"></a>Blocage de l'exécution d'applications à l'aide d'un AsyncWaitHandle
 Les applications qui ne peuvent pas continuer à effectuer d’autres tâches en attendant les résultats d’une opération asynchrone doivent se bloquer jusqu'à ce que cette opération se termine. Pour bloquer le thread principal de votre application en attendant la fin d’une opération asynchrone, utilisez l’une des options suivantes :  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457359"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208658"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Contraintes sur les paramètres de type (Guide de programmation C#)
 
@@ -19,7 +19,7 @@ Les contraintes informent le compilateur sur les fonctionnalités que doit avoir
 
 |Contrainte|Description|
 |----------------|-----------------|
-|`where T : struct`|L’argument de type doit être un type valeur. Tout type valeur, excepté <xref:System.Nullable>, peut être spécifié. Pour plus d’informations, consultez [Utilisation de types Nullable](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|L’argument de type doit être un type valeur. Tout type valeur, excepté <xref:System.Nullable%601>, peut être spécifié. Pour plus d’informations sur les types Nullable en C#, consultez [Types Nullable](../nullable-types/index.md).|
 |`where T : class`|L’argument de type doit être un type référence. Cette contrainte s’applique également à tous les types de classe, d’interface, de délégué ou de tableau.|
 |`where T : unmanaged`|L’argument de type ne doit pas être un type référence et ne doit contenir aucun membre de type référence à tous les niveaux d’imbrication.|
 |`where T : new()`|L’argument de type doit avoir un constructeur sans paramètre public. Quand vous utilisez la contrainte `new()` avec d’autres contraintes, elle doit être spécifiée en dernier.|
@@ -111,7 +111,8 @@ Vous pouvez l’utiliser comme montré dans l’exemple suivant pour créer un e
 
 ## <a name="see-also"></a>Voir aussi
 
- <xref:System.Collections.Generic> [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Classes génériques](../../../csharp/programming-guide/generics/generic-classes.md)  
- [new, contrainte](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Classes génériques](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [new, contrainte](../../../csharp/language-reference/keywords/new-constraint.md)  

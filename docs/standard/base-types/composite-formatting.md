@@ -16,11 +16,11 @@ ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264910"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45638871"
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
 La fonctionnalité de mise en forme composite du .NET utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  

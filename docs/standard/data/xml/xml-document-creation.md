@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 877e9c62-b082-4bfb-bc5b-f47297eb30ef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ab7632966cd2a0087a8bdc1d452d02543edbec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b76140fb7d79b1e191c0451cd7556963130d224a
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572786"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45646179"
 ---
 # <a name="xml-document-creation"></a>Création d'un document XML
 Il existe deux façons de créer un document XML. L'une consiste à créer un objet **XmlDocument**, sans paramètre. L'autre consiste à créer un objet **XmlDocument** et à le passer à XmlNameTable sous la forme d'un paramètre. L'exemple suivant indique comment créer un nouveau **XmlDocument** vide dépourvu de paramètre.  
@@ -30,5 +30,6 @@ XmlDocument doc = new XmlDocument();
   
  Il existe une classe appelée **XmlNameTable**. Cette classe est une table d'objets chaîne atomisés. Cette table constitue un moyen efficace pour que l'analyseur XML utilise le même objet chaîne pour tous les noms d'éléments et d'attributs répétés dans un document XML. Un objet **XmlNameTable** est créé automatiquement lors de la création d'un document, comme le montre l'exemple ci-avant, et est chargé avec des noms d'attributs et d'éléments lors du chargement du document. Si vous disposez déjà d'un document possédant une table de noms, et que ces noms pourraient être employés utilement dans un autre document, vous pouvez créer un nouveau document à l'aide de la méthode **Load** qui prend **XmlNameTable** comme paramètre. Lorsque le document est créé avec cette méthode, il utilise le **XmlNameTable** existant avec tous les attributs et éléments déjà chargés en son sein à partir de l'autre document. Celui-ci peut être employé pour comparer efficacement des noms d'éléments et d'attributs. Pour plus d'informations sur **XmlNameTable**, consultez [Comparaison d'objets à l'aide de XmlNameTable](../../../../docs/standard/data/xml/object-comparison-using-xmlnametable.md). Pour référence, consultez <xref:System.Xml.XmlNameTable>.  
   
-## <a name="see-also"></a>Voir aussi  
- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>Voir aussi
+
+- [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

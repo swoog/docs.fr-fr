@@ -13,11 +13,11 @@ ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44180109"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45619079"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Génération et compilation de code source dynamique
 Le .NET Framework inclut un mécanisme appelé CodeDOM (Code Document Object Model) qui permet aux développeurs d’émettre du code source pour générer du code source dans plusieurs langages de programmation au moment de l’exécution, en fonction d’un modèle unique qui représente le code à restituer.  

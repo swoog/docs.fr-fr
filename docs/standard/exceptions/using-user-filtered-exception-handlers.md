@@ -9,11 +9,11 @@ ms.assetid: aa80d155-060d-41b4-a636-1ceb424afee8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d1e771a95542153dfad0981d3198e6b4c31cdeb9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264257"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45618234"
 ---
 # <a name="using-user-filtered-exception-handlers"></a>Utilisation de gestionnaires filtrés par l'utilisateur
 Visual Basic prend actuellement en charge les exceptions filtrées par l’utilisateur. Les gestionnaires d’exceptions filtrés par l’utilisateur interceptent et gèrent les exceptions selon des critères que vous définissez pour l’exception. Ces gestionnaires utilisent l’instruction **Catch** avec le mot clé **When**.  

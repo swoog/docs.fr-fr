@@ -9,11 +9,11 @@ ms.assetid: 9f436bca-1b96-494b-a6d2-e102c7551752
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1827e40256bc4307006ce081cbb6cbc44a89a0bc
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267062"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45594320"
 ---
 # <a name="remove-xml-data-using-xpathnavigator"></a>Suppression de données XML à l’aide de XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fournit un ensemble de méthodes permettant de supprimer des nœuds et des valeurs d'un document XML. Pour pouvoir utiliser ces méthodes, vous devez pouvoir modifier l'objet <xref:System.Xml.XPath.XPathNavigator>, ce qui signifie que sa propriété <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> doit être `true`.  

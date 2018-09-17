@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
 ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270206"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45595055"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;=, opérateur (référence C#)
 Tous les types numériques et d’énumération définissent un opérateur relationnel « inférieur ou égal à » (`<=`) qui retourne `true` si le premier opérande est inférieur ou égal au deuxième et `false` dans le cas contraire.  

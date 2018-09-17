@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: f1c045ffe311dfad851c7cace37966d8d42a22cc
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220735"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207237"
 ---
 # <a name="c-features-that-support-linq"></a>Fonctionnalités C# qui prennent en charge LINQ
 La section suivante présente de nouvelles constructions de langage qui sont apparues avec C# 3.0. Même si ces nouvelles fonctionnalités sont toutes plus ou moins utilisées avec les requêtes [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], elles ne sont pas limitées à [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] et peuvent être utilisées dans n’importe quel contexte.  
@@ -17,7 +17,7 @@ La section suivante présente de nouvelles constructions de langage qui sont app
 ## <a name="query-expressions"></a>Expressions de requête  
  Les expressions de requête utilisent une syntaxe déclarative similaire à SQL ou XQuery pour interroger les collections IEnumerable. Au moment de la compilation, la syntaxe de requête est convertie en appels de méthode à l’implémentation de méthodes d’extension d’opérateur de requête standard d’un fournisseur [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Les applications contrôlent les opérateurs de requête standard qui se trouvent dans la portée en spécifiant l’espace de noms approprié avec une directive `using`. L’expression de requête suivante accepte un tableau de chaînes, regroupe les chaînes qui commencent par le même caractère, puis trie ces groupes de chaînes.  
   
-```  
+```csharp  
 var query = from str in stringArray  
             group str by str[0] into stringGroup  
             orderby stringGroup.Key  
@@ -29,7 +29,7 @@ var query = from str in stringArray
 ## <a name="implicitly-typed-variables-var"></a>Variables implicitement typées (var)  
  Au lieu de spécifier explicitement un type lorsque vous déclarez et initialisez une variable, vous pouvez utiliser le modificateur [var](../../../../csharp/language-reference/keywords/var.md) pour indiquer au compilateur qu’il doit déduire et assigner le type, comme illustré ici :  
   
-```  
+```csharp  
 var number = 5;  
 var name = "Virginia";  
 var query = from str in stringArray  
@@ -37,14 +37,14 @@ var query = from str in stringArray
             select str;  
 ```  
   
- Les variables déclarées comme `var` sont aussi fortement typées que les variables dont vous spécifiez explicitement le type. `var` permet de créer des types anonymes, mais peut être utilisé pour toutes les variables locales. Les tableaux peuvent également être déclarés avec un typage implicite.  
+ Les variables déclarées comme `var` sont aussi fortement typées que les variables dont vous spécifiez explicitement le type. `var` permet de créer des types anonymes, mais peut être utilisé uniquement pour les variables locales. Les tableaux peuvent également être déclarés avec un typage implicite.  
   
  Pour plus d’informations, consultez [Variables locales implicitement typées](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
   
 ## <a name="object-and-collection-initializers"></a>Initialiseurs d’objets et de collections  
  Les initialiseurs d’objets et de collections permettent d’initialiser un objet sans appeler explicitement un constructeur pour cet objet. Les initialiseurs sont généralement utilisés dans les expressions de requête pour projeter la source de données en un nouveau type de données. En supposant une classe nommée `Customer` avec les propriétés publiques `Name` et `Phone`, l’initialiseur d’objet peut être utilisé, comme dans le code suivant :  
   
-```  
+```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
   
@@ -78,11 +78,12 @@ select new {name = cust.Name, phone = cust.Phone};
 ## <a name="auto-implemented-properties"></a>Propriétés implémentées automatiquement  
  Les propriétés implémentées automatiquement rendent la déclaration de propriétés plus concise. Quand vous déclarez une propriété comme indiqué dans l’exemple suivant, le compilateur crée un champ de stockage privé et anonyme, uniquement accessible via les méthodes getter et setter de la propriété.  
   
-```  
+```csharp  
 public string Name {get; set;}  
 ```  
   
  Pour plus d’informations, consultez [Propriétés implémentées automatiquement](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
   
-## <a name="see-also"></a>Voir aussi  
- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
+## <a name="see-also"></a>Voir aussi
+
+- [LINQ (Language-Integrated Query) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

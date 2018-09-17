@@ -12,11 +12,11 @@ ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208164"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45617154"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Sécurité des threads dans les expressions régulières
 La classe <xref:System.Text.RegularExpressions.Regex> proprement dite est thread-safe et immuable (en lecture seule). Autrement dit, des objets **Regex** peuvent être créés sur n’importe quel thread et partagés par plusieurs threads ; les méthodes de mise en correspondance peuvent être appelées à partir de n’importe quel thread et elles ne modifient jamais un état global.  

@@ -17,11 +17,11 @@ ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ee7de15130644e63b17a6d067c5cce9088d199a0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185048"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591263"
 ---
 # <a name="localization"></a>Localisation
 La localisation correspond au processus de traduction des ressources d’une application dans des versions localisées pour chaque culture prise en charge par l’application. Vous devez passer à l’étape de localisation uniquement après avoir effectué l’étape [Révision de l’adaptabilité](../../../docs/standard/globalization-localization/localizability-review.md) pour vérifier que l’application globalisée est prête pour la localisation.  

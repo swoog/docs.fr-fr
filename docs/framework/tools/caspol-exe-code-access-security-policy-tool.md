@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f2306d51d88ab2d3b74ed6381a6de0acebf1e62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410096"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748426"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (outil Stratégie de sécurité d'accès du code)
 L'outil Stratégie de sécurité d'accès du code (CAS) (Caspol.exe) permet aux utilisateurs et aux administrateurs de modifier la stratégie de sécurité au niveau de l'ordinateur, de l'utilisateur et de l'entreprise.  
@@ -83,29 +83,29 @@ caspol [options]
   
 |Argument|Description|  
 |--------------|-----------------|  
-|**-allcode**|Spécifie l'ensemble du code. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.AllMembershipCondition>.|  
-|**-appdir**|Spécifie le répertoire de l'application. Si vous spécifiez **–appdir** comme condition d'appartenance, la preuve fournie par l'URL du code est comparée à la preuve fournie par le répertoire d'application du même code. Si les deux preuves sont identiques, la condition d'appartenance est satisfaite. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
+|**-allcode**|Spécifie l'ensemble du code. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>.|  
+|**-appdir**|Spécifie le répertoire de l'application. Si vous spécifiez **–appdir** comme condition d'appartenance, la preuve fournie par l'URL du code est comparée à la preuve fournie par le répertoire d'application du même code. Si les deux preuves sont identiques, la condition d'appartenance est satisfaite. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>.|  
 |**-custom**  *xmlfile*|Ajoute une condition d'appartenance personnalisée. L’argument obligatoire *xmlfile* spécifie le fichier .xml qui contient la sérialisation XML de la condition d’appartenance personnalisée.|  
-|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Spécifie un code qui contient la valeur de hachage de l'assembly donné. Pour utiliser une valeur de hachage comme condition d'appartenance à un groupe de codes, vous devez spécifier la valeur de hachage ou le fichier d'assembly. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Spécifie un code qui présente l'éditeur de logiciel indiqué par un fichier de certificat, une signature sur un fichier ou la représentation hexadécimale d'un certificat X509. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.PublisherMembershipCondition>.|  
-|**-site** *website*|Spécifie un code qui présente le site d'origine donné. Exemple :<br /><br /> **-site** www.proseware.com<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.SiteMembershipCondition>.|  
-|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Spécifie un code avec un nom fort spécifique désigné par son nom de fichier, le nom de l'assembly (chaîne) et la version de l'assembly au format *major*.*minor*.*build*.*revision*. Exemple :<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
-|**-url** *URL*|Spécifie un code qui provient de l'URL donnée. L'URL doit contenir un protocole, tel que http:// ou ftp://. Par ailleurs, un caractère générique (\*) peut être utilisé pour spécifier plusieurs assemblys pour une même URL. **Remarque :** Parce qu'une URL peut être identifiée à l'aide de plusieurs noms, l'utilisation d'une URL comme condition d'appartenance n'est pas un moyen sûr d'établir l'identité du code. Lorsque cela est possible, utilisez une condition d'appartenance à nom fort, une condition d'appartenance d'un éditeur ou la condition d'appartenance de hachage. <br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.UrlMembershipCondition>.|  
+|**-hash** *hashAlg* {**-hex** *hashValue* &#124; **-file** *assembly_file* }|Spécifie un code qui contient la valeur de hachage de l'assembly donné. Pour utiliser une valeur de hachage comme condition d'appartenance à un groupe de codes, vous devez spécifier la valeur de hachage ou le fichier d'assembly. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Spécifie un code qui présente l'éditeur de logiciel indiqué par un fichier de certificat, une signature sur un fichier ou la représentation hexadécimale d'un certificat X509. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
+|**-site** *website*|Spécifie un code qui présente le site d'origine donné. Exemple :<br /><br /> `-site** www.proseware.com`<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
+|**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Spécifie un code avec un nom fort spécifique désigné par son nom de fichier, le nom de l'assembly (chaîne) et la version de l'assembly au format *major*.*minor*.*build*.*revision*. Exemple :<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Spécifie un code qui provient de l'URL donnée. L'URL doit contenir un protocole, tel que http:// ou ftp://. Par ailleurs, un caractère générique (\*) peut être utilisé pour spécifier plusieurs assemblys pour une même URL. **Remarque :** Parce qu'une URL peut être identifiée à l'aide de plusieurs noms, l'utilisation d'une URL comme condition d'appartenance n'est pas un moyen sûr d'établir l'identité du code. Lorsque cela est possible, utilisez une condition d'appartenance à nom fort, une condition d'appartenance d'un éditeur ou la condition d'appartenance de hachage. <br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Spécifie un code qui présente la zone d'origine donnée. L'argument *zonename* peut avoir l'une des valeurs suivantes : **MyComputer**, **Intranet**, **Trusted**, **Internet** ou **Untrusted**. Pour plus d'informations sur cette condition d'appartenance, reportez-vous à la classe <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  L’argument *flags* qui peut être utilisé avec les options **–addgroup** et **–chggroup** est spécifié de la façon suivante.  
   
 |Argument|Description|  
 |--------------|-----------------|  
-|**-description "** *description* **"**|S’il est utilisé avec l'option **–addgroup**, spécifie la description d'un groupe de codes à ajouter. S’il est utilisé avec l'option **–chggroup**, spécifie la description d'un groupe de codes à modifier. L’argument *description* doit être entouré de guillemets doubles.|  
+|**-description** "*description*"|S’il est utilisé avec l'option **–addgroup**, spécifie la description d'un groupe de codes à ajouter. S’il est utilisé avec l'option **–chggroup**, spécifie la description d'un groupe de codes à modifier. L’argument *description* doit être entouré de guillemets doubles.|  
 |**-exclusive** {**on**&#124;**off**}|Quand cette option est définie sur **on**, indique que seul le jeu d'autorisations associé au groupe de codes que vous ajoutez ou modifiez est pris en compte quand un code satisfait la condition d'appartenance du groupe de codes. Quand cette option est définie sur **off**, Caspol.exe tient compte des jeux d'autorisations de tous les groupes de codes correspondants du niveau de stratégie.|  
 |**-levelfinal** {**on**&#124;**off**}|Quand cette option est définie sur **on**, cela indique qu’aucun des niveaux de stratégie inférieurs au niveau du groupe de codes ajouté ou modifié n'est pris en compte. Cette option est généralement utilisée au niveau de la stratégie de l'ordinateur. Par exemple, si vous définissez cet indicateur pour un groupe de codes au niveau de l'ordinateur et qu'il existe un code satisfaisant à la condition d'appartenance de ce groupe de codes, Caspol.exe ne calcule pas (ni n'applique) la stratégie de niveau utilisateur pour ce code.|  
-|**-name "** *name* **"**|S’il est utilisé avec l'option **–addgroup**, spécifie le nom de script d'un groupe de codes à ajouter. S’il est utilisé avec l'option **–chggroup**, spécifie le nom de script d'un groupe de codes à modifier. L’argument *name* doit être entouré de guillemets doubles. L’argument *name* ne doit pas commencer par un chiffre et ne peut contenir que les lettres de A à Z, les chiffres de 0 à 9 et le caractère de soulignement. Vous pouvez faire référence aux groupes de codes par cet argument *name* au lieu d'utiliser leur étiquette numérique. L'argument *name* est également très utile dans les scripts.|  
+|**-name** "*nom*"|S’il est utilisé avec l'option **–addgroup**, spécifie le nom de script d'un groupe de codes à ajouter. S’il est utilisé avec l'option **–chggroup**, spécifie le nom de script d'un groupe de codes à modifier. L’argument *name* doit être entouré de guillemets doubles. L’argument *name* ne doit pas commencer par un chiffre et ne peut contenir que les lettres de A à Z, les chiffres de 0 à 9 et le caractère de soulignement. Vous pouvez faire référence aux groupes de codes par cet argument *name* au lieu d'utiliser leur étiquette numérique. L'argument *name* est également très utile dans les scripts.|  
   
 ## <a name="remarks"></a>Notes  
  La stratégie de sécurité se définit sur trois niveaux : ordinateur, utilisateur et entreprise. Le jeu d'autorisations dont bénéficie un assembly est déterminé par l'intersection entre les jeux d'autorisations accordés par ces trois niveaux de stratégie. Chaque niveau de stratégie est représenté par une structure hiérarchique de groupes de codes. Chaque groupe de codes possède une condition d'appartenance qui détermine quel code est membre de ce groupe. Un jeu d'autorisations nommé est également associé à chaque groupe de codes. Ce jeu d'autorisations spécifie les autorisations que peut accorder le runtime au code qui satisfait à la condition d'appartenance. Une hiérarchie de groupes de codes et les jeux d'autorisations nommés associés définissent et gèrent chaque niveau de la stratégie de sécurité. Vous pouvez utiliser les options **–user**, **-customuser**, **–machine** et **-enterprise** pour définir le niveau de stratégie de sécurité.  
   
- Pour plus d'informations sur les stratégies de sécurité et sur la manière dont le runtime détermine les autorisations à accorder au code, consultez [Gestion de la stratégie de sécurité](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Pour plus d'informations sur les stratégies de sécurité et sur la manière dont le runtime détermine les autorisations à accorder au code, consultez [Gestion de la stratégie de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Références aux groupes de codes et aux jeux d'autorisations  
  Pour faciliter les références aux groupes de codes d'une hiérarchie, l'option **-list** affiche une liste des groupes de codes avec des retraits et les étiquettes numériques correspondantes (1, 1.1, 1.1.1, etc.). Les autres opérations effectuées depuis la ligne de commande qui ciblent les groupes de codes utilisent également les étiquettes numériques pour faire référence à des groupes de codes particuliers.  
@@ -132,13 +132,13 @@ caspol [options]
   
  Supposez qu'un jeu d'autorisations contenant une autorisation personnalisée a été ajouté à la stratégie de l'ordinateur. Cette autorisation personnalisée est implémentée dans `MyPerm.exe`, et `MyPerm.exe` fait référence aux classes de `MyOther.exe`. Les deux assemblys doivent être ajoutés à la liste des assemblys de confiance totale. La commande suivante ajoute l'assembly `MyPerm.exe` à la liste des assemblys de confiance totale pour la stratégie de l'ordinateur.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyPerm.exe  
 ```  
   
  La commande suivante ajoute l'assembly `MyOther.exe` à la liste des assemblys de confiance totale pour la stratégie de l'ordinateur.  
   
-```  
+```console  
 caspol -machine -addfulltrust MyOther.exe  
 ```  
   
@@ -146,13 +146,13 @@ caspol -machine -addfulltrust MyOther.exe
   
  La commande suivante ajoute un groupe de codes enfant à la racine de la hiérarchie des groupes de codes de la stratégie de l'ordinateur. Le nouveau groupe de codes est membre de la zone **Internet** et il est associé au jeu d'autorisations **Execution**.  
   
-```  
+```console  
 caspol -machine -addgroup 1.  -zone Internet Execution  
 ```  
   
  La commande suivante ajoute un groupe de codes enfant qui donne des autorisations sur l’intranet local au partage \\\netserver\netshare.  
   
-```  
+```console  
 caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet  
 ```  
   
@@ -160,7 +160,7 @@ caspol -machine -addgroup 1. -url \\netserver\netshare\* LocalIntranet
   
  La commande suivante ajoute le jeu d'autorisations `Mypset` à la stratégie de l'utilisateur.  
   
-```  
+```console  
 caspol -user -addpset Mypset.xml Mypset  
 ```  
   
@@ -168,13 +168,13 @@ caspol -user -addpset Mypset.xml Mypset
   
  La commande suivante change le jeu d'autorisations défini dans la stratégie d'utilisateur du groupe de codes étiqueté 1.2. en jeu d’autorisations **Execution**.  
   
-```  
+```console  
 caspol -user -chggroup 1.2. Execution  
 ```  
   
  La commande suivante change la condition d'appartenance dans la stratégie par défaut du groupe de codes étiqueté 1.2.1. et change le paramètre de l’indicateur **exclusive**. La condition d'appartenance est définie comme un code qui provient de la zone **Internet** avec l'indicateur **exclusive** activé.  
   
-```  
+```console  
 caspol -chggroup 1.2.1. -zone Internet -exclusive on  
 ```  
   
@@ -182,7 +182,7 @@ caspol -chggroup 1.2.1. -zone Internet -exclusive on
   
  La commande suivante substitue au jeu d'autorisations `Mypset` le jeu d'autorisations contenu dans `newpset.xml`. Notez que la version actuelle ne prend pas en charge la modification des jeux d’autorisations utilisés par la hiérarchie des groupes de codes.  
   
-```  
+```console  
 caspol -chgpset Mypset newpset.xml  
 ```  
   
@@ -190,7 +190,7 @@ caspol -chgpset Mypset newpset.xml
   
  La commande suivante entraîne l'association du groupe de codes racine de la stratégie d'utilisateur (étiqueté 1) au jeu d'autorisations nommé **Nothing**. Cela empêche l'exécution de Caspol.exe.  
   
-```  
+```console  
 caspol -force -user -chggroup 1 Nothing  
 ```  
   
@@ -198,7 +198,7 @@ caspol -force -user -chggroup 1 Nothing
   
  La commande suivante récupère la stratégie d'ordinateur enregistrée le plus récemment.  
   
-```  
+```console  
 caspol -machine -recover  
 ```  
   
@@ -206,7 +206,7 @@ caspol -machine -recover
   
  La commande suivante supprime le groupe de codes étiqueté 1.1. Si ce groupe de codes comprend des groupes de codes enfants, ces derniers sont également supprimés.  
   
-```  
+```console  
 caspol -remgroup 1.1.  
 ```  
   
@@ -214,13 +214,13 @@ caspol -remgroup 1.1.
   
  La commande suivante supprime le jeu d'autorisations **Execution** de la stratégie d'utilisateur.  
   
-```  
+```console  
 caspol -user -rempset Execution  
 ```  
   
  La commande suivante supprime `Mypset` du niveau de stratégie de l'utilisateur.  
   
-```  
+```console  
 caspol -rempset MyPset  
 ```  
   
@@ -228,13 +228,13 @@ caspol -rempset MyPset
   
  La commande suivante affiche tous les groupes de codes de la stratégie d'ordinateur à laquelle appartient `myassembly`.  
   
-```  
+```console  
 caspol -machine -resolvegroup myassembly  
 ```  
   
  La commande suivante affiche tous les groupes de codes de la stratégie d'ordinateur, d'entreprise et d'utilisateur personnalisé à laquelle appartient `myassembly`.  
   
-```  
+```console  
 caspol -customall "c:\config_test\security.config" -resolvegroup myassembly  
 ```  
   
@@ -242,10 +242,10 @@ caspol -customall "c:\config_test\security.config" -resolvegroup myassembly
   
  La commande suivante calcule les autorisations de `testassembly` en fonction des niveaux de stratégie d'ordinateur et d'utilisateur.  
   
-```  
+```console  
 caspol -all -resolveperm testassembly  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils](../../../docs/framework/tools/index.md)  
- [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Outils](index.md)  
+ [Invites de commandes](developer-command-prompt-for-vs.md)

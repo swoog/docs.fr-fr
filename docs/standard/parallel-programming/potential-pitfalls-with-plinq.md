@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c4decd01938500fe6330c48caa33b845916aaff
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863005"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638832"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Pièges potentiels avec PLINQ
 Dans de nombreux cas, PLINQ permet d’améliorer les performances de manière significative par rapport à des requêtes LINQ to Objects séquentielles. Toutefois, le travail de parallélisation de l’exécution de la requête présente une certaine complexité pouvant entraîner des problèmes qui, dans du code séquentiel, ne sont pas si courants ou ne surviennent pas du tout. Cette rubrique répertorie des pratiques à éviter lorsque vous écrivez des requêtes PLINQ.  
@@ -83,36 +83,32 @@ a.Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
   
 ```vb  
 Dim mre = New ManualResetEventSlim()  
-    Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
-  
-                                                     If j = Environment.ProcessorCount Then  
-  
-                                                         Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Set()  
-  
-                                                     Else  
-  
-                                                         Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
-                                                         mre.Wait()  
-                                                     End If  
-    End Sub) ' deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll(Sub(j)   
+   If j = Environment.ProcessorCount Then  
+       Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Set()  
+   Else  
+       Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j)  
+       mre.Wait()  
+   End If  
+End Sub) ' deadlocks  
 ```  
   
 ```csharp  
 ManualResetEventSlim mre = new ManualResetEventSlim();  
-            Enumerable.Range(0, ProcessorCount * 100).AsParallel().ForAll((j) =>  
-            {  
-                if (j == Environment.ProcessorCount)  
-                {  
-                    Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Set();  
-                }  
-                else  
-                {  
-                    Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
-                    mre.Wait();  
-                }  
-            }); //deadlocks  
+Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>  
+{  
+    if (j == Environment.ProcessorCount)  
+    {  
+        Console.WriteLine("Set on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Set();  
+    }  
+    else  
+    {  
+        Console.WriteLine("Waiting on {0} with value of {1}", Thread.CurrentThread.ManagedThreadId, j);  
+        mre.Wait();  
+    }  
+}); //deadlocks  
 ```  
   
  Dans cet exemple, une itération définit un événement que toutes les autres itérations attendent. Aucune des itérations en attente ne peut s’achever tant que l’itération de définition d’événement n’est pas terminée. Toutefois, il est possible que les itérations en attente bloquent tous les threads utilisés pour exécuter la boucle parallèle, avant que l’itération de définition d’événement ait eu une chance de s’exécuter. Cela provoque un interblocage : l’itération de définition d’événement ne s’exécute jamais et les itérations en attente ne s’activent pas non plus.  

@@ -4,12 +4,12 @@ description: Découvrez les scripts dotnet-install pour installer les outils CL
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214378"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180041"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Documentation sur les scripts dotnet-install
 
@@ -36,11 +36,11 @@ Nous vous recommandons d’utiliser la version stable hébergée sur le [site we
 * https://dot.net/v1/dotnet-install.sh (bash, UNIX)
 * https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
 
-La principale utilité de ces scripts réside dans les scénarios d’automatisation et les installations non administrateur. Il existe deux scripts : un script PowerShell qui fonctionne sous Windows. L’autre script est un script bash qui fonctionne sur Linux/macOS. Les deux scripts ont le même comportement. Comme le script bash lit également les commutateurs PowerShell, vous pouvez utiliser ces derniers avec le script sur les systèmes Linux/macOS. 
+La principale utilité de ces scripts réside dans les scénarios d’automatisation et les installations non administrateur. Il existe deux scripts : un script PowerShell qui fonctionne sous Windows. L’autre script est un script bash qui fonctionne sur Linux/macOS. Les deux scripts ont le même comportement. Comme le script bash lit également les commutateurs PowerShell, vous pouvez utiliser ces derniers avec le script sur les systèmes Linux/macOS.
 
-Les scripts d’installation téléchargent le fichier ZIP/tarball à partir des cibles de builds CLI, puis poursuivent l’installation dans l’emplacement par défaut ou dans un emplacement spécifié par `-InstallDir|--install-dir`. Par défaut, les scripts d’installation téléchargent et installent le Kit de développement logiciel (SDK). Si vous souhaitez obtenir uniquement le runtime partagé, spécifiez l’argument `--shared-runtime`. 
+Les scripts d’installation téléchargent le fichier ZIP/tarball à partir des cibles de builds CLI, puis poursuivent l’installation dans l’emplacement par défaut ou dans un emplacement spécifié par `-InstallDir|--install-dir`. Par défaut, les scripts d’installation téléchargent et installent le Kit de développement logiciel (SDK). Si vous souhaitez obtenir uniquement le runtime partagé, spécifiez l’argument `--shared-runtime`.
 
-Par défaut, le script ajoute l’emplacement d’installation $PATH pour la session active. Remplacez ce comportement par défaut en spécifiant l’argument `--no-path`. 
+Par défaut, le script ajoute l’emplacement d’installation $PATH pour la session active. Remplacez ce comportement par défaut en spécifiant l’argument `--no-path`.
 
 Avant d’exécuter le script, installez les [dépendances](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) nécessaires.
 
@@ -141,7 +141,7 @@ Obtenir le script et installer les exemples unilignes de l’interface CLI .NET 
 
 Windows :
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 Mac OS/Linux :
 
@@ -149,5 +149,5 @@ Mac OS/Linux :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Versions de .NET Core](https://github.com/dotnet/core/releases)   
-[Archive de téléchargement de .NET Core Runtime et du Kit SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [Versions de .NET Core](https://github.com/dotnet/core/releases)
+* [Archive de téléchargement de .NET Core Runtime et du Kit SDK](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

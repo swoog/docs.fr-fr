@@ -3,11 +3,11 @@ title: -subsystemversion (Options du compilateur C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
 ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44098881"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45596103"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (Options du compilateur C#)
 Spécifie la version minimale du sous-système sur lequel le fichier exécutable généré peut s’exécuter, déterminant ainsi les versions de Windows sur lesquelles le fichier exécutable peut s’exécuter. En règle générale, cette option garantit que le fichier exécutable peut tirer parti de fonctionnalités de sécurité particulières qui ne sont pas disponibles avec des versions antérieures de Windows.  

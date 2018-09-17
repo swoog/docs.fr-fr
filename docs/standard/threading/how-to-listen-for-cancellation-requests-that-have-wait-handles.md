@@ -11,11 +11,11 @@ ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1c8bfea5fc55bafbaa30d3b74edf60b674ef75c
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268810"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624734"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Comment : écouter les demandes d'annulation avec des handles d'attente
 Si une méthode est bloquée pendant qu’elle attend qu’un événement soit signalé, elle ne peut pas vérifier la valeur du jeton d’annulation ni répondre en temps voulu. Le premier exemple montre comment résoudre ce problème quand vous travaillez avec des événements tels que <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> qui ne prennent pas en charge l’infrastructure d’annulation unifiée. Le deuxième exemple montre une approche plus simple qui utilise <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, qui prend en charge l’annulation unifiée.  

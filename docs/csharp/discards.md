@@ -4,12 +4,12 @@ description: Décrit la prise en charge par C# des éléments ignorés, qui sont
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: 9688ea596fa3d534c6c48d5874b04bb257d0dbce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219230"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43524201"
 ---
 # <a name="discards---c-guide"></a>Éléments ignorés - Guide C#
 
@@ -54,7 +54,7 @@ L’exemple suivant définit une méthode `ProvidesFormatInfo` qui utilise des i
 
 ## <a name="calls-to-methods-with-out-parameters"></a>Appels à des méthodes avec des paramètres out
 
-Quand vous appelez la méthode `Deconstruct` pour déconstruire un type défini par l’utilisateur (une instance d’une classe, d’une structure ou d’une interface), vous pouvez ignorer les valeurs d’arguments `out` individuels. Vous pouvez cependant aussi ignorer la valeur d’arguments `out` lors de l’appel de n’importe quelle méthode avec un paramètre out. 
+Quand vous appelez la méthode `Deconstruct` pour déconstruire un type défini par l’utilisateur (une instance d’une classe, d’une structure ou d’une interface), vous pouvez ignorer les valeurs d’arguments `out` individuels. Vous pouvez cependant aussi ignorer la valeur d’arguments `out` lors de l’appel de n’importe quelle méthode avec un paramètre out.
 
 L’exemple suivant appelle la méthode [DateTime.TryParse (String, out DateTime)](<xref:System.DateTime.TryParse(System.String,System.DateTime@)>) pour déterminer si la représentation sous forme de chaîne d’une date est valide dans la culture actuelle. Comme l’exemple concerne ici uniquement la validation de la chaîne de date et pas son analyse pour extraire la date, l’argument `out` de la méthode est un élément ignoré.
 
@@ -71,16 +71,17 @@ Notez que `_` est aussi un identificateur valide. Quand il est utilisé en dehor
 - Une modification accidentelle de la valeur de la variable `_` dans l’étendue en lui affectant la valeur de l’élément ignoré prévu. Exemple :
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#1)]
- 
+
 - Une erreur de compilateur pour violation de sécurité du type. Exemple :
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#2)]
- 
-- Erreur de compilateur CS0136, « Impossible de déclarer une variable locale ou un paramètre nommé ’_’ dans cette portée, car ce nom est utilisé dans une portée locale englobante pour définir une variable locale ou un paramètre ». Exemple :
+
+- Erreur du compilateur CS0136 : « Impossible de déclarer une variable locale ou un paramètre nommé ‘\_’ dans cette portée, car ce nom est utilisé dans une portée locale englobante pour définir une variable locale ou un paramètre. » Exemple :
 
    [!code-csharp[standalone-discard](../../samples/snippets/csharp/programming-guide/discards/standalone-discard2.cs#3)]
 
 ## <a name="see-also"></a>Voir aussi
-[Déconstruction de tuples et d’autres types](deconstruct.md)   
-[Mot clé `is` ](language-reference/keywords/is.md)   
-[Mot clé `switch`](language-reference/keywords/switch.md)   
+
+- [Déconstruction de tuples et autres types](deconstruct.md)
+- [Mot clé `is`](language-reference/keywords/is.md)
+- [Mot clé `switch`](language-reference/keywords/switch.md)

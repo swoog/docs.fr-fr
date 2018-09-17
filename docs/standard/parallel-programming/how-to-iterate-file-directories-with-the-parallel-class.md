@@ -11,11 +11,11 @@ ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44189359"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596361"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Comment : itérer les répertoires de fichiers avec la classe parallèle
 Dans de nombreux cas, l’itération de fichiers est une opération facile à mettre en parallèle. La rubrique [Guide pratique : itérer les répertoires de fichiers avec PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) présente le moyen le plus simple d’effectuer cette tâche dans de nombreux scénarios. Toutefois, des problèmes risquent de survenir si le code doit gérer les différents types d’exceptions susceptibles de se produire avec l’accès au système de fichiers. L'exemple suivant montre une approche du problème. Il utilise une itération de type pile pour parcourir tous les fichiers et tous les dossiers situés sous un répertoire spécifié, et permet au code d’intercepter et de gérer différentes exceptions. Bien entendu, vous pouvez gérer les exceptions comme vous le souhaitez.  

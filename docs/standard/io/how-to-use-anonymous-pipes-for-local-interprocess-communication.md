@@ -16,11 +16,11 @@ ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: db23b424d4357ad94b8b0de66ca71726b765321e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264478"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45641077"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>Comment : utiliser des canaux anonymes pour la communication entre processus en local
 Les canaux anonymes fournissent une communication entre processus sur un ordinateur local. Ils offrent moins de fonctionnalités que les canaux nommés, mais nécessitent également moins de surcharge. Vous pouvez utiliser les canaux anonymes pour établir plus facilement une communication entre processus sur un ordinateur local. Vous ne pouvez pas utiliser les canaux anonymes pour la communication sur un réseau.  

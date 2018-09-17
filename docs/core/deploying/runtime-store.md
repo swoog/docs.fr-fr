@@ -4,11 +4,12 @@ description: Cette rubrique décrit le magasin de packages de runtime et les man
 author: bleroy
 ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: aba1939cda8459d8b0d9438a97545c19d3c1926d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511582"
 ---
 # <a name="runtime-package-store"></a>Magasin de packages de runtime
 
@@ -16,18 +17,20 @@ ms.lasthandoff: 05/04/2018
 
 Cette fonctionnalité est implémentée en tant que *magasin de packages de runtime*, qui est un répertoire sur le disque où sont stockés les packages (généralement */usr/local/share/dotnet/store* sur macOS/Linux et *C:/Program Files/dotnet/store* sur Windows). Ce répertoire contient des sous-répertoires pour les architectures et les [frameworks cibles](../../standard/frameworks.md). La disposition de fichier est similaire à la [disposition des composants NuGet sur le disque](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure) :
 
-\dotnet   
-&nbsp;&nbsp;\store   
-&nbsp;&nbsp;&nbsp;&nbsp;\x64   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
-&nbsp;&nbsp;&nbsp;&nbsp;\x86   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\netcoreapp2.0   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.applicationinsights   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\microsoft.aspnetcore   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...   
+```
+\dotnet
+    \store
+        \x64
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+        \x86
+            \netcoreapp2.0
+                \microsoft.applicationinsights
+                \microsoft.aspnetcore
+                ...
+```
 
 Un fichier *manifeste cible* liste les packages dans le magasin de packages de runtime. Les développeurs peuvent cibler ce manifeste quand ils publient leur application. Le manifeste cible est généralement fourni par le propriétaire de l’environnement de production ciblé.
 
@@ -119,6 +122,8 @@ Spécifiez les manifestes cibles dans le fichier projet uniquement quand l’env
 
 ## <a name="aspnet-core-implicit-store"></a>Magasin ASP.NET Core implicite
 
+Le magasin implicite ASP.NET Core s’applique uniquement à ASP.NET Core 2.0. Nous vous recommandons fortement de baser les applications sur ASP.NET Core 2.1 et version ultérieure, car le magasin implicite n’est **pas** utilisé dans ce cas. ASP.NET Core 2.1 et les versions ultérieures utilisent le framework partagé.
+
 La fonctionnalité de magasin de packages de runtime est implicitement utilisée par une application ASP.NET Core quand celle-ci est déployée en tant qu’application [à déploiement dépendant du framework](index.md#framework-dependent-deployments-fdd). Les cibles dans [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) contiennent les manifestes référençant le magasin de packages implicite sur le système cible. De plus, toute application à déploiement dépendant du framework qui est tributaire du package `Microsoft.AspNetCore.All` aboutit à une application publiée qui contient uniquement l’application et ses composants et non les packages listés dans le métapackage `Microsoft.AspNetCore.All`. Ces packages sont censés être présents sur le système cible.
 
 Le magasin de packages de runtime est installé sur l’hôte quand le SDK .NET Core est installé. D’autres programmes d’installation peuvent fournir le magasin de packages de runtime, notamment les installations Zip/tarball du SDK .NET Core, `apt-get`, Red Hat Yum, le bundle .NET Core Windows Server Hosting et les installations de magasin de packages de runtime manuelles.
@@ -131,7 +136,7 @@ Quand vous déployez une application [à déploiement dépendant du framework](i
 </PropertyGroup>
 ```
 
-> [!NOTE] 
+> [!NOTE]
 > Dans le cas des applications [à déploiement autonome](index.md#self-contained-deployments-scd), le système peut ne pas contenir les packages de manifestes nécessaires. Par conséquent, **\<PublishWithAspNetCoreTargetManifest>** ne peut pas être défini avec la valeur `true` pour une application à déploiement autonome.
 
 Si vous déployez une application et que le déploiement comprend une dépendance de manifeste (l’assembly est présent dans le dossier *bin*), le magasin de packages de runtime *n’est pas utilisé* sur l’hôte pour cet assembly. L’assembly dans le dossier *bin* est utilisé indépendamment de sa présence dans le magasin de packages de runtime sur l’hôte.
@@ -141,5 +146,6 @@ La version de la dépendance indiquée dans le manifeste doit correspondre à la
 Quand le déploiement est *épuré* à la publication, seules les versions spécifiques des packages de manifestes que vous indiquez sont retirées de la sortie publiée. Les packages aux versions indiquées doivent être présents sur l’hôte pour que l’application démarre.
 
 ## <a name="see-also"></a>Voir aussi
- [dotnet-publish](../tools/dotnet-publish.md)  
- [dotnet-store](../tools/dotnet-store.md)  
+
+* [dotnet-publish](../tools/dotnet-publish.md)  
+* [dotnet-store](../tools/dotnet-store.md)  

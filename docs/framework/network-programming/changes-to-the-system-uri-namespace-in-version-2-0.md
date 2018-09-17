@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392446"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205982"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Modifications apportées à l’espace de noms System.Uri dans la Version 2.0
 Plusieurs modifications ont été apportées à la classe <xref:System.Uri?displayProperty=nameWithType>. Ces modifications éliminent un comportement incorrect, améliorent la convivialité et renforcent la sécurité.  
@@ -42,7 +42,7 @@ Plusieurs modifications ont été apportées à la classe <xref:System.Uri?displ
   
 -   Pour les schémas d’URI qui sont connus comme n’ayant aucune partie de requête (file, ftp, etc.), le caractère « ? » est toujours placé dans une séquence d’échappement et n’est pas considéré comme le début d’une partie <xref:System.Uri.Query%2A>.  
   
--   Pour les URI de fichiers implicites (au format « c:\directory\file@name.txt »), le caractère de fragment (« # ») est toujours placé dans une séquence d’échappement, sauf si l’absence totale de séquence d’échappement est demandée ou si <xref:System.Uri.LocalPath%2A> est `true`.  
+-   Pour les URI de fichiers implicites (au format `c:\directory\file@name.txt`), le caractère de fragment (« # ») est toujours placé dans une séquence d’échappement, sauf si l’absence totale de séquence d’échappement est demandée ou si <xref:System.Uri.LocalPath%2A> a la valeur `true`.  
   
 -   La prise en charge des noms d’hôtes UNC a été supprimée ; la spécification IDN pour la représentation des noms d’hôtes internationaux a été adoptée.  
   
@@ -56,9 +56,9 @@ Plusieurs modifications ont été apportées à la classe <xref:System.Uri?displ
   
 -   <xref:System.Uri.IsLoopback%2A> produit maintenant des résultats cohérents.  
   
--   L’URI « `file:///path` » n’est plus traduite en « file://path ».  
+-   L’URI « `file:///path` » n’est plus traduite en `file://path`.  
   
--   « # » est maintenant reconnu comme un terminateur de nom d’hôte. Autrement dit, « http://consoto.com#fragment » est converti en « http://contoso.com/#fragment ».  
+-   « # » est maintenant reconnu comme un terminateur de nom d’hôte. En d’autres termes, `http://consoto.com#fragment` est désormais converti en `http://contoso.com/#fragment`.  
   
 -   Un bogue présent lors de la combinaison d’un URI de base avec un fragment a été résolu.  
   

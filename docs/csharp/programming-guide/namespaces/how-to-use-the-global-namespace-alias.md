@@ -7,11 +7,11 @@ helpviewer_keywords:
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
 ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195175"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "44514616"
 ---
 # <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Comment : utiliser l'alias d'espace de noms global (Guide de programmation C#)
 La possibilité d’accéder à un membre dans l’[espace de noms ](../../../csharp/language-reference/keywords/namespace.md) global est utile quand le membre peut être masqué par une autre entité de même nom.  

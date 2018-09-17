@@ -6,11 +6,11 @@ ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208768"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596752"
 ---
 # <a name="namespace-support-in-the-dom"></a>Prise en charge des espaces de noms dans le DOM
 Le DOM (Document Object Model ) XML gère parfaitement les espaces de noms. Seuls les documents XML reconnaissant les espaces de noms sont pris en charge. Le World Wide Web Consortium (W3C) établit que les applications DOM implémentant le niveau 1 peuvent ne pas prendre en charge des espaces de noms, alors que les fonctionnalités du DOM de niveau 2 gèrent parfaitement les espaces de noms. Cependant, toutes les fonctionnalités du DOM XML tiennent compte des espaces de noms, peu importe si la méthode émane de la recommandation Document Object Model (DOM) de niveau 1 ou de niveau 2.  

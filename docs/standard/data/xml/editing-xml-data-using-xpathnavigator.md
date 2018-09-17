@@ -6,11 +6,11 @@ ms.assetid: b1f91616-3115-4264-9821-c66589d11d11
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5361ef036d91435b674a1637ac8c2a9a757bf8ab
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261770"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609344"
 ---
 # <a name="editing-xml-data-using-xpathnavigator"></a>Modification de données XML à l’aide de XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> fournit des méthodes permettant d'insérer, de modifier et de supprimer des nœuds et des valeurs d'un document XML contenu dans un objet <xref:System.Xml.XmlDocument>. Pour pouvoir utiliser ces méthodes afin d'insérer, de modifier et de supprimer des nœuds et des valeurs, vous devez pouvoir modifier l'objet <xref:System.Xml.XPath.XPathNavigator>, ce qui signifie que sa propriété <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> doit être définie sur true.  

@@ -3,11 +3,11 @@ title: Utilisation de la variance pour les délégués génériques Func et Acti
 ms.date: 07/20/2015
 ms.assetid: 1826774f-2b7a-470f-b110-17cfdd6abdae
 ms.openlocfilehash: 903926bc86b1b96cea25b91314e35ed4771bbcb9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272200"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45679130"
 ---
 # <a name="using-variance-for-func-and-action-generic-delegates-c"></a>Utilisation de la variance pour les délégués génériques Func et Action (C#)
 Ces exemples montrent comment utiliser la covariance et la contravariance dans les délégués génériques `Func` et `Action` pour permettre de réutiliser des méthodes et fournir davantage de flexibilité dans votre code.  

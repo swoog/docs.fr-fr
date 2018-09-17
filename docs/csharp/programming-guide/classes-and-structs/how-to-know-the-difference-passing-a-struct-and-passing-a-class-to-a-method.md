@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
 ms.openlocfilehash: 670dfad3b9fc22709a0ad7f8048a0468bce54a2e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44190830"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45594722"
 ---
 # <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Comment : différencier le passage d'un struct et le passage d'une référence de classe à une méthode (Guide de programmation C#)
 L’exemple suivant montre comment le passage d’un [struct](../../../csharp/language-reference/keywords/struct.md) à une méthode diffère du passage d’une instance de [classe](../../../csharp/language-reference/keywords/class.md) à une méthode. Dans l’exemple, les deux arguments (struct et instance de classe) sont passés par valeur, tandis que les deux méthodes changent la valeur d’un champ de l’argument. Toutefois, les résultats des deux méthodes ne sont pas identiques, car ce qui est passé quand vous passez un struct diffère de ce qui est passé quand vous passez une instance d’une classe.  

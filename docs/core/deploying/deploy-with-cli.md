@@ -4,12 +4,12 @@ description: Apprendre à déployer des applications .NET Core avec les outils d
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 7b009068422686442ebff83b9400c365f34a3154
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244749"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855020"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Déploiement d’applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
 
@@ -26,7 +26,7 @@ Si vous travaillez à partir de la ligne de commande, vous pouvez utiliser l’�
 
 ## <a name="framework-dependent-deployment"></a>Déploiement dépendant du framework
 
-Le déploiement d’un déploiement dépendant du framework sans dépendances tierces implique simplement la génération, le test et la publication de l’application. Un exemple simple écrit en C# illustre le processus. 
+Le déploiement d’un déploiement dépendant du framework sans dépendances tierces implique simplement la génération, le test et la publication de l’application. Un exemple simple écrit en C# illustre le processus.
 
 1. Créez un répertoire de projet.
 
@@ -43,7 +43,7 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
    [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
 
 1. Mettez à jour les dépendances et les outils du projet.
- 
+
    Exécutez la commande [dotnet restore](../tools/dotnet-restore.md) ([voir la remarque](#dotnet-restore-note)) pour restaurer les dépendances spécifiées dans votre projet.
 
 1. Créez une build Debug de votre application.
@@ -105,7 +105,7 @@ L’exécution d’un déploiement autonome sans dépendances tierces implique l
 
 1. Définissez les plateformes ciblées par votre application.
 
-   Créez une balise `<RuntimeIdentifiers>` dans la section `<PropertyGroup>` de votre fichier *csproj* qui définit les plateformes ciblées par votre application, puis spécifiez l’identificateur de runtime de chaque plateforme ciblée. Notez que vous devez également ajouter un point-virgule pour séparer les identificateurs de runtime. Consultez [Catalogue des identificateurs de runtime](../rid-catalog.md) pour obtenir une liste des identificateurs de runtime. 
+   Créez une balise `<RuntimeIdentifiers>` dans la section `<PropertyGroup>` de votre fichier *csproj* qui définit les plateformes ciblées par votre application, puis spécifiez l’identificateur de runtime de chaque plateforme ciblée. Notez que vous devez également ajouter un point-virgule pour séparer les identificateurs de runtime. Consultez [Catalogue des identificateurs de runtime](../rid-catalog.md) pour obtenir une liste des identificateurs de runtime.
 
    Par exemple, la section `<PropertyGroup>` suivante indique que l’application s’exécute sur les systèmes d’exploitation Windows 10 64 bits et sur le système d’exploitation OS X 64 bits version 10.11.
 
@@ -188,8 +188,7 @@ Notez que vous pouvez déployer un déploiement autonome avec une bibliothèque 
 <a name="dotnet-restore-note"></a>
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-# <a name="see-also"></a>Voir aussi
+## <a name="see-also"></a>Voir aussi
 
-[Déploiement d’applications .NET Core](index.md)   
-[Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)   
-
+* [Déploiement d’applications .NET Core](index.md)
+* [Catalogue d’identificateurs de runtime (RID) .NET Core](../rid-catalog.md)

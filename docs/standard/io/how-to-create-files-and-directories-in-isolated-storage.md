@@ -17,11 +17,11 @@ ms.assetid: 2ca4d2a4-809b-4f00-bc08-bf4a64d3a5c3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08beb44fdb58ab1c1d53f70ac0653348b96fcb18
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227046"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638884"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a>Comment : créer des fichiers et des répertoires dans un stockage isolé
 Après avoir obtenu un magasin isolé, vous pouvez créer des répertoires et des fichiers pour le stockage des données. Dans un magasin, les noms de répertoires et de fichiers sont spécifiées par rapport à la racine du système de fichiers virtuel.  

@@ -4,18 +4,18 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: f7bd75ecdd85e49524ccdf67f3e59aa4be46bdce
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: 63576445a44df0c0bdbd22b263754bb3d2919963
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792411"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195619"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Test d’applications web et de services ASP.NET Core
 
 Les contrôleurs constituent l’élément central des services d’API ASP.NET Core et des applications web ASP.NET MVC. Par conséquent, vous devez être sûr qu’ils vont se comporter comme prévu avec votre application. Les tests automatisés peuvent vous donner cette confiance et détecter des erreurs avant la mise en production.
 
-Vous devez tester le comportement du contrôleur avec les entrées valides et non valides, ainsi que les réponses du contrôleur en fonction du résultat de l’opération qu’il effectue. Toutefois, vous devez effectuer ces types de tests pour vos microservices :
+Vous devez tester le comportement du contrôleur avec les entrées valides et non valides, ainsi que les réponses du contrôleur en fonction du résultat de l’opération qu’il effectue. Toutefois, vous devez avoir ces types de test pour vos microservices :
 
 -   Tests unitaires. Ces tests permettent de vérifier que les composants de l’application fonctionnent comme prévu. Les assertions testent l’API des composants.
 
@@ -31,9 +31,9 @@ Les tests unitaires impliquent le test d’une partie d’une application de fa�
 
 Quand vous procédez à des tests unitaires pour les actions de votre contrôleur, concentrez-vous uniquement sur leur comportement. Les tests unitaires d’un contrôleur évitent les éléments tels que les filtres, le routage ou la liaison de données. Comme ils ne s’occupent que d’un seul objet à la fois, les tests unitaires sont généralement simples à écrire et rapides à exécuter. Un ensemble de tests unitaires bien écrits peut être exécuté fréquemment sans engendrer une surcharge importante.
 
-Les tests unitaires sont implémentés selon les frameworks de tests comme xUnit.net, MSTest, Moq ou NUnit. Pour l’exemple d’application eShopOnContainers, nous utilisons XUnit.
+Les tests unitaires sont implémentés selon les frameworks de tests comme xUnit.net, MSTest, Moq ou NUnit. Pour l’exemple d’application eShopOnContainers, nous utilisons xUnit.
 
-Lorsque vous écrivez un test unitaire pour un contrôleur d’API web, vous instanciez la classe de contrôleur directement à l’aide du mot clé new dans du code C\#, pour que le test s’exécute aussi rapidement que possible. L’exemple suivant montre comment effectuer cette opération lorsque vous utilisez [XUnit](https://xunit.github.io/) comme framework de tests.
+Lorsque vous écrivez un test unitaire pour un contrôleur d’API web, vous instanciez la classe de contrôleur directement à l’aide du mot clé new dans du code C\#, pour que le test s’exécute aussi rapidement que possible. L’exemple suivant montre comment effectuer cette opération en utilisant [xUnit](https://xunit.github.io/) comme framework de tests.
 
 ```csharp
 [Fact]

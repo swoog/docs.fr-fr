@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, private constructors
 - private constructors [C#]
 ms.assetid: 29eeaa7d-8d81-453c-94b9-0e2800172621
-ms.openlocfilehash: e8f1f097a62f022d305987800e89353b038f42ae
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1338a6efbe03522093899009178b6f31e558d8dd
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244463"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45646994"
 ---
 # <a name="private-constructors-c-programming-guide"></a>Constructeurs privés (Guide de programmation C#)
 Un constructeur privé est un constructeur d’instance spécial. Il est généralement utilisé dans les classes qui contiennent uniquement des membres statiques. Si une classe a un ou plusieurs constructeurs privés, mais n’a aucun constructeur public, les autres classes (à l’exception des classes imbriquées) ne peuvent pas créer d’instances de cette classe. Exemple :  
@@ -33,10 +33,11 @@ Un constructeur privé est un constructeur d’instance spécial. Il est génér
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [public](../../../csharp/language-reference/keywords/public.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
+- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Finaliseurs](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)

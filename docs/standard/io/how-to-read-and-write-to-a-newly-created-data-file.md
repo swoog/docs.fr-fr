@@ -16,11 +16,11 @@ ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 65c56a11531f705b7e047e435ec575969d39a616
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187674"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592904"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Comment : lire et écrire dans un fichier de données créé récemment
 Les classes <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader?displayProperty=nameWithType> sont utilisées pour écrire et lire des données plutôt que des chaînes de caractères. L’exemple suivant montre comment écrire et lire des données dans un flux de fichier vide nommé `Test.data`. Après avoir créé le fichier de données dans le répertoire actif, les objets <xref:System.IO.BinaryWriter> et <xref:System.IO.BinaryReader> associés sont créés, et l’objet <xref:System.IO.BinaryWriter> est utilisé pour écrire les entiers de 0 à 10 dans `Test.data`, ce qui laisse le pointeur de fichier à la fin du fichier. Après avoir replacé le pointeur de fichier au début, l’objet <xref:System.IO.BinaryReader> lit le contenu spécifié.  

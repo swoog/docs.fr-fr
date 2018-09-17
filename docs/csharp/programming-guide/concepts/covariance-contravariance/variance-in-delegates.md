@@ -3,11 +3,11 @@ title: Variance dans les délégués (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
 ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208672"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45592164"
 ---
 # <a name="variance-in-delegates-c"></a>Variance dans les délégués (C#)
 .NET Framework 3.5 a introduit la prise en charge de la variance pour faire correspondre les signatures de méthode aux types délégués pour tous les délégués dans C#. Cela signifie que vous pouvez assigner aux délégués non seulement les méthodes ayant des signatures correspondantes, mais également des méthodes qui retournent des types plus dérivés (covariance) ou qui acceptent des paramètres ayant des types moins dérivés (contravariance) que ceux spécifiés par le type délégué. Cela inclut à la fois des délégués génériques et non génériques.  

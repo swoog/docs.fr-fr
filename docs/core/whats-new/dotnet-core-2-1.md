@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités de .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 2599908c81cbe046889778bbdf7aeb9f8272b215
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43392847"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209574"
 ---
 # <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
 
@@ -121,6 +121,7 @@ La publication autonome s’appuie sur les versions de runtime de NuGet.org. Vou
 
 À l’aide du Kit de développement logiciel .NET Core 2.0, les applications autonomes sont publiées avec le runtime .NET Core 2.0.0, sauf si une version différente est spécifiée via la propriété `RuntimeFrameworkVersion`. Avec ce nouveau comportement, vous n’aurez plus besoin de définir cette propriété afin de sélectionner une version de runtime ultérieure pour une application autonome. Dorénavant, l’approche la plus simple consiste à toujours publier avec le Kit de développement .NET Core 2.1 (2.1.300).
 
+Pour plus d’informations, consultez [Restauration par progression du runtime de déploiement autonome](../deploying/runtime-patch-selection.md).
 ## <a name="windows-compatibility-pack"></a>Pack de compatibilité Windows
 
 Lorsque vous portez du code existant de .NET Framework vers .NET Core, vous pouvez utiliser le [pack de compatibilité Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Il permet d’accéder aux plus de 20 000 API disponibles dans .NET Core. Ces API incluent les types dans l’espace de noms <xref:System.Drawing?displayProperty=nameWithType>, la classe <xref:System.Diagnostics.EventLog>, WMI, les compteurs de performances, les services Windows, ainsi que les types et membres de registre Windows.

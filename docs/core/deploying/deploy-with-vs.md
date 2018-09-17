@@ -3,13 +3,16 @@ title: Déploiement d’applications .NET Core avec Visual Studio
 description: Découvrir comment déployer des applications .NET Core avec Visual Studio
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: 2829bb5a2f5857f6124e5c1f78f5247fe8d1f552
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.date: 09/03/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407447"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227738"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Déploiement d’applications .NET Core avec Visual Studio
 
@@ -30,13 +33,14 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
 
 1. créer le projet ;
 
-   Sélectionnez **Fichier** > **Nouveau** > **Projet**. Dans la boîte de dialogue **Nouveau projet**, sélectionnez **.NET Core** dans le volet des types de projets **Installé**, puis sélectionnez le modèle **Application console (.NET Core)** dans le volet central. Entrez un nom de projet, tel que « FDD », dans la zone de texte **Nom**. Sélectionnez le bouton **OK**.
+   Sélectionnez **Fichier** > **Nouveau** > **Projet**. Dans la boîte de dialogue **Nouveau projet**, développez les catégories de projet de votre langage (C# ou Visual Basic) au sein du volet des types de projet **Installé**, choisissez **.NET Core**, puis sélectionnez le modèle **Application console (.NET Core)** dans le volet central. Entrez un nom de projet, tel que « FDD », dans la zone de texte **Nom**. Sélectionnez le bouton **OK**.
 
 1. Ajoutez le code source de l’application.
 
-   Ouvrez le fichier *Program.cs* dans l’éditeur et remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
+   Ouvrez le fichier *Program.cs* ou *Program.vb* dans l’éditeur, puis remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Créez une build Debug de votre application.
 
@@ -54,7 +58,7 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
 
       1. L’onglet **Publier** affiche maintenant un seul profil, **FolderProfile**. Les paramètres de configuration du profil sont affichés dans la section **Résumé** de l’onglet.
 
-   Les fichiers résultants sont placés dans un répertoire nommé `PublishOutput` qui se trouve dans un sous-répertoire du sous-répertoire *.\bin\release* de votre projet.
+   Les fichiers résultants sont placés dans un répertoire nommé `Publish` sur Windows (`publish` sur les systèmes Unix), qui se trouve dans un sous-répertoire du sous-répertoire *.\bin\release\netcoreapp2.1* de votre projet.
 
 En même temps que les fichiers de votre application, le processus de publication produit un fichier de base de données du programme (.pdb) qui contient des informations de débogage sur votre application. Le fichier est surtout utile pour le débogage d’exceptions. Vous pouvez choisir de ne pas l’empaqueter avec les fichiers de votre application. Vous devez toutefois l’enregistrer au cas où vous souhaiteriez déboguer la build Release de votre application.
 
@@ -76,17 +80,40 @@ Notez qu’un déploiement dépendant du framework avec des dépendances tierces
 
 ## <a name="simpleSelf"></a> Déploiement autonome sans dépendances tierces
 
-L’exécution d’un déploiement autonome sans aucune dépendance tierce implique la création du projet, la modification du fichier *csproj*, la génération, le test et la publication de l’application. Un exemple simple écrit en C# illustre le processus.
+L’exécution d’un déploiement autonome sans aucune dépendance tierce implique la création du projet, la modification du fichier *csproj*, la génération, le test et la publication de l’application. Un exemple simple écrit en C# illustre le processus. Commencez par créer, coder et tester votre projet comme pour un déploiement dépendant du framework :
 
 1. créer le projet ;
 
-   Sélectionnez **Fichier** > **Nouveau** > **Projet**. Dans la boîte de dialogue **Ajouter un nouveau projet**, sélectionnez **.NET Core** dans le volet des types de projets **Installé**, puis sélectionnez le modèle **Application console (.NET Core)** dans le volet central. Entrez un nom de projet, tel que « SCD », dans la zone de texte **Nom**, puis sélectionnez le bouton **OK**.
+   Sélectionnez **Fichier** > **Nouveau** > **Projet**. Dans la boîte de dialogue **Nouveau projet**, développez les catégories de projet de votre langage (C# ou Visual Basic) au sein du volet des types de projet **Installé**, choisissez **.NET Core**, puis sélectionnez le modèle **Application console (.NET Core)** dans le volet central. Entrez un nom de projet, tel que « SCD », dans la zone de texte **Nom**, puis sélectionnez le bouton **OK**.
 
 1. Ajoutez le code source de l’application.
 
-   Ouvrez le fichier *Program.cs* dans votre éditeur et remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
+   Ouvrez le fichier *Program.cs* dans l’éditeur, puis remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+
+1. Déterminez si vous souhaitez utiliser le mode invariant de globalisation.
+
+   En particulier, si votre application cible Linux, vous pouvez réduire la taille totale de votre déploiement en tirant parti du [mode invariant de globalisation](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Le mode invariant de globalisation est utile pour les applications qui ne sont pas globalement compatibles et qui peuvent utiliser les conventions de mise en forme, les conventions de casse et la comparaison de chaînes, ainsi que l’ordre de tri de la [culture invariante](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Pour activer le mode invariant, cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Modifier SCD.csproj** ou **Modifier SCD.vbproj**. Ajoutez ensuite les lignes en surbrillance suivantes au fichier :
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
+1. Créez une build Debug de votre application.
+
+   Sélectionnez **Générer** > **Générer la solution**. Vous pouvez également compiler et exécuter la build Debug de votre application en sélectionnant **Déboguer** > **Démarrer le débogage**. Cette étape de débogage vous permet d’identifier les problèmes de votre application quand elle s’exécute sur la plateforme hôte. Vous devez tout de même la tester sur chacune des plateformes cibles.
+
+   Si vous avez activé le mode invariant de globalisation, vérifiez si l’absence de données relatives à la culture convient à votre application.
+
+Une fois le débogage effectué, vous pouvez publier votre déploiement autonome :
+
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 et versions antérieures](#tab/vs156)
+
+Après avoir débogué et testé le programme, créez les fichiers à déployer avec votre application pour chaque plateforme ciblée.
+
+Pour publier votre application à partir de Visual Studio, effectuez les étapes suivantes :
 
 1. Définissez les plateformes ciblées par votre application.
 
@@ -96,17 +123,13 @@ L’exécution d’un déploiement autonome sans aucune dépendance tierce impli
 
    Dans l’exemple suivant, l’application s’exécute sur les systèmes d’exploitation Windows 10 64 bits et sur le système d’exploitation OS X 64 bits version 10.11.
 
-```xml
-<PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-</PropertyGroup>
-```
+   ```xml
+   <PropertyGroup>
+      <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
+   </PropertyGroup>
+   ```
 
    Notez que l’élément `<RuntimeIdentifiers>` peut être placé dans n’importe quelle section `<PropertyGroup>` de votre fichier *csproj*. Un exemple complet de fichier *csproj* figure plus loin dans cette section.
-
-1. Créez une build Debug de votre application.
-
-   Sélectionnez **Générer** > **Générer la solution**. Vous pouvez également compiler et exécuter la build Debug de votre application en sélectionnant **Déboguer** > **Démarrer le débogage**.
 
 1. Publiez votre application.
 
@@ -146,11 +169,97 @@ Voici le fichier *csproj* complet pour ce projet.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 et versions ultérieures](#tab/vs157)
+
+Après avoir débogué et testé le programme, créez les fichiers à déployer avec votre application pour chaque plateforme ciblée. Cela implique la création d’un profil distinct pour chaque plateforme cible.
+
+Pour chaque plateforme ciblée par votre application, effectuez ce qui suit :
+
+1. Créez un profil pour la plateforme cible.
+
+   S’il s’agit du premier profil que vous créez, cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Publier**.
+
+   Si vous avez déjà créé un profil, cliquez avec le bouton droit sur le projet pour ouvrir la boîte de dialogue **Publier**, le cas échéant. Sélectionnez ensuite **Nouveau profil**.
+
+   La boîte de dialogue **Choisir une cible de publication** s’ouvre.
+  
+1. Sélectionnez l’emplacement où Visual Studio publie votre application.
+
+   Si vous publiez uniquement sur une seule plateforme, vous pouvez accepter la valeur par défaut de la zone de texte **Choisir un dossier**. Cela vous permet de publier le déploiement dépendant du framework de votre application sur le répertoire *\<répertoire-projet>\bin\Release\netcoreapp2.1\publish\*.
+
+   Si vous publiez sur plusieurs plateformes, ajoutez une chaîne identifiant la plateforme cible. Par exemple, si vous ajoutez la chaîne « linux » au chemin de fichier, Visual Studio publie le déploiement dépendant du framework de votre application sur *\<répertoire-projet>\bin\Release\netcoreapp2.1\publish\linux*.
+
+1. Pour créer le profil, sélectionnez l’icône de liste déroulante en regard du bouton **Publier**, puis sélectionnez **Créer un profil**. Sélectionnez ensuite le bouton **Créer un profil** pour créer le profil.
+
+1. Indiquez que vous publiez un déploiement autonome, et définissez la plateforme ciblée par votre application.
+
+   1. Dans la boîte de dialogue **Publier**, sélectionnez le lien **Configurer** pour ouvrir la boîte de dialogue **Paramètres du profil**.
+
+   1. Sélectionnez **Autonome** dans la zone de liste **Mode de déploiement**.
+
+   1. Dans la zone de liste **Runtime cible**, sélectionnez l’une des plateformes ciblées par votre application.
+
+   1. Sélectionnez **Enregistrer** pour faire accepter vos changements, puis fermez la boîte de dialogue.
+
+1. Nommez votre profil.
+
+   1. Sélectionnez **Actions** > **Renommer le profil** pour nommer le profil.
+
+   2. Attribuez au profil un nom qui identifie la plateforme cible, puis sélectionnez **Enregistrer*.
+
+Répétez ces étapes pour définir les plateformes cibles supplémentaires ciblées par votre application.
+
+Vous avez configuré vos profils et êtes maintenant prêt à publier votre application. Pour ce faire :
+
+   1. Si la fenêtre **Publier** n’est pas ouverte, cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Publier**.
+
+   2. Sélectionnez le profil à publier, puis sélectionnez **Publier**. Procédez ainsi pour chaque profil à publier.
+
+   Notez que chaque emplacement cible (dans notre exemple, bin\release\netcoreapp2.1\publish\\*nom-profil* contient l’ensemble complet des fichiers (vos fichiers d’application et tous les fichiers .NET Core).) nécessaires au lancement de votre application.
+
+En même temps que les fichiers de votre application, le processus de publication produit un fichier de base de données du programme (.pdb) qui contient des informations de débogage sur votre application. Le fichier est surtout utile pour le débogage d’exceptions. Vous pouvez choisir de ne pas l’empaqueter avec les fichiers de votre application. Vous devez toutefois l’enregistrer au cas où vous souhaiteriez déboguer la build Release de votre application.
+
+Déployez les fichiers publiés de la façon qui vous convient. Par exemple, vous pouvez les empaqueter dans un fichier Zip, utiliser une simple commande `copy` ou les déployer avec n’importe quel package d’installation de votre choix.
+
+Voici le fichier *csproj* complet pour ce projet.
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+</Project>
+```
+
+De plus, Visual Studio crée un profil de publication distinct (\*.pubxml) pour chaque plateforme que vous ciblez. Par exemple, le fichier de notre profil linux (linux.pubxml) se présente comme suit :
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PublishProtocol>FileSystem</PublishProtocol>
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PublishDir>bin\Release\netcoreapp2.1\publish\linux</PublishDir>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <_IsPortable>false</_IsPortable>
+  </PropertyGroup>
+</Project>
+```
+
+---
 
 ## <a name="self-contained-deployment-with-third-party-dependencies"></a>Déploiement autonome avec des dépendances tierces
 
@@ -164,11 +273,13 @@ L’exécution d’un déploiement autonome avec une ou plusieurs dépendances t
 
 Voici le fichier *csproj* complet pour ce projet :
 
+# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 et versions antérieures](#tab/vs156)
+
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>
@@ -176,6 +287,22 @@ Voici le fichier *csproj* complet pour ce projet :
   </ItemGroup>
 </Project>
 ```
+
+# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 et versions ultérieures](#tab/vs157)
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+</Project>
+```
+
+---
 
 Quand vous déployez votre application, toutes les dépendances tierces utilisées dans votre application sont également incluses avec vos fichiers d’application. Il n’est pas nécessaire que les bibliothèques tierces soient déjà présentes sur le système sur lequel l’application s’exécute.
 

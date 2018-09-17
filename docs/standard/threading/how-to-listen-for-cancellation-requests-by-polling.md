@@ -11,11 +11,11 @@ ms.assetid: c7f2f022-d08e-4e00-b4eb-ae84844cb1bc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1794b47db87f636cc2ccdf2eecb9e7ca334ae659
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266850"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45624970"
 ---
 # <a name="how-to-listen-for-cancellation-requests-by-polling"></a>Comment : écouter les demandes d'annulation par l'interrogation
 L’exemple suivant montre une manière dont un code utilisateur peut interroger un jeton d’annulation à intervalles réguliers pour voir si une annulation a été demandée à partir du thread appelant. Cet exemple utilise le type <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, mais le même modèle s’applique aux opérations asynchrones créées directement par le type <xref:System.Threading.ThreadPool?displayProperty=nameWithType> ou par le type <xref:System.Threading.Thread?displayProperty=nameWithType>.  

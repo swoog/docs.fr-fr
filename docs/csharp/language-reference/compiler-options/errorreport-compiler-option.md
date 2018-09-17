@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: dcbb9467da87a82147176bb0feb00383aff2c77f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44198372"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609880"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (Options du compilateur C#)
 Cette option fournit un moyen pratique de signaler une erreur interne du compilateur C# à Microsoft.  

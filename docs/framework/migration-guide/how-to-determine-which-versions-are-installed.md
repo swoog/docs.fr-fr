@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391636"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44222738"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Guide pratique pour déterminer les versions du .NET Framework installées
 
@@ -94,7 +94,7 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
     |379893|.NET Framework 4.5.2|
     |Sur les systèmes Windows 10 uniquement : 393295<br /><br /> Sur toutes les autres versions de système d'exploitation : 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
     |Sur les systèmes Windows 10 avec la mise à jour de novembre uniquement : 394254<br /><br /> Sur toutes les autres versions de système d'exploitation : 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Sur les systèmes Windows 10 avec la mise à jour anniversaire uniquement : 394802<br /><br /> Sur toutes les autres versions de système d’exploitation : 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Sur les systèmes Mise à jour anniversaire Windows 10 et Windows Server 2016 : 394802<br /><br /> Sur toutes les autres versions de système d’exploitation : 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Sur les systèmes Windows 10 Creators Update uniquement : 460798<br/><br/> Sur toutes les autres versions du système d’exploitation : 460805 | .NET Framework 4.7 |
     |Sur les systèmes Windows 10 Fall Creators Update uniquement : 461308<br/><br/> Sur toutes les autres versions de système d’exploitation : 461310 | .NET Framework 4.7.1 |
     |Sur les systèmes Windows 10 avec la mise à jour d’avril 2018 uniquement : 461808<br/><br/> Sur toutes les autres versions de système d’exploitation : 461814| .NET Framework 4.7.2 |
@@ -142,7 +142,7 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
     |.NET Framework 4.6 installé sur toutes les autres versions du système d’exploitation Windows|393297|
     |.NET Framework 4.6.1 installé sur Windows 10|394254|
     |.NET Framework 4.6.1 installé sur toutes les autres versions du système d’exploitation Windows|394271|
-    |.NET Framework 4.6.2 installé sur la Mise à jour anniversaire Windows 10|394802|
+    |.NET Framework 4.6.2 installé sur la Mise à jour anniversaire Windows 10 et sur Windows Server 2016|394802|
     |.NET Framework 4.6.2 installé sur toutes les autres versions du système d’exploitation Windows|394806|
     |.NET Framework 4.7 est installé sur Windows 10 Creators Update|460798|
     |.NET Framework 4.7 installé sur toutes les autres versions du système d’exploitation Windows|460805|

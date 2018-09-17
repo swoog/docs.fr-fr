@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264949"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609682"
 ---
 # <a name="weak-references"></a>Références faibles
 Le Garbage collector ne peut pas collecter un objet actuellement utilisé par une application, tandis que le code de l’application peut accéder à cet objet. On dit de l’application qu’elle a une référence forte à l’objet.  

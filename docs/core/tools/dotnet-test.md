@@ -4,12 +4,12 @@ description: La commande dotnet test est utilisée pour exécuter des tests unit
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 2bee78ca44026f28c51fac3bcf87d976b53e48a7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7946196b27489870da1c16b15cbf5f078ae89c61
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390688"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44137198"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -251,6 +251,10 @@ Exécutez les tests du projet dans le répertoire actif :
 Exécuter les tests dans le projet `test1` :
 
 `dotnet test ~/projects/test1/test1.csproj`
+
+Exécutez les tests du projet dans le répertoire actif et générez un fichier de résultats des tests au format trx :
+
+`dotnet test --logger:trx`
 
 ## <a name="filter-option-details"></a>Détails de l’option de filtre
 

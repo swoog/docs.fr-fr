@@ -3,13 +3,13 @@ title: Commande dotnet new - Interface CLI .NET Core
 description: La commande dotnet new crée des projets .NET Core basés sur le modèle spécifié.
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207766"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512553"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,25 +22,31 @@ ms.locfileid: "36207766"
 ## <a name="synopsis"></a>Résumé
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Description
@@ -284,9 +290,11 @@ Chaque modèle de projet peut présenter d’autres options disponibles. Les mod
 
 **web**
 
-`--use-launch-settings` : inclut *launchSettings.json* dans la sortie de modèle générée.
+`--exclude-launch-settings` - Exclure *launchSettings.json* du modèle généré.
 
 `--no-restore` - N’exécute aucune restauration implicite pendant la création du projet.
+
+`--no-https` - Le projet ne nécessite pas le protocole HTTPS. Cette option s’applique uniquement si `IndividualAuth` ou `OrganizationalAuth` ne sont pas utilisés.
 
 **webapi**
 
@@ -311,11 +319,13 @@ Chaque modèle de projet peut présenter d’autres options disponibles. Les mod
 
 `-r|--org-read-access` : accorde à cette application un accès en lecture au répertoire. S’applique uniquement à l’authentification `SingleOrg` ou `MultiOrg`.
 
-`--use-launch-settings` : inclut *launchSettings.json* dans la sortie de modèle générée.
+`--exclude-launch-settings` - Exclure *launchSettings.json* du modèle généré.
 
-`-uld|--use-local-db` : spécifie que la base de données locale doit être utilisée à la place de SQLite. S’applique uniquement à l’authentification `Individual` ou `IndividualB2C`.
+`-uld|--use-local-db` : spécifie que la base de données locale doit être utilisée à la place de SQLite. S’applique uniquement à l’authentification `Individual` ou `IndividualB2C`.
 
 `--no-restore` - N’exécute aucune restauration implicite pendant la création du projet.
+
+`--no-https` - Le projet ne nécessite pas le protocole HTTPS. `app.UseHsts` et `app.UseHttpsRedirection` ne sont pas ajoutés à `Startup.Configure`. Cette option s’applique uniquement si `Individual`, `IndividualB2C`, `SingleOrg` ou `MultiOrg` ne sont pas utilisés.
 
 **mvc, razor**
 
@@ -348,13 +358,15 @@ Chaque modèle de projet peut présenter d’autres options disponibles. Les mod
 
 `-r|--org-read-access` : accorde à cette application un accès en lecture au répertoire. S’applique uniquement à l’authentification `SingleOrg` ou `MultiOrg`.
 
-`--use-launch-settings` : inclut *launchSettings.json* dans la sortie de modèle générée.
+`--exclude-launch-settings` - Exclure *launchSettings.json* du modèle généré.
 
 `--use-browserlink` : inclut BrowserLink dans le projet.
 
 `-uld|--use-local-db` : spécifie que la base de données locale doit être utilisée à la place de SQLite. S’applique uniquement à l’authentification `Individual` ou `IndividualB2C`.
 
 `--no-restore` - N’exécute aucune restauration implicite pendant la création du projet.
+
+`--no-https` - Le projet ne nécessite pas le protocole HTTPS. `app.UseHsts` et `app.UseHttpsRedirection` ne sont pas ajoutés à `Startup.Configure`. Cette option s’applique uniquement si `Individual`, `IndividualB2C`, `SingleOrg` ou `MultiOrg` ne sont pas utilisés.
 
 **page**
 
@@ -524,7 +536,7 @@ Créez un fichier *global.json* dans le répertoire actif en définissant la ver
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles personnalisés pour dotnet new](custom-templates.md)  
-[Créer un modèle personnalisé pour dotnet new](~/docs/core/tutorials/create-custom-template.md)  
-[Dépôt GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
-[Modèles disponibles pour dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [Modèles personnalisés pour dotnet new](custom-templates.md)  
+* [Créer un modèle personnalisé pour dotnet new](~/docs/core/tutorials/create-custom-template.md)  
+* [Dépôt GitHub dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)  
+* [Modèles disponibles pour dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

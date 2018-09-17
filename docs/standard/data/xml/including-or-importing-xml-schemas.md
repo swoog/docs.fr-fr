@@ -10,11 +10,11 @@ ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266042"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592073"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Inclusion ou importation de schémas XML
 Un schéma XML peut contenir des éléments `<xs:import />`, `<xs:include />` et `<xs:redefine />`. Ces éléments de schéma réfèrent à d'autres schémas XML qui peuvent être utilisés pour compléter la structure du schéma où ils sont inclus ou importés. Les classes <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> et <xref:System.Xml.Schema.XmlSchemaRedefine> sont mappées à ces éléments dans l'API SOM (Schema Object Model).  

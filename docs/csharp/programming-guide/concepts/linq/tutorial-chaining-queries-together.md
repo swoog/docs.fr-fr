@@ -2,12 +2,12 @@
 title: 'Didacticiel : chaînage de requêtes (C#)'
 ms.date: 07/20/2015
 ms.assetid: 44f54444-c4c5-4c23-9d19-986b957b8eda
-ms.openlocfilehash: 8411d8577c192e2aa1a43bea47644fe6bdc09e88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cab012a6ae618bd731c26bc1a002c144b84d2169
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33323708"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609630"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a>Didacticiel : chaînage de requêtes (C#)
 Ce didacticiel illustre le modèle de traitement lorsque vous chaînez des requêtes. Le chaînage de requêtes est un aspect essentiel de l'écriture des transformations fonctionnelles. Il est important de comprendre exactement comment fonctionnent les requêtes chaînées.  
@@ -24,5 +24,6 @@ Ce didacticiel illustre le modèle de traitement lorsque vous chaînez des requ�
 |[Matérialisation intermédiaire (C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)|Identifie et illustre la sémantique de matérialisation intermédiaire.|  
 |[Chaînage d’opérateurs de requête standard (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)|Décrit la sémantique différée des opérateurs de requête standard.|  
   
-## <a name="see-also"></a>Voir aussi  
- [Transformations fonctionnelles pures de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Transformations fonctionnelles pures de données XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)

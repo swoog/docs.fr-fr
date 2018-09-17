@@ -7,17 +7,17 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 55ff87ef51f00a803276083052d4d86960e702e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332853"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521751"
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Guide pratique pour convertir une chaîne en nombre (Guide de programmation C#)
 Vous pouvez convertir une [chaîne](../../../csharp/language-reference/keywords/string.md) en nombre en utilisant des méthodes dans la classe <xref:System.Convert> ou en utilisant la méthode `TryParse` des différents types numériques (int, long, float, etc.).  
   
- Si vous avez une chaîne, il est légèrement plus efficace et direct d'appeler une méthode `TryParse` (par exemple, `int.TryParse("11")`).  L'utilisation d'une méthode `Convert` s'avère plus utile pour les objets généraux qui implémentent <xref:System.IConvertible>.  
+ Si vous avez une chaîne, il est légèrement plus efficace et direct d’appeler une méthode `TryParse` (par exemple [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)).  L'utilisation d'une méthode <xref:System.Convert> s'avère plus utile pour les objets généraux qui implémentent <xref:System.IConvertible>.  
   
  Vous pouvez utiliser les méthodes `Parse` ou `TryParse` sur le type numérique que doit contenir la chaîne, notamment le type <xref:System.Int32?displayProperty=nameWithType>.  La méthode <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> utilise <xref:System.Int32.Parse%2A> en interne.  Si le format de la chaîne n’est pas valide, `Parse` lève une exception, tandis que `TryParse` retourne [false](../../../csharp/language-reference/keywords/false.md).  
   
@@ -53,7 +53,8 @@ Vous pouvez convertir une [chaîne](../../../csharp/language-reference/keywords/
  [!code-csharp[csProgGuideTypes#5555](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_1.cs)]  
 [!code-csharp[csProgGuideTypes#24](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/how-to-convert-a-string-to-a-number_7.cs)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Types](../../../csharp/programming-guide/types/index.md)  
- [Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
- [Utilitaire de mise en forme .NET Framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>Voir aussi
+
+- [Types](../../../csharp/programming-guide/types/index.md)  
+- [Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+- [Utilitaire de mise en forme .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

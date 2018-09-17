@@ -3,11 +3,11 @@ title: Guide pratique pour utiliser des arborescences d’expressions dans le bu
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
 ms.openlocfilehash: e3afbea647bb429d25f41f37fde268565bc5bf8a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179219"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591410"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>Guide pratique pour utiliser des arborescences d’expressions dans le but de générer des requêtes dynamiques (C#)
 Dans LINQ, des arborescences d’expressions sont utilisées pour représenter des requêtes structurées qui ciblent des sources de données qui implémentent <xref:System.Linq.IQueryable%601>. Par exemple, le fournisseur LINQ implémente l’interface <xref:System.Linq.IQueryable%601> pour interroger des magasins de données relationnelles. Le compilateur C# compile les requêtes qui ciblent de telles sources de données dans du code qui génère une arborescence d’expressions lors de l’exécution. Le fournisseur de requêtes peut ensuite parcourir la structure de données de l’arborescence d’expressions et la traduire en un langage de requête qui convienne à la source de données.  

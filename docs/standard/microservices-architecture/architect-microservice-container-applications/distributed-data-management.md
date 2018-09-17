@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7574a28fc3e8eb3288a81fa5a7ad26f34f1a3eb9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44268849"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45646218"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problématiques et solutions pour la gestion des données distribuées
 
@@ -19,7 +19,7 @@ Définir les limites d’un microservice est sans doute la première problémati
 
 Vous devez d’abord vous concentrer sur les modèles de domaine logique de l’application et ses données associées. Vous devez essayer d’identifier les éléments isolés découplés dans les données et les différents contextes au sein de la même application. Chaque contexte peut avoir un langage métier différent (des termes métier différents). Les contextes doivent être définis et gérés indépendamment. Les termes et les entités utilisés dans ces différents contextes peuvent sembler similaires, mais vous pouvez découvrir que dans un contexte spécifique, un concept métier d’un contexte est utilisé à des fins différentes dans un autre contexte, et qu’il peut même porter un autre nom. Par exemple, un utilisateur peut s’appeler un utilisateur dans un contexte d’identité ou d’appartenance, un client dans un contexte de gestion de la relation clientèle, un acheteur dans un contexte de prise de commande, etc.
 
-La façon dont vous identifiez les limites entre plusieurs contextes d’application avec un domaine différent pour chaque contexte correspond exactement à la façon dont vous pouvez identifier les limites pour chaque microservice métier, et son modèle de domaine et ses données associés. Vous essayez toujours de minimiser le couplage entre ces microservices. Ce guide présente plus en détails cette identification et cette conception du modèle de domaine plus loin dans la section [Identification des limites du modèle de domaine pour chaque microservice](#identifying-domain-model-boundaries-for-each-microservice).
+La façon dont vous identifiez les limites entre plusieurs contextes d’application avec un domaine différent pour chaque contexte correspond exactement à la façon dont vous pouvez identifier les limites pour chaque microservice métier, et son modèle de domaine et ses données associés. Vous essayez toujours de minimiser le couplage entre ces microservices. Ce guide présente plus en détails cette identification et cette conception du modèle de domaine plus loin dans la section [Identification des limites du modèle de domaine pour chaque microservice](identify-microservice-domain-model-boundaries.md).
 
 ## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Problématique \#2 : Comment créer des requêtes qui extraient des données de plusieurs microservices
 
@@ -57,7 +57,7 @@ Comme le montre le [théorème CAP](https://en.wikipedia.org/wiki/CAP_theorem), 
 
 En outre, les transactions de style ACID ou avec validation en deux phases ne sont pas seulement en opposition avec les principes des microservices : la plupart des bases de données NoSQL (comme Azure Cosmos DB, MongoDB, etc.) ne prennent pas en charge les transactions avec validation en deux phases. Cependant, conserver la cohérence des données entre les services et les bases de données est fondamental. Cette problématique concerne aussi la façon de propager les modifications entre plusieurs microservices quand certaines données doivent être redondantes, par exemple quand vous devez avoir le nom ou la description du produit dans le microservice Catalog et dans le microservice Basket.
 
-Une bonne solution pour résoudre ce problème est d’utiliser la cohérence à terme entre les microservices, articulée autour d’une communication pilotée par les événements et d’un système de publication-abonnement. Ces rubriques sont traitées dans la section [Communication asynchrone pilotée par les événements](#async_event_driven_communication) plus loin dans ce guide.
+Une bonne solution pour résoudre ce problème est d’utiliser la cohérence à terme entre les microservices, articulée autour d’une communication pilotée par les événements et d’un système de publication-abonnement. Ces rubriques sont traitées dans la section [Communication asynchrone pilotée par les événements](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) plus loin dans ce guide.
 
 ## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Problématique \#4 : Comment concevoir la communication entre les limites des microservices
 

@@ -3,11 +3,11 @@ title: Guide pratique pour écrire une requête qui recherche des éléments en 
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
 ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210115"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45593307"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Guide pratique pour écrire une requête qui recherche des éléments en fonction du contexte (C#)
 Parfois, vous devez écrire une requête qui sélectionne des éléments en fonction de leur contexte. Vous souhaiterez peut-être filtrer en fonction des éléments frères qui précèdent ou qui suivent. Vous souhaiterez peut-être filtrer en fonction des éléments enfants ou ancêtres.  

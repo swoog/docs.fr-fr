@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933603"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861300"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formats de chemin de fichier sur les systèmes Windows
 
@@ -117,7 +117,7 @@ Presque tous les chemins passés aux API Windows sont normalisés. Durant la nor
 - Évalue les composants des répertoires relatifs (`.` pour le répertoire actif et `..` pour le répertoire parent).
 - Supprime certains caractères.
 
-Cette normalisation se produit implicitement, mais vous pouvez l’effectuer explicitement en appelant la méthode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, qui inclut dans un wrapper un appel à la [fonction GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx). Vous pouvez également appeler directement la [fonction GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) Windows à l’aide de P/Invoke. Vous pouvez également appeler le 
+Cette normalisation se produit implicitement, mais vous pouvez l’effectuer explicitement en appelant la méthode <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, qui inclut dans un wrapper un appel à la fonction [GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Vous pouvez également appeler la fonction Windows [GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) directement via P/Invoke. Vous pouvez également appeler le 
 
 ### <a name="identifying-the-path"></a>Identification du chemin
 

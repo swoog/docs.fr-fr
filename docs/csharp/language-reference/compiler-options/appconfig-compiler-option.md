@@ -9,11 +9,11 @@ helpviewer_keywords:
 - appconfig compiler option [C#]
 ms.assetid: 1cdbcbcc-7813-4010-b5b8-e67c107c5a98
 ms.openlocfilehash: 33f79967c34736f2175e0bb6e2b5b88d211545c2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44172705"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45638718"
 ---
 # <a name="-appconfig-c-compiler-options"></a>-appconfig (Options du compilateur C#)
 L’option du compilateur **-appconfig** permet à une application C# d’indiquer l’emplacement du fichier de configuration de l’application (app.config) d’un assembly au CLR (Common Language Runtime) au moment de la liaison de l’assembly.  

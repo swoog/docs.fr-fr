@@ -3,11 +3,11 @@ title: Utilisation de la variance dans les interfaces pour les collections gén�
 ms.date: 07/20/2015
 ms.assetid: a44f0708-10fa-4c76-82cd-daa6e6b31e8e
 ms.openlocfilehash: 66a1eac33d5f715f52bd83c43bac4452df41aabd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196944"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45596539"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a>Utilisation de la variance dans les interfaces pour les collections génériques (C#)
 Une interface covariante permet à ses méthodes de retourner des types plus dérivés que ceux spécifiés dans l’interface. Une interface contravariante permet à ses méthodes d’accepter des paramètres de types moins dérivés que ceux spécifiés dans l’interface.  

@@ -36,7 +36,7 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
   
  La principale exception réside dans le fait que les accolades ({ et }) ont de l’importance en XAML car ces caractères informent un processeur XAML qu’une séquence de caractères comprise entre les accolades doit être interprétée comme une extension du balisage. Pour plus d’informations sur les extensions de balisage, consultez [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
   
- Toutefois, vous pouvez toujours afficher les accolades comme des caractères littéraux en utilisant une séquence d'échappement propre à XAML plutôt qu'à XML. Pour plus d’informations, consultez [ {} séquence d’échappement - Extension de balisage](escape-sequence-markup-extension.md).  
+ Toutefois, vous pouvez toujours afficher les accolades comme des caractères littéraux en utilisant une séquence d'échappement propre à XAML plutôt qu'à XML. Pour plus d’informations, consultez [{} séquence d’échappement - Extension de balisage](escape-sequence-markup-extension.md).  
   
  Notez qu’une barre oblique inverse (\\) ne nécessite pas une séquence d’échappement lorsqu’elle est traitée en tant que chaîne.  
   
@@ -51,7 +51,7 @@ XAML utilise des entités de caractères définies en XML pour les caractères s
 |< (inférieur à)|\&lt;|Doit être utilisé pour une valeur d’attribut, mais \< est acceptable comme contenu d’un élément en tant que > ne la respecte pas.|  
 |" (guillemets droits)|\&quot;|Doit être utilisé pour une valeur d'attribut, mais le guillemet droit (") est acceptable comme contenu d'un élément. Notez que les valeurs d'attributs peuvent être placées entre un guillemet droit unique (') ou des guillemets droit (") ; le caractère qui apparaît en premier définit ce qui est inclus dans la valeur d'attribut, et l'autre guillemet peut ensuite être utilisé comme littéral dans la valeur.|  
 |' (guillemet droit unique)|\&apos;|Doit être utilisé pour une valeur d'attribut, mais le guillemet droit unique (') est acceptable comme contenu d'un élément. Notez que les valeurs d'attributs peuvent être placées entre un guillemet droit unique (') ou des guillemets droit (") ; le caractère qui apparaît en premier définit ce qui est inclus dans la valeur d'attribut, et l'autre guillemet peut ensuite être utilisé comme littéral dans la valeur.|  
-|(mappages de caractères numériques)|&#*[entier]* ; ou & #x *[hexa]*;|XAML prend en charge les mappages de caractères numériques dans de l'encodage actif.|  
+|(mappages de caractères numériques)|&#*[entier]* ; ou &#x *[hexa]*;|XAML prend en charge les mappages de caractères numériques dans de l'encodage actif.|  
 |(espace insécable)|&\#160 ; (en supposant que le codage UTF-8)|Pour les éléments de document dynamique ou les éléments qui acceptent du texte tels que le <xref:System.Windows.Controls.TextBox> WPF, les espaces insécables ne sont pas normalisés hors du balisage, même pour `xml:space="default"`. (Pour plus d’informations, consultez [blancs en XAML traitement](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md).)|  
   
 <a name="xml_comment_format"></a>   

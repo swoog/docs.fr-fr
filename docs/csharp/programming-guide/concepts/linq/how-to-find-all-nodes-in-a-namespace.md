@@ -3,11 +3,11 @@ title: Guide pratique pour rechercher tous les nœuds dans un espace de noms (C#
 ms.date: 07/20/2015
 ms.assetid: 3a38b913-a53e-4d0e-a19d-8782bffd3364
 ms.openlocfilehash: 0675795da7c190e6d105ac61027c28f161961099
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261549"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45613954"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-c"></a>Guide pratique pour rechercher tous les nœuds dans un espace de noms (C#)
 Vous pouvez filtrer sur l'espace de noms de chaque élément ou attribut afin de rechercher les nœuds dans cet espace de noms particulier.  

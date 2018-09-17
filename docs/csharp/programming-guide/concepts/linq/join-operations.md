@@ -3,11 +3,11 @@ title: Opérations de jointure (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
 ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270775"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45609996"
 ---
 # <a name="join-operations-c"></a>Opérations de jointure (C#)
 Une *jointure* de deux sources de données est l’association des objets d’une source de données aux objets qui partagent un attribut commun dans une autre source de données.  

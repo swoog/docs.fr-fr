@@ -18,11 +18,11 @@ ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225527"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45689312"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Comment : utiliser des canaux nommés pour la communication entre processus en réseau
 Les canaux nommés fournissent la communication entre un serveur de canaux et un ou plusieurs clients de canaux. Ils offrent plus de fonctionnalités que les canaux anonymes, qui fournissent la communication entre processus sur un ordinateur local. Les canaux nommés prennent en charge la communication en duplex intégrale sur un réseau et plusieurs instances de serveur, la communication basée sur message et l’emprunt d’identité du client, ce qui permet aux processus de connexion d’utiliser leur propre jeu d’autorisations sur des serveurs distants.  

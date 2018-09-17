@@ -9,11 +9,11 @@ ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9e02dd304893e4d9354144c5b412dfd145161c6e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44202048"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45596947"
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Sélection de nœuds à l’aide de la navigation XPath
 Le DOM (Document Object Model) XML contient des méthodes permettant d’utiliser la navigation du langage XPath (XML Path) pour demander des informations dans le DOM. Vous pouvez utiliser XPath pour rechercher un nœud simple spécifique ou tous les nœuds qui correspondent à certains critères.  
