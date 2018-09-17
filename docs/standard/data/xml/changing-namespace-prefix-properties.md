@@ -9,14 +9,14 @@ ms.assetid: d5c87cbe-4d69-429f-aad5-3103c2ca2770
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4a6597a3a57cd68c4dd17c4fbae882590f373709
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44222686"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45674297"
 ---
-# <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="219f8-102">Modification des propriétés de préfixe d'espace de noms</span><span class="sxs-lookup"><span data-stu-id="219f8-102">Changing Namespace Prefix Properties</span></span>
-<span data-ttu-id="219f8-103">La classe **XmlNode** vous permet de modifier le préfixe d'espace de noms associé à un nœud précis.</span><span class="sxs-lookup"><span data-stu-id="219f8-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="219f8-104">Par exemple, le code suivant montre la modification du préfixe d'un élément.</span><span class="sxs-lookup"><span data-stu-id="219f8-104">For example, the following code shows the prefix of an element being changed.</span></span>  
+# <a name="changing-namespace-prefix-properties"></a><span data-ttu-id="f2cfe-102">Modification des propriétés de préfixe d'espace de noms</span><span class="sxs-lookup"><span data-stu-id="f2cfe-102">Changing Namespace Prefix Properties</span></span>
+<span data-ttu-id="f2cfe-103">La classe **XmlNode** vous permet de modifier le préfixe d'espace de noms associé à un nœud précis.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-103">The **XmlNode** class allows you to change the namespace prefix associated with a given node.</span></span> <span data-ttu-id="f2cfe-104">Par exemple, le code suivant montre la modification du préfixe d'un élément.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-104">For example, the following code shows the prefix of an element being changed.</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -34,13 +34,13 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- <span data-ttu-id="219f8-105">**Sortie**</span><span class="sxs-lookup"><span data-stu-id="219f8-105">**Output**</span></span>  
+ <span data-ttu-id="f2cfe-105">**Sortie**</span><span class="sxs-lookup"><span data-stu-id="f2cfe-105">**Output**</span></span>  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
 ```  
   
- <span data-ttu-id="219f8-106">La modification du préfixe d'un nœud n'entraîne pas la modification de son espace de noms.</span><span class="sxs-lookup"><span data-stu-id="219f8-106">Changing the prefix of a node does not change its namespace.</span></span> <span data-ttu-id="219f8-107">Ce dernier peut être défini uniquement au moment de la création du nœud.</span><span class="sxs-lookup"><span data-stu-id="219f8-107">The namespace can only be set when the node is created.</span></span> <span data-ttu-id="219f8-108">Lorsque vous rendez persistante l'arborescence, de nouveaux attributs d'espace de noms peuvent ne plus être persistants pour satisfaire le préfixe défini.</span><span class="sxs-lookup"><span data-stu-id="219f8-108">When you persist the tree, new namespace attributes may be persisted out to satisfy the prefix you set.</span></span> <span data-ttu-id="219f8-109">Si le nouvel espace de noms ne peut pas être créé, le préfixe est modifié de telle sorte que le nœud préserve son nom local et son espace de noms.</span><span class="sxs-lookup"><span data-stu-id="219f8-109">If the new namespace cannot be created, then the prefix is changed so the node preserves its local name and namespace.</span></span> <span data-ttu-id="219f8-110">L'exemple suivant illustre l'ajout d'un attribut d'espace de noms.</span><span class="sxs-lookup"><span data-stu-id="219f8-110">The following example shows a namespace attribute being added.</span></span>  
+ <span data-ttu-id="f2cfe-106">La modification du préfixe d'un nœud n'entraîne pas la modification de son espace de noms.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-106">Changing the prefix of a node does not change its namespace.</span></span> <span data-ttu-id="f2cfe-107">Ce dernier peut être défini uniquement au moment de la création du nœud.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-107">The namespace can only be set when the node is created.</span></span> <span data-ttu-id="f2cfe-108">Lorsque vous rendez persistante l'arborescence, de nouveaux attributs d'espace de noms peuvent ne plus être persistants pour satisfaire le préfixe défini.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-108">When you persist the tree, new namespace attributes may be persisted out to satisfy the prefix you set.</span></span> <span data-ttu-id="f2cfe-109">Si le nouvel espace de noms ne peut pas être créé, le préfixe est modifié de telle sorte que le nœud préserve son nom local et son espace de noms.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-109">If the new namespace cannot be created, then the prefix is changed so the node preserves its local name and namespace.</span></span> <span data-ttu-id="f2cfe-110">L'exemple suivant illustre l'ajout d'un attribut d'espace de noms.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-110">The following example shows a namespace attribute being added.</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -58,14 +58,14 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- <span data-ttu-id="219f8-111">**Sortie**</span><span class="sxs-lookup"><span data-stu-id="219f8-111">**Output**</span></span>  
+ <span data-ttu-id="f2cfe-111">**Sortie**</span><span class="sxs-lookup"><span data-stu-id="f2cfe-111">**Output**</span></span>  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
 ```  
   
- <span data-ttu-id="219f8-112">Quand l’arborescence a été rendue persistante sous la forme d’une chaîne à la suite de l’appel à **doc.InnerXml**, l’attribut `xmlns:a='123'` a été ajouté pour préserver l’espace de noms de l’élément `test`.</span><span class="sxs-lookup"><span data-stu-id="219f8-112">When the tree was persisted to a string as a result of the call to **doc.InnerXml**, the `xmlns:a='123'` attribute was added to preserve the namespace of the `test` element.</span></span> <span data-ttu-id="219f8-113">Sa valeur était `'123'` et est restée `'123'`.</span><span class="sxs-lookup"><span data-stu-id="219f8-113">It was `'123'`, and it remained `'123'`.</span></span>  
+ <span data-ttu-id="f2cfe-112">Quand l’arborescence a été rendue persistante sous la forme d’une chaîne à la suite de l’appel à **doc.InnerXml**, l’attribut `xmlns:a='123'` a été ajouté pour préserver l’espace de noms de l’élément `test`.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-112">When the tree was persisted to a string as a result of the call to **doc.InnerXml**, the `xmlns:a='123'` attribute was added to preserve the namespace of the `test` element.</span></span> <span data-ttu-id="f2cfe-113">Sa valeur était `'123'` et est restée `'123'`.</span><span class="sxs-lookup"><span data-stu-id="f2cfe-113">It was `'123'`, and it remained `'123'`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="219f8-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="219f8-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2cfe-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f2cfe-114">See also</span></span>
 
-- [<span data-ttu-id="219f8-115">DOM (Document Object Model) XML</span><span class="sxs-lookup"><span data-stu-id="219f8-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="f2cfe-115">DOM (Document Object Model) XML</span><span class="sxs-lookup"><span data-stu-id="f2cfe-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

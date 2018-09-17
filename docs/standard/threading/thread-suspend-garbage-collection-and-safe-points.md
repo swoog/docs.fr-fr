@@ -11,23 +11,24 @@ helpviewer_keywords:
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ded5c057b1c257e8bcf3c8427f5810720eaf0947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582159"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45658585"
 ---
-# <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="16fbe-102">Thread.Suspend, Garbage Collection et les points sans risque</span><span class="sxs-lookup"><span data-stu-id="16fbe-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
-<span data-ttu-id="16fbe-103">Quand vous appelez <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> sur un thread, le système indique qu’une suspension du thread a été demandée et permet au thread de s’exécuter jusqu'à ce qu’il ait atteint un point sans risque avant de suspendre réellement le thread.</span><span class="sxs-lookup"><span data-stu-id="16fbe-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="16fbe-104">Un point sans risque pour un thread est un point de son exécution auquel le nettoyage de la mémoire peut être exécuté.</span><span class="sxs-lookup"><span data-stu-id="16fbe-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  
+# <a name="threadsuspend-garbage-collection-and-safe-points"></a><span data-ttu-id="79550-102">Thread.Suspend, Garbage Collection et les points sans risque</span><span class="sxs-lookup"><span data-stu-id="79550-102">Thread.Suspend, Garbage Collection, and Safe Points</span></span>
+<span data-ttu-id="79550-103">Quand vous appelez <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> sur un thread, le système indique qu’une suspension du thread a été demandée et permet au thread de s’exécuter jusqu'à ce qu’il ait atteint un point sans risque avant de suspendre réellement le thread.</span><span class="sxs-lookup"><span data-stu-id="79550-103">When you call <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> on a thread, the system notes that a thread suspension has been requested and allows the thread to execute until it has reached a safe point before actually suspending the thread.</span></span> <span data-ttu-id="79550-104">Un point sans risque pour un thread est un point de son exécution auquel le nettoyage de la mémoire peut être exécuté.</span><span class="sxs-lookup"><span data-stu-id="79550-104">A safe point for a thread is a point in its execution at which garbage collection can be performed.</span></span>  
   
- <span data-ttu-id="16fbe-105">Une fois atteint un point sans risque, le runtime garantit que le thread suspendu ne progressera pas dans le code managé.</span><span class="sxs-lookup"><span data-stu-id="16fbe-105">Once a safe point is reached, the runtime guarantees that the suspended thread will not make any further progress in managed code.</span></span> <span data-ttu-id="16fbe-106">Un thread s’exécutant en dehors du code managé est toujours sûr pour le nettoyage de la mémoire, et son exécution se poursuit jusqu'à ce qu’il tente de reprendre l’exécution du code managé.</span><span class="sxs-lookup"><span data-stu-id="16fbe-106">A thread executing outside managed code is always safe for garbage collection, and its execution continues until it attempts to resume execution of managed code.</span></span>  
+ <span data-ttu-id="79550-105">Une fois atteint un point sans risque, le runtime garantit que le thread suspendu ne progressera pas dans le code managé.</span><span class="sxs-lookup"><span data-stu-id="79550-105">Once a safe point is reached, the runtime guarantees that the suspended thread will not make any further progress in managed code.</span></span> <span data-ttu-id="79550-106">Un thread s’exécutant en dehors du code managé est toujours sûr pour le nettoyage de la mémoire, et son exécution se poursuit jusqu'à ce qu’il tente de reprendre l’exécution du code managé.</span><span class="sxs-lookup"><span data-stu-id="79550-106">A thread executing outside managed code is always safe for garbage collection, and its execution continues until it attempts to resume execution of managed code.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="16fbe-107">Pour effectuer un nettoyage de la mémoire, le runtime doit suspendre tous les threads, sauf celui qui exécute le nettoyage.</span><span class="sxs-lookup"><span data-stu-id="16fbe-107">In order to perform a garbage collection, the runtime must suspend all the threads except the thread performing the collection.</span></span> <span data-ttu-id="16fbe-108">Chaque thread doit être acheminé vers un point sans risque avant de pouvoir être suspendu.</span><span class="sxs-lookup"><span data-stu-id="16fbe-108">Each thread must be brought to a safe point before it can be suspended.</span></span>  
+>  <span data-ttu-id="79550-107">Pour effectuer un nettoyage de la mémoire, le runtime doit suspendre tous les threads, sauf celui qui exécute le nettoyage.</span><span class="sxs-lookup"><span data-stu-id="79550-107">In order to perform a garbage collection, the runtime must suspend all the threads except the thread performing the collection.</span></span> <span data-ttu-id="79550-108">Chaque thread doit être acheminé vers un point sans risque avant de pouvoir être suspendu.</span><span class="sxs-lookup"><span data-stu-id="79550-108">Each thread must be brought to a safe point before it can be suspended.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16fbe-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="16fbe-109">See Also</span></span>  
- <xref:System.Threading.Thread>  
- <xref:System.GC>  
- [<span data-ttu-id="16fbe-110">Thread</span><span class="sxs-lookup"><span data-stu-id="16fbe-110">Threading</span></span>](../../../docs/standard/threading/index.md)  
- [<span data-ttu-id="16fbe-111">Gestion automatique de la mémoire</span><span class="sxs-lookup"><span data-stu-id="16fbe-111">Automatic Memory Management</span></span>](../../../docs/standard/automatic-memory-management.md)
+## <a name="see-also"></a><span data-ttu-id="79550-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="79550-109">See also</span></span>
+
+- <xref:System.Threading.Thread>  
+- <xref:System.GC>  
+- [<span data-ttu-id="79550-110">Thread</span><span class="sxs-lookup"><span data-stu-id="79550-110">Threading</span></span>](../../../docs/standard/threading/index.md)  
+- [<span data-ttu-id="79550-111">Gestion automatique de la mémoire</span><span class="sxs-lookup"><span data-stu-id="79550-111">Automatic Memory Management</span></span>](../../../docs/standard/automatic-memory-management.md)

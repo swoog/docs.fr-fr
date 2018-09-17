@@ -7,59 +7,59 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 4adc7ba106e0044ba6aff94ea3180d9c8e3ded7b
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266837"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45619199"
 ---
-# <a name="interface-c-reference"></a><span data-ttu-id="46f87-102">interface (référence C#)</span><span class="sxs-lookup"><span data-stu-id="46f87-102">interface (C# Reference)</span></span>
+# <a name="interface-c-reference"></a><span data-ttu-id="16120-102">interface (référence C#)</span><span class="sxs-lookup"><span data-stu-id="16120-102">interface (C# Reference)</span></span>
 
-<span data-ttu-id="46f87-103">Une interface contient uniquement des signatures de [méthodes](../../programming-guide/classes-and-structs/methods.md), de [propriétés](../../programming-guide/classes-and-structs/properties.md), d’[événements](../../programming-guide/events/index.md) ou d’[indexeurs](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="46f87-103">An interface contains only the signatures of [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [events](../../programming-guide/events/index.md) or [indexers](../../programming-guide/indexers/index.md).</span></span> <span data-ttu-id="46f87-104">Une classe ou un struct qui implémente l’interface doit implémenter les membres de l’interface qui sont spécifiés dans la définition de l’interface.</span><span class="sxs-lookup"><span data-stu-id="46f87-104">A class or struct that implements the interface must implement the members of the interface that are specified in the interface definition.</span></span> <span data-ttu-id="46f87-105">Dans l’exemple suivant, la classe `ImplementationClass` doit implémenter une méthode nommée `SampleMethod` qui n’a aucun paramètre et qui retourne `void`.</span><span class="sxs-lookup"><span data-stu-id="46f87-105">In the following example, class `ImplementationClass` must implement a method named `SampleMethod` that has no parameters and returns `void`.</span></span>
+<span data-ttu-id="16120-103">Une interface contient uniquement des signatures de [méthodes](../../programming-guide/classes-and-structs/methods.md), de [propriétés](../../programming-guide/classes-and-structs/properties.md), d’[événements](../../programming-guide/events/index.md) ou d’[indexeurs](../../programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="16120-103">An interface contains only the signatures of [methods](../../programming-guide/classes-and-structs/methods.md), [properties](../../programming-guide/classes-and-structs/properties.md), [events](../../programming-guide/events/index.md) or [indexers](../../programming-guide/indexers/index.md).</span></span> <span data-ttu-id="16120-104">Une classe ou un struct qui implémente l’interface doit implémenter les membres de l’interface qui sont spécifiés dans la définition de l’interface.</span><span class="sxs-lookup"><span data-stu-id="16120-104">A class or struct that implements the interface must implement the members of the interface that are specified in the interface definition.</span></span> <span data-ttu-id="16120-105">Dans l’exemple suivant, la classe `ImplementationClass` doit implémenter une méthode nommée `SampleMethod` qui n’a aucun paramètre et qui retourne `void`.</span><span class="sxs-lookup"><span data-stu-id="16120-105">In the following example, class `ImplementationClass` must implement a method named `SampleMethod` that has no parameters and returns `void`.</span></span>
 
-<span data-ttu-id="46f87-106">Pour plus d’informations et d’exemples, consultez [Interfaces](../../programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="46f87-106">For more information and examples, see [Interfaces](../../programming-guide/interfaces/index.md).</span></span>
+<span data-ttu-id="16120-106">Pour plus d’informations et d’exemples, consultez [Interfaces](../../programming-guide/interfaces/index.md).</span><span class="sxs-lookup"><span data-stu-id="16120-106">For more information and examples, see [Interfaces](../../programming-guide/interfaces/index.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="46f87-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="46f87-107">Example</span></span>
+## <a name="example"></a><span data-ttu-id="16120-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="16120-107">Example</span></span>
 
 [!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
 
-<span data-ttu-id="46f87-108">Une interface peut être membre d’un espace de noms ou d’une classe, et peut contenir les signatures des membres suivants :</span><span class="sxs-lookup"><span data-stu-id="46f87-108">An interface can be a member of a namespace or a class and can contain signatures of the following members:</span></span>
+<span data-ttu-id="16120-108">Une interface peut être membre d’un espace de noms ou d’une classe, et peut contenir les signatures des membres suivants :</span><span class="sxs-lookup"><span data-stu-id="16120-108">An interface can be a member of a namespace or a class and can contain signatures of the following members:</span></span>
 
-- [<span data-ttu-id="46f87-109">Méthodes</span><span class="sxs-lookup"><span data-stu-id="46f87-109">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)
+- [<span data-ttu-id="16120-109">Méthodes</span><span class="sxs-lookup"><span data-stu-id="16120-109">Methods</span></span>](../../programming-guide/classes-and-structs/methods.md)
 
-- [<span data-ttu-id="46f87-110">Propriétés</span><span class="sxs-lookup"><span data-stu-id="46f87-110">Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)
+- [<span data-ttu-id="16120-110">Propriétés</span><span class="sxs-lookup"><span data-stu-id="16120-110">Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)
 
-- [<span data-ttu-id="46f87-111">Indexeurs</span><span class="sxs-lookup"><span data-stu-id="46f87-111">Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)
+- [<span data-ttu-id="16120-111">Indexeurs</span><span class="sxs-lookup"><span data-stu-id="16120-111">Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)
 
-- [<span data-ttu-id="46f87-112">Événements</span><span class="sxs-lookup"><span data-stu-id="46f87-112">Events</span></span>](event.md)
+- [<span data-ttu-id="16120-112">Événements</span><span class="sxs-lookup"><span data-stu-id="16120-112">Events</span></span>](event.md)
 
-<span data-ttu-id="46f87-113">Une interface peut hériter d’une ou de plusieurs interfaces de base.</span><span class="sxs-lookup"><span data-stu-id="46f87-113">An interface can inherit from one or more base interfaces.</span></span>
+<span data-ttu-id="16120-113">Une interface peut hériter d’une ou de plusieurs interfaces de base.</span><span class="sxs-lookup"><span data-stu-id="16120-113">An interface can inherit from one or more base interfaces.</span></span>
 
-<span data-ttu-id="46f87-114">Lorsqu’une liste de types de base contient une classe de base et des interfaces, la classe de base doit figurer en premier dans la liste.</span><span class="sxs-lookup"><span data-stu-id="46f87-114">When a base type list contains a base class and interfaces, the base class must come first in the list.</span></span>
+<span data-ttu-id="16120-114">Lorsqu’une liste de types de base contient une classe de base et des interfaces, la classe de base doit figurer en premier dans la liste.</span><span class="sxs-lookup"><span data-stu-id="16120-114">When a base type list contains a base class and interfaces, the base class must come first in the list.</span></span>
 
-<span data-ttu-id="46f87-115">Une classe qui implémente une interface peut implémenter explicitement les membres de cette interface.</span><span class="sxs-lookup"><span data-stu-id="46f87-115">A class that implements an interface can explicitly implement members of that interface.</span></span> <span data-ttu-id="46f87-116">Un membre implémenté explicitement n’est pas accessible via une instance de classe, mais uniquement via une instance de l’interface.</span><span class="sxs-lookup"><span data-stu-id="46f87-116">An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.</span></span>
+<span data-ttu-id="16120-115">Une classe qui implémente une interface peut implémenter explicitement les membres de cette interface.</span><span class="sxs-lookup"><span data-stu-id="16120-115">A class that implements an interface can explicitly implement members of that interface.</span></span> <span data-ttu-id="16120-116">Un membre implémenté explicitement n’est pas accessible via une instance de classe, mais uniquement via une instance de l’interface.</span><span class="sxs-lookup"><span data-stu-id="16120-116">An explicitly implemented member cannot be accessed through a class instance, but only through an instance of the interface.</span></span>
 
-<span data-ttu-id="46f87-117">Pour plus d’informations et plus d’exemples sur l’implémentation explicite des interfaces, consultez [Implémentation d’interface explicite](../../programming-guide/interfaces/explicit-interface-implementation.md).</span><span class="sxs-lookup"><span data-stu-id="46f87-117">For more details and code examples on explicit interface implementation, see [Explicit Interface Implementation](../../programming-guide/interfaces/explicit-interface-implementation.md).</span></span>
+<span data-ttu-id="16120-117">Pour plus d’informations et plus d’exemples sur l’implémentation explicite des interfaces, consultez [Implémentation d’interface explicite](../../programming-guide/interfaces/explicit-interface-implementation.md).</span><span class="sxs-lookup"><span data-stu-id="16120-117">For more details and code examples on explicit interface implementation, see [Explicit Interface Implementation](../../programming-guide/interfaces/explicit-interface-implementation.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="46f87-118">Exemple</span><span class="sxs-lookup"><span data-stu-id="46f87-118">Example</span></span>
+## <a name="example"></a><span data-ttu-id="16120-118">Exemple</span><span class="sxs-lookup"><span data-stu-id="16120-118">Example</span></span>
 
-<span data-ttu-id="46f87-119">L’exemple suivant montre une implémentation d’interface.</span><span class="sxs-lookup"><span data-stu-id="46f87-119">The following example demonstrates interface implementation.</span></span> <span data-ttu-id="46f87-120">Dans cet exemple, l’interface contient la déclaration de propriété, et la classe contient l’implémentation.</span><span class="sxs-lookup"><span data-stu-id="46f87-120">In this example, the interface contains the property declaration and the class contains the implementation.</span></span> <span data-ttu-id="46f87-121">Toutes les instances d’une classe qui implémentent `IPoint` ont les propriétés entières `x` et `y`.</span><span class="sxs-lookup"><span data-stu-id="46f87-121">Any instance of a class that implements `IPoint` has integer properties `x` and `y`.</span></span>
+<span data-ttu-id="16120-119">L’exemple suivant montre une implémentation d’interface.</span><span class="sxs-lookup"><span data-stu-id="16120-119">The following example demonstrates interface implementation.</span></span> <span data-ttu-id="16120-120">Dans cet exemple, l’interface contient la déclaration de propriété, et la classe contient l’implémentation.</span><span class="sxs-lookup"><span data-stu-id="16120-120">In this example, the interface contains the property declaration and the class contains the implementation.</span></span> <span data-ttu-id="16120-121">Toutes les instances d’une classe qui implémentent `IPoint` ont les propriétés entières `x` et `y`.</span><span class="sxs-lookup"><span data-stu-id="16120-121">Any instance of a class that implements `IPoint` has integer properties `x` and `y`.</span></span>
 
 [!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="46f87-122">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="46f87-122">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="16120-122">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="16120-122">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="46f87-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="46f87-123">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16120-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="16120-123">See also</span></span>
 
-- [<span data-ttu-id="46f87-124">Référence C#</span><span class="sxs-lookup"><span data-stu-id="46f87-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="46f87-125">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="46f87-125">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-- [<span data-ttu-id="46f87-126">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="46f87-126">C# Keywords</span></span>](index.md)  
-- [<span data-ttu-id="46f87-127">Types référence</span><span class="sxs-lookup"><span data-stu-id="46f87-127">Reference Types</span></span>](reference-types.md)  
-- [<span data-ttu-id="46f87-128">Interfaces</span><span class="sxs-lookup"><span data-stu-id="46f87-128">Interfaces</span></span>](../../programming-guide/interfaces/index.md)  
-- [<span data-ttu-id="46f87-129">Utilisation de propriétés</span><span class="sxs-lookup"><span data-stu-id="46f87-129">Using Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)  
-- [<span data-ttu-id="46f87-130">Utilisation d’indexeurs</span><span class="sxs-lookup"><span data-stu-id="46f87-130">Using Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)  
-- [<span data-ttu-id="46f87-131">class</span><span class="sxs-lookup"><span data-stu-id="46f87-131">class</span></span>](class.md)  
-- [<span data-ttu-id="46f87-132">struct</span><span class="sxs-lookup"><span data-stu-id="46f87-132">struct</span></span>](struct.md)  
-- [<span data-ttu-id="46f87-133">Interfaces</span><span class="sxs-lookup"><span data-stu-id="46f87-133">Interfaces</span></span>](../../programming-guide/interfaces/index.md)
+- [<span data-ttu-id="16120-124">Référence C#</span><span class="sxs-lookup"><span data-stu-id="16120-124">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="16120-125">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="16120-125">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="16120-126">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="16120-126">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="16120-127">Types référence</span><span class="sxs-lookup"><span data-stu-id="16120-127">Reference Types</span></span>](reference-types.md)  
+- [<span data-ttu-id="16120-128">Interfaces</span><span class="sxs-lookup"><span data-stu-id="16120-128">Interfaces</span></span>](../../programming-guide/interfaces/index.md)  
+- [<span data-ttu-id="16120-129">Utilisation de propriétés</span><span class="sxs-lookup"><span data-stu-id="16120-129">Using Properties</span></span>](../../programming-guide/classes-and-structs/using-properties.md)  
+- [<span data-ttu-id="16120-130">Utilisation d’indexeurs</span><span class="sxs-lookup"><span data-stu-id="16120-130">Using Indexers</span></span>](../../programming-guide/indexers/using-indexers.md)  
+- [<span data-ttu-id="16120-131">class</span><span class="sxs-lookup"><span data-stu-id="16120-131">class</span></span>](class.md)  
+- [<span data-ttu-id="16120-132">struct</span><span class="sxs-lookup"><span data-stu-id="16120-132">struct</span></span>](struct.md)  
+- [<span data-ttu-id="16120-133">Interfaces</span><span class="sxs-lookup"><span data-stu-id="16120-133">Interfaces</span></span>](../../programming-guide/interfaces/index.md)
