@@ -4,12 +4,12 @@ description: Explique comment gérer les dépendances avec les outils .NET Core.
 author: blackdwarf
 ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: c8f40b8571523b98da55b047fea8d2bf03b390a2
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244226"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45591119"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Gestion des dépendances avec le SDK .NET Core 1.0
 
@@ -32,7 +32,7 @@ Si vous êtes familiarisé avec MSBuild, il est similaire aux autres types de r�
 L’ajout d’une dépendance qui n’est disponible que dans une cible spécifique s’effectue à l’aide de conditions décrites dans l’exemple suivant :
 
 ```xml
-<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp1.0'" />
+<PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
 D’après le code ci-dessus, la dépendance n’est valide que si la génération se produit pour la cible donnée. Dans la condition, `$(TargetFramework)` est une propriété MSBuild définie dans le projet. Pour la plupart des applications .NET Core courantes, cela n’est pas nécessaire. 
@@ -57,7 +57,7 @@ Le projet complet ressemble à ceci :
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>

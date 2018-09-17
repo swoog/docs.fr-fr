@@ -4,12 +4,12 @@ description: Consultez le mappage entre éléments project.json et csproj.
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518555"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45647367"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Mappage entre propriétés project.json et csproj
 
@@ -487,7 +487,7 @@ Voir aussi [Fichiers](#files).
 ```
 
 Il n’existe aucun équivalent de l’élément `owners` dans MSBuild.
-Pour `summary`, vous pouvez utiliser la propriété MSBuild `<Description>`, même si la valeur de `summary` n’est pas migrée automatiquement vers cette propriété, étant donné que cette propriété est mappée à l’élément [`description`](#-other-common-root-level-options).
+Pour `summary`, vous pouvez utiliser la propriété MSBuild `<Description>`, même si la valeur de `summary` n’est pas migrée automatiquement vers cette propriété, étant donné que cette propriété est mappée à l’élément [`description`](#other-common-root-level-options).
 
 ## <a name="scripts"></a>scripts
 
