@@ -3,11 +3,11 @@ title: Guide pratique pour calculer des valeurs de colonnes dans un fichier text
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
 ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261260"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45668760"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Guide pratique pour calculer des valeurs de colonnes dans un fichier texte CSV (LINQ) (C#)
 Cet exemple montre comment effectuer des calculs d’agrégation tels que Sum, Average, Min et Max, avec les colonnes d’un fichier .csv. Les exemples de principes montrés ici sont applicables à d’autres types de texte structuré.  

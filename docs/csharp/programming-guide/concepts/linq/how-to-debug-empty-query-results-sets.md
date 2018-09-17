@@ -3,11 +3,11 @@ title: Guide pratique pour déboguer des ensembles de résultats de requête vid
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
 ms.openlocfilehash: 4760b1e5274634954bd5fe4b3880fd4415af2510
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44082321"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677849"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a>Guide pratique pour déboguer des ensembles de résultats de requête vides (C#)
 L'un des problèmes les plus courants lors de l'interrogation d'une arborescence XML est que si celle-ci possède un espace de noms par défaut, le développeur écrit parfois la requête comme si le code XML n'était dans aucun espace de noms.  

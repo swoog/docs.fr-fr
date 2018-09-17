@@ -9,11 +9,11 @@ ms.assetid: c268c49e-32b9-4171-b782-dcb7b065fa73
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fea54d36759b12b01fa7a68748d069c7890d84e4
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44177404"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45675910"
 ---
 # <a name="select-xml-data-using-xpathnavigator"></a>Sélection de données XML à l’aide de XPathNavigator
 La classe <xref:System.Xml.XPath.XPathNavigator> offre un ensemble de méthodes permettant de sélectionner une collection de nœuds dans un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument> à l'aide d'une expression XPath. Une fois la collection de nœuds sélectionnée, vous pouvez y effectuer des itérations.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 811443dbd8e2483f7fc1b0f8c44afb4ebcd9efcf
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34233949"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649387"
 ---
 # <a name="application-domains"></a>Domaines d'application
 Les systèmes d'exploitation et les environnements d'exécution assurent généralement une certaine forme d'isolation entre les applications. Par exemple, Windows utilise des processus pour isoler des applications. Cette isolation est nécessaire pour que le code en cours d'exécution dans une application ne puisse pas affecter de manière négative d'autres applications non liées.  
@@ -55,7 +55,7 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
     > [!NOTE]
     >  Vous ne pouvez pas décharger des assemblys ou des types individuels. Seul un domaine complet peut être déchargé.  
   
--   Le code en cours d'exécution dans une application ne peut pas directement accéder au code ou aux ressources d'une autre application. Le Common Language Runtime applique cette isolation en empêchant les appels directs entre les objets dans les différents domaines d'application. Les objets qui passent d'un domaine à un autre sont soit copiés, soit accédés par un proxy. Si l'objet est copié, l'appel à cet objet est alors local. Dans ce cas, l'appelant et l'objet référencé figurent dans le même domaine d'application. Si l'objet est accédé par un proxy, l'appel à cet objet est alors distant. Dans ce cas, l'appelant et l'objet référencé figurent dans des domaines d'application différents. Les appels interdomaines utilisent la même infrastructure d'appel distant que les appels entre deux processus ou deux ordinateurs. Les métadonnées de l'objet référencé doivent par conséquent être disponibles pour les deux domaines d'application pour que l'appel de méthode puisse faire l'objet d'une compilation JIT correcte. Si le domaine appelant n’a pas accès aux métadonnées pour l’objet qui est appelé, la compilation peut échouer avec une exception de type **System.IO.FileNotFound**. Pour plus d’informations, consultez [Objets distants](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58). Le mécanisme permettant de déterminer le mode d'accès des objets sur les domaines est défini par l'objet. Pour plus d'informations, consultez <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+-   Le code en cours d'exécution dans une application ne peut pas directement accéder au code ou aux ressources d'une autre application. Le Common Language Runtime applique cette isolation en empêchant les appels directs entre les objets dans les différents domaines d'application. Les objets qui passent d'un domaine à un autre sont soit copiés, soit accédés par un proxy. Si l'objet est copié, l'appel à cet objet est alors local. Dans ce cas, l'appelant et l'objet référencé figurent dans le même domaine d'application. Si l'objet est accédé par un proxy, l'appel à cet objet est alors distant. Dans ce cas, l'appelant et l'objet référencé figurent dans des domaines d'application différents. Les appels interdomaines utilisent la même infrastructure d'appel distant que les appels entre deux processus ou deux ordinateurs. Les métadonnées de l'objet référencé doivent par conséquent être disponibles pour les deux domaines d'application pour que l'appel de méthode puisse faire l'objet d'une compilation JIT correcte. Si le domaine appelant n’a pas accès aux métadonnées pour l’objet qui est appelé, la compilation peut échouer avec une exception de type **System.IO.FileNotFound**. Pour plus d’informations, consultez [Objets distants](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58). Le mécanisme permettant de déterminer le mode d'accès des objets sur les domaines est défini par l'objet. Pour plus d'informations, consultez <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   La portée du comportement de code est définie par l'application dans laquelle il s'exécute. En d'autres termes, le domaine d'application fournit des paramètres de configuration tels que les stratégies de version d'application, l'emplacement des assemblys distants auxquels il accède et des informations sur l'emplacement où se trouvent les assemblys qui sont chargés dans le domaine.  
   

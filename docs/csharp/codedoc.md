@@ -3,12 +3,12 @@ title: Documentation de votre code avec des commentaires XML
 description: Découvrez comment documenter votre code avec des commentaires de documentation XML et générer un fichier de documentation XML au moment de la compilation.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 4c94e98478e71449a3f9cc4bf1f21462e17a371b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517479"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45683055"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentation de votre code avec des commentaires XML
 
@@ -29,7 +29,7 @@ Vous pouvez générer le fichier XML au moment de la compilation en procédant c
    Vous pouvez également spécifier le chemin absolu ou relatif exact et le nom du fichier XML. L’exemple suivant génère le fichier XML dans le même répertoire que la version Debug d’une application :
 
    ```xml
-   <DocumentationFile>bin\Debug\netcoreapp1.0\App.xml</DocumentationFile>
+   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Si vous développez une application à l’aide de Visual Studio, cliquez avec le bouton droit sur le projet, puis sélectionnez **Propriétés**. Dans la boîte de dialogue des propriétés, sélectionnez l’onglet **Générer**, puis cochez **Fichier de documentation XML**. Vous pouvez également changer l’emplacement dans lequel le compilateur écrit le fichier.

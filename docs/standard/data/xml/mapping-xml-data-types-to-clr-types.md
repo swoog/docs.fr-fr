@@ -6,11 +6,11 @@ ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264530"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45673842"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Mappage entre types de données XML et types CLR
 Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).  

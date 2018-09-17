@@ -25,11 +25,11 @@ ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207718"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649379"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Comment : anticiper des conditions d'espace insuffisant avec le stockage isolé
 Le code qui utilise le stockage isolé est limité par un [quota](../../../docs/standard/io/isolated-storage.md#quotas) qui spécifie la taille maximale du compartiment de données dans lequel des fichiers et répertoires de stockage isolé existent. Le quota est défini par la stratégie de sécurité et peut être configuré par les administrateurs. Si la taille maximale autorisée est dépassée lorsque vous tenez d’écrire des données, une exception <xref:System.IO.IsolatedStorage.IsolatedStorageException> est levée et l’opération échoue. Cela permet d’éviter des attaques malveillantes par déni de service, qui pourraient amener l’application à refuser des requêtes parce que le stockage des données est rempli.  

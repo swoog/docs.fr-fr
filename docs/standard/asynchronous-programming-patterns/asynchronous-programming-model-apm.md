@@ -14,11 +14,11 @@ ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cd2fa6219f39a8506d865d85e1ce5f84d22a92f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44269031"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45658624"
 ---
 # <a name="asynchronous-programming-model-apm"></a>Modèle de programmation asynchrone
 Une opération asynchrone qui utilise le modèle de conception <xref:System.IAsyncResult> est implémentée sous la forme de deux méthodes nommées **Begin***NomOpération* et **End***NomOpération* qui commencent et terminent l’opération asynchrone *NomOpération*, respectivement. Par exemple, la classe <xref:System.IO.FileStream> fournit les méthodes <xref:System.IO.FileStream.BeginRead%2A> et <xref:System.IO.FileStream.EndRead%2A> pour lire les octets d’un fichier de façon asynchrone. Ces méthodes implémentent la version asynchrone de la méthode <xref:System.IO.FileStream.Read%2A> .  

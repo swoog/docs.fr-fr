@@ -15,11 +15,11 @@ ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f39b079de1c97d0954ba013ba1c87a8bd606920
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44198996"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45652857"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Comment : afficher les millisecondes dans les valeurs de date et d'heure
 Les méthodes de mise en forme de date et d’heure par défaut, telles que <xref:System.DateTime.ToString?displayProperty=nameWithType>, incluent les heures, les minutes et les secondes d’une valeur d’heure, mais excluent son composant « millisecondes ». Cette rubrique montre comment inclure le composant « millisecondes » d’une date et d’une heure dans des chaînes de date et d’heure mises en forme.  

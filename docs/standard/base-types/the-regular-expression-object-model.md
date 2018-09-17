@@ -38,11 +38,11 @@ ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192845"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664733"
 ---
 # <a name="the-regular-expression-object-model"></a>Modèle objet d'expression régulière
 <a name="introduction"></a> Cette rubrique décrit le modèle objet utilisé avec les expressions régulières .NET. Elle contient les sections suivantes :  

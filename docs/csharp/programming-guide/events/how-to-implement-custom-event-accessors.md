@@ -8,12 +8,12 @@ helpviewer_keywords:
 - events [C#], remove accessor
 - remove accessor [C#]
 ms.assetid: bf903abf-03a4-4f7b-ab6b-b7e59bc2ee1e
-ms.openlocfilehash: 4779c69a0cca9c907bd8277da521a4dc913d2829
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 759a7a4518a371449723a23669816bbc0fbc0dee
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874336"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45677095"
 ---
 # <a name="how-to-implement-custom-event-accessors-c-programming-guide"></a>Comment : implémenter des accesseurs d’événement personnalisés (Guide de programmation C#)
 Un événement constitue un genre spécial de délégué multicast qui peut être appelé uniquement à partir de la classe dans laquelle il est déclaré. Le code client s’abonne à l’événement en fournissant une référence à une méthode qui doit être appelée quand l’événement est déclenché. Ces méthodes sont ajoutées à la liste d’invocation du délégué par le biais des accesseurs d’événement, qui ressemblent aux accesseurs de propriété, sauf que les accesseurs d’événement sont nommés `add` et `remove`. Dans la plupart des cas, vous n’avez pas à fournir d’accesseurs d’événement personnalisés. Quand aucun accesseur d’événement personnalisé n’est fourni dans votre code, le compilateur les ajoute automatiquement. Toutefois, vous devez parfois fournir un comportement personnalisé. Ce genre de cas est illustré dans la rubrique [Guide pratique pour implémenter des événements d’interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).  
@@ -23,6 +23,7 @@ Un événement constitue un genre spécial de délégué multicast qui peut êtr
   
 [!code-csharp[IDrawingObject.OnDraw](codesnippet/CSharp/how-to-implement-interface-events_1.cs#IDrawingObjectOnDraw)]  
   
-## <a name="see-also"></a>Voir aussi  
- [Événements](../../../csharp/programming-guide/events/index.md)  
- [event](../../../csharp/language-reference/keywords/event.md)
+## <a name="see-also"></a>Voir aussi
+
+- [Événements](../../../csharp/programming-guide/events/index.md)  
+- [event](../../../csharp/language-reference/keywords/event.md)

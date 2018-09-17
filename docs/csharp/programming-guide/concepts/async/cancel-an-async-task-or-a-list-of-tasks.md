@@ -3,11 +3,11 @@ title: Annuler une tâche asynchrone ou une liste de tâches (C#)
 ms.date: 07/20/2015
 ms.assetid: eec32dbb-70ea-4c88-bd27-fa2e34546914
 ms.openlocfilehash: 2aadfccd8b38922b72dfc21daf27f610adffc922
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177816"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45692805"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-c"></a>Annuler une tâche asynchrone ou une liste de tâches (C#)
 Vous pouvez créer un bouton permettant d’annuler une application asynchrone que vous souhaitez interrompre avant la fin de son exécution. Les exemples de cette rubrique vous montrent comment ajouter un bouton d’annulation à une application qui télécharge du contenu d’un site web ou une liste de sites web.  

@@ -9,11 +9,11 @@ ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cec2b85c55871c8a21a74e79cfcdd041fa063bec
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262347"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45664577"
 ---
 # <a name="conversion-of-xml-data-types"></a>Conversion des types de données XML
 La majorité des méthodes présentes dans la classe **XmlConvert** sont utilisées pour la conversion de données entre le format de chaînes et le format fortement typé. Ces méthodes sont indépendantes des paramètres régionaux. Cela signifie qu'elles ne prennent pas en compte les paramètres régionaux éventuels lors de la conversion.  

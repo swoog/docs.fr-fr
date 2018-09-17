@@ -9,11 +9,11 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276261"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676189"
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Extraction de nœuds triés par l'index
 Le DOM (Document Object Model) XML du World Wide Web Consortium (W3C) décrit également un NodeList, qui permet de gérer une liste triée de nœuds, par opposition à l’ensemble non trié que gère **XmlNamedNodeMap**. Dans le Microsoft .NET Framework, ce NodeList est appelé **XmlNodeList**. Les méthodes et propriétés qui retournent **XmlNodeList** sont les suivantes :  

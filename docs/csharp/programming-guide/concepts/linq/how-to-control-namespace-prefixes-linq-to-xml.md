@@ -3,11 +3,11 @@ title: Guide pratique pour contrôler les préfixes d'espaces de noms (C#) (LINQ
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
 ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44182135"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45649703"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>Guide pratique pour contrôler les préfixes d'espaces de noms (C#) (LINQ to XML)
 Cette rubrique décrit comment contrôler les préfixes d’espaces de noms lors de la sérialisation d’une arborescence XML.  
