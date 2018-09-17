@@ -3,11 +3,11 @@ title: Sérialisation de graphiques d’objets qui contiennent des objets XEleme
 ms.date: 07/20/2015
 ms.assetid: fcbc3951-3cc4-4d0f-9259-e97549ed68f0
 ms.openlocfilehash: 2e82165421d31ec234de4806b59565fa675217ef
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45618446"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698141"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-c"></a>Sérialisation de graphiques d’objets qui contiennent des objets XElement (C#)
 Cette rubrique présente la fonctionnalité de sérialisation de graphiques d'objets qui contiennent des références à des objets de type <xref:System.Xml.Linq.XElement>. Afin de faciliter ce type de sérialisation, <xref:System.Xml.Linq.XElement> implémente l'interface <xref:System.Xml.Serialization.IXmlSerializable>.  

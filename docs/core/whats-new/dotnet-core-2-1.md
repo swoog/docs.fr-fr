@@ -5,11 +5,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
 ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209574"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45625397"
 ---
 # <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
 

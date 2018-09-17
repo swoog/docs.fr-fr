@@ -4,11 +4,11 @@ description: Ce didacticiel vous présente un certain nombre de fonctionnalités
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
 ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227257"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45646426"
 ---
 # <a name="rest-client"></a>Client REST
 
