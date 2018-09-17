@@ -3,11 +3,11 @@ title: Exemple Discovery Binding Element
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
 ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45687599"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964501"
 ---
 # <a name="discovery-binding-element-sample"></a>Exemple Discovery Binding Element
 Cet exemple montre comment utiliser l’élément de liaison du client de découverte pour découvrir un service. Cette fonctionnalité permet aux développeurs d'ajouter un canal client de découverte à leur pile de canaux clients existante, ce qui rend le modèle de programmation très intuitif. Lorsque le canal associé est ouvert, l'adresse du service est résolue à l'aide de la découverte. Cet exemple est composé des projets suivants :  

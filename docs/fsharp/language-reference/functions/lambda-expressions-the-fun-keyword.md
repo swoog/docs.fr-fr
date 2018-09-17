@@ -3,11 +3,11 @@ title: 'Expressions lambda : mot clé fun (F#)'
 description: 'Découvrez comment utiliser le mot clé F # « fun » pour définir une expression lambda, qui est une fonction anonyme.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683087"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964241"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Expressions lambda : mot clé fun (F#)
 

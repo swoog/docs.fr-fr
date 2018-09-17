@@ -3,11 +3,11 @@ title: 'Didacticiel : Créer un fournisseur de Type (F #)'
 description: 'Découvrez comment créer vos propres fournisseurs de type F # dans F # 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666913"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743847"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Didacticiel : Créer un fournisseur de Type
 
