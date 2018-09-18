@@ -3,37 +3,37 @@ title: Calculs tardifs (F#)
 description: 'Découvrez comment les calculs tardifs F # peuvent améliorer les performances de vos applications et les bibliothèques.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8afe815f26978de96291a52973d54a9dbcc5eaf2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676517"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698206"
 ---
-# <a name="lazy-computations"></a><span data-ttu-id="70bc1-103">Calculs tardifs</span><span class="sxs-lookup"><span data-stu-id="70bc1-103">Lazy Computations</span></span>
+# <a name="lazy-computations"></a><span data-ttu-id="2ce79-103">Calculs tardifs</span><span class="sxs-lookup"><span data-stu-id="2ce79-103">Lazy Computations</span></span>
 
-<span data-ttu-id="70bc1-104">*Calculs tardifs* sont des calculs qui ne sont pas évalués immédiatement, mais sont évaluées à la place lorsque le résultat est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="70bc1-104">*Lazy computations* are computations that are not evaluated immediately, but are instead evaluated when the result is needed.</span></span> <span data-ttu-id="70bc1-105">Cela peut contribuer à améliorer les performances de votre code.</span><span class="sxs-lookup"><span data-stu-id="70bc1-105">This can help to improve the performance of your code.</span></span>
+<span data-ttu-id="2ce79-104">*Calculs tardifs* sont des calculs qui ne sont pas évalués immédiatement, mais sont évaluées à la place lorsque le résultat est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="2ce79-104">*Lazy computations* are computations that are not evaluated immediately, but are instead evaluated when the result is needed.</span></span> <span data-ttu-id="2ce79-105">Cela peut contribuer à améliorer les performances de votre code.</span><span class="sxs-lookup"><span data-stu-id="2ce79-105">This can help to improve the performance of your code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="70bc1-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="70bc1-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2ce79-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2ce79-106">Syntax</span></span>
 
 ```fsharp
 let identifier = lazy ( expression )
 ```
 
-## <a name="remarks"></a><span data-ttu-id="70bc1-107">Notes</span><span class="sxs-lookup"><span data-stu-id="70bc1-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2ce79-107">Notes</span><span class="sxs-lookup"><span data-stu-id="2ce79-107">Remarks</span></span>
 
-<span data-ttu-id="70bc1-108">Dans la syntaxe précédente, *expression* est le code qui est évaluée uniquement lorsqu’un résultat est requis, et *identificateur* est une valeur qui stocke le résultat.</span><span class="sxs-lookup"><span data-stu-id="70bc1-108">In the previous syntax, *expression* is code that is evaluated only when a result is required, and *identifier* is a value that stores the result.</span></span> <span data-ttu-id="70bc1-109">La valeur est de type [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), où le type réel qui est utilisé pour `'T` est déterminé à partir du résultat de l’expression.</span><span class="sxs-lookup"><span data-stu-id="70bc1-109">The value is of type [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), where the actual type that is used for `'T` is determined from the result of the expression.</span></span>
+<span data-ttu-id="2ce79-108">Dans la syntaxe précédente, *expression* est le code qui est évaluée uniquement lorsqu’un résultat est requis, et *identificateur* est une valeur qui stocke le résultat.</span><span class="sxs-lookup"><span data-stu-id="2ce79-108">In the previous syntax, *expression* is code that is evaluated only when a result is required, and *identifier* is a value that stores the result.</span></span> <span data-ttu-id="2ce79-109">La valeur est de type [ `Lazy<'T>` ](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), où le type réel qui est utilisé pour `'T` est déterminé à partir du résultat de l’expression.</span><span class="sxs-lookup"><span data-stu-id="2ce79-109">The value is of type [`Lazy<'T>`](https://msdn.microsoft.com/library/b29d0af5-6efb-4a55-a278-2662a4ecc489), where the actual type that is used for `'T` is determined from the result of the expression.</span></span>
 
-<span data-ttu-id="70bc1-110">Calculs tardifs permettent d’améliorer les performances en limitant l’exécution d’un calcul aux seules situations dans lesquelles un résultat est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="70bc1-110">Lazy computations enable you to improve performance by restricting the execution of a computation to only those situations in which a result is needed.</span></span>
+<span data-ttu-id="2ce79-110">Calculs tardifs permettent d’améliorer les performances en limitant l’exécution d’un calcul aux seules situations dans lesquelles un résultat est nécessaire.</span><span class="sxs-lookup"><span data-stu-id="2ce79-110">Lazy computations enable you to improve performance by restricting the execution of a computation to only those situations in which a result is needed.</span></span>
 
-<span data-ttu-id="70bc1-111">Pour forcer l’exécution du calcul, vous appelez la méthode `Force`.</span><span class="sxs-lookup"><span data-stu-id="70bc1-111">To force the computation to be performed, you call the method `Force`.</span></span> <span data-ttu-id="70bc1-112">`Force` entraîne l’exécution à effectuer qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="70bc1-112">`Force` causes the execution to be performed only one time.</span></span> <span data-ttu-id="70bc1-113">Les appels suivants à `Force` retournent le même résultat, mais n’exécutent pas le code.</span><span class="sxs-lookup"><span data-stu-id="70bc1-113">Subsequent calls to `Force` return the same result, but do not execute any code.</span></span>
+<span data-ttu-id="2ce79-111">Pour forcer l’exécution du calcul, vous appelez la méthode `Force`.</span><span class="sxs-lookup"><span data-stu-id="2ce79-111">To force the computation to be performed, you call the method `Force`.</span></span> <span data-ttu-id="2ce79-112">`Force` entraîne l’exécution à effectuer qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="2ce79-112">`Force` causes the execution to be performed only one time.</span></span> <span data-ttu-id="2ce79-113">Les appels suivants à `Force` retournent le même résultat, mais n’exécutent pas le code.</span><span class="sxs-lookup"><span data-stu-id="2ce79-113">Subsequent calls to `Force` return the same result, but do not execute any code.</span></span>
 
-<span data-ttu-id="70bc1-114">Le code suivant illustre l’utilisation du calcul tardif et l’utilisation de `Force`.</span><span class="sxs-lookup"><span data-stu-id="70bc1-114">The following code illustrates the use of lazy computation and the use of `Force`.</span></span> <span data-ttu-id="70bc1-115">Dans ce code, le type de `result` est `Lazy<int>`et le `Force` méthode retourne un `int`.</span><span class="sxs-lookup"><span data-stu-id="70bc1-115">In this code, the type of `result` is `Lazy<int>`, and the `Force` method returns an `int`.</span></span>
+<span data-ttu-id="2ce79-114">Le code suivant illustre l’utilisation du calcul tardif et l’utilisation de `Force`.</span><span class="sxs-lookup"><span data-stu-id="2ce79-114">The following code illustrates the use of lazy computation and the use of `Force`.</span></span> <span data-ttu-id="2ce79-115">Dans ce code, le type de `result` est `Lazy<int>`et le `Force` méthode retourne un `int`.</span><span class="sxs-lookup"><span data-stu-id="2ce79-115">In this code, the type of `result` is `Lazy<int>`, and the `Force` method returns an `int`.</span></span>
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-<span data-ttu-id="70bc1-116">L’évaluation différée, mais pas le `Lazy` type, est également utilisé pour les séquences.</span><span class="sxs-lookup"><span data-stu-id="70bc1-116">Lazy evaluation, but not the `Lazy` type, is also used for sequences.</span></span> <span data-ttu-id="70bc1-117">Pour plus d’informations, consultez [séquences](sequences.md).</span><span class="sxs-lookup"><span data-stu-id="70bc1-117">For more information, see [Sequences](sequences.md).</span></span>
+<span data-ttu-id="2ce79-116">L’évaluation différée, mais pas le `Lazy` type, est également utilisé pour les séquences.</span><span class="sxs-lookup"><span data-stu-id="2ce79-116">Lazy evaluation, but not the `Lazy` type, is also used for sequences.</span></span> <span data-ttu-id="2ce79-117">Pour plus d’informations, consultez [séquences](sequences.md).</span><span class="sxs-lookup"><span data-stu-id="2ce79-117">For more information, see [Sequences](sequences.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="70bc1-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="70bc1-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ce79-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2ce79-118">See also</span></span>
 
-- [<span data-ttu-id="70bc1-119">Informations de référence du langage F#</span><span class="sxs-lookup"><span data-stu-id="70bc1-119">F# Language Reference</span></span>](index.md)
-- [<span data-ttu-id="70bc1-120">LazyExtensions (module)</span><span class="sxs-lookup"><span data-stu-id="70bc1-120">LazyExtensions module</span></span>](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
+- [<span data-ttu-id="2ce79-119">Informations de référence du langage F#</span><span class="sxs-lookup"><span data-stu-id="2ce79-119">F# Language Reference</span></span>](index.md)
+- [<span data-ttu-id="2ce79-120">LazyExtensions (module)</span><span class="sxs-lookup"><span data-stu-id="2ce79-120">LazyExtensions module</span></span>](https://msdn.microsoft.com/library/86671f40-84a0-402a-867d-ae596218d948)
