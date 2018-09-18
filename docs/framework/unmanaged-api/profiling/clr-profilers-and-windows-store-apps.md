@@ -15,11 +15,11 @@ ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1747d99fbfbc31fb592aee570d10d574b8480b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45558221"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743811"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profileurs CLR et les applications du Windows Store
 
@@ -134,7 +134,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
  **En spécifiant le bloc environnement personnalisé**  
  Une nouvelle interface COM, [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx), vous permet de personnaliser le comportement de l’exécution d’une application Windows Store pour simplifier certaines formes de diagnostics.  Une de ses méthodes, [EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx), vous permet de passer un bloc d’environnement à l’application du Windows Store lorsqu’elle est lancée, ainsi que d’autres effets utiles comme la désactivation de suspension de processus automatique.  Le bloc d’environnement est important car il s’agit d’où vous devez spécifier les variables d’environnement (`COR_PROFILER`, `COR_ENABLE_PROFILING`, et `COR_PROFILER_PATH)`) utilisé par le CLR pour charger votre DLL de Profiler.  
   
- Prenez en compte l’extrait de code suivant :  
+ Examinez l’extrait de code suivant :  
   
 ```csharp  
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();  
