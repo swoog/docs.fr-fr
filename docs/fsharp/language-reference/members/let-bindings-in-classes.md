@@ -3,11 +3,11 @@ title: Liaisons let dans les classes (F#)
 description: "Découvrez comment définir des champs privés et des fonctions privées pour les classes F # à l’aide de liaisons 'let' dans la définition de classe."
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45624403"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45972873"
 ---
 # <a name="let-bindings-in-classes"></a>Liaisons let dans des classes
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 66412c620b8107312e5d58fef5cf1b5d9ee90107
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: e1625d2cdf0be4106a43b9d40aef97ea2b5c4ec4
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615512"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999462"
 ---
 # <a name="introducing-xml-serialization"></a>Introduction à la sérialisation XML
 
@@ -61,7 +61,7 @@ Quand vous créez une application qui utilise la classe **XmlSerializer**, tenez
 
 - Les données sensibles sérialisées peuvent être vulnérables.
 
-  Une fois que les données ont été sérialisées par **XmlSerializer**, elles peuvent être stockées dans un fichier XML ou un autre magasin de données. Si d'autres processus peuvent accéder à votre magasin de données, ou que celui-ci est visible sur un intranet ou sur Internet, les données peuvent être volées et utilisées de manière malveillante. Par exemple, si vous créez une application qui sérialise des commandes qui incluent des numéros de carte de crédit, les données sont très sensibles. Pour empêcher cela, protégez toujours votre magasin de données et prenez les mesures nécessaires pour assurer sa confidentialité.
+  Après le **XmlSerializer** a sérialisé des données, il peut être stocké comme un fichier XML ou autre magasin de données. Si d'autres processus peuvent accéder à votre magasin de données, ou que celui-ci est visible sur un intranet ou sur Internet, les données peuvent être volées et utilisées de manière malveillante. Par exemple, si vous créez une application qui sérialise des commandes qui incluent des numéros de carte de crédit, les données sont très sensibles. Pour empêcher cela, protégez toujours votre magasin de données et prenez les mesures nécessaires pour assurer sa confidentialité.
 
 ## <a name="serialization-of-a-simple-class"></a>Sérialisation d'une classe simple
 

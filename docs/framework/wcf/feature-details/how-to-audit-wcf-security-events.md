@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d884c0e772deafdaa2326a47903e90691f8106
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493260"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969663"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Comment : auditer les événements de sécurité relatifs à Windows Communication Foundation
 Windows Communication Foundation (WCF) vous permet de consigner les événements de sécurité pour le journal des événements Windows, qui peut être affiché à l’aide de l’Observateur d’événements Windows. Cette rubrique explique comment installer une application afin qu'elle enregistre des événements de sécurité. Pour plus d’informations sur l’audit de WCF, consultez [audit](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) vous permet de consigner les événements
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     Le <xref:System.ServiceModel.AuditLogLocation> énumération possède trois valeurs : `Application`, `Security`, ou `Default`. La valeur spécifie l'un des journaux visibles dans l'Observateur d'événements, le journal de sécurité ou le journal des applications. Si vous utilisez la valeur `Default`, le journal réel dépend du système d'exploitation sur lequel l'application s'exécute. Si l'audit est activé et que l'emplacement du journal n'est pas spécifié, la valeur par défaut est le journal `Security` pour les plateformes qui prennent en charge l'écriture dans le journal de sécurité ; sinon, les événements sont consignés dans le journal `Application`. Seuls [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)] prennent en charge l'écriture dans le journal de sécurité par défaut.  
+     Le <xref:System.ServiceModel.AuditLogLocation> énumération a trois valeurs : `Application`, `Security`, ou `Default`. La valeur spécifie l'un des journaux visibles dans l'Observateur d'événements, le journal de sécurité ou le journal des applications. Si vous utilisez la valeur `Default`, le journal réel dépend du système d'exploitation sur lequel l'application s'exécute. Si l'audit est activé et que l'emplacement du journal n'est pas spécifié, la valeur par défaut est le journal `Security` pour les plateformes qui prennent en charge l'écriture dans le journal de sécurité ; sinon, les événements sont consignés dans le journal `Application`. Seuls [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] et [!INCLUDE[wv](../../../../includes/wv-md.md)] prennent en charge l'écriture dans le journal de sécurité par défaut.  
   
 2.  Installez les types d'événements à auditer. Vous pouvez auditer simultanément des événements au niveau du service ou des événements d'autorisation au niveau du message. Pour cela, affectez à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> ou <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> l'une des valeurs d'énumération <xref:System.ServiceModel.AuditLevel>, tel qu'indiqué dans le code suivant.  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) vous permet de consigner les événements
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Pour installer l'audit dans la configuration  
   
-1.  Pour configurer l’audit dans la configuration, ajoutez une [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) élément à la [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) section du fichier web.config. Ajoutez ensuite une [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) et définissez les différents attributs, comme indiqué dans l’exemple suivant.  
+1.  Pour configurer l’audit dans la configuration, ajoutez un [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) élément à la [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) section du fichier web.config. Ajoutez ensuite une [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) élément et définissez les différents attributs, comme indiqué dans l’exemple suivant.  
   
     ```xml  
     <behaviors>  
@@ -81,13 +81,13 @@ Windows Communication Foundation (WCF) vous permet de consigner les événements
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
- Affecter à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` supprime toute impossibilité de générer des audits de sécurité (si la propriété a la valeur `false`, une exception est levée). Toutefois, si vous activez les fenêtres suivantes **paramètre de sécurité locale**propriété, une défaillance pour générer des événements d’audit entraîne Windows arrêter immédiatement :  
+ Affecter à la propriété <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> la valeur `true` supprime toute impossibilité de générer des audits de sécurité (si la propriété a la valeur `false`, une exception est levée). Toutefois, si vous activez le Windows suivant **paramètre de sécurité locale** propriété, tout échec de génération des événements d’audit entraîne Windows arrêter immédiatement :  
   
- **Audit : Arrêter immédiatement le système se ne peut pas se connecter aux audits de sécurité**  
+ **Audit : Arrêter immédiatement s’il est impossible d’enregistrer les audits de sécurité de système**  
   
  Pour définir la propriété, ouvrez le **paramètres de sécurité locaux** boîte de dialogue. Sous **paramètres de sécurité**, cliquez sur **stratégies locales**. Puis cliquez sur **Options de sécurité**.  
   
- Si le <xref:System.ServiceModel.AuditLogLocation> est définie sur <xref:System.ServiceModel.AuditLogLocation.Security> et **auditer l’accès aux objets** n’est pas définie le **stratégie de sécurité locale**, événements d’audit ne seront pas écrit dans le journal de sécurité. Notez qu'aucun échec n'est retourné, mais que les entrées d'audit ne sont pas écrites dans le journal de sécurité.  
+ Si le <xref:System.ServiceModel.AuditLogLocation> propriété est définie sur <xref:System.ServiceModel.AuditLogLocation.Security> et **auditer l’accès aux objets** n’est pas définie le **stratégie de sécurité locale**, événements d’audit ne seront pas écrites dans le journal de sécurité. Notez qu'aucun échec n'est retourné, mais que les entrées d'audit ne sont pas écrites dans le journal de sécurité.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>  

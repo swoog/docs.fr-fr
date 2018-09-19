@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], inheriting from
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
-ms.openlocfilehash: 2c7d2c94c376b671d6e9e4e4b71bc8a9b0fbc343
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798756"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007430"
 ---
 # <a name="how-to-author-composite-controls"></a>Comment : créer des contrôles composites
 Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pouvez les créer dans le cadre d’un projet d’application de bureau Windows et les utiliser uniquement sur les formulaires du projet. Ou vous pouvez les créer dans un projet de bibliothèque de contrôles Windows, compiler le projet dans un assembly et utiliser les contrôles dans d’autres projets. Vous pouvez même hériter d’eux et utiliser l’héritage visuel pour les personnaliser rapidement à des fins spécifiques.  
@@ -26,11 +26,11 @@ Les contrôles composites peuvent être utilisés de plusieurs façons. Vous pou
   
 1.  Ouvrez un nouveau projet d’**application Windows** nommé `DemoControlHost`.  
   
-2.  Dans le menu **Projet**, cliquez sur **Ajouter un contrôle utilisateur**.  
+2.  Dans le menu **Projet** , cliquez sur **Ajouter un contrôle utilisateur**.  
   
 3.  Dans la boîte de dialogue **Ajouter un nouvel élément**, donnez au fichier de classe (fichier .vb ou .cs) le nom que vous souhaitez pour le contrôle composite.  
   
-4.  Cliquez sur le bouton **Ajouter** afin de créer le fichier de classe pour le contrôle composite.  
+4.  Sélectionnez le **ajouter** bouton pour créer le fichier de classe pour le contrôle composite.  
   
 5.  Utilisez la **boîte à outils** pour ajouter des contrôles à la surface du contrôle composite.  
   
