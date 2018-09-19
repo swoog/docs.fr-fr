@@ -3,11 +3,11 @@ title: Fournisseurs de type
 description: 'Découvrez comment un fournisseur de type F # est un composant qui fournit des types, propriétés et méthodes à utiliser dans vos programmes.'
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615246"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287081"
 ---
 # <a name="type-providers"></a>Fournisseurs de type
 
