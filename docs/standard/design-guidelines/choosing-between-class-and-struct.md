@@ -22,23 +22,23 @@ ms.lasthandoff: 09/06/2018
 ms.locfileid: "43865551"
 ---
 # <a name="choosing-between-class-and-struct"></a>Choix entre classe et structure
-Une des décisions de conception de base qu'est confrontée chaque concepteur framework est s’il faut un type de conception sous la forme d’une classe (type référence) ou un struct (type valeur). Est de bien comprendre les différences dans le comportement des types référence et les types valeur essentiel pour faire ce choix.  
+Une des décisions de conception de base auxquelles est confronté chaque concepteur de framework est de concevoir un type sous forme de classe (type référence) ou sous forme de struct (type valeur). Il est nécessaire de bien comprendre les différences de comportement entre les types référence et les types valeur pour faire ce choix. 
   
- La première différence entre les types référence et les types de valeur nous considérera est que les types référence sont alloués sur le tas et le garbage collector, alors que les types valeur sont alloués sur la pile ou inline dans contenant les types et libérée lorsque la pile se déroule ou quand leur type conteneur est désallouée. Par conséquent, les allocations et désallocations de types valeur sont en général moins cher que les allocations et désallocations de types référence.  
+ La première différence entre les types référence et les types valeur que nous considérerons est que les types référence sont alloués sur la pile et récupérés par le récupérateur de mémoire, alors que les types valeur sont alloués sur la pile ou en ligne dans les types conteneurs, et désalloués quand la pile se déroule ou quand leur type conteneur est désalloué. Par conséquent, les allocations et les désallocations des types valeur sont en général moins coûteuses en ressources que les allocations et désallocations des types référence.
   
- Ensuite, les tableaux de référence sont des types alloués hors ligne, ce qui signifie que le tableau d’éléments sont simplement les références aux instances du type référence résidant sur le tas. Les tableaux de types valeur sont alloués inline, ce qui signifie que les éléments du tableau sont les instances réelles du type valeur. Par conséquent, les allocations et désallocations de tableaux de types valeur sont beaucoup moins chers que les allocations et désallocations de tableaux de types référence. En outre, les tableaux de types valeur présentent une bien meilleure localité de référence dans la majorité des cas.  
+ Ensuite, les tableaux de types référence sont alloués hors ligne, ce qui signifie que les éléments du tableau sont simplement des références à des instances de type référence présentes dans la pile. Les tableaux de types valeur sont alloués en ligne, ce qui signifie que les éléments du tableau sont les instances réelles du type valeur. Par conséquent, les allocations et les désallocations de tableaux de types valeur sont beaucoup moins coûteuses en ressources que les allocations et les désallocations de tableaux de types référence. En outre, dans la plupart des cas, les tableaux de types valeur présentent une bien meilleure localité des références.  
   
- La différence suivante est liée à l’utilisation de la mémoire. Types valeur inclus lors de la conversion en un type de référence ou une des interfaces qu’ils implémentent. Ils obtiennent unboxed lors de la conversion vers le type de valeur. Étant donné que les zones sont des objets qui sont alloués sur le tas et sont garbage collector, trop boxing et unboxing peut avoir un impact négatif sur le tas, le garbage collector et, finalement, les performances de l’application.  En revanche, pas de boxing se produit comme types référence sont convertis.  
+ La différence suivante est liée à l’utilisation de la mémoire. Les types valeur subissent un boxing lors du cast en un type référence ou en une des interfaces qu’ils implémentent. Ils subissent un unboxing quand ils sont recastés en type valeur. Comme les box sont des objets qui sont alloués à la pile et récupérés par le récupérateur de mémoire, trop de boxing et d’unboxing peut avoir un impact négatif sur la pile, sur le récupérateur de mémoire et au final sur les performances de l’application. En revanche, aucun boxing de ce type ne se produit quand des types référence sont castés.
   
- Ensuite, les affectations de type référence copier la référence, tandis que les affectations de type valeur copiez la valeur entière. Par conséquent, des types référence volumineux sont moins cher que les affectations de types de valeur élevée.  
+ Ensuite, les affectations de type référence copient la référence, tandis que les affectations de type valeur copient la valeur entière. Par conséquent, les affectations de types référence de grande taille sont moins coûteuses en ressources que les affectations de types valeur de grande taille.  
   
- Enfin, les types référence sont passés par référence, tandis que les types valeur sont passés par valeur. Modifications apportées à une instance d’un type référence affectent toutes les références pointant vers l’instance. Les instances de types valeur sont copiés quand ils sont passés par valeur. Lorsqu’une instance d’un type valeur est modifiée, elle évidemment n’affecte pas un de ses copies. Étant donné que les copies ne sont pas créées explicitement par l’utilisateur, mais sont créées implicitement lorsque les arguments sont passés ou retournent les valeurs sont retournées, les types de valeur qui peuvent être modifiées peuvent prêter à confus à de nombreux utilisateurs. Par conséquent, les types valeur doivent être immuables.  
+ Enfin, les types référence sont passés par référence, tandis que les types valeur sont passés par valeur. Les modifications apportées à une instance d’un type référence affectent toutes les références pointant vers l’instance. Les instances de types valeur sont copiées quand elles sont passées par valeur. Quand une instance d’un type valeur est modifiée, cela n’affecte bien sûr pas ses copies. Comme les copies ne sont pas créées explicitement par l’utilisateur, mais sont créées implicitement quand des arguments sont passés ou que des valeurs sont retournées, les types valeur qui peuvent être modifiés peuvent créer de la confusion pour de nombreux utilisateurs. Par conséquent, les types valeur devraient être immuables.
   
- En règle générale, la majorité des types dans une infrastructure doit-elle être des classes. Toutefois, il existe certaines situations dans lesquelles les caractéristiques d’un type valeur rendent plus appropriées à utiliser les structures.  
+ D’une façon générale, la majorité des types d’un framework devraient être des classes. Cependant, il existe certaines situations dans lesquelles les caractéristiques d’un type valeur font qu’il est plus approprié d’utiliser des structs. 
   
- **✓ CONSIDER** définition d’un struct au lieu d’une classe si les instances du type sont généralement de courte durée et de petite taille ou sont généralement incorporés dans d’autres objets.  
+ **✓ CONSIDER** de définir un struct au lieu d’une classe si les instances du type sont de petite taille et d’une durée de vie assez courte, ou si elles sont souvent incorporées dans d’autres objets. 	 
   
- **X AVOID** définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
+ **X AVOID** la définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
   
 -   Il représente logiquement une seule valeur, similaire aux types primitifs (`int`, `double`, etc..).  
   
@@ -46,7 +46,7 @@ Une des décisions de conception de base qu'est confrontée chaque concepteur fr
   
 -   Il est immuable.  
   
--   Il n’aura pas à être converti (boxed) fréquemment.  
+-   Il n’aura pas à subir fréquemment des opérations de boxing.
   
  Dans tous les autres cas, vous devez définir vos types comme classes.  
   
