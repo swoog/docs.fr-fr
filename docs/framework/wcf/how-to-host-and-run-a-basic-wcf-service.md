@@ -1,6 +1,6 @@
 ---
 title: 'Comment : héberger et exécuter un service Windows Communication Foundation de base'
-ms.date: 03/30/2017
+ms.date: 09/14/2018
 dev_langs:
 - csharp
 - vb
@@ -8,424 +8,406 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: e2bf16bd07c7ac9d918a4ae95d7f4aa185d436ec
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227179"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481921"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a><span data-ttu-id="225c9-102">Comment : héberger et exécuter un service Windows Communication Foundation de base</span><span class="sxs-lookup"><span data-stu-id="225c9-102">How to: Host and Run a Basic Windows Communication Foundation Service</span></span>
-<span data-ttu-id="225c9-103">Il s’agit de la troisième des six tâches nécessaires pour créer une application WCF (Windows Communication Foundation).</span><span class="sxs-lookup"><span data-stu-id="225c9-103">This is the third of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="225c9-104">Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>  
-  
- <span data-ttu-id="225c9-105">Cette rubrique explique comment héberger un service WCF (Windows Communication Foundation) dans une application console.</span><span class="sxs-lookup"><span data-stu-id="225c9-105">This topic describes how to host a Windows Communication Foundation (WCF) service in a console application.</span></span> <span data-ttu-id="225c9-106">Cette procédure se compose des étapes suivantes :</span><span class="sxs-lookup"><span data-stu-id="225c9-106">This procedure consists of the following steps:</span></span>  
-  
--   <span data-ttu-id="225c9-107">Créez un projet d'application console pour héberger le service.</span><span class="sxs-lookup"><span data-stu-id="225c9-107">Create a console application project to host the service.</span></span>  
-  
--   <span data-ttu-id="225c9-108">Créer un hôte de service pour le service.</span><span class="sxs-lookup"><span data-stu-id="225c9-108">Create a service host for the service.</span></span>  
-  
--   <span data-ttu-id="225c9-109">Activer l'échange de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="225c9-109">Enable metadata exchange.</span></span>  
-  
--   <span data-ttu-id="225c9-110">Ouvrir l'hôte de service.</span><span class="sxs-lookup"><span data-stu-id="225c9-110">Open the service host.</span></span>  
-  
- <span data-ttu-id="225c9-111">La liste complète du code écrit dans cette tâche est fournie dans l'exemple qui suit la procédure.</span><span class="sxs-lookup"><span data-stu-id="225c9-111">A complete listing of the code written in this task is provided in the example following the procedure.</span></span>  
-  
-## <a name="to-create-a-new-console-application-to-host-the-service"></a><span data-ttu-id="225c9-112">Pour créer une nouvelle application console pour héberger le service</span><span class="sxs-lookup"><span data-stu-id="225c9-112">To create a new console application to host the service</span></span>  
-  
-1.  <span data-ttu-id="225c9-113">Créez un projet d’application console en cliquant avec le bouton droit sur la solution Mise en route, puis en sélectionnant **Ajouter**, **Nouveau projet**.</span><span class="sxs-lookup"><span data-stu-id="225c9-113">Create a new Console Application project by right-clicking on the Getting Started solution, selecting, **Add**, **New Project**.</span></span> <span data-ttu-id="225c9-114">Dans la boîte de dialogue **Ajouter un nouveau projet**, dans la partie gauche de la boîte de dialogue, sélectionnez **Windows** sous **C#** ou **VB**.</span><span class="sxs-lookup"><span data-stu-id="225c9-114">In the **Add New Project** dialog on the left hand side of the dialog select **Windows** under **C#** or **VB**.</span></span> <span data-ttu-id="225c9-115">Dans la section centrale de la boîte de dialogue, sélectionnez **Application console**.</span><span class="sxs-lookup"><span data-stu-id="225c9-115">In the center section of the dialog select **Console Application**.</span></span> <span data-ttu-id="225c9-116">Nom du projet GettingStartedHost.</span><span class="sxs-lookup"><span data-stu-id="225c9-116">Name the project GettingStartedHost.</span></span>  
-  
-2.  <span data-ttu-id="225c9-117">Affectez au framework cible du projet GettingStartedHost le .NET Framework 4.5 en cliquant avec le bouton droit sur **GettingStartedHost** dans l’Explorateur de solutions, puis en sélectionnant **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="225c9-117">Set the target framework of the GettingStartedHost project to .NET Framework 4.5 by right clicking on **GettingStartedHost** in the Solution Explorer and selecting **Properties**.</span></span> <span data-ttu-id="225c9-118">Dans la zone de liste déroulante **Framework cible**, sélectionnez **.NET Framework 4.5**.</span><span class="sxs-lookup"><span data-stu-id="225c9-118">In the dropdown box labeled **Target Framework** select **.NET Framework 4.5**.</span></span> <span data-ttu-id="225c9-119">Définir le framework cible d’un projet VB est un peu différent. Dans la boîte de dialogue de propriétés du projet GettingStartedHost, cliquez sur l’onglet **Compiler** à gauche de l’écran, puis cliquez sur le bouton **Options avancées de compilation** dans le coin inférieur gauche de la boîte de dialogue.</span><span class="sxs-lookup"><span data-stu-id="225c9-119">Setting the target framework for a VB project is a little different, in the GettingStartedHost project properties dialog, click the **Compile** tab on the left-hand side of the screen, and then click the **Advanced Compile Options** button at the lower left-hand corner of the dialog.</span></span> <span data-ttu-id="225c9-120">Sélectionnez ensuite **.NET Framework 4.5** dans la liste déroulante **Framework cible**.</span><span class="sxs-lookup"><span data-stu-id="225c9-120">Then select **.NET Framework 4.5** in the dropdown box labeled **Target Framework**.</span></span>  
-  
-     <span data-ttu-id="225c9-121">La définition du framework cible entraîne le rechargement de la solution par [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Appuyez sur **OK** quand vous y êtes invité.</span><span class="sxs-lookup"><span data-stu-id="225c9-121">Setting the target framework will cause [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] to reload the solution, press **OK** when prompted.</span></span>  
-  
-3.  <span data-ttu-id="225c9-122">Ajoutez une référence au projet GettingStartedLib dans le projet GettingStartedHost en cliquant avec le bouton droit sur le dossier **Références** sous le projet GettingStartedHost dans l’Explorateur de solutions, puis sélectionnez **Ajouter une référence**.</span><span class="sxs-lookup"><span data-stu-id="225c9-122">Add a reference to the GettingStartedLib project to the GettingStartedHost project by right clicking on the **References** folder under the GettingStartedHost project in the solution explorer and select **Add Reference**.</span></span> <span data-ttu-id="225c9-123">Dans la boîte de dialogue **Ajouter une référence**, sélectionnez **Solution** dans la partie gauche de la boîte de dialogue, sélectionnez GettingStartedLib dans la section centrale de la boîte de dialogue, puis cliquez sur **Ajouter**.</span><span class="sxs-lookup"><span data-stu-id="225c9-123">In the **Add Reference** dialog, select **Solution** on the left-hand side of the dialog and select GettingStartedLib in the center section of the dialog and click **Add**.</span></span> <span data-ttu-id="225c9-124">Cela rend les types définis dans GettingStartedLib disponibles au projet GettingStartedHost.</span><span class="sxs-lookup"><span data-stu-id="225c9-124">This makes the types defined in GettingStartedLib available to the GettingStartedHost project.</span></span>  
-  
-4.  <span data-ttu-id="225c9-125">Ajoutez une référence à System.ServiceModel dans le projet GettingStartedHost en cliquant avec le bouton droit sur le dossier **Référence** sous le projet GettingStartedHost dans l’Explorateur de solutions, puis sélectionnez **Ajouter une référence**.</span><span class="sxs-lookup"><span data-stu-id="225c9-125">Add a reference to System.ServiceModel to the GettingStartedHost project by right-clicking the **Reference** folder under the GettingStartedHost project in Solution Explorer and select **Add** Reference.</span></span> <span data-ttu-id="225c9-126">Dans la boîte de dialogue **Ajouter une référence**, sélectionnez **Framework** dans la partie gauche de la boîte de dialogue.</span><span class="sxs-lookup"><span data-stu-id="225c9-126">In the **Add Reference** dialog select **Framework** on the left-hand side of the dialog.</span></span> <span data-ttu-id="225c9-127">Dans la zone de texte Rechercher des assemblys, tapez `System.ServiceModel`.</span><span class="sxs-lookup"><span data-stu-id="225c9-127">In the Search Assemblies textbox, type in `System.ServiceModel`.</span></span> <span data-ttu-id="225c9-128">Dans la section centrale de la boîte de dialogue, sélectionnez **System.ServiceModel**, cliquez sur le bouton **Ajouter**, puis sur le bouton **Fermer**.</span><span class="sxs-lookup"><span data-stu-id="225c9-128">In the center section of the dialog select **System.ServiceModel**, click the **Add** button, and click the **Close** button.</span></span> <span data-ttu-id="225c9-129">Enregistrez la solution en cliquant sur le bouton Enregistrer tout dans le menu principal.</span><span class="sxs-lookup"><span data-stu-id="225c9-129">Save the solution by clicking the Save All button below the main menu.</span></span>  
-  
-### <a name="to-host-the-service"></a><span data-ttu-id="225c9-130">Pour héberger le service</span><span class="sxs-lookup"><span data-stu-id="225c9-130">To host the service</span></span>  
-  
--   <span data-ttu-id="225c9-131">Ouvrez le fichier Program.cs ou Module.vb et entrez le code suivant :</span><span class="sxs-lookup"><span data-stu-id="225c9-131">Open the Program.cs or Module.vb file and enter the following code:</span></span>  
-  
-    ```csharp
-    // program.cs  
-    using System;  
-    using System.Collections.Generic;  
-    using System.Linq;  
-    using System.Text;  
-    using System.ServiceModel;  
-    using GettingStartedLib;  
-    using System.ServiceModel.Description;   
-  
-    namespace GettingStartedHost  
-    {  
-        class Program  
-        {  
-            static void Main(string[] args)  
-            {  
-                // Step 1 Create a URI to serve as the base address.  
-                Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");  
-  
-                // Step 2 Create a ServiceHost instance  
-                ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
-  
-                try  
-                {  
-                    // Step 3 Add a service endpoint.  
-                    selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");  
-  
-                    // Step 4 Enable metadata exchange.  
-                    ServiceMetadataBehavior smb = new ServiceMetadataBehavior();  
-                    smb.HttpGetEnabled = true;  
-                    selfHost.Description.Behaviors.Add(smb);  
-  
-                    // Step 5 Start the service.  
-                    selfHost.Open();  
-                    Console.WriteLine("The service is ready.");  
-                    Console.WriteLine("Press <ENTER> to terminate service.");  
-                    Console.WriteLine();  
-                    Console.ReadLine();  
-  
-                    // Close the ServiceHostBase to shutdown the service.  
-                    selfHost.Close();  
-                }  
-                catch (CommunicationException ce)  
-                {  
-                    Console.WriteLine("An exception occurred: {0}", ce.Message);  
-                    selfHost.Abort();  
-                }  
-            }  
-        }  
-    }  
-    ```  
-  
-    ```vb
-    'Module1.vb  
-    Imports System  
-    Imports System.ServiceModel  
-    Imports System.ServiceModel.Description  
-    Imports GettingStartedLibVB.GettingStartedLib  
-  
-    Module Service  
-  
-        Class Program  
-            Shared Sub Main()  
-                ' Step 1 Create a URI to serve as the base address  
-                Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")  
-  
-                ' Step 2 Create a ServiceHost instance  
-                Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)  
-                Try  
-  
-                    ' Step 3 Add a service endpoint  
-                    ' Add a service endpoint  
-                    selfHost.AddServiceEndpoint( _  
-                        GetType(ICalculator), _  
-                        New WSHttpBinding(), _  
-                        "CalculatorService")  
-  
-                    ' Step 4 Enable metadata exchange.  
-                    Dim smb As New ServiceMetadataBehavior()  
-                    smb.HttpGetEnabled = True  
-                    selfHost.Description.Behaviors.Add(smb)  
-  
-                    ' Step 5 Start the service  
-                    selfHost.Open()  
-                    Console.WriteLine("The service is ready.")  
-                    Console.WriteLine("Press <ENTER> to terminate service.")  
-                    Console.WriteLine()  
-                    Console.ReadLine()  
-  
-                    ' Close the ServiceHostBase to shutdown the service.  
-                    selfHost.Close()  
-                Catch ce As CommunicationException  
-                    Console.WriteLine("An exception occurred: {0}", ce.Message)  
-                    selfHost.Abort()  
-                End Try  
-            End Sub  
-        End Class  
-  
-    End Module  
-    ```  
-  
-    1.  <span data-ttu-id="225c9-132">Étape 1 - Crée une instance de la classe URI pour contenir l'adresse de base du service.</span><span class="sxs-lookup"><span data-stu-id="225c9-132">Step 1 - Creates an instance of the Uri class to hold the base address of the service.</span></span> <span data-ttu-id="225c9-133">Les services sont identifiés par une URL, qui contient une adresse de base et un URI facultatif.</span><span class="sxs-lookup"><span data-stu-id="225c9-133">Services are identified by a URL which contains a base address and an optional URI.</span></span> <span data-ttu-id="225c9-134">L’adresse de base est mise en forme comme suit : [transport]://[nom de machine ou domaine][:n° de port facultatif]/[segment d’URI facultatif]L’adresse de base du service de calculatrice utilise le transport HTTP, localhost, le port 8000 et le segment d’URI « GettingStarted »</span><span class="sxs-lookup"><span data-stu-id="225c9-134">The base address is formatted as follows:[transport]://[machine-name or domain][:optional port #]/[optional URI segment]The base address for the calculator service uses the HTTP transport, localhost, port 8000, and the URI segment "GettingStarted"</span></span>  
-  
-    2.  <span data-ttu-id="225c9-135">Étape 2 – Crée une instance de la classe <xref:System.ServiceModel.ServiceHost> pour héberger le service.</span><span class="sxs-lookup"><span data-stu-id="225c9-135">Step 2 – Creates an instance of the <xref:System.ServiceModel.ServiceHost> class to host the service.</span></span> <span data-ttu-id="225c9-136">Le constructeur prend deux paramètres, le type de la classe qui implémente le contrat de service et l'adresse de base du service.</span><span class="sxs-lookup"><span data-stu-id="225c9-136">The constructor takes two parameters, the type of the class that implements the service contract, and the base address of the service.</span></span>  
-  
-    3.  <span data-ttu-id="225c9-137">Étape 3 - Crée une instance <xref:System.ServiceModel.Description.ServiceEndpoint>.</span><span class="sxs-lookup"><span data-stu-id="225c9-137">Step 3 – Creates a <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span></span> <span data-ttu-id="225c9-138">Un point de terminaison de service est composé d’une adresse, d’une liaison et d’un contrat de service.</span><span class="sxs-lookup"><span data-stu-id="225c9-138">A service endpoint is composed of an address, a binding, and a service contract.</span></span> <span data-ttu-id="225c9-139">Le constructeur <xref:System.ServiceModel.Description.ServiceEndpoint> prend donc le type d'interface de contrat de service, une liaison et une adresse.</span><span class="sxs-lookup"><span data-stu-id="225c9-139">The <xref:System.ServiceModel.Description.ServiceEndpoint> constructor therefore takes the service contract interface type, a binding, and an address.</span></span> <span data-ttu-id="225c9-140">Le contrat de service est `ICalculator`, que vous définissez et implémentez dans le type de service.</span><span class="sxs-lookup"><span data-stu-id="225c9-140">The service contract is `ICalculator`, which you defined and implement in the service type.</span></span> <span data-ttu-id="225c9-141">La liaison utilisée dans cet exemple est <xref:System.ServiceModel.WSHttpBinding>, qui est une liaison intégrée utilisée pour se connecter aux points de terminaison qui sont conformes aux spécifications WS-\*.</span><span class="sxs-lookup"><span data-stu-id="225c9-141">The binding used in this sample is <xref:System.ServiceModel.WSHttpBinding> which is a built-in binding that is used for connecting to endpoints that conform to the WS-\* specifications.</span></span> <span data-ttu-id="225c9-142">Pour plus d’informations sur les liaisons WCF, consultez [Vue d’ensemble des liaisons WCF](../../../docs/framework/wcf/bindings-overview.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-142">For more information about WCF bindings, see [WCF Bindings Overview](../../../docs/framework/wcf/bindings-overview.md).</span></span> <span data-ttu-id="225c9-143">L'adresse est ajoutée à l'adresse de base pour identifier le point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="225c9-143">The address is appended to the base address to identify the endpoint.</span></span> <span data-ttu-id="225c9-144">L’adresse spécifiée dans ce code est « CalculatorService », par conséquent, l’adresse complète du point de terminaison est `"http://localhost:8000/GettingStarted/CalculatorService"`.</span><span class="sxs-lookup"><span data-stu-id="225c9-144">The address specified in this code is "CalculatorService" so the fully qualified address for the endpoint is `"http://localhost:8000/GettingStarted/CalculatorService"`.</span></span>  
-  
-        > [!IMPORTANT]
-        >  <span data-ttu-id="225c9-145">L'ajout d'un point de terminaison de service est facultatif lorsque vous utilisez .NET Framework 4 ou version ultérieure.</span><span class="sxs-lookup"><span data-stu-id="225c9-145">Adding a service endpoint is optional when using .NET Framework 4 or later.</span></span> <span data-ttu-id="225c9-146">Dans ces versions, si aucun point de terminaison n'est ajouté dans le code ou dans la configuration, WCF ajoute un point de terminaison par défaut pour chaque combinaison d'adresse de base et de contrat implémentée par le service.</span><span class="sxs-lookup"><span data-stu-id="225c9-146">In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service.</span></span> <span data-ttu-id="225c9-147">Pour plus d’informations sur les points de terminaison par défaut, consultez [Spécification d’une adresse de point de terminaison](../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-147">For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md).</span></span> <span data-ttu-id="225c9-148">Pour plus d’informations sur les points de terminaison, les liaisons et les comportements par défaut, consultez [Configuration simplifiée](../../../docs/framework/wcf/simplified-configuration.md) et [Configuration simplifiée pour les services WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-148">For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>  
-  
-    4.  <span data-ttu-id="225c9-149">Étape 4 – Activer l'échange de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="225c9-149">Step 4 – Enable metadata exchange.</span></span> <span data-ttu-id="225c9-150">Les clients utilisent l'échange de métadonnées pour générer des proxys qui seront utilisés pour appeler les opérations de service.</span><span class="sxs-lookup"><span data-stu-id="225c9-150">Clients will use metadata exchange to generate proxies that will be used to call the service operations.</span></span> <span data-ttu-id="225c9-151">Pour permettre l’échange de métadonnées, créez une instance de <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, affectez à sa propriété <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> la valeur `true`, puis ajoutez le comportement à la collection <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` de l’instance <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="225c9-151">To enable metadata exchange create a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance, set it’s <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property to `true`, and add the behavior to the <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` collection of the <xref:System.ServiceModel.ServiceHost> instance.</span></span>  
-  
-    5.  <span data-ttu-id="225c9-152">Étape 5 - Ouvrir <xref:System.ServiceModel.ServiceHost> pour écouter les messages entrants.</span><span class="sxs-lookup"><span data-stu-id="225c9-152">Step 5 – Open the <xref:System.ServiceModel.ServiceHost> to listen for incoming messages.</span></span> <span data-ttu-id="225c9-153">Notez que le code attend que l'utilisateur appuie sur Entrée.</span><span class="sxs-lookup"><span data-stu-id="225c9-153">Notice the code waits for the user to hit enter.</span></span> <span data-ttu-id="225c9-154">Si vous n'effectuez pas cette opération, l'application se ferme immédiatement et le service s'arrête. Notez également le bloc try/catch utilisé.</span><span class="sxs-lookup"><span data-stu-id="225c9-154">If you do not do this, the app will close immediately and the service will shut down.Also notice a  try/catch block used.</span></span> <span data-ttu-id="225c9-155">Une fois que <xref:System.ServiceModel.ServiceHost> a été instancié, le reste du code est placé dans un bloc try/catch.</span><span class="sxs-lookup"><span data-stu-id="225c9-155">After the <xref:System.ServiceModel.ServiceHost> has been instantiated, all other code is placed in a try/catch block.</span></span> <span data-ttu-id="225c9-156">Pour plus d’informations sur l’interception en toute sécurité des exceptions levées par <xref:System.ServiceModel.ServiceHost>, consultez la section [Éviter les problèmes avec l’instruction Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)</span><span class="sxs-lookup"><span data-stu-id="225c9-156">For more information about safely catching exceptions thrown by <xref:System.ServiceModel.ServiceHost>, see [Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)</span></span>  
-  
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a><span data-ttu-id="de962-102">Comment : héberger et exécuter un service Windows Communication Foundation de base</span><span class="sxs-lookup"><span data-stu-id="de962-102">How to: Host and Run a Basic Windows Communication Foundation Service</span></span>
+
+<span data-ttu-id="de962-103">Il s’agit de la troisième des six tâches nécessaires pour créer une application WCF (Windows Communication Foundation).</span><span class="sxs-lookup"><span data-stu-id="de962-103">This is the third of six tasks required to create a Windows Communication Foundation (WCF) application.</span></span> <span data-ttu-id="de962-104">Pour une vue d’ensemble des six tâches, consultez la rubrique [Tutoriel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="de962-104">For an overview of all six of the tasks, see the [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md) topic.</span></span>
+
+<span data-ttu-id="de962-105">Cette rubrique explique comment héberger un service WCF (Windows Communication Foundation) dans une application console.</span><span class="sxs-lookup"><span data-stu-id="de962-105">This topic describes how to host a Windows Communication Foundation (WCF) service in a console application.</span></span> <span data-ttu-id="de962-106">Cette procédure se compose des étapes suivantes :</span><span class="sxs-lookup"><span data-stu-id="de962-106">This procedure consists of the following steps:</span></span>
+
+- <span data-ttu-id="de962-107">Créez un projet d'application console pour héberger le service.</span><span class="sxs-lookup"><span data-stu-id="de962-107">Create a console application project to host the service.</span></span>
+
+- <span data-ttu-id="de962-108">Créer un hôte de service pour le service.</span><span class="sxs-lookup"><span data-stu-id="de962-108">Create a service host for the service.</span></span>
+
+- <span data-ttu-id="de962-109">Activer l'échange de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="de962-109">Enable metadata exchange.</span></span>
+
+- <span data-ttu-id="de962-110">Ouvrir l'hôte de service.</span><span class="sxs-lookup"><span data-stu-id="de962-110">Open the service host.</span></span>
+
+<span data-ttu-id="de962-111">La liste complète du code écrit dans cette tâche est fournie dans l’exemple qui suit la procédure.</span><span class="sxs-lookup"><span data-stu-id="de962-111">A complete listing of the code written in this task is provided in the example following the procedure.</span></span>
+
+## <a name="create-a-new-console-application-to-host-the-service"></a><span data-ttu-id="de962-112">Créer une nouvelle application de console pour héberger le service</span><span class="sxs-lookup"><span data-stu-id="de962-112">Create a new console application to host the service</span></span>
+
+1. <span data-ttu-id="de962-113">Créer un nouveau projet d’Application de Console dans Visual Studio en effectuant un clic droit sur la solution de mise en route et en sélectionnant **ajouter** > **nouveau projet**.</span><span class="sxs-lookup"><span data-stu-id="de962-113">Create a new Console Application project in Visual Studio by right-clicking on the Getting Started solution and selecting **Add** > **New Project**.</span></span> <span data-ttu-id="de962-114">Dans le **ajouter un nouveau projet** boîte de dialogue, sur le côté gauche, sélectionnez le **Windows Desktop** catégorie sous **Visual C#** ou **Visual Basic**.</span><span class="sxs-lookup"><span data-stu-id="de962-114">In the **Add New Project** dialog, on the left-hand side, select the **Windows Desktop** category under **Visual C#** or **Visual Basic**.</span></span> <span data-ttu-id="de962-115">Sélectionnez le **application Console (.NET Framework)** modèle, puis nommez le projet **GettingStartedHost**.</span><span class="sxs-lookup"><span data-stu-id="de962-115">Select the **Console App (.NET Framework)** template, and then name the project **GettingStartedHost**.</span></span>
+
+2. <span data-ttu-id="de962-116">Ajoutez une référence au projet GettingStartedLib dans le projet GettingStartedHost.</span><span class="sxs-lookup"><span data-stu-id="de962-116">Add a reference to the GettingStartedLib project to the GettingStartedHost project.</span></span> <span data-ttu-id="de962-117">Avec le bouton droit sur le **références** dossier sous le projet GettingStartedHost dans **l’Explorateur de solutions**, puis sélectionnez **ajouter une référence**.</span><span class="sxs-lookup"><span data-stu-id="de962-117">Right-click on the **References** folder under the GettingStartedHost project in **Solution Explorer**, and then select **Add Reference**.</span></span> <span data-ttu-id="de962-118">Dans le **ajouter une référence** boîte de dialogue, sélectionnez **Solution** sur le côté gauche de la boîte de dialogue, sélectionnez GettingStartedLib dans la section centrale de la boîte de dialogue, puis choisissez **ajouter**.</span><span class="sxs-lookup"><span data-stu-id="de962-118">In the **Add Reference** dialog, select **Solution** on the left-hand side of the dialog, select GettingStartedLib in the center section of the dialog, and then choose **Add**.</span></span> <span data-ttu-id="de962-119">Cela rend les types définis dans GettingStartedLib disponibles au projet GettingStartedHost.</span><span class="sxs-lookup"><span data-stu-id="de962-119">This makes the types defined in GettingStartedLib available to the GettingStartedHost project.</span></span>
+
+3. <span data-ttu-id="de962-120">Ajoutez une référence à System.ServiceModel dans le projet GettingStartedHost.</span><span class="sxs-lookup"><span data-stu-id="de962-120">Add a reference to System.ServiceModel to the GettingStartedHost project.</span></span> <span data-ttu-id="de962-121">Avec le bouton droit le **références** dossier sous le projet GettingStartedHost dans **l’Explorateur de solutions** et sélectionnez **ajouter une référence**.</span><span class="sxs-lookup"><span data-stu-id="de962-121">Right-click the **References** folder under the GettingStartedHost project in **Solution Explorer** and select **Add Reference**.</span></span> <span data-ttu-id="de962-122">Dans le **ajouter une référence** boîte de dialogue, sélectionnez **Framework** sur le côté gauche de la boîte de dialogue **assemblys**.</span><span class="sxs-lookup"><span data-stu-id="de962-122">In the **Add Reference** dialog, select **Framework** on the left-hand side of the dialog under **Assemblies**.</span></span> <span data-ttu-id="de962-123">Recherchez et sélectionnez **System.ServiceModel**, puis choisissez **OK**.</span><span class="sxs-lookup"><span data-stu-id="de962-123">Find and select **System.ServiceModel**, and then choose **OK**.</span></span> <span data-ttu-id="de962-124">Enregistrez la solution en sélectionnant **fichier** > **Enregistrer tout**.</span><span class="sxs-lookup"><span data-stu-id="de962-124">Save the solution by selecting **File** > **Save All**.</span></span>
+
+## <a name="host-the-service"></a><span data-ttu-id="de962-125">Héberger le service</span><span class="sxs-lookup"><span data-stu-id="de962-125">Host the service</span></span>
+
+<span data-ttu-id="de962-126">Ouvrez le fichier Program.cs ou Module.vb et entrez le code suivant :</span><span class="sxs-lookup"><span data-stu-id="de962-126">Open the Program.cs or Module.vb file and enter the following code:</span></span>
+
+```csharp
+using System;
+using System.ServiceModel;
+using System.ServiceModel.Description;
+using GettingStartedLib;
+
+namespace GettingStartedHost
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Step 1 Create a URI to serve as the base address.
+            Uri baseAddress = new Uri("http://localhost:8000/GettingStarted/");
+
+            // Step 2 Create a ServiceHost instance
+            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
+
+            try
+            {
+                // Step 3 Add a service endpoint.
+                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+
+                // Step 4 Enable metadata exchange.
+                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                smb.HttpGetEnabled = true;
+                selfHost.Description.Behaviors.Add(smb);
+
+                // Step 5 Start the service.
+                selfHost.Open();
+                Console.WriteLine("The service is ready.");
+                Console.WriteLine("Press <ENTER> to terminate service.");
+                Console.WriteLine();
+                Console.ReadLine();
+
+                // Close the ServiceHostBase to shutdown the service.
+                selfHost.Close();
+            }
+            catch (CommunicationException ce)
+            {
+                Console.WriteLine("An exception occurred: {0}", ce.Message);
+                selfHost.Abort();
+            }
+        }
+    }
+}
+```
+
+```vb
+Imports System.ServiceModel
+Imports System.ServiceModel.Description
+Imports GettingStartedLibVB.GettingStartedLib
+
+Module Service
+
+    Class Program
+        Shared Sub Main()
+            ' Step 1 Create a URI to serve as the base address
+            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")
+
+            ' Step 2 Create a ServiceHost instance
+            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
+           Try
+
+                ' Step 3 Add a service endpoint
+                ' Add a service endpoint
+                selfHost.AddServiceEndpoint( _
+                    GetType(ICalculator), _
+                    New WSHttpBinding(), _
+                    "CalculatorService")
+
+                ' Step 4 Enable metadata exchange.
+                Dim smb As New ServiceMetadataBehavior()
+                smb.HttpGetEnabled = True
+                selfHost.Description.Behaviors.Add(smb)
+
+                ' Step 5 Start the service
+                selfHost.Open()
+                Console.WriteLine("The service is ready.")
+                Console.WriteLine("Press <ENTER> to terminate service.")
+                Console.WriteLine()
+                Console.ReadLine()
+
+                ' Close the ServiceHostBase to shutdown the service.
+                selfHost.Close()
+            Catch ce As CommunicationException
+                Console.WriteLine("An exception occurred: {0}", ce.Message)
+                selfHost.Abort()
+            End Try
+        End Sub
+    End Class
+
+End Module
+```
+
+<span data-ttu-id="de962-127">**Étape 1** -crée une instance de la classe Uri pour contenir l’adresse de base du service.</span><span class="sxs-lookup"><span data-stu-id="de962-127">**Step 1** - Creates an instance of the Uri class to hold the base address of the service.</span></span> <span data-ttu-id="de962-128">Les services sont identifiés par une URL, qui contient une adresse de base et un URI facultatif.</span><span class="sxs-lookup"><span data-stu-id="de962-128">Services are identified by a URL which contains a base address and an optional URI.</span></span> <span data-ttu-id="de962-129">L’adresse de base est mise en forme comme suit : [transport]://[nom de machine ou domaine][:n° de port facultatif]/[segment d’URI facultatif]L’adresse de base du service de calculatrice utilise le transport HTTP, localhost, le port 8000 et le segment d’URI « GettingStarted »</span><span class="sxs-lookup"><span data-stu-id="de962-129">The base address is formatted as follows:[transport]://[machine-name or domain][:optional port #]/[optional URI segment]The base address for the calculator service uses the HTTP transport, localhost, port 8000, and the URI segment "GettingStarted"</span></span>
+
+<span data-ttu-id="de962-130">**Étape 2** – crée une instance de la <xref:System.ServiceModel.ServiceHost> classe pour héberger le service.</span><span class="sxs-lookup"><span data-stu-id="de962-130">**Step 2** – Creates an instance of the <xref:System.ServiceModel.ServiceHost> class to host the service.</span></span> <span data-ttu-id="de962-131">Le constructeur prend deux paramètres, le type de la classe qui implémente le contrat de service et l'adresse de base du service.</span><span class="sxs-lookup"><span data-stu-id="de962-131">The constructor takes two parameters, the type of the class that implements the service contract, and the base address of the service.</span></span>
+
+<span data-ttu-id="de962-132">**Étape 3** – crée un <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span><span class="sxs-lookup"><span data-stu-id="de962-132">**Step 3** – Creates a <xref:System.ServiceModel.Description.ServiceEndpoint> instance.</span></span> <span data-ttu-id="de962-133">Un point de terminaison de service est composé d’une adresse, d’une liaison et d’un contrat de service.</span><span class="sxs-lookup"><span data-stu-id="de962-133">A service endpoint is composed of an address, a binding, and a service contract.</span></span> <span data-ttu-id="de962-134">Le constructeur <xref:System.ServiceModel.Description.ServiceEndpoint> prend donc le type d'interface de contrat de service, une liaison et une adresse.</span><span class="sxs-lookup"><span data-stu-id="de962-134">The <xref:System.ServiceModel.Description.ServiceEndpoint> constructor therefore takes the service contract interface type, a binding, and an address.</span></span> <span data-ttu-id="de962-135">Le contrat de service est `ICalculator`, que vous définissez et implémentez dans le type de service.</span><span class="sxs-lookup"><span data-stu-id="de962-135">The service contract is `ICalculator`, which you defined and implement in the service type.</span></span> <span data-ttu-id="de962-136">La liaison utilisée dans cet exemple est <xref:System.ServiceModel.WSHttpBinding>, qui est une liaison intégrée utilisée pour se connecter aux points de terminaison qui sont conformes aux spécifications WS-\*.</span><span class="sxs-lookup"><span data-stu-id="de962-136">The binding used in this sample is <xref:System.ServiceModel.WSHttpBinding> which is a built-in binding that is used for connecting to endpoints that conform to the WS-\* specifications.</span></span> <span data-ttu-id="de962-137">Pour plus d’informations sur les liaisons WCF, consultez [Vue d’ensemble des liaisons WCF](../../../docs/framework/wcf/bindings-overview.md).</span><span class="sxs-lookup"><span data-stu-id="de962-137">For more information about WCF bindings, see [WCF Bindings Overview](../../../docs/framework/wcf/bindings-overview.md).</span></span> <span data-ttu-id="de962-138">L'adresse est ajoutée à l'adresse de base pour identifier le point de terminaison.</span><span class="sxs-lookup"><span data-stu-id="de962-138">The address is appended to the base address to identify the endpoint.</span></span> <span data-ttu-id="de962-139">L’adresse spécifiée dans ce code est « CalculatorService », par conséquent, l’adresse complète du point de terminaison est `"http://localhost:8000/GettingStarted/CalculatorService"`.</span><span class="sxs-lookup"><span data-stu-id="de962-139">The address specified in this code is "CalculatorService" so the fully qualified address for the endpoint is `"http://localhost:8000/GettingStarted/CalculatorService"`.</span></span>
+
+    > [!IMPORTANT]
+    > Adding a service endpoint is optional when using .NET Framework 4 or later. In these versions, if no endpoints are added in code or configuration, WCF adds one default endpoint for each combination of base address and contract implemented by the service. For more information about default endpoints see [Specifying an Endpoint Address](../../../docs/framework/wcf/specifying-an-endpoint-address.md). For more information about default endpoints, bindings, and behaviors, see [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).
+
+<span data-ttu-id="de962-140">**Étape 4** – activer l’échange de métadonnées.</span><span class="sxs-lookup"><span data-stu-id="de962-140">**Step 4** – Enable metadata exchange.</span></span> <span data-ttu-id="de962-141">Les clients utilisent l'échange de métadonnées pour générer des proxys qui seront utilisés pour appeler les opérations de service.</span><span class="sxs-lookup"><span data-stu-id="de962-141">Clients will use metadata exchange to generate proxies that will be used to call the service operations.</span></span> <span data-ttu-id="de962-142">Pour permettre l’échange de métadonnées, créez une instance de <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, affectez à sa propriété <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> la valeur `true`, puis ajoutez le comportement à la collection <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` de l’instance <xref:System.ServiceModel.ServiceHost>.</span><span class="sxs-lookup"><span data-stu-id="de962-142">To enable metadata exchange create a <xref:System.ServiceModel.Description.ServiceMetadataBehavior> instance, set it’s <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> property to `true`, and add the behavior to the <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` collection of the <xref:System.ServiceModel.ServiceHost> instance.</span></span>
+
+<span data-ttu-id="de962-143">**Étape 5** – permet d’ouvrir le <xref:System.ServiceModel.ServiceHost> pour écouter les messages entrants.</span><span class="sxs-lookup"><span data-stu-id="de962-143">**Step 5** – Open the <xref:System.ServiceModel.ServiceHost> to listen for incoming messages.</span></span> <span data-ttu-id="de962-144">Notez que le code attend que l'utilisateur appuie sur Entrée.</span><span class="sxs-lookup"><span data-stu-id="de962-144">Notice the code waits for the user to hit enter.</span></span> <span data-ttu-id="de962-145">Si vous n'effectuez pas cette opération, l'application se ferme immédiatement et le service s'arrête. Notez également le bloc try/catch utilisé.</span><span class="sxs-lookup"><span data-stu-id="de962-145">If you do not do this, the app will close immediately and the service will shut down.Also notice a  try/catch block used.</span></span> <span data-ttu-id="de962-146">Une fois que <xref:System.ServiceModel.ServiceHost> a été instancié, le reste du code est placé dans un bloc try/catch.</span><span class="sxs-lookup"><span data-stu-id="de962-146">After the <xref:System.ServiceModel.ServiceHost> has been instantiated, all other code is placed in a try/catch block.</span></span> <span data-ttu-id="de962-147">Pour plus d’informations sur l’interception en toute sécurité des exceptions levées par <xref:System.ServiceModel.ServiceHost>, consultez la section [Éviter les problèmes avec l’instruction Using](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)</span><span class="sxs-lookup"><span data-stu-id="de962-147">For more information about safely catching exceptions thrown by <xref:System.ServiceModel.ServiceHost>, see [Avoiding Problems with the Using Statement](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md)</span></span>
+
 > [!IMPORTANT]
-> <span data-ttu-id="225c9-157">Modifiez le fichier App.config dans GettingStartedLib afin de refléter les modifications apportées dans le code :</span><span class="sxs-lookup"><span data-stu-id="225c9-157">Edit App.config in GettingStartedLib to reflect the changes made in code:</span></span> 
-> 1. <span data-ttu-id="225c9-158">Modifiez la ligne 14 pour `<service name="GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="225c9-158">Change line 14 to `<service name="GettingStartedLib.CalculatorService">`</span></span>
-> 2. <span data-ttu-id="225c9-159">Modifiez la ligne 17 en `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="225c9-159">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
-> 3. <span data-ttu-id="225c9-160">Remplacez la ligne 22 à `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="225c9-160">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span></span>
-        
-### <a name="to-verify-the-service-is-working"></a><span data-ttu-id="225c9-161">Pour vérifier que le service fonctionne</span><span class="sxs-lookup"><span data-stu-id="225c9-161">To verify the service is working</span></span>  
-  
-1.  <span data-ttu-id="225c9-162">Exécutez l'application console GettingStartedHost à partir de [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="225c9-162">Run the GettingStartedHost console application from inside [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].</span></span> <span data-ttu-id="225c9-163">Lors de l'exécution sur [!INCLUDE[wv](../../../includes/wv-md.md)] et les systèmes d'exploitation ultérieurs, le service doit être exécuté avec des privilèges d'administrateur.</span><span class="sxs-lookup"><span data-stu-id="225c9-163">When running on [!INCLUDE[wv](../../../includes/wv-md.md)] and later operating systems, the service must be run with administrator privileges.</span></span> <span data-ttu-id="225c9-164">Dans la mesure où Visual Studio a été exécuté avec des privilèges d’administrateur, GettingStartedHost est également exécuté avec des privilèges d’administrateur.</span><span class="sxs-lookup"><span data-stu-id="225c9-164">Because Visual Studio was run with Administrator privileges, GettingStartedHost is also run with Administrator privileges.</span></span> <span data-ttu-id="225c9-165">Vous pouvez aussi démarrer une nouvelle invite de commandes qui l'exécute avec les privilèges d'administrateur et y exécuter service.exe.</span><span class="sxs-lookup"><span data-stu-id="225c9-165">You can also start a new command prompt running it with Administrator privileges and run service.exe within it.</span></span>  
-  
-2.  <span data-ttu-id="225c9-166">Ouvrez Internet Explorer et accédez à la page de débogage du service à l'adresse `http://localhost:8000/GettingStarted/CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="225c9-166">Open Internet Explorer and browse to the service's debug page at `http://localhost:8000/GettingStarted/CalculatorService`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="225c9-167">Exemple</span><span class="sxs-lookup"><span data-stu-id="225c9-167">Example</span></span>  
- <span data-ttu-id="225c9-168">L'exemple suivant inclut le contrat de service et l'implémentation d'étapes précédentes dans le didacticiel et héberge le service dans une application console.</span><span class="sxs-lookup"><span data-stu-id="225c9-168">The following example includes the service contract and implementation from previous steps in the tutorial and hosts the service in a console application.</span></span>  
-  
- <span data-ttu-id="225c9-169">Pour le compiler avec un compilateur en ligne de commande, compilez IService1.cs et Service1.cs dans une bibliothèque de classes référençant `System.ServiceModel.dll`.</span><span class="sxs-lookup"><span data-stu-id="225c9-169">To compile this with a command-line compiler, compile IService1.cs and Service1.cs into a class library referencing `System.ServiceModel.dll`.</span></span> <span data-ttu-id="225c9-170">Et compilez le fichier Program.cs dans une application console.</span><span class="sxs-lookup"><span data-stu-id="225c9-170">And compile Program.cs to a console application.</span></span>  
-  
+> <span data-ttu-id="de962-148">Modifiez le fichier App.config dans GettingStartedLib afin de refléter les modifications apportées dans le code :</span><span class="sxs-lookup"><span data-stu-id="de962-148">Edit App.config in GettingStartedLib to reflect the changes made in code:</span></span>
+> 1. <span data-ttu-id="de962-149">Modifiez la ligne 14 pour `<service name="GettingStartedLib.CalculatorService">`</span><span class="sxs-lookup"><span data-stu-id="de962-149">Change line 14 to `<service name="GettingStartedLib.CalculatorService">`</span></span>
+> 2. <span data-ttu-id="de962-150">Modifiez la ligne 17 en `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span><span class="sxs-lookup"><span data-stu-id="de962-150">Change line 17 to `<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`</span></span>
+> 3. <span data-ttu-id="de962-151">Remplacez la ligne 22 à `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span><span class="sxs-lookup"><span data-stu-id="de962-151">Change line 22 to `<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`</span></span>
+
+## <a name="verify-the-service-is-working"></a><span data-ttu-id="de962-152">Vérifiez que le service fonctionne</span><span class="sxs-lookup"><span data-stu-id="de962-152">Verify the service is working</span></span>
+
+1. <span data-ttu-id="de962-153">Exécutez la console GettingStartedHost application à partir de Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="de962-153">Run the GettingStartedHost console application from inside Visual Studio.</span></span>
+
+   <span data-ttu-id="de962-154">Le service doit être exécuté avec des privilèges d’administrateur.</span><span class="sxs-lookup"><span data-stu-id="de962-154">The service must be run with administrator privileges.</span></span> <span data-ttu-id="de962-155">Étant donné que Visual Studio a été ouverte avec des privilèges d’administrateur, GettingStartedHost est également exécuté avec des privilèges d’administrateur.</span><span class="sxs-lookup"><span data-stu-id="de962-155">Because Visual Studio was opened with administrator privileges, GettingStartedHost is also run with administrator privileges.</span></span> <span data-ttu-id="de962-156">Vous pouvez également ouvrir une invite de commandes en utilisant **exécuter en tant qu’administrateur** et exécutez service.exe qu’il contient.</span><span class="sxs-lookup"><span data-stu-id="de962-156">You can also open a new command prompt using **Run as administrator** and run service.exe within it.</span></span>
+
+2. <span data-ttu-id="de962-157">Ouvrez un navigateur web et accédez à la page du service debug à `http://localhost:8000/GettingStarted/CalculatorService`.</span><span class="sxs-lookup"><span data-stu-id="de962-157">Open a web browser and browse to the service's debug page at `http://localhost:8000/GettingStarted/CalculatorService`.</span></span>
+
+## <a name="example"></a><span data-ttu-id="de962-158">Exemple</span><span class="sxs-lookup"><span data-stu-id="de962-158">Example</span></span>
+
+<span data-ttu-id="de962-159">L'exemple suivant inclut le contrat de service et l'implémentation d'étapes précédentes dans le didacticiel et héberge le service dans une application console.</span><span class="sxs-lookup"><span data-stu-id="de962-159">The following example includes the service contract and implementation from previous steps in the tutorial and hosts the service in a console application.</span></span>
+
+<span data-ttu-id="de962-160">Pour compiler avec un compilateur de ligne de commande, compilez IService1.cs et Service1.cs dans une bibliothèque de classes qui fait référence à `System.ServiceModel.dll`.</span><span class="sxs-lookup"><span data-stu-id="de962-160">To compile this with a command-line compiler, compile IService1.cs and Service1.cs into a class library that references `System.ServiceModel.dll`.</span></span> <span data-ttu-id="de962-161">Compilez le fichier Program.cs comme une application console.</span><span class="sxs-lookup"><span data-stu-id="de962-161">Compile Program.cs as a console application.</span></span>
+
 ```csharp
-// IService1.cs  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.Text;  
-  
-namespace GettingStartedLib  
-{  
-        [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-        public interface ICalculator  
-        {  
-            [OperationContract]  
-            double Add(double n1, double n2);  
-            [OperationContract]  
-            double Subtract(double n1, double n2);  
-            [OperationContract]  
-            double Multiply(double n1, double n2);  
-            [OperationContract]  
-            double Divide(double n1, double n2);  
-        }  
-}  
-```  
-  
+using System;
+using System.ServiceModel;
+
+namespace GettingStartedLib
+{
+        [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
+        public interface ICalculator
+        {
+            [OperationContract]
+            double Add(double n1, double n2);
+            [OperationContract]
+            double Subtract(double n1, double n2);
+            [OperationContract]
+            double Multiply(double n1, double n2);
+            [OperationContract]
+            double Divide(double n1, double n2);
+        }
+}
+```
+
 ```csharp
-// Service1.cs  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using System.Runtime.Serialization;  
-using System.ServiceModel;  
-using System.Text;  
-  
-namespace GettingStartedLib  
-{  
-    public class CalculatorService : ICalculator  
-    {  
-        public double Add(double n1, double n2)  
-        {  
-            double result = n1 + n2;  
-            Console.WriteLine("Received Add({0},{1})", n1, n2);  
-            // Code added to write output to the console window.  
-            Console.WriteLine("Return: {0}", result);  
-            return result;  
-        }  
-  
-        public double Subtract(double n1, double n2)  
-        {  
-            double result = n1 - n2;  
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);  
-            Console.WriteLine("Return: {0}", result);  
-            return result;  
-        }  
-  
-        public double Multiply(double n1, double n2)  
-        {  
-            double result = n1 * n2;  
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);  
-            Console.WriteLine("Return: {0}", result);  
-            return result;  
-        }  
-  
-        public double Divide(double n1, double n2)  
-        {  
-            double result = n1 / n2;  
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);  
-            Console.WriteLine("Return: {0}", result);  
-            return result;  
-        }  
-    }  
-}  
-```  
-  
+using System;
+using System.ServiceModel;
+
+namespace GettingStartedLib
+{
+    public class CalculatorService : ICalculator
+    {
+        public double Add(double n1, double n2)
+        {
+            double result = n1 + n2;
+            Console.WriteLine("Received Add({0},{1})", n1, n2);
+            // Code added to write output to the console window.
+            Console.WriteLine("Return: {0}", result);
+            return result;
+        }
+
+        public double Subtract(double n1, double n2)
+        {
+            double result = n1 - n2;
+            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
+            Console.WriteLine("Return: {0}", result);
+            return result;
+        }
+
+        public double Multiply(double n1, double n2)
+        {
+            double result = n1 * n2;
+            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
+            Console.WriteLine("Return: {0}", result);
+            return result;
+        }
+
+        public double Divide(double n1, double n2)
+        {
+            double result = n1 / n2;
+            Console.WriteLine("Received Divide({0},{1})", n1, n2);
+            Console.WriteLine("Return: {0}", result);
+            return result;
+        }
+    }
+}
+```
+
 ```csharp
-//Program.cs  
-using System;  
-using System.Collections.Generic;  
-using System.Linq;  
-using System.Text;  
-using System.ServiceModel;  
-using GettingStartedLib;  
-using System.ServiceModel.Description;   
-  
-namespace GettingStartedHost  
-{  
-    class Program  
-    {  
-        static void Main(string[] args)  
-        {  
-            // Step 1 of the address configuration procedure: Create a URI to serve as the base address.  
-            Uri baseAddress = new Uri("http://localhost:8000/ServiceModelSamples/Service");  
-  
-            // Step 2 of the hosting procedure: Create ServiceHost  
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
-  
-            try  
-            {  
-                // Step 3 of the hosting procedure: Add a service endpoint.  
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");  
-  
-                // Step 4 of the hosting procedure: Enable metadata exchange.  
-                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();  
-                smb.HttpGetEnabled = true;  
-                selfHost.Description.Behaviors.Add(smb);  
-  
-                // Step 5 of the hosting procedure: Start (and then stop) the service.  
-                selfHost.Open();  
-                Console.WriteLine("The service is ready.");  
-                Console.WriteLine("Press <ENTER> to terminate service.");  
-                Console.WriteLine();  
-                Console.ReadLine();  
-  
-                // Close the ServiceHostBase to shutdown the service.  
-                selfHost.Close();  
-            }  
-            catch (CommunicationException ce)  
-            {  
-                Console.WriteLine("An exception occurred: {0}", ce.Message);  
-                selfHost.Abort();  
-            }  
-        }  
-    }  
-}  
-```  
-  
+using System;
+using System.ServiceModel;
+using System.ServiceModel.Description;
+using GettingStartedLib;
+
+namespace GettingStartedHost
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Step 1 of the address configuration procedure: Create a URI to serve as the base address.
+            Uri baseAddress = new Uri("http://localhost:8000/ServiceModelSamples/Service");
+
+            // Step 2 of the hosting procedure: Create ServiceHost
+            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
+
+            try
+            {
+                // Step 3 of the hosting procedure: Add a service endpoint.
+                selfHost.AddServiceEndpoint(typeof(ICalculator), new WSHttpBinding(), "CalculatorService");
+
+                // Step 4 of the hosting procedure: Enable metadata exchange.
+                ServiceMetadataBehavior smb = new ServiceMetadataBehavior();
+                smb.HttpGetEnabled = true;
+                selfHost.Description.Behaviors.Add(smb);
+
+                // Step 5 of the hosting procedure: Start (and then stop) the service.
+                selfHost.Open();
+                Console.WriteLine("The service is ready.");
+                Console.WriteLine("Press <ENTER> to terminate service.");
+                Console.WriteLine();
+                Console.ReadLine();
+
+                // Close the ServiceHostBase to shutdown the service.
+                selfHost.Close();
+            }
+            catch (CommunicationException ce)
+            {
+                Console.WriteLine("An exception occurred: {0}", ce.Message);
+                selfHost.Abort();
+            }
+        }
+    }
+}
+```
+
 ```vb
-'IService1.vb  
-Imports System  
-Imports System.ServiceModel  
-  
-Namespace GettingStartedLib  
-  
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _  
-    Public Interface ICalculator  
-  
-        <OperationContract()> _  
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double  
-        <OperationContract()> _  
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double  
-        <OperationContract()> _  
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double  
-        <OperationContract()> _  
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double  
-    End Interface  
-End Namespace  
-```  
-  
+Imports System.ServiceModel
+
+Namespace GettingStartedLib
+
+    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
+    Public Interface ICalculator
+
+        <OperationContract()> _
+        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
+        <OperationContract()> _
+        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
+        <OperationContract()> _
+        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
+        <OperationContract()> _
+        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
+    End Interface
+End Namespace
+```
+
 ```vb
-'Service1.vb  
-Imports System  
-Imports System.ServiceModel  
-  
-Namespace GettingStartedLib  
-  
-    Public Class CalculatorService  
-        Implements ICalculator  
-  
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add  
-            Dim result As Double = n1 + n2  
-            ' Code added to write output to the console window.  
-            Console.WriteLine("Received Add({0},{1})", n1, n2)  
-            Console.WriteLine("Return: {0}", result)  
-            Return result  
-        End Function  
-  
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract  
-            Dim result As Double = n1 - n2  
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)  
-            Console.WriteLine("Return: {0}", result)  
-            Return result  
-  
-        End Function  
-  
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply  
-            Dim result As Double = n1 * n2  
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)  
-            Console.WriteLine("Return: {0}", result)  
-            Return result  
-  
-        End Function  
-  
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide  
-            Dim result As Double = n1 / n2  
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)  
-            Console.WriteLine("Return: {0}", result)  
-            Return result  
-  
-        End Function  
-    End Class  
-End Namespace  
-```  
-  
+Imports System.ServiceModel
+
+Namespace GettingStartedLib
+
+    Public Class CalculatorService
+        Implements ICalculator
+
+        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
+            Dim result As Double = n1 + n2
+            ' Code added to write output to the console window.
+            Console.WriteLine("Received Add({0},{1})", n1, n2)
+            Console.WriteLine("Return: {0}", result)
+            Return result
+        End Function
+
+        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
+            Dim result As Double = n1 - n2
+            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
+            Console.WriteLine("Return: {0}", result)
+            Return result
+
+        End Function
+
+        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
+            Dim result As Double = n1 * n2
+            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
+            Console.WriteLine("Return: {0}", result)
+            Return result
+
+        End Function
+
+        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
+            Dim result As Double = n1 / n2
+            Console.WriteLine("Received Divide({0},{1})", n1, n2)
+            Console.WriteLine("Return: {0}", result)
+            Return result
+
+        End Function
+    End Class
+End Namespace
+```
+
 ```vb
-'Module1.vb  
-Imports System  
-Imports System.ServiceModel  
-Imports System.ServiceModel.Description  
-Imports GettingStartedLibVB.GettingStartedLib  
-  
-Module Service  
-  
-    Class Program  
-        Shared Sub Main()  
-            ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.  
-            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")  
-  
-            ' Step 2 of the hosting procedure: Create ServiceHost  
-            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)  
-            Try  
-  
-                ' Step 3 of the hosting procedure: Add a service endpoint.  
-                ' Add a service endpoint  
-                selfHost.AddServiceEndpoint( _  
-                    GetType(ICalculator), _  
-                    New WSHttpBinding(), _  
-                    "CalculatorService")  
-  
-                ' Step 4 of the hosting procedure: Enable metadata exchange.  
-                ' Enable metadata exchange  
-                Dim smb As New ServiceMetadataBehavior()  
-                smb.HttpGetEnabled = True  
-                selfHost.Description.Behaviors.Add(smb)  
-  
-                ' Step 5 of the hosting procedure: Start (and then stop) the service.  
-                selfHost.Open()  
-                Console.WriteLine("The service is ready.")  
-                Console.WriteLine("Press <ENTER> to terminate service.")  
-                Console.WriteLine()  
-                Console.ReadLine()  
-  
-                ' Close the ServiceHostBase to shutdown the service.  
-                selfHost.Close()  
-            Catch ce As CommunicationException  
-                Console.WriteLine("An exception occurred: {0}", ce.Message)  
-                selfHost.Abort()  
-            End Try  
-        End Sub  
-    End Class  
-  
-End Module  
-```  
-  
+Imports System.ServiceModel
+Imports System.ServiceModel.Description
+Imports GettingStartedLibVB.GettingStartedLib
+
+Module Service
+
+    Class Program
+        Shared Sub Main()
+            ' Step 1 of the address configuration procedure: Create a URI to serve as the base address.
+            Dim baseAddress As New Uri("http://localhost:8000/ServiceModelSamples/Service")
+
+            ' Step 2 of the hosting procedure: Create ServiceHost
+            Dim selfHost As New ServiceHost(GetType(CalculatorService), baseAddress)
+            Try
+
+                ' Step 3 of the hosting procedure: Add a service endpoint.
+                ' Add a service endpoint
+                selfHost.AddServiceEndpoint( _
+                    GetType(ICalculator), _
+                    New WSHttpBinding(), _
+                    "CalculatorService")
+
+                ' Step 4 of the hosting procedure: Enable metadata exchange.
+                ' Enable metadata exchange
+                Dim smb As New ServiceMetadataBehavior()
+                smb.HttpGetEnabled = True
+                selfHost.Description.Behaviors.Add(smb)
+
+                ' Step 5 of the hosting procedure: Start (and then stop) the service.
+                selfHost.Open()
+                Console.WriteLine("The service is ready.")
+                Console.WriteLine("Press <ENTER> to terminate service.")
+                Console.WriteLine()
+                Console.ReadLine()
+
+                ' Close the ServiceHostBase to shutdown the service.
+                selfHost.Close()
+            Catch ce As CommunicationException
+                Console.WriteLine("An exception occurred: {0}", ce.Message)
+                selfHost.Abort()
+            End Try
+        End Sub
+    End Class
+
+End Module
+```
+
 > [!NOTE]
->  <span data-ttu-id="225c9-171">Les services tels que celui-ci requièrent que l'autorisation enregistre des adresses HTTP sur l'ordinateur pour écouter.</span><span class="sxs-lookup"><span data-stu-id="225c9-171">Services such as this one require permission to register HTTP addresses on the machine for listening.</span></span> <span data-ttu-id="225c9-172">Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur.</span><span class="sxs-lookup"><span data-stu-id="225c9-172">Administrator accounts have this permission, but non-administrator accounts must be granted permission for HTTP namespaces.</span></span> <span data-ttu-id="225c9-173">Pour plus d’informations sur la configuration des réservations d’espaces de noms, consultez [Configuration de HTTP et HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-173">For more information about how to configure namespace reservations, see [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).</span></span> <span data-ttu-id="225c9-174">Quand il s’exécute dans Visual Studio, le fichier service.exe doit être exécuté avec des privilèges d’administrateur.</span><span class="sxs-lookup"><span data-stu-id="225c9-174">When running under Visual Studio, the service.exe must be run with administrator privileges.</span></span>  
-  
- <span data-ttu-id="225c9-175">Le service est en cours d'exécution.</span><span class="sxs-lookup"><span data-stu-id="225c9-175">Now the service is running.</span></span> <span data-ttu-id="225c9-176">Passez à [Guide pratique pour créer un client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-176">Proceed to [How to: Create a Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span> <span data-ttu-id="225c9-177">Pour obtenir des informations sur la résolution des problèmes, consultez la section [Dépannage du tutoriel Bien démarrer](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="225c9-177">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="225c9-178">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="225c9-178">See Also</span></span>  
- [<span data-ttu-id="225c9-179">Prise en main</span><span class="sxs-lookup"><span data-stu-id="225c9-179">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)  
- [<span data-ttu-id="225c9-180">Auto-hébergement</span><span class="sxs-lookup"><span data-stu-id="225c9-180">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
+> <span data-ttu-id="de962-162">Les services tels que celui-ci requièrent que l'autorisation enregistre des adresses HTTP sur l'ordinateur pour écouter.</span><span class="sxs-lookup"><span data-stu-id="de962-162">Services such as this one require permission to register HTTP addresses on the machine for listening.</span></span> <span data-ttu-id="de962-163">Les comptes Administrateur possèdent cette autorisation, mais l'autorisation pour les espaces de noms HTTP doit être accordée aux comptes qui ne sont pas administrateur.</span><span class="sxs-lookup"><span data-stu-id="de962-163">Administrator accounts have this permission, but non-administrator accounts must be granted permission for HTTP namespaces.</span></span> <span data-ttu-id="de962-164">Pour plus d’informations sur la configuration des réservations d’espaces de noms, consultez [Configuration de HTTP et HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).</span><span class="sxs-lookup"><span data-stu-id="de962-164">For more information about how to configure namespace reservations, see [Configuring HTTP and HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md).</span></span> <span data-ttu-id="de962-165">Quand il s’exécute dans Visual Studio, le fichier service.exe doit être exécuté avec des privilèges d’administrateur.</span><span class="sxs-lookup"><span data-stu-id="de962-165">When running under Visual Studio, the service.exe must be run with administrator privileges.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="de962-166">Étapes suivantes</span><span class="sxs-lookup"><span data-stu-id="de962-166">Next steps</span></span>
+
+<span data-ttu-id="de962-167">Le service est en cours d'exécution.</span><span class="sxs-lookup"><span data-stu-id="de962-167">Now the service is running.</span></span> <span data-ttu-id="de962-168">Dans la tâche suivante, vous créez un client WCF.</span><span class="sxs-lookup"><span data-stu-id="de962-168">In the next task, you create a WCF client.</span></span>
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="de962-169">Comment : créer un client WCF</span><span class="sxs-lookup"><span data-stu-id="de962-169">How to: Create a WCF client</span></span>](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+
+<span data-ttu-id="de962-170">Pour obtenir des informations sur la résolution des problèmes, consultez la section [Dépannage du tutoriel Bien démarrer](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="de962-170">For troubleshooting information, see [Troubleshooting the Getting Started Tutorial](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="de962-171">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="de962-171">See also</span></span>
+
+- [<span data-ttu-id="de962-172">Prise en main</span><span class="sxs-lookup"><span data-stu-id="de962-172">Getting Started</span></span>](../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [<span data-ttu-id="de962-173">Auto-hébergement</span><span class="sxs-lookup"><span data-stu-id="de962-173">Self-Host</span></span>](../../../docs/framework/wcf/samples/self-host.md)
