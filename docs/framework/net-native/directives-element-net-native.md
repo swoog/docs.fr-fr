@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8921d2841f9a7b4228ae3b8735d7047453f71bcb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972148"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490625"
 ---
 # <a name="ltdirectivesgt-element-net-native"></a>&lt;Directives&gt;, élément (.NET Native)
 L’élément racine dans chaque fichier de directives runtime pour .NET Native.  
