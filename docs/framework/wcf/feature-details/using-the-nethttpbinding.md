@@ -2,21 +2,21 @@
 title: Utilisation de NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: a753cca008c7eb9b500afa7f3f3b55b5410522a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498867"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471143"
 ---
 # <a name="using-the-nethttpbinding"></a>Utilisation de NetHttpBinding
-<xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte si elle est utilisée avec un contrat demande-réponse ou un contrat duplex et modifie son comportement pour le faire correspondre - elle utilise HTTP pour les contrats de demande-réponse et WebSockets pour les contrats duplex. Ce comportement peut être substitué à l’aide de la <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` paramètre :  
+<xref:System.ServiceModel.NetHttpBinding> est une liaison conçue pour consommer des services HTTP ou WebSocket et utilise l'encodage binaire par défaut. <xref:System.ServiceModel.NetHttpBinding> détecte si elle est utilisée avec un contrat demande-réponse ou un contrat duplex et modifie son comportement pour le faire correspondre - elle utilise HTTP pour les contrats de demande-réponse et WebSockets pour les contrats duplex. Vous pouvez substituer ce comportement au moyen du paramètre <xref:System.ServiceModel.Channels.WebSocketTransportUsage> :  
   
-1.  Toujours - Force l'utilisation de WebSockets même pour les contrats de demande-réponse.  
+1. `Always` -Cela force l’utilisation de WebSockets même pour les contrats demande-réponse.  
   
-2.  Jamais - Empêche l'utilisation de WebSockets. Toute tentative d'utiliser un contrat duplex avec ce paramètre entraîne une exception.  
+2. `Never` -WebSockets cela empêche l’utilisation. Toute tentative d'utiliser un contrat duplex avec ce paramètre entraîne une exception.  
   
-3.  WhenDuplex - Il s'agit de la valeur par défaut et elle se comporte de la façon décrite ci-dessus.  
+3. `WhenDuplex` -C’est la valeur par défaut et se comporte comme décrit ci-dessus.  
   
  <xref:System.ServiceModel.NetHttpBinding> prend en charge les sessions fiables en mode HTTP et en mode WebSocket. Les sessions en mode WebSocket sont fournies par le transport.  
   

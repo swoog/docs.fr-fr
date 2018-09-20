@@ -2,14 +2,15 @@
 title: 'Comment : choisir entre des demandes HTTP POST et HTTP GET pour des points de terminaison AJAX ASP.NET'
 ms.date: 03/30/2017
 ms.assetid: b47de82a-4c92-4af6-bceb-a5cb8bb8ede9
-ms.openlocfilehash: 079bbd98b3fc3d5538f87cad39a4a83a0dc1e242
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5cebdf0bae937d84ec23ed97a5d2feca24fff473
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863333"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473049"
 ---
 # <a name="how-to-choose-between-http-post-and-http-get-requests-for-aspnet-ajax-endpoints"></a>Comment : choisir entre des demandes HTTP POST et HTTP GET pour des points de terminaison AJAX ASP.NET
+
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un point de terminaison compatible ASP.NET AJAX qui peut être appelée à partir de JavaScript sur un site Web client. Les procédures de base pour la création de ces services est abordé dans [Comment : utiliser la Configuration pour ajouter un point de terminaison ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md) et [Comment : ajouter un point de terminaison du AJAX ASP.NET sans Configuration à l’aide de](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
  ASP.NET AJAX prend en charge des opérations utilisant les verbes HTTP POST et HTTP GET, avec HTTP POST comme valeur par défaut. Lors de la création d'une opération qui n'a pas d'effets secondaires et qui retourne des données qui changent rarement, voire jamais, utilisez HTTP GET à la place. Les résultats des opérations GET peuvent être mis en cache, ce qui signifie que les conversations multiples vers la même opération peuvent aboutir à une seule demande à votre service. La mise en cache n’est pas effectuée par WCF, mais peut avoir lieu à n’importe quel niveau (dans un navigateur de l’utilisateur, sur un serveur proxy et d’autres niveaux.) La mise en cache est avantageuse si vous souhaitez augmenter la performance du service, mais peut ne pas convenir si les données changent fréquemment ou si l'opération effectue une action.  
@@ -30,11 +31,11 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
   
  Pour obtenir un exemple qui utilise POST, consultez la [AJAX Service utilisant HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md) exemple.  
   
-### <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>Pour créer un service WCF qui répond aux demandes HTTP GET ou HTTP POST  
+## <a name="to-create-a-wcf-service-that-responds-to-http-get-or-http-post-requests"></a>Pour créer un service WCF qui répond aux demandes HTTP GET ou HTTP POST
   
-1.  Définir un contrat de service WCF base avec une interface marquée avec le <xref:System.ServiceModel.ServiceContractAttribute> attribut. Marquez chaque opération avec <xref:System.ServiceModel.OperationContractAttribute>. Ajoutez l'attribut <xref:System.ServiceModel.Web.WebGetAttribute> pour stipuler qu'une opération doit répondre aux demandes HTTP GET. Vous pouvez également ajouter l'attribut <xref:System.ServiceModel.Web.WebInvokeAttribute> pour spécifier explicitement HTTP POST ou ne pas spécifier d'attribut, dans ce cas la valeur par défaut est HTTP POST.  
+1. Définir un contrat de service WCF base avec une interface marquée avec le <xref:System.ServiceModel.ServiceContractAttribute> attribut. Marquez chaque opération avec <xref:System.ServiceModel.OperationContractAttribute>. Ajoutez l'attribut <xref:System.ServiceModel.Web.WebGetAttribute> pour stipuler qu'une opération doit répondre aux demandes HTTP GET. Vous pouvez également ajouter l'attribut <xref:System.ServiceModel.Web.WebInvokeAttribute> pour spécifier explicitement HTTP POST ou ne pas spécifier d'attribut, dans ce cas la valeur par défaut est HTTP POST.
   
-    ```  
+    ```csharp
     [ServiceContract]  
     public interface IMusicService  
     {  
@@ -58,9 +59,9 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
     }  
     ```  
   
-2.  Implémentez le contrat de service `IMusicService` avec un `MusicService`.  
+2. Implémentez le contrat de service `IMusicService` avec un `MusicService`.
   
-    ```  
+    ```csharp
     public class MusicService : IMusicService  
     {  
         public void AddAlbum(string user, string album)  
@@ -72,7 +73,7 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
     }  
     ```  
   
-3.  Créez un nouveau fichier pour le service avec une extension .svc dans l’application. Modifiez ce fichier en ajoutant approprié [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) informations directives pour le service. Spécifier que le <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> doit être utilisé dans le [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive pour configurer automatiquement un point de terminaison ASP.NET AJAX.  
+3. Créez un nouveau fichier pour le service avec une extension .svc dans l’application. Modifiez ce fichier en ajoutant approprié [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) informations directives pour le service. Spécifier que le <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> doit être utilisé dans le [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive pour configurer automatiquement un point de terminaison ASP.NET AJAX.  
   
     ```  
     <%@ServiceHost   
@@ -83,11 +84,11 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
     %>  
     ```  
   
-### <a name="to-call-the-service"></a>Pour appeler le service  
+## <a name="to-call-the-service"></a>Pour appeler le service  
   
-1.  Vous pouvez tester les opérations GET de votre service sans aucun code client, en utilisant le navigateur. Par exemple, si votre service est configuré à la « http://example.com/service.svc» adresse, puis en tapant « http://example.com/service.svc/LookUpArtist?album=SomeAlbum» dans le navigateur, barre d’adresses appelle le service et la réponse est téléchargée ou affichée.  
+1. Vous pouvez tester les opérations GET de votre service sans aucun code client, en utilisant le navigateur. Par exemple, si votre service est configuré au niveau du `http://example.com/service.svc` adresse, puis en tapant `http://example.com/service.svc/LookUpArtist?album=SomeAlbum` dans le navigateur, barre d’adresses appelle le service et la réponse est téléchargée ou affichée.
   
-2.  Vous pouvez utiliser les services avec les opérations GET de la même façon que tous les autres services ASP.NET AJAX, en tapant l’URL du service dans la collection Scripts du contrôle Script Manager ASP.NET AJAX. Pour obtenir un exemple, consultez le [base AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md).  
+2. Vous pouvez utiliser les services avec les opérations GET de la même façon que tous les autres services ASP.NET AJAX, en tapant l’URL du service dans la collection Scripts du contrôle Script Manager ASP.NET AJAX. Pour obtenir un exemple, consultez le [base AJAX Service](../../../../docs/framework/wcf/samples/basic-ajax-service.md).
   
 ## <a name="see-also"></a>Voir aussi  
  [Création de services WCF pour ASP.NET AJAX](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)  

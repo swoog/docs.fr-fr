@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2efa8cfb2b196d6f5a26354161e42c1f376e43b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880504e874d9797cf05290058b6dbf3a3daf2579
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389515"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473114"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Amélioration du débogage avec les attributs d'affichage de débogueur
-Les attributs d’affichage de débogueur permettent au développeur du type, qui spécifie et appréhende le mieux le comportement d’exécution de ce type, de spécifier également ce à quoi le type ressemblera une fois affiché dans un débogueur. De plus, les attributs d’affichage de débogueur qui fournissent une propriété `Target` peuvent être appliqués au niveau de l’assembly par des utilisateurs sans qu’il leur soit nécessaire de connaître le code source. L’attribut <xref:System.Diagnostics.DebuggerDisplayAttribute> contrôle la façon dont un type ou un membre s’affiche dans les fenêtres de variables du débogueur. L’attribut <xref:System.Diagnostics.DebuggerBrowsableAttribute> contrôle si une classe ou un champ s’affiche dans les fenêtres de variables du débogueur et comment ils s’affichent. L’attribut <xref:System.Diagnostics.DebuggerTypeProxyAttribute> spécifie un type de substitution (ou un proxy) pour un type, et modifie le mode d’affichage de ce type dans les fenêtres de débogage. Quand vous visualisez une variable ayant un proxy, ou un type de substitution, le proxy remplace le type d’origine dans la fenêtre d’affichage du débogage **.** La fenêtre de variables du débogueur n’affiche que les membres publics du type du proxy. Les membres privés ne sont pas affichés.  
+Les attributs d’affichage de débogueur permettent au développeur du type, qui spécifie et appréhende le mieux le comportement d’exécution de ce type, de spécifier également ce à quoi le type ressemblera une fois affiché dans un débogueur. De plus, les attributs d’affichage de débogueur qui fournissent une propriété `Target` peuvent être appliqués au niveau de l’assembly par des utilisateurs sans qu’il leur soit nécessaire de connaître le code source. L’attribut <xref:System.Diagnostics.DebuggerDisplayAttribute> contrôle la façon dont un type ou un membre s’affiche dans les fenêtres de variables du débogueur. L’attribut <xref:System.Diagnostics.DebuggerBrowsableAttribute> contrôle si une classe ou un champ s’affiche dans les fenêtres de variables du débogueur et comment ils s’affichent. L’attribut <xref:System.Diagnostics.DebuggerTypeProxyAttribute> spécifie un type de substitution (ou un proxy) pour un type, et modifie le mode d’affichage de ce type dans les fenêtres de débogage. Lorsque vous affichez une variable possédant un proxy, ou un type de substitution, ce dernier remplace le type d’origine dans la fenêtre d’affichage de débogueur. La fenêtre de variables du débogueur   n'affiche que les membres publics du type du proxy. Les membres privés ne sont pas affichés.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>Utilisation de DebuggerDisplayAttribute  
  Le constructeur <xref:System.Diagnostics.DebuggerDisplayAttribute.%23ctor%2A> n’a qu’un seul argument : une chaîne à afficher dans la colonne valeur pour les instances du type. Cette chaîne peut contenir des accolades ({ et }). Le texte entre accolades est évalué comme une expression. Par exemple, le code C# suivant entraîne l’affichage de « Count = 4 » quand le signe plus (+) est sélectionné pour développer l’affichage de débogueur pour une instance de `MyHashtable`.  

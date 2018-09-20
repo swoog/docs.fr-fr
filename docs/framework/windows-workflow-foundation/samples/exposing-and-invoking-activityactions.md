@@ -2,19 +2,19 @@
 title: Exposition et appel d'ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520121"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479752"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Exposition et appel d'ActivityActions
 Cet exemple montre comment développer une activité personnalisée qui a un <xref:System.Activities.ActivityAction>. Il montre également comment utiliser cette activité en fournissant une implémentation d'<xref:System.Activities.ActivityAction>.  
   
- Un <xref:System.Activities.ActivityAction> permet à un auteur d’activité exposer des « trous » avec des signatures spécifiques où l’utilisateur de l’activité peut incorporer un comportement personnalisé. Par exemple, le <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach` activité, (qui fonctionne sur une collection d’éléments), a un <xref:System.Activities.ActivityAction> qui permet à l’utilisateur de l’activité incorporer un comportement qui fonctionne sur l’élément d’itération actuel.  
+ Un <xref:System.Activities.ActivityAction> permet à un auteur d’activité exposer des « trous » avec des signatures spécifiques où l’utilisateur de l’activité peut incorporer un comportement personnalisé. Par exemple, l'activité <xref:System.Activities.Statements.ForEach%601> (qui fonctionne sur une collection d'éléments) a un <xref:System.Activities.ActivityAction> qui permet à l'utilisateur de l'activité d'incorporer un comportement qui fonctionne sur l'élément de l'itération en cours.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
+## <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   
 1.  Ouvrez le **ActivityAction.sln** exemple de solution dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   

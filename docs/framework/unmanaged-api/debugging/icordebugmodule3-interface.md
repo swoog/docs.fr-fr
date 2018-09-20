@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fc4c0560c2aa0d66c1b40d78458a2d44284e232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417913"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46472033"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3, interface
 Crée un lecteur de symboles pour un module dynamique.  
@@ -43,7 +43,7 @@ interface ICorDebugModule3 : IUnknown
   
 |Méthode|Description|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Crée un lecteur de symboles (généralement [ISymUnmanagedReader (Interface)](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) pour un module dynamique.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols, méthode](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|Crée un lecteur de symboles (généralement [ISymUnmanagedReader Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) pour un module dynamique.|  
   
 ## <a name="remarks"></a>Notes  
  Cette interface étend logiquement les interfaces « ICorDebugModule » et « ICorDebugModule2 ».  
@@ -51,14 +51,14 @@ interface ICorDebugModule3 : IUnknown
 > [!NOTE]
 >  Cette interface ne prend pas en charge l'appel à distance, que ce soit entre ordinateurs ou entre processus.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** 4.5, 4, 3.5 SP1  
+ **Versions du .NET framework :** 4.5, 4, 3.5 SP1
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorDebugRemoteTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  

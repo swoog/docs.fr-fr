@@ -2,12 +2,12 @@
 title: Options pour la création d'activités dans WF
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
-ms.openlocfilehash: f91c74b4e3dc002ed2abf979619b84a81db65e78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516398"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481252"
 ---
 # <a name="activity-authoring-options-in-wf"></a>Options pour la création d'activités dans WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] fournit plusieurs options pour créer des activités personnalisées. Le choix de la méthode à utiliser pour créer une activité donnée dépend de quelles fonctionnalités d'exécution sont nécessaires.  
@@ -20,7 +20,7 @@ ms.locfileid: "33516398"
 |<xref:System.Activities.Activity>|Compose des groupes d'activités fournies par le système et personnalisées dans une activité composite.|  
 |<xref:System.Activities.CodeActivity>|Implémente les fonctionnalités impératives en fournissant une méthode <xref:System.Activities.CodeActivity%601.Execute%2A> qui peut être remplacée. Donne également accès au suivi, aux variables et aux arguments.|  
 |<xref:System.Activities.NativeActivity>|Fournit toutes les fonctionnalités de <xref:System.Activities.CodeActivity>, plus celles nécessaires pour abandonner l'exécution d'une activité, annuler l'exécution d'une activité enfant, utiliser des signets, ainsi que planifier des activités, des actions d'activité et des fonctions.|  
-|<xref:System.Activities.DynamicActivity>|Fournit une approche DOM pour créer des activités qui s’interface avec le concepteur WF et les machines de l’exécution via <!--zz <xref:System.ComponentModel.IcustomTypeDescriptor>--> `IcustomTypeDescriptor`, ce qui permet de nouvelles activités sans définir de nouveaux types.|  
+|<xref:System.Activities.DynamicActivity>|Fournit une approche DOM pour créer des activités qui servent d'interface avec le concepteur WF et les fonctionnalités d'exécution via <xref:System.ComponentModel.ICustomTypeDescriptor>, ce qui permet de créer d'autres activités sans définir de nouveaux types.|  
   
 ## <a name="authoring-activities-using-activity"></a>Création d'activités à l'aide d'Activity  
  Les activités qui dérivent de <xref:System.Activities.Activity> composent les fonctionnalités en assemblant d'autres activités existantes. Ces activités peuvent être des activités personnalisées existantes et des activités de la bibliothèque d'activités [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]. Assembler ces activités est la méthode la plus simple pour créer des fonctionnalités personnalisées. Cette approche est généralement utilisée pour la création de workflows dans un environnement de conception visuelle.  
@@ -29,7 +29,7 @@ ms.locfileid: "33516398"
  Les activités qui dérivent de <xref:System.Activities.CodeActivity> ou <xref:System.Activities.AsyncCodeActivity> peuvent implémenter les fonctionnalités impératives en remplaçant la méthode <xref:System.Activities.CodeActivity%601.Execute%2A> par un code impératif personnalisé. Le code personnalisé est exécuté lorsque l'activité est exécutée par le runtime. Les activités créées de cette façon ont accès aux fonctionnalités personnalisées, mais elles n'ont pas accès à toutes les fonctionnalités d'exécution, notamment celles offrant un accès total à l'environnement d'exécution, la capacité de planifier des activités enfants, la création de signets ou la prise en charge des méthodes Cancel ou Abort. Lorsqu'un <xref:System.Activities.CodeActivity> est exécuté, il a accès à une version réduite de l'environnement d'exécution (via la classe <xref:System.Activities.CodeActivityContext> ou <xref:System.Activities.AsyncCodeActivityContext>). Les activités créées à l'aide de <xref:System.Activities.CodeActivity> ont accès à la résolution des arguments et des variables, aux extensions et au suivi. La planification d'activités asynchrones peut être réalisée à l'aide de <xref:System.Activities.AsyncCodeActivity>.  
   
 ## <a name="authoring-activities-using-nativeactivity"></a>Création d'activités à l'aide de NativeActivity  
- Les activités qui dérivent de <xref:System.Activities.NativeActivity>, comme celles qui dérivent de <xref:System.Activities.CodeActivity>, créent des fonctionnalités impératives en remplaçant la méthode <xref:System.Activities.NativeActivity.Execute%2A>, mais elles ont également accès à toutes les fonctionnalités d'exécution de workflow via le contexte <xref:System.Activities.NativeActivityContext> passé dans la méthode <xref:System.Activities.NativeActivity.Execute%2A>. Ce contexte est prise en charge de la planification et l’annulation des activités enfants, l’exécution <xref:System.Activities.ActivityAction> et <!--zz <xref:System.Activities.ActivityFunc>--> `ActivityFunc` , objets de flux de transactions dans un workflow, l’appel de processus asynchrones, l’annulation et l’abandon de l’exécution, l’accès à propriétés d’exécution et les extensions et les signets (descripteurs pour reprendre les workflows mis en pause).  
+ Les activités qui dérivent de <xref:System.Activities.NativeActivity>, comme celles qui dérivent de <xref:System.Activities.CodeActivity>, créent des fonctionnalités impératives en remplaçant la méthode <xref:System.Activities.NativeActivity.Execute%2A>, mais elles ont également accès à toutes les fonctionnalités d'exécution de workflow via le contexte <xref:System.Activities.NativeActivityContext> passé dans la méthode <xref:System.Activities.NativeActivity.Execute%2A>. Ce contexte prend en charge la planification et l'annulation des activités enfants, l'exécution des objets <xref:System.Activities.ActivityAction> et objets <xref:System.Activities.ActivityFunc%601>, la circulation des transactions dans un workflow, l'appel de processus asynchrones, l'annulation et l'abandon de l'exécution, l'accès aux propriétés d'exécution et aux extensions, ainsi que l'utilisation des signets (descripteurs pour reprendre les workflows mis en pause).  
   
 ## <a name="authoring-activities-using-dynamicactivity"></a>Création d'activités à l'aide de DynamicActivity  
  Contrairement aux trois autres types d'activité, les nouvelles fonctionnalités ne sont pas créées en dérivant de nouveaux types de <xref:System.Activities.DynamicActivity> (la classe est scellée), mais plutôt en assemblant les fonctionnalités dans les propriétés <xref:System.Activities.DynamicActivity.Properties%2A> et <xref:System.Activities.DynamicActivity.Implementation%2A> à l'aide d'un modèle DOM (Document Object Model) de l'activité.  

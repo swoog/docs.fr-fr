@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197564"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490164"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Outil Service Model Metadata Tool (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe peut améliorer les performances de démarrage de ces applications e
 |/ reference :\<chemin d’accès de fichier >|Ajoute l'assembly spécifié au jeu d'assemblys utilisé pour résoudre des références de type.<br /><br /> Forme abrégée : `/r`|
 |/excludeType :\<type >|Spécifie le nom qualifié complet ou qualifié d’assembly d’un type à exclure de l’exportation ou de la validation.<br /><br /> Forme abrégée : `/et`|
 |/ out :\<fichier >|Spécifie le nom de fichier du code généré. Cette option est ignorée lorsque plusieurs assemblys sont passés à l'outil en tant qu'entrée.<br /><br /> Valeur par défaut : dérivée du nom de l'assembly.<br /><br /> Forme abrégée : `/o`|
-|/UseSerializerForFaults|Spécifie que le <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` doit être utilisé pour lire et écrire des erreurs, au lieu de la valeur par défaut <xref:System.Runtime.Serialization.DataContractSerializer>.|
+|/UseSerializerForFaults|Spécifie que <xref:System.Xml.Serialization.XmlSerializer> doit être utilisé pour lire et écrire les erreurs, au lieu du <xref:System.Runtime.Serialization.DataContractSerializer> par défaut.|
 
 ## <a name="examples"></a>Exemples
 

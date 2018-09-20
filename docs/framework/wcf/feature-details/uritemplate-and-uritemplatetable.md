@@ -2,15 +2,15 @@
 title: UriTemplate et UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 09726af0a124723de025f29927954a2100aebcb4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508817"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478591"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
-Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. Windows Communication Foundation (WCF) ajouté deux nouvelles classes pour permettre aux développeurs de contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> constituent la base du moteur de répartition reposant sur l’URI de WCF. Ces classes peuvent également être utilisées sur leur propres, ce qui permet aux développeurs de tirer parti de modèles et de l’URI de mécanisme de mappage sans avoir à implémenter un service WCF.  
+Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. Windows Communication Foundation (WCF) ajouté deux nouvelles classes pour permettre aux développeurs de contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> constituent la base du moteur de répartition reposant sur l’URI de WCF. Ces classes peuvent également être utilisées sur leur propre, ce qui permet aux développeurs de tirer parti des modèles et l’URI de mécanisme de mappage sans avoir à implémenter un service WCF.  
   
 ## <a name="templates"></a>Modèles  
  Un modèle est un moyen de décrire un ensemble d'URI relatifs. L'ensemble de modèles URI présentés dans le tableau suivant montre comment peut être défini un système qui récupère différents types d'informations météorologiques.  
@@ -22,7 +22,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
 |Prévision par ville|météo/{état}/{ville}|  
 |Prévision par activité|météo/{état}/{ville}/{activité}|  
   
- Cette table décrit un ensemble d'URI structurellement semblables. Chaque entrée est un modèle URI. Les segments entre accolades décrivent des variables. Les segments hors accolades décrivent des chaînes littérales. Les classes de modèles WCF permettent au développeur de prendre un URI entrant, par exemple, « / météo/wa/seattle/vélo » et la faire correspondre à un modèle qui décrit, « /météo/ {état} / {ville} / {activité} ».  
+ Cette table décrit un ensemble d'URI structurellement semblables. Chaque entrée est un modèle URI. Les segments entre accolades décrivent des variables. Les segments hors accolades décrivent des chaînes littérales. Les classes de modèle WCF permettent au développeur de prendre un URI entrant, par exemple, « / météo/wa/seattle/vélo » et la faire correspondre à un modèle qui décrit, « /météo/ {état} / {ville} / {activité} ».  
   
 ## <a name="uritemplate"></a>UriTemplate  
  <xref:System.UriTemplate> est une classe qui encapsule un modèle URI. Le constructeur prend un paramètre de chaîne qui définit le modèle. Cette chaîne contient le modèle au format décrit dans la section suivante. La classe <xref:System.UriTemplate> fournit des méthodes qui vous permettent de faire correspondre un URI entrant à un modèle, de générer un URI a partir d'un modèle, de récupérer une collection de noms de variables utilisés dans le modèle, de déterminer si deux modèles sont équivalents et de retourner la chaîne du modèle.  
@@ -38,19 +38,19 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
  La propriété <xref:System.UriTemplate.PathSegmentVariableNames%2A> contient une collection des noms des variables utilisés dans les segments de chemin d'accès de la chaîne du modèle.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> prend <xref:System.UriTemplate> comme paramètre et retourne une valeur booléenne qui spécifie si les deux modèles sont équivalents. Pour plus d’informations, consultez la section de l’équivalence des modèles plus loin dans cette rubrique.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> prend <xref:System.UriTemplate> comme paramètre et retourne une valeur booléenne qui spécifie si les deux modèles sont équivalents. Pour plus d’informations, consultez la section d’équivalence des modèles plus loin dans cette rubrique.  
   
  <xref:System.UriTemplate> est conçu pour utiliser tout schéma URI conforme à la grammaire d'URI HTTP. Les éléments suivants illustrent des modèles URI pris en charge.  
   
--   http://  
+- http://  
   
--   https://  
+- https://  
   
--   net.tcp://  
+- net.tcp://  
   
--   net.pipe://  
+- net.pipe://  
   
--   sb://  
+- sb://  
   
  Des schémas tels que file:// et urn:// ne sont pas conformes à la grammaire d'URI HTTP et entraînent des résultats imprévisibles en cas d'utilisation avec les modèles URI.  
   
@@ -63,7 +63,7 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
  Le chemin d’accès est "/météo/{état}/{ville}", la demande est "?prévision={durée}, et le fragment est "#frag1".  
   
- Les barres obliques de début et de fin sont facultatives dans l'expression du chemin d'accès. Les expressions de la requête et du fragment peuvent toutes deux être complètement omises. Un chemin d’accès se compose d’une série de segments délimités par '/', chaque segment peut avoir une valeur littérale, un nom de variable (écrit entre {accolades}) ou un caractère générique (écrit comme\*'). Dans le modèle précédent, le segment "\météo\" est une valeur littérale tandis que "{état}" et "{ville}" sont des variables. Variables tirent leur nom à partir du contenu de leurs accolades et elles peuvent être remplacées ultérieurement par une valeur concrète pour créer un *URI fermé*. Le caractère générique est facultatif, mais il ne peut apparaître qu’à la fin de l’URI, où il correspond logiquement à « la suite du chemin d’accès ».  
+ Les barres obliques de début et de fin sont facultatives dans l'expression du chemin d'accès. Les expressions de la requête et du fragment peuvent toutes deux être complètement omises. Un chemin d’accès se compose d’une série de segments délimités par '/', chaque segment peut avoir une valeur littérale, un nom de variable (écrit entre {accolades}) ou un caractère générique (écrit comme\*'). Dans le modèle précédent, le segment "\météo\" est une valeur littérale tandis que "{état}" et "{ville}" sont des variables. Variables tirent leur nom à partir du contenu de leurs accolades et elles peuvent être remplacées ultérieurement par une valeur concrète pour créer un *URI fermé*. Le caractère générique est facultatif, mais il ne peut apparaître à la fin de l’URI, où il correspond logiquement à « le reste du chemin d’accès ».  
   
  L'expression de la demande, le cas échant, spécifie une série de paires nom/valeur non ordonnées délimitées par '&'. Les éléments de l'expression de la demande peuvent être des paires littérales (x=2) ou une paire variable (x = {var}). Seule la partie droite de la requête peut comporter une expression variable. ({Nom} = {Valeur} n'est pas autorisé. Les valeurs non couplées (?x) ne sont pas autorisées. Il n'y a aucune différence entre une expression de demande vide et une expression de demande qui consiste en un '?' unique (les deux signifiant « aucune demande »).  
   
@@ -73,66 +73,66 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
  Exemples de chaînes de modèle valides :  
   
--   ""  
+- ""  
   
--   "/chaussure"  
+- "/chaussure"  
   
--   "/chaussure/*"  
+- « /shoe/\*»  
   
--   "{chaussure}/bateau"  
+- "{chaussure}/bateau"  
   
--   « {CHAUSSURE} / {bateau} /bed/ {quilt} »  
+- « {CHAUSSURE} / {bateau} /bed/ {quilt} »  
   
--   « CHAUSSURE / {bateau} »  
+- « CHAUSSURE / {bateau} »  
   
--   « CHAUSSURE / {bateau} / * »  
+- « CHAUSSURE / {bateau} /\*»  
   
--   « CHAUSSURE/bateau ? x = 2 »  
+- « CHAUSSURE/bateau ? x = 2 »  
   
--   « CHAUSSURE / {bateau} ? x = {lit} »  
+- « CHAUSSURE / {bateau} ? x = {lit} »  
   
--   "chaussure/{bateau}?x={lit}&y=bande"  
+- "chaussure/{bateau}?x={lit}&y=bande"  
   
--   « ? x = {CHAUSSURE} »  
+- « ? x = {CHAUSSURE} »  
   
--   "chaussure?x=3&y={var}  
+- "chaussure?x=3&y={var}  
   
  Exemples de chaînes de modèle non valides :  
   
--   « {CHAUSSURE} / {CHAUSSURE} / x = 2 » – noms de variable en double.  
+- « {CHAUSSURE} / {CHAUSSURE} / x = 2 » – noms de variable en double.  
   
--   « {CHAUSSURE} /bateau/ ? lit = {CHAUSSURE} » : les noms de variable en double.  
+- « {CHAUSSURE} /bateau/ ? lit = {CHAUSSURE} » – dupliquer les noms de variables.  
   
--   « ? x = 2 & x = 3 » – les paires nom/valeur dans une chaîne de requête doivent être uniques, même si elles sont des littéraux.  
+- « ? x = 2 & x = 3 » – les paires nom/valeur au sein d’une chaîne de requête doivent être uniques, même si elles sont des littéraux.  
   
--   « ? x = 2 & » – chaîne de requête est incorrecte.  
+- « ? x = 2 & » – chaîne de requête est incorrecte.  
   
--   « ? 2 & x = {CHAUSSURE} » – la chaîne de requête doit être des paires nom/valeur.  
+- « ? 2 & x = {CHAUSSURE} » – chaîne de requête doit être des paires nom/valeur.  
   
--   « ? y = 2 & & X = 3 » – chaîne de requête doit être des paires nom-valeur, les noms ne peut pas commencer par '&'.  
+- « ? y = 2 & & X = 3 » – chaîne de requête doit être des paires nom / valeur, les noms ne peut pas commencer par '&'.  
   
 ### <a name="compound-path-segments"></a>Segments de chemin d’accès composés  
  Les segments de chemin d’accès composés permettent à un segment du chemin d’accès de l’URI unique de contenir plusieurs variables ainsi que des variables associées à des littéraux. Les éléments suivants illustrent des segments de chemin d’accès composés valides.  
   
--   /nom_de_fichier.{ext}/  
+- /nom_de_fichier.{ext}/  
   
--   /{nom_de_fichier}.jpg/  
+- /{nom_de_fichier}.jpg/  
   
--   /{nom_de_fichier}.{ext}/  
+- /{nom_de_fichier}.{ext}/  
   
--   /{a}.{b}someLiteral{c}({d})/  
+- /{a}.{b}someLiteral{c}({d})/  
   
  Les exemples suivants illustrent des segments de chemin d’accès non valides.  
   
--   /{} -Variables doivent être nommés.  
+- /{} -Variables doivent être nommés.  
   
--   /{chaussure}{bateau} – Les variables doivent être séparées par un littéral.  
+- /{chaussure}{bateau} – Les variables doivent être séparées par un littéral.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segments de chemin d'accès composés et correspondants  
- Les segments de chemin d’accès composés vous permettent de définit un modèle d’URI ayant plusieurs variables dans un seul segment de chemin d’accès. Par exemple, dans la chaîne de modèle suivant : « adresses / {état}. {Ville} » deux variables (état et ville) sont définis dans le même segment. Ce modèle correspondrait à une URL comme «http://example.com/Washington.Redmond«, mais il correspond également à une URL telle que »http://example.com/Washington.Redmond.Microsoft». Dans ce cas, la variable d’état contiendra « Washington » et la variable ville contiendra « Redmond.Microsoft ». Dans ce cas, tout texte (sauf ‘/’) correspondra à la variable {ville}. Si vous souhaitez un modèle qui ne corresponde pas le texte « supplémentaire », placez la variable dans un segment de modèle séparé, par exemple : « adresses / {état} / {ville}.  
+ Les segments de chemin d’accès composés vous permettent de définit un modèle d’URI ayant plusieurs variables dans un seul segment de chemin d’accès. Par exemple, dans la chaîne de modèle suivante : « adresses / {état}. {Ville} » deux variables (état et ville) sont définis dans le même segment. Ce modèle correspondrait à une URL comme `http://example.com/Washington.Redmond` mais aussi à une URL comme `http://example.com/Washington.Redmond.Microsoft`. Dans ce cas, la variable d’état contiendra « Washington » et la variable de ville contiendra « Redmond.Microsoft ». Dans ce cas, tout texte (sauf ‘/’) correspondra à la variable {ville}. Si vous voulez un modèle qui ne correspondra pas le texte « supplémentaire », placez la variable dans un segment de modèle séparé, par exemple : « adresses / {état} / {ville}.  
   
 ### <a name="named-wildcard-segments"></a>Segments de caractère générique nommés  
- Un segment de caractère générique nommé est tout segment variable de chemin d’accès dont le nom de variable commence par le caractère générique ’*’. La chaîne de modèle suivante contient un segment de caractère générique nommé « chaussure ».  
+ Un segment de caractère générique nommé est tout segment variable de chemin d’accès dont le nom de variable commence par le caractère générique '\*'. La chaîne de modèle suivante contient un segment de caractère générique nommé « chaussure ».  
   
 ```  
 "literal/{*shoe}"  
@@ -140,22 +140,22 @@ Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la dis
   
  Les segments de caractère générique doivent respecter les règles suivantes :  
   
--   Il peut y avoir tout au plus un segment de caractère générique nommé pour chaque chaîne de modèle.  
+- Il peut y avoir tout au plus un segment de caractère générique nommé pour chaque chaîne de modèle.  
   
--   Un segment de caractère générique nommé doit apparaître à l'extrémité droite du chemin d'accès.  
+- Un segment de caractère générique nommé doit apparaître à l'extrémité droite du chemin d'accès.  
   
--   Un segment de caractère générique nommé ne peut pas coexister avec un segment de caractère générique anonyme dans la même chaîne de modèle.  
+- Un segment de caractère générique nommé ne peut pas coexister avec un segment de caractère générique anonyme dans la même chaîne de modèle.  
   
--   Le nom d'un segment de caractère générique nommé doit être unique.  
+- Le nom d'un segment de caractère générique nommé doit être unique.  
   
--   Les segments de caractère générique nommés ne peuvent pas comporter de valeurs par défaut.  
+- Les segments de caractère générique nommés ne peuvent pas comporter de valeurs par défaut.  
   
--   Les segments de caractère générique nommé ne peut pas se terminer par « / ».  
+- Les segments de caractère générique nommé ne peut pas se terminer par « / ».  
   
 ### <a name="default-variable-values"></a>Valeurs de variables par défaut  
  Les valeurs de variables par défaut vous permettent de spécifier les valeurs par défaut des variables dans un modèle. Les variables par défaut peuvent être spécifiées entre des accolades qui les déclarent ou comme une collection passée au constructeur UriTemplate. Le modèle suivant démontre deux méthodes pour spécifier un <xref:System.UriTemplate> comportant des variables avec des valeurs par défaut.  
   
-```  
+```csharp
 UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");  
 ```  
   
@@ -166,34 +166,37 @@ UriTemplate t = new UriTemplate("/test/{a=1}/{b=5}");
   
  Le code suivant montre comment les valeurs de variables par défaut sont gérées lors de la mise en correspondance d'un URI candidat.  
   
-```  
-Uri baseAddress = new Uri("http://localhost:800   
-Dictionary<string,string> defVals = new Dictionary<string,string> {{"a","1"}, {"b", "5"}};  
-UriTemplate t = new UriTemplate("/test/{a}/{b}", defVals);0");  
-UriTemplate t = new UriTemplate("/{state=WA}/{city=Redmond}/", true);  
-Uri candidate = new Uri("http://localhost:8000/OR");  
-  
-UriTemplateMatch m1 = t.Match(baseAddress, candidate);  
-  
-// Display contents of BoundVariables  
-foreach (string key in m1.BoundVariables.AllKeys)  
-{  
-    Console.WriteLine("\t\t{0}={1}", key, m1.BoundVariables[key]);  
-}  
+```csharp
+Uri baseAddress = new Uri("http://localhost:8000/");
+
+UriTemplate t = new UriTemplate("/{state=WA}/{city=Redmond}/", true);
+Uri candidate = new Uri("http://localhost:8000/OR");
+
+UriTemplateMatch m1 = t.Match(baseAddress, candidate);
+
+Console.WriteLine($"Template: {t}");
+Console.WriteLine($"Candidate URI: {candidate}");
+
+// Display contents of BoundVariables
+Console.WriteLine("BoundVariables:");
+foreach (string key in m1.BoundVariables.AllKeys)
+{
+    Console.WriteLine($"\t{key}={m1.BoundVariables[key]}");
+}
 // The output of the above code is  
-// Template: /{state=WA}/{city=Redmond}/  
-// Candidate URI: http://localhost:8000/OR  
-// BoundVariables:  
-//      STATE=OR  
-//       CITY=Redmond  
+// Template: /{state=WA}/{city=Redmond}/
+// Candidate URI: http://localhost:8000/OR
+// BoundVariables:
+//         STATE=OR
+//         CITY=Redmond
 ```  
   
 > [!NOTE]
->  Un URI tel http://localhost:8000/// ne correspond pas à ce modèle dans le code précédent, toutefois un URI comme http://localhost:8000/ est.  
+>  Un URI comme http://localhost:8000/// ne correspond pas au modèle que répertorié dans le code précédent, toutefois un URI comme http://localhost:8000/ est.  
   
  Le code suivant montre comment les valeurs de variables par défaut sont gérées à la création d'un URI avec un modèle.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/");  
 Dictionary<string,string> defVals = new Dictionary<string,string> {{"a","1"}, {"b", "5"}};  
 UriTemplate t = new UriTemplate("/test/{a}/{b}", defVals);  
@@ -219,46 +222,39 @@ Console.WriteLine("Bound URI: {0}", boundUri);
 // Bound URI: http://localhost:8000/test/10/5  
 ```  
   
- Si une variable a une valeur par défaut `null`, quelques contraintes supplémentaires s'appliquent. Une variable peut avoir une valeur par défaut `null` si elle est contenue dans le segment qui se trouve à l'extrémité droite de la chaîne de modèle ou si tous les segments à droite du segment ont des valeurs par défaut `null`. Les exemples suivants illustrent des chaînes de modèle comportant des valeurs par défaut `null` valides :  
+Si une variable a une valeur par défaut `null`, quelques contraintes supplémentaires s'appliquent. Une variable peut avoir une valeur par défaut `null` si elle est contenue dans le segment qui se trouve à l'extrémité droite de la chaîne de modèle ou si tous les segments à droite du segment ont des valeurs par défaut `null`. Les exemples suivants illustrent des chaînes de modèle comportant des valeurs par défaut `null` valides :  
   
--   ```  
-    UriTemplate t = new UriTemplate("shoe/{boat=null}");  
-    ```  
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");  
-    ```  
+- `UriTemplate t = new UriTemplate("shoe/{boat=null}");`
+
+- `UriTemplate t = new UriTemplate("{shoe=null}/{boat=null}");`
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");  
-    ```  
- Les exemples suivants illustrent des chaînes de modèle comportant des valeurs par défaut `null` non valides :  
+- `UriTemplate t = new UriTemplate("{shoe=1}/{boat=null}");`
+
+ Les éléments suivants sont des chaînes de modèle non valide avec les valeurs par défaut de `null`:  
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment  
-    ```  
+- `UriTemplate t = new UriTemplate("{shoe=null}/boat"); // null default must be in the right most path segment`
   
--   ```  
-    UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value  
-    ```  
+- `UriTemplate t = new UriTemplate("{shoe=null}/{boat=x}/{bed=null}"); // shoe cannot have a null default because boat does not have a default null value`
+
 ### <a name="default-values-and-matching"></a>Valeurs par défaut et correspondance  
  Lorsque vous mettez en correspondance un URI candidat avec un modèle comportant des valeurs par défaut, si des valeurs ne sont pas spécifiées dans l'URI candidat, les valeurs par défaut seront placées dans la collection <xref:System.UriTemplateMatch.BoundVariables%2A>.  
   
 ### <a name="template-equivalence"></a>Équivalence des modèles  
- Deux modèles sont dits *structurellement équivalents* lorsque tous leurs littéraux correspondent et ils ont des variables dans les mêmes segments. Par exemple, les deux modèles suivants sont structurellement équivalents :  
+ Deux modèles sont dits se situer *structurellement équivalents* lorsque tous leurs littéraux correspondent et ils ont des variables dans les mêmes segments. Par exemple, les deux modèles suivants sont structurellement équivalents :  
   
--   /a/{var1}/b b/{var2}?x=1&y=2  
+- /a/{var1}/b b/{var2}?x=1&y=2  
   
--   a/{x}/b%20b/{var1}?y=2&x=1  
+- a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20B/{z}/?y=2&x=1  
+- a/{y}/B%20B/{z}/?y=2&x=1  
   
  Quelques points à noter :  
   
--   Si un modèle contient des barres obliques de début, seule la première est ignorée.  
+- Si un modèle contient des barres obliques de début, seule la première est ignorée.  
   
--   Lors de la comparaison des chaînes de modèles pour rechercher une équivalence structurelle, la casse est ignorée pour les noms de variables et les segments de chemin d’accès, mais les chaînes de demande respectent la casse.  
+- Lors de la comparaison des chaînes de modèles pour rechercher une équivalence structurelle, la casse est ignorée pour les noms de variables et les segments de chemin d’accès, mais les chaînes de demande respectent la casse.  
   
--   Les chaînes de demande ne sont pas ordonnées.  
+- Les chaînes de demande ne sont pas ordonnées.  
   
 ## <a name="uritemplatetable"></a>UriTemplateTable  
  La classe <xref:System.UriTemplateTable> représente une table associative d'objets <xref:System.UriTemplate> liés à un objet choisi par le développeur. Une <xref:System.UriTemplateTable> doit contenir au moins un <xref:System.UriTemplate> avant d'appeler <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>. Le contenu d'une  <xref:System.UriTemplateTable> peut être modifié jusqu'à l'appel de <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>. La validation est exécutée lorsque <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29> est appelée. Le type de validation exécuté dépend de la valeur du paramètre `allowMultiple` de <xref:System.UriTemplateTable.MakeReadOnly%28System.Boolean%29>.  
@@ -277,60 +273,60 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  Les ensembles suivants de chaînes de requête ne sont pas ambigus entre eux :  
   
--   ?x=1  
+- ?x=1  
   
--   ?x=2  
+- ?x=2  
   
--   ?x=3  
+- ?x=3  
   
--   ?x=1&y={var}  
+- ?x=1&y={var}  
   
--   ?x=2&z={var}  
+- ?x=2&z={var}  
   
--   ?x=3  
+- ?x=3  
   
--   ?x=1  
+- ?x=1  
   
--   ?  
+- ?  
   
--   ? x={var}  
+- ? x={var}  
   
--   ?  
+- ?  
   
--   ?m=get&c=rss  
+- ?m=get&c=rss  
   
--   ?m=put&c=rss  
+- ?m=put&c=rss  
   
--   ?m=get&c=atom  
+- ?m=get&c=atom  
   
--   ?m=put&c=atom  
+- ?m=put&c=atom  
   
  Les ensembles suivants de modèles de chaînes de requête sont ambigus entre eux :  
   
--   ?x=1  
+- ?x=1  
   
--   ?x={var}  
+- ?x={var}  
   
  "x=1" - correspond aux deux modèles.  
   
--   ?x=1  
+- ?x=1  
   
--   ?y=2  
+- ?y=2  
   
  "x=1&y=2" correspond aux deux modèles. C'est parce qu'une chaîne de demande peut contenir plus de variables de chaîne de demande que le modèle auquel elle correspond.  
   
--   ?x=1  
+- ?x=1  
   
--   ?x=1&y={var}  
+- ?x=1&y={var}  
   
  "x=1&y=3" correspond aux deux modèles.  
   
--   ?x=3&y=4  
+- ?x=3&y=4  
   
--   ?x=3&z=5  
+- ?x=3&z=5  
   
 > [!NOTE]
->  Les caractères á et Á sont considérés comme des caractères différents lorsqu'ils apparaissent dans le cadre d'un chemin d'accès d'URI ou d'un littéral de segment de chemin d'accès <xref:System.UriTemplate> (en revanche, les caractères a et A sont considérés comme identiques). Les caractères á et Á sont considérés comme identiques lorsqu'ils apparaissent dans le cadre d'un {nomVariable} <xref:System.UriTemplate> ou d'une chaîne de demande (a et A sont également considérés comme identiques).  
+> Les caractères á et Á sont considérés comme des caractères différents lorsqu'ils apparaissent dans le cadre d'un chemin d'accès d'URI ou d'un littéral de segment de chemin d'accès <xref:System.UriTemplate> (en revanche, les caractères a et A sont considérés comme identiques). Les caractères á et Á sont considérés comme identiques lorsqu'ils apparaissent dans le cadre d'un {nomVariable} <xref:System.UriTemplate> ou d'une chaîne de demande (a et A sont également considérés comme identiques).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du modèle de programmation HTTP web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)  

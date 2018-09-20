@@ -3,11 +3,11 @@ title: Attributs (F#)
 description: 'Découvrez comment F # attributs activer les métadonnées à appliquer à une construction de programmation.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45647948"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471088"
 ---
 # <a name="attributes"></a>Attributs
 

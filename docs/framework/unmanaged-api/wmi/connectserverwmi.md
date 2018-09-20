@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 163e61eef8a753b5b6470285e5e3ce63789e25a4
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287739"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473536"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (fonction)
 Crée une connexion via DCOM à un espace de noms WMI sur un ordinateur spécifié.  
@@ -48,7 +48,7 @@ HRESULT ConnectServerWmi (
 
 `strNetworkResource` [in] Pointeur vers un valide `BSTR` qui contient le chemin d’accès de l’objet de l’espace de noms WMI. Consultez le [notes](#remarks) section pour plus d’informations.
 
-`strUser` [in] Un pointeur vers une valide `BSTR` qui contient le nom d’utilisateur. Un `null` valeur indique le contexte de sécurité actuel. Si l’utilisateur provient d’un autre domaine que celui en cours, `strUser` peut également contenir le nom de domaine et d’utilisateur séparés par une barre oblique inverse. `strUser` peut également être utilisateur principaux (UPN) mettre en forme, suhc comme *userName@domainName*. Consultez le [notes](#remarks) section pour plus d’informations.
+`strUser` [in] Un pointeur vers une valide `BSTR` qui contient le nom d’utilisateur. Un `null` valeur indique le contexte de sécurité actuel. Si l’utilisateur provient d’un autre domaine que celui en cours, `strUser` peut également contenir le nom de domaine et d’utilisateur séparés par une barre oblique inverse. `strUser` peut également être dans le format nom utilisateur principal (UPN), tel que `userName@domainName`. Consultez le [notes](#remarks) section pour plus d’informations.
 
 `strPassword` [in] Un pointeur vers une valide `BSTR` qui contient le mot de passe. Un `null` indique le contexte de sécurité actuel. Une chaîne vide (« ») indique un mot de passe vide.
 

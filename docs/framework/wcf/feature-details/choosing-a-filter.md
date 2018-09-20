@@ -2,12 +2,12 @@
 title: Choix d'un filtre
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743140"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478499"
 ---
 # <a name="choosing-a-filter"></a>Choix d'un filtre
 Lors de la configuration du service de routage, il est important de sélectionner des filtres de message corrects et de les configurer pour vous permettre d'établir des correspondances exactes avec les messages que vous recevez. Si les filtres que vous sélectionnez établissent des correspondances trop générales ou ne sont pas configurés correctement, les messages sont routés de manière incorrecte. Si les filtres sont trop restrictifs, vous risquez de ne pas disposer d'itinéraires valides disponibles pour certains de vos messages.  
@@ -16,7 +16,7 @@ Lors de la configuration du service de routage, il est important de sélectionne
  Lors de la sélection des filtres utilisés par le service de routage, il est important de connaître le fonctionnement de chaque filtre, ainsi que les informations disponibles dans le cadre des messages entrants. Par exemple, si tous les messages sont reçus sur le même point de terminaison, les filtres Adresse et EndpointName sont inutiles, parce que tous les messages correspondent à ces filtres.  
   
 ### <a name="action"></a>Action  
- Le filtre Action inspecte la propriété <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si le contenu de l'en-tête Action du message correspond à la valeur des données de filtre spécifiée dans la configuration du filtre, alors ce filtre retourne `true`. L’exemple suivant définit un `FilterElement` qui utilise le filtre d’Action pour faire correspondre des messages avec un en-tête d’action qui contient une valeur de « http://namespace/contract/operation/».  
+ Le filtre Action inspecte la propriété <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Si le contenu de l'en-tête Action du message correspond à la valeur des données de filtre spécifiée dans la configuration du filtre, alors ce filtre retourne `true`. L’exemple suivant définit un `FilterElement` qui utilise le filtre d’Action pour faire correspondre des messages avec un en-tête d’action qui contient une valeur de `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  Ce filtre doit être utilisé lorsque les messages entrants sont adressés à une adresse unique.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- Le filtre EndpointAddressPrefix est semblable au filtre EndpointAddress. Le filtre EndpointAddressPrefix inspecte l'EndpointAddress sur lequel le message a été reçu. Toutefois, le filtre EndpointAddressPrefix agit comme un caractère générique en correspondant aux adresses qui commencent par la valeur spécifié dans la configuration de filtre. L’exemple suivant définit un `FilterElement` qui utilise le filtre EndpointAddressPrefix pour faire correspondre aux messages adressés à « http://\<hostname > / vdir * ».  
+ Le filtre EndpointAddressPrefix est semblable au filtre EndpointAddress. Le filtre EndpointAddressPrefix inspecte l'EndpointAddress sur lequel le message a été reçu. Toutefois, le filtre EndpointAddressPrefix agit comme un caractère générique en correspondant aux adresses qui commencent par la valeur spécifié dans la configuration de filtre. L’exemple suivant définit un `FilterElement` qui utilise le filtre EndpointAddressPrefix pour faire correspondre aux messages adressés à `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  

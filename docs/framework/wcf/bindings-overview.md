@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989785"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489014"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Vue d’ensemble des liaisons Windows Communication Foundation
 Les liaisons sont des objets qui sont utilisés pour spécifier les détails de communication qui sont requises pour se connecter au point de terminaison d’un service Windows Communication Foundation (WCF). Chaque point de terminaison dans un service WCF requiert une liaison soit spécifiée correctement. Cette rubrique décrit les types de détails de communication définis par les liaisons, les éléments d’une liaison, les liaisons incluses dans WCF et comment une liaison peut être spécifiée pour un point de terminaison.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
 ms.openlocfilehash: c181a415c8702c3032077728139b23e86d85d1f0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746216"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490268"
 ---
 # <a name="queues-overview"></a>Vue d'ensemble des files d'attente
 Cette section présente les concepts généraux et principaux relatifs à la communication mise en file d'attente. Les sections suivantes passent en plus d’informations sur la façon dont les concepts de file d’attente décrits ici sont représentées dans Windows Communication Foundation (WCF).  

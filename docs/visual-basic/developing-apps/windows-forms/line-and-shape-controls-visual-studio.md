@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Line control [Visual Basic], topic list
 ms.assetid: 29ee3a5f-920f-4677-85bc-bd7425ab57e8
 ms.openlocfilehash: 6d052af15257f00f43ad21b08765ab3c882b31bf
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46005704"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479414"
 ---
 # <a name="line-and-shape-controls-visual-studio"></a>Contrôles Line et Shape (Visual Studio)
 Les contrôles Line et Shape de Visual Basic Power Packs sont des contrôles graphiques qui vous permettent de dessiner des lignes horizontales, verticales et diagonales, des rectangles, des carrés, des ovales, des cercles, ainsi que des rectangles et des carrés avec des angles arrondis, sur un formulaire ou un conteneur.  

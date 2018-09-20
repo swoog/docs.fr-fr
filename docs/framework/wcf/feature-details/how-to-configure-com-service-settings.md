@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
-ms.openlocfilehash: 43964331f6728db0f094eaceb63e2c306d2dd3ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490102"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471683"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Comment : configurer des paramètres de service COM+
-Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application. Dans le mode d’hébergement COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut). Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.  
+Lorsqu'une interface d'application est ajoutée ou supprimée en utilisant l'outil de configuration de service COM+, la configuration de service Web est mise à jour dans le fichier de configuration de l'application. Dans le mode hébergé COM +, le fichier Application.config est placé dans le répertoire racine de l’Application (%PROGRAMFILES%\ComPlus Applications\\{appid} est la valeur par défaut). Dans l'un ou l'autre des modes hébergés sur le Web, le fichier Web.config est placé dans le répertoire vroot spécifié.  
   
 > [!NOTE]
 >  La signature du message doit être utilisée pour éviter la falsification des messages entre un client et un serveur. De plus, le chiffrement de la couche transport ou message doit être utilisé pour se protéger contre la divulgation d'informations de messages entre un client et un serveur. Comme avec les services Windows Communication Foundation (WCF), vous devez utiliser la limitation pour limiter le nombre d’appels simultanés, les connexions, les instances et les opérations en attente. Elle permet d'empêcher la surconsommation de ressources. La fonctionnalité de limitation est spécifiée à l'aide des paramètres de fichier de configuration de service.  
@@ -49,15 +49,15 @@ public interface IFinancesContract : IDisposable
   
  Les applications clientes qui utilisent ce service doivent se conformer à ce contrat et utiliser une liaison compatible avec celui spécifié dans la configuration de l'application.  
   
- L'exemple de code suivant affiche un fichier de configuration par défaut. Est un service Web de Windows Communication Foundation (WCF), cela est conforme au schéma de configuration de modèle de service standard et peut être modifiée dans la même façon que les autres fichiers de configuration de services WCF.  
+ L'exemple de code suivant affiche un fichier de configuration par défaut. En étant un service Web de Windows Communication Foundation (WCF), cela est conforme au schéma de configuration de modèle de service standard et peut être modifiée dans la même façon que les autres fichiers de configuration de services WCF.  
   
  Les changements standard incluent :  
   
--   Remplacer l'adresse de point de terminaison de la forme par défaut ApplicationName/ComponentName/InterfaceName par une forme plus utilisable.  
+- Remplacer l'adresse de point de terminaison de la forme par défaut ApplicationName/ComponentName/InterfaceName par une forme plus utilisable.  
   
--   Modification de l’espace de noms du service à partir de la valeur par défaut «http://tempuri.org/InterfaceID« forme à une forme plus pertinente.  
+- Modification de l’espace de noms du service à partir de la valeur par défaut `http://tempuri.org/InterfaceID` formulaire à une forme plus pertinente.  
   
--   Modifier le point de terminaison pour utiliser une liaison de transport différente.  
+- Modifier le point de terminaison pour utiliser une liaison de transport différente.  
   
      Dans le cas hébergé par COM+, le transport de canaux nommés est utilisé par défaut, mais un transport off-machine, tel que TCP, peut être utilisé à la place.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 685c68967f69e8933ff3dd2cd062e0893c7e2da6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: e1d06085b4edb5c1e102eaab766ec7636194b991
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076808"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46482116"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Procédure pas à pas : localisation d'une application hybride
 
@@ -123,7 +123,7 @@ Vous pouvez mapper votre contenu localisable à des assemblys de ressources en u
 2.  Utilisez la commande suivante pour assigner des identificateurs de ressource à votre contenu localisable.
 
     ```
-    msbuild /t:updateuid LocalizingWpfInWf.csproj
+    msbuild -t:updateuid LocalizingWpfInWf.csproj
     ```
 
 3.  Dans **l’Explorateur de solutions**, double-cliquez sur **SimpleControl.xaml** pour l’ouvrir dans l’éditeur de Code. Vous verrez que le `msbuild` commande a ajouté le `Uid` à tous les éléments d’attribut. Cela facilite la localisation par l’assignation des identificateurs de ressource.

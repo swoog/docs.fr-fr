@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 7dcdaa0d101ce45ba24226e0aba81b812d5b88da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518304"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478595"
 ---
 # <a name="how-to-localize-an-application"></a>Guide pratique pour localiser une application
 Ce didacticiel explique comment créer une application localisée à l'aide de l'outil LocBaml.  
@@ -46,11 +46,11 @@ Ce didacticiel explique comment créer une application localisée à l'aide de l
   
 3.  Ajoutez des UID à vos fichiers [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Les UID permettent de suivre les modifications apportées aux fichiers et d'identifier les éléments qui doivent être traduits. Pour ajouter des UID à vos fichiers, exécutez **updateuid** sur votre fichier projet :  
   
-     **msbuild /t:updateuid helloapp.csproj**  
+     **MSBuild - t : updateuid helloapp.csproj**  
   
      Pour vérifier que vous n’est manquant ou en double UID, exécutez **checkuid**:  
   
-     **msbuild /t:checkuid helloapp.csproj**  
+     **MSBuild - t : checkuid helloapp.csproj**  
   
      Après l’exécution **updateuid**, vos fichiers doivent contenir des UID. Par exemple, dans le fichier Pane1.xaml de HelloApp, vous devez trouver les éléments suivants :  
   
