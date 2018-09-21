@@ -3,11 +3,11 @@ title: Suivi de variables et arguments
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
 ms.openlocfilehash: 45ed3761cd7ead82650023b93a2f32a43e847339
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46320124"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492559"
 ---
 # <a name="variable-and-argument-tracking"></a>Suivi de variables et arguments
 Lors du suivi de l'exécution d'un workflow, il est souvent utile d'extraire des données. Vous obtenez ainsi un contexte supplémentaire lors de l'accès à une post-exécution d'enregistrement de suivi. Dans [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)], vous pouvez extraire toute variable ou argument visible dans l'étendue de toute activité d'un flux de travail utilisant le suivi. Les profils de suivi facilitent l'extraction de données.  

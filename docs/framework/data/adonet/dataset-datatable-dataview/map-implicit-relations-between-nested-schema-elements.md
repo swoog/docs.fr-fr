@@ -2,12 +2,12 @@
 title: Mapper les relations implicites entre éléments de schéma imbriqués
 ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
-ms.openlocfilehash: 3c0b5356479d31a3caad8438618e7cf7dc4e10e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 73cd8a83021934de3b8e3bf494a4f59dd32e183c
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485571"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493618"
 ---
 # <a name="map-implicit-relations-between-nested-schema-elements"></a>Mapper les relations implicites entre éléments de schéma imbriqués
 Un schéma en langage XSD (XML Schema Definition) peut présenter des types complexes imbriqués les uns dans les autres. Dans ce cas, le processus de mappage applique le mappage par défaut et crée les différents éléments suivants dans l'objet <xref:System.Data.DataSet> :  
@@ -16,7 +16,7 @@ Un schéma en langage XSD (XML Schema Definition) peut présenter des types comp
   
 -   Si aucune contrainte unique n’existe sur le parent, une colonne de clé primaire supplémentaire par la définition de la table nommée *TableName*_Id où *TableName* est le nom de la table parente.  
   
--   Une contrainte de clé primaire sur la table parente, identifiant la colonne supplémentaire en tant que la clé primaire (en définissant le **IsPrimaryKey** propriété **True**). La contrainte est nommée contrainte*#* où *#* est 1, 2, 3 et ainsi de suite. Par exemple, le nom par défaut de la première contrainte est Constraint1.  
+-   Une contrainte de clé primaire sur la table parente, identifiant la colonne supplémentaire en tant que la clé primaire (en définissant le **IsPrimaryKey** propriété **True**). La contrainte est nommée selon le modèle Constraint\#, où \# est 1, 2, 3, etc. Par exemple, le nom par défaut de la première contrainte est Constraint1.  
   
 -   Une contrainte de clé étrangère sur la table enfant, qui identifie la colonne supplémentaire en tant que clé étrangère faisant référence à la clé primaire de la table parente. La contrainte est nommée *ParentTable_ChildTable* où *ParentTable* est le nom de la table parente et *ChildTable* est le nom de la table enfant.  
   

@@ -2,12 +2,12 @@
 title: "Procédure : accéder à un service à partir d'une application de workflow"
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595462"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493296"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Procédure : accéder à un service à partir d'une application de workflow
 Cette rubrique décrit comment appeler un service de workflow à partir d'une application console de workflow. Cela dépend à la fin de la [Comment : créer un Service de flux de travail avec les activités de messagerie](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) rubrique. Bien que cette rubrique décrit comment appeler un service de workflow à partir d’une application de workflow, les mêmes méthodes peuvent servir à appeler n’importe quel service Windows Communication Foundation (WCF) à partir d’une application de workflow.
@@ -42,13 +42,13 @@ Cette rubrique décrit comment appeler un service de workflow à partir d'une ap
 
      ![Activité dans la boîte à outils d’écho](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  Faites glisser et déposez un <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activité sur l’aire du concepteur. Il se trouve sous le **flux de contrôle** section de la boîte à outils.
+7.  Faites glisser une activité <xref:System.Activities.Statements.Sequence> sur l'aire du concepteur. Il se trouve sous le **flux de contrôle** section de la boîte à outils.
 
-8.  Avec le <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` activité en mode focus, cliquez sur le **Variables** lier et ajoutez une variable de chaîne nommée `inString`. Affectez la valeur par défaut à la variable `"Hello, world"` ainsi que d’une variable chaîne nommée `outString` comme indiqué dans le diagramme suivant.
+8.  Avec le <xref:System.Activities.Statements.Sequence> activité en mode focus, cliquez sur le **Variables** lier et ajoutez une variable de chaîne nommée `inString`. Affectez la valeur par défaut à la variable `"Hello, world"` ainsi que d’une variable chaîne nommée `outString` comme indiqué dans le diagramme suivant.
 
      ![Ajout d’une variable](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. Faites glisser et déposez une **Echo** l’activité dans le <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`. Dans la fenêtre Propriétés lier le `inMsg` l’argument de la `inString` variable et la `outMsg` l’argument de la `outString` variable, comme indiqué dans l’illustration suivante. Cela transmet la valeur de la variable `inString` à l'opération, puis prend la valeur de retour et la place dans la variable `outString`.
+9. Faites glisser et déposez une **Echo** l’activité dans le <xref:System.Activities.Statements.Sequence>. Dans la fenêtre Propriétés lier le `inMsg` l’argument de la `inString` variable et la `outMsg` l’argument de la `outString` variable, comme indiqué dans l’illustration suivante. Cela transmet la valeur de la variable `inString` à l'opération, puis prend la valeur de retour et la place dans la variable `outString`.
 
      ![Liaison des arguments aux variables](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

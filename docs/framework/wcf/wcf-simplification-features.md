@@ -2,12 +2,12 @@
 title: Fonctionnalités de simplification de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526351"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493230"
 ---
 # <a name="wcf-simplification-features"></a>Fonctionnalités de simplification de WCF
 Cette rubrique décrit les nouvelles fonctionnalités qui facilitent l’écriture d’applications WCF.  
@@ -106,7 +106,7 @@ Cette rubrique décrit les nouvelles fonctionnalités qui facilitent l’écritu
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Obtient et définit la longueur maximale de tableau autorisée. Ce quota limite la taille maximale d'un tableau de primitives que le lecteur XML renvoie, notamment un tableau d'octets. Ce quota ne limite pas la consommation de mémoire dans le lecteur XML lui-même, mais dans le composant qui utilise le lecteur. Par exemple, lorsque <xref:System.Runtime.Serialization.DataContractSerializer> utilise un lecteur sécurisé avec <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, il ne désérialise pas les tableaux d'octets supérieurs à ce quota.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Obtient et définit le nombre maximal d'octets autorisés retournés pour chaque lecture. Ce quota limite le nombre d'octets lus dans une seule opération de lecture lors de la lecture de la balise de début d'élément et ses attributs. (Dans les cas non diffusés en continu, le nom de l'élément lui-même n'est pas compté dans le quota.) Un nombre trop élevé d'attributs XML risque d'utiliser un temps de traitement disproportionné parce que le caractère unique des noms d'attributs doit être vérifié. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> atténue cette menace.|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 nœuds|Ce quota limite la profondeur d'imbrication maximale des éléments XML.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> interagit avec <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> : le lecteur conserve toujours des données en mémoire pour l'élément actuel et tous ses ancêtres, donc la consommation de mémoire maximale du lecteur est proportionnelle au produit de ces deux paramètres. Lors de la désérialisation d'un graphique d'objets très imbriqué, le désérialiseur est obligé d'accéder à la pile entière et de lever une exception <xref:System.StackOverflowException>irrécupérable. Une corrélation directe existe entre l’imbrication XML et l’imbrication d’objets pour le <xref:System.Runtime.Serialization.DataContractSerializer> et <!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> permet d'atténuer cette menace.|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|128 nœuds|Ce quota limite la profondeur d'imbrication maximale des éléments XML.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> interagit avec <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> : le lecteur conserve toujours des données en mémoire pour l'élément actuel et tous ses ancêtres, donc la consommation de mémoire maximale du lecteur est proportionnelle au produit de ces deux paramètres. Lors de la désérialisation d'un graphique d'objets très imbriqué, le désérialiseur est obligé d'accéder à la pile entière et de lever une exception <xref:System.StackOverflowException>irrécupérable. Une corrélation directe existe entre l'imbrication XML et l'imbrication d'objets pour <xref:System.Runtime.Serialization.DataContractSerializer> et <xref:System.Xml.Serialization.XmlSerializer>. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> permet d'atténuer cette menace.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Ce quota limite le nombre maximal de caractères autorisés dans un nametable. Le nametable contient certaines chaînes (telles que des espaces de noms et des préfixes) rencontrées lors du traitement d'un document XML. Étant donné que ces chaînes sont mises en mémoire tampon, ce quota permet d'empêcher une mise en mémoire tampon excessive lorsqu'une diffusion en continu est prévue.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|Ce quota limite la taille maximale de la chaîne que le lecteur XML renvoie. Ce quota ne limite pas la consommation de mémoire dans le lecteur XML lui-même, mais dans le composant qui utilise le lecteur. Par exemple, lorsque <xref:System.Runtime.Serialization.DataContractSerializer> utilise un lecteur sécurisé avec <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, il ne désérialise pas les chaînes supérieures à ce quota.|  
   
