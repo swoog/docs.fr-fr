@@ -3,11 +3,11 @@ title: Points de terminaison de service et adressage de files d'attente
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
 ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
-ms.translationtype: MT
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46323546"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525381"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Points de terminaison de service et adressage de files d'attente
 Cette rubrique discute comment les clients adressent des services qui lisent à partir des files d'attente et comment les points de terminaison de service mappent aux files d'attente. En guise de rappel, l’illustration suivante montre le classique Windows Communication Foundation (WCF) en file d’attente de déploiement de l’application.  

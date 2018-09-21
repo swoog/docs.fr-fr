@@ -2,12 +2,12 @@
 title: Accès aux services WCF avec une application cliente Windows Store
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: cfc5dd13c5660ff1604e9de02fdf6755d70a95e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485662"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46541117"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Accès aux services WCF avec une application cliente Windows Store
 Windows 8 introduit un nouveau type d'application appelé applications du Windows Store. Ces applications sont conçues autour d'une interface d'écran tactile. .NET Framework 4.5 permet aux applications du Windows Store d'appeler des services WCF.  
@@ -107,19 +107,20 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 >  XmlDictionaryWriter.Write(DateTime) écrit maintenant l'objet DateTime en tant que chaîne.  
   
 ### <a name="security"></a>Sécurité  
- Les modes suivants de sécurité sont pris en charge dans les applications du Windows Store :  
+
+Les modes de sécurité suivants sont pris en charge dans les applications du Windows Store :
   
-1.  <xref:System.ServiceModel.SecurityMode.None>  
+1. <xref:System.ServiceModel.SecurityMode.None>  
   
-2.  <xref:System.ServiceModel.SecurityMode.Transport>  
+2. <xref:System.ServiceModel.SecurityMode.Transport>  
   
-3.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredentials> --> `System.ServiceModel.SecurityMode.TransportWithMessageCredentials`
+3. <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>
   
-4.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportCredentialOnly>  --> `System.ServiceModel.SecurityMode.TransportCredentialOnly`
+4. <xref:System.ServiceModel.SecurityMode.Message>
   
- Les types d'informations d'identification du client suivants sont pris en charge dans les applications du Windows Store :  
+Les types d’informations d’identification de client suivants sont pris en charge dans les applications du Windows Store :
   
-1.  None  
+1.  Aucun.  
   
 2.  Basic  
   
@@ -145,7 +146,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 1.  <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <!--zz <xref:System.ServiceModel.DuplexChannelFactory> --> `System.ServiceModel.DuplexChannelFactory`
+2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
   
 3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   

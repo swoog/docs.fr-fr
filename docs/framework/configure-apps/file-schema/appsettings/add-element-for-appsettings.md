@@ -1,5 +1,5 @@
 ---
-title: '&lt;ajouter&gt; , élément pour &lt;appSettings&gt;'
+title: '&lt;ajouter&gt; élément pour &lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 35a9fc08033d2b9cd1dae5a1f1f3ddcd361f03eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753636"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529578"
 ---
-# <a name="add-element-for-appsettings"></a>\<Ajouter >, élément pour \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<Ajouter > élément pour \<appSettings >
 
 Ajoute un paramètre d’application personnalisé.
 
@@ -47,7 +47,7 @@ Ajoute un paramètre d’application personnalisé.
 
 ## <a name="child-elements"></a>Éléments enfants
 
-Aucun
+Aucun.
 
 ## <a name="example"></a>Exemple
 
@@ -56,6 +56,15 @@ L’exemple suivant montre comment ajouter un paramètre de configuration person
 ```xml
 <appSettings>
   <add key="ApplicationName" value="MyApplication" />
+</appSettings>
+```
+
+L’exemple suivant utilise le `<add>` élément pour définir les deux paramètres de compatibilité dans une application ASP.NET :
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
 </appSettings>
 ```
 

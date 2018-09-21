@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: abb679971771f6bff5bd1c84ff744e2fcbb9c45a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46471942"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529831"
 ---
 # <a name="using-the-xmlserializer-class"></a>Utilisation de la classe XmlSerializer
 Windows Communication Foundation (WCF) peut utiliser deux technologies de sérialisation différentes pour convertir les données dans votre application en code XML qui est transmis entre les clients et services, un processus appelé sérialisation.  
