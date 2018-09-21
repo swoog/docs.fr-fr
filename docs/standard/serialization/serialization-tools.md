@@ -3,11 +3,11 @@ title: Outils de sérialisation
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46481817"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525618"
 ---
 # <a name="serialization-tools"></a>Outils de sérialisation
 Cette section contient des informations détaillées sur les outils de sérialisation. Vous pouvez exécuter tous les outils à partir de la ligne de commande.  

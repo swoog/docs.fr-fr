@@ -3,11 +3,11 @@ title: Accéder à un OperationContext à partir d'un service de workflow
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
 ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326369"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46540750"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Accéder à un OperationContext à partir d'un service de workflow
 Pour accéder à <xref:System.ServiceModel.OperationContext> dans un service de workflow, vous devez implémenter l'interface <xref:System.ServiceModel.Activities.IReceiveMessageCallback> dans une propriété d'exécution personnalisée. Remplacez la méthode <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> passée à <xref:System.ServiceModel.OperationContext>. Cette rubrique vous aidera à implémenter cette propriété d'exécution pour récupérer un en-tête personnalisé, ainsi qu'une activité personnalisée qui affichera cette propriété à  <xref:System.ServiceModel.Activities.Receive> au moment de l'exécution.  L'activité personnalisée implémentera le même comportement qu'une activité <xref:System.Activities.Statements.Sequence>, excepté lorsqu'un <xref:System.ServiceModel.Activities.Receive> est placé à l'intérieur,  <xref:System.ServiceModel.Activities.IReceiveMessageCallback> sera appelé et l'information  <xref:System.ServiceModel.OperationContext> sera récupérée.  Cette rubrique explique également comment accéder à <xref:System.ServiceModel.OperationContext> côté client pour ajouter des en-têtes sortants via l'interface <xref:System.ServiceModel.Activities.ISendMessageCallback>.  

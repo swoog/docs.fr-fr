@@ -3,11 +3,11 @@ title: 'Informations de l’appelant (F #)'
 description: Décrit comment utiliser les attributs d’Argument appelant informations pour obtenir des informations de l’appelant à partir d’une méthode.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991452"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537278"
 ---
 # <a name="caller-information"></a>Informations de l’appelant
 
