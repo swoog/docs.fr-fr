@@ -3,11 +3,11 @@ title: Mappage de type SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: d5c0072d8561efa1211de191a1f2b6f3a1e55b7b
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478693"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532439"
 ---
 # <a name="sql-clr-type-mapping"></a>Mappage de type SQL-CLR
 Dans <token>vbtecdlinq</token>, le modèle de données d'une base de données relationnelle mappe à un modèle objet qui est exprimé dans le langage de programmation de votre choix. Lors de l'exécution de l'application, LINQ to SQL traduit les requêtes LINQ dans le modèle objet en SQL et les envoie à la base de données pour exécution. Lorsque la base de données retourne les résultats, LINQ to SQL traduit ces derniers en objets que vous pouvez utiliser dans votre propre langage de programmation.  
