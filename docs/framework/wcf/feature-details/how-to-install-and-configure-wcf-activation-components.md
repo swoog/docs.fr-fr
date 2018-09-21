@@ -5,45 +5,45 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46326096"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530087"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a><span data-ttu-id="f65f1-102">Comment : installer et configurer des composants d'activation WCF</span><span class="sxs-lookup"><span data-stu-id="f65f1-102">How to: Install and Configure WCF Activation Components</span></span>
-<span data-ttu-id="f65f1-103">Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP.</span><span class="sxs-lookup"><span data-stu-id="f65f1-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) on [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="f65f1-104">Les sections suivantes définissent les étapes pour cette configuration :</span><span class="sxs-lookup"><span data-stu-id="f65f1-104">The following sections outline the steps for this configuration:</span></span>  
+# <a name="how-to-install-and-configure-wcf-activation-components"></a><span data-ttu-id="484bf-102">Comment : installer et configurer des composants d'activation WCF</span><span class="sxs-lookup"><span data-stu-id="484bf-102">How to: Install and Configure WCF Activation Components</span></span>
+<span data-ttu-id="484bf-103">Cette rubrique décrit les étapes requises pour configurer le service Windows Process Activation Service (également appelé WAS) sur [!INCLUDE[wv](../../../../includes/wv-md.md)] pour héberger des services Windows Communication Foundation (WCF) les protocoles de réseau de services qui ne communiquent pas sur HTTP.</span><span class="sxs-lookup"><span data-stu-id="484bf-103">This topic describes the steps required to set up Windows Process Activation Service (also known as WAS) on [!INCLUDE[wv](../../../../includes/wv-md.md)] to host Windows Communication Foundation (WCF) services that do not communicate over HTTP network protocols.</span></span> <span data-ttu-id="484bf-104">Les sections suivantes définissent les étapes pour cette configuration :</span><span class="sxs-lookup"><span data-stu-id="484bf-104">The following sections outline the steps for this configuration:</span></span>  
   
--   <span data-ttu-id="f65f1-105">Installer (ou vérifiez l’installation) les composants d’activation de WCF.</span><span class="sxs-lookup"><span data-stu-id="f65f1-105">Install (or confirm the installation of) the WCF activation components.</span></span>  
+-   <span data-ttu-id="484bf-105">Installer (ou vérifiez l’installation) les composants d’activation de WCF.</span><span class="sxs-lookup"><span data-stu-id="484bf-105">Install (or confirm the installation of) the WCF activation components.</span></span>  
   
--   <span data-ttu-id="f65f1-106">Configurer le service WAS pour prendre en charge un protocole non HTTP.</span><span class="sxs-lookup"><span data-stu-id="f65f1-106">Configure WAS to support a non-HTTP protocol.</span></span> <span data-ttu-id="f65f1-107">La procédure suivante configure [!INCLUDE[wv](../../../../includes/wv-md.md)] pour l'activation TCP.</span><span class="sxs-lookup"><span data-stu-id="f65f1-107">The following procedure configures [!INCLUDE[wv](../../../../includes/wv-md.md)] for TCP activation.</span></span>  
+-   <span data-ttu-id="484bf-106">Configurer le service WAS pour prendre en charge un protocole non HTTP.</span><span class="sxs-lookup"><span data-stu-id="484bf-106">Configure WAS to support a non-HTTP protocol.</span></span> <span data-ttu-id="484bf-107">La procédure suivante configure [!INCLUDE[wv](../../../../includes/wv-md.md)] pour l'activation TCP.</span><span class="sxs-lookup"><span data-stu-id="484bf-107">The following procedure configures [!INCLUDE[wv](../../../../includes/wv-md.md)] for TCP activation.</span></span>  
   
- <span data-ttu-id="f65f1-108">Une fois l’installation et configuration du service WAS, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) pour connaître les procédures créer un service WCF qui expose un point de terminaison non HTTP qui emploie WAS.</span><span class="sxs-lookup"><span data-stu-id="f65f1-108">After installing and configuring WAS, see [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) for the procedures to create a WCF service that exposes an non-HTTP endpoint that employs WAS.</span></span>  
+ <span data-ttu-id="484bf-108">Une fois l’installation et configuration du service WAS, consultez [Comment : héberger un Service WCF dans WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) pour connaître les procédures créer un service WCF qui expose un point de terminaison non HTTP qui emploie WAS.</span><span class="sxs-lookup"><span data-stu-id="484bf-108">After installing and configuring WAS, see [How to: Host a WCF Service in WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) for the procedures to create a WCF service that exposes an non-HTTP endpoint that employs WAS.</span></span>  
   
-### <a name="to-install-the-wcf-non-http-activation-components"></a><span data-ttu-id="f65f1-109">Pour installer les composants d'activation non HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="f65f1-109">To install the WCF non-HTTP activation components</span></span>  
+### <a name="to-install-the-wcf-non-http-activation-components"></a><span data-ttu-id="484bf-109">Pour installer les composants d'activation non HTTP WCF</span><span class="sxs-lookup"><span data-stu-id="484bf-109">To install the WCF non-HTTP activation components</span></span>  
   
-1.  <span data-ttu-id="f65f1-110">Cliquez sur le **Démarrer** bouton, puis cliquez sur **le panneau de configuration**.</span><span class="sxs-lookup"><span data-stu-id="f65f1-110">Click the **Start** button, and then click **Control Panel**.</span></span>  
+1.  <span data-ttu-id="484bf-110">Cliquez sur le **Démarrer** bouton, puis cliquez sur **le panneau de configuration**.</span><span class="sxs-lookup"><span data-stu-id="484bf-110">Click the **Start** button, and then click **Control Panel**.</span></span>  
   
-2.  <span data-ttu-id="f65f1-111">Cliquez sur **programmes**, puis cliquez sur **programmes et fonctionnalités**.</span><span class="sxs-lookup"><span data-stu-id="f65f1-111">Click **Programs**, and then click **Programs and Features**.</span></span>  
+2.  <span data-ttu-id="484bf-111">Cliquez sur **programmes**, puis cliquez sur **programmes et fonctionnalités**.</span><span class="sxs-lookup"><span data-stu-id="484bf-111">Click **Programs**, and then click **Programs and Features**.</span></span>  
   
-3.  <span data-ttu-id="f65f1-112">Sur le **tâches** menu, cliquez sur **ou désactiver des fonctionnalités Windows activer**.</span><span class="sxs-lookup"><span data-stu-id="f65f1-112">On the **Tasks** menu, click **Turn Windows features on or off**.</span></span>  
+3.  <span data-ttu-id="484bf-112">Sur le **tâches** menu, cliquez sur **ou désactiver des fonctionnalités Windows activer**.</span><span class="sxs-lookup"><span data-stu-id="484bf-112">On the **Tasks** menu, click **Turn Windows features on or off**.</span></span>  
   
-4.  <span data-ttu-id="f65f1-113">Recherchez le noeud [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], sélectionnez-le puis développez-le.</span><span class="sxs-lookup"><span data-stu-id="f65f1-113">Find the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] node, select and then expand it.</span></span>  
+4.  <span data-ttu-id="484bf-113">Recherchez le noeud [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], sélectionnez-le puis développez-le.</span><span class="sxs-lookup"><span data-stu-id="484bf-113">Find the [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] node, select and then expand it.</span></span>  
   
-5.  <span data-ttu-id="f65f1-114">Sélectionnez le **les composants d’Activation Non-Http WCF** zone et d’enregistrer le paramètre.</span><span class="sxs-lookup"><span data-stu-id="f65f1-114">Select the **WCF Non-Http Activation Components** box and save the setting.</span></span>  
+5.  <span data-ttu-id="484bf-114">Sélectionnez le **les composants d’Activation Non-Http WCF** zone et d’enregistrer le paramètre.</span><span class="sxs-lookup"><span data-stu-id="484bf-114">Select the **WCF Non-Http Activation Components** box and save the setting.</span></span>  
   
-### <a name="to-configure-the-was-to-support-tcp-activation"></a><span data-ttu-id="f65f1-115">Pour configurer le service WAS pour prendre en charge l'activation TCP</span><span class="sxs-lookup"><span data-stu-id="f65f1-115">To configure the WAS to support TCP activation</span></span>  
+### <a name="to-configure-the-was-to-support-tcp-activation"></a><span data-ttu-id="484bf-115">Pour configurer le service WAS pour prendre en charge l'activation TCP</span><span class="sxs-lookup"><span data-stu-id="484bf-115">To configure the WAS to support TCP activation</span></span>  
   
-1.  <span data-ttu-id="f65f1-116">Pour assurer la prise en charge de l'activation de net.tcp, le site Web par défaut doit d'abord être lié à un port net.tcp.</span><span class="sxs-lookup"><span data-stu-id="f65f1-116">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="f65f1-117">Vous pouvez utiliser Appcmd.exe installé avec l'ensemble d'outils de gestion [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f65f1-117">You can do this by using Appcmd.exe, which is installed with the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] management toolset.</span></span> <span data-ttu-id="f65f1-118">Dans une fenêtre d'invite de commandes au niveau de l'administrateur, exécutez la commande suivante.</span><span class="sxs-lookup"><span data-stu-id="f65f1-118">In an administrator-level Command Prompt window, run the following command.</span></span>  
+1.  <span data-ttu-id="484bf-116">Pour assurer la prise en charge de l'activation de net.tcp, le site Web par défaut doit d'abord être lié à un port net.tcp.</span><span class="sxs-lookup"><span data-stu-id="484bf-116">To support net.tcp activation, the default Web site must first be bound to a net.tcp port.</span></span> <span data-ttu-id="484bf-117">Vous pouvez utiliser Appcmd.exe installé avec l'ensemble d'outils de gestion [!INCLUDE[iisver](../../../../includes/iisver-md.md)].</span><span class="sxs-lookup"><span data-stu-id="484bf-117">You can do this by using Appcmd.exe, which is installed with the [!INCLUDE[iisver](../../../../includes/iisver-md.md)] management toolset.</span></span> <span data-ttu-id="484bf-118">Dans une fenêtre d'invite de commandes au niveau de l'administrateur, exécutez la commande suivante.</span><span class="sxs-lookup"><span data-stu-id="484bf-118">In an administrator-level Command Prompt window, run the following command.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="f65f1-119">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-119">This command is a single line of text.</span></span> <span data-ttu-id="f65f1-120">Cette commande ajoute une liaison de site net.tcp au site web par défaut qui écoute sur le port TCP 808, quel que soit le nom d’hôte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-120">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any host name.</span></span>  
+    >  <span data-ttu-id="484bf-119">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="484bf-119">This command is a single line of text.</span></span> <span data-ttu-id="484bf-120">Cette commande ajoute une liaison de site net.tcp au site web par défaut qui écoute sur le port TCP 808, quel que soit le nom d’hôte.</span><span class="sxs-lookup"><span data-stu-id="484bf-120">This command adds a net.tcp site binding to the default Web site listening on TCP port 808 with any host name.</span></span>  
   
-2.  <span data-ttu-id="f65f1-121">Bien que toutes les applications d’un site partagent la même liaison net.tcp, chacune d’elle peut activer de manière individuelle la prise en charge net.pipe.</span><span class="sxs-lookup"><span data-stu-id="f65f1-121">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="f65f1-122">Afin d'activer net.tcp pour l'application, exécutez la commande suivante à partir d'une invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="f65f1-122">To enable net.tcp for the application, run the following command from an administrator-level command prompt.</span></span>  
+2.  <span data-ttu-id="484bf-121">Bien que toutes les applications d’un site partagent la même liaison net.tcp, chacune d’elle peut activer de manière individuelle la prise en charge net.pipe.</span><span class="sxs-lookup"><span data-stu-id="484bf-121">Although all applications within a site share a common net.tcp binding, each application can enable net.tcp support individually.</span></span> <span data-ttu-id="484bf-122">Afin d'activer net.tcp pour l'application, exécutez la commande suivante à partir d'une invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="484bf-122">To enable net.tcp for the application, run the following command from an administrator-level command prompt.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app   
@@ -51,13 +51,13 @@ ms.locfileid: "46326096"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="f65f1-123">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-123">This command is a single line of text.</span></span> <span data-ttu-id="f65f1-124">Cette commande active le /\<*Application WCF*> application accessible à l’aide des deux `http://localhost/<WCF Application>` et `net.tcp://localhost/<WCF Application>`.</span><span class="sxs-lookup"><span data-stu-id="f65f1-124">This command enables the /\<*WCF Application*> application to be accessed using both `http://localhost/<WCF Application>` and `net.tcp://localhost/<WCF Application>`.</span></span>
+    >  <span data-ttu-id="484bf-123">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="484bf-123">This command is a single line of text.</span></span> <span data-ttu-id="484bf-124">Cette commande active le /\<*Application WCF*> application accessible à l’aide des deux `http://localhost/<WCF Application>` et `net.tcp://localhost/<WCF Application>`.</span><span class="sxs-lookup"><span data-stu-id="484bf-124">This command enables the /\<*WCF Application*> application to be accessed using both `http://localhost/<WCF Application>` and `net.tcp://localhost/<WCF Application>`.</span></span>
   
-     <span data-ttu-id="f65f1-125">Supprimez la liaison de site net.tcp que vous avez ajoutée dans le cadre de cet exemple.</span><span class="sxs-lookup"><span data-stu-id="f65f1-125">Remove the net.tcp site binding you added for this sample.</span></span>  
+     <span data-ttu-id="484bf-125">Supprimez la liaison de site net.tcp que vous avez ajoutée dans le cadre de cet exemple.</span><span class="sxs-lookup"><span data-stu-id="484bf-125">Remove the net.tcp site binding you added for this sample.</span></span>  
   
-     <span data-ttu-id="f65f1-126">Pour des raisons pratiques, les deux étapes suivantes sont implémentées dans le fichier de commandes RemoveNetTcpSiteBinding.cmd situé dans le répertoire de l'exemple.</span><span class="sxs-lookup"><span data-stu-id="f65f1-126">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
+     <span data-ttu-id="484bf-126">Pour des raisons pratiques, les deux étapes suivantes sont implémentées dans le fichier de commandes RemoveNetTcpSiteBinding.cmd situé dans le répertoire de l'exemple.</span><span class="sxs-lookup"><span data-stu-id="484bf-126">As a convenience, the following two steps are implemented in a batch file called RemoveNetTcpSiteBinding.cmd located in the sample directory.</span></span>  
   
-    1.  <span data-ttu-id="f65f1-127">Supprimez le protocole net.tcp de la liste des protocoles activés en exécutant la commande suivante dans une invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="f65f1-127">Remove net.tcp from the list of enabled protocols by running the following command in an administrator-level Command Prompt window.</span></span>  
+    1.  <span data-ttu-id="484bf-127">Supprimez le protocole net.tcp de la liste des protocoles activés en exécutant la commande suivante dans une invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="484bf-127">Remove net.tcp from the list of enabled protocols by running the following command in an administrator-level Command Prompt window.</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -65,9 +65,9 @@ ms.locfileid: "46326096"
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="f65f1-128">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-128">This command is a single line of text.</span></span>  
+        >  <span data-ttu-id="484bf-128">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="484bf-128">This command is a single line of text.</span></span>  
   
-    2.  <span data-ttu-id="f65f1-129">Supprimez la liaison du site net.tcp en exécutant la commande suivante dans une invite de commandes de niveau élevé :</span><span class="sxs-lookup"><span data-stu-id="f65f1-129">Remove the net.tcp site binding by running the following command in an elevated Command Prompt window:</span></span>  
+    2.  <span data-ttu-id="484bf-129">Supprimez la liaison du site net.tcp en exécutant la commande suivante dans une invite de commandes de niveau élevé :</span><span class="sxs-lookup"><span data-stu-id="484bf-129">Remove the net.tcp site binding by running the following command in an elevated Command Prompt window:</span></span>  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -75,22 +75,22 @@ ms.locfileid: "46326096"
         ```  
   
         > [!NOTE]
-        >  <span data-ttu-id="f65f1-130">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-130">This command is a single line of text.</span></span>  
+        >  <span data-ttu-id="484bf-130">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="484bf-130">This command is a single line of text.</span></span>  
   
-### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a><span data-ttu-id="f65f1-131">Pour supprimer net.tcp de la liste des protocoles actifs</span><span class="sxs-lookup"><span data-stu-id="f65f1-131">To remove net.tcp from the list of enabled protocols</span></span>  
+### <a name="to-remove-nettcp-from-the-list-of-enabled-protocols"></a><span data-ttu-id="484bf-131">Pour supprimer net.tcp de la liste des protocoles actifs</span><span class="sxs-lookup"><span data-stu-id="484bf-131">To remove net.tcp from the list of enabled protocols</span></span>  
   
-1.  <span data-ttu-id="f65f1-132">Pour supprimer net.tcp de la liste des protocoles actifs, exécutez la commande suivante dans une invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="f65f1-132">To remove net.tcp from the list of enabled protocols, run the following command in an administrator-level Command Prompt window.</span></span>  
+1.  <span data-ttu-id="484bf-132">Pour supprimer net.tcp de la liste des protocoles actifs, exécutez la commande suivante dans une invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="484bf-132">To remove net.tcp from the list of enabled protocols, run the following command in an administrator-level Command Prompt window.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set app "Default Web Site/servicemodelsamples<WCF Application>" " /enabledProtocols:http  
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="f65f1-133">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-133">This command is a single line of text.</span></span>  
+    >  <span data-ttu-id="484bf-133">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="484bf-133">This command is a single line of text.</span></span>  
   
-### <a name="to-remove-the-nettcp-site-binding"></a><span data-ttu-id="f65f1-134">Pour supprimer la liaison de site net.tcp</span><span class="sxs-lookup"><span data-stu-id="f65f1-134">To remove the net.tcp site binding</span></span>  
+### <a name="to-remove-the-nettcp-site-binding"></a><span data-ttu-id="484bf-134">Pour supprimer la liaison de site net.tcp</span><span class="sxs-lookup"><span data-stu-id="484bf-134">To remove the net.tcp site binding</span></span>  
   
-1.  <span data-ttu-id="f65f1-135">Pour supprimer la liaison de site net.tcp, exécutez la commande suivante dans une fenêtre d'invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="f65f1-135">To remove the net.tcp site binding run the following command in an administrator-level Command Prompt window.</span></span>  
+1.  <span data-ttu-id="484bf-135">Pour supprimer la liaison de site net.tcp, exécutez la commande suivante dans une fenêtre d'invite de commandes au niveau de l'administrateur.</span><span class="sxs-lookup"><span data-stu-id="484bf-135">To remove the net.tcp site binding run the following command in an administrator-level Command Prompt window.</span></span>  
   
     ```  
     %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -98,10 +98,10 @@ ms.locfileid: "46326096"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="f65f1-136">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="f65f1-136">This command is a single line of text.</span></span>  
+    >  <span data-ttu-id="484bf-136">Cette commande est une ligne unique de texte.</span><span class="sxs-lookup"><span data-stu-id="484bf-136">This command is a single line of text.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f65f1-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f65f1-137">See Also</span></span>  
- [<span data-ttu-id="f65f1-138">Activation TCP</span><span class="sxs-lookup"><span data-stu-id="f65f1-138">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
- [<span data-ttu-id="f65f1-139">Activation MSMQ</span><span class="sxs-lookup"><span data-stu-id="f65f1-139">MSMQ Activation</span></span>](../../../../docs/framework/wcf/samples/msmq-activation.md)  
- [<span data-ttu-id="f65f1-140">Activation de NamedPipe</span><span class="sxs-lookup"><span data-stu-id="f65f1-140">NamedPipe Activation</span></span>](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [<span data-ttu-id="f65f1-141">Fonctionnalités d’hébergement de Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="f65f1-141">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
+## <a name="see-also"></a><span data-ttu-id="484bf-137">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="484bf-137">See Also</span></span>  
+ [<span data-ttu-id="484bf-138">Activation TCP</span><span class="sxs-lookup"><span data-stu-id="484bf-138">TCP Activation</span></span>](../../../../docs/framework/wcf/samples/tcp-activation.md)  
+ [<span data-ttu-id="484bf-139">Activation MSMQ</span><span class="sxs-lookup"><span data-stu-id="484bf-139">MSMQ Activation</span></span>](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ [<span data-ttu-id="484bf-140">Activation de NamedPipe</span><span class="sxs-lookup"><span data-stu-id="484bf-140">NamedPipe Activation</span></span>](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
+ [<span data-ttu-id="484bf-141">Fonctionnalités d’hébergement de Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="484bf-141">Windows Server App Fabric Hosting Features</span></span>](https://go.microsoft.com/fwlink/?LinkId=201276)
