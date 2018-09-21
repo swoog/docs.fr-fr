@@ -3,11 +3,11 @@ title: Modèles actifs (F#)
 description: 'Découvrez comment utiliser des modèles actifs pour définir des partitions nommées qui subdivisent les données d’entrée dans le langage de programmation F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006642"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46524413"
 ---
 # <a name="active-patterns"></a>Modèles actifs
 
