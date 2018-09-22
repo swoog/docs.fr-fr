@@ -3,11 +3,11 @@ title: Base de données de persistance SQL Server
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: 3929148cf6a236db7d226b45da750e8d4ae1d0cc
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46322459"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46576370"
 ---
 # <a name="sql-server-persistence-database"></a>Base de données de persistance SQL Server
 Cette section fournit des détails sur les vues de base de données publique prises en charge par le magasin d'instances de workflow SQL, et montre comment désérialiser des propriétés de données d'instance primitives et rechercher des instances non persistantes.  

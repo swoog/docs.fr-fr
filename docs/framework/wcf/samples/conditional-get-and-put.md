@@ -3,11 +3,11 @@ title: GET et PUT conditionnelle
 ms.date: 03/30/2017
 ms.assetid: 3d22067f-57b8-4e0f-a571-a694512187ae
 ms.openlocfilehash: 29819f89327128cdd71cc89eb8d14126522dc2df
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540253"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580393"
 ---
 # <a name="conditional-get-and-put"></a>GET et PUT conditionnelle
 Cet exemple montre comment utiliser les nouvelles API de récupération et mise à jour conditionnelles du modèle de programmation REST WCF. Étant donné que la récupération conditionnelle et mise à jour sont plus appropriés pour orientés ressources et services REST, cet exemple étend la [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple. Cet exemple se concentre sur l’ajout de prise en charge de récupération conditionnelle et de mise à jour le [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple utilisant les nouvelles API introduites dans [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)].  
