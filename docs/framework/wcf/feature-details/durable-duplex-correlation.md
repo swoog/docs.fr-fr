@@ -3,11 +3,11 @@ title: Corrélation duplex durable
 ms.date: 03/30/2017
 ms.assetid: 8eb0e49a-6d3b-4f7e-a054-0d4febee2ffb
 ms.openlocfilehash: 82c052ff87eb8b125dfc64e1567dbd00d255894d
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526612"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46699181"
 ---
 # <a name="durable-duplex-correlation"></a>Corrélation duplex durable
 La corrélation duplex durable, également appelée corrélation de rappel, est utile lorsqu’un service de workflow a besoin d’envoyer un rappel à l’appelant initial. Contrairement au duplex WCF, le rappel peut arriver à n'importe quel moment du futur et n'est pas lié au même canal ni à la durée de vie du canal ; la seule condition est que l'appelant ait un point de terminaison actif qui écoute le message de rappel. Cela permet à deux services de workflow de communiquer dans une conversation de longue durée. Cette rubrique présente une vue d'ensemble de la corrélation duplex durable.  

@@ -10,11 +10,11 @@ ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 8cbc22be68aae976e939520383995652e896d529
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539964"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696165"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Comment : créer un authentificateur de jeton de sécurité personnalisé
 Cette rubrique indique comment créer un authentificateur de jetons de sécurité personnalisé et comment l'intégrer à un gestionnaire de jetons de sécurité personnalisé. Un authentificateur de jetons de sécurité valide le contenu du jeton de sécurité fourni par le message entrant. Lorsque le processus de validation réussit, l'authentificateur retourne une collection d'instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui, après évaluation, retourne un ensemble de revendications.  
