@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
 ms.openlocfilehash: cd275cdbc51c86b1d774058db839c38349b319a6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963838"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46532397"
 ---
 # <a name="ltdatetimeserializationgt-element"></a>Élément &lt;dateTimeSerialization&gt;
 Détermine le mode de sérialisation des objets <xref:System.DateTime>.  
