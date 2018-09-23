@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: c830a8ac3c8c935aa73974bb5fcee1f2be9c79a3
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: c9eed211b65e7069897718d98c301667a23aaec2
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754662"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702905"
 ---
 # <a name="attached-properties-overview"></a>Vue d'ensemble des propriétés jointes
 
@@ -60,7 +60,7 @@ Le scénario le plus courant où WPF définit une propriété jointe est quand u
 
 ## Propriétés jointes dans le Code <a name="attached_properties_code"></a>
 
-Propriétés jointes dans WPF n’ont pas le standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] méthodes « wrapper » pour un accès simple get/set. Cela est dû au fait que la propriété jointe ne fait pas nécessairement partie de l’espace de noms [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] pour les instances dans lesquelles est définie la propriété. Toutefois, un processeur XAML doit pouvoir définir ces valeurs quand XAML est analysé. Pour prendre en charge une utilisation efficace de la propriété jointe, le type de propriétaire de la propriété jointe doit implémenter des méthodes d’accesseur dédiées de la forme `Get`*NomPropriété* et `Set`*NomPropriété*. Ces méthodes d’accesseur dédiées sont également utiles pour obtenir ou définir la propriété jointe dans le code. Du point de vue du code, une propriété jointe s’apparente à un champ de stockage comportant des accesseurs de méthode au lieu d’accesseurs de propriété, et ce champ de stockage peut exister sur tout objet plutôt que devoir être défini de manière spécifique.
+Propriétés jointes dans WPF n’ont pas le standard [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] méthodes « wrapper » pour un accès simple get/set. Cela est dû au fait que la propriété jointe ne fait pas nécessairement partie de l’espace de noms [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] pour les instances dans lesquelles est définie la propriété. Toutefois, un processeur XAML doit pouvoir définir ces valeurs quand XAML est analysé. Pour prendre en charge une utilisation efficace, le type de propriétaire de la propriété jointe doit implémenter les méthodes d’accesseur dédiées sous la forme **obtenir * PropertyName*** et **définir*PropertyName ***. Ces méthodes d’accesseur dédiées sont également utiles pour obtenir ou définir la propriété jointe dans le code. Du point de vue du code, une propriété jointe s’apparente à un champ de stockage comportant des accesseurs de méthode au lieu d’accesseurs de propriété, et ce champ de stockage peut exister sur tout objet plutôt que devoir être défini de manière spécifique.
 
 L’exemple suivant illustre la définition d’une propriété jointe dans le code. Dans cet exemple, `myCheckBox` est une instance de la <xref:System.Windows.Controls.CheckBox> classe.
 
@@ -91,16 +91,16 @@ Comme mentionné précédemment, vous devez enregistrer une propriété jointe s
 
 Si votre classe définit la propriété jointe pour son utilisation sur d’autres types, la classe ne devra pas dériver de <xref:System.Windows.DependencyObject>. Mais vous n’avez pas besoin de dériver de <xref:System.Windows.DependencyObject> si vous suivez le modèle global de WPF d’avoir votre propriété jointe également être une propriété de dépendance.
 
-Définissez votre propriété jointe comme une propriété de dépendance en déclarant un `public static readonly` champ de type <xref:System.Windows.DependencyProperty>. Vous définissez ce champ à l’aide de la valeur de retour de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (méthode). Le nom du champ doit correspondre au nom de la propriété jointe, auquel s’ajouté la chaîne `Property`, pour suivre le modèle WPF établi de dénomination des champs d’identification et les propriétés qu’ils représentent. Le fournisseur de propriétés jointes doit également fournir des méthodes statiques `Get`*NomPropriété* et `Set`*NomPropriété* comme accesseurs de la propriété jointe pour que le système de propriétés puisse utiliser celle-ci.
+Définissez votre propriété jointe comme une propriété de dépendance en déclarant un `public static readonly` champ de type <xref:System.Windows.DependencyProperty>. Vous définissez ce champ à l’aide de la valeur de retour de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> (méthode). Le nom du champ doit correspondre au nom de la propriété jointe, auquel s’ajouté la chaîne `Property`, pour suivre le modèle WPF établi de dénomination des champs d’identification et les propriétés qu’ils représentent. Le fournisseur de propriétés jointes doit fournir également statique **obtenir * PropertyName*** et **définir * PropertyName*** méthodes comme accesseurs pour la propriété jointe ; ne parvient pas à le faire entraîne la propriété système en cours ne peut pas utiliser votre propriété jointe.
 
 > [!NOTE]
 > Si vous omettez d’accesseur get de la propriété jointe, la liaison de données sur la propriété ne fonctionne pas dans les outils de conception, tels que Visual Studio et Expression Blend.
 
 #### <a name="the-get-accessor"></a>Accesseur Get
 
-La signature pour l’accesseur `Get`*NomPropriété* doit être :
+La signature pour le **obtenir * PropertyName*** accesseur doit être :
 
-`public static object Get` *PropertyName* `(object target)`
+`public static object GetPropertyName(object target)`
 
 -   L’objet `target` peut être défini comme un type plus spécifique dans votre implémentation. Par exemple, le <xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType> le paramètre en tant que types de méthode <xref:System.Windows.UIElement>, car la propriété jointe est uniquement destinée à être définie sur <xref:System.Windows.UIElement> instances.
 
@@ -108,15 +108,15 @@ La signature pour l’accesseur `Get`*NomPropriété* doit être :
 
 #### <a name="the-set-accessor"></a>Accesseur Set
 
-La signature pour l’accesseur `Set`*NomPropriété* doit être :
+La signature pour le **définir * PropertyName*** accesseur doit être :
 
-`public static void Set` *NomPropriété* `(object`  `target` `, object`  `value` `)`
+`public static void SetPropertyName(object target, object value)`
 
 -   L’objet `target` peut être défini comme un type plus spécifique dans votre implémentation. Par exemple, le <xref:System.Windows.Controls.DockPanel.SetDock%2A> en tant que méthode tape <xref:System.Windows.UIElement>, car la propriété jointe est uniquement destinée à être définie sur <xref:System.Windows.UIElement> instances.
 
 -   L’objet `value` peut être défini comme un type plus spécifique dans votre implémentation. Par exemple, le <xref:System.Windows.Controls.DockPanel.SetDock%2A> en tant que méthode tape <xref:System.Windows.Controls.Dock>, car la valeur peut uniquement être définie que sur cette énumération. N’oubliez pas que la valeur de cette méthode est l’entrée provenant du chargeur XAML quand il rencontre votre propriété jointe dans une utilisation des propriétés jointes dans le balisage. Cette entrée est la valeur spécifiée comme valeur d’attribut XAML dans le balisage. Ainsi, la conversion de type, la sérialisation de valeur ou l’extension de balisage doit être prise en charge pour le type utilisé afin que le type approprié puisse être créé à partir de la valeur d’attribut (laquelle est en fin de compte une simple chaîne).
 
-L’exemple suivant montre l’inscription de propriété de dépendance (à l’aide de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> méthode), ainsi que le `Get` *PropertyName* et `Set` *PropertyName* accesseurs . Dans cet exemple, le nom de la propriété jointe est `IsBubbleSource`. Les accesseurs doivent donc être nommés `GetIsBubbleSource` et `SetIsBubbleSource`.
+L’exemple suivant montre l’inscription de propriété de dépendance (à l’aide de la <xref:System.Windows.DependencyProperty.RegisterAttached%2A> méthode), ainsi que le **obtenir * PropertyName*** et **définir * PropertyName*** accesseurs. Dans cet exemple, le nom de la propriété jointe est `IsBubbleSource`. Les accesseurs doivent donc être nommés `GetIsBubbleSource` et `SetIsBubbleSource`.
 
 [!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
 [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]

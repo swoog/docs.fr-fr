@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81f1eb4236bab72caf4421342e1f54d6d2f32607
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539503"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706500"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Méthode ICLRStrongName::StrongNameSignatureGenerationEx
 Génère une signature de nom fort pour l’assembly spécifié, en fonction des indicateurs spécifiés.  

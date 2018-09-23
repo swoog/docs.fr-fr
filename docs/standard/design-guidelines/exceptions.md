@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517945"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703737"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Instructions de conception pour les exceptions
 Gestion des exceptions présente de nombreux avantages sur le rapport d’erreurs basée sur la valeur de retour. Conception de bonne infrastructure permet le développeur d’applications de tirer parti d’exceptions. Cette section décrit les avantages des exceptions et présente des recommandations pour les utiliser efficacement.  
