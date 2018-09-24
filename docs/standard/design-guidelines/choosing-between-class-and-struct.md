@@ -38,7 +38,7 @@ Une des décisions de conception de base auxquelles est confronté chaque concep
   
  **✓ CONSIDER** de définir un struct au lieu d’une classe si les instances du type sont de petite taille et d’une durée de vie assez courte, ou si elles sont souvent incorporées dans d’autres objets.  
   
- **X AVOID** définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
+ **X AVOID** la définition d’un struct, sauf si le type possède toutes les caractéristiques suivantes :  
   
 -   Il représente logiquement une seule valeur, similaire aux types primitifs (`int`, `double`, etc..).  
   

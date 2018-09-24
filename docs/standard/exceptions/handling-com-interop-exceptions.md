@@ -12,11 +12,11 @@ ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46568619"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937542"
 ---
 # <a name="handling-com-interop-exceptions"></a>Gestion des exceptions COM Interop
 Le code managé et le code non managé peuvent collaborer pour gérer les exceptions. Si une méthode lève une exception dans du code managé, le common language runtime peut passer HRESULT à un objet COM. Si une méthode échoue dans du code non managé en retournant un échec HRESULT, le runtime lève une exception qui peut être interceptée par du code managé.  
