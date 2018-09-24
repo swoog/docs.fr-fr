@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "44710944"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705719"
 ---
 # <a name="application-domain-resource-monitoring"></a>Analyse de ressource de domaine d'application
 L'analyse de ressource de domaine d'application (ARM) permet aux hôtes de contrôler l'utilisation de l'UC et de la mémoire par domaine d'application. Il est utile pour les ordinateurs hôtes comme ASP.NET qui utilisent de nombreux domaines d’application dans un processus à long terme. L'hôte peut décharger le domaine d'application d'une application qui affecte de façon défavorable les performances de l'ensemble du processus, mais uniquement s'il peut identifier l'application problématique. ARM fournit des informations qui peuvent être utilisées pour faciliter la prise de telles décisions.  

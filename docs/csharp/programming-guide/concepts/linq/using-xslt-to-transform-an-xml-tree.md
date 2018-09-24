@@ -3,11 +3,11 @@ title: Utilisation de XSLT pour transformer une arborescence XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 373a2699-d4c5-471b-9bda-c1f0ab73b477
 ms.openlocfilehash: 3fa850c0f09404da49b2963e980d15e1ed54316f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646715"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585944"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-c"></a>Utilisation de XSLT pour transformer une arborescence XML (C#)
 Vous pouvez créer une arborescence XML, créer un objet <xref:System.Xml.XmlReader> à partir de l'arborescence XML, créer un nouveau document, puis créer un objet <xref:System.Xml.XmlWriter> qui écrira dans le nouveau document. Ensuite, vous pouvez appeler la transformation XSLT, en passant le <xref:System.Xml.XmlReader> et le <xref:System.Xml.XmlWriter> à la transformation. Une fois la transformation terminée avec succès, la nouvelle arborescence XML est remplie avec les résultats de la transformation.  

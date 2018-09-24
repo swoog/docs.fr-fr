@@ -6,11 +6,11 @@ ms.assetid: 71d03b78-6898-4ce7-b0fc-1282573f31f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 623583f16c23b55c16f648fedcd039ca36f73b1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597613"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583705"
 ---
 # <a name="types-of-xml-nodes"></a>Types de nœuds XML
 Quand un document XML est lu et chargé en mémoire sous la forme d’une arborescence de nœuds, le type de nœud des nœuds est déterminé lors de la création de ces derniers. Le DOM (Document Object Model) XML propose plusieurs catégories de types de nœuds, déterminés par le World Wide Web Consortium (W3C) et répertoriés dans la section 1.1.1 The DOM Structure Model. Le tableau suivant répertorie les types de nœuds et fournit, pour chaque type, l'objet qui lui est assigné ainsi qu'une brève description.  

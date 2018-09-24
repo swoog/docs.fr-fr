@@ -12,11 +12,11 @@ ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6426e8bd138d06d3655562de6384e46a12c09279
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618280"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585439"
 ---
 # <a name="how-to-implement-an-observer"></a>Comment : implémenter une méthode Observer
 Le modèle de design observateur requiert une division entre un observateur, qui s’inscrit pour recevoir des notifications, et un fournisseur, qui surveille les données et envie des notifications à un ou plusieurs observateurs. Cette rubrique décrit comment créer un observateur. Une rubrique connexe, [Guide pratique pour implémenter un fournisseur](../../../docs/standard/events/how-to-implement-a-provider.md), explique comment créer un fournisseur.  

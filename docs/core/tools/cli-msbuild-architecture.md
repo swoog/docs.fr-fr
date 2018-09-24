@@ -3,12 +3,12 @@ title: Architecture des outils en ligne de commande .NET Core
 description: Découvrez les différentes couches des outils .NET Core et les changements apportés aux versions récentes.
 author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 1d96a0b1e19bf84af0ab645ebd104afc899ae656
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245127"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46696328"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>Vue d’ensemble générale des modifications des outils .NET Core
 
@@ -63,7 +63,7 @@ Du point de vue de l’exécution, les commandes CLI construisent, à partir de 
     
 Cette commande publie une application dans un dossier `pub` à l’aide de la configuration « Release ». En interne, cette commande se traduit par l’appel MSBuild suivant : 
 
-   `dotnet msbuild /t:Publish /p:OutputPath=pub /p:Configuration=Release`
+   `dotnet msbuild -t:Publish -p:OutputPath=pub -p:Configuration=Release`
 
 La principale exception à cette règle sont les commandes `new` et `run`, car elles n’ont pas été implémentées comme cibles de MSBuild.
 

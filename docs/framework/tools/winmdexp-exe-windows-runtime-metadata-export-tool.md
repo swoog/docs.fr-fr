@@ -8,11 +8,11 @@ ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625033"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46697943"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (outil d'exportation de métadonnées Windows Runtime)
 L'outil Metadata Export [!INCLUDE[wrt](../../../includes/wrt-md.md)] (Winmdexp.exe) transforme un module .NET Framework en un fichier qui contient des métadonnées [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Bien que les assemblys .NET Framework et les fichiers de métadonnées [!INCLUDE[wrt](../../../includes/wrt-md.md)] utilisent le même format physique, il y a des différences dans le contenu des tables de métadonnées. Autrement dit, les assemblys .NET Framework ne sont pas utilisables automatiquement comme composants [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Le processus qui transforme un module .NET Framework en composant [!INCLUDE[wrt](../../../includes/wrt-md.md)] s’appelle *exportation*. Dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], le fichier de métadonnées Windows (.winmd) résultant contient à la fois les métadonnées et l'implémentation.  

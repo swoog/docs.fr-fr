@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45678889"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46583520"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (Options du compilateur C#)
 L’option **-nologo** supprime l’affichage de la bannière de démarrage pendant le démarrage du compilateur et l’affichage des messages d’informations pendant la compilation.  

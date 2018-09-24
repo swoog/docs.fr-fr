@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 80ecca30b534591ffb2633ade961425f694403f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192195"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46697696"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Méthodes d’extension (Guide de programmation C#)
 Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des types existants sans créer un type dérivé, ni recompiler ou modifier le type d'origine. Les méthodes d'extension sont un type particulier de méthode statique appelées comme s'il s'agissait de méthodes d'instance sur le type étendu. Pour le code client écrit en C#, F# et Visual Basic, il n’y a aucune différence apparente lors de l’appel entre une méthode d’extension et les méthodes qui sont réellement définies dans un type.  
@@ -52,9 +52,6 @@ using System.Linq;
 ```  
   
  (Il peut également être nécessaire d'ajouter une référence à System.Core.dll.) Vous pouvez remarquer que les opérateurs de requête standard apparaissent dorénavant dans IntelliSense comme des méthodes supplémentaires disponibles pour la plupart des types <xref:System.Collections.Generic.IEnumerable%601>.  
-  
-> [!NOTE]
->  Bien que les opérateurs de requête standard n'apparaissent pas dans IntelliSense pour <xref:System.String>, ils sont encore disponibles.  
   
 ## <a name="binding-extension-methods-at-compile-time"></a>Liaison de méthodes d'extension à la compilation  
  Vous pouvez utiliser des méthodes d'extension pour étendre une classe ou une interface, mais pas pour les remplacer. Une méthode d'extension avec le même nom et la même signature qu'une méthode d'interface ou de classe ne sera jamais appelée. Au moment de la compilation, les méthodes d'extension ont toujours la priorité la plus faible par rapport aux méthodes d'instance définies dans le type lui-même. En d'autres termes, si un type a une méthode nommée `Process(int i)` et que vous avez une méthode d'extension avec la même signature, le compilateur créera toujours une liaison avec la méthode d'instance. Lorsque le compilateur rencontre un appel de méthode, il recherche d'abord une correspondance dans les méthodes d'instance du type. Si aucune correspondance n'est trouvée, il recherche toutes les méthodes d'extension définies pour le type et crée une liaison avec la première méthode d'extension qu'il trouve. L’exemple suivant montre comment le compilateur détermine quelle méthode d’extension ou méthode d’instance est choisie pour créer une liaison.  

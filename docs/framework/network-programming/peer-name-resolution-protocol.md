@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45625189"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580406"
 ---
 # <a name="peer-name-resolution-protocol"></a>protocole PNRP
 Dans les environnements pair à pair, les pairs utilisent des systèmes de résolution de noms spécifiques pour résoudre les emplacements réseau les uns des autres (adresses, protocoles et ports) à partir de noms et d’autres types d’identificateurs. Dans le passé, la résolution des noms de pairs était compliquée en raison de la nature transitoire de la connectivité, et d’autres défauts du système DNS.  

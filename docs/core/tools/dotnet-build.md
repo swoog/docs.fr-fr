@@ -4,12 +4,12 @@ description: La commande dotnet build permet de générer un projet et l’ensem
 author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: dc5970fa1c8f3172916676819fa7789d84a5386e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: da33647e583af8441218f64fb8ac76d5de3cee38
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45692974"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46580107"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -47,7 +47,7 @@ La génération requiert le fichier *project.assets.json* qui répertorie les d�
 
 La commande `dotnet build` utilise MSBuild pour générer le projet. Elle prend donc en charge les builds parallèles et les builds incrémentielles. Pour plus d’informations, consultez l’article [Incremental Builds (Générations incrémentielles)](/visualstudio/msbuild/incremental-builds) .
 
-En plus de ses options, la commande `dotnet build` accepte des options MSBuild, comme `/p` pour définir des propriétés ou `/l` pour définir un enregistreur d’événements. Pour plus d’informations sur ces options, consultez [Informations de référence sur la ligne de commande MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+En plus de ses options, la commande `dotnet build` accepte des options MSBuild, comme `-p` pour définir des propriétés ou `-l` pour définir un enregistreur d’événements. Pour plus d’informations sur ces options, consultez [Informations de référence sur la ligne de commande MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
 La possibilité d’exécuter le projet ou non est déterminée par la propriété `<OutputType>` dans le fichier projet. L’exemple suivant illustre un projet qui génère du code exécutable :
 

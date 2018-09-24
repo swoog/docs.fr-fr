@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45594331"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577582"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Structures de données pour la programmation parallèle
 La version 4 de .NET Framework introduit de nouveaux types très utiles pour la programmation parallèle, notamment un ensemble de classes de collections simultanées, des primitives de synchronisation légères et des types pour l’initialisation tardive. Vous pouvez utiliser ces types avec n’importe quel code d’application multithread, y compris la bibliothèque parallèle de tâches et PLINQ.  

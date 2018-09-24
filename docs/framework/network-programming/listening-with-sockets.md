@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 640caf57638acae9bbe39d3f1039bc08c036785f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45624974"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002656"
 ---
 # <a name="listening-with-sockets"></a>écoute avec des sockets
 Les sockets de serveur et d’écoute ouvrent un port sur le réseau, puis attendent qu’un client se connecte à ce port. Cet exemple montre comment créer un service distant pour un réseau TCP/IP, cependant, il existe d’autres protocoles et familles d’adresses réseau.  

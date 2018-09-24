@@ -3,11 +3,11 @@ title: Comparaison de la programmation fonctionnelle et de la programmation imp�
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
 ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178336"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696441"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>Comparaison de la programmation fonctionnelle et de la programmation impérative (C#)
 Cette rubrique compare et contraste la programmation fonctionnelle avec la programmation impérative (procédurale) plus traditionnelle.  

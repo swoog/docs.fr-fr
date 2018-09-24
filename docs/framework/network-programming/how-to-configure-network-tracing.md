@@ -15,11 +15,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45610065"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479687"
 ---
 # <a name="how-to-configure-network-tracing"></a>Guide pratique pour configurer le suivi réseau
 Le fichier de configuration de l'application ou de l'ordinateur contient les paramètres qui déterminent le format et le contenu des traces réseau. Avant d'effectuer cette procédure, assurez-vous que le traçage est activé. Pour plus d’informations sur l’activation du suivi, consultez [Activation du suivi réseau](../../../docs/framework/network-programming/enabling-network-tracing.md).  

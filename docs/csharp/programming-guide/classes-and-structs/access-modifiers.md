@@ -6,11 +6,11 @@ helpviewer_keywords:
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 ms.openlocfilehash: 6be0ae4f6497dfb2db9607f61c4ede5083d57dc7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617511"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46706487"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modificateurs d’accès (Guide de programmation C#)
 Tous les types et membres de type ont un niveau d’accessibilité, qui détermine s’ils peuvent être utilisés à partir d’un autre code de votre assembly ou d’autres assemblys. Utilisez les modificateurs d’accès suivants pour spécifier l’accessibilité d’un type ou d’un membre au moment où vous le déclarez :  

@@ -10,11 +10,11 @@ ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45616125"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580081"
 ---
 # <a name="traversing-xml-schemas"></a>Traversée de schémas XML
 Traverser un schéma XML à l'aide de l'API SOM (Schema Object Model) permet d'accéder aux éléments, attributs et types stockés dans le SOM. Traverser un schéma XML chargé dans le SOM est également la première étape de l'édition d'un schéma XML avec l'API SOM.  

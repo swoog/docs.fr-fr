@@ -3,11 +3,11 @@ title: Bogues liés à l’utilisation combinée de code déclaratif et de code 
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
 ms.openlocfilehash: 56d8140613f3dae7f99c1374634dbd8bdf094a7c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45649157"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46580367"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>Bogues mixtes code déclaratif/code impératif (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] contient diverses méthodes qui vous permettent de modifier directement une arborescence XML. Vous pouvez ajouter des éléments, supprimer des éléments, modifier le contenu d'un élément, ajouter des attributs, et ainsi de suite. Cette interface de programmation est décrite dans [Modification d’arborescences XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md). Si vous itérez au sein de l'un des axes, tels que <xref:System.Xml.Linq.XContainer.Elements%2A>, et que vous modifiez l'arborescence XML à mesure que vous parcourez l'axe, vous pouvez constater des bogues étranges.  

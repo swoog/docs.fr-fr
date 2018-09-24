@@ -6,11 +6,11 @@ ms.assetid: 86dba977-5cc4-4567-964f-027ffabc47b2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e30b52b8cdfb4d185687d58c80f4475730031c86
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45615209"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45748679"
 ---
 # <a name="reading-entity-declarations-and-entity-references-into-the-dom"></a>Lecture de déclarations d'entité et de références d'entité vers le DOM
 Une entité est une déclaration établissant qu'un certain nom doit être utilisé dans les données XML en lieu et place d'un contenu ou d'un balisage donné. Une entité présente deux aspects. D'une part, vous devez associer un nom au contenu de remplacement, au moyen d'une déclaration d'entité. Une déclaration d'entité est créée au moyen de la syntaxe `<!ENTITY name "value">` dans une DTD ou un schéma XML. D'autre part, le nom défini dans la déclaration d'entité est utilisé par la suite dans les données XML. Ce nom, une fois employé dans le code XML, est appelé référence d'entité. Par exemple, la déclaration d'entité suivante déclare une entité portant le nom `publisher` associé au contenu de « Microsoft Press ».  

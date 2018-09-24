@@ -11,11 +11,11 @@ ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bc36c926ba81de8a59ff3af69719bec6b7370efc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45619149"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586842"
 ---
 # <a name="understanding-speedup-in-plinq"></a>Fonctionnement de l'accélération dans PLINQ
 Le principal objectif de PLINQ est d’accélérer l’exécution de requêtes LINQ to Objects en exécutant parallèlement les délégués de requête sur des ordinateurs multicœurs. PLINQ accomplit les meilleures performances lorsque le traitement de chaque élément dans une collection source est indépendant, sans aucun état partagé parmi les délégués individuels. Ces opérations sont courantes dans LINQ to Objects et PLINQ et sont souvent appelées « *délicieusement parallèles* », car elles se prêtent facilement à la planification sur plusieurs threads. Toutefois, toutes les requêtes ne sont pas entièrement constituées d’opérations délicieusement parallèles ; dans la plupart des cas, une requête concerne certains opérateurs qui ne peuvent pas être parallélisés, ou qui ralentissent l’exécution parallèle. Et même dans le cas de requêtes qui sont entièrement délicieusement parallèles, PLINQ doit encore partitionner la source de données et planifier le travail sur les threads et, généralement, fusionner les résultats lorsque la requête est terminée. Toutes ces opérations ajoutent au coût de calcul de la parallélisation ; ces coûts d’ajout de parallélisation sont appelés *surcharge*. Pour optimiser les performances dans une requête PLINQ, l’objectif est d’augmenter les parties délicieusement parallèles et de réduire au minimum les parties qui nécessitent une surcharge. Cet article fournit des informations qui vous aideront à écrire des requêtes PLINQ aussi efficaces que possible, tout en produisant des résultats corrects.  

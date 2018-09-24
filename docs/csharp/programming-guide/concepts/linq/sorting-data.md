@@ -3,11 +3,11 @@ title: Tri des données (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
 ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45638306"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45749577"
 ---
 # <a name="sorting-data-c"></a>Tri des données (C#)
 Une opération de tri ordonne les éléments d’une séquence en fonction d’un ou de plusieurs attributs. Le premier critère de tri effectue un tri principal sur les éléments. En spécifiant un deuxième critère de tri, vous pouvez trier les éléments dans chaque groupe de tri principal.  

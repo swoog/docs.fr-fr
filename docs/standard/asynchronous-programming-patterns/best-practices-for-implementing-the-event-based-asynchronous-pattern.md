@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
 ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45615457"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46581049"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Meilleures pratiques pour implémenter le modèle asynchrone basé sur des événements
 Le modèle asynchrone basé sur les événements vous permet d’exposer efficacement un comportement asynchrone dans les classes, en utilisant une sémantique d’événement et de délégué familière. Pour implémenter le modèle asynchrone basé sur les événements, vous devez respecter certaines contraintes liées au comportement. Les sections ci-après décrivent les exigences et les recommandations que vous devez prendre en compte quand vous implémentez une classe qui suit le modèle asynchrone basé sur les événements.  

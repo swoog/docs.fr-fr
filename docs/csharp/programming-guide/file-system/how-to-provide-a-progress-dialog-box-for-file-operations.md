@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: f80bbc94579c58210769800ad8bf74bc60878af5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e93ce06a01046dfaf4465470ba7fdc687effa58d
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260160"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710801"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Comment : fournir une boîte de dialogue de progression pour les opérations sur les fichiers (Guide de programmation C#)
 Vous pouvez fournir une boîte de dialogue standard qui montre la progression des opérations sur les fichiers dans Windows si vous utilisez la méthode <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> de l’espace de noms <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
@@ -22,7 +22,7 @@ Vous pouvez fournir une boîte de dialogue standard qui montre la progression de
   
      La boîte de dialogue **Gestionnaire de références** s’affiche.  
   
-2.  Dans la zone **Assemblys**, choisissez **Framework** si ce n’est pas sélectionné.  
+2.  Dans la zone **Assemblys**, choisissez **Framework** s’il n’est pas déjà sélectionné.  
   
 3.  Dans la liste des noms, cochez la case **Microsoft.VisualBasic**, puis choisissez le bouton **OK** pour fermer la boîte de dialogue.  
   

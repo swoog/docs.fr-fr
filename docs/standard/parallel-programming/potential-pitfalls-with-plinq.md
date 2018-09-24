@@ -11,11 +11,11 @@ ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e44fd3e6f806eef3805416dafd90a4855e79b3c7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638832"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46525705"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>Pièges potentiels avec PLINQ
 Dans de nombreux cas, PLINQ permet d’améliorer les performances de manière significative par rapport à des requêtes LINQ to Objects séquentielles. Toutefois, le travail de parallélisation de l’exécution de la requête présente une certaine complexité pouvant entraîner des problèmes qui, dans du code séquentiel, ne sont pas si courants ou ne surviennent pas du tout. Cette rubrique répertorie des pratiques à éviter lorsque vous écrivez des requêtes PLINQ.  

@@ -11,11 +11,11 @@ ms.assetid: c4bc0f44-eba2-4e96-9e03-1cc787461e61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2af0f82e66da1c8db5e17863dfad861c8a7d195e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45618751"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45742488"
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>Comment : retourner une valeur à partir d’une tâche
 Cet exemple montre comment utiliser le type <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> pour retourner une valeur à partir de la propriété <xref:System.Threading.Tasks.Task%601.Result%2A>. Il nécessite que le répertoire C:\Users\Public\Pictures\Sample Pictures\ existe et qu'il contienne des fichiers.  

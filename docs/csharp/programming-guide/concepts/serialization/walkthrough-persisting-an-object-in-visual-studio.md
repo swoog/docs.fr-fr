@@ -2,11 +2,11 @@
 title: 'Procédure pas à pas : persistance d’un objet avec C#'
 ms.date: 04/26/2018
 ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625111"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568139"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Procédure pas à pas : persistance d’un objet avec C# #
 

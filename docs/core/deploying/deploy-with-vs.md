@@ -7,12 +7,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet
+ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45595306"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705797"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Déploiement d’applications .NET Core avec Visual Studio
 
@@ -74,7 +75,7 @@ Pour exécuter un déploiement dépendant du framework avec une ou plusieurs dé
 
 1. Confirmez que `Newtonsoft.Json` est installé sur votre système et, si ce n’est pas le cas, installez-le. L’onglet **Installé** répertorie les packages NuGet installés sur votre système. Si `Newtonsoft.Json` n’est pas répertorié, sélectionnez l’onglet **Parcourir** et entrez « Newtonsoft.Json » dans la zone de recherche. Sélectionnez `Newtonsoft.Json` et, dans le volet droit, choisissez votre projet avant de sélectionner **Installer**.
 
-1. Si `Newtonsoft.Json` est déjà installé sur votre système, ajoutez-le à votre projet. Pour cela, sélectionnez votre projet dans le volet droit de l’onglet **Gérer les packages de la solution**.
+1. Si `Newtonsoft.Json` est déjà installé sur votre système, ajoutez-le à votre projet en sélectionnant votre projet dans le volet droit de l’onglet **Gérer les packages de la solution**.
 
 Notez qu’un déploiement dépendant du framework avec des dépendances tierces n’est portable que dans la mesure de la portabilité de ses dépendances tierces. Par exemple, si une bibliothèque tierce prend uniquement en charge macOS, l’application n’est pas portable sur des systèmes Windows. Cela se produit si la dépendance tierce elle-même dépend du code natif. Un [serveur Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel) constitue un bon exemple, car il nécessite une dépendance native à [libuv](https://github.com/libuv/libuv). Quand un déploiement dépendant du framework est créé pour une application avec ce type de dépendance tierce, le résultat publié contient un dossier pour chaque [identificateur de runtime](../rid-catalog.md) pris en charge par la dépendance native (et qui existe dans le package NuGet).
 

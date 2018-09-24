@@ -9,11 +9,11 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45529848"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584290"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection et niveau de performance
 <a name="top"></a> Cette rubrique décrit les problèmes liés au garbage collection et à l’utilisation de la mémoire. Elle apporte des solutions aux problèmes concernant les tas managés et explique comment réduire l’effet du garbage collection sur vos applications. Chaque problème contient des liens vers des procédures à suivre pour résoudre le problème.  

@@ -4,12 +4,12 @@ description: Découvrez comment étendre les outils de l’interface de ligne de
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
-ms.openlocfilehash: a9cfebbeddbedc329432c805c5956b382a726a77
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9f54479704f547ada567619a82b24a47a0b104c4
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45592060"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46326580"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modèle d’extensibilité des outils CLI .NET Core
 
@@ -133,7 +133,7 @@ Dans l’exemple suivant, vous pouvez voir le fichier projet de la cible à l’
 
 L’utilisation de cibles personnalisées s’effectue en fournissant un `<PackageReference>` qui pointe vers le package et sa version dans le projet en cours d’extension. Contrairement aux outils, le package des cibles personnalisées n’est pas inclus dans la fermeture de dépendance du projet de consommation.
 
-L’utilisation de la cible personnalisée dépend uniquement de la façon dont vous la configurez. Puisqu’il s’agit d’une cible MSBuild, elle peut dépendre d’une cible donnée, exécutée après une autre cible, et peut également être appelée manuellement à l’aide de la commande `dotnet msbuild /t:<target-name>`.
+L’utilisation de la cible personnalisée dépend uniquement de la façon dont vous la configurez. Puisqu’il s’agit d’une cible MSBuild, elle peut dépendre d’une cible donnée, exécutée après une autre cible, et peut également être appelée manuellement à l’aide de la commande `dotnet msbuild -t:<target-name>`.
 
 Toutefois, si vous souhaitez procurer une meilleure expérience à vos utilisateurs, vous pouvez combiner des outils par projet et des cibles personnalisées. Dans ce scénario, l’outil par projet se contenterait essentiellement d’accepter tous les paramètres nécessaires à partir desquels il générerait l’invocation [`dotnet msbuild`](dotnet-msbuild.md) nécessaire pour exécuter la cible. Vous pouvez voir un exemple de ce type de synergie sur le dépôt des [exemples du MVP Summit 2016 Hackathon](https://github.com/dotnet/MVPSummitHackathon2016) du projet [`dotnet-packer`](https://github.com/dotnet/MVPSummitHackathon2016/tree/master/dotnet-packer).
 

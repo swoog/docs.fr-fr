@@ -10,11 +10,11 @@ ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45647312"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585957"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Génération d'applications de console dans le .NET Framework
 Les applications dans le .NET Framework peuvent utiliser la classe <xref:System.Console?displayProperty=nameWithType> pour lire et écrire des caractères en provenance ou à destination de la console. Les données provenant de la console sont lues dans le flux d'entrée standard, les données à destination de la console sont écrites dans le flux de sortie standard et les données d'erreur à destination de la console sont écrites dans le flux de sortie standard des erreurs. Ces flux de données, associés automatiquement à la console au démarrage de l'application, sont présentés respectivement en tant que propriétés <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> et <xref:System.Console.Error%2A>.  

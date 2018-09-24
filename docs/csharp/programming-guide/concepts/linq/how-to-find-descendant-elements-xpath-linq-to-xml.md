@@ -3,11 +3,11 @@ title: Guide pratique pour rechercher des éléments descendants (XPath-LINQ to 
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45675651"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580640"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Guide pratique pour rechercher des éléments descendants (XPath-LINQ to XML) (C#)
 Cette rubrique montre comment obtenir les éléments descendants avec un nom particulier.  

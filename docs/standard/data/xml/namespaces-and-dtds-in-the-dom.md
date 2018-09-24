@@ -6,11 +6,11 @@ ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45648081"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46568739"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>Espaces de noms et DTD dans le DOM
 Les définitions de type de document (DTD) compliquent la prise en charge des espaces de noms. Par exemple, le code XML suivant contient des attributs par défaut, et un de ces noms comporte le signe deux-points.  

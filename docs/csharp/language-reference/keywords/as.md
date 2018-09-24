@@ -9,11 +9,11 @@ helpviewer_keywords:
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
 ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45648386"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46695408"
 ---
 # <a name="as-c-reference"></a>as (référence C#)
 Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conversions entre des types référence ou des [types Nullable](../../../csharp/programming-guide/nullable-types/index.md) compatibles. Le code suivant fournit un exemple.  
