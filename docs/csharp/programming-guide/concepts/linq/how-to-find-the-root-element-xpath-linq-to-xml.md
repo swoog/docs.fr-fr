@@ -3,11 +3,11 @@ title: Guide pratique pour rechercher l’élément racine (XPath-LINQ to XML) (
 ms.date: 07/20/2015
 ms.assetid: 4fd824e0-4d39-429b-b092-f6a5c046ee6c
 ms.openlocfilehash: a0197a34f2e9d1b42a71d3c8cb1a4281ba495c4f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45610046"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46710986"
 ---
 # <a name="how-to-find-the-root-element-xpath-linq-to-xml-c"></a>Guide pratique pour rechercher l’élément racine (XPath-LINQ to XML) (C#)
 Cette rubrique montre comment obtenir l'élément racine avec XPath et [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
