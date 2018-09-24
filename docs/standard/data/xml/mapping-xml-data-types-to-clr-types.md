@@ -6,21 +6,21 @@ ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45673842"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004047"
 ---
-# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="9acc9-102">Mappage entre types de données XML et types CLR</span><span class="sxs-lookup"><span data-stu-id="9acc9-102">Mapping XML Data Types to CLR Types</span></span>
-<span data-ttu-id="9acc9-103">Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).</span><span class="sxs-lookup"><span data-stu-id="9acc9-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
+# <a name="mapping-xml-data-types-to-clr-types"></a><span data-ttu-id="530ad-102">Mappage entre types de données XML et types CLR</span><span class="sxs-lookup"><span data-stu-id="530ad-102">Mapping XML Data Types to CLR Types</span></span>
+<span data-ttu-id="530ad-103">Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).</span><span class="sxs-lookup"><span data-stu-id="530ad-103">The following table describes the default mapping between the XML data types and the common language runtime (CLR) types.</span></span>  
   
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="9acc9-104">Le tableau suivant décrit les mappages par défaut entre un type de données XML et un type CLR.</span><span class="sxs-lookup"><span data-stu-id="9acc9-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
+## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a><span data-ttu-id="530ad-104">Le tableau suivant décrit les mappages par défaut entre un type de données XML et un type CLR.</span><span class="sxs-lookup"><span data-stu-id="530ad-104">The following table describes the default mappings of an XML data type to a CLR type.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9acc9-105">Les préfixes `xs` et `xdt` sont mappés aux URI d’espace de noms http://www.w3.org/2001/XMLSchema et http://www.w3.org/2003/05/xpath-datatypes, respectivement.</span><span class="sxs-lookup"><span data-stu-id="9acc9-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
+>  <span data-ttu-id="530ad-105">Les préfixes `xs` et `xdt` sont mappés aux URI d’espace de noms http://www.w3.org/2001/XMLSchema et http://www.w3.org/2003/05/xpath-datatypes, respectivement.</span><span class="sxs-lookup"><span data-stu-id="530ad-105">The `xs` and the `xdt` prefixes are mapped to the http://www.w3.org/2001/XMLSchema and the http://www.w3.org/2003/05/xpath-datatypes namespace URIs respectively.</span></span>  
   
-|<span data-ttu-id="9acc9-106">Type XML</span><span class="sxs-lookup"><span data-stu-id="9acc9-106">XML Type</span></span>|<span data-ttu-id="9acc9-107">Type CLR</span><span class="sxs-lookup"><span data-stu-id="9acc9-107">CLR Type</span></span>|  
+|<span data-ttu-id="530ad-106">Type XML</span><span class="sxs-lookup"><span data-stu-id="530ad-106">XML Type</span></span>|<span data-ttu-id="530ad-107">Type CLR</span><span class="sxs-lookup"><span data-stu-id="530ad-107">CLR Type</span></span>|  
 |--------------|--------------|  
 |`xs:anyURI`|<xref:System.Uri>|  
 |`xs:base64Binary`|`Byte[]`|  
@@ -71,14 +71,14 @@ ms.locfileid: "45673842"
 |`xdt:untypedAtomic`|<xref:System.String>|  
 |`xdt:anyAtomicType`|<xref:System.Object>|  
 |`xs:anySimpleType`|<xref:System.String>|  
-|<span data-ttu-id="9acc9-108">Nœud Document</span><span class="sxs-lookup"><span data-stu-id="9acc9-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="9acc9-109">Nœud d'élément</span><span class="sxs-lookup"><span data-stu-id="9acc9-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="9acc9-110">Nœud d'attribut</span><span class="sxs-lookup"><span data-stu-id="9acc9-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="9acc9-111">Nœud d'espace de noms</span><span class="sxs-lookup"><span data-stu-id="9acc9-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="9acc9-112">Nœud de texte</span><span class="sxs-lookup"><span data-stu-id="9acc9-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="9acc9-113">Nœud de commentaire</span><span class="sxs-lookup"><span data-stu-id="9acc9-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
-|<span data-ttu-id="9acc9-114">Nœud d'instruction de traitement</span><span class="sxs-lookup"><span data-stu-id="9acc9-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-108">Nœud Document</span><span class="sxs-lookup"><span data-stu-id="530ad-108">Document node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-109">Nœud d'élément</span><span class="sxs-lookup"><span data-stu-id="530ad-109">Element node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-110">Nœud d'attribut</span><span class="sxs-lookup"><span data-stu-id="530ad-110">Attribute node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-111">Nœud d'espace de noms</span><span class="sxs-lookup"><span data-stu-id="530ad-111">Namespace node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-112">Nœud de texte</span><span class="sxs-lookup"><span data-stu-id="530ad-112">Text node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-113">Nœud de commentaire</span><span class="sxs-lookup"><span data-stu-id="530ad-113">Comment node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
+|<span data-ttu-id="530ad-114">Nœud d'instruction de traitement</span><span class="sxs-lookup"><span data-stu-id="530ad-114">Processing instruction node</span></span>|<xref:System.Xml.XPath.XPathNavigator>|  
   
-## <a name="see-also"></a><span data-ttu-id="9acc9-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9acc9-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="530ad-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="530ad-115">See also</span></span>
 
-- [<span data-ttu-id="9acc9-116">Prise en charge du type dans les classes System.Xml</span><span class="sxs-lookup"><span data-stu-id="9acc9-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [<span data-ttu-id="530ad-116">Prise en charge du type dans les classes System.Xml</span><span class="sxs-lookup"><span data-stu-id="530ad-116">Type Support in the System.Xml Classes</span></span>](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
