@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44207640"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075799"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Chaînes de format de date et d'heure standard
 Une chaîne de format de date et d'heure standard utilise un spécificateur de format unique pour définir la représentation textuelle d'une valeur de date et d'heure. Toute chaîne de format de date et d’heure contenant plusieurs caractères, y compris un espace, est interprétée comme une chaîne de format de date et d’heure personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Une chaîne de format standard ou personnalisée peut être utilisée de deux façons :  
@@ -35,7 +35,7 @@ Une chaîne de format de date et d'heure standard utilise un spécificateur de f
 
 Les chaînes de format de date et d'heure standard peuvent être utilisées avec les valeurs <xref:System.DateTime> et <xref:System.DateTimeOffset>.  
   
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
 
 <a name="table"></a> Le tableau suivant décrit les spécificateurs de format de date et d’heure standard. Sauf indication contraire, un spécificateur de format de date et d'heure standard particulier produit une représentation sous forme de chaîne identique, qu'il soit utilisé avec une valeur <xref:System.DateTime> ou <xref:System.DateTimeOffset>. Pour plus d’informations sur l’utilisation de chaînes de format de date et d’heure standard, consultez la section [Remarques](#Notes).  
   
@@ -70,12 +70,12 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
 -   Vous pouvez passer un objet <xref:System.Globalization.CultureInfo> représentant la culture dont la mise en forme sera utilisée à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte de la culture pt-BR.  
   
-     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   Vous pouvez passer un objet <xref:System.Globalization.DateTimeFormatInfo> qui fournit des informations de mise en forme à une méthode qui a un paramètre <xref:System.IFormatProvider>. L'exemple suivant affiche une date à l'aide du format de date courte d'un objet <xref:System.Globalization.DateTimeFormatInfo> pour la culture hr-HR.  
   
-     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -110,7 +110,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "d" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [Retour au tableau](#table)  
@@ -129,7 +129,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "D" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [Retour au tableau](#table)  
@@ -152,7 +152,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "f" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [Retour au tableau](#table)  
@@ -174,7 +174,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "F" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [Retour au tableau](#table)  
@@ -196,7 +196,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "g" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [Retour au tableau](#table)  
@@ -218,7 +218,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "G" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [Retour au tableau](#table)  
@@ -236,7 +236,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "m" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [Retour au tableau](#table)  
@@ -266,7 +266,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "o" pour créer une chaîne mise en forme, puis restaure la valeur de date et d'heure d'origine en appelant une méthode `Parse` de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [Retour au tableau](#table)  
@@ -322,7 +322,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "t" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [Retour au tableau](#table)  
@@ -342,7 +342,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "T" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [Retour au tableau](#table)  
@@ -379,7 +379,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "U" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [Retour au tableau](#table)  
@@ -397,7 +397,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
  L'exemple suivant utilise le spécificateur de format "y" pour afficher une valeur de date et d'heure.  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [Retour au tableau](#table)  
