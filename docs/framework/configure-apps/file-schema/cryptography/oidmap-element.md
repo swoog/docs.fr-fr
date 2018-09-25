@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db39d7de3566647b5171b71940c78a9a0ab6f5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350220"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073539"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; élément
-Contient les mappages de d’identificateur d’objet ASN.1 aux classes.  
+Contient des mappages d’identificateur (OID) d’objet ASN.1 aux classes.  
   
  \<configuration>  
 \<mscorlib >  

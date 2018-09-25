@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746353"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082066"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; élément
 Mappe un identificateur d’objet (OID) ASN.1 à un nom convivial.  
@@ -53,10 +52,10 @@ Mappe un identificateur d’objet (OID) ASN.1 à un nom convivial.
 |`configuration`|Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
 |`cryptographySettings`|Contient des paramètres de chiffrement.|  
 |`mscorlib`|Contient le `cryptographySettings` élément.|  
-|`oidMap`|Contient les mappages de d’identificateur d’objet ASN.1 aux classes.|  
+|`oidMap`|Contient des mappages d’identificateur (OID) d’objet ASN.1 aux classes.|  
   
 ## <a name="remarks"></a>Notes  
- OID ASN.1 identifient les algorithmes dans certains formats de chiffrement. Mapper des identificateurs d’objet aux noms conviviaux des algorithmes que vous souhaitez identifier.  
+ OID ASN.1 identifient les algorithmes dans certains formats de chiffrement. Mapper des identificateurs d’objets à des noms conviviaux pour les algorithmes que vous souhaitez identifier.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser le  **\<oidEntry >** élément pour mapper un identificateur d’objet pour l’algorithme de hachage RIPEMD-160 à une implémentation de cet algorithme de hachage.  

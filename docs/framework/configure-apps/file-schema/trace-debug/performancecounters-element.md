@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: a71f605b-c7d9-4501-a5c3-abcbb964a43f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cb4af08095c14c0c748a79f53104d8454d3dcd47
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 69d6deafb6aad88f5d379c7e8d4ac707e4c51815
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754156"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088683"
 ---
 # <a name="ltperformancecountersgt-element"></a>&lt;performanceCounters&gt; élément
 Spécifie la taille de la mémoire globale partagée par les compteurs de performances.  
@@ -51,11 +50,11 @@ Spécifie la taille de la mémoire globale partagée par les compteurs de perfor
 |`system.diagnostics`|Spécifie l'élément racine de la section de configuration ASP.NET.|  
   
 ## <a name="remarks"></a>Notes  
- Compteurs de performance utilisent un fichier mappé en mémoire, ou mémoire partagée, pour publier les données de performances.  La taille de la mémoire partagée détermine le nombre d’instances peut être utilisé à la fois.  Il existe deux types de mémoire partagée : mémoire partagée globale et mémoire partagée séparée.  La mémoire partagée globale est utilisée par toutes les catégories de compteur de performance installés avec les versions de .NET Framework 1.0 ou 1.1.  Catégories de compteur de performance installés avec le .NET Framework version 2.0 utilisent une mémoire partagée distincte, chaque catégorie de compteur de performance possédant sa propre mémoire.  
+ Compteurs de performances utilisent un fichier mappé en mémoire, ou mémoire partagée, pour publier des données de performances.  La taille de la mémoire partagée détermine le nombre d’instances peut être utilisé à la fois.  Il existe deux types de mémoire partagée : mémoire partagée globale et mémoire partagée séparée.  La mémoire partagée globale est utilisée par toutes les catégories de compteur de performance installés avec les versions de .NET Framework 1.0 ou 1.1.  Catégories de compteur de performances installés avec la version 2.0 du .NET Framework utilisent mémoire partagée distincte, chaque catégorie de compteur de performance possédant sa propre mémoire.  
   
- La taille de la mémoire partagée globale peut être définie uniquement avec un fichier de configuration.  La taille par défaut est 524 288 octets, la taille maximale est de 33 554 432 octets et la taille minimale est de 32 768 octets.  Étant donné que la mémoire partagée globale est partagée par tous les processus et les catégories, le créateur du premier spécifie la taille.  Si vous définissez la taille de votre fichier de configuration d’application, cette taille est utilisée uniquement si votre application est la première application qui provoque les compteurs de performances à exécuter.  Par conséquent, l’emplacement correct pour spécifier le `filemappingsize` valeur est le fichier Machine.config.  La mémoire dans la mémoire partagée globale ne peut pas être libérée par les compteurs de performances individuels, forScope mémoire partagée globale est épuisée si un grand nombre d’instances de compteur de performance avec des noms différents est créé.  
+ La taille de la mémoire partagée globale peut être définie uniquement avec un fichier de configuration.  La taille par défaut est 524 288 octets, la taille maximale est de 33 554 432 octets et la taille minimale est de 32 768 octets.  Étant donné que la mémoire partagée globale est partagée par tous les processus et les catégories, le créateur du premier spécifie la taille.  Si vous définissez la taille de votre fichier de configuration d’application, cette taille est utilisée uniquement si votre application est la première application qui provoque les compteurs de performances à exécuter.  Par conséquent, l’emplacement correct pour spécifier le `filemappingsize` valeur est le fichier Machine.config.  Mémoire dans la mémoire partagée globale ne peut pas être libérée par les compteurs de performances individuels, forScope mémoire partagée globale est épuisée, si un grand nombre d’instances de compteur de performances avec des noms différents est créé.  
   
- La taille de mémoire partagée séparée, la valeur DWORD FileMappingSize dans le Registre de clé HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nom de la catégorie >* \Performance est référencé. tout d’abord, suivi par la valeur spécifiée pour la mémoire partagée globale dans le fichier de configuration. Si la valeur FileMappingSize n’existe pas, alors que la taille de la mémoire partagée séparée est définie à un quart (1/4) le paramètre global dans le fichier de configuration.  
+ Pour la taille de mémoire partagée séparée, la valeur DWORD FileMappingSize dans le Registre de clé HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\\*\<nom de catégorie >* \Performance est référencé. tout d’abord, suivi par la valeur spécifiée pour la mémoire partagée globale dans le fichier de configuration. Si la valeur FileMappingSize n’existe pas, la taille de la mémoire partagée séparée est définie à un quart (1/4) le paramètre global dans le fichier de configuration.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Diagnostics.PerformanceCounter>  

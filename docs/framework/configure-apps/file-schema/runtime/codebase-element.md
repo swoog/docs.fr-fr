@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3b614546e8ed23cc1a5e169a33fb5878695037ae
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745992"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073181"
 ---
 # <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; élément
 Spécifie où le common language runtime peut trouver un assembly.  
@@ -65,11 +64,11 @@ href="URL of assembly"/>
 |`System.web`|Spécifie l'élément racine de la section de configuration ASP.NET.|  
   
 ## <a name="remarks"></a>Notes  
- Le runtime doit utiliser le  **\<codeBase >** défini dans un fichier de configuration machine ou d’un fichier de stratégie d’éditeur, le fichier doit également rediriger la version d’assembly. Fichiers de configuration d’application peuvent avoir un paramètre codebase sans rediriger la version d’assembly. Après avoir déterminé la version de l’assembly à utiliser, le runtime applique le paramètre de la base de code à partir du fichier qui détermine la version. Si aucun code de base n’est indiquée, le runtime détecte l’assembly de manière habituelle.  
+ Le runtime doit utiliser le  **\<codeBase >** définissant dans un fichier de configuration machine ou d’un fichier de stratégie d’éditeur, le fichier doit également rediriger la version d’assembly. Fichiers de configuration d’application peuvent avoir un paramètre de base de code sans avoir à demander la version d’assembly. Après avoir déterminé la version de l’assembly à utiliser, le runtime applique le paramètre de base de code à partir du fichier qui détermine la version. Si aucune base de code n’est indiqué, le runtime tente de détecter l’assembly à l’accoutumée.  
   
- Si l’assembly a un nom fort, le paramètre codebase peut être n’importe où sur l’intranet local ou sur Internet. Si l’assembly est un assembly privé, le paramètre codebase doit être un chemin d’accès relatif au répertoire de l’application.  
+ Si l’assembly a un nom fort, le paramètre de base de code peut être n’importe où sur l’intranet local ou Internet. Si l’assembly est un assembly privé, le paramètre de base de code doit être un chemin d’accès relatif au répertoire de l’application.  
   
- Pour les assemblys sans nom fort, la version est ignorée et le chargeur utilise la première occurrence de \<codebase > à l’intérieur de \<dependentAssembly >. Si une entrée existe dans le fichier de configuration d’application qui redirige la liaison à un autre assembly, la redirection est prioritaire même si la version d’assembly ne correspond pas à la demande de liaison.  
+ Pour les assemblys sans nom fort, la version est ignorée et le chargeur utilise la première apparition de \<codebase > à l’intérieur \<dependentAssembly >. S’il existe une entrée dans le fichier de configuration d’application qui redirige la liaison à un autre assembly, la redirection est prioritaire même si la version d’assembly ne correspond pas à la demande de liaison.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment spécifier où le runtime peut trouver un assembly.  

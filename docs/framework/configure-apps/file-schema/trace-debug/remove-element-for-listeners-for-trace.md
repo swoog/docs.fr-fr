@@ -1,5 +1,5 @@
 ---
-title: '&lt;supprimer&gt; élément &lt;écouteurs&gt; pour &lt;trace&gt;'
+title: '&lt;supprimer&gt; élément pour &lt;écouteurs&gt; pour &lt;trace&gt;'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/remove
@@ -9,15 +9,14 @@ helpviewer_keywords:
 ms.assetid: 9a5cd1b5-be1a-485f-8f0c-2890ad3ef3e0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 11f4b648ac1ffc614f18a3686eb2b6508a272980
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 54fd529c571c8e8cf43c5dabe2398ae4a6cf4f11
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746551"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088956"
 ---
-# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;supprimer&gt; élément &lt;écouteurs&gt; pour &lt;trace&gt;
+# <a name="ltremovegt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;supprimer&gt; élément pour &lt;écouteurs&gt; pour &lt;trace&gt;
 Supprime un écouteur de la **écouteurs** collection.  
   
  \<configuration>  
@@ -51,12 +50,12 @@ Supprime un écouteur de la **écouteurs** collection.
 |`configuration`|Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
 |`listeners`|Spécifie un écouteur qui collecte, stocke et achemine les messages. Les écouteurs dirigent la sortie de traçage vers une cible appropriée.|  
 |`system.diagnostics`|Spécifie les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.|  
-|`trace`|Configure le service de suivi ASP.NET.|  
+|`trace`|Configure le service de trace ASP.NET.|  
   
 ## <a name="remarks"></a>Notes  
   
 > [!NOTE]
->  Suppression de la <xref:System.Diagnostics.DefaultTraceListener> à partir de la `Listeners` collection modifie le comportement de la <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, et <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> méthodes. Appeler un `Assert` ou `Fail` méthode normalement provoque l’affichage d’un message, mais la boîte de message ne s’affiche pas si le <xref:System.Diagnostics.DefaultTraceListener> ne figure pas dans le `Listeners` collection.  
+>  Suppression de la <xref:System.Diagnostics.DefaultTraceListener> à partir de la `Listeners` collection modifie le comportement de la <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, et <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> méthodes. Appeler un `Assert` ou `Fail` méthode aboutit généralement à l’affichage d’une boîte de message, mais la boîte de message s’affiche pas si le <xref:System.Diagnostics.DefaultTraceListener> n’est pas dans le `Listeners` collection.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment supprimer l’écouteur de trace par défaut de la trace **écouteurs** collection.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Supprimez&gt; , élément pour connectionManagement (paramètres réseau)'
+title: '&lt;supprimer&gt; , élément de connectionManagement (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754478"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085532"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Supprimez&gt; , élément pour connectionManagement (paramètres réseau)
-Supprime une adresse IP ou le nom DNS de la liste de gestion des connexions.  
+# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;supprimer&gt; , élément de connectionManagement (paramètres réseau)
+Supprime une adresse IP ou le nom DNS de la liste de gestion de connexion.  
   
  \<configuration>  
 \<system.net>  
@@ -63,7 +62,7 @@ Supprime une adresse IP ou le nom DNS de la liste de gestion des connexions.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant supprime toutes les entrées de liste de gestion de connexion pour le serveur www.adventure-works.com, puis configure une application d’utiliser quatre connexions au serveur www.contoso.com et deux connexions à tous les autres serveurs.  
+ L’exemple suivant supprime toute entrée de liste de gestion de connexion pour le serveur www.adventure-works.com, puis configure une application d’utiliser quatre connexions au serveur www.contoso.com et deux connexions à tous les autres serveurs.  
   
 ```xml  
 <configuration>  

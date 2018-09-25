@@ -1,5 +1,5 @@
 ---
-title: '&lt;Supprimez&gt; , élément pour webRequestModules (paramètres réseau)'
+title: '&lt;supprimer&gt; , élément de webRequestModules (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/remove
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073019"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112203"
 ---
-# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Supprimez&gt; , élément pour webRequestModules (paramètres réseau)
+# <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;supprimer&gt; , élément de webRequestModules (paramètres réseau)
 Supprime un module de demande Web personnalisé de l’application.  
   
  \<configuration>  
@@ -43,7 +42,7 @@ Supprime un module de demande Web personnalisé de l’application.
   
 |**Attribut**|**Description**|  
 |-------------------|---------------------|  
-|`prefix`|Le préfixe URI pour les demandes gérées par ce module de demande Web.|  
+|`prefix`|Le préfixe URI pour les demandes traitées par ce module de demande Web.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -52,18 +51,18 @@ Supprime un module de demande Web personnalisé de l’application.
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Spécifie les modules à utiliser pour demander des informations à des hôtes réseau.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Spécifie les modules à utiliser pour demander des informations à partir d’hôtes de réseau.|  
   
 ## <a name="remarks"></a>Notes  
  Le `remove` élément supprime le module de demande Web inscrit pour le préfixe URI spécifié.  
   
- La valeur de la `prefix` attribut doit être les premiers caractères d’un URI valide, par exemple, « http » ou «`http://www.contoso.com` ».  
+ La valeur de la `prefix` attribut doit être les premiers caractères d’un URI valide--par exemple, « http » ou «`http://www.contoso.com` ».  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant supprime le module de demande Web existant pour HTTP et inscrit un nouveau module de demande Web personnalisé pour les demandes HTTP www.contoso.com.  
+ L’exemple suivant supprime le module de demande Web existant pour HTTP et inscrit un nouveau module de demande Web personnalisé pour les requêtes HTTP à www.contoso.com.  
   
 ```xml  
 <configuration>  

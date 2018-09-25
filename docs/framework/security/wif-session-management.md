@@ -3,13 +3,12 @@ title: Gestion de session WIF
 ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 04c2f4bdfe2a6309fde0821db308ee2a83887323
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520550"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084525"
 ---
 # <a name="wif-session-management"></a>Gestion de session WIF
 Quand un client tente d’abord d’accéder à une ressource protégée qui est hébergée par une partie de confiance, il doit d’abord s’authentifier auprès d’un service d’émission de jeton de sécurité (STS) qui est approuvé par la partie de confiance. Le service STS fournit ensuite un jeton de sécurité au client. Le client présente ce jeton à la partie de confiance, qui accorde l’accès client à la ressource protégée. Toutefois, vous souhaitez éviter au client d’avoir à s’authentifier de nouveau auprès du service STS pour chaque demande, en particulier car il peut même ne pas se trouver sur le même ordinateur ou dans le même domaine que la partie de confiance. Au lieu de cela, avec WIF (Windows Identity Foundation), le client et la partie de confiance établissent une session dans laquelle le client utilise un jeton de sécurité de session pour s’authentifier auprès de la partie de confiance pour toutes les demandes après la première. La partie de confiance peut utiliser ce jeton de sécurité de session, qui est stocké à l’intérieur d’un cookie, afin de reconstruire le <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> du client.  

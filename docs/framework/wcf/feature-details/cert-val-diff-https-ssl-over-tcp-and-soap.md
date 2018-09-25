@@ -8,19 +8,18 @@ helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79b5e86b689da0678b0d949d2a335dbfe3836f0e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489467"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077211"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Différences de validation des certificats entre HTTPS, SSL sur TCP et la sécurité SOAP
-Vous pouvez utiliser des certificats dans Windows Communication Foundation (WCF) avec la sécurité de la couche de message (SOAP) en plus de la sécurité de la couche transport (TLS) sur HTTP (HTTPS) ou TCP. Cette rubrique décrit les différences dans la façon dont ces certificats sont validés.  
+Vous pouvez utiliser des certificats dans Windows Communication Foundation (WCF) avec la sécurité de la couche de message (SOAP) en plus de la sécurité de couche de transport (TLS) sur HTTP (HTTPS) ou TCP. Cette rubrique décrit les différences dans la façon dont ces certificats sont validés.  
   
 ## <a name="validation-of-https-client-certificates"></a>Validation des certificats clients HTTPS  
- Lors de l'utilisation du protocole HTTPS pour communiquer entre un client et un service, le certificat que le client utilise pour s'authentifier auprès du service doit prendre en charge l'approbation de chaîne. Autrement dit, il doit être chaîné à une autorité de certification racine approuvée. Dans le cas contraire, la couche HTTP lève une exception <xref:System.Net.WebException> avec le message "Le serveur distant a retourné une erreur : (403) Interdit". WCF revêt cette exception comme un <xref:System.ServiceModel.Security.MessageSecurityException>.  
+ Lors de l'utilisation du protocole HTTPS pour communiquer entre un client et un service, le certificat que le client utilise pour s'authentifier auprès du service doit prendre en charge l'approbation de chaîne. Autrement dit, il doit être chaîné à une autorité de certification racine approuvée. Dans le cas contraire, la couche HTTP lève une exception <xref:System.Net.WebException> avec le message "Le serveur distant a retourné une erreur : (403) Interdit". WCF revêt cette exception en tant qu’un <xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>Validation des certificats de service HTTPS  
  Lors de l'utilisation du protocole HTTPS pour communiquer entre un client et un service, le certificat avec lequel le serveur effectue l'authentification doit prendre en charge l'approbation de chaîne par défaut. Autrement dit, il doit être chaîné à une autorité de certification racine approuvée. Aucun contrôle en ligne n'est effectué pour voir si le certificat a été révoqué. Vous pouvez compenser ce comportement en enregistrant un rappel <xref:System.Net.Security.RemoteCertificateValidationCallback>, comme illustré dans le code ci-dessous.  

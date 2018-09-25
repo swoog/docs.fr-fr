@@ -5,16 +5,15 @@ helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 6160f3be39bc7317b57f8f1d85bda8e61dbd80fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508706"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078212"
 ---
 # <a name="security-protocols"></a>Protocoles de sécurité
-Les protocoles Web Services Security fournissent des mécanismes de sécurité des services Web qui couvrent l’ensemble des exigences de sécurité de la messagerie de l’entreprise. Cette section décrit les détails de Windows Communication Foundation (WCF) (implémentée dans le <xref:System.ServiceModel.Channels.SecurityBindingElement>) pour les services Web suivants des protocoles de sécurité.  
+Les protocoles Web Services Security fournissent des mécanismes de sécurité des services Web qui couvrent l’ensemble des exigences de sécurité de la messagerie de l’entreprise. Cette section décrit les détails de Windows Communication Foundation (WCF) (implémenté dans le <xref:System.ServiceModel.Channels.SecurityBindingElement>) pour les services Web suivants protocoles de sécurité.  
   
 |Spécification/Document|Link|  
 |-|-|  
@@ -34,7 +33,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 |Note d'application :<br /><br /> Identité et références de point de terminaison Web Services Addressing|À publier|  
 |WS-SecurityPolicy 1.2 (2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
- WCF, version 1 fournit 17 modes d’authentification qui peuvent être utilisés comme base pour la configuration de sécurité des services Web. Chaque mode est optimisé pour un jeu commun d’exigences de déploiement, tel que :  
+ WCF, version 1, fournit 17 modes d’authentification qui peuvent servir comme base pour la configuration de sécurité des services Web. Chaque mode est optimisé pour un jeu commun d’exigences de déploiement, tel que :  
   
 -   Informations d'identification utilisées pour authentifier le client et le service.  
   
@@ -64,9 +63,9 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
   
  Les points de terminaison qui utilisent des modes d'authentification de ce type peuvent exprimer leurs conditions de sécurité à l'aide de WS-SP (WS-SecurityPolicy). Ce document décrit la structure des messages d'infrastructure et d'en-tête de sécurité pour chaque mode d'authentification et fournit des exemples de stratégies et de messages.  
   
- WCF tire parti de WS-SecureConversation pour fournir la prise en charge des sessions sécurisées pour protéger les échanges de messages multiples entre les applications.  Consultez la section « Sessions sécurisées » ci-après pour plus d'informations sur l'implémentation.  
+ WCF s’appuie sur WS-SecureConversation pour assurer la prise en charge des sessions sécurisées pour protéger les échanges de messages multiples entre les applications.  Consultez la section « Sessions sécurisées » ci-après pour plus d'informations sur l'implémentation.  
   
- Outre les modes d’authentification, WCF fournit des paramètres pour contrôler les mécanismes de protection courants qui s’appliquent à la plupart des modes d’authentification basée sur la sécurité de message, par exemple : ordre de signature et les opérations de chiffrement, suites algorithmiques, dérivation de clé et la confirmation de signature.  
+ Outre les modes d’authentification, WCF fournit des paramètres pour contrôler les mécanismes de protection courants qui s’appliquent à la plupart des modes de l’authentification basée sur la sécurité de message, par exemple : ordre de signature et opérations de chiffrement, suites algorithmiques, dérivation de clé et la confirmation de signature.  
   
  Les préfixes et espaces de noms suivants sont utilisés dans ce document.  
   
@@ -93,7 +92,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
   
  R1101 - L'attribut PasswordType sur l'élément UsernameToken\Password DOIT être omis ou avoir la valeur #PasswordText (valeur par défaut).  
   
- Il est possible d'implémenter #PasswordDigest à l'aide de l'extensibilité. Il a été observé que #PasswordDigest était souvent considéré à tort comme un mécanisme de protection par mot de passe suffisamment sécurisé. Mais #PasswordDigest ne peut pas servir de substitut pour le chiffrement de UsernameToken. L'objectif principal de #PasswordDigest est la protection contre des attaques par relecture. Dans les modes d’authentification WCF, les menaces d’attaque par relecture sont atténuées à l’aide de signatures de message.  
+ Il est possible d'implémenter #PasswordDigest à l'aide de l'extensibilité. Il a été observé que #PasswordDigest était souvent considéré à tort comme un mécanisme de protection par mot de passe suffisamment sécurisé. Mais #PasswordDigest ne peut pas servir de substitut pour le chiffrement de UsernameToken. L'objectif principal de #PasswordDigest est la protection contre des attaques par relecture. Dans les modes d’authentification WCF, les menaces d’attaques de relecture sont atténuées en utilisant des signatures de message.  
   
  B1102 WCF émet jamais les sous-éléments Nonce et Created de UsernameToken.  
   
@@ -120,14 +119,14 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
   
  R1204 - Si X509TokenProfile1.1 est utilisé, une référence externe au jeton de sécurité X509 DOIT utiliser l'empreinte numérique introduite par WS-Security 1.1.  
   
- WCF prend en charge X509IssuerSerial. Toutefois, il existe des problèmes d’interopérabilité avec X509IssuerSerial : WCF utilise une chaîne pour comparer deux valeurs de X509IssuerSerial. Par conséquent, si une réorganise des composants du nom du sujet et envoie à un service WCF, une référence à un certificat, il peut être introuvable.  
+ WCF prend en charge X509IssuerSerial. Cependant, il existe des problèmes d’interopérabilité avec X509IssuerSerial : WCF utilise une chaîne pour comparer deux valeurs de X509IssuerSerial. Par conséquent, si une réorganise des composants du nom du sujet et envoie à un service WCF, une référence à un certificat, il peut être introuvable.  
   
 ### <a name="13-kerberos-token"></a>1.3 Jeton Kerberos  
  WCF prend en charge kerberostokenprofile1.1 à pour les besoins de l’authentification Windows avec les contraintes suivantes :  
   
  R1301 - Un jeton Kerberos doit contenir la valeur d'un AP_REQ Kerberos v4 encapsulé GSS tel que défini dans GSS_API et la spécification Kerberos, et l'attribut ValueType doit avoir la valeur #GSS_Kerberosv5_AP_REQ.  
   
- WCF utilise GSS encapsulé AP-REQ Kerberos, pas un système AP-demande Il s'agit d'une méthode conseillée en matière de sécurité.  
+ WCF utilise GSS encapsulé AP-REQ Kerberos, pas un AP-REQ nu Il s'agit d'une méthode conseillée en matière de sécurité.  
   
 ### <a name="14-saml-v11-token"></a>1.4 Jeton SAML v1.1  
  WCF prend en charge les profils de jeton WSS SAML 1.0 et 1.1 des jetons SAML v1.1. Il est possible d'implémenter d'autres versions de formats de jeton SAML.  
@@ -138,16 +137,16 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 ## <a name="2-common-message-security-parameters"></a>2. Paramètres de sécurité de message courants  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- La présence de l'horodatage est contrôlée à l'aide de la propriété <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> . WCF sérialise systématiquement wsse : timestamp avec wsse : créés et wsse : champs arrive à expiration. wsse:TimeStamp est systématiquement signé en cas de signature.  
+ La présence de l'horodatage est contrôlée à l'aide de la propriété <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> de la classe <xref:System.ServiceModel.Channels.SecurityBindingElement> . WCF sérialise systématiquement wsse : timestamp avec wsse : créé et wsse : expiration de champs. wsse:TimeStamp est systématiquement signé en cas de signature.  
   
 ### <a name="22-protection-order"></a>2.2 Ordre de protection  
- WCF prend en charge l’ordre de protection des messages « Signe avant Encrypt » et « Chiffrer avant l’authentification » (1.2 de stratégie de sécurité). « Sign Before Encrypt » est recommandé dans les cas suivants : les messages protégés à l'aide de Encrypt Before Sign sont ouverts aux attaques par substitution de signature, sauf si le mécanisme WS-Security 1.1 SignatureConfirmation est utilisé et qu'une signature sur contenu chiffré rend l'audit plus difficile.  
+ WCF prend en charge l’ordre de protection des messages « Sign Before Encrypt » et « Chiffrer avant de se connecter » (Security Policy 1.2). « Sign Before Encrypt » est recommandé dans les cas suivants : les messages protégés à l'aide de Encrypt Before Sign sont ouverts aux attaques par substitution de signature, sauf si le mécanisme WS-Security 1.1 SignatureConfirmation est utilisé et qu'une signature sur contenu chiffré rend l'audit plus difficile.  
   
 ### <a name="23-signature-protection"></a>2.3 Protection de la signature  
  Lorsque Encrypt Before Sign est utilisé, il est recommandé de protéger la signature afin d'empêcher les attaques par force brute de découvrir le contenu chiffré ou la clé de signature (en particulier lorsqu'un jeton personnalisé est utilisé avec du matériel de clé faible).  
   
 ### <a name="24-algorithm-suite"></a>2.4 Suite algorithmique  
- WCF prend en charge toutes les suites algorithmiques répertoriées dans Security Policy 1.2.  
+ WCF prend en charge toutes les suites algorithmiques répertoriées dans la version 1.2 de stratégie de sécurité.  
   
 ### <a name="25-key-derivation"></a>2.5 Dérivation de clé  
  WCF utilise « Dérivation de clé pour les clés symétriques », comme décrit dans WS-SecureConversation.  
@@ -171,7 +170,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
  Cette section fournit des exemples de stratégie pour chaque mode d'authentification ainsi que des exemples qui présentent la structure d'entête de sécurité dans les messages échangés par le client et le service.  
   
 ### <a name="31-transport-protection"></a>3.1 Protection du transport de  
- WCF fournit cinq modes d’authentification qui utilisent le transport sécurisé pour protéger les messages ; : UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport et SspiNegotiatedOverTransport.  
+ WCF fournit cinq modes d’authentification qui utilisent le transport sécurisé pour protéger les messages ; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport et SspiNegotiatedOverTransport.  
   
  Ces modes d’authentification sont construits à l’aide de la liaison de transport décrite dans SecurityPolicy. Pour le mode d'authentification UserNameOverTransport, UsernameToken est un jeton de prise en charge signé. Pour les autres modes d'authentification, le jeton apparaît sous forme d'un jeton d'endossement signé. Les annexes C.1.2 et C.1.3 de SecurityPolicy décrivent en détail la disposition de l'en-tête de sécurité. Les exemples suivants affichent la disposition Strict pour un mode d'authentification donné.  
   
@@ -301,7 +300,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="_0"> ... </u:Timestamp></o:Security>  
 ```  
   
-### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 à l’aide de certificats X.509 pour l’authentification du Service  
+### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 à l’aide de certificats X.509 pour l’authentification de Service  
  Cette section décrit les modes d'authentification suivants : MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate et IssuedTokenForCertificate.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
@@ -403,7 +402,7 @@ Les protocoles Web Services Security fournissent des mécanismes de sécurité d
 ```  
   
 #### <a name="323-using-symmetricbinding-with-x509-service-authentication"></a>3.2.3 Utilisation de SymmetricBinding avec l'authentification de service X.509  
- « WSS10 » a fourni un support limité aux scénarios avec jetons X509. Par exemple, il n'était pas possible d'assurer la protection des signatures et du chiffrement des messages qui utilisent uniquement le jeton X509 du service. « WSS11 » a introduit l'utilisation de EncryptedKey sous forme d'un jeton symétrique. Une clé temporaire chiffrée pour le certificat X.509 du service peut maintenant être utilisée à la fois pour la protection des messages de demande et de réponse. Les modes d’authentification décrits dans la section 3.4 ci-après utilisent ce modèle.  
+ « WSS10 » a fourni un support limité aux scénarios avec jetons X509. Par exemple, il n'était pas possible d'assurer la protection des signatures et du chiffrement des messages qui utilisent uniquement le jeton X509 du service. « WSS11 » a introduit l'utilisation de EncryptedKey sous forme d'un jeton symétrique. Une clé temporaire chiffrée pour le certificat X.509 du service peut maintenant être utilisée à la fois pour la protection des messages de demande et de réponse. Les modes d’authentification décrits dans la section 3.4 ci-dessous utilisent ce modèle.  
   
  WS-SecurityPolicy décrit ce modèle à l’aide de SymmetricBinding avec le jeton X509 du service sous forme de jeton de protection.  
   
@@ -684,7 +683,7 @@ Jeton de protection : False
 <o:Security s:mustUnderstand="1" xmlns:o="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"><u:Timestamp u:Id="uuid-7e004f51-63a3-4069-9b03-6a1a311a3181-6"> ... </u:Timestamp><c:DerivedKeyToken u:Id="_0" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> </c:DerivedKeyToken> ... <c:DerivedKeyToken u:Id="_1" xmlns:c="http://schemas.xmlsoap.org/ws/2005/02/sc"> ... </c:DerivedKeyToken><e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:ReferenceList><e:EncryptedData Id="_6" Type="http://www.w3.org/2001/04/xmlenc#Element" xmlns:e="http://www.w3.org/2001/04/xmlenc#"> ... </e:EncryptedData></o:Security>  
 ```  
   
-### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 à l’aide de SslNegotiated pour l’authentification du Service  
+### <a name="35-using-sslnegotiated-for-service-authentication"></a>3.5 à l’aide de SslNegotiated pour l’authentification de Service  
  Cette section décrit un groupe de modes d’authentification qui utilisent une liaison symétrique, le jeton de protection étant un jeton de contexte de sécurité tel que défini dans WS-SC (WS-SecureConversation) dont la valeur de clé est négociée en exécutant le protocole TLS sur les messages WS-T (WS-Trust) RST/RSTR. Les détails de l'implémentation de la négociation TLS à l'aide de WS-Trust sont décrits dans TLSNEGO. Dans les exemples de message présentés, nous supposerons que le SCT avec un contexte de sécurité associé est déjà établi via une négociation.  
   
  La liaison utilisée est une liaison symétrique avec les propriétés suivantes :  

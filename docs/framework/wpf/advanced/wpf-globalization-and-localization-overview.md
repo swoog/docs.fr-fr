@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: d8fef7965e3248d5361d866a441783bf4968460e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478892"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111314"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Vue d’ensemble de la globalisation et de la localisation WPF
 Quand vous limitez la disponibilité de votre produit à une seule langue, vous limitez votre clientèle potentielle à une fraction des 6,5 milliards de personnes qui constituent la population mondiale. Si vous voulez que vos applications atteignent une audience mondiale, la localisation est le meilleur moyen, et le plus rentable, pour que votre produit atteigne plus de clients.  
@@ -29,7 +29,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
 -   Évitez d’utiliser des positions absolues et des tailles fixes pour présenter le contenu ; Utilisez plutôt le dimensionnement relatif ou automatique.
   
-    -   Utilisez <xref:System.Windows.Window.SizeToContent%2A>; et conservez les largeurs et hauteurs définis sur `Auto`.  
+    -   Utilisez <xref:System.Windows.Window.SizeToContent%2A> et conservez les largeurs et hauteurs définis sur `Auto`.  
   
     -   Évitez d’utiliser <xref:System.Windows.Controls.Canvas> pour agencer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]s.  
   
@@ -39,7 +39,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
 -   Activer <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> sur <xref:System.Windows.Controls.TextBlock> pour éviter le découpage.
   
--   Définir le **XML : lang** attribut. Cet attribut décrit la culture d’un élément spécifique et ses éléments enfants. La valeur de cette propriété modifie le comportement de plusieurs fonctionnalités dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Par exemple, elle change le comportement de la coupure des mots, la vérification orthographique, la substitution des nombres, la mise en forme des scripts complexes et la police de substitution. Consultez [globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) pour plus d’informations sur la configuration de la [XML : lang dans XAML de gestion des](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
+-   Définir le `xml:lang` attribut. Cet attribut décrit la culture d’un élément spécifique et ses éléments enfants. La valeur de cette propriété modifie le comportement de plusieurs fonctionnalités dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Par exemple, elle change le comportement de la coupure des mots, la vérification orthographique, la substitution des nombres, la mise en forme des scripts complexes et la police de substitution. Consultez [globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) pour plus d’informations sur la configuration de la [XML : lang dans XAML de gestion des](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
   
 -   Créer une police composite personnalisée pour obtenir un meilleur contrôle des polices qui sont utilisées pour différentes langues. Par défaut, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise la police GlobalUserInterface.composite qui se trouve dans votre répertoire Windows/Fonts.  
   
@@ -64,7 +64,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
          Si vous décidez d’inclure votre langue source dans l’assembly principal en omettant le `<UICulture>` baliser dans votre fichier projet, définissez le `UltimateResourceFallback` emplacement que l’assembly principal au lieu du satellite (par exemple, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).  
   
-<a name="workflow_to_localize"></a>   
+<a name="workflow_to_localize" />   
 ## <a name="localize-a-wpf-application"></a>Localiser une application WPF  
  Quand vous localisez un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, vous disposez de plusieurs options. Par exemple, vous pouvez lier les ressources localisables dans votre application pour un [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] de fichiers, stocker le texte localisable dans les tables resx ou demander aux localiseurs d’utiliser [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichiers. Cette section décrit un flux de travail de localisation qui utilise le formulaire BAML de XAML, ce qui offre plusieurs avantages :  
   
@@ -92,7 +92,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
  ![Flux de travail non localisé](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization"></a>   
+<a name="examples_of_localization" />   
 ## <a name="examples-of-wpf-localization"></a>Exemples de localisation WPF  
  Cette section contient des exemples d’applications localisées pour vous aider à comprendre comment générer et localiser [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
   
@@ -137,7 +137,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
  Notez que de l’exemple utilise la fonctionnalité de dimensionnement partagé de <xref:System.Windows.Controls.Grid>. Les trois dernières colonnes en tirent parti en se plaçant dans le même <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Comme vous pouvez vous y attendre d’après le nom de la propriété, ceci permet aux colonnes de partager la même taille. Par conséquent, lorsque le paramètre « Parcourir... » obtient localisé dans la chaîne plus longue « Durchsuchen... », tous les boutons se largeur au lieu d’avoir un petit bouton « OK » et un bouton « Durchsuchen... » disproportionnellement élevée.  
   
- **Xml:lang**  
+ **Xml:lang**
   
  `Xml:lang="en-US"`  
   
@@ -146,7 +146,9 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
  **Génération d’un assembly de ressources satellite**  
   
  *Dans .csproj :*  
-  
+
+ Modifier le `.csproj` fichier, puis ajoutez la balise suivante pour un inconditionnel `<PropertyGroup>`:
+ 
  `<UICulture>en-US</UICulture>`  
   
  Notez l’ajout d’un `UICulture` valeur. Lorsque cela est la valeur valide <xref:System.Globalization.CultureInfo> valeur telle qu’en-US, génération du projet génère un assembly satellite avec toutes les ressources localisables dans celui-ci.  
@@ -197,7 +199,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
  **LocBaml.exe /generate RunDialog.resources.dll /trans:RunDialog.resources.dll.CSV /out: . /cul:de-DE**  
   
- Sur allemand [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], si ce resources.dll est placé dans un dossier fr-fr à côté de l’assembly principal, cette ressource est chargée automatiquement au lieu de celle dans le dossier en-US. Si vous n’avez pas une version allemande de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] pour ce test, définir la culture sur la culture de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] vous utilisez (par exemple, en-US) et remplacez le fichier resources.dll d’origine.  
+ Sur allemand [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], si ce resources.dll est placé dans un dossier fr-fr à côté de l’assembly principal, cette ressource est chargée automatiquement au lieu de celle dans le dossier en-US. Si vous n’avez pas une version allemande de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] pour ce test, définir la culture sur la culture de [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] vous utilisez (par exemple, `en-US`) et remplacez les DLL de ressources d’origine.  
   
  **Chargement de la ressource satellite**  
   
@@ -246,7 +248,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
  **Éviter d’utiliser des dimensions fixes pour les panneaux et les contrôles**  
   
- Jetez un coup de œil à Homepage.xaml, notez qu’en dehors de la largeur fixe et la hauteur spécifiées pour la totalité [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] situé en haut <xref:System.Windows.Controls.DockPanel>, aucune autre dimension fixe. N’utilisez pas de dimensions fixes pour éviter le découpage du texte localisé, qui peut être plus long que le texte source. Les panneaux et les contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont automatiquement redimensionnés en fonction de leur contenu. La plupart des contrôles ont également des dimensions minimales et maximales que vous pouvez définir pour plus de contrôle (par exemple MinWidth = "20"). Avec <xref:System.Windows.Controls.Grid>, vous pouvez également définir des largeurs et hauteurs relatives à l’aide de ' *' (par exemple Width = « 0,25\*») ou utiliser sa fonctionnalité de partage de taille de cellule.  
+ Jetez un coup de œil à Homepage.xaml, notez qu’en dehors de la largeur fixe et la hauteur spécifiées pour la totalité [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] situé en haut <xref:System.Windows.Controls.DockPanel>, aucune autre dimension fixe. N’utilisez pas de dimensions fixes pour éviter le découpage du texte localisé, qui peut être plus long que le texte source. Les panneaux et les contrôles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sont automatiquement redimensionnés en fonction de leur contenu. La plupart des contrôles ont également des dimensions minimales et maximales que vous pouvez définir pour un meilleur contrôle (par exemple, MinWidth = « 20 »). Avec <xref:System.Windows.Controls.Grid>, vous pouvez également définir des largeurs et hauteurs relatives à l’aide de «\*» (par exemple, `Width="0.25*"`) ou utiliser sa fonctionnalité de partage de taille de cellule.  
   
  **Commentaires de localisation**  
   
@@ -275,26 +277,20 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
  [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]  
   
  La localisation par défaut des attributs qui [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fournit peut également être remplacée par le biais de code, vous pouvez définir correctement les valeurs par défaut adéquates pour les contrôles personnalisés. Exemple :  
-  
- `[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]`  
-  
- `public class CorporateLogo: TextBlock`  
-  
- `{`  
-  
- `…`  
-  
- `..`  
-  
- `.`  
-  
- `}`  
-  
+
+```csharp 
+[Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)] 
+public class CorporateLogo : TextBlock
+{
+    // ...
+}
+``` 
+ 
  Les attributs d’instance définis [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ont priorité sur les valeurs définies dans le code sur les contrôles personnalisés. Pour plus d’informations sur les attributs et les commentaires, consultez [attributs de localisation et les commentaires](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md).  
   
  **Police de base et polices composites**  
   
- Si vous spécifiez une police qui ne prend pas en charge une plage de points de code donnée, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] passent automatiquement à l’autre à l’aide de Global User Interface.compositefont qui se trouve dans votre répertoire Windows/Fonts. Les polices composites fonctionnent comme toute autre police et peuvent être utilisées explicitement en définissant FontFamily pour un élément (FontFamily= "Global User Interface"). Vous pouvez spécifier votre propre police de base préférée en créant votre propre police composite, et en spécifiant la police à utiliser pour des plages de points de code et des langues spécifiques.  
+ Si vous spécifiez une police qui ne prend pas en charge une plage de points de code donnée, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] passent automatiquement à l’autre à l’aide de Global User Interface.compositefont qui se trouve dans votre répertoire Windows/Fonts. Polices composites fonctionnent comme toute autre police et peuvent être utilisées explicitement en définissant d’un élément `FontFamily` (par exemple, `FontFamily="Global User Interface"`). Vous pouvez spécifier votre propre police de base préférée en créant votre propre police composite, et en spécifiant la police à utiliser pour des plages de points de code et des langues spécifiques.  
   
  Pour plus d’informations sur les polices composites, consultez <xref:System.Windows.Media.FontFamily>.  
   

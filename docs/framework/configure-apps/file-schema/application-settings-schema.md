@@ -9,21 +9,20 @@ helpviewer_keywords:
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7af6342e9c05fc4e6c1bf4daac59db14ccdf22c7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741735"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073428"
 ---
 # <a name="application-settings-schema"></a>Schéma des paramètres d’application
 
-Paramètres d’application permettent à une application Windows Forms ou ASP.NET stocker et récupérer des paramètres de portée application et de portée utilisateur. Dans ce contexte, un *paramètre* est n’importe quel élément d’information qui peut-être être spécifiques à l’application ou spécifiques à l’utilisateur actuel, quoi que ce soit à partir d’une chaîne de connexion de base de données à l’utilisateur par défaut de le taille de fenêtre par défaut.
+Paramètres d’application permettent à une application Windows Forms ou ASP.NET stocker et récupérer des paramètres de portée application et de portée utilisateur. Dans ce contexte, un *paramètre* est n’importe quel élément d’information qui peut-être être spécifiques à l’application ou spécifiques à l’utilisateur actuel, quoi que ce soit à partir d’une chaîne de connexion de base de données à l’utilisateur préféré par taille de fenêtre par défaut.
 
-Par défaut, les paramètres d’application dans une application Windows Forms utilise le <xref:System.Configuration.LocalFileSettingsProvider> (classe), qui utilise le système de configuration .NET pour stocker les paramètres dans un fichier de configuration XML. Pour plus d’informations sur les fichiers utilisés par les paramètres de l’application, consultez [Architecture des paramètres d’Application](~/docs/framework/winforms/advanced/application-settings-architecture.md).
+Par défaut, les paramètres d’application dans une application Windows Forms utilise le <xref:System.Configuration.LocalFileSettingsProvider> (classe), qui utilise le système de configuration .NET pour stocker les paramètres dans un fichier de configuration XML. Pour plus d’informations sur les fichiers utilisés par les paramètres de l’application, consultez [Application Settings Architecture](~/docs/framework/winforms/advanced/application-settings-architecture.md).
 
-Paramètres de l’application définit les éléments suivants en tant que partie des fichiers de configuration qu’il utilise.
+Paramètres de l’application définit les éléments suivants dans le cadre des fichiers de configuration qu’il utilise.
 
 | Élément                    | Description                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
@@ -38,16 +37,16 @@ Cet élément contient tous les  **\<paramètre >** balises qui sont spécifique
 
 ## <a name="usersettings-element"></a>\<userSettings > élément
 
-Cet élément contient tous les  **\<paramètre >** balises qui sont spécifiques à l’utilisateur qui est actuellement à l’aide de l’application. Il ne définit aucun attribut.
+Cet élément contient tous les  **\<paramètre >** balises qui sont spécifiques à l’utilisateur qui utilise actuellement l’application. Il ne définit aucun attribut.
 
-## <a name="setting-element"></a>\<paramètre > élément
+## <a name="setting-element"></a>\<définition > élément
 
-Cet élément définit un paramètre. Il possède les attributs suivants.
+Cet élément définit un paramètre. Il a les attributs suivants.
 
 | Attribut        | Description |
 | ---------------- | ----------- |
 | **name**         | Obligatoire. ID unique du paramètre. Les paramètres créés via Visual Studio sont enregistrés avec le nom `ProjectName.Properties.Settings`. |
-| **serializedAs** | Obligatoire. Le format à utiliser pour sérialiser la valeur de texte. Les valeurs valides sont les suivantes :<br><br>- `string`. La valeur est sérialisée comme une chaîne à l’aide un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. La valeur est sérialisée à l’aide de la sérialisation XML.<br>- `binary`. La valeur est sérialisée en tant que binaire codé sur le texte à l’aide de la sérialisation binaire.<br />- `custom`. Le fournisseur de paramètres a une connaissance inhérente de ce paramètre et sérialise et désérialise il. |
+| **serializedAs** | Obligatoire. Le format à utiliser pour sérialiser la valeur en texte. Les valeurs valides sont les suivantes :<br><br>- `string`. La valeur est sérialisée comme une chaîne en utilisant un <xref:System.ComponentModel.TypeConverter>.<br>- `xml`. La valeur est sérialisée à l’aide de la sérialisation XML.<br>- `binary`. La valeur est sérialisée sous forme binaire texte encodé à l’aide de la sérialisation binaire.<br />- `custom`. Le fournisseur de paramètres a une connaissance inhérente de ce paramètre et sérialise et désérialise il. |
 
 ## <a name="value-element"></a>\<valeur > élément
 
@@ -55,7 +54,7 @@ Cet élément contient la valeur d’un paramètre.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre un fichier de paramètres d’application qui définit deux paramètres de portée application et les deux paramètres de portée utilisateur :
+L’exemple suivant montre un fichier de paramètres d’application qui définit deux paramètres de portée application et deux paramètres de portée utilisateur :
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

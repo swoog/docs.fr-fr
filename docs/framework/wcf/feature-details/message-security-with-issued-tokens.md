@@ -3,13 +3,12 @@ title: Sécurité de message avec jetons émis
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c084c9e393728c2f4c2889339dbc36517c058d24
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b859387196de42406903b690d375e4ecb7370e2c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525333"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090121"
 ---
 # <a name="message-security-with-issued-tokens"></a>Sécurité de message avec jetons émis
 Le client de jeton émis permet le scénario de sécurité fédérée dans Windows Communication Foundation (WCF).  

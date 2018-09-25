@@ -1,5 +1,5 @@
 ---
-title: '&lt;Désactivez&gt; , élément pour authenticationModules (paramètres réseau)'
+title: '&lt;Désactivez&gt; , élément d’authenticationModules (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/clear
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 94e0242ca685e8b0118a55ba44fb0569c13f10f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ef12a475dde103023d3411fb68efb3bdb4f6d116
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751985"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47076691"
 ---
-# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Désactivez&gt; , élément pour authenticationModules (paramètres réseau)
-Efface tous les modules d’authentification de l’application.  
+# <a name="ltcleargt-element-for-authenticationmodules-network-settings"></a>&lt;Désactivez&gt; , élément d’authenticationModules (paramètres réseau)
+Efface tous les modules d’authentification à partir de l’application.  
   
  \<configuration>  
 \<system.net>  

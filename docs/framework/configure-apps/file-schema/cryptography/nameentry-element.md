@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743051"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082368"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; élément
 Mappe un nom de classe à un nom d’algorithme convivial, ce qui permet à une classe d’avoir plusieurs noms conviviaux.  
@@ -40,7 +39,7 @@ Mappe un nom de classe à un nom d’algorithme convivial, ce qui permet à une 
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|**name**|Attribut requis.<br /><br /> Spécifie le nom convivial de l’algorithme de la classe de chiffrement implémente.|  
+|**name**|Attribut requis.<br /><br /> Spécifie le nom convivial de l’algorithme qui implémente la classe de chiffrement.|  
 |**class**|Attribut requis.<br /><br /> Spécifie la valeur de la **nom** d’attribut dans le [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) élément.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -54,10 +53,10 @@ Mappe un nom de classe à un nom d’algorithme convivial, ce qui permet à une 
 |`system.web`|Spécifie l'élément racine de la section de configuration ASP.NET.|  
   
 ## <a name="remarks"></a>Notes  
- Le **nom** attribut peut être le nom de l’une des classes abstraites trouvées dans le <xref:System.Security.Cryptography> espace de noms. Lorsque vous appelez le **créer** méthode sur une classe de chiffrement abstraite, le nom de la classe abstraite est passé à la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> (méthode). **CreateFromName** retourne une instance du type indiqué par la **classe** attribut. Si le **nom** attribut est un nom court, tels que RSA, vous pouvez utiliser ce nom lorsque vous appelez le **CreateFromName** (méthode).  
+ Le **nom** attribut peut être le nom de l’une des classes abstraites trouvées dans le <xref:System.Security.Cryptography> espace de noms. Lorsque vous appelez le **créer** méthode sur une classe de chiffrement abstraite, le nom de classe abstraite est passé à la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> (méthode). **CreateFromName** retourne une instance du type indiqué par la **classe** attribut. Si le **nom** attribut est un nom court, tels que RSA, vous pouvez utiliser ce nom lors de l’appel le **CreateFromName** (méthode).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le  **\<nameEntry >** élément pour référencer une classe de chiffrement et configurer le runtime. Vous pouvez ensuite passer la chaîne « RSA » pour le <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> méthode et l’utilisation du <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> méthode pour retourner un `MyCryptoRSAClass` objet.  
+ L’exemple suivant montre comment utiliser le  **\<nameEntry >** élément à référencer une classe de chiffrement et configurer le runtime. Vous pouvez ensuite passer la chaîne « RSA » à la <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> méthode et l’utilisation du <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> méthode pour retourner un `MyCryptoRSAClass` objet.  
   
 ```xml  
 <configuration>  

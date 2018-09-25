@@ -3,20 +3,19 @@ title: Liaison de sécurité de message
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 50e9b831430eefc202dd3128502a7f916b96aef6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 22daa3edbda5be44ce67a6b9a93946505f3fcc12
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805039"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070862"
 ---
 # <a name="message-security-binding"></a>Liaison de sécurité de message
-Cette section contient des exemples qui illustrent la liaison de sécurité des messages dans les Services Windows dans WCF.  
+Cette section contient des exemples qui illustrent la liaison de sécurité de message dans les Services Windows dans WCF.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Sécurité de message anonyme](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- Cet exemple montre comment pour implémenter une application Windows Communication Foundation (WCF) qui utilise la sécurité de niveau message sans authentifier le client, mais qui nécessite une authentification de serveur à l’aide du certificat du serveur X.509.  
+ Cet exemple montre comment implémenter une application Windows Communication Foundation (WCF) qui utilise la sécurité d’au niveau du message sans authentifier le client, mais qui nécessite une authentification de serveur à l’aide du certificat X.509 du serveur.  
   
  [Certificat de sécurité de message](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  Cet exemple montre comment implémenter une application qui utilise WS-Security avec l'authentification de certificat X.509 v3 pour le client et requiert l'authentification de serveur à l'aide du certificat X.509 v3 du serveur.  
