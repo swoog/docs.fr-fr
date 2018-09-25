@@ -3,30 +3,30 @@ title: Accès aux informations d'identité dans un service de workflow
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585505"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108367"
 ---
-# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="28446-102">Accès aux informations d'identité dans un service de workflow</span><span class="sxs-lookup"><span data-stu-id="28446-102">Accessing Identity Information inside a Workflow Service</span></span>
-<span data-ttu-id="28446-103">Pour accéder aux informations d'identité dans un service de workflow, vous devez implémenter l'interface <xref:System.ServiceModel.Activities.IReceiveMessageCallback> dans une propriété d'exécution personnalisée.</span><span class="sxs-lookup"><span data-stu-id="28446-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="28446-104">Dans la méthode <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, vous pouvez accéder à <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> pour accéder aux informations d'identité.</span><span class="sxs-lookup"><span data-stu-id="28446-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="28446-105">Cette rubrique vous aidera à implémenter cette propriété d'exécution pour récupérer un en-tête personnalisé, ainsi qu'une activité personnalisée qui affichera cette propriété à l'activité <xref:System.ServiceModel.Activities.Receive> au moment de l'exécution.</span><span class="sxs-lookup"><span data-stu-id="28446-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span> <span data-ttu-id="28446-106">L'activité personnalisée implémentera le même comportement qu'une activité <xref:System.Activities.Statements.Sequence>, excepté lorsqu'un <xref:System.ServiceModel.Activities.Receive> est placé à l'intérieur, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> sera appelé et les informations d'identité seront récupérées.</span><span class="sxs-lookup"><span data-stu-id="28446-106">The custom activity will implement the same behavior as a <xref:System.Activities.Statements.Sequence> activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
+# <a name="accessing-identity-information-inside-a-workflow-service"></a><span data-ttu-id="fb920-102">Accès aux informations d'identité dans un service de workflow</span><span class="sxs-lookup"><span data-stu-id="fb920-102">Accessing Identity Information inside a Workflow Service</span></span>
+<span data-ttu-id="fb920-103">Pour accéder aux informations d'identité dans un service de workflow, vous devez implémenter l'interface <xref:System.ServiceModel.Activities.IReceiveMessageCallback> dans une propriété d'exécution personnalisée.</span><span class="sxs-lookup"><span data-stu-id="fb920-103">To access identity information inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="fb920-104">Dans la méthode <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, vous pouvez accéder à <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> pour accéder aux informations d'identité.</span><span class="sxs-lookup"><span data-stu-id="fb920-104">In the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method you can access the <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> to access identity information.</span></span> <span data-ttu-id="fb920-105">Cette rubrique vous aidera à implémenter cette propriété d'exécution pour récupérer un en-tête personnalisé, ainsi qu'une activité personnalisée qui affichera cette propriété à l'activité <xref:System.ServiceModel.Activities.Receive> au moment de l'exécution.</span><span class="sxs-lookup"><span data-stu-id="fb920-105">This topic will walk you through implementing this execution property, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> activity at runtime.</span></span> <span data-ttu-id="fb920-106">L'activité personnalisée implémentera le même comportement qu'une activité <xref:System.Activities.Statements.Sequence>, excepté lorsqu'un <xref:System.ServiceModel.Activities.Receive> est placé à l'intérieur, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> sera appelé et les informations d'identité seront récupérées.</span><span class="sxs-lookup"><span data-stu-id="fb920-106">The custom activity will implement the same behavior as a <xref:System.Activities.Statements.Sequence> activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the identity information will be retrieved.</span></span>  
   
-## <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="28446-107">Implémenter IReceiveMessageCallback</span><span class="sxs-lookup"><span data-stu-id="28446-107">Implement IReceiveMessageCallback</span></span>  
+## <a name="implement-ireceivemessagecallback"></a><span data-ttu-id="fb920-107">Implémenter IReceiveMessageCallback</span><span class="sxs-lookup"><span data-stu-id="fb920-107">Implement IReceiveMessageCallback</span></span>  
   
-1.  <span data-ttu-id="28446-108">Créez une solution [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vide.</span><span class="sxs-lookup"><span data-stu-id="28446-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
+1.  <span data-ttu-id="fb920-108">Créez une solution [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] vide.</span><span class="sxs-lookup"><span data-stu-id="fb920-108">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
   
-2.  <span data-ttu-id="28446-109">Ajoutez à la solution une nouvelle application console nommée `Service`.</span><span class="sxs-lookup"><span data-stu-id="28446-109">Add a new console application called `Service` to the solution.</span></span>  
+2.  <span data-ttu-id="fb920-109">Ajoutez à la solution une nouvelle application console nommée `Service`.</span><span class="sxs-lookup"><span data-stu-id="fb920-109">Add a new console application called `Service` to the solution.</span></span>  
   
-3.  <span data-ttu-id="28446-110">Ajoutez des références aux assemblys suivants :</span><span class="sxs-lookup"><span data-stu-id="28446-110">Add references to the following assemblies:</span></span>  
+3.  <span data-ttu-id="fb920-110">Ajoutez des références aux assemblys suivants :</span><span class="sxs-lookup"><span data-stu-id="fb920-110">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="28446-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="28446-111">System.Runtime.Serialization</span></span>  
+    1.  <span data-ttu-id="fb920-111">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="fb920-111">System.Runtime.Serialization</span></span>  
   
-    2.  <span data-ttu-id="28446-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="28446-112">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="fb920-112">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="fb920-112">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="28446-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="28446-113">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="fb920-113">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="fb920-113">System.ServiceModel.Activities</span></span>  
   
-4.  <span data-ttu-id="28446-114">Ajoutez une classe nommée `AccessIdentityCallback` et implémentez <xref:System.ServiceModel.Activities.IReceiveMessageCallback> tel qu'illustré dans l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="28446-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
+4.  <span data-ttu-id="fb920-114">Ajoutez une classe nommée `AccessIdentityCallback` et implémentez <xref:System.ServiceModel.Activities.IReceiveMessageCallback> tel qu'illustré dans l'exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="fb920-114">Add a new class called `AccessIdentityCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
   
     ```csharp  
     class AccessIdentityCallback : IReceiveMessageCallback  
@@ -48,13 +48,13 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-     <span data-ttu-id="28446-115">Ce code utilise le <xref:System.ServiceModel.OperationContext> passé dans la méthode pour accéder aux informations d'identité.</span><span class="sxs-lookup"><span data-stu-id="28446-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
+     <span data-ttu-id="fb920-115">Ce code utilise le <xref:System.ServiceModel.OperationContext> passé dans la méthode pour accéder aux informations d'identité.</span><span class="sxs-lookup"><span data-stu-id="fb920-115">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access identity information.</span></span>  
   
-## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="28446-116">Implémenter une activité native pour ajouter l'implémentation de IReceiveMessageCallback à NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="28446-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="fb920-116">Implémenter une activité native pour ajouter l'implémentation de IReceiveMessageCallback à NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="fb920-116">Implement a Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
   
-1.  <span data-ttu-id="28446-117">Ajoutez une nouvelle classe dérivée de <xref:System.Activities.NativeActivity> nommée `AccessIdentityScope`.</span><span class="sxs-lookup"><span data-stu-id="28446-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
+1.  <span data-ttu-id="fb920-117">Ajoutez une nouvelle classe dérivée de <xref:System.Activities.NativeActivity> nommée `AccessIdentityScope`.</span><span class="sxs-lookup"><span data-stu-id="fb920-117">Add a new class derived from <xref:System.Activities.NativeActivity> called `AccessIdentityScope`.</span></span>  
   
-2.  <span data-ttu-id="28446-118">Ajoutez des variables locales pour effectuer le suivi des activités enfants, des variables, de l'index de l'activité actuelle, et un rappel  <xref:System.Activities.CompletionCallback>.</span><span class="sxs-lookup"><span data-stu-id="28446-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
+2.  <span data-ttu-id="fb920-118">Ajoutez des variables locales pour effectuer le suivi des activités enfants, des variables, de l'index de l'activité actuelle, et un rappel  <xref:System.Activities.CompletionCallback>.</span><span class="sxs-lookup"><span data-stu-id="fb920-118">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
   
     ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
@@ -66,7 +66,7 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-3.  <span data-ttu-id="28446-119">Implémenter le constructeur</span><span class="sxs-lookup"><span data-stu-id="28446-119">Implement the constructor</span></span>  
+3.  <span data-ttu-id="fb920-119">Implémenter le constructeur</span><span class="sxs-lookup"><span data-stu-id="fb920-119">Implement the constructor</span></span>  
   
     ```csharp
     public AccessIdentityScope() : base()  
@@ -77,7 +77,7 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-4.  <span data-ttu-id="28446-120">Implémentez les propriétés `Activities` et `Variables`.</span><span class="sxs-lookup"><span data-stu-id="28446-120">Implement the `Activities` and `Variables` properties.</span></span>  
+4.  <span data-ttu-id="fb920-120">Implémentez les propriétés `Activities` et `Variables`.</span><span class="sxs-lookup"><span data-stu-id="fb920-120">Implement the `Activities` and `Variables` properties.</span></span>  
   
     ```csharp
     public Collection<Activity> Activities  
@@ -91,7 +91,7 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-5.  <span data-ttu-id="28446-121">Substituer la méthode <xref:System.Activities.NativeActivity.CacheMetadata%2A></span><span class="sxs-lookup"><span data-stu-id="28446-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
+5.  <span data-ttu-id="fb920-121">Substituer la méthode <xref:System.Activities.NativeActivity.CacheMetadata%2A></span><span class="sxs-lookup"><span data-stu-id="fb920-121">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
   
     ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -103,7 +103,7 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-6.  <span data-ttu-id="28446-122">Substituer la méthode <xref:System.Activities.NativeActivity.Execute%2A></span><span class="sxs-lookup"><span data-stu-id="28446-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
+6.  <span data-ttu-id="fb920-122">Substituer la méthode <xref:System.Activities.NativeActivity.Execute%2A></span><span class="sxs-lookup"><span data-stu-id="fb920-122">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
   
     ```csharp
     protected override void Execute(NativeActivityContext context)  
@@ -139,11 +139,11 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-## <a name="implement-the-workflow-service"></a><span data-ttu-id="28446-123">Implémenter le service de workflow</span><span class="sxs-lookup"><span data-stu-id="28446-123">Implement the workflow service</span></span>  
+## <a name="implement-the-workflow-service"></a><span data-ttu-id="fb920-123">Implémenter le service de workflow</span><span class="sxs-lookup"><span data-stu-id="fb920-123">Implement the workflow service</span></span>  
   
-1.  <span data-ttu-id="28446-124">Ouvrez existant `Program` classe.</span><span class="sxs-lookup"><span data-stu-id="28446-124">Open the existing `Program` class.</span></span>  
+1.  <span data-ttu-id="fb920-124">Ouvrez existant `Program` classe.</span><span class="sxs-lookup"><span data-stu-id="fb920-124">Open the existing `Program` class.</span></span>  
   
-2.  <span data-ttu-id="28446-125">Définissez les constantes suivantes :</span><span class="sxs-lookup"><span data-stu-id="28446-125">Define the following constants:</span></span>  
+2.  <span data-ttu-id="fb920-125">Définissez les constantes suivantes :</span><span class="sxs-lookup"><span data-stu-id="fb920-125">Define the following constants:</span></span>  
   
     ```csharp
     class Program  
@@ -153,7 +153,7 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-3.  <span data-ttu-id="28446-126">Ajoutez une méthode statique nommée `GetWorkflowService` qui crée le service de workflow.</span><span class="sxs-lookup"><span data-stu-id="28446-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
+3.  <span data-ttu-id="fb920-126">Ajoutez une méthode statique nommée `GetWorkflowService` qui crée le service de workflow.</span><span class="sxs-lookup"><span data-stu-id="fb920-126">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
   
     ```csharp
     static Activity GetServiceWorkflow()  
@@ -192,7 +192,7 @@ ms.locfileid: "46585505"
      }  
     ```  
   
-4.  <span data-ttu-id="28446-127">Dans la méthode `Main` existante, hébergez le service de workflow.</span><span class="sxs-lookup"><span data-stu-id="28446-127">In the existing `Main` method, host the workflow service.</span></span>  
+4.  <span data-ttu-id="fb920-127">Dans la méthode `Main` existante, hébergez le service de workflow.</span><span class="sxs-lookup"><span data-stu-id="fb920-127">In the existing `Main` method, host the workflow service.</span></span>  
   
     ```csharp
     static void Main(string[] args)  
@@ -213,19 +213,19 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-## <a name="implement-a-workflow-client"></a><span data-ttu-id="28446-128">Implémenter un client de workflow</span><span class="sxs-lookup"><span data-stu-id="28446-128">Implement a workflow client</span></span>  
+## <a name="implement-a-workflow-client"></a><span data-ttu-id="fb920-128">Implémenter un client de workflow</span><span class="sxs-lookup"><span data-stu-id="fb920-128">Implement a workflow client</span></span>  
   
-1.  <span data-ttu-id="28446-129">Créez un projet d'application console nommé `Client`.</span><span class="sxs-lookup"><span data-stu-id="28446-129">Create a new console application project called `Client`.</span></span>  
+1.  <span data-ttu-id="fb920-129">Créez un projet d'application console nommé `Client`.</span><span class="sxs-lookup"><span data-stu-id="fb920-129">Create a new console application project called `Client`.</span></span>  
   
-2.  <span data-ttu-id="28446-130">Ajoutez des références aux assemblys suivants :</span><span class="sxs-lookup"><span data-stu-id="28446-130">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="fb920-130">Ajoutez des références aux assemblys suivants :</span><span class="sxs-lookup"><span data-stu-id="fb920-130">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="28446-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="28446-131">System.Activities</span></span>  
+    1.  <span data-ttu-id="fb920-131">System.Activities</span><span class="sxs-lookup"><span data-stu-id="fb920-131">System.Activities</span></span>  
   
-    2.  <span data-ttu-id="28446-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="28446-132">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="fb920-132">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="fb920-132">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="28446-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="28446-133">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="fb920-133">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="fb920-133">System.ServiceModel.Activities</span></span>  
   
-3.  <span data-ttu-id="28446-134">Ouvrez le fichier Program.cs généré et ajoutez une méthode statique nommée `GetClientWorkflow` pour créer le workflow client.</span><span class="sxs-lookup"><span data-stu-id="28446-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
+3.  <span data-ttu-id="fb920-134">Ouvrez le fichier Program.cs généré et ajoutez une méthode statique nommée `GetClientWorkflow` pour créer le workflow client.</span><span class="sxs-lookup"><span data-stu-id="fb920-134">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
   
     ```csharp
     static Activity GetClientWorkflow()  
@@ -279,7 +279,7 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-4.  <span data-ttu-id="28446-135">Ajoutez le code d'hébergement suivant à la méthode `Main()`.</span><span class="sxs-lookup"><span data-stu-id="28446-135">Add the following hosting code to the `Main()` method.</span></span>  
+4.  <span data-ttu-id="fb920-135">Ajoutez le code d'hébergement suivant à la méthode `Main()`.</span><span class="sxs-lookup"><span data-stu-id="fb920-135">Add the following hosting code to the `Main()` method.</span></span>  
   
     ```csharp
     static void Main(string[] args)  
@@ -292,8 +292,8 @@ ms.locfileid: "46585505"
     }  
     ```  
   
-## <a name="example"></a><span data-ttu-id="28446-136">Exemple</span><span class="sxs-lookup"><span data-stu-id="28446-136">Example</span></span>
- <span data-ttu-id="28446-137">L'intégralité du code source utilisé dans cette rubrique est présentée ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="28446-137">Here is a complete listing of the source code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="fb920-136">Exemple</span><span class="sxs-lookup"><span data-stu-id="fb920-136">Example</span></span>
+ <span data-ttu-id="fb920-137">L'intégralité du code source utilisé dans cette rubrique est présentée ci-dessous.</span><span class="sxs-lookup"><span data-stu-id="fb920-137">Here is a complete listing of the source code used in this topic.</span></span>  
   
 ```csharp
 // AccessIdentityCallback.cs  
@@ -573,7 +573,7 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="28446-138">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="28446-138">See Also</span></span>  
- [<span data-ttu-id="28446-139">Services de workflow</span><span class="sxs-lookup"><span data-stu-id="28446-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="28446-140">Accès à OperationContext</span><span class="sxs-lookup"><span data-stu-id="28446-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [<span data-ttu-id="28446-141">Création de workflows, d’activités et d’expressions à l’aide du code impératif</span><span class="sxs-lookup"><span data-stu-id="28446-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a><span data-ttu-id="fb920-138">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fb920-138">See Also</span></span>  
+ [<span data-ttu-id="fb920-139">Services de workflow</span><span class="sxs-lookup"><span data-stu-id="fb920-139">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="fb920-140">Accès à OperationContext</span><span class="sxs-lookup"><span data-stu-id="fb920-140">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [<span data-ttu-id="fb920-141">Création de workflows, d’activités et d’expressions à l’aide du code impératif</span><span class="sxs-lookup"><span data-stu-id="fb920-141">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
