@@ -1,5 +1,5 @@
 ---
-title: '&lt;servicePointManager&gt; élément (paramètres réseau)'
+title: '&lt;servicePointManager&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113067"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; élément (paramètres réseau)
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; , élément (paramètres réseau)
 Configure les connexions aux ressources réseau.  
   
  \<configuration>  
@@ -46,12 +46,12 @@ Configure les connexions aux ressources réseau.
   
 |**Attribut**|**Description**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Spécifie si le système doit vérifier que le nom du certificat correspond le nom d’hôte du serveur avant d’utiliser le certificat. La valeur par défaut est `true`.|  
+|`checkCertificateName`|Spécifie si le système doit vérifier que le nom du certificat correspond le nom d’hôte de serveur avant d’utiliser le certificat. La valeur par défaut est `true`.|  
 |`checkCertificateRevocationList`|Spécifie si le système doit vérifier si le certificat a été révoqué avant d’utiliser le certificat. La valeur par défaut est `false`.|  
-|`dnsRefreshTimeout`|Spécifie la durée pendant laquelle Service DNS (Domain Name) résolutions sont mis en cache avec l’option de tourniquet DNS, en millisecondes. La valeur par défaut est 120 000 millisecondes (deux minutes).|  
-|`enableDnsRoundRobin`|Spécifie si les résolutions DNS d’hôte noms avec plusieurs adresses IP (Internet Protocol) retournés toutes les adresses, ou simplement la première. La valeur par défaut est `false`.|  
-|`encryptionPolicy`|Spécifie la stratégie de chiffrement appliquée à une session SSL/TLS sur un <xref:System.Net.ServicePointManager> instance. Les valeurs possibles sont équivalents aux valeurs de la <xref:System.Net.Security.EncryptionPolicy> énumération. L’utilisation de <xref:System.Security.Authentication.CipherAlgorithmType.Null> est requise lors de la stratégie de chiffrement a la valeur `NoEncryption`. La valeur par défaut est `RequireEncryption`.|  
-|`expect100Continue`|Spécifie si les méthodes POST doivent s’attendre à recevoir un `100-continue` réponse du serveur. La valeur par défaut est `true`.|  
+|`dnsRefreshTimeout`|Spécifie la durée pendant laquelle Service DNS (Domain Name) résolutions sont mis en cache en conjonction avec l’option de tourniquet DNS, en millisecondes. La valeur par défaut est 120 000 millisecondes (deux minutes).|  
+|`enableDnsRoundRobin`|Spécifie si les résolutions DNS d’hôte noms avec plusieurs adresses IP (Internet Protocol) retournés toutes les adresses, ou simplement le premier. La valeur par défaut est `false`.|  
+|`encryptionPolicy`|Spécifie la stratégie de chiffrement appliquée à une session SSL/TLS sur un <xref:System.Net.ServicePointManager> instance. Les valeurs possibles sont équivalentes aux valeurs de la <xref:System.Net.Security.EncryptionPolicy> énumération. L’utilisation de <xref:System.Security.Authentication.CipherAlgorithmType.Null> est requise lorsque la stratégie de chiffrement est définie sur `NoEncryption`. La valeur par défaut est `RequireEncryption`.|  
+|`expect100Continue`|Spécifie si les méthodes POST doivent attendre pour recevoir un `100-continue` réponse du serveur. La valeur par défaut est `true`.|  
 |`useNagleAlgorithm`|Spécifie si les connexions contrôlées par le Gestionnaire de point de service utilisent l’algorithme Nagle. La valeur par défaut est `true`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  

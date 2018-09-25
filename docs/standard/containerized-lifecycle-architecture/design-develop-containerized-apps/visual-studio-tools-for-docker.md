@@ -1,64 +1,66 @@
 ---
-title: À l’aide de Visual Studio Tools pour Docker (Visual Studio sur Windows)
+title: Visual Studio Tools pour Docker sur Windows
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: cd140c12ef4a0187cce096e013937d5c98cd4b39
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581218"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170793"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>À l’aide de Visual Studio Tools pour Docker (Visual Studio sur Windows)
 
-Le flux de travail de développement lors de l’utilisation de Visual Studio Tools pour Docker est similaire au flux de travail lors de l’utilisation de Visual Studio Code et interface CLI Docker. En fait, il est basé sur la même interface CLI Docker, mais il est plus facile commencer, simplifie le processus et fournit une plus grande productivité pour la build, exécuter et composer des tâches. Il est également en mesure d’exécuter et déboguer vos conteneurs via des actions simples telles que F5 et Ctrl + F5 dans Visual Studio. Avec la prise en charge d’orchestration de conteneur facultatif, en plus de pouvoir exécuter et déboguer un conteneur unique, vous pouvez exécuter et déboguer un groupe de conteneurs (un ensemble de la solution) en même temps. Définir les conteneurs dans le même *docker-compose.yml* fichier au niveau de la solution.
+Visual Studio Tools pour le flux de travail de développeur Docker est similaire à l’aide de Visual Studio Code et interface CLI Docker (il est basé sur la même interface CLI Docker). Visual Studio Tools pour Docker facilite la prise en main, simplifie le processus et fournit une plus grande productivité pour la génération, exécutez et composer des tâches. Exécuter et déboguer vos conteneurs via des actions simples comme **F5** et **Ctrl**+**F5**.
 
-## <a name="configuring-your-local-environment"></a>Configuration de votre environnement local
+> [!NOTE]
+> Cet article s’applique à Visual Studio sur Windows et non dans Visual Studio pour Mac.
 
-Prise en charge docker est inclus dans Visual Studio 2017 avec des charges de travail .NET et .NET Core installés. Installer Docker pour Windows séparément.
+## <a name="configure-your-local-environment"></a>Configurer votre environnement local
 
-Avec les dernières versions de Docker pour Windows, il est plus facile que jamais pour développer des applications Docker, car le programme d’installation est simple, comme expliqué dans les références suivantes.
+Avec les dernières versions de Docker pour Windows ([https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)), le programme d’installation simple permet de facilement développer des applications Docker.
 
-**Plus d’informations :** pour en savoir plus sur l’installation de Docker pour Windows, accédez à <https://docs.docker.com/docker-for-windows/>.
+Prise en charge docker est inclus dans Visual Studio 2017. Téléchargez Visual Studio 2017 ici : [https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
-**Plus d’informations :** pour obtenir des instructions sur l’installation de Visual Studio, accédez à [ https://visualstudio.microsoft.com/downloads/ ](https://visualstudio.microsoft.com/downloads/).
+## <a name="use-docker-tools-in-visual-studio-2017"></a>Utilisez des outils Docker dans Visual Studio 2017
 
-Pour plus d’informations sur l’installation de Visual Studio Tools pour Docker, accédez à <http://aka.ms/vstoolsfordocker> et <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
+Il existe deux niveaux de prise en charge de Docker que vous pouvez ajouter à un projet. Dans les projets d’application web .NET Core, vous pouvez simplement ajouter un *Dockerfile* fichier au projet en activant la prise en charge Docker. Le niveau suivant est prise en charge de conteneurs orchestrator, ce qui ajoute un *Dockerfile* au projet (s’il n’existe pas déjà) et un *docker-compose.yml* fichier au niveau de la solution.
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>À l’aide des outils Docker dans Visual Studio 2017
+Le **ajouter** > **prise en charge Docker** et **ajouter** > **prise en charge de conteneurs Orchestrator** sont des commandes situé sur le menu contextuel (ou le menu contextuel) du nœud du projet pour un projet d’application web dans **l’Explorateur de solutions**, comme illustré dans la Figure 4-26 :
 
-Lors de l’ajout de prise en charge Docker à un projet (voir Figure 4-26), Visual Studio ajoute un *Dockerfile* à la racine du projet.
+![Ajoutez l’option de menu de prise en charge Docker dans Visual Studio](media/add-docker-support-menu.png)
 
-![L’activation de la prise en charge de la Solution Docker dans un projet Visual Studio 2017](./media/image32.png)
+Figure 4-26 : ajout de prise en charge Docker à un projet Visual Studio 2017
 
-Figure 4-26 : activer la prise en charge de la Solution Docker dans un projet Visual Studio 2017
+### <a name="add-docker-support"></a>Ajouter la prise en charge Docker
 
- Prise en charge d’orchestration de conteneur, via Docker Compose, est ajouté par défaut dans Visual Studio 2017 version 15.7 ou une version antérieure. Prise en charge d’orchestration de conteneur est une fonctionnalité à activer dans les versions de Visual Studio 2017 15.8 ou une version ultérieure, auquel cas Docker Compose et Service Fabric sont pris en charge.
+Vous pouvez ajouter la prise en charge Docker à un projet d’application web .NET Core existant en sélectionnant **ajouter** > **prennent en charge de Docker** dans **l’Explorateur de solutions**. Vous pouvez également activer la prise en charge de Docker lors de la création du projet en sélectionnant **activer la prise en charge Docker** dans le **nouvelle Application de Web ASP.NET Core** boîte de dialogue qui s’ouvre après avoir cliqué sur **OK** dans le **nouveau projet** boîte de dialogue, comme illustré dans la Figure 4-27.
 
-Avec Visual Studio version 15,8 et versions ultérieure, vous pouvez ajouter la prise en charge de plusieurs projets dans une solution qui ont chacune un conteneur associé. Avec le bouton droit sur le nœud de solution ou projet dans **l’Explorateur de solutions**, puis choisissez **ajouter** > **prise en charge d’Orchestration de conteneurs**.  Puis choisissez **Docker Compose** ou **Service Fabric** pour gérer les conteneurs.
+![Activer la prise en charge de Docker pour l’application web ASP.NET Core dans Visual Studio](./media/enable-docker-support-visual-studio.png)
 
-Lorsque vous choisissez **Docker Compose**, Visual Studio ajoute une section de service dans votre solution *docker-compose.yml* fichiers (ou crée les fichiers s’ils n’existent pas). Il est un moyen simple de commencer la composition de votre solution multiconteneur ; Vous pouvez ensuite ouvrir le *docker-compose.yml* de fichiers et de les mettre à jour avec des fonctionnalités supplémentaires.
+Figure 4-27 : activer la prise en charge Docker lors de la création du projet dans Visual Studio 2017
 
-Cette action ajoute les configuration requise de lignes de code pour un *docker-compose.yml* définie au niveau de la solution.
+Lorsque vous ajoutez ou activez la prise en charge Docker, Visual Studio ajoute un *Dockerfile* fichier au projet.
 
-Vous également pourrez activer la prise en charge de Docker lors de la création d’un projet ASP.NET Core dans Visual Studio 2017, comme indiqué dans la Figure 4-27.
+> [!NOTE]
+> Lorsque vous activez la prise en charge de Docker Compose lors de la création de projet pour un projet d’application web .NET Framework (pas un projet .NET Core web application) comme indiqué dans la Figure 4-28, conteneur orchestrator prise en charge est également ajoutée.
+>
+> ![Activer Docker compose prise en charge pour un projet d’application web .NET Framework](media/enable-docker-compose-support.png)
 
-![Prise en charge Docker sous tension lors de la création d’un projet](./media/image33.png)
+> Figure 4-28 : l’activation de prise en charge de Docker Compose sur un projet d’application web .NET Framework dans Visual Studio 2017
 
-Figure 4-27 : activer prise en charge Docker lors de la création d’un projet
+### <a name="add-container-orchestrator-support"></a>Ajouter la prise en charge de conteneurs orchestrator
 
-Après avoir ajouté la prise en charge Docker à votre solution dans Visual Studio, apparaît également une nouvelle arborescence de nœuds dans **l’Explorateur de solutions** avec l’ajout *docker-compose.yml* des fichiers, comme illustré dans la Figure 4-28.
+Lorsque vous souhaitez composer une solution multiconteneur, ajouter la prise en charge de conteneurs orchestrator à vos projets. Lorsque vous ajoutez la prise en charge de conteneurs orchestrator, Visual Studio ajoute un *Dockerfile* au projet (s’il n’existe pas déjà) et global *docker-compose.yml* fichier au niveau de la solution. Cela vous permet d’exécuter et déboguer un groupe de conteneurs (un ensemble de la solution) en même temps, si elles sont définies dans le même *docker-compose.yml* fichier. Si *docker-compose.yml* existe déjà, Visual Studio ajoute simplement les lignes de code de configuration requises.
 
-![fichiers docker-compose.yml affichent désormais dans l’Explorateur de solutions](./media/image34.PNG)
+Après avoir ajouté la prise en charge d’orchestration de conteneurs à votre projet, vous voyez un fichier Dockerfile ajouté au projet et un **docker-compose** dossier ajouté à la solution dans **l’Explorateur de solutions**, comme illustré dans la Figure 4-29 :
 
-Figure 4-28 : fichiers docker-compose.yml affichent désormais dans **l’Explorateur de solutions**
+![Fichiers docker dans l’Explorateur de solutions dans Visual Studio](media/docker-support-solution-explorer.png)
 
-Vous pouvez déployer une application à conteneurs multiples à l’aide d’un seul *docker-compose.yml* fichier lorsque vous exécutez `docker-compose up`; Toutefois, Visual Studio ajoute un groupe de fichiers, donc vous pouvez remplacer les valeurs en fonction de l’environnement (développement ou production) et l’exécution (release ou debug) de type. Cette fonctionnalité est expliquée mieux dans les chapitres.
-
-Vous pouvez également utiliser Service Fabric au lieu de Docker Compose pour gérer plusieurs conteneurs. Consultez [didacticiel : déployer une application .NET dans un conteneur Windows sur Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-host-app-in-a-container).
+Figure 4-29 : les fichiers de Docker dans l’Explorateur de solutions dans Visual Studio 2017
 
 **Plus d’informations :** pour plus d’informations sur la mise en œuvre des services et l’utilisation de Visual Studio Tools pour Docker, lisez les articles suivants :
 

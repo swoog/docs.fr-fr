@@ -3,16 +3,15 @@ title: '&lt;clear&gt;'
 ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d4d81a1b876c724ad60be399756fbe37c67b7153
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8f5d2e2b580d6a2824fd885f9b08cb2b2f0b244e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754913"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111566"
 ---
 # <a name="ltcleargt"></a>&lt;clear&gt;
-Efface tous les gestionnaires de jetons de sécurité de la collection actuelle de gestionnaire de jetons.  
+Efface tous les gestionnaires de jetons de sécurité à partir de la collection de gestionnaires de jetons en cours.  
   
  \<system.identityModel>  
 \<identityConfiguration >  
@@ -36,13 +35,13 @@ Efface tous les gestionnaires de jetons de sécurité de la collection actuelle 
  Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
   
 ### <a name="attributes"></a>Attributs  
- Aucun  
+ Aucun.  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Spécifie une collection de gestionnaires de jetons de sécurité qui sont enregistrés avec le point de terminaison.|
+|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|Spécifie une collection de gestionnaires de jetons de sécurité qui sont inscrits avec le point de terminaison.|

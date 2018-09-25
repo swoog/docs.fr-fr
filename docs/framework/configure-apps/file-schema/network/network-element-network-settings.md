@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2c2c6ad4-ed11-48ab-b28e-2bc0ba9b42c7
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e6cf78b06d5afe950dd97381e99ba9eb77f818ca
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 96a6c8a3c2d7114004278d3c40daf4d01b6c1d90
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874557"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170020"
 ---
 # <a name="ltnetworkgt-element-network-settings"></a>&lt;réseau&gt; , élément (paramètres réseau)
 Configure les options de réseau pour un serveur de Transport protocole SMTP (Simple Mail) externe.  
