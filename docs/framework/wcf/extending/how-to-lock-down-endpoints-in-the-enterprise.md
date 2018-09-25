@@ -3,11 +3,11 @@ title: "Comment : verrouiller des points de terminaison dans l'entreprise"
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711166"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075514"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Comment : verrouiller des points de terminaison dans l'entreprise
 Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client qui peut être utilisé pour valider toutes les applications clientes de Windows Communication Foundation (WCF) installées sur les ordinateurs.  

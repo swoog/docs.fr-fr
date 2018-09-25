@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2dc03c3aa6808ed4ce0c22f4e69fa8c98cb7aebd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cd57cc7bbe39b042e11d0dad3fd54373bcaae98b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758254"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47076510"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mappage de noms d'algorithmes à des classes de chiffrement
-Il existe quatre méthodes, un développeur peut créer un objet de chiffrement à l’aide de la [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+Il existe quatre façons un développeur peut créer un objet de chiffrement à l’aide de la [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
 -   Créer un objet à l’aide de la **nouveau** opérateur.  
   
@@ -26,18 +25,18 @@ Il existe quatre méthodes, un développeur peut créer un objet de chiffrement 
   
 -   Créer un objet qui implémente un algorithme de chiffrement particulier en appelant le <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> (méthode).  
   
--   Créer un objet qui implémente une classe d’algorithmes de chiffrement (par exemple, un chiffrement symétrique) en appelant le **créer** méthode sur la classe abstraite pour ce type d’algorithme (tel que <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
+-   Créer un objet qui implémente une classe d’algorithmes de chiffrement (par exemple, un chiffrement par bloc symétriques) en appelant le **créer** méthode sur la classe abstraite pour ce type d’algorithme (tel que <xref:System.Security.Cryptography.SymmetricAlgorithm>).  
   
- Par exemple, qu'un développeur souhaite calculer le hachage SHA1 d’un jeu d’octets. Le <xref:System.Security.Cryptography> espace de noms contient deux implémentations de l’algorithme SHA1, une implémentation managée de purement et une autre qui encapsule CryptoAPI. Le développeur peut choisir d’instancier une implémentation particulière de SHA1 (telles que la <xref:System.Security.Cryptography.SHA1Managed>) en appelant le **nouveau** opérateur. Toutefois, si elle n’a pas d’importance le common language runtime charge tant que la classe implémente l’algorithme de hachage SHA1, le développeur peut créer un objet en appelant le <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> (méthode). Cette méthode appelle **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, qui doit retourner une implémentation de l’algorithme de hachage SHA1.  
+ Par exemple, qu'un développeur souhaite calculer le hachage SHA1 d’un jeu d’octets. Le <xref:System.Security.Cryptography> espace de noms contient deux implémentations de l’algorithme SHA1, une implémentation purement managée et une autre qui encapsule CryptoAPI. Le développeur peut choisir instancier une implémentation particulière de SHA1 (telles que la <xref:System.Security.Cryptography.SHA1Managed>) en appelant le **nouveau** opérateur. Toutefois, si elle n’a pas d’importance du common language runtime charge tant que la classe implémente l’algorithme de hachage SHA1, le développeur peut créer un objet en appelant le <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> (méthode). Cette méthode appelle **System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**, qui doit retourner une implémentation de l’algorithme de hachage SHA1.  
   
  Le développeur peut également appeler **System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** car, par défaut, la configuration de chiffrement comprend des noms courts pour les algorithmes fournis dans le .NET Framework.  
   
  Si l’algorithme de hachage est utilisé n’a pas d’importance, le développeur peut appeler le <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> (méthode), qui retourne un objet qui implémente une transformation de hachage.  
   
-## <a name="mapping-algorithm-names-in-configuration-files"></a>Mappage des noms d’algorithmes dans les fichiers de Configuration  
- Par défaut, le runtime retourne un <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> objet pour les quatre scénarios. Toutefois, un administrateur d’ordinateur permettre modifier le type d’objet renvoyées par les méthodes dans les deux derniers scénarios. Pour ce faire, vous devez mapper un nom d’algorithme convivial à la classe que vous souhaitez utiliser dans le fichier de configuration de l’ordinateur (Machine.config).  
+## <a name="mapping-algorithm-names-in-configuration-files"></a>Mappage de noms d’algorithme dans les fichiers de Configuration  
+ Par défaut, le runtime retourne un <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> objet pour les quatre scénarios. Toutefois, un administrateur d’ordinateur permettre modifier le type d’objet renvoyées par les méthodes dans les deux derniers scénarios. Pour ce faire, vous devez mapper un nom d’algorithme convivial à la classe que vous souhaitez utiliser dans le fichier de configuration machine (Machine.config).  
   
- L’exemple suivant montre comment configurer le runtime de sorte que **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, et  **System.Security.Cryptography.HashAlgorithm.Create** renvoyer un `MySHA1HashClass` objet.  
+ L’exemple suivant montre comment configurer le runtime afin que **System.Security.Cryptography.SHA1.Create**, **System.Security.CryptoConfig.CreateFromName("SHA1")**, et  **System.Security.Cryptography.HashAlgorithm.Create** retourner un `MySHA1HashClass` objet.  
   
 ```xml  
 <configuration>  
@@ -61,14 +60,14 @@ Il existe quatre méthodes, un développeur peut créer un objet de chiffrement 
 </configuration>  
 ```  
   
- Vous pouvez spécifier le nom de l’attribut dans le [< cryptoClass\> élément](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (l’exemple précédent nomme l’attribut `MySHA1Hash`). La valeur de l’attribut dans le  **\<cryptoClass >** élément est une chaîne que le common language runtime utilise pour rechercher la classe. Vous pouvez utiliser n’importe quelle chaîne qui répond aux exigences spécifiées dans [en spécifiant des noms de types qualifiés complets](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
+ Vous pouvez spécifier le nom de l’attribut dans le [< cryptoClass\> élément](../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) (l’exemple précédent nomme l’attribut `MySHA1Hash`). La valeur de l’attribut dans le  **\<cryptoClass >** élément est une chaîne que le common language runtime utilise pour rechercher la classe. Vous pouvez utiliser n’importe quelle chaîne qui répond aux exigences spécifiées dans [spécifiant des noms de types qualifiés complets](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).  
   
- Plusieurs noms d’algorithmes peuvent mapper à la même classe. Le [ \<nameEntry > élément](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) mappe une classe à un nom d’algorithme convivial. Le **nom** attribut peut être soit une chaîne qui est utilisée lors de l’appel du **System.Security.Cryptography.CryptoConfig.CreateFromName** méthode ou le nom d’une classe de chiffrement abstraite dans le <xref:System.Security.Cryptography> espace de noms. La valeur de la **classe** attribut est le nom de l’attribut dans le  **\<cryptoClass >** élément.  
+ Plusieurs noms d’algorithmes peuvent mapper à la même classe. Le [ \<nameEntry > élément](../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) mappe une classe à un nom d’algorithme convivial. Le **nom** attribut peut être soit une chaîne qui est utilisée lors de l’appel le **System.Security.Cryptography.CryptoConfig.CreateFromName** méthode ou le nom d’une classe de chiffrement abstraite dans le <xref:System.Security.Cryptography> espace de noms. La valeur de la **classe** attribut est le nom de l’attribut dans le  **\<cryptoClass >** élément.  
   
 > [!NOTE]
->  Vous pouvez obtenir un algorithme SHA1 en appelant le <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> ou **Security.CryptoConfig.CreateFromName("SHA1")** (méthode). Chaque méthode garantit uniquement qu’il retourne un objet qui implémente l’algorithme SHA1. Vous n’avez pas à mapper chaque nom convivial d’un algorithme à la même classe dans le fichier de configuration.  
+>  Vous pouvez obtenir un algorithme SHA1 en appelant le <xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType> ou **Security.CryptoConfig.CreateFromName("SHA1")** (méthode). Chaque méthode garantit uniquement qu’elle retourne un objet qui implémente l’algorithme SHA1. Il est inutile mapper chaque nom convivial d’un algorithme à la même classe dans le fichier de configuration.  
   
- Pour obtenir la liste de noms par défaut et les classes de mappage, consultez <xref:System.Security.Cryptography.CryptoConfig>.  
+ Pour obtenir la liste des noms par défaut et des classes auxquels elles sont mappées à, consultez <xref:System.Security.Cryptography.CryptoConfig>.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)  

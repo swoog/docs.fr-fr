@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f05f7e35d69f789d3ebb371689aafbc84004b732
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075217"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; élément (paramètres d’Uri)
 Spécifie si l’analyse d’identificateur de ressource internationale (IRI) s’applique à un <xref:System.Uri> et si les règles d’analyse IRI doivent s’appliquer.  
@@ -36,10 +36,10 @@ Spécifie si l’analyse d’identificateur de ressource internationale (IRI) s�
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|`enabled`|Spécifie si l’analyse IRI est activée. La valeur par défaut est `false`.|  
+|`enabled`|Spécifie si l’analyse des IRI est activée. La valeur par défaut est `false`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -48,7 +48,7 @@ Spécifie si l’analyse d’identificateur de ressource internationale (IRI) s�
 |[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contient des paramètres qui spécifient la façon dont le .NET Framework gère les adresses web exprimées à l’aide d’identificateurs de ressource uniforme (URI).|  
   
 ## <a name="remarks"></a>Notes  
- Existants <xref:System.Uri> classe a été étendue dans .NET Framework 3.5. 3.0 SP1 et 2.0 SP1 pour fournir la prise en charge des identificateurs IRI (International Resource) et les noms de domaine internationaux (IDN). Les utilisateurs actuels ne verront pas de toute modification du comportement de .NET Framework 2.0, à moins qu’ils activent spécifiquement IRI et IDN prennent en charge. Cela garantit la compatibilité des applications avec les versions antérieures de .NET Framework.  
+ Existant <xref:System.Uri> classe a été étendue dans .NET Framework 3.5. 3.0 SP1 et 2.0 SP1 pour fournir la prise en charge pour les identificateurs IRI (International Resource) et les noms de domaine international (IDN). Les utilisateurs actuels ne verront pas de toute modification du comportement de .NET Framework 2.0, sauf si ils activent spécifiquement les IRI et des IDN prennent en charge. Cela garantit la compatibilité des applications avec les versions antérieures de .NET Framework.  
   
  Pour activer la prise en charge des IRI, les deux modifications suivantes sont requises :  
   
@@ -58,9 +58,9 @@ Spécifie si l’analyse d’identificateur de ressource internationale (IRI) s�
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Spécifiez si les règles d’analyse ini doit être appliquée. Cela est spécifié dans le fichier machine.config ou app.config.  
+2.  Spécifiez si les règles d’analyse des IRI doit être appliquée. Cela est spécifié dans le fichier machine.config ou app.config.  
   
- L’activation de l’analyse IRI (iriParsing activé = `true`) effectuera la normalisation et les règles de vérification des caractères selon le IRI les plus récentes dans RFC 3987. La valeur par défaut est `false` et permet la normalisation et caractères la vérification en fonction de RFC 2396 et RFC 3986 (pour les littéraux IPv6).  
+ L’activation de l’analyse des IRI (iriParsing activé = `true`) effectue la normalisation et la vérification des caractères selon le IRI les plus récentes des règles dans la RFC 3987. La valeur par défaut est `false` et permet la normalisation et caractères vérification selon RFC 2396 et RFC 3986 (pour les littéraux IPv6).  
   
 ### <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
@@ -68,7 +68,7 @@ Spécifie si l’analyse d’identificateur de ressource internationale (IRI) s�
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L’exemple suivant montre une configuration utilisée par la <xref:System.Uri> classe pour prendre en charge l’analyse IRI et les noms IDN.  
+ L’exemple suivant montre une configuration utilisée par la <xref:System.Uri> classe pour prendre en charge l’analyse des IRI et les noms IDN.  
   
 ### <a name="code"></a>Code  
   
