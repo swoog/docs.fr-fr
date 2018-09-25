@@ -3,16 +3,15 @@ title: '&lt;trustedIssuers&gt;'
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f9daea7d6b78e2f6790050b35dde62db6058c60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757468"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075370"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
-Configure la liste des certificats d’émetteur de confiance utilisé par le Registre de nom de base de configuration de l’émetteur (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
+Configure la liste des certificats d’émetteurs approuvés utilisés par le Registre des noms d’émetteurs basé sur la configuration (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
   
  \<system.identityModel>  
 \<identityConfiguration >  
@@ -45,26 +44,26 @@ Configure la liste des certificats d’émetteur de confiance utilisé par le Re
  Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
   
 ### <a name="attributes"></a>Attributs  
- Aucun  
+ Aucun.  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|Ajoute un certificat à la collection des émetteurs approuvés. Le certificat est spécifié avec la `thumbprint` attribut. Cet attribut est obligatoire et doit contenir le formulaire ASN.1 codé de l’empreinte numérique du certificat. Le `name` attribut est facultatif et peut être utilisé pour spécifier un nom convivial pour le certificat.|  
-|`<clear>`|Efface tous les certificats de la collection des émetteurs approuvés.|  
+|`<add thumbprint=xs:string name=xs:string>`|Ajoute un certificat à la collection des émetteurs approuvés. Le certificat est spécifié avec la `thumbprint` attribut. Cet attribut est obligatoire et doit contenir le formulaire ASN.1 codé de l’empreinte du certificat. Le `name` attribut est facultatif et peut être utilisé pour spécifier un nom convivial pour le certificat.|  
+|`<clear>`|Efface tous les certificats à partir de la collection des émetteurs approuvés.|  
 |`<remove thumbprint=xs:string>`|Supprime un certificat à partir de la collection des émetteurs approuvés. Le certificat est spécifié avec la `thumbprint` attribut. Cet attribut est obligatoire.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configure le Registre de nom de l’émetteur. **Important :** le `type` attribut de la `<issuerNameRegistry>` élément doit faire référence à la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> de classes pour la `<trustedIssuers>` élément soit valide.|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Configure le Registre des noms d’émetteur. **Important :** le `type` attribut de la `<issuerNameRegistry>` élément doit faire référence à la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe pour le `<trustedIssuers>` élément soit valide.|  
   
 ## <a name="remarks"></a>Notes  
- Windows Identity Foundation (WIF) fournit une implémentation unique de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe prêtes à l’emploi, la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Le Registre de nom d’émetteur configuration gère une liste d’émetteurs approuvés qui est chargée à partir de la configuration. La liste associe chaque nom de l’émetteur du certificat X.509 qui est nécessaire pour vérifier la signature de jetons généré par l’émetteur. La liste de certificats de confiance de l’émetteur est spécifiée sous la `<trustedIssuers>` élément. Chaque élément dans la liste associe un nom mnémonique de l’émetteur du certificat X.509 qui est nécessaire pour vérifier la signature des jetons générés par cet émetteur. Certificats de confiance sont spécifiés à l’aide de la ASN.1 forme encodée de l’empreinte numérique du certificat et sont ajoutés de la collection à l’aide de `<add>` élément. Vous pouvez effacer ou supprimer des émetteurs (certificats) dans la liste à l’aide de la `<clear>` et `<remove>` éléments.  
+ Windows Identity Foundation (WIF) fournit une implémentation unique de la <xref:System.IdentityModel.Tokens.IssuerNameRegistry> classe dès le départ, le <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe. Le Registre des noms configuration émetteur gère une liste d’émetteurs approuvés qui est chargée à partir de la configuration. La liste associe chaque nom de l’émetteur du certificat X.509 qui est nécessaire pour vérifier la signature des jetons produits par l’émetteur. La liste des certificats d’émetteurs approuvés est spécifiée sous la `<trustedIssuers>` élément. Chaque élément dans la liste associe un nom de l’émetteur mnémonique avec le certificat X.509 qui est nécessaire pour vérifier la signature des jetons produits par cet émetteur. Certificats de confiance sont spécifiés à l’aide de l’ASN.1 forme codée de l’empreinte de certificat et sont ajoutés de la collection à l’aide de `<add>` élément. Vous pouvez effacer ou supprimer des émetteurs (certificats) dans la liste à l’aide de la `<clear>` et `<remove>` éléments.  
   
- Le `type` attribut de la `<issuerNameRegistry>` élément doit faire référence à la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> de classes pour la `<trustedIssuers>` élément soit valide.  
+ Le `type` attribut de la `<issuerNameRegistry>` élément doit faire référence à la <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> classe pour le `<trustedIssuers>` élément soit valide.  
   
 ## <a name="example"></a>Exemple  
  Le code XML suivant montre comment spécifier l’émetteur de la configuration en fonction du Registre des noms.  

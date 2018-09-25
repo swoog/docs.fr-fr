@@ -1,5 +1,5 @@
 ---
-title: '&lt;supprimer&gt; , élément pour &lt;namedCaches&gt;'
+title: '&lt;supprimer&gt; élément pour &lt;namedCaches&gt;'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
@@ -7,15 +7,14 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6ffaea24910a6b8f4a120d6b72219bff592fab17
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745212"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071717"
 ---
-# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;supprimer&gt; , élément pour &lt;namedCaches&gt;
+# <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;supprimer&gt; élément pour &lt;namedCaches&gt;
 Supprime une entité de cache nommé de la collection `namedCaches` d’un cache mémoire.  
   
  \<system.runtime.caching>  
@@ -48,7 +47,7 @@ Supprime une entité de cache nommé de la collection `namedCaches` d’un cache
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contient une collection de paramètres de configuration pour le nommé <xref:System.Runtime.Caching.MemoryCache> instances.|  
+|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Contient une collection de paramètres de configuration pour l’élément nommé <xref:System.Runtime.Caching.MemoryCache> instances.|  
   
 ## <a name="remarks"></a>Notes  
  Le `remove` élément supprime un `namedCache` entrée à partir de la collection de cache nommé pour un cache mémoire.  

@@ -6,16 +6,15 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 73fd9919d1403ef592e5b81c11b6eb659baea669
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c5ab5e76ebed549df09b365a5a271f81003a517
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493040"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073552"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Comment : sécuriser un service avec un certificat X.509
-La sécurisation d’un service avec un certificat X.509 est une technique de base utilisée par la plupart des liaisons Windows Communication Foundation (WCF). Cette rubrique décrit les étapes de la configuration d'un service auto-hébergé avec un certificat X.509.  
+Sécurisation d’un service avec un certificat X.509 est une technique de base qui utilisent la plupart des liaisons Windows Communication Foundation (WCF). Cette rubrique décrit les étapes de la configuration d'un service auto-hébergé avec un certificat X.509.  
   
  L'une des conditions préalables est de disposer d'un certificat valide pouvant être utilisé pour authentifier le serveur. Le certificat doit être envoyé au serveur par une autorité de certification approuvée. Si le certificat n'est pas valide, les clients qui essayeront d'utiliser le service ne lui feront pas confiance, et par conséquent aucune connexion ne sera établie. Pour plus d’informations sur l’utilisation de certificats, consultez [utilisation des certificats](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
@@ -33,7 +32,7 @@ La sécurisation d’un service avec un certificat X.509 est une technique de ba
      [!code-csharp[C_SecureWithCertificate#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#2)]
      [!code-vb[C_SecureWithCertificate#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#2)]  
   
-4.  Créez une instance de la classe <xref:System.Uri> pour l'adresse de base du service. Étant donné que le `WSHttpBinding` utilise le transport HTTP, l’identificateur de ressource uniforme (URI) doit commencer par ce schéma, ou Windows Communication Foundation (WCF) lève une exception lorsque le service est ouvert.  
+4.  Créez une instance de la classe <xref:System.Uri> pour l'adresse de base du service. Étant donné que le `WSHttpBinding` utilise le transport HTTP, l’identificateur URI (Uniform Resource) doit commencer par ce schéma, ou Windows Communication Foundation (WCF) lève une exception lors de l’ouverture du service.  
   
      [!code-csharp[C_SecureWithCertificate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewithcertificate/cs/source.cs#3)]
      [!code-vb[C_SecureWithCertificate#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewithcertificate/vb/source.vb#3)]  

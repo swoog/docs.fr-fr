@@ -1,5 +1,5 @@
 ---
-title: '&lt;Désactivez&gt; , élément pour webRequestModules (paramètres réseau)'
+title: '&lt;Désactivez&gt; , élément de webRequestModules (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d89fbc757198f25219b8051bf77dbdeea0cef53
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752726"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070381"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Désactivez&gt; , élément pour webRequestModules (paramètres réseau)
+# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Désactivez&gt; , élément de webRequestModules (paramètres réseau)
 Supprime tous les modules de demande Web inscrits de l’application.  
   
  \<configuration>  
@@ -47,7 +46,7 @@ Supprime tous les modules de demande Web inscrits de l’application.
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Spécifie les modules à utiliser pour demander des informations à des hôtes réseau.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Spécifie les modules à utiliser pour demander des informations à partir d’hôtes de réseau.|  
   
 ## <a name="remarks"></a>Notes  
  Le `clear` élément supprime inscrits tous les modules de demande Web qui ont été définis précédemment dans le fichier de configuration ou à un niveau supérieur dans la hiérarchie de configuration.  

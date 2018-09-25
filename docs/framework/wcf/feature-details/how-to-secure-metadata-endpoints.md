@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 659291975902ec78c1484ac77f898b4486000e8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f1dae4b9d2976ddbc941e49843324a29ec8885a4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497176"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090225"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>Comment : sécuriser des points de terminaison de métadonnées
 Les métadonnées d'un service peuvent contenir des informations sensibles sur votre application dont un utilisateur malveillant peut tirer parti. Les consommateurs de votre service peuvent également avoir besoin d'un mécanisme sécurisé pour obtenir des métadonnées sur votre service. Par conséquent, il est parfois nécessaire de publier vos métadonnées à l'aide d'un point de terminaison sécurisé.  
   
- Points de terminaison de métadonnées sont en général sécurisés à l’aide de mécanismes de sécurité standard définies dans Windows Communication Foundation (WCF) pour la sécurisation des points de terminaison application. (Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
+ Points de terminaison de métadonnées sont en général sécurisés à l’aide de mécanismes de sécurité standard définis dans Windows Communication Foundation (WCF) pour la sécurisation des points de terminaison application. (Pour plus d’informations, consultez [vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
   
  Cette rubrique présente en détail les étapes permettant de créer un point de terminaison sécurisé par un certificat SSL (Secure Sockets Layer) ou, en d'autres termes, un point de terminaison HTTPS.  
   
@@ -41,7 +40,7 @@ Les métadonnées d'un service peuvent contenir des informations sensibles sur v
   
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>Pour créer un point de terminaison sécurisé de métadonnées HTTPS GET dans la configuration  
   
-1.  Ajouter un [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) élément à la [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément du fichier de configuration de votre service.  
+1.  Ajouter un [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) élément à la [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) élément du fichier de configuration pour votre service.  
   
 2.  Ajouter un [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) élément à la [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) élément.  
   
@@ -55,7 +54,7 @@ Les métadonnées d'un service peuvent contenir des informations sensibles sur v
   
 7.  Affectez une valeur appropriée à l'attribut `httpsGetUrl` de l'élément `<serviceMetadata>`. Notez que si vous spécifiez une adresse absolue, l'URL doit commencer par le préfixe https://. Si vous spécifiez une adresse relative, vous devez fournir une adresse de base HTTPS pour votre hôte de service. Si cette propriété n'est pas définie, l'adresse par défaut est "" ou directement l'adresse de base HTTPS pour le service.  
   
-8.  Pour utiliser le comportement avec un service, définissez la `behaviorConfiguration` attribut de la [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément sur la valeur de l’attribut de nom de l’élément de comportement. Le code de configuration ci-dessous illustre un exemple complet.  
+8.  Pour utiliser le comportement avec un service, définissez la `behaviorConfiguration` attribut de la [ \<service >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) élément à la valeur de l’attribut de nom de l’élément de comportement. Le code de configuration ci-dessous illustre un exemple complet.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

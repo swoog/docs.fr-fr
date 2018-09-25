@@ -3,18 +3,17 @@ title: ReadMe pour l'exemple d'authentification de protection étendue
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495078"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110311"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>ReadMe pour l'exemple d'authentification de protection étendue
-La Protection étendue est une initiative de sécurité pour protéger contre les attaques (d’intercepteur MITM) man-in-the-middle, dans lequel une personne malveillante (le « man-in-the-middle ») intercepte les informations d’identification d’un client et les utilise pour accéder aux ressources sécurisées sur le serveur du client prévue.  
+La Protection étendue est une initiative de sécurité pour vous protéger contre les attaques (d’intercepteur MITM) man-in-the-middle, dans lequel un attaquant (le « man-in-the-middle ») intercepte les informations d’identification d’un client et les utilise pour accéder aux ressources sécurisées sur le serveur du client prévue.  
   
- Pour plus d’informations, consultez [Extended Protection for Authentication Overview](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
+ Pour plus d’informations, consultez [la Protection étendue pour une vue d’ensemble de l’authentification](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
   
 > [!NOTE]
 >  Cet exemple fonctionne uniquement dans le cadre d'un hébergement sur IIS. Ile ne fonctionne pas sur Visual Studio Development Server car il ne prend pas en charge HTTPS.  
@@ -45,6 +44,6 @@ La Protection étendue est une initiative de sécurité pour protéger contre le
   
 10. Vous pouvez tester le service en accédant à l'URL depuis une fenêtre de navigateur. Si vous souhaitez accéder à cette URL depuis plusieurs ordinateurs, assurez-vous que le pare-feu est ouvert pour l'ensemble des connexions HTTP et HTTPS entrantes.  
   
-11. Ouvrez le fichier de configuration client et fournissez un nom d’ordinateur complet pour le \<client >- \<point de terminaison >-attribut d’adresse, en remplaçant << nom_complet_ordinateur >>.  
+11. Ouvrez le fichier de configuration de client et de fournir un nom d’ordinateur complet pour le \<client >- \<point de terminaison >-attribut d’adresse, en remplaçant << nom_complet_ordinateur >>.  
   
 12. Exécutez le client. Le client communique avec le service en établissant un canal sécurisé et en utilisant une protection étendue de manière discrète.

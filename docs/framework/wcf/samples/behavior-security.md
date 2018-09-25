@@ -3,13 +3,12 @@ title: Sécurité des comportements
 ms.date: 03/30/2017
 ms.assetid: 19710ae3-f197-4d28-ba9d-52e465006819
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c1360a5b9e4b96c66b4bb7809fc139d1306730dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 255393c3b1fd6d395e0013010fc590c4579dda77
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499517"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077003"
 ---
 # <a name="behavior-security"></a>Sécurité des comportements
 Cette section contient des exemples qui indiquent comment configurer la sécurité des comportements de service.  

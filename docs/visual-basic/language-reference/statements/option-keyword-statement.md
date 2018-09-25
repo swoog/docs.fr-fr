@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576572"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074870"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Option &lt;mot clé&gt; instruction
 Introduit une instruction qui spécifie une option du compilateur qui s’applique à l’intégralité du fichier source.  

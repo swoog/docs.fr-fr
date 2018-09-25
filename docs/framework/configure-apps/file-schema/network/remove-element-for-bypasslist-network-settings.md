@@ -1,5 +1,5 @@
 ---
-title: '&lt;Supprimez&gt; , élément pour bypasslist (paramètres réseau)'
+title: '&lt;supprimer&gt; , élément de bypasslist (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/remove
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742947"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074977"
 ---
-# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Supprimez&gt; , élément pour bypasslist (paramètres réseau)
-Supprime une adresse IP ou le nom DNS de la liste de contournement du proxy.  
+# <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;supprimer&gt; , élément de bypasslist (paramètres réseau)
+Supprime une adresse IP ou le nom DNS de la liste de contournement proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -58,7 +57,7 @@ Supprime une adresse IP ou le nom DNS de la liste de contournement du proxy.
 ## <a name="remarks"></a>Notes  
  Le `remove` élément supprime des expressions régulières décrivant les adresses IP ou des noms de serveur DNS dans la liste des adresses qui contournent un serveur proxy. Les adresses ont été définis précédemment dans le fichier de configuration ou à un niveau supérieur dans la hiérarchie de configuration.  
   
- La valeur de la `address` attribut doit être une expression régulière qui décrit un ensemble d’adresses IP ou des noms d’hôte.  
+ La valeur de la `address` attribut doit être une expression régulière qui décrit un ensemble d’adresses IP ou noms d’hôte.  
   
  Pour plus d’informations sur les expressions régulières, consultez. [Expressions régulières .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -66,7 +65,7 @@ Supprime une adresse IP ou le nom DNS de la liste de contournement du proxy.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant supprime toute définition précédente pour le domaine adventure-works.com, puis ajoute le domaine contoso.com à la liste d’exclusion.  
+ L’exemple suivant supprime toute définition précédente pour le domaine adventure-works.com, puis ajoute le domaine contoso.com à la liste de contournement.  
   
 ```xml  
 <configuration>  

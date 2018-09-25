@@ -3,13 +3,12 @@ title: Recommandations sur la migration d’une application générée à l’ai
 ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5db0925900a357134cf0103bbebbf5c9aac9e688
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ec66803edc21f186fa9a8c5bcb91b5181789893d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386863"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47086864"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Recommandations sur la migration d’une application générée à l’aide de WIF 3.5 à WIF 4.5
 ## <a name="applies-to"></a>S'applique à  

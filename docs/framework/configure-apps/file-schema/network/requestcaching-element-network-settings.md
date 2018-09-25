@@ -1,5 +1,5 @@
 ---
-title: '&lt;requestCaching&gt; élément (paramètres réseau)'
+title: '&lt;requestCaching&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#requestCaching
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9c0c8d80182931f9ac14e687a337b7be55a5a9a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743431"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083187"
 ---
-# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; élément (paramètres réseau)
+# <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; , élément (paramètres réseau)
 Contrôle le mécanisme de mise en cache pour les demandes réseau.  
   
  \<configuration>  
@@ -45,20 +44,20 @@ Contrôle le mécanisme de mise en cache pour les demandes réseau.
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`isPrivateCache`|Spécifie si le cache fournit une isolation entre les informations des différents utilisateurs. La valeur par défaut est `true`. Cette valeur doit être `false` pour les applications de couche intermédiaire.|  
-|`disableAllCaching`|Spécifie que la mise en cache est désactivée pour toutes les réponses Web et ne peut pas être modifié par programmation.|  
+|`isPrivateCache`|Spécifie si le cache fournit une isolation entre les informations d’utilisateurs différents. La valeur par défaut est `true`. Cette valeur doit être `false` pour les applications de couche intermédiaire.|  
+|`disableAllCaching`|Spécifie que la mise en cache est désactivée pour toutes les réponses Web et ne peut pas être substituée par programmation.|  
 |`defaultPolicyLevel`|Une des valeurs dans l’énumération <xref:System.Net.Cache.RequestCacheLevel>. La valeur par défaut est `BypassCache`.|  
 |`unspecifiedMaximumAge`|Spécifie la durée par défaut après lequel le contenu est marqué comme ayant expiré.|  
   
-## <a name="policylevel-attribute"></a>PolicyLevel qui n’est attribut  
+## <a name="policylevel-attribute"></a>policyLevel attribut  
   
 |Value|Description|  
 |-----------|-----------------|  
-|`Default`|Retourne la ressource mise en cache si la ressource est actualisée, la longueur du contenu est précise et d’expiration, modification et les attributs de la longueur de contenu sont présents.|  
+|`Default`|Retourne la ressource mise en cache si la ressource est actualisée, la longueur du contenu est précise, et l’expiration, la modification et attributs de la longueur du contenu sont présents.|  
 |`BypassCache`|Retourne la ressource à partir du serveur.|  
-|`CacheOnly`|Retourne la ressource mise en cache si la longueur du contenu est présente et qu’il correspond à la taille de l’entrée.|  
-|`CacheIfAvailable`|Retourne la ressource mise en cache si la longueur du contenu est fournie et correspond à la taille de l’entrée ; Sinon, la ressource est téléchargée à partir du serveur et est retournée à l’appelant.|  
-|`Revalidate`|Retourne la ressource mise en cache si l’horodatage de la ressource mise en cache est identique à celui de la ressource sur le serveur ; Sinon, la ressource est téléchargée à partir du serveur, stocké dans le cache et est retournée à l’appelant.|  
+|`CacheOnly`|Retourne la ressource mise en cache si la longueur du contenu est présente et qu’il correspond à la taille d’entrée.|  
+|`CacheIfAvailable`|Retourne la ressource mise en cache si la longueur du contenu est fournie et correspond à la taille d’entrée ; Sinon, la ressource est téléchargée à partir du serveur et est retournée à l’appelant.|  
+|`Revalidate`|Retourne la ressource mise en cache si l’horodatage de la ressource mise en cache est identique à l’horodatage de la ressource sur le serveur ; Sinon, la ressource est téléchargée à partir du serveur, stocké dans le cache et est retournée à l’appelant.|  
 |`Reload`|Télécharge la ressource à partir du serveur, il stocke dans le cache et retourne la ressource à l’appelant.|  
 |`NoCacheNoStore`|Si une ressource mise en cache existe, elle est supprimée. La ressource est téléchargée à partir du serveur et est retournée à l’appelant.|  
 |`Revalidate`|Satisfait une demande à l’aide de la copie mise en cache de la ressource si l’horodatage est le même que l’horodatage de la ressource sur le serveur ; Sinon, la ressource est téléchargée à partir du serveur, présenté à l’appelant et est stockée dans le cache,|  

@@ -2,12 +2,12 @@
 title: UriTemplate et UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478591"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090511"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate et UriTemplateTable
 Les développeurs de sites Web ont besoin de pouvoir décrire la forme et la disposition des URI auxquels leurs services répondent. Windows Communication Foundation (WCF) ajouté deux nouvelles classes pour permettre aux développeurs de contrôler leurs URI. <xref:System.UriTemplate> et <xref:System.UriTemplateTable> constituent la base du moteur de répartition reposant sur l’URI de WCF. Ces classes peuvent également être utilisées sur leur propre, ce qui permet aux développeurs de tirer parti des modèles et l’URI de mécanisme de mappage sans avoir à implémenter un service WCF.  
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  Un URI comme http://localhost:8000/// ne correspond pas au modèle que répertorié dans le code précédent, toutefois un URI comme http://localhost:8000/ est.  
+> Un URI comme `http://localhost:8000///` ne correspond pas au modèle que répertorié dans le code précédent, toutefois un URI comme `http://localhost:8000/` est.  
   
  Le code suivant montre comment les valeurs de variables par défaut sont gérées à la création d'un URI avec un modèle.  
   

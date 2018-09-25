@@ -1,5 +1,5 @@
 ---
-title: '&lt;ajouter&gt; , élément pour authenticationModules (paramètres réseau)'
+title: '&lt;ajouter&gt; , élément d’authenticationModules (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 471e36bb584164b851e7a06c0e682ba9872f7910
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4a9bcc6cd5d2bbf30f463da0a51e1bccbcd5a3f1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742898"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083885"
 ---
-# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;ajouter&gt; , élément pour authenticationModules (paramètres réseau)
+# <a name="ltaddgt-element-for-authenticationmodules-network-settings"></a>&lt;ajouter&gt; , élément d’authenticationModules (paramètres réseau)
 Ajoute un module d’authentification à l’application.  
   
  \<configuration>  
@@ -43,7 +42,7 @@ Ajoute un module d’authentification à l’application.
   
 |**Attribut**|**Description**|  
 |-------------------|---------------------|  
-|`type`|Le nom de type qualifié complet (indiqué par le <xref:System.Type.FullName%2A> propriété) et le nom de l’assembly (indiqué par le <xref:System.Reflection.Assembly.FullName%2A> propriété), séparés par une virgule.|  
+|`type`|Le nom de type qualifié complet (indiqué par le <xref:System.Type.FullName%2A> propriété) et le nom d’assembly (indiqué par le <xref:System.Reflection.Assembly.FullName%2A> propriété), séparés par une virgule.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -63,7 +62,7 @@ Ajoute un module d’authentification à l’application.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant active les modules d’authentification par défaut. Vous devez remplacer les valeurs de Version et de PublicKeyToken par les valeurs correctes pour le module spécifié.  
+ L’exemple suivant active les modules d’authentification par défaut. Vous devez remplacer les valeurs de Version et PublicKeyToken par les valeurs correctes pour le module spécifié.  
   
 ```xml  
 <configuration>  

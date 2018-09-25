@@ -8,16 +8,15 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2fa8d753d5fb168c14ee71cbbf6de62e0e4aff9e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806394"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073202"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Comment : sécuriser un service à l'aide d'informations d'identification Windows
-Cette rubrique montre comment activer la sécurité de transport sur un service Windows Communication Foundation (WCF) qui réside dans un domaine Windows et est appelée par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité de Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez la [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  
+Cette rubrique montre comment activer la sécurité de transport sur un service Windows Communication Foundation (WCF) qui réside dans un domaine Windows et est appelé par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité du Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez le [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  
   
  Cette rubrique suppose que vous avez une interface de contrat existante et que l'implémentation est déjà définie et s'ajoute à cela. Vous pouvez également modifier un service et un client existants.  
   
@@ -46,17 +45,17 @@ Cette rubrique montre comment activer la sécurité de transport sur un service 
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Utilisation de la liaison dans un service  
- Il s’agit de la deuxième procédure, qui indique comment utiliser la liaison dans un service auto-hébergé. Pour plus d’informations sur l’hébergement des services, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
+ Il s’agit de la deuxième procédure, qui indique comment utiliser la liaison dans un service auto-hébergé. Pour plus d’informations sur les services d’hébergement, consultez [Services d’hébergement](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Pour utiliser une liaison dans un service  
   
 1.  Insérez le code de cette procédure après celui de la procédure précédente.  
   
-2.  Créez une variable <xref:System.Type> nommée `contractType` et assignez-lui le type de l'interface (`ICalculator`). Lorsque vous utilisez Visual Basic, utilisez la `GetType` opérateur ; lorsque vous utilisez c#, utilisez le `typeof` (mot clé).  
+2.  Créez une variable <xref:System.Type> nommée `contractType` et assignez-lui le type de l'interface (`ICalculator`). Lorsque vous utilisez Visual Basic, utilisez la `GetType` opérateur ; lorsque vous utilisez c#, utilisez le `typeof` mot clé.  
   
 3.  Créez une deuxième variable `Type` nommée `serviceType` et assignez-lui le type du contrat implémenté (`Calculator`).  
   
-4.  Créez une instance de la classe <xref:System.Uri> nommée `baseAddress` avec l'adresse de base du service. L'adresse de base doit avoir un schéma qui correspond au transport. Dans ce cas, le schéma de transport est HTTP, ainsi que l’adresse spéciales identificateur de ressource uniforme (URI) « localhost » et un port number (8036), ainsi qu’une adresse de point de terminaison de base (« serviceModelSamples /) : http://localhost:8036/serviceModelSamples/.  
+4.  Créez une instance de la classe <xref:System.Uri> nommée `baseAddress` avec l'adresse de base du service. L'adresse de base doit avoir un schéma qui correspond au transport. Dans ce cas, le schéma de transport est HTTP, et l’adresse inclut spéciale identificateur URI (Uniform Resource) « localhost » et un port number (8036), ainsi qu’une adresse de point de terminaison de base (« serviceModelSamples /) : http://localhost:8036/serviceModelSamples/.  
   
 5.  Créez une instance de la classe <xref:System.ServiceModel.ServiceHost> avec les variables `serviceType` et `baseAddress`.  
   
@@ -96,7 +95,7 @@ Cette rubrique montre comment activer la sécurité de transport sur un service 
 ## <a name="using-the-configuration-file"></a>Utilisation du fichier de configuration  
  Au lieu de créer la liaison avec le code de procédure, vous pouvez utiliser le code suivant indiqué pour la section Liaisons du fichier de configuration.  
   
- Si vous n’avez pas déjà un service défini, consultez [conception et implémentation de Services](../../../docs/framework/wcf/designing-and-implementing-services.md), et [configuration des Services](../../../docs/framework/wcf/configuring-services.md).  
+ Si vous ne disposez pas d’un service défini, consultez [conception et implémentation de Services](../../../docs/framework/wcf/designing-and-implementing-services.md), et [configuration des Services](../../../docs/framework/wcf/configuring-services.md).  
   
  **Remarque** ce code de configuration est utilisé dans les fichiers de configuration du service et le client.  
   
@@ -110,7 +109,7 @@ Cette rubrique montre comment activer la sécurité de transport sur un service 
   
 4.  Ajoutez un élément <`message`> et définissez l'attribut `clientCredentialType` sur la valeur Windows.  
   
-5.  Dans le fichier de configuration du service, remplacez la section `<bindings>` par le code suivant. Si vous n’avez pas déjà un fichier de configuration de service, consultez [à l’aide de liaisons pour configurer les Services et les Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
+5.  Dans le fichier de configuration du service, remplacez la section `<bindings>` par le code suivant. Si vous n’avez pas déjà un fichier de configuration de service, consultez [à l’aide de liaisons pour configurer les Services et Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
     ```xml  
     <bindings>  
