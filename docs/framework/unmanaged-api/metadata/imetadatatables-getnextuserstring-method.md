@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 01b326765e792bf97658d951a2d5590d22eff546
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493424"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157741"
 ---
-# <a name="imetadatatablesgetnextuserstring-method"></a><span data-ttu-id="2cc36-102">IMetaDataTables::GetNextUserString, méthode</span><span class="sxs-lookup"><span data-stu-id="2cc36-102">IMetaDataTables::GetNextUserString Method</span></span>
-<span data-ttu-id="2cc36-103">Obtient l’index de la ligne qui contient la chaîne codée en dur suivante dans la colonne de table actuelle.</span><span class="sxs-lookup"><span data-stu-id="2cc36-103">Gets the index of the row that contains the next hard-coded string in the current table column.</span></span>  
+# <a name="imetadatatablesgetnextuserstring-method"></a><span data-ttu-id="2bd3e-102">IMetaDataTables::GetNextUserString, méthode</span><span class="sxs-lookup"><span data-stu-id="2bd3e-102">IMetaDataTables::GetNextUserString Method</span></span>
+<span data-ttu-id="2bd3e-103">Obtient l’index de la ligne qui contient la chaîne codée en dur suivante dans la colonne de table actuelle.</span><span class="sxs-lookup"><span data-stu-id="2bd3e-103">Gets the index of the row that contains the next hard-coded string in the current table column.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2cc36-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2cc36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2bd3e-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="2bd3e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextUserString (  
@@ -36,25 +36,25 @@ HRESULT GetNextUserString (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2cc36-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="2cc36-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2bd3e-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="2bd3e-105">Parameters</span></span>  
  `ixUserString`  
- <span data-ttu-id="2cc36-106">[in] Une valeur d’index à partir de la colonne de chaîne actuelle.</span><span class="sxs-lookup"><span data-stu-id="2cc36-106">[in] An index value from the current string column.</span></span>  
+ <span data-ttu-id="2bd3e-106">[in] Une valeur d’index à partir de la colonne de chaîne actuelle.</span><span class="sxs-lookup"><span data-stu-id="2bd3e-106">[in] An index value from the current string column.</span></span>  
   
  `pNext`  
- <span data-ttu-id="2cc36-107">[out] Pointeur vers l’index de ligne de la chaîne suivante dans la colonne.</span><span class="sxs-lookup"><span data-stu-id="2cc36-107">[out] A pointer to the row index of the next string in the column.</span></span>  
+ <span data-ttu-id="2bd3e-107">[out] Pointeur vers l’index de ligne de la chaîne suivante dans la colonne.</span><span class="sxs-lookup"><span data-stu-id="2bd3e-107">[out] A pointer to the row index of the next string in the column.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2cc36-108">Notes</span><span class="sxs-lookup"><span data-stu-id="2cc36-108">Remarks</span></span>  
- <span data-ttu-id="2cc36-109">Nous déconseillons l’utilisation de cette méthode, car elle ne retourne pas de résultats cohérents.</span><span class="sxs-lookup"><span data-stu-id="2cc36-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="2cc36-110">Pour plus d’informations sur le tableau GUID, consultez la documentation de Common Language Infrastructure (CLI), en particulier « Partition II : Metadata Definition et Semantics ».</span><span class="sxs-lookup"><span data-stu-id="2cc36-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="2cc36-111">La documentation est disponible en ligne. Consultez [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) sur MSDN et [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) sur le site web d’Ecma International.</span><span class="sxs-lookup"><span data-stu-id="2cc36-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2bd3e-108">Notes</span><span class="sxs-lookup"><span data-stu-id="2bd3e-108">Remarks</span></span>  
+ <span data-ttu-id="2bd3e-109">Nous déconseillons l’utilisation de cette méthode, car elle ne retourne pas de résultats cohérents.</span><span class="sxs-lookup"><span data-stu-id="2bd3e-109">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="2bd3e-110">Pour plus d’informations sur le tableau GUID, consultez la documentation de Common Language Infrastructure (CLI), en particulier « Partition II : Metadata Definition et Semantics ».</span><span class="sxs-lookup"><span data-stu-id="2bd3e-110">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="2bd3e-111">La documentation est disponible en ligne. Consultez [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) sur MSDN et [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) sur le site web d’Ecma International.</span><span class="sxs-lookup"><span data-stu-id="2bd3e-111">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2cc36-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="2cc36-112">Requirements</span></span>  
- <span data-ttu-id="2cc36-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2cc36-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2bd3e-112">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="2bd3e-112">Requirements</span></span>  
+ <span data-ttu-id="2bd3e-113">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bd3e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2cc36-114">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2cc36-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2bd3e-114">**En-tête :** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2bd3e-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="2cc36-115">**Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2cc36-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2bd3e-115">**Bibliothèque :** utilisé en tant que ressource dans MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2bd3e-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="2cc36-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2cc36-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2bd3e-116">**Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bd3e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cc36-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2cc36-117">See Also</span></span>  
- [<span data-ttu-id="2cc36-118">IMetaDataTables, interface</span><span class="sxs-lookup"><span data-stu-id="2cc36-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="2cc36-119">IMetaDataTables2, interface</span><span class="sxs-lookup"><span data-stu-id="2cc36-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2bd3e-117">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="2bd3e-117">See Also</span></span>  
+ [<span data-ttu-id="2bd3e-118">IMetaDataTables, interface</span><span class="sxs-lookup"><span data-stu-id="2bd3e-118">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [<span data-ttu-id="2bd3e-119">IMetaDataTables2, interface</span><span class="sxs-lookup"><span data-stu-id="2bd3e-119">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
