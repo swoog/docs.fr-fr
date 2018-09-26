@@ -2,12 +2,12 @@
 title: Recherche de découverte et FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bd54a7bc896870035972daf1ea6f56d84dc5414e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855997"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205437"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Recherche de découverte et FindCriteria
 Une opération de recherche de découverte est lancée par un client pour découvrir un ou plusieurs services ; il s'agit de l'une des principales actions de la découverte. Effectuer une recherche envoie un message Probe WS-Discovery sur le réseau. Les services qui correspondent aux critères spécifiés répondent avec des messages WS-Discovery ProbeMatch. Pour plus d’informations sur les messages de découverte, consultez la [spécification WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -68,5 +68,4 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
  [Vue d’ensemble de la découverte WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
  [Utilisation du canal client de découverte](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Découverte avec étendues](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
- [Recherche asynchrone](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
  [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)
