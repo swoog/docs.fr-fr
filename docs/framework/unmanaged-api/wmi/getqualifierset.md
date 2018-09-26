@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 635dc7605af00f2662a9f9553adefafcd25f9452
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079458"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47198759"
 ---
-# <a name="getqualifierset-function"></a><span data-ttu-id="97882-103">GetQualifierSet (fonction)</span><span class="sxs-lookup"><span data-stu-id="97882-103">GetQualifierSet function</span></span>
-<span data-ttu-id="97882-104">Récupère le jeu de qualificateurs pour une instance de classe ou une définition de classe.</span><span class="sxs-lookup"><span data-stu-id="97882-104">Retrieves the qualifier set for a class instance or a class definition.</span></span>
+# <a name="getqualifierset-function"></a><span data-ttu-id="b9c83-103">GetQualifierSet (fonction)</span><span class="sxs-lookup"><span data-stu-id="b9c83-103">GetQualifierSet function</span></span>
+<span data-ttu-id="b9c83-104">Récupère le jeu de qualificateurs pour une instance de classe ou une définition de classe.</span><span class="sxs-lookup"><span data-stu-id="b9c83-104">Retrieves the qualifier set for a class instance or a class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="97882-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="97882-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9c83-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="b9c83-105">Syntax</span></span>  
   
 ```  
 HRESULT GetQualifierSet (
@@ -38,41 +38,41 @@ HRESULT GetQualifierSet (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="97882-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="97882-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="b9c83-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="b9c83-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="97882-107">[in] Ce paramètre n’est pas utilisé.</span><span class="sxs-lookup"><span data-stu-id="97882-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="b9c83-107">[in] Ce paramètre n’est pas utilisé.</span><span class="sxs-lookup"><span data-stu-id="b9c83-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="97882-108">[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span><span class="sxs-lookup"><span data-stu-id="97882-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="b9c83-108">[in] Un pointeur vers un [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span><span class="sxs-lookup"><span data-stu-id="b9c83-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `ppQualSet`  
-<span data-ttu-id="97882-109">[out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de l’objet de classe.</span><span class="sxs-lookup"><span data-stu-id="97882-109">[out] Receives the interface pointer that allows access to the qualifiers of the class object.</span></span> <span data-ttu-id="97882-110">`ppQualSet` ne peut pas avoir la valeur `null`.</span><span class="sxs-lookup"><span data-stu-id="97882-110">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="97882-111">Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur reste non modifié.</span><span class="sxs-lookup"><span data-stu-id="97882-111">If an error occurs, a new object is not returned, and the pointer is left unmodified.</span></span> 
+<span data-ttu-id="b9c83-109">[out] Reçoit le pointeur d’interface qui autorise l’accès pour les qualificateurs de l’objet de classe.</span><span class="sxs-lookup"><span data-stu-id="b9c83-109">[out] Receives the interface pointer that allows access to the qualifiers of the class object.</span></span> <span data-ttu-id="b9c83-110">`ppQualSet` ne peut pas avoir la valeur `null`.</span><span class="sxs-lookup"><span data-stu-id="b9c83-110">`ppQualSet` cannot be `null`.</span></span> <span data-ttu-id="b9c83-111">Si une erreur se produit, un nouvel objet n’est pas retourné, et le pointeur reste non modifié.</span><span class="sxs-lookup"><span data-stu-id="b9c83-111">If an error occurs, a new object is not returned, and the pointer is left unmodified.</span></span> 
 
-## <a name="return-value"></a><span data-ttu-id="97882-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="97882-112">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="b9c83-112">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="b9c83-112">Return value</span></span>
 
-<span data-ttu-id="97882-113">Les valeurs suivantes est retournées par cette fonction sont définies dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code :</span><span class="sxs-lookup"><span data-stu-id="97882-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="b9c83-113">Les valeurs suivantes est retournées par cette fonction sont définies dans le *WbemCli.h* fichier d’en-tête, ou vous pouvez les définir en tant que constantes dans votre code :</span><span class="sxs-lookup"><span data-stu-id="b9c83-113">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="97882-114">Constante</span><span class="sxs-lookup"><span data-stu-id="97882-114">Constant</span></span>  |<span data-ttu-id="97882-115">Value</span><span class="sxs-lookup"><span data-stu-id="97882-115">Value</span></span>  |<span data-ttu-id="97882-116">Description</span><span class="sxs-lookup"><span data-stu-id="97882-116">Description</span></span>  |
+|<span data-ttu-id="b9c83-114">Constante</span><span class="sxs-lookup"><span data-stu-id="b9c83-114">Constant</span></span>  |<span data-ttu-id="b9c83-115">Value</span><span class="sxs-lookup"><span data-stu-id="b9c83-115">Value</span></span>  |<span data-ttu-id="b9c83-116">Description</span><span class="sxs-lookup"><span data-stu-id="b9c83-116">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_FAILED` | <span data-ttu-id="97882-117">0 x 80041001</span><span class="sxs-lookup"><span data-stu-id="97882-117">0x80041001</span></span> | <span data-ttu-id="97882-118">Il y a eu une défaillance générale.</span><span class="sxs-lookup"><span data-stu-id="97882-118">There has been a general failure.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="97882-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="97882-119">0x80041002</span></span> | <span data-ttu-id="97882-120">La méthode spécifiée n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="97882-120">The specified method does not exist.</span></span> |
-|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="97882-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="97882-121">0x80041006</span></span> | <span data-ttu-id="97882-122">Mémoire est insuffisante pour terminer l’opération.</span><span class="sxs-lookup"><span data-stu-id="97882-122">Not enough memory is available to complete the operation.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="97882-123">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="97882-123">0x80041008</span></span> | <span data-ttu-id="97882-124">Un paramètre est `null`.</span><span class="sxs-lookup"><span data-stu-id="97882-124">A parameter is `null`.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="97882-125">0</span><span class="sxs-lookup"><span data-stu-id="97882-125">0</span></span> | <span data-ttu-id="97882-126">L’appel de fonction a réussi.</span><span class="sxs-lookup"><span data-stu-id="97882-126">The function call was successful.</span></span>  |
+|`WBEM_E_FAILED` | <span data-ttu-id="b9c83-117">0 x 80041001</span><span class="sxs-lookup"><span data-stu-id="b9c83-117">0x80041001</span></span> | <span data-ttu-id="b9c83-118">Il y a eu une défaillance générale.</span><span class="sxs-lookup"><span data-stu-id="b9c83-118">There has been a general failure.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="b9c83-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="b9c83-119">0x80041002</span></span> | <span data-ttu-id="b9c83-120">La méthode spécifiée n’existe pas.</span><span class="sxs-lookup"><span data-stu-id="b9c83-120">The specified method does not exist.</span></span> |
+|`WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="b9c83-121">0x80041006</span><span class="sxs-lookup"><span data-stu-id="b9c83-121">0x80041006</span></span> | <span data-ttu-id="b9c83-122">Mémoire est insuffisante pour terminer l’opération.</span><span class="sxs-lookup"><span data-stu-id="b9c83-122">Not enough memory is available to complete the operation.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="b9c83-123">0 x 80041008</span><span class="sxs-lookup"><span data-stu-id="b9c83-123">0x80041008</span></span> | <span data-ttu-id="b9c83-124">Un paramètre est `null`.</span><span class="sxs-lookup"><span data-stu-id="b9c83-124">A parameter is `null`.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="b9c83-125">0</span><span class="sxs-lookup"><span data-stu-id="b9c83-125">0</span></span> | <span data-ttu-id="b9c83-126">L’appel de fonction a réussi.</span><span class="sxs-lookup"><span data-stu-id="b9c83-126">The function call was successful.</span></span>  |
   
-## <a name="remarks"></a><span data-ttu-id="97882-127">Notes</span><span class="sxs-lookup"><span data-stu-id="97882-127">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b9c83-127">Notes</span><span class="sxs-lookup"><span data-stu-id="b9c83-127">Remarks</span></span>
 
-<span data-ttu-id="97882-128">Cette fonction encapsule un appel à la [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) (méthode).</span><span class="sxs-lookup"><span data-stu-id="97882-128">This function wraps a call to the [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) method.</span></span> 
+<span data-ttu-id="b9c83-128">Cette fonction encapsule un appel à la [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) (méthode).</span><span class="sxs-lookup"><span data-stu-id="b9c83-128">This function wraps a call to the [IWbemClassObject::GetQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getqualifierset) method.</span></span> 
 
-<span data-ttu-id="97882-129">Le [IWbemQualifierSet pointeur](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permet à l’appelant ajouter, modifier ou supprimer ces qualificateurs.</span><span class="sxs-lookup"><span data-stu-id="97882-129">The [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span> <span data-ttu-id="97882-130">Ces qualificateurs ajoutés, modifiés ou supprimés s’appliquent à la définition de classe ou instance entière.</span><span class="sxs-lookup"><span data-stu-id="97882-130">Such added, edited, or deleted qualifiers apply to the entire instance or class definition.</span></span>
+<span data-ttu-id="b9c83-129">Le [IWbemQualifierSet pointeur](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) permet à l’appelant ajouter, modifier ou supprimer ces qualificateurs.</span><span class="sxs-lookup"><span data-stu-id="b9c83-129">The [IWbemQualifierSet pointer](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) lets the caller add, edit, or delete these qualifiers.</span></span> <span data-ttu-id="b9c83-130">Ces qualificateurs ajoutés, modifiés ou supprimés s’appliquent à la définition de classe ou instance entière.</span><span class="sxs-lookup"><span data-stu-id="b9c83-130">Such added, edited, or deleted qualifiers apply to the entire instance or class definition.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="97882-131">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="97882-131">Requirements</span></span>  
-<span data-ttu-id="97882-132">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="97882-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b9c83-131">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="b9c83-131">Requirements</span></span>  
+<span data-ttu-id="b9c83-132">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b9c83-132">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="97882-133">**En-tête :** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="97882-133">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="b9c83-133">**En-tête :** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="b9c83-133">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="97882-134">**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="97882-134">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="b9c83-134">**Versions du .NET Framework :** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="b9c83-134">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="97882-135">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="97882-135">See also</span></span>  
-[<span data-ttu-id="97882-136">WMI et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="97882-136">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="b9c83-135">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="b9c83-135">See also</span></span>  
+[<span data-ttu-id="b9c83-136">WMI et compteurs de performances (référence des API non managées)</span><span class="sxs-lookup"><span data-stu-id="b9c83-136">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
