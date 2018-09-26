@@ -3,13 +3,12 @@ title: Suivi d'activité dans la sécurité de message
 ms.date: 03/30/2017
 ms.assetid: 68862534-3b2e-4270-b097-8121b12a2c97
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 31882dfff746aa8e0e45698f70b0f19ae413d66a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 830339682f86d3882ff2cfc2d07d14145b987dde
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474855"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47157517"
 ---
 # <a name="activity-tracing-in-message-security"></a>Suivi d'activité dans la sécurité de message
 Cette rubrique décrit le suivi d'activité pour le traitement de sécurité, qui se produit dans les trois phases suivantes.  
@@ -23,7 +22,7 @@ Cette rubrique décrit le suivi d'activité pour le traitement de sécurité, qu
 ## <a name="negotiationsct-exchange"></a>Échange de négociation/SCT  
  Dans la phase d'échange de négociation/SCT, deux types d'activité sont créés sur le client : « Configurer une session sécurisée » et « Fermer une session sécurisée ». Le type « Configurer une session sécurisée » comprend des suivis pour les échanges de messages RST/RSTR/SCT, tandis que le type « Fermer une session sécurisée » inclut des suivis pour le message Cancel.  
   
- Sur le serveur, chaque demande/réponse pour les échanges RST/RSTR/SCT apparaît dans sa propre activité. Si `propagateActivity` = `true` sur le serveur et le client, les activités sur le serveur ont le même ID et apparaissent ensemble dans le « le programme d’installation Session sécurisée » lorsqu’ils sont affichés avec Service Trace Viewer.  
+ Sur le serveur, chaque demande/réponse pour les échanges RST/RSTR/SCT apparaît dans sa propre activité. Si `propagateActivity` = `true` sur le serveur et client, les activités sur le serveur ont le même ID et apparaissent ensemble dans le « le programme d’installation une Session sécurisée » lorsqu’ils sont affichés avec Service Trace Viewer.  
   
  Ce modèle d'activité de suivi est valide pour l'authentification par nom d'utilisateur/mot de passe, l'authentification du certificat et l'authentification NTLM.  
   
@@ -31,8 +30,8 @@ Cette rubrique décrit le suivi d'activité pour le traitement de sécurité, qu
   
 ||Occurrence de l'échange de négociation/SCT|Activités|Suivis|  
 |-|-------------------------------------------------|----------------|------------|  
-|Transport sécurisé<br /><br /> (HTTPS, SSL)|À réception du premier message.|Les suivis sont émis dans l'activité ambiante.|-Suivis des échanges<br />-Canal sécurisé établi<br />-Partager les secrets obtenus.|  
-|Couche de message sécurisée<br /><br /> (WSHTTP)|À réception du premier message.|Sur le client :<br /><br /> -« Le programme d’installation Session sécurisée » depuis « Traiter l’Action » de ce premier message, pour chaque demande/réponse pour RST/RSTR/SCT.<br />-« Fermer une Session sécurisée », pour l’échange CANCEL, hors de l’activité « fermer le Proxy ». Cette activité peut provenir d'une autre activité ambiante, selon le moment où la session sécurisée est fermée.<br /><br /> Sur le serveur :<br /><br /> -Activité « Traiter l’Action » un pour chaque demande/réponse pour RST/SCT/Cancel sur le serveur. Si `propagateActivity` = `true`, les activités RST/RSTR/SCT sont fusionnées avec « Configurer une Session sécurisée » et Cancel est fusionnée avec l’activité « Fermeture » à partir du client.<br /><br /> Il y a deux étapes pour « Configurer une session sécurisée » :<br /><br /> 1.  Négociation de l'authentification. Facultatif si le client a déjà les informations d'identification qui conviennent. Cette phase peut être accomplie par un transport sécurisé, ou par des échanges de messages. Dans ce dernier cas, 1 ou 2 échanges RST/RSTR peuvent se produire. Pour ces échanges, les suivis sont émis dans de nouvelles activités de demande/réponse comme prévu.<br />2.  Établissement de session sécurisée (SCT), dans laquelle un échange RST/RSTR se produit. A les mêmes activités ambiantes que celles décrites précédemment.|-Suivis des échanges<br />-Canal sécurisé établi<br />-Partager les secrets obtenus.|  
+|Transport sécurisé<br /><br /> (HTTPS, SSL)|À réception du premier message.|Les suivis sont émis dans l'activité ambiante.|-Les traces Exchange<br />-Canal sécurisé établi<br />-Partager les secrets obtenus.|  
+|Couche de message sécurisée<br /><br /> (WSHTTP)|À réception du premier message.|Sur le client :<br /><br /> -« Le programme d’installation Session sécurisée » depuis « Action de processus » de ce premier message, pour chaque demande/réponse pour RST/RSTR/SCT.<br />-« Fermer une Session sécurisée » pour l’échange CANCEL, en dehors de l’activité « fermer le Proxy ». Cette activité peut provenir d'une autre activité ambiante, selon le moment où la session sécurisée est fermée.<br /><br /> Sur le serveur :<br /><br /> -Activité « Traiter l’Action » un pour chaque demande/réponse pour RST/SCT/Cancel sur le serveur. Si `propagateActivity` = `true`, les activités RST/RSTR/SCT sont fusionnées avec « Configurer une Session sécurisée » et Cancel est fusionnée avec l’activité « Fermeture » à partir du client.<br /><br /> Il y a deux étapes pour « Configurer une session sécurisée » :<br /><br /> 1.  Négociation de l'authentification. Facultatif si le client a déjà les informations d'identification qui conviennent. Cette phase peut être accomplie par un transport sécurisé, ou par des échanges de messages. Dans ce dernier cas, 1 ou 2 échanges RST/RSTR peuvent se produire. Pour ces échanges, les suivis sont émis dans de nouvelles activités de demande/réponse comme prévu.<br />2.  Établissement de session sécurisée (SCT), dans laquelle un échange RST/RSTR se produit. A les mêmes activités ambiantes que celles décrites précédemment.|-Les traces Exchange<br />-Canal sécurisé établi<br />-Partager les secrets obtenus.|  
   
 > [!NOTE]
 >  En mode de sécurité mixte, l'authentification de négociation survient dans les échanges binaires, mais le SCT survient dans l'échange de messages. En mode de transport pur, la négociation survient uniquement dans le transport sans activités supplémentaires.  
@@ -44,7 +43,7 @@ Cette rubrique décrit le suivi d'activité pour le traitement de sécurité, qu
 |-|---------------------------------------------------------------------------------|  
 |Heure à laquelle surviennent le chiffrement/déchiffrement des message et l'authentification de la signature.|À réception du message|  
 |Activités|Les suivis sont émis dans l'activité ProcessAction sur le client et le serveur.|  
-|Suivis|-sendSecurityHeader (expéditeur) :<br />-Signer le message<br />-Chiffrer les données de la demande<br />-receiveSecurityHeader (récepteur) :<br />-Vérification de signature<br />-Déchiffrer les données de réponse<br />-Authentification|  
+|Suivis|-sendSecurityHeader (expéditeur) :<br />-Signer le message<br />-Chiffrer les données de la demande<br />-receiveSecurityHeader (récepteur) :<br />-Vérifier la signature<br />-Déchiffrer les données de réponse<br />-Authentification|  
   
 > [!NOTE]
 >  En mode de transport pur, le chiffrement/déchiffrement des messages se produit uniquement dans le transport sans activités supplémentaires.  

@@ -8,22 +8,21 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1e288daeb717fa9fa041d552cac4ec5d0cd28808
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495630"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171736"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Comment : créer une liaison personnalisée à l’aide de SecurityBindingElement
-Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui peuvent être configurées mais ne fournissent pas une souplesse complète lors de la configuration de toutes les options de sécurité WCF prend en charge. Cette rubrique montre comment créer une liaison personnalisée directement à partir d’éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d’une liaison de ce type. Pour plus d’informations sur la création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
+Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui peuvent être configurés mais ne fournissent pas une flexibilité totale lors de la configuration de toutes les options de sécurité WCF prend en charge. Cette rubrique montre comment créer une liaison personnalisée directement à partir d’éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d’une liaison de ce type. Pour plus d’informations sur la création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
 >  <xref:System.ServiceModel.Channels.SecurityBindingElement> ne prend pas en charge la forme de canal <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, qui est la forme de canal par défaut utilisée par le transport TCP lorsque <xref:System.ServiceModel.TransferMode> a la valeur <xref:System.ServiceModel.TransferMode.Buffered>. Vous devez définir <xref:System.ServiceModel.TransferMode> à <xref:System.ServiceModel.TransferMode.Streamed> pour utiliser <xref:System.ServiceModel.Channels.SecurityBindingElement> dans ce scénario.  
   
 ## <a name="creating-a-custom-binding"></a>Création d’une liaison personnalisée  
- Dans WCF toutes les liaisons sont composées de *éléments de liaison*. Chaque élément de liaison dérive de la classe <xref:System.ServiceModel.Channels.BindingElement>. Pour les liaisons fournies par le système standard, les éléments de liaison sont créés et configurés automatiquement, bien que vous puissiez personnaliser quelques paramètres de propriétés.  
+ Dans WCF toutes les liaisons sont constituées de *éléments de liaison*. Chaque élément de liaison dérive de la classe <xref:System.ServiceModel.Channels.BindingElement>. Pour les liaisons fournies par le système standard, les éléments de liaison sont créés et configurés automatiquement, bien que vous puissiez personnaliser quelques paramètres de propriétés.  
   
  En revanche, pour créer une liaison personnalisée, les éléments de liaison sont créés et configurés, puis une <xref:System.ServiceModel.Channels.CustomBinding> est créée à partir des éléments de liaison.  
   

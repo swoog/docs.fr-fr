@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748670"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172730"
 ---
 # <a name="ltruntimegt-element"></a>&lt;runtime&gt; élément
 Fournit des informations utilisées par le common language runtime pour configurer des applications.  
@@ -49,7 +48,7 @@ Fournit des informations utilisées par le common language runtime pour configur
 |[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Demande au runtime de collecter des statistiques sur tous les domaines d’application du processus sur toute sa durée.|  
 |[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Contient des informations à propos de la redirection des versions d'assemblys et de l'emplacement de ces derniers.|  
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Indique s’il faut ignorer la vérification de nom fort pour les assemblys de confiance.|  
-|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Spécifie que le runtime doit utiliser le comportement de tri hérité lorsque vous effectuez des comparaisons de chaînes.|  
+|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Spécifie que le runtime doit utiliser le comportement de tri hérité lors des comparaisons de chaînes.|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Indique si le runtime recherche des assemblys dans les répertoires spécifiés par la variable d’environnement DEVPATH.|  
 |[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Spécifie si la mise en cache des échecs de liaison, qui est le comportement par défaut dans le .NET Framework version 2.0, est désactivé.|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Spécifie si la pile des threads complète est validée quand un thread est démarré.|  
@@ -88,9 +87,9 @@ Fournit des informations utilisées par le common language runtime pour configur
 |`configuration`|Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.|  
   
 ## <a name="remarks"></a>Notes  
- Les éléments enfants dans le [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section d’un fichier de configuration sont utilisés par le common language runtime pour configurer la façon dont une application s’exécute. Par exemple, le [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) élément détermine si le garbage collector utilise le garbage collection de station de travail ou le garbage collection côté serveur, le [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) élément détermine si le common language runtime calcule les codes de hachage de chaîne sur chaque application ou d’une base par domaine d’application et le `AppContextSwitchOverrides` élément permet aux utilisateurs de bibliothèque Pour participer ou refuser la fonctionnalité modifiée fournie par une bibliothèque.  
+ Les éléments enfants dans le [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section d’un fichier de configuration sont utilisés par le common language runtime pour configurer la façon dont une application s’exécute. Par exemple, le [ \<< gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) élément détermine si le garbage collector utilise le garbage collection de station de travail ou de garbage collection côté serveur, le [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) élément détermine si le common language runtime calcule les codes de hachage pour la chaîne par application ou par domaine d’application et le `AppContextSwitchOverrides` élément permet aux utilisateurs de bibliothèque pour accepter ou refuser la fonctionnalité modifiée fournie par une bibliothèque.  
   
- Les éléments dans le [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section sont lus automatiquement par le common language runtime au démarrage de l’application. Vous pouvez également définir le fichier de configuration pour un domaine d’application non-par défaut en fournissant son nom à la <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propriété ; ses paramètres sont lus automatiquement lorsque le domaine d’application est chargé. Vous devez rarement, voire jamais, ont besoin de directement lire les paramètres dans le [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section dans le fichier de configuration de votre application.  
+ Les éléments dans le [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section sont lus automatiquement par le common language runtime au démarrage de l’application. Vous pouvez également définir le fichier de configuration pour un domaine d’application non-par défaut en fournissant son nom par le <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> propriété ; ses paramètres sont lus automatiquement lorsque le domaine d’application est chargé. Vous devez rarement, voire jamais, ont besoin de lire directement les paramètres dans le [ \<runtime >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) section dans le fichier de configuration de votre application.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

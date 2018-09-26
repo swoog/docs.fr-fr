@@ -3,13 +3,12 @@ title: Guide pratique pour déboguer les applications prenant en charge les reve
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501190"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088124"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Guide pratique pour déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF
 ## <a name="applies-to"></a>S'applique à  

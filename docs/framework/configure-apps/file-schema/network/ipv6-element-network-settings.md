@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4b73e5d781829292513e809c39ac9de9dfc6d0e8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742482"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171411"
 ---
 # <a name="ltipv6gt-element-network-settings"></a>&lt;IPv6&gt; , élément (paramètres réseau)
-Protocole Internet version 6 (IPv6) permet de réponses à partir des membres obsolètes de la <xref:System.Net.Dns> classe.  
+Permet d’Internet Protocol version 6 (IPv6) des réponses à partir des membres obsolètes de la <xref:System.Net.Dns> classe.  
   
  \<configuration>  
 \<system.net>  
@@ -41,7 +40,7 @@ Protocole Internet version 6 (IPv6) permet de réponses à partir des membres ob
   
 |**Attribut**|**Description**|  
 |-------------------|---------------------|  
-|`enabled`|Spécifie si les membres de la <xref:System.Net.Dns> classe retourner protocole Internet version 6 (IPv6) adresses. La valeur par défaut est `false`.|  
+|`enabled`|Spécifie si les membres de la <xref:System.Net.Dns> classe retourner Internet Protocol version 6 (IPv6) adresses. La valeur par défaut est `false`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -53,7 +52,7 @@ Protocole Internet version 6 (IPv6) permet de réponses à partir des membres ob
 |[Paramètres](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Notes  
- Ce paramètre permet la prise en charge IPv6 pour les membres obsolètes de la <xref:System.Net.Dns> classe : <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, et <xref:System.Net.Dns.Resolve%2A>. Pour les autres membres de le <xref:System.Net?displayProperty=nameWithType> espace de noms, les adresses IPv6 peuvent être retournées si IPv6 est activé dans le système d’exploitation.  
+ Ce paramètre permet la prise en charge IPv6 pour les membres obsolètes de la <xref:System.Net.Dns> classe : <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, et <xref:System.Net.Dns.Resolve%2A>. Pour d’autres membres de la <xref:System.Net?displayProperty=nameWithType> espace de noms, les adresses IPv6 peuvent être retournées si IPv6 est activé dans le système d’exploitation.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  

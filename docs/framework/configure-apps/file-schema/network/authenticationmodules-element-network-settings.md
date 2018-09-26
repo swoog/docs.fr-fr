@@ -1,5 +1,5 @@
 ---
-title: '&lt;authenticationModules&gt; élément (paramètres réseau)'
+title: '&lt;authenticationModules&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6d7f811a5746fa07264a192efdc4c5c02323e1f4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743327"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170806"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; élément (paramètres réseau)
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a>&lt;authenticationModules&gt; , élément (paramètres réseau)
 Spécifie les modules utilisés pour authentifier les demandes du réseau.  
   
  \<configuration>  
@@ -43,7 +42,7 @@ Spécifie les modules utilisés pour authentifier les demandes du réseau.
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Ajoute un module d’authentification à l’application.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Efface tous les modules d’authentification de l’application.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Efface tous les modules d’authentification à partir de l’application.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Supprime un module d’authentification de l’application.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
@@ -59,7 +58,7 @@ Spécifie les modules utilisés pour authentifier les demandes du réseau.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant active un module d’authentification. Vous devez remplacer les valeurs de Version et de PublicKeyToken par les valeurs correctes pour le module spécifié.  
+ L’exemple suivant active un module d’authentification. Vous devez remplacer les valeurs de Version et PublicKeyToken par les valeurs correctes pour le module spécifié.  
   
 ```xml  
 <configuration>  

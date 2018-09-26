@@ -1,5 +1,5 @@
 ---
-title: '&lt;connectionManagement&gt; élément (paramètres réseau)'
+title: '&lt;connectionManagement&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a7e1609df0a7a1de4e70f425e649115459b43f8c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742820"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47173068"
 ---
-# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; élément (paramètres réseau)
+# <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; , élément (paramètres réseau)
 Spécifie le nombre maximal de connexions à un hôte réseau.  
   
  \<configuration>  
@@ -44,7 +43,7 @@ Spécifie le nombre maximal de connexions à un hôte réseau.
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Ajoute une adresse IP ou un nom DNS à la liste de gestion des connexions.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Efface la liste de gestion des connexions.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Supprime une adresse IP ou le nom DNS de la liste de gestion des connexions.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Supprime une adresse IP ou le nom DNS de la liste de gestion de connexion.|  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -53,7 +52,7 @@ Spécifie le nombre maximal de connexions à un hôte réseau.
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.|  
   
 ## <a name="remarks"></a>Notes  
- Le `connectionManagement` élément définit le nombre maximal de connexions à un serveur ou un groupe de serveurs.  
+ Le `connectionManagement` élément définit le nombre maximal de connexions sur un serveur ou un groupe de serveurs.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 59d5083632630513d2afc1f8d78400310451e46f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55a7eb431432b67b3252853d14bf93be304ee883
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746057"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176345"
 ---
 # <a name="lttracegt-element"></a>&lt;trace&gt; élément
 Contient les écouteurs qui collectent, stockent et acheminent les messages de traçage.  
@@ -43,7 +42,7 @@ Contient les écouteurs qui collectent, stockent et acheminent les messages de t
 |Attribut|Description|  
 |---------------|-----------------|  
 |`autoflush`|Attribut facultatif.<br /><br /> Spécifie si les écouteurs de suivi vidage automatique de la mémoire tampon de sortie après chaque opération d’écriture.|  
-|`indentsize`|Attribut facultatif.<br /><br /> Spécifie le nombre d’espaces pour mettre en retrait.|  
+|`indentsize`|Attribut facultatif.<br /><br /> Spécifie le nombre d’espaces à mettre en retrait.|  
 |`useGlobalLock`|Attribut facultatif.<br /><br /> Indique si le verrouillage global doit être utilisé.|  
   
 ## <a name="autoflush-attribute"></a>AutoFlush attribut  
@@ -53,7 +52,7 @@ Contient les écouteurs qui collectent, stockent et acheminent les messages de t
 |`false`|Ne vide pas automatiquement la mémoire tampon de sortie. Il s'agit de la valeur par défaut.|  
 |`true`|Vide automatiquement la mémoire tampon de sortie.|  
   
-## <a name="usegloballock-attribute"></a>Attribut d’useGlobalLock  
+## <a name="usegloballock-attribute"></a>useGlobalLock attribut  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -74,7 +73,7 @@ Contient les écouteurs qui collectent, stockent et acheminent les messages de t
 |`system.diagnostics`|Spécifie les écouteurs de trace qui collectent, stockent et acheminent les messages, ainsi que le niveau auquel un commutateur de trace est défini.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le `<trace>` élément pour ajouter l’écouteur `MyListener` à la `Listeners` collection. `MyListener` Crée un fichier nommé `MyListener.log` et écrit la sortie dans le fichier. Le `useGlobalLock` attribut est défini sur `false`, ce qui entraîne le verrouillage global doit ne pas être utilisée si l’écouteur de trace est thread-safe. Le `autoflush` attribut a la valeur `true`, ce qui entraîne l’écouteur de trace à écrire dans le fichier indépendamment du fait que le <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> méthode est appelée. Le `indentsize` attribut est défini sur 0 (zéro), l’écouteur mettre en retrait des espaces nuls lorsque la <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> méthode est appelée.  
+ L’exemple suivant montre comment utiliser le `<trace>` élément pour ajouter l’écouteur `MyListener` à la `Listeners` collection. `MyListener` Crée un fichier nommé `MyListener.log` et écrit la sortie dans le fichier. Le `useGlobalLock` attribut est défini sur `false`, ce qui entraîne le verrouillage global doit ne pas être utilisé si l’écouteur de trace est thread-safe. Le `autoflush` attribut a la valeur `true`, ce qui entraîne l’écouteur de suivi à écrire dans le fichier ait ou non la <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> méthode est appelée. Le `indentsize` attribut est défini sur 0 (zéro), l’écouteur mettre en retrait de zéro espaces lorsque la <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> méthode est appelée.  
   
 ```xml  
 <configuration>  

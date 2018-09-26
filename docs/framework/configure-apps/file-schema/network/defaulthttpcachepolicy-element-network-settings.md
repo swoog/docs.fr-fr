@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultHttpCachePolicy&gt; élément (paramètres réseau)'
+title: '&lt;defaultHttpCachePolicy&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741839"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172901"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; élément (paramètres réseau)
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; , élément (paramètres réseau)
 Décrit si la mise en cache HTTP est active et décrit la valeur par défaut, la mise en cache de stratégie.  
   
  \<configuration>  
@@ -44,13 +43,13 @@ Décrit si la mise en cache HTTP est active et décrit la valeur par défaut, la
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`maximumAge`|Spécifie l’intervalle de temps maximal avant un objet mis en cache est marqué comme étant expirée.|  
-|`maximumStale`|Spécifie la durée maximale postérieure à l’heure de nouveauté calculée avant un objet mis en cache est marqué comme étant expirée.|  
-|`minimumFresh`|Spécifie la durée minimale d’un objet mis en cache soit considéré comme nouveau.|  
+|`maximumAge`|Spécifie l’intervalle de temps maximal avant un objet mis en cache est marqué comme ayant expiré.|  
+|`maximumStale`|Spécifie la durée maximale après l’heure d’actualisation calculée avant un objet mis en cache est marqué comme ayant expiré.|  
+|`minimumFresh`|Spécifie la durée minimale pour un objet mis en cache soit considéré comme nouveau.|  
 |`policyLevel`|Spécifie si la stratégie de mise en cache est automatique, ou si le cache est ignoré. La valeur par défaut est `BypassCache`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -59,15 +58,15 @@ Décrit si la mise en cache HTTP est active et décrit la valeur par défaut, la
 |[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|Contrôle le mécanisme de mise en cache pour les demandes réseau.|  
   
 ## <a name="remarks"></a>Notes  
- La valeur de la `policyLevel` attribut a la valeur `BypassCache` ou `Default`.  
+ La valeur de la `policyLevel` attribut est soit `BypassCache` ou `Default`.  
   
- Les valeurs pour le `maximumAge`, `maximumStale`, et `minimumFresh` les éléments sont soit un intervalle de temps explicite avec un format de *d*. *hh*:*mm*:*ss* (jours, heures, minutes et secondes), ou l’une des constantes `minValue` ou `maxValue`, le cas échéant.  
+ Valeurs pour le `maximumAge`, `maximumStale`, et `minimumFresh` les éléments sont soit un intervalle de temps explicite avec un format de *d*. *hh*:*mm*:*ss* (jours, heures, minutes et secondes), ou l’une des constantes `minValue` ou `maxValue`, le cas échéant.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment spécifier une durée minimale de frais de six heures, une durée maximale de deux jours et une durée maximale obsolète de quatre heures.  
+ L’exemple suivant montre comment spécifier une durée minimale de frais de six heures, un temps d’âge maximal de deux jours et la durée maximale obsolète de quatre heures.  
   
 ```xml  
 <configuration>  

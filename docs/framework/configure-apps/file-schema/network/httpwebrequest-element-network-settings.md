@@ -1,5 +1,5 @@
 ---
-title: '&lt;httpWebRequest&gt; élément (paramètres réseau)'
+title: '&lt;httpWebRequest&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1d1dce38e5188824ba1412d3f2a285bd2304f147
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e83f12d849f6f6a587bccc85fbf6fe8fe24026f0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741966"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108102"
 ---
-# <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; élément (paramètres réseau)
+# <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; , élément (paramètres réseau)
 Personnalise les paramètres de la demande Web.  
   
  \<configuration>  
@@ -46,7 +45,7 @@ Personnalise les paramètres de la demande Web.
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|Spécifie la longueur maximale d’un en-tête de réponse, en kilo-octets. La valeur par défaut est 64. La valeur -1 indique qu’aucune limite de taille ne sera imposée sur les en-têtes de réponse.|  
 |`maximumErrorResponseLength`|Spécifie la longueur maximale d’une réponse d’erreur, en kilo-octets. La valeur par défaut est 64. La valeur -1 indique qu’aucune limite de taille ne sera imposée sur la réponse d’erreur.|  
-|`maximumUnauthorizedUploadLength`|Spécifie la longueur maximale d’un téléchargement en réponse à un code d’erreur non autorisée, en octets. La valeur par défaut est -1. La valeur -1 indique qu’aucune limite de taille ne sera imposée pour le téléchargement.|  
+|`maximumUnauthorizedUploadLength`|Spécifie la longueur maximale d’un téléchargement en réponse à un code d’erreur non autorisé, en octets. La valeur par défaut est -1. La valeur -1 indique qu’aucune limite de taille ne sera imposée sur le téléchargement.|  
 |`useUnsafeHeaderParsing`|Spécifie si l’analyse des en-têtes non sécurisé est activé. La valeur par défaut est `false`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -59,13 +58,13 @@ Personnalise les paramètres de la demande Web.
 |[Paramètres](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Configure les options réseau de base pour l’espace de noms <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, le .NET Framework applique strictement la norme RFC 2616 pour l’analyse URI. Certaines réponses du serveur peuvent inclure des caractères de contrôle dans les champs interdits, ce qui provoquent le <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> méthode pour lever une <xref:System.Net.WebException>. Si **useUnsafeHeaderParsing** a la valeur **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> ne lèvent pas dans ce cas ; cependant, votre application sera vulnérable à plusieurs formes d’attaques d’analyse URI. La meilleure solution consiste à modifier le serveur afin que la réponse n’inclut pas les caractères de contrôle.  
+ Par défaut, le .NET Framework applique strictement la norme RFC 2616 pour l’analyse URI. Certaines réponses du serveur peuvent inclure des caractères de contrôle dans les champs interdits, ce qui provoquent le <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> méthode lève un <xref:System.Net.WebException>. Si **useUnsafeHeaderParsing** a la valeur **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> ne lèvera pas dans ce cas, toutefois, votre application sera vulnérable à plusieurs formes d’attaques d’analyse URI. La meilleure solution consiste à modifier le serveur afin que la réponse n’inclut pas les caractères de contrôle.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment spécifier une valeur plus élevée que la longueur maximale d’en-tête normal.  
+ L’exemple suivant montre comment spécifier une valeur plus élevée à la longueur d’en-tête maximale normal.  
   
 ```xml  
 <configuration>  

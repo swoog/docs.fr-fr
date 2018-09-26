@@ -1,5 +1,5 @@
 ---
-title: '&lt;Désactivez&gt; , élément pour bypasslist (paramètres réseau)'
+title: '&lt;Désactivez&gt; , élément de bypasslist (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742190"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170637"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Désactivez&gt; , élément pour bypasslist (paramètres réseau)
-Efface la liste de contournement du proxy.  
+# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Désactivez&gt; , élément de bypasslist (paramètres réseau)
+Efface la liste de contournement proxy.  
   
  \<configuration>  
 \<system.net>  
@@ -51,13 +50,13 @@ Efface la liste de contournement du proxy.
 |[BypassList](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Fournit un ensemble d’expressions régulières décrivant les adresses qui n’utilisent pas un proxy.|  
   
 ## <a name="remarks"></a>Notes  
- Le `clear` élément efface toutes les entrées de la liste d’exclusion.  
+ Le `clear` élément efface toutes les entrées dans la liste de contournement.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant efface la liste d’exclusion, puis ajoute deux adresses à la liste d’exclusion. La première contourne le proxy pour tous les serveurs dans le domaine contoso.com ; la deuxième contourne le proxy pour tous les serveurs dont l’adresse IP commence par 192.168.  
+ L’exemple suivant efface la liste de contournement, puis ajoute deux adresses à la liste de contournement. La première contourne le proxy pour tous les serveurs dans le domaine contoso.com ; la deuxième contourne le proxy pour tous les serveurs dont l’adresse IP commence par 192.168.  
   
 ```xml  
 <configuration>  

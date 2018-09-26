@@ -4,16 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 17f68fbb92797928be911e530232e8638793687f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1537c17cb3c16beeb41cfaa4103e0664e93facc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742570"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170598"
 ---
 # <a name="ltidngt-element-uri-settings"></a>&lt;IDN&gt; élément (paramètres d’Uri)
-Spécifie si l’analyse de nom de domaine internationaux (IDN) est appliqué à un nom de domaine.  
+Spécifie si l’analyse du nom de domaine international (IDN) est appliqué à un nom de domaine.  
   
 ## <a name="schema-hierarchy"></a>Hiérarchie de schéma  
  [\<configuration>, élément](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
@@ -37,10 +36,10 @@ Spécifie si l’analyse de nom de domaine internationaux (IDN) est appliqué à
   
 |**Élément**|**Description**|  
 |-----------------|---------------------|  
-|`enabled`|Spécifie que si l’analyse de nom de domaine internationaux (IDN) est appliqué à un nom de domaine la valeur par défaut est none.|  
+|`enabled`|Spécifie que si l’analyse du nom de domaine international (IDN) est appliqué à un nom de domaine la valeur par défaut est none.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -49,7 +48,7 @@ Spécifie si l’analyse de nom de domaine internationaux (IDN) est appliqué à
 |[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Contient des paramètres qui spécifient la façon dont le .NET Framework gère les adresses web exprimées à l’aide d’identificateurs de ressource uniforme (URI).|  
   
 ## <a name="remarks"></a>Notes  
- Existants <xref:System.Uri> classe a été étendue dans .NET Framework 3.5. 3.0 SP1 et 2.0 SP1 avec prise en charge pour les identificateurs IRI (International Resource) et les noms de domaine internationaux (IDN). Les utilisateurs actuels ne verront pas de toute modification du comportement de .NET Framework 2.0, à moins qu’ils activent spécifiquement IRI et IDN prennent en charge. Cela garantit la compatibilité des applications avec les versions antérieures de .NET Framework.  
+ Existant <xref:System.Uri> classe a été étendue dans .NET Framework 3.5. 3.0 SP1 et 2.0 SP1 avec prise en charge pour les identificateurs IRI (International Resource) et les noms de domaine international (IDN). Les utilisateurs actuels ne verront pas de toute modification du comportement de .NET Framework 2.0, sauf si ils activent spécifiquement les IRI et des IDN prennent en charge. Cela garantit la compatibilité des applications avec les versions antérieures de .NET Framework.  
   
  Pour activer la prise en charge des IRI, les deux modifications suivantes sont requises :  
   
@@ -59,21 +58,21 @@ Spécifie si l’analyse de nom de domaine internationaux (IDN) est appliqué à
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Spécifiez si vous souhaitez que l’analyse de nom de domaine internationaux (IDN) appliquée au nom de domaine et si les règles d’analyse ini doit être appliquée. Cela est spécifié dans le fichier machine.config ou app.config.  
+2.  Spécifiez si vous souhaitez que l’analyse de nom de domaine international (IDN) appliquée au nom de domaine et si les règles d’analyse IRI doivent être appliquée. Cela est spécifié dans le fichier machine.config ou app.config.  
   
  Il existe trois valeurs possibles pour l’IDN selon les serveurs DNS qui sont utilisés :  
   
 -   IDN activé = All  
   
-     Cette valeur convertit tous les noms de domaine Unicode en leurs équivalents Punycode (noms IDN).  
+     Cette valeur convertit les noms de domaine Unicode en leurs équivalents Punycode (noms IDN).  
   
 -   IDN activé = AllExceptIntranet  
   
-     Cette valeur convertit tous les noms de domaine Unicode pas sur l’Intranet local pour utiliser les équivalents Punycode (noms IDN). Dans ce cas pour gérer des noms internationaux sur l’Intranet local, les serveurs DNS qui sont utilisés pour l’Intranet doivent prendre en charge la résolution de noms Unicode.  
+     Cette valeur convertit tous les noms de domaine Unicode pas sur l’Intranet local pour utiliser les équivalents Punycode (noms IDN). Dans ce cas pour gérer des noms internationaux sur l’Intranet local, les serveurs DNS qui sont utilisés pour l’Intranet doivent prendre en charge résolution de noms Unicode.  
   
 -   IDN activé = None  
   
-     Cette valeur ne convertira pas tous les noms de domaine Unicode pour utiliser Punycode. Il s’agit de la valeur par défaut qui est cohérente avec le comportement de .NET Framework 2.0.  
+     Cette valeur ne convertira pas les noms de domaine Unicode pour utiliser Punycode. Il s’agit de la valeur par défaut qui est cohérente avec le comportement de .NET Framework 2.0.  
   
  L’activation des IDN entraîne la conversion de toutes les étiquettes Unicode d’un nom de domaine en leurs équivalents Punycode. Les noms Punycode contiennent uniquement des caractères ASCII et commencent toujours par le préfixe xn--. Cela permet de garantir la prise en charge des serveurs DNS existants sur Internet, la plupart d’entre eux prenant uniquement en charge les caractères ASCII (consultez la norme RFC 3940).  
   
@@ -83,7 +82,7 @@ Spécifie si l’analyse de nom de domaine internationaux (IDN) est appliqué à
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L’exemple suivant montre une configuration utilisée par la <xref:System.Uri> classe pour prendre en charge l’analyse IRI et les noms IDN.  
+ L’exemple suivant montre une configuration utilisée par la <xref:System.Uri> classe pour prendre en charge l’analyse des IRI et les noms IDN.  
   
 ### <a name="code"></a>Code  
   
