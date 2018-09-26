@@ -8,11 +8,11 @@ ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 17a30ba5132673af70860e4f5f1a87f861c97386
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072707"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193643"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Vue d’ensemble des modèles de contrôle UI Automation
 > [!NOTE]

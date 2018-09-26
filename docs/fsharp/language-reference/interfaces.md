@@ -3,11 +3,11 @@ title: Interfaces (F#)
 description: 'Découvrez comment F # Interfaces spécifient des jeux de membres associés qui implémentent des autres classes.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47115111"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231438"
 ---
 # <a name="interfaces"></a>Interfaces
 

@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
 author: BrucePerlerMS
 ms.openlocfilehash: b7f382f364538ecf0d425dab1571ac865ebf48c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176605"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195743"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Service et client Internet non sécurisés
 L’illustration suivante montre un exemple de client Windows Communication Foundation (WCF) publics, non sécurisés et service.  

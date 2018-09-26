@@ -3,11 +3,11 @@ title: Résolution des problèmes liés aux fournisseurs de type
 description: 'Découvrez les solutions potentielles pour les problèmes que vous êtes plus susceptible de rencontrer lorsque vous utilisez des fournisseurs de type en F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086708"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204935"
 ---
 # <a name="troubleshooting-type-providers"></a>Résolution des problèmes liés aux fournisseurs de type
 

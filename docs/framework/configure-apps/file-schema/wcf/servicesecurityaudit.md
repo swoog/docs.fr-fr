@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
 author: BrucePerlerMS
 ms.openlocfilehash: 3cdadedd3c9fda3874409ecad9a0f63ac34f2497
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086682"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196177"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Spécifie des paramètres qui activent l'audit d'événements de sécurité pendant des opérations de service.  

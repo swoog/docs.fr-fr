@@ -1,5 +1,5 @@
 ---
-title: '&lt;socket&gt; élément (paramètres réseau)'
+title: '&lt;socket&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 995a89dd67664fd6a408f88f20f6837d2dbaaad4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fb057ab75c31edd7bbdaf5d5115cda2802d3b057
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744237"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203993"
 ---
-# <a name="ltsocketgt-element-network-settings"></a>&lt;socket&gt; élément (paramètres réseau)
+# <a name="ltsocketgt-element-network-settings"></a>&lt;socket&gt; , élément (paramètres réseau)
 Spécifie si les opérations de socket utilisent des ports de terminaison.  
   
  \<configuration>  
@@ -44,7 +43,7 @@ Spécifie si les opérations de socket utilisent des ports de terminaison.
 |**Attribut**|**Description**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Indique si le socket doit toujours utiliser des ports de terminaison pour accepter les appels de méthode. La valeur par défaut est `false`.|  
-|`alwaysUseCompletionPortsForConnect`|Indique si le socket doit toujours utiliser des ports de terminaison pour les appels de méthode de connexion. La valeur par défaut est `false`.|  
+|`alwaysUseCompletionPortsForConnect`|Indique si le socket doit toujours utiliser des ports de terminaison pour les appels de méthode Connect. La valeur par défaut est `false`.|  
 |`ipProtectionLevel`|Spécifie la valeur par défaut <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> à utiliser pour un socket. La valeur par défaut dépend de la version de Windows.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -61,9 +60,9 @@ Spécifie si les opérations de socket utilisent des ports de terminaison.
   
  La valeur par défaut pour le `alwaysUseCompletionPortsForAccept` et `alwaysUseCompletionPortsForConnect` attributs est **false**.  
   
- Le <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> peut être utilisé pour obtenir la valeur actuelle de la `alwaysUseCompletionPortsForAccept` attribut à partir des fichiers de configuration applicables. Le <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> peut être utilisé pour obtenir la valeur actuelle de la `alwaysUseCompletionPortsForConnect` attribut à partir des fichiers de configuration applicables.  
+ Le <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForAccept%2A> peut être utilisée pour obtenir la valeur actuelle de la `alwaysUseCompletionPortsForAccept` attribut à partir des fichiers de configuration applicables. Le <xref:System.Net.Configuration.SocketElement.AlwaysUseCompletionPortsForConnect%2A> peut être utilisée pour obtenir la valeur actuelle de la `alwaysUseCompletionPortsForConnect` attribut à partir des fichiers de configuration applicables.  
   
- Le `ipProtectionLevel` attribut spécifie la valeur par défaut <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> à utiliser pour un socket. Le <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propriété permet la configuration d’une restriction pour un socket IPv6 à une portée spécifiée, telles que les adresses avec le même lien locales préfixe ou de site local. Cette option permet aux applications de placer des restrictions d’accès sur les sockets IPv6. Ces restrictions permettent à une application qui s'exécute sur un réseau local privé de se renforcer facilement et efficacement contre les attaques externes. Cette option élargit ou limite la portée d’un socket en écoute, permettant l’accès illimité des utilisateurs publics et privés le cas échéant, ou restreindre l’accès au même site, en fonction des besoins.  
+ Le `ipProtectionLevel` attribut spécifie la valeur par défaut <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> à utiliser pour un socket. Le <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> propriété permet la configuration d’une restriction pour un socket IPv6 à une portée spécifiée, telle que les adresses avec le même lien locales ou préfixe local de site. Cette option permet aux applications de placer des restrictions d’accès sur les sockets IPv6. Ces restrictions permettent à une application qui s'exécute sur un réseau local privé de se renforcer facilement et efficacement contre les attaques externes. Cette option élargit ou limite la portée d’un socket d’écoute, permettant l’accès illimité des utilisateurs publics et privés le cas échéant, ou restreindre l’accès uniquement au même site, en fonction des besoins.  
   
  Cela `ipProtectionLevel` paramètre d’attribut affecte uniquement le trafic entrant initial :  
   
@@ -71,15 +70,15 @@ Spécifie si les opérations de socket utilisent des ports de terminaison.
   
 -   Application UDP qui reçoit un paquet sur un socket.  
   
- Ce paramètre de configuration n’affecte pas les connexions TCP déjà établies (le trafic n’est pas restreint dans les deux directions) et n’affecte pas une application envoie des paquets UDP.  
+ Ce paramètre de configuration n’affecte pas les connexions TCP déjà établies (le trafic est illimité dans les deux directions) et n’affecte pas une application qui envoie des paquets UDP.  
   
  Les valeurs possibles pour le `ipProtectionLevel` paramètre d’attribut correspondent aux niveaux de protection définis spécifiés dans le <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> énumération comme suit :  
   
 |**Valeur d’attribut**|**Description**|  
 |-|-|  
-|EdgeRestricted|Le niveau de protection IP est limité à un périmètre. Cette valeur peut être utilisée par les applications conçues pour fonctionner sur Internet. Ce paramètre n’autorise pas de parcours de traduction d’adresses réseau (NAT) à l’aide de l’implémentation de Windows Teredo. Ces applications peuvent contourner les pare-feux IPv4, donc les applications doivent être protégées contre les attaques Internet dirigées vers le port ouvert. Sur Windows Server 2003 et Windows XP, la valeur par défaut pour le niveau de Protection IP sur un socket est limité à un périmètre.|  
-|Restreint|Le niveau de protection IP est limité. Cette valeur peut être utilisée par les applications intranet qui n’implémentent pas de scénarios Internet. Ces applications sont généralement pas testées ou renforcées contre les attaques de type Internet. Ce paramètre limite le trafic reçu aux liens locaux uniquement.|  
-|Non restreint|Le niveau de protection IP est illimité. Cette valeur peut être utilisée par les applications conçues pour fonctionner sur Internet, notamment les applications qui tirent parti des fonctionnalités de traversée NAT IPv6 intégrées à Windows (Teredo, par exemple). Ces applications peuvent contourner les pare-feux IPv4, donc les applications doivent être protégées contre les attaques Internet dirigées vers le port ouvert. Sur Windows Server 2008 R2 et Windows Vista, la valeur par défaut pour le niveau de Protection IP sur un socket est illimitée.|  
+|EdgeRestricted|Le niveau de protection IP est limité à un périmètre. Cette valeur peut être utilisée par les applications conçues pour fonctionner sur Internet. Ce paramètre n’autorise pas de parcours de traduction d’adresses réseau (NAT) à l’aide de l’implémentation de Windows Teredo. Ces applications peuvent contourner les pare-feux IPv4, applications ; doivent donc être renforcées contre les attaques Internet dirigées vers le port ouvert. Sur Windows Server 2003 et Windows XP, la valeur par défaut pour le niveau de Protection IP sur un socket est périmètre limité.|  
+|restreint|Le niveau de protection IP est limité. Cette valeur peut être utilisée par les applications intranet qui n’implémentent pas de scénarios Internet. Ces applications sont généralement pas testées ou renforcées contre les attaques Internet. Ce paramètre limite le trafic reçu aux liens locaux uniquement.|  
+|Non restreint|Le niveau de protection IP est illimité. Cette valeur peut être utilisée par les applications conçues pour fonctionner sur Internet, notamment les applications qui tirent parti des fonctions de traversée NAT IPv6 intégrées à Windows (Teredo, par exemple). Ces applications peuvent contourner les pare-feux IPv4, applications ; doivent donc être renforcées contre les attaques Internet dirigées vers le port ouvert. Sur Windows Server 2008 R2 et Windows Vista, la valeur par défaut pour le niveau de Protection IP sur un socket est illimitée.|  
 |Non spécifié|Le niveau de protection IP n’est pas spécifié. Sur Windows 7 et Windows Server 2008 R2, la valeur par défaut pour le niveau de Protection IP sur un socket n’est pas spécifiée.|  
   
  La valeur par défaut pour le `ipProtectionLevel` attribut est **Unspecified**.  
@@ -90,7 +89,7 @@ Spécifie si les opérations de socket utilisent des ports de terminaison.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment spécifier que les ports de terminaison doivent être utilisés et que la valeur par défaut <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> doit être non restreint.  
+ L’exemple suivant montre comment spécifier que les ports de terminaison doivent être utilisés et que la valeur par défaut <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> doit être illimité.  
   
 ```xml  
 <configuration>  

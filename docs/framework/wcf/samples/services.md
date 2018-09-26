@@ -2,19 +2,19 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3987b170f216064073f14afb489bd7afb5228c77
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806095"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206369"
 ---
 # <a name="services"></a>Services
-Cette section contient des exemples qui illustrent les services de Windows Communication Foundation (WCF).  
+Cette section contient des exemples qui illustrent des services Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Hébergement](../../../../docs/framework/wcf/feature-details/hosting.md)  
- Illustre les services d’hébergement de WCF.  
+ Montre les services d’hébergement WCF.  
   
  [Interopérabilité des services](../../../../docs/framework/wcf/samples/service-interoperability.md)  
  Illustre l’interaction entre WCF et d’autres technologies de service.  
@@ -23,16 +23,13 @@ Cette section contient des exemples qui illustrent les services de Windows Commu
  Illustre des comportements de service WCF.  
   
  [Sécurité du service](../../../../docs/framework/wcf/samples/service-security.md)  
- Illustre la sécurité du service WCF.  
+ Illustre la sécurité de service WCF.  
   
  [Configuration simplifiée pour les services WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
  Montre comment implémenter et configurer un service classique et le client à l’aide de WCF.  
   
  [Utilisation de points de terminaison standard](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- Montre comment utiliser des points de terminaison standard dans des fichiers de configuration de service.  
-  
- [Modèle de configuration hiérarchique](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- Montre comment implémenter une hiérarchie de fichiers de configuration pour les services.  
+ Montre comment utiliser des points de terminaison standard dans des fichiers de configuration de service.
   
  [Stratégie de protection étendue](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  Illustre la protection étendue, une initiative de sécurité visant à se protéger des attaques de l'intercepteur (MITM, Man In The Middle).  

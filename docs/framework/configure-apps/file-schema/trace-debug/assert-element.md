@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: ab1644d23e4d6d78b62e701902e5ec39e134b38b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b15e569ff6e42298c0a1de02f77ab7c302c70d86
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745118"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193510"
 ---
 # <a name="ltassertgt-element"></a>&lt;Assert&gt; élément
 Indique si une boîte de message doit s’afficher quand vous appelez la méthode <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> ; spécifie également le nom du fichier dans lequel écrire les messages.  
@@ -38,10 +37,10 @@ Indique si une boîte de message doit s’afficher quand vous appelez la méthod
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`assertuienabled`|Attribut facultatif.<br /><br /> Spécifie si pour afficher un boîte de message lorsque le **Debug.Assert** prend la valeur de méthode **false**.|  
-|`logfilename`|Attribut facultatif.<br /><br /> Spécifie le nom du fichier à écrire le message se **Debug.Assert** prend la valeur de **false**.|  
+|`assertuienabled`|Attribut facultatif.<br /><br /> Spécifie si pour afficher un boîte de message lorsque le **Debug.Assert** méthode prend la valeur **false**.|  
+|`logfilename`|Attribut facultatif.<br /><br /> Spécifie le nom de fichier dans lequel écrire le message à if **Debug.Assert** prend la valeur **false**.|  
   
-## <a name="assertuienabled-attribute"></a>Attribut d’AssertUiEnabled  
+## <a name="assertuienabled-attribute"></a>AssertUiEnabled attribut  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -62,7 +61,7 @@ Indique si une boîte de message doit s’afficher quand vous appelez la méthod
  Les deux attributs dans le  **\<assert >** élément sont facultatifs. Vous pouvez désactiver les boîtes de message sans spécifier de fichier pour écrire les messages, ou vous pouvez spécifier un fichier pour écrire des messages tout en laissant les messages activés.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment désactiver l’affichage des messages lorsque vous appelez **Debug.Assert** et écrire les messages dans `c:\log.txt`.  
+ L’exemple suivant montre comment désactiver l’affichage des messages lorsque vous appelez **Debug.Assert** et écrire les messages à `c:\log.txt`.  
   
 ```xml  
 <configuration>  

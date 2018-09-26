@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075185"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199781"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom (fonction)
 Détermine si l’instance ou la classe active dérive d’une classe parente spécifié.

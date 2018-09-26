@@ -4,11 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 458b67de57be2bd0847ceccbc8a3aebd3b025f64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 629f478e1a5a9ad21ce77943fdad098aa21de4a6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200442"
 ---
 # <a name="routing-scenarios"></a>Scénarios de routage
 Bien que le service de routage soit entièrement personnalisable, concevoir une logique de routage efficace lors de la création d'une configuration à partir de zéro peut s'avérer difficile.  Toutefois, il existe plusieurs scénarios courants que suivent la plupart des configurations de service de routage. Bien que ces scénarios puissent ne pas s'appliquer directement à votre configuration spécifique, comprendre comment configurer le service de routage en vue de gérer ces scénarios vous permet de mieux maîtriser le fonctionnement du service de routage.  
@@ -33,17 +34,17 @@ Bien que le service de routage soit entièrement personnalisable, concevoir une 
   
  En utilisant le service de routage, vous pouvez exposer un point de terminaison pour recevoir les messages d'applications clientes, puis router chaque message vers la version appropriée du service, en fonction du contenu du message. L'implémentation de base implique d'ajouter au message un en-tête personnalisé, indiquant la version du service qui doit traiter le message. Le service de routage peut utiliser le XPathMessageFilter pour vérifier si un en-tête personnalisé est présent dans chaque message et router le message vers le point de terminaison de destination approprié.  
   
- Pour les étapes permettant de créer une configuration de contrôle de version de service, consultez [How To : le Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md). Pour obtenir un exemple d’utilisation de la XPathMessageFilter pour router les messages selon un en-tête personnalisé, consultez la [les filtres avancés](../../../../docs/framework/wcf/samples/advanced-filters.md) exemple.  
+ Pour connaître les étapes permettant de créer une configuration de contrôle de version de service, consultez [How To : le Service de contrôle de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).
   
 ### <a name="service-data-partitioning"></a>Partitionnement des données du service  
  Lors de la conception d'un environnement distribué, il est souvent préférable de répartir la charge de traitement entre plusieurs ordinateurs, afin d'assurer un haut niveau de disponibilité, de diminuer la charge de traitement sur les ordinateurs individuels, ou de fournir des ressources dédiées à un sous-ensemble spécifique de messages. Bien que le service de routage ne remplace pas une solution d'équilibrage de charge dédiée, sa capacité à effectuer des routages basés sur le contenu peut être utilisée pour router vers des destinations spécifiques des messages qui par ailleurs sont semblables. Par exemple, vous pouvez avoir besoin de traiter les messages d’un client spécifique séparément de ceux d’autres clients.  
   
- Pour les étapes permettant de créer une configuration du partitionnement de données de service, consultez [procédure : partitionnement des données de Service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md). Pour obtenir un exemple de l’utilisation de filtres pour partitionner les données en fonction de l’URL et les en-têtes personnalisés, consultez la [les filtres avancés](../../../../docs/framework/wcf/samples/advanced-filters.md) exemple.  
+ Pour connaître les étapes permettant de créer une configuration de partitionnement des données de service, consultez [How To : partitionnement des données de Service](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md).  
   
 ### <a name="dynamic-routing"></a>Routage dynamique  
  Il est souvent préférable de modifier la configuration du routage pour satisfaire l'évolution des besoins professionnels : par exemple ajouter un itinéraire à la nouvelle version d'un service, modifier les critères de routage, ou modifier le point de terminaison de destination vers lequel le filtre route un message particulier. Le service de routage permet d'effectuer ces modifications via l'objet <xref:System.ServiceModel.Routing.RoutingExtension>, qui fournit une nouvelle RoutingConfiguration au moment de l'exécution. La nouvelle configuration entre immédiatement en vigueur, mais n'affecte que les nouvelles sessions traitées par le service de routage.  
   
- Pour les étapes utilisées pour implémenter le routage dynamique, consultez [comment faire : mise à jour dynamique](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md). Pour obtenir un exemple d’utilisation de routage dynamique, consultez la [Reconfiguration dynamique](../../../../docs/framework/wcf/samples/dynamic-reconfiguration.md) exemple.  
+ Pour connaître les étapes permettant d’implémenter le routage dynamique, consultez [How To : mise à jour dynamique](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md).
   
 ### <a name="multicast"></a>Multidiffusion  
  Lors du routage de messages, vous routez habituellement chaque message vers un point de terminaison de destination spécifique.  Toutefois, vous pouvez avoir besoin occasionnellement de router une copie du message vers plusieurs points de terminaison de destination. Pour effectuer un routage en multidiffusion, les conditions suivantes doivent être remplies :  
@@ -55,16 +56,14 @@ Bien que le service de routage soit entièrement personnalisable, concevoir une 
  Si ces conditions sont réunies, chaque point de terminaison de destination associé à un filtre qui retourne true recevra une copie du message.  
   
 ### <a name="protocol-bridging"></a>Pontage de protocoles  
- En cas de routage de messages entre des protocoles SOAP dissemblables, le service de routage utilise des API WCF pour convertir le message dans un autre protocole. Cela se produit automatiquement lorsque le ou les points de terminaison de service exposés par le service de routage utilisent un protocole différent du ou des points de terminaison clients vers lesquels les messages sont routés. Il est possible de désactiver ce comportement si les protocoles utilisés ne sont pas standard ; mais vous devez alors fournir votre propre code de pontage.  
-  
- . Pour obtenir un exemple de l’utilisation du Service de routage pour convertir des messages entre des protocoles, consultez le [pontage et la gestion des erreurs](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) exemple.  
+ En cas de routage de messages entre des protocoles SOAP dissemblables, le service de routage utilise des API WCF pour convertir le message dans un autre protocole. Cela se produit automatiquement lorsque le ou les points de terminaison de service exposés par le service de routage utilisent un protocole différent du ou des points de terminaison clients vers lesquels les messages sont routés. Il est possible de désactiver ce comportement si les protocoles utilisés ne sont pas standard ; mais vous devez alors fournir votre propre code de pontage.
   
 ### <a name="error-handling"></a>Gestion des erreurs  
  Dans un environnement distribué, il n'est pas rare de rencontrer des défaillances temporaires du réseau ou de la communication. Sans un service intermédiaire tel que le service de routage, la charge de gérer ces défaillances incomberait à l'application cliente. Si l'application cliente n'inclut aucune logique spécifique pour refaire une tentative en cas de panne réseau ou de défaillance de communication, et ne connaît aucun autre emplacement, l'utilisateur peut être confronté à une situation où il faut soumettre un message plusieurs fois avant que le service de destination réussisse à le traiter. Le client risque de ne pas être satisfait de l'application et de la considérer comme peu fiable.  
   
  Le service de routage tente de remédier à ce problème en fournissant de robustes fonctions de gestion des erreurs pour les messages confrontés à des pannes réseau ou des défaillances de communication. En créant une liste de points de terminaison de destination possibles et en associant cette liste à chaque filtre de messages, vous évitez le point de défaillance unique dû au fait de n'avoir qu'une seule destination possible. En cas de panne, le service de routage essaie de remettre le message au prochain point de terminaison de la liste, jusqu'à ce que le message soit remis, qu'une défaillance non liée à la communication se produise ou que tous les points de terminaison soient épuisés.  
   
- Pour les étapes permettant de configurer la gestion des erreurs, consultez [procédure : gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Pour obtenir un exemple d’implémentation de la gestion des erreurs, consultez le [pontage et la gestion des erreurs](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) et [avancées de gestion des erreurs](../../../../docs/framework/wcf/samples/advanced-error-handling.md) exemples.  
+ Pour connaître les étapes permettant de configurer la gestion des erreurs, consultez [How To : gestion des erreurs](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>Dans cette section  
  [Guide pratique pour traiter la gestion de version](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  

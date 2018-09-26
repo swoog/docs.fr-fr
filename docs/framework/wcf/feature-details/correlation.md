@@ -2,12 +2,12 @@
 title: Corrélation
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: 9dbebf6d497a5cc109400d04206d39ad76321ba3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e72f462a9b8777fbeadb306c7fea8354f64ffe8c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491281"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216576"
 ---
 # <a name="correlation"></a>Corrélation
 Lorsque les applications de service de workflow communiquent avec d'autres services, il est important que les messages échangés entre eux soient distribués à l'instance de workflow appropriée. La corrélation en fournit le mécanisme. Les rubriques de cette section donnent une vue d'ensemble de la corrélation et de son utilisation dans différents scénarios de service de workflow.  
@@ -16,14 +16,8 @@ Lorsque les applications de service de workflow communiquent avec d'autres servi
  [Vue d’ensemble de la corrélation](../../../../docs/framework/wcf/feature-details/correlation-overview.md)  
  Donne une vue d'ensemble des types de corrélation disponibles dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
- [Échange de contexte](../../../../docs/framework/wcf/feature-details/context-exchange-correlation.md)  
- Décrit la corrélation d'échange de contextes.  
-  
  [Durable Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md)  
- Décrit la corrélation duplex durable.  
-  
- [Basé sur le contenu](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
- Décrit la corrélation basée sur le contenu.  
+ Décrit la corrélation duplex durable.
   
  [Demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
  Décrit la corrélation demande-réponse  

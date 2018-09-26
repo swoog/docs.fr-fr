@@ -2,15 +2,15 @@
 title: ASP.NET Caching Integration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002786"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197446"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET Caching Integration
-Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle de programmation HTTP Web WCF. Veuillez consulter la [Basic Resource Service](../../../../docs/framework/wcf/samples/basic-resource-service.md) exemple pour une version auto-hébergée de ce scénario traite en détail l’implémentation de service. Cette rubrique met l’accent sur la fonctionnalité d’intégration du cache de sortie ASP.NET.  
+Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle de programmation HTTP Web WCF. Cette rubrique met l’accent sur la fonctionnalité d’intégration du cache de sortie ASP.NET.  
   
 ## <a name="demonstrates"></a>Démonstrations  
  Intégration au cache de sortie ASP.NET  
@@ -29,7 +29,7 @@ Cet exemple montre comment utiliser le cache de sortie ASP.NET avec le modèle d
   
  Dans le fichier Service.cs de l’exemple de projet de Service, à la fois le `GetCustomer` et `GetCustomers` opérations sont marquées avec le <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, qui fournit le nom de profil de cache « CacheFor60Seconds ». Dans le fichier Web.config du projet de Service, le profil de cache « CacheFor60Seconds » est fourni sous la <`caching`> élément de <`system.web`>. Pour ce profil de cache, la valeur de la `duration` attribut étant « 60 », les réponses associées à ce profil sont mises en cache dans le cache de sortie ASP.NET pendant 60 secondes. En outre, pour ce profil de cache, le `varmByParam` attribut est défini sur « format » demande avec différentes valeurs pour le `format` requête paramètre de chaîne ont leurs réponses mises en cache séparément. D’Enfin, le profil de cache `varyByHeader` attribut est défini sur « Accepter », donc des demandes présentant différentes valeurs d’en-tête Accept sur leurs réponses mises en cache séparément.  
   
- Le fichier program.cs du projet Client montre comment un tel client peut être créé à l'aide de <xref:System.Net.HttpWebRequest>. Notez qu'il ne s'agit là que de l'un des moyens d'accéder à un service WCF. Il est également possible d’accéder au service à l’aide d’autres classes .NET Framework telles que la fabrication de canal WCF et <xref:System.Net.WebClient>. Autres exemples du SDK (telles que la [Service HTTP de base](../../../../docs/framework/wcf/samples/basic-http-service.md) exemple et le [la sélection automatique du Format](../../../../docs/framework/wcf/samples/automatic-format-selection.md) exemple) montrent comment utiliser ces classes pour communiquer avec un service WCF.  
+ Le fichier program.cs du projet Client montre comment un tel client peut être créé à l'aide de <xref:System.Net.HttpWebRequest>. Notez qu'il ne s'agit là que de l'un des moyens d'accéder à un service WCF. Il est également possible d’accéder au service à l’aide d’autres classes .NET Framework telles que la fabrication de canal WCF et <xref:System.Net.WebClient>. Autres exemples du SDK (telles que la [Service HTTP de base](../../../../docs/framework/wcf/samples/basic-http-service.md) exemple) montrent comment utiliser ces classes pour communiquer avec un service WCF.  
   
 ## <a name="to-run-the-sample"></a>Pour exécuter l'exemple  
  Cet exemple est composé de trois projets :  

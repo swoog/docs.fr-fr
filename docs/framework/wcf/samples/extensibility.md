@@ -2,12 +2,12 @@
 title: Extensibilité
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
-ms.openlocfilehash: 010d6d7b17d3cb39e19c23550ca3522d6ea73a21
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805380"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196864"
 ---
 # <a name="extensibility"></a>Extensibilité
 Cette section contient des exemples qui traitent de l’extensibilité personnalisée et d’autres fonctionnalités de Windows Communication Foundation (WCF).  
@@ -38,16 +38,13 @@ Cette section contient des exemples qui traitent de l’extensibilité personnal
  Illustre la syndication personnalisée.  
   
  [Extensibilité du transport](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
- Illustre les transports personnalisés.  
-  
- [Extensibilité web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
- Illustre les fonctionnalités Web personnalisées.  
+ Illustre les transports personnalisés.
   
  [Module de formatage et sélecteur de l’opération](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
  Montre comment les points d'extensibilité peuvent consommer des formats de données de message personnalisés.  
   
  [Filtre de messages personnalisé](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
- montre comment remplacer les filtres de message Windows Communication Foundation (WCF) utilise pour distribuer des messages aux points de terminaison.  
+ montre comment remplacer les filtres de messages Windows Communication Foundation (WCF) utilise pour distribuer des messages aux points de terminaison.  
   
  [Hôte de service personnalisé](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Montre comment utiliser un dérivé personnalisé de la classe <xref:System.ServiceModel.ServiceHost> pour altérer le comportement d'exécution d'un service.  
@@ -56,7 +53,7 @@ Cette section contient des exemples qui traitent de l’extensibilité personnal
  Montre comment des processus tels que la sérialisation, la désérialisation, l’exportation de schéma et l’importation de schéma peuvent être personnalisés à l’aide d’une classe de substitution d’un contrat de données.  
   
  [Extension du contrôle à la gestion des erreurs et au rapport d’erreurs](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
- Montre comment étendre le contrôle à la gestion des erreurs et de signaler les erreurs dans un service WCF à l’aide du <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  
+ Montre comment étendre le contrôle sur la gestion des erreurs et des rapports d’erreurs dans un service WCF à l’aide du <xref:System.ServiceModel.Dispatcher.IErrorHandler> interface.  
   
  [Inspecteurs de messages](../../../../docs/framework/wcf/samples/message-inspectors.md)  
  Montre comment implémenter et configurer des inspecteurs de message de service et de client.  

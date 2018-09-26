@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultFtpCachePolicy&gt; élément (paramètres réseau)'
+title: '&lt;defaultFtpCachePolicy&gt; , élément (paramètres réseau)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultFtpCachePolicy
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: e4ea16c925114d4ad4054af5f340c764ed6fe4fd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743145"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47209424"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; élément (paramètres réseau)
+# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a>&lt;defaultFtpCachePolicy&gt; , élément (paramètres réseau)
 Décrit si la mise en cache FTP est active et décrit la valeur par défaut, la mise en cache de stratégie.  
   
  \<configuration>  
@@ -43,15 +42,15 @@ Décrit si la mise en cache FTP est active et décrit la valeur par défaut, la 
 |---------------|-----------------|  
 |`policyLevel`|Spécifie la mise en cache de stratégie FTP. La valeur par défaut est `Default`.|  
   
-## <a name="policylevel-attribute"></a>PolicyLevel qui n’est attribut  
+## <a name="policylevel-attribute"></a>policyLevel attribut  
   
 |Value|Description|  
 |-----------|-----------------|  
-|`Default`|Retourne la ressource mise en cache si la ressource est actualisée, la longueur du contenu est précise et d’expiration, modification et les attributs de la longueur de contenu sont présents.|  
+|`Default`|Retourne la ressource mise en cache si la ressource est actualisée, la longueur du contenu est précise, et l’expiration, la modification et attributs de la longueur du contenu sont présents.|  
 |`BypassCache`|Retourne la ressource à partir du serveur.|  
-|`CacheOnly`|Retourne la ressource mise en cache si la longueur du contenu est présente et qu’il correspond à la taille de l’entrée.|  
-|`CacheIfAvailable`|Retourne la ressource mise en cache si la longueur du contenu est fournie et correspond à la taille de l’entrée ; Sinon, la ressource est téléchargée à partir du serveur et est retournée à l’appelant.|  
-|`Revalidate`|Retourne la ressource mise en cache si l’horodatage de la ressource mise en cache est identique à celui de la ressource sur le serveur ; Sinon, la ressource est téléchargée à partir du serveur, stockée dans le cache et retournée à l’appelant.|  
+|`CacheOnly`|Retourne la ressource mise en cache si la longueur du contenu est présente et qu’il correspond à la taille d’entrée.|  
+|`CacheIfAvailable`|Retourne la ressource mise en cache si la longueur du contenu est fournie et correspond à la taille d’entrée ; Sinon, la ressource est téléchargée à partir du serveur et est retournée à l’appelant.|  
+|`Revalidate`|Retourne la ressource mise en cache si l’horodatage de la ressource mise en cache est identique à l’horodatage de la ressource sur le serveur ; Sinon, la ressource est téléchargée à partir du serveur, stockée dans le cache et retournée à l’appelant.|  
 |`Reload`|Télécharge la ressource à partir du serveur, il stocke dans le cache et retourne la ressource à l’appelant.|  
 |`NoCacheNoStore`|Si une ressource mise en cache existe, elle est supprimée. La ressource est téléchargée à partir du serveur et est retournée à l’appelant.|  
 |`Revalidate`|Satisfait une demande à l’aide de la copie mise en cache de la ressource si l’horodatage est le même que l’horodatage de la ressource sur le serveur ; Sinon, la ressource est téléchargée à partir du serveur, présentée à l’appelant et stockée dans le cache.|  
@@ -68,7 +67,7 @@ Décrit si la mise en cache FTP est active et décrit la valeur par défaut, la 
 ## <a name="remarks"></a>Notes  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment spécifier une stratégie de la mise en cache de FTP `NoCacheNoStore`.  
+ L’exemple suivant montre comment spécifier une FTP mise en cache de la stratégie de `NoCacheNoStore`.  
   
 ```xml  
 <configuration>  
