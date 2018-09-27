@@ -1,14 +1,14 @@
 ---
 title: Utilisation de F# dans Azure
-description: 'Guide à l’aide des services Azure avec F #'
+description: 'Guide d’utilisation des services Azure avec F #'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 9a6e384874426584a19e1dc83a35c3f80e59537a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569705"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399032"
 ---
 # <a name="using-f-on-azure"></a>Utilisation de F# dans Azure
 
@@ -19,14 +19,14 @@ Vous trouverez dans les sections suivantes des ressources expliquant comment uti
 > [!NOTE]
 > Si un service Azure particulier ne figure pas dans cette documentation, consultez la documentation Azure Functions ou .NET pour ce service. Certains services Azure sont indépendants du langage et ne nécessitent aucune documentation spécifique au langage. Ces services ne sont pas listés ici.
 
-## <a name="using-azure-virtual-machines-with-f"></a>À l’aide de Machines virtuelles avec F # #
+## <a name="using-azure-virtual-machines-with-f"></a>À l’aide de Machines virtuelles Azure avec F # #
 
 Azure prend en charge un large éventail de configurations de machine virtuelle. Pour plus d’informations, consultez [Machines virtuelles Linux et Azure](https://azure.microsoft.com/services/virtual-machines/).
 
 Pour installer F# sur une machine virtuelle pour exécution, compilation et/ou création de scripts, consultez [Utilisation de F# sur Linux](http://fsharp.org/use/linux) et [Utilisation de F# sur Windows](http://fsharp.org/use/windows).
 
 
-## <a name="using-azure-functions-with-f"></a>À l’aide de fonctions Azure avec F # #
+## <a name="using-azure-functions-with-f"></a>Utilisation d’Azure Functions avec F # #
 
 [Azure Functions](https://azure.microsoft.com/services/functions/) est une solution qui vous permet d’exécuter facilement de petits blocs de code, ou « fonctions », dans le cloud. Écrivez simplement le code nécessaire pour résoudre le problème qui se pose, sans vous soucier d’une application dans son intégralité ni de l’infrastructure pour l’exécuter. Les fonctions sont connectées à des événements dans le stockage Azure et à d’autres ressources hébergées dans le cloud. Les données sont acheminées aux fonctions F# par le biais d’arguments de fonction. Vous pouvez utiliser le langage de développement de votre choix, Azure se chargeant de la mise à l’échelle en fonction des besoins.
 
@@ -34,9 +34,9 @@ Azure Functions, qui prend en charge F# comme langage de première classe, exé
 
 Autres ressources relatives à l’utilisation d’Azure Functions et de F# :
 
-* [Montée en puissance des fonctions Azure en F # à l’aide de Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [Mettre à l’échelle des fonctions Azure en F # à l’aide de Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
 * [Comment créer une fonction Azure en F #](https://mnie.github.io/2016-09-08-AzureFunctions/)
-* [Utilisation du fournisseur de Type Azure avec des fonctions Azure](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
+* [Utilisation du fournisseur de Type Azure avec Azure Functions](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>L’utilisation du stockage Azure avec F # #
 
@@ -49,7 +49,7 @@ Stockage Azure est une couche de base de services de stockage pour les applicati
 
 Vous pouvez aussi utiliser Stockage Azure conjointement avec Azure Functions en remplaçant les appels d’API explicites par une configuration déclarative. Pour obtenir des exemples d’utilisation de F#, consultez [Déclencheurs et liaisons Azure Functions pour Stockage Azure](/azure/azure-functions/functions-bindings-storage).
 
-## <a name="using-azure-app-service-with-f"></a>À l’aide du Service d’applications Azure avec F # #
+## <a name="using-azure-app-service-with-f"></a>À l’aide d’Azure App Service avec F # #
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) est une plateforme cloud qui permet de générer des applications web et mobiles performantes qui se connectent aux données en tout lieu, dans le cloud ou localement.
 
@@ -65,14 +65,14 @@ Vous pouvez aussi utiliser Stockage Azure conjointement avec Azure Functions en 
 
 ## <a name="using-azure-cosmos-db-with-f"></a>À l’aide d’Azure Cosmos DB avec F # #
 
-[Base de données Azure Cosmos](https://azure.microsoft.com/services/cosmos-db) est un service NoSQL pour les applications hautement disponibles et distribués internationalement.
+[Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db) est un service NoSQL pour les applications hautement disponibles et distribuées dans le monde entier.
 
-Base de données Azure Cosmos est utilisable avec F # de deux manières :
+Azure Cosmos DB peut être utilisé avec F # de deux manières :
 
-1. Grâce à la création de fonctions d’Azure) (F # qui réagir à ou de provoquer des modifications apportées aux regroupements de la base de données Azure Cosmos. Consultez [pour les fonctions d’Azure, les liaisons de base de données Azure Cosmos](/azure/azure-functions/functions-bindings-cosmosdb), ou
-2. À l’aide de la [Azure Cosmos DB .NET SDK pour l’API SQL](/azure/cosmos-db/sql-api-sdk-dotnet). Les exemples associés sont en c#.
+1. Via la création de fonctions Azure Functions F # qui réagissent aux ou entraîner des modifications apportées aux collections Azure Cosmos DB. Consultez [liaisons Azure Cosmos DB pour Azure Functions](/azure/azure-functions/functions-bindings-cosmosdb), ou
+2. À l’aide de la [SDK .NET Azure Cosmos DB pour API SQL](/azure/cosmos-db/sql-api-sdk-dotnet). Les exemples associés sont en c#.
 
-## <a name="using-azure-event-hubs-with-f"></a>À l’aide de concentrateurs d’événements Azure avec F # #
+## <a name="using-azure-event-hubs-with-f"></a>À l’aide d’Azure Event Hubs avec F # #
 
 [Azure Event Hubs](https://azure.microsoft.com/services/event-hubs/) assure l’ingestion de la télémétrie à l’échelle du cloud à partir de sites web, d’applications et d’appareils.
 
@@ -81,7 +81,7 @@ Vous pouvez utiliser Azure DocumentDB avec F# de deux manières :
 1. Soit en créant des fonctions Azure Functions en F# qui sont déclenchées par des événements. Consultez [Déclencheurs Azure Functions pour Event Hubs](/azure/azure-functions/functions-bindings-event-hubs).
 2. Soit en utilisant le [SDK .NET pour Azure](/azure/event-hubs/event-hubs-csharp-ephcs-getstarted). Notez que ces exemples sont en C#.
 
-## <a name="using-azure-notification-hubs-with-f"></a>À l’aide de concentrateurs de Notification Azure avec F # #
+## <a name="using-azure-notification-hubs-with-f"></a>À l’aide d’Azure Notification Hubs avec F # #
 
 [Azure Notification Hubs](/azure/notification-hubs/) est une infrastructure Push multiplateforme avec montée en charge qui vous permet d’envoyer des notifications Push de n’importe quel backend (dans le cloud ou localement) vers toute plateforme mobile.
 
@@ -97,13 +97,13 @@ Un [Webhook](https://en.wikipedia.org/wiki/Webhook) est un rappel déclenché au
 
 Vous pouvez implémenter des Webhooks en F# et les héberger sur Azure par le biais d’une [fonction Azure Functions en F# avec une liaison Webhook](/azure/azure-functions/functions-bindings-http-webhook).
 
-## <a name="using-webjobs-with-f"></a>À l’aide des tâches Web avec F # #
+## <a name="using-webjobs-with-f"></a>L’utilisation de Webjobs avec F # #
 
 Les [Webjobs](/azure/app-service-web/web-sites-create-web-jobs) sont des programmes que vous pouvez exécuter dans votre application web App Service de trois façons : à la demande, en continu ou selon une planification.
 
-[Exemple de Webjob en F# ](https://github.com/andredublin/fsharp-azure-webjob)
+[Exemple de Webjob en F# ](https://github.com/jrr/webjob-project-examples)
 
-## <a name="implementing-timers-on-azure-with-f"></a>Implémentation des minuteries sur Azure avec F # #
+## <a name="implementing-timers-on-azure-with-f"></a>Implémentation de minuteries sur Azure avec F # #
 
 Les déclencheurs de minuterie appellent des fonctions selon une planification ou de manière ponctuelle ou périodique.
 
@@ -113,7 +113,7 @@ Vous pouvez implémenter des minuteries en F# et les héberger sur Azure par le
 
 Vous pouvez déployer et gérer des machines virtuelles Azure par programmation à partir de scripts F# à l’aide de packages et d’API Microsoft.Azure.Management. Par exemple, consultez [Bien démarrer avec les bibliothèques de gestion pour .NET](https://msdn.microsoft.com/library/dn722415.aspx) et [Utilisation d’Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-De même, vous pouvez déployer et gérer d’autres ressources Azure à partir de scripts F# à l’aide des mêmes composants. Par exemple, vous pourrez créer des comptes de stockage, déployer des Services de cloud computing Azure, créer des instances de base de données Azure Cosmos et gérer Azure des notifications Hubs par programme à partir de scripts F #.
+De même, vous pouvez déployer et gérer d’autres ressources Azure à partir de scripts F# à l’aide des mêmes composants. Par exemple, vous pouvez créer des comptes de stockage, déployer des Services Cloud Azure, créer des instances d’Azure Cosmos DB et gérer Azure Notifcation Hubs par programmation à partir de scripts F #.
 
 Il est généralement inutile d’utiliser des scripts F# pour déployer et gérer des ressources. Par exemple, vous pouvez déployer des ressources Azure directement à partir de descriptions de modèles JSON paramétrables. Consultez [Modèles Azure Resource Manager](/azure/azure-resource-manager/resource-manager-template-best-practices), en particulier les exemples fournis tels que les [modèles de démarrage rapide Azure](https://azure.microsoft.com/resources/templates/).
 

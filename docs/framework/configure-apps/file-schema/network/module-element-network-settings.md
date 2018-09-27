@@ -11,11 +11,11 @@ ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 4d51010d6236103d252507802e14d01230d90219
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075198"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397187"
 ---
 # <a name="ltmodulegt-element-network-settings"></a>&lt;module&gt; , élément (paramètres réseau)
 Ajoute un nouveau module proxy à l'application.  

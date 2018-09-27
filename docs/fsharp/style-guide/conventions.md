@@ -3,11 +3,11 @@ title: 'Conventions de codage F #'
 description: 'Découvrez les idiomes et des recommandations générales lors de l’écriture de code F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078470"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237398"
 ---
 # <a name="f-coding-conventions"></a>Conventions de codage F #
 

@@ -3,11 +3,11 @@ title: Exemple d'activité compensable
 ms.date: 03/30/2017
 ms.assetid: 58f4898c-b2b8-44a4-9a73-3bef4da6d5ba
 ms.openlocfilehash: 3bf1d120cd700830a98f53495f7e9989ffec73db
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089822"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398928"
 ---
 # <a name="compensable-activity-sample"></a>Exemple d'activité compensable
 Cet exemple montre comment utiliser l'activité `CompensableActivity` pour définir le travail à faire pour une action donnée pendant une exécution normale et le travail qui doit être fait pour compenser cette action, si nécessaire ultérieurement.  La première partie de l’exemple montre comment les unités de travail compensable peuvent être définies dans Windows Workflow Foundation (WF) à l’aide un `CompensableActivity` activité et comment elles sont exécutées dans une exécution réussie.  La deuxième partie de l'exemple montre comment ces mêmes unités de travail compensable se chargent automatiquement de la compensation lorsqu'un événement inattendu est atteint et que l'instance de workflow est annulée.  
