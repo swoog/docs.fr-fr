@@ -3,13 +3,12 @@ title: Exceptions de sécurité
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474881"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233241"
 ---
 # <a name="security-exceptions"></a>Exceptions de sécurité
 Cette rubrique répertorie toutes les exceptions de sécurité.  
@@ -30,7 +29,7 @@ Cette rubrique répertorie toutes les exceptions de sécurité.
 |BindingDoesNotSupportWindowsIdenityForImpersonation|L'opération de contrat spécifiée requiert l'identité Windows pour l'emprunt d'identité automatique. Une identité Windows qui représente l’appelant n’est pas fournie par la liaison spécifiée pour le contrat spécifié.|  
 |CachedNegotiationStateQuotaReached|Le service ne peut pas mettre l'état de la négociation en mémoire cache car la capacité spécifiée est atteinte. Faites une nouvelle tentative pour cette demande.|  
 |CacheQuotaReached|Ajout de l'élément impossible. La taille maximale de la mémoire cache est spécifiée.|  
-|CannotDetermineSPNBasedOnAddress|Le client ne peut pas déterminer le nom de principal du service (SPN) basé sur l'identité dans l'adresse cible spécifiée pour les besoins de SspiNegotiation/Kerberos. L’identité de l’adresse cible doit être une identité UPN (comme acmedomain\\\alice) ou une identité SPN (comme host/bobs-machine).|  
+|CannotDetermineSPNBasedOnAddress|Le client ne peut pas déterminer le nom de principal du service (SPN) basé sur l'identité dans l'adresse cible spécifiée pour les besoins de SspiNegotiation/Kerberos. L’identité de l’adresse cible doit être une identité UPN (par exemple acmedomain\\\alice) ou une identité SPN (comme host/bobs-machine).|  
 |CannotFindCert|Impossible de trouver le certificat X.509 à l'aide des critères de recherche spécifiés : StoreName, StoreLocation, FindType, FindValue.|  
 |CannotFindCertForTarget|Impossible de trouver le certificat X.509 à l'aide des critères de recherche spécifiés : StoreName, StoreLocation, FindType, FindValue pour la cible spécifiée.|  
 |CannotFindCorrelationStateForApplyingSecurity|Impossible de trouver l'état de corrélation pour appliquer la sécurité et répliquer au répondeur.|  
