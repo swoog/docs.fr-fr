@@ -4,73 +4,73 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 4a003acbf4e182a0493368b586a3add229d8b526
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087669"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455513"
 ---
-# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="c7f4e-102">Comment : générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF</span><span class="sxs-lookup"><span data-stu-id="c7f4e-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="c7f4e-103">S'applique à</span><span class="sxs-lookup"><span data-stu-id="c7f4e-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a><span data-ttu-id="8e6fe-102">Comment : générer une application web ASP.NET MVC prenant en charge les revendications à l’aide de WIF</span><span class="sxs-lookup"><span data-stu-id="8e6fe-102">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="8e6fe-103">S'applique à</span><span class="sxs-lookup"><span data-stu-id="8e6fe-103">Applies To</span></span>  
   
--   <span data-ttu-id="c7f4e-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="c7f4e-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="8e6fe-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="8e6fe-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="c7f4e-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="c7f4e-105">ASP.NET® MVC</span></span>  
+-   <span data-ttu-id="8e6fe-105">ASP.NET® MVC</span><span class="sxs-lookup"><span data-stu-id="8e6fe-105">ASP.NET® MVC</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="c7f4e-106">Récapitulatif</span><span class="sxs-lookup"><span data-stu-id="c7f4e-106">Summary</span></span>  
- <span data-ttu-id="c7f4e-107">Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application web ASP.NET MVC prenant en charge les revendications.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="c7f4e-108">Elle fournit également des instructions afin de tester cette simple application web ASP.NET MVC prenant en charge les revendications pour une implémentation réussie de l’authentification basée sur les revendications.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="c7f4e-109">Cette procédure ne comprend pas d’instructions détaillées pour créer un service d’émission de jeton de sécurité (STS) et suppose que vous en avez déjà configuré un.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
+## <a name="summary"></a><span data-ttu-id="8e6fe-106">Récapitulatif</span><span class="sxs-lookup"><span data-stu-id="8e6fe-106">Summary</span></span>  
+ <span data-ttu-id="8e6fe-107">Cette procédure fournit des procédures pas à pas détaillées pour la création d’une simple application web ASP.NET MVC prenant en charge les revendications.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET MVC web application.</span></span> <span data-ttu-id="8e6fe-108">Elle fournit également des instructions afin de tester cette simple application web ASP.NET MVC prenant en charge les revendications pour une implémentation réussie de l’authentification basée sur les revendications.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-108">It also provides instructions how to test the simple claims-aware ASP.NET MVC web application for successful implementation of claims-based authentication.</span></span> <span data-ttu-id="8e6fe-109">Cette procédure ne comprend pas d’instructions détaillées pour créer un service d’émission de jeton de sécurité (STS) et suppose que vous en avez déjà configuré un.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="c7f4e-110">Sommaire</span><span class="sxs-lookup"><span data-stu-id="c7f4e-110">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="8e6fe-110">Sommaire</span><span class="sxs-lookup"><span data-stu-id="8e6fe-110">Contents</span></span>  
   
--   <span data-ttu-id="c7f4e-111">Objectifs</span><span class="sxs-lookup"><span data-stu-id="c7f4e-111">Objectives</span></span>  
+-   <span data-ttu-id="8e6fe-111">Objectifs</span><span class="sxs-lookup"><span data-stu-id="8e6fe-111">Objectives</span></span>  
   
--   <span data-ttu-id="c7f4e-112">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="c7f4e-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="8e6fe-112">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="8e6fe-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="c7f4e-113">Étape 1 : créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="c7f4e-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+-   <span data-ttu-id="8e6fe-113">Étape 1 : créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8e6fe-113">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   <span data-ttu-id="c7f4e-114">Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="8e6fe-114">Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-114">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="c7f4e-115">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="c7f4e-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="8e6fe-115">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="8e6fe-115">Step 3 – Test Your Solution</span></span>  
   
--   <span data-ttu-id="c7f4e-116">Éléments associés</span><span class="sxs-lookup"><span data-stu-id="c7f4e-116">Related Items</span></span>  
+-   <span data-ttu-id="8e6fe-116">Éléments associés</span><span class="sxs-lookup"><span data-stu-id="8e6fe-116">Related Items</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="c7f4e-117">Objectifs</span><span class="sxs-lookup"><span data-stu-id="c7f4e-117">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="8e6fe-117">Objectifs</span><span class="sxs-lookup"><span data-stu-id="8e6fe-117">Objectives</span></span>  
   
--   <span data-ttu-id="c7f4e-118">Configurer l’application web ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
+-   <span data-ttu-id="8e6fe-118">Configurer l’application web ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-118">Configure ASP.NET MVC web application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="c7f4e-119">Tester le bon fonctionnement de l’application web ASP.NET MVC prenant en charge les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
+-   <span data-ttu-id="8e6fe-119">Tester le bon fonctionnement de l’application web ASP.NET MVC prenant en charge les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-119">Test successful claims-aware ASP.NET MVC web application</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="c7f4e-120">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="c7f4e-120">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="8e6fe-120">Résumé des étapes</span><span class="sxs-lookup"><span data-stu-id="8e6fe-120">Summary of Steps</span></span>  
   
--   <span data-ttu-id="c7f4e-121">Étape 1 : créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="c7f4e-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+-   <span data-ttu-id="8e6fe-121">Étape 1 : créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8e6fe-121">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
   
--   <span data-ttu-id="c7f4e-122">Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="8e6fe-122">Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-122">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="c7f4e-123">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="c7f4e-123">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="8e6fe-123">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="8e6fe-123">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="c7f4e-124">Étape 1 : créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="c7f4e-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
- <span data-ttu-id="c7f4e-125">Dans cette étape, vous allez créer une application ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
+## <a name="step-1--create-simple-aspnet-mvc-application"></a><span data-ttu-id="8e6fe-124">Étape 1 : créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8e6fe-124">Step 1 – Create Simple ASP.NET MVC Application</span></span>  
+ <span data-ttu-id="8e6fe-125">Dans cette étape, vous allez créer une application ASP.NET MVC.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-125">In this step, you will create a new ASP.NET MVC application.</span></span>  
   
-#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="c7f4e-126">Pour créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="c7f4e-126">To create simple ASP.NET MVC application</span></span>  
+#### <a name="to-create-simple-aspnet-mvc-application"></a><span data-ttu-id="8e6fe-126">Pour créer une simple application ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="8e6fe-126">To create simple ASP.NET MVC application</span></span>  
   
-1.  <span data-ttu-id="c7f4e-127">Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="8e6fe-127">Démarrez Visual Studio et cliquez sur **Fichier**, **Nouveau**, puis **Projet**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-127">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="c7f4e-128">Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web ASP.NET MVC 3**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
+2.  <span data-ttu-id="8e6fe-128">Dans la fenêtre **Nouveau projet**, cliquez sur **Application Web ASP.NET MVC 3**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-128">In the **New Project** window, click **ASP.NET MVC 3 Web Application**.</span></span>  
   
-3.  <span data-ttu-id="c7f4e-129">Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="8e6fe-129">Dans **Nom**, entrez `TestApp` et appuyez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-129">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-4.  <span data-ttu-id="c7f4e-130">Dans la boîte de dialogue **Nouveau projet ASP.NET MVC 3**, sélectionnez **Application Internet** dans les modèles disponibles, vérifiez que **Moteur de vue** a la valeur **Razor**, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
+4.  <span data-ttu-id="8e6fe-130">Dans la boîte de dialogue **Nouveau projet ASP.NET MVC 3**, sélectionnez **Application Internet** dans les modèles disponibles, vérifiez que **Moteur de vue** a la valeur **Razor**, puis cliquez sur **OK**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-130">In the **New ASP.NET MVC 3 Project** dialog, select **Internet Application** from the available templates, ensure **View Engine** is set to **Razor**, and then click **OK**.</span></span>  
   
-5.  <span data-ttu-id="c7f4e-131">Quand le nouveau projet s’ouvre, cliquez avec le bouton droit sur le projet **TestApp** dans l’**Explorateur de solutions** et sélectionnez l’option **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
+5.  <span data-ttu-id="8e6fe-131">Quand le nouveau projet s’ouvre, cliquez avec le bouton droit sur le projet **TestApp** dans l’**Explorateur de solutions** et sélectionnez l’option **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-131">When the new project opens, right-click the **TestApp** project in **Solution Explorer** and select the **Properties** option.</span></span>  
   
-6.  <span data-ttu-id="c7f4e-132">Dans la page de propriétés du projet, cliquez sur l’onglet **Web** sur la gauche et vérifiez que l’option **Utiliser le serveur Web IIS local** est sélectionnée.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
+6.  <span data-ttu-id="8e6fe-132">Dans la page de propriétés du projet, cliquez sur l’onglet **Web** sur la gauche et vérifiez que l’option **Utiliser le serveur Web IIS local** est sélectionnée.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-132">On the project’s properties page, click on the **Web** tab on the left and ensure that the **Use Local IIS Web Server** option is selected.</span></span>  
   
-## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="c7f4e-133">Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
- <span data-ttu-id="c7f4e-134">Dans cette étape, vous allez ajouter des entrées de configuration au fichier de configuration *Web.config* de votre application web ASP.NET MVC pour qu’elle prenne en charge les revendications.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
+## <a name="step-2--configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8e6fe-133">Étape 2 : configurer l’application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-133">Step 2 – Configure ASP.NET MVC Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="8e6fe-134">Dans cette étape, vous allez ajouter des entrées de configuration au fichier de configuration *Web.config* de votre application web ASP.NET MVC pour qu’elle prenne en charge les revendications.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-134">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET MVC web application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="c7f4e-135">Pour configurer une application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
+#### <a name="to-configure-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8e6fe-135">Pour configurer une application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-135">To configure ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="c7f4e-136">Ajoutez les définitions des sections de configuration suivantes au fichier de configuration *Web.config*.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="c7f4e-137">Elles définissent les sections de configuration requises par Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="c7f4e-138">Ajoutez les définitions immédiatement après l’élément d’ouverture **\<configuration>**  :</span><span class="sxs-lookup"><span data-stu-id="c7f4e-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
+1.  <span data-ttu-id="8e6fe-136">Ajoutez les définitions des sections de configuration suivantes au fichier de configuration *Web.config*.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-136">Add the following configuration section definitions to the *Web.config* configuration file.</span></span> <span data-ttu-id="8e6fe-137">Elles définissent les sections de configuration requises par Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-137">These define configuration sections required by Windows Identity Foundation.</span></span> <span data-ttu-id="8e6fe-138">Ajoutez les définitions immédiatement après l’élément d’ouverture **\<configuration>**  :</span><span class="sxs-lookup"><span data-stu-id="8e6fe-138">Add the definitions immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -79,7 +79,7 @@ ms.locfileid: "47087669"
     </configSections>  
     ```  
   
-2.  <span data-ttu-id="c7f4e-139">Ajoutez un élément **\<location>** qui permet d’accéder aux métadonnées de fédération de l’application :</span><span class="sxs-lookup"><span data-stu-id="c7f4e-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
+2.  <span data-ttu-id="8e6fe-139">Ajoutez un élément **\<location>** qui permet d’accéder aux métadonnées de fédération de l’application :</span><span class="sxs-lookup"><span data-stu-id="8e6fe-139">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -91,7 +91,7 @@ ms.locfileid: "47087669"
     </location>  
     ```  
   
-3.  <span data-ttu-id="c7f4e-140">Ajoutez les entrées de configuration suivantes dans les éléments **\<system.web>** pour refuser des utilisateurs, désactiver l’authentification native et activer WIF afin de gérer l’authentification.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
+3.  <span data-ttu-id="8e6fe-140">Ajoutez les entrées de configuration suivantes dans les éléments **\<system.web>** pour refuser des utilisateurs, désactiver l’authentification native et activer WIF afin de gérer l’authentification.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-140">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -100,7 +100,7 @@ ms.locfileid: "47087669"
     <authentication mode="None" />  
     ```  
   
-4.  <span data-ttu-id="c7f4e-141">Ajoutez les entrées de configuration liées à Windows Identity Foundation suivantes et vérifiez que l’URL et le numéro de port de votre application ASP.NET correspondent aux valeurs dans l’entrée **\<audienceUris>**, l’attribut **realm** de l’élément **\<wsFederation>** et l’attribut **reply** de l’élément **\<wsFederation>**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="c7f4e-142">Vérifiez également que la valeur **issuer** correspond à l’URL de votre service d’émission de jeton de sécurité (STS).</span><span class="sxs-lookup"><span data-stu-id="c7f4e-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
+4.  <span data-ttu-id="8e6fe-141">Ajoutez les entrées de configuration liées à Windows Identity Foundation suivantes et vérifiez que l’URL et le numéro de port de votre application ASP.NET correspondent aux valeurs dans l’entrée **\<audienceUris>**, l’attribut **realm** de l’élément **\<wsFederation>** et l’attribut **reply** de l’élément **\<wsFederation>**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-141">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="8e6fe-142">Vérifiez également que la valeur **issuer** correspond à l’URL de votre service d’émission de jeton de sécurité (STS).</span><span class="sxs-lookup"><span data-stu-id="8e6fe-142">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -124,16 +124,16 @@ ms.locfileid: "47087669"
     </system.identityModel.services>  
     ```  
   
-5.  <span data-ttu-id="c7f4e-143">Ajoutez une référence à l’assembly <xref:System.IdentityModel>.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
+5.  <span data-ttu-id="8e6fe-143">Ajoutez une référence à l’assembly <xref:System.IdentityModel>.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-143">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-6.  <span data-ttu-id="c7f4e-144">Compilez la solution pour vérifier la présence d’erreurs.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-144">Compile the solution to make sure there are errors.</span></span>  
+6.  <span data-ttu-id="8e6fe-144">Compilez la solution pour vérifier la présence d’erreurs.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-144">Compile the solution to make sure there are errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="c7f4e-145">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="c7f4e-145">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="c7f4e-146">Dans cette étape, vous allez tester votre application web ASP.NET MVC configurée pour l’authentification basée sur les revendications.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="c7f4e-147">Pour effectuer un test de base, vous allez ajouter un code simple qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité (STS).</span><span class="sxs-lookup"><span data-stu-id="c7f4e-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="8e6fe-145">Étape 3 : tester votre solution</span><span class="sxs-lookup"><span data-stu-id="8e6fe-145">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="8e6fe-146">Dans cette étape, vous allez tester votre application web ASP.NET MVC configurée pour l’authentification basée sur les revendications.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-146">In this step you will test your ASP.NET MVC web application configured for claims-based authentication.</span></span> <span data-ttu-id="8e6fe-147">Pour effectuer un test de base, vous allez ajouter un code simple qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité (STS).</span><span class="sxs-lookup"><span data-stu-id="8e6fe-147">To perform basic test you will add simple code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="c7f4e-148">Pour tester votre application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="c7f4e-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
+#### <a name="to-test-your-aspnet-mvc-application-for-claims-based-authentication"></a><span data-ttu-id="8e6fe-148">Pour tester votre application ASP.NET MVC pour l’authentification basée sur les revendications</span><span class="sxs-lookup"><span data-stu-id="8e6fe-148">To test your ASP.NET MVC application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="c7f4e-149">Dans l’**Explorateur de solutions**, développez le dossier **Contrôleurs** et ouvrez le fichier *HomeController.cs* dans l’éditeur.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="c7f4e-150">Ajoutez le code suivant à la méthode **Index** :</span><span class="sxs-lookup"><span data-stu-id="c7f4e-150">Add the following code to the **Index** method:</span></span>  
+1.  <span data-ttu-id="8e6fe-149">Dans l’**Explorateur de solutions**, développez le dossier **Contrôleurs** et ouvrez le fichier *HomeController.cs* dans l’éditeur.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-149">In the **Solution Explorer**, expand the **Controllers** folder and open *HomeController.cs* file in the editor.</span></span> <span data-ttu-id="8e6fe-150">Ajoutez le code suivant à la méthode **Index** :</span><span class="sxs-lookup"><span data-stu-id="8e6fe-150">Add the following code to the **Index** method:</span></span>  
   
     ```csharp  
     public ActionResult Index()  
@@ -144,7 +144,7 @@ ms.locfileid: "47087669"
     }  
     ```  
   
-2.  <span data-ttu-id="c7f4e-151">Dans l’**Explorateur de solutions**, développez les dossiers **Vues**, puis **Accueil**, et ouvrez le fichier *Index.cshtml* dans l’éditeur.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="c7f4e-152">Supprimez son contenu et ajoutez le balisage suivant :</span><span class="sxs-lookup"><span data-stu-id="c7f4e-152">Delete its contents and add the following markup:</span></span>  
+2.  <span data-ttu-id="8e6fe-151">Dans l’**Explorateur de solutions**, développez les dossiers **Vues**, puis **Accueil**, et ouvrez le fichier *Index.cshtml* dans l’éditeur.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-151">In the **Solution Explorer** expand **Views** and then **Home** folders and open *Index.cshtml* file in the editor.</span></span> <span data-ttu-id="8e6fe-152">Supprimez son contenu et ajoutez le balisage suivant :</span><span class="sxs-lookup"><span data-stu-id="8e6fe-152">Delete its contents and add the following markup:</span></span>  
   
     ```html  
     @{  
@@ -212,10 +212,10 @@ ms.locfileid: "47087669"
     </table>  
     ```  
   
-3.  <span data-ttu-id="c7f4e-153">Exécutez la solution en appuyant sur la touche **F5**.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-153">Run the solution by pressing the **F5** key.</span></span>  
+3.  <span data-ttu-id="8e6fe-153">Exécutez la solution en appuyant sur la touche **F5**.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-153">Run the solution by pressing the **F5** key.</span></span>  
   
-4.  <span data-ttu-id="c7f4e-154">La page qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité doit s’afficher.</span><span class="sxs-lookup"><span data-stu-id="c7f4e-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
+4.  <span data-ttu-id="8e6fe-154">La page qui affiche les revendications dans le jeton émis par le service d’émission de jeton de sécurité doit s’afficher.</span><span class="sxs-lookup"><span data-stu-id="8e6fe-154">You should be presented with the page that displays the claims in the token that was issued to you by Security Token Service.</span></span>  
   
-## <a name="related-items"></a><span data-ttu-id="c7f4e-155">Éléments associés</span><span class="sxs-lookup"><span data-stu-id="c7f4e-155">Related Items</span></span>  
+## <a name="related-items"></a><span data-ttu-id="8e6fe-155">Éléments associés</span><span class="sxs-lookup"><span data-stu-id="8e6fe-155">Related Items</span></span>  
   
--   [<span data-ttu-id="c7f4e-156">Guide pratique pour générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF</span><span class="sxs-lookup"><span data-stu-id="c7f4e-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [<span data-ttu-id="8e6fe-156">Guide pratique pour générer une application Web Forms ASP.NET prenant en charge les revendications à l’aide de WIF</span><span class="sxs-lookup"><span data-stu-id="8e6fe-156">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
