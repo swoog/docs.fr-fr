@@ -16,11 +16,11 @@ ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5e52b827f337892c33ec61b9affa1cc646a759c5
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577020"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47232277"
 ---
 # <a name="composing-streams"></a>Composition de flux
 Un magasin de stockage est un support de stockage, comme un disque ou de la mémoire. Chaque magasin de stockage implémente son propre flux en tant qu’implémentation de la classe <xref:System.IO.Stream>. Chaque type de flux lit et écrit des octets depuis et vers le magasin de stockage donné. Les flux qui se connectent aux magasins de stockage sont appelés des flux de base. Les flux de base possèdent des constructeurs qui ont les paramètres requis pour connecter le flux au magasin de stockage. Par exemple, <xref:System.IO.FileStream> possède des constructeurs qui spécifient un paramètre de chemin d’accès, qui indique la façon dont le fichier est partagé par les processus, et ainsi de suite.  

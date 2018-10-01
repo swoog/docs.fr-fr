@@ -3,11 +3,11 @@ title: Guide pratique pour combiner des requêtes LINQ avec des expressions rég
 ms.date: 07/20/2015
 ms.assetid: 6b003b65-20a4-4ca2-929e-2ee3f215aecc
 ms.openlocfilehash: c535620f2dee1ec9cd1b6ee994fbf860629601ba
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696681"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47235346"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-c"></a>Guide pratique pour combiner des requêtes LINQ avec des expressions régulières (C#)
 Cet exemple montre comment utiliser la classe <xref:System.Text.RegularExpressions.Regex> afin de créer une expression régulière pour les correspondances plus complexes des chaînes de texte. La requête LINQ facilite le filtrage des fichiers à parcourir à l’aide de l’expression régulière, et facilite également la personnalisation des résultats.  

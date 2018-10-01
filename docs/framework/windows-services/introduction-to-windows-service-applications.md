@@ -22,13 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-manager: douge
-ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520420"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47436282"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Introduction aux applications de service Windows
 Les services Microsoft Windows, anciennement « services NT », vous permettent de créer des applications exécutables longue durée qui s’exécutent au sein de leurs propres sessions Windows. Ces services peuvent être lancés automatiquement au démarrage de l’ordinateur, et peuvent être suspendus et redémarrés. Ils n’affichent aucune interface utilisateur. Les services sont donc parfaitement adaptés à une utilisation sur un serveur ou chaque fois que vous avez besoin de fonctionnalités longue durée qui n’interfèrent pas avec d’autres utilisateurs travaillant sur le même ordinateur. Vous pouvez également exécuter des services dans le contexte de sécurité d’un compte d’utilisateur spécifique (différent de l’utilisateur connecté ou du compte d’ordinateur par défaut). Pour plus d’informations sur les services et sessions Windows, consultez la documentation du kit SDK Windows.  

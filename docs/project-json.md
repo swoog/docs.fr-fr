@@ -1,20 +1,15 @@
 ---
 title: project.JSON et Visual Studio 2015 avec .NET Core
 description: Où trouver la documentation des outils en préversion pour .NET Core et ASP.NET Core (project.json et Visual Studio 2015).
-keywords: project.json, Visual Studio 2015, .NET Core, ASP.NET Core
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: e282c43b-593e-40a6-af91-de0babcd7b72
-ms.openlocfilehash: 2bfacd28a1560cd60f252b8f8368a8abdddab5bd
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "42871077"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47216615"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>project.JSON et Visual Studio 2015 avec .NET Core
 

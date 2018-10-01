@@ -4,12 +4,12 @@ description: Découvrez les nouvelles fonctionnalités de .NET Core 2.1.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 850df87666c5beb0594f0672d8f558c11653f973
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625397"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400065"
 ---
 # <a name="whats-new-in-net-core-21"></a>Nouveautés de .NET Core 2.1
 
@@ -66,7 +66,7 @@ Un certain nombre d’outils qui étaient disponibles uniquement par projet à l
 
 .NET Core 2.1 prend en charge les *outils globaux*, autrement dit des outils personnalisés disponibles globalement à partir de la ligne de commande. Le modèle d’extensibilité des versions précédentes de .NET Core proposant des outils personnalisés par projet uniquement à l’aide de [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
 
-Pour installer un outil global, vous utilisez la commande [dotnet tool install](..\tools\dotnet-tool-install.md). Exemple :
+Pour installer un outil global, vous utilisez la commande [dotnet tool install](../tools/dotnet-tool-install.md). Exemple :
 
 ```console
 dotnet tool install -g dotnetsay

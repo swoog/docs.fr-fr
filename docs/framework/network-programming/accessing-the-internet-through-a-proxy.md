@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9671dae85a5057f9077437ea16275ddcfcb3a75e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394977"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47421276"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>Accès à Internet via un proxy
 Si votre site utilise un proxy pour fournir l’accès à Internet, vous devez configurer une instance de proxy pour permettre à votre application de communiquer avec le proxy web.  

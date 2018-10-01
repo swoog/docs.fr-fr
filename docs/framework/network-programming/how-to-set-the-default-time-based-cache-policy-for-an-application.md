@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6bfce066-a2e7-4add-a05e-85c12ec9f07f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 021a13b9124cf54712643e33cbf0ca77ec828b27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1e08026f8d1ec8b39f7ef3c2c34efad9e51b8fe9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396670"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235700"
 ---
 # <a name="how-to-set-the-default-time-based-cache-policy-for-an-application"></a>Comment : définir la stratégie de cache à durée définie par défaut pour une application
 Avec la stratégie de cache basée sur la durée par défaut, le comportement de cache d’une application est déterminé par les en-têtes envoyés avec la ressource en cache et par le comportement du cache défini dans les sections 13 et 14 du document RFC 2616, disponible à l’adresse [http://www.ietf.org](http://www.ietf.org/). Ce comportement de cache convient à la plupart des applications.  

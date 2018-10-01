@@ -3,12 +3,12 @@ title: Bien démarrer avec la transformation de la syntaxe (API Roslyn)
 description: Une introduction à la façon de parcourir et d’interroger les arborescences de syntaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: c372b1ba1e08a7d3b57ceea0d4449d03e55a39cf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618020"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47400788"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Bien démarrer avec la transformation de la syntaxe
 
@@ -30,7 +30,7 @@ Vous choisissez une des deux stratégies pour les transformations de syntaxe. Le
 
 La première transformation de syntaxe montre les méthodes de fabrique. Vous allez remplacer une instruction `using System.Collections;` par une instruction `using System.Collections.Generic;`. Cet exemple montre comment créer des objets <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> à l’aide des méthodes de fabrique <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType>. Pour chaque type de **nœud**, **jeton** ou **trivia**, il existe une méthode de fabrique qui crée une instance de ce type. Vous créez des arborescences de syntaxe en composant hiérarchiquement des nœuds de façon ascendante. Puis vous transformez le programme existant en remplaçant les nœuds existants par la nouvelle arborescence que vous avez créée.
 
-Démarrez Visual Studio, puis créez un nouveau projet C# **Outil d’analyse du code autonome**. Dans Visual Studio, choisissez **Fichier** > **Nouveau* > **Projet** pour afficher la boîte de dialogue Nouveau projet. Sous **Visual C#** > **Extensibilité**, choisissez **Outil d’analyse du code autonome**. Ce démarrage rapide inclut deux exemples de projets, par conséquent, nommez la solution **SyntaxTransformationQuickStart**, puis nommez le projet **ConstructionCS**. Cliquez sur **OK**.
+Démarrez Visual Studio, puis créez un nouveau projet C# **Outil d’analyse du code autonome**. Dans Visual Studio, choisissez **Fichier** > **Nouveau** > **Projet** pour afficher la boîte de dialogue Nouveau projet. Sous **Visual C#** > **Extensibilité**, choisissez **Outil d’analyse du code autonome**. Ce démarrage rapide inclut deux exemples de projets, par conséquent, nommez la solution **SyntaxTransformationQuickStart**, puis nommez le projet **ConstructionCS**. Cliquez sur **OK**.
 
 Ce projet utilise les méthodes de classe <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> pour construire un élément <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> représentant l’espace de noms `System.Collections.Generic`.
 

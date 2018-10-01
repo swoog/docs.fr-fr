@@ -5,11 +5,11 @@ helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
 ms.openlocfilehash: 9a17aaec20b03325abadfcc168f7ac4653f300df
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576754"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47401509"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>Guide pratique pour publier des événements conformes aux indications du .NET Framework (Guide de programmation C#)
 La procédure suivante montre comment ajouter à vos classes et structures des événements qui respectent le modèle [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] standard. Tous les événements de la bibliothèque de classes [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] sont basés sur le délégué <xref:System.EventHandler>, qui est défini comme suit :  
