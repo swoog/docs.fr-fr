@@ -19,22 +19,22 @@ ms.assetid: f977ebdc-1b55-475a-bc3d-3376470b08ae
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9aecf7aef9023439e145d408e40fb4adf5c0e986
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586384"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47192220"
 ---
-# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="01812-102">Lecture et écriture dans des fichiers</span><span class="sxs-lookup"><span data-stu-id="01812-102">How to: Read and Write to Files in Isolated Storage</span></span>
-<span data-ttu-id="01812-103">Pour lire ou écrire dans un fichier dans un magasin isolé, utilisez un objet <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> avec un lecteur de flux (objet <xref:System.IO.StreamReader>) ou un writer de flux (objet <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="01812-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
+# <a name="how-to-read-and-write-to-files-in-isolated-storage"></a><span data-ttu-id="59339-102">Lecture et écriture dans des fichiers</span><span class="sxs-lookup"><span data-stu-id="59339-102">How to: Read and Write to Files in Isolated Storage</span></span>
+<span data-ttu-id="59339-103">Pour lire ou écrire dans un fichier dans un magasin isolé, utilisez un objet <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> avec un lecteur de flux (objet <xref:System.IO.StreamReader>) ou un writer de flux (objet <xref:System.IO.StreamWriter>).</span><span class="sxs-lookup"><span data-stu-id="59339-103">To read from, or write to, a file in an isolated store, use an <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> object with a stream reader (<xref:System.IO.StreamReader> object) or stream writer (<xref:System.IO.StreamWriter> object).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="01812-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="01812-104">Example</span></span>  
- <span data-ttu-id="01812-105">L’exemple de code suivant obtient un magasin isolé et vérifie l’existence d’un fichier intitulé TestStore.txt dans le magasin.</span><span class="sxs-lookup"><span data-stu-id="01812-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="01812-106">S’il n’existe pas, il crée le fichier et écrit « Hello Isolated Storage » dans le fichier.</span><span class="sxs-lookup"><span data-stu-id="01812-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="01812-107">Si TestStore.txt existe déjà, l’exemple de code lit le fichier.</span><span class="sxs-lookup"><span data-stu-id="01812-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
+## <a name="example"></a><span data-ttu-id="59339-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="59339-104">Example</span></span>  
+ <span data-ttu-id="59339-105">L’exemple de code suivant obtient un magasin isolé et vérifie l’existence d’un fichier intitulé TestStore.txt dans le magasin.</span><span class="sxs-lookup"><span data-stu-id="59339-105">The following code example obtains an isolated store and checks whether a file named TestStore.txt exists in the store.</span></span> <span data-ttu-id="59339-106">S’il n’existe pas, il crée le fichier et écrit « Hello Isolated Storage » dans le fichier.</span><span class="sxs-lookup"><span data-stu-id="59339-106">If it doesn't exist, it creates the file and writes "Hello Isolated Storage" to the file.</span></span> <span data-ttu-id="59339-107">Si TestStore.txt existe déjà, l’exemple de code lit le fichier.</span><span class="sxs-lookup"><span data-stu-id="59339-107">If TestStore.txt already exists, the example code reads from the file.</span></span>  
   
  [!code-csharp[Conceptual.IsolatedStorage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source5.cs#5)]
  [!code-vb[Conceptual.IsolatedStorage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source5.vb#5)]  
   
-## <a name="see-also"></a><span data-ttu-id="01812-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="01812-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="59339-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="59339-108">See also</span></span>
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>  
@@ -42,5 +42,5 @@ ms.locfileid: "46586384"
 - <xref:System.IO.FileAccess?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader?displayProperty=nameWithType>  
 - <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
-- [<span data-ttu-id="01812-109">Fichier et flux de données E/S</span><span class="sxs-lookup"><span data-stu-id="01812-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
-- [<span data-ttu-id="01812-110">Stockage isolé</span><span class="sxs-lookup"><span data-stu-id="01812-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)
+- [<span data-ttu-id="59339-109">Fichier et flux de données E/S</span><span class="sxs-lookup"><span data-stu-id="59339-109">File and Stream I/O</span></span>](../../../docs/standard/io/index.md)  
+- [<span data-ttu-id="59339-110">Stockage isolé</span><span class="sxs-lookup"><span data-stu-id="59339-110">Isolated Storage</span></span>](../../../docs/standard/io/isolated-storage.md)

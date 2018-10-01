@@ -9,36 +9,36 @@ helpviewer_keywords:
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
 ms.openlocfilehash: f99415fc9a2b728917cdf829ffb9e25823a824dd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609552"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47207433"
 ---
-# <a name="reference-types-c-reference"></a><span data-ttu-id="751b4-102">Types référence (informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="751b4-102">Reference types (C# Reference)</span></span>
+# <a name="reference-types-c-reference"></a><span data-ttu-id="ce281-102">Types référence (informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="ce281-102">Reference types (C# Reference)</span></span>
 
-<span data-ttu-id="751b4-103">Il existe deux genres de types en C# : les types référence et les types valeur.</span><span class="sxs-lookup"><span data-stu-id="751b4-103">There are two kinds of types in C#: reference types and value types.</span></span> <span data-ttu-id="751b4-104">Les variables des types référence font référence à leurs données (objets), tandis que les variables des types valeur contiennent directement leurs données.</span><span class="sxs-lookup"><span data-stu-id="751b4-104">Variables of reference types store references to their data (objects), while variables of value types directly contain their data.</span></span> <span data-ttu-id="751b4-105">Avec les types référence, deux variables peuvent faire référence au même objet ; par conséquent, les opérations sur une variable peuvent affecter le même objet référencé par l'autre variable.</span><span class="sxs-lookup"><span data-stu-id="751b4-105">With reference types, two variables can reference the same object; therefore, operations on one variable can affect the object referenced by the other variable.</span></span> <span data-ttu-id="751b4-106">Avec les types valeur, chaque variable a sa propre copie des données et les opérations sur une variable ne peuvent pas affecter l’autre (sauf pour les variables de paramètre in, ref et out ; consultez les modificateurs de paramètre [in](in-parameter-modifier.md), [ref](ref.md) et [out](out-parameter-modifier.md)).</span><span class="sxs-lookup"><span data-stu-id="751b4-106">With value types, each variable has its own copy of the data, and it is not possible for operations on one variable to affect the other (except in the case of in, ref and out parameter variables; see [in](in-parameter-modifier.md), [ref](ref.md) and [out](out-parameter-modifier.md) parameter modifier).</span></span>
+<span data-ttu-id="ce281-103">Il existe deux genres de types en C# : les types référence et les types valeur.</span><span class="sxs-lookup"><span data-stu-id="ce281-103">There are two kinds of types in C#: reference types and value types.</span></span> <span data-ttu-id="ce281-104">Les variables des types référence font référence à leurs données (objets), tandis que les variables des types valeur contiennent directement leurs données.</span><span class="sxs-lookup"><span data-stu-id="ce281-104">Variables of reference types store references to their data (objects), while variables of value types directly contain their data.</span></span> <span data-ttu-id="ce281-105">Avec les types référence, deux variables peuvent faire référence au même objet ; par conséquent, les opérations sur une variable peuvent affecter le même objet référencé par l'autre variable.</span><span class="sxs-lookup"><span data-stu-id="ce281-105">With reference types, two variables can reference the same object; therefore, operations on one variable can affect the object referenced by the other variable.</span></span> <span data-ttu-id="ce281-106">Avec les types valeur, chaque variable a sa propre copie des données et les opérations sur une variable ne peuvent pas affecter l’autre (sauf pour les variables de paramètre in, ref et out ; consultez les modificateurs de paramètre [in](in-parameter-modifier.md), [ref](ref.md) et [out](out-parameter-modifier.md)).</span><span class="sxs-lookup"><span data-stu-id="ce281-106">With value types, each variable has its own copy of the data, and it is not possible for operations on one variable to affect the other (except in the case of in, ref and out parameter variables; see [in](in-parameter-modifier.md), [ref](ref.md) and [out](out-parameter-modifier.md) parameter modifier).</span></span>
 
- <span data-ttu-id="751b4-107">Les mots clés suivants sont utilisés pour déclarer des types référence :</span><span class="sxs-lookup"><span data-stu-id="751b4-107">The following keywords are used to declare reference types:</span></span>
+ <span data-ttu-id="ce281-107">Les mots clés suivants sont utilisés pour déclarer des types référence :</span><span class="sxs-lookup"><span data-stu-id="ce281-107">The following keywords are used to declare reference types:</span></span>
 
-- [<span data-ttu-id="751b4-108">class</span><span class="sxs-lookup"><span data-stu-id="751b4-108">class</span></span>](class.md)
+- [<span data-ttu-id="ce281-108">class</span><span class="sxs-lookup"><span data-stu-id="ce281-108">class</span></span>](class.md)
 
-- [<span data-ttu-id="751b4-109">interface</span><span class="sxs-lookup"><span data-stu-id="751b4-109">interface</span></span>](interface.md)
+- [<span data-ttu-id="ce281-109">interface</span><span class="sxs-lookup"><span data-stu-id="ce281-109">interface</span></span>](interface.md)
 
-- [<span data-ttu-id="751b4-110">delegate</span><span class="sxs-lookup"><span data-stu-id="751b4-110">delegate</span></span>](delegate.md)
+- [<span data-ttu-id="ce281-110">delegate</span><span class="sxs-lookup"><span data-stu-id="ce281-110">delegate</span></span>](delegate.md)
 
- <span data-ttu-id="751b4-111">C# fournit également les types référence intégrés suivants :</span><span class="sxs-lookup"><span data-stu-id="751b4-111">C# also provides the following built-in reference types:</span></span>
+ <span data-ttu-id="ce281-111">C# fournit également les types référence intégrés suivants :</span><span class="sxs-lookup"><span data-stu-id="ce281-111">C# also provides the following built-in reference types:</span></span>
 
-- [<span data-ttu-id="751b4-112">dynamic</span><span class="sxs-lookup"><span data-stu-id="751b4-112">dynamic</span></span>](dynamic.md)
+- [<span data-ttu-id="ce281-112">dynamic</span><span class="sxs-lookup"><span data-stu-id="ce281-112">dynamic</span></span>](dynamic.md)
 
-- [<span data-ttu-id="751b4-113">object</span><span class="sxs-lookup"><span data-stu-id="751b4-113">object</span></span>](object.md)
+- [<span data-ttu-id="ce281-113">object</span><span class="sxs-lookup"><span data-stu-id="ce281-113">object</span></span>](object.md)
 
-- [<span data-ttu-id="751b4-114">string</span><span class="sxs-lookup"><span data-stu-id="751b4-114">string</span></span>](string.md)
+- [<span data-ttu-id="ce281-114">string</span><span class="sxs-lookup"><span data-stu-id="ce281-114">string</span></span>](string.md)
 
-## <a name="see-also"></a><span data-ttu-id="751b4-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="751b4-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce281-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ce281-115">See also</span></span>
 
-- [<span data-ttu-id="751b4-116">Référence C#</span><span class="sxs-lookup"><span data-stu-id="751b4-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="751b4-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="751b4-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="751b4-118">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="751b4-118">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="751b4-119">Types</span><span class="sxs-lookup"><span data-stu-id="751b4-119">Types</span></span>](types.md)
-- [<span data-ttu-id="751b4-120">Types valeur</span><span class="sxs-lookup"><span data-stu-id="751b4-120">Value Types</span></span>](value-types.md)
+- [<span data-ttu-id="ce281-116">Référence C#</span><span class="sxs-lookup"><span data-stu-id="ce281-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="ce281-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="ce281-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="ce281-118">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="ce281-118">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="ce281-119">Types</span><span class="sxs-lookup"><span data-stu-id="ce281-119">Types</span></span>](types.md)
+- [<span data-ttu-id="ce281-120">Types valeur</span><span class="sxs-lookup"><span data-stu-id="ce281-120">Value Types</span></span>](value-types.md)

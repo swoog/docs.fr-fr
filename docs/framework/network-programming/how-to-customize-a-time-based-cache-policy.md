@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fd2856ffcf6b21ba34771c231f608ad725b21763
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d46f88b40fc48eb819877c49ff9e04e487a0f5a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390963"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47205250"
 ---
-# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="8ad66-102">Comment : personnaliser une stratégie de cache basée sur la durée</span><span class="sxs-lookup"><span data-stu-id="8ad66-102">How to: Customize a Time-Based Cache Policy</span></span>
-<span data-ttu-id="8ad66-103">Lors de la création d’une stratégie de cache basée sur la durée, vous pouvez personnaliser le comportement de la mise en cache en spécifiant des valeurs pour l’ancienneté maximale, l’actualisation minimale, l’obsolescence maximale ou la date de synchronisation du cache.</span><span class="sxs-lookup"><span data-stu-id="8ad66-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="8ad66-104">L’objet <xref:System.Net.Cache.HttpRequestCachePolicy> fournit plusieurs constructeurs qui vous permettent de spécifier des combinaisons valides de ces valeurs.</span><span class="sxs-lookup"><span data-stu-id="8ad66-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
+# <a name="how-to-customize-a-time-based-cache-policy"></a><span data-ttu-id="8cb4d-102">Comment : personnaliser une stratégie de cache basée sur la durée</span><span class="sxs-lookup"><span data-stu-id="8cb4d-102">How to: Customize a Time-Based Cache Policy</span></span>
+<span data-ttu-id="8cb4d-103">Lors de la création d’une stratégie de cache basée sur la durée, vous pouvez personnaliser le comportement de la mise en cache en spécifiant des valeurs pour l’ancienneté maximale, l’actualisation minimale, l’obsolescence maximale ou la date de synchronisation du cache.</span><span class="sxs-lookup"><span data-stu-id="8cb4d-103">When creating a time-based cache policy, you can customize caching behavior by specifying values for maximum age, minimum freshness, maximum staleness, or cache synchronization date.</span></span> <span data-ttu-id="8cb4d-104">L’objet <xref:System.Net.Cache.HttpRequestCachePolicy> fournit plusieurs constructeurs qui vous permettent de spécifier des combinaisons valides de ces valeurs.</span><span class="sxs-lookup"><span data-stu-id="8cb4d-104">The <xref:System.Net.Cache.HttpRequestCachePolicy> object provides several constructors that allow you to specify valid combinations of these values.</span></span>  
   
-### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="8ad66-105">Pour créer une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache</span><span class="sxs-lookup"><span data-stu-id="8ad66-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a><span data-ttu-id="8cb4d-105">Pour créer une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache</span><span class="sxs-lookup"><span data-stu-id="8cb4d-105">To create a time-based cache policy that uses a cache synchronization date</span></span>  
   
--   <span data-ttu-id="8ad66-106">Créez une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache en passant un objet <xref:System.DateTime> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.</span><span class="sxs-lookup"><span data-stu-id="8ad66-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
+-   <span data-ttu-id="8cb4d-106">Créez une stratégie de cache basée sur la durée qui utilise une date de synchronisation du cache en passant un objet <xref:System.DateTime> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.</span><span class="sxs-lookup"><span data-stu-id="8cb4d-106">Create a time-based cache policy that uses a cache synchronization date by passing a <xref:System.DateTime> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)  
@@ -46,16 +45,16 @@ ms.locfileid: "33390963"
     End Function  
     ```  
   
- <span data-ttu-id="8ad66-107">La sortie est similaire à ce qui suit :</span><span class="sxs-lookup"><span data-stu-id="8ad66-107">The output is similar to the following:</span></span>  
+ <span data-ttu-id="8cb4d-107">La sortie est similaire à ce qui suit :</span><span class="sxs-lookup"><span data-stu-id="8cb4d-107">The output is similar to the following:</span></span>  
   
 ```  
 When: 1/14/2004 8:07:30 AM  
 Level:Default CacheSyncDate:1/14/2004 8:07:30 AM  
 ```  
   
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="8ad66-108">Pour créer une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale</span><span class="sxs-lookup"><span data-stu-id="8ad66-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a><span data-ttu-id="8cb4d-108">Pour créer une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale</span><span class="sxs-lookup"><span data-stu-id="8cb4d-108">To create a time-based cache policy that is based on minimum freshness</span></span>  
   
--   <span data-ttu-id="8ad66-109">Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> comme valeur de paramètre `cacheAgeControl` et en passant un objet <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.</span><span class="sxs-lookup"><span data-stu-id="8ad66-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
+-   <span data-ttu-id="8cb4d-109">Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> comme valeur de paramètre `cacheAgeControl` et en passant un objet <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>.</span><span class="sxs-lookup"><span data-stu-id="8cb4d-109">Create a time-based cache policy that is based on minimum freshness by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> as the `cacheAgeControl` parameter value and passing a <xref:System.TimeSpan> object to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)  
@@ -75,7 +74,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
     End Function  
     ```  
   
- <span data-ttu-id="8ad66-110">Pour l’appel suivant :</span><span class="sxs-lookup"><span data-stu-id="8ad66-110">For the following invocation:</span></span>  
+ <span data-ttu-id="8cb4d-110">Pour l’appel suivant :</span><span class="sxs-lookup"><span data-stu-id="8cb4d-110">For the following invocation:</span></span>  
   
 ```  
 CreateMinFreshPolicy(new TimeSpan(1,0,0));  
@@ -85,9 +84,9 @@ CreateMinFreshPolicy(new TimeSpan(1,0,0));
 Level:Default MinFresh:3600  
 ```  
   
-### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="8ad66-111">Pour créer une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale</span><span class="sxs-lookup"><span data-stu-id="8ad66-111">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
+### <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a><span data-ttu-id="8cb4d-111">Pour créer une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale</span><span class="sxs-lookup"><span data-stu-id="8cb4d-111">To create a time-based cache policy that is based on minimum freshness and maximum age</span></span>  
   
--   <span data-ttu-id="8ad66-112">Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> comme valeur de paramètre `cacheAgeControl` et en passant deux objets <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>, un pour indiquer l’ancienneté maximale des ressources et un second pour indiquer l’actualisation minimale autorisée pour un objet retourné du cache.</span><span class="sxs-lookup"><span data-stu-id="8ad66-112">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
+-   <span data-ttu-id="8cb4d-112">Créez une stratégie de cache basée sur la durée qui est basée sur l’actualisation minimale et l’ancienneté maximale en spécifiant <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> comme valeur de paramètre `cacheAgeControl` et en passant deux objets <xref:System.TimeSpan> au constructeur <xref:System.Net.Cache.HttpRequestCachePolicy>, un pour indiquer l’ancienneté maximale des ressources et un second pour indiquer l’actualisation minimale autorisée pour un objet retourné du cache.</span><span class="sxs-lookup"><span data-stu-id="8cb4d-112">Create a time-based cache policy that is based on minimum freshness and maximum age by specifying <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> as the `cacheAgeControl` parameter value and passing two <xref:System.TimeSpan> objects to the <xref:System.Net.Cache.HttpRequestCachePolicy> constructor, one to specify the maximum age for resources and a second to specify the minimum freshness permitted for an object returned from the cache.</span></span>  
   
     ```csharp  
     public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)  
@@ -107,7 +106,7 @@ Level:Default MinFresh:3600
     End Function  
     ```  
   
- <span data-ttu-id="8ad66-113">Pour l’appel suivant :</span><span class="sxs-lookup"><span data-stu-id="8ad66-113">For the following invocation:</span></span>  
+ <span data-ttu-id="8cb4d-113">Pour l’appel suivant :</span><span class="sxs-lookup"><span data-stu-id="8cb4d-113">For the following invocation:</span></span>  
   
 ```  
 CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));  
@@ -117,9 +116,9 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8ad66-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8ad66-114">See Also</span></span>  
- [<span data-ttu-id="8ad66-115">Gestion du cache pour les applications réseau</span><span class="sxs-lookup"><span data-stu-id="8ad66-115">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [<span data-ttu-id="8ad66-116">Stratégie de cache</span><span class="sxs-lookup"><span data-stu-id="8ad66-116">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
- [<span data-ttu-id="8ad66-117">Stratégies de cache basées sur l’emplacement</span><span class="sxs-lookup"><span data-stu-id="8ad66-117">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [<span data-ttu-id="8ad66-118">Stratégies de cache basées sur la durée</span><span class="sxs-lookup"><span data-stu-id="8ad66-118">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [<span data-ttu-id="8ad66-119">\<requestCaching>, élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="8ad66-119">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a><span data-ttu-id="8cb4d-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8cb4d-114">See Also</span></span>  
+ [<span data-ttu-id="8cb4d-115">Gestion du cache pour les applications réseau</span><span class="sxs-lookup"><span data-stu-id="8cb4d-115">Cache Management for Network Applications</span></span>](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [<span data-ttu-id="8cb4d-116">Stratégie de cache</span><span class="sxs-lookup"><span data-stu-id="8cb4d-116">Cache Policy</span></span>](../../../docs/framework/network-programming/cache-policy.md)  
+ [<span data-ttu-id="8cb4d-117">Stratégies de cache basées sur l’emplacement</span><span class="sxs-lookup"><span data-stu-id="8cb4d-117">Location-Based Cache Policies</span></span>](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [<span data-ttu-id="8cb4d-118">Stratégies de cache basées sur la durée</span><span class="sxs-lookup"><span data-stu-id="8cb4d-118">Time-Based Cache Policies</span></span>](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [<span data-ttu-id="8cb4d-119">\<requestCaching>, élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="8cb4d-119">\<requestCaching> Element (Network Settings)</span></span>](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

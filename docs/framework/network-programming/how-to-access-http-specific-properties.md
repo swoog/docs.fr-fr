@@ -7,18 +7,17 @@ dev_langs:
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 20773d2224f9c04f3b0f9d0906c9e6fc215c5619
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f008cf82b80e29f8fe741034a0e820b5eae5b0ba
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389611"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193748"
 ---
-# <a name="how-to-access-http-specific-properties"></a><span data-ttu-id="42883-102">Comment : accéder aux propriétés spécifiques à HTTP</span><span class="sxs-lookup"><span data-stu-id="42883-102">How to: Access HTTP-Specific Properties</span></span>
-<span data-ttu-id="42883-103">Cet exemple montre comment désactiver le comportement HTTP **Keep-alive** et obtenir le numéro de version du protocole du serveur web.</span><span class="sxs-lookup"><span data-stu-id="42883-103">This sample shows how to turn off the HTTP **Keep-alive** behavior and get the protocol version number from the Web server.</span></span>  
+# <a name="how-to-access-http-specific-properties"></a><span data-ttu-id="c60f6-102">Comment : accéder aux propriétés spécifiques à HTTP</span><span class="sxs-lookup"><span data-stu-id="c60f6-102">How to: Access HTTP-Specific Properties</span></span>
+<span data-ttu-id="c60f6-103">Cet exemple montre comment désactiver le comportement HTTP **Keep-alive** et obtenir le numéro de version du protocole du serveur web.</span><span class="sxs-lookup"><span data-stu-id="c60f6-103">This sample shows how to turn off the HTTP **Keep-alive** behavior and get the protocol version number from the Web server.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42883-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="42883-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c60f6-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="c60f6-104">Example</span></span>  
   
 ```vb  
 Dim HttpWReq As HttpWebRequest= _  
@@ -47,12 +46,12 @@ String ver = HttpWResp.ProtocolVersion.ToString();
 HttpWResp.Close();  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="42883-105">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="42883-105">Compiling the Code</span></span>  
- <span data-ttu-id="42883-106">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="42883-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="c60f6-105">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="c60f6-105">Compiling the Code</span></span>  
+ <span data-ttu-id="c60f6-106">Cet exemple nécessite :</span><span class="sxs-lookup"><span data-stu-id="c60f6-106">This example requires:</span></span>  
   
--   <span data-ttu-id="42883-107">Références à l’espace de noms **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="42883-107">References to the **System.Net** namespace.</span></span>  
+-   <span data-ttu-id="c60f6-107">Références à l’espace de noms **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="c60f6-107">References to the **System.Net** namespace.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="42883-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="42883-108">See Also</span></span>  
- [<span data-ttu-id="42883-109">Accès à Internet via un proxy</span><span class="sxs-lookup"><span data-stu-id="42883-109">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [<span data-ttu-id="42883-110">Utilisation de protocoles d’application</span><span class="sxs-lookup"><span data-stu-id="42883-110">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
- [<span data-ttu-id="42883-111">HTTP</span><span class="sxs-lookup"><span data-stu-id="42883-111">HTTP</span></span>](../../../docs/framework/network-programming/http.md)
+## <a name="see-also"></a><span data-ttu-id="c60f6-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c60f6-108">See Also</span></span>  
+ [<span data-ttu-id="c60f6-109">Accès à Internet via un proxy</span><span class="sxs-lookup"><span data-stu-id="c60f6-109">Accessing the Internet Through a Proxy</span></span>](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [<span data-ttu-id="c60f6-110">Utilisation de protocoles d’application</span><span class="sxs-lookup"><span data-stu-id="c60f6-110">Using Application Protocols</span></span>](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [<span data-ttu-id="c60f6-111">HTTP</span><span class="sxs-lookup"><span data-stu-id="c60f6-111">HTTP</span></span>](../../../docs/framework/network-programming/http.md)
