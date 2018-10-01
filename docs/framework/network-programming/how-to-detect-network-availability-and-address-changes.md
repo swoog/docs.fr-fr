@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9056c8b2ecf18c4a57d356e7c9698984df1558eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0357c4000a7efdb838a40f2f3f907c1dd313c58
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396257"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193120"
 ---
 # <a name="how-to-detect-network-availability-and-address-changes"></a>Comment : détecter la disponibilité réseau et les changements d’adresse
 Cet exemple montre comment détecter les modifications de l’adresse réseau d’une interface.  

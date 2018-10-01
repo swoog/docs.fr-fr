@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4e64f1293da18823166883a869ac6377908c9e72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396135"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193549"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Résolution et publication de nom de pair
 ## <a name="publishing-a-peer-name"></a>Publication d’un nom de pair  

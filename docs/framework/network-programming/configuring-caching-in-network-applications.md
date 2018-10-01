@@ -6,13 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2213b5401c7b82771dcf7a1c982f1b3d0f347832
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395256"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193042"
 ---
 # <a name="configuring-caching-in-network-applications"></a>Configuration de la mise en cache dans les applications réseau
 Pour configurer la mise en cache, vous devez spécifier une stratégie de cache au niveau de l’application ou au niveau de <xref:System.Net.WebRequest>. Les rubriques suivantes fournissent des exemples de code qui illustrent la configuration des applications et des requêtes afin d’utiliser la mise en cache.  

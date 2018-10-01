@@ -3,11 +3,11 @@ title: Document WordprocessingML avec des styles
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
 ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46526677"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196094"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>Document WordprocessingML avec des styles
 Les documents WordprocessingML plus complexes possèdent des paragraphes qui sont mis en forme à l'aide de styles.  

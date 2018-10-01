@@ -11,11 +11,11 @@ ms.assetid: e1a253ff-e0fb-4df8-95ff-d01a90d4cb19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 16dc60fa9cd8782efbe1b6028413138b5991839e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45624838"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47193720"
 ---
 # <a name="how-to-synchronize-concurrent-operations-with-a-barrier"></a>Comment : synchroniser des opérations simultanées avec un objet Barrier
 L’exemple suivant montre comment synchroniser des tâches simultanées avec un objet <xref:System.Threading.Barrier>.  
