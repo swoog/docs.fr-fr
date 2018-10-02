@@ -8,11 +8,11 @@ ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425808"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47861897"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;supprimer&gt; élément pour &lt;namedCaches&gt;
 Supprime une entité de cache nommé de la collection `namedCaches` d’un cache mémoire.  
