@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 55869c3c8a957de98962378cc1a93e7058e24e38
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d79c8fc364d13c00049523f7788ada258af6ec98
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524868"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028337"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Procédure : activer la persistance SQL pour les workflows et les services de workflow
 
@@ -72,7 +72,7 @@ Vous pouvez activer la persistance pour les workflows auto-hébergés qui utilis
    ```
 
 > [!NOTE]
-> Consultez le [persistance d’une Application de flux de travail](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md) exemple indiqué à [persistance](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) pour obtenir un exemple d’activation de la persistance pour les workflows à l’aide de la <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>et le [Comment : créer et exécuter un Long Flux de travail en cours d’exécution](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) étape de la [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) pour obtenir des instructions étape par étape.  
+> Consultez le [Comment : créer et exécuter un Workflow de longue durée](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) étape de la [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) pour obtenir des instructions étape par étape.  
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Activation de la persistance pour les services de workflow auto-hébergés qui utilisent WorkflowServiceHost
 
@@ -82,7 +82,7 @@ Vous pouvez activer la persistance pour les services de workflow auto-hébergés
 
 La procédure suivante contient les étapes pour utiliser la classe <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> afin d'activer la persistance pour les services de workflow auto-hébergés.  
 
-##### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>Pour activer la persistance à l'aide de SqlWorkflowInstanceStoreBehavior
+#### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>Pour activer la persistance à l'aide de SqlWorkflowInstanceStoreBehavior
 
 1.  Ajoutez une référence à System.ServiceModel.dll.  
   
@@ -116,9 +116,6 @@ La procédure suivante contient les étapes pour utiliser la classe <xref:System
     ```csharp
     host.Open();
     ```
-
-> [!IMPORTANT]
-> Consultez le [Configuration intégrée](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md) exemple indiqué à [persistance](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) pour obtenir un exemple d’activation de la persistance pour les services de flux de travail à l’aide de la `SqlWorkflowInstanceStoreBehavior` classe.  
 
 ### <a name="using-the-durableinstancingoptions-property"></a>Utilisation de la propriété DurableInstancingOptions
 

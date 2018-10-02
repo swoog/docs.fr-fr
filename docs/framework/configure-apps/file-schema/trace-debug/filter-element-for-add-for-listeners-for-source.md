@@ -12,11 +12,11 @@ ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 19b28c3391a10cc522f17c5353c9ec0726b0a2f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233177"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033426"
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;filtre&gt; élément pour &lt;ajouter&gt; pour &lt;écouteurs&gt; pour &lt;source&gt;
 Ajoute un filtre à un écouteur dans la collection `Listeners` pour une source de trace.  

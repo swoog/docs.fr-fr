@@ -11,11 +11,11 @@ ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47209678"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028103"
 ---
 # <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; , élément (paramètres réseau)
 Décrit si la mise en cache HTTP est active et décrit la valeur par défaut, la mise en cache de stratégie.  

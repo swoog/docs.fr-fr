@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
 ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399409"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031862"
 ---
 # <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
 Spécifie le jeu de revendications requises pour les jetons de sécurité entrants.  

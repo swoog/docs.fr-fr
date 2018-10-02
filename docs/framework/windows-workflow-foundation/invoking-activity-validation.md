@@ -2,12 +2,12 @@
 title: Appel de la validation d’activité
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 7e8be762e6c5c67687864727dcd4ca1cde9a8e42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520173"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035134"
 ---
 # <a name="invoking-activity-validation"></a>Appel de la validation d’activité
 La validation d’activité offre une méthode d’identification et de signalisation des erreurs dans la configuration de toute activité, avant son exécution. La validation a lieu lorsque, dans le Concepteur de Workflow, un workflow est modifié et que l'ensemble des erreurs ou avertissements de validation sont affichés. La validation se produit également au moment de l'exécution lorsqu'un workflow est appelé et si des erreurs de validation se produisent, <xref:System.Activities.InvalidWorkflowException> est levée par la logique de validation par défaut. Windows Workflow Foundation (WF) fournit la <xref:System.Activities.Validation.ActivityValidationServices> classe qui peut être utilisée par l’application de flux de travail et les développeurs d’outils pour valider explicitement une activité. Cette rubrique décrit comment utiliser la classe <xref:System.Activities.Validation.ActivityValidationServices> pour valider une activité.  
@@ -91,7 +91,7 @@ catch (Exception ex)
 ```  
   
  **System.Activities.InvalidWorkflowException :**  
-**Les erreurs suivantes ont été rencontrées lors du traitement de l’arborescence de flux de travail :**   
+**Les erreurs suivantes se sont produites lors du traitement de l’arborescence de flux de travail :**   
 **'Add' : valeur d’un argument d’activité 'operand2 ' requis n’a pas été fourni.**   
 **'Add' : valeur d’un argument d’activité 'operand1 ' requis n’a pas été fourni.**  Pour que cet exemple de workflow soit valide, les deux arguments requis de l'activité `Add` doivent être liés. Dans l'exemple suivant, les deux arguments requis sont liés aux variables de flux de travail, tout comme la valeur de résultat. Dans cet exemple, l'argument <xref:System.Activities.Activity%601.Result%2A> est lié, ainsi que les deux arguments requis. L'argument <xref:System.Activities.Activity%601.Result%2A> ne doit pas forcément être lié et ne provoque pas d'erreur de validation s'il ne l'est pas. Il incombe à l'auteur du workflow de lier l'objet <xref:System.Activities.Activity%601.Result%2A>, si sa valeur est utilisée ailleurs dans le flux de travail.  
   
@@ -152,12 +152,13 @@ catch (Exception ex)
 ```  
   
 > [!NOTE]
->  Dans cet exemple, l'activité racine a été déclarée comme activité `Add` plutôt qu'`Activity` comme dans l'exemple précédent. La méthode `WorkflowInvoker.Invoke` peut ainsi retourner un entier unique qui représente les résultats de l'activité `Add`, au lieu d'un dictionnaire d'arguments `out`. La variable `wf` aurait également pu être déclarée comme `Activity<int>`.  
+> Dans cet exemple, l'activité racine a été déclarée comme activité `Add` plutôt qu'`Activity` comme dans l'exemple précédent. La méthode `WorkflowInvoker.Invoke` peut ainsi retourner un entier unique qui représente les résultats de l'activité `Add`, au lieu d'un dictionnaire d'arguments `out`. La variable `wf` aurait également pu être déclarée comme `Activity<int>`.  
   
  Lors de la validation d'arguments racines, il incombe à l'application hôte de vérifier que tous les arguments requis sont passés pendant l'appel du flux de travail.  
   
-### <a name="invoking-imperative-code-based-validation"></a>Appel de validation basée sur le code impératif  
- La validation basée sur le code impératif offre un moyen simple de valider une activité ainsi que les activités dérivées de <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> et <xref:System.Activities.NativeActivity>. Le code de validation est ajouté à l'activité qui détermine les erreurs ou avertissements de validation ajoutés à l'activité. Lorsque la validation est appelée sur l'activité, ces avertissements ou erreurs sont contenus dans la collection retournée par l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Dans l’exemple suivant, issu de la [une Validation de base](../../../docs/framework/windows-workflow-foundation/samples/basic-validation.md) exemple, un `CreateProduct` l’activité est définie. Si la valeur `Cost` est supérieure à la valeur `Price`, une erreur de validation est ajoutée aux métadonnées dans la substitution <xref:System.Activities.CodeActivity.CacheMetadata%2A>.  
+### <a name="invoking-imperative-code-based-validation"></a>Appel de validation basée sur le code impératif
+
+La validation basée sur le code impératif offre un moyen simple de valider une activité ainsi que les activités dérivées de <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> et <xref:System.Activities.NativeActivity>. Le code de validation est ajouté à l'activité qui détermine les erreurs ou avertissements de validation ajoutés à l'activité. Lorsque la validation est appelée sur l'activité, ces avertissements ou erreurs sont contenus dans la collection retournée par l'appel à <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Dans l'exemple suivant, une activité `CreateProduct` est définie. Si la valeur `Cost` est supérieure à la valeur `Price`, une erreur de validation est ajoutée aux métadonnées dans la substitution <xref:System.Activities.CodeActivity.CacheMetadata%2A>.  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  

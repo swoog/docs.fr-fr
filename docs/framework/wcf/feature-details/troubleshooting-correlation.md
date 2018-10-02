@@ -2,12 +2,12 @@
 title: Dépannage de la corrélation
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027921"
 ---
 # <a name="troubleshooting-correlation"></a>Dépannage de la corrélation
 La corrélation est utilisée pour établir une relation entre des messages de service de workflow et avec l'instance de workflow appropriée, mais si elle n'est pas proprement configurée, les messages ne seront pas reçus et les applications ne fonctionneront pas correctement. Cette rubrique fournit une vue d'ensemble de plusieurs méthodes de résolution des problèmes de corrélation et présente certains problèmes courants qui peuvent se produire lorsque vous utilisez la corrélation.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Un participant de suivi tel que ConsoleTrackingParticipant est utile pour les services de workflow auto-hébergés qui ont une fenêtre de console. Pour un service hébergé sur le Web, un participant de suivi qui enregistre les informations de suivi dans un magasin durable doit être utilisé, tels que le compte <xref:System.Activities.Tracking.EtwTrackingParticipant>, ou à un participant de suivi personnalisé qui enregistre les informations dans un fichier, tel que le `TextWriterTrackingParticpant` à partir de la [ Suivi à l’aide d’un fichier texte](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) exemple.
+ Un participant de suivi tel que ConsoleTrackingParticipant est utile pour les services de workflow auto-hébergés qui ont une fenêtre de console. Pour un service hébergé sur le Web, un participant de suivi qui enregistre les informations de suivi dans un magasin durable doit être utilisé, tels que le compte <xref:System.Activities.Tracking.EtwTrackingParticipant>, ou à un participant de suivi personnalisé qui enregistre les informations dans un fichier.
 
  Pour plus d’informations sur le suivi et la configuration du suivi d’un service de workflow hébergé sur le Web, consultez [suivi et traçage de Workflow](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [configuration du suivi d’un flux de travail](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)et le [ Suivi des &#91;exemples WF&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) exemples.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Ceci peut être vérifié en examinant le corps du message.
+Ceci peut être vérifié en examinant le corps du message.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- L'exemple suivant illustre une activité <xref:System.ServiceModel.Activities.Receive> configurée pour une opération `AddItem` qui utilise le contrat de message précédent pour recevoir les données. La requête XPath est configurée correctement.
+L'exemple suivant illustre une activité <xref:System.ServiceModel.Activities.Receive> configurée pour une opération `AddItem` qui utilise le contrat de message précédent pour recevoir les données. La requête XPath est configurée correctement.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Pour plus d’informations sur la corrélation en fonction du contenu, consultez la [calculatrice corrélée](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) exemple.

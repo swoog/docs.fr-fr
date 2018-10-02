@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: ebce4daf433647179a0bce5751f66cdfab7a4d80
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195717"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030270"
 ---
 # <a name="workflow-security"></a>Sécurité de workflow
 Windows Workflow Foundation (WF) est intégré à plusieurs technologies différentes, telles que Microsoft SQL Server et Windows Communication Foundation (WCF). L'interaction avec ces technologies peut poser des problèmes de sécurité dans votre workflow si elle est effectuée de façon incorrecte.
@@ -40,7 +40,7 @@ Windows Workflow Foundation (WF) est intégré à plusieurs technologies différ
 
 -   Points de terminaison Windows Communication Foundation (WCF) utilisés dans les workflows doivent être sécurisés. Pour plus d’informations, consultez [vue d’ensemble de la sécurité WCF](https://go.microsoft.com/fwlink/?LinkID=164975).
 
--   L'autorisation au niveau hôte peut être implémentée à l'aide de <xref:System.ServiceModel.ServiceAuthorizationManager>. Consultez [Comment : créer un gestionnaire d’autorisation personnalisé pour un Service](https://go.microsoft.com/fwlink/?LinkId=192228) pour plus d’informations. Cela est également illustré dans l’exemple suivant : [sécurisation des Services de flux de travail](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).
+-   L'autorisation au niveau hôte peut être implémentée à l'aide de <xref:System.ServiceModel.ServiceAuthorizationManager>. Consultez [Comment : créer un gestionnaire d’autorisation personnalisé pour un Service](https://go.microsoft.com/fwlink/?LinkId=192228) pour plus d’informations.
 
 -   Le ServiceSecurityContext pour le message entrant est également disponible dans le workflow en accédant à OperationContext.
 

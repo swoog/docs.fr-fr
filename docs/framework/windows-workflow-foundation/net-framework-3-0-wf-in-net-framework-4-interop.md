@@ -2,12 +2,12 @@
 title: Utilisation d'activités WF de .NET Framework 3.0 dans .NET Framework 4 avec l'activité d'interopérabilité
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 386f71f21a4164f6f0ffc0ed19aab68abbe5a0b5
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467503"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48029256"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Utilisation d'activités WF de .NET Framework 3.0 dans .NET Framework 4 avec l'activité d'interopérabilité
 L'activité <xref:System.Activities.Statements.Interop> est une activité [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5) qui encapsule une activité [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) dans un workflow [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. L'activité WF 3 peut être une activité de feuille unique ou une arborescence entière d'activités. L'exécution (notamment l'annulation et gestion des exceptions) et la persistance de l'activité [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] se produisent dans le contexte de l'instance du workflow [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] qui s'exécute.  
@@ -52,7 +52,4 @@ L'activité <xref:System.Activities.Statements.Interop> est une activité [!INCL
   
 3.  Les enregistrements de suivi WF 3 pour les activités au sein d'une activité <xref:System.Activities.Statements.Interop> sont fournis aux participants de suivi WF 4.5 comme objets <xref:System.Activities.Tracking.InteropTrackingRecord>. <xref:System.Activities.Tracking.InteropTrackingRecord> dérive de <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
-4.  Una activité personnalisée WF 3 peut accéder aux données à l'aide de files d'attente de workflow dans l'environnement d'interopération de la même façon qu'au sein de l'exécution du workflow WF 3. Aucune modification du code d'activité personnalisé n'est obligatoire. Sur l'hôte, les données sont mises en file d'attente dans un workflow WF 3 en reprenant un <xref:System.Activities.Bookmark>. Le nom du signet correspond à la chaîne du nom de la file d'attente du flux de travail <xref:System.IComparable>.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Utilisation d’une activité .NET Framework 3.0 ou .NET Framework 3.5 dans un workflow .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)
+4.  Una activité personnalisée WF 3 peut accéder aux données à l'aide de files d'attente de workflow dans l'environnement d'interopération de la même façon qu'au sein de l'exécution du workflow WF 3. Aucune modification du code d'activité personnalisé n'est obligatoire. Sur l'hôte, les données sont mises en file d'attente dans un workflow WF 3 en reprenant un <xref:System.Activities.Bookmark>. Le nom du signet correspond à la chaîne du nom de la file d'attente du flux de travail <xref:System.IComparable>.

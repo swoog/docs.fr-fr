@@ -12,11 +12,11 @@ ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
-ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
-ms.translationtype: HT
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47862066"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034608"
 ---
 # <a name="naming-resources"></a>Attribution d'un nom à des ressources
 Étant donné que les ressources localisables peuvent être référencés par le biais de certains objets comme s’ils étaient des propriétés, les instructions d’affectation de noms pour les ressources sont similaires aux instructions de la propriété.  

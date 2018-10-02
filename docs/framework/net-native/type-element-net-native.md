@@ -5,11 +5,11 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47402628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037467"
 ---
 # <a name="lttypegt-element-net-native"></a>&lt;Type&gt;, élément (.NET Native)
 Applique la stratégie runtime à un type particulier, tel qu'une classe ou une structure.  
