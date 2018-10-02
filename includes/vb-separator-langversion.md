@@ -1,8 +1,10 @@
 
-Pour utiliser le caractère de soulignement comme un séparateur de début, vous devez ajouter l’élément suivant à votre projet Visual Basic (\*.vbproj) fichier :
+Pour utiliser le trait de soulignement comme séparateur de début, vous devez ajouter l’élément suivant à votre fichier projet Visual Basic (\*.vbproj) :
 
 ```xml
 <PropertyGroup>
   <LangVersion>15.5</LangVersion>
 </PropertyGroup>
 ```
+
+Pour plus d’informations, consultez [définition de la version de langage Visual Basic](../docs/visual-basic/language-reference/configure-language-version.md).
