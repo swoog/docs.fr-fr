@@ -10,11 +10,11 @@ ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1ac7e28c3172f2ed68d402e1d04a1664644c7f25
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399681"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024530"
 ---
 # <a name="arrays"></a>Tableaux
 **✓ DO** préférez l’utilisation de collections sur des tableaux dans les API publiques. Le [Collections](../../../docs/standard/design-guidelines/guidelines-for-collections.md) section fournit des détails sur le choix entre les collections et tableaux.  

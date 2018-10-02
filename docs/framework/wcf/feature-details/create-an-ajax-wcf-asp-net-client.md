@@ -3,11 +3,11 @@ title: Créer un Service WCF compatible AJAX et un Client ASP.NET dans Visual St
 ms.date: 08/17/2018
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
 ms.openlocfilehash: 954ee0409f370c3fa28814a70d51334fd75f7b79
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47454313"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48024608"
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Comment : créer un service WCF compatible AJAX et un client ASP.NET qui accède à ce service
 

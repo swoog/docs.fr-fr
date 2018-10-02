@@ -1,31 +1,27 @@
 ---
-title: Exemples Windows Communication Foundation (WCF)
-ms.date: 03/30/2017
+title: Documentation des exemples Windows Communication Foundation (WCF)
+ms.date: 09/24/2018
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-ms.openlocfilehash: a8ac756a5c52093015f32942de3791853bdd17c4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5fe191aa3bc005aacf1e32bfb6533b8dfd6f23fb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087600"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027830"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Exemples Windows Communication Foundation (WCF)
-Ces exemples fournissent des instructions sur les divers aspects de Windows Communication Foundation (WCF).  
+
+Vous pouvez télécharger [exemples Windows Communication Foundation (WCF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780). Les exemples fournissent des instructions sur divers aspects de Windows Communication Foundation (WCF).
   
--   Pour les versions c# des exemples, accédez à [Windows Communication Foundation (WCF) et des exemples de Windows Workflow Foundation (WF) pour .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780).  
-  
--   Pour les versions de Visual Basic des exemples, consultez [exemples Visual Basic 2010](https://go.microsoft.com/fwlink/?LinkID=193373) et cliquez sur **WF HYPERLINK « javascript:__doPostBack('ctl00$ctl00$Content$TabContentPanel$Content$ReleaseFiles$FileList$ctl02$ FileNameLink', '') « _WCF_Samples.zip**.  
-  
- Windows Workflow Foundation (WF) [Application](../../../../docs/framework/windows-workflow-foundation/samples/application.md) exemples montrent également plusieurs WCFfeatures.  
-  
- Pour installer une version autonome de la documentation et une visionneuse d’aide, téléchargez le [Microsoft Windows SDK version 7.1](https://go.microsoft.com/fwlink/?LinkID=194146).  
+> [!TIP]
+> Les articles de cette section décrivent certains exemples dans le package de téléchargement. Pour un ensemble de documentation complète qui couvre tous les exemples, consultez le [documentation .NET Framework 4 pour les exemples WCF](/previous-versions/dotnet/netframework-4.0/dd483346(v%3dvs.100)).
+
+Windows Workflow Foundation (WF) [application](../../windows-workflow-foundation/samples/application.md) exemples montrent également plusieurs fonctionnalités WCF.
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Basic](../../../../docs/framework/wcf/samples/basic.md)  
- Montre des exemples qui illustrent les fonctionnalités de WCF de base.  
-  
- Extensibilité  
- Montre des exemples liés à la fonctionnalité de découverte.  
-  
- [Scénario](../../../../docs/framework/wcf/samples/scenario.md)  
- Montre un scénario WCF.
+
+[Base](basic.md) -exemples qui illustrent les fonctionnalités de WCF de base.  
+
+[Extensibilité](extensibility.md) -exemples qui sont liés à la fonctionnalité de découverte.  
+
+[Scénario](scenario.md) -illustre un scénario WCF.

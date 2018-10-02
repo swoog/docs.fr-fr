@@ -2,12 +2,12 @@
 title: Corrélation
 ms.date: 03/30/2017
 ms.assetid: 60151f6c-19b7-47af-9cdc-76c2ac95f301
-ms.openlocfilehash: e72f462a9b8777fbeadb306c7fea8354f64ffe8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6d02b95bcf735d42cca2b51167e21a6a091add1c
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025173"
 ---
 # <a name="correlation"></a>Corrélation
 Lorsque les applications de service de workflow communiquent avec d'autres services, il est important que les messages échangés entre eux soient distribués à l'instance de workflow appropriée. La corrélation en fournit le mécanisme. Les rubriques de cette section donnent une vue d'ensemble de la corrélation et de son utilisation dans différents scénarios de service de workflow.  
@@ -26,9 +26,8 @@ Lorsque les applications de service de workflow communiquent avec d'autres servi
  Fournit des méthodes pour dépanner la corrélation.  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.ServiceModel.Activities.CorrelationHandle>  
- <xref:System.ServiceModel.Activities.Send>  
- <xref:System.ServiceModel.Activities.Receive>  
- <xref:System.ServiceModel.CorrelationQuery>  
- [Corrélation basée sur le contenu](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [Calculatrice corrélée](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)
+
+- <xref:System.ServiceModel.Activities.CorrelationHandle>  
+- <xref:System.ServiceModel.Activities.Send>  
+- <xref:System.ServiceModel.Activities.Receive>  
+- <xref:System.ServiceModel.CorrelationQuery>  
