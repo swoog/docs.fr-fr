@@ -2,24 +2,17 @@
 title: Exécution
 ms.date: 03/30/2017
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-ms.openlocfilehash: de3f6929be89b5e2d869275020bd3ac0ade8b1b9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5773391bf9cfe8e28724e5a79f901a8e78a62ceb
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48031813"
 ---
 # <a name="execution"></a>Exécution
 Cette section contient des exemples qui illustrent l’exécution de workflows dans Windows Workflow Foundation (WF).  
   
-## <a name="in-this-section"></a>Dans cette section  
- [Exemple de point de terminaison de gestion de workflow](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- Montre comment un point de terminaison de contrôle de workflow peut être utilisé pour créer et exécuter des workflows à la fois localement et à distance.  
-  
- [Utilisation de la classe WorkflowInvoker](../../../../docs/framework/windows-workflow-foundation/samples/using-the-workflowinvoker-class.md)  
- Montre comment utiliser la classe <xref:System.Activities.WorkflowInvoker> pour appeler une activité comme s'il s'agissait d'une méthode.  
-  
- [Hôte ReadLine WorkflowApplication](../../../../docs/framework/windows-workflow-foundation/samples/workflowapplication-readline-host.md)  
- Montre comment créer un hôte ReadLine générique.  
+## <a name="in-this-section"></a>Dans cette section
   
  [Création et exécution d’une instance de workflow](../../../../docs/framework/windows-workflow-foundation/samples/creating-and-running-a-workflow-instance.md)  
  Montre comment exécuter une instance de workflow. Il indique comment l’exécuter de façon synchrone et de façon asynchrone.  
