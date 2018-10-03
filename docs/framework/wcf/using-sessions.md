@@ -129,7 +129,7 @@ Dans les applications Windows Communication Foundation (WCF), un *session* met e
   
 -   Une opération de fin sur un type d’objet client WCF (par défaut, aucune opération ne termine ; le contrat doit spécifier explicitement une opération de fin). Lorsque la première opération est appelée, l’objet de client WCF ouvre le canal automatiquement et lance une session.  
   
- Pour obtenir des exemples, consultez [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ainsi que [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) et [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
+ Pour obtenir des exemples, consultez [Guide pratique pour créer un service qui requiert des sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) ainsi que [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) et [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
  Pour plus d’informations sur les clients et les sessions, consultez [Services d’accès à l’aide d’un Client WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   

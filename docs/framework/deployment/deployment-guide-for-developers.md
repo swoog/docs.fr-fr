@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Détectez](#detecting-the-language-packs) si les modules linguistiques sont déjà installés sur l'ordinateur de l'utilisateur.
 
-- Si vous souhaitez contrôler le déploiement, lancez et suivez en mode silencieux le processus d’installation du .NET Framework (consultez [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Si vous souhaitez contrôler le déploiement, lancez et suivez en mode silencieux le processus d’installation du .NET Framework (consultez [Guide pratique : connaître la progression dans le programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
 
 - Si vous déployez le programme d'installation hors connexion, [chaînez les modules linguistiques séparément](#chain_langpack).
 
