@@ -5,21 +5,21 @@ ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 9cca5e35bfc0aef448d2d515f5ac55ed9e2e2258
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028795"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781240"
 ---
-# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="c82d4-102">&lt;ajouter&gt; , élément de schemeSettings (paramètres d’Uri)</span><span class="sxs-lookup"><span data-stu-id="c82d4-102">&lt;add&gt; Element for schemeSettings (Uri Settings)</span></span>
-<span data-ttu-id="c82d4-103">Ajoute un paramètre de schéma pour un nom de schéma.</span><span class="sxs-lookup"><span data-stu-id="c82d4-103">Adds a scheme setting for a scheme name.</span></span>  
+# <a name="ltaddgt-element-for-schemesettings-uri-settings"></a><span data-ttu-id="c9afe-102">&lt;ajouter&gt; , élément de schemeSettings (paramètres d’Uri)</span><span class="sxs-lookup"><span data-stu-id="c9afe-102">&lt;add&gt; Element for schemeSettings (Uri Settings)</span></span>
+<span data-ttu-id="c9afe-103">Ajoute un paramètre de schéma pour un nom de schéma.</span><span class="sxs-lookup"><span data-stu-id="c9afe-103">Adds a scheme setting for a scheme name.</span></span>  
   
- <span data-ttu-id="c82d4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c82d4-104">\<configuration></span></span>  
-<span data-ttu-id="c82d4-105">\<URI ></span><span class="sxs-lookup"><span data-stu-id="c82d4-105">\<uri></span></span>  
-<span data-ttu-id="c82d4-106">\<schemeSettings ></span><span class="sxs-lookup"><span data-stu-id="c82d4-106">\<schemeSettings></span></span>  
-<span data-ttu-id="c82d4-107">\<add></span><span class="sxs-lookup"><span data-stu-id="c82d4-107">\<add></span></span>  
+ <span data-ttu-id="c9afe-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c9afe-104">\<configuration></span></span>  
+<span data-ttu-id="c9afe-105">\<URI ></span><span class="sxs-lookup"><span data-stu-id="c9afe-105">\<uri></span></span>  
+<span data-ttu-id="c9afe-106">\<schemeSettings ></span><span class="sxs-lookup"><span data-stu-id="c9afe-106">\<schemeSettings></span></span>  
+<span data-ttu-id="c9afe-107">\<add></span><span class="sxs-lookup"><span data-stu-id="c9afe-107">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c82d4-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c82d4-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c9afe-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="c9afe-108">Syntax</span></span>  
   
 ```xml  
 <add
@@ -28,50 +28,50 @@ ms.locfileid: "48028795"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c82d4-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="c82d4-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c82d4-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="c82d4-110">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c9afe-109">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="c9afe-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="c9afe-110">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="c9afe-110">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c82d4-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="c82d4-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c9afe-111">Attributs</span><span class="sxs-lookup"><span data-stu-id="c9afe-111">Attributes</span></span>  
   
-|<span data-ttu-id="c82d4-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="c82d4-112">Attribute</span></span>|<span data-ttu-id="c82d4-113">Description</span><span class="sxs-lookup"><span data-stu-id="c82d4-113">Description</span></span>|  
+|<span data-ttu-id="c9afe-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="c9afe-112">Attribute</span></span>|<span data-ttu-id="c9afe-113">Description</span><span class="sxs-lookup"><span data-stu-id="c9afe-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="c82d4-114">name</span><span class="sxs-lookup"><span data-stu-id="c82d4-114">name</span></span>|<span data-ttu-id="c82d4-115">Le nom du schéma pour lequel ce paramètre s’applique.</span><span class="sxs-lookup"><span data-stu-id="c82d4-115">The scheme name for which this setting applies.</span></span> <span data-ttu-id="c82d4-116">Les seules valeurs prises en charge sont nom = « http » et le nom = « https ».</span><span class="sxs-lookup"><span data-stu-id="c82d4-116">The only supported values are name="http" and name="https".</span></span>|  
+|<span data-ttu-id="c9afe-114">name</span><span class="sxs-lookup"><span data-stu-id="c9afe-114">name</span></span>|<span data-ttu-id="c9afe-115">Le nom du schéma pour lequel ce paramètre s’applique.</span><span class="sxs-lookup"><span data-stu-id="c9afe-115">The scheme name for which this setting applies.</span></span> <span data-ttu-id="c9afe-116">Les seules valeurs prises en charge sont nom = « http » et le nom = « https ».</span><span class="sxs-lookup"><span data-stu-id="c9afe-116">The only supported values are name="http" and name="https".</span></span>|  
   
-## <a name="attribute-name-attribute"></a><span data-ttu-id="c82d4-117">{Nom d’attribut} Attribut</span><span class="sxs-lookup"><span data-stu-id="c82d4-117">{Attribute name} Attribute</span></span>  
+## <a name="attribute-name-attribute"></a><span data-ttu-id="c9afe-117">{Nom d’attribut} Attribut</span><span class="sxs-lookup"><span data-stu-id="c9afe-117">{Attribute name} Attribute</span></span>  
   
-|<span data-ttu-id="c82d4-118">Value</span><span class="sxs-lookup"><span data-stu-id="c82d4-118">Value</span></span>|<span data-ttu-id="c82d4-119">Description</span><span class="sxs-lookup"><span data-stu-id="c82d4-119">Description</span></span>|  
+|<span data-ttu-id="c9afe-118">Value</span><span class="sxs-lookup"><span data-stu-id="c9afe-118">Value</span></span>|<span data-ttu-id="c9afe-119">Description</span><span class="sxs-lookup"><span data-stu-id="c9afe-119">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="c82d4-120">genericUriParserOptions</span><span class="sxs-lookup"><span data-stu-id="c82d4-120">genericUriParserOptions</span></span>|<span data-ttu-id="c82d4-121">Les options d’analyseur pour ce schéma.</span><span class="sxs-lookup"><span data-stu-id="c82d4-121">The parser options for this scheme.</span></span> <span data-ttu-id="c82d4-122">La seule valeur prise en charge est genericUriParserOptions = « DontUnescapePathDotsAndSlashes ».</span><span class="sxs-lookup"><span data-stu-id="c82d4-122">The only supported value is genericUriParserOptions= "DontUnescapePathDotsAndSlashes".</span></span>|  
+|<span data-ttu-id="c9afe-120">genericUriParserOptions</span><span class="sxs-lookup"><span data-stu-id="c9afe-120">genericUriParserOptions</span></span>|<span data-ttu-id="c9afe-121">Les options d’analyseur pour ce schéma.</span><span class="sxs-lookup"><span data-stu-id="c9afe-121">The parser options for this scheme.</span></span> <span data-ttu-id="c9afe-122">La seule valeur prise en charge est genericUriParserOptions = « DontUnescapePathDotsAndSlashes ».</span><span class="sxs-lookup"><span data-stu-id="c9afe-122">The only supported value is genericUriParserOptions= "DontUnescapePathDotsAndSlashes".</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c82d4-123">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="c82d4-123">Child Elements</span></span>  
- <span data-ttu-id="c82d4-124">Aucun.</span><span class="sxs-lookup"><span data-stu-id="c82d4-124">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c9afe-123">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="c9afe-123">Child Elements</span></span>  
+ <span data-ttu-id="c9afe-124">Aucun.</span><span class="sxs-lookup"><span data-stu-id="c9afe-124">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c82d4-125">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="c82d4-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c9afe-125">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="c9afe-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="c82d4-126">Élément</span><span class="sxs-lookup"><span data-stu-id="c82d4-126">Element</span></span>|<span data-ttu-id="c82d4-127">Description</span><span class="sxs-lookup"><span data-stu-id="c82d4-127">Description</span></span>|  
+|<span data-ttu-id="c9afe-126">Élément</span><span class="sxs-lookup"><span data-stu-id="c9afe-126">Element</span></span>|<span data-ttu-id="c9afe-127">Description</span><span class="sxs-lookup"><span data-stu-id="c9afe-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="c82d4-128">\<schemeSettings, élément (paramètres d’Uri)</span><span class="sxs-lookup"><span data-stu-id="c82d4-128">\<schemeSettings> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="c82d4-129">Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.</span><span class="sxs-lookup"><span data-stu-id="c82d4-129">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
+|[<span data-ttu-id="c9afe-128">\<schemeSettings, élément (paramètres d’Uri)</span><span class="sxs-lookup"><span data-stu-id="c9afe-128">\<schemeSettings> Element (Uri Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<span data-ttu-id="c9afe-129">Spécifie la façon dont un <xref:System.Uri> est analysé pour les schémas spécifiques.</span><span class="sxs-lookup"><span data-stu-id="c9afe-129">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c82d4-130">Notes</span><span class="sxs-lookup"><span data-stu-id="c82d4-130">Remarks</span></span>  
- <span data-ttu-id="c82d4-131">Par défaut, le <xref:System.Uri?displayProperty=nameWithType> % n’échappe pas de classe encodé délimiteurs de chemin d’accès avant d’exécuter la compression de chemin d’accès.</span><span class="sxs-lookup"><span data-stu-id="c82d4-131">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="c82d4-132">Ceci était implémenté comme un mécanisme de sécurité contre les attaques comme suit :</span><span class="sxs-lookup"><span data-stu-id="c82d4-132">This was implemented as a security mechanism against attacks like the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c9afe-130">Notes</span><span class="sxs-lookup"><span data-stu-id="c9afe-130">Remarks</span></span>  
+ <span data-ttu-id="c9afe-131">Par défaut, le <xref:System.Uri?displayProperty=nameWithType> % n’échappe pas de classe encodé délimiteurs de chemin d’accès avant d’exécuter la compression de chemin d’accès.</span><span class="sxs-lookup"><span data-stu-id="c9afe-131">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="c9afe-132">Ceci était implémenté comme un mécanisme de sécurité contre les attaques comme suit :</span><span class="sxs-lookup"><span data-stu-id="c9afe-132">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="c82d4-133">Si cet URI est passé à des modules ne gère ne pas % caractères encodés correctement, cela peut entraîner la commande suivante en cours d’exécution par le serveur :</span><span class="sxs-lookup"><span data-stu-id="c82d4-133">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
+ <span data-ttu-id="c9afe-133">Si cet URI est passé à des modules ne gère ne pas % caractères encodés correctement, cela peut entraîner la commande suivante en cours d’exécution par le serveur :</span><span class="sxs-lookup"><span data-stu-id="c9afe-133">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- <span data-ttu-id="c82d4-134">Pour cette raison, <xref:System.Uri?displayProperty=nameWithType> première délimiteurs de chemin d’accès n’échappe pas de classe, puis applique la compression de chemin d’accès.</span><span class="sxs-lookup"><span data-stu-id="c82d4-134">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="c82d4-135">Le résultat du passage de l’URL malveillante ci-dessus à <xref:System.Uri?displayProperty=nameWithType> classe les résultats de constructeur dans l’URI suivant :</span><span class="sxs-lookup"><span data-stu-id="c82d4-135">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
+ <span data-ttu-id="c9afe-134">Pour cette raison, <xref:System.Uri?displayProperty=nameWithType> première délimiteurs de chemin d’accès n’échappe pas de classe, puis applique la compression de chemin d’accès.</span><span class="sxs-lookup"><span data-stu-id="c9afe-134">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="c9afe-135">Le résultat du passage de l’URL malveillante ci-dessus à <xref:System.Uri?displayProperty=nameWithType> classe les résultats de constructeur dans l’URI suivant :</span><span class="sxs-lookup"><span data-stu-id="c9afe-135">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="c82d4-136">Ce comportement par défaut peut être modifié pour ne pas les délimiteurs de chemin d’accès codé en pourcentage échapper à l’aide de l’option de configuration schemeSettings pour un modèle spécifique.</span><span class="sxs-lookup"><span data-stu-id="c82d4-136">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
+ <span data-ttu-id="c9afe-136">Ce comportement par défaut peut être modifié pour ne pas les délimiteurs de chemin d’accès codé en pourcentage échapper à l’aide de l’option de configuration schemeSettings pour un modèle spécifique.</span><span class="sxs-lookup"><span data-stu-id="c9afe-136">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="c82d4-137">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="c82d4-137">Configuration Files</span></span>  
- <span data-ttu-id="c82d4-138">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="c82d4-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="c9afe-137">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="c9afe-137">Configuration Files</span></span>  
+ <span data-ttu-id="c9afe-138">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="c9afe-138">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c82d4-139">Exemple</span><span class="sxs-lookup"><span data-stu-id="c82d4-139">Example</span></span>  
- <span data-ttu-id="c82d4-140">L’exemple suivant montre une configuration utilisée par la <xref:System.Uri> classe pour prendre en charge l’échappement ne pas les délimiteurs de chemin d’encodés en pourcentage pour le schéma http.</span><span class="sxs-lookup"><span data-stu-id="c82d4-140">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
+## <a name="example"></a><span data-ttu-id="c9afe-139">Exemple</span><span class="sxs-lookup"><span data-stu-id="c9afe-139">Example</span></span>  
+ <span data-ttu-id="c9afe-140">L’exemple suivant montre une configuration utilisée par la <xref:System.Uri> classe pour prendre en charge l’échappement ne pas les délimiteurs de chemin d’encodés en pourcentage pour le schéma http.</span><span class="sxs-lookup"><span data-stu-id="c9afe-140">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
 ```xml  
 <configuration>  
@@ -83,11 +83,11 @@ ms.locfileid: "48028795"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c82d4-141">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c82d4-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c9afe-141">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c9afe-141">See Also</span></span>  
  <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
  <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
  <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
  <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
  <xref:System.Uri?displayProperty=nameWithType>  
- [<span data-ttu-id="c82d4-142">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="c82d4-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="c9afe-142">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="c9afe-142">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
