@@ -36,13 +36,13 @@ Commencez par créer une application console « Hello World » simple. Procéd
 
    Le modèle crée une application « Hello World » simple. Il appelle la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> pour afficher la chaîne littérale « Hello World ! » dans la fenêtre de console. En sélectionnant le bouton **HelloWorld** avec la flèche verte dans la barre d’outils, vous pouvez exécuter le programme en mode débogage. Si vous le faites, la fenêtre de console est visible seulement pendant un court intervalle de temps avant sa fermeture. Cela se produit, car la méthode `Main` se termine et l’application se termine dès que l’instruction unique de la méthode `Main` s’exécute.
 
-1. Pour que l’application se mette en pause de fermer la fenêtre de console, ajoutez le code suivant immédiatement après l’appel à la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> :
+1. Pour que la console ne se ferme pas d'elle-même, ajoutez le code suivant immédiatement après l’appel de la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> :
 
    ```csharp
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
-   Ce code invite l’utilisateur à appuyer sur une touche, puis arrête le programme jusqu'à ce que l’utilisateur appuie sur une touche.
+   Ce code invite l’utilisateur à appuyer sur une touche. Le programme s'arrête lorsque l’utilisateur appuie sur une touche.
 
 1. Dans la barre de menus, sélectionnez **Générer** > **Générer la solution**. Ceci compile votre programme en un langage intermédiaire, qui est ensuite converti en code binaire par un compilateur juste-à-temps (JIT).
 
