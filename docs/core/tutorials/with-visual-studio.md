@@ -42,7 +42,7 @@ Commencez par créer une application console « Hello World » simple. Procéd
    Console.Write("Press any key to continue...");
    Console.ReadKey(true);
    ```
-   Ce code invite l’utilisateur à appuyer sur une touche. Le programme s'arrêtera lorsque l’utilisateur aura appuyé sur une touche.
+   Ce code invite l’utilisateur à appuyer sur une touche. Le programme s'arrête lorsque l’utilisateur appuie sur une touche.
 
 1. Dans la barre de menus, sélectionnez **Générer** > **Générer la solution**. Ceci compile votre programme en un langage intermédiaire, qui est ensuite converti en code binaire par un compilateur juste-à-temps (JIT).
 
