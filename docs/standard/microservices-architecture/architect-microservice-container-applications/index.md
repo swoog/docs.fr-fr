@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 185279cb4df70d9896d7e11c995170e7cd214f73
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f7933cc25a5fde13113d0c9c278e9bd1730d4f9d
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106812"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48264148"
 ---
 # <a name="architecting-container--and-microservice-based-applications"></a>Architecture des applications basées sur des conteneurs et des microservices
 
