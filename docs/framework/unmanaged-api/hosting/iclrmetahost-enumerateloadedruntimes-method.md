@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db10b5c67a098cc34292a2680bd832f9cef2861b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205012"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584102"
 ---
-# <a name="iclrmetahostenumerateloadedruntimes-method"></a><span data-ttu-id="04a4f-102">ICLRMetaHost::EnumerateLoadedRuntimes, méthode</span><span class="sxs-lookup"><span data-stu-id="04a4f-102">ICLRMetaHost::EnumerateLoadedRuntimes Method</span></span>
-<span data-ttu-id="04a4f-103">Retourne une énumération qui inclut un valide [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) pointeur d’interface pour chaque version du common language runtime (CLR) qui est chargé dans un processus donné.</span><span class="sxs-lookup"><span data-stu-id="04a4f-103">Returns an enumeration that includes a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface pointer for each version of the common language runtime (CLR) that is loaded in a given process.</span></span> <span data-ttu-id="04a4f-104">Cette méthode remplace la [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) (fonction).</span><span class="sxs-lookup"><span data-stu-id="04a4f-104">This method supersedes the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) function.</span></span>  
+# <a name="iclrmetahostenumerateloadedruntimes-method"></a><span data-ttu-id="d7351-102">ICLRMetaHost::EnumerateLoadedRuntimes, méthode</span><span class="sxs-lookup"><span data-stu-id="d7351-102">ICLRMetaHost::EnumerateLoadedRuntimes Method</span></span>
+<span data-ttu-id="d7351-103">Retourne une énumération qui inclut un valide [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) pointeur d’interface pour chaque version du common language runtime (CLR) qui est chargé dans un processus donné.</span><span class="sxs-lookup"><span data-stu-id="d7351-103">Returns an enumeration that includes a valid [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interface pointer for each version of the common language runtime (CLR) that is loaded in a given process.</span></span> <span data-ttu-id="d7351-104">Cette méthode remplace la [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) (fonction).</span><span class="sxs-lookup"><span data-stu-id="d7351-104">This method supersedes the [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04a4f-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="04a4f-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7351-105">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d7351-105">Syntax</span></span>  
   
 ```  
 HRESULT EnumerateLoadedRuntimes (  
@@ -36,33 +36,33 @@ HRESULT EnumerateLoadedRuntimes (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="04a4f-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="04a4f-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d7351-106">Paramètres</span><span class="sxs-lookup"><span data-stu-id="d7351-106">Parameters</span></span>  
  `hndProcess`  
- <span data-ttu-id="04a4f-107">[in] Le handle du processus à inspecter pour les runtimes chargés.</span><span class="sxs-lookup"><span data-stu-id="04a4f-107">[in] The handle of the process to inspect for loaded runtimes.</span></span>  
+ <span data-ttu-id="d7351-107">[in] Le handle du processus à inspecter pour les runtimes chargés.</span><span class="sxs-lookup"><span data-stu-id="d7351-107">[in] The handle of the process to inspect for loaded runtimes.</span></span>  
   
  `ppEnumerator`  
- <span data-ttu-id="04a4f-108">[out] Un <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> énumération de [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces correspondant à chaque CLR qui est chargé par le processus.</span><span class="sxs-lookup"><span data-stu-id="04a4f-108">[out] An <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each CLR that is loaded by the process.</span></span>  
+ <span data-ttu-id="d7351-108">[out] Un <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> énumération de [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces correspondant à chaque CLR qui est chargé par le processus.</span><span class="sxs-lookup"><span data-stu-id="d7351-108">[out] An <xref:Microsoft.VisualStudio.OLE.Interop.IEnumUnknown> enumeration of [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) interfaces corresponding to each CLR that is loaded by the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="04a4f-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="04a4f-109">Return Value</span></span>  
- <span data-ttu-id="04a4f-110">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="04a4f-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d7351-109">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="d7351-109">Return Value</span></span>  
+ <span data-ttu-id="d7351-110">Cette méthode retourne les HRESULT spécifiques suivants ainsi que les erreurs HRESULT indiquant l'échec de la méthode.</span><span class="sxs-lookup"><span data-stu-id="d7351-110">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="04a4f-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="04a4f-111">HRESULT</span></span>|<span data-ttu-id="04a4f-112">Description</span><span class="sxs-lookup"><span data-stu-id="04a4f-112">Description</span></span>|  
+|<span data-ttu-id="d7351-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d7351-111">HRESULT</span></span>|<span data-ttu-id="d7351-112">Description</span><span class="sxs-lookup"><span data-stu-id="d7351-112">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="04a4f-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="04a4f-113">S_OK</span></span>|<span data-ttu-id="04a4f-114">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="04a4f-114">The method completed successfully.</span></span>|  
-|<span data-ttu-id="04a4f-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="04a4f-115">E_POINTER</span></span>|<span data-ttu-id="04a4f-116">`ppEnumerator` a la valeur null.</span><span class="sxs-lookup"><span data-stu-id="04a4f-116">`ppEnumerator` is null.</span></span>|  
+|<span data-ttu-id="d7351-113">S_OK</span><span class="sxs-lookup"><span data-stu-id="d7351-113">S_OK</span></span>|<span data-ttu-id="d7351-114">La commande s'est correctement terminée.</span><span class="sxs-lookup"><span data-stu-id="d7351-114">The method completed successfully.</span></span>|  
+|<span data-ttu-id="d7351-115">E_POINTER</span><span class="sxs-lookup"><span data-stu-id="d7351-115">E_POINTER</span></span>|<span data-ttu-id="d7351-116">`ppEnumerator` a la valeur null.</span><span class="sxs-lookup"><span data-stu-id="d7351-116">`ppEnumerator` is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="04a4f-117">Notes</span><span class="sxs-lookup"><span data-stu-id="04a4f-117">Remarks</span></span>  
- <span data-ttu-id="04a4f-118">Cette méthode est répertorie toutes les exécutions chargées, même si elles ont été chargées avec les fonctions déconseillées comme [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span><span class="sxs-lookup"><span data-stu-id="04a4f-118">This method is lists all loaded runtimes, even if they were loaded with deprecated functions such as [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d7351-117">Notes</span><span class="sxs-lookup"><span data-stu-id="d7351-117">Remarks</span></span>  
+ <span data-ttu-id="d7351-118">Cette méthode est répertorie toutes les exécutions chargées, même si elles ont été chargées avec les fonctions déconseillées comme [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span><span class="sxs-lookup"><span data-stu-id="d7351-118">This method is lists all loaded runtimes, even if they were loaded with deprecated functions such as [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04a4f-119">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="04a4f-119">Requirements</span></span>  
- <span data-ttu-id="04a4f-120">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04a4f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7351-119">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="d7351-119">Requirements</span></span>  
+ <span data-ttu-id="d7351-120">**Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7351-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04a4f-121">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="04a4f-121">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="d7351-121">**En-tête :** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="d7351-121">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="04a4f-122">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="04a4f-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d7351-122">**Bibliothèque :** inclus en tant que ressource dans MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="d7351-122">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="04a4f-123">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04a4f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="d7351-123">**Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7351-123">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="04a4f-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="04a4f-124">See Also</span></span>  
- [<span data-ttu-id="04a4f-125">ICLRMetaHost, interface</span><span class="sxs-lookup"><span data-stu-id="04a4f-125">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [<span data-ttu-id="04a4f-126">Hébergement</span><span class="sxs-lookup"><span data-stu-id="04a4f-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="d7351-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d7351-124">See Also</span></span>  
+ [<span data-ttu-id="d7351-125">ICLRMetaHost, interface</span><span class="sxs-lookup"><span data-stu-id="d7351-125">ICLRMetaHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
+ [<span data-ttu-id="d7351-126">Hébergement</span><span class="sxs-lookup"><span data-stu-id="d7351-126">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

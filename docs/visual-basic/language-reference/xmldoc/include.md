@@ -6,45 +6,45 @@ helpviewer_keywords:
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
 ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046381"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778703"
 ---
-# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="25304-102">&lt;inclure&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25304-102">&lt;include&gt; (Visual Basic)</span></span>
-<span data-ttu-id="25304-103">Fait référence à un autre fichier qui décrit les types et membres dans votre code source.</span><span class="sxs-lookup"><span data-stu-id="25304-103">Refers to another file that describes the types and members in your source code.</span></span>  
+# <a name="ltincludegt-visual-basic"></a><span data-ttu-id="52ce8-102">&lt;inclure&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="52ce8-102">&lt;include&gt; (Visual Basic)</span></span>
+<span data-ttu-id="52ce8-103">Fait référence à un autre fichier qui décrit les types et membres dans votre code source.</span><span class="sxs-lookup"><span data-stu-id="52ce8-103">Refers to another file that describes the types and members in your source code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="25304-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="25304-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52ce8-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="52ce8-104">Syntax</span></span>  
   
 ```xml  
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="25304-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="25304-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="52ce8-105">Paramètres</span><span class="sxs-lookup"><span data-stu-id="52ce8-105">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="25304-106">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="25304-106">Required.</span></span> <span data-ttu-id="25304-107">Nom du fichier contenant la documentation.</span><span class="sxs-lookup"><span data-stu-id="25304-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="25304-108">Le nom de fichier peut être qualifié avec un chemin.</span><span class="sxs-lookup"><span data-stu-id="25304-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="25304-109">Placez `filename` dans des guillemets doubles ( » «).</span><span class="sxs-lookup"><span data-stu-id="25304-109">Enclose `filename` in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="52ce8-106">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52ce8-106">Required.</span></span> <span data-ttu-id="52ce8-107">Nom du fichier contenant la documentation.</span><span class="sxs-lookup"><span data-stu-id="52ce8-107">The name of the file containing the documentation.</span></span> <span data-ttu-id="52ce8-108">Le nom de fichier peut être qualifié avec un chemin.</span><span class="sxs-lookup"><span data-stu-id="52ce8-108">The file name can be qualified with a path.</span></span> <span data-ttu-id="52ce8-109">Placez `filename` dans des guillemets doubles ( » «).</span><span class="sxs-lookup"><span data-stu-id="52ce8-109">Enclose `filename` in double quotation marks (" ").</span></span>  
   
  `tagpath`  
- <span data-ttu-id="25304-110">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="25304-110">Required.</span></span> <span data-ttu-id="25304-111">Chemin des balises contenues dans `filename` qui mène à la balise `name`.</span><span class="sxs-lookup"><span data-stu-id="25304-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="25304-112">Placez le chemin d’accès entre guillemets doubles ( » «).</span><span class="sxs-lookup"><span data-stu-id="25304-112">Enclose the path in double quotation marks (" ").</span></span>  
+ <span data-ttu-id="52ce8-110">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52ce8-110">Required.</span></span> <span data-ttu-id="52ce8-111">Chemin des balises contenues dans `filename` qui mène à la balise `name`.</span><span class="sxs-lookup"><span data-stu-id="52ce8-111">The path of the tags in `filename` that leads to the tag `name`.</span></span> <span data-ttu-id="52ce8-112">Placez le chemin d’accès entre guillemets doubles ( » «).</span><span class="sxs-lookup"><span data-stu-id="52ce8-112">Enclose the path in double quotation marks (" ").</span></span>  
   
  `name`  
- <span data-ttu-id="25304-113">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="25304-113">Required.</span></span> <span data-ttu-id="25304-114">Le spécificateur de nom dans la balise qui précède les commentaires.</span><span class="sxs-lookup"><span data-stu-id="25304-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="25304-115">`Name` aura un `id`.</span><span class="sxs-lookup"><span data-stu-id="25304-115">`Name` will have an `id`.</span></span>  
+ <span data-ttu-id="52ce8-113">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52ce8-113">Required.</span></span> <span data-ttu-id="52ce8-114">Le spécificateur de nom dans la balise qui précède les commentaires.</span><span class="sxs-lookup"><span data-stu-id="52ce8-114">The name specifier in the tag that precedes the comments.</span></span> <span data-ttu-id="52ce8-115">`Name` aura un `id`.</span><span class="sxs-lookup"><span data-stu-id="52ce8-115">`Name` will have an `id`.</span></span>  
   
  `id`  
- <span data-ttu-id="25304-116">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="25304-116">Required.</span></span> <span data-ttu-id="25304-117">ID de la balise qui précède les commentaires.</span><span class="sxs-lookup"><span data-stu-id="25304-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="25304-118">Mettez l’ID entre guillemets simples (' ').</span><span class="sxs-lookup"><span data-stu-id="25304-118">Enclose the ID in single quotation marks (' ').</span></span>  
+ <span data-ttu-id="52ce8-116">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="52ce8-116">Required.</span></span> <span data-ttu-id="52ce8-117">ID de la balise qui précède les commentaires.</span><span class="sxs-lookup"><span data-stu-id="52ce8-117">The ID for the tag that precedes the comments.</span></span> <span data-ttu-id="52ce8-118">Mettez l’ID entre guillemets simples (' ').</span><span class="sxs-lookup"><span data-stu-id="52ce8-118">Enclose the ID in single quotation marks (' ').</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="25304-119">Notes</span><span class="sxs-lookup"><span data-stu-id="25304-119">Remarks</span></span>  
- <span data-ttu-id="25304-120">Utilisez le `<include>` balise pour faire référence à des commentaires dans un autre fichier qui décrivent les types et membres dans votre code source.</span><span class="sxs-lookup"><span data-stu-id="25304-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="25304-121">Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.</span><span class="sxs-lookup"><span data-stu-id="25304-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52ce8-119">Notes</span><span class="sxs-lookup"><span data-stu-id="52ce8-119">Remarks</span></span>  
+ <span data-ttu-id="52ce8-120">Utilisez le `<include>` balise pour faire référence à des commentaires dans un autre fichier qui décrivent les types et membres dans votre code source.</span><span class="sxs-lookup"><span data-stu-id="52ce8-120">Use the `<include>` tag to refer to comments in another file that describe the types and members in your source code.</span></span> <span data-ttu-id="52ce8-121">Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.</span><span class="sxs-lookup"><span data-stu-id="52ce8-121">This is an alternative to placing documentation comments directly in your source code file.</span></span>  
   
- <span data-ttu-id="25304-122">Le `<include>` balise utilise la recommandation de la Version 1.0 W3C XML Path Language (XPath).</span><span class="sxs-lookup"><span data-stu-id="25304-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="25304-123">Plus d’informations pour savoir comment personnaliser votre `<include>` utilisation est disponible à l’adresse http://www.w3.org/TR/xpath.</span><span class="sxs-lookup"><span data-stu-id="25304-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
+ <span data-ttu-id="52ce8-122">Le `<include>` balise utilise la recommandation de la Version 1.0 W3C XML Path Language (XPath).</span><span class="sxs-lookup"><span data-stu-id="52ce8-122">The `<include>` tag uses the W3C XML Path Language (XPath) Version 1.0 Recommendation.</span></span> <span data-ttu-id="52ce8-123">Plus d’informations pour savoir comment personnaliser votre `<include>` utilisation est disponible à l’adresse http://www.w3.org/TR/xpath.</span><span class="sxs-lookup"><span data-stu-id="52ce8-123">More information for ways to customize your `<include>` use is available at http://www.w3.org/TR/xpath.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25304-124">Exemple</span><span class="sxs-lookup"><span data-stu-id="25304-124">Example</span></span>  
- <span data-ttu-id="25304-125">Cet exemple utilise le `<include>` balise pour importer des commentaires de documentation de membre à partir d’un fichier appelé `commentFile.xml`.</span><span class="sxs-lookup"><span data-stu-id="25304-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
+## <a name="example"></a><span data-ttu-id="52ce8-124">Exemple</span><span class="sxs-lookup"><span data-stu-id="52ce8-124">Example</span></span>  
+ <span data-ttu-id="52ce8-125">Cet exemple utilise le `<include>` balise pour importer des commentaires de documentation de membre à partir d’un fichier appelé `commentFile.xml`.</span><span class="sxs-lookup"><span data-stu-id="52ce8-125">This example uses the `<include>` tag to import member documentation comments from a file called `commentFile.xml`.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#4](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/include_1.vb)]  
   
- <span data-ttu-id="25304-126">Le format de la `commentFile.xml` se présente comme suit.</span><span class="sxs-lookup"><span data-stu-id="25304-126">The format of the `commentFile.xml` is as follows.</span></span>  
+ <span data-ttu-id="52ce8-126">Le format de la `commentFile.xml` se présente comme suit.</span><span class="sxs-lookup"><span data-stu-id="52ce8-126">The format of the `commentFile.xml` is as follows.</span></span>  
   
 ```xml  
 <Docs>  
@@ -59,5 +59,5 @@ ms.locfileid: "48046381"
 </Docs>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="25304-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="25304-127">See Also</span></span>  
- [<span data-ttu-id="25304-128">Étiquettes XML pour les commentaires</span><span class="sxs-lookup"><span data-stu-id="25304-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="52ce8-127">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="52ce8-127">See Also</span></span>  
+ [<span data-ttu-id="52ce8-128">Étiquettes XML pour les commentaires</span><span class="sxs-lookup"><span data-stu-id="52ce8-128">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

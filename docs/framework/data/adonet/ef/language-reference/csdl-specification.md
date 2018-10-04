@@ -3,13 +3,13 @@ title: Spécification CSDL
 ms.date: 03/30/2017
 ms.assetid: 6bb94c37-87da-447a-8dfd-83d1c4b5a2d2
 ms.openlocfilehash: f3acb7933392fcd8a1d952354a2b45e4b588834e
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026737"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48265342"
 ---
-# <a name="csdl-specification"></a><span data-ttu-id="f7e1d-102">Spécification CSDL</span><span class="sxs-lookup"><span data-stu-id="f7e1d-102">CSDL Specification</span></span>
-<span data-ttu-id="f7e1d-103">Le [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site est maintenant l’emplacement principal pour le contenu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="f7e1d-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
+# <a name="csdl-specification"></a><span data-ttu-id="4da79-102">Spécification CSDL</span><span class="sxs-lookup"><span data-stu-id="4da79-102">CSDL Specification</span></span>
+<span data-ttu-id="4da79-103">Le [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site est maintenant l’emplacement principal pour le contenu Entity Framework.</span><span class="sxs-lookup"><span data-stu-id="4da79-103">The [msdn.microsoft.com/data/ef](https://msdn.microsoft.com/data/ef) site is now the main location for the Entity Framework content.</span></span>  
   
- <span data-ttu-id="f7e1d-104">Le contenu de cette rubrique est désormais disponible sur la page suivante : [spécification CSDL](https://msdn.microsoft.com/data/jj652004).</span><span class="sxs-lookup"><span data-stu-id="f7e1d-104">The content for this topic is now available on the following page: [CSDL Specification](https://msdn.microsoft.com/data/jj652004).</span></span>
+ <span data-ttu-id="4da79-104">Le contenu de cette rubrique est désormais disponible sur la page suivante : [spécification CSDL](https://msdn.microsoft.com/data/jj652004).</span><span class="sxs-lookup"><span data-stu-id="4da79-104">The content for this topic is now available on the following page: [CSDL Specification](https://msdn.microsoft.com/data/jj652004).</span></span>
