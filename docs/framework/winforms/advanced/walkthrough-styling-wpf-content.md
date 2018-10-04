@@ -6,31 +6,31 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ad98c2da32084122dab529b8cf3a8fe7ef506b99
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bd056bb9d5ad429e35e0b2625dee99ae5f18b527
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489901"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780139"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Procédure pas à pas : application de styles au contenu WPF
-Cette procédure pas à pas montre comment appliquer des styles à un contrôle WPF (Windows Presentation Foundation) hébergé sur un Windows Form.  
-  
- Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :  
-  
--   créer le projet ;  
-  
--   créer le type de contrôle WPF ;  
-  
--   appliquer un style au contrôle WPF.  
-  
+Cette procédure pas à pas montre comment appliquer des styles à un contrôle WPF (Windows Presentation Foundation) hébergé sur un Windows Form.
+
+ Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
+
+-   créer le projet ;
+
+-   créer le type de contrôle WPF ;
+
+-   appliquer un style au contrôle WPF.
+
 > [!NOTE]
 >  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Création du projet  
  La première étape consiste à créer le projet Windows Forms.  

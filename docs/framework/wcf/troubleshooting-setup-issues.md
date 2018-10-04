@@ -2,12 +2,12 @@
 title: Résolution des problèmes d’installation
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 0270bd8c1006b39805e3486c4fef0cb379089ea8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 13828bee07dd455cd2b94d20d4afa7ea416ce186
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805128"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780126"
 ---
 # <a name="troubleshooting-setup-issues"></a>Résolution des problèmes d’installation
 Cette rubrique décrit comment résoudre les problèmes d’installation Windows Communication Foundation (WCF).  
@@ -67,7 +67,7 @@ Cette rubrique décrit comment résoudre les problèmes d’installation Windows
  Pour contourner ce problème, utilisez le [outil WorkFlow Service Registration (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) avec la `/c` commutateur à configurer correctement les mappages de script IIS sur l’ordinateur. [Outil workFlow Service Registration (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) trouverez %windir%\Microsoft.NET\framework\v3.5\ ou %windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Impossible de charger le type ‘System.ServiceModel.Activation.HttpModule’ à partir de l'assembly ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- Cette erreur se produit si [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] est installé et puis Activation HTTP de WCF est activée. Pour résoudre ce problème, exécutez la ligne de commande suivante depuis l'invite de commandes [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] :  
+ Cette erreur se produit si [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] est installé et puis Activation HTTP de WCF est activée. Pour résoudre le problème, exécutez la commande suivante à la ligne de commande à partir d’à l’intérieur de l’invite de commandes développeur pour Visual Studio :  
   
 ```Output  
 aspnet_regiis.exe -i -enable  

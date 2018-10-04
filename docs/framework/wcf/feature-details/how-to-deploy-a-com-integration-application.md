@@ -2,12 +2,12 @@
 title: "Comment : déployer une application d'intégration COM+"
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 872d0f0c84c1ac0ea96a87ed24a386bb9bedcf85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490137"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48793069"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Comment : déployer une application d'intégration COM+
 Après avoir écrit une application d'intégration COM+, vous pouvez la déployer sur un autre ordinateur. Cette rubrique décrit comment déplacer une application d'intégration COM+ d'un ordinateur vers un autre.  
@@ -24,7 +24,7 @@ Après avoir écrit une application d'intégration COM+, vous pouvez la déploye
   
 5.  Copiez les fichiers Application.config et Application.manifest du répertoire racine de l'application sur l'ordinateur A vers le répertoire racine de l'application sur l'ordinateur B.  
   
-6.  Modifiez les adresses de point de terminaison de service dans le fichier Application.config sur l'ordinateur B pour identifier l'ordinateur approprié. Par exemple, remplacez http://machineA/MyService à http://machineB/MyService.  
+6.  Modifiez les adresses de point de terminaison de service dans le fichier Application.config sur l'ordinateur B pour identifier l'ordinateur approprié. Par exemple, remplacez `http://machineA/MyService` par `http://machineB/MyService`.  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>Déplacement d'une application d'intégration hébergée sur le Web  
   

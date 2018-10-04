@@ -2,12 +2,12 @@
 title: MSMQ Activation
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: a03f5783e732c4a0f3f13cf6abd7ec4803c07c8f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a179fca70a97b4fd9c7b21bdf548afdda59dda91
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779310"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780152"
 ---
 # <a name="msmq-activation"></a>MSMQ Activation
 Cet exemple illustre comment héberger des applications dans le service d'activation des processus Windows (WAS, Windows Process Activation Service), qui sont lues à partir d'une file d'attente de messages. Cet exemple utilise le `netMsmqBinding` et est basé sur le [bidirectionnel Communication](../../../../docs/framework/wcf/samples/two-way-communication.md) exemple. Dans cet exemple, le service est une application hébergée par le Web et le client est auto-hébergé. Les résultats, qui s'affichent sur la console, permettent d'observer le statut des bons de commande envoyés.  
@@ -20,7 +20,7 @@ Cet exemple illustre comment héberger des applications dans le service d'activa
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Si ce répertoire n’existe pas, accédez à Windows Communication Foundation (WCF) HYPERLINK "https://go.microsoft.com/fwlink/?LinkId=150780» \t « _blank » et des exemples de Windows Workflow Foundation (WF) pour [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pour télécharger tous les WCF et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
+>  Si ce répertoire n’existe pas, accédez à Windows Communication Foundation (WCF) lien hypertexte « https://go.microsoft.com/fwlink/?LinkId=150780« \t »\_vide » et des exemples de Windows Workflow Foundation (WF) pour [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pour télécharger tous les WCF et [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemples. Cet exemple se trouve dans le répertoire suivant.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -76,7 +76,8 @@ public class OrderProcessorService : IOrderProcessor
             client.OrderStatus(po.PONumber, po.Status);  
             scope.Complete();  
         }  
-    }  
+    }
+}
 ```  
   
  La liaison du client à utiliser est spécifiée à l'aide d'un fichier de configuration.  
@@ -173,7 +174,7 @@ public class OrderStatusService : IOrderStatus
   
  La file d'attente de l'état des bons de commande est créée dans la méthode `Main`. La configuration du client intègre la configuration du service de l'état des bons de commande pour héberger le service de l'état des bons de commande, comme illustré dans l'exemple de configuration suivant.  
   
-```csharp  
+```xml  
 <appSettings>  
     <!-- use appSetting to configure MSMQ queue name -->  
     <add key="targetQueueName" value=".\private$\ServiceModelSamples/service.svc" />  
@@ -269,7 +270,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  Cette commande est une ligne unique de texte.  
   
-         Cette commande permet d’accéder à l’aide de l’application http://localhost/servicemodelsamples et via NET.MSMQ://localhost/servicemodelsamples.  
+         Cette commande permet d’accéder à l’aide de l’application `http://localhost/servicemodelsamples` et `net.msmq://localhost/servicemodelsamples`.
   
 7.  Si vous ne l'avez pas fait précédemment, assurez-vous que le service d'activation MSMQ est activé. À partir de la **Démarrer** menu, cliquez sur **exécuter**et le type `Services.msc`. Dans la liste des services pour le **adaptateur d’écouteur Net.Msmq**. Avec le bouton droit et sélectionnez **propriétés**. Définir le **Type de démarrage** à **automatique**, cliquez sur **appliquer** et cliquez sur le **Démarrer** bouton. Cette étape doit être effectuée à une seule reprise, avant la première utilisation du service d'adaptateur de l'écouteur Net.Msmq.  
   

@@ -2,12 +2,12 @@
 title: Consommation de flux OData à partir d'un workflow
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: a7e2a0658294681b154b11f48563ebc562c47210
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 8d08a58cecead105f6e1f580ea40175cac93e417
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221621"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780100"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Consommation de flux OData à partir d'un workflow
 
@@ -23,7 +23,7 @@ WCF Data Services inclut des bibliothèques clientes qui vous permettent de cons
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>Ajout d'une référence de service au service de données WCF
 
-Pour générer les bibliothèques clientes Northwind, vous pouvez utiliser la boîte de dialogue **Ajouter une référence de service** dans [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] pour ajouter une référence au service OData Northwind.
+Pour générer les bibliothèques clientes Northwind, vous pouvez utiliser la **ajouter une référence de Service** boîte de dialogue dans Visual Studio 2012 pour ajouter une référence au service Northwind OData.
 
 ![Ajouter une référence de Service](../../../docs/framework/windows-workflow-foundation/media/addservicereferencetonorthwindodataservice.gif "AddServiceReferencetoNorthwindODataService")
 
@@ -114,7 +114,7 @@ Lorsque ce code s'exécute, la sortie suivante s'affiche sur la console :
 
 ```console
 Raw data returned:
-<?xml version="1.0" encoding="utf-8" standalone="yes"?> 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <ContactName xmlns="http://schemas.microsoft.com/ado/2007/08/dataservices">Maria Anders</ContactName>
 ```
 
