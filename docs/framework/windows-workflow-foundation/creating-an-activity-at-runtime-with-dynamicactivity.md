@@ -2,12 +2,12 @@
 title: Création d'une activité en cours d'exécution avec DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027362"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583869"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Création d'une activité en cours d'exécution avec DynamicActivity
 <xref:System.Activities.DynamicActivity> est une classe concrète et scellée avec un constructeur public. <xref:System.Activities.DynamicActivity> peut servir à assembler les fonctionnalités d'activité au moment de l'exécution à l'aide d'un DOM d'activité.  
@@ -21,7 +21,7 @@ ms.locfileid: "48027362"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>Pour créer une activité au moment de l'exécution à l'aide du code impératif  
   
-1.  Ouvrez [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Ouvrez Visual Studio 2010.  
   
 2.  Sélectionnez **fichier**, **nouveau**, **projet**. Sélectionnez **Workflow 4.0** sous **Visual C#** dans le **Types de projets** , puis sélectionnez le **v2010** nœud. Sélectionnez **Application Console de Workflow séquentiel** dans le **modèles** fenêtre. Nommez le nouveau projet « DynamicActivitySample ».  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48027362"
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>Pour créer une activité au moment de l'exécution à l'aide de XAML  
   
-1.  Ouvrez [!INCLUDE[vs2010](../../../includes/vs2010-md.md)].  
+1.  Ouvrez Visual Studio 2010.  
   
 2.  Sélectionnez **fichier**, **nouveau**, **projet**. Sélectionnez **Workflow 4.0** sous **Visual C#** dans le **Types de projets** , puis sélectionnez le **v2010** nœud. Sélectionnez **Application Console de Workflow** dans le **modèles** fenêtre. Nommez le nouveau projet « DynamicActivitySample ».  
   

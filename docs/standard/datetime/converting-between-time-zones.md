@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c77832a4c578ddb2c8a427b133e53ab4ab5c5e3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595624"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580155"
 ---
 # <a name="converting-times-between-time-zones"></a>Conversion d’heures entre fuseaux horaires
 
@@ -44,9 +44,6 @@ Le code suivant convertit l’heure locale actuelle en heure UTC et affiche le r
 
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
-
-> [!NOTE]
-> Le <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> méthode ne produit pas nécessairement les résultats sont identiques à la <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType> et <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> méthodes. Si le système hôte local de l’horaire inclut plusieurs règles d’ajustement, <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> s’applique la règle appropriée à une date et heure particulière. Les deux autres méthodes appliquent toujours la dernière règle d’ajustement.
 
 Si la valeur de date et d’heure ne représente pas l’heure locale ou UTC, la <xref:System.DateTime.ToUniversalTime%2A> méthode probablement retourne un résultat erroné. Toutefois, vous pouvez utiliser la <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> méthode pour convertir la date et l’heure à partir d’un fuseau horaire spécifié. (Pour plus d’informations sur la récupération d’un <xref:System.TimeZoneInfo> objet qui représente le fuseau horaire de destination, consultez [recherche des fuseaux horaires définis sur un système local](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) Le code suivant utilise la <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> méthode pour convertir l’heure UTC.
 

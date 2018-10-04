@@ -9,35 +9,35 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 1466591a06e9e7ca61f94683e037566f8d0cb31a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509773"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266667"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : réorganisation du contenu WPF sur les Windows Forms au moment du design
-Cette procédure pas à pas montre comment utiliser les fonctionnalités de disposition Windows Forms, telles que l’ancrage et les lignes d’alignement, pour disposer les contrôles WPF (Windows Presentation Foundation).  
-  
- Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :  
-  
--   créer le projet ;  
-  
--   créer le contrôle WPF ;  
-  
--   héberger des contrôles WPF dans un panneau de disposition ;  
-  
--   utiliser des lignes d'alignement pour aligner des contrôles WPF ;  
-  
--   ancrer des contrôles WPF.  
-  
+Cette procédure pas à pas montre comment utiliser les fonctionnalités de disposition Windows Forms, telles que l’ancrage et les lignes d’alignement, pour disposer les contrôles WPF (Windows Presentation Foundation).
+
+ Lors de cette procédure pas à pas, vous allez exécuter les tâches suivantes :
+
+-   créer le projet ;
+
+-   créer le contrôle WPF ;
+
+-   héberger des contrôles WPF dans un panneau de disposition ;
+
+-   utiliser des lignes d'alignement pour aligner des contrôles WPF ;
+
+-   ancrer des contrôles WPF.
+
 > [!NOTE]
 >  Les boîtes de dialogue et les commandes de menu qui s'affichent peuvent être différentes de celles qui sont décrites dans l'aide, en fonction de vos paramètres actifs ou de l'édition utilisée. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour exécuter cette procédure pas à pas, vous devez disposer des composants suivants :  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Création du projet  
  La première étape consiste à créer le projet Windows Forms.  

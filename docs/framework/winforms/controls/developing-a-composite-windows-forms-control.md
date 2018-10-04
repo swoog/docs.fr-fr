@@ -7,17 +7,17 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3bd8a91942cf41be62ff1e66bd97064e2db26692
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510158"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580799"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Développement d'un contrôle Windows Forms composite
 Vous pouvez développer un contrôle Windows Forms composite en combinant d'autres contrôles Windows Forms. Les contrôles composites qui dérivent <xref:System.Web.UI.UserControl> sont appelés contrôles utilisateur. La classe de base, <xref:System.Windows.Forms.UserControl>, fournit le routage clavier pour les contrôles enfants, ce qui permet de garantir que les contrôles enfants peuvent recevoir le focus. Pour obtenir un exemple d’un contrôle utilisateur, consultez le <xref:System.Windows.Forms.UserControl> exemple [Comment : appliquer des attributs dans les contrôles Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Le Concepteur Windows Forms dans [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] fournit une prise en charge enrichie au moment du design pour la création de contrôles utilisateur.  
+ Le Concepteur Windows Forms dans Visual Studio fournit la prise en charge au moment du design pour la création de contrôles utilisateur.  
   
 -   [Comment : afficher un contrôle dans la boîte de dialogue Choisir des éléments de boîte à outils](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   

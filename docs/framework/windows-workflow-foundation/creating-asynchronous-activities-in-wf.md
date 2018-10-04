@@ -2,12 +2,12 @@
 title: Création d'activités asynchrones dans WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520066"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266557"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Création d'activités asynchrones dans WF
 <xref:System.Activities.AsyncCodeActivity> fournit aux auteurs d'activités une classe de base qui permet aux activités dérivées d'implémenter la logique d'exécution asynchrone. Les activités personnalisées peuvent ainsi effectuer un travail asynchrone sans maintenir le thread du service de planification de workflow. Elles peuvent également bloquer toute activité qui peut s'exécuter en parallèle. Cette rubrique fournit une vue d'ensemble de la méthode de création des activités asynchrones personnalisées à l'aide de l'objet <xref:System.Activities.AsyncCodeActivity>.  
@@ -16,7 +16,7 @@ ms.locfileid: "33520066"
  L'objet <xref:System.Activities?displayProperty=nameWithType> fournit aux auteurs d'activités personnalisées différentes classes de base pour différentes spécifications de création d'activité. Chacune possède une sémantique particulière et fournit à un auteur de workflow (et au runtime d'activité) un contrat correspondant. Une activité basée sur l'objet <xref:System.Activities.AsyncCodeActivity> est une activité qui effectue le travail de façon asynchrone par rapport au thread du service de planification et dont la logique d'exécution est exprimée en code managé. Du fait qu'il devienne asynchrone, un objet <xref:System.Activities.AsyncCodeActivity> peut induire un point inactif lors de l'exécution. En raison de la nature volatile du travail asynchrone, un objet <xref:System.Activities.AsyncCodeActivity> crée toujours un bloc sans persistance pour la durée d'exécution de l'activité. Cela empêche le runtime du workflow de rendre persistante l'instance de workflow au milieu du travail asynchrone, et empêche également l'instance de workflow de se décharger lors de l'exécution du code asynchrone.  
   
 ### <a name="asynccodeactivity-methods"></a>Méthodes AsyncCodeActivity  
- Les activités qui dérivent de l'objet <xref:System.Activities.AsyncCodeActivity> peuvent créer la logique d'exécution asynchrone en substituant le code personnalisé aux méthodes <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> et <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Une fois appelées par le runtime, un <xref:System.Activities.AsyncCodeActivityContext> est passé à ces méthodes. <xref:System.Activities.AsyncCodeActivityContext> permet à l’auteur d’activité de fournir l’état partagé entre <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> dans du contexte <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> propriété. Dans l'exemple suivant, une activité `GenerateRandom` génère un nombre aléatoire de façon asynchrone.  
+ Les activités qui dérivent de l'objet <xref:System.Activities.AsyncCodeActivity> peuvent créer la logique d'exécution asynchrone en substituant le code personnalisé aux méthodes <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> et <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Une fois appelées par le runtime, un <xref:System.Activities.AsyncCodeActivityContext> est passé à ces méthodes. <xref:System.Activities.AsyncCodeActivityContext> permet à l’auteur d’activité fournir l’état partagé entre <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> /  <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> dans le contexte <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> propriété. Dans l'exemple suivant, une activité `GenerateRandom` génère un nombre aléatoire de façon asynchrone.  
   
  [!code-csharp[CFX_ActivityExample#8](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#8)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33520066"
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>Appel de méthodes asynchrones sur une classe  
- De nombreuses classes dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournissent les fonctionnalités asynchrones. Ces dernières peuvent être appelées de façon asynchrone à l'aide d'une activité basée sur <xref:System.Activities.AsyncCodeActivity>. Dans l’exemple suivant à partir de la [à l’aide d’AsyncOperationContext dans une activité](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md), une activité est créée qui crée un fichier de façon asynchrone à l’aide de la <xref:System.IO.FileStream> classe.  
+ De nombreuses classes dans le [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] fournissent les fonctionnalités asynchrones. Ces dernières peuvent être appelées de façon asynchrone à l'aide d'une activité basée sur <xref:System.Activities.AsyncCodeActivity>. Dans l’exemple suivant, une activité est créée qui crée un fichier de façon asynchrone à l’aide de la <xref:System.IO.FileStream> classe.  
   
  [!code-csharp[CFX_ActivityExample#12](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -44,9 +44,9 @@ ms.locfileid: "33520066"
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Planifier des actions ou des activités enfants à l'aide d'AsyncCodeActivity  
- Les activités personnalisées dérivées <xref:System.Activities.AsyncCodeActivity> fournissent une méthode pour effectuer des tâches de façon asynchrone concernant le thread de workflow, mais ne permettent pas de planifier des activités enfants ou des actions. Toutefois, le comportement asynchrone peut être incorporé à la planification des activités enfants via la composition. Une activité asynchrone peut être créée, puis être composée d'une activité dérivée <xref:System.Activities.Activity> ou <xref:System.Activities.NativeActivity> pour fournir le comportement asynchrone et planifier des activités ou actions enfants. Par exemple, une activité peut être créée qui dérive de <xref:System.Activities.Activity>, et qui a comme implémentation un <xref:System.Activities.Statements.Sequence> contenant l'activité asynchrone, ainsi que les autres activités qui implémentent la logique de l'activité. Pour plus d’exemples de composition des activités à l’aide <xref:System.Activities.Activity> et <xref:System.Activities.NativeActivity>, consultez [Comment : créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [Options de création d’activités](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)et le [Composite](../../../docs/framework/windows-workflow-foundation/samples/composite.md) des exemples d’activités.  
+ Les activités personnalisées dérivées <xref:System.Activities.AsyncCodeActivity> fournissent une méthode pour effectuer des tâches de façon asynchrone concernant le thread de workflow, mais ne permettent pas de planifier des activités enfants ou des actions. Toutefois, le comportement asynchrone peut être incorporé à la planification des activités enfants via la composition. Une activité asynchrone peut être créée, puis être composée d'une activité dérivée <xref:System.Activities.Activity> ou <xref:System.Activities.NativeActivity> pour fournir le comportement asynchrone et planifier des activités ou actions enfants. Par exemple, une activité peut être créée qui dérive de <xref:System.Activities.Activity>, et qui a comme implémentation un <xref:System.Activities.Statements.Sequence> contenant l'activité asynchrone, ainsi que les autres activités qui implémentent la logique de l'activité. Pour plus d’exemples de composition d’activités à l’aide de <xref:System.Activities.Activity> et <xref:System.Activities.NativeActivity>, consultez [Comment : créer une activité](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) et [Options de création d’activités](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Action>  
- <xref:System.Func%602>  
- [Utilisation d’AsyncOperationContext dans une activité](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+
+- <xref:System.Action>  
+- <xref:System.Func%602>  

@@ -2,16 +2,16 @@
 title: Processus d'approbation des documents
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 874ee560407c3054b4f270a35e5100eaf9e174b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508928"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582708"
 ---
 # <a name="document-approval-process"></a>Processus d'approbation des documents
-Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Workflow Foundation (WF) et Windows Communication Foundation (WCF) ensemble. Ensemble, elles implémentent un scénario de processus d'approbation des documents. Une application cliente peut soumettre des documents pour approbation et approuver des documents. Une application du responsable des approbations existe pour faciliter les communications entre les clients et mettre en vigueur les règles du processus d'approbation. Le processus d'approbation est un workflow qui peut exécuter plusieurs types d'approbation. Il existe des activités pour obtenir une approbation unique, une approbation de quorum (pourcentage de l'ensemble d'approbateurs) et un processus d'approbation complexe qui se compose d'une approbation unique et de quorum dans une séquence.  
-  
+Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Workflow Foundation (WF) et Windows Communication Foundation (WCF) ensemble. Ensemble, elles implémentent un scénario de processus d'approbation des documents. Une application cliente peut soumettre des documents pour approbation et approuver des documents. Une application du responsable des approbations existe pour faciliter les communications entre les clients et mettre en vigueur les règles du processus d'approbation. Le processus d'approbation est un workflow qui peut exécuter plusieurs types d'approbation. Il existe des activités pour obtenir une approbation unique, une approbation de quorum (pourcentage de l'ensemble d'approbateurs) et un processus d'approbation complexe qui se compose d'une approbation unique et de quorum dans une séquence.
+
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   
@@ -80,11 +80,11 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 ##### <a name="to-set-up-the-database"></a>Pour configurer la base de données  
   
-1.  À partir d'une invite de commandes [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] ouverte avec des privilèges d'administrateur, accédez au dossier DocumentApprovalProcess et exécutez Setup.cmd.  
+1.  À partir d’une invite de commandes de Visual Studio 2010 avec des privilèges d’administrateur, accédez au dossier DocumentApprovalProcess et exécutez Setup.cmd.  
   
 ##### <a name="to-set-up-the-application"></a>Pour configurer l'application  
   
-1.  À l'aide de [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], ouvrez le fichier solution DocumentApprovalProcess.sln.  
+1.  À l’aide de Visual Studio 2010, ouvrez le fichier solution DocumentApprovalProcess.sln.  
   
 2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.  
   
@@ -146,4 +146,4 @@ Cet exemple montre l’utilisation de nombreuses fonctionnalités de Windows Wor
   
 ##### <a name="to-clean-up"></a>Pour nettoyer  
   
-1.  À partir d'une invite de commandes [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)], naviguez jusqu'au dossier DocumentApprovalProcess et exécutez Cleanup.cmd.
+1.  À partir d’une invite de commandes Visual Studio 2010, accédez au dossier DocumentApprovalProcess et exécutez Cleanup.cmd.

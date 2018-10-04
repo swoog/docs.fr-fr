@@ -2,19 +2,19 @@
 title: 'Procédure : créer un service de workflow avec les activités de messagerie'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 6ccc4ddc6ba273f6f41efb023f077dd6b87c7ffb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12fc8706eb81df281571bb6ab54f7c2a2805f351
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196551"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580420"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Procédure : créer un service de workflow avec les activités de messagerie
 Cette rubrique décrit comment créer un service de workflow simple, à l'aide d'activités de messagerie. Elle est consacrée à la mécanique de création d'un service de workflow, simplement constitué d'activités de messagerie. Dans un service réel, le workflow contient de nombreuses autres activités. Le service implémente une opération nommée Echo, qui prend une chaîne et la retourne à l'appelant. Cette rubrique est la première d'une série de deux. La rubrique suivante [Comment : accéder à un Service à partir d’une Application de Workflow](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) explique comment créer une application de flux de travail qui peut appeler le service créé dans cette rubrique.  
   
 ### <a name="to-create-a-workflow-service-project"></a>Pour créer un projet de service de workflow  
   
-1.  Démarrez [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+1.  Démarrez Visual Studio 2012.  
   
 2.  Cliquez sur le **fichier** menu, sélectionnez **New**, puis **projet** pour afficher le **boîte de dialogue Nouveau projet**. Sélectionnez **Workflow** dans la liste des modèles installés et **Application de Service de Workflow WCF** dans la liste des types de projets. Nommez le projet `MyWFService` et utilisez l’emplacement par défaut comme indiqué dans l’illustration suivante.  
   

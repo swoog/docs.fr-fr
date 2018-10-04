@@ -2,12 +2,12 @@
 title: traçage analytique [WCF]
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 006f8aa0bc2f32e43269aa83433e8ca7a773a1c9
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46532806"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580434"
 ---
 # <a name="wcf-analytic-tracing"></a>traçage analytique [WCF]
 Cet exemple montre comment ajouter vos propres événements de traçage dans le flux de traces analytiques que Windows Communication Foundation (WCF) écrit dans ETW dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser le <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API pour écrire des événements qui s’intègrent avec les services WCF.  
@@ -43,7 +43,7 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  À l'aide de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], ouvrez le fichier solution WCFAnalyticTracingExtensibility.sln.  
+1.  À l’aide de Visual Studio 2012, ouvrez le fichier solution WCFAnalyticTracingExtensibility.sln.  
   
 2.  Pour générer la solution, appuyez sur Ctrl+Maj+B.  
   
@@ -53,7 +53,7 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
   
 4.  Exécutez le client de test WCF (WcfTestClient.exe).  
   
-     Le client de test WCF (WcfTestClient.exe) se trouve dans le \< [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] Répertoire_installation > \Common7\IDE\ WcfTestClient.exe (par défaut [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] est C:\Program Files\Microsoft Visual Studio 10.0).  
+     Le client de test WCF (WcfTestClient.exe) se trouve dans le \<Visual Studio 2012 Répertoire_installation > \Common7\IDE\ WcfTestClient.exe (le répertoire d’installation Visual Studio 2012 par défaut est C:\Program Files\Microsoft Visual Studio 10.0).  
   
 5.  Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.  
   

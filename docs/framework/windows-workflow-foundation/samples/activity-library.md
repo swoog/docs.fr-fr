@@ -2,64 +2,29 @@
 title: Bibliothèque d'activités
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 29b3efd648ac103526f572a2cac5b8b67c4b220a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7e8777d0068e6cca9c9324a6fd2668e6ff9e9da7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698469"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778955"
 ---
 # <a name="activity-library"></a>Bibliothèque d'activités
 Cette section contient des exemples qui illustrent des activités personnalisées avancées dans Windows Workflow Foundation (WF).  
   
-## <a name="in-this-section"></a>Dans cette section  
- [Activité de stratégie dans .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Montre comment l’activité Policy4 permet à Windows Workflow Foundation dans [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> des objets dans Windows Workflow Foundation dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directement à l’aide du moteur de règles est fourni dans WF 3.5.  
-  
- [Activité personnalisée pour commuter une plage de valeurs](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
- Montre comment créer une activité personnalisée qui étend l'utilisation d'un <xref:System.Activities.Statements.Switch%601>.  
-  
- [Activité LINQ to Objects](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-objects-activity.md)  
- Montre comment créer une activité pour utiliser LINQ to Objects pour interroger des éléments d’une collection.  
-  
- [Exemple LINQ to SQL](../../../../docs/framework/windows-workflow-foundation/samples/linq-to-sql-sample.md)  
- Montre comment créer une activité pour utiliser des entités de requêtes LINQ to SQL de tables dans des bases de données SQL Server.  
-  
- [Utilisation de l’activité InvokePowerShell](../../../../docs/framework/windows-workflow-foundation/samples/using-the-invokepowershell-activity.md)  
- Montre comment appeler des commandes Windows PowerShell à l'aide de l'activité InvokePowerShell.  
-  
- [Activité RangeEnumeration](../../../../docs/framework/windows-workflow-foundation/samples/rangeenumeration-activity.md)  
- Montre comment créer une activité personnalisée qui itère au sein d’une collection de nombres.  
-  
- [Activités d’expression régulière](../../../../docs/framework/windows-workflow-foundation/samples/regular-expression-activities.md)  
- Montre comment créer un ensemble d'activités qui exposent la fonctionnalité d'expression régulière de l'espace de noms <xref:System.Text.RegularExpressions>.  
-  
+## <a name="in-this-section"></a>Dans cette section
+
  [Activité personnalisée SendMail](../../../../docs/framework/windows-workflow-foundation/samples/sendmail-custom-activity.md)  
  Montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow.  
   
- [Activité For](../../../../docs/framework/windows-workflow-foundation/samples/for-activity.md)  
- Montre comment générer une activité personnalisée qui hérite de <xref:System.Activities.NativeActivity> et l'utilise dans un workflow pour itérer au sein d'une plage de valeurs.  
-  
- [Activité Wait For Input](../../../../docs/framework/windows-workflow-foundation/samples/wait-for-input-activity.md)  
- Montre comment créer des signets nommés dans un workflow.  
-  
  [ParallelForEach limité](../../../../docs/framework/windows-workflow-foundation/samples/throttled-parallel-foreach.md)  
- Montre comment l'activité `ThrottleParallelForEach` est semblable à l'activité <xref:System.Activities.Statements.ParallelForEach%601> hormis le seul fait qu'elle permet la définition d'un facteur de concurrence pour restreindre le nombre de branches simultanées à exécuter.  
-  
- [Activités d’entités](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- Montre comment utiliser ADO.NET Entity Framework avec Windows Workflow Foundation pour simplifier l’accès aux données.  
+ Montre comment l'activité `ThrottleParallelForEach` est semblable à l'activité <xref:System.Activities.Statements.ParallelForEach%601> hormis le seul fait qu'elle permet la définition d'un facteur de concurrence pour restreindre le nombre de branches simultanées à exécuter.
   
  [Activités d’accès aux bases de données](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  Montre comment créer des activités qui permettent l’accès aux bases de données pour récupérer ou modifier les informations et utilisez [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  
   
- [Activité CommentOut](../../../../docs/framework/windows-workflow-foundation/samples/commentout-activity.md)  
- Montre comment écrire une activité personnalisée qui supprime d’autres activités du chemin d’exécution, en les transformant en fait en commentaire.  
-  
  [Activité de stratégie externalisée dans .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- Montre comment l’activité ExternalizedPolicy4 permet l’exécution existantes de Windows Workflow Foundation dans [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objets dans Windows Workflow Foundation dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directement à l’aide du moteur de règles qui est fourni dans WF 3.5.  
-  
- [Activité NoPersistScope](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
- Montre comment manipuler un état non sérialisable et pouvant être supprimé dans un workflow.  
+ Montre comment l’activité ExternalizedPolicy4 permet l’exécution existantes de Windows Workflow Foundation dans [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> objets dans Windows Workflow Foundation dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) directement à l’aide du moteur de règles qui est fourni dans WF 3.5. 
   
  [ForEach non générique](../../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md)  
  Montre comment créer une version non générique de l'activité <xref:System.Activities.Statements.ForEach%601>.  

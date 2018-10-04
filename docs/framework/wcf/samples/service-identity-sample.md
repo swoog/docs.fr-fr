@@ -2,125 +2,125 @@
 title: Service Identity, exemple
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 8cd6688802628a484cc9fe1fc1dffa82ddecd12a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 913795f9d9e35b4ecce5998320cc64c0c0b46ba7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084910"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582618"
 ---
 # <a name="service-identity-sample"></a>Service Identity, exemple
-Cet exemple montre comment définir l'identité d'un service. Au moment du design, un client peut récupérer l'identité à l'aide des métadonnées du service, puis au miment de l'exécution, il peut authentifier l'identité du service. Le concept d'identité de service consiste à permettre à un client d'authentifier un service avant d'appeler l'une de ses opérations, ce qui protège le client contre les appels non authentifiés. Sur une connexion sécurisée, le service authentifie également les informations d'identification d'un client avant de lui autoriser l'accès, mais ce n'est pas l'objet traité dans cet exemple. Consultez les exemples de [Client](../../../../docs/framework/wcf/samples/client.md) qui montrent l’authentification du serveur.  
-  
+Cet exemple montre comment définir l'identité d'un service. Au moment du design, un client peut récupérer l'identité à l'aide des métadonnées du service, puis au miment de l'exécution, il peut authentifier l'identité du service. Le concept d'identité de service consiste à permettre à un client d'authentifier un service avant d'appeler l'une de ses opérations, ce qui protège le client contre les appels non authentifiés. Sur une connexion sécurisée, le service authentifie également les informations d'identification d'un client avant de lui autoriser l'accès, mais ce n'est pas l'objet traité dans cet exemple. Consultez les exemples de [Client](../../../../docs/framework/wcf/samples/client.md) qui montrent l’authentification du serveur.
+
 > [!NOTE]
->  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
-  
- Cet exemple illustre les fonctionnalités suivantes :  
-  
--   Comment définir les divers types d'identité sur différents points de terminaison d'un service. Chaque type d'identité possède des fonctionnalités différentes. Le type d’identité à utiliser dépend du type d’informations d’identification de sécurité utilisé sur la liaison du point de terminaison.  
-  
--   L'identité peut être définie de façon déclarative dans la configuration ou de façon impérative dans le code. Pour le client et le service, vous devez généralement utiliser la configuration.  
-  
--   Comment définir une identité personnalisée sur le client Une identité personnalisée est en général une personnalisation d'un type d'identité existant qui permet au client d'examiner d'autres informations de revendication fournies dans les informations d'identification du service afin de prendre des décisions d'autorisation avant d'appeler le service.  
-  
+>  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.
+
+ Cet exemple illustre les fonctionnalités suivantes :
+
+-   Comment définir les divers types d'identité sur différents points de terminaison d'un service. Chaque type d'identité possède des fonctionnalités différentes. Le type d’identité à utiliser dépend du type d’informations d’identification de sécurité utilisé sur la liaison du point de terminaison.
+
+-   L'identité peut être définie de façon déclarative dans la configuration ou de façon impérative dans le code. Pour le client et le service, vous devez généralement utiliser la configuration.
+
+-   Comment définir une identité personnalisée sur le client Une identité personnalisée est en général une personnalisation d'un type d'identité existant qui permet au client d'examiner d'autres informations de revendication fournies dans les informations d'identification du service afin de prendre des décisions d'autorisation avant d'appeler le service.
+
     > [!NOTE]
-    >  Cet exemple vérifie l'identité d'un certificat spécifique appelé identity.com et la clé RSA contenue dans ce certificat. Lors de l'utilisation des types d'identité Certificat et RSA dans la configuration sur le client, l'une des méthodes utilisées pour obtenir facilement ces valeurs consiste à inspecter le WSDL du service dans lequel ces valeurs sont sérialisées.  
-  
- L'exemple de code suivant montre comment configurer l'identité d'un point de terminaison de service avec le serveur DNS (Domain Name Server) d'un certificat à l'aide de WSHttpBinding.  
-  
-```  
-//Create a service endpoint and set its identity to the certificate's DNS                 
-WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);  
-// Client are Anonymous to the service  
-wsAnonbinding.Security.Message.ClientCredentialType = MessageCredentialType.None;  
-WServiceEndpoint ep = serviceHost.AddServiceEndpoint(typeof(ICalculator),wsAnonbinding, String.Empty);  
-EndpointAddress epa = new EndpointAddress(dnsrelativeAddress,EndpointIdentity.CreateDnsIdentity("identity.com"));  
-ep.Address = epa;  
-```  
-  
- L'identité peut également être spécifiée dans la configuration dans le fichier App.config. L'exemple suivant montre comment définir l'identité UPN (User Principal Name, nom d'utilisateur principal) pour un point de terminaison de service.  
-  
-```xml  
-<endpoint address="upnidentity"  
-        behaviorConfiguration=""  
-        binding="wsHttpBinding"  
-        bindingConfiguration="WSHttpBinding_Windows"  
-        name="WSHttpBinding_ICalculator_Windows"  
-        contract="Microsoft.ServiceModel.Samples.ICalculator">  
-  <!-- Set the UPN identity for this endpoint -->  
-  <identity>  
-      <userPrincipalName value="host\myservice.com" />  
-  </identity >  
-</endpoint>  
-```  
-  
- Une identité personnalisée peut être définie sur le client en dérivant des classes <xref:System.ServiceModel.EndpointIdentity> et <xref:System.ServiceModel.Security.IdentityVerifier>. D'un point de vue conceptuel, la classe <xref:System.ServiceModel.Security.IdentityVerifier> peut être considérée comme étant l'équivalent client de la classe `AuthorizationManager` du service. L'exemple de code suivant présente une implémentation de `OrgEndpointIdentity`, qui stocke un nom d'organisation à faire correspondre au nom du sujet du certificat du serveur. Le contrôle d'autorisation du nom d'organisation se produit dans la méthode `CheckAccess` sur la classe `CustomIdentityVerifier`.  
-  
-```  
-// This custom EndpointIdentity stores an organization name   
-public class OrgEndpointIdentity : EndpointIdentity  
-{  
-    private string orgClaim;  
-    public OrgEndpointIdentity(string orgName)  
-    {  
-        orgClaim = orgName;  
-    }  
-    public string OrganizationClaim  
-    {  
-        get { return orgClaim; }  
-        set { orgClaim = value; }  
-    }  
-}  
-  
-//This custom IdentityVerifier uses the supplied OrgEndpointIdentity to  
-//check that X.509 certificate's distinguished name claim contains  
-//the organization name e.g. the string value "O=Contoso"   
-class CustomIdentityVerifier : IdentityVerifier  
-{  
-    public override bool CheckAccess(EndpointIdentity identity, AuthorizationContext authContext)  
-    {  
-        bool returnvalue = false;  
-        foreach (ClaimSet claimset in authContext.ClaimSets)  
-        {  
-            foreach (Claim claim in claimset)  
-            {  
-                if (claim.ClaimType == "http://schemas.microsoft.com/ws/2005/05/identity/claims/x500distinguishedname")  
-                {  
-                    X500DistinguishedName name = (X500DistinguishedName)claim.Resource;  
-                    if (name.Name.Contains(((OrgEndpointIdentity)identity).OrganizationClaim))  
-                    {  
-                        Console.WriteLine("Claim Type: {0}",claim.ClaimType);  
-                        Console.WriteLine("Right: {0}", claim.Right);  
-                        Console.WriteLine("Resource: {0}",claim.Resource);  
-                        Console.WriteLine();  
-                        returnvalue = true;  
-                    }  
-                }  
-            }  
-        }  
-        return returnvalue;  
-    }  
-}  
-```  
-  
- Cet exemple utilise un certificat appelé identity.com qui est situé dans le dossier de solution Identity correspondant à votre langue.  
-  
-### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
-  
-1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  
-### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur  
-  
-1.  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importez le fichier de certificat Identity.pfx du dossier de solution Identity dans le magasin de certificats LocalMachine/My (Personal) à l'aide de l'outil enfichable MMC. Ce fichier est protégé par mot de passe. Lors de l'importation, un mot de passe vous est demandé. Type `xyz` dans la zone de mot de passe. Pour plus d’informations, consultez le [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) rubrique. Ceci fait, exécutez Setup.bat dans une invite de commandes de Visual Studio avec des privilèges élevés, qui copie ce certificat dans le magasin CurrentUser/Trusted People pour une utilisation sur le client.  
-  
-2.  Sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], exécutez Setup.bat à partir du dossier d'installation de l'exemple dans une fenêtre d'invite de commandes de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] avec des privilèges d'administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.  
-  
+    >  Cet exemple vérifie l'identité d'un certificat spécifique appelé identity.com et la clé RSA contenue dans ce certificat. Lors de l'utilisation des types d'identité Certificat et RSA dans la configuration sur le client, l'une des méthodes utilisées pour obtenir facilement ces valeurs consiste à inspecter le WSDL du service dans lequel ces valeurs sont sérialisées.
+
+ L'exemple de code suivant montre comment configurer l'identité d'un point de terminaison de service avec le serveur DNS (Domain Name Server) d'un certificat à l'aide de WSHttpBinding.
+
+```
+//Create a service endpoint and set its identity to the certificate's DNS
+WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);
+// Client are Anonymous to the service
+wsAnonbinding.Security.Message.ClientCredentialType = MessageCredentialType.None;
+WServiceEndpoint ep = serviceHost.AddServiceEndpoint(typeof(ICalculator),wsAnonbinding, String.Empty);
+EndpointAddress epa = new EndpointAddress(dnsrelativeAddress,EndpointIdentity.CreateDnsIdentity("identity.com"));
+ep.Address = epa;
+```
+
+ L'identité peut également être spécifiée dans la configuration dans le fichier App.config. L'exemple suivant montre comment définir l'identité UPN (User Principal Name, nom d'utilisateur principal) pour un point de terminaison de service.
+
+```xml
+<endpoint address="upnidentity"
+        behaviorConfiguration=""
+        binding="wsHttpBinding"
+        bindingConfiguration="WSHttpBinding_Windows"
+        name="WSHttpBinding_ICalculator_Windows"
+        contract="Microsoft.ServiceModel.Samples.ICalculator">
+  <!-- Set the UPN identity for this endpoint -->
+  <identity>
+      <userPrincipalName value="host\myservice.com" />
+  </identity >
+</endpoint>
+```
+
+ Une identité personnalisée peut être définie sur le client en dérivant des classes <xref:System.ServiceModel.EndpointIdentity> et <xref:System.ServiceModel.Security.IdentityVerifier>. D'un point de vue conceptuel, la classe <xref:System.ServiceModel.Security.IdentityVerifier> peut être considérée comme étant l'équivalent client de la classe `AuthorizationManager` du service. L'exemple de code suivant présente une implémentation de `OrgEndpointIdentity`, qui stocke un nom d'organisation à faire correspondre au nom du sujet du certificat du serveur. Le contrôle d'autorisation du nom d'organisation se produit dans la méthode `CheckAccess` sur la classe `CustomIdentityVerifier`.
+
+```
+// This custom EndpointIdentity stores an organization name
+public class OrgEndpointIdentity : EndpointIdentity
+{
+    private string orgClaim;
+    public OrgEndpointIdentity(string orgName)
+    {
+        orgClaim = orgName;
+    }
+    public string OrganizationClaim
+    {
+        get { return orgClaim; }
+        set { orgClaim = value; }
+    }
+}
+
+//This custom IdentityVerifier uses the supplied OrgEndpointIdentity to
+//check that X.509 certificate's distinguished name claim contains
+//the organization name e.g. the string value "O=Contoso"
+class CustomIdentityVerifier : IdentityVerifier
+{
+    public override bool CheckAccess(EndpointIdentity identity, AuthorizationContext authContext)
+    {
+        bool returnvalue = false;
+        foreach (ClaimSet claimset in authContext.ClaimSets)
+        {
+            foreach (Claim claim in claimset)
+            {
+                if (claim.ClaimType == "http://schemas.microsoft.com/ws/2005/05/identity/claims/x500distinguishedname")
+                {
+                    X500DistinguishedName name = (X500DistinguishedName)claim.Resource;
+                    if (name.Name.Contains(((OrgEndpointIdentity)identity).OrganizationClaim))
+                    {
+                        Console.WriteLine("Claim Type: {0}",claim.ClaimType);
+                        Console.WriteLine("Right: {0}", claim.Right);
+                        Console.WriteLine("Resource: {0}",claim.Resource);
+                        Console.WriteLine();
+                        returnvalue = true;
+                    }
+                }
+            }
+        }
+        return returnvalue;
+    }
+}
+```
+
+ Cet exemple utilise un certificat appelé identity.com qui est situé dans le dossier de solution Identity correspondant à votre langue.
+
+### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple
+
+1.  Vérifiez que vous avez effectué la [procédure d’installation unique pour les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+2.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+3.  Pour exécuter l’exemple dans une configuration unique ou plusieurs ordinateurs, suivez les instructions de [en cours d’exécution les exemples Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+
+### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
+
+1.  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importez le fichier de certificat Identity.pfx du dossier de solution Identity dans le magasin de certificats LocalMachine/My (Personal) à l'aide de l'outil enfichable MMC. Ce fichier est protégé par mot de passe. Lors de l'importation, un mot de passe vous est demandé. Type `xyz` dans la zone de mot de passe. Pour plus d’informations, consultez le [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) rubrique. Ceci fait, exécutez Setup.bat dans une invite de commandes de Visual Studio avec des privilèges élevés, qui copie ce certificat dans le magasin CurrentUser/Trusted People pour une utilisation sur le client.
+
+2.  Sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], exécutez Setup.bat à partir du dossier d’installation de l’exemple à l’intérieur d’une invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
+
     > [!NOTE]
-    >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d'une invite de commandes de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. La variable d'environnement PATH définie dans l'invite de commandes [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] pointe vers le répertoire qui contient les exécutables requis par le script Setup.bat. Assurez-vous d'effacer les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
+    >  Le fichier de commandes Setup.bat est conçu pour être exécuté à partir d’un Visual Studio 2012 invite de commandes. La variable d’environnement PATH définie dans les points de l’invite de commandes de Visual Studio 2012 sur le répertoire qui contient les exécutables requis par le script Setup.bat. Assurez-vous d'effacer les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
   
 3.  Lancez Service.exe à partir du répertoire de \service\bin. Vérifiez que le service indique qu’il est prêt et affiche une invite à appuyer sur \<entrée > pour terminer le service.  
   
@@ -157,6 +157,6 @@ class CustomIdentityVerifier : IdentityVerifier
 -   Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
     > [!NOTE]
-    >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`, par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
-  
+    >  Ce script ne supprime pas de certificat de service sur un client lors de l'exécution de cet exemple sur plusieurs ordinateurs. Si vous avez exécuté les exemples Windows Communication Foundation (WCF) qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`, par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+
 ## <a name="see-also"></a>Voir aussi

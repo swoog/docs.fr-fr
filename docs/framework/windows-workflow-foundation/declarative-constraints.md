@@ -2,12 +2,12 @@
 title: Contraintes déclaratives
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: bf794d5b14d2d278dc4068309f25e6f0ddcf3342
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517658"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580488"
 ---
 # <a name="declarative-constraints"></a>Contraintes déclaratives
 Les contraintes déclaratives fournissent une méthode puissante de validation d’une activité et de ses relations avec d’autres activités. Les contraintes sont configurées pour une activité pendant le processus de création, mais les contraintes supplémentaires peuvent également être spécifiées par l'hôte du workflow. Cette rubrique fournit une vue d'ensemble de l'utilisation de contraintes déclaratives afin de fournir la validation d'activité.  
@@ -57,12 +57,13 @@ public sealed class SampleActivity : CodeActivity
   
  Cette contrainte pourrait également être spécifiée pour les activités d'un workflow par l'hôte à l'aide de <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. La section suivante explique la démarche à suivre.  
   
- L'activité <xref:System.Activities.Validation.AddValidationError> est utilisée pour générer une erreur de validation ou un avertissement sans recourir à l'évaluation d'une expression. Ses propriétés sont semblables à <xref:System.Activities.Validation.AssertValidation> et elle peut être utilisée avec des activités de contrôle de flux d'une contrainte telles que l'activité <xref:System.Activities.Statements.If>.  
+ L'activité <xref:System.Activities.Validation.AddValidationError> est utilisée pour générer une erreur de validation ou un avertissement sans recourir à l'évaluation d'une expression. Ses propriétés sont semblables à <xref:System.Activities.Validation.AssertValidation> et elle peut être utilisée avec des activités de contrôle de flux d'une contrainte telles que l'activité <xref:System.Activities.Statements.If>.
   
-### <a name="workflow-relationship-activities"></a>Activités de la relation du workflow  
- Plusieurs activités de validation sont disponibles, qui fournissent des informations sur les autres activités dans le flux de travail par rapport à l'activité en cours de validation. <xref:System.Activities.Validation.GetParentChain> retourne une collection d'activités qui contient toutes les activités entre l'activité actuelle et l'activité racine. <xref:System.Activities.Validation.GetChildSubtree> fournit une collection d'activités qui contient les activités enfants dans un modèle récurrent, et <xref:System.Activities.Validation.GetWorkflowTree> obtient toutes les activités dans le workflow.  
+### <a name="workflow-relationship-activities"></a>Activités de la relation du workflow
+
+Plusieurs activités de validation sont disponibles, qui fournissent des informations sur les autres activités dans le flux de travail par rapport à l'activité en cours de validation. <xref:System.Activities.Validation.GetParentChain> retourne une collection d'activités qui contient toutes les activités entre l'activité actuelle et l'activité racine. <xref:System.Activities.Validation.GetChildSubtree> fournit une collection d'activités qui contient les activités enfants dans un modèle récurrent, et <xref:System.Activities.Validation.GetWorkflowTree> obtient toutes les activités dans le workflow.  
   
- Dans l’exemple suivant à partir de la [Validation des relations d’activité](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) exemple, un `CreateState` l’activité est définie. L'activité `CreateState` doit être contenue dans une activité `CreateCountry`, et la méthode `GetParent` retourne une contrainte qui applique cette spécification. `GetParent` utilise l'activité <xref:System.Activities.Validation.GetParentChain> conjointement avec une activité <xref:System.Activities.Statements.ForEach%601> pour examiner les activités parentes de l'activité `CreateState` et déterminer si la spécification est satisfaite.  
+Dans l'exemple suivant, une activité `CreateState` est définie. L'activité `CreateState` doit être contenue dans une activité `CreateCountry`, et la méthode `GetParent` retourne une contrainte qui applique cette spécification. `GetParent` utilise l'activité <xref:System.Activities.Validation.GetParentChain> conjointement avec une activité <xref:System.Activities.Statements.ForEach%601> pour examiner les activités parentes de l'activité `CreateState` et déterminer si la spécification est satisfaite.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -134,9 +135,7 @@ public sealed class CreateState : CodeActivity
         // not needed for the sample  
     }  
 }  
-```  
-  
- Pour plus d’informations, consultez Windows Workflow Foundation [Validation](../../../docs/framework/windows-workflow-foundation/samples/validation.md) exemples.  
+```
   
 ## <a name="additional-constraints"></a>Contraintes supplémentaires  
  Les auteurs hôte du workflow peuvent spécifier des contraintes de validation supplémentaires pour les activités d'un workflow en créant des contraintes et en les ajoutant au dictionnaire <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> d'une instance <xref:System.Activities.Validation.ValidationSettings>. Chaque élément dans <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> contient le type d'activité pour laquelle les contraintes s'appliquent et une liste des contraintes supplémentaires pour ce type d'activité. Lorsque la validation est appelée pour le workflow, chaque activité du type spécifié, notamment les classes dérivées, évalue les contraintes. Dans cet exemple, la contrainte `ActivityDisplayNameIsNotSetWarning` de la section précédente est appliquée à toutes les activités dans un workflow.  
@@ -177,4 +176,4 @@ else
 }  
 ```  
   
- Si la propriété <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> est définie sur `true`, seules les contraintes supplémentaires spécifiées sont évaluées lorsque la validation est appelée en invoquant <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Cela peut être utile pour inspecter les workflows et rechercher des configurations de validation spécifiques. Notez toutefois que lorsque le workflow est appelé, la logique de validation configurée dans le workflow est évaluée et doit aboutir pour que le workflow démarre avec succès. Pour plus d’informations sur l’appel de la validation, consultez [appel de Validation d’activité](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Si la propriété <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> de <xref:System.Activities.Validation.ValidationSettings> est définie sur `true`, seules les contraintes supplémentaires spécifiées sont évaluées lorsque la validation est appelée en invoquant <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. Cela peut être utile pour inspecter les workflows et rechercher des configurations de validation spécifiques. Notez toutefois que lorsque le workflow est appelé, la logique de validation configurée dans le workflow est évaluée et doit aboutir pour que le workflow démarre avec succès. Pour plus d’informations sur l’appel de validation, consultez [appel de Validation d’activité](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

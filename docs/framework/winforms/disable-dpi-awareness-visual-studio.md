@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037039"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263503"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Désactiver la prise en charge-DPI dans Visual Studio
 
@@ -68,6 +68,10 @@ Vous pouvez marquer Visual Studio comme dépendant PPP en modifiant le Registre.
 Pour définir l’affichage de votre mise à l’échelle de paramètre à 100 % dans Windows 10, tapez **paramètres d’affichage** dans la barre de zone de recherche, puis sélectionnez des tâches **modifier les paramètres d’affichage**. Dans le **paramètres** fenêtre, définissez **modifier la taille du texte, les applications et les autres éléments** à **100 %**.
 
 Paramétrage de votre affichage mise à l’échelle à 100 % est peut-être pas souhaitable, car cela peut rendre l’interface utilisateur trop petite pour être utilisable.
+
+## <a name="troubleshoot"></a>Résoudre les problèmes
+
+Si la transition prise en charge DPI ne fonctionne pas comme prévu dans Visual Studio, vérifiez si vous avez le `dpiAwareness` valeur dans le **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image fichier exécution Options\devenv.exe**  sous-clé dans l’Éditeur du Registre. Supprimez la valeur si elle est présente.
 
 ## <a name="see-also"></a>Voir aussi
 

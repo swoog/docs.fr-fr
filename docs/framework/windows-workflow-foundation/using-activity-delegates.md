@@ -2,12 +2,12 @@
 title: Utilisation de délégués d'activité
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489927"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580872"
 ---
 # <a name="using-activity-delegates"></a>Utilisation de délégués d'activité
 Les délégués d'activité permettent aux auteurs d'activités d'exposer des rappels avec des signatures spécifiques pour lesquelles les utilisateurs de l'activité peuvent fournir des gestionnaires basés sur l'activité. Deux types de délégués d'activité sont disponibles : <xref:System.Activities.ActivityAction%601> est utilisé pour définir des délégués d'activité qui n'ont pas de valeur de retour et <xref:System.Activities.ActivityFunc%601> est utilisé pour définir des délégués d'activité qui ont une valeur de retour.  
@@ -54,7 +54,4 @@ Les exemples de cette rubrique utilisent la syntaxe d'initialisation d'objet. La
   
  Pour utiliser l'activité `TextGenerator` avec l'activité `WriteFillerText`, spécifiez-la en tant que <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
- [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
-  
-## <a name="see-also"></a>Voir aussi  
- [Exposition et appel d’ActivityActions](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)
+ [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]

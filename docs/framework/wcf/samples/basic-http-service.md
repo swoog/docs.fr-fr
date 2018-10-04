@@ -2,12 +2,12 @@
 title: Service HTTP de base
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028244"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48262382"
 ---
 # <a name="basic-http-service"></a>Service HTTP de base
 Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RPC ce concept est communément appelé service « POX » (Plain Old XML) – à l’aide du modèle de programmation REST Windows Communication Foundation (WCF). Cet exemple se compose de deux composants : un service HTTP WCF auto-hébergé (Service.cs) et une application de console (Program.cs) qui crée le service et effectue des appels à ce dernier.  
@@ -27,7 +27,7 @@ Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RP
   
 #### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
   
-1.  Ouvrez la solution de l'exemple Basic HTTP Service. Pour que l'exemple fonctionne correctement, vous devez exécuter [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] en tant qu'administrateur. Cela en double-cliquant sur le [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] icône et en sélectionnant **exécuter en tant qu’administrateur** dans le menu contextuel.  
+1.  Ouvrez la solution de l'exemple Basic HTTP Service. Lors du lancement de Visual Studio 2012, vous devez exécuter en tant qu’administrateur de l’exemple s’exécute correctement. Cela en double-cliquant sur l’icône de Visual Studio 2012 et en sélectionnant **exécuter en tant qu’administrateur** dans le menu contextuel.  
   
 2.  Appuyez sur CTRL+MAJ+B pour générer la solution, puis appuyez sur Ctrl+F5 pour exécuter l'application console sans débogage. La fenêtre de console apparaît et fournit l'URI du service en cours d'exécution, ainsi que l'URI de sa page d'aide HTML. Vous pouvez à tout moment consulter la page d'aide HTML en tapant son URI dans un navigateur. Lorsque l'exemple s'exécute, le client écrit l'état de l'activité actuelle.  
   

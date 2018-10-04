@@ -2,22 +2,22 @@
 title: External RuleSet Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: f418c71b39611e64afea168ed40418dbe981521a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f545d083bb6caf9daca3ce553d0a1ee6711b0062
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43803354"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584258"
 ---
 # <a name="external-ruleset-toolkit"></a>External RuleSet Toolkit
-Généralement, lorsque des règles sont utilisées dans une application de workflow, elles font partie de l'assembly. Dans certains cas, il peut être préférable de gérer les RuleSets séparément de l'assembly afin qu'ils soient mis à jour sans que la génération et le déploiement de l'assembly de workflow ne soient nécessaires. Cet exemple vous permet de gérer et de modifier des RuleSets dans une base de données et d'accéder à ceux-ci à partir d'un workflow au moment de son exécution, opération qui permet aux instances de workflow en cours d'intégrer automatiquement des modifications de RuleSets.  
-  
- L'exemple External RuleSet Toolkit contient un utilitaire basé sur les Windows Forms pouvant être utilisé pour gérer et modifier les versions d'un RuleSet dans une base de données. Il inclut également une activité et un service hôte permettant d'exécuter ces règles.  
-  
+Généralement, lorsque des règles sont utilisées dans une application de workflow, elles font partie de l'assembly. Dans certains cas, il peut être préférable de gérer les RuleSets séparément de l'assembly afin qu'ils soient mis à jour sans que la génération et le déploiement de l'assembly de workflow ne soient nécessaires. Cet exemple vous permet de gérer et de modifier des RuleSets dans une base de données et d'accéder à ceux-ci à partir d'un workflow au moment de son exécution, opération qui permet aux instances de workflow en cours d'intégrer automatiquement des modifications de RuleSets.
+
+ L'exemple External RuleSet Toolkit contient un utilitaire basé sur les Windows Forms pouvant être utilisé pour gérer et modifier les versions d'un RuleSet dans une base de données. Il inclut également une activité et un service hôte permettant d'exécuter ces règles.
+
 > [!NOTE]
 >  Cet exemple requiert [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] contient un outil RuleSet editor, issu de Windows Workflow Foundation (WF). Vous pouvez démarrer cet éditeur en double-cliquant sur l'activité `Policy` dans un workflow ; cette opération sérialise l'objet RuleSet défini au fichier .rules associé au workflow (une activité `Policy` exécute une instance RuleSet sur le workflow). Le fichier .rules est compilé dans l'assembly en tant que ressource lors de la génération du projet de workflow.  
+ Visual Studio fournit un outil RuleSet editor dans le cadre de Windows Workflow Foundation (WF). Vous pouvez démarrer cet éditeur en double-cliquant sur l'activité `Policy` dans un workflow ; cette opération sérialise l'objet RuleSet défini au fichier .rules associé au workflow (une activité `Policy` exécute une instance RuleSet sur le workflow). Le fichier .rules est compilé dans l'assembly en tant que ressource lors de la génération du projet de workflow.  
   
  Les composants de cet exemple incluent les éléments suivants :  
   

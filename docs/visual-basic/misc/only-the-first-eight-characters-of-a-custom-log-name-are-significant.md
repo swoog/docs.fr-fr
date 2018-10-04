@@ -3,11 +3,11 @@ title: Seuls les premiers huit caractères sont pris en compte dans un nom de jo
 ms.date: 07/20/2015
 ms.assetid: db2a0252-9ddd-4e93-a239-6a690cc09557
 ms.openlocfilehash: c994399a657de3872e70edce0a9168e22f781ce3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035095"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583137"
 ---
 # <a name="only-the-first-eight-characters-of-a-custom-log-name-are-significant"></a>Seuls les premiers huit caractères sont pris en compte dans un nom de journal personnalisé
 Quand vous vérifiez que les noms des journaux d’événements sont uniques, seuls les huit premiers caractères sont pris en compte. Si le nom de plusieurs journaux des événements commencent par les mêmes huit premiers caractères, un conflit peut se produire.  
