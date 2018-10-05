@@ -9,34 +9,34 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 09/26/2018
 ms.locfileid: "47200943"
 ---
-# <a name="-add"></a><span data-ttu-id="728c7-102">+ (Ajouter)</span><span class="sxs-lookup"><span data-stu-id="728c7-102">+ (Add)</span></span>
-<span data-ttu-id="728c7-103">Additionne deux nombres.</span><span class="sxs-lookup"><span data-stu-id="728c7-103">Adds two numbers.</span></span>  
+# <a name="-add"></a><span data-ttu-id="1b59c-102">+ (Ajouter)</span><span class="sxs-lookup"><span data-stu-id="1b59c-102">+ (Add)</span></span>
+<span data-ttu-id="1b59c-103">Additionne deux nombres.</span><span class="sxs-lookup"><span data-stu-id="1b59c-103">Adds two numbers.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="728c7-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="728c7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1b59c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="1b59c-104">Syntax</span></span>  
   
 ```  
 expression + expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="728c7-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="728c7-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="1b59c-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="1b59c-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="728c7-106">Toute expression valide de l'un des types de données numériques.</span><span class="sxs-lookup"><span data-stu-id="728c7-106">Any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="1b59c-106">Toute expression valide de l'un des types de données numériques.</span><span class="sxs-lookup"><span data-stu-id="1b59c-106">Any valid expression of any one of the numeric data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="728c7-107">Types de résultats</span><span class="sxs-lookup"><span data-stu-id="728c7-107">Result Types</span></span>  
- <span data-ttu-id="728c7-108">Type de données qui résulte de la promotion de type implicite de deux arguments.</span><span class="sxs-lookup"><span data-stu-id="728c7-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="728c7-109">Pour plus d’informations sur la promotion de type implicite, consultez [système de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="728c7-109">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
+## <a name="result-types"></a><span data-ttu-id="1b59c-107">Types de résultats</span><span class="sxs-lookup"><span data-stu-id="1b59c-107">Result Types</span></span>  
+ <span data-ttu-id="1b59c-108">Type de données qui résulte de la promotion de type implicite de deux arguments.</span><span class="sxs-lookup"><span data-stu-id="1b59c-108">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="1b59c-109">Pour plus d’informations sur la promotion de type implicite, consultez [système de Type](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span><span class="sxs-lookup"><span data-stu-id="1b59c-109">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="728c7-110">Notes</span><span class="sxs-lookup"><span data-stu-id="728c7-110">Remarks</span></span>  
- <span data-ttu-id="728c7-111">Pour les types EDM.String, l'addition est une concaténation.</span><span class="sxs-lookup"><span data-stu-id="728c7-111">For EDM.String types, addition is concatenation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1b59c-110">Notes</span><span class="sxs-lookup"><span data-stu-id="1b59c-110">Remarks</span></span>  
+ <span data-ttu-id="1b59c-111">Pour les types EDM.String, l'addition est une concaténation.</span><span class="sxs-lookup"><span data-stu-id="1b59c-111">For EDM.String types, addition is concatenation.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="728c7-112">Exemple</span><span class="sxs-lookup"><span data-stu-id="728c7-112">Example</span></span>  
- <span data-ttu-id="728c7-113">La requête Entity SQL ci-dessous utilise l'opérateur arithmétique + pour additionner deux nombres.</span><span class="sxs-lookup"><span data-stu-id="728c7-113">The following Entity SQL query uses the + arithmetic operator to add two numbers.</span></span> <span data-ttu-id="728c7-114">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="728c7-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="728c7-115">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="728c7-115">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="1b59c-112">Exemple</span><span class="sxs-lookup"><span data-stu-id="1b59c-112">Example</span></span>  
+ <span data-ttu-id="1b59c-113">La requête Entity SQL ci-dessous utilise l'opérateur arithmétique + pour additionner deux nombres.</span><span class="sxs-lookup"><span data-stu-id="1b59c-113">The following Entity SQL query uses the + arithmetic operator to add two numbers.</span></span> <span data-ttu-id="1b59c-114">Cette requête est basée sur le modèle de vente AdventureWorks Sales Model.</span><span class="sxs-lookup"><span data-stu-id="1b59c-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="1b59c-115">Pour compiler et exécuter cette requête, procédez comme suit :</span><span class="sxs-lookup"><span data-stu-id="1b59c-115">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="728c7-116">Suivez la procédure indiquée dans [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="728c7-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1.  <span data-ttu-id="1b59c-116">Suivez la procédure indiquée dans [Comment : exécuter une requête qui retourne les résultats StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span><span class="sxs-lookup"><span data-stu-id="1b59c-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="728c7-117">Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="728c7-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2.  <span data-ttu-id="1b59c-117">Transmettez à la méthode `ExecuteStructuralTypeQuery` la requête suivante en tant qu'argument :</span><span class="sxs-lookup"><span data-stu-id="1b59c-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#ADD](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#add)]  
   
-## <a name="see-also"></a><span data-ttu-id="728c7-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="728c7-118">See Also</span></span>  
- [<span data-ttu-id="728c7-119">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="728c7-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [<span data-ttu-id="728c7-120">Types de modèle conceptuel (CSDL)</span><span class="sxs-lookup"><span data-stu-id="728c7-120">Conceptual Model Types (CSDL)</span></span>](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)
+## <a name="see-also"></a><span data-ttu-id="1b59c-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="1b59c-118">See Also</span></span>  
+ [<span data-ttu-id="1b59c-119">Référence Entity SQL</span><span class="sxs-lookup"><span data-stu-id="1b59c-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
+ [<span data-ttu-id="1b59c-120">Types de modèle conceptuel (CSDL)</span><span class="sxs-lookup"><span data-stu-id="1b59c-120">Conceptual Model Types (CSDL)</span></span>](https://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4)
