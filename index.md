@@ -688,7 +688,7 @@ ms.locfileid: "36314903"
                                             <div class="cardText">
                                                 <a href="/azure/cognitive-services">
                                                     <h3>Cognitive Services</h3>
-                                                    <p>Boostez les applications, les sites web et les bots avec une intelligence permettant de voir, entendre, parler et comprendre.</p>
+                                                    <p>Boostez les applications, les sites web et les chatbots avec une intelligence artificielle permettant de voir, entendre, parler et comprendre.</p>
                                                 </a>
                                             </div>
                                         </div>
