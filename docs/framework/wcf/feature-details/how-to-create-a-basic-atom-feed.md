@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e0cacc1-9b11-4665-adb7-577a62626fd6
-ms.openlocfilehash: 229cc4a5a06059159eb045da234d9f09de0f6c0d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac356ac9acd3f0b14fb3da902f1a9c3cfbdd9ef7
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493027"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847891"
 ---
 # <a name="how-to-create-a-basic-atom-feed"></a>Comment : créer un flux Atom de base
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication Atom.  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Pour appeler GetBlog() avec un HTTP GET  
   
-1.  Ouvrez Internet Explorer, tapez l’URL suivante et appuyez sur ENTRÉE : http://localhost:8000/BlogService/GetBlog  
+1.  Ouvrez Internet Explorer, tapez l’URL suivante et appuyez sur ENTRÉE : `http://localhost:8000/BlogService/GetBlog`  
   
-     L’URL contient l’adresse de base du service (http://localhost:8000/BlogService), l’adresse relative du point de terminaison et l’opération de service à appeler.  
+     L’URL contient l’adresse de base du service (`http://localhost:8000/BlogService`), l’adresse relative du point de terminaison et l’opération de service à appeler.  
   
 ### <a name="to-call-getblog-from-code"></a>Pour appeler GetBlog() à partir d'un code  
   

@@ -3,12 +3,12 @@ title: '&lt;security&gt; de &lt;wsFederationHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 author: BrucePerlerMS
-ms.openlocfilehash: 7c7868561ea4d41b308d3bcd963e10e9b81df314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2e7ec6b73ec56aa679040e8d3ee50843c9286183
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397135"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847774"
 ---
 # <a name="ltsecuritygt-of-ltwsfederationhttpbindinggt"></a>&lt;security&gt; de &lt;wsFederationHttpBinding&gt;
 Définit les paramètres de sécurité de la [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -119,5 +119,5 @@ Définit les paramètres de sécurité de la [ \<wsFederationHttpBinding >](../.
  [Sélection d’un type d’informations d’identification](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Liaisons](../../../../../docs/framework/wcf/bindings.md)  
  [Configuration des liaisons fournies par le système](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Utilisation de liaisons pour configurer les Clients et les Services Windows Communication Foundation](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Utilisation de liaisons pour configurer des services et des clients](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<liaison >](../../../../../docs/framework/misc/binding.md)

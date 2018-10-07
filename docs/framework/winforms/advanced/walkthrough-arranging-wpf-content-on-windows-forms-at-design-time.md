@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 062b9b943d187ccd4105f3772688c563f540d696
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266667"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846472"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>Procédure pas à pas : réorganisation du contenu WPF sur les Windows Forms au moment du design
 Cette procédure pas à pas montre comment utiliser les fonctionnalités de disposition Windows Forms, telles que l’ancrage et les lignes d’alignement, pour disposer les contrôles WPF (Windows Presentation Foundation).

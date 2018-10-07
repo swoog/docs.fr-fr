@@ -3,11 +3,11 @@ title: Transacted MSMQ Binding
 ms.date: 03/30/2017
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
 ms.openlocfilehash: e8b0b21acb9c99305ef144d18104338da5f8769a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793394"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846524"
 ---
 # <a name="transacted-msmq-binding"></a>Transacted MSMQ Binding
 Cet exemple montre comment effectuer la communication de messages mis en file d'attente avec transactions à l'aide de MSMQ (Message Queuing).

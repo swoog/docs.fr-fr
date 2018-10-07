@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855713"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847403"
 ---
 # <a name="endpoint-addresses"></a>Adresses de point de terminaison
 Chaque point de terminaison a une adresse qui lui est associée et qui est utilisé pour localiser et identifier le point de terminaison. Cette adresse se compose à l'origine d'un URI (Uniform Resource Identifier) qui spécifie l'emplacement du point de terminaison. L’adresse de point de terminaison est représentée dans le modèle de programmation Windows Communication Foundation (WCF) par le <xref:System.ServiceModel.EndpointAddress> (classe), qui contient un texte facultatif <xref:System.ServiceModel.EndpointAddress.Identity%2A> propriété qui permet l’authentification du point de terminaison par d’autres points de terminaison qui échanger des messages avec lui et un ensemble de facultatif <xref:System.ServiceModel.EndpointAddress.Headers%2A> propriétés qui définissent tous les autres en-têtes SOAP requis pour atteindre le service. Les en-têtes facultatifs fournissent des données d'adressage plus détaillées supplémentaires pour identifier ou interagir avec le point de terminaison de service. L'adresse d'un point de terminaison est représentée sur le câble comme une référence de point de terminaison WS-Addressing (EPR).  
   
 ## <a name="uri-structure-of-an-address"></a>Structure URI d'une adresse  
- L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, les quatre parties de l’URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint peuvent être décomposées comme suit :  
+ L'URI d'adresse de la plupart des transports se compose de quatre parties. Par exemple, les quatre parties de l’URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` peuvent être décomposées comme suit :  
   
--   Schéma : http:  
+-   Schéma : `http:`
   
 -   Ordinateur : `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
   
  Par exemple, un site pourrait contenir les adresses de base suivantes :  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Grâce au [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], vous spécifiez un filtre de préfixe au niveau de AppDomain dans le fichier de configuration. Faites-le avec la [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) élément, qui contient une liste de préfixes. Les adresses de base entrantes, fournies par IIS, sont filtrées selon la liste de préfixes facultative. Par défaut, lorsqu'un préfixe n'est pas spécifié, toutes les adresses sont transmises. La spécification du préfixe entraîne uniquement la transmission de l'adresse de base correspondante pour ce schéma.  
   
@@ -75,7 +75,7 @@ Chaque point de terminaison a une adresse qui lui est associée et qui est utili
 </system.serviceModel>  
 ```  
   
- Dans l’exemple précédent, NET.TCP://Payroll.myorg.com : 8000 et http://shipping.myorg.com:8000 sont les seules adresses de base, pour leur modèle respectif, qui est ensuite transmis.  
+ Dans l’exemple précédent, `net.tcp://payroll.myorg.com:8000` et `http://shipping.myorg.com:8000` sont les seules adresses de base, pour leur modèle respectif, qui est ensuite transmis.  
   
  Le `baseAddressPrefixFilter` ne prend pas en charge de caractères génériques.  
   

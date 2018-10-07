@@ -2,12 +2,12 @@
 title: '&lt;defaultCertificate&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
-ms.openlocfilehash: a4af1c6ec452b24634fa50162fa71f069e2451f5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b99ee36fdb924ea12f3023984a3aa4b590937e8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751010"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847852"
 ---
 # <a name="ltdefaultcertificategt-element"></a>&lt;defaultCertificate&gt;, élément
 Spécifie un certificat X.509 à utiliser lorsqu'un service ou un service d'émission de jeton de sécurité n'en fournit pas un via un protocole de négociation.  
@@ -78,7 +78,7 @@ x509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/
  Pour les liaisons qui utilisent la sécurité de message basée sur des certificats, le certificat spécifié par cet élément de configuration est utilisé pour chiffrer les messages au service et doit être utilisé par le service pour signer les réponses au client. Il stocke un certificat unique à utiliser lorsqu'aucun certificat n'est spécifié par un service.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant spécifie un certificat à utiliser pour les points de terminaison dont l’URI commence par http://www.contoso.com et un certificat à utiliser pour tous les autres points de terminaison qui n’effectuent pas de négociation de certificat.  
+ L’exemple suivant spécifie un certificat à utiliser pour les points de terminaison dont l’URI commence par `http://www.contoso.com` et un certificat à utiliser pour tous les autres points de terminaison qui n’effectuent pas de négociation de certificat.  
   
 ```xml  
 <serviceCertificate>  

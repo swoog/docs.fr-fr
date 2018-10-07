@@ -7,11 +7,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 ms.openlocfilehash: e69cd500c50e9d76824d0e438a1af86f3a722c52
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48780691"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848034"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Liaisons Windows Communication Foundation
 Windows Communication Foundation (WCF) sépare la façon dont le logiciel pour une application est écrite à partir de la manière dont il communique avec d’autres logiciels. Les liaisons sont utilisées pour spécifier le transport, l'encodage et les détails de protocole requis pour que les clients et les services puissent communiquer l'un avec l'autre. WCF utilise des liaisons pour générer la représentation de câble sous-jacente du point de terminaison, par conséquent, la plupart des détails de la liaison doive être convenue par les parties qui communiquent. Pour cela, le plus simple est que les clients d’un service utilisent la même liaison que celle utilisée par le point de terminaison du service. Pour plus d’informations sur la procédure à suivre, consultez [à l’aide de liaisons pour configurer les Services et Clients](~/docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  

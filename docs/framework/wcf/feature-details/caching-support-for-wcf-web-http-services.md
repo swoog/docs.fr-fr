@@ -2,12 +2,12 @@
 title: Prise en charge de la mise en cache pour les services HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 25b564235b5d2b3b26b5d657f3e5f0bd5d594125
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972986"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847636"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Prise en charge de la mise en cache pour les services HTTP Web WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] vous permet d’utiliser le mécanisme de mise en cache déclaratif déjà disponible dans ASP.NET dans vos services HTTP Web WCF. Il vous permet de mettre en cache les réponses provenant de vos opérations de service HTTP Web WCF. Lorsqu'un utilisateur envoie un HTTP GET à votre service qui est configuré pour la mise en cache, ASP.NET renvoie la réponse mise en cache et la méthode de service n'est pas appelée. Lorsque le cache expire, au prochain envoi d'un HTTP GET par un utilisateur, votre méthode de service est appelée et la réponse est encore une fois mise en cache. Pour plus d’informations sur la mise en cache ASP.NET, consultez [vue d’ensemble de la mise en cache ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- Il s'agit du même élément de configuration que celui disponible pour les applications ASP.NET. Pour plus d’informations sur les profils de cache ASP.NET, consultez <xref:System.Web.Configuration.OutputCacheProfile>. Les attributs du profil de cache les plus importants pour les services HTTP Web sont : `cacheDuration` et `varyByParam`. Ces deux attributs sont nécessaires. `cacheDuration` définit la durée (en secondes) pendant laquelle une réponse doit être mise en cache. `varyByParam` vous permet de spécifier un paramètre de chaîne de requête qui est utilisé pour mettre en cache les réponses. Toutes les demandes effectuées avec des valeurs de paramètre de chaîne de requête différentes sont mises en cache de manière distincte. Par exemple, une fois une demande initiale est établie avec http://MyServer/MyHttpService/MyOperation?param=10 toutes les demandes ultérieures effectuées avec le même URI seraient retournées la réponse mise en cache (tant que la durée du cache n’est pas écoulée). Les réponses à une demande similaire, identique mais dont la valeur de paramètre de chaîne de requête est différente, sont mises en cache de manière distincte. Si vous ne souhaitez pas ce comportement de mise en cache distinct, donnez à l'attribut `varyByParam` la valeur « aucun ».  
+ Il s'agit du même élément de configuration que celui disponible pour les applications ASP.NET. Pour plus d’informations sur les profils de cache ASP.NET, consultez <xref:System.Web.Configuration.OutputCacheProfile>. Les attributs du profil de cache les plus importants pour les services HTTP Web sont : `cacheDuration` et `varyByParam`. Ces deux attributs sont nécessaires. `cacheDuration` définit la durée (en secondes) pendant laquelle une réponse doit être mise en cache. `varyByParam` vous permet de spécifier un paramètre de chaîne de requête qui est utilisé pour mettre en cache les réponses. Toutes les demandes effectuées avec des valeurs de paramètre de chaîne de requête différentes sont mises en cache de manière distincte. Par exemple, une fois une demande initiale est établie avec `http://MyServer/MyHttpService/MyOperation?param=10`, la réponse mise en cache seraient retournées toutes les demandes ultérieures effectuées avec le même URI (tant que la durée du cache n’est pas écoulée). Les réponses à une demande similaire, identique mais dont la valeur de paramètre de chaîne de requête est différente, sont mises en cache de manière distincte. Si vous ne souhaitez pas ce comportement de mise en cache distinct, donnez à l'attribut `varyByParam` la valeur « aucun ».  
   
 ## <a name="sql-cache-dependency"></a>Dépendance de cache SQL  
  Les réponses du service HTTP Web peuvent également être mises en cache avec une dépendance de cache SQL. Si votre service HTTP Web WCF dépend de données stockées dans une base de données SQL, vous pouvez mettre en cache la réponse du service et invalider la réponse mise en cache lorsque les données dans la table de la base de données SQL changent. Ce comportement est entièrement configuré dans le fichier Web.config. Vous devez d’abord définir une chaîne de connexion dans le <`connectionStrings`> élément.  

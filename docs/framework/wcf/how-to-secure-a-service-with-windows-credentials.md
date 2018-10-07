@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 author: BrucePerlerMS
-ms.openlocfilehash: bf88073c25351aac0e421d69a947605de3e37759
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200696"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848229"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Comment : sécuriser un service à l'aide d'informations d'identification Windows
 Cette rubrique montre comment activer la sécurité de transport sur un service Windows Communication Foundation (WCF) qui réside dans un domaine Windows et est appelé par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité du Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez le [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  
@@ -55,7 +55,7 @@ Cette rubrique montre comment activer la sécurité de transport sur un service 
   
 3.  Créez une deuxième variable `Type` nommée `serviceType` et assignez-lui le type du contrat implémenté (`Calculator`).  
   
-4.  Créez une instance de la classe <xref:System.Uri> nommée `baseAddress` avec l'adresse de base du service. L'adresse de base doit avoir un schéma qui correspond au transport. Dans ce cas, le schéma de transport est HTTP, et l’adresse inclut spéciale identificateur URI (Uniform Resource) « localhost » et un port number (8036), ainsi qu’une adresse de point de terminaison de base (« serviceModelSamples /) : http://localhost:8036/serviceModelSamples/.  
+4.  Créez une instance de la classe <xref:System.Uri> nommée `baseAddress` avec l'adresse de base du service. L'adresse de base doit avoir un schéma qui correspond au transport. Dans ce cas, le schéma de transport est HTTP, et l’adresse inclut spéciale identificateur URI (Uniform Resource) « localhost » et un port number (8036), ainsi qu’une adresse de point de terminaison de base (« serviceModelSamples /) : `http://localhost:8036/serviceModelSamples/`.  
   
 5.  Créez une instance de la classe <xref:System.ServiceModel.ServiceHost> avec les variables `serviceType` et `baseAddress`.  
   

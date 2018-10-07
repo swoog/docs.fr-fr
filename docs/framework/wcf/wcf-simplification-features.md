@@ -3,11 +3,11 @@ title: Fonctionnalités de simplification de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: 2a2b1bc90729f2c8c3303c5d8ce6befc4dff3980
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580834"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847956"
 ---
 # <a name="wcf-simplification-features"></a>Fonctionnalités de simplification de WCF
 Cette rubrique décrit les nouvelles fonctionnalités qui facilitent l’écriture d’applications WCF.  

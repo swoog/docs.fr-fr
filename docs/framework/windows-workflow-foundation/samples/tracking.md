@@ -2,15 +2,15 @@
 title: Suivi
 ms.date: 03/30/2017
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-ms.openlocfilehash: 9683256585b3076a4bad0398e859d9d5a156f56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 329dcaab093a4cb177fcba64e4bacbe9c9af4710
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515145"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48845900"
 ---
 # <a name="tracking"></a>Suivi
-Cette section contient des exemples qui illustrent des flux de travail de suivi dans Windows Workflow Foundation (WF).  
+Cette section contient des exemples qui illustrent le flux de travail de suivi dans Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Suivi personnalisé](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  
@@ -20,10 +20,4 @@ Cette section contient des exemples qui illustrent des flux de travail de suivi 
  Montre comment activer le suivi [!INCLUDE[wf1](../../../../includes/wf1-md.md)] sur un service de workflow et émettre les événements de suivi dans le suivi d'événements pour Windows (ETW).  
   
  [Suivi SQL](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- Montre comment écrire un participant de suivi SQL personnalisé, qui écrit des enregistrements de suivi dans une base de données SQL.  
-  
- [Extraire des données WF à l’aide du suivi](../../../../docs/framework/windows-workflow-foundation/samples/extract-wf-data-using-tracking.md)  
- Montre comment utiliser le suivi de workflow pour extraire des variables de workflow et des arguments d’activités.  
-  
- [Suivi à l’aide d’un fichier texte](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)  
- Montre comment étendre le suivi dans [!INCLUDE[wf1](../../../../includes/wf1-md.md)] en créant un participant de suivi personnalisé.
+ Montre comment écrire un participant de suivi SQL personnalisé, qui écrit des enregistrements de suivi dans une base de données SQL.

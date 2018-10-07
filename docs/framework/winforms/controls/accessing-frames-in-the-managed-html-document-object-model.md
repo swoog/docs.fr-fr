@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 5b214a3b3c8d59d27a60b5cee28ea168edb9bf4a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779771"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847635"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Accès aux frames dans le modèle objet de document HTML managé
 Certains documents HTML sont composés de *frames*, ou windows qui peuvent contenir leurs propres documents HTML. L'utilisation de frames simplifie la création de pages HTML dans lesquelles un ou plusieurs éléments de la page (tels qu'une barre de navigation) restent statiques, tandis que d'autres frames changent constamment de contenu.  
@@ -34,7 +34,7 @@ Certains documents HTML sont composés de *frames*, ou windows qui peuvent conte
 3.  Quand vous accédez à une balise `FRAME` ou `IFRAME` à l'aide de la propriété <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> de <xref:System.Windows.Forms.HtmlWindow>, de la collection <xref:System.Windows.Forms.HtmlElement.Children%2A> ou de méthodes telles que <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> ou <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, vous récupérez l'élément de frame. Il représente les propriétés statiques du frame, y compris l'URL spécifiée dans le fichier HTML d'origine.  
   
 ## <a name="frames-and-security"></a>Frames et sécurité  
- L’accès aux frames est compliqué par le fait que le modèle DOM HTML managé implémente une mesure de sécurité connu sous le nom *inter-frame sécurité des scripts*. Si un document contient un `FRAMESET` avec plusieurs `FRAME` dans différents domaines, ces `FRAME` ne peuvent pas interagir. En d’autres termes, une `FRAME` qu’affiche le contenu de votre site Web ne peut pas accéder aux informations dans un `FRAME` qui héberge un site tiers comme http://www.adatum.com/. Cette sécurité est implémentée au niveau de la classe <xref:System.Windows.Forms.HtmlWindow>. Vous pouvez obtenir des informations générales sur un `FRAME` qui héberge un autre site web, telles que son URL, mais vous ne pourrez pas accéder à son <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni modifier la taille ou l'emplacement de son `FRAME` ou `IFRAME` hébergeur.  
+ L’accès aux frames est compliqué par le fait que le modèle DOM HTML managé implémente une mesure de sécurité connu sous le nom *inter-frame sécurité des scripts*. Si un document contient un `FRAMESET` avec plusieurs `FRAME` dans différents domaines, ces `FRAME` ne peuvent pas interagir. En d’autres termes, une `FRAME` qu’affiche le contenu de votre site Web ne peut pas accéder aux informations dans un `FRAME` qui héberge un site tiers comme `http://www.adatum.com/`. Cette sécurité est implémentée au niveau de la classe <xref:System.Windows.Forms.HtmlWindow>. Vous pouvez obtenir des informations générales sur un `FRAME` qui héberge un autre site web, telles que son URL, mais vous ne pourrez pas accéder à son <xref:System.Windows.Forms.HtmlWindow.Document%2A> ni modifier la taille ou l'emplacement de son `FRAME` ou `IFRAME` hébergeur.  
   
  Cette règle s'applique également aux fenêtres que vous ouvrez à l'aide des méthodes <xref:System.Windows.Forms.HtmlWindow.Open%2A> et <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Si la fenêtre que vous ouvrez est dans un domaine différent de celui de la page hébergée dans le contrôle <xref:System.Windows.Forms.WebBrowser>, vous ne pourrez pas déplacer cette fenêtre ni examiner son contenu. Ces restrictions s'appliquent également si vous utilisez le contrôle <xref:System.Windows.Forms.WebBrowser> pour afficher un site web différent de celui utilisé pour déployer votre application Windows Forms. Si vous utilisez la technologie de déploiement [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] pour installer votre application à partir du site web A et que vous utilisez <xref:System.Windows.Forms.WebBrowser> pour afficher le site web B, vous ne pourrez pas accéder aux données du site web B.  
   
