@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 01a30ac6cb252eba51cfff8a221c28425f347b0a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200761"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837258"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Outil Service Model Metadata Tool (Svcutil.exe)
 
@@ -236,7 +236,7 @@ La commande suivante génère des types de sérialisation pour les types <xref:S
 
 Lors de l'utilisation de svcutil pour générer des métadonnées pour un service, vous pouvez recevoir le message suivant :
 
-Erreur : Impossible de récupérer les métadonnées à partir http://localhost:8000/somesservice/mex le quota de nombre de caractères maximal nametable (16384) a été dépassé lors de la lecture des données XML. La structure de données nametable est utilisée pour stocker les chaînes rencontrées lors du traitement XML ; des documents XML longs comportant des noms d'éléments non répétés, des noms d'attributs et des valeurs d'attributs peuvent déclencher ce quota. Ce quota peut être augmenté en modifiant la propriété MaxNameTableCharCount sur l’objet XmlDictionaryReaderQuotas utilisé pendant la création du lecteur XML.
+Erreur : Impossible de récupérer les métadonnées à partir `http://localhost:8000/somesservice/mex` le quota de nombre de caractères maximal nametable (16384) a été dépassé lors de la lecture des données XML. La structure de données nametable est utilisée pour stocker les chaînes rencontrées lors du traitement XML ; des documents XML longs comportant des noms d'éléments non répétés, des noms d'attributs et des valeurs d'attributs peuvent déclencher ce quota. Ce quota peut être augmenté en modifiant la propriété MaxNameTableCharCount sur l’objet XmlDictionaryReaderQuotas utilisé pendant la création du lecteur XML.
 
 Cette erreur peut être causée par un service qui retourne un fichier WSDL volumineux lorsque vous demandez ses métadonnées. Le problème est lié à un dépassement du quota de caractères pour l'outil svcutil.exe. Cette valeur est définie pour empêcher les attaques par déni de service (DOS). Vous pouvez augmenter ce quota en spécifiant le fichier de configuration suivant pour svcutil.
 

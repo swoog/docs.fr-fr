@@ -3,11 +3,11 @@ title: Fonctions (F#)
 description: 'En savoir plus sur les fonctions en F # et comment F # prend en charge les constructions de programmation fonctionnelles courants.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781620"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839567"
 ---
 # <a name="functions"></a>Fonctions
 

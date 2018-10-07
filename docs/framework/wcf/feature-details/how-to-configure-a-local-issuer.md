@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495091"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837126"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Comment : configurer un émetteur local
 Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur local pour les jetons émis.  
   
- Lorsqu'un client communique avec un service fédéré, il arrive souvent que le service spécifie l'adresse du service d'émission de jeton de sécurité qui est attendue pour émettre le jeton que le client utilisera pour s'authentifier auprès du service fédéré. Dans certains cas, le client peut être configuré pour utiliser un *émetteur local*.  
+ Lorsqu'un client communique avec un service fédéré, il arrive souvent que le service spécifie l'adresse du service d'émission de jeton de sécurité qui est attendue pour émettre le jeton que le client utilisera pour s'authentifier auprès du service fédéré. Dans certaines situations, le client peut être configuré pour utiliser un *émetteur local*.  
   
- Windows Communication Foundation (WCF) utilise un émetteur local dans les cas où l’adresse de l’émetteur d’une liaison fédérée est http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous ou `null`. Dans ce cas, vous devez configurer <xref:System.ServiceModel.Description.ClientCredentials> avec l'adresse de l'émetteur local et la liaison à utiliser pour communiquer avec celui-ci.  
+ Windows Communication Foundation (WCF) utilise un émetteur local dans les cas où l’adresse de l’émetteur d’une liaison fédérée est `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`. Dans ce cas, vous devez configurer <xref:System.ServiceModel.Description.ClientCredentials> avec l'adresse de l'émetteur local et la liaison à utiliser pour communiquer avec celui-ci.  
   
 > [!NOTE]
->  Si le <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propriété de la `ClientCredentials` classe a la valeur `true`, une adresse d’émetteur local n’est pas spécifiée, et l’adresse d’émetteur spécifié par le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou autres une liaison fédérée est http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, ou est `null`, puis les fenêtres [!INCLUDE[infocard](../../../../includes/infocard-md.md)] émetteur est utilisé.  
+>  Si le <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> propriété de la `ClientCredentials` classe est définie sur `true`, une adresse d’émetteur local n’est pas spécifiée, et l’adresse d’émetteur spécifiée par le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) ou autres liaison fédérée est `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, ou est `null`, puis le Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] émetteur est utilisé.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Pour configurer l'émetteur local dans le code  
   
@@ -61,7 +61,7 @@ Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>Pour configurer l'émetteur local dans la configuration  
   
-1.  Créer un [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) élément en tant qu’enfant de la [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) élément qui est lui-même un enfant de la [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) élément dans un comportement de point de terminaison.  
+1.  Créer un [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) élément en tant qu’enfant de le [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) élément lui-même est un enfant de la [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) élément dans un comportement de point de terminaison.  
   
 2.  Affectez à l'attribut `address` l'adresse de l'émetteur local qui acceptera des demandes de jeton.  
   
@@ -69,7 +69,7 @@ Cette rubrique décrit comment configurer un client afin d'utiliser un émetteur
   
 4.  Facultatif. Définir le [ \<identité >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez les informations d’identité de l’émetteur local.  
   
-5.  Facultatif. Définir le [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez des en-têtes supplémentaires sont requis pour adresser correctement l’émetteur local.  
+5.  Facultatif. Définir le [ \<en-têtes >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) élément en tant qu’enfant de la <`localIssuer`> élément et spécifiez les en-têtes supplémentaires qui sont requis pour adresser correctement l’émetteur local.  
   
 ## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Notez que si une liaison et une adresse d’émetteur sont spécifiées pour une liaison donnée, l’émetteur local n’est pas utilisé pour les points de terminaison qui utilisent cette liaison. Les clients qui prévoient d'utiliser systématiquement l'émetteur local doivent s'assurer de ne pas utiliser de liaison de ce type ou de modifier la liaison afin que l'adresse de l'émetteur soit `null`.  

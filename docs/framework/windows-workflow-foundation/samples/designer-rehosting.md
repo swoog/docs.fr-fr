@@ -2,12 +2,12 @@
 title: Réhébergement du concepteur
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028912"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837352"
 ---
 # <a name="designer-rehosting"></a>Réhébergement du Concepteur
 Le réhébergement du concepteur est un scénario courant qui fait référence à l'hébergement de la zone de dessin de conception du workflow dans une application personnalisée. L'application d'hébergement avec laquelle la plupart des personnes sont familières est Visual Studio, mais il existe plusieurs scénarios où l'affichage du concepteur de workflow dans une application peut être utile :  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Utilisation de l'exemple  
   
-1.  Ouvrez la solution DesignerRehosting.sln dans [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Ouvrez la solution DesignerRehosting.sln dans Visual Studio 2010.  
   
 2.  Appuyez sur F5 pour compiler et exécuter l'application.  
   

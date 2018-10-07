@@ -2,11 +2,12 @@
 title: Instructions d'installation du certificat de serveur des services Internet (IIS)
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838245"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Instructions d'installation du certificat de serveur des services Internet (IIS)
 Pour pouvoir exécuter les exemples qui utilisent la communication sécurisée avec les services Internet (IIS), vous devez créer et installer un certificat de serveur.  
@@ -35,7 +36,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![Assistant certificat de IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Testez l’accès au service dans un navigateur à l’aide de l’adresse HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Tester l’accès au service dans un navigateur à l’aide de l’adresse HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Si SSL a été configuré précédemment via l'utilisation du fichier Httpcfg.exe :  
   
@@ -64,7 +65,7 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 5.  Sélectionnez le **ServiceModelSamples-HTTPS-Server** à partir de la **certificat SSL** liste déroulante, puis cliquez sur **OK**.  
   
-6.  Testez l’accès au service dans un navigateur à l’aide de l’adresse HTTPS https://localhost/servicemodelsamples/service.svc.  
+6.  Tester l’accès au service dans un navigateur à l’aide de l’adresse HTTPS `https://localhost/servicemodelsamples/service.svc`.  
   
 > [!NOTE]
 >  Étant donné que le certificat de test que vous venez d'installer n'est pas un certificat approuvé, vous risquez de recevoir des avertissements de sécurité Internet Explorer supplémentaires lorsque vous recherchez des adresses Web locales sécurisées à l'aide de ce certificat.  

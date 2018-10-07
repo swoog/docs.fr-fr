@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: d5b62d968c38401a19fc9009954450bef210e5a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf8f719a47fda8b592165368234a2db0467c59ce
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493280"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835788"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Comment : créer un flux RSS de base
 Windows Communication Foundation (WCF) vous permet de créer un service qui expose un flux de syndication. Cette rubrique explique comment créer un service de syndication qui expose un flux de syndication RSS.  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) vous permet de créer un service qui expo
   
 ### <a name="to-call-getblog-with-an-http-get"></a>Pour appeler GetBlog() avec un HTTP GET  
   
-1.  Ouvrez Internet Explorer, tapez l’URL suivante et appuyez sur ENTRÉE : http://localhost:8000/BlogService/GetBlog. L’URL contient l’adresse de base du service (http://localhost:8000/BlogService), l’adresse relative du point de terminaison et l’opération de service à appeler.  
+1.  Ouvrez Internet Explorer, tapez l’URL suivante, et appuyez sur ENTRÉE : `http://localhost:8000/BlogService/GetBlog`. L’URL contient l’adresse de base du service (`http://localhost:8000/BlogService`), l’adresse relative du point de terminaison et l’opération de service à appeler.  
   
 ### <a name="to-call-getblog-from-code"></a>Pour appeler GetBlog() à partir d'un code  
   

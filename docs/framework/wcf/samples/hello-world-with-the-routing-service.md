@@ -2,50 +2,50 @@
 title: Hello World avec le service de routage
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 490d91da22b11c269c4d3c11d376087919a608e0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 52b5c3b167cbbfb032d8e6104a118c5c9384938e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519197"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845773"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Hello World avec le service de routage
-Cet exemple montre le Service de routage de Windows Communication Foundation (WCF). Le Service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le Service de routage. Dans cet exemple, le client Calculator est configuré pour envoyer des messages à un point de terminaison exposé par le routeur. Le service de routage (Routing Service) est configuré de façon à accepter tous les messages qui lui sont envoyés et les transférer à un point de terminaison qui correspond au service Calculator. Les messages envoyés à partir du client sont donc reçus par le routeur et reroutés au véritable service Calculator. Les messages du service Calculator sont renvoyés au routeur, qui à son tour les retransmet au client Calculator.  
-  
-### <a name="to-use-this-sample"></a>Pour utiliser cet exemple  
-  
-1.  À l'aide de [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], ouvrez HelloRoutingService.sln.  
-  
-2.  Appuyez sur F5 ou CTRL+MAJ+B.  
-  
+Cet exemple montre le Service de routage de Windows Communication Foundation (WCF). Le Service de routage est un composant WCF qui facilite l’inclusion d’un routeur basé sur le contenu dans votre application. Cet exemple adapte l’exemple de calculatrice WCF standard afin de communiquer avec le Service de routage. Dans cet exemple, le client Calculator est configuré pour envoyer des messages à un point de terminaison exposé par le routeur. Le service de routage (Routing Service) est configuré de façon à accepter tous les messages qui lui sont envoyés et les transférer à un point de terminaison qui correspond au service Calculator. Les messages envoyés à partir du client sont donc reçus par le routeur et reroutés au véritable service Calculator. Les messages du service Calculator sont renvoyés au routeur, qui à son tour les retransmet au client Calculator.
+
+### <a name="to-use-this-sample"></a>Pour utiliser cet exemple
+
+1.  À l’aide de Visual Studio 2012, ouvrez HelloRoutingService.sln.
+
+2.  Appuyez sur F5 ou CTRL+MAJ+B.
+
     > [!NOTE]
-    >  Si vous appuyez sur F5, le client Calculator démarre automatiquement. Si vous appuyez sur CTRL+MAJ+B (génération), vous devez démarrer vous-même les applications suivantes.  
-    >  
-    > 1.  Client Calculator (./CalculatorClient/bin/client.exe)  
-    > 2.  Service Calculator (./CalculatorService/bin/service.exe)  
-    > 3.  Routing service (./RoutingService/bin/RoutingService.exe)  
-  
-3.  Appuyez sur ENTRÉE pour démarrer le client.  
-  
-     Vous devez voir la sortie suivante :  
-  
-     Add(100,15.99) = 115.99  
-  
-     Subtract(145,76.54) = 68.46  
-  
-     Multiply(9,81.25) = 731.25  
-  
-     Divide(22,7) = 3.14285714285714  
-  
-## <a name="configurable-via-code-or-appconfig"></a>Configurable au moyen d'un code ou d'un fichier App.config  
- L'exemple est fourni en étant configuré de façon à utiliser un fichier App.config pour définir le comportement du routeur. Vous pouvez également renommer le fichier App.config afin qu'il ne soit pas reconnu et supprimer les marques de commentaire de l'appel de méthode à ConfigureRouterViaCode(). Quelle que soit la méthode employée, le comportement de routeur obtenu est le même.  
-  
-### <a name="scenario"></a>Scénario  
- Cet exemple illustre l'utilisation du routeur en tant que pompe de messages de base. Le service de routage fait office de nœud de proxy transparent configuré pour passer les messages directement à un ensemble préconfiguré de points de terminaison de destination.  
-  
-### <a name="real-world-scenario"></a>Scénario réel  
- Contoso souhaite augmenter la flexibilité en matière d'affectation de noms, d'adressage, de configuration et de sécurité de ses services. Pour ce faire, la société place une pompe de messages de base devant ses services, qui fera office de point de terminaison face au public. Cela lui permet de renforcer la sécurité devant ses véritables services et de simplifier l'implémentation de solutions à montée en puissance parallèle ou du contrôle des versions du service à une date ultérieure.  
-  
+    >  Si vous appuyez sur F5, le client Calculator démarre automatiquement. Si vous appuyez sur CTRL+MAJ+B (génération), vous devez démarrer vous-même les applications suivantes.
+    >
+    > 1.  Client Calculator (./CalculatorClient/bin/client.exe)
+    > 2.  Service Calculator (./CalculatorService/bin/service.exe)
+    > 3.  Routing service (./RoutingService/bin/RoutingService.exe)
+
+3.  Appuyez sur ENTRÉE pour démarrer le client.
+
+     Vous devez voir la sortie suivante :
+
+     Add(100,15.99) = 115.99
+
+     Subtract(145,76.54) = 68.46
+
+     Multiply(9,81.25) = 731.25
+
+     Divide(22,7) = 3.14285714285714
+
+## <a name="configurable-via-code-or-appconfig"></a>Configurable au moyen d'un code ou d'un fichier App.config
+ L'exemple est fourni en étant configuré de façon à utiliser un fichier App.config pour définir le comportement du routeur. Vous pouvez également renommer le fichier App.config afin qu'il ne soit pas reconnu et supprimer les marques de commentaire de l'appel de méthode à ConfigureRouterViaCode(). Quelle que soit la méthode employée, le comportement de routeur obtenu est le même.
+
+### <a name="scenario"></a>Scénario
+ Cet exemple illustre l'utilisation du routeur en tant que pompe de messages de base. Le service de routage fait office de nœud de proxy transparent configuré pour passer les messages directement à un ensemble préconfiguré de points de terminaison de destination.
+
+### <a name="real-world-scenario"></a>Scénario réel
+ Contoso souhaite augmenter la flexibilité en matière d'affectation de noms, d'adressage, de configuration et de sécurité de ses services. Pour ce faire, la société place une pompe de messages de base devant ses services, qui fera office de point de terminaison face au public. Cela lui permet de renforcer la sécurité devant ses véritables services et de simplifier l'implémentation de solutions à montée en puissance parallèle ou du contrôle des versions du service à une date ultérieure.
+
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  
 >   

@@ -2,12 +2,12 @@
 title: '&lt;scopedCertificates&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: c7b6fc35-d4b2-4c18-98bd-83e09591f1d3
-ms.openlocfilehash: d95e608fa9b94086dac72341eb599f258dae6097
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5b9bf4d25e23c8bdc4e3d01c2dfa61d059166117
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748862"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838273"
 ---
 # <a name="ltscopedcertificatesgt-element"></a>&lt;scopedCertificates&gt;, élément
 Représente une collection de certificats X.509 fournie par les services spécifiques (étendus) à des fins d’authentification. Cette collection est utilisée en général pour spécifier les certificats de service pour les services d’émission de jeton de sécurité dans un scénario fédéré.  
@@ -19,7 +19,7 @@ section d’endpointBehaviors
 \<clientCredentials>  
 \<serviceCertificate >  
 \<scopedCertificates > élément  
-\<Ajouter >, élément pour \<scopedCertificates >  
+\<Ajouter > élément pour \<scopedCertificates >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,10 +56,10 @@ section d’endpointBehaviors
   
  Le certificat par défaut est utilisé si une liaison requiert un certificat pour le service et qu’aucun certificat spécifique de l’URL du service n’est trouvé dans ScopedCertificates.  
   
- Pour plus d’informations, consultez la section « Portée des certificats » de [Comment : créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
+ Pour plus d’informations, consultez la section » certificats à étendue » de [Comment : créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant spécifie un certificat de service pour le client à utiliser lors de la communication avec les points de terminaison dont nom de domaine est http://www.contoso.com via le protocole HTTP.  
+ L’exemple suivant spécifie un certificat de service pour le client à utiliser lors de la communication avec les points de terminaison dont nom de domaine est `http://www.contoso.com` via le protocole HTTP.  
   
 ```xml  
 <serviceCertificate>  

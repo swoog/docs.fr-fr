@@ -2,12 +2,12 @@
 title: Meilleures pratiques pour l'hébergement dans Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073591"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840743"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Meilleures pratiques pour l'hébergement dans Internet Information Services
 Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des services Windows Communication Foundation (WCF).  
@@ -33,7 +33,7 @@ Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des 
  Les scénarios de couche intermédiaire produisent également des gains de performance en utilisant les API asynchrones générées par l'option `svcutil /a`. Le `/a` option entraîne la [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer `BeginXXX/EndXXX` méthodes pour chaque opération de service, ce qui permet des appels potentiellement longs aux services à distance sur threads d’arrière-plan.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF dans des scénarios multi-résidents ou multi-nommés  
- Vous pouvez déployer des services WCF à l’intérieur d’une batterie de serveurs Web IIS, où un ensemble d’ordinateurs partagent un nom externe commun (tel que http://www.contoso.com) mais sont adressés individuellement par des noms d’hôte (par exemple, http://www.contoso.com peut diriger le trafic vers deux ordinateurs différents nommé http://machine1.internal.contoso.com et http://machine2.internal.contoso.com). Ce scénario de déploiement est entièrement pris en charge par WCF, mais nécessite une configuration spéciale du site Web IIS qui héberge les services WCF pour afficher le nom d’hôte correct (externe) dans les métadonnées du service (Web Services Description Language).  
+ Vous pouvez déployer des services WCF à l’intérieur d’une batterie de serveurs Web IIS, où un ensemble d’ordinateurs partagent un nom externe commun (tel que `http://www.contoso.com`), mais sont adressés individuellement par des noms d’hôte (par exemple, `http://www.contoso.com` peut diriger le trafic vers deux ordinateurs différents nommé `http://machine1.internal.contoso.com` et `http://machine2.internal.contoso.com`). Ce scénario de déploiement est entièrement pris en charge par WCF, mais nécessite une configuration spéciale du site Web IIS qui héberge les services WCF pour afficher le nom d’hôte correct (externe) dans les métadonnées du service (Web Services Description Language).  
   
  Pour vous assurer que le nom d’hôte correct apparaît dans les métadonnées du service que WCF génère, configurez l’identité par défaut pour le site Web IIS qui héberge les services WCF pour utiliser un nom d’hôte explicite. Par exemple, les ordinateurs qui se trouvent dans la ferme www.contoso.com doivent utiliser une liaison de site IIS de * : 80 : www.contoso.com pour HTTP et \*: 443:www.contoso.com pour le protocole HTTPS.  
   

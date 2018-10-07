@@ -2,12 +2,12 @@
 title: '&lt;localIssuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: 9118d1462d4790bb457fc8dc2f7c74b6e69de43a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cb5afb0e73ad0a07ea43f06915f4e477d7f8f985
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749112"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841551"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Spécifie l’adresse et la liaison de l’émetteur local à utiliser pour obtenir un jeton de sécurité.  
@@ -17,7 +17,7 @@ Spécifie l’adresse et la liaison de l’émetteur local à utiliser pour obte
 section d’endpointBehaviors  
 \<comportement >  
 \<clientCredentials>  
-\<jeton issuedToken >  
+\<issuedToken >  
 \<localIssuer >  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -36,7 +36,7 @@ section d’endpointBehaviors
 |Attribut|Description|  
 |---------------|-----------------|  
 |address|Chaîne requise. Spécifie l'URI de l'émetteur local.|  
-|liaison|Chaîne facultative. Une des liaisons fournies par le système. Pour obtenir la liste, consultez [les liaisons fournies](../../../../../docs/framework/wcf/system-provided-bindings.md).|  
+|liaison|Chaîne facultative. Une des liaisons fournies par le système. Pour obtenir la liste, consultez [System-Provided Bindings](../../../../../docs/framework/wcf/system-provided-bindings.md).|  
 |bindingConfiguration|Chaîne facultative. Spécifie une configuration de liaison recherchée dans le fichier de configuration.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -50,10 +50,10 @@ section d’endpointBehaviors
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<jeton issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Spécifie un jeton personnalisé utilisé pour authentifier un client auprès d'un service.|  
+|[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Spécifie un jeton personnalisé utilisé pour authentifier un client auprès d'un service.|  
   
 ## <a name="remarks"></a>Notes  
- Lors de l’obtention d’un jeton émis depuis un service d’émission de jeton de sécurité (STS), l’application cliente doit être configurée avec l’adresse et la liaison à utiliser pour pouvoir communiquer avec le STS. Lorsque le <xref:System.ServiceModel.WSFederationHttpBinding> ne fournit pas d’URL pour le service de jeton de sécurité, ou lorsque l’adresse de l’émetteur d’une liaison fédérée est http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous ou `null`, le canal de client Windows Communication Foundation (WCF) utilise les valeurs spécifiées par `address`et `binding` pour communiquer avec le STS pour obtenir le jeton émis. Pour plus d’informations sur la configuration d’un émetteur local, consultez [Comment : configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Lors de l’obtention d’un jeton émis depuis un service d’émission de jeton de sécurité (STS), l’application cliente doit être configurée avec l’adresse et la liaison à utiliser pour pouvoir communiquer avec le STS. Lorsque le <xref:System.ServiceModel.WSFederationHttpBinding> ne fournit pas d’URL pour le service de jeton de sécurité, ou lorsque l’adresse de l’émetteur d’une liaison fédérée est `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`, le canal de client Windows Communication Foundation (WCF) utilise les valeurs spécifiées par `address`et `binding` pour communiquer avec le STS pour obtenir le jeton émis. Pour plus d’informations sur la configuration d’un émetteur local, consultez [Comment : configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant définit les attributs `address`, `binding` et `bindingConfiguration` d'un élément `localIssuer`.  

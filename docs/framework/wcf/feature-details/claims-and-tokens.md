@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 087deeef91367210db936f2976a3846d0279dcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f640372504658c8f7935d3d219cd373f19ebf31f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491853"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837532"
 ---
 # <a name="claims-and-tokens"></a>Revendications et jetons
 Cette rubrique décrit les différents types de revendication Windows Communication Foundation (WCF) crée à partir des jetons par défaut pris en charge.  
   
  Vous pouvez examiner les revendications des informations d'identification d'un client à l'aide des classes <xref:System.IdentityModel.Claims.ClaimSet> et <xref:System.IdentityModel.Claims.Claim>. `ClaimSet` contient une collection d'objets `Claim`. Chaque `Claim` contient les membres importants suivants :  
   
--   La propriété <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> retourne un URI (Uniform Resource Identifier) qui spécifie le type de revendication qui est fait. Par exemple, un type de revendication peut être une empreinte numérique (thumprint) d'un certificat, auquel cas l'URI est http:schemas.microsoft.com/ws/20005/05/identity/claims/thumprint.  
+-   La propriété <xref:System.IdentityModel.Claims.Claim.ClaimType%2A> retourne un URI (Uniform Resource Identifier) qui spécifie le type de revendication qui est fait. Par exemple, un type de revendication peut être une empreinte numérique d’un certificat, auquel cas l’URI est `http://schemas.microsoft.com/ws/20005/05/identity/claims/thumprint`.  
   
 -   La propriété <xref:System.IdentityModel.Claims.Claim.Right%2A> retourne un URI qui spécifie le droit de la revendication. Les droits prédéfinis sont regroupés dans la classe <xref:System.IdentityModel.Claims.Rights> (<xref:System.IdentityModel.Claims.Rights.Identity%2A>, <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>).  
   
@@ -50,19 +50,19 @@ Cette rubrique décrit les différents types de revendication Windows Communicat
   
     -   `Claim` dont le `ClaimType` est Empreinte numérique, un `Right` PossessProperty et une `Resource` qui est un tableau d'octets contenant l'empreinte numérique du certificat.  
   
-    -   Revendications PossessProperty supplémentaires de différents types, notamment X500DistinguishedName, Dns, Name, Upn et Rsa, qui représentent différentes propriétés du certificat. La ressource de la revendication Rsa est la clé publique associée au certificat. **Remarque** compte où le type d’informations d’identification du client est un certificat que le service mappe à un Windows, deux `ClaimSet` les objets sont générés. Le premier contient toutes les revendications relatives au compte Windows et le second contient toutes les revendications en rapport avec le certificat.  
+    -   Revendications PossessProperty supplémentaires de différents types, notamment X500DistinguishedName, Dns, Name, Upn et Rsa, qui représentent différentes propriétés du certificat. La ressource de la revendication Rsa est la clé publique associée au certificat. **Remarque** où le type d’informations d’identification du client est un certificat que le service mappe à un Windows du compte, deux `ClaimSet` objets sont générés. Le premier contient toutes les revendications relatives au compte Windows et le second contient toutes les revendications en rapport avec le certificat.  
   
 ## <a name="user-namepassword"></a>Nom d'utilisateur/mot de passe  
  Si les informations d'identification du client sont un nom d'utilisateur/mot de passe (ou équivalent) qui ne correspondent pas à un compte Windows, le `ClaimSet` qui en résulte est émis par la propriété <xref:System.IdentityModel.Claims.ClaimSet.System%2A> statique de la classe `ClaimSet`. Le `ClaimSet` contient un `Identity` de type de revendication <xref:System.IdentityModel.Claims.ClaimTypes.Name%2A> dont la ressource est le nom d’utilisateur du client. Une revendication correspondante a un `Right` de `PossessProperty`.  
   
 ## <a name="rsa-keys"></a>Clés RSA  
- Lorsqu’une clé RSA non associée à un certificat est utilisée, résultant `ClaimSet` auto-émis et contient un `Identity` de type de revendication <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> dont la ressource est la clé RSA. Une revendication correspondante a un `Right` de `PossessProperty`.  
+ Lorsqu’une clé RSA non associée à un certificat est utilisée, résultant `ClaimSet` est auto-publié et contient un `Identity` de type de revendication <xref:System.IdentityModel.Claims.ClaimTypes.Rsa%2A> dont la ressource est la clé RSA. Une revendication correspondante a un `Right` de `PossessProperty`.  
   
 ## <a name="saml"></a>SAML  
  Si le client s'authentifie avec un jeton SAML (Security Assertions Markup Language), le `ClaimSet` qui en résulte est émis par l'entité qui a signé le jeton SAML, souvent le certificat du service STS (Security Token Service) qui a émis le jeton SAML. Le `ClaimSet` contient différentes revendications présentes dans le jeton SAML. Si le jeton SAML contient un `SamlSubject` avec un nom non `null`, une revendication `Identity` de type <xref:System.IdentityModel.Claims.ClaimTypes.NameIdentifier%2A> et une ressource de type <xref:System.IdentityModel.Tokens.SamlNameIdentifierClaimResource> sont alors créées.  
   
 ## <a name="identity-claims-and-servicesecuritycontextisanonymous"></a>Revendications d'identité et ServiceSecurityContext.IsAnonymous  
- Si aucun de la `ClaimSet` objets résultant les informations d’identification du client contient une revendication avec un `Right` de `Identity,` le <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> propriété renvoie `true`. En présence d'une ou plusieurs revendications de ce type, la propriété `IsAnonymous` retourne `false`.  
+ Si aucun de la `ClaimSet` objets résultant les informations d’identification du client contient une revendication avec un `Right` de `Identity,` le <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A> retourne de la propriété `true`. En présence d'une ou plusieurs revendications de ce type, la propriété `IsAnonymous` retourne `false`.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.IdentityModel.Claims.ClaimSet>  

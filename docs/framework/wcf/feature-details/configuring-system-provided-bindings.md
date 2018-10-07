@@ -6,14 +6,15 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 184f4da26df2c688b2b6f30f063bab058af37a4a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 343cdc4e30984e75bd2fede2706679839a573153
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845708"
 ---
 # <a name="configuring-system-provided-bindings"></a>Configuration des liaisons fournies par le système
-Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Les liaisons se composent des éléments qui définissent comment les canaux de Windows Communication Foundation (WCF) sont posés en couches pour fournir les fonctionnalités de communication requises. Une liaison contient trois types d’éléments :  
+Les liaisons spécifient le mécanisme de communication à utiliser pour communiquer avec un point de terminaison et indiquer comment se connecter à un point de terminaison. Liaisons se composent des éléments qui définissent comment les canaux Windows Communication Foundation (WCF) sont posés en couches pour fournir les fonctionnalités de communication requis. Une liaison contient trois types d’éléments :  
   
 -   Éléments de liaison de canal de protocole qui déterminent la sécurité, la fiabilité, des paramètres de flux de contexte ou des protocoles définis par l'utilisateur à utiliser avec les messages envoyés au point de terminaison.  
   
@@ -21,7 +22,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
   
 -   Éléments de liaison d’encodage de message qui déterminent le code de câble à utiliser pour les messages envoyés au point de terminaison, par exemple, texte/XML, binaire ou MTOM (Message Transmission Optimization Mechanism).  
   
- Cette rubrique présente toutes les liaisons Windows Communication Foundation (WCF) fournie par le système. Si aucun de ces éléments ne répond aux spécifications exactes de votre application, vous pouvez créer une liaison à l'aide de la classe <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur la création de liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
+ Cette rubrique présente toutes les liaisons Windows Communication Foundation (WCF) fournie par le système. Si aucun de ces éléments ne répond aux spécifications exactes de votre application, vous pouvez créer une liaison à l'aide de la classe <xref:System.ServiceModel.Channels.CustomBinding>. Pour plus d’informations sur la création de liaisons personnalisées, consultez [Liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
 >  Sélectionnez une liaison dont la sécurité est activée. Par défaut, toutes les liaisons, à l'exception de la liaison <xref:System.ServiceModel.BasicHttpBinding>, ont la sécurité activée. Si vous ne sélectionnez pas de liaison sécurisée, ou si vous désactivez la sécurité, assurez-vous que vos échanges de réseau sont protégés d'une autre manière, comme le fait d'appartenir à un centre de données sûr ou à un réseau isolé.  
@@ -30,7 +31,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 >  N’utilisez pas de contrats duplex avec les liaisons qui ne prennent pas en charge la sécurité, ou dont la sécurité est désactivée, sauf si l’échange de réseau est sécurisé par d’autres moyens.  
   
 ## <a name="system-provided-bindings"></a>Liaisons fournies par le système  
- Les liaisons suivantes sont livrées avec WCF.  
+ Les liaisons suivantes sont livrés avec WCF.  
   
 |Liaison|Élément de configuration|Description|  
 |-------------|---------------------------|-----------------|  
@@ -40,12 +41,12 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|Une liaison sécurisée et interopérable appropriée pour les contrats de service duplex ou les communications par le biais des intermédiaires SOAP.|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|Une liaison sécurisée et interopérable qui prend en charge le protocole WS-Federation et permet aux organisations qui sont dans une fédération d’authentifier et d’autoriser efficacement les utilisateurs.|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|[\<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md)|Liaison sécurisée et interopérable qui dérive de <xref:System.ServiceModel.WS2007HttpBinding> et prend en charge la sécurité fédérée.|  
-|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Une liaison sécurisée et optimisée appropriée pour la communication entre ordinateurs entre les applications WCF.|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Une liaison sécurisée, fiable et optimisée qui convient pour la communication sur l’ordinateur entre les applications WCF.|  
-|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Une liaison en file d’attente, qui est appropriée pour la communication entre ordinateurs entre les applications WCF.|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Une liaison qui permet la communication sécurisée entre plusieurs ordinateurs.|  
-|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Une liaison permet de configurer des points de terminaison pour les services Web WCF qui sont exposées via des requêtes HTTP au lieu des messages SOAP.|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Une liaison qui est appropriée pour la communication entre ordinateurs entre une application WCF et existantes, Message Queuing (également appelé MSMQ) les applications.|  
+|<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|Liaison sécurisée et optimisée, adaptée à la communication des applications WCF entre les machines.|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|[\<netNamedPipeBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)|Liaison sécurisée, fiable et optimisée adaptée à la communication des applications WCF sur les machines.|  
+|<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|Liaison en file d’attente adaptée à la communication des applications WCF entre les machines.|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|[\<netPeerTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)|Une liaison qui permet la communication sécurisée entre plusieurs ordinateurs.|  
+|<xref:System.ServiceModel.WebHttpBinding>|[\<webHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Liaison utilisée afin de configurer des points de terminaison pour les services web WCF qui sont exposés via des requêtes HTTP au lieu de messages SOAP.|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|[\<msmqIntegrationBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)|Une liaison qui est appropriée pour la communication entre ordinateurs entre une application WCF et existant Message Queuing (également appelé MSMQ) des applications.|  
   
 ## <a name="binding-features"></a>Fonctionnalités de liaison  
  Le tableau suivant répertorie certaines des fonctionnalités clés fournies par chacune des liaisons fournies par le système. Les liaisons sont répertoriées dans la première colonne et les information concernant les fonctionnalités sont décrites dans le tableau. Le tableau suivant fournit une clé pour les abréviations de liaison utilisées. Pour sélectionner une liaison, déterminez quelle colonne satisfait toutes les fonctionnalités de ligne dont vous avez besoin.  
@@ -62,6 +63,7 @@ Les liaisons spécifient le mécanisme de communication à utiliser pour communi
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|Aucun,<br /><br /> (Transport)|Aucun, (Transport)|(Aucun), oui|Oui|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|Aucun, message, (transport), les deux|(Aucun)|(Aucun), oui|Non|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|Aucun, message, (transport), mixte|(Aucun)|(Aucun)|Oui|  
+|<xref:System.ServiceModel.WebHttpBinding>|.NET|Aucun, Transport, TransportCredentialOnly|(Aucun)|(Aucun)|N/A|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|Aucun, (Transport)|(Aucun)|(Aucun), oui|N/A|  
   
  Le tableau suivant explique les fonctionnalités répertoriées dans le tableau précédent.  
