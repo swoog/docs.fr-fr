@@ -12,22 +12,22 @@ ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d7563d3a0ba545bfd8d1b80981fcce607d230873
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028214"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847286"
 ---
-# <a name="ltcodebasegt-element"></a><span data-ttu-id="bcec4-102">&lt;codeBase&gt; élément</span><span class="sxs-lookup"><span data-stu-id="bcec4-102">&lt;codeBase&gt; Element</span></span>
-<span data-ttu-id="bcec4-103">Spécifie où le common language runtime peut trouver un assembly.</span><span class="sxs-lookup"><span data-stu-id="bcec4-103">Specifies where the common language runtime can find an assembly.</span></span>  
+# <a name="ltcodebasegt-element"></a><span data-ttu-id="af4aa-102">&lt;codeBase&gt; élément</span><span class="sxs-lookup"><span data-stu-id="af4aa-102">&lt;codeBase&gt; Element</span></span>
+<span data-ttu-id="af4aa-103">Spécifie où le common language runtime peut trouver un assembly.</span><span class="sxs-lookup"><span data-stu-id="af4aa-103">Specifies where the common language runtime can find an assembly.</span></span>  
   
- <span data-ttu-id="bcec4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="bcec4-104">\<configuration></span></span>  
-<span data-ttu-id="bcec4-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="bcec4-105">\<runtime></span></span>  
-<span data-ttu-id="bcec4-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="bcec4-106">\<assemblyBinding></span></span>  
-<span data-ttu-id="bcec4-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="bcec4-107">\<dependentAssembly></span></span>  
-<span data-ttu-id="bcec4-108">\<codeBase ></span><span class="sxs-lookup"><span data-stu-id="bcec4-108">\<codeBase></span></span>  
+ <span data-ttu-id="af4aa-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="af4aa-104">\<configuration></span></span>  
+<span data-ttu-id="af4aa-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="af4aa-105">\<runtime></span></span>  
+<span data-ttu-id="af4aa-106">\<assemblyBinding ></span><span class="sxs-lookup"><span data-stu-id="af4aa-106">\<assemblyBinding></span></span>  
+<span data-ttu-id="af4aa-107">\<dependentAssembly ></span><span class="sxs-lookup"><span data-stu-id="af4aa-107">\<dependentAssembly></span></span>  
+<span data-ttu-id="af4aa-108">\<codeBase ></span><span class="sxs-lookup"><span data-stu-id="af4aa-108">\<codeBase></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bcec4-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="bcec4-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="af4aa-109">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="af4aa-109">Syntax</span></span>  
   
 ```xml  
    <codeBase    
@@ -35,43 +35,43 @@ version="Assembly version"
 href="URL of assembly"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="bcec4-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="bcec4-110">Attributes and Elements</span></span>  
- <span data-ttu-id="bcec4-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="bcec4-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="af4aa-110">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="af4aa-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="af4aa-111">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="af4aa-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="bcec4-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="bcec4-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="af4aa-112">Attributs</span><span class="sxs-lookup"><span data-stu-id="af4aa-112">Attributes</span></span>  
   
-|<span data-ttu-id="bcec4-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="bcec4-113">Attribute</span></span>|<span data-ttu-id="bcec4-114">Description</span><span class="sxs-lookup"><span data-stu-id="bcec4-114">Description</span></span>|  
+|<span data-ttu-id="af4aa-113">Attribut</span><span class="sxs-lookup"><span data-stu-id="af4aa-113">Attribute</span></span>|<span data-ttu-id="af4aa-114">Description</span><span class="sxs-lookup"><span data-stu-id="af4aa-114">Description</span></span>|  
 |---------------|-----------------|  
-|`href`|<span data-ttu-id="bcec4-115">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="bcec4-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="bcec4-116">Spécifie l’URL où le runtime peut trouver la version spécifiée de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="bcec4-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
-|`version`|<span data-ttu-id="bcec4-117">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="bcec4-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="bcec4-118">Spécifie la version de l’assembly d’à que la base de code s’applique.</span><span class="sxs-lookup"><span data-stu-id="bcec4-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="bcec4-119">Le format du numéro de version est *major.minor.build.revision*.</span><span class="sxs-lookup"><span data-stu-id="bcec4-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
+|`href`|<span data-ttu-id="af4aa-115">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="af4aa-115">Required attribute.</span></span><br /><br /> <span data-ttu-id="af4aa-116">Spécifie l’URL où le runtime peut trouver la version spécifiée de l’assembly.</span><span class="sxs-lookup"><span data-stu-id="af4aa-116">Specifies the URL where the runtime can find the specified version of the assembly.</span></span>|  
+|`version`|<span data-ttu-id="af4aa-117">Attribut requis.</span><span class="sxs-lookup"><span data-stu-id="af4aa-117">Required attribute.</span></span><br /><br /> <span data-ttu-id="af4aa-118">Spécifie la version de l’assembly d’à que la base de code s’applique.</span><span class="sxs-lookup"><span data-stu-id="af4aa-118">Specifies the version of the assembly the codebase applies to.</span></span> <span data-ttu-id="af4aa-119">Le format du numéro de version est *major.minor.build.revision*.</span><span class="sxs-lookup"><span data-stu-id="af4aa-119">The format of an assembly version number is *major.minor.build.revision*.</span></span>|  
   
-## <a name="version-attribute"></a><span data-ttu-id="bcec4-120">Attribut de version</span><span class="sxs-lookup"><span data-stu-id="bcec4-120">version Attribute</span></span>  
+## <a name="version-attribute"></a><span data-ttu-id="af4aa-120">Attribut de version</span><span class="sxs-lookup"><span data-stu-id="af4aa-120">version Attribute</span></span>  
   
-|<span data-ttu-id="bcec4-121">Value</span><span class="sxs-lookup"><span data-stu-id="bcec4-121">Value</span></span>|<span data-ttu-id="bcec4-122">Description</span><span class="sxs-lookup"><span data-stu-id="bcec4-122">Description</span></span>|  
+|<span data-ttu-id="af4aa-121">Value</span><span class="sxs-lookup"><span data-stu-id="af4aa-121">Value</span></span>|<span data-ttu-id="af4aa-122">Description</span><span class="sxs-lookup"><span data-stu-id="af4aa-122">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="bcec4-123">Les valeurs valides pour chaque partie du numéro de version sont compris entre 0 et 65535.</span><span class="sxs-lookup"><span data-stu-id="bcec4-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="bcec4-124">Non applicable.</span><span class="sxs-lookup"><span data-stu-id="bcec4-124">Not applicable.</span></span>|  
+|<span data-ttu-id="af4aa-123">Les valeurs valides pour chaque partie du numéro de version sont compris entre 0 et 65535.</span><span class="sxs-lookup"><span data-stu-id="af4aa-123">Valid values for each part of the version number are 0 to 65535.</span></span>|<span data-ttu-id="af4aa-124">Non applicable.</span><span class="sxs-lookup"><span data-stu-id="af4aa-124">Not applicable.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="bcec4-125">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="bcec4-125">Child Elements</span></span>  
- <span data-ttu-id="bcec4-126">Aucun.</span><span class="sxs-lookup"><span data-stu-id="bcec4-126">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="af4aa-125">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="af4aa-125">Child Elements</span></span>  
+ <span data-ttu-id="af4aa-126">Aucun.</span><span class="sxs-lookup"><span data-stu-id="af4aa-126">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="bcec4-127">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="bcec4-127">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="af4aa-127">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="af4aa-127">Parent Elements</span></span>  
   
-|<span data-ttu-id="bcec4-128">Élément</span><span class="sxs-lookup"><span data-stu-id="bcec4-128">Element</span></span>|<span data-ttu-id="bcec4-129">Description</span><span class="sxs-lookup"><span data-stu-id="bcec4-129">Description</span></span>|  
+|<span data-ttu-id="af4aa-128">Élément</span><span class="sxs-lookup"><span data-stu-id="af4aa-128">Element</span></span>|<span data-ttu-id="af4aa-129">Description</span><span class="sxs-lookup"><span data-stu-id="af4aa-129">Description</span></span>|  
 |-------------|-----------------|  
-|`buildproviders`|<span data-ttu-id="bcec4-130">Définit une collection de fournisseurs de générations utilisés pour compiler des fichiers de ressources personnalisés.</span><span class="sxs-lookup"><span data-stu-id="bcec4-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="bcec4-131">Le nombre de fournisseurs de générations n'est pas défini.</span><span class="sxs-lookup"><span data-stu-id="bcec4-131">You can have any number of build providers.</span></span>|  
-|`compilation`|<span data-ttu-id="bcec4-132">Configure tous les paramètres de compilation ASP.NET utilise.</span><span class="sxs-lookup"><span data-stu-id="bcec4-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
-|`configuration`|<span data-ttu-id="bcec4-133">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="bcec4-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`System.web`|<span data-ttu-id="bcec4-134">Spécifie l'élément racine de la section de configuration ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="bcec4-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
+|`buildproviders`|<span data-ttu-id="af4aa-130">Définit une collection de fournisseurs de générations utilisés pour compiler des fichiers de ressources personnalisés.</span><span class="sxs-lookup"><span data-stu-id="af4aa-130">Defines a collection of build providers used to compile custom resource files.</span></span> <span data-ttu-id="af4aa-131">Le nombre de fournisseurs de générations n'est pas défini.</span><span class="sxs-lookup"><span data-stu-id="af4aa-131">You can have any number of build providers.</span></span>|  
+|`compilation`|<span data-ttu-id="af4aa-132">Configure tous les paramètres de compilation ASP.NET utilise.</span><span class="sxs-lookup"><span data-stu-id="af4aa-132">Configures all the compilation settings that ASP.NET uses.</span></span>|  
+|`configuration`|<span data-ttu-id="af4aa-133">Élément racine de chaque fichier de configuration utilisé par le Common Language Runtime et les applications .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="af4aa-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`System.web`|<span data-ttu-id="af4aa-134">Spécifie l'élément racine de la section de configuration ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="af4aa-134">Specifies the root element for the ASP.NET configuration section.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bcec4-135">Notes</span><span class="sxs-lookup"><span data-stu-id="bcec4-135">Remarks</span></span>  
- <span data-ttu-id="bcec4-136">Le runtime doit utiliser le  **\<codeBase >** définissant dans un fichier de configuration machine ou d’un fichier de stratégie d’éditeur, le fichier doit également rediriger la version d’assembly.</span><span class="sxs-lookup"><span data-stu-id="bcec4-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="bcec4-137">Fichiers de configuration d’application peuvent avoir un paramètre de base de code sans avoir à demander la version d’assembly.</span><span class="sxs-lookup"><span data-stu-id="bcec4-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="bcec4-138">Après avoir déterminé la version de l’assembly à utiliser, le runtime applique le paramètre de base de code à partir du fichier qui détermine la version.</span><span class="sxs-lookup"><span data-stu-id="bcec4-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="bcec4-139">Si aucune base de code n’est indiqué, le runtime tente de détecter l’assembly à l’accoutumée.</span><span class="sxs-lookup"><span data-stu-id="bcec4-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="af4aa-135">Notes</span><span class="sxs-lookup"><span data-stu-id="af4aa-135">Remarks</span></span>  
+ <span data-ttu-id="af4aa-136">Le runtime doit utiliser le  **\<codeBase >** définissant dans un fichier de configuration machine ou d’un fichier de stratégie d’éditeur, le fichier doit également rediriger la version d’assembly.</span><span class="sxs-lookup"><span data-stu-id="af4aa-136">For the runtime to use the **\<codeBase>** setting in a machine configuration file or publisher policy file, the file must also redirect the assembly version.</span></span> <span data-ttu-id="af4aa-137">Fichiers de configuration d’application peuvent avoir un paramètre de base de code sans avoir à demander la version d’assembly.</span><span class="sxs-lookup"><span data-stu-id="af4aa-137">Application configuration files can have a codebase setting without redirecting the assembly version.</span></span> <span data-ttu-id="af4aa-138">Après avoir déterminé la version de l’assembly à utiliser, le runtime applique le paramètre de base de code à partir du fichier qui détermine la version.</span><span class="sxs-lookup"><span data-stu-id="af4aa-138">After determining which assembly version to use, the runtime applies the codebase setting from the file that determines the version.</span></span> <span data-ttu-id="af4aa-139">Si aucune base de code n’est indiqué, le runtime tente de détecter l’assembly à l’accoutumée.</span><span class="sxs-lookup"><span data-stu-id="af4aa-139">If no codebase is indicated, the runtime probes for the assembly in the usual way.</span></span>  
   
- <span data-ttu-id="bcec4-140">Si l’assembly a un nom fort, le paramètre de base de code peut être n’importe où sur l’intranet local ou Internet.</span><span class="sxs-lookup"><span data-stu-id="bcec4-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="bcec4-141">Si l’assembly est un assembly privé, le paramètre de base de code doit être un chemin d’accès relatif au répertoire de l’application.</span><span class="sxs-lookup"><span data-stu-id="bcec4-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
+ <span data-ttu-id="af4aa-140">Si l’assembly a un nom fort, le paramètre de base de code peut être n’importe où sur l’intranet local ou Internet.</span><span class="sxs-lookup"><span data-stu-id="af4aa-140">If the assembly has a strong name, the codebase setting can be anywhere on the local intranet or the Internet.</span></span> <span data-ttu-id="af4aa-141">Si l’assembly est un assembly privé, le paramètre de base de code doit être un chemin d’accès relatif au répertoire de l’application.</span><span class="sxs-lookup"><span data-stu-id="af4aa-141">If the assembly is a private assembly, the codebase setting must be a path relative to the application's directory.</span></span>  
   
- <span data-ttu-id="bcec4-142">Pour les assemblys sans nom fort, la version est ignorée et le chargeur utilise la première apparition de \<codebase > à l’intérieur \<dependentAssembly >.</span><span class="sxs-lookup"><span data-stu-id="bcec4-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="bcec4-143">S’il existe une entrée dans le fichier de configuration d’application qui redirige la liaison à un autre assembly, la redirection est prioritaire même si la version d’assembly ne correspond pas à la demande de liaison.</span><span class="sxs-lookup"><span data-stu-id="bcec4-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
+ <span data-ttu-id="af4aa-142">Pour les assemblys sans nom fort, la version est ignorée et le chargeur utilise la première apparition de \<codebase > à l’intérieur \<dependentAssembly >.</span><span class="sxs-lookup"><span data-stu-id="af4aa-142">For assemblies without a strong name, version is ignored and the loader uses the first appearance of \<codebase> inside \<dependentAssembly>.</span></span> <span data-ttu-id="af4aa-143">S’il existe une entrée dans le fichier de configuration d’application qui redirige la liaison à un autre assembly, la redirection est prioritaire même si la version d’assembly ne correspond pas à la demande de liaison.</span><span class="sxs-lookup"><span data-stu-id="af4aa-143">If there is an entry in the application configuration file that redirects binding to another assembly, the redirection will take precedence even if the assembly version doesnt match the binding request.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bcec4-144">Exemple</span><span class="sxs-lookup"><span data-stu-id="bcec4-144">Example</span></span>  
- <span data-ttu-id="bcec4-145">L’exemple suivant montre comment spécifier où le runtime peut trouver un assembly.</span><span class="sxs-lookup"><span data-stu-id="bcec4-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
+## <a name="example"></a><span data-ttu-id="af4aa-144">Exemple</span><span class="sxs-lookup"><span data-stu-id="af4aa-144">Example</span></span>  
+ <span data-ttu-id="af4aa-145">L’exemple suivant montre comment spécifier où le runtime peut trouver un assembly.</span><span class="sxs-lookup"><span data-stu-id="af4aa-145">The following example shows how to specify where the runtime can find an assembly.</span></span>  
   
 ```xml  
 <configuration>  
@@ -89,8 +89,8 @@ href="URL of assembly"/>
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bcec4-146">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="bcec4-146">See Also</span></span>  
- [<span data-ttu-id="bcec4-147">Schéma des paramètres d’exécution</span><span class="sxs-lookup"><span data-stu-id="bcec4-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [<span data-ttu-id="bcec4-148">Schéma des fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="bcec4-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="bcec4-149">Spécification de l'emplacement d'un assembly</span><span class="sxs-lookup"><span data-stu-id="bcec4-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [<span data-ttu-id="bcec4-150">Méthode de localisation des assemblys par le runtime</span><span class="sxs-lookup"><span data-stu-id="bcec4-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+## <a name="see-also"></a><span data-ttu-id="af4aa-146">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="af4aa-146">See Also</span></span>  
+ [<span data-ttu-id="af4aa-147">Schéma des paramètres d’exécution</span><span class="sxs-lookup"><span data-stu-id="af4aa-147">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+ [<span data-ttu-id="af4aa-148">Schéma des fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="af4aa-148">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+ [<span data-ttu-id="af4aa-149">Spécification de l'emplacement d'un assembly</span><span class="sxs-lookup"><span data-stu-id="af4aa-149">Specifying an Assembly's Location</span></span>](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [<span data-ttu-id="af4aa-150">Méthode de localisation des assemblys par le runtime</span><span class="sxs-lookup"><span data-stu-id="af4aa-150">How the Runtime Locates Assemblies</span></span>](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
