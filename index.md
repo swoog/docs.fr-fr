@@ -5,12 +5,13 @@ hide_bc: true
 title: Documentation .NET
 description: Découvrez comment utiliser .NET pour créer diverses applications sur n’importe quelle plateforme en C#, Visual Basic et F#. Parcourez les informations de référence sur les API, les exemples de code, les didacticiels et plus encore.
 ms.custom: updateeachrelease
-ms.openlocfilehash: a62586689d1fe1c3352171fe71d92620269d9a72
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.date: 06/21/2018
+ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314903"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837467"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -688,7 +689,7 @@ ms.locfileid: "36314903"
                                             <div class="cardText">
                                                 <a href="/azure/cognitive-services">
                                                     <h3>Cognitive Services</h3>
-                                                    <p>Boostez les applications, les sites web et les chatbots avec une intelligence artificielle permettant de voir, entendre, parler et comprendre.</p>
+                                                    <p>Boostez les applications, les sites web et les bots avec une intelligence permettant de voir, entendre, parler et comprendre.</p>
                                                 </a>
                                             </div>
                                         </div>
