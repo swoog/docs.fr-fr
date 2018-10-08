@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462462"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850685"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Vue d'ensemble du contrôle DataGrid (Windows Forms)
 > [!NOTE]
@@ -90,7 +90,7 @@ Contrôle DataGrid lié aux données par plusieurs tables
 |Plusieurs tables associées.|La grille peut afficher une arborescence dans laquelle sélectionner des tables ou vous pouvez spécifier que la grille affiche la table parente. Les enregistrements dans la table parente permettent aux utilisateurs d'accéder aux lignes enfants associées.|  
   
 > [!NOTE]
->  Les tables dans un dataset sont associées à l'aide d'un <xref:System.Data.DataRelation>.  Consultez également [HYPERLINK « http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)» relations dans les Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) ou [relations dans les Datasets](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+> Les tables dans un dataset sont associées à l'aide d'un <xref:System.Data.DataRelation>. Consultez également [créer des relations entre les jeux de données](/visualstudio/data-tools/relationships-in-datasets).
   
  Quand le contrôle <xref:System.Windows.Forms.DataGrid> affiche une table et que la propriété <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> a la valeur `true`, vous pouvez retrier les données en cliquant sur les en-têtes de colonnes. L'utilisateur peut aussi ajouter des lignes et modifier des cellules.  
   

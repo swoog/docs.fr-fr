@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778703"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849481"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;inclure&gt; (Visual Basic)
 Fait référence à un autre fichier qui décrit les types et membres dans votre code source.  
@@ -37,7 +37,7 @@ Fait référence à un autre fichier qui décrit les types et membres dans votre
 ## <a name="remarks"></a>Notes  
  Utilisez le `<include>` balise pour faire référence à des commentaires dans un autre fichier qui décrivent les types et membres dans votre code source. Il s’agit d’une solution alternative au placement direct des commentaires de la documentation dans votre fichier de code source.  
   
- Le `<include>` balise utilise la recommandation de la Version 1.0 W3C XML Path Language (XPath). Plus d’informations pour savoir comment personnaliser votre `<include>` utilisation est disponible à l’adresse http://www.w3.org/TR/xpath.  
+ Le `<include>` balise utilise la recommandation de la Version 1.0 W3C XML Path Language (XPath). Pour plus d’informations sur les façons de personnaliser votre `<include>` utiliser, consultez <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Exemple  
  Cet exemple utilise le `<include>` balise pour importer des commentaires de documentation de membre à partir d’un fichier appelé `commentFile.xml`.  
