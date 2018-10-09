@@ -60,7 +60,7 @@ API ML.NET connexe : <xref:Microsoft.ML.Models.BinaryClassificationMetrics.F1Sc
 
 Un paramètre d’un algorithme d’apprentissage automatique. Par exemple, le nombre d’arbres à assimiler dans une forêt décisionnelle ou la taille d’étape dans un algorithme de jambage descendant dégradé. Les valeurs des *hyperparamètres* sont définies avant l’apprentissage du modèle et régissent le processus de recherche des paramètres de la fonction de prédiction, par exemple, les points de comparaison dans un arbre de décision ou les pondérations dans un modèle de régression linéaire. Pour plus d’informations, consultez l’article Wikipédia [Hyperparamètre](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)).
 
-## <a name="label"></a>Ajouter des contrôles
+## <a name="label"></a>Etiquette
 
 L’élément à prédire avec le modèle d’apprentissage automatique. Par exemple, la race d’un chien ou le futur cours d’une action.
 
