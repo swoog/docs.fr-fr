@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964382"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873116"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Création d'un modèle de chiffrement
 Les composants de chiffrement de .NET Framework peuvent être combinés pour créer différents modèles permettant de chiffrer et de déchiffrer des données.  
@@ -30,7 +30,7 @@ Les composants de chiffrement de .NET Framework peuvent être combinés pour cr�
   
 5.  Les parties lancent ensuite une conversation à l'aide du chiffrement symétrique.  
   
- La création d’un modèle de chiffrement n’est pas une tâche facile. Pour plus d’informations sur l’utilisation du chiffrement, consultez la rubrique de cryptographie dans la documentation Platform SDK à http://msdn.microsoft.com/library.  
+ La création d’un modèle de chiffrement n’est pas une tâche facile.
   
 ## <a name="see-also"></a>Voir aussi
 

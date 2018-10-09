@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779905"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872955"
 ---
 # <a name="how-to-create-an-activity"></a>Procédure : créer une activité
 
 Les activités sont l'unité principale de comportement dans [!INCLUDE[wf1](../../../includes/wf1-md.md)]. La logique d'exécution d'une activité peut être implémentée en code managé ou à l'aide d'autres activités. Cette rubrique indique comment créer deux activités. La première activité est une activité simple qui utilise le code pour implémenter la logique d'exécution. L'implémentation de la deuxième activité est définie à l'aide d'autres activités. Ces activités sont utilisées dans les procédures du didacticiel.
 
 > [!NOTE]
-> Pour télécharger une version terminée du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Pour télécharger une version complète du didacticiel, consultez [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)(Windows Workflow Foundation (WF45) - Didacticiel de mise en route).
 
 ## <a name="create-the-activity-library-project"></a>Créer le projet de bibliothèque d’activités
 
@@ -74,7 +74,7 @@ Les activités sont l'unité principale de comportement dans [!INCLUDE[wf1](../.
 
 12. Type `Text` dans le **nom** boîte, sélectionnez **dans** à partir de la **Direction** liste déroulante, sélectionnez **chaîne** à partir de la **Type d’argument** liste déroulante, puis appuyez sur **entrée** pour enregistrer l’argument.
 
-     Ces trois arguments sont liés aux arguments correspondants des activités <xref:System.Activities.Statements.WriteLine> et `ReadInt` ajoutées à l'activité `Prompt` dans les étapes suivantes.
+     Ces trois arguments sont liés aux arguments correspondants des activités <xref:System.Activities.Statements.WriteLine> et `ReadInt` ajoutées à l’activité `Prompt` dans les étapes suivantes.
 
 13. Cliquez sur **Arguments** dans la partie inférieure gauche du Concepteur d’activités pour fermer la **Arguments** volet.
 

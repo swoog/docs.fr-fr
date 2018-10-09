@@ -2,12 +2,12 @@
 title: NamedPipe Activation
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504270"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873360"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe Activation
 Cet exemple illustre l'hébergement d'un service qui utilise le service d'activation des processus Windows (WAS) pour activer un service qui communique sur des canaux nommés. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) et nécessite [!INCLUDE[wv](../../../../includes/wv-md.md)] à exécuter.  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Cette commande est une ligne unique de texte.  
   
-         Cette commande active l’application accessible à l’aide à la fois http://localhost/servicemodelsamples et via NET.TCP://localhost/servicemodelsamples.  
+         Cette commande active l’application accessible à l’aide de deux `http://localhost/servicemodelsamples` et `net.tcp://localhost/servicemodelsamples`.  
   
 4.  Pour générer l’édition C# ou Visual Basic .NET de la solution, conformez-vous aux instructions figurant dans [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

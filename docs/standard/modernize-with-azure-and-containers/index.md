@@ -4,12 +4,12 @@ description: Apprenez à migrer et moderniser les applications existantes vers l
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 4/28/2018
-ms.openlocfilehash: 07e1a1e2ef145dce1b292d9425f33fcd99ffd1ae
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b22ddd8a63d183571f9ca3a63fb7ae84ebb88510
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747002"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873495"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Moderniser des applications .NET existantes avec le cloud Azure et les conteneurs Windows (2nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 Microsoft Corporation
 
 Tous droits réservés. Aucune partie du contenu de ce document ne peut être reproduite sous quelque forme ou par quelque moyen que ce soit sans l’autorisation écrite de l’éditeur.
 
-Cet ouvrage est disponible gratuitement sous la forme d’un livre électronique (e-book) disponible via plusieurs canaux chez Microsoft, tels que http://dot.net/architecture.
+Cet ouvrage est disponible gratuitement sous la forme d’un livre électronique (e-book) disponible via plusieurs canaux chez Microsoft, tels que <http://dot.net/architecture>.
 
 Si vous avez des questions liées à cet ouvrage, envoyez un e-mail à [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -33,7 +33,7 @@ Ce document est fourni « en l’état » et exprime les points de vue et les op
 
 Certains exemples décrits dans ce document ne sont fournis qu’à titre d’illustration et sont purement fictifs. Toute ressemblance ou tout lien avec le monde réel sont purement fortuits et involontaires.
 
-Microsoft et les marques commerciales mentionnées dans la page web « Marques » sur http://www.microsoft.com sont des marques du groupe Microsoft. Toutes les autres marques sont la propriété de leurs propriétaires respectifs.
+Microsoft et les marques commerciales mentionnées dans la page web « Marques » sur <https://www.microsoft.com> sont des marques du groupe Microsoft. Toutes les autres marques sont la propriété de leurs propriétaires respectifs.
 
 Auteur :
 > **Cesar de la Torre**, chef de projet sénior, équipe produit .NET, Microsoft Corp.

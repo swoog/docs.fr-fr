@@ -3,11 +3,11 @@ title: "Comment : déployer une application d'intégration COM+"
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
 ms.openlocfilehash: e338641b801113c5cd6ff4ec380f60f9ef900fc2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793069"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873084"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>Comment : déployer une application d'intégration COM+
 Après avoir écrit une application d'intégration COM+, vous pouvez la déployer sur un autre ordinateur. Cette rubrique décrit comment déplacer une application d'intégration COM+ d'un ordinateur vers un autre.  

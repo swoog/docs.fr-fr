@@ -3,11 +3,11 @@ title: Performances de Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
 ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035368"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873691"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Performances de Windows Workflow Foundation 4
 Dustin Metzgar
@@ -437,7 +437,7 @@ public class Workflow1 : Activity
  Le contrôle d'état a un impact d'environ 3 % sur le débit.  Le coût du modèle de base est d'environ 8 %.
 
 ## <a name="interop"></a>Interop
- WF4 a été presque entièrement réécrit à partir de [!INCLUDE[wf1](../../../includes/wf1-md.md)], c'est pourquoi les workflows et les activités de WF3 ne sont pas directement compatibles avec WF4.  De nombreux clients qui ont adopté très tôt de Windows Workflow Foundation aura les définitions de workflow en interne ou par des tiers et des activités personnalisées pour WF3.  Une façon de faciliter la transition vers WF4 consiste à utiliser l'activité Interop, qui peut exécuter des activités WF3 à partir d'un workflow WF4.  Il est recommandé d'utiliser l'activité <xref:System.Activities.Statements.Interop> seulement si nécessaire. Pour plus d’informations sur la migration vers WF4 extraire le [conseils de migration vers WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
+ WF4 a été presque entièrement réécrit à partir de [!INCLUDE[wf1](../../../includes/wf1-md.md)], c’est pourquoi les workflows et les activités de WF3 ne sont pas directement compatibles avec WF4.  De nombreux clients qui ont adopté très tôt de Windows Workflow Foundation aura les définitions de workflow en interne ou par des tiers et des activités personnalisées pour WF3.  Une façon de faciliter la transition vers WF4 consiste à utiliser l'activité Interop, qui peut exécuter des activités WF3 à partir d'un workflow WF4.  Il est recommandé d'utiliser l'activité <xref:System.Activities.Statements.Interop> seulement si nécessaire. Pour plus d’informations sur la migration vers WF4 extraire le [conseils de migration vers WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Configuration de l'environnement
  ![Environnement de Test de performances de flux de travail](../../../docs/framework/windows-workflow-foundation/media/wfperfenvironment.gif "WFPerfEnvironment")

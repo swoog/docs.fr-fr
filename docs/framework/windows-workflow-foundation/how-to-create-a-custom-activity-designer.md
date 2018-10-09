@@ -3,11 +3,11 @@ title: "Procédure : créer un concepteur d'activités personnalisées"
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 ms.openlocfilehash: 86cd3544e9117cca273b6c8dde8454672f14a36a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777680"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873006"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Procédure : créer un concepteur d'activités personnalisées
 
@@ -23,7 +23,7 @@ Les concepteurs d’activités personnalisées sont généralement implémentés
 
 1.  La première procédure décrit comment créer un concepteur d'activités personnalisées avec un <xref:System.Activities.Presentation.WorkflowItemPresenter> qui fournit la zone de dépôt qui reçoit d'autres activités. Cette procédure est basée sur le [concepteurs composites personnalisés - présentateur d’élément de Workflow](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md) exemple.
 
-2.  La deuxième procédure décrit comment créer un concepteur d'activités personnalisées avec un <xref:System.Activities.Presentation.WorkflowItemsPresenter> qui fournit les fonctionnalités requises pour modifier d'une collection d'éléments contenus. Cette procédure est basée sur le [concepteurs composites personnalisés - présentateur d’éléments de flux de travail](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) exemple.
+2.  La deuxième procédure décrit comment créer un concepteur d’activités personnalisées avec un <xref:System.Activities.Presentation.WorkflowItemsPresenter> qui fournit les fonctionnalités requises pour modifier d’une collection d’éléments contenus. Cette procédure est basée sur le [concepteurs composites personnalisés - présentateur d’éléments de flux de travail](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md) exemple.
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>Pour créer un concepteur d’activités personnalisées avec une zone de dépôt à l’aide de WorkflowItemPresenter
 

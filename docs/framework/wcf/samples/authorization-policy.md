@@ -2,12 +2,12 @@
 title: Authorization Policy
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198317"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873477"
 ---
 # <a name="authorization-policy"></a>Authorization Policy
 
@@ -282,9 +282,9 @@ Ou vous pouvez faire la même chose dans la configuration :
 </behavior>
 ```
 
-Windows Communication Foundation (WCF) fournit un rich modèle basée sur les revendications pour effectuer des vérifications d’accès. L'objet <xref:System.ServiceModel.ServiceAuthorizationManager> est utilisé pour effectuer la vérification d'accès et détermine si les revendications associées au client répondent aux spécifications nécessaires pour accéder à la méthode de service.
+Windows Communication Foundation (WCF) fournit un rich modèle basée sur les revendications pour effectuer des vérifications d’accès. L’objet <xref:System.ServiceModel.ServiceAuthorizationManager> est utilisé pour effectuer la vérification d’accès et détermine si les revendications associées au client répondent aux exigences nécessaires pour accéder à la méthode de service.
 
-Aux fins de démonstration, cet exemple illustre une implémentation de <xref:System.ServiceModel.ServiceAuthorizationManager> qui implémente le <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> méthode pour autoriser un accès utilisateur aux méthodes basées sur des revendications de type http://example.com/claims/allowedoperation dont la valeur est l’URI d’Action de l’opération est peut être appelée.
+Aux fins de démonstration, cet exemple illustre une implémentation de <xref:System.ServiceModel.ServiceAuthorizationManager> qui implémente le <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> méthode pour autoriser un accès utilisateur aux méthodes basées sur des revendications de type `http://example.com/claims/allowedoperation` dont la valeur est l’URI d’Action de l’opération est peut être appelée.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -460,7 +460,7 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
 
 1. Lancez Client.exe à partir *\client\bin*. L'activité du client s'affiche sur son application de console.
 
-  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs
 
@@ -500,7 +500,7 @@ Les éléments suivants fournissent une brève vue d'ensemble des différentes s
 
 14. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.
 
-   Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="clean-up-after-the-sample"></a>Nettoyer après l’exemple
 
