@@ -8,20 +8,20 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: d69de8c01a23eff5314220a10a51f6487080df41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 205e0052f0ea257d965b0cd088cbe3586321022f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496752"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48914177"
 ---
 # <a name="federation"></a>Fédération
-Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour déployer des architectures de sécurité fédérée. Pour un exemple d’application qui illustre la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
+Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédérée. Elle décrit également la prise en charge de Windows Communication Foundation (WCF) pour le déploiement d’architectures de sécurité fédérée. Pour un exemple d’application présentant la fédération, consultez [Federation, exemple](../../../../docs/framework/wcf/samples/federation-sample.md).  
   
 ## <a name="definition-of-federated-security"></a>Définition de sécurité fédérée  
  La sécurité fédérée permet une séparation nette entre le service auquel un client accède et les procédures d'authentification et d'autorisation associées. La sécurité fédérée permet également la collaboration sur plusieurs systèmes, réseaux et organisations dans les différents domaines de confiance.  
   
- WCF fournit la prise en charge pour la création et déploiement de systèmes distribués qui utilisent la sécurité fédérée.  
+ WCF prend en charge pour la création et déploiement de systèmes distribués qui utilisent la sécurité fédérée.  
   
 ### <a name="elements-of-a-federated-security-architecture"></a>Éléments d'une architecture de sécurité fédérée  
  L'architecture de sécurité fédérée a trois éléments clés, tel qu'indiqué dans le tableau suivant.  
@@ -60,21 +60,21 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
   
  Dans une architecture de sécurité fédérée, les utilisateurs de l'organisation A savent que s'ils souhaitent accéder au service Web de l'organisation B, ils doivent présenter un jeton de sécurité valide provenant du STS à l'organisation B, qui authentifie et autorise leur accès au service spécifique.  
   
- Lorsqu'ils contactent le STS B, les utilisateurs reçoivent un autre niveau d'indirection de la stratégie associée au STS. Ils doivent présenter un jeton de sécurité valide provenant du STS A (autrement dit, le domaine de confiance client) pour que le STS B puisse leur délivrer un jeton de sécurité. C'est un corollaire de la relation de confiance établie entre les deux organisations et cela implique que l'organisation B n'a pas à gérer des identités pour les utilisateurs de l'organisation A. Dans la pratique, le STS B a en général un `issuerAddress` et un `issuerMetadataAddress` null. Pour plus d’informations, consultez [Comment : configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Dans ce cas, le client consulte une stratégie locale pour localiser STS A. Cette configuration est appelée *fédération de domaine d’accueil* et elle évolue mieux car STS B n’a pas à mettre à jour les informations sur le STS A.  
+ Lorsqu'ils contactent le STS B, les utilisateurs reçoivent un autre niveau d'indirection de la stratégie associée au STS. Ils doivent présenter un jeton de sécurité valide provenant du STS A (autrement dit, le domaine de confiance client) pour que le STS B puisse leur délivrer un jeton de sécurité. C'est un corollaire de la relation de confiance établie entre les deux organisations et cela implique que l'organisation B n'a pas à gérer des identités pour les utilisateurs de l'organisation A. Dans la pratique, le STS B a en général un `issuerAddress` et un `issuerMetadataAddress` null. Pour plus d’informations, consultez [Comment : configurer un émetteur Local](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md). Dans ce cas, le client consulte une stratégie locale pour localiser STS A. Cette configuration est appelée *fédération de domaine d’accueil* et elle évolue mieux, car STS B n’a pas gérer les informations sur le STS A.  
   
  Les utilisateurs contactent ensuite le STS de l'organisation A et obtiennent un jeton de sécurité en présentant les informations d'identification qu'ils utilisent habituellement pour accéder aux autres ressources de l'organisation A. Cela évite aux utilisateurs d'avoir à gérer plusieurs ensembles d'informations d'identification ou à utiliser le même ensemble au niveau de plusieurs sites de service.  
   
  Une fois que les utilisateurs obtiennent un jeton de sécurité du STS A, ils présentent le jeton au STS B. L'organisation B continue à procéder à l'autorisation des demandes des utilisateurs et leur envoie un jeton de sécurité provenant de son propre jeu. Les utilisateurs peuvent ensuite présenter leur jeton à la ressource de l'organisation B et accéder au service.  
   
 ## <a name="support-for-federated-security-in-wcf"></a>Prise en charge de la sécurité fédérée dans WCF  
- WCF fournit la prise en charge des clés en main pour déployer des architectures de sécurité fédérée via la [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
+ WCF fournit une prise en charge clé en main pour déployer des architectures de sécurité fédérée via le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
   
- Le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) élément fournit pour une liaison sécurisée, fiable et interopérable qui implique l’utilisation de HTTP comme mécanisme de transport sous-jacent pour le style de communication demande-réponse, emploi en tant que le format de câble d’encodage de texte et XML.  
+ Le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) élément fournit pour une liaison sécurisée, fiable et interopérable qui implique l’utilisation de HTTP comme mécanisme de transport sous-jacent pour le style de communication demande-réponse, utilisation de texte et XML en tant que le format de câble d’encodage.  
   
- L’utilisation de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) dans la sécurité fédérée scénario peut être dissocié en deux phases logiquement indépendantes, comme décrit dans les sections suivantes.  
+ L’utilisation de [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) dans une sécurité fédérée scénario peut être divisée en deux phases logiquement indépendantes, comme décrit dans les sections suivantes.  
   
 ### <a name="phase-1-design-phase"></a>Phase 1 : phase de conception  
- Pendant la phase de conception, le client utilise le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour lire la stratégie de point de terminaison de service expose et rassembler des exigences d’authentification et d’autorisation du service. Les proxys appropriés sont construits pour créer le modèle de communication de sécurité fédérée suivant au niveau du client :  
+ Pendant la phase de conception, le client utilise le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour lire la déclaration expose le point de terminaison de service et pour collecter les exigences du service d’authentification et d’autorisation. Les proxys appropriés sont construits pour créer le modèle de communication de sécurité fédérée suivant au niveau du client :  
   
 -   Procurez-vous un jeton de sécurité auprès du STS du domaine de confiance du client.  
   
@@ -85,19 +85,19 @@ Cette rubrique fournit une brève vue d'ensemble du concept de sécurité fédé
 -   Présentez le jeton au service pour accéder au service.  
   
 ### <a name="phase-2-run-time-phase"></a>Phase 2 : phase d'exécution  
- Pendant la phase d’exécution, le client instancie un objet de la classe de client WCF et effectue un appel à l’aide du client WCF. L’infrastructure sous-jacente de WCF gère les étapes précédemment mentionnées dans le modèle de communication de sécurité fédérée et permet au client de consommer le service de façon transparente.  
+ Pendant la phase d’exécution, le client instancie un objet de la classe de client WCF et effectue un appel à l’aide du client WCF. L’infrastructure sous-jacente de WCF gère les étapes mentionnées précédemment dans le modèle de communication de sécurité fédérée et permet au client en toute transparence consommer le service.  
   
 ## <a name="sample-implementation-using-wcf"></a>Exemple d'implémentation à l'aide de WCF  
- L’illustration suivante montre un exemple d’implémentation d’une architecture de sécurité fédérée à l’aide de la prise en charge native de WCF.  
+ L’illustration suivante montre un exemple d’implémentation pour une architecture de sécurité fédérée à l’aide de la prise en charge native de WCF.  
   
- ![Sécurité fédérée dans WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![Sécurité de la fédération dans WCF](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
   
 ### <a name="example-myservice"></a>Exemple MyService  
  Le service `MyService` expose un point de terminaison unique via `MyServiceEndpoint`. L’illustration suivante présente l’adresse, la liaison et le contrat associés au point de terminaison.  
   
  ![Fédération](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
   
- Le point de terminaison de service `MyServiceEndpoint` utilise le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) et nécessite un jeton de sécurité Assertions Markup Language (SAML) valide avec un `accessAuthorized` revendication émise par le STS B. Cela est spécifié de façon déclarative dans la configuration du service.  
+ Le point de terminaison de service `MyServiceEndpoint` utilise le [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) et requiert un jeton Security Assertions Markup Language (SAML) valide avec un `accessAuthorized` revendication émise par STS B. Cela est spécifié de façon déclarative dans la configuration du service.  
   
 ```xml  
 <system.serviceModel>  
@@ -148,7 +148,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Un point subtil doit être noté concernant les revendications requises par `MyService`. La deuxième figure indique que `MyService` requiert un jeton SAML avec la revendication `accessAuthorized`. Pour être plus précis, cela spécifie le type de revendication que `MyService` requiert. Le nom qualifié complet de ce type de revendication est http://tempuri.org:accessAuthorized (ainsi que l’espace de noms associé), qui est utilisé dans le fichier de configuration de service. La valeur de cette revendication indique sa présence et elle est supposée être définie à `true` par le STS B.  
+>  Un point subtil doit être noté concernant les revendications requises par `MyService`. La deuxième figure indique que `MyService` requiert un jeton SAML avec la revendication `accessAuthorized`. Pour être plus précis, cela spécifie le type de revendication que `MyService` requiert. Le nom qualifié complet de ce type de revendication est `http://tempuri.org:accessAuthorized` (ainsi que l’espace de noms associé), qui est utilisé dans le fichier de configuration de service. La valeur de cette revendication indique sa présence et elle est supposée être définie à `true` par le STS B.  
   
  Pendant l'exécution, cette stratégie est appliquée par la classe `MyServiceOperationRequirement` implémentée dans le cadre de `MyService`.  
   
@@ -207,7 +207,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ```  
   
 > [!NOTE]
->  Là encore, la `userAuthenticated` revendication est le type de revendication est requis par STS B. Le nom qualifié complet de ce type de revendication est http://tempuri.org:userAuthenticated (ainsi que l’espace de noms associé), qui est utilisé dans le fichier de configuration STS. La valeur de cette revendication indique sa présence et elle est supposée être définie à `true` par le STS A.  
+>  Là encore, le `userAuthenticated` revendication est le type de revendication requis par STS B. Le nom qualifié complet de ce type de revendication est `http://tempuri.org:userAuthenticated` (ainsi que l’espace de noms associé), qui est utilisé dans le fichier de configuration de STS. La valeur de cette revendication indique sa présence et elle est supposée être définie à `true` par le STS A.  
   
  Pendant l'exécution, la classe `STS_B_OperationRequirement` applique cette stratégie, qui est implémentée dans le cadre du STS B.  
   
@@ -287,7 +287,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  ![Fédération](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
   
 ## <a name="summary"></a>Récapitulatif  
- La sécurité fédérée fournit une division nette de la responsabilité et permet de générer des architectures de service sécurisées et évolutives. En tant que plateforme de générer et déployer des applications distribuées, WCF fournit la prise en charge native pour implémenter la sécurité fédérée.  
+ La sécurité fédérée fournit une division nette de la responsabilité et permet de générer des architectures de service sécurisées et évolutives. En tant que plateforme pour la création et déploiement d’applications distribuées, WCF fournit la prise en charge native pour implémenter la sécurité fédérée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité](../../../../docs/framework/wcf/feature-details/security.md)
