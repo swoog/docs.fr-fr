@@ -3,11 +3,11 @@ title: Service HTTP de base
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
 ms.openlocfilehash: 2e4aee93341404df5f06b096a9a7bf18a3c94f56
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844707"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087152"
 ---
 # <a name="basic-http-service"></a>Service HTTP de base
 Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RPC ce concept est communément appelé service « POX » (Plain Old XML) – à l’aide du modèle de programmation REST Windows Communication Foundation (WCF). Cet exemple se compose de deux composants : un service HTTP WCF auto-hébergé (Service.cs) et une application de console (Program.cs) qui crée le service et effectue des appels à ce dernier.  
@@ -15,7 +15,7 @@ Cet exemple montre comment implémenter un service basé sur HTTP, basés sur RP
 ## <a name="sample-details"></a>Détails de l'exemple  
  Le service WCF expose 2 opérations, `EchoWithGet` et `EchoWithPost`, qui retourne la chaîne passée en tant qu’entrée.  
   
- L'opération `EchoWithGet` est annotée avec <xref:System.ServiceModel.Web.WebGetAttribute>, ce qui indique que l'opération traite des requêtes HTTP `GET`. Comme le <xref:System.ServiceModel.Web.WebGetAttribute> ne spécifie pas explicitement d'<xref:System.UriTemplate>, l'opération attend le passage de la chaîne d'entrée à l'aide d'un paramètre de chaîne de requête mentionnant le nom `s`. Notez que le format de l'URI attendu par le service peut être personnalisé à l'aide de la propriété <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A>.  
+ L’opération `EchoWithGet` est annotée avec <xref:System.ServiceModel.Web.WebGetAttribute>, ce qui indique que l’opération traite des requêtes HTTP `GET`. Comme le <xref:System.ServiceModel.Web.WebGetAttribute> ne spécifie pas explicitement d'<xref:System.UriTemplate>, l'opération attend le passage de la chaîne d'entrée à l'aide d'un paramètre de chaîne de requête mentionnant le nom `s`. Notez que le format de l'URI attendu par le service peut être personnalisé à l'aide de la propriété <xref:System.ServiceModel.Web.WebGetAttribute.UriTemplate%2A>.  
   
  L'opération `EchoWithPost` est annotée avec <xref:System.ServiceModel.Web.WebInvokeAttribute>, ce qui indique qu'il ne s'agit pas d'une opération `GET` (elle a des effets secondaires). Comme le <xref:System.ServiceModel.Web.WebInvokeAttribute> ne spécifie pas explicitement de `Method`, l'opération traite les requêtes HTTP `POST` dont le corps contient la chaîne (au format XML, par exemple). Notez que la méthode HTTP et le format de l'URI de la requête peuvent être personnalisés à l'aide des propriétés <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> et <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate>, respectivement.  
   

@@ -3,11 +3,11 @@ title: Collections (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847462"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087373"
 ---
 # <a name="collections-visual-basic"></a>Collections (Visual Basic)
 Pour de nombreuses applications, vous voulez créer et gérer des groupes d’objets connexes. Il existe deux manières de grouper des objets : en créant des tableaux d’objets ou des collections d’objets.  
@@ -35,7 +35,7 @@ Pour de nombreuses applications, vous voulez créer et gérer des groupes d’ob
   
     -   [Classes System.Collections](#BKMK_Collections)  
   
-    -   [Classe de Collection Visual Basic](#BKMK_VisualBasic)  
+    -   [Classe de la collection Visual Basic](#BKMK_VisualBasic)  
   
 -   [Implémentation d’une collection de paires clé-valeur](#BKMK_KeyValuePairs)  
   
@@ -182,7 +182,7 @@ End Class
   
 -   Classes <xref:System.Collections>  
   
--   Visual Basic `Collection` classe  
+-   Classe `Collection` Visual Basic  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Classes System.Collections.Generic  
@@ -228,13 +228,13 @@ End Class
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Classe de la collection Visual Basic  
- Vous pouvez utiliser Visual Basic <xref:Microsoft.VisualBasic.Collection> classe d’accéder à une collection d’éléments à l’aide d’un index numérique ou une `String` clé. Vous pouvez ajouter des éléments à un objet de collection en spécifiant ou non une clé. Si vous ajoutez un élément sans clé, vous devez utiliser son index numérique pour y accéder.  
+ Vous pouvez utiliser la classe Visual Basic <xref:Microsoft.VisualBasic.Collection> pour accéder à une collection d’éléments à l’aide d’un index numérique ou d’une clé `String`. Vous pouvez ajouter des éléments à un objet de collection en spécifiant ou non une clé. Si vous ajoutez un élément sans clé, vous devez utiliser son index numérique pour y accéder.  
   
- Visual Basic `Collection` classe stocke tous ses éléments en tant que type `Object`, de sorte que vous pouvez ajouter un élément de n’importe quel type de données. Il n’existe aucun dispositif de protection contre l’ajout de types de données inappropriés.  
+ La classe Visual Basic `Collection` stocke tous ses éléments sous le type `Object`, de sorte que vous pouvez ajouter un élément de n’importe quel type de données. Il n’existe aucun dispositif de protection contre l’ajout de types de données inappropriés.  
   
- Lorsque vous utilisez Visual Basic `Collection` (classe), le premier élément dans une collection a un index de 1. Ce n’est pas le cas pour les classes de collection .NET Framework, pour lesquelles l’index de départ est 0.  
+ Quand vous utilisez la classe Visual Basic `Collection`, le premier élément d’une collection a un index égal à 1. Ce n’est pas le cas pour les classes de collection .NET Framework, pour lesquelles l’index de départ est 0.  
   
- Si possible, vous devez utiliser les collections génériques dans le <xref:System.Collections.Generic?displayProperty=nameWithType> espace de noms ou le <xref:System.Collections.Concurrent> espace de noms au lieu de Visual Basic `Collection` classe.  
+ Si possible, vous devez utiliser les collections génériques dans l’espace de noms <xref:System.Collections.Generic?displayProperty=nameWithType> ou <xref:System.Collections.Concurrent> à la place de la classe Visual Basic `Collection`.  
   
  Pour plus d'informations, consultez <xref:Microsoft.VisualBasic.Collection>.  
   

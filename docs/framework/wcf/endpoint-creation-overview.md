@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781607"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086841"
 ---
 # <a name="endpoint-creation-overview"></a>Vue d'ensemble de la création de points de terminaison
 Toutes les communications avec un service Windows Communication Foundation (WCF) s’effectue via le *points de terminaison* du service. Points de terminaison fournissent les clients à accéder aux fonctionnalités offertes par un service WCF. Cette section décrit la structure d'un point de terminaison et explique comment définir un point de terminaison dans la configuration et dans le code.  
@@ -40,7 +40,7 @@ Toutes les communications avec un service Windows Communication Foundation (WCF)
   
 -   Spécifiez une adresse de point de terminaison de `http://localhost:8000/Echo` pour le service.  
   
--   Configurez le service `Echo` à l'aide d'une liaison <xref:System.ServiceModel.WSHttpBinding>.  
+-   Configurez le service `Echo` à l’aide d’une liaison <xref:System.ServiceModel.WSHttpBinding>.  
   
 ```csharp  
 Namespace Echo  

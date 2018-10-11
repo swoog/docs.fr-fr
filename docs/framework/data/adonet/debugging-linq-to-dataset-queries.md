@@ -3,15 +3,15 @@ title: Débogage des requêtes LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266258"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087620"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Débogage des requêtes LINQ to DataSet
 
-Visual Studio prend en charge le débogage de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] code. Il y a cependant certaines différences entre le débogage de code managé [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] et non-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La plupart des fonctionnalités de débogage sont compatibles avec les instructions [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], notamment l'exécution pas à pas, la définition de points d'arrêt et la consultation des résultats dans les fenêtres du débogueur. Toutefois, différée des requêtes que l’exécution dans a des effets dont vous devez tenir compte lors du débogage [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] de code et il existe certaines limitations à l’utilisation de modifier & Continuer. Cette rubrique traite des aspects du débogage qui sont uniques à [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] par rapport aux non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] du code managé.  
+Visual Studio prend en charge le débogage de [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] code. Il y a cependant certaines différences entre le débogage de code managé [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] et non-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. La plupart des fonctionnalités de débogage sont compatibles avec les instructions [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], notamment l’exécution pas à pas, la définition de points d’arrêt et la consultation des résultats dans les fenêtres du débogueur. Toutefois, différée des requêtes que l’exécution dans a des effets dont vous devez tenir compte lors du débogage [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] de code et il existe certaines limitations à l’utilisation de modifier & Continuer. Cette rubrique traite des aspects du débogage qui sont uniques à [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] par rapport aux non -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] du code managé.  
   
 ## <a name="viewing-results"></a>Affichage des résultats  
  Vous pouvez afficher le résultat d’une [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instruction à l’aide des DataTips, de la fenêtre Espion et de la boîte de dialogue Espion express. En utilisant une fenêtre source, vous pouvez suspendre le pointeur sur une requête dans la fenêtre source pour afficher un DataTip. Vous pouvez copier une variable [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] et la coller dans la fenêtre Espion ou dans la boîte de dialogue Espion express. Dans [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], une requête n'est pas évaluée lorsqu'elle est créée ou déclarée, mais uniquement lors de son exécution. Il s’agit *exécution différée*. Par conséquent, la variable de requête ne possède de valeur que lorsqu'elle est évaluée. Pour plus d’informations, consultez [requêtes dans LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  

@@ -2,12 +2,12 @@
 title: WCF Services et suivi d'événements Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266869"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086581"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF Services et suivi d'événements Windows
 Cet exemple montre comment utiliser le traçage analytique dans Windows Communication Foundation (WCF) pour émettre des événements Event Tracing for Windows (ETW). Les traces analytiques sont des événements émis à des points clés dans la pile de WCF qui permettent la résolution des problèmes des services WCF dans un environnement de production.
@@ -34,7 +34,7 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
 
 5.  Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.
 
-     Ajoutez l'adresse du point de terminaison dans la zone d'entrée. La valeur par défaut est http://localhost:1378/Calculator.svc.
+     Ajoutez l'adresse du point de terminaison dans la zone d'entrée. La valeur par défaut est `http://localhost:1378/Calculator.svc`.
 
 6.  Ouvrez l'application Observateur d'événements.
 

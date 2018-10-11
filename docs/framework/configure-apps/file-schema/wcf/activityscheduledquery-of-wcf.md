@@ -2,12 +2,12 @@
 title: '&lt;activityScheduledQuery&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: 25f6eee1-3d98-4c39-b517-c0813f03f106
-ms.openlocfilehash: 4efd6ba13e8a54d3338c25b077477d4abdbe9ab5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9a53d72316dad0178f24e05656a4fb4531b88aec
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746236"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087763"
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; de WCF
 Représente une collection de requêtes qui permettent d’effectuer le suivi d’une activité dont l’exécution par une activité parent est planifiée. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner aux enregistrements d'une activité planifiée.  
@@ -24,7 +24,16 @@ Représente une collection de requêtes qui permettent d’effectuer le suivi d�
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml
-<tracking>     <trackingProfile name="Name">       <workflow>          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>       </workflow>     </trackingProfile></tracking>  
+<tracking>
+  <trackingProfile name="Name">
+    <workflow>
+      <activityScheduledQueries>
+        <activityScheduledQuery activityName="String"   
+                                childActivityName="String"/>
+      </activityScheduledQueries>
+    </workflow>
+  </trackingProfile>
+</tracking> 
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

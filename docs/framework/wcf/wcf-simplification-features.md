@@ -3,11 +3,11 @@ title: Fonctionnalités de simplification de WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
 ms.openlocfilehash: 2a2b1bc90729f2c8c3303c5d8ce6befc4dff3980
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847956"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087360"
 ---
 # <a name="wcf-simplification-features"></a>Fonctionnalités de simplification de WCF
 Cette rubrique décrit les nouvelles fonctionnalités qui facilitent l’écriture d’applications WCF.  
@@ -93,7 +93,7 @@ Cette rubrique décrit les nouvelles fonctionnalités qui facilitent l’écritu
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 secondes|Cette propriété détermine la durée d'authentification d'une connexion TCP à l'aide du protocole .Net Framing. Un client doit envoyer des données initiales avant que le serveur dispose de suffisamment d'informations pour exécuter l'authentification. Ce délai d'attente est volontairement plus petit que le ReceiveTimeout (10 minutes) afin que les clients non authentifiés malveillants ne conservent pas longtemps les connexions occupées au serveur. La valeur par défaut est de 30 secondes. Pour plus d’informations sur <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * nombre de processeurs|Cette propriété de niveau socket décrit le nombre de demandes en "attente d'acceptation" à mettre en file d'attente. Si la file d’attente du backlog d’écoute est remplie, les nouvelles demandes de socket sont rejetées. Pour plus d’informations sur <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * nombre de processeurs pour le transport<br /><br /> 4 \* nombre de processeurs pour SMSvcHost.exe|Cette propriété limite le nombre de canaux que le serveur peut avoir en attente sur un écouteur. Lorsque MaxPendingAccepts est trop bas, il y a un petit intervalle de temps pendant lequel tous les canaux en attente démarrent les connexions de service, mais aucun nouveau canal ne démarre d'écoute. Une connexion peut se produire pendant cet intervalle et échouera, car aucun élément ne l'attend sur le serveur. Cette propriété peut être configurée en affectant un plus grand nombre à la propriété <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>. Pour plus d’informations, consultez <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> et [configurer le Service de partage de ports Net.TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|  
-|maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * nombre de processeurs|Cette propriété détermine le nombre de connexions acceptées par un transport, mais non choisies par le répartiteur ServiceModel. Pour définir cette valeur, utilisez `MaxConnections` sur la liaison ou `maxOutboundConnectionsPerEndpoint` sur l'élément de liaison. Pour plus d’informations sur <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
+|maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * nombre de processeurs|Cette propriété détermine le nombre de connexions acceptées par un transport, mais non choisies par le répartiteur ServiceModel. Pour définir cette valeur, utilisez `MaxConnections` sur la liaison ou `maxOutboundConnectionsPerEndpoint` sur l’élément de liaison. Pour plus d’informations sur <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
 |receiveTimeout|SMSvcHost.exe|30 secondes|Cette propriété spécifie le délai d'attente pour lire les données d'encadrement TCP et effectuer la distribution de la connexion à partir des connexions sous-jacentes. Elle permet de limiter la durée pendant laquelle le service SMSvcHost.exe prend part à la lecture des données de préambule d'une connexion entrante. Pour plus d’informations, consultez [configurer le Service de partage de Port Net.TCP](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).|  
   
 > [!NOTE]

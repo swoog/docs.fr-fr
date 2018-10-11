@@ -2,12 +2,12 @@
 title: 'Procédure : configurer un service WCF hébergé par IIS avec SSL'
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493489"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086217"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Procédure : configurer un service WCF hébergé par IIS avec SSL
 Cette rubrique décrit comment installer un service WCF hébergé par IIS pour utiliser la sécurité de transport HTTP. La sécurité de transport HTTP requiert un certificat SSL à enregistrer avec IIS. Si vous n'avez pas de certificat SSL, vous pouvez utiliser IIS pour générer un certificat de test. Vous devez ensuite ajouter une liaison SSL au site Web et configurer les propriétés d'authentification du site Web. Enfin, vous devez configurer le service WCF pour utiliser HTTPS.  
@@ -16,7 +16,7 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
   
 1.  Ouvrez le Gestionnaire des services IIS (inetmgr.exe), puis choisissez le nom de votre ordinateur dans l'arborescence à gauche. Du côté droit de l'écran, sélectionnez Certificats de serveur.  
   
-     ![Écran d’accueil du Gestionnaire des services Internet](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
+     ![Écran d’accueil IIS Manager](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
 2.  Dans la fenêtre certificats de serveur, cliquez sur le **créer un certificat auto-signé...** Lien.  
   
@@ -24,9 +24,9 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
   
 3.  Entrez un nom convivial pour le certificat auto-signé et cliquez sur **OK**.  
   
-     ![Créer Self&#45;boîte de dialogue certificat signé](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Créer ses enregistrements&#45;boîte de dialogue certificat signé](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
-     Les détails du certificat auto-signé nouvellement créé sont maintenant affichés dans le **des certificats de serveur** fenêtre.  
+     Les détails du certificat auto-signé nouvellement créé sont maintenant affichés dans le **certificats de serveur** fenêtre.  
   
      ![Fenêtre certificat de serveur](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
@@ -44,7 +44,7 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
   
      ![Boîte de dialogue liaisons de site](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  Dans le **ajouter la liaison de Site** boîte de dialogue, sélectionnez https pour le type et le nom convivial du certificat auto-signé vous venez de créer.  
+4.  Dans le **ajouter la liaison de Site** boîte de dialogue, sélectionnez le protocole https pour le type et le nom convivial du certificat auto-signé que vous avez créé.  
   
      ![Exemple de liaison de site](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
@@ -145,7 +145,7 @@ Cette rubrique décrit comment installer un service WCF hébergé par IIS pour u
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Hébergement IIS à l’aide de code en ligne](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+* [Hébergement dans les services IIS (Internet Information Services)](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+* [Instructions relatives à l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+* [Bonnes pratiques pour l’hébergement dans Internet Information Services](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+* [Hébergement IIS à l’aide de code en ligne](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

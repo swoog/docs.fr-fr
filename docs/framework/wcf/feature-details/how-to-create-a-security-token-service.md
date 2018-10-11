@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046732"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087724"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Comment : créer un service de jeton de sécurité
 Un service de jeton de sécurité implémente le protocole défini dans la spécification WS-Trust. Ce protocole définit des formats de message et des modèles d'échange de message pour émettre, renouveler, annuler et valider des jetons de sécurité. Un service de jeton de sécurité donné fournit une ou plusieurs de ces fonctions. Cette rubrique examine le scénario le plus courant : l'implémentation de l'émission de jeton.  
   
 ## <a name="issuing-tokens"></a>Émission de jetons  
- La spécification WS-Trust définit des formats de message, basés sur l'élément de schéma XSD (XML Schema Definition) `RequestSecurityToken` et sur l'élément de schéma XSD `RequestSecurityTokenResponse` pour réaliser une émission de jetons. De plus, elle définit les URI (Uniform Resource Identifier) d'action associés. L’action associé à un URI le `RequestSecurityToken` message est http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. L’action associé à un URI le `RequestSecurityTokenResponse` message est http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ La spécification WS-Trust définit des formats de message, basés sur l'élément de schéma XSD (XML Schema Definition) `RequestSecurityToken` et sur l'élément de schéma XSD `RequestSecurityTokenResponse` pour réaliser une émission de jetons. De plus, elle définit les URI (Uniform Resource Identifier) d'action associés. L’action associé à un URI le `RequestSecurityToken` message est `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`. L’action associé à un URI le `RequestSecurityTokenResponse` message est `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`.  
   
 ### <a name="request-message-structure"></a>Structure d'un message de demande  
  La structure d'un message de demande d'émission se compose en général des éléments suivants :  
   
--   Une demande de taper l’URI avec la valeur http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Une demande de taper l’URI avec la valeur `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Un URI de type de jeton. Pour les jetons Security Assertions Markup Language (SAML) 1.1, la valeur de cet URI est http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Un URI de type de jeton. Pour les jetons Security Assertions Markup Language (SAML) 1.1, la valeur de cet URI est `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
 -   Une valeur de taille de clé qui indique le nombre de bits inclus dans la clé à associer au jeton émis.  
   
--   Un URI de type de clé. Pour les clés symétriques, la valeur de cet URI est http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Un URI de type de clé. Pour les clés symétriques, la valeur de cet URI est `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  De plus, plusieurs autres éléments peuvent être présents :  
   

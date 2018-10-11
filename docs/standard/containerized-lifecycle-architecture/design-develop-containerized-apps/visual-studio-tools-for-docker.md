@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/12/2018
 ms.custom: vs-dotnet
-ms.openlocfilehash: faae4b3e3ef96d1d8dd73b7ac313b0a5deffec34
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c58c680c6500bc3b9adec50e18c26af3329122c9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838232"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086386"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>À l’aide de Visual Studio Tools pour Docker (Visual Studio sur Windows)
 
@@ -76,12 +76,15 @@ Figure 4-30 : Options des outils Docker
 
 Le tableau suivant peut vous aider à décider comment définir ces options.
 
-| Name | Paramètre par défaut | Description |
-| -----|:---------------:| ----------- |
-| Extraire automatiquement des images Docker nécessaires lors du chargement du projet | Activé | Pour augmenter les performances lors du chargement des projets, Visual Studio démarre une opération d’extraction de Docker en arrière-plan afin que lorsque vous êtes prêt à exécuter votre code, l’image est déjà téléchargée ou en cours de téléchargement. Si vous êtes simplement charger les projets et parcourez le code, vous pouvez désactiver cette option pour éviter le téléchargement des images de conteneur que vous n’avez pas besoin. |
-| Démarrer automatiquement les conteneurs en arrière-plan | Activé | À nouveau pour de meilleures performances, Visual Studio crée un conteneur avec les montages de volume prêt pour lorsque vous générez et exécutez votre conteneur. Si vous souhaitez contrôler la création de votre conteneur, désactivez cette option. |
-| Ferment automatiquement les conteneurs kill sur la solution | Activé | Désactiver cette option si vous souhaitez que les conteneurs de votre solution continuer à exécuter après la fermeture de la solution ou de fermeture de Visual Studio. |
-| Ne demande pas de certificat SSL localhost approbation | Off | Visual Studio continue à l’invite pour les nouveaux projets, même après que le certificat SSL a été approuvé pour un projet antérieur. Vous pouvez définir cette case à cocher afin d’éviter l’invite lorsque vous ouvrez d’autres projets. |
+| Name | Paramètre par défaut | S'applique à | Description |
+| -----|:---------------:|:----------:| ----------- |
+| Extraire automatiquement des images Docker nécessaires lors du chargement du projet | Activé | Docker Compose | Pour augmenter les performances lors du chargement des projets, Visual Studio démarre une opération d’extraction de Docker en arrière-plan afin que lorsque vous êtes prêt à exécuter votre code, l’image est déjà téléchargée ou en cours de téléchargement. Si vous êtes simplement charger les projets et parcourez le code, vous pouvez désactiver cette option pour éviter le téléchargement des images de conteneur que vous n’avez pas besoin. |
+| Démarrer automatiquement les conteneurs en arrière-plan | Activé | Docker Compose | À nouveau pour de meilleures performances, Visual Studio crée un conteneur avec les montages de volume prêt pour lorsque vous générez et exécutez votre conteneur. Si vous souhaitez contrôler la création de votre conteneur, désactivez cette option. |
+| Ferment automatiquement les conteneurs kill sur la solution | Activé | Docker Compose | Désactiver cette option si vous souhaitez que les conteneurs de votre solution continuer à exécuter après la fermeture de la solution ou de fermeture de Visual Studio. |
+| Ne demande pas de certificat SSL localhost approbation | Off | Projets ASP.NET Core 2.1 | Si le certificat SSL localhost n’est pas approuvé, Visual Studio vous invite chaque fois que vous exécutez votre projet, sauf si cette case à cocher est activée. |
+
+> [!WARNING]
+> Si le certificat SSL localhost n’est pas approuvé et que vous cochez la case pour supprimer l’invite, les demandes web HTTPS peuvent échouer lors de l’exécution dans votre application ou service. Dans ce cas, désactivez le **ne pas demander** case à cocher, exécuter votre projet et indiquer l’approbation à l’invite.
 
 **Plus d’informations :** pour plus d’informations sur la mise en œuvre des services et l’utilisation de Visual Studio Tools pour Docker, lisez les articles suivants :
 

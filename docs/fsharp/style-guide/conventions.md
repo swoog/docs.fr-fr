@@ -2,12 +2,12 @@
 title: 'Conventions de codage F #'
 description: 'Découvrez les idiomes et des recommandations générales lors de l’écriture de code F #.'
 ms.date: 05/14/2018
-ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237398"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087386"
 ---
 # <a name="f-coding-conventions"></a>Conventions de codage F #
 
@@ -420,7 +420,7 @@ Cette technique ne doit pas être appliquée universellement à votre base de co
 
 F # offre plusieurs options pour [contrôle d’accès](../language-reference/access-control.md), hérité de ce qui est disponible dans le runtime .NET. Ils ne sont pas simplement utilisables pour les types : vous pouvez les utiliser pour les fonctions, trop.
 
-* Préférez non -`public` types et membres jusqu'à ce que vous avez besoin pour être utilisable publiquement. Cela réduit également les deux consommateurs à
+* Préférez non -`public` types et membres jusqu'à ce que vous avez besoin pour être utilisable publiquement. Cela réduit également les deux consommateurs à.
 * Vous efforcer de garder toutes les fonctionnalités d’assistance `private`.
 * Envisagez d’utiliser `[<AutoOpen>]` sur un module privé de fonctions d’assistance si elles sont nombreuses.
 
