@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-ms.openlocfilehash: 03c2ffc37bc6c2e820b8e28599f415cde1be9be5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4031ff08bee945f019974ad590e9b3df6d9c263c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521955"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086230"
 ---
 # <a name="events-c-programming-guide"></a>Événements (Guide de programmation C#)
 Les événements permettent à une [classe](../../../csharp/language-reference/keywords/class.md) ou à un objet de notifier d’autres classes ou objets quand quelque chose de significatif se produit. La classe qui envoie (ou *déclenche*) l’événement est appelée *publieur* et les classes qui reçoivent (ou *gèrent*) l’événement sont appelées *abonnés*.  
@@ -43,8 +43,6 @@ Les événements permettent à une [classe](../../../csharp/language-reference/k
 -   [Comment : déclencher les événements de la classe de base dans les classes dérivées](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)  
   
 -   [Guide pratique d’implémentation d’événements d’interface](../../../csharp/programming-guide/events/how-to-implement-interface-events.md)  
-  
--   [Synchronisation des threads](../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)  
   
 -   [Comment : utiliser un dictionnaire pour stocker des instances d’événements](../../../csharp/programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md)  
   
