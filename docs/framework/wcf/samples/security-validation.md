@@ -5,7 +5,7 @@ ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 ms.openlocfilehash: 4b80457fb551c2ee99f910710c5f30fa59c53a01
 ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/11/2018
 ms.locfileid: "49087737"
