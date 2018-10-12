@@ -5,11 +5,11 @@ helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
 ms.openlocfilehash: 45c245b886c8b113ed49972f1ba94caa01330eb2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847969"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121851"
 ---
 # <a name="ltbasichttpbindinggt"></a>&lt;basicHttpBinding&gt;
 Représente une liaison qu’un service Windows Communication Foundation (WCF) peut utiliser pour configurer et exposer des points de terminaison capables de communiquer avec des clients et services web basés sur ASMX, ainsi qu’avec d’autres services conformes au profil WS-I Basic Profile 1.1.  
@@ -71,8 +71,8 @@ Représente une liaison qu’un service Windows Communication Foundation (WCF) p
 |`maxBufferSize`|Entier qui spécifie la taille maximale, en octets, d'une mémoire tampon qui stocke des messages pendant qu'ils sont traités pour un point de terminaison configuré avec cette liaison. La valeur par défaut est de 65 536 octets.|  
 |`maxReceivedMessageSize`|Entier positif qui définit la taille maximale du message, en octets, y compris les en-têtes d'un message pouvant être reçu sur un canal configuré avec cette liaison. L'expéditeur reçoit une erreur SOAP si le message est trop grand pour le récepteur. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65 536 octets.|  
 |`messageEncoding`|Définit l'encodeur utilisé pour encoder le message SOAP. Les valeurs valides sont les suivantes :<br /><br /> -Text : Utiliser un encodeur de message texte.<br />-Mtom : Utiliser un encodeur Message Transmission Organization Mechanism 1.0 (MTOM).<br /><br /> La valeur par défaut est Text. Cet attribut est de type <xref:System.ServiceModel.WSMessageEncoding>.|  
-|`name`|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Chaque liaison porte un `name` et a un attribut `namespace` qui l'identifient de façon unique dans les métadonnées du service. De plus, ce nom est unique parmi les liaisons du même type. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|`namespace`|Spécifie l’espace de noms XML de la liaison. La valeur par défaut est « http://tempuri.org/Bindings ». Chaque liaison porte un `name` et a un attribut `namespace` qui l'identifient de façon unique dans les métadonnées du service.|  
+|`name`|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Chaque liaison porte un `name` et a un attribut `namespace` qui l'identifient de façon unique dans les métadonnées du service. De plus, ce nom est unique parmi les liaisons du même type. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`namespace`|Spécifie l’espace de noms XML de la liaison. La valeur par défaut est « http://tempuri.org/Bindings ». Chaque liaison porte un `name` et a un attribut `namespace` qui l’identifient de façon unique dans les métadonnées du service.|  
 |`openTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |`proxyAddress`|URI qui contient l'adresse du proxy HTTP. Si `useSystemWebProxy` a la valeur `true` ce paramètre doit avoir la valeur `null`. La valeur par défaut est `null`.|  
 |`receiveTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:10:00.|  
@@ -100,7 +100,7 @@ Représente une liaison qu’un service Windows Communication Foundation (WCF) p
  Sécurité est désactivée par défaut, mais peut être ajoutée en affectant l’attribut mode de le [ \<sécurité >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) élément enfant à une valeur autre que `None`. Par défaut, il utilise un encodage de message "Texte" et un encodage texte UTF-8.  
   
 ## <a name="example"></a>Exemple  
- L'exemple suivant montre l'utilisation de <xref:System.ServiceModel.BasicHttpBinding> qui fournit la communication HTTP et l'interopérabilité maximale avec les services Web de première et seconde génération. La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié à l'aide de l'attribut `binding` de l'élément `<endpoint>`. Si vous souhaitez configurer la liaison de base et modifier certains de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom en utilisant l'attribut `bindingConfiguration` de l'élément `<endpoint>`, comme présenté dans le code de configuration suivant pour le service.  
+ L'exemple suivant montre l'utilisation de <xref:System.ServiceModel.BasicHttpBinding> qui fournit la communication HTTP et l'interopérabilité maximale avec les services Web de première et seconde génération. La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié à l'aide de l'attribut `binding` de l'élément `<endpoint>`. Si vous souhaitez configurer la liaison de base et modifier certains de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom en utilisant l’attribut `bindingConfiguration` de l’élément `<endpoint>`, comme présenté dans le code de configuration suivant pour le service.  
   
 ```xml  
 <system.serviceModel>   
@@ -138,7 +138,7 @@ Représente une liaison qu’un service Windows Communication Foundation (WCF) p
 ```  
   
 ## <a name="example"></a>Exemple  
- Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Les fonctionnalités de l’exemple précédent peuvent être obtenues en supprimant le bindingConfiguration de l’adresse du point de terminaison et le nom de la liaison.  
+ Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Les fonctionnalités de l’exemple précédent peuvent être obtenues en supprimant le bindingConfiguration de l’adresse du point de terminaison et le nom de la liaison.  
   
 ```xml  
 <system.serviceModel>   

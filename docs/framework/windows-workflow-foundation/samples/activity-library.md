@@ -3,11 +3,11 @@ title: Bibliothèque d'activités
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
 ms.openlocfilehash: 7e8777d0068e6cca9c9324a6fd2668e6ff9e9da7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844018"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123122"
 ---
 # <a name="activity-library"></a>Bibliothèque d'activités
 Cette section contient des exemples qui illustrent des activités personnalisées avancées dans Windows Workflow Foundation (WF).  
@@ -18,7 +18,7 @@ Cette section contient des exemples qui illustrent des activités personnalisée
  Montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow.  
   
  [ParallelForEach limité](../../../../docs/framework/windows-workflow-foundation/samples/throttled-parallel-foreach.md)  
- Montre comment l'activité `ThrottleParallelForEach` est semblable à l'activité <xref:System.Activities.Statements.ParallelForEach%601> hormis le seul fait qu'elle permet la définition d'un facteur de concurrence pour restreindre le nombre de branches simultanées à exécuter.
+ Montre comment l’activité `ThrottleParallelForEach` est semblable à l’activité <xref:System.Activities.Statements.ParallelForEach%601> hormis le seul fait qu’elle permet la définition d’un facteur de concurrence pour restreindre le nombre de branches simultanées à exécuter.
   
  [Activités d’accès aux bases de données](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  Montre comment créer des activités qui permettent l’accès aux bases de données pour récupérer ou modifier les informations et utilisez [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) pour accéder à la base de données.  

@@ -3,11 +3,11 @@ title: X.509 Certificate Validator
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: ece96c04245434853169c458f8f0c0ebe91da724
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580587"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123421"
 ---
 # <a name="x509-certificate-validator"></a>X.509 Certificate Validator
 Cet exemple montre comment implémenter un validateur de certificat X.509 personnalisé. Cela s’avère utile dans les cas où aucun des modes de validation de certificat X.509 intégrés ne convient aux spécifications de l’application. Cet exemple illustre un service qui possède un validateur personnalisé qui accepte les certificats auto-émis. Le client utilise un certificat X.509 pour s'authentifier auprès du service.
@@ -317,7 +317,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 3.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -335,7 +335,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 7.  Copiez le fichier Service.cer du répertoire de service vers le répertoire client sur l'ordinateur client.  
   
-8.  Sur le client, ouvrez une fenêtre d'invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez `setup.bat client`. L'exécution de `setup.bat` à l'aide de l'argument `client` crée un certificat client appelé client.com, puis exporte ce certificat vers un fichier nommé Client.cer.  
+8.  Sur le client, ouvrez une fenêtre d'invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez `setup.bat client`. L’exécution de `setup.bat` à l’aide de l’argument `client` crée un certificat client appelé client.com, puis exporte ce certificat vers un fichier nommé Client.cer.  
   
 9. Dans le fichier Client.exe.config de l'ordinateur client, modifiez la valeur d'adresse du point de terminaison afin qu'elle corresponde à la nouvelle adresse de votre service. Pour ce faire, remplacez localhost par le nom de domaine complet du serveur.  
   
@@ -347,7 +347,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
   
 13. Sur l'ordinateur serveur, lancez Service.exe à partir de la fenêtre d'invite de commandes.  
   
-14. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

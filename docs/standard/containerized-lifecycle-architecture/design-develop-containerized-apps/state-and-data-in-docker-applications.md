@@ -4,18 +4,18 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 78db191bdec4c25c11728d819d89eaaaff4bd7da
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586036"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123226"
 ---
 # <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
 Une primitive de conteneurs est immuabilité. Par rapport à une machine virtuelle, les conteneurs ne disparaissent en tant qu’une occurrence courante. Une machine virtuelle peut échouer dans différentes formes à partir des processus obsolètes, surcharge de l’UC ou un disque complet ou ayant échoué. Pourtant, nous pensons que la machine virtuelle soit disponible et disques RAID sont très courants pour vous assurer de défaillances de disque conserver les données.
 
-Toutefois, les conteneurs sont considérés être des instances de processus. Un processus ne conserve pas état durable. Même si un conteneur peut écrire dans son stockage local, en supposant que cette instance sera présente indéfiniment serait équivalente à en supposant qu'une copie unique de mémoire pourra perdurer. Vous devez supposer que les conteneurs, comme les processus, sont dupliqués, arrêté, ou quand gérée avec un orchestrateur de conteneurs, ils peuvent être déplacés.
+Toutefois, les conteneurs sont considérés être des instances de processus. Un processus ne conserve pas état durable. Même si un conteneur peut écrire dans son stockage local, en supposant que l’instance sera présente indéfiniment serait équivalente à en supposant qu'une copie unique de mémoire pourra perdurer. Vous devez supposer que les conteneurs, comme les processus, sont dupliqués, arrêté, ou quand gérée avec un orchestrateur de conteneurs, ils peuvent être déplacés.
 
 Docker utilise une fonctionnalité appelée un *système de fichiers de superposition* pour implémenter un processus de copie sur écriture qui stocke une informations mises à jour au système de fichiers racine d’un conteneur, par rapport à l’image d’origine sur lequel il est basé. Ces modifications sont perdues si le conteneur est supprimé par la suite à partir du système. Un conteneur, par conséquent, n’a pas le stockage persistant par défaut. Bien qu’il soit possible d’enregistrer l’état d’un conteneur, conception d’un système de contourner ce problème serait en conflit avec le principe de l’architecture de conteneur.
 

@@ -1,13 +1,13 @@
 ---
 title: Programmation asynchrone
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123655"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
@@ -23,15 +23,16 @@ Cette rubrique décrit la prise en charge pour la programmation asynchrone dans 
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  Cette fonctionnalité est conservée dans SqlClient dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
-  
- À partir de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], ces méthodes ne requièrent plus `Asynchronous Processing=true` dans la chaîne de connexion.  
+
+> [!TIP]
+> À compter de la [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], ces méthodes héritées n’ont plus besoin `Asynchronous Processing=true` dans la chaîne de connexion.  
   
 ## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Fonctionnalités de programmation asynchrones ajoutées dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  La nouvelle fonctionnalité de programmation asynchrone fournit une technique simple pour rendre le code asynchrone.  
   
- Pour plus d'informations sur la fonctionnalité de programmation asynchrone qui a été introduite dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], consultez :  
+ Pour plus d’informations sur la fonctionnalité de programmation asynchrone qui a été introduite dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], consultez :  
   
-- [Programmation asynchrone en c#](../../../csharp/async.md)
+- [Programmation asynchrone en C#](../../../csharp/async.md)
 
 - [Programmation asynchrone avec Async et Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -43,7 +44,7 @@ Cette rubrique décrit la prise en charge pour la programmation asynchrone dans 
   
  Vous pouvez maintenant appeler des méthodes asynchrones sans utiliser de rappels, et sans fractionner votre code entre plusieurs méthodes ou expressions lambda.  
   
- Le modificateur `async` spécifie qu'une méthode est asynchrone. Lors de l'appel d'une méthode `async`, une tâche est retournée. Lorsque le `await` opérateur est appliqué à une tâche, la méthode actuelle se termine immédiatement. Lorsque la tâche se termine, l’exécution reprend dans la même méthode.
+ Le modificateur `async` spécifie qu'une méthode est asynchrone. Lors de l’appel d’une méthode `async`, une tâche est retournée. Lorsque le `await` opérateur est appliqué à une tâche, la méthode actuelle se termine immédiatement. Lorsque la tâche se termine, l’exécution reprend dans la même méthode.
   
 > [!WARNING]
 >  Les appels asynchrones ne sont pas pris en charge si une application utilise également le mot clé de chaîne de connexion `Context Connection`.  
@@ -87,6 +88,9 @@ Cette rubrique décrit la prise en charge pour la programmation asynchrone dans 
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  Autres membres asynchrones ont été ajoutées pour prendre en charge [SqlClient de diffusion en continu prend en charge](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+
+> [!TIP]
+> Les nouvelles méthodes asynchrones ne nécessitent pas `Asynchronous Processing=true` dans la chaîne de connexion.  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Ouverture de connexion synchrone à asynchrone  
  Vous pouvez mettre à niveau une application existante afin d'utiliser la nouvelle fonctionnalité asynchrone. Par exemple, supposons qu'une application possède un algorithme de connexion synchrone et bloque le thread d'interface utilisateur chaque fois qu'elle se connecte à la base de données et, une fois connectée, l'application appelle une procédure stockée qui signale d'autres utilisateurs que celui qui vient de se connecter.  

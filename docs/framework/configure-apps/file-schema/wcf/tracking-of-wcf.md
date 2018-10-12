@@ -2,17 +2,17 @@
 title: '&lt;tracking&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: f09c8c59bf805ec7a061fba3ebfecd5fb457e402
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e033b569502bba795b5dcd1abdf9f68a726fac21
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749317"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121298"
 ---
 # <a name="lttrackinggt-of-wcf"></a>&lt;tracking&gt; de WCF
 Représente une section de configuration permettant de définir les paramètres de suivi d'un service de flux de travail.  
   
- Pour plus d’informations dans le suivi de workflow et sa configuration, consultez [suivi et traçage de Workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [configuration du suivi d’un flux de travail](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
+ Pour plus d’informations de suivi de workflow et sa configuration, consultez [suivi et traçage de Workflow](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) et [configuration du suivi d’un flux de travail](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).  
   
  \<system.serviceModel>  
 \<suivi >  
@@ -20,7 +20,59 @@ Représente une section de configuration permettant de définir les paramètres 
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml
-   <system.serviceModel>  <tracking>       <participants>       <add name="String"            profileName="String"           type="String" />      </participants>     <trackingProfile name="String">      <workflow activityDefinitionId="String">          <activityScheduledQueries>             <activityScheduledQuery activityName="String"                 childActivityName="String"/>          </activityScheduledQueries>             <activityStateQuery activityName="String" />                <arguments>                   <argument name="String"/>                </arguments>                <states>                   <state name="String"/>                </states>                <variables>                   <variable name="String"/>                </variables>          </activityStateQueries>          <bookmarkResumptionQueries>             <bookmarkResumptionQuery name="String" />          </bookmarkResumptionQueries>          <cancelRequestQueries>             <cancelRequestQuery activityName="String"                 childActivityName="String"/>          </cancelRequestQueries>          <customTrackingQueries>             <customTrackingQuery activityName="String"                 name="String"/>          </customTrackingQueries>          <faultPropagationQueries>             <faultPropagationQuery activityName="String"                 faultHandlerActivityName="String"/>          </faultPropagationQueries>         <workflowInstanceQueries>            <workflowInstanceQuery>              <states>                 <state name="String"/>              </states>          </workflowInstanceQuery>        </workflowInstanceQueries>      </workflow>    </trackingProfile>           </profiles>  </tracking></system.serviceModel>  
+<system.serviceModel>
+  <tracking>
+    <participants>
+      <add name="String" 
+           profileName="String" 
+           type="String" />
+    </participants>
+    <profiles>
+      <trackingProfile name="String">
+        <workflow activityDefinitionId="String">
+          <activityScheduledQueries>
+            <activityScheduledQuery activityName="String"       
+                                    childActivityName="String"/>
+          </activityScheduledQueries>
+          <activityStateQueries>
+            <activityStateQuery activityName="String" />
+            <arguments>
+              <argument name="String"/>
+            </arguments>
+            <states>
+              <state name="String"/>
+            </states>
+            <variables>
+              <variable name="String"/>
+            </variables>
+          </activityStateQueries>
+          <bookmarkResumptionQueries>
+            <bookmarkResumptionQuery name="String" />
+          </bookmarkResumptionQueries>
+          <cancelRequestQueries>
+            <cancelRequestQuery activityName="String" 
+                                childActivityName="String"/>
+          </cancelRequestQueries>
+          <customTrackingQueries>
+            <customTrackingQuery activityName="String" 
+                                 name="String"/>
+          </customTrackingQueries>
+          <faultPropagationQueries>
+            <faultPropagationQuery activityName="String" 
+                                   faultHandlerActivityName="String"/>
+          </faultPropagationQueries>
+          <workflowInstanceQueries>
+            <workflowInstanceQuery>
+              <states>
+                <state name="String"/>
+              </states>
+            </workflowInstanceQuery>
+          </workflowInstanceQueries>
+        </workflow>
+      </trackingProfile>
+    </profiles>
+  </tracking>
+</system.serviceModel>   
 ```
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -33,7 +85,7 @@ Représente une section de configuration permettant de définir les paramètres 
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Une collection d’éléments de configuration définissent des participants qui s’abonnent aux enregistrements de suivi. Les participants de suivi contiennent la logique nécessaire pour traiter la charge utile des enregistrements de suivi (par exemple, ils peuvent choisir d'écrire dans un fichier).|  
+|[\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|Une collection d’éléments de configuration définissent des participants qui s’abonner aux enregistrements de suivi. Les participants de suivi contiennent la logique nécessaire pour traiter la charge utile des enregistrements de suivi (par exemple, ils peuvent choisir d'écrire dans un fichier).|  
 |[\<trackingProfile >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|Modèle de suivi permettant de filtrer les enregistrements de suivi émis d'une instance de flux de travail.|  
   
 ### <a name="parent-elements"></a>Éléments parents  

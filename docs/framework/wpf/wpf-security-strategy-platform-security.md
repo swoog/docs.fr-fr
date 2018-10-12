@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 905092cfdcbcbeb95fdfa689c09a847491595d9d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1b5bada61a9d6374a1b961603fcf575199dee591
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857321"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121400"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Stratégie de sécurité de WPF - sécurité de la plateforme
 Bien que Windows Presentation Foundation (WPF) offre une variété de services de sécurité, il s’appuie également sur les fonctionnalités de sécurité de la plateforme sous-jacente, qui inclut le système d’exploitation, le [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], et [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Ces couches se combinent pour fournir à [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] un modèle de sécurité de défense en profondeur renforcé qui essaie d'éviter le moindre point de défaillance, comme cela est illustré dans l'image suivante :  
@@ -88,7 +88,7 @@ Bien que Windows Presentation Foundation (WPF) offre une variété de services d
 #### <a name="defense-in-depth-layer"></a>Couche de défense en profondeur  
  Sachant que les [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] sont généralement placées dans le bac à sable (sandbox) par le jeu d'autorisations de la zone Internet, la suppression de ces privilèges ne nuit pas aux [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] du point de vue de la compatibilité. En revanche, une couche de défense en profondeur supplémentaire est créée. Si une application sandbox peut exploiter d'autres couches et détourner le processus, celui-ci aura encore des privilèges limités.  
   
- Consultez [à l’aide d’un compte d’utilisateur de moindre privilège](https://technet.microsoft.com/library/cc700846.aspx).  
+ Consultez [à l’aide d’un compte d’utilisateur de moindre privilège](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
 <a name="Common_Language_Runtime_Security"></a>   
 ## <a name="common-language-runtime-security"></a>Sécurité du Common Language Runtime  

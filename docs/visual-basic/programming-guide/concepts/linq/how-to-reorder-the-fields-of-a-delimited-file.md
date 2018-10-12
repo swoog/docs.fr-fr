@@ -3,11 +3,11 @@ title: 'Comment : réorganiser les champs d’un fichier délimité (LINQ) (Vis
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
 ms.openlocfilehash: f9322ac9601deffd110c962a9ed8b502a02092ee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205060"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122614"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Comment : réorganiser les champs d’un fichier délimité (LINQ) (Visual Basic)
 Un fichier de valeurs séparées par des virgules (CSV) est un fichier texte qui est souvent utilisé pour stocker des données de feuille de calcul ou autres données tabulaires qui sont représentées sous forme de lignes et de colonnes. En utilisant la méthode <xref:System.String.Split%2A> pour séparer les champs, il est très facile d’interroger et de manipuler des fichiers CSV à l’aide de LINQ. En fait, la même technique peut servir à réorganiser les sections de n’importe quelle ligne de texte structurée et ne se limite donc pas aux fichiers CSV.  

@@ -3,11 +3,11 @@ title: Dépannage de la corrélation
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
 ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48793732"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121890"
 ---
 # <a name="troubleshooting-correlation"></a>Dépannage de la corrélation
 La corrélation est utilisée pour établir une relation entre des messages de service de workflow et avec l'instance de workflow appropriée, mais si elle n'est pas proprement configurée, les messages ne seront pas reçus et les applications ne fonctionneront pas correctement. Cette rubrique fournit une vue d'ensemble de plusieurs méthodes de résolution des problèmes de corrélation et présente certains problèmes courants qui peuvent se produire lorsque vous utilisez la corrélation.
@@ -119,7 +119,7 @@ host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
  Pour afficher les informations de trace qui sont contenues dans `service.svclog`, le [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) est utilisé. Celui-ci est particulièrement utile pour résoudre les problèmes de corrélation basée sur le contenu, car vous pouvez consulter le contenu des messages, voir exactement ce qui est passé, et si cela correspond au <xref:System.ServiceModel.CorrelationQuery> de la corrélation basée sur le contenu. Pour plus d’informations sur le suivi WCF, consultez [outil Service Trace Viewer (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md), [configuration du suivi](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md), et [à l’aide de suivi pour résoudre les problèmes de votre Application](../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).
 
 ## <a name="common-context-exchange-correlation-issues"></a>Problèmes courants rencontrés avec la corrélation basée sur l'échange de contextes
- Certains types de corrélation requièrent pour fonctionner correctement l'utilisation d'un type spécifique de liaison. C'est par exemple le cas de la corrélation demande-réponse, qui requiert une liaison bidirectionnelle telle que <xref:System.ServiceModel.BasicHttpBinding> et de la corrélation basée sur l'échange de contextes, qui requiert une liaison basée sur le contexte, telle que <xref:System.ServiceModel.BasicHttpContextBinding>. La plupart des liaisons prennent en charge des opérations bidirectionnelles, aussi cela ne constitue-t-il pas un problème courant pour la corrélation demande-réponse, mais il n'existe qu'une poignée de liaisons basées sur le contexte, notamment <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> et <xref:System.ServiceModel.NetTcpContextBinding>. Si l'une de ces liaisons n'est pas utilisée, l'appel initial à un service de workflow réussira, mais les appels suivants échoueront avec le <xref:System.ServiceModel.FaultException> suivant :
+ Certains types de corrélation requièrent pour fonctionner correctement l'utilisation d'un type spécifique de liaison. C'est par exemple le cas de la corrélation demande-réponse, qui requiert une liaison bidirectionnelle telle que <xref:System.ServiceModel.BasicHttpBinding> et de la corrélation basée sur l'échange de contextes, qui requiert une liaison basée sur le contexte, telle que <xref:System.ServiceModel.BasicHttpContextBinding>. La plupart des liaisons prennent en charge des opérations bidirectionnelles, aussi cela ne constitue-t-il pas un problème courant pour la corrélation demande-réponse, mais il n’existe qu’une poignée de liaisons basées sur le contexte, notamment <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> et <xref:System.ServiceModel.NetTcpContextBinding>. Si l’une de ces liaisons n’est pas utilisée, l’appel initial à un service de workflow réussira, mais les appels suivants échoueront avec le <xref:System.ServiceModel.FaultException> suivant :
 
 ```Output
 There is no context attached to the incoming message for the service
@@ -202,13 +202,13 @@ public class AddItemMessage
 }
 ```
 
- Ce contrat de message est utilisé par une activité <xref:System.ServiceModel.Activities.Receive> dans un workflow. Le `CartId` dans l'en-tête du message est utilisé pour corréler le message à l'instance correcte. Si la requête XPath qui récupère le `CartId` est créée à l'aide de boîtes de dialogue de corrélation dans le concepteur de workflow, la requête XPath incorrecte suivante est générée.
+ Ce contrat de message est utilisé par une activité <xref:System.ServiceModel.Activities.Receive> dans un workflow. Le `CartId` dans l'en-tête du message est utilisé pour corréler le message à l'instance correcte. Si la requête XPath qui récupère le `CartId` est créée à l’aide de boîtes de dialogue de corrélation dans le concepteur de workflow, la requête XPath incorrecte suivante est générée.
 
 ```
 sm:body()/xg0:AddItemMessage/xg0:CartId
 ```
 
- Cette requête XPath serait correcte si l'activité <xref:System.ServiceModel.Activities.Receive> utilisait des paramètres pour les données, mais puisqu'elle utilise un contrat de message, elle est incorrecte. La requête XPath suivante est celle qu'il faut utiliser pour récupérer le `CartId` de l'en-tête.
+ Cette requête XPath serait correcte si l’activité <xref:System.ServiceModel.Activities.Receive> utilisait des paramètres pour les données, mais puisqu’elle utilise un contrat de message, elle est incorrecte. La requête XPath suivante est celle qu’il faut utiliser pour récupérer le `CartId` de l’en-tête.
 
 ```
 sm:header()/tempuri:CartId

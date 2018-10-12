@@ -2,12 +2,12 @@
 title: Basic AJAX Service
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: d8da6469101511b6b5a9ce19a11f1e5e3fe9d83e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2218c8e062f8fe0b799213831099a112a2df732b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524881"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121010"
 ---
 # <a name="basic-ajax-service"></a>Basic AJAX Service
 Cet exemple montre comment utiliser Windows Communication Foundation (WCF) pour créer un service ASP.NET Asynchronous JavaScript and XML (AJAX) base (service que vous pouvez accéder à l’aide de code JavaScript à partir d’un client de navigateur Web). L'attribut <xref:System.ServiceModel.Web.WebGetAttribute> est utilisé afin de garantir que le service répond aux requêtes HTTP GET et que ce service utilise le format de données JSON (JavaScript Object Notation) pour les réponses.  
@@ -29,7 +29,7 @@ public interface ICalculator
 }
 ```
 
- Le fichier d'exemple .svc utilise <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, qui ajoute un point de terminaison standard <xref:System.ServiceModel.Description.WebScriptEndpoint> au service. Ce point de terminaison est configuré à une adresse vide relative au fichier .svc. Cela signifie que l’adresse du service est http://localhost/ServiceModelSamples/service.svc, sans autre suffixe autres que le nom de l’opération.  
+ Le fichier d'exemple .svc utilise <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>, qui ajoute un point de terminaison standard <xref:System.ServiceModel.Description.WebScriptEndpoint> au service. Ce point de terminaison est configuré à une adresse vide relative au fichier .svc. Cela signifie que l’adresse du service est `http://localhost/ServiceModelSamples/service.svc`, sans autre suffixe autres que le nom de l’opération.  
 
 ```svc
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
@@ -48,7 +48,7 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- Le <xref:System.ServiceModel.Description.WebScriptEndpoint> affecte au format de données par défaut du service la valeur JSON au lieu de XML. Pour appeler le service, accédez à http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 après la fin de l’ensemble des étapes et de génération indiqués plus loin dans cette rubrique. L'utilisation d'une requête HTTP GET active cette fonctionnalité de test.  
+ Le <xref:System.ServiceModel.Description.WebScriptEndpoint> affecte au format de données par défaut du service la valeur JSON au lieu de XML. Pour appeler le service, accédez à `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` après la fin de l’ensemble des étapes et de génération indiqués plus loin dans cette rubrique. L'utilisation d'une requête HTTP GET active cette fonctionnalité de test.  
   
  La page Web PostAjaxClientPage.aspx du client contient le code ASP.NET permettant d'appeler le service à chaque fois que l'utilisateur clique sur l'un des boutons d'opération de cette page. Le contrôle `ScriptManager` est utilisé pour permettre l'accès à un proxy du service via JavaScript.  
 

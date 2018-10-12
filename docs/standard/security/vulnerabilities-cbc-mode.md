@@ -4,12 +4,12 @@ description: Apprenez à détecter et atténuer les vulnérabilités de minutage
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 6d16b6849bfd4744f1828cda38a537f842243c1d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840520"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123642"
 ---
 # <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>Vulnérabilités de minutage avec déchiffrement symétrique en mode CBC à l’aide de la marge intérieure
 
@@ -65,7 +65,7 @@ Historiquement, il a été consensus qu’il est important de chiffrer et authen
 
 Une classe de vulnérabilités appelé « remplissage oracle attaques » ont été identifiés existe depuis plus de 10 ans. Ces vulnérabilités permettent à une personne malveillante de déchiffrer les données chiffrées par bloc symétriques algorithmes, tels que AES et 3DES, à l’aide de tentatives de ne plus de 4 096 par bloc de données. Assurez-vous de supprimer ces vulnérabilités utilisation du fait que les chiffrements par bloc les plus fréquemment utilisés avec des données de remplissage vérifiable à la fin. Il a été trouvé si une personne malveillante peut falsifier le texte chiffré et déterminer si les risques de falsification a entraîné une erreur dans le format de la marge intérieure à la fin, l’attaquant peut déchiffrer les données.
 
-Initialement, les attaques pratiques étaient basés sur les services qui retournent les codes d’erreur différents en fonction de remplissage intervenue valide, telle que la vulnérabilité ASP.NET [MS10-070](https://technet.microsoft.com/library/security/ms10-070.aspx). Toutefois, Microsoft estime maintenant qu’il est pratique de mener des attaques similaires à l’aide uniquement les différences de minutage entre le traitement de remplissage valide et non valide.
+Initialement, les attaques pratiques étaient basés sur les services qui retournent les codes d’erreur différents en fonction de remplissage intervenue valide, telle que la vulnérabilité ASP.NET [MS10-070](/security-updates/SecurityBulletins/2010/ms10-070). Toutefois, Microsoft estime maintenant qu’il est pratique de mener des attaques similaires à l’aide uniquement les différences de minutage entre le traitement de remplissage valide et non valide.
 
 Condition que le schéma de chiffrement utilise une signature et que la vérification de signature est effectuée avec un runtime fixe pour une longueur donnée de données (quel que soit le contenu), l’intégrité des données peut être vérifiée sans émettre de toutes les informations à un attaquant via un [canal latéral](https://en.wikipedia.org/wiki/Side-channel_attack). Étant donné que la vérification d’intégrité rejette les messages falsifiés, la menace d’oracle de remplissage est atténuée.
 

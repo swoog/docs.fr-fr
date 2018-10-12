@@ -3,11 +3,11 @@ title: '&lt;trackingProfile&gt; de WCF'
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
 ms.openlocfilehash: a11086ef07a2a605f3889bc4077d25e0b7748e5e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087659"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120919"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>&lt;trackingProfile&gt; de WCF
 Représente une section de configuration pour la création d’un abonnement pour le suivi des enregistrements dans un participant de suivi de workflow. Un modèle de suivi contient des requêtes de suivi qui permettent à un participant au suivi de s'abonner à des événements de flux de travail émis lorsque l'état d'une instance de flux de travail change au moment de l'exécution. Les requêtes définies dans la section de modèle de suivi déterminent les types d'événements retournés par l'abonnement.  

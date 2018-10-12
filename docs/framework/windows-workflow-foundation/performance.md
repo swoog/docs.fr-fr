@@ -2,12 +2,12 @@
 title: Performances de Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: c7dc098eee5f17e18f76c0b54a097a22f5d844b1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 78e9ac1cc350fe8c04222b2698569412961d3b52
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873691"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123811"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Performances de Windows Workflow Foundation 4
 Dustin Metzgar
@@ -287,7 +287,7 @@ public sealed class CompensableActivityEmptyCompensation : CodeActivity
  Même dans le cas de workflows complexes avec de nombreux niveaux de profondeur et un grand nombre d'activités, les résultats des performances sont cohérents avec d'autres nombres de débit indiqués plus haut dans cet article.  Le débit de WF4 est beaucoup plus rapide et doit être comparé sur une échelle logarithmique.
 
 ### <a name="memory"></a>Mémoire
- La charge mémoire de Windows Workflow Foundation est mesurée dans deux domaines clés : complexité de workflow et nombre de définitions de workflow.  Les mesures de mémoire proviennent d'une station de travail Windows 7 64 bits.  Il existe de nombreuses façons d’obtenir la mesure de l’utilisation de taille de jeu telles que la surveillance des compteurs de performances, interrogation d’Environment.WorkingSet ou à l’aide d’un outil comme VMMap disponible sur [VMMap](https://technet.microsoft.com/sysinternals/dd535533.aspx). Une combinaison de méthodes a été utilisée pour obtenir et vérifier les résultats de chaque test.
+ La charge mémoire de Windows Workflow Foundation est mesurée dans deux domaines clés : complexité de workflow et nombre de définitions de workflow.  Les mesures de mémoire proviennent d'une station de travail Windows 7 64 bits.  Il existe de nombreuses façons d’obtenir la mesure de l’utilisation de taille de jeu telles que la surveillance des compteurs de performances, interrogation d’Environment.WorkingSet ou à l’aide d’un outil comme VMMap disponible sur [VMMap](/sysinternals/downloads/vmmap). Une combinaison de méthodes a été utilisée pour obtenir et vérifier les résultats de chaque test.
 
 ### <a name="workflow-complexity-test"></a>Test de complexité de workflow
  Les test de complexité de workflow mesure la différence du jeu de travail en fonction de la complexité du workflow.  Outre les workflows complexes utilisés dans la section précédente, de nouvelles variations sont ajoutées pour couvrir deux cas de base : un workflow à activité unique et une séquence avec 1 000 activités.  Pour ces tests, les workflows sont initialisés et exécutés jusqu'à la fin dans une boucle sérielle unique pour une période d'une minute.  Chaque variation de test est exécutée trois fois et les données enregistrées correspondent à la moyenne de ces trois exécutions.

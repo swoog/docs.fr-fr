@@ -2,12 +2,12 @@
 title: Addressing
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 6f2ab732fd5758358c7347087694cab8d56703bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 0e18039db51a1060661b435640c356fd0610a68a
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468363"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123200"
 ---
 # <a name="addressing"></a>Addressing
 Cet exemple illustre les divers aspects et fonctionnalités des adresses de point de terminaison. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Dans cet exemple, le service est auto-hébergé. Le client et le service sont tous les deux des applications console. Le service définit plusieurs points de terminaison en utilisant à la fois des adresses de point de terminaison absolues et relatives.  
@@ -40,7 +40,7 @@ Cet exemple illustre les divers aspects et fonctionnalités des adresses de poin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Dans ce cas de figure, l'adresse relative est vide (""). Par conséquent, l'adresse de point de terminaison correspond à l'adresse de base. L’adresse de point de terminaison réel est http://localhost:8000/servicemodelsamples/service.  
+ Dans ce cas de figure, l'adresse relative est vide (""). Par conséquent, l'adresse de point de terminaison correspond à l'adresse de base. L’adresse de point de terminaison réel est `http://localhost:8000/servicemodelsamples/service`.
   
  La deuxième définition de point de terminaison spécifie également une adresse relative, comme affiché dans l'exemple de configuration suivant.  
   
@@ -53,7 +53,7 @@ Cet exemple illustre les divers aspects et fonctionnalités des adresses de poin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'adresse relative, "test", est ajoutée à l'adresse de base. L’adresse de point de terminaison réel est http://localhost:8000/servicemodelsamples/service/test.  
+ L'adresse relative, "test", est ajoutée à l'adresse de base. L’adresse de point de terminaison réel est `http://localhost:8000/servicemodelsamples/service/test`.
   
  La troisième définition de point de terminaison spécifie une adresse absolue, comme affiché dans l'exemple de configuration suivant.  
   
@@ -63,9 +63,9 @@ Cet exemple illustre les divers aspects et fonctionnalités des adresses de poin
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- L'adresse de base ne joue aucun rôle dans l'adresse. L’adresse de point de terminaison réel est http://localhost:8001/hello/servicemodelsamples.  
+ L'adresse de base ne joue aucun rôle dans l'adresse. L’adresse de point de terminaison réel est `http://localhost:8001/hello/servicemodelsamples`.
   
- La quatrième adresse de point de terminaison spécifie une adresse absolue et un transport différent - TCP. L'adresse de base ne joue aucun rôle dans l'adresse. La véritable adresse de point de terminaison est net.tcp://localhost:9000/servicemodelsamples/service.  
+ La quatrième adresse de point de terminaison spécifie une adresse absolue et un transport différent - TCP. L'adresse de base ne joue aucun rôle dans l'adresse. L’adresse de point de terminaison réel est `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  

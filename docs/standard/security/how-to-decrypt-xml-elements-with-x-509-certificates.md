@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25a2fb441269508402263e103a6c6e1be2635406
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 72630fce122c2b0acadb074724ed41394695f2c6
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199789"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122368"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Comment : déchiffrer des éléments XML avec les certificats X.509
-Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour chiffrer et déchiffrer un élément d'un document XML.  Le chiffrement XML est une méthode normalisée qui permet d'échanger et de stocker des données XML chiffrées sans que celles-ci ne puissent être lues facilement.  Pour plus d’informations sur la norme de chiffrement XML, consultez la spécification du World Wide Web Consortium (W3C) pour le chiffrement XML situé dans http://www.w3.org/TR/xmldsig-core/.  
+Vous pouvez utiliser les classes de l'espace de noms <xref:System.Security.Cryptography.Xml> pour chiffrer et déchiffrer un élément d'un document XML.  Le chiffrement XML est une méthode normalisée qui permet d'échanger et de stocker des données XML chiffrées sans que celles-ci ne puissent être lues facilement.  Pour plus d’informations sur la norme de chiffrement XML, consultez la spécification du World Wide Web Consortium (W3C) pour le chiffrement XML situé dans <https://www.w3.org/TR/xmldsig-core/>.  
   
  Cet exemple déchiffre un élément XML qui a été chiffré à l’aide des méthodes décrites dans : [Comment : chiffrer des éléments XML avec les certificats X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Il recherche un élément <`EncryptedData`>, le déchiffre, puis le remplace par l'élément XML en texte brut d'origine.  
   
