@@ -4,12 +4,12 @@ description: Déploiement d’une application .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/03/2018
-ms.openlocfilehash: 2ef63ebd737739b2c8e671d982c3844135689ab4
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277156"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836626"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 

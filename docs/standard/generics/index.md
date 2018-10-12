@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5e5aea783640a2aa2c9f4fa7754b9a3a435d1f13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579065"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584141"
 ---
 # <a name="generics-in-net"></a>Génériques en .NET
 
@@ -115,7 +115,7 @@ ms.locfileid: "33579065"
   
 -   Les délégués génériques permettent d'effectuer des rappels de type sécurisé sans avoir à créer plusieurs classes déléguées. Par exemple, le délégué générique <xref:System.Predicate%601> permet de créer une méthode qui implémente vos propres critères de recherche pour un type particulier et d'utiliser votre méthode avec les méthodes du type <xref:System.Array> telles que <xref:System.Array.Find%2A>, <xref:System.Array.FindLast%2A>et <xref:System.Array.FindAll%2A>.  
   
--   Les génériques simplifient le code généré dynamiquement. Quand vous utilisez des génériques avec du code généré dynamiquement, vous n'avez pas besoin de générer le type. Cela permet d'augmenter le nombre de scénarios dans lesquels vous pouvez utiliser des méthodes dynamiques légères au lieu de générer des assemblys entiers. Pour plus d'informations, consultez "Comment définir et exécuter des méthodes dynamiques".  
+-   Les génériques simplifient le code généré dynamiquement. Quand vous utilisez des génériques avec du code généré dynamiquement, vous n'avez pas besoin de générer le type. Cela permet d'augmenter le nombre de scénarios dans lesquels vous pouvez utiliser des méthodes dynamiques légères au lieu de générer des assemblys entiers. Pour plus d'informations, consultez [Guide pratique pour définir et exécuter des méthodes dynamiques](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md) et <xref:System.Reflection.Emit.DynamicMethod>.  
   
  Voici quelques-unes des limitations des génériques :  
   

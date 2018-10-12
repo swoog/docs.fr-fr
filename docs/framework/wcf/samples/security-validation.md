@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 ms.openlocfilehash: 4b80457fb551c2ee99f910710c5f30fa59c53a01
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844538"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087737"
 ---
 # <a name="security-validation"></a>Security Validation
 Cet exemple montre comment utiliser un comportement personnalisé pour valider des services sur un ordinateur afin de garantir qu'ils répondent à des critères spécifiques. Dans cet exemple, les services sont validés par le comportement personnalisé en analysant chaque point de terminaison sur le service et en vérifiant s’ils contiennent des éléments de liaison sécurisés. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -60,7 +60,7 @@ public void Validate(ServiceDescription serviceDescription,
 ...  
 ```  
   
- Une fois l'extension de comportement ajoutée au service, il est possible d'ajouter le comportement `endpointValidate` à la liste de comportements dans le fichier Web.config et donc, au service.  
+ Une fois l’extension de comportement ajoutée au service, il est possible d’ajouter le comportement `endpointValidate` à la liste de comportements dans le fichier Web.config et donc, au service.  
   
 ```xml  
 <behaviors>  
