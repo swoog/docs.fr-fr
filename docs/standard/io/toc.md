@@ -14,6 +14,7 @@
 ### [Composition de flux](composing-streams.md)
 ### [Guide pratique pour effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [E/S sur fichier asynchrones](asynchronous-file-i-o.md)
+## [Gestion des erreurs E/S](handling-io-errors.md)
 ## [Stockage isolé](isolated-storage.md)
 ### [Types d’isolation](types-of-isolation.md)
 ### [Obtention de magasins](how-to-obtain-stores-for-isolated-storage.md)

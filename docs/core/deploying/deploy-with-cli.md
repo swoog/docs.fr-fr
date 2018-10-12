@@ -3,13 +3,16 @@ title: Déploiement d’applications .NET Core avec les outils CLI
 description: Apprendre à déployer des applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855020"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208248"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Déploiement d’applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
 
@@ -34,13 +37,14 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
 
 1. créer le projet ;
 
-   À partir de la ligne de commande, tapez [dotnet new console](../tools/dotnet-new.md) pour créer un projet de console C# dans ce répertoire.
+   À partir de la ligne de commande, tapez [dotnet new console](../tools/dotnet-new.md) pour créer un nouveau projet console C# ou [dotnet new console -lang vb](../tools/dotnet-new.md) pour créer un nouveau projet console Visual Basic dans ce répertoire.
 
 1. Ajoutez le code source de l’application.
 
-   Ouvrez le fichier *Program.cs* dans votre éditeur et remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
+   Ouvrez le fichier *Program.cs* ou *Program.vb* dans votre éditeur, puis remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Mettez à jour les dépendances et les outils du projet.
 
@@ -55,7 +59,7 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
    Après avoir débogué et testé le programme, créez le déploiement à l’aide de la commande suivante :
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    Ceci crée une version de publication (au lieu d’une version Debug) de votre application. Les fichiers résultants sont placés dans un répertoire nommé *publish* qui se trouve dans un sous-répertoire du répertoire *bin* de votre projet.
 
@@ -101,8 +105,8 @@ L’exécution d’un déploiement autonome sans dépendances tierces implique l
 
    Ouvrez le fichier *Program.cs* dans votre éditeur et remplacez le code généré automatiquement par le code suivant. Il invite l’utilisateur à entrer du texte et affiche les différents mots entrés. Il utilise l’expression régulière `\w+` pour séparer les mots dans le texte d’entrée.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. Définissez les plateformes ciblées par votre application.
 
    Créez une balise `<RuntimeIdentifiers>` dans la section `<PropertyGroup>` de votre fichier *csproj* qui définit les plateformes ciblées par votre application, puis spécifiez l’identificateur de runtime de chaque plateforme ciblée. Notez que vous devez également ajouter un point-virgule pour séparer les identificateurs de runtime. Consultez [Catalogue des identificateurs de runtime](../rid-catalog.md) pour obtenir une liste des identificateurs de runtime.
@@ -121,6 +125,14 @@ L’exécution d’un déploiement autonome sans dépendances tierces implique l
 
    Exécutez la commande [dotnet restore](../tools/dotnet-restore.md) ([voir la remarque](#dotnet-restore-note)) pour restaurer les dépendances spécifiées dans votre projet.
 
+1. Déterminez si vous souhaitez utiliser le mode invariant de globalisation.
+
+   En particulier, si votre application cible Linux, vous pouvez réduire la taille totale de votre déploiement en tirant parti du [mode invariant de globalisation](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Le mode invariant de globalisation est utile pour les applications qui ne sont pas globalement compatibles et qui peuvent utiliser les conventions de mise en forme, les conventions de casse et la comparaison de chaînes, ainsi que l’ordre de tri de la [culture invariante](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Pour activer le mode invariant, cliquez avec le bouton droit sur le projet (pas la solution) dans l’**Explorateur de solutions**, puis sélectionnez **Modifier SCD.csproj** ou **Modifier SCD.vbproj**. Ajoutez ensuite les lignes en surbrillance suivantes au fichier :
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. Créez une build Debug de votre application.
 
    À partir de la ligne de commande, utilisez la commande [dotnet build](../tools/dotnet-build.md).
@@ -134,7 +146,7 @@ L’exécution d’un déploiement autonome sans dépendances tierces implique l
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   Ceci crée une version de publication (au lieu d’une version Debug) de votre application pour chaque plateforme cible. Les fichiers résultants sont placés dans un sous-répertoire nommé *publish* qui se trouve dans un sous-répertoire du sous-répertoire *.\bin\Release\netcoreapp1.1\<identificateur_runtime>* de votre projet. Notez que chaque sous-répertoire contient l’ensemble complet des fichiers (les fichiers de votre application et tous les fichiers .NET Core) nécessaires pour lancer votre application.
+   Ceci crée une version de publication (au lieu d’une version Debug) de votre application pour chaque plateforme cible. Les fichiers résultants sont placés dans un sous-répertoire nommé *publish* qui se trouve dans un sous-répertoire du sous-répertoire *.\bin\Release\netcoreapp2.1\<identificateur_runtime>* de votre projet. Notez que chaque sous-répertoire contient l’ensemble complet des fichiers (les fichiers de votre application et tous les fichiers .NET Core) nécessaires pour lancer votre application.
 
 En même temps que les fichiers de votre application, le processus de publication produit un fichier de base de données du programme (.pdb) qui contient des informations de débogage sur votre application. Le fichier est surtout utile pour le débogage d’exceptions. Vous pouvez choisir de ne pas l’empaqueter avec les fichiers de votre application. Vous devez toutefois l’enregistrer au cas où vous souhaiteriez déboguer la build Release de votre application.
 
@@ -146,7 +158,7 @@ Voici le fichier *csproj* complet pour ce projet.
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ Voici le fichier *csproj* complet pour ce projet :
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

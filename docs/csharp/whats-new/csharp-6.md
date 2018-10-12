@@ -3,12 +3,12 @@ title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: 5ba5d8f4cc5c7cecdda030594273324d14d1582a
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565876"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47208183"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
@@ -45,7 +45,7 @@ Globalement, ces fonctionnalités vous permettent d’écrire du code plus conci
 
 Le reste de cette rubrique fournit des détails sur chacune de ces fonctionnalités.
 
-## <a name="auto-property-enhancements"></a>Améliorations des auto-properties 
+## <a name="auto-property-enhancements"></a>Améliorations des auto-properties
 
 La syntaxe des propriétés implémentées automatiquement (généralement appelées "auto-properties") permettait de créer très facilement des propriétés qui avaient des accesseurs get et set simples :
 
@@ -88,6 +88,8 @@ public class Student
 
 Cette fonctionnalité permet une véritable prise en charge du langage pour la création de types immuables et l’utilisation de la syntaxe d’auto-property plus concise et plus pratique.
 
+Si l’ajout de cette syntaxe ne supprime pas une méthode accessible, il s’agit d’une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
+
 ### <a name="auto-property-initializers"></a>Initialiseurs d’auto-properties
 
 Les *initialiseurs d’auto-properties* vous permettent de déclarer la valeur initiale d’une auto-property dans le cadre de la déclaration de la propriété.  Dans les versions antérieures, ces propriétés devaient avoir des méthodes setter que vous deviez utiliser pour initialiser le stockage de données utilisé par le champ de stockage. Étudions la classe suivante pour un étudiant. Elle contient le nom et la liste des diplômes de ce dernier :
@@ -115,6 +117,9 @@ Le corps de beaucoup de membres que nous écrivons se compose d’une seule inst
 Vous pouvez également utiliser des membres expression-bodied dans des propriétés en lecture seule :
 
 [!code-csharp[FullNameExpressionMember](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
+
+La modification d’un membre existant en un membre expression-bodied est une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
+
 
 ## <a name="using-static"></a>using static
 
@@ -398,4 +403,3 @@ L’option `-deterministic` fait en sorte que le compilateur génère un assembl
 Par défaut, chaque compilation génère une sortie unique. Le compilateur ajoute un horodateur et un GUID généré à partir de nombres aléatoires. Vous utilisez cette option si vous souhaitez comparer la sortie octet par octet afin de garantir la cohérence entre les builds.
 
 Pour plus d’informations, consultez l’article [Option du compilateur -deterministic](../language-reference/compiler-options/deterministic-compiler-option.md).
-

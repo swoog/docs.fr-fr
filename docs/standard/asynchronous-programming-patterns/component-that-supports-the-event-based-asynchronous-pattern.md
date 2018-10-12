@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042437"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003813"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Comment : implémenter un composant qui prend en charge le modèle asynchrone basé sur des événements
 Si vous écrivez une classe qui comporte certaines opérations pouvant entraîner d’importants ralentissements, pensez à lui affecter des fonctionnalités asynchrones en implémentant la [Vue d’ensemble du modèle asynchrone basé sur les événements](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -58,7 +58,7 @@ Si vous écrivez une classe qui comporte certaines opérations pouvant entraîne
 -   Créez une classe nommée `PrimeNumberCalculator` qui hérite de <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Définir des délégués et des événements asynchrones publics  
- Votre composant communique avec les clients à l’aide d’événements. L’événement *NomMéthode***Completed** avertit les clients de l’achèvement d’une tâche asynchrone, et l’événement *NomMéthode***ProgressChanged** les informe de la progression d’une tâche asynchrone.  
+ Votre composant communique avec les clients à l’aide d’événements. L’événement _MethodName_**Completed** avertit les clients de l’achèvement d’une tâche asynchrone, et l’événement _MethodName_**ProgressChanged** les informe de la progression d’une tâche asynchrone.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Pour définir des événements asynchrones pour les clients de votre composant :  
   

@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084716"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46702775"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 La classe <xref:System.Threading.EventWaitHandle> permet aux threads de communiquer entre eux en signalant et en attendant des signaux. Les handles d’attente d’événement (également appelés simplement des événements) sont des handles d’attente qui peuvent être signalés pour libérer un ou plusieurs threads en attente. Une fois signalé, un handle d’attente d’événement est réinitialisé manuellement ou automatiquement. La classe <xref:System.Threading.EventWaitHandle> peut représenter un handle d’attente d’événement local (événement local) ou un handle d’attente d’événement système nommé (événement nommé ou événement système, visible par tous les processus).  
   
 > [!NOTE]
->  Les handles d’attente d’événements ne sont pas des événements dans le sens généralement donné à ce terme dans .NET Framework. Aucun délégué ni gestionnaire d’événements n’est impliqué. Le terme « événement » est utilisé pour les décrire, car ils sont généralement connus sous le nom d’événements du système d’exploitation, et le fait de signaler le handle d’attente indique aux threads en attente qu’un événement s’est produit.  
+>  Les handles d’attente d’événement ne sont pas des [événements](../events/index.md) .NET. Aucun délégué ni gestionnaire d’événements n’est impliqué. Le terme « événement » est utilisé pour les décrire, car ils sont généralement connus sous le nom d’événements du système d’exploitation, et le fait de signaler le handle d’attente indique aux threads en attente qu’un événement s’est produit.  
   
  Les handles d’attente d’événement locaux et nommés utilisent des objets de synchronisation du système, qui sont protégés par des wrappers <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> pour garantir la libération des ressources. Vous pouvez utiliser la méthode <xref:System.Threading.WaitHandle.Dispose%2A> pour libérer les ressources immédiatement après avoir terminé d’utiliser l’objet.  
   

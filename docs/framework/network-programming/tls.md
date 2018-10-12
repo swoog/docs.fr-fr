@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798910"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47424478"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Meilleures pratiques du protocole TLS (Transport Layer Security) avec .NET Framework
 
@@ -179,7 +179,10 @@ Pour plus d’informations sur les protocoles TLS, consultez [Atténuation : pr
 
 ## <a name="configuring-security-via-the-windows-registry"></a>Configuration de la sécurité via le Registre Windows
 
-Si la définition d’un ou des deux commutateurs `AppContext` n’est pas possible, vous pouvez contrôler les protocoles de sécurité utilisés par votre application avec les clés de Registre Windows décrites dans cette section. Vous n’êtes peut-être pas en mesure d’utiliser un ou les deux commutateurs `AppContext` si votre application cible une version .NET Framework antérieure à la version 4.6 ou si vous ne pouvez pas modifier le fichier de configuration. Si vous souhaitez configurer la sécurité avec le registre, ne spécifiez pas de valeur du protocole de sécurité dans votre code ; ceci pourrait écraser le registre.
+> [!WARNING]
+> La définition des clés de Registre affecte toutes les applications sur le système. Utilisez cette option uniquement si vous contrôlez entièrement l’ordinateur et pouvez contrôler les modifications apportées au Registre.
+
+Si la définition d’un ou des deux commutateurs `AppContext` n’est pas possible, vous pouvez contrôler les protocoles de sécurité utilisés par votre application avec les clés de Registre Windows décrites dans cette section. Vous ne pouvez peut-être pas utiliser un ou les deux commutateurs `AppContext` si votre application s’exécute sur .NET Framework 4.5.2 ou une version antérieure, ou si vous ne pouvez pas modifier le fichier de configuration. Si vous souhaitez configurer la sécurité avec le registre, ne spécifiez pas de valeur du protocole de sécurité dans votre code ; ceci écrase le paramètre du registre.
 
 Les noms des clés de Registre sont similaires aux noms des commutateurs `AppContext` correspondants, mais sans un `DontEnable` ajouté au nom. Par exemple, le `AppContext` commutateur `DontEnableSchUseStrongCrypto` est la clé de Registre appelée [SchUseStrongCrypto](#schusestrongcrypto).
 

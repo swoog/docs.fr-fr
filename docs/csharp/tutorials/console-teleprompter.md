@@ -3,12 +3,12 @@ title: Application console
 description: Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core et du langage C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: bae03c9ae02f2888b1b70617ca712ef7927e9dce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961415"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46937590"
 ---
 # <a name="console-application"></a>Application console
 
@@ -20,7 +20,7 @@ Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core
 - Les principes fondamentaux des API d’E/S de fichier dans .NET
 - Les principes fondamentaux de la programmation asynchrone basée sur des tâches dans .NET
 
-Vous allez générer une application qui lit un fichier texte et retourne le contenu du fichier texte dans la console. La sortie sur la console se fait à un rythme permettant de la lire à haute voix. Vous pouvez accélérer ou ralentir la vitesse en appuyant sur les touches '<’ ou ’>'.
+Vous allez générer une application qui lit un fichier texte et retourne le contenu du fichier texte dans la console. La sortie sur la console se fait à un rythme permettant de la lire à haute voix. Vous pouvez accélérer ou ralentir la vitesse en appuyant sur les touches '<’ (inférieur à) ou ’>' (supérieur à).
 
 Il existe un grand nombre de fonctionnalités dans ce didacticiel. Nous allons les construire une par une.
 
@@ -190,7 +190,7 @@ Ici, dans `Main`, le code attend de façon synchrone. Vous devez utiliser l’op
 > [!NOTE]
 > Si vous utilisez C# 7.1 ou une version ultérieure, vous pouvez créer des applications de console à l’aide de la [méthode `async` `Main`](../whats-new/csharp-7-1.md#async-main).
 
-Ensuite, vous devez écrire la seconde méthode asynchrone pour lire à partir de la console et chercher les touches '<’ et ’>'. Voici la méthode que vous ajoutez pour cette tâche :
+Ensuite, vous devez écrire la seconde méthode asynchrone pour lire à partir de la console et chercher les touches '<’ (inférieur à) et ’>' (supérieur à). Voici la méthode que vous ajoutez pour cette tâche :
 
 ```csharp
 private static async Task GetInput()
@@ -214,7 +214,7 @@ private static async Task GetInput()
 }
 ```
 
-Cela crée une expression lambda pour représenter un délégué <xref:System.Action> qui lit une touche de la console et modifie une variable locale représentant le délai lorsque l’utilisateur appuie sur les touches '<’ ou ’>'. Cette méthode utilise <xref:System.Console.ReadKey> pour bloquer et attendre que l’utilisateur appuie sur une touche.
+Cela crée une expression lambda pour représenter un délégué <xref:System.Action> qui lit une touche de la console et modifie une variable locale représentant le délai lorsque l’utilisateur appuie sur les touches '<’ (inférieur à) et ’>' (supérieur à). Cette méthode utilise <xref:System.Console.ReadKey> pour bloquer et attendre que l’utilisateur appuie sur une touche.
 
 Pour terminer cette fonctionnalité, vous devez créer une nouvelle méthode de retour `async Task` qui démarre ces deux tâches (`GetInput` et `ShowTeleprompter`) et gère également les données partagées entre ces deux tâches.
 
@@ -277,10 +277,10 @@ Ensuite, vous devez mettre à jour les méthodes `ShowTeleprompter` et `GetInput
 private static async Task ShowTeleprompter(TelePrompterConfig config)
 {
     var words = ReadFrom("sampleQuotes.txt");
-    foreach (var line in words)
+    foreach (var word in words)
     {
-        Console.Write(line);
-        if (!string.IsNullOrWhiteSpace(line))
+        Console.Write(word);
+        if (!string.IsNullOrWhiteSpace(word))
         {
             await Task.Delay(config.DelayInMilliseconds);
         }

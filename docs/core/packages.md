@@ -4,12 +4,12 @@ description: Découvrez la terminologie des packages, des métapackages et des i
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: f10965a8f5f2848f2b942b92577adf3185d8bd3c
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: e68c63d26133ac76b718bb3696d16c81bd943dc2
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472800"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45597666"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Packages, métapackages et frameworks
 
@@ -56,7 +56,7 @@ En général, au lieu d’inclure des packages dans vos projets un par un, il es
 
 Les métapackages sont une convention de packages NuGet qui vise à décrire un ensemble de packages qu’il est logique de regrouper. Ils représentent cet ensemble de packages sous forme de dépendances. Ils peuvent éventuellement établir un cadre pour cet ensemble de packages en spécifiant un framework. 
 
-Les versions précédentes des outils .NET Core (les outils project.json et csproj) spécifiaient par défaut un framework et un métapackage. Actuellement, toutefois, le métapackage est implicitement référencé par le framework cible, de sorte que chaque métapackage est lié à un framework cible. Par exemple, le framework `netstandard1.6` référence le métapackage NetStandard.Library version 1.6.0. De même, le framework `netcoreapp1.1` référence le métapackage Microsoft.NETCore.App version 1.1.0. Pour plus d’informations, consultez [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Référence de package métapackage implicite dans le SDK .NET Core).
+Les versions précédentes des outils .NET Core (les outils project.json et csproj) spécifiaient par défaut un framework et un métapackage. Actuellement, toutefois, le métapackage est implicitement référencé par le framework cible, de sorte que chaque métapackage est lié à un framework cible. Par exemple, le framework `netstandard1.6` référence le métapackage NetStandard.Library version 1.6.0. De même, le framework `netcoreapp2.1` référence le métapackage Microsoft.NETCore.App version 2.1.0. Pour plus d’informations, consultez [Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md) (Référence de package métapackage implicite dans le SDK .NET Core).
 
 En ciblant un framework et en référençant implicitement un métapackage, vous ajoutez une référence à chacun de ses packages dépendants en une seule fois. De cette façon, toutes les bibliothèques contenues dans ces packages sont disponibles pour IntelliSense (ou une expérience similaire) et pour la publication de votre application.  
 

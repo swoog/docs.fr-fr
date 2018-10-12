@@ -3,12 +3,12 @@ title: Nouveautés de C# 7.0 | Guide C#
 description: Découvrez les nouvelles fonctionnalités disponibles dans la prochaine version 7 du langage C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: a78b30411d734d6dadc52b7dbd402763d4eb7f5e
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956407"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237382"
 ---
 # <a name="whats-new-in-c-70"></a>Nouveautés de C# 7.0
 
@@ -159,7 +159,7 @@ L’exemple suivant définit une méthode `QueryCityDataForYears` qui retourne u
 [!code-csharp[Tuple-discard](../../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
 Pour plus d’informations, consultez [Éléments ignorés](../discards.md).
- 
+
 ## <a name="pattern-matching"></a>Critères spéciaux
 
 Les *critères spéciaux* constituent une fonctionnalité qui vous permet d’implémenter la distribution de méthodes sur des propriétés autres que le type d’un objet. Vous êtes probablement déjà familiarisé avec la distribution de méthodes en fonction du type d’un objet. Dans la programmation orientée objet, les méthodes virtuelles et override fournissent une syntaxe du langage permettant d’implémenter la distribution de méthodes basées sur le type d’un objet. Les classes de base et dérivées offrent des implémentations différentes. Les expressions de critères spéciaux étendent ce concept de manière à vous permettre d’implémenter facilement des modèles de distribution similaires pour les types et les éléments de données qui ne sont pas liés au moyen d’une hiérarchie d’héritage. 
@@ -277,7 +277,9 @@ Le langage C# a trois autres règles qui vous protègent contre une mauvaise uti
 * Les variables locales et les retours `ref` ne peuvent pas être utilisés avec les méthodes Async.
     - Le compilateur ne peut pas savoir si la variable référencée a été définie à sa valeur finale quand la méthode Async est retournée.
 
-L’ajout de variables locales ref et de retours ref permet d’utiliser des algorithmes qui sont plus efficaces en évitant la copie de valeurs, ou d’effectuer plusieurs fois des opérations de déréférencement. 
+L’ajout de variables locales ref et de retours ref permet d’utiliser des algorithmes qui sont plus efficaces en évitant la copie de valeurs, ou d’effectuer plusieurs fois des opérations de déréférencement.
+
+L’ajout de `ref` à la valeur de retour est une [modification compatible avec la source](version-update-considerations.md#source-compatible-changes). Le code existant est compilé, mais la valeur de retour référencée est copiée lorsqu’elle est assignée. Les appelants doivent mettre à jour le stockage pour la valeur de retour sur une variable locale `ref` afin de stocker la valeur de retour en tant que référence.
 
 ## <a name="local-functions"></a>Fonctions locales
 
@@ -327,6 +329,8 @@ C# 6 a introduit les [membres expression-bodied](csharp-6.md#expression-bodied-
 
 Ces nouveaux emplacements pour les membres expression-bodied représentent une étape importante pour le langage C# : ces fonctionnalités ont été implémentées par des membres de la communauté travaillant sur le projet open source [Roslyn](https://github.com/dotnet/Roslyn).
 
+La modification d’une méthode en un membre expression-bodied est une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
+
 ## <a name="throw-expressions"></a>Expressions throw
 
 En C#, `throw` a toujours été une instruction. Étant donné que `throw` est une instruction, et non pas une expression, certaines constructions C# ne pouvaient pas l’utiliser. Il s’agit notamment des expressions conditionnelles, des expressions de fusion null, ainsi que de certaines expressions lambda. L’ajout de membres expression-bodied ajoute des emplacements supplémentaires où les expressions `throw` seraient utiles. Pour vous permettre d’écrire n’importe laquelle de ces constructions, C# 7.0 introduit les *expressions throw*.
@@ -362,8 +366,10 @@ La nouvelle fonctionnalité du langage signifie que les méthodes async peuvent 
 Une optimisation simple consisterait à utiliser `ValueTask` dans des emplacements où `Task` était utilisé avant. Toutefois, si vous voulez effectuer manuellement des optimisations supplémentaires, vous pouvez mettre en cache les résultats à partir du travail asynchrone et réutiliser le résultat dans les appels suivants. Le struct `ValueTask` a un constructeur avec un paramètre `Task` pour vous permettre de construire un `ValueTask` à partir de la valeur de retour de toute méthode async existante :
 
 [!code-csharp[AsyncOptimizedValueTask](../../../samples/snippets/csharp/new-in-7/AsyncWork.cs#31_AsyncOptimizedValueTask "Return async result or cached value")]
- 
+
 Comme avec toutes les recommandations relatives aux performances, vous devez effectuer un test d’évaluation sur les deux versions avant d’apporter des changements à grande échelle à votre code.
+
+Lorsque la valeur de retour est la cible d’une instruction `await`, la modification d’une API de <xref:System.Threading.Tasks.Task%601> à <xref:System.Threading.Tasks.ValueTask%601> est une [modification compatible avec la source](version-update-considerations.md#source-compatible-changes). En règle générale, la modification en `ValueTask` ne l’est pas.
 
 ## <a name="numeric-literal-syntax-improvements"></a>Améliorations de la syntaxe littérale numérique
 

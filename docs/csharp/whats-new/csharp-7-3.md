@@ -2,12 +2,12 @@
 title: Nouveautés de C# 7.3
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 921374773d57d3fa6f8dd614f2691d345cf6eab7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511609"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47235229"
 ---
 # <a name="whats-new-in-c-73"></a>Nouveautés de C# 7.3
 
@@ -36,7 +36,7 @@ Les nouvelles options du compilateur sont les suivantes :
 
 Le reste de cet article fournit des détails et des liens pour en savoir plus sur chacune de ces améliorations.
 
-## <a name="enabling-more-performant-safe-code"></a>Code sécurisé plus performant
+## <a name="enabling-more-efficient-safe-code"></a>Code sécurisé plus performant
 
 Vous devez être en mesure d’écrire en toute sécurité un code C# ainsi performant qu’un code non sécurisé. Le code sécurisé évite les classes d’erreurs, par exemple les dépassements de mémoire tampon, les pointeurs perdus et d’autres erreurs d’accès à la mémoire. Ces nouvelles fonctionnalités étendent les fonctionnalités de code sécurisé vérifiables. Efforcez-vous d’utiliser plus de constructions sécurisées pour écrire votre code. Ces fonctionnalités facilitent cette écriture.
 
@@ -82,7 +82,7 @@ class C
 }
 ```
 
-Pour plus d’informations, consultez l’article sur l’[instruction `fixed`](../language-reference/keywords/fixed-statement.md).
+Pour plus d’informations, consultez l’article sur [l’instruction `fixed`](../language-reference/keywords/fixed-statement.md).
 
 ### <a name="ref-local-variables-may-be-reassigned"></a>Les variables locales `ref` peuvent être réaffectées
 
@@ -128,13 +128,15 @@ Vous pouvez également utiliser la nouvelle contrainte `unmanaged` pour spécifi
 
 Pour plus d’informations, consultez les articles sur les [contraintes génériques `where`](../language-reference/keywords/where-generic-type-constraint.md) et les [contraintes sur les paramètres de type](../programming-guide/generics/constraints-on-type-parameters.md).
 
+L’ajout de ces contraintes aux types existants est une [modification incompatible](version-update-considerations.md#incompatible-changes). Les types génériques fermés peuvent ne plus respecter ces nouvelles contraintes.
+
 ## <a name="make-existing-features-better"></a>Améliorer les fonctionnalités existantes
 
 Le second thème fournit des améliorations apportées aux fonctionnalités du langage. Ces fonctionnalités améliorent la productivité lors de l’écriture de code C#.
 
 ### <a name="tuples-support--and-"></a>Les tuples prennent en charge `==` et `!=`
 
-Les types tuple C# prennent désormais en charge `==` et `!=`. Pour plus d’informations, consultez la section consacrée à l’[égalité](../tuples.md#equality-and-tuples) dans l’article sur les [tuples](../tuples.md).
+Les types tuple C# prennent désormais en charge `==` et `!=`. Pour plus d’informations, consultez la section consacrée à [l’égalité](../tuples.md#equality-and-tuples) dans l’article sur les [tuples](../tuples.md).
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>Joindre des attributs à des champs de stockage pour les propriétés implémentées automatiquement
 

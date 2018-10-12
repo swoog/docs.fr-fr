@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: bde771051af034e7da72e9648fb3b0f37a95fa01
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404387"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231243"
 ---
 # <a name="development-process-for-azure"></a>Processus de développement pour Azure
 
@@ -44,15 +44,15 @@ Que vous préfériez un IDE complet et puissant ou un éditeur léger et agile, 
 
 Le cycle de vie du développement d’une application débute sur une machine de développeur, là où le développeur programme l’application dans le langage de son choix et où il la teste localement. Les développeurs peuvent choisir leur système de contrôle de code source par défaut et peuvent configurer l’intégration continue (CI) et/ou la livraison/le déploiement continu(e) (CD) à l’aide d’un serveur de builds ou en fonction des fonctionnalités Azure intégrées.
 
-Pour commencer à développer une application ASP.NET Core à l’aide de CI/CD, vous pouvez utiliser Visual Studio Team Services ou le serveur TFS (Team Foundation Server) de votre organisation.
+Pour commencer à développer une application ASP.NET Core à l’aide de CI/CD, vous pouvez utiliser Azure DevOps Services ou le serveur TFS (Team Foundation Server) de votre organisation.
 
 ### <a name="initial-setup"></a>Configuration initiale
 
 Pour créer un pipeline de mise en production pour votre application, vous devez avoir votre code d’application dans le contrôle de code source. Configurez un référentiel local et connectez-le à un référentiel distant dans un projet d’équipe. Suivez les instructions ci-dessous :
 
-- [Partager votre code avec Git et Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) ou
+- [Partager votre code avec Git et Visual Studio](https://docs.microsoft.com/azure/devops/git/share-your-code-in-git-vs) ou
 
-- [Partager votre code avec TFVC et Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
+- [Partager votre code avec TFVC et Visual Studio](https://docs.microsoft.com/azure/devops/tfvc/share-your-code-in-tfvc-vs)
 
 Créez un service d’application Azure où vous déploierez votre application. Créez une application web en accédant au panneau App Services dans le portail Azure. Cliquez sur +Ajouter, sélectionnez le modèle Application web, cliquez sur Créer et spécifiez un nom et d’autres détails. L’application web sera accessible à partir de {nom}.azurewebsites.net.
 
@@ -62,13 +62,13 @@ Créez un service d’application Azure où vous déploierez votre application. 
 
 Votre processus de génération CI effectue une génération automatique chaque fois que du nouveau code est validé dans le référentiel de contrôle de code source du projet. Ainsi, vous savez immédiatement que le code a été généré (et, dans l’idéal, réussit les tests automatisés) et peut être déployé. Cette build CI génère un artefact de package de déploiement web et le publie en vue de sa consommation par votre processus CD.
 
-[Définir votre processus de build CI](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
+[Définir votre processus de build CI](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Veillez à activer l’intégration continue afin que le système mette en file d’attente une build chaque fois qu’un membre de votre équipe valide du nouveau code. Testez la build et vérifiez qu’elle produit un package de déploiement web comme l’un de ses artefacts.
 
 Quand une build réussit, votre processus CD déploie les résultats de votre build CI sur votre application web Azure. Pour configurer cela, créez et configurez une *Mise en production*, qui sera déployée sur votre service d’application Azure.
 
-[Définir votre processus de mise en production CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
+[Définir votre processus de mise en production CD](https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Une fois que votre pipeline CI/CD est configuré, vous pouvez simplement effectuer des mises à jour de votre application web et les valider dans le contrôle de code source afin de les déployer.
 
@@ -86,7 +86,7 @@ Le développement d’une application ASP.NET Core pour le déploiement sur Azur
 
 #### <a name="step-2-application-code-repository"></a>Étape 2. Référentiel de code d’application
 
-Chaque fois que vous êtes prêt à partager votre code avec votre équipe, vous devez envoyer vos modifications de votre référentiel de code source local vers le référentiel de code source partagé de votre équipe. Si vous travaillez dans une branche personnalisée, cette étape nécessite généralement la fusion de votre code dans une branche partagée (par exemple au moyen d’une [demande de tirage (pull request)](https://docs.microsoft.com/vsts/git/pull-requests)).
+Chaque fois que vous êtes prêt à partager votre code avec votre équipe, vous devez envoyer vos modifications de votre référentiel de code source local vers le référentiel de code source partagé de votre équipe. Si vous travaillez dans une branche personnalisée, cette étape nécessite généralement la fusion de votre code dans une branche partagée (par exemple au moyen d’une [demande de tirage (pull request)](https://docs.microsoft.com/azure/devops/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Étape 3. Serveur de builds : Intégration continue. Générer, tester, empaqueter
 
@@ -107,7 +107,7 @@ Pendant l’exécution de l’application web, vous pouvez surveiller son intég
 ## <a name="references"></a>Références
 
 **Générer et déployer votre application ASP.NET Core sur Azure**  
-<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
+<https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>
 
 >[!div class="step-by-step"]
 [Précédent](test-asp-net-core-mvc-apps.md)

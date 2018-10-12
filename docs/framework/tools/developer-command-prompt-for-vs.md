@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c95074190419dd3e984c7659ede917b83b97f08
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524714"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170007"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Invite de commandes développeur pour Visual Studio
 
-L’invite de commandes développeur pour Visual Studio définit automatiquement les variables d’environnement qui vous permettent d’utiliser facilement les outils du .NET Framework.
+L’invite de commandes développeur pour Visual Studio vous permet d’utiliser plus facilement les outils .NET Framework. Il s’agit d’une invite de commandes qui définit automatiquement les variables d’environnement spécifiques.
 
 > [!div class="button"]
 [Télécharger Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
-## <a name="searching-for-the-command-prompt-on-your-machine"></a>Recherche de l’invite de commandes sur votre ordinateur
+## <a name="search-for-the-command-prompt-on-your-machine"></a>Rechercher l’invite de commandes sur votre ordinateur
 
-Vous pouvez avoir plusieurs invites de commandes, en fonction de la version de Visual Studio et des SDK que vous avez installés. Par exemple, les versions 64 bits de Visual Studio fournissent à la fois des invites de commandes 32 bits et 64 bits. (Les versions 32 bits et 64 bits de la plupart des outils sont identiques ; toutefois, certains outils apportent des modifications propres aux environnements 32 bits et 64 bits.) Si les étapes suivantes ne fonctionnent pas, vous pouvez essayer de [rechercher manuellement les fichiers sur votre ordinateur](#manually-locating-the-files-on-your-machine) ou de [lancer l’invite de commandes à partir de Visual Studio](#running-command-prompt-from-inside-visual-studio).
+Vous pouvez avoir plusieurs invites de commandes, en fonction de la version de Visual Studio et des SDK que vous avez installés. Par exemple, les versions 64 bits de Visual Studio fournissent à la fois des invites de commandes 32 bits et 64 bits. (Les versions 32 bits et 64 bits de la plupart des outils sont identiques ; toutefois, certains outils apportent des modifications propres aux environnements 32 bits et 64 bits.) Si les étapes suivantes ne fonctionnent pas, vous pouvez essayer de [rechercher manuellement les fichiers sur votre ordinateur](#manually-locate-the-files-on-your-machine) ou de [lancer l’invite de commandes à partir de Visual Studio](#run-the-command-prompt-from-inside-visual-studio).
 
 ### <a name="in-windows-10"></a>Dans Windows 10
 
@@ -40,7 +40,7 @@ Vous pouvez avoir plusieurs invites de commandes, en fonction de la version de V
 
 1. Accédez à l’écran **Démarrer**, par exemple en appuyant sur la touche du logo Windows ![Logo Windows](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") de votre clavier.
 
-2. Dans l’écran **Démarrer**, appuyez sur `CTRL + TAB` pour ouvrir la liste **Applications**, puis entrez `V`. Cela entraîne l’affichage d’une liste qui inclut toutes les invites de commandes Visual Studio installées.
+2. Dans l’écran **Démarrer**, appuyez sur **Ctrl**+**Tab** pour ouvrir la liste **Applications**, puis entrez `V`. Cela entraîne l’affichage d’une liste qui inclut toutes les invites de commandes Visual Studio installées.
 
 3. Choisissez **Invite de commandes développeur** (ou l’invite de commandes que vous voulez utiliser).
 
@@ -66,7 +66,7 @@ Si vous avez installé d’autres SDK, tels que le [SDK Windows 10](https://dev
 
 En règle générale, les raccourcis des invites de commandes que vous avez installées sont placés dans le dossier **Menu Démarrer** de Visual Studio, par exemple dans C:\ProgramData\Microsoft\Windows\Menu Démarrer\Programmes\Visual Studio 2017\Visual Studio Tools. Mais si pour une raison quelconque la recherche de l’invite de commandes ne donne pas les résultats attendus, vous pouvez tenter de localiser manuellement le raccourci sur votre machine. Essayez de rechercher le nom du fichier d’invite de commandes, par exemple *VsDevCmd.bat*, ou accédez au dossier Tools à l’emplacement C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (le chemin varie en fonction de l’emplacement d’installation, de l’édition et de la version de Visual Studio).
 
-## <a name="run-command-prompt-from-inside-visual-studio"></a>Exécuter l’invite de commandes à partir de Visual Studio
+## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Exécuter l’invite de commandes à partir de Visual Studio
 
 Pour faciliter l’accès, vous pouvez ajouter l’invite de commandes développeur Visual Studio ou toute autre invite de commandes au menu **Outils** de Visual Studio. Pour cela, il vous suffit de l’ajouter à la liste des outils externes. Procédez comme suit :
 
@@ -87,6 +87,8 @@ Pour faciliter l’accès, vous pouvez ajouter l’invite de commandes développ
 8. Sélectionnez le bouton **OK** .
 
    Le nouvel élément de menu est ajouté et vous pouvez accéder à l’invite de commandes à partir du menu **Outils**.
+
+   ![Élément de menu d’invite de commandes dans Visual Studio](media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>Voir aussi
 

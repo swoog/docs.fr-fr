@@ -4,12 +4,12 @@ description: Découvrez comment .NET Core recherche et choisit les versions du r
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 21697aa773abfbd88288d47323402a48c51d69ae
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204862"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47233196"
 ---
 # <a name="net-core-version-selection"></a>Sélection de la version de .NET Core
 
@@ -31,7 +31,12 @@ Le reste de ce document examine ces quatre scénarios.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>Le kit SDK utilise la dernière version installée
 
-Les commandes du kit SDK incluent `dotnet new`,  , ou `dotnet run`. L’interface CLI `dotnet` doit choisir une version du kit SDK pour n’importe quelle commande. Par défaut, l’interface CLI .NET Core utilise le dernier kit SDK installé sur la machine. S’il est installé, le kit SDK .NET Core v2.1.301 est utilisé, même si le projet sur lequel vous travaillez cible .NET Core Runtime 2.0. Vous allez utiliser les dernières préversions ainsi que des versions publiées. Vous pouvez tirer parti des fonctionnalités et des améliorations du dernier kit SDK tout en ciblant des versions antérieures du runtime .NET Core. Vous pouvez cibler plusieurs versions du runtime de .NET Core dans différents projets en utilisant les mêmes outils du kit SDK pour tous les projets.
+Les commandes du kit SDK incluent `dotnet new` et `dotnet run`. L’interface CLI `dotnet` doit choisir une version du kit SDK pour chaque commande dotnet. Par défaut, l’interface CLI .NET Core utilise le dernier kit SDK installé sur la machine, même si :
+
+* Le projet cible une version antérieure.
+* La dernière version est une préversion.
+
+Les applications peuvent tirer parti des fonctionnalités et des améliorations du dernier kit SDK tout en ciblant des versions antérieures du runtime .NET Core. Vous pouvez cibler plusieurs versions du runtime de .NET Core dans différents projets en utilisant les mêmes outils du kit SDK pour tous les projets.
 
 À de rares occasions, vous pouvez être amené à utiliser une version antérieure du kit SDK. Vous devez dans ce cas spécifier cette version dans un [ fichier *global.json*](../tools/global-json.md). La stratégie « utiliser la dernière version » signifie que vous utilisez uniquement *global.json* pour spécifier une version du kit SDK .NET Core antérieure à la dernière version installée.
 

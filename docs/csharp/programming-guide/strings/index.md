@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 9b108a1613e01016c541d088612303c6aaa13629
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961466"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170650"
 ---
 # <a name="strings-c-programming-guide"></a>Chaînes (Guide de programmation C#)
 Une chaîne est un objet de type <xref:System.String> dont la valeur est du texte. En interne, le texte est stocké sous la forme d’une collection séquentielle en lecture seule d’objets <xref:System.Char>. Il n’existe aucun caractère de fin Null à la fin d’une chaîne C# ; par conséquent, une chaîne C# peut contenir n’importe quel nombre de caractères Null incorporés ('\0'). La propriété <xref:System.String.Length%2A> d’une chaîne représente le nombre d’objets `Char` qu’elle contient, et non pas le nombre de caractères Unicode. Pour accéder à des points de code Unicode individuels dans une chaîne, utilisez l’objet <xref:System.Globalization.StringInfo>.  
@@ -64,7 +64,7 @@ Une chaîne est un objet de type <xref:System.String> dont la valeur est du text
 |\U|Séquence d’échappement Unicode pour les paires de substitution.|\Unnnnnnnn|  
 |\u|Séquence d’échappement Unicode|\u0041 = "A"|  
 |\v|Tabulation verticale|0x000B|  
-|\x|Séquence d’échappement Unicode similaire à "\u", mais avec une longueur variable.|\x0041 = "A"|  
+|\x|Séquence d’échappement Unicode similaire à "\u", mais avec une longueur variable.|\x0041 ou \x41 = "A"|  
   
 > [!NOTE]
 >  Au moment de la compilation, les chaînes textuelles sont converties en chaînes normales avec les mêmes séquences d’échappement. Par conséquent, si vous affichez une chaîne textuelle dans la fenêtre Espion du débogueur, vous verrez les caractères d’échappement qui ont été ajoutés par le compilateur et non la version textuelle de votre code source. Par exemple, la chaîne textuelle @"C:\files.txt" s’affiche dans la fenêtre Espion en tant que "C:\\\files.txt".  
