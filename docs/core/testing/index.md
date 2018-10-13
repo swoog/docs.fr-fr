@@ -4,12 +4,12 @@ description: Les tests unitaires n’ont jamais été aussi faciles. Découvrez 
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 4a1d880da796aac40da93ca2513b6163200ca3c1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 5b54e7936fb19a94fad9585c00904ae67a59e064
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004388"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314851"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Tests unitaires dans .NET Core et .NET Standard
 
@@ -21,16 +21,16 @@ ms.locfileid: "46004388"
 
 ## <a name="getting-started-with-testing"></a>Bien démarrer avec les tests
 
-L’utilisation d’une suite de tests automatisés est l’un des meilleurs moyens de vérifier qu’une application logicielle se comporte comme ses auteurs l’avaient prévu. Il existe différents types de test pour les applications logicielles : tests d’intégration, tests web, tests de charge, etc. Au niveau le plus bas se trouvent les tests unitaires, qui permettent de tester individuellement chaque composant logiciel ou méthode. Les tests unitaires doivent porter uniquement sur le code dont le développeur a le contrôle, et non sur les problèmes d’infrastructure comme les bases de données, les systèmes de fichiers ou les ressources réseau. Les tests unitaires peuvent être écrits en faisant appel au [développement piloté par les tests (TDD)](http://deviq.com/test-driven-development/). Ils peuvent aussi être ajoutés à du code existant pour vérifier qu’il est correct. Dans les deux cas, ils doivent être succincts, bien nommés et rapides, car dans l’idéal, vous souhaitez pouvoir en exécuter des centaines avant de répercuter vos modifications dans le référentiel de code partagé du projet.
+L’utilisation d’une suite de tests automatisés est l’un des meilleurs moyens de vérifier qu’une application logicielle se comporte comme ses auteurs l’avaient prévu. Il existe différents types de test pour les applications logicielles : tests d’intégration, tests web, tests de charge, etc. Au niveau le plus bas se trouvent les tests unitaires, qui permettent de tester individuellement chaque composant logiciel ou méthode. Les tests unitaires doivent porter uniquement sur le code dont le développeur a le contrôle, et non sur les problèmes d’infrastructure comme les bases de données, les systèmes de fichiers ou les ressources réseau. Les tests unitaires peuvent être écrits en faisant appel au [développement piloté par les tests (TDD)](https://deviq.com/test-driven-development/). Ils peuvent aussi être ajoutés à du code existant pour vérifier qu’il est correct. Dans les deux cas, ils doivent être succincts, bien nommés et rapides, car dans l’idéal, vous souhaitez pouvoir en exécuter des centaines avant de répercuter vos modifications dans le référentiel de code partagé du projet.
 
 > [!NOTE]
 > Les développeurs éprouvent souvent des difficultés à trouver des noms appropriés pour leurs classes et méthodes de test. Comme point de départ, l’équipe produit ASP.NET suit [ces conventions](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests).
 
-Quand vous écrivez des tests unitaires, veillez à ne pas introduire accidentellement de dépendances vis-à-vis de l’infrastructure. Celles-ci ont tendance à ralentir et à fragiliser les tests. Il est donc préférable de les réserver aux tests d’intégration. Vous pouvez éviter ces dépendances cachées dans le code de votre application en suivant le [principe des dépendances explicites](http://deviq.com/explicit-dependencies-principle/) et en ayant recours à l’[injection de dépendances](/aspnet/core/fundamentals/dependency-injection) pour demander vos dépendances à partir du framework. Vous pouvez aussi conserver vos tests unitaires dans un projet distinct de celui qui abrite vos tests d’intégration et vérifier que ce dernier ne contient pas de références à des dépendances ou des dépendances à des packages d’infrastructure.
+Quand vous écrivez des tests unitaires, veillez à ne pas introduire accidentellement de dépendances vis-à-vis de l’infrastructure. Celles-ci ont tendance à ralentir et à fragiliser les tests. Il est donc préférable de les réserver aux tests d’intégration. Vous pouvez éviter ces dépendances cachées dans le code de votre application en suivant le [principe des dépendances explicites](https://deviq.com/explicit-dependencies-principle/) et en ayant recours à l’[injection de dépendances](/aspnet/core/fundamentals/dependency-injection) pour demander vos dépendances à partir du framework. Vous pouvez aussi conserver vos tests unitaires dans un projet distinct de celui qui abrite vos tests d’intégration et vérifier que ce dernier ne contient pas de références à des dépendances ou des dépendances à des packages d’infrastructure.
 
 Pour en savoir plus sur les tests unitaires dans les projets .NET Core :
 
-Les projets de test unitaire pour .NET Core sont pris en charge pour [C#](../../csharp/index.md), [F#](../../fsharp/index.md) et [Visual Basic](../../visual-basic/index.md). Vous pouvez également choisir entre [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) et [MSTest](https://github.com/Microsoft/vstest-docs).
+Les projets de test unitaire pour .NET Core sont pris en charge pour [C#](../../csharp/index.md), [F#](../../fsharp/index.md) et [Visual Basic](../../visual-basic/index.md). Vous pouvez également choisir entre [xUnit](https://xunit.github.io), [NUnit](https://nunit.org) et [MSTest](https://github.com/Microsoft/vstest-docs).
 
 Vous pouvez en apprendre plus sur ces combinaisons dans ces procédures pas à pas :
 
@@ -48,4 +48,4 @@ Vous pouvez choisir différents langages pour vos bibliothèques de classes et v
 
 * Visual Studio Enterprise propose des outils de test très performants pour .NET Core. Pour en savoir plus, découvrez [Live Unit Testing](/visualstudio/test/live-unit-testing) ou la[couverture du code](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
 * Pour plus d’informations et des exemples sur la façon d’utiliser le filtrage de test unitaire sélectif, consultez [Exécution de tests unitaires sélectifs](selective-unit-tests.md) ou [Inclusion et exclusion de tests avec Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
-* L’équipe xUnit a écrit un tutoriel qui explique [comment utiliser xUnit avec .NET Core et Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+* L’équipe xUnit a écrit un tutoriel qui explique [comment utiliser xUnit avec .NET Core et Visual Studio](https://xunit.github.io/docs/getting-started-dotnet-core.html).
