@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7f7a779cc10b32d66a184107359b502cf094979
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 569be83b902e7634a0c22e78c3f3c3a23985076c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649211"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308550"
 ---
 # <a name="code-contracts"></a>Contrats de code
 Les contrats de code offrent un moyen de spécifier des conditions préalables, des post-conditions et des invariants d'objet dans votre code. Les conditions préalables sont des exigences qui doivent être satisfaites à l'entrée d'une méthode ou d'une propriété. Les post-conditions décrivent les attentes à la sortie de la méthode ou de la propriété. Les invariants d'objet décrivent l'état attendu pour une classe présentant un état correct.  
@@ -79,7 +79,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
  `Contract.EnsuresOnThrow<T>( this.F > 0 );`  
   
- L'argument est la condition qui doit être `true` chaque fois qu'une exception qui est un sous-type de `T` est levée.  
+ L’argument est la condition qui doit être `true` chaque fois qu’une exception qui est un sous-type de `T` est levée.  
   
  Certains types d'exception sont difficiles à utiliser dans une post-condition exceptionnelle. Par exemple, l'utilisation du type <xref:System.Exception> pour `T` nécessite que la méthode garantisse la condition indépendamment du type d'exception levée, même s'il s'agit d'un dépassement de capacité de la pile ou d'une autre exception impossible à contrôler. Utilisez les post-conditions exceptionnelles uniquement pour des exceptions spécifiques qui peuvent être levées après l'appel d'un membre, par exemple, quand une exception <xref:System.InvalidTimeZoneException> est levée pour un appel de méthode <xref:System.TimeZoneInfo>.  
   
@@ -90,7 +90,7 @@ Contract.EndContractBlock(); // All previous "if" checks are preconditions
   
 -   Une valeur de « pré-état » dans une post-condition fait référence à la valeur d'une expression au début d'une méthode ou d'une propriété. Elle utilise l'expression `Contract.OldValue<T>(e)`, où `T` est le type de `e`. Vous pouvez omettre l'argument de type générique chaque fois que le compilateur est en mesure de déduire son type (par exemple, le compilateur C# déduit toujours le type quand un argument est utilisé). Il existe plusieurs restrictions sur ce qui peut se produire dans `e` et les contextes dans lesquels une expression ancienne peut s'afficher. Une expression ancienne ne peut pas contenir une autre expression ancienne. Encore plus important, une expression ancienne doit faire référence à une valeur qui a existé dans l'état de condition préalable de la méthode. En d'autres termes, il doit s'agir d'une expression qui peut être évaluée tant que la condition préalable de la méthode est `true`. Voici plusieurs instances de cette règle :  
   
-    -   La valeur doit exister dans l'état de condition préalable de la méthode. Pour référencer un champ sur un objet, les conditions préalables doivent garantir que cet objet a toujours une valeur non null.  
+    -   La valeur doit exister dans l'état de condition préalable de la méthode. Pour référencer un champ sur un objet, les conditions préalables doivent garantir que l’objet est toujours non null.  
   
     -   Vous ne pouvez pas faire référence à la valeur de retour de la méthode dans une expression ancienne :  
   
