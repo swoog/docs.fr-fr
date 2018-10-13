@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1dc87b201638bab974c59722a69300977b14cf08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426934"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123772"
 ---
-# <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="ad64b-102">ISymUnmanagedWriter::DefineSequencePoints, méthode</span><span class="sxs-lookup"><span data-stu-id="ad64b-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
-<span data-ttu-id="ad64b-103">Définit un groupe de points de séquence dans la méthode actuelle.</span><span class="sxs-lookup"><span data-stu-id="ad64b-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="ad64b-104">Chaque ligne de début et de la colonne de début définissent le début d’une instruction dans une méthode.</span><span class="sxs-lookup"><span data-stu-id="ad64b-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="ad64b-105">Chaque ligne de fin et de colonne de fin définissent la fin d’une instruction dans une méthode.</span><span class="sxs-lookup"><span data-stu-id="ad64b-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="ad64b-106">Les tableaux doivent être triés dans l’ordre croissant des offsets.</span><span class="sxs-lookup"><span data-stu-id="ad64b-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="ad64b-107">Le décalage est mesuré à partir du début de la méthode, en octets.</span><span class="sxs-lookup"><span data-stu-id="ad64b-107">The offset is always measured from the start of the method, in bytes.</span></span>  
+# <a name="isymunmanagedwriterdefinesequencepoints-method"></a><span data-ttu-id="02bc1-102">ISymUnmanagedWriter::DefineSequencePoints, méthode</span><span class="sxs-lookup"><span data-stu-id="02bc1-102">ISymUnmanagedWriter::DefineSequencePoints Method</span></span>
+<span data-ttu-id="02bc1-103">Définit un groupe de points de séquence dans la méthode actuelle.</span><span class="sxs-lookup"><span data-stu-id="02bc1-103">Defines a group of sequence points within the current method.</span></span> <span data-ttu-id="02bc1-104">Chaque ligne de début et de la colonne de départ définit le début d’une instruction dans une méthode.</span><span class="sxs-lookup"><span data-stu-id="02bc1-104">Each starting line and starting column define the start of a statement within a method.</span></span> <span data-ttu-id="02bc1-105">Chaque ligne de fin et la colonne de fin définissent la fin d’une instruction dans une méthode.</span><span class="sxs-lookup"><span data-stu-id="02bc1-105">Each ending line and ending column define the end of a statement within a method.</span></span> <span data-ttu-id="02bc1-106">Les tableaux doivent être triés dans l’ordre croissant des offsets.</span><span class="sxs-lookup"><span data-stu-id="02bc1-106">The arrays should be sorted in increasing order of offsets.</span></span> <span data-ttu-id="02bc1-107">L’offset est toujours mesuré depuis le début de la méthode, en octets.</span><span class="sxs-lookup"><span data-stu-id="02bc1-107">The offset is always measured from the start of the method, in bytes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ad64b-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ad64b-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="02bc1-108">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="02bc1-108">Syntax</span></span>  
   
 ```  
 HRESULT DefineSequencePoints(  
@@ -40,33 +40,33 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ad64b-109">Paramètres</span><span class="sxs-lookup"><span data-stu-id="ad64b-109">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="02bc1-109">Paramètres</span><span class="sxs-lookup"><span data-stu-id="02bc1-109">Parameters</span></span>  
  `document`  
- <span data-ttu-id="ad64b-110">[in] L’objet de document pour lequel les points de séquence sont définies.</span><span class="sxs-lookup"><span data-stu-id="ad64b-110">[in] The document object for which the sequence points are being defined.</span></span>  
+ <span data-ttu-id="02bc1-110">[in] L’objet de document pour lequel les points de séquence sont définies.</span><span class="sxs-lookup"><span data-stu-id="02bc1-110">[in] The document object for which the sequence points are being defined.</span></span>  
   
  `spCount`  
- <span data-ttu-id="ad64b-111">[in] A `ULONG32` qui indique la taille de chacun de la `offsets`, `lines`, `columns`, `endLines`, et `endColumns` mémoires tampons.</span><span class="sxs-lookup"><span data-stu-id="ad64b-111">[in] A `ULONG32` that that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.</span></span>  
+ <span data-ttu-id="02bc1-111">[in] Un `ULONG32` qui indique la taille de la `offsets`, `lines`, `columns`, `endLines`, et `endColumns` mémoires tampons.</span><span class="sxs-lookup"><span data-stu-id="02bc1-111">[in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.</span></span>  
   
  `offsets`  
- <span data-ttu-id="ad64b-112">[in] Le décalage des points de séquence mesuré à partir du début de la méthode.</span><span class="sxs-lookup"><span data-stu-id="ad64b-112">[in] The offset of the sequence points measured from the beginning of the method.</span></span>  
+ <span data-ttu-id="02bc1-112">[in] Le décalage des points de séquence mesuré à partir du début de la méthode.</span><span class="sxs-lookup"><span data-stu-id="02bc1-112">[in] The offset of the sequence points measured from the beginning of the method.</span></span>  
   
  `lines`  
- <span data-ttu-id="ad64b-113">[in] Les numéros de ligne de départ des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="ad64b-113">[in] The starting line numbers of the sequence points.</span></span>  
+ <span data-ttu-id="02bc1-113">[in] Les numéros de ligne de début des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="02bc1-113">[in] The starting line numbers of the sequence points.</span></span>  
   
  `columns`  
- <span data-ttu-id="ad64b-114">[in] Les numéros de colonne de début des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="ad64b-114">[in] The starting column numbers of the sequence points.</span></span>  
+ <span data-ttu-id="02bc1-114">[in] Les numéros de colonne de départ des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="02bc1-114">[in] The starting column numbers of the sequence points.</span></span>  
   
  `endLines`  
- <span data-ttu-id="ad64b-115">[in] Les numéros de ligne de fin des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="ad64b-115">[in] The ending line numbers of the sequence points.</span></span> <span data-ttu-id="ad64b-116">Ce paramètre est optionnel.</span><span class="sxs-lookup"><span data-stu-id="ad64b-116">This parameter is optional.</span></span>  
+ <span data-ttu-id="02bc1-115">[in] Les numéros de ligne de fin des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="02bc1-115">[in] The ending line numbers of the sequence points.</span></span> <span data-ttu-id="02bc1-116">Ce paramètre est optionnel.</span><span class="sxs-lookup"><span data-stu-id="02bc1-116">This parameter is optional.</span></span>  
   
  `endColumns`  
- <span data-ttu-id="ad64b-117">[in] Les numéros de colonne de fin des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="ad64b-117">[in] The ending column numbers of the sequence points.</span></span> <span data-ttu-id="ad64b-118">Ce paramètre est optionnel.</span><span class="sxs-lookup"><span data-stu-id="ad64b-118">This parameter is optional.</span></span>  
+ <span data-ttu-id="02bc1-117">[in] Les numéros de colonne de fin des points de séquence.</span><span class="sxs-lookup"><span data-stu-id="02bc1-117">[in] The ending column numbers of the sequence points.</span></span> <span data-ttu-id="02bc1-118">Ce paramètre est optionnel.</span><span class="sxs-lookup"><span data-stu-id="02bc1-118">This parameter is optional.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ad64b-119">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="ad64b-119">Return Value</span></span>  
- <span data-ttu-id="ad64b-120">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="ad64b-120">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="02bc1-119">Valeur de retour</span><span class="sxs-lookup"><span data-stu-id="02bc1-119">Return Value</span></span>  
+ <span data-ttu-id="02bc1-120">S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.</span><span class="sxs-lookup"><span data-stu-id="02bc1-120">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ad64b-121">Spécifications</span><span class="sxs-lookup"><span data-stu-id="ad64b-121">Requirements</span></span>  
- <span data-ttu-id="ad64b-122">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ad64b-122">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="02bc1-121">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="02bc1-121">Requirements</span></span>  
+ <span data-ttu-id="02bc1-122">**En-tête :** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="02bc1-122">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad64b-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ad64b-123">See Also</span></span>  
- [<span data-ttu-id="ad64b-124">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="ad64b-124">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="02bc1-123">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="02bc1-123">See Also</span></span>  
+ [<span data-ttu-id="02bc1-124">ISymUnmanagedWriter, interface</span><span class="sxs-lookup"><span data-stu-id="02bc1-124">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
