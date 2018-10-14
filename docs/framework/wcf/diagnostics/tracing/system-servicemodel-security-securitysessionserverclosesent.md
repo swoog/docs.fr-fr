@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 712716fd-6c89-4dea-9398-d2c5b30f6563
 author: BrucePerlerMS
 ms.openlocfilehash: e6702e3841e9fa7b061adb745f8fc157dde20525
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48265920"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314830"
 ---
-# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="82438-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="82438-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
-<span data-ttu-id="82438-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="82438-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionserverclosesent"></a><span data-ttu-id="3dadb-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="3dadb-102">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>
+<span data-ttu-id="3dadb-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span><span class="sxs-lookup"><span data-stu-id="3dadb-103">System.ServiceModel.Security.SecuritySessionServerCloseSent</span></span>  
   
-## <a name="description"></a><span data-ttu-id="82438-104">Description</span><span class="sxs-lookup"><span data-stu-id="82438-104">Description</span></span>  
- <span data-ttu-id="82438-105">La session de sécurité du serveur a envoyé un message fermé au client.</span><span class="sxs-lookup"><span data-stu-id="82438-105">The server security session sent Close to client.</span></span>  
+## <a name="description"></a><span data-ttu-id="3dadb-104">Description</span><span class="sxs-lookup"><span data-stu-id="3dadb-104">Description</span></span>  
+ <span data-ttu-id="3dadb-105">La session de sécurité du serveur a envoyé un message fermé au client.</span><span class="sxs-lookup"><span data-stu-id="3dadb-105">The server security session sent Close to client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82438-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="82438-106">See Also</span></span>  
- [<span data-ttu-id="82438-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="82438-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="82438-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="82438-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="82438-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="82438-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="3dadb-106">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3dadb-106">See Also</span></span>  
+ [<span data-ttu-id="3dadb-107">Suivi</span><span class="sxs-lookup"><span data-stu-id="3dadb-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="3dadb-108">Utilisation du suivi pour résoudre les problèmes posés par votre application</span><span class="sxs-lookup"><span data-stu-id="3dadb-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="3dadb-109">Administration et diagnostics</span><span class="sxs-lookup"><span data-stu-id="3dadb-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
