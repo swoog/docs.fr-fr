@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7802a64716f8bde278fe3f8ed8214f6ac01eadbc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839466"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316517"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Désactivez&gt; , élément de connectionManagement (paramètres réseau)
 Efface la liste de gestion des connexions.  
@@ -55,7 +55,7 @@ Efface la liste de gestion des connexions.
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant efface la liste de gestion des connexions et ajoute ensuite les nouvelles entrées de gestion de connexion pour le serveur www.contoso.com et tous les autres hôtes de réseau.  
+ L’exemple suivant efface la liste de gestion des connexions et ajoute ensuite les nouvelles entrées de gestion de connexion pour le serveur `www.contoso.com` et tous les autres hôtes de réseau.  
   
 ```xml  
 <configuration>  

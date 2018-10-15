@@ -2,12 +2,12 @@
 title: '&lt;participants&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: 093ed0ed51c068fe0a999dc5f7b7a3adec39ae77
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ffe93a6c51fe00760db2276f8ac9efb247f13355
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748460"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316283"
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>&lt;participants&gt; de WCF
 Configurez une liste de participants au suivi qui écoutent les enregistrements de suivi émis directement du runtime et les traitent en fonction de leur configuration. Cela inclut l'écriture dans une sortie spécifique (par exemple, un fichier, une console ou le suivi d'événements pour Windows [ETW]), le traitement/regroupement des enregistrements ou toute autre combinaison requise.  
@@ -21,7 +21,13 @@ Configurez une liste de participants au suivi qui écoutent les enregistrements 
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml
-   <tracking>    <participants>       <add name="String"            profileName="String"           type="String" />    </participants> </tracking>   
+<tracking>
+  <participants>
+    <add name="String"           
+         profileName="String"
+         type="String" />
+  </participants>
+</tracking>    
 ```
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

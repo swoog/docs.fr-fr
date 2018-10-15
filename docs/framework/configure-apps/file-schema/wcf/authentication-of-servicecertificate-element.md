@@ -2,12 +2,12 @@
 title: '&lt;authentication&gt;, élément de &lt;serviceCertificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752544"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316452"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt;, élément de &lt;serviceCertificate&gt;
 Spécifie les paramètres utilisés par le proxy client pour authentifier les certificats de service obtenus à l'aide de la négociation SSL/TLS.  
@@ -38,7 +38,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |customCertificateValidatorType|Chaîne. Type et assembly utilisés pour valider un type personnalisé.|  
 |certificateValidationMode|Spécifie l'un de trois modes utilisés pour valider des informations d'identification. S'il est défini à `Custom`, un customCertificateValidator doit également être fourni. La valeur par défaut est `ChainTrust`.|  
 |revocationMode|Un des modes utilisés pour vérifier des listes de certificat révoqués (CRL). La valeur par défaut est `Online`.|  
-|trustedStoreLocation|L'un des deux emplacements du magasin du système : `LocalMachine` ou `CurrentUser`. Cette valeur est utilisée lorsqu'un certificat de service est négocié au client. La validation est exécutée sur le **personnes** stocker dans l’emplacement de magasin spécifié. La valeur par défaut est `CurrentUser`.|  
+|trustedStoreLocation|L'un des deux emplacements du magasin du système : `LocalMachine` ou `CurrentUser`. Cette valeur est utilisée lorsqu'un certificat de service est négocié au client. La validation est effectuée sur le **personnes** stocker dans l’emplacement de magasin spécifié. La valeur par défaut est `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>customCertificateValidator, attribut  
   
@@ -79,7 +79,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  L'attribut `revocationMode` spécifie le mode de vérification des certificats à révoquer. La valeur par défaut est `online`, qui indique que les certificats sont automatiquement vérifiés pour révocation. Pour plus d’informations, consultez [utilisation des certificats](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Exemple  
- Dans l’exemple suivant, deux tâches sont effectuées : Premièrement, un certificat de service est spécifié, que le client utilise au cours de communications avec les points de terminaison dont le nom de domaine est www.contoso.com sur le protocole HTTP. Deuxièmement, le mode de révocation et l'emplacement de magasin utilisés pendant l'authentification sont définis.  
+ Dans l’exemple suivant, deux tâches sont effectuées : Elle commence par spécifier un certificat de service pour le client à utiliser lors de la communication avec les points de terminaison dont nom de domaine est `www.contoso.com` via le protocole HTTP. Deuxièmement, le mode de révocation et l'emplacement de magasin utilisés pendant l'authentification sont définis.  
   
 ```xml  
 <serviceCertificate>  

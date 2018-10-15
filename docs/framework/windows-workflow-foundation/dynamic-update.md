@@ -2,12 +2,12 @@
 title: Mise à jour dynamique
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 9b26bde8e524275d2eef34afc3f6442e2ebeea6f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076717"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49323121"
 ---
 # <a name="dynamic-update"></a>Mise à jour dynamique
 La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs d'applications de workflow de mettre à jour la définition de workflow d'une instance de workflow persistante. Il peut s'agir d'une résolution de bogue, de nouvelles spécifications ou de l'adaptation à des modifications inattendues. Cette rubrique fournit une vue d'ensemble de la fonctionnalité de mise à jour dynamique introduite dans [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -24,7 +24,7 @@ La mise à jour dynamique fournit un mécanisme pour permettre aux développeurs
 4.  [Appliquer la mise à jour de la carte aux instances de workflow persistantes souhaitées](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
->  Notez que les étapes 1 à 3, qui couvrent la conception de la mise à jour de la carte, peuvent être effectuées indépendamment de la mise à jour. Un scénario courant consiste pour le développeur de workflow à créer la carte de mise à jour hors connexion, puis pour un administrateur à appliquer la mise à jour ultérieurement.  
+>  Notez que les étapes 1 à 3, qui couvrent la conception de la mise à jour de la carte, peuvent être effectuées indépendamment de la mise à jour. Un scénario courant que le développeur de flux de travail crée la carte de mise à jour en mode hors connexion, et ensuite un administrateur s’applique à la mise à jour à une date ultérieure.  
   
  Cette rubrique fournit une vue d'ensemble du processus de mise à jour dynamique pour ajouter une nouvelle activité à une instance persistante d'un workflow XAML compilé.  
   
