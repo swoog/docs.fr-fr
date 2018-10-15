@@ -1,17 +1,16 @@
-# .NET Documentation
+# <a name="net-docs"></a>Documentation de .NET
 
-This repo contains work-in-progress documentation for .NET. To contribute, see the [Contributing Guide](CONTRIBUTING.md) and the [issues list](https://github.com/dotnet/docs/issues). 
+Ce référentiel contient la documentation conceptuelle de .NET. Le [site de la documentation de .NET](https://docs.microsoft.com/dotnet) repose sur plusieurs référentiels en plus de celui-ci :
 
-We welcome contributions to help us improve and complete the .NET docs. Feel free to copy/paste documentation from [.NET Framework docs](https://msdn.microsoft.com/library/w0x726c2.aspx) as a starting point for .NET docs. We anticipate that [Xamarin](http://developer.xamarin.com/api/root/classlib/), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) and [Unity](http://docs.unity3d.com/Manual/index.html) will also use this documentation.
+- [Exemples et extraits de code](https://github.com/dotnet/samples)
+- [Informations de référence sur les API](https://github.com/dotnet/dotnet-api-docs)
+- [Informations de référence sur le kit SDK .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)
 
-This project has adopted the code of conduct defined by the Contributor Covenant
-to clarify expected behavior in our community.
-For more information, see the [.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct).
+Le suivi des problèmes et des tâches de ces trois référentiels se trouve ici. Nous avons une grande communauté qui utilise ces ressources. Nous nous efforçons de répondre aux problèmes dans les meilleurs délais. Vous pouvez en savoir plus sur nos procédures de classification et de résolution des problèmes dans notre rubrique [Politique des problèmes](issues-policy.md).
 
-Samples Build Status
-===
+Nous portons un grand intérêt aux contributions qui nous aident à améliorer et à compléter la documentation de .NET. Pour contribuer, consultez les [Projets pour les contributeurs de la communauté .NET](https://github.com/dotnet/docs/projects/35) et partagez vos idées. Le [Guide de contribution](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md) contient des instructions sur les procédures que nous utilisons. Vous pouvez aussi consulter la [liste des problèmes](https://github.com/dotnet/docs/issues) relatifs aux tâches qui vous intéressent.
 
+Nous prévoyons que [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) et [Unity](http://docs.unity3d.com/Manual/index.html) feront également partie de cette documentation.
 
-| Framework | Ubuntu 16.04 (x64) | Windows Server 2012 R2 (x64)  |
-| ------------- |------------| -----|
-| .NET Core     | [![Build Status](http://seoul.westus.cloudapp.azure.com/buildStatus/icon?job=dotnetcore-samples-ubuntu1604-x64)](http://seoul.westus.cloudapp.azure.com/job/dotnetcore-samples-ubuntu1604-x64/) | [![Build Status](http://seoul.westus.cloudapp.azure.com/buildStatus/icon?job=dotnetcore-samples-windows2012-x64)](http://seoul.westus.cloudapp.azure.com/job/dotnetcore-samples-windows2012-x64/) |
+Ce projet a adopté le code de conduite défini dans la charte des contributeurs afin que le comportement à observer dans notre communauté soit clair.
+Pour plus d’informations, consultez le [code de conduite de .NET Foundation](https://dotnetfoundation.org/code-of-conduct).
