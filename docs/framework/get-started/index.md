@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522328"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349067"
 ---
 # <a name="get-started-with-the-net-framework"></a>Bien démarrer avec le .NET Framework
 
@@ -67,7 +67,7 @@ Si vous êtes développeur, choisissez n’importe quel langage de programmation
 
 Pour développer des applications ou des composants .NET Framework, procédez comme suit :
 
-1. Si elle n’est pas préinstallée sur votre système d’exploitation, installez la version du .NET Framework ciblée par votre application. La dernière version en production est le .NET Framework 4.7.2, préinstallé sur la Mise à jour du 10 avril 2018 de Windows 10 et disponible en téléchargement sur les versions précédentes du système d’exploitation Windows. Pour la configuration système requise du .NET Framework, consultez [Configuration requise](../../../docs/framework/get-started/system-requirements.md). Pour plus d’informations sur l’installation d’autres versions du .NET Framework, consultez [Guide d’installation](../../../docs/framework/install/guide-for-developers.md). Les autres packages .NET Framework sont fournis hors bande, ce qui signifie qu’ils sont publiés en continu, en dehors d’un cycle de publications classique ou planifié. Pour plus d’informations sur ces packages, consultez [Versions finales hors plage du .NET Framework](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
+1. Si elle n’est pas préinstallée sur votre système d’exploitation, installez la version du .NET Framework ciblée par votre application. La version de production la plus récente est le .NET Framework 4.7.2. Elle est préinstallée sur la Mise à jour d’avril 2018 de Windows 10 et la Mise à jour d’octobre 2018 de Windows 10, et elle est disponible en téléchargement sur les versions précédentes du système d’exploitation Windows. Pour la configuration système requise du .NET Framework, consultez [Configuration requise](../../../docs/framework/get-started/system-requirements.md). Pour plus d’informations sur l’installation d’autres versions du .NET Framework, consultez [Guide d’installation](../../../docs/framework/install/guide-for-developers.md). Les autres packages .NET Framework sont fournis hors bande, ce qui signifie qu’ils sont publiés en continu, en dehors d’un cycle de publications classique ou planifié. Pour plus d’informations sur ces packages, consultez [Versions finales hors plage du .NET Framework](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
 2. Sélectionnez le ou les langages pris en charge par le .NET Framework que vous prévoyez d’utiliser pour développer vos applications. Microsoft propose plusieurs langages, notamment [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) et C++/CLI. (Un langage de programmation qui vous permet de développer des applications pour le .NET Framework respecte la [spécification CLI (Common Language Infrastructure)](https://go.microsoft.com/fwlink/?LinkId=199862).)
 

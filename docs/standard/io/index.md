@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025595"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372029"
 ---
 # <a name="file-and-stream-io"></a>Fichier et flux de données E/S
 E/S de fichier et de flux (entrées/sorties) fait référence au transfert de données vers ou depuis un support de stockage. Dans le .NET Framework, les espaces de noms `System.IO` contiennent des types qui permettent la lecture et l'écriture, de façon synchrone ou asynchrone, sur les flux de données et les fichiers. Ces espaces de noms contiennent également les types qui exécutent la compression et la décompression sur les fichiers, et ceux qui permettent la communication via des canaux et des ports série.  
@@ -122,7 +122,7 @@ Pour les conventions de nommage des chemins et les nouvelles méthodes pour expr
 ## <a name="isolated-storage"></a>Stockage isolé  
  Le stockage isolé est un mécanisme de stockage de données qui offre une isolation et une sécurité en définissant des méthodes standardisées pour associer du code à des données enregistrées. Le stockage fournit un système de fichiers virtuel qui est isolé par utilisateur, assembly et (éventuellement) domaine. Le stockage isolé est particulièrement utile lorsque votre application n'a pas l'autorisation d'accès aux fichiers utilisateur. Enregistrez les paramètres ou les fichiers de votre application d'une façon contrôlée par la stratégie de sécurité de l'ordinateur.  
   
- Le stockage isolé n'est pas disponible pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Utilisez à la place les classes de données d'application de l'espace de noms [Windows.Storage](/uwp/api/Windows.Storage). Pour plus d’informations, consultez [Données d’applications](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) dans le Centre de développement Windows.  
+ Le stockage isolé n'est pas disponible pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Utilisez à la place les classes de données d'application de l'espace de noms <xref:Windows.Storage?displayProperty=nameWithType>. Pour plus d’informations, consultez [Données de l’application](/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Les classes suivantes sont fréquemment utilisées lors d'une implémentation de stockage isolé :  
   
@@ -139,20 +139,20 @@ Pour les conventions de nommage des chemins et les nouvelles méthodes pour expr
   
  Quelques différences importantes sont notables pour les opérations d'E/S dans les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] :  
   
--   Les types spécifiquement liés aux opérations sur les fichiers, tels que <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> et <xref:System.IO.DirectoryInfo> ne sont pas inclus dans [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. À la place, utilisez les types de l'espace de noms [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) de [!INCLUDE[wrt](../../../includes/wrt-md.md)], comme [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) et [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Les types spécifiquement liés aux opérations sur les fichiers, tels que <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> et <xref:System.IO.DirectoryInfo> ne sont pas inclus dans [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Au lieu de cela, utilisez les types dans l’espace de noms <xref:Windows.Storage?displayProperty=nameWithType> de [!INCLUDE[wrt](../../../includes/wrt-md.md)], comme <xref:Windows.Storage.StorageFile> et <xref:Windows.Storage.StorageFolder>.  
   
 -   Le stockage isolé n'est pas disponible ; à la place, utilisez les [données d'application](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Utilisez les méthodes asynchrones, telles que <xref:System.IO.Stream.ReadAsync%2A> et <xref:System.IO.Stream.WriteAsync%2A> pour empêcher le blocage du thread d'interface utilisateur.  
   
--   Les types de compression <xref:System.IO.Compression.ZipFile> et <xref:System.IO.Compression.ZipFileExtensions> basés sur le chemin d'accès ne sont pas disponibles. À la place, utilisez les types de l'espace de noms [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+-   Les types de compression <xref:System.IO.Compression.ZipFile> et <xref:System.IO.Compression.ZipFileExtensions> basés sur le chemin d’accès ne sont pas disponibles. À la place, utilisez les types dans l’espace de noms <xref:Windows.Storage.Compression?displayProperty=nameWithType>.  
   
  Vous pouvez convertir entre les flux .NET Framework et les flux Windows Runtime, si nécessaire. Pour plus d'informations, consultez la page [Guide pratique : effectuer une conversion entre les flux .NET Framework et les flux Windows Runtime](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
  Pour plus d’informations sur les opérations d’E/S dans une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consultez [Démarrage rapide : lecture et écriture de fichiers](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>E/S et sécurité  
- Lorsque vous utilisez les classes de l'espace de noms <xref:System.IO?displayProperty=nameWithType>, vous devez suivre les spécifications de sécurité du système d'exploitation telles que les listes de contrôle d'accès (ACL) pour contrôler l'accès aux fichiers et aux répertoires. Ces spécifications s'ajoutent aux spécifications <xref:System.Security.Permissions.FileIOPermission> existantes. Les listes de contrôle d'accès peuvent être gérées par programmation. Pour plus d'informations, consultez [Comment : ajouter ou supprimer des entrées dans la liste de contrôle d'accès](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
+ Lorsque vous utilisez les classes de l’espace de noms <xref:System.IO?displayProperty=nameWithType>, vous devez suivre les exigences de sécurité du système d’exploitation telles que les listes de contrôle d’accès (ACL) pour contrôler l’accès aux fichiers et aux répertoires. Ces spécifications s'ajoutent aux spécifications <xref:System.Security.Permissions.FileIOPermission> existantes. Les listes de contrôle d'accès peuvent être gérées par programmation. Pour plus d'informations, consultez [Comment : ajouter ou supprimer des entrées dans la liste de contrôle d'accès](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
  Les stratégies de sécurité par défaut empêchent les applications provenant d'Internet ou de l'intranet d'accéder aux fichiers sur l'ordinateur de l'utilisateur. Par conséquent, n’utilisez pas les classes d’E/S qui requièrent un chemin d’accès à un fichier physique lors de l’écriture du code qui sera téléchargé sur Internet ou sur l’intranet. À la place, utilisez le [stockage isolé](../../../docs/standard/io/isolated-storage.md) pour les applications .NET Framework traditionnelles ou les [données d'application](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
@@ -164,7 +164,7 @@ Pour les conventions de nommage des chemins et les nouvelles méthodes pour expr
   
  Présente les tâches d’E/S associées aux fichiers, aux répertoires et aux flux, et des liens vers du contenu et des exemples appropriés pour chaque tâche.  
   
--   [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)  
+-   [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
   
  Décrit les opérations élémentaires des E/S asynchrones et leurs avantages en termes de performances.  
   
