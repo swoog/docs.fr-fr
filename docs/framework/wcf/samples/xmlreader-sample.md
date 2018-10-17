@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: ce5c03d7bd169ee166e9444ee070c32df6e2801c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520944"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374675"
 ---
 # <a name="xmlreader-sample"></a>XmlReader, exemple
 Cet exemple présente le traitement d'un corps de message à l'aide de <xref:System.Xml.XmlReader>. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente un service de calculatrice. L'opération de service `Sum` a été ajoutée et accepte un message qui contient un tableau de valeurs à ajouter ensemble. Le service lit le message à l'aide de <xref:System.Xml.XmlReader>.  
@@ -19,7 +19,7 @@ Cet exemple présente le traitement d'un corps de message à l'aide de <xref:Sys
   
  L'interface de calculatrice inclut une opération de service appelée `Sum` qui accepte un paramètre <xref:System.ServiceModel.Channels.Message>, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp
 public interface ICalculator  
 {  
     [OperationContract]  
@@ -37,9 +37,10 @@ public interface ICalculator
   
  Le client accède à `Sum` en créant tout d'abord un tableau de valeurs entières, puis un message à partir du tableau, et en appelant ensuite la méthode `Sum` à l'aide du message créé, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp
 CalculatorClient client = new CalculatorClient();  
-...  
+//...  
+
 // Call the Sum service operation.  
 int[] values = { 1, 2, 3, 4, 5 };  
 using (new OperationContextScope(client.InnerChannel))  
@@ -54,7 +55,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  Dans le service, l'implémentation de l'opération de service `Sum` accède au corps du message à l'aide d'un objet <xref:System.Xml.XmlReader> pour parcourir les valeurs à additionner. La méthode <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> est appelée pour accéder au corps du message, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp  
 public int Sum(Message message)  
 {  
     int sum = 0;  
@@ -81,7 +82,7 @@ public int Sum(Message message)
   
  Lorsque vous exécutez l'exemple, les demandes et réponses de l'opération s'affichent dans la fenêtre de console du client. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

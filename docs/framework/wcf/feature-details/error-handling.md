@@ -2,12 +2,12 @@
 title: Gestion des erreurs
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: 64b1af4b557d7792c7285866edc9aed08a0ef667
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486152"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372209"
 ---
 # <a name="error-handling"></a>Gestion des erreurs
 ## <a name="error-handling-in-windows-communication-foundation"></a>Gestion des erreurs dans Windows Communication Foundation  
@@ -30,7 +30,7 @@ ms.locfileid: "43486152"
 ### <a name="dealing-with-unexpected-exceptions-using-an-ierrorhandler"></a>Traiter les exceptions inattendues à l'aide d'un IErrorHandler  
  Pour traiter les exceptions inattendues, la procédure recommandée est « connecter » un IErrorHandler. Gestionnaires d’erreurs uniquement interceptent des exceptions au niveau du runtime WCF (la couche « modèle de service »), pas au niveau de la couche de canal. La seule manière de connecter un IErrorHandler au niveau de canal consiste à créer un canal personnalisé, ce qui est déconseillé dans la plupart des scénarios.  
   
- Une exception « inattendue » n’est généralement ni une exception irrécupérable ni une exception de traitement ; Il est, au lieu de cela, une exception utilisateur inattendue. Une exception irrécupérable (par exemple, une exception de mémoire insuffisante), généralement gérée par le [Gestionnaire d’exceptions de modèle de Service](https://msdn.microsoft.com/library/system.servicemodel.dispatcher.exceptionhandler.aspx) automatiquement – ne peut généralement être gérée correctement et la seule raison de gérer cette exception tout est peut-être effectuer un enregistrement supplémentaire ou de retourner une exception standard au client. Une exception de traitement se produit dans le traitement du message (par exemple, au niveau de la sérialisation, de l'encodeur ou du formateur), généralement elle ne peut pas être gérée dans un IErrorHandler, car il est trop tôt ou trop tard pour que le gestionnaire d'erreurs intervienne lorsque ces exceptions se produisent. De même, les exceptions de transport ne peuvent pas être gérées dans un IErrorHandler.  
+ Une exception « inattendue » n’est généralement ni une exception irrécupérable ni une exception de traitement ; Il est, au lieu de cela, une exception utilisateur inattendue. Une exception irrécupérable (par exemple, une exception de mémoire insuffisante), généralement gérée par le [Gestionnaire d’exceptions de modèle de Service](xref:System.ServiceModel.Dispatcher.ExceptionHandler) automatiquement – ne peut généralement être gérée correctement et la seule raison de gérer cette exception tout est peut-être effectuer un enregistrement supplémentaire ou de retourner une exception standard au client. Une exception de traitement se produit dans le traitement du message (par exemple, au niveau de la sérialisation, de l'encodeur ou du formateur), généralement elle ne peut pas être gérée dans un IErrorHandler, car il est trop tôt ou trop tard pour que le gestionnaire d'erreurs intervienne lorsque ces exceptions se produisent. De même, les exceptions de transport ne peuvent pas être gérées dans un IErrorHandler.  
   
  Avec un IErrorHandler, vous pouvez explicitement contrôler le comportement de votre application lorsqu'une exception est levée. Vous pouvez :  
   

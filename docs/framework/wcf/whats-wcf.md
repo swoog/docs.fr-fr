@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 0aaa72741a1bb75862a1e3a4c5569ea53919a7f3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1046f80ee094fa1c65c9f0f69febff84ccd36db0
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845578"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372049"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Présentation de Windows Communication Foundation
 Windows Communication Foundation (WCF) est une infrastructure pour la création d’applications orientées service. À l’aide de WCF, vous pouvez envoyer données sous forme de messages asynchrones à partir d’un point de terminaison à un autre. Un point de terminaison de service peut faire partie d'un service disponible en continu et hébergé par IIS, ou il peut s'agir d'un service hébergé dans une application. Un point de terminaison peut être un client d'un service qui demande des données auprès d'un point de terminaison de service. Les messages peuvent être simplement constitués d'un caractère ou d'un mot unique envoyé au format XML, ou se présenter sous la forme d'un flux de données binaires plus complexe. Voici quelques exemples de scénarios :
@@ -103,4 +103,4 @@ Le [!INCLUDE[dublin](../../../includes/dublin-md.md)] application server est sp�
 - [Didacticiel Bien démarrer](../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Guide de la documentation](../../../docs/framework/wcf/guide-to-the-documentation.md)
 - [Programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Exemples Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)
+- [Exemples Windows Communication Foundation](/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

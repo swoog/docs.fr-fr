@@ -2,19 +2,19 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: 9a9d48cc49b19f737236939c83a4e9421013f48f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486599"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370911"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 class MsmqBindingElementBase : TransportBindingElement  
 {  
   string CustomDeadLetterQueue;  
@@ -34,7 +34,7 @@ class MsmqBindingElementBase : TransportBindingElement
 ## <a name="methods"></a>Méthodes  
  La classe MsmqBindingElementBase ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe MsmqBindingElementBase a les propriétés suivantes :  
   
 ### <a name="customdeadletterqueue"></a>CustomDeadLetterQueue  
@@ -114,7 +114,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  Valeur booléenne qui indique si les copies des messages traités par cette liaison doivent être stockées dans la file d'attente du journal source.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

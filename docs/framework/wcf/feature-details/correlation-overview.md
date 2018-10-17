@@ -2,12 +2,12 @@
 title: Vue d'ensemble de la corrélation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 1f9e4db4002e53af5cdf91ab9d563764495b30d3
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261246"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372640"
 ---
 # <a name="correlation-overview"></a>Vue d'ensemble de la corrélation
 La corrélation est le mécanisme qui permet de lier les messages de service de workflow entre eux ou à l'état de l'instance d'application, par exemple une réponse à une demande initiale ou un ID de commande particulier à l'état persistant d'un workflow de traitement de commandes. Cette rubrique offre une vue d'ensemble de la corrélation. Les autres rubriques de cette section fournissent des informations supplémentaires sur chaque type de corrélation.  
@@ -21,12 +21,12 @@ La corrélation est le mécanisme qui permet de lier les messages de service de 
 
 La corrélation basée sur le protocole utilise le mécanisme de transport pour lier des messages entre eux et à l'instance appropriée. Certaines corrélations de protocole fournies par le système incluent une corrélation demande-réponse et une corrélation basée sur le contexte. Une corrélation demande-réponse permet de corréler une seule paire d'activités de messagerie pour former une opération bidirectionnelle, par exemple <xref:System.ServiceModel.Activities.Send> appariée à <xref:System.ServiceModel.Activities.ReceiveReply>, ou <xref:System.ServiceModel.Activities.Receive> appariée à <xref:System.ServiceModel.Activities.SendReply>. Le Concepteur de flux de travail Visual Studio fournit également un ensemble de modèles d’activité pour implémenter ce modèle rapidement. Une corrélation basée sur le contexte est basée sur le mécanisme d’échange de contexte décrit dans le [.NET Context Exchange Protocol Specification](https://go.microsoft.com/fwlink/?LinkID=166059). Pour utiliser la corrélation basée sur le contexte, une liaison basée sur le contexte telle que <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding> doit être utilisée sur le point de terminaison.  
   
-Pour plus d’informations sur la corrélation de protocole, consultez [Durable Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) et [demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Pour plus d’informations sur les modèles d’activité de Concepteur de flux de travail de Visual Studio, consultez [activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Pour l’exemple de code, consultez le [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) exemple.  
+Pour plus d’informations sur la corrélation de protocole, consultez [Durable Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) et [demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Pour plus d’informations sur les modèles d’activité de Concepteur de flux de travail de Visual Studio, consultez [activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Pour l’exemple de code, consultez le [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) exemple.  
   
 ## <a name="content-based-correlation"></a>Corrélation basée sur le contenu
 
-La corrélation basée sur le contenu utilise quelques renseignements dans le message pour l'associer à une instance particulière. Contrairement à la corrélation basée sur le protocole, la corrélation basée sur le contenu exige que l'auteur de l'application déclare explicitement où se trouvent ces données dans chaque message connexe. Les activités qui utilisent la corrélation basée sur le contenu spécifient ces données de message à l'aide d'un objet <xref:System.ServiceModel.MessageQuerySet>. La corrélation basée sur le contenu est utile lors de la communication avec des services qui n'utilisent aucune liaison de contexte, comme <xref:System.ServiceModel.BasicHttpContextBinding>.
+La corrélation basée sur le contenu utilise quelques renseignements dans le message pour l'associer à une instance particulière. Contrairement à la corrélation basée sur le protocole, la corrélation basée sur le contenu exige que l'auteur de l'application déclare explicitement où se trouvent ces données dans chaque message connexe. Les activités qui utilisent la corrélation basée sur le contenu spécifient ces données de message à l'aide d'un objet <xref:System.ServiceModel.MessageQuerySet>. La corrélation basée sur le contenu est utile lors de la communication avec des services qui n’utilisent aucune liaison de contexte, comme <xref:System.ServiceModel.BasicHttpContextBinding>.
   
 ## <a name="see-also"></a>Voir aussi  
 
-- [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

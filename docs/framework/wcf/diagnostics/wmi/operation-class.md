@@ -2,19 +2,19 @@
 title: Operation, classe
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: d9256915afe9fdb8e4c91d186131fe41a7094c56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487566"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371587"
 ---
 # <a name="operation-class"></a>Operation, classe
 Opération  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class Operation  
 {  
   string Action;  
@@ -35,7 +35,7 @@ class Operation
 ## <a name="methods"></a>Méthodes  
  La classe Operation ne définit pas de méthodes.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe Operation a les propriétés suivantes :  
   
 ### <a name="action"></a>Action  
@@ -50,7 +50,7 @@ class Operation
   
  Type d'accès : lecture seule  
   
- Indique qu’une opération est implémentée à l’aide de façon asynchrone un `Begin`[Ouvrir/fermer les crochets pointus] et `End`paire de méthodes [ouverture/fermeture crochets] dans un contrat de service.  
+ Indique qu’une opération est implémentée de façon asynchrone à l’aide un `Begin`[Ouvrir/fermer les crochets] et `End`paire de méthodes [ouverture/fermeture crochets] dans un contrat de service.  
   
 ### <a name="behaviors"></a>comportements  
  Type de données : tableau de comportements  
@@ -122,7 +122,7 @@ class Operation
   
  Type de retour de l’opération.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

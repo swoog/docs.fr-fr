@@ -2,12 +2,12 @@
 title: "Comment : verrouiller des points de terminaison dans l'entreprise"
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836903"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374155"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Comment : verrouiller des points de terminaison dans l'entreprise
 Les entreprises de grande taille exigent souvent que les applications soient développées conformément à leurs stratégies de sécurité. La rubrique suivante explique comment développer et installer un validateur de point de terminaison client qui peut être utilisé pour valider toutes les applications clientes de Windows Communication Foundation (WCF) installées sur les ordinateurs.  
@@ -39,7 +39,7 @@ Les entreprises de grande taille exigent souvent que les applications soient dé
   
 1.  Installez le validateur de point de terminaison à l'aide du mécanisme approprié. Dans une entreprise, cela peut s'effectuer en utilisant la stratégie de groupe ou SMS (Systems Management Server).  
   
-2.  Installer l’assembly avec nom fort dans le global assembly cache en utilisant le [Gacutil.exe (outil Global Assembly Cache)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Installer l’assembly avec nom fort dans le global assembly cache en utilisant le [Gacutil.exe (outil Global Assembly Cache)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
 3.  Utilisez les types d'espaces de noms <xref:System.Configuration?displayProperty=nameWithType> pour :  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3955329903af0d4c27bc7228c7c9025cb03e00f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f68304b06c502672ae1aac9693a966ea546ee4dd
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394311"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371834"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException, classe (.NET Native)
 **.NET pour applications Windows pour Windows 10, [!INCLUDE[net_native](../../../includes/net-native-md.md)] uniquement**  
@@ -35,7 +35,7 @@ ms.locfileid: "33394311"
 |`public MissingMetadataException()`|Initialise une nouvelle instance de la classe `MissingMetadataException` à l'aide d'un message système qui décrit l'erreur.<br /><br /> Ce constructeur est destiné à une utilisation interne par la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] uniquement.|  
 |`public MissingMetadataException(String message)`|Initialise une nouvelle instance de la classe `MissingMetadataException` avec un message d'erreur spécifié.<br /><br /> Ce constructeur est destiné à une utilisation interne par la chaîne d'outils [!INCLUDE[net_native](../../../includes/net-native-md.md)] uniquement.|  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
   
 |Propriété|Description|  
 |--------------|-----------------|  
@@ -76,8 +76,8 @@ ms.locfileid: "33394311"
 > [!IMPORTANT]
 >  Comme cette exception indique que les métadonnées nécessaires à votre application ne sont pas disponibles au moment de l’exécution, vous ne devez pas gérer cette exception dans un bloc `try`/`catch`. Au lieu de cela, vous devez diagnostiquer la cause de l'exception et l'éliminer à l'aide d'un fichier de directives runtime. Pour obtenir l'entrée que vous pouvez ajouter à votre fichier de directives de runtime qui élimine l'exception, vous pouvez utiliser un des deux utilitaires de résolution des problèmes :  
 >   
->  -   l’ [utilitaire de résolution des problèmes MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) pour les types ;  
-> -   l’ [utilitaire de résolution des problèmes MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) pour les méthodes.  
+>  -   l’ [utilitaire de résolution des problèmes MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) pour les types ;  
+> -   l’ [utilitaire de résolution des problèmes MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) pour les méthodes.  
   
  La classe `MissingMetadataException` ne contient pas de membres uniques ; tous ses membres sont hérités de sa classe de base, <xref:System.TypeAccessException>.  
   

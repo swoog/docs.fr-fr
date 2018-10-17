@@ -2,19 +2,19 @@
 title: WSAT_TraceRecord
 ms.date: 03/30/2017
 ms.assetid: 99bc7f66-1335-40d8-aa68-e754d569dc0d
-ms.openlocfilehash: 1136647ce668dbb69bdb8acf8ed62343831464b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 907e764cf032e595c7aba455fd4808a640f68016
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487774"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373994"
 ---
 # <a name="wsattracerecord"></a>WSAT_TraceRecord
 WSAT_TraceRecord  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class WSAT_TraceRecord : WSAT_TraceEvent  
 {  
   object ActivityID;  
@@ -26,7 +26,7 @@ class WSAT_TraceRecord : WSAT_TraceEvent
 ## <a name="methods"></a>Méthodes  
  La classe WSAT_TraceRecord ne définit aucune méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe WSAT_TraceRecord a les propriétés suivantes :  
   
 ### <a name="activityid"></a>ActivityID  
@@ -47,7 +47,7 @@ Type d'accès : lecture seule
   
  Enregistrement de suivi  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

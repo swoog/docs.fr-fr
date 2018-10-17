@@ -2,19 +2,19 @@
 title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
-ms.openlocfilehash: 7189448a930298837089cf3ac2743cb7e073ae02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486979"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371574"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Informations du domaine d'application  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class AppDomainInfo  
 {  
   sint32 AppDomainId;  
@@ -35,7 +35,7 @@ class AppDomainInfo
 ## <a name="methods"></a>Méthodes  
  La classe AppDomainInfo ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe AppDomainInfo a les propriétés suivantes :  
   
 ### <a name="appdomainid"></a>AppDomainId  
@@ -122,7 +122,7 @@ class AppDomainInfo
   
  Collection d’écouteurs de la source de suivi System.ServiceModel.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

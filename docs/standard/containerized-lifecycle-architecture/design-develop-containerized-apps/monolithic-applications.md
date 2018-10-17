@@ -4,70 +4,70 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4d25ef131cf149eb869fa2acd40eddff5ee0b55d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106617"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374701"
 ---
 # <a name="monolithic-applications"></a>Applications monolithiques
 
-Dans ce scénario, vous générez une application web unique et monolithique ou le service et déployer en tant que conteneur. Dans l’application, la structure ne peut pas être monolithique ; Il peut comprendre plusieurs bibliothèques, composants ou même des couches (couche application, couche de domaine, couche d’accès aux données, etc.). En externe, il s’agit d’un seul conteneur, comme un processus unique, seule application web ou service unique.
+Dans ce scénario, vous générez une application web unique et monolithique ou le service et déployez-le en tant que conteneur. Au sein de l’application, la structure ne peut pas être monolithique ; Il peut comprendre plusieurs bibliothèques, composants ou mêmes couches (couche application, couche de domaine, couche d’accès aux données, etc.). En externe, il est un conteneur unique, comme un processus unique, application web unique ou service unique.
 
-Pour gérer ce modèle, vous déployez un seul conteneur pour représenter l’application. À l’échelle, ajoutez simplement quelques copies plus avec un équilibrage de charge à l’avant. La simplicité provient de la gestion d’un déploiement unique dans un conteneur unique ou d’un ordinateur virtuel (VM).
+Pour gérer ce modèle, vous déployez un seul conteneur pour représenter l’application. Mettre à l’échelle, ajoutez simplement quelques autres copies avec un équilibreur de charge à l’avant. Cette simplicité provient de la gestion d’un déploiement unique dans un conteneur unique ou de la machine virtuelle (VM).
 
-Suite de l’entité de sécurité qu’un conteneur fait une chose uniquement et qu’il le fait dans un processus, le modèle monolithique est en conflit. Vous pouvez inclure plusieurs composants/bibliothèques ou couches internes dans chaque conteneur, comme illustré dans la Figure 4-1.
+Le principal qu’un conteneur fait une chose uniquement et le fait dans un processus, ce modèle monolithique est en conflit. Vous pouvez inclure plusieurs composants ou bibliothèques ou couches internes dans chaque conteneur, comme illustré dans la Figure 4-1.
 
 ![](./media/image1.png)
 
-Figure 4-1 : exemple d’architecture d’application monolithique
+Figure 4-1 : un exemple d’architecture de l’application monolithique
 
-L’inconvénient de cette approche est fournie si ou lorsque l’application se développe, nécessitant une mise à l’échelle. Si l’application entière est mise à l’échelle, ce n’est pas vraiment un problème. Toutefois, dans la plupart des cas, certaines parties de l’application sont les points d’étranglement qui nécessitent la mise à l’échelle, tandis que les autres composants sont utilisés moins.
+L’inconvénient de cette approche est fourni si ou quand l’application grandit, nécessitant sa mise à l’échelle. Si l’application entière est mise à l’échelle, ce n’est pas vraiment un problème. Toutefois, dans la plupart des cas, quelques parties de l’application sont des goulots nécessitant une mise à l’échelle, tandis que les autres composants sont moins utilisés.
 
-À l’aide de l’exemple classique de commerce électronique, cela signifie probablement qu’avez besoin est à l’échelle le composant d’informations de produit. Les clients qui recherchent des produits sont beaucoup plus nombreux que ceux qui en achètent. Plus de clients utilisent leur panier d’achat que ceux qui utilisent le pipeline de paiement. Moins de clients ajoutent des commentaires ou consultent leur historique d’achat. Et vous avez probablement que quelques employés, dans une région unique, qui ont besoin de gérer le contenu et les campagnes marketing. Par la mise à l’échelle de la conception monolithique, tout le code est déployé plusieurs fois.
+À l’aide de l’exemple de commerce électronique ordinaire, ce que vous avez probablement besoin consiste à mettre à l’échelle le composant d’informations de produit. Les clients qui recherchent des produits sont beaucoup plus nombreux que ceux qui en achètent. Plus de clients utilisent leur panier d’achat que ceux qui utilisent le pipeline de paiement. Moins de clients ajoutent des commentaires ou consultent leur historique d’achat. Et vous avez probablement uniquement un certain nombre d’employés, d’une seule région, qui doivent gérer le contenu et les campagnes marketing. Par la mise à l’échelle de la conception monolithique, tout le code est déployé plusieurs fois.
 
-En plus de la « montée en puissance-tous les éléments « nécessitent des modifications à un seul composant problème, le nouveau test complet de l’ensemble de l’application ainsi que d’un redéploiement complet de toutes les instances.
+En plus de la « mise à l’échelle-tous les éléments « problème, les modifications apportées à un seul composant nécessitent un nouveau test complet de l’application entière, mais aussi un redéploiement complet de toutes les instances.
 
-L’approche monolithique est courant, et développent avec cette méthode architecturale de nombreuses organisations. Nombreux Profitez bon nombre insuffisant de résultats, alors que d’autres limites de rencontrer. Nombreux conçues leurs applications dans ce modèle, car l’infrastructure et les outils ont été trop difficiles à générer SOA, et il n’a pas été voit la nécessité, jusqu'à ce que l’application a fait l’objet.
+L’approche monolithique est commun, et de nombreuses organisations développez avec cette méthode architecturale. Nombreux Profitez bien suffisamment de résultats, tandis que d’autres limites de rencontrer. Souvent conçu leurs applications dans ce modèle, car les outils et l’infrastructure étaient trop complexes pour concevoir des SOA, et elles ne voyaient la nécessité, jusqu'à ce que l’application a augmenté.
 
-Du point de vue de l’infrastructure, chaque serveur peut exécuter des applications dans le même hôte et ont un taux acceptable d’efficacité dans votre utilisation des ressources, comme indiqué dans la Figure 4-2.
+Du point de vue de l’infrastructure, chaque serveur peut exécuter de nombreuses applications au sein du même hôte et avoir un ratio acceptable d’efficacité dans votre utilisation des ressources, comme indiqué dans la Figure 4-2.
 
 ![](./media/image2.png)
 
 Figure 4-2 : un ordinateur hôte exécutant plusieurs applications/conteneurs
 
-Vous pouvez déployer des applications monolithiques dans Azure à l’aide de machines virtuelles dédiées pour chaque instance. À l’aide de [jeux de mise à l’échelle de machine virtuelle Azure](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), vous pouvez adapter facilement les machines virtuelles. [Azure App Service](https://azure.microsoft.com/en-us/services/app-service/) peut également exécuter des applications monolithiques et facilement mettre à l’échelle des instances sans nécessiter une gestion des machines virtuelles. Depuis 2016, les Services d’application Azure peut exécute des instances uniques de Docker, en matière de conteneurs, ce qui simplifie le déploiement. Et, à l’aide de Docker, vous pouvez déployer une seule machine virtuelle comme un hôte Docker et exécuter plusieurs instances. À l’aide de l’équilibrage de Azure, comme illustré dans la Figure 4-3, vous pouvez gérer la mise à l’échelle.
+Vous pouvez déployer des applications monolithiques dans Azure à l’aide de machines virtuelles dédiées pour chaque instance. À l’aide de [Azure VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/), vous pouvez évoluer facilement les machines virtuelles. [Azure App Service](https://azure.microsoft.com/services/app-service/) peut également exécuter des applications monolithiques et facilement mettre à l’échelle des instances sans nécessiter une gestion des machines virtuelles. Depuis 2016, Azure App Services peut exécuter des instances uniques de conteneurs Docker, ainsi, ce qui simplifie le déploiement. Et, à l’aide de Docker, vous pouvez déployer une seule machine virtuelle comme hôte Docker et exécuter plusieurs instances. À l’aide de l’équilibrage de Azure, comme illustré dans la Figure 4-3, vous pouvez gérer la mise à l’échelle.
 
 ![](./media/image3.png)
 
-Figure 4-3 : plusieurs hôtes montée en une seule application applications/conteneurs Docker
+Figure 4-3 : plusieurs hôtes montée une seule application applications/conteneurs Docker
 
-Vous pouvez gérer le déploiement sur les différents hôtes via les techniques de déploiement traditionnelles. Vous pouvez gérer les hôtes Docker à l’aide des commandes telles que `docker run` manuellement, à l’aide d’automation, tels que les pipelines de livraison continue (CD), ce qui nous expliquons plus loin dans ce livre électronique.
+Vous pouvez gérer le déploiement sur les différents hôtes par le biais de techniques de déploiement traditionnelles. Vous pouvez gérer des hôtes Docker à l’aide des commandes telles que `docker run` manuellement, à l’aide d’automation, telles que les pipelines de livraison continue (CD), ce qui nous expliquer plus loin dans ce livre électronique.
 
 ## <a name="monolithic-application-deployed-as-a-container"></a>Application monolithique déployée comme conteneur
 
-Il existe des avantages à utiliser des conteneurs pour gérer les déploiements monolithiques. La mise à l’échelle des instances des conteneurs est beaucoup plus rapide et facile que le déploiement de machines virtuelles supplémentaires. Bien que les groupes de VM identiques sont une fonctionnalité intéressante à l’échelle de machines virtuelles, qui sont requis pour héberger vos conteneurs Docker, ils de temps configuré. Quand une machine virtuelle est déployée en tant qu’instance de l’application, la configuration de l’application est gérée en interne par la machine virtuelle.
+Il existe des avantages à l’utilisation de conteneurs pour gérer les déploiements monolithiques. La mise à l’échelle des instances des conteneurs est beaucoup plus rapide et facile que le déploiement de machines virtuelles supplémentaires. Bien que les machines virtuelles identiques sont une fonctionnalité intéressante à l’échelle de machines virtuelles, qui sont requis pour héberger vos conteneurs Docker, ils tarder à configurer. Quand une machine virtuelle est déployée en tant qu’instance de l’application, la configuration de l’application est gérée en interne par la machine virtuelle.
 
-Le déploiement de mises à jour comme images Docker est beaucoup plus rapide et efficace du point de vue du réseau. Les instances Vn peuvent être configurés sur les mêmes hôtes que vos instances Vn-1, en éliminant les coûts supplémentaires résultant des machines virtuelles supplémentaires. Les images docker démarrent généralement en secondes, ce qui accélère les déploiements. Destruction d’une instance de Docker est aussi simple que l’appel du `docker stop` commande, généralement à la fin dans moins d’une seconde.
+Le déploiement de mises à jour comme images Docker est beaucoup plus rapide et efficace du point de vue du réseau. Les instances Vn peuvent être configurés sur les mêmes hôtes que vos instances Vn-1, en éliminant les coûts supplémentaires résultant des machines virtuelles supplémentaires. Les images docker démarrent généralement en quelques secondes, ce qui accélère les déploiements. Destruction d’une instance Docker est aussi simple que l’appel de la `docker stop` commande, normalement moins d’une seconde.
 
-Étant donné que les conteneurs sont par nature immuables, par conception, vous devez jamais à vous soucier des machines virtuelles endommagés, car vous avez oublié par un script de mise à jour pour prendre en compte une configuration spécifique ou d’un fichier restant sur le disque.
+Étant donné que les conteneurs sont immuables, par conception, vous devez jamais à vous soucier d’endommagement des machines virtuelles, car vous avez oublié par un script de mise à jour pour prendre en compte une configuration spécifique ou d’un fichier restant sur le disque.
 
-Bien que les applications monolithiques peuvent tirer parti de Docker, nous allons abordant uniquement les conseils des avantages. Les avantages de plus grandes de la gestion des conteneurs proviennent de déploiement avec orchestrators de conteneur qui gèrent les différentes instances et cycle de vie de chaque instance de conteneur. La décomposition de l’application monolithique en sous-systèmes qui peuvent être mis à l’échelle, développés et déployés individuellement est votre point d’entrée dans le domaine des microservices.
+Bien que les applications monolithiques peuvent tirer parti de Docker, nous touchons sur uniquement les conseils des avantages. Les avantages de plus grande de la gestion des conteneurs provient de déploiement avec des orchestrateurs de conteneur qui gèrent les différentes instances et le même cycle de vie de chaque instance de conteneur. La décomposition de l’application monolithique en sous-systèmes qui peuvent être mis à l’échelle, développés et déployés individuellement est votre point d’entrée dans le domaine des microservices.
 
-## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Publication d’une seule application de conteneur Docker dans Azure App Service
+## <a name="publishing-a-single-docker-container-app-to-azure-app-service"></a>Publication d’une seule application de conteneur Docker sur Azure App Service
 
-Soit parce que vous voulez obtenir une validation rapide d’un conteneur déployé sur Azure ou parce que l’application est simplement une application conteneur unique, les Services d’application Azure fournit un excellent moyen de fournir des services de conteneur unique évolutives.
+Soit parce que vous souhaitez obtenir une validation rapide d’un conteneur déployé sur Azure, soit parce que l’application est simplement une application de conteneur unique, Azure App Services fournit un excellent moyen de fournir des services évolutifs de conteneur unique.
 
-À l’aide du Service d’applications Azure est intuitif et vous pouvez obtenir et exécute rapidement, car elle fournit une excellente Git intégration prendre votre code, générez-le dans Microsoft Visual Studio et déployer directement vers Azure. Mais, traditionnellement (avec aucune Docker), si vous avez besoin d’autres fonctionnalités, les infrastructures ou les dépendances qui ne sont pas pris en charge dans les Services d’application, vous nécessaire d’attendre jusqu'à ce que l’équipe Azure met à jour ces dépendances dans le Service d’applications ou basculé vers d’autres services tels que Service Fabric, Services de cloud computing ou même brut machines virtuelles, pour lequel vous avez davantage de contrôle et pourrez installer un framework ou un composant requis pour votre application.
+À l’aide d’Azure App Service est intuitif et vous pouvez être opérationnel et en cours d’exécution rapidement, car elle fournit Git excellente intégration à votre code, générez-le dans Microsoft Visual Studio et déployer directement dans Azure. Mais, traditionnellement (avec aucune Docker), si vous avez besoin d’autres fonctionnalités, les frameworks ou dépendances qui ne sont pas pris en charge dans les Services d’application, vous nécessaire d’attendre jusqu'à ce que l’équipe Azure met à jour ces dépendances dans App Service ou basculé vers d’autres services tels que Service Fabric, Services Cloud ou même simple des machines virtuelles, pour lequel vous avez davantage de contrôle et pourrez installer un framework ou un composant requis pour votre application.
 
-Désormais, cependant, (annoncé à Microsoft Connect 2016 en novembre 2016) et comme indiqué dans la Figure 4‑4, lors de l’utilisation de Visual Studio 2017, prise en charge du conteneur dans Azure App Service vous donne la possibilité d’inclure tout ce que vous voulez dans votre environnement d’application. Si vous avez ajouté une dépendance à votre application, car vous l’exécutez dans un conteneur, vous obtenez la fonctionnalité d’intégration de ces dépendances dans votre image Dockerfile ou Docker.
+Maintenant, toutefois, (annoncée à Microsoft Connect 2016 en novembre 2016) et comme indiqué dans la Figure 4‑4, lorsque vous utilisez Visual Studio 2017, prise en charge des conteneurs dans Azure App Service vous donne la possibilité d’inclure tout ce que vous voulez dans votre environnement d’application. Si vous avez ajouté une dépendance à votre application, car vous l’exécutez dans un conteneur, vous obtenez la fonctionnalité d’inclusion de ces dépendances dans votre image de fichier Dockerfile ou Docker.
 
 ![](./media/image4.png)
 
-Figure 4-4 : publication d’un conteneur vers Azure App Service à partir des conteneurs/applications Visual Studio
+Figure 4-4 : publication d’un conteneur sur Azure App Service à partir de Visual Studio applications/conteneurs
 
-Figure 4-4 montre également que le flux de publication exécute un push d’une image à un Registre de conteneur, qui peut être le Registre de conteneur Azure (un Registre près à vos déploiements dans Azure et sécurisé par des comptes et groupes Azure Active Directory) ou tout autre registre Docker comme les registres de Hub d’ancrage ou localement.
+Figure 4-4 montre également que le flux de publication envoie une image via un Registre de conteneurs, qui peut être Azure Container Registry (un Registre de près à vos déploiements dans Azure et sécurisés par les comptes et groupes Azure Active Directory) ou tout autre registre Docker comme les registres Docker Hub ou en local.
 
 
 >[!div class="step-by-step"]

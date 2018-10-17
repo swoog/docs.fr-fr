@@ -2,19 +2,19 @@
 title: Service
 ms.date: 03/30/2017
 ms.assetid: 999806e1-6376-409e-b998-b0af391adfe7
-ms.openlocfilehash: 0cfeb178e26f6c93e29210accf5d7866cc1fca02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c59672b3b7617d9c28d99f7d534b6e7f2f2e9fbb
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487145"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374208"
 ---
 # <a name="service"></a>Service
 Service  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class Service  
 {  
   string BaseAddresses[];  
@@ -35,7 +35,7 @@ class Service
 ## <a name="methods"></a>Méthodes  
  La classe Service ne définit aucune méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe Service a les propriétés suivantes :  
   
 ### <a name="baseaddresses"></a>BaseAddresses  
@@ -122,7 +122,7 @@ class Service
   
  L'ID de processus du processus qui héberge le service.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

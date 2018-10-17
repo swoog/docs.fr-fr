@@ -2,12 +2,12 @@
 title: Vue d'ensemble du flux de messages
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841980"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372783"
 ---
 # <a name="message-flow-overview"></a>Vue d'ensemble du flux de messages
 Dans un système distribué contenant des services interconnectés, il est nécessaire de déterminer les relations de causalité entre les services. Il est important de comprendre les différents composants faisant partie d'un flux de demandes pour prendre en charge des scénarios critiques, tels que le contrôle d'état, la résolution des problèmes et l'analyse de la cause première. Pour activer la corrélation des suivis entre différents services, la prise en prendre en charge des fonctionnalités suivantes a été ajoutée dans .NET Framework 4 :
@@ -52,13 +52,13 @@ Dans un système distribué contenant des services interconnectés, il est néce
 
 8.  Dans le fichier Program.cs du projet client, ajoutez l'instruction Using suivante.
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. Dans la méthode Main du fichier program.cs du projet client, définissez le GUID de suivi à propager dans le journal des événements.
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```

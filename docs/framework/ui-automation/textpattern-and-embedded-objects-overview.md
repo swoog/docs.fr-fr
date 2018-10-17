@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193903"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372384"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Vue d'ensemble de TextPattern et des objets incorporés
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Cette vue d'ensemble décrit comment [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expose des objets incorporés ou des éléments enfants dans un document texte ou un conteneur.  
   
@@ -45,7 +45,7 @@ Exemple de flux de texte avec des objets incorporés et leurs amplitudes
   
  Quand il est nécessaire de parcourir le contenu d'une plage de texte, il faut effectuer une série d'étapes en arrière-plan pour assurer la bonne exécution de la méthode <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, « {l’U} RL [ http://www.microsoft.com ](https://www.microsoft.com) est incorporée dans le texte » où « { » et «} » est des points de terminaison de plage de texte.  
+1.  La plage de texte est normalisée : elle est réduite en une plage dégénérée au niveau du point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , rendant le point de terminaison <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> superflu. Cette étape est nécessaire pour supprimer toute ambiguïté dans des situations où une plage de texte s’étend sur <xref:System.Windows.Automation.Text.TextUnit> limites : par exemple, `{The URL https://www.microsoft.com is embedded in text` où « { » et «} » est des points de terminaison de plage de texte.  
   
 2.  La plage obtenue est déplacée vers l'arrière dans <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> au début de la limite <xref:System.Windows.Automation.Text.TextUnit> demandée.  
   
@@ -66,22 +66,22 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Lien hypertexte  
- **Exemple 1 - Plage de texte contenant un lien hypertexte textuel incorporé**  
+
+**Exemple 1 - Plage de texte contenant un lien hypertexte textuel incorporé**
   
- {L’URL [ http://www.microsoft.com ](https://www.microsoft.com) est incorporée dans le texte}.  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retourne la chaîne « l’URL http://www.microsoft.com est incorporée dans le texte ».|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Retourne la chaîne `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit de l' <xref:System.Windows.Automation.AutomationElement> qui représente le fournisseur de texte lui-même.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne un <xref:System.Windows.Automation.AutomationElement> qui représente le contrôle de lien hypertexte.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetChildren` précédente.|Retourne la plage qui représente « http://www.microsoft.com».|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> où <xref:System.Windows.Automation.AutomationElement> est l'objet retourné par la méthode `GetChildren` précédente.|Retourne la plage qui représente « https://www.microsoft.com».|  
   
  **Exemple 2 - Plage de texte couvrant partiellement un lien hypertexte textuel incorporé**  
   
- L’URL `http://{[www]}` est incorporée dans le texte.  
+ L’URL `https://{[www]}` est incorporée dans le texte.  
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ Exemples de la façon dont une plage de texte est ajustée pour Move() et Expand
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Retourne l' <xref:System.Windows.Automation.AutomationElement> le plus profond qui englobe la plage de texte ; dans ce cas, il s'agit du contrôle de lien hypertexte.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Retourne `null` étant donné que la plage de texte ne couvre pas entièrement la chaîne d'URL.|  
   
- **Exemple 3 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
+**Exemple 3 - plage de texte couvrant partiellement le contenu d’un conteneur de texte. Le conteneur de texte a un lien hypertexte textuel incorporé qui ne fait pas partie de la plage de texte.**  
   
- {L’URL} [ http://www.microsoft.com ](https://www.microsoft.com) est incorporée dans le texte.  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |Méthode appelée|Résultat|  
 |-------------------|------------|  

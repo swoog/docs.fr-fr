@@ -2,19 +2,19 @@
 title: ServiceMetadataBehavior
 ms.date: 03/30/2017
 ms.assetid: 0f194476-72f1-467e-bdce-674306316e64
-ms.openlocfilehash: e96a732f8b3b4d78d597429905cc7dd290dcc606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19a04b6432f1ecc38a3b906b7e677175863134db
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485998"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374818"
 ---
 # <a name="servicemetadatabehavior"></a>ServiceMetadataBehavior
 ServiceMetadataBehavior  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class ServiceMetadataBehavior : Behavior  
 {  
   string ExternalMetadataLocation;  
@@ -28,7 +28,7 @@ class ServiceMetadataBehavior : Behavior
 ## <a name="methods"></a>Méthodes  
  La classe ServiceMetadataBehavior ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ServiceMetadataBehavior a les propriétés suivantes :  
   
 ### <a name="externalmetadatalocation"></a>ExternalMetadataLocation  
@@ -66,7 +66,7 @@ class ServiceMetadataBehavior : Behavior
   
  Définit l'emplacement auquel le service WSDL est publié pour récupération à l'aide de HTTPS.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

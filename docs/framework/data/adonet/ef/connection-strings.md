@@ -1,32 +1,33 @@
 ---
-title: Chaînes de connexion
-ms.date: 03/30/2017
+title: Chaînes de connexion dans ADO.NET Entity Framework
+ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 99b6b1b7a38477dc17d3960ee5bc0b63ec0cb819
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842176"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372484"
 ---
-# <a name="connection-strings"></a>Chaînes de connexion
+# <a name="connection-strings-in-the-adonet-entity-framework"></a>Chaînes de connexion dans ADO.NET Entity Framework
 Une chaîne de connexion contient des informations d'initialisation qui sont passées en tant que paramètre d'un fournisseur de données à une source de données. La syntaxe dépend du fournisseur de données et la chaîne de connexion est analysée lors de la tentative d'ouverture d'une connexion. Les chaînes de connexion utilisées par Entity Framework contiennent des informations utilisées pour la connexion au fournisseur de données ADO.NET sous-jacent qui prend en charge Entity Framework. Elles contiennent également des informations sur les fichiers de modèle et de mappage requis.  
   
  La chaîne de connexion est utilisée par le fournisseur EntityClient lors de l'accès aux métadonnées de modèle et de mappage et de la connexion à la source de données. Il est possible d'accéder à cette chaîne ou de la définir via la propriété <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> de <xref:System.Data.EntityClient.EntityConnection>. La classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder> peut être utilisée pour construire par programme des paramètres dans la chaîne de connexion ou y accéder par programme. Pour plus d’informations, consultez [Comment : créer une chaîne de connexion EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
  Le [outils Entity Data Model](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) génèrent une chaîne de connexion qui est stockée dans le fichier de configuration de l’application. <xref:System.Data.Objects.ObjectContext> récupère automatiquement ces informations de connexion lors de la création de requêtes d'objet. Il est possible d'accéder au <xref:System.Data.EntityClient.EntityConnection> utilisé par une instance de <xref:System.Data.Objects.ObjectContext> à partir de la propriété <xref:System.Data.Objects.ObjectContext.Connection%2A>. Pour plus d’informations, consultez [gestion des connexions et Transactions](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).  
-  
+
+## <a name="connection-string-syntax"></a>Syntaxe des chaînes de connexion
+
+Pour en savoir plus sur la syntaxe générale pour les chaînes de connexion, consultez [syntaxe de chaîne de connexion | Chaînes de connexion dans ADO.NET](../connection-strings.md#connection-string-syntax).
+
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion  
- Le format d'une chaîne de connexion est une liste délimitée par des points-virgules de paires de paramètres clé/valeur :  
-  
- `keyword1=value; keyword2=value;`  
-  
- Le signe égal (=) sert de lien entre chaque mot clé et sa valeur. Les mots clés ne respectent pas la casse et les espaces entre les paires clé/valeur sont ignorés. Toutefois, des valeurs peuvent respecter la casse, en fonction de la source de données. Toute valeur qui contient un point-virgule ou des guillemets simples ou des guillemets doubles doit être placée entre des guillemets doubles. Le tableau suivant répertorie les noms valides pour les valeurs de mots clés dans la propriété <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
+
+Le tableau suivant répertorie les noms valides pour les valeurs de mots clés dans la propriété <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
 |Mot clé|Description|  
 |-------------|-----------------|  
 |`Provider`|Obligatoire si le mot clé `Name` n'est pas spécifié. Nom du fournisseur, utilisé pour récupérer l'objet <xref:System.Data.Common.DbProviderFactory> du fournisseur sous-jacent. Cette valeur est constante.<br /><br /> Lorsque le mot clé `Name` n'est pas inclus dans une chaîne de connexion de l'entité, une valeur non vide pour le mot clé `Provider` est requise. Ce mot clé et le mot clé `Name` s'excluent mutuellement.|  
-|`Provider Connection String`|Facultatif. Spécifie la chaîne de connexion spécifique au fournisseur passée à la source de données sous-jacente. Cette chaîne de connexion est exprimée à l'aide de paires mot clé/valeur valides pour le fournisseur de données. Un mot clé `Provider Connection String` non valide provoque une erreur d'exécution lors de son évaluation par la source de données.<br /><br /> Ce mot clé et le mot clé `Name` s'excluent mutuellement.<br /><br /> La valeur du mot clé `Provider Connection String` doit être placée entre guillemets. Voici un exemple :<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> L'exemple suivant est incorrect :<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  
+|`Provider Connection String`|Facultatif. Spécifie la chaîne de connexion spécifique au fournisseur passée à la source de données sous-jacente. Cette chaîne de connexion contient des paires mot clé/valeur valide pour le fournisseur de données. Un mot clé `Provider Connection String` non valide provoque une erreur d'exécution lors de son évaluation par la source de données.<br /><br /> Ce mot clé et le mot clé `Name` s'excluent mutuellement.<br /><br /> N’oubliez pas de séquence d’échappement de la valeur en fonction de la syntaxe générale de [les chaînes de connexion ADO.NET](../../../../../docs/framework/data/adonet/connection-strings.md). Considérez par exemple la chaîne de connexion suivante : `Server=serverName; User ID = userID`. Il doit être échappé, car elle contient un point-virgule. Dans la mesure où il ne contient pas de guillemets doubles, ils peuvent être utilisés pour la séquence d’échappement :<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`|  
 |`Metadata`|Obligatoire si le mot clé `Name` n'est pas spécifié. Liste de répertoires, de fichiers et d'emplacements de ressources délimités par des barres verticales (|) où rechercher les métadonnées et les informations de mappage. Voici un exemple :<br /><br /> `Metadata=`<br /><br /> `c:\model &#124; c:\model\sql\mapping.msl;`<br /><br /> Les espaces situés de part et d'autre de la barre verticale sont ignorés.<br /><br /> Ce mot clé et le mot clé `Name` s'excluent mutuellement.|  
 |`Name`|L'application peut éventuellement spécifier le nom de la connexion dans un fichier de configuration d'application qui fournit les valeurs de chaîne de connexion mot clé/valeur requises. Dans ce cas, vous ne pouvez pas les fournir directement dans la chaîne de connexion. Le mot clé `Name` n'est pas autorisé dans un fichier de configuration.<br /><br /> Lorsque le mot clé `Name` n'est pas inclus dans la chaîne de connexion, des valeurs non vides pour le mot clé Provider sont requises.<br /><br /> Ce mot clé est incompatible avec tous les autres mots clés de chaîne de connexion, et inversement.|  
   

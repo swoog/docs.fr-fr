@@ -2,19 +2,19 @@
 title: ServiceToEndpointAssociation
 ms.date: 03/30/2017
 ms.assetid: 03c3cd15-e1b2-4dc2-bdc2-59fdccdae110
-ms.openlocfilehash: b1e5b87b053e947432cba9f6e716f7d1ea8f013f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d23a3ee10c47e04ea7bdba202ea5063c0d84fac
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33484327"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372176"
 ---
 # <a name="servicetoendpointassociation"></a>ServiceToEndpointAssociation
 Mappe un service à un point de terminaison.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class ServiceToEndpointAssociation  
 {  
   Service ref;  
@@ -25,7 +25,7 @@ class ServiceToEndpointAssociation
 ## <a name="methods"></a>Méthodes  
  La classe ServiceToEndpointAssociation ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ServiceToEndpointAssociation a les propriétés suivantes :  
   
 ### <a name="ref"></a>ref  
@@ -44,7 +44,7 @@ Qualificateurs : clé
   
  Point de terminaison associé au service.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

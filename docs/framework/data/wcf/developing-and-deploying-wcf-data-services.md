@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: cf1782eaf54701f0cf93576325b3d46e8bc4d3f1
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d4b4c776db542b6326fcceb8f2fd057d9caabf94
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261509"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372427"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Développer et déployer des Services de données WCF
 
@@ -80,9 +80,9 @@ Vous devez tenir compte de ce qui suit lorsque vous développez un service de do
 
 -   Un programme d'inspection HTTP peut être très utile pour le débogage d'un service de données, car il vous permet d'inspecter le contenu des messages de demande et de réponse. N'importe quel analyseur de paquets réseau en mesure d'afficher des paquets bruts peut être utilisé pour inspecter des demandes et des réponses HTTP à partir du service de données.
 
--   Lorsque vous déboguez un service de données, il est plus utile d'obtenir des informations sur l'erreur à partir du service de données que dans le cadre d'un fonctionnement normal. Pour obtenir davantage d'informations sur l'erreur à partir du service de données, affectez à la propriété <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> dans <xref:System.Data.Services.DataServiceConfiguration> la valeur `true` et affectez à la propriété <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> de l'attribut <xref:System.ServiceModel.Description.ServiceDebugBehavior> sur la classe de service de données la valeur `true`. Pour plus d’informations, consultez le billet [débogage de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Vous pouvez également activer le traçage dans WCF pour afficher les exceptions levées dans la couche de messagerie HTTP. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
+-   Lorsque vous déboguez un service de données, vous souhaiterez obtenir plus d’informations sur une erreur du service de données que pendant le fonctionnement normal. Pour obtenir davantage d'informations sur l'erreur à partir du service de données, affectez à la propriété <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> dans <xref:System.Data.Services.DataServiceConfiguration> la valeur `true` et affectez à la propriété <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> de l'attribut <xref:System.ServiceModel.Description.ServiceDebugBehavior> sur la classe de service de données la valeur `true`. Pour plus d’informations, consultez le billet [débogage de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868). Vous pouvez également activer le traçage dans WCF pour afficher les exceptions levées dans la couche de messagerie HTTP. Pour plus d'informations, consultez [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).
 
--   Un service de données est généralement développé comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet d’application, mais vous pouvez également créer votre service de données comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet de site Web dans Visual Studio. Pour plus d’informations sur les différences entre les deux types de projets, consultez [NIB : projets d’Application Web et projets de Site Web dans Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
+-   Un service de données est généralement développé comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet d’application, mais vous pouvez également créer votre service de données comme un [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projet de site Web dans Visual Studio. Pour plus d’informations sur les différences entre les deux types de projets, consultez la page [NIB : Projets d’application web et projets de site web dans Visual Studio](https://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).
 
 -   Lorsque vous créez un service de données à l’aide de la **ajouter un nouvel élément** boîte de dialogue dans Visual Studio, le service de données est hébergé par [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dans IIS. Tandis que [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] et IIS sont l'hôte par défaut d'un service de données, d'autres options d'hébergement sont prises en charge. Pour plus d’informations, consultez [qui héberge le Service de données](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).
 
@@ -98,7 +98,7 @@ WCF Data Service permet de choisir le processus qui héberge le service de donn�
 
         -   [Package de déploiement Web](https://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)
 
-        -   [Publication d’un clic](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
+        -   [publication en un clic](https://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)
 
     -   **Technologies de déploiement des sites Web ASP.NET**
 

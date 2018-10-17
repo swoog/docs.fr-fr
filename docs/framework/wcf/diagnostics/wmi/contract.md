@@ -2,19 +2,19 @@
 title: Contract1
 ms.date: 03/30/2017
 ms.assetid: aa00f6b3-7e1f-4213-841a-206463fca20b
-ms.openlocfilehash: 12b45c08a3d8dc69e740ce77d0d2abd097907ac2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12e9cbf5232ebbad33ccc4fdca33233997d27357
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485705"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371561"
 ---
 # <a name="contract"></a>Contrat
 Contrat  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class Contract  
 {  
   sint32 AppDomainId;  
@@ -32,7 +32,7 @@ class Contract
 ## <a name="methods"></a>Méthodes  
  La classe Contract ne définit pas de méthodes.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe Contract a les propriétés suivantes :  
   
 ### <a name="appdomainid"></a>AppDomainId  
@@ -98,7 +98,7 @@ class Contract
   
  Type du contrat.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

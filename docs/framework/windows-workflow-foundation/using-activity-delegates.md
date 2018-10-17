@@ -3,11 +3,11 @@ title: Utilisation de délégués d'activité
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580872"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374233"
 ---
 # <a name="using-activity-delegates"></a>Utilisation de délégués d'activité
 Les délégués d'activité permettent aux auteurs d'activités d'exposer des rappels avec des signatures spécifiques pour lesquelles les utilisateurs de l'activité peuvent fournir des gestionnaires basés sur l'activité. Deux types de délégués d'activité sont disponibles : <xref:System.Activities.ActivityAction%601> est utilisé pour définir des délégués d'activité qui n'ont pas de valeur de retour et <xref:System.Activities.ActivityFunc%601> est utilisé pour définir des délégués d'activité qui ont une valeur de retour.  

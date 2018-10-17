@@ -1,16 +1,16 @@
 ---
 title: Paramètres table
-ms.date: 03/30/2017
+ms.date: 10/12/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
-ms.openlocfilehash: 333154f26a575886f19a914ce2f91beebd6be49e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8654a415ee0701680064aec2ee45f975086ec2c0
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042580"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374649"
 ---
 # <a name="table-valued-parameters"></a>Paramètres table
 Les paramètres table fournissent un moyen simple de marshaler plusieurs lignes de données d'une application cliente vers SQL Server sans avoir recours à plusieurs allers-retours ou à une logique côté serveur spéciale pour le traitement des données. Les paramètres table vous permettent d'encapsuler des lignes de données dans une application cliente et d'envoyer les données au serveur dans une commande paramétrée unique. Les lignes de données entrantes sont stockées dans une variable de table qui peut ensuite être traitée en utilisant [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -87,7 +87,9 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
 ## <a name="configuring-a-sqlparameter-example"></a>Exemple : configuration d'un SqlParameter  
  <xref:System.Data.SqlClient> prend en charge le remplissage des paramètres table à partir de <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> ou <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> objets. Vous devez spécifier un nom de type pour le paramètre table à l'aide de la propriété <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> d'un objet <xref:System.Data.SqlClient.SqlParameter>. Le `TypeName` doit correspondre au nom d'un type compatible précédemment créé sur le serveur. Le fragment de code suivant montre comment configurer l'objet <xref:System.Data.SqlClient.SqlParameter> pour insérer des données.  
-  
+ 
+Dans l’exemple suivant, le `addedCategories` variable contient un <xref:System.Data.DataTable>. Pour voir comment la variable est remplie, consultez les exemples dans la section suivante, [en passant un paramètre table à une procédure stockée](#passing).
+
 ```csharp  
 // Configure the command and parameter.  
 SqlCommand insertCommand = new SqlCommand(sqlInsert, connection);  
@@ -126,7 +128,7 @@ Dim tvpParam As SqlParameter = _
 tvpParam.SqlDbType = SqlDbType.Structured  
 ```  
   
-## <a name="passing-a-table-valued-parameter-to-a-stored-procedure"></a>Passage d'un paramètre table à une procédure stockée  
+## <a name="passing"></a> En passant un paramètre table à une procédure stockée  
  Cet exemple montre comment passer des données de paramètre table à une procédure stockée. Le code extrait les lignes ajoutées dans un nouvel objet <xref:System.Data.DataTable> à l'aide de la méthode <xref:System.Data.DataTable.GetChanges%2A>. Le code définit ensuite un objet <xref:System.Data.SqlClient.SqlCommand>, en affectant <xref:System.Data.SqlClient.SqlCommand.CommandType%2A> à la propriété <xref:System.Data.CommandType.StoredProcedure>. <xref:System.Data.SqlClient.SqlParameter> est rempli à l'aide de la méthode <xref:System.Data.SqlClient.SqlParameterCollection.AddWithValue%2A> et <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> a la valeur `Structured`. <xref:System.Data.SqlClient.SqlCommand> est ensuite exécuté à l'aide de la méthode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>.  
   
 ```csharp  

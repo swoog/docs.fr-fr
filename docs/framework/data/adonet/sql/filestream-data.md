@@ -2,12 +2,12 @@
 title: Données FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176797"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374194"
 ---
 # <a name="filestream-data"></a>Données FILESTREAM
 L'attribut de stockage FILESTREAM est destiné aux données binaires (BLOB) stockées dans une colonne varbinary(max). Avant l'introduction de cet attribut, le stockage des données binaires nécessitait un traitement spécial. Les données non structurées, telles que les documents texte, les images et les vidéos, sont souvent stockées en dehors de la base de données, ce qui rend difficile leur gestion.  
@@ -167,17 +167,15 @@ namespace FileStreamTest
 }
 ```  
   
- Pour obtenir un autre exemple, consultez [comment stocker et récupérer des données binaires dans une colonne de flux de fichier](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
+ Pour obtenir un autre exemple, consultez [comment stocker et récupérer des données binaires dans une colonne de flux de fichier](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
 ## <a name="resources-in-sql-server-books-online"></a>Ressources dans la documentation en ligne de SQL Server.  
  La documentation complète relative à FILESTREAM se trouve dans les sections suivantes dans la documentation en ligne de SQL Server.  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Conception et implémentation du stockage FILESTREAM](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Fournit des liens vers la documentation relative à FILESTREAM et les rubriques connexes.|  
-|[Vue d’ensemble FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Explique quand utiliser le stockage FILESTREAM et comment il intègre le moteur de base de données SQL Server avec un système de fichiers NTFS.|  
-|[Prise en main du stockage FILESTREAM](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Explique comment activer FILESTREAM sur une instance de SQL Server, comment créer une base de données et une table pour stocker les données FILESTREAM, et comment manipuler les lignes contenant des données FILESTREAM.|  
-|[Utilisation du stockage FILESTREAM dans les Applications clientes](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Décrit les fonctions API Win32 pour une utilisation avec des données FILESTREAM.|  
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Explique quand utiliser le stockage FILESTREAM et comment il intègre le moteur de base de données SQL Server avec un système de fichiers NTFS.|  
+|[Créer des Applications clientes pour les données FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Décrit les fonctions API Win32 pour une utilisation avec des données FILESTREAM.|  
 |[FILESTREAM et autres fonctionnalités SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Fournit des considérations, indications et limitations relatives à l’utilisation des données FILESTREAM avec d’autres fonctionnalités de SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -185,4 +183,4 @@ namespace FileStreamTest
  [Extraction et modification de données dans ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Sécurité d’accès du code et ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [Données binaires et de valeur élevée SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [Vue d’ensemble d’ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

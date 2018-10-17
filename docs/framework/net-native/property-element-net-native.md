@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ad4ba56d-3bcb-4c10-ba90-1cc66e2175a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47ed75d377814a740edece2b6a69e44acbd8ef0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1b4541bc5a878739c17179576739fbe33384445d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004349"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372054"
 ---
 # <a name="ltpropertygt-element-net-native"></a>&lt;Property&gt;, élément (.NET Native)
 Applique la stratégie de réflexion runtime à une propriété.  
@@ -75,7 +75,7 @@ Applique la stratégie de réflexion runtime à une propriété.
   
  Le fichier applique la valeur `All` à la stratégie `Activate` pour la classe `Book`, ce qui permet d'accéder aux constructeurs de classe par réflexion. La stratégie `Browse` pour la classe `Book` est héritée de son espace de noms parent. Cette option est définie sur `Required Public`, ce qui rend les métadonnées disponibles au moment de l'exécution.  
   
- Voici le code source de l'exemple. La variable `outputBlock` représente un contrôle [TextBlock](https://msdn.microsoft.com/library/windows.ui.xaml.controls.textblock.aspx).  
+ Voici le code source de l'exemple. Le `outputBlock` variable représente un <xref:Windows.UI.Xaml.Controls.TextBlock> contrôle.  
   
  [!code-csharp[ProjectN_Reflection#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/property1.cs#6)]  
   

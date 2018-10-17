@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 7b91d13cbcb9d211d4ca18c8e48c7494bf6eccc6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8df756009ebe3a0613ec47018d938151829214df
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588078"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372315"
 ---
 # <a name="end-of-statement-expected"></a>Fin d'instruction attendue
-L’instruction est syntaxiquement complète, mais un élément de programmation supplémentaire suit l’élément qui termine l’instruction. Un terminateur de ligne est requis à la fin de chaque instruction.
+L’instruction est syntaxiquement complète, mais un élément de programmation supplémentaire suit l’élément qui termine l’instruction. Un terminateur de ligne est nécessaire à la fin de chaque instruction.
   
- Un terminateur de ligne divise les caractères d’un fichier source Visual Basic en lignes. Exemples d’indicateurs de fin de ligne sont le Unicode chariot retour (& HD), le Unicode saut de ligne (& HA), et le suivi du caractère de saut de ligne Unicode des caractères de retour chariot Unicode. Pour plus d’informations sur les indicateurs de fin de ligne, consultez la [spécification du langage Visual Basic](../../../visual-basic/reference/language-specification/index.md).
+ Un terminateur de ligne divise les caractères d’un fichier source Visual Basic en lignes. Exemples d’indicateurs de fin de ligne sont le Unicode chariot retour (& HD), le Unicode saut de ligne (& haute disponibilité), et Unicode retour chariot suivi du caractère de saut de ligne Unicode. Pour plus d’informations sur les indicateurs de fin de ligne, consultez le [spécification du langage Visual Basic](~/_vblang/spec/lexical-grammar.md#line-terminators).
   
  **ID d’erreur :** BC30205
   
@@ -25,7 +25,7 @@ L’instruction est syntaxiquement complète, mais un élément de programmation
   
 1.  Vérifiez si deux instructions différentes ont été placées par inadvertance sur la même ligne.
   
-2.  Insérer une marque de fin de ligne après l’élément qui termine l’instruction.
+2.  Insérer un terminateur de ligne après l’élément qui se termine l’instruction.
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide pratique : diviser et combiner des instructions dans le code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)  

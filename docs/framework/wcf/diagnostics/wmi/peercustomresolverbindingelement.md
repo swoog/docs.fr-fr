@@ -2,31 +2,29 @@
 title: PeerCustomResolverBindingElement
 ms.date: 03/30/2017
 ms.assetid: 9ccc2770-a20e-4dff-9970-f56ad8aec2b5
-ms.openlocfilehash: 1e3a0c8cdee110bf66f4b54c5a44b5bf3a9c29e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e52a1ebec8a55b51d3c918971c420fe45fdaa1
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485777"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373843"
 ---
 # <a name="peercustomresolverbindingelement"></a>PeerCustomResolverBindingElement
 PeerCustomResolverBindingElement  
   
 ## <a name="syntax"></a>Syntaxe  
- `class PeerCustomResolverBindingElement : PeerResolverBindingElement`  
-  
- `{`  
-  
- `string Address;`  
-  
- `string Binding;`  
-  
- `};`  
+```csharp
+class PeerCustomResolverBindingElement : PeerResolverBindingElement
+{  
+    string Address;
+    string Binding;
+};
+```  
   
 ## <a name="methods"></a>Méthodes  
  La classe PeerCustomResolverBindingElement ne définit aucune méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe PeerCustomResolverBindingElement a les propriétés suivantes :  
   
 ### <a name="address"></a>Adresse  
@@ -43,7 +41,7 @@ PeerCustomResolverBindingElement
   
  Nom de configuration de la liaison.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

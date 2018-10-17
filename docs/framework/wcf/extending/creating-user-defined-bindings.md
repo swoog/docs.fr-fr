@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: c9d37163770f2fd192a6fd2a03878b28f0237646
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7be7c156ec20a15cf8d1a12d8d1f429b6c2c33a9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806742"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372217"
 ---
 # <a name="creating-user-defined-bindings"></a>Création de liaisons définies par l’utilisateur
 Il existe plusieurs méthodes pour créer des liaisons non fournies par le système :  
   
--   Créez une liaison personnalisée basés sur la classe <xref:System.ServiceModel.Channels.CustomBinding> qui est un conteneur que vous remplissez avec les éléments de liaison. La liaison personnalisée est ensuite ajoutée à un point de terminaison de service. Vous pouvez créer la liaison personnalisée soit par programmation soit dans un fichier de configuration d'application. Pour utiliser un élément de liaison d'un fichier de configuration d'application, l'élément doit étendre les liaisons personnalisées <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Pour plus d’informations sur les liaisons personnalisées, consultez [des liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md) et <xref:System.ServiceModel.Channels.CustomBinding>.  
+-   Créez une liaison personnalisée basés sur la classe <xref:System.ServiceModel.Channels.CustomBinding> qui est un conteneur que vous remplissez avec les éléments de liaison. La liaison personnalisée est ensuite ajoutée à un point de terminaison de service. Vous pouvez créer la liaison personnalisée soit par programmation soit dans un fichier de configuration d'application. Pour utiliser un élément de liaison d’un fichier de configuration d’application, l’élément doit étendre les liaisons personnalisées <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Pour plus d’informations sur les liaisons personnalisées, consultez [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md) et <xref:System.ServiceModel.Channels.CustomBinding>.  
   
 -   Vous pouvez créer une classe qui dérive d’une liaison standard. Par exemple, vous pouvez dériver une classe de <xref:System.ServiceModel.WSHttpBinding> et remplacer la méthode <xref:System.ServiceModel.Channels.CustomBinding.CreateBindingElements%2A> pour obtenir les éléments de liaison et insérer un élément de liaison personnalisé ou établir une valeur particulière pour la sécurité.  
   
@@ -25,11 +25,11 @@ Il existe plusieurs méthodes pour créer des liaisons non fournies par le syst�
   
  Il y a trois types principaux d'éléments de liaison : les éléments de liaison de protocole, les éléments de liaison d'encodage et les éléments de liaison de transport.  
   
- Éléments de liaison de protocole – Ces éléments représentent des étapes de traitement de niveau supérieur qui agissent sur les messages. Les canaux et les écouteurs créés par ces éléments de liaison peuvent ajouter, supprimer ou modifier le contenu du message. Une liaison donnée peut avoir un nombre arbitraire d'éléments de liaison de protocole, chacun héritant d'un objet <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) inclut plusieurs éléments de liaison de protocole, y compris le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> et <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Éléments de liaison de protocole – Ces éléments représentent des étapes de traitement de niveau supérieur qui agissent sur les messages. Les canaux et les écouteurs créés par ces éléments de liaison peuvent ajouter, supprimer ou modifier le contenu du message. Une liaison donnée peut avoir un nombre arbitraire d’éléments de liaison de protocole, chacun héritant d’un objet <xref:System.ServiceModel.Channels.BindingElement>. Windows Communication Foundation (WCF) inclut plusieurs éléments de liaison de protocole, y compris le <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> et <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Élément de liaison d’encodage – Ces éléments représentent des transformations entre un message et un encodage prêt pour la transmission sur le fil. Les liaisons WCF standards incluent exactement un élément de liaison de codage. Des exemples d'éléments de liaison d'encodage incluent <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> et <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Si un élément de liaison d'encodage n'est pas spécifié pour une liaison, un encodage par défaut est utilisé. La valeur par défaut est Text lorsque le transport est HTTP, sinon la valeur est Binary.  
+ Élément de liaison d’encodage – Ces éléments représentent des transformations entre un message et un encodage prêt pour la transmission sur le fil. Les liaisons WCF standard incluent exactement un élément de liaison d’encodage. Des exemples d’éléments de liaison d’encodage incluent <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> et <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Si un élément de liaison d'encodage n'est pas spécifié pour une liaison, un encodage par défaut est utilisé. La valeur par défaut est Text lorsque le transport est HTTP, sinon la valeur est Binary.  
   
- Élément de liaison de transport – Ces éléments représentent la transmission d’un message d’encodage sur un protocole de transport. Les liaisons WCF typiques incluent exactement un élément de liaison de transport, qui hérite de <xref:System.ServiceModel.Channels.TransportBindingElement>. Des exemples d'éléments de liaison de transport incluent <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> et <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Élément de liaison de transport – Ces éléments représentent la transmission d’un message d’encodage sur un protocole de transport. Les liaisons WCF standard incluent exactement un élément de liaison de transport, qui hérite de <xref:System.ServiceModel.Channels.TransportBindingElement>. Des exemples d’éléments de liaison de transport incluent <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> et <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  Lors de la création de nouvelles liaisons, l'ordre des éléments de liaison ajoutés est important. Ajoutez toujours les éléments de liaison dans l'ordre suivant :  
   
@@ -42,10 +42,10 @@ Il existe plusieurs méthodes pour créer des liaisons non fournies par le syst�
 |Encodage|Text, Binary, MTOM, Custom|Oui*|  
 |Transport|TCP, Named Pipes, HTTP, HTTPS, MSMQ, Custom|Oui|  
   
- *, Car un encodage est requis pour chaque liaison, si aucun codage n’est pas spécifié, WCF ajoute un codage par défaut. La valeur par défaut est Text/XML pour les transports HTTP et HTTPS, et Binary pour les autres transports.  
+ *, Car un encodage est requis pour chaque liaison, si aucun encodage n’est pas spécifié, WCF ajoute un codage par défaut. La valeur par défaut est Text/XML pour les transports HTTP et HTTPS, et Binary pour les autres transports.  
   
 ## <a name="creating-a-new-binding-element"></a>Création d’un nouvel élément de liaison  
- En plus des types dérivés de <xref:System.ServiceModel.Channels.BindingElement> qui sont fournies par WCF, vous pouvez créer vos propres éléments de liaison. Vous pouvez personnaliser la façon dont la pile des liaisons est créée et les composants qu'elle inclut en créant votre propre <xref:System.ServiceModel.Channels.BindingElement> qui peut être composé dans la pile avec les autres types fournis par le système.  
+ Outre les types dérivés de <xref:System.ServiceModel.Channels.BindingElement> qui sont fournies par WCF, vous pouvez créer vos propres éléments de liaison. Vous pouvez personnaliser la façon dont la pile des liaisons est créée et les composants qu'elle inclut en créant votre propre <xref:System.ServiceModel.Channels.BindingElement> qui peut être composé dans la pile avec les autres types fournis par le système.  
   
  Par exemple, si vous implémentez un `LoggingBindingElement` qui fournit la capacité d'enregistrer le message dans une base de données, vous devez le placer au-dessus d'un canal de transport dans la pile des canaux. Dans ce cas, l'application crée une liaison personnalisée qui compose le `LoggingBindingElement` avec `TcpTransportBindingElement`, comme dans l'exemple suivant.  
   
@@ -61,20 +61,20 @@ Binding customBinding = new CustomBinding(
 ## <a name="creating-a-new-binding"></a>Création d’une nouvelle liaison  
  Un élément de liaison créé par l'utilisateur peut être utilisé de deux façons. La section précédente illustre la première méthode : via une liaison personnalisée. Une liaison personnalisée permet à l'utilisateur de créer sa propre la liaison basée sur un jeu arbitraire d'éléments de liaison, y compris ceux créés par l'utilisateur.  
   
- Si vous utilisez la liaison dans plusieurs applications, créez votre propre liaison et étendez <xref:System.ServiceModel.Channels.Binding>. Cela évite de créer manuellement une liaison personnalisée à chaque fois que vous souhaitez l'utiliser. Une liaison définie par l’utilisateur vous permet de définir le comportement de la liaison et d’inclure des éléments de liaison définis par l’utilisateur. Et il est *préconçue*: vous n’êtes pas obligé de reconstruire le la liaison chaque fois que vous utilisez.  
+ Si vous utilisez la liaison dans plusieurs applications, créez votre propre liaison et étendez <xref:System.ServiceModel.Channels.Binding>. Cela évite de créer manuellement une liaison personnalisée à chaque fois que vous souhaitez l'utiliser. Une liaison définie par l’utilisateur vous permet de définir le comportement de la liaison et d’inclure des éléments de liaison définis par l’utilisateur. Et il est *préconçue*: vous n’êtes pas obligé de reconstruire la liaison chaque fois que vous l’utilisez.  
   
- Au minimum, une liaison définie par l'utilisateur doit implémenter la méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> et la propriété <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
+ Au minimum, une liaison définie par l’utilisateur doit implémenter la méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> et la propriété <xref:System.ServiceModel.Channels.Binding.Scheme%2A>.  
   
- La méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> retourne un nouveau <xref:System.ServiceModel.Channels.BindingElementCollection> qui contient les éléments de liaison pour la liaison. La collection est ordonnée et doit contenir en premier les éléments de liaison de protocole, suivis par l’élément de liaison d’encodage, suivi par l’élément de liaison de transport. Lorsque vous utilisez les éléments de liaison fournie par le système WCF, vous devez suivre l’élément de liaison spécifiées dans des règles de tri [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md). Cette collection ne doit jamais référencer des objets référencés dans la classe de liaison définie par l'utilisateur ; par conséquent, les auteurs de la liaison doivent retourner un `Clone()` de <xref:System.ServiceModel.Channels.BindingElementCollection> sur chaque appel à <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
+ La méthode <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> retourne un nouveau <xref:System.ServiceModel.Channels.BindingElementCollection> qui contient les éléments de liaison pour la liaison. La collection est ordonnée et doit contenir en premier les éléments de liaison de protocole, suivis par l’élément de liaison d’encodage, suivi par l’élément de liaison de transport. Lorsque vous utilisez les éléments de liaison fournie par le système WCF, vous devez suivre l’élément de liaison spécifiés dans des règles de classement [liaisons personnalisées](../../../../docs/framework/wcf/extending/custom-bindings.md). Cette collection ne doit jamais référencer des objets référencés dans la classe de liaison définie par l’utilisateur ; par conséquent, les auteurs de la liaison doivent retourner un `Clone()` de <xref:System.ServiceModel.Channels.BindingElementCollection> sur chaque appel à <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>.  
   
  La propriété <xref:System.ServiceModel.Channels.Binding.Scheme%2A> représente le modèle URI pour le protocole de transport utilisé sur la liaison. Par exemple, le *WSHttpBinding* et *NetTcpBinding* retournent « http » et « net.tcp » à partir de leurs détenteurs respectifs <xref:System.ServiceModel.Channels.Binding.Scheme%2A> propriétés.  
   
- Pour une liste exhaustive des méthodes et des propriétés optionnelles relatives aux liaisons définies par l'utilisateur, consultez <xref:System.ServiceModel.Channels.Binding>.  
+ Pour une liste exhaustive des méthodes et des propriétés optionnelles relatives aux liaisons définies par l’utilisateur, consultez <xref:System.ServiceModel.Channels.Binding>.  
   
 ### <a name="example"></a>Exemple  
- Cet exemple implémente la liaison de profil dans `SampleProfileUdpBinding`, lequel dérive de <xref:System.ServiceModel.Channels.Binding>. Le `SampleProfileUdpBinding` contient jusqu'à quatre éléments de liaison : un créés par l’utilisateur `UdpTransportBindingElement`; et trois fournie par le système : `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, et `ReliableSessionBindingElement`.  
+ Cet exemple implémente la liaison de profil dans `SampleProfileUdpBinding`, lequel dérive de <xref:System.ServiceModel.Channels.Binding>. Le `SampleProfileUdpBinding` contient jusqu'à quatre éléments de liaison : un utilisateur créé `UdpTransportBindingElement`; et trois fournie par le système : `TextMessageEncodingBindingElement`, `CompositeDuplexBindingElement`, et `ReliableSessionBindingElement`.  
   
-```  
+```csharp
 public override BindingElementCollection CreateBindingElements()  
 {     
     BindingElementCollection bindingElements = new BindingElementCollection();  
@@ -93,7 +93,7 @@ public override BindingElementCollection CreateBindingElements()
  Tous les éléments de liaison ne sont pas compatibles les uns avec les autres. Notamment, il existe des restrictions concernant les éléments de liaison de sécurité en cas d'utilisation avec les contrats duplex.  
   
 ### <a name="one-shot-security"></a>Sécurité « one-shot »  
- Vous pouvez implémenter la sécurité « One-Shot », où toutes les informations d’identification de sécurité nécessaires sont envoyées dans un seul message, en définissant le `negotiateServiceCredential` attribut de la \<message > élément de configuration `false`.  
+ Vous pouvez implémenter une sécurité « One-Shot », où toutes les informations d’identification de sécurité nécessaires sont envoyées dans un seul message, en définissant le `negotiateServiceCredential` attribut de la \<message > élément de configuration `false`.  
   
  L'authentification « one-shot » ne fonctionne pas avec les contrats duplex.  
   

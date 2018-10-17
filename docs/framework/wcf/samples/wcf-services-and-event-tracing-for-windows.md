@@ -2,12 +2,12 @@
 title: WCF Services et suivi d'événements Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 100f9c0ce71eedaa4061fc894521597074b21b00
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086581"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372469"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>WCF Services et suivi d'événements Windows
 Cet exemple montre comment utiliser le traçage analytique dans Windows Communication Foundation (WCF) pour émettre des événements Event Tracing for Windows (ETW). Les traces analytiques sont des événements émis à des points clés dans la pile de WCF qui permettent la résolution des problèmes des services WCF dans un environnement de production.
@@ -26,11 +26,11 @@ Cet exemple montre comment utiliser le traçage analytique dans Windows Communic
 
      Dans le navigateur Web, cliquez sur **Calculator.svc**. L'URI du document WSDL du service doit s'afficher dans le navigateur. Copiez cet URI.
 
-     Par défaut, le service commence à écouter les demandes sur le port 1378 (http://localhost:1378/Calculator.svc).
+     Par défaut, le service commence à écouter les demandes sur le port 1378 `http://localhost:1378/Calculator.svc`.
 
 4.  Exécutez le client de test WCF (WcfTestClient.exe).
 
-     Le client de test WCF (WcfTestClient.exe) se trouve dans le \<Visual Studio 2012 Répertoire_installation > \Common7\IDE\ WcfTestClient.exe (le répertoire d’installation Visual Studio 2012 par défaut est C:\Program Files\Microsoft Visual Studio 10.0).
+     Le client de test WCF (WcfTestClient.exe) se trouve dans `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`.  Le répertoire d’installation de Visual Studio 2012 par défaut est `C:\Program Files\Microsoft Visual Studio 10.0`.
 
 5.  Dans le client test WCF, ajoutez le service en sélectionnant **fichier**, puis **ajouter un Service**.
 

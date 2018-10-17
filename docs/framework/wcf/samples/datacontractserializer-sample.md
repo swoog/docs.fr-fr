@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: ef1b01ff59fc32546dca8ed9c95f3a981ed408e3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0086bdd41b9f87c14b3a9d0653a8f8982235b1ad
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45743867"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371514"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer, exemple
-Cet exemple illustre l'utilisation du sérialiseur <xref:System.Runtime.Serialization.DataContractSerializer>, lequel est chargé d'effectuer des processus de sérialisation et de désérialisation standard pour les classes de contrat de données. L’exemple crée un `Record` de l’objet, il sérialise vers un flux de mémoire et désérialise le flux de mémoire à un autre `Record` objet pour illustrer l’utilisation de la <xref:System.Runtime.Serialization.DataContractSerializer>. L'exemple sérialise ensuite l'objet `Record` à l'aide d'un enregistreur binaire afin d'illustrer la manière dont l'utilisation d'un tel enregistreur affecte la sérialisation.  
+Cet exemple illustre l’utilisation du sérialiseur <xref:System.Runtime.Serialization.DataContractSerializer>, lequel est chargé d’effectuer des processus de sérialisation et de désérialisation standard pour les classes de contrat de données. L’exemple crée un `Record` de l’objet, il sérialise vers un flux de mémoire et désérialise le flux de mémoire à un autre `Record` objet pour illustrer l’utilisation de la <xref:System.Runtime.Serialization.DataContractSerializer>. L'exemple sérialise ensuite l'objet `Record` à l'aide d'un enregistreur binaire afin d'illustrer la manière dont l'utilisation d'un tel enregistreur affecte la sérialisation.  
   
 > [!NOTE]
 >  La procédure d'installation ainsi que les instructions de génération relatives à cet exemple figurent à la fin de cette rubrique.  
   
  L'exemple de code suivant contient le contrat de données de l'objet `Record`.  
   
-```  
+```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 internal class Record  
 {  
@@ -74,14 +74,14 @@ internal class Record
   
  L'exemple de code crée un objet `Record` nommé `record1`, puis affiche celui-ci.  
   
-```  
+```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
  L'exemple utilise ensuite le <xref:System.Runtime.Serialization.DataContractSerializer> pour sérialiser `record1` dans un flux de mémoire.  
   
-```  
+```csharp  
 MemoryStream stream1 = new MemoryStream();  
   
 //Serialize the Record object to a memory stream using DataContractSerializer.  
@@ -91,7 +91,7 @@ serializer.WriteObject(stream1, record1);
   
  L'exemple utilise ensuite le <xref:System.Runtime.Serialization.DataContractSerializer> pour désérialiser le flux de mémoire dans un nouvel objet `Record`, puis affiche ce nouvel objet.  
   
-```  
+```csharp  
 stream1.Position = 0;  
   
 //Deserialize the Record object back into a new record object.  
@@ -102,7 +102,7 @@ Console.WriteLine("Deserialized record: {0}", record2.ToString());
   
  Par défaut, le sérialiseur `DataContractSerializer` encode les objets sous la forme d'un flux de données à l'aide d'une représentation XML textuelle. Toutefois, vous pouvez influencer les modalités d'encodage de la représentation XML en passant un enregistreur différent. L'exemple crée un enregistreur binaire en appelant <xref:System.Xml.XmlDictionaryWriter.CreateBinaryWriter%2A>. Il passe ensuite l'enregistreur et l'objet Record au sérialiseur lorsqu'il appelle <xref:System.Runtime.Serialization.DataContractSerializer.WriteObjectContent%2A>. Enfin, l'exemple vide l'enregistreur et génère un rapport sur la longueur des flux de données.  
   
-```  
+```csharp  
 MemoryStream stream2 = new MemoryStream();  
   
 XmlDictionaryWriter binaryDictionaryWriter = XmlDictionaryWriter.CreateBinaryWriter(stream2);  
@@ -116,7 +116,7 @@ Console.WriteLine("Binary Stream is {0} bytes long", stream2.Length);
   
  Lorsque vous exécutez l'exemple, l'enregistrement d'origine et l'enregistrement désérialisé s'affichent, suivis des différences de longueur entre l'encodage texte et l'encodage binaire. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
-```  
+```console  
 Original record: Record: 1 + 2 = 3  
 Deserialized record: Record: 1 + 2 = 3  
 Text Stream is 233 bytes long  
