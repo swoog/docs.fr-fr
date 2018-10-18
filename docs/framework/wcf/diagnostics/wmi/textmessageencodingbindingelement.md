@@ -2,19 +2,19 @@
 title: TextMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-ms.openlocfilehash: f9b94e946413967cc14282e85743a23327683b89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2371c38aebe2bd8d6da93d702801556fad986ef9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486014"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372211"
 ---
-# <a name="textmessageencodingbindingelement"></a><span data-ttu-id="8b660-102">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="8b660-102">TextMessageEncodingBindingElement</span></span>
-<span data-ttu-id="8b660-103">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="8b660-103">TextMessageEncodingBindingElement</span></span>  
+# <a name="textmessageencodingbindingelement"></a><span data-ttu-id="9ca6f-102">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="9ca6f-102">TextMessageEncodingBindingElement</span></span>
+<span data-ttu-id="9ca6f-103">TextMessageEncodingBindingElement</span><span class="sxs-lookup"><span data-stu-id="9ca6f-103">TextMessageEncodingBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b660-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="8b660-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ca6f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="9ca6f-104">Syntax</span></span>  
   
-```  
+```csharp
 class TextMessageEncodingBindingElement : MessageEncodingBindingElement  
 {  
   string Encoding;  
@@ -24,45 +24,45 @@ class TextMessageEncodingBindingElement : MessageEncodingBindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="8b660-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="8b660-105">Methods</span></span>  
- <span data-ttu-id="8b660-106">La classe TextMessageEncodingBindingElement ne définit pas de méthodes.</span><span class="sxs-lookup"><span data-stu-id="8b660-106">The TextMessageEncodingBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="9ca6f-105">Méthodes</span><span class="sxs-lookup"><span data-stu-id="9ca6f-105">Methods</span></span>  
+ <span data-ttu-id="9ca6f-106">La classe TextMessageEncodingBindingElement ne définit pas de méthodes.</span><span class="sxs-lookup"><span data-stu-id="9ca6f-106">The TextMessageEncodingBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="8b660-107">Propriétés</span><span class="sxs-lookup"><span data-stu-id="8b660-107">Properties</span></span>  
- <span data-ttu-id="8b660-108">La classe TextMessageEncodingBindingElement a les propriétés suivantes :</span><span class="sxs-lookup"><span data-stu-id="8b660-108">The TextMessageEncodingBindingElement class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="9ca6f-107">Properties</span><span class="sxs-lookup"><span data-stu-id="9ca6f-107">Properties</span></span>  
+ <span data-ttu-id="9ca6f-108">La classe TextMessageEncodingBindingElement a les propriétés suivantes :</span><span class="sxs-lookup"><span data-stu-id="9ca6f-108">The TextMessageEncodingBindingElement class has the following properties:</span></span>  
   
-### <a name="encoding"></a><span data-ttu-id="8b660-109">Encodage</span><span class="sxs-lookup"><span data-stu-id="8b660-109">Encoding</span></span>  
- <span data-ttu-id="8b660-110">Type de données : chaîne</span><span class="sxs-lookup"><span data-stu-id="8b660-110">Data type: string</span></span>  
+### <a name="encoding"></a><span data-ttu-id="9ca6f-109">Encodage</span><span class="sxs-lookup"><span data-stu-id="9ca6f-109">Encoding</span></span>  
+ <span data-ttu-id="9ca6f-110">Type de données : chaîne</span><span class="sxs-lookup"><span data-stu-id="9ca6f-110">Data type: string</span></span>  
   
- <span data-ttu-id="8b660-111">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="8b660-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="9ca6f-111">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="9ca6f-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="8b660-112">Encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison.</span><span class="sxs-lookup"><span data-stu-id="8b660-112">The character set encoding to be used for emitting messages on the binding.</span></span>  
+ <span data-ttu-id="9ca6f-112">Encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison.</span><span class="sxs-lookup"><span data-stu-id="9ca6f-112">The character set encoding to be used for emitting messages on the binding.</span></span>  
   
-### <a name="maxreadpoolsize"></a><span data-ttu-id="8b660-113">MaxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="8b660-113">MaxReadPoolSize</span></span>  
- <span data-ttu-id="8b660-114">Type de données : sint32</span><span class="sxs-lookup"><span data-stu-id="8b660-114">Data type: sint32</span></span>  
+### <a name="maxreadpoolsize"></a><span data-ttu-id="9ca6f-113">MaxReadPoolSize</span><span class="sxs-lookup"><span data-stu-id="9ca6f-113">MaxReadPoolSize</span></span>  
+ <span data-ttu-id="9ca6f-114">Type de données : sint32</span><span class="sxs-lookup"><span data-stu-id="9ca6f-114">Data type: sint32</span></span>  
   
- <span data-ttu-id="8b660-115">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="8b660-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="9ca6f-115">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="9ca6f-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="8b660-116">Entier qui définit combien de messages peuvent être lus de manière simultanée sans allouer de nouveaux lecteurs.</span><span class="sxs-lookup"><span data-stu-id="8b660-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span>  
+ <span data-ttu-id="9ca6f-116">Entier qui définit combien de messages peuvent être lus de manière simultanée sans allouer de nouveaux lecteurs.</span><span class="sxs-lookup"><span data-stu-id="9ca6f-116">An integer that defines how many messages can be read simultaneously without allocating new readers.</span></span>  
   
-### <a name="maxwritepoolsize"></a><span data-ttu-id="8b660-117">MaxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="8b660-117">MaxWritePoolSize</span></span>  
- <span data-ttu-id="8b660-118">Type de données : sint32</span><span class="sxs-lookup"><span data-stu-id="8b660-118">Data type: sint32</span></span>  
+### <a name="maxwritepoolsize"></a><span data-ttu-id="9ca6f-117">MaxWritePoolSize</span><span class="sxs-lookup"><span data-stu-id="9ca6f-117">MaxWritePoolSize</span></span>  
+ <span data-ttu-id="9ca6f-118">Type de données : sint32</span><span class="sxs-lookup"><span data-stu-id="9ca6f-118">Data type: sint32</span></span>  
   
- <span data-ttu-id="8b660-119">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="8b660-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="9ca6f-119">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="9ca6f-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="8b660-120">Entier qui définit combien de messages peuvent être envoyés simultanément sans allouer de nouveaux enregistreurs.</span><span class="sxs-lookup"><span data-stu-id="8b660-120">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span>  
+ <span data-ttu-id="9ca6f-120">Entier qui définit combien de messages peuvent être envoyés simultanément sans allouer de nouveaux enregistreurs.</span><span class="sxs-lookup"><span data-stu-id="9ca6f-120">An integer that defines how many messages can be sent simultaneously without allocating new writers.</span></span>  
   
-### <a name="readerquotas"></a><span data-ttu-id="8b660-121">ReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="8b660-121">ReaderQuotas</span></span>  
- <span data-ttu-id="8b660-122">Type de données : XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="8b660-122">Data type: XmlDictionaryReaderQuotas</span></span>  
+### <a name="readerquotas"></a><span data-ttu-id="9ca6f-121">ReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="9ca6f-121">ReaderQuotas</span></span>  
+ <span data-ttu-id="9ca6f-122">Type de données : XmlDictionaryReaderQuotas</span><span class="sxs-lookup"><span data-stu-id="9ca6f-122">Data type: XmlDictionaryReaderQuotas</span></span>  
   
- <span data-ttu-id="8b660-123">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="8b660-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="9ca6f-123">Type d'accès : lecture seule</span><span class="sxs-lookup"><span data-stu-id="9ca6f-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="8b660-124">Quotas des lecteurs.</span><span class="sxs-lookup"><span data-stu-id="8b660-124">The quotas of the readers.</span></span>  
+ <span data-ttu-id="9ca6f-124">Quotas des lecteurs.</span><span class="sxs-lookup"><span data-stu-id="9ca6f-124">The quotas of the readers.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b660-125">Spécifications</span><span class="sxs-lookup"><span data-stu-id="8b660-125">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ca6f-125">Spécifications</span><span class="sxs-lookup"><span data-stu-id="9ca6f-125">Requirements</span></span>  
   
-|<span data-ttu-id="8b660-126">MOF</span><span class="sxs-lookup"><span data-stu-id="8b660-126">MOF</span></span>|<span data-ttu-id="8b660-127">Déclaré dans Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="8b660-127">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="9ca6f-126">MOF</span><span class="sxs-lookup"><span data-stu-id="9ca6f-126">MOF</span></span>|<span data-ttu-id="9ca6f-127">Déclaré dans Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="9ca6f-127">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="8b660-128">Espace de noms</span><span class="sxs-lookup"><span data-stu-id="8b660-128">Namespace</span></span>|<span data-ttu-id="8b660-129">Défini dans root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="8b660-129">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="9ca6f-128">Espace de noms</span><span class="sxs-lookup"><span data-stu-id="9ca6f-128">Namespace</span></span>|<span data-ttu-id="9ca6f-129">Défini dans root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="9ca6f-129">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8b660-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="8b660-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="9ca6f-130">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9ca6f-130">See Also</span></span>  
  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
