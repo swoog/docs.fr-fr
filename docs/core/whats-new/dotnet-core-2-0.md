@@ -56,7 +56,7 @@ Pour plus d’informations sur la migration de votre projet vers .NET Core 2.0, 
 
 ## <a name="language-support"></a>Langages pris en charge
 
-En plus de la prise en charge de c# et F#, .NET Core 2.0 prend également en charge Visual Basic.
+En plus de la prise en charge de C# et F#, .NET Core 2.0 prend également en charge Visual Basic.
 
 ### <a name="visual-basic"></a>Visual Basic
 
