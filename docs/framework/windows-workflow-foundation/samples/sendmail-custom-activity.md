@@ -2,12 +2,12 @@
 title: Activité personnalisée SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845253"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181288"
 ---
 # <a name="sendmail-custom-activity"></a>Activité personnalisée SendMail
 Cet exemple montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow. L’activité personnalisée utilise les fonctionnalités de <xref:System.Net.Mail.SmtpClient> pour envoyer un e-mail de façon asynchrone et d’envoyer des messages avec l’authentification. Elle fournit aussi certaines fonctionnalités d’utilisateur final telles que le mode Test, le remplacement des jetons, les modèles de fichier et le chemin d’accès de dépôt de test.  
@@ -84,7 +84,7 @@ new SendMail
 ```  
   
 ### <a name="sending-mails-in-testing-mode"></a>Envoi de messages électronique en mode Test  
- Cet extrait de code montre comment définir les deux propriétés de tests : en définissant `TestMailTo` à tous les messages seront envoyés à john.doe@contoso.con (sans tenir compte des valeurs de, Cc, Cci). En définissant TestDropPath, tous les messages électroniques sortants seront aussi enregistrés dans le chemin d’accès fourni. Ces propriétés peuvent être définies indépendamment (elles ne sont pas liées).  
+ Cet extrait de code montre comment définir les deux propriétés de tests : en définissant `TestMailTo` à tous les messages seront envoyés à `john.doe@contoso.con` (sans tenir compte des valeurs de, Cc, Cci). En définissant TestDropPath, tous les messages électroniques sortants seront aussi enregistrés dans le chemin d’accès fourni. Ces propriétés peuvent être définies indépendamment (elles ne sont pas liées).  
   
 ```  
 new SendMail  

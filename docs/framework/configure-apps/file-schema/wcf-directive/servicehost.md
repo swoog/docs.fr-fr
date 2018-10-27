@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6d568c1c78677b53f4b79f5aefd3a56d71c2685f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838974"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182929"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Associe la fabrique utilisée pour générer l'hôte de service au service à héberger ainsi qu'à d'autres aspects de programmation requis pour compiler le code d'hébergement fourni dans le fichier .svc ou pour y accéder.  
@@ -41,9 +41,9 @@ CodeBehind = "CodeBehind"%>
  Spécifie le fichier source qui implémente le service web XML, lorsque la classe implémentant le service web XML ne réside pas dans le même fichier et n’a pas été compilée dans un assembly et placée dans le répertoire \Bin.  
   
 ## <a name="remarks"></a>Notes  
- Le <xref:System.ServiceModel.ServiceHost> utilisé pour héberger le service est un point d’extensibilité dans le modèle de programmation Windows Communication Foundation (WCF). Un modèle de fabrique est utilisé pour instancier le <xref:System.ServiceModel.ServiceHost> car il peut s'agir d'un type polymorphe ne devant pas être instancié directement par l'environnement d'hébergement.  
+ Le <xref:System.ServiceModel.ServiceHost> utilisé pour héberger le service est un point d’extensibilité dans le modèle de programmation Windows Communication Foundation (WCF). Un modèle de fabrique est utilisé pour instancier le <xref:System.ServiceModel.ServiceHost> car il peut s’agir d’un type polymorphe ne devant pas être instancié directement par l’environnement d’hébergement.  
   
- L'implémentation par défaut utilise <xref:System.ServiceModel.Activation.ServiceHostFactory> pour créer une instance de <xref:System.ServiceModel.ServiceHost>. Mais vous pouvez fournir votre propre fabrique (celui qui retourne votre hôte dérivé) en spécifiant le nom de type CLR de votre implémentation de la fabrique dans le [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.  
+ L'implémentation par défaut utilise <xref:System.ServiceModel.Activation.ServiceHostFactory> pour créer une instance de <xref:System.ServiceModel.ServiceHost>. Mais vous pouvez fournir votre propre fabrique (celui qui retourne votre hôte dérivé) en spécifiant le nom de type CLR de votre implémentation de la fabrique dans le [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.  
   
  Pour utiliser votre propre classe ServiceHostFactory personnalisée au lieu de la fabrique par défaut, simplement fournir le nom de type dans le [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive comme suit :  
   

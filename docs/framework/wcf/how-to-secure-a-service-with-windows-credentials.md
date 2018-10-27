@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-author: BrucePerlerMS
-ms.openlocfilehash: b9b7d78601790cfcd7cf54688db1750df96a19f9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c47539e0c614992efd74296171034b8091ba3f15
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123408"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183319"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Comment : sécuriser un service à l'aide d'informations d'identification Windows
 Cette rubrique montre comment activer la sécurité de transport sur un service Windows Communication Foundation (WCF) qui réside dans un domaine Windows et est appelé par les clients dans le même domaine. Pour plus d’informations sur ce scénario, consultez [sécurité du Transport avec l’authentification Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Pour un exemple d’application, consultez le [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) exemple.  

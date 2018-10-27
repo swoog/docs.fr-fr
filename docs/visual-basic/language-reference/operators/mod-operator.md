@@ -12,14 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424400"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170807"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod, opérateur (Visual Basic)
 Divise deux nombres et retourne uniquement le reste.  
@@ -90,7 +88,7 @@ End Module
  Lorsque vous travaillez avec des nombres à virgule flottante, n’oubliez pas qu’ils n’ont pas toujours de représentation décimale précise dans la mémoire. Cela peut entraîner des résultats inattendus à partir de certaines opérations, comme la comparaison de valeurs et les `Mod` opérateur. Pour plus d’informations, consultez [dépannage des Types de données](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Surcharge  
- Le `Mod` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement. Si votre code s’applique `Mod` à une instance d’une classe ou une structure qui inclut une telle surcharge, assurez-vous que vous comprenez son comportement redéfini. Pour plus d’informations, consultez [procédures d’opérateur](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ Le `Mod` opérateur peut être *surchargé*, ce qui signifie qu’une classe ou structure peut redéfinir son comportement. Si votre code s’applique `Mod` à une instance d’une classe ou une structure qui inclut une telle surcharge, assurez-vous que vous comprenez son comportement redéfini. Pour plus d'informations, consultez [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant utilise le `Mod` opérateur diviser deux nombres et retourner uniquement le reste. Si des nombres sont un nombre à virgule flottante, le résultat est un nombre à virgule flottante qui représente le reste.  

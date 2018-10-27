@@ -2,19 +2,19 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: 514af4c6d9eaaf8929ca831e4e786c895d14c67d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487197"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182955"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class ServiceBehaviorAttribute : Behavior  
 {  
   boolean AutomaticSessionShutdown;  
@@ -38,7 +38,7 @@ class ServiceBehaviorAttribute : Behavior
 ## <a name="methods"></a>Méthodes  
  La classe ServiceBehaviorAttribute ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ServiceBehaviorAttribute a les propriétés suivantes :  
   
 ### <a name="automaticsessionshutdown"></a>AutomaticSessionShutdown  
@@ -145,7 +145,7 @@ Type d'accès : lecture seule
   
  Spécifie si le système ou l'application applique le traitement d'en-tête SOAP MustUnderstand.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

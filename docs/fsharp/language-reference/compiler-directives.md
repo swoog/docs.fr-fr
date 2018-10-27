@@ -2,12 +2,12 @@
 title: Directives de compilateur (F#)
 description: 'En savoir plus sur F # langage les directives de préprocesseur, directives de compilation conditionnelle, directives de ligne et les directives de compilateur.'
 ms.date: 05/16/2016
-ms.openlocfilehash: eeb33cd3b1d6a228555724a307bf2e2407c6b4c3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042454"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181366"
 ---
 # <a name="compiler-directives"></a>Directives de compilateur
 
@@ -33,7 +33,7 @@ L’effet de désactiver un avertissement s’applique à l’intégralité du f
 
 ## <a name="conditional-compilation-directives"></a>Directives de compilation conditionnelle
 
-Code qui est désactivé par l’une de ces directives apparaît grisé dans l’éditeur de StudioCode Visual.
+Code qui est désactivé par l’une de ces directives apparaît grisé dans l’éditeur de Code Visual Studio.
 
 >[!NOTE]
 Le comportement des directives de compilation conditionnelle n'est pas le même que dans les autres langages. Par exemple, vous ne pouvez pas utiliser des expressions booléennes qui impliquent des symboles et `true` et `false` n'ont aucune signification spéciale. Les symboles que vous utilisez dans la directive `if` doivent être définis par la ligne de commande ou dans les paramètres du projet ; il n'existe aucune directive de préprocesseur `define`.

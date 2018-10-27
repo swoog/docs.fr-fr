@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424337"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182474"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>ISymUnmanagedENCUpdate::GetLocalVariables, méthode
 Obtient les variables locales.  
@@ -38,23 +38,23 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>Paramètres  
+## <a name="parameters"></a>Paramètres  
  `mdMethodToken`  
  [in] Le jeton de métadonnées de la méthode.  
   
  `cLocals`  
- [in] A `ULONG` qui indique la taille de la `rgLocals` paramètre.  
+ [in] Un `ULONG` qui indique la taille de la `rgLocals` paramètre.  
   
  `rgLocals`  
- [out] Le tableau retourné <!--zz<xref:ISymUnmanagedVariable>--> `ISymUnmanagedVariable` instances.  
+ [out] Le tableau retourné [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) instances.  
   
  `pceltFetched`  
- [out] Un pointeur vers un `ULONG` qui reçoit la taille de la `rgLocals` mémoire tampon requise pour contenir les variables locales.  
+ [out] Un pointeur vers un `ULONG` qui reçoit la taille de la `rgLocals` tampon nécessaire pour contenir les variables locales.  
   
 ## <a name="return-value"></a>Valeur de retour  
  S_OK si la méthode réussit ; Sinon, E_FAIL ou un autre code d’erreur.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **En-tête :** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Voir aussi  

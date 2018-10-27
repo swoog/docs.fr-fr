@@ -1,5 +1,5 @@
 ---
-title: '&lt;System.Runtime.Caching&gt; élément (paramètres de Cache)'
+title: '&lt;System.Runtime.Caching&gt; , élément (paramètres de Cache)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <system.runtime.caching> element
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 9b44daee-874a-4bd1-954e-83bf53565590
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 659a168f6c0bcb459bcfbdb247a9959c61c9c996
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0c9932d1328f010158535b096e4ead599c7b3f47
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750607"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50043437"
 ---
-# <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching&gt; élément (paramètres de Cache)
+# <a name="ltsystemruntimecachinggt-element-cache-settings"></a>&lt;System.Runtime.Caching&gt; , élément (paramètres de Cache)
 Fournit la configuration pour l’implémentation de <xref:System.Runtime.Caching.ObjectCache> en mémoire par défaut via l’entrée `memoryCache` dans le fichier de configuration.  
   
  \<configuration>  
@@ -65,7 +65,7 @@ Fournit la configuration pour l’implémentation de <xref:System.Runtime.Cachin
       <namedCaches>  
           <add name="default"   
                cacheMemoryLimitMegabytes="0"   
-               physicalMemoryPercentage="0"  
+               physicalMemoryLimitPercentage="0"  
                pollingInterval="00:02:00" />  
       </namedCaches>  
     </memoryCache>  

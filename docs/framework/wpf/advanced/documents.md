@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 4a0d2b99368dc985c11951089adbabf8e1cdc8b9
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 145c28a2f36b2d53487004af214f3c6048f0687e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372146"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415202"
 ---
 # <a name="documents"></a>Documents
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] propose un ensemble polyvalent de composants qui permettent aux développeurs de créer des applications avec les fonctionnalités de document avancées et une expérience de lecture améliorée. En plus d’une amélioration des capacités et de la qualité, [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fournit également des services de gestion simplifiée pour le packaging, la sécurité et le stockage des documents.  
@@ -28,4 +28,4 @@ ms.locfileid: "49372146"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe (isXPS Conformance Tool)](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
+ [isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

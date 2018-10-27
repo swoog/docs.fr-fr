@@ -2,17 +2,17 @@
 title: Types de données SQL Server et ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 81b43550-23e8-43bb-b460-7eb8ac825c33
-ms.openlocfilehash: 878bbe41f259f1e50cd0a41669c7a352e78bc0f1
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: e519dc82fac7b8755155dcf40696030f2a1d266c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108058"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452991"
 ---
 # <a name="sql-server-data-types-and-adonet"></a>Types de données SQL Server et ADO.NET
 SQL Server et le .NET Framework sont basés sur des systèmes de types différents, ce qui peut entraîner une perte de données potentielle. Afin de protéger l'intégrité des données, le fournisseur de données .NET Framework pour SQL Server (<xref:System.Data.SqlClient>) fournit des méthodes d'accesseur typé pour utiliser les données SQL Server. Vous pouvez également utiliser les énumérations des classes <xref:System.Data.SqlDbType> pour spécifier les types de données <xref:System.Data.SqlClient.SqlParameter>.  
   
- Pour plus d’informations et une table qui décrit les données entre SQL Server et les types de données .NET Framework, les mappages de type, consultez [mappages de Type de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
+ Pour plus d’informations et une table qui décrit les mappages de types de données entre SQL Server et les types de données .NET Framework, consultez [mappages de Type de données SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md).  
   
  SQL Server 2008 introduit de nouveaux types de données conçus pour répondre aux besoins des entreprises en termes d'utilisation des données de date et d'heure, structurées, semi-structurées et non structurées. Ceux-ci sont décrits dans la documentation en ligne de SQL Server 2008.  
   

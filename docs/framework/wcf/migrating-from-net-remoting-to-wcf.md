@@ -2,12 +2,12 @@
 title: Migration de .NET Remoting vers WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: e260ecaf422b5654364143b1fc529112b5ea0656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857386"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50039593"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migration de .NET Remoting vers WCF
 Cet article décrit comment migrer une application .NET Remoting vers Windows Communication Foundation (WCF). Il compare d'abord les concepts similaires entre ces deux produits, puis explique comment transposer plusieurs scénarios Remoting courants dans WCF.  
@@ -292,7 +292,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 ### <a name="why-migrate-from-remoting-to-wcf"></a>Pourquoi effectuer la migration de Remoting vers WCF ?  
   
--   **.NET remoting est un produit hérité.** Comme décrit dans [.NET Remoting](https://msdn.microsoft.com/library/vstudio/72x4h507\(v=vs.100\).aspx), il est considéré comme un produit hérité et n’est pas recommandé pour un nouveau développement. Dans le cas d'applications nouvelles et existantes, il est recommandé d'utiliser WCF ou l'API Web ASP.NET.  
+-   **.NET remoting est un produit hérité.** Comme décrit dans [.NET Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29), il est considéré comme un produit hérité et n’est pas recommandé pour un nouveau développement. Dans le cas d'applications nouvelles et existantes, il est recommandé d'utiliser WCF ou l'API Web ASP.NET.  
   
 -   **WCF utilise les normes multiplateformes.** Conçu pour mettre en avant l'interopérabilité multiplateforme, WCF prend en charge de nombreuses normes (SOAP, WS-Security, WS-Trust, etc.). Un service WCF peut interagir avec des clients en cours d'exécution sur des systèmes d'exploitation autres que Windows. Remoting est principalement conçu pour les environnements dans lesquels le serveur et les applications clientes exécutent .NET Framework sur un système d'exploitation Windows.  
   

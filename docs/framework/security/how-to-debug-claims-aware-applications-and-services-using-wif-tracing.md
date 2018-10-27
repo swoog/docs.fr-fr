@@ -3,12 +3,12 @@ title: Guide pratique pour déboguer les applications prenant en charge les reve
 ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
-ms.openlocfilehash: e10d8d2ea869b03586b4680ad8320aeb2de90620
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 38e168fff9bc351b6239c41197348d24129a4747
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584271"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453386"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Guide pratique pour déboguer les applications prenant en charge les revendications et les services utilisant le suivi WIF
 ## <a name="applies-to"></a>S'applique à  
@@ -104,7 +104,7 @@ ms.locfileid: "48584271"
   
 |**ID d’erreur**|**Message d'erreur**|**Mesure à prendre pour corriger l’erreur**|  
 |-|-|-|  
-|ID4175|L'émetteur du jeton de sécurité n'a pas été reconnu par IssuerNameRegistry.  Pour accepter les jetons de sécurité en provenance de cet émetteur, configurez IssuerNameRegistry pour qu'il retourne un nom valide pour cet émetteur.|Cette erreur peut être provoquée par la copie d’une empreinte numérique à partir du composant logiciel enfichable MMC et par son collage dans le fichier *Web.config*. Plus précisément, vous pouvez obtenir un caractère non imprimable supplémentaire dans la chaîne de texte en effectuant une copie à partir de la fenêtre de propriétés du certificat. Ce caractère supplémentaire entraîne l’échec de la correspondance d’empreinte numérique. Vous trouverez ici la procédure de copie correctement l’empreinte numérique : [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|L'émetteur du jeton de sécurité n'a pas été reconnu par IssuerNameRegistry.  Pour accepter les jetons de sécurité en provenance de cet émetteur, configurez IssuerNameRegistry pour qu'il retourne un nom valide pour cet émetteur.|Cette erreur peut être provoquée par la copie d’une empreinte numérique à partir du composant logiciel enfichable MMC et par son collage dans le fichier *Web.config*. Plus précisément, vous pouvez obtenir un caractère non imprimable supplémentaire dans la chaîne de texte en effectuant une copie à partir de la fenêtre de propriétés du certificat. Ce caractère supplémentaire entraîne l’échec de la correspondance d’empreinte numérique. Vous trouverez la procédure de copie correctement l’empreinte numérique dans [authentification unique basée sur les revendications-sur pour le Web et Microsoft Azure](https://docs.microsoft.com/previous-versions/msp-n-p/ff359102%28v=pandp.10%29).|  
   
 ## <a name="related-items"></a>Éléments associés  
   

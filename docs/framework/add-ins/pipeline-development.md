@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 932788f2-b87d-44cf-82f9-04492a8b2722
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 047cd7a2b8a6d315c6cadb9b535b84f744fd2d09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f981d667f3cbf35ab010ac5bd26a9ecd5c2aae11
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504883"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135435"
 ---
 # <a name="pipeline-development"></a>Développement de pipeline
 Le pipeline de complément est le chemin d’accès des segments de pipeline que l’application hôte et son complément doivent utiliser pour communiquer entre eux.  
@@ -89,5 +89,5 @@ Chemin d’activation du complément à l’hôte
      Décrit comment passer des collections de données sur le pipeline à l’aide d’un scénario de librairie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Scénarios de pipelines de complément](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
- [Compléments et extensibilité](../../../docs/framework/add-ins/index.md)
+- [Scénarios de pipelines de complément](https://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
+- [Compléments et extensibilité](../../../docs/framework/add-ins/index.md)

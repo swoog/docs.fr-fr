@@ -2,19 +2,19 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: aa852ff82c44a3b5009dbc70e1067face44cbbe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8b6200f84f352d49cf142d9c8b97d1c2b36149b2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486374"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180898"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class ClientCredentials : Behavior  
 {  
   string ClientCertificate;  
@@ -31,7 +31,7 @@ class ClientCredentials : Behavior
 ## <a name="methods"></a>Méthodes  
  La classe ClientCredentials ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ClientCredentials a les propriétés suivantes :  
   
 ### <a name="clientcertificate"></a>ClientCertificate  
@@ -90,7 +90,7 @@ class ClientCredentials : Behavior
   
  Informations d'identification que le client utilise pour s'authentifier auprès du service.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

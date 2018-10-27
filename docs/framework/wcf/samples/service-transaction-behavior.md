@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: 69f65ca833dc9a0f719541733be9e6066db37f6e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bfdf0c9ddb8654bf7a6736bcccb0d9350e9a12a6
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858107"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042491"
 ---
 # <a name="service-transaction-behavior"></a>Service Transaction Behavior
 Cet exemple illustre l’utilisation d’une transaction coordonnée par le client et les paramètres de ServiceBehaviorAttribute et OperationBehaviorAttribute pour contrôler le comportement de la transaction du service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice, mais est étendu pour maintenir un journal de serveur des opérations effectuées dans une table de base de données et un avec état en cours d’exécution total pour les opérations de calculatrice. Les écritures rendues persistantes dans la table du journal de serveur dépendent du résultat d’une transaction coordonnée par le client : si la transaction cliente ne se complète pas, la transaction de service Web garantit que les mises à jour de la base de données ne sont pas validées.  
@@ -19,7 +19,7 @@ Cet exemple illustre l’utilisation d’une transaction coordonnée par le clie
   
  Le contrat pour le service définit que toutes les opérations requièrent qu’une transaction soit transmise avec les demandes :  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples",  
                     SessionMode = SessionMode.Required)]  
 public interface ICalculator  
@@ -51,7 +51,7 @@ public interface ICalculator
   
  Après avoir initialisé à la fois une connexion au service et une transaction, le client accède à plusieurs opérations de service dans l'étendue de cette transaction, puis complète la transaction et ferme la connexion :  
   
-```  
+```csharp
 // Create a client  
 CalculatorClient client = new CalculatorClient();  
   
@@ -108,13 +108,13 @@ client.Close();
   
 -   Sur le `OperationBehaviorAttribute` :  
   
-    -   La propriété `TransactionScopeRequired` spécifie si les actions de l'opération doivent être exécutées dans une étendue de transaction. Elle a la valeur `true` pour toutes les opérations dans cet exemple et, vu que le client transmet sa transaction à toutes les opérations, les actions se produisent dans l'étendue de cette transaction cliente.  
+    -   La propriété `TransactionScopeRequired` spécifie si les actions de l'opération doivent être exécutées dans une étendue de transaction. Elle a la valeur `true` pour toutes les opérations dans cet exemple et, vu que le client transmet sa transaction à toutes les opérations, les actions se produisent dans l’étendue de cette transaction cliente.  
   
     -   La propriété `TransactionAutoComplete` spécifie si la transaction dans laquelle la méthode s'exécute est automatiquement effectuée si aucune exception non prise en charge n'est levée. Comme décrit précédemment, cette propriété a la valeur `true` pour les opérations d'addition et de soustraction mais `false` pour les opérations de multiplication et de division. Les opérations d'addition et de soustraction s'exécutent automatiquement, l'opération de division s'exécute à travers un appel explicite à la méthode `SetTransactionComplete`, et l'opération de multiplication ne s'exécute mais à la place compte sur un appel ultérieur obligatoire, à l'opération de division par exemple, pour s'exécuter.  
   
  L'implémentation du service doté d'attributs se déroule comme suit :  
   
-```  
+```csharp
 [ServiceBehavior(  
     TransactionIsolationLevel = System.Transactions.IsolationLevel.Serializable,  
     TransactionTimeout = "00:00:30",  
@@ -168,7 +168,7 @@ public class CalculatorService : ICalculator
   
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
-```  
+```console  
 Starting transaction  
 Performing calculations...  
   Adding 100, running total=100  
@@ -182,7 +182,7 @@ Press <ENTER> to terminate client.
   
  Le journal des demandes faites à l'opération de service est visible dans la fenêtre de console du service. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
-```  
+```console  
 Press <ENTER> to terminate service.  
 Creating new service instance...  
   Writing row 1 to database: Adding 100 to 0  
@@ -193,7 +193,7 @@ Creating new service instance...
   
  Notez qu'en plus de conserver le total évolutif des calculs, le service signale la création d'instances (une instance pour cet exemple) et enregistre les demandes d'opération dans une base de données. Étant donné que toutes les demandes transmettent la transaction du client, tout échec d’exécution de cette transaction entraîne la restauration de toutes les opérations de la base de données. Cela peut être démontré de plusieurs manières :  
   
--   Supprimez l'appel du client à `tx.Complete` () et répétez la transaction : le client quitte l'étendue de la transaction sans l'exécuter.  
+-   Supprimez l’appel du client à `tx.Complete` () et répétez la transaction : le client quitte l’étendue de la transaction sans l’exécuter.  
   
 -   Supprimez l’appel à l’opération de division du service : cela empêche l’action initiée par l’opération de multiplication de s’effectuer. Par conséquent, la transaction du client échoue également.  
   

@@ -2,12 +2,12 @@
 title: Prise en charge POCO
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
-ms.openlocfilehash: beba1469d5d9575a5b2ef76a4db3747dfcc35d0c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bb4f8b0a5eb20be50a2d3ba9a15d66fd7fc573f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857600"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452808"
 ---
 # <a name="poco-support"></a>Prise en charge POCO
 Cet exemple illustre la prise en charge de la sérialisation pour les types non marqués, c'est-à-dire les types auxquels aucun attribut de sérialisation n'a été appliqué. Ces types sont parfois appelés types POCO (Plain Old CLR Object). <xref:System.Runtime.Serialization.DataContractSerializer> déduit un contrat de données pour tous les types non marqués publics qui possèdent un constructeur par défaut. Les contrats de données vous permettent de transférer des données structurées vers des services et à partir de ceux-ci. Pour plus d’informations sur les types non marqués, consultez [Types sérialisables](../../../../docs/framework/wcf/feature-details/serializable-types.md).  
@@ -21,7 +21,7 @@ Cet exemple illustre la prise en charge de la sérialisation pour les types non 
   
  La classe `ComplexNumber` est utilisée dans `ServiceContract`. Le type `ComplexNumber` ne comporte pas les attributs <xref:System.Runtime.Serialization.DataContractAttribute> et <xref:System.Runtime.Serialization.DataMemberAttribute>, comme indiqué dans l'exemple de code suivant. Par défaut, l'ensemble des propriétés et des champs publics sont sérialisés.  
   
-```  
+```csharp
 public class ComplexNumber  
 {  
     public double Real;  

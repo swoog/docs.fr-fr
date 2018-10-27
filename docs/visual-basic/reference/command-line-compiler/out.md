@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -out compiler option [Visual Basic]
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 234071d043b2649e2438ed20fe044fb89cdb9bf8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041087"
 ---
 # <a name="-out-visual-basic"></a>-out (Visual Basic)
 Spécifie le nom du fichier de sortie.  
@@ -28,16 +26,16 @@ Spécifie le nom du fichier de sortie.
   
 |Terme|Définition|  
 |---|---|  
-|`filename`|Obligatoire. Le nom du fichier de sortie que le compilateur crée. Si le nom de fichier contient un espace, placez-le entre guillemets (« »).|  
+|`filename`|Obligatoire. Le nom du fichier de sortie que le compilateur crée. Si le nom de fichier contient un espace, placez le nom entre guillemets ( » «).|  
   
 ## <a name="remarks"></a>Notes  
- Spécifiez le nom complet et l’extension de fichier à créer. Si vous ne le faites pas, le fichier .exe tire son nom dans le fichier de code source contenant le `Sub Main` procédure et le fichier .dll tire son nom du premier fichier de code source.  
+ Spécifiez le nom complet et l’extension de fichier à créer. Si vous ne le faites pas, le fichier .exe tire son nom de fichier de code source contenant le `Sub Main` procédure et le fichier .dll tire son nom du premier fichier de code source.  
   
- Si vous spécifiez un nom de fichier sans l’extension .exe ou .dll, le compilateur ajoute automatiquement l’extension pour vous, en fonction de la valeur spécifiée pour la `-target` option du compilateur.  
+ Si vous spécifiez un nom de fichier sans extension .exe ou .dll, le compilateur ajoute automatiquement l’extension pour vous, en fonction de la valeur spécifiée pour le `-target` option du compilateur.  
   
 |Pour définir - out dans l’environnement de développement intégré Visual Studio|  
 |---|  
-|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Application** .<br />3.  Modifiez la valeur dans la **nom de l’Assembly** boîte.|  
+|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Application** .<br />3.  Modifiez la valeur dans le **nom de l’Assembly** boîte.|  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `T2.vb` et crée le fichier de sortie `T2.exe`.  

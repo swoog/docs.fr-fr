@@ -6,14 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f81b578c5ee3ffd830cef237fba2272eecd07642
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1982a70c4baacae5ffb35efd93d447c4d81b00b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33654084"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181106"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifie un fichier manifeste d'application Win32 défini par l'utilisateur à incorporer dans le fichier exécutable portable (PE) d'un projet.  
@@ -28,31 +26,31 @@ Identifie un fichier manifeste d'application Win32 défini par l'utilisateur à 
   
 |Terme|Définition|  
 |---|---|  
-|`fileName`|Le chemin d’accès du fichier manifest personnalisé.|  
+|`fileName`|Le chemin d’accès du fichier manifeste personnalisé.|  
   
 ## <a name="remarks"></a>Notes  
- Par défaut, le compilateur Visual Basic incorpore un manifeste d’application qui spécifie le niveau d’exécution demandé asInvoker. Il crée le manifeste dans le même dossier que celui dans lequel le fichier exécutable est généré, en général le dossier bin\Debug ou bin\Release lorsque vous utilisez Visual Studio. Si vous souhaitez fournir un manifeste personnalisé, par exemple, pour spécifier un niveau d’exécution demandé de highestAvailable ou requireAdministrator, utilisez cette option pour spécifier le nom du fichier.  
+ Par défaut, le compilateur Visual Basic incorpore un manifeste d’application qui spécifie le niveau d’exécution demandé d’asInvoker. Il crée le manifeste dans le même dossier dans lequel le fichier exécutable est généré, normalement le dossier bin\Debug ou bin\Release lorsque vous utilisez Visual Studio. Si vous souhaitez fournir un manifeste personnalisé, par exemple pour spécifier un niveau d’exécution demandé de highestAvailable ou requireAdministrator, utilisez cette option pour spécifier le nom du fichier.  
   
 > [!NOTE]
 >  Cette option et la [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) option s’excluent mutuellement. Si vous essayez d’utiliser les deux options dans la même ligne de commande, vous obtiendrez une erreur de build.  
   
  Une application sans manifeste d’application pour spécifier le niveau d’exécution requis est soumise à une virtualisation des fichiers/registres sous la fonctionnalité de contrôle de compte d’utilisateur de Windows Vista. Pour plus d’informations sur la virtualisation, consultez [déploiement ClickOnce sur Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
- Votre application sera soumis à la virtualisation si une des conditions suivantes est vraie :  
+ Votre application sera soumise à la virtualisation si une des conditions suivantes est vraie :  
   
-1.  Vous utilisez la `-nowin32manifest` option et si vous ne fournissez pas de manifeste dans une étape de génération ultérieure ou en tant que partie d’un fichier de ressources Windows (.res) à l’aide de la `-win32resource` option.  
+1.  Vous utilisez le `-nowin32manifest` option et si vous ne fournissez pas de manifeste dans une étape de génération ultérieure ou en tant que partie d’un fichier de ressources Windows (.res) à l’aide de la `-win32resource` option.  
   
 2.  Vous fournissez un manifeste personnalisé qui ne spécifie pas le niveau d’exécution requis.  
   
- Visual Studio crée un fichier .manifest par défaut et le stocke dans les répertoires de débogage et de mise en production avec le fichier exécutable. Vous pouvez afficher ou modifier le fichier App.manifest par défaut en cliquant sur **afficher les paramètres UAC** sur la **Application** onglet dans le Concepteur de projet. Pour plus d’informations, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio crée un fichier .manifest par défaut et le stocke dans les répertoires de débogage et de mise en production avec le fichier exécutable. Vous pouvez afficher ou modifier le fichier App.manifest par défaut en cliquant sur **afficher les paramètres UAC** sur le **Application** onglet du Concepteur de projets. Pour plus d’informations, consultez [Page Application, Concepteur de projets (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Vous pouvez fournir le manifeste d’application comme une étape post-build personnalisée ou en tant que partie d’un fichier de ressources Win32 à l’aide de la `-nowin32manifest` option. Utilisez cette même option pour que votre application soit soumise à la virtualisation des fichiers ou des registres dans Windows Vista. Cela empêchera le compilateur de créer et d’incorporer un manifeste par défaut dans le fichier PE.  
+ Vous pouvez fournir le manifeste d’application en tant qu’étape après génération personnalisée ou en tant que partie d’un fichier de ressources Win32 à l’aide de la `-nowin32manifest` option. Utilisez cette même option pour que votre application soit soumise à la virtualisation des fichiers ou des registres dans Windows Vista. Cela empêchera le compilateur de créer et d’incorporer un manifeste par défaut dans le fichier PE.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre le manifeste par défaut que le compilateur Visual Basic insère dans un PE.  
+ L’exemple suivant montre le manifeste par défaut que le compilateur Visual Basic insère dans un fichier PE.  
   
 > [!NOTE]
->  Le compilateur insère un nom d’application standard, MyApplication.app, dans le manifeste XML. Cela permet aux applications de s’exécuter dans Windows Server 2003 Service Pack 3.  
+>  Le compilateur insère un nom d’application standard, MyApplication.app, dans le code XML du manifeste. Cela permet aux applications de s’exécuter dans Windows Server 2003 Service Pack 3.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  

@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-author: BrucePerlerMS
-ms.openlocfilehash: e0adbe9d1689e840d940dd22fcfe05f54e2131fa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203080"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181132"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Comment : créer une liaison personnalisée à l’aide de SecurityBindingElement
 Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le système qui peuvent être configurés mais ne fournissent pas une flexibilité totale lors de la configuration de toutes les options de sécurité WCF prend en charge. Cette rubrique montre comment créer une liaison personnalisée directement à partir d’éléments de liaison individuels et met en évidence certains des paramètres de sécurité qui peuvent être spécifiés lors de la création d’une liaison de ce type. Pour plus d’informations sur la création de liaisons personnalisées, consultez [extension de liaisons](../../../../docs/framework/wcf/extending/extending-bindings.md).  
@@ -101,7 +100,7 @@ Windows Communication Foundation (WCF) inclut plusieurs liaisons fournies par le
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  
- L'exemple suivant fournit une fonction complète permettant de créer une liaison personnalisée qui utilise <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ L’exemple suivant fournit une fonction complète permettant de créer une liaison personnalisée qui utilise <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
 ### <a name="code"></a>Code  
  [!code-csharp[c_CustomBinding#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#20)]

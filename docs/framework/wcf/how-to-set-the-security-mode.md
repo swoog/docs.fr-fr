@@ -9,16 +9,15 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
-author: BrucePerlerMS
-ms.openlocfilehash: 0efa9ecbe384009cc8fc4735ec9fc3db8ed3ce59
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 9f4f83502016fb749c75776dd6c2dc2bd01476e6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841454"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183345"
 ---
 # <a name="how-to-set-the-security-mode"></a>Comment : définir le mode de sécurité
-Sécurité de Windows Communication Foundation (WCF) a trois modes de sécurité courants qui sont trouvent sur des liaisons plus prédéfinies : transport, message et « transport avec informations d’identification de message. » Il existe également deux modes supplémentaires propres à deux liaisons particulières. Il s'agit du mode « informations d'identification de transport uniquement » disponible sur la liaison <xref:System.ServiceModel.BasicHttpBinding> et du mode « les deux » disponible sur la liaison <xref:System.ServiceModel.NetMsmqBinding>. Cette rubrique traite essentiellement des trois principaux modes de sécurité : <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> et <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
+Sécurité de Windows Communication Foundation (WCF) a trois modes de sécurité courants qui sont trouvent sur des liaisons plus prédéfinies : transport, message et « transport avec informations d’identification de message. » Il existe également deux modes supplémentaires propres à deux liaisons particulières. Il s’agit du mode « informations d’identification de transport uniquement » disponible sur la liaison <xref:System.ServiceModel.BasicHttpBinding> et du mode « les deux » disponible sur la liaison <xref:System.ServiceModel.NetMsmqBinding>. Cette rubrique traite essentiellement des trois principaux modes de sécurité : <xref:System.ServiceModel.SecurityMode.Transport>, <xref:System.ServiceModel.SecurityMode.Message> et <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
  Remarque : toutes les liaisons prédéfinies ne prennent pas nécessairement en charge chacun de ces modes. Cette rubrique, dans laquelle le mode est défini à l'aide des classes <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>, illustre comment définir les modes de sécurité à l'aide d'un programme ou dans la configuration.  
   

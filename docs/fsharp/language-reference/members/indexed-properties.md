@@ -1,58 +1,48 @@
 ---
 title: Propriétés indexées (F#)
-description: 'En savoir plus sur les propriétés indexées F #, qui sont des propriétés qui fournissent un accès de type tableau aux données classées.'
-ms.date: 05/16/2016
-ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+description: En savoir plus sur les propriétés indexées dans F#, qui permettent l’accès de type tableau aux données ordonnées.
+ms.date: 10/17/2018
+ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321364"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452246"
 ---
 # <a name="indexed-properties"></a>Propriétés indexées
 
-*Propriétés indexées* propriétés qui fournissent un accès de type tableau aux sont classées les données. Ils se présentent sous trois formes :
-
-* `Item`
-* `Ordinal`
-* `Cardinal`
-
-Un membre F # doit être nommé un de ces trois noms pour fournir un accès de type tableau. `IndexerName` est utilisé pour représenter l’un des trois options ci-dessous :
+Lorsque vous définissez une classe qui effectue l’abstraction sur le tri des données, il peut parfois être utile de fournir un accès indexé à ces données sans exposer l’implémentation sous-jacente. Cette opération est effectuée avec la `Index` membre.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.IndexerName
-    with get(index-variable) =
-        get-function-body
-    and set index-variablesvalue-variables =
-        set-function-body
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
+    and set index-values values-to-set =
+        set-member-body
 
-// Indexed property that has get only.
-member self-identifier.IndexerName(index-variable) =
-    get-function-body
-
-// Alternative syntax for indexed property with get only
-member self-identifier.IndexerName
-    with get(index-variables) =
-        get-function-body
+// Indexed property with get only
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
 
 // Indexed property that has set only.
-member self-identifier.IndexerName
-    with set index-variablesvalue-variables = 
-        set-function-body
+member self-identifier.Index
+    with set index-values values-to-set =
+        set-member-body
 ```
 
 ## <a name="remarks"></a>Notes
 
 Les formes de la syntaxe précédente montrent comment définir des propriétés indexées qui ont les deux un `get` et un `set` (méthode), ont un `get` méthode uniquement, ou avoir un `set` méthode uniquement. Vous pouvez également combiner les deux la syntaxe indiquée pour get uniquement et la syntaxe indiquée pour set uniquement et produire une propriété qui possède à la fois get et set. Cette dernière forme vous permet de placer des modificateurs d’accessibilité différente et des attributs sur la méthode get et de définir des méthodes.
 
-Lorsque le *IndexerName* est `Item`, le compilateur traite la propriété comme une propriété indexée par défaut. Un *propriété indexée par défaut* est une propriété que vous pouvez accéder à l’aide de la syntaxe de type tableau sur l’instance d’objet. Par exemple, si `obj` est un objet du type qui définit cette propriété, la syntaxe `obj.[index]` est utilisé pour accéder à la propriété.
+En utilisant le nom `Item`, le compilateur traite la propriété comme une propriété indexée par défaut. Un *propriété indexée par défaut* est une propriété que vous pouvez accéder à l’aide de la syntaxe de type tableau sur l’instance d’objet. Par exemple, si `o` est un objet du type qui définit cette propriété, la syntaxe `o.[index]` est utilisé pour accéder à la propriété.
 
-La syntaxe pour l’accès à une propriété indexée par défaut consiste à fournir le nom de la propriété et l’index entre parenthèses. Par exemple, si la propriété est `Ordinal`, vous écrivez `obj.Ordinal(index)` pour y accéder.
+La syntaxe permettant d’accéder à une propriété indexée par défaut consiste à fournir le nom de la propriété et l’index entre parenthèses, comme un membre régulier. Par exemple, si la propriété sur `o` est appelée `Ordinal`, vous écrivez `o.Ordinal(index)` pour y accéder.
 
-Quelle que soit la forme que vous utilisez, vous devez toujours utiliser la forme curryfiée pour la `set` méthode sur une propriété indexée. Pour plus d’informations sur les fonctions curryfiées, consultez [fonctions](../functions/index.md).
+Quelle que soit la forme que vous utilisez, vous devez toujours utiliser la forme curryfiée pour la méthode set sur une propriété indexée. Pour plus d’informations sur les fonctions curryfiées, consultez [fonctions](../functions/index.md).
 
 ## <a name="example"></a>Exemple
 
@@ -62,7 +52,7 @@ L’exemple de code suivant illustre la définition et l’utilisation de la val
 
 ## <a name="output"></a>Sortie
 
-```
+```console
 ONE two three four five six seven eight nine ten
 ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth

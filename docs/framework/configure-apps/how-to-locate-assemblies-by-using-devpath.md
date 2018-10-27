@@ -12,11 +12,11 @@ ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 3a9ae9c60ad7de80d04f16984b3b2fb048421cc2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847567"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452751"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Comment : localiser des assemblys à l'aide de DEVPATH
 Les développeurs peuvent souhaiter vous assurer qu’un assembly partagé, qu'ils créent fonctionne correctement avec plusieurs applications. Au lieu de mettre en permanence l’assembly dans le global assembly cache au cours du cycle de développement, le développeur peut créer une variable d’environnement DEVPATH qui pointe vers le répertoire de sortie pour l’assembly.  

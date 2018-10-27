@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 147de1cdde79ee29f8f316399ba2e41f93921073
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4302ee961fcd396c7e6a6ddb0d9bbe1bdb714cfc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201112"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453461"
 ---
 # <a name="working-with-certificates"></a>Utilisation des certificats
 Pour programmer la sécurité relative à WCF (Windows Communication Foundation), les certificats numériques X.509 sont couramment utilisés pour authentifier les clients et les serveurs, ainsi que pour chiffrer et signer numériquement les messages. Cette rubrique décrit brièvement les fonctionnalités des certificats numériques X.509 et leur utilisation dans WCF. Elle inclut également des liens vers les rubriques qui présentent ces concepts de manière plus détaillée, ou qui montrent comment effectuer les tâches courantes à l’aide de WCF et des certificats.  
@@ -42,7 +42,7 @@ Pour programmer la sécurité relative à WCF (Windows Communication Foundation)
   
 -   **Personnel**. Ce magasin est utilisé pour stocker les certificats associés à l'utilisateur d'un ordinateur. Ce magasin est en principe utilisé pour stocker les certificats publiés par l'un des certificats d'autorité de certification stockés dans le magasin Autorités de certification racine approuvées. Les certificats stockés dans ce magasin peuvent également s'être auto-publiés et avoir été approuvés par une application.  
   
- Pour plus d’informations sur les magasins de certificats, consultez [Magasins de certificats](https://go.microsoft.com/fwlink/?LinkId=88912).  
+ Pour plus d’informations sur les magasins de certificats, consultez [Magasins de certificats](/windows/desktop/secauthn/certificate-stores).  
   
 ### <a name="selecting-a-store"></a>Sélection d'un magasin  
  La sélection d'un magasin pour y stocker un certificat dépend de la manière dont un client ou service s'exécutent ainsi que de l'instant où ils s'exécutent. Les règles générales suivantes s'appliquent :  

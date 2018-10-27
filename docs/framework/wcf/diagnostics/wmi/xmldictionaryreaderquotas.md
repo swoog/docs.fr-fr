@@ -2,19 +2,19 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: 78914d52a9e57fe2e48adcfc0d7b6f911a0d8b3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bc519509b00383be333ac605688950d2709117c
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33487826"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50044227"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class XmlDictionaryReaderQuotas  
 {  
   sint32 MaxArrayLength;  
@@ -28,7 +28,7 @@ class XmlDictionaryReaderQuotas
 ## <a name="methods"></a>Méthodes  
  La classe XmlDictionaryReaderQuotas ne définit aucune méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe XmlDictionaryReaderQuotas a les propriétés suivantes :  
   
 ### <a name="maxarraylength"></a>MaxArrayLength  
@@ -66,7 +66,7 @@ class XmlDictionaryReaderQuotas
   
  Nombre maximal de caractères autorisés dans un contenu d'élément XML.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

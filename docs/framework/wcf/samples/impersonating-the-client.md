@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 9e1c38abd1c9cacfd4db953d9fb875437b2f1093
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047668"
 ---
 # <a name="impersonating-the-client"></a>Emprunt de l'identité du client
 Cet exemple montre comment emprunter l'identité de l'application de l'appelant au niveau du service afin que ce dernier puisse accéder aux ressources système pour le compte de l'appelant.  
@@ -23,7 +23,7 @@ Cet exemple montre comment emprunter l'identité de l'application de l'appelant 
   
  Le code de service a été modifié afin que la méthode `Add` sur le service emprunte l'identité de l'appelant à l'aide de <xref:System.ServiceModel.OperationBehaviorAttribute>, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
 public double Add(double n1, double n2)  
 {  
@@ -39,7 +39,7 @@ public double Add(double n1, double n2)
   
  La méthode `DisplayIdentityInformation` indiquée dans l'exemple de code suivant est une fonction utilitaire qui affiche l'identité de l'appelant.  
   
-```  
+```csharp
 static void DisplayIdentityInformation()  
 {  
     Console.WriteLine("\t\tThread Identity            :{0}",  
@@ -54,14 +54,14 @@ static void DisplayIdentityInformation()
   
  La méthode `Subtract` sur le service emprunte l'identité de l'appelant à l'aide d'appels impératifs, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp
 public double Subtract(double n1, double n2)  
 {  
     double result = n1 - n2;  
     Console.WriteLine("Received Subtract({0},{1})", n1, n2);  
     Console.WriteLine("Return: {0}", result);  
-Console.WriteLine("Before impersonating");  
-DisplayIdentityInformation();  
+    Console.WriteLine("Before impersonating");  
+    DisplayIdentityInformation();  
   
     if (ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Impersonation ||  
         ServiceSecurityContext.Current.WindowsIdentity.ImpersonationLevel == TokenImpersonationLevel.Delegation)  
@@ -80,8 +80,8 @@ DisplayIdentityInformation();
         Console.WriteLine("ImpersonationLevel is not high enough to perform this operation.");  
     }  
   
-Console.WriteLine("After reverting");  
-DisplayIdentityInformation();  
+    Console.WriteLine("After reverting");  
+    DisplayIdentityInformation();  
     return result;  
 }  
 ```  
@@ -92,7 +92,7 @@ DisplayIdentityInformation();
   
  Le code client a été modifié pour affecter <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> au niveau d'emprunt d'identité. Le client spécifie le niveau d'emprunt d'identité à utiliser par le service, en utilisant l'énumération <xref:System.Security.Principal.TokenImpersonationLevel>. L'énumération prend en charge les valeurs suivantes : <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> et <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Pour effectuer un contrôle lors de l'accès à une ressource système sur l'ordinateur local protégé à l'aide des listes de contrôle d'accès Windows, le niveau d'emprunt d'identité doit avoir la valeur <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   

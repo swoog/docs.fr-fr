@@ -13,15 +13,15 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: f20a03c4d9a0e33203629ae066686f4c9f25c105
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 571b09a0783ec0dfd09970b000faec39dca682b3
+ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656056"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49995361"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Assignation des variables objets (Visual Basic)
-Vous utilisez une instruction d’assignation normale pour assigner un objet à une variable objet. Vous pouvez affecter une expression d’objet ou le [rien](../../../../visual-basic/language-reference/nothing.md) (mot clé), comme l’exemple suivant illustre.  
+Vous utilisez une instruction d’assignation normale pour assigner un objet à une variable objet. Vous pouvez affecter une expression d’objet ou le [rien](../../../../visual-basic/language-reference/nothing.md) mot clé, comme dans l’exemple suivant illustre.  
   
 ```  
 Dim thisObject As Object  
@@ -31,15 +31,15 @@ thisObject = Form1
 thisObject = Nothing  
 ```  
   
- `Nothing` signifie aucun objet actuellement assigné à la variable.  
+ `Nothing` signifie qu’il n’existe aucun objet actuellement affecté à la variable.  
   
 ## <a name="initialization"></a>Initialisation  
- Lorsque votre code commence à s’exécuter, votre objet variables sont initialisées à `Nothing`. Ceux dont les déclarations incluent l’initialisation sont réinitialisées avec les valeurs que vous spécifiez lorsque les instructions de déclaration sont exécutées.  
+ Lorsque votre code commence à exécuter, vos variables objet sont initialisées à `Nothing`. Ceux dont les déclarations incluent l’initialisation sont réinitialisés aux valeurs que vous spécifiez quand les instructions de déclaration sont exécutées.  
   
- Vous pouvez inclure l’initialisation dans votre déclaration à l’aide de la [nouveau](../../../../visual-basic/language-reference/operators/new-operator.md) (mot clé). Les instructions de déclaration suivantes déclarent des variables objets `testUri` et `ver` et leur attribuer des objets spécifiques. Chacune utilise un des constructeurs surchargés de la classe appropriée pour initialiser l’objet.  
+ Vous pouvez inclure l’initialisation dans votre déclaration à l’aide de la [New](../../../../visual-basic/language-reference/operators/new-operator.md) mot clé. Les instructions de déclaration suivantes déclarent des variables objets `testUri` et `ver` et leur attribuer des objets spécifiques. Chacun utilise un des constructeurs surchargés de la classe appropriée pour initialiser l’objet.  
   
 ```  
-Dim testUri As New System.Uri("http://www.microsoft.com")  
+Dim testUri As New System.Uri("https://www.microsoft.com")  
 Dim ver As New System.Version(6, 1, 0)  
 ```  
   
@@ -52,16 +52,16 @@ If otherObject IsNot Nothing Then
 End If  
 ```  
   
- Si l’objet désigné par votre variable est dans une autre application, ce test ne peut pas déterminer si cette application est arrêtée ou invalider l’objet.  
+ Si l’objet désigné par votre variable est dans une autre application, ce test ne peut pas déterminer si cette application a terminé ou invalider l’objet.  
   
  Une variable objet avec la valeur `Nothing` est également appelé un *référence null*.  
   
 ## <a name="current-instance"></a>Instance actuelle  
- Le *instance actuelle* d’un objet est celui dans lequel le code est en cours d’exécution. Étant donné que tout le code s’exécute à l’intérieur d’une procédure, l’instance actuelle est celui dans lequel la procédure a été appelée.  
+ Le *instance actuelle* d’un objet est celui dans lequel le code est en cours d’exécution. Dans la mesure où tout le code s’exécute à l’intérieur d’une procédure, l’instance actuelle est celui dans lequel la procédure a été appelée.  
   
- Le `Me` mot clé sert de variable objet faisant référence à l’instance actuelle. Si une procédure n’est pas [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), il peut utiliser le `Me` mot clé à obtenir un pointeur vers l’instance actuelle. Les procédures partagées ne peut pas être associés à une instance spécifique d’une classe.  
+ Le `Me` mot clé agit comme une variable objet faisant référence à l’instance actuelle. Si une procédure n’est pas [partagé](../../../../visual-basic/language-reference/modifiers/shared.md), il peut utiliser le `Me` mot clé pour obtenir un pointeur vers l’instance actuelle. Les procédures partagées ne peut pas être associés à une instance spécifique d’une classe.  
   
- À l’aide de `Me` est particulièrement utile pour le passage de l’instance actuelle à une procédure dans un autre module. Par exemple, supposons que vous avez un nombre de documents XML et que vous souhaitez ajouter un texte standard pour tous les. L’exemple suivant définit une procédure pour ce faire.  
+ À l’aide de `Me` est particulièrement utile pour passer l’instance actuelle à une procédure dans un autre module. Par exemple, supposons que vous avez un nombre de documents XML et que vous souhaitez ajouter un texte standard à toutes les. L’exemple suivant définit une procédure pour ce faire.  
   
 ```  
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)  
@@ -69,7 +69,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub  
 ```  
   
- Chaque objet de document XML peut ensuite appeler la procédure et passer son instance en cours en tant qu’argument. Cela est illustré par l'exemple suivant.  
+ Chaque objet de document XML peut ensuite appeler la procédure et passer son instance actuelle en tant qu’argument. Cela est illustré par l'exemple suivant.  
   
 ```  
 addStandardText(Me)  

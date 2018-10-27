@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 3eea3d6c8a28ace0cc79cbfeb7eb3a7a52c9b8ab
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047525"
 ---
 # <a name="white-space-processing-in-xaml"></a>Espace blanc dans XAML de traitement
 Les règles de langage pour XAML d’état que l’espace blanc significatif doit être traité par un [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implémentation du processeur. Cette rubrique documente ces règles de langage XAML. Il traite également de la gestion des espaces blancs supplémentaires définie par le [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implémentation du processeur XAML et le writer XAML pour la sérialisation.  
@@ -59,7 +59,7 @@ Les règles de langage pour XAML d’état que l’espace blanc significatif doi
   
 <a name="east_asian_characters"></a>   
 ## <a name="east-asian-characters"></a>Caractères d’Extrême-Orient  
- Les caractères d'Extrême-Orient sont définis comme un jeu de caractères [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] allant de U+20000 à U+2FFFD et de U+30000 à U+3FFFD. Ce sous-ensemble est parfois également appelé « idéogrammes CJK ». Pour plus d’informations, consultez [http://www.unicode.org](http://www.unicode.org/).  
+ Les caractères d'Extrême-Orient sont définis comme un jeu de caractères [!INCLUDE[TLA2#tla_unicode](../../../includes/tla2sharptla-unicode-md.md)] allant de U+20000 à U+2FFFD et de U+30000 à U+3FFFD. Ce sous-ensemble est parfois également appelé « idéogrammes CJK ». Pour plus d'informations, consultez <https://www.unicode.org>.  
   
 <a name="whitespace_and_text_content_models"></a>   
 ## <a name="white-space-and-text-content-models"></a>Espace blanc et le texte des modèles de contenu  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 721ab72ab1f67d2dc42574ed0147fa7686e02fd1
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 04586f22076b6e2cf4175c7d9d985820ef7885c6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316465"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181616"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Procédure : héberger plusieurs versions d'un workflow côte à côte
 `WorkflowIdentity` permet aux développeurs d'applications de workflow d'associer un nom et une version à une définition de workflow, et d'associer ces informations à une instance persistante de workflow. Ces informations d'identité peuvent être utilisées par les développeurs d'applications de workflow pour activer des scénarios tels que l'exécution côte à côte de plusieurs versions d'une définition de workflow, et fournir la base d'autres fonctionnalités telles que la mise à jour dynamique. Cette étape du didacticiel explique comment utiliser `WorkflowIdentity` pour héberger plusieurs versions de workflow en même temps.
@@ -555,14 +555,15 @@ ms.locfileid: "49316465"
 
 2.  Démarrer un nouveau flux de travail en cliquant sur **nouvelle partie**. La version du workflow s'affiche dans la fenêtre d'état et reflète la version mise à jour du `WorkflowIdentity` associé. Notez `InstanceId` de façon à afficher le fichier de suivi du workflow lorsqu'il se termine, puis entrez des propositions jusqu'à ce que le jeu soit terminé. Notez comment la proposition de l'utilisateur est affichée dans les informations affichées dans la fenêtre d'état basée sur les mises à jour dans les activités `WriteLine`.
 
- **Entrez un nombre compris entre 1 et 10**
-**5 est trop élevée.** 
- **Entrez un nombre compris entre 1 et 10**
-**3 est trop élevée.** 
- **Entrez un nombre compris entre 1 et 10**
-**1 est trop faible.** 
- **Entrez un nombre compris entre 1 et 10**
-**Félicitations, vous avez deviné le nombre en 4 tours.**
+ **Entrez un nombre compris entre 1 et 10**  
+**5 est trop élevée.**  
+**Entrez un nombre compris entre 1 et 10**  
+**3 est trop élevée.**  
+**Entrez un nombre compris entre 1 et 10**  
+**1 est trop faible.**  
+**Entrez un nombre compris entre 1 et 10**  
+**Félicitations, vous avez deviné le nombre en 4 tours.**  
+
     > [!NOTE]
     >  Le texte mis à jour à partir des activités `WriteLine` s'affiche, mais la sortie de l'activité finale `WriteLine` ajoutée dans cette rubrique ne s'affiche pas. Cela est dû au fait que la fenêtre d'état est mise à jour par le gestionnaire `PersistableIdle`. Étant donné que le workflow se termine et n'est pas inactif après l'activité finale, le gestionnaire `PersistableIdle` n'est pas appelé. Toutefois, un message similaire est affiché dans la fenêtre d'état par le gestionnaire `Completed`. Si vous le souhaitez, le code peut être ajouté au gestionnaire `Completed` pour extraire le texte de `StringWriter` et pour l'afficher dans la fenêtre d'état.
 

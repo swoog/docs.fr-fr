@@ -8,13 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-author: BrucePerlerMS
-ms.openlocfilehash: e81469f5ac55b1c698dc99af0782dbdedab33339
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: ce02e562f3c6e92b6dfadbb065730e9f1644b82a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50042504"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Comment : désactiver des sessions sécurisées sur une classe WSFederationHttpBinding
 Certains services peuvent requérir des informations d'identification fédérées mais ne prennent pas en charge les sessions sécurisées. Dans ce cas, vous devez désactiver la fonctionnalité de session sécurisée. Contrairement à la <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, la <xref:System.ServiceModel.WSFederationHttpBinding> classe ne fournit pas la possibilité de désactiver des sessions sécurisées lors de la communication avec un service. À la place, vous devez créer une liaison personnalisée qui remplace les paramètres de session sécurisée par un démarrage.  
@@ -31,7 +30,7 @@ Certains services peuvent requérir des informations d'identification fédérée
   
 4.  Recherchez <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters> dans <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
-5.  Remplacez le <xref:System.ServiceModel.Channels.SecurityBindingElement> d'origine par l'élément de liaison de sécurité de démarrage des <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.  
+5.  Remplacez le <xref:System.ServiceModel.Channels.SecurityBindingElement> d’origine par l’élément de liaison de sécurité de démarrage des <xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant permet de créer une liaison fédérée personnalisée sans session sécurisée.  

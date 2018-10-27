@@ -19,18 +19,18 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208574"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183111"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Encodage et globalisation des applications Windows Forms
-Les applications Windows Forms sont totalement compatibles Unicode, ce qui signifie que chaque caractère est représenté par un nombre unique, quels que soient la plate-forme, le programme ou la langue. Pour plus d’informations sur Unicode, consultez le [site Web du consortium Unicode](http://www.unicode.org).  
+Les applications Windows Forms sont totalement compatibles Unicode, ce qui signifie que chaque caractère est représenté par un nombre unique, quels que soient la plate-forme, le programme ou la langue. Pour plus d’informations sur Unicode, consultez le [site Web du consortium Unicode](https://www.unicode.org).  
   
 ## <a name="benefits-of-unicode"></a>Avantages d'Unicode  
- Les avantages des formulaires Unicode incluent la possibilité de travailler avec des scripts qui sont Unicode uniquement, tels que l'Hindi. En outre, vous pouvez utiliser plusieurs langues sur un même formulaire. En Unicode, tous les caractères font deux octets. Aucun effort particulier n'est donc nécessaire pour représenter des caractères codés sur deux octets. Vous pouvez aussi écrire un seul ensemble de code qui fonctionne sur toutes les plateformes. Il s’agit d’une modification à partir de versions précédentes de Visual Basic, dans lequel vous deviez écrire du code différent pour les différentes plateformes, telles que Windows NT et [!INCLUDE[win98](../../../../includes/win98-md.md)].  
+ Les avantages des formulaires Unicode incluent la possibilité de travailler avec des scripts qui sont Unicode uniquement, tels que l'Hindi. En outre, vous pouvez utiliser plusieurs langues sur un même formulaire. En Unicode, tous les caractères font deux octets. Aucun effort particulier n'est donc nécessaire pour représenter des caractères codés sur deux octets. Vous pouvez aussi écrire un seul ensemble de code qui fonctionne sur toutes les plateformes. Il s’agit d’une modification des versions précédentes de Visual Basic, dans lequel vous deviez écrire du code différent pour différentes plateformes, tels que Windows NT et [!INCLUDE[win98](../../../../includes/win98-md.md)].  
   
  Toutefois, certains contrôles ne prennent pas en charge Unicode dans [!INCLUDE[win98](../../../../includes/win98-md.md)] et Windows Millennium Edition. Ces contrôles, qui héritent tous du contrôle commun, traitent les données avec les pages de code Windows, comme [!INCLUDE[vcpransi](../../../../includes/vcpransi-md.md)]. Il s'agit des contrôles suivants : <xref:System.Windows.Forms.TabControl>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.DateTimePicker>, <xref:System.Windows.Forms.MonthCalendar>, <xref:System.Windows.Forms.TrackBar>, <xref:System.Windows.Forms.ProgressBar>, <xref:System.Windows.Forms.ImageList>, <xref:System.Windows.Forms.ToolBar>, et <xref:System.Windows.Forms.StatusBar>. Par conséquent, vous ne pouvez pas afficher de données Unicode dans ces contrôles sur les plateformes répertoriées. Par exemple, vous ne pouvez pas afficher de caractères japonais sur un système d'exploitation [!INCLUDE[win98](../../../../includes/win98-md.md)] en anglais.  
   
@@ -38,4 +38,4 @@ Les applications Windows Forms sont totalement compatibles Unicode, ce qui signi
   
 ## <a name="see-also"></a>Voir aussi
 
-[Globalisation des applications Windows Forms](globalizing-windows-forms.md)
+[Globalisation d’applications Windows Forms](globalizing-windows-forms.md)

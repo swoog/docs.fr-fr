@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 45c838fbac5e6f576a242c8839f849dc9529ef7d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779264"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453175"
 ---
 # <a name="code-access-security-and-adonet"></a>Sécurité d'accès du code et ADO.NET
 Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécurité d'accès du code (CAS, Code Access Security) implémentées à l'aide d'une infrastructure commune fournie par le Common Language Runtime (CLR). Dans l'univers du code non managé, la plupart des applications s'exécutent avec les autorisations de l'utilisateur ou d'une principal de sécurité. C'est pourquoi les systèmes informatiques peuvent être endommagés et des données privées compromises lorsqu'un utilisateur bénéficiant de privilèges élevés exécute des logiciels malveillants ou remplis d'erreurs.  
@@ -192,11 +192,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Interopérabilité avec du code non managé  
  Le code qui s'exécute en dehors du CLR est appelé code non managé. Par conséquent, les mécanismes de sécurité, tels que la sécurité d'accès du code, ne peuvent pas être appliqués à du code non managé. Les composants COM, les interfaces ActiveX et les fonctions API Win32 sont des exemples de code non managé. Des considérations de sécurité particulières s'appliquent lors de l'exécution de code non managé pour éviter de compromettre la sécurité globale des applications. Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md).  
   
- Le .NET Framework prend également en charge la compatibilité descendante avec des composants COM existants en offrant un accès via COM Interop. Vous pouvez incorporer des composants COM dans une application .NET Framework en utilisant des outils de COM Interop pour importer les types COM pertinents. Une fois importés, les types COM sont prêts à être utilisés. COM Interop permet également aux clients COM d'accéder à du code managé en exportant des métadonnées d'assembly dans une bibliothèque de types et en inscrivant le composant managé en tant que composant COM. Pour plus d’informations, consultez [interopérabilité COM avancée](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ Le .NET Framework prend également en charge la compatibilité descendante avec des composants COM existants en offrant un accès via COM Interop. Vous pouvez incorporer des composants COM dans une application .NET Framework en utilisant des outils de COM Interop pour importer les types COM pertinents. Une fois importés, les types COM sont prêts à être utilisés. COM Interop permet également aux clients COM d'accéder à du code managé en exportant des métadonnées d'assembly dans une bibliothèque de types et en inscrivant le composant managé en tant que composant COM. Pour plus d’informations, consultez [interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Sécurité PAVE dans le code natif et .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Sécurité d’accès du code](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Sécurité basée sur les rôles](https://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)  
+ [Sécurité basée sur les rôles](../../../../docs/standard/security/role-based-security.md)  
  [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

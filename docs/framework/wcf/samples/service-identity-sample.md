@@ -2,12 +2,12 @@
 title: Service Identity, exemple
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 913795f9d9e35b4ecce5998320cc64c0c0b46ba7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 341e4922089634c3e46929d6cdb474b2dfbd0666
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582618"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49633909"
 ---
 # <a name="service-identity-sample"></a>Service Identity, exemple
 Cet exemple montre comment définir l'identité d'un service. Au moment du design, un client peut récupérer l'identité à l'aide des métadonnées du service, puis au miment de l'exécution, il peut authentifier l'identité du service. Le concept d'identité de service consiste à permettre à un client d'authentifier un service avant d'appeler l'une de ses opérations, ce qui protège le client contre les appels non authentifiés. Sur une connexion sécurisée, le service authentifie également les informations d'identification d'un client avant de lui autoriser l'accès, mais ce n'est pas l'objet traité dans cet exemple. Consultez les exemples de [Client](../../../../docs/framework/wcf/samples/client.md) qui montrent l’authentification du serveur.
@@ -28,7 +28,7 @@ Cet exemple montre comment définir l'identité d'un service. Au moment du desig
 
  L'exemple de code suivant montre comment configurer l'identité d'un point de terminaison de service avec le serveur DNS (Domain Name Server) d'un certificat à l'aide de WSHttpBinding.
 
-```
+```csharp
 //Create a service endpoint and set its identity to the certificate's DNS
 WSHttpBinding wsAnonbinding = new WSHttpBinding (SecurityMode.Message);
 // Client are Anonymous to the service
@@ -56,7 +56,7 @@ ep.Address = epa;
 
  Une identité personnalisée peut être définie sur le client en dérivant des classes <xref:System.ServiceModel.EndpointIdentity> et <xref:System.ServiceModel.Security.IdentityVerifier>. D'un point de vue conceptuel, la classe <xref:System.ServiceModel.Security.IdentityVerifier> peut être considérée comme étant l'équivalent client de la classe `AuthorizationManager` du service. L'exemple de code suivant présente une implémentation de `OrgEndpointIdentity`, qui stocke un nom d'organisation à faire correspondre au nom du sujet du certificat du serveur. Le contrôle d'autorisation du nom d'organisation se produit dans la méthode `CheckAccess` sur la classe `CustomIdentityVerifier`.
 
-```
+```csharp
 // This custom EndpointIdentity stores an organization name
 public class OrgEndpointIdentity : EndpointIdentity
 {
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>Pour exécuter l'exemple sur le même ordinateur
 
-1.  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importez le fichier de certificat Identity.pfx du dossier de solution Identity dans le magasin de certificats LocalMachine/My (Personal) à l'aide de l'outil enfichable MMC. Ce fichier est protégé par mot de passe. Lors de l'importation, un mot de passe vous est demandé. Type `xyz` dans la zone de mot de passe. Pour plus d’informations, consultez le [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) rubrique. Ceci fait, exécutez Setup.bat dans une invite de commandes de Visual Studio avec des privilèges élevés, qui copie ce certificat dans le magasin CurrentUser/Trusted People pour une utilisation sur le client.
+1.  Sur [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ou [!INCLUDE[wv](../../../../includes/wv-md.md)], importez le fichier de certificat Identity.pfx du dossier de solution Identity dans le magasin de certificats LocalMachine/My (Personal) à l’aide de l’outil enfichable MMC. Ce fichier est protégé par mot de passe. Lors de l'importation, un mot de passe vous est demandé. Type `xyz` dans la zone de mot de passe. Pour plus d’informations, consultez le [Comment : afficher les certificats avec le composant logiciel enfichable MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md) rubrique. Ceci fait, exécutez Setup.bat dans une invite de commandes de Visual Studio avec des privilèges élevés, qui copie ce certificat dans le magasin CurrentUser/Trusted People pour une utilisation sur le client.
 
 2.  Sur [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], exécutez Setup.bat à partir du dossier d’installation de l’exemple à l’intérieur d’une invite de commandes de Visual Studio 2012 avec des privilèges d’administrateur. Tous les certificats requis à l'exécution de l'exemple sont ainsi installés.
 
@@ -126,7 +126,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 4.  Lancez Client.exe à partir du répertoire \client\bin ou en appuyant sur F5 dans Visual Studio pour effectuer la génération et l'exécution. L'activité du client s'affiche sur son application de console.  
   
-5.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -150,7 +150,7 @@ class CustomIdentityVerifier : IdentityVerifier
   
 10. Sur l'ordinateur de service, lancez Service.exe à partir d'une invite de commandes.  
   
-11. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+11. Sur l'ordinateur client, lancez Client.exe à partir d'une invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

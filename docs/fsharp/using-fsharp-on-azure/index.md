@@ -3,12 +3,12 @@ title: Utilisation de F# dans Azure
 description: 'Guide d’utilisation des services Azure avec F #'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: b0efa919e846086e2dee131fb5791abc409b5bcb
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033543"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50033958"
 ---
 # <a name="using-f-on-azure"></a>Utilisation de F# dans Azure
 
@@ -23,7 +23,7 @@ Vous trouverez dans les sections suivantes des ressources expliquant comment uti
 
 Azure prend en charge un large éventail de configurations de machine virtuelle. Pour plus d’informations, consultez [Machines virtuelles Linux et Azure](https://azure.microsoft.com/services/virtual-machines/).
 
-Pour installer F# sur une machine virtuelle pour exécution, compilation et/ou création de scripts, consultez [Utilisation de F# sur Linux](http://fsharp.org/use/linux) et [Utilisation de F# sur Windows](http://fsharp.org/use/windows).
+Pour installer F# sur une machine virtuelle pour exécution, compilation et/ou création de scripts, consultez [Utilisation de F# sur Linux](https://fsharp.org/use/linux) et [Utilisation de F# sur Windows](https://fsharp.org/use/windows).
 
 
 ## <a name="using-azure-functions-with-f"></a>Utilisation d’Azure Functions avec F # #

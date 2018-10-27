@@ -2,17 +2,17 @@
 title: Behavior, classe
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
-ms.openlocfilehash: 6fbe6bae02d580dc0b44c2a1922187dd2b166e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf7d7f4ae4340cd8aee9a200015255820ac140f4
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485692"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50034370"
 ---
 # <a name="behavior-class"></a>Behavior, classe
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class Behavior  
 {  
   string Type;  
@@ -22,7 +22,7 @@ class Behavior
 ## <a name="methods"></a>Méthodes  
  La classe Behavior ne définit aucune méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe Behavior dispose de la propriété suivante :  
   
 ### <a name="type"></a>Type  
@@ -32,7 +32,7 @@ class Behavior
   
  Type de comportement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

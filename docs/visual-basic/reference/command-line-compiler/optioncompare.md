@@ -9,14 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c1906710ef10634187782f9355146dfa7ccb7748
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d50a3bb739bbde09fa10d2adf03ec7c1ff5d344
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653401"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180798"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 Spécifie la façon dont sont effectuées les comparaisons de chaînes.  
@@ -28,27 +26,27 @@ Spécifie la façon dont sont effectuées les comparaisons de chaînes.
 ```  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez spécifier `-optioncompare` dans un des deux formes : `-optioncompare:binary` pour utiliser des comparaisons de chaînes binaires et `-optioncompare:text` pour utiliser des comparaisons de chaînes de texte. Par défaut, le compilateur utilise `-optioncompare:binary`.  
+ Vous pouvez spécifier `-optioncompare` dans un des deux formes : `-optioncompare:binary` à utiliser des comparaisons de chaînes binaires et `-optioncompare:text` à utiliser des comparaisons de chaînes de texte. Par défaut, le compilateur utilise `-optioncompare:binary`.  
   
  Dans Microsoft Windows, la page de codes actuelle détermine l’ordre de tri binaire. Un ordre de tri binaire standard est la suivante :  
   
  `A < B < E < Z < a < b < e < z < À < Ê < Ø < à < ê < ø`  
   
- Les comparaisons de chaînes de texte sont basées sur un ordre de tri de texte respectant la casse déterminé par les paramètres régionaux de votre système. Un ordre de tri de texte par défaut est la suivante :  
+ Les comparaisons de chaînes textuelles sont basées sur un ordre de tri de texte respectant la casse déterminé par les paramètres régionaux de votre système. Un ordre de tri de texte classique est comme suit :  
   
  `(A = a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
-### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Pour définir des - optioncompare dans l’IDE de Visual Studio  
+### <a name="to-set--optioncompare-in-the-visual-studio-ide"></a>Pour définir - optioncompare dans l’IDE Visual Studio  
   
 1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**.   
   
 2.  Cliquez sur l’onglet **Compiler**.  
   
-3.  Modifiez la valeur dans la **Option Compare** boîte.  
+3.  Modifiez la valeur dans le **Option Compare** boîte.  
   
 ### <a name="to-set--optioncompare-programmatically"></a>Pour définir - optioncompare par programmation  
   
--   Consultez [Option Compare, instruction](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
+-   Consultez [Option Compare (instruction)](../../../visual-basic/language-reference/statements/option-compare-statement.md).  
   
 ## <a name="example"></a>Exemple  
  Le code suivant compile `ProjFile.vb` et utilise des comparaisons de chaînes binaires.  

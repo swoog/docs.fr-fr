@@ -3,11 +3,11 @@ title: Réhébergement du Workflow Designer
 ms.date: 03/30/2017
 ms.assetid: bec1fc28-f902-4edb-86c5-436cec802c2b
 ms.openlocfilehash: f5964b5c150dbe2a4132d072672a621315270fd5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579931"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452938"
 ---
 # <a name="rehosting-the-workflow-designer"></a>Réhébergement du Workflow Designer
 Le [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] peut être réhébergé dans des environnements en dehors de Visual Studio 2012 dans le cadre de la création, la modification et la surveillance des flux de travail.

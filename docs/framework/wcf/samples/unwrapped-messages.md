@@ -2,12 +2,12 @@
 title: Unwrapped Messages
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 2c818cc6c37a59f75599afb3eab3290d8525e4bc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 835312101ba9e0daaa7986a78c9a0040535881b9
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43797587"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50044617"
 ---
 # <a name="unwrapped-messages"></a>Unwrapped Messages
 Cet exemple montre des messages non encapsulés. Par défaut, le corps du message est mis en forme de manière à ce que les paramètres d'une opération de service soient encapsulés. L'exemple suivant montre un message de demande `Add` au service `ICalculator` en mode encapsulé.  
@@ -52,7 +52,7 @@ Cet exemple montre des messages non encapsulés. Par défaut, le corps du messag
   
  Dans cet exemple, un message non encapsulé est créé en appliquant l'<xref:System.ServiceModel.MessageContractAttribute> au type de paramètre de l'opération de service et au type de valeur de retour comme le montre l'exemple de code suivant.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  

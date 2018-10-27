@@ -2,12 +2,12 @@
 title: Publication du service WCF
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: b62b2616233eb81e64945e997a2efe17973dedd2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 515885658612cf11ecff8e084c466a70ba698625
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781503"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452985"
 ---
 # <a name="wcf-service-publishing"></a>Publication du service WCF
 
@@ -21,7 +21,7 @@ Publication de Service WCF prend en charge la publication des services WCF cré�
 
 -   Bibliothèque du service de syndication.
 
-Vous trouverez ces modèles de service en choisissant **fichier** > **nouveau projet** > [**Visual Basic** ou **Visual C#**] > **WCF**. Pour les autres modèles WCF à cet emplacement (y compris l’Application de Service de Workflow WCF et Application de Service WCF), vous pouvez publier à l’aide de [de publication pour les applications web à un clic](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
+Vous trouverez ces modèles de service en choisissant **fichier** > **nouveau projet** > [**Visual Basic** ou **Visual C#** ] > **WCF**. Pour les autres modèles WCF à cet emplacement (y compris l’Application de Service de Workflow WCF et Application de Service WCF), vous pouvez publier à l’aide de [de publication pour les applications web à un clic](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).
 
 Le service peut être publié aux emplacements cibles suivants.
 
@@ -41,9 +41,9 @@ Pour déployer une implémentation de service, procédez comme suit :
 
 3.  Le **publier** fenêtre s’affiche. Cliquez sur le **...** . pour spécifier l'emplacement cible où doit être déployé le service. Vous pouvez sélectionner pour déployer l’application à local IIS, un système de fichiers ou un FTP Site. Si vous déployez l’application sur l’IIS local, vous pouvez sélectionner votre site Web et créez votre application web en cours, en cliquant sur le **créer une Application Web** icône dans l’angle supérieur droit.
 
-4.  Après avoir cliqué sur **publier** dans la fenêtre principale, Visual Studio déploie l’application à l’emplacement cible indiqué et copie les fichiers Web.config, .svc et l’assembly dans le répertoire cible. . Le nom du fichier .svc sera « ProjectName.ServiceName.svc ». Une fois que le service est publié avec succès, vous trouverez un lien est disponible dans la fenêtre Sortie de Visual Studio, qui est similaire à « Connexion à un lien hypertexte » http://localhost/WebApplicationFolderName« http://localhost/WebApplicationFolderName ... ». Vous pouvez appuyer sur Ctrl et cliquer sur le lien pour ouvrir une page du navigateur dans Visual Studio afin d'afficher la structure des répertoires du service.
+4.  Après avoir cliqué sur **publier** dans la fenêtre principale, Visual Studio déploie l’application à l’emplacement cible indiqué et copie les fichiers Web.config, .svc et l’assembly dans le répertoire cible. . Le nom du fichier .svc sera « ProjectName.ServiceName.svc ». Une fois que le service est publié avec succès, vous trouverez un lien est disponible dans la fenêtre Sortie de Visual Studio, qui est similaire à « connexion à `http://localhost/WebApplicationFolderName...`». Vous pouvez appuyer sur Ctrl et cliquer sur le lien pour ouvrir une page du navigateur dans Visual Studio afin d'afficher la structure des répertoires du service.
 
-     S'il est impossible de visiter le site, l'explorateur de répertoires n'est peut-être pas activé dans IIS. Suivez les conseils fournis dans la section « Choses à essayer » pour l’activer. Ou bien, vous pouvez aussi taper directement » lien hypertexte « http://localhost/WebApplicationFolderName« http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc« pour afficher la page de votre service.
+     S'il est impossible de visiter le site, l'explorateur de répertoires n'est peut-être pas activé dans IIS. Suivez les conseils fournis dans la section « Choses à essayer » pour l’activer. Ou bien, vous pouvez taper directement `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` pour afficher la page de votre service.
 
 Vous pouvez utiliser **publier** pour spécifier si vous souhaitez copier l’assembly, la configuration et le fichier .svc pour tous les services définis dans le projet à l’emplacement cible et remplacer les fichiers existants dans la destination.
 

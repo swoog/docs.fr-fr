@@ -2,19 +2,19 @@
 title: ServiceTimeoutsBehavior
 ms.date: 03/30/2017
 ms.assetid: 4412525d-a3cc-4eae-b3e8-a50ce766d09d
-ms.openlocfilehash: 7531cf27aec0ea9a71ee7b1906e8f7cee151695f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a5284915de739e95325234318842a4d1ab607be
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485952"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50135243"
 ---
 # <a name="servicetimeoutsbehavior"></a>ServiceTimeoutsBehavior
 ServiceTimeoutsBehavior  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class ServiceTimeoutsBehavior : Behavior  
 {  
   datetime TransactionTimeout;  
@@ -24,7 +24,7 @@ class ServiceTimeoutsBehavior : Behavior
 ## <a name="methods"></a>Méthodes  
  La classe ServiceTimeoutsBehavior ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe ServiceTimeoutsBehavior a la propriété suivante :  
   
 ### <a name="transactiontimeout"></a>TransactionTimeout  
@@ -34,7 +34,7 @@ class ServiceTimeoutsBehavior : Behavior
   
  Période pendant laquelle une transaction doit s'effectuer.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

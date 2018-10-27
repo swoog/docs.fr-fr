@@ -3,11 +3,11 @@ title: Arguments obligatoires et groupes surchargés
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
 ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374261"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452899"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Arguments obligatoires et groupes surchargés
 Les activités peuvent être configurées de sorte que certains arguments doivent être liés pour que l’activité soit valide pour l’exécution. L'attribut `RequiredArgument` sert à indiquer que certains arguments sur une activité sont requis et l'attribut `OverloadGroup` à grouper des catégories d'arguments requis. En utilisant les attributs, les auteurs d'activités peuvent fournir des configurations de validation d'activités simples ou complexes.  

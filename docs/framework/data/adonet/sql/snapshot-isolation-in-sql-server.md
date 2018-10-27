@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970070"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034297"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Isolation d'instantanés dans SQL Server
 L'isolation de capture instantanée améliore l'accès concurrentiel aux applications OLTP.  
@@ -24,7 +24,7 @@ L'isolation de capture instantanée améliore l'accès concurrentiel aux applica
   
  L’isolation d’instantané doit être activée en définissant l’option de base de données ALLOW_SNAPSHOT_ISOLATION ON avant de l’utiliser dans des transactions. Cela permet d’activer le mécanisme de stockage des versions de ligne dans la base de données temporaire (**tempdb**). Vous devez activer l'isolation d'instantané dans chaque base de données qui l'utilise avec l'instruction Transact-SQL ALTER DATABASE. À cet égard, l'isolation d'instantané diffère de niveaux d'isolation traditionnels des instructions READ COMMITTED, REPEATABLE READ, SERIALIZABLE et READ UNCOMMITTED qui ne requièrent aucune configuration. Les instructions suivantes activent l'isolation d'instantané et remplacent le comportement READ COMMITTED par défaut par SNAPSHOT :  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -47,11 +47,11 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   REPEATABLE READ est un niveau d'isolation plus restrictif que READ COMMITTED. Il englobe READ COMMITTED et spécifie qu'aucune autre transaction ne peut modifier ou supprimer des données lues par la transaction en cours tant que celle-ci n'est pas validée. L'accès simultané est inférieur à celui obtenu avec READ COMMITTED parce que les blocs partagés sur les données lues sont conservés pendant la durée de la transaction au lieu d'être libérés à la fin de chaque instruction.  
   
--   SERIALIZABLE est le niveau d'isolation le plus restrictif parce qu'il verrouille des plages entières de touches et maintient les verrous jusqu'à ce que la transaction soit achevée. Il englobe REPEATABLE READ et ajoute la restriction en vertu de laquelle d'autres transactions ne peuvent pas insérer de nouvelles lignes dans les plages qui ont été lues par la transaction tant que celle-ci n'est pas achevée.  
+-   SERIALIZABLE est le niveau d'isolation le plus restrictif parce qu'il verrouille des plages entières de touches et maintient les verrous jusqu'à ce que la transaction soit achevée. Il englobe REPEATABLE READ et ajoute la restriction en vertu de laquelle d’autres transactions ne peuvent pas insérer de nouvelles lignes dans les plages qui ont été lues par la transaction tant que celle-ci n’est pas achevée.  
   
- Pour plus d'informations, voir « Isolation Levels » dans la documentation en ligne de SQL Server.  
+ Pour plus d’informations, reportez-vous à la [verrouillage de Transaction et le Guide de gestion des versions de ligne](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
-### <a name="snapshot-isolation-level-extensions"></a>Extensions de niveau d'isolation d'instantané  
+### <a name="snapshot-isolation-level-extensions"></a>Extensions de niveau d’isolation d’instantané  
  SQL Server introduit des extensions des niveaux d'isolation de SQL-92 avec le niveau d'isolation SNAPSHOT et l'implémentation supplémentaire de READ COMMITTED. Le niveau d'isolation READ_COMMITTED_SNAPSHOT peut remplacer de façon transparente READ COMMITTED pour toutes les transactions.  
   
 -   L'isolation SNAPSHOT spécifie que les données lues dans une transaction ne refléteront jamais les modifications apportées par d'autres transactions simultanées. Au démarrage, la transaction utilise les versions de ligne de données existantes. Aucun verrou n'est appliqué aux données lors de leur lecture, de sorte que les transactions SNAPSHOT n'empêchent pas d'autres transactions d'écrire des données. Les transactions qui écrivent des données n'empêchent pas les transactions d'instantané de lire des données. Vous devez activer une isolation d'instantané en définissant l'option de base de données ALLOW_SNAPSHOT_ISOLATION de façon à ce qu'elle l'utilise.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Utilisation d'indicateurs de verrou avec une isolation d'instantané  
  Dans l'exemple précédent, la première transaction sélectionne des données et une seconde transaction met à jour les données avant que la première transaction puisse se terminer, entraînant un conflit de mise à jour lorsque la première transaction tente de mettre à jour la même ligne. Vous pouvez réduire la probabilité de conflits de mise à jour dans les transactions d'instantané de longue durée en fournissant des indicateurs de verrou au début de la transaction. L'instruction SELECT suivante utilise l'indicateur UPDLOCK pour verrouiller les lignes sélectionnées :  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server et ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [Fournisseurs managés ADO.NET et centre de développement de jeu de données](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [Guide de gestion des versions de ligne et de verrouillage des transactions](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

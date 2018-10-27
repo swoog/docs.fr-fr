@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 60def26d21ff065bda3209ac90161af0672a38af
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698547"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181694"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Stratégie de sécurité de WPF - ingénierie de sécurité
 Trustworthy Computing (informatique de confiance) est une initiative de Microsoft qui vise à garantir la production de code sécurisé. Un élément clé de l'initiative Trustworthy Computing est [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] est une pratique d’ingénierie utilisée en association avec des processus d’ingénierie standard pour faciliter la livraison de code sécurisé. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] se compose de dix phases qui associent les meilleures pratiques à la formalisation, à la mesurabilité et à une structure supplémentaire qui comprend les aspects suivants :  
@@ -67,7 +67,7 @@ Trustworthy Computing (informatique de confiance) est une initiative de Microsof
 ### <a name="source-analysis-and-editing-tools"></a>Analyse de la source et outils de modification  
  Outre les éléments manuels de révision du code de sécurité de [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)], l'équipe [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] utilise plusieurs outils pour analyser la source et apporter les modifications associées pour réduire les vulnérabilités en matière de sécurité. Une large gamme d’outils sources est utilisée et comprend les éléments suivants :  
   
--   **FXCop** : recherche les problèmes de sécurité courants dans le code managé, depuis les règles d’héritage et l’utilisation de la sécurité d’accès du code jusqu’aux méthodes permettant d’interagir sans risque avec le code non managé. Consultez la page [FXCop](http://www.gotdotnet.com/team/fxcop/).  
+-   **FXCop** : recherche les problèmes de sécurité courants dans le code managé, depuis les règles d’héritage et l’utilisation de la sécurité d’accès du code jusqu’aux méthodes permettant d’interagir sans risque avec le code non managé. Consultez la page [FXCop](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/bb429476%28v=vs.80%29).  
   
 -   **Prefix/Prefast** : recherche les failles de sécurité et les problèmes de sécurité courants dans le code non managé, tels que les dépassements de mémoire tampon, les problèmes de chaîne de format et la vérification d’erreurs.  
   

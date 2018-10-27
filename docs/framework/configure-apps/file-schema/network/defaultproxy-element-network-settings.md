@@ -8,14 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c1783776b62532a2bd28067ca9bdb6ae4c80c717
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0d32e5d03b7c78f616f7d68c0fe0edc9a69dd42e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027433"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50037189"
 ---
 # <a name="ltdefaultproxygt-element-network-settings"></a>&lt;defaultProxy&gt; , élément (paramètres réseau)
 Configure le serveur proxy HTTP (Hypertext Transfer Protocol).  
@@ -63,7 +61,7 @@ Configure le serveur proxy HTTP (Hypertext Transfer Protocol).
 ## <a name="remarks"></a>Notes  
  Si l'élément defaultProxy est vide, les paramètres du proxy Internet Explorer sont utilisés. Ce comportement est différent de la version 1.1 de .NET Framework.  
   
- Une exception est levée si le [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) élément spécifie un type non public, le type ne dérive pas de la <xref:System.Net.IWebProxy> (classe), une exception à partir du constructeur par défaut de cet objet s’est produite, ou une exception s’est produite alors que récupération du proxy système spécifié la valeur par défaut. La propriété <xref:System.Exception.InnerException%2A> de l'exception fournit normalement plus d'informations sur la cause première de l'erreur.  
+ Une exception est levée si le [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) élément spécifie un type non public, le type ne dérive pas de la <xref:System.Net.IWebProxy> (classe), une exception à partir du constructeur par défaut de cet objet s’est produite, ou une exception s’est produite alors que récupération du proxy système spécifié la valeur par défaut. La propriété <xref:System.Exception.InnerException%2A> de l’exception fournit normalement plus d’informations sur la cause racine de l’erreur.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  

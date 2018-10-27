@@ -2,12 +2,12 @@
 title: '&lt;httpsTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: 972fc94234d5eeabcdb428bc5f0cff81e69cec9b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b31965d5c61969f673dfa5627e40567ea0a189a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850307"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181577"
 ---
 # <a name="lthttpstransportgt"></a>&lt;httpsTransport&gt;
 Spécifie un transport HTTP pour la transmission des messages SOAP d’une liaison personnalisée.  
@@ -49,7 +49,7 @@ Spécifie un transport HTTP pour la transmission des messages SOAP d’une liais
 |allowCookies|Valeur booléenne qui spécifie si le client accepte les cookies et les propage dans de futures demandes. La valeur par défaut est `false`.<br /><br /> Vous pouvez utiliser cet attribut lorsque vous interagissez avec les services Web ASMX qui utilisent des cookies. De cette manière, vous avez la certitude que les cookies retournés par le serveur sont automatiquement copiés dans toutes les futures demandes du client pour ce service.|  
 |authenticationScheme|Spécifie le protocole utilisé pour authentifier des demandes du client qui sont traitées par un écouteur HTTP. Les valeurs valides sont les suivantes :<br /><br /> -Digest : Spécifie l’authentification digest.<br />-Negotiate : Négocie avec le client pour déterminer le schéma d’authentification. Si le client et le serveur prennent tous les deux en charge Kerberos, ce protocole est utilisé ; sinon, NTLM est utilisé.<br />-Ntlm : Spécifie l’authentification NTLM.<br />-Basic : Spécifie l’authentification de base.<br />-Anonymous : Spécifie l’authentification anonyme.<br /><br /> La valeur par défaut est Anonymous. Cet attribut est de type <xref:System.Net.AuthenticationSchemes>. Cet attribut ne peut être défini qu'une fois.|  
 |bypassProxyOnLocal|Valeur booléenne qui indique s'il faut ignorer le serveur proxy pour les adresses locales. La valeur par défaut est `false`.<br /><br /> Une adresse locale est une adresse sur le réseau local ou l'intranet.<br /><br /> Windows Communication Foundation (WCF) ignore toujours le proxy si l’adresse de service commence par `http://localhost`.<br /><br /> Utilisez le nom d'hôte plutôt que localhost si vous souhaitez que les clients passent par un proxy lorsqu'ils communiquent avec des services sur le même ordinateur.|  
-|hostnameComparisonMode|Spécifie le mode de comparaison du nom d'hôte HTTP utilisé pour analyser des URI. Les valeurs valides sont :<br /><br /> -StrongWildcard : (« + ») correspond à tous les noms d’hôtes possibles dans le contexte du schéma spécifié, le port et l’URI relatif.<br />-Exact : aucun des caractères génériques<br />-WeakWildcard : (« * ») correspond au nom d’hôte possible dans le contexte de schéma spécifié, le port et le UIR relatif qui n’ont pas été trouvées explicitement ou via un mécanisme générique fort.<br /><br /> La valeur par défaut est StrongWildcard. Cet attribut est de type `System.ServiceModel.HostnameComparison`.|  
+|hostnameComparisonMode|Spécifie le mode de comparaison du nom d'hôte HTTP utilisé pour analyser des URI. Les valeurs valides sont :<br /><br /> -StrongWildcard : (« + ») correspond à tous les noms d’hôtes possibles dans le contexte du schéma spécifié, le port et l’URI relatif.<br />-Exact : aucun des caractères génériques<br />-WeakWildcard : («\*») correspond au nom d’hôte possible dans le contexte de schéma spécifié, le port et le UIR relatif qui n’ont pas été trouvées explicitement ou via un mécanisme générique fort.<br /><br /> La valeur par défaut est StrongWildcard. Cet attribut est de type `System.ServiceModel.HostnameComparison`.|  
 |manualAddressing|Valeur booléenne qui permet à l'utilisateur de prendre le contrôle de l'adressage de message. Cette propriété est utilisée habituellement dans les scénarios de routeur, dans lesquels l'application choisit à quelle destination envoyer un message.<br /><br /> Si cette propriété a la valeur `true`, le canal suppose que le message a déjà été adressé et n'y ajoute aucune information supplémentaire. L'utilisateur peut adresser ensuite individuellement chaque message.<br /><br /> Si cette propriété a la valeur `false`, le mécanisme d'adressage Windows Communication Foundation (WCF) par défaut crée automatiquement des adresses pour tous les messages.<br /><br /> La valeur par défaut est `false`.|  
 |maxBufferPoolSize|Entier positif indiquant la taille maximale du pool de mémoires tampons. La valeur par défaut est 524288.<br /><br /> De nombreux éléments de WCF utilisent des mémoires tampons. La création et la destruction des mémoires tampons à chaque utilisation sont chères, tout comme leur nettoyage. Avec les pools de mémoires tampons, vous pouvez prendre une mémoire tampon du pool, l'utiliser et la retourner au pool une fois que vous avez terminé. Ainsi, la surcharge de la création et de la destruction des mémoires tampons est évitée.|  
 |maxBufferSize|Entier positif qui spécifie la taille maximale de la mémoire tampon. La valeur par défaut est 524 288.|  
@@ -72,7 +72,7 @@ Spécifie un transport HTTP pour la transmission des messages SOAP d’une liais
 |[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
- L'élément `httpsTransport` constitue le point de départ pour créer une liaison personnalisée qui implémente le protocole de transport HTTPS. HTTPS est le principal transport utilisé à des fins d'interopérabilité sécurisée. HTTPS est pris en charge par Windows Communication Foundation (WCF) pour garantir l’interopérabilité avec les autres piles de services Web.  
+ L’élément `httpsTransport` constitue le point de départ pour créer une liaison personnalisée qui implémente le protocole de transport HTTPS. HTTPS est le principal transport utilisé à des fins d'interopérabilité sécurisée. HTTPS est pris en charge par Windows Communication Foundation (WCF) pour garantir l’interopérabilité avec les autres piles de services Web.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.HttpsTransportElement>  

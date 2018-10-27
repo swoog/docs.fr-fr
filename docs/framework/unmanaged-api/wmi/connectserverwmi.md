@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049280"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi (fonction)
 Crée une connexion via DCOM à un espace de noms WMI sur un ordinateur spécifié.  
@@ -94,7 +94,7 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) (méthode).
+Cette fonction encapsule un appel à la [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) (méthode).
 
  Pour un accès local à l’espace de noms par défaut, `strNetworkResource` peut être un chemin d’accès de l’objet simple : « root\default » ou «\\.\root\default ». Pour accéder à l’espace de noms par défaut sur un ordinateur distant à l’aide de la mise en réseau COM ou compatible avec Microsoft, incluent le nom d’ordinateur : «\\myserver\root\default ». Le nom d’ordinateur peut être une adresse IP ou nom DNS. Le `ConnectServerWmi` fonction peut également se connecter avec les ordinateurs qui exécutent IPv6 à l’aide d’une adresse IPv6.
 
