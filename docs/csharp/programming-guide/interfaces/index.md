@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321403"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454432"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guide de programmation C#)
 
@@ -36,7 +36,7 @@ Pour implémenter un membre d'interface, le membre correspondant de la classe d'
   
 Quand une classe ou un struct implémentent une interface, la classe ou le struct doivent fournir une implémentation pour tous les membres que l'interface définit. L'interface elle-même n'offre aucune fonctionnalité dont une classe ou un struct peuvent hériter de la manière qu'ils peuvent hériter d'une fonctionnalité de classe de base. Toutefois, si une classe de base implémente une interface, toute classe dérivée de la classe de base hérite de cette implémentation.  
   
-L'exemple suivant illustre une implémentation de l'interface IEquatable<T\>. La classe d'implémentation, `Car`, doit fournir une implémentation de la méthode <xref:System.IEquatable%601.Equals%2A>.  
+L'exemple suivant illustre une implémentation de l'interface <xref:System.IEquatable%601>. La classe d'implémentation, `Car`, doit fournir une implémentation de la méthode <xref:System.IEquatable%601.Equals%2A>.  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   

@@ -4,12 +4,12 @@ description: Architecture des Microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/06/2018
-ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 1af53f8f37e516219767fdde49eb7da9927d9e29
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874385"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50047265"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Lutte contre la complexité d’entreprise dans un microservice disposant des modèles DDD et CQRS
 
@@ -66,7 +66,7 @@ DDD est un large sujet avec un ensemble complet de ressources d’apprentissage.
 Formation DDD
 
 -   **Julie Lerman et Steve Smith. Domain-Driven Design Fundamentals**
-    [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
+    [*https://bit.ly/PS-DDD*](https://bit.ly/PS-DDD)
 
 
 >[!div class="step-by-step"]

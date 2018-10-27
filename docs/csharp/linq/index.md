@@ -3,12 +3,12 @@ title: LINQ (Language-Integrated Query) dans C#
 description: Présente LINQ (Language-Integrated Query) dans C#.
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 89630245a33c03851c7607b3b299eb7b9c477177
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404578"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038420"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Language-Integrated Query)
 
@@ -30,7 +30,7 @@ L’exemple suivant montre l’opération de requête complète. L’opération 
 
 - Une requête ne s’exécute pas tant que vous n’avez pas itéré la variable de requête, par exemple dans une instruction `foreach`. Pour plus d’informations, consultez la page [Introduction aux requêtes LINQ](../programming-guide/concepts/linq/introduction-to-linq-queries.md).
 
-- Lors de la compilation, les expressions de requête sont converties en appels de méthode d’opérateur de requête standard en fonction des règles définies dans la spécification du langage C#. Toute requête exprimable avec la syntaxe de requête peut également être exprimée avec la syntaxe de méthode. Toutefois, dans la plupart des cas, la syntaxe de requête est plus lisible et plus concise. Pour plus d’informations, consultez les pages [Spécification du langage C#](../language-reference/language-specification/index.md) et [Vue d’ensemble des opérateurs de requête standard](../programming-guide/concepts/linq/standard-query-operators-overview.md).
+- Lors de la compilation, les expressions de requête sont converties en appels de méthode d’opérateur de requête standard en fonction des règles définies dans la spécification du langage C#. Toute requête exprimable avec la syntaxe de requête peut également être exprimée avec la syntaxe de méthode. Toutefois, dans la plupart des cas, la syntaxe de requête est plus lisible et plus concise. Pour plus d’informations, consultez les pages [Spécification du langage C#](~/_csharplang/spec/expressions.md#query-expressions) et [Vue d’ensemble des opérateurs de requête standard](../programming-guide/concepts/linq/standard-query-operators-overview.md).
 
 - En règle générale, lorsque vous écrivez des requêtes LINQ, nous vous recommandons d’utiliser la syntaxe de requête dans la mesure du possible et la syntaxe de méthode si nécessaire. Il n’y a aucune différence de sémantique ou de performances entre les deux formats. Les expressions de requête sont souvent plus lisibles que les expressions équivalentes écrites avec la syntaxe de méthode.
 

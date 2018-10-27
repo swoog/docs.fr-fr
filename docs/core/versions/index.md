@@ -4,12 +4,12 @@ description: Découvrez comment fonctionne la gestion des versions de .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047434"
 ---
 # <a name="net-core-versioning"></a>Gestion des versions de .NET Core
 
@@ -43,7 +43,7 @@ Vous trouverez plus de détails dans la proposition initiale dans le dépôt [do
 
 ## <a name="semantic-versioning"></a>Gestion sémantique des versions
 
-Le *runtime* .NET Core adhère globalement à la [gestion sémantique des versions (SemVer)](http://semver.org/), adoptant ainsi l’utilisation de la gestion de versions `MAJOR.MINOR.PATCH`, qui utilise différentes parties du numéro de version pour décrire le degré et le type de modification.
+Le *runtime* .NET Core adhère globalement à la [gestion sémantique des versions (SemVer)](https://semver.org/), adoptant ainsi l’utilisation de la gestion de versions `MAJOR.MINOR.PATCH`, qui utilise différentes parties du numéro de version pour décrire le degré et le type de modification.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]

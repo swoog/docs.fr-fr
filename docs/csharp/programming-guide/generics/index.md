@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9aa57fd31b8d969bbbbf4329a028007f42d3e097
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506079"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50042309"
 ---
 # <a name="generics-c-programming-guide"></a>Génériques (guide de programmation C#)
 Les génériques ont été ajoutés à la version 2.0 du langage C# et du Common Language Runtime (CLR). Les génériques introduisent le concept des paramètres de type dans .NET Framework, qui permettent de concevoir des classes et des méthodes qui diffèrent la spécification d’un ou de plusieurs types jusqu’à ce que la classe ou la méthode soit déclarée et instanciée par le code client. Par exemple, à l’aide d’un paramètre de type générique T, vous pouvez écrire une seule classe qui peut être utilisée par un autre code client sans impliquer le coût ou le risque des casts ou des opérations de boxing à l’exécution, comme illustré ici :  
@@ -57,7 +57,7 @@ Les génériques ont été ajoutés à la version 2.0 du langage C# et du Common
 -   [Génériques dans le runtime](../../../csharp/programming-guide/generics/generics-in-the-run-time.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
- Pour plus d'informations, voir la [spécification du langage C#](../../../csharp/language-reference/language-specification/index.md).  
+ Pour plus d'informations, voir la [spécification du langage C#](~/_csharplang/spec/types.md#constructed-types).  
   
 ## <a name="see-also"></a>Voir aussi
 

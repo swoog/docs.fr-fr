@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 4452ad2445f81659d04bca3d64885148895aeb88
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50046747"
 ---
 # <a name="file-and-stream-io"></a>Fichier et flux de données E/S
 E/S de fichier et de flux (entrées/sorties) fait référence au transfert de données vers ou depuis un support de stockage. Dans le .NET Framework, les espaces de noms `System.IO` contiennent des types qui permettent la lecture et l'écriture, de façon synchrone ou asynchrone, sur les flux de données et les fichiers. Ces espaces de noms contiennent également les types qui exécutent la compression et la décompression sur les fichiers, et ceux qui permettent la communication via des canaux et des ports série.  
@@ -122,7 +122,7 @@ Pour les conventions de nommage des chemins et les nouvelles méthodes pour expr
 ## <a name="isolated-storage"></a>Stockage isolé  
  Le stockage isolé est un mécanisme de stockage de données qui offre une isolation et une sécurité en définissant des méthodes standardisées pour associer du code à des données enregistrées. Le stockage fournit un système de fichiers virtuel qui est isolé par utilisateur, assembly et (éventuellement) domaine. Le stockage isolé est particulièrement utile lorsque votre application n'a pas l'autorisation d'accès aux fichiers utilisateur. Enregistrez les paramètres ou les fichiers de votre application d'une façon contrôlée par la stratégie de sécurité de l'ordinateur.  
   
- Le stockage isolé n'est pas disponible pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Utilisez à la place les classes de données d'application de l'espace de noms <xref:Windows.Storage?displayProperty=nameWithType>. Pour plus d’informations, consultez [Données de l’application](/previous-versions/windows/apps/hh464917%28v=win.10%29).  
+ Le stockage isolé n'est pas disponible pour les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Utilisez à la place les classes de données d'application de l'espace de noms <xref:Windows.Storage?displayProperty=nameWithType>. Pour plus d’informations, consultez [Données de l’application](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Les classes suivantes sont fréquemment utilisées lors d'une implémentation de stockage isolé :  
   
