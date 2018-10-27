@@ -1,8 +1,0 @@
-# [Didacticiels](index.md)
-## [Application console](console-teleprompter.md)
-## [Client REST](console-webapiclient.md)
-## [Héritage dans C# et .NET](inheritance.md)
-## [Utilisation de LINQ](working-with-linq.md)
-## [Microservices hébergés dans Docker](microservices.md)
-## [Interpolation de chaîne](string-interpolation.md)
-## [Utilisation d’attributs](attributes.md)
