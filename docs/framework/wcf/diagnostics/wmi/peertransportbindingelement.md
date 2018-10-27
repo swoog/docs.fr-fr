@@ -2,19 +2,19 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: 68e6a25e4e3f47c556363e2fd5aa8d3bb9946449
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58bf07b0429ca2435b5aae3683ef69951a10003e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485643"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185181"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class PeerTransportBindingElement : TransportBindingElement  
 {  
   string ListenIPAddress;  
@@ -26,7 +26,7 @@ class PeerTransportBindingElement : TransportBindingElement
 ## <a name="methods"></a>Méthodes  
  La classe PeerTransportBindingElement ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe PeerTransportBindingElement a les propriétés suivantes :  
   
 ### <a name="listenipaddress"></a>ListenIPAddress  
@@ -50,7 +50,7 @@ class PeerTransportBindingElement : TransportBindingElement
   
  Paramètres de sécurité de transport de l'homologue.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

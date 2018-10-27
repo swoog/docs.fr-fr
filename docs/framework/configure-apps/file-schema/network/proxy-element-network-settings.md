@@ -8,14 +8,12 @@ helpviewer_keywords:
 - <proxy> element
 - proxy element
 ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ab3d4e7ce6686a43e4c5258a56e72203c38ebd
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3a6d5b080c74fbd3f6ebca9882c1667951cfcb91
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033387"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183671"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;proxy&gt; , élément (paramètres réseau)
 Définit un serveur proxy.  
@@ -70,7 +68,7 @@ Définit un serveur proxy.
   
  Utilisez le `usesystemdefault` attribut pour les applications .NET Framework version 1.1 qui effectuent une migration vers la version 2.0.  
   
- Une exception est levée si le `proxyaddress` attribut spécifie un proxy par défaut non valide. La propriété <xref:System.Exception.InnerException%2A> de l'exception fournit normalement plus d'informations sur la cause première de l'erreur.  
+ Une exception est levée si le `proxyaddress` attribut spécifie un proxy par défaut non valide. La propriété <xref:System.Exception.InnerException%2A> de l’exception fournit normalement plus d’informations sur la cause racine de l’erreur.  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
  Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).  
@@ -93,5 +91,5 @@ Définit un serveur proxy.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

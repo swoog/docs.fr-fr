@@ -2,12 +2,12 @@
 title: Vue d'ensemble de la corrélation
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: cc165bb4b74c70b740632c5cb873ed200b2283bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372640"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185860"
 ---
 # <a name="correlation-overview"></a>Vue d'ensemble de la corrélation
 La corrélation est le mécanisme qui permet de lier les messages de service de workflow entre eux ou à l'état de l'instance d'application, par exemple une réponse à une demande initiale ou un ID de commande particulier à l'état persistant d'un workflow de traitement de commandes. Cette rubrique offre une vue d'ensemble de la corrélation. Les autres rubriques de cette section fournissent des informations supplémentaires sur chaque type de corrélation.  
@@ -21,7 +21,7 @@ La corrélation est le mécanisme qui permet de lier les messages de service de 
 
 La corrélation basée sur le protocole utilise le mécanisme de transport pour lier des messages entre eux et à l'instance appropriée. Certaines corrélations de protocole fournies par le système incluent une corrélation demande-réponse et une corrélation basée sur le contexte. Une corrélation demande-réponse permet de corréler une seule paire d'activités de messagerie pour former une opération bidirectionnelle, par exemple <xref:System.ServiceModel.Activities.Send> appariée à <xref:System.ServiceModel.Activities.ReceiveReply>, ou <xref:System.ServiceModel.Activities.Receive> appariée à <xref:System.ServiceModel.Activities.SendReply>. Le Concepteur de flux de travail Visual Studio fournit également un ensemble de modèles d’activité pour implémenter ce modèle rapidement. Une corrélation basée sur le contexte est basée sur le mécanisme d’échange de contexte décrit dans le [.NET Context Exchange Protocol Specification](https://go.microsoft.com/fwlink/?LinkID=166059). Pour utiliser la corrélation basée sur le contexte, une liaison basée sur le contexte telle que <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> ou <xref:System.ServiceModel.NetTcpContextBinding> doit être utilisée sur le point de terminaison.  
   
-Pour plus d’informations sur la corrélation de protocole, consultez [Durable Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) et [demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Pour plus d’informations sur les modèles d’activité de Concepteur de flux de travail de Visual Studio, consultez [activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Pour l’exemple de code, consultez le [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) exemple.  
+Pour plus d’informations sur la corrélation de protocole, consultez [Durable Duplex](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) et [demande-réponse](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Pour plus d’informations sur les modèles d’activité de Concepteur de flux de travail de Visual Studio, consultez [activités de messagerie](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Pour l’exemple de code, consultez le [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) exemple.  
   
 ## <a name="content-based-correlation"></a>Corrélation basée sur le contenu
 
@@ -29,4 +29,4 @@ La corrélation basée sur le contenu utilise quelques renseignements dans le me
   
 ## <a name="see-also"></a>Voir aussi  
 
-- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)
+- [NetContextExchangeCorrelation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

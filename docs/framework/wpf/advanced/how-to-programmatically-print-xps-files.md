@@ -8,17 +8,17 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: 25c0b34bd33bee626df14c8dbedce0b82e895b58
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: a42f9b2101266857e56dee6836f4c3b27b3c6f96
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857337"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188323"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Comment : imprimer des fichiers XPS par programmation
 Vous pouvez utiliser une surcharge de la <xref:System.Printing.PrintQueue.AddJob%2A> méthode pour imprimer [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] fichiers sans ouvrir un <xref:System.Windows.Controls.PrintDialog> ou, en principe, n’importe quel [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] du tout.  
   
- Vous pouvez également imprimer [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] de fichiers en utilisant les nombreux <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> et <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> méthodes de la <xref:System.Windows.Xps.XpsDocumentWriter>. Pour en savoir plus sur ce sujet, consultez l’article [Printing an XPS Document](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90)) (Impression d’un document XPS).  
+ Vous pouvez également imprimer [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] de fichiers en utilisant les nombreux <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> et <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> méthodes de la <xref:System.Windows.Xps.XpsDocumentWriter>. Pour en savoir plus sur ce sujet, consultez l’article [Printing an XPS Document](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90)) (Impression d’un document XPS).  
   
  Une autre façon d’imprimer des [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] consiste à utiliser le <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> ou <xref:System.Windows.Controls.PrintDialog.PrintVisual%2A> méthodes de la <xref:System.Windows.Controls.PrintDialog> contrôle. Consultez l’article [Appeler une boîte de dialogue Imprimer](how-to-invoke-a-print-dialog.md).  
   
@@ -56,7 +56,7 @@ Vous pouvez utiliser une surcharge de la <xref:System.Printing.PrintQueue.AddJob
   
  Ce procédé vous permettra à passer `true` en tant que le dernier paramètre de <xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29> sans provoquer une exception, mais puisque  *\<PseudoXPSPrinter >* n’est pas vraiment une imprimante XPSDrv, seront imprimées.  
   
- **Remarque** par souci de simplicité, l’exemple ci-dessus utilise la présence d’un \*extension .xps tester qu’un fichier est [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Toutefois, les fichiers [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] n’ont pas obligatoirement cette extension. L’outil [isXPS.exe (isXPS Conformance Tool)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100)) permet de tester la conformité d’un fichier aux normes [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
+ **Remarque** par souci de simplicité, l’exemple ci-dessus utilise la présence d’un \*extension .xps tester qu’un fichier est [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. Toutefois, les fichiers [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] n’ont pas obligatoirement cette extension. L’outil [isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) permet de tester la conformité d’un fichier aux normes [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Printing.PrintQueue>  
@@ -64,8 +64,8 @@ Vous pouvez utiliser une surcharge de la <xref:System.Printing.PrintQueue.AddJob
  <xref:System.Threading.ApartmentState>  
  <xref:System.STAThreadAttribute>  
  [XPS](https://www.microsoft.com/xps)  
- [Impression d’un Document XPS](https://msdn.microsoft.com/library/849555c8-0c4e-48c0-86bc-a5494c69b36c(v=vs.90))  
- [Threading managé et non managé](https://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5(v=vs.100))  
- [isXPS.exe (isXPS Conformance Tool)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))  
+ [Impression d’un Document XPS](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))  
+ [Threading managé et non managé](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
+ [isXPS.exe (isXPS Conformance Tool)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))  
  [Documents dans WPF](documents-in-wpf.md)  
  [Vue d’ensemble de l’impression](printing-overview.md)

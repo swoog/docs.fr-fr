@@ -5,15 +5,15 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 0596e91204a2a9dbaed2fdbe85387ec3785fd3db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d6f74d88dc9db775718c0098eccced4750d3b75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488697"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184502"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Comment : configurer une liaison WS-Metadata Exchange personnalisée
-Cette rubrique explique comment configurer une liaison d’échange WS-Metadata personnalisée. Windows Communication Foundation (WCF) inclut quatre liaisons de métadonnées définies par le système, mais vous pouvez publier des métadonnées à l’aide de la liaison de que votre choix. Cette rubrique indique comment publier des métadonnées à l'aide du `wsHttpBinding`. Cette liaison vous donne la possibilité d’exposer des métadonnées de manière sécurisée. Le code dans cet article est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Cette rubrique explique comment configurer une liaison d’échange WS-Metadata personnalisée. Windows Communication Foundation (WCF) inclut quatre liaisons de métadonnées définie par le système, mais vous pouvez publier des métadonnées à l’aide de la liaison de que votre choix. Cette rubrique indique comment publier des métadonnées à l'aide du `wsHttpBinding`. Cette liaison vous donne la possibilité d’exposer des métadonnées de manière sécurisée. Le code dans cet article est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Utilisation d'un fichier de configuration  
   
@@ -66,7 +66,7 @@ Cette rubrique explique comment configurer une liaison d’échange WS-Metadata 
   
 ### <a name="configuring-by-code"></a>Configuration par code  
   
-1.  Créer un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> instance de liaison :  
+1.  Créez une instance de liaison <xref:System.ServiceModel.WSHttpBinding> :  
   
     ```  
     WSHttpBinding binding = new WSHttpBinding();  
@@ -87,13 +87,13 @@ Cette rubrique explique comment configurer une liaison d’échange WS-Metadata 
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4.  Ajouter un point de terminaison d’échange de métadonnées, en spécifiant le <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> créé précédemment :  
+4.  Ajoutez un point de terminaison d'échange de métadonnées, en spécifiant le <xref:System.ServiceModel.WSHttpBinding> créé précédemment :  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
-5.  Pour vérifier que le point de terminaison d’échange de métadonnées fonctionne correctement, ajoutez une étiquette de point de terminaison dans le fichier de configuration de client :  
+5.  Pour vérifier que le point de terminaison d'échange de métadonnées fonctionne correctement, ajoutez une balise de point de terminaison dans le fichier de configuration de client :  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  

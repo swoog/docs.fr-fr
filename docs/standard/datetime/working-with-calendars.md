@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fca25786096ebeb97c133d306129f33f2bb4580
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181048"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183904"
 ---
 # <a name="working-with-calendars"></a>Utilisation des calendriers
 
@@ -60,7 +60,7 @@ Tous les calendriers dans .NET dérivent la <xref:System.Globalization.Calendar?
 
 Un calendrier peut être utilisé de deux manières différentes :
 
-* En tant que calendrier utilisé par une culture spécifique. Chaque objet <xref:System.Globalization.CultureInfo> possède un calendrier actuel, qui est celui que l'objet utilise actuellement. Les représentations sous forme de chaîne de toutes les valeurs de date et d'heure reflètent automatiquement la culture actuelle et le calendrier en cours. En général, le calendrier actuel est le calendrier par défaut de la culture. Les objets <xref:System.Globalization.CultureInfo> ont également des calendriers facultatifs, qui comprennent les calendriers supplémentaires que cette culture peut utiliser.
+* En tant que calendrier utilisé par une culture spécifique. Chaque objet <xref:System.Globalization.CultureInfo> possède un calendrier actuel, qui est celui que l'objet utilise actuellement. Les représentations sous forme de chaîne de toutes les valeurs de date et d'heure reflètent automatiquement la culture actuelle et le calendrier en cours. En général, le calendrier actuel est le calendrier par défaut de la culture. <xref:System.Globalization.CultureInfo> objets possèdent également des calendriers facultatifs, qui comprennent les calendriers supplémentaires utilisables par la culture.
 
 * En tant que calendrier autonome, indépendant d'une culture spécifique. Dans ce cas, les méthodes <xref:System.Globalization.Calendar> sont utilisées pour exprimer des dates sous forme de valeurs qui reflètent le calendrier.
 
@@ -139,7 +139,7 @@ Les calendriers divisent en général les dates en ères. Toutefois, le <xref:Sy
 
 ### <a name="eras-and-era-names"></a>Ères et noms d’ères
 
-Dans .NET, les entiers qui représentent les ères prises en charge par une implémentation particulière de calendrier sont stockées dans l’ordre inverse dans le <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tableau. L'ère actuelle se trouve à l'index zéro et pour les classes <xref:System.Globalization.Calendar> qui prennent en charge plusieurs ères, chaque index successif reflète l'ère précédente. La propriété statique <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> définit l'index de l'ère actuelle dans le tableau <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; il s'agit d'une constante dont la valeur est toujours zéro. Les classes <xref:System.Globalization.Calendar> individuelles incluent également les champs statiques qui retournent la valeur de l'ère actuelle. Elles sont répertoriées dans le tableau suivant.
+Dans .NET, les entiers qui représentent les ères prises en charge par une implémentation particulière de calendrier sont stockées dans l’ordre inverse dans le <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tableau. L'ère actuelle se trouve à l'index zéro et pour les classes <xref:System.Globalization.Calendar> qui prennent en charge plusieurs ères, chaque index successif reflète l'ère précédente. La propriété statique <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> définit l'index de l'ère actuelle dans le tableau <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; il s'agit d'une constante dont la valeur est toujours zéro. Les classes <xref:System.Globalization.Calendar> individuelles incluent également les champs static qui retournent la valeur de l’ère actuelle. Elles sont répertoriées dans le tableau suivant.
 
 | Classe de calendrier                                        | Champ d'ère actuelle                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -173,7 +173,7 @@ L'exemple suivant utilise la méthode <xref:System.Globalization.Calendar.ToDate
 
 ### <a name="representing-dates-in-calendars-with-eras"></a>Représentation des dates dans des calendriers avec des ères
 
-Si un objet <xref:System.Globalization.Calendar> prend en charge les ères et est le calendrier actuel d'un objet <xref:System.Globalization.CultureInfo>, l'ère est comprise dans la représentation sous forme de chaîne d'une valeur de date et d'heure pour les modèles de date et d'heure complètes, de date longue et de date courte. L’exemple suivant illustre ces modèles de date lorsque la culture actuelle est le japonais (Japon) et le calendrier actuel est le japonais.
+Si un objet <xref:System.Globalization.Calendar> prend en charge les ères et est le calendrier actuel d’un objet <xref:System.Globalization.CultureInfo>, l’ère est comprise dans la représentation sous forme de chaîne d’une valeur de date et d’heure pour les modèles de date et d’heure complètes, de date longue et de date courte. L’exemple suivant illustre ces modèles de date lorsque la culture actuelle est le japonais (Japon) et le calendrier actuel est le japonais.
 
 [!code-csharp[Conceptual.Calendars#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings1.cs#8)]
 [!code-vb[Conceptual.Calendars#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings1.vb#8)]

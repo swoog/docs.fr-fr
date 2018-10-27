@@ -2,12 +2,12 @@
 title: System.TimeSpan, méthodes
 ms.date: 03/30/2017
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
-ms.openlocfilehash: 2cb7201c113fe72ce03d0308ab8f97dca585e602
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab4519f480dfeca0a35da50a80bd878b7db0960d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358315"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187060"
 ---
 # <a name="systemtimespan-methods"></a>System.TimeSpan, méthodes
 La prise en charge des membres pour <xref:System.TimeSpan?displayProperty=nameWithType> dépend beaucoup des versions du .NET Framework et de Microsoft SQL Server que vous utilisez.  
@@ -17,7 +17,8 @@ La prise en charge des membres pour <xref:System.TimeSpan?displayProperty=nameWi
 ## <a name="previous-limitations"></a>Limites précédentes  
  Lorsque vous utilisez LINQ to SQL avec des versions du .NET Framework antérieures au .NET Framework 3.5 SP1, vous ne pouvez pas mapper les champs de base de données SQL Server à <xref:System.TimeSpan?displayProperty=nameWithType>. Toutefois, les opérations sur <xref:System.TimeSpan> sont prises en charge car des valeurs <xref:System.TimeSpan> peuvent être retournées par la soustraction <xref:System.DateTime> ou introduites dans une expression sous forme de variable littérale ou liée.  
   
-## <a name="supported-systemtimespan-method-support"></a>Prise en charge de la méthode System.TimeSpan  
+## <a name="supported-systemtimespan-member-support"></a>Prise en charge des membres pris en charge System.TimeSpan
+
  Les méthodes, propriétés et opérateurs pris en charge par LINQ to SQL suivants peuvent être utilisés dans les requêtes LINQ to SQL. Une fois mappés dans le modèle objet ou le fichier de mappage externe, LINQ to SQL vous permet d'appeler un grand nombre des membres <xref:System.TimeSpan?displayProperty=nameWithType> à l'intérieur des requêtes LINQ to SQL.  
   
 |Méthodes <xref:System.TimeSpan> prises en charge|Opérateurs <xref:System.TimeSpan> pris en charge|Propriétés <xref:System.TimeSpan> prises en charge|  
@@ -27,7 +28,7 @@ La prise en charge des membres pour <xref:System.TimeSpan?displayProperty=nameWi
 |<xref:System.TimeSpan.Duration%2A>|<xref:System.TimeSpan.op_GreaterThanOrEqual%2A>|<xref:System.TimeSpan.MaxValue>|  
 |<xref:System.TimeSpan.Equals%28System.TimeSpan%2CSystem.TimeSpan%29>|<xref:System.TimeSpan.op_Inequality%2A>|<xref:System.TimeSpan.Milliseconds%2A>|  
 |<xref:System.TimeSpan.Equals%28System.TimeSpan%29>|<xref:System.TimeSpan.op_LessThan%2A>|<xref:System.TimeSpan.Minutes%2A>|  
-||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<!--zz <xref:System.TimeSpan.MinValue%2A>-->|  
+||<xref:System.TimeSpan.op_LessThanOrEqual%2A>|<xref:System.TimeSpan.MinValue>|  
   
 > [!NOTE]
 >  La capacité à mapper <xref:System.TimeSpan?displayProperty=nameWithType> à une colonne `TIME` SQL à l'aide de LINQ to SQL requiert .NET Framework 3.5 SP1 et version ultérieure. Le type de données `TIME` SQL est uniquement disponible à partir de Microsoft SQL Server 2008.  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 892def5d9788dfdf86d312aa04cf89e891323971
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f8925157714621f8b97893bc25e41685778416f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528425"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186003"
 ---
 # <a name="concurrency"></a>Concurrence
 Cet exemple montre l'utilisation du <xref:System.ServiceModel.ServiceBehaviorAttribute> avec l'énumération <xref:System.ServiceModel.ConcurrencyMode> qui contrôle si une instance de service traite des messages l'un après l'autre ou simultanément. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit un nouveau contrat, `ICalculatorConcurrency`, qui hérite d' `ICalculator`, fournissant deux opérations supplémentaires pour l'inspection de l'état d'accès concurrentiel du service. En modifiant le paramètre d'accès concurrentiel, vous pouvez observer le changement de comportement en exécutant le client.  
@@ -32,7 +32,7 @@ Cet exemple montre l'utilisation du <xref:System.ServiceModel.ServiceBehaviorAtt
   
  La classe de service spécifie le comportement d'accès concurrentiel avec l'attribut `[ServiceBehavior(ConcurrencyMode=<setting>)]` comme illustré dans l'exemple de code suivant. En modifiant les lignes commentées, vous pouvez tester les modes d'accès concurrentiel `Single` et `Multiple`. Veillez à régénérer le service après avoir modifié le mode d'accès concurrentiel.  
   
-```  
+```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
 //[ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.Single)]  
   

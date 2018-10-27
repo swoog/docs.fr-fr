@@ -2,13 +2,12 @@
 title: Sessions sécurisées
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
-author: BrucePerlerMS
-ms.openlocfilehash: 09c261afb2c64a46fc1f4619c4ec6b2e87b3fbbf
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 1f3a1e23f7cac2540216365acfca5c23cddfce71
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371705"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190838"
 ---
 # <a name="secure-sessions"></a>Sessions sécurisées
 Une fonctionnalité de Windows Communication Foundation (WCF) est les sessions fiables qui garantissent des messages sont reçus dans l’ordre qu’ils ont été envoyés. Les rubriques de cette section traitent des implications de sécurité à considérer lors de la création d'une session fiable. Pour plus d’informations sur les sessions fiables, consultez [à l’aide de Sessions](../../../../docs/framework/wcf/using-sessions.md).  

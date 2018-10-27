@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 2e454f968bbb80f0e59142dc623fde5d455a78d1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8e2140d02b39a181f55da2c0bed4826dc893f068
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200426"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185800"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Prise en charge d'UI Automation pour le type de contrôle Hyperlink
 > [!NOTE]
->  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour plus d’informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [Windows Automation API : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Cette documentation s'adresse aux développeurs .NET Framework qui souhaitent utiliser les classes [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] managées définies dans l'espace de noms <xref:System.Windows.Automation>. Pour obtenir les dernières informations sur [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consultez [API Windows Automation : UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle Hyperlink. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit réunir pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Les conditions incluent des indications spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] et les modèles de contrôle.  
+ Cette rubrique fournit des informations sur la prise en charge d’ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] pour le type de contrôle Hyperlink. Dans [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], un type de contrôle est un ensemble de conditions qu’un contrôle doit respecter pour pouvoir utiliser la propriété <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Les conditions incluent des indications spécifiques pour l’arborescence [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , les valeurs de propriété [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] et les modèles de contrôle.  
   
  Les contrôles de lien hypertexte permettent à l’utilisateur de naviguer dans une page, d’une page à une autre, et d’ouvrir des fenêtres.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "47200426"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Oui|Tous les contrôles de lien hypertexte doivent prendre en charge le modèle Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Selon le cas|Les contrôles de lien hypertexte doivent prendre en charge le modèle de contrôle Value quand le lien contient des informations explicites qui sont utilisables par l’utilisateur.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Par exemple, `"http://www...."`.|Une URL d’adresse Internet ou intranet est un exemple de lien hypertexte qui contient des informations explicites pour l’utilisateur. Toutefois, un lien créé par programmation est uniquement explicite pour une application, et n’est pas recommandé pour la propriété Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Par exemple, `"https://www...."`.|Une URL d’adresse Internet ou intranet est un exemple de lien hypertexte qui contient des informations explicites pour l’utilisateur. Toutefois, un lien créé par programmation est uniquement explicite pour une application, et n’est pas recommandé pour la propriété Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Événements UI Automation requis  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdec49d077a41ea0b578aaff9ce7fcf9e0c7dc8c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 51a7969821cb4c2367ac298c8452daf1f2a8ceab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505830"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185899"
 ---
 # <a name="securing-method-access"></a>Sécurisation de l'accès à la méthode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -30,7 +30,7 @@ ms.locfileid: "43505830"
   
 -   Limitez l'étendue de l'accessibilité à la classe, à l'assembly ou aux classes dérivées, s'ils sont de confiance. C'est la façon la plus simple de limiter l'accès à la méthode. Notez que, en général, les classes dérivées peuvent être moins fiables que la classe dont elles dérivent, même si dans certains cas elles partagent l'identité de la classe parente. En particulier, ne déduisez pas un niveau de confiance du mot clé **protégé**, qui n’est pas nécessairement utilisé dans le contexte de sécurité.  
   
--   Limiter l’accès à la méthode aux appelants d’une identité spécifiée--essentiellement, n’importe quel [preuve](https://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (nom fort, éditeur, zone, etc.) que vous choisissez.  
+-   Limiter l’accès à la méthode aux appelants d’une identité spécifiée--essentiellement, n’importe quel [preuve](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29) (nom fort, éditeur, zone, etc.) que vous choisissez.  
   
 -   Limitez l'accès à la méthode aux appelants dont les autorisations correspondent à celles que vous choisissez.  
   
@@ -62,7 +62,7 @@ public class Class1
 > [!NOTE]
 >  Un nouveau modèle de transparence a été ajouté au [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Le [Code Transparent de sécurité, niveau 2](../../../docs/framework/misc/security-transparent-code-level-2.md) modèle identifie le code sécurisé avec le <xref:System.Security.SecurityCriticalAttribute> attribut. Le code critique de sécurité nécessite que les appelants et les héritiers soient entièrement fiables. Les assemblys qui s'exécutent selon les règles de sécurité d'accès du code des versions antérieures du .NET Framework peuvent appeler les assemblys de niveau 2. Dans ce cas, les attributs critiques de sécurité seront traités comme des demandes de liaison pour la confiance totale.  
   
- Dans les assemblys avec nom fort, une [LinkDemand](../../../docs/framework/misc/link-demands.md) est appliqué à toutes les méthodes accessibles publiquement, des propriétés et des événements afin de limiter leur utilisation aux appelants de confiance totale. Pour désactiver cette fonctionnalité, vous devez appliquer l'attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. De cette manière, marquer les classes de manière explicite afin d'exclure des appelants non fiables n'est nécessaire que pour des assemblys non signés ou des assemblys possédant cet attribut ; vous pouvez utiliser ces déclarations pour marquer un sous-ensemble de types qui ne sont pas destinés à des appelants non fiables.  
+ Dans les assemblys avec nom fort, une [LinkDemand](../../../docs/framework/misc/link-demands.md) est appliqué à toutes les méthodes accessibles publiquement, des propriétés et des événements afin de limiter leur utilisation aux appelants de confiance totale. Pour désactiver cette fonctionnalité, vous devez appliquer l’attribut <xref:System.Security.AllowPartiallyTrustedCallersAttribute>. De cette manière, marquer les classes de manière explicite afin d'exclure des appelants non fiables n'est nécessaire que pour des assemblys non signés ou des assemblys possédant cet attribut ; vous pouvez utiliser ces déclarations pour marquer un sous-ensemble de types qui ne sont pas destinés à des appelants non fiables.  
   
  Les exemples suivants montrent comment empêcher des classes et des membres d'être utilisés par du code non fiable.  
   

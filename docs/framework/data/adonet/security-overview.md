@@ -2,12 +2,12 @@
 title: Sécurité Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 18a7496d39cd08e8b340e23c57fcd10dae5ed281
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db7b45fef28b0b28e7da550c24d510da73c02aa9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861856"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183527"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 La sécurisation d'une application est un processus permanent. Un développeur ne peut à aucun moment garantir qu'une application est à l'abri de toute attaque car il est impossible de prédire les types d'attaques futures que les nouvelles technologies permettront de faire apparaître. Inversement, le fait que personne n'a encore découvert (ou révélé) les défaillances de la sécurité d'un système ne signifie pas qu'il n'en existe pas ou qu'il ne peut pas en exister. Vous devez planifier la sécurité au cours de la phase de conception du projet, ainsi que la manière dont la sécurité sera maintenue tout au long de la durée de vie de l'application.  
@@ -67,7 +67,7 @@ La sécurisation d'une application est un processus permanent. Un développeur n
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Sécurité d’accès du code et ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|Décrit les interactions entre la sécurité d'accès du code, la sécurité basée sur les rôles et les environnements avec un niveau de confiance partielle depuis la perspective d'une application ADO.NET.|  
-|[Sécurité d’accès du code](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
+|[Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)|Contient des liens vers des rubriques supplémentaires qui décrivent la sécurité d'accès du code dans le .NET Framework.|  
   
 ## <a name="database-security"></a>Sécurité de base de données  
  Le principe des privilèges minimum s'applique également à votre source de données. Ci-dessous figurent quelques-unes des instructions générales concernant la sécurité de la base de données :  

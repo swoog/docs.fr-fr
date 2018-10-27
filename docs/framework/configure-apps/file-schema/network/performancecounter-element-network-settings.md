@@ -8,14 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849787"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187074"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; , élément (paramètres réseau)
 Active ou désactive les compteurs de performance réseau.  
@@ -76,7 +74,7 @@ Active ou désactive les compteurs de performance réseau.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Compteurs de Performance réseau](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+- [Compteurs de Performance réseau](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

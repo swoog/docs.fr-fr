@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c80f65ad2a4c7c48e32615c3cfdf754996f91bc1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664512"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187869"
 ---
 # <a name="windows-applications-using-callbacks"></a>Applications Windows utilisant des rappels
 Dans la plupart des scénarios de traitement asynchrone, vous devez démarrer une opération de base de données et continuer à exécuter d'autres processus sans attendre que l'opération de base de données soit terminée. Toutefois, de nombreux scénarios exigent de faire quelque chose une fois l'opération de base de données terminée. Dans une application Windows, par exemple, vous pouvez déléguer l'opération de longue durée à un thread d'arrière-plan tout en autorisant le thread d'interface utilisateur à rester réactif. Toutefois, une fois l'opération de base de données terminée, vous pouvez utiliser les résultats pour remplir le formulaire. La meilleure façon d'implémenter ce type de scénario consiste à utiliser un rappel.  
@@ -248,7 +248,7 @@ private void Form1_FormClosing(object sender, System.Windows.Forms.FormClosingEv
     {  
         MessageBox.Show(this, "Can't close the form until " +  
         "the pending asynchronous command has completed. Please " +  
-        wait...");  
+        "wait...");
         e.Cancel = true;  
     }  
 }  

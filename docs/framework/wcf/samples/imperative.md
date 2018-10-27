@@ -3,11 +3,11 @@ title: Imperative
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
 ms.openlocfilehash: 7547e3ed3d573cccce068aec239710e76d29bf38
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49370937"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189535"
 ---
 # <a name="imperative"></a>Imperative
 Cet exemple montre comment définir un <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> pour un service à l’aide de code, au lieu de définir la `wsHttpBinding` dans la configuration de liaison. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.  

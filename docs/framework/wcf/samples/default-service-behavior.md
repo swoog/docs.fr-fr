@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 8583c74f85d9638313db1779610c0f6dac9cfbe5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2c49c28d99bb3d300fd4589a088b2f086bdfd45d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857756"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184476"
 ---
 # <a name="default-service-behavior"></a>Default Service Behavior
 Cet exemple montre comment les paramètres de comportement du service peuvent être configurés. L’exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), qui implémente le `ICalculator` contrat de service. Cet exemple définit explicitement des comportements de service et des comportements d'opération à l'aide des attributs <xref:System.ServiceModel.ServiceBehaviorAttribute> et <xref:System.ServiceModel.OperationBehaviorAttribute>. Vous pouvez configurer les comportements dans les fichiers de configuration ou impérativement dans le code (comme le montre cet exemple).  
@@ -22,7 +22,7 @@ Cet exemple montre comment les paramètres de comportement du service peuvent ê
   
  La classe de service spécifie des comportements avec l'<xref:System.ServiceModel.ServiceBehaviorAttribute> et l'<xref:System.ServiceModel.OperationBehaviorAttribute> comme le montre l'exemple de code suivant. Toutes les valeurs spécifiées sont les valeurs par défaut.  
   
-```  
+```csharp
 [ServiceBehavior(  
     AutomaticSessionShutdown=true,  
     ConcurrencyMode=ConcurrencyMode.Single,  
@@ -52,7 +52,7 @@ public class CalculatorService : ICalculator
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.AutomaticSessionShutdown%2A>|Ferme automatiquement une session à la demande du client.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Spécifie le mode d'accès concurrentiel pour chaque instance de service.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Spécifie le mode de contexte d'instance.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Détermine s’il faut utiliser le contexte de synchronisation fourni, s’il est défini. Utilisez-le pour contrôler s'il faut utiliser un `WindowsFormsSynchronizationContext` dans les applications Windows Forms.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Détermine s’il faut utiliser le contexte de synchronisation fourni, s’il est défini. Utilisez-le pour contrôler s’il faut utiliser un `WindowsFormsSynchronizationContext` dans les applications Windows Forms.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Détermine si les exceptions d'exécution non prise en charge générales doivent être converties en `Fault<string>` et envoyées comme un message d'erreur.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Spécifie le niveau d’isolation des transactions.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Détermine si les en-têtes de message inattendus provoquent une condition d'erreur.|  
@@ -68,7 +68,7 @@ public class CalculatorService : ICalculator
   
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console du client. Le délai entre les appels est le résultat des appels passés à `System.Threading.Thread.Sleep()` dans les opérations de service. Le reste des exemples de comportements explique ces comportements de manière plus détaillée. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

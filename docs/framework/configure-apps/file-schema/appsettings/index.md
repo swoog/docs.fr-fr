@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 99347d62-3ea5-40b6-bfec-c31431011422
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 154f38880225fb420f9944f336ff885bd116e2c3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9bf2568c8c18f8f6d18c445e802cc72df18fb8c4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743769"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191142"
 ---
 # <a name="app-settings-schema"></a>Schéma des paramètres d’application
 
@@ -72,5 +72,5 @@ L’exemple suivant montre un fichier de configuration d’application qui conso
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble des paramètres d’application](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[Architecture des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Vue d'ensemble des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-overview.md)   
+- [Architecture des paramètres d'application](~/docs/framework/winforms/advanced/application-settings-architecture.md)

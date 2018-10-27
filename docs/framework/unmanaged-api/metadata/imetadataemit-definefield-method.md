@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446572"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184947"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField, méthode
 Crée une définition pour un champ avec la signature de métadonnées spécifiée et obtient un jeton pour cette définition de champ.  
@@ -59,8 +59,8 @@ HRESULT DefineField (
  `cbSigBlob`  
  [in] Le nombre d’octets dans `pvSigBlob`.  
   
- `dwCPlusTypeFlage`  
- [in] Le `ELEMENT_TYPE_` *\** pour la valeur de constante. Il s’agit d’un `CorElementType` valeur. Si vous ne pas définir une valeur constante pour le champ, utilisez `ELEMENT_TYPE_END`.  
+ `dwCPlusTypeFlag`  
+ [in] Le `ELEMENT_TYPE_` *\** pour la valeur de constante. Il s’agit d’un `CorElementType` valeur. Si vous ne définissez pas une valeur constante pour le champ, utilisez `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] La valeur de constante pour le champ.  
@@ -69,16 +69,16 @@ HRESULT DefineField (
  [in] La taille en caractères (Unicode) de `pValue`.  
   
  `pmd`  
- [out] Le `mdFieldDef` jeton assigné.  
+ [out] Le `mdFieldDef` jeton attribué.  
   
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** Cor.h  
   
  **Bibliothèque :** utilisé en tant que ressource dans MSCorEE.dll  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [IMetaDataEmit, interface](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

@@ -5,13 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-author: BrucePerlerMS
-ms.openlocfilehash: 54cb952e2f3bffc9c37f2d75059c931d78f29eee
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c8918bce1d0e19e8f70be4ddbda892924a944e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198863"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185233"
 ---
 # <a name="security-overview"></a>Vue d'ensemble de la sécurité
 Windows Communication Foundation (WCF) est une plateforme SOAP de la programmation distribuée basée sur message, et la sécurisation des messages entre les clients et services est essentielle à la protection des données. WCF fournit une plateforme souple et interopérable pour échanger des messages sécurisés en fonction de l’infrastructure de sécurité existante et les normes de sécurité reconnues pour les messages SOAP.  

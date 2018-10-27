@@ -2,17 +2,17 @@
 title: Prise en charge de la diffusion en continu pour SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364734"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191038"
 ---
 # <a name="sqlclient-streaming-support"></a>Prise en charge de la diffusion en continu pour SqlClient
-Prise en charge entre SQL Server et une application de diffusion en continu (nouveauté de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) prend en charge les données non structurées sur le serveur (documents, images et fichiers multimédias). Une base de données SQL Server peut stocker des objets binaires volumineux (BLOB), mais la récupération d’objets BLOB peut utiliser une grande quantité de mémoire.  
+Prise en charge entre SQL Server et une application de diffusion en continu (nouveauté de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) prend en charge les données non structurées sur le serveur (documents, images et fichiers multimédias). Une base de données SQL Server peut stocker des objets binaires volumineux (BLOB), mais la récupération des objets BLOB peuvent utiliser beaucoup de mémoire.  
   
- Diffusion en continu de la prise en charge vers et à partir de SQL Server simplifie l’écriture d’applications ces flux de données, sans devoir entièrement charger les données en mémoire, ce qui entraîne moins exceptions de dépassement de capacité de mémoire.  
+ Diffusion en continu de prise en charge vers et depuis SQL Server simplifie l’écriture d’applications ces données de flux de données, sans devoir entièrement charger les données en mémoire, ce qui entraîne moins exceptions de dépassement de capacité de mémoire.  
   
  La prise en charge de la diffusion en continu facilite la montée en charge des applications intermédiaires, surtout dans les scénarios où les objets métiers se connectent à SQL Azure afin d'envoyer, de récupérer et manipuler des BLOB.  
   
@@ -22,7 +22,7 @@ Prise en charge entre SQL Server et une application de diffusion en continu (nou
 >  Les membres ajoutés pour la prise en charge de la diffusion en continu sont utilisés pour récupérer des données de requêtes et passer des paramètres aux requêtes et aux procédures stockées. La fonctionnalité de diffusion en continu répond à des scénarios OLTP de base et de migration des données et s’applique aux environnements de migration des données sur site et hors site.  
   
 ## <a name="streaming-support-from-sql-server"></a>Prise en charge de diffusion en continu à partir de SQL Server  
- Diffusion en continu de la prise en charge de SQL Server introduit une nouvelle fonctionnalité dans le <xref:System.Data.Common.DbDataReader> et dans le <xref:System.Data.SqlClient.SqlDataReader> afin d’obtenir les classes <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, et <xref:System.IO.TextReader> des objets et réagir à ces derniers.  Ces classes sont utilisées pour récupérer les données des requêtes. Par conséquent, la prise en charge de la diffusion en continu à partir de SQL Server traite les scénarios OLTP et s’applique pour sur site et des environnements hors site.  
+ Diffusion en continu de prise en charge à partir de SQL Server introduit une nouvelle fonctionnalité dans le <xref:System.Data.Common.DbDataReader> et dans le <xref:System.Data.SqlClient.SqlDataReader> classes afin d’obtenir <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, et <xref:System.IO.TextReader> objets et de réagir à ces derniers.  Ces classes sont utilisées pour récupérer les données des requêtes. Par conséquent, prise en charge de la diffusion en continu à partir de SQL Server répond aux scénarios OLTP et s’applique sur site et des environnements hors site.  
   
  Les membres suivants ont été ajoutés à <xref:System.Data.SqlClient.SqlDataReader> pour activer la prise en charge de diffusion en continu à partir de SQL Server :  
   
@@ -46,8 +46,8 @@ Prise en charge entre SQL Server et une application de diffusion en continu (nou
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-sql-server"></a>Prise en charge de diffusion en continu à SQL Server  
- Diffusion en continu de la prise en charge pour SQL Server introduit une nouvelle fonctionnalité dans le <xref:System.Data.SqlClient.SqlParameter> classe afin qu’il reçoive et réagisse à <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, et <xref:System.IO.TextReader> objets. <xref:System.Data.SqlClient.SqlParameter> est utilisé pour passer des paramètres aux requêtes et aux procédures stockées.  
+## <a name="streaming-support-to-sql-server"></a>Prise en charge de diffusion en continu vers SQL Server  
+ Diffusion en continu de prise en charge pour SQL Server introduit une nouvelle fonctionnalité dans le <xref:System.Data.SqlClient.SqlParameter> classe afin de pouvoir accepter et réagir aux <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, et <xref:System.IO.TextReader> objets. <xref:System.Data.SqlClient.SqlParameter> est utilisé pour passer des paramètres aux requêtes et aux procédures stockées.  
   
  Supprimer un objet <xref:System.Data.SqlClient.SqlCommand> ou appeler <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> doit annuler toute opération en continu. Si une application envoie <xref:System.Threading.CancellationToken>, l'annulation n'est pas garantie.  
   
@@ -97,13 +97,13 @@ GO
   
 -   Éviter de bloquer un thread d'interface utilisateur en fournissant une façon asynchrone de récupérer des fichiers volumineux.  
   
--   Transférer un grand fichier texte à partir de SQL Server dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transférer un fichier texte volumineux à partir de SQL Server dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Transférer un grand fichier XML à partir de SQL Server dans [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Récupérer des données à partir de SQL Server.  
   
--   Transfert de fichiers volumineux (BLOB) à partir d’une base de données SQL Server vers un autre sans insuffisance de mémoire.  
+-   Transférer des fichiers volumineux (BLOB) à partir d’une base de données SQL Server vers un autre sans insuffisance de mémoire.  
   
 ```  
 using System;  
@@ -241,7 +241,7 @@ namespace StreamingFromServer {
             Async = true,  
             // Since we will immediately wrap the TextReader we are creating in an XmlReader, we will permit the XmlReader to take care of closing\disposing it  
             CloseInput = true,  
-            // If the Xml you are reading is not a valid document (as per http://msdn.microsoft.com/library/6bts1x50.aspx) you will need to set the conformance level to Fragment  
+            // If the Xml you are reading is not a valid document (as per <https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6bts1x50(v=vs.100)>) you will need to set the conformance level to Fragment  
             ConformanceLevel = ConformanceLevel.Fragment  
          };  
   
@@ -328,7 +328,7 @@ GO
   
 -   Annuler le transfert d'un grand BLOB.  
   
--   Diffusion en continu à partir d’un serveur SQL Server à un autre à l’aide de la nouvelle fonctionnalité asynchrone.  
+-   Diffusion en continu à partir d’une instance SQL Server à un autre à l’aide de la nouvelle fonctionnalité asynchrone.  
   
 ```  
 using System;  
@@ -450,8 +450,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Exemple--Diffusion en continu à partir d’un serveur SQL Server vers un autre serveur SQL  
- Cet exemple montre comment diffuser en continu un objet BLOB à partir d’un serveur SQL Server vers un autre, avec prise en charge l’annulation.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Exemple--Diffusion en continu à partir d’une instance SQL Server vers un autre serveur SQL  
+ Cet exemple montre comment diffuser en continu un objet BLOB à partir d’une instance SQL Server vers un autre, avec prise en charge l’annulation.  
   
 ```  
 using System;  

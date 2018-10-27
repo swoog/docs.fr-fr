@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-ms.openlocfilehash: 80c61f11f82a13fe5aedb9d21ae2555f86fd4aff
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f32308a17e2934b6884140307074f97e6b51f5f9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49371210"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190539"
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Création de services pouvant interagir avec le profil Basic Profile 1.1 de WS-I
 Pour configurer un point de terminaison de service WCF pour être interopérable avec [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] les clients du service Web :  
@@ -29,7 +29,7 @@ Pour configurer un point de terminaison de service WCF pour être interopérable
   
 -   La sécurité du message contrôlée par la valeur <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> fournit une prise en charge de WS-Security conforme à WS-I Basic Security Profile 1.0. Conservez la valeur par défaut de cette propriété, à savoir <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> pour ne pas utiliser WS-Security.  
   
- Pour rendre les métadonnées pour un service WCF disponibles pour [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], utilisez les outils de génération de client de service Web : [outil Web Services Description Language Tool (Wsdl.exe)](/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29), [outil Web Services Discovery Tool (Disco.exe)](/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)et le `Add Web Reference` fonctionnalité dans Visual Studio ; vous devez activer la publication de métadonnées. Pour plus d’informations, consultez [publication points de terminaison de métadonnées](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Pour rendre les métadonnées pour un service WCF disponibles pour [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], utilisez les outils de génération de client de service Web : [outil Web Services Description Language Tool (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6%28v=vs.100%29), [outil Web Services Discovery Tool (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs%28v=vs.100%29)et le `Add Web Reference` fonctionnalité dans Visual Studio ; vous devez activer la publication de métadonnées. Pour plus d’informations, consultez [publication points de terminaison de métadonnées](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Exemple  
   

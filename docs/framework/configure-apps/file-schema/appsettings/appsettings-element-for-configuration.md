@@ -1,5 +1,5 @@
 ---
-title: '&lt;appSettings&gt; , élément pour &lt;configuration&gt;'
+title: '&lt;appSettings&gt; élément pour &lt;configuration&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings
@@ -9,15 +9,16 @@ helpviewer_keywords:
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: d17400536b911ce0be4d2bf105b0b4d99d0916df
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0ba57f51d3b1e78239677317933507ff009db035
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190929"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings >, élément pour \<configuration >
 
-Contient des paramètres d’application personnalisés. Il s’agit d’une section de configuration prédéfinie fournie par le .NET Framework.
+Contient les paramètres d’application personnalisés. Il s’agit d’une section de configuration prédéfinis fournie par le .NET Framework.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;**\<appSettings >**
@@ -34,7 +35,7 @@ Contient des paramètres d’application personnalisés. Il s’agit d’une sec
 
 |           | Description |
 | --------- | ----------- |
-| **fichier**  | Attribut facultatif.<br><br>Spécifie un chemin d’accès relatif vers un fichier externe qui contient les paramètres de configuration d’application personnalisés. Le fichier spécifié contient le même type de paramètres qui sont spécifiés dans le  **\<Ajouter >**,  **\<Supprimer >**, et  **\<Effacer >** éléments et utilise la même paire clé/valeur de format que ces éléments.<br><br>Le chemin d’accès spécifié est relatif au fichier de configuration principal. Pour une application Windows Forms, c’est le dossier binaire (tel que */bin/debug*), pas l’emplacement du fichier de configuration d’application. Pour les applications Web Forms, le chemin d’accès est relatif à la racine de l’application, où le *web.config* fichier se trouve.<br><br>Notez que le runtime ignore l’attribut si le fichier spécifié est introuvable. |
+| **fichier**  | Attribut facultatif.<br><br>Spécifie un chemin d’accès relatif vers un fichier externe contenant des paramètres de configuration d’application personnalisés. Le fichier spécifié contient le même type de paramètres qui sont spécifiés dans le  **\<Ajouter >**,  **\<Supprimer >**, et  **\<Effacer >** éléments et utilise la même paire clé/valeur mettre en forme en tant que ces éléments.<br><br>Le chemin d’accès spécifié est relatif au fichier de configuration principal. Pour une application Windows Forms, c’est le dossier binaire (tel que */bin/debug*), pas l’emplacement du fichier de configuration d’application. Pour les applications Web Forms, le chemin d’accès est relatif à la racine de l’application, où le *web.config* fichier se trouve.<br><br>Notez que le runtime ignore l’attribut si le fichier spécifié est introuvable. |
 
 ## <a name="parent-element"></a>Élément parent
 
@@ -47,16 +48,16 @@ Contient des paramètres d’application personnalisés. Il s’agit d’une sec
 |     | Description |
 | --- | ----------- |
 | [**\<add>**](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) | Ajoute un paramètre d’application personnalisé. |
-| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Efface tous les paramètres d’application définis précédemment. |
+| [**\<clear>**](~/docs/framework/configure-apps/file-schema/appsettings/clear-element-for-appsettings.md) | Efface tous les paramètres d’application défini précédemment. |
 | [**\<remove>**](~/docs/framework/configure-apps/file-schema/appsettings/remove-element-for-appsettings.md) | Supprime un paramètre d’application défini précédemment. |
 
 ## <a name="remarks"></a>Notes
 
-Le  **\<appSettings >** élément stocke les informations de configuration d’application personnalisée, tels que les chaînes de connexion de base de données, les chemins d’accès de fichier, des URL de service Web XML ou d’autres informations de configuration personnalisée pour un application. Les paires clé/valeur spécifiées dans le  **\<appSettings >** élément sont accessibles dans le code à l’aide la <xref:System.Configuration.ConfigurationSettings> classe.
+Le  **\<appSettings >** élément stocke les informations de configuration d’application personnalisée, telles que des chaînes de connexion de base de données, chemins d’accès, des URL de service Web XML ou d’autres informations de configuration personnalisée pour un application. Les paires clé/valeur spécifiées dans le  **\<appSettings >** élément sont accessibles dans le code à l’aide la <xref:System.Configuration.ConfigurationSettings> classe.
 
-Vous pouvez utiliser la **fichier** d’attribut dans le  **\<appSettings >** élément de la *Web.config* et les fichiers de configuration d’application. Cet attribut spécifie un fichier de configuration qui fournit des paramètres supplémentaires ou substitue les paramètres spécifiés dans le  **\<appSettings >** élément. Le **fichier** attribut peut être utilisé dans les scénarios de développement en équipe de contrôle de code source, telles que lorsqu’un utilisateur souhaite remplacer les paramètres du projet spécifiés dans un fichier de configuration d’application.
+Vous pouvez utiliser la **fichier** d’attribut dans le  **\<appSettings >** élément de la *Web.config* et fichiers de configuration d’application. Cet attribut spécifie un fichier de configuration qui fournit des paramètres supplémentaires ou substitue les paramètres spécifiés dans le  **\<appSettings >** élément. Le **fichier** attribut peut être utilisé dans les scénarios de développement en équipe de contrôle de code source, tels que lorsqu’un utilisateur souhaite remplacer les paramètres du projet spécifiés dans un fichier de configuration d’application.
 
-Les fichiers de configuration spécifiés par le **fichier** attribut doit avoir un nœud racine de  **\<appSettings >** plutôt que  **\<configuration >**.
+Les fichiers de configuration spécifiés par la **fichier** attribut doit avoir un nœud racine de  **\<appSettings >** plutôt que  **\<configuration >**.
 
 ## <a name="example"></a>Exemple
 
@@ -81,8 +82,8 @@ L’exemple suivant montre un fichier de configuration d’application qui conso
 
 ## <a name="configuration-file"></a>fichier de configuration
 
-Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* les fichiers qui ne sont pas au niveau du répertoire d’application.
+Cet élément peut être utilisé dans le fichier de configuration d’application, fichier de configuration machine (*Machine.config*), et *Web.config* fichiers qui ne sont pas au niveau du répertoire d’application.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

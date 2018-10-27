@@ -2,19 +2,19 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 3548a1f19672a98ad0fc81eec15d5be29e5170bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486280"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188727"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class NamedPipeConnectionPoolSettings  
 {  
   string GroupName;  
@@ -26,7 +26,7 @@ class NamedPipeConnectionPoolSettings
 ## <a name="methods"></a>Méthodes  
  La classe NamedPipeConnectionPoolSettings ne définit pas de méthodes.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe NamedPipeConnectionPoolSettings a les propriétés suivantes :  
   
 ### <a name="groupname"></a>GroupName  
@@ -50,7 +50,7 @@ class NamedPipeConnectionPoolSettings
   
  Nombre maximal de connexions sortantes pour chaque point de terminaison sur le client.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

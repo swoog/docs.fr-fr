@@ -2,12 +2,12 @@
 title: Flux
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: 54601b92efcb621d36432d870514fe9a9dc0b46e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ed77d8231df8a2272e398f5b1a126c6ed8cab354
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861112"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191179"
 ---
 # <a name="stream"></a>Flux
 Cet exemple de flux montre l'utilisation de la communication en mode de transfert par diffusion en continu. Le service expose plusieurs opérations qui envoient et reçoivent des flux. Cet exemple est auto-hébergé. Le client et le service sont tous deux des programmes de console.  
@@ -20,7 +20,7 @@ Cet exemple de flux montre l'utilisation de la communication en mode de transfer
 ## <a name="streaming-and-service-contracts"></a>Diffusion en continu et contrats de service  
  La diffusion en continu est un élément à prendre en compte lors de la conception d'un contrat de service. Si une opération reçoit ou retourne des données volumineuses, diffusez-les en continu afin d'éviter d'utiliser une grande quantité de mémoire en raison de la mise en mémoire tampon des messages d'entrée ou de sortie. Pour diffuser des données en continu, le paramètre qui gère ces données doit être le seul de ce type dans le message. Par exemple, si le message d'entrée est celui à diffuser en continu, l'opération ne doit avoir qu'un seul paramètre d'entrée. De la même façon, si le message de sortie doit être diffusé en continu, l'opération ne doit avoir qu'un seul paramètre de sortie ou qu'une seule valeur de retour. Dans les deux cas, le type de paramètre ou de valeur de retour doit être `Stream`, `Message` ou `IXmlSerializable`. Le contrat de service utilisé dans cet exemple de diffusion en continu est le suivant :  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IStreamingSample  
 {  
@@ -39,9 +39,9 @@ public interface IStreamingSample
  L'opération `GetStream` reçoit des données d'entrée sous forme d'une chaîne, qui est mise en mémoire tampon, et retourne `Stream` qui est diffusé en continu. Inversement, `UploadStream` utilise `Stream` (transmis en continu) et retourne `bool` (mis en mémoire tampon). `EchoStream` prend et retourne `Stream` et constitue un exemple d'opération dont les messages d'entrée et de sortie sont tous deux diffusés en continu. Enfin, `GetReversedStream` ne prend pas d'entrée et retourne `Stream` (diffusion en continu).  
   
 ## <a name="enabling-streamed-transfers"></a>Activation des transferts avec diffusion en continu  
- La définition de contrats d'opération telle qu'elle est décrite précédemment fournit la diffusion en continu au niveau du modèle de programmation. Si vous vous arrêtez là, le transport met toujours en mémoire tampon l'ensemble du contenu du message. Pour activer la diffusion en continu du transport, sélectionnez un mode de transfert sur l'élément de liaison du transport. La propriété `TransferMode` de l'élément de liaison peut avoir la valeur `Buffered`, `Streamed`, `StreamedRequest` ou `StreamedResponse`. L'affectation de `Streamed` au mode de transfert permet d'assurer la communication en mode de diffusion en continu dans les deux sens. Si vous affectez `StreamedRequest` ou `StreamedResponse` au mode de transfert, la communication en mode de diffusion en continu s'active uniquement dans la demande ou la réponse, respectivement.  
+ La définition de contrats d'opération telle qu'elle est décrite précédemment fournit la diffusion en continu au niveau du modèle de programmation. Si vous vous arrêtez là, le transport met toujours en mémoire tampon l'ensemble du contenu du message. Pour activer la diffusion en continu du transport, sélectionnez un mode de transfert sur l'élément de liaison du transport. La propriété `TransferMode` de l’élément de liaison peut avoir la valeur `Buffered`, `Streamed`, `StreamedRequest` ou `StreamedResponse`. L'affectation de `Streamed` au mode de transfert permet d'assurer la communication en mode de diffusion en continu dans les deux sens. Si vous affectez `StreamedRequest` ou `StreamedResponse` au mode de transfert, la communication en mode de diffusion en continu s'active uniquement dans la demande ou la réponse, respectivement.  
   
- À l'instar de `basicHttpBinding` et `TransferMode`, `NetTcpBinding` expose la propriété `NetNamedPipeBinding` sur la liaison. Pour les autres transports, vous devez créer une liaison personnalisée pour pouvoir définir le mode de transfert.  
+ À l’instar de `basicHttpBinding` et `TransferMode`, `NetTcpBinding` expose la propriété `NetNamedPipeBinding` sur la liaison. Pour les autres transports, vous devez créer une liaison personnalisée pour pouvoir définir le mode de transfert.  
   
  Le code de configuration suivant de l'exemple présente l'affectation du mode de diffusion en continu à la propriété `TransferMode` sur `basicHttpBinding` et une liaison HTTP personnalisée :  
   
@@ -68,7 +68,7 @@ public interface IStreamingSample
   
  `GetReversedStream` crée et retourne une nouvelle instance de `ReverseStream`. Le traitement se produit lorsque le système lit l'objet `ReverseStream`. L'implémentation `ReverseStream.Read` lit un segment d'octets du fichier sous-jacent, les inverse, puis retourne les octets inversés. Cette opération n'inverse pas l'ensemble du contenu du fichier, mais uniquement un segment d'octets à la fois. Cet exemple vous montre comment procéder au traitement du flux lors sa lecture ou de son écriture.  
   
-```  
+```csharp
 class ReverseStream : Stream  
 {  
   
@@ -117,7 +117,7 @@ class ReverseStream : Stream
   
  Sortie du service :  
   
-```  
+```console  
 The streaming service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -131,7 +131,7 @@ File D:\...\uploadedfile saved
   
  Sortie du client :  
   
-```  
+```console  
 Press <ENTER> when service is ready  
 ------ Using HTTP ------   
 Calling GetStream()  

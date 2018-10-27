@@ -2,18 +2,18 @@
 title: Hébergement de services de workflow
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d51157863984314583c5d225bc9d8d0b6cf74874
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505544"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186094"
 ---
 # <a name="hosting-workflow-services"></a>Hébergement de services de workflow
 Un service de workflow doit être hébergé pour pouvoir répondre aux messages entrants. Les services de workflow utilisent l'infrastructure de messagerie WCF et sont donc hébergés de manière similaire. Comme les services WCF, les services de flux de travail peuvent être hébergés dans toute application managée, sous Internet Information Services (IIS), ou sous les services Internet (WAS, Windows Process Activation Services). En outre, les services de workflow peuvent être hébergés sous Windows Server AppFabric. Pour plus d’informations sur Windows Server AppFabric, consultez [documentation de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193037), [fonctionnalités d’hébergement d’AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494), et [Concepts d’hébergement AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Pour plus d’informations sur les différentes façons d’héberger WCF services, consultez [Services d’hébergement](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Hébergement dans une application managée
- Pour héberger un service de workflow dans une application managée, utilisez la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Le constructeur <xref:System.ServiceModel.Activities.WorkflowServiceHost> vous permet de spécifier une instance singleton du service de workflow, une définition du service de workflow ou une activité qui utilise les activités de messagerie du workflow. Appel de <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`>, le service commence à écouter les messages entrants.
+ Pour héberger un service de workflow dans une application managée, utilisez la classe <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Le constructeur <xref:System.ServiceModel.Activities.WorkflowServiceHost> vous permet de spécifier une instance singleton du service de workflow, une définition du service de workflow ou une activité qui utilise les activités de messagerie du workflow. L'appel à la méthode <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> oblige le service à se mettre à l'écoute des messages entrants.
 
 ## <a name="hosting-under-iis-or-was"></a>Hébergement dans les services IIS ou WAS
  Héberger un service de workflow dans les services IIS ou WAS implique de créer un répertoire virtuel et d'y placer les fichiers qui définissent le service et son comportement. Lors de l'hébergement d'un service de workflow dans les services IIS ou WAS, il existe plusieurs possibilités :

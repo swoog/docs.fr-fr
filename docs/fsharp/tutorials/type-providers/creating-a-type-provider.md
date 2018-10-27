@@ -2,12 +2,12 @@
 title: 'Didacticiel : Créer un fournisseur de Type (F #)'
 description: 'Découvrez comment créer vos propres fournisseurs de type F # dans F # 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397957"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183917"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Didacticiel : Créer un fournisseur de Type
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ Cette section montre comment fournir un type que vous pouvez utiliser pour obten
 
 - Les noms d’en-tête sont soit inférieur à l’unité ou ont la forme « Nom (unité) » et ne pas contenir de virgules.
 
-- Les unités sont toutes les unités de système International (SI) en tant que le [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (Module) (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) module définit.
+- Les unités sont toutes les unités de système International (SI) en tant que le [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames Module (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) module définit.
 
 - Les unités sont tout simples (par exemple, compteur) plutôt que composée (par exemple, jauge par seconde).
 
@@ -1110,9 +1110,9 @@ Le mécanisme de fournisseur de type en F # présente les limitations suivantes�
 
 ## <a name="development-tips"></a>Conseils de développement
 
-Les conseils suivants peuvent s’avérer utiles pendant le processus de développement.
+Les conseils suivants peuvent s’avérer utiles pendant le processus de développement :
 
-### <a name="run-two-instances-of-visual-studio"></a>Exécuter deux Instances de Visual Studio
+### <a name="run-two-instances-of-visual-studio"></a>Exécuter deux instances de Visual Studio
 
 Vous pouvez développer le fournisseur de type dans une seule instance et le fournisseur de test dans l’autre, car le test IDE prendra un verrou sur le fichier .dll qui empêche que le fournisseur de type en cours de reconstruction. Par conséquent, vous devez fermer la deuxième instance de Visual Studio pendant que le fournisseur est créé dans la première instance, puis vous devez rouvrir la deuxième instance une fois que le fournisseur est créé.
 

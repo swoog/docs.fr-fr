@@ -22,27 +22,26 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49e313b2d5aa8302ea4b99e643e09f7b43659785
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183865"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passage des arguments par position et par nom (Visual Basic)
-Lorsque vous appelez un `Sub` ou `Function` procédure, vous pouvez passer des arguments *par position* , dans l’ordre dans lequel elles apparaissent dans la définition de la procédure, ou vous pouvez passer les *par nom*, sans vu les positionner.  
+Lorsque vous appelez un `Sub` ou `Function` procédure, vous pouvez passer des arguments *par position* , dans l’ordre dans lequel ils apparaissent dans la définition de la procédure, ou vous pouvez les transmettre *par nom*, sans vu les positionner.  
   
- Lorsque vous passez un argument par nom, vous spécifiez l’argument déclaré de le nom suivi d’un signe deux-points et un signe égal (`:=`), suivi par la valeur d’argument. Vous pouvez fournir des arguments nommés dans n’importe quel ordre.  
+ Quand vous passez un argument par nom, vous spécifiez l’argument déclaré de le nom suivi d’un signe deux-points et un signe égal (`:=`), suivie de la valeur d’argument. Vous pouvez fournir des arguments nommés dans n’importe quel ordre.  
   
- Par exemple, les éléments suivants `Sub` procédure prend trois arguments :  
+ Par exemple, ce qui suit `Sub` procédure accepte trois arguments :  
   
  [!code-vb[SampleProcedure](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#1)]  
   
- Lorsque vous appelez cette procédure, vous pouvez fournir les arguments par position, par nom ou à l’aide d’une combinaison des deux.  
+ Lorsque vous appelez cette procédure, vous pouvez fournir les arguments par position, par nom ou à l’aide d’un mélange des deux.  
   
 ## <a name="passing-arguments-by-position"></a>Passage des Arguments par Position  
- Vous pouvez appeler la `Display` méthode avec des arguments passés par position et délimités par des virgules, comme indiqué dans l’exemple suivant :  
+ Vous pouvez appeler la `Display` méthode avec ses arguments passés par position et délimités par des virgules, comme indiqué dans l’exemple suivant :  
   
 [!code-vb[ByPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#2)] 
   
@@ -55,7 +54,7 @@ Lorsque vous appelez un `Sub` ou `Function` procédure, vous pouvez passer des a
   
 [!code-vb[ByName](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#4)] 
 
- Passer des arguments par nom de cette façon est particulièrement utile lorsque vous appelez une procédure qui possède plusieurs arguments facultatifs. Si vous fournissez des arguments par nom, vous n’avez pas à utiliser des virgules successives pour signaler l’absence d’arguments de position. Passer des arguments par nom facilite également suivre les arguments que vous passez et ceux qui sont omis.  
+ Passer des arguments par nom de cette façon est particulièrement utile lorsque vous appelez une procédure qui possède plusieurs arguments facultatifs. Si vous fournissez des arguments par nom, il est inutile d’utiliser des virgules consécutives pour signaler l’absence d’arguments positionnels. Passer des arguments par nom rend également plus facile de suivre les arguments que vous transmettez et celles qui sont omis.  
   
 ## <a name="mixing-arguments-by-position-and-by-name"></a>Mélange d’Arguments par Position et par nom  
 
@@ -63,19 +62,19 @@ Vous pouvez fournir des arguments par position et par nom dans un seul appel de 
   
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#5)] 
   
- Dans l’exemple précédent, aucune virgule supplémentaire n’est nécessaire pour marquer l’emplacement de l’indication `age` argument, étant donné que `birth` est passé par nom.  
+ Dans l’exemple précédent, aucune virgule supplémentaire n’est nécessaire pour contenir le lieu du omis `age` argument, étant donné que `birth` est passé par nom.  
   
-Dans les versions de Visual Basic avant 15.5, lorsque vous fournissez des arguments par un mélange de position et le nom, les arguments positionnels doivent tous être placés premier. Une fois que vous fournissez un argument par nom, tous les autres arguments doivent tous être passés par nom.  Par exemple, l’appel suivant à la `Display` méthode affiche l’erreur du compilateur [BC30241 : argument attendu nommé](../../../misc/bc30241.md).
+Dans les versions de Visual Basic avant la version 15.5, lorsque vous fournissez des arguments par un mélange de position et le nom, les arguments positionnels doivent tous figurer en premier. Une fois que vous fournissez un argument par nom, tous les autres arguments doivent tous être passés par nom.  Par exemple, l’appel suivant à la `Display` méthode affiche l’erreur du compilateur [BC30241 : argument nommé attendu](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
-À partir de Visual Basic 15.5, des arguments de position peuvent suivre des arguments nommés si les arguments de position de fin se trouvent dans la position correcte. Si elles sont compilées sous 15.5 Visual Basic, l’appel précédent à la `Display` méthode se compile correctement et ne génère plus d’erreur du compilateur [BC30241](../../../misc/bc30241.md).  
+À partir de Visual Basic 15.5, les arguments positionnels peuvent suivre les arguments nommés si les arguments de position de fin se trouvent dans la position correcte. Si compilé sous Visual Basic 15.5, l’appel précédent à la `Display` méthode compile correctement et ne génère plus d’erreur du compilateur [BC30241](../../../misc/bc30241.md).  
 
-Cette possibilité de combiner les arguments nommés et positionnels dans n’importe quel ordre est particulièrement utile lorsque vous souhaitez utiliser un argument nommé pour rendre votre code plus lisible. Par exemple, `Person` constructeur de classe requiert deux arguments de type `Person`, qui peuvent être `Nothing`. 
+Cette possibilité de combiner des arguments nommés et positionnels dans n’importe quel ordre est particulièrement utile lorsque vous souhaitez utiliser un argument nommé pour rendre votre code plus lisible. Par exemple, ce qui suit `Person` constructeur de classe requiert deux arguments de type `Person`, qui peuvent être `Nothing`. 
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#7)] 
 
-À l’aide des arguments nommés et positionnels mixtes afin que l’objectif du code permet de désactiver quand la valeur de la `father` et `mother` arguments est `Nothing`:
+À l’aide des arguments nommés et positionnels mixtes permet de faire l’intention du code effacer lorsque la valeur de la `father` et `mother` arguments est `Nothing`:
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#8)] 
 
@@ -87,11 +86,13 @@ Pour suivre des arguments de position avec des arguments nommés, vous devez ajo
 </PropertyGroup>
 ```
 
+Pour plus d’informations, consultez [définition de la version de langage Visual Basic](../../../language-reference/configure-language-version.md).
+
 ## <a name="restrictions-on-supplying-arguments-by-name"></a>Restrictions sur la fourniture des Arguments par nom  
 
-Vous ne peut pas passer d’arguments par nom pour éviter d’entrer des arguments requis. Vous pouvez omettre que les arguments facultatifs.  
+Vous ne pouvez pas passer des arguments par nom afin d’éviter d’entrer des arguments requis. Vous pouvez omettre les arguments facultatifs uniquement.  
   
-Vous ne pouvez pas passer un tableau de paramètres par nom. Il s’agit, car lorsque vous appelez la procédure, vous indiquez un nombre indéfini d’arguments de séparées par des virgules pour le tableau de paramètres, et le compilateur ne peut pas associer plusieurs arguments avec un nom unique.  
+Vous ne pouvez pas passer un tableau de paramètres par nom. Il s’agit, car lorsque vous appelez la procédure, vous fournissez un nombre indéfini de séparées par des virgules des arguments pour le tableau de paramètres, et le compilateur ne peut pas associer plusieurs arguments à un nom unique.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures](./index.md)  

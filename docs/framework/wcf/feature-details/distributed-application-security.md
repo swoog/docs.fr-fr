@@ -5,13 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-author: BrucePerlerMS
-ms.openlocfilehash: dfefa94db2bd286cb92a7fe09e5c4addb52ba8c8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 1a601c03c8644f3f4b543864a774a35820c7d6bd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090540"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189626"
 ---
 # <a name="distributed-application-security"></a>Sécurité des applications distribuées
 Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones fonctionnelles principales : sécurité de transfert, contrôle d’accès et l’audit. La sécurité de transfert fournit l'intégrité, la confidentialité et l'authentification. La sécurité de transfert est fournie par l'un des éléments suivants : sécurité de transport, sécurité de message ou `TransportWithMessageCredential`.  
@@ -88,7 +87,7 @@ Sécurité de Windows Communication Foundation (WCF) est divisée en trois zones
   
  Sécurité WCF a deux types d’informations d’identification : comportements d’informations d’identification et les comportements du canal d’informations d’identification de service. Comportements d’informations d’identification dans WCF spécifient les données réelles, à savoir, les informations d’identification utilisées pour satisfaire les exigences de sécurité exprimées par les liaisons. Dans WCF, une classe de client est le composant d’exécution qui effectue la conversion entre les messages et l’appel de l’opération. Tous les clients héritent de la classe <xref:System.ServiceModel.ClientBase%601>. La propriété <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> sur la classe de base vous permet de spécifier différentes valeurs d'informations d'identification du client.  
   
- Dans WCF, les comportements de service sont des attributs appliqués à la classe qui implémente un contrat de service (interface) pour contrôler par programme le service. La classe <xref:System.ServiceModel.Description.ServiceCredentials> vous permet de spécifier des certificats pour les informations d'identification du service et des paramètres de validation de client pour divers types d'informations d'identification du client.  
+ Dans WCF, les comportements de service sont des attributs appliqués à la classe qui implémente un contrat de service (interface) pour contrôler par programme le service. La classe <xref:System.ServiceModel.Description.ServiceCredentials> vous permet de spécifier des certificats pour les informations d’identification du service et des paramètres de validation de client pour divers types d’informations d’identification du client.  
   
 ### <a name="negotiation-model-for-message-security"></a>Modèle de négociation pour la sécurité de message  
  Le mode de sécurité du message vous permet d'exécuter la sécurité de transfert afin que les informations d'identification du service soient configurées au niveau du client hors bande. Par exemple, si vous utilisez un certificat stocké dans le magasin de certificats Windows, vous devez utiliser un outil tel qu'un composant logiciel enfichable MMC (Microsoft Management Console).  

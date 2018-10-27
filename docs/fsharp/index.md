@@ -3,12 +3,12 @@ title: Guide F#
 description: 'Ce guide fournit une vue d’ensemble des différents documents de formation pour F #, un langage de programmation fonctionnels qui s’exécute sur .NET.'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: d3e10b6eb99f35b8eddeaa1f0ae257dd17d5cc41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cd5bd95373c8a52a8d2b2348a51970560e8b272
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480676"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188363"
 ---
 # <a name="f-guide"></a>Guide F#
 
@@ -56,7 +56,7 @@ Le guide de F # fournit de nombreuses ressources pour apprendre le langage F #.
 
 Le [site Web d’extraits de code F #](http://www.fssnip.net) contient un ensemble massif d’extraits de code montrant comment effectuer presque n’importe quoi en F #, allant des débutants aux extraits hautement avancées.
 
-Le [F # Software Foundation Slack](http://fsharp.org/guides/slack/) est l’endroit idéal pour les débutants tout comme les experts, est très actifs, et est dotée des meilleurs programmeurs au monde F # disponibles pour une discussion. Nous vous recommandons vivement de jointure.
+Le [F # Software Foundation Slack](https://fsharp.org/guides/slack/) est l’endroit idéal pour les débutants tout comme les experts, est très actifs, et est dotée des meilleurs programmeurs au monde F # disponibles pour une discussion. Nous vous recommandons vivement de jointure.
 
 ## <a name="the-f-software-foundation"></a>F# Software Foundation
 
@@ -64,4 +64,4 @@ Bien que Microsoft est le principal développeur du langage F # et ses outils da
 
 La FSSF a pour but non seulement de promouvoir, protéger et développer le langage de programmation F#, mais aussi de soutenir et d’étendre la communauté internationale et diversifiée de programmeurs F#.
 
-Pour en savoir plus et vous impliquer, consultez [fsharp.org](http://fsharp.org). C’est gratuit joindre, et le réseau de développeurs F # dans la base est quelque chose que vous ne souhaitez pas manquez pas !
+Pour en savoir plus et vous impliquer, consultez [fsharp.org](https://fsharp.org). C’est gratuit joindre, et le réseau de développeurs F # dans la base est quelque chose que vous ne souhaitez pas manquez pas !

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 23ab534ef31773efc69b6a68e73ec30bde4f6e61
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f5a7eff25fb202ba84f0bd49893748b507326fd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502657"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188168"
 ---
 # <a name="default-message-contract"></a>Default Message Contract
 Cet exemple présente un service dans lequel un message personnalisé défini par l'utilisateur est passé à et depuis des opérations de service. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente une interface de calculatrice comme un service typé. Au lieu d’opérations de service individuelles pour l’addition, soustraction, multiplication et division utilisées dans le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md), cet exemple transmet un message personnalisé qui contient les opérandes et l’opérateur et retourne le résultat du calcul arithmétique.  
@@ -21,7 +21,7 @@ Cet exemple présente un service dans lequel un message personnalisé défini pa
   
  Dans le service, une opération de service unique est définie et elle accepte et retourne des messages personnalisés de type `MyMessage`. Même si dans cet exemple les messages de demande et de réponse sont du même type, elles peuvent bien évidemment être des contrats de message différents, si nécessaire.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -31,9 +31,9 @@ public interface ICalculator
 }  
 ```  
   
- Le message personnalisé `MyMessage` est défini dans une classe annotée avec les attributs <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> et <xref:System.ServiceModel.MessageBodyMemberAttribute>. Seul le troisième constructeur est utilisé dans cet exemple. L'utilisation de contrats de message vous permet d'exercer un contrôle total sur le message SOAP. Dans cet exemple, l'attribut <xref:System.ServiceModel.MessageHeaderAttribute> permet de placer `Operation` dans un en-tête SOAP. Les opérandes `N1`, `N2` et `Result` apparaissent dans le corps SOAP car ils l'attribut <xref:System.ServiceModel.MessageBodyMemberAttribute> leur est appliqué.  
+ Le message personnalisé `MyMessage` est défini dans une classe annotée avec les attributs <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> et <xref:System.ServiceModel.MessageBodyMemberAttribute>. Seul le troisième constructeur est utilisé dans cet exemple. L'utilisation de contrats de message vous permet d'exercer un contrôle total sur le message SOAP. Dans cet exemple, l'attribut <xref:System.ServiceModel.MessageHeaderAttribute> permet de placer `Operation` dans un en-tête SOAP. Les opérandes `N1`, `N2` et `Result` apparaissent dans le corps SOAP car ils l’attribut <xref:System.ServiceModel.MessageBodyMemberAttribute> leur est appliqué.  
   
-```  
+```csharp
 [MessageContract]  
 public class MyMessage  
 {  
@@ -97,9 +97,9 @@ public class MyMessage
 }  
 ```  
   
- La classe d'implémentation contient le code pour l'opération de service `Calculate`. La classe `CalculateService` obtient les opérandes et l'opérateur à partir du message de demande et crée un message de réponse qui contient le résultat du calcul demandé, tel qu'indiqué dans l'exemple de code suivant.  
+ La classe d'implémentation contient le code pour l'opération de service `Calculate`. La classe `CalculateService` obtient les opérandes et l’opérateur à partir du message de demande et crée un message de réponse qui contient le résultat du calcul demandé, tel qu’indiqué dans l’exemple de code suivant.  
   
-```  
+```csharp
 // Service class which implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -133,29 +133,31 @@ public class CalculatorService : ICalculator
   
  Le code client généré pour le client a été créé avec le [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) outil. L'outil crée automatiquement des types de contrats de message dans le code client généré si nécessaire. L'option de commande `/messageContract` peut être spécifiée pour forcer la génération de contrats de message.  
   
-```  
+```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
  L'exemple de code suivant présente le client utilisant le message `MyMessage`.  
   
-```  
+```csharp
 // Create a client with given client endpoint configuration  
 CalculatorClient client = new CalculatorClient();  
   
 // Perform addition using a typed message.  
   
-MyMessage request = new MyMessage();  
-request.N1 = 100D;  
-request.N2 = 15.99D;  
-request.Operation = "+";  
+MyMessage request = new MyMessage() 
+                    {  
+                        N1 = 100D,  
+                        N2 = 15.99D,  
+                        Operation = "+"  
+                    };
 MyMessage response = ((ICalculator)client).Calculate(request);  
 Console.WriteLine("Add({0},{1}) = {2}", request.N1, request.N2, response.Result);  
 ```  
   
  Lorsque vous exécutez l'exemple, les calculs s'affichent dans la fenêtre de console du client. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

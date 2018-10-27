@@ -2,18 +2,18 @@
 title: Prise en charge de la configuration et des métadonnées
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140149"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183488"
 ---
 # <a name="configuration-and-metadata-support"></a>Prise en charge de la configuration et des métadonnées
 Cette rubrique décrit comment activer la prise en charge de la configuration et des métadonnées pour les liaisons et éléments de liaison.  
   
 ## <a name="overview-of-configuration-and-metadata"></a>Vue d'ensemble de la configuration et des métadonnées  
- Cette rubrique décrit les tâches suivantes, qui sont des éléments facultatifs 1, 2 et 4 dans le [développement canaux](../../../../docs/framework/wcf/extending/developing-channels.md) liste des tâches.  
+ Cette rubrique décrit les tâches suivantes, qui sont des éléments facultatifs 1, 2 et 4 dans le [canaux de développement](../../../../docs/framework/wcf/extending/developing-channels.md) liste des tâches.  
   
 -   Activation de la prise en charge du fichier de configuration pour un élément de liaison.  
   
@@ -28,7 +28,7 @@ Cette rubrique décrit comment activer la prise en charge de la configuration et
 ## <a name="adding-configuration-support"></a>Ajout de la prise en charge de la configuration  
  Pour activer la prise en charge du fichier de configuration pour un canal, vous devez implémenter deux sections de configuration : <xref:System.ServiceModel.Configuration.BindingElementExtensionElement?displayProperty=nameWithType> qui active la prise en charge de la configuration pour les éléments de liaison, et <xref:System.ServiceModel.Configuration.StandardBindingElement?displayProperty=nameWithType> et <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602?displayProperty=nameWithType> qui activent la prise en charge de la configuration pour les liaisons.  
   
- Un moyen plus simple pour ce faire consiste à utiliser le [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) exemple d’outil pour générer le code de configuration de vos éléments de liaison et les liaisons.  
+ Un moyen plus simple pour ce faire consiste à utiliser le [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md) exemple d’outil pour générer le code de configuration pour vos liaisons et les éléments de liaison.  
   
 ### <a name="extending-bindingelementextensionelement"></a>Extension de BindingElementExtensionElement  
  L’exemple de code suivant provient de la [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple. `UdpTransportElement` est un objet <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> qui expose `UdpTransportBindingElement` au système de configuration. Avec quelques substitutions de base, l’exemple définit le nom de section de configuration, le type de l’élément de liaison et la méthode utilisée pour le créer. Les utilisateurs peuvent ensuite enregistrer la section d'extension dans un fichier de configuration comme suit.  
@@ -64,7 +64,7 @@ Cette rubrique décrit comment activer la prise en charge de la configuration et
 ### <a name="adding-configuration-for-a-binding"></a>Ajout de la configuration pour une liaison  
  La section `SampleProfileUdpBindingCollectionElement` est un <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> qui expose `SampleProfileUdpBinding` au système de configuration. Le bloc de l'implémentation est délégué à `SampleProfileUdpBindingConfigurationElement`, qui dérive de <xref:System.ServiceModel.Configuration.StandardBindingElement>. Le `SampleProfileUdpBindingConfigurationElement` a des propriétés qui correspondent aux propriétés sur `SampleProfileUdpBinding`et des fonctions pour mapper à partir de la `ConfigurationElement` liaison. Enfin, la méthode `OnApplyConfiguration` est substituée dans `SampleProfileUdpBinding`, tel qu'indiqué dans l'exemple de code suivant.  
   
-```  
+```csharp 
 protected override void OnApplyConfiguration(string configurationName)  
 {  
             if (binding == null)  
@@ -119,24 +119,24 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="adding-metadata-support-for-a-binding-element"></a>Ajout de la prise en charge des métadonnées pour un élément de liaison  
- Pour intégrer un canal dans le système de métadonnées, il doit à la fois prendre en charge l'importation et l'exportation de stratégie. Cela permet des outils, tels que [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer des clients de l’élément de liaison.  
+ Pour intégrer un canal dans le système de métadonnées, il doit à la fois prendre en charge l'importation et l'exportation de stratégie. Cela permet aux outils tels que [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour générer des clients de l’élément de liaison.  
   
 ### <a name="adding-wsdl-support"></a>Ajout de la prise en charge WSDL  
  L'élément de liaison de transport d'une liaison est chargé d'exporter et d'importer les informations d'adressage dans les métadonnées. Lors de l’utilisation d’une liaison SOAP, l’élément de liaison de transport doit également exporter un URI de transport correct dans les métadonnées. L’exemple de code suivant provient de la [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple.  
   
 #### <a name="wsdl-export"></a>Exportation WSDL  
- Pour exporter les informations d’adressage, la `UdpTransportBindingElement` implémente la <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface. La méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> ajoute les informations d'adressage correctes au port WSDL.  
+ Pour exporter les informations d’adressage, le `UdpTransportBindingElement` implémente le <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> interface. La méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A?displayProperty=nameWithType> ajoute les informations d'adressage correctes au port WSDL.  
   
-```  
+```csharp  
 if (context.WsdlPort != null)  
 {  
     AddAddressToWsdlPort(context.WsdlPort, context.Endpoint.Address, encodingBindingElement.MessageVersion.Addressing);  
 }  
 ```  
   
- L'implémentation `UdpTransportBindingElement` de la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> exporte également un URI de transport lorsque le point de terminaison utilise une liaison SOAP :  
+ L’implémentation `UdpTransportBindingElement` de la méthode <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> exporte également un URI de transport lorsque le point de terminaison utilise une liaison SOAP :  
   
-```  
+```csharp  
 WsdlNS.SoapBinding soapBinding = GetSoapBinding(context, exporter);  
 if (soapBinding != null)  
 {  
@@ -169,7 +169,7 @@ if (soapBinding != null)
   
  Le type `UdpBindingElementImporter` implémente l'interface <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>. La méthode `ImportEndpoint` importe l'adresse à partir du port WSDL :  
   
-```  
+```csharp  
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
 TransportBindingElement transportBindingElement = bindingElements.Find<TransportBindingElement>();  
 if (transportBindingElement is UdpTransportBindingElement)  
@@ -182,11 +182,11 @@ if (transportBindingElement is UdpTransportBindingElement)
  L’élément de liaison personnalisé peut exporter des assertions de stratégie dans la liaison WSDL d’un point de terminaison de service pour exprimer les fonctionnalités de cet élément de liaison. L’exemple de code suivant provient de la [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple.  
   
 #### <a name="policy-export"></a>Exportation de stratégie  
- Le `UdpTransportBindingElement` type implémente <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> pour ajouter la prise en charge pour l’exportation de stratégie. En conséquence, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> inclut `UdpTransportBindingElement` dans la génération de stratégie des liaisons qui l'incluent.  
+ Le `UdpTransportBindingElement` type implémente <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> pour ajouter la prise en charge pour l’exportation de stratégie. En conséquence, <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> inclut `UdpTransportBindingElement` dans la génération de stratégie des liaisons qui l’incluent.  
   
  Dans <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType>, ajoutez une assertion pour UDP et une autre si le canal est en mode multicast. Cela est dû au fait que le mode multicast affecte la manière dont la pile est construite, et doit donc être coordonné entre les deux côtés.  
   
-```  
+```csharp  
 ICollection<XmlElement> bindingAssertions = context.GetBindingAssertions();  
 XmlDocument xmlDocument = new XmlDocument();  
 bindingAssertions.Add(xmlDocument.CreateElement(  
@@ -200,7 +200,7 @@ UdpPolicyStrings.Prefix, UdpPolicyStrings.MulticastAssertion,     UdpPolicyStrin
   
  Les éléments de liaison de transport personnalisés étant chargés de gérer l'adressage, l'implémentation <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> sur `UdpTransportBindingElement` doit également gérer l'exportation des assertions de stratégie WS-Addressing appropriées pour indiquer la version de WS-Addressing utilisée.  
   
-```  
+```csharp  
 AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressing);  
 ```  
   
@@ -223,16 +223,16 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Puis nous implémentons <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> à partir de la classe enregistrée (`UdpBindingElementImporter`). Dans <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType>, examinez les assertions dans l'espace de noms approprié et traitez celles permettant de générer le transport et de vérifier s'il est multicast. En outre, supprimez les assertions gérées par l’importateur de la liste des assertions de liaison. Une fois encore, il existe deux méthodes d'intégration possibles lorsque vous exécutez Svcutil.exe :  
   
-1.  Pointez Svcutil.exe sur le fichier de configuration en utilisant/svcutilconfig :\<fichier >.  
+1.  Pointez Svcutil.exe sur notre fichier de configuration en utilisant/svcutilconfig :\<fichier >.  
   
 2.  Ajoutez la section de configuration à Svcutil.exe.config dans le répertoire où se trouve Svcutil.exe.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Ajout d’un importateur de liaison standard personnalisé  
- Par défaut, Svcutil.exe et le type <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> reconnaissent et importent les liaisons fournies par le système. Sinon, la liaison est importée en tant qu'instance <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Pour permettre à Svcutil.exe et <xref:System.ServiceModel.Description.WsdlImporter> d'importer `SampleProfileUdpBinding`, `UdpBindingElementImporter` agit également comme un importateur de liaison standard personnalisé.  
+ Par défaut, Svcutil.exe et le type <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> reconnaissent et importent les liaisons fournies par le système. Sinon, la liaison est importée en tant qu'instance <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>. Pour permettre à Svcutil.exe et <xref:System.ServiceModel.Description.WsdlImporter> d’importer `SampleProfileUdpBinding`, `UdpBindingElementImporter` agit également comme un importateur de liaison standard personnalisé.  
   
- Un importateur de liaison standard personnalisé implémente la `ImportEndpoint` méthode sur le <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interface pour examiner la <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> instance importé à partir des métadonnées pour voir si elle peut avoir été générée par une liaison standard spécifique.  
+ Un importateur de liaison standard personnalisé implémente la `ImportEndpoint` méthode sur le <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> interface pour examiner le <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> instance importé à partir des métadonnées pour voir si elle peut avoir été générée par une liaison standard spécifique.  
   
-```  
+```csharp  
 if (context.Endpoint.Binding is CustomBinding)  
 {  
     Binding binding;  

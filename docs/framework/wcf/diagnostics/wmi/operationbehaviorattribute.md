@@ -2,19 +2,19 @@
 title: OperationBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
-ms.openlocfilehash: 4f731d146885265d9f956c182f1bebdba5db924b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6266713307846ab953299370835726958196fac1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486869"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185337"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class OperationBehaviorAttribute : Behavior  
 {  
   boolean AutoDisposeParameters;  
@@ -28,7 +28,7 @@ class OperationBehaviorAttribute : Behavior
 ## <a name="methods"></a>Méthodes  
  La classe OperationBehaviorAttribute ne définit pas de méthodes.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe OperationBehaviorAttribute a les propriétés suivantes :  
   
 ### <a name="autodisposeparameters"></a>AutoDisposeParameters  
@@ -66,7 +66,7 @@ class OperationBehaviorAttribute : Behavior
   
  Indique si l’opération nécessite une transaction.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

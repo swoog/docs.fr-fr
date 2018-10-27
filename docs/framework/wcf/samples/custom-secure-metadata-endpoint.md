@@ -2,13 +2,12 @@
 title: Point de terminaison de métadonnées sécurisé personnalisée
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-author: BrucePerlerMS
-ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d9c1e8755e32f3d1a38287e2e88d1026c27af1e8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200736"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191231"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Point de terminaison de métadonnées sécurisé personnalisée
 Cet exemple montre comment implémenter un service avec un point de terminaison de métadonnées sécurisé qui utilise l’une des liaisons d’échange non-métadonnées et comment configurer [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ou clients pour extraire le métadonnées à partir de tel un point de terminaison de métadonnées. Il existe deux liaisons fournies par le système pour exposer des points de terminaison de métadonnées : mexHttpBinding et mexHttpsBinding. mexHttpBinding est utilisé pour exposer un point de terminaison de métadonnées sur HTTP de façon non sécurisée. mexHttpsBinding est utilisé pour exposer un point de terminaison de métadonnées sur HTTPS de façon sécurisée. Cet exemple montre comment exposer un point de terminaison de métadonnées sécurisé à l'aide du <xref:System.ServiceModel.WSHttpBinding>. Cette opération peut être utile lorsque vous souhaitez modifier les paramètres de sécurité de la liaison sans devoir utiliser HTTPS. Si vous utilisez mexHttpsBinding, votre point de terminaison de métadonnées sera sécurisé, mais il n'existe aucun moyen de modifier les paramètres de la liaison.  
@@ -58,7 +57,7 @@ Cet exemple montre comment implémenter un service avec un point de terminaison 
  Le deuxième client utilise le `MetadataResolver` pour extraire dynamiquement les métadonnées d'un contrat connu, puis pour appeler des opérations sur le client généré dynamiquement.  
   
 ## <a name="svcutil-client"></a>Client Svcutil  
- Lorsque la liaison par défaut héberge votre point de terminaison `IMetadataExchange`, vous pouvez exécuter Svcutil.exe en utilisant l'adresse de ce point de terminaison :  
+ Lorsque la liaison par défaut héberge votre point de terminaison `IMetadataExchange`, vous pouvez exécuter Svcutil.exe en utilisant l’adresse de ce point de terminaison :  
   
 ```  
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
@@ -82,7 +81,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 svcutil http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- il recherche le point de terminaison nommé « http » et le contrat `IMetadataExchange` pour configurer la liaison et le comportement de l'échange de communication à l'aide du point de terminaison de métadonnées. Le reste du fichier Svcutil.exe.config (dans cet exemple) spécifie la configuration de la liaison et les informations d'identification du comportement de sorte à ce qu'elles correspondent à la configuration du point de terminaison de métadonnées côté serveur.  
+ il recherche le point de terminaison nommé « http » et le contrat `IMetadataExchange` pour configurer la liaison et le comportement de l’échange de communication à l’aide du point de terminaison de métadonnées. Le reste du fichier Svcutil.exe.config (dans cet exemple) spécifie la configuration de la liaison et les informations d'identification du comportement de sorte à ce qu'elles correspondent à la configuration du point de terminaison de métadonnées côté serveur.  
   
  Pour que l'outil Svcutil.exe puisse récupérer la configuration spécifiée dans le fichier Svcutil.exe.config, ils doivent tous deux se trouver dans le même répertoire. Vous devez copier l'outil Svcutil.exe depuis son emplacement d'installation vers le répertoire qui contient le fichier Svcutil.exe.config. À partir de ce répertoire, exécutez ensuite la commande suivante :  
   
@@ -95,7 +94,7 @@ svcutil http://localhost/servicemodelsamples/service.svc/mex
 ## <a name="metadataresolver-client"></a>Client MetadataResolver  
  Si le client connaît le contrat et sait comment s'adresser aux métadonnées pendant la conception, il peut trouver dynamiquement la liaison et l'adresse des points de terminaison d'application à l'aide du `MetadataResolver`. Cet exemple de client démontre comme cela est possible en indiquant comment configurer la liaison et les informations d'identification utilisées par `MetadataResolver` en créant et configurant un `MetadataExchangeClient`.  
   
- La liaison ainsi que les informations de certificat apparues dans Svcutil.exe.config peuvent également être spécifiées à l'identique et de manière impérative sur le `MetadataExchangeClient` :  
+ La liaison ainsi que les informations de certificat apparues dans Svcutil.exe.config peuvent également être spécifiées à l’identique et de manière impérative sur le `MetadataExchangeClient` :  
   
 ```  
 // Specify the Metadata Exchange binding and its security mode  
@@ -143,7 +142,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  Exécutez l'application cliente à partir du dossier \MetadataResolverClient\bin ou du dossier \SvcutilClient\bin. L'activité du client s'affiche sur son application de console.  
   
-3.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 4.  Supprimez les certificats en exécutant Cleanup.bat une fois l'exemple terminé. D'autres exemples de sécurité utilisent ces mêmes certificats.  
   
@@ -169,7 +168,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. Sur l'ordinateur client, exécutez le MetadataResolverClient ou le SvcutilClient depuis VS.  
   
-    1.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   

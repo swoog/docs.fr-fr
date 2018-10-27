@@ -7,16 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-author: BrucePerlerMS
-ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f678c4713bff342cb3e788a85d7e58fc6e47820c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200410"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187606"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Comment : utiliser des informations d'identification de sécurité de transport et de message
-Sécurisation d’un service avec les informations d’identification de transport et message utilise le meilleur des modes de sécurité de Transport et Message dans Windows Communication Foundation (WCF). En résumé, la sécurité de la couche de transport assure l'intégrité et la confidentialité des informations tandis que la sécurité de la couche de message offre diverses informations d'identification, lesquelles ne sont pas disponibles lorsque seule la sécurité de niveau transport est utilisée. Cette rubrique contient la procédure par étape permettant d'implémenter la sécurité de transport avec les informations d'identification de message à l'aide des liaisons <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>. Pour plus d’informations sur la définition du mode de sécurité, consultez [Comment : définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Sécurisation d’un service avec les informations d’identification de transport et message utilise le meilleur des modes de sécurité de Transport et Message dans Windows Communication Foundation (WCF). En résumé, la sécurité de la couche de transport assure l'intégrité et la confidentialité des informations tandis que la sécurité de la couche de message offre diverses informations d'identification, lesquelles ne sont pas disponibles lorsque seule la sécurité de niveau transport est utilisée. Cette rubrique contient la procédure par étape permettant d’implémenter la sécurité de transport avec les informations d’identification de message à l’aide des liaisons <xref:System.ServiceModel.WSHttpBinding> et <xref:System.ServiceModel.NetTcpBinding>. Pour plus d’informations sur la définition du mode de sécurité, consultez [Comment : définir le Mode de sécurité](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  Lorsque vous affectez au mode de sécurité la valeur `TransportWithMessageCredential`, le mécanisme chargé d'offrir la sécurité de niveau transport dépend du transport utilisé. Pour le transport HTTP, le mécanisme utilisé est Secure Sockets Layer (SSL) sur HTTP, c'est-à-dire HTTPS, pour le transport TCP, il s'agit de SSL sur TCP ou de Windows.  
   
@@ -118,7 +117,7 @@ Sécurisation d’un service avec les informations d’identification de transpo
   
 2.  Ajouter un [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) à la section des liaisons  
   
-3.  Ajoutez un élément de liaison, puis affectez à l'attribut `name` une valeur adéquate.  
+3.  Ajoutez un élément de liaison, puis affectez à l’attribut `name` une valeur adéquate.  
   
 4.  Ajouter un <`security`> élément et définissez la `mode` attribut `TransportWithMessageCredential`.  
   

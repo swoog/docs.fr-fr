@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516748"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191037"
 ---
 # <a name="putmethod-function"></a>PutMethod (fonction)
 Crée une méthode.
@@ -53,7 +53,7 @@ HRESULT PutMethod (
 [in] Le nom de la méthode à créer. 
 
 `lFlags`  
-[in] Réservé. Ce paramètre doit être 0.
+[in] Réservée. Ce paramètre doit être 0.
 
 `pSignatureIn`  
 [in] Un pointeur vers une copie de la [classe __Parameters](/windows/desktop/WmiSdk/--parameters) qui contient le `in` paramètres de la méthode. Ce paramètre est ignoré si la valeur `null`.  
@@ -80,11 +80,11 @@ Les valeurs suivantes est retournées par cette fonction sont définies dans le 
 
 Cette fonction encapsule un appel à la [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) (méthode).
 
-Cet appel de méthode est uniquement pris en charge `ptr` est une définition de classe CIM. Manipulation de la méthode n’est pas disponible à partir de [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) pointeurs qui pointent vers des instances CIM.
+Cet appel de méthode est uniquement pris en charge `ptr` est une définition de classe CIM. Manipulation de la méthode n’est pas disponible à partir de [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointeurs qui pointent vers des instances CIM.
 
 Les utilisateurs ne peuvent pas créer des méthodes dont les noms commencent ou finir par un trait de soulignement. Cela est réservé pour les propriétés et les classes système.
 
-Pour une méthode, le `in` et `out` paramètres sont décrits en tant que propriétés dans [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) objets.
+Pour une méthode, le `in` et `out` paramètres sont décrits en tant que propriétés dans [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) objets.
 
 Un `[in/out]` paramètre peut être défini en ajoutant la même propriété pour les deux objets vers lequel pointés le `pInSignature` et `pOutSignature` paramètres. Dans ce cas, les propriétés partagent le même **ID** valeur du qualificateur.
 

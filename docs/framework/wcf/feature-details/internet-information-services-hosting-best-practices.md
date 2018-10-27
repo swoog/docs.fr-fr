@@ -2,12 +2,12 @@
 title: Meilleures pratiques pour l'hébergement dans Internet Information Services
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5efa4c56cafe32dcc6864ba0bd68d14ea10b15e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840743"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187568"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Meilleures pratiques pour l'hébergement dans Internet Information Services
 Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des services Windows Communication Foundation (WCF).  
@@ -35,7 +35,7 @@ Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des 
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF dans des scénarios multi-résidents ou multi-nommés  
  Vous pouvez déployer des services WCF à l’intérieur d’une batterie de serveurs Web IIS, où un ensemble d’ordinateurs partagent un nom externe commun (tel que `http://www.contoso.com`), mais sont adressés individuellement par des noms d’hôte (par exemple, `http://www.contoso.com` peut diriger le trafic vers deux ordinateurs différents nommé `http://machine1.internal.contoso.com` et `http://machine2.internal.contoso.com`). Ce scénario de déploiement est entièrement pris en charge par WCF, mais nécessite une configuration spéciale du site Web IIS qui héberge les services WCF pour afficher le nom d’hôte correct (externe) dans les métadonnées du service (Web Services Description Language).  
   
- Pour vous assurer que le nom d’hôte correct apparaît dans les métadonnées du service que WCF génère, configurez l’identité par défaut pour le site Web IIS qui héberge les services WCF pour utiliser un nom d’hôte explicite. Par exemple, les ordinateurs qui se trouvent dans la ferme www.contoso.com doivent utiliser une liaison de site IIS de * : 80 : www.contoso.com pour HTTP et \*: 443:www.contoso.com pour le protocole HTTPS.  
+ Pour vous assurer que le nom d’hôte correct apparaît dans les métadonnées du service que WCF génère, configurez l’identité par défaut pour le site Web IIS qui héberge les services WCF pour utiliser un nom d’hôte explicite. Par exemple, les ordinateurs qui se trouvent à l’intérieur de la `www.contoso.com` batterie de serveurs doit utiliser une liaison de site IIS de * : 80 : www.contoso.com pour HTTP et \*: 443:www.contoso.com pour le protocole HTTPS.  
   
  Vous pouvez configurer des liaisons de site web IIS en utilisant le composant logiciel enfichable IIS Microsoft Management Console (MMC).  
   
@@ -83,4 +83,4 @@ Cette rubrique décrit certaines meilleures pratiques pour l’hébergement des 
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de services d’hébergement](https://msdn.microsoft.com/library/f703a3f6-0fba-418a-a92f-7ce75ccfa47e)  
- [Fonctionnalités d’hébergement de Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+ [Fonctionnalités d’hébergement de Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201276)

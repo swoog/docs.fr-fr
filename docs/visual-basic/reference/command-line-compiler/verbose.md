@@ -6,17 +6,15 @@ helpviewer_keywords:
 - -verbose compiler option [Visual Basic]
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5f257fce67d8e348b69404411c12ded785cfd68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e70496b552ced8e07cbe3cde34cda377d94da9f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652127"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188415"
 ---
 # <a name="-verbose"></a>-verbose
-Indique au compilateur générer des messages d’état et d’erreur détaillés.  
+Indique au compilateur de générer des messages d’état et d’erreur détaillés.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -26,10 +24,10 @@ Indique au compilateur générer des messages d’état et d’erreur détaillé
   
 ## <a name="arguments"></a>Arguments  
  `+` &#124; `-`  
- Facultatif. Spécification de `-verbose` est identique à la spécification `-verbose+`, ce qui entraîne le compilateur à émettre des messages détaillés. La valeur par défaut de cette option est `-verbose-`.  
+ Facultatif. Spécification `-verbose` est identique à la spécification `-verbose+`, ce qui entraîne le compilateur à émettre des messages détaillés. La valeur par défaut pour cette option est `-verbose-`.  
   
 ## <a name="remarks"></a>Notes  
- Le `-verbose` option affiche des informations sur le nombre total d’erreurs émises par le compilateur, signale les assemblys chargés par un module et affiche les fichiers qui sont en cours de compilation.  
+ Le `-verbose` option affiche des informations sur le nombre total d’erreurs émis par le compilateur, signale les assemblys sont chargés par un module et affiche les fichiers qui sont en cours de compilation.  
   
 > [!NOTE]
 >  Le `-verbose` option n’est pas disponible dans l’environnement de développement Visual Studio ; il est disponible uniquement lors de la compilation à partir de la ligne de commande.  

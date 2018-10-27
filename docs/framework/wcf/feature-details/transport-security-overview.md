@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-author: BrucePerlerMS
-ms.openlocfilehash: ad05e3c202e7115aaddd2b892377f570e14afec7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 44f0763aa09b2a9d036d13c9995d7ea978908d4c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266843"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188090"
 ---
 # <a name="transport-security-overview"></a>Vue d'ensemble de la sécurité des transports
 Mécanismes de sécurité de transport dans Windows Communication Foundation (WCF) dépendent de la liaison et le transport utilisé. Par exemple, lors de l'utilisation de la classe <xref:System.ServiceModel.WSHttpBinding>, le transport correspond à HTTP et le mécanisme principal utilisé pour sécuriser ce transport correspond à SSL (Secure Sockets Layer) sur HTTP, c'est-à-dire à HTTPS. Cette rubrique décrit les mécanismes de sécurité de transport principales utilisées dans les liaisons fournies par le système WCF.  
@@ -113,7 +112,7 @@ Mécanismes de sécurité de transport dans Windows Communication Foundation (WC
  La classe <xref:System.ServiceModel.NetNamedPipeBinding> est conçue pour assurer une communication interne efficace au sein des ordinateurs, c'est-à-dire entre les processus s'exécutant sur les mêmes ordinateurs, bien qu'il soit possible de créer des canaux nommés entre deux ordinateurs figurant sur le même réseau. Cette liaison offre uniquement une sécurité de niveau transport. Lorsque des applications sont créées à l'aide de cette liaison, les adresses de point de terminaison doivent comporter « net.pipe » dans leur protocole.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- Lorsqu'un transport de sécurité est utilisé, cette liaison utilise SSL sur HTTP, c'est-à-dire HTTPS avec un jeton émis (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Pour plus d’informations sur les applications de fédération, consultez [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Lorsqu’un transport de sécurité est utilisé, cette liaison utilise SSL sur HTTP, c’est-à-dire HTTPS avec un jeton émis (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Pour plus d’informations sur les applications de fédération, consultez [fédération et jetons émis](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
  La classe <xref:System.ServiceModel.NetPeerTcpBinding> correspond à un transport sécurisé, conçu pour assurer une communication efficace à l'aide de la fonctionnalité de réseau pair à pair. Comme indiqué par le nom de la classe et de la liaison, TCP correspond au protocole. Lorsque le mode de sécurité a la valeur transport, la liaison implémente TLS sur TCP. Pour plus d’informations sur la fonctionnalité de peer-to-peer, consultez [mise en réseau Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
