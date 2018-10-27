@@ -2,14 +2,12 @@
 title: '&lt;URI&gt; élément (paramètres d’Uri)'
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a58c27500c0258415c12a5fd8e552b3ee43f50e8
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2ca5592bd0a66ded25c7da8f0b42367af990aa7a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033205"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192185"
 ---
 # <a name="lturigt-element-uri-settings"></a>&lt;URI&gt; élément (paramètres d’Uri)
 Contient des paramètres qui spécifient la façon dont le .NET Framework gère les adresses web exprimées à l’aide d’identificateurs de ressource uniforme (URI).  
@@ -70,4 +68,4 @@ Contient des paramètres qui spécifient la façon dont le .NET Framework gère 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

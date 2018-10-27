@@ -1,5 +1,5 @@
 ---
-title: Classe de DataMemberListEditor
+title: Datamemberlisteditor, classe
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-winforms
@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742047"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191808"
 ---
-# <a name="datamemberlisteditor-class"></a>Classe de DataMemberListEditor
+# <a name="datamemberlisteditor-class"></a>Datamemberlisteditor, classe
 
-Fournit une interface utilisateur de la liste déroulante pour la modification des propriétés d’objets liés aux données (objets ayant non null `DataSource` propriété) en répertoriant toutes les propriétés de la `DataSource` pour sélectionner la source de la valeur d’objet.  
+Fournit une interface utilisateur de la liste déroulante pour la modification des propriétés d’objets liés aux données (objets qui ont une valeur non-null `DataSource` propriété) en répertoriant toutes les propriétés de la `DataSource` objet pour sélectionner la source de la valeur à partir de.  
   
 ## <a name="syntax"></a>Syntaxe
   
@@ -32,18 +32,18 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> La `DataMemberListEditor` classe est interne et ne revient pas à être utilisée directement dans votre code.
+> Le `DataMemberListEditor` classe est interne et non destiné à être utilisé directement dans votre code.
 > 
-> Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toutes circonstances.
+> Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toute circonstance.
   
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-**Namespace :** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
+**Espace de noms :** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
 **Assembly :** System.Design (dans System.Design.dll)  
   
-**Versions du .NET framework :** disponible depuis la version 2.0.  
+**Versions du .NET framework :** disponible depuis 2.0.  
   
 ## <a name="see-also"></a>Voir aussi
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: 'Bien démarrer avec F # dans Visual Studio Code'
 description: 'Découvrez comment utiliser F # avec Visual Studio Code et la suite de plug-in Ionide.'
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874349"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192666"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Bien démarrer avec F # dans Visual Studio Code
 
