@@ -4,7 +4,7 @@ description: 'Découvrez la différence entre la syntaxe détaillée et légère
 ms.date: 05/16/2016
 ms.openlocfilehash: e697c6fe619df7ffe12f7d4e2a234a5a5cb401ff
 ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50044761"

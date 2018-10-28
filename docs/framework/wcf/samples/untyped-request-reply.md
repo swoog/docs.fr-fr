@@ -2,12 +2,12 @@
 title: Demande-réponse non typée
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 55692282aa06b8e988f44806394bdfcbb6e2f3ec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b6e93ad0782fcacbc4ce20c0e9bb407abdf2366f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528591"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195305"
 ---
 # <a name="untyped-requestreply"></a>Untyped Request/Reply
 Cet exemple montre comment définir des contrats d'opération qui utilisent la classe Message.  
@@ -17,14 +17,14 @@ Cet exemple montre comment définir des contrats d'opération qui utilisent la c
   
  Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md). Le contrat de service définit une opération qui prend un type de message comme argument et retourne un message. L'opération recueille toutes les données requises pour calculer la somme du corps du message puis envoie la somme dans le corps du message de retour.  
   
-```  
+```csharp
 [OperationContract(Action = CalculatorService.RequestAction, ReplyAction = CalculatorService.ReplyAction)]  
 Message ComputeSum(Message request);  
 ```  
   
  Sur le service, l'opération récupère le tableau d'entiers passé dans le message d'entrée puis calcule la somme. Pour envoyer un message de réponse, l'exemple crée un nouveau message avec la version de message et l'action appropriées et inclut la somme calculée dans son corps. C'est ce que montre l'exemple de code suivant.  
   
-```  
+```csharp
 public Message ComputeSum(Message request)  
 {  
     //The body of the message contains a list of numbers which will be   
@@ -45,7 +45,7 @@ public Message ComputeSum(Message request)
   
  Le client utilise le code généré par [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) pour créer un proxy au service distant. Pour envoyer un message de demande, le client doit connaître la version du message, qui dépend du canal sous-jacent. Donc, il crée une <xref:System.ServiceModel.OperationContextScope> étendue au canal proxy qu'il a créé, ce qui crée un <xref:System.ServiceModel.OperationContext> avec la version de message correcte indiquée à la propriété `OutgoingMessageHeaders.MessageVersion`. Le client passe un tableau d'entrées dans le corps du message de demande puis appelle `ComputeSum` sur le proxy. Le client récupère ensuite la somme des entrées qu'il a passées en accédant à la méthode `GetBody<T>` depuis le message de réponse. C'est ce que montre l'exemple de code suivant.  
   
-```  
+```csharp
 using (new OperationContextScope(client.InnerChannel))  
 {  
     // Call the Sum service operation.  
@@ -63,7 +63,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  Cet exemple est un exemple hébergé sur le Web donc seul le fichier exécutable client doit être exécuté. L'exemple suivant illustre la sortie sur le client.  
   
-```  
+```console  
 Prompt>Client.exe  
 Sum of numbers passed (1,2,3,4,5) = 15  
   

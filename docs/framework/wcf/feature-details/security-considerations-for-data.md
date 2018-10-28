@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201151"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195942"
 ---
 # <a name="security-considerations-for-data"></a>Considérations sur la sécurité des données
 Lorsque vous traitez des données dans Windows Communication Foundation (WCF), vous devez prendre en compte un nombre de catégories de menaces. Le tableau suivant répertorie les classes de menace les plus importantes concernant le traitement de données. WCF fournit des outils pour atténuer ces menaces.  
@@ -202,11 +201,11 @@ Lorsque vous traitez des données dans Windows Communication Foundation (WCF), v
   
  <xref:System.Runtime.Serialization.DataContractSerializer> est toujours autorisé à charger un type actuellement prévu conformément au contrat. Par exemple, si un contrat de données comporte un membre de données du type `Customer`, <xref:System.Runtime.Serialization.DataContractSerializer> est autorisé à charger le type `Customer` lorsqu'il désérialise ce membre de données.  
   
- En outre, <xref:System.Runtime.Serialization.DataContractSerializer> prend en charge le polymorphisme. Un membre de données peut être déclaré comme <xref:System.Object>, mais les données entrantes peuvent contenir une instance `Customer` . Cette situation est possible uniquement si le type `Customer` a été indiqué au désérialiseur via l'un de ces mécanismes :  
+ En outre, <xref:System.Runtime.Serialization.DataContractSerializer> prend en charge le polymorphisme. Un membre de données peut être déclaré comme <xref:System.Object>, mais les données entrantes peuvent contenir une instance `Customer` . Cette situation est possible uniquement si le type `Customer` a été indiqué au désérialiseur via l'un de ces mécanismes :  
   
 -   attribut<xref:System.Runtime.Serialization.KnownTypeAttribute> appliqué à un type ;  
   
--   attribut`KnownTypeAttribute` qui spécifie une méthode qui renvoie une liste de types ;  
+-   attribut `KnownTypeAttribute` qui spécifie une méthode qui renvoie une liste de types ;  
   
 -   attribut`ServiceKnownTypeAttribute` ;  
   

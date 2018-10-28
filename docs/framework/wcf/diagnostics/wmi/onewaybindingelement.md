@@ -2,19 +2,19 @@
 title: OneWayBindingElement
 ms.date: 03/30/2017
 ms.assetid: 5c7e17c3-39b9-4214-ae08-9e6141734305
-ms.openlocfilehash: ee7cfed20234175ba54dd25dbbbab4615c1ed7af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34220a3651819978f5f597fdc67d54630ec5e059
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485741"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195812"
 ---
 # <a name="onewaybindingelement"></a>OneWayBindingElement
 OneWayBindingElement  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class OneWayBindingElement : BindingElement  
 {  
   ChannelPoolSettings ChannelPoolSettings;  
@@ -26,7 +26,7 @@ class OneWayBindingElement : BindingElement
 ## <a name="methods"></a>Méthodes  
  La classe OneWayBindingElement ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe OneWayBindingElement a les propriétés suivantes :  
   
 ### <a name="channelpoolsettings"></a>ChannelPoolSettings  
@@ -50,7 +50,7 @@ class OneWayBindingElement : BindingElement
   
  Valeur qui indique si le paquet peut être routé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

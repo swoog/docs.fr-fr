@@ -2,13 +2,12 @@
 title: BasicBinding with Transport Security
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-author: BrucePerlerMS
-ms.openlocfilehash: 6f68512089d6ab975557f58e883215ad70c3cc04
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: d3d1aa9b4ee35e4ef96f1494ee79b3e60bba50a4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035959"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195708"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding with Transport Security
 Cet exemple illustre l’utilisation de la sécurité de transport SSL avec la liaison de base. Cet exemple est basé sur le [mise en route](../../../../docs/framework/wcf/samples/getting-started-sample.md) qui implémente un service de calculatrice.  

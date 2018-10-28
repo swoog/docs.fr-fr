@@ -12,7 +12,7 @@ ms.author: mairaw
 ms.topic: conceptual
 ms.openlocfilehash: 84e2d07275194683661a75e422847bbe0ebf1383
 ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50047876"

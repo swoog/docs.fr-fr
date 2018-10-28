@@ -8,14 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3e014c7a47a53a424bbaef51c9acb28e59b43078
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: fecb3c71e0686a557b8a4b0c85b7d91a9846204f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028142"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194967"
 ---
 # <a name="ltrequestcachinggt-element-network-settings"></a>&lt;requestCaching&gt; , élément (paramètres réseau)
 Contrôle le mécanisme de mise en cache pour les demandes réseau.  
@@ -89,5 +87,5 @@ Contrôle le mécanisme de mise en cache pour les demandes réseau.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Net.Cache?displayProperty=nameWithType>  
- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Cache?displayProperty=nameWithType>  
+- [Schéma des paramètres réseau](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

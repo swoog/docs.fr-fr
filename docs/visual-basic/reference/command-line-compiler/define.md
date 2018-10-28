@@ -9,14 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4de37c58543aed9ed13be8b0d2bcec9830ca9082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33656098"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195175"
 ---
 # <a name="-define-visual-basic"></a>-définir (Visual Basic)
 Définit des constantes conditionnelles du compilateur.  
@@ -34,7 +32,7 @@ Définit des constantes conditionnelles du compilateur.
 |Terme|Définition|  
 |---|---|  
 |`symbol`|Requis. Symbole à définir.|  
-|`value`|Facultatif. Valeur à affecter au `symbol`. Si `value` est une chaîne, elle doit être entourée par des séquences de barre oblique inverse/guillemets (\\») au lieu des guillemets doubles. Si aucune valeur n'est spécifiée, il prend la valeur True.|  
+|`value`|Facultatif. Valeur à affecter au `symbol`. Si `value` est une chaîne, elle doit être entourée par des séquences de barre oblique inverse/guillemets (\\») au lieu des guillemets. Si aucune valeur n'est spécifiée, il prend la valeur True.|  
   
 ## <a name="remarks"></a>Notes  
  L'option `-define` revient à utiliser la directive de préprocesseur `#Const` dans votre fichier source, excepté que les constantes définies avec `-define` sont publiques et s'appliquent à tous les fichiers du projet.  
@@ -47,7 +45,7 @@ Définit des constantes conditionnelles du compilateur.
   
 |Pour définir /define dans l'environnement de développement intégré Visual Studio|  
 |---|  
-|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Cliquez sur **Avancé**.<br />4.  Modifiez la valeur dans la **constantes personnalisées** boîte.|  
+|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Cliquez sur **Avancé**.<br />4.  Modifiez la valeur dans le **constantes personnalisées** boîte.|  
   
 ## <a name="example"></a>Exemple  
  Le code suivant définit deux constantes de compilation conditionnelle, puis les utilise.  
