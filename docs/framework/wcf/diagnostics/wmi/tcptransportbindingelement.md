@@ -2,19 +2,19 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: e64f689923d95546c8cecdf47c247faf79242ebf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33485783"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193927"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp
 class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement  
 {  
   TcpConnectionPoolSettings ConnectionPoolSettings;  
@@ -27,7 +27,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 ## <a name="methods"></a>Méthodes  
  La classe TcpTransportBindingElement ne définit pas de méthode.  
   
-## <a name="properties"></a>Propriétés  
+## <a name="properties"></a>Properties  
  La classe TcpTransportBindingElement a les propriétés suivantes :  
   
 ### <a name="connectionpoolsettings"></a>ConnectionPoolSettings  
@@ -58,7 +58,7 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
   
  Valeur booléenne qui spécifie si Teredo (technologie d'adressage de clients placés derrière des pare-feu) est activé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

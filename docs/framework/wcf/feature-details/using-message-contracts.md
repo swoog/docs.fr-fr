@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848307"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194083"
 ---
 # <a name="using-message-contracts"></a>Utilisation de contrats de message
 En général, lors de la création d’applications Windows Communication Foundation (WCF), les développeurs attention particulière aux structures de données et aux problèmes de sérialisation et n’avez pas besoin de se préoccuper de la structure des messages dans lesquels les données sont stockées. Pour ces applications, créer des contrats de données pour les paramètres ou les valeurs de retour est une procédure simple. (Pour plus d’informations, consultez [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -22,7 +22,7 @@ En général, lors de la création d’applications Windows Communication Founda
  Cette rubrique explique comment utiliser les divers attributs de contrat de message afin de créer un contrat de message spécifique pour votre opération.  
   
 ## <a name="using-message-contracts-in-operations"></a>Utilisation de contrats de message dans les opérations  
- WCF prend en charge les opérations modélisées sur le *style d’appel de procédure distante* ou *style de messagerie*. Dans une opération de style RPC, vous pouvez utiliser n'importe quel type sérialisable, et vous avez accès aux fonctionnalités disponibles aux appels locaux, tels que plusieurs paramètres et les paramètres `ref` et `out`. Dans ce style, le formulaire de sérialisation choisi contrôle la structure des données dans les messages sous-jacents, et le runtime WCF crée les messages pour prendre en charge de l’opération. Cela permet aux développeurs qui ne sont pas familiarisés avec SOAP et les messages SOAP de créer et d'utiliser rapidement et facilement des applications de service.  
+ WCF prend en charge les opérations modélisées sur le *style d’appel de procédure distante* ou *style de messagerie*. Dans une opération de style RPC, vous pouvez utiliser n’importe quel type sérialisable, et vous avez accès aux fonctionnalités disponibles aux appels locaux, tels que plusieurs paramètres et les paramètres `ref` et `out`. Dans ce style, le formulaire de sérialisation choisi contrôle la structure des données dans les messages sous-jacents, et le runtime WCF crée les messages pour prendre en charge de l’opération. Cela permet aux développeurs qui ne sont pas familiarisés avec SOAP et les messages SOAP de créer et d'utiliser rapidement et facilement des applications de service.  
   
  L'exemple de code suivant présente une opération de service modélisée sur le style RPC.  
   
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Contrôle de l'encapsulation des parties de corps SOAP  
  Par défaut, les parties de corps SOAP sont sérialisées à l'intérieur d'un élément encapsulé. Par exemple, le code suivant affiche l'élément wrapper `HelloGreetingMessage` généré à partir du nom du type <xref:System.ServiceModel.MessageContractAttribute> dans le contrat de message du message `HelloGreetingMessage`.  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  Pour supprimer l'élément wrapper, affectez <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> à la propriété `false`. Pour contrôler le nom et l'espace de noms de l'élément wrapper, utilisez les propriétés <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> et <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A>.  
   

@@ -2,13 +2,12 @@
 title: Custom Binding Security
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-author: BrucePerlerMS
-ms.openlocfilehash: 85d069fed9fb1e82670c81003b5ef091c22a8e92
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 72812c23bca5cd5c61f906cfd98f1929b0edee1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841578"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192887"
 ---
 # <a name="custom-binding-security"></a>Custom Binding Security
 L’exemple suivant illustre comment configurer la sécurité à l’aide d’une liaison personnalisée. Il indique également comment utiliser une liaison personnalisée afin d’activer la sécurité de niveau message à l’aide d’un transport sécurisé. Cette configuration est utile lorsqu'un transport sécurisé est requis pour la transmission des messages entre le client et le service et que ces messages doivent en même temps bénéficier d'une sécurité de niveau message. Cette configuration n’est pas prise en charge par les liaisons fournies par le système.
@@ -42,7 +41,7 @@ L’exemple suivant illustre comment configurer la sécurité à l’aide d’un
 </bindings>
 ```
 
- La liaison personnalisée utilise un certificat de service afin d’authentifier le service au niveau du transport et de protéger les messages pendant leur transmission entre le client et le service. Cette tâche est effectuée par l'élément de liaison `sslStreamSecurity`. Le certificat du service est configuré à l'aide d'un comportement de service, tel qu'illustré dans l'exemple de configuration suivant.
+ La liaison personnalisée utilise un certificat de service afin d’authentifier le service au niveau du transport et de protéger les messages pendant leur transmission entre le client et le service. Cette tâche est effectuée par l’élément de liaison `sslStreamSecurity`. Le certificat du service est configuré à l'aide d'un comportement de service, tel qu'illustré dans l'exemple de configuration suivant.
 
 ```xml
 <behaviors>
@@ -58,7 +57,7 @@ L’exemple suivant illustre comment configurer la sécurité à l’aide d’un
 </behaviors>
 ```
 
- En outre, la liaison personnalisée utilise la sécurité de niveau message avec le type d'informations d'identification Windows, c'est-à-dire le type par défaut. Cette tâche est effectuée par l'élément de liaison `security`. Le client et le service sont tous deux authentifiés à l'aide de la sécurité au niveau du message si le mécanisme d'authentification Kerberos est disponible. Cela se produit à condition toutefois que l'exemple soit exécuté dans l'environnement Active Directory. Si le mécanisme d'authentification Kerberos n'est pas disponible, l'authentification NTLM est utilisée. NTLM authentifie le client au service mais n'authentifie pas le service au client. Le `security` élément de liaison est configuré pour utiliser `SecureConversation``authenticationType`, ce qui entraîne la création d’une session de sécurité sur le client et le service. Ceci est nécessaire pour permettre au contrat duplex du service de fonctionner.
+ En outre, la liaison personnalisée utilise la sécurité de niveau message avec le type d'informations d'identification Windows, c'est-à-dire le type par défaut. Cette tâche est effectuée par l’élément de liaison `security`. Le client et le service sont tous deux authentifiés à l'aide de la sécurité au niveau du message si le mécanisme d'authentification Kerberos est disponible. Cela se produit à condition toutefois que l'exemple soit exécuté dans l'environnement Active Directory. Si le mécanisme d'authentification Kerberos n'est pas disponible, l'authentification NTLM est utilisée. NTLM authentifie le client au service mais n'authentifie pas le service au client. Le `security` élément de liaison est configuré pour utiliser `SecureConversation``authenticationType`, ce qui entraîne la création d’une session de sécurité sur le client et le service. Ceci est nécessaire pour permettre au contrat duplex du service de fonctionner.
 
  Lorsque vous exécutez l'exemple, les demandes et réponses d'opération s'affichent dans la fenêtre de console cliente. Appuyez sur Entrée dans la fenêtre du client pour l'arrêter.
 
@@ -123,7 +122,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
 3.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-4.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   

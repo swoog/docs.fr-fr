@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1729ad4d07fdc0d3dbb31c2bfc29edce647373d4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033127"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193654"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; élément
 Mappe un identificateur d’objet (OID) ASN.1 à un nom convivial.  
@@ -81,8 +81,8 @@ Mappe un identificateur d’objet (OID) ASN.1 à un nom convivial.
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Services de chiffrement](../../../../../docs/standard/security/cryptographic-services.md)  
- [Configuration des classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Mappage d'identificateurs d'objet à des algorithmes de chiffrement](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Schéma des paramètres de chiffrement](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Configuration des classes de chiffrement](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [Mappage d'identificateurs d'objet à des algorithmes de chiffrement](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

@@ -2,13 +2,12 @@
 title: Liaison de sécurité de message
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
-author: BrucePerlerMS
-ms.openlocfilehash: 22daa3edbda5be44ce67a6b9a93946505f3fcc12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5c8f1cd9135f48d06beb19317910a1c13bac78ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200059"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194434"
 ---
 # <a name="message-security-binding"></a>Liaison de sécurité de message
 Cette section contient des exemples qui illustrent la liaison de sécurité de message dans les Services Windows dans WCF.  
@@ -24,4 +23,4 @@ Cette section contient des exemples qui illustrent la liaison de sécurité de m
  Cet exemple montre comment implémenter une application qui utilise WS-Security et l'authentification de nom d'utilisateur pour le client et qui nécessite l'authentification du serveur à l'aide de son certificat X.509v3.  
   
  [Sécurité de message Windows](../../../../docs/framework/wcf/samples/message-security-windows.md)  
- Cet exemple illustre comment configurer une liaison <xref:System.ServiceModel.WSHttpBinding> pour permettre l'utilisation de la sécurité de niveau message avec authentification Windows.
+ Cet exemple illustre comment configurer une liaison <xref:System.ServiceModel.WSHttpBinding> pour permettre l’utilisation de la sécurité de niveau message avec authentification Windows.
