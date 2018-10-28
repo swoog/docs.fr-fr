@@ -6,59 +6,57 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5044bc0093960fdf6b063450d8d3a57575ff07c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d713a63c9503581f38048fe79c559883dc96efd2
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653876"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040132"
 ---
-# <a name="-libpath"></a><span data-ttu-id="6ae9c-102">-libpath</span><span class="sxs-lookup"><span data-stu-id="6ae9c-102">-libpath</span></span>
-<span data-ttu-id="6ae9c-103">Spécifie l’emplacement des assemblys référencés.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-103">Specifies the location of referenced assemblies.</span></span>  
+# <a name="-libpath"></a><span data-ttu-id="51d9f-102">-libpath</span><span class="sxs-lookup"><span data-stu-id="51d9f-102">-libpath</span></span>
+<span data-ttu-id="51d9f-103">Spécifie l’emplacement des assemblys référencés.</span><span class="sxs-lookup"><span data-stu-id="51d9f-103">Specifies the location of referenced assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6ae9c-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="6ae9c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51d9f-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="51d9f-104">Syntax</span></span>  
   
 ```  
 -libpath:dirList  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6ae9c-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="6ae9c-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="51d9f-105">Arguments</span><span class="sxs-lookup"><span data-stu-id="51d9f-105">Arguments</span></span>  
   
-|<span data-ttu-id="6ae9c-106">Terme</span><span class="sxs-lookup"><span data-stu-id="6ae9c-106">Term</span></span>|<span data-ttu-id="6ae9c-107">Définition</span><span class="sxs-lookup"><span data-stu-id="6ae9c-107">Definition</span></span>|  
+|<span data-ttu-id="51d9f-106">Terme</span><span class="sxs-lookup"><span data-stu-id="51d9f-106">Term</span></span>|<span data-ttu-id="51d9f-107">Définition</span><span class="sxs-lookup"><span data-stu-id="51d9f-107">Definition</span></span>|  
 |---|---|  
-|`dirList`|<span data-ttu-id="6ae9c-108">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-108">Required.</span></span> <span data-ttu-id="6ae9c-109">Délimitée par des points-virgules de liste de répertoires pour le compilateur doit vérifier si un assembly référencé est introuvable dans le répertoire de travail actif (le répertoire à partir duquel vous appelez le compilateur) ou le répertoire du système du common language runtime.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="6ae9c-110">Si le nom de répertoire contient un espace, placez-le entre guillemets (« »).</span><span class="sxs-lookup"><span data-stu-id="6ae9c-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
+|`dirList`|<span data-ttu-id="51d9f-108">Obligatoire.</span><span class="sxs-lookup"><span data-stu-id="51d9f-108">Required.</span></span> <span data-ttu-id="51d9f-109">Délimitée par des points-virgules de liste de répertoires pour le compilateur doit vérifier si un assembly référencé est introuvable dans le répertoire de travail actuel (le répertoire à partir duquel vous appelez le compilateur) ou le répertoire du système du common language runtime.</span><span class="sxs-lookup"><span data-stu-id="51d9f-109">Semicolon-delimited list of directories for the compiler to look in if a referenced assembly is not found in either the current working directory (the directory from which you are invoking the compiler) or the common language runtime's system directory.</span></span> <span data-ttu-id="51d9f-110">Si le nom du répertoire contient un espace, placez le nom entre guillemets ( » «).</span><span class="sxs-lookup"><span data-stu-id="51d9f-110">If the directory name contains a space, enclose the name in quotation marks (" ").</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6ae9c-111">Notes</span><span class="sxs-lookup"><span data-stu-id="6ae9c-111">Remarks</span></span>  
- <span data-ttu-id="6ae9c-112">Le `-libpath` option spécifie l’emplacement des assemblys référencés par le [-référence](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-112">The `-libpath` option specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="51d9f-111">Notes</span><span class="sxs-lookup"><span data-stu-id="51d9f-111">Remarks</span></span>  
+ <span data-ttu-id="51d9f-112">Le `-libpath` option spécifie l’emplacement des assemblys référencés par le [-référence](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span><span class="sxs-lookup"><span data-stu-id="51d9f-112">The `-libpath` option specifies the location of assemblies referenced by the [-reference](../../../visual-basic/reference/command-line-compiler/reference.md) option.</span></span>  
   
- <span data-ttu-id="6ae9c-113">Le compilateur recherche les références d’assembly qui ne sont pas complètes dans l’ordre suivant :</span><span class="sxs-lookup"><span data-stu-id="6ae9c-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
+ <span data-ttu-id="51d9f-113">Le compilateur recherche les références d’assembly qui ne sont pas complètes dans l’ordre suivant :</span><span class="sxs-lookup"><span data-stu-id="51d9f-113">The compiler searches for assembly references that are not fully qualified in the following order:</span></span>  
   
-1.  <span data-ttu-id="6ae9c-114">Répertoire de travail actuel.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-114">Current working directory.</span></span> <span data-ttu-id="6ae9c-115">Il s’agit du répertoire à partir duquel le compilateur est appelé.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-115">This is the directory from which the compiler is invoked.</span></span>  
+1.  <span data-ttu-id="51d9f-114">Répertoire de travail actuel.</span><span class="sxs-lookup"><span data-stu-id="51d9f-114">Current working directory.</span></span> <span data-ttu-id="51d9f-115">Il s’agit du répertoire à partir duquel le compilateur est appelé.</span><span class="sxs-lookup"><span data-stu-id="51d9f-115">This is the directory from which the compiler is invoked.</span></span>  
   
-2.  <span data-ttu-id="6ae9c-116">Répertoire système du common language runtime.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-116">The common language runtime system directory.</span></span>  
+2.  <span data-ttu-id="51d9f-116">Répertoire système du common language runtime.</span><span class="sxs-lookup"><span data-stu-id="51d9f-116">The common language runtime system directory.</span></span>  
   
-3.  <span data-ttu-id="6ae9c-117">Répertoires spécifiés par `/libpath`.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-117">Directories specified by `/libpath`.</span></span>  
+3.  <span data-ttu-id="51d9f-117">Répertoires spécifiés par `/libpath`.</span><span class="sxs-lookup"><span data-stu-id="51d9f-117">Directories specified by `/libpath`.</span></span>  
   
-4.  <span data-ttu-id="6ae9c-118">Répertoires spécifiés par la variable d’environnement LIB.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-118">Directories specified by the LIB environment variable.</span></span>  
+4.  <span data-ttu-id="51d9f-118">Répertoires spécifiés par la variable d’environnement LIB.</span><span class="sxs-lookup"><span data-stu-id="51d9f-118">Directories specified by the LIB environment variable.</span></span>  
   
- <span data-ttu-id="6ae9c-119">Le `-libpath` option est additif ; en spécifiant plus qu’une seule fois ajoute aux valeurs précédentes.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-119">The `-libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
+ <span data-ttu-id="51d9f-119">Le `-libpath` option est additif ; en spécifiant davantage qu’une seule fois ajoute aux valeurs précédentes.</span><span class="sxs-lookup"><span data-stu-id="51d9f-119">The `-libpath` option is additive; specifying it more than once appends to any prior values.</span></span>  
   
- <span data-ttu-id="6ae9c-120">Utilisez `-reference` pour spécifier une référence d’assembly.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-120">Use `-reference` to specify an assembly reference.</span></span>  
+ <span data-ttu-id="51d9f-120">Utilisez `-reference` pour spécifier une référence d’assembly.</span><span class="sxs-lookup"><span data-stu-id="51d9f-120">Use `-reference` to specify an assembly reference.</span></span>  
   
-|<span data-ttu-id="6ae9c-121">Pour définir /libpath dans Visual Studio environnement de développement intégré</span><span class="sxs-lookup"><span data-stu-id="6ae9c-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="51d9f-121">Pour définir /libpath dans Visual Studio un environnement de développement intégré</span><span class="sxs-lookup"><span data-stu-id="51d9f-121">To set /libpath in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="6ae9c-122">1.  Sélectionnez un projet dans l' **Explorateur de solutions**.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="6ae9c-123">Dans le menu **Projet**, cliquez sur **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-123">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="6ae9c-124">2.  Cliquez sur l’onglet **Références**.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-124">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="6ae9c-125">3.  Cliquez sur le **référencer les chemins d’accès...**  bouton.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-125">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="6ae9c-126">4.  Dans le **chemins d’accès de référence** boîte de dialogue, entrez le nom du répertoire dans le **dossier :** boîte.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-126">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="6ae9c-127">5.  Cliquez sur **ajouter un dossier**.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-127">5.  Click **Add Folder**.</span></span>|  
+|<span data-ttu-id="51d9f-122">1.  Sélectionnez un projet dans l' **Explorateur de solutions**.</span><span class="sxs-lookup"><span data-stu-id="51d9f-122">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="51d9f-123">Dans le menu **Projet**, cliquez sur **Propriétés**.</span><span class="sxs-lookup"><span data-stu-id="51d9f-123">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="51d9f-124">2.  Cliquez sur l’onglet **Références**.</span><span class="sxs-lookup"><span data-stu-id="51d9f-124">2.  Click the **References** tab.</span></span><br /><span data-ttu-id="51d9f-125">3.  Cliquez sur le **référencer les chemins d’accès...**  bouton.</span><span class="sxs-lookup"><span data-stu-id="51d9f-125">3.  Click the **Reference Paths...** button.</span></span><br /><span data-ttu-id="51d9f-126">4.  Dans le **chemins d’accès de référence** boîte de dialogue, entrez le nom du répertoire dans le **dossier :** boîte.</span><span class="sxs-lookup"><span data-stu-id="51d9f-126">4.  In the **Reference Paths** dialog box, enter the directory name in the **Folder:** box.</span></span><br /><span data-ttu-id="51d9f-127">5.  Cliquez sur **ajouter dossier**.</span><span class="sxs-lookup"><span data-stu-id="51d9f-127">5.  Click **Add Folder**.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="6ae9c-128">Exemple</span><span class="sxs-lookup"><span data-stu-id="6ae9c-128">Example</span></span>  
- <span data-ttu-id="6ae9c-129">Le code suivant compile `T2.vb` pour créer un fichier .exe.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-129">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="6ae9c-130">Le compilateur recherche dans le répertoire de travail, dans le répertoire racine du lecteur C: et dans le répertoire de nouveaux assemblys du lecteur C:, références d’assembly.</span><span class="sxs-lookup"><span data-stu-id="6ae9c-130">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
+## <a name="example"></a><span data-ttu-id="51d9f-128">Exemple</span><span class="sxs-lookup"><span data-stu-id="51d9f-128">Example</span></span>  
+ <span data-ttu-id="51d9f-129">Le code suivant compile `T2.vb` pour créer un fichier .exe.</span><span class="sxs-lookup"><span data-stu-id="51d9f-129">The following code compiles `T2.vb` to create an .exe file.</span></span> <span data-ttu-id="51d9f-130">Le compilateur recherche dans le répertoire de travail, dans le répertoire racine du lecteur C: et dans le répertoire de nouveaux assemblys du lecteur C: pour références d’assembly.</span><span class="sxs-lookup"><span data-stu-id="51d9f-130">The compiler looks in the working directory, in the root directory of the C: drive, and in the New Assemblies directory of the C: drive for assembly references.</span></span>  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6ae9c-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="6ae9c-131">See Also</span></span>  
- [<span data-ttu-id="6ae9c-132">Assemblys et le Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="6ae9c-132">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [<span data-ttu-id="6ae9c-133">Compilateur de ligne de commande de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6ae9c-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="6ae9c-134">Exemples de lignes de commande de compilation</span><span class="sxs-lookup"><span data-stu-id="6ae9c-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="51d9f-131">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="51d9f-131">See Also</span></span>  
+ [<span data-ttu-id="51d9f-132">Assemblys et le Global Assembly Cache</span><span class="sxs-lookup"><span data-stu-id="51d9f-132">Assemblies and the Global Assembly Cache</span></span>](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [<span data-ttu-id="51d9f-133">Compilateur de ligne de commande de Visual Basic</span><span class="sxs-lookup"><span data-stu-id="51d9f-133">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="51d9f-134">Exemples de lignes de commande de compilation</span><span class="sxs-lookup"><span data-stu-id="51d9f-134">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

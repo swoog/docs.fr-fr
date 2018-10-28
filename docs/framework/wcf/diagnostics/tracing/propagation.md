@@ -2,37 +2,37 @@
 title: Propagation
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
+ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803235"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50033634"
 ---
-# <a name="propagation"></a><span data-ttu-id="352e5-102">Propagation</span><span class="sxs-lookup"><span data-stu-id="352e5-102">Propagation</span></span>
-<span data-ttu-id="352e5-103">Cette rubrique décrit la propagation d’activité dans le modèle de suivi Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="352e5-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  
+# <a name="propagation"></a><span data-ttu-id="d5ac2-102">Propagation</span><span class="sxs-lookup"><span data-stu-id="d5ac2-102">Propagation</span></span>
+<span data-ttu-id="d5ac2-103">Cette rubrique décrit la propagation d’activité dans le modèle de suivi de Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d5ac2-103">This topic describes activity propagation in the Windows Communication Foundation (WCF) tracing model.</span></span>  
   
-## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="352e5-104">Utilisation de la propagation pour corréler des activités sur des points de terminaison</span><span class="sxs-lookup"><span data-stu-id="352e5-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
- <span data-ttu-id="352e5-105">La propagation fournit à l'utilisateur la corrélation directe de suivi d'erreur pour la même unité de traitement sur des points de terminaison d'application, par exemple, une demande.</span><span class="sxs-lookup"><span data-stu-id="352e5-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="352e5-106">Les erreurs émises à des points de terminaison différents pour la même unité de traitement sont groupées dans la même activité, y compris sur les domaines d'application.</span><span class="sxs-lookup"><span data-stu-id="352e5-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="352e5-107">Cette opération s'effectue par la propagation de l'ID d'activité dans les en-têtes de message.</span><span class="sxs-lookup"><span data-stu-id="352e5-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="352e5-108">Par conséquent, en cas d'expiration d'un client à cause d'une erreur interne dans le serveur, les deux erreurs apparaissent dans la même activité pour une corrélation directe.</span><span class="sxs-lookup"><span data-stu-id="352e5-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
+## <a name="using-propagation-to-correlate-activities-across-endpoints"></a><span data-ttu-id="d5ac2-104">Utilisation de la propagation pour corréler des activités sur des points de terminaison</span><span class="sxs-lookup"><span data-stu-id="d5ac2-104">Using Propagation to Correlate Activities Across Endpoints</span></span>  
+ <span data-ttu-id="d5ac2-105">La propagation fournit à l'utilisateur la corrélation directe de suivi d'erreur pour la même unité de traitement sur des points de terminaison d'application, par exemple, une demande.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-105">Propagation provides the user with direct correlation of error traces for the same unit of processing across application endpoints, for example, a request.</span></span> <span data-ttu-id="d5ac2-106">Les erreurs émises à des points de terminaison différents pour la même unité de traitement sont groupées dans la même activité, y compris sur les domaines d'application.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-106">Errors emitted at different endpoints for the same unit of processing are grouped in the same activity, even across application domains.</span></span> <span data-ttu-id="d5ac2-107">Cette opération s'effectue par la propagation de l'ID d'activité dans les en-têtes de message.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-107">This is done through propagation of the activity ID in the message headers.</span></span> <span data-ttu-id="d5ac2-108">Par conséquent, en cas d'expiration d'un client à cause d'une erreur interne dans le serveur, les deux erreurs apparaissent dans la même activité pour une corrélation directe.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-108">Therefore, if a client times out because of an internal error in the server, both errors appear in the same activity for direct correlation.</span></span>  
   
- <span data-ttu-id="352e5-109">Pour ce faire, utilisez le paramètre `ActivityTracing` comme indiqué dans l'exemple précédent.</span><span class="sxs-lookup"><span data-stu-id="352e5-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="352e5-110">Définissez aussi l'attribut `propagateActivity` pour la source de suivi `System.ServiceModel` à tous les points de terminaison.</span><span class="sxs-lookup"><span data-stu-id="352e5-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
+ <span data-ttu-id="d5ac2-109">Pour ce faire, utilisez le paramètre `ActivityTracing` comme indiqué dans l'exemple précédent.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-109">To do this, use the `ActivityTracing` setting as demonstrated in the previous example.</span></span> <span data-ttu-id="d5ac2-110">Définissez aussi l'attribut `propagateActivity` pour la source de suivi `System.ServiceModel` à tous les points de terminaison.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-110">In addition, set the `propagateActivity` attribute for the `System.ServiceModel` trace source at all endpoints.</span></span>  
   
 ```xml  
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- <span data-ttu-id="352e5-111">La propagation d’activité est une fonction configurable qui entraîne de WCF ajouter un en-tête aux messages sortants, qui inclut l’ID d’activité sur le TLS.</span><span class="sxs-lookup"><span data-stu-id="352e5-111">Activity propagation is a configurable capability that causes WCF to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="352e5-112">En incluant ces informations dans les suivis ultérieurs sur le côté serveur, il est possible de mettre en corrélation les activités de client et de serveur.</span><span class="sxs-lookup"><span data-stu-id="352e5-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
+ <span data-ttu-id="d5ac2-111">La propagation d’activité est une fonction configurable qui entraîne par WCF ajouter un en-tête aux messages sortants, ce qui inclut l’ID d’activité sur le TLS.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-111">Activity propagation is a configurable capability that causes WCF to add a header to outbound messages, which includes the activity ID on the TLS.</span></span> <span data-ttu-id="d5ac2-112">En incluant ces informations dans les suivis ultérieurs sur le côté serveur, il est possible de mettre en corrélation les activités de client et de serveur.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-112">By including this on subsequent traces on the server side, we can correlate client and server activities.</span></span>  
   
-## <a name="propagation-definition"></a><span data-ttu-id="352e5-113">Définition de la propagation</span><span class="sxs-lookup"><span data-stu-id="352e5-113">Propagation Definition</span></span>  
- <span data-ttu-id="352e5-114">Le gAId de l'activité M est propagé à l'activité N si toutes les conditions suivantes s'appliquent.</span><span class="sxs-lookup"><span data-stu-id="352e5-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
+## <a name="propagation-definition"></a><span data-ttu-id="d5ac2-113">Définition de la propagation</span><span class="sxs-lookup"><span data-stu-id="d5ac2-113">Propagation Definition</span></span>  
+ <span data-ttu-id="d5ac2-114">Le gAId de l'activité M est propagé à l'activité N si toutes les conditions suivantes s'appliquent.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-114">Activity M’s gAId is propagated to activity N if all of the following conditions apply.</span></span>  
   
--   <span data-ttu-id="352e5-115">N est créé à cause de M</span><span class="sxs-lookup"><span data-stu-id="352e5-115">N is created because of M</span></span>  
+-   <span data-ttu-id="d5ac2-115">N est créé à cause de M</span><span class="sxs-lookup"><span data-stu-id="d5ac2-115">N is created because of M</span></span>  
   
--   <span data-ttu-id="352e5-116">Le gAId de M est connu de N</span><span class="sxs-lookup"><span data-stu-id="352e5-116">M’s gAId is known to N</span></span>  
+-   <span data-ttu-id="d5ac2-116">Le gAId de M est connu de N</span><span class="sxs-lookup"><span data-stu-id="d5ac2-116">M’s gAId is known to N</span></span>  
   
--   <span data-ttu-id="352e5-117">Le gAId de N est égal au gAId de M.</span><span class="sxs-lookup"><span data-stu-id="352e5-117">N's gAId is equal to M’s gAId.</span></span>  
+-   <span data-ttu-id="d5ac2-117">Le gAId de N est égal au gAId de M.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-117">N's gAId is equal to M’s gAId.</span></span>  
   
- <span data-ttu-id="352e5-118">Le gAId est propagé par l'en-tête de message ActivityId, comme illustré dans le schéma XML suivant.</span><span class="sxs-lookup"><span data-stu-id="352e5-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
+ <span data-ttu-id="d5ac2-118">Le gAId est propagé par l'en-tête de message ActivityId, comme illustré dans le schéma XML suivant.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-118">The gAId is propagated through the ActivityId message header, as illustrated in the following XML schema.</span></span>  
   
 ```xml  
 <xsd:element name="ActivityId" type="integer" minOccurs="0">  
@@ -40,25 +40,23 @@ ms.locfileid: "33803235"
 </xsd:element>  
 ```  
   
- <span data-ttu-id="352e5-119">Les éléments suivants sont un exemple de l'en-tête de message.</span><span class="sxs-lookup"><span data-stu-id="352e5-119">The following is an example of the message header.</span></span>  
+ <span data-ttu-id="d5ac2-119">Les éléments suivants sont un exemple de l'en-tête de message.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-119">The following is an example of the message header.</span></span>  
   
 ```xml  
 <MessageLogTraceRecord>  
-  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"     
+  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
                       xmlns:a="http://www.w3.org/2005/08/addressing">  
     <s:Header>  
       <a:Action s:mustUnderstand="1">http://Microsoft.ServiceModel.Samples/ICalculator/Subtract  
       </a:Action>  
       <a:MessageID>urn:uuid:f0091eae-d339-4c7e-9408-ece34602f1ce  
       </a:MessageID>  
-      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"   
-  
+      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"
                xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">  
         17f59a29-b435-4a15-bf7b-642ffc40eac8  
       </ActivityId>  
       <a:ReplyTo>  
-          <a:Address>http://www.w3.org/2005/08/addressing/anonymous  
-          </a:Address>  
+          <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>  
       </a:ReplyTo>  
       <a:To s:mustUnderstand="1">net.tcp://localhost/servicemodelsamples/service</a:To>  
    </s:Header>  
@@ -72,14 +70,14 @@ ms.locfileid: "33803235"
 </MessageLogTraceRecord>  
 ```  
   
-## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="352e5-120">Limites de propagation et d'activité</span><span class="sxs-lookup"><span data-stu-id="352e5-120">Propagation and Activity Boundaries</span></span>  
- <span data-ttu-id="352e5-121">Lorsque l'ID d'activité est propagé sur des points de terminaison, le récepteur de message émet un suivi de démarrage et d'arrêt avec cet ID d'activité (propagé).</span><span class="sxs-lookup"><span data-stu-id="352e5-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="352e5-122">Par conséquent, il y a un suivi de démarrage et d'arrêt avec ce gAId à partir de chaque source de suivi.</span><span class="sxs-lookup"><span data-stu-id="352e5-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="352e5-123">Si les points de terminaison sont dans le même processus et utilisent le même nom de source de suivi, plusieurs suivis Démarrer et Arrêter ayant le même lAId (gAId identique, source de suivi et processus identiques) sont créés.</span><span class="sxs-lookup"><span data-stu-id="352e5-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
+## <a name="propagation-and-activity-boundaries"></a><span data-ttu-id="d5ac2-120">Limites de propagation et d'activité</span><span class="sxs-lookup"><span data-stu-id="d5ac2-120">Propagation and Activity Boundaries</span></span>  
+ <span data-ttu-id="d5ac2-121">Lorsque l'ID d'activité est propagé sur des points de terminaison, le récepteur de message émet un suivi de démarrage et d'arrêt avec cet ID d'activité (propagé).</span><span class="sxs-lookup"><span data-stu-id="d5ac2-121">When the activity ID is propagated across endpoints, the message receiver emits a Start and Stop traces with that (propagated) activity ID.</span></span> <span data-ttu-id="d5ac2-122">Par conséquent, il y a un suivi de démarrage et d'arrêt avec ce gAId à partir de chaque source de suivi.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-122">Therefore, there is a Start and Stop trace with that gAId from each trace source.</span></span> <span data-ttu-id="d5ac2-123">Si les points de terminaison sont dans le même processus et utilisent le même nom de source de suivi, plusieurs suivis Démarrer et Arrêter ayant le même lAId (gAId identique, source de suivi et processus identiques) sont créés.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-123">If the endpoints are in the same process and use the same trace source name, multiple Start and Stop with the same lAId (same gAId, same trace source, same process) are created.</span></span>  
   
-## <a name="synchronization"></a><span data-ttu-id="352e5-124">Synchronisation</span><span class="sxs-lookup"><span data-stu-id="352e5-124">Synchronization</span></span>  
- <span data-ttu-id="352e5-125">Pour synchroniser des événements sur les points de terminaison qui s'exécutent sur des ordinateurs différents, CorrelationId est ajouté à l'en-tête ActivityId propagé dans les messages.</span><span class="sxs-lookup"><span data-stu-id="352e5-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="352e5-126">Les outils peuvent utiliser cet ID pour synchroniser des événements sur des ordinateurs présentant des différences d'horloge.</span><span class="sxs-lookup"><span data-stu-id="352e5-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="352e5-127">En particulier, l'outil Service Trace Viewer utilise cet ID pour afficher les flux de messages d'un point de terminaison à un autre.</span><span class="sxs-lookup"><span data-stu-id="352e5-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
+## <a name="synchronization"></a><span data-ttu-id="d5ac2-124">Synchronisation</span><span class="sxs-lookup"><span data-stu-id="d5ac2-124">Synchronization</span></span>  
+ <span data-ttu-id="d5ac2-125">Pour synchroniser des événements sur les points de terminaison qui s'exécutent sur des ordinateurs différents, CorrelationId est ajouté à l'en-tête ActivityId propagé dans les messages.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-125">To synchronize events across endpoints that run on different machines, a CorrelationId is added to the ActivityId header that is propagated in messages.</span></span> <span data-ttu-id="d5ac2-126">Les outils peuvent utiliser cet ID pour synchroniser des événements sur des ordinateurs présentant des différences d'horloge.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-126">Tools can use this ID to synchronize events across machines with clock discrepancy.</span></span> <span data-ttu-id="d5ac2-127">En particulier, l'outil Service Trace Viewer utilise cet ID pour afficher les flux de messages d'un point de terminaison à un autre.</span><span class="sxs-lookup"><span data-stu-id="d5ac2-127">Specifically, the Service Trace Viewer tool uses this ID for showing message flows between endpoints.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="352e5-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="352e5-128">See Also</span></span>  
- [<span data-ttu-id="352e5-129">Configuration du suivi</span><span class="sxs-lookup"><span data-stu-id="352e5-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [<span data-ttu-id="352e5-130">Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes</span><span class="sxs-lookup"><span data-stu-id="352e5-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [<span data-ttu-id="352e5-131">Scénarios de suivi de bout en bout</span><span class="sxs-lookup"><span data-stu-id="352e5-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [<span data-ttu-id="352e5-132">Outil Service Trace Viewer (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="352e5-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a><span data-ttu-id="d5ac2-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d5ac2-128">See Also</span></span>  
+ [<span data-ttu-id="d5ac2-129">Configuration du suivi</span><span class="sxs-lookup"><span data-stu-id="d5ac2-129">Configuring Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
+ [<span data-ttu-id="d5ac2-130">Utilisation de Service Trace Viewer pour afficher les suivis corrélés et résoudre les problèmes</span><span class="sxs-lookup"><span data-stu-id="d5ac2-130">Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [<span data-ttu-id="d5ac2-131">Scénarios de suivi de bout en bout</span><span class="sxs-lookup"><span data-stu-id="d5ac2-131">End-To-End Tracing Scenarios</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ [<span data-ttu-id="d5ac2-132">Outil Service Trace Viewer (SvcTraceViewer.exe)</span><span class="sxs-lookup"><span data-stu-id="d5ac2-132">Service Trace Viewer Tool (SvcTraceViewer.exe)</span></span>](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

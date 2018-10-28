@@ -1,5 +1,5 @@
 ---
-title: Classe de DataMemberFieldEditor
+title: DataMemberFieldEditor, classe
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-winforms
@@ -14,36 +14,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741878"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452951"
 ---
-# <a name="datamemberfieldeditor-class"></a><span data-ttu-id="489f1-102">Classe de DataMemberFieldEditor</span><span class="sxs-lookup"><span data-stu-id="489f1-102">DataMemberFieldEditor Class</span></span>
+# <a name="datamemberfieldeditor-class"></a><span data-ttu-id="d2cae-102">DataMemberFieldEditor, classe</span><span class="sxs-lookup"><span data-stu-id="d2cae-102">DataMemberFieldEditor Class</span></span>
 
-<span data-ttu-id="489f1-103">Fournit l’interface utilisateur de modifier les propriétés des objets liés aux données en répertoriant toutes les propriétés de la `DataSource` pour sélectionner la source de la valeur d’objet.</span><span class="sxs-lookup"><span data-stu-id="489f1-103">Provides user interface for editing properties of data-bound objects by listing all properties of the `DataSource` object to select the value source from.</span></span>  
+<span data-ttu-id="d2cae-103">Fournit l’interface utilisateur pour la modification des propriétés d’objets liés aux données en répertoriant toutes les propriétés de la `DataSource` objet à sélectionner à partir de la source de valeur.</span><span class="sxs-lookup"><span data-stu-id="d2cae-103">Provides user interface for editing properties of data-bound objects by listing all properties of the `DataSource` object to select the value source from.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="489f1-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="489f1-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d2cae-104">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d2cae-104">Syntax</span></span>
   
 ```csharp
 internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> <span data-ttu-id="489f1-105">La `DataMemberFieldEditor` classe est interne et ne revient pas à être utilisée directement dans votre code.</span><span class="sxs-lookup"><span data-stu-id="489f1-105">The `DataMemberFieldEditor` class is internal and not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="d2cae-105">Le `DataMemberFieldEditor` classe est interne et non destiné à être utilisé directement dans votre code.</span><span class="sxs-lookup"><span data-stu-id="d2cae-105">The `DataMemberFieldEditor` class is internal and not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="489f1-106">Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toutes circonstances.</span><span class="sxs-lookup"><span data-stu-id="489f1-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="d2cae-106">Microsoft ne prend pas en charge l’utilisation de cette classe dans une application de production en toute circonstance.</span><span class="sxs-lookup"><span data-stu-id="d2cae-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="489f1-107">Spécifications</span><span class="sxs-lookup"><span data-stu-id="489f1-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="d2cae-107">Configuration requise</span><span class="sxs-lookup"><span data-stu-id="d2cae-107">Requirements</span></span>
 
-<span data-ttu-id="489f1-108">**Namespace :** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="489f1-108">**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span></span>  
+<span data-ttu-id="d2cae-108">**Espace de noms :** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="d2cae-108">**Namespace:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType></span></span>  
   
-<span data-ttu-id="489f1-109">**Assembly :** System.Design (dans System.Design.dll)</span><span class="sxs-lookup"><span data-stu-id="489f1-109">**Assembly:** System.Design (in System.Design.dll)</span></span>  
+<span data-ttu-id="d2cae-109">**Assembly :** System.Design (dans System.Design.dll)</span><span class="sxs-lookup"><span data-stu-id="d2cae-109">**Assembly:** System.Design (in System.Design.dll)</span></span>  
   
-<span data-ttu-id="489f1-110">**Versions du .NET framework :** disponible depuis la version 2.0.</span><span class="sxs-lookup"><span data-stu-id="489f1-110">**.NET Framework versions:** Available since 2.0.</span></span>  
+<span data-ttu-id="d2cae-110">**Versions du .NET framework :** disponible depuis 2.0.</span><span class="sxs-lookup"><span data-stu-id="d2cae-110">**.NET Framework versions:** Available since 2.0.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="489f1-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="489f1-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d2cae-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d2cae-111">See also</span></span>
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>
