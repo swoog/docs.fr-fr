@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c0081e5677ca65e8c730c7199ebac5d4c86261
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741826"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194837"
 ---
 # <a name="assembly-contents"></a>Contenu d'un assembly
 En général, un assembly statique peut comporter les quatre éléments suivants :  
@@ -49,6 +49,6 @@ Assembly multifichier
  Actuellement, à mesure que vous concevez votre code source, vous prenez des décisions explicites concernant le mode de partition des fonctionnalités de votre application dans un ou plusieurs fichiers. Lors du design de code .NET Framework, vous prendrez des décisions similaires sur le mode de partition des fonctionnalités dans un ou plusieurs assemblys.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Manifeste d’assembly](../../../docs/framework/app-domains/assembly-manifest.md)  
- [Aspects de la sécurité des assemblys](../../../docs/framework/app-domains/assembly-security-considerations.md)
+- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Manifeste d’assembly](../../../docs/framework/app-domains/assembly-manifest.md)  
+- [Aspects de la sécurité des assemblys](../../../docs/framework/app-domains/assembly-security-considerations.md)

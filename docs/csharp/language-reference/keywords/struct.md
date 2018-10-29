@@ -7,49 +7,53 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 46cf0b66a50685a717818fe762ad4f1de36d6156
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530190"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185743"
 ---
 # <a name="struct-c-reference"></a>struct (Référence C#)
-Un type `struct` est un type valeur utilisé pour encapsuler de petits groupes de variables liées, par exemple les coordonnées d'un rectangle ou les caractéristiques d'un élément dans un inventaire. L'exemple suivant illustre une déclaration struct simple :  
-  
-```csharp  
-public struct Book  
-{  
-    public decimal price;  
-    public string title;  
-    public string author;  
-}  
-```  
-  
-## <a name="remarks"></a>Notes  
- Les structs peuvent également contenir des [constructeurs](../../../csharp/programming-guide/classes-and-structs/constructors.md), des [constantes](../../../csharp/programming-guide/classes-and-structs/constants.md), des [champs](../../../csharp/programming-guide/classes-and-structs/fields.md), des [méthodes](../../../csharp/programming-guide/classes-and-structs/methods.md), des [propriétés](../../../csharp/programming-guide/classes-and-structs/properties.md), des [indexeurs](../../../csharp/programming-guide/indexers/index.md), des [opérateurs](../../../csharp/programming-guide/statements-expressions-operators/operators.md), des [événements](../../../csharp/programming-guide/events/index.md) et des [types imbriqués](../../../csharp/programming-guide/classes-and-structs/nested-types.md). Toutefois, si plusieurs membres sont nécessaires, il est conseillé de plutôt utiliser une classe.  
-  
- Pour obtenir des exemples, consultez [Utilisation de structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
-  
- Les structs peuvent implémenter une interface, mais ne peuvent pas hériter d'un autre struct. C'est pourquoi, les membres struct ne peuvent pas être déclarés en tant que `protected`.  
-  
- Pour plus d’informations, consultez [Structs](../../../csharp/programming-guide/classes-and-structs/structs.md).  
-  
-## <a name="examples"></a>Exemples  
- Pour obtenir des exemples et des informations supplémentaires, consultez [Utilisation de structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
- Pour obtenir des exemples, consultez [Utilisation de structs](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
-  
+
+Un type `struct` est un type valeur utilisé pour encapsuler de petits groupes de variables liées, par exemple les coordonnées d'un rectangle ou les caractéristiques d'un élément dans un inventaire. L'exemple suivant illustre une déclaration struct simple :
+
+```csharp
+public struct Book
+{
+    public decimal price;
+    public string title;
+    public string author;
+}
+```
+
+## <a name="remarks"></a>Notes
+
+Les structs peuvent également contenir des [constructeurs](../../programming-guide/classes-and-structs/constructors.md), des [constantes](../../programming-guide/classes-and-structs/constants.md), des [champs](../../programming-guide/classes-and-structs/fields.md), des [méthodes](../../programming-guide/classes-and-structs/methods.md), des [propriétés](../../programming-guide/classes-and-structs/properties.md), des [indexeurs](../../programming-guide/indexers/index.md), des [opérateurs](../../programming-guide/statements-expressions-operators/operators.md), des [événements](../../programming-guide/events/index.md) et des [types imbriqués](../../programming-guide/classes-and-structs/nested-types.md). Toutefois, si plusieurs membres sont nécessaires, il est conseillé de plutôt utiliser une classe.
+
+Pour obtenir des exemples, consultez [Utilisation de structs](../../programming-guide/classes-and-structs/using-structs.md).
+
+Les structs peuvent implémenter une interface, mais ne peuvent pas hériter d'un autre struct. C'est pourquoi, les membres struct ne peuvent pas être déclarés en tant que `protected`.
+
+Pour plus d’informations, consultez [Structs](../../programming-guide/classes-and-structs/structs.md).
+
+## <a name="examples"></a>Exemples
+
+Pour obtenir des exemples et des informations supplémentaires, consultez [Utilisation de structs](../../programming-guide/classes-and-structs/using-structs.md).
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour obtenir des exemples, consultez [Utilisation de structs](../../programming-guide/classes-and-structs/using-structs.md).
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [Tableau des valeurs par défaut](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Types](../../../csharp/language-reference/keywords/types.md)  
-- [Types valeur](../../../csharp/language-reference/keywords/value-types.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [interface](../../../csharp/language-reference/keywords/interface.md)  
-- [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [Tableau des valeurs par défaut](default-values-table.md)
+- [Tableau des types intégrés](built-in-types-table.md)
+- [Types](types.md)
+- [Types valeur](value-types.md)
+- [class](class.md)
+- [interface](interface.md)
+- [Classes et structs](../../programming-guide/classes-and-structs/index.md)

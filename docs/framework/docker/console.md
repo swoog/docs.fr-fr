@@ -4,12 +4,12 @@ description: Découvrez comment prendre une application console .NET Framework e
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193328"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200572"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Exécution d’applications console dans des conteneurs Windows
 
@@ -46,7 +46,7 @@ Le déplacement de votre application console se fait en quelques étapes.
 Les conteneurs Windows sont pris en charge sur [Mise à jour anniversaire Windows 10](https://www.microsoft.com/en-us/software-download/windows10/) ou [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->Si vous utilisez Windows Server 2016, vous devez activer manuellement les conteneurs dans la mesure où le programme d’installation de Docker pour Windows n’active pas cette fonctionnalité. Vérifiez que toutes les mises à jour ont été exécutées pour le système d’exploitation, puis suivez les instructions indiquées dans l’article [Déploiement d’un hôte de conteneurs](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) pour installer les fonctionnalités Docker et les conteneurs.
+>Si vous utilisez Windows Server 2016, vous devez activer manuellement les conteneurs dans la mesure où le programme d’installation de Docker pour Windows n’active pas cette fonctionnalité. Vérifiez que toutes les mises à jour ont été exécutées pour le système d’exploitation, puis suivez les instructions indiquées dans l’article [Déploiement d’un hôte de conteneurs](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server) pour installer les fonctionnalités Docker et les conteneurs.
 
 Vous devez disposer de Docker pour Windows, version 1.12 bêta 26 ou ultérieure, pour prendre en charge les conteneurs Windows. Par défaut, Docker autorise les conteneurs Linux ; basculez vers les conteneurs Windows en cliquant avec le bouton droit sur l’icône Docker dans la barre d’état système et en sélectionnant **Switch to Windows containers** (Basculer vers les conteneurs Windows). Docker exécute le processus de modification et un redémarrage peut être nécessaire.
 

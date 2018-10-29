@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c579c97e273e7d3e149e04f7aa7670313663b617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 95e5bdbeda4f6faff33467233e28d9dd6bc01d1c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751769"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186931"
 ---
 # <a name="how-to-create-an-application-domain"></a>Comment : créer un domaine d'application
 Un hôte Common Language Runtime crée automatiquement des domaines d’application quand ils sont nécessaires. Toutefois, vous pouvez créer vos propres domaines d’application et y charger les assemblys que vous souhaitez gérer personnellement. Vous pouvez également créer des domaines d’application à partir desquels vous exécutez du code.  
@@ -30,5 +30,5 @@ Un hôte Common Language Runtime crée automatiquement des domaines d’applicat
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)  
- [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)
+- [Programmation avec des domaines d’application](application-domains.md#programming-with-application-domains)  
+- [Utilisation des domaines d’application](../../../docs/framework/app-domains/use.md)

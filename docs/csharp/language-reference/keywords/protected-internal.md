@@ -2,12 +2,12 @@
 title: protected internal (Référence C#)
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 1a305cb84989f12350e2e7cc28dd18f9d0c7ae5e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e5763830a29d4e627dbb8efa0e86fca536bbb26c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210030"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193771"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (Référence C#)
 
@@ -75,4 +75,4 @@ Les membres de struct ne peuvent pas être `protected internal`, car le struct n
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [Problèmes de sécurité pour les mots clés virtuels internes](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [Problèmes de sécurité pour les mots clés virtuels internes](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

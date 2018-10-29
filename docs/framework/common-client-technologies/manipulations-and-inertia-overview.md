@@ -2,12 +2,12 @@
 title: Vue d'ensemble des manipulations et de l'inertie
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6396c174b341b5ae937fa931488ee1bd3a5fcbd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521237"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187817"
 ---
 # <a name="manipulations-and-inertia-overview"></a>Vue d'ensemble des manipulations et de l'inertie
 Les *manipulations* permettent aux utilisateurs de déplacer, de faire pivoter et de redimensionner des éléments de l’interface utilisateur à l’aide de *manipulateurs*. Un manipulateur représente une souris ou, dans le cas d'un écran tactile, un stylet ou un doigt.  
@@ -25,7 +25,7 @@ Les *manipulations* permettent aux utilisateurs de déplacer, de faire pivoter e
   
  Image manipulée par deux manipulateurs  
   
- La manipulation fournit un framework qui surveille une partie des manipulateurs et les interprète comme s'ils agissaient ensemble, et non indépendamment. Vous pouvez créer plusieurs objets de processeur de manipulation simultanément (un pour chaque élément de l'interface utilisateur devant être manipulé dans une application). Un processeur de manipulation reçoit des informations lui indiquant les périphériques d’entrée à observer et signale les manipulations via des [événements .NET](https://msdn.microsoft.com/library/17sde2xt.aspx).  
+ La manipulation fournit un framework qui surveille une partie des manipulateurs et les interprète comme s'ils agissaient ensemble, et non indépendamment. Vous pouvez créer plusieurs objets de processeur de manipulation simultanément (un pour chaque élément de l'interface utilisateur devant être manipulé dans une application). Un processeur de manipulation reçoit des informations lui indiquant les périphériques d’entrée à observer et signale les manipulations via des [événements .NET](../../../docs/standard/events/index.md).  
   
  Un processeur de manipulation ne reçoit aucune information sur l'élément particulier qui est manipulé. Une application applique séparément les modifications apportées à un élément spécifique de l'application. Par exemple, une application applique des transformations effectuées sur une image ou la redessine pour l'afficher à son nouvel emplacement ou dans sa nouvelle taille ou orientation.  
   
@@ -41,7 +41,7 @@ Les *manipulations* permettent aux utilisateurs de déplacer, de faire pivoter e
  À mesure que des manipulateurs sont ajoutés, déplacés ou supprimés pour un élément d'interface utilisateur, une application met à jour l'objet <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> en appelant la méthode <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A>. Au début d'une manipulation, l'événement <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> est déclenché.  
   
 > [!NOTE]
->  Le traitement des manipulations est plus efficace quand il est utilisé dans un environnement de mise à jour basé sur des trames. Cela ne pose aucun problème quand le traitement des manipulations est utilisé dans une application Microsoft XNA, étant donné que le framework XNA fournit des mises à jour basées sur des trames à l’aide de la méthode [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx). Dans un autre environnement (tel que WinForms), vous devrez éventuellement fournir votre propre logique basée sur des trames pour collecter des manipulations et les envoyer périodiquement à la méthode <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> sous forme de lot.  
+> Le traitement des manipulations est plus efficace quand il est utilisé dans un environnement de mise à jour basé sur des trames. Cela ne pose aucun problème quand le traitement des manipulations est utilisé dans une application Microsoft XNA, étant donné que le framework XNA fournit des mises à jour basées sur des trames à l’aide de la méthode [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29). Dans un autre environnement (tel que WinForms), vous devrez éventuellement fournir votre propre logique basée sur des trames pour collecter des manipulations et les envoyer périodiquement à la méthode <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> sous forme de lot.  
   
  À mesure que le nombre de manipulateurs ou leur position change, l'événement <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> est déclenché. Les propriétés de l'objet <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> qui est passé au gestionnaire d'événements <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> spécifient les modifications de l'origine, de l'échelle, de la rotation et de la translation qui ont eu lieu depuis le dernier événement. L'origine de la manipulation change quand les manipulateurs se déplacent et qu'ils sont ajoutés ou supprimés. Les valeurs de translation spécifient la magnitude du déplacement X ou Y inclus dans la manipulation.  
   

@@ -2,15 +2,15 @@
 title: Syntaxe de directive WCF
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
-ms.openlocfilehash: 18cc3eda23154af143cdae5e3861242e20d64d50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4ba39812b96940683ae52bd64d28730f5c97c61f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386169"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205124"
 ---
 # <a name="wcf-directive-syntax"></a>Syntaxe de directive WCF
-Spécifie les paramètres utilisés par les directives de Windows Communication Foundation (WCF) dans les fichiers .svc pour diriger les compilateurs. Chaque directive peut contenir un ou plusieurs attributs (associés à des valeurs) qui sont spécifiques à cette directive. WCF prend uniquement en le [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) la directive.  
+Spécifie les paramètres utilisés par les directives de Windows Communication Foundation (WCF) dans les fichiers .svc pour diriger les compilateurs. Chaque directive peut contenir un ou plusieurs attributs (associés à des valeurs) qui sont spécifiques à cette directive. WCF propose uniquement la [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) directive.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)  

@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198681"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183605"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Modèle de passerelle API et communication directe de client à microservice
 
@@ -84,13 +84,13 @@ Soyez prudent lors de l’implémentation du modèle Passerelle API. Il n’est 
 
 Par conséquent, les passerelles d’API doivent être séparées en fonction des limites métier et des applications clientes et ne pas agir comme un agrégateur pour tous les microservices internes.
 
-Lorsque vous fractionnez le niveau de la passerelle d’API en plusieurs passerelles d’API, si votre application comporte plusieurs applications clientes, vous pouvez utiliser un tableau croisé dynamique primaire pour identifier les différents types de passerelles d’API, et vous pouvez ainsi utiliser une façade différente selon les besoins de chaque application cliente. Ce cas est un modèle intitulé « Backend for Frontend » ([BFF](http://samnewman.io/patterns/architectural/bff/)), dans lequel chaque passerelle d’API peut fournir une API différente adaptée à chaque type d’application cliente, voire même en fonction du facteur de forme du client en implémentant le code d’un adaptateur spécifique qui appelle plusieurs microservices internes de façon sous-jacente, comme le montre l’image suivante :
+Lorsque vous fractionnez le niveau de la passerelle d’API en plusieurs passerelles d’API, si votre application comporte plusieurs applications clientes, vous pouvez utiliser un tableau croisé dynamique primaire pour identifier les différents types de passerelles d’API, et vous pouvez ainsi utiliser une façade différente selon les besoins de chaque application cliente. Ce cas est un modèle intitulé « Backend for Frontend » ([BFF](https://samnewman.io/patterns/architectural/bff/)), dans lequel chaque passerelle d’API peut fournir une API différente adaptée à chaque type d’application cliente, voire même en fonction du facteur de forme du client en implémentant le code d’un adaptateur spécifique qui appelle plusieurs microservices internes de façon sous-jacente, comme le montre l’image suivante :
 
 ![Diagramme montrant plusieurs passerelles d’API personnalisées](./media/image13.1.png)
 
 **Figure 4-13.1**. Utilisation de plusieurs passerelles d’API personnalisées
 
-L’image précédente montre une architecture simplifiée avec plusieurs passerelles d’API affinées. Dans ce cas, les limites identifiées pour chaque passerelle d’API reposent uniquement sur le modèle « Backend for Frontend » ([BFF](http://samnewman.io/patterns/architectural/bff/)), et sont donc basées uniquement sur l’API nécessaire à l’application cliente. Mais dans les applications de grande taille, vous devez également aller plus loin et créer d’autres passerelles d’API basées sur les limites de l’entreprise sous forme d’un second tableau croisé dynamique de conception.
+L’image précédente montre une architecture simplifiée avec plusieurs passerelles d’API affinées. Dans ce cas, les limites identifiées pour chaque passerelle d’API reposent uniquement sur le modèle « Backend for Frontend » ([BFF](https://samnewman.io/patterns/architectural/bff/)), et sont donc basées uniquement sur l’API nécessaire à l’application cliente. Mais dans les applications de grande taille, vous devez également aller plus loin et créer d’autres passerelles d’API basées sur les limites de l’entreprise sous forme d’un second tableau croisé dynamique de conception.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>Principales fonctionnalités du modèle Passerelle d’API
 
@@ -168,7 +168,7 @@ Après les sections consacrées à l’architecture initiale et à la présentat
 
 - **Modèle de passerelle d’API** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Modèle d’agrégation et de composition** [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Modèle d’agrégation et de composition** [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Gestion des API Azure** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

@@ -3,11 +3,12 @@ title: Expression Trees
 description: En savoir plus sur les arborescences d’expressions dans .NET Core et comment les utiliser pour représenter le code en tant que structures que vous pouvez examiner, modifier et exécuter.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190734"
 ---
 # <a name="expression-trees"></a>Expression Trees
 
@@ -19,7 +20,7 @@ Quand vous souhaitez avoir une interaction plus complète, vous devez utiliser d
 Les arborescences d’expressions représentent le code sous forme de structure que vous pouvez examiner, modifier ou exécuter. Ces outils vous permettent de manipuler le code au moment de l’exécution. Vous pouvez écrire du code qui examine les algorithmes en cours d’exécution ou injecte de nouvelles fonctionnalités. Dans des scénarios avancés, vous pouvez modifier les algorithmes en cours d’exécution, et même traduire les expressions C# dans une autre forme en vue d’une exécution dans un autre environnement.
 
 Vous avez probablement déjà écrit du code qui utilise des arborescences d’expressions. Les API LINQ d’Entity Framework acceptent des arborescences d’expressions comme arguments pour le modèle d’expression de requête LINQ.
-Cela permet à [Entity Framework](http://docs.efproject.net/en/latest/) de traduire la requête que vous avez écrite en C# en code SQL qui s’exécute dans le moteur de base de données. [Moq](https://github.com/Moq/moq), framework de simulation populaire pour .NET, constitue un autre exemple.
+Cela permet à [Entity Framework](/ef/) de traduire la requête que vous avez écrite en C# en code SQL qui s’exécute dans le moteur de base de données. [Moq](https://github.com/Moq/moq), framework de simulation populaire pour .NET, constitue un autre exemple.
 
 Les sections suivantes de ce didacticiel expliquent en détail ce que sont les arborescences d’expressions, examinent les classes de framework qui prennent en charge les arborescences d’expressions et montrent comment utiliser des arborescences d’expressions. Vous découvrirez comment lire des arborescences d’expressions, créer des arborescences d’expressions, créer des arborescences d’expressions modifiées et exécuter le code représenté par des arborescences d’expressions. Une fois ce didacticiel terminé, vous serez prêt à utiliser ces structures pour créer des algorithmes adaptatifs enrichis.
 

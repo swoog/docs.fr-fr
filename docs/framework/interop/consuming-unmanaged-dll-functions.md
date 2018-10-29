@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388376"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195240"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>Consommation de fonctions DLL non managées
 L'appel de code non managé est un service qui permet au code managé d'appeler des fonctions non managées implémentées dans des bibliothèques de liens dynamiques (DLL), telles que celles de l'API Win32. Il localise et appelle une fonction exportée, puis marshale ses arguments (entiers, chaînes, tableaux, structures, etc) au-delà des limites d’interopérabilité, selon les besoins.  
@@ -70,8 +70,8 @@ Appel de code non managé à une fonction DLL non managée
   
 4.  Il cède le contrôle à la fonction non managée.  
   
- L'appel de code non managé lève des exceptions générées par la fonction non managée pour l'appelant managé.  
-  
+ L'appel de code non managé lève des exceptions générées par la fonction non managée pour l'appelant managé.
+
 ## <a name="see-also"></a>Voir aussi  
  [Interopération avec du code non managé](../../../docs/framework/interop/index.md)  
  [Exemples d'appel de code non managé](../../../docs/framework/interop/platform-invoke-examples.md)  

@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 5d8ba76caab39db222c2ceba36a4d67cab3e8a3f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6a365c284d66ea24a9bb4caae51c63f22c79877b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105792"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194044"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implémentation de la communication basée sur les événements entre les microservices (événements d’intégration)
 
@@ -29,7 +29,7 @@ Comme indiqué dans la section relative à l’architecture, vous pouvez choisir
 
 Si vous souhaitez uniquement implémenter une preuve de concept de bus d’événements pour votre environnement de développement, comme dans l’exemple eShopOnContainers, une simple implémentation par-dessus RabbitMQ exécutée dans un conteneur peut être suffisante. Toutefois, pour les systèmes stratégiques et les systèmes de production qui nécessitent un haut niveau de scalabilité, il peut être utile d’évaluer et d’utiliser Azure Service Bus.
 
-Si vous avez besoin d’un haut niveau d’abstraction et de fonctionnalités plus riches telles que [Sagas](https://docs.particular.net/nservicebus/sagas/) pour les processus longs qui facilitent le développement distribué, d’autres bus de services commerciaux et open source comme NServiceBus, MassTransit et Brighter méritent d’être évalués. Dans ce cas, les abstractions et l’API à utiliser sont généralement celles fournies par ces bus de services de haut niveau, et non vos propres abstractions (comme les [abstractions de bus d’événements simples fournies dans eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Pour cela, vous pouvez examiner [l’exemple eShopOnContainers dupliqué (fork) à l’aide de NServiceBus](http://go.particular.net/eShopOnContainers) (autre exemple dérivé, implémenté par Particular Software)
+Si vous avez besoin d’un haut niveau d’abstraction et de fonctionnalités plus riches telles que [Sagas](https://docs.particular.net/nservicebus/sagas/) pour les processus longs qui facilitent le développement distribué, d’autres bus de services commerciaux et open source comme NServiceBus, MassTransit et Brighter méritent d’être évalués. Dans ce cas, les abstractions et l’API à utiliser sont généralement celles fournies par ces bus de services de haut niveau, et non vos propres abstractions (comme les [abstractions de bus d’événements simples fournies dans eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Pour cela, vous pouvez examiner [l’exemple eShopOnContainers dupliqué (fork) à l’aide de NServiceBus](https://go.particular.net/eShopOnContainers) (autre exemple dérivé, implémenté par Particular Software)
 
 Bien entendu, vous pouvez toujours créer vos propres fonctionnalités de bus de services par-dessus les technologies de bas niveau comme RabbitMQ et Docker. Toutefois, le travail que cela nécessite peut être trop coûteux pour une application d’entreprise personnalisée.
 

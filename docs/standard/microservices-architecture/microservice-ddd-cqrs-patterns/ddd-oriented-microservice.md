@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
-ms.openlocfilehash: 7793a3ffded788698fcbc4ba28edefde44268989
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105769"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183501"
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Conception d’un microservice orienté DDD
 
@@ -57,7 +57,7 @@ L’excellent livre d’Eric Evans [Domain Driven Design](https://domainlanguage
 
 La couche de modèle de domaine est l’endroit où l’entreprise s’exprime. Quand vous implémentez une couche de modèle de domaine de microservice dans .NET, cette couche est codée comme une bibliothèque de classes avec les entités de domaine qui capturent les données ainsi que le comportement (méthodes avec logique).
 
-Selon les principes [d’ignorance de la persistance](http://deviq.com/persistence-ignorance/) et [d’ignorance de l’infrastructure](https://ayende.com/blog/3137/infrastructure-ignorance), cette couche doit ignorer complètement les détails de persistance des données. Ces tâches de persistance doivent être effectuées par la couche d’infrastructure. Par conséquent, cette couche ne nécessite pas de dépendances directes sur l’infrastructure, ce qui signifie qu’il est important que vos classes d’entité de modèle de domaine soient des classes [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
+Selon les principes [d’ignorance de la persistance](https://deviq.com/persistence-ignorance/) et [d’ignorance de l’infrastructure](https://ayende.com/blog/3137/infrastructure-ignorance), cette couche doit ignorer complètement les détails de persistance des données. Ces tâches de persistance doivent être effectuées par la couche d’infrastructure. Par conséquent, cette couche ne nécessite pas de dépendances directes sur l’infrastructure, ce qui signifie qu’il est important que vos classes d’entité de modèle de domaine soient des classes [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object).
 
 Les entités de domaine ne doivent pas avoir de dépendance directe (par exemple, une dérivation d’une classe de base) sur un framework d’infrastructure d’accès aux données comme Entity Framework ou NHibernate. Dans l’idéal, vos entités de domaine ne doivent pas dériver d’un type ni implémenter un type défini dans un framework d’infrastructure.
 
@@ -83,7 +83,7 @@ L’objectif est que la logique de domaine dans la couche de modèle de domaine,
 
 La couche d’infrastructure représente la façon dont les données qui sont initialement contenues dans les entités de domaine (en mémoire) sont conservées dans les bases de données ou un autre magasin persistant. Un exemple est l’utilisation de code Entity Framework Core pour implémenter les classes de modèle de dépôt qui utilisent un DBContext pour conserver les données dans une base de données relationnelle.
 
-Conformément aux principes [d’ignorance de la persistance](http://deviq.com/persistence-ignorance/) et [d’ignorance de l’infrastructure](https://ayende.com/blog/3137/infrastructure-ignorance) mentionnés précédemment, la couche d’infrastructure ne doit pas « contaminer » la couche de modèle de domaine. Les classes d’entité de modèle de domaine doivent rester étrangères à l’infrastructure qui vous permet de rendre persistantes des données (EF ou tout autre framework) en évitant les dépendances dures sur les frameworks. Votre bibliothèque de classes de couche de modèle de domaine doit avoir uniquement votre code de domaine, simplement des classes d’entité [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) qui implémentent le cœur de votre logiciel et qui sont complètement découplées des technologies d’infrastructure.
+Conformément aux principes [d’ignorance de la persistance](https://deviq.com/persistence-ignorance/) et [d’ignorance de l’infrastructure](https://ayende.com/blog/3137/infrastructure-ignorance) mentionnés précédemment, la couche d’infrastructure ne doit pas « contaminer » la couche de modèle de domaine. Les classes d’entité de modèle de domaine doivent rester étrangères à l’infrastructure qui vous permet de rendre persistantes des données (EF ou tout autre framework) en évitant les dépendances dures sur les frameworks. Votre bibliothèque de classes de couche de modèle de domaine doit avoir uniquement votre code de domaine, simplement des classes d’entité [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) qui implémentent le cœur de votre logiciel et qui sont complètement découplées des technologies d’infrastructure.
 
 Par conséquent, vos couches ou bibliothèques de classes et projets doivent finalement s’appuyer sur votre couche de modèle de domaine (bibliothèque), et non l’inverse, comme indiqué dans la Figure 9-7.
 
@@ -96,7 +96,7 @@ Cette conception de couche doit être indépendante pour chaque microservice. Co
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **DevIQ. Persistence Ignorance principle**
-    [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
+    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
 -   **Oren Eini. Infrastructure Ignorance**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)

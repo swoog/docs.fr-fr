@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa37e2237ca0cffe7ff2e64aa53739b6ffafd24a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609721"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182747"
 ---
 # <a name="value-types-table-c-reference"></a>Tableau des types valeur (référence C#)
 
@@ -43,9 +43,9 @@ Utilisez un suffixe de type pour spécifier un type d’un littéral numérique.
 decimal a = 0.1M;
 ```
 
-Quand un [littéral numérique entier](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals) n’a pas de suffixe, il a le premier type parmi les types suivants où sa valeur peut être représentée : `int`, `uint`, `long`, `ulong`.
+Quand un [littéral numérique entier](~/_csharplang/spec/lexical-structure.md#integer-literals) n’a pas de suffixe, il a le premier type parmi les types suivants où sa valeur peut être représentée : `int`, `uint`, `long`, `ulong`.
 
-Si un [littéral numérique réel](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals) n’a pas de suffixe, il a le type `double`.
+Si un [littéral numérique réel](~/_csharplang/spec/lexical-structure.md#real-literals) n’a pas de suffixe, il a le type `double`.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,38 +8,41 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3fa60d4e7546fc88ac2a2ffea45ae69b0da7a6a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516479"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183540"
 ---
 # <a name="select-clause-c-reference"></a>select, clause (Référence C#)
-Dans une expression de requête, la clause `select` spécifie le type de valeurs qui sont générées quand la requête est exécutée. Le résultat est basé sur l’évaluation de toutes les clauses précédentes et sur toutes les expressions de la clause `select` elle-même. Une expression de requête doit se terminer par une clause `select` ou par une clause [group](../../../csharp/language-reference/keywords/group-clause.md).  
-  
- L’exemple suivant présente une clause `select` simple dans une expression de requête.  
-  
- [!code-csharp[cscsrefQueryKeywords#8](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_1.cs)]  
-  
- Le type de la séquence générée par la clause `select` détermine le type de la variable de requête `queryHighScores`. Dans le cas le plus simple, la clause `select` spécifie uniquement la variable de portée. La séquence retournée contient alors des éléments du même type que la source de données. Pour plus d’informations, consultez [Relations des types dans des opérations de requête LINQ](../../../csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md). Toutefois, la clause `select` fournit également un mécanisme puissant pour transformer (ou *projeter*) les données sources en nouveaux types. Pour plus d’informations, consultez [Transformations de données avec LINQ (C#)](../../../csharp/programming-guide/concepts/linq/data-transformations-with-linq.md).  
-  
-## <a name="example"></a>Exemple  
- L’exemple suivant affiche l’ensemble des différentes formes que peut prendre une clause `select`. Dans chaque requête, notez la relation entre la clause `select` et le type de la *variable de requête* (`studentQuery1`, `studentQuery2`, etc.).  
-  
- [!code-csharp[cscsrefQueryKeywords#9](../../../csharp/language-reference/keywords/codesnippet/CSharp/select-clause_2.cs)]  
-  
- Comme indiqué dans `studentQuery8` dans l’exemple précédent, vous pouvez parfois souhaiter que les éléments de la séquence retournée contiennent uniquement un sous-ensemble des propriétés des éléments sources. En limitant au maximum la séquence retournée, vous pouvez réduire les besoins en ressources mémoire et augmenter la vitesse d’exécution de la requête. Pour ce faire, créez un type anonyme dans la clause `select` et utilisez un initialiseur d’objet pour l’initialiser avec les propriétés appropriées de l’élément source. Pour obtenir un exemple de la procédure à suivre, consultez [Initialiseurs d’objet et de collection](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
-  
-## <a name="remarks"></a>Notes  
- Au moment de la compilation, la clause `select` traduite en un appel de méthode à l’opérateur de requête standard <xref:System.Linq.Enumerable.Select%2A>.  
-  
+
+Dans une expression de requête, la clause `select` spécifie le type de valeurs qui sont générées quand la requête est exécutée. Le résultat est basé sur l’évaluation de toutes les clauses précédentes et sur toutes les expressions de la clause `select` elle-même. Une expression de requête doit se terminer par une clause `select` ou par une clause [group](group-clause.md).
+
+L’exemple suivant présente une clause `select` simple dans une expression de requête.
+
+[!code-csharp[cscsrefQueryKeywords#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#8)]  
+
+Le type de la séquence générée par la clause `select` détermine le type de la variable de requête `queryHighScores`. Dans le cas le plus simple, la clause `select` spécifie uniquement la variable de portée. La séquence retournée contient alors des éléments du même type que la source de données. Pour plus d’informations, consultez [Relations des types dans des opérations de requête LINQ](../../programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md). Toutefois, la clause `select` fournit également un mécanisme puissant pour transformer (ou *projeter*) les données sources en nouveaux types. Pour plus d’informations, consultez [Transformations de données avec LINQ (C#)](../../programming-guide/concepts/linq/data-transformations-with-linq.md).
+
+## <a name="example"></a>Exemple
+
+L’exemple suivant affiche l’ensemble des différentes formes que peut prendre une clause `select`. Dans chaque requête, notez la relation entre la clause `select` et le type de la *variable de requête* (`studentQuery1`, `studentQuery2`, etc.).
+
+[!code-csharp[cscsrefQueryKeywords#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Select.cs#9)]
+
+Comme indiqué dans `studentQuery8` dans l’exemple précédent, vous pouvez parfois souhaiter que les éléments de la séquence retournée contiennent uniquement un sous-ensemble des propriétés des éléments sources. En limitant au maximum la séquence retournée, vous pouvez réduire les besoins en ressources mémoire et augmenter la vitesse d’exécution de la requête. Pour ce faire, créez un type anonyme dans la clause `select` et utilisez un initialiseur d’objet pour l’initialiser avec les propriétés appropriées de l’élément source. Pour obtenir un exemple de la procédure à suivre, consultez [Initialiseurs d’objet et de collection](../../programming-guide/classes-and-structs/object-and-collection-initializers.md).
+
+## <a name="remarks"></a>Notes
+
+Au moment de la compilation, la clause `select` traduite en un appel de méthode à l’opérateur de requête standard <xref:System.Linq.Enumerable.Select%2A>.
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Mots clés de requête (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
-- [from, clause](../../../csharp/language-reference/keywords/from-clause.md)  
-- [partial, méthode (Référence C#)](../../../csharp/language-reference/keywords/partial-method.md)  
-- [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [Expressions de requête LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [Bien démarrer avec LINQ en C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Référence C#](../index.md)
+- [Mots clés de requête (LINQ)](query-keywords.md)
+- [from, clause](from-clause.md)
+- [partial, méthode (Référence C#)](partial-method.md)
+- [Types anonymes](../../programming-guide/classes-and-structs/anonymous-types.md)
+- [Expressions de requête LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [Bien démarrer avec LINQ en C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)

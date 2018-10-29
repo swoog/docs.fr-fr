@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231555"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198482"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (outil de gestionnaire de certificats)
 L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de certificats de confiance (CTL) et les listes de révocation de certificats (CRL).  
@@ -54,7 +54,7 @@ L'outil Certificate Manager (Certmgr.exe) gère les certificats, les listes de c
 |Option|Description|  
 |------------|-----------------|  
 |**/add**|Ajoute des certificats, listes de certificats de confiance et listes de révocation de certificats à un magasin de certificats.|  
-|**/all**|Ajoute toutes les entrées si utilisée avec **/add**. Supprime toutes les entrées si utilisée avec **/del**. Affiche toutes les entrées si utilisée sans les options **/add**, ni **/del**. L'option **/all** ne peut pas être utilisée avec **/put**.|  
+|**/all**|Ajoute toutes les entrées si utilisée avec **/add**. Supprime toutes les entrées si utilisée avec **/del**. Affiche toutes les entrées si utilisée sans les options /add, ni **/del**. L'option **/all** ne peut pas être utilisée avec **/put**.|  
 |**/c**|Ajoute des certificats si utilisée avec **/add**. Supprime des certificats si utilisée avec **/del**. Enregistre des certificats si utilisée avec **/put**. Affiche des certificats si utilisée sans les options **/add**, **/del** ou **/put**.|  
 |**/CRL**|Ajoute des listes de révocation de certificats si utilisée avec **/add**. Supprime des listes de révocation de certificats si utilisée avec **/del**. Enregistre des listes de révocation de certificats si utilisée avec **/put**. Affiche les listes de révocation des certificats si utilisée sans les options **/add**, **/del** ou **/put**.|  
 |**/CTL**|Ajoute des listes de certificats de confiance si utilisée avec **/add**. Supprime des listes de certificats de confiance si utilisée avec **/del**. Enregistre des listes de certificats de confiance si utilisée avec **/put**. Affiche des listes de certificats de confiance si utilisée sans l'option **/add**, **/del** ou **/put**.|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils](../../../docs/framework/tools/index.md)  
- [Makecert.exe (outil de création du certificat)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (outil de création du certificat)](/windows/desktop/SecCrypto/makecert)  
  [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391405"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196439"
 ---
 # <a name="deploying-the-net-framework"></a>Déployer le .NET Framework
 Cette section de la documentation du .NET Framework fournit des informations pour les développeurs qui souhaitent installer le .NET Framework avec leurs applications, et pour les administrateurs qui souhaitent déployer le .NET Framework sur un réseau. Elle traite également des problèmes d’activation et de redémarrage associés au déploiement, et décrit comment surveiller la progression de l’installation du .NET Framework.  
@@ -37,4 +37,4 @@ Cette section de la documentation du .NET Framework fournit des informations pou
  Explique comment afficher et déboguer les journaux d’activation du CLR pour résoudre les problèmes que vous pouvez rencontrer quand vous essayez de faire en sorte que votre application s’exécute avec la version appropriée du CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de développement](../../../docs/framework/development-guide.md)
+- [Guide de développement](../../../docs/framework/development-guide.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664525"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50134918"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>Transfert de type dans le Common Language Runtime
 Le transfert de type vous permet de déplacer un type vers un autre assembly sans avoir à recompiler les applications utilisant l’assembly d’origine.  
@@ -44,9 +44,9 @@ Le transfert de type vous permet de déplacer un type vers un autre assembly san
   
 3.  Compilez l’assembly qui contient désormais le type.  
   
-4.  Recompilez l’assembly dans lequel le type se trouvait, avec une référence à l’assembly qui contient désormais le type. Par exemple, si vous compilez un fichier C# de la ligne de commande, utilisez l’option [/reference (Options du compilateur C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) pour spécifier l’assembly contenant le type. Dans C++, utilisez la directive [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) dans le fichier source pour spécifier l’assembly contenant le type.  
+4.  Recompilez l’assembly dans lequel le type se trouvait, avec une référence à l’assembly qui contient désormais le type. Par exemple, si vous compilez un fichier C# de la ligne de commande, utilisez l’option [/reference (Options du compilateur C#)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) pour spécifier l’assembly contenant le type. Dans C++, utilisez la directive [#using](/cpp/preprocessor/hash-using-directive-cpp) dans le fichier source pour spécifier l’assembly contenant le type.  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
- [Transfert de type (C++-CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [Directive #using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+- [Transfert de type (C++-CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+- [Directive #using](/cpp/preprocessor/hash-using-directive-cpp)

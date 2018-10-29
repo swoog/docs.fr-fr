@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 0fb5267e6324d3dffd1ad5a72ef3718c8cdd08b8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c6846b28813273cf99334b0427e304651e4cf5ee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251480"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187164"
 ---
 # <a name="generic-methods-c-programming-guide"></a>Méthodes génériques (guide de programmation C#)
 Une méthode générique est une méthode qui est déclarée avec des paramètres de type, comme suit :  
@@ -43,7 +43,7 @@ Une méthode générique est une méthode qui est déclarée avec des paramètre
  [!code-csharp[csProgGuideGenerics#28](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-methods_7.cs)]  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
- Pour plus d'informations, voir la [spécification du langage C#](../../../csharp/language-reference/language-specification/index.md).  
+ Pour plus d'informations, voir la [spécification du langage C#](~/_csharplang/spec/classes.md#methods).  
   
 ## <a name="see-also"></a>Voir aussi
 

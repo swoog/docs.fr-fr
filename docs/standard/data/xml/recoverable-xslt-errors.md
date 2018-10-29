@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581932"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202983"
 ---
 # <a name="recoverable-xslt-errors"></a>Erreurs XSLT récupérables
 La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend des zones dans lesquelles le fournisseur d'implémentation peut décider de la manière de gérer une situation. Ces zones sont considérées comme discrétionnaires en termes de comportement. Par exemple, dans la section 7.3 sur la création d'instructions de traitement, la recommandation sur XSLT 1.0 précise que la création de nœuds autres que des nœuds de texte lors d'une instanciation du contenu de `xsl:processing-instruction` génère une erreur. Pour certains problèmes, la recommandation sur XSLT 1.0 indique la décision à prendre si le processeur décide de récupérer l'erreur. Pour le problème donné dans la section 7.3, le W3C indique que l'implémentation peut récupérer cette erreur en ignorant les nœuds et leur contenu.  
@@ -22,7 +22,7 @@ La recommandation du W3C sur XSLT (XSL Transformations) Version 1.0 comprend de
   
 -   L'erreur indique qu'une exception est levée pour cette condition.  
   
--   Les références de section se trouvent dans la [recommandation du W3C sur XSLT (XSL Transformations) Version 1.0](http://www.w3.org/TR/xslt) et dans l'[errata de la spécification du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Les références de section se trouvent dans la [recommandation du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/TR/xslt) et dans l'[errata de la spécification du W3C sur XSLT (XSL Transformations) Version 1.0](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Condition XSLT|Section|Comportement XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

@@ -2,14 +2,12 @@
 title: Prise en charge de l’identifiant de ressource internationalisée dans System.Uri
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ef44453dce2f59a2b481d0533b8bd28de516c630
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 742ea03a62426506f068a9b9e669278d0d4663ec
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199162"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047148"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>Prise en charge de l’identifiant de ressource internationalisée dans System.Uri
 La classe <xref:System.Uri?displayProperty=nameWithType> a été étendue pour prendre en charge les identificateurs IRI (International Resource Identifier) et les noms IDN (Internationalized Domain Name). Ces améliorations sont disponibles dans .NET Framework 3.5, 3.0 SP1 et 2.0 SP1.  
