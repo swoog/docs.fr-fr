@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 90af7d01d78cf74cbb304e3b987d5fe58e23f76e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086135"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196698"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue, fonction
 Convertit une valeur de données de performances brute au format spécifié, ou deux valeurs de données de performances brutes si la conversion de format est basé sur l’heure.   
@@ -65,11 +65,11 @@ Une des valeurs précédentes peut être ORed avec l’un des indicateurs de mis
 `pTimeBase`  
 [in] Pointeur vers la base de temps, si nécessaire pour la conversion de format. Si les informations de base de temps ne sont pas nécessaires pour la conversion de format, la valeur de ce paramètre est ignorée.
 
-`pRawValue1` [in] Un pointeur vers un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) structure qui représente une valeur de performances brutes.
+`pRawValue1` [in] Un pointeur vers un [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) structure qui représente une valeur de performances brutes.
 
-`pRawValue2` [in] Un pointeur vers un [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) structure qui représente une seconde valeur de performances brutes. Si une seconde valeur de performances brutes n’est pas nécessaire, ce paramètre doit être `null`.
+`pRawValue2` [in] Un pointeur vers un [ `PDH_RAW_COUNTER` ](/windows/desktop/api/pdh/ns-pdh-_pdh_raw_counter) structure qui représente une seconde valeur de performances brutes. Si une seconde valeur de performances brutes n’est pas nécessaire, ce paramètre doit être `null`.
 
-`pFmtValue` [out] Un pointeur vers un [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) structure qui reçoit la valeur de performance de mise en forme.
+`pFmtValue` [out] Un pointeur vers un [ `PDH_FMT_COUNTERVALUE` ](/windows/desktop/api/pdh/ns-pdh-_pdh_fmt_countervalue) structure qui reçoit la valeur de performance de mise en forme.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -83,7 +83,7 @@ Les valeurs suivantes sont retournées par cette fonction :
   
 ## <a name="remarks"></a>Notes
 
-Cette fonction encapsule un appel à la [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) (fonction).
+Cette fonction encapsule un appel à la [FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29) (fonction).
 
 ## <a name="requirements"></a>Configuration requise  
  **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  

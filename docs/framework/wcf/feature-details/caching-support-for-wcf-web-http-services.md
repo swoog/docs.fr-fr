@@ -2,12 +2,12 @@
 title: Prise en charge de la mise en cache pour les services HTTP Web WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
-ms.translationtype: HT
+ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453292"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196802"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Prise en charge de la mise en cache pour les services HTTP Web WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] vous permet d’utiliser le mécanisme de mise en cache déclaratif déjà disponible dans ASP.NET dans vos services HTTP Web WCF. Il vous permet de mettre en cache les réponses provenant de vos opérations de service HTTP Web WCF. Lorsqu'un utilisateur envoie un HTTP GET à votre service qui est configuré pour la mise en cache, ASP.NET renvoie la réponse mise en cache et la méthode de service n'est pas appelée. Lorsque le cache expire, au prochain envoi d'un HTTP GET par un utilisateur, votre méthode de service est appelée et la réponse est encore une fois mise en cache. Pour plus d’informations sur la mise en cache ASP.NET, consultez [vue d’ensemble de la mise en cache ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -15,7 +15,7 @@ ms.locfileid: "49453292"
 ## <a name="basic-web-http-service-caching"></a>Mise en cache du service HTTP Web de base  
  Pour activer la mise en cache du service HTTP WEB, vous devez d'abord activer la compatibilité ASP.NET en appliquant au service l'objet <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> et en attribuant à la propriété <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> la valeur <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] introduit un nouvel attribut nommé <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> qui vous permet de spécifier un nom de profil de cache. Cet attribut s'applique à une opération de service. L'exemple suivant applique l'objet <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> à un service pour activer la compatibilité ASP.NET et configure l'opération `GetCustomer` pour la mise en cache. Le <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` attribut spécifie un profil de cache qui contient les paramètres de cache à utiliser.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] introduit un nouvel attribut nommé <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> qui vous permet de spécifier un nom de profil de cache. Cet attribut s'applique à une opération de service. L'exemple suivant applique l'objet <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> à un service pour activer la compatibilité ASP.NET et configure l'opération `GetCustomer` pour la mise en cache. L'attribut <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> spécifie un profil de cache qui contient les paramètres de cache à utiliser.  
   
 ```csharp
 [ServiceContract] 

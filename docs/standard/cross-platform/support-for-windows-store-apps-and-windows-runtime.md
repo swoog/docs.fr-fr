@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261561"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198456"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Prise en charge .NET Framework pour les applications Windows Store et Windows Runtime
 Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieurs scénarios de développement de logiciel avec le [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Ces scénarios se répartissent en trois catégories :
@@ -25,7 +25,7 @@ Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieur
 
 -   Développement de bibliothèques de classes à utiliser dans les applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] que vous créez avec le .NET Framework.
 
--   Développement de composants [!INCLUDE[wrt](../../../includes/wrt-md.md)], empaquetés dans des fichiers .WinMD, qui peuvent être utilisés par n’importe quel langage de programmation qui prend en charge le [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Par exemple, consultez [création de composants Windows Runtime en c# et Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx).
+-   Développement de composants [!INCLUDE[wrt](../../../includes/wrt-md.md)], empaquetés dans des fichiers .WinMD, qui peuvent être utilisés par n’importe quel langage de programmation qui prend en charge le [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Par exemple, consultez [création de composants Windows Runtime en c# et Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
  Cette rubrique décrit la prise en charge fournie par le .NET Framework pour ces trois catégories, et décrit les scénarios pour les composants [!INCLUDE[wrt](../../../includes/wrt-md.md)]. La première section comprend des informations de base sur la relation entre le .NET Framework et le [!INCLUDE[wrt](../../../includes/wrt-md.md)], et explique certaines singularités que vous pouvez rencontrer dans le système d’aide et l’IDE. Le [deuxième section](#WindowsRuntimeComponents) décrit des scénarios de développement [!INCLUDE[wrt](../../../includes/wrt-md.md)] composants.
 
@@ -84,12 +84,12 @@ Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieur
 
  La façon dont les interfaces apparaissent dans le code managé affecte la façon dont les types qui implémentent ces interfaces apparaissent. Par exemple, la classe `PropertySet` implémente `IMap<K, V>`, qui s'affiche dans le code managé sous la forme `IDictionary<TKey, TValue>`. `PropertySet` apparaît comme ayant implémenté `IDictionary<TKey, TValue>` au lieu de `IMap<K, V>`, donc en code managé une méthode `Add` semble se comporter comme la méthode `Add` sur les dictionnaires .NET Framework. Il ne semble pas avoir de méthode `Insert`.
 
- Pour plus d’informations sur l’utilisation de .NET Framework pour créer un [!INCLUDE[wrt](../../../includes/wrt-md.md)] composant et une procédure pas à pas qui montre comment utiliser un tel composant avec JavaScript, consultez [création de composants Windows Runtime en c# et Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx).
+ Pour plus d’informations sur l’utilisation de .NET Framework pour créer un [!INCLUDE[wrt](../../../includes/wrt-md.md)] composant et une procédure pas à pas qui montre comment utiliser un tel composant avec JavaScript, consultez [création de composants Windows Runtime en c# et Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
 ### <a name="primitive-types"></a>Types primitifs
  Pour permettre l’utilisation naturelle du [!INCLUDE[wrt](../../../includes/wrt-md.md)] dans le code managé, les types primitifs .NET Framework s’affichent au lieu des types primitifs [!INCLUDE[wrt](../../../includes/wrt-md.md)] dans votre code. Dans le .NET Framework, les types primitifs comme la structure `Int32` ont de nombreuses propriétés et méthodes utiles, telles que la méthode `Int32.TryParse`. En revanche, les types primitifs et les structures dans le [!INCLUDE[wrt](../../../includes/wrt-md.md)] ont uniquement des champs. Quand vous utilisez des primitives dans du code managé, elles semblent être des types .NET Framework, et vous pouvez en utiliser les propriétés et les méthodes comme vous le faites habituellement. La liste suivante fournit un résumé :
 
--   Pour les primitives [!INCLUDE[wrt](../../../includes/wrt-md.md)] `Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (une collection immuables de caractères Unicode), `Enum`, `UInt32`, `UInt64` et `Guid`, utilisez le type portant le même nom que dans l'espace de noms `System`.
+-   Pour les primitives [!INCLUDE[wrt](../../../includes/wrt-md.md)]`Int32`, `Int64`, `Single`, `Double`, `Boolean`, `String` (une collection immuables de caractères Unicode), `Enum`, `UInt32`, `UInt64` et `Guid`, utilisez le type portant le même nom que dans l’espace de noms `System`.
 
 -   Pour `UInt8`, utilisez `System.Byte`.
 
@@ -149,6 +149,6 @@ Le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] prend en charge plusieur
 |[Vue d’ensemble de .NET pour les applications Windows Store](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|Décrit les types .NET Framework et les membres que vous pouvez utiliser pour créer des applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] et des composants [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (Dans le Centre de développement Windows.)|
 |[Feuille de route pour les applications du Windows Store à l’aide de c# ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Fournit des ressources clés pour vous aider à commencer à développer des applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] à l’aide de C# ou Visual Basic, notamment de nombreuses rubriques de démarrage rapide, des instructions et des bonnes pratiques. (Dans le Centre de développement Windows.)|
 |[Comment : procédures (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Fournit des ressources clés pour vous aider à commencer à développer des applications [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] à l’aide de C# ou Visual Basic, notamment de nombreuses rubriques de démarrage rapide, des instructions et des bonnes pratiques. (Dans le Centre de développement Windows.)|
-|[Création de composants Windows Runtime en C# et Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|Décrit comment créer un composant [!INCLUDE[wrt](../../../includes/wrt-md.md)] à l’aide du .NET Framework, explique comment l’utiliser dans le cadre d’une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] conçue pour Windows à l’aide de JavaScript, et décrit comment déboguer la combinaison avec Visual Studio. (Dans le Centre de développement Windows.)|
+|[Création de composants Windows Runtime en C# et Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|Décrit comment créer un composant [!INCLUDE[wrt](../../../includes/wrt-md.md)] à l’aide du .NET Framework, explique comment l’utiliser dans le cadre d’une application [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] conçue pour Windows à l’aide de JavaScript, et décrit comment déboguer la combinaison avec Visual Studio. (Dans le Centre de développement Windows.)|
 |[Guide de référence Windows Runtime](/uwp/api/)|Fournit une documentation de référence pour le [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (Dans le Centre de développement Windows.)|
 |[Passage d’un URI au Windows Runtime](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Décrit un problème qui peut se produire quand vous transmettez un URI du code managé au [!INCLUDE[wrt](../../../includes/wrt-md.md)], et comment l’éviter.|

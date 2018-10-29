@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 71d2edac1dd9a84c9d3c92049d2494c7c5bd54b0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9bf94c28522d42e1a763726469cf9b1a03ccd86e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028215"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196750"
 ---
 # <a name="cryptography-settings-schema"></a>Schéma des paramètres de chiffrement
 Le schéma des paramètres de chiffrement contient des éléments qui spécifient comment mapper des noms d’algorithmes conviviaux à des classes qui implémentent des algorithmes de chiffrement.  
@@ -52,5 +52,5 @@ Le schéma des paramètres de chiffrement contient des éléments qui spécifien
 |[**\<oidMap>**](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|Contient les mappages d’OID ASN.1 aux classes.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Services de chiffrement](../../../../../docs/standard/security/cryptographic-services.md)
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)

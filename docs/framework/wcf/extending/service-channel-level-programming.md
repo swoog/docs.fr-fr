@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: 4d1ee0671a45b12e70f8f43ed2ea83b0a22d6c98
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805858"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197195"
 ---
 # <a name="service-channel-level-programming"></a>Programmation de service au niveau du canal
-Cette rubrique explique comment écrire une application de service Windows Communication Foundation (WCF) sans utiliser le <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> et son modèle objet associé.  
+Cette rubrique décrit comment écrire une application de service Windows Communication Foundation (WCF) sans utiliser le <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> et son modèle objet associé.  
   
 ## <a name="receiving-messages"></a>Réception des messages  
  Pour pouvoir recevoir et traiter des messages, vous devez effectuer les étapes suivantes :  
@@ -29,12 +29,12 @@ Cette rubrique explique comment écrire une application de service Windows Commu
 5.  Fermer tous les objets de canal.  
   
 #### <a name="creating-a-binding"></a>Création d’une liaison  
- La première étape pour écouter et recevoir des messages consiste à créer une liaison. WCF est fourni avec plusieurs liaisons intégrées ou fournies par le système qui peuvent être utilisés directement par l’instanciation d’un d’eux. Vous pouvez également créer votre propre liaison personnalisée en instanciant une classe CustomBinding, comme dans le code n°1.  
+ La première étape pour écouter et recevoir des messages consiste à créer une liaison. WCF est fourni avec plusieurs liaisons intégrées ou fournies par le système qui peuvent être utilisées directement par l’instanciation d’un d’eux. Vous pouvez également créer votre propre liaison personnalisée en instanciant une classe CustomBinding, comme dans le code n°1.  
   
- L'exemple de code suivant crée une instance de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> et ajoute un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> à sa collection Elements qui est une collection d'éléments de liaison utilisés pour générer la pile de canaux. Dans cet exemple, la collection d'éléments ayant uniquement le <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, la pile de canaux résultante dispose uniquement du canal de transport HTTP.  
+ L'exemple de code suivant crée une instance de <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> et ajoute un <xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType> à sa collection Elements qui est une collection d'éléments de liaison utilisés pour générer la pile de canaux. Dans cet exemple, la collection d’éléments ayant uniquement le <xref:System.ServiceModel.Channels.HttpTransportBindingElement>, la pile de canaux résultante dispose uniquement du canal de transport HTTP.  
   
 #### <a name="building-a-channellistener"></a>Génération d'un ChannelListener  
- Après avoir créé une liaison, nous appelons <!--zz<xref:System.ServiceModel.Channels.Binding.BuildChannelListener%601%2A?displayProperty=nameWithType>--> `System.ServiceModel.Channels.Binding.BuildChannelListener` pour générer l’écouteur de canal où le paramètre de type est la forme de canal à créer. Dans cet exemple, nous utilisons <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> car nous souhaitons écouter les messages entrants dans un modèle d'échange de messages demande/réponse.  
+ Après avoir créé une liaison, nous appelons <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> pour générer l’écouteur de canal où le paramètre de type est la forme de canal à créer. Dans cet exemple, nous utilisons <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> car nous souhaitons écouter les messages entrants dans un modèle d’échange de messages demande/réponse.  
   
  <xref:System.ServiceModel.Channels.IReplyChannel> est utilisé pour recevoir des messages de demande et renvoyer des messages de réponse. <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> retourne un <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>, qui peut être utilisé pour recevoir le message de demande et renvoyer un message de réponse.  
   

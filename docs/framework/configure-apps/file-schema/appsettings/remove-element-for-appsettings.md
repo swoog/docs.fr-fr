@@ -1,5 +1,5 @@
 ---
-title: '&lt;supprimer&gt; , élément pour &lt;appSettings&gt;'
+title: '&lt;supprimer&gt; élément pour &lt;appSettings&gt;'
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752115"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199693"
 ---
 # <a name="remove-element-for-appsettings"></a>\<Supprimer >, élément pour \<appSettings >
 
@@ -46,7 +46,7 @@ Supprime les paramètres d’application personnalisés.
 
 ## <a name="child-elements"></a>Éléments enfants
 
-Aucun
+Aucun.
 
 ## <a name="example"></a>Exemple
 
@@ -60,4 +60,4 @@ L’exemple suivant montre comment supprimer un paramètre de configuration pers
 
 ## <a name="see-also"></a>Voir aussi
 
-[Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Schéma de fichier de configuration pour le .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

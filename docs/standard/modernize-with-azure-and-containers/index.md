@@ -4,12 +4,12 @@ description: Apprenez à migrer et moderniser les applications existantes vers l
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413935"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200083"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Moderniser des applications .NET existantes avec le cloud Azure et les conteneurs Windows (2nd edition)
 
@@ -25,7 +25,7 @@ Copyright © 2018 Microsoft Corporation
 
 Tous droits réservés. Aucune partie du contenu de ce document ne peut être reproduite sous quelque forme ou par quelque moyen que ce soit sans l’autorisation écrite de l’éditeur.
 
-Cet ouvrage est disponible gratuitement sous la forme d’un livre électronique (e-book) disponible via plusieurs canaux chez Microsoft, tels que <http://dot.net/architecture>.
+Cet ouvrage est disponible gratuitement sous la forme d’un livre électronique (e-book) disponible via plusieurs canaux chez Microsoft, tels que <https://dot.net/architecture>.
 
 Si vous avez des questions liées à cet ouvrage, envoyez un e-mail à [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -72,7 +72,7 @@ Pour les applications modernes avec la valeur pour l’organisation et l’agili
 
 La figure 1-1 montre les voies possibles utilisables quand vous faites passer progressivement des applications .NET existantes dans le cloud.
 
- ![Voies de modernisation pour les applications et les services .NET existants](./media/image1-1.png)
+ ![Voies de modernisation pour les applications et les services .NET existants](./media/image1-1.png)
 
 > **Figure 1-1**. Voies de modernisation pour les applications et les services .NET existants
 
