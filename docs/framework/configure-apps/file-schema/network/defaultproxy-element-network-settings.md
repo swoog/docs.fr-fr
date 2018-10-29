@@ -8,21 +8,21 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 0d32e5d03b7c78f616f7d68c0fe0edc9a69dd42e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 54185c7cca734ced166fbe0a52b96214321d4469
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50037189"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200501"
 ---
-# <a name="ltdefaultproxygt-element-network-settings"></a><span data-ttu-id="26abc-102">&lt;defaultProxy&gt; , élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="26abc-102">&lt;defaultProxy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="26abc-103">Configure le serveur proxy HTTP (Hypertext Transfer Protocol).</span><span class="sxs-lookup"><span data-stu-id="26abc-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
+# <a name="ltdefaultproxygt-element-network-settings"></a><span data-ttu-id="dbddd-102">&lt;defaultProxy&gt; , élément (paramètres réseau)</span><span class="sxs-lookup"><span data-stu-id="dbddd-102">&lt;defaultProxy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="dbddd-103">Configure le serveur proxy HTTP (Hypertext Transfer Protocol).</span><span class="sxs-lookup"><span data-stu-id="dbddd-103">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>  
   
- <span data-ttu-id="26abc-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="26abc-104">\<configuration></span></span>  
-<span data-ttu-id="26abc-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="26abc-105">\<system.net></span></span>  
-<span data-ttu-id="26abc-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="26abc-106">\<defaultProxy></span></span>  
+ <span data-ttu-id="dbddd-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dbddd-104">\<configuration></span></span>  
+<span data-ttu-id="dbddd-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="dbddd-105">\<system.net></span></span>  
+<span data-ttu-id="dbddd-106">\<defaultProxy ></span><span class="sxs-lookup"><span data-stu-id="dbddd-106">\<defaultProxy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26abc-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="26abc-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dbddd-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="dbddd-107">Syntax</span></span>  
   
 ```xml  
       <defaultProxy  
@@ -34,40 +34,40 @@ ms.locfileid: "50037189"
       </defaultProxy>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="26abc-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="26abc-108">Attributes and Elements</span></span>  
- <span data-ttu-id="26abc-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="26abc-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dbddd-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="dbddd-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="dbddd-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="dbddd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="26abc-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="26abc-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dbddd-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="dbddd-110">Attributes</span></span>  
   
-|<span data-ttu-id="26abc-111">**Élément**</span><span class="sxs-lookup"><span data-stu-id="26abc-111">**Element**</span></span>|<span data-ttu-id="26abc-112">**Description**</span><span class="sxs-lookup"><span data-stu-id="26abc-112">**Description**</span></span>|  
+|<span data-ttu-id="dbddd-111">**Élément**</span><span class="sxs-lookup"><span data-stu-id="dbddd-111">**Element**</span></span>|<span data-ttu-id="dbddd-112">**Description**</span><span class="sxs-lookup"><span data-stu-id="dbddd-112">**Description**</span></span>|  
 |-----------------|---------------------|  
-|`enabled`|<span data-ttu-id="26abc-113">Spécifie si un proxy web est utilisé.</span><span class="sxs-lookup"><span data-stu-id="26abc-113">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="26abc-114">La valeur par défaut est `true`.</span><span class="sxs-lookup"><span data-stu-id="26abc-114">The default value is `true`.</span></span>|  
-|`useDefaultCredentials`|<span data-ttu-id="26abc-115">Spécifie si les informations d'identification par défaut associées à cet hôte sont utilisées pour accéder au proxy web.</span><span class="sxs-lookup"><span data-stu-id="26abc-115">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="26abc-116">La valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="26abc-116">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="dbddd-113">Spécifie si un proxy web est utilisé.</span><span class="sxs-lookup"><span data-stu-id="dbddd-113">Specifies whether a web proxy is used.</span></span> <span data-ttu-id="dbddd-114">La valeur par défaut est `true`.</span><span class="sxs-lookup"><span data-stu-id="dbddd-114">The default value is `true`.</span></span>|  
+|`useDefaultCredentials`|<span data-ttu-id="dbddd-115">Spécifie si les informations d'identification par défaut associées à cet hôte sont utilisées pour accéder au proxy web.</span><span class="sxs-lookup"><span data-stu-id="dbddd-115">Specifies whether the default credentials for this host are used to access the web proxy.</span></span> <span data-ttu-id="dbddd-116">La valeur par défaut est `false`.</span><span class="sxs-lookup"><span data-stu-id="dbddd-116">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="26abc-117">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="26abc-117">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dbddd-117">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="dbddd-117">Child Elements</span></span>  
   
-|<span data-ttu-id="26abc-118">**Élément**</span><span class="sxs-lookup"><span data-stu-id="26abc-118">**Element**</span></span>|<span data-ttu-id="26abc-119">**Description**</span><span class="sxs-lookup"><span data-stu-id="26abc-119">**Description**</span></span>|  
+|<span data-ttu-id="dbddd-118">**Élément**</span><span class="sxs-lookup"><span data-stu-id="dbddd-118">**Element**</span></span>|<span data-ttu-id="dbddd-119">**Description**</span><span class="sxs-lookup"><span data-stu-id="dbddd-119">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="26abc-120">BypassList</span><span class="sxs-lookup"><span data-stu-id="26abc-120">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="26abc-121">Fournit un ensemble d'expressions régulières décrivant les adresses qui n'utilisent pas le proxy.</span><span class="sxs-lookup"><span data-stu-id="26abc-121">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
-|[<span data-ttu-id="26abc-122">module</span><span class="sxs-lookup"><span data-stu-id="26abc-122">module</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|<span data-ttu-id="26abc-123">Ajoute un nouveau module proxy à l'application.</span><span class="sxs-lookup"><span data-stu-id="26abc-123">Adds a new proxy module to the application.</span></span>|  
-|[<span data-ttu-id="26abc-124">Proxy</span><span class="sxs-lookup"><span data-stu-id="26abc-124">proxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|<span data-ttu-id="26abc-125">Définit un serveur proxy.</span><span class="sxs-lookup"><span data-stu-id="26abc-125">Defines a proxy server.</span></span>|  
+|[<span data-ttu-id="dbddd-120">BypassList</span><span class="sxs-lookup"><span data-stu-id="dbddd-120">bypasslist</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|<span data-ttu-id="dbddd-121">Fournit un ensemble d'expressions régulières décrivant les adresses qui n'utilisent pas le proxy.</span><span class="sxs-lookup"><span data-stu-id="dbddd-121">Provides a set of regular expressions that describe addresses that do not use the proxy.</span></span>|  
+|[<span data-ttu-id="dbddd-122">module</span><span class="sxs-lookup"><span data-stu-id="dbddd-122">module</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|<span data-ttu-id="dbddd-123">Ajoute un nouveau module proxy à l'application.</span><span class="sxs-lookup"><span data-stu-id="dbddd-123">Adds a new proxy module to the application.</span></span>|  
+|[<span data-ttu-id="dbddd-124">Proxy</span><span class="sxs-lookup"><span data-stu-id="dbddd-124">proxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|<span data-ttu-id="dbddd-125">Définit un serveur proxy.</span><span class="sxs-lookup"><span data-stu-id="dbddd-125">Defines a proxy server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="26abc-126">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="26abc-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dbddd-126">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="dbddd-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="26abc-127">**Élément**</span><span class="sxs-lookup"><span data-stu-id="26abc-127">**Element**</span></span>|<span data-ttu-id="26abc-128">**Description**</span><span class="sxs-lookup"><span data-stu-id="26abc-128">**Description**</span></span>|  
+|<span data-ttu-id="dbddd-127">**Élément**</span><span class="sxs-lookup"><span data-stu-id="dbddd-127">**Element**</span></span>|<span data-ttu-id="dbddd-128">**Description**</span><span class="sxs-lookup"><span data-stu-id="dbddd-128">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="26abc-129">System.NET</span><span class="sxs-lookup"><span data-stu-id="26abc-129">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="26abc-130">Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.</span><span class="sxs-lookup"><span data-stu-id="26abc-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="dbddd-129">System.NET</span><span class="sxs-lookup"><span data-stu-id="dbddd-129">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="dbddd-130">Contient des paramètres qui spécifient la manière dont .NET Framework se connecte au réseau.</span><span class="sxs-lookup"><span data-stu-id="dbddd-130">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="26abc-131">Notes</span><span class="sxs-lookup"><span data-stu-id="26abc-131">Remarks</span></span>  
- <span data-ttu-id="26abc-132">Si l'élément defaultProxy est vide, les paramètres du proxy Internet Explorer sont utilisés.</span><span class="sxs-lookup"><span data-stu-id="26abc-132">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="26abc-133">Ce comportement est différent de la version 1.1 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="26abc-133">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dbddd-131">Notes</span><span class="sxs-lookup"><span data-stu-id="dbddd-131">Remarks</span></span>  
+ <span data-ttu-id="dbddd-132">Si l'élément defaultProxy est vide, les paramètres du proxy Internet Explorer sont utilisés.</span><span class="sxs-lookup"><span data-stu-id="dbddd-132">If the defaultProxy element is empty, the proxy settings from Internet Explorer will be used.</span></span> <span data-ttu-id="dbddd-133">Ce comportement est différent de la version 1.1 de .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="dbddd-133">This behavior is different from version 1.1 of the .NET Framework.</span></span>  
   
- <span data-ttu-id="26abc-134">Une exception est levée si le [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) élément spécifie un type non public, le type ne dérive pas de la <xref:System.Net.IWebProxy> (classe), une exception à partir du constructeur par défaut de cet objet s’est produite, ou une exception s’est produite alors que récupération du proxy système spécifié la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="26abc-134">An exception is thrown if the [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the default constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="26abc-135">La propriété <xref:System.Exception.InnerException%2A> de l’exception fournit normalement plus d’informations sur la cause racine de l’erreur.</span><span class="sxs-lookup"><span data-stu-id="26abc-135">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
+ <span data-ttu-id="dbddd-134">Une exception est levée si le [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) élément spécifie un type non public, le type ne dérive pas de la <xref:System.Net.IWebProxy> (classe), une exception à partir du constructeur par défaut de cet objet s’est produite, ou une exception s’est produite alors que récupération du proxy système spécifié la valeur par défaut.</span><span class="sxs-lookup"><span data-stu-id="dbddd-134">An exception is thrown if the [module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) element specifies a non-public type, the type is not deriving from the <xref:System.Net.IWebProxy> class, an exception from the default constructor of this object occurred, or an exception occurred while retrieving the system-specified default proxy.</span></span> <span data-ttu-id="dbddd-135">La propriété <xref:System.Exception.InnerException%2A> de l’exception fournit normalement plus d’informations sur la cause racine de l’erreur.</span><span class="sxs-lookup"><span data-stu-id="dbddd-135">The <xref:System.Exception.InnerException%2A> property on the exception should have more information about the root cause of the error.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="26abc-136">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="26abc-136">Configuration Files</span></span>  
- <span data-ttu-id="26abc-137">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="26abc-137">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="dbddd-136">Fichiers de configuration</span><span class="sxs-lookup"><span data-stu-id="dbddd-136">Configuration Files</span></span>  
+ <span data-ttu-id="dbddd-137">Cet élément peut être défini dans le fichier de configuration de l'application ou dans le fichier de configuration de l'ordinateur (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="dbddd-137">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="26abc-138">Exemple</span><span class="sxs-lookup"><span data-stu-id="26abc-138">Example</span></span>  
- <span data-ttu-id="26abc-139">L’exemple suivant utilise les valeurs par défaut du proxy Internet Explorer, spécifie l’adresse de proxy et contourne le proxy pour un accès local et contoso.com.</span><span class="sxs-lookup"><span data-stu-id="26abc-139">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
+## <a name="example"></a><span data-ttu-id="dbddd-138">Exemple</span><span class="sxs-lookup"><span data-stu-id="dbddd-138">Example</span></span>  
+ <span data-ttu-id="dbddd-139">L’exemple suivant utilise les valeurs par défaut du proxy Internet Explorer, spécifie l’adresse de proxy et contourne le proxy pour un accès local et contoso.com.</span><span class="sxs-lookup"><span data-stu-id="dbddd-139">The following example uses the defaults from the Internet Explorer proxy, specifies the proxy address, and bypasses the proxy for local access and contoso.com.</span></span>  
   
 ```xml  
 <configuration>  
@@ -86,6 +86,6 @@ ms.locfileid: "50037189"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="26abc-140">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="26abc-140">See Also</span></span>  
- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
- [<span data-ttu-id="26abc-141">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="26abc-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="dbddd-140">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="dbddd-140">See Also</span></span>  
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
+- [<span data-ttu-id="dbddd-141">Schéma des paramètres réseau</span><span class="sxs-lookup"><span data-stu-id="dbddd-141">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
