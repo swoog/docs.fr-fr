@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 465fdcf9-ba24-4d8d-a43f-d983b7cb0cc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4949540b9f61e71301647a83a1c05d8b4c941412
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c85d0c5c291743c6daac549e15d479fcf332235c
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46581270"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452821"
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent et ManualResetEventSlim
 La classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> représente un événement de descripteur d’attente local qui doit être réinitialisé manuellement après avoir été signalé. Cette classe représente un cas spécial de sa classe de base, <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>. Consultez la documentation conceptuelle de [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) relative à l’utilisation et aux fonctionnalités des événements de réinitialisation manuelle.  
@@ -24,9 +24,10 @@ La classe <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> 
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Thread](../../../docs/standard/threading/index.md)  
-- [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [Descripteurs d’attente](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
-- [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [Semaphore et SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- [AutoResetEvent](autoresetevent.md)  
+- [SpinWait](spinwait.md)  
+- [Semaphore et SemaphoreSlim](semaphore-and-semaphoreslim.md)
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+- [Fonctionnalités et objets de threading](threading-objects-and-features.md)  
+- [Thread](index.md)  

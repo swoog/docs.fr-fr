@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208235"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49478920"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Tableau des conversions numériques explicites (référence C#)
 
@@ -61,7 +61,7 @@ Le tableau suivant indique les conversions explicites prédéfinies entre les ty
   
 - Quand vous convertissez `decimal` en `float` ou `double`, la valeur `decimal` est arrondie à la valeur `double` ou `float` la plus proche.  
   
- Pour plus d’informations sur les conversions explicites, consultez la section [Conversions explicites](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions) de la [Spécification du langage C#](../language-specification/index.md).
+ Pour plus d’informations sur les conversions explicites, consultez la section [Conversions explicites](~/_csharplang/spec/conversions.md#explicit-conversions) de la [Spécification du langage C#](../language-specification/index.md).
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -9,11 +9,11 @@ ms.assetid: 095b0987-ee4b-4595-a160-da1c956ad576
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d838f3d9f4c9400fbbef0fb24f5275eff2038c49
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232675"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086776"
 ---
 # <a name="extract-xml-data-using-xpathnavigator"></a>Extraction de données XML à l’aide de XPathNavigator
 Il existe différentes manières de représenter un document XML dans Microsoft .NET Framework. Ce peut être à l'aide d'une chaîne (<xref:System.String>) ou des classes <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, <xref:System.Xml.XmlDocument> ou <xref:System.Xml.XPath.XPathDocument>. Pour faciliter les déplacements entre ces différentes représentations d'un document XML, la classe <xref:System.Xml.XPath.XPathNavigator> offre diverses méthodes et propriétés d'extraction du XML en tant qu'objet <xref:System.String>, <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter>.  
@@ -53,7 +53,7 @@ string root = navigator.OuterXml;
 ## <a name="convert-an-xpathnavigator-to-an-xmlreader"></a>Conversion d’un objet XPathNavigator en un objet XmlReader  
  La méthode <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> permet de transmettre l'ensemble du contenu d'un document XML ou un seul nœud et ses nœuds enfants à un objet <xref:System.Xml.XmlReader>.  
   
- Lorsque l'objet <xref:System.Xml.XmlReader> est créé avec le nœud actuel et ses nœuds enfants, la propriété <xref:System.Xml.XmlReader> de l'objet <xref:System.Xml.XmlReader.ReadState%2A> est définie sur <xref:System.Xml.ReadState.Initial>. Lorsque la méthode <xref:System.Xml.XmlReader> de l'objet <xref:System.Xml.XmlReader.Read%2A> est appelée pour la première fois, le <xref:System.Xml.XmlReader> est déplacé vers le nœud actuel du <xref:System.Xml.XPath.XPathNavigator>. Le nouvel objet <xref:System.Xml.XmlReader> poursuit la lecture jusqu'à la fin de l'arborescence XML. À ce stade, la méthode <xref:System.Xml.XmlReader.Read%2A> retourne `false` et la propriété <xref:System.Xml.XmlReader> de l'objet <xref:System.Xml.XmlReader.ReadState%2A> est définie sur <xref:System.Xml.ReadState.EndOfFile>.  
+ Lorsque l'objet <xref:System.Xml.XmlReader> est créé avec le nœud actuel et ses nœuds enfants, la propriété <xref:System.Xml.XmlReader> de l'objet <xref:System.Xml.XmlReader.ReadState%2A> est définie sur <xref:System.Xml.ReadState.Initial>. Lorsque la méthode <xref:System.Xml.XmlReader> de l'objet <xref:System.Xml.XmlReader.Read%2A> est appelée pour la première fois, le <xref:System.Xml.XmlReader> est déplacé vers le nœud actuel du <xref:System.Xml.XPath.XPathNavigator>. Le nouvel objet <xref:System.Xml.XmlReader> poursuit la lecture jusqu’à la fin de l’arborescence XML. À ce stade, la méthode <xref:System.Xml.XmlReader.Read%2A> retourne `false` et la propriété <xref:System.Xml.XmlReader> de l'objet <xref:System.Xml.XmlReader.ReadState%2A> est définie sur <xref:System.Xml.ReadState.EndOfFile>.  
   
  La position de l'objet <xref:System.Xml.XPath.XPathNavigator> n'est pas modifiée par la création ou le déplacement de l'objet <xref:System.Xml.XmlReader>. La méthode <xref:System.Xml.XPath.XPathNavigator.ReadSubtree%2A> n'est valide que lorsque vous êtes positionné sur un élément ou un nœud racine.  
   

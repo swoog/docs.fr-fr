@@ -9,11 +9,11 @@ ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81d0ce4f697935908b8ad7084560bd1adacbdf2d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456075"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "47863488"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>Implémentation du processeur XSLT par la classe XslTransform
 > [!NOTE]
@@ -71,17 +71,17 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
  La plupart des méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> illustrées ci-avant prennent un objet <xref:System.Xml.XmlResolver> comme paramètre. L'objet <xref:System.Xml.XmlResolver> s'utilise pour charger la feuille de style et toutes les feuilles de style référencées dans les éléments xsl:import et xsl:include.  
   
- La plupart des méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> prennent également la preuve comme paramètre. Le paramètre de preuve correspond à l'objet <xref:System.Security.Policy.Evidence> associé à la feuille de style. Le niveau de sécurité de la feuille de style affecte le niveau de sécurité de toutes les ressources ultérieures qu'elle référence, comme le script qu'elle contient, toute fonction `document()` qu'elle utilise, et tous les objets d'extension utilisés par l'objet <xref:System.Xml.Xsl.XsltArgumentList>.  
+ La plupart des méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> prennent également la preuve comme paramètre. Le paramètre de preuve correspond à l'objet <xref:System.Security.Policy.Evidence> associé à la feuille de style. Le niveau de sécurité de la feuille de style affecte le niveau de sécurité de toutes les ressources ultérieures qu’elle référence, comme le script qu’elle contient, toute fonction `document()` qu’elle utilise, et tous les objets d’extension utilisés par l’objet <xref:System.Xml.Xsl.XsltArgumentList>.  
   
  Si la feuille de style est chargée à l'aide de la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> qui contient un paramètre d'URL et aucune preuve, la preuve de la feuille de style est calculée en combinant l'URL donnée avec son site et sa zone.  
   
- Si aucun URI ou aucune preuve n'est fourni, la preuve définie pour la feuille de style est d'un niveau de confiance suffisant. Ne chargez pas de feuilles de style à partir de sources non fiables ou n'ajoutez pas d'objets d'extension non fiables dans l'objet <xref:System.Xml.Xsl.XsltArgumentList>.  
+ Si aucun URI ou aucune preuve n'est fourni, la preuve définie pour la feuille de style est d'un niveau de confiance suffisant. Ne chargez pas de feuilles de style à partir de sources non fiables ou n’ajoutez pas d’objets d’extension non fiables dans l’objet <xref:System.Xml.Xsl.XsltArgumentList>.  
   
  Pour plus d'informations sur les niveaux de sécurité et les preuves, ainsi que sur la manière dont ils affectent la création de scripts, consultez [XSLT Stylesheet Scripting à l’aide de \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md). Pour plus d’informations sur les niveaux de sécurité et les preuves, ainsi que sur la manière dont ils affectent les objets d’extension, consultez [XsltArgumentList pour les paramètres de feuille de style et les objets d’extension](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md).  
   
  Pour plus d'informations sur les niveaux de sécurité et les preuves, ainsi que la manière dont ceux-ci affectent la fonction `document()`, consultez [Résolution de feuilles de style XSLT externes et de documents](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md).  
   
- Une feuille de style peut être fournie par un nombre de paramètres d'entrée. La feuille de style peut également appeler des fonctions sur des objets d’extension. Tant les paramètres que les objets d'extension sont fournis à la feuille de style à l'aide de la classe <xref:System.Xml.Xsl.XsltArgumentList>. Pour plus d'informations sur le <xref:System.Xml.Xsl.XsltArgumentList>, consultez <xref:System.Xml.Xsl.XsltArgumentList>.  
+ Une feuille de style peut être fournie par un nombre de paramètres d'entrée. La feuille de style peut également appeler des fonctions sur des objets d’extension. Tant les paramètres que les objets d’extension sont fournis à la feuille de style à l’aide de la classe <xref:System.Xml.Xsl.XsltArgumentList>. Pour plus d'informations sur le <xref:System.Xml.Xsl.XsltArgumentList>, consultez <xref:System.Xml.Xsl.XsltArgumentList>.  
   
 ## <a name="recommended-secure-use-of-xsltransform-class"></a>Utilisation sécurisée recommandée de la classe XslTransform  
  Les privilèges de sécurité de la feuille de style dépendent de la preuve fournie. Le tableau suivant résume l'emplacement de la feuille de style et donne une explication du type de preuve à fournir.  
@@ -104,7 +104,7 @@ public void Load(XPathNavigator, XmlResolver, Evidence);
   
 -   La feuille de style XSLT provient d'une source externe. L'origine de la source n'est pas connue.  
   
-    -   Attribuez à la preuve la valeur `null`. Les blocs de script ne sont pas traités, la fonction `document()` XSLT n'est pas prise en charge et les objets d'extension privilégiés ne sont pas autorisés.  
+    -   Attribuez à la preuve la valeur `null`. Les blocs de script ne sont pas traités, la fonction `document()` XSLT n’est pas prise en charge et les objets d’extension privilégiés ne sont pas autorisés.  
   
          En outre, vous pouvez également attribuer la valeur `resolver` au paramètre `null`. Vous garantissez ainsi que les éléments `xsl:import` et `xsl:include` ne sont pas traités.  
   

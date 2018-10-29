@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 79b63c376d25725b2bcb6c16cdb4d06e107d5c07
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3c5f4c5a1dd1c1065be63ad916af078050c069c1
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199006"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50033647"
 ---
 # <a name="creating-composite-ui-based-on-microservices-including-visual-ui-shape-and-layout-generated-by-multiple-microservices"></a>Création d’une interface utilisateur composite basée sur des microservices, notamment la forme et la disposition de l’interface utilisateur visuelle générées par plusieurs microservices
 
@@ -42,10 +42,10 @@ Nous vous encourageons cependant à utiliser les références suivantes pour en 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **Composite UI using ASP.NET (Particular’s Workshop)**
-    [*http://go.particular.net/workshop-composite-ui-demo*](http://go.particular.net/workshop-composite-ui-demo)
+    [*https://go.particular.net/workshop-composite-ui-demo*](https://go.particular.net/workshop-composite-ui-demo)
 
 -   **Ruben Oostinga. The Monolithic Frontend in the Microservices Architecture**
-    [*http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/*](http://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+    [*https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/*](https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/)
 
 -   **Mauro Servienti. The secret of better UI composition**
     [*https://particular.net/blog/secret-of-better-ui-composition*](https://particular.net/blog/secret-of-better-ui-composition)

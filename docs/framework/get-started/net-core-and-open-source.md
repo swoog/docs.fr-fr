@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e73705e5e96e1b0b92976d22f763afef64929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389250"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454393"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core et Open-Source
 Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment trouver plus d’informations. Pour connaître la liste complète des rubriques de .NET Core, consultez le [Guide .NET Core](../../core/index.md).
@@ -24,7 +24,7 @@ Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment
   
 -   **Multiplateforme.** .NET Core fournit des fonctionnalités clés permettant d’implémenter les composants d’application dont vous avez besoin et de réutiliser le code, quelle que soit votre plateforme cible. Il prend actuellement en charge les trois principaux systèmes d’exploitation : Windows, Linux et Mac OS. Vous pouvez écrire des applications et des bibliothèques qui s’exécutent telles quelles sur les systèmes d’exploitation pris en charge. Pour afficher la liste des systèmes d’exploitation pris en charge, consultez la [feuille de route .NET Core](https://github.com/dotnet/core/blob/master/roadmap.md).
   
--   **Open source.** .NET Core est l’un des nombreux projets placés sous l’intendance de [.NET Foundation](http://www.dotnetfoundation.org/) et disponible sur [GitHub](https://github.com/).  .NET Core, en tant que projet open source, encourage un processus de développement plus transparent et soutient une communauté active et engagée.  
+-   **Open source.** .NET Core est l’un des nombreux projets placés sous l’intendance de [.NET Foundation](https://www.dotnetfoundation.org/) et disponible sur [GitHub](https://github.com/).  .NET Core, en tant que projet open source, encourage un processus de développement plus transparent et soutient une communauté active et engagée.  
   
 -   **Déploiement flexible.** Il existe deux méthodes principales pour déployer votre application : le déploiement dépendant du framework ou le déploiement autonome. Avec le déploiement dépendant du framework, seules vos dépendances d’application et tierces sont installées. Votre application dépend de la présence d’une version de .NET Core à l’échelle du système.  Avec le déploiement autonome, la version de .NET Core utilisée pour générer votre application est également déployée avec les dépendances d’application et tierces, et peut s’exécuter côte à côte avec d’autres versions.    Pour plus d’informations, consultez [Déploiement d’applications .NET Core](../../core/deploying/index.md).
 
@@ -46,6 +46,6 @@ Cette rubrique fournit une vue d’ensemble de .NET Core et vous montre comment
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page d’accueil de .NET Core](https://www.microsoft.com/net/core)  
- [Guide .NET Core](../../core/index.md)  
- [Documentation ASP.NET Core](/aspnet/core/)
+- [Page d’accueil de .NET Core](https://www.microsoft.com/net/core)  
+- [Guide .NET Core](../../core/index.md)  
+- [Documentation ASP.NET Core](/aspnet/core/)

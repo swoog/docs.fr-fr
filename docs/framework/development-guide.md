@@ -7,11 +7,11 @@ ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47209536"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123759"
 ---
 # <a name="net-framework-development-guide"></a>Guide de développement .NET Framework
 Cette section explique comment créer, configurer, déboguer, sécuriser et déployer des applications .NET Framework. La section fournit également des informations sur les aspects technologiques, tels que la programmation dynamique, l'interopérabilité, l'extensibilité, la gestion de la mémoire et les threads.  

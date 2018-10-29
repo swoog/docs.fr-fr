@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f7e45a863c46090dd62d5e1c80b5f0149d9460cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b24cc4b0ad2839d2c2fa099f963b13a5532d39df
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530001"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452886"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Réduction des redémarrages système lors des installations de .NET Framework 4.5
 Le programme d’installation du [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] utilise le [Gestionnaire de redémarrage](https://go.microsoft.com/fwlink/?LinkId=231425) pour empêcher le redémarrage du système autant que possible pendant l’installation. Si votre programme d’installation de l’application installe .NET Framework, il peut interagir avec le Gestionnaire de redémarrage pour tirer parti de cette fonctionnalité. Pour plus d’informations, consultez [Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -35,6 +35,6 @@ Invite pour fermer les applications .NET Framework en cours d'utilisation
  Si vous utilisez un programme d'installation chaîné, mais que vous ne souhaitez pas fournir votre propre boîte de message pour la fermeture des applications, vous pouvez utiliser les options `/showrmui` et `/passive` sur la ligne de commande lorsque vous chaînez le processus d'installation .NET Framework. Lorsque vous utilisez ces options ensemble, le programme d'installation affiche la boîte de message pour fermer les applications qui peuvent l'être pour éviter le redémarrage du système. Cette boîte de message se comporte de la même manière en mode passif que dans l'interface utilisateur. Consultez [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md) pour les options complètes de la ligne de commande du package redistribuable du .NET Framework.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement](../../../docs/framework/deployment/index.md)  
- [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Guide pratique : connaître la progression dans le programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Déploiement](../../../docs/framework/deployment/index.md)  
+- [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Guide pratique : connaître la progression dans le programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

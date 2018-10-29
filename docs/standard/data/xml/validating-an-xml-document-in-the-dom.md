@@ -10,11 +10,11 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47398915"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846238"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validation d'un document XML dans le DOM
 La classe <xref:System.Xml.XmlDocument> ne valide pas le XML dans le DOM (Document Object Model) par rapport à un schéma de langage XSD (XML Schema Definition) ou à une définition de type de document (DTD) par défaut ; il est seulement vérifié que le XML est correctement construit.  
@@ -73,10 +73,10 @@ La classe <xref:System.Xml.XmlDocument> ne valide pas le XML dans le DOM (Docume
 ## <a name="handling-validation-errors-and-warnings"></a>Traitement des erreurs et avertissements de validation  
  Les erreurs de validation de schéma XML sont signalées lors de la validation des données XML chargées dans le DOM. Vous êtes notifié de toutes les erreurs de validation de schéma détectées lors de la validation des données XML en cours de chargement, ou lors de la validation d’un document XML qui n’était pas validé.  
   
- Les erreurs de validation sont traitées par l'objet <xref:System.Xml.Schema.ValidationEventHandler>. Si un objet <xref:System.Xml.Schema.ValidationEventHandler> a été assigné à l'instance de l'objet <xref:System.Xml.XmlReaderSettings> ou transféré à la méthode <xref:System.Xml.XmlDocument.Validate%2A> de la classe <xref:System.Xml.XmlDocument>, l'objet <xref:System.Xml.Schema.ValidationEventHandler> traitera les erreurs de validation de schéma ; sinon, un objet <xref:System.Xml.Schema.XmlSchemaValidationException> est levé lorsqu'une erreur de validation de schéma est détectée.  
+ Les erreurs de validation sont traitées par l’objet <xref:System.Xml.Schema.ValidationEventHandler>. Si un objet <xref:System.Xml.Schema.ValidationEventHandler> a été assigné à l’instance de l’objet <xref:System.Xml.XmlReaderSettings> ou transféré à la méthode <xref:System.Xml.XmlDocument.Validate%2A> de la classe <xref:System.Xml.XmlDocument>, l’objet <xref:System.Xml.Schema.ValidationEventHandler> traitera les erreurs de validation de schéma ; sinon, un objet <xref:System.Xml.Schema.XmlSchemaValidationException> est levé lorsqu’une erreur de validation de schéma est détectée.  
   
 > [!NOTE]
->  Les données XML sont chargées dans le DOM malgré des erreurs de validation de schéma à moins que votre objet <xref:System.Xml.Schema.ValidationEventHandler> soulève une exception afin d'arrêter le processus.  
+>  Les données XML sont chargées dans le DOM malgré des erreurs de validation de schéma à moins que votre objet <xref:System.Xml.Schema.ValidationEventHandler> soulève une exception afin d’arrêter le processus.  
 >   
 >  Les avertissements de validation de schéma ne sont pas signalés à moins que l'indicateur <xref:System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings> ne soit spécifié à l'objet <xref:System.Xml.XmlReaderSettings>.  
   

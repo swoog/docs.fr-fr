@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501798"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035746"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Erreurs d'initialisation du .NET Framework : gestion de l’expérience utilisateur
 Le système d’activation du CLR (Common Langage Runtime) détermine la version du CLR qui sera utilisée pour exécuter du code d’application managé. Dans certains cas, le système d’activation peut ne pas être en mesure de trouver une version du CLR à charger. Cette situation se produit généralement quand une application requiert une version du CLR qui est incorrecte ou non installée sur un ordinateur donné. Si la version demandée est introuvable, le système d’activation du CLR retourne un code d’erreur HRESULT de la fonction ou de l’interface appelée, et peut afficher un message d’erreur destiné à l’utilisateur qui exécute l’application. Cet article fournit une liste de codes HRESULT et montre comment empêcher le message d’erreur de s’afficher.  
@@ -87,7 +87,7 @@ Invite à installer le .NET Framework 3.5 à la demande
  Depuis [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], la journalisation de l’activation du CLR a été améliorée pour inclure les entrées de journal enregistrant quand et pourquoi le message d’erreur d’initialisation est affiché. Pour plus d’informations, consultez [Guide pratique pour déboguer les problèmes d’activation du CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Guide pratique pour configurer une application en vue de prendre en charge le .NET Framework 4 ou 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
- [Guide pratique pour déboguer les problèmes d’activation du CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
- [Installation du .NET Framework 3.5 sur Windows 10, Windows 8.1 et Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Guide pratique pour configurer une application en vue de prendre en charge le .NET Framework 4 ou 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+- [Guide pratique pour déboguer les problèmes d’activation du CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+- [Installation du .NET Framework 3.5 sur Windows 10, Windows 8.1 et Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
 ms.openlocfilehash: 999df9db0819a5f33e21a29b892de0a8854dd5d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46706146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028163"
 ---
 # <a name="-operator-c-reference"></a>|, opérateur (référence C#)
 Les opérateurs `|` binaires sont prédéfinis pour les types intégraux et `bool`. Pour les types intégraux, `|` calcule l’opération OR au niveau du bit de ses opérandes. Pour les opérandes `bool`, `|` calcule l’opération OR logique de ses opérandes ; autrement dit, le résultat est `false` si et seulement si ses deux opérandes ont la valeur `false`.  

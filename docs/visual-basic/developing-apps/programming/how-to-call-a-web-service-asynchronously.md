@@ -5,15 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589034"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842690"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>Guide pratique pour appeler un service web de manière asynchrone (Visual Basic)
-Cet exemple attache un gestionnaire à l'événement de gestionnaire asynchrone d'un service web pour qu'il puisse récupérer le résultat d'un appel de méthode asynchrone. Cet exemple utilise le service web DemoTemperatureService disponible sur http://www.xmethods.net.  
+Cet exemple attache un gestionnaire à l'événement de gestionnaire asynchrone d'un service web pour qu'il puisse récupérer le résultat d'un appel de méthode asynchrone. Cet exemple utilise le service web DemoTemperatureService disponible sur `http://www.xmethods.net`.  
   
  Quand vous faites référence à un service web dans votre projet dans l'IDE (Integrated Development Environment) de Visual Studio, il est ajouté à l'objet `My.WebServices` et l'IDE génère une classe proxy cliente pour accéder à un service web spécifié.  
   
@@ -24,7 +24,7 @@ Cet exemple attache un gestionnaire à l'événement de gestionnaire asynchrone 
   
 ### <a name="to-call-a-web-service-asynchronously"></a>Pour appeler un service web de manière asynchrone  
   
-1.  Faites référence au service web DemoTemperatureService disponible sur http://www.xmethods.net. L'adresse est  
+1.  Faites référence au service web DemoTemperatureService disponible sur `http://www.xmethods.net`. L'adresse est  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

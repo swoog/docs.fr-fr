@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210956"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034333"
 ---
 # <a name="xslt-security-considerations"></a>XSLT et la sécurité
 Le langage XSLT possède une panoplie de fonctionnalités offrant puissance et flexibilité. Il comprend de nombreuses fonctions qui, tout en étant utiles, pourraient aussi être exploitées par des sources extérieures. Pour utiliser XSLT en toute sécurité, vous devez comprendre les types de risques pour la sécurité que pose l'utilisation de XSLT et les stratégies de base que vous pouvez employer pour minimiser ces risques.  
@@ -20,26 +20,26 @@ Le langage XSLT possède une panoplie de fonctionnalités offrant puissance et f
   
 -   Les objets d'extension ajoutent des capacités de programmation aux transformations XSL.  
   
--   Des scripts peuvent être intégrés dans la feuille de style à l'aide de l'élément d'extension `msxsl:script`.  
+-   Des scripts peuvent être intégrés dans la feuille de style à l’aide de l’élément d’extension `msxsl:script`.  
   
 ### <a name="extension-objects"></a>Objets d’extension  
  Les objets d'extension sont ajoutés avec la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>. Le jeu d'autorisations FullTrust est requis pour la prise en charge des objets d'extension. Cela garantit qu’il n’y a pas d’élévation d’autorisations lors de l’exécution du code de l’objet d’extension. Une tentative d'appel de la méthode <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> sans autorisation FullTrust produit une exception de sécurité.  
   
 ### <a name="style-sheet-scripts"></a>Scripts de feuille de style  
- Des scripts peuvent être intégrés dans une feuille de style à l'aide de l'élément d'extension `msxsl:script`. La prise en charge des scripts est une fonction facultative de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Elle est désactivée par défaut. Les scripts peuvent être activés en définissant la propriété <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> sur `true` et en transmettant l'objet <xref:System.Xml.Xsl.XsltSettings> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+ Des scripts peuvent être intégrés dans une feuille de style à l’aide de l’élément d’extension `msxsl:script`. La prise en charge des scripts est une fonctionnalité facultative de la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Elle est désactivée par défaut. Les scripts peuvent être activés en définissant la propriété <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> sur `true` et en transmettant l'objet <xref:System.Xml.Xsl.XsltSettings> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
 #### <a name="guidelines"></a>Recommandations  
- N'activez les scripts que lorsque la source de la feuille de style est fiable. Si vous ne pouvez pas vérifier la source de la feuille de style ou si celle-ci ne provient pas d'une source fiable, transmettez l'argument `null` dans les réglages XSLT.  
+ N'activez les scripts que lorsque la source de la feuille de style est fiable. Si vous ne pouvez pas vérifier la source de la feuille de style ou si celle-ci ne provient pas d’une source fiable, transmettez l’argument `null` dans les réglages XSLT.  
   
 ## <a name="external-resources"></a>Ressources externes  
- Le langage XSLT possède des fonctions telles que `xsl:import`, `xsl:include` ou `document()` où le processeur doit résoudre des références URI. La classe <xref:System.Xml.XmlResolver> permet de résoudre des ressources externes. La résolution de ressources externes peut être requise dans les deux cas suivants :  
+ Le langage XSLT possède des fonctionnalités telles que `xsl:import`, `xsl:include` ou `document()` où le processeur doit résoudre des références URI. La classe <xref:System.Xml.XmlResolver> permet de résoudre des ressources externes. La résolution de ressources externes peut être requise dans les deux cas suivants :  
   
--   Lors de la compilation d'une feuille de style, l'objet <xref:System.Xml.XmlResolver> est utilisé pour résoudre `xsl:import` et `xsl:include`.  
+-   Lors de la compilation d’une feuille de style, l’objet <xref:System.Xml.XmlResolver> est utilisé pour résoudre `xsl:import` et `xsl:include`.  
   
 -   Lorsque la transformation est effectuée, l'objet <xref:System.Xml.XmlResolver> est utilisé pour résoudre la fonction `document()`.  
   
     > [!NOTE]
-    >  La fonction `document()` est désactivée par défaut dans la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Cette fonction peut être activée en définissant la propriété <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> sur `true` et en transmettant l'objet <xref:System.Xml.Xsl.XsltSettings> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
+    >  La fonction `document()` est désactivée par défaut dans la classe <xref:System.Xml.Xsl.XslCompiledTransform>. Cette fonctionnalité peut être activée en définissant la propriété <xref:System.Xml.Xsl.XsltSettings.EnableDocumentFunction%2A?displayProperty=nameWithType> sur `true` et en transmettant l’objet <xref:System.Xml.Xsl.XsltSettings> à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>.  
   
  Les méthodes <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> et <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> comprennent des surcharges qui prennent un objet <xref:System.Xml.XmlResolver> comme l'un de leurs arguments. Si aucun <xref:System.Xml.XmlResolver> n'est spécifié, un <xref:System.Xml.XmlUrlResolver> par défaut sans informations d'identification est utilisé.  
   
@@ -54,10 +54,10 @@ Le langage XSLT possède une panoplie de fonctionnalités offrant puissance et f
   
 -   Pour personnaliser le comportement, vous pouvez implémenter votre propre classe <xref:System.Xml.XmlResolver> et l'utiliser pour résoudre les ressources.  
   
--   Pour vous assurer qu'aucune ressource externe n'est accessible, vous pouvez spécifier `null` pour l'argument <xref:System.Xml.XmlResolver>.  
+-   Pour vous assurer qu’aucune ressource externe n’est accessible, vous pouvez spécifier `null` pour l’argument <xref:System.Xml.XmlResolver>.  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [Transformations XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
 - [Résolution de ressources externes lors du traitement XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
-- [Sécurité d’accès du code](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+- [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)

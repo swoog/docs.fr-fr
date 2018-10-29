@@ -4,11 +4,11 @@ description: En savoir plus sur les modèles d’événement .NET et comment cr�
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
 ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399948"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266765"
 ---
 # <a name="standard-net-event-patterns"></a>Modèles d’événement .NET standard
 

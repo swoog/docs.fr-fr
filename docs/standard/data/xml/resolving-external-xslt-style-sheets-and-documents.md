@@ -6,11 +6,11 @@ ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 39e8afd8c22ca757141d2a7b556b115f8380e731
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47205575"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48847488"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Résolution de feuilles de style XSLT externes et de documents
 Lors d'une transformation, il peut s'avérer nécessaire de résoudre des ressources externes à plusieurs moments.  
@@ -29,7 +29,7 @@ Lors d'une transformation, il peut s'avérer nécessaire de résoudre des ressou
 ## <a name="using-the-xmlresolver-class"></a>Utilisation de la classe XmlResolver  
  Si l'authentification est nécessaire pour accéder à une ressource réseau, utilisez les méthodes <xref:System.Xml.Xsl.XslTransform.Load%2A> qui ont un paramètre <xref:System.Xml.XmlResolver> à passer à l'objet <xref:System.Xml.XmlResolver> qui possède le jeu de propriétés d'informations d'identification nécessaire.  
   
- Si vous souhaitez utiliser un objet <xref:System.Xml.XmlResolver> personnalisé ou si vous devez spécifier des informations d'identification différentes, le tableau suivant répertorie la tâche requise en fonction du moment où la ressource externe doit être résolue.  
+ Si vous souhaitez utiliser un objet <xref:System.Xml.XmlResolver> personnalisé ou si vous devez spécifier des informations d’identification différentes, le tableau suivant répertorie la tâche requise en fonction du moment où la ressource externe doit être résolue.  
   
 |Processus devant être résolu|Tâche requise|  
 |--------------------------------------|-------------------|  

@@ -9,16 +9,16 @@ ms.assetid: 2bc6ddc6-674a-4f75-b264-abc35e4e5857
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6f71d409729707f4af93fd7f8d5b82a99404579b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232753"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836051"
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>XPathNodeIterator dans les transformations
-L'objet <xref:System.Xml.XPath.XPathNodeIterator> fournit des méthodes pour itérer sur une collection de nœuds créée à la suite d'une requête XPath ou d'un fragment d'arborescence résultat converti en une collection de nœuds à l'aide de la méthode node-set. L'objet <xref:System.Xml.XPath.XPathNodeIterator> vous permet d'itérer sur les nœuds à l'intérieur de cette collection de nœuds. Dès qu'une collection de nœuds est extraite, la classe <xref:System.Xml.XPath.XPathNodeIterator> fournit un curseur avant uniquement en lecture seule à la collection de nœuds sélectionnée. La collection de nœuds étant créée dans l'ordre du document, l'appel de cette méthode permet un déplacement vers le prochain nœud dans l'ordre du document. <xref:System.Xml.XPath.XPathNodeIterator> ne construit pas une arborescence de nœuds de tous les nœuds de l'ensemble. Elle fournit à la place une seule fenêtre de nœuds dans les données, exposant le nœud sous-jacent vers lequel elle pointe lors du déplacement dans l'arborescence. Les méthodes et propriétés disponibles à partir de la classe <xref:System.Xml.XPath.XPathNodeIterator> vous permettent d'obtenir des informations à partir du nœud actuel. Pour obtenir la liste des méthodes et propriétés disponibles, voir <xref:System.Windows.Forms.ToolBar>.  
+L’objet <xref:System.Xml.XPath.XPathNodeIterator> fournit des méthodes pour itérer sur une collection de nœuds créée à la suite d’une requête XPath ou d’un fragment d’arborescence résultat converti en une collection de nœuds à l’aide de la méthode node-set. L'objet <xref:System.Xml.XPath.XPathNodeIterator> vous permet d'itérer sur les nœuds à l'intérieur de cette collection de nœuds. Dès qu'une collection de nœuds est extraite, la classe <xref:System.Xml.XPath.XPathNodeIterator> fournit un curseur avant uniquement en lecture seule à la collection de nœuds sélectionnée. La collection de nœuds étant créée dans l'ordre du document, l'appel de cette méthode permet un déplacement vers le prochain nœud dans l'ordre du document. <xref:System.Xml.XPath.XPathNodeIterator> ne construit pas une arborescence de nœuds de tous les nœuds de l'ensemble. Elle fournit à la place une seule fenêtre de nœuds dans les données, exposant le nœud sous-jacent vers lequel elle pointe lors du déplacement dans l'arborescence. Les méthodes et propriétés disponibles à partir de la classe <xref:System.Xml.XPath.XPathNodeIterator> vous permettent d'obtenir des informations à partir du nœud actuel. Pour obtenir la liste des méthodes et propriétés disponibles, voir <xref:System.Windows.Forms.ToolBar>.  
   
- Dans la mesure où un objet <xref:System.Xml.XPath.XPathNodeIterator> se déplace sur une collection de nœuds créée à partir d'une requête XPath et se déplace uniquement en avant, la méthode <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> permet de se déplacer. Le type de retour de cette méthode est `Boolean`, qui retourne `true` si elle se déplace vers le nœud sélectionné suivant, et `false` s'il n'y a plus de nœud sélectionné. Si elle retourne `true`, la liste suivante affiche les propriétés disponibles :  
+ Dans la mesure où un objet <xref:System.Xml.XPath.XPathNodeIterator> se déplace sur une collection de nœuds créée à partir d’une requête XPath et se déplace uniquement en avant, la méthode <xref:System.Xml.XPath.XPathNodeIterator.MoveNext%2A> permet de se déplacer. Le type de retour de cette méthode est `Boolean`, qui retourne `true` si elle se déplace vers le nœud sélectionné suivant, et `false` s’il n’y a plus de nœud sélectionné. Si elle retourne `true`, la liste suivante affiche les propriétés disponibles :  
   
 -   <xref:System.Xml.XPath.XPathNodeIterator.Current%2A>  
   

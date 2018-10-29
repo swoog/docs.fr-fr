@@ -5,20 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004047"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839023"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Mappage entre types de données XML et types CLR
-Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>Le tableau suivant décrit les mappages par défaut entre un type de données XML et un type CLR.  
+
+Le tableau suivant décrit le mappage par défaut entre les types de données XML et les types CLR (common language runtime).
   
 > [!NOTE]
->  Les préfixes `xs` et `xdt` sont mappés aux URI d’espace de noms http://www.w3.org/2001/XMLSchema et http://www.w3.org/2003/05/xpath-datatypes, respectivement.  
+> Les préfixes `xs` et `xdt` sont mappés aux URI d’espace de noms <https://www.w3.org/2001/XMLSchema> et <https://www.w3.org/2003/05/xpath-datatypes>, respectivement.
   
 |Type XML|Type CLR|  
 |--------------|--------------|  

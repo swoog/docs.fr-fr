@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff875f2807a14493ab81a9e354b5c4dcdf3d5feb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 579bc56a538707fd19d6d089c7f3c0c0561ea9eb
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389381"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454419"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling d’un délégué comme méthode de rappel
 Cet exemple montre comment passer des délégués à une fonction non managée qui attend des pointeurs de fonction. Un délégué est une classe qui peut contenir une référence à une méthode, et qui équivaut à un pointeur de fonction de type sécurisé ou à une fonction de rappel.  
@@ -38,7 +38,7 @@ Cet exemple montre comment passer des délégués à une fonction non managée q
     void TestCallBack2(FPTR2 pf2, char* value);  
     ```  
   
- [PinvokeLib.dll](https://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614(v=vs.100)) est une bibliothèque non managée personnalisée qui contient une implémentation des fonctions précédemment répertoriées.  
+ [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) est une bibliothèque non managée personnalisée qui contient une implémentation des fonctions précédemment répertoriées.  
   
  Dans cet exemple, la classe `LibWrap` contient des prototypes managés pour les méthodes `TestCallBack` et `TestCallBack2`. Ces deux méthodes passent un délégué comme paramètre à une fonction de rappel. La signature du délégué doit correspondre à la signature de la méthode qu’il référence. Par exemple, les délégués `FPtr` et `FPtr2` ont des signatures qui sont identiques à celles des méthodes `DoSomething` et `DoSomething2`.  
   

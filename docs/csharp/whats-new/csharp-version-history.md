@@ -3,12 +3,12 @@ title: Histoire du langage C# | Guide C#
 description: À quoi ressemblait le langage dans ses versions antérieures et comment a-t-il évolué depuis ?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504411"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316257"
 ---
 # <a name="the-history-of-c"></a>Histoire du langage C# #
 
@@ -145,10 +145,10 @@ Une autre nouveauté a été proposée avec cette version, même s’il ne s’a
 
 La dernière version majeure est C# version 7.0. Cette version propose des évolutions intéressantes dans l’esprit de C# 6.0, mais sans le compilateur en tant que service. Voici quelques-unes des nouvelles fonctionnalités :
 
-- [Variables out](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Variables out](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Tuples et déconstruction](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Critères spéciaux](./csharp-7.md#pattern-matching)
-- [Fonctions locales](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Fonctions locales](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Membres expression-bodied étendus](./csharp-7.md#more-expression-bodied-members)
 - [Variables locales et retours ref](./csharp-7.md#ref-locals-and-returns)
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667a644253ab52d8421a1d4222e0bf8c03624c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751972"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452980"
 ---
 # <a name="global-assembly-cache"></a>Global Assembly Cache
 Sur chaque ordinateur où le Common Language Runtime est installé, il y a un cache de code machine appelé Global Assembly Cache. Le Global Assembly Cache stocke des assemblys spécialement destinés à être partagés entre plusieurs applications sur l’ordinateur.  
@@ -43,6 +43,6 @@ Sur chaque ordinateur où le Common Language Runtime est installé, il y a un ca
  Les assemblys déployés dans le Global Assembly Cache doivent avoir un nom fort. Quand un assembly est ajouté au Global Assembly Cache, des contrôles d’intégrité sont effectués sur tous les fichiers qui composent l’assembly. Le cache effectue ces contrôles d’intégrité pour vérifier qu’aucun assembly n’a été falsifié, par exemple quand un fichier a changé mais que le manifeste ne reflète pas ce changement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Utilisation d’assemblys et du Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Utilisation d’assemblys et du Global Assembly Cache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md)

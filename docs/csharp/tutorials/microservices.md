@@ -3,12 +3,12 @@ title: Microservices hébergés dans Docker - C#
 description: Apprenez à créer des services principaux ASP.NET qui s’exécutent dans des conteneurs Docker
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106348"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454484"
 ---
 # <a name="microservices-hosted-in-docker"></a>Microservices hébergés dans Docker
 
@@ -41,7 +41,7 @@ Vous devez configurer votre ordinateur pour exécuter .NET Core. Vous trouverez 
 Vous pouvez exécuter cette application sur Windows, Linux, Mac OS ou dans un conteneur Docker.
 Vous devez installer l’éditeur de code de votre choix. Les descriptions ci-dessous utilisent [Visual Studio Code](https://code.visualstudio.com/), un éditeur open source et multiplateforme. Cependant, vous pouvez utiliser les outils avec lesquels vous êtes le plus à l’aise.
 
-Vous devez également installer le moteur Docker. Consultez la [page d’installation de Docker](http://www.docker.com/products/docker) pour obtenir des instructions pour votre plateforme.
+Vous devez également installer le moteur Docker. Consultez la [page d’installation de Docker](https://docs.docker.com/install/overview/) pour obtenir des instructions pour votre plateforme.
 Docker peut être installé dans de nombreuses distributions Linux, Mac OS ou Windows. La page mentionnée ci-dessus contient des sections pour chacune des installations disponibles.
 
 ## <a name="create-the-application"></a>Création de l’application

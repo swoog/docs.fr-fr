@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861622"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846511"
 ---
 # <a name="how-to-configure-client-application-services"></a>Comment : configurer les services d'application cliente
 Cette rubrique décrit comment utiliser le **Concepteur de projet** Visual Studio pour activer et configurer les services d’applications clientes. Vous pouvez utiliser les services d'application cliente pour valider des utilisateurs et extraire des rôles d'utilisateur ainsi que des paramètres d'un service d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Une fois la configuration effectuée, vous pouvez accéder aux services actifs dans votre code d’application comme décrit dans [Vue d’ensemble des services d’application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Pour plus d’informations sur les services d’application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d’ensemble des services d’application ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
- Vous pouvez activer et configurer les services d’application cliente dans la page **Services** du **Concepteur de projet**. La page **Services** met à jour les valeurs dans le fichier App.config de votre projet. Pour accéder au **Concepteur de projet**, utilisez la commande **Propriétés** du menu **Projet**. Pour plus d’informations sur la page **Services**, consultez [Services, page du Concepteur de projet](https://msdn.microsoft.com/library/bb398109).  
+ Vous pouvez activer et configurer les services d’application cliente dans la page **Services** du **Concepteur de projet**. La page **Services** met à jour les valeurs dans le fichier App.config de votre projet. Pour accéder au **Concepteur de projet**, utilisez la commande **Propriétés** du menu **Projet**. Pour plus d’informations sur la page **Services**, consultez [Services, page du Concepteur de projet](/visualstudio/ide/reference/services-page-project-designer).  
   
  La procédure suivante décrit comment effectuer la configuration de base des services d'application cliente. Les options de configuration avancées sont décrites dans les sections suivantes.  
   
@@ -143,7 +143,7 @@ Cette rubrique décrit comment utiliser le **Concepteur de projet** Visual Studi
 ## <a name="see-also"></a>Voir aussi  
  [Services d’application cliente](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Vue d'ensemble des services d'application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Page Services, Concepteur de projet](https://msdn.microsoft.com/library/bb398109)  
+ [Page Services, Concepteur de projet](/visualstudio/ide/reference/services-page-project-designer)  
  [Paramètres avancés pour les services, boîte de dialogue](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Comment : implémenter la connexion utilisateur avec les services d'application cliente](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Procédure pas à pas : utilisation des services d'application cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
