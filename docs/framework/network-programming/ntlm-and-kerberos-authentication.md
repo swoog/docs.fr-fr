@@ -19,17 +19,15 @@ helpviewer_keywords:
 - classes [.NET Framework], authentication
 - client authentication, NTLM
 ms.assetid: 9ef65560-f596-4469-bcce-f4d5407b55cd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e7638b9558363b77b03208d86d98330b922b414c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 254ffea79612c10f147984dda37d0117edbf9e3e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195465"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190292"
 ---
-# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="66946-102">Authentification NTLM et Kerberos</span><span class="sxs-lookup"><span data-stu-id="66946-102">NTLM and Kerberos Authentication</span></span>
-<span data-ttu-id="66946-103">Par défaut, l’authentification NTLM et l’authentification Kerberos utilisent les informations d’identification utilisateur de Microsoft Windows NT qui sont associées à l’application appelante pour tenter l’authentification auprès du serveur.</span><span class="sxs-lookup"><span data-stu-id="66946-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="66946-104">Lorsque vous utilisez l’authentification NTLM qui n’est pas celle par défaut, l’application définit le type d’authentification sur NTLM et utilise un objet <xref:System.Net.NetworkCredential> pour passer le nom d’utilisateur, le mot de passe et le domaine à l’hôte, comme indiqué dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="66946-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
+# <a name="ntlm-and-kerberos-authentication"></a><span data-ttu-id="308f0-102">Authentification NTLM et Kerberos</span><span class="sxs-lookup"><span data-stu-id="308f0-102">NTLM and Kerberos Authentication</span></span>
+<span data-ttu-id="308f0-103">Par défaut, l’authentification NTLM et l’authentification Kerberos utilisent les informations d’identification utilisateur de Microsoft Windows NT qui sont associées à l’application appelante pour tenter l’authentification auprès du serveur.</span><span class="sxs-lookup"><span data-stu-id="308f0-103">Default NTLM authentication and Kerberos authentication use the Microsoft Windows NT user credentials associated with the calling application to attempt authentication with the server.</span></span> <span data-ttu-id="308f0-104">Lorsque vous utilisez l’authentification NTLM qui n’est pas celle par défaut, l’application définit le type d’authentification sur NTLM et utilise un objet <xref:System.Net.NetworkCredential> pour passer le nom d’utilisateur, le mot de passe et le domaine à l’hôte, comme indiqué dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="308f0-104">When using non-default NTLM authentication, the application sets the authentication type to NTLM and uses a <xref:System.Net.NetworkCredential> object to pass the user name, password, and domain to the host, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -45,7 +43,7 @@ WReq.Credentials =
     new NetworkCredential(UserName, SecurelyStoredPassword, Domain);  
 ```  
   
- <span data-ttu-id="66946-105">Les applications qui doivent se connecter aux services Internet à l’aide des informations d’identification de l’utilisateur de l’application peuvent le faire en utilisant les informations d’identification par défaut de l’utilisateur, comme indiqué dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="66946-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
+ <span data-ttu-id="308f0-105">Les applications qui doivent se connecter aux services Internet à l’aide des informations d’identification de l’utilisateur de l’application peuvent le faire en utilisant les informations d’identification par défaut de l’utilisateur, comme indiqué dans l’exemple suivant.</span><span class="sxs-lookup"><span data-stu-id="308f0-105">Applications that need to connect to Internet services using the credentials of the application user can do so with the user's default credentials, as shown in the following example.</span></span>  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  
@@ -59,11 +57,11 @@ WebRequest WReq = WebRequest.Create (MyURI);
 WReq.Credentials = CredentialCache.DefaultCredentials;  
 ```  
   
- <span data-ttu-id="66946-106">Le module d’authentification par négociation détermine si le serveur distant utilise l’authentification NTLM ou l’authentification Kerberos, et envoie sa réponse.</span><span class="sxs-lookup"><span data-stu-id="66946-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
+ <span data-ttu-id="308f0-106">Le module d’authentification par négociation détermine si le serveur distant utilise l’authentification NTLM ou l’authentification Kerberos, et envoie sa réponse.</span><span class="sxs-lookup"><span data-stu-id="308f0-106">The negotiate authentication module determines whether the remote server is using NTLM or Kerberos authentication, and sends the appropriate response.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="66946-107">L’authentification NTLM ne fonctionne pas via un serveur proxy.</span><span class="sxs-lookup"><span data-stu-id="66946-107">NTLM authentication does not work through a proxy server.</span></span>  
+>  <span data-ttu-id="308f0-107">L’authentification NTLM ne fonctionne pas via un serveur proxy.</span><span class="sxs-lookup"><span data-stu-id="308f0-107">NTLM authentication does not work through a proxy server.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="66946-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="66946-108">See Also</span></span>  
- [<span data-ttu-id="66946-109">Authentification de base et authentification Digest</span><span class="sxs-lookup"><span data-stu-id="66946-109">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
- [<span data-ttu-id="66946-110">Authentification Internet</span><span class="sxs-lookup"><span data-stu-id="66946-110">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
+## <a name="see-also"></a><span data-ttu-id="308f0-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="308f0-108">See Also</span></span>  
+ [<span data-ttu-id="308f0-109">Authentification de base et authentification Digest</span><span class="sxs-lookup"><span data-stu-id="308f0-109">Basic and Digest Authentication</span></span>](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [<span data-ttu-id="308f0-110">Authentification Internet</span><span class="sxs-lookup"><span data-stu-id="308f0-110">Internet Authentication</span></span>](../../../docs/framework/network-programming/internet-authentication.md)
