@@ -3,11 +3,11 @@ title: Introduction aux transformations fonctionnelles pures (C#)
 ms.date: 07/20/2015
 ms.assetid: 8495c9d9-2d02-4aa0-8a10-9e8794b985fe
 ms.openlocfilehash: f04189c5ae6fc8f6c827f983357ab0126b2c086d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193851"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087259"
 ---
 # <a name="introduction-to-pure-functional-transformations-c"></a>Introduction aux transformations fonctionnelles pures (C#)
 Cette section présente les transformations fonctionnelles, y compris les concepts sous-jacents et les constructions de prise en charge. Elle décrit le contraste qu'il existe entre la programmation orientée objet et la programmation avec transformation fonctionnelle, et fournit des conseils pour aider les programmeurs à passer de l'une à l'autre. Bien que les transformations fonctionnelles puissent être utilisées dans de nombreux scénarios de programmation, la transformation XML est utilisée ici comme exemple concret.  

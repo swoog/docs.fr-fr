@@ -8,12 +8,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 157bd07f3332883f010ef26ba920dae88276051b
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084675"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584349"
 ---
 # <a name="group-clause-c-reference"></a>group, clause (Référence C#)
 
@@ -53,7 +53,7 @@ L’exemple suivant illustre l’utilisation d’une valeur booléenne pour une 
 
 ### <a name="grouping-by-numeric-range"></a>Regroupement par plage numérique
 
-L’exemple suivant utilise une expression pour créer des clés de groupes numériques qui représentent une plage de centiles. Notez l’utilisation de [let](let-clause.md) comme emplacement pratique pour stocker un résultat d’appel de méthode, qui vous évite d’avoir à appeler deux fois la méthode dans la clause `group`. Notez aussi que dans la clause `group`, pour éviter une exception « division par zéro », le code vérifie que l’étudiant n’a pas une moyenne égale à zéro. Pour plus d’informations sur la façon d’utiliser en toute sécurité des méthodes dans des expressions de requête, consultez [Guide pratique pour gérer des exceptions dans des expressions de requête](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+L’exemple suivant utilise une expression pour créer des clés de groupes numériques qui représentent une plage de centiles. Notez l’utilisation de [let](let-clause.md) comme emplacement pratique pour stocker un résultat d’appel de méthode, qui vous évite d’avoir à appeler deux fois la méthode dans la clause `group`. Pour plus d’informations sur la façon d’utiliser en toute sécurité des méthodes dans des expressions de requête, consultez [Guide pratique pour gérer des exceptions dans des expressions de requête](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 

@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208248"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454445"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Déploiement d’applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
 
@@ -77,7 +77,7 @@ Le déploiement d’un déploiement dépendant du framework sans dépendances ti
 
 Pour exécuter un déploiement dépendant du framework avec une ou plusieurs dépendances tierces, ces dépendances doivent être accessibles à votre projet. Avant de pouvoir exécuter la commande `dotnet restore` ([voir la remarque](#dotnet-restore-note)), vous devez effectuer les deux étapes suivantes :
 
-1. Ajoutez les références aux bibliothèques tierces exigées à la section `<ItemGroup>` de votre fichier *csproj*. La section `<ItemGroup>` suivante contient une dépendance à [Json.NET](http://www.newtonsoft.com/json) comme bibliothèque tierce :
+1. Ajoutez les références aux bibliothèques tierces exigées à la section `<ItemGroup>` de votre fichier *csproj*. La section `<ItemGroup>` suivante contient une dépendance à [Json.NET](https://www.newtonsoft.com/json) comme bibliothèque tierce :
 
       ```xml
       <ItemGroup>

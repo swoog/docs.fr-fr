@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4336978825fbf7844b3ceaf179954f28660f08c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04b28dec0f016d44692665fb0ce95a7e496f103c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409405"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200520"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next, méthode
 Obtient le nombre spécifié de [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets à partir de l’énumération, en commençant à la position actuelle.  
@@ -41,7 +41,7 @@ HRESULT Next([in] ULONG  celt,
  [in] Le nombre d’objets à récupérer.  
   
  `values`  
- [out] Un tableau de pointeurs vers les [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets.  
+ [out] Un tableau de pointeurs vers [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) objets.  
   
  `pceltFetched`  
  [out] Pointeur vers le nombre d’objets qui ont été récupérées.  
@@ -57,21 +57,19 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="remarks"></a>Notes  
  Cette méthode fonctionne comme un énumérateur COM classique.  
   
- Les valeurs du tableau d’entrée doivent être au moins de taille `celt`. Le tableau sera rempli avec l’option suivant `celt` valeurs dans l’énumération ou avec toutes les valeurs restantes si moins de `celt` restent. Lorsque cette méthode est retournée, `pceltFetched` sera rempli avec le nombre de valeurs qui ont été récupérées. Si `values` contient des pointeurs non valides ou pointe vers une mémoire tampon qui est plus petite que `celt`, ou si `pceltFetched` est un pointeur non valide, le résultat est indéfini.  
+ Les valeurs du tableau d’entrée doivent être au moins de taille `celt`. Le tableau est rempli avec une l’autre `celt` valeurs dans l’énumération ou avec toutes les valeurs restantes si moins de `celt` restent. Lorsque cette méthode est retournée, `pceltFetched` sera remplie avec le nombre de valeurs qui ont été récupérées. Si `values` contient des pointeurs non valides ou pointe vers une mémoire tampon qui est inférieure à `celt`, ou si `pceltFetched` est un pointeur non valide, le résultat est indéfini.  
   
 > [!NOTE]
->  Bien que le [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure n’a pas besoin d’être publié, l’interface « ICorDebugValue » qu’elle a besoin être publié.  
+>  Bien que le [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) structure n’a pas besoin être libéré, l’interface « ICorDebugValue » qu’elle n’a besoin d’être publié.  
   
--  
-  
-## <a name="requirements"></a>Spécifications  
- **Plateformes :** consultez [requise](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>Configuration requise  
+ **Plateformes :** Consultez [Configuration requise](../../../../docs/framework/get-started/system-requirements.md).  
   
  **En-tête :** CorDebug.idl, CorDebug.h  
   
  **Bibliothèque :** CorGuids.lib  
   
- **Versions du .NET framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Versions du .NET Framework :** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  
  [ICorDebugDataTarget, interface](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)  

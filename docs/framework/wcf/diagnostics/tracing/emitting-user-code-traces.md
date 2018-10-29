@@ -3,11 +3,11 @@ title: Émission de suivis dans du code utilisateur
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049163"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200585"
 ---
 # <a name="emitting-user-code-traces"></a>Émission de suivis dans du code utilisateur
 Outre l’activation du suivi dans une configuration pour collecter des données d’instrumentation générées par Windows Communication Foundation (WCF), vous pouvez également émettre des suivis par programmation dans le code utilisateur. Ainsi, vous pouvez créer de manière proactive des données d'instrumentation que vous pouvez consulter ultérieurement à des fins de diagnostic. Cette rubrique explique comment procéder.  

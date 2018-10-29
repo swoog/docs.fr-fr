@@ -3,11 +3,11 @@ title: Sécurité de transport HTTP
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: 043154095d4600bd824457750effe9ea5494dcf5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036955"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201528"
 ---
 # <a name="http-transport-security"></a>Sécurité de transport HTTP
 Lors de l'utilisation du protocole HTTP comme transport, la sécurité est fournie par une implémentation SSL (Secure Sockets Layer). SSL est largement utilisé sur Internet pour authentifier un service auprès d'un client, puis pour fournir la confidentialité (chiffrement) au canal. Cette rubrique explique comment SSL fonctionne et comment il est implémenté dans Windows Communication Foundation (WCF).  

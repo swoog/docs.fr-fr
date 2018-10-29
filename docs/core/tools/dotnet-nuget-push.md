@@ -4,12 +4,12 @@ description: La commande dotnet nuget push exécute un envoi (push) d’un packa
 author: karann-msft
 ms.author: mairaw
 ms.date: 09/04/2018
-ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45610000"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50200020"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -179,9 +179,9 @@ Envoie (push) *foo.nupkg* à la source de push par défaut, en spécifiant une c
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-Envoyez (push) *foo.nupkg* à la source de push personnalisée `http://customsource`, en spécifiant une clé API :
+Envoyez (push) *foo.nupkg* à la source de push personnalisée `https://customsource`, en spécifiant une clé API :
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
 
 Effectuer une transmission de type push de *foo.nupkg* vers la source de push par défaut :
 

@@ -5,24 +5,27 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9a9e9295425efaadff4ac1f0b796b2c9a889543
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424465"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200951"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Vue d’ensemble de la globalisation et de la localisation WPF
+
 Quand vous limitez la disponibilité de votre produit à une seule langue, vous limitez votre clientèle potentielle à une fraction des 6,5 milliards de personnes qui constituent la population mondiale. Si vous voulez que vos applications atteignent une audience mondiale, la localisation est le meilleur moyen, et le plus rentable, pour que votre produit atteigne plus de clients.  
   
  Cette vue d’ensemble présente la globalisation et localisation dans [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. La globalisation consiste à concevoir et à développer des applications qui s’exécutent dans plusieurs endroits. Par exemple, la globalisation prend en charge des interfaces utilisateur localisées et des données régionales pour les utilisateurs de différentes cultures. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Fournit des fonctionnalités de conception globalisées, notamment la disposition automatique, les assemblys satellites et les attributs localisées et les commentaires.
   
- La localisation est la traduction des ressources d’une application dans les versions localisées pour des cultures spécifiques prises en charge par l’application. Quand vous localisez dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vous utilisez les API dans le <xref:System.Windows.Markup.Localizer> espace de noms. Puissance de ces API le [exemple d’outil LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) outil de ligne de commande. Pour plus d’informations sur la génération et l’utilisation de LocBaml, consultez [localiser une Application](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).    
+ La localisation est la traduction des ressources d’une application dans les versions localisées pour des cultures spécifiques prises en charge par l’application. Quand vous localisez dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], vous utilisez les API dans le <xref:System.Windows.Markup.Localizer> espace de noms. Puissance de ces API le [exemple d’outil LocBaml](https://go.microsoft.com/fwlink/?LinkID=160016) outil de ligne de commande. Pour plus d’informations sur la génération et l’utilisation de LocBaml, consultez [localiser une Application](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md).
   
-## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Bonnes pratiques pour la globalisation et la localisation dans WPF  
+## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>Bonnes pratiques pour la globalisation et la localisation dans WPF
+
  Vous pouvez tirer parti de la fonctionnalité de globalisation et localisation intégrée à [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] en suivant la conception d’interface utilisateur et les conseils présentés dans cette section concernant la localisation.  
   
-### <a name="best-practices-for-wpf-ui-design"></a>Bonnes pratiques pour la conception de l’interface utilisateur WPF  
+### <a name="best-practices-for-wpf-ui-design"></a>Bonnes pratiques pour la conception de l’interface utilisateur WPF
+
  Lorsque vous concevez un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– en [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], envisagez d’implémenter ces meilleures pratiques :  
   
 -   Écrire votre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; Évitez de créer des [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dans le code. Lorsque vous créez votre [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] à l’aide de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], vous l’exposez à travers des API de localisation intégrées.  
@@ -39,7 +42,7 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
 -   Activer <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> sur <xref:System.Windows.Controls.TextBlock> pour éviter le découpage.
   
--   Définir le `xml:lang` attribut. Cet attribut décrit la culture d’un élément spécifique et ses éléments enfants. La valeur de cette propriété modifie le comportement de plusieurs fonctionnalités dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Par exemple, elle change le comportement de la coupure des mots, la vérification orthographique, la substitution des nombres, la mise en forme des scripts complexes et la police de substitution. Consultez [globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) pour plus d’informations sur la configuration de la [XML : lang dans XAML de gestion des](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
+-   Définissez l’attribut `xml:lang` . Cet attribut décrit la culture d’un élément spécifique et ses éléments enfants. La valeur de cette propriété modifie le comportement de plusieurs fonctionnalités dans [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Par exemple, elle change le comportement de la coupure des mots, la vérification orthographique, la substitution des nombres, la mise en forme des scripts complexes et la police de substitution. Consultez [globalisation pour WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) pour plus d’informations sur la configuration de la [XML : lang dans XAML de gestion des](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md).  
   
 -   Créer une police composite personnalisée pour obtenir un meilleur contrôle des polices qui sont utilisées pour différentes langues. Par défaut, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] utilise la police GlobalUserInterface.composite qui se trouve dans votre répertoire Windows/Fonts.  
   
@@ -47,7 +50,8 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
 -   Lorsque vous créez des applications de navigation autonomes hébergées en dehors d’un navigateur, définissez la <xref:System.Windows.Application.StartupUri%2A> pour votre application initiale sur un <xref:System.Windows.Navigation.NavigationWindow> au lieu de vers une page (par exemple, `<Application StartupUri="NavigationWindow.xaml">`). Cette conception vous permet de modifier le <xref:System.Windows.FlowDirection> de la fenêtre et la barre de navigation. Pour plus d’informations et un exemple, consultez [Globalization Homepage Sample](https://go.microsoft.com/fwlink/?LinkID=159990).  
   
-### <a name="best-practices-for-wpf-localization"></a>Bonnes pratiques pour la localisation WPF  
+### <a name="best-practices-for-wpf-localization"></a>Bonnes pratiques pour la localisation WPF
+
  Quand vous localisez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– applications reposant sur, envisagez d’implémenter ces meilleures pratiques :  
   
 -   Utiliser des commentaires de localisation pour fournir le contexte supplémentaire aux localiseurs.  
@@ -64,9 +68,9 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
          Si vous décidez d’inclure votre langue source dans l’assembly principal en omettant le `<UICulture>` baliser dans votre fichier projet, définissez le `UltimateResourceFallback` emplacement que l’assembly principal au lieu du satellite (par exemple, `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).  
   
-<a name="workflow_to_localize" />   
-## <a name="localize-a-wpf-application"></a>Localiser une application WPF  
- Quand vous localisez un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, vous disposez de plusieurs options. Par exemple, vous pouvez lier les ressources localisables dans votre application pour un [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] de fichiers, stocker le texte localisable dans les tables resx ou demander aux localiseurs d’utiliser [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichiers. Cette section décrit un flux de travail de localisation qui utilise le formulaire BAML de XAML, ce qui offre plusieurs avantages :  
+## <a name="localize-a-wpf-application"></a>Localiser une application WPF
+
+Quand vous localisez un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, vous disposez de plusieurs options. Par exemple, vous pouvez lier les ressources localisables dans votre application pour un [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] de fichiers, stocker le texte localisable dans les tables resx ou demander aux localiseurs d’utiliser [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] fichiers. Cette section décrit un flux de travail de localisation qui utilise le formulaire BAML de XAML, ce qui offre plusieurs avantages :  
   
 -   Vous pouvez localiser après avoir généré.  
   
@@ -75,14 +79,16 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
 -   Vous pouvez valider des éléments de la source d’origine et la sémantique au moment de la compilation, car le formulaire BAML de XAML est la forme compilée de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 ### <a name="localization-build-process"></a>Processus de génération de la localisation  
- Lorsque vous développez un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, le processus de génération pour la localisation est la suivante :  
+
+Lorsque vous développez un [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application, le processus de génération pour la localisation est la suivante :  
   
 -   Le développeur crée et globalise le [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] application. Dans le fichier projet, le développeur définit `<UICulture>en-US</UICulture>` afin que lorsque l’application est compilée, un assembly principal indépendant de la langue est généré. Cet assembly a un fichier .resources.dll satellite qui contient toutes les ressources localisables. Si vous le souhaitez, vous pouvez conserver la langue source dans l’assembly principal, car notre localisation [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] prennent en charge l’extraction à partir de l’assembly principal.  
   
 -   Lorsque le fichier est compilé dans la build, le [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] est converti en formulaire BAML de XAML. Culturellement neutre `MyDialog.exe` et la culture dépendante (en anglais) `MyDialog.resources.dll` sont publiés pour le client anglophone.  
   
-### <a name="localization-workflow"></a>Flux du travail de localisation  
- Le processus de localisation commence après le non localisé `MyDialog.resources.dll` fichier est généré. Le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] éléments et les propriétés dans votre original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sont extraits à partir du formulaire BAML de XAML en paires clé-valeur à l’aide de la [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] sous <xref:System.Windows.Markup.Localizer>. Les localiseurs utilisent les paires clé-valeur pour localiser l’application. Vous pouvez générer un nouveau fichier .resource.dll à partir des nouvelles valeurs une fois la localisation terminée.  
+### <a name="localization-workflow"></a>Flux du travail de localisation
+
+Le processus de localisation commence après le non localisé `MyDialog.resources.dll` fichier est généré. Le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] éléments et les propriétés dans votre original [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sont extraits à partir du formulaire BAML de XAML en paires clé-valeur à l’aide de la [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] sous <xref:System.Windows.Markup.Localizer>. Les localiseurs utilisent les paires clé-valeur pour localiser l’application. Vous pouvez générer un nouveau fichier .resource.dll à partir des nouvelles valeurs une fois la localisation terminée.
   
  Les clés des paires clé-valeur sont `x:Uid` valeurs placées par le développeur dans la version d’origine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Ces `x:Uid` valeurs activer le [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] pour suivre et de fusionner les modifications qui interviennent entre le développeur et le localisateur lors de la localisation. Par exemple, si le développeur modifie le [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] une fois que le localisateur a commencé la localisation, vous pouvez fusionner les modifications des développements avec le travail de localisation terminé afin que le travail réalisé en traduction est perdue.  
   
@@ -92,11 +98,12 @@ Quand vous limitez la disponibilité de votre produit à une seule langue, vous 
   
  ![Flux de travail non localisé](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization" />   
-## <a name="examples-of-wpf-localization"></a>Exemples de localisation WPF  
+## <a name="examples-of-wpf-localization"></a>Exemples de localisation WPF
+
  Cette section contient des exemples d’applications localisées pour vous aider à comprendre comment générer et localiser [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] applications.  
   
-#### <a name="run-dialog-box-example"></a>Exemple de boîte de dialogue Run  
+#### <a name="run-dialog-box-example"></a>Exemple de boîte de dialogue Run
+
  Les graphiques suivants illustrent la sortie de la **exécuter** exemple de boîte de dialogue.  
   
  **Anglais :**  

@@ -4,12 +4,12 @@ description: Découvrez les fonctionnalités de télémétrie du kit SDK .NET Co
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: b60fc9d9d619334269343fd858a782cdfeb09ba4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a20d79e132726cb342064b681218ee568fab2c13
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513338"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841614"
 ---
 # <a name="net-core-sdk-telemetry"></a>Télémétrie du kit SDK .NET Core
 
@@ -106,7 +106,7 @@ La distribution Microsoft de .NET Core est concédée sous licence avec le [CLUF
 
 Les [packages NuGet .NET](https://www.nuget.org/profiles/dotnetframework) utilisent la même licence, mais ne permettent pas la télémétrie (voir la section [Portée](#scope)).
 
-> 2. DONNÉES. Le logiciel peut collecter des informations sur vous et votre utilisation du logiciel et les envoyer à Microsoft. Microsoft peut utiliser ces informations pour améliorer ses produits et services. Pour plus d’informations sur la collecte et l’utilisation des données, consultez la documentation d’aide et la déclaration de confidentialité à l’adresse http://go.microsoft.com/fwlink/?LinkId=528096. Votre utilisation du logiciel est considérée comme votre acceptation de ces pratiques.
+> 2. DONNÉES. Le logiciel peut collecter des informations sur vous et votre utilisation du logiciel et les envoyer à Microsoft. Microsoft peut utiliser ces informations pour améliorer ses produits et services. Pour plus d’informations sur la collecte et l’utilisation des données, consultez la documentation d’aide et la déclaration de confidentialité à l’adresse <http://go.microsoft.com/fwlink/?LinkId=528096>. Votre utilisation du logiciel est considérée comme votre acceptation de ces pratiques.
 
 ## <a name="disclosure"></a>Divulgation d’informations
 

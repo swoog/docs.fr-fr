@@ -4,12 +4,12 @@ description: Découvrez les scripts dotnet-install pour installer les outils CL
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004008"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837074"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Documentation sur les scripts dotnet-install
 
@@ -33,8 +33,8 @@ Les scripts `dotnet-install` sont utilisés pour effectuer une installation non 
 
 Nous vous recommandons d’utiliser la version stable hébergée sur le [site web principal de .NET Core](https://dot.net). Les chemins d’accès directs aux scripts sont :
 
-* https://dot.net/v1/dotnet-install.sh (bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows)
+* <https://dot.net/v1/dotnet-install.sh> (bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows)
 
 La principale utilité de ces scripts réside dans les scénarios d’automatisation et les installations non administrateur. Il existe deux scripts : un script PowerShell qui fonctionne sous Windows. L’autre script est un script bash qui fonctionne sur Linux/macOS. Les deux scripts ont le même comportement. Comme le script bash lit également les commutateurs PowerShell, vous pouvez utiliser ces derniers avec le script sur les systèmes Linux/macOS.
 
@@ -65,7 +65,7 @@ Représente une version spécifique. Les valeurs possibles sont :
 
 - `latest` - Dernière version sur le canal (utilisée avec l’option `-Channel`)
 - `coherent` - Dernière version cohérente sur le canal ; utilise la dernière combinaison de packages stable (utilisée avec les options `-Channel` de nom de branche)
-- Version en trois parties au format X.Y.Z représentant une version spécifique ; remplace l’option `-Channel`. Par exemple :`2.0.0-preview2-006120`
+- Version en trois parties au format X.Y.Z représentant une version spécifique ; remplace l’option `-Channel`. Exemple : `2.0.0-preview2-006120`.
 
 Si aucune valeur n'est spécifiée, la valeur utilisée par défaut pour `-Version` est `latest`.
 

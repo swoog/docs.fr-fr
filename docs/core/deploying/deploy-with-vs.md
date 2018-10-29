@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204295"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584382"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Déploiement d’applications .NET Core avec Visual Studio
 
@@ -144,7 +144,7 @@ Pour publier votre application à partir de Visual Studio, effectuez les étapes
 
       1. Sous l’onglet **Publier**, sélectionnez **Publier**. Visual Studio écrit les fichiers qui composent votre application dans le système de fichiers local.
 
-      1. L’onglet **Publier** affiche maintenant un seul profil, **FolderProfile**. Les paramètres de configuration du profil sont affichés dans la section **Résumé** de l’onglet. **Runtime cible** identifie le runtime qui a été publié, et **Emplacement cible** l’endroit où les fichiers du déploiement autonome ont été écrits.
+      1. L’onglet **Publier** affiche maintenant un seul profil, **FolderProfile**. Les paramètres de configuration du profil sont affichés dans la section **Résumé** de l’onglet. Runtime cible identifie le runtime qui a été publié, et **Emplacement cible** l’endroit où les fichiers du déploiement autonome ont été écrits.
 
       1. Par défaut, Visual Studio écrit tous les fichiers publiés dans un répertoire unique. Pour des raisons pratiques, il est préférable de créer des profils séparés pour chaque runtime cible et de placer les fichiers publiés dans un répertoire spécifique à la plateforme. Vous devez donc créer un profil de publication distinct pour chaque plateforme cible. À présent, effectuez les étapes suivantes pour regénérer l’application pour chaque plateforme :
 

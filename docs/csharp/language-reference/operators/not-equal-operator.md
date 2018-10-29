@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
 ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47455472"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837826"
 ---
 # <a name="-operator-c-reference"></a>!=, opérateur (référence C#)
 L’opérateur d’inégalité (`!=`) retourne la valeur false si ses opérandes sont égaux et la valeur true dans le cas contraire. Les opérateurs d’inégalité sont prédéfinis pour tous les types, dont string et object. Les types définis par l’utilisateur peuvent surcharger l’opérateur `!=`.  

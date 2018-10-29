@@ -8,11 +8,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaring
 ms.assetid: aadd7a60-7ca4-4608-b986-091f19e7fc10
 ms.openlocfilehash: 4ce2e061c5f523fae3020b08034875422a0062a7
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170170"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202001"
 ---
 # <a name="how-to-initialize-an-array-variable-in-visual-basic"></a>Comment : initialiser une variable tableau en Visual Basic
 Vous initialisez une variable tableau en incluant un littéral de tableau dans un `New` clause et en spécifiant les valeurs initiales du tableau. Vous pouvez spécifier le type ou pouvoir être déduit à partir des valeurs du littéral de tableau. Pour plus d’informations sur la façon dont le type est déduit, consultez « Remplissage d’un tableau avec des valeurs initiales » dans [tableaux](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576088"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202957"
 ---
 # <a name="xml-documents-and-data"></a>Documents et données XML
 Le .NET Framework fournit un jeu de classes complet et intégré qui vous permet de créer facilement des applications capables de traiter du code XML. Les classes dans les espaces de noms suivants prennent en charge l’analyse et l’écriture de code XML, l’édition de donnés XML en mémoire, la validation de données et la transformation XSLT.  
@@ -35,7 +35,7 @@ Le .NET Framework fournit un jeu de classes complet et intégré qui vous perme
   
 -   Les schémas de la classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> sont conformes aux recommandations du [W3C relatives aux structures (Part 1)](https://www.w3.org/TR/xmlschema-1/) et aux [types de données (Part 2) du schéma XML](https://www.w3.org/TR/xmlschema-2/).  
   
--   Les classes de l’espace de noms <xref:System.Xml.Xsl?displayProperty=nameWithType> prennent en charge les transformations XSLT qui sont conformes à la recommandation [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
+-   Les classes de l’espace de noms <xref:System.Xml.Xsl?displayProperty=nameWithType> prennent en charge les transformations XSLT qui sont conformes à la recommandation [W3C XSLT 1.0](https://www.w3.org/TR/xslt).  
   
  Les classes XML du .NET Framework offrent les avantages suivants :  
   
@@ -47,7 +47,7 @@ Le .NET Framework fournit un jeu de classes complet et intégré qui vous perme
   
 -   **Performances** Pour améliorer les performances des applications, certaines des classes XML du .NET Framework prennent en charge un modèle basé sur les flux de données ayant les caractéristiques suivantes :  
   
-    -   Mise en cache minimale pour une analyse avant uniquement et de type pull (<xref:System.Xml.XmlReader>).  
+    -   Mise en cache minimale pour une analyse avant uniquement et de tirage (<xref:System.Xml.XmlReader>).  
   
     -   Validation avant uniquement (<xref:System.Xml.XmlReader>).  
   
@@ -71,13 +71,13 @@ Le .NET Framework fournit un jeu de classes complet et intégré qui vous perme
  Décrit les classes utilisées pour créer et manipuler des schémas XML (XSD) en fournissant une classe <xref:System.Xml.Schema.XmlSchema> pour le chargement et la modification d'un schéma.  
   
  [Intégration de XML aux données relationnelles et à ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
- Décrit comment le .NET Framework permet un accès synchrone en temps réel aux représentations relationnelles et hiérarchiques des données via l'objet <xref:System.Data.DataSet> et l'objet <xref:System.Xml.XmlDataDocument>.  
+ Décrit comment le .NET Framework permet un accès synchrone en temps réel aux représentations relationnelles et hiérarchiques des données via l’objet <xref:System.Data.DataSet> et l’objet <xref:System.Xml.XmlDataDocument>.  
   
  [Gestion d’espaces de noms dans un document XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
  Décrit comment la classe <xref:System.Xml.XmlNamespaceManager> est utilisée pour stocker et gérer des informations d'espace de noms.  
   
  [Prise en charge du type dans les classes System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
- Décrit comment les types de données XML sont mappés aux types CLR, comment convertir des types de données XML, ainsi que d'autres fonctionnalités de prise en charge des types dans les classes <xref:System.Xml>.  
+ Décrit comment les types de données XML sont mappés aux types CLR, comment convertir des types de données XML, ainsi que d’autres fonctionnalités de prise en charge des types dans les classes <xref:System.Xml>.  
   
 ## <a name="related-sections"></a>Rubriques connexes  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  

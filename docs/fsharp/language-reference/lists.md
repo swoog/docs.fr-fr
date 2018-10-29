@@ -2,12 +2,12 @@
 title: Listes (F#)
 description: 'En savoir plus sur les listes F #, une série chronologique, immuable d’éléments du même type.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 60e7edb56bdf498e3ba51aff028d8564eb68d0f1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210160"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201622"
 ---
 # <a name="lists"></a>Listes
 
@@ -48,7 +48,7 @@ Vous pouvez joindre des éléments à une liste en utilisant l'opérateur (cons)
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1305.fs)]
 
-Vous pouvez concaténer des listes qui présentent des types compatibles à l'aide de l'opérateur `@`, comme dans le code suivant. Si `list1` est `[2; 3; 4]` et `list2` est `[100; 2; 3; 4 ]`, ce code crée `list3` sous la forme `[2; 3; 4; 100; 2; 3; 4]`.
+Vous pouvez concaténer des listes qui présentent des types compatibles à l'aide de l'opérateur `@`, comme dans le code suivant. Si `list1` est `[2; 3; 4]` et `list2` est `[100; 2; 3; 4]`, ce code crée `list3` sous la forme `[2; 3; 4; 100; 2; 3; 4]`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1306.fs)]
 

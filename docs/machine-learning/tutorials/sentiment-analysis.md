@@ -4,12 +4,12 @@ description: Découvrez comment utiliser ML.NET dans un scénario de classificat
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436139"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453162"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>Ingérer les données
 
-Initialise une nouvelle instance de <xref:Microsoft.ML.LearningPipeline>, qui inclut le chargement des données, le traitement/la fonctionnalisation des données, et le modèle. Ajoutez le code suivant comme première ligne de la méthode `Train` :
+Initialise une nouvelle instance de <xref:Microsoft.ML.Legacy.LearningPipeline>, qui inclut le chargement des données, le traitement/la fonctionnalisation des données, et le modèle. Ajoutez le code suivant comme première ligne de la méthode `Train` :
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-L’objet <xref:Microsoft.ML.Data.TextLoader> est la première partie du pipeline, et charge les données du fichier d’apprentissage.
+L’objet <xref:Microsoft.ML.Legacy.Data.TextLoader> est la première partie du pipeline, et charge les données du fichier d’apprentissage.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,23 +187,23 @@ L’objet <xref:Microsoft.ML.Data.TextLoader> est la première partie du pipelin
 
 Le prétraitement et le nettoyage des données constituent des tâches importantes qui se produisent avant qu’un jeu de données puisse être utilisé efficacement pour l’apprentissage. Les données brutes sont souvent imprécises, peu fiables, et manquent parfois de certaines valeurs. L’utilisation de données sans effectuer ces tâches de modélisation peut produire des résultats trompeurs. Les pipelines de transformation ML.NET vous permettent de composer un ensemble personnalisé de transformations appliquées à vos données avant l’apprentissage ou le test. Les transformations servent principalement à fonctionnaliser les données. Un pipeline de transformation offre l’avantage suivant : après définition du pipeline de transformation, vous pouvez enregistrer le pipeline pour tester les données.
 
-Appliquez un pipeline <xref:Microsoft.ML.Transforms.TextFeaturizer> pour convertir la colonne `SentimentText` en un [vecteur numérique](../resources/glossary.md#numerical-feature-vector) appelé `Features` utilisé par l’algorithme d’apprentissage automatique. Il s’agit de l’étape de prétraitement/fonctionnalisation. L’utilisation des composants supplémentaires disponibles dans ML.NET peut améliorer les résultats de votre modèle. Ajoutez `TextFeaturizer` au pipeline comme ligne de code suivante :
+Appliquez un pipeline <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> pour convertir la colonne `SentimentText` en un [vecteur numérique](../resources/glossary.md#numerical-feature-vector) appelé `Features` utilisé par l’algorithme d’apprentissage automatique. Il s’agit de l’étape de prétraitement/fonctionnalisation. L’utilisation des composants supplémentaires disponibles dans ML.NET peut améliorer les résultats de votre modèle. Ajoutez `TextFeaturizer` au pipeline comme ligne de code suivante :
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>Choisir un algorithme d’apprentissage
 
-L’objet <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> est un apprenant d’arbre de décision que vous utiliserez dans ce pipeline. Comme pour l’étape de fonctionnalisation, si vous testez les différents apprenants disponibles dans ML.NET et modifiez leurs paramètres, vous obtenez des résultats différents. Pour le paramétrage, vous pouvez définir des [hyperparamètres](../resources/glossary.md#hyperparameter) comme <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves> et <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Spécifiques au modèle, ces hyperparamètres sont définis avant qu’un élément quelconque n’affecte le modèle. Ils sont utilisés pour paramétrer l’arbre de décision pour les performances et, par conséquent, les valeurs trop grandes peuvent nuire à ces performances.
+L’objet <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> est un apprenant d’arbre de décision que vous utiliserez dans ce pipeline. Comme pour l’étape de fonctionnalisation, si vous testez les différents apprenants disponibles dans ML.NET et modifiez leurs paramètres, vous obtenez des résultats différents. Pour le paramétrage, vous pouvez définir des [hyperparamètres](../resources/glossary.md#hyperparameter) comme <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> et <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Spécifiques au modèle, ces hyperparamètres sont définis avant qu’un élément quelconque n’affecte le modèle. Ils sont utilisés pour paramétrer l’arbre de décision pour les performances et, par conséquent, les valeurs trop grandes peuvent nuire à ces performances.
 
-Ajoutez le code suivant à la méthode `Train` :
+Ajoutez le code suivant à la méthode `Train` :
 
 [!code-csharp[BinaryClassifier](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#8 "Add a fast binary tree classifier")]
 
 ## <a name="train-the-model"></a>Effectuer l’apprentissage du modèle
 
-Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.PredictionModel%602>, selon le jeu de données qui a été chargé et transformé. `pipeline.Train<SentimentData, SentimentPrediction>()` effectue l’apprentissage du pipeline (charge les données, forme le générateur de fonctionnalités et l’apprenant). L’expérience n’est pas exécutée tant que cette opération n’a pas été effectuée.
+Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Legacy.PredictionModel%602>, selon le jeu de données qui a été chargé et transformé. `pipeline.Train<SentimentData, SentimentPrediction>()` effectue l’apprentissage du pipeline (charge les données, forme le générateur de fonctionnalités et l’apprenant). L’expérience n’est pas exécutée tant que cette opération n’a pas été effectuée.
 
-Ajoutez le code suivant à la méthode `Train` :
+Ajoutez le code suivant à la méthode `Train` :
 
 [!code-csharp[TrainModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#9 "Train the model")]
 
@@ -239,15 +239,15 @@ Ajoutez un appel à la nouvelle méthode à partir de la méthode `Main`, juste 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-La classe <xref:Microsoft.ML.Data.TextLoader> charge le nouveau jeu de données de test avec le même schéma. Vous pouvez évaluer le modèle à l’aide de ce jeu de données afin de contrôler la qualité. Ajoutez le code suivant à la méthode `Evaluate` :
+La classe <xref:Microsoft.ML.Legacy.Data.TextLoader> charge le nouveau jeu de données de test avec le même schéma. Vous pouvez évaluer le modèle à l’aide de ce jeu de données afin de contrôler la qualité. Ajoutez le code suivant à la méthode `Evaluate` :
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-L’objet <xref:Microsoft.ML.Models.BinaryClassificationEvaluator> calcule les métriques de qualité pour `PredictionModel` à l’aide du jeu de données spécifié. Pour afficher ces métriques, ajoutez l’évaluateur comme ligne suivante dans la méthode `Evaluate`, avec le code suivant :
+L’objet <xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> calcule les métriques de qualité pour `PredictionModel` à l’aide du jeu de données spécifié. Pour afficher ces métriques, ajoutez l’évaluateur comme ligne suivante dans la méthode `Evaluate`, avec le code suivant :
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> contient les métriques globales calculées par les évaluateurs de classification binaire. Pour afficher ces informations afin d’évaluer la qualité du modèle, vous devez d’abord obtenir les métriques. Ajoutez le code suivant :
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> contient les métriques globales calculées par les évaluateurs de classification binaire. Pour afficher ces informations afin d’évaluer la qualité du modèle, vous devez d’abord obtenir les métriques. Ajoutez le code suivant :
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ Ajoutez des commentaires pour tester les prédictions du modèle formé dans la 
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-Maintenant que vous disposez d’un modèle, vous pouvez l’utiliser pour prédire le sentiment positif ou négatif des données de commentaires à l’aide de la méthode <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType>. Pour obtenir une prédiction, utilisez `Predict` sur les nouvelles données. Notez que les données d’entrée constituent une chaîne et que le modèle inclut la fonctionnalisation. Votre pipeline est synchronisé durant l’apprentissage et la prédiction. Vous n’aviez pas à écrire le code de prétraitement/fonctionnalisation spécifiquement pour les prédictions, et la même API gère le traitement par lots et les prédictions à usage unique.
+Maintenant que vous disposez d’un modèle, vous pouvez l’utiliser pour prédire le sentiment positif ou négatif des données de commentaires à l’aide de la méthode <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType>. Pour obtenir une prédiction, utilisez `Predict` sur les nouvelles données. Notez que les données d’entrée constituent une chaîne et que le modèle inclut la fonctionnalisation. Votre pipeline est synchronisé durant l’apprentissage et la prédiction. Vous n’aviez pas à écrire le code de prétraitement/fonctionnalisation spécifiquement pour les prédictions, et la même API gère le traitement par lots et les prédictions à usage unique.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

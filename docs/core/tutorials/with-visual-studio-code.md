@@ -4,12 +4,12 @@ description: Découvrez comment créer et déboguer votre première application 
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668221"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192577"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Bien démarrer avec C# et Visual Studio Code
 
@@ -58,7 +58,7 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 
 ## <a name="debug"></a>Débogage
 
-1. Ouvrez *Program.cs* en cliquant dessus. La première fois que vous ouvrez un fichier C# dans Visual Studio Code, [OmniSharp](http://www.omnisharp.net/) se charge dans l’éditeur.
+1. Ouvrez *Program.cs* en cliquant dessus. La première fois que vous ouvrez un fichier C# dans Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) se charge dans l’éditeur.
 
     ![Ouvrez le fichier Program.cs](media/with-visual-studio-code/opencs.png)
 

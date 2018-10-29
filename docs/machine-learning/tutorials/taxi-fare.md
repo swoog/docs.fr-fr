@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 133b7ad17a98e4eea510f1704555b690b98e9091
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: bfae97d65ec192e9289841c82d84807b4937b09a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252842"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183813"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Tutoriel : Utiliser ML.NET pour prédire le prix des courses de taxi à New York (régression)
 
@@ -150,13 +150,13 @@ pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, sep
 
 Dans les prochaines étapes, nous référençons les colonnes au moyen des noms définis dans la classe `TaxiTrip`.
 
-Quand le modèle fait l’objet d’un apprentissage et d’une évaluation, les valeurs de la colonne **Label** sont considérées par défaut comme des valeurs correctes à prédire. Comme nous voulons prédire le prix de la course en taxi, copiez la colonne `FareAmount` dans la colonne **Étiquette**. Pour ce faire, utilisez <xref:Microsoft.ML.Transforms.ColumnCopier> et ajoutez le code suivant :
+Quand le modèle fait l’objet d’un apprentissage et d’une évaluation, les valeurs de la colonne **Label** sont considérées par défaut comme des valeurs correctes à prédire. Comme nous voulons prédire le prix de la course en taxi, copiez la colonne `FareAmount` dans la colonne **Étiquette**. Pour ce faire, utilisez <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> et ajoutez le code suivant :
 
 ```csharp
 pipeline.Add(new ColumnCopier(("FareAmount", "Label")));
 ```
 
-L’algorithme qui effectue l’apprentissage du modèle nécessite des fonctionnalités **numériques**, car vous transformez les données catégoriques (`VendorId`, `RateCode` et `PaymentType`) en nombres. Pour ce faire, utilisez <xref:Microsoft.ML.Transforms.CategoricalOneHotVectorizer>, qui attribue différentes valeurs de clé numériques aux différentes valeurs de chaque colonne, et ajoutez le code suivant :
+L’algorithme qui effectue l’apprentissage du modèle nécessite des fonctionnalités **numériques**, car vous transformez les données catégoriques (`VendorId`, `RateCode` et `PaymentType`) en nombres. Pour ce faire, utilisez <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer>, qui attribue différentes valeurs de clé numériques aux différentes valeurs de chaque colonne, et ajoutez le code suivant :
 
 ```csharp
 pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
@@ -164,7 +164,7 @@ pipeline.Add(new CategoricalOneHotVectorizer("VendorId",
                                              "PaymentType"));
 ```
 
-La dernière étape de préparation des données regroupe toutes les colonnes de fonctionnalités dans la colonne **Fonctionnalités** à l’aide de la classe de transformation <xref:Microsoft.ML.Transforms.ColumnConcatenator>. Par défaut, un algorithme d’apprentissage traite uniquement les caractéristiques issues de la colonne **Features**. Ajoutez le code suivant :
+La dernière étape de préparation des données regroupe toutes les colonnes de fonctionnalités dans la colonne **Fonctionnalités** à l’aide de la classe de transformation <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator>. Par défaut, un algorithme d’apprentissage traite uniquement les caractéristiques issues de la colonne **Features**. Ajoutez le code suivant :
 
 ```csharp
 pipeline.Add(new ColumnConcatenator("Features",
@@ -182,9 +182,9 @@ Notez que la colonne `TripTime`, qui correspond à la colonne `trip_time_in_secs
 
 ## <a name="choose-a-learning-algorithm"></a>Choisir un algorithme d’apprentissage
 
-Après avoir ajouté les données au pipeline et les avoir transformées au format d’entrée approprié, sélectionnez un algorithme d’apprentissage (**apprenant**). L’apprenant effectue l’apprentissage du modèle. Vous avez choisi une tâche de **régression** pour ce problème. Vous utilisez donc un apprenant <xref:Microsoft.ML.Trainers.FastTreeRegressor>, qui est l’un des apprenants de régression fournis par ML.NET.
+Après avoir ajouté les données au pipeline et les avoir transformées au format d’entrée approprié, sélectionnez un algorithme d’apprentissage (**apprenant**). L’apprenant effectue l’apprentissage du modèle. Vous avez choisi une tâche de **régression** pour ce problème. Vous utilisez donc un apprenant <xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor>, qui est l’un des apprenants de régression fournis par ML.NET.
 
-L’apprenant <xref:Microsoft.ML.Trainers.FastTreeRegressor> utilise le boosting de gradient. Le boosting de gradient est une technique d’apprentissage automatique pour résoudre les problèmes de régression. Il génère chaque arbre de régression étape par étape. Il utilise une fonction de perte prédéfinie pour mesurer l’erreur à chaque étape et la corriger à la prochaine. Le résultat est un modèle de prévision qui est en fait un ensemble de modèles de prédiction moins efficaces. Pour plus d’informations sur le boosting de gradient, consultez [Régression d’arbre de décision boostée](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
+L’apprenant <xref:Microsoft.ML.Legacy.Trainers.FastTreeRegressor> utilise le boosting de gradient. Le boosting de gradient est une technique d’apprentissage automatique pour résoudre les problèmes de régression. Il génère chaque arbre de régression étape par étape. Il utilise une fonction de perte prédéfinie pour mesurer l’erreur à chaque étape et la corriger à la prochaine. Le résultat est un modèle de prévision qui est en fait un ensemble de modèles de prédiction moins efficaces. Pour plus d’informations sur le boosting de gradient, consultez [Régression d’arbre de décision boostée](/azure/machine-learning/studio-module-reference/boosted-decision-tree-regression).
 
 Ajoutez le code suivant dans la méthode `Train` après le code de traitement des données ajouté à l’étape précédente :
 

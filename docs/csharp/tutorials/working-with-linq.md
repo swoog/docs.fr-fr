@@ -3,12 +3,12 @@ title: Utilisation de LINQ
 description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 ms.date: 03/28/2017
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e5f9baab13cddfb9e294de1e1a6ce967ccbe0813
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: dc5f6cc4fd38b32f54a576a3947187cbed4e70e8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172423"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086750"
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
@@ -87,6 +87,14 @@ static IEnumerable<string> Ranks()
 ```
 
 Les deux méthodes utilisent la syntaxe `yield return` pour produire une séquence lors de leur exécution. Le compilateur génère un objet qui implémente `IEnumerable<T>` et génère la séquence de chaînes au fur et à mesure.
+
+Pour que cela compile, vous devez ajouter les deux lignes suivantes au début du fichier :
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+```
 
 Ensuite, exécutez l’exemple que vous avez commencé à élaborer. Il affiche les 52 cartes du jeu. Il peut être très utile d’exécuter cet exemple avec un débogueur pour observer la façon dont les méthodes `Suits()` et `Values()` s’exécutent. Vous pouvez clairement voir que chaque chaîne de chaque séquence est générée uniquement au moment requis.
 

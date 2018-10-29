@@ -2,12 +2,12 @@
 title: Flux de contrôle dans les programmes Async (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 49123dde51acaa82a2d8fa7d27fdf27087675034
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586777"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347953"
 ---
 # <a name="control-flow-in-async-programs-c"></a>Flux de contrôle dans les programmes asynchrones (C#)
 
@@ -47,7 +47,7 @@ public partial class MainWindow : Window
         // TWO
         HttpClient client = new HttpClient();
         Task<string> getStringTask =
-            client.GetStringAsync("http://msdn.microsoft.com");
+            client.GetStringAsync("https://msdn.microsoft.com");
 
         // THREE
         string urlContents = await getStringTask;
@@ -212,7 +212,7 @@ Pour exécuter le projet, procédez comme suit :
                 resultsTextBox.Text += "\r\n           Calling HttpClient.GetStringAsync.\r\n";
 
                 // GetStringAsync returns a Task<string>.
-                Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+                Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 
                 resultsTextBox.Text += "\r\nTHREE: Back in AccessTheWebAsync.\r\n" +
                     "           Task getStringTask is started.";
@@ -287,7 +287,7 @@ Dans `AccessTheWebAsync`, la méthode asynchrone <xref:System.Net.Http.HttpClien
  La méthode `client.GetStringAsync` retourne une tâche de la chaîne assignée à la variable `getStringTask` dans `AccessTheWebAsync`. La ligne suivante de l’exemple de programme illustre l’appel à `client.GetStringAsync` et l’assignation.
 
 ```csharp
-Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 ```
 
  Vous pouvez considérer la tâche comme une promesse faite par `client.GetStringAsync` de produire au final une chaîne réelle. Pour le moment, si `AccessTheWebAsync` a du travail à effectuer qui ne dépend pas de la chaîne promise de `client.GetStringAsync`, ce travail peut se poursuivre pendant que `client.GetStringAsync` attend. Dans l’exemple, les lignes de sortie suivantes, qui sont étiquetées « THREE », représentent la possibilité d’effectuer un travail indépendant
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  L’expression await suspend `AccessTheWebAsync` jusqu’à ce que `client.GetStringAsync` retourne une sortie. Dans le même temps, le contrôle retourne à l’appelant de `AccessTheWebAsync`, `startButton_Click`.
 
 > [!NOTE]
-> En général, vous attendez immédiatement l’appel à une méthode asynchrone. Par exemple, l’assignation suivante peut substituer le code précédent qui crée, puis attend `getStringTask` : `string urlContents = await client.GetStringAsync("http://msdn.microsoft.com");`
+> En général, vous attendez immédiatement l’appel à une méthode asynchrone. Par exemple, l’assignation suivante peut substituer le code précédent qui crée, puis attend `getStringTask` : `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > Dans cette rubrique, l’opérateur await est appliqué ultérieurement pour s’adapter aux lignes de sortie qui marquent le flux de contrôle dans le programme.
 
