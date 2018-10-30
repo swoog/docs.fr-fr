@@ -3,17 +3,17 @@ title: Portage vers .NET Core à partir du .NET Framework
 description: Présentation du processus de portage et d’outils qui peuvent s’avérer utiles lors du portage d’un projet .NET Framework vers .NET Core.
 author: cartermp
 ms.author: mairaw
-ms.date: 06/20/2016
-ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 10/23/2018
+ms.openlocfilehash: 0c0ec3d8ab09e34e8dae24623903ca571f2cca6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835390"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192770"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Portage vers .NET Core à partir du .NET Framework
 
-Si vous avez un code s’exécutant sur le .NET Framework, vous pouvez être intéressé par l’exécution de votre code sur .NET Core 1.0.  Cet article contient une vue d’ensemble du processus de portage et une liste des outils que peuvent s’avérer utiles lors du portage vers .NET Core.
+Si vous avez du code s’exécutant sur le .NET Framework, vous pouvez être intéressé par l’exécution de votre code sur .NET Core.  Cet article contient une vue d’ensemble du processus de portage et une liste des outils que peuvent s’avérer utiles lors du portage vers .NET Core.
 
 ## <a name="overview-of-the-porting-process"></a>Vue d’ensemble du processus de portage
 
@@ -23,7 +23,7 @@ Le processus recommandé pour le portage est constitué de la série d’étapes
 
    Ceci implique de comprendre ce que sont vos dépendances tierces, comment vous en dépendez, comment faire pour voir si elles s’exécutent aussi sur .NET Core, ainsi que les étapes à réaliser si ce n’est pas le cas.
    
-2. Reciblez tous les projets que vous voulez porter pour cibler le .NET Framework 4.6.2.
+2. Reciblez tous les projets que vous voulez porter pour cibler la dernière version du .NET Framework.
 
    Cela garantit que vous pouvez utiliser des API alternatives pour des cibles spécifiques au .NET Framework dans les cas où .NET Core ne peut pas prendre en charge une API particulière.
    
@@ -33,7 +33,7 @@ Le processus recommandé pour le portage est constitué de la série d’étapes
    
 4. Porter le code de vos tests.
 
-   Le portage vers .NET Core représentant un grand changement pour votre code base, il est fortement recommandé de porter vos tests, pour pouvoir exécuter des tests au fil du portage du code.  MSTest, xUnit et NUnit prennent tous actuellement en charge .NET Core 1.0.
+   Le portage vers .NET Core représentant un grand changement pour votre code base, il est fortement recommandé de porter vos tests, pour pouvoir exécuter des tests au fil du portage du code.  MSTest, xUnit et NUnit prennent tous actuellement en charge .NET Core.
    
 6. Exécutez votre plan de portage !
 

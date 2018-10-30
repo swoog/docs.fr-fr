@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454432"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181512"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guide de programmation C#)
 
@@ -42,7 +42,7 @@ L'exemple suivant illustre une implémentation de l'interface <xref:System.IEqua
   
 Les propriétés et indexeurs d’une classe peuvent définir des accesseurs supplémentaires pour une propriété ou un indexeur qui est défini dans une interface. Par exemple, une interface peut déclarer une propriété qui a un accesseur [get](../../language-reference/keywords/get.md). La classe qui implémente l’interface peut déclarer la même propriété avec à la fois un accesseur `get` et un accesseur [set](../../language-reference/keywords/set.md). Toutefois, si la propriété ou l’indexeur utilisent une implémentation explicite, les accesseurs doivent correspondre. Pour plus d'informations sur l'implémentation explicite, consultez les pages [Implémentation d'interface explicite](explicit-interface-implementation.md) et [Propriétés d'interface](../classes-and-structs/interface-properties.md).  
 
-Les interfaces peuvent implémenter d'autres interfaces. Une classe peut inclure une interface plusieurs fois par le biais de classes de base qu'elle hérite ou d'interfaces que d'autres interfaces implémentent. Toutefois, la classe peut fournir une implémentation d'une interface une seule fois et uniquement si la classe déclare l'interface dans le cadre de la définition de la classe (`class ClassName : InterfaceName`). Si l'interface est héritée car vous avez hérité d'une classe de base qui implémente l'interface, la classe de base fournit l'implémentation des membres de l'interface. Toutefois, la classe dérivée peut implémenter de nouveau les membres d'interface au lieu d'utiliser l'implémentation héritée.  
+Les interfaces peuvent hériter d’autres interfaces. Une classe peut inclure une interface plusieurs fois par le biais de classes de base qu’elle hérite ou d’interfaces dont d’autres interfaces héritent. Toutefois, la classe peut fournir une implémentation d'une interface une seule fois et uniquement si la classe déclare l'interface dans le cadre de la définition de la classe (`class ClassName : InterfaceName`). Si l'interface est héritée car vous avez hérité d'une classe de base qui implémente l'interface, la classe de base fournit l'implémentation des membres de l'interface. Toutefois, la classe dérivée peut réimplémenter des membres d’interface virtuels au lieu d’utiliser l’implémentation héritée.  
   
 Une classe de base peut également implémenter des membres d'interface à l'aide de membres virtuels. Dans ce cas, une classe dérivée peut modifier le comportement de l'interface en substituant les membres virtuels. Pour plus d'informations sur les membres virtuels, consultez la page [Polymorphisme](../classes-and-structs/polymorphism.md).  
   

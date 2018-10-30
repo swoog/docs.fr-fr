@@ -3,16 +3,16 @@ title: Nouveautés de C# | Guide C#
 description: Évolution du langage C#
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314670"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047252"
 ---
 # <a name="whats-new-in-c"></a>Nouveautés de C# #
 
-Cette page fournit un Guide des nouvelles fonctionnalités de chaque version majeure du langage c#. Les liens suivants fournissent des informations détaillées sur les principales fonctionnalités ajoutées dans chaque version.
+Cette page fournit un Guide des nouvelles fonctionnalités de chaque version majeure du langage c#. Les articles liés fournissent des informations détaillées sur les principales fonctionnalités ajoutées dans chaque version. Vous trouverez des informations sur les nouvelles fonctionnalités qui ont été publiées dans une version générale ou dans une préversion publique. L’état détaillé des fonctionnalités de langage, notamment celles prises en compte pour les versions à venir, est disponible dans le [dépôt dotnet/roslyn](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) sur GitHub.
 
 > [!IMPORTANT]
 > Le langage c# s’appuie sur des types et des méthodes présents dans une *bibliothèque standard* pour certaines des fonctionnalités. Par exemple, le traitement des exceptions. Chaque instruction ou expression`throw` est vérifiée pour s’assurer de l’objet levé est dérivé de <xref:System.Exception>. De même, chaque `catch` est vérifié pour assurer que le type intercepté est dérivé de <xref:System.Exception>. Chaque version peut ajouter de nouvelles spécifications. Pour utiliser les dernières fonctionnalités de langage dans les environnements plus anciens, vous devrez peut-être installer des bibliothèques spécifiques. Ces dépendances sont décrites dans la page pour chaque version spécifique. Pour en savoir plus, consultez les [relations entre le langage et la bibliothèque](relationships-between-language-and-library.md) pour l’arrière-plan sur cette dépendance. 

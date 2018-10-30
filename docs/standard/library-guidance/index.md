@@ -1,24 +1,24 @@
 ---
-title: Aide sur les bibliothèques open source
+title: Conseils sur la bibliothèque open source
 description: Recommandations de bonne pratique à l’attention des développeurs qui créent des bibliothèques .NET de qualité.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 50fb745f7eb65abcaca76cebaf9991c48f559e59
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.date: 10/17/2018
+ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374903"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188623"
 ---
-# <a name="open-source-library-guidance"></a>Aide sur les bibliothèques open source
+# <a name="open-source-library-guidance"></a>Conseils sur la bibliothèque open source
 
 Cette aide fournit des recommandations à l’attention des développeurs qui créent des bibliothèques .NET de qualité. Cette documentation se concentre sur le *quoi* et le *pourquoi* de la création d’une bibliothèque .NET, mais pas sur le *comment*.
 
 Aspects des bibliothèques .NET open source de qualité :
 
 > [!div class="checklist"]
-> * **Inclusives** - Les bonnes bibliothèques .NET s’efforcent de prendre en charge de nombreuses plateformes et applications.
+> * **Inclusives** - Les bonnes bibliothèques .NET s’efforcent de prendre en charge plusieurs plateformes, langages de programmation et applications.
 > * **Stables** - Les bonnes bibliothèques .NET coexistent dans l’écosystème .NET en s’exécutant dans les applications créées avec de nombreuses bibliothèques.
 > * **Conçues pour évoluer** - Les bibliothèques .NET doivent s’améliorer et évoluer au fil du temps tout en prenant en charge les utilisateurs existants.
 > * **Débogables** - Les bibliothèques .NET doivent utiliser les derniers outils afin de créer une excellente expérience de débogage pour les utilisateurs.
@@ -27,11 +27,11 @@ Aspects des bibliothèques .NET open source de qualité :
 > [!div class="nextstepaction"]
 > [Bien démarrer](./get-started.md)
 
-## <a name="recommendations"></a>Recommandations
+## <a name="types-of-recommendations"></a>Types de suggestions
 
-Dans chaque article,vous verrez une liste de recommandations pour votre bibliothèque .NET, avec les libellés **À faire**, **Envisager**, **Éviter** et **À ne pas faire**. Le libellé de chaque recommandation indique si celle-ci doit être suivie ou pas.
+Chaque article présente quatre types de suggestions : **À faire**, **Envisager**, **Éviter** et **À ne pas faire**. Le type de suggestion indique si celle-ci doit être suivie ou pas.
 
-Une recommandation **À faire** doit presque toujours être suivie :
+Vous devez presque toujours suivre une suggestion **À faire**. Exemple :
 
 **✔️ À FAIRE** : Distribuer votre bibliothèque à l’aide d’un package NuGet.
 
@@ -39,11 +39,11 @@ En revanche, les recommandations **Envisager** doivent généralement être appl
 
 **✔️ ENVISAGER** d’utiliser [SemVer 2.0.0](https://semver.org/) pour versionner votre package NuGet.
 
-Les recommandations **Éviter** indiquent quelque chose qui n’est généralement pas une bonne idée, mais enfreindre les règles peut parfois avoir du sens :
+Les suggestions **Éviter** indiquent quelque chose qui n’est généralement pas une bonne idée, mais enfreindre les règles peut parfois avoir du sens :
 
 **❌ ÉVITER** les références de package NuGet qui exigent une version précise.
 
-Et enfin, **À ne pas faire** désigne quelque chose que vous ne devez presque jamais faire :
+Et enfin, les suggestions **À ne pas faire** désignent quelque chose que vous ne devez presque jamais faire :
 
 **❌ À NE PAS FAIRE** : publier les versions avec nom fort et sans nom fort de votre bibliothèque. Par exemple : `Contoso.Api` et `Contoso.Api.StrongNamed`.
 
