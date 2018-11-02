@@ -3,10 +3,10 @@ title: Événements (F#)
 description: 'Découvrez comment les événements F # permettent vous permettent d’associer des appels de fonction avec des actions utilisateur, qui sont importantes dans la programmation GUI.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ce547bc9ec7b5e0ef9a7492c0889bb690e3040c2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43871931"
 ---
 # <a name="events"></a>Événements
@@ -22,15 +22,15 @@ Lorsque vous utilisez une bibliothèque d'interfaces GUI telle que Windows Forms
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3601.fs)]
 
-Le type de la méthode `Add` est `('a -> unit) -> unit`. Par conséquent, la méthode du gestionnaire d'événements prend un paramètre, en général les arguments d'événement, et retourne `unit`. L'exemple précédent présente le gestionnaire d'événements en tant qu'expression lambda. Le gestionnaire d'événements peut également être une valeur de fonction, comme dans l'exemple de code suivant. L'exemple de code suivant illustre également l'utilisation des paramètres du gestionnaire d'événements, qui fournissent des informations spécifiques au type d'événement. Pour un événement `MouseMove`, le système passe un objet `System.Windows.Forms.MouseEventArgs`, qui contient les positions `X` et `Y` du pointeur.
+Le type de la méthode `Add` est `('a -> unit) -> unit`. Par conséquent, la méthode du gestionnaire d’événements prend un paramètre, en général les arguments d’événement, et retourne `unit`. L'exemple précédent présente le gestionnaire d'événements en tant qu'expression lambda. Le gestionnaire d'événements peut également être une valeur de fonction, comme dans l'exemple de code suivant. L'exemple de code suivant illustre également l'utilisation des paramètres du gestionnaire d'événements, qui fournissent des informations spécifiques au type d'événement. Pour un événement `MouseMove`, le système passe un objet `System.Windows.Forms.MouseEventArgs`, qui contient les positions `X` et `Y` du pointeur.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3602.fs)]
 
 ## <a name="creating-custom-events"></a>Création d'événements personnalisés
 
-Les événements F # sont représentés par le F # [événement](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe qui implémente le [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interface. `IEvent` est une interface qui combine les fonctionnalités de deux autres interfaces, `System.IObservable<'T>` et [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Par conséquent, les `Event`s ont les fonctionnalités équivalentes des délégués dans d'autres langues, plus les fonctionnalités supplémentaires d'`IObservable`, ce qui signifie que les événements F# prennent en charge le filtrage d'événements, ainsi que l'utilisation de fonctions de première classe F# et expressions lambda comme gestionnaires d'événements. Cette fonctionnalité est fournie dans le [module événements](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
+Les événements F # sont représentés par le F # [événement](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9) classe qui implémente le [IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862) interface. `IEvent` est une interface qui combine les fonctionnalités de deux autres interfaces, `System.IObservable<'T>` et [IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a). Par conséquent, les `Event`s ont les fonctionnalités équivalentes des délégués dans d’autres langues, plus les fonctionnalités supplémentaires d’`IObservable`, ce qui signifie que les événements F# prennent en charge le filtrage d’événements, ainsi que l’utilisation de fonctions de première classe F# et expressions lambda comme gestionnaires d’événements. Cette fonctionnalité est fournie dans le [module événements](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7).
 
-Pour créer un événement sur une classe qui agit juste comme tout autre événement .NET Framework, ajoutez à la classe une liaison `let` qui définit un `Event` comme un champ dans une classe. Vous pouvez spécifier le type d'argument d'événement souhaité comme argument de type ou le laisser vide et indiquer au compilateur de déduire le type approprié. Vous devez également définir un membre d'événement qui expose l'événement comme un événement CLI. Ce membre doit avoir la [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) attribut. Il est déclaré comme une propriété et son implémentation est simplement un appel à la [publier](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) propriété de l’événement. Les utilisateurs de votre classe peuvent utiliser la méthode `Add` de l'événement publié pour ajouter un gestionnaire. L'argument de la méthode `Add` peut être une expression lambda. Vous pouvez utiliser la propriété `Trigger` de l'événement pour le déclencher, en passant les arguments à la fonction de gestionnaire. L'exemple de code suivant illustre ceci. Dans cet exemple, l’argument de type déduit pour l’événement est un tuple, qui représente les arguments de l’expression lambda.
+Pour créer un événement sur une classe qui agit juste comme tout autre événement .NET Framework, ajoutez à la classe une liaison `let` qui définit un `Event` comme un champ dans une classe. Vous pouvez spécifier le type d'argument d'événement souhaité comme argument de type ou le laisser vide et indiquer au compilateur de déduire le type approprié. Vous devez également définir un membre d'événement qui expose l'événement comme un événement CLI. Ce membre doit avoir la [CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333) attribut. Il est déclaré comme une propriété et son implémentation est simplement un appel à la [publier](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e) propriété de l’événement. Les utilisateurs de votre classe peuvent utiliser la méthode `Add` de l'événement publié pour ajouter un gestionnaire. L'argument de la méthode `Add` peut être une expression lambda. Vous pouvez utiliser la propriété `Trigger` de l’événement pour le déclencher, en passant les arguments à la fonction de gestionnaire. L'exemple de code suivant illustre ceci. Dans cet exemple, l’argument de type déduit pour l’événement est un tuple, qui représente les arguments de l’expression lambda.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3605.fs)]
 
@@ -40,7 +40,7 @@ La sortie est la suivante.
 Event1 occurred! Object data: Hello World!
 ```
 
-Les fonctionnalités supplémentaires fournies par le module `Event` sont illustrées ici. L'exemple de code suivant illustre l'utilisation de base d'`Event.create` pour créer un événement et une méthode de déclencheur, ajouter deux gestionnaires d'événements sous forme d'expressions lambda, puis déclencher l'événement pour exécuter les deux expressions lambda.
+Les fonctionnalités supplémentaires fournies par le module `Event` sont illustrées ici. L’exemple de code suivant illustre l’utilisation de base de `Event.create` pour créer un événement et une méthode de déclencheur, ajouter deux gestionnaires d’événements sous forme d’expressions lambda, puis déclencher l’événement pour exécuter les deux expressions lambda.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3603.fs)]
 

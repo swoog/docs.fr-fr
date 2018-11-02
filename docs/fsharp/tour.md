@@ -2,12 +2,12 @@
 title: Visite guidée de F#
 description: Examiner certaines des fonctionnalités clés de la langue dans cette visite guidée avec exemples de code de programmation F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924519"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235711"
 ---
 # <a name="tour-of-f"></a>Visite guidée de F# #
 
@@ -193,6 +193,6 @@ Les classes sont idéales pour un très grand nombre de raisons, par exemple lor
 
 Maintenant que vous avez vu certaines des principales fonctionnalités du langage, vous devez être prêt à écrire vos premiers programmes F# !  Découvrez [mise en route](tutorials/getting-started/index.md) pour savoir comment configurer votre environnement de développement et d’écrire du code.
 
-Les étapes suivantes pour en savoir plus peuvent être comme vous le souhaitez, mais nous vous recommandons de [fonctionne comme valeurs de première classe](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> à se familiariser avec les principaux concepts de programmation fonctionnelle.  Il s’agira essentielles dans la création de programmes robustes en F#.
+Les étapes suivantes pour en savoir plus peuvent être comme vous le souhaitez, mais nous vous recommandons de [Introduction à la programmation fonctionnelle dans F# ](introduction-to-functional-programming/index.md) à se familiariser avec les principaux concepts de programmation fonctionnelle.  Il s’agira essentielles dans la création de programmes robustes en F#.
 
-Consultez également le [référence du langage F#](language-reference/index.md) pour voir un ensemble complet de contenu conceptuel sur F#.F#
+Consultez également le [référence du langage F#](language-reference/index.md) pour voir un ensemble complet de contenu conceptuel sur F#.

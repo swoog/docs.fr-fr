@@ -2,12 +2,12 @@
 title: Paramètres et arguments (F#)
 description: 'En savoir plus sur F # prise en charge linguistique pour la définition de paramètres et en transmettant des arguments aux fonctions, méthodes et propriétés.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123356"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744455"
 ---
 # <a name="parameters-and-arguments"></a>Paramètres et arguments
 
@@ -111,6 +111,8 @@ Pour plus d’informations, consultez [constructeurs (F #)](https://msdn.microso
 
 Vous pouvez spécifier un paramètre facultatif pour une méthode à l’aide d’un point d’interrogation devant le nom du paramètre. Paramètres facultatifs sont interprétés comme le type d’option F #, vous pouvez les interroger de façon habituelle que les types d’option sont interrogées, à l’aide un `match` expression avec `Some` et `None`. Paramètres facultatifs sont autorisés uniquement sur les membres, et non sur les fonctions créées à l’aide de `let` liaisons.
 
+Vous pouvez passer les valeurs facultatives existants à la méthode par nom de paramètre, tel que `?arg=None` ou `?arg=Some(3)` ou `?arg=arg`. Cela peut être utile lors de la création d’une méthode qui transmet les arguments facultatifs à une autre méthode.
+
 Vous pouvez également utiliser une fonction `defaultArg`, qui définit une valeur par défaut d’un argument facultatif. Le `defaultArg` fonction prend le paramètre facultatif comme premier argument et la valeur par défaut en tant que la seconde.
 
 L’exemple suivant illustre l’utilisation de paramètres facultatifs.
@@ -123,7 +125,29 @@ La sortie est la suivante.
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+Dans le cadre de C# interopérabilité et Visual Basic vous pouvez utiliser les attributs `[<Optional; DefaultParameterValue<(...)>]` dans F#, afin que les appelants voient un argument comme étant facultatifs. Cela équivaut à la définition de l’argument comme facultatifs dans C# comme dans `MyMethod(int i = 3)`.
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+La valeur donnée en tant qu’argument à `DefaultParameterValue` doit correspondre au type du paramètre, par exemple, ce qui suit n’est pas autorisé :
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+Dans ce cas, le compilateur génère un avertissement et ignore complètement les deux attributs. Notez que la valeur par défaut `null` doit être annotée de type, comme dans le cas contraire le compilateur déduit un type incorrect, par exemple, `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
 
 ## <a name="passing-by-reference"></a>Passage par référence
 

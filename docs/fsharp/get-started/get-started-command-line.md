@@ -3,10 +3,10 @@ title: 'Bien démarrer avec F # avec les outils de ligne de commande'
 description: 'Découvrez comment créer une solution à projets multiples simple sur F # à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673907"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Bien démarrer avec F # avec l’interface CLI .NET Core

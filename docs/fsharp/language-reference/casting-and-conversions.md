@@ -3,10 +3,10 @@ title: Cast et conversions (F#)
 description: 'Découvrez comment le langage de programmation F # fournit des opérateurs de conversion pour les conversions arithmétiques entre différents types primitifs.'
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45677927"
 ---
 # <a name="casting-and-conversions-f"></a>Cast et conversions (F#)

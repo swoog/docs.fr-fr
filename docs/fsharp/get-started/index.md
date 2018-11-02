@@ -1,21 +1,22 @@
 ---
-title: 'Mise en route avec F #'
-description: 'Découvrez comment démarrer avec le langage dans .NET de programmation F #.'
+title: Prise en mainF#
+description: Découvrez comment bien démarrer avec le F# programming language dans .NET.
 ms.date: 09/06/2016
 ms.openlocfilehash: 6c419ce8f05096566012b7b6a0b8601350c938a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "33562542"
 ---
-# <a name="getting-started-with-f"></a>Mise en route avec F # #
+# <a name="getting-started-with-f"></a>Prise en mainF# #
 
-Il existe plusieurs manières de démarrer avec F #.  Nous avons plusieurs articles créés pour fournir un guide pour chacune d’elles principales.  Vous pouvez utiliser le tableau suivant pour faciliter la prise de décision.
+Il existe plusieurs manières de prise en main F#.  Nous avons plusieurs articles écrits pour fournir un guide pour chacune d’elles majeure.  Vous pouvez utiliser le tableau suivant afin de prendre une décision.
 
-| SYSTÈME D’EXPLOITATION | Préférez Visual Studio | Préférez le Code de Visual Studio | Choix d’une ligne de commande |
+| Système d’exploitation | Préférez Visual Studio | Préférez Visual Studio Code | Préférez une ligne de commande |
 | -- |------------------------|--------------------------|-----------------------------|-------------------------|
-| Windows | [Prise en main Visual Studio](get-started-visual-studio.md) | [Prise en main VSCode et Ionide](get-started-vscode.md) | [Prise en main .NET Core CLI](get-started-command-line.md) |
-| macOS | [Prise en main Visual Studio pour Mac](get-started-with-visual-studio-for-mac.md) | [Prise en main VSCode et Ionide](get-started-vscode.md) | [Prise en main .NET Core CLI](get-started-command-line.md) |
-| Linux | N/A | [Prise en main VSCode et Ionide](get-started-vscode.md) | [Prise en main .NET Core CLI](get-started-command-line.md) |
+| Windows | [Bien démarrer avec Visual Studio](get-started-visual-studio.md) | [Bien démarrer avec VSCode et Ionide](get-started-vscode.md) | [Bien démarrer avec l’interface CLI .NET Core](get-started-command-line.md) |
+| macOS | [Bien démarrer avec Visual Studio pour Mac](get-started-with-visual-studio-for-mac.md) | [Bien démarrer avec VSCode et Ionide](get-started-vscode.md) | [Bien démarrer avec l’interface CLI .NET Core](get-started-command-line.md) |
+| Linux | N/A | [Bien démarrer avec VSCode et Ionide](get-started-vscode.md) | [Bien démarrer avec l’interface CLI .NET Core](get-started-command-line.md) |
 
-En règle générale, il n’existe aucun moyen spécifique prise en main, qui est préférable que le reste.  Nous vous conseillons de toutes les façons d’utiliser F # sur votre ordinateur pour voir ce que vous aimez le meilleur !
+En règle générale, il n’existe aucun moyen spécifique prise en main, ce qui est mieux que le reste.  Nous vous conseillons de toutes les façons d’utiliser F# sur votre ordinateur pour voir ce que vous aimez le meilleur !

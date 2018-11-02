@@ -3,10 +3,10 @@ title: 'Déclarations d’importation : mot clé open (F#)'
 description: 'En savoir plus sur les déclarations d’importation F # et comment ils spécifient un module ou un espace de noms dont les éléments que vous pouvez référencer sans utiliser un nom qualifié complet.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "46586621"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Déclarations d’importation : Le `open` mot clé

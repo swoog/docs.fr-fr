@@ -3,10 +3,10 @@ title: 'Fichiers de signature (F #)'
 description: 'Découvrez comment utiliser des fichiers de signature F # pour conserver les informations sur les signatures publiques d’un jeu de F # d’éléments de programme, tels que des types, des espaces de noms et des modules.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "45991231"
 ---
 # <a name="signatures"></a>Signatures

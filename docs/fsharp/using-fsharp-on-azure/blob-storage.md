@@ -4,10 +4,10 @@ description: Store les données non structurées dans le cloud avec stockage Blo
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: ea9dc334ec9c2bcd4a80cc501d4b6634da5f64e4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037280"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Prise en main stockage Blob Azure avec F # #
