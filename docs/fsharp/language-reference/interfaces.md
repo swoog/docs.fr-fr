@@ -1,6 +1,6 @@
 ---
 title: Interfaces (F#)
-description: 'Découvrez comment F # Interfaces spécifient des jeux de membres associés qui implémentent des autres classes.'
+description: Découvrez comment F# Interfaces spécifient des jeux de membres associés qui implémentent des autres classes.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,7 +47,7 @@ Déclarations d’interface ressemblent aux déclarations de classe, à ceci pr�
 
 L’accessibilité par défaut pour les interfaces est `public`.
 
-Vous pouvez éventuellement nommer chaque paramètre de méthode à l’aide de la syntaxe normale F # :
+Vous pouvez éventuellement nommer chaque paramètre de méthode à l’aide de la syntaxe normale F# :
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet24032.fs)]
 

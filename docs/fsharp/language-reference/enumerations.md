@@ -1,6 +1,6 @@
 ---
 title: Énumérations (F#)
-description: 'Découvrez comment utiliser les énumérations F # à la place de littéraux pour rendre votre code plus lisible et plus facile à gérer.'
+description: Découvrez comment utiliser les énumérations F# à la place de littéraux pour rendre votre code plus lisible et plus facile à gérer.
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -40,7 +40,7 @@ Vous pouvez facilement convertir des énumérations au type sous-jacent à l’a
 
 Types énumérés peuvent avoir un des types sous-jacents suivants : `sbyte`, `byte`, `int16`, `uint16`, `int32`, `uint32`, `int64`, `uint16`, `uint64`, et `char`. Types énumération sont représentés dans le .NET Framework en tant que types qui sont héritées de `System.Enum`, qui à son tour est hérité de `System.ValueType`. Par conséquent, ils sont des types valeur qui sont trouvent sur la pile ou inline dans l’objet conteneur, et toute valeur du type sous-jacent est une valeur valide de l’énumération. Ceci est important lorsque les critères spéciaux sur l’énumération des valeurs, car vous devez fournir un modèle qui intercepte les valeurs sans nom.
 
-Le `enum` fonction dans la bibliothèque F # peut servir à générer une valeur d’énumération, même une valeur autre que prédéfinis, valeurs nommées. Vous utilisez le `enum` fonctionnent comme suit.
+Le `enum` fonction dans la bibliothèque F# peut servir à générer une valeur d’énumération, même une valeur autre que prédéfinis, valeurs nommées. Vous utilisez le `enum` fonctionnent comme suit.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2103.fs)]
 

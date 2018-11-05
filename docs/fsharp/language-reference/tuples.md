@@ -1,6 +1,6 @@
 ---
 title: Tuples (F#)
-description: 'Découvrez le tuple F #, un regroupement de valeurs sans nom, mais ordonnées, de types éventuellement différents.'
+description: Découvrez le tuple F#, un regroupement de valeurs sans nom, mais ordonnées, de types éventuellement différents.
 ms.date: 05/16/2016
 ms.openlocfilehash: e7628e4c4b538c2fe52fca25d2597b10fec28d1c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ struct(element, ... ,element )
 
 ## <a name="remarks"></a>Notes
 
-Chaque *élément* dans la syntaxe précédente peut être toute expression valide de F #.
+Chaque *élément* dans la syntaxe précédente peut être toute expression valide de F#.
 
 ## <a name="examples"></a>Exemples
 
@@ -88,7 +88,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Interopérabilité avec des Tuples de c#
 
-C# 7.0 introduit des tuples à la langue.  Tuples en c# sont des structs et sont équivalents aux tuples de struct en F #.  Si vous avez besoin interagir avec c#, vous devez utiliser des tuples de struct.
+C# 7.0 introduit des tuples à la langue.  Tuples en c# sont des structs et sont équivalents aux tuples de struct en F#.  Si vous avez besoin interagir avec c#, vous devez utiliser des tuples de struct.
 
 Il est facile à réaliser.  Par exemple, supposons que vous devez passer un tuple à une classe c# et les utiliser ensuite son résultat, qui est également un tuple :
 
@@ -103,7 +103,7 @@ namespace CSharpTupleInterop
 }
 ```
 
-Dans votre code F #, vous pouvez ensuite transmettre un tuple de struct comme paramètre et consommer le résultat sous forme de tuple struct.
+Dans votre code F#, vous pouvez ensuite transmettre un tuple de struct comme paramètre et consommer le résultat sous forme de tuple struct.
 
 ```fsharp
 open TupleInterop
@@ -126,7 +126,7 @@ Vous devez répéter mettre en correspondance un tuple et construire l’autre a
 
 Cette section explique le formulaire de tuples quand elles sont compilées.  Les informations ici n’est pas nécessaire pour lire, sauf si vous ciblez .NET Framework 3.5 ou inférieure.
 
-Tuples sont compilés en objets d’un des divers types génériques, toutes nommées `System.Tuple`, qui sont surchargés sur l’arité, nombre de paramètres de type. Types de tuple apparaissent dans ce formulaire lorsque vous les affichez à partir d’un autre langage, tel que c# ou Visual Basic, ou lorsque vous utilisez un outil qui n’est pas conscient des constructions F #. Le `Tuple` types ont été introduits dans .NET Framework 4. Si vous ciblez une version antérieure du .NET Framework, le compilateur utilise les versions de [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) à partir de la version 2.0 de la bibliothèque principale F #. Les types dans cette bibliothèque sont utilisés uniquement pour les applications qui ciblent le 2.0, 3.0 et les versions du .NET Framework 3.5. Le transfert de type est utilisé pour assurer la compatibilité binaire entre les composants .NET Framework 2.0 et .NET Framework 4 F #.
+Tuples sont compilés en objets d’un des divers types génériques, toutes nommées `System.Tuple`, qui sont surchargés sur l’arité, nombre de paramètres de type. Types de tuple apparaissent dans ce formulaire lorsque vous les affichez à partir d’un autre langage, tel que c# ou Visual Basic, ou lorsque vous utilisez un outil qui n’est pas conscient des constructions F#. Le `Tuple` types ont été introduits dans .NET Framework 4. Si vous ciblez une version antérieure du .NET Framework, le compilateur utilise les versions de [System.Tuple](https://msdn.microsoft.com/library/5ac7953d-acdc-4a58-bfb7-c1f6406c0fa3) à partir de la version 2.0 de la bibliothèque principale F#. Les types dans cette bibliothèque sont utilisés uniquement pour les applications qui ciblent le 2.0, 3.0 et les versions du .NET Framework 3.5. Le transfert de type est utilisé pour assurer la compatibilité binaire entre les composants .NET Framework 2.0 et .NET Framework 4 F#.
 
 ### <a name="compiled-form-of-struct-tuples"></a>Forme compilée de Tuples de Struct
 

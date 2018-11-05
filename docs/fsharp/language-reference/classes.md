@@ -1,6 +1,6 @@
 ---
 title: Classes (F#)
-description: 'Découvrez comment F # Classes sont des types qui représentent des objets qui peuvent avoir des propriétés, méthodes et événements.'
+description: Découvrez comment F# Classes sont des types qui représentent des objets qui peuvent avoir des propriétés, méthodes et événements.
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -33,7 +33,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="remarks"></a>Notes
 
-Les classes représentent la description fondamentale des types d’objet .NET ; la classe est le concept de type principal qui prend en charge la programmation orientée objet en F #.
+Les classes représentent la description fondamentale des types d’objet .NET ; la classe est le concept de type principal qui prend en charge la programmation orientée objet en F#.
 
 Dans la syntaxe précédente, le `type-name` est n’importe quel identificateur valid. Le `type-params` décrit les paramètres de type générique facultatifs. Il se compose des noms de paramètre de type et des contraintes placé entourés crochets pointus (`<` et `>`). Pour plus d’informations, consultez [génériques](generics/index.md) et [contraintes](generics/constraints.md). Le `parameter-list` décrit les paramètres du constructeur. Le modificateur d’accès associé au type ; le second se rapporte au constructeur principal. Dans les deux cas, la valeur par défaut est `public`.
 
@@ -51,7 +51,7 @@ Types mutuellement récursifs, qui sont des types qui se référencent mutuellem
 
 ## <a name="constructors"></a>Constructeurs
 
-Le constructeur est un code qui crée une instance du type classe. Constructeurs des classes fonctionnent un peu différemment dans F # que dans d’autres langages .NET. Dans une classe F #, il y a toujours un constructeur principal dont les arguments sont décrits dans le `parameter-list` qui suit le nom de type, et dont le corps se compose de la `let` (et `let rec`) liaisons au début de la déclaration de classe et le `do`liaisons qui suivent. Les arguments du constructeur principal sont dans la portée dans l’ensemble de la déclaration de classe.
+Le constructeur est un code qui crée une instance du type classe. Constructeurs des classes fonctionnent un peu différemment dans F# que dans d’autres langages .NET. Dans une classe F#, il y a toujours un constructeur principal dont les arguments sont décrits dans le `parameter-list` qui suit le nom de type, et dont le corps se compose de la `let` (et `let rec`) liaisons au début de la déclaration de classe et le `do`liaisons qui suivent. Les arguments du constructeur principal sont dans la portée dans l’ensemble de la déclaration de classe.
 
 Vous pouvez ajouter des constructeurs supplémentaires en utilisant le `new` mot clé pour ajouter un membre, comme suit :
 
@@ -104,7 +104,7 @@ Arguments de type sont déduits lorsque le type est utilisé. Dans le code suiva
 
 ## <a name="specifying-inheritance"></a>Spécification de l’héritage
 
-Le `inherit` clause identifie la classe de base directe, le cas échéant. En F #, qu’une seule classe de base directe est autorisée. Les interfaces qu’une classe implémente ne sont pas considérés comme des classes de base. Interfaces sont traitées dans le [Interfaces](Interfaces.md) rubrique.
+Le `inherit` clause identifie la classe de base directe, le cas échéant. En F#, qu’une seule classe de base directe est autorisée. Les interfaces qu’une classe implémente ne sont pas considérés comme des classes de base. Interfaces sont traitées dans le [Interfaces](Interfaces.md) rubrique.
 
 Vous pouvez accéder aux méthodes et propriétés de la classe de base à partir de la classe dérivée à l’aide du mot clé du langage `base` comme identificateur, suivi par un point (.) et le nom du membre.
 
@@ -112,7 +112,7 @@ Pour plus d’informations, consultez [Héritage](inheritance.md).
 
 ## <a name="members-section"></a>Section de membres
 
-Dans cette section, vous pouvez définir statique ou méthodes d’instance, propriétés, les implémentations d’interface, membres abstraits, déclarations d’événement et des constructeurs supplémentaires. Let et effectuent des liaisons ne peut pas apparaître dans cette section. Étant donné que les membres peuvent être ajoutés à un large éventail de types F # en plus des classes, ils sont traités dans une rubrique distincte, [membres](members/index.md).
+Dans cette section, vous pouvez définir statique ou méthodes d’instance, propriétés, les implémentations d’interface, membres abstraits, déclarations d’événement et des constructeurs supplémentaires. Let et effectuent des liaisons ne peut pas apparaître dans cette section. Étant donné que les membres peuvent être ajoutés à un large éventail de types F# en plus des classes, ils sont traités dans une rubrique distincte, [membres](members/index.md).
 
 ## <a name="mutually-recursive-types"></a>Types mutuellement récursifs
 
@@ -124,7 +124,7 @@ La sortie est une liste de tous les fichiers dans le répertoire actif.
 
 ## <a name="when-to-use-classes-unions-records-and-structures"></a>Quand utiliser des Classes, des Unions, des enregistrements et des Structures
 
-Étant donné la diversité des types disponibles, vous devez avoir une bonne compréhension de ce que chaque type est conçu pour sélectionner le type approprié pour une situation particulière. Classes sont conçues pour une utilisation dans des contextes de programmation orientée objet. Programmation orientée objet est le paradigme dominant utilisé dans les applications écrites pour le .NET Framework. Si votre code F # doit travailler en étroite collaboration avec le .NET Framework ou une autre bibliothèque orientée objet, et en particulier si vous avez besoin d’étendre à partir d’un système type orienté objet tel qu’une bibliothèque d’interface utilisateur, les classes sont probablement appropriés.
+Étant donné la diversité des types disponibles, vous devez avoir une bonne compréhension de ce que chaque type est conçu pour sélectionner le type approprié pour une situation particulière. Classes sont conçues pour une utilisation dans des contextes de programmation orientée objet. Programmation orientée objet est le paradigme dominant utilisé dans les applications écrites pour le .NET Framework. Si votre code F# doit travailler en étroite collaboration avec le .NET Framework ou une autre bibliothèque orientée objet, et en particulier si vous avez besoin d’étendre à partir d’un système type orienté objet tel qu’une bibliothèque d’interface utilisateur, les classes sont probablement appropriés.
 
 Si vous n’interagissez pas étroitement avec code orienté objet, ou si vous écrivez du code qui est autonome et par conséquent protégés de l’interaction fréquente avec code orienté objet, vous devez envisager d’utiliser des enregistrements et des unions discriminées. Un seul, bien pensée – hors union discriminée, ainsi que du code, de correspondance au modèle approprié peut souvent être utilisée comme une alternative plus simple à une hiérarchie d’objets. Pour plus d’informations sur les unions discriminées, consultez [Unions discriminées](discriminated-unions.md).
 

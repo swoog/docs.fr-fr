@@ -1,6 +1,6 @@
 ---
 title: Assertions (F#)
-description: 'Découvrez comment utiliser l’expression « déclarer » comme une fonctionnalité de débogage pour le test des expressions dans le langage de programmation F #.'
+description: Découvrez comment utiliser l’expression « déclarer » comme une fonctionnalité de débogage pour le test des expressions dans le langage de programmation F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -27,7 +27,7 @@ Dans la syntaxe précédente, *condition* représente une expression booléenne 
 
 Vérification de l’assertion est activée uniquement lorsque vous compilez en mode débogage ; Autrement dit, si la constante `DEBUG` est défini. Dans le système de projet, par défaut, le `DEBUG` constante n’est définie dans la configuration Debug, mais pas dans la configuration Release.
 
-L’erreur d’échec d’assertion ne peut pas être interceptée à l’aide de la gestion des exceptions F #.
+L’erreur d’échec d’assertion ne peut pas être interceptée à l’aide de la gestion des exceptions F#.
 
 >[!NOTE]
 Le `assert` fonction se résout en <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.

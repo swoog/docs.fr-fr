@@ -1,6 +1,6 @@
 ---
-title: 'Bien démarrer avec F # avec les outils de ligne de commande'
-description: 'Découvrez comment créer une solution à projets multiples simple sur F # à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).'
+title: Bien démarrer avec F# avec les outils de ligne de commande
+description: Découvrez comment créer une solution à projets multiples simple sur F# à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,15 +9,15 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45673907"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Bien démarrer avec F # avec l’interface CLI .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Bien démarrer avec F# avec l’interface CLI .NET Core
 
-Cet article explique comment vous pouvez commencer avec F # sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux) avec l’interface CLI .NET Core. Il passe par la création d’une solution à projets multiples avec une bibliothèque de classes est appelée par une application console.
+Cet article explique comment vous pouvez commencer avec F# sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux) avec l’interface CLI .NET Core. Il passe par la création d’une solution à projets multiples avec une bibliothèque de classes est appelée par une application console.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour commencer, vous devez installer la dernière version [du SDK .NET Core](https://www.microsoft.com/net/download/).
 
-Cet article suppose que vous savez comment utiliser une ligne de commande et un texte par défaut est l’éditeur. Si vous ne l’utilisez déjà, [Visual Studio Code](get-started-vscode.md) est une excellente option comme un éditeur de texte pour F #.
+Cet article suppose que vous savez comment utiliser une ligne de commande et un texte par défaut est l’éditeur. Si vous ne l’utilisez déjà, [Visual Studio Code](get-started-vscode.md) est une excellente option comme un éditeur de texte pour F#.
 
 ## <a name="build-a-simple-multi-project-solution"></a>Créer une solution à projets multiples simple
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez ensuite le [visite guidée de F #](../tour.md) pour en savoir plus sur les différentes fonctionnalités de F #.
+Consultez ensuite le [visite guidée de F#](../tour.md) pour en savoir plus sur les différentes fonctionnalités de F#.

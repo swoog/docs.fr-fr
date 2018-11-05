@@ -27,7 +27,7 @@ Les deux dernières mesures définissent ce que l'on *opérations d’ordre sup�
 
 ## <a name="give-the-value-a-name"></a>Donnez un nom à la valeur
 
-Si une fonction est une valeur de première classe, vous devez être en mesure de nom, tout comme vous pouvez nommer les entiers, chaînes et autres types intégrés. Cela s’appelle dans la programmation fonctionnelle en tant que liant un identificateur à une valeur. F # utilise [ `let` liaisons](../language-reference/functions/let-bindings.md) pour lier des noms aux valeurs : `let <identifier> = <value>`. Le code suivant montre deux exemples.
+Si une fonction est une valeur de première classe, vous devez être en mesure de nom, tout comme vous pouvez nommer les entiers, chaînes et autres types intégrés. Cela s’appelle dans la programmation fonctionnelle en tant que liant un identificateur à une valeur. F# utilise [ `let` liaisons](../language-reference/functions/let-bindings.md) pour lier des noms aux valeurs : `let <identifier> = <value>`. Le code suivant montre deux exemples.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet20.fs)]
 
@@ -35,7 +35,7 @@ Vous pouvez nommer une fonction aussi facilement. L’exemple suivant définit u
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
 
-F # fournit une syntaxe plus concise pour obtenir le même résultat avec moins de frappe.
+F# fournit une syntaxe plus concise pour obtenir le même résultat avec moins de frappe.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet22.fs)]
 
@@ -57,7 +57,7 @@ Tout comme l’identificateur `num` et entière 10 peut être utilisés indiffé
 
 ## <a name="pass-the-value-as-an-argument"></a>Passez la valeur en tant qu’Argument
 
-Si une valeur a un état de première classe dans un langage, vous pouvez le passer en tant qu’argument à une fonction. Par exemple, il est courant pour passer des entiers et des chaînes en tant qu’arguments. Le code suivant montre des entiers et les chaînes passées comme arguments en F #.
+Si une valeur a un état de première classe dans un langage, vous pouvez le passer en tant qu’argument à une fonction. Par exemple, il est courant pour passer des entiers et des chaînes en tant qu’arguments. Le code suivant montre des entiers et les chaînes passées comme arguments en F#.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet26.fs)]
 
@@ -69,7 +69,7 @@ Dans l’exemple suivant, fonction `applyIt` a deux paramètres, `op` et `arg`. 
 
 Permet d’envoyer une fonction en tant qu’argument à une autre fonction se trouve sous les abstractions communes dans les langages de programmation fonctionnelle, telles que les opérations de mappage ou de filtrage. Une opération de mappage, par exemple, est une fonction d’ordre supérieur qui capture le calcul partagé par les fonctions dans une liste, effectuer une opération sur chaque élément et puis retournent une liste des résultats. Vous pouvez faire pour incrémenter chaque élément dans une liste d’entiers, ou à un carré de chaque élément ou pour convertir chaque élément dans une liste de chaînes en majuscules. La partie sujette aux erreurs du calcul est le processus récursif qui parcourt la liste et génère une liste des résultats à retourner. Cette partie est capturée dans la fonction de mappage. Il vous suffit d’écrire pour une application particulière est la fonction que vous souhaitez appliquer individuellement à chaque élément de liste (ajout, mise au carré, changement de casse). Cette fonction est envoyée en tant qu’argument à la fonction de mappage, tout comme `squareIt` est envoyé à `applyIt` dans l’exemple précédent.
 
-F # fournit des méthodes de mappage pour la plupart des types de collection, notamment [répertorie](../language-reference/lists.md), [tableaux](../language-reference/arrays.md), et [séquences](../language-reference/sequences.md). Les exemples suivants utilisent des listes. La syntaxe est `List.map <the function> <the list>`.
+F# fournit des méthodes de mappage pour la plupart des types de collection, notamment [répertorie](../language-reference/lists.md), [tableaux](../language-reference/arrays.md), et [séquences](../language-reference/sequences.md). Les exemples suivants utilisent des listes. La syntaxe est `List.map <the function> <the list>`.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
@@ -99,7 +99,7 @@ Le code suivant utilise `checkFor` pour créer une nouvelle fonction qui accepte
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet33.fs)]
 
-L’exemple suivant utilise l’état de première classe de fonctions en F # pour déclarer une fonction, `compose`, qui retourne une composition de deux arguments de fonction.
+L’exemple suivant utilise l’état de première classe de fonctions en F# pour déclarer une fonction, `compose`, qui retourne une composition de deux arguments de fonction.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet34.fs)]
 
@@ -111,7 +111,7 @@ Le code suivant envoie deux fonctions en tant qu’arguments à `compose`, à la
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet35.fs)]
 
 >[!NOTE]
-F # fournit deux opérateurs, `<<` et `>>`, qui composent des fonctions. Par exemple, `let squareAndDouble2 = doubleIt << squareIt` équivaut à `let squareAndDouble = compose doubleIt squareIt` dans l’exemple précédent.
+F# fournit deux opérateurs, `<<` et `>>`, qui composent des fonctions. Par exemple, `let squareAndDouble2 = doubleIt << squareIt` équivaut à `let squareAndDouble = compose doubleIt squareIt` dans l’exemple précédent.
 
 L’exemple de retour d’une fonction en tant que la valeur d’un appel de fonction suivant crée un jeu d’estimation simple. Pour créer un jeu, appelez `makeGame` avec la valeur que vous voulez que quelqu'un à deviner envoyé pour `target`. La valeur de retour à partir de la fonction `makeGame` est une fonction qui prend un argument (l’estimation) et indique si l’estimation est correcte.
 
@@ -123,7 +123,7 @@ Le code suivant appelle `makeGame`, envoi de la valeur `7` pour `target`. Identi
 
 ## <a name="curried-functions"></a>Fonctions curryfiées
 
-La plupart des exemples dans la section précédente peuvent être écrites plus concise en tirant parti de l’implicite *curryfication* dans les déclarations de fonction F #. La curryfication est un processus qui transforme une fonction qui a plusieurs paramètres dans une série de fonctions intégrées, chacun d’eux possède un seul paramètre. En F #, les fonctions qui ont plusieurs paramètres sont intrinsèquement curryfiées. Par exemple, `compose` à partir de la section précédente peut être écrite comme indiqué dans le style concis suivant, avec trois paramètres.
+La plupart des exemples dans la section précédente peuvent être écrites plus concise en tirant parti de l’implicite *curryfication* dans les déclarations de fonction F#. La curryfication est un processus qui transforme une fonction qui a plusieurs paramètres dans une série de fonctions intégrées, chacun d’eux possède un seul paramètre. En F#, les fonctions qui ont plusieurs paramètres sont intrinsèquement curryfiées. Par exemple, `compose` à partir de la section précédente peut être écrite comme indiqué dans le style concis suivant, avec trois paramètres.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet38.fs)]
 
@@ -162,7 +162,7 @@ Pour aller plus loin il une seule étape, remplacez la valeur qui `applyIt` lié
 
 ## <a name="functions-are-first-class-values-in-f"></a>Les fonctions sont des valeurs de première classe f\#
 
-Les exemples dans les sections précédentes montrent que les fonctions en F # satisfont les critères de valeurs de première classe en F #:
+Les exemples dans les sections précédentes montrent que les fonctions en F# satisfont les critères de valeurs de première classe en F#:
 
 - Vous pouvez lier un identificateur à une définition de fonction.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet21.fs)]
@@ -176,7 +176,7 @@ Les exemples dans les sections précédentes montrent que les fonctions en F # s
 - Vous pouvez retourner une fonction en tant que la valeur d’un appel de fonction.
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet32.fs)]
 
-Pour plus d’informations sur F #, consultez le [référence du langage F #](../language-reference/index.md).
+Pour plus d’informations sur F#, consultez le [référence du langage F#](../language-reference/index.md).
 
 ## <a name="example"></a>Exemple
 
