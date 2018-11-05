@@ -5,12 +5,12 @@ author: bleroy
 ms.author: mairaw
 ms.date: 11/16/2016
 ms.custom: vs-dotnet
-ms.openlocfilehash: 15537ea8c68b5c873bbf26ab0519a19de0b13230
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: b3e466511fcae447f5bb54b83f13b25bc90c6539
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969559"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185077"
 ---
 # <a name="building-a-complete-net-core-solution-on-windows-using-visual-studio-2017"></a>Génération d’une solution .NET Core complète sur Windows à l’aide de Visual Studio 2017
 
@@ -24,7 +24,7 @@ Suivez les instructions stipulées dans [notre page de prérequis](../windows-pr
 
 ### <a name="writing-the-library"></a>Écriture de la bibliothèque
 
-1. Dans Visual Studio, sélectionnez **Fichier**, **Nouveau**, **Projet**. Dans la boîte de dialogue **Nouveau projet**, développez le nœud **Visual C#**, choisissez le nœud **.NET Standard**, puis choisissez **Bibliothèque de classes (.NET Standard)**. 
+1. Dans Visual Studio, sélectionnez **Fichier**, **Nouveau**, **Projet**. Dans la boîte de dialogue **Nouveau projet**, développez le nœud **Visual C#**, choisissez le nœud **.NET Standard**, puis choisissez **Bibliothèque de classes (.NET Standard)**. Une bibliothèque .NET Standard est créée. Elle cible .NET Core, ainsi que toute autre implémentation de .NET qui prend en charge la version 2.0 de [.NET Standard](../../standard/net-standard.md).
 
 2. Nommez le projet « Library » et la solution « Golden ». Laissez l’option **Créer le répertoire pour la solution** activée. Cliquez sur **OK**.
 
@@ -73,6 +73,6 @@ Suivez les instructions stipulées dans [notre page de prérequis](../windows-pr
 
 8. Définissez un point d’arrêt après la ligne que vous venez d’ajouter.
 
-9. Appuyez sur F5 pour exécuter l’application.
+9. Appuyez sur F5 pour exécuter l'application.
 
    L’application doit se générer sans erreur et atteindre le point d’arrêt. Vous pouvez également vérifier que la sortie de l’application est « The answer is 42. ».

@@ -2,12 +2,12 @@
 title: Activation d’une source de données pour l’interrogation LINQ
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: 204d2d6104a065f1d1cf9e731dc01f400218f91b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 1aa3a22028b0b3d7c705076a3e16379e09323271
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253180"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122695"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Activation d'une source de données pour l'interrogation LINQ
 Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] pour permettre l’interrogation de toute source de données dans le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. La source de données peut être une structure de données, un service Web, un système de fichiers ou une base de données, par exemple. Le modèle [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] permet aux clients d'interroger facilement une source de données pour laquelle l'interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] est activée, car la syntaxe et le modèle de la requête ne changent pas. Il existe différentes manières d’étendre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] à ces sources de données, dont les suivantes :  
@@ -28,7 +28,7 @@ Il y a différentes méthodes pour étendre [!INCLUDE[vbteclinq](~/includes/vbte
  Vous pouvez activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] des données en mémoire de deux manières. Si les données sont d'un type qui implémente <xref:System.Collections.Generic.IEnumerable%601>, vous pouvez interroger les données en utilisant [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects. S’il est inutile d’activer l’énumération de ce type par l’implémentation de l’interface <xref:System.Collections.Generic.IEnumerable%601>, vous pouvez définir des méthodes d’opérateur de requête standard [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dans ce type ou créer des méthodes d’opérateur de requête standard [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] qui étendent ce type. Les implémentations personnalisées des opérateurs de requête standard doivent utiliser l'exécution différée pour retourner les résultats.  
   
 ### <a name="remote-data"></a>Données distantes  
- La meilleure manière d’activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] d’une source de données distante est d’implémenter l’interface <xref:System.Linq.IQueryable%601>. Toutefois, cette méthode diffère de l'extension d'un fournisseur tel que [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] pour une source de données. Aucun modèle de fournisseur pour l’extension des technologies [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existantes (telles que [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]), à d’autres types de source de données n’est disponible dans [!INCLUDE[vs_orcas_long](~/includes/vs-orcas-long-md.md)].  
+ La meilleure manière d’activer l’interrogation [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] d’une source de données distante est d’implémenter l’interface <xref:System.Linq.IQueryable%601>. Toutefois, cette méthode diffère de l'extension d'un fournisseur tel que [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] pour une source de données. Aucun modèle de fournisseur n’est disponible dans Visual Studio 2008 pour étendre les technologies [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] existantes (comme [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]) à d’autres types de source de données.
   
 ## <a name="iqueryable-linq-providers"></a>Fournisseurs LINQ IQueryable  
  La complexité des fournisseurs [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] qui implémentent <xref:System.Linq.IQueryable%601> peut varier énormément. Cette section décrit les différents niveaux de complexité.  

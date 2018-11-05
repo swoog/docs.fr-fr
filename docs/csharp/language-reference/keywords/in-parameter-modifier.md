@@ -4,16 +4,16 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 199d2d54a1937b9982131b8cc7f1c777f656d7a9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512013"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199407"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in, modificateur de paramètre (référence C#)
 
-Le mot clé `in` entraîne le passage des arguments par référence. Il est similaire aux mots clés [ref](ref.md) ou [out](out-parameter-modifier.md), sauf que les arguments `in` ne peuvent pas être modifiés par la méthode appelée. Alors que les arguments `ref` peuvent être modifiés, les arguments `out` doivent être modifiés par l’appelant, et ces modifications sont observables dans le contexte d’appel.
+Le mot clé `in` entraîne le passage des arguments par référence. Il est similaire aux mots clés [ref](ref.md) ou [out](out-parameter-modifier.md), sauf que les arguments `in` ne peuvent pas être modifiés par la méthode appelée. Alors que les arguments `ref` peuvent être modifiés, les arguments `out` doivent être modifiés par la méthode appelée, et ces modifications sont observables dans le contexte d’appel.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -124,4 +124,4 @@ Vous ne pouvez pas utiliser les mots clés `in`, `ref` ou `out` pour les types d
 - [Guide de programmation C#](../../programming-guide/index.md)  
 - [Mots clés C#](index.md)  
 - [Paramètres de méthodes](method-parameters.md)  
-- [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)  
+- [Écrire du code sécurisé et efficace](../../write-safe-efficient-code.md)  

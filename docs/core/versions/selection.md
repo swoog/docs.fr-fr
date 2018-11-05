@@ -4,12 +4,12 @@ description: Découvrez comment .NET Core recherche et choisit les versions du r
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 28a76cc17346c40517a21e8dc902bd6c2a84597f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47233196"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841538"
 ---
 # <a name="net-core-version-selection"></a>Sélection de la version de .NET Core
 
@@ -22,7 +22,7 @@ Cet article explique les stratégies utilisées par les outils .NET Core, le kit
 
 La sélection de version s’opère dans les cas suivants :
 
-- Quand vous exécutez une commande du kit SDK, [celui-ci utilise la dernière version installée](#the-sdk-uses-the-latest-installed-version).
+- Quand vous exécutez une commande du Kit SDK, [celui-ci utilise la dernière version installée](#the-sdk-uses-the-latest-installed-version).
 - Quand vous générez un assembly, [les monikers de framework cible définissent les API au moment de la génération](#target-framework-monikers-define-build-time-apis).
 - Quand vous exécutez une application .NET Core, [les applications dépendantes de la version cible de .Net Framework font l’objet d’une restauration par progression](#framework-dependent-apps-roll-forward).
 - Quand vous publiez une application autonome, [les déploiements autonomes incluent le runtime sélectionné](#self-contained-deployments-include-the-selected-runtime).
@@ -31,12 +31,12 @@ Le reste de ce document examine ces quatre scénarios.
 
 ## <a name="the-sdk-uses-the-latest-installed-version"></a>Le kit SDK utilise la dernière version installée
 
-Les commandes du kit SDK incluent `dotnet new` et `dotnet run`. L’interface CLI `dotnet` doit choisir une version du kit SDK pour chaque commande dotnet. Par défaut, l’interface CLI .NET Core utilise le dernier kit SDK installé sur la machine, même si :
+Les commandes du kit SDK incluent `dotnet new` et `dotnet run`. L’interface CLI .NET Core doit choisir une version du Kit SDK pour chaque commande `dotnet`. Par défaut, elle utilise le dernier Kit SDK installé sur la machine, même si :
 
-* Le projet cible une version antérieure.
-* La dernière version est une préversion.
+* Le projet cible une version antérieure du runtime .NET Core.
+* La dernière version du Kit SDK .NET Core est une préversion.
 
-Les applications peuvent tirer parti des fonctionnalités et des améliorations du dernier kit SDK tout en ciblant des versions antérieures du runtime .NET Core. Vous pouvez cibler plusieurs versions du runtime de .NET Core dans différents projets en utilisant les mêmes outils du kit SDK pour tous les projets.
+Vous pouvez tirer parti des fonctionnalités et des améliorations du dernier kit SDK tout en ciblant des versions antérieures du runtime .NET Core. Vous pouvez cibler plusieurs versions du runtime de .NET Core dans différents projets en utilisant les mêmes outils du kit SDK pour tous les projets.
 
 À de rares occasions, vous pouvez être amené à utiliser une version antérieure du kit SDK. Vous devez dans ce cas spécifier cette version dans un [ fichier *global.json*](../tools/global-json.md). La stratégie « utiliser la dernière version » signifie que vous utilisez uniquement *global.json* pour spécifier une version du kit SDK .NET Core antérieure à la dernière version installée.
 

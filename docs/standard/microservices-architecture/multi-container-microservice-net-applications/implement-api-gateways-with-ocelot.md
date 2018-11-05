@@ -4,12 +4,12 @@ description: Découvrez comment implémenter des passerelles d’API avec Ocelot
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: dbb3fdb27175a86291d3a942ff168a5aae787c0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 26b3c3510aa06fb1c7aa4c3a44f23c8e526fe60c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522198"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200024"
 ---
 # <a name="implementing-api-gateways-with-ocelot"></a>Implémentation de passerelles d’API avec Ocelot
 
@@ -271,7 +271,7 @@ DownstreamHostAndPorts est un tableau qui contient l’hôte et le port de tous 
 
 UpstreamPathTemplate est l’URL dont Ocelot se servira pour identifier l’URL DownstreamPathTemplate à utiliser pour une demande donnée à partir du client. Enfin, la méthode UpstreamHttpMethod est utilisée pour qu’Ocelot puisse faire la distinction entre les différentes demandes (GET, POST, PUT) sur la même URL.
 
-À ce stade, vous pourriez avoir une seule passerelle d’API Ocelot (WebHost ASP.NET Core) utilisant un ou [plusieurs fichiers configuration.json fusionnés](http://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) ou vous pouvez également stocker la [configuration dans un magasin Consul KV](http://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul). 
+À ce stade, vous pourriez avoir une seule passerelle d’API Ocelot (WebHost ASP.NET Core) utilisant un ou [plusieurs fichiers configuration.json fusionnés](https://ocelot.readthedocs.io/en/latest/features/configuration.html#merging-configuration-files) ou vous pouvez également stocker la [configuration dans un magasin Consul KV](https://ocelot.readthedocs.io/en/latest/features/configuration.html#store-configuration-in-consul).
 
 Toutefois, comme indiqué dans la section d’architecture et de conception, si vous voulez vraiment avoir des microservices autonomes, il peut être préférable de diviser cette passerelle d’API monolithique en plusieurs passerelles d’API et/ou BFF (backend for frontend). Pour ce faire, voyons comment implémenter cette approche avec des conteneurs Docker.
 
@@ -346,9 +346,9 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api              
+    - IdentityUrl=http://identity.api
   ports:
-    - "5203:80"   
+    - "5203:80"
   volumes:
     - ./src/ApiGateways/Web.Bff.Marketing/apigw:/app/configuration
 ```
@@ -363,25 +363,25 @@ En divisant la passerelle d’API en plusieurs passerelles d’API, différentes
 
 Maintenant, si vous exécutez eShopOnContainers avec les passerelles d’API (incluses par défaut dans Visual Studio lorsque vous ouvrez la solution eShopOnContainers-ServicesAndWebApps.sln ou si vous exécutez « docker-compose up »), les exemples d’itinéraires suivants sont effectués. 
 
-Par exemple, lors de la visite de l’URL en amont http://localhost:5202/api/v1/c/catalog/items/2/ prise en charge par la passerelle d’API webshoppingapigw, vous obtenez le résultat à partir de l’URL interne en aval http://catalog.api/api/v1/2 dans l’hôte Docker, comme dans le navigateur suivant.
+Par exemple, lors de la visite de l’URL en amont `http://localhost:5202/api/v1/c/catalog/items/2/` prise en charge par la passerelle d’API webshoppingapigw, vous obtenez le résultat à partir de l’URL interne en aval `http://catalog.api/api/v1/2` dans l’hôte Docker, comme dans le navigateur suivant.
 
 ![](./media/image35.png)
 
-**Figure 8-34.** Accès à un microservice via une URL fournie par la passerelle d’API 
+**Figure 8-34.** Accès à un microservice via une URL fournie par la passerelle d’API
 
-En raisons des tests ou du débogage, si vous souhaitez accéder directement au conteneur Docker Catalog (uniquement dans l’environnement de développement) sans passer par la passerelle d’API, dans la mesure où « catalog.api » est une résolution DNS interne à l’hôte Docker (découverte de service gérée par les noms de service docker-compose), la seule façon d’accéder directement au conteneur est via le port externe publié dans le fichier docker-compose.override.yml, qui est fourni uniquement pour les tests de développement, comme http://localhost:5101/api/v1/Catalog/items/1 dans le navigateur suivant.
+En raisons des tests ou du débogage, si vous souhaitez accéder directement au conteneur Docker Catalog (uniquement dans l’environnement de développement) sans passer par la passerelle d’API, dans la mesure où « catalog.api » est une résolution DNS interne à l’hôte Docker (découverte de service gérée par les noms de service docker-compose), la seule façon d’accéder directement au conteneur est via le port externe publié dans le fichier docker-compose.override.yml, qui est fourni uniquement pour les tests de développement, comme `http://localhost:5101/api/v1/Catalog/items/1` dans le navigateur suivant.
 
 ![](./media/image36.png)
 
 **Figure 8-35.** Accès direct à un microservice à des fins de test 
 
-Toutefois, l’application est configurée pour pouvoir accéder à tous les microservices via les passerelles d’API et non pas via les « raccourcis » des ports directs. 
+Toutefois, l’application est configurée pour pouvoir accéder à tous les microservices via les passerelles d’API et non pas via les « raccourcis » des ports directs.
 
 ### <a name="the-gateway-aggregation-pattern-in-eshoponcontainers"></a>Modèle d’agrégation de passerelle dans eShopOnContainers
 
-Comme expliqué précédemment, une manière souple d’implémenter l’agrégation des demandes est d’utiliser les services personnalisés, par code. Vous pouvez également implémenter l’agrégation des demandes avec la fonctionnalité d’agrégation des demandes dans Ocelot, mais elle ne sera peut-être pas aussi flexible qu’il le faut. Par conséquent, la manière sélectionnée pour implémenter l’agrégation dans eShopOnContainers consiste à utiliser un service API web ASP.NET Core explicite pour chaque agrégateur. 
+Comme expliqué précédemment, une manière souple d’implémenter l’agrégation des demandes est d’utiliser les services personnalisés, par code. Vous pouvez également implémenter l’agrégation des demandes avec la fonctionnalité d’agrégation des demandes dans Ocelot, mais elle ne sera peut-être pas aussi flexible qu’il le faut. Par conséquent, la manière sélectionnée pour implémenter l’agrégation dans eShopOnContainers consiste à utiliser un service API web ASP.NET Core explicite pour chaque agrégateur.
 
-Selon cette approche, le diagramme de composition de passerelle d’API est en réalité un peu plus étendu lorsque sont pris en compte les services d’agrégation qui ne figurent pas dans le diagramme d’architecture globale simplifiée illustrée précédemment. 
+Selon cette approche, le diagramme de composition de passerelle d’API est en réalité un peu plus étendu lorsque sont pris en compte les services d’agrégation qui ne figurent pas dans le diagramme d’architecture globale simplifiée illustrée précédemment.
 
 Dans le diagramme suivant, vous pouvez également voir les services d’agrégation fonctionner avec leurs passerelles d’API associées.
 
@@ -389,13 +389,13 @@ Dans le diagramme suivant, vous pouvez également voir les services d’agrégat
 
 **Figure 8-36.** Architecture eShopOnContainers avec services d’agrégation
 
-L’image suivante offre un plus grand zoom avant et vous pouvez remarquer comment, pour le secteur d’activité « Shopping », les applications clientes peuvent être améliorées en réduisant les échanges avec les microservices lors de l’utilisation de ces services d’agrégation sous le domaine des passerelles d’API. 
+L’image suivante offre un plus grand zoom avant et vous pouvez remarquer comment, pour le secteur d’activité « Shopping », les applications clientes peuvent être améliorées en réduisant les échanges avec les microservices lors de l’utilisation de ces services d’agrégation sous le domaine des passerelles d’API.
 
  ![](./media/image38.png)
 
 **Figure 8-37.** Vision agrandie des services d’agrégation
 
-Vous pouvez remarquer que le diagramme peut se compliquer lorsqu’il montre les demandes possibles provenant des passerelles d’API. Vous pouvez voir comment les flèches en bleu seraient simplifiées, du point de vue des applications clientes, lors de l’utilisation du modèle d’agrégation en réduisant les échanges et la latence de la communication, et en améliorant finalement considérablement l’expérience utilisateur pour les applications distantes (applications mobiles et SPA), en particulier. 
+Vous pouvez remarquer que le diagramme peut se compliquer lorsqu’il montre les demandes possibles provenant des passerelles d’API. Vous pouvez voir comment les flèches en bleu seraient simplifiées, du point de vue des applications clientes, lors de l’utilisation du modèle d’agrégation en réduisant les échanges et la latence de la communication, et en améliorant finalement considérablement l’expérience utilisateur pour les applications distantes (applications mobiles et SPA), en particulier.
 
 Dans le cas du secteur d’activité « Marketing » et des microservices, il s’agit d’un cas d’usage très simple, et il n’était pas nécessaire d’utiliser des agrégateurs, bien que cela soit possible, le cas échéant.
 
@@ -466,9 +466,12 @@ namespace OcelotApiGw
                     x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
                     {
                         ValidAudiences = new[] { "orders", "basket", "locations", "marketing", "mobileshoppingagg", "webshoppingagg" }
-                    };                   
+                    };
                 });
             //...
+        }
+    }
+}
 ```
 
 Ensuite, vous devez également définir une autorisation avec l’attribut [Authorize] sur une ressource quelconque accessible comme les microservices, comme dans le contrôleur de microservice de panier d’achat (Basket) suivant.
@@ -479,7 +482,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.Controllers
     [Route("api/v1/[controller]")]
     [Authorize]
     public class BasketController : Controller
-    {   
+    {
       //...
     }
 }
@@ -506,9 +509,9 @@ services.AddAuthentication(options =>
 });
 ```
 
-Dans l’étape suivante, si vous essayez d’accéder à un microservice sécurisé quelconque comme le microservice Basket avec une URL de réacheminement basée sur la passerelle d’API comme http://localhost:5202/api/v1/b/basket/1, vous obtenez une erreur 401 Non autorisé, sauf si vous fournissez un jeton valide. En revanche, si une URL de réacheminement est authentifiée, Ocelot appelle tout schéma en aval qui lui est associé (URL de microservice interne).
+Dans l’étape suivante, si vous essayez d’accéder à un microservice sécurisé quelconque comme le microservice Basket avec une URL de réacheminement basée sur la passerelle d’API comme `http://localhost:5202/api/v1/b/basket/1`, vous obtenez une erreur 401 Non autorisé, sauf si vous fournissez un jeton valide. En revanche, si une URL de réacheminement est authentifiée, Ocelot appelle tout schéma en aval qui lui est associé (URL de microservice interne).
 
-**Autorisation au niveau des réacheminements d’Ocelot.**  Ocelot prend en charge l’autorisation basée sur les revendications évaluée après l’authentification. Vous définissez l’autorisation à un niveau d’acheminement en ajoutant le code suivant à la configuration de réacheminement. 
+**Autorisation au niveau des réacheminements d’Ocelot.**  Ocelot prend en charge l’autorisation basée sur les revendications évaluée après l’authentification. Vous définissez l’autorisation à un niveau d’acheminement en ajoutant le code suivant à la configuration de réacheminement.
 
 ```
 "RouteClaimsRequirement": {
@@ -516,7 +519,7 @@ Dans l’étape suivante, si vous essayez d’accéder à un microservice sécur
 }
 ```
 
-Dans cet exemple, quand l’intergiciel d’autorisation est appelé, Ocelot détermine si l’utilisateur a le type de revendication « UserType » dans le jeton, et si la valeur de cette revendication est « employee ». Si ce n’est pas le cas, l’utilisateur n’est pas autorisé et la réponse est 403 (Refusé). 
+Dans cet exemple, quand l’intergiciel d’autorisation est appelé, Ocelot détermine si l’utilisateur a le type de revendication « UserType » dans le jeton, et si la valeur de cette revendication est « employee ». Si ce n’est pas le cas, l’utilisateur n’est pas autorisé et la réponse est 403 (Refusé).
 
 ## <a name="using-kubernetes-ingress-plus-ocelot-api-gateways"></a>Utilisation de l’entrée Kubernetes et des passerelles d’API Ocelot
 
@@ -530,9 +533,9 @@ Par définition, une entrée est une collection de règles qui autorisent les co
 
 Dans eShopOnContainers, lorsque vous effectuez un développement local et utilisez simplement votre machine de développement en tant qu’hôte Docker, vous n’utilisez pas d’entrée, mais uniquement les multiples passerelles d’API. 
 
-Toutefois, lorsque vous ciblez un environnement de « production » basé sur Kuberentes, eShopOnCOntainers utilise une entrée en face des passerelles d’API. De cette façon, les clients appellent toujours la même URL de base, mais les demandes sont acheminées vers plusieurs passerelles d’API ou BFF. 
+Toutefois, lorsque vous ciblez un environnement de « production » basé sur Kubernetes, eShopOnContainers utilise une entrée en face des passerelles d’API. De cette façon, les clients appellent toujours la même URL de base, mais les demandes sont acheminées vers plusieurs passerelles d’API ou BFF. 
 
-Notez que les passerelles d’API sont des serveurs frontaux ou des façades exposant uniquement les services, mais pas les applications web qui sont généralement hors de leur portée. De plus, les passerelles d’API peuvent masquer certains microservices internes. 
+Notez que les passerelles d’API sont des serveurs frontaux ou des façades exposant uniquement les services, mais pas les applications web qui sont généralement hors de leur portée. De plus, les passerelles d’API peuvent masquer certains microservices internes.
 
 Toutefois, l’entrée redirige simplement les requêtes HTTP et n’essaie pas de masquer de microservice ni d’application web.
 
@@ -542,7 +545,7 @@ Le fait d’avoir un niveau Nginx d’entrée dans Kubernetes en face des applic
 
 **Figure 8-40.** Niveau d’entrée dans eShopOnContainers lors d’un déploiement dans Kubernetes
 
-Quand vous déployez eShopOnContainers dans Kubernetes, il expose simplement quelques services ou points de terminaison via l’_entrée_, en fait la liste suivante de suffixes sur les URL :
+Quand vous déployez eShopOnContainers dans Kubernetes, il expose simplement quelques services ou points de terminaison via _l’entrée_, en fait la liste suivante de suffixes sur les URL :
 
 -   `/` pour l’application web SPA cliente
 -   `/webmvc` pour l’application web MVC cliente
@@ -556,28 +559,24 @@ Lorsque vous déployez dans Kubernetes, chaque passerelle d’API Ocelot utilise
 
 Dans les fichiers de code source d’eShopOnContainers, les fichiers « configuration.json » d’origine sont disponibles dans le dossier `k8s/ocelot/`. Il existe un fichier pour chaque passerelle d’API/BFF.
 
-
 ## <a name="additional-cross-cutting-features-in-an-ocelot-api-gateway"></a>Fonctionnalités transversales supplémentaires dans une passerelle d’API Ocelot
 
 D’autres fonctionnalités importantes peuvent être étudiées et utilisées lorsque vous utilisez une passerelle d’API Ocelot. Elles sont décrites dans les liens suivants.
 
 -   **Découverte de services côté client intégrant Ocelot avec Consul ou Eureka** 
-    [*http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](http://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 -   **Mise en cache au niveau de la passerelle d’API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/caching.html*](http://ocelot.readthedocs.io/en/latest/features/caching.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 -   **Connexion au niveau de la passerelle d’API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/logging.html*](http://ocelot.readthedocs.io/en/latest/features/logging.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 -   **Qualité de service (nouvelles tentatives et disjoncteurs) au niveau de la passerelle d’API** 
-    [*http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](http://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+    [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 -   **Limitation du débit** 
-    [*http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](http://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
-
-
-
+    [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 >[!div class="step-by-step"]
 [Précédent] (background-tasks-with-ihostedservice.md) [Suivant] (../microservice-ddd-cqrs-patterns/index.md)

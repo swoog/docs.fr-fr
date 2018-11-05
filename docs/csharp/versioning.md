@@ -3,16 +3,16 @@ title: Gestion de version C# - Guide C#
 description: Comprendre le fonctionnement de la gestion de version C# et .NET
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: af81e5a8ad3165ce99a823f8b263cc798d5b6d2c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585931"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183228"
 ---
 # <a name="versioning-in-c"></a>Gestion de version en C# #
 
-Dans ce didacticiel, vous allez apprendre la signification de la gestion de version .NET. Vous apprendrez également les facteurs à prendre en compte lors de la gestion de version de votre bibliothèque ainsi que de la mise à niveau vers une nouvelle version de la bibliothèque.
+Dans ce didacticiel, vous allez apprendre la signification de la gestion de version .NET. Vous découvrirez également les facteurs à prendre en compte dans le cadre du contrôle de version de votre bibliothèque et de sa mise à niveau vers une nouvelle version.
 
 ## <a name="authoring-libraries"></a>Création de bibliothèques
 
@@ -20,7 +20,7 @@ En tant que développeur ayant créé des bibliothèques .NET pour une utilisati
 
 ### <a name="semantic-versioning"></a>Gestion sémantique de version
 
-La [gestion sémantique de version](http://semver.org/) (SemVer en abrégé) est une convention d’affectation de noms appliquée à des versions de votre bibliothèque pour indiquer des événements jalons spécifiques.
+La [gestion sémantique de version](https://semver.org/) (SemVer en abrégé) est une convention d’affectation de noms appliquée à des versions de votre bibliothèque pour indiquer des événements jalons spécifiques.
 Dans l’idéal, les informations de version ajoutées à votre bibliothèque doivent aider les développeurs à déterminer la compatibilité avec les projets qui utilisent des versions antérieures de cette même bibliothèque.
 
 L’approche la plus simple de SemVer est le format à 3 composants `MAJOR.MINOR.PATCH`, où :

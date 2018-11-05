@@ -3,12 +3,12 @@ title: Effectuer une sous-requête sur une opération de regroupement (LINQ en C
 description: Découvrez comment effectuer une sous-requête sur une opération de regroupement à l’aide de LINQ en C#.
 ms.date: 12/1/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 19be93fe695982e93abea9a59153a4245dce4a60
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47193471"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846316"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Effectuer une sous-requête sur une opération de regroupement
 
@@ -23,7 +23,11 @@ Pour plus d’informations sur les continuations, consultez [into](../language-r
 > [!NOTE]
 > Cet exemple contient des références aux objets définis dans l’exemple de code qui est présenté dans [Interroger une collection d’objets](query-a-collection-of-objects.md).
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
+
+La requête de l’extrait de code ci-dessus peut également s’écrire avec la syntaxe de méthode. L’extrait de code suivant comporte une requête sémantiquement équivalente, écrite avec la syntaxe de méthode.
+
+[!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
 
 ## <a name="see-also"></a>Voir aussi
 

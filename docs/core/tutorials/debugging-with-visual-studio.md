@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
 ms.custom: vs-dotnet
-ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399227"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200122"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Déboguer votre application Hello World avec Visual Studio 2017
 
@@ -166,7 +166,7 @@ Pour définir un point d’arrêt conditionnel et voir ce qu’il se passe lorsq
 ---
 ## <a name="stepping-through-a-program"></a>Exécution pas à pas d’un programme
 
-Visual Studio vous permet également de parcourir un programme ligne par ligne et de surveiller son exécution. En règle générale, vous définissez un point d’arrêt et utilisez cette fonctionnalité pour suivre le déroulement du programme sur une petite portion de son code. Comme votre programme est petit, nous pouvons exécuter pas à pas la totalité du programme en procédant comme suit :
+Visual Studio vous permet également de parcourir un programme ligne par ligne et de surveiller son exécution. En règle générale, on définit un point d’arrêt et on utilise cette fonctionnalité pour suivre le déroulement du programme sur une petite portion de son code. Comme votre programme est petit, nous pouvons exécuter pas à pas la totalité du programme en procédant comme suit :
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Dans la barre de menus, choisissez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio met en surbrillance et affiche une flèche en regard de la ligne suivante de l’exécution.

@@ -1,23 +1,17 @@
 ---
-title: Opérateurs conditionnels Null (C# et Visual Basic)
+title: Opérateurs conditionnels Null (Référence C#)
 ms.date: 04/03/2015
-dev_langs:
-- csharp
-- vb
 helpviewer_keywords:
 - null-conditional operators [C#]
-- null-conditional operators [Visual Basic]
 - ?. operator [C#]
-- ?. operator [Visual Basic]
 - ?[] operator [C#]
-- ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 823b9dc886bf2448ca9da4ac640bfe56f90d3ff3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192809"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194850"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. et ?[] (C# et Visual Basic)
 Teste si l’opérande de gauche a une valeur Null avant d’effectuer une opération d’accès au membre (`?.`) ou d’index (`?[]`) ; retourne `null` si l’opérande de gauche s’évalue à `null`. 
@@ -30,12 +24,6 @@ Customer first = customers?[0];  // null if customers is null
 int? count = customers?[0]?.Orders?.Count();  // null if customers, the first customer, or Orders is null  
 ```  
   
-```vb  
-Dim length = customers?.Length  ' null if customers is null  
-Dim first as Customer = customers?(0)  ' null if customers is null  
-Dim count as Integer? = customers?(0)?.Orders?.Count()  ' null if customers, the first customer, or Orders is null  
-```  
-  
  Les opérateurs conditionnels Null ont un effet de court-circuit.  Si une opération dans une chaîne d'opérations d'accès au membre et d'indexation conditionnelles retourne une valeur Null, l'exécution du reste de la chaîne s'arrête.  Dans l’exemple ci-dessous, `E` ne s’exécute pas si `A`, `B` ou `C` a une valeur Null.
   
 ```csharp
@@ -43,11 +31,6 @@ A?.B?.C?.Do(E);
 A?.B?.C?[E];
 ```
 
-```vb
-A?.B?.C?.Do(E);
-A?.B?.C?(E);
-```  
-  
  L’accès au membre conditionnel Null s’utilise également pour appeler des délégués de façon thread-safe, avec beaucoup moins de code.  Avec l'ancienne méthode, vous deviez utiliser un code similaire au suivant :  
   
 ```csharp  
@@ -56,11 +39,6 @@ if (handler != null)
     handler(…);
 ```  
   
-```vb  
-Dim handler = AddressOf(Me.PropertyChanged)  
-If handler IsNot Nothing  
-    Call handler(…)  
-```  
   
  La nouvelle méthode est beaucoup plus simple :  
   
@@ -68,20 +46,13 @@ If handler IsNot Nothing
 PropertyChanged?.Invoke(…)  
 ```  
 
-```vb
-PropertyChanged?.Invoke(…)
-```  
-  
  La nouvelle méthode est thread-safe, car le compilateur génère du code qui évalue `PropertyChanged` une seule fois, en conservant le résultat dans une variable temporaire. Vous devez explicitement appeler la méthode `Invoke`, car il n'existe pas de syntaxe d'appel de délégué conditionnel Null `PropertyChanged?(e)`.  
   
 ## <a name="language-specifications"></a>Spécifications du langage  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
- Pour plus d’informations, consultez [Informations de référence sur le langage Visual Basic](../../../visual-basic/language-reference/index.md).  
   
 ## <a name="see-also"></a>Voir aussi
 
 - [?? (opérateur de fusion Null)](null-coalescing-operator.md)  
 - [Référence C#](../../../csharp/language-reference/index.md)  
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Guide de programmation Visual Basic](../../../visual-basic/programming-guide/index.md)

@@ -3,12 +3,12 @@ title: Modèle d’événement .NET Core mis à jour
 description: Découvrez toute la souplesse apportée par le modèle d’événement .NET Core et la compatibilité descendante et apprenez à implémenter un traitement sécurisé des événements grâce aux abonnés asynchrones.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827178"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188480"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Modèle d’événement .NET Core mis à jour
 
@@ -18,7 +18,7 @@ L’article précédent décrit les modèles d’événements les plus courants.
 
 Ceci accroît la flexibilité pour vous et offre une compatibilité descendante. Commençons par la flexibilité. La classe System.EventArgs introduit une méthode : `MemberwiseClone()`, qui crée une copie superficielle de l’objet.
 Cette méthode doit utiliser la réflexion afin d’implémenter ses fonctionnalités pour n’importe quelle classe dérivée de `EventArgs`. Ces fonctionnalités sont plus faciles à créer dans une classe dérivée spécifique. Cela signifie concrètement que la dérivation depuis System.EventArgs est une contrainte qui limite vos conceptions, mais n’offre aucun avantage supplémentaire.
-En fait, vous pouvez changer les définitions de `FileFoundArgs` et de `SearchDirectoryArgs` de façon à ce qu’ils ne dérivent pas de `EventArgs`.
+Vous pouvez en fait changer les définitions de `FileFoundArgs` et de `SearchDirectoryArgs` de façon à ce qu’ils ne dérivent pas de `EventArgs`.
 Le programme fonctionnera exactement de la même façon.
 
 Vous pouvez également changer les `SearchDirectoryArgs` en un struct si vous faites une modification de plus :

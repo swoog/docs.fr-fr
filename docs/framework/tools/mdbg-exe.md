@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399767"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202918"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (débogueur de ligne de commande du .NET Framework)
 Le débogueur de ligne de commande du .NET Framework aide les fournisseurs d'outils et les développeurs d'applications à trouver et à corriger les bogues dans les programmes qui ont pour cible le Common Language Runtime du .NET Framework. Cet outil utilise l'API de débogage du runtime pour fournir des services de débogage. Vous pouvez utiliser MDbg.exe pour déboguer uniquement du code managé ; il n'y a pas de prise en charge du débogage du code non managé.  
   
- Cet outil est disponible via NuGet. Pour plus d’informations sur l’installation, consultez [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0). Pour exécuter l'outil, utilisez la console du Gestionnaire de package. Pour plus d’informations sur la manière d’utiliser la console du Gestionnaire de package, consultez [Utilisation de la console du Gestionnaire de package](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console).  
+Cet outil est disponible via NuGet. Pour plus d’informations sur l’installation, consultez [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Pour exécuter l'outil, utilisez la console du Gestionnaire de package. Pour plus d’informations sur la manière d’utiliser la console du Gestionnaire de package, consultez l’article [Console du Gestionnaire de package](/nuget/tools/package-manager-console).
   
- À l'invite du Gestionnaire de package, tapez ce qui suit :  
+À l'invite du Gestionnaire de package, tapez ce qui suit :  
   
 ## <a name="syntax"></a>Syntaxe  
   

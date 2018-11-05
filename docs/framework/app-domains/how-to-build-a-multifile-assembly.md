@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744081"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183098"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Comment : générer un assembly multifichier
 Cet article explique comment créer un assembly multifichier et fournit le code illustrant chaque étape de la procédure.  
@@ -88,7 +88,7 @@ Cet article explique comment créer un assembly multifichier et fournit le code 
   
      Dans cette commande, les arguments *nom_module* spécifient le nom de chaque module à inclure dans l’assembly. L’option **/main:** spécifie le nom de la méthode représentant le point d’entrée de l’assembly. L’option **/out:** spécifie le nom du fichier de sortie, qui contient les métadonnées de l’assembly. L’option **/target:** indique que l’assembly est un fichier exécutable (.exe) d’application console, un fichier exécutable Windows (.win) ou un fichier bibliothèque (.lib).  
   
-     Dans l'exemple suivant, Al.exe crée un assembly qui est un exécutable d'application console appelé `myAssembly.exe`. L’application se compose de deux modules appelés `Client.netmodule` et `Stringer.netmodule` et du fichier exécutable appelé `myAssembly.exe,` qui contient uniquement les métadonnées de l’assembly. Le point d'entrée de l'assembly est la méthode `Main` de la classe `MainClientApp`, qui est située dans `Client.dll`.  
+     Dans l'exemple suivant, Al.exe crée un assembly qui est un exécutable d'application console appelé `myAssembly.exe`. L’application se compose de deux modules appelés `Client.netmodule` et `Stringer.netmodule`, et du fichier exécutable appelé `myAssembly.exe,` qui contient uniquement les métadonnées de l’assembly. Le point d'entrée de l'assembly est la méthode `Main` de la classe `MainClientApp`, qui est située dans `Client.dll`.  
   
     ```  
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe   
@@ -97,7 +97,7 @@ Cet article explique comment créer un assembly multifichier et fournit le code 
      Vous pouvez utiliser le [Désassembleur MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) pour examiner le contenu d’un assembly ou déterminer si un fichier est un assembly ou un module.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
- [Guide pratique pour afficher le contenu d’un assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Assemblys multifichiers](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Création d’assemblys](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Guide pratique pour afficher le contenu d’un assembly](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Assemblys multifichiers](../../../docs/framework/app-domains/multifile-assemblies.md)

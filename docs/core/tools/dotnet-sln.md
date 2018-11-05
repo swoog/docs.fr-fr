@@ -4,12 +4,12 @@ description: La commande dotnet-sln offre une option pratique pour ajouter, supp
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207771"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121218"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -95,3 +95,6 @@ Ajouter plusieurs projets C# à une solution avec un modèle d’utilisation des
 Supprimer plusieurs projets C# d’une solution avec un modèle d’utilisation des caractères génériques :
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> L’utilisation des caractères génériques n’est pas une fonctionnalité de l’interface CLI, mais une fonctionnalité de l’interpréteur de commandes. Pour pouvoir développer les fichiers, vous devez utiliser un interpréteur de commandes qui prend en charge l’utilisation des caractères génériques. Pour plus d’informations sur l’utilisation des caractères génériques, voir [Wikipédia](https://en.wikipedia.org/wiki/Glob_(programming)).

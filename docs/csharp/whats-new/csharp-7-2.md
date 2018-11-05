@@ -2,12 +2,12 @@
 title: Nouveautés de C# 7.2
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 87fd67b37a31a02960334a2b2a325724e0cc2c73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47400801"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181171"
 ---
 # <a name="whats-new-in-c-72"></a>Nouveautés de C# 7.2
 
@@ -20,7 +20,7 @@ C# 7.2 utilise l’élément de configuration de [sélection de la version du la
 
 Les nouvelles fonctionnalités de langage de cette version sont :
 
-* [Sémantique de référence avec les types valeur](#reference-semantics-with-value-types)
+* [Techniques d’écriture de code safe et efficace](#safe-efficient-code-enhancements)
   - Une combinaison des améliorations de la syntaxe qui permettent d’utiliser les types valeur avec la sémantique de référence.
 * [Arguments nommés non placés en position de fin](#non-trailing-named-arguments)
   - Les arguments nommés peuvent être suivis par des arguments de position.
@@ -29,7 +29,7 @@ Les nouvelles fonctionnalités de langage de cette version sont :
 * [Modificateur d’accès `private protected`](#private-protected-access-modifier)
   - Le modificateur d’accès `private protected` active l’accès pour les classes dérivées dans le même assembly.
 
-## <a name="reference-semantics-with-value-types"></a>Sémantique de référence avec les types valeur
+## <a name="safe-efficient-code-enhancements"></a>Amélioration du code safe et efficace
 
 Les fonctionnalités de langage introduites dans 7.2 vous permettent de travailler avec les types valeur tout en utilisant la sémantique de référence. Elles sont conçues pour améliorer les performances en réduisant la copie des types valeur sans impliquer les allocations de mémoire associées à l’utilisation des types référence. Les fonctionnalités incluent :
 
@@ -38,7 +38,7 @@ Les fonctionnalités de langage introduites dans 7.2 vous permettent de travaill
  - La déclaration `readonly struct` pour indiquer qu’un struct est immuable et doit être passé comme un paramètre `in` aux méthodes de ses membres. L’ajout du modificateur `readonly` à une déclaration struct existante est une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
  - La déclaration `ref struct` pour indiquer qu’un type struct accède directement à la mémoire managée et doit toujours être alloué par la pile. L’ajout du modificateur `ref` à une déclaration `struct` existante est une [modification incompatible](version-update-considerations.md#incompatible-changes). Un `ref struct` ne peut pas être membre d’une classe ou utilisé dans d’autres emplacements où il pourrait être alloué sur le tas.
 
-Vous pouvez en savoir plus sur toutes ces modifications dans [Sémantique de référence avec les types valeur](../reference-semantics-with-value-types.md).
+Pour plus d’informations sur toutes ces modifications, voir [Écrire du code safe et efficace](../write-safe-efficient-code.md).
 
 ## <a name="non-trailing-named-arguments"></a>Arguments nommés non placés en position de fin
 

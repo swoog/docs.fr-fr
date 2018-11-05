@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45617141"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873494"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Création d’un microservice CRUD simple piloté par les données
 
@@ -393,7 +393,7 @@ Après cela, vous pouvez démarrer votre application et parcourir les points de 
   http://<your-root-url>/swagger/
 ```
 
-Vous avez déjà vu l’interface utilisateur générée par Swashbuckle pour une URL telle que http://&lt;votre-url-racine&gt;/swagger/ui. Dans la Figure 8-9, vous pouvez également voir comment tester une méthode d’API.
+Vous avez déjà vu l’interface utilisateur générée par Swashbuckle pour une URL telle que `http://<your-root-url>/swagger/ui`. Dans la Figure 8-9, vous pouvez également voir comment tester une méthode d’API.
 
 ![](./media/image10.png)
 

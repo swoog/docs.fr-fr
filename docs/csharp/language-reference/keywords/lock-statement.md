@@ -1,19 +1,19 @@
 ---
 title: lock, instruction (référence C#)
 description: Utilisez l’instruction lock en C# pour synchroniser l’accès des threads à une ressource partagée
-ms.date: 08/28/2018
+ms.date: 10/01/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 802f447e1ae01020fa80fa3048e3783ea24db3d3
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858354"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850099"
 ---
 # <a name="lock-statement-c-reference"></a>lock, instruction (référence C#)
 
@@ -50,13 +50,11 @@ Vous ne pouvez pas utiliser le mot clé [await](await.md) dans le corps d’une 
 
 ## <a name="remarks"></a>Notes
 
-Quand vous synchronisez l’accès des threads à une ressource partagée, verrouillez une instance d’objet dédiée (par exemple `private readonly object balanceLock = new object();`) ou toute autre instance peu susceptible d’être utilisée comme objet de verrouillage par des parties du code non associées. Évitez d’utiliser la même instance d’objet de verrouillage pour différentes ressources partagées, car cela peut entraîner une contention d’interblocage ou de verrouillage. En particulier, évitez
+Quand vous synchronisez l’accès des threads à une ressource partagée, verrouillez une instance d’objet dédiée (par exemple `private readonly object balanceLock = new object();`) ou toute autre instance peu susceptible d’être utilisée comme objet de verrouillage par des parties du code non associées. Évitez d’utiliser la même instance d’objet de verrouillage pour différentes ressources partagées, car cela peut entraîner une contention d’interblocage ou de verrouillage. En particulier, évitez d’utiliser les éléments suivants en tant qu’objets de verrouillage :
 
-- `this` (peut être utilisé en tant que verrou par les appelants)
-- Les instances de <xref:System.Type> (peuvent être obtenues par l’opérateur [typeof](typeof.md) ou par réflexion)
-- Les instances de chaîne, notamment les littéraux de chaîne
-
-en tant qu’objets de verrouillage.
+- `this`, qui peut être utilisé en tant que verrou par les appelants.
+- Les instances de <xref:System.Type>, qui peuvent être obtenues par l’opérateur [typeof](typeof.md) ou par réflexion.
+- Les instances de chaîne, notamment les littéraux de chaîne, qui peuvent être [internés](/dotnet/api/system.string.intern#remarks).
 
 ## <a name="example"></a>Exemple
 

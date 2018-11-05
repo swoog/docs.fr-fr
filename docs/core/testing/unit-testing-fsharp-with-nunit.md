@@ -2,25 +2,34 @@
 title: Effectuer des tests unitaires des bibliothèques F# dans .NET Core à l’aide de dotnet test et de NUnit
 description: Apprenez les concepts des tests unitaires pour F# dans .NET Core de manière interactive en créant un exemple de solution pas à pas à l’aide de dotnet test et de NUnit.
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215748"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308403"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Effectuer des tests unitaires des bibliothèques F# dans .NET Core à l’aide de dotnet test et de NUnit
 
 Ce didacticiel vous guide pas à pas dans la création d’un exemple de solution pour apprendre les concepts des tests unitaires. Si vous préférez suivre le didacticiel à l’aide d’une solution prédéfinie, [affichez ou téléchargez l’exemple de code](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) avant de commencer. Pour obtenir des instructions de téléchargement, consultez [Exemples et didacticiels](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Prérequis 
+- [Kit SDK .NET Core 2.1 (version 2.1.400)](https://www.microsoft.com/net/download) ou versions ultérieures. 
+- Un éditeur de texte ou un éditeur de code de votre choix.
+
 ## <a name="creating-the-source-project"></a>Création du projet source
 
 Ouvrez une fenêtre d’interpréteur de commandes. Créez un répertoire appelé *unit-testing-with-fsharp* qui contiendra la solution.
-Dans ce nouveau répertoire, exécutez [`dotnet new sln`](../tools/dotnet-new.md) pour créer une solution. Ceci permet de simplifier la gestion de la bibliothèque de classes et du projet de test unitaire.
-Dans le répertoire de la solution, créez un répertoire *MathService*. La structure du répertoire et des fichiers jusqu’ici est indiquée ci-dessous :
+Dans ce nouveau répertoire, exécutez la commande suivante afin de créer un fichier solution pour la bibliothèque de classes et le projet de test :
+
+```console
+dotnet new sln
+```
+
+Ensuite, créez un répertoire *MathService*. La structure de répertoire et de fichiers est la suivante :
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ Dans le répertoire de la solution, créez un répertoire *MathService*. La stru
     /MathService
 ```
 
-Accédez au répertoire *MathService* et exécutez [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) pour créer le projet source.  Pour utiliser le développement piloté par les tests (TDD), vous devez créer une implémentation défaillante du service Math :
+Faites de *MathService* le répertoire actif et exécutez la commande suivante pour créer le projet source :
+
+```console
+dotnet new classlib -lang F#
+```
+
+Pour utiliser le développement piloté par les tests (TDD), vous devez créer une implémentation défaillante de MathService :
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Accédez de nouveau au répertoire *unit-testing-with-fsharp*. Exécutez [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) pour ajouter le projet de la bibliothèque de classes à la solution.
+Accédez de nouveau au répertoire *unit-testing-with-fsharp*. Exécutez la commande suivante pour ajouter le projet de la bibliothèque de classes à la solution :
 
-## <a name="install-the-nunit-project-template"></a>Installer le modèle de projet NUnit
-
-Les modèles de projet de test NUnit doivent être installés avant de créer un projet de test. Cette opération ne doit être effectuée qu’une fois sur chaque ordinateur de développeur où vous allez créer des projets NUnit. Exécutez [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md) pour installer les modèles NUnit.
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>Création du projet de test
 
@@ -58,7 +69,13 @@ Ensuite, créez le répertoire *MathService.Tests*. La structure du répertoire 
     /MathService.Tests
 ```
 
-Accédez au répertoire *MathService.Tests* et créez un projet à l’aide de [`dotnet new nunit -lang F#`](../tools/dotnet-new.md). Vous obtenez un projet de test qui utilise NUnit comme framework de test. Le modèle généré configure le Test Runner dans *MathServiceTests.fsproj* :
+Faites de *MathService.Tests* le répertoire actif et créez un projet avec la commande suivante :
+
+```console
+dotnet new nunit -lang F#
+```
+
+Vous obtenez un projet de test qui utilise NUnit comme framework de test. Le modèle généré configure le Test Runner dans *MathServiceTests.fsproj* :
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ Accédez au répertoire *MathService.Tests* et créez un projet à l’aide de [
 
 Le projet de test a besoin d’autres packages pour créer et exécuter des tests unitaires. `dotnet new` dans l’étape précédente a ajouté NUnit et l’adaptateur de test NUnit. Maintenant, ajoutez la bibliothèque de classes `MathService` en tant qu’une autre dépendance au projet. Utilisez la commande [`dotnet add reference`](../tools/dotnet-add-reference.md) :
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ La solution finale se présente comme suit :
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-Exécutez [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) dans le répertoire *unit-testing-with-fsharp*.
+Exécutez la commande suivante dans le répertoire *unit-testing-with-fsharp* :
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>Création du premier test
 
-L’approche TDD impose d’écrire un test défaillant, de le corriger pour qu’il réussisse, puis de répéter le processus. Ouvrez *Tests.fs* et ajoutez le code suivant :
+L’approche TDD impose d’écrire un test défaillant, de le corriger pour qu’il réussisse, puis de répéter le processus. Ouvrez *UnitTest1.fs* et ajoutez le code suivant :
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 Notez que la séquence `expected` a été convertie en liste. Le framework NUnit s’appuie sur de nombreux types .NET standard. Cette dépendance signifie que votre interface publique et les résultats attendus prennent en charge <xref:System.Collections.ICollection> plutôt que <xref:System.Collections.IEnumerable>.
 
-Lorsque vous exécutez le test, vous constatez que votre test échoue. Vous n’avez pas encore créé l’implémentation. Effectuez ce test en écrivant le code le plus simple dans la classe `Mathservice` qui fonctionne :
+Lorsque vous exécutez le test, vous constatez que votre test échoue. Vous n’avez pas encore créé l’implémentation. Écrivez le code fonctionnel le plus simple possible dans la classe *Library.fs* de votre projet MathService, de façon à ce que ce test réussisse :
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-Dans le répertoire *unit-testing-with-fsharp*, réexécutez `dotnet test`. La commande `dotnet test` exécute une build pour le projet `MathService` puis pour le projet `MathService.Tests`. Après la création des deux projets, il exécute ce test unique. Le test réussit.
+Dans le répertoire *unit-testing-with-fsharp*, réexécutez `dotnet test`. La commande `dotnet test` exécute une build pour le projet `MathService` puis pour le projet `MathService.Tests`. Après avoir créé les deux projets, elle exécute vos tests. À présent, les deux tests réussissent.
 
 ## <a name="completing-the-requirements"></a>Finalisation des spécifications
 

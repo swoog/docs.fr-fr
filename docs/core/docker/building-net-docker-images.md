@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 675b6821588f8d0dd9495346a13665a32986f060
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "34827337"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48841162"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Création d’images Docker pour les applications .NET Core
 
@@ -34,7 +34,7 @@ Lors de la création d’images Docker pour les développeurs, nous nous sommes 
 * Images utilisées pour exécuter des applications .NET Core
 
 Pourquoi trois images ?
-Lors du développement, de la génération et de l’exécution d’applications conteneurisées, nous avons des priorités différentes.
+Lors du développement, de la génération et de l’exécution d’applications en conteneur, nous avons des priorités différentes.
 
 * **Développement :** la priorité porte sur la rapidité avec laquelle vous pouvez apporter des modifications de façon itérative, et la possibilité de déboguer les modifications. La taille de l’image est moins importante que la possibilité d’apporter des modifications à votre code et de les voir rapidement.
 
@@ -130,17 +130,17 @@ Le client Docker peut être installé dans :
 
 * Distributions Linux
 
-   * [CentOS](https://www.docker.com/docker-centos-distribution)
+   * [CentOS](https://docs.docker.com/install/linux/docker-ce/centos/)
 
-   * [Debian](https://www.docker.com/docker-debian)
+   * [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
 
-   * [Fedora](https://www.docker.com/docker-fedora)
+   * [Fedora](https://docs.docker.com/install/linux/docker-ce/fedora/)
 
-   * [Ubuntu](https://www.docker.com/docker-ubuntu)
+   * [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-* [macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/install/)
 
-* [Windows](https://docs.docker.com/docker-for-windows/).
+* [Windows](https://docs.docker.com/docker-for-windows/install/).
 
 #### <a name="installing-git-for-sample-repository"></a>Installation de Git pour un dépôt d’exemples
 
@@ -205,7 +205,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 ```
 
 > [!IMPORTANT]
-> Vous devez accéder directement à **l’adresse IP de conteneur** (par opposition à http://localhost)) dans votre navigateur lors de l’utilisation de conteneurs Windows. Vous pouvez obtenir l’adresse IP de votre conteneur en effectuant les étapes suivantes :
+> Si vous utilisez des conteneurs Windows, vous devez accéder directement à **l’adresse IP de conteneur** (par opposition à `http://localhost`) dans votre navigateur. Vous pouvez obtenir l’adresse IP de votre conteneur en effectuant les étapes suivantes :
 
 * Ouvrez une autre invite de commandes.
 * Exécutez `docker ps` pour voir vos conteneurs en cours d’exécution. Le conteneur « aspnetcore_sample » doit être visible.

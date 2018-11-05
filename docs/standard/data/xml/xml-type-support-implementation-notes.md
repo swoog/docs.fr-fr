@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44191064"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187450"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Remarques pour l'implémentation de la prise en charge du type XML
 Cette rubrique décrit certains détails de l'implémentation que vous souhaitez connaître.  
@@ -19,7 +19,7 @@ Cette rubrique décrit certains détails de l'implémentation que vous souhaitez
  Les types <xref:System.Collections.IList>, <xref:System.Collections.ICollection>, <xref:System.Collections.IEnumerable>, **Type[]** et <xref:System.String> permettent de représenter des types de liste du langage XSD (XML Schema Definition).  
   
 ## <a name="union-mappings"></a>Mappages d'union  
- Les types d'union sont représentées à l'aide du type <xref:System.Xml.Schema.XmlAtomicValue> ou <xref:System.String>. Le type de source ou de destination doit donc toujours être un objet <xref:System.String> ou <xref:System.Xml.Schema.XmlAtomicValue>.  
+ Les types union sont représentées à l’aide du type <xref:System.Xml.Schema.XmlAtomicValue> ou <xref:System.String>. Le type de source ou de destination doit donc toujours être un objet <xref:System.String> ou <xref:System.Xml.Schema.XmlAtomicValue>.  
   
  Si l'objet <xref:System.Xml.Schema.XmlSchemaDatatype> représente un type de liste, l'objet convertit la valeur de la chaîne d'entrée en une liste d'au moins un objet. Si l'objet <xref:System.Xml.Schema.XmlSchemaDatatype> représente un type d'union, il essaye ensuite d'analyser la valeur d'entrée comme un type de membre de l'union. Si la tentative d'analyse échoue, une tentative de conversion avec le membre suivant de l'union est effectuée jusqu'à ce que la conversion soit réussie ou qu'il n'y ait plus de types de membre pour essayer la conversion. Dans ce cas, une exception est levée.  
   
@@ -27,14 +27,14 @@ Cette rubrique décrit certains détails de l'implémentation que vous souhaitez
  Voici la description de certaines incompatibilités qui peuvent se produire entre les types de données CLR et XML et concernant la manière de les traiter.  
   
 > [!NOTE]
->  Le préfixe `xs` est mappé à l’URI d’espace de noms http://www.w3.org/2001/XMLSchema.  
+> Le préfixe `xs` est mappé à l’URI d’espace de noms <https://www.w3.org/2001/XMLSchema>.
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan et xs:duration  
  Le type `xs:duration` est partiellement trié en ce sens que certaines valeurs de durée sont différentes mais équivalentes. Cela signifie que pour la valeur de type `xs:duration`, la valeur de 1 mois (P1M) est inférieure à 32 jours (P32D), supérieure à 27 jours (P27D) et équivalente à 28, 29 ou 30 jours.  
   
  La classe <xref:System.TimeSpan> ne prend pas en charge ce tri partiel. Par contre, elle détermine un nombre spécifique de jours pour un an et pour un mois, respectivement 365 jours et 30 jours.  
   
- Pour plus d’informations sur le type `xs:duration`, consultez les recommandations du W3C sur les schémas XML (« XML Schema Part 2: Datatypes »), disponibles à l’adresse http://www.w3.org/TR/xmlschema-2/.  
+ Pour plus d’informations sur le type `xs:duration`, consultez les [recommandations du W3C sur les schémas XML (« XML Schema Part 2: Datatypes »)](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, types de dates grégoriennes et System.DateTime  
  Lorsqu'une valeur `xs:time` est mappée à un objet <xref:System.DateTime>, le champ <xref:System.DateTime.MinValue> permet d'initialiser les propriétés de date de l'objet <xref:System.DateTime> (telles que <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> et <xref:System.DateTime.Day%2A>) à la valeur <xref:System.DateTime> la plus petite possible.  

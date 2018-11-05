@@ -1,6 +1,6 @@
 ---
 title: as (référence C#)
-ms.date: 07/20/2015
+ms.date: 10/11/2018
 f1_keywords:
 - as_CSharpKeyword
 - as
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: aee80b3262ccd9432d7c311dddec47185b66d05f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ce3163f7d957df96a5c0304adc0b3083d8e20104
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47216174"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122712"
 ---
 # <a name="as-c-reference"></a>as (référence C#)
 Vous pouvez utiliser l’opérateur `as` pour effectuer certains types de conversions entre des types référence ou des [types Nullable](../../../csharp/programming-guide/nullable-types/index.md) compatibles. Le code suivant fournit un exemple.  
   
 [!code-csharp[csrefKeywordsOperator#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#1)]
+
+Comme le montre l’exemple, vous devez comparer le résultat de l’expression `as` avec `null` pour vérifier si la conversion a réussi. À partir de C# 7.0, vous pouvez utiliser l’expression [is](is.md) pour effectuer ce test et affecter une variable de manière conditionnelle en cas de réussite. Dans de nombreux scénarios, elle est plus concise que l’opérateur `as`. Pour plus d’informations, voir la section [Modèle de type](is.md#type) de l’article [Opérateur `is`](is.md).
   
 ## <a name="remarks"></a>Notes  
  L’opérateur `as` est semblable à une opération de cast. Toutefois, si la conversion n’est pas possible, `as` retourne `null` au lieu de lever une exception. Prenons l'exemple suivant :  

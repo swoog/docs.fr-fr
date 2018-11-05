@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038303"
 ---
 # <a name="methods"></a>Méthodes #
 
@@ -114,7 +114,7 @@ L’exemple suivant définit une classe (qui est un type référence) nommée `S
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Passage de paramètres par référence ###
 
-Vous passez un paramètre par référence quand vous voulez changer la valeur d’un argument dans une méthode et que vous voulez refléter cette modification quand le contrôle retourne à la méthode appelante. Pour passer un paramètre par référence, vous utilisez le mot clé [`ref`](language-reference/keywords/ref.md) ou [`out`](language-reference/keywords/out-parameter-modifier.md). Vous pouvez également passer une valeur par référence pour éviter la copie tout en empêchant les modifications à l’aide du mot clé [`in`](language-reference/keywords/in-parameter-modifier.md).
+On passe un paramètre par référence quand on souhaite changer la valeur d’un argument dans une méthode et refléter cette modification lorsque le contrôle revient à la méthode appelante. Pour passer un paramètre par référence, vous utilisez le mot clé [`ref`](language-reference/keywords/ref.md) ou [`out`](language-reference/keywords/out-parameter-modifier.md). Vous pouvez également passer une valeur par référence pour éviter la copie tout en empêchant les modifications à l’aide du mot clé [`in`](language-reference/keywords/in-parameter-modifier.md).
 
 L’exemple suivant est identique au précédent, sauf que la valeur est passée par référence à la méthode `ModifyValue`. Quand la valeur du paramètre est modifiée dans la méthode `ModifyValue`, le changement de la valeur est reflété quand le contrôle retourne à l’appelant.
 
@@ -129,7 +129,7 @@ Passer un paramètre de type référence vous permet de changer la valeur de la 
 <a name="paramarray"></a>
 ### <a name="parameter-arrays"></a>Tableaux de paramètres ###
 
-Parfois, l’obligation de spécifier le nombre exact d’arguments de votre méthode est restrictive. En utilisant le mot clé `params` pour indiquer qu’un paramètre est un tableau de paramètres, vous permettez que votre méthode soit appelée avec un nombre variable d’arguments. Le paramètre marqué avec le mot clé `params` doit être un type tableau, et il doit être le dernier paramètre de la liste des paramètres de la méthode.
+Parfois, l’obligation de spécifier le nombre exact d’arguments de votre méthode est restrictive. En utilisant le mot clé `params` pour indiquer qu’un paramètre est un tableau de paramètres, vous permettez que votre méthode soit appelée avec un nombre variable d’arguments. Le paramètre marqué avec le mot clé `params` doit être un type tableau. Ce doit être le dernier paramètre de la liste de paramètres de la méthode.
 
 Un appelant peut alors appeler la méthode de trois façons :
 

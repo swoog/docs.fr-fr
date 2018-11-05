@@ -10,19 +10,17 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: afaa4389940bd16ee2685c2ed64fbec4626d96e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd115621db369a28a51e7c5de8dd4095eca80901
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193146"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50199433"
 ---
 # <a name="cache-policy"></a>Stratégie de cache
 Une stratégie de cache définit les règles utilisées pour déterminer si une requête peut être satisfaite à l’aide d’une copie mise en cache de la ressource demandée. Les applications spécifient les exigences d’actualisation du cache du client, mais la stratégie de cache effective est déterminée par les exigences de cache du client, les exigences d’expiration du contenu du serveur, et les exigences de revalidation du serveur. L’interaction entre la stratégie de cache du client et les exigences du serveur ont toujours comme résultat la stratégie de cache la plus restrictive, afin d’aider à garantir que le contenu le plus récent est renvoyé à l’application cliente.  
   
- Les stratégies de cache sont basées sur l’emplacement ou sur la durée. Une stratégie de cache basée sur l’emplacement définit l’actualisation des entrées en cache en fonction de l’emplacement d’où la ressource demandée peut être récupérée. Une stratégie de cache basée sur la durée définit l’actualisation des entrées en cache en fonction de l’heure de récupération de la ressource, des en-têtes retournés avec la ressource et de l’heure actuelle. La plupart des applications peuvent utiliser la stratégie de cache basée sur la durée par défaut, qui implémente la stratégie de mise en cache spécifiée dans le document RFC 2616, disponible à l’adresse [http://www.ietf.org](http://www.ietf.org/).  
+ Les stratégies de cache sont basées sur l’emplacement ou sur la durée. Une stratégie de cache basée sur l’emplacement définit l’actualisation des entrées en cache en fonction de l’emplacement d’où la ressource demandée peut être récupérée. Une stratégie de cache basée sur la durée définit l’actualisation des entrées en cache en fonction de l’heure de récupération de la ressource, des en-têtes retournés avec la ressource et de l’heure actuelle. La plupart des applications peuvent utiliser la stratégie de cache basée sur la durée par défaut, qui implémente la stratégie de mise en cache spécifiée dans le document RFC 2616, disponible sur le site web [Internet Engineering Task Force (IETF)](https://www.ietf.org/).  
   
  Les classes décrites dans le tableau suivant permettent de spécifier des stratégies de cache.  
   

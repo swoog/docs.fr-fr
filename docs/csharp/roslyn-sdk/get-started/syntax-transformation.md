@@ -3,12 +3,12 @@ title: Bien démarrer avec la transformation de la syntaxe (API Roslyn)
 description: Une introduction à la façon de parcourir et d’interroger les arborescences de syntaxe.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400788"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122564"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Bien démarrer avec la transformation de la syntaxe
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> De nombreuses API Roslyn déclarent des types de retour représentant des classes de base des types Runtime réels retournés. Dans de nombreux scénarios, un type de nœud peut être entièrement remplacé par un autre type de nœud, voire même supprimé. Dans cet exemple, la méthode <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> retourne un <xref:Microsoft.CodeAnalysis.SyntaxNode>, au lieu du type dérivé de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Ce module de réécriture retourne un nouveau nœud <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> en fonction du nœud existant.
+> De nombreuses API Roslyn déclarent des types de retour représentant des classes de base des types Runtime réels retournés. Dans de nombreux scénarios, il est possible de remplacer un type de nœud par un autre, voire de le supprimer. Dans cet exemple, la méthode <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> retourne un <xref:Microsoft.CodeAnalysis.SyntaxNode>, au lieu du type dérivé de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Ce module de réécriture retourne un nouveau nœud <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> en fonction du nœud existant.
 
 Ce démarrage rapide gère les déclarations de variables locales. Vous pouvez l’étendre à d’autres déclarations telles que des boucles `foreach`, des boucles `for`, des expressions LINQ et des expressions lambda. En outre, ce module de réécriture transformera les déclarations dans la forme la plus simple :
 

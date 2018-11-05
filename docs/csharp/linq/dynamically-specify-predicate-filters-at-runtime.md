@@ -3,12 +3,12 @@ title: Spécifier dynamiquement des filtres de prédicat au moment de l’exécu
 description: Découvrez comment spécifier dynamiquement des filtres de prédicat au moment de l’exécution à l’aide de LINQ en C#.
 ms.date: 12/1/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ece5940edd615f30acab06a429de300e27811a66
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512574"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038485"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>Spécifier dynamiquement des filtres de prédicat au moment de l’exécution
 
@@ -44,7 +44,7 @@ Dans certains cas, ce n’est qu’au moment de l’exécution que vous savez co
 
 8. L’étape suivante consiste à réexécuter le projet, cette fois en utilisant l’entrée saisie au moment de l’exécution plutôt que le tableau `ids`. Remplacez `QueryByID(ids)` par `QueryByID(args)` dans la méthode `Main`.
 
-9. Exécutez le projet avec les arguments de ligne de commande `122 117 120 115`. Quand le projet est exécuté, ces valeurs deviennent des éléments de `args`, le paramètre de la méthode `Main`.
+9. Exécutez le projet avec les arguments de ligne de commande `122 117 120 115`. Quand le projet s’exécute, ces valeurs deviennent des éléments de `args`, le paramètre de la méthode `Main`.
 
 10. La sortie suivante s’affiche dans une fenêtre de console :
 

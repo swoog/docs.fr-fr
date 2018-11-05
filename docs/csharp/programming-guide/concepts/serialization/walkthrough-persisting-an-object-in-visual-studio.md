@@ -1,12 +1,12 @@
 ---
 title: 'Procédure pas à pas : persistance d’un objet avec C#'
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231490"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086075"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Procédure pas à pas : persistance d’un objet avec C# #
 
@@ -28,6 +28,8 @@ Dans cette procédure pas à pas, vous créez un objet `Loan` de base et vous st
 
 > [!TIP]
 > Vous avez besoin d’installer un éditeur de code ? Essayez [Visual Studio](https://visualstudio.com/downloads) !
+
+* L’exemple exige C# 7.3. Voir [Sélectionner la version du langage C#](../../../language-reference/configure-language-version.md). 
 
 Vous pouvez examiner l’exemple de code en ligne [sur le référentiel GitHub des exemples .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

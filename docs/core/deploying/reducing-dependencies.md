@@ -4,12 +4,12 @@ description: Réduisez les dépendances de package dans le cadre de la création
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: ae314800f789cee363728def8347b5e6990acb0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6da7404415e8d485533fc1c9a619cb0706a26aca
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193606"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50040879"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Réduction des dépendances de package avec project.json
 
@@ -36,7 +36,7 @@ Il n’existe actuellement aucune commande `dotnet` officielle qui réduit les r
 Vous pouvez déterminer les packages dont vous n’avez pas besoin de l’une des façons suivantes :
 
 1. Essai et erreur.  Ceci implique de supprimer un package, de le restaurer, de déterminer si votre bibliothèque se compile encore et de répéter ce processus.
-2. L’utilisation d’un outil comme [ILSpy](http://ilspy.net) ou [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) permet d’examiner les références pour voir ce que votre code utilise réellement.  Vous pouvez ensuite supprimer les packages qui ne correspondent pas aux types que vous utilisez.
+2. L’utilisation d’un outil comme [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) permet d’examiner les références pour voir ce que votre code utilise réellement.  Vous pouvez ensuite supprimer les packages qui ne correspondent pas aux types que vous utilisez.
 
 ## <a name="example"></a>Exemple 
 
@@ -127,7 +127,7 @@ Ensuite, copiez les références de package dans la section `dependencies` du fi
 }
 ```
 
-Ceci représente beaucoup de packages, dont un grand nombre ne sont certainement pas nécessaires pour étendre les types de collections.  Vous pouvez supprimer manuellement les packages ou utiliser un outil comme [ILSpy](http://ilspy.net) ou [.NET Reflector](http://www.red-gate.com/products/dotnet-development/reflector) pour identifier les packages utilisés par votre code.
+Cela représente beaucoup de packages, dont la plupart ne sont certainement pas nécessaires pour étendre les types de collections.  Vous pouvez supprimer manuellement les packages ou utiliser un outil comme [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector/) pour identifier les packages utilisés par votre code.
 
 Voici ce à quoi un package réduit peut ressembler :
 

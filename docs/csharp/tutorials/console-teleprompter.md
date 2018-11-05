@@ -3,12 +3,12 @@ title: Application console
 description: Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core et du langage C#.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 9255ad9b1fefc828e767fb8e6ccc62b2eaf23fd6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937590"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183618"
 ---
 # <a name="console-application"></a>Application console
 
@@ -155,7 +155,7 @@ Exécutez l’exemple et vous serez en mesure de lire à haute voix au rythme pr
 
 ## <a name="async-tasks"></a>Tâches asynchrones
 
-Dans cette étape, vous allez ajouter le code pour écrire la sortie de façon asynchrone dans une tâche, lorsque vous exécutez également une autre tâche pour lire d’entrée de l’utilisateur s’il souhaite accélérer ou ralentir l’affichage du texte. Cela représente plusieurs étapes et à la fin, vous aurez toutes les mises à jour dont vous avez besoin.
+Dans cette étape, vous allez ajouter le code pour écrire la sortie de façon asynchrone dans une tâche, lorsque vous exécutez également une autre tâche pour lire d’entrée de l’utilisateur s’il souhaite accélérer ou ralentir l’affichage du texte, ou l’arrêter. Cela représente plusieurs étapes et à la fin, vous aurez toutes les mises à jour dont vous avez besoin.
 La première étape consiste à créer une méthode de retour <xref:System.Threading.Tasks.Task> asynchrone qui représente le code que vous avez créé jusqu'à présent pour lire et afficher le fichier.
 
 Ajoutez cette méthode à votre classe `Program` (elle est extraite du corps de votre méthode `Main`) :
@@ -190,7 +190,7 @@ Ici, dans `Main`, le code attend de façon synchrone. Vous devez utiliser l’op
 > [!NOTE]
 > Si vous utilisez C# 7.1 ou une version ultérieure, vous pouvez créer des applications de console à l’aide de la [méthode `async` `Main`](../whats-new/csharp-7-1.md#async-main).
 
-Ensuite, vous devez écrire la seconde méthode asynchrone pour lire à partir de la console et chercher les touches '<’ (inférieur à) et ’>' (supérieur à). Voici la méthode que vous ajoutez pour cette tâche :
+Ensuite, vous devez écrire la seconde méthode asynchrone pour lire à partir de la console et chercher les touches '<’ (inférieur à), ’>' (supérieur à) et ‘X’ ou ‘x’. Voici la méthode que vous ajoutez pour cette tâche :
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-Cela crée une expression lambda pour représenter un délégué <xref:System.Action> qui lit une touche de la console et modifie une variable locale représentant le délai lorsque l’utilisateur appuie sur les touches '<’ (inférieur à) et ’>' (supérieur à). Cette méthode utilise <xref:System.Console.ReadKey> pour bloquer et attendre que l’utilisateur appuie sur une touche.
+Cela crée une expression lambda pour représenter un délégué <xref:System.Action> qui lit une touche de la console et modifie une variable locale représentant le délai lorsque l’utilisateur appuie sur les touches '<’ (inférieur à) et ’>' (supérieur à). La méthode déléguée se termine lorsque l’utilisateur appuie sur les touches ‘X’ ou ‘x’, ce qui autorise l’utilisateur à arrêter l’affichage du texte à tout moment.
+Cette méthode utilise <xref:System.Console.ReadKey> pour bloquer et attendre que l’utilisateur appuie sur une touche.
 
 Pour terminer cette fonctionnalité, vous devez créer une nouvelle méthode de retour `async Task` qui démarre ces deux tâches (`GetInput` et `ShowTeleprompter`) et gère également les données partagées entre ces deux tâches.
 

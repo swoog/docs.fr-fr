@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237044"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197234"
 ---
 # <a name="configuring-internet-applications"></a>Configuration des applications Internet
 L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) contient des informations de configuration réseau pour les applications. Avec l’[élément \<system.Net> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md), vous pouvez définir des serveurs proxy, définir des paramètres de gestion de connexion, et inclure des modules de requête et d’authentification personnalisés dans votre application.  
@@ -37,7 +35,7 @@ L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../do
   
  Il est important de noter que les paramètres de Microsoft Internet Explorer sont combinés avec les paramètres de configuration, ces derniers étant prioritaires.  
   
- L’exemple suivant définit http://proxyserver comme adresse du serveur proxy par défaut, indique que le proxy ne doit pas être utilisé pour les adresses locales, et spécifie que toutes les requêtes aux serveurs situés dans le domaine contoso.com doivent ignorer le proxy.  
+ L’exemple suivant définit `http://proxyserver` comme adresse du serveur proxy par défaut, indique que le proxy ne doit pas être utilisé pour les adresses locales, et spécifie que toutes les requêtes aux serveurs situés dans le domaine contoso.com doivent ignorer le proxy.  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ L’[élément de configuration \<system.Net> (Paramètres réseau)](../../../do
 </configuration>  
 ```  
   
- Utilisez l’élément [\<connectionManagement> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) pour configurer le nombre de connexions persistantes pouvant être établies avec un serveur spécifique ou avec tous les autres serveurs. L’exemple suivant configure l’application pour qu’elle utilise deux connexions persistantes au serveur www.contoso.com, quatre connexions persistantes au serveur avec l’adresse IP 192.168.1.2, et une connexion persistante à tous les autres serveurs.  
+ Utilisez l’élément [\<connectionManagement> (Paramètres réseau)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) pour configurer le nombre de connexions persistantes pouvant être établies avec un serveur spécifique ou avec tous les autres serveurs. L’exemple suivant configure l’application pour qu’elle utilise deux connexions persistantes au serveur `www.contoso.com`, quatre connexions persistantes au serveur avec l’adresse IP 192.168.1.2, et une connexion persistante à tous les autres serveurs.  
   
 ```xml  
 <configuration>  

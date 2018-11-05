@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201138"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086854"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (outil Stratégie de sécurité d'accès du code)
 L'outil Stratégie de sécurité d'accès du code (CAS) (Caspol.exe) permet aux utilisateurs et aux administrateurs de modifier la stratégie de sécurité au niveau de l'ordinateur, de l'utilisateur et de l'entreprise.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|Spécifie un code qui présente l'éditeur de logiciel indiqué par un fichier de certificat, une signature sur un fichier ou la représentation hexadécimale d'un certificat X509. Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Spécifie un code qui présente le site d'origine donné. Exemple :<br /><br /> `-site** www.proseware.com`<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Spécifie un code avec un nom fort spécifique désigné par son nom de fichier, le nom de l'assembly (chaîne) et la version de l'assembly au format *major*.*minor*.*build*.*revision*. Exemple :<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Spécifie un code qui provient de l'URL donnée. L'URL doit contenir un protocole, tel que http:// ou ftp://. Par ailleurs, un caractère générique (\*) peut être utilisé pour spécifier plusieurs assemblys pour une même URL. **Remarque :** Parce qu'une URL peut être identifiée à l'aide de plusieurs noms, l'utilisation d'une URL comme condition d'appartenance n'est pas un moyen sûr d'établir l'identité du code. Lorsque cela est possible, utilisez une condition d'appartenance à nom fort, une condition d'appartenance d'un éditeur ou la condition d'appartenance de hachage. <br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Spécifie un code qui provient de l'URL donnée. L'URL doit contenir un protocole, tel que `http://` ou `ftp://`. Par ailleurs, un caractère générique (\*) peut être utilisé pour spécifier plusieurs assemblys pour une même URL. **Remarque :** Parce qu'une URL peut être identifiée à l'aide de plusieurs noms, l'utilisation d'une URL comme condition d'appartenance n'est pas un moyen sûr d'établir l'identité du code. Lorsque cela est possible, utilisez une condition d'appartenance à nom fort, une condition d'appartenance d'un éditeur ou la condition d'appartenance de hachage. <br /><br /> Pour plus d’informations sur cette condition d’appartenance, consultez <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Spécifie un code qui présente la zone d'origine donnée. L'argument *zonename* peut avoir l'une des valeurs suivantes : **MyComputer**, **Intranet**, **Trusted**, **Internet** ou **Untrusted**. Pour plus d'informations sur cette condition d'appartenance, reportez-vous à la classe <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  L’argument *flags* qui peut être utilisé avec les options **–addgroup** et **–chggroup** est spécifié de la façon suivante.  

@@ -4,12 +4,12 @@ description: Décrit la prise en charge par C# des éléments ignorés, qui sont
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/21/2017
-ms.openlocfilehash: d70067194ea9921f8af31fe436d04e2b780e1a73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 761fb69d3bc774975caf63b8aa665f8c19c0430a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524201"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50045650"
 ---
 # <a name="discards---c-guide"></a>Éléments ignorés - Guide C#
 
@@ -38,7 +38,7 @@ Les éléments ignorés sont particulièrement utiles pour travailler avec des t
 
 Pour plus d’informations sur la déconstruction de tuples avec des éléments ignorés, consultez [Déconstruction de tuples et d’autres types](deconstruct.md#deconstructing-tuple-elements-with-discards).
 
-La méthode `Deconstruct` d’une classe, d’un struct ou d’une interface vous permet aussi de récupérer et de déconstruire un ensemble spécifique de données d’un objet. Vous pouvez utiliser des éléments ignorés quand vous êtes intéressé seulement par un sous-ensemble des valeurs déconstruites. L’exemple suivant déconstruit un objet `Person` en quatre chaînes (le prénom et le nom, la ville et l’état), mais ignore le nom et l’état.
+La méthode `Deconstruct` d’une classe, d’un struct ou d’une interface vous permet aussi de récupérer et de déconstruire un ensemble spécifique de données d’un objet. Vous pouvez utiliser des éléments ignorés quand vous êtes intéressé seulement par un sous-ensemble des valeurs déconstruites. L’exemple suivant déconstruit un objet `Person` en quatre chaînes (le prénom, le nom, la ville et l’État), mais ignore le nom et l’État.
 
 [!code-csharp[Class-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/class-discard1.cs)]
 

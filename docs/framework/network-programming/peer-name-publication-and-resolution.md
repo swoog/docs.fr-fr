@@ -2,28 +2,27 @@
 title: Résolution et publication de nom de pair
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 436c84c948a867acedf69af1bc7b3e78c308ce54
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 98ccfc79a25d547c751d8153d0f290860e5eb743
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193549"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184554"
 ---
 # <a name="peer-name-publication-and-resolution"></a>Résolution et publication de nom de pair
+
 ## <a name="publishing-a-peer-name"></a>Publication d’un nom de pair  
+
  Pour publier un nouvel ID PNRP, un pair effectue les opérations suivantes :  
   
 -   Il envoie des messages de publication PNRP à ses voisins du cache (les pairs dont les ID PNRP sont inscrits au niveau le plus bas du cache) pour amorcer leur cache.  
   
 -   Il choisit de manière aléatoire des nœuds dans le cloud qui ne sont pas ses voisins et leur envoie des requêtes de résolution de nom PNRP pour son propre ID P2P. Le processus de détermination du point de terminaison qui en résulte amorce les caches de nœuds du cloud choisis aléatoirement avec l’ID PNRP du pair de publication.  
   
--  
+Les nœuds PNRP version 2 ne publient pas les ID PNRP s’ils résolvent uniquement d’autres ID P2P. La valeur de Registre HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (type REG_DWORD) spécifie que les pairs utilisent uniquement PNRP pour la résolution de noms et jamais pour la publication de noms. Cette valeur de Registre peut également être configurée via la stratégie de groupe.  
   
- Les nœuds PNRP version 2 ne publient pas les ID PNRP s’ils résolvent uniquement d’autres ID P2P. La valeur de Registre HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PeerNet\PNRP\IPV6-Global\SearchOnly=1 (type REG_DWORD) spécifie que les pairs utilisent uniquement PNRP pour la résolution de noms et jamais pour la publication de noms. Cette valeur de Registre peut également être configurée via la stratégie de groupe.  
-  
-## <a name="resolving-a-peer-name"></a>Résolution d’un nom de pair  
+## <a name="resolving-a-peer-name"></a>Résolution d’un nom de pair
+
  Le processus de localisation d’autres pairs sur un réseau PNRP ou dans le cloud comprend deux phases :  
   
 1.  Détermination du point de terminaison  
@@ -44,11 +43,9 @@ ms.locfileid: "47193549"
   
 -   Si l’ID PNRP n’est pas trouvé, et si aucun des ID PNRP du cache n’est proche du ID PNRP cible, le pair qui reçoit la demande envoie au pair demandeur une réponse indiquant cette condition. Le pair demandeur choisit alors l’ID PNRP le plus proche.  
   
--  
-  
- Le pair demandeur continue ce processus avec des itérations successives dans le but de localiser le nœud qui a inscrit l’ID PNRP.  
+Le pair demandeur continue ce processus avec des itérations successives dans le but de localiser le nœud qui a inscrit l’ID PNRP.  
   
  Dans l’espace de noms <xref:System.Net.PeerToPeer>, il existe une relation plusieurs-à-plusieurs entre les enregistrements <xref:System.Net.PeerToPeer.PeerName> qui contiennent les points de terminaison, et les clouds PNRP ou les mailles avec lesquels ils communiquent. Lorsqu’il y a des entrées obsolètes ou en double, ou plusieurs nœuds portant le même nom de pair, les nœuds PNRP peuvent obtenir des informations actuelles à l’aide de la classe <xref:System.Net.PeerToPeer.PeerNameResolver>. Les méthodes <xref:System.Net.PeerToPeer.PeerNameResolver> utilisent un seul nom de pair pour simplifier les enregistrements de noms de pairs : de un à plusieurs pairs et d’un pair à plusieurs clouds. Ceci est similaire à une requête effectuée à l’aide d’une jointure de table relationnelle. Lorsque vous avez terminé, l’objet Resolver retourne un <xref:System.Net.PeerToPeer.PeerNameRecordCollection> pour le nom de pair spécifié.  Par exemple, un nom de pair peut apparaître dans tous les enregistrements de noms de pairs de la collection, qui sont classés par cloud. Il s’agit là des instances du nom de pair dont les données prises en charge peuvent être demandées par une application PNRP.  
   
 ## <a name="see-also"></a>Voir aussi  
- <xref:System.Net.PeerToPeer>
+- <xref:System.Net.PeerToPeer>

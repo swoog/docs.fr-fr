@@ -3,36 +3,36 @@ title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f6f953eacc935d38cc7d45173109c96c52a5e2f3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208183"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194031"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
 La version Release 6.0 de C# comprenait de nombreuses fonctionnalités qui améliorent la productivité des développeurs. Cette version inclut les fonctionnalités suivantes :
 
-* [Auto-properties en lecture seule](#read-only-auto-properties) :
+* [Propriétés automatiques en lecture seule](#read-only-auto-properties) :
     - Vous pouvez créer des auto-properties en lecture seule qui ne peuvent être définies que dans des constructeurs.
-* [Initialiseurs d’auto-properties](#auto-property-initializers) :
+* [Initialiseurs de propriétés automatiques](#auto-property-initializers) :
     - Vous pouvez écrire des expressions d’initialisation pour définir la valeur initiale d’une auto-property.
 * [Membres de fonction expression-bodied](#expression-bodied-function-members) :
     - Vous pouvez créer des méthodes d’une ligne à l’aide d’expressions lambda.
 * [using static](#using-static) :
     - Vous pouvez importer toutes les méthodes d’une classe unique dans l’espace de noms actuel.
-* [Null - Opérateurs conditionnels](#null-conditional-operators) :
+* [Opérateurs conditionnels Null](#null-conditional-operators) :
     - Vous pouvez accéder avec concision et en toute sécurité aux membres d’un objet tout en recherchant les valeurs null avec l’opérateur conditionnel null.
-* [Interpolation de chaîne](#string-interpolation) :
+* [Interpolation de chaîne](#string-interpolation) :
     - Vous pouvez écrire des expressions de mise en forme de chaînes à l’aide d’expressions inline plutôt que d’arguments de position.
 * [Filtres d’exception](#exception-filters) :
     - Vous pouvez intercepter des expressions en fonction de propriétés de l’exception ou de l’état d’un autre programme. 
-* [Expressions nameof](#nameof-expressions) :
+* [Expression `nameof` ](#the-nameof-expression) :
     - Vous pouvez laisser le compilateur générer des représentations de symboles sous forme de chaîne.
 * [await dans des blocs catch et finally](#await-in-catch-and-finally-blocks) :
     - Vous pouvez utiliser des expressions `await` dans des emplacements qui ne les autorisaient pas auparavant.
-* [Initialiseurs d’index](#index-initializers) :
+* [Initialiseurs d’index](#index-initializers) :
     - Vous pouvez créer des expressions d’initialisation pour les conteneurs associatifs, ainsi que des conteneurs de séquence.
 * [Méthodes d’extension pour les initialiseurs de collections](#extension-add-methods-in-collection-initializers) :
     - Les initialiseurs de collections peuvent s’appuyer sur des méthodes d’extension accessibles, en plus des méthodes membres.
@@ -45,7 +45,7 @@ Globalement, ces fonctionnalités vous permettent d’écrire du code plus conci
 
 Le reste de cette rubrique fournit des détails sur chacune de ces fonctionnalités.
 
-## <a name="auto-property-enhancements"></a>Améliorations des auto-properties
+## <a name="auto-property-enhancements"></a>Améliorations des propriétés automatiques
 
 La syntaxe des propriétés implémentées automatiquement (généralement appelées "auto-properties") permettait de créer très facilement des propriétés qui avaient des accesseurs get et set simples :
 
@@ -90,9 +90,9 @@ Cette fonctionnalité permet une véritable prise en charge du langage pour la c
 
 Si l’ajout de cette syntaxe ne supprime pas une méthode accessible, il s’agit d’une [modification compatible binaire](version-update-considerations.md#binary-compatible-changes).
 
-### <a name="auto-property-initializers"></a>Initialiseurs d’auto-properties
+### <a name="auto-property-initializers"></a>Initialiseurs de propriétés automatiques
 
-Les *initialiseurs d’auto-properties* vous permettent de déclarer la valeur initiale d’une auto-property dans le cadre de la déclaration de la propriété.  Dans les versions antérieures, ces propriétés devaient avoir des méthodes setter que vous deviez utiliser pour initialiser le stockage de données utilisé par le champ de stockage. Étudions la classe suivante pour un étudiant. Elle contient le nom et la liste des diplômes de ce dernier :
+Les *initialiseurs de propriétés automatiques* vous permettent de déclarer la valeur initiale d’une propriété automatique dans le cadre de la déclaration de la propriété.  Dans les versions antérieures, ces propriétés devaient avoir des méthodes setter que vous deviez utiliser pour initialiser le stockage de données utilisé par le champ de stockage. Étudions la classe suivante pour un étudiant. Elle contient le nom et la liste des diplômes de ce dernier :
 
 [!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
  
@@ -211,34 +211,34 @@ Le fait de garantir que la partie gauche n’est évaluée qu’une seule fois v
 
 ## <a name="string-interpolation"></a>Interpolation de chaîne
 
-C# 6 contient une nouvelle syntaxe pour la composition de chaînes à partir d’une chaîne de format et des expressions qui sont évaluées pour produire d’autres valeurs de chaîne.
+C# 6 contient une nouvelle syntaxe pour la composition de chaînes à partir d’une chaîne et des expressions intégrées qui sont évaluées pour produire d’autres valeurs de chaîne.
 
-Habituellement, vous deviez utiliser des paramètres de position dans une méthode telle que `string.Format` :
+Habituellement, vous deviez utiliser des paramètres de position dans une méthode telle que <xref:System.String.Format%2A?displayProperty=nameWithType> :
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Avec C# 6, la nouvelle fonctionnalité d’[interpolation de chaîne](../language-reference/tokens/interpolated.md) vous permet d’incorporer des expressions dans la chaîne de format. Faites simplement précéder la chaîne de `$` :
+Avec C# 6, la nouvelle fonctionnalité [d’interpolation de chaîne](../language-reference/tokens/interpolated.md) vous permet d’incorporer des expressions dans une chaîne. Faites simplement précéder la chaîne de `$` :
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-Cet exemple initial utilise des expressions de propriété pour les expressions substituées. Vous pouvez étendre cette syntaxe pour utiliser n’importe quelle expression. Par exemple, vous pourrez calculer la moyenne pondérée cumulative d’un étudiant dans le cadre de l’interpolation :
+Cet exemple utilise des expressions de propriété pour les expressions substituées. Vous pouvez étendre cette syntaxe pour utiliser n’importe quelle expression. Par exemple, vous pourrez calculer la moyenne pondérée cumulative d’un étudiant dans le cadre de l’interpolation :
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
-En exécutant l’exemple précédent, vous pouvez voir que la sortie de `Grades.Average()` peut avoir plus de décimales que vous ne le souhaitez. La syntaxe d’interpolation de chaîne prend en charge toutes les chaînes de format disponibles en utilisant des méthodes de mise en forme précédentes. Vous ajoutez les chaînes de format entre les accolades. Ajoutez un `:` après l’expression à mettre en forme :
+En exécutant l’exemple précédent, vous pouvez voir que la sortie de `Grades.Average()` peut avoir plus de décimales que vous ne le souhaitez. La syntaxe d’interpolation de chaîne prend en charge toutes les chaînes de format disponibles en utilisant des méthodes de mise en forme précédentes. Vous spécifiez la chaîne de format entre les accolades. Ajoutez un `:` après l’expression à mettre en forme :
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
 La ligne de code précédente met en forme la valeur de `Grades.Average()` sous la forme d’un nombre à virgule flottante à deux décimales.
 
-Le `:` est toujours interprété comme le séparateur entre l’expression mise en forme et la chaîne de format. Cela peut entraîner des problèmes quand votre expression utilise un `:` d’une autre manière, par exemple comme opérateur conditionnel :
+Le `:` est toujours interprété comme le séparateur entre l’expression mise en forme et la chaîne de format. Cela peut entraîner des problèmes quand votre expression utilise un `:` d’une autre manière, par exemple comme [opérateur conditionnel](../language-reference/operators/conditional-operator.md) :
 
 ```csharp
 public string GetGradePointPercentages() =>
     $"Name: {LastName}, {FirstName}. G.P.A: {Grades.Any() ? Grades.Average() : double.NaN:F2}";
 ```
 
-Dans l’exemple précédent, le `:` est analysé comme début de la chaîne de format, et non comme partie de l’opérateur conditionnel. Dans tous les cas où cela se produit, vous pouvez mettre l’expression entre parenthèses pour forcer le compilateur à interpréter l’expression comme vous le souhaitez :
+Dans l’exemple précédent, le `:` est analysé comme début de la chaîne de format, et non comme partie de l’opérateur conditionnel. Dans tous les cas où cela se produit, mettez l’expression entre parenthèses pour forcer le compilateur à interpréter l’expression comme vous le souhaitez :
 
 [!code-csharp[stringInterpolationConditional](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationConditional)]
 
@@ -249,21 +249,23 @@ Aucune limite ne s’applique aux expressions que vous pouvez placer entre accol
 Dans cet exemple, vous pouvez voir qu’il est même possible d’imbriquer une expression d’interpolation de chaîne à l’intérieur d’une autre expression d’interpolation de chaîne. Cet exemple est très probablement plus complexe que vous ne le souhaiteriez dans le code de production.
 En fait, il illustre l’étendue de la fonctionnalité. Toute expression C# peut être placée entre les accolades d’une chaîne interpolée.
 
+Pour bien démarrer avec l’interpolation de chaîne, consultez le tutoriel interactif [Interpolation de chaîne en C#](../tutorials/intro-to-csharp/interpolated-strings.yml).
+
 ### <a name="string-interpolation-and-specific-cultures"></a>Interpolation de chaîne et cultures spécifiques
 
-Tous les exemples présentés dans la section précédente mettent en forme les chaînes à l’aide de la culture et de la langue actuelles sur l’ordinateur sur lequel le code s’exécute. Souvent, vous devrez mettre en forme la chaîne produite à l’aide d’une culture spécifique.
-Pour cela, utilisez le fait que l’objet résultant d’une interpolation de chaîne peut être converti implicitement en <xref:System.FormattableString>.
+Tous les exemples présentés dans la section précédente mettent en forme les chaînes à l’aide de la culture actuelle sur l’ordinateur sur lequel le code s’exécute. Souvent, vous devrez mettre en forme la chaîne produite à l’aide d’une culture spécifique.
+Pour cela, utilisez le fait que l’objet résultant d’une interpolation de chaîne peut être converti implicitement en <xref:System.FormattableString?displayProperty=nameWithType>.
 
-L’instance <xref:System.FormattableString> contient la chaîne de format et les résultats de l’évaluation des expressions avant leur conversion en chaînes. Vous pouvez utiliser des méthodes publiques de <xref:System.FormattableString> pour spécifier la culture lors de la mise en forme d’une chaîne. Par exemple, l’exemple suivant produit une chaîne en utilisant la culture allemande. (Il utilise le caractère « , » comme séparateur décimal et le caractère « . » comme séparateur des milliers.)
+L’instance <xref:System.FormattableString> contient la chaîne de format composite et les résultats de l’évaluation des expressions avant leur conversion en chaînes. Utilisez la méthode <xref:System.FormattableString.ToString(System.IFormatProvider)> pour spécifier la culture lors de la mise en forme d’une chaîne. Par exemple, l’exemple suivant produit une chaîne en utilisant la culture allemande. (Il utilise le caractère « , » comme séparateur décimal et le caractère « . » comme séparateur des milliers.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-Pour plus d’informations, consultez la rubrique [Interpolation de chaîne](../language-reference/tokens/interpolated.md).
+Pour plus d’informations, consultez l’article [Interpolation de chaîne](../language-reference/tokens/interpolated.md) et le tutoriel [Interpolation de chaîne en C#](../tutorials/string-interpolation.md).
 
-## <a name="exception-filters"></a>Filtres d’exception
+## <a name="exception-filters"></a>Filtres d’exceptions
 
 Les *filtres d’exception* constituent une autre nouvelle fonctionnalité en C# 6. Les filtres d’exception sont des clauses qui déterminent quand une clause catch donnée doit être appliquée.
 Si l’expression utilisée pour un filtre d’exception prend la valeur `true`, la clause catch effectue son traitement normal sur une exception. Si l’expression prend la valeur `false`, la clause `catch` est ignorée.
@@ -311,7 +313,7 @@ Dans votre code, ajoutez un filtre d’exception afin que tout code de récupér
 Après avoir ajouté cela au code, vous configurez votre débogueur pour qu’il s’arrête sur toutes les exceptions non prises en charge. Exécutez le programme sous le débogueur. Ce dernier s’arrête chaque fois que `PerformFailingOperation()` lève un `RecoverableException`.
 Le débogueur arrête votre programme, car la clause catch ne sera pas exécutée en raison du filtre d’exception qui retourne false.
 
-## <a name="nameof-expressions"></a>Expressions `nameof`
+## <a name="the-nameof-expression"></a>Expression `nameof`
 
 L’expression `nameof` prend comme valeur le nom d’un symbole. C’est un très bon moyen d’obtenir les outils fonctionnant chaque fois que vous avez besoin du nom d’une variable, d’une propriété ou d’un champ de membre.
 
@@ -347,7 +349,7 @@ Les informations d’implémentation détaillées de l’ajout de la prise en ch
 > [!NOTE]
 > De ce fait, il est recommandé d’écrire les clauses `catch` et `finally` avec précaution, afin d’éviter d’introduire de nouvelles exceptions.
 
-## <a name="index-initializers"></a>Initialiseurs d’index.
+## <a name="index-initializers"></a>Initialiseurs d’index
 
 Les *initialiseurs d’index* constituent l’une des deux fonctionnalités qui améliorent la cohérence des initialiseurs de collection avec l’utilisation des index. Dans les versions précédentes de C#, les *initialiseurs de collection* n’étaient utilisables qu’avec des collections de styles de séquence, y compris <xref:System.Collections.Generic.Dictionary%602>, en ajoutant des accolades autour des paires clé-valeur :
 

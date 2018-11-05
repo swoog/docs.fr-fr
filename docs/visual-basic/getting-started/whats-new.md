@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de Visual Basic
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925609"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194057"
 ---
 # <a name="whats-new-for-visual-basic"></a>Nouveautés de Visual Basic
 
-Cette rubrique liste les noms des principales fonctionnalités de chaque version de Visual Basic et décrit en détail les fonctionnalités nouvelles et améliorées de la dernière version du langage.
+Cette rubrique liste les noms des principales fonctionnalités de chaque version de Visual Basic et décrit en détail les fonctionnalités nouvelles et améliorées des dernières versions du langage.
   
 ## <a name="current-version"></a>Version actuelle
 
@@ -69,6 +67,10 @@ Par exemple, dans l’appel de méthode suivant un argument nommé est entouré 
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[`Private Protected` modificateur d’accès de membre](../language-reference/modifiers/private-protected.md)
+
+Cette nouvelle combinaison de mots clés définit un membre qui est accessible par tous les membres de sa classe conteneur ainsi que par des types dérivés de la classe conteneur, mais uniquement s’ils se trouvent également dans l’assembly conteneur. Étant donné que les structures ne peuvent pas être héritées, `Private Protected` peut uniquement être appliqué aux membres d’une classe.
 
 **Séparateur hex/binaire/octal de début**
 
@@ -153,7 +155,7 @@ Pour plus d’informations, consultez [Valeurs de retour de référence](../prog
 [Interpolation de chaîne](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Vous pouvez utiliser des expressions d’interpolation de chaîne pour construire des chaînes.  Une expression de chaîne interpolée s’apparente à une chaîne de modèle contenant des expressions.  Les arguments d’une chaîne interpolée sont plus compréhensibles que dans une [Mise en forme composite](../../standard/base-types/composite-format.md).  
   
-[Indexation et accès aux membres conditionnels Null](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Indexation et accès aux membres conditionnels Null](../language-reference/operators/null-conditional-operators.md)  
 Vous pouvez rechercher les valeurs Null à l’aide d’une syntaxe très légère avant d’effectuer une opération d’accès aux membres (`?.`) ou d’indexation (`?[]`).  Ces opérateurs permettent d’écrire moins de code pour gérer les vérifications Null, notamment pour l’exploration des structures de données.  Si la référence objet ou l’opérande gauche est Null, l’opération retourne la valeur Null.  
   
 [Littéraux de chaîne multiligne](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

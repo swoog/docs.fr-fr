@@ -3,12 +3,12 @@ title: Documentation de votre code avec des commentaires XML
 description: Découvrez comment documenter votre code avec des commentaires de documentation XML et générer un fichier de documentation XML au moment de la compilation.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: e211543a6a5cc5f6f29d8c195492b474eb24a38d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397057"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453266"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentation de votre code avec des commentaires XML
 
@@ -51,7 +51,7 @@ Voici le code de la bibliothèque mathématique simple :
 L’exemple de bibliothèque prend en charge quatre opérations arithmétiques principales `add`, `subtract`, `multiply` et `divide` sur des types de données `int` et `double`.
 
 Vous voulez maintenant pouvoir créer un document de référence des API à partir de votre code pour les développeurs tiers qui utilisent votre bibliothèque, mais qui n’ont pas accès au code source.
-Comme mentionné précédemment, les balises de documentation XML peuvent être utilisées à cette fin. Vous allez maintenant découvrir les balises XML standard prises en charge par le compilateur C#.
+Comme nous l’avons déjà mentionné, vous pouvez pour cela utiliser les balises de documentation XML. Vous allez maintenant découvrir les balises XML standard prises en charge par le compilateur C#.
 
 ### <a name="ltsummarygt"></a>&lt;summary&gt;
 
@@ -160,7 +160,7 @@ Vous pouvez utiliser la même méthode générique que celle créée précédemm
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="ltlistgt"></a>&lt;list&gt;
+### <a name="ltlistgt"></a>&lt;liste&gt;
 
 La balise `<list>` vous permet de mettre en forme des informations de documentation sous la forme d’une liste triée, d’une liste non triée ou d’un tableau.
 Créez une liste non triée de toutes les opérations mathématiques prises en charge par votre bibliothèque `Math`.

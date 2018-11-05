@@ -2,12 +2,12 @@
 title: Informations relatives à l’appelant (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586453"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50185272"
 ---
 # <a name="caller-information-c"></a>Informations relatives à l’appelant (C#)
 
@@ -76,7 +76,7 @@ Le graphique suivant affiche les noms des membres qui sont retournés lorsque vo
 |Constructeur statique|La chaîne « .cctor »|
 |Destructeur|La chaîne « finalize »|
 |Opérateurs définis par l'utilisateur ou conversions|Le nom généré pour le membre, par exemple, « op_Addition ».|
-|Constructeur d'attribut|Le nom du membre auquel l'attribut est appliqué. Si l'attribut est un élément dans un membre (tel qu'un paramètre, une valeur de retour, ou un paramètre de type générique), le résultat est le nom du membre qui est associé à cet élément.|
+|Constructeur d'attribut|Le nom de la méthode ou de la propriété à laquelle s’applique l'attribut. Si l'attribut est un élément dans un membre (tel qu'un paramètre, une valeur de retour, ou un paramètre de type générique), le résultat est le nom du membre qui est associé à cet élément.|
 |Aucun membre contenant (par exemple, niveau assembly ou attributs qui sont appliqués aux types)|Valeur par défaut du paramètre optionnel.|
 
 ## <a name="see-also"></a>Voir aussi
