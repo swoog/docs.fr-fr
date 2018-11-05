@@ -8,29 +8,30 @@ dev_langs:
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d8b8c21af8ca0a21d97e8246ad82c42aaaf4974
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7f835cfb45848ca2790c3dcb541629564e9cc48a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971966"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261392"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migration depuis la classe XslTransform
-L’architecture XSLT a été repensée dans la version [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)]. La classe <xref:System.Xml.Xsl.XslTransform> a été remplacée par la classe <xref:System.Xml.Xsl.XslCompiledTransform>.  
-  
- Les sections suivantes décrivent quelques-unes des principales différences entre les classes <xref:System.Xml.Xsl.XslCompiledTransform> et <xref:System.Xml.Xsl.XslTransform>.  
-  
-## <a name="performance"></a>Performances  
- La classe <xref:System.Xml.Xsl.XslCompiledTransform> comporte de nombreuses améliorations des performances. Le nouveau processeur XSLT compile la feuille de style XSLT en un format intermédiaire commun, à la façon dont le CLR (common language runtime) le fait pour d'autres langages de programmation. Une fois compilée, la feuille de style peut être mise en cache et réutilisée.  
-  
- La classe <xref:System.Xml.Xsl.XslCompiledTransform> inclut aussi d'autres optimisations qui la rendent beaucoup plus rapide que la classe <xref:System.Xml.Xsl.XslTransform>.  
-  
+
+L’architecture XSLT a été repensée dans la version 2005 de Visual Studio. La classe <xref:System.Xml.Xsl.XslTransform> a été remplacée par la classe <xref:System.Xml.Xsl.XslCompiledTransform>.
+
+ Les sections suivantes décrivent quelques-unes des principales différences entre les classes <xref:System.Xml.Xsl.XslCompiledTransform> et <xref:System.Xml.Xsl.XslTransform>.
+
+## <a name="performance"></a>Performances
+ La classe <xref:System.Xml.Xsl.XslCompiledTransform> comporte de nombreuses améliorations des performances. Le nouveau processeur XSLT compile la feuille de style XSLT en un format intermédiaire commun, à la façon dont le CLR (common language runtime) le fait pour d'autres langages de programmation. Une fois compilée, la feuille de style peut être mise en cache et réutilisée.
+
+ La classe <xref:System.Xml.Xsl.XslCompiledTransform> inclut aussi d'autres optimisations qui la rendent beaucoup plus rapide que la classe <xref:System.Xml.Xsl.XslTransform>.
+
 > [!NOTE]
->  Bien que les performances globales de la classe <xref:System.Xml.Xsl.XslCompiledTransform> soient meilleures que celles de la classe <xref:System.Xml.Xsl.XslTransform>, la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la classe <xref:System.Xml.Xsl.XslCompiledTransform> peut s'exécuter plus lentement que la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> de la classe <xref:System.Xml.Xsl.XslTransform> la première fois qu'elle est appelée pour une transformation. C'est parce que le fichier XSLT doit être compilé avant d'être chargé. Pour plus d'informations, consultez le billet de blog suivant : [XslCompiledTransform plus lent que XslTransform ?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/).  
-  
-## <a name="security"></a>Sécurité  
- Par défaut, la classe <xref:System.Xml.Xsl.XslCompiledTransform> désactive la prise en charge de la fonction XSLT `document()` et les scripts intégrés par défaut. Ces fonctions peuvent être activées en créant un objet <xref:System.Xml.Xsl.XsltSettings> où les fonctions sont activées et en le passant à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. L'exemple suivant montre comment activer les scripts et effectuer une transformation XSLT.  
-  
+>  Bien que les performances globales de la classe <xref:System.Xml.Xsl.XslCompiledTransform> soient meilleures que celles de la classe <xref:System.Xml.Xsl.XslTransform>, la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> de la classe <xref:System.Xml.Xsl.XslCompiledTransform> peut s'exécuter plus lentement que la méthode <xref:System.Xml.Xsl.XslTransform.Load%2A> de la classe <xref:System.Xml.Xsl.XslTransform> la première fois qu'elle est appelée pour une transformation. C'est parce que le fichier XSLT doit être compilé avant d'être chargé. Pour plus d'informations, consultez le billet de blog suivant : [XslCompiledTransform plus lent que XslTransform ?](https://blogs.msdn.microsoft.com/antosha/2006/07/16/xslcompiledtransform-slower-than-xsltransform/).
+
+## <a name="security"></a>Sécurité
+ Par défaut, la classe <xref:System.Xml.Xsl.XslCompiledTransform> désactive la prise en charge de la fonction XSLT `document()` et les scripts intégrés par défaut. Ces fonctions peuvent être activées en créant un objet <xref:System.Xml.Xsl.XsltSettings> où les fonctions sont activées et en le passant à la méthode <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A>. L'exemple suivant montre comment activer les scripts et effectuer une transformation XSLT.
+
  [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
  [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]  
   
@@ -80,7 +81,7 @@ XmlDocument doc = new XmlDocument();
 doc.Load(xslt.Transform(input, (XsltArgumentList)null));  
 ```  
   
- La classe <xref:System.Xml.Xsl.XslCompiledTransform> ne prend pas en charge la transformation vers un objet <xref:System.Xml.XmlReader>. Vous pouvez cependant effectuer une opération similaire en utilisant la méthode <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> pour charger directement l'arborescence XML résultante à partir d'un <xref:System.Xml.XmlWriter>. Le code C# suivant montre comment exécuter la même tâche à l'aide de <xref:System.Xml.Xsl.XslCompiledTransform>.  
+ La classe <xref:System.Xml.Xsl.XslCompiledTransform> ne prend pas en charge la transformation vers un objet <xref:System.Xml.XmlReader>. Vous pouvez cependant effectuer une opération similaire en utilisant la méthode <xref:System.Xml.XPath.XPathNavigator.CreateNavigator%2A> pour charger directement l’arborescence XML résultante à partir d’un <xref:System.Xml.XmlWriter>. Le code C# suivant montre comment exécuter la même tâche à l'aide de <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 ```  
 // Transform input document to XmlDocument for additional processing  
@@ -109,13 +110,13 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 ### <a name="msxml-functions"></a>Fonctions MSXML  
  La prise en charge de fonctions MSXML supplémentaires a été ajoutée à la classe <xref:System.Xml.Xsl.XslCompiledTransform>. La liste suivante décrit les fonctionnalités nouvelles ou améliorées :  
   
--   msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> avait besoin que l'argument de la fonction [node-set Function](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) soit un fragment de l'arborescence de résultats. La classe <xref:System.Xml.Xsl.XslCompiledTransform> n'impose pas cette exigence.  
+-   msxsl:node-set: <xref:System.Xml.Xsl.XslTransform> avait besoin que l'argument de la fonction [node-set Function](https://msdn.microsoft.com/library/87b6b3f4-16f4-4fa3-8103-d62a679ac2a7) soit un fragment de l'arborescence de résultats. La classe <xref:System.Xml.Xsl.XslCompiledTransform> n’impose pas cette exigence.  
   
 -   msxsl:version : cette fonction est prise en charge dans <xref:System.Xml.Xsl.XslCompiledTransform>.  
   
 -   Fonctions d’extension XPath : les fonctions [ms:string-compare Function](https://msdn.microsoft.com/library/20616b82-9e27-444c-b714-4f1e09b73aee), [ms:utc Function](https://msdn.microsoft.com/library/ef26fc88-84c6-4fb9-9c3b-f2f5264b864f), [ms:namespace-uri Function](https://msdn.microsoft.com/library/91f9cabf-ab93-4dbe-9c12-e6a75214f4c7), [ms:local-name Function](https://msdn.microsoft.com/library/10ed60a1-17a9-4d74-8b98-7940ac97c0b5), [ms:number Function](https://msdn.microsoft.com/library/b94fc08e-1f31-4f48-b1a8-6d78c1b5d954), [ms:format-date Function](https://msdn.microsoft.com/library/51f35609-89a9-4098-a166-88bf01300bf5) et [ms:format-time Function](https://msdn.microsoft.com/library/e5c2df2d-e8fb-4a8f-bfc0-db84ea12a5d5) sont maintenant prises en charge.  
   
--   Fonctions d'extension Xpath liées au schéma : ces fonctions ne sont pas prises en charge en natif par <xref:System.Xml.Xsl.XslCompiledTransform>. Toutefois, elles peuvent être implémentées en tant que fonctions d’extension.  
+-   Fonctions d’extension Xpath liées au schéma : ces fonctions ne sont pas prises en charge en natif par <xref:System.Xml.Xsl.XslCompiledTransform>. Toutefois, elles peuvent être implémentées en tant que fonctions d’extension.  
   
 ## <a name="see-also"></a>Voir aussi
 

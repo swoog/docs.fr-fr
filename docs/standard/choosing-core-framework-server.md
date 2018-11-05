@@ -4,12 +4,12 @@ description: Guide sur l’implémentation de .NET à envisager pour générer u
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864960"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202235"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Choix entre .NET Core et .NET Framework pour les applications serveur
 
@@ -87,7 +87,7 @@ Certaines technologies du .NET Framework ne sont pas disponibles dans .NET Core.
 
 * Applications Web Forms ASP.NET : Web Forms ASP.NET n’est disponible que dans le .NET Framework. ASP.NET Core ne peut pas être utilisé pour Web Forms ASP.NET. Il n’est pas prévu d’intégrer Web Forms ASP.NET à .NET Core.
 
-* Applications Pages Web ASP.NET : le framework Pages Web ASP.NET n’est pas inclus dans ASP.NET Core. ASP.NET Core [Pages Razor](/aspnet/core/mvc/razor-pages/) a beaucoup de similitudes avec Pages Web.
+* Applications Pages Web ASP.NET : le framework Pages Web ASP.NET n’est pas inclus dans ASP.NET Core. 
 
 * Implémentation des services WCF. Même s’il existe une [bibliothèque cliente WCF](https://github.com/dotnet/wcf) pour utiliser des services WCF à partir de .NET Core, l’implémentation serveur WCF est disponible uniquement sur le .NET Framework. Ce scénario ne fait pas partie du plan actuel pour .NET Core, mais il est envisagé pour l’avenir.
 
@@ -104,6 +104,7 @@ Certaines plateformes Microsoft ou tierces ne prennent pas en charge .NET Core. 
 ## <a name="see-also"></a>Voir aussi
 
 * [Choisir entre ASP.NET et ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+* [ASP.NET Core ciblant .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
 * [Frameworks cibles](frameworks.md)
 * [Guide .NET Core](../core/index.md)  
 * [Portage depuis .NET Framework vers .NET Core](../core/porting/index.md)  

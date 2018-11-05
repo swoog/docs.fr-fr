@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 834049f1-ab41-449e-9f10-4a1d0701bc48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e09828b827b12645ebbf37d62a346c8877bfba05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: beb351ac365694ac909b793bf19adb9fbb8c0274
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865733"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835972"
 ---
 # <a name="inputs-to-the-xslcompiledtransform-class"></a>Entrées dans la classe XslCompiledTransform
 La méthode <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> accepte trois types d'entrées pour le document source : un objet qui implémente l'interface <xref:System.Xml.XPath.IXPathNavigable>, un objet <xref:System.Xml.XmlReader> qui lit le document source ou un string URI.  
   
 > [!NOTE]
->  La classe <xref:System.Xml.Xsl.XslCompiledTransform> conserve l'espace blanc par défaut. Elle respecte ainsi la section 3.4 de la recommandation du W3C sur XSLT 1.0 (section 3.4, http://www.w3.org/TR/xslt.html#strip).  
+>  La classe <xref:System.Xml.Xsl.XslCompiledTransform> conserve l'espace blanc par défaut. Elle respecte ainsi la [section 3.4 de la recommandation du W3C sur XSLT 1.0](https://www.w3.org/TR/xslt.html#strip).  
   
 ## <a name="ixpathnavigable-interface"></a>Interface IXPathNavigable  
  L'interface <xref:System.Xml.XPath.IXPathNavigable> est implémentée dans les classes <xref:System.Xml.XmlNode> et <xref:System.Xml.XPath.XPathDocument>. Ces classes représentent un cache en mémoire de données XML.  

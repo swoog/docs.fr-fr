@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: e5c7e0acb0496aebce4d9cbe8cb51ced0c7166a2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: a8c03f99accf75f60fe6c21a0f09f304214b4a6c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106604"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194099"
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Conception de la couche Application de microservices et de l’API web
 
@@ -31,14 +31,14 @@ SOLID a plus trait à la façon dont vous concevez votre application ou vos couc
 
 L’inversion de dépendances est une façon d’implémenter le principe éponyme. Il s’agit d’une technique de couplage faible entre des objets et leurs dépendances. Au lieu d’instancier directement des collaborateurs ou d’utiliser des références statiques, les objets dont a besoin une classe pour effectuer ses opérations sont fournis à la classe (ou injectés dans la classe). Le plus souvent, les classes déclarent leurs dépendances par le biais de leur constructeur, ce qui leur permet de suivre le principe des dépendances explicites. L’inversion de dépendances se base généralement sur des conteneurs d’inversion de contrôle (IoC) spécifiques. ASP.NET Core fournit un simple conteneur IoC intégré, mais vous pouvez également utiliser votre conteneur IoC favori, comme Autofac ou Ninject.
 
-En suivant les principes SOLID, vos classes ont naturellement tendance à être petites, bien factorisées et facilement testées. Mais comment savoir si trop de dépendances sont injectées dans vos classes ? Si vous utilisez l’inversion de dépendances par le biais du constructeur, vous pouvez facilement le détecter rien qu’en examinant le nombre de paramètres pour votre constructeur. S’il y a trop de dépendances, c’est généralement le signe (un [code smell](http://deviq.com/code-smells/)) que votre classe essaie d’en faire trop et qu’elle enfreint probablement le principe de responsabilité unique.
+En suivant les principes SOLID, vos classes ont naturellement tendance à être petites, bien factorisées et facilement testées. Mais comment savoir si trop de dépendances sont injectées dans vos classes ? Si vous utilisez l’inversion de dépendances par le biais du constructeur, vous pouvez facilement le détecter rien qu’en examinant le nombre de paramètres pour votre constructeur. S’il y a trop de dépendances, c’est généralement le signe (un [code smell](https://deviq.com/code-smells/)) que votre classe essaie d’en faire trop et qu’elle enfreint probablement le principe de responsabilité unique.
 
 Un autre guide serait nécessaire pour couvrir les principes SOLID de façon approfondie. C’est pourquoi le présent guide exige que vous ayez un minimum de connaissances à ce sujet.
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
 -   **SOLID: Fundamental OOP Principles**
-    [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
+    [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
 -   **Inversion of Control Containers and the Dependency Injection pattern**
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)

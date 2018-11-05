@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 277ab8e094f28fd5e3cbba4de12e742bb9614730
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: abcc67a16e257a15599431a8fefe7753e6d52549
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425782"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190318"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap (Options du compilateur C#)
 
@@ -34,7 +34,7 @@ Pour spécifier plusieurs chemins sources mappés, séparez-les par des virgules
 
 ## <a name="remarks"></a>Notes
 
-Le compilateur écrit le chemin source dans sa sortie dans les cas suivants :
+Le compilateur écrit le chemin source dans sa sortie dans les cas suivants :
 
 1. Le chemin source est remplacé par un argument quand <xref:System.Runtime.CompilerServices.CallerFilePathAttribute> est appliqué à un paramètre facultatif.
 1. Le chemin source est incorporé dans un fichier PDB.

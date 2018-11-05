@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003085"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202905"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Tas de grands objets sur les systèmes Windows
 
@@ -66,7 +66,7 @@ Figure 3 : LOH après un GC de la génération 2
 
 ## <a name="when-is-a-large-object-collected"></a>Quand un grand objet est-il collecté ?
 
-En règle générale, un GC est déclenché quand l’une des 3 conditions suivantes se produit :
+En règle générale, un GC est déclenché quand l’une des 3 conditions suivantes est remplie :
 
 - L’allocation dépasse le seuil des grands objets ou de la génération 0.
 
@@ -164,7 +164,7 @@ Les compteurs de performances peuvent également être interrogés par programma
 > [!NOTE]
 > Nous vous recommandons d’utiliser les événements ETW au lieu des compteurs de performances, car ETW fournit des informations plus détaillées.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>événements ETW
 
 Le récupérateur de mémoire fournit un riche ensemble d’événements ETW pour vous aider à comprendre ce que fait le tas et pourquoi. Les billets de blog suivants décrivent comment collecter et comprendre les événements GC avec ETW :
 
@@ -204,7 +204,7 @@ Comme vous pouvez le voir, il s’agit d’un test très simple qui alloue simpl
 
 ### <a name="a-debugger"></a>Débogueur
 
-Si tout ce que vous avez est un vidage de mémoire et que vous devez examiner les objets qui se trouvent sur le LOH, vous pouvez utiliser [l’extension de débogueur SoS](http://msdn2.microsoft.com/ms404370.aspx) fournie par .NET.
+Si tout ce que vous avez est un vidage de mémoire et que vous devez examiner les objets qui se trouvent sur le LOH, vous pouvez utiliser [l’extension de débogueur SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md) fournie par .NET.
 
 > [!NOTE]
 > Les commandes de débogage indiquées dans cette section sont applicables aux [débogueurs Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

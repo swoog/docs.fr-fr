@@ -1,23 +1,26 @@
 ---
 title: Threading managé et non managé dans Windows
-ms.date: 03/30/2017
+ms.date: 10/24/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], unmanaged
 - threading [.NET Framework], managed
+- threading [.NET], managed
+- threads and fibers [.NET]
 - managed threading
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 34bd959890717a16df80d3870099757dd7400943
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864548"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199732"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Threading managé et non managé dans Windows
-La gestion de tous les threads s'effectue par le biais de la classe <xref:System.Threading.Thread> , notamment les threads créés par le Common Language Runtime et ceux créés en dehors du runtime qui entrent dans l'environnement managé pour exécuter du code. Le runtime surveille tous les threads dans son processus qui ont exécuté du code dans l'environnement d'exécution managé. Il n'effectue le suivi d'aucun autre thread. Les threads peuvent entrer dans l’environnement d’exécution managé par le biais du service COM Interop (car le runtime expose les objets managés en tant qu’objets COM à l’environnement non managé), de la fonction COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) et de l’appel de code non managé.  
+
+La gestion de tous les threads s'effectue par le biais de la classe <xref:System.Threading.Thread> , notamment les threads créés par le Common Language Runtime et ceux créés en dehors du runtime qui entrent dans l'environnement managé pour exécuter du code. Le runtime surveille tous les threads dans son processus qui ont exécuté du code dans l'environnement d'exécution managé. Il n'effectue le suivi d'aucun autre thread. Les threads peuvent entrer dans l’environnement d’exécution managé via COM Interop (car le runtime expose les objets managés en tant qu’objets COM à l’environnement non managé), la fonction COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) et l’appel de code non managé.  
   
  Quand un thread non managé entre dans le runtime via, par exemple, un wrapper CCW (COM Callable Wrapper), le système vérifie si le magasin de threads local de ce thread contient un objet <xref:System.Threading.Thread> managé interne. Si un objet de ce type est trouvé, le runtime connaît déjà ce thread. Sinon, le runtime crée quand même un objet <xref:System.Threading.Thread> et l’installe dans le magasin de threads local de ce thread.  
   
@@ -26,7 +29,8 @@ La gestion de tous les threads s'effectue par le biais de la classe <xref:System
 > [!NOTE]
 >  Un **ID de thread** de système d'exploitation n'est pas lié de manière fixe à un thread managé, car un hôte non managé peut contrôler la relation entre les threads managés et les threads non managés. En particulier, un hôte élaboré peut utiliser l'API Fiber pour planifier de nombreux threads managés par rapport au même thread de système d'exploitation, ou pour déplacer un thread managé parmi différents threads de système d'exploitation.  
   
-## <a name="mapping-from-win32-threading-to-managed-threading"></a>Correspondance entre les éléments de thread Win32 et les éléments de thread managés  
+## <a name="mapping-from-win32-threading-to-managed-threading"></a>Correspondance entre les éléments de thread Win32 et les éléments de thread managés
+
  Le tableau suivant établit une correspondance entre les éléments de thread Win32 et leurs équivalents approximatifs dans le runtime. Notez que cette mise en correspondance ne représente pas des fonctionnalités identiques. Par exemple, **TerminateThread** n'exécute pas de clauses **finally** ou ne libère pas de ressources, et son exécution ne peut pas être empêchée. Toutefois, <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> exécute tout votre code de restauration, récupère toutes les ressources et peut être refusé à l'aide de <xref:System.Threading.Thread.ResetAbort%2A>. Veillez à lire la documentation attentivement avant d'émettre des hypothèses sur les fonctionnalités.  
   
 |Dans Win32|Dans le Common Language Runtime|  
@@ -44,8 +48,9 @@ La gestion de tous les threads s'effectue par le biais de la classe <xref:System
 |Aucun équivalent|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
 |Proche de **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
-## <a name="managed-threads-and-com-apartments"></a>Threads managés et cloisonnements COM  
- Un thread managé peut être marqué pour indiquer qu’il hébergera un [thread unique cloisonné](/windows/desktop/com/single-threaded-apartments) ou un [multithread cloisonné](/windows/desktop/com/multithreaded-apartments). (Pour plus d’informations sur l’architecture des threads COM, consultez l’article [Processes, threads, and Apartments](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx) (Processus, threads et cloisonnements).) Les méthodes <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> et <xref:System.Threading.Thread.TrySetApartmentState%2A> de la classe <xref:System.Threading.Thread> retournent et affectent l'état de cloisonnement d'un thread. Si l'état n’a pas été défini, <xref:System.Threading.Thread.GetApartmentState%2A> retourne <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+## <a name="managed-threads-and-com-apartments"></a>Threads managés et cloisonnements COM
+
+Un thread managé peut être marqué pour indiquer qu’il hébergera un [thread unique cloisonné](/windows/desktop/com/single-threaded-apartments) ou un [multithread cloisonné](/windows/desktop/com/multithreaded-apartments) . (Pour plus d’informations sur l’architecture des threads COM, consultez l’article [Processes, threads, and Apartments](/windows/desktop/com/processes--threads--and-apartments) (Processus, threads et cloisonnements).) Les méthodes <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> et <xref:System.Threading.Thread.TrySetApartmentState%2A> de la classe <xref:System.Threading.Thread> retournent et affectent l'état de cloisonnement d'un thread. Si l'état n’a pas été défini, <xref:System.Threading.Thread.GetApartmentState%2A> retourne <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  La propriété ne peut être définie que quand le thread se trouve dans l’état <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType> et qu’une seule fois par thread.  
   
@@ -61,8 +66,13 @@ La gestion de tous les threads s'effectue par le biais de la classe <xref:System
  Quand un code managé appelle des objets COM, il suit systématiquement les règles COM. En d'autres termes, il effectue les appels par le biais de proxys de cloisonnement COM et de wrappers de contexte COM+ 1.0, conformément à OLE32.  
   
 ## <a name="blocking-issues"></a>Problèmes de blocage  
- Si un thread effectue dans le système d'exploitation un appel non managé et qu'il se retrouve bloqué dans un code non managé, le runtime ne prend pas le contrôle du thread pour <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ou <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Dans le cas de <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, le runtime marque le thread comme **Abandonné** et en prend le contrôle quand il revient dans le code managé. Pensez à utiliser un blocage managé plutôt qu'un blocage non managé. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>, etc. réagissent tous à <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> et à <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. En outre, si votre thread se trouve dans un cloisonnement monothread, toutes ces opérations de blocage managé pompent correctement les messages dans votre cloisonnement pendant que votre thread est bloqué.  
-  
+
+Si un thread effectue dans le système d'exploitation un appel non managé et qu'il se retrouve bloqué dans un code non managé, le runtime ne prend pas le contrôle du thread pour <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> ou <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Dans le cas d' <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>, le runtime marque le thread pour **Abort** et en prend le contrôle quand il revient dans le code managé. Pensez à utiliser un blocage managé plutôt qu'un blocage non managé. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType>et ainsi de suite réagissent tous à <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> et à <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. En outre, si votre thread se trouve dans un cloisonnement monothread, toutes ces opérations de blocage managé pompent correctement les messages dans votre cloisonnement pendant que votre thread est bloqué.  
+
+## <a name="threads-and-fibers"></a>Threads et fibres
+
+Le modèle de thread .NET ne prend pas en charge les [fibres](/windows/desktop/procthread/fibers). Vous ne devez pas appeler dans n’importe quelle fonction non managée qui est implémentée à l’aide de fibres. Ces appels peuvent entraîner un blocage du runtime .NET.
+
 ## <a name="see-also"></a>Voir aussi
 
 - <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  

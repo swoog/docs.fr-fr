@@ -1,18 +1,18 @@
 ---
 title: ref, mot clé (référence C#)
-ms.date: 03/06/2018
+ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47207967"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195968"
 ---
 # <a name="ref-c-reference"></a>ref (référence C#)
 
@@ -21,7 +21,8 @@ Le mot clé `ref` indique une valeur qui est passée par référence. Il est ut
 - Dans une signature de méthode et dans un appel de méthode, pour passer un argument à une méthode par référence. Pour plus d’informations, consultez [Passage d’un argument par référence](#passing-an-argument-by-reference).
 - Dans une signature de méthode, pour retourner une valeur à l’appelant par référence. Pour plus d’informations, consultez [Valeurs de retour de référence](#reference-return-values).
 - Dans le corps d’un membre, pour indiquer qu’une valeur de retour de référence est stockée localement sous la forme d’une référence que l’appelant a l’intention de modifier, ou une variable locale accède généralement à une valeur par référence. Pour plus d’informations, consultez [Variables locales ref](#ref-locals).
-- Dans une déclaration de `struct` pour déclarer un `ref struct` ou un `ref readonly struct`. Pour plus d’informations, consultez [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md).
+- Dans une déclaration de `struct` pour déclarer un `ref struct` ou un `ref readonly struct`. Pour plus d’informations, consultez [Types de structures ref](#ref-struct-types).
+
 
 ## <a name="passing-an-argument-by-reference"></a>Passage d’un argument par référence
 
@@ -89,6 +90,8 @@ return ref DecimalArray[0];
 
 Pour que l’appelant puisse modifier l’état de l’objet, la valeur de retour de référence doit être stockée dans une variable qui est explicitement définie comme [variable locale ref](#ref-locals).
 
+La méthode appelée peut également déclarer la valeur renvoyée en tant que `ref readonly` pour renvoyer la valeur par référence et faire en sorte que le code d'appel ne puisse pas modifier la valeur renvoyée. La méthode d’appel peut éviter de copier la valeur renvoyée en stockant la valeur dans une variable [ref readonly](#ref-readonly-locals) locale.
+
 Pour obtenir un exemple, consultez [un exemple de retours ref et de variables locales ref](#a-ref-returns-and-ref-locals-example)
 
 ## <a name="ref-locals"></a>Variables locales ref
@@ -111,6 +114,10 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 Notez que dans les deux exemples, le mot clé `ref` doit être utilisé aux deux emplacements, sans quoi le compilateur génère l’erreur CS8172, « Impossible d’initialiser une variable par référence avec une valeur ».
 
+## <a name="ref-readonly-locals"></a>Variable locale ref readonly
+
+Une variable locale ref readonly est utilisée pour se référer à des valeurs renvoyées par la méthode ou par la propriété comprenant `ref readonly` dans sa signature et utilise `return ref`. Une variable `ref readonly` combine les propriétés d’une variable locale `ref` avec une variable `readonly` : c’est un alias du stockage auquel elle est assignée et qui ne peut pas être modifié. 
+
 ## <a name="a-ref-returns-and-ref-locals-example"></a>Exemple de retours ref et de variables locales ref
 
 L’exemple suivant définit une classe `Book` qui a deux champs <xref:System.String>, `Title` et `Author`. Il définit également une classe `BookCollection` qui inclut un tableau privé d’objets `Book`. Des objets livres individuels sont retournés par référence en appelant sa méthode `GetBookByTitle`.
@@ -121,13 +128,30 @@ Quand l’appelant stocke la valeur retournée par la méthode `GetBookByTitle` 
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
+## <a name="ref-struct-types"></a>Types de structures ref
+
+L’ajout du modificateur `ref` à une déclaration `struct` définit que les instances de ce type doivent être allouées par la pile. En d’autres termes, les instances de ces types ne peuvent jamais être créées sur un segment de mémoire en tant que membre d’une autre classe. Cette fonctionnalité vise principalement <xref:System.Span%601> et ses structures associées.
+
+La conservation d’un type `ref struct` comme variable allouée par la pile introduit plusieurs règles que le compilateur applique pour tous les types `ref struct`.
+
+- Vous ne pouvez pas effectuer d’opération box sur un `ref struct`. Vous ne pouvez pas assigner un type `ref struct` à une variable de type `object`, `dynamic` ou tout type interface.
+- Les types `ref struct` ne peuvent pas implémenter les interfaces.
+- Vous ne pouvez pas déclarer `ref struct` comme membre d’une classe ou d’un struct normal.
+- Vous ne pouvez pas déclarer des variables locales qui sont des types `ref struct` dans des méthodes async. Vous pouvez les déclarer dans des méthodes synchrones qui retournent des types semblables à <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> ou `Task`.
+- Vous ne pouvez pas déclarer de variables locales `ref struct` dans des itérateurs.
+- Vous ne pouvez pas capturer de variables `ref struct` dans des expressions lambda ou des fonctions locales.
+
+Ces restrictions garantissent que vous n’utilisiez pas accidentellement une `ref struct` d’une manière qui pourrait la promouvoir auprès du tas managé.
+
+Vous pouvez combiner des modificateurs pour déclarer une structure en tant que `readonly ref`. Une `readonly ref struct` combine les avantages et les restrictions des déclarations `ref struct` et `readonly struct`.
+
 ## <a name="c-language-specification"></a>spécification du langage C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Sémantique de référence avec les types valeur](../../reference-semantics-with-value-types.md)  
+- [Écrire du code sécurisé et efficace](../../write-safe-efficient-code.md)  
 - [Passage de paramètres](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Paramètres de méthodes](method-parameters.md)  
 - [Référence C#](../index.md)  

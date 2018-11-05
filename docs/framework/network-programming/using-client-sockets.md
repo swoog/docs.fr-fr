@@ -16,14 +16,12 @@ helpviewer_keywords:
 - sockets, client sockets
 - client sockets
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ec789bcc5b675f3cde468f9464531a225e8c33db
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195548"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198965"
 ---
 # <a name="using-client-sockets"></a>Utilisation de sockets clients
 Avant de démarrer une conversation via un <xref:System.Net.Sockets.Socket>, vous devez créer un canal de données entre votre application et l’appareil distant. Il existe d’autres protocoles et familles d’adresses réseau, mais cet exemple montre comment créer une connexion TCP/IP à un service distant.  
@@ -42,7 +40,7 @@ IPHostEntry ipHostInfo = Dns.Resolve("host.contoso.com");
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 ```  
   
- L’IANA (Internet Assigned Numbers Authority) définit les numéros de port des services courants (pour plus d’informations, consultez www.iana.org/assignments/port-numbers). Les autres services peuvent avoir un numéro de port compris dans la plage 1 024 à 65 535. Le code suivant combine l’adresse IP du serveur host.contoso.com avec un numéro de port pour créer un point de terminaison distant pour une connexion.  
+ L’IANA (Internet Assigned Numbers Authority) définit les numéros de port des services courants. Pour plus d’informations, consultez [Service Name and Transport Protocol Port Number Registry](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml). Les autres services peuvent avoir un numéro de port compris dans la plage 1 024 à 65 535. Le code suivant combine l’adresse IP du serveur host.contoso.com avec un numéro de port pour créer un point de terminaison distant pour une connexion.  
   
 ```vb  
 Dim ipe As New IPEndPoint(ipAddress, 11000)  

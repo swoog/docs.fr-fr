@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: a614cfe3d3437426893d8748165b2ef4d6389765
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 487a303e5cf572cf4173423588ee7fb5a93cb394
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231243"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185617"
 ---
 # <a name="development-process-for-azure"></a>Processus de développement pour Azure
 

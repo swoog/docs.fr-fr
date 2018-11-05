@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615311"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123577"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Règles relatives à l'inférence de types simples
 Décrit comment la classe <xref:System.Xml.Schema.XmlSchemaInference> déduit le type de données pour les attributs et les éléments.  
@@ -65,8 +65,9 @@ Décrit comment la classe <xref:System.Xml.Schema.XmlSchemaInference> déduit le
   
  Lorsque la première valeur `attr2` est rencontrée, le type de `attr2` est déduit comme `unsignedByte` sur la base de la valeur `0`. Lorsque la seconde valeur `attr2` est rencontrée, le type est promu au rang de `string` sur la base du type actuellement déduit de `unsignedByte` et de la valeur actuelle `true` parce que la classe <xref:System.Xml.Schema.XmlSchemaInference> prend en considération les valeurs précédents lors de la promotion du type déduit. Toutefois, si les deux instances de `attr2` avaient été rencontrées dans le même document XML et pas dans deux documents XML différents, comme illustré ci-avant, `attr2` aurait été déduit comme `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Attributs ignorés dans l’espace de noms http://www.w3.org/2001/XMLSchema-instance  
- Vous trouverez ci-après les attributs de définition du schéma qui sont ignorés durant l'inférence de schéma.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Attributs ignorés dans l’espace de noms <https://www.w3.org/2001/XMLSchema-instance>
+
+Vous trouverez ci-après les attributs de définition du schéma qui sont ignorés durant l'inférence de schéma.  
   
 |Attribut|Description|  
 |---------------|-----------------|  

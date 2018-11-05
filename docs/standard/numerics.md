@@ -1,6 +1,6 @@
 ---
-title: Valeurs numériques dans le .NET Framework
-ms.date: 03/30/2017
+title: Valeurs numériques dans .NET
+ms.date: 10/18/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - SIMD
@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44209483"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191147"
 ---
-# <a name="numerics-in-the-net-framework"></a>Valeurs numériques dans le .NET Framework
-Le .NET Framework prend en charge les primitives numériques standard pour les intégraux et les nombres à virgule flottante, ainsi que <xref:System.Numerics.BigInteger>, un type intégral sans limite théorique supérieure ou inférieure, <xref:System.Numerics.Complex>, un type qui représente des nombres complexes et un ensemble de types de vecteurs compatibles SIMD dans l’espace de noms <xref:System.Numerics>.  
+# <a name="numerics-in-net"></a>Valeurs numériques dans .NET
+
+.NET fournit une plage de primitives numériques pour les intégraux et les nombres à virgule flottante, ainsi que <xref:System.Numerics.BigInteger?displayProperty=nameWithType>, un type intégral sans limite théorique supérieure ou inférieure, <xref:System.Numerics.Complex?displayProperty=nameWithType>, qui représente des nombres complexes et un ensemble de types compatibles SIMD dans l’espace de noms <xref:System.Numerics>.
   
- De plus, System.Numerics.Vectors, la bibliothèque de types de vecteurs compatibles SIMD a été publiée sous forme de package NuGet.  
-  
-## <a name="integral-types"></a>Types intégraux  
- Le .NET Framework prend en charge les entiers signés et non signés, d'une longueur de un à huit octets. Le tableau suivant répertorie les types intégraux et leur taille, indique s'ils sont signés ou non signés, et spécifie leur plage de valeurs. Tous les entiers sont des types valeur.  
+## <a name="integer-types"></a>Types d'entier
+
+.NET prend en charge à la fois les types d’entier signés et non signés 8, 16, 32 et 64 bits, répertoriés dans le tableau suivant :
   
 |Type|Signé/Non signé|Taille (en octets)|Valeur minimale|Valeur maximale|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
@@ -39,44 +39,63 @@ Le .NET Framework prend en charge les primitives numériques standard pour les i
 |<xref:System.UInt32?displayProperty=nameWithType>|Non signé|4|0|4,294,967,295|  
 |<xref:System.UInt64?displayProperty=nameWithType>|Non signé|8|0|18 446 744 073 709 551 615|  
   
- Chaque type intégral prend en charge un ensemble standard d'opérateurs arithmétiques, de comparaison, d'égalité, de conversion explicite et de conversion implicite. Chaque entier comprend également des méthodes pour effectuer des comparaisons d'égalité et des comparaisons relatives, pour convertir la représentation sous forme de chaîne d'un nombre en cet entier et pour convertir un entier en sa représentation sous forme de chaîne. Certaines autres opérations mathématiques en dehors de celles qui sont gérées par les opérateurs standard, comme l'arrondi et l'identification de la valeur plus grande ou plus petite de deux entiers, sont disponibles à partir de la classe <xref:System.Math>. Vous pouvez également travailler avec les bits individuels d'une valeur d'entier en utilisant la classe <xref:System.BitConverter>.  
+Chaque type d’entier prend en charge un ensemble d’opérateurs arithmétiques standard. La classe <xref:System.Math?displayProperty=nameWithType> fournit des méthodes pour un ensemble plus large de fonctions mathématiques.
+
+Vous pouvez également travailler avec les bits individuels d'une valeur d'entier en utilisant la classe <xref:System.BitConverter?displayProperty=nameWithType>.  
+
+> [!NOTE]  
+> Les types d’entier non signés ne sont pas conformes à CLS. Pour plus d'informations, consultez [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md).
+
+## <a name="biginteger"></a>BigInteger
+
+La structure <xref:System.Numerics.BigInteger?displayProperty=nameWithType> est un type immuable qui représente un entier arbitrairement grand dont la valeur en théorie n'a pas de limite supérieure ou inférieure. Les méthodes du type <xref:System.Numerics.BigInteger> sont très proches de celles des autres types intégraux.
   
- Notez que les types intégraux non signés ne sont pas conformes à CLS. Pour plus d’informations, consultez [Indépendance du langage et composants indépendants du langage](../../docs/standard/language-independence-and-language-independent-components.md).  
+## <a name="floating-point-types"></a>Types virgule flottante
+
+.NET comprend trois types à virgule flottante primitifs, qui sont répertoriés dans le tableau suivant :
   
-## <a name="floating-point-types"></a>Types virgule flottante  
- Le .NET Framework comprend trois types à virgule flottante primitifs, qui sont répertoriés dans le tableau suivant.  
+|Type|Taille (en octets)|Plage approximative|Précision|  
+|----------|--------|---------------------|--------------------|  
+|<xref:System.Single?displayProperty=nameWithType>|4|±1,5 x 10<sup>−45</sup> à ±3,4 x 10<sup>38</sup>|~6-9 chiffres|  
+|<xref:System.Double?displayProperty=nameWithType>|8|De ±5,0 × 10<sup>−324</sup> à ±1,7 × 10<sup>308</sup>|~15-17 chiffres|  
+|<xref:System.Decimal?displayProperty=nameWithType>|16|±1,0 x 10<sup>-28</sup> to ±7,9228 x 10<sup>28</sup>|28 à 29 chiffres|  
   
-|Type|Taille (en octets)|Minimum|Maximum|  
-|----------|-----------------------|-------------|-------------|  
-|<xref:System.Double?displayProperty=nameWithType>|8|-1,79769313486232e308|1,79769313486232e308|  
-|<xref:System.Single?displayProperty=nameWithType>|4|-3,402823e38|3,402823e38|  
-|<xref:System.Decimal?displayProperty=nameWithType>|16|-79 228 162 514 264 337 593 543 950 335|79 228 162 514 264 337 593 543 950 335|  
+Les deux types <xref:System.Single> et <xref:System.Double> prennent en charge des valeurs spéciales qui représentent une valeur NaN (N’est pas un nombre) et l’infini. Par exemple, le type <xref:System.Double> fournit les valeurs suivantes : <xref:System.Double.NaN?displayProperty=nameWithType>, <xref:System.Double.NegativeInfinity?displayProperty=nameWithType> et <xref:System.Double.PositiveInfinity?displayProperty=nameWithType>. Vous utilisez les méthodes <xref:System.Double.IsNaN%2A?displayProperty=nameWithType>, <xref:System.Double.IsInfinity%2A?displayProperty=nameWithType>, <xref:System.Double.IsPositiveInfinity%2A?displayProperty=nameWithType> et <xref:System.Double.IsNegativeInfinity%2A?displayProperty=nameWithType> pour tester ces valeurs spéciales.
+
+Chaque type à virgule flottante prend en charge un ensemble d’opérateurs arithmétiques standard. La classe <xref:System.Math?displayProperty=nameWithType> fournit des méthodes pour un ensemble plus large de fonctions mathématiques. .NET Core 2.0 et versions ultérieures inclut la classe <xref:System.MathF?displayProperty=nameWithType>, qui fournit des méthodes acceptant des arguments du type <xref:System.Single>.
+
+Vous pouvez également travailler avec les bits individuels de valeurs <xref:System.Double> et <xref:System.Single> en utilisant la classe <xref:System.BitConverter?displayProperty=nameWithType>. La structure <xref:System.Decimal?displayProperty=nameWithType> a ses propres méthodes, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> et <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType> pour travailler avec les bits individuel d'une valeur décimale, ainsi que son propre ensemble de méthodes pour effectuer d'autres opérations mathématiques.
   
- Chaque type virgule flottante prend en charge un ensemble standard d'opérateurs arithmétiques, de comparaison, d'égalité, de conversion explicite et de conversion implicite. Chacun comprend également des méthodes pour effectuer des comparaisons d'égalité et des comparaisons relatives, pour convertir la représentation sous forme de chaîne d'un nombre en virgule flottante et pour convertir un en nombre en virgule flottante en sa représentation sous forme de chaîne. Certaines autres opérations mathématiques, algébriques et trigonométriques sont disponibles à partir de la classe <xref:System.Math>. Vous pouvez également travailler avec les bits individuels de valeurs <xref:System.Double> et <xref:System.Single> en utilisant la classe <xref:System.BitConverter>. La structure <xref:System.Decimal?displayProperty=nameWithType> a ses propres méthodes, <xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> et <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType> pour travailler avec les bits individuel d'une valeur décimale, ainsi que son propre ensemble de méthodes pour effectuer d'autres opérations mathématiques.  
+Les types <xref:System.Double> et <xref:System.Single> sont destinés à être utilisé pour des valeurs par nature imprécises (par exemple, la distance entre deux étoiles) et les applications dans lesquelles un haut degré de précision et une erreur d'arrondi réduite ne sont pas des impératifs. Vous devez utiliser le type <xref:System.Decimal?displayProperty=nameWithType> pour les cas dans lesquels une plus grande précision est requise et où les erreurs d'arrondi doivent être minimisées.
+
+> [!NOTE]
+> Le type <xref:System.Decimal> n’élimine pas la nécessité d’arrondi. Au lieu de cela, il réduit les erreurs dues à l’arrondi.
   
- Les types <xref:System.Double> et <xref:System.Single> sont destinés à être utilisé pour des valeurs par nature imprécises (par exemple la distance entre deux étoiles dans le système solaire) et les applications dans lesquelles un haut degré de précision et une erreur d'arrondi réduite ne sont pas des impératifs. Vous devez utiliser le type <xref:System.Decimal?displayProperty=nameWithType> pour les cas dans lesquels une plus grande précision est requise et où les erreurs d'arrondi ne sont pas souhaitables.  
+## <a name="complex"></a>Complex
+
+La structure <xref:System.Numerics.Complex?displayProperty=nameWithType> représente un nombre complexe, c'est-à-dire un nombre avec une partie réelle et une partie imaginaire. Elle prend en charge un ensemble standard d'opérateurs arithmétiques, de comparaison, d'égalité, de conversion explicite et implicite, ainsi que des méthodes mathématiques, algébriques et trigonométriques.  
   
-## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=nameWithType> est un type immuable qui représente un entier arbitrairement grand dont la valeur en théorie n'a pas de limite supérieure ou inférieure. Les méthodes du type <xref:System.Numerics.BigInteger> sont très proches de celles des autres types intégraux.  
+## <a name="simd-enabled-types"></a>Types SIMD
+
+L’espace de noms <xref:System.Numerics> comprend un ensemble de types compatibles SIMD pour .NET. Les opérations SIMD (Single Instruction Multiple Data) peuvent être parallélisées au niveau du matériel. Cela augmente le débit des calculs vectorisés, couramment utilisés dans les applications mathématiques, scientifiques et graphiques.
   
-## <a name="complex"></a>Complex  
- Le type <xref:System.Numerics.Complex> représente un nombre complexe, c'est-à-dire un nombre avec une partie réelle et une partie imaginaire. Il prend en charge un ensemble standard d'opérateurs arithmétiques, de comparaison, d'égalité, de conversion explicite et de conversion implicite, ainsi que des méthodes mathématiques, algébriques et trigonométriques.  
+Les types .NET compatibles SIMD sont les suivants :
+
+- Les types <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> et <xref:System.Numerics.Vector4>, qui représentent des vecteurs à 2, 3 et 4 valeurs <xref:System.Single>.
+
+- Deux types de matrices, <xref:System.Numerics.Matrix3x2>, qui représente une matrice 3 x 2, et <xref:System.Numerics.Matrix4x4>, qui représente une matrice 4 x 4.
+
+- Le type <xref:System.Numerics.Plane>, qui représente un plan dans un espace à trois dimensions.
+
+- Le type <xref:System.Numerics.Quaternion>, qui représente un vecteur utilisé pour encoder des rotations physiques en trois dimensions.
+
+- Le type <xref:System.Numerics.Vector%601>, qui représente un vecteur d’un type numérique spécifié et fournit un large éventail d’opérateurs bénéficiant d’un support SIMD. Le nombre d’une instance <xref:System.Numerics.Vector%601> est fixe, mais sa valeur <xref:System.Numerics.Vector%601.Count%2A?displayProperty=nameWithType> dépend de l’UC de l’ordinateur sur lequel le code est exécuté.
+  > [!NOTE]
+  > Le type <xref:System.Numerics.Vector%601> n’est pas inclus dans .NET Framework. Vous devez installer le package NuGet [System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) pour accéder à ce type.
   
-## <a name="simd-enabled-vector-types"></a>Types de vecteurs compatibles SIMD  
- L’espace de noms <xref:System.Numerics> comprend un ensemble de types de vecteurs compatibles SIMD pour le .NET Framework. SIMD (opérations Single Instruction Multiple Data) permet à certaines opérations d’être parallélisées au niveau du matériel, ce qui se traduit par une nette amélioration des performances des applications mathématiques, scientifiques et graphiques qui effectuent des calculs sur les vecteurs.  
-  
- Les types de vecteurs compatibles SIMD rencontrés dans le .NET Framework sont les suivants :  De plus, System.Numerics.Vectors inclut un type Plane et un type Quaternion.  
-  
--   Les types <xref:System.Numerics.Vector2>, <xref:System.Numerics.Vector3> et <xref:System.Numerics.Vector4>, qui correspondent à des vecteurs à 2, 3 et 4 dimensions de type <xref:System.Single>.  
-  
--   Deux types de matrices, <xref:System.Numerics.Matrix3x2>, qui représente une matrice 3 x 2, et <xref:System.Numerics.Matrix4x4>, qui représente une matrice 4 x 4.  
-  
--   Les types <xref:System.Numerics.Plane> et <xref:System.Numerics.Quaternion>.  
-  
- Les types de vecteurs compatibles SIMD sont implémentés en langage intermédiaire, ce qui permet de les utiliser sur un matériel non compatible SIMD et sur les compilateurs JIT. Pour tirer parti des instructions SIMD, vos applications 64 bits doivent être compilées par le nouveau compilateur JIT 64 bits pour le code managé, qui est intégré au.NET Framework 4.6 ; il ajoute la prise en charge SIMD quand les processeurs x64 sont ciblés.  
-  
- SIMD peut aussi être téléchargé sous forme de [NuGet package](https://www.nuget.org/packages/System.Numerics.Vectors).  Le package NuGet inclut aussi une structure <xref:System.Numerics.Vector%601> générique, qui permet de créer un vecteur de n’importe quel type numérique primitif. (Les types numériques primitifs incluent tous les types numériques de l'espace de noms <xref:System> à l'exception de <xref:System.Decimal>.) De plus, la structure <xref:System.Numerics.Vector%601> fournit une bibliothèque de méthodes pratiques que vous pouvez appeler quand vous utilisez des vecteurs.  
-  
+Les types compatibles SIMD sont implémentés de telle sorte qu’ils peuvent être utilisés avec du matériel non compatible SIMD ou des compilateurs JIT. Pour tirer parti des instructions SIMD, vos applications 64 bits doivent être exécutées par le runtime qui utilise le compilateur RyuJIT, inclus dans .NET Core et dans .NET Framework 4.6 et versions ultérieures. Il ajoute la prise en charge SIMD lors du ciblage de processeurs 64 bits.
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Application Essentials](../../docs/standard/application-essentials.md)
+- [Application Essentials](application-essentials.md)
+- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)

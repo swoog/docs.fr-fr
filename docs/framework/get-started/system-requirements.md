@@ -2,7 +2,7 @@
 title: Configuration requise pour le .NET Framework
 description: Découvrez la configuration requise en termes de matériel, de système d’exploitation et de logiciels pour installer .NET Framework 4.5 et versions ultérieures.
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 10/01/2018
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509176"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203941"
 ---
 # <a name="net-framework-system-requirements"></a>Configuration requise pour le .NET Framework
 
@@ -26,6 +26,8 @@ Les tableaux de cette rubrique indiquent la configuration matérielle et logicie
 * .NET Framework 4.5 et ses versions intermédiaires (4.5.1 et 4.5.2).
 * .NET Framework 4.6 et ses versions intermédiaires (4.6.1 et 4.6.2).
 * .NET Framework 4.7 et ses versions intermédiaires (4.7.1 et 4.7.2).
+
+Pour plus d’informations sur les versions .NET Framework antérieures à .NET Framework 4.5, consultez [Versions et dépendances de .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Les environnements de développement qui vous permettent de développer des applications pour le .NET Framework ont des exigences différentes.
 
@@ -53,6 +55,7 @@ L’installation du .NET Framework nécessite des privilèges d’administrateur
 
 | Système d'exploitation | Éditions prises en charge | Préinstallé avec le système d'exploitation | Installable séparément |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Windows 10 avec la mise à jour d’octobre 2018 | 32 bits et 64 bits | .NET Framework 4.7.2 |--|
 | Mise à jour d’avril 2018 de Windows 10 | 32 bits et 64 bits | .NET Framework 4.7.2 |--|
 | Windows 10 Fall Creators Update | 32 bits et 64 bits | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
 | Windows 10 Creators Update | 32 bits et 64 bits | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
@@ -105,6 +108,6 @@ L’installation du .NET Framework nécessite des privilèges d’administrateur
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide d’installation](../../../docs/framework/install/index.md)   
-[Bien démarrer](../../../docs/framework/get-started/index.md)   
-[Résolution des problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Guide d’installation](../../../docs/framework/install/index.md)   
+- [Prise en main](../../../docs/framework/get-started/index.md)   
+- [Résolution des problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

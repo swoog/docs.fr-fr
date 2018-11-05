@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 91dbbefd247b5e175da7dc3560b6323cbec1972b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595555"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50186068"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -49,6 +49,8 @@ D’une façon générale, nous vous recommandons de cibler la version *la moins
 
 1. Ciblez la version moins élevée suivante de .NET Standard et générez votre projet.
 2. Si votre projet est généré correctement, répétez l’étape 1. Dans le cas contraire, reciblez-le sur la version plus élevée suivante : c’est cette version que vous devez utiliser.
+
+Le ciblage de versions inférieures de .NET Standard génère cependant un certain nombre de dépendances de support. Si votre projet cible .NET Standard 1.x, nous vous recommandons de cibler *également* .NET Standard 2.0. Ceci simplifie le graphique de dépendance pour les utilisateurs de votre bibliothèque qui exécutent des infrastructures compatibles .NET Standard 2.0 et réduit le nombre de packages qu’ils doivent télécharger.
 
 ### <a name="net-standard-versioning-rules"></a>Règles de contrôle de version de .NET standard
 

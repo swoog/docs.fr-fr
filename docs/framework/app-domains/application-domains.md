@@ -14,28 +14,21 @@ helpviewer_keywords:
 ms.assetid: 113a8bbf-6875-4a72-a49d-ca2d92e19cc8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddf8f52ab98d0188235d8c9f97293adced4bfe90
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2e1db5447be5f46873b6648fc6791426b2886a75
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698313"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192614"
 ---
 # <a name="application-domains"></a>Domaines d'application
+
 Les systèmes d'exploitation et les environnements d'exécution assurent généralement une certaine forme d'isolation entre les applications. Par exemple, Windows utilise des processus pour isoler des applications. Cette isolation est nécessaire pour que le code en cours d'exécution dans une application ne puisse pas affecter de manière négative d'autres applications non liées.  
   
  Les domaines d'application fournissent une limite d'isolation pour la sécurité, la fiabilité, le suivi des versions et le déchargement des assemblys. Les domaines d'application sont généralement créés par des hôtes de runtime qui sont chargés d'initialiser le Common Language Runtime avant l'exécution d'une application.  
   
- Les rubriques de cette section de la documentation expliquent comment utiliser des domaines d'application pour assurer l'isolation entre les assemblys.  
-  
- Cette vue d'ensemble contient les sections suivantes :  
-  
--   [Avantages de l’isolation des applications](#benefits)  
-  
--   [Référence](#reference)  
-  
-<a name="benefits"></a>   
-## <a name="the-benefits-of-isolating-applications"></a>Avantages de l'isolation des applications  
+## <a name="the-benefits-of-isolating-applications"></a>Avantages de l'isolation des applications
+
  Du point de vue historique, les limites de processus ont permis d'isoler les applications en cours d'exécution sur le même ordinateur. Chaque application est chargée dans un processus distinct, ce qui isole l'application des autres applications en cours d'exécution sur le même ordinateur.  
   
  Les applications sont isolées, car les adresses mémoire sont liées au processus ; un pointeur mémoire passé d'un processus à un autre ne peut pas être utilisé d'une manière significative dans le processus cible. De plus, vous ne pouvez pas établir d'appels directs entre deux processus. Vous devez à la place utiliser des proxys qui génèrent un niveau d'adressage indirect.  
@@ -61,9 +54,9 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
 -   Les autorisations accordées au code peuvent être contrôlées par le domaine d'application dans lequel le code s'exécute.  
   
-  
-## <a name="application-domains-and-assemblies"></a>Domaines d'application et assemblys  
- Cette rubrique décrit la relation entre les domaines d'application et les assemblys. Vous devez charger un assembly dans un domaine d'application avant de pouvoir exécuter le code qu'il contient. L'exécution d'une application standard entraîne le chargement de plusieurs assemblys dans un domaine d'application.  
+## <a name="application-domains-and-assemblies"></a>Domaines d’application et assemblys
+
+ Cette section décrit la relation entre les domaines d'application et les assemblys. Vous devez charger un assembly dans un domaine d'application avant de pouvoir exécuter le code qu'il contient. L'exécution d'une application standard entraîne le chargement de plusieurs assemblys dans un domaine d'application.  
   
  La façon dont un assembly est chargé détermine si son code compilé juste-à-temps (JIT) peut être partagé par plusieurs domaines d'application dans le processus, et si l'assembly peut être déchargé du processus.  
   
@@ -95,21 +88,24 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
 -   Toutes les dépendances d'un assembly doivent être localisées et chargées lorsque l'assembly est chargé comme indépendant du domaine, car une dépendance qui ne peut pas être chargée comme indépendante du domaine empêche le chargement de l'assembly comme indépendant du domaine.  
   
-## <a name="application-domains-and-threads"></a>Domaines d'application et threads  
+## <a name="application-domains-and-threads"></a>Domaines d'application et threads
+
  Un domaine d'application forme une limite d'isolation pour la sécurité, le suivi des versions, la fiabilité et le déchargement de code managé. Un thread constitue la construction du système d'exploitation utilisée par le Common Language Runtime pour exécuter le code. Au moment de l'exécution, l'ensemble du code managé est chargé dans un domaine d'application et exécuté par un ou plusieurs threads managés.  
   
  Il n'existe pas de corrélation un-à-un entre les domaines d'application et les threads. Plusieurs threads peuvent s'exécuter dans un seul domaine d'application à tout moment donné et un thread particulier n'est pas limité à un seul domaine d'application. En d'autres termes, les threads sont libres de franchir les limites de domaine d'application et un nouveau n'est pas créé pour chaque domaine d'application.  
   
- À tout moment donné, chaque thread s'exécute dans un domaine d'application. Aucun, un ou plusieurs threads peuvent s'exécuter dans n'importe quel domaine d'application donné. Le runtime assure le suivi des threads s'exécutant dans les domaines d'application. Vous pouvez rechercher le domaine dans lequel un thread s'exécute à tout moment en appelant la méthode <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.  
-  
-### <a name="application-domains-and-cultures"></a>Domaines d'application et cultures  
+ À tout moment donné, chaque thread s'exécute dans un domaine d'application. Aucun, un ou plusieurs threads peuvent s'exécuter dans n'importe quel domaine d'application donné. Le runtime assure le suivi des threads s'exécutant dans les domaines d'application. Vous pouvez rechercher le domaine dans lequel un thread s'exécute à tout moment en appelant la méthode <xref:System.Threading.Thread.GetDomain%2A?displayProperty=nameWithType>.
+
+### <a name="application-domains-and-cultures"></a>Domaines d'application et cultures
+
  La culture, représentée par un objet <xref:System.Globalization.CultureInfo>, est associée aux threads. Vous pouvez obtenir la culture associée au thread en cours d'exécution à l'aide de la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> et vous pouvez obtenir ou définir la culture associée au thread en cours d'exécution à l'aide de la propriété <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>. Si la culture associée à un thread a été définie explicitement à l'aide de la propriété <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType>, elle continue d'être associée à ce thread lorsque le thread traverse les limites du domaine d'application. Sinon, la culture associée au thread à un moment donné est déterminée par la valeur de la propriété <xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> dans le domaine d'application dans lequel le thread s'exécute :  
   
 -   Si la valeur de la propriété n'est pas `null`, la culture retournée par la propriété est associée au thread (et, par conséquent, retournée par les propriétés <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> et <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>).  
   
 -   Si la valeur de la propriété est `null`, la culture système en cours est associée au thread.  
   
-## <a name="programming-with-application-domains"></a>Programmation avec des domaines d'application  
+## <a name="programming-with-application-domains"></a>Programmation avec des domaines d’application
+
  Les domaines d'application sont généralement créés et manipulés par programme par des hôtes de runtime. Toutefois, un programme d'application peut parfois souhaiter travailler également avec des domaines d'application. Par exemple, un programme d'application pourrait charger un composant d'application dans un domaine pour pouvoir décharger le domaine (et le composant) sans devoir arrêter l'application entière.  
   
  La classe <xref:System.AppDomain> est l’interface de programmation des domaines d’application. Cette classe inclut des méthodes permettant de créer et de décharger des domaines, de créer des instances de types dans des domaines et de s'inscrire pour différentes notifications telles que le déchargement du domaine d'application. Le tableau suivant répertorie les méthodes <xref:System.AppDomain> fréquemment utilisées.  
@@ -126,7 +122,8 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
   
  Les interfaces non managées décrites dans la spécification sur les interfaces d'hébergement du Common Language Runtime permettent également d'accéder aux domaines d'application. Les hôtes de runtime peuvent utiliser des interfaces à partir d'un code non managé pour créer des domaines d'application dans un processus et y accéder.  
   
-## <a name="complusloaderoptimization-environment-variable"></a>COMPLUS_LoaderOptimization, variable d'environnement  
+## <a name="the-complusloaderoptimization-environment-variable"></a>La variable d'environnement COMPLUS_LoaderOptimization
+
  Variable d'environnement qui définit la stratégie d'optimisation de chargeur par défaut d'une application exécutable.  
   
 ### <a name="syntax"></a>Syntaxe  
@@ -135,7 +132,8 @@ Les systèmes d'exploitation et les environnements d'exécution assurent génér
 COMPLUS_LoaderOptimization = 1  
 ```  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Notes
+
  Une application typique charge plusieurs assemblys dans un domaine d'application avant que le code qu'ils contiennent ne puisse être exécuté.  
   
  La façon dont l'assembly est chargé détermine si son code compilé juste-à-temps (JIT) peut être partagé par plusieurs domaines d'application dans le processus.  
@@ -149,7 +147,8 @@ COMPLUS_LoaderOptimization = 1
 > [!CAUTION]
 >  L'indicateur d'environnement COMPLUS_LoaderOptimization a été conçu pour être utilisé dans les scénarios de diagnostic et de test. L'activation de l'indicateur peut provoquer un net ralentissement et accroître l'utilisation de la mémoire.  
   
-### <a name="code-example"></a>Exemple de code  
+### <a name="code-example"></a>Exemple de code
+
  Pour forcer tous les assemblys à ne pas se charger comme indépendants du domaine pour le service IISADMIN, ajoutez `COMPLUS_LoaderOptimization=1` à la chaîne de valeur multiple de l'environnement dans la clé HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\IISADMIN.  
   
 ```  
@@ -159,6 +158,9 @@ Type = REG_MULTI_SZ
 Value (to append) = COMPLUS_LoaderOptimization=1  
 ```  
   
-<a name="reference"></a>   
-## <a name="reference"></a>Référence  
- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+## <a name="see-also"></a>Voir aussi
+
+- <xref:System.AppDomain?displayProperty=nameWithType>
+- <xref:System.MarshalByRefObject?displayProperty=nameWithType>
+- [Programmation à l'aide de domaines d'application et d'assemblys](index.md)
+- [Utilisation des domaines d’application](use.md)

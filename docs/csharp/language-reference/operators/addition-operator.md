@@ -1,6 +1,6 @@
 ---
 title: + , opérateur (Informations de référence sur C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232382"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192295"
 ---
 # <a name="-operator-c-reference"></a>+, opérateur (référence C#)
-L’opérateur `+` peut être utilisé comme opérateur unaire ou opérateur binaire.  
-  
-## <a name="remarks"></a>Notes  
- Les opérateurs `+` sont prédéfinis pour tous les types numériques. Le résultat d’une opération `+` unaire sur un type numérique correspond simplement à la valeur de l’opérande.  
-  
- Les opérateurs `+` binaires sont prédéfinis pour les types numériques et chaîne. Pour les types numériques, + calcule la somme des deux opérandes. Quand les deux opérandes ou l’un d’entre eux sont de type chaîne, + concatène les représentations sous forme de chaîne des opérandes.  
-  
- Les types délégués fournissent aussi un opérateur `+` binaire, qui effectue la concaténation de délégués.  
-  
- Les types définis par l’utilisateur peuvent surcharger les opérateurs `+` unaires et `+` binaires. Les opérations sur les types intégraux sont en général autorisées sur l’énumération. Pour plus d’informations, consultez [operator (référence C#)](../../../csharp/language-reference/keywords/operator.md).  
-  
-## <a name="example"></a>Exemple  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+L’opérateur `+` est pris en charge sous deux formes : un opérateur plus unaire plus ou un opérateur d’addition binaire.
+
+Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) les opérateurs unaires et binaires `+`. Quand un opérateur binaire `+` est surchargé, l’[opérateur d’assignation d’addition](addition-assignment-operator.md) `+=` est aussi implicitement surchargé.
+
+## <a name="unary-plus-operator"></a>Opérateur plus unaire
+
+L’opérateur unaire `+` retourne la valeur de son opérande. Il est pris en charge par tous les types numériques.
+
+## <a name="numeric-addition"></a>Addition numérique
+
+Pour les types numériques, l’opérateur `+` calcule la somme de ses opérandes :
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a>Concaténation de chaînes
+
+Quand les deux opérandes ou l’un d’entre eux sont de [type chaîne](../keywords/string.md), l’opérateur `+` concatène les représentations sous forme de chaîne de ses opérandes :
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+À partir de C# 6, l’[interpolation de chaîne](../tokens/interpolated.md) fournit un moyen plus pratique de mettre en format les chaînes :
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a>Combinaison de délégués
+
+Pour les types [délégué](../keywords/delegate.md), l’opérateur `+` retourne une nouvelle instance de délégué qui, lorsqu’elle est appelée, appelle le premier opérande puis appelle le second opérande. Si un des opérandes est `null`, l’opérateur `+` retourne la valeur de l’autre opérande (qui peut également être `null`). L’exemple suivant montre comment les délégués peuvent être combinés avec l’opérateur `+` :
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+Pour plus d'informations sur les types de délégués, consultez [Délégués](../../programming-guide/delegates/index.md).
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, consultez les sections [Opérateur unaire plus](~/_csharplang/spec/expressions.md#unary-plus-operator) et [Opérateur d’addition](~/_csharplang/spec/expressions.md#addition-operator) de la [spécification du langage C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)  
-- [operator (référence C#)](../../../csharp/language-reference/keywords/operator.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Opérateurs C#](index.md)
+- [Interpolation de chaîne](../tokens/interpolated.md)
+- [Comment : concaténer plusieurs chaînes](../../how-to/concatenate-multiple-strings.md)
+- [Délégués](../../programming-guide/delegates/index.md)
+- [Checked et unchecked](../keywords/checked-and-unchecked.md)

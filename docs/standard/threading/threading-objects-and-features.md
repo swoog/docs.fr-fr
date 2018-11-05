@@ -1,6 +1,6 @@
 ---
 title: Fonctionnalités et objets de threading
-ms.date: 08/16/2018
+ms.date: 10/01/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], features
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d56d962279120a03a6e4b89154ac1429ea5479e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1ba47ece16c74555b58780733e14de9833718c33
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039327"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873305"
 ---
 # <a name="threading-objects-and-features"></a>Fonctionnalités et objets de threading
 
@@ -22,16 +22,16 @@ En plus de la classe <xref:System.Threading.Thread?displayProperty=nameWithType>
 |Titre|Description|  
 |-----------|-----------------|  
 |[Pool de threads managés](the-managed-thread-pool.md)|Décrit la classe <xref:System.Threading.ThreadPool?displayProperty=nameWithType>, qui fournit un pool de threads de travail managés par .NET.|  
-|[Minuteries](timers.md)|Décrit les minuteurs qui peuvent être utilisés dans un environnement multithread.|
-|[Vue d’ensemble des primitives de synchronisation](overview-of-synchronization-primitives.md)|Décrit les classes qui peuvent être utilisées pour synchroniser l’accès aux données ou contrôler les interactions de threads.|
+|[Minuteries](timers.md)|Décrit les minuteurs .NET qui peuvent être utilisés dans un environnement multithread.|
+|[Vue d’ensemble des primitives de synchronisation](overview-of-synchronization-primitives.md)|Décrit les types qui peuvent être utilisés pour synchroniser l’accès à une ressource partagée ou contrôler les interactions de threads.|
 |[EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)|Décrit les handles d’attente d’événements managés qui sont utilisés pour synchroniser les activités de thread en signalant et en attendant des signaux.|
-|[Mutex](mutexes.md)|Décrit comment utiliser un <xref:System.Threading.Mutex?displayProperty=nameWithType> pour synchroniser l’accès à un objet ou créer vos propres mécanismes de synchronisation.|
+|[Mutex](mutexes.md)|Décrit <xref:System.Threading.Mutex?displayProperty=nameWithType>, qui accorde un accès exclusif à une ressource partagée.|
 |[Opérations verrouillées](interlocked-operations.md)|Décrit la classe <xref:System.Threading.Interlocked?displayProperty=nameWithType>, qui fournit des opérations atomiques pour les variables partagées par plusieurs threads.|
-|[Verrous de lecteur-writer](reader-writer-locks.md)|Décrit la classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, qui fournit une sémantique writer unique/lecteurs multiples.|
-|[Semaphore et SemaphoreSlim](semaphore-and-semaphoreslim.md)|Décrit la classe <xref:System.Threading.Semaphore?displayProperty=nameWithType> et explique comment l’utiliser pour contrôler l’accès aux ressources limitées.|
+|[Verrous de lecteur-writer](reader-writer-locks.md)|Décrit la classe <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType>, qui fournit un accès writer unique/lecteurs multiples à une ressource partagée.|
+|[Semaphore et SemaphoreSlim](semaphore-and-semaphoreslim.md)|Décrit la classe <xref:System.Threading.Semaphore?displayProperty=nameWithType>, qui limite le nombre de threads qui peuvent accéder simultanément à une ressource partagée ou à un pool de ressources.|
 |[Barrier](barrier.md)|Décrit la classe <xref:System.Threading.Barrier?displayProperty=nameWithType> qui implémentent le modèle de cloisonnement pour la coordination des threads dans les opérations planifiées.|
-|[SpinLock](spinlock.md)|Décrit la classe <xref:System.Threading.SpinLock?displayProperty=nameWithType>, une alternative légère à la classe <xref:System.Threading.Monitor?displayProperty=nameWithType> pour certains scénarios de bas niveau.|
-|[SpinWait](spinwait.md)|Décrit la classe <xref:System.Threading.SpinWait?displayProperty=nameWithType>, une primitive de synchronisation de bas niveau qui exécute une attente active avant d’initialiser une attente basée sur le noyau.|
+|[SpinLock](spinlock.md)|Décrit la structure <xref:System.Threading.SpinLock?displayProperty=nameWithType>, une alternative légère à la classe <xref:System.Threading.Monitor?displayProperty=nameWithType> pour certains scénarios de verrouillage de bas niveau.|
+|[SpinWait](spinwait.md)|Décrit la structure <xref:System.Threading.SpinWait?displayProperty=nameWithType>, qui fournit la prise en charge pour l’attente basée sur les spins.|
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -41,6 +41,6 @@ En plus de la classe <xref:System.Threading.Thread?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - [Utilisation des threads et du threading](using-threads-and-threading.md)
-- [E/S sur fichier asynchrones](../io/asynchronous-file-i-o.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
 - [Programmation parallèle](../parallel-programming/index.md)
 - [La bibliothèque parallèle de tâches](../parallel-programming/task-parallel-library-tpl.md)

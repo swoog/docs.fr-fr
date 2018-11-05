@@ -5,12 +5,12 @@ author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 11fad691021ec897348177c67134750e72b4ff7c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ffcf56ba171192048a736b58ddcfa591fd3af58
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698482"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840269"
 ---
 # <a name="net-glossary"></a>Glossaire .NET
 
@@ -46,13 +46,13 @@ Un assembly peut inclure des types comme des interfaces, des classes, des struct
 
 Common Language Runtime.
 
-La signification exacte dépend du contexte, mais ce terme fait généralement référence au runtime de .NET Framework. Le CLR gère l’allocation et la gestion de la mémoire. Le CLR est également une machine virtuelle qui non seulement exécute des applications, mais aussi génère et compile du code à la volée à l’aide d’un compilateur JIT. L’implémentation CLR Microsoft actuelle est Windows uniquement.
+La signification exacte dépend du contexte, mais ce terme fait généralement référence au runtime de .NET Framework. Le CLR gère l’allocation et la gestion de la mémoire. Le CLR est également une machine virtuelle qui non seulement exécute des applications, mais aussi génère et compile du code à la volée à l’aide d’un compilateur [JIT](#jit). L’implémentation CLR Microsoft actuelle est Windows uniquement.
 
 ## <a name="coreclr"></a>CoreCLR
 
 .NET Core Common Language Runtime.
 
-Ce CLR repose sur la même base de code que le CLR. À l’origine, CoreCLR était le runtime de Silverlight et était conçu pour s’exécuter sur plusieurs plateformes, notamment Windows et OS X. CoreCLR fait désormais partie de .NET Core et représente une version simplifiée du CLR. C’est toujours un runtime multiplateforme, qui prend désormais en charge de nombreuses distributions Linux. CoreCLR est également une machine virtuelle avec des capacités JIT et d’exécution de code.
+Ce CLR repose sur la même base de code que le CLR. À l’origine, CoreCLR était le runtime de Silverlight et était conçu pour s’exécuter sur plusieurs plateformes, notamment Windows et OS X. CoreCLR fait désormais partie de .NET Core et représente une version simplifiée du CLR. C’est toujours un runtime [multiplateforme](#cross-platform), qui prend désormais en charge de nombreuses distributions Linux. CoreCLR est également une machine virtuelle avec des capacités JIT et d’exécution de code.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -67,6 +67,10 @@ Runtime .NET Core.
 Contrairement à CLR/CoreCLR, CoreRT n’est pas une machine virtuelle, ce qui signifie qu’il n’inclut pas les fonctionnalités de génération et d’exécution de code à la volée en raison de l’absence d’un compilateur [JIT](#jit). Toutefois, il inclut le [GC](#gc) et les fonctionnalités RTTI (identification du type au moment de l’exécution) et de réflexion. Toutefois, son système de type est conçu pour que les métadonnées de réflexion ne soient pas nécessaires. Cela permet d’avoir une chaîne d’outils [AOT](#aot) qui peut écarter les métadonnées superflues et (surtout) identifier le code que l’application n’utilise pas. CoreRT est en cours de développement.
 
 Consultez [Présentation de .NET Native et CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md).
+
+## <a name="cross-platform"></a>interplateformes
+
+La possibilité de développer et d’exécuter une application pouvant être utilisée sur plusieurs systèmes d’exploitation, tels que Linux, Windows et iOS, sans avoir à réécrire spécifiquement pour chacun d’eux. Cela permet de réutiliser le code et garantit la cohérence entre les applications sur différentes plateformes.
 
 ## <a name="ecosystem"></a>écosystème
 
@@ -136,7 +140,7 @@ Consultez [Packages, métapackages et frameworks](../core/packages.md).
 
 ## <a name="mono"></a>Mono
 
-Mono est une implémentation de .NET qui est principalement utilisée quand un runtime réduit est requis. Ce runtime, qui alimente les applications Xamarin sur Android, Mac, iOS, tvOS et watchOS, est avant tout axé sur les applications qui requièrent un faible encombrement.
+Mono est une implémentation de .NET open source [multiplateforme](#cross-platform) qui est principalement utilisée quand un runtime réduit est requis. Ce runtime, qui alimente les applications Xamarin sur Android, Mac, iOS, tvOS et watchOS, est avant tout axé sur les applications qui requièrent un faible encombrement.
 
 Il prend en charge toutes les versions de .NET Standard publiées.
 

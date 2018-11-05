@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502364"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195682"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guide de déploiement du .NET Framework pour les administrateurs
 Cet article explique étape par étape comment un administrateur système peut déployer [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et ses dépendances système dans un réseau à l'aide de Microsoft System Center Configuration Manager (SCCM). Cet article suppose que tous les ordinateurs clients cibles ont la configuration minimale requise pour le .NET Framework. Pour obtenir la liste des configurations logicielle et matérielle requises pour installer le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consultez [Configuration système requise](../../../docs/framework/get-started/system-requirements.md).  
@@ -37,16 +37,16 @@ Cet article explique étape par étape comment un administrateur système peut d
 ## <a name="the-deployment-process"></a>Processus de déploiement  
  Lorsque l'infrastructure de prise en charge est en place, utilisez System Center 2012 Configuration Manager pour déployer le package redistribuable .Net Framework sur les ordinateurs du réseau. Générer l’infrastructure implique la création et la définition de cinq éléments principaux : les regroupements, un package et un programme pour les logiciels, des points de distribution et des déploiements.  
   
--   Les **regroupements** sont des ensembles de ressources de Configuration Manager, tels que des utilisateurs, des groupes d’utilisateurs ou des ordinateurs, sur lesquels le .Net Framework est déployé. Pour plus d’informations, consultez [Regroupements dans Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) dans la bibliothèque de documentation Configuration Manager.  
+-   Les **regroupements** sont des ensembles de ressources de Configuration Manager, tels que des utilisateurs, des groupes d’utilisateurs ou des ordinateurs, sur lesquels le .Net Framework est déployé. Pour plus d’informations, consultez [Présentation de regroupements dans System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) dans la bibliothèque de la documentation Configuration Manager.  
   
--   Les **packages et programmes** sont généralement les applications logicielles à installer sur un ordinateur client, mais ils peuvent également contenir des fichiers individuels, des mises à jour, ou même des commandes individuelles. Pour plus d’informations, consultez [Packages et programmes dans Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) dans la bibliothèque de documentation Configuration Manager.  
+-   Les **packages et programmes** sont généralement les applications logicielles à installer sur un ordinateur client, mais ils peuvent également contenir des fichiers individuels, des mises à jour, ou même des commandes individuelles. Pour plus d’informations, consultez [Packages et programmes dans System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) dans la bibliothèque de la documentation Configuration Manager.  
   
--   Les **points de distribution** sont des rôles de système de site Configuration Manager qui stockent les fichiers requis pour l’exécution des logiciels sur les ordinateurs clients. Lorsque le client Configuration Manager reçoit et traite un déploiement de logiciel, il contacte un point de distribution pour télécharger le contenu associé au logiciel et démarrer le processus d'installation. Pour plus d’informations, consultez [Présentation de la gestion de contenu dans Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) dans la bibliothèque de documentation Configuration Manager.  
+-   Les **points de distribution** sont des rôles de système de site Configuration Manager qui stockent les fichiers requis pour l’exécution des logiciels sur les ordinateurs clients. Lorsque le client Configuration Manager reçoit et traite un déploiement de logiciel, il contacte un point de distribution pour télécharger le contenu associé au logiciel et démarrer le processus d'installation. Pour plus d’informations, consultez [Concepts fondamentaux de la gestion de contenu dans Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) dans la bibliothèque de la documentation Configuration Manager.  
   
--   Les **déploiements** font en sorte que les membres applicables du regroupement cible spécifié installent le package logiciel. Pour plus d’informations, consultez [Comment déployer des applications dans Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) dans la bibliothèque de documentation Configuration Manager.  
+-   Les **déploiements** font en sorte que les membres applicables du regroupement cible spécifié installent le package logiciel. 
   
 > [!IMPORTANT]
->  Les procédures de cette rubrique contiennent les paramètres classiques pour créer et déployer un package et un programme, et ne couvrent pas tous les paramètres possibles. Pour d’autres options de déploiement de Configuration Manager, consultez la [Bibliothèque de documentation Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
+>  Les procédures de cette rubrique contiennent les paramètres classiques pour créer et déployer un package et un programme, et ne couvrent pas tous les paramètres possibles. Pour d’autres options de déploiement de Configuration Manager, consultez la [Bibliothèque de documentation Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Déployer le .NET Framework  
@@ -62,7 +62,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Créer un regroupement  
- Dans cette étape, sélectionnez les ordinateurs sur lesquels seront déployés le package et le programme, et regroupez-les dans un regroupement de périphériques. Pour créer un regroupement dans Configuration Manager, utilisez des règles d’adhésion directes (où les membres du regroupement sont spécifiés manuellement) ou des règles de requête (où Configuration Manager détermine les membres du regroupement selon des critères que vous avez spécifiés). Pour plus d’informations sur les règles d’adhésion, notamment les règles directes et de requête, consultez [Introduction aux regroupements dans Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) dans la bibliothèque de documentation Configuration Manager.  
+ Dans cette étape, sélectionnez les ordinateurs sur lesquels seront déployés le package et le programme, et regroupez-les dans un regroupement de périphériques. Pour créer un regroupement dans Configuration Manager, utilisez des règles d’adhésion directes (où les membres du regroupement sont spécifiés manuellement) ou des règles de requête (où Configuration Manager détermine les membres du regroupement selon des critères que vous avez spécifiés). Pour plus d’informations sur les règles d’adhésion, notamment les règles directes et de requête, consultez [Présentation des regroupements dans System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) dans la bibliothèque de la documentation Configuration Manager.  
   
  Pour créer un regroupement  
   
@@ -83,8 +83,6 @@ Cet article explique étape par étape comment un administrateur système peut d
 8.  Dans la page **Sélectionner les ressources**, cochez la case de chaque ordinateur sur lequel vous souhaitez déployer le .Net Framework. Choisissez **Suivant**, puis terminez l’Assistant.  
   
 9. Dans la page **Règles d’adhésion** de l’**Assistant Création d’un regroupement de périphériques**, choisissez **Suivant**, puis terminez l’Assistant.  
-  
- Pour plus d’informations sur les regroupements, consultez [Regroupements dans Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) dans la bibliothèque de documentation Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Créer un package et un programme pour le package redistribuable .Net Framework  
@@ -154,7 +152,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 8.  Effectuez toutes les étapes de l'Assistant.  
   
- Le package contient désormais toutes les informations nécessaires au déploiement sans assistance de .Net Framework 4.5. Avant de déployer le package et le programme, vérifiez qu’il a été installé sur le point de distribution ; consultez la section « Surveiller le contenu » de la page [Opérations et maintenance de la gestion de contenu dans Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) dans la bibliothèque de la documentation Configuration Manager.  
+ Le package contient désormais toutes les informations nécessaires au déploiement sans assistance de .Net Framework 4.5. Avant de déployer le package et le programme, vérifiez qu’il a été installé sur le point de distribution ; consultez la section « Surveiller le contenu » de la page [Surveiller le contenu distribué avec System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) dans la bibliothèque de la documentation Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Déployer le package  
@@ -193,27 +191,27 @@ Cet article explique étape par étape comment un administrateur système peut d
   
  **Active Directory, DNS, DHCP :**  
   
--   [Services de domaine Active Directory pour Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Services de domaine Active Directory](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Serveur DNS](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [DNS (Domain Name System)](/windows-server/networking/dns/dns-top)  
   
--   [Serveur DHCP](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [DHCP (Dynamic Host Configuration Protocol)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008 :**  
   
--   [Installation de SQL Server 2008 (Vidéo liée à SQL Server)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [Installation de SQL Server 2008 (Vidéo liée à SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [Présentation de la sécurité SQL Server 2008 pour les administrateurs de base de données](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (point de gestion, point de distribution) :**  
   
--   [Administration de site pour System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [Administration de site pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Planification et déploiement d’un site Configuration Manager unique](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Client System Center 2012 Configuration Manager pour des ordinateurs Windows :**  
   
--   [Déploiement de clients pour System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [Déploiement de clients pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Résolution des problèmes  
@@ -248,18 +246,18 @@ Cet article explique étape par étape comment un administrateur système peut d
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Codes d'erreur de téléchargement  
   
--   [Codes d’erreur du service de transfert intelligent en arrière-plan (BITS)](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Codes d’erreur du service de transfert intelligent en arrière-plan (BITS)](/windows/desktop/Bits/bits-return-values)  
   
--   [Codes d’erreur du moniker d’URL](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Codes d’erreur du moniker d’URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [Codes d’erreur WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Autres codes d'erreur :  
   
--   [Codes d’erreur Windows Installer](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Codes d’erreur Windows Installer](/windows/desktop/msi/error-codes)  
   
--   [Codes de résultat de l’agent de mise à jour automatique Windows Update](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Codes de résultat de l’agent de mise à jour automatique Windows Update](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Configuration système requise](../../../docs/framework/get-started/system-requirements.md)
+- [Guide de déploiement pour les développeurs](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Configuration système requise](../../../docs/framework/get-started/system-requirements.md)

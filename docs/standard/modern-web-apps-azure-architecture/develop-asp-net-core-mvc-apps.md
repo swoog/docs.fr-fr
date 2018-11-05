@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 2fd3eb1e123959130884b96ee9d2e59b83c41b0a
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404643"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308589"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
@@ -279,11 +279,11 @@ Pour découvrir plus en détail les filtres d’implémentation et télécharger
 
 > ### <a name="references--structuring-applications"></a>Références – Structuration des applications
 >
-> - **Zones (areas)**  
+> - **Les zones (areas)**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – Feature Slices for ASP.NET Core MVC**  
  > <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **Filtres**  
+> - **Les filtres**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – Real World ASP.NET Core MVC Filters**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>

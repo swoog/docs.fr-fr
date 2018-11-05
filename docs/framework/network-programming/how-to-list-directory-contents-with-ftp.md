@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 130c64c9-7b7f-4672-9b3b-d946bd2616c5
-ms.openlocfilehash: 26a02cdacfb73b9fa75976ee67c2ef09784cfc71
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 924e6731ce585f127af319fdbfbdc8c12e61c46d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028212"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197312"
 ---
 # <a name="how-to-list-directory-contents-with-ftp"></a>Guide pratique pour répertorier le contenu d’un répertoire avec FTP
 
@@ -79,4 +79,14 @@ Namespace Examples.System.Net
         End Sub
     End Module
 End Namespace
+```
+
+Si vous avez besoin d’afficher un répertoire spécifique, ajoutez simplement le répertoire à la fin de l’URI que vous utilisez dans la méthode <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> :
+
+```csharp
+FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/your_preferred_directory");
+```
+
+```vb
+Dim request As FtpWebRequest = CType(WebRequest.Create("ftp://www.contoso.com/your_preferred_directory"), FtpWebRequest)
 ```

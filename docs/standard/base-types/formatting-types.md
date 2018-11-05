@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502213"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189717"
 ---
 # <a name="formatting-types-in-net"></a>Mettre en forme des types dans .NET
 <a name="Introduction"></a> La mise en forme est le processus de conversion d'une instance d'une classe, d'une structure ou d'une valeur d'énumération en représentation sous forme de chaîne, généralement pour exposer la chaîne obtenue aux utilisateurs ou pour qu'elle soit désérialisée afin de restaurer le type de données d'origine. Cette conversion peut présenter plusieurs difficultés :  
@@ -114,15 +114,15 @@ ms.locfileid: "43502213"
   
 <a name="DefaultToString"></a>   
 ## <a name="default-formatting-using-the-tostring-method"></a>Mise en forme par défaut à l'aide de la méthode ToString  
- Chaque type qui est dérivé d'<xref:System.Object?displayProperty=nameWithType> hérite automatiquement d'une méthode `ToString` sans paramètre, laquelle retourne le nom du type par défaut. L'exemple suivant illustre la méthode `ToString` par défaut. Il définit une classe nommée `Automobile` qui n'a pas d'implémentation. Lorsque cette classe est instanciée et que sa méthode `ToString` est appelée, elle affiche son nom de type. Notez que la méthode `ToString` n'est pas appelée explicitement dans cet exemple. La méthode <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> appelle implicitement la méthode `ToString` de l'objet qui lui est passé comme argument.  
+ Chaque type qui est dérivé d' <xref:System.Object?displayProperty=nameWithType> hérite automatiquement d'une méthode `ToString` sans paramètre, laquelle retourne le nom du type par défaut. L'exemple suivant illustre la méthode `ToString` par défaut. Il définit une classe nommée `Automobile` qui n'a pas d'implémentation. Lorsque cette classe est instanciée et que sa méthode `ToString` est appelée, elle affiche son nom de type. Notez que la méthode `ToString` n'est pas appelée explicitement dans cet exemple. La méthode <xref:System.Console.WriteLine%28System.Object%29?displayProperty=nameWithType> appelle implicitement la méthode `ToString` de l'objet qui lui est passé comme argument.  
   
  [!code-csharp[Conceptual.Formatting.Overview#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/default1.cs#1)]
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  À partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclut une interface [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) avec une méthode unique ([IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx)) qui fournit la prise en charge par défaut de la mise en forme. Toutefois, nous recommandons que les types managés n'implémentent pas l'interface `IStringable` . Pour plus d'informations, consultez la section « [!INCLUDE[wrt](../../../includes/wrt-md.md)] et interface `IStringable` » à la page de référence de <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+>  À partir de [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] inclut une interface <xref:Windows.Foundation.IStringable> avec une méthode unique ([IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A)) qui fournit la prise en charge par défaut de la mise en forme. Toutefois, nous recommandons que les types managés n'implémentent pas l'interface `IStringable` . Pour plus d'informations, consultez la section « [!INCLUDE[wrt](../../../includes/wrt-md.md)] et interface `IStringable` » à la page de référence de <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
   
- Étant donné que tous les types autres que les interfaces sont dérivés de <xref:System.Object>, ces fonctionnalités sont fournies automatiquement à vos classes ou structures personnalisées. Toutefois, les fonctionnalités offertes par la méthode `ToString` par défaut sont limitées : Bien qu'elle identifie le type, elle ne fournit aucune information relative à une instance du type. Pour fournir une représentation sous forme de chaîne d'un objet qui donne des informations sur cet objet, vous devez substituer la méthode `ToString` .  
+ Étant donné que tous les types autres que les interfaces sont dérivés de <xref:System.Object>, ces fonctionnalités sont fournies automatiquement à vos classes ou structures personnalisées. Toutefois, les fonctionnalités offertes par la méthode `ToString` par défaut sont limitées : Bien qu'elle identifie le type, elle ne fournit aucune information relative à une instance du type. Pour fournir une représentation sous forme de chaîne d'un objet qui donne des informations sur cet objet, vous devez substituer la méthode `ToString`.  
   
 > [!NOTE]
 >  Les structures héritent de <xref:System.ValueType>, qui, à son tour, est dérivé d' <xref:System.Object>. Bien que <xref:System.ValueType> substitue <xref:System.Object.ToString%2A?displayProperty=nameWithType>, son implémentation est identique.  
@@ -207,7 +207,7 @@ ms.locfileid: "43502213"
   
  Pour plus d’informations sur les chaînes de format numériques standard, consultez [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Les chaînes de format standard pour les valeurs de date et d'heure sont des alias de chaînes de format personnalisées stockées par une propriété <xref:System.Globalization.DateTimeFormatInfo> particulière. Par exemple, appeler la méthode `ToString` d'une valeur de date et d'heure avec le spécificateur de format "D" affiche la date et l'heure en utilisant la chaîne de format personnalisée stockée dans la propriété <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> de la culture actuelle. (Pour plus d'informations sur les chaînes de format personnalisées, consultez la [section suivante](#customStrings).) L'exemple suivant illustre cette relation.  
+ Les chaînes de format standard pour les valeurs de date et d'heure sont des alias de chaînes de format personnalisées stockées par une propriété <xref:System.Globalization.DateTimeFormatInfo> particulière. Par exemple, appeler la méthode `ToString` d'une valeur de date et d'heure avec le spécificateur de format "D" affiche la date et l'heure en utilisant la chaîne de format personnalisée stockée dans la propriété <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> de la culture actuelle. (Pour plus d'informations sur les chaînes de format personnalisées, consultez la [section suivante](#customStrings).) L'exemple suivant illustre cette relation.  
   
  [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
  [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]  
@@ -276,7 +276,7 @@ ms.locfileid: "43502213"
   
  <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> est une méthode de rappel. Lorsque vous appelez une surcharge de méthode `ToString` qui inclut un paramètre <xref:System.IFormatProvider> , elle appelle la méthode <xref:System.IFormatProvider.GetFormat%2A> de cet objet <xref:System.IFormatProvider> . La méthode <xref:System.IFormatProvider.GetFormat%2A> est chargée de retourner les informations de mise en forme requises, spécifiées par son paramètre `formatType` , à la méthode `ToString` .  
   
- Certaines méthodes de mise en forme ou de conversion de chaînes incluent un paramètre de type <xref:System.IFormatProvider>, mais la valeur de ce paramètre est souvent ignorée lorsque la méthode est appelée. Le tableau suivant répertorie certaines des méthodes de mise en forme qui utilisent le paramètre et le type de l'objet <xref:System.Type> qu'elles passent à la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>.  
+ Certaines méthodes de mise en forme ou de conversion de chaînes incluent un paramètre de type <xref:System.IFormatProvider>, mais la valeur de ce paramètre est souvent ignorée lorsque la méthode est appelée. Le tableau suivant répertorie certaines des méthodes de mise en forme qui utilisent le paramètre et le type de l'objet <xref:System.Type> qu'elles passent à la méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> .  
   
 |Méthode|Type de paramètre `formatType`|  
 |------------|------------------------------------|  
@@ -286,7 +286,7 @@ ms.locfileid: "43502213"
 |<xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>|<xref:System.ICustomFormatter?displayProperty=nameWithType>|  
   
 > [!NOTE]
->  Les méthodes `ToString` des types numériques et des types de date et d'heure sont surchargées, et seules certaines des surcharges incluent un paramètre <xref:System.IFormatProvider> . Si une méthode n'a pas de paramètre de type <xref:System.IFormatProvider>, l'objet retourné par la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> est passé à la place. Par exemple, un appel à la méthode <xref:System.Int32.ToString?displayProperty=nameWithType> par défaut a, pour résultat, un appel de méthode semblable au suivant : `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.  
+>  Les méthodes `ToString` des types numériques et des types de date et d'heure sont surchargées, et seules certaines des surcharges incluent un paramètre <xref:System.IFormatProvider> . Si une méthode n'a pas de paramètre de type <xref:System.IFormatProvider>, l'objet retourné par la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> est passé à la place. Par exemple, un appel à la méthode <xref:System.Int32.ToString?displayProperty=nameWithType> par défaut a, pour résultat, un appel de méthode semblable au suivant : `Int32.ToString("G", System.Globalization.CultureInfo.CurrentCulture)`.  
   
  .NET propose trois classes qui implémentent <xref:System.IFormatProvider> :  
   
@@ -307,7 +307,7 @@ ms.locfileid: "43502213"
  [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
  [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]  
   
- Vous pouvez également mettre en forme une valeur numérique pour une culture spécifique en appelant une surcharge `ToString` dotée d'un paramètre `provider` et en lui passant l'un ou l'autre des éléments suivants :  
+ Vous pouvez également mettre en forme une valeur numérique pour une culture spécifique en appelant une surcharge `ToString` dotée d'un paramètre `provider` et en lui passant l'un ou l'autre des éléments suivants :  
   
 -   Un objet <xref:System.Globalization.CultureInfo> représentant la culture dont les conventions de mise en forme doivent être utilisées. Sa méthode <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retourne la valeur de la propriété <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType>, qui est l'objet <xref:System.Globalization.NumberFormatInfo> qui fournit des informations de mise en forme propres à la culture pour les valeurs numériques.  
   
@@ -320,14 +320,14 @@ ms.locfileid: "43502213"
   
 <a name="dateCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Mise en forme dépendante de la culture des valeurs de date et d'heure  
- Par défaut, la mise en forme des valeurs de date et d'heure est dépendante de la culture. Si vous ne spécifiez pas de culture lorsque vous appelez une méthode de mise en forme, les conventions de mise en forme de la culture actuelle du thread sont utilisées. Ceci est illustré dans l'exemple ci-dessous où la culture actuelle du thread est changée quatre fois avant que la méthode <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> soit appelée. Dans chaque cas, la chaîne obtenue reflète les conventions de mise en forme de la culture actuelle. Ceci tient au fait que les méthodes <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> et <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> encapsulent les appels aux méthodes <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> et <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.  
+ Par défaut, la mise en forme des valeurs de date et d'heure est dépendante de la culture. Si vous ne spécifiez pas de culture lorsque vous appelez une méthode de mise en forme, les conventions de mise en forme de la culture actuelle du thread sont utilisées. Ceci est illustré dans l'exemple ci-dessous où la culture actuelle du thread est changée quatre fois avant que la méthode <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> soit appelée. Dans chaque cas, la chaîne obtenue reflète les conventions de mise en forme de la culture actuelle. Ceci tient au fait que les méthodes <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>et <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> encapsulent les appels aux méthodes <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> et <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
  [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
   
  Vous pouvez également mettre en forme une valeur de date et d'heure pour une culture spécifique en appelant une surcharge <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> ou <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType> dotée d'un paramètre `provider` et en lui passant l'un ou l'autre des éléments suivants :  
   
--   Un objet <xref:System.Globalization.CultureInfo> représentant la culture dont les conventions de mise en forme doivent être utilisées. Sa méthode <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retourne la valeur de la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>, qui est l'objet <xref:System.Globalization.DateTimeFormatInfo> qui fournit des informations de mise en forme propres à la culture pour les valeurs de date et d'heure.  
+-   Un objet <xref:System.Globalization.CultureInfo> représentant la culture dont les conventions de mise en forme doivent être utilisées. Sa méthode <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> retourne la valeur de la propriété <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> , qui est l'objet <xref:System.Globalization.DateTimeFormatInfo> qui fournit des informations de mise en forme propres à la culture pour les valeurs de date et d'heure.  
   
 -   Un objet <xref:System.Globalization.DateTimeFormatInfo> définissant les conventions de mise en forme propres à la culture qui doivent être utilisées. Sa méthode <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> retourne une instance d'elle-même.  
   
@@ -344,7 +344,7 @@ ms.locfileid: "43502213"
   
 -   Prise en charge de la conversion de chaînes par la classe <xref:System.Convert> . Les appels aux méthodes <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> et <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> appellent automatiquement votre implémentation d'<xref:System.IFormattable>.  
   
--   Prise en charge de la mise en forme composite. Si un élément de mise en forme qui inclut une chaîne de format est utilisé pour mettre en forme votre type personnalisé, le Common Language Runtime appelle automatiquement votre implémentation d' <xref:System.IFormattable> et lui passe la chaîne de format. Pour plus d’informations sur la mise en forme composite avec des méthodes telles que <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, consultez la section [Mise en forme composite](#CompositeFormatting).  
+-   Prise en charge de la mise en forme composite. Si un élément de mise en forme qui inclut une chaîne de format est utilisé pour mettre en forme votre type personnalisé, le Common Language Runtime appelle automatiquement votre implémentation d' <xref:System.IFormattable> et lui passe la chaîne de format. Pour plus d'informations sur la mise en forme composite avec des méthodes telles que <xref:System.String.Format%2A?displayProperty=nameWithType> ou <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, consultez la section [Mise en forme composite](#CompositeFormatting) .  
   
  L'exemple suivant définit une classe `Temperature` qui implémente l'interface <xref:System.IFormattable> . Il prend en charge les spécificateurs de format "C" ou "G" pour afficher la température en Celsius, le spécificateur de format "F" pour afficher la température en Fahrenheit et le spécificateur de format "K" pour afficher la température en Kelvin.  
   
@@ -391,7 +391,7 @@ ms.locfileid: "43502213"
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- L'exemple suivant utilise la classe `ByteByByteFormatter` pour mettre en forme des valeurs entières. Notez que la méthode <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> est appelée plusieurs fois dans le deuxième appel de méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, et que le fournisseur <xref:System.Globalization.NumberFormatInfo> par défaut est utilisé dans le troisième appel de méthode, car la méthode .`ByteByByteFormatter.Format` ne reconnaît pas la chaîne de format "N0" et retourne une référence null (`Nothing` en Visual Basic).  
+ L'exemple suivant utilise la classe `ByteByByteFormatter` pour mettre en forme des valeurs entières. Notez que la méthode <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> est appelée plusieurs fois dans le deuxième appel de méthode <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> , et que le fournisseur <xref:System.Globalization.NumberFormatInfo> par défaut est utilisé dans le troisième appel de méthode, car la méthode .`ByteByByteFormatter.Format` ne reconnaît pas la chaîne de format "N0" et retourne une référence null (`Nothing` en Visual Basic).  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

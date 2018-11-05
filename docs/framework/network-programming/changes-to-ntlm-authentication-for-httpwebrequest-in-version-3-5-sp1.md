@@ -2,14 +2,12 @@
 title: Changements apportés à l’authentification NTLM pour HttpWebRequest dans la version 3.5 SP1
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b679c137d31c1212e1e6c82fd41f89b9de7a18d4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d20707bbecb7521408d2ea1a3d6a6e3d6e892504
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231154"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202866"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>Changements apportés à l’authentification NTLM pour HttpWebRequest dans la version 3.5 SP1
 Des changements de sécurité apportés au .NET Framework version 3.5 SP1 et ultérieures affectent la manière dont l’intégration de l’authentification Windows est gérée par <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Security.NegotiateStream> et les classes associées dans l’espace de noms System.Net. Ces changements peuvent affecter les applications qui utilisent ces classes pour effectuer des requêtes web et recevoir des réponses dans lesquelles l’authentification Windows intégrée en fonction de NTLM est utilisée. Ce changement peut avoir un impact sur les serveurs web et les applications clientes configurés pour utiliser l’authentification Windows intégrée.  
@@ -22,9 +20,9 @@ Des changements de sécurité apportés au .NET Framework version 3.5 SP1 et ul
 ## <a name="changes"></a>Modifications  
  Le processus d’authentification NTLM utilisé avec l’authentification Windows intégrée inclut une stimulation émise par l’ordinateur de destination et renvoyée à l’ordinateur client. Quand un ordinateur reçoit une stimulation qu’il a lui-même généré, l’authentification échoue, sauf si la connexion est une connexion de retour de boucle (adresse IPv4 127.0.0.1, par exemple).  
   
- Quand vous accédez à un service en cours d’exécution sur un serveur web interne, il est courant d’accéder au service à l’aide d’une URL semblable à http://contoso/service ou https://contoso/service. Le nom « contoso » est rarement le nom de l’ordinateur sur lequel le service est déployé. <xref:System.Net> et les espaces de noms associés prennent en charge l’utilisation d’Active Directory, de DNS, de NetBIOS, du fichier hosts de l’ordinateur local (généralement WINDOWS\system32\drivers\etc\hosts) ou du fichier lmhosts de l’ordinateur local (généralement WINDOWS\system32\drivers\etc\lmhosts) pour résoudre les noms en adresses. Le nom « contoso » est résolu pour que les demandes envoyées à « contoso » soient envoyées à l’ordinateur serveur approprié.  
+ Quand vous accédez à un service en cours d’exécution sur un serveur web interne, il est courant d’accéder au service à l’aide d’une URL semblable à `http://contoso/service` ou `https://contoso/service`. Le nom « contoso » est rarement le nom de l’ordinateur sur lequel le service est déployé. <xref:System.Net> et les espaces de noms associés prennent en charge l’utilisation d’Active Directory, de DNS, de NetBIOS, du fichier hosts de l’ordinateur local (généralement WINDOWS\system32\drivers\etc\hosts) ou du fichier lmhosts de l’ordinateur local (généralement WINDOWS\system32\drivers\etc\lmhosts) pour résoudre les noms en adresses. Le nom « contoso » est résolu pour que les demandes envoyées à « contoso » soient envoyées à l’ordinateur serveur approprié.  
   
- En cas de configuration pour des déploiements à grande échelle, il est également courant d’attribuer un nom de serveur virtuel unique au déploiement, sans que les noms d’ordinateurs sous-jacents ne soient jamais utilisés par les applications clientes et les utilisateurs finaux. Par exemple, vous pourriez appeler le serveur www.contoso.com, mais utiliser simplement « contoso » sur un réseau interne. Ce nom porte le nom d’en-tête d’hôte dans la requête web du client. Comme spécifié par le protocole HTTP, le champ d’en-tête de requête d’hôte spécifie le numéro de port et l’hôte Internet de la ressource demandée. Ces informations sont obtenues à partir de l’URI d’origine donné par l’utilisateur ou la ressource de référence (généralement une URL HTTP). Dans le .NET Framework version 4, ces informations peuvent aussi être définies par le client à l’aide de la nouvelle propriété <xref:System.Net.HttpWebRequest.Host%2A>.  
+ En cas de configuration pour des déploiements à grande échelle, il est également courant d’attribuer un nom de serveur virtuel unique au déploiement, sans que les noms d’ordinateurs sous-jacents ne soient jamais utilisés par les applications clientes et les utilisateurs finaux. Par exemple, vous pourriez appeler le serveur `www.contoso.com`, mais utiliser simplement « contoso » sur un réseau interne. Ce nom porte le nom d’en-tête d’hôte dans la requête web du client. Comme spécifié par le protocole HTTP, le champ d’en-tête de requête d’hôte spécifie le numéro de port et l’hôte Internet de la ressource demandée. Ces informations sont obtenues à partir de l’URI d’origine donné par l’utilisateur ou la ressource de référence (généralement une URL HTTP). Dans le .NET Framework version 4, ces informations peuvent aussi être définies par le client à l’aide de la nouvelle propriété <xref:System.Net.HttpWebRequest.Host%2A>.  
   
  La classe <xref:System.Net.AuthenticationManager> contrôle les composants d’authentification gérés (« modules ») qui sont utilisés par les classes dérivés <xref:System.Net.WebRequest> et la classe <xref:System.Net.WebClient>. La classe <xref:System.Net.AuthenticationManager> fournit une propriété qui expose un objet <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>, indexé par chaîne d’URI, pour que les applications puissent fournir une chaîne de nom de principal du service personnalisée à utiliser lors de l’authentification.  
   
@@ -50,7 +48,7 @@ Des changements de sécurité apportés au .NET Framework version 3.5 SP1 et ul
   
  7. Quittez l’Éditeur du Registre, puis redémarrez le service IISAdmin et exécutez IISReset.  
   
- Une solution de contournement moins sécurisée consiste à désactiver le contrôle de retour de boucle, comme décrit dans [http://support.microsoft.com/kb/896861](https://go.microsoft.com/fwlink/?LinkID=179657). Cette opération désactive la protection contre les attaques par réflexion. Il est donc préférable de limiter l’ensemble des autres noms aux seuls noms qui seront utilisés par l’ordinateur.  
+ Une solution de contournement moins sécurisée consiste à désactiver le contrôle de retour de boucle, comme décrit dans <https://support.microsoft.com/kb/896861>. Cette opération désactive la protection contre les attaques par réflexion. Il est donc préférable de limiter l’ensemble des autres noms aux seuls noms qui seront utilisés par l’ordinateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>  

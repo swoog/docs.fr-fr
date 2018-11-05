@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5049ed1b44155f3c21c53bef24a13006fe97a3fa
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44188538"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452584"
 ---
 # <a name="threads-and-threading"></a>Threads et threading
 Les systèmes d’exploitation utilisent des processus pour séparer les différentes applications qu’ils exécutent. Les threads sont l’unité de base à laquelle un système d’exploitation alloue du temps processeur, et plusieurs threads peuvent exécuter du code au sein de ce processus. Chaque thread maintient des gestionnaires d’exceptions, une priorité de planification et un ensemble de structures utilisé par le système pour enregistrer le contexte du thread jusqu'à sa planification. Le contexte du thread comprend toutes les informations dont le thread a besoin pour reprendre l’exécution sans interruption, notamment son ensemble de registres d’UC et de pile, dans l’espace d’adressage de son processus hôte.  
@@ -26,7 +26,7 @@ Les systèmes d’exploitation utilisent des processus pour séparer les différ
  La longueur de chaque tranche de temps dépend du système d’exploitation et du processeur. Dans la mesure où elle est petite, plusieurs threads semblent s’exécuter en même temps, même s’il n’y a qu’un processeur. C’est le cas sur les systèmes multiprocesseurs, où les threads exécutables sont distribués entre les processeurs disponibles.  
   
 ## <a name="when-to-use-multiple-threads"></a>Quand utiliser plusieurs threads  
- Les logiciels qui nécessitent l’intervention de l’utilisateur doivent réagir aussi vite que possible aux activités de l’utilisateur pour offrir une expérience utilisateur riche. Il doit cependant effectuer en même temps les calculs nécessaires pour présenter les données à l’utilisateur aussi rapidement que possible. Si votre application utilise un seul thread d’exécution, vous pouvez combiner la [programmation asynchrone](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) avec la [communication à distance .NET Framework](https://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) ou des [services web XML](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) créés à l’aide d’ASP.NET pour utiliser le temps de traitement d’autres ordinateurs en plus des vôtres afin d’augmenter la réactivité vis-à-vis de l’utilisateur et de réduire le temps de traitement des données de votre application. Si vous effectuez des opérations riches en entrées/sorties, vous pouvez également utiliser des ports d’achèvement d’E/S pour accroître la rapidité de réaction de votre application.  
+ Les logiciels qui nécessitent l’intervention de l’utilisateur doivent réagir aussi vite que possible aux activités de l’utilisateur pour offrir une expérience utilisateur riche. Il doit cependant effectuer en même temps les calculs nécessaires pour présenter les données à l’utilisateur aussi rapidement que possible. Si votre application utilise un seul thread d’exécution, vous pouvez combiner la [programmation asynchrone](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) avec la [communication à distance .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100)) ou des [services web XML](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100)) créés à l’aide d’ASP.NET pour utiliser le temps de traitement d’autres ordinateurs en plus des vôtres afin d’augmenter la réactivité vis-à-vis de l’utilisateur et de réduire le temps de traitement des données de votre application. Si vous effectuez des opérations riches en entrées/sorties, vous pouvez également utiliser des ports d’achèvement d’E/S pour accroître la rapidité de réaction de votre application.  
   
 ### <a name="advantages-of-multiple-threads"></a>Avantages des threads multiples  
  L’utilisation de plusieurs threads, toutefois, est la technique la plus puissante qui soit pour augmenter la réactivité vis-à-vis de l’utilisateur et traiter les données nécessaires pour effectuer le travail presque en même temps. Sur un ordinateur doté d’un seul processeur, plusieurs threads peuvent créer cet effet, en tirant parti des courts laps de temps entre les événements utilisateur pour traiter les données en arrière-plan. Par exemple, un utilisateur peut modifier une feuille de calcul tandis qu’un autre thread recalcule d’autres parties de cette feuille de calcul au sein de la même application.  

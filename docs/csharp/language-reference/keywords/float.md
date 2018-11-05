@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: da697aa6f1f429418a69d9f58a13f46a3da9ac74
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157702"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187177"
 ---
 # <a name="float-c-reference"></a>float (référence C#)
 
@@ -21,7 +21,7 @@ Le mot clé `float` désigne un type simple qui stocke des valeurs à virgule fl
 
 |Type|Plage approximative|Précision|Type .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|±1,5 x 10<sup>−45</sup> à ±3,4 x 10<sup>38</sup>|7 chiffres|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|±1,5 x 10<sup>−45</sup> à ±3,4 x 10<sup>38</sup>|~6-9 chiffres|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Littéraux
 
@@ -51,7 +51,7 @@ Une expression à virgule flottante peut contenir les ensembles de valeurs suiva
 
 - L’ensemble fini de valeurs différentes de zéro
 
-Pour plus d’informations sur ces valeurs, consultez IEEE Standard for Binary Floating-Point Arithmetic, disponible sur le site web de [l’IEEE](http://www.ieee.org).
+Pour plus d’informations sur ces valeurs, consultez IEEE Standard for Binary Floating-Point Arithmetic, disponible sur le site web de [l’IEEE](https://www.ieee.org).
 
 ## <a name="example"></a>Exemple
 
