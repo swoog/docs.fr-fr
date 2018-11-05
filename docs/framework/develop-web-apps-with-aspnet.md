@@ -1,26 +1,44 @@
 ---
 title: Développement d'applications Web avec ASP.NET
-ms.date: 10/10/2017
+ms.date: 09/25/2018
 helpviewer_keywords:
 - ASP.NET
 - .NET Framework, ASP.NET
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
-ms.openlocfilehash: 9033927f714a6788a10d6966973ad2ac51d17945
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 51cc54d67d5b68e07f1dcfcb4c62f32cd509d51a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191382"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580509"
 ---
-# <a name="developing-web-applications-with-aspnet"></a><span data-ttu-id="eb30a-102">Développement d'applications Web avec ASP.NET</span><span class="sxs-lookup"><span data-stu-id="eb30a-102">Developing Web Applications with ASP.NET</span></span>
-<span data-ttu-id="eb30a-103">ASP.NET est une technologie .NET Framework permettant de créer des applications Web.</span><span class="sxs-lookup"><span data-stu-id="eb30a-103">ASP.NET is a .NET Framework technology for creating web apps.</span></span> <span data-ttu-id="eb30a-104">Les liens suivants sont fournis à des fins pratiques :</span><span class="sxs-lookup"><span data-stu-id="eb30a-104">The following links are provided for your convenience:</span></span>  
+# <a name="developing-web-apps-with-aspnet"></a><span data-ttu-id="54c68-102">Développement d’applications web avec ASP.NET</span><span class="sxs-lookup"><span data-stu-id="54c68-102">Developing Web apps with ASP.NET</span></span>
 
-- [<span data-ttu-id="eb30a-105">Documentation ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="eb30a-105">ASP.NET Core Documentation</span></span>](/aspnet/core/)   
-- [<span data-ttu-id="eb30a-106">Documentation d’ASP.NET</span><span class="sxs-lookup"><span data-stu-id="eb30a-106">ASP.NET documentation</span></span>](/aspnet/overview)   
-- [<span data-ttu-id="eb30a-107">ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="eb30a-107">ASP.NET MVC</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=227227)   
-- [<span data-ttu-id="eb30a-108">Pages Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="eb30a-108">ASP.NET Web Pages</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=251040)   
-- [<span data-ttu-id="eb30a-109">API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="eb30a-109">ASP.NET Web API</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
+<span data-ttu-id="54c68-103">ASP.NET est une technologie .NET Framework permettant de créer des applications Web.</span><span class="sxs-lookup"><span data-stu-id="54c68-103">ASP.NET is a .NET Framework technology for creating web apps.</span></span> <span data-ttu-id="54c68-104">Pour plus d'informations sur ASP.NET, voir :</span><span class="sxs-lookup"><span data-stu-id="54c68-104">For more information on ASP.NET, see:</span></span>
+
+- [<span data-ttu-id="54c68-105">Documentation d’ASP.NET</span><span class="sxs-lookup"><span data-stu-id="54c68-105">ASP.NET documentation</span></span>](/aspnet/overview)
+- [<span data-ttu-id="54c68-106">ASP.NET MVC</span><span class="sxs-lookup"><span data-stu-id="54c68-106">ASP.NET MVC</span></span>](https://go.microsoft.com/fwlink/p/?LinkID=227227)
+- [<span data-ttu-id="54c68-107">Pages Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="54c68-107">ASP.NET Web Pages</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=251040)
+- [<span data-ttu-id="54c68-108">API Web ASP.NET</span><span class="sxs-lookup"><span data-stu-id="54c68-108">ASP.NET Web API</span></span>](https://go.microsoft.com/fwlink/p/?LinkId=251041)  
+- [<span data-ttu-id="54c68-109">Créer une application web ASP.NET Framework dans Azure</span><span class="sxs-lookup"><span data-stu-id="54c68-109">Create an ASP.NET Framework web app in Azure</span></span>](/azure/app-service/app-service-web-get-started-dotnet-framework)
+- 
+## <a name="developing-web-apps-with-aspnet-core"></a><span data-ttu-id="54c68-110">Développement d’applications web avec ASP.NET Core</span><span class="sxs-lookup"><span data-stu-id="54c68-110">Developing Web apps with ASP.NET Core</span></span>
+
+<span data-ttu-id="54c68-111">ASP.NET Core est une refonte d’ASP.NET 4.x.</span><span class="sxs-lookup"><span data-stu-id="54c68-111">ASP.NET Core is a redesign of ASP.NET 4.x.</span></span> <span data-ttu-id="54c68-112">Certains des avantages d’ASP.NET Core par rapport à ASP.NET :</span><span class="sxs-lookup"><span data-stu-id="54c68-112">Some of the benefits ASP.NET Core provides over ASP.NET:</span></span>
+
+- <span data-ttu-id="54c68-113">Multiplateformes.</span><span class="sxs-lookup"><span data-stu-id="54c68-113">Cross platform.</span></span>
+- <span data-ttu-id="54c68-114">Plus léger et plus modulaire.</span><span class="sxs-lookup"><span data-stu-id="54c68-114">Leaner and more modular.</span></span>
+- <span data-ttu-id="54c68-115">Un scénario unifié pour créer une interface utilisateur web et des API web.</span><span class="sxs-lookup"><span data-stu-id="54c68-115">A unified story for building web UI and web APIs.</span></span>
+
+<span data-ttu-id="54c68-116">Consultez [Pourquoi utiliser ASP.NET Core ?](/aspnet/core#why-use-aspnet-core) pour obtenir la liste développée des avantages.</span><span class="sxs-lookup"><span data-stu-id="54c68-116">See [Why use ASP.NET Core?](/aspnet/core#why-use-aspnet-core) for an expanded list of benefits.</span></span>
+
+<span data-ttu-id="54c68-117">Pour plus d’informations sur ASP.NET Core](/aspnet/core), consultez :</span><span class="sxs-lookup"><span data-stu-id="54c68-117">For more information on ASP.NET Core](/aspnet/core), see:</span></span>
+
+- [<span data-ttu-id="54c68-118">Bien démarrer avec les pages Razor</span><span class="sxs-lookup"><span data-stu-id="54c68-118">Get started with Razor Pages</span></span>](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+- [<span data-ttu-id="54c68-119">Créer une API web</span><span class="sxs-lookup"><span data-stu-id="54c68-119">Create a Web API</span></span>](/aspnet/core/tutorials/first-web-api)
+- [<span data-ttu-id="54c68-120">Créer une application web ASP.NET Core dans Azure</span><span class="sxs-lookup"><span data-stu-id="54c68-120">Create an ASP.NET Core web app in Azure</span></span>](/azure/app-service/app-service-web-get-started-dotnet)
   
-## <a name="see-also"></a><span data-ttu-id="eb30a-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="eb30a-110">See also</span></span>
- [<span data-ttu-id="eb30a-111">Guide de développement</span><span class="sxs-lookup"><span data-stu-id="eb30a-111">Development Guide</span></span>](../../docs/framework/development-guide.md)
+## <a name="see-also"></a><span data-ttu-id="54c68-121">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="54c68-121">See also</span></span>
+
+[<span data-ttu-id="54c68-122">Guide de développement</span><span class="sxs-lookup"><span data-stu-id="54c68-122">Development Guide</span></span>](../../docs/framework/development-guide.md)
