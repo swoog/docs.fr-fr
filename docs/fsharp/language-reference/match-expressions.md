@@ -1,6 +1,6 @@
 ---
-title: Expressions de correspondance (F#)
-description: Découvrez comment l’expression de correspondance F# fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.
+title: 'Expressions de correspondance (F #)'
+description: 'Découvrez comment l’expression de correspondance F # fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.'
 ms.date: 04/19/2018
 ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

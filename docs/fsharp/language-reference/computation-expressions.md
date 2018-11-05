@@ -1,6 +1,6 @@
 ---
 title: Expressions de calcul (F#)
-description: Découvrez comment créer une syntaxe pratique pour l’écriture de calculs en F# qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle.
+description: 'Découvrez comment créer une syntaxe pratique pour l’écriture de calculs en F # qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle.'
 ms.date: 07/27/2018
 ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48839867"
 ---
 # <a name="computation-expressions"></a>Expressions de calcul
 
-Expressions de calcul en F# fournissent une syntaxe pratique pour l’écriture de calculs qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle. En fonction du type d’expression de calcul, elles peuvent être considérés comme un moyen d’exprimer monades, monoids, monad transformateurs et les functors applicative. Cependant, contrairement à d’autres langages (tels que *-notation* de Haskell), ils ne sont pas liées à une simple abstraction et que vous ne comptez pas sur les macros ou d’autres formes de métaprogrammation pour accomplir une syntaxe pratique et sensible au contexte.
+Expressions de calcul en F # fournissent une syntaxe pratique pour l’écriture de calculs qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle. En fonction du type d’expression de calcul, elles peuvent être considérés comme un moyen d’exprimer monades, monoids, monad transformateurs et les functors applicative. Cependant, contrairement à d’autres langages (tels que *-notation* de Haskell), ils ne sont pas liées à une simple abstraction et que vous ne comptez pas sur les macros ou d’autres formes de métaprogrammation pour accomplir une syntaxe pratique et sensible au contexte.
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -22,7 +22,7 @@ Les calculs peuvent prendre différentes formes. La forme la plus courante de ca
 * Calculs effectful
 * Calculs générative
 
-En règle générale, il existe *contextuelle* calculs que vous devez effectuer dans certaines parties d’une application. Écrire du code contextuelle peut être difficile, car il est facile de calculs de « fuite » en dehors d’un contexte donné sans abstractions pour vous éviter de le faire. Ces abstractions sont souvent difficile à écrire vous-même, c’est pourquoi F# a une méthode généralisée pour faire ce qu’on appelle **expressions de calcul**.
+En règle générale, il existe *contextuelle* calculs que vous devez effectuer dans certaines parties d’une application. Écrire du code contextuelle peut être difficile, car il est facile de calculs de « fuite » en dehors d’un contexte donné sans abstractions pour vous éviter de le faire. Ces abstractions sont souvent difficile à écrire vous-même, c’est pourquoi F # a une méthode généralisée pour faire ce qu’on appelle **expressions de calcul**.
 
 Expressions de calcul offrent un modèle uniforme de syntaxe et d’abstraction pour l’encodage des calculs contextuelles.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Chacune de ces mots clés et d’autres mots clés F# standard sont uniquement disponibles dans une expression de calcul s’ils ont été définis dans le type de générateur de rapports de sauvegarde. La seule exception à cela est `match!`, qui est lui-même liant syntaxique pour l’utilisation de `let!` suivie d’une correspondance de modèle sur le résultat.
+Chacune de ces mots clés et d’autres mots clés F # standard sont uniquement disponibles dans une expression de calcul s’ils ont été définis dans le type de générateur de rapports de sauvegarde. La seule exception à cela est `match!`, qui est lui-même liant syntaxique pour l’utilisation de `let!` suivie d’une correspondance de modèle sur le résultat.
 
-Le type de générateur est un objet qui définit des méthodes spéciales qui régissent la manière de que combiner les fragments de l’expression de calcul ; Autrement dit, ses méthodes contrôlent le comportement de l’expression de calcul. Un autre moyen de décrire une classe de générateur est à dire qu’il vous permet de personnaliser l’opération de nombreuses constructions F#, telles que des boucles et des liaisons.
+Le type de générateur est un objet qui définit des méthodes spéciales qui régissent la manière de que combiner les fragments de l’expression de calcul ; Autrement dit, ses méthodes contrôlent le comportement de l’expression de calcul. Un autre moyen de décrire une classe de générateur est à dire qu’il vous permet de personnaliser l’opération de nombreuses constructions F #, telles que des boucles et des liaisons.
 
 ### `let!`
 
@@ -179,7 +179,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-En commençant par F# 4.5, le `match!` mot clé vous permet d’inline un appel à une autre correspondance d’expression et le modèle de calcul sur son résultat :
+En commençant par F # 4.5, le `match!` mot clé vous permet d’inline un appel à une autre correspondance d’expression et le modèle de calcul sur son résultat :
 
 ```fsharp
 let doThingsAsync url =
@@ -194,7 +194,7 @@ Lors de l’appel d’une expression de calcul avec `match!`, elle réalisera le
 
 ## <a name="built-in-computation-expressions"></a>Expressions de calcul intégré
 
-La bibliothèque principale F# définit trois expressions de calcul intégré : [Expressions de séquence](sequences.md), [flux de travail asynchrones](asynchronous-workflows.md), et [Expressions de requête](query-expressions.md).
+La bibliothèque principale F # définit trois expressions de calcul intégré : [Expressions de séquence](sequences.md), [flux de travail asynchrones](asynchronous-workflows.md), et [Expressions de requête](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Création d’un nouveau Type d’Expression de calcul
 
@@ -227,7 +227,7 @@ L’expression imbriquée est au format suivant :
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Dans le code ci-dessus, les appels à `Run` et `Delay` sont omis s’ils ne sont pas définis dans la classe de générateur d’expression calcul. Le corps de l’expression de calcul, désignée ici comme `{| cexpr |}`, est convertie en appels impliquant les méthodes de la classe de générateur de rapports par les traductions décrites dans le tableau suivant. L’expression de calcul `{| cexpr |}` est définie de manière récursive en fonction de ces traductions où `expr` est une expression F# et `cexpr` est une expression de calcul.
+Dans le code ci-dessus, les appels à `Run` et `Delay` sont omis s’ils ne sont pas définis dans la classe de générateur d’expression calcul. Le corps de l’expression de calcul, désignée ici comme `{| cexpr |}`, est convertie en appels impliquant les méthodes de la classe de générateur de rapports par les traductions décrites dans le tableau suivant. L’expression de calcul `{| cexpr |}` est définie de manière récursive en fonction de ces traductions où `expr` est une expression F # et `cexpr` est une expression de calcul.
 
 |Expression|Traduction|
 |----------|-----------|

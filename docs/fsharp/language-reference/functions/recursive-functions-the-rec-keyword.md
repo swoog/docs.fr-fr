@@ -1,6 +1,6 @@
 ---
 title: 'Fonctions récursives : mot clé rec (F#)'
-description: Découvrez comment le mot clé F# « rec » est utilisé avec le mot clé 'let' pour définir une fonction récursive.
+description: "Découvrez comment le mot clé F # « rec » est utilisé avec le mot clé 'let' pour définir une fonction récursive."
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -30,7 +30,7 @@ function2-body
 
 ## <a name="remarks"></a>Notes
 
-Fonctions récursives, les fonctions qui appellent eux-mêmes, sont identifiées de façon explicite dans le langage F#. L’identificateur qui est en cours de définition sont ainsi disponibles dans la portée de la fonction.
+Fonctions récursives, les fonctions qui appellent eux-mêmes, sont identifiées de façon explicite dans le langage F #. L’identificateur qui est en cours de définition sont ainsi disponibles dans la portée de la fonction.
 
 Le code suivant illustre une fonction récursive qui calcule le *n*<sup>th</sup> nombre Fibonacci.
 

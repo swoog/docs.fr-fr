@@ -1,6 +1,6 @@
 ---
 title: 'Déclarations d’importation : mot clé open (F#)'
-description: En savoir plus sur les déclarations d’importation F# et comment ils spécifient un module ou un espace de noms dont les éléments que vous pouvez référencer sans utiliser un nom qualifié complet.
+description: 'En savoir plus sur les déclarations d’importation F # et comment ils spécifient un module ou un espace de noms dont les éléments que vous pouvez référencer sans utiliser un nom qualifié complet.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -36,7 +36,7 @@ Le code suivant illustre l’utilisation de la `open` mot clé pour simplifier l
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6801.fs)]
 
-Le compilateur F# n’émet pas une erreur ou un avertissement lorsque des ambiguïtés se produisent lorsque le même nom se produit dans plus d’un module open ou espace de noms. Lorsque des ambiguïtés se produisent, F# donne la priorité au module ou un espace de noms plus récemment ouverts. Par exemple, dans le code suivant, `empty` signifie `Seq.empty`, même si `empty` se trouve à la fois dans le `List` et `Seq` modules.
+Le compilateur F # n’émet pas une erreur ou un avertissement lorsque des ambiguïtés se produisent lorsque le même nom se produit dans plus d’un module open ou espace de noms. Lorsque des ambiguïtés se produisent, F # donne la priorité au module ou un espace de noms plus récemment ouverts. Par exemple, dans le code suivant, `empty` signifie `Seq.empty`, même si `empty` se trouve à la fois dans le `List` et `Seq` modules.
 
 ```fsharp
 open List
@@ -48,11 +48,11 @@ Par conséquent, soyez prudent lorsque vous ouvrez des modules ou espaces de nom
 
 ## <a name="namespaces-that-are-open-by-default"></a>Espaces de noms qui sont ouverts par défaut
 
-Certains espaces de noms sont si souvent utilisés dans le code F# qu’ils sont ouverts implicitement sans avoir besoin d’une déclaration d’importation explicite. Le tableau suivant présente les espaces de noms qui sont ouverts par défaut.
+Certains espaces de noms sont si souvent utilisés dans le code F # qu’ils sont ouverts implicitement sans avoir besoin d’une déclaration d’importation explicite. Le tableau suivant présente les espaces de noms qui sont ouverts par défaut.
 
 |Espace de noms|Description|
 |---------|-----------|
-|`Microsoft.FSharp.Core`|Contient des définitions de type F# de base pour les types intégrés tels que `int` et `float`.|
+|`Microsoft.FSharp.Core`|Contient des définitions de type F # de base pour les types intégrés tels que `int` et `float`.|
 |`Microsoft.FSharp.Core.Operators`|Contient des opérations arithmétiques de base telles que `+` et `*`.|
 |`Microsoft.FSharp.Collections`|Contient des classes de collection immuable comme `List` et `Array`.|
 |`Microsoft.FSharp.Control`|Contient des types pour les constructions de contrôle telles que l’évaluation paresseuse et flux de travail asynchrones.|

@@ -1,6 +1,6 @@
 ---
-title: Types de base (F#)
-description: Découvrir les types de base fondamentales qui sont utilisés dans le langage F#.
+title: 'Types de base (F #)'
+description: 'Découvrir les types de base fondamentales qui sont utilisés dans le langage F #.'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48026934"
 ---
 # <a name="basic-types"></a>Types de base
 
-Cette rubrique répertorie les types de base qui sont définies dans le langage F#. Ces types sont le plus fondamental en F#, constituant la base de presque chaque programme F#. Ils représentent un sur-ensemble des types primitifs .NET.
+Cette rubrique répertorie les types de base qui sont définies dans le langage F #. Ces types sont le plus fondamental en F #, constituant la base de presque chaque programme F #. Ils représentent un sur-ensemble des types primitifs .NET.
 
 |Type|Type .NET|Description|
 |----|---------|-----------|

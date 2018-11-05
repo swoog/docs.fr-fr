@@ -1,6 +1,6 @@
 ---
 title: Syntaxe détaillée (F#)
-description: Découvrez la différence entre la syntaxe détaillée et légère dans le langage de programmation F#.
+description: 'Découvrez la différence entre la syntaxe détaillée et légère dans le langage de programmation F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e697c6fe619df7ffe12f7d4e2a234a5a5cb401ff
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "50196763"
 ---
 # <a name="verbose-syntax"></a>Syntaxe détaillée
 
-Il existe deux formes de syntaxe disponibles pour de nombreuses constructions dans le langage F# : *syntaxe détaillée* et *syntaxe simplifiée*. La syntaxe détaillée n’est pas aussi couramment utilisée, mais présente l’avantage d’être moins sensibles à la mise en retrait. La syntaxe simplifiée est plus courte et utilise la mise en retrait pour signaler le début et la fin de constructions, plutôt que mots clés supplémentaires comme `begin`, `end`, `in`, et ainsi de suite. La syntaxe par défaut est la syntaxe simplifiée. Cette rubrique décrit la syntaxe des constructions F# lorsque la syntaxe simplifiée n’est pas activée. La syntaxe détaillée est toujours activée, même si vous activez la syntaxe simplifiée, vous pouvez toujours utiliser la syntaxe détaillée pour certaines constructions. Vous pouvez désactiver la syntaxe simplifiée à l’aide de la `#light "off"` directive.
+Il existe deux formes de syntaxe disponibles pour de nombreuses constructions dans le langage F # : *syntaxe détaillée* et *syntaxe simplifiée*. La syntaxe détaillée n’est pas aussi couramment utilisée, mais présente l’avantage d’être moins sensibles à la mise en retrait. La syntaxe simplifiée est plus courte et utilise la mise en retrait pour signaler le début et la fin de constructions, plutôt que mots clés supplémentaires comme `begin`, `end`, `in`, et ainsi de suite. La syntaxe par défaut est la syntaxe simplifiée. Cette rubrique décrit la syntaxe des constructions F # lorsque la syntaxe simplifiée n’est pas activée. La syntaxe détaillée est toujours activée, même si vous activez la syntaxe simplifiée, vous pouvez toujours utiliser la syntaxe détaillée pour certaines constructions. Vous pouvez désactiver la syntaxe simplifiée à l’aide de la `#light "off"` directive.
 
 ## <a name="table-of-constructs"></a>Tableau de constructions
 
-Le tableau suivant présente la syntaxe simplifiée et détaillée pour les constructions de langage F# dans des contextes où il existe une différence entre les deux formes. Dans ce tableau, les crochets pointus (&lt;&gt;) placez des éléments de syntaxe fourni par l’utilisateur. Reportez-vous à la documentation pour chaque construction de langage pour des informations plus détaillées sur la syntaxe utilisée dans ces constructions.
+Le tableau suivant présente la syntaxe simplifiée et détaillée pour les constructions de langage F # dans des contextes où il existe une différence entre les deux formes. Dans ce tableau, les crochets pointus (&lt;&gt;) placez des éléments de syntaxe fourni par l’utilisateur. Reportez-vous à la documentation pour chaque construction de langage pour des informations plus détaillées sur la syntaxe utilisée dans ces constructions.
 
 <table>
 <tr>

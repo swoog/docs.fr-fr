@@ -1,6 +1,6 @@
 ---
 title: Extensions de type (F#)
-description: Découvrez comment les extensions de type F# permettent de que vous ajoutez de nouveaux membres à un type d’objet précédemment défini.
+description: 'Découvrez comment les extensions de type F # permettent de que vous ajoutez de nouveaux membres à un type d’objet précédemment défini.'
 ms.date: 07/20/2018
 ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -127,7 +127,7 @@ Ce que vous souhaitez sont des méthodes statiques qui « flottant dans l’esp
 
 ## <a name="extension-methods"></a>Méthodes d’extension
 
-Enfin, les méthodes d’extension (parfois appelés « C# style membres d’extension ») peuvent être déclarées en F# comme une méthode membre statique sur une classe.
+Enfin, les méthodes d’extension (parfois appelés « C# style membres d’extension ») peuvent être déclarées en F # comme une méthode membre statique sur une classe.
 
 Méthodes d’extension sont utiles pour lorsque vous souhaitez définir des extensions sur un type générique qui contrainte la variable de type. Exemple :
 
@@ -163,7 +163,7 @@ Les limitations suivantes existent également pour les extensions de type :
 * Extensions de type ne peut pas être définies sur [abréviations de types](type-abbreviations.md).
 * Extensions de type ne sont pas valides pour `byref<'T>` (même si elles peuvent être déclarées).
 * Extensions de type ne sont pas valides pour les attributs (même si elles peuvent être déclarées).
-* Vous pouvez définir des extensions qui surchargent les autres méthodes du même nom, mais le compilateur F# donne la préférence aux méthodes d’extension non s’il existe un appel ambigu.
+* Vous pouvez définir des extensions qui surchargent les autres méthodes du même nom, mais le compilateur F # donne la préférence aux méthodes d’extension non s’il existe un appel ambigu.
 
 Enfin, si plusieurs extensions de type intrinsèques existent pour un type, tous les membres doivent être uniques. Pour les extensions de type facultatif, les membres dans différentes extensions de type vers le même type peuvent avoir les mêmes noms. Erreurs d’ambiguïté se produisent uniquement si le code client ouvre deux portées différentes qui définissent les mêmes noms de membre.
 

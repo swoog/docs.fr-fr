@@ -1,6 +1,6 @@
 ---
 title: Chaînes (F#)
-description: Découvrez comment le type 'string' F# représente le texte immuable sous la forme d’une séquence de caractères Unicode.
+description: "Découvrez comment le type 'string' F # représente le texte immuable sous la forme d’une séquence de caractères Unicode."
 ms.date: 05/16/2016
 ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -18,7 +18,7 @@ Le `string` type représente le texte immuable sous la forme d’une séquence d
 
 ## <a name="remarks"></a>Notes
 
-Littéraux de chaîne sont délimitées par le caractère guillemet ("). Le caractère barre oblique inverse ( \\ ) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés une *séquence d’échappement*. Prise en charge par F# littéraux sont affichés dans le tableau suivant de chaîne de séquences d’échappement.
+Littéraux de chaîne sont délimitées par le caractère guillemet ("). Le caractère barre oblique inverse ( \\ ) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés une *séquence d’échappement*. Prise en charge par F # littéraux sont affichés dans le tableau suivant de chaîne de séquences d’échappement.
 
 |Caractère|Séquence d'échappement|
 |---------|---------------|
@@ -78,7 +78,7 @@ L’exemple suivant illustre la concaténation de chaînes.
 
 ## <a name="string-class"></a>Classe de chaîne
 
-Étant donné que le type de chaîne en F# est en fait un .NET Framework `System.String` taper, tout le `System.String` membres sont disponibles. Cela inclut la `+` opérateur, qui est utilisé pour concaténer des chaînes, la `Length` propriété et le `Chars` propriété, qui retourne la chaîne sous la forme d’un tableau de caractères Unicode. Pour plus d’informations sur les chaînes, consultez `System.String`.
+Étant donné que le type de chaîne en F # est en fait un .NET Framework `System.String` taper, tout le `System.String` membres sont disponibles. Cela inclut la `+` opérateur, qui est utilisé pour concaténer des chaînes, la `Length` propriété et le `Chars` propriété, qui retourne la chaîne sous la forme d’un tableau de caractères Unicode. Pour plus d’informations sur les chaînes, consultez `System.String`.
 
 À l’aide de la `Chars` propriété du `System.String`, vous pouvez accéder à différents caractères dans une chaîne en spécifiant un index, comme indiqué dans le code suivant.
 

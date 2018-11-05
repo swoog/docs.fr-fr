@@ -1,6 +1,6 @@
 ---
-title: Bien démarrer avec F# dans Visual Studio pour Mac
-description: Découvrez comment utiliser F# avec Visual Studio pour Mac.
+title: 'Bien démarrer avec F # dans Visual Studio pour Mac'
+description: 'Découvrez comment utiliser F # avec Visual Studio pour Mac.'
 ms.date: 07/03/2018
 ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,9 +9,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44042321"
 ---
-# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Bien démarrer avec F# dans Visual Studio pour Mac
+# <a name="get-started-with-f-in-visual-studio-for-mac"></a>Bien démarrer avec F # dans Visual Studio pour Mac
 
-F# et les outils Visual F# sont pris en charge dans Visual Studio pour Mac IDE. Assurez-vous d’avoir [Visual Studio pour Mac installé](install-fsharp.md#install-f-with-visual-studio-for-mac).
+F # et les outils Visual F # sont pris en charge dans Visual Studio pour Mac IDE. Assurez-vous d’avoir [Visual Studio pour Mac installé](install-fsharp.md#install-f-with-visual-studio-for-mac).
 
 ## <a name="creating-a-console-application"></a>Création d’une application de console
 
@@ -21,11 +21,11 @@ Un des projets plus simples dans Visual Studio pour Mac est l’Application de C
 
 2.  Dans la boîte de dialogue Nouveau projet, il existe 2 différents modèles d’Application de Console.  Il y a un sous autre -> .NET qui cible le .NET Framework.  L’autre modèle est sous .NET Core -> application qui cible .NET Core.  Un modèle doit fonctionner pour les besoins de cet article.
 
-3. Sous l’application de console, changez c# à F#.  Choisissez le **suivant** bouton Déplacer vers l’avant !  
+3. Sous l’application de console, changez c# à F #.  Choisissez le **suivant** bouton Déplacer vers l’avant !  
 
 4. Donnez un nom à votre projet, puis choisissez les options souhaitées pour l’application.  Notez, le volet de visualisation vers le côté de l’écran qui affiche la structure de répertoires qui est créée en fonction des options sélectionnées.  
 
-5. Cliquez sur **Créer**.  Vous devez maintenant voir un projet F# dans l’Explorateur de solutions.
+5. Cliquez sur **Créer**.  Vous devez maintenant voir un projet F # dans l’Explorateur de solutions.
 
 ## <a name="writing-your-code"></a>Écrivez votre code
 
@@ -33,17 +33,17 @@ Commençons par écrire du code tout d’abord.  Assurez-vous que le `Program.fs
 
 [!code-fsharp[HelloSquare](../../../samples/snippets/fsharp/getting-started/hello-square.fs)]
 
-Dans l’exemple de code précédent, une fonction `square` a été trouvé qui accepte une entrée nommée `x` et le multiplie par lui-même.  Étant donné que F# utilise [l’inférence de Type](../language-reference/type-inference.md), le type de `x` n’a pas besoin d’être spécifié.  Le compilateur F# comprend les types où la multiplication est valide et affectera un type à `x` selon la façon dont `square` est appelée.  Si vous pointez sur `square`, vous devez voir les éléments suivants :
+Dans l’exemple de code précédent, une fonction `square` a été trouvé qui accepte une entrée nommée `x` et le multiplie par lui-même.  Étant donné que F # utilise [l’inférence de Type](../language-reference/type-inference.md), le type de `x` n’a pas besoin d’être spécifié.  Le compilateur F # comprend les types où la multiplication est valide et affectera un type à `x` selon la façon dont `square` est appelée.  Si vous pointez sur `square`, vous devez voir les éléments suivants :
 
 ```
 val square: x:int -> int
 ```
 
-C’est ce qui est appelé signature de type de la fonction.  Il peut être lu comme suit : « carré est une fonction qui prend un entier nommé x et produit un entier ».  Notez que le compilateur retournait `square` le `int` type pour le moment - il s’agit, car la multiplication n’est pas générique sur *tous les* types, mais plutôt générique entre un ensemble fermé de types.  Le compilateur F# prélevé `int` sur ce point, mais il ajuste la signature de type si vous appelez `square` avec un autre type d’entrée, comme un `float`.
+C’est ce qui est appelé signature de type de la fonction.  Il peut être lu comme suit : « carré est une fonction qui prend un entier nommé x et produit un entier ».  Notez que le compilateur retournait `square` le `int` type pour le moment - il s’agit, car la multiplication n’est pas générique sur *tous les* types, mais plutôt générique entre un ensemble fermé de types.  Le compilateur F # prélevé `int` sur ce point, mais il ajuste la signature de type si vous appelez `square` avec un autre type d’entrée, comme un `float`.
 
-Une autre fonction, `main`, est défini, ce qui est décoré avec le `EntryPoint` attribut pour indiquer au compilateur F# que l’exécution du programme doit commencer.  Il suit la même convention que les autres [les langages de programmation de style C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), où les arguments de ligne de commande peuvent être passés à cette fonction, et un code entier est retourné (généralement `0`).
+Une autre fonction, `main`, est défini, ce qui est décoré avec le `EntryPoint` attribut pour indiquer au compilateur F # que l’exécution du programme doit commencer.  Il suit la même convention que les autres [les langages de programmation de style C](https://en.wikipedia.org/wiki/Entry_point#C_and_C.2B.2B), où les arguments de ligne de commande peuvent être passés à cette fonction, et un code entier est retourné (généralement `0`).
 
-Il se trouve dans cette fonction que nous appelons le `square` fonction avec un argument de `12`.  Le compilateur F# puis assigne le type de `square` être `int -> int` (autrement dit, une fonction qui prend un `int` et produit un `int`).  L’appel à `printfn` est une fonction d’impression mis en forme qui utilise une chaîne de format, similaire aux langages de programmation de style C, les paramètres qui correspondent à celles spécifiées dans la chaîne de format et imprime ensuite le résultat et une nouvelle ligne.
+Il se trouve dans cette fonction que nous appelons le `square` fonction avec un argument de `12`.  Le compilateur F # puis assigne le type de `square` être `int -> int` (autrement dit, une fonction qui prend un `int` et produit un `int`).  L’appel à `printfn` est une fonction d’impression mis en forme qui utilise une chaîne de format, similaire aux langages de programmation de style C, les paramètres qui correspondent à celles spécifiées dans la chaîne de format et imprime ensuite le résultat et une nouvelle ligne.
 
 ## <a name="running-your-code"></a>Exécution de votre code
 
@@ -55,13 +55,13 @@ Vous devez maintenant voir ce qui suit imprimé dans la fenêtre de console Visu
 12 squared is 144!
 ```
 
-Félicitations !  Vous avez créé votre premier projet F# dans Visual Studio pour Mac, écrit qu'une fonction F# imprimer les résultats de l’appel de cette fonction et exécutez le projet pour afficher certains résultats.
+Félicitations !  Vous avez créé votre premier projet F # dans Visual Studio pour Mac, écrit qu'une fonction F # imprimer les résultats de l’appel de cette fonction et exécutez le projet pour afficher certains résultats.
 
-## <a name="using-f-interactive"></a>Utilisation de F# Interactive
+## <a name="using-f-interactive"></a>Utilisation de F # Interactive
 
-Une des meilleures fonctionnalités de Visual F# outils dans Visual Studio pour Mac est la fenêtre Interactive F#.  Il vous permet d’envoyer le code sur à un processus dans lequel vous pouvez appeler ce code et afficher le résultat de manière interactive.
+Une des meilleures fonctionnalités de Visual F # outils dans Visual Studio pour Mac est la fenêtre Interactive F #.  Il vous permet d’envoyer le code sur à un processus dans lequel vous pouvez appeler ce code et afficher le résultat de manière interactive.
 
-Pour commencer à l’utiliser, mettez en surbrillance le `square` fonction définie dans votre code.  Ensuite, cliquez sur **modifier** dans le menu de niveau supérieur.  Sélectionnez ensuite **envoyer la sélection à F# Interactive**.  Cela exécute le code dans la fenêtre Interactive F#.  Ou bien, vous pouvez cliquez avec le bouton droit sur la sélection et choisissez **envoyer la sélection à F# Interactive**.  La fenêtre Interactive F# doit s’afficher par le code suivant dans celui-ci :
+Pour commencer à l’utiliser, mettez en surbrillance le `square` fonction définie dans votre code.  Ensuite, cliquez sur **modifier** dans le menu de niveau supérieur.  Sélectionnez ensuite **envoyer la sélection à F # Interactive**.  Cela exécute le code dans la fenêtre Interactive F #.  Ou bien, vous pouvez cliquez avec le bouton droit sur la sélection et choisissez **envoyer la sélection à F # Interactive**.  La fenêtre Interactive F # doit s’afficher par le code suivant dans celui-ci :
 
 ```
 >
@@ -71,7 +71,7 @@ val square : x:int -> int
 >
 ```
 
-Cela montre la même signature de fonction pour le `square` (fonction), vous l’avez vu précédemment lorsque vous pointez sur la fonction.  Étant donné que `square` est maintenant définie dans le processus de F# Interactive, vous pouvez l’appeler avec des valeurs différentes :
+Cela montre la même signature de fonction pour le `square` (fonction), vous l’avez vu précédemment lorsque vous pointez sur la fonction.  Étant donné que `square` est maintenant définie dans le processus de F # Interactive, vous pouvez l’appeler avec des valeurs différentes :
 
 ```
 > square 12;;
@@ -80,7 +80,7 @@ val it : int = 144
 val it : int = 169
 ```
 
-Cela exécute la fonction, lie le résultat vers un nouveau nom `it`et affiche le type et la valeur de `it`.  Notez que vous devez terminer chaque ligne avec `;;`.  Voici comment F# Interactive sait quand votre appel de fonction est terminée.  Vous pouvez également définir de nouvelles fonctions dans F# Interactive :
+Cela exécute la fonction, lie le résultat vers un nouveau nom `it`et affiche le type et la valeur de `it`.  Notez que vous devez terminer chaque ligne avec `;;`.  Voici comment F # Interactive sait quand votre appel de fonction est terminée.  Vous pouvez également définir de nouvelles fonctions dans F # Interactive :
 
 ```
 > let isOdd x = x % 2 <> 0;;
@@ -107,16 +107,16 @@ val it : bool = true
 
 L’opérateur de redirection de canal et bien plus encore, sont traités dans les didacticiels suivants.
 
-Il s’agit uniquement d’un aperçu dans ce que vous pouvez faire avec F# Interactive.  Pour plus d’informations, consultez [programmation Interactive avec F#](../tutorials/fsharp-interactive/index.md).
+Il s’agit uniquement d’un aperçu dans ce que vous pouvez faire avec F # Interactive.  Pour plus d’informations, consultez [programmation Interactive avec F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous n’avez pas déjà, consultez le [visite guidée de F#](../tour.md), qui aborde certaines des principales fonctionnalités du langage F#.  Il vous donner une vue d’ensemble de certaines des fonctionnalités de F# et fournissent des exemples de code suffisamment que vous pouvez copier dans Visual Studio pour Mac et l’exécuter.  Il existe également des ressources exceptionnelles externes, vous pouvez utiliser, présentée dans le [Guide F#](../index.md).
+Si vous n’avez pas déjà, consultez le [visite guidée de F #](../tour.md), qui aborde certaines des principales fonctionnalités du langage F #.  Il vous donner une vue d’ensemble de certaines des fonctionnalités de F # et fournissent des exemples de code suffisamment que vous pouvez copier dans Visual Studio pour Mac et l’exécuter.  Il existe également des ressources exceptionnelles externes, vous pouvez utiliser, présentée dans le [Guide F #](../index.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Visual F#](../index.md)  
 - [Présentation de F#](../tour.md)  
-- [Référence du langage F#](../language-reference/index.md)  
+- [Référence du langage F #](../language-reference/index.md)  
 - [Inférence de type](../language-reference/type-inference.md)  
 - [Référence des symboles et d’opérateur](../language-reference/symbol-and-operator-reference/index.md)  

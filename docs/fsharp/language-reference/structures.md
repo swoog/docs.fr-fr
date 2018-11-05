@@ -1,6 +1,6 @@
 ---
 title: Structures (F#)
-description: En savoir plus sur la structure F#, un type d’objet compact souvent plus efficace qu’une classe pour les types avec une petite quantité de données et un comportement simple.
+description: 'En savoir plus sur la structure F #, un type d’objet compact souvent plus efficace qu’une classe pour les types avec une petite quantité de données et un comportement simple.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` n’implique pas `Struct`. Les deux doivent être présents sur le type.
 
-Un «`byref`-comme « struct en F# est un type de valeur de limite de la pile. Elle n’est jamais allouée sur le tas managé. Un `byref`-comme struct est utile pour la programmation de hautes performances, car elle est appliquée avec l’ensemble de vérifications fortes sur la durée de vie et de non capture. Les règles sont :
+Un «`byref`-comme « struct en F # est un type de valeur de limite de la pile. Elle n’est jamais allouée sur le tas managé. Un `byref`-comme struct est utile pour la programmation de hautes performances, car elle est appliquée avec l’ensemble de vérifications fortes sur la durée de vie et de non capture. Les règles sont :
 
 * Elles peuvent servir comme paramètres de fonction, les paramètres de méthode, les variables locales, méthode est retournée.
 * Ils ne peuvent pas être statiques ou membres d’une classe ou un struct normal d’instance.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` n’implique pas `Struct`. Vous devez ajouter les deux avoir un `IsReadOnly` struct.
 
-Utilisation de cet attribut émet des métadonnées vous permettant de F# et savoir du pour traiter comme c# `inref<'T>` et `in ref`, respectivement.
+Utilisation de cet attribut émet des métadonnées vous permettant de F # et savoir du pour traiter comme c# `inref<'T>` et `in ref`, respectivement.
 
 Définition d’une valeur mutable à l’intérieur d’un struct en lecture seule génère une erreur.
 

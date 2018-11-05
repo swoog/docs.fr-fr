@@ -1,6 +1,6 @@
 ---
 title: Liaisons let (F#)
-description: Découvrez comment utiliser une liaison qui associe un identificateur à une valeur ou une fonction ' let' F#.
+description: "Découvrez comment utiliser une liaison qui associe un identificateur à une valeur ou une fonction ' let' F #."
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a35b5a39f2768a18665b5c7fe768af0e7714577
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -110,7 +110,7 @@ let function3 x =
     function1 x
 ```
 
-Certains modules ont l’attribut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), ce qui signifie que les fonctions qu’ils exposent doivent être qualifiées avec le nom du module. Par exemple, le module de liste F# a cet attribut.
+Certains modules ont l’attribut [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15), ce qui signifie que les fonctions qu’ils exposent doivent être qualifiées avec le nom du module. Par exemple, le module de liste F # a cet attribut.
 
 Pour plus d’informations sur les modules et contrôle d’accès, consultez [Modules](../modules.md) et [contrôle d’accès](../access-control.md).
 

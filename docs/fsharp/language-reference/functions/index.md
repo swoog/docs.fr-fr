@@ -1,6 +1,6 @@
 ---
 title: Fonctions (F#)
-description: En savoir plus sur les fonctions en F# et comment F# prend en charge les constructions de programmation fonctionnelles courants.
+description: 'En savoir plus sur les fonctions en F # et comment F # prend en charge les constructions de programmation fonctionnelles courants.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

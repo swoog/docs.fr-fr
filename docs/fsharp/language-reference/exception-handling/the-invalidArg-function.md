@@ -1,6 +1,6 @@
 ---
 title: 'Exceptions : fonction invalidArg (F#)'
-description: Découvrez comment la fonction 'invalidArg' F# génère une exception d’argument.
+description: "Découvrez comment la fonction 'invalidArg' F # génère une exception d’argument."
 ms.date: 05/16/2016
 ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

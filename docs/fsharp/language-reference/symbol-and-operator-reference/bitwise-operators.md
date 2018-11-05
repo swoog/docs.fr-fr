@@ -1,6 +1,6 @@
 ---
 title: Opérateurs au niveau du bit (F#)
-description: En savoir plus sur les opérateurs au niveau du bit qui sont disponibles dans le langage de programmation F#.
+description: 'En savoir plus sur les opérateurs au niveau du bit qui sont disponibles dans le langage de programmation F #.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,11 +11,11 @@ ms.locfileid: "48581506"
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
 
-Cette rubrique décrit les opérateurs au niveau du bit qui sont disponibles dans le langage F#.
+Cette rubrique décrit les opérateurs au niveau du bit qui sont disponibles dans le langage F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Résumé des opérateurs au niveau du bit
 
-Le tableau suivant décrit les opérateurs au niveau du bit qui sont prises en charge pour les types intégrés unboxed dans le langage F#.
+Le tableau suivant décrit les opérateurs au niveau du bit qui sont prises en charge pour les types intégrés unboxed dans le langage F #.
 
 |Opérateur|Notes|
 |--------|-----|

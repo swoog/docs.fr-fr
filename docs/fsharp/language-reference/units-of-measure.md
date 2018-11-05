@@ -1,6 +1,6 @@
 ---
 title: Unités de mesure (F#)
-description: Découvrez comment flottantes et valeurs d’entier signé en F# peuvent avoir des unités de mesure, qui sont généralement utilisées pour indiquer la longueur, le volume et masse associées.
+description: 'Découvrez comment flottantes et valeurs d’entier signé en F # peuvent avoir des unités de mesure, qui sont généralement utilisées pour indiquer la longueur, le volume et masse associées.'
 ms.date: 05/16/2016
 ms.openlocfilehash: ad2193e25f3c0cee6e73cd529ab43d1e4b6b549b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45972515"
 ---
 # <a name="units-of-measure"></a>Unités de mesure
 
-Virgule flottante et entiers auto-signés en F# permettre être associés à des unités de mesure, qui sont généralement utilisées pour indiquer la longueur, volume, en série, et ainsi de suite. À l’aide de quantités avec des unités, vous activez le compilateur de vérifier que les relations arithmétiques ont les bonnes unités, qui permet d’éviter des erreurs de programmation.
+Virgule flottante et entiers auto-signés en F # permettre être associés à des unités de mesure, qui sont généralement utilisées pour indiquer la longueur, volume, en série, et ainsi de suite. À l’aide de quantités avec des unités, vous activez le compilateur de vérifier que les relations arithmétiques ont les bonnes unités, qui permet d’éviter des erreurs de programmation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -113,7 +113,7 @@ Pour convertir une valeur sans unité en une valeur qui a des unités, vous pouv
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6906.fs)]
 
-## <a name="units-of-measure-in-the-f-core-library"></a>Unités de mesure dans la bibliothèque principale F#
+## <a name="units-of-measure-in-the-f-core-library"></a>Unités de mesure dans la bibliothèque principale F #
 
 Une unité de bibliothèque est disponible dans le `FSharp.Data.UnitSystems.SI` espace de noms. Il inclut des unités SI dans les deux leur forme de symbole (comme `m` compteur) dans le `UnitSymbols` sub-espace de noms et leur nom complet (comme `meter` compteur) dans le `UnitNames` sub-espace de noms.
 

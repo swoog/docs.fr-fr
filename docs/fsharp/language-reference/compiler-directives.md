@@ -1,6 +1,6 @@
 ---
 title: Directives de compilateur (F#)
-description: En savoir plus sur F# langage les directives de préprocesseur, directives de compilation conditionnelle, directives de ligne et les directives de compilateur.
+description: 'En savoir plus sur F # langage les directives de préprocesseur, directives de compilation conditionnelle, directives de ligne et les directives de compilateur.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ Le tableau suivant répertorie la directive de compilateur disponible en F#.
 |Directive|Description|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Active ou désactive la syntaxe simplifiée, à des fins de compatibilité avec d'autres versions de ML. Par défaut, la syntaxe simplifiée est activée. La syntaxe détaillée est toujours activée. Par conséquent, vous pouvez utiliser la syntaxe simplifiée et la syntaxe détaillée. La directive `#light` en elle-même équivaut à `#light "on"`. Si vous spécifiez `#light "off"`, vous devez utiliser la syntaxe détaillée pour toutes les constructions de langage. La syntaxe présentée dans la documentation de F# part du principe que vous utilisez la syntaxe simplifiée. Pour plus d’informations, consultez [syntaxe détaillée](verbose-syntax.md).|
-Pour les directives de l’interpréteur (fsi.exe), consultez [programmation Interactive avec F#](../tutorials/fsharp-interactive/index.md).
+Pour les directives de l’interpréteur (fsi.exe), consultez [programmation Interactive avec F #](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 

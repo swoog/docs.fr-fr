@@ -1,6 +1,6 @@
 ---
 title: Littéraux (F#)
-description: En savoir plus sur les types de littéraux dans le langage de programmation F#.
+description: 'En savoir plus sur les types de littéraux dans le langage de programmation F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,11 +14,11 @@ ms.locfileid: "44087623"
 > [!NOTE]
 Les liens de référence des API dans cet article vous dirigera vers MSDN (pour l’instant).
 
-Cette rubrique fournit une table qui montre comment spécifier le type d’un littéral en F#.
+Cette rubrique fournit une table qui montre comment spécifier le type d’un littéral en F #.
 
 ## <a name="literal-types"></a>Types de littéral
 
-Le tableau suivant présente les types de littéraux en F#. Les caractères qui représentent des chiffres en notation hexadécimale ne sont pas la casse ; les caractères qui identifient le type respectent la casse.
+Le tableau suivant présente les types de littéraux en F #. Les caractères qui représentent des chiffres en notation hexadécimale ne sont pas la casse ; les caractères qui identifient le type respectent la casse.
 
 |Type|Description|Suffixe ou préfixe|Exemples|
 |----|-----------|----------------|--------|
@@ -47,7 +47,7 @@ Le tableau suivant présente les types de littéraux en F#. Les caractères qui 
 
 Chaînes Unicode peuvent contenir des encodages explicites que vous pouvez spécifier à l’aide de `\u` suivi d’un code hexadécimal 16 bits ou les encodages UTF-32 que vous pouvez spécifier à l’aide de `\U` suivie d’un code hexadécimal 32 bits qui représente un Unicode paire de substitution.
 
-Avec F# 3,1, vous pouvez utiliser le `+` vous connecter pour combiner des littéraux de chaîne. Vous pouvez également utiliser l’opérateur de bits ou (`|||`) opérateur pour combiner les indicateurs d’énumération. Par exemple, le code suivant est autorisé dans F# 3.1 :
+Avec F # 3,1, vous pouvez utiliser le `+` vous connecter pour combiner des littéraux de chaîne. Vous pouvez également utiliser l’opérateur de bits ou (`|||`) opérateur pour combiner les indicateurs d’énumération. Par exemple, le code suivant est autorisé dans F # 3.1 :
 
 ```fsharp
 [<Literal>]
@@ -82,7 +82,7 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Traits de soulignement dans les littéraux numériques
 
-À partir de F# 4.1, vous pouvez séparer les chiffres par le caractère de soulignement (`_`).
+À partir de F # 4.1, vous pouvez séparer les chiffres par le caractère de soulignement (`_`).
 
 ```fsharp
 let DeadBeef = 0xDEAD_BEEF

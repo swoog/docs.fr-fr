@@ -1,6 +1,6 @@
 ---
 title: Types flexibles (F#)
-description: Découvrez comment utiliser F# annotation de type flexible, ce qui indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié.
+description: 'Découvrez comment utiliser F # annotation de type flexible, ce qui indique qu’un paramètre, une variable ou une valeur a un type qui est compatible avec un type spécifié.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -65,7 +65,7 @@ seq [1; 2; 3; 4; ...]
 seq [1; 2; 3; 4; ...]
 ```
 
-En F#, comme dans d’autres langages orientés objet, il existe les contextes dans lequel types dérivés ou des types qui implémentent les interfaces sont automatiquement convertis en un type de base ou d’un type d’interface. Ces conversions automatiques se produisent dans les arguments directs, mais pas lorsque le type est dans une position subordonnée, dans le cadre d’un type plus complexe comme un type de retour d’un type de fonction, ou un argument de type. Par conséquent, la notation de type flexible est particulièrement utile lorsque le type que vous l’appliquez fait partie d’un type plus complexe.
+En F #, comme dans d’autres langages orientés objet, il existe les contextes dans lequel types dérivés ou des types qui implémentent les interfaces sont automatiquement convertis en un type de base ou d’un type d’interface. Ces conversions automatiques se produisent dans les arguments directs, mais pas lorsque le type est dans une position subordonnée, dans le cadre d’un type plus complexe comme un type de retour d’un type de fonction, ou un argument de type. Par conséquent, la notation de type flexible est particulièrement utile lorsque le type que vous l’appliquez fait partie d’un type plus complexe.
 
 ## <a name="see-also"></a>Voir aussi
 

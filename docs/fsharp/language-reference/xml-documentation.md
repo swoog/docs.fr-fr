@@ -1,6 +1,6 @@
 ---
 title: Documentation XML (F#)
-description: En savoir plus sur la prise en charge en F# pour générer la documentation à partir de commentaires.
+description: 'En savoir plus sur la prise en charge en F # pour générer la documentation à partir de commentaires.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 1a4cb132e65b630821e5eb2b39276c1de99aff80
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,17 +11,17 @@ ms.locfileid: "45641623"
 ---
 # <a name="xml-documentation"></a>Documentation XML
 
-Vous pouvez générer la documentation à partir de trois barres obliques (/ / /) commentaires en F# de code. Commentaires XML peuvent précéder les déclarations dans les fichiers de code (.fs) ou des fichiers de signature (.fsi).
+Vous pouvez générer la documentation à partir de trois barres obliques (/ / /) commentaires en F # de code. Commentaires XML peuvent précéder les déclarations dans les fichiers de code (.fs) ou des fichiers de signature (.fsi).
 
 ## <a name="generating-documentation-from-comments"></a>Générer la Documentation à partir de commentaires
 
-La prise en charge en F# pour générer la documentation à partir de commentaires est identique à celui dans d’autres langages .NET Framework. Comme dans d’autres langages .NET Framework, le [-doc option du compilateur](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) vous permet de produire un fichier XML qui contient des informations que vous pouvez convertir dans la documentation à l’aide d’un outil tel que Sandcastle. La documentation générée à l’aide des outils conçus pour une utilisation avec les assemblys qui sont écrits dans d’autres langages .NET Framework généralement produire une vue de l’API sont basées sur la forme compilée de constructions F#. À moins que les outils prennent en charge F#, la documentation générée par ces outils ne correspond pas à la vue F# d’une API.
+La prise en charge en F # pour générer la documentation à partir de commentaires est identique à celui dans d’autres langages .NET Framework. Comme dans d’autres langages .NET Framework, le [-doc option du compilateur](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04) vous permet de produire un fichier XML qui contient des informations que vous pouvez convertir dans la documentation à l’aide d’un outil tel que Sandcastle. La documentation générée à l’aide des outils conçus pour une utilisation avec les assemblys qui sont écrits dans d’autres langages .NET Framework généralement produire une vue de l’API sont basées sur la forme compilée de constructions F #. À moins que les outils prennent en charge F #, la documentation générée par ces outils ne correspond pas à la vue F # d’une API.
 
 Pour plus d’informations sur la façon de générer la documentation à partir de XML, consultez [commentaires de Documentation XML &#40;C&#35; Guide de programmation&#41;](https://msdn.microsoft.com/library/b2s063f7).
 
 ## <a name="recommended-tags"></a>Balises recommandées
 
-Il existe deux façons d’écrire des commentaires de documentation XML. Une consiste à écrire la documentation directement dans un commentaire de trois barres obliques, sans l’aide de balises XML. Si vous procédez ainsi, le texte de commentaire entier est pris comme documentation de résumé pour la construction de code qui suit immédiatement. Utilisez cette méthode lorsque vous souhaitez écrire uniquement un bref résumé pour chaque construction. L’autre méthode consiste à utiliser des balises XML pour fournir une documentation plus structurée. La deuxième méthode vous permet de spécifier des remarques séparées pour un bref résumé, remarques supplémentaires, la documentation pour chaque paramètre et le paramètre de type et la levée des exceptions et une description de la valeur de retour. Le tableau suivant décrit les balises XML qui sont reconnues dans les commentaires de code XML F#.
+Il existe deux façons d’écrire des commentaires de documentation XML. Une consiste à écrire la documentation directement dans un commentaire de trois barres obliques, sans l’aide de balises XML. Si vous procédez ainsi, le texte de commentaire entier est pris comme documentation de résumé pour la construction de code qui suit immédiatement. Utilisez cette méthode lorsque vous souhaitez écrire uniquement un bref résumé pour chaque construction. L’autre méthode consiste à utiliser des balises XML pour fournir une documentation plus structurée. La deuxième méthode vous permet de spécifier des remarques séparées pour un bref résumé, remarques supplémentaires, la documentation pour chaque paramètre et le paramètre de type et la levée des exceptions et une description de la valeur de retour. Le tableau suivant décrit les balises XML qui sont reconnues dans les commentaires de code XML F #.
 
 |Syntaxe de balise|Description|
 |----------|-----------|

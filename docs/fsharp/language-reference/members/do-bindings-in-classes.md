@@ -1,6 +1,6 @@
 ---
 title: Liaisons do dans les classes (F#)
-description: Découvrez comment utiliser une liaison dans une définition de classe, qui effectue des actions lorsque l’objet est construit ou lorsque le type est tout d’abord utilisé ' do' F#.
+description: "Découvrez comment utiliser une liaison dans une définition de classe, qui effectue des actions lorsque l’objet est construit ou lorsque le type est tout d’abord utilisé ' do' F #."
 ms.date: 05/16/2016
 ms.openlocfilehash: e54a5bde52bf6973cc338c929ba99e6fd5b53127
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

@@ -1,6 +1,6 @@
 ---
 title: Tableaux (F#)
-description: Découvrez comment créer et utiliser des tableaux dans le langage de programmation F#.
+description: 'Découvrez comment créer et utiliser des tableaux dans le langage de programmation F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27b73efc900ac2efc813fe66f81baa2e9ae1e843
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -57,7 +57,7 @@ Lors de la notation de découpage est utilisée, une nouvelle copie du tableau e
 
 ## <a name="array-types-and-modules"></a>Modules et des Types de tableau
 
-Le type de tous les tableaux F# est le type .NET Framework <xref:System.Array?displayProperty=nameWithType>. Par conséquent, les tableaux F# prennent en charge toutes les fonctionnalités disponibles dans <xref:System.Array?displayProperty=nameWithType>.
+Le type de tous les tableaux F # est le type .NET Framework <xref:System.Array?displayProperty=nameWithType>. Par conséquent, les tableaux F # prennent en charge toutes les fonctionnalités disponibles dans <xref:System.Array?displayProperty=nameWithType>.
 
 Le module de bibliothèque [ `Microsoft.FSharp.Collections.Array` ](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1) prend en charge les opérations sur les tableaux unidimensionnels. Les modules `Array2D`, `Array3D`, et `Array4D` contiennent des fonctions qui prennent en charge les opérations sur les tableaux de deux, trois et quatre dimensions, respectivement. Vous pouvez créer des tableaux de rang supérieur à quatre à l’aide de <xref:System.Array?displayProperty=nameWithType>.
 
@@ -218,7 +218,7 @@ matrix.[*, 1..3]
 matrix.[1..3, 1..3]
 ```
 
-Avec F# 3,1, vous pouvez décomposer un tableau multidimensionnel en sous-tableaux de la dimension égal ou inférieure. Par exemple, vous pouvez obtenir un vecteur à partir d’une matrice en spécifiant une seule ligne ou colonne.
+Avec F # 3,1, vous pouvez décomposer un tableau multidimensionnel en sous-tableaux de la dimension égal ou inférieure. Par exemple, vous pouvez obtenir un vecteur à partir d’une matrice en spécifiant une seule ligne ou colonne.
 
 ```fsharp
 // Get row 3 from a matrix as a vector:
@@ -228,7 +228,7 @@ matrix.[3, *]
 matrix.[*, 3]
 ```
 
-Vous pouvez utiliser cette segmentation de la syntaxe pour les types qui implémentent les opérateurs d’accès élément et surchargé `GetSlice` méthodes. Par exemple, le code suivant crée un type Matrix qui encapsule le tableau 2D F#, implémente une propriété d’élément pour prendre en charge l’indexation de tableau et implémente trois versions de `GetSlice`. Si vous pouvez utiliser ce code en tant que modèle pour vos types de matrice, vous pouvez utiliser toutes les opérations de découpage décrits dans cette section.
+Vous pouvez utiliser cette segmentation de la syntaxe pour les types qui implémentent les opérateurs d’accès élément et surchargé `GetSlice` méthodes. Par exemple, le code suivant crée un type Matrix qui encapsule le tableau 2D F #, implémente une propriété d’élément pour prendre en charge l’indexation de tableau et implémente trois versions de `GetSlice`. Si vous pouvez utiliser ce code en tant que modèle pour vos types de matrice, vous pouvez utiliser toutes les opérations de découpage décrits dans cette section.
 
 ```fsharp
 type Matrix<'T>(N: int, M: int) =
@@ -418,4 +418,4 @@ Le module [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-
 ## <a name="see-also"></a>Voir aussi
 
 - [Informations de référence du langage F#](index.md)
-- [F#; Types](fsharp-types.md)
+- [F #; Types](fsharp-types.md)

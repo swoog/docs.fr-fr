@@ -1,6 +1,6 @@
 ---
 title: Attributs (F#)
-description: Découvrez comment F# attributs activer les métadonnées à appliquer à une construction de programmation.
+description: 'Découvrez comment F # attributs activer les métadonnées à appliquer à une construction de programmation.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -39,7 +39,7 @@ Dans cet exemple, l’attribut est `DllImportAttribute`, utilisé ici sous forme
 
 Les attributs sont une construction de programmation .NET qui permet à un objet appelé un *attribut* à associer à un type ou un autre élément de programme. L’élément de programme auquel un attribut est appliqué est appelé le *cible de l’attribut*. L’attribut contient généralement des métadonnées sur sa cible. Dans ce contexte, les métadonnées peuvent être des données sur le type autre que les champs et leurs membres.
 
-Attributs en F# peuvent être appliqués pour les constructions de programmation suivantes : fonctions, méthodes, assemblys, modules, types (classes, enregistrements, structures, interfaces, délégués, énumérations, unions et ainsi de suite), constructeurs, propriétés, champs, paramètres, paramètres de type et les valeurs de retour. Les attributs ne sont pas autorisées sur `let` liaisons à l’intérieur des classes, des expressions ou des expressions de flux de travail.
+Attributs en F # peuvent être appliqués pour les constructions de programmation suivantes : fonctions, méthodes, assemblys, modules, types (classes, enregistrements, structures, interfaces, délégués, énumérations, unions et ainsi de suite), constructeurs, propriétés, champs, paramètres, paramètres de type et les valeurs de retour. Les attributs ne sont pas autorisées sur `let` liaisons à l’intérieur des classes, des expressions ou des expressions de flux de travail.
 
 En règle générale, la déclaration d’attribut apparaît directement avant la déclaration de l’attribut cible. Plusieurs déclarations d’attribut peuvent être utilisées ensemble, comme suit.
 
@@ -59,7 +59,7 @@ Pour les cibles d’attribut `assembly` et `module`, vous appliquez les attribut
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6606.fs)]
 
-Si vous omettez la cible d’attribut pour un attribut appliqué à un `do` de liaison, le compilateur F# tente de déterminer la cible d’attribut qui a du sens pour cet attribut. Plusieurs classes d’attributs ont un attribut de type `System.AttributeUsageAttribute` qui inclut des informations sur les cibles possibles prises en charge pour cet attribut. Si le `System.AttributeUsageAttribute` indique que l’attribut prend en charge les fonctions en tant que cibles, l’attribut est pris à appliquer au point d’entrée principal du programme. Si le `System.AttributeUsageAttribute` indique que l’attribut prend en charge les assemblys en tant que cibles, le compilateur prend l’attribut à appliquer à l’assembly. La plupart des attributs ne s’appliquent pas aux fonctions et assemblys, mais dans les cas où ils le font, l’attribut est effectuée à appliquer à la fonction principale du programme. Si la cible d’attribut est spécifiée explicitement, l’attribut est appliqué à la cible spécifiée.
+Si vous omettez la cible d’attribut pour un attribut appliqué à un `do` de liaison, le compilateur F # tente de déterminer la cible d’attribut qui a du sens pour cet attribut. Plusieurs classes d’attributs ont un attribut de type `System.AttributeUsageAttribute` qui inclut des informations sur les cibles possibles prises en charge pour cet attribut. Si le `System.AttributeUsageAttribute` indique que l’attribut prend en charge les fonctions en tant que cibles, l’attribut est pris à appliquer au point d’entrée principal du programme. Si le `System.AttributeUsageAttribute` indique que l’attribut prend en charge les assemblys en tant que cibles, le compilateur prend l’attribut à appliquer à l’assembly. La plupart des attributs ne s’appliquent pas aux fonctions et assemblys, mais dans les cas où ils le font, l’attribut est effectuée à appliquer à la fonction principale du programme. Si la cible d’attribut est spécifiée explicitement, l’attribut est appliqué à la cible spécifiée.
 
 Bien que vous n’avez généralement pas besoin de spécifier l’attribut cible explicitement, les valeurs valides pour *cible* dans un attribut sont affichés dans le tableau ci-dessous, ainsi que des exemples d’utilisation.
 

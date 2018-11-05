@@ -1,6 +1,6 @@
 ---
 title: Types de collection F#
-description: En savoir plus sur les types de collection F# et quoi ils diffèrent des types de collections dans le .NET Framework.
+description: 'En savoir plus sur les types de collection F # et quoi ils diffèrent des types de collections dans le .NET Framework.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a3cfc3f06582c31a79dce43b583eca39f69ddf1e
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,13 +11,13 @@ ms.locfileid: "43864759"
 ---
 # <a name="f-collection-types"></a>Types de collection F#
 
-En passant en revue cette rubrique, vous pouvez déterminer quel type F# collection meilleures adapté à un besoin particulier. Ces types de collections diffèrent des types de collection dans le .NET Framework, telles que celles de la `System.Collections.Generic` espace de noms, car les types de collection F# sont conçues à partir d’un point de vue de la programmation fonctionnelle plutôt que d’un point de vue et orienté objet. Plus précisément, seul le regroupement de tableau comporte des éléments mutables. Par conséquent, lorsque vous modifiez une collection, vous créez une instance de la collection modifiée au lieu de la modification de la collection d’origine.
+En passant en revue cette rubrique, vous pouvez déterminer quel type F # collection meilleures adapté à un besoin particulier. Ces types de collections diffèrent des types de collection dans le .NET Framework, telles que celles de la `System.Collections.Generic` espace de noms, car les types de collection F # sont conçues à partir d’un point de vue de la programmation fonctionnelle plutôt que d’un point de vue et orienté objet. Plus précisément, seul le regroupement de tableau comporte des éléments mutables. Par conséquent, lorsque vous modifiez une collection, vous créez une instance de la collection modifiée au lieu de la modification de la collection d’origine.
 
 Types de collections diffèrent également dans le type de structure de données dans lequel les objets sont stockés. Structures de données telles que les tables de hachage, les listes liées et les tableaux ont des caractéristiques de performances différentes et un ensemble différent d’opérations disponibles.
 
 ## <a name="f-collection-types"></a>Types de collection F#
 
-Le tableau suivant présente les types de collection F#.
+Le tableau suivant présente les types de collection F #.
 
 |Type|Description|Liens associés|
 |----|-----------|-------------|
@@ -25,11 +25,11 @@ Le tableau suivant présente les types de collection F#.
 |[tableau](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)|Une collection de taille fixe, de base zéro et mutable d’éléments de données consécutifs qui sont tous du même type.|[Tableaux](arrays.md)<br /><br />[Module Array](https://msdn.microsoft.com/library/0cda8040-9396-40dd-8dcd-cf48542165a1)<br /><br />[Array2D Module](https://msdn.microsoft.com/library/ae1a9746-7817-4430-bcdb-a79c2411bbd3)<br /><br />[Module de Array3D](https://msdn.microsoft.com/library/c8355e2d-add8-48a4-8aa6-1c57ae74c560)|
 |[Seq](https://msdn.microsoft.com/library/2f0c87c6-8a0d-4d33-92a6-10d1d037ce75)|Une série logique d’éléments qui sont tous d’un type. Les séquences sont particulièrement utiles lorsque vous avez une vaste collection ordonnée de données, mais ne pensez pas nécessairement utiliser tous les éléments. Séquence des éléments sont calculées uniquement en tant que cela est nécessaire une séquence peut être plus performant qu’une liste si ce n’est pas tous les éléments sont utilisés. Les séquences sont représentées par le `seq<'T>` type, qui est un alias pour `IEnumerable<T>`. Par conséquent, n’importe quel type .NET Framework qui implémente `System.Collections.Generic.IEnumerable<'T>` peut être utilisé comme une séquence.|[Séquences](sequences.md)<br /><br />[Module Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684)|
 |[Carte](https://msdn.microsoft.com/library/975316ea-55e3-4987-9994-90897ad45664)|Dictionnaire immuable d’éléments. Éléments accessibles par clé.|[Module de mappage](https://msdn.microsoft.com/library/bfe61ead-f16c-416f-af98-56dbcbe23e4f)|
-|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un ensemble immuable qui est basé sur les arborescences binaires, lequel la comparaison est la fonction de comparaison structurelle F#, qui utilise potentiellement des implémentations de la `System.IComparable` interface sur les valeurs de clé.|[Module de jeu](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
+|[Set](https://msdn.microsoft.com/library/50cebdce-0cd7-4c5c-8ebc-f3a9e90b38d8)|Un ensemble immuable qui est basé sur les arborescences binaires, lequel la comparaison est la fonction de comparaison structurelle F #, qui utilise potentiellement des implémentations de la `System.IComparable` interface sur les valeurs de clé.|[Module de jeu](https://msdn.microsoft.com/library/61efa732-d55d-4c32-993f-628e2f98e6a0)|
 
 ### <a name="table-of-functions"></a>Table de fonctions
 
-Cette section compare les fonctions qui sont disponibles sur les types de collection F#. La complexité des calculs de la fonction est donnée, où N est la taille de la première collection, et où M est la taille de la deuxième collection, le cas échéant. Un tiret (-) indique que cette fonction n’est pas disponible sur la collection. Étant donné que les séquences sont évaluées en différé, une fonction telle que Seq.distinct peut être o (1), car elle retourne immédiatement, bien qu’il affecte toujours les performances de la séquence lors de l’énumération.
+Cette section compare les fonctions qui sont disponibles sur les types de collection F #. La complexité des calculs de la fonction est donnée, où N est la taille de la première collection, et où M est la taille de la deuxième collection, le cas échéant. Un tiret (-) indique que cette fonction n’est pas disponible sur la collection. Étant donné que les séquences sont évaluées en différé, une fonction telle que Seq.distinct peut être o (1), car elle retourne immédiatement, bien qu’il affecte toujours les performances de la séquence lors de l’énumération.
 
 |Fonction|Tableau|Liste|Séquence|Carte|Définir|Description|
 |--------|-----|----|--------|---|---|-----------|

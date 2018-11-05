@@ -1,6 +1,6 @@
 ---
 title: Cellules de référence (F#)
-description: Découvrez comment les cellules de référence F# sont des emplacements de stockage qui vous permettent de créer des valeurs mutables avec la sémantique de référence.
+description: 'Découvrez comment les cellules de référence F # sont des emplacements de stockage qui vous permettent de créer des valeurs mutables avec la sémantique de référence.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e2e1a91c62fd76e4992bc5ae11bb672766850718
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -74,7 +74,7 @@ La sortie est la suivante.
 
 Le champ `contents` est fourni à des fins de compatibilité avec d'autres versions de ML et produit un avertissement au cours de la compilation. Pour désactiver l'avertissement, utilisez l'option de compilateur `--mlcompatibility`. Pour plus d’informations, consultez l’article [Options du compilateur](compiler-options.md).
 
-Les programmeurs c# doivent savoir que `ref` en c# n’est pas la même chose que `ref` en F#. Les constructions équivalentes en F# sont [ByRef](byrefs.md), qui sont un concept différent à partir de cellules de référence.
+Les programmeurs c# doivent savoir que `ref` en c# n’est pas la même chose que `ref` en F #. Les constructions équivalentes en F # sont [ByRef](byrefs.md), qui sont un concept différent à partir de cellules de référence.
 
 Les valeurs marquées en tant que `mutable`peut être promue automatiquement en `'a ref` si capturées par une fermeture ; consultez [valeurs](values/index.md).
 
