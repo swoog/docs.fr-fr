@@ -1,6 +1,6 @@
 ---
 title: Listes (F#)
-description: 'En savoir plus sur les listes F #, une série chronologique, immuable d’éléments du même type.'
+description: En savoir plus sur les listes F#, une série chronologique, immuable d’éléments du même type.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48bf04f5ec490b49e63462affc0d4eadebe10ef
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -56,7 +56,7 @@ Fonctions permettant d’effectuer des opérations sur les listes sont disponibl
 
 En F#, les listes étant immuables, toute opération de changement a pour effet de générer de nouvelles listes au lieu de modifier les listes existantes.
 
-Listes dans F # sont implémentées comme des listes liées uniques, ce qui signifie que les opérations qui accèdent seulement au début de la liste sont o (1), et l’accès aux éléments est O (*n*).
+Listes dans F# sont implémentées comme des listes liées uniques, ce qui signifie que les opérations qui accèdent seulement au début de la liste sont o (1), et l’accès aux éléments est O (*n*).
 
 ## <a name="properties"></a>Properties
 

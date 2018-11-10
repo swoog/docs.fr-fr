@@ -2,12 +2,12 @@
 title: Chaînes de connexion dans ADO.NET
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 4dab2656ae8f39976b21f949c9548a3f718dfafc
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 078fdab257115296f9ff00330265cb14ff8674c8
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50409455"
 ---
 # <a name="connection-strings-in-adonet"></a>Chaînes de connexion dans ADO.NET
 
@@ -19,7 +19,7 @@ Une chaîne de connexion est une liste délimitée par des points-virgules de pa
   
     keyword1=value; keyword2=value;
   
-Mots clés ne respectent pas la casse. Valeurs, toutefois, peuvent être la casse, en fonction de la source de données. Peuvent contenir des mots clés et valeurs [blancs](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Un espace blanc de début et de fin est ignoré dans les mots clés et guillemets valeurs.
+Mots clés ne respectent pas la casse. Valeurs, toutefois, peuvent être la casse, en fonction de la source de données. Peuvent contenir des mots clés et valeurs [blancs](https://en.wikipedia.org/wiki/Whitespace_character#Unicode). Espaces de début et de fin est ignoré dans les mots clés et guillemets valeurs.
 
 Si une valeur contient le point-virgule, [caractères de contrôle Unicode](https://en.wikipedia.org/wiki/Unicode_control_characters), ou à gauche ou un espace blanc, elle doit figurer entre guillemets simples ou doubles. Exemple :
 

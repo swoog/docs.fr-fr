@@ -1,6 +1,6 @@
 ---
 title: Modèles actifs (F#)
-description: 'Découvrez comment utiliser des modèles actifs pour définir des partitions nommées qui subdivisent les données d’entrée dans le langage de programmation F #.'
+description: Découvrez comment utiliser des modèles actifs pour définir des partitions nommées qui subdivisent les données d’entrée dans le langage de programmation F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 4fb7d3e2b9c7e6f1c1ed9d64a47728c7f40017c8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

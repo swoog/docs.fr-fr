@@ -1,6 +1,6 @@
 ---
 title: 'Exceptions : expression try...with (F#)'
-description: 'Découvrez comment utiliser l’expression « try... with » F # pour la gestion des exceptions.'
+description: Découvrez comment utiliser l’expression « try... with » F# pour la gestion des exceptions.
 ms.date: 05/16/2016
 ms.openlocfilehash: 588960c0f8ccedb431c37d0f1314bf1a293b638c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "44042164"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Exceptions : expression try...with
 
-Cette rubrique décrit la `try...with` expression, l’expression qui est utilisée pour la gestion des exceptions dans le langage F #.
+Cette rubrique décrit la `try...with` expression, l’expression qui est utilisée pour la gestion des exceptions dans le langage F#.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ with
 
 ## <a name="remarks"></a>Notes
 
-Le `try...with` expression est utilisée pour gérer les exceptions en F #. Elle est similaire à la `try...catch` instruction en langage c#. Dans la syntaxe précédente, le code dans *expression1* peut générer une exception. Le `try...with` expression retourne une valeur. Si aucune exception n’est levée, l’expression entière retourne la valeur de *expression1*. Si une exception est levée, chacun *modèle* est ensuite comparé avec l’exception et pour le premier modèle correspondant, correspondant *expression*, connu sous le *Gestionnaire d’exceptions*, pour cette branche est exécutée, et l’expression globale retourne la valeur de l’expression dans ce gestionnaire d’exceptions. Si aucun modèle ne correspond, l’exception se propage la pile des appels jusqu'à ce qu’un gestionnaire correspondant est trouvé. Les types des valeurs retournées de chaque expression dans les gestionnaires d’exceptions doivent correspondre au type retourné à partir de l’expression dans le `try` bloc.
+Le `try...with` expression est utilisée pour gérer les exceptions en F#. Elle est similaire à la `try...catch` instruction en langage c#. Dans la syntaxe précédente, le code dans *expression1* peut générer une exception. Le `try...with` expression retourne une valeur. Si aucune exception n’est levée, l’expression entière retourne la valeur de *expression1*. Si une exception est levée, chacun *modèle* est ensuite comparé avec l’exception et pour le premier modèle correspondant, correspondant *expression*, connu sous le *Gestionnaire d’exceptions*, pour cette branche est exécutée, et l’expression globale retourne la valeur de l’expression dans ce gestionnaire d’exceptions. Si aucun modèle ne correspond, l’exception se propage la pile des appels jusqu'à ce qu’un gestionnaire correspondant est trouvé. Les types des valeurs retournées de chaque expression dans les gestionnaires d’exceptions doivent correspondre au type retourné à partir de l’expression dans le `try` bloc.
 
 Fréquemment, le fait qu’une erreur s’est produite également signifie qu’il n’existe aucune valeur valide qui peut être retournée par les expressions dans chaque gestionnaire d’exceptions. Un modèle fréquent consiste à avoir le type de l’expression à être un type d’option. L’exemple de code suivant illustre ce modèle.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet5601.fs)]
 
-Les exceptions peuvent être des exceptions .NET, ou ils peuvent être des exceptions F #. Vous pouvez définir des exceptions F # à l’aide de la `exception` mot clé.
+Les exceptions peuvent être des exceptions .NET, ou ils peuvent être des exceptions F#. Vous pouvez définir des exceptions F# à l’aide de la `exception` mot clé.
 
 Vous pouvez utiliser divers modèles de filtrer sur le type d’exception et d’autres conditions ; les options sont résumées dans le tableau suivant.
 
@@ -40,7 +40,7 @@ Vous pouvez utiliser divers modèles de filtrer sur le type d’exception et d�
 |-------|-----------|
 |:? *type d’exception*|Correspond au type d’exception .NET spécifié.|
 |:? *type d’exception* comme *identificateur*|Correspond au type d’exception .NET spécifié, mais donne une valeur nommée à l’exception.|
-|*nom de l’exception*(*arguments*)|Correspond à un type d’exception F # et lie les arguments.|
+|*nom de l’exception*(*arguments*)|Correspond à un type d’exception F# et lie les arguments.|
 |*identifier*|Correspond à n’importe quelle exception et lie le nom à l’objet exception. Équivalent à **: ? System.Exception comme *** identificateur*|
 |*identificateur* lorsque *condition*|Correspond à une exception si la condition est vraie.|
 

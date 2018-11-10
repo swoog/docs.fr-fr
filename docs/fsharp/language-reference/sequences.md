@@ -1,6 +1,6 @@
 ---
 title: Séquences (F#)
-description: 'Découvrez comment utiliser des séquences de F #, lorsque vous avez une vaste collection ordonnée de données, mais ne pensez pas nécessairement utiliser tous les éléments.'
+description: Découvrez comment utiliser des séquences de F#, lorsque vous avez une vaste collection ordonnée de données, mais ne pensez pas nécessairement utiliser tous les éléments.
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -22,7 +22,7 @@ Un *expression de séquence* est une expression qui correspond à une séquence.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Expressions de séquence sont constituées d’expressions F # qui produisent des valeurs de la séquence. Ils peuvent utiliser le `yield` mot clé pour produire les valeurs qui font partie de la séquence.
+Expressions de séquence sont constituées d’expressions F# qui produisent des valeurs de la séquence. Ils peuvent utiliser le `yield` mot clé pour produire les valeurs qui font partie de la séquence.
 
 Voici un exemple.
 
@@ -62,7 +62,7 @@ L’exemple suivant illustre l’utilisation de `yield!` pour combiner des séqu
 
 Séquences prennent en charge la plupart des fonctions identiques à celles [répertorie](lists.md). Séquences prennent également en charge les opérations telles que le regroupement et le décompte à l’aide de fonctions de génération de clé. Séquences prennent également en charge des fonctions plus diverses pour l’extraction de sous-séquences.
 
-Nombreux types de données, telles que les listes, les tableaux, les jeux et les mappages sont implicitement des séquences, car ils sont des collections énumérables. Une fonction qui prend une séquence comme un argument fonctionne avec un des types de données F # courants, en outre à n’importe quel type de données .NET Framework qui implémente `System.Collections.Generic.IEnumerable<'T>`. Par opposition à une fonction qui accepte une liste en tant qu’argument, ce qui peut prendre uniquement les listes. Le type `seq<'T>` est une abréviation de type pour `IEnumerable<'T>`. Cela signifie que n’importe quel type qui implémente le modèle générique `System.Collections.Generic.IEnumerable<'T>`, qui inclut des tableaux, listes, définit et cartes dans F # et également la plupart des .NET Framework types de collections, est compatible avec le `seq` type et peut être utilisée partout où une séquence est attendue.
+Nombreux types de données, telles que les listes, les tableaux, les jeux et les mappages sont implicitement des séquences, car ils sont des collections énumérables. Une fonction qui prend une séquence comme un argument fonctionne avec un des types de données F# courants, en outre à n’importe quel type de données .NET Framework qui implémente `System.Collections.Generic.IEnumerable<'T>`. Par opposition à une fonction qui accepte une liste en tant qu’argument, ce qui peut prendre uniquement les listes. Le type `seq<'T>` est une abréviation de type pour `IEnumerable<'T>`. Cela signifie que n’importe quel type qui implémente le modèle générique `System.Collections.Generic.IEnumerable<'T>`, qui inclut des tableaux, listes, définit et cartes dans F# et également la plupart des .NET Framework types de collections, est compatible avec le `seq` type et peut être utilisée partout où une séquence est attendue.
 
 ## <a name="module-functions"></a>Fonctions de module
 

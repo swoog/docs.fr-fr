@@ -1,5 +1,5 @@
 ---
-title: 'Prise en main le stockage Table Azure en F #'
+title: Prise en main le stockage Table Azure en F#
 description: Store données structurées dans le cloud à l’aide du stockage Table Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
@@ -10,7 +10,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "43519533"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aide de F # # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aide de F# # 
 
 Stockage Table Azure est un service qui stocke des données NoSQL structurées dans le cloud. Stockage de table est un magasin de clés/attributs doté d’une conception sans schéma. Étant donné que le stockage de tables est sans schéma, il est facile d’adapter vos données en tant que l’évolution des besoins de votre application. Accès aux données est rapide et économique pour toutes sortes d’applications. Stockage table est généralement beaucoup moins coûteux que le SQL traditionnel pour des volumes de données similaires.
 
@@ -30,16 +30,16 @@ Pour plus d’informations, consultez [Introduction à l’API de Table Azure Co
 
 ## <a name="about-this-tutorial"></a>À propos de ce didacticiel
 
-Ce didacticiel montre comment écrire du code F # pour effectuer certaines tâches courantes à l’aide du stockage Table Azure ou l’API Azure Cosmos DB Table, y compris la création et suppression d’une table et insertion de la mise à jour, suppression et interrogation des données de table.
+Ce didacticiel montre comment écrire du code F# pour effectuer certaines tâches courantes à l’aide du stockage Table Azure ou l’API Azure Cosmos DB Table, y compris la création et suppression d’une table et insertion de la mise à jour, suppression et interrogation des données de table.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser ce guide, vous devez d’abord [créer un compte de stockage Azure](/azure/storage/storage-create-storage-account) ou [compte Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Créer de Script F # et démarrer F # Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Créer de Script F# et démarrer F# Interactive
 
-Les exemples de cet article peuvent être utilisés dans une application F # ou un script F #. Pour créer un script F #, créez un fichier avec le `.fsx` extension, par exemple `tables.fsx`, dans votre environnement de développement F #.
+Les exemples de cet article peuvent être utilisés dans une application F# ou un script F#. Pour créer un script F#, créez un fichier avec le `.fsx` extension, par exemple `tables.fsx`, dans votre environnement de développement F#.
 
 Ensuite, utilisez un [Gestionnaire de package](package-management.md) comme [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) pour installer le `WindowsAzure.Storage` package et référence `WindowsAzure.Storage.dll` dans votre script à l’aide d’un `#r`directive. Effectuez à nouveau pour `Microsoft.WindowsAzure.ConfigurationManager` afin d’obtenir de l’espace de noms Microsoft.Azure.
 

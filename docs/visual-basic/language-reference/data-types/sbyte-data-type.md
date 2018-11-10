@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c353aa8c5ac1d1912bc303f8f741ff0911cdf021
+ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196919"
+ms.lasthandoff: 11/03/2018
+ms.locfileid: "50980818"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte, type de données (Visual Basic)
 
@@ -58,7 +58,7 @@ Si le littéral entier est en dehors de la plage de `SByte` (autrement dit, s’
 
 - Désactive les contrôles de limites d’entier en compilant avec le `/removeintchecks` commutateur de compilateur.
 
-- Utilisez un [caractère de type](../../programming-guide\language-features\data-types/type-characters.md) pour définir explicitement la valeur littérale que vous souhaitez affecter à la `SByte`. L’exemple suivant assigne un littéral négatif `Short` valeur à un `SByte`. Notez que, pour les nombres négatifs, le bit de poids fort du mot de poids fort du littéral numérique doit être défini. Dans le cas de notre exemple, il est de type bit 15 du littéral `Short` valeur.
+- Utilisez un [caractère de type](../../programming-guide/language-features/data-types/type-characters.md) pour définir explicitement la valeur littérale que vous souhaitez affecter à la `SByte`. L’exemple suivant assigne un littéral négatif `Short` valeur à un `SByte`. Notez que, pour les nombres négatifs, le bit de poids fort du mot de poids fort du littéral numérique doit être défini. Dans le cas de notre exemple, il est de type bit 15 du littéral `Short` valeur.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 

@@ -1,5 +1,5 @@
 ---
-title: 'Copier et mettre à jour des Expressions d’enregistrement (F #)'
+title: Copier et mettre à jour des Expressions d’enregistrement (F#)
 description: Découvrez comment écrire une « copie et mise à jour enregistrement expression » qui copie un existant, ces mises à jour spécifié de champs et retourne l’enregistrement mis à jour.
 author: ChrSteinert
 ms.date: 06/04/2016

@@ -1,6 +1,6 @@
 ---
-title: 'Conventions de codage F #'
-description: 'Découvrez les idiomes et des recommandations générales lors de l’écriture de code F #.'
+title: Conventions de codage F#
+description: Découvrez les idiomes et des recommandations générales lors de l’écriture de code F#.
 ms.date: 05/14/2018
 ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,13 +9,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "49087386"
 ---
-# <a name="f-coding-conventions"></a>Conventions de codage F #
+# <a name="f-coding-conventions"></a>Conventions de codage F#
 
-Les conventions suivantes sont formulées à partir de l’expérience avec F # volumineux des codes base. Le [cinq principes du bon code F #](index.md#five-principles-of-good-f-code) constituent la base de chaque recommandation. Elles sont liées à la [instructions de conception de composant F #](component-design-guidelines.md), mais sont applicables à n’importe quel code F #, pas seulement les composants tels que des bibliothèques.
+Les conventions suivantes sont formulées à partir de l’expérience avec F# volumineux des codes base. Le [cinq principes du bon code F#](index.md#five-principles-of-good-f-code) constituent la base de chaque recommandation. Elles sont liées à la [instructions de conception de composant F#](component-design-guidelines.md), mais sont applicables à n’importe quel code F#, pas seulement les composants tels que des bibliothèques.
 
 ## <a name="organizing-code"></a>Organisation du code
 
-F # propose deux méthodes principales pour organiser le code : modules et les espaces de noms. Ceux-ci sont similaires, mais que vous n’ont pas les différences suivantes :
+F# propose deux méthodes principales pour organiser le code : modules et les espaces de noms. Ceux-ci sont similaires, mais que vous n’ont pas les différences suivantes :
 
 * Espaces de noms sont compilés en tant qu’espaces de noms .NET. Les modules sont compilés en tant que classes statiques.
 * Espaces de noms sont toujours de niveau supérieur. Modules peuvent être imbriqués dans d’autres modules et de niveau supérieur.
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-À l’aide d’un module de niveau supérieur peuvent être absentes différent lorsqu’elle est appelée uniquement à partir de F #, mais pour les consommateurs de c#, vous serez peut-être surpris les appelants par devoir qualifier `MyClass` avec la `MyCode` module.
+À l’aide d’un module de niveau supérieur peuvent être absentes différent lorsqu’elle est appelée uniquement à partir de F#, mais pour les consommateurs de c#, vous serez peut-être surpris les appelants par devoir qualifier `MyClass` avec la `MyCode` module.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>Appliquer avec soin `[<AutoOpen>]`
 
-Le `[<AutoOpen>]` construction permettre polluent l’étendue de ce qui est disponible aux appelants, et la réponse à quelque chose de provenance est « magique ». Cela n’est généralement pas une bonne chose. Une exception à cette règle est la bibliothèque principale F # lui-même (bien que cela soit également un peu controversé).
+Le `[<AutoOpen>]` construction permettre polluent l’étendue de ce qui est disponible aux appelants, et la réponse à quelque chose de provenance est « magique ». Cela n’est généralement pas une bonne chose. Une exception à cette règle est la bibliothèque principale F# lui-même (bien que cela soit également un peu controversé).
 
 Toutefois, il est pratique si vous disposez des fonctionnalités d’assistance pour une API publique que vous souhaitez organiser séparément à partir de cette API publique.
 
@@ -90,13 +90,13 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>Tri `open` instructions topologiquement
 
-En F #, l’ordre des déclarations est important, y compris avec `open` instructions. Contrairement à c#, où l’effet de `using` et `using static` est indépendante de l’ordre de ces instructions dans un fichier.
+En F#, l’ordre des déclarations est important, y compris avec `open` instructions. Contrairement à c#, où l’effet de `using` et `using static` est indépendante de l’ordre de ces instructions dans un fichier.
 
-En F #, les éléments ouverts dans une étendue peuvent occulter d’autres déjà présent. Cela signifie que la réorganisation `open` instructions pourraient modifier la signification du code. Par conséquent, toute arbitraire de tri de tous les `open` instructions (par exemple, dans l’ordre alphanumérique) n’est généralement pas recommandé, peur de vous générer un comportement différent que vous pourriez vous attendre.
+En F#, les éléments ouverts dans une étendue peuvent occulter d’autres déjà présent. Cela signifie que la réorganisation `open` instructions pourraient modifier la signification du code. Par conséquent, toute arbitraire de tri de tous les `open` instructions (par exemple, dans l’ordre alphanumérique) n’est généralement pas recommandé, peur de vous générer un comportement différent que vous pourriez vous attendre.
 
 Au lieu de cela, nous vous recommandons de les trier [topologiquement](https://en.wikipedia.org/wiki/Topological_sorting); autrement dit, commander votre `open` instructions dans l’ordre dans lequel _couches_ de votre système sont définis. Effectuant d’alphanumériques dans les différentes couches topologiques de tri peut également être considéré comme.
 
-Par exemple, voici le tri topologique pour le fichier F # du compilateur service public API :
+Par exemple, voici le tri topologique pour le fichier F# du compilateur service public API :
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -190,7 +190,7 @@ Gestion des erreurs dans les systèmes volumineux s’avérer complexe et subtil
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>Représentent les cas d’erreur et l’état non conforme dans les types intrinsèques à votre domaine
 
-Avec [Unions discriminées](../language-reference/discriminated-unions.md), F # vous donne la possibilité pour représenter l’état du programme défectueux dans votre système de type. Exemple :
+Avec [Unions discriminées](../language-reference/discriminated-unions.md), F# vous donne la possibilité pour représenter l’état du programme défectueux dans votre système de type. Exemple :
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -219,11 +219,11 @@ En règle générale, si vous pouvez modéliser les différentes façons que que
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>Utilisez les exceptions lorsque les erreurs ne peut pas être représentées avec des types
 
-Pas toutes les erreurs peuvent être représentés dans un domaine qui pose problème. Ces types d’erreurs sont *exceptionnelles* par nature, par conséquent, la possibilité de déclencher et intercepter les exceptions en F #.
+Pas toutes les erreurs peuvent être représentés dans un domaine qui pose problème. Ces types d’erreurs sont *exceptionnelles* par nature, par conséquent, la possibilité de déclencher et intercepter les exceptions en F#.
 
-Tout d’abord, il est recommandé de lire le [instructions de conception d’Exception](../../standard/design-guidelines/exceptions.md). Il s’agit également applicables à F #.
+Tout d’abord, il est recommandé de lire le [instructions de conception d’Exception](../../standard/design-guidelines/exceptions.md). Il s’agit également applicables à F#.
 
-Les constructions principales disponibles en F # dans le cadre de déclenchement d’exceptions doivent être considérées dans l’ordre de préférence suivant :
+Les constructions principales disponibles en F# dans le cadre de déclenchement d’exceptions doivent être considérées dans l’ordre de préférence suivant :
 
 | Fonction | Syntaxe | Objectif |
 |----------|--------|---------|
@@ -240,7 +240,7 @@ Le `failwith` et `failwithf` fonctions doivent généralement être évitées, c
 
 ### <a name="using-exception-handling-syntax"></a>À l’aide de la syntaxe de gestion des exceptions
 
-F # prend en charge les modèles d’exception via la `try...with` syntaxe :
+F# prend en charge les modèles d’exception via la `try...with` syntaxe :
 
 ```fsharp
 try
@@ -317,15 +317,15 @@ let tryReadAllTextIfPresent (path : string) =
 
 Au lieu de fonctionner comme un fourre-tout, cette fonction désormais correctement gérera le cas lorsqu’un fichier est introuvable et affecter ce sens à un retour. Cette valeur de retour peut mapper à ce cas d’erreur lors de pas en ignorant toutes les informations contextuelles ou forcer les appelants pour y faire face à un cas qui ne peuvent pas être pertinent à ce stade dans le code.
 
-Types tels que `Result<'Success, 'Error>` conviennent pour les opérations de base où ils ne sont pas imbriqués, des types F # facultatifs sont parfaits pour représenter lorsque quelque chose peut retourner *quelque chose* ou *rien*. Ils ne sont pas un substitut pour les exceptions, cependant et ne doivent pas être utilisés dans une tentative pour remplacer des exceptions. Au lieu de cela, elles doivent être appliquées judicieusement à des aspects spécifiques d’adresse de stratégie de gestion des erreurs et des exceptions de manière ciblée.
+Types tels que `Result<'Success, 'Error>` conviennent pour les opérations de base où ils ne sont pas imbriqués, des types F# facultatifs sont parfaits pour représenter lorsque quelque chose peut retourner *quelque chose* ou *rien*. Ils ne sont pas un substitut pour les exceptions, cependant et ne doivent pas être utilisés dans une tentative pour remplacer des exceptions. Au lieu de cela, elles doivent être appliquées judicieusement à des aspects spécifiques d’adresse de stratégie de gestion des erreurs et des exceptions de manière ciblée.
 
 ## <a name="partial-application-and-point-free-programming"></a>Application partielle et libre de point de programmation
 
-F # prend en charge application partielle et par conséquent, les différentes manières de programme dans un style libre de point. Ceci peut être avantageux de réutilisation du code au sein d’un module ou de l’implémentation de quelque chose, mais il n’est généralement pas quelque chose pour exposer publiquement. En général, libre de point de programmation n’est pas une raison elle-même et peut ajouter un frein COGNITIF pour les personnes qui ne sont pas plonge dans le style.
+F# prend en charge application partielle et par conséquent, les différentes manières de programme dans un style libre de point. Ceci peut être avantageux de réutilisation du code au sein d’un module ou de l’implémentation de quelque chose, mais il n’est généralement pas quelque chose pour exposer publiquement. En général, libre de point de programmation n’est pas une raison elle-même et peut ajouter un frein COGNITIF pour les personnes qui ne sont pas plonge dans le style.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>N’utilisez pas application partielle et des curryfication dans les API publiques
 
-Avec peu d’exception, l’utilisation d’une application partielle dans les API publiques permettre prêter à confuse pour les consommateurs. En règle générale, `let`-valeurs liées dans le code F # sont **valeurs**, et non **des valeurs de fonction**. Combinaison de valeurs et les valeurs de fonction peut entraîner l’enregistrement d’un petit nombre de lignes de code en échange d’un peu de surcharge cognitive, en particulier si combinées avec des opérateurs tels que `>>` pour composer des fonctions.
+Avec peu d’exception, l’utilisation d’une application partielle dans les API publiques permettre prêter à confuse pour les consommateurs. En règle générale, `let`-valeurs liées dans le code F# sont **valeurs**, et non **des valeurs de fonction**. Combinaison de valeurs et les valeurs de fonction peut entraîner l’enregistrement d’un petit nombre de lignes de code en échange d’un peu de surcharge cognitive, en particulier si combinées avec des opérateurs tels que `>>` pour composer des fonctions.
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Prendre en compte les implications en matière d’outils pour la programmation exempt de point
 
@@ -418,7 +418,7 @@ Cette technique ne doit pas être appliquée universellement à votre base de co
 
 ## <a name="access-control"></a>Contrôle d'accès
 
-F # offre plusieurs options pour [contrôle d’accès](../language-reference/access-control.md), hérité de ce qui est disponible dans le runtime .NET. Ils ne sont pas simplement utilisables pour les types : vous pouvez les utiliser pour les fonctions, trop.
+F# offre plusieurs options pour [contrôle d’accès](../language-reference/access-control.md), hérité de ce qui est disponible dans le runtime .NET. Ils ne sont pas simplement utilisables pour les types : vous pouvez les utiliser pour les fonctions, trop.
 
 * Préférez non -`public` types et membres jusqu'à ce que vous avez besoin pour être utilisable publiquement. Cela réduit également les deux consommateurs à.
 * Vous efforcer de garder toutes les fonctionnalités d’assistance `private`.
@@ -426,7 +426,7 @@ F # offre plusieurs options pour [contrôle d’accès](../language-reference/ac
 
 ## <a name="type-inference-and-generics"></a>Inférence de type et génériques
 
-Inférence de type peut vous faire gagner de la saisie d’un grand nombre de réutilisable. Et la généralisation automatique dans le compilateur F # peut vous aider à écrire du code plus générique avec pratiquement aucun effort supplémentaire de votre part. Toutefois, ces fonctionnalités ne sont pas universellement bonnes.
+Inférence de type peut vous faire gagner de la saisie d’un grand nombre de réutilisable. Et la généralisation automatique dans le compilateur F# peut vous aider à écrire du code plus générique avec pratiquement aucun effort supplémentaire de votre part. Toutefois, ces fonctionnalités ne sont pas universellement bonnes.
 
 * Envisagez d’étiqueter les noms des arguments avec des types explicites dans les API publiques et ne vous basez pas sur l’inférence de type pour cela.
 
@@ -440,17 +440,17 @@ Inférence de type peut vous faire gagner de la saisie d’un grand nombre de r�
 
     Il s’agit du moyen général de faire des choses dans .NET, il est recommandé d’utiliser la casse Pascal plutôt que de snake_case ou de la casse mixte.
 
-Enfin, la généralisation automatique n’est pas toujours une aubaine pour les personnes qui débutent avec F # ou un grand code base. Il est nécessaire à l’aide de composants qui sont génériques. En outre, si automatiquement généralisées fonctions ne sont pas utilisées avec différents types d’entrée (permettent uniquement si elles sont conçues pour être utilisé en tant que tel), alors il n’existe aucun avantage réel d’y être un générique à ce stade dans le temps. Toujours prendre en compte si le code que vous écrivez est réellement avantage d’être générique.
+Enfin, la généralisation automatique n’est pas toujours une aubaine pour les personnes qui débutent avec F# ou un grand code base. Il est nécessaire à l’aide de composants qui sont génériques. En outre, si automatiquement généralisées fonctions ne sont pas utilisées avec différents types d’entrée (permettent uniquement si elles sont conçues pour être utilisé en tant que tel), alors il n’existe aucun avantage réel d’y être un générique à ce stade dans le temps. Toujours prendre en compte si le code que vous écrivez est réellement avantage d’être générique.
 
 ## <a name="performance"></a>Performances
 
-Valeurs de F # sont immuables par défaut, ce qui vous permet d’éviter certaines catégories de bogues (en particulier les impliquant d’accès concurrentiel et parallélisme). Toutefois, dans certains cas, afin d’obtenir une efficacité optimale (ou même raisonnable) de la durée d’exécution ou des allocations de mémoire, une étendue de travail peut-être mieux être implémentée à l’aide de mutation in situ d’état. Cela est possible dans une base opt-in avec F # avec le `mutable` mot clé.
+Valeurs de F# sont immuables par défaut, ce qui vous permet d’éviter certaines catégories de bogues (en particulier les impliquant d’accès concurrentiel et parallélisme). Toutefois, dans certains cas, afin d’obtenir une efficacité optimale (ou même raisonnable) de la durée d’exécution ou des allocations de mémoire, une étendue de travail peut-être mieux être implémentée à l’aide de mutation in situ d’état. Cela est possible dans une base opt-in avec F# avec le `mutable` mot clé.
 
-Toutefois, utiliser des `mutable` en F # peuvent avoir l’impression ne correspond pas à pureté fonctionnelle. Ceci fonctionne bien, si vous ajustez les attentes à partir de la pureté [transparence référentielle](https://en.wikipedia.org/wiki/Referential_transparency). Transparence référentielle - pas pureté - est l’objectif final lors de l’écriture de fonctions F #. Cela vous permet d’écrire une interface fonctionnelle par rapport à une implémentation basée sur une mutation pour le code critique de performances.
+Toutefois, utiliser des `mutable` en F# peuvent avoir l’impression ne correspond pas à pureté fonctionnelle. Ceci fonctionne bien, si vous ajustez les attentes à partir de la pureté [transparence référentielle](https://en.wikipedia.org/wiki/Referential_transparency). Transparence référentielle - pas pureté - est l’objectif final lors de l’écriture de fonctions F#. Cela vous permet d’écrire une interface fonctionnelle par rapport à une implémentation basée sur une mutation pour le code critique de performances.
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Encapsuler le code mutable dans les interfaces immuables
 
-Transparence référentielle en tant qu’objectif, il est essentiel d’écrire du code qui n’expose pas l’underbelly mutable de fonctions critiques pour les performances. Par exemple, le code suivant implémente la `Array.contains` fonction dans la bibliothèque principale F # :
+Transparence référentielle en tant qu’objectif, il est essentiel d’écrire du code qui n’expose pas l’underbelly mutable de fonctions critiques pour les performances. Par exemple, le code suivant implémente la `Array.contains` fonction dans la bibliothèque principale F# :
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -546,7 +546,7 @@ Outre le point unique de mutation au milieu de l’expression lambda, tout autre
 
 ## <a name="object-programming"></a>Programmation de l’objet
 
-F # offre une prise en charge complète pour les objets et concepts (OO) orientée objet. Bien que de nombreux concepts OO sont puissants et utiles, certaines d'entre elles sont idéales à utiliser. Les listes suivantes proposent des conseils sur les catégories de fonctionnalités OO à un niveau élevé.
+F# offre une prise en charge complète pour les objets et concepts (OO) orientée objet. Bien que de nombreux concepts OO sont puissants et utiles, certaines d'entre elles sont idéales à utiliser. Les listes suivantes proposent des conseils sur les catégories de fonctionnalités OO à un niveau élevé.
 
 **Envisagez d’utiliser ces fonctionnalités dans de nombreuses situations :**
 
@@ -578,7 +578,7 @@ F # offre une prise en charge complète pour les objets et concepts (OO) orient�
 
 ### <a name="prefer-composition-over-inheritance"></a>Préférer composition de l’héritage
 
-[Composition au fil de l’héritage](https://en.wikipedia.org/wiki/Composition_over_inheritance) est un idiome de longue date bon code F # peut respecter. Le principe fondamental est que vous ne devez pas exposer une classe de base et forcer les appelants d’hériter de cette classe de base pour obtenir les fonctionnalités.
+[Composition au fil de l’héritage](https://en.wikipedia.org/wiki/Composition_over_inheritance) est un idiome de longue date bon code F# peut respecter. Le principe fondamental est que vous ne devez pas exposer une classe de base et forcer les appelants d’hériter de cette classe de base pour obtenir les fonctionnalités.
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Utiliser des expressions d’objet pour implémenter les interfaces si vous n’avez pas besoin d’une classe
 

@@ -1,6 +1,6 @@
 ---
 title: Critères spéciaux (F#)
-description: 'Découvrez comment les modèles sont utilisés en F # pour comparer des données avec les structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données.'
+description: Découvrez comment les modèles sont utilisés en F# pour comparer des données avec les structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "45991422"
 ---
 # <a name="pattern-matching"></a>Critères spéciaux
 
-Les modèles sont des règles de transformation des données d’entrée. Elles sont utilisées dans le langage F # pour comparer des données avec une ou plusieurs structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données de différentes manières.
+Les modèles sont des règles de transformation des données d’entrée. Elles sont utilisées dans le langage F# pour comparer des données avec une ou plusieurs structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données de différentes manières.
 
 ## <a name="remarks"></a>Notes
 

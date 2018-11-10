@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06661cb2c34d1da9085fa2129cb0c3307b99097e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865551"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757424"
 ---
 # <a name="choosing-between-class-and-struct"></a>Choix entre classe et structure
 Une des décisions de conception de base auxquelles est confronté chaque concepteur de framework est de concevoir un type sous forme de classe (type référence) ou sous forme de struct (type valeur). Il est nécessaire de bien comprendre les différences de comportement entre les types référence et les types valeur pour faire ce choix.  
@@ -28,7 +28,7 @@ Une des décisions de conception de base auxquelles est confronté chaque concep
   
  Ensuite, les tableaux de types référence sont alloués hors ligne, ce qui signifie que les éléments du tableau sont simplement des références à des instances de type référence présentes dans la pile. Les tableaux de types valeur sont alloués en ligne, ce qui signifie que les éléments du tableau sont les instances réelles du type valeur. Par conséquent, les allocations et les désallocations de tableaux de types valeur sont beaucoup moins coûteuses en ressources que les allocations et les désallocations de tableaux de types référence. En outre, dans la plupart des cas, les tableaux de types valeur présentent une bien meilleure localité des références.  
   
- La différence suivante est liée à l’utilisation de la mémoire. Les types valeur subissent un boxing lors du cast en un type référence ou en une des interfaces qu’ils implémentent. Ils subissent un unboxing quand ils sont recastés en type valeur. Comme les box sont des objets qui sont alloués à la pile et récupérés par le récupérateur de mémoire, trop de boxing et d’unboxing peut avoir un impact négatif sur la pile, sur le récupérateur de mémoire et au final sur les performances de l’application.  En revanche, aucun boxing de ce type ne se produit quand des types référence sont castés.  
+ La différence suivante est liée à l’utilisation de la mémoire. Les types valeur subissent un boxing lors du cast en un type référence ou en une des interfaces qu’ils implémentent. Ils subissent un unboxing quand ils sont recastés en type valeur. Comme les box sont des objets qui sont alloués à la pile et récupérés par le récupérateur de mémoire, trop de boxing et d’unboxing peut avoir un impact négatif sur la pile, sur le récupérateur de mémoire et au final sur les performances de l’application.  En revanche, aucun boxing de ce type ne se produit quand des types référence sont castés. (Pour plus d’informations, consultez [Boxing et Unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md)).
   
  Ensuite, les affectations de type référence copient la référence, tandis que les affectations de type valeur copient la valeur entière. Par conséquent, les affectations de types référence de grande taille sont moins coûteuses en ressources que les affectations de types valeur de grande taille.  
   

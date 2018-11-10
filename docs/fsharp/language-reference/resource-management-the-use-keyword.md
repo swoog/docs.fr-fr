@@ -1,6 +1,6 @@
 ---
 title: 'Gestion des ressources : mot clé « use » (F#)'
-description: "Découvrez le F # mot clé 'use' et la fonction 'using', qui permettre contrôler l’initialisation et la libération de ressources."
+description: Découvrez le F# mot clé 'use' et la fonction 'using', qui permettre contrôler l’initialisation et la libération de ressources.
 ms.date: 05/16/2016
 ms.openlocfilehash: ffa1cb515139a3705920d9d9f79be1a69602f7d8
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -19,7 +19,7 @@ Le terme *ressource* est utilisé dans plusieurs façons. Oui, les ressources pe
 
 ## <a name="managing-resources"></a>Gestion des ressources
 
-Pour gérer les ressources dans une application efficacement et de façon responsable, vous devez libérer les ressources rapidement et de manière prévisible. Le .NET Framework vous permet de faire en fournissant le `System.IDisposable` interface. Un type qui implémente `System.IDisposable` a le `System.IDisposable.Dispose` (méthode), ce qui libère les ressources correctement. Applications bien écrites garantissent que `System.IDisposable.Dispose` est appelé rapidement lorsqu’un objet qui contient une ressource limitée n’est plus nécessaire. Heureusement, la plupart des langages .NET prennent en charge pour simplifier ce processus, et F # ne fait pas exception. Il existe deux constructions de langage utiles qui prennent en charge le modèle de suppression : le `use` liaison et le `using` (fonction).
+Pour gérer les ressources dans une application efficacement et de façon responsable, vous devez libérer les ressources rapidement et de manière prévisible. Le .NET Framework vous permet de faire en fournissant le `System.IDisposable` interface. Un type qui implémente `System.IDisposable` a le `System.IDisposable.Dispose` (méthode), ce qui libère les ressources correctement. Applications bien écrites garantissent que `System.IDisposable.Dispose` est appelé rapidement lorsqu’un objet qui contient une ressource limitée n’est plus nécessaire. Heureusement, la plupart des langages .NET prennent en charge pour simplifier ce processus, et F# ne fait pas exception. Il existe deux constructions de langage utiles qui prennent en charge le modèle de suppression : le `use` liaison et le `using` (fonction).
 
 ## <a name="use-binding"></a>Utiliser la liaison
 

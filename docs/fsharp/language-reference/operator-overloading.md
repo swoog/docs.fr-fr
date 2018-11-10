@@ -1,6 +1,6 @@
 ---
 title: Surcharge d'opérateur (F#)
-description: 'Découvrez comment surcharger des opérateurs arithmétiques dans une classe ou un type d’enregistrement et au niveau global dans F #.'
+description: Découvrez comment surcharger des opérateurs arithmétiques dans une classe ou un type d’enregistrement et au niveau global dans F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6232ebf215289e6a22b9d77fbd5fa67b82460486
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -47,11 +47,11 @@ Le caractère d’opérateur `.` n’affecte pas le niveau de priorité, afin qu
 
 Seuls les opérateurs `?` et `?<-` peut commencer par `?`.
 
-Vous trouverez un tableau qui indique la priorité de tous les opérateurs en F # dans [référence des symboles et opérateur](symbol-and-operator-reference/index.md).
+Vous trouverez un tableau qui indique la priorité de tous les opérateurs en F# dans [référence des symboles et opérateur](symbol-and-operator-reference/index.md).
 
 ## <a name="overloaded-operator-names"></a>Noms des opérateurs surchargés
 
-Lorsque le compilateur F # compile une expression d’opérateur, il génère une méthode qui a un nom généré par le compilateur pour cet opérateur. Il s’agit du nom qui apparaît dans le Microsoft intermediate language (MSIL) pour la méthode et également dans la réflexion et IntelliSense. Normalement, vous n’avez pas besoin d’utiliser ces noms dans le code F #.
+Lorsque le compilateur F# compile une expression d’opérateur, il génère une méthode qui a un nom généré par le compilateur pour cet opérateur. Il s’agit du nom qui apparaît dans le Microsoft intermediate language (MSIL) pour la méthode et également dans la réflexion et IntelliSense. Normalement, vous n’avez pas besoin d’utiliser ces noms dans le code F#.
 
 Le tableau suivant répertorie les opérateurs standards et les noms générés correspondants.
 
@@ -151,7 +151,7 @@ Vous pouvez également définir des opérateurs au niveau global. Le code suivan
 
 La sortie du code ci-dessus est `12`.
 
-Vous pouvez redéfinir les opérateurs arithmétiques standards de cette manière, car les règles de portée pour F # exigent que les opérateurs nouvellement définis sont prioritaires sur les opérateurs intégrés.
+Vous pouvez redéfinir les opérateurs arithmétiques standards de cette manière, car les règles de portée pour F# exigent que les opérateurs nouvellement définis sont prioritaires sur les opérateurs intégrés.
 
 Le mot clé `inline` est souvent utilisé avec des opérateurs globaux, qui sont souvent des petites fonctions sont mieux intégrées dans le code appelant. Fabrication opérateur fonctions inline également leur permet d’utiliser des paramètres de type résolus statiquement pour produire un code générique résolu statiquement. Pour plus d’informations, consultez [fonctions Inline](functions/inline-functions.md) et [paramètres résolus statiquement Type](generics/statically-resolved-type-parameters.md).
 

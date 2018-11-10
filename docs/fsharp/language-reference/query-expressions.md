@@ -1,6 +1,6 @@
 ---
 title: Expressions de requête (F#)
-description: 'En savoir plus sur la prise en charge des expression de requête de LINQ dans le langage de programmation F #.'
+description: En savoir plus sur la prise en charge des expression de requête de LINQ dans le langage de programmation F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -14,7 +14,7 @@ ms.locfileid: "48033491"
 > [!NOTE]
 Les liens des informations de référence sur les API qui figurent dans cet article pointent vers MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
 
-Expressions de requête permettent d’interroger une source de données et les placer dans une forme souhaitée. Expressions de requête prennent en charge LINQ en F #.
+Expressions de requête permettent d’interroger une source de données et les placer dans une forme souhaitée. Expressions de requête prennent en charge LINQ en F#.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,7 +24,7 @@ query { expression }
 
 ## <a name="remarks"></a>Notes
 
-Expressions de requête sont un type d’expression de calcul similaire aux expressions de séquence. Tout comme vous spécifiez une séquence en fournissant du code dans une expression de séquence, vous spécifiez un jeu de données en fournissant du code dans une expression de requête. Dans une expression de séquence, le `yield` mot clé identifie les données qui doivent être retournées dans le cadre de la séquence résultante. Dans les expressions de requête, le `select` mot clé effectue la même fonction. Outre le `select` mot clé F # prend également en charge un nombre d’opérateurs de requête qui s’apparentent à des parties d’une instruction SQL SELECT. Voici un exemple d’une expression de requête simple, ainsi que du code qui se connecte à la source OData de Northwind.
+Expressions de requête sont un type d’expression de calcul similaire aux expressions de séquence. Tout comme vous spécifiez une séquence en fournissant du code dans une expression de séquence, vous spécifiez un jeu de données en fournissant du code dans une expression de requête. Dans une expression de séquence, le `yield` mot clé identifie les données qui doivent être retournées dans le cadre de la séquence résultante. Dans les expressions de requête, le `select` mot clé effectue la même fonction. Outre le `select` mot clé F# prend également en charge un nombre d’opérateurs de requête qui s’apparentent à des parties d’une instruction SQL SELECT. Voici un exemple d’une expression de requête simple, ainsi que du code qui se connecte à la source OData de Northwind.
 
 ```fsharp
 // Use the OData type provider to create types that can be used to access the Northwind database.
@@ -56,7 +56,7 @@ Opérateurs de requête vous permettent de spécifier les détails de la requêt
 
 Seules les expressions qui peuvent être traduites vers SQL sont autorisées dans les expressions de requête. Par exemple, aucun appel de fonction n’est autorisés dans les expressions lorsque vous utilisez le `where` opérateur de requête.
 
-Tableau 1 présente les opérateurs de requête disponibles. En outre, consultez Table2, qui compare les requêtes SQL et les équivalents F # expressions de requête plus loin dans cette rubrique. Certains opérateurs de requête ne sont pas pris en charge par certains fournisseurs de type. En particulier, le fournisseur de type OData est limité dans les opérateurs de requête pris en charge en raison des limitations dans OData. Pour plus d’informations, consultez [fournisseur de Type ODataService (F #)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
+Tableau 1 présente les opérateurs de requête disponibles. En outre, consultez Table2, qui compare les requêtes SQL et les équivalents F# expressions de requête plus loin dans cette rubrique. Certains opérateurs de requête ne sont pas pris en charge par certains fournisseurs de type. En particulier, le fournisseur de type OData est limité dans les opérateurs de requête pris en charge en raison des limitations dans OData. Pour plus d’informations, consultez [fournisseur de Type ODataService (F#)](https://msdn.microsoft.com/library/bac609dd-9d12-4bf9-a662-24bdf4faa43e).
 
 Ce tableau suppose une base de données sous la forme suivante :
 
@@ -498,17 +498,17 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </td></tr>
 </table>
 
-## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Comparaison de Transact-SQL et des Expressions de requête F #
-Le tableau suivant montre quelques requêtes Transact-SQL courantes et leurs équivalents dans F #. Le code dans ce tableau suppose également la même base de données en tant que le tableau précédent et le même code initial pour configurer le fournisseur de type.
+## <a name="comparison-of-transact-sql-and-f-query-expressions"></a>Comparaison de Transact-SQL et des Expressions de requête F#
+Le tableau suivant montre quelques requêtes Transact-SQL courantes et leurs équivalents dans F#. Le code dans ce tableau suppose également la même base de données en tant que le tableau précédent et le même code initial pour configurer le fournisseur de type.
 
 
-### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tableau 2. Transact-SQL et des Expressions de requête F #
+### <a name="table-2-transact-sql-and-f-query-expressions"></a>Tableau 2. Transact-SQL et des Expressions de requête F#
 
 
 <table style="width:100%">
   <tr>
     <th>Transact-SQL (non sensible à la casse)</th>
-    <th>F # Expression de requête (respecte la casse)</th>
+    <th>F# Expression de requête (respecte la casse)</th>
   </tr>
 <tr><td>
 Sélectionnez tous les champs à partir de la table.</br>
@@ -1864,7 +1864,7 @@ query {
 |> Seq.iter (fun (studentName, courseName) -> printfn "%s %s" studentName courseName)
 ```
 
-Et Voici la sortie complète lors de l’exécution de code dans F # Interactive.
+Et Voici la sortie complète lors de l’exécution de code dans F# Interactive.
 
 ```
 --> Referenced 'C:\Program Files (x86)\Reference Assemblies\Microsoft\FSharp\3.0\Runtime\v4.0\Type Providers\FSharp.Data.TypeProviders.dll'

@@ -1,6 +1,6 @@
 ---
 title: Liaisons do (F#)
-description: "Découvrez comment une liaison ' do' F # est utilisé pour exécuter du code sans définir une fonction ou une valeur."
+description: Découvrez comment une liaison ' do' F# est utilisé pour exécuter du code sans définir une fonction ou une valeur.
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

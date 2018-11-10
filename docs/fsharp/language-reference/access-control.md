@@ -1,6 +1,6 @@
 ---
 title: Contrôle d'accès (F#)
-description: 'Découvrez comment contrôler l’accès aux éléments de programmation, tels que les types, méthodes et fonctions, dans le langage de programmation F #.'
+description: Découvrez comment contrôler l’accès aux éléments de programmation, tels que les types, méthodes et fonctions, dans le langage de programmation F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 66a260d326acf07391e3775e5a7853654b4feee4
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -15,7 +15,7 @@ ms.locfileid: "43803972"
 
 ## <a name="basics-of-access-control"></a>Principes de base du contrôle d’accès
 
-En F #, les spécificateurs de contrôle de l’accès `public`, `internal`, et `private` peuvent être appliquées à des modules, types, méthodes, des définitions de valeur, fonctions, propriétés et champs explicites.
+En F#, les spécificateurs de contrôle de l’accès `public`, `internal`, et `private` peuvent être appliquées à des modules, types, méthodes, des définitions de valeur, fonctions, propriétés et champs explicites.
 
 - `public` Indique que l’entité est accessible par tous les appelants.
 
@@ -24,13 +24,13 @@ En F #, les spécificateurs de contrôle de l’accès `public`, `internal`, et 
 - `private` Indique que l’entité est accessible uniquement à partir de type ou un module englobant.
 
 >[!NOTE]
-Le spécificateur d’accès `protected` n’est pas utilisé en F #, bien qu’il soit acceptable si vous utilisez des types créés dans les langages qui prennent en charge `protected` accès. Par conséquent, si vous substituez une méthode protégée, votre méthode reste accessible uniquement au sein de la classe et ses descendants.
+Le spécificateur d’accès `protected` n’est pas utilisé en F#, bien qu’il soit acceptable si vous utilisez des types créés dans les langages qui prennent en charge `protected` accès. Par conséquent, si vous substituez une méthode protégée, votre méthode reste accessible uniquement au sein de la classe et ses descendants.
 
 En général, le spécificateur est placé devant le nom de l’entité, sauf quand une `mutable` ou `inline` spécificateur est utilisé, qui apparaît après le spécificateur de contrôle d’accès.
 
 Si aucun spécificateur d’accès n’est utilisé, la valeur par défaut est `public`, à l’exception de `let` liaisons dans un type, qui sont toujours `private` au type.
 
-En F #, les signatures offrent un autre mécanisme pour contrôler l’accès aux éléments de programme F #. Les signatures ne sont pas requises pour le contrôle d’accès. Pour plus d’informations, consultez [Signatures](signatures.md).
+En F#, les signatures offrent un autre mécanisme pour contrôler l’accès aux éléments de programme F#. Les signatures ne sont pas requises pour le contrôle d’accès. Pour plus d’informations, consultez [Signatures](signatures.md).
 
 ## <a name="rules-for-access-control"></a>Règles de contrôle d’accès
 

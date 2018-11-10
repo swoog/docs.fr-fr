@@ -1,6 +1,6 @@
 ---
-title: 'ByRef (F #)'
-description: 'Découvrez byref et byref types en F #, qui sont utilisés pour la programmation de bas niveau.'
+title: ByRef (F#)
+description: Découvrez byref et byref types en F#, qui sont utilisés pour la programmation de bas niveau.
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "48836879"
 ---
 # <a name="byrefs"></a>ByRef
 
-F # a deux principaux domaines de fonctionnalités qui traitent dans l’espace de programmation de bas niveau :
+F# a deux principaux domaines de fonctionnalités qui traitent dans l’espace de programmation de bas niveau :
 
 * Le `byref` / `inref` / `outref` types, qui sont des pointeurs managés. Ils ont des restrictions sur l’utilisation afin que vous ne pouvez pas compiler un programme qui n’est pas valide lors de l’exécution.
 * Un `byref`-comme struct, qui est un [structure](structures.md) qui a une sémantique similaire et les mêmes restrictions de compilation que `byref<'T>`. Par exemple, <xref:System.Span%601>.
@@ -97,7 +97,7 @@ Les éléments suivants sont également vrai :
 * Il est sans implication que d’autres threads ou alias n’ont pas accès en écriture à `x`.
 * Il n’existe aucune implication qui `SomeStruct` est immuable en raison de `x` en cours un `inref`.
 
-Toutefois, pour F # types valeur **sont** immuable, le `this` pointeur est déduit comme étant un `inref`.
+Toutefois, pour F# types valeur **sont** immuable, le `this` pointeur est déduit comme étant un `inref`.
 
 Toutes ces règles ensemble signifient que le titulaire d’un `inref` pointeur ne peut pas modifier le contenu immédiat de la mémoire qui est pointé.
 
@@ -107,18 +107,18 @@ L’objectif de `outref<'T>` consiste à indiquer que le pointeur doit uniquemen
 
 ### <a name="interop-with-c"></a>Interopérabilité avec c# #
 
-C# prend en charge la `in ref` et `out ref` mots clés, en plus de `ref` retourne. Le tableau suivant montre comment F # interprète ce que c# émet :
+C# prend en charge la `in ref` et `out ref` mots clés, en plus de `ref` retourne. Le tableau suivant montre comment F# interprète ce que c# émet :
 
-|Construction de c#|F # déduit|
+|Construction de c#|F# déduit|
 |------------|---------|
 |`ref` Valeur de retour|`outref<'T>`|
 |`ref readonly` Valeur de retour|`inref<'T>`|
 |`in ref` Paramètre|`inref<'T>`|
 |`out ref` Paramètre|`outref<'T>`|
 
-Le tableau suivant montre ce que F # émet :
+Le tableau suivant montre ce que F# émet :
 
-|Construction F #|Construction émise|
+|Construction F#|Construction émise|
 |------------|-----------------|
 |`inref<'T>` argument|`[In]` attribut de l’argument|
 |`inref<'T>` retour|`modreq` attribut de valeur|
@@ -127,7 +127,7 @@ Le tableau suivant montre ce que F # émet :
 
 ### <a name="type-inference-and-overloading-rules"></a>Inférence de type et les règles de surcharge
 
-Un `inref<'T>` type est déduit par le compilateur F # dans les cas suivants :
+Un `inref<'T>` type est déduit par le compilateur F# dans les cas suivants :
 
 1. Un type de paramètre ou de retour de .NET qui a un `IsReadOnly` attribut.
 2. Le `this` pointeur sur un type struct qui ne comporte aucun champ mutable.
@@ -165,20 +165,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` n’implique pas `Struct`. Les deux doivent être présents sur le type.
 
-Un «`byref`-comme « struct en F # est un type de valeur de limite de la pile. Elle n’est jamais allouée sur le tas managé. Un `byref`-comme struct est utile pour la programmation de hautes performances, car elle est appliquée avec l’ensemble de vérifications fortes sur la durée de vie et de non capture. Les règles sont :
+Un «`byref`-comme « struct en F# est un type de valeur de limite de la pile. Elle n’est jamais allouée sur le tas managé. Un `byref`-comme struct est utile pour la programmation de hautes performances, car elle est appliquée avec l’ensemble de vérifications fortes sur la durée de vie et de non capture. Les règles sont :
 
 * Elles peuvent servir comme paramètres de fonction, les paramètres de méthode, les variables locales, méthode est retournée.
 * Ils ne peuvent pas être statiques ou membres d’une classe ou un struct normal d’instance.
 * Ils ne peuvent pas être capturés par n’importe quelle construction de fermeture (`async` méthodes ou expressions lambda).
 * Ils ne peuvent pas être utilisés comme un paramètre générique.
 
-Ce dernier point est essentiel pour la programmation de style de pipeline F #, en tant que `|>` est une fonction générique qui paramètre selon ses types d’entrée. Cette restriction peut être assouplie pour `|>` à l’avenir, car elle est en ligne et ne fait pas tous les appels aux fonctions génériques non inline dans son corps.
+Ce dernier point est essentiel pour la programmation de style de pipeline F#, en tant que `|>` est une fonction générique qui paramètre selon ses types d’entrée. Cette restriction peut être assouplie pour `|>` à l’avenir, car elle est en ligne et ne fait pas tous les appels aux fonctions génériques non inline dans son corps.
 
 Bien que ces règles limiter fortement l’utilisation, elles ne remplissent la promesse de l’informatique hautes performances de manière sécurisée.
 
 ## <a name="byref-returns"></a>Retours ByRef
 
-Retours ByRef à partir de fonctions F # ou membres peuvent être générés et consommées. Lors de l’utilisation un `byref`-méthode de retour, la valeur est déréférencée implicitement. Exemple :
+Retours ByRef à partir de fonctions F# ou membres peuvent être générés et consommées. Lors de l’utilisation un `byref`-méthode de retour, la valeur est déréférencée implicitement. Exemple :
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

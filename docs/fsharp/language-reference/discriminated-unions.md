@@ -1,6 +1,6 @@
 ---
 title: Unions discriminées (F#)
-description: 'Découvrez comment utiliser F # unions discriminées.'
+description: Découvrez comment utiliser F# unions discriminées.
 ms.date: 05/16/2016
 ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Ce code montre que vous pouvez utiliser les champs nommés dans l’initialisation, ou vous pouvez utiliser l’ordre des champs dans la déclaration et fournir uniquement les valeurs pour chaque champ à son tour. L’appel de constructeur pour `rect` dans le code précédent utilise les champs nommés, mais l’appel de constructeur pour `circ` utilise le classement. Vous pouvez combiner les champs ordonnés et les champs nommés, comme dans la construction de `prism`.
 
-Le `option` type est une union discriminée simple de la bibliothèque principale F #. Le `option` type est déclaré comme suit.
+Le `option` type est une union discriminée simple de la bibliothèque principale F#. Le `option` type est déclaré comme suit.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Normalement, les identificateurs de cas peuvent être utilisés sans être quali
 
 ### <a name="unwrapping-discriminated-unions"></a>Unions discriminées désencapsuler
 
-Dans les Unions discriminées F # sont souvent utilisés dans la modélisation de domaine pour l’encapsulation d’un type unique. Il est facile d’extraire la valeur sous-jacente par le biais de critères spéciaux ainsi. Vous n’avez pas besoin d’utiliser une expression de correspondance pour un seul cas :
+Dans les Unions discriminées F# sont souvent utilisés dans la modélisation de domaine pour l’encapsulation d’un type unique. Il est facile d’extraire la valeur sous-jacente par le biais de critères spéciaux ainsi. Vous n’avez pas besoin d’utiliser une expression de correspondance pour un seul cas :
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -103,7 +103,7 @@ let someMethodUsingShaderProgram shaderProgram =
 
 ## <a name="struct-discriminated-unions"></a>Unions discriminées de structs
 
-À partir de F # 4.1, vous pouvez également représenter les Unions discriminées en tant que structures.  Cette opération est effectuée avec la `[<Struct>]` attribut.
+À partir de F# 4.1, vous pouvez également représenter les Unions discriminées en tant que structures.  Cette opération est effectuée avec la `[<Struct>]` attribut.
 
 ```fsharp
 [<Struct>]

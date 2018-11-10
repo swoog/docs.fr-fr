@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 63780583d035d6fab6b3a79424857b82a910ef09
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183891"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744611"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Procédure pas à pas : création d'une application extensible
 Cette procédure pas à pas décrit comment créer un pipeline pour un complément qui effectue des fonctions de calculatrice simple. S’il ne présente pas un scénario réel ; au lieu de cela, il illustre les fonctionnalités de base d’un pipeline et la façon dont un complément peut fournir des services pour un ordinateur hôte.  
