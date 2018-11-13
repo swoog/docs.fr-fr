@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ushort keyword [C#]
 ms.assetid: 1a7dbaae-b7a0-4111-872a-c88a6d3981ac
-ms.openlocfilehash: 2f038378e1af85520cea13d914da69dfcb054ac0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fa7f80f8f0fd6efa92242949ef16963213d0a28e
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857295"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744481"
 ---
 # <a name="ushort-c-reference"></a>ushort (référence C#)
 
@@ -101,7 +101,8 @@ ushort y = (ushort)3.0;
  Pour plus d’informations sur les règles des conversions numériques implicites, consultez le [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Pour plus d’informations, consultez [Types intégraux](~/_csharplang/spec/types.md#integral-types) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
   
 ## <a name="see-also"></a>Voir aussi
 

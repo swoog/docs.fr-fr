@@ -1,6 +1,6 @@
 ---
 title: '||, opérateur (référence C#)'
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925538"
 ---
 # <a name="-operator-c-reference"></a>||, opérateur (référence C#)
-L’opérateur conditionnel OR (`||`) effectue une opération OR logique de ses opérandes `bool`. Si le premier opérande prend la valeur `true`, le deuxième opérande n’est pas évalué. Si le premier opérande prend la valeur `false`, le deuxième opérateur détermine si l’expression OR dans son ensemble prend la valeur `true` ou `false`.  
-  
-## <a name="remarks"></a>Notes  
- L’opération  
-  
-```csharp  
-x || y  
-```  
-  
- correspond à l’opération  
-  
-```csharp  
-x | y  
-```  
-  
- sauf si `x` a la valeur `true`, auquel cas `y` n’est pas évalué, car l’opération OR a la valeur `true`, indépendamment de la valeur d’`y`. Ce concept est connu sous le nom d’évaluation de « court-circuit ».  
-  
- L’opérateur OR conditionnel ne peut pas être surchargé, mais les surcharges des opérateurs logiques normaux et des opérateurs [true](../../../csharp/language-reference/keywords/true.md) et [false](../../../csharp/language-reference/keywords/false.md) sont, avec certaines restrictions, également considérées comme des surcharges des opérateurs logiques conditionnels.  
-  
-## <a name="example"></a>Exemple  
- Dans les exemples suivants, l’expression qui utilise `||` évalue seulement le premier opérande. L’expression qui utilise `|` évalue les deux opérandes. Dans le deuxième exemple, une exception runtime se produit si les deux opérandes sont évalués.  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
+
+L’opérateur logique conditionnel OR `||`, également appelé opérateur logique OR de « court-circuit », calcule l’opération logique OR de ses opérandes [bool](../keywords/bool.md). Le résultat de `x || y` est `true` si `x` ou `y` prend la valeur `true`. Sinon, le résultat est `false`. Si le premier opérande prend la valeur `true`, le deuxième n’est pas évalué. Le résultat de l’opération est donc `true`. L’exemple suivant illustre ce comportement :
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+[L’opérateur logique OR](or-operator.md) `|` calcule également l’opération logique OR de ses opérandes `bool`, mais il évalue toujours les deux opérandes.
+
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
+
+Un type défini par l’utilisateur ne peut pas surcharger l’opérateur logique conditionnel OR. Toutefois, si un type défini par l’utilisateur surcharge l’opérateur [logique OR](or-operator.md) et les opérateurs [true](../keywords/true-operator.md) et [false](../keywords/false-operator.md) d’une certaine manière, l’opération `||` peut être évaluée pour les opérandes de ce type. Pour plus d’informations, consultez la section [Opérateurs logiques conditionnels définis par l’utilisateur](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [spécification du langage C#](../language-specification/index.md).
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, consultez la section [Opérateurs logiques conditionnels](~/_csharplang/spec/expressions.md#conditional-logical-operators) de la [spécification du langage C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Opérateurs C#](index.md)
+- [&&, opérateur](conditional-and-operator.md)
+- [!, opérateur](logical-negation-operator.md)
+- [|, opérateur](or-operator.md)

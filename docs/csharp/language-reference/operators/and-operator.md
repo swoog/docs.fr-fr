@@ -1,6 +1,6 @@
 ---
 title: '&amp;, opérateur (référence C#)'
-ms.date: 04/04/2018
+ms.date: 10/29/2018
 f1_keywords:
 - '&_CSharpKeyword'
 helpviewer_keywords:
@@ -9,32 +9,61 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-ms.openlocfilehash: b257c7d41618464e26ab3b54bcfb1f1e2c2e420e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a8f76ded0ef9f8e8099838a903d90f1695324991
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43510976"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;, opérateur (référence C#)
-L’opérateur `&` peut être utilisé comme opérateur unaire ou opérateur binaire.  
-  
-## <a name="remarks"></a>Notes  
- L’opérateur `&` unaire retourne l’adresse de son opérande (requiert un contexte [unsafe](../../../csharp/language-reference/keywords/unsafe.md)).  
-  
- Les opérateurs `&` binaires sont prédéfinis pour les types intégraux et `bool`. Pour les types intégraux, & calcule l’opération logique AND au niveau du bit de ses opérandes. Pour les opérandes `bool`, & calcule l’opération logique AND de ses opérandes ; autrement dit, le résultat est `true` uniquement si ses deux opérandes ont la valeur `true`.  
-  
- L’opérateur `&` binaire évalue les deux opérandes, quelle que soit la valeur du premier, à la différence de [l’opérateur AND conditionnel](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`. Exemple :  
-  
- [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
-  
- Les types définis par l’utilisateur peuvent surcharger l’opérateur `&` binaire (voir [operator](../../../csharp/language-reference/keywords/operator.md)). Les opérations sur les types intégraux sont en général autorisées sur l’énumération. Quand un opérateur binaire est surchargé, l’opérateur d’assignation correspondant, le cas échéant, est aussi implicitement surchargé.  
-  
-## <a name="example"></a>Exemple  
- [!code-csharp[csRefOperators#38](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_2.cs)]  
-  
+
+L’opérateur `&` est pris en charge sous deux formes : un opérateur address-of unaire ou un opérateur logique binaire.
+
+## <a name="unary-address-of-operator"></a>address-of, opérateur unaire
+
+L’opérateur unaire `&` retourne l’adresse de son opérande. Pour plus d’informations, consultez [Guide pratique pour obtenir l’adresse d’une variable](../../programming-guide/unsafe-code-pointers/how-to-obtain-the-address-of-a-variable.md)
+
+L’opérateur address-of `&` nécessite un contexte [unsafe](../keywords/unsafe.md).
+
+## <a name="integer-logical-bitwise-and-operator"></a>Opérateur logique AND au niveau du bit pour les types entier
+
+Pour les types entier, l’opérateur `&` calcule l’opération logique AND au niveau du bit de ses opérandes :
+
+[!code-csharp-interactive[integer logical bitwise AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#IntegerOperands)]
+
+> [!NOTE]
+> L’exemple précédent utilise les littéraux binaires [introduits dans C# 7.0](../../whats-new/csharp-7.md#numeric-literal-syntax-improvements) et [améliorés dans C# 7.2](../../whats-new/csharp-7-2.md#leading-underscores-in-numeric-literals).
+
+Étant donné que les opérations sur les types entier sont généralement autorisées sur les types énumération, l’opérateur `&` prend également en charge les opérandes [enum](../keywords/enum.md).
+
+## <a name="boolean-logical-and-operator"></a>Opérateur logique booléen AND
+
+Pour les opérandes [bool](../keywords/bool.md), l’opérateur `&` calcule l’opération logique AND de ses opérandes. Le résultat de `x & y` est `true` si `x` et `y` sont `true`. Sinon, le résultat est `false`.
+
+L’opérateur `&` évalue les deux opérandes, même si le premier opérande prend la valeur `false`. Le résultat est donc `false` quelle que soit la valeur du deuxième opérande. L’exemple suivant illustre ce comportement :
+
+[!code-csharp-interactive[bool logical AND](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#BooleanOperands)]
+
+[L’opérateur conditionnel AND](conditional-and-operator.md) `&&` calcule également l’opération logique AND de ses opérandes, mais évalue uniquement le deuxième opérande si le premier prend la valeur `true`.
+
+Pour les opérandes bool nullables, le comportement de l’opérateur `&` est cohérent avec la logique ternaire de SQL. Pour plus d’informations, consultez la section [Type bool?](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) de l’article [Utilisation de types nullable](../../programming-guide/nullable-types/using-nullable-types.md).
+
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
+
+Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) l’opérateur binaire `&`. Quand un opérateur binaire `&` est surchargé, [l’opérateur d’assignation AND](and-assignment-operator.md) `&=` est aussi implicitement surchargé.
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, consultez les sections [Opérateur address-of](~/_csharplang/spec/unsafe-code.md#the-address-of-operator) et [Opérateurs logiques](~/_csharplang/spec/expressions.md#logical-operators) de la [spécification du langage C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Opérateurs C#](index.md)
+- [Types de pointeur](../../programming-guide/unsafe-code-pointers/pointer-types.md)
+- [|, opérateur](or-operator.md)
+- [^, opérateur](xor-operator.md)
+- [~, opérateur](bitwise-complement-operator.md)
+- [&&, opérateur](conditional-and-operator.md)

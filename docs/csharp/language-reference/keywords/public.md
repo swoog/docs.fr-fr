@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 84a3bc49b6eea047d518edc01dab7f2301854b6a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b2e09bdb16d6128d69a3eb33cf2cffd4cba60376
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43518184"
 ---
 # <a name="public-c-reference"></a>public (référence C#)
@@ -37,9 +37,9 @@ Si vous remplacez le niveau d’accès `public` par [private](private.md) ou [pr
 
 'PointTest.y' est inaccessible en raison de son niveau de protection.
 
-## <a name="c-language-specification"></a>spécification du langage C#
+## <a name="c-language-specification"></a>spécification du langage C#  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Pour plus d’informations, consultez [Accessibilité déclarée](~/_csharplang/spec/basic-concepts.md#declared-accessibility) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
 
 ## <a name="see-also"></a>Voir aussi
 

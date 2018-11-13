@@ -1,46 +1,46 @@
 ---
 title: Publication d’un package NuGet
-description: Meilleures pratiques recommandées pour la publication des bibliothèques .NET sur NuGet.
+description: Meilleures pratiques recommandées pour la publication de bibliothèques .NET dans NuGet.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 0602712311411ef3d59825bec8c5e550bc8d8265
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
-ms.translationtype: MT
+ms.openlocfilehash: e0244d2a9d09382c289c74a45969bca0a1311445
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49370049"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50757307"
 ---
 # <a name="publishing-a-nuget-package"></a>Publication d’un package NuGet
 
-Les packages NuGet sont publiés et consommés à partir de référentiels de packages. Tandis que NuGet.org est le plus largement connue et utilisée, il existe de nombreux endroits pour publier les packages NuGet :
+Les packages NuGet sont publiés et utilisés à partir de référentiels de packages. Bien que NuGet.org soit le référentiel le plus largement connu et utilisé, il existe de nombreux endroits où publier des packages NuGet :
 
-* **[NuGet.org](https://www.nuget.org/)**  est le référentiel principal en ligne pour les packages NuGet. Tous les packages sur NuGet.org sont accessibles à tout le monde. Par défaut, Visual Studio a NuGet.org comme source de package et pour de nombreux développeurs NuGet.org est le seul référentiel de package qu’ils allez interagir avec. NuGet.org est le meilleur endroit pour publier des packages stables et préliminaires les packages que vous voulez les commentaires de la Communauté sur.
+* **[NuGet.org](https://www.nuget.org/)**  est le principal référentiel en ligne pour les packages NuGet. Tous les packages sur NuGet.org sont accessibles à tous. Par défaut, Visual Studio utilise NuGet.org comme source de package, et pour de nombreux développeurs NuGet.org est le seul référentiel de package avec lequel ils interagissent. NuGet.org est l’endroit idéal pour publier des packages stables et des packages en préversion que vous souhaitez soumettre à l’avis de la communauté.
 
-* **[MyGet](https://myget.org/)**  prend en charge du service de référentiel [de flux de package personnalisé gratuit pour les projets open source](https://www.myget.org/opensource). Un flux personnalisé public MyGet est un endroit idéal pour publier des packages en préversion créés par votre service d’intégration continue. MyGet fournit également les flux privés dans le commerce.
+* **[MyGet](https://myget.org/)**  est un service de référentiel qui prend en charge des flux de packages personnalisés pour les projets open source. Un flux personnalisé public MyGet est l’endroit idéal pour publier des packages en préversion créés par votre service d’intégration continue. MyGet commercialise également des flux privés.
 
-* Un **[flux local](/nuget/hosting-packages/local-feeds)** vous permet de traiter un dossier comme un référentiel de packages et rend le `*.nupkg` fichiers dans le dossier accessible par NuGet. Un flux local est utile pour tester un package NuGet avant sa publication sur NuGet.org.
+* Un **[flux local](/nuget/hosting-packages/local-feeds)** vous permet de traiter un dossier comme un référentiel de packages et rend les fichiers `*.nupkg` de ce dossier accessibles par NuGet. Un flux local est utile pour tester un package NuGet avant sa publication sur NuGet.org.
 
 > [!NOTE]
-> NuGet.org [n’autorise pas un package à supprimer](/nuget/policies/deleting-packages) une fois qu’il est chargé. Un package peut être retirée de la liste afin qu’il ne soit pas publiquement visible dans l’interface utilisateur, mais le `*.nupkg` peut toujours être téléchargé sur la restauration. En outre, nuget.org n’autorise pas les versions de package en double. Pour corriger un package NuGet avec une erreur d’avoir au retirer de la liste le package incorrect, incrémenter le numéro de version et publier une nouvelle version du package.
+> NuGet.org [n’autorise pas la suppression d’un package](/nuget/policies/deleting-packages) une fois qu’il est chargé. Un package peut être retiré de la liste afin qu’il ne soit pas publiquement visible dans l’interface utilisateur, mais le `*.nupkg` peut toujours être téléchargé lors de la restauration. En outre, nuget.org n’autorise pas les versions de package en double. Pour corriger un package NuGet comportant une erreur, vous devez retirer de la liste le package incorrect, incrémenter le numéro de version, puis publier une nouvelle version du package.
 
-**FAIRE ✔️** [publier des packages stables et préliminaires](/nuget/create-packages/publish-a-package) vous souhaitez que les commentaires de la Communauté sur NuGet.org.
+**✔️ À FAIRE** [Publier des packages stables et des packages en préversion](/nuget/create-packages/publish-a-package) que vous souhaitez soumettre à l’avis de la communauté sur NuGet.org.
 
-**ENVISAGEZ de ✔️** packages de préversion de publication pour un MyGet flux à partir d’une build d’intégration continue.
+**✔️ À ENVISAGER** Publier des packages en préversion pour un flux MyGet à partir d’une build d’intégration continue.
 
-**ENVISAGEZ de ✔️** test des packages dans votre environnement de développement à l’aide d’un flux local ou un MyGet. Vérifier le fonctionnement du package, puis publiez-le sur NuGet.org.
+**✔️ À ENVISAGER** Tester des packages dans votre environnement de développement à l’aide d’un flux local ou MyGet. Vérifiez le fonctionnement du package, puis publiez-le sur NuGet.org.
 
 ## <a name="nugetorg-security"></a>Sécurité de NuGet.org
 
-Il est important que les mauvais acteurs ne peut pas accéder à votre compte de NuGet et charger une version malveillante de votre bibliothèque. NuGet.org offre deux facteurs d’authentification et les notifications électroniques lors de la publication d’un package. Activer ces fonctionnalités une fois connecté à NuGet.org sur le **paramètres du compte** page.
+Il est important d’empêcher les personnes mal intentionnées d’accéder à votre compte NuGet pour y télécharger une version malveillante de votre bibliothèque. NuGet.org propose une authentification à deux facteurs et des notifications par e-mail lors de la publication d’un package. Activez ces fonctionnalités une fois connecté à NuGet.org sur la page **Paramètres du compte**.
 
-![texte de remplacement](./media/publish-nuget-package/nuget-2fa.png "sécurité du compte NuGet")
+![texte de remplacement](./media/publish-nuget-package/nuget-2fa.png "Sécurité du compte NuGet")
 
-**FAIRE ✔️** utiliser un compte Microsoft pour vous connecter à NuGet.
+**✔️ À FAIRE** Utiliser un compte Microsoft pour vous connecter à NuGet.
 
-**FAIRE ✔️** activer l’authentification à deux facteurs pour accéder à NuGet.
+**✔️ À FAIRE** Activer l’authentification à deux facteurs pour accéder à NuGet.
 
-**FAIRE ✔️** activer la notification par courrier électronique lorsqu’un package est publié.
+**✔️ À FAIRE** Activer la notification par e-mail lorsqu’un package est publié.
 
 >[!div class="step-by-step"]
 [Précédent](./sourcelink.md)

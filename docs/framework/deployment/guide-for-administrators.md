@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195682"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744585"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guide de déploiement du .NET Framework pour les administrateurs
 Cet article explique étape par étape comment un administrateur système peut déployer [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] et ses dépendances système dans un réseau à l'aide de Microsoft System Center Configuration Manager (SCCM). Cet article suppose que tous les ordinateurs clients cibles ont la configuration minimale requise pour le .NET Framework. Pour obtenir la liste des configurations logicielle et matérielle requises pour installer le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], consultez [Configuration système requise](../../../docs/framework/get-started/system-requirements.md).  
@@ -176,8 +176,8 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 9. Dans la page **Expérience utilisateur** de l’Assistant, utilisez les valeurs par défaut et choisissez **Suivant**.  
   
-    > [!WARNING]
-    >  Il est possible que votre environnement de production ait des stratégies qui requièrent des sélections différentes pour la planification de déploiement. Pour plus d’informations sur ces options, consultez [Propriétés du nom de la publication : Onglet Calendrier](https://technet.microsoft.com/library/bb694016.aspx) dans la bibliothèque TechNet.  
+> [!WARNING]
+> Il est possible que votre environnement de production ait des stratégies qui requièrent des sélections différentes pour la planification de déploiement. Pour plus d’informations sur ces options, consultez [Propriétés du nom de la publication : Onglet Calendrier](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. Dans la page **Points de distribution** de l’Assistant, utilisez les valeurs par défaut et choisissez **Suivant**.  
   
@@ -207,7 +207,7 @@ Cet article explique étape par étape comment un administrateur système peut d
   
 -   [Administration de site pour System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Planification et déploiement d’un site Configuration Manager unique](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Planification et déploiement d’un site Configuration Manager unique](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  **Client System Center 2012 Configuration Manager pour des ordinateurs Windows :**  
   

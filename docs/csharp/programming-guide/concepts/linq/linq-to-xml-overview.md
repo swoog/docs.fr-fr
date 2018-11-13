@@ -1,12 +1,12 @@
 ---
 title: Vue d’ensemble de LINQ to XML (C#)
-ms.date: 07/20/2015
+ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 5b557c95993d7f1e907a8eb6ef1e5ec23a2988ab
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 5e005343226b47fb843b817747ca03c49c28dbfc
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43856619"
 ---
 # <a name="linq-to-xml-overview-c"></a>Vue d’ensemble de LINQ to XML (C#)
@@ -30,26 +30,50 @@ Le langage XML a été largement adopté comme méthode pour mettre en forme des
   
  Par exemple, vous pouvez avoir un bon de commande XML classique comme décrit dans [Exemple de fichier XML : commande fournisseur typique (LINQ to XML)](sample-xml-file-typical-purchase-order-linq-to-xml-1.md). En utilisant [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], vous pourriez exécuter la requête suivante afin d'obtenir la valeur d'attribut de numéro de référence pour chaque élément de la commande fournisseur :  
   
-```csharp  
-IEnumerable<string> partNos =  
-from item in purchaseOrder.Descendants("Item")  
-select (string) item.Attribute("PartNumber");  
+```csharp
+// Load the XML file from our project directory containing the purchase orders
+var filename = "PurchaseOrder.xml";
+var currentDirectory = Directory.GetCurrentDirectory();
+var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+
+XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+
+IEnumerable<string> partNos =  from item in purchaseOrder.Descendants("Item")  
+                               select (string) item.Attribute("PartNumber");  
+``` 
+Vous pouvez réécrire ceci sous forme d’une syntaxe de méthode :
+
+```csharp
+IEnumerable<string> partNos = purchaseOrder.Descendants("Item").Select(x => (string) x.Attribute("PartNumber"));
+```
+
+Vous pourriez également, si vous le souhaitez, générer une liste des éléments avec une valeur supérieure à $ 100, triés par numéro de référence. Pour obtenir ces informations, vous pourriez exécuter la requête suivante :  
+  
+```csharp 
+// Load the XML file from our project directory containing the purchase orders
+var filename = "PurchaseOrder.xml";
+var currentDirectory = Directory.GetCurrentDirectory();
+var purchaseOrderFilepath = Path.Combine(currentDirectory, filename);
+
+XElement purchaseOrder = XElement.Load($"{purchaseOrderFilepath}");
+
+IEnumerable<XElement> pricesByPartNos =  from item in purchaseOrder.Descendants("Item")  
+                                 where (int) item.Element("Quantity") * (decimal) item.Element("USPrice") > 100  
+                                 orderby (string)item.Element("PartNumber")  
+                                 select item;  
 ```  
-  
- Vous pourriez également, si vous le souhaitez, générer une liste des éléments avec une valeur supérieure à $ 100, triés par numéro de référence. Pour obtenir ces informations, vous pourriez exécuter la requête suivante :  
-  
-```csharp  
-IEnumerable<XElement> partNos =  
-from item in purchaseOrder.Descendants("Item")  
-where (int) item.Element("Quantity") *  
-    (decimal) item.Element("USPrice") > 100  
-orderby (string)item.Element("PartNumber")  
-select item;  
-```  
-  
+
+Vous pouvez aussi réécrire ceci sous forme d’une syntaxe de méthode :
+
+```csharp
+IEnumerable<XElement> pricesByPartNos = purchaseOrder.Descendants("Item")
+                                        .Where(item => (int)item.Element("Quantity") * (decimal)item.Element("USPrice") > 100)
+                                        .OrderBy(order => order.Element("PartNumber"));
+```
+
  Outre ces fonctionnalités [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] fournit une interface de programmation XML améliorée. Grâce à [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], vous pouvez :  
   
--   charger du code XML à partir de fichiers ou de flux ;  
+-   charger du code XML à partir de [fichiers](how-to-load-xml-from-a-file.md) ou de [flux](how-to-stream-xml-fragments-from-an-xmlreader.md) ;  
   
 -   sérialiser du code XML vers des fichiers ou des flux ;  
   

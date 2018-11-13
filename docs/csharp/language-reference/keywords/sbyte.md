@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sbyte keyword [C#]
 ms.assetid: 1a9c7b48-73d1-4d33-b485-c4faf0a816bc
-ms.openlocfilehash: 1dca23c4a4216f1edc79b7701a002a28652aed26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c64aae58317c54499b3d16c5643e4a473544c6a6
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47207139"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744507"
 ---
 # <a name="sbyte-c-reference"></a>sbyte (référence C#)
 
@@ -102,7 +102,8 @@ sbyte y = (sbyte)3.0;  // OK: explicit conversion
  Pour plus d’informations sur les règles des conversions numériques implicites, consultez le [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md).  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Pour plus d’informations, consultez [Types intégraux](~/_csharplang/spec/types.md#integral-types) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
   
 ## <a name="see-also"></a>Voir aussi
 

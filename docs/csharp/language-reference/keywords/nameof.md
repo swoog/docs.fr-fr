@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035251"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744353"
 ---
 # <a name="nameof-c-reference"></a>nameof (informations de référence sur C#)
 
@@ -131,8 +131,9 @@ class C {
  Il n'existe aucun moyen pour obtenir des informations de signature comme « `Method1 (str, str)` ».  Pour cela, vous pouvez utiliser une expression, `Expression e = () => A.B.Method1("s1", "s2")`, puis extraire MemberInfo de l'arborescence de l'expression qui en résulte.  
   
 ## <a name="language-specifications"></a>Spécifications du langage  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Pour plus d’informations, consultez [Expressions Nameof](~/_csharplang/spec/expressions.md#nameof-expressions) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
+ 
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence C#](../../../csharp/language-reference/index.md)  
