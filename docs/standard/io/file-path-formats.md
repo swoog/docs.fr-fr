@@ -9,12 +9,12 @@ helpviewer_keywords:
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5821d15e71492bd54fa6b5d891f2ff38a2902a06
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424387"
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51214192"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formats de chemin de fichier sur les systèmes Windows
 
@@ -202,7 +202,7 @@ Notez que vous pouvez passer les chemins de plus de `MAX_PATH` caractères à la
 Le fait que les noms de chemin et de répertoire ne respectent pas la casse est une particularité du système de fichiers Windows que les développeurs et utilisateurs d’autres systèmes d’exploitation trouvent déroutante. Autrement dit, les noms de répertoire et de fichier reflètent la casse des chaînes utilisée au moment de leur création. Par exemple, l’appel de méthode
 
 ```csharp
-Directory.Create(TeStDiReCtOrY);
+Directory.Create("TeStDiReCtOrY");
 ```
 crée un répertoire nommé TeStDiReCtOrY. Si vous renommez un répertoire ou un fichier pour changer sa casse, le nom du répertoire ou du fichier reflète la casse de la chaîne utilisée au moment du renommage. Par exemple, le code suivant renomme un fichier nommé test.txt en Test.txt :
 

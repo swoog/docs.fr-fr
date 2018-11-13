@@ -7,11 +7,11 @@ ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041620"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744468"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Guide pratique pour déboguer les problèmes d’activation du CLR
 Si vous avez des difficultés à faire en sorte que votre application s’exécute avec la version correcte du Common Language Runtime (CLR), vous pouvez afficher et déboguer les journaux d’activation du CLR. Ces journaux peuvent être très utiles pour déterminer la cause d’un problème d’activation, quand votre application charge une autre version du CLR que celle prévue ou ne charge pas du tout le CLR. L’article [Erreurs d’initialisation de .NET Framework : gérer l’expérience utilisateur](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) décrit l’expérience quand aucun CLR n’est trouvé pour une application.  

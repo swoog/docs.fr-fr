@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404630"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757450"
 ---
 # <a name="common-web-application-architectures"></a>Architectures courantes des applications web
 
@@ -97,7 +97,7 @@ L’approche la plus simple pour mettre à l’échelle une application web dans
 
 ## <a name="clean-architecture"></a>Architecture propre
 
-Les applications conçues selon le principe d’inversion des dépendances et les principes DDD (conception pilotée par le domaine) présentent au final plus ou moins la même architecture. Les noms donnés à cette architecture ont beaucoup varié au fil des années. Au début, on l’a nommée architecture hexagonale, puis architecture ports-adaptateurs. Plus récemment, on l’a appelée [architecture en oignon](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) ou [architecture propre](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Cette dernière désignation, architecture propre, est celle utilisée pour qualifier l’architecture utilisée dans ce livre électronique.
+Les applications conçues selon le principe d’inversion des dépendances et les principes DDD (conception pilotée par le domaine) présentent au final plus ou moins la même architecture. Les noms donnés à cette architecture ont beaucoup varié au fil des années. Au début, on l’a nommée architecture hexagonale, puis architecture ports-adaptateurs. Plus récemment, on l’a appelée [architecture en oignon](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) ou [architecture propre](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html). Cette dernière désignation, architecture propre, est celle utilisée pour qualifier l’architecture utilisée dans ce livre électronique.
 
 > [!NOTE]
 > Ce terme s’applique aussi bien aux applications conçues selon les principes DDD qu’à celles qui ne le sont pas. Les premières peuvent être désignées sous le terme combiné « architecture DDD propre ».
@@ -307,7 +307,7 @@ Si vous voulez ajouter la prise en charge de Docker à votre application à l’
 > - **L’architecture propre**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **L’architecture en oignon**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Le modèle référentiel**  
 >   <https://deviq.com/repository-pattern/>
 > - **Exemple d’une solution d’architecture propre**  

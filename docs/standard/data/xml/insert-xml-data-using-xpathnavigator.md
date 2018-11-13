@@ -10,10 +10,10 @@ ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "45698338"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Insertion de données XML à l’aide de XPathNavigator
@@ -273,7 +273,7 @@ navigator.SetTypedValue(DateTime.Now);
   
 -   Les fragments XML écrits par les objets <xref:System.Xml.XmlWriter> sont ajoutés au document XML en cas d'appel de la méthode <xref:System.Xml.XmlWriter.Close%2A> de chaque objet <xref:System.Xml.XmlWriter>. Dans les autres cas, l'objet <xref:System.Xml.XmlWriter> écrit un fragment déconnecté. Si une opération est effectuée sur le document XML, avant l'appel de <xref:System.Xml.XmlWriter>, aucun fragment en cours d'écriture par un objet <xref:System.Xml.XmlWriter.Close%2A> n'est affecté.  
   
--   Si un objet <xref:System.Xml.XmlWriter> ouvert existe dans une sous-arborescence XML particulière et si cette sous-arborescence est supprimée, l'objet <xref:System.Xml.XmlWriter> peut encore être ajouté à la sous-arborescence. La sous-arborescence devient simplement un fragment supprimé.  
+-   Si un objet <xref:System.Xml.XmlWriter> ouvert existe dans une sous-arborescence XML particulière et si cette sous-arborescence est supprimée, l’objet <xref:System.Xml.XmlWriter> peut encore être ajouté à la sous-arborescence. La sous-arborescence devient simplement un fragment supprimé.  
   
 -   Si plusieurs objets <xref:System.Xml.XmlWriter> sont ouverts au même point du document XML, ils sont ajoutés au document XML dans l'ordre dans lequel les objets <xref:System.Xml.XmlWriter> sont fermés, pas dans l'ordre dans lequel ils ont été ouverts.  
   

@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: dd8baa481e51aa44c4c884b4b165bdf319ac1c4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b5099c73264f3175aa05094f4460c1c97774533
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576280"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50743961"
 ---
 # <a name="framework-libraries"></a>Bibliothèques de framework
 
@@ -59,4 +59,4 @@ Les bibliothèques de classes de base fournissent les types les plus fondamentau
 
 Il existe de nombreux modèles d’application qui peuvent être utilisés avec .NET, fournis par plusieurs sociétés.
 
-*   [ASP.NET](http://asp.net) : Fournit un framework web pour créer des sites et des services web. Pris en charge sur Windows, Linux et Mac OS (dépend de la version d’ASP.NET).
+*   [ASP.NET](https://www.asp.net) : Fournit un framework web pour créer des sites et des services web. Pris en charge sur Windows, Linux et Mac OS (dépend de la version d’ASP.NET).
