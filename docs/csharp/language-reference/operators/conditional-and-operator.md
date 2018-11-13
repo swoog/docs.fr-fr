@@ -1,49 +1,40 @@
 ---
 title: '&amp;&amp;, opérateur (Informations de référence sur C#)'
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '&&_CSharpKeyword'
 helpviewer_keywords:
 - '&& operator [C#]'
 - logical AND operator [C#]
 ms.assetid: 2e4f0a1c-92a3-40f8-8e3b-17b607f20c31
-ms.openlocfilehash: 459b791fde3e4d3940dbd3d916f940e81f365da6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d0e6d9a5aedc7dc87393e3dea070bf442b3268dc
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "43529233"
 ---
-# <a name="ampamp-operator-c-reference"></a><span data-ttu-id="41b55-102">&amp;&amp;, opérateur (Informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="41b55-102">&amp;&amp; Operator (C# Reference)</span></span>
-<span data-ttu-id="41b55-103">L’opérateur AND conditionnel (`&&`) effectue une opération AND logique sur ses opérandes de type `bool`, mais évalue uniquement le second opérande, si nécessaire.</span><span class="sxs-lookup"><span data-stu-id="41b55-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="41b55-104">Notes</span><span class="sxs-lookup"><span data-stu-id="41b55-104">Remarks</span></span>  
- <span data-ttu-id="41b55-105">L’opération</span><span class="sxs-lookup"><span data-stu-id="41b55-105">The operation</span></span>  
-  
-```csharp  
-x && y  
-```  
-  
- <span data-ttu-id="41b55-106">correspond à l’opération</span><span class="sxs-lookup"><span data-stu-id="41b55-106">corresponds to the operation</span></span>  
-  
-```csharp  
-x & y  
-```  
-  
- <span data-ttu-id="41b55-107">sauf si `x` a la valeur `false`, auquel cas `y` n’est pas évalué, car le résultat de l’opération AND est `false` quelle que soit la valeur de `y`.</span><span class="sxs-lookup"><span data-stu-id="41b55-107">except that if `x` is `false`, `y` is not evaluated, because the result of the AND operation is `false` no matter what the value of `y`  is.</span></span> <span data-ttu-id="41b55-108">Ce procédé est connu sous le nom d’évaluation "de court-circuit".</span><span class="sxs-lookup"><span data-stu-id="41b55-108">This is known as "short-circuit" evaluation.</span></span>  
-  
- <span data-ttu-id="41b55-109">L’opérateur AND conditionnel ne peut pas être surchargé, mais les surcharges des opérateurs logiques normaux et des opérateurs [true](../../../csharp/language-reference/keywords/true.md) et [false](../../../csharp/language-reference/keywords/false.md) sont, avec certaines restrictions, également considérées comme des surcharges des opérateurs logiques conditionnels.</span><span class="sxs-lookup"><span data-stu-id="41b55-109">The conditional-AND operator cannot be overloaded, but overloads of the regular logical operators and operators [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md) are, with certain restrictions, also considered overloads of the conditional logical operators.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="41b55-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="41b55-110">Example</span></span>  
- <span data-ttu-id="41b55-111">Dans l’exemple suivant, l’expression conditionnelle dans la deuxième instruction `if` évalue seulement le premier opérande, car ce dernier retourne `false`.</span><span class="sxs-lookup"><span data-stu-id="41b55-111">In the following example, the conditional expression in the second `if` statement evaluates only the first operand because the operand returns `false`.</span></span>  
-  
- [!code-csharp[csRefOperators#48](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-and-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="41b55-112">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="41b55-112">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="41b55-113">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="41b55-113">See Also</span></span>
+# <a name="ampamp-operator-c-reference"></a><span data-ttu-id="c7a20-102">&amp;&amp;, opérateur (Informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="c7a20-102">&amp;&amp; Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="41b55-114">Référence C#</span><span class="sxs-lookup"><span data-stu-id="41b55-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="41b55-115">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="41b55-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="41b55-116">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="41b55-116">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="c7a20-103">L’opérateur logique conditionnel AND `&&`, également appelé opérateur logique AND de « court-circuit », calcule l’opération logique AND de ses opérandes [bool](../keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="c7a20-103">The conditional logical AND operator `&&`, also known as the "short-circuiting" logical AND operator, computes the logical AND of its [bool](../keywords/bool.md) operands.</span></span> <span data-ttu-id="c7a20-104">Le résultat de `x && y` est `true` si `x` et `y` prennent la valeur `true`.</span><span class="sxs-lookup"><span data-stu-id="c7a20-104">The result of `x && y` is `true` if both `x` and `y` evaluate to `true`.</span></span> <span data-ttu-id="c7a20-105">Sinon, le résultat est `false`.</span><span class="sxs-lookup"><span data-stu-id="c7a20-105">Otherwise, the result is `false`.</span></span> <span data-ttu-id="c7a20-106">Si le premier opérande prend la valeur `false`, le deuxième n’est pas évalué. Le résultat de l’opération est donc `false`.</span><span class="sxs-lookup"><span data-stu-id="c7a20-106">If the first operand evaluates to `false`, the second operand is not evaluated and the result of operation is `false`.</span></span> <span data-ttu-id="c7a20-107">L’exemple suivant illustre ce comportement :</span><span class="sxs-lookup"><span data-stu-id="c7a20-107">The following example demonstrates that behavior:</span></span>
+
+[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#And)]
+
+<span data-ttu-id="c7a20-108">[L’opérateur logique AND](and-operator.md) `&` calcule également l’opération logique AND de ses opérandes `bool`, mais il évalue toujours les deux opérandes.</span><span class="sxs-lookup"><span data-stu-id="c7a20-108">The [logical AND operator](and-operator.md) `&` also computes the logical AND of its `bool` operands, but always evaluates both operands.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="c7a20-109">Capacité de surcharge de l’opérateur</span><span class="sxs-lookup"><span data-stu-id="c7a20-109">Operator overloadability</span></span>
+
+<span data-ttu-id="c7a20-110">Un type défini par l’utilisateur ne peut pas surcharger l’opérateur logique conditionnel AND.</span><span class="sxs-lookup"><span data-stu-id="c7a20-110">A user-defined type cannot overload the conditional logical AND operator.</span></span> <span data-ttu-id="c7a20-111">Toutefois, si un type défini par l’utilisateur surcharge l’opérateur [logique AND](and-operator.md) et les opérateurs [true](../keywords/true-operator.md) et [false](../keywords/false-operator.md) d’une certaine manière, l’opération `&&` peut être évaluée pour les opérandes de ce type.</span><span class="sxs-lookup"><span data-stu-id="c7a20-111">However, if a user-defined type overloads the [logical AND](and-operator.md), [true](../keywords/true-operator.md), and [false](../keywords/false-operator.md) operators in a certain way, the `&&` operation can be evaluated for the operands of that type.</span></span> <span data-ttu-id="c7a20-112">Pour plus d’informations, consultez la section [Opérateurs logiques conditionnels définis par l’utilisateur](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="c7a20-112">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="c7a20-113">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="c7a20-113">C# language specification</span></span>
+
+<span data-ttu-id="c7a20-114">Pour plus d’informations, consultez la section [Opérateurs logiques conditionnels](~/_csharplang/spec/expressions.md#conditional-logical-operators) de la [spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="c7a20-114">For more information, see the [Conditional logical operators](~/_csharplang/spec/expressions.md#conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="c7a20-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c7a20-115">See also</span></span>
+
+- [<span data-ttu-id="c7a20-116">Référence C#</span><span class="sxs-lookup"><span data-stu-id="c7a20-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c7a20-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="c7a20-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c7a20-118">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="c7a20-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="c7a20-119">||, opérateur</span><span class="sxs-lookup"><span data-stu-id="c7a20-119">|| operator</span></span>](conditional-or-operator.md)
+- [!, opérateur]<span data-ttu-id="c7a20-120">(logical-negation-operator.md)</span><span class="sxs-lookup"><span data-stu-id="c7a20-120">(logical-negation-operator.md)</span></span>
+- [<span data-ttu-id="c7a20-121">&, opérateur</span><span class="sxs-lookup"><span data-stu-id="c7a20-121">& operator</span></span>](and-operator.md)

@@ -1,44 +1,53 @@
 ---
 title: '&amp;=, opérateur (référence C#)'
-ms.date: 07/20/2015
+ms.date: 10/29/2018
 f1_keywords:
 - '&=_CSharpKeyword'
 helpviewer_keywords:
 - AND assignment operator (&=) [C#]
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
-ms.openlocfilehash: f3a6fe20ca89a90b5a64118d73fb39e9a364d1e9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8ce27c999cf21a9059ba23ee3c86b8fa024c7341
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506399"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50980607"
 ---
-# <a name="amp-operator-c-reference"></a><span data-ttu-id="e319d-102">&amp;=, opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="e319d-102">&amp;= Operator (C# Reference)</span></span>
-<span data-ttu-id="e319d-103">Opérateur d’assignation AND.</span><span class="sxs-lookup"><span data-stu-id="e319d-103">The AND assignment operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="e319d-104">Notes</span><span class="sxs-lookup"><span data-stu-id="e319d-104">Remarks</span></span>  
- <span data-ttu-id="e319d-105">Une expression qui utilise l’opérateur d’assignation `&=`, telle que</span><span class="sxs-lookup"><span data-stu-id="e319d-105">An expression using the `&=` assignment operator, such as</span></span>  
-  
-```csharp  
-x &= y  
-```  
-  
- <span data-ttu-id="e319d-106">est équivalent à</span><span class="sxs-lookup"><span data-stu-id="e319d-106">is equivalent to</span></span>  
-  
-```csharp  
-x = x & y  
-```  
-  
- <span data-ttu-id="e319d-107">sauf que `x` n’est évalué qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="e319d-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="e319d-108">L’[opérateur &](../../../csharp/language-reference/operators/and-operator.md) effectue une opération AND logique au niveau du bit sur les opérandes de type intégral et une opération AND logique sur les opérandes de type `bool`.</span><span class="sxs-lookup"><span data-stu-id="e319d-108">The [& operator](../../../csharp/language-reference/operators/and-operator.md) performs a bitwise logical AND operation on integral operands and logical AND on `bool` operands.</span></span>  
-  
- <span data-ttu-id="e319d-109">L’opérateur `&=` ne peut pas être surchargé directement, mais les types définis par l’utilisateur peuvent surcharger l’[opérateur &](../../../csharp/language-reference/operators/and-operator.md) binaire (voir [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="e319d-109">The `&=` operator cannot be overloaded directly, but user-defined types can overload the binary [& operator](../../../csharp/language-reference/operators/and-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="e319d-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="e319d-110">Example</span></span>  
- [!code-csharp[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="e319d-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e319d-111">See Also</span></span>
+# <a name="amp-operator-c-reference"></a><span data-ttu-id="fa22f-102">&amp;=, opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="fa22f-102">&amp;= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="e319d-112">Référence C#</span><span class="sxs-lookup"><span data-stu-id="e319d-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="e319d-113">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="e319d-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="e319d-114">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="e319d-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="fa22f-103">Opérateur d’assignation AND.</span><span class="sxs-lookup"><span data-stu-id="fa22f-103">The AND assignment operator.</span></span>
+
+<span data-ttu-id="fa22f-104">Expression utilisant l’opérateur `&=`, par exemple</span><span class="sxs-lookup"><span data-stu-id="fa22f-104">An expression using the `&=` operator, such as</span></span>
+
+```csharp
+x &= y
+```
+
+<span data-ttu-id="fa22f-105">est équivalent à</span><span class="sxs-lookup"><span data-stu-id="fa22f-105">is equivalent to</span></span>
+
+```csharp
+x = x & y
+```
+
+<span data-ttu-id="fa22f-106">sauf que `x` n’est évalué qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="fa22f-106">except that `x` is only evaluated once.</span></span>
+
+<span data-ttu-id="fa22f-107">Pour les opérandes entiers, [l’opérateur `&`](and-operator.md) calcule l’opération logique AND au niveau du bit de ses opérandes ; pour les opérandes [bool](../keywords/bool.md), il calcule l’opération logique AND de ses opérandes.</span><span class="sxs-lookup"><span data-stu-id="fa22f-107">For integer operands, the [`&` operator](and-operator.md) computes the bitwise logical AND of its operands; for [bool](../keywords/bool.md) operands, it computes the logical AND of its operands.</span></span>
+
+<span data-ttu-id="fa22f-108">L’exemple suivant illustre l’utilisation de l’opérateur `&=` :</span><span class="sxs-lookup"><span data-stu-id="fa22f-108">The following example demonstrates the usage of the `&=` operator:</span></span>
+
+[!code-csharp-interactive[AND assignment example](~/samples/snippets/csharp/language-reference/operators/AndOperatorExamples.cs#AndAssignmentExample)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="fa22f-109">Capacité de surcharge de l’opérateur</span><span class="sxs-lookup"><span data-stu-id="fa22f-109">Operator overloadability</span></span>
+
+<span data-ttu-id="fa22f-110">Si un type défini par l’utilisateur [surcharge](../keywords/operator.md) [l’opérateur `&` ](and-operator.md), l’opérateur d’assignation AND `&=` est implicitement surchargé.</span><span class="sxs-lookup"><span data-stu-id="fa22f-110">If a user-defined type [overloads](../keywords/operator.md) the [`&` operator](and-operator.md), the AND assignment operator `&=` is implicitly overloaded.</span></span> <span data-ttu-id="fa22f-111">Un type défini par l’utilisateur ne peut pas surcharger explicitement l’opérateur d’assignation AND.</span><span class="sxs-lookup"><span data-stu-id="fa22f-111">A user-defined type cannot explicitly overload the AND assignment operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="fa22f-112">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="fa22f-112">C# language specification</span></span>
+
+<span data-ttu-id="fa22f-113">Pour plus d’informations, consultez la section [Assignation composée](~/_csharplang/spec/expressions.md#compound-assignment) de la [spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="fa22f-113">For more information, see the [Compound assignment](~/_csharplang/spec/expressions.md#compound-assignment) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="fa22f-114">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fa22f-114">See also</span></span>
+
+- [<span data-ttu-id="fa22f-115">Référence C#</span><span class="sxs-lookup"><span data-stu-id="fa22f-115">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="fa22f-116">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="fa22f-116">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="fa22f-117">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="fa22f-117">C# Operators</span></span>](index.md)
