@@ -6,14 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4c77d063d64354bf4693ce82509f36be9d2e5b0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d786a77a0f787515ce1ab2ca61cbc1251aa14563
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003891"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192458"
 ---
 # <a name="-doc"></a>-doc
 Traite les commentaires de documentation pour les diriger vers un fichier XML.  
@@ -30,30 +28,30 @@ Traite les commentaires de documentation pour les diriger vers un fichier XML.
   
 |Terme|Définition|  
 |---|---|  
-|`+` &#124; `-`|Facultatif. Spécification +, ou simplement `-doc`, le compilateur génère des informations de documentation et les place dans un fichier XML. Spécification `-` équivaut à ne pas spécifier `-doc`, à l’origine d’aucune information de documentation doit être créé.|  
-|`file`|Obligatoire si l'option `-doc:` est utilisée. Spécifie le fichier XML de sortie, qui est rempli avec les commentaires à partir des fichiers de code source de la compilation. Si le nom de fichier contient un espace, placez ce nom entre guillemets ( » «).|  
+|`+` &#124; `-`|Facultatif. Si vous spécifiez +, ou simplement `-doc`, le compilateur génère des informations de documentation et les place dans un fichier XML. Si vous spécifiez `-`, ce qui équivaut à ne pas spécifier `-doc`, aucune information de documentation n’est créée.|  
+|`file`|Obligatoire si l'option `-doc:` est utilisée. Spécifie le fichier XML de sortie, qui est renseigné avec les commentaires des fichiers de code source de la compilation. Si le nom de fichier contient un espace, placez-le entre des guillemets (" ").|  
   
 ## <a name="remarks"></a>Notes  
- Le `-doc` option contrôle si le compilateur génère un fichier XML contenant les commentaires de documentation. Si vous utilisez le `-doc:file` syntaxe, la `file` paramètre spécifie le nom du fichier XML. Si vous utilisez `-doc` ou `-doc+`, le compilateur prend le nom du fichier XML à partir du fichier exécutable ou la bibliothèque que le compilateur est en train de créer. Si vous utilisez `-doc-` ou ne spécifiez pas la `-doc` option, le compilateur ne crée pas d’un fichier XML.  
+ L’option `-doc` contrôle si le compilateur génère un fichier XML contenant les commentaires de documentation. Si vous utilisez la syntaxe `-doc:file`, le paramètre `file` spécifie le nom du fichier XML. Si vous utilisez `-doc` ou `-doc+`, le compilateur prend le nom de fichier XML du fichier exécutable ou de la bibliothèque en cours de création. Si vous utilisez `-doc-` ou que vous ne spécifiez pas l’option `-doc`, le compilateur ne crée pas de fichier XML.  
   
- Dans les fichiers de code source, les commentaires de documentation peuvent précéder les définitions suivantes :  
+ Dans les fichiers de code source, des commentaires de documentation peuvent précéder les définitions suivantes :  
   
--   Défini par l’utilisateur types, tels qu’un [classe](../../../visual-basic/language-reference/statements/class-statement.md) ou [interface](../../../visual-basic/language-reference/statements/interface-statement.md)  
+-   Types définis par l’utilisateur ([classe](../../../visual-basic/language-reference/statements/class-statement.md), [interface](../../../visual-basic/language-reference/statements/interface-statement.md), etc.)  
   
--   Membres, tel qu’un champ, [événement](../../../visual-basic/language-reference/statements/event-statement.md), [propriété](../../../visual-basic/language-reference/statements/property-statement.md), [fonction](../../../visual-basic/language-reference/statements/function-statement.md), ou [sous-routine](../../../visual-basic/language-reference/statements/sub-statement.md).  
+-   Membres (champ, [événement](../../../visual-basic/language-reference/statements/event-statement.md), [propriété](../../../visual-basic/language-reference/statements/property-statement.md), [fonction](../../../visual-basic/language-reference/statements/function-statement.md), [sous-routine](../../../visual-basic/language-reference/statements/sub-statement.md), etc.)  
   
- Pour utiliser le fichier XML généré avec Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) fonctionnalité, laisser le nom de fichier du fichier XML d’être le même que l’assembly que vous souhaitez prendre en charge. Assurez-vous que le fichier XML est dans le même répertoire que l’assembly afin que lorsque l’assembly est référencé dans le projet Visual Studio, le fichier .xml est également trouvé. Fichiers de documentation XML ne sont pas requis pour qu’IntelliSense fonctionne pour le code dans un projet ou dans des projets référencés par un projet.  
+ Pour utiliser le fichier XML généré avec la fonctionnalité [IntelliSense](/visualstudio/ide/using-intellisense) de Visual Studio, faites en sorte que le nom du fichier XML soit identique à l’assembly que vous souhaitez prendre en charge. Vérifiez que le fichier XML se trouve dans le même répertoire que l’assembly. De cette façon, quand l’assembly est référencé dans le projet Visual Studio, le fichier .xml est aussi localisé. Les fichiers de documentation XML ne sont pas nécessaires au bon fonctionnement d’IntelliSense avec du code dans un projet ou dans des projets référencés par un projet.  
   
- Sauf si vous compilez avec `/target:module`, le fichier XML contient les balises `<assembly></assembly>`. Ces balises spécifient le nom du fichier contenant le manifeste d’assembly du fichier de sortie de la compilation.  
+ Le fichier XML contient les balises `<assembly></assembly>`, sauf si vous effectuez la compilation avec `/target:module`. Ces balises spécifient le nom du fichier contenant le manifeste d’assembly pour le fichier de sortie de la compilation.  
   
- Consultez [balises de commentaire XML](../../../visual-basic/language-reference/xmldoc/index.md) pour savoir comment générer la documentation à partir de commentaires dans votre code.  
+ Pour découvrir comment générer de la documentation à partir de commentaires dans votre code, consultez [Balises de commentaires XML](../../../visual-basic/language-reference/xmldoc/index.md).  
   
-|Pour définir - doc dans Visual Studio des environnement de développement intégré|  
+|Pour définir -doc dans l’environnement de développement intégré Visual Studio|  
 |---|  
-|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Définissez la valeur dans le **fichier de documentation XML générer** boîte.|  
+|1.  Sélectionnez un projet dans l' **Explorateur de solutions**. Dans le menu **Projet**, cliquez sur **Propriétés**. <br />2.  Cliquez sur l’onglet **Compiler**.<br />3.  Définissez la valeur dans la zone **Générer le fichier de documentation XML**.|  
   
 ## <a name="example"></a>Exemple  
- Consultez [documenter votre Code avec XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) pour obtenir un exemple.  
+ Pour obtenir un exemple, consultez [Documentation de votre code avec le langage XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Compilateur de ligne de commande de Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
