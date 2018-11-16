@@ -1,6 +1,6 @@
 ---
-title: 'Le mot clé Fixed (F #)'
-description: 'Découvrez comment vous pouvez « pin » une variable locale dans la pile pour empêcher la collecte avec F # « fixed » mot clé.'
+title: Le mot clé Fixed (F#)
+description: Découvrez comment vous pouvez « pin » une variable locale dans la pile pour empêcher la collecte avec F# « fixed » mot clé.
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -9,27 +9,27 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "45624507"
 ---
-# <a name="the-fixed-keyword"></a><span data-ttu-id="ecded-103">Le mot clé Fixed</span><span class="sxs-lookup"><span data-stu-id="ecded-103">The Fixed Keyword</span></span>
+# <a name="the-fixed-keyword"></a><span data-ttu-id="d879c-103">Le mot clé Fixed</span><span class="sxs-lookup"><span data-stu-id="d879c-103">The Fixed Keyword</span></span>
 
-<span data-ttu-id="ecded-104">F # 4.1 introduit le `fixed` mot clé, qui vous permet de « épingler » une variable locale dans la pile pour éviter d’être collectées ou déplacé pendant le garbage collection.</span><span class="sxs-lookup"><span data-stu-id="ecded-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="ecded-105">Il est utilisé pour les scénarios de programmation de bas niveau.</span><span class="sxs-lookup"><span data-stu-id="ecded-105">It is used for low-level programming scenarios.</span></span>
+<span data-ttu-id="d879c-104">F# 4.1 introduit le `fixed` mot clé, qui vous permet de « épingler » une variable locale dans la pile pour éviter d’être collectées ou déplacé pendant le garbage collection.</span><span class="sxs-lookup"><span data-stu-id="d879c-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="d879c-105">Il est utilisé pour les scénarios de programmation de bas niveau.</span><span class="sxs-lookup"><span data-stu-id="d879c-105">It is used for low-level programming scenarios.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="ecded-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="ecded-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="d879c-106">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="d879c-106">Syntax</span></span>
 
 ```fsharp
 use ptr = fixed expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="ecded-107">Notes</span><span class="sxs-lookup"><span data-stu-id="ecded-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="d879c-107">Notes</span><span class="sxs-lookup"><span data-stu-id="d879c-107">Remarks</span></span>
 
-<span data-ttu-id="ecded-108">Cela permet d’étendre la syntaxe des expressions pour permettre l’extraction d’un pointeur et le lier à un nom qui ne peut pas être collectées ou déplacé pendant le garbage collection.</span><span class="sxs-lookup"><span data-stu-id="ecded-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
+<span data-ttu-id="d879c-108">Cela permet d’étendre la syntaxe des expressions pour permettre l’extraction d’un pointeur et le lier à un nom qui ne peut pas être collectées ou déplacé pendant le garbage collection.</span><span class="sxs-lookup"><span data-stu-id="d879c-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
 
-<span data-ttu-id="ecded-109">Correction d’un pointeur à partir d’une expression via la `fixed` mot clé est lié à un identificateur via le `use` mot clé.</span><span class="sxs-lookup"><span data-stu-id="ecded-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="ecded-110">La sémantique de cela est similaire à la gestion des ressources via les `use` mot clé.</span><span class="sxs-lookup"><span data-stu-id="ecded-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="ecded-111">Le pointeur est résolu pendant qu’il est dans la portée et une fois qu’il est hors de portée, il est fixe n’est plus.</span><span class="sxs-lookup"><span data-stu-id="ecded-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="ecded-112">`fixed` ne peut pas être utilisé en dehors du contexte d’un `use` liaison.</span><span class="sxs-lookup"><span data-stu-id="ecded-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="ecded-113">Vous devez lier le pointeur à un nom avec `use`.</span><span class="sxs-lookup"><span data-stu-id="ecded-113">You must bind the pointer to a name with `use`.</span></span>
+<span data-ttu-id="d879c-109">Correction d’un pointeur à partir d’une expression via la `fixed` mot clé est lié à un identificateur via le `use` mot clé.</span><span class="sxs-lookup"><span data-stu-id="d879c-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="d879c-110">La sémantique de cela est similaire à la gestion des ressources via les `use` mot clé.</span><span class="sxs-lookup"><span data-stu-id="d879c-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="d879c-111">Le pointeur est résolu pendant qu’il est dans la portée et une fois qu’il est hors de portée, il est fixe n’est plus.</span><span class="sxs-lookup"><span data-stu-id="d879c-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="d879c-112">`fixed` ne peut pas être utilisé en dehors du contexte d’un `use` liaison.</span><span class="sxs-lookup"><span data-stu-id="d879c-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="d879c-113">Vous devez lier le pointeur à un nom avec `use`.</span><span class="sxs-lookup"><span data-stu-id="d879c-113">You must bind the pointer to a name with `use`.</span></span>
 
-<span data-ttu-id="ecded-114">Utilisation de `fixed` doivent se produire dans une expression dans une fonction ou une méthode.</span><span class="sxs-lookup"><span data-stu-id="ecded-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="ecded-115">Il ne peut pas être utilisé dans une étendue au niveau du script ou au niveau du module.</span><span class="sxs-lookup"><span data-stu-id="ecded-115">It cannot be used at a script-level or module-level scope.</span></span>
+<span data-ttu-id="d879c-114">Utilisation de `fixed` doivent se produire dans une expression dans une fonction ou une méthode.</span><span class="sxs-lookup"><span data-stu-id="d879c-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="d879c-115">Il ne peut pas être utilisé dans une étendue au niveau du script ou au niveau du module.</span><span class="sxs-lookup"><span data-stu-id="d879c-115">It cannot be used at a script-level or module-level scope.</span></span>
 
-<span data-ttu-id="ecded-116">Comme tout code de pointeur, cela est une fonctionnalité unsafe et émet un avertissement lorsqu’il est utilisé.</span><span class="sxs-lookup"><span data-stu-id="ecded-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
+<span data-ttu-id="d879c-116">Comme tout code de pointeur, cela est une fonctionnalité unsafe et émet un avertissement lorsqu’il est utilisé.</span><span class="sxs-lookup"><span data-stu-id="d879c-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
 
-## <a name="example"></a><span data-ttu-id="ecded-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="ecded-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="d879c-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="d879c-117">Example</span></span>
 
 ```fsharp
 open Microsoft.FSharp.NativeInterop
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a><span data-ttu-id="ecded-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ecded-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d879c-118">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="d879c-118">See also</span></span>
 
-- [<span data-ttu-id="ecded-119">NativePtr (Module)</span><span class="sxs-lookup"><span data-stu-id="ecded-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [<span data-ttu-id="d879c-119">NativePtr (Module)</span><span class="sxs-lookup"><span data-stu-id="d879c-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
