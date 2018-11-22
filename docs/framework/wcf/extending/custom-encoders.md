@@ -2,11 +2,11 @@
 title: Encodeurs personnalisés
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034343"
 ---
 # <a name="custom-encoders"></a>Encodeurs personnalisés
@@ -60,7 +60,7 @@ Cette rubrique décrit comment créer des encodeurs personnalisés.
  En plus de traiter des clés de dictionnaire dynamiques, les messages de session en mémoire tampon sont reçus d'une manière unique. Au lieu de créer un lecteur sur le document et de le traiter, l'encodeur binaire utilise la classe interne `MessagePatterns` pour déconstruire le flux binaire. L’idée est que la plupart des messages ont un certain ensemble d’en-têtes qui s’affichent dans un certain ordre lorsque généré par WCF. Le système de modèle décompose le message en fonction de ce qu’il en attend. Si l'opération aboutie, il initialise un objet <xref:System.ServiceModel.Channels.MessageHeaders> sans analyser le XML. Dans le cas contraire, il revient à la méthode standard.  
   
 ### <a name="mtom-encoding"></a>MTOM Encoding  
- Le <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> classe possède une propriété de configuration supplémentaire appelée <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2A>. Celle-ci place une limite supérieure sur la quantité de données qu'il est possible de mettre en mémoire tampon pendant la lecture d'un message. Le jeu d'informations XML (Infoset), ou d'autres parties MIME, peuvent nécessiter leur mise en mémoire tampon pour réassembler toutes les parties MIME dans un message unique.  
+ La classe <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> a une propriété de configuration supplémentaire appelée <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>. Celle-ci place une limite supérieure sur la quantité de données qu'il est possible de mettre en mémoire tampon pendant la lecture d'un message. Le jeu d'informations XML (Infoset), ou d'autres parties MIME, peuvent nécessiter leur mise en mémoire tampon pour réassembler toutes les parties MIME dans un message unique.  
   
  Pour fonctionner correctement avec HTTP, la classe d'encodeur de message MTOM interne fournit des API internes pour `GetContentType` (qui est aussi interne) et `WriteMessage` qui est public et peut être substitué. Il doit s'effectuer plus de communication pour que les valeurs dans les en-têtes HTTP soient conformes aux valeurs dans les en-têtes MIME.  
   
