@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507390"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296865"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent, instruction
 Déclenche un événement déclaré au niveau du module dans une classe, un formulaire ou un document.  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  Appuyez sur F5 pour exécuter l’exemple précédent, puis cliquez sur le bouton intitulé **Démarrer**. La première zone de texte commence à décompter les secondes. Quand la durée totale (10 secondes) s'est écoulée, la première zone de texte affiche « Terminé ».  
   
 > [!NOTE]
->  Le `My.Application.DoEvents` méthode ne traite pas les événements de la même façon que le formulaire. Pour permettre au formulaire gérer les événements directement, vous pouvez utiliser le multithreading. Pour plus d’informations, consultez [Threading](../../programming-guide/concepts/threading/index.md).  
+>  Le `My.Application.DoEvents` méthode ne traite pas les événements de la même façon que le formulaire. Pour permettre au formulaire gérer les événements directement, vous pouvez utiliser le multithreading. Pour plus d’informations, consultez [Managed Threading](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements](../../../visual-basic/programming-guide/language-features/events/index.md)  

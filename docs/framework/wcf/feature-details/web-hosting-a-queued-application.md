@@ -2,21 +2,22 @@
 title: Hébergement sur le Web d'une application en file d'attente
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: f396ffadeca81d86d867842b63cad3c63d67ff3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa50b3b66230930f9553d6f0238b0a5f9178f7a5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297411"
 ---
 # <a name="web-hosting-a-queued-application"></a>Hébergement sur le Web d'une application en file d'attente
-Le Service de l’Activation des processus Windows (WAS) gère l’activation et la durée de vie des processus de travail qui contiennent des applications héberger des services de Windows Communication Foundation (WCF). Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Ainsi, les services WCF à utiliser à la fois HTTP et les protocoles non-HTTP, tels que net.msmq et msmq.formatname, dans un environnement d’hébergement qui prend en charge l’activation basée sur le message et offre la capacité d’héberger un grand nombre d’applications sur un ordinateur donné.  
+Le Service de l’Activation des processus Windows (WAS) gère l’activation et la durée de vie du processus de travail qui contiennent des applications à héberger des services de Windows Communication Foundation (WCF). Le modèle de processus WAS généralise le modèle de processus [!INCLUDE[iis601](../../../../includes/iis601-md.md)] pour le serveur HTTP en supprimant la dépendance envers le protocole HTTP. Ainsi, les services WCF à utiliser les protocoles HTTP et non-HTTP, tels que net.msmq et msmq.formatname, dans un environnement d’hébergement qui prend en charge l’activation basée sur le message et offre la possibilité d’héberger un grand nombre d’applications sur un ordinateur donné.  
   
  WAS inclut un service d'activation Message Queuing (MSMQ) qui active une application en file d'attente lorsqu'un ou plusieurs messages sont placés dans l'une des files d'attente utilisée par l'application. Le service d'activation MSMQ est un service NT démarré automatiquement par défaut.  
   
- Pour plus d’informations sur WAS et ses avantages, consultez [hébergement dans le Service d’Activation des processus Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Pour plus d’informations sur MSMQ, consultez [vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
+ Pour plus d’informations sur WAS et ses avantages, consultez [hébergement dans Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md). Pour plus d’informations sur MSMQ, consultez [vue d’ensemble des files d’attente](../../../../docs/framework/wcf/feature-details/queues-overview.md).
   
 ## <a name="queue-addressing-in-was"></a>Adressage de file d'attente dans le service WAS  
- Les applications WAS ont des adresses URI (Uniform Resource Identifier). Les adresses d'application ont deux parties : un préfixe URI de base et une adresse relative spécifique à l'application (chemin d'accès). Ces deux parties fournissent l'adresse externe d'une application lorsqu'elles sont jointes. Le préfixe URI de base est construit à partir de la liaison de site et est utilisé pour toutes les applications sous le site, par exemple, « NET.MSMQ://localhost », « MSMQ.FormatName://localhost » ou « NET.TCP://localhost ». Adresses d’application sont ensuite créées en prenant des fragments de chemin d’accès spécifiques à l’application (tel que « / /applicationone ») et en les ajoutant à l’URI de base du préfixe pour arriver à l’URI d’application complet, par exemple, « NET.MSMQ://localhost/applicationone ».  
+ Les applications WAS ont des adresses URI (Uniform Resource Identifier). Les adresses d'application ont deux parties : un préfixe URI de base et une adresse relative spécifique à l'application (chemin d'accès). Ces deux parties fournissent l'adresse externe d'une application lorsqu'elles sont jointes. Le préfixe URI de base est construit à partir de la liaison de site et est utilisé pour toutes les applications sous le site, par exemple, « NET.MSMQ://localhost », « MSMQ.FormatName://localhost » ou « NET.TCP://localhost ». Adresses d’application sont ensuite créées en prenant des fragments de chemin d’accès spécifique à l’application (tel que « / /applicationone ») et en les ajoutant à l’URI de base du préfixe pour arriver à l’application complète URI, par exemple, « NET.MSMQ://localhost/applicationone ».  
   
  Le service d'activation MSMQ utilise l'URI d'application pour mettre en correspondance la file d'attente dont le service d'activation MSMQ doit surveiller les messages. Lorsque le service d'activation MSMQ démarre, il énumère toutes les files d'attente publiques et privées sur l'ordinateur à partir duquel il est configuré pour recevoir et surveille leurs messages. Toutes les 10 minutes, le service d'activation MSMQ actualise la liste de files d'attente à surveiller. Lorsqu'un message est détecté dans une file d'attente, le service d'activation fait correspondre le nom de file d'attente à l'URI d'application la plus longue correspondante pour la liaison net.msmq et active l'application.  
   

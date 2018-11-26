@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847577"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296735"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Désactiver la prise en charge-DPI dans Visual Studio
 
@@ -51,10 +51,10 @@ Il est important de redémarrer Visual Studio en tant que reconnaissant les rés
 
 Vous pouvez marquer Visual Studio comme dépendant PPP en modifiant le Registre. Ouvrez **Éditeur du Registre** et ajouter une entrée à la **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** sous-clé :
 
-**Entrée**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Entrée**: C:\Program fichiers (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
-   > Si vous utilisez l’édition Professional ou Enterprise de Visual Studio 2017, remplacez **Communauté** avec **Professionnel** ou **Enterprise** dans l’entrée.
+   > Si vous utilisez l’édition Professional ou Enterprise de Visual Studio 2017, remplacez **Communauté** avec **Professionnel** ou **Enterprise** dans l’entrée. Remplacez la lettre de lecteur en fonction des besoins.
 
 **Type**: REG_SZ
 
