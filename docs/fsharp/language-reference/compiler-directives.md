@@ -1,13 +1,13 @@
 ---
 title: Directives de compilateur (F#)
-description: En savoir plus sur F# langage les directives de préprocesseur, directives de compilation conditionnelle, directives de ligne et les directives de compilateur.
+description: En savoir plus sur F# directives de préprocesseur de langage, les directives de compilation conditionnelle, directives de ligne et directives de compilateur.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ac375ac5acd0609a6556f9e0481d169df827c98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb23096e03584f2a50cfe069075ba94a35c4753c
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50181366"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296500"
 ---
 # <a name="compiler-directives"></a>Directives de compilateur
 
@@ -35,8 +35,8 @@ L’effet de désactiver un avertissement s’applique à l’intégralité du f
 
 Code qui est désactivé par l’une de ces directives apparaît grisé dans l’éditeur de Code Visual Studio.
 
->[!NOTE]
-Le comportement des directives de compilation conditionnelle n'est pas le même que dans les autres langages. Par exemple, vous ne pouvez pas utiliser des expressions booléennes qui impliquent des symboles et `true` et `false` n'ont aucune signification spéciale. Les symboles que vous utilisez dans la directive `if` doivent être définis par la ligne de commande ou dans les paramètres du projet ; il n'existe aucune directive de préprocesseur `define`.
+> [!NOTE]
+> Le comportement des directives de compilation conditionnelle n'est pas le même que dans les autres langages. Par exemple, vous ne pouvez pas utiliser des expressions booléennes qui impliquent des symboles et `true` et `false` n'ont aucune signification spéciale. Les symboles que vous utilisez dans la directive `if` doivent être définis par la ligne de commande ou dans les paramètres du projet ; il n'existe aucune directive de préprocesseur `define`.
 
 Le code suivant illustre l'utilisation des directives `#if`, `#else` et `#endif`. Dans cet exemple, le code contient deux versions de la définition de `function1`. Lorsque `VERSION1` est défini à l’aide de la [-définir l’option du compilateur](https://msdn.microsoft.com/library/434394ae-0d4a-459c-a684-bffede519a04), le code entre la `#if` directive et le `#else` est activé. Sinon, le code entre `#else` et `#endif` est activé.
 
@@ -65,7 +65,7 @@ Le tableau suivant répertorie la directive de compilateur disponible en F#.
 |Directive|Description|
 |---------|-----------|
 |`#light` ["on"&#124;"off"]|Active ou désactive la syntaxe simplifiée, à des fins de compatibilité avec d'autres versions de ML. Par défaut, la syntaxe simplifiée est activée. La syntaxe détaillée est toujours activée. Par conséquent, vous pouvez utiliser la syntaxe simplifiée et la syntaxe détaillée. La directive `#light` en elle-même équivaut à `#light "on"`. Si vous spécifiez `#light "off"`, vous devez utiliser la syntaxe détaillée pour toutes les constructions de langage. La syntaxe présentée dans la documentation de F# part du principe que vous utilisez la syntaxe simplifiée. Pour plus d’informations, consultez [syntaxe détaillée](verbose-syntax.md).|
-Pour les directives de l’interpréteur (fsi.exe), consultez [programmation Interactive avec F#](../tutorials/fsharp-interactive/index.md).
+Pour les directives de l’interpréteur (fsi.exe), consultez [programmation Interactive avec F# ](../tutorials/fsharp-interactive/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,20 +1,20 @@
 ---
 title: Flux de travail asynchrones (F#)
-description: En savoir plus sur la prise en charge dans le langage de programmation pour l’exécution de calculs asynchrones, F# qui s’exécutent sans bloquer l’exécution d’autres tâches.
+description: En savoir plus sur la prise en charge dans les F# langage de programmation pour effectuer des calculs de façon asynchrone, qui s’exécutent sans bloquer l’exécution d’autres tâches.
 ms.date: 05/16/2016
-ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861560"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297073"
 ---
 # <a name="asynchronous-workflows"></a>Flux de travail asynchrones
 
 > [!NOTE]
-Le lien des informations de référence sur les API pointe vers MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
+> Le lien des informations de référence sur les API pointe vers MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
 
-Cette rubrique décrit la prise en charge en F# pour l’exécution de calculs asynchrones, autrement dit, sans bloquer l’exécution d’autres tâches. Par exemple, les calculs asynchrones peuvent être utilisés pour écrire des applications qui ont des interfaces utilisateur restent réactives aux utilisateurs que l’application effectue un autre travail.
+Cette rubrique décrit la prise en charge dans F# pour l’exécution de calculs asynchrones, autrement dit, sans bloquer l’exécution des autres fonctionnent. Par exemple, les calculs asynchrones peuvent être utilisés pour écrire des applications qui ont des interfaces utilisateur restent réactives aux utilisateurs que l’application effectue un autre travail.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,17 +41,17 @@ let (result1 : Async<byte[]>) = stream.AsyncRead(bufferSize)
 let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 ```
 
-En plus de `let!`, vous pouvez utiliser `use!` pour effectuer des liaisons asynchrones. La différence entre `let!` et `use!` est identique à la différence entre `let` et `use`. Pour `use!`, l’objet est supprimé à la fermeture de la portée actuelle. Notez que dans la version actuelle du langage F#, `use!` n’autorise pas une valeur doivent être initialisées sur null, même si `use` est.
+En plus de `let!`, vous pouvez utiliser `use!` pour effectuer des liaisons asynchrones. La différence entre `let!` et `use!` est identique à la différence entre `let` et `use`. Pour `use!`, l’objet est supprimé à la fermeture de la portée actuelle. Notez que dans l’actuelle version de la F# language, `use!` n’autorise pas une valeur doivent être initialisées sur null, même si `use` est.
 
 ## <a name="asynchronous-primitives"></a>Primitives asynchrones
 
-Une méthode qui effectue une seule tâche asynchrone et retourne le résultat est appelée un *primitive asynchrone*, et celles-ci sont conçues spécifiquement pour une utilisation avec `let!`. Plusieurs primitives asynchrones sont définies dans la bibliothèque principale F#. Deux de ces méthodes pour les applications Web est définies dans le module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) et [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Les deux primitives téléchargent des données à partir d’une page Web, en fonction de l’URL. `AsyncGetResponse` génère un `System.Net.WebResponse` objet, et `AsyncDownloadString` génère une chaîne qui représente le code HTML pour une page Web.
+Une méthode qui effectue une seule tâche asynchrone et retourne le résultat est appelée un *primitive asynchrone*, et celles-ci sont conçues spécifiquement pour une utilisation avec `let!`. Plusieurs primitives asynchrones sont définies dans le F# bibliothèque principale. Deux de ces méthodes pour les applications Web est définies dans le module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) et [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Les deux primitives téléchargent des données à partir d’une page Web, en fonction de l’URL. `AsyncGetResponse` génère un `System.Net.WebResponse` objet, et `AsyncDownloadString` génère une chaîne qui représente le code HTML pour une page Web.
 
 Plusieurs primitives pour les opérations d’e/s asynchrones sont inclus dans le [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) module. Ces méthodes d’extension de la `System.IO.Stream` classe sont [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) et [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
 Vous pouvez également écrire vos propres primitives asynchrones en définissant une fonction dont le corps complet est placé dans un bloc async.
 
-Pour utiliser les méthodes asynchrones dans le .NET Framework sont conçues pour d’autres modèles asynchrones avec le modèle de programmation asynchrone F#, vous créez une fonction qui retourne un F# `Async` objet. La bibliothèque F# a des fonctions qui rendent cela plus faciles à faire.
+Pour utiliser les méthodes asynchrones dans le .NET Framework sont conçues pour d’autres modèles asynchrones avec le F# modèle de programmation asynchrone, vous créez une fonction qui retourne un F# `Async` objet. Le F# bibliothèque dispose de fonctions qui rendent cela plus faciles à faire.
 
 Un exemple d’utilisation de flux de travail asynchrones est inclus ici ; Il existe de nombreux autres dans la documentation pour les méthodes de la [classe Async](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7).
 

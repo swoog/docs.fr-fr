@@ -1,24 +1,24 @@
 ---
 title: Chaînes (F#)
-description: Découvrez comment le type 'string' F# représente le texte immuable sous la forme d’une séquence de caractères Unicode.
+description: Découvrez comment la F# type 'string' représente le texte immuable sous la forme d’une séquence de caractères Unicode.
 ms.date: 05/16/2016
-ms.openlocfilehash: 21971602093bc84b0df47d4ae46a14fb936c28bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43799341"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296784"
 ---
 # <a name="strings"></a>Chaînes
 
 > [!NOTE]
-Les liens des informations de référence sur les API qui figurent dans cet article pointent vers MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
+> Les liens des informations de référence sur les API qui figurent dans cet article pointent vers MSDN.  Les informations de référence sur les API docs.microsoft.com ne sont pas terminées.
 
 Le `string` type représente le texte immuable sous la forme d’une séquence de caractères Unicode. `string` est un alias pour `System.String` dans le .NET Framework.
 
 ## <a name="remarks"></a>Notes
 
-Littéraux de chaîne sont délimitées par le caractère guillemet ("). Le caractère barre oblique inverse ( \\ ) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés une *séquence d’échappement*. Prise en charge par F# littéraux sont affichés dans le tableau suivant de chaîne de séquences d’échappement.
+Littéraux de chaîne sont délimitées par le caractère guillemet ("). Le caractère barre oblique inverse ( \\ ) est utilisé pour encoder certains caractères spéciaux. La barre oblique inverse et le caractère suivant forment sont appelés une *séquence d’échappement*. Prise en charge dans des séquences d’échappement F# littéraux de chaîne sont affichées dans le tableau suivant.
 
 |Caractère|Séquence d'échappement|
 |---------|---------------|
@@ -78,7 +78,7 @@ L’exemple suivant illustre la concaténation de chaînes.
 
 ## <a name="string-class"></a>Classe de chaîne
 
-Étant donné que le type de chaîne en F# est en fait un .NET Framework `System.String` taper, tout le `System.String` membres sont disponibles. Cela inclut la `+` opérateur, qui est utilisé pour concaténer des chaînes, la `Length` propriété et le `Chars` propriété, qui retourne la chaîne sous la forme d’un tableau de caractères Unicode. Pour plus d’informations sur les chaînes, consultez `System.String`.
+Parce que la chaîne de type dans F# est en fait un .NET Framework `System.String` taper, tout le `System.String` membres sont disponibles. Cela inclut la `+` opérateur, qui est utilisé pour concaténer des chaînes, la `Length` propriété et le `Chars` propriété, qui retourne la chaîne sous la forme d’un tableau de caractères Unicode. Pour plus d’informations sur les chaînes, consultez `System.String`.
 
 À l’aide de la `Chars` propriété du `System.String`, vous pouvez accéder à différents caractères dans une chaîne en spécifiant un index, comme indiqué dans le code suivant.
 
