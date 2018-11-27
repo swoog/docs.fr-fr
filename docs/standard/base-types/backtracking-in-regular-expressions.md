@@ -1,6 +1,6 @@
 ---
 title: Rétroaction dans les expressions régulières
-ms.date: 03/30/2017
+ms.date: 11/12/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 343249f5411d4e5c2335446e7c892b989c8033f2
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039499"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297358"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Rétroaction dans les expressions régulières
 <a name="top"></a> La rétroaction se produit lorsqu'un modèle d'expression régulière contient des quantificateurs [facultatifs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) ou des [constructions d'alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), et que le moteur des expressions régulières retourne à l'état enregistré précédent pour poursuivre la recherche d'une correspondance. La rétroaction est essentielle à la puissance des expressions régulières ; elle permet aux expressions d'être puissantes et flexibles et de correspondre à des modèles très complexes. Cependant, cette puissance a un coût. La rétroaction est souvent le facteur le plus important qui affecte les performances du moteur des expressions régulières. Heureusement, le développeur contrôle le comportement du moteur des expressions régulières et comment il utilise la rétroaction. Cette rubrique explique comment la rétroaction fonctionne et comment elle peut être activée.  
@@ -99,7 +99,7 @@ ms.locfileid: "44039499"
   
 -   Il compare le « s » dans le modèle avec le « s » qui suit le « e » mis en correspondance (le premier « s » dans « expressions »). La correspondance réussit.  
   
- Lorsque vous utilisez la rétroaction, la mise en correspondance du modèle d'expression régulière avec la chaîne d'entrée, qui comporte 55 caractères, requiert 67 opérations de comparaison. Chose intéressante, si le modèle d'expression régulière comprenait un quantificateur paresseux, .`*?(es)`, la mise en correspondance de l'expression normale nécessiterait des comparaisons supplémentaires. Dans ce cas, au lieu de devoir revenir en arrière à la fin de la chaîne à « r » dans « expressions », le moteur des expressions régulières devrait revenir en arrière complètement au début de la chaîne pour établir une correspondance avec « es » et nécessiterait 113 comparaisons. En général, si un modèle d'expression régulière a une seule construction d'alternative ou un seul quantificateur facultatif, le nombre d'opérations de comparaison requises pour correspondre au modèle est supérieur au double du nombre de caractères dans la chaîne d'entrée.  
+ Lorsque vous utilisez la rétroaction, la mise en correspondance du modèle d'expression régulière avec la chaîne d'entrée, qui comporte 55 caractères, requiert 67 opérations de comparaison. En général, si un modèle d'expression régulière a une seule construction d'alternative ou un seul quantificateur facultatif, le nombre d'opérations de comparaison requises pour correspondre au modèle est supérieur au double du nombre de caractères dans la chaîne d'entrée.  
   
  [Retour au début](#top)  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44039499"
   
  Une exception <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> indique que le moteur des expressions régulières n'a pas pu trouver de correspondance dans l'intervalle de délai d'attente spécifié mais n'indique pas pourquoi l'exception a été levée. Cela peut provenir de la rétroaction excessive, mais il est possible que l'intervalle de délai d'attente était trop faible étant donné la charge système au moment où l'exception a été levée. Lorsque vous gérez l'exception, vous pouvez choisir d'abandonner d'autres correspondances avec la chaîne d'entrée ou augmenter l'intervalle de délai d'attente et de retenter l'opération de mise en correspondance.  
   
- Par exemple, le code suivant appelle le constructeur <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> pour instancier un objet <xref:System.Text.RegularExpressions.Regex> avec un délai d'attente d'une seconde. Le modèle d'expression régulière `(a+)+$`, qui correspond à une ou plusieurs séquences d'un ou plusieurs caractères « a » à la fin d'une ligne, est soumis à une rétroaction excessive. Si une <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> est levée, l'exemple augmente la valeur du délai d'attente jusqu'à un intervalle maximal de trois secondes. Après cela, il abandonne la tentative pour mettre en correspondance le modèle.  
+ Par exemple, le code suivant appelle le constructeur <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> pour instancier un objet <xref:System.Text.RegularExpressions.Regex> avec un délai d'attente d'une seconde. Le modèle d'expression régulière `(a+)+$`, qui correspond à une ou plusieurs séquences d'un ou plusieurs caractères « a » à la fin d'une ligne, est soumis à une rétroaction excessive. Si une <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> est levée, l'exemple augmente la valeur du délai d'attente jusqu'à un intervalle maximal de trois secondes. Après cela, il abandonne la tentative pour mettre en correspondance le modèle.  
   
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
@@ -176,7 +176,7 @@ ms.locfileid: "44039499"
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Démarrer la correspondance au début de la chaîne.|  
-|`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`[0-9A-Z]`|Mettre en correspondance un caractère alphanumérique. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`[-.\w]*`|Mettre en correspondance zéro, une ou plusieurs occurrences d'un trait d'union, d'un point ou d'un caractère alphabétique.|  
 |`(?<=[0-9A-Z])`|Remonter au dernier caractère mis en correspondance et continuer la mise en correspondances si elle est alphanumérique. Notez que les caractères alphanumériques sont un sous-ensemble du jeu qui se compose de points, de traits d'union et de tous les caractères alphabétiques.|  
 |`@`|Mettre en correspondance une arobase (« \@ »).|  
@@ -187,7 +187,7 @@ ms.locfileid: "44039499"
   
  `(?=` *sous-expression* `)` est une assertion de préanalyse positive ; c'est-à-dire que le ou les caractères situés après la position actuelle doivent correspondre à la *sous-expression*. `(?!`*sous-expression*`)` est une assertion de préanalyse négative ; c'est-à-dire que le ou les caractères situés après la position actuelle ne doivent pas correspondre à la *sous-expression*. Les assertions de préanalyse positive et négative sont très utiles quand la *sous-expression* est un sous-ensemble de la sous-expression suivante.  
   
- L'exemple suivant utilise deux modèles d'expressions régulières équivalentes qui valident un nom de type qualifié complet. Le premier modèle est sujet à des performances médiocres dues à une rétroaction excessive. Le second modifie la première expression régulière en remplaçant un quantificateur imbriqué par une assertion de préanalyse positive. La sortie de l'exemple indique la durée d'exécution de la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType>.  
+ L'exemple suivant utilise deux modèles d'expressions régulières équivalentes qui valident un nom de type qualifié complet. Le premier modèle est sujet à des performances médiocres dues à une rétroaction excessive. Le second modifie la première expression régulière en remplaçant un quantificateur imbriqué par une assertion de préanalyse positive. La sortie de l'exemple indique la durée d'exécution de la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking6.cs#6)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking6.vb#6)]  
@@ -197,7 +197,7 @@ ms.locfileid: "44039499"
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Démarrer la correspondance au début de la chaîne.|  
-|`([A-Z]\w*)+\.`|Mettre en correspondance un caractère alphabétique (A-Z) suivi de zéro, un ou plusieurs caractères alphabétiques une ou plusieurs fois, suivi d'un point. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`([A-Z]\w*)+\.`|Mettre en correspondance un caractère alphabétique (A-Z) suivi de zéro, un ou plusieurs caractères alphabétiques une ou plusieurs fois, suivi d'un point. Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`(([A-Z]\w*)+\.)*`|Mettre en correspondance le modèle précédent, zéro, une ou plusieurs fois.|  
 |`[A-Z]\w*`|Mettre en correspondance un caractère alphabétique suivi de zéro, un ou plusieurs caractères alphabétiques.|  
 |`$`|Terminer la correspondance à la fin de la chaîne d'entrée.|  
@@ -207,7 +207,7 @@ ms.locfileid: "44039499"
 |Motif|Description|  
 |-------------|-----------------|  
 |`^`|Démarrer la correspondance au début de la chaîne.|  
-|`(?=[A-Z])`|Effectuer une préanalyse du premier caractère et continuer la mise en correspondance s'il est alphabétique (A-Z). Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType>.|  
+|`(?=[A-Z])`|Effectuer une préanalyse du premier caractère et continuer la mise en correspondance s'il est alphabétique (A-Z). Cette comparaison ne respecte pas la casse, parce que la méthode <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> est appelée avec l'option <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> .|  
 |`\w+\.`|Mettre en correspondance un ou plusieurs caractères alphabétiques suivis d'un point.|  
 |`((?=[A-Z])\w+\.)*`|Mettre en correspondance un ou plusieurs caractères alphabétiques suivis d'un point zéro, une ou plusieurs fois. Le caractère alphabétique initial doit être alphabétique.|  
 |`[A-Z]\w*`|Mettre en correspondance un caractère alphabétique suivi de zéro, un ou plusieurs caractères alphabétiques.|  
@@ -221,4 +221,4 @@ ms.locfileid: "44039499"
 - [Langage des expressions régulières - Aide-mémoire](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
 - [Quantificateurs](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
 - [Constructions d’alternative](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
-- [Constructions de regroupement](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
