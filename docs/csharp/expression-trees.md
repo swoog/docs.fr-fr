@@ -1,5 +1,5 @@
 ---
-title: Expression Trees
+title: Arborescences de l’expression
 description: En savoir plus sur les arborescences d’expressions dans .NET Core et comment les utiliser pour représenter le code en tant que structures que vous pouvez examiner, modifier et exécuter.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
@@ -10,7 +10,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 10/28/2018
 ms.locfileid: "50190734"
 ---
-# <a name="expression-trees"></a>Expression Trees
+# <a name="expression-trees"></a>Arborescences de l’expression
 
 Si vous avez déjà utilisé LINQ, vous connaissez une bibliothèque enrichie où les types `Func` font partie de l’ensemble d’API. (Si vous ne connaissez pas LINQ, nous vous conseillons de lire le [didacticiel LINQ](linq/index.md) et le didacticiel sur les [expressions lambda](lambda-expressions.md) avant celui-ci.) Les *arborescences d’expressions* fournissent une interaction plus complète avec les arguments qui sont des fonctions.
 
