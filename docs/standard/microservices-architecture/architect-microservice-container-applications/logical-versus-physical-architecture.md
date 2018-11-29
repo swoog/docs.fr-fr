@@ -1,25 +1,25 @@
 ---
 title: Architecture logique et architecture physique
-description: Architecture de microservices .NET pour les applications .NET en conteneur | Architecture logique et architecture physique
+description: Comprendre les différences entre l’architecture logique et l’architecture physique.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: bb5f0daf0bcf824d72bb104914de03532bd3f9f7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.date: 09/20/2018
+ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213340"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296124"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architecture logique et architecture physique
 
-Il est utile à ce stade de s’arrêter et d’expliquer la distinction entre l’architecture logique et l’architecture physique, et comment cela s’applique à la conception des applications basées sur des microservices.
+Il est utile, à ce stade, de s’arrêter et d’expliquer en quoi l’architecture logique et l’architecture physique sont différentes, et de voir comment cela s’applique à la conception des applications basées sur des microservices.
 
-Pour commencer, la création de microservices ne nécessite l’utilisation d’aucune technologie spécifique. Par exemple, les conteneurs Docker ne sont pas obligatoires pour créer une architecture basée sur des microservices. Ces microservices peuvent également être exécutés comme processus ordinaires. Les microservices constituent une architecture logique.
+Pour commencer, notez que la création de microservices ne nécessite l’utilisation d’aucune technologie spécifique. Par exemple, les conteneurs Docker ne sont pas obligatoires pour créer une architecture basée sur des microservices. Ces microservices peuvent également être exécutés comme processus ordinaires. Les microservices constituent une architecture logique.
 
-De plus, même si un microservice peut être physiquement implémenté sous la forme d’un simple service, processus ou conteneur (par souci de simplicité, c’est l’approche adoptée dans la version initiale de [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), cette parité entre un microservice métier et un service ou un conteneur physique n’est pas nécessairement obligatoire dans tous les cas quand vous créez une grande application complexe composée de plusieurs dizaines ou même plusieurs centaines de services.
+De plus, même si un microservice peut être physiquement implémenté comme un simple service, processus ou conteneur (par souci de simplicité, c’est l’approche adoptée dans la version initiale de [eShopOnContainers](https://aka.ms/MicroservicesArchitecture)), cette parité entre un microservice métier et un service ou un conteneur physique n’est pas une exigence dans tous les cas quand vous créez une grande application complexe composée de plusieurs dizaines voire centaines de services.
 
-C’est là où il y a une différence entre l’architecture logique et l’architecture physique d’une application. L’architecture logique et les limites logiques d’un système ne correspondent pas nécessairement selon une relation un-à-un à l’architecture physique ou du déploiement. Cela peut se produire, mais ce n’est pas souvent le cas.
+C’est sur ce point qu’il y a une réelle différence entre l’architecture logique et l’architecture physique d’une application. L’architecture logique et les limites logiques d’un système ne correspondent pas nécessairement selon une relation un-à-un à l’architecture physique ou du déploiement. Cela peut se produire, mais ce n’est pas souvent le cas.
 
 Même si vous avez identifié certains microservices métier ou des contextes délimités, cela ne signifie pas que la meilleure façon de les implémenter est toujours de créer un service (comme une API web ASP.NET) ou un conteneur Docker pour chaque microservice métier. Une règle spécifiant que chaque microservice métier doit être implémenté en utilisant un service ou un conteneur est trop rigide.
 
@@ -27,14 +27,13 @@ Par conséquent, un microservice métier ou un contexte délimité est une archi
 
 Comme le montre la figure 4-8, le microservice métier du catalogue pourrait être composé de plusieurs services ou processus. Il pourrait s’agir de plusieurs services d’API web ASP.NET ou de tout autre type de service utilisant HTTP ou un autre protocole. Plus important encore, les services pourraient partager les mêmes données, dès lors que ces services sont cohésifs pour le même domaine métier.
 
-![](./media/image8.png)
+![Diagramme du microservice métier Catalog, qui contient un service API, un service de recherche et une base de données SQL Server.](./media/image8.png)
 
 **Figure 4-8**. Microservice métier avec plusieurs services physiques
 
-Les services de l’exemple partagent le même modèle de données, car le service d’API web cible les mêmes données que le service de recherche. Ainsi, dans l’implémentation physique du microservice métier, vous fractionnez cette fonctionnalité afin de mettre à l’échelle chacun de ces services internes vers le haut ou vers le bas en fonction des besoins. Le service d’API web nécessite peut-être généralement plus d’instances que le service de recherche, ou inversement.
+Les services de l’exemple partagent le même modèle de données, car le service d’API web cible les mêmes données que le service de recherche. Ainsi, dans l’implémentation physique du microservice métier, vous divisez cette fonctionnalité afin d’effectuer un scale-up ou un scale-down de chacun de ces services internes selon les besoins. Le service d’API web nécessite peut-être généralement plus d’instances que le service de recherche, ou inversement.
 
-En bref, l’architecture logique des microservices ne doit pas toujours coïncider avec l’architecture du déploiement physique. Dans ce guide, quand nous mentionnons un microservice, nous entendons par là un microservice métier ou logique, qui peut correspondre à un ou plusieurs services. Dans la plupart des cas, il s’agit d’un seul service, mais il peut y en avoir plus.
-
+En bref, l’architecture logique des microservices n’a pas toujours à coïncider avec l’architecture du déploiement physique. Dans ce guide, quand nous mentionnons un microservice, nous entendons par là un microservice métier ou logique, qui peut correspondre à un ou plusieurs services (physiques). Dans la plupart des cas, il s’agit d’un seul service, mais il peut y en avoir plus.
 
 >[!div class="step-by-step"]
 [Précédent](data-sovereignty-per-microservice.md)

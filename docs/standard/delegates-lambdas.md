@@ -6,41 +6,43 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fb926683de90516bcf67d99026a0134d82cb683
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574556"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296943"
 ---
 # <a name="delegates-and-lambdas"></a>Délégués et expressions lambda
 
 Les délégués définissent un type, qui spécifie la signature d’une méthode particulière. Une méthode (statique ou d’instance) qui répond à cette signature peut être attribuée à une variable de ce type, puis appelée directement (avec les arguments appropriés) ou passée elle-même comme argument à une autre méthode, puis appelée. L’exemple suivant montre l’utilisation des délégués.
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    public delegate string Reverse(string s);
 
-  public delegate string Reverse(string s);
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Reverse rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Reverse rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-*   Sur la ligne 4, nous créons un type délégué d’une certaine signature, dans notre exemple, une méthode qui accepte un paramètre de chaîne, puis renvoie un paramètre de chaîne.
-*   Sur la ligne 6, nous définissons l’implémentation du délégué en fournissant une méthode qui a exactement la même signature.
-*   Sur la ligne 13, la méthode est attribuée à un type conforme au délégué `Reverse`.
-*   Enfin, sur la ligne 15, nous appelons le délégué en passant une chaîne à inverser.
+* La ligne `public delegate string Reverse(string s);` crée un type délégué d’une certaine signature : dans notre exemple, une méthode qui prend un paramètre de type chaîne, puis retourne un paramètre de type chaîne.
+* La méthode `static string ReverseString(string s)`, qui a exactement la même signature que le type délégué défini, implémente le délégué.
+* La ligne `Reverse rev = ReverseString;` montre que vous pouvez affecter une méthode à une variable du type délégué correspondant.
+* La ligne `Console.WriteLine(rev("a string"));` montre comment utiliser une variable d’un type délégué pour appeler le délégué.
 
 Pour simplifier le processus de développement, .NET inclut un ensemble de types délégués que les programmeurs peuvent réutiliser sans avoir à en créer. Il s’agit de `Func<>`, `Action<>` et `Predicate<>`. Ils peuvent être utilisés à plusieurs endroits dans les API .NET, sans avoir à définir de nouveaux types délégués. Bien sûr, il existe certaines différences entre ces trois types, comme vous pouvez le constater dans leurs signatures, qui sont principalement liées à la manière dont ils doivent être utilisés :
 
@@ -51,87 +53,93 @@ Pour simplifier le processus de développement, .NET inclut un ensemble de types
 Nous pouvons maintenant reprendre notre exemple ci-dessus et le réécrire à l’aide du délégué `Func<>` au lieu d’un type personnalisé. Le programme continue à s’exécuter exactement de la même façon.
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Func<string, string> rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Func<string, string> rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-Dans cet exemple simple, il peut sembler un peu superflu de définir une méthode en dehors de la méthode Main(). C’est pourquoi .NET Framework 2.0 a introduit le concept des **délégués anonymes**. Grâce à eux, vous pouvez créer des délégués « inline », sans avoir à spécifier un autre type ou méthode. Vous insérez simplement la définition du délégué là où vous en avez besoin.
+Dans cet exemple simple, il peut sembler un peu superflu de définir une méthode en dehors de la méthode `Main`. C’est pourquoi .NET Framework 2.0 a introduit le concept des **délégués anonymes**. Grâce à eux, vous pouvez créer des délégués « inline », sans avoir à spécifier un autre type ou méthode. Vous insérez simplement la définition du délégué là où vous en avez besoin.
 
 En guise d’exemple, nous allons utiliser notre délégué anonyme pour filtrer une liste uniquement sur les nombres pairs et les imprimer dans la console.
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(
-      delegate(int no)
-      {
-          return (no%2 == 0);
-      }
-    );
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(
+          delegate (int no)
+          {
+              return (no % 2 == 0);
+          }
+        );
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-Notez les lignes en surbrillance. Comme vous pouvez le voir, le corps du délégué n’est qu’un ensemble d’expressions, comme tout autre délégué. Mais au lieu d’être une définition séparée, nous l’avons introduit _ad hoc_ dans notre appel à la méthode `FindAll()` du type `List<T>`.
+Comme vous pouvez le voir, le corps du délégué n’est qu’un ensemble d’expressions, comme tout autre délégué. Mais au lieu d’en faire une définition distincte, nous l’avons introduit _ad hoc_ dans notre appel à la méthode <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType>.
 
 Toutefois, même avec cette approche, nous avons encore beaucoup de code inutile. C’est là que les **expressions lambda** interviennent.
 
-Les expressions lambda ont été initialement introduites dans C# 3.0 comme l’un des principaux blocs de construction de la requête LINQ (Language-Integrated Query). Il s’agit simplement d’une syntaxe plus pratique pour l’utilisation des délégués. Elles déclarent une signature et un corps de méthode, mais n’ont pas d’identité formelle propre, sauf si elles sont attribuées à un délégué. Contrairement aux délégués, elles peuvent être directement attribuées comme côté gauche de l’inscription d’événement, ou dans plusieurs clauses et méthodes Linq.
+Les expressions lambda ont été initialement introduites dans C# 3.0 comme l’un des principaux blocs de construction de la requête LINQ (Language-Integrated Query). Il s’agit simplement d’une syntaxe plus pratique pour l’utilisation des délégués. Elles déclarent une signature et un corps de méthode, mais n’ont pas d’identité formelle propre, sauf si elles sont attribuées à un délégué. Contrairement aux délégués, elles peuvent être directement affectées comme côté gauche de l’inscription d’un événement, ou dans plusieurs clauses et méthodes LINQ.
 
 Dans la mesure où une expression lambda est simplement une autre façon de spécifier un délégué, nous pouvons réécrire l’exemple ci-dessus pour utiliser une expression lambda au lieu d’un délégué anonyme.
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(i => i % 2 == 0);
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(i => i % 2 == 0);
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-Si vous jetez un œil aux lignes en surbrillance, vous pouvez voir à quoi ressemble une expression lambda. Là encore, il s’agit simplement d’une syntaxe **très** pratique pour l’utilisation des délégués. Par conséquent, ce qui se passe en coulisses est très proche de ce qui se passe avec le délégué anonyme.
+Dans l’exemple précédent, l’expression lambda utilisée est `i => i % 2 == 0`. Là encore, il s’agit simplement d’une syntaxe **très** pratique pour l’utilisation des délégués. Par conséquent, ce qui se passe en coulisses est très proche de ce qui se passe avec le délégué anonyme.
 
 Comme les expressions lambda sont juste des délégués, elles peuvent servir de gestionnaire d’événements sans aucun problème, comme l’illustre l’extrait de code suivant.
 

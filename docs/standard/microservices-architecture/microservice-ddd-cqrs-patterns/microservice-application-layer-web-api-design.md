@@ -1,35 +1,35 @@
 ---
 title: Conception de la couche Application de microservices et de l’API web
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Conception de la couche Application de microservices et de l’API web
+description: Architecture de microservices .NET pour les applications .NET conteneurisées | Brève explication des principes SOLID pour la conception de la couche Application.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/12/2017
-ms.openlocfilehash: a8c03f99accf75f60fe6c21a0f09f304214b4a6c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 03e08d757917b5ff658e9d4dd282a096c8dd23d5
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194099"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296767"
 ---
-# <a name="designing-the-microservice-application-layer-and-web-api"></a>Conception de la couche Application de microservices et de l’API web
+# <a name="design-the-microservice-application-layer-and-web-api"></a>Concevoir la couche Application de microservices et l’API web
 
-## <a name="using-solid-principles-and-dependency-injection"></a>Utilisation des principes SOLID et de l’injection de dépendances
+## <a name="use-solid-principles-and-dependency-injection"></a>Utiliser les principes SOLID et l’injection de dépendances
 
 Les principes SOLID sont des techniques essentielles à utiliser dans les applications modernes et stratégiques, notamment dans le développement d’un microservice avec des modèles DDD. SOLID est un acronyme qui regroupe cinq principes fondamentaux :
 
--   Principe de responsabilité unique (Single responsibility)
+- Principe de responsabilité unique (Single responsibility)
 
--   Principe ouvert/fermé (Open/closed)
+- Principe ouvert/fermé (Open/closed)
 
--   Principe de substitution de Liskov (Liskov substitution)
+- Principe de substitution de Liskov (Liskov substitution)
 
--   Principe de ségrégation des interfaces (Interface segregation)
+- Principe de ségrégation des interfaces (Interface segregation)
 
--   Principe d’inversion de dépendances (Dependency inversion)
+- Principe d’inversion de dépendances (Dependency inversion)
 
 SOLID a plus trait à la façon dont vous concevez votre application ou vos couches internes de microservices et au découplage des dépendances entre elles. Ce principe n’est pas lié au domaine, mais à la conception technique de l’application. Le dernier principe, celui de l’inversion de dépendances, vous permet de découpler la couche d’infrastructure du reste des couches, ce qui permet une implémentation mieux découplée des couches DDD.
 
-L’inversion de dépendances est une façon d’implémenter le principe éponyme. Il s’agit d’une technique de couplage faible entre des objets et leurs dépendances. Au lieu d’instancier directement des collaborateurs ou d’utiliser des références statiques, les objets dont a besoin une classe pour effectuer ses opérations sont fournis à la classe (ou injectés dans la classe). Le plus souvent, les classes déclarent leurs dépendances par le biais de leur constructeur, ce qui leur permet de suivre le principe des dépendances explicites. L’inversion de dépendances se base généralement sur des conteneurs d’inversion de contrôle (IoC) spécifiques. ASP.NET Core fournit un simple conteneur IoC intégré, mais vous pouvez également utiliser votre conteneur IoC favori, comme Autofac ou Ninject.
+L’inversion de dépendances est une façon d’implémenter le principe éponyme. Il s’agit d’une technique de couplage faible entre des objets et leurs dépendances. Au lieu d’instancier directement des collaborateurs ou d’utiliser des références statiques (comme is, using new…), les objets dont a besoin une classe pour effectuer ses opérations sont fournis à la classe (ou injectés dans la classe). Le plus souvent, les classes déclarent leurs dépendances par le biais de leur constructeur, ce qui leur permet de suivre le principe des dépendances explicites. L’injection de dépendances se base généralement sur des conteneurs d’inversion de contrôle (IoC) spécifiques. ASP.NET Core fournit un simple conteneur IoC intégré, mais vous pouvez également utiliser votre conteneur IoC favori, comme Autofac ou Ninject.
 
 En suivant les principes SOLID, vos classes ont naturellement tendance à être petites, bien factorisées et facilement testées. Mais comment savoir si trop de dépendances sont injectées dans vos classes ? Si vous utilisez l’inversion de dépendances par le biais du constructeur, vous pouvez facilement le détecter rien qu’en examinant le nombre de paramètres pour votre constructeur. S’il y a trop de dépendances, c’est généralement le signe (un [code smell](https://deviq.com/code-smells/)) que votre classe essaie d’en faire trop et qu’elle enfreint probablement le principe de responsabilité unique.
 
@@ -37,15 +37,14 @@ Un autre guide serait nécessaire pour couvrir les principes SOLID de façon app
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **SOLID: Fundamental OOP Principles**
-    [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
+- **SOLID: Fundamental OOP Principles** \
+  [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
--   **Inversion of Control Containers and the Dependency Injection pattern**
-    [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
+- **Inversion of Control Containers and the Dependency Injection pattern** \
+  [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
--   **Steve Smith. New is Glue**
-    [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
-
+- **Steve Smith. New is Glue** \
+  [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 >[!div class="step-by-step"]
 [Précédent](nosql-database-persistence-infrastructure.md)

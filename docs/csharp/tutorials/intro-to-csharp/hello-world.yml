@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: d9992c65b2f5f0f73af9f3234ac389b1c8647337
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 7d6029e48c67259dc2fb28151196223f2490962f
+  ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200154"
+  ms.lasthandoff: 11/26/2018
+  ms.locfileid: "52297047"
 items:
 - durationInMinutes: 1
   content: >
@@ -98,10 +98,4 @@ items:
     > [!NOTE]
 
     > Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).
-- content: >-
-    Vous avez terminé la présentation du tutoriel C# « Hello C# ».
-
-
-    Pour plus d’informations sur l’utilisation du type `string`, consultez la rubrique du [Guide de programmation C#](../../programming-guide/index.md) sur les [chaînes](../../programming-guide/strings/index.md).
-
-    [Conseils d’utilisation des chaînes](../../how-to/index.md#working-with-strings).
+- content: "Vous avez terminé la présentation du tutoriel C# « Hello C# ». Vous pouvez cliquer sur le lien **Nombres dans C#** ci-dessous pour démarrer le tutoriel interactif suivant, ou vous pouvez visiter le [site .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) pour télécharger le SDK .NET Core, créer un projet sur votre machine et continuer à coder. L’étape « Continuer à apprendre » vous ramène à ces tutoriels.\n\nPour plus d’informations sur le type `string` :\n- Rubrique du [Guide de programmation C#](../../programming-guide/index.md) sur les [chaînes](../../programming-guide/strings/index.md). \n- [Conseils d’utilisation des chaînes](../../how-to/index.md#working-with-strings).\n"

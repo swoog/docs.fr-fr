@@ -3,12 +3,12 @@ title: Modèles d’événement .NET standard
 description: En savoir plus sur les modèles d’événement .NET et comment créer des sources d’événements standard, vous abonner à des événements standard dans votre code et traiter ces événements.
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 0b10c440f4d05533032aa94819ec879f6a1ca2a4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 16a091dabe34a064ab3ee65a6d9f3e0ab36f1db4
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266765"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297034"
 ---
 # <a name="standard-net-event-patterns"></a>Modèles d’événement .NET standard
 
@@ -117,7 +117,7 @@ EventHandler<FileFoundArgs> onFileFound = (sender, eventArgs) =>
 
 ## <a name="adding-another-event-declaration"></a>Ajout d’une autre déclaration d’événement
 
-Nous allons ajouter une autre fonctionnalité et illustrer d’autres idiomes de langage pour les événements. Ajoutons une surcharge de la méthode `Search()` qui parcourt tous les sous-répertoires à la recherche de fichiers.
+Nous allons ajouter une autre fonctionnalité et illustrer d’autres idiomes de langage pour les événements. Ajoutons une surcharge de la méthode `Search` qui parcourt tous les sous-répertoires à la recherche de fichiers.
 
 Cette opération pourrait prendre beaucoup de temps dans un répertoire contenant de nombreux sous-répertoires. Ajoutons un événement déclenché au début de chaque nouvelle recherche dans un répertoire. Cela permet aux abonnés de suivre la progression et de tenir l’utilisateur à jour. Tous les exemples que nous avons créés jusqu’à présent sont publics. Faisons de celui-ci un événement interne. Cela signifie que nous pouvons aussi rendre internes les types utilisés pour les arguments.
 
@@ -133,7 +133,7 @@ Maintenant, définissons l’événement. Cette fois-ci, nous utiliserons une sy
 
 Le code que nous écrivons ici reflète en grande partie le code généré par le compilateur pour les définitions d’événements de champs que nous avons vu précédemment. Nous créons l’événement à l’aide d’une syntaxe très similaire à celle utilisée pour les [propriétés](properties.md). Notez que les gestionnaires ont des noms différents : `add` et `remove`. Il sont appelés pour s’abonner à l’événement ou pour annuler un abonnement. Notez que vous devez également déclarer un champ de stockage privé pour stocker la variable d’événement. Il est initialisé avec la valeur null.
 
-Ensuite, nous allons ajouter la surcharge de la méthode Search() qui parcourt les sous-répertoires et déclenche les deux événements. Le moyen le plus simple consiste à utiliser un argument par défaut pour indiquer que nous souhaitons rechercher dans tous les répertoires :
+Ensuite, nous allons ajouter la surcharge de la méthode `Search` qui parcourt les sous-répertoires et déclenche les deux événements. Le moyen le plus simple consiste à utiliser un argument par défaut pour indiquer que nous souhaitons rechercher dans tous les répertoires :
 
 [!code-csharp[SearchImplementation](../../samples/csharp/events/Program.cs#FinalImplementation "Implementation to search directories")]
 
