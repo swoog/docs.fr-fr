@@ -2,12 +2,12 @@
 title: Attribution d'autorisations de niveau ligne dans SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: 4a4b45e13a16b357be28a1383648e98890567ea9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0ec68f013d08e3939d48a820b9fd52ce27a4f12d
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873703"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671968"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Attribution d'autorisations de niveau ligne dans SQL Server
 Dans certains scénarios, il est nécessaire de contrôler l’accès aux données plus précisément qu’en se contentant d’accorder, de révoquer ou de refuser des autorisations. Par exemple, l’application de base de données d’un hôpital peut nécessiter que chaque médecin ne puisse accéder qu’aux informations de ses propres patients. Des scénarios similaires existent dans de nombreux environnements, notamment dans les applications financières, juridiques, publiques et militaires. Pour gérer ces scénarios, SQL Server 2016 propose une fonctionnalité [Sécurité au niveau des lignes](https://msdn.microsoft.com/library/dn765131.aspx) qui simplifie et centralise la logique d’accès au niveau des lignes dans une stratégie de sécurité. Pour les versions antérieures de SQL Server, une fonctionnalité similaire peut être obtenue à l’aide de vues permettant de mettre en œuvre un filtrage au niveau des lignes.  
@@ -21,7 +21,7 @@ Dans certains scénarios, il est nécessaire de contrôler l’accès aux donné
   
 -   Activez le filtrage au niveau des lignes :  
   
-    -   Si vous utilisez SQL Server 2016 ou version ultérieure, ou [base de données SQL Azure](https://docs.microsoft.com/azure/sql-database/), créez une stratégie de sécurité qui ajoute un prédicat sur la table pour limiter les lignes retournées à celles qui correspondent soit à l’utilisateur de base de données actuel (à l’aide de la CURRENT_USER() fonction intégrée) ou le nom de connexion actuel (à l’aide de la fonction intégrée SUSER_SNAME()) :  
+    -   Si vous utilisez SQL Server 2016 ou version ultérieure, ou [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/), créez une stratégie de sécurité qui ajoute un prédicat sur la table pour limiter les lignes retournées à celles qui correspondent à l’utilisateur de base de données actuel (à l’aide de la fonction intégrée CURRENT_USER()) ou au nom de connexion actuel (à l’aide de la fonction intégrée SUSER_SNAME()) :  
   
         ```tsql  
         CREATE SCHEMA Security  
@@ -58,13 +58,6 @@ Dans certains scénarios, il est nécessaire de contrôler l’accès aux donné
 -   Refusez au rôle `public` toutes les autorisations sur les tables (et les vues, le cas échéant). Les utilisateurs ne peuvent pas hériter des autorisations d’autres rôles de base de données, car le prédicat de filtre repose sur des noms d’utilisateurs ou de connexion, et non sur des rôles.  
   
 -   Accordez aux rôles de base de données l'autorisation EXECUTE sur les procédures stockées. Les utilisateurs ne peuvent accéder aux données que par le biais des procédures stockées fournies.  
-  
-## <a name="external-resources"></a>Ressources externes  
- Pour plus d'informations, voir la ressource suivante :  
-  
-|||  
-|-|-|  
-|[Implémentation de sécurité de niveau ligne et cellule dans Classified Databases Using SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=98227) sur le site TechCenter de SQL Server.|Décrit comment utiliser la sécurité de niveau ligne et de niveau cellule pour répondre aux spécifications de sécurité des bases de données confidentielles.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de niveau ligne](https://msdn.microsoft.com/library/dn765131.aspx)  

@@ -2,12 +2,12 @@
 title: Unions discriminées (F#)
 description: Découvrez comment utiliser F# unions discriminées.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788121"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672243"
 ---
 # <a name="discriminated-unions"></a>Unions discriminées
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Ce code montre que vous pouvez utiliser les champs nommés dans l’initialisation, ou vous pouvez utiliser l’ordre des champs dans la déclaration et fournir uniquement les valeurs pour chaque champ à son tour. L’appel de constructeur pour `rect` dans le code précédent utilise les champs nommés, mais l’appel de constructeur pour `circ` utilise le classement. Vous pouvez combiner les champs ordonnés et les champs nommés, comme dans la construction de `prism`.
 
-Le `option` type est une union discriminée simple de la bibliothèque principale F#. Le `option` type est déclaré comme suit.
+Le `option` type est une union discriminée simple dans le F# bibliothèque principale. Le `option` type est déclaré comme suit.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ Normalement, les identificateurs de cas peuvent être utilisés sans être quali
 
 ### <a name="unwrapping-discriminated-unions"></a>Unions discriminées désencapsuler
 
-Dans les Unions discriminées F# sont souvent utilisés dans la modélisation de domaine pour l’encapsulation d’un type unique. Il est facile d’extraire la valeur sous-jacente par le biais de critères spéciaux ainsi. Vous n’avez pas besoin d’utiliser une expression de correspondance pour un seul cas :
+Dans F# Unions discriminées sont souvent utilisées dans la modélisation de domaine pour l’encapsulation d’un type unique. Il est facile d’extraire la valeur sous-jacente par le biais de critères spéciaux ainsi. Vous n’avez pas besoin d’utiliser une expression de correspondance pour un seul cas :
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ Cela est illustré par l'exemple suivant :
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Critères spéciaux est également autorisée directement dans les paramètres de fonction, donc vous pouvez désencapsuler un cas unique :
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Unions discriminées de structs
 
-À partir de F# 4.1, vous pouvez également représenter les Unions discriminées en tant que structures.  Cette opération est effectuée avec la `[<Struct>]` attribut.
+En commençant par F# 4.1, vous pouvez également représenter des Unions discriminées en tant que structures.  Cette opération est effectuée avec la `[<Struct>]` attribut.
 
 ```fsharp
 [<Struct>]
