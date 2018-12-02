@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757346"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743267"
 ---
 # <a name="monolithic-applications"></a>Applications monolithiques
 
@@ -69,7 +69,6 @@ Figure 4-4 : publication d’un conteneur sur Azure App Service à partir de Vi
 
 Figure 4-4 montre également que le flux de publication envoie une image via un Registre de conteneurs, qui peut être Azure Container Registry (un Registre de près à vos déploiements dans Azure et sécurisés par les comptes et groupes Azure Active Directory) ou tout autre registre Docker comme les registres Docker Hub ou en local.
 
-
 >[!div class="step-by-step"]
-[Précédent](common-container-design-principles.md)
-[Suivant](state-and-data-in-docker-applications.md)
+>[Précédent](common-container-design-principles.md)
+>[Suivant](state-and-data-in-docker-applications.md)
