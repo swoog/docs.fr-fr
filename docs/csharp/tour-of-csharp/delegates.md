@@ -3,12 +3,12 @@ title: Délégués C# - Visite guidée du langage C#
 description: Découvrez la liaison tardive avec les délégués C#
 ms.date: 08/10/2016
 ms.assetid: 3cc27357-3ac2-43a1-aad0-86a77b88f884
-ms.openlocfilehash: 1dcd078b275d951b049b0c5bb6e084a4083d042d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2744f774392ef021974535de535b063264ae9a54
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360568"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672034"
 ---
 # <a name="delegates"></a>Délégués
 
@@ -29,5 +29,5 @@ Les délégués peuvent également être créés à l’aide de fonctions anonym
 Une propriété intéressante et utile d’un délégué est qu’il ne connaît pas la classe de la méthode qu’il référence, et cela lui est égal. Tout ce qui importe est que la méthode référencée ait les mêmes paramètres et type de retour que le délégué.
 
 >[!div class="step-by-step"]
-[Précédent](enums.md)
-[Suivant](attributes.md)
+>[Précédent](enums.md)
+>[Suivant](attributes.md)
