@@ -4,12 +4,12 @@ description: Apprenez à choisir entre des applications web traditionnelles et d
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404144"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745301"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Choisir entre des applications web traditionnelles et des applications monopages
 
@@ -73,7 +73,7 @@ L’écriture d’applications SPA nécessite une bonne connaissance des bibliot
 > - **Angular**  
 >   <https://angular.io>
 > - **Comparaison des frameworks JavaScript**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **Votre application doit déjà exposer une API pour d’autres clients (internes ou publics)**
 
@@ -91,5 +91,5 @@ Le tableau de décision ci-dessous récapitule certains facteurs à prendre en c
 | Exigences d’une interface utilisateur riche et complexe            | **Limité**             | **Adapté**             |
 
 >[!div class="step-by-step"]
-[Précédent](modern-web-applications-characteristics.md)
-[Suivant](architectural-principles.md)
+>[Précédent](modern-web-applications-characteristics.md)
+>[Suivant](architectural-principles.md)
