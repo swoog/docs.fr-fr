@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7953e34f76e23e3f9f4913726adc4b2176b172c9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1f86ed838e1333a5475d72eabc4d4248fc256211
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615324"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672030"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Constructions de backreference dans les expressions régulières
 Les références arrière offrent un moyen pratique d’identifier un caractère répété ou une sous-chaîne répétée dans une chaîne. Par exemple, si la chaîne d’entrée contient plusieurs occurrences d’une sous-chaîne arbitraire, vous pouvez faire correspondre la première occurrence à un groupe de capture, puis utiliser une référence arrière pour faire correspondre les occurrences suivantes de la sous-chaîne.  
@@ -64,7 +64,7 @@ Les références arrière offrent un moyen pratique d’identifier un caractère
   
  ou :  
   
- `\k'` *nom* `'`  
+ `\k'` *name* `'`  
   
  où *nom* est le nom d’un groupe de capture défini dans le modèle d’expression régulière. Si *nom* n’est pas défini dans le modèle d’expression régulière, une erreur d’analyse se produit et le moteur d’expression régulière lève une exception <xref:System.ArgumentException>.  
   
@@ -103,7 +103,7 @@ Cependant, si *nom* est la représentation sous forme de chaîne d’un nombre e
 |Motif|Description|  
 |-------------|-----------------|  
 |`(?<1>a)`|Mettre en correspondance le caractère « a » et affecter le résultat au groupe de capture nommé `1`.|  
-|`(?<1>\1b)*`|Mettre en correspondance 0 ou 1 occurrence du groupe nommé `1` avec un « b » et affecter le résultat au groupe de capture nommé `1`.|  
+|`(?<1>\1b)*`|Mettre en correspondance zéro ou plus d’occurrences du groupe nommé `1` avec un « b » et affecter le résultat au groupe de capture nommé `1`.|  
   
  [!code-csharp[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference4.cs#4)]
  [!code-vb[RegularExpressions.Language.Backreferences#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference4.vb#4)]  
@@ -114,7 +114,7 @@ Cependant, si *nom* est la représentation sous forme de chaîne d’un nombre e
   
 2.  Il passe au deuxième caractère et réussit à mettre en correspondance la chaîne « ab » avec l’expression `\1b`, ou « ab ». Il affecte ensuite le résultat, « ab », à `\1`.  
   
-3.  Il passe au quatrième caractère. L’expression `(?<1>\1b)` doit être mise en correspondance zéro fois ou plus, donc il réussit à mettre en correspondance la chaîne « abb » avec l’expression `\1b`. Il réaffecte le résultat, « abb », à `\1`.  
+3.  Il passe au quatrième caractère. L’expression `(?<1>\1b)*` doit être mise en correspondance zéro fois ou plus, donc il réussit à mettre en correspondance la chaîne « abb » avec l’expression `\1b`. Il réaffecte le résultat, « abb », à `\1`.  
   
  Dans cet exemple, `*` est un quantificateur en boucle : il est évalué à plusieurs reprises jusqu’à ce que le moteur d’expression régulière ne puisse pas mettre en correspondance le modèle qu’il définit. Les quantificateurs en boucle ne suppriment pas les définitions de groupe.  
   

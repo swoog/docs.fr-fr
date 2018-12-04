@@ -1,17 +1,17 @@
 ---
-title: "Comment : accéder à un membre à l'aide d'un pointeur (Guide de programmation C#)"
+title: Guide pratique pour accéder à un membre à l’aide d’un pointeur (Guide de programmation C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
-ms.openlocfilehash: 715bc2c493b58757154aa114d1e0527cbad46f46
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b51239be8da8c45aa2d7f1ff0700884c43c07299
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511300"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671954"
 ---
-# <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Comment : accéder à un membre à l'aide d'un pointeur (Guide de programmation C#)
+# <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Guide pratique pour accéder à un membre à l’aide d’un pointeur (Guide de programmation C#)
 Pour accéder à un membre d’un struct déclaré dans un contexte unsafe, vous pouvez utiliser l’opérateur d’accès au membre comme illustré dans l’exemple suivant où `p` est un pointeur vers un [struct](../../../csharp/language-reference/keywords/struct.md) qui contient un membre `x`.  
   
 ```  
