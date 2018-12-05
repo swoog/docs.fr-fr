@@ -1,21 +1,21 @@
 ---
 title: Référence des mots clés (F#)
-description: Trouvez des liens vers des informations sur tous les mots-clés du langage F#.
+description: Trouver des liens vers des informations sur tous les F# mots clés du langage.
 ms.date: 05/16/2016
 ms.openlocfilehash: 0016f68b2872183a2b4dd865ce229b6a76250b78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
+ms.lasthandoff: 12/05/2018
 ms.locfileid: "43856022"
 ---
 # <a name="keyword-reference"></a>Référence des mots clés
 
-Cette rubrique contient des liens vers des informations sur tous les mots clés du langage F#.
+Cette rubrique contient des liens vers des informations sur toutes les F# mots clés du langage.
 
-## <a name="f-keyword-table"></a>Table de mot clé F#
+## <a name="f-keyword-table"></a>F#Mot clé Table
 
-Le tableau suivant affiche tous les mots-clés F# par ordre alphabétique, ainsi que de brèves descriptions et des liens vers des rubriques qui contiennent des informations plus pertinentes.
+Le tableau suivant montre toutes les F# mots clés dans l’ordre alphabétique, ainsi que de brèves descriptions et des liens vers des rubriques qui contiennent des informations plus pertinentes.
 
 |Mot clé|Lien|Description|
 |-------|----|-----------|
@@ -90,7 +90,7 @@ Le tableau suivant affiche tous les mots-clés F# par ordre alphabétique, ainsi
 |`yield`|[Séquences](sequences.md)|Utilisé dans une expression de séquence pour produire une valeur pour une séquence.|
 |`yield!`|[Expressions de calcul](computation-expressions.md)<br /><br />[Flux de travail asynchrones](asynchronous-workflows.md)|Utilisé dans une expression de calcul pour ajouter le résultat d’une expression de calcul donné à une collection de résultats pour l’expression de calcul qui la contient.|
 
-Les jetons suivants sont réservés en F#, car ils sont des mots clés dans le langage OCaml :
+Les jetons suivants sont réservés dans F# , car ils sont des mots clés dans le langage OCaml :
 
 * `asr`
 * `land`
@@ -103,7 +103,7 @@ Les jetons suivants sont réservés en F#, car ils sont des mots clés dans le l
 
 Si vous utilisez la `--mlcompatibility` option du compilateur, les mots clés ci-dessus peuvent être utilisés comme identificateurs.
 
-Les jetons suivants sont réservés en tant que mots clés pour l’expansion future du langage F# :
+Les jetons suivants sont réservés en tant que mots clés pour l’expansion future de la F# langage :
 
 * `atomic`
 * `break`
