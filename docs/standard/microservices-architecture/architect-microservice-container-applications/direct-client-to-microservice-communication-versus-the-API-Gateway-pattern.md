@@ -4,12 +4,12 @@ description: Découvrez les différences et les utilisations du modèle de passe
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 36b95f8b6308773dbb49cc68e4f8e2099bdd1ff0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297307"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152641"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Modèle de passerelle API et communication directe de client à microservice
 
@@ -67,7 +67,7 @@ Par conséquent, avoir un niveau ou une couche intermédiaire d’indirection (p
 
 Quand vous concevez et que vous créez des applications de grande taille ou complexes basées sur des microservices avec plusieurs applications clientes, une [passerelle d’API](https://microservices.io/patterns/apigateway.html) peut être une bonne approche à considérer. Il s’agit d’un service qui fournit un point d’entrée unique pour certains groupes de microservices. Il est similaire au [modèle Façade](https://en.wikipedia.org/wiki/Facade_pattern) de la conception orientée objet, mais dans ce cas, il fait partie d’un système distribué. Le modèle Passerelle API est également parfois appelé « backend for frontend » ([BFF](https://samnewman.io/patterns/architectural/bff/)), car vous le créez en prenant en compte les besoins de l’application cliente.
 
-Par conséquent, la passerelle d’API se place entre les applications clientes et les microservices. Elle agit comme un proxy inverse, acheminant les requêtes des clients vers les services. Elle peut également fournir des fonctionnalités composites supplémentaires comme l’authentification; la terminaison SSL et le cache.
+Par conséquent, la passerelle d’API se place entre les applications clientes et le microservices. Elle agit comme un proxy inverse, acheminant les requêtes des clients vers les services. Elle peut également fournir des fonctionnalités composites supplémentaires comme l’authentification; la terminaison SSL et le cache.
 
 La figure 4-13 montre comment une passerelle d’API personnalisée peut s’intégrer dans une architecture simplifiée basée sur quelques microservices.
 
@@ -142,11 +142,11 @@ Les informations disponibles provenant d’un système de gestion des API vous a
 
 Avec Gestion des API Azure, vous pouvez sécuriser vos API avec une clé, un jeton et un filtrage des adresses IP. Ces fonctionnalités vous permettent d’appliquer des quotas et des limites de débit de façon souple et précise, de modifier la forme et le comportement de vos API avec des stratégies, et d’améliorer les performances avec la mise en cache des réponses.
 
-Dans ce guide et dans l’exemple d’application de référence (eShopOnContainers), l’architecture est limitée à une architecture conteneurisée plus simple et personnalisée, de façon à mettre l’accent sur des conteneurs ordinaires sans utiliser de produits PaaS comme Gestion des API Azure. Cependant, pour les applications de grande taille basées sur des microservices et déployées sur Microsoft Azure, nous vous encourageons à évaluer Gestion des API Azure comme base pour vos passerelles d’API en production.
+Dans ce guide et dans l’exemple d’application de référence (eShopOnContainers), l’architecture est limitée à une architecture en conteneurs plus simple et personnalisée, de façon à mettre l’accent sur des conteneurs ordinaires sans utiliser de produits PaaS comme Gestion des API Azure. Cependant, pour les applications de grande taille basées sur des microservices et déployées sur Microsoft Azure, nous vous encourageons à évaluer Gestion des API Azure comme base pour vos passerelles d’API en production.
 
 ### <a name="ocelot"></a>Ocelot
 
-[Ocelot](https://github.com/ThreeMammals/Ocelot) est une passerelle API légère qui est recommandée pour les approches plus simples. Ocelot est une passerelle API .NET Core open source conçue spécifiquement pour une architecture de microservices qui nécessite des points d’entrée unifiés dans son système. Elle est légère, rapide, scalable et fournit le routage et l’authentification, parmi de nombreuses autres fonctionnalités.
+[Ocelot](https://github.com/ThreeMammals/Ocelot) est une passerelle API légère qui est recommandée pour les approches plus simples. Ocelot est une passerelle API .NET Core open source conçue spécifiquement pour une architecture de microservices qui nécessite des points d’entrée unifiés dans son système. Elle est légère, rapide, évolutive et fournit le routage et l’authentification, parmi de nombreuses autres fonctionnalités.
 
 La principale raison de choisir Ocelot pour l’[application de référence eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) vient du fait qu’Ocelot est une passerelle API .NET Core légère que vous pouvez déployer dans le même environnement de déploiement d’application où vous déployez vos microservices/conteneurs (hôte Docker, Kubernetes, Service Fabric, etc.). Et comme elle s’appuie sur .NET Core, elle est multiplateforme et peut donc être déployée sur Windows ou Linux.
 
@@ -194,5 +194,5 @@ Après les sections consacrées à l’architecture initiale et à la présentat
   [*https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html*](https://www.pogsdotnet.com/2018/08/api-gateway-in-nutshell.html)
 
 >[!div class="step-by-step"]
-[Précédent](identify-microservice-domain-model-boundaries.md)
-[Suivant](communication-in-microservice-architecture.md)
+>[Précédent](identify-microservice-domain-model-boundaries.md)
+>[Suivant](communication-in-microservice-architecture.md)

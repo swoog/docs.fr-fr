@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50038303"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127444"
 ---
 # <a name="methods"></a>Méthodes #
 
@@ -158,7 +158,7 @@ L’exemple suivant définit une méthode, `ExampleMethod`, qui a un paramètre 
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Si une méthode avec plusieurs arguments facultatifs est appelée en utilisant des arguments positionnels, l’appelant doit fournir un argument pour tous les paramètres facultatifs, du premier au dernier pour lequel un argument est fourni. Par exemple, dans le cas de la méthode `ExampleMethod`, si l’appelant fournit un argument pour le paramètre `description`, il doit également en fournir un pour le paramètre `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` est un appel de méthode valide. `opt.ExampleMethod(2, , "Addition of 2 and 0);` génère une erreur du compilateur « Argument manquant ».
+Si une méthode avec plusieurs arguments facultatifs est appelée en utilisant des arguments positionnels, l’appelant doit fournir un argument pour tous les paramètres facultatifs, du premier au dernier pour lequel un argument est fourni. Par exemple, dans le cas de la méthode `ExampleMethod`, si l’appelant fournit un argument pour le paramètre `description`, il doit également en fournir un pour le paramètre `optionalInt`. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` est un appel de méthode valide. `opt.ExampleMethod(2, , "Addition of 2 and 0");` génère une erreur du compilateur « Argument manquant ».
 
 Si une méthode est appelée en utilisant des arguments nommés ou une combinaison d’arguments positionnels et nommés, l’appelant peut omettre les arguments qui suivent le dernier argument positionnel dans l’appel de la méthode.
 

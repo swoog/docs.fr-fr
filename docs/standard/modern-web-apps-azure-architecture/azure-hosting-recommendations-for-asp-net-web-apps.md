@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: a70cb822c789638ca107b090d1aed2b88ccc6a5d
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 221ea2a9fc154468f16ce09195a0415883ada9df
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404526"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125930"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recommandations sur l’hébergement Azure pour les applications web ASP.NET Core
 
@@ -24,7 +24,7 @@ Les applications web peuvent être hébergées avec :
 
 - App Service Web Apps
 
-- Des conteneurs
+- Conteneurs
 
 - Azure Service Fabric
 
@@ -128,4 +128,4 @@ La figure 11-2 montre un exemple d’architecture de référence. Ce diagramme d
   <https://docs.microsoft.com/azure/aks/intro-kubernetes>
 
 >[!div class="step-by-step"]
-[Précédent](development-process-for-azure.md)
+>[Précédent](development-process-for-azure.md)

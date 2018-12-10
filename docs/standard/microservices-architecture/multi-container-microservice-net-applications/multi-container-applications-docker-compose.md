@@ -1,23 +1,23 @@
 ---
-title: Définition de votre application multiconteneur avec docker-compose.yml
+title: Définition de votre application à plusieurs conteneurs avec docker-compose.yml
 description: Architecture de microservices .NET pour les applications .NET conteneurisées | Guide pratique pour spécifier la composition des microservices d’une application multiconteneur avec docker-compose.yml.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297177"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145252"
 ---
-# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Définition de votre application multiconteneur avec docker-compose.yml 
+# <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Définition de votre application à plusieurs conteneurs avec docker-compose.yml 
 
-Dans ce guide, le fichier [docker-compose.yml](https://docs.docker.com/compose/compose-file/) a été introduit dans la section [Étape 4. Définir vos services dans docker-compose.yml au moment de générer une application Docker multiconteneur](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Toutefois, il existe d’autres modes d’utilisation des fichiers docker-compose qui méritent d’être abordés plus en détail.
+Dans ce guide, le fichier [docker-compose.yml](https://docs.docker.com/compose/compose-file/) a été introduit dans la section [Étape 4. Définir vos services dans docker-compose.yml au moment de générer une application Docker à plusieurs conteneurs](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Toutefois, il existe d’autres modes d’utilisation des fichiers docker-compose qui méritent d’être abordés plus en détail.
 
-Par exemple, vous pouvez décrire explicitement la façon dont vous souhaitez déployer votre application multiconteneur dans le fichier docker-compose.yml. Éventuellement, vous pouvez également décrire la façon dont vous allez générer vos images Docker personnalisées. (Vous pouvez également générer des images Docker personnalisées avec l’interface de ligne de commande Docker CLI.)
+Par exemple, vous pouvez décrire explicitement la façon dont vous souhaitez déployer votre application à plusieurs conteneurs dans le fichier docker-compose.yml. Éventuellement, vous pouvez également décrire la façon dont vous allez générer vos images Docker personnalisées. (Vous pouvez également générer des images Docker personnalisées avec l’interface de ligne de commande Docker CLI.)
 
-Pour l’essentiel, vous définissez chacun des conteneurs à déployer, ainsi que certaines caractéristiques relatives à chaque déploiement de conteneur. Une fois que vous disposez d’un fichier de description de déploiement multiconteneur, vous pouvez déployer l’ensemble de la solution en une seule action orchestrée par la commande CLI [docker-compose up](https://docs.docker.com/compose/overview/), ou la déployer de manière transparente à partir de Visual Studio. Sinon, vous devez utiliser l’interface CLI Docker pour effectuer un déploiement conteneur par conteneur en plusieurs étapes à l’aide de la commande `docker run` à partir de la ligne de commande. Ainsi, chaque service défini dans docker-compose.yml doit spécifier une seule image ou une seule build. Les autres clés sont facultatives et sont analogues à leurs homologues de ligne de commande `docker run`.
+Pour l’essentiel, vous définissez chacun des conteneurs à déployer, ainsi que certaines caractéristiques relatives à chaque déploiement de conteneur. Une fois que vous disposez d’un fichier de description de déploiement à plusieurs conteneurs, vous pouvez déployer l’ensemble de la solution en une seule action orchestrée par la commande CLI [docker-compose up](https://docs.docker.com/compose/overview/), ou la déployer de manière transparente à partir de Visual Studio. Sinon, vous devez utiliser l’interface CLI Docker pour effectuer un déploiement conteneur par conteneur en plusieurs étapes à l’aide de la commande `docker run` à partir de la ligne de commande. Ainsi, chaque service défini dans docker-compose.yml doit spécifier une seule image ou une seule build. Les autres clés sont facultatives et sont analogues à leurs homologues de ligne de commande `docker run`.
 
 Le code YAML suivant représente la définition d’un éventuel fichier docker-compose.yml global mais unique pour l’exemple eShopOnContainers. Il ne s’agit pas du fichier docker-compose réel d’eShopOnContainers. Il s’agit plutôt d’une version simplifiée et centralisée dans un fichier unique, ce qui n’est pas la meilleure façon d’utiliser les fichiers docker-compose, comme cela sera expliqué plus tard.
 
@@ -147,7 +147,7 @@ Quand vous développez des applications, il est important de pouvoir les exécut
 
 Le fichier docker-compose.yml vous permet de configurer et de documenter toutes les dépendances de service de votre application (autres services, mises en cache, bases de données, files d’attente, etc.). À l’aide de la commande CLI docker-compose, vous pouvez créer et démarrer un ou plusieurs conteneurs pour chaque dépendance avec une seule commande (docker-compose up).
 
-Les fichiers docker-compose.yml sont des fichiers config interprétés par le moteur Docker. Toutefois, ils servent également de fichiers de documentation pratiques sur la composition de votre application multiconteneur.
+Les fichiers docker-compose.yml sont des fichiers config interprétés par le moteur Docker. Toutefois, ils servent également de fichiers de documentation pratiques sur la composition de votre application à plusieurs conteneurs.
 
 #### <a name="testing-environments"></a>Environnements de test
 
@@ -471,5 +471,5 @@ Pour faciliter un démarrage plus rapide, les images runtime affectent égalemen
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Précédent](data-driven-crud-microservice.md)
-[Suivant](database-server-container.md)
+>[Précédent](data-driven-crud-microservice.md)
+>[Suivant](database-server-container.md)

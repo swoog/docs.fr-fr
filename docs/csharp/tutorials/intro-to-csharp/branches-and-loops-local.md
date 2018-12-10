@@ -3,12 +3,12 @@ title: Branches et boucles – Tutoriel d’introduction à C#
 description: Dans ce tutoriel sur les branches et les boucles, vous allez écrire du code en C# pour explorer la syntaxe du langage qui gère les branches et les boucles conditionnelles permettant d’exécuter des instructions de manière répétée.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 0997c0b4a8f450c0e5eadc9616457a1ab84e7d96
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186135"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153772"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Découvrir la logique conditionnelle avec des instructions de branches et de boucles
 
@@ -223,7 +223,7 @@ for(int index = 0; index < 10; index++)
 
 Cette boucle fonctionne de manière identique à la boucle `while` et la boucle `do` que vous avez déjà utilisées. L’instruction `for` comprend trois parties qui contrôlent son fonctionnement.
 
-La première partie est l’**initialiseur for** : `for index = 0;` déclare que `index` est la variable de boucle et définit sa valeur initiale sur `0`.
+La première partie est l’**initialiseur for** : `int index = 0;` déclare que `index` est la variable de boucle et définit sa valeur initiale sur `0`.
 
 La partie centrale est la **condition for** : `index < 10` déclare que cette boucle `for` continue à s’exécuter tant que la valeur de compteur est inférieure à 10.
 

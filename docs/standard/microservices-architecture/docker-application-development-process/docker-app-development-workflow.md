@@ -1,15 +1,15 @@
 ---
 title: Workflow de développement des applications Docker
-description: Architecture des microservices .NET pour les applications .NET conteneurisées | Workflow de développement des applications Docker
+description: Architecture des microservices .NET pour les applications .NET en conteneur | Workflow de développement des applications Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/05/2018
-ms.openlocfilehash: 00cffde7e7eb548f755b60f64aa596210b570d07
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: bc6b1796ed7b12a04affc521ac2efee515c48ae2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297515"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150548"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Workflow de développement des applications Docker
 
@@ -31,7 +31,7 @@ Une application est composée de vos propres services et de bibliothèques suppl
 
 ![Diagramme du workflow pas à pas pour développer des applications Docker conteneurisées](./media/image1.png)
 
-**Figure 5-1.** Workflow pas à pas pour développer des applications Docker conteneurisées
+**Figure 5-1.** Workflow pas à pas pour développer des applications Docker en conteneur
 
 Ce guide décrit tout ce processus en détail, en expliquant chacune des étapes majeures dans l’optique d’un environnement Visual Studio.
 
@@ -447,5 +447,5 @@ RUN powershell add-windowsfeature web-asp-net45
    [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](../net-core-single-containers-linux-windows-server-hosts/index.md)
+>[Précédent](index.md)
+>[Suivant](../multi-container-microservice-net-applications/index.md)

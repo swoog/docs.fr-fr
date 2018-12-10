@@ -5,12 +5,12 @@ description: Découvrez comment installer le .NET Framework sur Windows 7 SP1.
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 091fb93f26695df01f2f95fdec7ed168d96ba90d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 74b457eba9642eb4d54873769014a7db5d28003b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200756"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155429"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Installer le .NET Framework sur Windows 7 SP1 et Windows Server 2008 R2
 
@@ -23,7 +23,7 @@ Ces instructions ont pour but de vous aider à installer les versions du .NET Fr
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
-[Télécharger .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [Télécharger .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) peut être utilisé pour exécuter des applications conçues pour .NET Framework version 4.0 ou ultérieure.
 

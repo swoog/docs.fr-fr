@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 723719b22c1c7de63f19f68acf91e6499c1a4e43
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 94239fc30292760b2bb28849f8c6ab72c7ceb33d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875181"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144726"
 ---
 # <a name="handling-partial-failure"></a>Gestion d’une défaillance partielle
 
@@ -39,7 +39,6 @@ Pour limiter ce problème, la section « *Asynchronous microservice integration
 
 De plus, il est essentiel de concevoir vos microservices et applications clientes pour gérer les défaillances partielles, et ainsi les rendre résilients.
 
-
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](partial-failure-strategies.md)
+>[Précédent](index.md)
+>[Suivant](partial-failure-strategies.md)

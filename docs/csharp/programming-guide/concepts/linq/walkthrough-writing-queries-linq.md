@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 2cac07c8eb02465334af47fd46702b60f1371c68
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ffff8317e6524acc877b7d0851e5a1b37967b1f0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43745321"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154075"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>Procédure pas à pas : écriture de requêtes en C# (LINQ)
 Cette procédure pas à pas présente les fonctionnalités du langage C# utilisées pour écrire des expressions de requête LINQ.  
@@ -87,7 +87,7 @@ Cette procédure pas à pas présente les fonctionnalités du langage C# utilis
   
 1.  Vous pouvez associer plusieurs conditions booléennes dans la clause `where` pour affiner davantage une requête. Le code suivant ajoute une condition afin que la requête retourne les étudiants dont la première note est supérieure à 90 et dont la dernière est inférieure à 80. La clause `where` doit être semblable au code suivant.  
   
-    ```  
+    ```csharp
     where student.Scores[0] > 90 && student.Scores[3] < 80  
     ```  
   
@@ -99,19 +99,19 @@ Cette procédure pas à pas présente les fonctionnalités du langage C# utilis
   
 1.  Il est plus facile d’analyser les résultats s’ils sont classés. Vous pouvez classer la séquence retournée selon tous les champs accessibles dans les éléments sources. Par exemple, la clause `orderby` suivante classe les résultats dans l’ordre alphabétique de A à Z d’après le nom de chaque étudiant. Ajoutez la clause `orderby` suivante à votre requête, juste après l’instruction `where` et avant l’instruction `select` :  
   
-    ```  
+    ```csharp
     orderby student.Last ascending  
     ```  
   
 2.  Modifiez à présent la clause `orderby` pour qu’elle classe les résultats dans l’ordre inverse d’après la note au premier examen, de la plus élevée à la plus faible.  
   
-    ```  
+    ```csharp
     orderby student.Scores[0] descending  
     ```  
   
 3.  Modifiez la chaîne de format `WriteLine` pour pouvoir consulter les notes :  
   
-    ```  
+    ```csharp
     Console.WriteLine("{0}, {1} {2}", student.Last, student.First, student.Scores[0]);  
     ```  
   
@@ -157,7 +157,7 @@ Cette procédure pas à pas présente les fonctionnalités du langage C# utilis
   
 #### <a name="to-use-method-syntax-in-a-query-expression"></a>Pour utiliser la syntaxe de méthode dans une expression de requête  
   
-1.  Comme décrit dans [Syntaxe de requête et syntaxe de méthode dans LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), certaines opérations de requête peuvent être exprimées uniquement à l’aide de la syntaxe de méthode. Le code suivant calcule la note totale de chaque `Student` dans la séquence source, puis appelle la méthode `Average()` sur les résultats de cette requête pour calculer la note moyenne de la classe. Notez la présence de parenthèses de part et d’autre de l’expression de requête.  
+1.  Comme décrit dans [Syntaxe de requête et syntaxe de méthode dans LINQ](../../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md), certaines opérations de requête peuvent être exprimées uniquement à l’aide de la syntaxe de méthode. Le code suivant calcule la note totale de chaque `Student` dans la séquence source, puis appelle la méthode `Average()` sur les résultats de cette requête pour calculer la note moyenne de la classe.
   
      [!code-csharp[csLINQGettingStarted#19](../../../../csharp/programming-guide/concepts/linq/codesnippet/CSharp/walkthrough-writing-queries-linq_9.cs)]  
   

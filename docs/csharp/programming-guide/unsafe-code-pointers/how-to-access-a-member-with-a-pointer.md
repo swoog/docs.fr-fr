@@ -5,11 +5,11 @@ helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
 ms.openlocfilehash: b51239be8da8c45aa2d7f1ff0700884c43c07299
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671954"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130838"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Guide pratique pour accéder à un membre à l’aide d’un pointeur (Guide de programmation C#)
 Pour accéder à un membre d’un struct déclaré dans un contexte unsafe, vous pouvez utiliser l’opérateur d’accès au membre comme illustré dans l’exemple suivant où `p` est un pointeur vers un [struct](../../../csharp/language-reference/keywords/struct.md) qui contient un membre `x`.  

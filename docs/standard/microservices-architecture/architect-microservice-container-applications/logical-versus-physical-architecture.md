@@ -4,12 +4,12 @@ description: Comprendre les différences entre l’architecture logique et l’a
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296124"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129920"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Architecture logique et architecture physique
 
@@ -36,5 +36,5 @@ Les services de l’exemple partagent le même modèle de données, car le servi
 En bref, l’architecture logique des microservices n’a pas toujours à coïncider avec l’architecture du déploiement physique. Dans ce guide, quand nous mentionnons un microservice, nous entendons par là un microservice métier ou logique, qui peut correspondre à un ou plusieurs services (physiques). Dans la plupart des cas, il s’agit d’un seul service, mais il peut y en avoir plus.
 
 >[!div class="step-by-step"]
-[Précédent](data-sovereignty-per-microservice.md)
-[Suivant](distributed-data-management.md)
+>[Précédent](data-sovereignty-per-microservice.md)
+>[Suivant](distributed-data-management.md)

@@ -3,12 +3,12 @@ title: Tableaux C# - Visite guidée du langage C#
 description: Les tableaux constituent le type de collection le plus simple du langage C#
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: c0fe65348ab2d41852ed9150571dcb0e5b8553f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8685e6ad08eb74534cdad499099b3d12da0a497a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351003"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153304"
 ---
 # <a name="arrays"></a>Tableaux
 
@@ -44,5 +44,5 @@ Les deux exemples précédents sont équivalents à ce qui suit :
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
-[Précédent](structs.md)
-[Suivant](interfaces.md)
+>[Précédent](structs.md)
+>[Suivant](interfaces.md)

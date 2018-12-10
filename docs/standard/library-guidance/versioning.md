@@ -4,12 +4,12 @@ description: Meilleures pratiques recommandées pour la gestion de version des b
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187856"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144557"
 ---
 # <a name="versioning"></a>Gestion de version
 
@@ -97,5 +97,5 @@ La version des informations sur l’assembly est utilisée pour enregistrer des 
 > Autorisez SourceLink à générer automatiquement la version qui contient les métadonnées de contrôle source et NuGet.
 
 >[!div class="step-by-step"]
-[Précédent](./publish-nuget-package.md)
-[Suivant](./breaking-changes.md)
+>[Précédent](publish-nuget-package.md)
+>[Suivant](breaking-changes.md)

@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET con
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: d32c643e553dfe3ce52e3e2ce8aaf1ea3a296de6
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: b95e256bf8df7207eed0895587c0945f37b08ecb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297308"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128950"
 ---
 # <a name="subscribing-to-events"></a>S’abonner à des événements
 
@@ -390,9 +390,6 @@ Si l’indicateur de redistribution est défini, le récepteur doit en tenir com
 -   **Reliability Guide** (documentation RabbitMQ) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
-
-
-
 >[!div class="step-by-step"]
-[Précédent](rabbitmq-event-bus-development-test-environment.md)
-[Suivant](test-aspnet-core-services-web-apps.md)
+>[Précédent](rabbitmq-event-bus-development-test-environment.md)
+>[Suivant](test-aspnet-core-services-web-apps.md)

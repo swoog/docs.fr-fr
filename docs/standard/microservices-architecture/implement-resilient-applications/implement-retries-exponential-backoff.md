@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: a5ab15299ecb501691c26bbc6d377e22a38ee51e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e0758ee8fe28cb45ecd35ad07ddc738c12614973
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874362"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148767"
 ---
 # <a name="implement-retries-with-exponential-backoff"></a>Implémenter de nouvelles tentatives avec interruption exponentielle
 
@@ -17,7 +17,6 @@ Les [*nouvelles tentatives avec interruption exponentielle*](https://docs.micros
 
 Il existe plusieurs approches possibles pour implémenter la logique de nouvelles tentatives avec interruption exponentielle.
 
-
 >[!div class="step-by-step"]
-[Précédent](partial-failure-strategies.md)
-[Suivant](implement-resilient-entity-framework-core-sql-connections.md)
+>[Précédent](partial-failure-strategies.md)
+>[Suivant](implement-resilient-entity-framework-core-sql-connections.md)

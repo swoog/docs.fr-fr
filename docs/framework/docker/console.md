@@ -4,12 +4,12 @@ description: Découvrez comment prendre une application console .NET Framework e
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200572"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145278"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Exécution d’applications console dans des conteneurs Windows
 
@@ -59,7 +59,7 @@ Dans *build.ps1*, le script utilise [MSBuild](/visualstudio/msbuild/msbuild) pou
 
 Dans l’appel à `Invoke-MSBuild`, `OutputPath` est défini sur **publish** et `Configuration` sur **Release**. 
 
-```
+```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
     Invoke-Expression "$MSBuildPath $MSBuildParameters"
 }
@@ -133,7 +133,7 @@ Les exemples de fichiers de projet contiennent également un script *run.ps1* qu
 
 Pour ce faire, ouvrez PowerShell et utilisez la commande suivante :
 
-```
+```powershell
 .\run.ps1 "Is this easy or what?"
 ```
 

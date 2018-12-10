@@ -2,12 +2,12 @@
 title: Traiter les tâches asynchrones terminées
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 9380be1dc24d7c147c22dbb1a362777f56a32358
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202040"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152359"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Démarrer plusieurs tâches Async et les traiter une fois terminées (C#)
 
@@ -75,7 +75,7 @@ Dans le fichier MainWindow.xaml.cs du projet, apportez les modifications suivant
 
         ```csharp
         int length = await firstFinishedTask;
-        resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+        resultsTextBox.Text += $"\r\nLength of the download:  {length}";
         ```
 
 Exécutez le programme plusieurs fois pour vérifier que les longueurs téléchargées n’apparaissent pas toujours dans le même ordre.
@@ -181,7 +181,7 @@ namespace ProcessTasksAsTheyFinish
 
                     // Await the completed task.
                     int length = await firstFinishedTask;
-                    resultsTextBox.Text += String.Format("\r\nLength of the download:  {0}", length);
+                    resultsTextBox.Text += $"\r\nLength of the download:  {length}";
             }
         }
 

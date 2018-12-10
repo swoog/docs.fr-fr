@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET en co
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 74b3749077fdb375f84ddacd98221aa4afcf2f67
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8044e3064ac372750c174d8b47c3f7a63d6bbd0b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47401236"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149053"
 ---
 # <a name="decision-table-net-frameworks-to-use-for-docker"></a>Table de décision : versions de .NET Framework à utiliser pour Docker
 
@@ -88,5 +88,5 @@ La table de décision ci-dessous vous indique s’il convient d’utiliser .NET 
 </table>
 
 >[!div class="step-by-step"]
-[Précédent](net-framework-container-scenarios.md)
-[Suivant](net-container-os-targets.md)
+>[Précédent](net-framework-container-scenarios.md)
+>[Suivant](net-container-os-targets.md)

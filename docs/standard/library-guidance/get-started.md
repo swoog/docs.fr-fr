@@ -4,12 +4,12 @@ description: Bien démarrer la création de bibliothèques .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201241"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145723"
 ---
 # <a name="get-started"></a>Prise en main
 
@@ -46,5 +46,5 @@ Les bonnes bibliothèques .NET évoluent au fil du temps, avec l’ajout de fonc
 Il est important pour une bibliothèque .NET de trouver un équilibre entre la stabilité pour les utilisateurs existants et l’innovation pour l’avenir. Découvrez les différents types de modifications avec rupture et de stratégies pour l’ajout de nouvelles fonctionnalités tout en conservant une compatibilité descendante.
 
 >[!div class="step-by-step"]
-[Précédent](./index.md)
-[Suivant](./cross-platform-targeting.md)
+>[Précédent](index.md)
+>[Suivant](cross-platform-targeting.md)

@@ -3,12 +3,12 @@ title: Instructions C# - Visite guidée du langage C#
 description: Vous créez les actions d’un programme C# à l’aide d’instructions
 ms.date: 11/06/2016
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f6c7bb29af7f9c809c5278c97d21683166a8e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154292"
 ---
 # <a name="statements"></a>Instructions
 
@@ -109,5 +109,5 @@ La liste suivante décrit les types d’instructions qui peuvent être utilisés
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
-[Précédent](expressions.md)
-[Suivant](classes-and-objects.md)
+>[Précédent](expressions.md)
+>[Suivant](classes-and-objects.md)

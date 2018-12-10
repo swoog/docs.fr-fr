@@ -3,12 +3,12 @@ title: Documentation de votre code avec des commentaires XML
 description: Découvrez comment documenter votre code avec des commentaires de documentation XML et générer un fichier de documentation XML au moment de la compilation.
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 09e6b4aa75aababcebba96693d6e73b29a30fc6a
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4b01d7989b97cbae56fc04212e6c6753fd1252a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453266"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129661"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentation de votre code avec des commentaires XML
 
@@ -20,7 +20,7 @@ Les commentaires de documentation XML, comme tous les autres commentaires, sont 
 
 Vous pouvez générer le fichier XML au moment de la compilation en procédant comme suit :
 
-- Si vous développez une application avec .NET Core à partir de la ligne de commande, vous pouvez ajouter un [élément DocumentationFile](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-properties) à la section `<PropertyGroup>` de votre fichier projet .csproj. L’exemple suivant génère un fichier XML dans le répertoire du projet avec le même nom de fichier racine que l’assembly :
+- Si vous développez une application avec .NET Core à partir de la ligne de commande, vous pouvez ajouter un [élément DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) à la section `<PropertyGroup>` de votre fichier projet .csproj. L’exemple suivant génère un fichier XML dans le répertoire du projet avec le même nom de fichier racine que l’assembly :
 
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -36,7 +36,7 @@ Vous pouvez générer le fichier XML au moment de la compilation en procédant c
 
 - Si vous compilez une application .NET Framework à partir de la ligne de commande, ajoutez l’[option du compilateur /doc](language-reference/compiler-options/doc-compiler-option.md) lors de la compilation.  
 
-Les commentaires de documentation XML utilisent des barres obliques triples (`///`) et le corps d’un commentaire au format XML. Exemple :
+Les commentaires de documentation XML utilisent des barres obliques triples (`///`) et le corps d’un commentaire au format XML. Par exemple :
 
 [!code-csharp[XML Documentation Comment](../../samples/snippets/csharp/concepts/codedoc/xml-comment.cs)]
 
@@ -196,7 +196,7 @@ Et voilà : notre code est à nouveau lisible, et aucune information de documen
 
 L’attribut `filename` représente le nom du fichier XML contenant la documentation.
 
-L’attribut `path` représente une requête [XPath](https://msdn.microsoft.com/library/ms256115.aspx) au `tag name` présent dans le `filename` spécifié.
+L’attribut `path` représente une requête [XPath](../standard/data/xml/xpath-queries-and-namespaces.md) au `tag name` présent dans le `filename` spécifié.
 
 L’attribut `name` représente le spécificateur de nom dans la balise qui précède les commentaires.
 

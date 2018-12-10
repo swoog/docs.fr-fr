@@ -11,17 +11,17 @@ helpviewer_keywords:
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
 ms.openlocfilehash: 66b1729363878f69f868b8b8fd6e9e7011426f27
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672002"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153122"
 ---
 # <a name="string-c-reference"></a>string (référence C#)
 
 Le type `string` représente une séquence de zéro, un ou plusieurs caractères Unicode. `string` est un alias de <xref:System.String> dans .NET.
 
-Bien que `string` soit un type référence, les opérateurs d’égalité (`==` et `!=`) sont définis pour comparer les valeurs d’objets `string`, pas les références. Cela permet de tester l’égalité de chaînes de façon plus intuitive. Exemple :
+Bien que `string` soit un type référence, les opérateurs d’égalité (`==` et `!=`) sont définis pour comparer les valeurs d’objets `string`, pas les références. Cela permet de tester l’égalité de chaînes de façon plus intuitive. Par exemple :
 
 ```csharp
 string a = "hello";
@@ -72,7 +72,7 @@ Console.WriteLine(a);
 > [!NOTE]
 > Le code d’échappement `\udddd` (où `dddd` est un nombre à quatre chiffres) représente le caractère Unicode U+`dddd`. Les codes d’échappement Unicode à huit chiffres sont également reconnus : `\Udddddddd`.
 
-Les littéraux de chaîne textuelle commencent par `@` et sont placés entre guillemets doubles. Exemple :
+Les littéraux de chaîne textuelle commencent par `@` et sont placés entre guillemets doubles. Par exemple :
 
 ```csharp
 @"good morning"  // a string literal

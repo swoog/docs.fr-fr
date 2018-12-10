@@ -5,12 +5,12 @@ description: Découvrez comment installer le .NET Framework sur Windows 8.1
 author: rlander
 ms.author: mairaw
 ms.date: 10/22/2017
-ms.openlocfilehash: b5bf27f0a709e43968fa5f1fdf9b8a17c5dd4ec2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 302215f71e00ef7de03f6d7a27def71087822012
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452378"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125520"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Installer le .NET Framework sur Windows 8.1 et Windows Server 2012 R2
 
@@ -23,10 +23,7 @@ Ces instructions ont pour but de vous aider à installer les versions du .NET Fr
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
-[Télécharger .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
-
-
-<!-- (https://www.microsoft.com/net/framework/versions/net472?utm_source=ms-docs&utm_medium=referral) -->
+> [Télécharger .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) peut être utilisé pour exécuter des applications conçues pour .NET Framework version 4.0 ou ultérieure.
 

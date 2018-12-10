@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: be15acb98c20a61be2d88133ee3070fb1c09d70e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003724"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155325"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Requêtes et espaces de noms XPath
 Les requêtes XPath reconnaissent les espaces de noms d’un document XML et peuvent utiliser les préfixes d’espace de noms pour qualifier des noms d’éléments et d’attributs. Le fait de qualifier des noms d’éléments et d’attributs avec un préfixe d’espace de noms permet de limiter les nœuds retournés par une requête XPath aux nœuds qui appartiennent à un espace de noms spécifique.  
   
- Par exemple, si le préfixe `books` correspond à l'espace de noms `http://www.contoso.com/books`, la requête XPath suivante `/books:books/books:book` sélectionne uniquement les éléments `book` se trouvant dans l'espace de noms `http://www.contoso.com/books`.  
+ Par exemple, si le préfixe `books` correspond à l’espace de noms `http://www.contoso.com/books`, la requête XPath suivante `/books:books/books:book` sélectionne uniquement les éléments `book` se trouvant dans l’espace de noms `http://www.contoso.com/books`.  
   
 ## <a name="the-xmlnamespacemanager"></a>La classe XmlNamespaceManager  
  Pour qu'il soit possible d'utiliser des espaces de noms dans une requête XPath, un objet dérivé de l'interface <xref:System.Xml.IXmlNamespaceResolver> comme la classe <xref:System.Xml.XmlNamespaceManager> est construit avec l'URI d'espace de noms et le préfixe à utiliser dans la requête XPath.  
@@ -27,7 +27,7 @@ Les requêtes XPath reconnaissent les espaces de noms d’un document XML et peu
   
 -   L'objet <xref:System.Xml.XmlNamespaceManager> est associé à un objet <xref:System.Xml.XPath.XPathExpression> existant en utilisant la méthode <xref:System.Xml.XPath.XPathExpression.SetContext%2A> de l'objet <xref:System.Xml.XPath.XPathExpression>. Vous pouvez aussi compiler un nouvel objet <xref:System.Xml.XPath.XPathExpression> à l'aide de la méthode <xref:System.Xml.XPath.XPathExpression.Compile%2A> statique, qui prend comme paramètres une chaîne représentant l'expression XPath ainsi qu'un objet <xref:System.Xml.XmlNamespaceManager> et retourne un nouvel objet <xref:System.Xml.XPath.XPathExpression>.  
   
--   L'objet <xref:System.Xml.XmlNamespaceManager> lui-même est passé en paramètre à une méthode réceptrice de la classe <xref:System.Xml.XPath.XPathNavigator> en même temps qu'une chaîne représentant l'expression XPath.  
+-   L’objet <xref:System.Xml.XmlNamespaceManager> lui-même est passé en paramètre à une méthode réceptrice de la classe <xref:System.Xml.XPath.XPathNavigator> en même temps qu’une chaîne représentant l’expression XPath.  
   
  Voici les méthodes de la classe <xref:System.Xml.XPath.XPathNavigator> qui acceptent comme paramètre un objet dérivé de l'interface <xref:System.Xml.IXmlNamespaceResolver>.  
   
@@ -41,7 +41,7 @@ Les requêtes XPath reconnaissent les espaces de noms d’un document XML et peu
  Dans le document XML suivant, l'espace de noms par défaut, avec un préfixe vide, est utilisé pour déclarer l'espace de noms `http://www.contoso.com/books`.  
   
 ```xml  
-<books xmlns="http://www.example.com/books">  
+<books xmlns="http://www.contoso.com/books">  
     <book>  
         <title>Title</title>  
         <author>Author Name</author>  
@@ -50,9 +50,9 @@ Les requêtes XPath reconnaissent les espaces de noms d’un document XML et peu
 </books>  
 ```  
   
- XPath traite le préfixe vide comme l'espace de noms `null`. Autrement dit, seuls les préfixes mappés à des espaces de noms peuvent être utilisés dans des requêtes XPath. Cela signifie que si vous voulez appliquer une requête à un espace de noms d'un document XML, vous devez définir un préfixe pour cet espace de noms, même si c'est l'espace de noms par défaut.  
+ XPath traite le préfixe vide comme l’espace de noms `null`. Autrement dit, seuls les préfixes mappés à des espaces de noms peuvent être utilisés dans des requêtes XPath. Cela signifie que si vous voulez appliquer une requête à un espace de noms d'un document XML, vous devez définir un préfixe pour cet espace de noms, même si c'est l'espace de noms par défaut.  
   
- Par exemple, si aucun préfixe n'est défini pour le document XML ci-dessus, la requête XPath `/books/book` ne retournera aucun résultat.  
+ Par exemple, si aucun préfixe n’est défini pour le document XML ci-dessus, la requête XPath `/books/book` ne retournera aucun résultat.  
   
  Un préfixe doit être lié afin d'éviter toute ambiguïté lors de l'interrogation de documents où certains nœuds ne sont pas dans un espace de noms et certains se trouvent dans un espace de noms par défaut.  
   

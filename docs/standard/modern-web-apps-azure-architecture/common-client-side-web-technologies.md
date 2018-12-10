@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 692c1bf243c26ef6dcf441be9324e43d6a93fe50
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: eb5612e0cbdc52e397ba367b4cc744796174d06c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153889"
 ---
 # <a name="common-client-side-web-technologies"></a>Technologies web courantes côté client
 
@@ -108,7 +108,7 @@ Contrairement à Angular, qui offre une implémentation complète du modèle MVC
 
 Une des fonctionnalités les plus importantes de React est qu’il utilise un modèle DOM virtuel. Le modèle DOM virtuel offre à React plusieurs avantages, notamment au niveau des performances (le modèle DOM virtuel peut optimiser les parties du modèle DOM réel qui doivent être mises à jour) et de la testabilité (pas besoin d’utiliser un navigateur pour tester React et ses interactions avec son modèle DOM virtuel).
 
-React est également inédit dans la façon dont il utilise le code HTML. Au lieu d’avoir une séparation stricte entre le code et le balisage (avec des références à JavaScript apparaissant dans des attributs HTML, par exemple), React ajoute du code HTML directement dans le code JavaScript sous la forme JSX. JSX est une syntaxe de type HTML qui peut compiler du code en JavaScript pur. Exemple :
+React est également inédit dans la façon dont il utilise le code HTML. Au lieu d’avoir une séparation stricte entre le code et le balisage (avec des références à JavaScript apparaissant dans des attributs HTML, par exemple), React ajoute du code HTML directement dans le code JavaScript sous la forme JSX. JSX est une syntaxe de type HTML qui peut compiler du code en JavaScript pur. Par exemple :
 
 ```js
 <ul>
@@ -165,5 +165,5 @@ Les frameworks JavaScript évoluent très rapidement. Utilisez les considératio
 > <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Précédent](common-web-application-architectures.md)
-[Suivant](develop-asp-net-core-mvc-apps.md)
+>[Précédent](common-web-application-architectures.md)
+>[Suivant](develop-asp-net-core-mvc-apps.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 0bd53d97cec4370adc78fc715b1cea5ee5a3fd6f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d19f238136ed4ce1eb9b9821ef12c6305c06e429
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44208794"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150029"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Vue d'ensemble de l'interopérabilité (Guide de programmation C#)
 Cette rubrique décrit les méthodes qui permettent une interopérabilité entre le code managé C# et le code non managé.  
@@ -59,8 +59,8 @@ Cette rubrique décrit les méthodes qui permettent une interopérabilité entre
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Amélioration des performances d’interopérabilité](https://msdn.microsoft.com/library/ms998551.aspx)  
-- [Introduction à l’interopérabilité entre COM et .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+- [Amélioration des performances d’interopérabilité](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)  
+- [Introduction à l’interopérabilité entre COM et .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)  
 - [Introduction à COM Interop dans Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
 - [Marshaling entre du code managé et non managé](../../../../docs/framework/interop/interop-marshaling.md)  
 - [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)  

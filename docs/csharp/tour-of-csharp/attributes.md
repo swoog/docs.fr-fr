@@ -3,12 +3,12 @@ title: Attributs C# - Visite guidée du langage C#
 description: Découvrir la programmation déclarative à l’aide des attributs en C#
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: a8ee40e5d4956667dd54cf25cc7993d041cba6e7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34312233"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151081"
 ---
 # <a name="attributes"></a>Attributs
 
@@ -31,4 +31,4 @@ L’exemple de code suivant montre comment obtenir les `HelpAttribute` instances
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
-[Précédent](delegates.md)
+>[Précédent](delegates.md)

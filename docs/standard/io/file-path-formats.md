@@ -2,18 +2,21 @@
 title: Formats de chemin de fichier sur les systèmes Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296826"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144856"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formats de chemin de fichier sur les systèmes Windows
 
@@ -203,30 +206,14 @@ Le fait que les noms de chemin et de répertoire ne respectent pas la casse est 
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 crée un répertoire nommé TeStDiReCtOrY. Si vous renommez un répertoire ou un fichier pour changer sa casse, le nom du répertoire ou du fichier reflète la casse de la chaîne utilisée au moment du renommage. Par exemple, le code suivant renomme un fichier nommé test.txt en Test.txt :
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Toutefois, les comparaisons des noms de répertoire et de fichier ne respectent pas la casse. Si vous recherchez un fichier nommé « test.txt », les API du système de fichiers .NET ignorent la casse dans la comparaison. Test.txt, TEST.TXT, test.TXT et toute autre combinaison de lettres majuscules et minuscules équivalent à « test.txt ».

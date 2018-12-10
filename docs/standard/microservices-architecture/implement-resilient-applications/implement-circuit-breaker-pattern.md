@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453149"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147260"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implémenter le modèle Disjoncteur
 
@@ -146,14 +146,11 @@ Vous pouvez implémenter une logique différente pour déterminer quand ouvrir/r
 
 Enfin, une autre solution pour la stratégie `CircuitBreakerPolicy` consiste à utiliser `Isolate` (qui force l’ouverture du circuit et le maintient ouvert) et `Reset` (qui le referme). Ces solutions peuvent être utilisées pour créer un point de terminaison HTTP d’utilitaire qui appelle Isolate et Reset directement sur la stratégie.  Un tel point de terminaison HTTP peut également être utilisé, correctement sécurisé, en production pour l’isolation temporaire d’un système en aval, par exemple quand vous voulez procéder à sa mise à niveau. Ou bien il peut déclencher le circuit manuellement pour protéger un système en aval que vous soupçonnez d’avoir provoqué l’erreur.
 
-
 ## <a name="additional-resources"></a>Ressources supplémentaires
-
 
 -   **Modèle Disjoncteur**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Précédent](implement-http-call-retries-exponential-backoff-polly.md)
-[Suivant](monitor-app-health.md)
+>[Précédent](implement-http-call-retries-exponential-backoff-polly.md)
+>[Suivant](monitor-app-health.md)

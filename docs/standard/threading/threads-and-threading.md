@@ -10,11 +10,11 @@ ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 095bd92921c9cd54d3a7d97ed07b35526b85c57f
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672304"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147676"
 ---
 # <a name="threads-and-threading"></a>Threads et threading
 
@@ -47,7 +47,7 @@ Enfin, vous pouvez utiliser la classe <xref:System.Threading.Thread?displayPrope
 
 Plusieurs threads peuvent avoir besoin d’accéder à une ressource partagée. Pour garder la ressource dans un état non endommagé et éviter des conditions de concurrence, vous devez synchroniser l’accès des threads à cette ressource. Vous voudrez peut-être aussi coordonner l’interaction de plusieurs threads. .NET fournit un éventail de types que vous pouvez utiliser pour synchroniser l’accès à une ressource partagée ou coordonner l’interaction des threads. Pour plus d’informations, consultez [Vue d’ensemble des primitives de synchronisation](overview-of-synchronization-primitives.md).
 
-Veillez à gérer les exceptions dans les threads. Les exceptions non gérées dans les threads entraînent généralement la fin du processus. Pour plus d’informations, consultez [Exceptions dans les threads managés](exceptions-in-managed-threads.md).
+Ne gérez pas les exceptions dans les threads. Les exceptions non gérées dans les threads entraînent généralement la fin du processus. Pour plus d’informations, consultez [Exceptions dans les threads managés](exceptions-in-managed-threads.md).
 
 ## <a name="see-also"></a>Voir aussi
 

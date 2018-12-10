@@ -4,12 +4,12 @@ description: HttpClientFactory est une fabrique rigide, disponible depuis .NET C
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347927"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145109"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Utilisez HttpClientFactory pour implémenter des requêtes HTTP résilientes
 
@@ -87,7 +87,7 @@ Chaque client typé ou client nommé peut avoir sa propre valeur de durée de vi
 
 ### <a name="implement-your-typed-client-classes-that-use-the-injected-and-configured-httpclient"></a>Implémenter les classes de client typé qui utilisent l’objet HttpClient injecté et configuré
 
-Comme étape préliminaire, vous devez avoir défini vos classes de client typé, telles que les classes dans l’exemple de code, comme « BasketService », « CatalogService », « OrderingService », etc. – Un client typé est une classe qui accepte un objet `HttpClient` (injecté via son constructeur) et l’utilise pour appeler un service HTTP distant. Exemple :
+Comme étape préliminaire, vous devez avoir défini vos classes de client typé, telles que les classes dans l’exemple de code, comme « BasketService », « CatalogService », « OrderingService », etc. – Un client typé est une classe qui accepte un objet `HttpClient` (injecté via son constructeur) et l’utilise pour appeler un service HTTP distant. Par exemple :
 
 ```csharp
 public class CatalogService : ICatalogService
@@ -162,7 +162,6 @@ Jusqu'à ce stade, le code indiqué effectue simplement des requêtes Http norma
 
     [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
-
-
 >[!div class="step-by-step"]
-[Précédent] (explore-custom-http-call-retries-exponential-backoff.md) [Suivant] (implement-http-call-retries-exponential-backoff-polly.md)
+>[Précédent](explore-custom-http-call-retries-exponential-backoff.md)
+>[Suivant](implement-http-call-retries-exponential-backoff-polly.md)

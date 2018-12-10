@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122849"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147172"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Utilisation de données dans les applications ASP.NET Core
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 La mise en cache peut améliorer considérablement les performances des pages web qui demandent à maintes reprises les mêmes valeurs à la base de données. Veillez à mesurer les performances des pages et de l’accès aux données avant d’appliquer la mise en cache, et appliquez uniquement la mise en cache là où vous constatez qu’il est nécessaire d’apporter une amélioration. La mise en cache consomme des ressources mémoire du serveur web et accroît la complexité de l’application. Il est donc important de ne pas procéder à une optimisation prématurée en employant cette technique.
 
 >[!div class="step-by-step"]
-[Précédent](develop-asp-net-core-mvc-apps.md)
-[Suivant](test-asp-net-core-mvc-apps.md)
+>[Précédent](develop-asp-net-core-mvc-apps.md)
+>[Suivant](test-asp-net-core-mvc-apps.md)

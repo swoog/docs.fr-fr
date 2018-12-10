@@ -3,12 +3,12 @@ title: Structure des programmes C# - Visite guidée du langage C#
 description: Découvrez les composantes élémentaires d’un programme C#
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 9efd2542d449da5ddcd9d3170c2e598282a34c39
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34565749"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131025"
 ---
 # <a name="program-structure"></a>Structure du programme
 
@@ -52,5 +52,5 @@ Cela permet de créer un assembly exécutable nommé `example.exe`, qui, lors de
 C# permet le stockage du texte source d’un programme dans plusieurs fichiers source. Lorsqu’un programme C# multifichier est compilé, tous les fichiers source sont traités ensemble et les fichiers source peuvent librement se référencer mutuellement. Sur le plan conceptuel, c’est comme si tous les fichiers source étaient concaténés en un seul fichier volumineux avant d’être traités. Déclarations anticipées ne sont jamais nécessaires en C#, car, à de très rares exceptions près, l’ordre de déclaration n’a pas d’importance. C# ne limite pas un fichier source à la déclaration d’un seul type public et ne nécessite pas non plus que le nom du fichier source corresponde à un type déclaré dans ce fichier.
 
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](types-and-variables.md)
+>[Précédent](index.md)
+>[Suivant](types-and-variables.md)
