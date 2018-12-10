@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875118"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130792"
 ---
 # <a name="implementing-resilient-applications"></a>Implémentation d’applications résilientes
 
@@ -21,7 +21,6 @@ Il est assez difficile de concevoir et de déployer une application basée sur d
 
 Les divers composants qui constituent votre application doivent aussi intégrer des fonctionnalités de contrôle d’intégrité. En suivant les recommandations fournies dans ce chapitre, vous pouvez créer une application capable de fonctionner correctement en dépit des temps morts temporaires ou des interruptions normales qui se produisent dans les déploiements complexes et dans le cloud.
 
-
 >[!div class="step-by-step"]
-[Précédent](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[Suivant](handle-partial-failure.md)
+>[Précédent](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Suivant](handle-partial-failure.md)

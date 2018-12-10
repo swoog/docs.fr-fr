@@ -3,13 +3,13 @@ title: Commande dotnet-add reference - Interface CLI .NET Core
 description: La commande dotnet add reference est une option pratique pour ajouter des références entre projets.
 author: mairaw
 ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 3398d4dc7bf70eaadcdd92269dbd3b784079c22d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 33c5e532baf23cc8fe2b3a5084bff029caece842
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696960"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129543"
 ---
 # <a name="dotnet-add-reference"></a>dotnet-add reference
 
@@ -37,34 +37,40 @@ La commande `dotnet add reference` est une option pratique pour ajouter des réf
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+* **`PROJECT`**
 
-Spécifie le nom du fichier projet. Si aucun fichier n’est spécifié, la commande en recherche un dans le répertoire actuel.
+  Spécifie le nom du fichier projet. Si aucun fichier n’est spécifié, la commande en recherche un dans le répertoire actuel.
 
-`PROJECT_REFERENCES`
+* **`PROJECT_REFERENCES`**
 
-Références entre projets (P2P) à ajouter. Spécifiez un ou plusieurs projets. Les [modèles Glob](https://en.wikipedia.org/wiki/Glob_(programming)) sont pris en charge sur les systèmes Unix/Linux.
+  Références entre projets (P2P) à ajouter. Spécifiez un ou plusieurs projets. Les [modèles Glob](https://en.wikipedia.org/wiki/Glob_(programming)) sont pris en charge sur les systèmes Unix/Linux.
 
 ## <a name="options"></a>Options
 
-`-h|--help`
+* **`-h|--help`**
 
-Affiche une aide brève pour la commande.
+  Affiche une aide brève pour la commande.
 
-`-f|--framework <FRAMEWORK>`
+* **`-f|--framework <FRAMEWORK>`**
 
-Ajoute des références de projet uniquement quand vous ciblez un [framework](../../standard/frameworks.md) spécifique.
+  Ajoute des références de projet uniquement quand vous ciblez un [framework](../../standard/frameworks.md) spécifique.
 
 ## <a name="examples"></a>Exemples
 
-Ajouter une référence de projet :
+* Ajouter une référence de projet :
 
-`dotnet add app/app.csproj reference lib/lib.csproj`
+  ```console
+  dotnet add app/app.csproj reference lib/lib.csproj
+  ```
 
-Ajouter plusieurs références de projet au projet dans le répertoire actuel :
+* Ajouter plusieurs références de projet au projet dans le répertoire actuel :
 
-`dotnet add reference lib1/lib1.csproj lib2/lib2.csproj`
+  ```console
+  dotnet add reference lib1/lib1.csproj lib2/lib2.csproj
+  ```
 
-Ajouter plusieurs références de projet à l’aide du modèle d’utilisation des caractères génériques (globbing) sur Linux/Unix :
+* Ajouter plusieurs références de projet à l’aide du modèle d’utilisation des caractères génériques (globbing) sur Linux/Unix :
 
-`dotnet add app/app.csproj reference **/*.csproj`
+  ```console
+  dotnet add app/app.csproj reference **/*.csproj
+  ```

@@ -1,15 +1,15 @@
 ---
-title: Tests unitaires dans .NET Core
+title: Effectuer des tests unitaires dans .NET Core
 description: Tests unitaires dans les projets .NET Core et .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: fe0807f93396466df7ed7d01dbb7a83e39c67770
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297424"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131272"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Tests unitaires dans .NET Core et .NET Standard
 

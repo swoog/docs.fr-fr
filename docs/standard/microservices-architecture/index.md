@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en c
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193914"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152680"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Microservices .NET : architecture pour les applications .NET en conteneurs
 
@@ -179,6 +179,5 @@ Le logo de Docker représentant une baleine est une marque déposée de Docker, 
 
 Toutes les autres marques et tous les autres logos sont la propriété de leurs propriétaires respectifs.
 
-
 >[!div class="step-by-step"]
-[Next](container-docker-introduction/index.md)
+>[Next](container-docker-introduction/index.md)

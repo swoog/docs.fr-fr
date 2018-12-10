@@ -4,12 +4,12 @@ description: Architecture des microservices .NET pour les applications .NET en
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658429"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147937"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introduction aux conteneurs et à Docker
 
@@ -29,7 +29,6 @@ L’autre avantage de la mise en conteneur est l’extensibilité. Vous pouvez r
 
 Pour résumer, les conteneurs offrent les avantages de l’isolation, de la portabilité, de l’agilité, de l’extensibilité et du contrôle dans l’ensemble du flux de travail du cycle de vie de l’application. L’avantage le plus important est l’isolation de l’environnement fourni entre le développement et les opérations.
 
-
 >[!div class="step-by-step"]
-[Précédent](../index.md)
-[Suivant](docker-defined.md)
+>[Précédent](../index.md)
+>[Suivant](docker-defined.md)

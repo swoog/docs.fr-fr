@@ -2,20 +2,19 @@
 title: Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste
 description: Découvrez comment utiliser la programmation probabiliste avec Infer.NET pour créer une application de tableau de matchs basée sur une version simplifiée de TrueSkill.
 ms.date: 10/04/2018
-ms.topic: how-to
-ms.custom: mvc
-ms.openlocfilehash: 990fd60d809c893730bf2682946f89dbe59f36a5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: mvc,how-to
+ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "49401695"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152464"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Créer une application de tableau de matchs avec Infer.NET et la programmation probabiliste
 
 Ce guide pratique porte sur la programmation probabiliste avec Infer.NET. La programmation probabiliste est une approche du Machine Learning selon laquelle des modèles personnalisés sont exprimés sous forme de programmes informatiques. Elle permet d’incorporer la connaissance du domaine dans les modèles et rend le système de Machine Learning plus facilement interprétable. Elle gère également l’inférence en ligne, c’est-à-dire le processus d’apprentissage au fil de l’intégration de nouvelles données. Infer.NET est utilisé dans différents produits de Microsoft dans Azure, Xbox et Bing.
 
-## <a name="what-is-probabilistic-programming"></a>Qu’est-ce que la programmation probabiliste ? 
+## <a name="what-is-probabilistic-programming"></a>Qu’est-ce que la programmation probabiliste ?
 
 La programmation probabiliste permet de créer des modèles statistiques de processus réels. 
 
