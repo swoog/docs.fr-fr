@@ -4,19 +4,19 @@ description: Découvrez comment entraîner un modèle Machine Learning en utilis
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 41b99415d736b6583a8d43434c031e677e6f3ac8
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297576"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145960"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="76cb7-103">Entraîner un modèle Machine Learning en utilisant la validation croisée - ML.NET</span><span class="sxs-lookup"><span data-stu-id="76cb7-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="ea289-103">Entraîner un modèle Machine Learning en utilisant la validation croisée - ML.NET</span><span class="sxs-lookup"><span data-stu-id="ea289-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
-<span data-ttu-id="76cb7-104">La [validation croisée](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) est une technique pratique pour les applications de Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="76cb7-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="76cb7-105">Elle vous aide à estimer la variation de la qualité du modèle d’une exécution à l’autre et vous évite aussi de devoir extraire un jeu de test distinct pour l’évaluation.</span><span class="sxs-lookup"><span data-stu-id="76cb7-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="ea289-104">La [validation croisée](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) est une technique pratique pour les applications de Machine Learning.</span><span class="sxs-lookup"><span data-stu-id="ea289-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="ea289-105">Elle vous aide à estimer la variation de la qualité du modèle d’une exécution à l’autre et vous évite aussi de devoir extraire un jeu de test distinct pour l’évaluation.</span><span class="sxs-lookup"><span data-stu-id="ea289-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="76cb7-106">ML.NET applique automatiquement une caractérisation correcte (à condition que tout le prétraitement se trouve dans un même pipeline d’entraînement), puis utilise le concept de « colonne de stratification » pour que les exemples connexes ne soient pas séparés.</span><span class="sxs-lookup"><span data-stu-id="76cb7-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="ea289-106">ML.NET applique automatiquement une caractérisation correcte (à condition que tout le prétraitement se trouve dans un même pipeline d’entraînement), puis utilise le concept de « colonne de stratification » pour que les exemples connexes ne soient pas séparés.</span><span class="sxs-lookup"><span data-stu-id="ea289-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="76cb7-107">Voici un exemple d’entraînement sur un jeu de données Iris utilisant une division entraînement-test aléatoire de 90/10 et une validation croisée de 5 tranches :</span><span class="sxs-lookup"><span data-stu-id="76cb7-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="ea289-107">Voici un exemple d’entraînement sur un jeu de données Iris utilisant une division entraînement-test aléatoire de 90/10 et une validation croisée de 5 tranches :</span><span class="sxs-lookup"><span data-stu-id="ea289-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

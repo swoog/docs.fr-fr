@@ -4,18 +4,18 @@ description: Découvrez comment charger des données à partir de plusieurs fich
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672403"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150730"
 ---
-# <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a><span data-ttu-id="56bc5-103">Charger des données à partir de plusieurs fichiers pour le traitement machine learning - ML.NET</span><span class="sxs-lookup"><span data-stu-id="56bc5-103">Load data from multiple files for machine learning processing - ML.NET</span></span>
+# <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a><span data-ttu-id="a6ae2-103">Charger des données à partir de plusieurs fichiers pour le traitement machine learning - ML.NET</span><span class="sxs-lookup"><span data-stu-id="a6ae2-103">Load data from multiple files for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="56bc5-104">Utilisez `TextLoader` et spécifiez un tableau de fichiers à la méthode `Read`.</span><span class="sxs-lookup"><span data-stu-id="56bc5-104">Use the `TextLoader`, and specify an array of files to the `Read` method.</span></span> <span data-ttu-id="56bc5-105">Les fichiers doivent avoir le même schéma (même nombre et type de colonnes) :</span><span class="sxs-lookup"><span data-stu-id="56bc5-105">The files must have the same schema (same number and type of columns):</span></span>
+<span data-ttu-id="a6ae2-104">Utilisez `TextLoader` et spécifiez un tableau de fichiers à la méthode `Read`.</span><span class="sxs-lookup"><span data-stu-id="a6ae2-104">Use the `TextLoader`, and specify an array of files to the `Read` method.</span></span> <span data-ttu-id="a6ae2-105">Les fichiers doivent avoir le même schéma (même nombre et type de colonnes) :</span><span class="sxs-lookup"><span data-stu-id="a6ae2-105">The files must have the same schema (same number and type of columns):</span></span>
 
-* [<span data-ttu-id="56bc5-106">Exemple de fichier1</span><span class="sxs-lookup"><span data-stu-id="56bc5-106">Example file1</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.train)
-* [<span data-ttu-id="56bc5-107">Exemple de fichier2</span><span class="sxs-lookup"><span data-stu-id="56bc5-107">Example file2</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.test)
+* [<span data-ttu-id="a6ae2-106">Exemple de fichier1</span><span class="sxs-lookup"><span data-stu-id="a6ae2-106">Example file1</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.train)
+* [<span data-ttu-id="a6ae2-107">Exemple de fichier2</span><span class="sxs-lookup"><span data-stu-id="a6ae2-107">Example file2</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.test)
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
