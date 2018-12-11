@@ -74,7 +74,7 @@ Le tableau suivant respecte les conventions d’affectation de noms et de mise e
 |-----------|------|------|----------|-------|
 | Types concrets | Casse Pascal | Nom / adjectif | La liste, Double, complexe | Types concrets sont des structs, des classes, des énumérations, des délégués, des enregistrements et des unions. Bien que les noms de types sont traditionnellement en minuscules dans OCaml, F# a adopté le schéma d’affectation de noms .NET pour les types.
 | DLL           | Casse Pascal |                 | Fabrikam.Core.dll |  |
-| Balises Union     | Casse Pascal | Nom | Certains, ajouter, réussite | N’utilisez pas de préfixe dans les API publiques. Utiliser éventuellement un préfixe lorsque internes, tels que « tapez équipes = TAlpha | TBeta | TDelta. » |
+| Balises Union     | Casse Pascal | Nom | Certains, ajouter, réussite | N’utilisez pas de préfixe dans les API publiques. Utiliser éventuellement un préfixe lorsque internes, tels que `tapez équipes = TAlpha | TBeta | TDelta.` |
 | Événement          | Casse Pascal | Verbe | ValueChanged / ValueChanging |  |
 | Exceptions     | Casse Pascal |      | WebException | Nom doit se terminer avec « Exception ». |
 | Champ          | Casse Pascal | Nom | CurrentName  | |
