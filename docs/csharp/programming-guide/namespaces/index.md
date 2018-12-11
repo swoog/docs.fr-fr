@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002812"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151108"
 ---
 # <a name="namespaces-c-programming-guide"></a>Espaces de noms (Guide de programmation C#)
 
@@ -38,8 +38,8 @@ Les espaces de noms ont les propriétés suivantes :
   
 - Ils organisent les projets de code de taille importante.  
 - Ils sont délimités à l’aide de l’opérateur `.`.  
-- La `using directive` évite de devoir spécifier le nom de l’espace de noms pour chaque classe.  
-- L’espace de noms `global` est l’espace de noms « racine » : `global::System` fait toujours référence à l’espace de noms `System` du .NET Framework.  
+- La directive `using` évite de devoir spécifier le nom de l’espace de noms pour chaque classe.  
+- L’espace de noms `global` est l’espace de noms « racine » : `global::System` fait toujours référence à l’espace de noms <xref:System> .NET.  
 
 ## <a name="c-language-specification"></a>Spécification du langage C#
 
@@ -56,4 +56,3 @@ Les espaces de noms ont les propriétés suivantes :
 - [using, directive](../../language-reference/keywords/using-directive.md)  
 - [:: (opérateur)](../../language-reference/operators/namespace-alias-qualifer.md)  
 - [. Opérateur](../../language-reference/operators/member-access-operator.md)
->>>>>>> ajouter des règles de nommage d’identificateur

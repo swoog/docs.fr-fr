@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: a06a5144e91901417906f071efd8e19c10cf2cba
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7034d37c141d79301bf108b9e7b41ab3e27e2572
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170650"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143920"
 ---
 # <a name="strings-c-programming-guide"></a>Chaînes (Guide de programmation C#)
 Une chaîne est un objet de type <xref:System.String> dont la valeur est du texte. En interne, le texte est stocké sous la forme d’une collection séquentielle en lecture seule d’objets <xref:System.Char>. Il n’existe aucun caractère de fin Null à la fin d’une chaîne C# ; par conséquent, une chaîne C# peut contenir n’importe quel nombre de caractères Null incorporés ('\0'). La propriété <xref:System.String.Length%2A> d’une chaîne représente le nombre d’objets `Char` qu’elle contient, et non pas le nombre de caractères Unicode. Pour accéder à des points de code Unicode individuels dans une chaîne, utilisez l’objet <xref:System.Globalization.StringInfo>.  
@@ -70,11 +70,21 @@ Une chaîne est un objet de type <xref:System.String> dont la valeur est du text
 >  Au moment de la compilation, les chaînes textuelles sont converties en chaînes normales avec les mêmes séquences d’échappement. Par conséquent, si vous affichez une chaîne textuelle dans la fenêtre Espion du débogueur, vous verrez les caractères d’échappement qui ont été ajoutés par le compilateur et non la version textuelle de votre code source. Par exemple, la chaîne textuelle @"C:\files.txt" s’affiche dans la fenêtre Espion en tant que "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Chaînes de format  
- Une chaîne de format est une chaîne dont le contenu peut être déterminé de façon dynamique lors de l’exécution. Vous créez une chaîne de format en utilisant la méthode statique <xref:System.String.Format%2A> et en incorporant des espaces réservés entre accolades qui seront remplacés par d’autres valeurs au moment de l’exécution. L’exemple suivant utilise une chaîne de format pour générer le résultat de chaque itération d’une boucle :  
+ Une chaîne de format est une chaîne dont le contenu est déterminé de façon dynamique lors de l’exécution. Les chaînes de format sont créées en incorporant des *expressions interpolées* ou des espaces réservés à l’intérieur d’accolades dans une chaîne. Tous les éléments à l’intérieur des accolades (`{...}`) seront convertis en une valeur et affichés sous forme d’une chaîne mise en forme lors de l’exécution. Il existe deux méthodes pour créer des chaînes de format : l’interpolation de chaîne et la mise en forme composite.
+
+### <a name="string-interpolation"></a>Interpolation de chaîne
+Disponible dans C# 6.0 et versions ultérieures, les [*chaînes interpolées*](../../language-reference/tokens/interpolated.md) sont identifiées par le caractère spéciale `$` et incluent des expressions interpolées entre accolades. Si vous ne connaissez pas l’interpolation de chaîne, consultez le tutoriel interactif [Interpolation de chaînes en C#](../../tutorials/intro-to-csharp/interpolated-strings.yml) pour obtenir un aperçu.
+
+Utilisez l’interpolation de chaîne pour améliorer la lisibilité et la maintenance de votre code. L’interpolation de chaîne permet d’obtenir les mêmes résultats que la méthode `String.Format`, mais avec plus de facilité d’utilisation et de clarté.
+
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringInterpolation)]
+
+### <a name="composite-formatting"></a>Mise en forme composite
+<xref:System.String.Format%2A?displayProperty=nameWithType> utilise des espaces réservés entre accolades pour créer une chaîne de format. Cet exemple renvoie une sortie similaire à la méthode d’interpolation de chaîne utilisée ci-dessus.
   
- [!code-csharp[csProgGuideStrings#26](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_6.cs)]  
-  
- Une surcharge de la méthode <xref:System.Console.WriteLine%2A> prend comme paramètre une chaîne de format. Par conséquent, vous pouvez simplement incorporer un littéral de chaîne de format sans appel explicite à la méthode. Toutefois, si vous utilisez la méthode <xref:System.Diagnostics.Trace.WriteLine%2A> pour afficher la sortie de débogage dans la fenêtre **Sortie** de Visual Studio, vous devez appeler explicitement la méthode <xref:System.String.Format%2A>, car <xref:System.Diagnostics.Trace.WriteLine%2A> accepte uniquement une chaîne, pas une chaîne de format. Pour plus d’informations sur les chaînes de format, consultez [Mise en forme des types](../../../standard/base-types/formatting-types.md).  
+[!code-csharp[csProgGuideFormatStrings](~/samples/snippets/csharp/programming-guide/strings/Strings_1.cs#StringFormat)]
+
+Pour plus d’informations sur la mise en forme des types .NET, consultez [Mise en forme des types dans .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Sous-chaînes  
  Une sous-chaîne est une séquence de caractères qui est contenue dans une chaîne. Utilisez la méthode <xref:System.String.Substring%2A> pour créer une chaîne à partir d’une partie de la chaîne d’origine. Vous pouvez rechercher une ou plusieurs occurrences d’une sous-chaîne en utilisant la méthode <xref:System.String.IndexOf%2A>. Utilisez la méthode <xref:System.String.Replace%2A> pour remplacer toutes les occurrences d’une sous-chaîne spécifiée par une nouvelle chaîne. Comme la méthode <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retourne en fait une nouvelle chaîne et ne modifie pas la chaîne d’origine. Pour plus d’informations, consultez [Comment : rechercher des chaînes](../../how-to/search-strings.md) et [Comment : modifier le contenu des chaînes](../../how-to/modify-string-contents.md).  
@@ -125,7 +135,7 @@ string s = String.Empty;
 |[Guide pratique pour déterminer si une chaîne représente une valeur numérique](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Montre comment analyser une chaîne en toute sécurité pour déterminer si elle possède une valeur numérique valide.|  
 |[Interpolation de chaîne](../../language-reference/tokens/interpolated.md)|Décrit la fonctionnalité d’interpolation de chaîne qui fournit une syntaxe pratique pour les chaînes de format.|
 |[Opérations de chaînes de base](../../../../docs/standard/base-types/basic-string-operations.md)|Fournit des liens vers des rubriques utilisant les méthodes <xref:System.String?displayProperty=nameWithType> et <xref:System.Text.StringBuilder?displayProperty=nameWithType> pour effectuer des opérations de chaînes de base.|  
-|[Analyse de chaînes](../../../standard/base-types/parsing-strings.md)|Décrit comment convertir des représentations sous forme de chaîne de types de base .NET en instances de types correspondants.|  
+|[Parsing Strings](../../../standard/base-types/parsing-strings.md)|Décrit comment convertir des représentations sous forme de chaîne de types de base .NET en instances de types correspondants.|  
 |[Analyse des chaînes de date et d’heure dans .NET](../../../standard/base-types/parsing-datetime.md)|Montre comment convertir une chaîne telle que « 24/01/2008 » en objet <xref:System.DateTime?displayProperty=nameWithType>.|  
 |[Comparaison de chaînes](../../../../docs/standard/base-types/comparing.md)|Inclut des informations sur la façon de comparer des chaînes et fournit des exemples en C# et Visual Basic.|  
 |[Utilisation de la classe StringBuilder](../../../standard/base-types/stringbuilder.md)|Explique comment créer et modifier des objets string dynamiques avec la classe <xref:System.Text.StringBuilder>.|  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1226f51143b912f85e94146948091891376e49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6447cd37e4718093acfb3a0e2db053c13a027d3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589917"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147452"
 ---
 # <a name="managed-threading"></a>Threading managé
 Que votre développement s’applique à des ordinateurs avec un ou plusieurs processeurs, votre application doit fournir l’interaction la plus réactive avec l’utilisateur, même si l’application effectue actuellement d’autres opérations. Utiliser plusieurs threads d’exécution est l’une des manières les plus efficaces pour maintenir la réactivité de votre application vis-à-vis de l’utilisateur, tout en exploitant le processeur entre voire pendant des événements utilisateur. Bien que cette section présente les concepts de base du threading, elle se concentre sur les concepts de threading managé et son utilisation.  
@@ -29,7 +29,7 @@ Que votre développement s’applique à des ordinateurs avec un ou plusieurs pr
  Explique comment créer, démarrer, suspendre, reprendre et abandonner des threads.  
   
  [Bonnes pratiques de threading géré](../../../docs/standard/threading/managed-threading-best-practices.md)  
- Décrit les niveaux de synchronisation, comment éviter les interblocages et les conditions de concurrence, les ordinateurs à un ou plusieurs processeurs et les autres problèmes liés aux threads.  
+ Décrit les niveaux de synchronisation, comment éviter les interblocages et les conditions de concurrence, et d’autres problèmes liés aux threads.  
   
  [Fonctionnalités et objets de threading](../../../docs/standard/threading/threading-objects-and-features.md)  
  Décrit les classes managées que vous pouvez utiliser pour synchroniser les activités de threads et les données d’objets ouvertes sur différents threads, et fournit une vue d’ensemble des threads du pool.  
@@ -48,7 +48,7 @@ Que votre développement s’applique à des ordinateurs avec un ou plusieurs pr
  [Domaines d’application](../../../docs/framework/app-domains/application-domains.md)  
  Fournit une vue d'ensemble des domaines d'application et de leur utilisation dans le Common Language Infrastructure.  
   
- [E/S sur fichier asynchrones](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Décrit les opérations élémentaires des E/S asynchrones et leurs avantages en termes de performances.  
   
  [Modèle asynchrone basé sur les tâches (TAP, Task-based Asynchronous Pattern)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  

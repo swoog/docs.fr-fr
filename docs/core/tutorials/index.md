@@ -4,14 +4,15 @@ description: Suivez les didacticiels pour apprendre .NET Core et générer des a
 author: richlander
 ms.author: mairaw
 ms.date: 03/16/2017
-ms.openlocfilehash: 858fc0b95772d4be14363a1dbcfcd533040b8040
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 16f468ffdff3ea4fff1ab2400ac7dd3d270c781c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210144"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130730"
 ---
-# <a name="net-core-tutorials"></a>Didacticiels .NET Core
+# <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Découvrez les outils .NET Core et SDK .NET Core en explorant ces didacticiels
 
 Les didacticiels disponibles pour découvrir .NET Core sont les suivants.
 

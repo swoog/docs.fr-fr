@@ -1,15 +1,16 @@
 ---
-title: Ressources ML.NET
+title: Ressources d’apprentissage automatique - ML.NET
 description: Explorez ces ressources ML.NET pour faciliter la création de solutions IA personnalisées et leur intégration à vos applications .NET.
+ms.custom: seodec18
 ms.date: 07/27/2018
-ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 98c89e921e24a0007c165d0a77e2abc34a4c8518
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798034"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152212"
 ---
-# <a name="mlnet-resources"></a>Ressources ML.NET
+# <a name="machine-learning-resources---mlnet"></a>Ressources d’apprentissage automatique - ML.NET
 
 Les ressources [ML.NET](../index.md) suivantes peuvent s’avérer utiles pour créer des solutions IA personnalisées et les intégrer à vos applications .NET :
 

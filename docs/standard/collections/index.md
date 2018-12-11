@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2fcff6d701b177d125eddaffe74383446f5f7b2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: af76322cac08d7cf4e7e30e503c7fa2c97414898
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577226"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154906"
 ---
 # <a name="collections-and-data-structures"></a>Collections et structures de données
 Des données similaires peuvent souvent être gérées plus efficacement quand elles sont stockées et manipulées en tant que collection. Vous pouvez utiliser la classe <xref:System.Array?displayProperty=nameWithType>, ou les classes qui se trouvent dans les espaces de noms <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> et System.Collections.Immutable, pour ajouter, supprimer et modifier des éléments individuels ou une série d’éléments dans une collection.  
@@ -60,9 +60,10 @@ Des données similaires peuvent souvent être gérées plus efficacement quand e
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Choix d'une collection  
  En règle générale, vous devez utiliser des collections génériques. Le tableau suivant décrit certains scénarios courants concernant les collections, ainsi que les classes de collection que vous pouvez utiliser pour ces scénarios. Si vous ne connaissez pas encore les collections génériques, ce tableau vous aidera à choisir la collection générique qui répond le mieux à vos besoins.  
+ 
 |Je souhaite :|Options de collection générique|Options de collection non générique|Options de collection thread-safe ou immuable|  
 |-|-|-|-|  
-|Stocker les éléments sous forme de paires clé/valeur pour une recherche rapide par clé|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (collection de paires clé/valeur organisées en fonction du code de hachage de la clé).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|Stocker les éléments sous forme de paires clé/valeur pour une recherche rapide par clé|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Collection de paires clé/valeur organisées en fonction du code de hachage de la clé).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
 |Accéder aux éléments par index|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
 |Utiliser des éléments premier entré, premier sorti (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
 |Utiliser des données dernier entré, premier sorti (LIFO)|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  

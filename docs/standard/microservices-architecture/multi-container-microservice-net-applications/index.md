@@ -1,15 +1,15 @@
 ---
 title: Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
-description: Architecture des Microservices .NET pour les applications .NET en conteneur | Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
+description: Architecture des Microservices .NET pour les applications .NET en conteneur | Comprendre l’architecture externe pour la conception et le développement d’applications .NET à plusieurs conteneurs et basées sur des microservices.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 13abff090d42c5d59476612942560c126836dbb0
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 3bbf746aa9c0b66a097b8c4df2964b5679342fd0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104476"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144141"
 ---
 # <a name="designing-and-developing-multi-container-and-microservice-based-net-applications"></a>Conception et développement d’applications .NET à plusieurs conteneurs et basées sur des microservices
 
@@ -19,7 +19,6 @@ Précédemment, nous avons posé la question : « Docker est-il nécessaire po
 
 Toutefois, si vous savez comment concevoir et développer une application basée sur des microservices qui est également basée sur des conteneurs Docker, vous serez en mesure de concevoir et développer n’importe quel modèle d’application plus simple. Par exemple, vous pouvez concevoir une application à trois niveaux qui requiert également une approche de plusieurs conteneurs. Par conséquent, et parce que les architectures de microservice sont une tendance majeure dans le milieu des conteneurs, cette section se concentre sur une implémentation d’architecture de microservice qui utilise des conteneurs Docker.
 
-
 >[!div class="step-by-step"]
-[Précédent](../containerize-net-framework-applications/index.md)
-[Suivant](microservice-application-design.md)
+>[Précédent](../docker-application-development-process/docker-app-development-workflow.md)
+>[Suivant](microservice-application-design.md)

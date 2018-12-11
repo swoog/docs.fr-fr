@@ -1,27 +1,30 @@
 ---
 title: Déploiement d’applications .NET Core
-description: Déploiement d’une application .NET Core.
+description: Découvrez les différentes façons de déployer une application .NET Core.
 author: rpetrusha
 ms.author: ronpet
-ms.date: 09/03/2018
-ms.openlocfilehash: 390af06e81788c3f64f255e5c85efdaa167274f4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: seodec18
+ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144713"
 ---
 # <a name="net-core-application-deployment"></a>Déploiement d’applications .NET Core
 
-Vous pouvez créer deux types de déploiement pour les applications .NET Core :
+Vous pouvez créer trois types de déploiement pour les applications .NET Core :
 
 - Déploiement dépendant du framework. Comme son nom l’indique, un déploiement dépendant du framework s’appuie sur la présence d’une version partagée à l’échelle du système de .NET Core sur le système cible. Comme .NET Core est déjà présent, votre application est également portable entre des installations de .NET Core. Votre application contient seulement son propre code et les dépendances tierces qui sont en dehors des bibliothèques .NET Core. Les déploiements dépendant du framework contiennent des fichiers *.dll* qui peuvent être lancés avec [l’utilitaire dotnet](../tools/dotnet.md) à partir de la ligne de commande. Par exemple, `dotnet app.dll` exécute une application nommée `app`.
 
 - Déploiement autonome. Contrairement à un déploiement dépendant du framework, un déploiement autonome ne s’appuie sur la présence d’aucun composant partagé sur le système cible. Tous les composants, notamment les bibliothèques .NET Core et le runtime .NET Core, sont inclus avec l’application et sont isolées des autres applications .NET Core. Les déploiements autonomes incluent un fichier exécutable (comme *app.exe* sur les plateformes Windows pour une application nommée `app`), qui est une version renommée de l’hôte .NET Core spécifique à la plateforme, et un fichier *.dll* (comme *app.dll*), qui est l’application elle-même.
 
+- Exécutables dépendant du framework. Produit un exécutable qui s’exécute sur une plateforme cible. Tout comme les déploiements dépendant du framework (FDD), les exécutables dépendant du framework (FDE) sont spécifiques à la plateforme et ne sont pas autonomes. Ces déploiements utilisent toujours une version .NET Core partagée à l’échelle du système pour s’exécuter. Contrairement à un SCD, votre application contient seulement son propre code et les éventuelles dépendances tierces situées à l’extérieur des bibliothèques .NET Core. Les FDE produisent un fichier exécutable qui s’exécute sur la plateforme cible.
+
 ## <a name="framework-dependent-deployments-fdd"></a>Déploiements dépendant du framework
 
-Pour un déploiement dépendant du framework, vous déployez seulement votre application et les dépendances tierces. Vous ne devez pas déployer .NET Core car votre application utilise la version de .NET Core qui est présente sur le système cible. Il s’agit du modèle de déploiement par défaut pour les applications .NET Core et ASP.NET Core qui ciblent .NET Core.
+Pour un déploiement dépendant du framework, vous déployez seulement votre application et les dépendances tierces. Votre application utilisera la version de .NET Core présente sur le système cible. Il s’agit du modèle de déploiement par défaut pour les applications .NET Core et ASP.NET Core qui ciblent .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Pourquoi créer un déploiement dépendant du framework ?
 
@@ -31,11 +34,13 @@ Un déploiement dépendant du framework présente plusieurs avantages :
 
 - Votre package de déploiement est de petite taille. Vous déployez seulement votre application et ses dépendances, et non pas .NET Core lui-même.
 
+- À moins qu’ils ne soient remplacés, les FDD utiliseront le dernier runtime pris en charge installé sur le système cible. Cela permet à votre application d’utiliser la dernière version corrigée du runtime .NET Core. 
+
 - Plusieurs applications utilisent la même installation de .NET Core, ce qui réduit l’utilisation de l’espace disque et de la mémoire sur les systèmes hôtes.
 
 Il existe également quelques inconvénients :
 
-- Votre application peut s’exécuter seulement si la version de .NET Core que vous ciblez, ou une version ultérieure, est déjà installée sur le système hôte.
+- Votre application peut s’exécuter seulement si la version de .NET Core ciblée par votre application, [ou une version ultérieure](../versions/selection.md#framework-dependent-apps-roll-forward), est déjà installée sur le système hôte.
 
 - Il est possible que le runtime et les bibliothèques .NET Core changent sans que vous le sachiez dans les versions futures. Dans de rares cas, ceci peut changer le comportement de votre application.
 
@@ -65,9 +70,31 @@ Elle a également plusieurs inconvénients :
 
 - Le déploiement de nombreuses applications .NET Core autonomes sur un système peut consommer une quantité significative d’espace disque car chaque application duplique les fichiers de .NET Core.
 
+## <a name="framework-dependent-executables-fde"></a>Exécutables dépendant du framework (FDE)
+
+À compter de .NET Core 2.2, vous pouvez déployer votre application en tant que FDE, ainsi que toutes les dépendances tierces requises. Votre application utilisera la version de .NET Core installée sur le système cible.
+
+### <a name="why-deploy-a-framework-dependent-executable"></a>Pourquoi déployer un exécutable dépendant du framework ?
+
+Un déploiement dépendant du framework présente plusieurs avantages :
+
+- Votre package de déploiement est de petite taille. Vous déployez seulement votre application et ses dépendances, et non pas .NET Core lui-même.
+
+- Plusieurs applications utilisent la même installation de .NET Core, ce qui réduit l’utilisation de l’espace disque et de la mémoire sur les systèmes hôtes.
+
+- Votre application peut être exécutée en appelant l’exécutable publié, sans appeler directement l’utilitaire `dotnet`.
+
+Il existe également quelques inconvénients :
+
+- Votre application peut s’exécuter seulement si la version de .NET Core ciblée par votre application, [ou une version ultérieure](../versions/selection.md#framework-dependent-apps-roll-forward), est déjà installée sur le système hôte.
+
+- Il est possible que le runtime et les bibliothèques .NET Core changent sans que vous le sachiez dans les versions futures. Dans de rares cas, ceci peut changer le comportement de votre application.
+
+- Vous devez publier votre application pour chaque plateforme cible.
+
 ## <a name="step-by-step-examples"></a>Exemples étape par étape
 
-Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec les outils de l’interface CLI, consultez [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md). Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec Visual Studio, consultez [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md). Chaque rubrique contient des exemples des déploiements suivants :
+Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec les outils de l’interface CLI, consultez [Déploiement d’applications .NET Core avec des outils CLI](deploy-with-cli.md). Pour obtenir des exemples étape par étape de déploiement d’applications .NET Core avec Visual Studio, consultez [Déploiement d’applications .NET Core avec Visual Studio](deploy-with-vs.md). Chaque article contient des exemples des déploiements suivants :
 
 - Déploiement dépendant du framework
 - Déploiement dépendant du framework avec des dépendances tierces

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192481"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127925"
 ---
 # <a name="handling-and-raising-events"></a>Gestion et déclenchement d'événements
 Les événements dans le .NET Framework sont basés sur le modèle délégué. Le modèle délégué suit le modèle de conception observateur, qui permet à un abonné de s'inscrire pour recevoir des notifications d'un fournisseur. Un émetteur d'événements émet une notification d'événement, et un récepteur d'événements reçoit cette notification et définit une réponse à celle-ci. Cet article décrit les principaux composants du modèle délégué, comment consommer les événements des applications, et comment implémenter des événements dans votre code.  

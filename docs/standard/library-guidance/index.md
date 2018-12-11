@@ -1,15 +1,15 @@
 ---
-title: Conseils sur la bibliothèque open source
+title: Conseils sur la bibliothèque .NET open source
 description: Recommandations de bonne pratique à l’attention des développeurs qui créent des bibliothèques .NET de qualité.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128068"
 ---
 # <a name="open-source-library-guidance"></a>Conseils sur la bibliothèque open source
 
@@ -31,7 +31,7 @@ Aspects des bibliothèques .NET open source de qualité :
 
 Chaque article présente quatre types de suggestions : **À faire**, **Envisager**, **Éviter** et **À ne pas faire**. Le type de suggestion indique si celle-ci doit être suivie ou pas.
 
-Vous devez presque toujours suivre une suggestion **À faire**. Exemple :
+Vous devez presque toujours suivre une suggestion **À faire**. Par exemple :
 
 **✔️ À FAIRE** : Distribuer votre bibliothèque à l’aide d’un package NuGet.
 
@@ -48,4 +48,4 @@ Et enfin, les suggestions **À ne pas faire** désignent quelque chose que vous 
 **❌ À NE PAS FAIRE** : publier les versions avec nom fort et sans nom fort de votre bibliothèque. Par exemple : `Contoso.Api` et `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[Next](./get-started.md)
+>[Next](get-started.md)
