@@ -1,15 +1,15 @@
 ---
-title: 'Procédure pas à pas : génération SQL'
+title: 'Procédure pas à pas : Génération SQL'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672015"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149040"
 ---
-# <a name="walkthrough-sql-generation"></a>Procédure pas à pas : génération SQL
+# <a name="walkthrough-sql-generation"></a>Procédure pas à pas : Génération SQL
 Cette rubrique illustre comment la génération SQL se produit dans le [fournisseur d’exemples](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). La requête Entity SQL suivante utilise le modèle inclus dans le fournisseur d'exemples :  
   
 ```  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Première phase de la génération SQL : visite de l'arborescence de l'expression  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Première Phase de génération SQL : Visite de l’arborescence d’Expression  
  La figure suivante illustre l'état vide initial du visiteur.  Dans l'ensemble de cette rubrique, seules les propriétés pertinentes pour l'explication de la procédure pas à pas sont présentées.  
   
  ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagramme](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Pour Join3, IsParentAJoin retourne la valeur false et doit démarrer un nouveau SqlSelectStatement (SelectStatement1) et l'ajouter à la pile. Le traitement continue comme pour les jointures précédentes, une nouvelle étendue est ajoutée à la pile et les enfants sont traités. L'enfant gauche est une étendue (Extent3) et l'enfant droit est une jointure (Join2) qui doit également démarrer un nouveau SqlSelectStatement : SelectStatement2. Les enfants sur Join2 sont également des étendues et sont regroupés dans SelectStatement2.  
+ Pour Join3, IsParentAJoin retourne la valeur false et doit démarrer un nouveau SqlSelectStatement (SelectStatement1) et l'ajouter à la pile. Le traitement continue comme pour les jointures précédentes, une nouvelle étendue est ajoutée à la pile et les enfants sont traités. L’enfant de gauche est une étendue (Extent3) et l’enfant droit est une jointure (Join2) qui doit également démarrer un nouveau SqlSelectStatement : SelectStatement2. Les enfants sur Join2 sont également des étendues et sont regroupés dans SelectStatement2.  
   
  L'état du visiteur une fois Join2 visité, mais avant que son post-traitement (ProcessJoinInputResult) soit effectué, est illustré dans la figure suivante :  
   
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Deuxième phase de la génération SQL : génération de la commande de chaîne  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Deuxième Phase de génération SQL : Génération de la chaîne de commande  
  La deuxième phase produit des noms réels pour les symboles et seuls sont considérés les symboles qui représentent des colonnes nommées « OrderID », puisque dans ce cas un conflit doit être résolu. Ceux-ci sont mis en surbrillance dans le SqlSelectStatement. Notez que les suffixes utilisés dans la figure permettent uniquement d'insister sur le fait que ce sont des instances différentes et non de représenter de nouveaux noms, puisque, à ce stade, leurs noms définitifs (pouvant être différents des noms d'origine) n'ont pas encore été assignés.  
   
  Le premier symbole trouvé qui doit être renommé est <symbol_OrderID>. Son nouveau nom est « OrderID1 », 1 est marqué en tant que dernier suffixe utilisé pour « OrderID » et le symbole est marqué comme ne devant pas être renommé. Ensuite, la première utilisation de <symbol_OrderID_2> est trouvée. Il est renommé pour utiliser le suffixe disponible suivant (« OrderID2 ») et est encore marqué comme ne devant pas être renommé afin qu'à sa prochaine utilisation il ne soit pas renommé. C'est également le cas pour <symbol_OrderID_3>.  

@@ -4,12 +4,12 @@ description: Comprendre l’éventail de scénarios pris en charge par les archi
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 0261b9f17f133942d635cf331d8cef414378bd90
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369971"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146705"
 ---
 # <a name="serverless-design-examples"></a>Exemples de conception sans serveur
 
@@ -89,5 +89,5 @@ Une passerelle d’API fournit un point d’entrée unique pour les clients et p
 * [Utilisation de la modification de flux prise en charge dans Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/change-feed)
 
 >[!div class="step-by-step"]
-[Précédent](serverless-architecture-considerations.md)
-[Suivant](azure-serverless-platform.md)
+>[Précédent](serverless-architecture-considerations.md)
+>[Suivant](azure-serverless-platform.md)
