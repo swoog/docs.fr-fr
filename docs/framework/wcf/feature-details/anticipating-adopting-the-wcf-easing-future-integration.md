@@ -1,15 +1,15 @@
 ---
-title: 'Anticipation de l‘adoption de Windows Communication Foundation : faciliter l‘intégration future'
+title: 'Anticipation de l’adoption de Windows Communication Foundation : Faciliter l’intégration Future'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: f4cc450b04fd05d390a1f41f3d14c19f4b23be29
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296492"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155143"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Anticipation de l‘adoption de Windows Communication Foundation : faciliter l‘intégration future
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Anticipation de l’adoption de Windows Communication Foundation : Faciliter l’intégration Future
 Si vous utilisez ASP.NET aujourd'hui et que vous prévoyez d’utiliser WCF à l’avenir, cette rubrique fournit des conseils pour vous assurer que les nouveaux services Web ASP.NET fonctionneront également avec les applications WCF.  
   
 ## <a name="general-recommendations"></a>Recommandations générales  
@@ -44,4 +44,4 @@ public interface IEcho
  Évitez d'utiliser les options d'authentification fournies par des services IIS (Internet Information Services). Les clients WCF ne prennent pas en charge les. Si un service doit être sécurisé, utilisez les options fournies par WCF, car ces options sont plus riches et sont basées sur des protocoles standard.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Anticipation de l’adoption de Windows Communication Foundation : faciliter la migration future](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Anticipation de l’adoption de Windows Communication Foundation : Faciliter la Migration Future](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

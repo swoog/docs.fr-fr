@@ -1,15 +1,15 @@
 ---
-title: 'Anticipation de l‘adoption de Windows Communication Foundation : faciliter la future migration'
+title: 'Anticipation de l’adoption de Windows Communication Foundation : Faciliter la Migration Future'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837383"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129582"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipation de l‘adoption de Windows Communication Foundation : faciliter la future migration
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Anticipation de l’adoption de Windows Communication Foundation : Faciliter la Migration Future
 Afin de faciliter une future migration de nouvelles applications ASP.NET vers WCF, suivez les recommandations précédentes ainsi que les recommandations suivantes.  
   
 ## <a name="protocols"></a>Protocoles  
@@ -36,7 +36,7 @@ Afin de faciliter une future migration de nouvelles applications ASP.NET vers WC
   
 -   Fournissez des noms explicites pour les opérations d'un service à l'aide du paramètre `MessageName` de <xref:System.Web.Services.WebMethodAttribute>.  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ Afin de faciliter une future migration de nouvelles applications ASP.NET vers WC
   
 -   Utilisez le <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> afin de fournir des valeurs explicites pour les en-têtes HTTP SOAPAction chargés d'acheminer les demandes HTTP aux méthodes.  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ Afin de faciliter une future migration de nouvelles applications ASP.NET vers WC
 ## <a name="exception-handling"></a>Gestion des exceptions  
  Lors de la conception des structures des types de données à envoyer et à recevoir par un service, concevez aussi des structures pour représenter les divers types d'exceptions qui peuvent se produire dans un service et qu'il faut décrire éventuellement à un client.  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ Afin de faciliter une future migration de nouvelles applications ASP.NET vers WC
   
  Donnez à ces classes la possibilité de se sérialiser en code XML :  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  Ces classes peuvent ensuite servir à fournir les détails pour les instances <xref:System.Web.Services.Protocols.SoapException> levées explicitement :  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -113,7 +113,7 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- Ces classes d’exceptions sera réutilisables avec WCF<xref:System.ServiceModel.FaultException%601> classe pour lever une nouvelle `FaultException<AnticipatedException>(anticipatedException);`  
+ Ces classes d’exceptions sera réutilisables avec WCF <xref:System.ServiceModel.FaultException%601> classe pour lever une nouvelle `FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Sécurité  
  Les éléments suivants sont des recommandations de sécurité.  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   Vous pouvez faire appel à des fournisseurs de rôles ASP.NET 2.0 pour autoriser l'accès aux ressources d'un service.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Anticipation de l’adoption de Windows Communication Foundation : faciliter l’intégration future](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Anticipation de l’adoption de Windows Communication Foundation : Faciliter l’intégration Future](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

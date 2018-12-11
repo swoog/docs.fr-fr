@@ -2,12 +2,12 @@
 title: '&lt;tcpTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 39fb57af6ad97c1a0e51a2c5dcf06245ddf293ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738170"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152463"
 ---
 # <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
 Définit un transport TCP qui peut être utilisé par un canal pour transférer des messages pour une liaison personnalisée.  
@@ -54,7 +54,7 @@ Définit un transport TCP qui peut être utilisé par un canal pour transférer 
 |channelInitializationTimeout|Obtient ou définit la limite de temps pour initialiser un canal à accepter.  Durée maximale de l'état d'initialisation du canal avant sa déconnexion (en secondes). Cette propriété détermine la durée d'authentification d'une connexion TCP à l'aide du protocole .NET Message Framing. Un client doit envoyer des données initiales avant que le serveur dispose de suffisamment d'informations pour exécuter l'authentification. La valeur par défaut est 30 secondes.|  
 |connectionBufferSize|Obtient ou définit la taille de la mémoire tampon utilisée pour transmettre un bloc du message sérialisé sur le câble depuis le client ou le service.|  
 |hostNameComparisonMode|Obtient ou définit une valeur qui indique si le nom d'hôte est utilisé pour atteindre le service lors de la correspondance avec l'URI.|  
-|listenBacklog|Nombre maximal de demandes de connexion en file d'attente pouvant être en attente pour un service Web. L'attribut `connectionLeaseTimeout` limite la durée d'attente d'un client pour être connecté avant de lever une exception de connexion. Il s'agit d'une propriété de niveau socket qui contrôle le nombre maximal de demandes de connexion en file d'attente qui peuvent être en attente pour un service Web. Lorsque ListenBacklog est trop faible, WCF arrête de recevoir des demandes et par conséquent supprime les nouvelles connexions jusqu’à ce que le serveur accepte certaines des connexions mises en file d’attente existantes. La valeur par défaut est 16 * nombre de processeurs.|  
+|listenBacklog|Nombre maximal de demandes de connexion en file d'attente pouvant être en attente pour un service Web. L'attribut `connectionLeaseTimeout` limite la durée d'attente d'un client pour être connecté avant de lever une exception de connexion. Il s'agit d'une propriété de niveau socket qui contrôle le nombre maximal de demandes de connexion en file d'attente qui peuvent être en attente pour un service Web. Lorsque ListenBacklog est trop faible, WCF arrête acceptant les demandes et chute par conséquent les nouvelles connexions jusqu'à ce que le serveur accepte certaines des connexions existantes en file d’attente. La valeur par défaut est 16 * nombre de processeurs.|  
 |manualAddressing|Obtient ou définit une valeur qui indique si l'adressage manuel du message est requis.|  
 |maxBufferPoolSize|Obtient ou définit la taille maximale des pools de mémoires tampons utilisés par le transport.|  
 |maxBufferSize|Obtient ou définit la taille maximale de la mémoire tampon à utiliser. Pour les messages diffusés en continu, cette valeur doit être au moins égale à la taille maximale possible des en-têtes de message, qui sont lus en mode mémoire tampon.|  

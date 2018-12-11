@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/10/2018
-ms.openlocfilehash: a03853a508cfb3d5dd5fbfe66e4ef484b685faaa
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 37dd5481da571be56f134a5e142b7ba46427d7d8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45653237"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143647"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Étapes du flux de travail DevOps boucle externe pour une application Docker
 
@@ -17,15 +17,15 @@ Figure 5-1 présente une description de bout en bout des étapes comprenant le f
 
 ![](./media/image1.png)
 
-Figure 5-1 : workflow DevOps pour les boucle externe pour les applications Docker avec les outils Microsoft
+Figure 5-1 : Flux de travail DevOps boucle externe pour les applications Docker avec les outils Microsoft
 
 Maintenant, nous allons examiner chacune de ces étapes plus en détail.
 
-## <a name="step-1-inner-loop-development-workflow"></a>Étape 1 : Flux de travail de développement boucle interne
+## <a name="step-1-inner-loop-development-workflow"></a>Étape 1 : Flux de travail de développement de la boucle interne
 
 Cette étape est expliquée en détail dans le chapitre 4, mais, pour résumer, voici où la boucle externe commence, le moment auquel un développeur transmet le code pour le système de gestion de contrôle de source (comme Git) initiation d’actions de pipeline CI.
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Étape 2 : Intégration du contrôle de Code Source et gestion avec Azure DevOps Services et Git
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>Étape 2 : Intégration de contrôle de Code source et la gestion avec Azure DevOps Services et Git
 
 À ce stade, vous devez disposer d’un système de contrôle de version pour collecter une version consolidée de tout le code provenant des différents développeurs de l’équipe.
 
@@ -35,7 +35,7 @@ Les images locales générées par les développeurs eux-mêmes doivent être ut
 
 Azure DevOps Services et Team Foundation Server prend en charge Git et Team Foundation Version Control. Vous pouvez choisir entre eux et l’utiliser pour une expérience de Microsoft de bout en bout. Toutefois, vous pouvez également gérer votre code dans les dépôts externes (tels que GitHub, les référentiels Git en local ou Subversion) et toujours être en mesure de s’y connecter et obtenir le code comme point de départ pour votre pipeline DevOps CI.
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Étape 3 : Build CI, intégrer et tester avec Azure DevOps Services et Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>Étape 3 : Générer, CI, intégrer et tester avec Azure DevOps Services et Docker
 
 CI est devenu une norme pour le test de logiciels modernes et de remise. La solution Docker gère une séparation claire des responsabilités entre les équipes de développement et les opérations. L’immuabilité des images Docker garantit un déploiement reproductible entre ce qui a développé, testé via l’élément de configuration et exécuter en production. Moteur docker déployé sur les ordinateurs portables de développeur et infrastructure de test rend les conteneurs portable entre les environnements.
 
@@ -47,11 +47,11 @@ Vous pouvez utiliser Azure DevOps Services comme base pour la création de vos a
 
 Lors de l’utilisation de Docker pour le déploiement, les « artefacts finales » à être déployées sont des images Docker avec votre application ou les services intégrés à ceux-ci. Ces images sont transmises ou publiés sur un *Registre Docker* (un référentiel privé, comme ceux que vous pouvez avoir dans Azure Container Registry ou une publique comme registre Docker Hub, qui est couramment utilisé pour les images de base officiels).
 
-Voici le concept de base : CI le pipeline doivent être déclenchée éteints par une validation à un référentiel de contrôle de code source comme Git. La validation entraîne Azure DevOps Services exécuter une tâche de build dans un conteneur Docker et, en cas de réussite de ce travail, transférer une image Docker au Registre Docker, comme illustré dans la Figure 5-2.
+Voici le concept de base : Le pipeline de CI sera déclenchée désactivé par une validation à un référentiel de contrôle de code source comme Git. La validation entraîne Azure DevOps Services exécuter une tâche de build dans un conteneur Docker et, en cas de réussite de ce travail, transférer une image Docker au Registre Docker, comme illustré dans la Figure 5-2.
 
 ![](./media/image2.png)
 
-Figure 5-2 : les étapes impliquées dans l’élément de configuration
+Figure 5-2 : Les étapes impliquées dans l’élément de configuration
 
 Voici les étapes de flux de travail de base CI avec Docker et Azure DevOps Services :
 
@@ -73,7 +73,7 @@ Le [extension Docker de Services Azure DevOps](https://aka.ms/vstsdockerextensio
 
 ![](./media/image3.png)
 
-Figure 5-3 : le pipeline de CI de Docker dans les Services Azure DevOps
+Figure 5-3 : Le pipeline d’intégration continue Docker dans les Services Azure DevOps
 
 L’extension de Docker peut utiliser des points de terminaison de service pour les ordinateurs hôtes de Docker et de conteneur ou de registres d’images. La valeur par défaut de tâches à l’aide d’un hôte Docker local s’il est disponible (cela actuellement nécessite un agent Azure DevOps Services personnalisé) ; Sinon, ils nécessitent que vous fournissiez une connexion d’hôte Docker. Actions qui dépendent d’authentifié avec un Registre Docker, telles qu’envoyer une image, nécessitent que vous fournissiez un Docker connexion au Registre.
 
@@ -97,7 +97,7 @@ L’extension Docker de Services Azure DevOps installe les composants suivants d
 
 Avec ces tâches Azure DevOps Services, une build/la machine virtuelle Linux Docker hôte configuré dans Azure et votre Registre Docker par défaut (Azure Container Registry, Docker Hub, DTR de Docker privé ou tout autre registre Docker), vous pouvez assembler votre pipeline CI de Docker dans un très façon cohérente.
 
-***Configuration requise :***
+***Configuration requise :***
 
 -   Les Services Azure DevOps, ou pour les installations locales, Team Foundation Server 2015 Update 3 ou version ultérieure.
 
@@ -145,7 +145,7 @@ En règle générale, vous souhaiterez peut-être avoir vos référentiels priv�
 
 ![](./media/image4.png)
 
-Figure 5-4 : publication d’images personnalisées à un Registre Docker
+Figure 5-4 : Publication des images personnalisées à un Registre Docker
 
 Il existe plusieurs offres de registres Docker à partir de fournisseurs de cloud comme Azure Container Registry, Registre de conteneurs d’Amazon Web Services, Google Container Registry, quai de Registre et ainsi de suite.
 
@@ -153,7 +153,7 @@ Il existe plusieurs offres de registres Docker à partir de fournisseurs de clou
 
 ![](./media/image5.png)
 
-Figure 5-5 : à l’aide des Services de DevOps Azure pour la publication des images personnalisées dans un Registre Docker
+Figure 5-5 : À l’aide d’Azure DevOps Services pour la publication des images personnalisées dans un Registre Docker
 
 **Plus d’informations** pour en savoir plus sur l’extension Docker pour Azure DevOps Services, accédez à <https://aka.ms/vstsdockerextension>. Pour en savoir plus sur Azure Container Registry, accédez à <https://aka.ms/azurecontainerregistry>.
 
@@ -169,13 +169,13 @@ Regardons premièrement le scénario moins complexes : déploiement d’hôtes 
 
 ![](./media/image6.png)
 
-Figure 5-6 : déploiement de conteneurs d’applications sur simple Registre d’environnements l’hôte Docker
+Figure 5-6 : Déploiement de conteneurs de l’application sur simple Registre d’environnements l’hôte Docker
 
 Figure 5-7 met en évidence la façon dont vous pouvez vous connecter votre élément de configuration de build aux environnements de test/AQ via des Services Azure DevOps en cliquant sur Docker Compose dans la boîte de dialogue Ajouter une tâche. Toutefois, lors du déploiement de l’environnement intermédiaire ou de production, généralement utilisez Gestion des environnements de plusieurs des fonctionnalités de Release Management (telles que questions et réponses, intermédiaire et production). Si vous effectuez un déploiement à des hôtes Docker uniques, il utilise les Services de DevOps Azure tâche « Docker Compose » (ce qui revient à appeler le docker-commande sous le capot compose up). Si vous déployez dans Azure Container Service, il utilise la tâche de déploiement de Docker, comme expliqué dans la section qui suit.
 
 ![](./media/image7.png)
 
-Figure 5-7 : ajout d’une tâche Docker Compose dans un pipeline Azure DevOps Services
+Figure 5-7 : Ajout d’une tâche Docker Compose dans un pipeline Azure DevOps Services
 
 Lorsque vous créez une version dans les Services Azure DevOps, il prend un ensemble d’artefacts d’entrée. Elles sont destinées à être immuable pendant la durée de vie de la version sur plusieurs environnements. Lorsque vous introduisez des conteneurs, les artefacts d’entrée identifient les images dans un Registre à déployer. Selon la façon dont ces tests sont identifiés, ils ne sont pas garanties reste identique pendant toute la durée de la version, le cas le plus évident en cours lorsque vous faites référence à « myimage:latest » à partir d’un fichier docker-compose.
 
@@ -187,7 +187,7 @@ Via les extensions Azure DevOps Services, vous pouvez créer une nouvelle image,
 
 ![](./media/image8.png)
 
-Figure 5-8 : configurer Azure DevOps Services Docker Compose de tâches à partir d’Azure DevOps Services Release Management
+Figure 5-8 : Configuration d’Azure DevOps Services Docker Compose de tâches à partir d’Azure DevOps Services Release Management
 
 Toutefois, n’oubliez pas que le scénario illustré dans la Figure 5-6 et implémenté dans la Figure 5-8 est assez basique (qu’il déploie sur les hôtes Docker simples et des machines virtuelles, et il y aura un seul conteneur ou une instance par image) et probablement doit être utilisé uniquement pour le développement ou test sc Gestionnaire de scénarios. Dans la plupart des scénarios de production d’entreprise, vous pourriez avoir de haute disponibilité (HA) et facile à gérer l’évolutivité par un équilibrage de charge entre plusieurs nœuds, serveurs et les machines virtuelles, ainsi que « intelligents basculements » par conséquent, si un serveur ou un nœud échoue, ses services et conteneurs seront déplacés vers un autre serveur hôte ou une machine virtuelle. Dans ce cas, vous avez besoin des technologies plus avancées telles que les clusters de conteneurs, les orchestrateurs et les planificateurs. Par conséquent, la façon de déployer à ces clusters est précisément via les scénarios avancés, expliqués dans la section suivante.
 
@@ -201,19 +201,19 @@ Vous pouvez déployer des conteneurs manuellement à ces clusters à partir d’
 
 ![](./media/image9.png)
 
-Figure 5-9 : déploiement d’applications distribuées au Service de conteneur
+Figure 5-9 : Déploiement d’applications distribuées au Service de conteneur
 
 Au départ, lorsque vous déployez à certains clusters ou les orchestrateurs, vous traditionnellement utiliseriez mécanismes par chaque orchestrateur (autrement dit, Mesosphere DC/OS ou Kubernetes disposent de mécanismes de déploiement différents à Docker et Docker et les scripts de déploiement spécifique Swarm) au lieu de la plus simple et facile à utiliser docker-composent outil basé sur le fichier de définition de docker-compose.YML. Toutefois, grâce à la tâche de déploiement de Microsoft Azure DevOps Services Docker, illustrée à la Figure 5-10, vous maintenant pouvez également déployer au contrôleur de domaine/système d’exploitation en utilisant simplement votre fichier familier docker-compose.yml étant donné que Microsoft effectue cette « traduction » pour vous (à partir de votre fichier docker-compose.yml dans d’autres formats requis par DC/OS).
 
 ![](./media/image10.png)
 
-Figure 5-10 : ajout de la tâche déployer Docker à votre gestionnaire de ressources d’environnement
+Figure 5-10 : Ajout de la tâche de déploiement Docker à votre gestionnaire de ressources d’environnement
 
 Figure 5-11 montre comment vous pouvez modifier la tâche de déploiement de Docker et spécifier le Type de cible (Azure Container Service DC/OS, dans ce cas), votre fichier Docker Compose et la connexion au Registre de Docker (comme Azure Container Registry ou Docker Hub). Il s’agit de la tâche récupère où vos images Docker personnalisées de prêts à l’emploi pour être déployé en tant que conteneurs dans le cluster DC/OS.
 
 ![](./media/image11.png)
 
-Déploiement de la figure 5-11 : Docker déployer tâche définition Service de conteneur DC/OS pour Azure
+Figure 5-11 : Déploiement de docker déployer tâche définition du Service de conteneur DC/OS pour Azure
 
 **Plus d’informations** pour en savoir plus sur le pipeline de CD avec Azure DevOps Services et Docker, visitez les sites suivants :
 
@@ -234,5 +234,5 @@ Cette rubrique également est couvert dans le chapitre suivant dans le cadre des
 Uniquement lors de la surveillance et diagnostic est à 100 % dans le domaine du DevOps sont les processus de surveillance et les analytique effectuée par l’équipe de développement par rapport à des environnements de test ou de la version bêta. Pour cela en effectuant des tests de charge ou simplement en version bêta ou les environnements d’assurance qualité, où les bêta-testeurs essayez les nouvelles versions de surveillance.
 
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](../run-manage-monitor-docker-environments/index.md)
+>[Précédent](index.md)
+>[Suivant](../run-manage-monitor-docker-environments/index.md)

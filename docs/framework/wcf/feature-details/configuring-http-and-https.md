@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 36dbf725dfcd6fefe6482f7de69daea9356d3d07
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3094c82382292be3295238ef9cf2687f6eeb98f8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087697"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149885"
 ---
 # <a name="configuring-http-and-https"></a>Configuration de HTTP et HTTPS
 Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les paramètres HTTP/HTTPS sont configurés à l'aide d'IIS (Internet Information Services) ou d'un outil de ligne de commande. Lorsqu'un service WCF est hébergé sous IIS, des paramètres HTTP ou HTTPS peuvent être configurés dans IIS (avec l'outil inetmgr.exe). Si un service WCF est auto-hébergé, les paramètres HTTP ou HTTPS sont configurés à l'aide d'un outil de ligne de commande.  
@@ -32,7 +32,7 @@ Les services et les clients WCF peuvent communiquer sur HTTP et HTTPS. Les param
   
  Les éléments suivants affichent la syntaxe de la commande Httpcfg avec l'option `set urlacl`  
   
-```  
+```console  
 httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL  
 ```  
   
@@ -42,14 +42,14 @@ httpcfg set urlacl /u {http://URL:Port/ | https://URL:Port/} /aACL
   
  Le code ci-après indique comment utiliser cette commande.  
   
-```  
+```console  
 httpcfg.exe set urlacl /u http://myhost:8000/ /a "O:AOG:DAD:(A;;RPWPCCDCLCSWRCWDWOGA;;;S-1-0-0)"  
 ```  
   
 ### <a name="running-windows-vista-windows-server-2008-r2-or-windows-7"></a>Exécution de Windows Vista, Windows Server 2008 R2 ou Windows 7  
  Si votre système d'exploitation est [!INCLUDE[wv](../../../../includes/wv-md.md)], Windows Server 2008 R2 ou Windows 7, utilisez l'outil Netsh.exe. Le code ci-après indique comment utiliser cette commande.  
   
-```  
+```console  
 netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user  
 ```  
   
@@ -63,7 +63,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
   
  Les certificats sont stockés dans un magasin centralisé en fonction de l'adresse IP et du numéro de port de la connexion. L'adresse IP 0.0.0.0 spéciale correspond à l'adresse IP de l'ordinateur local. Notez que le magasin de certificats ne distingue pas l'URL en fonction du chemin d'accès. Les services ayant la même combinaison d’adresse IP et de port doivent partager les mêmes certificats même si le chemin d’accès des services dans l’URL est différent.  
   
- Pour obtenir des instructions détaillées, consultez [Comment : configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+ Pour obtenir des instructions détaillées, consultez [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 ## <a name="configuring-the-ip-listen-list"></a>Configuration de la liste d'écoutes IP  
  L'API du serveur HTTP crée une liaison uniquement avec une adresse IP et un port lorsqu'un utilisateur inscrit une URL. Par défaut, l'API du serveur HTTP crée une liaison avec le port dans l'URL pour toutes les adresses IP de l'ordinateur. Un conflit survient si une application qui n'utilise pas l'API du serveur HTTP a créé précédemment une liaison avec cette combinaison d'adresse IP et de port. La liste d’écoutes IP permet aux services WCF de coexister avec les applications qui utilisent un port pour certaines des adresses IP de l’ordinateur. Si la liste d'écoutes IP contient une entrée, l'API du serveur HTTP crée seulement une liaison avec les adresses IP spécifiées dans la liste. La modification de la liste d'écoutes IP requiert des privilèges d'administrateur.  
@@ -71,14 +71,14 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ### <a name="running-windows-xp-or-server-2003"></a>Exécution de Windows XP ou Server 2003  
  Utilisez l'outil httpcfg pour modifier la liste d'écoute IP, comme illustré dans l'exemple suivant. Le [documentation sur les outils de prise en charge de Windows](https://go.microsoft.com/fwlink/?LinkId=94840) explique la syntaxe de l’outil httpcfg.exe.  
   
-```  
+```console  
 httpcfg.exe set iplisten -i 0.0.0.0:8000  
 ```  
   
 ### <a name="running-windows-vista-or-windows-7"></a>Exécution de Windows Vista ou Windows 7  
  Utilisez l'outil netsh pour modifier la liste d'écoute IP, comme illustré dans l'exemple suivant.  
   
-```  
+```console  
 netsh http add iplisten ipaddress=0.0.0.0:8000  
 ```  
   
@@ -92,4 +92,4 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.WSDualHttpBinding>  
- [Guide pratique pour configurer un port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+ [Comment : Configurer un Port avec un certificat SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

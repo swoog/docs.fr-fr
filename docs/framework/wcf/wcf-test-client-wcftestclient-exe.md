@@ -3,11 +3,11 @@ title: Client test WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181590"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149001"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Client test WCF (WcfTestClient.exe)
 Client de Test de Windows Communication Foundation (WCF) (WcfTestClient.exe) est un outil GUI qui permet aux utilisateurs d’entrer des paramètres de test, envoyer ces entrées au service et afficher la réponse que le service renvoie. Il offre de service transparentes lorsqu’il est associé avec l’hôte de Service WCF de test.  
@@ -136,7 +136,7 @@ Client de Test de Windows Communication Foundation (WCF) (WcfTestClient.exe) est
 ## <a name="features-supported-by-wcf-test-client"></a>Fonctionnalités prises en charge par le client test WCF  
  Voici une liste des fonctionnalités prises en charge par le Client Test WCF :  
   
--   Appel de service : message unidirectionnel et demande/réponse.  
+-   Appel de service : Message unidirectionnel et demande/réponse.  
   
 -   Liaisons : toutes les liaisons prises en charge par Svcutil.exe.  
   
@@ -156,7 +156,7 @@ Client de Test de Windows Communication Foundation (WCF) (WcfTestClient.exe) est
   
 -   Sécurité : [!INCLUDE[infocard](../../../includes/infocard-md.md)], certificat et nom d'utilisateur/mot de passe.  
   
--   Liaisons : WSFederationbinding, toute liaison de contexte et Https, WebHttpbinding (prise en charge des messages de réponse Json).  
+-   Liaisons : WSFederationbinding, les liaisons de contexte et la liaison Https, WebHttpbinding (prise en charge Json réponse message).  
   
 ## <a name="closing-wcf-test-client"></a>Fermeture du client test WCF  
  Vous pouvez fermer le Client Test WCF de plusieurs manières :  

@@ -3,11 +3,11 @@ title: Chaînes (F#)
 description: Découvrez comment la F# type 'string' représente le texte immuable sous la forme d’une séquence de caractères Unicode.
 ms.date: 05/16/2016
 ms.openlocfilehash: 158e30224fe50c2324e40d550b75e6abaf843597
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296784"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127678"
 ---
 # <a name="strings"></a>Chaînes
 

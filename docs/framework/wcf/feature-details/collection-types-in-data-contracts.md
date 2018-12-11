@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: a2528699387a86ca276cb3ba63eab39544552a4f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 0399c89e926611b076072e6475c52bf31ae83637
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850874"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155182"
 ---
 # <a name="collection-types-in-data-contracts"></a>Types de collections dans les contrats de données
 Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], ces listes peuvent être représentées à l'aide de tableaux ou de divers autres types (liste générique, <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>ou <xref:System.Collections.ArrayList>générique). Par exemple, une collection peut contenir une liste d'adresses pour un client donné. Ces collections sont appelées *collections liste*, indépendamment de leur type réel.  
@@ -87,7 +87,7 @@ Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE
   
 -   Lorsque l'attribut <xref:System.Runtime.Serialization.CollectionDataContractAttribute> n'est pas appliqué, le nom et l'espace de noms par défaut pour les types de collections dépendent des noms et des espaces de noms des types inclus dans la collection. Ils ne sont pas affectés par le nom et l'espace de noms du type de collection lui-même. Pour obtenir un exemple, consultez les types suivants.  
   
-    ```  
+    ```csharp  
     public CustomerList1 : Collection<string> {}  
     public StringList1 : Collection<string> {}  
     ```  
@@ -226,7 +226,7 @@ Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE
   
  Par défaut, les types ne sont pas générés pour les collections non personnalisées dans le code importé. Les membres de données des types de collections liste sont importés en tant que tableaux, alors que les membres de données des types de collections dictionnaire sont importés en tant que dictionnaire générique.  
   
- Toutefois, pour les collections personnalisées, des types distincts sont générés, marqués avec l'attribut <xref:System.Runtime.Serialization.CollectionDataContractAttribute> . (Un type de collection personnalisée dans le schéma est un type qui n’utilise pas l’espace de noms, le nom, le nom d’élément répétitif ou les noms des éléments clé/valeur par défaut.) Ces types sont des types vides qui dérivent de la <xref:System.Collections.Generic.List%601> générique pour les types liste et du dictionnaire générique pour les types dictionnaire.  
+ Toutefois, pour les collections personnalisées, des types distincts sont générés, marqués avec l'attribut <xref:System.Runtime.Serialization.CollectionDataContractAttribute>. (Un type de collection personnalisée dans le schéma est un type qui n’utilise pas l’espace de noms, le nom, le nom d’élément répétitif ou les noms des éléments clé/valeur par défaut.) Ces types sont des types vides qui dérivent de la <xref:System.Collections.Generic.List%601> générique pour les types liste et du dictionnaire générique pour les types dictionnaire.  
   
  Par exemple, vous pouvez avoir les types ci-dessous sur le serveur.  
   
@@ -249,7 +249,7 @@ Une *collection* est une liste d'éléments d'un certain type. Dans le [!INCLUDE
   
  Par exemple, pour provoquer l'importation de toutes les listes en tant que <xref:System.Collections.Generic.List%601>générique.  
   
-```  
+```console  
 svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\System.dll /ct:System.Collections.Generic.List`1  
 ```  
   
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Vous pouvez spécifier des types d'interfaces de collection dans le cadre de vos types de collections référencés, mais vous ne pouvez pas spécifier de types de collections non valides (tels que des types sans méthode `Add` ou sans constructeur public).  
   
- Un générique fermé est considéré comme la solution la mieux adaptée. (Les types non génériques sont considérés équivalents aux génériques fermés d' `Object`.) Par exemple, si les types <xref:System.Collections.Generic.List%601> générique de <xref:System.DateTime>, <xref:System.ComponentModel.BindingList%601> générique (générique ouvert) et <xref:System.Collections.ArrayList> sont les types de collections référencés, le code ci-dessous est généré.  
+ Un générique fermé est considéré comme la solution la mieux adaptée. (Les types non génériques sont considérés équivalents aux génériques fermés d'`Object`.) Par exemple, si les types <xref:System.Collections.Generic.List%601> générique de <xref:System.DateTime>, <xref:System.ComponentModel.BindingList%601> générique (générique ouvert) et <xref:System.Collections.ArrayList> sont les types de collections référencés, le code ci-dessous est généré.  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -287,8 +287,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Type référencé|Interface implémentée par le type référencé|Exemple|Type traité comme|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Non générique ou générique fermé (nombre de paramètres quelconque)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> ou<br /><br /> `MyType<T> : IDictionary` où T=`int`|Générique fermé `IDictionary<object,object>`|  
-|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>, fermé|`MyType<T> : IDictionary<string, bool>` où T =`int`|Générique fermé (par exemple, `IDIctionary<string,bool>`)|  
-|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé ou la valeur est fermée, l'autre est ouverte et utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<string,V>` où T =`int`, U =`float`, V =`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>` où Z =`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
+|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>, fermé|`MyType<T> : IDictionary<string, bool>` où T=`int`|Générique fermé (par exemple, `IDIctionary<string,bool>`)|  
+|Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé ou la valeur est fermée, l'autre est ouverte et utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<string,V>` où T=`int`, U=`float`, V=`bool`<br /><br /> ou<br /><br /> `MyType<Z> : IDictionary<Z,bool>` où Z=`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
 |Générique fermé (nombre quelconque de paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, la clé et la valeur sont ouvertes et chacune d'elles utilise un des paramètres du type|`MyType<T,U,V> : IDictionary<V,U>` où T=`int`, U=`bool`, V=`string`|Générique fermé (par exemple, `IDictionary<string,bool>`)|  
 |Générique ouvert (deux paramètres)|<xref:System.Collections.Generic.IDictionary%602>générique, ouvert, utilise les deux paramètres génériques du type dans l'ordre où ils apparaissent|`MyType<K,V> : IDictionary<K,V>`, K et V sont ouverts tous les deux|Générique ouvert (par exemple, `IDictionary<K,V>`)|  
   

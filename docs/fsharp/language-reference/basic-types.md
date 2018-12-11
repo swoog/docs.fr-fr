@@ -1,17 +1,17 @@
 ---
 title: Types de base (F#)
-description: Découvrir les types de base fondamentales qui sont utilisés dans le langage F#.
+description: Découvrir les types de base fondamentales qui sont utilisés dans le F# langage.
 ms.date: 07/09/2018
-ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48026934"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145122"
 ---
 # <a name="basic-types"></a>Types de base
 
-Cette rubrique répertorie les types de base qui sont définies dans le langage F#. Ces types sont le plus fondamental en F#, constituant la base de presque chaque programme F#. Ils représentent un sur-ensemble des types primitifs .NET.
+Cette rubrique répertorie les types de base qui sont définies dans le F# langage. Ces types sont le plus fondamental dans F#, constituant la base de presque chaque F# programme. Ils représentent un sur-ensemble des types primitifs .NET.
 
 |Type|Type .NET|Description|
 |----|---------|-----------|
@@ -34,8 +34,8 @@ Cette rubrique répertorie les types de base qui sont définies dans le langage 
 |`float32`, `single`|<xref:System.Single>|Type à virgule flottante 32 bits.|
 |`float`, `double`|<xref:System.Double>|Type à virgule flottante 64 bits.|
 
->[!NOTE]
-Vous pouvez effectuer des calculs avec des entiers trop grandes pour le type d’entier 64 bits à l’aide de la [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) type. `bigint` n’est pas considéré comme un type de base ; Il est l’abréviation de `System.Numerics.BigInteger`.
+> [!NOTE]
+> Vous pouvez effectuer des calculs avec des entiers trop grandes pour le type d’entier 64 bits à l’aide de la [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) type. `bigint` n’est pas considéré comme un type de base ; Il est l’abréviation de `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>Voir aussi
 

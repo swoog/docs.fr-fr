@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296449"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151307"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Passage des arguments par position et par nom (Visual Basic)
 Lorsque vous appelez un `Sub` ou `Function` procédure, vous pouvez passer des arguments *par position* , dans l’ordre dans lequel ils apparaissent dans la définition de la procédure, ou vous pouvez les transmettre *par nom*, sans vu les positionner.  
@@ -64,7 +64,7 @@ Vous pouvez fournir des arguments par position et par nom dans un seul appel de 
   
  Dans l’exemple précédent, aucune virgule supplémentaire n’est nécessaire pour contenir le lieu du omis `age` argument, étant donné que `birth` est passé par nom.  
   
-Dans les versions de Visual Basic avant la version 15.5, lorsque vous fournissez des arguments par un mélange de position et le nom, les arguments positionnels doivent tous figurer en premier. Une fois que vous fournissez un argument par nom, tous les autres arguments doivent tous être passés par nom.  Par exemple, l’appel suivant à la `Display` méthode affiche l’erreur du compilateur [BC30241 : argument nommé attendu](../../../misc/bc30241.md).
+Dans les versions de Visual Basic avant la version 15.5, lorsque vous fournissez des arguments par un mélange de position et le nom, les arguments positionnels doivent tous figurer en premier. Une fois que vous fournissez un argument par nom, tous les autres arguments doivent tous être passés par nom.  Par exemple, l’appel suivant à la `Display` méthode affiche l’erreur du compilateur [BC30241 : Argument nommé attendu](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ Vous ne pouvez pas passer un tableau de paramètres par nom. Il s’agit, car lo
 ## <a name="see-also"></a>Voir aussi  
  [Procédures](./index.md)  
  [Paramètres et arguments d’une procédure](./procedure-parameters-and-arguments.md)  
- [Guide pratique : passer des arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)  
+ [Comment : Passer des Arguments à une procédure](./how-to-pass-arguments-to-a-procedure.md)  
  [Passage d’un argument par valeur et par référence](./passing-arguments-by-value-and-by-reference.md)  
  [Paramètres facultatifs](./optional-parameters.md)  
  [tableaux de paramètres](./parameter-arrays.md)  

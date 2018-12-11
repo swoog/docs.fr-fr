@@ -4,12 +4,12 @@ description: Azure Logic Apps permettent de créer des workflows évolutifs auto
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 019539f0da1d38259870907c38ed0eb6a62f1929
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 14670a8459db3b80b8fbe3139c2675321cf9592c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369947"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147945"
 ---
 # <a name="azure-logic-apps"></a>Azure Logic Apps
 
@@ -34,5 +34,5 @@ Le tableau de bord des applications logiques affiche l’historique de l’exéc
 Pour plus d’informations, consultez [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps).
 
 >[!div class="step-by-step"]
-[Précédent](application-insights.md)
-[Suivant](event-grid.md)
+>[Précédent](application-insights.md)
+>[Suivant](event-grid.md)

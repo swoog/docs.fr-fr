@@ -1,19 +1,19 @@
 ---
-title: À l’aide des commandes Windows PowerShell dans un fichier DockerFile pour configurer les conteneurs Windows (Docker standard en fonction)
+title: À l’aide des commandes Windows PowerShell dans un fichier DockerFile pour configurer des conteneurs Windows (Docker standard en fonction)
 description: Cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: d68378a12a16dd4072b381f00241e781b40c3e16
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e85beea0efbee6a2b6594e3a49d705505a36e1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105548"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149391"
 ---
-# <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>À l’aide des commandes Windows PowerShell dans un fichier DockerFile pour configurer les conteneurs Windows (Docker standard en fonction)
+# <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>À l’aide des commandes Windows PowerShell dans un fichier DockerFile pour configurer des conteneurs Windows (Docker standard en fonction)
 
-Avec [les conteneurs Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), vous pouvez convertir vos applications Windows pour les images Docker et les déployer avec les mêmes outils que le reste de l’écosystème Docker.
+Avec [les conteneurs Windows](/virtualization/windowscontainers/about/index), vous pouvez convertir vos applications Windows existantes pour les images Docker et les déployer avec les mêmes outils que le reste de l’écosystème Docker.
 
 Pour utiliser les conteneurs Windows, vous devez simplement écrire des commandes Windows PowerShell dans le fichier DockerFile, comme illustré dans l’exemple suivant :
 
@@ -24,14 +24,14 @@ RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]
 ```
 
-Dans ce cas, nous utilisons Windows PowerShell pour installer une image de base Windows Server Core, ainsi qu’IIS.
+Dans ce cas, nous utilisons Windows PowerShell pour installer une image de base Windows Server Core, mais aussi IIS.
 
-De la même façon, vous pouvez également utiliser des commandes Windows PowerShell pour configurer des composants supplémentaires comme ASP.NET traditionnel 4.x et .NET 4.6 ou tout autre logiciel Windows, comme indiqué ici :
+De la même façon, vous pouvez également utiliser des commandes Windows PowerShell pour configurer des composants supplémentaires comme ASP.NET traditionnel 4.x et .NET 4.6 ou tout autre logiciel Windows, comme illustré ici :
 
 ```
 RUN powershell add-windowsfeature web-asp-net45
 ```
 
 >[!div class="step-by-step"]
-[Précédent](visual-studio-tools-for-docker.md)
-[Suivant](../docker-devops-workflow/index.md)
+>[Précédent](visual-studio-tools-for-docker.md)
+>[Suivant](../docker-devops-workflow/index.md)

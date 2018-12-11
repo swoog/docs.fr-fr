@@ -1,24 +1,24 @@
 ---
 title: Littéraux (F#)
-description: En savoir plus sur les types de littéraux dans le langage de programmation F#.
+description: En savoir plus sur les types de littéraux dans le F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: e6d34acd928edce8447c793105b08085ab0757b9
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7a531cd63c5a4dc1123834d481fc998216b0d82d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44087623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131337"
 ---
 # <a name="literals"></a>Littéraux
 
 > [!NOTE]
-Les liens de référence des API dans cet article vous dirigera vers MSDN (pour l’instant).
+> Les liens de référence des API dans cet article vous dirigera vers MSDN (pour l’instant).
 
-Cette rubrique fournit une table qui montre comment spécifier le type d’un littéral en F#.
+Cette rubrique fournit une table qui montre comment spécifier le type d’un littéral dans F#.
 
 ## <a name="literal-types"></a>Types de littéral
 
-Le tableau suivant présente les types de littéraux en F#. Les caractères qui représentent des chiffres en notation hexadécimale ne sont pas la casse ; les caractères qui identifient le type respectent la casse.
+Le tableau suivant présente les types de littéraux dans F#. Les caractères qui représentent des chiffres en notation hexadécimale ne sont pas la casse ; les caractères qui identifient le type respectent la casse.
 
 |Type|Description|Suffixe ou préfixe|Exemples|
 |----|-----------|----------------|--------|
@@ -47,20 +47,20 @@ Le tableau suivant présente les types de littéraux en F#. Les caractères qui 
 
 Chaînes Unicode peuvent contenir des encodages explicites que vous pouvez spécifier à l’aide de `\u` suivi d’un code hexadécimal 16 bits ou les encodages UTF-32 que vous pouvez spécifier à l’aide de `\U` suivie d’un code hexadécimal 32 bits qui représente un Unicode paire de substitution.
 
-Avec F# 3,1, vous pouvez utiliser le `+` vous connecter pour combiner des littéraux de chaîne. Vous pouvez également utiliser l’opérateur de bits ou (`|||`) opérateur pour combiner les indicateurs d’énumération. Par exemple, le code suivant est autorisé dans F# 3.1 :
+En tant que de F# 3.1, vous pouvez utiliser la `+` vous connecter pour combiner des littéraux de chaîne. Vous pouvez également utiliser l’opérateur de bits ou (`|||`) opérateur pour combiner les indicateurs d’énumération. Par exemple, le code suivant est autorisé dans F# 3.1 :
 
 ```fsharp
 [<Literal>]
-let Literal1 = "a" + "b"
+let literal1 = "a" + "b"
 
 [<Literal>]
-let FileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let fileLocation =   __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let Literal2 = 1 ||| 64
+let literal2 = 1 ||| 64
 
 [<Literal>]
-let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
+let literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
 L’utilisation d’autres opérateurs au niveau du bit n’est pas autorisée.
@@ -82,14 +82,14 @@ let Numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>Traits de soulignement dans les littéraux numériques
 
-À partir de F# 4.1, vous pouvez séparer les chiffres par le caractère de soulignement (`_`).
+En commençant par F# 4.1, vous pouvez séparer les chiffres par le caractère de soulignement (`_`).
 
 ```fsharp
-let DeadBeef = 0xDEAD_BEEF
+let value = 0xDEAD_BEEF
 
-let DeadBeefAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
+let valueAsBits = 0b1101_1110_1010_1101_1011_1110_1110_1111
 
-let ExampleSSN = 123_456_7890
+let exampleSSN = 123_456_7890
 ```
 
 ## <a name="see-also"></a>Voir aussi

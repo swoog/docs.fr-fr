@@ -3,11 +3,11 @@ title: Exemple Discovery Security
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 ms.openlocfilehash: 09b7bad2e0b6b68a00d5ad2ed18e6ec831b04416
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50041204"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129348"
 ---
 # <a name="discovery-security-sample"></a>Exemple Discovery Security
 La spécification Discovery n'exige pas que les points de terminaison participant au processus de découverte soient sécurisés. L'ajout de la sécurité aux messages de découverte atténue divers types d'attaques (altération de messages, déni de service, relecture, usurpation). Cet exemple implémente des canaux personnalisés qui calculent et vérifient des signatures de message utilisant le format de signature compact (décrit dans la section 8.2 de la spécification WS-Discovery). L’exemple prend en charge la [spécification Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) et [version 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -47,13 +47,13 @@ La spécification Discovery n'exige pas que les points de terminaison participan
 ## <a name="sample-details"></a>Détails de l'exemple  
  L'exemple comporte une bibliothèque et 4 applications console :  
   
--   **DiscoverySecurityChannels**: une bibliothèque qui expose la liaison sécurisée. Cette bibliothèque calcule et vérifie la signature compacte des messages sortants/entrants.  
+-   **DiscoverySecurityChannels**: Une bibliothèque qui expose la liaison sécurisée. Cette bibliothèque calcule et vérifie la signature compacte des messages sortants/entrants.  
   
--   **Service**: un service d’exposer le contrat ICalculatorService, auto-hébergé. Ce service est marqué comme étant détectable. L'utilisateur spécifie les informations du certificat utilisé pour signer des messages en spécifiant l'emplacement et le nom du magasin, ainsi que le nom du sujet ou autre identificateur unique pour le certificat, et le magasin où se trouvent les certificats clients (certificats utilisés pour vérifier la signature des messages entrants). Sur la base de ces informations, un UdpDiscoveryEndpoint avec sécurité accrue est généré et utilisé.  
+-   **Service**: Service exposant le contrat ICalculatorService, auto-hébergé. Ce service est marqué comme étant détectable. L'utilisateur spécifie les informations du certificat utilisé pour signer des messages en spécifiant l'emplacement et le nom du magasin, ainsi que le nom du sujet ou autre identificateur unique pour le certificat, et le magasin où se trouvent les certificats clients (certificats utilisés pour vérifier la signature des messages entrants). Sur la base de ces informations, un UdpDiscoveryEndpoint avec sécurité accrue est généré et utilisé.  
   
--   **Client**: cette classe tente de découvrir un ICalculatorService et appeler des méthodes sur le service. Là encore, un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> avec sécurité accrue est généré et utilisé pour signer et vérifier les messages.  
+-   **Client**: Cette classe tente de découvrir un ICalculatorService et appeler des méthodes sur le service. Là encore, un <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> avec sécurité accrue est généré et utilisé pour signer et vérifier les messages.  
   
--   **AnnouncementListener**: un service auto-hébergé qui écoute les annonces en ligne et hors connexion et utilise le point de terminaison d’annonce sécurisé.  
+-   **AnnouncementListener**: Un service auto-hébergé qui écoute les annonces en ligne et hors connexion et utilise le point de terminaison d’annonce sécurisé.  
   
 > [!NOTE]
 >  Si Setup.bat est exécuté plusieurs fois, des certificats sont dupliqués et le gestionnaire de certificats vous invite à choisir le certificat à ajouter. Dans ce cas, Setup.bat doit être abandonné et Cleanup.bat doit être appelé, car les doublons ont déjà été créés. Cleanup.bat vous invite également à choisir le certificat à supprimer. Sélectionnez un certificat dans la liste et continuez à exécuter Cleanup.bat jusqu'à ce qu'il ne reste aucun certificat.  
