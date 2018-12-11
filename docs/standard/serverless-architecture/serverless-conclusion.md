@@ -4,12 +4,12 @@ description: Sans serveur offre de nombreux avantages et présente ses propres d
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 055facf7ef46c18f8cda518da9a9f3e114dec1a2
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369696"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128841"
 ---
 # <a name="conclusion"></a>Conclusion
 
@@ -30,4 +30,4 @@ Les points clés suivants sont les conclusions plus importantes à partir de ce 
 **Sans serveur en tant qu’outil, pas dans la boîte à outils.** Sans serveur n’est pas la solution exclusive à l’architecture de l’application. C’est un outil qui peut être exploité dans le cadre d’une application hybride qui peut contenir des niveaux traditionnelles, MONOLITHE back-ends et conteneurs. Sans serveur peut être utilisée pour améliorer les solutions existantes et n’est pas une approche de type tout ou rien au développement d’applications.
 
 >[!div class="step-by-step"]
-[Précédent](serverless-business-scenarios.md)
+>[Précédent](serverless-business-scenarios.md)

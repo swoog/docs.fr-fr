@@ -1,18 +1,17 @@
 ---
-title: méthodes d’extension.
-ms.date: 03/30/2017
+title: Méthodes d’extension
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 6fedd41e901035290995d7ece1b5aa23e76f345e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396914"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148290"
 ---
-# <a name="extension-methods"></a>méthodes d’extension.
+# <a name="extension-methods"></a>Méthodes d’extension
 Méthodes d’extension sont une fonctionnalité de langage qui permet des méthodes statiques pour être appelée à l’aide de la syntaxe de méthode d’appel d’instance. Ces méthodes doivent disposer d’au moins un paramètre, qui représente l’instance de que la méthode consiste à utiliser.  
   
  La classe qui définit des méthodes d’extension correspond à la classe « parrain », et elle doit être déclarée comme statique. Pour utiliser les méthodes d’extension, un doit importer l’espace de noms définition de la classe de sponsor.  
@@ -45,7 +44,7 @@ Méthodes d’extension sont une fonctionnalité de langage qui permet des méth
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson éducation, Inc. à partir de [instructions de conception Framework : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi
 

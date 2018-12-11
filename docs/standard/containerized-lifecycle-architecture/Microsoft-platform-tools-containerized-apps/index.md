@@ -4,27 +4,27 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: bc13a0c8d6f14b8ea7ea2017009ba074f9a96ab3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: fe65e9036c1e0bdf2afe05426c01e75d48f93439
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580195"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152334"
 ---
-# <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Présentation de la plateforme et des outils Microsoft pour les applications en conteneur
+# <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Introduction à la plate-forme Microsoft et les outils pour les applications en conteneur
 
 
 La figure 3-1 illustre les principaux piliers du cycle de vie des applications Docker, classés selon le type de travail fourni par plusieurs équipes (développement d’applications, processus d’infrastructure DevOps, gestion et opérations informatiques). Dans l’entreprise, les profils du « persona » en charge de chaque zone sont généralement différents. Ses compétences varient aussi.
 
 ![](./media/image1.png)
 
-Figure 3-1 : Principaux piliers du cycle de vie des applications Docker en conteneur avec la plateforme et les outils Microsoft
+Figure 3-1 : Principaux piliers du cycle de vie pour les applications Docker en conteneur avec la plate-forme Microsoft et outils
 
 Un workflow de cycle de vie Docker en conteneur peut être initialement normalisé selon les « choix des produits par défaut », ce qui facilite et accélère le démarrage des développeurs. Toutefois, sous le capot, l’existence d’une infrastructure ouverte est fondamentale pour garantir un workflow flexible capable de s’adapter aux différents contextes de chaque organisation ou entreprise. L’infrastructure de workflow (composants et produits) doit être suffisamment flexible pour prendre en charge le futur environnement de chaque entreprise. Elle doit notamment permettre le remplacement de produits de développement ou DevOps par d’autres. Ces caractéristiques, à savoir la flexibilité, l’ouverture et le vaste choix de technologies d’infrastructure et de plateforme, sont précisément les priorités de Microsoft pour les applications Docker en conteneur, comme l’expliquent les chapitres qui suivent.
 
 Comme le montre le tableau 3-1, l’intention de Microsoft DevOps pour les applications Docker en conteneur est de fournir un workflow DevOps ouvert qui permet de choisir les produits à utiliser pour chaque phase (Microsoft ou tiers) tout en bénéficiant d’un workflow simplifié avec des « produits par défaut » déjà connectés. Vous pouvez donc vous lancer rapidement dans votre workflow DevOps au niveau de l’entreprise pour les applications Docker.
 
-Tableau 3-1 : Workflow DevOps ouvert à n’importe quelle technologie
+Tableau 3-1 : Workflow DevOps ouvert à n’importe quelle technologie
 
 | Hôte | Technologies Microsoft | Technologies tierces, enfichables dans Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
@@ -34,7 +34,7 @@ Tableau 3-1 : Workflow DevOps ouvert à n’importe quelle technologie
 
 La plateforme et les outils Microsoft pour les applications Docker en conteneur, tels que définis dans le tableau 3-1, comprennent les composants suivants :
 
--   **Plateforme pour le développement d’applications Docker** Développement d’un service ou d’une collection de services constituant une « application ». La plateforme de développement permet aux développeurs d’effectuer tout le travail nécessaire avant d’envoyer (push) leur code dans un dépôt de code partagé. Le processus de développement de services déployés comme conteneurs est très similaire à celui d’applications ou de services sans Docker. Vous pouvez continuer d’utiliser votre langage par défaut (.NET, Node.js, Go, etc.) et votre éditeur ou IDE préféré comme Visual Studio ou Visual Studio Code. Toutefois, plutôt que de considérer Docker comme destination du déploiement, vous développez vos services dans l’environnement Docker. Vous générez, exécutez, testez et déboguez votre code dans des conteneurs au niveau local, et vous indiquez l’environnement de destination au moment du développement. L’environnement de destination étant fourni au niveau local, les conteneurs Docker mettent en place ce qu’il faut pour améliorer considérablement votre cycle de vie DevOps. Visual Studio et Visual Studio Code offrent des extensions permettant d’intégrer les conteneurs Docker à votre processus de développement.
+-   **Plateforme pour le développement d’applications Docker** Développement d’un service ou d’une collection de services constituant une « application ». La plateforme de développement permet aux développeurs d’effectuer tout le travail nécessaire avant d’envoyer (push) leur code dans un dépôt de code partagé. Le processus de développement de services déployés comme conteneurs est très similaire à celui d’applications ou de services sans Docker. Vous continuez à utiliser votre langage préféré (.NET, Node.js, Go, etc.) et un éditeur favori ou un IDE comme Visual Studio ou Visual Studio Code. Toutefois, plutôt que de considérer Docker comme destination du déploiement, vous développez vos services dans l’environnement Docker. Vous générez, exécutez, testez et déboguez votre code dans des conteneurs au niveau local, et vous indiquez l’environnement de destination au moment du développement. L’environnement de destination étant fourni au niveau local, les conteneurs Docker mettent en place ce qu’il faut pour améliorer considérablement votre cycle de vie DevOps. Visual Studio et Visual Studio Code offrent des extensions permettant d’intégrer les conteneurs Docker à votre processus de développement.
 
 -   **DevOps pour les applications Docker** développeurs créent des applications Docker peuvent utiliser les Services Azure DevOps ou tout autre produit tiers, tels que Jenkins, générer une gamme complète de gestion de cycle de vie des applications (ALM) l’automatisation.
 
@@ -59,5 +59,5 @@ Avec Azure DevOps Services, les développeurs peuvent créer axée sur le conten
 Microsoft offre donc une base complète pour un cycle de vie d’application Docker en conteneur de bout en bout. Toutefois, il s’agit d’une *collection de produits et de technologies qui vous permettent de sélectionner et d’intégrer des outils et processus existants*. La flexibilité d’une approche large et la profondeur des fonctionnalités offertes confèrent à Microsoft un positionnement avantageux dans le domaine du développement d’applications Docker en conteneur.
 
 >[!div class="step-by-step"]
-[Précédent](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
-[Suivant](../design-develop-containerized-apps/index.md)
+>[Précédent](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+>[Suivant](../design-develop-containerized-apps/index.md)

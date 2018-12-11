@@ -5,16 +5,16 @@ ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199706"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152524"
 ---
 # <a name="net-native-and-compilation"></a>Compilation et .NET natif
 Les applications Windows 8.1 et les applications de bureau Windows qui ciblent le .NET Framework sont écrites dans un langage de programmation particulier et compilées dans un langage intermédiaire. Lors de l'exécution, un compilateur juste-à-temps (JIT) est chargé de compiler du langage intermédiaire en code natif pour l'ordinateur local, juste avant qu'une méthode ne soit exécutée pour la première fois. À l'inverse, la chaîne d'outils .NET Native convertit le code source en code natif au moment de la compilation. Cette rubrique compare .NET Native avec d'autres technologies de compilation disponibles pour les applications .NET Framework. Elle explique également de façon pratique comment .NET Native génère le code natif qui peut vous aider à comprendre pourquoi les exceptions qui se produisent dans le code compilé avec .NET Native ne se produisent pas dans le code compilé par le compilateur JIT.  
   
-## <a name="net-native-generating-native-binaries"></a>.NET Native : générer des binaires natifs  
+## <a name="net-native-generating-native-binaries"></a>.NET native : Générer des binaires natifs  
  Une application qui cible .NET Framework et qui n'est pas compilée à l'aide de la chaîne d'outils .NET Native se compose de votre assembly d'application, qui comprend les éléments suivants :  
   
 -   Des [métadonnées](../../../docs/standard/metadata-and-self-describing-components.md) qui décrivent l’assembly, ses dépendances, les types qu’il contient et leurs membres. Les métadonnées sont utilisées pour la réflexion et l'accès à liaison tardive et dans certains cas, par le compilateur et les outils de génération.  

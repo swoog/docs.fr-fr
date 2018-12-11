@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: d3c59b667c05be083e44de8cc3e7e44d50fefc71
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43516789"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155351"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Récupérer des données à l’aide d’un DataReader
 Pour récupérer des données à l’aide un **DataReader**, créez une instance de la **commande** de l’objet, puis créez un **DataReader** en appelant **Command.ExecuteReader**  pour extraire des lignes à partir d’une source de données. Le **DataReader** fournit un flux sans tampon de données qui permet la logique procédurale de traiter efficacement les résultats à partir d’une source de données de manière séquentielle. Le **DataReader** constitue un bon choix lorsque vous récupérez les grandes quantités de données, car les données ne sont pas mis en cache en mémoire.
@@ -144,7 +144,7 @@ using (OleDbConnection connection = new OleDbConnection(
   
  Considérez, par exemple, le package et le corps de package Oracle suivants.  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
   TYPE T_CURSOR IS REF CURSOR;   
   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   

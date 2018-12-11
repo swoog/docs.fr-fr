@@ -1,6 +1,6 @@
 ---
 title: Conventions générales d'affectation de noms
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -14,14 +14,13 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cd3defd969b5f26fb95e7feca9c3d533e67272b1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 9febc7eed7d6dedad6655b51a96694b72b78711b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209498"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147279"
 ---
 # <a name="general-naming-conventions"></a>Conventions générales d'affectation de noms
 Cette section décrit les conventions générales de nommage qui se rapportent au choix de word, les instructions sur l’utilisation d’abréviations et acronymes et des recommandations sur la façon d’éviter d’utiliser des noms spécifiques au langage.  
@@ -97,7 +96,7 @@ Cette section décrit les conventions générales de nommage qui se rapportent a
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson éducation, Inc. à partir de [instructions de conception Framework : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un service de jeton de sécurité'
+title: 'Procédure : Créer un Service de jeton de sécurité'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036500"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143907"
 ---
-# <a name="how-to-create-a-security-token-service"></a>Comment : créer un service de jeton de sécurité
+# <a name="how-to-create-a-security-token-service"></a>Procédure : Créer un Service de jeton de sécurité
 Un service de jeton de sécurité implémente le protocole défini dans la spécification WS-Trust. Ce protocole définit des formats de message et des modèles d'échange de message pour émettre, renouveler, annuler et valider des jetons de sécurité. Un service de jeton de sécurité donné fournit une ou plusieurs de ces fonctions. Cette rubrique examine le scénario le plus courant : l'implémentation de l'émission de jeton.  
   
 ## <a name="issuing-tokens"></a>Émission de jetons  

@@ -3,11 +3,11 @@ title: Expressions de requête (F#)
 description: En savoir plus sur la prise en charge des expression de requête de LINQ dans le F# langage de programmation.
 ms.date: 05/16/2016
 ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297151"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143759"
 ---
 # <a name="query-expressions"></a>Expressions de requête
 

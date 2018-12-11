@@ -3,11 +3,11 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170222"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127080"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
 Informations du domaine d'application  
@@ -41,84 +41,84 @@ class AppDomainInfo
 ### <a name="appdomainid"></a>AppDomainId  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  ID de l'appdomain.  
   
 ### <a name="isdefault"></a>IsDefault  
  Type de données : booléen  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Indique si l'appdomain est l'appdomain par défaut.  
   
 ### <a name="logmalformedmessages"></a>LogMalformedMessages  
  Type de données : booléen  
   
- Type d'accès : lecture/écriture  
+ Type d’accès : En lecture/écriture  
   
  Valeur qui spécifie si les messages incorrects sont enregistrés.  
   
 ### <a name="logmessagesatservicelevel"></a>LogMessagesAtServiceLevel  
  Type de données : booléen  
   
- Type d'accès : lecture/écriture  
+ Type d’accès : En lecture/écriture  
   
  Valeur qui spécifie si les messages sont suivis au niveau du service (avant les transformations associées au chiffrement et au transport).  
   
 ### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  Type de données : booléen  
   
- Type d'accès : lecture/écriture  
+ Type d’accès : En lecture/écriture  
   
  Valeur qui spécifie si les messages sont suivis au niveau du transport.  
   
 ### <a name="messageloggingtracelisteners"></a>MessageLoggingTraceListeners  
- Type de données : tableau TraceListener  
+ Type de données : Tableau TraceListener  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Écouteurs de suivi de la collection qui écoutent la source de suivi System.Wmi.MessageLogging.  
   
 ### <a name="name"></a>Name  
  Type de données : chaîne  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Nom de l'appdomain.  
   
 ### <a name="performancecounters"></a>PerformanceCounters  
  Type de données : chaîne  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Portée de compteurs de performance actifs dans l'appdomain.  
   
 ### <a name="processid"></a>ProcessId  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  ID de processus.  
   
 ### <a name="serviceconfigpath"></a>ServiceConfigPath  
  Type de données : chaîne  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Chemin d’accès à la configuration du service.  
   
 ### <a name="tracelevel"></a>TraceLevel  
  Type de données : chaîne  
   
- Type d'accès : lecture/écriture  
+ Type d’accès : En lecture/écriture  
   
  Niveau de suivi de la source de suivi System.Wmi.  
   
 ### <a name="servicemodeltracelisteners"></a>ServiceModelTraceListeners  
- Type de données : tableau TraceListener  
+ Type de données : Tableau TraceListener  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Collection d’écouteurs de la source de suivi System.ServiceModel.  
   

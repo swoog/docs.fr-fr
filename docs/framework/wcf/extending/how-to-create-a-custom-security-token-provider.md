@@ -1,5 +1,5 @@
 ---
-title: 'Comment : créer un fournisseur de jetons de sécurité personnalisé'
+title: 'Procédure : Créer un fournisseur de jetons de sécurité personnalisé'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
 ms.openlocfilehash: 88200b41346a18732647602fb16774610014330c
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131064"
 ---
-# <a name="how-to-create-a-custom-security-token-provider"></a>Comment : créer un fournisseur de jetons de sécurité personnalisé
+# <a name="how-to-create-a-custom-security-token-provider"></a>Procédure : Créer un fournisseur de jetons de sécurité personnalisé
 Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un fournisseur de jetons de sécurité personnalisé et comment intégrer le fournisseur à un gestionnaire de jetons de sécurité personnalisé.  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un 
   
  Le fournisseur de jetons de sécurité crée une représentation de jeton de sécurité en fonction des informations d'identification du client ou du service. Pour utiliser le fournisseur de jetons de sécurité personnalisées dans la sécurité de Windows Communication Foundation (WCF), vous devez créer des informations d’identification personnalisées et des implémentations de gestionnaire de jetons de sécurité.  
   
- Pour plus d’informations sur les informations d’identification personnalisées et le Gestionnaire de jetons de sécurité, consultez le [procédure pas à pas : création d’un Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+ Pour plus d’informations sur les informations d’identification personnalisées et le Gestionnaire de jetons de sécurité, consultez le [procédure pas à pas : Création du Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
  Pour plus d’informations sur les informations d’identification, jeton manager provider et authenticator classes de sécurité, consultez le [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
@@ -41,7 +41,7 @@ Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un 
   
 2.  Substituez la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> si elle ne l'est pas déjà.  
   
-     Le <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> méthode est chargée de retourner une instance de la <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe appropriée pour le <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> paramètre passé à la méthode par l’infrastructure de sécurité WCF. Modifiez la méthode pour retourner l'implémentation du fournisseur de jetons de sécurité personnalisé (créée dans la procédure précédente) lorsque la méthode est appelée avec un paramètre de jeton de sécurité approprié. Pour plus d’informations sur le Gestionnaire de jetons de sécurité, consultez le [procédure pas à pas : création d’un Client personnalisé et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
+     Le <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> méthode est chargée de retourner une instance de la <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe appropriée pour le <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> paramètre passé à la méthode par l’infrastructure de sécurité WCF. Modifiez la méthode pour retourner l'implémentation du fournisseur de jetons de sécurité personnalisé (créée dans la procédure précédente) lorsque la méthode est appelée avec un paramètre de jeton de sécurité approprié. Pour plus d’informations sur le Gestionnaire de jetons de sécurité, consultez le [procédure pas à pas : Création du Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md).  
   
 3.  Ajoutez une logique personnalisée à la méthode pour lui permettre de retourner votre fournisseur de jetons de sécurité personnalisé en fonction du paramètre <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>. L'exemple suivant retourne le fournisseur de jetons de sécurité personnalisé si les exigences de jeton sont satisfaites. Ces exigences incluent un jeton de sécurité X.509 et la direction des messages (le jeton est utilisé pour la sortie de message). Dans tous les autres cas, le code appelle la classe de base pour conserver le comportement fourni par le système pour les autres exigences de jeton de sécurité.  
   
@@ -59,6 +59,6 @@ Cette rubrique montre comment créer de nouveaux types de jetons à l'aide d'un 
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.IdentityModel.Tokens.X509SecurityToken>  
- [Procédure pas à pas : création d’informations d’identification de client et de service personnalisées](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Guide pratique pour créer un authentificateur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+ [Procédure pas à pas : Création du Client personnalisés et les informations d’identification de Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [Comment : Créer un authentificateur de jeton de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
  [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

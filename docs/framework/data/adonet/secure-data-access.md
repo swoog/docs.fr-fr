@@ -2,12 +2,12 @@
 title: Sécuriser l'accès aux données
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d7964a084c1d5936b034d76b8c6e46053e8dcb0a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185938"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129192"
 ---
 # <a name="secure-data-access"></a>Sécuriser l'accès aux données
 Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes de sécurité disponibles dans la base de données ou le magasin de données sous-jacent. Vous devez également prendre en compte les implications relatives à la sécurité des autres fonctionnalités ou composants que votre application peut contenir.  
@@ -66,11 +66,8 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
 |Ressource|Description|  
 |--------------|-----------------|  
 |[Considérations sur la sécurité et des conseils pour Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Décrit des techniques de sécurité pour Access 2007, telles que le chiffrement des fichiers, l'administration des mots de passe, la conversion des bases de données vers les nouveaux formats ACCDB et ACCDE, ainsi que l'utilisation d'autres options de sécurité.|  
-|[Protéger une base de données avec les sécurité au niveau utilisateur (MDB)](https://go.microsoft.com/fwlink/?LinkId=47697)|S'applique à Access 2003. Fournit des instructions permettant d'implémenter une sécurité au niveau utilisateur afin de protéger les données dans Access 2003.|  
 |[Présentation du rôle des fichiers d’Information de groupe de travail dans la sécurité Access](https://support.microsoft.com/kb/305542)|Explique le rôle et la relation du fichier d'informations de groupe de travail dans la sécurité Access 2003.|  
 |[Forum aux Questions sur Microsoft sécurité Access pour Microsoft Access versions 2.0 à 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Version téléchargeable du Forum aux questions sur la sécurité de Microsoft Access.|  
-|[Résoudre les problèmes de sécurité et Protection](https://go.microsoft.com/fwlink/?LinkId=47703)|Présente des solutions aux problèmes courants de sécurité dans Excel 2003.|  
-  
 ## <a name="enterprise-services"></a>Enterprise Services  
  COM + contient son propre modèle de sécurité qui s'appuie sur les comptes Windows NT et l'emprunt d'identité de processus/thread. L'espace de noms <xref:System.EnterpriseServices> fournit des wrappers qui permettent aux applications .NET d'intégrer du code managé avec des services de sécurité COM+ à l'aide de la classe <xref:System.EnterpriseServices.ServicedComponent>.  
   
@@ -87,9 +84,9 @@ Pour écrire un code ADO.NET sécurisé, vous devez comprendre les mécanismes d
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Interopération avec du code non managé](../../../../docs/framework/interop/index.md)|Contient des rubriques qui décrivent comment exposer les composants COM au .NET Framework et comment exposer les composants .NET Framework à COM.|  
-|[Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|Contient des sujets avancés tels que les assemblys PIA (Primary Interop Assembly), les threads et le marshaling personnalisé.|  
-  
+|[Interopération avec du code non managé](../../../../docs/framework/interop/index.md)|Contient des rubriques qui décrivent comment exposer les composants COM au .NET Framework et comment exposer les composants .NET Framework à COM.|
+|[Interopérabilité COM avancée](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contient des sujets avancés tels que les assemblys PIA (Primary Interop Assembly), les threads et le marshaling personnalisé.|
+
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Sécurité SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  

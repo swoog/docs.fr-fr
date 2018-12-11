@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562279"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148910"
 ---
 # <a name="listview-overview"></a>Vue d'ensemble de ListView
 Le <xref:System.Windows.Controls.ListView> contrôle fournit l’infrastructure pour afficher un ensemble d’éléments de données dans différentes dispositions ou différents affichages. Par exemple, un utilisateur peut souhaiter afficher des éléments de données dans un tableau et en trier les colonnes.  
@@ -75,13 +75,11 @@ Le <xref:System.Windows.Controls.ListView> contrôle fournit l’infrastructure 
 ## <a name="sharing-the-same-view-mode"></a>Partage du mode d’affichage  
  Deux <xref:System.Windows.Controls.ListView> contrôles ne peuvent pas partager le même mode d’affichage en même temps. Si vous essayez d’utiliser le même mode d’affichage avec plusieurs <xref:System.Windows.Controls.ListView> contrôler, une exception se produit.  
   
- Pour spécifier un mode d’affichage qui peut être utilisé simultanément par plusieurs <xref:System.Windows.Controls.ListView>, utilisez des modèles ou des styles. Pour obtenir un exemple montrant comment définir des vues en tant que <xref:System.Windows.FrameworkElement.Resources%2A>, consultez [ListView avec plusieurs vues, exemple](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Pour spécifier un mode d’affichage qui peut être utilisé simultanément par plusieurs <xref:System.Windows.Controls.ListView>, utilisez des modèles ou des styles.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Créer un mode d’affichage personnalisé  
- Affichages personnalisés tels que <xref:System.Windows.Controls.GridView> sont dérivés de la <xref:System.Windows.Controls.ViewBase> classe, qui fournit les outils pour afficher les éléments de données qui sont représentées sous forme abstraite <xref:System.Windows.Controls.ListViewItem> objets.  
-  
- Pour obtenir un exemple de mode d’affichage personnalisé, consultez [ListView with Multiple Views Sample](https://go.microsoft.com/fwlink/?LinkID=160013) (Exemple de contrôle ListView avec plusieurs affichages).  
+ Affichages personnalisés tels que <xref:System.Windows.Controls.GridView> sont dérivés de la <xref:System.Windows.Controls.ViewBase> classe, qui fournit les outils pour afficher les éléments de données qui sont représentées sous forme abstraite <xref:System.Windows.Controls.ListViewItem> objets.    
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.Controls.GridView>  

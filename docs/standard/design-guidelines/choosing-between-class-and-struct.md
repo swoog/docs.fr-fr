@@ -1,6 +1,6 @@
 ---
 title: Choix entre classe et structure
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+author: KrzysztofCwalina
+ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50757424"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131324"
 ---
 # <a name="choosing-between-class-and-struct"></a>Choix entre classe et structure
 Une des décisions de conception de base auxquelles est confronté chaque concepteur de framework est de concevoir un type sous forme de classe (type référence) ou sous forme de struct (type valeur). Il est nécessaire de bien comprendre les différences de comportement entre les types référence et les types valeur pour faire ce choix.  
@@ -52,7 +51,7 @@ Une des décisions de conception de base auxquelles est confronté chaque concep
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson éducation, Inc. à partir de [instructions de conception Framework : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi
 

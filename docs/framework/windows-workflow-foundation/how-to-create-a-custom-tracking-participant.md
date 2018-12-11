@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : créer un participant de suivi personnalisé'
+title: 'Procédure : Créer un Participant de suivi de personnalisés'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: a9a83f64b7ea0de275631d7d3b8d2755671223ce
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0f8d21ca4f08ad4dc2e5f5e62695b9b14aff13d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864480"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53156716"
 ---
-# <a name="how-to-create-a-custom-tracking-participant"></a>Procédure : créer un participant de suivi personnalisé
+# <a name="how-to-create-a-custom-tracking-participant"></a>Procédure : Créer un Participant de suivi de personnalisés
 Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow. L'exécution de workflow émet des enregistrements de suivi qui décrivent les événements de cycle de vie du workflow, les événements de cycle de vie de l'activité, la reprise de signet et les erreurs. Ces enregistrements de suivi sont consommés par les participants de suivi. Windows Workflow Foundation (WF) inclut un participant de suivi standard qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé. Cette étape du didacticiel décrit comment créer un participant de suivi et un modèle de suivi qui capturent la sortie des activités de `WriteLine` afin qu'elles puissent être affichées à l'utilisateur.  
   
 > [!NOTE]
@@ -320,7 +320,7 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a> Pour générer et exécuter l’application  
+###  <a name="BKMK_BuildAndRun"></a> Pour générer et exécuter l'application  
   
 1.  Appuyez sur Ctrl+Maj+B pour générer l'application.  
   
@@ -334,8 +334,9 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
  **Entrez un nombre compris entre 1 et 10**  
 **Votre estimation est trop élevée.**   
 **Entrez un nombre compris entre 1 et 10**    
+
     > [!NOTE]
-    >  Ces informations sont utiles pour déterminer la plage de nombres aléatoires, mais elles ne contiennent aucune information sur les propositions précédemment effectuées. Ces informations figurent dans l’étape suivante, [Comment : hôte de plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
+    >  Ces informations sont utiles pour déterminer la plage de nombres aléatoires, mais elles ne contiennent aucune information sur les propositions précédemment effectuées. Ces informations figurent dans l’étape suivante, [Comment : Héberger plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).  
   
      Notez l'ID d'instance de workflow, et exécutez le jeu jusqu'à son achèvement.  
   
@@ -345,4 +346,4 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
 **Votre estimation est trop élevée.**   
 **Entrez un nombre compris entre 1 et 10**   
 **Votre estimation est trop élevée.**   
-**Entrez un nombre compris entre 1 et 10** en plus de l’absence de propositions de l’utilisateur, ces données de suivi ne contient pas d’informations sur la proposition finale du flux de travail. C'est parce que les informations de suivi contiennent uniquement la sortie `WriteLine` du workflow, et le dernier message qui s'affiche est généré à partir du gestionnaire `Completed` après que le workflow est terminé. Dans l’étape suivante du didacticiel, [Comment : hôte de plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existant `WriteLine` activités sont modifiées pour afficher les propositions de l’utilisateur, ainsi qu’une autre `WriteLine` activité ajoutée Affiche les résultats finaux. Une fois ces modifications sont intégrées, [Comment : hôte de plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) montre comment héberger plusieurs versions d’un flux de travail en même temps.
+**Entrez un nombre compris entre 1 et 10** en plus de l’absence de propositions de l’utilisateur, ces données de suivi ne contient pas d’informations sur la proposition finale du flux de travail. C'est parce que les informations de suivi contiennent uniquement la sortie `WriteLine` du workflow, et le dernier message qui s'affiche est généré à partir du gestionnaire `Completed` après que le workflow est terminé. Dans l’étape suivante du didacticiel, [Comment : Héberger plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md), existant `WriteLine` activités sont modifiées pour afficher les propositions de l’utilisateur, ainsi qu’une autre `WriteLine` activité est ajoutée qui affiche les résultats finaux. Une fois ces modifications sont intégrées, [Comment : Héberger plusieurs Versions d’un Workflow côte à côte](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md) montre comment héberger plusieurs versions d’un flux de travail en même temps.

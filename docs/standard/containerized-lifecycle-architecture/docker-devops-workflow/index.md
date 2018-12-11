@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086591"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128438"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Workflow DevOps pour les applications Docker avec les outils Microsoft
 
@@ -21,7 +21,7 @@ Outils Microsoft peuvent automatiser le pipeline pour les implémentations spéc
 
 Les développeurs et testeurs peuvent provisionner facilement et rapidement des environnements de développement et de test basés sur Docker similaires à des environnements de production au moyen de modèles dans Microsoft Azure.
 
-La difficulté du développement d’applications en conteneur augmente de façon régulière en fonction de la complexité et des besoins en matière de scalabilité de l’entreprise. Les applications basées sur des architectures de microservices constituent un bon exemple. Pour réussir dans un tel environnement, votre projet doit automatiser le cycle de vie dans sa totalité : non seulement la build et le déploiement, mais aussi la gestion des versions et la collecte des données de télémétrie. Azure DevOps Services et Azure offrent les fonctionnalités suivantes :
+La difficulté du développement d’applications en conteneur augmente de façon régulière en fonction de la complexité et des besoins en matière de scalabilité de l’entreprise. Les applications basées sur des architectures de microservices constituent un bon exemple. Pour réussir dans un tel environnement, votre projet doit automatiser le cycle de vie — non seulement la génération et le déploiement, mais aussi la gestion des versions et la collecte de données de télémétrie. Azure DevOps Services et Azure offrent les fonctionnalités suivantes :
 
 -   Azure DevOps Services et Team Foundation Server source code gestion (basée sur Git ou Team Foundation Version Control), planification Agile (Agile, Scrum et CMMI sont pris en charge), élément de configuration, la gestion de version et d’autres outils pour les équipes Agile.
 
@@ -33,7 +33,6 @@ La difficulté du développement d’applications en conteneur augmente de faço
 
 -   Les organisations peuvent facilement provisionner des conteneurs Docker à partir d’images privées stockées dans Azure Container Registry, ainsi que toute dépendance vis-à-vis de composants Azure (Data, PaaS, etc.) à l’aide de modèles Azure Resource Manager accessibles avec des outils familiers.
 
-
 >[!div class="step-by-step"]
-[Précédent](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[Suivant](docker-application-outer-loop-devops-workflow.md)
+>[Précédent](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[Suivant](docker-application-outer-loop-devops-workflow.md)

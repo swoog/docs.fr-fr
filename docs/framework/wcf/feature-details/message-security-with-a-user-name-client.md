@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-author: BrucePerlerMS
-ms.openlocfilehash: e26665b76518e33de266c73600e1da918eb2a51d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 76accbccc1f65bb44b7e710f3f24dc2bae17eeda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203496"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154997"
 ---
 # <a name="message-security-with-a-user-name-client"></a>Sécurité de message avec un client de type Nom d'utilisateur
 L’illustration suivante montre un service Windows Communication Foundation (WCF) et le client sécurisé à l’aide de la sécurité au niveau du message. Le service est authentifié à l'aide d'un certificat X.509. Le client s'authentifie à l'aide d'un nom d'utilisateur et d'un mot de passe.  
@@ -90,13 +89,13 @@ L’illustration suivante montre un service Windows Communication Foundation (WC
 ## <a name="client"></a>Client  
   
 ### <a name="code"></a>Code  
- Le code ci-dessous crée le client. La liaison s'effectue avec la sécurité en mode de message et le type d'informations d'identification client a la valeur `UserName`. Le nom d'utilisateur et le mot de passe peuvent uniquement être spécifiés à l'aide du code (cela n'est pas configurable). Le code permettant de retourner le nom d'utilisateur et le mot de passe n'est pas indiqué dans ce cas car il doit être exécuté au niveau de l'application. Par exemple, utilisez une boîte de dialogue Windows Forms pour demander les données à l'utilisateur.  
+ Le code ci-dessous crée le client. La liaison s’effectue avec la sécurité en mode de message et le type d’informations d’identification client a la valeur `UserName`. Le nom d'utilisateur et le mot de passe peuvent uniquement être spécifiés à l'aide du code (cela n'est pas configurable). Le code permettant de retourner le nom d'utilisateur et le mot de passe n'est pas indiqué dans ce cas car il doit être exécuté au niveau de l'application. Par exemple, utilisez une boîte de dialogue Windows Forms pour demander les données à l'utilisateur.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
 ### <a name="configuration"></a>Configuration  
- Le code ci-dessous configure le client. La liaison s'effectue avec la sécurité en mode de message et le type d'informations d'identification client a la valeur `UserName`. Le nom d'utilisateur et le mot de passe peuvent uniquement être spécifiés à l'aide du code (cela n'est pas configurable).  
+ Le code ci-dessous configure le client. La liaison s’effectue avec la sécurité en mode de message et le type d’informations d’identification client a la valeur `UserName`. Le nom d'utilisateur et le mot de passe peuvent uniquement être spécifiés à l'aide du code (cela n'est pas configurable).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

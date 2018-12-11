@@ -1,120 +1,120 @@
 ---
 title: Migrer vos bases de données relationnelles vers azure
-description: Moderniser des Applications .NET existantes avec Azure Cloud et les conteneurs Windows | migrer vos bases de données relationnelles vers azure
+description: Moderniser des Applications .NET existantes avec le Cloud Azure et les conteneurs Windows | migrer vos bases de données relationnelles vers azure
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: fe1bf5820c2306beb380749b34d5a56964e016e4
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956083"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153759"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrer vos bases de données relationnelles vers azure
 
-Vision : Azure propose la migration de base de données la plus complète.
+Vision : Azure offre la migration la plus complète de la base de données.
 
-Dans Azure, vous pouvez migrer vos serveurs de base de données directement vers les machines virtuelles IaaS de (finesse pure et MAJ), ou vous pouvez migrer vers Azure SQL Database, pour les autres avantages. Base de données SQL Azure offre instance managée et les options de (DBaaS) complète de base de données-as-a-service. La figure 3-1 indique la base de données relationnelle plusieurs chemins de migration disponibles dans Azure.
+Dans Azure, vous pouvez migrer vos serveurs de base de données directement vers les machines virtuelles IaaS (pure lift- and -shift), ou vous pouvez migrer vers Azure SQL Database, des avantages supplémentaires. Base de données SQL Azure offre d’instance gérée et options de complète base de données-as-a-service (DBaaS). Figure 3-1 indique la base de données relationnelle plusieurs chemins de migration disponibles dans Azure.
 
 ![Chemins de migration de base de données dans Azure](./media/image3-1.png)
 
 > **Figure 3-1** : Chemins de migration de base de données dans Azure
 
-## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Quand migrer vers la base de données SQL Azure une Instance gérée
+## <a name="when-to-migrate-to-azure-sql-database-managed-instance"></a>Quand migrer vers Azure SQL Database Managed Instance
 
-Dans la plupart des cas, de base de données SQL Azure une Instance gérée sera la meilleure solution pour prendre en compte lorsque vous migrez vos données vers Azure. Si vous migrez les bases de données SQL Server et que vous avez besoin de presque 100 % assurance que vous ne devez remanier votre application ou d’apporter des modifications à vos données ou le code d’accès aux données, choisissez la fonctionnalité d’une Instance gérée de la base de données SQL Azure.
+Dans la plupart des cas, Azure SQL Database Managed Instance sera votre meilleure option à prendre en compte lorsque vous migrez vos données vers Azure. Si vous migrez les bases de données SQL Server et que vous devez presque les assurance 100 % que vous ne devez remanier votre application ou d’apporter des modifications à vos données ou le code d’accès aux données, choisissez la fonctionnalité de Managed Instance de base de données SQL Azure.
 
-L’Instance gérée de la base de données Azure SQL est la meilleure option si vous avez des exigences supplémentaires pour les fonctionnalités au niveau de l’instance de SQL Server, ou que les conditions d’isolation au-delà des fonctionnalités fournies dans une base de données SQL Azure standard (modèle de base de données unique). Cette dernière n’est pas le choix plus orientée services PaaS, mais il n’offre pas les mêmes fonctionnalités que celui de SQL server traditionnel. La migration peut surface frictions.
+Azure SQL Database Managed Instance est la meilleure option si vous avez des exigences supplémentaires pour les fonctionnalités de niveau d’instance de SQL Server ou aux exigences d’isolation au-delà des fonctionnalités fournies dans une base de données SQL Azure standard (modèle de base de données unique). Cette dernière est le choix plus orientée services PaaS, mais elle n’offre pas les mêmes fonctionnalités que celui de SQL server traditionnel. Migration peut se manifester frictions.
 
-Par exemple, une organisation de nos investissements dans les fonctionnalités de niveau de l’instance SQL Server bénéficient d’une migration vers l’Instance gérée de SQL. Exemples de fonctionnalités de SQL Server au niveau de l’instance incluent SQL intégration common language runtime (CLR), l’Agent SQL Server et interrogation des bases de données croiséesent. Prise en charge de ces fonctionnalités n’est pas disponible dans Azure SQL Database standard (un modèle de base de données unique).
+Par exemple, une organisation qui a investi approfondie dans les fonctionnalités de niveau de l’instance SQL Server bénéficient d’une migration vers SQL Managed Instance. Exemples de fonctionnalités de SQL Server au niveau de l’instance incluent SQL intégration common language runtime (CLR), SQL Server Agent et des bases de données croiséesent interrogation. Prise en charge de ces fonctionnalités n’est pas disponible dans Azure SQL Database standard (un modèle de base de données unique).
 
-Une organisation qui fonctionne dans un secteur de réglementation et qui a besoin garantir l’isolation pour des raisons de sécurité peut également bénéficier de choisir le modèle d’Instance gérée de SQL.
+Une organisation qui fonctionne dans un secteur hautement réglementé, et qui doit garantir l’isolation pour des raisons de sécurité, peut-être également bénéficier de choisir le modèle SQL Managed Instance.
 
 Instance gérée dans la base de données SQL Azure présente les caractéristiques suivantes :
 
 - Isolation de sécurité via le réseau virtuel Azure
 
-- Compatibilité d’aire de conception application, ces fonctionnalités :
+- Compatibilité d’aire de conception application, avec ces fonctionnalités :
 
   - L’Agent SQL Server et SQL Server Profiler
 
   - Réplication de références et les requêtes SQL CLR, des bases de données croisées, capture de données modifiées (CDC) et Service Broker
 
-- Jusqu'à 35 To des tailles de base de données
+- Tailles de base de données jusqu'à 35 To
 
-- Migration de l’interruption de service minimum, avec ces fonctionnalités :
+- Migration de temps d’arrêt minimum, avec ces fonctionnalités :
 
-  - Service de Migration de base de données Azure
+  - Azure Database Migration Service
 
-  - Sauvegarde en mode natif et de restauration et d’envoi de journaux
+  - Sauvegarde en mode natif et de restauration et de l’envoi de journaux
 
-Grâce à ces fonctionnalités, lorsque vous migrez des bases de données application existantes à la base de données SQL Azure, le modèle d’une Instance gérée offre presque 100 % des avantages de Paas pour SQL Server. Instance managée est un environnement de SQL Server où vous continuez à l’aide des fonctionnalités de niveau de l’instance sans modifier la conception de votre application.
+Avec ces fonctionnalités, lorsque vous migrez des bases de données application existantes vers Azure SQL Database, le modèle de Managed Instance offre presque 100 % des avantages de Paas pour SQL Server. Managed Instance est un environnement de SQL Server où vous continuer à utiliser les fonctionnalités de niveau d’instance sans modifier la conception de votre application.
 
-Instance managée est sans doute le mieux pour les entreprises qui en sont à l’aide de SQL Server, et pour lesquelles une grande souplesse dans la sécurité du réseau dans le cloud. Il ressemble à avoir un réseau virtuel privé pour vos bases de données SQL.
+Instance managée est probablement la meilleure solution pour les entreprises qui en sont à l’aide de SQL Server, et pour lesquelles la flexibilité dans la sécurité réseau dans le cloud. Cela revient à avoir un réseau privé virtuel pour vos bases de données SQL.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Quand migrer vers la base de données SQL Azure
+## <a name="when-to-migrate-to-azure-sql-database"></a>Quand migrer vers Azure SQL Database
 
-Comme indiqué, la base de données SQL Azure standard est un DBaaS entièrement géré et relationnelles. Base de données SQL gère actuellement des millions de bases de données de production, dans des centres de 38 données, dans le monde entier. Il prend en charge un large éventail d’applications et charges de travail, de la gestion des données transactionnelles simples, à gérant les applications critiques, de plus grandes consommatrices de données qui nécessitent un traitement de données avancé à une échelle globale.
+Comme mentionné, la base de données SQL Azure standard est un DBaaS entièrement gérée et relationnelle. Base de données SQL gère actuellement des millions de bases de données de production, dans 38 centres de données, dans le monde entier. Il prend en charge un large éventail d’applications et charges de travail, de la gestion des données transactionnelles simples, à la direction des applications plus gourmandes en données, stratégiques qui nécessitent le traitement avancé des données à l’échelle mondiale.
 
-En raison de ses fonctionnalités PaaS complètes, une meilleure tarification- et finalement coût-vous devez déplacer la base de données SQL Azure standard votre choix « par défaut » si vous avez une application qui utilise basique, standard SQL bases de données et aucune fonctionnalité d’instance supplémentaires. Fonctionnalités de SQL Server comme l’intégration CLR SQL, l’Agent SQL Server et l’interrogation des bases de données croisées ne sont pas pris en charge dans la base de données SQL Azure standard. Ces fonctionnalités sont disponibles uniquement dans le modèle de base de données SQL Azure une Instance gérée.
+En raison de ses fonctionnalités PaaS complètes, meilleurs tarifs- et finalement coût-vous devez déplacer la base de données SQL Azure standard comme « choix par défaut » si vous avez une application qui utilise base, standard SQL bases de données et aucune fonctionnalité d’instance supplémentaires. Fonctionnalités de SQL Server, comme l’intégration du CLR SQL, SQL Server Agent et l’interrogation de bases de données croisées ne sont pas pris en charge dans la base de données SQL Azure standard. Ces fonctionnalités sont disponibles uniquement dans le modèle Azure SQL Database Managed Instance.
 
-Base de données SQL Azure est le service de base de données de cloud uniquement intelligent qui est généré pour les développeurs d’applications. Il est également le seul service de base de données de cloud qui s’adapte à la volée, sans temps mort, pour vous aider à optimiser les applications mutualisées. Pour finir, base de données SQL Azure ne vous reste plus de temps à innover et elle accélère sur le marché. Vous pouvez créer des applications sécurisées et vous connecter à votre base de données SQL en utilisant les langages et les plateformes que vous préférez.
+Base de données SQL Azure est le service de base de données de cloud uniquement intelligent qui est conçu pour les développeurs d’applications. Il est également le seul service de base de données de cloud qui s’adapte à la volée, sans temps d’arrêt, pour vous aider à distribuer efficacement des applications multi-locataires. Finalement, base de données SQL Azure vous laisse plus de temps pour innover et il accélère la votre marché. Vous pouvez générer des applications sécurisées et se connecter à votre base de données SQL en utilisant les langages et plateformes que vous préférez.
 
 Base de données SQL Azure offre les avantages suivants :
 
 - Intelligence intégrée (apprentissage) qui apprend et s’adapte à votre application
 
-- Configuration de la base de données à la demande
+- Approvisionnement de la base de données à la demande
 
-- Une plage d’offres, pour toutes les charges de travail
+- Offres spéciales, pour toutes les charges de travail
 
-- disponibilité de 99,99 % SLA, zéro maintenance
+- disponibilité de 99,99 % SLA, sans maintenance
 
-- Géo-réplication et restauration des services pour la protection des données
+- Géo-réplication et restauration des services de protection des données
 
 - Point de base de données SQL Azure dans la fonctionnalité Restauration du temps
 
 - Compatibilité avec SQL Server 2016, y compris hybride et migration
 
-La base de données SQL Azure standard est proche PaaS à la base de données SQL Azure une Instance gérée. Préférez la base de données SQL Azure standard, car vous obtiendrez plus d’avantages à partir d’un cloud géré. Toutefois, base de données SQL Azure présente des différences clés de normal et les instances de SQL Server locale. Selon les exigences de base de données de votre application existante et vos besoins de l’entreprise et les stratégies, il ne peut pas être le meilleur choix lorsque vous planifiez votre migration vers le cloud.
+La base de données SQL Azure standard est plus proche PaaS que Azure SQL Database Managed Instance. Préférez la base de données SQL Azure standard, car vous obtiendrez plus d’avantages à partir d’un cloud géré. Toutefois, Azure SQL Database présente des différences clés de normal et les instances de SQL Server sur site. En fonction des besoins de base de données de votre application existante et vos exigences d’entreprise et les stratégies, il ne peut pas être le meilleur choix lorsque vous planifiez votre migration vers le cloud.
 
 ## <a name="when-to-move-your-original-rdbms-to-a-vm-iaas"></a>Transfert de votre SGBDR d’origine à une machine virtuelle (IaaS)
 
-Une de vos options de migration consiste à déplacer votre d’origine système de gestion de base de données relationnelle (SGBDR), notamment Oracle, IBM DB2, MySQL, PostgreSQL ou SQL Server, à un serveur similaire qui s’exécute sur une machine virtuelle Azure. Si vous avez des applications existantes qui nécessitent la migration plus rapide pour le cloud avec des modifications minimes, ou aucune modification du tout, une migration directe vers IaaS dans le cloud peut être une option équitable. Il ne peut pas être la meilleure façon de tirer parti des avantages de l’ensemble du cloud, mais il est probablement le chemin d’accès initial plus rapide.
+Une de vos options de migration consiste à déplacer votre d’origine système de gestion de base de données relationnelle (SGBDR), notamment Oracle, IBM DB2, MySQL, PostgreSQL ou SQL Server, à un serveur similaire qui s’exécute sur une machine virtuelle Azure. Si vous avez des applications existantes qui requièrent la migration le plus rapide vers le cloud avec un minimum de modifications ou aucune modification du tout, une migration directe vers IaaS dans le cloud peut être une option de répartition de charge. Il peut ne pas être la meilleure façon de tirer parti des avantages de tous les du cloud, mais il est probablement le chemin d’accès initial plus rapide.
 
-Actuellement, Microsoft Azure prend en charge jusqu'à [des serveurs de base de données différente 331](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) déployé en tant que machines virtuelles IaaS. Il s’agit notamment de SGBDR populaires tels que SQL Server, Oracle, MySQL, PostgreSQL et IBM DB2 et plusieurs autres bases de données NoSQL, MongoDB, Cassandra, DataStax, MariaDB et Cloudera.
+Actuellement, Microsoft Azure prend en charge jusqu'à [des serveurs de base de données différente 331](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) déployés en tant que machines virtuelles IaaS. Ceux-ci incluent un SGBDR populaires tels que SQL Server, Oracle, MySQL, PostgreSQL et IBM DB2 et plusieurs autres bases de données NoSQL comme MongoDB, Cassandra, DataStax, MariaDB et Cloudera.
 
 > [!NOTE]
-> Bien que le déplacement de votre SGBDR pour une machine virtuelle Azure peut être le moyen le plus rapide pour migrer vos données vers le cloud (car il est IaaS), cette approche nécessite un investissement important dans vos équipes informatiques (administrateurs de base de données et aux professionnels de l’informatique). Les équipes d’entreprise doivent être en mesure de configurer et gérer la haute disponibilité, la récupération d’urgence et la mise à jour corrective pour SQL Server. Ce contexte doit également un environnement personnalisé, avec des droits d’administration complets.
+> Bien que le déplacement de votre SGBDR pour une machine virtuelle Azure peut être le moyen le plus rapide pour migrer vos données vers le cloud (car il IaaS), cette approche nécessite un investissement significatif dans vos équipes informatique (administrateurs de base de données et les professionnels de l’informatique). Équipes d’entreprise doivent être en mesure de configurer et gérer une haute disponibilité, la récupération d’urgence et la mise à jour corrective pour SQL Server. Ce contexte a également besoin d’un environnement personnalisé, avec les droits d’administration complets.
 
-## <a name="when-to-migrate-to-sql-server-as-a-vm-iaas"></a>Quand effectuer la migration vers SQL Server dans une machine virtuelle (IaaS)
+## <a name="when-to-migrate-to-sql-server-as-a-vm-iaas"></a>Quand migrer vers SQL Server comme une machine virtuelle (IaaS)
 
-Il peut y avoir quelques cas où vous devrez migrer vers SQL Server en tant qu’une machine virtuelle standard. Un exemple de scénario est si vous devez utiliser SQL Server Reporting Services. Dans la plupart des cas, cependant, base de données SQL Azure une Instance gérée peut fournir tout ce que vous devez migrer à partir de serveurs de SQL Server locale, la migration vers une machine virtuelle SQL Server ne doit donc être votre dernier recours pour essayer.
+Il existe peut-être quelques cas où vous devez toujours effectuer la migration vers SQL Server comme une machine virtuelle standard. Un exemple de scénario est si vous devez utiliser SQL Server Reporting Services. Dans la plupart des cas, cependant, Azure SQL Database Managed Instance peut fournir tout ce que vous devez migrer à partir de serveurs de SQL Server sur site, afin que la migration vers une machine virtuelle SQL Server doit être votre dernier recours pour essayer.
 
-## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Utiliser le Service de Migration de base de données Azure à migrer vos bases de données relationnelles vers Azure 
+## <a name="use-azure-database-migration-service-to-migrate-your-relational-databases-to-azure"></a>Utiliser Azure Database Migration Service pour migrer vos bases de données relationnelles vers Azure 
 
-Vous pouvez utiliser le Service de Migration de base de données Azure pour migrer des bases de données relationnelles telles que SQL Server, Oracle et MySQL sur Azure, si votre base de données cible est la base de données SQL Azure, base de données SQL Azure une Instance gérée ou SQL Server sur une machine virtuelle Azure.
+Vous pouvez utiliser Azure Database Migration Service pour migrer des bases de données relationnelles telles que SQL Server, Oracle et MySQL vers Azure, si votre base de données cible est Azure SQL Database, Azure SQL Database Managed Instance ou SQL Server sur une machine virtuelle Azure.
 
-Le flux de travail automatisé, avec évaluation de la création de rapports, vous guide dans les modifications que vous devez faire avant de migrer la base de données. Lorsque vous êtes prêt, le service migre la base de données source vers Azure.
+Le flux de travail automatisé, avec le rapport d’évaluation, vous guide dans les modifications que vous devez faire avant de migrer la base de données. Lorsque vous êtes prêt, le service migre la base de données source vers Azure.
 
-Chaque fois que vous modifiez un SGBDR d’origine, vous devrez peut-être tester à nouveau. Vous devrez peut-être modifier le code de mappage relationnel objet (ORM) dans votre application, en fonction des résultats des tests ou de phrases SQL.
+Chaque fois que vous modifiez un SGBDR d’origine, vous devrez peut-être tester à nouveau. Vous devrez peut-être modifier le code de mappage objet-relationnel (ORM) dans votre application, en fonction des résultats des tests ou de phrases SQL.
 
-Si vous avez une autre base de données (par exemple, IBM DB2) et opter pour une approche de courbes d’élévation et MAJ, vous souhaiterez continuer à utiliser ces bases de données en tant que machines virtuelles de IaaS dans Azure, sauf si vous êtes prêt à effectuer une migration de données plus complexe. Une migration de données plus complexe nécessitera effort supplémentaire, car vous devez migration à un type de base de données différents avec le nouveau schéma et les bibliothèques de programmation différents.
+Si vous avez une autre base de données (par exemple, IBM DB2) et vous optez pour une approche de lift- and -shift, vous souhaiterez continuer à utiliser ces bases de données en tant que machines virtuelles IaaS dans Azure, sauf si vous êtes prêt à effectuer une migration de données plus complexe. Une migration de données plus complexe nécessite des efforts supplémentaires, car vous serez migration à un type de base de données différente avec le nouveau schéma et les bibliothèques de programmation différents.
 
-Pour savoir comment migrer des bases de données à l’aide du Service de Migration de base de données Azure, consultez [obtenir dans le cloud plus rapidement avec la base de données SQL Azure une Instance gérée et du Service de Migration de base de données Azure](https://channel9.msdn.com/Events/Build/2017/P4008).
+Pour savoir comment migrer des bases de données à l’aide d’Azure Database Migration Service, consultez [migrez vers le cloud plus rapidement avec Azure SQL Database Managed Instance et Azure Database Migration Service](https://channel9.msdn.com/Events/Build/2017/P4008).
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- **Choisissez une option de SQL Server cloud : base de données SQL Azure (PaaS) ou SQL Server sur une machine virtuelle de Azure (IaaS)**
+- **Choisir une option de SQL Server cloud : Base de données SQL Azure (PaaS) ou SQL Server sur machine virtuelle Azure (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
-- **Obtenir dans le cloud plus rapidement avec la base de données SQL Azure une Instance gérée et le Service de Migration de base de données**
+- **Migrez vers le cloud plus rapidement avec Azure SQL DB Managed Instance et le Service de Migration de base de données**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **Migration de base de données SQL Server pour la base de données SQL dans le cloud**
+- **Migration de base de données SQL Server vers SQL Database dans le cloud**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -127,5 +127,5 @@ Pour savoir comment migrer des bases de données à l’aide du Service de Migra
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
 >[!div class="step-by-step"]
-[Précédent](lift-and-shift-existing-apps-azure-iaas.md)
-[Suivant](modernize-existing-apps-to-cloud-optimized/index.md)
+>[Précédent](lift-and-shift-existing-apps-azure-iaas.md)
+>[Suivant](modernize-existing-apps-to-cloud-optimized/index.md)

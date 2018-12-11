@@ -1,16 +1,15 @@
 ---
 title: Instructions relatives aux collections
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964833"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145580"
 ---
 # <a name="guidelines-for-collections"></a>Instructions relatives aux collections
 Une collection peut être considéré comme n’importe quel type spécifiquement conçu pour manipuler un groupe d’objets ayant des caractéristiques communes. C’est presque toujours approprié pour ces types d’implémenter <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, de sorte que dans cette section, nous considérons uniquement types implémentant une ou deux de ces interfaces doivent être des collections.  
@@ -109,7 +108,7 @@ Une collection peut être considéré comme n’importe quel type spécifiquemen
  **X DO NOT** héritent des collections de base non génériques comme `CollectionBase`. Utilisez `Collection<T>`, `ReadOnlyCollection<T>`, et `KeyedCollection<TKey,TItem>` à la place.  
   
 ### <a name="naming-custom-collections"></a>Regroupements personnalisés d’affectation de noms  
- Collections (types qui implémentent `IEnumerable`) sont créés principalement pour deux raisons : (1) pour créer une nouvelle structure de données avec des opérations spécifiques à la structure et souvent les caractéristiques de performances différentes à des structures de données existantes (par exemple, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) et (2) pour créer une collection spécialisée pour conserver un ensemble spécifique d’éléments (par exemple, <xref:System.Collections.Specialized.StringCollection>). Structures de données sont souvent utilisées dans l’implémentation interne des applications et des bibliothèques. Collections spécialisées sont principalement d’être exposée dans les API (les types de propriété et de paramètre).  
+ Collections (types qui implémentent `IEnumerable`) sont créés principalement pour deux raisons : (1) pour créer une nouvelle structure de données avec des opérations spécifiques à la structure et souvent les caractéristiques de performances différentes à des structures de données existantes (par exemple, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) et (2) pour créer une collection spécialisée pour contenant un ensemble spécifique d’éléments (par exemple, <xref:System.Collections.Specialized.StringCollection>). Structures de données sont souvent utilisées dans l’implémentation interne des applications et des bibliothèques. Collections spécialisées sont principalement d’être exposée dans les API (les types de propriété et de paramètre).  
   
  **✓ DO** utiliser le suffixe « Dictionnaire » dans les noms de mise en œuvre des abstractions `IDictionary` ou `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ Une collection peut être considéré comme n’importe quel type spécifiquemen
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson éducation, Inc. à partir de [instructions de conception Framework : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi
 

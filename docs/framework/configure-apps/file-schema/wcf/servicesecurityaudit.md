@@ -2,12 +2,12 @@
 title: '&lt;serviceSecurityAudit&gt;'
 ms.date: 03/30/2017
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-ms.openlocfilehash: 4a3ac74ad369864f01fc6925657d4ab4c140495e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 36215709f0ede32c25739ea47f2f285e4122f098
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183724"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144431"
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Spécifie des paramètres qui activent l'audit d'événements de sécurité pendant des opérations de service.  
@@ -35,10 +35,10 @@ Spécifie des paramètres qui activent l'audit d'événements de sécurité pend
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|auditLogLocation|Spécifie l'emplacement du journal d'audit. Les valeurs valides sont les suivantes :<br /><br /> -Valeur par défaut : Événements de sécurité sont écrits dans le journal des applications sur Windows XP et dans le journal des événements sur Windows Server 2003 et Windows Vista.<br />-Application : Les événements d’Audit sont écrits dans le journal des événements.<br />-Sécurité : Événements d’Audit sont écrits dans le journal des événements de sécurité.<br /><br /> La valeur par défaut est Default. Pour plus d'informations, consultez <xref:System.ServiceModel.AuditLogLocation>.|  
+|auditLogLocation|Spécifie l'emplacement du journal d'audit. Les valeurs valides sont les suivantes :<br /><br /> -Valeur par défaut : Événements de sécurité sont écrits dans le journal des applications sur Windows XP et dans le journal des événements sur Windows Server 2003 et Windows Vista.<br />-Application : Événements d’audit sont écrits dans le journal des événements.<br />-Sécurité : Événements d’audit sont écrits dans le journal des événements de sécurité.<br /><br /> La valeur par défaut est Default. Pour plus d'informations, consultez <xref:System.ServiceModel.AuditLogLocation>.|  
 |suppressAuditFailure|Valeur booléenne qui spécifie le comportement permettant de supprimer les erreurs d'écriture dans le journal d'audit.<br /><br /> Les applications doivent être averties des erreurs d'écriture dans le journal d'audit. Si votre application n'est pas conçue pour gérer les erreurs d'audit, vous devez utiliser cet attribut pour supprimer les erreurs d'écriture dans le journal d'audit.<br /><br /> Si cet attribut a pour valeur `true`, les exceptions autres qu'OutOfMemoryException, StackOverFlowException, ThreadAbortException et ArgumentException qui résultent de tentatives d'écriture d'événements d'audit sont contrôlées par le système et ne sont pas propagées dans l'application. Si cet attribut a pour valeur `false`, toutes les exceptions qui résultent de tentatives d'écriture d'événements d'audit sont passées à l'application.<br /><br /> La valeur par défaut est `true`.|  
-|serviceAuthorizationAuditLevel|Spécifie les types d'événements d'autorisation enregistrés dans le journal d'audit. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucun audit d’événements d’autorisation de service est effectuée.<br />-Réussite : Uniquement les événements d’autorisation service réussis sont audités.<br />-Échec : Seuls les événements d’autorisation de service échec sont audités.<br />-SuccessOrFailure : Les deux événements d’autorisation du service réussite et d’échec sont audités.<br /><br /> La valeur par défaut est None. Pour plus d'informations, consultez <xref:System.ServiceModel.AuditLevel>.|  
-|messageAuthenticationAuditLevel|Spécifie le type d'événements d'audit d'authentification de message enregistrés. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucun événement d’audit est générées.<br />-Réussite : Seuls les événements de (validation complète, y compris la validation des signatures de message, le chiffrement et validation du jeton) de sécurité réussis sont enregistrés.<br />-Échec : Seuls les événements d’échec sont enregistrés.<br />-SuccessOrFailure : Les deux événements de réussite et d’échec sont enregistrés.<br /><br /> La valeur par défaut est None. Pour plus d'informations, consultez <xref:System.ServiceModel.AuditLevel>.|  
+|serviceAuthorizationAuditLevel|Spécifie les types d'événements d'autorisation enregistrés dans le journal d'audit. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucun audit d’événements d’autorisation de service n’est effectuée.<br />-Réussite : Seuls les événements d’autorisation service réussis sont audités.<br />-Échec : Seuls les événements d’autorisation de service échec sont audités.<br />-SuccessOrFailure : Événements d’autorisation du service réussite et d’échec sont audités.<br /><br /> La valeur par défaut est None. Pour plus d'informations, consultez <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|Spécifie le type d'événements d'audit d'authentification de message enregistrés. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucun événement d’audit n’est générées.<br />-Réussite : Seuls les événements de (validation complète, y compris la validation des signatures de message, le chiffrement et validation du jeton) sécurité réussis sont enregistrés.<br />-Échec : Seuls les événements d’échec sont enregistrés.<br />-SuccessOrFailure : Événements de réussite et d’échec sont enregistrés.<br /><br /> La valeur par défaut est None. Pour plus d'informations, consultez <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -54,7 +54,7 @@ Spécifie des paramètres qui activent l'audit d'événements de sécurité pend
   
  Pour obtenir un exemple détaillé de l’utilisation de cet élément de configuration, consultez [le comportement de l’audit Service](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md).  
   
- Par défaut, sur Windows XP, les événements d’audit peuvent être consultés dans le journal des applications, tandis que sur Windows Server 2003 et Windows Vista, ils peuvent être consultés dans le journal de sécurité. L'emplacement des événements d'audit peut être spécifié en affectant la valeur 'Application' ou 'Security' à l'attribut `auditLogLocation`. Pour plus d’informations, consultez [Comment : auditer les événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Si les événements sont écrits dans le journal de sécurité, LocalSecurityPolicy-> Enable Object Access doit être défini sur « Success » et « Failure ».  
+ Par défaut, sur Windows XP, les événements d’audit peuvent être consultés dans le journal des applications, tandis que sur Windows Server 2003 et Windows Vista, ils peuvent être consultés dans le journal de sécurité. L'emplacement des événements d'audit peut être spécifié en affectant la valeur 'Application' ou 'Security' à l'attribut `auditLogLocation`. Pour plus d'informations, voir [Procédure : Auditer les événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Si les événements sont écrits dans le journal de sécurité, LocalSecurityPolicy-> Enable Object Access doit être défini sur « Success » et « Failure ».  
   
  Lors de la consultation du journal des événements, la source des événements d'audit est « ServiceModel Audit 3.0.0.0 ». Les enregistrements de l'audit d'authentification du message portent la catégorie « MessageAuthentication », tandis que les enregistrements de l'audit d'autorisation du service portent la catégorie « ServiceAuthorization ».  
   
@@ -82,5 +82,5 @@ Spécifie des paramètres qui activent l'audit d'événements de sécurité pend
  <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>  
  [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Audit](../../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
- [Guide pratique pour auditer des événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Comment : Auditer les événements de sécurité](../../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [Comportement de l’audit de service](../../../../../docs/framework/wcf/samples/service-auditing-behavior.md)

@@ -1,31 +1,33 @@
 ---
 title: Espaces de noms (F#)
-description: Découvrez comment un espace de noms F# permet d’organiser le code en zones de fonctionnalités connexes en vous permettant de joindre un nom à un regroupement d’éléments de programme.
-ms.date: 04/24/2017
-ms.openlocfilehash: 769a1241f76ac32d3a6a80bd637078493119bb3c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+description: Découvrez comment un F# espace de noms vous permet d’organiser le code en zones de fonctionnalités connexes en vous permettant de joindre un nom à un regroupement d’éléments de programme.
+ms.date: 12/08/2018
+ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44178251"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169021"
 ---
 # <a name="namespaces"></a>Espaces de noms
 
-Un espace de noms vous permet d’organiser le code en zones de fonctionnalités connexes. Pour cela, vous attachez un nom à un regroupement d’éléments de programme.
+Un espace de noms vous permet d’organiser le code en zones de fonctionnalités connexes en vous permettant de joindre un nom à un regroupement de F# éléments de programme. Espaces de noms sont des éléments en général de niveau supérieur dans F# fichiers.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```fsharp
-namespace [parent-namespaces.]identifier
+namespace [rec] [parent-namespaces.]identifier
 ```
 
 ## <a name="remarks"></a>Notes
 
-Si vous souhaitez placer le code dans un espace de noms, la première déclaration dans le fichier doit déclarer l’espace de noms. Le contenu du fichier entier fait alors partie de l’espace de noms.
+Si vous souhaitez placer le code dans un espace de noms, la première déclaration dans le fichier doit déclarer l’espace de noms. Le contenu du fichier entier puis deviennent partie intégrante de l’espace de noms, fournie par aucune autre déclaration d’espaces de noms n’existe plus dans le fichier. Si tel est le cas, tout le code jusqu'à la déclaration d’espace de noms suivant est considéré comme se situer dans le premier espace de noms.
 
 Espaces de noms ne peut pas contenir directement les fonctions et les valeurs. Au lieu de cela, les fonctions et les valeurs doivent figurer dans les modules et les modules sont inclus dans les espaces de noms. Espaces de noms peuvent contenir des types, des modules.
 
-Espaces de noms peuvent être déclarés explicitement avec le mot clé d’espace de noms, ou implicitement lors de la déclaration d’un module. Pour déclarer un espace de noms explicitement, utilisez le mot clé namespace suivi du nom de l’espace de noms. L’exemple suivant montre un fichier de code qui déclare un espace de noms Widgets avec un type et un module inclus dans cet espace de noms.
+Commentaires de documentation XML peuvent être déclarés au-dessus d’un espace de noms, mais ils sont ignorés. Directives de compilateur peuvent également être déclarées au-dessus d’un espace de noms.
+
+Espaces de noms peuvent être déclarés explicitement avec le mot clé d’espace de noms, ou implicitement lors de la déclaration d’un module. Pour déclarer un espace de noms explicitement, utilisez le mot clé namespace suivi du nom de l’espace de noms. L’exemple suivant montre un fichier de code qui déclare un espace de noms `Widgets` avec un type et un module inclus dans cet espace de noms.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6406.fs)]
 
@@ -74,7 +76,7 @@ Vous pouvez également utiliser global pour référencer l’espace de noms .NET
 
 ## <a name="recursive-namespaces"></a>Espaces de noms récursive
 
-F# 4.1 introduit la notion d’espaces de noms qui autorisent tout le code relation contenant-contenu de s’exclure mutuellement récursives.  Cette opération est effectuée `namespace rec`.  Utilisation de `namespace rec` peuvent atténuer certains problèmes rencontrés dans l’impossibilité d’écrire du code mutuellement référentielle entre les types et les modules.  Voici un exemple de ceci :
+Espaces de noms peuvent également être déclarées comme récursive pour autoriser tout le code relation contenant-contenu de s’exclure mutuellement récursives.  Cette opération est effectuée `namespace rec`. Utilisation de `namespace rec` peuvent atténuer certains problèmes rencontrés dans l’impossibilité d’écrire du code mutuellement référentielle entre les types et les modules. Voici un exemple de ceci :
 
 ```fsharp
 namespace rec MutualReferences
@@ -115,12 +117,12 @@ module BananaHelpers =
         | Down -> b |> peelSides
 ```
 
-Notez que l’exception `DontSqueezeTheBananaException` et la classe `Banana` tous deux se font mutuellement référence.  En outre, le module `BananaHelpers` et la classe `Banana` également se font mutuellement référence.  Cela ne serait pas possible d’exprimer en F# si vous avez supprimé le `rec` mot clé à partir de la `MutualReferences` espace de noms.
+Notez que l’exception `DontSqueezeTheBananaException` et la classe `Banana` tous deux se font mutuellement référence.  En outre, le module `BananaHelpers` et la classe `Banana` également se font mutuellement référence. Cela ne serait pas possible d’exprimer dans F# si vous avez supprimé le `rec` mot clé à partir de la `MutualReferences` espace de noms.
 
-Cette fonctionnalité est également disponible pour niveau supérieur [Modules](modules.md) dans F# 4.1 ou version ultérieure.
+Cette fonctionnalité est également disponible pour niveau supérieur [Modules](modules.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Informations de référence du langage F#](index.md)
 - [Modules](modules.md)
-- [F# RFC FS-1009 - autoriser les types mutuellement référentielles et des modules sur des étendues plus grandes dans les fichiers](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)
+- [F#RFC FS-1009 - autoriser les types mutuellement référentielles et des modules sur des étendues plus grandes dans les fichiers](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1/FS-1009-mutually-referential-types-and-modules-single-scope.md)

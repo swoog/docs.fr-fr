@@ -1,19 +1,23 @@
 ---
 title: Visite guidée de F#
 description: Examiner certaines des fonctionnalités clés de la langue dans cette visite guidée avec exemples de code de programmation F#.
-ms.date: 02/28/2018
-ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.date: 11/06/2018
+ms.openlocfilehash: 32bf892e97b29fcaf426791ef9ada15c9c35b5ae
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50235711"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143739"
 ---
 # <a name="tour-of-f"></a>Visite guidée de F# #
 
-La meilleure façon d’en savoir plus sur F# consiste à lire et écrire du code F#.  Cet article sera agissent comme une visite guidée de certaines des fonctionnalités clés du langage F# et vous donner quelques extraits de code que vous pouvez exécuter sur votre ordinateur.  Pour en savoir plus sur la configuration d’un environnement de développement, consultez [mise en route](tutorials/getting-started/index.md).
+La meilleure façon d’en savoir plus sur F# consiste à lire et écrire du code F#. Cet article sera agissent comme une visite guidée de certaines des fonctionnalités clés du langage F# et vous donner quelques extraits de code que vous pouvez exécuter sur votre ordinateur. Pour en savoir plus sur la configuration d’un environnement de développement, consultez [mise en route](tutorials/getting-started/index.md).
 
 Il existe deux concepts principaux en F#: les types et les fonctions.  Cette visite guidée sera mettre l’accent sur les fonctionnalités du langage qui appartiennent à ces deux concepts.
+
+## <a name="executing-the-code-online"></a>L’exécution du code en ligne
+
+Si vous n’avez pas F# installé sur votre ordinateur, vous pouvez exécuter tous les exemples en ligne avec la [Fable REPL](http://fable.io/repl/). Fable est un dialecte F# qui s’exécute directement dans votre navigateur. Pour afficher les exemples qui suivent dans la boucle REPL, consultez **exemples > en savoir plus > visite guidée de F#**  dans la barre de menu de gauche de l’intervalle de Fable
 
 ## <a name="functions-and-modules"></a>Fonctions et des Modules
 
@@ -81,8 +85,8 @@ Listes, tableaux et séquences existe trois types de collection principale dans 
 
 Le traitement des collections ou des séquences d’éléments est généralement effectué avec [récursivité](language-reference/functions/index.md#recursive-functions) en F#.  Bien que F# offre la prise en charge des boucles et la programmation impérative, la récursivité est préférée, car il est plus facile de garantir l’exactitude.
 
->[!NOTE]
-L’exemple suivant utilise les critères spéciaux le `match` expression.  Cette construction fondamentale est couvert plus loin dans cet article.
+> [!NOTE]
+> L’exemple suivant utilise les critères spéciaux le `match` expression.  Cette construction fondamentale est couvert plus loin dans cet article.
 
 [!code-fsharp[RecursiveFunctions](../../samples/snippets/fsharp/tour.fs#L461-L500)]
 

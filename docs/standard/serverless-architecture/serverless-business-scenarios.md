@@ -4,12 +4,12 @@ description: Découvrez sans serveur avec une approche pratique en accédant à 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369959"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153785"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Scénarios d’entreprise sans serveur et cas d’utilisation
 
@@ -27,7 +27,7 @@ Une application distincte monopage (SPA) appelle une fonction sans serveur pour 
 
 ![Galerie d’images automatisée](./media/automated-image-gallery.png)
 
-Le référentiel complet et des instructions pour générer l’application logique sont disponibles ici : [collage de grille d’événement](https://github.com/JeremyLikness/Event-Grid-Glue).
+Le référentiel complet et des instructions pour générer l’application logique sont disponibles ici : [Collage de grille d’événement](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Client mobile multiplateforme à l’aide de Xamarin.Forms et fonctions
 
@@ -55,7 +55,7 @@ L’application utilise la fonctionnalité de proxys d’Azure Functions pour pe
 
 Le proxy fournit un point de terminaison d’API unique qui est mis à jour pour rediriger les demandes individuelles pendant leur déplacement dans les fonctions sans serveur.
 
-Vous pouvez afficher une vidéo qui vous guide à travers toute la migration : [Lift- and -shift avec Azure functions sans serveur](https://channel9.msdn.com/Events/Connect/2017/E102). L’exemple de code d’accès : [apportez votre propre application](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Vous pouvez afficher une vidéo qui vous guide à travers toute la migration : [Lift- and -shift avec Azure functions sans serveur](https://channel9.msdn.com/Events/Connect/2017/E102). Accéder à l’exemple de code : [Apportez votre propre application](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Analyser un fichier CSV et les insérer dans une base de données
 
@@ -77,7 +77,7 @@ Vous pouvez ensuite créer un tableau de bord Power BI pour rassembler des infor
 
 ![Exemple de Power BI](./media/power-bi-example.png)
 
-Le référentiel de raccourcisseur de liens complète en cours avec des instructions est disponible ici : [raccourcisseur d’URL sans serveur](https://github.com/jeremylikness/serverless-url-shortener). Vous trouverez ici une version simplifiée : [stockage Azure pour les applications .NET sans serveur en quelques minutes](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Le référentiel de raccourcisseur de liens complète en cours avec des instructions est disponible ici : [Sans serveur raccourcisseur d’URL](https://github.com/jeremylikness/serverless-url-shortener). Vous trouverez ici une version simplifiée : [Stockage Azure pour les applications .NET sans serveur en quelques minutes](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Vérifier la connectivité d’appareil à l’aide d’une commande ping
 
@@ -98,5 +98,5 @@ Pour plus d’informations, consultez [ping d’Azure IoT Hub](https://azure.mic
 * [Sans serveur raccourcisseur d’URL](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[Précédent](orchestration-patterns.md)
-[Suivant](serverless-conclusion.md)
+>[Précédent](orchestration-patterns.md)
+>[Suivant](serverless-conclusion.md)

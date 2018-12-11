@@ -2,15 +2,15 @@
 title: '&lt;udpTransportSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
-ms.openlocfilehash: f1ec25a5747186ade1d721f266ff58fa5e559a49
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50e3b283bb10ba3f34303acbbd76b42d37fa7078
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767594"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127795"
 ---
 # <a name="ltudptransportsettingsgt"></a>&lt;udpTransportSettings&gt;
-Cet élément de configuration expose des paramètres de transport UDP pour [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
+Cet élément de configuration expose les paramètres de transport UDP pour [ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md).  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -52,7 +52,7 @@ Cet élément de configuration expose des paramètres de transport UDP pour [ \<
 |maxReceivedMessageSize|Entier qui spécifie la taille maximale d'un message pouvant être traité par la liaison.<br /><br /> La valeur par défaut est 65507.|  
 |maxUnicastRetransmitCount|Entier qui spécifie le nombre maximal de retransmissions du message (en plus du premier envoi).  Si le message est envoyé à une adresse unicast et qu'un message de réponse est reçu avec un en-tête RelatesTo correspondant, la retransmission peut se terminer de manière précoce (avant le nombre de retransmissions configuré).<br /><br /> La valeur par défaut est 1.|  
 |multicastInterfaceId|Chaîne qui identifie de manière unique la carte réseau à utiliser lors de l'envoi et de la réception du trafic multidiffusion sur des ordinateurs multirésidents. Au moment de l'exécution, le transport utilise cette valeur d'attribut pour rechercher l'index d'interface, qui permet ensuite de définir les options de socket `IP_MULTICAST_IF` et `IPV6_MULTICAST_IF`.  Le même index d'interface est utilisé pour rejoindre un groupe de multidiffusion (le cas échéant).<br /><br /> La valeur par défaut est `null`.|  
-|socketReceiveBufferSize|Entier qui spécifie la taille du tampon de réception pour le socket WinSock sous-jacent.<br /><br /> Tout utilisateur d'un canal de réception peut se servir de cet attribut sur la liaison pour contrôler le comportement du système lorsqu'il reçoit des données.  Par exemple, si une application consomme des messages WCF entrants au seuil maximal, l'utilisation d'une valeur supérieure pour cet attribut permettrait aux messages de s'empiler dans la mémoire tampon Winsock en attendant que l'application puisse les traiter.  L'utilisation d'une valeur inférieure dans la même situation entraînerait la suppression des messages. Cet attribut expose l'option de socket Winsock `SO_RCVBUF` sous-jacente. Cette valeur d'attribut doit avoir au moins la taille de `maxReceivedMessageSize`.   Si sa valeur est inférieure à `maxReceivedMessageSize` une exception runtime se produit.<br /><br /> La valeur par défaut est 65536.|  
+|socketReceiveBufferSize|Entier qui spécifie la taille du tampon de réception pour le socket WinSock sous-jacent.<br /><br /> Tout utilisateur d'un canal de réception peut se servir de cet attribut sur la liaison pour contrôler le comportement du système lorsqu'il reçoit des données.  Par exemple, si une application consomme des messages WCF entrants au seuil maximal, l'utilisation d'une valeur supérieure pour cet attribut permettrait aux messages de s'empiler dans la mémoire tampon Winsock en attendant que l'application puisse les traiter.  L’utilisation d’une valeur inférieure dans la même situation provoquerait le dépôt des messages. Cet attribut expose le WinSock sous-jacent `SO_RCVBUF` option de socket. Cette valeur d’attribut doit être au moins la taille de `maxReceivedMessageSize`.   La définition d’une valeur inférieure à la `maxReceivedMessageSize` provoquera une exception runtime.<br /><br /> La valeur par défaut est 65536.|  
 |timeToLive|Entier qui spécifie le nombre de tronçons de segments réseau pouvant être traversés par un paquet multidiffusion.  Cette propriété expose la fonctionnalité associée aux options de socket `IP_MULTICAST_TTL` et `IP_TTL`.<br /><br /> La valeur par défaut est 1.|  
   
 ### <a name="child-elements"></a>Éléments enfants  

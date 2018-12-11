@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025608"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128204"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; élément pour &lt;runtime&gt;
 Contient des informations d’identification sur l’assembly.  
@@ -52,10 +52,10 @@ culture="assembly culture"/>
   
 |Value|Description|  
 |-----------|-----------------|  
-|`amd64`|Processeur AMD 64 bits uniquement.|  
-|`ia64`|Processeur Intel 64 bits uniquement.|  
-|`msil`|Neutre en ce qui concerne le processeur et bits par mot|  
-|`x86`|Un processeur Intel de 32 bits, natif ou dans le Windows sur l’environnement Windows (WOW) sur une plateforme 64 bits.|  
+|`amd64`|AMD 64 x86 uniquement à l’architecture.|  
+|`ia64`|Uniquement à l’architecture Intel Itanium.|  
+|`msil`|Neutre en ce qui concerne le processeur et bits par mot.|  
+|`x86`|Un x86 32 bits processeur, natif ou dans le Windows sur l’environnement Windows (WOW) sur une plateforme 64 bits.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59a2b7f7ed855cd6b7d363ea5d4723c7d7b8d629
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4623e8060b93c9331c99f9713598e177b6807472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386351"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131311"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>Assistant Débogage managé illegalPrepareConstrainedRegion
 L’Assistant Débogage managé `illegalPrepareConstrainedRegion` est activé quand un appel de méthode <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> ne précède pas immédiatement l’instruction `try` du gestionnaire d’exceptions. Cette restriction étant au niveau MSIL, il est permis d’avoir une source générant du non-code entre l’appel et `try`, telle que les commentaires.  
@@ -48,7 +48,7 @@ L’Assistant Débogage managé `illegalPrepareConstrainedRegion` est activé qu
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant illustre le modèle qui provoque l’activation de cet Assistant Débogage managé.  
   
-```  
+```csharp
 void MethodWithInvalidPCR()  
 {  
     RuntimeHelpers.PrepareConstrainedRegions();  

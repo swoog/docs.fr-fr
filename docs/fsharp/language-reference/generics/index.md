@@ -1,13 +1,13 @@
 ---
 title: Génériques (F#)
-description: Découvrez comment utiliser F# fonctions et types génériques, qui vous permettent d’écrire du code qui fonctionne avec un large éventail de types sans avoir à répéter le code.
+description: Découvrez comment utiliser F# fonctions génériques et les types qui vous permettent d’écrire du code qui fonctionne avec divers types sans avoir à répéter le code.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084960"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147003"
 ---
 # <a name="generics"></a>Génériques
 
@@ -71,8 +71,8 @@ Le code suivant présente l’utilisation des fonctions définies aux sections p
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-Il existe deux manières de faire référence à un type générique sur la base du nom. Par exemple, `list<int>` et `int list` sont deux manières de faire référence à un type générique `list` qui dispose d’un argument de type unique `int`. Cette dernière forme n’est traditionnellement utilisée qu’avec des types F# intégrés, comme `list` et `option`. S’il existe plusieurs arguments de type, vous utilisez en principe la syntaxe `Dictionary<int, string>`, mais vous pouvez également utiliser la syntaxe `(int, string) Dictionary`.
+> [!NOTE]
+> Il existe deux manières de faire référence à un type générique sur la base du nom. Par exemple, `list<int>` et `int list` sont deux manières de faire référence à un type générique `list` qui dispose d’un argument de type unique `int`. Cette dernière forme n’est traditionnellement utilisée qu’avec des types F# intégrés, comme `list` et `option`. S’il existe plusieurs arguments de type, vous utilisez en principe la syntaxe `Dictionary<int, string>`, mais vous pouvez également utiliser la syntaxe `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Caractères génériques utilisés comme arguments de type
 

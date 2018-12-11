@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: f416ae8252d9991905da7eeaf4ce6398ff0e7461
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7086bdfbbd2ebace25f2999a0787bcee48494ab8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514961"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147671"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Regroupement de connexions SQL Server (ADO.NET)
 La connexion à un serveur de base de données consiste généralement en plusieurs étapes de longue durée. Un canal physique tel qu'un socket ou un canal nommé doit être établi, le contrôle initial avec le serveur doit avoir lieu, les informations de chaîne de connexion doivent être analysées, la connexion doit être authentifiée par le serveur, des contrôles doivent être effectués pour l'inscription dans la transaction en cours, etc.  
@@ -31,7 +31,7 @@ La connexion à un serveur de base de données consiste généralement en plusie
   
  Dans l'exemple C# suivant, trois nouveaux objets <xref:System.Data.SqlClient.SqlConnection> sont créés mais seuls deux pools sont nécessaires pour les gérer. Notez que les première et deuxième chaînes de connexion diffèrent par la valeur assignée pour `Initial Catalog`.  
   
-```  
+```csharp
 using (SqlConnection connection = new SqlConnection(  
   "Integrated Security=SSPI;Initial Catalog=Northwind"))  
     {  
@@ -67,7 +67,7 @@ using (SqlConnection connection = new SqlConnection(
  Le dispositif de regroupement de connexions répond à ces requêtes de connexion en réallouant les connexions à mesure qu'elles se libèrent dans le pool. Si la taille maximale du pool est atteinte et qu'aucune connexion utilisable n'est disponible, la requête est mise en attente. Le dispositif de regroupement de connexions tente ensuite de récupérer des connexions jusqu'à ce que le délai de temporisation ait expiré (la valeur par défaut est de 15 secondes). Si le dispositif de regroupement de connexions ne peut pas répondre à la requête avant que le délai de temporisation de la connexion ait expiré, une exception est levée.  
   
 > [!CAUTION]
->  Il est vivement recommandé de toujours fermer la connexion lorsque vous avez terminé de l'utiliser, de sorte qu'elle soit retournée au pool. Vous pouvez le faire à l’aide la `Close` ou `Dispose` méthodes de la `Connection` de l’objet, ou en ouvrant toutes les connexions à l’intérieur d’un `using` instruction en langage c#, ou un `Using` instruction en Visual Basic. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Pour plus d’informations, consultez [à l’aide d’instruction](~/docs/csharp/language-reference/keywords/using-statement.md) ou [Comment : supprimer une ressource système](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) pour Visual Basic.  
+>  Il est vivement recommandé de toujours fermer la connexion lorsque vous avez terminé de l'utiliser, de sorte qu'elle soit retournée au pool. Vous pouvez le faire à l’aide la `Close` ou `Dispose` méthodes de la `Connection` de l’objet, ou en ouvrant toutes les connexions à l’intérieur d’un `using` instruction en langage c#, ou un `Using` instruction en Visual Basic. Les connexions qui ne sont pas explicitement fermées risquent de ne pas être ajoutées ni retournées au pool. Pour plus d’informations, consultez [à l’aide d’instruction](~/docs/csharp/language-reference/keywords/using-statement.md) ou [Comment : Supprimer une ressource système](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) pour Visual Basic.  
   
 > [!NOTE]
 >  N'appelez pas une commande `Close` ou `Dispose` sur une `Connection`, un `DataReader` ou tout autre objet managé dans la méthode `Finalize` de votre classe. Dans un finaliseur, libérez seulement les ressources non managées que votre classe possède directement. Si votre classe ne possède pas de ressource non managée, n'incluez pas une méthode `Finalize` dans la définition de classe. Pour plus d’informations, consultez [Garbage Collection](../../../../docs/standard/garbage-collection/index.md).  

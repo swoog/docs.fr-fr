@@ -2,12 +2,12 @@
 title: Exécution côte à côte dans ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 7435f64afa9ce45a29f4d0a537219f31968eb3f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f69a269e5f6370cf7c5a60920b3d5a47ce1079cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042151"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126612"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>Exécution côte à côte dans ADO.NET
 L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] représente la capacité à exécuter une application sur un ordinateur sur lequel plusieurs versions du[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sont installées, en utilisant exclusivement la version pour laquelle l'application a été compilée. Pour plus d’informations sur la configuration de l’exécution côte à côte, consultez [l’exécution côte à côte](../../../../docs/framework/deployment/side-by-side-execution.md).  
@@ -47,7 +47,7 @@ L'exécution côte à côte dans le [!INCLUDE[dnprdnshort](../../../../includes/
   
  Considérez le lot de commandes suivant exécuté dans un appel à <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM dbo.Customers;
   
  Pour les applications qui s'exécutent sur des versions antérieures ou ultérieures du [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], vous pouvez écrire du code pour garantir que le comportement restera le même, quelle que soit la version utilisée. Si vous souhaitez vous assurer qu'une commande modifie l'état de la connexion pour toutes les commandes suivantes, nous vous recommandons d'exécuter votre commande à l'aide de la méthode <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A>. Si vous souhaitez vous assurer qu'une commande ne modifie pas la connexion pour toutes les commandes suivantes, nous vous recommandons d'inclure les commandes qui rétablissent l'état de la connexion dans votre commande. Exemple :  
   
-```  
+```sql
 SET NOCOUNT ON;  
 SELECT * FROM dbo.Customers;  
 SET NOCOUNT OFF;  

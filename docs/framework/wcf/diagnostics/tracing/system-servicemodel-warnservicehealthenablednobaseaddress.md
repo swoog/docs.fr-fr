@@ -1,19 +1,18 @@
 ---
-title: System.ServiceModel.Security.SecurityActiveServerSessionRemoved
-ms.date: 03/30/2017
-ms.assetid: f62789ea-d455-43f5-ab6c-21588184b528
-ms.openlocfilehash: 35f223499222fb24e88a2a58c055be921fee7689
+title: System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress
+ms.date: 10/30/2018
+ms.openlocfilehash: 4e745d18dbc615e2807942fcfa5687a1229ea547
 ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152277"
+ms.locfileid: "53131600"
 ---
-# <a name="systemservicemodelsecuritysecurityactiveserversessionremoved"></a>System.ServiceModel.Security.SecurityActiveServerSessionRemoved
-System.ServiceModel.Security.SecurityActiveServerSessionRemoved  
+# <a name="systemservicemodelwarnservicehealthenablednobaseaddress"></a>System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress
+System.ServiceModel.WarnServiceHealthEnabledNoBaseAddress  
   
 ## <a name="description"></a>Description  
- Une session de sécurité active a été supprimée par le serveur.  
+ La page de contrôle d’intégrité ServiceHealthBehavior est activée à une adresse relative et ne peut pas être créée, car il n’existe aucune adresse de base.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Suivi](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  

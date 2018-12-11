@@ -3,11 +3,11 @@ title: Unions discriminées (F#)
 description: Découvrez comment utiliser F# unions discriminées.
 ms.date: 05/16/2016
 ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672243"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154409"
 ---
 # <a name="discriminated-unions"></a>Unions discriminées
 

@@ -1,27 +1,26 @@
 ---
 title: Règles de conception de .NET Framework
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - libraries, .NET Framework class library
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df2ccf3d778e26e16937554304ae847f624cfec0
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085634"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147604"
 ---
 # <a name="framework-design-guidelines"></a>Règles de conception de .NET Framework
 Cette section fournit des instructions pour la conception de bibliothèques qui étendent et interagissent avec le .NET Framework. L’objectif est d’aider les concepteurs de bibliothèques à garantir la cohérence d’API et la facilité d’utilisation en fournissant un modèle de programmation unifié qui est indépendant du langage de programmation utilisé pour le développement. Nous vous recommandons de suivre ces instructions de conception lors du développement de classes et composants qui étendent .NET Framework. Conception de la bibliothèque incohérent avoir un impact négatif la productivité des développeurs et décourage adoption.  
   
  Les directives sont organisées en tant que recommandation simple avec les termes du contrat le préfixe `Do`, `Consider`, `Avoid`, et `Do not`. Ces instructions sont destinées à aider les concepteurs de bibliothèque de classes à comprendre les compromis entre différentes solutions. Il existe peut-être enfreindre bon design de bibliothèque que vous ces instructions de conception. Ce cas est rare, et il est important que vous avez une raison claire et intéressante pour votre décision.  
   
- Ces instructions sont extraites de l’ouvrage *Framework Design Guidelines : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisable, 2nd Edition*, Krzysztof Cwalina et Brad Abrams.  
+ Ces instructions sont extraites de l’ouvrage *instructions de conception Framework : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisables, 2nd Edition*, Krzysztof Cwalina et Brad Abrams.  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Directives de nommage](../../../docs/standard/design-guidelines/naming-guidelines.md)  
@@ -47,7 +46,7 @@ Cette section fournit des instructions pour la conception de bibliothèques qui 
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   
- *Réimprimé avec l’autorisation de Pearson Education, Inc. et extrait de [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) par Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série sur le développement Microsoft Windows.*  
+ *Réimprimé avec l’autorisation de Pearson éducation, Inc. à partir de [instructions de conception Framework : Conventions, les idiomes et les modèles pour les bibliothèques .NET réutilisable, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina et Brad Abrams, publié le 22 octobre 2008 par Addison-Wesley Professional dans le cadre de la série de développement de Microsoft Windows.*  
   
 ## <a name="see-also"></a>Voir aussi
 

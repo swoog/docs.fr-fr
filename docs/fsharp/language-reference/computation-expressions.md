@@ -1,13 +1,13 @@
 ---
 title: Expressions de calcul (F#)
-description: Découvrez comment créer une syntaxe pratique pour l’écriture de calculs en F# qui peuvent être séquencés et combinés à l’aide de liaisons et constructions de flux de contrôle.
+description: Découvrez comment créer une syntaxe pratique pour l’écriture de calculs F# que peuvent être séquencés et combinés à l’aide contrôler les liaisons et constructions de flux.
 ms.date: 07/27/2018
-ms.openlocfilehash: 148d1a661fb7630782c6dc48507a66e7bdc1d56b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839867"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169844"
 ---
 # <a name="computation-expressions"></a>Expressions de calcul
 
@@ -22,7 +22,7 @@ Les calculs peuvent prendre différentes formes. La forme la plus courante de ca
 * Calculs effectful
 * Calculs générative
 
-En règle générale, il existe *contextuelle* calculs que vous devez effectuer dans certaines parties d’une application. Écrire du code contextuelle peut être difficile, car il est facile de calculs de « fuite » en dehors d’un contexte donné sans abstractions pour vous éviter de le faire. Ces abstractions sont souvent difficile à écrire vous-même, c’est pourquoi F# a une méthode généralisée pour faire ce qu’on appelle **expressions de calcul**.
+En règle générale, il existe *contextuelle* calculs que vous devez effectuer dans certaines parties d’une application. Écrire du code contextuelle peut être difficile, car il est facile de calculs de « fuite » en dehors d’un contexte donné sans abstractions pour vous éviter de le faire. Ces abstractions sont souvent difficile à écrire vous-même, ce qui explique pourquoi F# a une méthode généralisée pour faire ce qu’on appelle **expressions de calcul**.
 
 Expressions de calcul offrent un modèle uniforme de syntaxe et d’abstraction pour l’encodage des calculs contextuelles.
 
@@ -61,9 +61,9 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-Chacune de ces mots clés et d’autres mots clés F# standard sont uniquement disponibles dans une expression de calcul s’ils ont été définis dans le type de générateur de rapports de sauvegarde. La seule exception à cela est `match!`, qui est lui-même liant syntaxique pour l’utilisation de `let!` suivie d’une correspondance de modèle sur le résultat.
+Chacune de ces mots clés et autres standard F# mots clés sont uniquement disponibles dans une expression de calcul s’ils ont été définis dans le type de générateur de rapports de sauvegarde. La seule exception à cela est `match!`, qui est lui-même liant syntaxique pour l’utilisation de `let!` suivie d’une correspondance de modèle sur le résultat.
 
-Le type de générateur est un objet qui définit des méthodes spéciales qui régissent la manière de que combiner les fragments de l’expression de calcul ; Autrement dit, ses méthodes contrôlent le comportement de l’expression de calcul. Un autre moyen de décrire une classe de générateur est à dire qu’il vous permet de personnaliser l’opération de nombreuses constructions F#, telles que des boucles et des liaisons.
+Le type de générateur est un objet qui définit des méthodes spéciales qui régissent la manière de que combiner les fragments de l’expression de calcul ; Autrement dit, ses méthodes contrôlent le comportement de l’expression de calcul. Un autre moyen de décrire une classe de générateur est à dire qu’il vous permet de personnaliser l’opération de nombreuses F# construit, comme des boucles et des liaisons.
 
 ### `let!`
 
@@ -194,7 +194,7 @@ Lors de l’appel d’une expression de calcul avec `match!`, elle réalisera le
 
 ## <a name="built-in-computation-expressions"></a>Expressions de calcul intégré
 
-La bibliothèque principale F# définit trois expressions de calcul intégré : [Expressions de séquence](sequences.md), [flux de travail asynchrones](asynchronous-workflows.md), et [Expressions de requête](query-expressions.md).
+Le F# bibliothèque principale définit trois expressions de calcul intégré : [Expressions de séquence](sequences.md), [flux de travail asynchrones](asynchronous-workflows.md), et [Expressions de requête](query-expressions.md).
 
 ## <a name="creating-a-new-type-of-computation-expression"></a>Création d’un nouveau Type d’Expression de calcul
 
@@ -227,7 +227,7 @@ L’expression imbriquée est au format suivant :
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-Dans le code ci-dessus, les appels à `Run` et `Delay` sont omis s’ils ne sont pas définis dans la classe de générateur d’expression calcul. Le corps de l’expression de calcul, désignée ici comme `{| cexpr |}`, est convertie en appels impliquant les méthodes de la classe de générateur de rapports par les traductions décrites dans le tableau suivant. L’expression de calcul `{| cexpr |}` est définie de manière récursive en fonction de ces traductions où `expr` est une expression F# et `cexpr` est une expression de calcul.
+Dans le code ci-dessus, les appels à `Run` et `Delay` sont omis s’ils ne sont pas définis dans la classe de générateur d’expression calcul. Le corps de l’expression de calcul, désignée ici comme `{| cexpr |}`, est convertie en appels impliquant les méthodes de la classe de générateur de rapports par les traductions décrites dans le tableau suivant. L’expression de calcul `{| cexpr |}` est définie de manière récursive en fonction de ces traductions où `expr` est un F# expression et `cexpr` est une expression de calcul.
 
 |Expression|Traduction|
 |----------|-----------|
@@ -251,6 +251,7 @@ Dans le code ci-dessus, les appels à `Run` et `Delay` sont omis s’ils ne sont
 |<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
 |<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
 |<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+
 Dans le tableau précédent, `other-expr` décrit une expression qui ne figure pas dans le cas contraire dans la table. Une classe de générateur est inutile d’implémenter toutes les méthodes et de prendre en charge toutes les traductions répertoriées dans le tableau précédent. Ces constructions qui ne sont pas implémentées ne sont pas disponibles dans les expressions de calcul de ce type. Par exemple, si vous ne souhaitez pas prendre en charge la `use` mot clé dans les expressions de calcul, vous pouvez omettre la définition de `Use` dans votre classe de générateur de rapports.
 
 L’exemple de code suivant montre une expression de calcul qui encapsule un calcul telle qu’une série d’étapes qui peut être évaluée une seule étape à la fois. Un type d’union, de différencier `OkOrException`, encode l’état d’erreur de l’expression, telle qu’évaluée jusqu'à présent. Ce code illustre plusieurs modèles classiques que vous pouvez utiliser dans vos expressions de calcul, telles que des implémentations de réutilisable de certaines des méthodes de générateur de rapports.
@@ -266,7 +267,7 @@ module Eventually =
     // computation.
     let rec bind func expr =
         match expr with
-        | Done value -> NotYetDone (fun () -> func value)
+        | Done value -> func value
         | NotYetDone work -> NotYetDone (fun () -> bind func (work()))
 
     // Return the final value wrapped in the Eventually type.
@@ -372,13 +373,8 @@ comp |> step |> step
 
 // prints "x = 1"
 // prints "x = 2"
-// returns "NotYetDone <closure>"
-comp |> step |> step |> step |> step |> step |> step
-
-// prints "x = 1"
-// prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step |> step |> step |> step |> step
+comp |> step |> step |> step |> step 
 ```
 
 Une expression de calcul a un type sous-jacent, ce qui retourne l’expression. Le type sous-jacent peut représenter un résultat du calcul ou un calcul retardé qui peut être effectué, ou elle peut fournir un moyen pour effectuer une itération dans un type de collection. Dans l’exemple précédent, le type sous-jacent a été **finalement**. Pour une expression de séquence, le type sous-jacent est <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Pour une expression de requête, le type sous-jacent est <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Pour un flux de travail asynchrone, le type sous-jacent est [ `Async` ](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). Le `Async` objet représente le travail à effectuer pour calculer le résultat. Par exemple, vous appelez [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) pour effectuer un calcul et de retourner le résultat.

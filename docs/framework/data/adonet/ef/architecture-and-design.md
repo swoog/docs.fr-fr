@@ -2,17 +2,17 @@
 title: Architecture et conception
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 281f321e45b019178aa82946eb451e56f5c04841
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530468"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154260"
 ---
 # <a name="architecture-and-design"></a>Architecture et conception
-Le module de génération SQL dans le [exemple de fournisseur](https://go.microsoft.com/fwlink/?LinkId=180616) est implémenté en tant que visiteur sur l’arborescence d’expression qui représente l’arborescence de commandes. La génération est effectuée par un unique passage sur l’arborescence de l’expression.  
+Le module de génération SQL dans le [exemple de fournisseur](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) est implémenté en tant que visiteur sur l’arborescence d’expression qui représente l’arborescence de commandes. La génération est effectuée par un unique passage sur l’arborescence de l’expression.  
   
- Les nœuds de l'arborescence sont traités de bas en haut. En premier lieu, une structure intermédiaire est produite : SqlSelectStatement ou SqlBuilder, tous deux implémentant ISqlFragment. Ensuite, l'instruction SQL de chaîne est issue de cette structure. Il y a deux raisons pour la structure intermédiaire :  
+ Les nœuds de l’arborescence sont traités de bas en haut. Tout d’abord, une structure intermédiaire est produite : SqlSelectStatement ou SqlBuilder, tous deux implémentant ISqlFragment. Ensuite, l'instruction SQL de chaîne est issue de cette structure. Il y a deux raisons pour la structure intermédiaire :  
   
 -   Logiquement, une instruction SQL SELECT est remplie de manière désordonnée. Les nœuds qui participent à la clause FROM sont visités avant les nœuds qui participent aux clauses WHERE, GROUP BY et ORDER BY.  
   
@@ -25,7 +25,7 @@ Le module de génération SQL dans le [exemple de fournisseur](https://go.micros
  Dans la deuxième phase, lors de la production de la chaîne réelle, les alias sont renommés.  
   
 ## <a name="data-structures"></a>Structures de données  
- Cette section décrit les types utilisés dans le [fournisseur d’exemples](https://go.microsoft.com/fwlink/?LinkId=180616) qui vous permet de générer une instruction SQL.  
+ Cette section décrit les types utilisés dans le [fournisseur d’exemples](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) qui vous permet de générer une instruction SQL.  
   
 ### <a name="isqlfragment"></a>ISqlFragment  
  Cette section décrit les classes qui implémentent l'interface ISqlFragment, avec deux objectifs :  
@@ -226,9 +226,9 @@ private bool IsParentAJoin{get}
  L'aplanissement d'alias de jointure est accompli lors de la visite d'un DbPropertyExpression comme décrit dans la section intitulée DbPropertyExpression.  
   
 ### <a name="column-name-and-extent-alias-renaming"></a>Changement du nom de colonne et du nom d'alias d'étendue  
- Le problème du changement du nom de colonne et du nom d'alias d'étendue est résolu à l'aide de symboles qui sont uniquement remplacés par des alias dans la deuxième phase de la génération décrite dans la section intitulée Deuxième phase de la génération SQL : génération de la commande de chaîne.  
+ Le problème de nom de colonne et de renommer des alias d’étendue est résolu à l’aide de symboles qui sont uniquement remplacés avec des alias dans la deuxième phase de la génération décrite dans la section intitulée deuxième Phase de la génération SQL : Génération de la commande de chaîne.  
   
-## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Première phase de la génération SQL : visite de l'arborescence de l'expression  
+## <a name="first-phase-of-the-sql-generation-visiting-the-expression-tree"></a>Première Phase de la génération SQL : Visite de l’arborescence d’Expression  
  Cette section décrit la première phase de génération SQL, lorsque l'expression qui représente la requête est visitée et qu'une structure intermédiaire est produite, telle qu'un SqlSelectStatement ou un SqlBuilder.  
   
  Cette section décrit les principes de la visite de catégories de nœud d'expression différentes et les détails de la visite des types d'expression spécifiques.  
@@ -405,7 +405,7 @@ Not(All(input, x) => Not (Not Exists(Filter(input, not(x))) => Exists(Filter(inp
 IsEmpty(inut) = Not Exists(input)  
 ```  
   
-## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Deuxième phase de la génération SQL : génération de la commande de chaîne  
+## <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Deuxième Phase de génération SQL : Génération de la chaîne de commande  
  Lors de la génération d'une commande SQL de chaîne, le SqlSelectStatement produit des alias réels pour les symboles, ce qui résout le problème du changement de nom de colonne et d'alias de l'étendue.  
   
  Le changement de nom de l'alias de l'étendue se produit lors de l'écriture de l'objet SqlSelectStatement dans une chaîne. En premier lieu créez une liste de tous les alias utilisés par les étendues externes. Chaque symbole du FromExtents (ou AllJoinExtents si la valeur n'est pas null), est renommé s'il entre en conflit avec l'une des étendues externes. Si le changement de nom est exigé, il n'entrera en conflit avec aucune des étendues collectées dans AllExtentNames.  

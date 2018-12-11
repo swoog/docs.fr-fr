@@ -2,12 +2,12 @@
 title: Génération SQL de modification
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: bfeb4f826022d39b2a45132a5b2bf344ef4c99c6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836911"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127067"
 ---
 # <a name="modification-sql-generation"></a>Génération SQL de modification
 Cette section décrit la manière de développer un module de génération SQL de modification pour votre fournisseur (base de données conforme SQL:1999). Ce module doit traduire une arborescence de commandes de modification en instructions SQL INSERT, UPDATE ou DELETE appropriées.  
@@ -83,12 +83,12 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Génération SQL de modification dans le fournisseur d'exemples  
- Le [Entity Framework Sample Provider](https://go.microsoft.com/fwlink/?LinkId=180616) décrit les composants des fournisseurs de données ADO.NET qui prennent en charge la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Il cible une base de données SQL Server 2005 et est implémenté comme un wrapper sur le fournisseur de données ADO.NET 2.0 System.Data.SqlClient.  
+ Le [Entity Framework Sample Provider](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) décrit les composants des fournisseurs de données ADO.NET qui prennent en charge la [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Il cible une base de données SQL Server 2005 et est implémenté comme un wrapper sur le fournisseur de données ADO.NET 2.0 System.Data.SqlClient.  
   
  Le module de génération SQL de modification du fournisseur d'exemples (situé dans le fichier SQL Generation\DmlSqlGenerator.cs) prend un DbModificationCommandTree d'entrée et produit une instruction SQL de modification unique pouvant être suivie par une instruction SELECT pour retourner un lecteur, si spécifié par le DbModificationCommandTree. Notez que la forme des commandes générées est affectée par la base de données SQL Server cible.  
   
-### <a name="helper-classes-expressiontranslator"></a>Classes d'assistance : ExpressionTranslator  
- ExpressionTranslator fait office de traducteur commun léger pour toutes les propriétés de l'arborescence de commandes de modification de type DbExpression. Il prend uniquement en charge la traduction des types de l'expression auxquels les propriétés de l'arborescence de commandes de modification sont contraintes et est construit en fonction de ces contraintes particulières.  
+### <a name="helper-classes-expressiontranslator"></a>Classes d’assistance : ExpressionTranslator  
+ ExpressionTranslator fait office de traducteur commun léger pour toutes les propriétés de l’arborescence de commandes de modification de type DbExpression. Il prend uniquement en charge la traduction des types de l'expression auxquels les propriétés de l'arborescence de commandes de modification sont contraintes et est construit en fonction de ces contraintes particulières.  
   
  Les informations suivantes décrivent la visite de types de l'expression spécifiques (les nœuds avec des traductions simples sont omis).  
   

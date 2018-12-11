@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0aa9ecd357a192eba64cc14f8940b264461b5e74
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8441e1b2c623126e844d8a641d7f002aef495e9d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356353"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145882"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate (MDA)
-L'Assistant Débogage managé (MDA) `callbackOnCollectedDelegate` est activé si un délégué est marshalé du code managé vers du code non managé en tant que pointeur de fonction et si un rappel est placé sur ce pointeur de fonction après la récupération du délégué par le garbage collector.  
+L’Assistant Débogage managé (MDA) `callbackOnCollectedDelegate` est activé si un délégué est marshalé du code managé vers du code non managé en tant que pointeur de fonction et si un rappel est placé sur ce pointeur de fonction après la récupération du délégué par le garbage collector.  
   
 ## <a name="symptoms"></a>Symptômes  
  Des violations d'accès se produisent lors des tentatives d'appel de code managé par les pointeurs de fonction obtenus par des délégués managés. Ces échecs, qui ne sont pas des bogues du common language runtime (CLR), peuvent pourtant y ressembler, car la violation d'accès se produit dans le code CLR.  
@@ -61,7 +61,7 @@ L'Assistant Débogage managé (MDA) `callbackOnCollectedDelegate` est activé si
 ## <a name="example"></a>Exemple  
  L'exemple suivant illustre une situation qui peut activer cet Assistant Débogage managé :  
   
-```  
+```cpp
 // Library.cpp : Defines the unmanaged entry point for the DLL application.  
 #include "windows.h"  
 #include "stdio.h"  
@@ -76,8 +76,10 @@ void __stdcall Initialize(void __stdcall pfTarget())
 void __stdcall Callback()  
 {  
     g_pfTarget();  
-}  
-// ---------------------------------------------------  
+}
+```
+
+```csharp
 // C# Client  
 using System;  
 using System.Runtime.InteropServices;  

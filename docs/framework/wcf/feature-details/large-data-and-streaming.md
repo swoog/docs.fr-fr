@@ -2,12 +2,12 @@
 title: Données volumineuses et diffusion en continu
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: f381df2acdb370c6e84d3a00079578f8fceb69f3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a6c655e260aa75504e9a445458664b11d8e4d56d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192572"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145135"
 ---
 # <a name="large-data-and-streaming"></a>Données volumineuses et diffusion en continu
 Windows Communication Foundation (WCF) est une infrastructure de communications basées sur XML. Étant donné que les données XML sont généralement codées au format texte standard défini dans le [spécification XML 1.0](https://go.microsoft.com/fwlink/?LinkId=94838), connecté les architectes et développeurs de systèmes sont généralement concernées par l’encombrement du câble (ou taille) de messages envoyés entre le réseau et l’encodage de texte du XML pose des défis particuliers pour le transfert efficace de données binaires.  
@@ -15,7 +15,7 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
 ## <a name="basic-considerations"></a>Considérations de base  
  Pour fournir des informations générales sur les informations suivantes pour WCF, cette section met en évidence certaines préoccupations et considérations générales pour les encodages, les données binaires, et la diffusion en continu générale qui s’appliquent aux infrastructures de systèmes connectés.  
   
-### <a name="encoding-data-text-vs-binary"></a>Encodage de données : texte et Binaire  
+### <a name="encoding-data-text-vs-binary"></a>Encodage de données : Visual Studio de texte. Binaire  
  Les préoccupations couramment exprimées par les développeurs incluent l’idée que le XML possède une charge mémoire considérable par rapport aux formats binaires en raison de la nature répétitive des étiquettes de début et de fin, que l’encodage de valeurs numériques est considéré comme nettement plus volumineux parce qu’elles sont exprimées en valeurs texte, et que ces données binaires ne peuvent pas être exprimées efficacement parce qu’elles doivent être encodées spécialement à des fins d’incorporation dans un format texte.  
   
  Même si de nombreuses préoccupations comme celle-ci ainsi que d'autres sont justifiées, la différence réelle entre les messages à encodage texte XML dans un environnement de services Web XML et les messages à encodage binaire dans un environnement d'appel de procédure distante (RPC) hérité est souvent beaucoup moins importante que la considération initiale peut le suggérer.  
@@ -59,11 +59,11 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
  Lors de l’envoi de grandes quantités de données, vous devez définir le `maxAllowedContentLength` paramètre IIS (pour plus d’informations, consultez [configuration des limites de demande IIS](https://go.microsoft.com/fwlink/?LinkId=253165)) et le `maxReceivedMessageSize` paramètre de liaison (par exemple [ System.ServiceModel.BasicHttpBinding.MaxReceivedMessageSize](xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A) ou <xref:System.ServiceModel.NetTcpBinding.MaxReceivedMessageSize%2A>). Le `maxAllowedContentLength` propriété par défaut 28,6 M et `maxReceivedMessageSize` propriété valeur par défaut est 64 Ko.  
   
 ## <a name="encodings"></a>Encodages  
- Un *encodage* définit un ensemble de règles sur la façon de présenter des messages sur le câble. Un *encodeur* implémente un tel encodage et est responsable, du côté expéditeur, activer un <xref:System.ServiceModel.Channels.Message> message en mémoire dans un flux d’octets ou de la mémoire tampon d’octets qui peut être envoyé sur le réseau. Du côté destinataire, l'encodeur transforme une séquence d'octets en un message en mémoire.  
+ Un *encodage* définit un ensemble de règles sur la façon de présenter des messages sur le câble. Un *encodeur* implémente un tel encodage et est responsable du côté expéditeur, pour activer les messages en mémoire <xref:System.ServiceModel.Channels.Message> dans un flux d’octets ou de la mémoire tampon d’octets qui peut être envoyé sur le réseau. Du côté destinataire, l'encodeur transforme une séquence d'octets en un message en mémoire.  
   
  WCF inclut trois encodeurs et vous permet d’écrire et brancher vos propres encodeurs, si nécessaire.  
   
- Chacune des liaisons standard inclut un encodeur préconfiguré, selon lequel les liaisons avec le préfixe Net* utilisent l'encodeur binaire (en incluant la classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) pendant que les classes <xref:System.ServiceModel.BasicHttpBinding> et <xref:System.ServiceModel.WSHttpBinding> utilisent l'encodeur de message texte par défaut (au moyen de la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
+ Chacune des liaisons standard inclut un encodeur préconfiguré, selon lequel les liaisons avec le préfixe Net* utilisent l’encodeur binaire (en incluant la classe <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>) pendant que les classes <xref:System.ServiceModel.BasicHttpBinding> et <xref:System.ServiceModel.WSHttpBinding> utilisent l’encodeur de message texte par défaut (au moyen de la classe <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>).  
   
 |Élément de liaison d'encodeur|Description|  
 |-----------------------------|-----------------|  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) est une infrastructure de communications 
  Si votre solution ne requiert pas une interopérabilité, mais que vous souhaitez quand même utiliser le transport HTTP, vous pouvez composer un <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> dans une liaison personnalisée qui utilise la classe <xref:System.ServiceModel.Channels.HttpTransportBindingElement> pour le transport. Si plusieurs clients sur votre service ont besoin d'interopérabilité, il est recommandé d'exposer des points de terminaison parallèles qui ont tous le transport approprié et le choix de l'encodage pour les clients respectifs activés.  
   
 ### <a name="enabling-mtom"></a>Activation de MTOM  
- Lorsque l'interopérabilité est une condition requise et que vous devez envoyer des données binaires volumineuses, l'encodage de message MTOM constitue la stratégie d'encodage alternative que vous pouvez activer sur les liaisons <xref:System.ServiceModel.BasicHttpBinding> ou <xref:System.ServiceModel.WSHttpBinding> standard en affectant à la propriété `MessageEncoding` respective la valeur <xref:System.ServiceModel.WSMessageEncoding.Mtom> ou en composant le <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dans une <xref:System.ServiceModel.Channels.CustomBinding>. L’exemple de code suivant, extrait à partir de la [encodage MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md) exemple montre comment activer MTOM dans la configuration.  
+ Lorsque l’interopérabilité est une exigence et que vous devez envoyer des données binaires volumineuses, l’encodage de message MTOM constitue la stratégie d’encodage alternative que vous pouvez activer sur les liaisons <xref:System.ServiceModel.BasicHttpBinding> ou <xref:System.ServiceModel.WSHttpBinding> standard en affectant à la propriété `MessageEncoding` respective la valeur <xref:System.ServiceModel.WSMessageEncoding.Mtom> ou en composant le <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> dans une <xref:System.ServiceModel.Channels.CustomBinding>. L’exemple de code suivant, extrait à partir de la [encodage MTOM](../../../../docs/framework/wcf/samples/mtom-encoding.md) exemple montre comment activer MTOM dans la configuration.  
   
 ```xml  
 <system.serviceModel>  
@@ -180,7 +180,7 @@ class MyData
 <system.serviceModel>  
 ```  
   
- Lorsque vous instanciez votre liaison dans le code, vous devez affecter à la propriété `TransferMode` respective de la liaison (ou à l'élément de la liaison de transport si vous composez une liaison personnalisée) l'une des valeurs mentionnées précédemment.  
+ Lorsque vous instanciez votre liaison dans le code, vous devez affecter à la propriété `TransferMode` respective de la liaison (ou à l’élément de la liaison de transport si vous composez une liaison personnalisée) l’une des valeurs mentionnées précédemment.  
   
  Vous pouvez activer la diffusion en continu pour les demandes et les réponses ou pour les deux sens de manière indépendante à l'un ou l'autre côté des parties communicantes sans affecter les fonctionnalités. Toutefois, vous devez toujours partir du principe que la taille des données transférées est si importante que l'activation de la diffusion en continu est justifiée sur les deux points de terminaison d'une liaison de communication. Pour la communication multiplateforme où un point de terminaison n’est pas implémenté avec WCF, la possibilité d’utiliser la diffusion en continu dépend des fonctionnalités de diffusion en continu de la plateforme. Une autre exception rare peut impliquer un scénario piloté par la consommation de mémoire dans lequel un client ou service doit minimiser son jeu de travail et peut uniquement accepter de petites tailles de mémoire tampon.  
   
@@ -220,7 +220,7 @@ public class UploadStreamMessage
 }   
 ```  
   
- Les transferts en continu se terminent et le message est fermé lorsque le flux atteint la fin du fichier (EOF). Lors de l’envoi d’un message (qui retourne une valeur ou appel d’une opération), vous pouvez passer un <xref:System.IO.FileStream> et l’infrastructure WCF tire ensuite toutes les données à partir de ce flux de données jusqu'à ce que le flux a été complètement lues et atteint EOF. Pour transférer des données en continu pour la source pour laquelle aucune classe dérivée <xref:System.IO.Stream> pré-intégrée n'existe, construisez une telle classe, superposez-la sur votre source de flux et utilisez-la en tant qu'argument ou valeur de retour.  
+ Les transferts en continu se terminent et le message est fermé lorsque le flux atteint la fin du fichier (EOF). Lors de l’envoi d’un message (qui retourne une valeur ou appel d’une opération), vous pouvez passer un <xref:System.IO.FileStream> et l’infrastructure WCF tire ensuite toutes les données à partir de ce flux de données jusqu'à ce que le flux a été complètement lues et atteint EOF. Pour transférer des données en continu pour la source pour laquelle aucune classe dérivée <xref:System.IO.Stream> pré-intégrée n’existe, construisez une telle classe, superposez-la sur votre source de flux et utilisez-la en tant qu’argument ou valeur de retour.  
   
  Lors de la réception d’un message, WCF construit un flux de données sur le contenu du corps de message codé en Base64 (ou la partie MIME respective si à l’aide de MTOM) et le flux atteint EOF lorsque le contenu a été lu.  
   
@@ -239,4 +239,4 @@ public class UploadStreamMessage
 >  La décision d'utiliser des transferts mis en mémoire tampon ou diffusés en continu est une décision locale du point de terminaison. Pour les transports HTTP, le mode de transfert ne se propage pas sur une connexion ou sur des serveurs proxy et d'autres intermédiaires. La description de l'interface de service ne reflète pas le mode de transfert défini. Après avoir généré un client WCF pour un service, vous devez modifier le fichier de configuration des services destinés à être utilisés avec des transferts en flux continu pour définir le mode. Pour les transports TCP et les transports de canal nommé, le mode de transfert est propagé sous forme d'assertion de stratégie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Guide pratique pour activer le streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Comment : Activer la diffusion en continu](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

@@ -3,11 +3,11 @@ title: traçage analytique [WCF]
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181655"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147422"
 ---
 # <a name="wcf-analytic-tracing"></a>traçage analytique [WCF]
 Cet exemple montre comment ajouter vos propres événements de traçage dans le flux de traces analytiques que Windows Communication Foundation (WCF) écrit dans ETW dans [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Les traces analytiques permettent d'obtenir facilement une visibilité de vos services sans que cela se traduise par une lourde pénalité en termes de performances. Cet exemple montre comment utiliser le <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API pour écrire des événements qui s’intègrent avec les services WCF.  
@@ -106,7 +106,7 @@ Cet exemple montre comment ajouter vos propres événements de traçage dans le 
 4.  Cliquez sur **effacer** pour effacer les événements.  
   
 ## <a name="known-issue"></a>Problème connu  
- Il existe un problème connu dans le **Observateur d’événements** où il risque d’échouer à décoder des événements ETW. Vous pouvez voir un message d’erreur indiquant : « la description de l’ID d’événement \<id > à partir de la source Microsoft-Windows-Application Server-Applications est introuvable. Le composant qui a déclenché cet événement n'est pas installé sur l'ordinateur local ou l'installation est endommagée. Vous pouvez installer ou réparer le composant sur l’ordinateur local. » Si vous rencontrez cette erreur, sélectionnez **Actualiser** à partir de la **Actions** menu. Le décodage de l'événement doit ensuite s'effectuer correctement.  
+ Il existe un problème connu dans le **Observateur d’événements** où il risque d’échouer à décoder des événements ETW. Vous pouvez voir un message d’erreur indiquant que : « La description de l’ID d’événement \<id > à partir de la source Microsoft-Windows-Application Server-Applications est introuvable. Le composant qui a déclenché cet événement n'est pas installé sur l'ordinateur local ou l'installation est endommagée. Vous pouvez installer ou réparer le composant sur l’ordinateur local. » Si vous rencontrez cette erreur, sélectionnez **Actualiser** à partir de la **Actions** menu. Le décodage de l'événement doit ensuite s'effectuer correctement.  
   
 > [!IMPORTANT]
 >  Les exemples peuvent déjà être installés sur votre ordinateur. Recherchez le répertoire (par défaut) suivant avant de continuer.  

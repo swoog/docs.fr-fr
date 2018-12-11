@@ -4,12 +4,12 @@ description: Moderniser des applications .NET existantes avec des conteneurs de 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 17838381f42a760caa7fba7e09ab798c6284bccb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8a59a78bbf7ec38f32b14e67d4cb35a9c2375e94
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45683201"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151059"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>Raisons de moderniser des applications .NET existantes aux applications optimisé pour le Cloud
 
@@ -23,7 +23,7 @@ L’essentiel est que lorsqu’une organisation génère et gère les applicatio
 
 ## <a name="cloud-optimized-application-principles-and-tenets"></a>Principes et aux principes de l’application optimisé pour le cloud 
 
-Améliorations dans le cloud sont principalement centrées sur deux objectifs : réduire les coûts et améliorer la croissance de l’entreprise en améliorant la réactivité. Ces objectifs sont atteints en qui simplifie les processus et en réduisant les frictions lorsque vous relâchez et livrer des applications.
+Améliorations dans le cloud sont principalement centrées sur deux objectifs : Réduire les coûts et améliorer la croissance de l’entreprise en améliorant la réactivité. Ces objectifs sont atteints en qui simplifie les processus et en réduisant les frictions lorsque vous relâchez et livrer des applications.
 
 Votre application est optimisé pour le Cloud si vous pouvez dans agile manière-développer votre application autonome à partir d’autres applications locales, puis relâchez la souris, déployez, l’échelle automatique, surveiller et résoudre les problèmes de votre application dans le cloud.
 
@@ -68,5 +68,5 @@ Tous ces avantages fournissent au final des réductions des coûts de clés pour
 Dans les sections suivantes, ces avantages sont expliquées plus en détail et sont liés à des technologies spécifiques.
 
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](microsoft-technologies-in-cloud-optimized-applications.md)
+>[Précédent](index.md)
+>[Suivant](microsoft-technologies-in-cloud-optimized-applications.md)

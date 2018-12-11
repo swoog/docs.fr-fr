@@ -3,11 +3,11 @@ title: Utilisation d'ExpressionTextBox dans un concepteur d'activités personnal
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 ms.openlocfilehash: ee9da26625d772eda6100fc4d0db0469941bdb0d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849813"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149937"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Utilisation d'ExpressionTextBox dans un concepteur d'activités personnalisées
 Cet exemple montre comment utiliser le <xref:System.Activities.Presentation.View.ExpressionTextBox> dans un concepteur d'activités personnalisées. L'activité personnalisée, `MultiAssign`, assigne deux valeurs de chaîne à deux variables String. Certains contrôles <xref:System.Activities.Presentation.View.ExpressionTextBox> sont liés à <xref:System.Activities.InArgument>s et d'autres à <xref:System.Activities.OutArgument>s.
@@ -15,7 +15,7 @@ Cet exemple montre comment utiliser le <xref:System.Activities.Presentation.View
 ## <a name="sample-details"></a>Détails de l'exemple
  Le `ArgumentToExpressionConverter` est le convertisseur de type utilisé lors de la liaison d'expressions aux arguments. Affectez `ConverterParameter` ou `In` à `Out`. `InOut` n'est pas pris en charge.
 
- Le `UseLocationExpression` attribut est utilisé sur `OutArgument`s pour spécifier que l’expression doit être une expression L-value (« left value » ou « location value »). Dans la plupart des cas, une expression L-value est un identificateur Visual Basic valide utilisé pour indiquer que le `OutArgument` qui est retourné est un nom de variable ou d'argument.
+ Le `UseLocationExpression` attribut est utilisé sur `OutArgument`s pour spécifier que l’expression doit être une expression L-value (« left value » ou « location value »). Dans la plupart des cas, une expression L-value est un identificateur Visual Basic valide utilisé pour indiquer que le `OutArgument` qui est retourné est un nom de variable ou d’argument.
 
  L'attribut `MaxLines` a la valeur un dans cet exemple et `MinLines` n'est pas défini. Cela indique que le <xref:System.Activities.Presentation.View.ExpressionTextBox> a une taille fixe d'une ligne indépendamment de la quantité de texte tapée par l'utilisateur. Pour permettre au <xref:System.Activities.Presentation.View.ExpressionTextBox> de s'agrandir pour s'ajuster à l'entrée d'utilisateur, affectez à `MaxLines` une valeur supérieure à `MinLines`.
 

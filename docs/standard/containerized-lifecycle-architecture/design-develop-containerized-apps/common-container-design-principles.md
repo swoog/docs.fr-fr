@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202172"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152875"
 ---
 # <a name="common-container-design-principles"></a>Principes de conception communs conteneur
 
@@ -21,7 +21,6 @@ Dans le modèle de conteneur, un conteneur représente un processus unique. En d
 
 Vous pouvez trouver un scénario dans lequel vous souhaitez plusieurs processus en cours d’exécution dans un seul conteneur. Dans n’importe quel document d’architecture, il n’est jamais un « jamais » ni aucune toujours une « toujours ». Pour les scénarios qui requièrent plusieurs processus, un modèle courant consiste à utiliser [superviseur](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Précédent](design-docker-applications.md)
-[Suivant](monolithic-applications.md)
+>[Précédent](design-docker-applications.md)
+>[Suivant](monolithic-applications.md)

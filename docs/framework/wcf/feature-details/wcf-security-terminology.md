@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: 8b8f92697181c76710e75d6e5a07296b1fcf9188
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297060"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126820"
 ---
 # <a name="wcf-security-terminology"></a>Terminologie relative à la sécurité dans WCF
 La terminologie utilisée pour aborder la sécurité peut vous sembler peu familière. Cette rubrique explique rapidement certains des termes relatifs à la sécurité, mais ne fournit pas d'informations complètes pour chaque élément.  
@@ -120,7 +120,7 @@ La terminologie utilisée pour aborder la sécurité peut vous sembler peu famil
  Autorité de certification en haut d'une hiérarchie d'autorités de certification. L'autorité racine certifie les autorités de certification dans le niveau suivant de la hiérarchie.  
   
  algorithme de hachage sécurisé (Secure Hash Algorithm ou SHA)  
- Algorithme de hachage qui génère un résumé du message. L'algorithme de hachage est utilisé avec l'algorithme de signature numérique (DSA) dans la norme de signature numérique (DSS), entre autres. Il existe quatre types de SHA : SHA-1, SHA-256, SHA-384 et SHA-512. SHA-1 génère un résumé de message en 160 bits. SHA-256, SHA-384 et SHA-512 génèrent respectivement des condensats du message en 256, 384 et 512 bits. L'algorithme SHA a été développé par le National Institute of Standards and Technology (NIST) et par la National Security Agency (NSA).  
+ Algorithme de hachage qui génère un résumé du message. L'algorithme de hachage est utilisé avec l'algorithme de signature numérique (DSA) dans la norme de signature numérique (DSS), entre autres. Il y a quatre variétés d'algorithmes SHA : SHA-1, SHA-256-, SHA-384 et SHA-512. SHA-1, SHA-256, SHA-384 et SHA-512. SHA-1 génère un condensat de message en 160 bits. SHA-256, SHA-384 et SHA-512 génèrent respectivement des condensats du message en 256, 384 et 512 bits. L'algorithme SHA a été développé par le National Institute of Standards and Technology (NIST) et par la National Security Agency (NSA).  
   
  SSL (Secure Sockets Layer)  
  Protocole pour les communications réseau sécurisées à l'aide d'une combinaison de technologies de clés publique et secrète.  

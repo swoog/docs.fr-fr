@@ -3,11 +3,11 @@ title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
 ms.openlocfilehash: 9bc519509b00383be333ac605688950d2709117c
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980529"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153135"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
@@ -34,39 +34,39 @@ class XmlDictionaryReaderQuotas
 ### <a name="maxarraylength"></a>MaxArrayLength  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  La longueur de tableau maximale autorisée.  
   
 ### <a name="maxbytesperread"></a>MaxBytesPerRead  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Le nombre maximal d'octets autorisés retournés pour chaque lecture.  
   
 ### <a name="maxdepth"></a>MaxDepth  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Profondeur maximale de nœud imbriqué par lecture.  
   
 ### <a name="maxnametablecharcount"></a>MaxNameTableCharCount  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Le nombre maximal de caractères autorisés dans un nom de table.  
   
 ### <a name="maxstringcontentlength"></a>MaxStringContentLength  
  Type de données : sint32  
   
- Type d'accès : lecture seule  
+ Type d’accès : Propriétés en lecture seule  
   
  Nombre maximal de caractères autorisés dans un contenu d'élément XML.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
   
 |MOF|Déclaré dans Servicemodel.mof.|  
 |---------|-----------------------------------|  

@@ -4,12 +4,12 @@ description: Comprendre les défis de la conception des applications sans serveu
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5f175351cf42f3d9966add72750d64a4efe14e07
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "49370013"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155062"
 ---
 # <a name="serverless-architecture-considerations"></a>Considérations relatives à une architecture sans serveur
 
@@ -82,5 +82,5 @@ Pour plus d’informations, consultez [implémentation du modèle de disjoncteur
 Un avantage majeur de sans serveur est la possibilité de mettre à niveau d’une fonction spécifique sans avoir à redéployer l’application entière. Pour les mises à niveau réussisse, les fonctions doivent être avec contrôle de version afin que les services qui les appellent sont acheminés vers la version correcte du code. Une stratégie pour le déploiement de nouvelles versions est également importante. Une approche courante consiste à utiliser « vert/bleu déploiements » Le déploiement vert est la fonction active. Une nouvelle version de « bleue » est déployée en production et testée. Lorsque les tests réussissent, les versions de vertes et bleues sont échangées afin de la nouvelle version est fourni en direct. Si des problèmes sont rencontrés, ils peuvent être échangés en retour. Prise en charge le contrôle de version et les déploiements vert/bleu nécessite une combinaison de création de fonctions pour s’adapter aux changements de version et l’utilisation de la plateforme sans serveur pour gérer les déploiements. Une approche possible consiste à utiliser des proxys qui sont décrites dans le [plateforme serverless Azure](azure-functions.md#proxies) chapitre.
 
 >[!div class="step-by-step"]
-[Précédent](serverless-architecture.md)
-[Suivant](serverless-design-examples.md)
+>[Précédent](serverless-architecture.md)
+>[Suivant](serverless-design-examples.md)

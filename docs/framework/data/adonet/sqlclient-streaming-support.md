@@ -2,12 +2,12 @@
 title: Prise en charge de la diffusion en continu pour SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191038"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152888"
 ---
 # <a name="sqlclient-streaming-support"></a>Prise en charge de la diffusion en continu pour SqlClient
 Prise en charge entre SQL Server et une application de diffusion en continu (nouveauté de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) prend en charge les données non structurées sur le serveur (documents, images et fichiers multimédias). Une base de données SQL Server peut stocker des objets binaires volumineux (BLOB), mais la récupération des objets BLOB peuvent utiliser beaucoup de mémoire.  
@@ -76,7 +76,7 @@ Prise en charge entre SQL Server et une application de diffusion en continu (nou
 ## <a name="sample----streaming-from-sql-server"></a>Exemple--Diffusion en continu à partir de SQL Server  
  Utilisez le code [!INCLUDE[tsql](../../../../includes/tsql-md.md)] suivant pour créer l'exemple de base de données :  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   Transférer des fichiers volumineux (BLOB) à partir d’une base de données SQL Server vers un autre sans insuffisance de mémoire.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>Exemple--Diffusion en continu vers SQL Server  
  Utilisez le code [!INCLUDE[tsql](../../../../includes/tsql-md.md)] suivant pour créer l'exemple de base de données :  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   Diffusion en continu à partir d’une instance SQL Server à un autre à l’aide de la nouvelle fonctionnalité asynchrone.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Exemple--Diffusion en continu à partir d’une instance SQL Server vers un autre serveur SQL  
  Cet exemple montre comment diffuser en continu un objet BLOB à partir d’une instance SQL Server vers un autre, avec prise en charge l’annulation.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

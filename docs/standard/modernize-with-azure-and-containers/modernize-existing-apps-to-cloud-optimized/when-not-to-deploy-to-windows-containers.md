@@ -1,25 +1,25 @@
 ---
-title: Quand ne pas déployer des conteneurs Windows
-description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Quand ne pas déployer des conteneurs Windows
+title: Quand ne pas déployer sur des conteneurs Windows
+description: Moderniser des applications .NET existantes avec des conteneurs de Cloud Azure et Windows | Quand ne pas déployer sur des conteneurs Windows
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 819f32955ff019414bef8820d17d272eddc11bf8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957959"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129894"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Quand ne pas déployer des conteneurs Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Quand ne pas déployer sur des conteneurs Windows
 
-Certaines technologies de Windows ne sont pas pris en charge par les conteneurs Windows. Dans ce cas, vous devrez migrer vers les machines virtuelles aux normes, généralement avec Windows et de IIS.
+Certaines technologies de Windows ne sont pas pris en charge par les conteneurs Windows. Dans ce cas, vous devez toujours migrer vers les machines virtuelles aux normes, généralement avec simplement Windows et IIS.
 
-Cas non pris en charge dans les conteneurs Windows, à compter de mai 2018 : 
+Cas non pris en charge dans des conteneurs Windows, à compter de mai 2018 : 
 
--   Microsoft Message Queuing (MSMQ) actuellement est disponible uniquement dans les conteneurs Windows basé sur la version de Windows Server v1803, mais pas dans toutes les autres versions antérieures. 
+-   Microsoft Message Queuing (MSMQ) est actuellement uniquement disponible dans les conteneurs Windows basés sur la version de Windows Server v1803, mais pas dans toutes les versions antérieures. 
 
-    -   [Forum sur la demande UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
+    -   [Forum de demande de UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
     -   [Forum de discussion](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
@@ -29,21 +29,21 @@ Cas non pris en charge dans les conteneurs Windows, à compter de mai 2018 :
 
 -   Microsoft Office ne prend actuellement pas en charge les conteneurs.
 
-    -   [Forum sur la demande UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
+    -   [Forum de demande de UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
--   Applications de l’interface utilisateur (applications clientes avec une interface utilisateur) ne sont pas des scénarios pris en charge.
+-   Applications d’interface utilisateur (applications clientes avec une interface utilisateur visuelle) ne sont pas prises en charge de scénarios.
 
--   Rôles d’infrastructure Windows (DNS, DHCP, DC, NTP, impression, serveur de fichiers, etc. de la page IAM) ne sont pas des scénarios pris en charge.
+-   Rôles d’infrastructure Windows (DNS, DHCP, DC, NTP, impression, serveur de fichiers, etc. IAM) ne sont pas des scénarios pris en charge.
 
 
-Pour les requêtes à partir de la Communauté et d’autres scénarios non pris en charge, consultez le forum UserVoice pour les conteneurs Windows : <https://windowsserver.uservoice.com/forums/304624-containers>.
+Pour des scénarios supplémentaires non prise en charge et les demandes à partir de la Communauté, consultez le forum UserVoice pour les conteneurs Windows : <https://windowsserver.uservoice.com/forums/304624-containers>.
 
 ### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Machines virtuelles et les conteneurs dans Azure**
+-   **Machines virtuelles et conteneurs dans Azure**
 
     [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
 
 >[!div class="step-by-step"]
-[Précédent](deploy-existing-net-apps-as-windows-containers.md)
-[Suivant](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+>[Précédent](deploy-existing-net-apps-as-windows-containers.md)
+>[Suivant](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

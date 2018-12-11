@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197676"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152708"
 ---
 # <a name="what-is-docker"></a>Qu’est-ce que Docker ?
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197676"
 
 ![](./media/image2.png)
 
-Figure 1-2 : Docker déploie des conteneurs dans toutes les couches du cloud hybride
+Figure 1-2 : Docker déploie des conteneurs à toutes les couches du cloud hybride
 
 Les conteneurs d’images Docker peuvent s’exécuter en mode natif sur Linux et Windows. Toutefois, les images Windows peuvent s’exécuter uniquement sur les ordinateurs hôtes Windows et Linux images peuvent s’exécuter uniquement sur les hôtes Linux, ce qui signifie qu’un serveur hôte ou une machine virtuelle.
 
@@ -49,9 +49,8 @@ Lorsque vous utilisez Docker, vous n’entendrez pas les développeurs dire, «�
 
 ![](./media/image3.png)
 
-Figure 1-3 : comparaison entre des machines virtuelles traditionnelles sur des conteneurs Docker
-
+Figure 1-3 : Comparaison des machines virtuelles traditionnelles sur des conteneurs Docker
 
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](docker-terminology.md)
+>[Précédent](index.md)
+>[Suivant](docker-terminology.md)

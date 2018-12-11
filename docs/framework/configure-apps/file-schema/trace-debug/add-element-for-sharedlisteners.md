@@ -10,28 +10,30 @@ helpviewer_keywords:
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 93fdb548882422634e1d2456b4d37f434b278f8d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 9e0a23411f4bc37a1e09460113d15f4861e0a190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845370"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151159"
 ---
 # <a name="ltaddgt-element-for-ltsharedlistenersgt"></a>&lt;ajouter&gt; élément pour &lt;sharedListeners&gt;
 Ajoute un écouteur à la collection `sharedListeners`. `sharedListeners` est une collection d’écouteurs que tout [ \<source >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<trace >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) peut faire référence.  Par défaut, les écouteurs dans le `sharedListeners` collection ne sont pas placées dans un `Listeners` collection. Ils doivent être ajoutés par un nom pour le [ \<source >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) ou [ \<trace >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Il n’est pas possible d’obtenir les écouteurs de la `sharedListeners` collection dans le code en cours d’exécution.  
   
  \<configuration>  
-\<System.Diagnostics >  
-\<sharedListeners > élément  
-\<add>  
+&nbsp;&nbsp;\<System.Diagnostics >  
+&nbsp;&nbsp;&nbsp;&nbsp;\<sharedListeners > élément  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<Ajouter >  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
 <add name="name"   
   type="TraceListenerClassName, Version, Culture, PublicKeyToken"  
-  initializeData="data"/>  
-```  
+  initializeData="data"
+  traceOutputOptions = "None"
+/>  
+```
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
  Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
@@ -43,7 +45,8 @@ Ajoute un écouteur à la collection `sharedListeners`. `sharedListeners` est un
 |`name`|Attribut requis.<br /><br /> Spécifie le nom de l’écouteur est utilisé pour ajouter l’écouteur partagé à une `Listeners` collection.|  
 |`type`|Attribut requis.<br /><br /> Spécifie le type de l’écouteur. Vous devez utiliser une chaîne conforme aux exigences spécifiées dans [spécifiant des noms de types qualifiés complets](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
 |`initializeData`|Attribut facultatif.<br /><br /> La chaîne passée au constructeur pour la classe spécifiée.|  
-  
+|`traceOutputOptions`|Attribut facultatif.<br/><br/>La représentation sous forme de chaîne d’un ou plusieurs <xref:System.Diagnostics.TraceOptions> membres de l’énumération qui indique les données à écrire dans la sortie de trace. Plusieurs éléments sont séparés par des virgules. La valeur par défaut est « None ».|
+
 ### <a name="child-elements"></a>Éléments enfants  
   
 |Élément|Description|  

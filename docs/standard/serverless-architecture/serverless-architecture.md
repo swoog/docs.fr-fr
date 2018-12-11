@@ -4,12 +4,12 @@ description: Exploration des différentes architectures et les applications qui 
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: ea944a172154a1cff2b8f830cb8fc3fa24a15028
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 5f22f8b9894a23e5920adb2af3fdf02bce2877d7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49369958"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150301"
 ---
 # <a name="serverless-architecture"></a>Architecture sans serveur
 
@@ -42,9 +42,9 @@ Constitue un défi courant est migration d’une application monolithique exista
 
 ![Migration de MONOLITHE sans serveur](./media/serverless-monolith-migration.png)
 
-Pour en savoir plus sur cette approche, regardez la vidéo : [porter votre application dans le nuage avec Azure Functions sans serveur](https://channel9.msdn.com/Events/Connect/2017/E102).
+Pour en savoir plus sur cette approche, regardez la vidéo : [Importez votre application dans le cloud avec Azure Functions sans serveur](https://channel9.msdn.com/Events/Connect/2017/E102).
 
-## <a name="web-apps"></a>Applications Web
+## <a name="web-apps"></a>Applications web
 
 Applications Web sont d’excellents candidats pour les applications sans serveur. Il existe deux approches courantes pour les applications web aujourd'hui : gérée par le serveur et pilotés par client (par exemple, les applications à Page unique ou SPA). Applications web d’orientée serveur utilisent généralement une couche d’intergiciel (middleware) pour émettre des appels d’API pour restituer l’interface utilisateur web. Les applications SPA effectuer des appels d’API REST directement à partir du navigateur. Dans les deux scénarios, sans serveur peut prendre en charge l’intergiciel (middleware) ou une demande d’API REST en fournissant la logique métier nécessaire. Une architecture commune consiste à mettre en place un serveur web statique léger. L’Application à Page unique (SPA) fait Office de HTML, CSS, JavaScript et autres ressources de navigateur. L’application web se connecte ensuite à un serveur principal de microservices.
 
@@ -74,5 +74,5 @@ Le nombre élevé d’appareils et souvent des informations dicte une architectu
 L’omniprésence des IoT a entraîné plusieurs produits sans serveur qui se concentrent spécifiquement sur les problèmes IoT, tel que [Azure IoT Hub](https://docs.microsoft.com/azure/iot-hub). Sans serveur automatise les tâches telles que l’inscription, l’application des stratégies, le suivi et même déploiement de code pour les appareils à *le bord*. Le bord fait référence à des périphériques tels que les capteurs et régulateurs qui sont connectés à, mais pas une partie active d’Internet.
 
 >[!div class="step-by-step"]
-[Précédent](architecture-approaches.md)
-[Suivant](serverless-architecture-considerations.md)
+>[Précédent](architecture-approaches.md)
+>[Suivant](serverless-architecture-considerations.md)

@@ -3,11 +3,11 @@ title: Flux de travail asynchrones (F#)
 description: En savoir plus sur la prise en charge dans les F# langage de programmation pour effectuer des calculs de façon asynchrone, qui s’exécutent sans bloquer l’exécution d’autres tâches.
 ms.date: 05/16/2016
 ms.openlocfilehash: 720996106d2b90392eacc75eb99147691ee83334
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297073"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127743"
 ---
 # <a name="asynchronous-workflows"></a>Flux de travail asynchrones
 

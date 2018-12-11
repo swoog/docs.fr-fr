@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: e9f81c5fecc06b19ebd84cc4b2cc232686768a90
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: c2a6b9802bbb995939d33c5c40ef9c1afa1620e5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106630"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148819"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Présentation des conteneurs et de Docker
 
@@ -23,14 +23,13 @@ Chaque conteneur peut exécuter un service ou une application web dans son inté
 
 ![](./media/image1.png)
 
-Figure 1-1 : Plusieurs conteneurs s’exécutant sur un hôte de conteneurs
+Figure 1-1 : plusieurs conteneurs s’exécutant sur un hôte de conteneurs
 
 Dans cet exemple, l’hôte Docker est un hôte de conteneurs, et App1, App2, Svc 1 et Svc 2 sont des applications ou des services en conteneur.
 
-L’autre avantage qui dérive de la mise en conteneur est la scalabilité. Vous pouvez rapidement monter en charge en créant des conteneurs pour des tâches à court terme. Du point de vue de l’application, *instancier une image* (c.-à-d., créer un conteneur) revient à instancier un processus comme un service ou une application web. Cependant, dans un souci de fiabilité, quand il s’agit d’exécuter plusieurs instances d’une même image sur plusieurs serveurs hôtes, il est en principe préférable que chaque conteneur (instance d’image) s’exécute sur un serveur hôte différent ou sur une machine virtuelle dans différents domaines d’erreur.
+L’autre avantage qui dérive de la mise en conteneur est la scalabilité. Vous pouvez rapidement monter en charge en créant des conteneurs pour des tâches à court terme. Du point de vue de l’application, *instancier une image* (c.-à-d., créer un conteneur) revient à instancier un processus comme un service ou une application web. Pour la fiabilité, toutefois, lorsque vous exécutez plusieurs instances de la même image sur plusieurs serveurs hôtes, vous tenez chaque conteneur (instance d’image) à exécuter dans un autre serveur hôte ou une machine virtuelle dans différents domaines d’erreur.
 
 Pour résumer, les conteneurs offrent les avantages de l’isolation, de la portabilité, de l’agilité, de l’extensibilité et du contrôle dans l’ensemble du flux de travail du cycle de vie de l’application. L’avantage le plus important est l’isolation entre le développement et les opérations.
 
-
 >[!div class="step-by-step"]
-[Next](what-is-docker.md)
+>[Next](what-is-docker.md)

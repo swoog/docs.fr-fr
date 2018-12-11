@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2b2d487484f026be7637185ef759fb87db571b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211838"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145804"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Requêtes dans LINQ to DataSet
 Une requête est une expression qui récupère des données d'une source de données. En général, les requêtes sont exprimées dans un langage de requête spécialisé, tel que SQL pour les bases de données relationnelles et Xquery pour XML. Par conséquent, les développeurs ont dû apprendre un nouveau langage de requête pour chaque type de source de données ou format de données qu'ils interrogent. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] offre un modèle simplifié et cohérent qui permet d'utiliser des données de types de sources et de formats diversifiés. Dans une requête [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], vous travaillez toujours avec des objets de programmation.  
@@ -23,7 +23,7 @@ Une requête est une expression qui récupère des données d'une source de donn
   
  Dans une requête qui retourne une séquence, la variable de requête elle-même ne contient jamais les résultats de la requête et stocke uniquement les commandes de requête. L'exécution de la requête est différée jusqu'à ce que la variable de requête soit itérée au sein d'une boucle `foreach` ou `For Each`. Il s’agit *exécution différée*; autrement dit, la requête exécution lieu un certain temps après la construction de la requête. Vous pouvez ainsi exécuter une requête aussi souvent que vous le souhaitez. Cela est utile lorsque, par exemple, l'une de vos bases de données est en cours de mise à jour par d'autres applications. Dans votre application, vous pouvez créer une requête pour récupérer les informations les plus récentes et l'exécuter à plusieurs reprises, pour retourner chaque fois les informations à jour.  
   
- Contrairement aux requêtes différées qui retournent une séquence de valeurs, les requêtes qui retournent une valeur singleton sont exécutées immédiatement. Les requêtes <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> et <xref:System.Linq.Enumerable.First%2A> en sont quelques exemples. Elles s'exécutent immédiatement parce que les résultats de la requête sont nécessaires pour calculer le résultat singleton. Par exemple, pour trouver la moyenne des résultats, la requête doit être exécutée pour que la fonction de moyenne dispose de données sur lesquelles effectuer ses calculs. Vous pouvez également utiliser les méthodes <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A> sur une requête pour forcer l'exécution immédiate d'une requête qui ne produit pas de valeur singleton. Ces techniques peuvent être utiles lorsque vous souhaitez mettre en cache les résultats d'une requête. Pour plus d’informations sur l’exécution de requête différée et immédiate, consultez [mise en route avec LINQ](https://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9).  
+ Contrairement aux requêtes différées qui retournent une séquence de valeurs, les requêtes qui retournent une valeur singleton sont exécutées immédiatement. Les requêtes <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Average%2A> et <xref:System.Linq.Enumerable.First%2A> en sont quelques exemples. Elles s'exécutent immédiatement parce que les résultats de la requête sont nécessaires pour calculer le résultat singleton. Par exemple, pour trouver la moyenne des résultats, la requête doit être exécutée pour que la fonction de moyenne dispose de données sur lesquelles effectuer ses calculs. Vous pouvez également utiliser les méthodes <xref:System.Linq.Enumerable.ToList%2A> ou <xref:System.Linq.Enumerable.ToArray%2A> sur une requête pour forcer l'exécution immédiate d'une requête qui ne produit pas de valeur singleton. Ces techniques peuvent être utiles lorsque vous souhaitez mettre en cache les résultats d'une requête.
   
 ## <a name="queries"></a>Requêtes  
  [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] les requêtes peuvent être formulées dans deux syntaxes différentes : syntaxe d’expression et la syntaxe de requête fondée sur une méthode de requête.  
@@ -39,7 +39,7 @@ Une requête est une expression qui récupère des données d'une source de donn
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>Syntaxe de requête fondée sur une méthode  
- L'autre manière de formuler des requêtes [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consiste à utiliser des requêtes fondées sur une méthode. La syntaxe de requête fondée sur une méthode est une séquence d'appels directs de méthodes d'opérateur [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] passant des expressions lambda comme paramètres. Pour plus d’informations, consultez [Expressions lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
+ L'autre manière de formuler des requêtes [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] consiste à utiliser des requêtes fondées sur une méthode. La syntaxe de requête fondée sur une méthode est une séquence d’appels directs de méthodes d’opérateur [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] passant des expressions lambda comme paramètres. Pour plus d’informations, consultez [Expressions lambda](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
   
  Cet exemple utilise <xref:System.Linq.Enumerable.Select%2A> pour retourner toutes les lignes de `Product` et afficher les noms de produits.  
   

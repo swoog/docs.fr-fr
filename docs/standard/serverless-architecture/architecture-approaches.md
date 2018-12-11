@@ -4,12 +4,12 @@ description: Introduction à l’architecture approches pour créer des applicat
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 21e191f17e7d0b4f2d64454fb14c46a4831a8375
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 04ad383586f974bb2dccc4623a9a254f5668dab4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "49370019"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126743"
 ---
 # <a name="architecture-approaches"></a>Approches de l’architecture
 
@@ -97,5 +97,5 @@ Microservices sont fournis avec leurs propres problèmes, notamment :
 En fin de compte il existe des solutions pour répondre à tous ces défis, y compris qui exploite les avantages de sans serveur qui sont décrits plus loin.
 
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](architecture-deployment-approaches.md)
+>[Précédent](index.md)
+>[Suivant](architecture-deployment-approaches.md)

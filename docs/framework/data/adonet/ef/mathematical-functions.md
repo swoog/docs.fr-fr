@@ -2,12 +2,12 @@
 title: Fonctions mathématiques
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837308"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143673"
 ---
 # <a name="mathematical-functions"></a>Fonctions mathématiques
 
@@ -19,7 +19,7 @@ Effectue la fonction de valeur absolue.
 
 **Arguments**
 
-`expression` :`Int32`,`Int64`, `Double` ou `Decimal`.
+`expression`: Un `Int32`, `Int64`, `Double`, ou `Decimal`.
 
 **Valeur de retour**
 
@@ -35,7 +35,7 @@ Retourne la valeur d'arc cosinus de l'expression spécifiée.
 
 **Arguments**
 
-`expression` : `Double`.
+`expression`: `Double`
 
 **Valeur de retour**
 
@@ -51,7 +51,7 @@ Retourne la valeur d'arcsinus de l'expression spécifiée.
 
 **Arguments**
 
-`expression` : `Double`.
+`expression`: `Double`
 
 **Valeur de retour**
 
@@ -67,7 +67,7 @@ Retourne la valeur d'arctangente de l'expression numérique spécifiée.
 
 **Arguments**
 
-`expression` : `Double`.
+`expression`: `Double`
 
 **Valeur de retour**
 
@@ -83,7 +83,7 @@ Retourne l'angle, en radians, dont la tangente est comprise entre les deux expre
 
 **Arguments**
 
-`expression` : `Double`.
+`expression`: `Double`
 
 **Valeur de retour**
 
@@ -99,7 +99,7 @@ Convertit l'expression spécifiée en plus petit entier supérieur ou égal à c
 
 **Arguments**
 
-`expression` :`Int32`,`Int64`, `Double` ou `Decimal`.
+`expression`: Un `Int32`, `Int64`, `Double`, ou `Decimal`.
 
 **Valeur de retour**
 
@@ -116,7 +116,7 @@ Calcule le cosinus trigonométrique de l'angle spécifié, en radians.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -132,7 +132,7 @@ Calcule la cotangente trigonométrique de l'angle spécifié, en radians.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -148,7 +148,7 @@ Retourne l'angle correspondant, en degrés.
 
 **Arguments** 
 
-`expression` :`Int32`,`Int64`, `Double` ou `Decimal`. 
+`expression`: Un `Int32`, `Int64`, `Double`, ou `Decimal`. 
 
 **Valeur de retour** 
 
@@ -164,7 +164,7 @@ Calcule la valeur exponentielle d'une expression numérique spécifiée.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -178,7 +178,7 @@ Convertit l'expression spécifiée en plus grand entier inférieur ou égal à c
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -195,7 +195,7 @@ Calcule le logarithme népérien de l'expression `float` spécifiée.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -211,7 +211,7 @@ Retourne le logarithme en base 10 de l'expression `Double` spécifiée.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -258,7 +258,7 @@ Convertit les degrés en radians.
 
 **Arguments** 
 
-`expression` :`Int32`,`Int64`, `Double` ou `Decimal`. 
+`expression`: Un `Int32`, `Int64`, `Double`, ou `Decimal`. 
 
 **Valeur de retour** 
 
@@ -326,7 +326,7 @@ Calcule le sinus trigonométrique de l'angle spécifié, en radians, et retourne
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -340,7 +340,7 @@ Retourne la racine carrée de l'expression spécifiée.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -354,7 +354,7 @@ Retourne le carré de l'expression spécifiée.
 
 **Arguments** 
 
-`expression` : `Double`. 
+`expression`: `Double` 
 
 **Valeur de retour** 
 
@@ -384,8 +384,8 @@ Calcule la tangente d'une expression spécifiée.
 
 Pour plus d'informations sur les fonctions mathématiques prises en charge par SqlClient, consultez la documentation correspondant à la version de SQL Server que vous avez spécifiée dans le manifeste du fournisseur SqlClient :  
   
-**SQL Server 2005 :** [fonctions mathématiques (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008 :** [fonctions mathématiques (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 et versions ultérieur :** [fonctions mathématiques (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005 :** [Fonctions mathématiques (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008 :** [Fonctions mathématiques (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 et versions ultérieur :** [Fonctions mathématiques (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [Fonctions SqlClient pour Entity Framework](sqlclient-for-ef-functions.md)

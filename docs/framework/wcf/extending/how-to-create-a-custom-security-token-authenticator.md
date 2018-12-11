@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 ms.openlocfilehash: 2a6fc82b21d8530214923bdadcad7f52da947c82
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088817"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149261"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Comment : créer un authentificateur de jeton de sécurité personnalisé
 Cette rubrique indique comment créer un authentificateur de jetons de sécurité personnalisé et comment l'intégrer à un gestionnaire de jetons de sécurité personnalisé. Un authentificateur de jetons de sécurité valide le contenu du jeton de sécurité fourni par le message entrant. Lorsque le processus de validation réussit, l’authentificateur retourne une collection d’instances <xref:System.IdentityModel.Policy.IAuthorizationPolicy> qui, après évaluation, retourne un ensemble de revendications.  
   
- Pour utiliser un authentificateur de jeton de sécurité personnalisé dans Windows Communication Foundation (WCF), vous devez d’abord créer les informations d’identification personnalisées et de la sécurité des implémentations de gestionnaire de jetons. Pour plus d’informations sur la création des informations d’identification personnalisées et une sécurité Gestionnaire de jetons, consultez [procédure pas à pas : création d’un Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Pour plus d’informations sur les informations d’identification, Gestionnaire de jetons de sécurité et les classes de fournisseur et authentificateur, consultez [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Pour utiliser un authentificateur de jeton de sécurité personnalisé dans Windows Communication Foundation (WCF), vous devez d’abord créer les informations d’identification personnalisées et de la sécurité des implémentations de gestionnaire de jetons. Pour plus d’informations sur la création des informations d’identification personnalisées et une sécurité Gestionnaire de jetons, consultez [procédure pas à pas : Création du Client personnalisés et les informations d’identification du Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Pour plus d’informations sur les informations d’identification, Gestionnaire de jetons de sécurité et les classes de fournisseur et authentificateur, consultez [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Procédures  
   
@@ -47,7 +47,7 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
 
- [Procédure pas à pas : Création de Client personnalisées et les informations d’identification de Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) décrit comment créer des informations d’identification personnalisées et un sécurité personnalisée Gestionnaire de jetons. Pour utiliser l'authentificateur de jetons de sécurité personnalisés créé ici, une implémentation du gestionnaire de jetons de sécurité est modifiée pour retourner l'authentificateur personnalisé à partir de la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. La méthode retourne un authentificateur lorsqu’une exigence de jeton de sécurité appropriée est passée.  
+ [Procédure pas à pas : Création du Client personnalisés et les informations d’identification de Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) décrit comment créer des informations d’identification personnalisées et un sécurité personnalisée Gestionnaire de jetons. Pour utiliser l'authentificateur de jetons de sécurité personnalisés créé ici, une implémentation du gestionnaire de jetons de sécurité est modifiée pour retourner l'authentificateur personnalisé à partir de la méthode <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A>. La méthode retourne un authentificateur lorsqu’une exigence de jeton de sécurité appropriée est passée.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Pour intégrer un authentificateur de jetons de sécurité personnalisés à un gestionnaire de jetons de sécurité personnalisés  
   
@@ -63,6 +63,6 @@ Cette rubrique indique comment créer un authentificateur de jetons de sécurit�
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
- [Procédure pas à pas : création d’informations d’identification de client et de service personnalisées](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Guide pratique pour créer un fournisseur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [Procédure pas à pas : Création du Client personnalisés et les informations d’identification de Service](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [Comment : Créer un fournisseur de jetons de sécurité personnalisé](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [Architecture de sécurité](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

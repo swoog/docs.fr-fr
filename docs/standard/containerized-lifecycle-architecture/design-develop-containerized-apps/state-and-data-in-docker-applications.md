@@ -4,12 +4,12 @@ description: Cycle de vie des applications Docker en conteneur avec la plateform
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123226"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154175"
 ---
 # <a name="state-and-data-in-docker-applications"></a>État et données dans les applications Docker
 
@@ -39,7 +39,7 @@ Figure 4-5 montre que les volumes Docker standard peuvent être placées sur le 
 
 ![](./media/image5.png)
 
-Figure 4-5 : volumes de données et sources de données externes pour les applications de conteneurs/conteneurs
+Figure 4-5 : Volumes de données et sources de données externes pour les applications de conteneurs/conteneurs
 
 En raison de l’incapacité à gérer les données partagées entre les conteneurs qui s’exécutent sur des hôtes physiques distincts, il est recommandé de pas utiliser des volumes de données d’entreprise, sauf si l’hôte Docker est un ordinateur hôte/virtuel fixe, car lorsque vous utilisez des conteneurs Docker dans un orchestrateur, les conteneurs sont supposées être déplacées vers un autre hôte, selon les optimisations à effectuer par le cluster.
 
@@ -49,7 +49,6 @@ Par conséquent, les volumes de données régulières sont un bon mécanisme pou
 
 Sources de données distantes et des caches comme base de données SQL, DocumentDB ou un cache à distance comme Redis serait identique développements sans conteneurs. Il s’agit d’une des manières préféré et éprouvée, pour stocker les données d’application métier.
 
-
 >[!div class="step-by-step"]
-[Précédent](monolithic-applications.md)
-[Suivant](soa-applications.md)
+>[Précédent](monolithic-applications.md)
+>[Suivant](soa-applications.md)
