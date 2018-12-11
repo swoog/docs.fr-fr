@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing, exemple
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: db4cd5be73e3c170f2feaa1e76f275eb7d9cd226
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ddfb3340c010b57b78fa913601451b6a2af3674
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089735"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235135"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing, exemple
 Le protocole TCP/IP utilise un numéro à 16 bits, appelé un port, pour différencier des connexions vers des applications réseau multiples qui s'exécutent sur le même ordinateur. Si une application écoute un port, tout le trafic TCP de ce port va à cette application. Les autres applications ne peuvent pas écouter en même temps ce port.  
@@ -25,13 +25,13 @@ Le protocole TCP/IP utilise un numéro à 16 bits, appelé un port, pour différ
   
  Partage de ports NetTcp est une fonctionnalité de Windows Communication Foundation (WCF) qui permet même de plusieurs applications de réseau de partager un port unique. Le service de partage de ports NetTcp accepte les connexions utilisant le protocole net.tcp et transfère les messages en fonction de leur adresse de destination.  
   
- Le service de partage de ports NetTcp n'est pas activé par défaut. Avant d'exécuter cet exemple, vous devez activer le service manuellement. Pour plus d’informations, consultez [Comment : activer le Service de partage de Port Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Si le service est désactivé, une exception est levée lorsque l'application serveur est démarrée.  
+ Le service de partage de ports NetTcp n'est pas activé par défaut. Avant d'exécuter cet exemple, vous devez activer le service manuellement. Pour plus d'informations, voir [Procédure : Activer le Service de partage de ports Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Si le service est désactivé, une exception est levée lorsque l'application serveur est démarrée.  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- Le partage de ports est activé sur le serveur en définissant la propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> de la liaison <xref:System.ServiceModel.NetTcpBinding> ou de l'élément de liaison <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Le client n'a pas besoin de savoir comment le partage de ports a été configuré pour l'utiliser sur le serveur.  
+ Le partage de ports est activé sur le serveur en définissant la propriété <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> de la liaison <xref:System.ServiceModel.NetTcpBinding> ou de l’élément de liaison <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. Le client n'a pas besoin de savoir comment le partage de ports a été configuré pour l'utiliser sur le serveur.  
   
 ## <a name="enabling-port-sharing"></a>Activation du partage de ports  
  Le code suivant illustre l'activation du partage de ports sur le serveur. Il démarre une instance du service `ICalculator` sur un port fixe avec un chemin d'accès URI aléatoire. Bien que deux services puissent partager le même port, leurs adresses de point de terminaison globales doivent demeurer uniques afin que le service de partage de ports NetTcp puisse router les messages vers l'application qui convient.  
@@ -44,8 +44,7 @@ binding.PortSharingEnabled = true;
 // Start a service on a fixed TCP port  
 ServiceHost host = new ServiceHost(typeof(CalculatorService));  
 ushort salt = (ushort)new Random().Next();  
-string address =  
-   String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+string address = $"net.tcp://localhost:9000/calculator/{salt}";
 host.AddServiceEndpoint(typeof(ICalculator), binding, address);  
 host.Open();  
 ```
@@ -66,7 +65,7 @@ class client
    {  
       Console.Write("Enter the service number to test: ");  
       ushort salt = ushort.Parse(Console.ReadLine());  
-      string address = String.Format("net.tcp://localhost:9000/calculator/{0}", salt);  
+      string address = $"net.tcp://localhost:9000/calculator/{salt}";
       ChannelFactory<ICalculator> factory = new ChannelFactory<ICalculator>(new NetTcpBinding());  
       ICalculator proxy = factory.CreateChannel(new EndpointAddress(address));  
   

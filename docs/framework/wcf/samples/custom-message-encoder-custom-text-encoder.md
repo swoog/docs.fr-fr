@@ -1,15 +1,15 @@
 ---
-title: 'Encodeur de message personnalisé : Encodeur de texte personnalisé'
+title: 'Encodeur de Message personnalisé : Encodeur de texte personnalisé'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 39f09fd2ca58bfe7eb38afe536194ecad104d394
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192678"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236542"
 ---
-# <a name="custom-message-encoder-custom-text-encoder"></a>Encodeur de message personnalisé : Encodeur de texte personnalisé
+# <a name="custom-message-encoder-custom-text-encoder"></a>Encodeur de Message personnalisé : Encodeur de texte personnalisé
 Cet exemple montre comment implémenter un encodeur de message texte personnalisé à l’aide de Windows Communication Foundation (WCF).  
   
 > [!WARNING]
@@ -65,8 +65,7 @@ public class CustomTextMessageEncoder : MessageEncoder
   
         this.writerSettings = new XmlWriterSettings();  
         this.writerSettings.Encoding = Encoding.GetEncoding(factory.CharSet);  
-        this.contentType = string.Format("{0}; charset={1}",   
-            this.factory.MediaType, this.writerSettings.Encoding.HeaderName);  
+        this.contentType = $"{this.factory.MediaType}; charset={this.writerSettings.Encoding.HeaderName}";
     }  
   
     public override string ContentType  
@@ -211,12 +210,12 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Ajout de la prise en charge des métadonnées à l’élément de liaison d’encodage de message  
  Les types qui dérivent de <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> sont chargés de mettre à jour la version de la liaison SOAP dans le document WSDL généré pour le service. Pour ce faire, implémentez la méthode `ExportEndpoint` sur l'interface <xref:System.ServiceModel.Description.IWsdlExportExtension>, puis modifiez le document WSDL généré. Dans cet exemple, `CustomTextMessageBindingElement` utilise la logique d'exportation WSDL de `TextMessageEncodingBinidngElement`.  
   
- Pour cet exemple, la configuration du client est créée manuellement. Vous ne pouvez pas utiliser Svcutil.exe pour générer la configuration du client car `CustomTextMessageBindingElement` n'exporte pas d'assertion de stratégie pour décrire son comportement. Il est en général préférable d'implémenter l'interface <xref:System.ServiceModel.Description.IPolicyExportExtension> sur un élément de liaison personnalisé pour exporter une assertion de stratégie personnalisée qui décrit le comportement ou la fonctionnalité implémentée par l'élément de liaison. Pour obtenir un exemple montrant comment exporter une assertion de stratégie pour un élément de liaison personnalisée, consultez le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple.  
+ Pour cet exemple, la configuration du client est créée manuellement. Vous ne pouvez pas utiliser Svcutil.exe pour générer la configuration du client car `CustomTextMessageBindingElement` n'exporte pas d'assertion de stratégie pour décrire son comportement. Il est en général préférable d’implémenter l’interface <xref:System.ServiceModel.Description.IPolicyExportExtension> sur un élément de liaison personnalisé pour exporter une assertion de stratégie personnalisée qui décrit le comportement ou la fonctionnalité implémentée par l’élément de liaison. Pour obtenir un exemple montrant comment exporter une assertion de stratégie pour un élément de liaison personnalisée, consultez le [Transport : UDP](../../../../docs/framework/wcf/samples/transport-udp.md) exemple.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Gestionnaire de configuration de liaison d’encodage de message  
- La section précédente montre comment utiliser l'encodeur de message texte personnalisé par programme. `CustomTextMessageEncodingBindingSection` implémente un gestionnaire de configuration qui vous permet de spécifier l'utilisation d'un encodeur de message texte personnalisé dans un fichier de configuration. La classe `CustomTextMessageEncodingBindingSection` dérive de la classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. La propriété `BindingElementType` indique au système de configuration le type d'élément de liaison à créer pour cette section.  
+ La section précédente montre comment utiliser l'encodeur de message texte personnalisé par programme. `CustomTextMessageEncodingBindingSection` implémente un gestionnaire de configuration qui vous permet de spécifier l'utilisation d'un encodeur de message texte personnalisé dans un fichier de configuration. La classe `CustomTextMessageEncodingBindingSection` dérive de la classe <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> . La propriété `BindingElementType` indique au système de configuration le type d'élément de liaison à créer pour cette section.  
   
- Tous les paramètres définis par `CustomTextMessageBindingElement` sont exposés en tant que propriétés dans `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> permet de mapper les attributs d'élément de configuration aux propriétés et d'affecter des valeurs par défaut si les attributs ne sont pas définis. Après avoir chargé et appliqué les valeurs de la configuration aux propriétés du type, la méthode <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> est appelée et convertit les propriétés en instance concrète d'un élément de liaison.  
+ Tous les paramètres définis par `CustomTextMessageBindingElement` sont exposés en tant que propriétés dans `CustomTextMessageEncodingBindingSection`. <xref:System.Configuration.ConfigurationPropertyAttribute> permet de mapper les attributs d'élément de configuration aux propriétés et d'affecter des valeurs par défaut si les attributs ne sont pas définis. Après avoir chargé et appliqué les valeurs de la configuration aux propriétés du type, la méthode <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A> est appelée et convertit les propriétés en instance concrète d’un élément de liaison.  
   
  Ce gestionnaire de configuration mappe à la représentation suivante dans le fichier App.config ou Web.config du service ou du client.  
   

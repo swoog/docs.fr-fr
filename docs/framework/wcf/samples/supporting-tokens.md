@@ -2,12 +2,12 @@
 title: Supporting Tokens
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: b5834a0ae8fa987f243617fdf291223725ed5f6d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: b1fda39903c39811187fe3701d2a4c143b637544
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261600"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237699"
 ---
 # <a name="supporting-tokens"></a>Supporting Tokens
 Cet exemple montre comment ajouter des jetons supplémentaires à un message qui utilise WS-Security. L'exemple ajoute un jeton de sécurité binaire X.509 outre un jeton de sécurité de nom d'utilisateur. Le jeton est passé dans un en-tête de message WS-Security du client au service et une partie du message est signée avec la clé privée associée au jeton de sécurité X.509 pour prouver la possession du certificat X.509 au récepteur. Cela s'avère utile dans le cas où plusieurs revendications doivent être associées à un message pour authentifier ou autoriser l'expéditeur. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -27,7 +27,7 @@ Cet exemple montre comment ajouter des jetons supplémentaires à un message qui
 ## <a name="client-authenticates-with-username-token-and-supporting-x509-security-token"></a>Le client s'authentifie à l'aide du jeton de nom d'utilisateur et du jeton de sécurité X.509 de prise en charge
  Le service expose un point de terminaison unique de communication qui est créé par programme à l'aide des classes `BindingHelper` et `EchoServiceHost`. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une liaison personnalisé à l'aide de `SymmetricSecurityBindingElement` et `HttpTransportBindingElement`. Cet exemple oblige `SymmetricSecurityBindingElement` à utiliser un certificat X.509 du service pour protéger la clé symétrique pendant la transmission et à passer un `UserNameToken` avec le `X509SecurityToken` de prise en charge dans un en-tête de message WS-Security. La clé symétrique permet de chiffrer le corps du message et le jeton de sécurité de nom d'utilisateur. Le jeton de prise en charge est passé comme jeton de sécurité binaire supplémentaire dans l'en-tête de message WS-Security. L'authenticité du jeton de prise en charge est prouvée en signant une partie du message avec la clé privée associée au jeton de sécurité X.509 de prise en charge.
 
-```
+```csharp
 public static Binding CreateMultiFactorAuthenticationBinding()
 {
     HttpTransportBindingElement httpTransport = new HttpTransportBindingElement();
@@ -55,7 +55,7 @@ public static Binding CreateMultiFactorAuthenticationBinding()
 
  Le comportement spécifie les informations d'identification du service qui doivent être utilisées pour l'authentification du client ainsi que les informations sur le certificat X.509 du service. L'exemple utilise `CN=localhost` comme nom du sujet dans le certificat X.509 du service.
 
-```
+```csharp
 override protected void InitializeRuntime()
 {
     // Extract the ServiceCredentials behavior or create one.
@@ -88,7 +88,7 @@ This setting is less secure than the default, ChainTrust. The security implicati
 
  Code de service :
 
-```
+```csharp
 [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
 public class EchoService : IEchoService
 {
@@ -100,8 +100,7 @@ public class EchoService : IEchoService
             OperationContext.Current.ServiceSecurityContext,
             out userName,
             out certificateSubjectName);
-            return String.Format("Hello {0}, {1}",
-                    userName, certificateSubjectName);
+            return $"Hello {userName}, {certificateSubjectName}";
     }
 
     public void Dispose()
@@ -174,7 +173,7 @@ public class EchoService : IEchoService
 
  Le point de terminaison client est configuré de la même manière que le point de terminaison de service. Le client utilise une classe `BindingHelper` identique pour créer sa liaison. La suite de la configuration s'effectue dans classe `Client`. Le client définit les formations sur le jeton de sécurité de nom d'utilisateur, le jeton de sécurité X.509 de prise en charge et les informations sur le certificat X.509 du service dans le code d'installation vers la collection de comportements de point de terminaison client.
 
-```
+```csharp
  static void Main()
  {
      // Create the custom binding and an endpoint address for
@@ -285,7 +284,7 @@ public class EchoService : IEchoService
 ## <a name="displaying-callers-information"></a>Affichage des informations sur les appelants
  Pour afficher les informations sur l'appelant, vous pouvez utiliser `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, tel qu'indiqué dans le code suivant. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contient les revendications d'autorisation associées à l'appelant actuel. Ces revendications sont fournies automatiquement par Windows Communication Foundation (WCF) pour chaque jeton reçu dans le message.
 
-```
+```csharp
 bool TryGetClaimValue<TClaimResource>(ClaimSet claimSet, string
                          claimType, out TClaimResource resourceValue)
     where TClaimResource : class
@@ -430,7 +429,7 @@ iisreset
   
 2.  Lancez Client.exe à partir de \client\bin. L'activité du client s'affiche sur son application de console.  
   
-3.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### <a name="to-run-the-sample-across-machines"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -448,7 +447,7 @@ iisreset
   
 7.  Copiez le fichier Service.cer du répertoire de service dans le répertoire client sur l'ordinateur client.  
   
-8.  Sur le client, ouvrez une fenêtre d'invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez `setup.bat client`. L'exécution de `setup.bat` à l'aide de l'argument `client` crée un certificat client appelé client.com, puis exporte ce certificat vers un fichier nommé Client.cer.  
+8.  Sur le client, ouvrez une fenêtre d'invite de commandes de Visual Studio avec des privilèges d'administrateur et exécutez `setup.bat client`. L’exécution de `setup.bat` à l’aide de l’argument `client` crée un certificat client appelé client.com, puis exporte ce certificat vers un fichier nommé Client.cer.  
   
 9. Dans le fichier Client.exe.config sur l'ordinateur client, modifiez la valeur d'adresse du point de terminaison pour qu'il corresponde à la nouvelle adresse de votre service. Pour ce faire, remplacez localhost par le nom de domaine complet du serveur.  
   
@@ -458,13 +457,13 @@ iisreset
   
 12. Sur le serveur, exécutez ImportClientCert.bat. Cette opération importe le certificat client du fichier Client.cer dans le magasin LocalMachine - TrustedPeople.  
   
-13. Sur l'ordinateur du client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+13. Sur l'ordinateur du client, lancez Client.exe à partir d'une fenêtre d'invite de commandes. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ##### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
 -   Exécutez Cleanup.bat dans le dossier d'exemples après avoir exécuté l'exemple.  
   
 > [!NOTE]
->  Ce script ne supprime pas les certificats de service figurant sur le client lorsque l'exemple est exécuté sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`, par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
+>  Ce script ne supprime pas les certificats de service figurant sur le client lorsque l'exemple est exécuté sur plusieurs ordinateurs. Si vous avez exécuté les exemples WCF qui utilisent des certificats sur plusieurs ordinateurs, assurez-vous d’effacer les certificats de service qui ont été installés dans le magasin CurrentUser - TrustedPeople. Pour ce faire, utilisez la commande suivante : `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Par exemple : `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
 ## <a name="see-also"></a>Voir aussi

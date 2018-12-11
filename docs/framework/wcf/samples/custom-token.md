@@ -2,12 +2,12 @@
 title: Custom Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: 03a1f8bd6a5f2ec57e7af865d2aadde77b40326d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 8aa41a1f9651d0a385836178bc791c14706c17e4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261522"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243047"
 ---
 # <a name="custom-token"></a>Custom Token
 Cet exemple montre comment ajouter une implémentation de jeton personnalisé dans une application Windows Communication Foundation (WCF). Cet exemple utilise un `CreditCardToken` pour transmettre de manière sécurisée les informations de carte de crédit du client au service. Le jeton est transmis dans l'en-tête de message WS-Security. Il est signé et chiffré à l'aide de l'élément de liaison de sécurité symétrique en même temps que le corps du message et que les autres en-têtes de message. Cette particularité est utile lorsque les jetons intégrés ne sont pas suffisants. Cet exemple illustre comment fournir un jeton de sécurité personnalisé à un service au lieu d'utiliser l'un des jetons intégrés. Le service implémente un contrat qui définit un modèle de communication demande-réponse.
@@ -28,7 +28,7 @@ Cet exemple montre comment ajouter une implémentation de jeton personnalisé da
 ## <a name="client-authentication-using-a-custom-security-token"></a>Authentification du client à l'aide d'un jeton de sécurité personnalisé
  Le service expose un point de terminaison unique qui est créé par programme à l'aide des classes `BindingHelper` et `EchoServiceHost`. Le point de terminaison se compose d'une adresse, d'une liaison et d'un contrat. La liaison est configurée avec une liaison personnalisé à l'aide de `SymmetricSecurityBindingElement` et `HttpTransportBindingElement`. Dans cet exemple, l'élément `SymmetricSecurityBindingElement` est configuré pour utiliser un certificat X.509 de service afin de protéger la clé symétrique pendant la transmission et de transmettre le `CreditCardToken` personnalisé dans un en-tête de message WS-Security sous forme de jeton de sécurité signé et chiffré. Le comportement spécifie les informations d'identification du service qui doivent être utilisées pour l'authentification du client ainsi que les informations sur le certificat X.509 du service.
 
-```
+```csharp
 public static class BindingHelper
 {
     public static Binding CreateCreditCardBinding()
@@ -49,7 +49,7 @@ public static class BindingHelper
 
  Pour consommer le jeton de carte de crédit figurant dans le message, l'exemple utilise les informations d'identification personnalisées du service. La classe d'informations d'identification du service se trouve dans la classe `CreditCardServiceCredentials`. Elle est ajoutée aux collections de comportements de l'hôte de service dans la méthode `EchoServiceHost.InitializeRuntime`.
 
-```
+```csharp
 class EchoServiceHost : ServiceHost
 {
     string creditCardFile;
@@ -64,7 +64,6 @@ class EchoServiceHost : ServiceHost
         }
 
         creditCardFile = String.Format("{0}\\{1}", System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath, creditCardFile);
-
     }
 
     override protected void InitializeRuntime()
@@ -86,13 +85,12 @@ class EchoServiceHost : ServiceHost
 
  Le point de terminaison du client est configuré de la même manière que le point de terminaison du service. Le client utilise une classe `BindingHelper` identique pour créer sa liaison. La suite de la configuration s'effectue dans la classe `Client`. Le client définit également les informations qui figureront dans `CreditCardToken` ainsi que les informations relatives au certificat X.509 du service dans le code d'installation en ajoutant une instance `CreditCardClientCredentials` à l'aide des données appropriées à la collection des comportements du point de terminaison du client. Dans cet exemple, le nom du sujet du certificat X.509 utilisé correspond à `CN=localhost` pour le certificat de service.
 
-```
+```csharp
 Binding creditCardBinding = BindingHelper.CreateCreditCardBinding();
 EndpointAddress serviceAddress = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");
 
 // Create a client with given client endpoint configuration
-channelFactory =
-new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
+channelFactory = new ChannelFactory<IEchoService>(creditCardBinding, serviceAddress);
 
 // configure the credit card credentials on the channel factory
 CreditCardClientCredentials credentials =
@@ -119,7 +117,7 @@ channelFactory.Close();
 
  La section suivante décrit ce qui doit être fait pour activer un jeton personnalisé d’être transmises sur le câble et consommé par un point de terminaison WCF.
 
-```
+```csharp
 class CreditCardToken : SecurityToken
 {
     CreditCardInfo cardInfo;
@@ -161,7 +159,7 @@ class CreditCardToken : SecurityToken
 
  Côté client, la classe `CreditCardSecurityTokenSerializer` inscrit les informations contenues dans la représentation d'objet du jeton de sécurité dans l'enregistreur XML.
 
-```
+```csharp
 public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 {
     public CreditCardSecurityTokenSerializer(SecurityTokenVersion version) : base() { }
@@ -257,7 +255,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
 
  Côté service, cette fonctionnalité figure dans les classes `CreditCardServiceCredentials`, `CreditCardServiceCredentialsSecurityTokenManager`, `CreditCardTokenAuthenticator` et `CreditCardTokenAuthorizationPolicy`.
 
-```
+```csharp
     public class CreditCardClientCredentials : ClientCredentials
     {
         CreditCardInfo creditCardInfo;
@@ -287,7 +285,7 @@ public class CreditCardSecurityTokenSerializer : WSSecurityTokenSerializer
         }
     }
 
-public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
+    public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         CreditCardClientCredentials creditCardClientCredentials;
 
@@ -342,7 +340,7 @@ public class CreditCardClientCredentialsSecurityTokenManager : ClientCredentials
         }
     }
 
-public class CreditCardServiceCredentials : ServiceCredentials
+    public class CreditCardServiceCredentials : ServiceCredentials
     {
         string creditCardFile;
 
@@ -371,8 +369,8 @@ public class CreditCardServiceCredentials : ServiceCredentials
         }
     }
 
-public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
-{
+    public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentialsSecurityTokenManager
+    {
         CreditCardServiceCredentials creditCardServiceCredentials;
 
         public CreditCardServiceCredentialsSecurityTokenManager(CreditCardServiceCredentials creditCardServiceCredentials)
@@ -502,12 +500,11 @@ public class CreditCardServiceCredentialsSecurityTokenManager : ServiceCredentia
 ## <a name="displaying-the-callers-information"></a>Affichage des informations relatives aux appelants
  Pour afficher les informations de l'appelant, utilisez `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`, tel qu'indiqué dans l'exemple de code suivant. `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` contient les revendications d'autorisation associées à l'appelant actuel. Ces revendications sont fournies par la classe `CreditCardToken`, depuis sa collection `AuthorizationPolicies`.
 
-```
+```csharp
 bool TryGetStringClaimValue(ClaimSet claimSet, string claimType, out string claimValue)
 {
     claimValue = null;
-    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType,
-        Rights.PossessProperty);
+    IEnumerable<Claim> matchingClaims = claimSet.FindClaims(claimType, Rights.PossessProperty);
     if (matchingClaims == null)
         return false;
     IEnumerator<Claim> enumerator = matchingClaims.GetEnumerator();
@@ -532,9 +529,7 @@ string GetCallerCreditCardNumber()
                  {
                      issuer = "Unknown";
                  }
-                 return String.Format(
-                   "Credit card '{0}' issued by '{1}'",
-                   creditCardNumber, issuer);
+                 return $"Credit card '{creditCardNumber}' issued by '{issuer}'";
         }
     }
     return "Credit card is not known";
@@ -606,7 +601,7 @@ string GetCallerCreditCardNumber()
   
 1.  Lancez Client.exe à partir du répertoire \client\bin. L'activité du client s'affiche sur son application de console.  
   
-2.  Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Pour exécuter l'exemple sur plusieurs ordinateurs  
   
@@ -628,7 +623,7 @@ string GetCallerCreditCardNumber()
   
 9. Sur l'ordinateur client, lancez Client.exe à partir d'une fenêtre d'invite de commandes.  
   
-10. Si le client et le service ne sont pas en mesure de communiquer, consultez [conseils de dépannage](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Si le client et le service ne parviennent pas à communiquer, consultez [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Pour procéder au nettoyage après exécution de l'exemple  
   
