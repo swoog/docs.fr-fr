@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: a608b91c78808af70bd5e9188926a12b945c5604
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a5e5826dddbf60e92a50fd4f83322e7c1062f636
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453175"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144869"
 ---
 # <a name="code-access-security-and-adonet"></a>Sécurité d'accès du code et ADO.NET
 Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécurité d'accès du code (CAS, Code Access Security) implémentées à l'aide d'une infrastructure commune fournie par le Common Language Runtime (CLR). Dans l'univers du code non managé, la plupart des applications s'exécutent avec les autorisations de l'utilisateur ou d'une principal de sécurité. C'est pourquoi les systèmes informatiques peuvent être endommagés et des données privées compromises lorsqu'un utilisateur bénéficiant de privilèges élevés exécute des logiciels malveillants ou remplis d'erreurs.  
@@ -23,7 +23,7 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
  Le CLR permet au code d'effectuer uniquement les opérations pour lesquelles il dispose d'une autorisation. Le code peut demander des autorisations qui lui sont accordées en fonction de la stratégie de sécurité définie par un administrateur.  
   
 > [!NOTE]
->  Le code s'exécutant dans le CLR ne peut pas s'octroyer d'autorisations à lui-même. Par exemple, un code peut demander et obtenir moins d'autorisations qu'une stratégie de sécurité le prévoit, mais il ne pourra jamais en obtenir plus. Lors de l'octroi d'autorisations, démarrez sans autorisation, puis ajoutez les autorisations les plus restrictives pour la tâche en cours d'exécution. Démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées susceptibles de contenir des failles de sécurité involontaires dues à l'octroi de davantage d'autorisations que nécessaire. Pour plus d’informations, consultez [NIB : configuration de la stratégie de sécurité](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) et [NIB : gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  Le code s'exécutant dans le CLR ne peut pas s'octroyer d'autorisations à lui-même. Par exemple, un code peut demander et obtenir moins d'autorisations qu'une stratégie de sécurité le prévoit, mais il ne pourra jamais en obtenir plus. Lors de l'octroi d'autorisations, démarrez sans autorisation, puis ajoutez les autorisations les plus restrictives pour la tâche en cours d'exécution. Démarrer avec toutes les autorisations puis en refuser individuellement génère des applications non sécurisées susceptibles de contenir des failles de sécurité involontaires dues à l'octroi de davantage d'autorisations que nécessaire. Pour plus d’informations, consultez [NIB : Configuration de la stratégie de sécurité](https://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) et [NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
  Il existe trois types d'autorisations d'accès du code :  
   
@@ -38,7 +38,7 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
 ### <a name="requesting-permissions"></a>Demande d'autorisations  
  Les demandes d'autorisations ont pour but d'indiquer au runtime les autorisations dont votre application a besoin pour s'exécuter et de garantir que seules les autorisations requises lui sont octroyées. Par exemple, si votre application doit écrire des données sur le disque local, elle nécessite <xref:System.Security.Permissions.FileIOPermission>. Si cette autorisation n'a pas été accordée, l'application échoue lorsqu'elle tente d'écrire sur le disque. Cependant, si l'application demande `FileIOPermission` et que cette autorisation lui a été refusée, l'application génère l'exception dès le départ et ne se charge pas.  
   
- Dans un scénario dans lequel l'application a seulement besoin de lire des données du disque, vous pouvez demander à ce qu'aucune autorisation d'accès en écriture ne lui soit jamais octroyée. En cas de bogue ou d'attaque malveillante, votre code ne peut pas altérer les données sur lesquelles il opère. Pour plus d’informations, consultez [NIB : demande d’autorisations](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ Dans un scénario dans lequel l'application a seulement besoin de lire des données du disque, vous pouvez demander à ce qu'aucune autorisation d'accès en écriture ne lui soit jamais octroyée. En cas de bogue ou d'attaque malveillante, votre code ne peut pas altérer les données sur lesquelles il opère. Pour plus d’informations, consultez [NIB : Demande des autorisations](https://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
   
 ## <a name="role-based-security-and-cas"></a>Sécurité basée sur les rôles et sécurité d'accès du code (CAS)  
  L'implémentation de la sécurité basée sur les rôles et de la sécurité d'accès du code (CAS) améliore la sécurité globale de votre application. La sécurité basée sur les rôles peut utiliser un compte Windows ou une identité personnalisée, en mettant à la disposition du thread actuel des informations sur la principal de sécurité. Par ailleurs, les applications doivent souvent accorder l'accès aux données et aux ressources en fonction des informations d'identification fournies par l'utilisateur. Généralement, ces applications vérifient le rôle de l'utilisateur afin de lui donner accès aux ressources correspondant à ce rôle.  
@@ -71,8 +71,8 @@ Le .NET Framework offre une sécurité basée sur les rôles ainsi qu'une sécur
 |-----------------------------------|-----------------|  
 |`Action`|Obtient ou définit une action de sécurité. Hérité de l'objet <xref:System.Security.Permissions.SecurityAttribute>.|  
 |`AllowBlankPassword`|Active ou désactive l'utilisation d'un mot de passe vide dans une chaîne de connexion. Les valeurs valides sont `true` (pour activer l'utilisation des mots de passe vides) et `false` (pour la désactiver). Hérité de l'objet <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`ConnectionString`|Identifie une chaîne de connexion autorisée. Plusieurs chaînes de connexion peuvent être identifiées. **Remarque :** n’incluent pas un ID d’utilisateur ou le mot de passe dans votre chaîne de connexion. Dans cette mise en production, vous ne pouvez pas modifier les restrictions liées à la chaîne de connexion à l’aide de l’outil de configuration .NET Framework. <br /><br /> Hérité de l'objet <xref:System.Data.Common.DBDataPermissionAttribute>.|  
-|`KeyRestrictions`|Identifie les paramètres de chaîne de connexion autorisés et non autorisés. Paramètres de chaîne de connexion sont identifiés sous la forme  *\<nom de paramètre > =*. Il est possible de spécifier plusieurs paramètres, délimités par un point-virgule (;). **Remarque :** si vous ne spécifiez pas `KeyRestrictions`, mais vous définissez `KeyRestrictionBehavior` propriété `AllowOnly` ou `PreventUsage`, aucun paramètre de chaîne de connexion supplémentaires n’est autorisés. Hérité de l'objet <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`ConnectionString`|Identifie une chaîne de connexion autorisée. Plusieurs chaînes de connexion peuvent être identifiées. **Remarque :**  N'incluez pas d'ID utilisateur ni de mot de passe dans votre chaîne de connexion. Dans cette version, vous ne pouvez pas modifier les restrictions liées à la chaîne de connexion à l'aide de l'outil de configuration .NET Framework. <br /><br /> Hérité de l'objet <xref:System.Data.Common.DBDataPermissionAttribute>.|  
+|`KeyRestrictions`|Identifie les paramètres de chaîne de connexion autorisés et non autorisés. Paramètres de chaîne de connexion sont identifiés sous la forme  *\<nom de paramètre > =*. Il est possible de spécifier plusieurs paramètres, délimités par un point-virgule (;). **Remarque :**  Si aucun `KeyRestrictions` n'est spécifié et que la propriété `KeyRestrictionBehavior` a la valeur `AllowOnly` ou `PreventUsage`, aucun paramètre de chaîne de connexion supplémentaire n'est autorisé. Hérité de l'objet <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`KeyRestrictionBehavior`|Identifie les paramètres de chaîne de connexion comme étant les seuls paramètres supplémentaires autorisés (`AllowOnly`) ou identifie les paramètres supplémentaires qui ne sont pas autorisés (`PreventUsage`). `AllowOnly` est la valeur par défaut. Hérité de l'objet <xref:System.Data.Common.DBDataPermissionAttribute>.|  
 |`TypeID`|Obtient un identificateur unique pour cet attribut lors de l'implémentation dans une classe dérivée. Hérité de l'objet <xref:System.Attribute>.|  
 |`Unrestricted`|Indique si une autorisation illimitée à la ressource est déclarée. Hérité de l'objet <xref:System.Security.Permissions.SecurityAttribute>.|  
@@ -160,7 +160,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Vérification de l'accès du code ADO.NET à l'aide des autorisations de sécurité  
- Dans les scénarios avec confiance partielle, vous pouvez exiger des privilèges de sécurité d'accès du code (CAS) pour des méthodes particulières dans votre code en spécifiant un objet <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si ce privilège n'est pas autorisé par la stratégie de sécurité limitée en vigueur, une exception est levée avant que votre code soit exécuté. Pour plus d’informations sur la stratégie de sécurité, consultez [NIB : gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) et [NIB : meilleures pratiques de sécurité stratégie](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ Dans les scénarios avec confiance partielle, vous pouvez exiger des privilèges de sécurité d'accès du code (CAS) pour des méthodes particulières dans votre code en spécifiant un objet <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Si ce privilège n'est pas autorisé par la stratégie de sécurité limitée en vigueur, une exception est levée avant que votre code soit exécuté. Pour plus d’informations sur la stratégie de sécurité, consultez [NIB : Gestion des stratégies de sécurité](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) et [NIB : Meilleures pratiques de sécurité stratégie](https://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Exemple  
  L'exemple suivant montre comment écrire un code requérant une chaîne de connexion particulière. Il simule le refus d'autorisations illimitées à <xref:System.Data.SqlClient>, qu'un administrateur système implémenterait à l'aide d'une stratégie de sécurité d'accès du code dans la réalité.  
@@ -197,6 +197,5 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Voir aussi  
  [Sécurisation des applications ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Sécurité PAVE dans le code natif et .NET Framework](https://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
- [Sécurité d’accès du code](../../../../docs/framework/misc/code-access-security.md)  
  [Sécurité basée sur les rôles](../../../../docs/standard/security/role-based-security.md)  
  [Fournisseurs managés ADO.NET et centre de développement DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)

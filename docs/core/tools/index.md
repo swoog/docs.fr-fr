@@ -1,15 +1,14 @@
 ---
 title: Outils de l’interface de ligne de commande (CLI) de .NET Core
 description: Présentation des outils et fonctionnalités de l’interface de ligne de commande (CLI) de .NET Core.
-author: mairaw
-ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.custom: seodec18
+ms.openlocfilehash: 698e6188d2cc73c30a7003f53199065d1eff2ec0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43778878"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170187"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Outils de l’interface de ligne de commande (CLI) de .NET Core
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297450"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149898"
 ---
 # <a name="arrays-in-visual-basic"></a>Tableaux dans Visual Basic
 
@@ -126,7 +126,7 @@ Comme pour les tableaux unidimensionnels, vous pouvez compter sur l’inférence
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Pour obtenir des exemples supplémentaires, consultez [Comment : initialiser une variable tableau en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
+Pour obtenir des exemples supplémentaires, consultez [Comment : Initialiser une Variable tableau en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Itération au sein d’un tableau
 
@@ -299,9 +299,9 @@ Pour plus d’informations sur les collections, consultez [Collections](../../co
 |Terme|Définition|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Explique le rang et les dimensions des tableaux.|
-|[Comment : initialiser une variable tableau en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Explique comment remplir les tableaux de valeurs initiales.|
-|[Comment : trier un tableau dans Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Montre comment trier les éléments d’un tableau par ordre alphabétique.|
-|[Guide pratique : assigner un tableau à un autre tableau](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Décrit les règles et les étapes à suivre pour assigner un tableau à une autre variable tableau.|
+|[Comment : Initialiser une Variable tableau en Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Explique comment remplir les tableaux de valeurs initiales.|
+|[Comment : Trier un tableau en Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Montre comment trier les éléments d’un tableau par ordre alphabétique.|
+|[Comment : Assigner un tableau à un autre tableau](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Décrit les règles et les étapes à suivre pour assigner un tableau à une autre variable tableau.|
 |[Dépannage des tableaux](../../language-features/arrays/troubleshooting-arrays.md)|Décrit des problèmes courants qui surviennent dans le cadre de l’utilisation de tableaux.|
 
 ## <a name="see-also"></a>Voir aussi
