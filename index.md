@@ -6,12 +6,12 @@ title: Documentation .NET
 description: Découvrez comment utiliser .NET pour créer diverses applications sur n’importe quelle plateforme en C#, Visual Basic et F#. Parcourez les informations de référence sur les API, les exemples de code, les didacticiels et plus encore.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c79e7cd77c637ad06854be6a1372fec351a0c45d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127340"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240253"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -27,7 +27,7 @@ ms.locfileid: "53127340"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <h3>Bien démarrer avec C#</h3>
+                                    <h3>Découvrir C#</h3>
                                 </div>
                             </div>
                         </div>
@@ -172,9 +172,9 @@ ms.locfileid: "53127340"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Guide C#</a></h3>
-                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Découvrir C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Bien démarrer</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Présentation de C#</a></p>
+                                                <p><a href="/dotnet/csharp/whats-new">Nouveautés de C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Informations de référence sur le langage C#</a></p>
                                             </div>
                                         </div>
