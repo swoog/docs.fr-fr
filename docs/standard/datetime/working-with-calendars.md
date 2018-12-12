@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183904"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286583"
 ---
 # <a name="working-with-calendars"></a>Utilisation des calendriers
 
@@ -137,6 +137,9 @@ Toutefois, il existe une exception importante. La valeur par défaut (non initia
 
 Les calendriers divisent en général les dates en ères. Toutefois, le <xref:System.Globalization.Calendar> classes dans .NET ne prennent pas en charge chaque ère définie par un calendrier et la plupart de la <xref:System.Globalization.Calendar> classes prennent en charge qu’une seule ère. Seules les classes <xref:System.Globalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar> prennent en charge plusieurs ères.
 
+> [!IMPORTANT]
+>  Une nouvelle ère dans la <xref:System.Globlalization.JapaneseCalendar> et <xref:System.Globalization.JapaneseLunisolarCalendar> commence à 1 mai 2019. Cette modification affecte toutes les applications qui utilisent ces calendriers. Consultez [gère une nouvelle ère dans le calendrier japonais dans .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) pour plus d’informations et pour déterminer si vos applications sont affectées. Consultez [préparer votre application pour la modification de l’ère japonais](~/windows/uwp/design/globalizing/japanese-era-change) pour plus d’informations sur le test de vos applications sur Windows pour garantir leur disponibilité pour la modification de l’ère.
+
 ### <a name="eras-and-era-names"></a>Ères et noms d’ères
 
 Dans .NET, les entiers qui représentent les ères prises en charge par une implémentation particulière de calendrier sont stockées dans l’ordre inverse dans le <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> tableau. L'ère actuelle se trouve à l'index zéro et pour les classes <xref:System.Globalization.Calendar> qui prennent en charge plusieurs ères, chaque index successif reflète l'ère précédente. La propriété statique <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> définit l'index de l'ère actuelle dans le tableau <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> ; il s'agit d'une constante dont la valeur est toujours zéro. Les classes <xref:System.Globalization.Calendar> individuelles incluent également les champs static qui retournent la valeur de l’ère actuelle. Elles sont répertoriées dans le tableau suivant.
@@ -193,5 +196,5 @@ Dans les cas où la représentation sous forme de chaîne d'une date est exprim�
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Comment : afficher des dates dans des calendriers non grégoriens](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [Exemple : Utilitaire de plage de semaine de calendrier](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [Guide pratique pour Afficher des dates dans des calendriers non grégoriens](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [Exemple : Utilitaire de plages de semaine de calendrier](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
