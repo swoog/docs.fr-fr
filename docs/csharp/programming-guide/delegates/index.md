@@ -1,16 +1,17 @@
 ---
-title: Délégués (Guide de programmation C#)
+title: Délégués - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: cbceea24082d091c516c78313ca4c62bce44054d
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1352b7b6d2146f4cf043034b8b24d7a737f93c3b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "48584193"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240435"
 ---
 # <a name="delegates-c-programming-guide"></a>Délégués (Guide de programmation C#)
 Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un type qui représente des références aux méthodes avec une liste de paramètres et un type de retour particuliers. Lorsque vous instanciez un délégué, vous pouvez associer son instance à toute méthode ayant une signature et un type de retour compatibles. Vous pouvez appeler la méthode par le biais l'instance de délégué.  
@@ -55,7 +56,7 @@ Un [délégué](../../../csharp/language-reference/keywords/delegate.md) est un 
   
 -   [Guide pratique pour combiner des délégués (délégués multicast)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [Comment : déclarer, instancier et utiliser un délégué](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+-   [Guide pratique pour déclarer, instancier et utiliser un délégué](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
   
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  

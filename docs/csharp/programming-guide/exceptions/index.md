@@ -1,17 +1,18 @@
 ---
-title: Exceptions et gestion des exceptions (Guide de programmation C#)
+title: Exceptions et gestion des exceptions - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744221"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236841"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Exceptions et gestion des exceptions (Guide de programmation C#)
 Les fonctionnalités de gestion des exceptions du langage C# vous aident à gérer les situations inattendues ou exceptionnelles qui se produisent lorsqu’un programme est en cours d’exécution. La gestion des exceptions utilise les mots clés `try`, `catch` et `finally` pour tenter des actions susceptibles de ne pas réussir, pour gérer les défaillances lorsque vous pensez que c’est justifié et pour nettoyer ensuite les ressources. Les exceptions peuvent être générées par le common language runtime (CLR), par .NET Framework ou des bibliothèques tierces, ou par le code de l’application. Les exceptions sont créées avec le mot clé `throw`.  
@@ -56,9 +57,9 @@ Les fonctionnalités de gestion des exceptions du langage C# vous aident à gér
   
 -   [Exceptions générées par le compilateur](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Guide pratique : gérer une exception à l’aide de try/catch (Guide de programmation C#)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+-   [Guide pratique pour gérer une exception à l’aide de try/catch (Guide de programmation C#)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Comment : exécuter le code de nettoyage à l’aide de finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+-   [Guide pratique pour exécuter le code de nettoyage à l’aide de finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
 

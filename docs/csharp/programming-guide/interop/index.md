@@ -1,5 +1,6 @@
 ---
-title: Interopérabilité (Guide de programmation C#)
+title: Interopérabilité - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - platform invoke, accessing APIs with C#
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
-ms.openlocfilehash: dc68a2a9c21f6fdb9b531bd07428325ac22ebfb6
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.openlocfilehash: f3cbfe564fb5820c9e0fa77b75f76be36dd718a4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980646"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235005"
 ---
 # <a name="interoperability-c-programming-guide"></a>Interopérabilité (Guide de programmation C#)
 L’interopérabilité vous permet de préserver et de tirer parti d’investissements existants en code non managé. Le code qui s’exécute sous le contrôle du common language runtime (CLR) est appelé *code managé*, et le code qui s’exécute en dehors du CLR est appelé *code non managé*. COM, COM+, les composants C++, les composants ActiveX et l’API Microsoft Win32 sont des exemples de code non managé.  
@@ -26,13 +27,13 @@ L’interopérabilité vous permet de préserver et de tirer parti d’investiss
  [Guide pratique pour accéder aux objets Office Interop à l’aide des fonctionnalités Visual C#](../../../csharp/programming-guide/interop/how-to-access-office-onterop-objects.md)  
  Décrit les fonctionnalités introduites dans Visual C# pour faciliter la programmation Office.  
   
- [Comment : utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Guide pratique pour utiliser des propriétés indexées dans la programmation COM Interop](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
  Explique comment utiliser des propriétés indexées pour accéder aux propriétés COM qui ont des paramètres.  
   
- [Comment : utiliser l’appel de code non managé pour lire un fichier audio](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
+ [Guide pratique pour utiliser l’appel de code non managé pour lire un fichier audio](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md)  
  Explique comment utiliser des services d’appel de code non managé pour lire un fichier son .wav sur le système d’exploitation Windows.  
   
- [Procédure pas à pas : programmation Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
+ [Procédure pas à pas : programmation Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)  
  Montre comment créer un classeur Excel et un document Word qui contient un lien vers le classeur.  
   
  [Exemple de classe COM](../../../csharp/programming-guide/interop/example-com-class.md)  
@@ -47,4 +48,4 @@ Pour plus d’informations, consultez [Concepts de base](~/_csharplang/spec/unsa
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>  
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
 - [Interopération avec du code non managé](../../../../docs/framework/interop/index.md)  
-- [Procédure pas à pas : programmation Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)
+- [Procédure pas à pas : programmation Office](../../../csharp/programming-guide/interop/walkthrough-office-programming.md)

@@ -1,5 +1,6 @@
 ---
-title: Types Nullable (Guide de programmation C#)
+title: Types Nullable - Guide de programmation C#
+ms.custom: seodec18
 description: Découvrir les types Nullable C# et comment les utiliser
 ms.date: 07/30/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# language, nullable types
 - types [C#], nullable
 ms.assetid: e473cb01-28ca-42be-9cea-f717055d72c6
-ms.openlocfilehash: 2af0704abcad00c75a5d40bfe2d0523d07ee6a3f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd5ac40ca73f7c528a903d5863f3cf5880738f11
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45658702"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245121"
 ---
 # <a name="nullable-types-c-programming-guide"></a>Types Nullable (Guide de programmation C#)
 
@@ -52,7 +53,7 @@ Les types Nullable possèdent les caractéristiques suivantes :
   
 - Les types Nullable imbriqués ne sont pas autorisés. Il n’est pas possible de compiler la ligne suivante : `Nullable<Nullable<int>> n;`  
 
-Pour plus d’informations, consultez les rubriques [Utilisation des types Nullable](using-nullable-types.md) et [Guide pratique pour identifier un type Nullable](how-to-identify-a-nullable-type.md).
+Pour plus d’informations, consultez les rubriques [Utilisation de types Nullable](using-nullable-types.md) et [Guide pratique pour identifier un type Nullable](how-to-identify-a-nullable-type.md).
   
 ## <a name="see-also"></a>Voir aussi
 

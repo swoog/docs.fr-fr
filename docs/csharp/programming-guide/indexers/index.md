@@ -1,5 +1,6 @@
 ---
-title: Indexeurs (Guide de programmation C#)
+title: Indexeurs - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - cs.indexers
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - indexers [C#]
 - C# language, indexers
 ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
-ms.openlocfilehash: 405de22ea7e48a5964de48eb20becdaf5fc5ae01
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b3dd16cf4c12dca0bc155c478c187047caf4c25
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43503631"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236581"
 ---
 # <a name="indexers-c-programming-guide"></a>Indexeurs (Guide de programmation C#)
 
@@ -33,7 +34,7 @@ Il est courant pour l’accesseur get ou set d’un indexeur d’être constitu�
 
 Notez que `=>` introduit le corps de l’expression et que le mot clé `get` n’est pas utilisé. 
 
-À partir de C# 7.0, l’accesseur get et l’accesseur set peuvent être implémentés en tant que membres expression-bodied. Dans ce cas, les deux mots clés `get` et `set` doivent être utilisés. Exemple :
+À partir de C# 7.0, l’accesseur get et l’accesseur set peuvent être implémentés en tant que membres expression-bodied. Dans ce cas, les deux mots clés `get` et `set` doivent être utilisés. Par exemple :
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   

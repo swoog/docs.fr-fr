@@ -1,5 +1,6 @@
 ---
-title: Pointeurs et code unsafe (Guide de programmation C#)
+title: Pointeurs et code unsafe - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - security [C#], type safety
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - C# language, pointers
 - pointers [C#], about pointers
 ms.assetid: b0fcca10-a92d-4f2a-835b-b0ccae6739ee
-ms.openlocfilehash: 054a2c6c80e00b8baa742d5fe0a7c111994bcce4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7d7371fb29f12a766ef6b78544f82d021dd8dceb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509815"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237907"
 ---
 # <a name="unsafe-code-and-pointers-c-programming-guide"></a>Pointeurs et code unsafe (Guide de programmation C#)
 Pour conserver la sécurité des types, par défaut, C# ne prend pas en charge les opérations arithmétiques sur les pointeurs. Cependant, en utilisant le mot clé [unsafe](../../../csharp/language-reference/keywords/unsafe.md), vous pouvez définir un contexte non sécurisé dans lequel des pointeurs peuvent être utilisés. Pour plus d’informations sur les pointeurs, consultez la rubrique [Types pointeur](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md).  
@@ -43,7 +44,7 @@ Pour conserver la sécurité des types, par défaut, C# ne prend pas en charge l
   
 -   [Mémoires tampons de taille fixe](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)  
   
--   [Comment : utiliser des pointeurs pour copier un tableau d’octets](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
+-   [Guide pratique pour utiliser des pointeurs pour copier un tableau d’octets](../../../csharp/programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md)  
   
 -   [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: Tests unitaires dans .NET Core et .NET Standard
-description: Tests unitaires dans les projets .NET Core et .NET Standard.
+description: Cet article offre une courte vue d’ensemble des tests unitaires pour les projets .NET Core et .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170013"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243975"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Tests unitaires dans .NET Core et .NET Standard
 
@@ -30,6 +30,8 @@ Par ailleurs, n’oubliez pas qu’il existe des bonnes pratiques pour écrire d
 > L’équipe ASP.NET suit [ces conventions](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests) pour aider les développeurs à trouver des noms qui conviennent pour les méthodes et les classes de test.
 
 Essayez de ne pas introduire de dépendances à l’infrastructure quand vous écrivez des tests unitaires. Elles rendent les tests lents et fragiles et doivent être réservées aux tests d’intégration. Vous pouvez éviter ces dépendances dans votre application en suivant le [principe des dépendances explicites](https://deviq.com/explicit-dependencies-principle/) et en utilisant l’[injection de dépendances](/aspnet/core/fundamentals/dependency-injection). Vous pouvez également conserver vos tests unitaires dans un projet distinct de vos tests d’intégration. Ainsi, vous avez la garantie que votre projet de test unitaire n’a pas de références ou de dépendances aux packages de l’infrastructure.
+
+## <a name="next-steps"></a>Étapes suivantes
 
 Pour en savoir plus sur les tests unitaires dans les projets .NET Core :
 

@@ -1,16 +1,17 @@
 ---
-title: Interfaces (Guide de programmation C#)
+title: Interfaces - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181512"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245439"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guide de programmation C#)
 
@@ -61,17 +62,17 @@ Une interface possède les propriétés suivantes :
 [Implémentation d’interface explicite](explicit-interface-implementation.md)  
  Explique comment créer un membre de classe spécifique à une interface.  
   
- [Comment : implémenter de manière explicite des membres d’interface](how-to-explicitly-implement-interface-members.md)  
+ [Guide pratique pour implémenter de manière explicite des membres d’interface](how-to-explicitly-implement-interface-members.md)  
  Fournit un exemple montrant comment implémenter explicitement des membres d'interface.  
   
- [Comment : implémenter de manière explicite des membres de deux interfaces](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Guide pratique pour implémenter de manière explicite des membres de deux interfaces](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Fournit un exemple montrant comment implémenter explicitement des membres d'interface avec héritage.  
   
 ##  <a name="BKMK_RelatedSections"></a> Sections connexes
 
 - [Propriétés de l’interface](../classes-and-structs/interface-properties.md)  
 - [Indexeurs dans les interfaces](../indexers/indexers-in-interfaces.md)  
-- [Guide pratique d’implémentation d’événements d’interface](../events/how-to-implement-interface-events.md)  
+- [Guide pratique pour  implémenter des événements d’interface](../events/how-to-implement-interface-events.md)  
 - [Classes et structs](../classes-and-structs/index.md)  
 - [Héritage](../classes-and-structs/inheritance.md)  
 - [Méthodes](../classes-and-structs/methods.md)  

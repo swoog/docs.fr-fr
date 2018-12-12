@@ -1,5 +1,6 @@
 ---
-title: Classes et structs (Guide de programmation C#)
+title: Classes et structs - Guide de programmation C#
+ms.custom: seodec18
 description: Décrit l’utilisation des classes et des structures (structs) en C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 8860b519ece14a13e2a3350d299aa67598eadcc2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9380a06b733546cdf5af959868fcdfdcc7189ded
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513983"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242553"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Classes et structs (Guide de programmation C#)
 Les classes et structs sont deux des constructions de base du système de type commun dans le .NET Framework. Chacun est en substance une structure de données qui encapsule un ensemble de données et de comportements constituant une unité logique. Les données et comportements sont les *membres* de la classe ou du struct, et ils incluent ses méthodes, propriétés, événements, etc., comme indiqué plus loin dans cette rubrique.  
@@ -93,7 +94,7 @@ Les classes et structs sont deux des constructions de base du système de type c
  Dans les situations où il n’est pas pratique ou nécessaire de créer une classe nommée, par exemple pour remplir une liste avec des structures de données qu’il n’est pas nécessaire de conserver ou de transmettre à une autre méthode, on utilise des types anonymes. Pour plus d’informations, consultez la page [Types anonymes](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ### <a name="extension-methods"></a>méthodes d’extension.  
- Vous pouvez « étendre » une classe sans créer de classe dérivée en créant un type séparé dont les méthodes peuvent être appelées comme si elles appartenaient au type d’origine. Pour plus d’informations, consultez la page [Méthodes d’extension](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+ Vous pouvez « étendre » une classe sans créer de classe dérivée en créant un type séparé dont les méthodes peuvent être appelées comme si elles appartenaient au type d’origine. Pour plus d’informations, consultez [Méthodes d’extension](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ### <a name="implicitly-typed-local-variables"></a>Variables locales implicitement typées  
  Dans une méthode de classe ou de struct, vous pouvez utiliser le type implicite pour indiquer au compilateur de déterminer le type approprié au moment de la compilation. Pour plus d’informations, consultez la page [Variables locales implicitement typées](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).  
