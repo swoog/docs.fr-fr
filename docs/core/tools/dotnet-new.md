@@ -4,12 +4,12 @@ description: La commande dotnet new crée des projets .NET Core basés sur le mo
 author: mairaw
 ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188198"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131480"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -71,6 +71,7 @@ La commande contient une liste par défaut de modèles. Utilisez `dotnet new -l`
 | Bibliothèque de classes                                | `classlib`       | [C#], F#, VB  |
 | Projet de test unitaire                            | `mstest`         | [C#], F#, VB  |
 | Projet de test xUnit                           | `xunit`          | [C#], F#, VB  |
+| Projet de test NUnit                           | `nunit`          | [C#], F#, VB  |
 | Page Razor                                   | `page`           | [C#]          |
 | ViewImports MVC                              | `viewimports`    | [C#]          |
 | ViewStart MVC                                | `viewstart`      | [C#]          |

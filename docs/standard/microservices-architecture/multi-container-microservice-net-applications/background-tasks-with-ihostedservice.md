@@ -1,35 +1,37 @@
 ---
 title: Implémenter des tâches en arrière-plan dans les microservices avec IHostedService et la classe BackgroundService
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Implémenter des tâches en arrière-plan dans les microservices avec IHostedService et la classe BackgroundService
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre les nouvelles options pour utiliser IHostedService et BackgroundService afin d’implémenter des tâches d’arrière-plan dans des microservices .NET Core.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 981a20ca80f0652a9c3597d36b960d6b44d97912
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/02/2018
+ms.openlocfilehash: 3fe1f4bdf80943394688941c17d3041ea90256da
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195825"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126080"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>Implémenter des tâches en arrière-plan dans les microservices avec IHostedService et la classe BackgroundService
 
 Vous pouvez être amené à implémenter des tâches en arrière-plan et des travaux planifiés dans une application basée sur des microservices ou tout autre genre d’application. Toutefois, il existe une certaine différence quand vous utilisez une architecture de microservices. Vous pouvez implémenter un processus/conteneur de microservice unique pour héberger ces tâches en arrière-plan et adapter l’architecture à vos besoins. Vous pouvez même vérifier que cette architecture exécute une seule instance de ce processus/conteneur de microservice.
 
-D’un point de vue générique, dans .NET Core, nous avons appelé les tâches de ce type des services hébergés, car il s’agit de services/d’une logique que vous hébergez dans votre hôte/application/microservice. Notez que dans ce cas, le service hébergé représente simplement une classe avec la logique de tâche en arrière-plan.
+D’un point de vue générique, dans .NET Core, nous avons appelé les tâches de ce type *services hébergés*, car il s’agit de services/d’une logique que vous hébergez dans votre hôte/application/microservice. Notez que dans ce cas, le service hébergé représente simplement une classe avec la logique de tâche en arrière-plan.
 
-Depuis .NET Core 2.0, le framework fournit une nouvelle interface nommée <xref:Microsoft.Extensions.Hosting.IHostedService>, qui vous aide à implémenter facilement les services hébergés. L’idée de base est que vous pouvez inscrire plusieurs tâches en arrière-plan (services hébergés), qui s’exécutent en arrière-plan pendant que votre hôte web ou votre hôte est en cours d’exécution, comme le montre l’image ci-dessous.
+Depuis .NET Core 2.0, le framework fournit une nouvelle interface nommée <xref:Microsoft.Extensions.Hosting.IHostedService>, qui vous aide à implémenter facilement les services hébergés. L’idée de base est que vous pouvez inscrire plusieurs tâches en arrière-plan (services hébergés), qui s’exécutent en arrière-plan pendant que votre hôte ou votre hôte web est en cours d’exécution, comme le montre l’image 6-26.
 
-![](./media/image26.png)
+![ASP.NET Core 1.x et 2.x prend en charge IWebHost pour les processus en arrière-plan dans les applications web. .NET Core 2.1 prend en charge IHost pour les processus en arrière-plan avec les applications console simples.](./media/image26.png)
 
-**Figure 8-25.** Utilisation d’IHostedService dans un WebHost et un Host
+**Figure 6-26.** Utilisation d’IHostedService dans un WebHost et un Host
 
-Notez la différence faite entre `WebHost` et `Host`. En ASP.NET Core 2.0, `WebHost` (classe de base implémentant `IWebHost`) est l’artefact d’infrastructure qui vous permet de fournir des fonctionnalités de serveur HTTP à votre processus, par exemple si vous implémentez une application web MVC ou un service d’API web. Il fournit toute la qualité de l’infrastructure en ASP.NET Core, ce qui vous permet d’utiliser l’injection de dépendances, d’insérer des intergiciels (middleware) dans le pipeline HTTP, etc. et d’utiliser précisément les `IHostedServices` pour les tâches en arrière-plan.
+Notez la différence faite entre `WebHost` et `Host`. 
+
+En ASP.NET Core 2.0, `WebHost` (classe de base implémentant `IWebHost`) est l’artefact d’infrastructure qui vous permet de fournir des fonctionnalités de serveur HTTP à votre processus, par exemple si vous implémentez une application web MVC ou un service d’API web. Il fournit toute la qualité de l’infrastructure en ASP.NET Core, ce qui vous permet d’utiliser l’injection de dépendances, d’insérer des middlewares (intergiciels) dans le pipeline de requête, etc., et d’utiliser précisément les `IHostedServices` pour les tâches en arrière-plan.
 
 Toutefois, `Host` (classe de base implémentant `IHost`) est une nouveauté dans .NET Core 2.1. En fait, `Host` vous permet d’avoir une infrastructure similaire à celle que vous avez avec `WebHost` (injection de dépendances, services hébergés, etc.), mais dans ce cas précis, vous souhaitez simplement avoir un processus simple et plus léger en tant qu’hôte, sans lien avec les fonctionnalités MVC, d’API web ou de serveur HTTP.
 
 Ainsi, vous pouvez créer un processus hôte spécialisé avec IHost pour prendre en charge les services hébergés et rien d’autre, par exemple un microservice destiné uniquement à héberger `IHostedServices`, ou vous pouvez étendre un `WebHost` ASP.NET Core existant, par exemple une API web ou une application MVC ASP.NET Core existante. 
 
-Chaque approche a des avantages et des inconvénients selon vos besoins professionnels et de scalabilité. En fin de compte, si vos tâches en arrière-plan n’ont rien à voir avec le protocole HTTP (IWebHost), utilisez IHost dans .NET Core 2.1 quand cela est possible.
+Chaque approche a des avantages et des inconvénients selon vos besoins professionnels et de scalabilité. En fin de compte, si vos tâches en arrière-plan n’ont rien à voir avec le protocole HTTP (IWebHost), utilisez IHost (avec .NET Core 2.1).
 
 ## <a name="registering-hosted-services-in-your-webhost-or-host"></a>Inscription de services hébergés sur WebHost ou Host
 
@@ -66,7 +68,6 @@ L’exécution de la tâche en arrière-plan `IHostedService` est coordonnée av
 
 Sans utiliser `IHostedService`, vous pouvez tout de même démarrer un thread d’arrière-plan pour exécuter une tâche. La différence se situe précisément au moment de l’arrêt de l’application, quand le thread est simplement tué sans avoir eu l’occasion d’exécuter des actions de nettoyage normales.
 
-
 ## <a name="the-ihostedservice-interface"></a>Interface IHostedService
 
 Quand vous inscrivez `IHostedService`, .NET Core appelle les méthodes `StartAsync()` et `StopAsync()` de votre type `IHostedService` durant le démarrage et l’arrêt de l’application, respectivement. Plus précisément, le démarrage est appelé une fois que le serveur a démarré et que `IApplicationLifetime.ApplicationStarted` est déclenché.
@@ -98,13 +99,11 @@ En tant que développeur, vous êtes responsable de la prise en charge de l’ac
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>Implémentation d’IHostedService avec une classe de service hébergé personnalisé dérivant de la classe de base BackgroundService
 
-Créez entièrement votre classe de service hébergé personnalisé, et implémentez `IHostedService`, comme vous le faites quand vous utilisez .NET Core 2.0. 
+Vous pouvez donc créer entièrement votre classe de service hébergé personnalisé, et implémentez `IHostedService`, comme vous le faites quand vous utilisez .NET Core 2.0. 
 
-Toutefois, comme la plupart des tâches en arrière-plan ont des besoins similaires en ce qui concerne la gestion des jetons d’annulation et les autres opérations classiques, .NET Core 2.1 fournit une classe de base abstraite très pratique, nommée BackgroundService.
+Toutefois, comme la plupart des tâches en arrière-plan ont des besoins similaires en ce qui concerne la gestion des jetons d’annulation et d’autres opérations classiques, .NET Core 2.1 fournit une classe de base abstraite très pratique, nommée BackgroundService.
 
-Cette classe fournit le travail principal nécessaire à la configuration de la tâche en arrière-plan. Notez que cette classe fait partie de la bibliothèque .NET Core 2.1, vous n’avez donc pas besoin de l’écrire.
-
-Toutefois, au moment de la rédaction de ce document, .NET Core 2.1 n’est pas encore publié. Ainsi, dans eShopOnContainers qui utilise .NET Core 2.0, nous incorporons simplement cette classe de manière temporaire à partir du dépôt open source .NET Core 2.1 (pas besoin d’une licence propriétaire, à part la licence open source) en raison de sa compatibilité avec l’interface IHostedService actuelle dans .NET Core 2.0. Une fois que .NET Core 2.1 sera disponible, il vous suffira de pointer vers le bon package NuGet.
+Cette classe fournit le travail principal nécessaire à la configuration de la tâche en arrière-plan.
 
 Le code suivant est la classe de base BackgroundService abstraite implémentée dans .NET Core 2.1.
 
@@ -212,7 +211,7 @@ public class GracePeriodManagerService : BackgroundService
 }
 ```
 
-Dans ce cas de figure spécifique à eShopOnContainers, le code exécute une méthode d’application qui interroge une table de base de données à la recherche de commandes ayant un état spécifique. Quand des changements sont appliqués, il publie les événements d’intégration via le bus d’événements (il peut s’agir de RabbitMQ ou d’Azure Service Bus). 
+Dans ce cas de figure spécifique à eShopOnContainers, le code exécute une méthode d’application qui interroge une table de base de données à la recherche de commandes ayant un état spécifique. Quand des changements sont appliqués, il publie les événements d’intégration via le bus d’événements (il peut s’agir de RabbitMQ ou d’Azure Service Bus).
 
 Bien entendu, vous pouvez exécuter une autre tâche en arrière-plan à la place.
 
@@ -228,11 +227,11 @@ WebHost.CreateDefaultBuilder(args)
 
 ### <a name="summary-class-diagram"></a>Diagramme de classes récapitulatif
 
-L’image 8-26 suivante montre un récapitulatif visuel des classes et des interfaces impliquées dans l’implémentation d’IHostedServices.
+L’image suivante montre un récapitulatif visuel des classes et des interfaces impliquées dans l’implémentation d’IHostedServices.
  
-![](./media/image27.png)
+![Diagramme de classes : IWebHost et IHost peuvent héberger de nombreux services, qui héritent de BackgroundService, lequel implémente IHostedService.](./media/image27.png)
 
-**Figure 8-26.** Diagramme de classes montrant les multiples classes et interfaces liées à IHostedService
+**Figure 6-27.** Diagramme de classes montrant les multiples classes et interfaces liées à IHostedService
 
 ### <a name="deployment-considerations-and-takeaways"></a>Éléments importants à retenir et considérations relatives au déploiement
 
@@ -242,21 +241,17 @@ Toutefois, même pour un `WebHost` déployé dans un pool d’applications, il e
 
 L’interface `IHostedService` fournit un moyen pratique de démarrer des tâches en arrière-plan dans une application web ASP.NET Core (dans .NET Core 2.0) ou dans n’importe quel processus/hôte (à partir de .NET Core 2.1 avec `IHost`). Le principal avantage est le suivant : grâce à l’annulation normale, vous pouvez nettoyer le code de vos tâches en arrière-plan quand l’hôte s’arrête.
 
-
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Génération d’une tâche planifiée avec ASP.NET Core/Standard 2.0** 
-
+-   **Génération d’une tâche planifiée avec ASP.NET Core/Standard 2.0** <br/>
     [*https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html*](https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html)
 
--   **Implémentation d’IHostedService avec ASP.NET Core 2.0** 
-
+-   **Implémentation d’IHostedService avec ASP.NET Core 2.0** <br/>
     [*https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice*](https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice)
 
--   **Exemples d’hébergement ASP.NET Core 2.1** 
-
+-   **Exemples d’hébergement ASP.NET Core 2.1** <br/>
     [*https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample*](https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample)
 
 >[!div class="step-by-step"]
-[Précédent](test-aspnet-core-services-web-apps.md)
-[Suivant](../microservice-ddd-cqrs-patterns/index.md)
+>[Précédent](test-aspnet-core-services-web-apps.md)
+>[Suivant](implement-api-gateways-with-ocelot.md)

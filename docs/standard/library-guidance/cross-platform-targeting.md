@@ -1,15 +1,15 @@
 ---
-title: Ciblage multiplateforme
+title: Ciblage multiplateforme pour les bibliothèques .NET
 description: Meilleures pratiques recommandées pour la création de bibliothèques .NET multiplateformes.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 72fa891d5b1054af485a98d89b4efb11d6b0018b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202814"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129712"
 ---
 # <a name="cross-platform-targeting"></a>Ciblage multiplateforme
 
@@ -59,7 +59,7 @@ Pour éviter à vos consommateurs d’avoir à créer pour chaque infrastructure
 >
 > Ne supprimez pas la prise en charge de .NET Standard lorsque vous effectuez cette opération. Au lieu de cela, levez une exception à partir de l’implémentation et offrez la fonctionnalité API. De cette façon, votre bibliothèque peut être utilisée partout et prend en charge le runtime des fonctionnalités.
 
-**❌ À ÉVITER** : Utiliser le multi-ciblage avec .NET Standard si votre code source est identique pour toutes les cibles.
+**❌ À ÉVITER** : Utiliser le multi-ciblage ainsi que le ciblage de .NET Standard si votre code source est identique pour toutes les cibles.
 
 > L’assembly .NET Standard sera automatiquement utilisé par NuGet. Le ciblage d’implémentations .NET individuelles augmente la taille `*.nupkg` sans apporter d’avantage.
 
@@ -95,5 +95,5 @@ Pour éviter à vos consommateurs d’avoir à créer pour chaque infrastructure
 **❌ À NE PAS FAIRE** : Inclure des cibles pour les plateformes .NET qui ne sont plus prises en charge. Par exemple, `SL4`, `WP`.
 
 >[!div class="step-by-step"]
-[Précédent](./get-started.md)
-[Suivant](./strong-naming.md)
+>[Précédent](get-started.md)
+>[Suivant](strong-naming.md)

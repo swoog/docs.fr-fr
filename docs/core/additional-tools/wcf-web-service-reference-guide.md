@@ -1,18 +1,18 @@
 ---
-title: Outil Microsoft WCF Web Service Reference Provider
+title: Ajouter WCF Web Service Reference - .NET Core
 description: Vue d’ensemble de l’outil Microsoft WCF Web Service Reference Provider, qui ajoute des fonctionnalités pour les projets .NET Core et ASP.NET Core, de manière similaire à la fonctionnalité Ajouter une référence de service pour les projets .NET Framework.
 author: mlacouture
 ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: a1c5f389a5928a34ce1cbf13b2ef27a95b18d031
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215376"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148780"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Outil Microsoft WCF Web Service Reference Provider
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>Utiliser l’outil WCF Web Service Reference Provider
 
 Au fil des années, de nombreux développeurs Visual Studio ont apprécié le gain de productivité offert par l’outil [**Ajouter une référence de service**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) quand leurs projets .NET Framework avaient besoin d’accéder à des services web.  L’outil **WCF Web Service Reference** est une extension de service connecté de Visual Studio qui fournit une expérience semblable à la fonctionnalité Ajouter une référence de service pour les projets .NET Core et ASP.NET Core. Cet outil récupère les métadonnées d’un service web dans la solution actuelle sur un emplacement réseau ou dans un fichier WSDL, puis génère un fichier source compatible .NET Core contenant du code de proxy client WCF (Windows Communication Foundation) que vous pouvez utiliser pour accéder au service web.
 
@@ -37,11 +37,11 @@ Prenant le modèle de projet **Application web ASP.NET Core** en guise d’exemp
 
 La page **Services connectés** s’affiche, comme illustré ci-dessous :
 
-![Onglet Services connectés](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![Onglet Services connectés de Visual Studio pour .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
 2. Dans la page **Services connectés**, cliquez sur **Microsoft WCF Web Service Reference Provider**. L’Assistant **Configurer la référence de services web WCF** apparaît :
 
-![Onglet Point de terminaison de service](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![Onglet Point de terminaison de service Visual Studio pour .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. Sélectionnez un service.
 
@@ -58,7 +58,7 @@ La page **Services connectés** s’affiche, comme illustré ci-dessous :
 
 4. Le formulaire **Options du type de données** vous permet d’affiner les paramètres de configuration de référence de service générés :
 
-![Onglet Options du type de données](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![Onglet Options du type de données Visual Studio pour .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
 > La case à cocher **Réutiliser les types dans les assemblys référencés** est utile quand les types de données nécessaires pour la génération du code de référence de service sont définis dans l’un des assemblys référencés de votre projet.  Il est important de réutiliser ces types de données existants pour éviter les conflits de type au moment de la compilation ou les problèmes au moment de l’exécution.
@@ -74,7 +74,7 @@ Lors de l’affichage de la progression, l’outil :
 * Génère le code de référence de service dans un fichier nommé *reference.cs* et l’ajoute à votre projet sous le nœud **Services connectés**. 
 * Met à jour le fichier projet (.csproj) avec les références de package NuGet nécessaires pour la compilation et l’exécution sur la plateforme cible.
 
-![Fenêtre de progression](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Fenêtre de progression Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 Une fois ces processus terminés, vous pouvez créer une instance du type de client WCF généré et appeler les opérations de service.
 

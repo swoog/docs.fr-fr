@@ -2,14 +2,14 @@
 title: Configuration requise pour .NET Core sur Mac
 description: Versions macOS et dépendances .NET Core prises en charge pour développer, déployer et exécuter des applications .NET Core sur des ordinateurs macOS.
 author: guardrex
-ms.author: mairaw
-ms.date: 10/03/2018
-ms.openlocfilehash: b5b3c6ea90a2cc4487e849af468d324b645834af
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.author: adegeo
+ms.date: 12/03/2018
+ms.openlocfilehash: b2ab86b7eb9faeab8d4a4cac92b361f64517f638
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584076"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145623"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Configuration requise pour .NET Core sur macOS
 
@@ -23,7 +23,10 @@ Cet article vous présente les versions macOS et les dépendances .NET Core pris
 
 * macOS 10.12 « Sierra » et versions ultérieures
 
-Consultez [.NET Core 2.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 2.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.
+Consultez [.NET Core 2.1 - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) et [.NET Core 2.2 - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation, distributions et versions pris en charge par .NET Core 2.1 et .NET Core 2.2, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.
+
+Pour obtenir des liens de téléchargement et plus d’informations, consultez [Téléchargements .NET Core 2.2](https://www.microsoft.com/net/download/dotnet-core/2.2) ou [Téléchargements .NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1).
+
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -32,7 +35,9 @@ Consultez [.NET Core 2.x - Versions des systèmes d’exploitation prises en cha
 * macOS 10.12 "Sierra"
 * macOS 10.11 "El Capitan"
 
-Consultez [.NET Core 1.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 1.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.
+Consultez [.NET Core 1.1 - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) et [.NET Core 1.0 - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation, distributions et versions pris en charge par .NET Core 1.1 et .NET Core 1.0, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.
+
+Pour obtenir des liens de téléchargement et plus d’informations, consultez [Téléchargements .NET Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1) ou [Téléchargements .NET Core 1.0](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
 ---
 
@@ -94,9 +99,9 @@ Vous pouvez augmenter cette limite en effectuant les étapes suivantes :
 
 2. Dans une fenêtre de terminal, exécutez la commande suivante :
 
-```console
-echo 'ulimit -n 2048' | sudo tee -a /etc/profile
-```
+   ```console
+   echo 'ulimit -n 2048' | sudo tee -a /etc/profile
+   ```
 
 3. Redémarrez votre Mac pour appliquer ces paramètres.
 

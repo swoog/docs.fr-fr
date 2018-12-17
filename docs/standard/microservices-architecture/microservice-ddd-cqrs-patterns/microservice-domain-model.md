@@ -1,19 +1,19 @@
 ---
 title: Conception d’un modèle de domaine de microservice
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Conception d’un modèle de domaine de microservice
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre les concepts clés de la conception d’un modèle de domaine orienté DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048474"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143602"
 ---
-# <a name="designing-a-microservice-domain-model"></a>Conception d’un modèle de domaine de microservice
+# <a name="design-a-microservice-domain-model"></a>Concevoir un modèle de domaine de microservice
 
-*Définir un seul modèle de domaine complet pour chaque microservice métier ou contexte limité*
+*Définir un seul modèle de domaine complet pour chaque microservice métier ou contexte délimité*
 
 Votre objectif consiste à créer un seul modèle de domaine cohésif pour chaque microservice métier ou contexte limité. N’oubliez pas, toutefois, qu’un contexte limité ou microservice métier peuvent parfois se composer de plusieurs services physiques qui partagent un modèle de domaine unique. Le modèle de domaine doit capturer les règles, le comportement, le langage informatique de l’entreprise et les contraintes du contexte limité ou microservice métier unique qu’il représente.
 
@@ -23,19 +23,19 @@ Les entités représentent des objets de domaine. Elles sont principalement déf
 
 *L’identité d’une entité peut traverser plusieurs microservices ou contextes limités.*
 
-La même identité (mais pas la même entité) peut être modélisée dans plusieurs contextes limités ou microservices. Toutefois, cela n’implique pas que la même entité, avec les mêmes attributs et la même logique, peut être implémentée dans plusieurs contextes limités. En effet, les entités incluses dans chaque contexte limité limitent leurs attributs et comportements à ceux nécessaires dans le domaine du contexte limité.
+La même identité (c’est-à-dire la même valeur `Id`, mais peut-être pas la même entité de domaine) peut être modélisée dans plusieurs contextes délimités ou microservices. Toutefois, cela n’implique pas que la même entité, avec les mêmes attributs et la même logique, peut être implémentée dans plusieurs contextes limités. En effet, les entités incluses dans chaque contexte limité limitent leurs attributs et comportements à ceux nécessaires dans le domaine du contexte limité.
 
 Par exemple, l’entité Buyer peut avoir la plupart des attributs d’une personne définis dans l’entité User dans le profil ou microservice d’identité, notamment son identité. Mais l’entité Buyer dans le microservice de passation de commandes peut avoir moins d’attributs, car seules certaines données sur l’acheteur sont liées au processus de commande. Le contexte de chaque microservice ou contexte limité exerce un impact sur son modèle de domaine.
 
-*Les entités de domaine doivent implémenter le comportement en plus des attributs de données.*
+*Les entités de domaine doivent implémenter un comportement en plus des attributs de données.*
 
 Une entité de domaine en conception pilotée par le domaine (Domain Driver Design, DDD) doit implémenter la logique de domaine ou le comportement lié aux données de l’entité (objet auquel vous accédez dans la mémoire). Par exemple, dans le cadre d’une classe d’entité de commande, vous devez implémenter la logique et les opérations métier en tant que méthodes pour des tâches comme l’ajout d’un article, la validation des données et le calcul du total. Les méthodes de l’entité s’occupent des invariants et des règles de l’entité au lieu de répartir ces règles dans toute la couche Application.
 
-La figure 9-8 illustre une entité de domaine qui implémente non seulement des attributs de données, mais aussi des opérations ou méthodes avec une logique de domaine associée.
+La figure 7-8 illustre une entité de domaine qui implémente non seulement des attributs de données, mais aussi des opérations ou des méthodes avec une logique de domaine associée.
 
-![](./media/image9.png)
+![Une entité de modèle de domaine implémente des comportements via des méthodes : autrement dit, il ne s’agit pas d’un modèle « passif ».](./media/image9.png)
 
-**Figure 9-8**. Exemple de conception d’entité de domaine qui implémente des données en plus d’un comportement
+**Figure 7-8**. Exemple de conception d’entité de domaine qui implémente des données en plus d’un comportement
 
 Bien entendu, vous pouvez parfois avoir des entités qui n’implémentent pas de logique dans le cadre de la classe d’entité. Cela peut se produire dans les entités enfants au sein d’un agrégat si l’entité enfant n’a pas de logique spéciale, car la plupart de la logique est définie dans la racine d’agrégat. Si vous avez un microservice complexe qui contient beaucoup de logique implémentée dans les classes de service au lieu des entités de domaine, vous risquez de vous retrouver avec le modèle de domaine anémique, décrit dans la section suivante.
 
@@ -57,15 +57,14 @@ Certaines personnes disent que le modèle de domaine anémique est un anti-modè
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **DevIQ. Domain Entity**
-    [*https://deviq.com/entity/*](https://deviq.com/entity/)
+- **DevIQ. Domain Entity** \
+  [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
--   **Martin Fowler. The Domain Model**
-    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+- **Martin Fowler. The Domain Model** \
+  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Martin Fowler. The Anemic Domain Model**
-
-    <https://martinfowler.com/bliki/AnemicDomainModel.html>
+- **Martin Fowler. The Anemic Domain Model** \
+  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>Le modèle Objet de valeur
 
@@ -79,22 +78,24 @@ Une personne désignée par un prénom et un nom est généralement une entité,
 
 Les objets de valeur sont difficiles à gérer dans les bases de données relationnelles et les ORM comme EF, alors que dans les bases de données orientées document, ils sont plus faciles à implémenter et à utiliser.
 
+EF Core 2.0 inclut la fonctionnalité [Entités détenues](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), qui facilite la gestion des objets de valeur, comme nous le verrons en détail par la suite.
+
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Martin Fowler. Value Object pattern**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Martin Fowler. Value Object pattern**
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Value Object**
-    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- **Value Object**
+  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
--   **Value Objects in Test-Driven Development**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- **Value Objects in Test-Driven Development**
+  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre. Inclut une discussion sur les objets de valeur) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans. Domain-Driven Design: Tackling Complexity in the Heart of Software.** (Livre. Inclut une discussion sur les objets de valeur) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Le modèle Agrégat
 
-Un modèle de domaine contient des clusters d’entités de données et de processus différents qui peuvent contrôler une importante part des fonctionnalités, comme le déroulement des commandes ou l’inventaire. Un agrégat est une unité DDD plus fine qui décrit un cluster ou groupe d’entités et de comportements pouvant être traité comme une unité cohésive.
+Un modèle de domaine contient des clusters d’entités de données et de processus différents qui peuvent contrôler une partie importante des fonctionnalités, comme le déroulement des commandes ou l’inventaire. Un agrégat est une unité DDD plus fine qui décrit un cluster ou groupe d’entités et de comportements pouvant être traité comme une unité cohésive.
 
 En règle générale, vous définissez un agrégat selon les transactions dont vous avez besoin. Une commande qui contient aussi une liste d’articles constitue un exemple classique. Un article correspond généralement à une entité. Mais il s’agit d’une entité enfant au sein de l’agrégat de commande, qui contient aussi l’entité de commande en tant qu’entité racine, généralement appelée racine d’agrégat.
 
@@ -106,13 +107,13 @@ Un agrégat se compose d’au moins une entité : la racine d’agrégat, égal
 
 Une racine d’agrégat a pour but de garantir la cohérence de l’agrégat ; elle doit être le seul point d’entrée pour les mises à jour de l’agrégat par le biais de méthodes ou d’opérations dans la classe de racine d’agrégat. Vous devez apporter des modifications aux entités au sein de l’agrégat uniquement par le biais de la racine d’agrégat. Celle-ci protège la cohérence de l’agrégat, en tenant compte de tous les invariants et de toutes les règles de cohérence à respecter dans votre agrégat. Si vous modifiez séparément une entité enfant ou un objet de valeur, la racine d’agrégat ne peut pas vérifier que l’agrégat est dans un état valide. Il serait alors comme une table avec un pied qui bouge. Le maintien de la cohérence est le principal but de la racine d’agrégat.
 
-Dans la figure 9-9, vous pouvez voir des exemples d’agrégats comme l’agrégat d’acheteur (Buyer), qui contient une seule entité (la racine d’agrégat Buyer). L’agrégat de commande (Order) contient plusieurs entités et un objet de valeur.
+Dans la figure 7-9, vous pouvez voir des exemples d’agrégats, comme l’agrégat Buyer (Acheteur), qui contient une seule entité (la racine d’agrégat Buyer). L’agrégat de commande (Order) contient plusieurs entités et un objet de valeur.
 
-![](./media/image10.png)
+![Un modèle de domaine DDD est composé d’agrégats ; un agrégat peut avoir une ou plusieurs entités, et inclure aussi des objets de valeur.](./media/image10.png)
 
-**Figure 9-9**. Exemples d’agrégats avec une seule entité ou plusieurs entités
+**Figure 7-9**. Exemples d’agrégats avec une seule entité ou plusieurs entités
 
-Notez que l’agrégat d’acheteur (Buyer) peut avoir des entités enfants supplémentaires, en fonction de votre domaine, comme c’est le cas dans le microservice de passation de commandes dans l’application de référence eShopOnContainers. La figure 9-9 illustre un exemple dans lequel l’acheteur a une seule entité, et où un agrégat contient uniquement une racine d’agrégat.
+Notez que l’agrégat d’acheteur (Buyer) peut avoir des entités enfants supplémentaires, en fonction de votre domaine, comme c’est le cas dans le microservice de passation de commandes dans l’application de référence eShopOnContainers. La figure 7-9 illustre un cas où l’acheteur a une seule entité, qui est un exemple d’agrégat contenant seulement une racine d’agrégat.
 
 Afin de maintenir la séparation des agrégats et de conserver des limites claires entre eux, il est conseillé, dans un modèle de domaine DDD, d’interdire la navigation directe entre les agrégats et d’implémenter uniquement le champ de clé étrangère comme dans le [modèle de domaine du microservice de passation de commandes](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) dans eShopOnContainers. L’entité de commande (Order) a uniquement un champ de clé étrangère pour l’acheteur, mais pas de propriété de navigation EF Core, comme le montre le code suivant :
 
@@ -133,24 +134,24 @@ L’identification et l’utilisation des agrégats nécessitent des recherches 
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part I: Modeling a Single Aggregate** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Vaughn Vernon. Effective Aggregate Design - Part III: Gaining Insight Through Discovery** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
--   **Sergey Grybniak. DDD Tactical Design Patterns**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+- **Sergey Grybniak. DDD Tactical Design Patterns** \
+  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Chris Richardson. Developing Transactional Microservices Using Aggregates**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+- **Chris Richardson. Developing Transactional Microservices Using Aggregates** \
+  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. The Aggregate pattern**
-    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+- **DevIQ. The Aggregate pattern** \
+  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
-[Précédent](ddd-oriented-microservice.md)
-[Suivant](net-core-microservice-domain-model.md)
+>[Précédent](ddd-oriented-microservice.md)
+>[Suivant](net-core-microservice-domain-model.md)

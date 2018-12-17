@@ -1,5 +1,6 @@
 ---
-title: Ancres dans les expressions régulières
+title: Ancres dans les expressions régulières .NET
+description: Découvrez comment utiliser des ancres dans les modèles d’expressions régulières.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085184"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155036"
 ---
 # <a name="anchors-in-regular-expressions"></a>Ancres dans les expressions régulières
 <a name="top"></a> Les ancres, ou assertions atomiques de largeur nulle, spécifient une position dans la chaîne où une correspondance doit se produire. Quand vous utilisez une ancre dans votre expression de recherche, le moteur des expressions régulières n'avance pas dans la chaîne ou ne consomme pas de caractères ; il recherche uniquement une correspondance à la position spécifiée. Par exemple, `^` spécifie que la correspondance doit commencer au début d'une ligne ou d'une chaîne. Par conséquent, l'expression régulière `^http:` correspond uniquement à « http: » quand elle se produit au début d'une ligne. Le tableau suivant répertorie les ancres prises en charge par les expressions régulières dans .NET.  
@@ -73,7 +75,7 @@ ms.locfileid: "44085184"
   
  Si vous utilisez `$` avec l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, la correspondance peut également se trouver à la fin d'une ligne. Notez que `$` correspond à `\n` , mais ne correspond pas à `\r\n` (combinaison de caractères de retour chariot et de saut de ligne ou CR/LF). Pour établir une correspondance avec la combinaison de caractères CR/LF, incluez `\r?$` dans le modèle d'expression régulière.  
   
- L'exemple suivant ajoute l'ancre `$` au modèle d'expression régulière utilisé dans l'exemple dans la section [Début de chaîne ou de ligne](#Start) . En cas d'utilisation avec la chaîne d'entrée d'origine, qui inclut cinq lignes de texte, la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> ne peut pas trouver de correspondance, parce que la fin de la première ligne ne correspond pas au modèle `$`. Quand la chaîne d'entrée d'origine est fractionnée dans un tableau de chaînes, la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> réussit à faire correspondre chacune des cinq lignes. Quand la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> est appelée avec le paramètre `options` défini avec la valeur <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, aucune correspondance n'est trouvée parce que le modèle d'expression régulière ne représente pas l'élément de retour chariot (\u+000D). Toutefois, quand le modèle d'expression régulière est modifié par le remplacement de `$` par `\r?$`, l'appel de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> avec le paramètre `options` défini avec la valeur <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trouve encore cinq correspondances.  
+ L'exemple suivant ajoute l'ancre `$` au modèle d'expression régulière utilisé dans l'exemple dans la section [Début de chaîne ou de ligne](#Start) . En cas d'utilisation avec la chaîne d'entrée d'origine, qui inclut cinq lignes de texte, la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> ne peut pas trouver de correspondance, parce que la fin de la première ligne ne correspond pas au modèle `$` . Quand la chaîne d'entrée d'origine est fractionnée dans un tableau de chaînes, la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> réussit à faire correspondre chacune des cinq lignes. Quand la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> est appelée avec le paramètre `options` défini avec la valeur <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, aucune correspondance n'est trouvée parce que le modèle d'expression régulière ne représente pas l'élément de retour chariot (\u+000D). Toutefois, quand le modèle d'expression régulière est modifié par le remplacement de `$` par `\r?$`, l'appel de la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> avec le paramètre `options` défini avec la valeur <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> trouve encore cinq correspondances.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -82,7 +84,7 @@ ms.locfileid: "44085184"
   
 <a name="StartOnly"></a>   
 ## <a name="start-of-string-only-a"></a>Début de chaîne uniquement : \A  
- L'ancre `\A` spécifie qu'une correspondance doit se produire au début de la chaîne d'entrée. Elle est identique à l'ancre `^`, à la différence près que l'ancre `\A` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Par conséquent, elle peut correspondre uniquement au début de la première ligne dans une chaîne d'entrée multiligne.  
+ L'ancre `\A` spécifie qu'une correspondance doit se produire au début de la chaîne d'entrée. Elle est identique à l'ancre `^` , à la différence près que l'ancre `\A` ignore l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Par conséquent, elle peut correspondre uniquement au début de la première ligne dans une chaîne d'entrée multiligne.  
   
  L'exemple suivant est semblable aux exemples des ancres `^` et `$` . Il utilise l'ancre `\A` dans une expression régulière qui extrait des informations sur les années où jouaient certaines équipes de base-ball professionnelles. La chaîne d'entrée inclut cinq lignes. L'appel à la méthode <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> recherche uniquement la première sous-chaîne dans la chaîne d'entrée qui correspond au modèle d'expression régulière. Comme le montre l'exemple, l'option <xref:System.Text.RegularExpressions.RegexOptions.Multiline> n'a aucun effet.  
   

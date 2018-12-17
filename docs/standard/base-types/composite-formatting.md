@@ -1,6 +1,6 @@
 ---
 title: Mise en forme composite
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397931"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126859"
 ---
 # <a name="composite-formatting"></a>Mise en forme composite
+
 La fonctionnalité de mise en forme composite du .NET utilise une liste d’objets et une chaîne de format composite comme entrée. Une chaîne de format composite se compose de texte fixe mélangé à des espaces réservés indexés, appelés éléments de format, qui correspondent aux objets de la liste. L'opération de mise en forme produit une chaîne résultante qui se compose du texte fixe d'origine mélangé à la représentation sous forme de chaîne des objets de la liste.  
   
- La fonctionnalité de mise en forme composite est prise en charge par les méthodes suivantes :  
+> [!IMPORTANT]
+> Au lieu d’utiliser des chaînes de format composite, vous pouvez utiliser des *chaînes interpolées* si le langage et la version du langage que vous utilisez les prennent en charge. Une chaîne interpolée est une chaîne contenant des *expressions interpolées*. Chaque expression interpolée est résolue avec la valeur de l’expression et incluse dans la chaîne du résultat quand la chaîne est affectée. Pour plus d’informations, consultez [Interpolation de chaîne (Informations de référence sur C#)](../../csharp/language-reference/tokens/interpolated.md) et [Chaînes interpolées (Informations de référence sur Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+La fonctionnalité de mise en forme composite est prise en charge par les méthodes suivantes :  
   
--   <xref:System.String.Format%2A?displayProperty=nameWithType>, qui retourne une chaîne de résultat mise en forme.  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>, qui retourne une chaîne de résultat mise en forme.  
   
--   <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, qui ajoute une chaîne de résultat mise en forme à un objet <xref:System.Text.StringBuilder>.  
+- <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, qui ajoute une chaîne de résultat mise en forme à un objet <xref:System.Text.StringBuilder>.   
+- Certaines surcharges de la méthode <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, qui affichent une chaîne de résultat mise en forme sur la console.  
   
--   Certaines surcharges de la méthode <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, qui affichent une chaîne de résultat mise en forme sur la console.  
+- Certaines surcharges de la méthode <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, qui écrivent la chaîne de résultat mise en forme dans un flux ou un fichier. Les classes dérivées de <xref:System.IO.TextWriter>, telles que <xref:System.IO.StreamWriter> et <xref:System.Web.UI.HtmlTextWriter>, partagent également ces fonctionnalités.  
   
--   Certaines surcharges de la méthode <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, qui écrivent la chaîne de résultat mise en forme dans un flux ou un fichier. Les classes dérivées de <xref:System.IO.TextWriter>, telles que <xref:System.IO.StreamWriter> et <xref:System.Web.UI.HtmlTextWriter>, partagent également ces fonctionnalités.  
+- <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui génère un message mis en forme pour les écouteurs Trace.  
   
--   <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui génère un message mis en forme pour les écouteurs Trace.  
+- Les méthodes <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> et <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> qui génèrent des messages mis en forme pour les écouteurs Trace.  
   
--   Les méthodes <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> et <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> qui génèrent des messages mis en forme pour les écouteurs Trace.  
-  
--   La méthode <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui écrit une méthode à caractère informatif pour les écouteurs Trace.  
+- La méthode <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, qui écrit une méthode à caractère informatif pour les écouteurs Trace.  
   
 ## <a name="composite-format-string"></a>Chaîne de format composite  
  Une chaîne de format composite et une liste d'objets sont utilisées comme arguments des méthodes qui prennent en charge la fonctionnalité de mise en forme composite. Une chaîne de format composite est constituée de zéro, une ou plusieurs séquences de texte fixe mélangées à un ou plusieurs éléments de format. Le texte fixe correspond à toute chaîne que vous choisissez, et chaque élément de format correspond à un objet ou une structure boxed dans la liste. La fonctionnalité de mise en forme composite retourne une nouvelle chaîne résultante, dans laquelle chaque élément de format est remplacé par la représentation sous forme de chaîne de l’objet correspondant dans la liste.  
@@ -113,7 +116,7 @@ La fonctionnalité de mise en forme composite du .NET utilise une liste d’obje
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Ordre de traitement  
- Si l'appel à la méthode de mise en forme composite comprend un argument <xref:System.IFormatProvider> dont la valeur n'est pas `null`, le runtime appelle sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pour demander une implémentation de <xref:System.ICustomFormatter>. Si la méthode est en mesure de retourner une implémentation de <xref:System.ICustomFormatter>, elle est mise en cache durant l’appel de la méthode de mise en forme composite.
+ Si l’appel à la méthode de mise en forme composite comprend un argument <xref:System.IFormatProvider> dont la valeur n’est pas `null`, le runtime appelle sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pour demander une implémentation de <xref:System.ICustomFormatter>. Si la méthode est en mesure de retourner une implémentation de <xref:System.ICustomFormatter>, elle est mise en cache durant l’appel de la méthode de mise en forme composite.
   
  Chaque valeur de la liste de paramètres qui correspond à un élément de mise en forme est convertie en une chaîne de la manière suivante :  
   
@@ -121,11 +124,11 @@ La fonctionnalité de mise en forme composite du .NET utilise une liste d’obje
   
 2.  Si une implémentation de <xref:System.ICustomFormatter> est disponible, le runtime appelle sa méthode <xref:System.ICustomFormatter.Format%2A>. Il passe à la méthode la valeur *formatString* de l’élément de mise en forme, s’il en existe une, ou `null` si ce n’est pas le cas, ainsi que l’implémentation de <xref:System.IFormatProvider>. Si l’appel à la méthode <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retourne `null`, l’exécution se poursuit à l’étape suivante. Sinon, le résultat de l’appel à <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> est retourné.
   
-3.  Si la valeur implémente l'interface <xref:System.IFormattable>, la méthode de l'interface <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> est appelée. La valeur *formatString*, s’il en existe une dans l’élément de mise en forme, est passée à la méthode, ou bien la valeur `null` si ce n’est pas le cas. L'argument <xref:System.IFormatProvider> est déterminé comme suit :  
+3.  Si la valeur implémente l'interface <xref:System.IFormattable>, la méthode de l'interface <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> est appelée. La valeur *formatString*, s’il en existe une dans l’élément de mise en forme, est passée à la méthode, ou bien la valeur `null` si ce n’est pas le cas. L’argument <xref:System.IFormatProvider> est déterminé comme suit :  
   
-    -   Pour une valeur numérique, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.NumberFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S’il ne peut pas en fournir un, si la valeur de l’argument est `null` ou si la méthode de mise en forme composite n’a pas de paramètre <xref:System.IFormatProvider>, l’objet <xref:System.Globalization.NumberFormatInfo> de la culture actuelle du thread est utilisé.  
+    -   Pour une valeur numérique, si une méthode de mise en forme composite avec l’argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.NumberFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S’il ne peut pas en fournir un, si la valeur de l’argument est `null` ou si la méthode de mise en forme composite n’a pas de paramètre <xref:System.IFormatProvider>, l’objet <xref:System.Globalization.NumberFormatInfo> de la culture actuelle du thread est utilisé.  
   
-    -   Pour une valeur de date et d'heure, si une méthode de mise en forme composite avec l'argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.DateTimeFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S’il ne peut pas en fournir un, si la valeur de l’argument est `null` ou si la méthode de mise en forme composite n’a pas de paramètre <xref:System.IFormatProvider>, l’objet <xref:System.Globalization.DateTimeFormatInfo> de la culture actuelle du thread est utilisé.  
+    -   Pour une valeur de date et d’heure, si une méthode de mise en forme composite avec l’argument non null <xref:System.IFormatProvider> est appelée, le runtime demande un objet <xref:System.Globalization.DateTimeFormatInfo> de sa méthode <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. S’il ne peut pas en fournir un, si la valeur de l’argument est `null` ou si la méthode de mise en forme composite n’a pas de paramètre <xref:System.IFormatProvider>, l’objet <xref:System.Globalization.DateTimeFormatInfo> de la culture actuelle du thread est utilisé.  
   
     -   Pour les objets d'autres types, si une méthode de mise en forme composite est appelée avec un argument <xref:System.IFormatProvider>, sa valeur est transmise directement à l'implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. Dans le cas contraire, `null` est transmis à l’implémentation de <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   

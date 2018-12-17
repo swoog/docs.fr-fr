@@ -1,17 +1,17 @@
 ---
 title: Application des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Application des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre la façon dont CQRS est implémenté dans le microservice Ordering de l’application eShopOnContainers.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106747"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143634"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Application des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Appliquer des approches CQRS et CQS dans un microservice DDD dans eShopOnContainers
 
 La conception du microservice de commandes au niveau de l’application de référence eShopOnContainers est basée sur les principes CQRS. Toutefois, elle utilise l’approche la plus simple, qui consiste simplement à séparer les requêtes des commandes et à utiliser la même base de données pour les deux actions.
 
@@ -23,7 +23,7 @@ Les modèles DDD présentés dans ce guide ne doivent pas être appliqués de ma
 
 Un modèle de ce type est le modèle Agrégat, que nous examinerons plus en détail dans les sections suivantes. Brièvement, dans le modèle Agrégat, vous traitez un grand nombre d’objets de domaine comme un seul ensemble en raison de leur relation dans le domaine. Il est possible que vous n’obteniez pas toujours des avantages avec ce modèle dans les requêtes, car celui-ci peut augmenter la complexité de la logique de requête. Pour les requêtes en lecture seule, vous n’obtenez pas les avantages de traitement de plusieurs objets comme un seul agrégat, juste la complexité.
 
-Comme indiqué dans la figure 9-2, ce guide propose d’utiliser des modèles DDD uniquement dans la zone transactionnelle/de mises à jour de votre microservice (autrement dit, avec un déclenchement par des commandes). Les requêtes peuvent suivre une approche plus simple et doivent être séparées des commandes, suite à une approche CQRS.
+Comme le montre la figure 7-2, ce guide propose d’utiliser des modèles DDD seulement dans la zone transactionnelle/de mises à jour de votre microservice (c’est-à-dire avec un déclenchement par des commandes). Les requêtes peuvent suivre une approche plus simple et doivent être séparées des commandes, suite à une approche CQRS.
 
 Pour implémenter le « côté requêtes », vous pouvez choisir entre plusieurs méthodes, à partir de votre ORM complet comme EF Core, des projections AutoMapper, des procédures stockées, des vues, des vues matérialisées ou un micro-ORM.
 
@@ -33,7 +33,7 @@ Notez que, quand vous utilisez cette approche, toutes les mises à jour apporté
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>Les modèles CQRS et DDD ne sont pas des architectures de niveau supérieur
 
-Il est important de comprendre que CQRS et la plupart des modèles DDD (comme les couches DDD ou un modèle de domaine avec des agrégats) ne sont pas des styles architecturaux, mais uniquement des modèles d’architecture. Les microservices, SOA et l’architecture pilotée par événements (EDA) sont des exemples de styles architecturaux. Ils décrivent un système de nombreux composants, tels que de nombreux microservices. Les modèles CQRS et DDD décrivent un élément à l’intérieur d’un système ou composant unique, dans ce cas un élément à l’intérieur d’un microservice.
+Il est important de comprendre que CQRS et la plupart des modèles DDD (comme les couches DDD ou un modèle de domaine avec des agrégats) ne sont pas des styles d’architecture, mais seulement des modèles d’architecture. Les microservices, SOA et l’architecture pilotée par événements (EDA) sont des exemples de styles architecturaux. Ils décrivent un système de nombreux composants, tels que de nombreux microservices. Les modèles CQRS et DDD décrivent un élément à l’intérieur d’un système ou composant unique, dans ce cas un élément à l’intérieur d’un microservice.
 
 Des contextes délimités différents vont utiliser différents modèles. Ils ont des responsabilités diverses, ce qui aboutit à différentes solutions. Il est important de souligner que le fait d’imposer le même modèle partout entraîne un échec. N’utilisez pas les modèles CQRS et DDD partout. De nombreux sous-systèmes, contextes délimités ou microservices sont plus simples et peuvent être implémentés plus facilement à l’aide de services CRUD de base ou d’une autre approche.
 
@@ -41,28 +41,27 @@ Il n’existe qu’une seule architecture des applications : l’architecture de
 
 ####  <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Martin Fowler. CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Martin Fowler. CQRS** \
+  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Greg Young. CQS vs. CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Greg Young. CQS vs. CQRS** \
+  [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Greg Young. Documents CQRS**
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- **Greg Young. CQRS Documents** \
+  [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Greg Young. CQRS, Task Based UIs and Event Sourcing**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Greg Young. CQRS, Task Based UIs and Event Sourcing** \
+  [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Udi Dahan. Clarified CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Udi Dahan. Clarified CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Event-Sourcing (ES)**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **Event-Sourcing (ES)** \
+  [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[Précédent](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[Suivant](cqrs-microservice-reads.md)
+>[Précédent](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Suivant](cqrs-microservice-reads.md)

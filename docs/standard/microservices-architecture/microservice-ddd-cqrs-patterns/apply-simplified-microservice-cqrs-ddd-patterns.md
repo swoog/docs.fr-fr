@@ -1,23 +1,23 @@
 ---
 title: Application de modèles CQRS et DDD simplifiés dans un microservice
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Application de modèles CQRS et DDD simplifiés dans un microservice
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre la relation globale entre les modèles CQRS et DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 5557a3d83d1f5f3016ff411157db1652d3ac50e2
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148065"
 ---
-# <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Application de modèles CQRS et DDD simplifiés dans un microservice
+# <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>Appliquer des modèles CQRS et DDD simplifiés dans un microservice
 
 CQRS est un modèle d’architecture qui sépare les modèles pour la lecture et l’écriture de données. Le terme connexe [CQS (séparation des commandes et des requêtes)](https://martinfowler.com/bliki/CommandQuerySeparation.html) a été initialement défini par Bertrand Meyer dans son livre *Object-Oriented Software Construction*. L’idée de base est que vous pouvez diviser les opérations d’un système en deux catégories nettement séparées :
 
--   Requêtes. Elles retournent un résultat, ne modifient pas l’état du système et ne présentent aucun effet secondaire.
+- Requêtes. Elles retournent un résultat, ne modifient pas l’état du système et ne présentent aucun effet secondaire.
 
--   Commandes. Elles modifient l’état d’un système.
+- Commandes. Elles modifient l’état d’un système.
 
 CQS est un concept simple : il s’agit de méthodes du même objet qui sont soit des requêtes, soit des commandes. Chaque méthode retourne l’état ou transforme l’état, mais pas les deux. Même un seul objet de modèle de dépôt peut se conformer à CQS. L’approche CQS peut être considérée comme un principe fondamental de CQRS.
 
@@ -27,15 +27,14 @@ L’aspect de séparation de CQRS est obtenu en regroupant les opérations de re
 
 CQRS implique d’avoir deux objets pour une opération de lecture/écriture où, dans d’autres contextes, il y en a un. Il existe des raisons d’avoir une base de données de lectures dénormalisée, sur laquelle vous pouvez obtenir des informations dans une documentation CQRS plus avancée. Mais nous n’utilisons pas cette approche ici, où l’objectif est d’avoir plus de souplesse dans les requêtes, et non pas de limiter les requêtes avec des contraintes à partir de modèles DDD comme les agrégats.
 
-Il peut s’agir, par exemple, du microservice de commandes de l’application de référence eShopOnContainers. Ce service implémente un microservice basé sur une approche CQRS simplifiée. Il utilise une seule source de données ou base de données, mais deux modèles logiques plus des modèles DDD pour le domaine transactionnel, comme illustré dans la figure 9-2.
+Il peut s’agir, par exemple, du microservice de commandes de l’application de référence eShopOnContainers. Ce service implémente un microservice basé sur une approche CQRS simplifiée. Il utilise une seule source de données ou base de données, mais deux modèles logiques plus des modèles DDD pour le domaine transactionnel, comme illustré dans la figure 7-2.
 
-![](./media/image2.png)
+![Le microservice Ordering logique inclut sa base de données Ordering, qui peut ou non se trouver dans le même hôte Docker. Le fait d’avoir la base de données dans le même hôte Docker est parfait pour le développement, mais pas pour la production.](./media/image2.png)
 
-**Figure 9-2**. Microservice basé sur les modèles CQRS et DDD simplifiés
+**Figure 7-2**. Microservice basé sur les modèles CQRS et DDD simplifiés
 
 La couche Application peut être l’API web elle-même. Ici, l’aspect important de la conception est que le microservice a séparé les requêtes et les ViewModels (modèles de données spécialement créés pour les applications clientes) des commandes, du modèle de domaine et des transactions suivant le modèle CQRS. Avec cette approche, les requêtes restent indépendantes des restrictions et des contraintes provenant de modèles DDD qui conviennent uniquement pour les transactions et les mises à jour, comme expliqué dans des sections ultérieures.
 
-
 >[!div class="step-by-step"]
-[Précédent](index.md)
-[Suivant](eshoponcontainers-cqrs-ddd-microservice.md)
+>[Précédent](index.md)
+>[Suivant](eshoponcontainers-cqrs-ddd-microservice.md)

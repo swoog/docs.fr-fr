@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332951"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155023"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Concepts de base du système de fichiers et des E/S de fichier du .NET Framework (Visual Basic)
 Les classes de l’espace de noms <xref:System.IO> sont utilisées pour travailler avec les lecteurs, les fichiers et les répertoires.  
@@ -32,7 +32,7 @@ Les classes de l’espace de noms <xref:System.IO> sont utilisées pour travaill
 ## <a name="stream-operations"></a>Opérations de flux  
  Les données contenues dans le flux peuvent provenir de la mémoire, d’un fichier ou d’un socket TCP/IP. Des opérations fondamentales peuvent être appliquées aux flux :  
   
--   Lecture. Vous pouvez lire à partir d’un flux, autrement dit transférer des données du flux vers une structure de données, telle qu’une chaîne ou un tableau d’octets.  
+-   **Lecture**. Vous pouvez lire à partir d’un flux, autrement dit transférer des données du flux vers une structure de données, telle qu’une chaîne ou un tableau d’octets.  
   
 -   **Écriture**. Vous pouvez écrire dans un flux, autrement dit transférer des données d’une source de données vers le flux.  
   
@@ -101,5 +101,5 @@ Les classes de l’espace de noms <xref:System.IO> sont utilisées pour travaill
 ## <a name="see-also"></a>Voir aussi  
  [Composition de flux](../../../../standard/io/composing-streams.md)  
  [Fichier et flux de données E/S](../../../../standard/io/index.md)  
- [E/S sur fichier asynchrones](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [Classes utilisées dans les E/S de fichier du .NET Framework et le système de fichiers (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

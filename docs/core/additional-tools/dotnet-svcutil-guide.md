@@ -1,17 +1,18 @@
 ---
-title: Outil dotnet-svcutil Microsoft WCF
+title: Présentation de l’outil WCF svcutil - .NET Core
 description: Vue d’ensemble de l’outil dotnet-svcutil Microsoft WCF, qui ajoute des fonctionnalités pour les projets .NET Core et ASP.NET Core, de manière similaire à l’outil svcutil WCF pour les projets .NET Framework.
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126014"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Outil dotnet-svcutil Microsoft WCF
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Outil WCF dotnet-svcutil pour .NET Core
 
 L’outil **dotnet-svcutil** Windows Communication Foundation (WCF) est un outil CLI .NET Core qui récupère les métadonnées d’un service web sur un emplacement réseau ou dans un fichier WSDL, puis génère une classe WCF contenant des méthodes de proxy clientes pour accéder aux opérations du service web.
 
@@ -24,7 +25,7 @@ L’outil **dotnet-svcutil** est une option alternative au fournisseur de servic
 
 ## <a name="prerequisites"></a>Prérequis
 
-* [Kit SDK .NET Core](https://www.microsoft.com/net/download) 1.0.4 ou versions ultérieures
+* [Kit SDK .NET Core](https://dotnet.microsoft.com/download) 1.0.4 ou versions ultérieures
 * Votre éditeur de code favori
 
 ## <a name="getting-started"></a>Bien démarrer

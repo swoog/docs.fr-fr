@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 7da86cfe483a2355c53206f4c491fbd07e4c3046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f427eb5d8f41f730d4263425e268213db92236d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591922"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143180"
 ---
 # <a name="native-interoperability"></a>Interopérabilité native
 
@@ -260,7 +260,7 @@ Les deux exemples ci-dessus dépendent de paramètres et dans les deux cas, les 
 
 Le **marshaling** est le processus de transformation des types quand ils doivent franchir la limite entre code managé et code natif.
 
-La raison pour laquelle le marshaling est nécessaire est que les types des codes managé et non managé sont différents. Dans le code managé, par exemple, vous avez un élément `String`, tandis que dans le monde non managé, les chaînes peuvent être Unicode (« larges »), non-Unicode, terminées par Null, ASCII, etc. Par défaut, le sous-système P/Invoke tente de prendre la bonne décision en fonction du comportement par défaut que vous pouvez constater sur [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Toutefois, dans les cas où vous avez besoin de plus de contrôle, vous pouvez employer l’attribut `MarshalAs` pour spécifier le type attendu du côté du code non managé. Par exemple, si nous voulons que la chaîne soit envoyée sous forme de chaîne ANSI terminée par Null, nous pouvons procéder comme suit :
+La raison pour laquelle le marshaling est nécessaire est que les types des codes managé et non managé sont différents. Dans le code managé, par exemple, vous avez un élément `String`, tandis que dans le monde non managé, les chaînes peuvent être Unicode (« larges »), non-Unicode, terminées par Null, ASCII, etc. Par défaut, le sous-système P/Invoke tente de prendre la bonne décision en fonction du [comportement par défaut](../../docs/framework/interop/default-marshaling-behavior.md). Toutefois, dans les cas où vous avez besoin de plus de contrôle, vous pouvez employer l’attribut [MarshalAs](xref:System.Runtime.InteropServicxes.MarshalAs) pour spécifier le type attendu du côté du code non managé. Par exemple, si nous voulons que la chaîne soit envoyée sous forme de chaîne ANSI terminée par Null, nous pouvons procéder comme suit :
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

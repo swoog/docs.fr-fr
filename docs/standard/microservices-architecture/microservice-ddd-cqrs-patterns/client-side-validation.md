@@ -1,19 +1,19 @@
 ---
 title: Validation côté client (validation dans les couches de présentation)
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Validation côté client (validation dans les couches de présentation)
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Explorer les concepts clés de la validation côté client.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582422"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130076"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Validation côté client (validation dans les couches de présentation)
 
-Même quand la source fiable est le modèle de domaine et que vous devez obtenir au final une validation à ce niveau, la validation peut toujours être gérée au niveau du modèle de domaine (côté serveur) et côté client.
+Même quand la source fiable est le modèle de domaine et que vous devez obtenir au final une validation à ce niveau, la validation peut toujours être gérée au niveau du modèle de domaine (côté serveur) et au niveau de l’interface utilisateur (côté client).
 
 La validation côté client est très pratique pour les utilisateurs. Elle leur épargne le temps d’attente nécessaire à un aller-retour avec le serveur qui pourrait retourner des erreurs de validation. En termes d’activité de l’entreprise, même quelques fractions de secondes multipliées des centaines de fois par jour finissent par représenter un temps considérable, auquel s’ajoutent un coût et de la frustration. Une validation directe et immédiate permet aux utilisateurs de travailler plus efficacement, et de produire une meilleure qualité des entrées et des sorties.
 
@@ -29,27 +29,27 @@ L’implémentation de la validation côté client dépend du type d’applicati
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Validation dans les applications mobiles Xamarin
 
--   **Valider l’entrée de texte et afficher les erreurs**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **Valider l’entrée de texte et afficher les erreurs** \
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Validation Callback**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **Rappel de validation** \
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Validation dans les applications ASP.NET Core
 
--   **Rick Anderson. Ajout de la validation**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Rick Anderson. Ajout de la validation** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Validation dans les applications web SPA (Angular 2, TypeScript, JavaScript)
 
--   **Ado Kukic. Angular 2 Form Validation**
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **Ado Kukic. Validation des formulaires Angular 2** \
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Form Validation**
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **Validation des formulaires** \
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Validation.** Documentation Breeze.
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **Validation.** Documentation Breeze. \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 En résumé, voici les concepts les plus importants en ce qui concerne la validation :
 
@@ -59,10 +59,8 @@ En résumé, voici les concepts les plus importants en ce qui concerne la valida
 
 - Si vous devez créer plusieurs objets associés, comme un agrégat, et qu’ils ne sont valides qu’une fois que tous ont été créés, envisagez d’utiliser le modèle de fabrique.
 
-- Les frameworks de validation sont utilisés de façon optimale dans des couches spécifiques, telles que la couche de présentation ou la couche de service/d’application, mais généralement pas dans la couche de modèle de domaine, car cela implique une dépendance forte sur un framework d’infrastructure.
-
 - Dans la plupart des cas, une validation redondante côté client est appropriée, car l’application peut être proactive.
 
 >[!div class="step-by-step"]
-[Précédent](domain-model-layer-validations.md)
-[Suivant](domain-events-design-implementation.md)
+>[Précédent](domain-model-layer-validations.md)
+>[Suivant](domain-events-design-implementation.md)

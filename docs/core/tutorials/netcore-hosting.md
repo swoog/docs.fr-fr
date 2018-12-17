@@ -1,17 +1,18 @@
 ---
-title: Hébergement de .NET Core
-description: Hébergement du runtime .NET Core à partir du code natif
+title: Écrire un hôte de runtime .NET Core personnalisé
+description: Découvrez comment héberger le runtime .NET Core à partir du code natif pour prendre en charge des scénarios avancés nécessitant un contrôle du fonctionnement du runtime .NET Core.
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218604"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146947"
 ---
-# <a name="hosting-net-core"></a>Hébergement de .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Écrire un hôte .NET Core personnalisé pour contrôler le runtime .NET à partir de votre code natif
 
 Comme tout code managé, les applications .NET Core sont exécutées par un hôte. L’hôte est chargé du démarrage du runtime (y compris des composants comme le JIT et le récupérateur de mémoire), de la création de domaines d’application et de l’appel de points d’entrée managés.
 
@@ -82,7 +83,6 @@ Propriétés AppDomain courantes :
 *  `APP_NI_PATHS` Cette liste est très similaire à APP_PATHS, sauf qu’il s’agit de chemins où rechercher des images natives.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Cette propriété est une liste de chemins où le chargeur doit rechercher les DLL natives appelées via p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Cette liste inclut des chemins où rechercher les assemblys satellites de ressources (dans les sous-répertoires spécifiques de la culture).
-*  `AppDomainCompatSwitch` Cette chaîne spécifie les particularités de compatibilité qui doivent être utilisées pour les assemblys sans moniker de framework cible explicite (attribut de niveau assembly indiquant le framework dans lequel doit s’exécuter un assembly). En général, elle doit être définie sur `"UseLatestBehaviorWhenTFMNotSpecified"`, mais certains hôtes peuvent préférer obtenir d’anciennes particularités de compatibilité Silverlight ou Windows Phone à la place.
 
 Dans notre [exemple d’hôte simple](https://github.com/dotnet/samples/tree/master/core/hosting), ces propriétés sont configurées de la façon suivante :
 

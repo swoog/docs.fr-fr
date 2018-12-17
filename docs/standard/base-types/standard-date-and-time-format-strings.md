@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ca6109a61fb32cd148e69081da0772277743b6e
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f4c6d10fad075a70d80bf6e5aa32edf0f89c42dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873730"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151289"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Chaînes de format de date et d'heure standard
 Une chaîne de format de date et d'heure standard utilise un spécificateur de format unique pour définir la représentation textuelle d'une valeur de date et d'heure. Toute chaîne de format de date et d’heure contenant plusieurs caractères, y compris un espace, est interprétée comme une chaîne de format de date et d’heure personnalisée. Pour plus d’informations, consultez [Chaînes de format de date et d’heure personnalisées](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Une chaîne de format standard ou personnalisée peut être utilisée de deux façons :  
@@ -255,7 +255,7 @@ Les chaînes de format de date et d'heure standard peuvent être utilisées avec
   
 -   Les valeurs de date et d'heure <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> ne possèdent aucune information de fuseau horaire.  
   
- Comme le spécificateur de format standard O" ou "o" est conforme à une norme internationale, l'opération de mise en forme ou d'analyse qui recourt au spécificateur utilise toujours la culture dite indifférente et le calendrier grégorien.  
+ Comme le spécificateur de format standard « O » ou « o » est conforme à une norme internationale, l’opération de mise en forme ou d’analyse qui recourt au spécificateur utilise toujours la culture dite indifférente et le calendrier grégorien.  
   
  Les chaînes transmises aux méthodes `Parse`, `TryParse`, `ParseExact`, et `TryParseExact` de <xref:System.DateTime> et <xref:System.DateTimeOffset> peuvent être analysées à l'aide du spécificateur de format "O" ou "o" si elles sont définies dans l'un de ces formats. Dans le cas des objets <xref:System.DateTime>, la surcharge d'analyse que vous appelez doit également inclure un paramètre `styles` avec une valeur de <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType>. Notez que si vous appelez une méthode d'analyse avec la chaîne de format personnalisée qui correspond au spécificateur de format "O" ou "o", vous n'obtenez pas les mêmes résultats que "O" ou "o". En effet, les méthodes d'analyse qui utilisent une chaîne de format personnalisée ne peuvent pas analyser la représentation sous forme de chaîne des valeurs de date et d'heure auxquelles fait défaut un composant de fuseau horaire ou qui recourent à "Z" pour indiquer l'heure UTC.  
   

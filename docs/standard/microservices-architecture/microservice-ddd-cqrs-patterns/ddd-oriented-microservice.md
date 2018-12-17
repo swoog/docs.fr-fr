@@ -1,17 +1,17 @@
 ---
 title: Conception d’un microservice orienté DDD
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Conception d’un microservice orienté DDD
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Comprendre la conception du microservice orienté DDD (Domain Driven Design) et de ses couches d’application.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/06/2017
-ms.openlocfilehash: 4d6810e03414e8462dd90c4da686476da0b66032
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183501"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145606"
 ---
-# <a name="designing-a-ddd-oriented-microservice"></a>Conception d’un microservice orienté DDD
+# <a name="design-a-ddd-oriented-microservice"></a>Concevoir un microservice orienté DDD
 
 La conception DDD (Domain-Driven Design) préconise une modélisation basée sur la réalité de l’entreprise applicable à vos cas d’usage. Dans le contexte de la génération d’applications, DDD traite les problèmes comme des domaines. Elle décrit les problèmes indépendants comme des contextes délimités (chaque contexte délimité correspond à un microservice) et met l’accent sur un langage commun pour discuter de ces problèmes. Elle suggère également de nombreux modèles et concepts techniques, comme des entités de domaine avec des modèles élaborés (aucun [modèle de domaine anémique](https://martinfowler.com/bliki/AnemicDomainModel.html)), objets de valeur, agrégats et règles de racine d’agrégat (ou d’entité racine) pour prendre en charge l’implémentation interne. Cette section présente la conception et l’implémentation de ces modèles internes.
 
@@ -33,21 +33,21 @@ La plupart des applications d’entreprise avec une importante complexité techn
 
 Par exemple, une entité peut être chargée à partir de la base de données. Par la suite, une partie de ces informations, ou une agrégation d’informations dont des données supplémentaires provenant d’autres entités, peut être envoyée à l’interface utilisateur du client via une API web REST. L’intérêt ici est que l’entité de domaine est contenue dans la couche de modèle de domaine et qu’elle ne doit pas être propagée à d’autres zones auxquelles elle n’appartient pas, comme à la couche de présentation.
 
-En outre, vous devez disposer d’entités toujours valides (consultez la section [Conception de validations dans la couche de modèle de domaine](#designing-validations-in-the-domain-model-layer)) contrôlées par les racines d’agrégat (entités racine). Par conséquent, les entités ne doivent pas liées aux vues clientes, car il est possible que certaines données ne soient pas encore validées au niveau de l’interface utilisateur. C’est là où intervient le ViewModel. Ce dernier est un modèle de données destiné exclusivement à répondre aux besoins de la couche de présentation. Les entités de domaine n’appartiennent pas directement au ViewModel. Au lieu de cela, vous devez effectuer la conversion entre ViewModels et entités de domaine, et vice versa.
+En outre, vous devez disposer d’entités toujours valides (consultez la section [Conception de validations dans la couche de modèle de domaine](domain-model-layer-validations.md)) contrôlées par les racines d’agrégat (entités racine). Par conséquent, les entités ne doivent pas liées aux vues clientes, car il est possible que certaines données ne soient pas encore validées au niveau de l’interface utilisateur. C’est là où intervient le ViewModel. Ce dernier est un modèle de données destiné exclusivement à répondre aux besoins de la couche de présentation. Les entités de domaine n’appartiennent pas directement au ViewModel. Au lieu de cela, vous devez effectuer la conversion entre ViewModels et entités de domaine, et vice versa.
 
 Quand le problème de la complexité est abordé, il est important de disposer d’un modèle de domaine contrôlé par les racines d’agrégat qui vérifient que l’ensemble des invariants et règles associés à ce groupe d’entités (agrégat) fonctionne via un point d’entrée unique (une porte), la racine d’agrégat.
 
-La Figure 9-5 illustre l’implémentation d’une conception par couches dans l’application eShopOnContainers.
+La figure 7-5 montre l’implémentation d’une conception par couches dans l’application eShopOnContainers.
 
-![](./media/image6.png)
+![Les trois couches dans un microservice DDD comme Ordering. Chaque couche est un projet Visual Studio : la couche Application est Ordering.API, la couche Domaine est Ordering.Domain et la couche Infrastructure est Ordering.Infrastructure.](./media/image6.png)
 
-**Figure 9-5**. Couches DDD dans le microservice de commandes dans eShopOnContainers
+**Figure 7-5**. Couches DDD dans le microservice de commandes dans eShopOnContainers
 
-Vous souhaitez concevoir le système afin que chaque couche communique uniquement avec certaines autres couches. Cela peut être plus facile à appliquer si les couches sont implémentées comme des bibliothèques de classes différentes, car vous pouvez identifier clairement les dépendances définies entre les bibliothèques. Par exemple, la couche de modèle de domaine ne nécessite pas de dépendance sur une autre couche (les classes de modèle de domaine doivent être des classes d’objets CLR traditionnels ou [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Comme illustré dans la Figure 9-6, la bibliothèque de couche **Ordering.Domain** a des dépendances uniquement sur les bibliothèques .NET Core ou les packages NuGet, mais sur aucune autre bibliothèque personnalisée, telle que la bibliothèque de persistance ou de données.
+Vous souhaitez concevoir le système afin que chaque couche communique uniquement avec certaines autres couches. Cela peut être plus facile à appliquer si les couches sont implémentées comme des bibliothèques de classes différentes, car vous pouvez identifier clairement les dépendances définies entre les bibliothèques. Par exemple, la couche de modèle de domaine ne nécessite pas de dépendance sur une autre couche (les classes de modèle de domaine doivent être des classes d’objets CLR traditionnels ou [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)). Comme illustré dans la figure 7-6, la bibliothèque de la couche **Ordering.Domain** a des dépendances de bibliothèques .NET Core ou de packages NuGet seulement, et n’a pas de dépendances d’autres bibliothèques personnalisées, comme la bibliothèque de données ou la bibliothèque de persistance.
 
-![](./media/image7.PNG)
+![La vue Explorateur de solutions des dépendances de Ordering.Domain, montrant qu’elle dépend seulement de bibliothèques .NET Core.](./media/image7.png)
 
-**Figure 9-6**. Les couches implémentées comme des bibliothèques permettent de mieux contrôler les dépendances entre les couches
+**Figure 7-6**. Les couches implémentées comme des bibliothèques permettent de mieux contrôler les dépendances entre les couches
 
 ### <a name="the-domain-model-layer"></a>Couche de modèle de domaine
 
@@ -63,7 +63,7 @@ Les entités de domaine ne doivent pas avoir de dépendance directe (par exemple
 
 La plupart des frameworks ORM modernes comme Entity Framework Core autorisent cette approche, afin que vos classes de modèle de domaine ne soient pas couplées à l’infrastructure. Toutefois, il n’est pas toujours possible d’avoir des entités OCT lors de l’utilisation de certains frameworks et bases de données NoSQL, comme Actors et Reliable Collections dans Azure Service Fabric.
 
-Même quand il est important de suivre le principe d’ignorance de la persistance pour votre modèle de domaine, vous ne devez pas ignorer les problèmes de persistance. Il est toujours très important de comprendre le modèle de données physique et comment il est mappé à votre modèle d’objet entité. Dans le cas contraire, vous pouvez créer des conceptions impossibles.
+Même quand il est important de suivre le principe d’ignorance de la persistance pour votre modèle de domaine, vous ne devez pas ignorer les questions liées à la persistance. Il est toujours très important de comprendre le modèle de données physique et comment il est mappé à votre modèle d’objet entité. Dans le cas contraire, vous pouvez créer des conceptions impossibles.
 
 En outre, cela ne signifie pas que vous pouvez prendre un modèle conçu pour une base de données relationnelle et le déplacer directement vers une base de données orientée document ou NoSQL. Dans certains modèles d’entité, le modèle peut correspondre, mais ce n’est généralement pas le cas. Il existe toujours des contraintes que votre modèle d’entité doit respecter, basées sur les technologies de stockage et ORM.
 
@@ -85,26 +85,25 @@ La couche d’infrastructure représente la façon dont les données qui sont in
 
 Conformément aux principes [d’ignorance de la persistance](https://deviq.com/persistence-ignorance/) et [d’ignorance de l’infrastructure](https://ayende.com/blog/3137/infrastructure-ignorance) mentionnés précédemment, la couche d’infrastructure ne doit pas « contaminer » la couche de modèle de domaine. Les classes d’entité de modèle de domaine doivent rester étrangères à l’infrastructure qui vous permet de rendre persistantes des données (EF ou tout autre framework) en évitant les dépendances dures sur les frameworks. Votre bibliothèque de classes de couche de modèle de domaine doit avoir uniquement votre code de domaine, simplement des classes d’entité [OCT](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) qui implémentent le cœur de votre logiciel et qui sont complètement découplées des technologies d’infrastructure.
 
-Par conséquent, vos couches ou bibliothèques de classes et projets doivent finalement s’appuyer sur votre couche de modèle de domaine (bibliothèque), et non l’inverse, comme indiqué dans la Figure 9-7.
+Ainsi, vos couches ou vos bibliothèques et projets de classes doivent au final s’appuyer sur votre couche de modèle de domaine (bibliothèque), et pas l’inverse, comme illustré dans la figure 7-7.
 
-![](./media/image8.png)
+![Dépendances dans un service de conception DDD : la couche Application dépend des couches Domaine et Infrastructure, la couche Infrastructure dépend de la couche Domaine, mais la couche Domaine ne dépend d’aucune couche.](./media/image8.png)
 
-**Figure 9-7**. Dépendances entre les couches dans DDD
+**Figure 7-7**. Dépendances entre les couches dans DDD
 
 Cette conception de couche doit être indépendante pour chaque microservice. Comme indiqué précédemment, vous pouvez implémenter les microservices les plus complexes suivant des modèles DDD, tout en implémentant des microservices pilotés par des données plus simples (CRUD de base dans une couche unique) plus simplement.
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **DevIQ. Persistence Ignorance principle**
-    [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+- **DevIQ. Persistence Ignorance principle** \
+  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastructure Ignorance**
-    [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+- **Oren Eini. Infrastructure Ignorance** \
+  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Layered Architecture In Domain-Driven Design**
-    [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
-
+- **Angel Lopez. Layered Architecture In Domain-Driven Design** \
+  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
-[Précédent](cqrs-microservice-reads.md)
-[Suivant](microservice-domain-model.md)
+>[Précédent](cqrs-microservice-reads.md)
+>[Suivant](microservice-domain-model.md)

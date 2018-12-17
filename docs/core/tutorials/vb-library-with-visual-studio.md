@@ -1,20 +1,20 @@
 ---
-title: Génération d’une bibliothèque de classes avec Visual Basic et .NET Core dans Visual Studio 2017
-description: Découvrez comment créer une bibliothèque de classes écrite en Visual Basic à l’aide de Visual Studio 2017
+title: Génération d’une bibliothèque de classes Visual Basic .NET Core dans Visual Studio 2017
+description: Découvrez comment créer une bibliothèque de classes .NET Core écrite en Visual Basic à l’aide de Visual Studio 2017
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144700"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Génération d’une bibliothèque de classes avec Visual Basic et .NET Core dans Visual Studio 2017
+# <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Générer une bibliothèque de classes avec Visual Basic et le SDK .NET Core dans Visual Studio 2017
 
 Une *bibliothèque de classes* définit des types et des méthodes qui peuvent être appelés par une application. Une bibliothèque de classes qui cible .NET Standard 2.0 permet à votre bibliothèque d’être appelée par n’importe quelle implémentation .NET qui prend en charge cette version de .NET Standard. Quand vous avez terminé votre bibliothèque de classes, vous pouvez décider de la distribuer ou non comme un composant tiers, ou de l’inclure ou non dans un composant groupé avec une ou plusieurs applications.
 

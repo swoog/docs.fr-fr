@@ -1,33 +1,32 @@
 ---
 title: Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
-description: Architecture des microservices .NET pour les applications .NET en conteneur | Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Utilisation d’un serveur de base de données s’exécutant en tant que conteneur ? Uniquement pour le développement ! Comprendre pourquoi.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106147"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127717"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Utilisation d’un serveur de base de données s’exécutant en tant que conteneur
 
-Vos bases de données (SQL Server, PostgreSQL, MySQL, etc.) peuvent être stockées sur des serveurs autonomes ordinaires, dans des clusters locaux ou sur des services PaaS dans le cloud comme Azure SQL DB. Toutefois, pour les environnements de développement et de test, il est pratique de pouvoir exécuter des bases de données en tant que conteneurs. En effet, vous n’avez aucune dépendance externe, et la simple exécution de la commande docker-compose permet de démarrer l’ensemble de l’application. Le fait de disposer de ces bases de données en tant que conteneurs est également idéal pour les tests d’intégration, car la base de données démarre dans le conteneur et contient toujours les mêmes exemples de données. Les tests sont donc plus prévisibles.
+Vos bases de données (SQL Server, PostgreSQL, MySQL, etc.) peuvent être stockées sur des serveurs autonomes ordinaires, dans des clusters locaux ou sur des services PaaS dans le cloud comme Azure SQL DB. Toutefois, pour les environnements de développement et de test, il est pratique de pouvoir exécuter des bases de données en tant que conteneurs. En effet, vous n’avez aucune dépendance externe, et la simple exécution de la commande `docker-compose up` démarre l’ensemble de l’application. Le fait de disposer de ces bases de données en tant que conteneurs est également idéal pour les tests d’intégration, car la base de données démarre dans le conteneur et contient toujours les mêmes exemples de données. Les tests sont donc plus prévisibles.
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>Exécution de SQL Server en tant que conteneur avec une base de données liée à un microservice
 
 Dans eShopOnContainers, un conteneur nommé sql.data est défini dans le fichier [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) et exécute SQL Server pour Linux avec toutes les bases de données SQL Server nécessaires aux microservices. (Vous pouvez également avoir un conteneur SQL Server pour chaque base de données, mais cela nécessite l’affectation d’une plus grande quantité de mémoire à Docker.) Le point important des microservices est que chacun d’eux a ses données connexes, et donc sa base de données SQL associée. Mais les bases de données peuvent se trouver n’importe où.
 
-Le conteneur SQL Server de l’exemple d’application est configuré avec le code YAML suivant dans le fichier docker-compose.yml. Celui-ci s’exécute quand vous exécutez docker-compose. Notez que le code YAML a regroupé les informations de configuration du fichier docker-compose.yml générique et du fichier docker-compose.override.yml. (En règle générale, vous devez séparer les paramètres d’environnement des informations de base ou statiques liées à l’image SQL Server.)
+Le conteneur SQL Server de l’exemple d’application est configuré avec le code YAML suivant dans le fichier docker-compose.yml. Celui-ci s’exécute quand vous exécutez `docker-compose up`. Notez que le code YAML a regroupé les informations de configuration du fichier docker-compose.yml générique et du fichier docker-compose.override.yml. (En règle générale, vous devez séparer les paramètres d’environnement des informations de base ou statiques liées à l’image SQL Server.)
 
 ```yml
   sql.data:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:2017-latest
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5434:1433"
 ```
@@ -35,10 +34,10 @@ Le conteneur SQL Server de l’exemple d’application est configuré avec le co
 De même, au lieu d’utiliser `docker-compose`, la commande `docker run` suivante peut exécuter ce conteneur :
 
 ```
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
+  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-Toutefois, si vous déployez une application à plusieurs conteneurs comme eShopOnContainers, il est plus pratique d’utiliser la commande docker-compose up afin de déployer tous les conteneurs nécessaires pour l’application.
+Toutefois, si vous déployez une application à plusieurs conteneurs comme eShopOnContainers, il est plus pratique d’utiliser la commande `docker-compose up` afin de déployer tous les conteneurs nécessaires pour l’application.
 
 Quand vous démarrez ce conteneur SQL Server pour la première fois, il initialise SQL Server à l’aide du mot de passe que vous indiquez. Une fois que SQL Server est en cours d’exécution en tant que conteneur, vous pouvez mettre à jour la base de données en vous connectant via une connexion SQL normale, par exemple SQL Server Management Studio, Visual Studio ou du code C\#.
 
@@ -48,10 +47,10 @@ L’exécution de SQL Server en tant que conteneur n’est pas seulement utile �
 
 #### <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Exécuter l’image de SQL Server Docker sur Linux, Mac ou Windows**
+-   **Exécuter l’image SQL Server Docker sur Linux, Mac ou Windows** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Se connecter à SQL Server sur Linux et interroger avec sqlcmd**
+-   **Se connecter à SQL Server et y effectuer des requêtes sur Linux avec sqlcmd** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Alimentation à l’aide de données de test au démarrage de l’application web
@@ -166,7 +165,7 @@ Toutefois, quand vous utilisez Redis en production, il est préférable de reche
 
 Redis fournit une image Docker. Cette image est accessible à partir de Docker Hub à l’URL suivante :
 
-<https://hub.docker.com/_/redis/>
+[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
 
 Vous pouvez exécuter directement un conteneur Docker Redis en utilisant la commande Docker CLI suivante à l’invite de commandes :
 
@@ -199,7 +198,8 @@ Enfin, dans le fichier docker-compose.override.yml, le microservice basket.api d
       - EventBusConnection=rabbitmq
 ```
 
+Comme mentionné précédemment, le nom de microservice « basket.data » est résolu par le DNS de réseau interne de Docker.
 
 >[!div class="step-by-step"]
-[Précédent](multi-container-applications-docker-compose.md)
-[Suivant](integration-event-based-microservice-communications.md)
+>[Précédent](multi-container-applications-docker-compose.md)
+>[Suivant](integration-event-based-microservice-communications.md)

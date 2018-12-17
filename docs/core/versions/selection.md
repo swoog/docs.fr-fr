@@ -1,17 +1,18 @@
 ---
-title: Sélection de la version de .NET Core
-description: Découvrez comment .NET Core recherche et choisit les versions du runtime pour votre programme.
+title: Sélectionner la version .NET Core à utiliser
+description: Découvrez comment .NET Core recherche et choisit automatiquement les versions du runtime pour votre programme. En outre, cet article vous apprend à forcer l’utiliser d’une version spécifique.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841538"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127236"
 ---
-# <a name="net-core-version-selection"></a>Sélection de la version de .NET Core
+# <a name="select-the-net-core-version-to-use"></a>Sélectionner la version .NET Core à utiliser
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ Les versions cibles de .Net Framework Standard sont également plafonnées à la
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Les applications dépendantes du framework font l’objet d’une restauration par progression
 
-Une application s’exécute à partir de la source avec [`dotnet run`](../tools/dotnet-run.md). `dotnet run` permet à la fois de générer et d’exécuter une application. L’exécutable `dotnet` est l’**hôte** de l’application dans les environnements de développement.
+Lorsque vous exécutez une application à partir d’une source avec [`dotnet run`](../tools/dotnet-run.md), à partir d’un [**déploiement dépendant du framework**](../deploying/index.md#framework-dependent-deployments-fdd) avec [`dotnet myapp.dll`](../tools/dotnet.md#description), ou à partir d’un [**exécutable dépendant du framework**](../deploying/index.md#framework-dependent-executables-fde) avec `myapp.exe`, l’exécutable `dotnet` est l’**hôte** de l’application.
 
 L’hôte choisit la dernière version de correctif installée sur la machine. Par exemple, si vous avez spécifié `netcoreapp2.0` dans votre fichier projet et que `2.0.4` est le dernier runtime .NET installé, le runtime `2.0.4` est utilisé.
 

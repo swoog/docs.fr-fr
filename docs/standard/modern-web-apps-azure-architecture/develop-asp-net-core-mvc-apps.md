@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: de6b2e6650d173d325b2a717f5ee47506c307de7
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308589"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152775"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
@@ -33,7 +33,7 @@ app.UseMvc(routes =>;
 
 Dans cet exemple, une route nommée « default » a été ajoutée à la table de routage. Elle définit un modèle de routage avec des espaces réservés pour _controller_, _action_ et _id_. Les valeurs par défaut sont spécifiées pour les espaces réservés controller et action (« Home » et « Index », respectivement), tandis que l’espace réservé id est facultatif (ce qui est dénoté par « ? »). Selon la convention définie ici, la première partie d’une requête doit correspondre au nom du contrôleur, la deuxième partie à l’action et la troisième partie, s’il y a lieu, à un paramètre id. Les routes conventionnelles sont généralement définies dans un seul emplacement pour l’application, par exemple dans la méthode Configure de la classe Startup.
 
-Les routes par attributs ne sont pas spécifiées globalement. Au lieu de cela, elles sont appliquées directement aux contrôleurs et aux actions. L’avantage, c’est que ces routes sont plus facilement détectables quand vous examinez une méthode particulière. Mais cela signifie aussi que les informations de routage ne sont pas conservées au même endroit dans l’application. Avec les routes par attributs, vous pouvez facilement spécifier plusieurs routes pour une action donnée, mais aussi combiner des routes entre les contrôleurs et les actions. Exemple :
+Les routes par attributs ne sont pas spécifiées globalement. Au lieu de cela, elles sont appliquées directement aux contrôleurs et aux actions. L’avantage, c’est que ces routes sont plus facilement détectables quand vous examinez une méthode particulière. Mais cela signifie aussi que les informations de routage ne sont pas conservées au même endroit dans l’application. Avec les routes par attributs, vous pouvez facilement spécifier plusieurs routes pour une action donnée, mais aussi combiner des routes entre les contrôleurs et les actions. Par exemple :
 
 ```csharp
 [Route("Home")]
@@ -83,7 +83,7 @@ ASP.NET Core intègre la prise en charge d’une technique appelée « [injectio
 
 Le phénomène de « static cling » se produit quand vos classes appellent des méthodes statiques ou accèdent à des propriétés statiques qui ont des effets secondaires ou des dépendances sur l’infrastructure. Par exemple, si vous avez une méthode qui appelle une méthode statique qui à son tour écrit dans une base de données, votre méthode est alors étroitement couplée à la base de données. Tout problème interrompant cet appel de base de données arrête donc votre méthode. Les procédures à mettre en œuvre pour tester ces méthodes sont notoirement difficiles, car elles nécessitent des bibliothèques de simulation commerciale pour simuler les appels statiques ou la mise en place d’une base de données de test. Les appels statiques qui ne dépendent pas de l’infrastructure, en particulier ceux sans état, ne posent pas de problèmes et n’ont aucun impact sur le couplage ou la testabilité (au-delà du couplage du code à l’appel statique proprement dit).
 
-Si les développeurs ont conscience des risques associés au « static cling » et à l’état global, bon nombre continuent de coupler étroitement leur code à des implémentations spécifiques par le biais d’instanciations directes. « New is Glue » a pour but d’insister sur ce couplage, mais ne vise pas à condamner l’utilisation du mot clé new. Comme pour les appels de méthode statique, les nouvelles instances de types qui n’ont aucune dépendance externe n’entraînent généralement pas un couplage étroit du code aux détails d’implémentation et ne compliquent pas les tests. Mais chaque fois qu’une classe est instanciée, prenez un instant pour déterminer s’il convient de coder en dur cette instance spécifique à cet emplacement particulier ou s’il serait préférable de demander cette instance en tant que dépendance.
+Si les développeurs ont conscience des risques associés au « static cling » et à l’état global, bon nombre continuent de coupler étroitement leur code à des implémentations spécifiques par le biais d’instanciations directes. « New is Glue » est destiné à être un rappel de ce couplage, mais ne vise pas à condamner l’utilisation du mot clé `new`. Comme pour les appels de méthode statique, les nouvelles instances de types qui n’ont aucune dépendance externe n’entraînent généralement pas un couplage étroit du code aux détails d’implémentation et ne compliquent pas les tests. Mais chaque fois qu’une classe est instanciée, prenez un instant pour déterminer s’il convient de coder en dur cette instance spécifique à cet emplacement particulier ou s’il serait préférable de demander cette instance en tant que dépendance.
 
 ### <a name="declare-your-dependencies"></a>Déclarer vos dépendances
 
@@ -559,5 +559,5 @@ _Découvrez plus en détail les options de déploiement Azure dans le [chapitre�
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Précédent](common-client-side-web-technologies.md)
-[Suivant](work-with-data-in-asp-net-core-apps.md)
+>[Précédent](common-client-side-web-technologies.md)
+>[Suivant](work-with-data-in-asp-net-core-apps.md)

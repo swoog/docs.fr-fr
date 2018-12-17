@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de Visual Basic
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194057"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146155"
 ---
 # <a name="whats-new-for-visual-basic"></a>Nouveautés de Visual Basic
 
@@ -21,10 +21,13 @@ Cette rubrique liste les noms des principales fonctionnalités de chaque version
   
 ## <a name="current-version"></a>Version actuelle
 
-Visual Basic 15.5 / Visual Studio 2017 Version 15.5  
-Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.8/Visual Studio 2017 version 15.8  
+Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Versions antérieures
+
+Visual Basic 15.5 / Visual Studio 2017 Version 15.5  
+Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3 / Visual Studio 2017 Version 15.3  
 Pour connaître les nouvelles fonctionnalités, consultez [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Opérateurs de décalage de bits, déclaration de variable de boucle
 
 Visual Basic / Visual Studio .NET 2002   
 Première version de Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**Conversion optimisée de valeurs à virgule flottante en valeurs entières**
+
+Dans les versions précédentes de Visual Basic, la conversion de valeurs [Double](../language-reference/data-types/double-data-type.md) et [Single](../language-reference/data-types/single-data-type.md) en entiers offrait des performances relativement médiocres. Visual Basic 15.8 améliore considérablement les performances des conversions de valeurs à virgule flottante en entiers quand vous passez la valeur retournée par n’importe laquelle des méthodes suivantes à l’une des [fonctions de conversion d’entiers Visual Basic intrinsèques](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng), ou si la valeur retournée par n’importe laquelle des méthodes suivantes est implicitement castée en un type intégral type quand [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) est défini sur `Off` :
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Cette optimisation permet au code de s’exécuter plus rapidement (jusqu’à deux fois plus rapidement pour le code qui effectue un grand nombre de conversions en types d’entier). L’exemple suivant illustre certains appels de méthode simples qui sont affectés par cette optimisation :
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Notez que cette opération tronque les valeurs à virgule flottante au lieu de les arrondir.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

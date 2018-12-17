@@ -1,5 +1,6 @@
 ---
 title: Système de type commun
+description: Découvrez plus en détail le système de type dans .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,12 +18,13 @@ helpviewer_keywords:
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c8db725e25fe441c875a25cba97eb2090d4c071
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: e35ddc0346f73eafaece1bd17ab52e1b847e8e11
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204200"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151224"
 ---
 # <a name="common-type-system"></a>Système de type commun
 Le système de type commun (CTS, Common Type System) définit la façon dont les types sont déclarés, utilisés et managés dans le Common Language Runtime ; il constitue également une partie importante de la prise en charge, par le runtime, de l'intégration interlangage. Le système de type commun met en œuvre les fonctions suivantes :  
@@ -185,7 +187,7 @@ Le système de type commun (CTS, Common Type System) définit la façon dont les
 ### <a name="attributes"></a>Attributs  
  Les attributs fournissent des métadonnées définies par l'utilisateur supplémentaires. La plupart du temps, ils sont utilisés pour stocker les informations supplémentaires relatives à un type de l’assembly, ou pour modifier le comportement d’un membre de type dans l’environnement au moment du design ou dans l’environnement d’exécution.  
   
- Les attributs sont des classes qui héritent de <xref:System.Attribute?displayProperty=nameWithType>. Les langages qui prennent en charge l'utilisation d'attributs ont chacun leur propre syntaxe pour l'application d'attributs à un élément du langage. Les attributs peuvent être appliqués à presque n'importe quel élément de langage ; les éléments spécifiques auxquels un attribut peut être appliqué sont définis par l'<xref:System.AttributeUsageAttribute> qui est appliqué à cette classe d'attributs.  
+ Les attributs sont des classes qui héritent de <xref:System.Attribute?displayProperty=nameWithType>. Les langages qui prennent en charge l'utilisation d'attributs ont chacun leur propre syntaxe pour l'application d'attributs à un élément du langage. Les attributs peuvent être appliqués à presque n’importe quel élément de langage ; les éléments spécifiques auxquels un attribut peut être appliqué sont définis par l’<xref:System.AttributeUsageAttribute> qui est appliqué à cette classe d’attributs.  
   
 ### <a name="type-accessibility"></a>Accessibilité des types  
  Tous les types ont un modificateur qui régit leur accessibilité à partir d'autres types. Le tableau suivant décrit les accessibilités de type prises en charge par le runtime.  

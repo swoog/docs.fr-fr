@@ -1,5 +1,6 @@
 ---
 title: Bonnes pratiques pour l’utilisation de chaînes dans .NET
+description: Découvrez comment utiliser efficacement les chaînes dans les applications .NET.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,19 +20,20 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080336"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150971"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Bonnes pratiques pour l’utilisation de chaînes dans .NET
-<a name="top"></a> .NET offre une prise en charge complète du développement d’applications localisées et globalisées, et facilite l’application des conventions de la culture actuelle ou d’une culture spécifique durant l’exécution d’opérations courantes telles que le tri et l’affichage de chaînes. Toutefois, le tri ou la comparaison de chaînes n'est pas toujours une opération dépendante de la culture. Par exemple, les chaînes utilisées en interne par une application doivent généralement être gérées de la même manière dans toutes les cultures. Quand des données de type chaîne culturellement indépendantes, telles que des étiquettes XML, des étiquettes HTML, des noms d’utilisateurs, des chemins d’accès aux fichiers et des noms d’objets système, sont interprétées comme si elles étaient dépendantes de la culture, le code d’application peut faire l’objet de bogues subtils, de performances médiocres et, dans certains cas, de problèmes de sécurité.  
+<a name="top"></a> .NET offre une prise en charge complète du développement d’applications localisées et globalisées, et facilite l’application des conventions de la culture actuelle ou d’une culture spécifique durant l’exécution d’opérations courantes telles que le tri et l’affichage de chaînes. Toutefois, le tri ou la comparaison de chaînes n'est pas toujours une opération dépendante de la culture. Par exemple, les chaînes utilisées en interne par une application doivent généralement être gérées de la même manière dans toutes les cultures. Quand des données de type chaîne culturellement indépendantes, telles que des balises XML, des balises HTML, des noms d'utilisateurs, des chemins d'accès aux fichiers et des noms d'objets système, sont interprétées comme si elles étaient dépendantes de la culture, le code d'application peut faire l'objet de bogues subtils, de performances médiocres et, dans certains cas, de problèmes de sécurité.  
   
  Cette rubrique examine les méthodes de tri, de comparaison et d’application de la casse pour les chaînes dans .NET, présente des recommandations pour sélectionner une méthode appropriée de gestion des chaînes et fournit des informations supplémentaires sur les méthodes de gestion des chaînes. Elle décrit également comment les données mises en forme, telles que les données numériques et les données de date et d'heure, sont traitées pour l'affichage et pour le stockage.  
   
- Cette rubrique contient les sections suivantes :  
+ Cette rubrique contient les sections suivantes :  
   
 -   [Recommandations relatives à l'utilisation de chaînes](#recommendations_for_string_usage)  
   
@@ -69,7 +71,7 @@ ms.locfileid: "47080336"
   
 -   Utilisez la mise en forme en fonction de la culture pour afficher des données non-chaînées, telles que les nombres et les dates, dans une interface utilisateur. Utilisez la mise en forme en fonction de la culture dite indifférente pour rendre les données non-chaînées sous forme de chaîne.  
   
- Quand vous utilisez des chaînes, évitez les pratiques suivantes :  
+ Quand vous utilisez des chaînes, évitez les pratiques suivantes :  
   
 -   N'utilisez pas de surcharges qui ne spécifient pas explicitement ou implicitement les règles de comparaison de chaînes pour les opérations de chaînes.  
   
@@ -83,7 +85,7 @@ ms.locfileid: "47080336"
   
 <a name="specifying_string_comparisons_explicitly"></a>   
 ## <a name="specifying-string-comparisons-explicitly"></a>Spécification explicite de comparaisons de chaînes  
- La plupart des méthodes de manipulation de chaînes dans .NET sont surchargées. Une ou plusieurs surcharges acceptent généralement des paramètres par défaut, contrairement à d'autres qui définissent avec précision la façon dont les chaînes doivent être comparées ou manipulées. La plupart des méthodes qui ne s'appuient pas sur des valeurs par défaut incluent un paramètre de type <xref:System.StringComparison>, qui est une énumération spécifiant explicitement des règles pour la comparaison de chaînes selon la culture et la casse. Le tableau suivant décrit les membres de l'énumération <xref:System.StringComparison>.  
+ La plupart des méthodes de manipulation de chaînes dans .NET sont surchargées. Une ou plusieurs surcharges acceptent généralement des paramètres par défaut, contrairement à d'autres qui définissent avec précision la façon dont les chaînes doivent être comparées ou manipulées. La plupart des méthodes qui ne s'appuient pas sur des valeurs par défaut incluent un paramètre de type <xref:System.StringComparison>, qui est une énumération spécifiant explicitement des règles pour la comparaison de chaînes selon la culture et la casse. Le tableau suivant décrit les membres de l'énumération <xref:System.StringComparison> .  
   
 |Membre StringComparison|Description|  
 |-----------------------------|-----------------|  
@@ -94,15 +96,15 @@ ms.locfileid: "47080336"
 |<xref:System.StringComparison.Ordinal>|Effectue une comparaison ordinale.|  
 |<xref:System.StringComparison.OrdinalIgnoreCase>|Effectue une comparaison ordinale ne respectant pas la casse.|  
   
- Par exemple, la méthode <xref:System.String.IndexOf%2A>, qui retourne l'index d'une sous-chaîne contenue dans un objet <xref:System.String> correspondant à un caractère ou à une chaîne, a neuf surcharges :  
+ Par exemple, la méthode <xref:System.String.IndexOf%2A> , qui retourne l'index d'une sous-chaîne contenue dans un objet <xref:System.String> correspondant à un caractère ou à une chaîne, a neuf surcharges :  
   
--   <xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29> et <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, qui effectuent par défaut une recherche ordinale (respectant la casse et indépendante de la culture) d'un caractère dans la chaîne.  
+-   <xref:System.String.IndexOf%28System.Char%29>, <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>et <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>, qui effectuent par défaut une recherche ordinale (respectant la casse et indépendante de la culture) d'un caractère dans la chaîne.  
   
--   <xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29> et <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, qui effectuent par défaut une recherche respectant la casse et dépendante de la culture d'une sous-chaîne dans la chaîne.  
+-   <xref:System.String.IndexOf%28System.String%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>et <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>, qui effectuent par défaut une recherche respectant la casse et dépendante de la culture d'une sous-chaîne dans la chaîne.  
   
--   <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29> et <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, qui incluent un paramètre de type <xref:System.StringComparison> permettant la spécification de la forme de la comparaison.  
+-   <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>, <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>et <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>, qui incluent un paramètre de type <xref:System.StringComparison> permettant la spécification de la forme de la comparaison.  
   
- Nous vous recommandons de sélectionner une surcharge qui n'utilise pas de valeurs par défaut, pour les raisons suivantes :  
+ Nous vous recommandons de sélectionner une surcharge qui n'utilise pas de valeurs par défaut, pour les raisons suivantes :  
   
 -   Certaines surcharges ayant des paramètres par défaut (celles qui recherchent un <xref:System.Char> dans l'instance de chaîne) effectuent une comparaison ordinale, tandis que d'autres (celles qui recherchent une chaîne dans l'instance de chaîne) sont dépendantes de la culture. Il est difficile de mémoriser quelle méthode utilise quelle valeur par défaut, et les surcharges peuvent être facilement confondues.  
   
@@ -120,7 +122,7 @@ ms.locfileid: "47080336"
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>Détails de la comparaison de chaînes  
- La comparaison de chaînes est le cœur de nombreuses opérations liées aux chaînes, en particulier le tri et le test d'égalité. Les chaînes sont triées dans un ordre déterminé : si "my" s'affiche avant "string" dans une liste triée de chaînes, "my" doit être considéré comme inférieur ou égal à "string". En outre, la comparaison définit implicitement l'égalité. L'opération de comparaison retourne zéro pour les chaînes qu'il estime égales. Considérer qu'aucune chaîne n'est inférieure à l'autre constitue une bonne interprétation. La plupart des opérations significatives impliquant des chaînes incluent l'une des procédures suivantes, ou les deux : comparaison avec une autre chaîne et exécution d'une opération de tri bien définie.  
+ La comparaison de chaînes est le cœur de nombreuses opérations liées aux chaînes, en particulier le tri et le test d'égalité. Les chaînes sont triées dans un ordre déterminé : si "my" s'affiche avant "string" dans une liste triée de chaînes, "my" doit être considéré comme inférieur ou égal à "string". En outre, la comparaison définit implicitement l'égalité. L'opération de comparaison retourne zéro pour les chaînes qu'il estime égales. Considérer qu'aucune chaîne n'est inférieure à l'autre constitue une bonne interprétation. La plupart des opérations significatives impliquant des chaînes incluent l'une des procédures suivantes, ou les deux : comparaison avec une autre chaîne et exécution d'une opération de tri bien définie.  
 
 > [!NOTE]
 > Vous pouvez télécharger les [Sorting Weight Tables](https://www.microsoft.com/en-us/download/details.aspx?id=10921), un ensemble de fichiers texte qui contiennent des informations sur les poids des caractères utilisés dans les opérations de tri et de comparaison pour les systèmes d’exploitation Windows et la [Default Unicode Collation Element Table](https://www.unicode.org/Public/UCA/latest/allkeys.txt), la version la plus récente de la table de pondération de tri pour Linux et macOS. La version spécifique de la table de pondération de tri sur Linux et macOS varie selon la version des bibliothèques [International Components for Unicode](http://site.icu-project.org/) installées sur le système. Pour plus d’informations sur les versions ICU et les versions Unicode qu’elles implémentent, consultez [Téléchargement d’ICU](http://site.icu-project.org/download).
@@ -130,7 +132,7 @@ ms.locfileid: "47080336"
 En outre, les comparaisons de chaînes à l’aide de différentes versions de .NET ou à l’aide de .NET sur différents systèmes d’exploitation ou des versions différentes de système d’exploitation peuvent retourner des résultats différents. Pour plus d’informations, consultez [Chaînes et norme Unicode](xref:System.String#Unicode). 
 
 <a name="current_culture"></a>   
-### <a name="string-comparisons-that-use-the-current-culture"></a>Comparaisons de chaînes qui utilisent la culture actuelle   
+### <a name="string-comparisons-that-use-the-current-culture"></a>Comparaisons de chaînes qui utilisent la culture actuelle  
  L'un des critères à prendre en compte est l'utilisation des conventions de la culture actuelle lors de la comparaison de chaînes. Les comparaisons basées sur la culture actuelle utilisent la culture ou les paramètres régionaux actuels du thread. Si la culture n'est pas définie par l'utilisateur, sa valeur par défaut est le paramètre défini dans la fenêtre **Options régionales** du Panneau de configuration. Vous devez toujours utiliser des comparaisons basées sur la culture actuelle quand les données sont linguistiquement pertinentes et quand elles reflètent l'intervention de l'utilisateur dépendante de la culture.  
   
  Toutefois, le comportement de la comparaison et de la casse dans .NET change en fonction de la culture. Cela se produit quand une application s'exécute sur un ordinateur dont la culture est différente de celle de l'ordinateur sur lequel l'application a été développée, ou quand le thread en cours d'exécution change sa culture. Ce comportement est intentionnel, mais il reste peu évident à de nombreux développeurs. L'exemple suivant illustre les différences au niveau de l'ordre de tri entre les cultures Anglais (États-Unis) ("en-US") et Suédois ("sv-SE"). Notez que les mots « ångström », « Windows » et « Visual Studio » s’affichent à des positions différentes dans les tableaux de chaînes triées.  
@@ -140,21 +142,21 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
   
  Les comparaisons ne respectant pas la casse qui utilisent la culture actuelle sont identiques aux comparaisons dépendantes de la culture, mais elles ignorent la casse, comme défini par la culture actuelle du thread. Ce comportement peut également se manifester dans les ordres de tri.  
   
- Les comparaisons qui utilisent la sémantique de la culture actuelle sont la valeur par défaut pour les méthodes suivantes :  
+ Les comparaisons qui utilisent la sémantique de la culture actuelle sont la valeur par défaut pour les méthodes suivantes :  
   
 -   les surcharges <xref:System.String.Compare%2A?displayProperty=nameWithType> qui n'incluent pas de paramètre <xref:System.StringComparison> ;  
   
--   les surcharges <xref:System.String.CompareTo%2A?displayProperty=nameWithType> ;  
+-   les surcharges<xref:System.String.CompareTo%2A?displayProperty=nameWithType> ;  
   
 -   la méthode <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> par défaut et la méthode <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> avec un paramètre `null`<xref:System.Globalization.CultureInfo> ;  
   
 -   la méthode <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> par défaut et la méthode <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> avec un paramètre `null`<xref:System.Globalization.CultureInfo> ;  
   
--   les surcharges <xref:System.String.IndexOf%2A?displayProperty=nameWithType> qui acceptent un <xref:System.String> comme paramètre de recherche et qui n'ont pas de paramètre <xref:System.StringComparison> ;  
+-   les surcharges<xref:System.String.IndexOf%2A?displayProperty=nameWithType> qui acceptent un <xref:System.String> comme paramètre de recherche et qui n'ont pas de paramètre <xref:System.StringComparison> ;  
   
--   les surcharges <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> qui acceptent un <xref:System.String> comme paramètre de recherche et qui n'ont pas de paramètre <xref:System.StringComparison> ;  
+-   les surcharges<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> qui acceptent un <xref:System.String> comme paramètre de recherche et qui n'ont pas de paramètre <xref:System.StringComparison> ;  
   
- Dans tous les cas, nous vous recommandons d'appeler une surcharge qui a un paramètre <xref:System.StringComparison>, afin que l'objectif de l'appel de la méthode soit clair.  
+ Dans tous les cas, nous vous recommandons d'appeler une surcharge qui a un paramètre <xref:System.StringComparison> , afin que l'objectif de l'appel de la méthode soit clair.  
   
  Des bogues, plus ou moins subtils, peuvent émerger quand des données de type chaîne non linguistiques sont interprétées linguistiquement, ou quand des données de type chaîne d'une culture particulière sont interprétées à l'aide des conventions d'une autre culture. L'exemple canonique est le problème du caractère I en turc.  
   
@@ -178,7 +180,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
 ### <a name="ordinal-string-operations"></a>Opérations de chaînes ordinales  
  La spécification de la valeur <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> dans un appel de méthode correspond à une comparaison non linguistique dans laquelle les fonctionnalités de langages naturels sont ignorées. Les méthodes qui sont appelées avec ces valeurs <xref:System.StringComparison> font reposer les décisions d'opération de chaîne sur de simples comparaisons d'octets plutôt que sur la casse ou des tables d'équivalences paramétrables par la culture. Dans la plupart des cas, cette approche correspond le mieux à l'interprétation de chaînes prévue tout en rendant le code plus rapide et plus fiable.  
   
- Les comparaisons ordinales sont des comparaisons de chaînes dans lesquelles chaque octet de chaque chaîne est comparé sans interprétation linguistique ; par exemple, "windows" ne correspond pas à "Windows". Il s'agit essentiellement d'un appel à la fonction `strcmp` du runtime C. Utilisez cette comparaison quand le contexte indique que les chaînes doivent correspondre exactement ou demande une stratégie de correspondance classique. En outre, la comparaison ordinale est l'opération de comparaison la plus rapide, car elle n'applique aucune règle linguistique lors de la détermination d'un résultat.  
+ Les comparaisons ordinales sont des comparaisons de chaînes dans lesquelles chaque octet de chaque chaîne est comparé sans interprétation linguistique ; par exemple, "windows" ne correspond pas à "Windows". Il s’agit fondamentalement d’un appel à la fonction `strcmp` du runtime C. Utilisez cette comparaison quand le contexte indique que les chaînes doivent correspondre exactement ou demande une stratégie de correspondance classique. En outre, la comparaison ordinale est l'opération de comparaison la plus rapide, car elle n'applique aucune règle linguistique lors de la détermination d'un résultat.  
   
  Les chaînes dans .NET peuvent contenir des caractères Null incorporés. L'une des différences les plus évidentes entre la comparaison ordinale et la comparaison dépendante de la culture (y compris les comparaisons qui utilisent la culture dite indifférente) concerne la gestion des caractères Null incorporés dans une chaîne. Ces caractères sont ignorés quand vous utilisez les méthodes <xref:System.String.Compare%2A?displayProperty=nameWithType> et <xref:System.String.Equals%2A?displayProperty=nameWithType> pour effectuer des comparaisons dépendantes de la culture (notamment des comparaisons qui utilisent la culture dite indifférente). Par conséquent, dans les comparaisons dépendantes de la culture, les chaînes qui contiennent des caractères Null incorporés peuvent être considérées comme égales à des chaînes qui n'en contiennent pas.  
   
@@ -200,7 +202,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
  [!code-csharp[Conceptual.Strings.BestPractices#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison2.cs#4)]
  [!code-vb[Conceptual.Strings.BestPractices#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#4)]  
   
- est équivalente à la comparaison suivante (mais plus rapide) :  
+ est équivalente à la comparaison suivante (mais plus rapide) :  
   
  [!code-csharp[Conceptual.Strings.BestPractices#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/comparison2.cs#5)]
  [!code-vb[Conceptual.Strings.BestPractices#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/comparison2.vb#5)]  
@@ -212,14 +214,14 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
   
  <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> et <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> utilisent tous les deux directement les valeurs binaires et sont les plus adaptés à la mise en correspondance. Quand vous n'êtes pas sûr de vos paramètres de comparaison, utilisez l'une de ces deux valeurs. Toutefois, étant donné qu'elles effectuent une comparaison octet par octet, elles n'effectuent pas le tri selon un ordre de tri linguistique (comme un dictionnaire français), mais selon un ordre de tri binaire. Les résultats peuvent sembler étranges dans la plupart des contextes s'ils sont affichés aux utilisateurs.  
   
- La sémantique ordinale est la valeur par défaut pour les surcharges de <xref:System.String.Equals%2A?displayProperty=nameWithType> qui n'incluent pas d'argument <xref:System.StringComparison> (notamment l'opérateur d'égalité). Dans tous les cas, nous vous recommandons d'appeler une surcharge ayant un paramètre <xref:System.StringComparison>.  
+ La sémantique ordinale est la valeur par défaut pour les surcharges de <xref:System.String.Equals%2A?displayProperty=nameWithType> qui n'incluent pas d'argument <xref:System.StringComparison> (notamment l'opérateur d'égalité). Dans tous les cas, nous vous recommandons d'appeler une surcharge ayant un paramètre <xref:System.StringComparison> .  
   
 ### <a name="string-operations-that-use-the-invariant-culture"></a>Opérations de chaîne qui utilisent la culture dite indifférente  
  Les comparaisons avec la culture dite indifférente utilisent la propriété <xref:System.Globalization.CultureInfo.CompareInfo%2A> retournée par la propriété <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> statique. Ce comportement est le même sur tous les systèmes ; il traduit tous les caractères en dehors de sa plage en ce qu'il suppose être des caractères invariants équivalents. Cette stratégie peut être utile pour la gestion d'un jeu de comportements de chaîne dans toutes les cultures, mais elle donne souvent des résultats inattendus.  
   
  Les comparaisons ne respectant pas la casse avec la culture dite indifférente utilisent également la propriété <xref:System.Globalization.CultureInfo.CompareInfo%2A> statique retournée également par la propriété <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> statique pour les informations de comparaison. Toutes les différences de casse entre ces caractères traduits sont ignorées.  
   
- Les comparaisons qui utilisent <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> et <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> fonctionnent de la même manière sur les chaînes ASCII. Toutefois, <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> prend des décisions linguistiques qui peuvent ne pas être appropriées pour les chaînes qui doivent être interprétées comme un jeu d'octets. L'objet `CultureInfo.InvariantCulture.CompareInfo` entraîne l'interprétation de certains jeux de caractères comme équivalents par la méthode <xref:System.String.Compare%2A>. Par exemple, l'équivalence suivante est valide dans la culture dite indifférente :  
+ Les comparaisons qui utilisent <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> et <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> fonctionnent de la même manière sur les chaînes ASCII. Toutefois, <xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> prend des décisions linguistiques qui peuvent ne pas être appropriées pour les chaînes qui doivent être interprétées comme un jeu d'octets. L’objet `CultureInfo.InvariantCulture.CompareInfo` entraîne l’interprétation par la méthode <xref:System.String.Compare%2A> de certains jeux de caractères comme étant équivalents. Par exemple, l'équivalence suivante est valide dans la culture dite indifférente :  
   
  InvariantCulture: a + ̊ = å  
   
@@ -236,7 +238,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
   
 <a name="choosing_a_stringcomparison_member_for_your_method_call"></a>   
 ## <a name="choosing-a-stringcomparison-member-for-your-method-call"></a>Choix d'un membre StringComparison pour votre appel de méthode  
- Le tableau suivant décrit le mappage de contexte de chaîne sémantique à un membre d'énumération <xref:System.StringComparison>.  
+ Le tableau suivant décrit le mappage de contexte de chaîne sémantique à un membre d'énumération <xref:System.StringComparison> .  
   
 |Données|Comportement|Valeur System.StringComparison<br /><br /> valeur|  
 |----------|--------------|-----------------------------------------------------|  
@@ -252,29 +254,29 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
  Les sections suivantes décrivent les méthodes le plus souvent utilisées pour la comparaison de chaînes.  
   
 ### <a name="stringcompare"></a>String.Compare  
- Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
  En tant qu'opération la plus centrale de l'interprétation de chaînes, toutes les instances de ces appels de méthode doivent être examinées pour déterminer si les chaînes doivent être interprétées d'après la culture actuelle ou être dissociées de la culture (symboliquement). L'opération appropriée est, en général, la dernière, et une comparaison <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> doit être utilisée à la place.  
   
  La classe <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>, retournée par la propriété <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType>, inclut également une méthode <xref:System.Globalization.CompareInfo.Compare%2A> qui fournit un grand nombre d'options de correspondance (ordinale, ignorance des espaces blancs, ignorance du type Kana, etc.) au moyen de l'énumération d'indicateur <xref:System.Globalization.CompareOptions>.  
   
 ### <a name="stringcompareto"></a>String.CompareTo  
- Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Cette méthode n'offre actuellement pas de surcharge spécifiant un type <xref:System.StringComparison>. Il est généralement possible de convertir cette méthode dans la forme <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> recommandée.  
+ Cette méthode n'offre actuellement pas de surcharge spécifiant un type <xref:System.StringComparison> . Il est généralement possible de convertir cette méthode dans la forme <xref:System.String.Compare%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> recommandée.  
   
- Les types qui implémentent les interfaces <xref:System.IComparable> et <xref:System.IComparable%601> implémentent cette méthode. Étant donné qu'elle n'offre pas la possibilité d'un paramètre <xref:System.StringComparison>, les types d'implémentation permettent souvent à l'utilisateur de spécifier un <xref:System.StringComparer> dans leur constructeur. L'exemple suivant définit une classe `FileName` dont le constructeur de classe inclut un paramètre <xref:System.StringComparer>. Cet objet <xref:System.StringComparer> est ensuite utilisé dans la méthode `FileName.CompareTo` .  
+ Les types qui implémentent les interfaces <xref:System.IComparable> et <xref:System.IComparable%601> implémentent cette méthode. Étant donné qu'elle n'offre pas la possibilité d'un paramètre <xref:System.StringComparison> , les types d'implémentation permettent souvent à l'utilisateur de spécifier un <xref:System.StringComparer> dans leur constructeur. L'exemple suivant définit une classe `FileName` dont le constructeur de classe inclut un paramètre <xref:System.StringComparer> . Cet objet <xref:System.StringComparer> est ensuite utilisé dans la méthode `FileName.CompareTo` .  
   
  [!code-csharp[Conceptual.Strings.BestPractices#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/api1.cs#6)]
  [!code-vb[Conceptual.Strings.BestPractices#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/api1.vb#6)]  
   
 ### <a name="stringequals"></a>String.Equals  
- Interprétation par défaut : <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
   
- La classe <xref:System.String> vous permet de tester l'égalité en appelant les surcharges de méthode <xref:System.String.Equals%2A> statique ou d'instance, ou en utilisant l'opérateur d'égalité statique. Par défaut, les surcharges et l'opérateur utilisent la comparaison ordinale. Toutefois, nous vous recommandons quand même d'appeler une surcharge qui spécifie explicitement le type <xref:System.StringComparison>, même si vous voulez effectuer une comparaison ordinale ; cela le simplifie la recherche d'une interprétation de chaîne particulière dans du code.  
+ La classe <xref:System.String> vous permet de tester l'égalité en appelant les surcharges de méthode <xref:System.String.Equals%2A> statique ou d'instance, ou en utilisant l'opérateur d'égalité statique. Par défaut, les surcharges et l'opérateur utilisent la comparaison ordinale. Toutefois, nous vous recommandons quand même d'appeler une surcharge qui spécifie explicitement le type <xref:System.StringComparison> , même si vous voulez effectuer une comparaison ordinale ; cela le simplifie la recherche d'une interprétation de chaîne particulière dans du code.  
   
 ### <a name="stringtoupper-and-stringtolower"></a>String.ToUpper et String.ToLower  
- Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
  Vous devez faire preuve de prudence quand vous utilisez ces méthodes, car imposer une majuscule ou une minuscule dans une chaîne est souvent utilisé comme une petite normalisation pour la comparaison de chaînes indépendamment de la casse. Si tel est le cas, vous devez envisager d'utiliser une comparaison ne respectant pas la casse.  
   
@@ -283,7 +285,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
  Des surcharges sont également disponibles pour la conversion en majuscules et en minuscules dans une culture spécifique, en passant à la méthode un objet <xref:System.Globalization.CultureInfo> qui représente cette culture.  
   
 ### <a name="chartoupper-and-chartolower"></a>Char.ToUpper et Char.ToLower  
- Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
  Ces méthodes fonctionnent de la même façon que les méthodes <xref:System.String.ToUpper%2A?displayProperty=nameWithType> et <xref:System.String.ToLower%2A?displayProperty=nameWithType> décrites dans la section précédente.  
   
@@ -293,7 +295,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
  Par défaut, ces deux méthodes effectuent une comparaison dépendante de la culture.  
   
 ### <a name="stringindexof-and-stringlastindexof"></a>String.IndexOf et String.LastIndexOf  
- Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
  La façon dont les surcharges par défaut de ces méthodes effectuent les comparaisons n'est pas cohérente. Toutes les méthodes <xref:System.String.IndexOf%2A?displayProperty=nameWithType> et <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> qui incluent un paramètre <xref:System.Char> effectuent une comparaison ordinale, mais les méthodes <xref:System.String.IndexOf%2A?displayProperty=nameWithType> et <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> par défaut qui incluent un paramètre <xref:System.String> effectuent une comparaison dépendante de la culture.  
   
@@ -303,24 +305,24 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
   
 <a name="methods_that_perform_string_comparison_indirectly"></a>   
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Méthodes qui effectuent indirectement la comparaison de chaînes  
- Certaines méthodes autres que les méthodes de chaîne dont l'opération centrale est la comparaison de chaînes utilisent le type <xref:System.StringComparer>. La classe <xref:System.StringComparer> inclut six propriétés statiques qui retournent des instances de <xref:System.StringComparer> dont les méthodes <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> effectuent les types de comparaisons de chaînes suivants :  
+ Certaines méthodes autres que les méthodes de chaîne dont l'opération centrale est la comparaison de chaînes utilisent le type <xref:System.StringComparer> . La classe <xref:System.StringComparer> inclut six propriétés statiques qui retournent des instances de <xref:System.StringComparer> dont les méthodes <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> effectuent les types de comparaisons de chaînes suivants :  
   
--   Comparaisons de chaînes dépendantes de la culture à l'aide de la culture actuelle. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>.  
+-   Comparaisons de chaînes dépendantes de la culture à l'aide de la culture actuelle. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> .  
   
--   Comparaisons ne respectant pas la casse à l'aide de la culture actuelle. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Comparaisons ne respectant pas la casse à l'aide de la culture actuelle. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> .  
   
--   Comparaisons indépendantes de la culture à l'aide des règles de comparaison de mots de la culture dite indifférente. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>.  
+-   Comparaisons indépendantes de la culture à l'aide des règles de comparaison de mots de la culture dite indifférente. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> .  
   
 -   Comparaisons ne respectant pas la casse et indépendantes de la culture à l'aide des règles de comparaison des mots de la culture dite indifférente. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>.  
   
--   Comparaison ordinale. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>.  
+-   Comparaison ordinale. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> .  
   
--   Comparaison ordinale ne respectant pas la casse. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Comparaison ordinale ne respectant pas la casse. Cet objet <xref:System.StringComparer> est retourné par la propriété <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> .  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort et Array.BinarySearch  
- Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
+ Interprétation par défaut : <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Quand vous stockez des données dans une collection ou quand vous lisez des données persistantes à partir d'un fichier ou d'une base de données dans une collection, le changement de culture actuelle peut invalider les invariants de la collection. La méthode <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> suppose que les éléments du tableau dans lequel effectuer la recherche sont déjà triés. Pour trier tout élément de chaîne dans le tableau, la méthode <xref:System.Array.Sort%2A?displayProperty=nameWithType> appelle la méthode <xref:System.String.Compare%2A?displayProperty=nameWithType> pour classer les éléments individuels. L'utilisation d'un comparateur dépendant de la culture peut s'avérer dangereux si la culture change entre le moment où le tableau est trié et le moment où son contenu fait l'objet d'une recherche. Par exemple, dans le code suivant, le stockage et la récupération fonctionnent sur le comparateur fourni implicitement par la propriété `Thread.CurrentThread.CurrentCulture`. Si la culture peut changer entre les appels à `StoreNames` et `DoesNameExist`, et surtout si le contenu du tableau est rendu persistant à un moment donné entre les deux appels de méthode, la recherche binaire peut échouer.  
+ Quand vous stockez des données dans une collection ou quand vous lisez des données persistantes à partir d'un fichier ou d'une base de données dans une collection, le changement de culture actuelle peut invalider les invariants de la collection. La méthode <xref:System.Array.BinarySearch%2A?displayProperty=nameWithType> suppose que les éléments du tableau dans lequel effectuer la recherche sont déjà triés. Pour trier tout élément de chaîne dans le tableau, la méthode <xref:System.Array.Sort%2A?displayProperty=nameWithType> appelle la méthode <xref:System.String.Compare%2A?displayProperty=nameWithType> pour classer les éléments individuels. L'utilisation d'un comparateur dépendant de la culture peut s'avérer dangereux si la culture change entre le moment où le tableau est trié et le moment où son contenu fait l'objet d'une recherche. Par exemple, dans le code suivant, le stockage et la récupération fonctionnent sur le comparateur fourni implicitement par la propriété `Thread.CurrentThread.CurrentCulture` statique. Si la culture peut changer entre les appels à `StoreNames` et `DoesNameExist`, et surtout si le contenu du tableau est rendu persistant à un moment donné entre les deux appels de méthode, la recherche binaire peut échouer.  
   
  [!code-csharp[Conceptual.Strings.BestPractices#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#7)]
  [!code-vb[Conceptual.Strings.BestPractices#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#7)]  
@@ -335,7 +337,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
  [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
  [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
   
-### <a name="collections-example-hashtable-constructor"></a>Exemple de collections : constructeur Hashtable  
+### <a name="collections-example-hashtable-constructor"></a>Exemple de collections : constructeur Hashtable  
  Le hachage de chaînes constitue un deuxième exemple d'opération qui est affectée par la façon dont des chaînes sont comparées.  
   
  L'exemple suivant instancie un objet <xref:System.Collections.Hashtable> en lui passant l'objet <xref:System.StringComparer> qui est retourné par la propriété <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>. Étant donné qu'une classe <xref:System.StringComparer> dérivée de <xref:System.StringComparer> implémente l'interface <xref:System.Collections.IEqualityComparer> , sa méthode <xref:System.Collections.IEqualityComparer.GetHashCode%2A> est utilisée pour calculer le code de hachage de chaînes dans la table de hachage.  
@@ -347,7 +349,7 @@ En outre, les comparaisons de chaînes à l’aide de différentes versions de .
   
 <a name="Formatted"></a>   
 ## <a name="displaying-and-persisting-formatted-data"></a>Affichage et persistance des données mises en forme  
- Lorsque vous affichez des données non-chaînées telles que les nombres et les dates et heures aux utilisateurs, mettez-les en forme en utilisant les paramètres de la culture de l'utilisateur. Par défaut, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et les méthodes `ToString` des types numériques et des types de date et d'heure utilisent la culture du thread actuelle pour la mise en forme des opérations. Pour spécifier explicitement que la méthode de mise en forme doit utiliser la culture actuelle, vous pouvez appeler une surcharge d'une méthode de mise en forme ayant un paramètre `provider`, comme <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, et lui passer la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.  
+ Lorsque vous affichez des données non-chaînées telles que les nombres et les dates et heures aux utilisateurs, mettez-les en forme en utilisant les paramètres de la culture de l'utilisateur. Par défaut, la méthode <xref:System.String.Format%2A?displayProperty=nameWithType> et les méthodes `ToString` des types numériques et des types de date et d'heure utilisent la culture du thread actuelle pour la mise en forme des opérations. Pour spécifier explicitement que la méthode de mise en forme doit utiliser la culture actuelle, vous pouvez appeler une surcharge d'une méthode de mise en forme ayant un paramètre `provider` , comme <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ou <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType>, et lui passer la propriété <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> .  
   
  Vous pouvez rendre persistantes des données non-chaînées soit comme données binaires, soit comme données mises en forme. Si vous choisissez de l'enregistrer en tant que données mises en forme, vous devez appeler une surcharge de méthode de mise en forme qui inclut un paramètre `provider` et le passer à la propriété <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. La culture dite indifférente fournit un format cohérent pour les données mises en forme qui est indépendant de la culture et de l'ordinateur. En revanche, assurer la persistance de données mises en forme à l'aide de cultures autres que la culture dite indifférente a plusieurs limites :  
   

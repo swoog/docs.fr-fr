@@ -1,19 +1,20 @@
 ---
-title: Restauration par progression du runtime de déploiement autonome
+title: Restauration par progression du runtime pour les déploiements d’applications autonomes .NET Core.
 description: Découvrez-en plus sur les modifications apportées à la commande dotnet publish pour les déploiements autonomes.
 author: jralexander
 ms.author: kdollard
 ms.date: 05/31/2018
-ms.openlocfilehash: 39a23917dec1aba5142839265c555da5c1e6f09c
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.custom: seodec18
+ms.openlocfilehash: dde00cf71f0d67c8c4380748e01a4ef5c17ebb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071030"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126677"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>Restauration par progression du runtime de déploiement autonome
 
-[Les déploiements d’applications autonomes](index.md) .NET Core incluent à la fois les bibliothèques .NET Core et le runtime .NET Core. À compter du SDK .NET Core 2.1.300 (.NET Core 2.1), un déploiement d’applications autonome [publie le runtime du correctif le plus élevé sur votre machine](https://github.com/dotnet/designs/pull/36). Par défaut, [`dotnet publish`](../tools/dotnet-publish.md) pour un déploiement autonome sélectionne la dernière version installée dans le cadre du SDK sur la machine de publication. Ainsi, votre application déployée peut exécuter des correctifs de sécurité (et d’autres correctifs) disponibles pendant `publish`. L’application doit être republiée pour obtenir un nouveau correctif. Les applications autonomes sont créées en spécifiant `-r <RID>` dans la commande `dotnet publish` ou en spécifiant l’[identificateur du runtime (RID)](../rid-catalog.md) dans le fichier projet (csproj/vbproj) ou sur la ligne de commande.
+[Les déploiements d’applications autonomes](index.md) .NET Core incluent à la fois les bibliothèques .NET Core et le runtime .NET Core. À compter du SDK .NET Core 2.1 (version 2.1.300), un déploiement d’applications autonome [publie le runtime du correctif le plus élevé sur votre machine](https://github.com/dotnet/designs/pull/36). Par défaut, [`dotnet publish`](../tools/dotnet-publish.md) pour un déploiement autonome sélectionne la dernière version installée dans le cadre du SDK sur la machine de publication. Ainsi, votre application déployée peut exécuter des correctifs de sécurité (et d’autres correctifs) disponibles pendant `publish`. L’application doit être republiée pour obtenir un nouveau correctif. Les applications autonomes sont créées en spécifiant `-r <RID>` dans la commande `dotnet publish` ou en spécifiant l’[identificateur du runtime (RID)](../rid-catalog.md) dans le fichier projet (csproj/vbproj) ou sur la ligne de commande.
 
 ## <a name="patch-version-roll-forward-overview"></a>Vue d’ensemble de la restauration par progression d’une version de correctif
 

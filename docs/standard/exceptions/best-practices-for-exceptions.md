@@ -1,6 +1,6 @@
 ---
 title: Meilleures pratiques pour les exceptions
-ms.date: 03/30/2017
+ms.date: 12/05.2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -9,26 +9,22 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6aa1049c531550687a2c6289ccd87e763ca2f58
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199628"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149586"
 ---
 # <a name="best-practices-for-exceptions"></a>Bonnes pratiques pour les exceptions
 
 Une application bien conçue gère les exceptions et les erreurs pour empêcher les incidents d'applications. Cette section présente les bonnes pratiques pour la gestion et la création des exceptions.
 
-## <a name="use-trycatchfinally-blocks"></a>Utiliser des blocs try/catch/finally
+## <a name="use-trycatchfinally-blocks-to-recover-from-errors-or-release-resources"></a>Utiliser des blocs try/catch/finally pour procéder à une récupération après des erreurs ou libérer des ressources
 
-Utilisez des blocs `try`/`catch`/`finally` autour du code susceptible de générer une exception. 
+Utilisez des blocs `try`/`catch` autour du code susceptible de générer une exception ***et*** votre code peut récupérer suite à cette exception. Dans les blocs `catch`, veillez à toujours classer les exceptions de la plus dérivée à la moins dérivée. Toutes les exceptions dérivent de <xref:System.Exception>. Les exceptions les plus dérivées ne sont pas gérées par une clause catch qui est précédée d’une clause catch pour une classe d’exception de base. Quand votre code ne peut pas récupérer suite à une exception, n’interceptez pas cette exception. Activez des méthodes un peu plus haut dans la pile d’appels pour récupérer si possible.
 
-Dans les blocs `catch`, veillez à toujours classer les exceptions de la plus spécifique à la moins spécifique.
-
-Utilisez un bloc `finally` pour nettoyer les ressources, que la récupération soit possible ou non.
+Nettoyez les ressources allouées avec des instructions `using` ou des blocs `finally`. Préférez les instructions `using` pour nettoyer automatiquement les ressources quand des exceptions sont levées. Utilisez des blocs `finally` pour nettoyer les ressources qui n’implémentent pas <xref:System.IDisposable>. Le code dans une clause `finally` est presque toujours exécuté même quand des exceptions sont levées.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Gérer les conditions courantes sans lever d’exception
 
@@ -58,15 +54,15 @@ Une classe peut fournir des méthodes ou propriétés qui vous permettent d’é
 [!code-csharp[Conceptual.Exception.Handling#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#5)]
 [!code-vb[Conceptual.Exception.Handling#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.exception.handling/vb/source.vb#5)]  
 
-Un autre moyen d’éviter les exceptions est de retourner Null pour les cas d’erreur très répandus au lieu de lever une exception. Un cas d'erreur très répandu peut être considéré comme un flux de contrôle normal. En retournant null dans ces cas-là, vous réduisez l'impact sur les performances d'une application.
+Un autre moyen d’éviter les exceptions est de retourner `null` pour les cas d’erreur très répandus au lieu de lever une exception. Un cas d'erreur très répandu peut être considéré comme un flux de contrôle normal. En retournant `null` dans ces cas-là, vous réduisez l’impact sur les performances d’une application.
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>Lever des exceptions au lieu de retourner un code d’erreur
 
-Les exceptions font en sorte que les échecs ne passent pas inaperçus parce que l’appel du code n’a pas vérifié le code de retour. 
+Les exceptions font en sorte que les échecs ne passent pas inaperçus parce que l’appel du code n’a pas vérifié le code de retour.
 
 ## <a name="use-the-predefined-net-exception-types"></a>Utiliser les types d’exception .NET prédéfinis
 
-N'introduisez une nouvelle classe d'exception que quand aucune classe d'exception prédéfinie ne s'applique. Exemple :
+N'introduisez une nouvelle classe d'exception que quand aucune classe d'exception prédéfinie ne s'applique. Par exemple :
 
 - Levez une exception <xref:System.InvalidOperationException> si un appel de jeu de propriétés ou de méthode n'est pas approprié étant donné l'état actuel de l'objet.
 
@@ -74,7 +70,7 @@ N'introduisez une nouvelle classe d'exception que quand aucune classe d'exceptio
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Terminer les noms de classes d’exception par le mot `Exception`
 
-Quand une exception personnalisée est nécessaire, nommez-la de manière appropriée et dérivez-la de la classe <xref:System.Exception>. Exemple :
+Quand une exception personnalisée est nécessaire, nommez-la de manière appropriée et dérivez-la de la classe <xref:System.Exception>. Par exemple :
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -124,7 +120,7 @@ La trace de la pile commence à l'instruction où l'exception est levée et se t
 
 ## <a name="use-exception-builder-methods"></a>Utiliser des méthodes de générateur d’exceptions
 
-Il est fréquent qu'une classe lève la même exception à partir de différents endroits de son implémentation. Pour éviter un excès de code, utilisez des méthodes d'assistance qui créent une exception et la retournent. Exemple :
+Il est fréquent qu'une classe lève la même exception à partir de différents endroits de son implémentation. Pour éviter un excès de code, utilisez des méthodes d'assistance qui créent une exception et la retournent. Par exemple :
 
 [!code-cpp[Conceptual.Exception.Handling#6](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#6)]
 [!code-csharp[Conceptual.Exception.Handling#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#6)]
@@ -132,7 +128,7 @@ Il est fréquent qu'une classe lève la même exception à partir de différents
   
 Dans certains cas, il est plus approprié d’utiliser le constructeur de l’exception pour générer l’exception. Par exemple, une classe d’exception globale comme <xref:System.ArgumentException>.
 
-## <a name="clean-up-intermediate-results-when-throwing-an-exception"></a>Nettoyer les résultats intermédiaires quand vous levez une exception
+## <a name="restore-state-when-methods-dont-complete-due-to-exceptions"></a>Restaurer l’état quand les méthodes ne sont pas exécutées en raison d’exceptions
 
 Les appelants doivent supposer qu'il n'y a aucun effet secondaire quand une exception est levée à partir d'une méthode. Par exemple, si vous avez du code qui transfère de l’argent en le retirant d’un compte pour le déposer dans un autre, et qu’une exception est levée pendant l’exécution du transfert, vous ne voulez pas que le retrait reste en vigueur.
 
@@ -144,6 +140,8 @@ public void TransferFunds(Account from, Account to, decimal amount)
     to.Deposit(amount);
 }
 ```
+
+La méthode ci-dessus ne lève pas directement d’exceptions, mais doit être écrite avec précaution afin d’inverser le retrait si l’opération de dépôt échoue.
 
 Pour gérer cette situation, vous pouvez intercepter toutes les exceptions levées par la transaction de dépôt et annuler le retrait.
 
@@ -172,8 +170,8 @@ catch (Exception ex)
     throw new TransferFundsException("Withdrawal failed", innerException: ex)
     {
         From = from,
-    To = to,
-    Amount = amount
+        To = to,
+        Amount = amount
     };
 }
 ```

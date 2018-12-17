@@ -1,15 +1,15 @@
 ---
 title: Images officielles .NET Docker
-description: Architecture de microservices .NET pour les applications .NET en conteneur | Images officielles .NET Docker
+description: Architecture de microservices .NET pour les applications .NET conteneurisées | Images officielles .NET Docker
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 5d42ec77958e056b75b0e379f8ab520ac926c72a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c1948693edbc197b8527ce8ce82c196206a16876
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075567"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131376"
 ---
 # <a name="official-net-docker-images"></a>Images officielles .NET Docker
 
@@ -27,7 +27,7 @@ Au moment de créer des images Docker pour développeurs, Microsoft s’est conc
 
 -   Images utilisées pour *exécuter* des applications .NET Core
 
-Pourquoi plusieurs images ? En règle générale, vos propriétés varient selon que vous développez, générez ou exécutez des applications en conteneur. En proposant des images différentes en fonction des tâches, Microsoft permet d’optimiser ces processus distincts que sont le développement, la génération et le déploiement d’applications.
+Pourquoi plusieurs images ? En règle générale, vos propriétés varient selon que vous développez, générez ou exécutez des applications conteneurisées. En proposant des images différentes en fonction des tâches, Microsoft permet d’optimiser ces processus distincts que sont le développement, la génération et le déploiement d’applications.
 
 ### <a name="during-development-and-build"></a>En phase de développement et de génération
 
@@ -50,7 +50,6 @@ En explorant les dépôts d’images .NET dans Docker Hub, vous trouverez plusie
 | microsoft/dotnet:**2.1-aspnetcore-runtime** | ASP.NET Core, avec le runtime uniquement et les optimisations ASP.NET Core, Linux et Windows (multi-arch) |
 | microsoft/dotnet:**2.1-sdk**                | .NET Core, avec les SDK inclus, sur Linux et Windows (multi-arch)                                  |
 
-
 >[!div class="step-by-step"]
-[Précédent](net-container-os-targets.md)
-[Suivant](../architect-microservice-container-applications/index.md)
+>[Précédent](net-container-os-targets.md)
+>[Suivant](../architect-microservice-container-applications/index.md)

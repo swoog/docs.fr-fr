@@ -1,15 +1,15 @@
 ---
 title: Stockage sécurisé des secrets d’application en phase de développement
-description: Architecture de microservices .NET pour les applications .NET en conteneur | Stockage sécurisé des secrets d’application en phase de développement
+description: Architecture de microservices .NET pour les applications .NET conteneurisées | Stockage sécurisé des secrets d’application en phase de développement
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 560120db35ae190bdef1f95d72ac1e5de697124e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6f5dfbb53b99fec4d7cc66c528fe866c71c2172f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105944"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143868"
 ---
 # <a name="storing-application-secrets-safely-during-development"></a>Stockage sécurisé des secrets d’application en phase de développement
 
@@ -39,7 +39,7 @@ Notez que les variables d’environnement sont généralement stockées en texte
 
 ## <a name="storing-secrets-using-the-aspnet-core-secret-manager"></a>Stockage des secrets à l’aide de l’outil Secret Manager d’ASP.NET Core
 
-L’outil [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) d’ASP.NET Core offre un autre moyen de maintenir les secrets en dehors du code source. Pour utiliser l’outil Secret Manager, incluez une référence de l’outil (DotNetCliToolReference) au package Microsoft.Extensions.SecretManager.Tools de votre fichier projet. Une fois cette dépendance présente et restaurée, la commande dotnet user-secrets peut être utilisée pour définir la valeur des secrets à partir de la ligne de commande. Ces secrets sont alors stockés dans un fichier JSON dans le répertoire du profil de l’utilisateur (les détails varient selon le système d’exploitation), à l’écart du code source.
+L’outil [Secret Manager](https://docs.microsoft.com/aspnet/core/security/app-secrets#secret-manager) d’ASP.NET Core offre un autre moyen de maintenir les secrets en dehors du code source. Pour utiliser l’outil Secret Manager, incluez une référence de l’outil (DotNetCliToolReference) au package Microsoft.Extensions.SecretManager.Tools de votre fichier projet. Une fois cette dépendance présente et restaurée, la commande dotnet user-secrets peut être utilisée pour définir la valeur des secrets à partir de la ligne de commande. Ces secrets sont alors stockés dans un fichier JSON dans le répertoire du profil de l’utilisateur (les détails varient selon le système d’exploitation), à l’écart du code source.
 
 Les secrets définis par l’outil Secret Manager sont organisés par la propriété UserSecretsId du projet qui utilise les secrets. Par conséquent, veillez à définir la propriété UserSecretsId dans votre fichier projet (comme indiqué dans l’extrait de code ci-dessous). Vous pouvez utiliser n’importe quelle chaîne en guise d’ID du moment qu’elle est unique dans le projet.
 
@@ -53,5 +53,5 @@ Pour utiliser les secrets stockés avec Secret Manager dans une application, Add
 
 
 >[!div class="step-by-step"]
-[Précédent](authorization-net-microservices-web-applications.md)
-[Suivant](azure-key-vault-protects-secrets.md)
+>[Précédent](authorization-net-microservices-web-applications.md)
+>[Suivant](azure-key-vault-protects-secrets.md)

@@ -4,11 +4,11 @@ description: Meilleures pratiques suggérées pour la gestion des dépendances N
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: c5df30c606e77c9ef44387233b0072ab890f612f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 5566ab83040ce5dc23520401e3fc4bb619af4ec4
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "49400525"
 ---
 # <a name="dependencies"></a>Dépendances
@@ -92,10 +92,12 @@ Les packages à code source partagé ont certaines limitations. Ils ne peuvent �
 
 > Les types à code source partagé sont compilés dans l’assembly de référencement et ne peuvent pas être échangés au-delà des limites de l’assembly. Par exemple, un type de `IRepository` à code source partagé dans un projet est un type distinct du même `IRepository` à code source partagé dans un autre projet. Les types de packages à code source partagé doivent avoir une visibilité `internal`.
 
-**❌ NE PAS** publier de packages à code source partagé sur nuget.org.
+**❌ À NE PAS FAIRE** : Publier des packages à code source partagé sur NuGet.org.
 
 > Les packages à code source partagé contiennent du code source et ne peuvent être utilisés que par des projets ayant le même type de langage. Par exemple, un package à code source partagé C# ne peut pas être utilisé par une application F#.
+>
+> Publier des packages à code source partagé sur un [flux local ou MyGet](./publish-nuget-package.md) pour les utiliser en interne au sein de votre projet.
 
 >[!div class="step-by-step"]
-[Précédent](./nuget.md)
-[Suivant](./sourcelink.md)
+>[Précédent](nuget.md)
+>[Suivant](sourcelink.md)

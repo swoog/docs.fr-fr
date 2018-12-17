@@ -2,14 +2,13 @@
 title: Commande dotnet nuget push - Interface CLI .NET Core
 description: La commande dotnet nuget push exécute un envoi (push) d’un package sur le serveur et le publie.
 author: karann-msft
-ms.author: mairaw
-ms.date: 09/04/2018
-ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/04/2018
+ms.openlocfilehash: 090dbfbe3db83b2bb234867aed295ac416b27865
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50200020"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143059"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -21,16 +20,10 @@ ms.locfileid: "50200020"
 
 ## <a name="synopsis"></a>Résumé
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
+dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--interactive] [-k|--api-key] [-n|--no-symbols]
     [--no-service-endpoint] [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
-dotnet nuget push [-h|--help]
-```
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
-dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [-k|--api-key] [-n|--no-symbols]
-    [-s|--source] [-sk|--symbol-api-key] [-ss|--symbol-source] [-t|--timeout]
 dotnet nuget push [-h|--help]
 ```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -47,154 +40,132 @@ La commande `dotnet nuget push` exécute un push d’un package sur le serveur e
 
 ## <a name="arguments"></a>Arguments
 
-`ROOT`
+* **`ROOT`**
 
-Spécifie le chemin de fichier au package devant faire l’objet d’un envoi (push).
+  Spécifie le chemin de fichier au package devant faire l’objet d’un envoi (push).
 
 ## <a name="options"></a>Options
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-Désactive la mise en mémoire tampon pendant le transfert push vers un serveur HTTP(S) afin de réduire l’utilisation de la mémoire.
+  Désactive la mise en mémoire tampon pendant le transfert push vers un serveur HTTP(S) afin de réduire l’utilisation de la mémoire.
 
-`--force-english-output`
+* **`--force-english-output`**
 
-Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
+  Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
 
-`-h|--help`
-
-Affiche une aide brève pour la commande.
-
-`-k|--api-key <API_KEY>`
-
-Clé d’API pour le serveur.
-
-`-n|--no-symbols`
-
-N’envoie pas les symboles (même s’ils sont présents).
-
-`--no-service-endpoint`
-
-N’ajoute pas « api/v2/package » à l’URL source.
-
-`-s|--source <SOURCE>`
-
-Spécifie l’URL du serveur. Cette option est obligatoire, sauf si la valeur de configuration de `DefaultPushSource` est définie dans le fichier de configuration NuGet.
-
-`-sk|--symbol-api-key <API_KEY>`
-
-Clé d’API pour le serveur de symboles.
-
-`-ss|--symbol-source <SOURCE>`
-
-Spécifie l’URL du serveur de symboles.
-
-`-t|--timeout <TIMEOUT>`
-
-Spécifie le délai d’attente, en secondes, pour effectuer un push vers un serveur. La valeur par défaut est 300 secondes (5 minutes). Si vous spécifiez 0 (zéro seconde), la valeur par défaut s’applique.
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-`-d|--disable-buffering`
-
-Désactive la mise en mémoire tampon pendant le transfert push vers un serveur HTTP(S) afin de réduire l’utilisation de la mémoire.
-
-`--force-english-output`
-
-Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
-
-`-h|--help`
+* **`-h|--help`**
 
 Affiche une aide brève pour la commande.
 
-`-k|--api-key <API_KEY>`
+* **`--interactive`**
 
-Clé d’API pour le serveur.
+  Autorise la commande pour bloquer et exige une action manuelle pour des opérations comme l'authentification. Option disponible à partir du SDK .NET Core 2.2.
 
-`-n|--no-symbols`
+* **`-k|--api-key <API_KEY>`**
 
-N’envoie pas les symboles (même s’ils sont présents).
+  Clé d’API pour le serveur.
 
-`-s|--source <SOURCE>`
+* **`-n|--no-symbols`**
 
-Spécifie l’URL du serveur. Cette option est obligatoire, sauf si la valeur de configuration de `DefaultPushSource` est définie dans le fichier de configuration NuGet.
+  N’envoie pas les symboles (même s’ils sont présents).
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`--no-service-endpoint`**
 
-Clé d’API pour le serveur de symboles.
+  N’ajoute pas « api/v2/package » à l’URL source. Option disponible à partir du kit SDK .NET Core 2.1.
 
-`-ss|--symbol-source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Spécifie l’URL du serveur de symboles.
+  Spécifie l’URL du serveur. Cette option est obligatoire, sauf si la valeur de configuration de `DefaultPushSource` est définie dans le fichier de configuration NuGet.
 
-`-t|--timeout <TIMEOUT>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-Spécifie le délai d’attente, en secondes, pour effectuer un push vers un serveur. La valeur par défaut est 300 secondes (5 minutes). Si vous spécifiez 0 (zéro seconde), la valeur par défaut s’applique.
+  Clé d’API pour le serveur de symboles.
+
+* **`-ss|--symbol-source <SOURCE>`**
+
+  Spécifie l’URL du serveur de symboles.
+
+* **`-t|--timeout <TIMEOUT>`**
+
+  Spécifie le délai d’attente, en secondes, pour effectuer un push vers un serveur. La valeur par défaut est 300 secondes (5 minutes). Si vous spécifiez 0 (zéro seconde), la valeur par défaut s’applique.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-d|--disable-buffering`
+* **`-d|--disable-buffering`**
 
-Désactive la mise en mémoire tampon pendant le transfert push vers un serveur HTTP(S) afin de réduire l’utilisation de la mémoire.
+  Désactive la mise en mémoire tampon pendant le transfert push vers un serveur HTTP(S) afin de réduire l’utilisation de la mémoire.
 
-`--force-english-output`
+* **`--force-english-output`**
 
-Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
+  Force l’application à s’exécuter avec les paramètres régionaux Anglais (culture indifférente).
 
-`-h|--help`
+* **`-h|--help`**
 
-Affiche une aide brève pour la commande.
+  Affiche une aide brève pour la commande.
 
-`-k|--api-key <API_KEY>`
+* **`-k|--api-key <API_KEY>`**
 
-Clé d’API pour le serveur.
+  Clé d’API pour le serveur.
 
-`-n|--no-symbols`
+* **`-n|--no-symbols`**
 
-N’envoie pas les symboles (même s’ils sont présents).
+  N’envoie pas les symboles (même s’ils sont présents).
 
-`-s|--source <SOURCE>`
+* **`-s|--source <SOURCE>`**
 
-Spécifie l’URL du serveur. Cette option est obligatoire, sauf si la valeur de configuration de `DefaultPushSource` est définie dans le fichier de configuration NuGet.
+  Spécifie l’URL du serveur. Cette option est obligatoire, sauf si la valeur de configuration de `DefaultPushSource` est définie dans le fichier de configuration NuGet.
 
-`-sk|--symbol-api-key <API_KEY>`
+* **`-sk|--symbol-api-key <API_KEY>`**
 
-Clé d’API pour le serveur de symboles.
+  Clé d’API pour le serveur de symboles.
 
-`-ss|--symbol-source <SOURCE>`
+* **`-ss|--symbol-source <SOURCE>`**
 
-Spécifie l’URL du serveur de symboles.
+  Spécifie l’URL du serveur de symboles.
 
-`-t|--timeout <TIMEOUT>`
+* **`-t|--timeout <TIMEOUT>`**
 
-Spécifie le délai d’attente, en secondes, pour effectuer un push vers un serveur. La valeur par défaut est 300 secondes (5 minutes). Si vous spécifiez 0 (zéro seconde), la valeur par défaut s’applique.
+  Spécifie le délai d’attente, en secondes, pour effectuer un push vers un serveur. La valeur par défaut est 300 secondes (5 minutes). Si vous spécifiez 0 (zéro seconde), la valeur par défaut s’applique.
 
 ---
 
 ## <a name="examples"></a>Exemples
 
-Envoie (push) *foo.nupkg* à la source de push par défaut, en spécifiant une clé API :
+* Envoie (push) *foo.nupkg* à la source de push par défaut, en spécifiant une clé API :
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
+  ```
 
-Envoyez (push) *foo.nupkg* à la source de push personnalisée `https://customsource`, en spécifiant une clé API :
+* Envoyez (push) *foo.nupkg* à la source de push personnalisée `https://customsource`, en spécifiant une clé API :
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
+  ```console
+  dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
+  ```
 
-Effectuer une transmission de type push de *foo.nupkg* vers la source de push par défaut :
+* Effectuer une transmission de type push de *foo.nupkg* vers la source de push par défaut :
 
-`dotnet nuget push foo.nupkg`
+  ```console
+  dotnet nuget push foo.nupkg
+  ```
 
-Effectuer une transmission de type push de *foo.symbols.nupkg* vers la source de symboles par défaut :
+* Effectuer une transmission de type push de *foo.symbols.nupkg* vers la source de symboles par défaut :
 
-`dotnet nuget push foo.symbols.nupkg`
+  ```console
+  dotnet nuget push foo.symbols.nupkg
+  ```
 
-Envoie (push) *foo.nupkg* à la source de push par défaut, en spécifiant un délai d’attente de 360 secondes :
+* Envoie (push) *foo.nupkg* à la source de push par défaut, en spécifiant un délai d’attente de 360 secondes :
 
-`dotnet nuget push foo.nupkg --timeout 360`
+  ```console
+  dotnet nuget push foo.nupkg --timeout 360
+  ```
 
-Effectuer une transmission de type push de tous les fichiers *.nupkg* du répertoire actif vers la source de push par défaut :
+* Effectuer une transmission de type push de tous les fichiers *.nupkg* du répertoire actif vers la source de push par défaut :
 
-`dotnet nuget push *.nupkg`
+  ```console
+  dotnet nuget push *.nupkg
+  ```
