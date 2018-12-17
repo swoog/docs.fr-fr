@@ -7,112 +7,110 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511726"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149235"
 ---
-# <a name="for-c-reference"></a><span data-ttu-id="942e9-102">for (référence C#)</span><span class="sxs-lookup"><span data-stu-id="942e9-102">for (C# reference)</span></span>
+# <a name="for-c-reference"></a><span data-ttu-id="9c460-102">for (référence C#)</span><span class="sxs-lookup"><span data-stu-id="9c460-102">for (C# reference)</span></span>
 
-<span data-ttu-id="942e9-103">L’instruction `for` exécute une instruction ou un bloc d’instructions jusqu’à ce qu’une expression booléenne spécifique corresponde à la valeur `true`.</span><span class="sxs-lookup"><span data-stu-id="942e9-103">The `for` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span>
+<span data-ttu-id="9c460-103">L’instruction `for` exécute une instruction ou un bloc d’instructions tant qu’une expression booléenne donne la valeur `true`.</span><span class="sxs-lookup"><span data-stu-id="9c460-103">The `for` statement executes a statement or a block of statements while a specified Boolean expression evaluates to `true`.</span></span>
 
-<span data-ttu-id="942e9-104">À tout moment dans le bloc d’instructions `for`, vous pouvez sortir de la boucle à l’aide de l’instruction [break](break.md), ou passer à l’itération suivante de la boucle à l’aide de l’instruction [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="942e9-104">At any point within the `for` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="942e9-105">Vous pouvez également quitter une boucle `for` en utilisant les instructions [goto](goto.md), [return](return.md) ou [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="942e9-105">You also can exit a `for` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+<span data-ttu-id="9c460-104">À tout moment dans le bloc d’instructions `for`, vous pouvez sortir de la boucle à l’aide de l’instruction [break](break.md), ou passer à l’itération suivante de la boucle à l’aide de l’instruction [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="9c460-104">At any point within the `for` statement block, you can break out of the loop by using the [break](break.md) statement, or step to the next iteration in the loop by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="9c460-105">Vous pouvez également quitter une boucle `for` en utilisant les instructions [goto](goto.md), [return](return.md) ou [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="9c460-105">You also can exit a `for` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
 
-## <a name="structure-of-the-for-statement"></a><span data-ttu-id="942e9-106">Structure de l’instruction `for`</span><span class="sxs-lookup"><span data-stu-id="942e9-106">Structure of the `for` statement</span></span>
+## <a name="structure-of-the-for-statement"></a><span data-ttu-id="9c460-106">Structure de l’instruction `for`</span><span class="sxs-lookup"><span data-stu-id="9c460-106">Structure of the `for` statement</span></span>
 
-<span data-ttu-id="942e9-107">Chaque instruction `for` définit des sections *initialiseur*, *condition* et *itérateur* :</span><span class="sxs-lookup"><span data-stu-id="942e9-107">The `for` statement defines *initializer*, *condition*, and *iterator* sections:</span></span>
+<span data-ttu-id="9c460-107">Chaque instruction `for` définit des sections *initialiseur*, *condition* et *itérateur* :</span><span class="sxs-lookup"><span data-stu-id="9c460-107">The `for` statement defines *initializer*, *condition*, and *iterator* sections:</span></span>
 
 ```csharp
 for (initializer; condition; iterator)
     body
 ```
 
-<span data-ttu-id="942e9-108">Ces trois sections sont facultatives.</span><span class="sxs-lookup"><span data-stu-id="942e9-108">All three sections are optional.</span></span> <span data-ttu-id="942e9-109">Le corps de la boucle est une instruction ou un bloc d’instructions.</span><span class="sxs-lookup"><span data-stu-id="942e9-109">The body of the loop is either a statement or a block of statements.</span></span>
+<span data-ttu-id="9c460-108">Ces trois sections sont facultatives.</span><span class="sxs-lookup"><span data-stu-id="9c460-108">All three sections are optional.</span></span> <span data-ttu-id="9c460-109">Le corps de la boucle est une instruction ou un bloc d’instructions.</span><span class="sxs-lookup"><span data-stu-id="9c460-109">The body of the loop is either a statement or a block of statements.</span></span>
 
-<span data-ttu-id="942e9-110">L’exemple suivant montre l’instruction `for` avec toutes les sections définies :</span><span class="sxs-lookup"><span data-stu-id="942e9-110">The following example shows the `for` statement with all of the sections defined:</span></span>
+<span data-ttu-id="9c460-110">L’exemple suivant montre l’instruction `for` avec toutes les sections définies :</span><span class="sxs-lookup"><span data-stu-id="9c460-110">The following example shows the `for` statement with all of the sections defined:</span></span>
 
 [!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
 
-### <a name="the-initializer-section"></a><span data-ttu-id="942e9-111">La section *initialiseur*</span><span class="sxs-lookup"><span data-stu-id="942e9-111">The *initializer* section</span></span>
+### <a name="the-initializer-section"></a><span data-ttu-id="9c460-111">La section *initialiseur*</span><span class="sxs-lookup"><span data-stu-id="9c460-111">The *initializer* section</span></span>
 
-<span data-ttu-id="942e9-112">Les instructions figurant dans la section *initialiseur* sont exécutées une seule fois, avant d’entrer dans la boucle.</span><span class="sxs-lookup"><span data-stu-id="942e9-112">The statements in the *initializer* section are executed only once, before entering the loop.</span></span> <span data-ttu-id="942e9-113">La section *initialiseur* contient au choix :</span><span class="sxs-lookup"><span data-stu-id="942e9-113">The *initializer* section is either of the following:</span></span>
+<span data-ttu-id="9c460-112">Les instructions figurant dans la section *initialiseur* sont exécutées une seule fois, avant d’entrer dans la boucle.</span><span class="sxs-lookup"><span data-stu-id="9c460-112">The statements in the *initializer* section are executed only once, before entering the loop.</span></span> <span data-ttu-id="9c460-113">La section *initialiseur* contient au choix :</span><span class="sxs-lookup"><span data-stu-id="9c460-113">The *initializer* section is either of the following:</span></span>
 
-- <span data-ttu-id="942e9-114">La déclaration et l’initialisation d’une variable de boucle locale, qui n’est pas accessible à partir de l’extérieur de la boucle, ou</span><span class="sxs-lookup"><span data-stu-id="942e9-114">The declaration and initialization of a local loop variable, which can't be accessed from outside the loop.</span></span>
+- <span data-ttu-id="9c460-114">La déclaration et l’initialisation d’une variable de boucle locale, qui n’est pas accessible à partir de l’extérieur de la boucle, ou</span><span class="sxs-lookup"><span data-stu-id="9c460-114">The declaration and initialization of a local loop variable, which can't be accessed from outside the loop.</span></span>
 
-- <span data-ttu-id="942e9-115">Zéro, une ou plusieurs expressions d’instruction parmi celles de la liste suivante, séparées par des virgules :</span><span class="sxs-lookup"><span data-stu-id="942e9-115">Zero or more statement expressions from the following list, separated by commas:</span></span>
+- <span data-ttu-id="9c460-115">Zéro, une ou plusieurs expressions d’instruction parmi celles de la liste suivante, séparées par des virgules :</span><span class="sxs-lookup"><span data-stu-id="9c460-115">Zero or more statement expressions from the following list, separated by commas:</span></span>
 
-  - <span data-ttu-id="942e9-116">Instruction d’[assignation](../operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="942e9-116">[assignment](../operators/assignment-operator.md) statement</span></span>
+  - <span data-ttu-id="9c460-116">Instruction d’[assignation](../operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="9c460-116">[assignment](../operators/assignment-operator.md) statement</span></span>
 
-  - <span data-ttu-id="942e9-117">Appel d’une méthode</span><span class="sxs-lookup"><span data-stu-id="942e9-117">invocation of a method</span></span>
+  - <span data-ttu-id="9c460-117">Appel d’une méthode</span><span class="sxs-lookup"><span data-stu-id="9c460-117">invocation of a method</span></span>
 
-  - <span data-ttu-id="942e9-118">Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`</span><span class="sxs-lookup"><span data-stu-id="942e9-118">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>
+  - <span data-ttu-id="9c460-118">Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`</span><span class="sxs-lookup"><span data-stu-id="9c460-118">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>
 
-  - <span data-ttu-id="942e9-119">Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`</span><span class="sxs-lookup"><span data-stu-id="942e9-119">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>
+  - <span data-ttu-id="9c460-119">Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`</span><span class="sxs-lookup"><span data-stu-id="9c460-119">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>
 
-  - <span data-ttu-id="942e9-120">Création d’un objet à l’aide du mot clé [new](new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="942e9-120">creation of an object by using [new](new-operator.md) keyword</span></span>
+  - <span data-ttu-id="9c460-120">Création d’un objet à l’aide du mot clé [new](new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="9c460-120">creation of an object by using [new](new-operator.md) keyword</span></span>
 
-  - <span data-ttu-id="942e9-121">Expression [await](await.md)</span><span class="sxs-lookup"><span data-stu-id="942e9-121">[await](await.md) expression</span></span>
+  - <span data-ttu-id="9c460-121">Expression [await](await.md)</span><span class="sxs-lookup"><span data-stu-id="9c460-121">[await](await.md) expression</span></span>
 
-<span data-ttu-id="942e9-122">La section *initialiseur* dans l’exemple ci-dessus déclare et initialise la variable de boucle locale `i` :</span><span class="sxs-lookup"><span data-stu-id="942e9-122">The *initializer* section in the example above declares and initializes the local loop variable `i`:</span></span>
+<span data-ttu-id="9c460-122">La section *initialiseur* dans l’exemple ci-dessus déclare et initialise la variable de boucle locale `i` :</span><span class="sxs-lookup"><span data-stu-id="9c460-122">The *initializer* section in the example above declares and initializes the local loop variable `i`:</span></span>
 
 ```csharp
 int i = 0
 ```
 
-### <a name="the-condition-section"></a><span data-ttu-id="942e9-123">La section *condition*</span><span class="sxs-lookup"><span data-stu-id="942e9-123">The *condition* section</span></span>
+### <a name="the-condition-section"></a><span data-ttu-id="9c460-123">La section *condition*</span><span class="sxs-lookup"><span data-stu-id="9c460-123">The *condition* section</span></span>
 
-<span data-ttu-id="942e9-124">La section *condition*, si elle est présente, doit être une expression booléenne.</span><span class="sxs-lookup"><span data-stu-id="942e9-124">The *condition* section, if present, must be a boolean expression.</span></span> <span data-ttu-id="942e9-125">Cette expression est évaluée avant chaque itération de boucle.</span><span class="sxs-lookup"><span data-stu-id="942e9-125">That expression is evaluated before every loop iteration.</span></span> <span data-ttu-id="942e9-126">Si la section *condition* est absente ou que l’expression booléenne est `true`, l’itération suivante de la boucle est exécutée ; sinon, la boucle est fermée.</span><span class="sxs-lookup"><span data-stu-id="942e9-126">If the *condition* section is not present or the boolean expression evaluates to `true`, the next loop iteration is executed; otherwise, the loop is exited.</span></span>
+<span data-ttu-id="9c460-124">La section *condition*, si elle est présente, doit être une expression booléenne.</span><span class="sxs-lookup"><span data-stu-id="9c460-124">The *condition* section, if present, must be a boolean expression.</span></span> <span data-ttu-id="9c460-125">Cette expression est évaluée avant chaque itération de boucle.</span><span class="sxs-lookup"><span data-stu-id="9c460-125">That expression is evaluated before every loop iteration.</span></span> <span data-ttu-id="9c460-126">Si la section *condition* est absente ou que l’expression booléenne est `true`, l’itération suivante de la boucle est exécutée ; sinon, la boucle est fermée.</span><span class="sxs-lookup"><span data-stu-id="9c460-126">If the *condition* section is not present or the boolean expression evaluates to `true`, the next loop iteration is executed; otherwise, the loop is exited.</span></span>
 
-<span data-ttu-id="942e9-127">La section *condition* dans l’exemple ci-dessus détermine si la boucle se termine en fonction de la valeur de la variable de boucle locale :</span><span class="sxs-lookup"><span data-stu-id="942e9-127">The *condition* section in the example above determines if the loop terminates based on the value of the local loop variable:</span></span>
+<span data-ttu-id="9c460-127">La section *condition* dans l’exemple ci-dessus détermine si la boucle se termine en fonction de la valeur de la variable de boucle locale :</span><span class="sxs-lookup"><span data-stu-id="9c460-127">The *condition* section in the example above determines if the loop terminates based on the value of the local loop variable:</span></span>
 
 ```csharp
 i < 5
 ```
 
-### <a name="the-iterator-section"></a><span data-ttu-id="942e9-128">La section *itérateur*</span><span class="sxs-lookup"><span data-stu-id="942e9-128">The *iterator* section</span></span>
+### <a name="the-iterator-section"></a><span data-ttu-id="9c460-128">La section *itérateur*</span><span class="sxs-lookup"><span data-stu-id="9c460-128">The *iterator* section</span></span>
 
-<span data-ttu-id="942e9-129">La section *itérateur* définit ce qui se produit après chaque itération du corps de la boucle.</span><span class="sxs-lookup"><span data-stu-id="942e9-129">The *iterator* section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="942e9-130">La section *itérateur* contient zéro, une ou plusieurs des expressions d’instruction suivantes, séparées par des virgules :</span><span class="sxs-lookup"><span data-stu-id="942e9-130">The *iterator* section contains zero or more of the following statement expressions, separated by commas:</span></span>
+<span data-ttu-id="9c460-129">La section *itérateur* définit ce qui se produit après chaque itération du corps de la boucle.</span><span class="sxs-lookup"><span data-stu-id="9c460-129">The *iterator* section defines what happens after each iteration of the body of the loop.</span></span> <span data-ttu-id="9c460-130">La section *itérateur* contient zéro, une ou plusieurs des expressions d’instruction suivantes, séparées par des virgules :</span><span class="sxs-lookup"><span data-stu-id="9c460-130">The *iterator* section contains zero or more of the following statement expressions, separated by commas:</span></span>
 
-- <span data-ttu-id="942e9-131">Instruction d’[assignation](../operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="942e9-131">[assignment](../operators/assignment-operator.md) statement</span></span>
+- <span data-ttu-id="9c460-131">Instruction d’[assignation](../operators/assignment-operator.md)</span><span class="sxs-lookup"><span data-stu-id="9c460-131">[assignment](../operators/assignment-operator.md) statement</span></span>
 
-- <span data-ttu-id="942e9-132">Appel d’une méthode</span><span class="sxs-lookup"><span data-stu-id="942e9-132">invocation of a method</span></span>
+- <span data-ttu-id="9c460-132">Appel d’une méthode</span><span class="sxs-lookup"><span data-stu-id="9c460-132">invocation of a method</span></span>
 
-- <span data-ttu-id="942e9-133">Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`</span><span class="sxs-lookup"><span data-stu-id="942e9-133">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>
+- <span data-ttu-id="9c460-133">Expression d’[incrémentation](../operators/increment-operator.md) préfixée ou suffixée, telle que `++i` ou `i++`</span><span class="sxs-lookup"><span data-stu-id="9c460-133">prefix or postfix [increment](../operators/increment-operator.md) expression, such as `++i` or `i++`</span></span>
 
-- <span data-ttu-id="942e9-134">Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`</span><span class="sxs-lookup"><span data-stu-id="942e9-134">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>
+- <span data-ttu-id="9c460-134">Expression de [décrémentation](../operators/decrement-operator.md) préfixée ou suffixée, telle que `--i` ou `i--`</span><span class="sxs-lookup"><span data-stu-id="9c460-134">prefix or postfix [decrement](../operators/decrement-operator.md) expression, such as `--i` or `i--`</span></span>
 
-- <span data-ttu-id="942e9-135">Création d’un objet à l’aide du mot clé [new](new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="942e9-135">creation of an object by using [new](new-operator.md) keyword</span></span>
+- <span data-ttu-id="9c460-135">Création d’un objet à l’aide du mot clé [new](new-operator.md)</span><span class="sxs-lookup"><span data-stu-id="9c460-135">creation of an object by using [new](new-operator.md) keyword</span></span>
 
-- <span data-ttu-id="942e9-136">Expression [await](await.md)</span><span class="sxs-lookup"><span data-stu-id="942e9-136">[await](await.md) expression</span></span>
+- <span data-ttu-id="9c460-136">Expression [await](await.md)</span><span class="sxs-lookup"><span data-stu-id="9c460-136">[await](await.md) expression</span></span>
 
-<span data-ttu-id="942e9-137">La section *itérateur* dans l’exemple ci-dessus incrémente la variable de boucle locale :</span><span class="sxs-lookup"><span data-stu-id="942e9-137">The *iterator* section in the example above increments the local loop variable:</span></span>
+<span data-ttu-id="9c460-137">La section *itérateur* dans l’exemple ci-dessus incrémente la variable de boucle locale :</span><span class="sxs-lookup"><span data-stu-id="9c460-137">The *iterator* section in the example above increments the local loop variable:</span></span>
 
 ```csharp
 i++
 ```
 
-## <a name="examples"></a><span data-ttu-id="942e9-138">Exemples</span><span class="sxs-lookup"><span data-stu-id="942e9-138">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="9c460-138">Exemples</span><span class="sxs-lookup"><span data-stu-id="9c460-138">Examples</span></span>
 
-<span data-ttu-id="942e9-139">L’exemple suivant illustre plusieurs utilisations moins courantes des sections d’instruction `for` : l’attribution d’une valeur à une variable de boucle externe dans la section *initialiseur*, l’appel d’une méthode dans les sections *initialiseur* et *itérateur*, et la modification des valeurs de deux variables dans la section *itérateur*.</span><span class="sxs-lookup"><span data-stu-id="942e9-139">The following example illustrates several less common usages of the `for` statement sections: assigning a value to an external loop variable in the *initializer* section, invoking a method in both the *initializer* and the *iterator* sections, and changing the values of two variables in the *iterator* section.</span></span> <span data-ttu-id="942e9-140">Sélectionnez **Exécuter** pour exécuter l’exemple de code.</span><span class="sxs-lookup"><span data-stu-id="942e9-140">Select **Run** to run the example code.</span></span> <span data-ttu-id="942e9-141">Après cela, vous pouvez modifier le code et le réexécuter.</span><span class="sxs-lookup"><span data-stu-id="942e9-141">After that you can modify the code and run it again.</span></span>
+<span data-ttu-id="9c460-139">L’exemple suivant illustre plusieurs utilisations moins courantes des sections d’instruction `for` : l’attribution d’une valeur à une variable de boucle externe dans la section *initialiseur*, l’appel d’une méthode dans les sections *initialiseur* et *itérateur*, et la modification des valeurs de deux variables dans la section *itérateur*.</span><span class="sxs-lookup"><span data-stu-id="9c460-139">The following example illustrates several less common usages of the `for` statement sections: assigning a value to an external loop variable in the *initializer* section, invoking a method in both the *initializer* and the *iterator* sections, and changing the values of two variables in the *iterator* section.</span></span> <span data-ttu-id="9c460-140">Sélectionnez **Exécuter** pour exécuter l’exemple de code.</span><span class="sxs-lookup"><span data-stu-id="9c460-140">Select **Run** to run the example code.</span></span> <span data-ttu-id="9c460-141">Après cela, vous pouvez modifier le code et le réexécuter.</span><span class="sxs-lookup"><span data-stu-id="9c460-141">After that you can modify the code and run it again.</span></span>
 
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
 
-<span data-ttu-id="942e9-142">L’exemple suivant définit la boucle `for` infinie :</span><span class="sxs-lookup"><span data-stu-id="942e9-142">The following example defines the infinite `for` loop:</span></span>
+<span data-ttu-id="9c460-142">L’exemple suivant définit la boucle `for` infinie :</span><span class="sxs-lookup"><span data-stu-id="9c460-142">The following example defines the infinite `for` loop:</span></span>
 
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="942e9-143">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="942e9-143">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="9c460-143">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="9c460-143">C# language specification</span></span>
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+<span data-ttu-id="9c460-144">Pour plus d’informations, voir la section [Instruction for](~/_csharplang/spec/statements.md#the-for-statement) de la [spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="9c460-144">For more information, see [The for statement](~/_csharplang/spec/statements.md#the-for-statement) section of the [C# language specification](../language-specification/index.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="942e9-144">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="942e9-144">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c460-145">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9c460-145">See also</span></span>
 
-- [<span data-ttu-id="942e9-145">L’instruction for (spécification du langage C#)</span><span class="sxs-lookup"><span data-stu-id="942e9-145">The for statement (C# language specification)</span></span>](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
-- [<span data-ttu-id="942e9-146">Référence C#</span><span class="sxs-lookup"><span data-stu-id="942e9-146">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="942e9-147">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="942e9-147">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="942e9-148">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="942e9-148">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="942e9-149">foreach, in</span><span class="sxs-lookup"><span data-stu-id="942e9-149">foreach, in</span></span>](foreach-in.md)
-- [<span data-ttu-id="942e9-150">for, instruction (C++)</span><span class="sxs-lookup"><span data-stu-id="942e9-150">for Statement (C++)</span></span>](/cpp/cpp/for-statement-cpp)
-- [<span data-ttu-id="942e9-151">Instructions d’itération</span><span class="sxs-lookup"><span data-stu-id="942e9-151">Iteration Statements</span></span>](iteration-statements.md)
+- [<span data-ttu-id="9c460-146">Référence C#</span><span class="sxs-lookup"><span data-stu-id="9c460-146">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9c460-147">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="9c460-147">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9c460-148">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="9c460-148">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="9c460-149">Instructions d’itération</span><span class="sxs-lookup"><span data-stu-id="9c460-149">Iteration Statements</span></span>](iteration-statements.md)
+- [<span data-ttu-id="9c460-150">foreach, in</span><span class="sxs-lookup"><span data-stu-id="9c460-150">foreach, in</span></span>](foreach-in.md)

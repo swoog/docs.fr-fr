@@ -1,1 +1,1 @@
-<span data-ttu-id="1d69c-101">**Cette rubrique s’applique à : ✓** .NET Core SDK 2.0 et versions ultérieures</span><span class="sxs-lookup"><span data-stu-id="1d69c-101">**This topic applies to: ✓** .NET Core SDK 2.0 and later versions</span></span>
+<span data-ttu-id="5dd46-101">**Cette rubrique s’applique à : ✓** kit SDK .NET Core 2.0 (et versions ultérieures)</span><span class="sxs-lookup"><span data-stu-id="5dd46-101">**This topic applies to: ✓** .NET Core 2.0 SDK and later versions</span></span>

@@ -1,44 +1,50 @@
 ---
 title: -&gt;, opérateur (Informations de référence sur C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ->_CSharpKeyword
 helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 178724ede105d809bd812461121a38d5a0e90517
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609517"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144128"
 ---
-# <a name="-gt-operator-c-reference"></a><span data-ttu-id="7af86-102">-&gt;, opérateur (Informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="7af86-102">-&gt; Operator (C# Reference)</span></span>
-<span data-ttu-id="7af86-103">L’opérateur `->` allie l’annulation de la référence d’un pointeur et l’accès au membre.</span><span class="sxs-lookup"><span data-stu-id="7af86-103">The `->` operator combines pointer dereferencing and member access.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="7af86-104">Notes</span><span class="sxs-lookup"><span data-stu-id="7af86-104">Remarks</span></span>  
- <span data-ttu-id="7af86-105">Une expression de forme</span><span class="sxs-lookup"><span data-stu-id="7af86-105">An expression of the form,</span></span>  
-  
-```csharp  
-x->y  
-```  
-  
- <span data-ttu-id="7af86-106">(où `x` est un pointeur de type `T*` et `y` un membre de `T`) est équivalente à</span><span class="sxs-lookup"><span data-stu-id="7af86-106">(where `x` is a pointer of type `T*` and `y` is a member of `T`) is equivalent to,</span></span>  
-  
-```csharp  
-(*x).y  
-```  
-  
- <span data-ttu-id="7af86-107">L’opérateur `->` peut être utilisé uniquement dans du code marqué comme [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="7af86-107">The `->` operator can be used only in code that is marked as [unsafe](../../../csharp/language-reference/keywords/unsafe.md).</span></span>  
-  
- <span data-ttu-id="7af86-108">L’opérateur `->` ne peut pas être surchargé.</span><span class="sxs-lookup"><span data-stu-id="7af86-108">The `->` operator cannot be overloaded.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="7af86-109">Exemple</span><span class="sxs-lookup"><span data-stu-id="7af86-109">Example</span></span>  
- [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="7af86-110">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="7af86-110">See Also</span></span>
+# <a name="-gt-operator-c-reference"></a><span data-ttu-id="272a6-102">-&gt;, opérateur (Informations de référence sur C#)</span><span class="sxs-lookup"><span data-stu-id="272a6-102">-&gt; Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="7af86-111">Référence C#</span><span class="sxs-lookup"><span data-stu-id="7af86-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="7af86-112">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="7af86-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="7af86-113">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="7af86-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="272a6-103">L’opérateur d’accès au membre pointeur `->` combine l’accès au membre et l’indirection du pointeur.</span><span class="sxs-lookup"><span data-stu-id="272a6-103">The pointer member access operator `->` combines pointer indirection and member access.</span></span>
+
+<span data-ttu-id="272a6-104">Si `x` est un pointeur de type `T*` et `y` un membre accessible de `T`, une expression de la forme :</span><span class="sxs-lookup"><span data-stu-id="272a6-104">If `x` is a pointer of the type `T*` and `y` is an accessible member of `T`, an expression of the form</span></span>
+
+```csharp
+x->y
+```
+
+<span data-ttu-id="272a6-105">est équivalent à</span><span class="sxs-lookup"><span data-stu-id="272a6-105">is equivalent to</span></span>
+
+```csharp
+(*x).y
+```
+
+<span data-ttu-id="272a6-106">L’opérateur `->` réclame un contexte [unsafe](../keywords/unsafe.md).</span><span class="sxs-lookup"><span data-stu-id="272a6-106">The `->` operator requires [unsafe](../keywords/unsafe.md) context.</span></span>
+
+<span data-ttu-id="272a6-107">Pour plus d’informations, voir [Guide pratique : accéder à un membre avec un pointeur](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="272a6-107">For more information, see [How to: access a member with a pointer](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="272a6-108">Capacité de surcharge de l’opérateur</span><span class="sxs-lookup"><span data-stu-id="272a6-108">Operator overloadability</span></span>
+
+<span data-ttu-id="272a6-109">L’opérateur `->` ne peut pas être surchargé.</span><span class="sxs-lookup"><span data-stu-id="272a6-109">The `->` operator cannot be overloaded.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="272a6-110">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="272a6-110">C# language specification</span></span>
+
+<span data-ttu-id="272a6-111">Pour plus d’informations, voir la section [Accès au membre pointeur](~/_csharplang/spec/unsafe-code.md#pointer-member-access) de la [spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="272a6-111">For more information, see the [Pointer member access](~/_csharplang/spec/unsafe-code.md#pointer-member-access) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="272a6-112">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="272a6-112">See also</span></span>
+
+- [<span data-ttu-id="272a6-113">Référence C#</span><span class="sxs-lookup"><span data-stu-id="272a6-113">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="272a6-114">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="272a6-114">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="272a6-115">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="272a6-115">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="272a6-116">Types de pointeur</span><span class="sxs-lookup"><span data-stu-id="272a6-116">Pointer types</span></span>](../../programming-guide/unsafe-code-pointers/pointer-types.md)
