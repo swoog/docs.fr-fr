@@ -10,16 +10,16 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 77ee6e86017eb24d565842b3401533ebda1add35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2cbfab57ffaf294109f9f01f228f2826097fc299
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151393"
 ---
 # <a name="if-else-c-reference"></a>if-else (référence C#)
 
-Une instruction `if` identifie l’instruction à exécuter en fonction de la valeur d’une expression `Boolean` . Dans l’exemple suivant, la variable `Boolean` `result` est définie sur `true` puis archivé dans l’instruction `if` . Le résultat est `The variable is set to true.`.
+Une instruction `if` identifie l’instruction à exécuter en fonction de la valeur d’une expression booléenne. Dans l’exemple suivant, la variable `bool` `result` est définie sur `true` puis archivé dans l’instruction `if` . Le résultat est `The variable is set to true.`.
 
 [!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
 

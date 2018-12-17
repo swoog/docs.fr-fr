@@ -5,12 +5,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c9ab5c3ca1dd49f011bf9c980945fa9da0d8cfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515435"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148351"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Utilisation de types Nullable (Guide de programmation C#)
 
@@ -52,7 +52,7 @@ Si vous devez affecter une valeur de type Nullable à un type non Nullable, util
 
 Utilisez la méthode <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> si la valeur à utiliser quand une valeur de type Nullable est null doit être la valeur par défaut du type valeur sous-jacent.
   
-Vous pouvez convertir explicitement un type Nullable en un type non Nullable. Exemple :  
+Vous pouvez convertir explicitement un type Nullable en un type non Nullable. Par exemple :  
   
 [!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
 
@@ -62,7 +62,7 @@ Un type valeur non Nullable est implicitement converti en type Nullable correspo
   
 ## <a name="operators"></a>Opérateurs
 
-Les opérateurs unaire et binaire prédéfinis et tous les opérateurs définis par l’utilisateur existant pour les types valeur peuvent également être utilisés par les types Nullable. Ces opérateurs produisent une valeur null si l’un des opérandes ou les deux sont null ; sinon, l’opérateur utilise les valeurs contenues pour calculer le résultat. Exemple :  
+Les opérateurs unaire et binaire prédéfinis et tous les opérateurs définis par l’utilisateur existant pour les types valeur peuvent également être utilisés par les types Nullable. Ces opérateurs produisent une valeur null si l’un des opérandes ou les deux sont null ; sinon, l’opérateur utilise les valeurs contenues pour calculer le résultat. Par exemple :  
   
 [!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
@@ -88,7 +88,7 @@ Vous pouvez effectuer l’unboxing du type valeur boxed vers le type Nullable co
 
 ## <a name="the-bool-type"></a>Type bool?
 
-Le type Nullable `bool?` peut contenir trois valeurs différentes : [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) et [null](../../language-reference/keywords/null.md). Le type `bool?` est comme le type de variable booléen utilisé dans SQL. Pour vérifier que les résultats produits par les opérateurs `&` et `|` sont cohérents avec le type booléen à trois valeurs dans SQL, les opérateurs prédéfinis suivants sont fournis :
+Le type Nullable `bool?` peut contenir trois valeurs différentes : [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) et [Null](../../language-reference/keywords/null.md). Le type `bool?` est comme le type de variable booléen utilisé dans SQL. Pour vérifier que les résultats produits par les opérateurs `&` et `|` sont cohérents avec le type booléen à trois valeurs dans SQL, les opérateurs prédéfinis suivants sont fournis :
 
 - `bool? operator &(bool? x, bool? y)`  
 - `bool? operator |(bool? x, bool? y)`  

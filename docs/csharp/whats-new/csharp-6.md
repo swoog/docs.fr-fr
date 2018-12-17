@@ -3,12 +3,12 @@ title: Nouveautés de C# 6 | Guide C#
 description: Découvrez les nouvelles fonctionnalités de C# version 6
 ms.date: 09/22/2016
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: ad3515e1fc7d70e1377f007276c369d2884780f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6aa070d54bb1b571d4fa51538b0521a554073cbc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194031"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146737"
 ---
 # <a name="whats-new-in-c-6"></a>Nouveautés de C# 6
 
@@ -94,9 +94,9 @@ Si l’ajout de cette syntaxe ne supprime pas une méthode accessible, il s’ag
 
 Les *initialiseurs de propriétés automatiques* vous permettent de déclarer la valeur initiale d’une propriété automatique dans le cadre de la déclaration de la propriété.  Dans les versions antérieures, ces propriétés devaient avoir des méthodes setter que vous deviez utiliser pour initialiser le stockage de données utilisé par le champ de stockage. Étudions la classe suivante pour un étudiant. Elle contient le nom et la liste des diplômes de ce dernier :
 
-[!code-csharp[Construction](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Construction)]
+[!code-csharp[Student](../../../samples/snippets/csharp/new-in-6/oldcode.cs#Student)]
  
-À mesure que cette classe augmente, vous pouvez inclure d’autres constructeurs. Chaque constructeur doit initialiser ce champ, sans quoi vous introduirez des erreurs.
+À mesure que cette classe augmente, vous pouvez inclure d’autres constructeurs. Chaque constructeur doit initialiser la propriété Grades, sans quoi des erreurs se produiront.
 
 C# 6 vous permet d’assigner une valeur initiale pour le stockage utilisé par une auto-property dans la déclaration de l’auto-property :
 
@@ -104,7 +104,7 @@ C# 6 vous permet d’assigner une valeur initiale pour le stockage utilisé par
 
 Le membre `Grades` est initialisé à l’emplacement où il est déclaré. Il est ainsi plus facile d’effectuer l’initialisation une seule fois. L’initialisation fait partie de la déclaration de propriété, facilitant ainsi la mise en correspondance de l’allocation de stockage et de l’interface publique pour les objets `Student`.
 
-Les initialiseurs de propriété peuvent être utilisés avec des propriétés en lecture/écriture, ainsi qu’avec des propriétés en lecture seule, comme indiqué ici.
+Les initialiseurs de propriété peuvent être utilisés avec des propriétés en lecture seule (cf. ci-dessus), ainsi qu’avec des propriétés de lecture/écriture (cf. ci-dessous).
 
 [!code-csharp[ReadWriteInitialization](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadWriteInitialization)]
 

@@ -1,42 +1,46 @@
 ---
-title: Création d’un Package NuGet avec les outils multiplateformes
+title: Créer un package NuGet avec des outils de l’interface de ligne de commande (CLI) de .NET Core
 description: Découvrez comment créer un package NuGet avec la commande « dotnet pack ».
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0be8d302568bc08d2c3dacfdf5738eff4b97d4b2
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.custom: seodec18
+ms.openlocfilehash: 406db6c9841aa9152ea4d4b1b3fb9fad80d69ce8
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48848099"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125546"
 ---
-# <a name="how-to-create-a-nuget-package-with-cross-platform-tools"></a>Création d’un Package NuGet avec les outils multiplateformes
+# <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Guide pratique pour créer un package NuGet avec des outils de l’interface de ligne de commande (CLI) de .NET Core
 
 > [!NOTE]
-> Voici des exemples de ligne de commande avec Unix.  La commande `dotnet pack` montrée ici fonctionne de la même façon sur Windows.
+> Voici des exemples de ligne de commande avec Unix. La commande `dotnet pack` montrée ici fonctionne de la même façon sur Windows.
 
-Pour .NET Core 1.0, les bibliothèques doivent être distribuées sous forme de packages NuGet.  Il s’agit en fait de la façon dont toutes les bibliothèques .NET Standard sont distribuées et consommées.  Cette opération est plus facile avec la commande `dotnet pack`.
+Les bibliothèques .NET Standard et .NET Core devraient être distribuées sous forme de packages NuGet. Il s’agit en fait de la façon dont toutes les bibliothèques .NET Standard sont distribuées et consommées. Cette opération est plus facile avec la commande `dotnet pack`.
 
-Imaginez que vous venez d’écrire une nouvelle bibliothèque que vous voulez distribuer via NuGet.  Pour cela, vous pouvez créer un package NuGet avec les outils multiplateformes.  L’exemple suivant suppose une bibliothèque nommée **SuperAwesomeLibrary** ciblant `netstandard1.0`.
+Imaginez que vous venez d’écrire une nouvelle bibliothèque que vous voulez distribuer via NuGet. Pour cela, vous pouvez créer un package NuGet avec les outils multiplateformes. L’exemple suivant suppose une bibliothèque nommée **SuperAwesomeLibrary** ciblant `netstandard1.0`.
 
-Si vous avez des dépendances transitives (c’est-à-dire un projet qui dépend d’un autre package), veillez à restaurer les packages de l’ensemble de votre solution avec la commande `dotnet restore` avant de créer un package NuGet.  Si vous ne le faites pas, la commande `dotnet pack` ne fonctionne pas correctement.
+Si vous avez des dépendances transitives (c’est-à-dire un projet qui dépend d’un autre package), veillez à restaurer les packages de l’ensemble de votre solution avec la commande `dotnet restore` avant de créer un package NuGet. Si vous ne le faites pas, la commande `dotnet pack` ne fonctionne pas correctement.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-
 Après avoir vérifié que les packages sont restaurés, vous pouvez accéder au répertoire où se trouve une bibliothèque :
 
-`$ cd src/SuperAwesomeLibrary`
+```console
+$ cd src/SuperAwesomeLibrary`
+```
 
 Il s’agit d’une seule commande à partir de la ligne de commande :
-    
-`$ dotnet pack`
+
+```console
+$ dotnet pack
+```
 
 Votre dossier `/bin/Debug` doit maintenant ressembler à ceci :
 
-```
+```console
 $ ls bin/Debug
 
 netstandard1.0/
@@ -44,13 +48,15 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Notez que ceci génère un package qui peut être débogué.  Si vous voulez générer un package NuGet avec des fichiers binaires compilés, tout ce que vous devez faire est d’ajouter le commutateur `-c`/`--configuration` et d’utiliser `release` comme argument.
+Notez que ceci génère un package qui peut être débogué. Pour générer un package NuGet avec des fichiers binaires compilés, il suffit d’ajouter le commutateur `--configuration` (ou `-c`) et d’utiliser `release` comme argument.
 
-`$ dotnet pack --configuration release`
+```console
+$ dotnet pack --configuration release
+```
 
 Votre dossier `/bin` a désormais un dossier `release` contenant votre package NuGet avec les fichiers binaires compilés :
 
-```
+```console
 $ ls bin/release
 
 netstandard1.0/
@@ -62,4 +68,8 @@ Vous avez maintenant les fichiers nécessaires pour publier un package NuGet !
 
 ## <a name="dont-confuse-dotnet-pack-with-dotnet-publish"></a>Ne confondez pas `dotnet pack` et `dotnet publish`
 
-Il est important de noter qu’à aucun moment, la commande `dotnet publish` n’est impliquée.  La commande `dotnet publish` est destinée au déploiement des applications avec toutes leurs dépendances dans le même regroupement, et non pas à la génération d’un package NuGet à distribuer et à consommer via NuGet.
+Il est important de noter qu’à aucun moment, la commande `dotnet publish` n’est impliquée. La commande `dotnet publish` sert à déployer des applications avec toutes leurs dépendances dans le même bundle, et non pas à générer un package NuGet à distribuer et à consommer sur NuGet.
+
+## <a name="see-also"></a>Voir aussi
+
+- [Démarrage rapide : Créer et publier un package](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

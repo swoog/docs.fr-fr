@@ -1,19 +1,20 @@
 ---
-title: Portage vers .NET Core - Utilisation du pack de compatibilité Windows
+title: Utiliser le pack de compatibilité Windows pour porter du code vers .NET Core
 description: Découvrez le pack de compatibilité Windows et comment l’utiliser pour déplacer du code .NET Framework existant vers .NET Core
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566171"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144609"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Utilisation du pack de compatibilité Windows
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Utiliser le pack de compatibilité Windows pour porter du code vers .NET Core
 
-L’un des problèmes les plus courants auxquels les développeurs sont confrontés lors du portage de leur code existant vers .NET Core est qu’ils dépendent des API et des technologies qui existent uniquement dans le .NET Framework. Le *pack de compatibilité Windows* se rapporte à la mise à disposition d’un grand nombre de ces technologies afin que la création d’applications .NET Core et de bibliothèques .NET Standard devienne beaucoup plus viable pour le code existant.
+Certains des problèmes courants que l’on peut rencontrer en portant du code vers .NET Core sont des dépendances à des API et à des technologies propres à .NET Framework. Le *pack de compatibilité Windows* comporte la plupart de ces technologies, ce qui facilite la création d’applications .NET Core et de bibliothèques .NET Standard.
 
 Ce package est une [extension logique de.NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) qui augmente considérablement l’ensemble d’API et le code existant est compilé sans presque aucune modification. Toutefois, pour respecter l’engagement de .NET Standard (« il s’agit de l’ensemble d’API fourni par toutes les implémentations .NET »), cela ne comprend pas les technologies qui ne peuvent pas fonctionner sur toutes les plateformes, telles que le Registre, WMI (Windows Management Instrumentation), ou les API d’émission de réflexion.
 

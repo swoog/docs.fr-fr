@@ -3,13 +3,13 @@ title: Bien démarrer avec C# et Visual Studio Code - Guide C#
 description: Découvrez comment créer et déboguer votre première application .NET Core en C# à l’aide de Visual Studio Code.
 author: kendrahavens
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/05/2018
+ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192577"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129595"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Bien démarrer avec C# et Visual Studio Code
 
@@ -81,12 +81,56 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 6. Pour démarrer le débogage, sélectionnez <kbd>F5</kbd> ou la flèche verte. Le débogueur arrête l’exécution de votre programme lorsqu’il atteint le point d’arrêt que vous avez défini à l’étape précédente.
     * Pendant le débogage, vous pouvez afficher vos variables locales dans le volet supérieur gauche ou utiliser la console de débogage.
 
-    ![Exécuter et déboguer](media/with-visual-studio-code/rundebug.png)
+7. Sélectionnez la flèche bleue en haut pour continuer le débogage, ou le carré rouge en haut pour l’arrêter.
 
-7. Cliquez sur la flèche verte en haut pour continuer le débogage, ou sélectionnez le carré rouge en haut pour arrêter.
+    ![Exécuter et déboguer](media/with-visual-studio-code/rundebug.png)
 
 > [!TIP]
 > Pour obtenir plus d’informations et de conseils de dépannage sur le débogage de .NET Core avec OmniSharp dans Visual Studio Code, consultez [Instructions de configuration du débogueur .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+
+## <a name="add-a-class"></a>Ajouter une classe
+
+1. Pour ajouter une nouvelle classe, cliquez avec le bouton droit dans l’Explorateur VS Code et sélectionnez **Nouveau fichier**. Un nouveau fichier est ajouté au dossier ouvert dans VS Code.
+2. Nommez votre fichier `Class1.cs`. Vous devez l’enregistrer avec l’extension `.cs` à la fin pour qu’il soit reconnu comme fichier C#.
+3. Ajoutez le code ci-dessous pour créer votre première classe. Veillez à inclure le bon espace de noms pour pouvoir y faire référence dans votre fichier `Program.cs`.
+``` csharp
+using System;
+
+namespace HelloWorld
+{
+    public class Class1
+    {
+        public string ReturnMessage()
+        {
+            return "Happy coding!";
+        }
+    }
+}
+```
+
+4. Appelez votre nouvelle classe dans votre méthode principale, dans `Program.cs`, en ajoutant le code ci-dessous.
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 c1 = new Class1();
+            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+        }
+    }
+}
+```
+
+5. Enregistrez vos modifications et exécutez à nouveau votre programme. Le nouveau message devrait apparaître avec la chaîne ajoutée.
+```console
+> dotnet run
+Hello World! Happy coding!
+```
 
 ## <a name="faq"></a>FAQ
 

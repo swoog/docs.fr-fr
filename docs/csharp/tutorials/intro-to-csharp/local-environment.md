@@ -2,12 +2,12 @@
 title: Présentation de C# -vous familiariser avec les outils de développement
 description: Cet article constitue une introduction aux outils que vous utiliserez pour développer des applications C# et .NET sur votre ordinateur.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200146"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129985"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Vous familiariser avec les outils de développement .NET
 
@@ -22,7 +22,7 @@ Vous créez des applications à l’aide de la commande [`dotnet new`](../../../
 
 Les autres commandes que vous utiliserez sont [`dotnet build`](../../../core/tools/dotnet-build.md) pour générer le fichier exécutable et [`dotnet run`](../../../core/tools/dotnet-run.md) pour exécuter le fichier exécutable.
 
-## <a name="pick-your-turorial"></a>Choisir votre turoriel
+## <a name="pick-your-tutorial"></a>Choisir un tutoriel
 
 Vous pouvez commencer par l’un des tutoriels suivants :
 

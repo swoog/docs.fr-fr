@@ -1,32 +1,53 @@
 ---
 title: --, opérateur (référence C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - --_CSharpKeyword
 helpviewer_keywords:
 - -- operator [C#]
 - decrement operator (--) [C#]
 ms.assetid: 6b9cfe86-63c7-421f-9379-c9690fea8720
-ms.openlocfilehash: 615b100447233856ab3740d075d69e3ae19285fd
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0858321d6fe192a55bc548f169c558542238a981
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45648780"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153333"
 ---
 # <a name="---operator-c-reference"></a>--, opérateur (référence C#)
-L’opérateur de décrémentation (`--`) décrémente son opérande de 1. L’opérateur de décrémentation peut figurer avant ou après son opérande : `--variable` et `variable--`. La première forme est une opération de décrément préfixé. Le résultat de l’opération est la valeur de l’opérande « après » sa décrémentation. La deuxième forme est une opération de décrément suffixé. Le résultat de l’opération est la valeur de l’opérande « avant » sa décrémentation.  
-  
-## <a name="remarks"></a>Notes  
- Les types numériques et d’énumération ont des opérateurs de décrémentation prédéfinis.  
-  
- Les types définis par l’utilisateur peuvent surcharger l’opérateur `--` (voir [operator](../../../csharp/language-reference/keywords/operator.md)). Les opérations sur les types intégraux sont en général autorisées sur l’énumération.  
-  
-## <a name="example"></a>Exemple  
- [!code-csharp[csRefOperators#8](../../../csharp/language-reference/operators/codesnippet/CSharp/decrement-operator_1.cs)]  
-  
+
+L’opérateur de décrémentation unaire `--` décrémente son opérande de 1. Il est pris en charge sous deux formes : l’opérateur de décrémentation suffixé, `x--`, et l’opérateur de décrémentation préfixé, `--x`.
+
+## <a name="postfix-decrement-operator"></a>Opérateur de décrémentation suffixé
+
+Le résultat de `x--` est la valeur de `x` *avant* l’opération, comme le montre l’exemple suivant :
+
+[!code-csharp-interactive[postfix decrement](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PostfixDecrement)]
+
+## <a name="prefix-decrement-operator"></a>Opérateur de décrémentation préfixé
+
+Le résultat de `--x` est la valeur de `x` *après* l’opération, comme le montre l’exemple suivant :
+
+[!code-csharp-interactive[prefix decrement](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PrefixDecrement)]
+
+## <a name="remarks"></a>Notes
+
+L’opérateur de décrémentation est prédéfini pour toutes les [types intégraux](../keywords/integral-types-table.md) (y compris le type [char](../keywords/char.md)), les [types à virgule flottante](../keywords/floating-point-types-table.md) et n’importe quel type [enum](../keywords/enum.md).
+
+Un opérande de l’opérateur de décrémentation doit être une variable, un accès [propriété](../../programming-guide/classes-and-structs/properties.md) ou un accès [indexeur](../../../csharp/programming-guide/indexers/index.md).
+
+## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
+
+Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) l’opérateur `--`.
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, voir les sections [Opérateurs d’incrémentation et de décrémentation](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) et [Opérateurs d’incrémentation et de décrémentation préfixés](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) de la [spécification du langage C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Opérateurs C#](../../../csharp/language-reference/operators/index.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Opérateurs C#](index.md)
+- [++, opérateur](increment-operator.md)
+- [Guide pratique : Incrémenter et décrémenter des pointeurs](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)

@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 6b7a00a0d7ea17ab48e673b735bdd1a77328c099
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: 1d4ae646dfc4c96db77bee69d0b7fe0876cce85d
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200147"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53129010"
 items:
 - durationInMinutes: 1
   content: >
@@ -198,8 +198,14 @@ items:
 - title: Terminer le test
   durationInMinutes: 3
   content: "Avez-vous obtenu un résultat similaire à celui-ci ?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nÀ chaque itération de la boucle, vous sélectionnez les deux derniers entiers de la liste, les additionner et ajoutez la valeur obtenue à la liste. La boucle se répète jusqu'à ce que vous ayez ajouté 20 éléments à la liste.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
-- content: >-
-    Vous avez terminé ce didacticiel sur les listes. Ce tutoriel est le dernier tutoriel interactif. Vous pouvez poursuivre ces tutoriels dans votre propre environnement de développement. Découvrez les principes fondamentaux du [développement local](local-environment.md), puis choisissez un tutoriel. Vous pouvez tenter ce même exercice, passer directement au tutoriel suivant ou recommencer à partir du tutoriel sur les [nombres en C#](numbers-in-csharp-local.md).
+- content: >
+    Vous avez terminé le tutoriel interactif sur les listes, qui terminait l’introduction du tutoriel interactif sur C#. Vous pouvez consulter le [site .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) pour télécharger le kit SDK .NET Core, créer un projet sur votre ordinateur et continuer à coder. L’étape « Continuer à apprendre » vous ramène à ces tutoriels pour créer des projets sur votre ordinateur.
 
 
-    Pour plus d’informations sur l’utilisation du type `List`, consultez la rubrique du [Guide .NET](../../../standard/index.md) sur les [collections](../../../standard/collections/index.md). Vous allez également en découvrir plus sur de nombreux autres types de collection.
+    Pour plus d’informations sur les [Collections .NET](../../../standard/collections/index.md), voir les rubriques suivantes :
+
+    - [Sélectionner un type de collection](../../../standard/collections/selecting-a-collection-class.md)
+
+    - [Types de collections couramment utilisés](../../../standard/collections/commonly-used-collection-types.md)
+
+    - [Quand utiliser les collections génériques](../../../standard/collections/when-to-use-generic-collections.md)

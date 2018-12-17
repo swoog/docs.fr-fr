@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: e3e9493b5371fbd6f53a779ba73743efc6d6e05b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f465bc98c0348c3b3522c062cf3be5ed90ee414a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514058"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143504"
 ---
 # <a name="while-c-reference"></a>while (référence C#)
 
-L’instruction `while` exécute une instruction ou un bloc d’instructions jusqu’à ce qu’une expression booléenne spécifique corresponde à la valeur `true`. Dans la mesure où cette expression est évaluée avant chaque exécution de la boucle, une boucle `while` s’exécute plusieurs fois ou pas du tout. Cela diffère de la boucle [do](do.md), qui s’exécute une ou plusieurs fois.
+L’instruction `while` exécute une instruction ou un bloc d’instructions tant qu’une expression booléenne donne la valeur `true`. Dans la mesure où cette expression est évaluée avant chaque exécution de la boucle, une boucle `while` s’exécute plusieurs fois ou pas du tout. Cela diffère de la boucle [do](do.md), qui s’exécute une ou plusieurs fois.
 
 À tout moment dans le bloc d’instructions `while`, vous pouvez sortir de la boucle à l’aide de l’instruction [break](break.md).
 
@@ -32,13 +32,12 @@ L’exemple suivant illustre l’utilisation de l’instruction `while`. Sélect
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Pour plus d’informations, voir la section [Instruction while](~/_csharplang/spec/statements.md#the-while-statement) de la [spécification du langage C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 - [Référence C#](../index.md)  
 - [Guide de programmation C#](../../programming-guide/index.md)  
 - [Mots clés C#](index.md)  
-- [while, instruction (C++)](/cpp/cpp/while-statement-cpp)  
 - [Instructions d’itération](iteration-statements.md)  
 - [Instruction do](do.md)  

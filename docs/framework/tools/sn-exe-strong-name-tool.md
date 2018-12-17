@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270472"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151133"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (outil Strong Name Tool)
 L’outil Strong Name (Sn.exe) permet de signer des assemblys avec des [noms forts](../../../docs/framework/app-domains/strong-named-assemblies.md). Sn.exe fournit des options de gestion des clés, de génération des signatures et de vérification des signatures.  
@@ -28,9 +28,9 @@ L’outil Strong Name (Sn.exe) permet de signer des assemblys avec des [noms for
  Pour plus d’informations sur l’utilisation de noms forts et sur les assemblys portant des noms forts, consultez [Assemblys avec nom fort](../../../docs/framework/app-domains/strong-named-assemblies.md) et [Guide pratique pour signer un assembly avec un nom fort](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
  Cet outil est installé automatiquement avec Visual Studio. Pour démarrer l'outil, utilisez l'invite de commandes développeur (ou l'invite de commandes Visual Studio dans Windows 7). Pour plus d’informations, consultez [Invites de commandes](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
 > [!NOTE]
->  Sur les ordinateurs 64 bits, exécutez la version 32 bits de Sn.exe à l'aide de l'invite de commandes Visual Studio et la version 64 bits à l'aide de l'invite de commandes Visual Studio x64 Win64.  
+>  Sur les ordinateurs 64 bits, exécutez la version 32 bits de Sn.exe à l'aide de l'invite de commandes Visual Studio et la version 64 bits à l'aide de l'invite de commandes Visual Studio x64 Win64. 
   
  À l'invite de commandes, tapez le texte suivant :  
   
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Pour les paramètres (par exemple, **-Vr**) qui écrivent dans les ressources protégées, telles que le Registre, exécutez SN.exe comme administrateur.  
   
+L’outil Strong Name suppose que les paires de clés publiques/privées sont générées avec l’identificateur d’algorithme `AT_SIGNATURE`. Les paires de clés publiques/privées générées avec l’algorithme `AT_KEYEXCHANGE` génèrent une erreur. 
+
 ## <a name="examples"></a>Exemples  
  La commande suivante crée une nouvelle paire de clés aléatoire et la stocke dans `keyPair.snk`.  
   

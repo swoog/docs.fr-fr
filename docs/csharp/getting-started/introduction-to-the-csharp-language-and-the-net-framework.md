@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: 75ef14032ee2211d3b8d355f050ced67b4a04930
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46579844"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153941"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introduction au langage C# et au .NET Framework
 
@@ -38,7 +38,7 @@ C# est un langage élégant et de type sécurisé orienté objet qui permet aux 
   
 - [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)], qui fournit des fonctions de requête intégrées sur diverses sources de données.  
   
- Si vous devez interagir avec d’autres logiciels Windows, comme les objets COM ou les DLL Win32 natives, vous pouvez faire cela dans C# via un processus appelé « Interopérabilité ». L’interopérabilité permet aux programmes C# de faire presque tout ce qu’une application native C++ peut faire. C# prend même en charge les pointeurs et le concept de code « unsafe » pour les cas où l’accès direct à la mémoire est absolument essentiel.  
+ Si vous devez interagir avec d’autres logiciels Windows, comme des objets COM ou des DLL Win32 natives, vous pouvez pour cela utiliser un processus C# appelé « Interop ». L’interopérabilité permet aux programmes C# de faire presque tout ce qu’une application native C++ peut faire. C# prend même en charge les pointeurs et le concept de code « unsafe » pour les cas où l’accès direct à la mémoire est absolument essentiel.  
   
  Le processus de génération de C# est simple par rapport à C et C++ et plus souple qu’avec Java. Il n’existe aucun fichier d’en-tête distinct, et les types et méthodes n’ont pas à être déclarés dans un ordre particulier. Un fichier source C# peut définir un nombre quelconque de classes, structs, interfaces et événements.  
   
@@ -69,4 +69,4 @@ C# est un langage élégant et de type sécurisé orienté objet qui permet aux 
 ## <a name="see-also"></a>Voir aussi
 
 - [C#](../../csharp/index.md)
-- [Bien démarrer avec Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Mises en route de Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

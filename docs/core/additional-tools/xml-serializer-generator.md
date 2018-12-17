@@ -1,17 +1,17 @@
 ---
-title: Utilisation de Microsoft XML Serializer Generator sur .NET Core
-description: Vue d’ensemble de Microsoft XML Serializer Generator.
+title: Microsoft XML Serializer Generator – .NET Core
+description: Vue d’ensemble de Microsoft XML Serializer Generator. Utilisez XML Serializer Generator afin de générer un assembly de sérialisation XML pour les types contenus dans votre projet.
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214554"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151757"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Utilisation de Microsoft XML Serializer Generator sur .NET Core
 
@@ -30,7 +30,7 @@ Comme l’outil [XML Serializer Generator (sgen.exe)](../../standard/serializati
 
 Pour suivre ce didacticiel :
 
-* Installez le [SDK .NET Core 2.1.3 ou version ultérieure](https://www.microsoft.com/net/download).
+* Installez le [kit SDK .NET Core 2.1 (ou version ultérieure)](https://www.microsoft.com/net/download).
 * Installez votre éditeur de code favori, si ce n’est pas déjà fait.
 
 > [!TIP]

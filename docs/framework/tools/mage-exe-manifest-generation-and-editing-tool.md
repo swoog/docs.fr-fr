@@ -1,16 +1,16 @@
 ---
 title: Mage.exe (outil Manifest Generation and Editing)
-ms.date: 03/30/2017
+ms.date: 12/06/2018
 helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 3eb1c665067d08a86fd4128381139c6829ebfd89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 86aec7bbdc7b57b43e9b547aabd36f808d84d05e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46009772"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146194"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (outil Manifest Generation and Editing)
 
@@ -24,7 +24,7 @@ Deux versions de *Mage.exe* et *MageUI.exe* sont founies avec Visual Studio. Pou
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```console
 Mage [commands] [commandOptions]
 ```
 
@@ -38,6 +38,7 @@ Le tableau ci-dessous répertorie les commandes prises en charge par *Mage.exe*.
 |**-n, -New** *fileType [newOptions]*|Crée un nouveau fichier du type donné. Les types valides sont :<br /><br /> -   `Deployment`: crée un manifeste de déploiement.<br />-   `Application`: crée un manifeste de l'application.<br /><br /> Si vous ne spécifiez pas de paramètres supplémentaires avec cette commande, elle crée un fichier du type approprié, avec les valeurs d’attributs et étiquettes par défaut adéquates.<br /><br /> Utilisez l’option **-ToFile** (voir le tableau ci-dessous) pour spécifier le nom de fichier et le chemin du nouveau fichier.<br /><br /> Utilisez l’option **-FromDirectory** (voir le tableau ci-dessous) pour créer un manifeste d’application avec tous les assemblys d’une application ajoutés à la section \<dependency> du manifeste.|
 |**-u, -Update** *[filePath] [updateOptions]*|Apporte une ou plusieurs modifications à un fichier manifeste. Vous n'avez pas à spécifier le type de fichier que vous modifiez. Mage.exe examinera le fichier en utilisant un jeu de paramètres heuristiques et déterminera s'il s'agit d'un manifeste de déploiement ou d'un manifeste d'application.<br /><br /> Si vous avez déjà signé un fichier avec un certificat, **-Update** supprime le bloc de signature de clé. En effet, la signature de clé contient un hachage du fichier, et la modification du fichier rend le hachage non valide.<br /><br /> Utilisez l’option **-ToFile** (voir le tableau ci-dessous) pour spécifier un nouveau nom et chemin de fichier au lieu de remplacer le fichier existant.|
 |**-s, -Sign** `[signOptions]`|Utilise une paire de clés ou un certificat X509 pour signer un fichier. Les signatures sont insérées en tant qu'éléments XML dans les fichiers.<br /><br /> Vous devez être connecté à Internet lors de la signature d’un manifeste qui spécifie une valeur **-TimestampUri** .|
+|**-ver, -Verify** *[nom-fichier-manifeste]*|Vérifie que le manifeste est correctement signé. Non combinable avec d’autres commandes. <br/><br/>**Disponible dans .NET Framework 4.7 (et versions ultérieures).**|
 |**-h, -?, -Help** *[verbose]*|Décrit toutes les commandes disponibles et leurs options. Spécifiez `verbose` pour obtenir une aide détaillée.|
 
 ## <a name="new-and-update-command-options"></a>Options des commandes New et Update
@@ -49,12 +50,14 @@ Le tableau suivant affiche les options prises en charge par les commandes `-New`
 |**-a, -Algorithm**|sha1RSA|Manifestes d'application.<br /><br /> Manifestes de déploiement.|Définit l'algorithme avec lequel générer des compactés de dépendance. La valeur doit être "sha256RSA" ou "sha1RSA".<br /><br /> N'utilisez pas avec l'option "-Update". Cette option est ignorée avec l'utilisation de l'option "-Sign".|
 |**-appc, -AppCodeBase** `manifestReference`||Manifestes de déploiement.|Insère une référence d'URL ou de chemin d'accès au fichier manifeste d'application. Cette valeur doit représenter le chemin d’accès complet au manifeste d’application.|
 |**-appm, -AppManifest** `manifestPath`||Manifestes de déploiement.|Insère une référence au manifeste d'application d'un déploiement dans son manifeste de déploiement.<br /><br /> Le fichier indiqué par `manifestPath` doit exister, sans quoi *Mage.exe* génère une erreur. Si le fichier référencé par `manifestPath` n’est pas un manifeste d’application, *Mage.exe* génère une erreur.|
-|**-cf, -CertFile** `filePath`||Tous les types de fichiers.|Spécifie l'emplacement d'un certificat numérique X509 pour la signature d'un manifeste. Vous pouvez utiliser cette option conjointement avec l’option **-Password** si le certificat exige un mot de passe.<br/><br/>À compter du SDK .NET Framework 4.6.2, qui est distribué avec Visual Studio, avec le SDK Windows et avec le Pack du développeur .NET Framework 4.6.2, *Mage.exe* signe les manifestes avec des certificats CNG et CAPI.|
+|**-cf, -CertFile** `filePath`||Tous les types de fichiers.|Spécifie l'emplacement d'un certificat numérique X509 permettant de signer un manifeste ou un fichier de licence. Vous pouvez utiliser cette option avec l’option **-Password** si le certificat exige un mot de passe pour les fichiers PFX (Personal Information Exchange). À partir de .NET Framework 4.7, si le fichier ne contient pas de clé privée, l’association des options **- CryptoProvider** et **- KeyContainer** est obligatoire.<br/><br/>À partir de .NET Framework 4.6.2, *Mage.exe* signes les manifestes avec des certificats CNG et CAPI.|
 |**-ch, -CertHash** `hashSignature`||Tous les types de fichiers.|Hachage d'un certificat numérique stocké dans le magasin de certificats personnel de l'ordinateur client. Il correspond à la chaîne d'empreinte numérique d'un certificat numérique affiché dans la console Certificats Windows.<br /><br /> `hashSignature` peut être en majuscules ou en minuscules et fourni en tant que chaîne unique ou avec chaque octet de l'empreinte numérique séparé par des espaces et l'empreinte numérique complète entre guillemets.|
+|**-csp, -CryptoProvider** `provider-name`||Tous les types de fichiers.|Spécifie le nom d’un fournisseur de services de chiffrement (CSP) contenant le conteneur de clés privées. L’option **- KeyContainer** est requise.<br/><br/>Disponible à partir de .NET Framework 4.7.|
 |**-fd, -FromDirectory** `directoryPath`||Manifestes d'application.|Remplit le manifeste d'application avec les descriptions de tous les assemblys et fichiers trouvés dans `directoryPath`, y compris tous les sous-répertoires, `directoryPath` étant le répertoire qui contient l'application à déployer. Pour chaque fichier du répertoire, *Mage.exe* détermine s’il s’agit d’un assembly ou d’un fichier statique. Si c'est un assembly, il ajoute une balise `<dependency>` et un attribut `installFrom` à l'application avec le nom de l'assembly, la base de code et la version. S'il s'agit d'un fichier statique, il ajoute une balise `<file>` . *Mage.exe* utilise également un ensemble de paramètres heuristiques simple pour détecter le fichier exécutable principal de l’application, et le marque comme point d’entrée de l’application ClickOnce dans le manifeste.<br /><br /> *Mage.exe* ne marquera jamais automatiquement un fichier en tant que fichier de « données ». Vous devez faire cela manuellement. Pour plus d'informations, consultez [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage.exe* génère également un hachage pour chaque fichier en fonction de sa taille. ClickOnce utilise ces hachages pour éviter toute falsification des fichiers du déploiement après la création du manifeste. Si l’un des fichiers de votre déploiement change, vous pouvez exécuter *Mage.exe* avec la commande **-Update** et l’option **-FromDirectory**. Cela mettra à jour les hachages et les versions des assemblys de tous les fichiers référencés.<br /><br /> **-FromDirectory** inclut tous les fichiers de tous les sous-répertoires trouvés dans `directoryPath`.<br /><br /> Si vous utilisez **-FromDirectory** avec la commande **-Update**, *Mage.exe* supprime tous les fichiers du manifeste d’application qui n’existent plus dans le répertoire.|
 |**-if, -IconFile**  `filePath`||Manifestes d'application.|Spécifie le chemin d'accès complet à un fichier icône .ICO. Cette icône s'affiche à côté du nom de votre application dans le menu Démarrage et dans son entrée Ajout/Suppression de programmes. Si aucune icône n'est fournie, une icône par défaut est utilisée.|
 |**-ip, -IncludeProviderURL**  `url`|true|Manifestes de déploiement.|Indique si le manifeste du déploiement inclut la valeur de l’emplacement de la mise à jour définie par **-ProviderURL**.|
 |**-i, -Install** `willInstall`|true|Manifestes de déploiement.|Indique si l'application ClickOnce doit être installée ou non sur l'ordinateur local ou si elle doit s'exécuter à partir du Web. Lorsqu'une application est installée, elle figure dans le menu **Démarrer** de Windows. Les valeurs valides sont "true" ou "t", et "false" ou "f".<br /><br /> Si vous spécifiez l’option **-MinVersion** et qu’un utilisateur dispose d’une version antérieure à la version **-MinVersion** installée, ceci force l’installation de l’application, indépendamment de la valeur passée à **-Install**.<br /><br /> Cette option ne peut pas être utilisée avec l’option **-BrowserHosted** . Toute tentative de spécifier ces deux options pour le même manifeste générera une erreur.|
+|**-kc, -KeyContainer** `name`||Tous les types de fichiers.|Spécifie le conteneur de clés contenant le nom de la clé privée. L’option **CryptoProvider** est requise.<br/><br/>Disponible à partir de .NET Framework 4.7.|
 |**-mv, -MinVersion**  `[version]`|Version répertoriée dans le manifeste de déploiement ClickOnce telle que spécifiée par l’indicateur **-Version** .|Manifestes de déploiement.|Version minimale de cette application qu'un utilisateur peut exécuter. Cet indicateur rend obligatoire la mise à jour avec la version nommée de votre application. Si vous publiez une version de votre produit avec une mise à jour corrigeant une rupture ou une vulnérabilité de sécurité critique, vous pouvez utiliser cet indicateur pour spécifier que cette mise à jour doit être installée et que l’utilisateur ne peut pas continuer à exécuter des versions antérieures.<br /><br /> `version` a la même sémantique que l’argument pour l’indicateur **-Version** .|
 |**-n, -Name** `nameString`|Déployer|Tous les types de fichiers.|Nom utilisé pour identifier l'application. ClickOnce utilise ce nom pour identifier l'application dans le menu **Démarrer** (si l'application est configurée pour s'installer elle-même) et dans les boîtes de dialogue Permission Elevation. **Remarque :** Si vous mettez à jour un manifeste existant et que vous ne spécifiez pas de nom d’éditeur avec cette option, *Mage.exe* met à jour le manifeste avec le nom de l’organisation défini sur l’ordinateur. Pour utiliser un nom différent, veillez à utiliser cette option et spécifiez le nom voulu pour l'éditeur.|
 |**-pwd, -Password** `passwd`||Tous les types de fichiers.|Mot de passe utilisé pour signer un manifeste avec un certificat numérique. Cette option doit être utilisée conjointement avec l’option **-CertFile** .|
@@ -75,8 +78,10 @@ Le tableau suivant affiche les options prises en charge par la commande `-Sign` 
 
 |Options|Description|
 |-------------|-----------------|
-|**-cf, -CertFile** `filePath`|Spécifie l'emplacement d'un certificat numérique servant à signer un manifeste. Cette option peut être utilisée en conjonction avec l’option **-Password** .|
+|**-cf, -CertFile** `filePath`|Spécifie l'emplacement d'un certificat numérique servant à signer un manifeste. Vous pouvez utiliser cette option avec l’option **-Password** si le certificat exige un mot de passe pour les fichiers PFX (Personal Information Exchange). À partir de .NET Framework 4.7, si le fichier ne contient pas de clé privée, l’association des options **- CryptoProvider** et **- KeyContainer** est obligatoire.<br/><br/>À partir de .NET Framework 4.6.2, *Mage.exe* signes les manifestes avec des certificats CNG et CAPI.|
 |**-ch, -CertHash** `hashSignature`|Hachage d'un certificat numérique stocké dans le magasin de certificats personnel de l'ordinateur client. Il correspond à la propriété d'empreinte numérique d'un certificat numérique affiché dans la console Certificats Windows.<br /><br /> `hashSignature` peut être en majuscules ou en minuscules et fourni en tant que chaîne unique ou avec chaque octet de l'empreinte numérique séparé par des espaces et l'empreinte numérique complète entre guillemets.|
+**-csp, -CryptoProvider** `provider-name`|Spécifie le nom d’un fournisseur de services de chiffrement (CSP) contenant le conteneur de clés privées. L’option **- KeyContainer** est requise.<br/><br/>Disponible à partir de .NET Framework 4.7.|
+|**-kc, -KeyContainer** `name`|Spécifie le conteneur de clés contenant le nom de la clé privée. L’option **CryptoProvider** est requise.<br/><br/>Disponible à partir de .NET Framework 4.7.|
 |**-pwd, -Password** `passwd`|Mot de passe utilisé pour signer un manifeste avec un certificat numérique. Cette option doit être utilisée conjointement avec l’option **-CertFile** .|
 |**-t, -ToFile** `filePath`|Spécifie le chemin de sortie du fichier créé ou modifié.|
 
@@ -86,7 +91,7 @@ Tous les arguments passés à *Mage.exe* ne respectent pas la casse. Les command
 
 Tous les arguments utilisés avec la commande **-Sign** peuvent être toujours utilisés avec les commandes **-New** ou **-Update** . Les commandes suivantes sont équivalentes.
 
-```
+```console
 mage -Sign c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -CertFile cert.pfx
 ```
@@ -146,58 +151,70 @@ Voici un exemple d’élément `<framework>` qui cible le [!INCLUDE[net_client_v
 
 L’exemple suivant ouvre l’interface utilisateur de Mage (*MageUI.exe*).
 
-```
+```console
 mage
 ```
 
 Les exemples suivants créent un manifeste de déploiement et un manifeste d'application par défaut. Ces fichiers sont tous créés dans le répertoire de travail en cours et ils sont nommés respectivement deploy.application et application.exe.manifest.
 
-```
+```console
 mage -New Deployment
 mage -New Application
 ```
 
-L’exemple suivant crée un manifeste d’application rempli avec tous les assemblys et fichiers de ressources du répertoire actuel.
+L’exemple suivant crée un manifeste d’application contenant tous les assemblys et fichiers de ressources du répertoire actif.
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0
 ```
 
 L'exemple suivant prend la suite de l'exemple précédent en spécifiant le nom du déploiement et le microprocesseur cible. Il spécifie également une URL en fonction de laquelle ClickOnce doit rechercher des mises à jour.
 
-```
+```console
 mage -New Application -FromDirectory . -Name "Hello, World! Application" -Version 1.0.0.0 -Processor "x86" -ProviderUrl http://internalserver/HelloWorld/
 ```
 
 L'exemple suivant montre comment créer une paire de manifestes pour déployer une application WPF qui sera hébergée dans Internet Explorer.
 
-```
+```console
 mage -New Application -FromDirectory . -Version 1.0.0.0 -WPFBrowserApp true
 mage -New Deployment -AppManifest 1.0.0.0\application.manifest -WPFBrowserApp true
 ```
 
+L’exemple suivant crée un manifeste d’application contenant tous les assemblys et fichiers de ressources du répertoire actif et signe.
+
+```console
+mage -New Application -FromDirectory . -Version 1.0.0.0 -KeyContainer keypair.snk -CryptoProvider "Microsoft Enhanced Cryptographic Provider v1.0"
+```
+
 L'exemple suivant met à jour un manifeste de déploiement avec les informations d'un manifeste d'application et définit la base de code pour l'emplacement du manifeste d'application.
 
-```
+```console
 mage -Update HelloWorld.deploy -AppManifest 1.0.0.0\application.manifest -AppCodeBase http://internalserver/HelloWorld.deploy
 ```
 
 L'exemple suivant modifie le manifeste de déploiement pour forcer une mise à jour de la version installée de l'utilisateur.
 
-```
+```console
 mage -Update c:\HelloWorldDeployment\HelloWorld.deploy -MinVersion 1.1.0.0
 ```
 
 L'exemple suivant indique au manifeste de déploiement de récupérer le manifeste d'application d'un autre répertoire.
 
-```
+```console
 mage -Update HelloWorld.deploy -AppCodeBase http://anotherserver/HelloWorld/1.1.0.0/
 ```
 
 L'exemple suivant signe un manifeste de déploiement existant à l'aide d'un certificat numérique dans le répertoire de travail actif.
 
-```
+```console
 mage -Sign deploy.application -CertFile cert.pfx -Password <passwd>
+```
+
+L'exemple suivant signe un manifeste de déploiement existant à l'aide d'un certificat numérique et d’une clé privée dans le répertoire de travail actif.
+
+```console
+mage -Sign deploy.application -CertFile cert.pfx -KeyContainer keyfile.snk -CryptoProvider "Microsoft Enghanced Cryptographic Provider v1.0"
 ```
 
 ## <a name="see-also"></a>Voir aussi

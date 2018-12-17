@@ -1,15 +1,13 @@
 ---
 title: Commande dotnet add package - Interface CLI .NET Core
 description: La commande « dotnet add package » est une option pratique pour ajouter une référence de package NuGet à un projet.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 31dda9dbb101238b3a33d8b0d9a17765744480e0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.date: 12/04/2018
+ms.openlocfilehash: 8227e5a86a888f850304e8b94f46c7d31779653f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244391"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150821"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -21,78 +19,91 @@ ms.locfileid: "39244391"
 
 ## <a name="synopsis"></a>Résumé
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
+`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
 ## <a name="description"></a>Description
 
 La commande `dotnet add package` est une option pratique pour ajouter une référence de package à un fichier projet. Une fois que vous avez exécuté la commande, il existe un contrôle de compatibilité qui vérifie que le package est compatible avec les frameworks du projet. Si le résultat du contrôle est positif, un élément `<PackageReference>` est ajouté au fichier projet et la commande [dotnet restore](dotnet-restore.md) est exécutée.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 Par exemple, l’ajout de `Newtonsoft.Json` à *ToDo.csproj* produit une sortie similaire à l’exemple suivant :
 
 ```console
   Writing C:\Users\mairaw\AppData\Local\Temp\tmp95A8.tmp
 info : Adding PackageReference for package 'Newtonsoft.Json' into project 'C:\projects\ToDo\ToDo.csproj'.
-log  : Restoring packages for C:\projects\ToDo\ToDo.csproj...
+log  : Restoring packages for C:\Temp\projects\consoleproj\consoleproj.csproj...
 info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json
-info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 235ms
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json 79ms
+info :   GET https://api.nuget.org/v3-flatcontainer/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/newtonsoft.json/12.0.1/newtonsoft.json.12.0.1.nupkg 232ms
+log  : Installing Newtonsoft.Json 12.0.1.
 info : Package 'Newtonsoft.Json' is compatible with all the specified frameworks in project 'C:\projects\ToDo\ToDo.csproj'.
-info : PackageReference for package 'Newtonsoft.Json' version '10.0.3' added to file 'C:\projects\ToDo\ToDo.csproj'.
+info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to file 'C:\projects\ToDo\ToDo.csproj'.
 ```
 
 Le fichier *ToDo.csproj* contient à présent un élément [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) pour le package référencé.
 
 ```xml
-<PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+<PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+* **`PROJECT`**
 
-Spécifie le nom du fichier projet. Si aucun fichier n’est spécifié, la commande en recherche un dans le répertoire actuel.
+  Spécifie le nom du fichier projet. Si aucun fichier n’est spécifié, la commande en recherche un dans le répertoire actuel.
 
-`PACKAGE_NAME`
+* **`PACKAGE_NAME`**
 
-Référence de package à ajouter.
+  Référence de package à ajouter.
 
 ## <a name="options"></a>Options
 
-`-h|--help`
+* **`-f|--framework <FRAMEWORK>`**
 
-Affiche une aide brève pour la commande.
+  Ajoute une référence de package uniquement quand vous ciblez un [framework](../../standard/frameworks.md) spécifique.
 
-`-f|--framework <FRAMEWORK>`
+* **`-h|--help`**
 
-Ajoute une référence de package uniquement quand vous ciblez un [framework](../../standard/frameworks.md) spécifique.
+  Affiche une aide brève pour la commande.
 
-`-n|--no-restore`
+* **`--interactive`**
 
-Ajoute une référence de package sans effectuer d’aperçu de restauration ni de contrôle de compatibilité.
+  Permet à la commande de s’arrêter et d’attendre une saisie ou une action de l’utilisateur (par exemple, s’authentifier). Disponible à partir du kit SDK .NET Core 2.1, version 2.1.400 (ou version ultérieure).
 
-`--package-directory <PACKAGE_DIRECTORY>`
+* **`-n|--no-restore`**
 
-Restaure le package dans le répertoire spécifié.
+  Ajoute une référence de package sans effectuer d’aperçu de restauration ni de contrôle de compatibilité.
 
-`-s|--source <SOURCE>`
+* **`--package-directory <PACKAGE_DIRECTORY>`**
 
-Utilise une source de package NuGet spécifique pendant l’opération de restauration.
+  Restaure le package dans le répertoire spécifié.
 
-`-v|--version <VERSION>`
+* **`-s|--source <SOURCE>`**
 
-Version du package.
+  Utilise une source de package NuGet spécifique pendant l’opération de restauration.
+
+* **`-v|--version <VERSION>`**
+
+  Version du package.
 
 ## <a name="examples"></a>Exemples
 
-Ajouter un package NuGet `Newtonsoft.Json` à un projet :
+* Ajouter un package NuGet `Newtonsoft.Json` à un projet :
 
-`dotnet add package Newtonsoft.Json`
+  ```console
+  dotnet add package Newtonsoft.Json
+  ```
 
-Ajouter une version spécifique d’un package à un projet :
+* Ajouter une version spécifique d’un package à un projet :
 
-`dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0`
+  ```console
+  dotnet add ToDo.csproj package Microsoft.Azure.DocumentDB.Core -v 1.0.0
+  ```
 
-Ajouter un package à l’aide d’une source NuGet spécifique :
+* Ajouter un package à l’aide d’une source NuGet spécifique :
 
-`dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json`
+  ```console
+  dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
+  ```

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152776"
 ---
 # <a name="volatile-c-reference"></a>volatile (référence C#)
 
@@ -29,7 +29,7 @@ Le mot clé `volatile` peut être appliqué aux champs des types suivants :
 
 Les autres types, notamment `double` et `long`, ne peuvent pas être marqués `volatile`, car il n’y a aucune garantie que les lectures et écritures sur des champs de ce type soient atomiques. Pour protéger l’accès multithread à ces types de champs, utilisez les membres de classe <xref:System.Threading.Interlocked> ou l’instruction [`lock`](lock-statement.md).
 
-Le mot clé volatile ne peut s’appliquer qu’aux champs d’une `class` ou d’une `struct`. Les variables locales ne peuvent pas être déclarées `volatile`.
+Le mot clé `volatile` ne peut s’appliquer qu’aux champs d’une `class` ou d’un `struct`. Les variables locales ne peuvent pas être déclarées `volatile`.
   
 ## <a name="example"></a>Exemple
 
@@ -37,7 +37,7 @@ L’exemple ci-dessous montre comment déclarer une variable de champ public com
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-L’exemple suivant montre comment il est possible de créer un thread auxiliaire ou de travail et de l’utiliser pour effectuer le traitement en parallèle avec le thread principal. Pour obtenir des informations générales sur le multithreading, consultez [Threading managé](../../../standard/threading/index.md) et [Threading (C#)](../../programming-guide/concepts/threading/index.md).  
+L’exemple suivant montre comment il est possible de créer un thread auxiliaire ou de travail et de l’utiliser pour effectuer le traitement en parallèle avec le thread principal. Pour plus d'informations sur le multithreading, voir [Threading managé](../../../standard/threading/index.md).
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 

@@ -1,20 +1,20 @@
 ---
 title: Finaliseurs (Guide de programmation C#)
-ms.date: 05/10/2017
+ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: b98d5eac29f498672000a7b0354734c15fd7400c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2b24884d2650a5e799eda630bc65f3c5a5c2508a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526033"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127262"
 ---
 # <a name="finalizers-c-programming-guide"></a>Finaliseurs (Guide de programmation C#)
-Les finaliseurs permettent de détruire des instances de classes.  
+Les finaliseurs (également appelés **destructeurs**) servent à effectuer les derniers nettoyages nécessaires lorsqu’une instance de classe est collectée par le récupérateur de mémoire.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -63,7 +63,7 @@ protected override void Finalize()
   
  Il est possible de forcer le nettoyage de la mémoire en appelant <xref:System.GC.Collect%2A>, mais la plupart du temps c’est à éviter car cela peut créer des problèmes de performances.  
   
-## <a name="using-finalizers-to-release-resources"></a>Utilisation des finaliseurs pour libérer des ressources  
+## <a name="using-finalizers-to-release-resources"></a>Utiliser des finaliseurs pour libérer des ressources  
  En général, C# ne nécessite pas autant de gestion de mémoire que quand vous développez avec un langage qui ne cible pas un runtime avec nettoyage de la mémoire. En effet, le récupérateur de mémoire .NET Framework gère implicitement l’allocation et la libération de la mémoire pour vos objets. Toutefois, quand votre application encapsule des ressources non managées, telles que des fenêtres, des fichiers et des connexions réseau, vous devez utiliser des finaliseurs pour libérer ces ressources. Quand l’objet peut être finalisé, le récupérateur de mémoire exécute la méthode `Finalize` de l’objet.  
   
 ## <a name="explicit-release-of-resources"></a>Libération explicite de ressources  
@@ -82,8 +82,9 @@ protected override void Finalize()
   
  [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
   
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+## <a name="c-language-specification"></a>spécification du langage C#  
+
+Pour plus d’informations, voir la section [Destructeurs](~/_csharplang/spec/classes.md#destructors) de la [spécification du langage C#](../../language-reference/language-specification/index.md).
   
 ## <a name="see-also"></a>Voir aussi
 

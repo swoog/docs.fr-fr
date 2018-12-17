@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 60a75946d30b1555aea01507d846e790dd00f767
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122716"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53125991"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes statiques et membres de classe statique (Guide de programmation C#)
 Une classe [statique](../../../csharp/language-reference/keywords/static.md) est fondamentalement identique à une classe non statique, à une différence près : une classe statique ne peut pas être instanciée. En d’autres termes, vous ne pouvez pas utiliser le mot clé [new](../../../csharp/language-reference/keywords/new.md) pour créer une variable du type classe. Étant donné qu’il n’y a aucune variable d’instance, vous accédez aux membres d’une classe statique en utilisant le nom de classe lui-même. Par exemple, si vous avez une classe statique nommée `UtilityClass` qui a une méthode publique nommée `MethodA`, vous appelez la méthode comme illustré dans l’exemple suivant :  
@@ -39,7 +39,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Comme c’est le cas avec tous les types de classe, les informations de type pour une classe statique sont chargées par le Common Language Runtime (CLR) [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] lorsque le programme qui fait référence à la classe est chargé. Le programme ne peut pas spécifier exactement quand la classe est chargée. Toutefois, il est garanti qu’elle sera chargée, que ses champs seront initialisés et que son constructeur statique sera appelé avant que la classe soit référencée pour la première fois dans votre programme. Un constructeur statique est appelé une seule fois et une classe statique reste en mémoire pendant la durée de vie du domaine d’application dans lequel votre programme réside.  
   
 > [!NOTE]
->  Pour créer une classe non statique permettant la création d’une seule instance d’elle-même, consultez [Implémentation d’un singleton en C#](https://msdn.microsoft.com/library/ms998558.aspx).  
+>  Pour créer une classe non statique permettant la création d’une seule instance d’elle-même, consultez [Implémentation d’un singleton en C#](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29).  
   
  La liste suivante fournit les fonctionnalités principales d’une classe statique :  
   
@@ -84,7 +84,8 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Un appel à une méthode statique génère une instruction d’appel en langage MSIL (Microsoft Intermediate Language), alors qu’un appel à une méthode d’instance génère une instruction `callvirt`, qui vérifie également l’existence de références d’objet Null. Toutefois, la plupart du temps, l’écart de performances entre les deux n’est pas significatif.  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Pour plus d’informations, voir [Classes statiques](~/_csharplang/spec/classes.md#static-classes) et [Membres statiques et d’instances](~/_csharplang/spec/classes.md#static-and-instance-members) dans la [spécification du langage C#](../../language-reference/language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
   
 ## <a name="see-also"></a>Voir aussi
 

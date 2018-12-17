@@ -3,12 +3,12 @@ title: Nouveautés de C# 7.0 | Guide C#
 description: Découvrez les nouvelles fonctionnalités disponibles dans la prochaine version 7 du langage C#.
 ms.date: 12/21/2016
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 734fdf962ef481a3b434e9ce17e535eadd52f420
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a8b20606e5133c45f26377ea1c2eba58a1aa3af
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237382"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155286"
 ---
 # <a name="whats-new-in-c-70"></a>Nouveautés de C# 7.0
 
@@ -22,7 +22,7 @@ C# 7.0 ajoute un certain nombre de nouvelles fonctionnalités au langage C# :
 * [Critères spéciaux](#pattern-matching)
     - Vous pouvez créer une logique de branchement basée sur des types arbitraires et les valeurs des membres de ces types.
 * [Variables locales et retours `ref`](#ref-locals-and-returns)
-    - Les arguments et les variables locales de méthode peuvent être des références à un autre stockage.
+    - Les valeurs de retour et les variables locales de méthode peuvent être des références à un autre stockage.
 * [Fonctions locales](#local-functions)
     - Vous pouvez imbriquer des fonctions dans d’autres fonctions afin de limiter leur portée et leur visibilité.
 * [Autres membres expression-bodied](#more-expression-bodied-members)
@@ -280,6 +280,8 @@ Le langage C# a trois autres règles qui vous protègent contre une mauvaise uti
 L’ajout de variables locales ref et de retours ref permet d’utiliser des algorithmes qui sont plus efficaces en évitant la copie de valeurs, ou d’effectuer plusieurs fois des opérations de déréférencement.
 
 L’ajout de `ref` à la valeur de retour est une [modification compatible avec la source](version-update-considerations.md#source-compatible-changes). Le code existant est compilé, mais la valeur de retour référencée est copiée lorsqu’elle est assignée. Les appelants doivent mettre à jour le stockage pour la valeur de retour sur une variable locale `ref` afin de stocker la valeur de retour en tant que référence.
+
+Pour plus d'informations, voir l’article [ref, mot clé](../language-reference/keywords/ref.md).
 
 ## <a name="local-functions"></a>Fonctions locales
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514183"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150965"
 ---
 # <a name="operators-c-programming-guide"></a>Opérateurs (guide de programmation C#)
 En C#, un *opérateur* est un élément de programme qui s'applique à un ou plusieurs *opérandes* dans une expression ou une instruction. Les opérateurs qui prennent un opérande, comme l'opérateur d'incrément (`++`) ou `new`, portent le nom d'opérateurs *unaires* . Les opérateurs qui prennent deux opérandes, comme les opérateurs arithmétiques (`+`,`-`,`*`,`/`) portent le nom d'opérateur *binaires* . Un opérateur, l'opérateur conditionnel (`?:`), prend trois opérandes et est le seul opérateur ternaire en C#.  
@@ -111,8 +111,8 @@ En C#, un *opérateur* est un élément de programme qui s'applique à un ou plu
 |Category|Expression|Description|  
 |--------------|----------------|-----------------|  
 |AND logique|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Opération de bits entière AND, Boolean logique AND|  
-|XOR logique|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Opération de bits entière XOR, Boolean logique XOR|  
-|OR logique|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Opération de bits entière OR, Boolean logique OR|  
+|XOR logique|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|XOR d’entiers au niveau du bit, XOR logique booléen|  
+|OR logique|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|OR d’entiers au niveau du bit, OR logique booléen|  
 |AND conditionnel|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Évalue y uniquement si x est vrai|  
 |OR conditionnel|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Évalue y uniquement si x est false|  
 |Fusion de Null|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) o|Prend la valeur y si x est null, sinon prend la valeur x|  

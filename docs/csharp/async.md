@@ -4,12 +4,12 @@ description: Découvrez le modèle de programmation asynchrone au niveau du lang
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: e562ef9fffa5bf77fd5dee1cb19cee0a2492b986
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349093"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126495"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
@@ -108,7 +108,7 @@ Voici deux questions à vous poser avant d’écrire du code :
     
 Si le travail à faire **utilise les E/S de manière intensive**, utilisez `async` et `await` *sans* `Task.Run`.  Vous *ne devez pas* utiliser la bibliothèque parallèle de tâches.  La raison à cela est expliquée dans l’article [Async en détail](../standard/async-in-depth.md).
 
-Si le travail à faire **utilise le processeur de manière intensive** et que la réactivité est une exigence, utilisez `async` et `await`, mais transférez le travail sur un autre thread *avec* `Task.Run`.  Si le travail accepte la concurrence et le parallélisme, vous pouvez également utiliser la bibliothèque parallèle de tâches.
+Si le travail à faire **utilise le processeur de manière intensive** et que la réactivité est une exigence, utilisez `async` et `await`, mais transférez le travail sur un autre thread *avec* `Task.Run`.  S’il accepte la concurrence et le parallélisme, vous pouvez également utiliser la [bibliothèque parallèle de tâches](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 De plus, vous devez toujours mesurer les performances d’exécution de votre code.  Par exemple, vous constaterez peut-être que le coût d’un travail utilisant le processeur de manière intensive n’est pas si élevé que cela par rapport à la surcharge des changements de contexte induits par le multithreading.  Chaque solution ayant ses compromis, choisissez le meilleur compromis pour votre scénario.
 

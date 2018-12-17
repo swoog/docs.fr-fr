@@ -4,12 +4,12 @@ description: Découvrir les différences entre les fichiers csproj existants et 
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50203954"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143699"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Ajouts au format csproj pour .NET Core
 
@@ -75,9 +75,6 @@ Pour désactiver **tous les modèles Glob implicites**, vous pouvez affecter à 
     <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
-
-### <a name="recommendation"></a>Recommandation
-Avec csproj, nous vous recommandons de supprimer les modèles Glob par défaut de votre projet et d’ajouter uniquement des chemins de fichier avec des modèles Glob pour les artefacts dont votre application/bibliothèque a besoin dans différents scénarios (par exemple, runtime et mise en package NuGet).
 
 ## <a name="how-to-see-the-whole-project-as-msbuild-sees-it"></a>Comment afficher la totalité du projet tel qu’il est perçu par MSBuild ?
 
@@ -195,8 +192,12 @@ Titre convivial du package, généralement utilisé dans les affichages de l’i
 ### <a name="authors"></a>Auteurs
 Liste séparée par des points-virgules des auteurs de packages, qui correspondent aux noms de profil sur nuget.org. Ceux-ci sont affichés dans la galerie NuGet sur nuget.org et servent à croiser les références des packages de mêmes auteurs.
 
-### <a name="description"></a>Description
+### <a name="packagedescription"></a>PackageDescription
+
 Description longue du package pour l’affichage de l’interface utilisateur.
+
+### <a name="description"></a>Description
+Description longue de l'assembly. Si `PackageDescription` n’est pas spécifié, cette propriété est également utilisée comme description du package.
 
 ### <a name="copyright"></a>Copyright
 Détails de copyright pour le package.

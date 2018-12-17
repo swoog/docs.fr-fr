@@ -4,12 +4,12 @@ description: Décrit comment créer un Outil global. Un Outil global est une app
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 3860aad5e2c13714298d50bb9ac10daec3aadf01
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e544ab51920015e0f1ea48ad83ba9b637d98aa0c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144577"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>Créer un Outil global .NET Core avec la CLI .NET Core
 
@@ -162,7 +162,7 @@ Ensuite, créez un package NuGet pour votre application.
 dotnet pack
 ```
 
-Le fichier `botsay.1.0.0.nupkg` est créé dans le dossier identifié par la valeur XML `<PackageOutputPath>` à partir du fichier `botsay.csproj`, qui dans cet exemple est le dossier `./nupkg`. Cela facilite l’installation et le test. Lorsque vous souhaitez distribuer un outil publiquement, chargez-le dans [https://www.nuget.org](https://www.nuget.org).
+Le fichier `botsay.1.0.0.nupkg` est créé dans le dossier identifié par la valeur XML `<PackageOutputPath>` à partir du fichier `botsay.csproj`, qui dans cet exemple est le dossier `./nupkg`. Cela facilite l’installation et le test. Lorsque vous souhaitez distribuer un outil publiquement, chargez-le dans [https://www.nuget.org](https://www.nuget.org). Une fois l’outil disponible sur NuGet, les développeurs peuvent l’installer à l’échelle de l’utilisateur en utilisant l’option `--global` de la commande [dotnet tool install](dotnet-tool-install.md).
 
 Maintenant que vous avez un package, installez l’outil à partir de ce package : 
 

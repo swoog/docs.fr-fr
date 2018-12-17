@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Collections en C#
-  ms.openlocfilehash: f1262beab39b78966d2be10fc983dfe1d4be998b
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50200155"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53149209"
 items:
 - durationInMinutes: 2
   content: >
@@ -96,4 +96,8 @@ items:
     > [!NOTE]
 
     > Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Vous avez terminé le guide de démarrage rapide sur l’interpolation de chaîne. \n\nVous pouvez poursuivre ces guides de démarrage rapide dans votre propre environnement de développement local. Découvrez les principes fondamentaux du [développement local](local-environment.md), puis choisissez un guide de démarrage rapide. Vous pouvez suivre ce même guide de démarrage, passer directement au guide de démarrage rapide suivant ou recommencer le guide de démarrage rapide [Nombres en C#](numbers-in-csharp-local.md).\n\nPour plus d’informations, consultez la rubrique [Interpolation de chaîne](../../language-reference/tokens/interpolated.md) et le tutoriel [Interpolation de chaîne en C#](../../tutorials/string-interpolation.md)."
+- content: >
+    Vous avez terminé le tutoriel interactif sur l’interpolation de chaînes. Vous pouvez cliquer sur le lien **Collections en C#** ci-dessous pour commencer le tutoriel interactif suivant, ou consulter le [site .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) pour télécharger le kit SDK .NET Core, créer un projet sur votre ordinateur et continuer à coder. L’étape « Continuer à apprendre » vous ramène à ces tutoriels.
+
+
+    Pour plus d’informations, voir [Interpolation de chaînes](../../language-reference/tokens/interpolated.md).

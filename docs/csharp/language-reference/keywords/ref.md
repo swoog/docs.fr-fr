@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195968"
 ---
 # <a name="ref-c-reference"></a>ref (référence C#)
@@ -92,7 +92,7 @@ Pour que l’appelant puisse modifier l’état de l’objet, la valeur de retou
 
 La méthode appelée peut également déclarer la valeur renvoyée en tant que `ref readonly` pour renvoyer la valeur par référence et faire en sorte que le code d'appel ne puisse pas modifier la valeur renvoyée. La méthode d’appel peut éviter de copier la valeur renvoyée en stockant la valeur dans une variable [ref readonly](#ref-readonly-locals) locale.
 
-Pour obtenir un exemple, consultez [un exemple de retours ref et de variables locales ref](#a-ref-returns-and-ref-locals-example)
+Pour obtenir un exemple, voir [Exemple de valeurs de retour de référence et de variables locales ref](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Variables locales ref
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Notez que dans les deux exemples, le mot clé `ref` doit être utilisé aux deux emplacements, sans quoi le compilateur génère l’erreur CS8172, « Impossible d’initialiser une variable par référence avec une valeur ».
+
+À partir de C# 7.3, la variable d’itération de l’instruction `foreach` peut être une variable locale ref ou une variable locale ref readonly. Pour plus d’informations, voir l’article [Instruction foreach](foreach-in.md).
 
 ## <a name="ref-readonly-locals"></a>Variable locale ref readonly
 
@@ -152,6 +154,9 @@ Vous pouvez combiner des modificateurs pour déclarer une structure en tant que 
 ## <a name="see-also"></a>Voir aussi
 
 - [Écrire du code sécurisé et efficace](../../write-safe-efficient-code.md)  
+- [Retours ref et variables locales ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Expression ref conditionnelle](../operators/conditional-operator.md#conditional-ref-expression)
+- [Opérateur d'assignation ref](../operators/assignment-operator.md#ref-assignment-operator)
 - [Passage de paramètres](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Paramètres de méthodes](method-parameters.md)  
 - [Référence C#](../index.md)  

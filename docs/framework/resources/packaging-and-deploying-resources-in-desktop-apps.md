@@ -1,5 +1,5 @@
 ---
-title: Empaquetage et déploiement de ressources dans des applications de bureau
+title: Packager et déployer des ressources dans des applications .NET
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -28,14 +28,14 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7aca04c191234686de5a15cb3dc1336080a3a344
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: b2f0ceced1749f42d57094a09f768c192b49ff4e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485701"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131532"
 ---
-# <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Empaquetage et déploiement de ressources dans des applications de bureau
+# <a name="packaging-and-deploying-resources-in-net-apps"></a>Packager et déployer des ressources dans des applications .NET
 Les applications s’appuient sur le gestionnaire des ressources du .NET Framework, représenté par la classe <xref:System.Resources.ResourceManager>, pour récupérer des ressources localisées. Le gestionnaire des ressources suppose qu’un modèle Hub and Spoke est utilisé pour empaqueter et déployer des ressources. Le hub est l’assembly principal qui contient le code exécutable non localisable et les ressources pour une culture unique, appelée culture neutre ou par défaut. La culture par défaut est la culture de secours de l’application ; il s’agit de la culture dont les ressources sont utilisées si aucune ressource localisée ne peut être trouvée. Chaque spoke se connecte à un assembly satellite qui contient les ressources d’une culture unique, mais ne contient pas de code.  
   
  Ce modèle présente plusieurs avantages :  
@@ -64,16 +64,17 @@ Les applications s’appuient sur le gestionnaire des ressources du .NET Framewo
   
  Pour améliorer les performances de recherche, appliquez l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> à votre assembly principal et passez-lui le nom de la langue neutre à utiliser avec votre assembly principal.  
   
+### <a name="net-framework-resource-fallback-process"></a>Processus de secours pour les ressources .NET Framework
+ Le processus de secours pour les ressources .NET Framework comprend les étapes suivantes :
+
 > [!TIP]
 >  Vous pouvez peut-être utiliser l’élément de configuration [\<relativeBindForResources>](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) pour optimiser le processus de secours pour les ressources et le processus selon lequel le runtime recherche des assemblys de ressources. Pour plus d’informations, consultez la section [Optimisation du processus de secours pour les ressources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#Optimizing).  
-  
- Le processus de secours pour les ressources comprend les étapes suivantes :  
   
 1.  Le runtime recherche d’abord dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md) un assembly qui correspond à la culture demandée pour votre application.  
   
      Le Global Assembly Cache peut stocker des assemblys de ressources partagés par de nombreuses applications. Cela vous évite d’avoir à inclure des ensembles de ressources spécifiques dans la structure de répertoires de chaque application que vous créez. Si le runtime trouve une référence à l’assembly, il recherche la ressource demandée dans cet assembly. S’il trouve l’entrée dans l’assembly, il utilise la ressource demandée. S’il ne trouve pas l’entrée, il continue la recherche.  
   
-2.  Le runtime vérifie ensuite le répertoire de l’assembly en cours d’exécution à la recherche d’un répertoire qui correspond à la culture demandée. S’il trouve le répertoire, il y recherche un assembly satellite valide pour la culture demandée. Le runtime recherche ensuite dans l’assembly satellite la ressource demandée. S’il trouve la ressource dans l’assembly, il l’utilise. S’il ne trouve pas la ressource, il continue la recherche.  
+2.  Le runtime recherche ensuite un sous-répertoire correspondant à la culture demandée dans le répertoire de l’assembly en cours d’exécution. S’il le trouve, il y recherche un assembly satellite valide pour la culture demandée. Le runtime recherche ensuite dans l’assembly satellite la ressource demandée. S’il trouve la ressource dans l’assembly, il l’utilise. S’il ne trouve pas la ressource, il continue la recherche.
   
 3.  Le runtime interroge ensuite Windows Installer pour déterminer si l’assembly satellite doit être installé à la demande. Dans ce cas, il gère l’installation, charge l’assembly et y recherche la ressource demandée. S’il trouve la ressource dans l’assembly, il l’utilise. S’il ne trouve pas la ressource, il continue la recherche.  
   
@@ -81,7 +82,7 @@ Les applications s’appuient sur le gestionnaire des ressources du .NET Framewo
   
 5.  Le runtime effectue ensuite une nouvelle recherche dans le Global Assembly Cache, cette fois pour trouver l’assembly parent de la culture demandée. Si l’assembly parent existe dans le Global Assembly Cache, le runtime recherche la ressource demandée dans cet assembly.  
   
-     La culture parente est définie comme culture de secours appropriée. Considérez les parents comme des candidats de secours, car n’importe quelle ressource est préférable à la levée d’une exception. Ce processus vous permet également de réutiliser les ressources. Vous devez inclure une ressource donnée au niveau parent uniquement si la culture enfant n’a pas besoin de localiser la ressource demandée. Par exemple, si vous fournissez des assemblys satellites pour en (anglais neutre), en-GB (anglais tel qu’il est parlé au Royaume-Uni) et en-US (anglais tel qu’il est parlé aux États-Unis), le satellite en contient la terminologie commune et les satellites en-GB et en-US fournissent les substitutions uniquement pour les termes qui diffèrent.  
+     La culture parente est définie comme culture de secours appropriée. Considérez les parents comme des candidats de secours, car n’importe quelle ressource est préférable à la levée d’une exception. Ce processus vous permet également de réutiliser les ressources. Vous devez inclure une ressource donnée au niveau parent uniquement si la culture enfant n’a pas besoin de localiser la ressource demandée. Par exemple, si vous fournissez des assemblys satellites pour `en` (anglais neutre), `en-GB` (anglais du Royaume-Uni) et `en-US` (anglais des États-Unis), le satellite `en` contient la terminologie commune et les satellites `en-GB` et `en-US` une terminologie de remplacement, seulement pour les termes qui diffèrent.
   
 6.  Le runtime vérifie ensuite le répertoire de l’assembly en cours d’exécution à la recherche d’un répertoire parent. Si un répertoire parent existe, le runtime y recherche un assembly satellite valide pour la culture parente. S’il trouve l’assembly, le runtime y recherche la ressource demandée. S’il trouve la ressource, il l’utilise. S’il ne trouve pas la ressource, il continue la recherche.  
   
@@ -94,14 +95,14 @@ Les applications s’appuient sur le gestionnaire des ressources du .NET Framewo
 10. Si la culture spécifiée à l’origine et tous les parents ont fait l’objet de la recherche et que la ressource est toujours introuvable, la ressource de la culture par défaut (de secours) est utilisée. En règle générale, les ressources de la culture par défaut sont incluses dans l’assembly d’application principal. Toutefois, vous pouvez spécifier la valeur <xref:System.Resources.UltimateResourceFallbackLocation.Satellite> pour la propriété <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> de l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> pour indiquer que l’emplacement de secours ultime pour les ressources est un assembly satellite, plutôt que l’assembly principal.  
   
     > [!NOTE]
-    >  La ressource par défaut est la seule ressource qui peut être compilée avec l’assembly principal. Sauf si vous spécifiez un assembly satellite à l’aide de l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute>, il s’agit du secours ultime (parent final). Par conséquent, nous vous recommandons de toujours inclure un ensemble de ressources par défaut dans votre assembly principal. Vous empêchez ainsi la levée d’exceptions. En incluant un fichier de ressources par défaut, vous fournissez une solution de secours pour toutes les ressources et garantissez qu’au moins une ressource est toujours présente pour l’utilisateur, même si elle n’est pas spécifique à une culture.  
+    >  La ressource par défaut est la seule ressource qui peut être compilée avec l’assembly principal. Sauf si vous spécifiez un assembly satellite à l’aide de l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute>, il s’agit du secours ultime (parent final). Par conséquent, nous vous recommandons de toujours inclure un ensemble de ressources par défaut dans votre assembly principal. Vous empêchez ainsi la levée d’exceptions. En ajoutant un fichier de ressources par défaut, vous fournissez une solution de secours pour toutes les ressources et garantissez qu’au moins une ressource est toujours présente pour l’utilisateur, même si elle n’est pas propre à une culture.
   
 11. Enfin, si le runtime ne trouve pas une ressource pour une culture par défaut (de secours), une exception <xref:System.Resources.MissingManifestResourceException> ou <xref:System.Resources.MissingSatelliteAssemblyException> est levée pour indiquer que la ressource est introuvable.  
   
- Par exemple, supposons que l’application demande une ressource localisée en espagnol (Mexique) (la culture es-MX). Le runtime recherche d’abord dans le Global Assembly Cache l’assembly qui correspond à es-MX, mais ne le trouve pas. Le runtime recherche ensuite un répertoire es-MX dans le répertoire de l’assembly en cours d’exécution. En cas d’échec, le runtime effectue une nouvelle recherche dans le Global Assembly Cache pour trouver un assembly parent qui reflète la culture de secours appropriée, ici es (Espagnol). Si l’assembly parent est introuvable, le runtime recherche dans tous les niveaux potentiels des assemblys parents la culture es-MX jusqu’à ce qu’il trouve une ressource correspondante. Si aucune ressource n’est trouvée, le runtime utilise la ressource pour la culture par défaut.  
+ Supposons par exemple que l’application demande une ressource localisée en espagnol (Mexique) (la culture `es-MX`). Tout d’abord, le runtime recherche l’assembly correspondant à `es-MX` dans le Global Assembly Cache, mais ne le trouve pas. Il recherche ensuite un répertoire `es-MX` dans le répertoire de l’assembly en cours d’exécution. En cas d’échec, il effectue une nouvelle recherche dans le Global Assembly Cache pour trouver un assembly parent qui reflète la culture de secours correspondante, ici `es` (espagnol). S’il ne trouve pas l’assembly parent, le runtime fouille tous les niveaux potentiels des assemblys parents, à la recherche de la culture `es-MX`, jusqu’à ce qu’il trouve une ressource correspondante. Si aucune ressource n’est trouvée, le runtime utilise la ressource pour la culture par défaut.
   
 <a name="Optimizing"></a>   
-### <a name="optimizing-the-resource-fallback-process"></a>Optimisation du processus de secours pour les ressources  
+#### <a name="optimizing-the-net-framework-resource-fallback-process"></a>Optimiser le processus de secours pour les ressources .NET Framework
  Dans les conditions suivantes, vous pouvez optimiser le processus par lequel le runtime recherche des ressources dans les assemblys satellites.  
   
 -   Les assemblys satellites sont déployés au même emplacement que l’assembly de code. Si l’assembly de code est installé dans le [Global Assembly Cache](../../../docs/framework/app-domains/gac.md), les assemblys satellites sont également installés dans le Global Assembly Cache. Si l’assembly de code est installé dans un répertoire, les assemblys satellites sont installés dans des dossiers spécifiques à la culture de ce répertoire.  
@@ -128,10 +129,44 @@ Les applications s’appuient sur le gestionnaire des ressources du .NET Framewo
   
 -   Si la recherche d’un assembly de ressource particulier échoue, le runtime ne déclenche pas l’événement <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>.  
   
+
+### <a name="net-core-resource-fallback-process"></a>Processus de secours pour les ressources .NET Core
+ Le processus de secours pour les ressources .NET Core comprend les étapes suivantes :
+
+1.  Le runtime tente de charger un assembly satellite pour la culture demandée.
+     * Il recherche un sous-répertoire correspondant à la culture demandée dans le répertoire de l’assembly en cours d’exécution. S’il le trouve, il y recherche un assembly satellite valide pour la culture demandée et le charge.
+
+       > [!NOTE]
+       >  Sur les systèmes d’exploitation dont le système de fichiers respecte la casse (autrement dit, Linux et macOS), la recherche d’un sous-répertoire du nom de la culture est sensible à la casse.  La casse du nom du sous-répertoire doit être identique à celle de <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType> (par exemple, `es` ou `es-MX`).
+
+       > [!NOTE]
+       > Si le programmeur a dérivé un contexte de chargement d’assembly personnalisé à partir de <xref:System.Runtime.Loader.AssemblyLoadContext>, la situation est complexe.  Si l’assembly en cours d’exécution a été chargé dans le contexte personnalisé, le runtime charge l’assembly satellite dans le contexte personnalisé.  Ce document ne couvre pas ce processus en détail.  Consultez <xref:System.Runtime.Loader.AssemblyLoadContext>.
+
+     * S’il n’a pas trouvé l’assembly satellite, <xref:System.Runtime.Loader.AssemblyLoadContext> déclenche l’événement <xref:System.Runtime.Loader.AssemblyLoadContext.Resolving?displayProperty=nameWithType> pour le signaler. Si vous choisissez de gérer l’événement, votre gestionnaire d’événements peut charger et retourner une référence à l’assembly satellite.
+     * Si l’assembly satellite reste introuvable, AssemblyLoadContext conduit AppDomain à déclencher un événement <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> pour le signaler. Si vous choisissez de gérer l’événement, votre gestionnaire d’événements peut charger et retourner une référence à l’assembly satellite.
+
+2. Dès qu’il trouve un assembly satellite, le runtime y recherche la ressource demandée. S’il trouve la ressource dans l’assembly, il l’utilise. S’il ne trouve pas la ressource, il continue la recherche.
+
+     > [!NOTE]
+     >  Pour trouver une ressource dans l’assembly satellite, le runtime recherche le fichier de ressources demandé par <xref:System.Resources.ResourceManager> pour <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>.  Dans le fichier de ressources, il cherche le nom de la ressource demandée.  En cas d’échec, la ressource est traitée comme introuvable.
+
+3. Le runtime parcourt ensuite les assemblys de culture parente à différents niveaux potentiels, en répétant à chaque fois les étapes 1 et 2.
+
+     La culture parente est définie comme une culture de secours appropriée. Considérez les parents comme des candidats de secours, car n’importe quelle ressource est préférable à la levée d’une exception. Ce processus vous permet également de réutiliser les ressources. Vous devez inclure une ressource donnée au niveau parent uniquement si la culture enfant n’a pas besoin de localiser la ressource demandée. Par exemple, si vous fournissez des assemblys satellites pour `en` (anglais neutre), `en-GB` (anglais du Royaume-Uni) et `en-US` (anglais des États-Unis), le satellite `en` contient la terminologie commune et les satellites `en-GB` et `en-US` une terminologie de remplacement, seulement pour les termes qui diffèrent.
+
+     Chaque culture n’a qu’un seul parent, qui est défini par la propriété <xref:System.Globalization.CultureInfo.Parent%2A?displayProperty=nameWithType>, mais un parent peut avoir son propre parent. La recherche des cultures parentes s’arrête lorsque la propriété <xref:System.Globalization.CultureInfo.Parent%2A> d’une culture retourne <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>. En ce qui concerne la culture de secours pour les ressources, la culture invariante n’est pas considérée comme une culture parente ou une culture pouvant comporter des ressources.
+
+4. Si la culture spécifiée à l’origine et tous les parents ont fait l’objet de la recherche et que la ressource est toujours introuvable, la ressource de la culture par défaut (de secours) est utilisée. En règle générale, les ressources de la culture par défaut sont incluses dans l’assembly d’application principal. Toutefois, vous pouvez spécifier la valeur <xref:System.Resources.UltimateResourceFallbackLocation.Satellite?displayProperty.nameWithType> pour la propriété <xref:System.Resources.NeutralResourcesLanguageAttribute.Location%2A> afin d’indiquer que l’emplacement de secours ultime des ressources est un assembly satellite, plutôt que l’assembly principal.
+
+    > [!NOTE]
+    >  La ressource par défaut est la seule ressource qui peut être compilée avec l’assembly principal. Sauf si vous spécifiez un assembly satellite à l’aide de l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute>, il s’agit du secours ultime (parent final). Par conséquent, nous vous recommandons de toujours inclure un ensemble de ressources par défaut dans votre assembly principal. Vous empêchez ainsi la levée d’exceptions. En ajoutant un fichier de ressources par défaut, vous fournissez une solution de secours pour toutes les ressources et garantissez qu’au moins une ressource est toujours présente pour l’utilisateur, même si elle n’est pas propre à une culture.
+
+5. Enfin, si le runtime ne trouve pas de fichier de ressources pour une culture (de secours) par défaut, une exception <xref:System.Resources.MissingManifestResourceException> ou <xref:System.Resources.MissingSatelliteAssemblyException> est levée pour indiquer que la ressource est introuvable.  Si le fichier de ressources est trouvé, mais que la ressource demandée n’est pas présente, la demande retourne `null`.
+
 ### <a name="ultimate-fallback-to-satellite-assembly"></a>Secours ultime pour l’assembly satellite  
  Vous pouvez éventuellement supprimer des ressources de l’assembly principal et spécifier que le runtime doit charger les ressources de secours ultime depuis un assembly satellite qui correspond à une culture spécifique. Pour contrôler le processus de secours, vous utilisez le constructeur <xref:System.Resources.NeutralResourcesLanguageAttribute.%23ctor%28System.String%2CSystem.Resources.UltimateResourceFallbackLocation%29?displayProperty=nameWithType> et fournissez une valeur pour le paramètre <xref:System.Resources.UltimateResourceFallbackLocation> qui spécifie si le gestionnaire des ressources doit extraire les ressources de secours à partir de l’assembly principal ou d’un assembly satellite.  
   
- L’exemple suivant utilise l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> pour stocker les ressources de secours d’une application dans un assembly satellite pour la langue Français (fr).  L’exemple comprend deux fichiers de ressources textuels qui définissent une ressource de type chaîne unique nommée `Greeting`. Le premier, resources.fr.txt, contient une ressource de langue française.  
+ L’exemple .NET Framework suivant utilise l’attribut <xref:System.Resources.NeutralResourcesLanguageAttribute> pour stocker les ressources de secours d’une application dans un assembly satellite pour la langue française (`fr`).  L’exemple comprend deux fichiers de ressources textuels qui définissent une ressource de type chaîne unique nommée `Greeting`. Le premier, resources.fr.txt, contient une ressource de langue française.
   
 ```  
 Greeting=Bon jour!  
@@ -183,7 +218,6 @@ vbc Example1.vb
 ```  
 Bon jour!  
 ```  
-  
 ## <a name="suggested-packaging-alternative"></a>Autre empaquetage suggéré  
  Des contraintes de temps ou de budget peuvent vous empêcher de créer un ensemble de ressources pour chaque sous-culture que votre application prend en charge. À la place, vous pouvez créer un seul assembly satellite pour une culture parente qui peut être utilisé par toutes les sous-cultures apparentées. Par exemple, vous pouvez fournir un seul assembly satellite anglais (en) qui est récupéré par les utilisateurs qui demandent des ressources anglaises spécifiques à une région et un seul assembly satellite allemand (de) pour les utilisateurs qui demandent des ressources allemandes spécifiques à une région. Par exemple, les demandes pour l’allemand tel qu’il est parlé en Allemagne (de-DE), en Autriche (de-AT) et en Suisse (de-CH) reviennent à l’assembly satellite allemand (de). Comme les ressources par défaut représentent les ressources de secours final et doivent dont être les ressources qui seront demandées par la majorité des utilisateurs de votre application, choisissez-les avec précaution. Cette solution déploie des ressources qui sont moins spécifiques à une culture, mais peut réduire de manière significative les coûts de localisation de votre application.  
   

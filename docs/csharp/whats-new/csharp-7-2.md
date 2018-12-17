@@ -2,12 +2,12 @@
 title: Nouveautés de C# 7.2
 description: Vue d’ensemble des nouvelles fonctionnalités de C# 7.2.
 ms.date: 08/16/2017
-ms.openlocfilehash: 93b0a5281db841abdb8de0865dfe4b13be6d9ee2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181171"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148173"
 ---
 # <a name="whats-new-in-c-72"></a>Nouveautés de C# 7.2
 
@@ -28,6 +28,8 @@ Les nouvelles fonctionnalités de langage de cette version sont :
   - Les littéraux numériques peuvent maintenant comporter des traits de soulignement de début avant tout chiffre affiché.
 * [Modificateur d’accès `private protected`](#private-protected-access-modifier)
   - Le modificateur d’accès `private protected` active l’accès pour les classes dérivées dans le même assembly.
+* [Expressions `ref` conditionnelles](#conditional-ref-expressions)
+  - Le résultat d’une expression conditionnelle (`?:`) peut maintenant être une référence.
 
 ## <a name="safe-efficient-code-enhancements"></a>Amélioration du code safe et efficace
 
@@ -48,7 +50,7 @@ Les appels de méthode peuvent désormais utiliser des arguments nommés qui pr�
 
 L’implémentation de la prise en charge des séparateurs numériques dans C# 7.0 n’autorisait pas `_` comme premier caractère de la valeur littérale. Les littéraux numériques binaires et hexadécimaux peuvent maintenant commencer par un caractère `_`. 
 
-Exemple :
+Par exemple :
 
 ```csharp
 int binaryValue = 0b_0101_0101;
@@ -56,6 +58,18 @@ int binaryValue = 0b_0101_0101;
 
 ## <a name="private-protected-access-modifier"></a>_private protected_ (modificateur d’accès)
 
-Enfin, un nouveau modificateur d’accès composé, `private protected`, indique qu’un membre peut être accessible par la classe conteneur ou les classes dérivées qui sont déclarées dans le même assembly. Alors que `protected internal` autorise l’accès par des classes dérivées ou qui se trouvent dans le même assembly, `private protected` limite l’accès aux types dérivés déclarés dans le même assembly.
+Enfin, un nouveau modificateur d’accès composé, `private protected`, indique qu’un membre est accessible à la classe globale ou aux classes dérivées déclarées dans le même assembly. Alors que `protected internal` autorise l’accès par des classes dérivées ou qui se trouvent dans le même assembly, `private protected` limite l’accès aux types dérivés déclarés dans le même assembly.
 
 Pour plus d’informations, consultez [Modificateurs d’accès](../language-reference/keywords/access-modifiers.md) dans Informations de référence sur le langage.
+
+## <a name="conditional-ref-expressions"></a>Expressions `ref` conditionnelles
+
+Enfin, l’expression conditionnelle peut produire comme résultat une référence plutôt qu’une valeur. Prenons par exemple la ligne suivante, qui récupère une référence au premier élément dans un des deux tableaux :
+
+```csharp
+ref var r = ref (arr != null ? ref arr[0] : ref otherArr[0]);
+```
+
+La variable `r` est une référence à la première valeur de `arr` ou `otherArr`.
+
+Pour plus d’informations, voir [Opérateur conditionnel (?:)](../language-reference/operators/conditional-operator.md) dans la référence sur le langage.

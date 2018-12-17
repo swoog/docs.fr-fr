@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: interpolated-strings.yml
   nextTutorialTitle: Interpolation de chaîne en C#
-  ms.openlocfilehash: 492922177cf213400629fac79da30a51bdbf46e5
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: a3db445f522bc3360629c17386cad4423fcd1b43
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50201663"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53147159"
 items:
 - durationInMinutes: 1
   content: >
@@ -32,7 +32,7 @@ items:
   content: "Un autre concept important pour créer des programmes plus volumineux est celui des **boucles**. Vous allez utiliser des boucles pour répéter des instructions que vous souhaitez exécuter plusieurs fois. Exécutez le code suivant dans la fenêtre interactive :\n\n```csharp\nint counter = 0;\nwhile (counter < 10)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n}\n```\n\nL’instruction `while` vérifie une condition et exécute l’instruction qui suit `while`. Elle répète la vérification de la condition et l’exécution de ces instructions jusqu'à ce que la condition soit false.\n\nCet exemple contient un nouvel opérateur. `++` après la variable `counter` est l’opérateur d’**incrémentation**. Il ajoute 1 à la valeur de compteur et stocke cette valeur dans la variable de compteur.\n\n> [!IMPORTANT]\n> Assurez-vous que la condition de boucle `while` ne devienne pas false quand vous exécutez le code. Dans le cas contraire, vous allez créer une **boucle infinie** dans laquelle votre programme ne se terminera jamais. Nous n’allons pas le démontrer ici, car le moteur qui exécute votre code expirerait et votre programme n’afficherait aucune sortie.\n\nLa boucle `while` teste la condition avant d’exécuter le code qui suit `while`. La boucle `do` ... `while` exécute d’abord le code, puis vérifie la condition. Elle ressemble à ce qui suit :\n\n```csharp\nint counter = 0;\ndo\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n  counter++;\n} while (counter < 10);\n```\n\nCette boucle `do` et la boucle antérieure `while` fonctionnent de manière identique. \n\nPassons maintenant à une dernière instruction de boucle.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Utiliser la boucle for
   durationInMinutes: 5
-  content: "Une autre instruction de boucle commune présente dans le code C# est la boucle `for`. Exécutez le code suivant dans la fenêtre interactive :\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nCette boucle fonctionne de manière identique à la boucle `while` et la boucle `do` que vous avez déjà utilisées. L’instruction `for` comprend trois parties qui contrôlent son fonctionnement. \n\nLa première partie est l’**initialiseur for** : `for counter = 0;` déclare que `counter` est la variable de boucle et définit sa valeur initiale sur `0`.\n\nLa partie centrale est la **condition for** : `counter < 10` déclare que cette boucle `for` continue à s’exécuter tant que la valeur de compteur est inférieure à 10.\n\nLa dernière partie est l’**itérateur for** : `counter++` indique comment modifier la variable de boucle après l’exécution du bloc qui suit l’instruction `for`. Il spécifie ici que `counter` doit être incrémenté de 1 chaque fois que le bloc s’exécute.\n\nVérifiez-le par vous-même. Réalisez les essais suivants :\n\n- Modifiez l’initialiseur pour définir le démarrage à une valeur différente.\n- Modifiez la condition pour définir l’arrêt à une valeur différente.\n\nUne fois terminé, vous allez vous-même écrire des codes pour mettre en pratique ce que vous avez appris.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: "Une autre instruction de boucle commune présente dans le code C# est la boucle `for`. Exécutez le code suivant dans la fenêtre interactive :\n\n```csharp\nfor(int counter = 0; counter < 10; counter++)\n{\n  Console.WriteLine($\"Hello World! The counter is {counter}\");\n} \n```\n\nCette boucle fonctionne de manière identique à la boucle `while` et la boucle `do` que vous avez déjà utilisées. L’instruction `for` comprend trois parties qui contrôlent son fonctionnement. \n\nLa première partie est l’**initialiseur for** : `int counter = 0;` déclare que `counter` est la variable de boucle et définit sa valeur initiale sur `0`.\n\nLa partie centrale est la **condition for** : `counter < 10` déclare que cette boucle `for` continue à s’exécuter tant que la valeur de compteur est inférieure à 10.\n\nLa dernière partie est l’**itérateur for** : `counter++` indique comment modifier la variable de boucle après l’exécution du bloc qui suit l’instruction `for`. Il spécifie ici que `counter` doit être incrémenté de 1 chaque fois que le bloc s’exécute.\n\nVérifiez-le par vous-même. Réalisez les essais suivants :\n\n- Modifiez l’initialiseur pour définir le démarrage à une valeur différente.\n- Modifiez la condition pour définir l’arrêt à une valeur différente.\n\nUne fois terminé, vous allez vous-même écrire des codes pour mettre en pratique ce que vous avez appris.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
 - title: Combiner des branches et des boucles
   durationInMinutes: 12
   content: >
@@ -80,4 +80,17 @@ items:
 
     > Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).
 - title: Félicitations !
-  content: "Vous avez terminé le didacticiel « Branches et boucles ». \n\nVous pouvez poursuivre ces tutoriels dans votre propre environnement de développement. Découvrez les concepts de base du [développement local](local-environment.md), puis choisissez un tutoriel. Vous pouvez tenter ce même exercice, passer directement au tutoriel suivant ou recommencer au début de la série à partir du tutoriel sur les [nombres en C#](numbers-in-csharp-local.md).\n\nPour en savoir plus sur ces concepts, consultez les rubriques suivantes :\n\n[Instruction if et else](../../language-reference/keywords/if-else.md)   \n[Instruction while](../../language-reference/keywords/while.md)   \n[Instruction do](../../language-reference/keywords/do.md)   \n[Instruction for](../../language-reference/keywords/for.md)"
+  content: >
+    Vous avez terminé le tutoriel interactif « Branches et boucles ». Vous pouvez cliquer sur le lien **Chaînes interpolées** ci-dessous pour commencer le tutoriel interactif suivant, ou consulter le [site .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial) pour télécharger le kit SDK .NET Core, créer un projet sur votre ordinateur et continuer à coder. L’étape « Continuer à apprendre » vous ramène à ces tutoriels.
+
+
+    Pour en savoir plus sur ces concepts, consultez les rubriques suivantes :
+
+
+    - [Instruction if et else](../../language-reference/keywords/if-else.md)
+
+    - [Instruction while](../../language-reference/keywords/while.md)
+
+    - [Instruction do](../../language-reference/keywords/do.md)
+
+    - [Instruction for](../../language-reference/keywords/for.md)

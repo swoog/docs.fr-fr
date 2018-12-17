@@ -3,14 +3,14 @@ title: Vue d’ensemble de global.json
 description: Découvrez comment utiliser le fichier global.json pour définir la version du kit SDK .NET Core pendant l’exécution de commandes CLI .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/30/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838076"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150849"
 ---
 # <a name="globaljson-overview"></a>Vue d’ensemble de global.json
 
@@ -46,14 +46,14 @@ L’exemple suivant montre le contenu d’un fichier *global.json* :
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.JSON et l’interface CLI .NET Core
 
-Il est utile de connaître les versions disponibles pour en définir une dans le fichier *global.json*. Vous pouvez trouver la liste complète des kits SDK disponibles pris en charge sur le site de [téléchargement .NET](https://www.microsoft.com/net/download/all). À partir du kit SDK .NET Core 2.1, vous pouvez exécuter la commande suivante pour savoir quelles versions du kit SDK sont déjà installées sur votre machine :
+Il est utile de connaître les versions disponibles pour en définir une dans le fichier *global.json*. Vous pouvez trouver la liste complète des kits SDK disponibles pris en charge sur le site de [téléchargement .NET](https://www.microsoft.com/net/download/all). À partir du kit SDK .NET Core 2.1, vous pouvez exécuter la commande suivante pour savoir quelles versions du kit SDK sont déjà installées sur votre ordinateur :
 
 ```console
 dotnet --list-sdks
@@ -64,7 +64,7 @@ Pour installer des versions supplémentaires du kit SDK .NET Core sur votre mach
 Vous pouvez créer un fichier *global.json* dans le répertoire actif en exécutant la commande [dotnet new](dotnet-new.md), comme dans l’exemple suivant :
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>Règles de correspondance
@@ -103,8 +103,8 @@ Cet avertissement indique que votre projet est compilé à partir d’une préve
 > [!WARNING]
 > Le projet de démarrage '{startupProject}' cible le framework '.NETCoreApp' version '{targetFrameworkVersion}'. Cette version des outils en ligne de commande Entity Framework Core .NET prend uniquement en charge la version 2.0 ou supérieure. Pour plus d’informations sur l’utilisation d’anciennes versions des outils, consultez <https://go.microsoft.com/fwlink/?linkid=871254>.
 
-À partir du kit SDK .NET Core 2.1 (v. 2.1.300), la commande `dotnet ef` est incluse dans le kit SDK. Cet avertissement indique que votre projet cible EF Core 1.0 ou 1.1, qui n’est pas compatible avec le kit SDK .NET Core 2.1 et ultérieur. Pour compiler votre projet, installez le kit SDK .NET Core 2.0 (v. 2.1.201) ou version antérieure sur votre machine et définissez la version du SDK à utiliser dans le fichier *global.json*. Pour plus d’informations sur la commande `dotnet ef`, consultez [Outils en ligne de commande EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
+À partir du kit SDK .NET Core 2.1 (version 2.1.300), la commande `dotnet ef` est incluse dans le kit SDK. Cet avertissement indique que votre projet cible EF Core 1.0 ou 1.1, qui n’est pas compatible avec le kit SDK .NET Core 2.1 (et les versions ultérieures). Pour compiler votre projet, installez le kit SDK .NET Core 2.0 (version 2.1.201) ou une version antérieure sur votre ordinateur et définissez la version du SDK à utiliser dans le fichier *global.json*. Pour plus d’informations sur la commande `dotnet ef`, consultez [Outils en ligne de commande EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>Voir aussi
 
-* [Méthode de résolution des kits SDK de projet](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Méthode de résolution des kits SDK de projet](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

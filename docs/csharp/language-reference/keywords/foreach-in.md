@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 675e6b7fa925fe1822c2fc321d79afd13b5e4c51
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347681"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128620"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, instruction (C#)
 
@@ -22,6 +22,8 @@ L’instruction `foreach` exécute une instruction ou un bloc d’instructions p
 
 - comporte la méthode `GetEnumerator` sans paramètre publique dont le retour est de type classe, struct ou interface,
 - le type de retour de la méthode `GetEnumerator` contient la propriété publique `Current` et la méthode sans paramètre publique `MoveNext`, dont le type de retour est <xref:System.Boolean>.
+
+À partir de C# 7.3, si la propriété `Current` de l’énumérateur retourne une [valeur de retour de référence](ref.md#reference-return-values) (`ref T` où `T` est le type de l’élément de collection), vous pouvez déclarer la variable d’itération avec le modificateur `ref` ou `ref readonly`.
 
 À tout moment dans le bloc d’instructions `foreach`, vous pouvez sortir de la boucle à l’aide de l’instruction [break](break.md), ou passer à l’itération suivante de la boucle à l’aide de l’instruction [continue](continue.md). Vous pouvez également quitter une boucle `foreach` en utilisant les instructions [goto](goto.md), [return](return.md) ou [throw](throw.md).
 
@@ -37,20 +39,19 @@ L’exemple suivant utilise l’instruction `foreach` avec une instance de type 
 
 [!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-À partir de C# 7.3, si la propriété `Current` de l’énumérateur retourne une [valeur de retour de référence](../../programming-guide/classes-and-structs/ref-returns.md) (`ref T` où `T` est le type de l’élément de collection), vous pouvez déclarer la variable d’itération avec le modificateur `ref` ou `ref readonly`. L’exemple suivant utilise une variable d’itération `ref` pour définir la valeur de chaque élément dans un tableau stackalloc. La version `ref readonly` effectue une itération de la collection pour imprimer toutes les valeurs. La déclaration `readonly` utilise une déclaration de variable locale implicite. Les déclarations de variable implicite peuvent être utilisées avec les déclarations `ref` ou `ref readonly`, tout comme les déclarations de variable explicitement typée.
+L’exemple suivant utilise une variable d’itération `ref` pour définir la valeur de chaque élément dans un tableau stackalloc. La version `ref readonly` effectue une itération de la collection pour imprimer toutes les valeurs. La déclaration `readonly` utilise une déclaration de variable locale implicite. Les déclarations de variable implicite peuvent être utilisées avec les déclarations `ref` ou `ref readonly`, tout comme les déclarations de variable explicitement typée.
 
 [!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Pour plus d’informations, voir la section [Instruction foreach](~/_csharplang/spec/statements.md#the-foreach-statement) de la [spécification du langage C#](../language-specification/index.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-- [L’instruction foreach (spécification du langage C#)](~/_csharplang/spec/statements.md#the-foreach-statement)
-- [Utilisation de foreach avec des tableaux](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [for](for.md)
-- [Instructions d’itération](iteration-statements.md)
-- [Mots clés C#](index.md)
 - [Référence C#](../index.md)
 - [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [Instructions d’itération](iteration-statements.md)
+- [Utiliser foreach avec des tableaux](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [instruction for](for.md)

@@ -1,5 +1,5 @@
 ---
-title: unsafe (référence C#)
+title: unsafe, mot clé (référence C#)
 ms.date: 07/20/2015
 f1_keywords:
 - unsafe_CSharpKeyword
@@ -7,53 +7,56 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: f4fcff02166091ae5dbd83e7ddf7762373fd9836
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 79cb246c4094f02d1319d28fcc94d0d3d5bd9cb5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128425"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (référence C#)
-Le mot clé `unsafe` désigne un contexte non sécurisé, qui est requis pour toute opération impliquant des pointeurs. Pour plus d’informations, consultez l’article [Pointeurs et code unsafe](../../../csharp/programming-guide/unsafe-code-pointers/index.md).  
-  
- Vous pouvez utiliser le modificateur `unsafe` dans la déclaration d’un type ou d’un membre. Toute l’étendue de texte du type ou du membre est ainsi considérée comme un contexte unsafe. Par exemple, ce qui suit est une méthode déclarée avec le modificateur `unsafe` :  
-  
-```csharp  
-unsafe static void FastCopy(byte[] src, byte[] dst, int count)  
-{  
-    // Unsafe context: can use pointers here.  
-}  
-```  
-  
- La portée du contexte unsafe s’étend de la liste de paramètres à la fin de la méthode, de sorte que les pointeurs peuvent également être utilisés dans la liste de paramètres :  
-  
-```csharp  
-unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}  
-```  
-  
- Vous pouvez également avoir recours à un bloc unsafe pour utiliser un code unsafe dans ce bloc. Exemple :  
-  
-```csharp  
-unsafe  
-{  
-    // Unsafe context: can use pointers here.  
-}  
-```  
-  
- Pour compiler du code unsafe, vous devez spécifier l’option de compilateur [/unsafe](../../../csharp/language-reference/compiler-options/unsafe-compiler-option.md). Le code unsafe n’est pas vérifiable par le service CLR (Common Language Runtime).  
-  
-## <a name="example"></a>Exemple  
- [!code-csharp[csrefKeywordsModifiers#22](../../../csharp/language-reference/keywords/codesnippet/CSharp/unsafe_1.cs)]  
-  
-## <a name="c-language-specification"></a>Spécification du langage C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Le mot clé `unsafe` désigne un contexte non sécurisé, qui est requis pour toute opération impliquant des pointeurs. Pour plus d’informations, consultez l’article [Pointeurs et code unsafe](../../programming-guide/unsafe-code-pointers/index.md).
+
+Vous pouvez utiliser le modificateur `unsafe` dans la déclaration d’un type ou d’un membre. Toute l’étendue de texte du type ou du membre est ainsi considérée comme un contexte unsafe. Par exemple, ce qui suit est une méthode déclarée avec le modificateur `unsafe` :
+
+```csharp
+unsafe static void FastCopy(byte[] src, byte[] dst, int count)
+{
+    // Unsafe context: can use pointers here.
+}
+```
+
+La portée du contexte unsafe s’étend de la liste de paramètres à la fin de la méthode, de sorte que les pointeurs peuvent également être utilisés dans la liste de paramètres :
+
+```csharp
+unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
+```
+
+Vous pouvez également avoir recours à un bloc unsafe pour utiliser un code unsafe dans ce bloc. Exemple :
+
+```csharp
+unsafe
+{
+    // Unsafe context: can use pointers here.
+}
+```
+
+Pour compiler du code unsafe, vous devez spécifier l’option de compilateur [/unsafe](../compiler-options/unsafe-compiler-option.md). Le code unsafe n’est pas vérifiable par le service CLR (Common Language Runtime).
+
+## <a name="example"></a>Exemple
+
+[!code-csharp[csrefKeywordsModifiers#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#22)]
+
+## <a name="c-language-specification"></a>spécification du langage C#
+
+Pour plus d’informations, voir [Code unsafe](~/_csharplang/spec/unsafe-code.md) dans la [spécification du langage C#](../language-specification/index.md). La spécification du langage est la source de référence pour la syntaxe C# et son utilisation.
+
 ## <a name="see-also"></a>Voir aussi
 
-- [Référence C#](../../../csharp/language-reference/index.md)  
-- [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
-- [Mots clés C#](../../../csharp/language-reference/keywords/index.md)  
-- [fixed, instruction](../../../csharp/language-reference/keywords/fixed-statement.md)  
-- [Pointeurs et code unsafe](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
-- [Mémoires tampons de taille fixe](../../../csharp/programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [Référence C#](../index.md)
+- [Guide de programmation C#](../../programming-guide/index.md)
+- [Mots clés C#](index.md)
+- [fixed, instruction](fixed-statement.md)
+- [Pointeurs et code unsafe](../../programming-guide/unsafe-code-pointers/index.md)
+- [Mémoires tampons de taille fixe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

@@ -1,6 +1,6 @@
 ---
 title: Wrapper pouvant être appelé par COM
-ms.date: 03/30/2017
+ms.date: 10/23/2018
 dev_langs:
 - csharp
 - vb
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 21f7b0d56a788b4161fb7e99899b4dd15a434152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75a8fb01fd22a7f84fadaf355a269b3ad3de63ab
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145174"
 ---
 # <a name="com-callable-wrapper"></a>Wrapper pouvant être appelé par COM
 Quand un client COM appelle un objet .NET, le common language runtime crée l'objet managé et un wrapper CCW pour cet objet. Parce qu'ils ne peuvent pas référencer directement un objet .NET, les clients COM utilisent le wrapper CCW en tant que proxy pour l'objet managé.  
@@ -84,17 +84,17 @@ Public Class Mammal
 End Class  
 ```  
   
-```csharp  
-// Applies the ClassInterfaceAttribute to set the interface to dual.  
-[ClassInterface(ClassInterfaceType.AutoDual)]  
-// Implicitly extends System.Object.  
-public class Mammal  
-{  
-    void  Eat();  
-    void  Breathe():  
-    void  Sleep();  
-}  
-```  
+```csharp
+// Applies the ClassInterfaceAttribute to set the interface to dual.
+[ClassInterface(ClassInterfaceType.AutoDual)]
+// Implicitly extends System.Object.
+public class Mammal
+{
+    public void Eat() {}
+    public void Breathe() {}
+    public void Sleep() {}
+}
+```
   
  Le client COM peut obtenir un pointeur vers une interface de classe nommée `_Mammal`, qui est décrite dans la bibliothèque de types générée par l’outil [Tlbexp.exe (exportateur de bibliothèques de types)](../tools/tlbexp-exe-type-library-exporter.md). Si la classe `Mammal` implémentait une ou plusieurs interfaces, les interfaces apparaîtraient sous la coclasse.  
   
@@ -139,12 +139,13 @@ coclass Mammal
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.None)]  
-public class LoanApp : IExplicit {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.None)]
+public class LoanApp : IExplicit
+{
+    int IExplicit.M() { return 0; }
+}
+```
   
  La valeur **ClassInterfaceType.None** empêche l’interface de classe d’être générée quand les métadonnées de classe sont exportées vers une bibliothèque de types. Dans l'exemple précédent, les clients COM peuvent accéder à la classe `LoanApp` uniquement via l'interface `IExplicit`.  
   
@@ -163,20 +164,31 @@ public class LoanApp : IExplicit {
 End Class  
 ```  
   
-```csharp  
-[ClassInterface(ClassInterfaceType.AutoDispatch]  
-public class LoanApp : IAnother {  
-    void M();  
-}  
-```  
+```csharp
+[ClassInterface(ClassInterfaceType.AutoDispatch)]
+public class LoanApp
+{
+    public int M() { return 0; }
+}
+```
   
  Pour obtenir le DISPID d’un membre d’interface au moment de l’exécution, les clients COM peuvent appeler **IDispatch.GetIdsOfNames**. Pour appeler une méthode sur l’interface, passez le DISPID retourné comme argument à **IDispatch.Invoke**.  
   
 ### <a name="restrict-using-the-dual-interface-option-for-the-class-interface"></a>Limitez l'utilisation de l'option d'interface double pour l'interface de classe.  
  Les interfaces doubles permettent une liaison anticipée et tardive aux membres d'interface par les clients COM. Au moment du design et au cours des tests, il peut s'avérer utile de faire de l'interface de classe une interface double. Pour une classe managée (et ses classes de base) qui ne sera jamais modifiée, cette option est également acceptable. Dans tous les autres cas, évitez d'utiliser l'interface double.  
   
- Une interface double générée automatiquement peut être appropriée dans de rares cas. Toutefois, cela rend souvent le contrôle de version plus complexe. Par exemple, les clients COM qui utilisent l'interface de classe d'une classe dérivée peuvent facilement s'arrêter en raison des modifications apportées à la classe de base. Quand une tierce partie fournit la classe de base, la disposition de l'interface de classe est hors de votre contrôle. De plus, contrairement à une interface IDispatch uniquement, une interface Dual (**ClassInterface.AutoDual**) fournit une description de l’interface de classe dans la bibliothèque de types exportée. Une telle description encourage les clients à liaison tardive à mettre en cache les DISPID au moment de l'exécution.  
+ Une interface double générée automatiquement peut être appropriée dans de rares cas. Toutefois, cela rend souvent le contrôle de version plus complexe. Par exemple, les clients COM qui utilisent l'interface de classe d'une classe dérivée peuvent facilement s'arrêter en raison des modifications apportées à la classe de base. Quand une tierce partie fournit la classe de base, la disposition de l'interface de classe est hors de votre contrôle. De plus, contrairement à une interface Dispatch uniquement, une interface Dual (**ClassInterfaceType.AutoDual**) offre une description de l’interface de classe dans la bibliothèque de types exportée. Une telle description encourage les clients à liaison tardive à mettre en cache les DISPID au moment de l'exécution.  
   
+### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Vérifiez que toutes les notifications d’événements COM sont à liaison tardive.
+
+Par défaut, les informations du type COM sont intégrées directement aux assemblys managés, ce qui éviter d’avoir à utiliser des assemblys PIA (Primary Interop Assembly). Ces informations de type incorporées présentent toutefois une limitation : elles ne prennent pas en charge la distribution des notifications d’événements COM par des appels vtable à liaison anticipée, mais seulement par des appels `IDispatch::Invoke` à liaison tardive.
+
+Si votre application exige des appels à liaison anticipée à des méthodes d’interface d’événements COM, vous pouvez définir la propriété **Incorporer les types Interop** sur `true` dans Visual Studio, ou inclure l’élément suivant dans votre fichier projet :
+
+```xml
+<EmbedInteropTypes>True</EmbedInteropTypes>
+```
+
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>  
  [Wrappers COM](com-wrappers.md)  

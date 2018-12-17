@@ -1,15 +1,13 @@
 ---
 title: Commande dotnet list reference - Interface CLI .NET Core
 description: La commande dotnet list reference est une option pratique pour lister des références entre projets.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 821e6d276af44bf984c8ac1b42b4e954dbe69556
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/03/2018
+ms.openlocfilehash: 58b4e07abfe95d1febdd54d117825ecedf502e61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697181"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152597"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
@@ -25,26 +23,30 @@ ms.locfileid: "34697181"
 
 ## <a name="description"></a>Description
 
-La commande `dotnet list reference` est une option pratique pour répertorier des références de projet pour un projet donné.
+La commande `dotnet list reference` est pratique pour lister les références à un projet ou à une solution donné.
 
 ## <a name="arguments"></a>Arguments
 
-`PROJECT`
+* **`PROJECT`**
 
-Spécifie le fichier projet à utiliser pour répertorier les références. Si aucun fichier n’est spécifié, la commande recherche un fichier projet dans le répertoire actif.
+  Spécifie le fichier projet à utiliser pour répertorier les références. Si aucun fichier n’est spécifié, la commande recherche un fichier projet dans le répertoire actif.
 
 ## <a name="options"></a>Options
 
-`-h|--help`
+* **`-h|--help`**
 
-Affiche une aide brève pour la commande.
+  Affiche une aide brève pour la commande.
 
 ## <a name="examples"></a>Exemples
 
-Lister les références de projet pour le projet spécifié :
+* Lister les références de projet pour le projet spécifié :
 
-`dotnet list app/app.csproj reference`
+  ```console
+  dotnet list app/app.csproj reference
+  ```
 
-Lister les références de projet du projet dans le répertoire actuel :
+* Lister les références de projet du projet dans le répertoire actuel :
 
-`dotnet list reference`
+  ```console
+  dotnet list reference
+  ```

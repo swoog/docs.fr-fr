@@ -3,12 +3,12 @@ title: Types tuple - Guide C#
 description: En savoir plus sur les types tuple nommés et sans nom en C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32d089d36328d30de344e14fb7e88e80eacf5ed0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50186029"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155130"
 ---
 # <a name="c-tuple-types"></a>Types tuple C# #
 
@@ -88,7 +88,7 @@ Ces cas de figure n’entraînent aucune erreur du compilateur, car ce serait un
 
 ## <a name="equality-and-tuples"></a>Égalité et tuples
 
-À compter de C# 7.3, les types tuple prennent en charge les opérateurs `==` et `!=`. Ces opérateurs fonctionnent en comparant, dans l’ordre, chaque membre de l’argument de gauche à chaque membre de l’argument de droite. Ces comparaisons se court-circuitent. L’opérateur `==` arrête l’évaluation des membres dès qu’une paire n’est pas égale. L’opérateur `!=` arrête l’évaluation des membres dès qu’une paire est égale. Les exemples de code suivants utilisent `==`, mais toutes les règles de comparaison s’appliquent à `!=`. L’exemple de code suivant montre une comparaison d’égalité pour deux paires d’entiers :
+À compter de C# 7.3, les types tuple prennent en charge les opérateurs `==` et `!=`. Ces opérateurs fonctionnent en comparant, dans l’ordre, chaque membre de l’argument de gauche à chaque membre de l’argument de droite. Ces comparaisons se court-circuitent. Elles arrêtent l’évaluation des membres dès qu’une paire n’est pas égale. Les exemples de code suivants utilisent `==`, mais toutes les règles de comparaison s’appliquent à `!=`. L’exemple de code suivant montre une comparaison d’égalité pour deux paires d’entiers :
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 

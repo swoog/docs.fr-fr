@@ -1,20 +1,18 @@
 ---
-title: Déboguer une application C# ou Visual Basic Hello World .NET Core avec Visual Studio 2017
+title: Déboguer une application .NET Core Hello World avec Visual Studio 2017
 description: Découvrez comment déboguer une application Hello World écrite en C# ou Visual Basic avec Visual Studio 2017.
-author: BillWagner
-ms.author: wiwagn
 ms.date: 12/15/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 53e4549f4790bc0756cd0ad0b903b3dc25d2f66a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200122"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147526"
 ---
-# <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Déboguer votre application Hello World avec Visual Studio 2017
+# <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Déboguer une application Hello World .NET Core C# ou Visual Basic avec Visual Studio 2017
 
-Jusqu’à présent, vous avez suivi la procédure [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](.\with-visual-studio.md) ou [Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017](vb-with-visual-studio.md) pour créer et exécuter une application console simple. Une fois que vous avez écrit et compilé votre application, vous pouvez commencer à la tester. Visual Studio inclut un ensemble complet d’outils de débogage qui vous permettent de tester et dépanner votre application.
+Jusqu’à présent, vous avez suivi la procédure [Générer une application C# Hello World avec .NET Core dans Visual Studio 2017](with-visual-studio.md) ou [Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017](vb-with-visual-studio.md) pour créer et exécuter une application console simple. Une fois que vous avez écrit et compilé votre application, vous pouvez commencer à la tester. Visual Studio inclut un ensemble complet d’outils de débogage qui vous permettent de tester et dépanner votre application.
 
 ## <a name="debugging-in-debug-mode"></a>Débogage en mode débogage
 
@@ -228,4 +226,4 @@ Pour générer et tester la version Release de votre application console, change
 
 Quand vous appuyez sur F5 ou que vous choisissez **Générer la solution** à partir du menu **Build**, Visual Studio compile la version Release de votre application. Vous pouvez la tester comme vous l’avez fait pour la version Debug de l’application.
 
-Une fois que vous avez terminé de déboguer votre application, l’étape suivante consiste à publier une version déployable de votre application. Pour plus d’informations sur la procédure à suivre, consultez [Publier l’application Hello World avec Visual Studio 2017](./publishing-with-visual-studio.md).
+Une fois que vous avez terminé de déboguer votre application, l’étape suivante consiste à publier une version déployable de votre application. Pour plus d’informations sur la procédure à suivre, consultez [Publier l’application Hello World avec Visual Studio 2017](publishing-with-visual-studio.md).

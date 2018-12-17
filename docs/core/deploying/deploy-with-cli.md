@@ -1,20 +1,21 @@
 ---
-title: Déploiement d’applications .NET Core avec les outils CLI
-description: Apprendre à déployer des applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
+title: Déployer des applications .NET Core avec des outils de l’interface de ligne de commande (CLI)
+description: Découvrez comment déployer une application .NET Core avec des outils de l’interface de ligne de commande (CLI).
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454445"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151094"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Déploiement d’applications .NET Core avec les outils de l’interface de ligne de commande (CLI)
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Déployer des applications .NET Core avec des outils de l’interface de ligne de commande (CLI)
 
 Pour déployer une application .NET Core, vous pouvez soit effectuer un *déploiement dépendant du framework* (qui inclut vos binaires d’application, mais qui dépend de la présence de .NET Core sur le système cible), soit effectuer un *déploiement autonome* (qui inclut votre application et les binaires .NET Core). Pour obtenir une vue d’ensemble, consultez [Déploiement d’applications .NET Core](index.md).
 

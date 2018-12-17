@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511943"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147383"
 ---
 # <a name="await-c-reference"></a>await (référence C#)
 L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone pour insérer un point d’interruption dans l’exécution de la méthode jusqu’à ce que la tâche attendue se termine. La tâche représente un travail en cours.  
@@ -54,9 +54,9 @@ La plupart des méthodes async retournent un <xref:System.Threading.Tasks.Task> 
   
 Si vous attendez une méthode async retournant des tâches qui lève une exception, l’opérateur `await` lève de nouveau l’exception.  
   
-Si vous attendez une méthode async retournant des tâches qui est annulée, l'opérateur `await` lève de nouveau une exception <xref:System.OperationCanceledException>.  
+Si vous attendez une méthode async retournant des tâches qui est annulée, l’opérateur `await` lève de nouveau une exception <xref:System.OperationCanceledException>.  
   
-Une tâche qui se trouve dans un état d'erreur peut refléter plusieurs exceptions. Par exemple, la tâche peut être le résultat d'un appel à <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quand vous attendez une telle tâche, l'opération await lève à nouveau une seule des exceptions. Toutefois, vous ne pouvez pas prédire laquelle de ces exceptions est de nouveau levée.  
+Une tâche qui se trouve dans un état d'erreur peut refléter plusieurs exceptions. Par exemple, la tâche peut être le résultat d’un appel à <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quand vous attendez une telle tâche, l'opération await lève à nouveau une seule des exceptions. Toutefois, vous ne pouvez pas prédire laquelle de ces exceptions est de nouveau levée.  
   
 Pour obtenir des exemples de gestion des erreurs dans les méthodes asynchrones, consultez [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
   
@@ -65,7 +65,7 @@ L’exemple suivant retourne le nombre total de caractères dans les pages dont 
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Étant donné que l’utilisation de `async` et de `await` dans un point d’entrée d’application n’est pas prise en charge, nous ne pouvons pas appliquer l’attribut `async` à la méthode `Main` ni attendre l’appel à la méthode `GetPageLengthsAsync`. Nous pouvons garantir que la méthode `Main` attend la fin de l’opération asynchrone en récupérant la valeur de la propriété <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Pour les tâches qui ne retournent pas de valeur, vous pouvez appeler la méthode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. 
+L’exemple précédent utilise C# 7.1, qui prend en charge la [méthode `async` `Main`](../../programming-guide/main-and-command-args/index.md). Les versions antérieures de C# ne prennent pas en charge les points d’entrée d’application qui retournent <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601> ; vous ne pouvez donc pas appliquer le modificateur `async` à la méthode `Main` et attendre l’appel de méthode `GetPageLengthsAsync`. Dans ce cas, vous pouvez faire en sorte que la méthode `Main` attende la fin de l’opération asynchrone en récupérant la valeur de la propriété <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Pour les tâches qui ne retournent pas de valeur, vous pouvez appeler la méthode <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Pour savoir comment sélectionner la version du langage, voir [Sélectionner la version du langage C#](../configure-language-version.md).
 
 ## <a name="see-also"></a>Voir aussi  
 - [Programmation asynchrone avec Async et Await](../../../csharp/programming-guide/concepts/async/index.md)   

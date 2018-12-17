@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399592"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144882"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (outil Global Assembly Cache)
 L'outil Global Assembly Cache vous permet d'afficher et de manipuler le contenu du Global Assembly Cache et du cache de téléchargement.  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  Si vous tentez d’installer un assembly dont le nom de fichier dépasse les 79-91 caractères (sans compter l’extension du fichier), vous risquez de rencontrer l’erreur suivante :
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> En effet, Gacutil.exe construit en interne un chemin d’accès pouvant atteindre MAX_PATH caractères et composé des éléments suivants :
+> - GAC Root – 34 caractères (p. ex., `C:\Windows\Microsoft.NET\assembly\`)
+> - Architecture – 7 ou 9 caractères (p. ex., `GAC_32\`, `GAC_64\`, `GAC_MSIL`)
+> - AssemblyName – jusqu'à 91 caractères, selon la taille des autres éléments (p. ex., `System.Xml.Linq\`)
+> - AssemblyInfo – 31 à 48 caractères ou plus, composés de :
+>   - Framework – 5 caractères (p. ex., `v4.0_`)
+>   - AssemblyVersion – 8 à 24 caractères (p. ex., `9.0.1000.0_`)
+>   - AssemblyLanguage – 1 à 8 caractères (p. ex., `de_`, `sr-Cyrl_`)
+>   - PublicKey – 17 caractères (p. ex., `31bf3856ad364e35\`)
+> - DllFileName – jusqu'à 91 + 4 caractères (p. ex., `<AssemblyName>.dll`)
+
 ## <a name="examples"></a>Exemples  
  La commande suivante installe l'assembly `mydll.dll` dans le Global Assembly Cache.  
   

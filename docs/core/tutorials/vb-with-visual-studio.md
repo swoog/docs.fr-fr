@@ -1,20 +1,20 @@
 ---
-title: Génération d’une application Hello World avec .NET Core et Visual Basic dans Visual Studio 2017
+title: Application Hello World .NET Core avec Visual Basic dans Visual Studio 2017
 description: Découvrez comment générer une application de console .NET Core simple avec Visual Basic à l’aide de Visual Studio 2017.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: d6b58e491b2857f83fe9b2e55ed35630c42b79ed
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969874"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149378"
 ---
-# <a name="build-a-visual-basic-hello-world-application-with-net-core-in-visual-studio-2017"></a>Générer une application Visual Basic Hello World avec .NET Core dans Visual Studio 2017
+# <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Générer une application Hello World Visual Basic .NET Core dans Visual Studio 2017
 
 Cette rubrique fournit une introduction pas à pas pour la création, le débogage et la publication d’une application de console .NET Core à l’aide de Visual Basic dans Visual Studio 2017. Visual Studio 2017 fournit un environnement de développement complet pour la création d’applications .NET Core. Tant que l’application n’a pas de dépendances spécifiques à la plateforme, elle peut s’exécuter sur n’importe quelle plateforme ciblée par .NET Core et sur tout système où .NET Core est installé.
 
@@ -38,13 +38,13 @@ Commencez par créer une application console « Hello World » simple. Procéd
 
    Le modèle crée une application « Hello World » simple. Il appelle la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> pour afficher la chaîne littérale « Hello World ! » dans la fenêtre de console. En sélectionnant le bouton **HelloWorld** avec la flèche verte dans la barre d’outils, vous pouvez exécuter le programme en mode débogage. Si vous le faites, la fenêtre de console est visible seulement pendant un court intervalle de temps avant sa fermeture. Cela se produit, car la méthode `Main` se termine et l’application se termine dès que l’instruction unique de la méthode `Main` s’exécute.
 
-1. Pour que l’application se mette en pause de fermer la fenêtre de console, ajoutez le code suivant immédiatement après l’appel à la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> :
+1. Pour que la console ne se ferme pas d'elle-même, ajoutez le code suivant immédiatement après l’appel de la méthode <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> :
 
    ```vb
    Console.Write("Press any key to continue...")
    Console.ReadKey(true)
    ```
-   Ce code invite l’utilisateur à appuyer sur une touche, puis arrête le programme jusqu'à ce que l’utilisateur appuie sur une touche.
+   Ce code invite l’utilisateur à appuyer sur une touche. Le programme s'arrête lorsque l’utilisateur appuie sur une touche.
 
 1. Dans la barre de menus, sélectionnez **Générer** > **Générer la solution**. Ceci compile votre programme en un langage intermédiaire, qui est ensuite converti en code binaire par un compilateur juste-à-temps (JIT).
 
