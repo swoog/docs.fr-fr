@@ -1,5 +1,6 @@
 ---
-title: unchecked, mot clé (référence C#)
+title: unchecked, mot clé - Référence C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unchecked_CSharpKeyword
@@ -7,41 +8,41 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 301e054c627ae7fc9a07c55c9d2b9a7738b9fb73
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 44301333f7a36e6b0baa6ea9e089d930bb485a45
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146697"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238453"
 ---
-# <a name="unchecked-c-reference"></a><span data-ttu-id="f773e-102">unchecked (référence C#)</span><span class="sxs-lookup"><span data-stu-id="f773e-102">unchecked (C# Reference)</span></span>
+# <a name="unchecked-c-reference"></a><span data-ttu-id="38c8f-102">unchecked (référence C#)</span><span class="sxs-lookup"><span data-stu-id="38c8f-102">unchecked (C# Reference)</span></span>
 
-<span data-ttu-id="f773e-103">Le mot clé `unchecked` permet de supprimer le contrôle de dépassement de capacité pour les conversions et les opérations arithmétiques de type intégral.</span><span class="sxs-lookup"><span data-stu-id="f773e-103">The `unchecked` keyword is used to suppress overflow-checking for integral-type arithmetic operations and conversions.</span></span>
+<span data-ttu-id="38c8f-103">Le mot clé `unchecked` permet de supprimer le contrôle de dépassement de capacité pour les conversions et les opérations arithmétiques de type intégral.</span><span class="sxs-lookup"><span data-stu-id="38c8f-103">The `unchecked` keyword is used to suppress overflow-checking for integral-type arithmetic operations and conversions.</span></span>
 
-<span data-ttu-id="f773e-104">Dans un contexte non vérifié (unchecked), si une expression produit une valeur située hors de la plage du type de destination, le dépassement de capacité n’est pas signalé.</span><span class="sxs-lookup"><span data-stu-id="f773e-104">In an unchecked context, if an expression produces a value that is outside the range of the destination type, the overflow is not flagged.</span></span> <span data-ttu-id="f773e-105">Par exemple, comme le calcul dans l’exemple suivant s’effectue dans un bloc ou une expression `unchecked`, le fait que le résultat est trop grand pour un entier est ignoré et `int1` se voit assigner la valeur -2,147,483,639.</span><span class="sxs-lookup"><span data-stu-id="f773e-105">For example, because the calculation in the following example is performed in an `unchecked` block or expression, the fact that the result is too large for an integer is ignored, and `int1` is assigned the value -2,147,483,639.</span></span>
+<span data-ttu-id="38c8f-104">Dans un contexte non vérifié (unchecked), si une expression produit une valeur située hors de la plage du type de destination, le dépassement de capacité n’est pas signalé.</span><span class="sxs-lookup"><span data-stu-id="38c8f-104">In an unchecked context, if an expression produces a value that is outside the range of the destination type, the overflow is not flagged.</span></span> <span data-ttu-id="38c8f-105">Par exemple, comme le calcul dans l’exemple suivant s’effectue dans un bloc ou une expression `unchecked`, le fait que le résultat est trop grand pour un entier est ignoré et `int1` se voit assigner la valeur -2,147,483,639.</span><span class="sxs-lookup"><span data-stu-id="38c8f-105">For example, because the calculation in the following example is performed in an `unchecked` block or expression, the fact that the result is too large for an integer is ignored, and `int1` is assigned the value -2,147,483,639.</span></span>
 
 [!code-csharp[csrefKeywordsChecked#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#5)]
 
-<span data-ttu-id="f773e-106">Si l’environnement `unchecked` est supprimé, une erreur de compilation se produit.</span><span class="sxs-lookup"><span data-stu-id="f773e-106">If the `unchecked` environment is removed, a compilation error occurs.</span></span> <span data-ttu-id="f773e-107">Le dépassement de capacité peut être détecté au moment de la compilation, car tous les termes de l’expression sont des constantes.</span><span class="sxs-lookup"><span data-stu-id="f773e-107">The overflow can be detected at compile time because all the terms of the expression are constants.</span></span>
+<span data-ttu-id="38c8f-106">Si l’environnement `unchecked` est supprimé, une erreur de compilation se produit.</span><span class="sxs-lookup"><span data-stu-id="38c8f-106">If the `unchecked` environment is removed, a compilation error occurs.</span></span> <span data-ttu-id="38c8f-107">Le dépassement de capacité peut être détecté au moment de la compilation, car tous les termes de l’expression sont des constantes.</span><span class="sxs-lookup"><span data-stu-id="38c8f-107">The overflow can be detected at compile time because all the terms of the expression are constants.</span></span>
 
-<span data-ttu-id="f773e-108">Les expressions qui contiennent des termes non constants sont non vérifiées par défaut au moment de la compilation et de l’exécution.</span><span class="sxs-lookup"><span data-stu-id="f773e-108">Expressions that contain non-constant terms are unchecked by default at compile time and run time.</span></span> <span data-ttu-id="f773e-109">Consultez [checked](checked.md) pour plus d’informations sur l’activation d’un environnement vérifié (checked).</span><span class="sxs-lookup"><span data-stu-id="f773e-109">See [checked](checked.md) for information about enabling a checked environment.</span></span>
+<span data-ttu-id="38c8f-108">Les expressions qui contiennent des termes non constants sont non vérifiées par défaut au moment de la compilation et de l’exécution.</span><span class="sxs-lookup"><span data-stu-id="38c8f-108">Expressions that contain non-constant terms are unchecked by default at compile time and run time.</span></span> <span data-ttu-id="38c8f-109">Consultez [checked](checked.md) pour plus d’informations sur l’activation d’un environnement vérifié (checked).</span><span class="sxs-lookup"><span data-stu-id="38c8f-109">See [checked](checked.md) for information about enabling a checked environment.</span></span>
 
-<span data-ttu-id="f773e-110">Étant donné que la vérification de dépassement de capacité prend du temps, l’utilisation de code non vérifié dans les situations où il n’existe aucun danger de dépassement de capacité peut améliorer les performances.</span><span class="sxs-lookup"><span data-stu-id="f773e-110">Because checking for overflow takes time, the use of unchecked code in situations where there is no danger of overflow might improve performance.</span></span> <span data-ttu-id="f773e-111">Toutefois, si un dépassement de capacité est possible, il convient d’utiliser un environnement vérifié (checked).</span><span class="sxs-lookup"><span data-stu-id="f773e-111">However, if overflow is a possibility, a checked environment should be used.</span></span>
+<span data-ttu-id="38c8f-110">Étant donné que la vérification de dépassement de capacité prend du temps, l’utilisation de code non vérifié dans les situations où il n’existe aucun danger de dépassement de capacité peut améliorer les performances.</span><span class="sxs-lookup"><span data-stu-id="38c8f-110">Because checking for overflow takes time, the use of unchecked code in situations where there is no danger of overflow might improve performance.</span></span> <span data-ttu-id="38c8f-111">Toutefois, si un dépassement de capacité est possible, il convient d’utiliser un environnement vérifié (checked).</span><span class="sxs-lookup"><span data-stu-id="38c8f-111">However, if overflow is a possibility, a checked environment should be used.</span></span>
 
-## <a name="example"></a><span data-ttu-id="f773e-112">Exemple</span><span class="sxs-lookup"><span data-stu-id="f773e-112">Example</span></span>
+## <a name="example"></a><span data-ttu-id="38c8f-112">Exemple</span><span class="sxs-lookup"><span data-stu-id="38c8f-112">Example</span></span>
 
-<span data-ttu-id="f773e-113">L’exemple de code suivant montre comment utiliser le mot clé `unchecked`.</span><span class="sxs-lookup"><span data-stu-id="f773e-113">This sample shows how to use the `unchecked` keyword.</span></span>
+<span data-ttu-id="38c8f-113">L’exemple de code suivant montre comment utiliser le mot clé `unchecked`.</span><span class="sxs-lookup"><span data-stu-id="38c8f-113">This sample shows how to use the `unchecked` keyword.</span></span>
 
 [!code-csharp[csrefKeywordsChecked#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsChecked/CS/csrefKeywordsChecked.cs#2)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="f773e-114">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="f773e-114">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="38c8f-114">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="38c8f-114">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="f773e-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f773e-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="38c8f-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="38c8f-115">See also</span></span>
 
-- [<span data-ttu-id="f773e-116">Référence C#</span><span class="sxs-lookup"><span data-stu-id="f773e-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
-- [<span data-ttu-id="f773e-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="f773e-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="f773e-118">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="f773e-118">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="f773e-119">Checked et unchecked</span><span class="sxs-lookup"><span data-stu-id="f773e-119">Checked and Unchecked</span></span>](checked-and-unchecked.md)
-- [<span data-ttu-id="f773e-120">checked</span><span class="sxs-lookup"><span data-stu-id="f773e-120">checked</span></span>](checked.md)
+- [<span data-ttu-id="38c8f-116">Référence C#</span><span class="sxs-lookup"><span data-stu-id="38c8f-116">C# Reference</span></span>](../../../csharp/language-reference/index.md)
+- [<span data-ttu-id="38c8f-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="38c8f-117">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="38c8f-118">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="38c8f-118">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="38c8f-119">Checked et unchecked</span><span class="sxs-lookup"><span data-stu-id="38c8f-119">Checked and Unchecked</span></span>](checked-and-unchecked.md)
+- [<span data-ttu-id="38c8f-120">checked</span><span class="sxs-lookup"><span data-stu-id="38c8f-120">checked</span></span>](checked.md)
