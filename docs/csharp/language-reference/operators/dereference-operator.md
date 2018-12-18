@@ -1,5 +1,6 @@
 ---
-title: -&gt;, opérateur (Informations de référence sur C#)
+title: -&gt;, opérateur - Référence C#
+ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - ->_CSharpKeyword
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: 178724ede105d809bd812461121a38d5a0e90517
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb1ccd026f403e68565c5c7681943d8017578d01
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144128"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234888"
 ---
-# <a name="-gt-operator-c-reference"></a>-&gt;, opérateur (Informations de référence sur C#)
+# <a name="-gt-operator-c-reference"></a>-&gt;, opérateur (Référence C#)
 
 L’opérateur d’accès au membre pointeur `->` combine l’accès au membre et l’indirection du pointeur.
 

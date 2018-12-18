@@ -1,5 +1,6 @@
 ---
-title: unsafe, mot clé (référence C#)
+title: unsafe, mot clé -Référence C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unsafe_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 79cb246c4094f02d1319d28fcc94d0d3d5bd9cb5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 81a293a6922a71f7428167c50aed064d7387a099
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128425"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236620"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (référence C#)
 
@@ -33,7 +34,7 @@ La portée du contexte unsafe s’étend de la liste de paramètres à la fin de
 unsafe static void FastCopy ( byte* ps, byte* pd, int count ) {...}
 ```
 
-Vous pouvez également avoir recours à un bloc unsafe pour utiliser un code unsafe dans ce bloc. Exemple :
+Vous pouvez également avoir recours à un bloc unsafe pour utiliser un code unsafe dans ce bloc. Par exemple :
 
 ```csharp
 unsafe

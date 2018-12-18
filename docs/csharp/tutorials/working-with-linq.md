@@ -3,22 +3,22 @@ title: Utilisation de LINQ
 description: Ce didacticiel vous apprend à générer des séquences avec LINQ, à écrire des méthodes pour les requêtes LINQ et à faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126316"
+ms.locfileid: "53170806"
 ---
 # <a name="working-with-linq"></a>Utilisation de LINQ
 
 ## <a name="introduction"></a>Introduction
 
-Ce didacticiel vous présente un certain nombre de fonctionnalités de .NET Core et du langage C#. Vous apprendrez à :
+Ce tutoriel vous présente les fonctionnalités de .NET Core et du langage C#. Vous apprendrez à :
 
-*   générer des séquences avec LINQ ;
-*   écrire des méthodes utilisables dans des requêtes LINQ ;
-*   faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
+*   Générer des séquences avec LINQ.
+*   Écrire des méthodes utilisables dans des requêtes LINQ.
+*   Faire la distinction entre l’évaluation stricte et l’évaluation paresseuse.
 
 Vous apprendrez ces techniques en créant une application qui illustre l’une des compétences de base de tout magicien : le [mélange faro](https://en.wikipedia.org/wiki/Faro_shuffle). En quelques mots, le mélange faro est une technique qui consiste à diviser un paquet de cartes en deux moitiés exactes, puis à intercaler une carte sur deux de chacune des deux moitiés de façon à reconstruire le jeu d’origine.
 

@@ -1,5 +1,6 @@
 ---
-title: readonly, mot clé (référence C#)
+title: readonly, mot clé - Référence C#
+ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e2fdb92ad2f044aa74201676ed8cb89bb51de5f5
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146168"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239837"
 ---
 # <a name="readonly-c-reference"></a>readonly (référence C#)
 
@@ -80,7 +81,7 @@ public readonly struct Point
 }
 ```
 
-L’ajout d’un champ non marqué `readonly` génère l’erreur `CS8340` du compilateur : « Les champs d’instance de structs readonly doivent être en lecture seule ».
+L’ajout d’un champ non marqué `readonly` génère l’erreur du compilateur `CS8340` : « Les champs d’instance de structs en lecture seule doivent être en lecture seule. »
 
 ## <a name="ref-readonly-return-example"></a>Exemple de retour ref readonly
 

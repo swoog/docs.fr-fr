@@ -1,17 +1,18 @@
 ---
-title: uint, mot clé (référence C#)
+title: uint, mot clé - Référence C#
+ms.custom: seodec18
 ms.date: 03/14/2017
 f1_keywords:
 - uint
 - uint_CSharpKeyword
 helpviewer_keywords:
 - uint keyword [C#]
-ms.openlocfilehash: 86cbb216bd960251ebd78916fae7865aa10aa5fc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e22468eea63ce082f2e9842e6ec307aba1888964
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149690"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241598"
 ---
 # <a name="uint-c-reference"></a>uint (référence C#)
 
@@ -56,7 +57,7 @@ Quand un littéral entier n’a pas de suffixe, son type est le premier des type
 
 ## <a name="conversions"></a>Conversions
 
-Il existe une conversion implicite prédéfinie de `uint` en [long](long.md), [ulong](ulong.md), [float](float.md), [double](double.md) et [decimal](decimal.md). Exemple :
+Il existe une conversion implicite prédéfinie de `uint` en [long](long.md), [ulong](ulong.md), [float](float.md), [double](double.md) et [decimal](decimal.md). Par exemple :
 
 ```csharp
 float myFloat = 4294967290;   // OK: implicit conversion to float

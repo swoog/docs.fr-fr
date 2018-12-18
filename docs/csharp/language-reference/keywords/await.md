@@ -1,5 +1,6 @@
 ---
-title: await (référence C#)
+title: await - Référence C#
+ms.custom: seodec18
 ms.date: 05/22/2017
 f1_keywords:
 - await_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c80d6598540700fdb8559497f10c66726c384519
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239681"
 ---
 # <a name="await-c-reference"></a>await (référence C#)
 L’opérateur `await` est appliqué à une tâche dans une méthode asynchrone pour insérer un point d’interruption dans l’exécution de la méthode jusqu’à ce que la tâche attendue se termine. La tâche représente un travail en cours.  
@@ -30,7 +31,7 @@ La tâche à laquelle l’opérateur `await` est appliqué est généralement re
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Pour obtenir un exemple complet, consultez [Procédure pas à pas : accès au web avec async et await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Vous pouvez télécharger l’exemple à partir des [exemples de code pour les développeurs](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) sur le site web de Microsoft. L'exemple est dans le projet AsyncWalkthrough_HttpClient.  
+>  Pour un exemple complet, consultez [Procédure pas à pas : Accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Vous pouvez télécharger l’exemple à partir des [exemples de code pour les développeurs](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) sur le site web de Microsoft. L'exemple est dans le projet AsyncWalkthrough_HttpClient.  
   
 Comme indiqué dans l’exemple précédent, si `await` est appliqué au résultat d’un appel de méthode qui retourne un `Task<TResult>`, le type de l’expression `await` est `TResult`. Si `await` est appliqué au résultat d’un appel de méthode qui retourne un `Task`, le type de l’expression `await` est `void`. L'exemple suivant illustre la différence.  
   
@@ -56,7 +57,7 @@ Si vous attendez une méthode async retournant des tâches qui lève une excepti
   
 Si vous attendez une méthode async retournant des tâches qui est annulée, l’opérateur `await` lève de nouveau une exception <xref:System.OperationCanceledException>.  
   
-Une tâche qui se trouve dans un état d'erreur peut refléter plusieurs exceptions. Par exemple, la tâche peut être le résultat d’un appel à <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quand vous attendez une telle tâche, l'opération await lève à nouveau une seule des exceptions. Toutefois, vous ne pouvez pas prédire laquelle de ces exceptions est de nouveau levée.  
+Une tâche qui se trouve dans un état d'erreur peut refléter plusieurs exceptions. Par exemple, la tâche peut être le résultat d'un appel à <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>. Quand vous attendez une telle tâche, l'opération await lève à nouveau une seule des exceptions. Toutefois, vous ne pouvez pas prédire laquelle de ces exceptions est de nouveau levée.  
   
 Pour obtenir des exemples de gestion des erreurs dans les méthodes asynchrones, consultez [try-catch](../../../csharp/language-reference/keywords/try-catch.md).  
   
@@ -69,5 +70,5 @@ L’exemple précédent utilise C# 7.1, qui prend en charge la [méthode `async`
 
 ## <a name="see-also"></a>Voir aussi  
 - [Programmation asynchrone avec Async et Await](../../../csharp/programming-guide/concepts/async/index.md)   
-- [Procédure pas à pas : accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [Procédure pas à pas : Accès au web avec Async et Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 - [async](../../../csharp/language-reference/keywords/async.md)
