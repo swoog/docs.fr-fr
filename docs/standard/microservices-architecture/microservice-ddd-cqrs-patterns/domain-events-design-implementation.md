@@ -1,15 +1,15 @@
 ---
 title: Événements de domaine. Conception et implémentation
-description: 'Architecture des microservices .NET pour les applications .NET en conteneur | Événements de domaine : conception et implémentation'
+description: Architecture des microservices .NET pour les applications .NET conteneurisées | Obtenir une vue détaillée des événements de domaine, un concept essentiel pour établir la communication entre les agrégats.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 3daab93a97c57521ae6f16ea2498c3f36f30d795
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.date: 10/08/2018
+ms.openlocfilehash: fc71e661a5fd2de2a69da36df0fc60616b149802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937125"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127847"
 ---
 # <a name="domain-events-design-and-implementation"></a>Événements de domaine : conception et implémentation
 
@@ -17,13 +17,21 @@ Utilisez des événements de domaine pour implémenter explicitement les effets 
 
 ## <a name="what-is-a-domain-event"></a>Qu’est-ce qu’un événement de domaine ?
 
-Un événement est quelque chose qui s’est produit dans le passé. Logiquement, un événement de domaine est quelque chose qui s’est produit dans un domaine particulier, et dont vous voulez que les autres composants du domaine (in-process) soient informés pour éventuellement y réagir.
+Un événement est quelque chose qui s’est produit dans le passé. Un événement de domaine est quelque chose qui s’est produit dans le domaine et dont vous voulez que les autres parties du même domaine (in-process) soient informées. Les parties notifiées réagissent généralement aux événements.
 
-Les événements de domaine présentent l’avantage important de pouvoir être exprimés de manière explicite et non implicite lorsque des effets secondaires se produisent dans un domaine. Ces effets doivent être cohérents, c’est-à-dire que soit toutes les opérations relatives à la tâche se produisent, soit aucune ne se produit. En outre, les événements de domaine permettent une meilleure séparation des classes appartenant au même domaine.
+Un avantage important des événements de domaine est que les effets secondaires peuvent être exprimés de façon explicite.
 
-Par exemple, si vous utilisez Entity Framework et des entités, voire des agrégats, si un cas d’usage doit provoquer des effets secondaires, ceux-ci seront implémentés comme un concept implicite dans le code couplé après la survenue d’un problème. Toutefois, si vous voyez uniquement ce code, vous pouvez ne pas savoir si ce code (l’effet secondaire) fait partie de l’opération principale ou s’il s’agit réellement d’un effet secondaire. En revanche, l’utilisation d’événements de domaine rend le concept explicite et l’intègre au langage omniprésent. Par exemple, dans l’application eShopOnContainers, la création d’une commande ne se résume pas à la commande. L’application met à jour ou crée un agrégat d’acheteur basé sur l’utilisateur d’origine, car l’utilisateur n’est pas un acheteur tant qu’il n’a pas passé de commande. Si vous utilisez des événements de domaine, vous pouvez exprimer explicitement cette règle de domaine dans le langage omniprésent fourni par les experts du domaine.
+Par exemple, si vous utilisez simplement Entity Framework et qu’il doit y avoir une réaction à un événement, vous allez probablement coder ce dont vous avez besoin d’une façon étroitement liée à ce qui déclenche l’événement. Ainsi, la règle est implicitement, couplée au code, et vous pouvez espérer qu’il suffit de regarder dans le code pour se rendre compte que la règle y est implémentée.
 
-Les événements de domaine sont quelque peu similaires aux événements de type messagerie, avec toutefois une différence importante. Avec les systèmes de messagerie réels, la mise en file d’attente des messages, les répartiteurs de messages et les bus de services utilisant le protocole AMPQ, les messages sont toujours envoyés de manière asynchrone sur plusieurs processus et ordinateurs. Cela est utile pour l’intégration de plusieurs contextes délimités ou de plusieurs microservices, voire d’applications différentes. Toutefois, avec les événements de domaine, vous devez déclencher un événement à partir de l’opération de domaine actuellement exécutée, et les effets secondaires doivent se produire dans le même domaine.
+D’un autre côté, l’utilisation d’événements de domaine rend le concept explicite, car un `DomainEvent` et au moins un `DomainEventHandler` sont impliqués.
+
+Par exemple, dans l’application eShopOnContainers, quand une commande est créée, l’utilisateur devient un acheteur : par conséquent, un `OrderStartedDomainEvent` est déclenché et géré dans le `ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler`, de sorte que le concept sous-jacent est évident.
+
+En résumé, les événements de domaine vous aident à exprimer explicitement les règles du domaine dans le langage courant fourni par les experts du domaine. Les événements de domaine permettent aussi une meilleure séparation des préoccupations entre les classes au sein du même domaine.
+
+Il est important de vérifier que, tout comme pour une transaction de base de données, toutes les opérations liées à un événement de domaine se terminent correctement ou que ce n’est le cas pour aucune d’entre elles.
+
+Les événements de domaine sont similaires aux événements de type message, avec cependant une différence importante. Avec les systèmes de messagerie réels, la mise en file d’attente des messages, les répartiteurs de messages et les bus de services utilisant le protocole AMPQ, les messages sont toujours envoyés de manière asynchrone sur plusieurs processus et ordinateurs. Cela est utile pour l’intégration de plusieurs contextes délimités ou de plusieurs microservices, voire d’applications différentes. Toutefois, avec les événements de domaine, vous devez déclencher un événement à partir de l’opération de domaine actuellement exécutée, et les effets secondaires doivent se produire dans le même domaine.
 
 Les événements de domaine et leurs effets secondaires (les actions déclenchées par la suite qui sont gérées par les gestionnaires d’événements) doivent se produire presque immédiatement, généralement in-process, et dans le même domaine. Par conséquent, les événements de domaine peuvent être synchrones ou asynchrones. Cependant, les événements d’intégration doivent toujours être asynchrones.
 
@@ -31,52 +39,58 @@ Les événements de domaine et leurs effets secondaires (les actions déclenché
 
 D’un point de vue sémantique, les événements de domaine et d’intégration sont identiques : ce sont des notifications à propos de quelque chose qui vient de se produire. Toutefois, leur implémentation doit être différente. Les événements de domaine ne sont que des messages envoyés vers un répartiteur d’événements de domaine, qui peut être implémenté comme un médiateur en mémoire basé sur un conteneur IoC ou toute autre méthode.
 
-En revanche, le rôle des événements d’intégration est de propager les transactions et les mises à jour validées sur d’autres sous-systèmes, tels que des microservices, des contextes délimités ou des applications externes. Par conséquent, ils doivent se produire uniquement si l’entité est rendue persistante, puisque dans de nombreux scénarios, en cas d’échec, l’opération n’est jamais effectuée dans son intégralité.
+En revanche, le rôle des événements d’intégration est de propager les transactions et les mises à jour validées sur d’autres sous-systèmes, tels que des microservices, des contextes délimités ou des applications externes. Ainsi, ils doivent se produire seulement si l’entité est rendue persistante ; sinon, c’est comme si l’opération toute entière ne s’était jamais produite.
 
-En outre, comme nous l’avons déjà dit, les événements d’intégration doivent être basés sur une communication asynchrone entre plusieurs microservices (d’autres contextes délimités), voire entre plusieurs systèmes/applications externes. Par conséquent, l’interface du bus d’événements a besoin d’une infrastructure permettant une communication entre processus et distribuée entre des services potentiellement distants. Elle peut reposer sur un bus de services commercial, sur des files d’attente, sur une base de données partagée utilisée comme une boîte aux lettres, ou sur tout autre système de messagerie distribué et idéalement basé sur les opérations d’envoi (push).
+Comme mentionné auparavant, les événements d’intégration doivent être basés sur une communication asynchrone entre plusieurs microservices (d’autres contextes délimités), ou même entre des systèmes/applications externes.
+
+Par conséquent, l’interface du bus d’événements a besoin d’une infrastructure permettant une communication entre processus et distribuée entre des services potentiellement distants. Elle peut reposer sur un bus de services commercial, sur des files d’attente, sur une base de données partagée utilisée comme une boîte aux lettres, ou sur tout autre système de messagerie distribué et idéalement basé sur les opérations d’envoi (push).
 
 ## <a name="domain-events-as-a-preferred-way-to-trigger-side-effects-across-multiple-aggregates-within-the-same-domain"></a>Utilisation des événements de domaine comme méthode par défaut de déclenchement des effets secondaires sur plusieurs agrégats appartenant à un même domaine
 
-Si l’exécution d’une commande liée à une instance d’agrégat nécessite que d’autres règles de domaine soient exécutées sur un ou plusieurs autres agrégats, vous devez concevoir et implémenter ces effets secondaires de manière à ce qu’ils soient déclenchés par les événements de domaine. Comme le montre la Figure 9-14, et c’est là l’un des principaux cas d’usage, un événement de domaine doit être utilisé pour propager les changements d’état sur plusieurs agrégats appartenant au même modèle de domaine.
+Si l’exécution d’une commande liée à une instance d’agrégat nécessite que d’autres règles de domaine soient exécutées sur un ou plusieurs autres agrégats, vous devez concevoir et implémenter ces effets secondaires de manière à ce qu’ils soient déclenchés par les événements de domaine. Comme le montre la figure 7-14, et c’est là un des principaux cas d’utilisation, un événement de domaine doit être utilisé pour propager les changements d’état sur plusieurs agrégats au sein du même modèle de domaine.
 
-![](./media/image15.png)
+![La cohérence entre les agrégats est obtenue via des événements de domaine : l’agrégat Order (Commande) envoie un événement de domaine OrderStarted qui est géré pour mettre à jour l’agrégat Buyer (Acheteur). ](./media/image15.png)
 
-**Figure 9-14**. Utilisation des événements de domaine pour obtenir la cohérence entre les différents agrégats d’un même domaine
+**Figure 7-14**. Utilisation des événements de domaine pour obtenir la cohérence entre les différents agrégats d’un même domaine
 
 Dans la figure ci-dessus, lorsque l’utilisateur démarre la création d’une commande, l’événement de domaine OrderStarted déclenche la création d’un objet Acheteur dans le microservice de commande, en se basant sur les informations de l’utilisateur d’origine provenant du microservice d’identité (avec les informations fournies dans la commande CreateOrder). L’événement de domaine est généré par l’agrégat de commande lors de sa création.
 
 Vous pouvez également abonner l’agrégat racine aux événements déclenchés par les membres de ses agrégats (entités enfants). Par exemple, chaque entité enfant d’OrderItem peut déclencher un événement lorsque le prix du produit est supérieur à un montant donné, ou lorsque le montant du produit est trop élevé. L’agrégat racine peut ensuite recevoir ces événements et effectuer un calcul global ou un agrégat.
 
-Il est important de comprendre que cette communication basée sur les événements n’est pas implémentée directement dans les agrégats. Vous devez implémenter des gestionnaires d’événements de domaine. La gestion des événements de domaine est située au niveau de l’application. La couche de modèle de domaine doit se concentrer uniquement sur la logique de domaine (que seuls des experts en domaines sont à même de comprendre), et non sur l’infrastructure de l’application (par exemple, les gestionnaires et les actions de persistance des effets secondaires utilisant des dépôts). Par conséquent, c’est au niveau de la couche Application que les gestionnaires d’événements de domaine doivent déclencher des actions lorsqu’un événement de domaine est déclenché.
+Il est important de comprendre que cette communication basée sur les événements n’est pas implémentée directement dans les agrégats. Vous devez implémenter des gestionnaires d’événements de domaine.
+
+La gestion des événements de domaine est située au niveau de l’application. La couche de modèle de domaine doit se concentrer uniquement sur la logique de domaine (que seuls des experts en domaines sont à même de comprendre), et non sur l’infrastructure de l’application (par exemple, les gestionnaires et les actions de persistance des effets secondaires utilisant des dépôts). Par conséquent, c’est au niveau de la couche Application que les gestionnaires d’événements de domaine doivent déclencher des actions lorsqu’un événement de domaine est déclenché.
 
 Les événements de domaine peuvent également servir à déclencher autant d’actions d’application que nécessaire, et plus important encore, ils doivent permettre l’augmentation future du nombre d’actions d’une manière découplée. Par exemple, lorsque vous démarrez la création de la commande, vous pouvez publier un événement de domaine pour propager ces informations sur d’autres agrégats ou même pour déclencher des actions telles que des notifications.
 
-Le point essentiel est le nombre ouvert d’actions à exécuter lorsqu’un événement de domaine se produit. Avec le temps, le nombre d’actions et de règles dans le domaine et dans l’application va augmenter. La complexité ou le nombre d’actions d’effet secondaire lors d’un événement vont augmenter avec le temps. Toutefois, si votre code était couplé avec « glue » (c’est-à-dire que les objets seraient simplement instanciés avec le mot clé new en C\#), chaque fois que vous auriez besoin d’ajouter une nouvelle action, une modification du code d’origine serait nécessaire. Cela pourrait entraîner de nouveaux bogues, car chaque nouvelle exigence nécessiterait la modification du code d’origine. Cela va à l’encontre du [principe ouvert/fermé](https://en.wikipedia.org/wiki/Open/closed_principle), issu des principes [SOLID](https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)). En outre, le volume de la classe d’origine orchestrant les opérations ne ferait qu’augmenter, ce qui irait à l’encontre du [principe de responsabilité unique](https://en.wikipedia.org/wiki/Single_responsibility_principle).
+Le point essentiel est le nombre ouvert d’actions à exécuter lorsqu’un événement de domaine se produit. Avec le temps, le nombre d’actions et de règles dans le domaine et dans l’application va augmenter. La complexité ou le nombre d’actions d’effet secondaire lors d’un événement vont augmenter avec le temps. Cependant, si votre code était fortement couplé (c’est-à-dire en créant des objets spécifiques avec `new`), chaque fois que vous avez besoin d’ajouter une nouvelle action, vous devez aussi changer le code en cours d’exécution et le code testé.
+
+Cette modification peut entraîner de nouveaux bogues, et cette approche va également à l’encontre du [principe ouvert/fermé](https://en.wikipedia.org/wiki/Open/closed_principle) de [SOLID](https://en.wikipedia.org/wiki/SOLID). En outre, le volume de la classe d’origine orchestrant les opérations ne ferait qu’augmenter, ce qui irait à l’encontre du [principe de responsabilité unique](https://en.wikipedia.org/wiki/Single_responsibility_principle).
 
 En revanche, si vous utilisez des événements de domaine, vous pouvez créer une implémentation affinée et découplée en séparant les responsabilités à l’aide de la méthode suivante :
 
-1.  Envoyez une commande (par exemple, CreateOrder).
-2.  Recevez la commande dans un gestionnaire de commandes.
-    -   Exécutez la transaction d’un seul agrégat.
-    -   (Facultatif) Déclenchez des événements de domaine pour les effets secondaires (par exemple, OrderStartedDomainEvent).
-1.  Gérez les événements de domaine (dans le processus actuel) qui vont exécuter un nombre ouvert d’effets secondaires dans plusieurs agrégats ou actions d’application. Exemple :
-    -   Vérifiez ou créez l’acheteur et la méthode de paiement.
-    -   Créez et envoyez un événement d’intégration associé au bus d’événements pour propager les états sur les microservices ou déclencher des actions externes, comme l’envoi d’un e-mail à l’acheteur.
-    -   Gérez les autres effets secondaires.
+1. Envoyez une commande (par exemple, CreateOrder).
+2. Recevez la commande dans un gestionnaire de commandes.
+   - Exécutez la transaction d’un seul agrégat.
+   - (Facultatif) Déclenchez des événements de domaine pour les effets secondaires (par exemple, OrderStartedDomainEvent).
+3. Gérez les événements de domaine (dans le processus actuel) qui vont exécuter un nombre ouvert d’effets secondaires dans plusieurs agrégats ou actions d’application. Exemple :
+   - Vérifiez ou créez l’acheteur et la méthode de paiement.
+   - Créez et envoyez un événement d’intégration associé au bus d’événements pour propager les états sur les microservices ou déclencher des actions externes, comme l’envoi d’un e-mail à l’acheteur.
+   - Gérez les autres effets secondaires.
 
-Comme le montre la Figure 9-15, à partir du même événement de domaine, vous pouvez gérer plusieurs actions liées aux autres agrégats du domaine ou à d’autres actions d’application devant être exécutées sur les microservices en se connectant aux événements d’intégration et au bus d’événements.
+Comme le montre la figure 7-15, à partir du même événement de domaine, vous pouvez gérer plusieurs actions liées aux autres agrégats du domaine ou à d’autres actions d’application à exécuter sur les microservices qui se connectent aux événements d’intégration et au bus d’événements.
 
-![](./media/image16.png)
+![Il peut exister plusieurs gestionnaires pour le même événement de domaine dans la couche Application, un gestionnaire peut résoudre la cohérence entre les agrégats, et un autre gestionnaire peut publier un événement d’intégration, pour que d’autres microservices puissent en faire quelque chose.](./media/image16.png)
 
-**Figure 9-15**. Gestion de plusieurs actions par domaine
+**Figure 7-15**. Gestion de plusieurs actions par domaine
 
 Les gestionnaires d’événements se trouvent en général dans la couche Application, car vous allez utiliser les objets d’infrastructure comme les dépôts ou une API d’application pour le comportement du microservice. Dans ce sens, les gestionnaires d’événements sont similaires aux gestionnaires de commandes, car tous deux font partie de la couche Application. La principale différence est qu’une commande ne doit être traitée qu’une seule fois. Un événement de domaine peut être traité zéro ou *n* fois, car il peut être reçu par plusieurs récepteurs ou gestionnaires d’événements, chacun ayant un objectif différent.
 
-La possibilité d’un nombre ouvert de gestionnaires pour chaque événement de domaine permet d’ajouter plusieurs règles de domaine sans impacter votre code actuel. Par exemple, pour implémenter la règle métier suivante qui doit se produire juste après un événement, vous pouvez simplement ajouter quelques gestionnaires d’événements (voire un seul) :
+La possibilité d’avoir un nombre quelconque de gestionnaires pour chaque événement de domaine vous permet d’ajouter autant de règles de domaine que nécessaire, sans impacter votre code actuel. Par exemple, pour implémenter la règle métier suivante, vous pouvez simplement ajouter quelques gestionnaires d’événements (voire un seul) :
 
-Lorsque le montant total dépensé par un client (quel que soit le nombre de commandes) dépasse 6 000 $, appliquer une remise de 10 % à chaque nouvelle commande et envoyer un e-mail au client pour l’informer de cette remise sur ses commandes futures.
+> Lorsque le montant total dépensé par un client (quel que soit le nombre de commandes) dépasse 6 000 $, appliquer une remise de 10 % à chaque nouvelle commande et envoyer un e-mail au client pour l’informer de cette remise sur ses commandes futures.
 
-## <a name="implementing-domain-events"></a>Implémentation des événements de domaine
+## <a name="implement-domain-events"></a>Implémenter des événements de domaine
 
 En C#, un événement de domaine est une simple structure ou classe contenant des données, tel qu’un objet de transfert de données (DTO), avec toutes les informations relatives à ce qui vient de se passer dans le domaine, comme dans l’exemple suivant :
 
@@ -108,19 +122,21 @@ public class OrderStartedDomainEvent : INotification
 
 Il s’agit essentiellement d’une classe qui contient toutes les données associées à l’événement OrderStarted.
 
-En ce qui concerne le langage omniprésent du domaine, dans la mesure où un événement est quelque chose qui s’est produit dans le passé, le nom de classe de l’événement doit être représenté comme un verbe au passé, comme dans OrderStartedDomainEvent ou OrderShippedDomainEvent. C’est ainsi qu’est implémenté l’événement de domaine dans le microservice de commande dans eShopOnContainers.
+En ce qui concerne le langage omniprésent du domaine, dans la mesure où un événement est quelque chose qui s’est produit dans le passé, le nom de classe de l’événement doit être représenté comme un verbe au passé, comme dans OrderStartedDomainEvent ou OrderShippedDomainEvent. C’est ainsi qu’est implémenté l’événement de domaine dans le microservice Ordering de l’application eShopOnContainers.
 
-Comme mentionné précédemment, l’une des caractéristiques les plus importantes des événements est, puisqu’ils se sont produits dans le passé, ils ne doivent pas changer. Par conséquent, il doit s’agir d’une classe immuable. Dans le code précédent, vous pouvez voir qu’en dehors de l’objet, les propriétés sont en lecture seule. La seule façon de mettre à jour l’objet est via le constructeur lorsque vous créez l’objet d’événement.
+Comme mentionné précédemment, l’une des caractéristiques les plus importantes des événements est, puisqu’ils se sont produits dans le passé, ils ne doivent pas changer. Par conséquent, il doit s’agir d’une classe immuable. Dans le code précédent, vous pouvez voir que les propriétés sont en lecture seule. Il n’existe aucun moyen de mettre à jour l’objet : vous pouvez seulement définir des valeurs quand vous le créez.
 
-### <a name="raising-domain-events"></a>Déclenchement des événements de domaine
+Il est important de souligner ici que si les événements de domaine devaient être traités de façon asynchrone en utilisant une file d’attente qui a nécessité la sérialisation et la désérialisation des objets d’événement, les propriétés devraient être définies comme étant privées et non pas en lecture seule : le désérialiseur pourrait alors affecter les valeurs après extraction de la file d’attente. Ceci n’est pas un problème dans le microservice Ordering, car la publication/abonnement de l’événement de domaine est implémentée de façon synchrone avec MediatR.
+
+### <a name="raise-domain-events"></a>Déclencher des événements de domaine
 
 L’étape suivante consiste à déclencher un événement de domaine pour qu’il atteigne ses gestionnaires d’événements associés. Il existe pour cela plusieurs méthodes.
 
-Udi Dahan proposait à l’origine (dans plusieurs billets de blog comme, par exemple, [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) d’utiliser une classe statique pour gérer et déclencher les événements. Cela peut inclure une classe statique nommée DomainEvents qui déclenche des événements de domaine immédiatement après son appel, en utilisant une syntaxe similaire à celle-ci : DomainEvents.Raise(Event myEvent). Jimmy Bogard a écrit un billet de blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) qui recommande une approche similaire.
+Udi Dahan proposait à l’origine (dans plusieurs billets de blog comme, par exemple, [Domain Events – Take 2](http://udidahan.com/2008/08/25/domain-events-take-2/)) d’utiliser une classe statique pour gérer et déclencher les événements. Ceci peut inclure une classe statique nommée DomainEvents qui déclenche des événements de domaine immédiatement quand elle est appelée, en utilisant une syntaxe comme `DomainEvents.Raise(Event myEvent)`. Jimmy Bogard a écrit un billet de blog ([Strengthening your domain: Domain Events](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)) qui recommande une approche similaire.
 
 Toutefois, lorsque la classe d’événements de domaine est statique, elle distribue aussi les événements aux gestionnaires immédiatement. Les tests et le débogage deviennent alors plus difficiles, car les gestionnaires d’événements avec une logique d’effets secondaires sont exécutés immédiatement après le déclenchement de l’événement. Lorsque vous effectuez des tests et des débogages, vous devez vous concentrer uniquement sur ce qui se passe actuellement dans les classes d’agrégats. Vous ne voulez pas être soudainement redirigé vers d’autres gestionnaires d’événements pour des effets secondaires liés à d’autres agrégats ou à une autre logique d’application. C’est pour cela que les autres approches ont évolué, comme nous allons le voir dans la section suivante.
 
-#### <a name="the-deferred-approach-for-raising-and-dispatching-events"></a>Approche différée pour déclencher et distribuer les événements
+#### <a name="the-deferred-approach-to-raise-and-dispatch-events"></a>Approche différée pour déclencher et distribuer des événements
 
 Au lieu de distribuer immédiatement les événements vers un gestionnaire d’événements de domaine, il est préférable d’ajouter les événements de domaine à une collection, puis de distribuer les événements de domaine *juste avant* ou *juste* *après* avoir validé la transaction (comme avec SaveChanges dans Entity Framework). Cette approche est expliquée par Jimmy Bogard dans le billet de blog [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/).
 
@@ -132,21 +148,20 @@ L’approche différée est celle utilisée par l’aplication eShopOnContainers
 public abstract class Entity
 {
      //... 
-    private List<INotification> _domainEvents;
-    public List<INotification> DomainEvents => _domainEvents;
+     private List<INotification> _domainEvents;
+     public List<INotification> DomainEvents => _domainEvents; 
 
-    public void AddDomainEvent(INotification eventItem)
-    {
-        _domainEvents = _domainEvents ?? new List<INotification>();
-        _domainEvents.Add(eventItem);
-    }
+     public void AddDomainEvent(INotification eventItem)
+     {
+         _domainEvents = _domainEvents ?? new List<INotification>();
+         _domainEvents.Add(eventItem);
+     }
 
-    public void RemoveDomainEvent(INotification eventItem)
-    {
-        if (_domainEvents is null) return;
-        _domainEvents.Remove(eventItem);
-    }
-    // ...
+     public void RemoveDomainEvent(INotification eventItem)
+     {
+         _domainEvents?.Remove(eventItem);
+     }
+     //... Additional code
 }
 ```
 
@@ -195,33 +210,33 @@ Avec ce code, vous distribuez les événements des entités à leurs gestionnair
 
 Le résultat global est que vous avez découplé le déclenchement d’un événement de domaine (un simple ajout à une liste en mémoire) de sa distribution à un gestionnaire d’événements. En outre, selon le type de répartiteur que vous utilisez, vous pouvez distribuer les événements de façon synchrone ou asynchrone.
 
-N’oubliez pas qu’ici, les limites transactionnelles jouent un rôle important. Si votre unité de travail et votre transaction peuvent s’étendre sur plusieurs agrégats (comme lorsque vous utilisez EF Core et une base de données relationnelle), cela peut bien fonctionner. Toutefois, si la transaction ne peut pas s’étendre sur plusieurs agrégats, comme lorsque vous utilisez une base de données NoSQL telle qu’Azure DocumentDB, vous devrez implémenter des étapes supplémentaires pour obtenir la cohérence. C’est une des raisons pour lesquelles l’ignorance de la persistance n’est pas universelle. Elle dépend du système de stockage que vous utilisez.
+N’oubliez pas qu’ici, les limites transactionnelles jouent un rôle important. Si votre unité de travail et votre transaction peuvent s’étendre sur plusieurs agrégats (comme lorsque vous utilisez EF Core et une base de données relationnelle), cela peut bien fonctionner. Cependant, si la transaction ne peut pas s’étendre sur plusieurs agrégats, par exemple quand vous utilisez une base de données NoSQL comme Azure CosmosDB, vous devez implémenter des étapes supplémentaires pour obtenir la cohérence. C’est une des raisons pour lesquelles l’ignorance de la persistance n’est pas universelle. Elle dépend du système de stockage que vous utilisez. 
 
 ### <a name="single-transaction-across-aggregates-versus-eventual-consistency-across-aggregates"></a>Méthode de la transaction unique sur plusieurs agrégats versus méthode de la cohérence à terme
 
 Effectuer une même transaction sur plusieurs agrégats ou compter sur la cohérence à terme de ces agrégats ? Il s’agit là d’une question controversée. De nombreux auteurs DDD comme Eric Evans et Vaughn Vernon préconisent la règle « une transaction = un agrégat », et prennent donc position pour la méthode de la cohérence à terme. Par exemple, dans son livre *Domain-Driven Design*, Eric Evans dit ceci :
 
-Une règle qui s’étend sur plusieurs agrégats ne peut pas être constamment à jour. Grâce au traitement des événements, au traitement par lots et autres mécanismes de mise à jour, les autres dépendances peuvent être résolues dans un temps donné. (page 128)
+> Une règle qui s’étend sur plusieurs agrégats ne peut pas être constamment à jour. Grâce au traitement des événements, au traitement par lots et autres mécanismes de mise à jour, les autres dépendances peuvent être résolues dans un temps donné. (page 128)
 
 Vaughn Vernon dit ce qui suit dans [Effective Aggregate Design. Part II: Making Aggregates Work Together](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf) :
 
-Par conséquent, si l’exécution d’une commande sur une instance d’agrégat nécessite que d’autres règles métier soient exécutées sur un ou plusieurs agrégats, utilisez la cohérence à terme \[...\] Il existe un moyen pratique de prendre en charge la cohérence à terme dans un modèle DDD. Une méthode d’agrégation publie un événement de domaine qui est remis à un ou plusieurs abonnés asynchrones.
+> Par conséquent, si l’exécution d’une commande sur une instance d’agrégat nécessite que d’autres règles métier soient exécutées sur un ou plusieurs agrégats, utilisez la cohérence à terme \[...\] Il existe un moyen pratique de prendre en charge la cohérence à terme dans un modèle DDD. Une méthode d’agrégation publie un événement de domaine qui est remis à un ou plusieurs abonnés asynchrones.
 
-Cette logique est basée sur l’exécution de transactions affinées plutôt que de transactions s’étendant sur un grand nombre d’agrégats ou d’entités. L’idée est que, dans le deuxième cas, le nombre de verrous de base de données sera important dans les applications à grande échelle nécessitant une haute scalabilité. Le fait de reconnaître que les applications hautement scalables n’ont pas besoin d’une cohérence transactionnelle instantanée entre les différents agrégats aide à accepter le concept de cohérence à terme. Les modifications atomiques ne sont généralement pas nécessaires à l’entreprise, et il revient aux experts en domaines de décider si certaines opérations ont besoin de transactions atomiques. Si une opération nécessite toujours une transaction atomique entre plusieurs agrégats, vous pouvez vous demander si la taille de votre agrégat doit être augmentée ou si vous l’avez conçu correctement.
+Cette logique est basée sur l’exécution de transactions affinées plutôt que de transactions s’étendant sur un grand nombre d’agrégats ou d’entités. L’idée est que, dans le deuxième cas, le nombre de verrous de base de données sera important dans les applications à grande échelle nécessitant une haute scalabilité. Le fait de reconnaître que les applications à haute scalabilité n’ont pas besoin d’une cohérence transactionnelle instantanée entre les différents agrégats aide à accepter le concept de cohérence à terme. Les modifications atomiques ne sont généralement pas nécessaires à l’entreprise, et il revient aux experts en domaines de décider si certaines opérations ont besoin de transactions atomiques. Si une opération nécessite toujours une transaction atomique entre plusieurs agrégats, vous pouvez vous demander si la taille de votre agrégat doit être augmentée ou si vous l’avez conçu correctement.
 
 Toutefois, les autres développeurs et architectes comme Jimmy Bogard sont d’accord pour utiliser une même transaction sur plusieurs agrégats, mais uniquement si les agrégats supplémentaires sont associés à des effets secondaires de la même commande d’origine. Par exemple, dans [A better domain events pattern](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/), Bogard dit ceci :
 
-En règle générale, je veux que les effets secondaires d’un événement de domaine se produisent dans la même transaction logique, mais pas nécessairement dans la même étendue de déclenchement de l’événement domaine \[...\] Juste avant de valider notre transaction, nous distribuons nos événements à leurs gestionnaires respectifs.
+> En règle générale, je veux que les effets secondaires d’un événement de domaine se produisent dans la même transaction logique, mais pas nécessairement dans la même étendue de déclenchement de l’événement domaine \[...\] Juste avant de valider notre transaction, nous distribuons nos événements à leurs gestionnaires respectifs.
 
 Si vous distribuez les événements de domaine juste *avant* de valider la transaction d’origine, c’est parce que les effets secondaires doivent être inclus dans la même transaction. Par exemple, si la méthode SaveChanges du DbContext EF échoue, la transaction annule toutes les modifications, y compris le résultat de toutes les opérations d’effet secondaire implémentées par les gestionnaires d’événements de domaine associés. Cela est dû au fait que la durée de vie de DbContext est configurée par défaut comme étant limitée. Par conséquent, l’objet DbContext est partagé par plusieurs objets de dépôt qui sont instanciés dans la même étendue ou le même graphe d’objet. Cela coïncide avec l’étendue HttpRequest lors du développement d’API web ou d’applications MVC.
 
-En réalité, les deux approches (transaction atomique et cohérence à terme) peuvent être appropriées. Cela dépend en réalité des exigences métier ou de votre domaine, et de ce que les experts en domaines vous disent. Cela dépend également du niveau de scalabilité dont doit disposer le service (les transactions plus granulaires ont un impact moindre sur les verrous de base de données). Enfin, cela dépend de l’investissement que vous êtes prêt à mettre dans votre code, puisque la cohérence à terme nécessite un code plus complexe afin de détecter les éventuelles incohérences entre les agrégats et la nécessité d’implémenter des actions compensatoires. Prenez en compte le fait que si vous validez des modifications dans l’agrégat d’origine et que par la suite, lorsque les événements sont distribués, un problème se produit et les gestionnaires d’événements ne peuvent pas valider leurs effets secondaires, vous aurez des incohérences entre les agrégats.
+En réalité, les deux approches (une seule transaction atomique et la cohérence à terme) peuvent être appropriées. Cela dépend en réalité des exigences métier ou de votre domaine, et de ce que les experts en domaines vous disent. Cela dépend également du niveau de scalabilité dont doit disposer le service (les transactions plus granulaires ont un impact moindre sur les verrous de base de données). Enfin, cela dépend de l’investissement que vous êtes prêt à mettre dans votre code, puisque la cohérence à terme nécessite un code plus complexe afin de détecter les éventuelles incohérences entre les agrégats et la nécessité d’implémenter des actions compensatoires. Prenez en compte le fait que si vous validez des modifications dans l’agrégat d’origine et que par la suite, quand les événements sont distribués, si un problème se produit et que les gestionnaires d’événements ne peuvent pas valider leurs effets secondaires, vous aurez des incohérences entre les agrégats.
 
 Pour permettre les actions compensatoires, vous pouvez stocker les événements de domaine dans des tables de base de données supplémentaires, pour qu’elles fassent partie de la transaction d’origine. Ensuite, vous pouvez avoir un traitement par lots qui détecte des incohérences et exécute des actions compensatoires en comparant la liste des événements à l’état actuel des agrégats. Les actions compensatoires sont un sujet complexe qui nécessite une analyse approfondie, impliquant à la fois les utilisateurs et les experts en domaines.
 
 Quoi qu’il en soit, vous pouvez choisir l’approche dont vous avez besoin. Toutefois, l’approche différée du début (qui déclenche les événements avant de les valider, permettant ainsi d’utiliser une seule transaction) est la plus simple lorsque vous utilisez EF Core et une base de données relationnelle. Elle est plus facile à implémenter et convient dans de nombreux cas en entreprise. Il s’agit également de l’approche utilisée dans le microservice de commande de l’application eShopOnContainers.
 
-Mais comment faire pour distribuer ces événements à leurs gestionnaires d’événements respectifs ? Quel est cet objet \_mediator que vous voyez dans l’exemple précédent ? Il s’agit de techniques et d’artefacts que vous pouvez utiliser pour le mappage des événements aux gestionnaires d’événements.
+Mais comment faire pour distribuer ces événements à leurs gestionnaires d’événements respectifs ? Qu’est-ce que l’objet `_mediator` que vous voyez dans l’exemple précédent ? Il est lié aux techniques et aux artefacts que vous utilisez pour le mappage des événements aux gestionnaires d’événements.
 
 ### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>Répartiteur d’événements de domaine : mappage des événements aux gestionnaires d’événements
 
@@ -229,13 +244,13 @@ Une fois que vous êtes en mesure de distribuer ou publier les événements, vou
 
 L’une des méthodes possibles consiste à utiliser un système de messagerie réel, voire un bus d’événements, éventuellement basé sur un bus de services au lieu d’événements en mémoire. Toutefois, pour le premier cas, un système de messagerie réel serait excessif pour traiter les événements de domaine, puisque vous avez seulement besoin de traiter ces événements au sein d’un même processus (c’est-à-dire, dans le même domaine et la même couche Application).
 
-Une autre façon de mapper des événements vers plusieurs gestionnaires d’événements est d’utiliser l’inscription des types dans un conteneur IoC, pour déduire dynamiquement où distribuer les événements. En d’autres termes, vous devez savoir ce dont les gestionnaires d’événements ont besoin pour recevoir un événement spécifique. La Figure 9-16 montre une approche simplifiée de cela.
+Une autre façon de mapper des événements à plusieurs gestionnaires d’événements est d’utiliser l’inscription des types dans un conteneur IoC, pour déduire dynamiquement où distribuer les événements. En d’autres termes, vous devez savoir ce dont les gestionnaires d’événements ont besoin pour recevoir un événement spécifique. La figure 7-16 montre une approche simplifiée de ceci.
 
-![](./media/image17.png)
+![L’injection de dépendances peut être utilisée pour associer des événements à des gestionnaires d’événements : c’est l’approche utilisée par MediatR](./media/image17.png)
 
-**Figure 9-16**. Répartiteur d’événements de domaine utilisant l’IoC
+**Figure 7-16**. Répartiteur d’événements de domaine utilisant l’IoC
 
-Vous pouvez créer vous-même tous les éléments et artefacts pour implémenter cette approche. Toutefois, vous pouvez également utiliser les bibliothèques disponibles telles que [MediatR](https://github.com/jbogard/MediatR), qui utilisent votre conteneur IoC en arrière-plan. Vous pouvez donc directement utiliser les interfaces prédéfinies, ainsi que les méthodes de publication/distribution de l’objet _mediator.
+Vous pouvez créer vous-même tous les éléments et artefacts pour implémenter cette approche. Cependant, vous pouvez aussi utiliser des bibliothèques comme [MediatR](https://github.com/jbogard/MediatR), qui utilisent votre conteneur IoC en arrière-plan. Vous pouvez donc directement utiliser les interfaces prédéfinies, ainsi que les méthodes de publication/distribution de l’objet _mediator.
 
 Dans le code, vous devez d’abord inscrire les types de gestionnaires d’événements dans votre conteneur IoC, comme le montre l’exemple suivant du [microservice de commande eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs) :
 
@@ -323,7 +338,7 @@ Le code du gestionnaire d’événements de domaine précédent est considéré 
 
 #### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>Les événements de domaine peuvent générer des événements d’intégration devant être publiés en dehors des limites du microservice.
 
-Enfin, il est important de mentionner qu’il est parfois utile de propager des événements sur plusieurs microservices. C’est considéré comme un événement d’intégration, qui peut être publié via un bus d’événements à partir de n’importe quel gestionnaire d’événements de domaine.
+Enfin, il est important de mentionner qu’il est parfois utile de propager des événements sur plusieurs microservices. Cette propagation est un événement d’intégration, qui peut être publié via un bus d’événements à partir de n’importe quel gestionnaire d’événements de domaine.
 
 ## <a name="conclusions-on-domain-events"></a>Conclusions sur les événements de domaine
 
@@ -331,40 +346,39 @@ Comme nous l’avons vu, les événements de domaine permettent d’implémenter
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
--   **Greg Young. What is a Domain Event?**
-    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+- **Greg Young. What is a Domain Event?** \
+  [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
--   **Jan Stenberg. Domain Events and Eventual Consistency**
-    [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
+- **Jan Stenberg. Domain Events and Eventual Consistency** \
+  [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
--   **Jimmy Bogard. A better domain events pattern**
-    [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+- **Jimmy Bogard. A better domain events pattern** \
+  [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+- **Vaughn Vernon. Effective Aggregate Design Part II: Making Aggregates Work Together** \
+  [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
--   **Jimmy Bogard. Strengthening your domain: Domain Events**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
+- **Jimmy Bogard. Strengthening your domain: Domain Events** \
+  [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
--   **Tony Truong. Domain Events Pattern Example**
-    [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
+- **Tony Truong. Domain Events Pattern Example** \
+  [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
 
--   **Udi Dahan. How to create fully encapsulated Domain Models**
-    [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+- **Udi Dahan. How to create fully encapsulated Domain Models** \
+  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
--   **Udi Dahan. Domain Events – Take 2**
-    [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+- **Udi Dahan. Domain Events – Take 2** \
+  [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
--   **Udi Dahan. Domain Events – Salvation**
-    [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
+- **Udi Dahan. Domain Events – Salvation** \
+  [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Don’t publish Domain Events, return them!**
-    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+- **Jan Kronquist. Don’t publish Domain Events, return them!** \
+  [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
-
+- **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures** \
+  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 >[!div class="step-by-step"]
-[Précédent](client-side-validation.md)
-[Suivant](infrastructure-persistence-layer-design.md)
+>[Précédent](client-side-validation.md)
+>[Suivant](infrastructure-persistence-layer-design.md)
