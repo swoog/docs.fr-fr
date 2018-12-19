@@ -1,15 +1,16 @@
 ---
-title: Valeurs de retour de Main() (Guide de programmation C#)
+title: Valeurs de retour de Main() - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8337303f97a3a654f5a3718bf0714ee876a7dc9f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205207"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242644"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Valeurs de retour de Main() (Guide de programmation C#)
 
@@ -96,5 +97,5 @@ Quand le point d’entrée de l’application retourne `Task` ou `Task<int>`, le
 - [Guide de programmation C#](../../programming-guide/index.md)
 - [Référence C#](../index.md)
 - [Main() et arguments de ligne de commande](index.md)
-- [Comment : afficher les arguments de ligne de commande](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
+- [Guide pratique pour afficher les arguments de ligne de commande](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
 - [Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

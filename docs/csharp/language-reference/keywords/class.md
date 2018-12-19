@@ -1,5 +1,6 @@
 ---
-title: class, mot clé (référence C#)
+title: class, mot clé - Référence C#
+ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: d436dee14280d86062834ac131bbe4775705d748
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086062"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286492"
 ---
 # <a name="class-c-reference"></a>class (référence C#)
 
@@ -93,7 +94,7 @@ L’accès aux membres privés de `Child` à partir de `Main` est uniquement pos
 
 Du fait que les types déclarés dans une classe sans modificateur d’accès sont par défaut `private`, les données membres dans cet exemple sont toujours `private` si le mot clé est supprimé.
 
-Notez enfin que pour l’objet créé à l’aide du constructeur par défaut (`child3`), le champ de l’âge est initialisé par défaut à la valeur zéro.
+Notez enfin que pour l’objet créé à l’aide du constructeur par défaut (`child3`), le champ `age` est initialisé par défaut à la valeur zéro.
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 

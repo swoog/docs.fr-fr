@@ -1,17 +1,18 @@
 ---
-title: Utilisation de propriétés (Guide de programmation C#)
+title: Utilisation de propriétés - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 50dda6a27081762a4e8b407ca5af94659b47da45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dd5d85feb520e10a5d89cf91878d092695efb13a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515852"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243060"
 ---
 # <a name="using-properties-c-programming-guide"></a>Utilisation de propriétés (Guide de programmation C#)
 Les propriétés allient des caractéristiques des champs et des méthodes. Pour l’utilisateur d’un objet, une propriété s’apparente à un champ. Pour accéder à celle-ci, il doit utiliser la même syntaxe. Pour l’implémenteur d’une classe, une propriété est constituée d’un ou deux blocs de code, représentant un accesseur [get](../../../csharp/language-reference/keywords/get.md) et/ou un accesseur [set](../../../csharp/language-reference/keywords/set.md). Le bloc de code correspondant à l’accesseur `get` est exécuté à la lecture de la propriété ; le bloc de code correspondant à l’accesseur `set` est exécuté au moment où une nouvelle valeur est assignée à la propriété. Une propriété sans accesseur `set` est considérée comme étant en lecture seule. Une propriété sans accesseur `get` est considérée comme étant en écriture seule. Une propriété qui possède les deux accesseurs est en lecture-écriture.  
@@ -20,7 +21,7 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
  Les propriétés ont diverses utilisations : elles peuvent valider les données avant d’autoriser une modification ; elles peuvent exposer de manière transparente les données d’une classe quand celles-ci sont effectivement extraites d’une autre source, telle qu’une base de données ; elles peuvent effectuer une action quand des données sont modifiées, comme déclencher un événement ou modifier la valeur d’autres champs.  
   
- Les propriétés sont déclarées dans le bloc de classe en spécifiant le niveau d’accès du champ, suivi du type de la propriété, du nom de la propriété et d’un bloc de code qui déclare un accesseur `get` et/ou un accesseur `set`. Exemple :  
+ Les propriétés sont déclarées dans le bloc de classe en spécifiant le niveau d’accès du champ, suivi du type de la propriété, du nom de la propriété et d’un bloc de code qui déclare un accesseur `get` et/ou un accesseur `set`. Par exemple :  
   
  [!code-csharp[csProgGuideProperties#7](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_1.cs)]  
   
@@ -33,7 +34,7 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
  [!code-csharp[csProgGuideProperties#8](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_2.cs)]  
   
- Quand vous faites référence à la propriété (pas en tant que cible d’une assignation), l’accesseur `get` est appelé pour lire la valeur de la propriété. Exemple :  
+ Quand vous faites référence à la propriété (pas en tant que cible d’une assignation), l’accesseur `get` est appelé pour lire la valeur de la propriété. Par exemple :  
   
  [!code-csharp[csProgGuideProperties#9](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_3.cs)]  
   
@@ -43,7 +44,7 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
  [!code-csharp[csProgGuideProperties#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_4.cs)]  
   
- L’accesseur `get` peut être utilisé pour retourner la valeur du champ ou pour la calculer et la retourner. Exemple :  
+ L’accesseur `get` peut être utilisé pour retourner la valeur du champ ou pour la calculer et la retourner. Par exemple :  
   
  [!code-csharp[csProgGuideProperties#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_5.cs)]  
   
@@ -54,7 +55,7 @@ Les propriétés allient des caractéristiques des champs et des méthodes. Pour
   
  [!code-csharp[csProgGuideProperties#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_6.cs)]  
   
- Quand vous assignez une valeur à la propriété, l’accesseur `set` est appelé en utilisant un argument qui fournit la nouvelle valeur. Exemple :  
+ Quand vous assignez une valeur à la propriété, l’accesseur `set` est appelé en utilisant un argument qui fournit la nouvelle valeur. Par exemple :  
   
  [!code-csharp[csProgGuideProperties#13](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-properties_7.cs)]  
   

@@ -1,17 +1,18 @@
 ---
-title: Méthodes d’extension (Guide de programmation C#)
+title: Méthodes d’extension - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#], adding to existing types
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: 7ebd04665d91f599edcb4a5c07680216dfb8925a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8da1deec2238f74a9b594c85feab0445ec2a35b7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840899"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241312"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Méthodes d’extension (Guide de programmation C#)
 Les méthodes d'extension vous permettent d'« ajouter » des méthodes à des types existants sans créer un type dérivé, ni recompiler ou modifier le type d'origine. Les méthodes d'extension sont un type particulier de méthode statique appelées comme s'il s'agissait de méthodes d'instance sur le type étendu. Pour le code client écrit en C#, F# et Visual Basic, il n’y a aucune différence apparente lors de l’appel entre une méthode d’extension et les méthodes qui sont réellement définies dans un type.  
@@ -43,7 +44,7 @@ int i = s.WordCount();
   
  Dans votre code, vous appelez la méthode d'extension avec la syntaxe de méthode d'instance. Toutefois, le langage intermédiaire (IL) généré par le compilateur traduit votre code dans un appel sur la méthode statique. Par conséquent, le principe d'encapsulation n'est pas réellement violé. En fait, les méthodes d’extension ne peuvent pas accéder aux variables privées dans le type qu’elles étendent.  
   
- Pour plus d’informations, consultez [Guide pratique pour implémenter et appeler une méthode d’extension personnalisée](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).  
+ Pour plus d'informations, voir [Procédure : Implémenter et appeler une méthode d’extension personnalisée](../../../csharp/programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).  
   
  En général, vous appellerez probablement les méthodes d’extension beaucoup plus souvent que vous n’implémenterez vos propres méthodes. Comme les méthodes d'extension sont appelées à l'aide de la syntaxe de méthode d'instance, aucune connaissance particulière n'est requise pour les utiliser depuis le code client. Pour activer des méthodes d'extension pour un type particulier, ajoutez simplement une directive `using` pour l'espace de noms dans lequel les méthodes sont définies. Par exemple, pour utiliser les opérateurs de requête standard, ajoutez la directive `using` à votre code :  
   

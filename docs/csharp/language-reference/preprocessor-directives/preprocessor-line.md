@@ -1,17 +1,18 @@
 ---
-title: '#line (informations de référence sur C#)'
+title: '#line - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#line'
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: f3ebecda7761e6249656e0b9f8543ae1252b844e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5933cf04a3fc8a1e986bff95ad1f38481883a340
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524536"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244988"
 ---
 # <a name="line-c-reference"></a>#line (référence C#)
 `#line` vous permet de changer la numérotation de lignes du compilateur et (éventuellement) le nom de fichier pour les erreurs et les avertissements.
@@ -35,7 +36,7 @@ class MainClass
     }  
 }  
 ```  
-La compilation produit la sortie suivante :
+La compilation produit la sortie suivante :
 
 ```console
 Special(200,13): warning CS0168: The variable 'i' is declared but never used

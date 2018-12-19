@@ -1,5 +1,6 @@
 ---
-title: default (référence C#)
+title: default - Référence C#
+ms.custom: seodec18
 ms.date: 08/04/2017
 f1_keywords:
 - default
@@ -7,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
-ms.openlocfilehash: e867de9ca18508445ee77c6c05aa12fe6b973d39
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ae145e5711a1bccf062d705037cdd0e852ffe0c2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857139"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234758"
 ---
 # <a name="default-c-reference"></a>default (référence C#)
 
 Le mot clé `default` peut être utilisé dans l’instruction `switch` ou dans une expression de valeur par défaut :
 
-- [Instruction switch](switch.md) : spécifie l’étiquette par défaut.
+- [Instruction switch](switch.md) : spécifie l’étiquette par défaut.
 
-- [Expressions de valeur par défaut](../../programming-guide/statements-expressions-operators/default-value-expressions.md) : produisent la valeur par défaut d’un type.
+- [Expressions de valeur par défaut](../../programming-guide/statements-expressions-operators/default-value-expressions.md) : produit la valeur par défaut d’un type.
 
 ## <a name="see-also"></a>Voir aussi
 

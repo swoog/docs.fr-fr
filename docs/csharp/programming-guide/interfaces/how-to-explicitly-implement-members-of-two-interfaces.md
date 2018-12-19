@@ -1,18 +1,19 @@
 ---
-title: 'Comment : implémenter de manière explicite des membres de deux interfaces (Guide de programmation C#)'
+title: 'Procédure : Implémenter de manière explicite des membres de deux interfaces - Guide de programmation C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inheritance [C#], explicitly implementing interface members
 - interfaces [C#], explicitly implementing with inheritance
 ms.assetid: 8b402ddc-dff9-4869-89cb-d718c764e68e
-ms.openlocfilehash: 6c02585b57acef654c6613bef1a276a433763af6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3e03e80279db8c36cb975715f390ff6899d593cb
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514671"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238323"
 ---
-# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Comment : implémenter de manière explicite des membres de deux interfaces (Guide de programmation C#)
+# <a name="how-to-explicitly-implement-members-of-two-interfaces-c-programming-guide"></a>Procédure : Implémenter de manière explicite des membres de deux interfaces (Guide de programmation C#)
 L’implémentation explicite d’une [interface](../../../csharp/language-reference/keywords/interface.md) permet également au programmeur d’implémenter deux interfaces qui ont les mêmes noms de membres et donnent à chaque membre d’interface une implémentation distincte. L’exemple suivant affiche les dimensions d’une zone dans les unités de mesure à la fois métriques et britanniques. La [classe](../../../csharp/language-reference/keywords/class.md) Box implémente deux interfaces, IEnglishDimensions et IMetricDimensions, qui représentent les différents systèmes de mesure. Les deux interfaces ont des noms de membres identiques, Length et Width.  
   
 ## <a name="example"></a>Exemple  
@@ -32,4 +33,4 @@ L’implémentation explicite d’une [interface](../../../csharp/language-refer
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
 - [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
-- [Comment : implémenter de manière explicite des membres d’interface](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)
+- [Guide pratique pour implémenter de manière explicite des membres d’interface](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-interface-members.md)

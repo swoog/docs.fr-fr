@@ -1,17 +1,18 @@
 ---
-title: Guide pratique pour utiliser des expressions lambda dans une requête (Guide de programmation C#)
+title: 'Procédure : Utiliser des expressions lambda dans une requête - Guide de programmation C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 1632466aaa29cb79f053bd3ac2ca42e8b03ea89c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b8adfde95cd2122136cb75e97b4113ee1d80cf9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506482"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238804"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Guide pratique pour utiliser des expressions lambda dans une requête (Guide de programmation C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Procédure : Utiliser des expressions lambda dans une requête (Guide de programmation C#)
 Vous n’utilisez pas d’expressions lambda directement dans la syntaxe de requête, mais vous les utilisez dans les appels de méthode qui peuvent être contenus dans des expressions de requête. En effet, certaines opérations de requête ne peuvent être exprimées que dans une syntaxe de méthode. Pour plus d’informations sur la différence entre la syntaxe de requête et la syntaxe de méthode, consultez [Syntaxe de requête et syntaxe de méthode dans LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Exemple  
@@ -27,7 +28,7 @@ Vous n’utilisez pas d’expressions lambda directement dans la syntaxe de requ
  [!code-csharp[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## <a name="compiling-the-code"></a>Compilation du code  
- Pour exécuter ce code, copiez-collez la méthode dans la `StudentClass` qui est fournie dans [Guide pratique pour interroger une collection d’objets](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md), puis appelez-la à partir de la méthode `Main`.  
+ Pour exécuter ce code, copiez et collez la méthode dans le `StudentClass` qui est fourni dans [Guide pratique pour interroger une collection d’objets](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md) et appelez-la à partir de la méthode `Main`.  
   
 ## <a name="see-also"></a>Voir aussi
 

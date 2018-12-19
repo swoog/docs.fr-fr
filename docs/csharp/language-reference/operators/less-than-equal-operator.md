@@ -1,5 +1,6 @@
 ---
-title: '&lt;=, opérateur (référence C#)'
+title: '&lt;=, opérateur - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <=_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 950ba3fc02e015f2574d123d1fd9adc116aae045
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45595055"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243450"
 ---
 # <a name="lt-operator-c-reference"></a>&lt;=, opérateur (référence C#)
 Tous les types numériques et d’énumération définissent un opérateur relationnel « inférieur ou égal à » (`<=`) qui retourne `true` si le premier opérande est inférieur ou égal au deuxième et `false` dans le cas contraire.  

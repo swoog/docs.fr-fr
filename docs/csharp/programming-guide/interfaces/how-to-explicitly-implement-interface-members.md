@@ -1,17 +1,18 @@
 ---
-title: "Comment : implémenter de manière explicite des membres d'interface (Guide de programmation C#)"
+title: "Procédure : Implémenter de manière explicite des membres d'interface - Guide de programmation C#"
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
-ms.openlocfilehash: 30ea58b7ef3edd757c450b9fca1cc810ff9d17c1
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11ef4eb3e4da0166ae4753b8028edb217f2a487e
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236926"
 ---
-# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Comment : implémenter de manière explicite des membres d'interface (Guide de programmation C#)
+# <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>Procédure : Implémenter de manière explicite des membres d'interface (Guide de programmation C#)
 Cet exemple déclare une [interface](../../../csharp/language-reference/keywords/interface.md), `IDimensions` et une classe `Box`, qui implémente de manière explicite les membres d’interface `getLength` et `getWidth`. Les membres sont accessibles via l’instance d’interface `dimensions`.  
   
 ## <a name="example"></a>Exemple  
@@ -32,4 +33,4 @@ Cet exemple déclare une [interface](../../../csharp/language-reference/keywords
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
 - [Classes et structs](../../../csharp/programming-guide/classes-and-structs/index.md)  
 - [Interfaces](../../../csharp/programming-guide/interfaces/index.md)  
-- [Comment : implémenter de manière explicite des membres de deux interfaces](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)
+- [Guide pratique pour implémenter de manière explicite des membres de deux interfaces](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)

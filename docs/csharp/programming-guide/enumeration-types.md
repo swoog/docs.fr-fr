@@ -1,5 +1,6 @@
 ---
-title: Types énumération (Guide de programmation C#)
+title: Types énumération - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 09/10/2017
 helpviewer_keywords:
 - enumerations [C#]
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 3efedd48303c79bafde3704b0fdd6fcdd465a0a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7c40e16e9c495c5e69dcdd74c3698d51b0d49785
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686126"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240058"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Types énumération (Guide de programmation C#)
 
@@ -85,7 +86,7 @@ Tous les enums sont des instances du type <xref:System.Enum?displayProperty=name
 
 Pour plus d'informations, consultez <xref:System.Enum?displayProperty=nameWithType>.
 
-Vous pouvez également créer une méthode pour un enum à l’aide d’une méthode d’extension. Pour plus d’informations, consultez [Guide pratique pour créer une méthode pour une énumération](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+Vous pouvez également créer une méthode pour un enum à l’aide d’une méthode d’extension. Pour plus d'informations, voir [Procédure : Créer une méthode pour une énumération](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Voir aussi
 

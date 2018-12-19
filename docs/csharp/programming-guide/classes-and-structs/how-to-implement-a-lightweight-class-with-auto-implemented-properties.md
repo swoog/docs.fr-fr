@@ -1,18 +1,19 @@
 ---
-title: Guide pratique pour implémenter une classe Lightweight avec des propriétés implémentées automatiquement (Guide de programmation C#)
+title: 'Procédure : Implémenter une classe Lightweight avec des propriétés implémentées automatiquement - Guide de programmation C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: cdd90685985b4a48b8fb98451eba0d4ebbbbc6bf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: faf7f635a42ece1a30c5bac096a909e32095fc0c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126510"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237231"
 ---
-# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Guide pratique pour implémenter une classe Lightweight avec des propriétés implémentées automatiquement (Guide de programmation C#)
+# <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Procédure : Implémenter une classe Lightweight avec des propriétés implémentées automatiquement (Guide de programmation C#)
 Cet exemple montre comment créer une classe légère immuable qui sert uniquement à encapsuler un jeu de propriétés implémentées automatiquement. Utilisez ce type de construction à la place d'un struct quand vous devez utiliser une sémantique de type de référence.  
   
  Vous pouvez rendre une propriété immuable de deux manières.  Vous pouvez déclarer l’accesseur [set](../../../csharp/language-reference/keywords/set.md) comme étant [private](../../../csharp/language-reference/keywords/private.md).  La propriété peut uniquement être définie dans le type, mais elle est immuable pour les consommateurs.  Vous pouvez autrement déclarer uniquement l’accesseur [get](../../../csharp/language-reference/keywords/get.md), ce qui rend la propriété immuable partout sauf dans le constructeur du type.  

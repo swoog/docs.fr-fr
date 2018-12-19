@@ -1,5 +1,6 @@
 ---
-title: Utilisation d'espaces de noms (Guide de programmation C#)
+title: Utilisation d'espaces de noms - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123395"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235778"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Utilisation d'espaces de noms (Guide de programmation C#)
 Les espaces de noms sont largement utilisés dans les programmes C#, et ce de deux façons différentes. En premier lieu, les classes .NET Framework utilisent les espaces de noms à des fins d’organisation. En deuxième lieu, la déclaration de vos propres espaces de noms peut faciliter le contrôle de la portée des noms de classes et de méthodes dans les projets de programmation de plus grande envergure.  
@@ -65,7 +66,7 @@ Les espaces de noms sont largement utilisés dans les programmes C#, et ce de de
   
  En règle générale, utilisez `::` pour faire référence à un alias d’espace de noms ou `global::` pour faire référence à l’espace de noms global et `.` pour qualifier les types ou les membres.  
   
- C’est une erreur d’utiliser `::` avec un alias qui fait référence à un type plutôt qu’à un espace de noms. Exemple :  
+ C’est une erreur d’utiliser `::` avec un alias qui fait référence à un type plutôt qu’à un espace de noms. Par exemple :  
   
  [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
@@ -92,6 +93,6 @@ Les espaces de noms sont largement utilisés dans les programmes C#, et ce de de
 - [Guide de programmation C#](../../../csharp/programming-guide/index.md)  
 - [Espaces de noms](../../../csharp/programming-guide/namespaces/index.md)  
 - [Mots clés d’espaces de noms](../../../csharp/language-reference/keywords/namespace-keywords.md)  
-- [. opérateur](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [:: (opérateur)](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [. Opérateur](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [:: Opérateur](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

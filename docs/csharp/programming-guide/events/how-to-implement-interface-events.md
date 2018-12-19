@@ -1,18 +1,19 @@
 ---
-title: Guide pratique pour implémenter des événements d'interface (Guide de programmation C#)
+title: "Procédure : Implémenter des événements d'interface - Guide de programmation C#"
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 3620a3e11553bdd6878126388b612113b5722e89
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d52d4d5140e96f81377733e39d1c36886718b706
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863659"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236438"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Guide pratique pour implémenter des événements d'interface (Guide de programmation C#)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Procédure : Implémenter des événements d'interface (Guide de programmation C#)
 Une [interface](../../../csharp/language-reference/keywords/interface.md) peut déclarer un [événement](../../../csharp/language-reference/keywords/event.md). L’exemple suivant montre comment implémenter des événements d’interface dans une classe. En gros, les règles sont les mêmes que quand vous implémentez une propriété ou une méthode d’interface.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Pour implémenter des événements d’interface dans une classe  
@@ -63,4 +64,4 @@ En fournissant vos propres accesseurs, vous pouvez spécifier si les deux évén
 - [Événements](../../../csharp/programming-guide/events/index.md)  
 - [Délégués](../../../csharp/programming-guide/delegates/index.md)  
 - [Implémentation d’interface explicite](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
-- [Comment : déclencher les événements de la classe de base dans les classes dérivées](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [Guide pratique pour déclencher les événements de la classe de base dans les classes dérivées](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

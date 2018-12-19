@@ -1,5 +1,6 @@
 ---
-title: global, mot clé contextuel (référence C#)
+title: global, mot clé contextuel - Référence C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - global
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - global keyword [C#]
 ms.assetid: 8932c16a-6959-42c2-86e7-2c4221ab788b
-ms.openlocfilehash: 837245e31a9a795aa2f13cfc6c33fefb6402801d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9273feb38b14dce61facc0f59b0890c431b9a7a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664473"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240789"
 ---
 # <a name="global-c-reference"></a>global (Référence C#)
 
-Le mot clé contextuel `global`, quand il vient avant l’[opérateur ::](../operators/namespace-alias-qualifer.md), fait référence à l’espace de noms global, qui est l’espace de noms par défaut pour tout programme C# et ne possède pas de nom. Pour plus d’informations, consultez [Guide pratique pour utiliser l’alias d’espace de noms global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
+Le mot clé contextuel `global`, quand il vient avant l’[opérateur ::](../operators/namespace-alias-qualifer.md), fait référence à l’espace de noms global, qui est l’espace de noms par défaut pour tout programme C# et ne possède pas de nom. Pour plus d'informations, voir [Procédure : Utiliser l’alias d’espace de noms global](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,17 +1,18 @@
 ---
-title: '##pragma checksum (référence C#)'
+title: '##pragma checksum - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma checksum'
 helpviewer_keywords:
 - '#pragma checksum [C#]'
 ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
-ms.openlocfilehash: 28a9ccfb9d36e648304a177294904ab1b7f18892
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 83cc6c56f18e5ce284d9e10294f3b3974578fc91
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024543"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235619"
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (Référence C#)
 Génère des sommes de contrôle pour les fichiers sources afin de faciliter le débogage des pages [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -27,7 +28,7 @@ Génère des sommes de contrôle pour les fichiers sources afin de faciliter le 
  Nom du fichier dont les modifications ou les mises à jour doivent faire l’objet d’une surveillance.  
   
  `"{guid}"`  
- Identificateur global unique (GUID) du fichier pour l’algorithme de hachage.  
+ Identificateur global unique (GUID) du fichier pour l’algorithme de hachage.  
   
  `"checksum_bytes"`  
  Chaîne de chiffres hexadécimaux représentant les octets de la somme de contrôle. Doit être un nombre pair de chiffres hexadécimaux. S’il y a un nombre impair de chiffres, un avertissement est généré au moment de la compilation et la directive est ignorée.  

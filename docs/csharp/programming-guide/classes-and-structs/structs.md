@@ -1,16 +1,17 @@
 ---
-title: Structures (Guide de programmation C#)
+title: Structures - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 27d4b0d7edf1b5e89e84ac1df5783d68ebb4efe0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 3f19d0485939e1923c479c1c9fdeb06572a11e14
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259483"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240383"
 ---
 # <a name="structs-c-programming-guide"></a>Structures (Guide de programmation C#)
 
@@ -37,7 +38,7 @@ Pour plus d'informations :
 - [Utilisation de structs](using-structs.md)
 - [Constructeurs](constructors.md)
 - [Types Nullable](../nullable-types/index.md)
-- [Comment : différencier le passage d’un struct et le passage d’une référence de classe à une méthode](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
+- [Guide pratique pour différencier le passage d’un struct et le passage d’une référence de classe à une méthode](how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)
 - [Guide pratique pour implémenter des conversions définies par l’utilisateur entre des structs](../statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,5 +1,6 @@
 ---
-title: '&lt;&lt;, opérateur (Informations de référence sur C#)'
+title: '&lt;&lt;, opérateur - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <<_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bd52d86c6ab84364d242e594054cfdd03dcc7e66
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677381"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241734"
 ---
 # <a name="ltlt-operator-c-reference"></a>&lt;&lt;, opérateur (Informations de référence sur C#)
 L’opérateur de décalage vers la gauche (`<<`) décale son premier opérande vers la gauche du nombre de bits spécifié par son deuxième opérande. Le deuxième opérande doit être de type [int](../../../csharp/language-reference/keywords/int.md) ou d’un type pour lequel une conversion numérique implicite vers `int` est prédéfinie.  

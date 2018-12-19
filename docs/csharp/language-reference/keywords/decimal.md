@@ -1,5 +1,6 @@
 ---
-title: decimal, mot clé (référence C#)
+title: decimal, mot clé - Référence C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506517"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239457"
 ---
 # <a name="decimal-c-reference"></a>decimal (référence C#)
 
@@ -42,7 +43,7 @@ Les types intégraux sont convertis implicitement en type `decimal` et ont pour 
 decimal myMoney = 300;
 ```
 
-Étant donné qu’il n’y a pas de conversion implicite entre les autres types virgule flottante et le type `decimal`, un cast doit être utilisé pour convertir ces types. Exemple :
+Étant donné qu’il n’y a pas de conversion implicite entre les autres types virgule flottante et le type `decimal`, un cast doit être utilisé pour convertir ces types. Par exemple :
 
 ```csharp
 decimal myMoney = 99.9m;
@@ -104,4 +105,4 @@ Dans cet exemple, le résultat est mis en forme à l'aide de la chaîne de forma
 - [Tableau des types intégrés](../../../csharp/language-reference/keywords/built-in-types-table.md)  
 - [Tableau des conversions numériques implicites](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
 - [Tableau des conversions numériques explicites](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Chaînes de format numériques standard](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

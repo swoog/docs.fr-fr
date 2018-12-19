@@ -1,5 +1,6 @@
 ---
-title: ::, opérateur (référence C#)
+title: ':: Opérateur - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ::_CSharpKeyword
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 077d5835b372897cbe797385271effc5d00bf6e3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2e456be075f3487676228244e0119ff46ed9a538
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525654"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243476"
 ---
-# <a name="-operator-c-reference"></a>::, opérateur (référence C#)
+# <a name="-operator-c-reference"></a>:: Opérateur (référence C#)
 Le qualificateur d’alias d’espace de noms (`::`) s’utilise pour rechercher les identificateurs. Il se place toujours entre deux identificateurs, comme dans cet exemple :  
   
  [!code-csharp[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
@@ -33,7 +34,7 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 ## <a name="for-more-information"></a>Pour plus d'informations  
  Pour obtenir un exemple d’utilisation de l’opérateur `::`, consultez la section suivante :  
   
--   [Comment : utiliser l’alias d’espace de noms global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
+-   [Guide pratique pour utiliser l’alias d’espace de noms global](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)  
   
 ## <a name="c-language-specification"></a>Spécification du langage C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

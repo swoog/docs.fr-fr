@@ -1,5 +1,6 @@
 ---
-title: Hello World -- Votre premier programme (guide de programmation C#)
+title: Hello World -- Votre premier programme - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593046"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236386"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World -- Votre premier programme (guide de programmation C#)
 La procédure suivante crée une version C# du traditionnel programme « Hello World ! » . Le programme affiche la chaîne `Hello World!`  
@@ -110,7 +111,7 @@ La procédure suivante crée une version C# du traditionnel programme « Hello
   
     -   Activez les générations en mode ligne de commande à partir d’une fenêtre d’invite de commandes standard.  
   
-         Consultez [Guide pratique pour définir des variables d’environnement pour la ligne de commande Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         Voir [Guide pratique pour définir des variables d’environnement pour la ligne de commande Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
 3.  Dans la fenêtre d’invite de commandes, accédez au dossier qui contient le fichier `Hello.cs`.  
   
@@ -134,4 +135,4 @@ La procédure suivante crée une version C# du traditionnel programme « Hello
 - [\<paveover>Exemples d’applications C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
 - [Référence C#](../../../csharp/language-reference/index.md)  
 - [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [Bien démarrer avec Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+- [Mises en route de Visual Basic et Visual C#](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

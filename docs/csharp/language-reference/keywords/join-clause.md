@@ -1,5 +1,6 @@
 ---
-title: join, clause (référence C#)
+title: join, clause - Référence C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237161"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236282"
 ---
 # <a name="join-clause-c-reference"></a>join, clause (référence C#)
 
@@ -73,7 +74,7 @@ Vous pouvez effectuer des non-équijointures, des jointures croisées et d’aut
 
 Dans une expression de requête [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], les opérations de jointure sont effectuées sur des collections d’objets. Les collections d’objets ne peuvent pas être « jointes » exactement de la même façon que deux tables relationnelles. Dans [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], les clauses `join` explicites sont nécessaires seulement quand deux séquences sources ne sont pas liées par une relation. Quand vous travaillez avec [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], les tables avec des clés étrangères sont représentées dans le modèle objet en tant que propriétés de la table principale. Par exemple, dans la base de données Northwind, la table Customer a une relation de clé étrangère avec la table Orders. Quand vous mappez les tables au modèle objet, la classe Customer a une propriété Orders qui contient la collection de commandes associées à ce client. En réalité, la jointure a déjà été effectuée pour vous.
 
-Pour plus d’informations sur l’interrogation de tables liées dans le contexte de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], consultez [Procédure : mapper des relations de base de données](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Pour plus d’informations sur l’interrogation de tables liées dans le contexte de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], consultez [Guide pratique pour mapper des relations de base de données](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Clés composites
 

@@ -1,5 +1,6 @@
 ---
-title: '! , opérateur (Informations de référence sur C#)'
+title: '! Opérateur - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '!_CSharpKeyword'
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - logical negation operator (!) [C#]
 - NOT operator [C#]
 ms.assetid: f5ae133f-8f64-4560-b34f-cd9cd5eed4ad
-ms.openlocfilehash: e7477254070e18cdcd0bf6aba600ae7e31bf24c4
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 41bd568e300598e50c5ae6493cc0503c72543870
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924973"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245166"
 ---
-# <a name="-operator-c-reference"></a>! , opérateur (Informations de référence sur C#)
+# <a name="-operator-c-reference"></a>! Opérateur (référence C#)
 L’opérateur de négation logique (`!`) est un opérateur unaire qui nie son opérande. Il est défini pour `bool` et retourne `true` si et seulement si son opérande a la valeur `false`.  
   
 ## <a name="remarks"></a>Notes  

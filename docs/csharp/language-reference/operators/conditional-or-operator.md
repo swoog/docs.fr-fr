@@ -1,5 +1,6 @@
 ---
-title: '||, opérateur (référence C#)'
+title: '||, opérateur - Référence C#'
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "42925538"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244568"
 ---
 # <a name="-operator-c-reference"></a>||, opérateur (référence C#)
 
@@ -25,7 +26,7 @@ L’opérateur logique conditionnel OR `||`, également appelé opérateur logiq
 
 ## <a name="operator-overloadability"></a>Capacité de surcharge de l’opérateur
 
-Un type défini par l’utilisateur ne peut pas surcharger l’opérateur logique conditionnel OR. Toutefois, si un type défini par l’utilisateur surcharge l’opérateur [logique OR](or-operator.md) et les opérateurs [true](../keywords/true-operator.md) et [false](../keywords/false-operator.md) d’une certaine manière, l’opération `||` peut être évaluée pour les opérandes de ce type. Pour plus d’informations, consultez la section [Opérateurs logiques conditionnels définis par l’utilisateur](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [spécification du langage C#](../language-specification/index.md).
+Un type défini par l’utilisateur ne peut pas surcharger l’opérateur logique conditionnel OR. Toutefois, si un type défini par l’utilisateur surcharge l’opérateur [logique OR](or-operator.md) et [les opérateurs true et false](../keywords/true-false-operators.md) d’une certaine manière, l’opération `||` peut être évaluée pour les opérandes de ce type. Pour plus d’informations, consultez la section [Opérateurs logiques conditionnels définis par l’utilisateur](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) de la [spécification du langage C#](../language-specification/index.md).
 
 ## <a name="c-language-specification"></a>spécification du langage C#
 

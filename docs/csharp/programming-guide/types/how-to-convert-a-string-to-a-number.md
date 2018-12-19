@@ -1,5 +1,6 @@
 ---
-title: Guide pratique pour convertir une chaîne en nombre (Guide de programmation C#)
+title: 'Procédure : Convertir une chaîne en nombre - Guide de programmation C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [C#]
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 1f11ba3981b219d3b3a7817afd75fa78f2ccf78a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a75d6dd5fdb74ca3cb6fe28db7415aeb478e2237
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521751"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243216"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Guide pratique pour convertir une chaîne en nombre (Guide de programmation C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Procédure : Convertir une chaîne en nombre (Guide de programmation C#)
 Vous pouvez convertir une [chaîne](../../../csharp/language-reference/keywords/string.md) en nombre en utilisant des méthodes dans la classe <xref:System.Convert> ou en utilisant la méthode `TryParse` des différents types numériques (int, long, float, etc.).  
   
  Si vous avez une chaîne, il est légèrement plus efficace et direct d’appeler une méthode `TryParse` (par exemple [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)).  L'utilisation d'une méthode <xref:System.Convert> s'avère plus utile pour les objets généraux qui implémentent <xref:System.IConvertible>.  
