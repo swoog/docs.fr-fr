@@ -1,63 +1,65 @@
 ---
-title: Mots clés des opérateurs (référence C#)
-ms.date: 07/20/2015
+title: Mots clés des opérateurs - Référence C#
+ms.custom: seodec18
+ms.date: 12/10/2018
 helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e03e1c930b452cf5e4f2c4bb1d06d5363f20c991
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003644"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243602"
 ---
-# <a name="operator-keywords-c-reference"></a><span data-ttu-id="625c0-102">Mots clés des opérateurs (référence C#)</span><span class="sxs-lookup"><span data-stu-id="625c0-102">Operator Keywords (C# Reference)</span></span>
-<span data-ttu-id="625c0-103">Permettent d’effectuer diverses actions comme créer des objets, vérifier le type d’un objet au moment de l’exécution, obtenir la taille d’un type, etc.</span><span class="sxs-lookup"><span data-stu-id="625c0-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="625c0-104">Cette section présente les mots clés suivants :</span><span class="sxs-lookup"><span data-stu-id="625c0-104">This section introduces the following keywords:</span></span>  
-  
--   <span data-ttu-id="625c0-105">[as](../../../csharp/language-reference/keywords/as.md) : convertit un objet en type compatible.</span><span class="sxs-lookup"><span data-stu-id="625c0-105">[as](../../../csharp/language-reference/keywords/as.md) Converts an object to a compatible type.</span></span>  
-  
--   <span data-ttu-id="625c0-106">[await](../../../csharp/language-reference/keywords/await.md) : suspend une méthode async jusqu’à ce qu’une tâche attendue soit terminée.</span><span class="sxs-lookup"><span data-stu-id="625c0-106">[await](../../../csharp/language-reference/keywords/await.md) Suspends an async method until an awaited task is completed.</span></span>  
-  
--   <span data-ttu-id="625c0-107">[is](../../../csharp/language-reference/keywords/is.md) : vérifie le type d’un objet au moment de l’exécution.</span><span class="sxs-lookup"><span data-stu-id="625c0-107">[is](../../../csharp/language-reference/keywords/is.md) Checks the run-time type of an object.</span></span>  
-  
--   [<span data-ttu-id="625c0-108">new</span><span class="sxs-lookup"><span data-stu-id="625c0-108">new</span></span>](../../../csharp/language-reference/keywords/new.md)  
-  
-    -   <span data-ttu-id="625c0-109">[Opérateur new](../../../csharp/language-reference/keywords/new-operator.md) : crée des objets.</span><span class="sxs-lookup"><span data-stu-id="625c0-109">[new Operator](../../../csharp/language-reference/keywords/new-operator.md) Creates objects.</span></span>  
-  
-    -   <span data-ttu-id="625c0-110">[Modificateur new](../../../csharp/language-reference/keywords/new-modifier.md) : masque un membre hérité.</span><span class="sxs-lookup"><span data-stu-id="625c0-110">[new Modifier](../../../csharp/language-reference/keywords/new-modifier.md) Hides an inherited member.</span></span>  
-  
-    -   <span data-ttu-id="625c0-111">[Contrainte new](../../../csharp/language-reference/keywords/new-constraint.md) : qualifie un paramètre de type.</span><span class="sxs-lookup"><span data-stu-id="625c0-111">[new Constraint](../../../csharp/language-reference/keywords/new-constraint.md) Qualifies a type parameter.</span></span>  
-  
--   <span data-ttu-id="625c0-112">[nameof](nameof.md) : obtient le nom de chaîne simple (non qualifié) d’une variable, d’un type ou d’un membre.</span><span class="sxs-lookup"><span data-stu-id="625c0-112">[nameof](nameof.md) Obtains the simple (unqualified) string name of a variable, type, or member.</span></span>
- 
--   <span data-ttu-id="625c0-113">[sizeof](../../../csharp/language-reference/keywords/sizeof.md) : obtient la taille d’un type.</span><span class="sxs-lookup"><span data-stu-id="625c0-113">[sizeof](../../../csharp/language-reference/keywords/sizeof.md) Obtains the size of a type.</span></span>  
-  
--   <span data-ttu-id="625c0-114">[typeof](../../../csharp/language-reference/keywords/typeof.md) : obtient l’objet **System.Type** pour un type.</span><span class="sxs-lookup"><span data-stu-id="625c0-114">[typeof](../../../csharp/language-reference/keywords/typeof.md) Obtains the **System.Type** object for a type.</span></span>  
-  
--   [<span data-ttu-id="625c0-115">true</span><span class="sxs-lookup"><span data-stu-id="625c0-115">true</span></span>](../../../csharp/language-reference/keywords/true.md)  
-  
-    -   <span data-ttu-id="625c0-116">[Opérateur true](../../../csharp/language-reference/keywords/true-operator.md) : retourne la valeur booléenne true pour indiquer qu’une condition est vérifiée et retourne false dans l’autre cas.</span><span class="sxs-lookup"><span data-stu-id="625c0-116">[true Operator](../../../csharp/language-reference/keywords/true-operator.md) Returns the boolean value true to indicate true and returns false otherwise.</span></span>  
-  
-    -   <span data-ttu-id="625c0-117">[Littéral true](../../../csharp/language-reference/keywords/true-literal.md) : représente la valeur booléenne true.</span><span class="sxs-lookup"><span data-stu-id="625c0-117">[true Literal](../../../csharp/language-reference/keywords/true-literal.md) Represents the boolean value true.</span></span>  
-  
--   [<span data-ttu-id="625c0-118">false</span><span class="sxs-lookup"><span data-stu-id="625c0-118">false</span></span>](../../../csharp/language-reference/keywords/false.md)  
-  
-    -   <span data-ttu-id="625c0-119">[Opérateur false](../../../csharp/language-reference/keywords/false-operator.md) : retourne la valeur booléenne true pour indiquer qu’une condition n’est pas vérifiée et retourne false dans l’autre cas.</span><span class="sxs-lookup"><span data-stu-id="625c0-119">[false Operator](../../../csharp/language-reference/keywords/false-operator.md) Returns the Boolean value true to indicate false and returns false otherwise.</span></span>  
-  
-    -   <span data-ttu-id="625c0-120">[Littéral false](../../../csharp/language-reference/keywords/false-literal.md) : représente la valeur booléenne false.</span><span class="sxs-lookup"><span data-stu-id="625c0-120">[false Literal](../../../csharp/language-reference/keywords/false-literal.md) Represents the boolean value false.</span></span>  
-  
--   <span data-ttu-id="625c0-121">[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) : alloue un bloc de mémoire dans la pile.</span><span class="sxs-lookup"><span data-stu-id="625c0-121">[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md) Allocates a block of memory on the stack.</span></span>  
-  
- <span data-ttu-id="625c0-122">Les mots clés suivants, qui peuvent être utilisés comme opérateurs et instructions, sont décrits dans la section [Instructions](../../../csharp/language-reference/keywords/statement-keywords.md) :</span><span class="sxs-lookup"><span data-stu-id="625c0-122">The following keywords, which can be used as operators and as statements, are covered in the [Statements](../../../csharp/language-reference/keywords/statement-keywords.md) section:</span></span>  
-  
--   <span data-ttu-id="625c0-123">[checked](../../../csharp/language-reference/keywords/checked.md) : indique un contexte vérifié.</span><span class="sxs-lookup"><span data-stu-id="625c0-123">[checked](../../../csharp/language-reference/keywords/checked.md) Specifies checked context.</span></span>  
-  
--   <span data-ttu-id="625c0-124">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) : indique un contexte non vérifié.</span><span class="sxs-lookup"><span data-stu-id="625c0-124">[unchecked](../../../csharp/language-reference/keywords/unchecked.md) Specifies unchecked context.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="625c0-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="625c0-125">See Also</span></span>
+# <a name="operator-keywords-c-reference"></a><span data-ttu-id="3ebed-102">Mots clés des opérateurs (référence C#)</span><span class="sxs-lookup"><span data-stu-id="3ebed-102">Operator Keywords (C# Reference)</span></span>
 
-- [<span data-ttu-id="625c0-126">Référence C#</span><span class="sxs-lookup"><span data-stu-id="625c0-126">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="625c0-127">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="625c0-127">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="625c0-128">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="625c0-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="625c0-129">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="625c0-129">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="3ebed-103">Permettent d’effectuer diverses actions comme créer des objets, vérifier le type d’un objet au moment de l’exécution, obtenir la taille d’un type, etc.</span><span class="sxs-lookup"><span data-stu-id="3ebed-103">Used to perform miscellaneous actions such as creating objects, checking the run-time type of an object, obtaining the size of a type, and other actions.</span></span> <span data-ttu-id="3ebed-104">Cette section présente les mots clés suivants :</span><span class="sxs-lookup"><span data-stu-id="3ebed-104">This section introduces the following keywords:</span></span>
+
+- <span data-ttu-id="3ebed-105">[as](as.md) : convertit un objet en type compatible.</span><span class="sxs-lookup"><span data-stu-id="3ebed-105">[as](as.md) Converts an object to a compatible type.</span></span>
+
+- <span data-ttu-id="3ebed-106">[await](await.md) : suspend une méthode [async](async.md) jusqu’à ce qu’une tâche attendue soit terminée.</span><span class="sxs-lookup"><span data-stu-id="3ebed-106">[await](await.md) Suspends an [async](async.md) method until an awaited task is completed.</span></span>
+
+- <span data-ttu-id="3ebed-107">[is](is.md) : vérifie le type de runtime d’un objet, ou (avec C# 7.0) teste une expression par rapport à un modèle.</span><span class="sxs-lookup"><span data-stu-id="3ebed-107">[is](is.md) Checks the run-time type of an object, or (starting with C# 7.0) tests an expression against a pattern.</span></span>
+
+- [<span data-ttu-id="3ebed-108">new</span><span class="sxs-lookup"><span data-stu-id="3ebed-108">new</span></span>](new.md)
+
+  - <span data-ttu-id="3ebed-109">[Opérateur new](new-operator.md) : crée des objets.</span><span class="sxs-lookup"><span data-stu-id="3ebed-109">[new Operator](new-operator.md) Creates objects.</span></span>
+
+  - <span data-ttu-id="3ebed-110">[Modificateur new](new-modifier.md) : masque un membre hérité.</span><span class="sxs-lookup"><span data-stu-id="3ebed-110">[new Modifier](new-modifier.md) Hides an inherited member.</span></span>
+
+  - <span data-ttu-id="3ebed-111">[Contrainte new](new-constraint.md) : qualifie un paramètre de type.</span><span class="sxs-lookup"><span data-stu-id="3ebed-111">[new Constraint](new-constraint.md) Qualifies a type parameter.</span></span>
+
+- <span data-ttu-id="3ebed-112">[nameof](nameof.md) : obtient le nom de chaîne simple (non qualifié) d’une variable, d’un type ou d’un membre.</span><span class="sxs-lookup"><span data-stu-id="3ebed-112">[nameof](nameof.md) Obtains the simple (unqualified) string name of a variable, type, or member.</span></span>
+
+- <span data-ttu-id="3ebed-113">[sizeof](sizeof.md) : obtient la taille d'un type non managé.</span><span class="sxs-lookup"><span data-stu-id="3ebed-113">[sizeof](sizeof.md) Obtains the size of an unmanaged type.</span></span>  
+
+- <span data-ttu-id="3ebed-114">[typeof](typeof.md) : obtient l’objet <xref:System.Type?displayProperty=nameWithType> pour un type.</span><span class="sxs-lookup"><span data-stu-id="3ebed-114">[typeof](typeof.md) Obtains the <xref:System.Type?displayProperty=nameWithType> object for a type.</span></span>  
+
+- [<span data-ttu-id="3ebed-115">true</span><span class="sxs-lookup"><span data-stu-id="3ebed-115">true</span></span>](true.md)  
+
+  - <span data-ttu-id="3ebed-116">[true Operator](true-false-operators.md) : retourne la valeur [bool](bool.md) `true` pour indiquer que l’opérande est true.</span><span class="sxs-lookup"><span data-stu-id="3ebed-116">[true Operator](true-false-operators.md) Returns the [bool](bool.md) value `true` to indicate that the operand is definitely true.</span></span>
+
+  - <span data-ttu-id="3ebed-117">[true Literal](true-literal.md) : représente la valeur [bool](bool.md) `true`.</span><span class="sxs-lookup"><span data-stu-id="3ebed-117">[true Literal](true-literal.md) Represents the [bool](bool.md) value `true`.</span></span>
+
+- [<span data-ttu-id="3ebed-118">false</span><span class="sxs-lookup"><span data-stu-id="3ebed-118">false</span></span>](false.md)  
+
+  - <span data-ttu-id="3ebed-119">[false Operator](true-false-operators.md) : retourne la valeur [bool](bool.md) `true` pour indiquer que l’opérande est false.</span><span class="sxs-lookup"><span data-stu-id="3ebed-119">[false Operator](true-false-operators.md) Returns the [bool](bool.md) value `true` to indicate that the operand is definitely false.</span></span>
+
+  - <span data-ttu-id="3ebed-120">[false Literal](false-literal.md) : représente la valeur [bool](bool.md) `false`.</span><span class="sxs-lookup"><span data-stu-id="3ebed-120">[false Literal](false-literal.md) Represents the [bool](bool.md) value `false`.</span></span>
+
+- <span data-ttu-id="3ebed-121">[stackalloc](stackalloc.md) : alloue un bloc de mémoire dans la pile.</span><span class="sxs-lookup"><span data-stu-id="3ebed-121">[stackalloc](stackalloc.md) Allocates a block of memory on the stack.</span></span>  
+
+<span data-ttu-id="3ebed-122">Les mots clés suivants, qui peuvent être utilisés comme opérateurs et instructions, sont décrits dans la section [Instructions](statement-keywords.md) :</span><span class="sxs-lookup"><span data-stu-id="3ebed-122">The following keywords, which can be used as operators and as statements, are covered in the [Statements](statement-keywords.md) section:</span></span>
+
+- <span data-ttu-id="3ebed-123">[checked](checked.md) : indique un contexte vérifié.</span><span class="sxs-lookup"><span data-stu-id="3ebed-123">[checked](checked.md) Specifies checked context.</span></span>  
+
+- <span data-ttu-id="3ebed-124">[unchecked](unchecked.md) : indique un contexte non vérifié.</span><span class="sxs-lookup"><span data-stu-id="3ebed-124">[unchecked](unchecked.md) Specifies unchecked context.</span></span>  
+
+## <a name="see-also"></a><span data-ttu-id="3ebed-125">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3ebed-125">See also</span></span>
+
+- [<span data-ttu-id="3ebed-126">Référence C#</span><span class="sxs-lookup"><span data-stu-id="3ebed-126">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="3ebed-127">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="3ebed-127">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="3ebed-128">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="3ebed-128">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="3ebed-129">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="3ebed-129">C# Operators</span></span>](../operators/index.md)

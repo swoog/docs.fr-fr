@@ -1,5 +1,6 @@
 ---
-title: '&gt;&gt;=, opérateur (référence C#)'
+title: '&gt;&gt;=, opérateur - Référence C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '>>=_CSharpKeyword'
@@ -7,38 +8,38 @@ helpviewer_keywords:
 - right shift assignment operator (>>=) [C#]
 - '>>= operator (right-shift assignment) [C#]'
 ms.assetid: b593778c-b9b4-440d-8b29-c1ac22cb81c0
-ms.openlocfilehash: f2bac6a4320980d80a9b6c2597dcf8dc6f08ac70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: aebc92ffb007db7b4950313874ebc2bf3c40615f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865021"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239444"
 ---
-# <a name="gtgt-operator-c-reference"></a><span data-ttu-id="e2995-102">&gt;&gt;=, opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="e2995-102">&gt;&gt;= Operator (C# Reference)</span></span>
-<span data-ttu-id="e2995-103">Opérateur d’assignation de décalage vers la droite.</span><span class="sxs-lookup"><span data-stu-id="e2995-103">The right-shift assignment operator.</span></span>  
+# <a name="gtgt-operator-c-reference"></a><span data-ttu-id="014d5-102">&gt;&gt;=, opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="014d5-102">&gt;&gt;= Operator (C# Reference)</span></span>
+<span data-ttu-id="014d5-103">Opérateur d’assignation de décalage vers la droite.</span><span class="sxs-lookup"><span data-stu-id="014d5-103">The right-shift assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e2995-104">Notes</span><span class="sxs-lookup"><span data-stu-id="e2995-104">Remarks</span></span>  
- <span data-ttu-id="e2995-105">Une expression sous la forme</span><span class="sxs-lookup"><span data-stu-id="e2995-105">An expression of the form</span></span>  
+## <a name="remarks"></a><span data-ttu-id="014d5-104">Notes</span><span class="sxs-lookup"><span data-stu-id="014d5-104">Remarks</span></span>  
+ <span data-ttu-id="014d5-105">Une expression sous la forme</span><span class="sxs-lookup"><span data-stu-id="014d5-105">An expression of the form</span></span>  
   
 ```csharp  
 x >>= y  
 ```  
   
- <span data-ttu-id="e2995-106">est évaluée comme étant</span><span class="sxs-lookup"><span data-stu-id="e2995-106">is evaluated as</span></span>  
+ <span data-ttu-id="014d5-106">est évaluée comme étant</span><span class="sxs-lookup"><span data-stu-id="014d5-106">is evaluated as</span></span>  
   
 ```csharp  
 x = x >> y  
 ```  
   
- <span data-ttu-id="e2995-107">sauf que `x` n’est évalué qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="e2995-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="e2995-108">L’[opérateur >>](../../../csharp/language-reference/operators/right-shift-operator.md) décale `x` vers la droite de la valeur spécifiée par `y`.</span><span class="sxs-lookup"><span data-stu-id="e2995-108">The [>> operator](../../../csharp/language-reference/operators/right-shift-operator.md) shifts `x` right by an amount specified by `y`.</span></span>  
+ <span data-ttu-id="014d5-107">sauf que `x` n’est évalué qu’une seule fois.</span><span class="sxs-lookup"><span data-stu-id="014d5-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="014d5-108">L’[opérateur >>](../../../csharp/language-reference/operators/right-shift-operator.md) décale `x` vers la droite de la valeur spécifiée par `y`.</span><span class="sxs-lookup"><span data-stu-id="014d5-108">The [>> operator](../../../csharp/language-reference/operators/right-shift-operator.md) shifts `x` right by an amount specified by `y`.</span></span>  
   
- <span data-ttu-id="e2995-109">L’opérateur >>= ne peut pas être surchargé directement, mais les types définis par l’utilisateur peuvent surcharger l’[opérateur >>](../../../csharp/language-reference/operators/right-shift-operator.md) (voir [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="e2995-109">The >>= operator cannot be overloaded directly, but user-defined types can overload the [>> operator](../../../csharp/language-reference/operators/right-shift-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="014d5-109">L’opérateur >>= ne peut pas être surchargé directement, mais les types définis par l’utilisateur peuvent surcharger l’[opérateur >>](../../../csharp/language-reference/operators/right-shift-operator.md) (voir [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="014d5-109">The >>= operator cannot be overloaded directly, but user-defined types can overload the [>> operator](../../../csharp/language-reference/operators/right-shift-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e2995-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="e2995-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="014d5-110">Exemple</span><span class="sxs-lookup"><span data-stu-id="014d5-110">Example</span></span>  
  [!code-csharp[csRefOperators#11](../../../csharp/language-reference/operators/codesnippet/CSharp/right-shift-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="e2995-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="e2995-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="014d5-111">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="014d5-111">See Also</span></span>
 
-- [<span data-ttu-id="e2995-112">Référence C#</span><span class="sxs-lookup"><span data-stu-id="e2995-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="e2995-113">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="e2995-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="e2995-114">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="e2995-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="014d5-112">Référence C#</span><span class="sxs-lookup"><span data-stu-id="014d5-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="014d5-113">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="014d5-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="014d5-114">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="014d5-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

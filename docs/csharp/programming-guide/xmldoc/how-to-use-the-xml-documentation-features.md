@@ -1,26 +1,27 @@
 ---
-title: Guide pratique pour utiliser les fonctionnalités de la documentation XML (Guide de programmation C#)
+title: 'Procédure : Utiliser les fonctionnalités de la documentation XML - Guide de programmation C#'
+ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: ce14de1f5aef4703a0c9b3868852104dc313e728
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514441"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241666"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="3f6c4-102">Guide pratique pour utiliser les fonctionnalités de la documentation XML</span><span class="sxs-lookup"><span data-stu-id="3f6c4-102">How to: Use the XML documentation features</span></span>
+# <a name="how-to-use-the-xml-documentation-features"></a><span data-ttu-id="fc8dc-102">Procédure : Utiliser les fonctionnalités de la documentation XML</span><span class="sxs-lookup"><span data-stu-id="fc8dc-102">How to: Use the XML documentation features</span></span>
 
-<span data-ttu-id="3f6c4-103">L’exemple suivant montre un type qui a été documenté.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-103">The following sample provides a basic overview of a type that has been documented.</span></span>
+<span data-ttu-id="fc8dc-103">L’exemple suivant montre un type qui a été documenté.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-103">The following sample provides a basic overview of a type that has been documented.</span></span>
 
-## <a name="example"></a><span data-ttu-id="3f6c4-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="3f6c4-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="fc8dc-104">Exemple</span><span class="sxs-lookup"><span data-stu-id="fc8dc-104">Example</span></span>
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-<span data-ttu-id="3f6c4-105">L’exemple génère un fichier .xml avec le contenu suivant :</span><span class="sxs-lookup"><span data-stu-id="3f6c4-105">The example generates an .xml file with the following contents:</span></span>
+<span data-ttu-id="fc8dc-105">L’exemple génère un fichier .xml avec le contenu suivant :</span><span class="sxs-lookup"><span data-stu-id="fc8dc-105">The example generates an .xml file with the following contents:</span></span>
 
 ```xml
 <?xml version="1.0"?>
@@ -106,33 +107,33 @@ ms.locfileid: "45514441"
 </doc>
 ```
 
-## <a name="compiling-the-code"></a><span data-ttu-id="3f6c4-106">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="3f6c4-106">Compiling the code</span></span>
+## <a name="compiling-the-code"></a><span data-ttu-id="fc8dc-106">Compilation du code</span><span class="sxs-lookup"><span data-stu-id="fc8dc-106">Compiling the code</span></span>
 
-<span data-ttu-id="3f6c4-107">Pour compiler l’exemple, tapez ce qui suit sur la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="3f6c4-107">To compile the example, type the following command line:</span></span>
+<span data-ttu-id="fc8dc-107">Pour compiler l’exemple, tapez ce qui suit sur la ligne de commande :</span><span class="sxs-lookup"><span data-stu-id="fc8dc-107">To compile the example, type the following command line:</span></span>
 
 `csc XMLsample.cs /doc:XMLsample.xml`
 
-<span data-ttu-id="3f6c4-108">Cette commande crée le fichier XML *XMLsample.xml*, que vous pouvez afficher dans votre navigateur ou à l’aide de la commande TYPE.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
+<span data-ttu-id="fc8dc-108">Cette commande crée le fichier XML *XMLsample.xml*, que vous pouvez afficher dans votre navigateur ou à l’aide de la commande TYPE.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-108">This command creates the XML file *XMLsample.xml*, which you can view in your browser or by using the TYPE command.</span></span>
 
-## <a name="robust-programming"></a><span data-ttu-id="3f6c4-109">Programmation fiable</span><span class="sxs-lookup"><span data-stu-id="3f6c4-109">Robust programming</span></span>
+## <a name="robust-programming"></a><span data-ttu-id="fc8dc-109">Programmation fiable</span><span class="sxs-lookup"><span data-stu-id="fc8dc-109">Robust programming</span></span>
 
-<span data-ttu-id="3f6c4-110">Le début de la documentation XML est symbolisé par trois barres obliques (///).</span><span class="sxs-lookup"><span data-stu-id="3f6c4-110">XML documentation starts with ///.</span></span> <span data-ttu-id="3f6c4-111">Lorsque vous créez un projet, les Assistants insèrent quelques lignes de début (///) pour vous.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="3f6c4-112">Le traitement de ces commentaires présente certaines restrictions :</span><span class="sxs-lookup"><span data-stu-id="3f6c4-112">The processing of these comments has some restrictions:</span></span>
+<span data-ttu-id="fc8dc-110">Le début de la documentation XML est symbolisé par trois barres obliques (///).</span><span class="sxs-lookup"><span data-stu-id="fc8dc-110">XML documentation starts with ///.</span></span> <span data-ttu-id="fc8dc-111">Lorsque vous créez un projet, les Assistants insèrent quelques lignes de début (///) pour vous.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-111">When you create a new project, the wizards put some starter /// lines in for you.</span></span> <span data-ttu-id="fc8dc-112">Le traitement de ces commentaires présente certaines restrictions :</span><span class="sxs-lookup"><span data-stu-id="fc8dc-112">The processing of these comments has some restrictions:</span></span>
 
-- <span data-ttu-id="3f6c4-113">La documentation doit être dans un format XML correct.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="3f6c4-114">Si le XML n’est pas correct, un avertissement est généré. En outre, un commentaire indiquant qu’une erreur s’est produite est ajouté au fichier de documentation.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
+- <span data-ttu-id="fc8dc-113">La documentation doit être dans un format XML correct.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-113">The documentation must be well-formed XML.</span></span> <span data-ttu-id="fc8dc-114">Si le XML n’est pas correct, un avertissement est généré. En outre, un commentaire indiquant qu’une erreur s’est produite est ajouté au fichier de documentation.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-114">If the XML is not well-formed, a warning is generated and the documentation file will contain a comment that says that an error was encountered.</span></span>
 
-- <span data-ttu-id="3f6c4-115">Les développeurs sont libres de créer leur propre jeu de balises.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="3f6c4-116">Il existe un jeu de balises recommandées (consultez [Balises recommandées pour les commentaires de documentation](recommended-tags-for-documentation-comments.md)).</span><span class="sxs-lookup"><span data-stu-id="3f6c4-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="3f6c4-117">Certaines des balises recommandées ont des significations spéciales :</span><span class="sxs-lookup"><span data-stu-id="3f6c4-117">Some of the recommended tags have special meanings:</span></span>
+- <span data-ttu-id="fc8dc-115">Les développeurs sont libres de créer leur propre jeu de balises.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-115">Developers are free to create their own set of tags.</span></span> <span data-ttu-id="fc8dc-116">Il existe un jeu de balises recommandées (consultez [Balises recommandées pour les commentaires de documentation](recommended-tags-for-documentation-comments.md)).</span><span class="sxs-lookup"><span data-stu-id="fc8dc-116">There is a recommended set of tags (see [Recommended tags for documentation comments](recommended-tags-for-documentation-comments.md)).</span></span> <span data-ttu-id="fc8dc-117">Certaines des balises recommandées ont des significations spéciales :</span><span class="sxs-lookup"><span data-stu-id="fc8dc-117">Some of the recommended tags have special meanings:</span></span>
 
-  - <span data-ttu-id="3f6c4-118">La balise \<param> est utilisée pour décrire les paramètres.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="3f6c4-119">Quand elle est utilisée, le compilateur vérifie que le paramètre existe et que tous les paramètres sont décrits dans la documentation.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="3f6c4-120">Si ce n’est pas le cas, le compilateur émet un avertissement.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-120">If the verification failed, the compiler issues a warning.</span></span>
+  - <span data-ttu-id="fc8dc-118">La balise \<param> est utilisée pour décrire les paramètres.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-118">The \<param> tag is used to describe parameters.</span></span> <span data-ttu-id="fc8dc-119">Quand elle est utilisée, le compilateur vérifie que le paramètre existe et que tous les paramètres sont décrits dans la documentation.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-119">If used, the compiler verifies that the parameter exists and that all parameters are described in the documentation.</span></span> <span data-ttu-id="fc8dc-120">Si ce n’est pas le cas, le compilateur émet un avertissement.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-120">If the verification failed, the compiler issues a warning.</span></span>
 
-  - <span data-ttu-id="3f6c4-121">L’attribut `cref` peut être joint à n’importe quelle balise pour fournir une référence à un élément de code.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="3f6c4-122">Le compilateur vérifie l’existence de cet élément de code.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="3f6c4-123">Si ce n’est pas le cas, le compilateur émet un avertissement.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="3f6c4-124">Le compilateur respecte toutes les instructions `using` lorsqu’il recherche un type décrit dans l’attribut `cref`.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
+  - <span data-ttu-id="fc8dc-121">L’attribut `cref` peut être joint à n’importe quelle balise pour fournir une référence à un élément de code.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-121">The `cref` attribute can be attached to any tag to provide a reference to a code element.</span></span> <span data-ttu-id="fc8dc-122">Le compilateur vérifie l’existence de cet élément de code.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-122">The compiler verifies that this code element exists.</span></span> <span data-ttu-id="fc8dc-123">Si ce n’est pas le cas, le compilateur émet un avertissement.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-123">If the verification failed, the compiler issues a warning.</span></span> <span data-ttu-id="fc8dc-124">Le compilateur respecte toutes les instructions `using` lorsqu’il recherche un type décrit dans l’attribut `cref`.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-124">The compiler respects any `using` statements when it looks for a type described in the `cref` attribute.</span></span>
 
-  - <span data-ttu-id="3f6c4-125">La balise \<summary> est utilisée par IntelliSense dans Visual Studio pour afficher des informations supplémentaires sur un type ou un membre.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
+  - <span data-ttu-id="fc8dc-125">La balise \<summary> est utilisée par IntelliSense dans Visual Studio pour afficher des informations supplémentaires sur un type ou un membre.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-125">The \<summary> tag is used by IntelliSense inside Visual Studio to display additional information about a type or member.</span></span>
 
     > [!NOTE]
-    > <span data-ttu-id="3f6c4-126">Le fichier XML ne fournit pas des informations complètes sur le type et les membres (par exemple, il ne contient pas d’informations sur le type).</span><span class="sxs-lookup"><span data-stu-id="3f6c4-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="3f6c4-127">Pour obtenir des informations complètes sur un type ou sur un membre, le fichier de documentation doit être utilisé avec la réflexion sur le type ou sur le membre.</span><span class="sxs-lookup"><span data-stu-id="3f6c4-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
+    > <span data-ttu-id="fc8dc-126">Le fichier XML ne fournit pas des informations complètes sur le type et les membres (par exemple, il ne contient pas d’informations sur le type).</span><span class="sxs-lookup"><span data-stu-id="fc8dc-126">The XML file does not provide full information about the type and members (for example, it does not contain any type information).</span></span> <span data-ttu-id="fc8dc-127">Pour obtenir des informations complètes sur un type ou sur un membre, le fichier de documentation doit être utilisé avec la réflexion sur le type ou sur le membre.</span><span class="sxs-lookup"><span data-stu-id="fc8dc-127">To get full information about a type or member, the documentation file must be used together with reflection on the actual type or member.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="3f6c4-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="3f6c4-128">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fc8dc-128">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="fc8dc-128">See Also</span></span>
 
-- [<span data-ttu-id="3f6c4-129">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="3f6c4-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3f6c4-130">/doc (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="3f6c4-130">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [<span data-ttu-id="3f6c4-131">Commentaires sur la documentation XML</span><span class="sxs-lookup"><span data-stu-id="3f6c4-131">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [<span data-ttu-id="fc8dc-129">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="fc8dc-129">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="fc8dc-130">/doc (Options du compilateur C#)</span><span class="sxs-lookup"><span data-stu-id="fc8dc-130">/doc (C# Compiler Options)</span></span>](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [<span data-ttu-id="fc8dc-131">Commentaires sur la documentation XML</span><span class="sxs-lookup"><span data-stu-id="fc8dc-131">XML Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  

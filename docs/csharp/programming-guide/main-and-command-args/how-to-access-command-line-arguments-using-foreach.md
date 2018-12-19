@@ -1,36 +1,37 @@
 ---
-title: Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach (Guide de programmation C#)
+title: 'Procédure : Accéder à des arguments de ligne de commande à l’aide de foreach - Guide de programmation C#'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 811ee09aec7afac70f3f2c2fe5fb002232935028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242430"
 ---
-# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a><span data-ttu-id="9aea6-102">Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="9aea6-102">How to: Access Command-Line Arguments Using foreach (C# Programming Guide)</span></span>
-<span data-ttu-id="9aea6-103">Il existe une autre méthode d’itération au sein d’un tableau qui consiste à utiliser l’instruction [foreach](../../../csharp/language-reference/keywords/foreach-in.md), comme indiqué dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="9aea6-103">Another approach to iterating over the array is to use the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement as shown in this example.</span></span> <span data-ttu-id="9aea6-104">L’instruction `foreach` peut être utilisée pour effectuer une itération au sein d’un tableau, d’une classe de collection .NET Framework, ou d’une classe ou d’un struct qui implémente l’interface <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="9aea6-104">The `foreach` statement can be used to iterate over an array, a .NET Framework collection class, or any class or struct that implements the <xref:System.Collections.IEnumerable> interface.</span></span>  
+# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a><span data-ttu-id="224fe-102">Procédure : Accéder à des arguments de ligne de commande à l’aide de foreach (Guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="224fe-102">How to: Access Command-Line Arguments Using foreach (C# Programming Guide)</span></span>
+<span data-ttu-id="224fe-103">Il existe une autre méthode d’itération au sein d’un tableau qui consiste à utiliser l’instruction [foreach](../../../csharp/language-reference/keywords/foreach-in.md), comme indiqué dans cet exemple.</span><span class="sxs-lookup"><span data-stu-id="224fe-103">Another approach to iterating over the array is to use the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement as shown in this example.</span></span> <span data-ttu-id="224fe-104">L’instruction `foreach` peut être utilisée pour effectuer une itération au sein d’un tableau, d’une classe de collection .NET Framework, ou d’une classe ou d’un struct qui implémente l’interface <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="224fe-104">The `foreach` statement can be used to iterate over an array, a .NET Framework collection class, or any class or struct that implements the <xref:System.Collections.IEnumerable> interface.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9aea6-105">Quand vous exécutez une application dans Visual Studio, vous pouvez spécifier des arguments de ligne de commande dans la [page Déboguer du Concepteur de projet](/visualstudio/ide/reference/debug-page-project-designer).</span><span class="sxs-lookup"><span data-stu-id="9aea6-105">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>  
+>  <span data-ttu-id="224fe-105">Quand vous exécutez une application dans Visual Studio, vous pouvez spécifier des arguments de ligne de commande dans la [page Déboguer du Concepteur de projet](/visualstudio/ide/reference/debug-page-project-designer).</span><span class="sxs-lookup"><span data-stu-id="224fe-105">When running an application in Visual Studio, you can specify command-line arguments in the [Debug Page, Project Designer](/visualstudio/ide/reference/debug-page-project-designer).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9aea6-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="9aea6-106">Example</span></span>  
- <span data-ttu-id="9aea6-107">Cet exemple montre comment imprimer les arguments de ligne de commande à l’aide de `foreach`.</span><span class="sxs-lookup"><span data-stu-id="9aea6-107">This example demonstrates how to print out the command line arguments using `foreach`.</span></span>  
+## <a name="example"></a><span data-ttu-id="224fe-106">Exemple</span><span class="sxs-lookup"><span data-stu-id="224fe-106">Example</span></span>  
+ <span data-ttu-id="224fe-107">Cet exemple montre comment imprimer les arguments de ligne de commande à l’aide de `foreach`.</span><span class="sxs-lookup"><span data-stu-id="224fe-107">This example demonstrates how to print out the command line arguments using `foreach`.</span></span>  
   
  [!code-csharp[csProgGuideMain#10](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-access-command-line-arguments-using-foreach_1.cs)]  
   
  [!code-csharp[csProgGuideMain#11](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/how-to-access-command-line-arguments-using-foreach_2.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="9aea6-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="9aea6-108">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="224fe-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="224fe-108">See Also</span></span>
 
 - <xref:System.Array>  
 - <xref:System.Collections>  
-- [<span data-ttu-id="9aea6-109">Génération à partir de la ligne de commande avec csc.exe</span><span class="sxs-lookup"><span data-stu-id="9aea6-109">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
-- [<span data-ttu-id="9aea6-110">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="9aea6-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="9aea6-111">foreach, in</span><span class="sxs-lookup"><span data-stu-id="9aea6-111">foreach, in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
-- [<span data-ttu-id="9aea6-112">Main() et arguments de ligne de commande</span><span class="sxs-lookup"><span data-stu-id="9aea6-112">Main() and Command-Line Arguments</span></span>](../../../csharp/programming-guide/main-and-command-args/index.md)  
-- [<span data-ttu-id="9aea6-113">Comment : afficher les arguments de ligne de commande</span><span class="sxs-lookup"><span data-stu-id="9aea6-113">How to: Display Command Line Arguments</span></span>](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
-- [<span data-ttu-id="9aea6-114">Valeurs de retour Main()</span><span class="sxs-lookup"><span data-stu-id="9aea6-114">Main() Return Values</span></span>](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+- [<span data-ttu-id="224fe-109">Génération à partir de la ligne de commande avec csc.exe</span><span class="sxs-lookup"><span data-stu-id="224fe-109">Command-line Building With csc.exe</span></span>](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)  
+- [<span data-ttu-id="224fe-110">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="224fe-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="224fe-111">foreach, in</span><span class="sxs-lookup"><span data-stu-id="224fe-111">foreach, in</span></span>](../../../csharp/language-reference/keywords/foreach-in.md)  
+- [<span data-ttu-id="224fe-112">Main() et arguments de ligne de commande</span><span class="sxs-lookup"><span data-stu-id="224fe-112">Main() and Command-Line Arguments</span></span>](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [<span data-ttu-id="224fe-113">Guide pratique pour Afficher les arguments de ligne de commande</span><span class="sxs-lookup"><span data-stu-id="224fe-113">How to: Display Command Line Arguments</span></span>](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [<span data-ttu-id="224fe-114">Valeurs de retour Main()</span><span class="sxs-lookup"><span data-stu-id="224fe-114">Main() Return Values</span></span>](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

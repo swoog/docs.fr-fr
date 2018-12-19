@@ -1,45 +1,46 @@
 ---
-title: Délégués génériques (guide de programmation C#)
+title: Délégués génériques - Guide de programmation C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], delegates
 - delegates [C#], generic
 ms.assetid: bdea509c-44c1-4309-aaa9-15c7aee009df
-ms.openlocfilehash: 7596ace0ea404cc345d73c0979fa7bd03a26b047
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 56e715aa0be91c250e243a3a37195e7ee037de82
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857534"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241072"
 ---
-# <a name="generic-delegates-c-programming-guide"></a><span data-ttu-id="c7086-102">Délégués génériques (guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="c7086-102">Generic Delegates (C# Programming Guide)</span></span>
-<span data-ttu-id="c7086-103">Un [délégué](../../../csharp/language-reference/keywords/delegate.md) peut définir ses propres paramètres de type.</span><span class="sxs-lookup"><span data-stu-id="c7086-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) can define its own type parameters.</span></span> <span data-ttu-id="c7086-104">Le code qui référence le délégué générique peut spécifier l’argument de type pour créer un type construit fermé, comme lors de l’instanciation d’une classe générique ou d’un appel d’une méthode générique, ainsi que l’illustre l’exemple ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="c7086-104">Code that references the generic delegate can specify the type argument to create a closed constructed type, just like when instantiating a generic class or calling a generic method, as shown in the following example:</span></span>  
+# <a name="generic-delegates-c-programming-guide"></a><span data-ttu-id="90c1d-102">Délégués génériques (guide de programmation C#)</span><span class="sxs-lookup"><span data-stu-id="90c1d-102">Generic Delegates (C# Programming Guide)</span></span>
+<span data-ttu-id="90c1d-103">Un [délégué](../../../csharp/language-reference/keywords/delegate.md) peut définir ses propres paramètres de type.</span><span class="sxs-lookup"><span data-stu-id="90c1d-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) can define its own type parameters.</span></span> <span data-ttu-id="90c1d-104">Le code qui référence le délégué générique peut spécifier l’argument de type pour créer un type construit fermé, comme lors de l’instanciation d’une classe générique ou d’un appel d’une méthode générique, ainsi que l’illustre l’exemple ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="90c1d-104">Code that references the generic delegate can specify the type argument to create a closed constructed type, just like when instantiating a generic class or calling a generic method, as shown in the following example:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#36](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_1.cs)]  
   
- <span data-ttu-id="c7086-105">Le langage C# version 2.0 propose une nouvelle fonctionnalité appelée conversion de groupe de méthodes, qui s’applique aussi bien aux types concrets qu’aux types délégués génériques et vous permet d’écrire la ligne précédente avec la syntaxe simplifiée suivante :</span><span class="sxs-lookup"><span data-stu-id="c7086-105">C# version 2.0 has a new feature called method group conversion, which applies to concrete as well as generic delegate types, and enables you to write the previous line with this simplified syntax:</span></span>  
+ <span data-ttu-id="90c1d-105">Le langage C# version 2.0 propose une nouvelle fonctionnalité appelée conversion de groupe de méthodes, qui s’applique aussi bien aux types concrets qu’aux types délégués génériques et vous permet d’écrire la ligne précédente avec la syntaxe simplifiée suivante :</span><span class="sxs-lookup"><span data-stu-id="90c1d-105">C# version 2.0 has a new feature called method group conversion, which applies to concrete as well as generic delegate types, and enables you to write the previous line with this simplified syntax:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#37](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_2.cs)]  
   
- <span data-ttu-id="c7086-106">Les délégués définis dans une classe générique peuvent utiliser les paramètres de type de classe générique, à l’instar des méthodes de classe.</span><span class="sxs-lookup"><span data-stu-id="c7086-106">Delegates defined within a generic class can use the generic class type parameters in the same way that class methods do.</span></span>  
+ <span data-ttu-id="90c1d-106">Les délégués définis dans une classe générique peuvent utiliser les paramètres de type de classe générique, à l’instar des méthodes de classe.</span><span class="sxs-lookup"><span data-stu-id="90c1d-106">Delegates defined within a generic class can use the generic class type parameters in the same way that class methods do.</span></span>  
   
  [!code-csharp[csProgGuideGenerics#38](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_3.cs)]  
   
- <span data-ttu-id="c7086-107">Le code qui référence le délégué doit spécifier l’argument de type de la classe conteneur, comme suit :</span><span class="sxs-lookup"><span data-stu-id="c7086-107">Code that references the delegate must specify the type argument of the containing class, as follows:</span></span>  
+ <span data-ttu-id="90c1d-107">Le code qui référence le délégué doit spécifier l’argument de type de la classe conteneur, comme suit :</span><span class="sxs-lookup"><span data-stu-id="90c1d-107">Code that references the delegate must specify the type argument of the containing class, as follows:</span></span>  
   
  [!code-csharp[csProgGuideGenerics#39](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_4.cs)]  
   
- <span data-ttu-id="c7086-108">Les délégués génériques sont particulièrement utiles pour définir des événements basés sur le modèle de design type parce que l’argument de l’expéditeur peut être fortement typé et il n’est plus nécessaire d’en effectuer un cast vers et depuis <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="c7086-108">Generic delegates are especially useful in defining events based on the typical design pattern because the sender argument can be strongly typed and no longer has to be cast to and from <xref:System.Object>.</span></span>  
+ <span data-ttu-id="90c1d-108">Les délégués génériques sont particulièrement utiles pour définir des événements basés sur le modèle de design type parce que l’argument de l’expéditeur peut être fortement typé et il n’est plus nécessaire d’en effectuer un cast vers et depuis <xref:System.Object>.</span><span class="sxs-lookup"><span data-stu-id="90c1d-108">Generic delegates are especially useful in defining events based on the typical design pattern because the sender argument can be strongly typed and no longer has to be cast to and from <xref:System.Object>.</span></span>  
   
  [!code-csharp[csProgGuideGenerics#40](../../../csharp/programming-guide/generics/codesnippet/CSharp/generic-delegates_5.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="c7086-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="c7086-109">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="90c1d-109">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="90c1d-109">See Also</span></span>
 
 - <xref:System.Collections.Generic>  
-- [<span data-ttu-id="c7086-110">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="c7086-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="c7086-111">Introduction aux génériques</span><span class="sxs-lookup"><span data-stu-id="c7086-111">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
-- [<span data-ttu-id="c7086-112">Méthodes génériques</span><span class="sxs-lookup"><span data-stu-id="c7086-112">Generic Methods</span></span>](../../../csharp/programming-guide/generics/generic-methods.md)  
-- [<span data-ttu-id="c7086-113">Classes génériques</span><span class="sxs-lookup"><span data-stu-id="c7086-113">Generic Classes</span></span>](../../../csharp/programming-guide/generics/generic-classes.md)  
-- [<span data-ttu-id="c7086-114">Interfaces génériques</span><span class="sxs-lookup"><span data-stu-id="c7086-114">Generic Interfaces</span></span>](../../../csharp/programming-guide/generics/generic-interfaces.md)  
-- [<span data-ttu-id="c7086-115">Délégués</span><span class="sxs-lookup"><span data-stu-id="c7086-115">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
-- [<span data-ttu-id="c7086-116">Génériques</span><span class="sxs-lookup"><span data-stu-id="c7086-116">Generics</span></span>](~/docs/standard/generics/index.md)
+- [<span data-ttu-id="90c1d-110">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="90c1d-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="90c1d-111">Introduction aux génériques</span><span class="sxs-lookup"><span data-stu-id="90c1d-111">Introduction to Generics</span></span>](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [<span data-ttu-id="90c1d-112">Méthodes génériques</span><span class="sxs-lookup"><span data-stu-id="90c1d-112">Generic Methods</span></span>](../../../csharp/programming-guide/generics/generic-methods.md)  
+- [<span data-ttu-id="90c1d-113">Classes génériques</span><span class="sxs-lookup"><span data-stu-id="90c1d-113">Generic Classes</span></span>](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [<span data-ttu-id="90c1d-114">Interfaces génériques</span><span class="sxs-lookup"><span data-stu-id="90c1d-114">Generic Interfaces</span></span>](../../../csharp/programming-guide/generics/generic-interfaces.md)  
+- [<span data-ttu-id="90c1d-115">Délégués</span><span class="sxs-lookup"><span data-stu-id="90c1d-115">Delegates</span></span>](../../../csharp/programming-guide/delegates/index.md)  
+- [<span data-ttu-id="90c1d-116">Génériques</span><span class="sxs-lookup"><span data-stu-id="90c1d-116">Generics</span></span>](~/docs/standard/generics/index.md)

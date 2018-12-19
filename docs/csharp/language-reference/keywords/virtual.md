@@ -1,5 +1,6 @@
 ---
-title: virtual (référence C#)
+title: virtual - Référence C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -7,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: 384cc442e51ec96cafe9b44ef945bb913b0e65f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0a6eb7bfcd598eb54b4b0cc5661d219367da2238
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44201099"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237387"
 ---
-# <a name="virtual-c-reference"></a><span data-ttu-id="ee63a-102">virtual (référence C#)</span><span class="sxs-lookup"><span data-stu-id="ee63a-102">virtual (C# Reference)</span></span>
-<span data-ttu-id="ee63a-103">Le mot clé `virtual` sert à modifier une méthode, une propriété, un indexeur ou une déclaration event et leur permet d’être substitués dans une classe dérivée.</span><span class="sxs-lookup"><span data-stu-id="ee63a-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="ee63a-104">Par exemple, cette méthode peut être substituée par toute classe qui en hérite :</span><span class="sxs-lookup"><span data-stu-id="ee63a-104">For example, this method can be overridden by any class that inherits it:</span></span>  
+# <a name="virtual-c-reference"></a><span data-ttu-id="a0563-102">virtual (référence C#)</span><span class="sxs-lookup"><span data-stu-id="a0563-102">virtual (C# Reference)</span></span>
+<span data-ttu-id="a0563-103">Le mot clé `virtual` sert à modifier une méthode, une propriété, un indexeur ou une déclaration event et leur permet d’être substitués dans une classe dérivée.</span><span class="sxs-lookup"><span data-stu-id="a0563-103">The `virtual` keyword is used to modify a method, property, indexer, or event declaration and allow for it to be overridden in a derived class.</span></span> <span data-ttu-id="a0563-104">Par exemple, cette méthode peut être substituée par toute classe qui en hérite :</span><span class="sxs-lookup"><span data-stu-id="a0563-104">For example, this method can be overridden by any class that inherits it:</span></span>  
   
 ```csharp  
 public virtual double Area()   
@@ -24,46 +25,46 @@ public virtual double Area()
 }  
 ```  
   
- <span data-ttu-id="ee63a-105">L’implémentation d’un membre virtuel peut être modifiée par un [membre de substitution](../../../csharp/language-reference/keywords/override.md) dans une classe dérivée.</span><span class="sxs-lookup"><span data-stu-id="ee63a-105">The implementation of a virtual member can be changed by an [overriding member](../../../csharp/language-reference/keywords/override.md) in a derived class.</span></span> <span data-ttu-id="ee63a-106">Pour plus d’informations sur l’utilisation du mot clé `virtual`, consultez [Gestion de version avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) et [Savoir quand utiliser les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="ee63a-106">For more information about how to use the `virtual` keyword, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
+ <span data-ttu-id="a0563-105">L’implémentation d’un membre virtuel peut être modifiée par un [membre de substitution](../../../csharp/language-reference/keywords/override.md) dans une classe dérivée.</span><span class="sxs-lookup"><span data-stu-id="a0563-105">The implementation of a virtual member can be changed by an [overriding member](../../../csharp/language-reference/keywords/override.md) in a derived class.</span></span> <span data-ttu-id="a0563-106">Pour plus d’informations sur l’utilisation du mot clé `virtual`, consultez [Gestion de version avec les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) et [Savoir quand utiliser les mots clés override et new](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span><span class="sxs-lookup"><span data-stu-id="a0563-106">For more information about how to use the `virtual` keyword, see [Versioning with the Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md) and [Knowing When to Use Override and New Keywords](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ee63a-107">Notes</span><span class="sxs-lookup"><span data-stu-id="ee63a-107">Remarks</span></span>  
- <span data-ttu-id="ee63a-108">Quand une méthode virtuelle est appelée, un membre de substitution est recherché dans le type d’objet au moment de l’exécution.</span><span class="sxs-lookup"><span data-stu-id="ee63a-108">When a virtual method is invoked, the run-time type of the object is checked for an overriding member.</span></span> <span data-ttu-id="ee63a-109">Le membre de substitution de la classe la plus dérivée est appelé (cela peut être le membre d’origine), si aucune classe dérivée n’a substitué le membre.</span><span class="sxs-lookup"><span data-stu-id="ee63a-109">The overriding member in the most derived class is called, which might be the original member, if no derived class has overridden the member.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a0563-107">Notes</span><span class="sxs-lookup"><span data-stu-id="a0563-107">Remarks</span></span>  
+ <span data-ttu-id="a0563-108">Quand une méthode virtuelle est appelée, un membre de substitution est recherché dans le type d’objet au moment de l’exécution.</span><span class="sxs-lookup"><span data-stu-id="a0563-108">When a virtual method is invoked, the run-time type of the object is checked for an overriding member.</span></span> <span data-ttu-id="a0563-109">Le membre de substitution de la classe la plus dérivée est appelé (cela peut être le membre d’origine), si aucune classe dérivée n’a substitué le membre.</span><span class="sxs-lookup"><span data-stu-id="a0563-109">The overriding member in the most derived class is called, which might be the original member, if no derived class has overridden the member.</span></span>  
   
- <span data-ttu-id="ee63a-110">Par défaut, les méthodes ne sont pas virtuelles.</span><span class="sxs-lookup"><span data-stu-id="ee63a-110">By default, methods are non-virtual.</span></span> <span data-ttu-id="ee63a-111">Vous ne pouvez pas substituer une méthode non virtuelle.</span><span class="sxs-lookup"><span data-stu-id="ee63a-111">You cannot override a non-virtual method.</span></span>  
+ <span data-ttu-id="a0563-110">Par défaut, les méthodes ne sont pas virtuelles.</span><span class="sxs-lookup"><span data-stu-id="a0563-110">By default, methods are non-virtual.</span></span> <span data-ttu-id="a0563-111">Vous ne pouvez pas substituer une méthode non virtuelle.</span><span class="sxs-lookup"><span data-stu-id="a0563-111">You cannot override a non-virtual method.</span></span>  
   
- <span data-ttu-id="ee63a-112">Vous ne pouvez pas utiliser le modificateur `virtual` avec les modificateurs `static`, `abstract`, `private` ou `override`.</span><span class="sxs-lookup"><span data-stu-id="ee63a-112">You cannot use the `virtual` modifier with the `static`, `abstract`, `private`, or `override` modifiers.</span></span> <span data-ttu-id="ee63a-113">L’exemple suivant illustre une propriété virtuelle :</span><span class="sxs-lookup"><span data-stu-id="ee63a-113">The following example shows a virtual property:</span></span>  
+ <span data-ttu-id="a0563-112">Vous ne pouvez pas utiliser le modificateur `virtual` avec les modificateurs `static`, `abstract`, `private` ou `override`.</span><span class="sxs-lookup"><span data-stu-id="a0563-112">You cannot use the `virtual` modifier with the `static`, `abstract`, `private`, or `override` modifiers.</span></span> <span data-ttu-id="a0563-113">L’exemple suivant illustre une propriété virtuelle :</span><span class="sxs-lookup"><span data-stu-id="a0563-113">The following example shows a virtual property:</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#26](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_1.cs)]  
   
- <span data-ttu-id="ee63a-114">Les propriétés virtuelles se comportent comme les méthodes abstraites, à l’exception des différences dans la syntaxe de déclaration et d’appel.</span><span class="sxs-lookup"><span data-stu-id="ee63a-114">Virtual properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
+ <span data-ttu-id="a0563-114">Les propriétés virtuelles se comportent comme les méthodes abstraites, à l’exception des différences dans la syntaxe de déclaration et d’appel.</span><span class="sxs-lookup"><span data-stu-id="a0563-114">Virtual properties behave like abstract methods, except for the differences in declaration and invocation syntax.</span></span>  
   
--   <span data-ttu-id="ee63a-115">L’utilisation du modificateur `virtual` sur une propriété statique est une erreur.</span><span class="sxs-lookup"><span data-stu-id="ee63a-115">It is an error to use the `virtual` modifier on a static property.</span></span>  
+-   <span data-ttu-id="a0563-115">L’utilisation du modificateur `virtual` sur une propriété statique est une erreur.</span><span class="sxs-lookup"><span data-stu-id="a0563-115">It is an error to use the `virtual` modifier on a static property.</span></span>  
   
--   <span data-ttu-id="ee63a-116">Une propriété virtuelle héritée peut être substituée dans une classe dérivée en incluant une déclaration de propriété qui utilise le modificateur `override`.</span><span class="sxs-lookup"><span data-stu-id="ee63a-116">A virtual inherited property can be overridden in a derived class by including a property declaration that uses the `override` modifier.</span></span>  
+-   <span data-ttu-id="a0563-116">Une propriété virtuelle héritée peut être substituée dans une classe dérivée en incluant une déclaration de propriété qui utilise le modificateur `override`.</span><span class="sxs-lookup"><span data-stu-id="a0563-116">A virtual inherited property can be overridden in a derived class by including a property declaration that uses the `override` modifier.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ee63a-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="ee63a-117">Example</span></span>  
- <span data-ttu-id="ee63a-118">Dans cet exemple, la classe `Shape` contient les deux coordonnées `x` et `y`, ainsi que la méthode virtuelle `Area()`.</span><span class="sxs-lookup"><span data-stu-id="ee63a-118">In this example, the `Shape` class contains the two coordinates `x`, `y`, and the `Area()` virtual method.</span></span> <span data-ttu-id="ee63a-119">Différentes classes de formes, telles que `Circle`, `Cylinder` et `Sphere`, héritent de la classe `Shape`, et la surface est calculée pour chaque figure.</span><span class="sxs-lookup"><span data-stu-id="ee63a-119">Different shape classes such as `Circle`, `Cylinder`, and `Sphere` inherit the `Shape` class, and the surface area is calculated for each figure.</span></span> <span data-ttu-id="ee63a-120">Chaque classe dérivée a sa propre implémentation de substitution de `Area()`.</span><span class="sxs-lookup"><span data-stu-id="ee63a-120">Each derived class has its own override implementation of `Area()`.</span></span>  
+## <a name="example"></a><span data-ttu-id="a0563-117">Exemple</span><span class="sxs-lookup"><span data-stu-id="a0563-117">Example</span></span>  
+ <span data-ttu-id="a0563-118">Dans cet exemple, la classe `Shape` contient les deux coordonnées `x` et `y`, ainsi que la méthode virtuelle `Area()`.</span><span class="sxs-lookup"><span data-stu-id="a0563-118">In this example, the `Shape` class contains the two coordinates `x`, `y`, and the `Area()` virtual method.</span></span> <span data-ttu-id="a0563-119">Différentes classes de formes, telles que `Circle`, `Cylinder` et `Sphere`, héritent de la classe `Shape`, et la surface est calculée pour chaque figure.</span><span class="sxs-lookup"><span data-stu-id="a0563-119">Different shape classes such as `Circle`, `Cylinder`, and `Sphere` inherit the `Shape` class, and the surface area is calculated for each figure.</span></span> <span data-ttu-id="a0563-120">Chaque classe dérivée a sa propre implémentation de substitution de `Area()`.</span><span class="sxs-lookup"><span data-stu-id="a0563-120">Each derived class has its own override implementation of `Area()`.</span></span>  
   
- <span data-ttu-id="ee63a-121">Notez que les classes héritées `Circle`, `Sphere` et `Cylinder` utilisent toutes des constructeurs qui initialisent la classe de base, comme indiqué dans la déclaration suivante.</span><span class="sxs-lookup"><span data-stu-id="ee63a-121">Notice that the inherited classes `Circle`, `Sphere`, and `Cylinder` all use constructors that initialize the base class, as shown in the following declaration.</span></span>  
+ <span data-ttu-id="a0563-121">Notez que les classes héritées `Circle`, `Sphere` et `Cylinder` utilisent toutes des constructeurs qui initialisent la classe de base, comme indiqué dans la déclaration suivante.</span><span class="sxs-lookup"><span data-stu-id="a0563-121">Notice that the inherited classes `Circle`, `Sphere`, and `Cylinder` all use constructors that initialize the base class, as shown in the following declaration.</span></span>  
   
 ```csharp  
 public Cylinder(double r, double h): base(r, h) {}  
 ```  
   
- <span data-ttu-id="ee63a-122">Le programme suivant calcule et affiche la zone appropriée pour chaque figure en appelant l’implémentation appropriée de la méthode `Area()`, selon l’objet associé à la méthode.</span><span class="sxs-lookup"><span data-stu-id="ee63a-122">The following program calculates and displays the appropriate area for each figure by invoking the appropriate implementation of the `Area()` method, according to the object that is associated with the method.</span></span>  
+ <span data-ttu-id="a0563-122">Le programme suivant calcule et affiche la zone appropriée pour chaque figure en appelant l’implémentation appropriée de la méthode `Area()`, selon l’objet associé à la méthode.</span><span class="sxs-lookup"><span data-stu-id="a0563-122">The following program calculates and displays the appropriate area for each figure by invoking the appropriate implementation of the `Area()` method, according to the object that is associated with the method.</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#23](../../../csharp/language-reference/keywords/codesnippet/CSharp/virtual_2.cs)]  
   
-## <a name="c-language-specification"></a><span data-ttu-id="ee63a-123">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="ee63a-123">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="a0563-123">Spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="a0563-123">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="ee63a-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="ee63a-124">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a0563-124">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a0563-124">See Also</span></span>
 
-- [<span data-ttu-id="ee63a-125">Référence C#</span><span class="sxs-lookup"><span data-stu-id="ee63a-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="ee63a-126">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="ee63a-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="ee63a-127">Modificateurs</span><span class="sxs-lookup"><span data-stu-id="ee63a-127">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
-- [<span data-ttu-id="ee63a-128">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="ee63a-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="ee63a-129">Polymorphisme</span><span class="sxs-lookup"><span data-stu-id="ee63a-129">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
-- [<span data-ttu-id="ee63a-130">abstract</span><span class="sxs-lookup"><span data-stu-id="ee63a-130">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
-- [<span data-ttu-id="ee63a-131">override</span><span class="sxs-lookup"><span data-stu-id="ee63a-131">override</span></span>](../../../csharp/language-reference/keywords/override.md)  
-- [<span data-ttu-id="ee63a-132">new</span><span class="sxs-lookup"><span data-stu-id="ee63a-132">new</span></span>](../../../csharp/language-reference/keywords/new.md)
+- [<span data-ttu-id="a0563-125">Référence C#</span><span class="sxs-lookup"><span data-stu-id="a0563-125">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="a0563-126">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="a0563-126">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="a0563-127">Modificateurs</span><span class="sxs-lookup"><span data-stu-id="a0563-127">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+- [<span data-ttu-id="a0563-128">Mots clés C#</span><span class="sxs-lookup"><span data-stu-id="a0563-128">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="a0563-129">Polymorphisme</span><span class="sxs-lookup"><span data-stu-id="a0563-129">Polymorphism</span></span>](../../../csharp/programming-guide/classes-and-structs/polymorphism.md)  
+- [<span data-ttu-id="a0563-130">abstract</span><span class="sxs-lookup"><span data-stu-id="a0563-130">abstract</span></span>](../../../csharp/language-reference/keywords/abstract.md)  
+- [<span data-ttu-id="a0563-131">override</span><span class="sxs-lookup"><span data-stu-id="a0563-131">override</span></span>](../../../csharp/language-reference/keywords/override.md)  
+- [<span data-ttu-id="a0563-132">new</span><span class="sxs-lookup"><span data-stu-id="a0563-132">new</span></span>](../../../csharp/language-reference/keywords/new.md)
