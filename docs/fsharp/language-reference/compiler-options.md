@@ -4,7 +4,7 @@ description: Utilisez F# options de ligne de commande du compilateur pour contr�
 ms.date: 12/10/2018
 ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
 ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170871"
@@ -25,7 +25,7 @@ Le tableau suivant présente les options du compilateur classées par ordre alph
 |`--baseaddress:address`|Spécifie l'adresse de base préférée à laquelle charger une DLL.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;baseaddress &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |`--codepage:id`|Spécifie la page de codes à utiliser pendant la compilation si la page requise n’est pas la page de codes par défaut actuelle pour le système.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;les pages de codes &#40;C&#35; Options du compilateur&#41;](../../csharp/language-reference/compiler-options/codepage-compiler-option.md).|
 |`--consolecolors`|Spécifie que les erreurs et avertissements utilisent texte codé par couleur sur la console.|
-|'--crossoptimize [+|-]`|Active ou désactive les optimisations intermodules.|
+|`--crossoptimize[+|-]`|Active ou désactive les optimisations intermodules.|
 |<code>--delaysign[+&#124;-]</code>|Signe l’assembly en utilisant uniquement la partie publique de la clé de nom fort.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;delaysign &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/ta1sxwy8.aspx).|
 |<code>--checked[+&#124;-]</code>|Active ou désactive la génération de contrôles de dépassement.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;vérifiée &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/h25wtyxf.aspx).|
 |<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|Active ou désactive la génération d’informations de débogage ou spécifie le type d’informations de débogage à générer. La valeur par défaut est plein, ce qui permet l’attachement à un programme en cours d’exécution. Choisissez **pdbonly** pour obtenir des informations de débogage limitées stockées dans un fichier pdb (base de données du programme).<br /><br />Équivalent à la C# option du compilateur du même nom. Pour plus d'informations, consultez<br /><br />[&#47;déboguer &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/8cw0bt21.aspx).|
@@ -67,7 +67,7 @@ Le tableau suivant présente les options du compilateur classées par ordre alph
 |`--warnon:warning-number-list`|Activer des avertissements spécifiques qui peuvent être désactivés par défaut ou désactivé par une autre option de ligne de commande. Dans F# 3.0, uniquement l’avertissement 1182 (variables inutilisées) est désactivée par défaut.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Active ou désactive l’option de signalement des avertissements comme des erreurs. Vous pouvez fournir des numéros d’avertissement spécifique pour être désactivé ou activé. Options plus loin dans la ligne de commande remplacent les options précédemment dans la ligne de commande. Par exemple, pour spécifier les avertissements que vous ne souhaitez pas signalées comme des erreurs, spécifiez `--warnaserror+` `--warnaserror-:warning-number-list`.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;warnaserror &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx).|
 |`--win32manifest:manifest-filename`|Ajoute un fichier manifeste Win32 à la compilation. Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;win32manifest &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/bb545961.aspx).|
-|`--win32res:resource-filename`|Ajoute un fichier de ressources Win32 à la compilation.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;win32res (&#40;C & #35) ; Options du compilateur&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
+|`--win32res:resource-filename`|Ajoute un fichier de ressources Win32 à la compilation.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;win32res (&#40;C &#35;) Options du compilateur&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
 ## <a name="related-articles"></a>Articles connexes
 
