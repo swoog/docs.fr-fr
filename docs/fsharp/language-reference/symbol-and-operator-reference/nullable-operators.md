@@ -1,13 +1,13 @@
 ---
-title: Opérateurs autorisant la valeur Null (F#)
-description: En savoir plus sur les opérateurs nullables qui sont disponibles dans le langage de programmation F#.
+title: Opérateurs autorisant la valeur Null
+description: En savoir plus sur les opérateurs nullables qui sont disponibles dans le F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: b17c0de2d81a1ef88b31d833a49ff9e3f9d34e8d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44086281"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610591"
 ---
 # <a name="nullable-operators"></a>Opérateurs autorisant la valeur Null
 
@@ -15,7 +15,7 @@ Opérateurs nullables sont des opérateurs arithmétiques ou de comparaison bina
 
 ## <a name="table-of-nullable-operators"></a>Tableau d’opérateurs Nullable
 
-Le tableau suivant répertorie les opérateurs nullables pris en charge dans le langage F#.
+Le tableau suivant répertorie les opérateurs nullables pris en charge dans les F# langage.
 
 |Nullable sur la gauche|Nullable sur la droite|Les deux côtés nullables|
 |---|---|---|
@@ -55,7 +55,7 @@ Le résultat est `10.000000`.
 
 Sur les champs de données autorise la valeur null, les opérateurs de requête comme `sumByNullable`, existent également pour une utilisation dans les expressions de requête. Les opérateurs de requête pour les types non nullables ne sont pas compatible avec le type avec les types nullable, vous devez donc utiliser la version nullable de l’opérateur de requête approprié lorsque vous travaillez avec des valeurs de données autorise la valeur null. Pour plus d’informations, consultez [Expressions de requête](../query-expressions.md).
 
-L’exemple suivant illustre l’utilisation d’opérateurs nullables dans une expression de requête F#. La première requête montre comment écrire une requête sans opérateur nullable ; la deuxième requête montre une requête équivalente qui utilise un opérateur nullable. Pour le contexte complet, y compris comment configurer la base de données à utiliser cet exemple de code, consultez [procédure pas à pas : accès à une base de données SQL à l’aide des fournisseurs de Type](../../tutorials/type-providers/accessing-a-sql-database.md).
+L’exemple suivant illustre l’utilisation des opérateurs nullables dans un F# expression de requête. La première requête montre comment écrire une requête sans opérateur nullable ; la deuxième requête montre une requête équivalente qui utilise un opérateur nullable. Pour le contexte complet, y compris comment configurer la base de données à utiliser cet exemple de code, consultez [procédure pas à pas : L’accès à une base de données SQL à l’aide de fournisseurs de Type](../../tutorials/type-providers/accessing-a-sql-database.md).
 
 ```fsharp
 open System

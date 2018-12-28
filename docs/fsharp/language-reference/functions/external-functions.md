@@ -1,13 +1,13 @@
 ---
-title: Fonctions externes (F#)
-description: En savoir plus sur la prise en charge de langage F# pour appeler des fonctions en code natif.
+title: Fonctions externes
+description: En savoir plus sur les F# prise en charge linguistique pour appeler des fonctions en code natif.
 ms.date: 05/16/2016
-ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973103"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611724"
 ---
 # <a name="external-functions"></a>Fonctions externes
 
@@ -46,7 +46,7 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-Interopérabilité avec du code natif est appelée *non managé* et est une fonctionnalité du CLR. Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md). Les informations contenues dans cette section sont applique à F#.
+Interopérabilité avec du code natif est appelée *non managé* et est une fonctionnalité du CLR. Pour plus d’informations, consultez [Interopération avec du code non managé](../../../../docs/framework/interop/index.md). Les informations contenues dans cette section sont applique aux F#.
 
 ## <a name="see-also"></a>Voir aussi
 

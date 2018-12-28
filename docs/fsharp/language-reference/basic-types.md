@@ -1,13 +1,13 @@
 ---
-title: Types de base (F#)
+title: Types de base
 description: Découvrir les types de base fondamentales qui sont utilisés dans le F# langage.
 ms.date: 07/09/2018
-ms.openlocfilehash: a8a1154a211d8c87571b47cb41cb091096569472
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 74a276792e2566b8f18b87f4bdcfb923b713b9c5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145122"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610409"
 ---
 # <a name="basic-types"></a>Types de base
 

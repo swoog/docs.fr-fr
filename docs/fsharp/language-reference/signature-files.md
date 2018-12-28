@@ -1,13 +1,13 @@
 ---
-title: Fichiers de signature (F#)
-description: Découvrez comment utiliser des fichiers de signature F# pour conserver les informations sur les signatures publiques d’un jeu de F# d’éléments de programme, tels que des types, des espaces de noms et des modules.
+title: Fichiers de signature
+description: Découvrez comment utiliser F# pour conserver les informations sur les signatures publiques d’un ensemble de fichiers de signature F# éléments, tels que des types, des espaces de noms et des modules de programme.
 ms.date: 06/15/2018
-ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 88938309a7c2bd12428f06ba8088141fd5349e80
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991231"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613412"
 ---
 # <a name="signatures"></a>Signatures
 
@@ -29,6 +29,7 @@ Quand il n’y a pas assez d’informations dans la signature de type pour indiq
 |---------|-----------|
 |`[<Sealed>]`|Type qui n’a pas de membres abstraits ou qui ne doit pas être étendu.|
 |`[<Interface>]`|Type qui est une interface.|
+
 Le compilateur produit une erreur si les attributs ne sont pas cohérents entre la signature et la déclaration dans le fichier d’implémentation.
 
 Utilisez le mot clé `val` pour créer une signature pour une valeur ou une valeur de fonction. Le mot clé `type` introduit une signature de type.
