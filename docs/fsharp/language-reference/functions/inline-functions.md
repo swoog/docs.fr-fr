@@ -1,13 +1,13 @@
 ---
-title: Fonctions inline (F#)
-description: Découvrez comment utiliser les fonctions F# inline qui sont intégrées directement dans le code appelant.
+title: Fonctions inline
+description: Découvrez comment utiliser F# les fonctions inline sont intégrées directement dans le code appelant.
 ms.date: 05/16/2016
-ms.openlocfilehash: 47fca0fe34630792aeb0908b0cee02a927e2567d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 12c175e3e46e12d978fe02d3e1fe83142e71a25d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45745943"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610565"
 ---
 # <a name="inline-functions"></a>Fonctions inline
 

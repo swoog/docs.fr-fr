@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147604"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396927"
 ---
 # <a name="framework-design-guidelines"></a>Règles de conception de .NET Framework
 Cette section fournit des instructions pour la conception de bibliothèques qui étendent et interagissent avec le .NET Framework. L’objectif est d’aider les concepteurs de bibliothèques à garantir la cohérence d’API et la facilité d’utilisation en fournissant un modèle de programmation unifié qui est indépendant du langage de programmation utilisé pour le développement. Nous vous recommandons de suivre ces instructions de conception lors du développement de classes et composants qui étendent .NET Framework. Conception de la bibliothèque incohérent avoir un impact négatif la productivité des développeurs et décourage adoption.  
@@ -42,7 +42,7 @@ Cette section fournit des instructions pour la conception de bibliothèques qui 
  Fournit des instructions pour l’utilisation des types courants tels que des tableaux, des attributs et des collections, prenant en charge la sérialisation et la surcharge des opérateurs d’égalité.  
   
  [Modèles de design courants](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Fournit des instructions pour le choix et l’implémentation des propriétés de dépendance et le modèle de suppression.  
+ Fournit des instructions pour le choix et l’implémentation des propriétés de dépendance.  
   
  *Portions © 2005, 2009 Microsoft Corporation. Tous droits réservés.*  
   

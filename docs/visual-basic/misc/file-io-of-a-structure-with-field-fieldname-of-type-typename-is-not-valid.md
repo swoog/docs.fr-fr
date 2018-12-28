@@ -1,17 +1,17 @@
 ---
-title: Fichier e/s d’une structure avec un champ &#39; &lt;fieldname&gt; &#39; de type &#39; &lt;typename&gt; &#39; n’est pas valide
+title: Fichier d’e/s d’une structure avec un champ '&lt;fieldname&gt;'de type'&lt;typename&gt;' n’est pas valide
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
 ms.assetid: 028e936f-6210-4290-adb2-46298e13e160
-ms.openlocfilehash: 94d0cfbde8e27adf4ad11d1f9adde747cf21b33f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa6d12d4f685cef088d0a0fd28811eeace2d21aa
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33634925"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53777256"
 ---
-# <a name="file-io-of-a-structure-with-field-39ltfieldnamegt39-of-type-39lttypenamegt39-is-not-valid"></a>Fichier e/s d’une structure avec un champ &#39; &lt;fieldname&gt; &#39; de type &#39; &lt;typename&gt; &#39; n’est pas valide
+# <a name="file-io-of-a-structure-with-field-ltfieldnamegt-of-type-lttypenamegt-is-not-valid"></a>Fichier d’e/s d’une structure avec un champ '&lt;fieldname&gt;'de type'&lt;typename&gt;' n’est pas valide
 La structure que vous tentez d’écrire dans un fichier contient un type non pris en charge.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

@@ -1,21 +1,21 @@
 ---
-title: Généralisation automatique (F#)
+title: Généralisation automatique
 description: Découvrez comment F# généralise automatiquement les arguments et les types de fonctions afin qu’ils fonctionnent avec plusieurs types lorsque cela est possible.
 ms.date: 05/16/2016
-ms.openlocfilehash: 84de9cbb2b9fcf2488393f7dbdfc3b610cdcffb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 15ecf8e6f07da19bb015fd028a7465ba8b837190
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43855775"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611709"
 ---
 # <a name="automatic-generalization"></a>Généralisation automatique
 
-F# utilise l’inférence de type pour évaluer les types de fonctions et d’expressions. Cette rubrique décrit comment F# généralise automatiquement les arguments et les types de fonctions afin qu’ils fonctionnent avec plusieurs types lorsque cela est possible.
+F#utilise l’inférence pour évaluer les types de fonctions et expressions de type. Cette rubrique décrit comment F# généralise automatiquement les arguments et les types de fonctions afin qu’ils fonctionnent avec plusieurs types lorsque cela est possible.
 
 ## <a name="automatic-generalization"></a>Généralisation automatique
 
-Le compilateur F#, lorsqu’il effectue l’inférence de type sur une fonction, détermine si un paramètre donné peut être générique. Le compilateur examine chaque paramètre et détermine si la fonction a une dépendance sur le type spécifique de ce paramètre. Si elle n’est pas le cas, le type est déduit de manière générique.
+Le F# compilateur, lorsqu’il effectue l’inférence de type sur une fonction, détermine si un paramètre donné peut être générique. Le compilateur examine chaque paramètre et détermine si la fonction a une dépendance sur le type spécifique de ce paramètre. Si elle n’est pas le cas, le type est déduit de manière générique.
 
 L’exemple de code suivant illustre une fonction que le compilateur déduit pour être générique.
 
@@ -66,7 +66,7 @@ let counter = ref None
 let counter : int option ref = ref None
 ```
 
-Cas 2 : Utilisation d’une construction non généralisable pour définir une fonction générique. Dans cet exemple, la construction est non généralisable, car il implique l’application partielle d’arguments de fonction.
+Cas 2 : À l’aide d’une construction non généralisable pour définir une fonction générique. Dans cet exemple, la construction est non généralisable, car il implique l’application partielle d’arguments de fonction.
 
 ```fsharp
 let maxhash = max << hash
@@ -82,7 +82,7 @@ let emptyList10 = Array.create 10 []
 let emptyList10 () = Array.create 10 []
 ```
 
-Cas 4 : Ajout type de paramètres.
+Cas 4 : Ajout de paramètres de type.
 
 ```fsharp
 let arrayOf10Lists = Array.create 10 []

@@ -1,13 +1,13 @@
 ---
-title: Quotations de code (F#)
+title: Quotations de code
 description: En savoir plus sur F# quotations de code, une fonctionnalité de langage qui vous permet de générer et utiliser des F# par programmation des expressions de code.
 ms.date: 05/16/2016
-ms.openlocfilehash: 565fd2a07c617d156f1d43f94a7cb98fc22f1401
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aa8a17eb8f9837ca4023abc552a6aac063117e96
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150776"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614296"
 ---
 # <a name="code-quotations"></a>Quotations de code
 

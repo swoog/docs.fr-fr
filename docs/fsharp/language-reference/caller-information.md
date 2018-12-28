@@ -1,13 +1,13 @@
 ---
-title: Informations de l’appelant (F#)
+title: Informations de l’appelant
 description: Décrit comment utiliser les attributs d’Argument appelant informations pour obtenir des informations de l’appelant à partir d’une méthode.
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216368"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613815"
 ---
 # <a name="caller-information"></a>Informations de l’appelant
 
@@ -72,6 +72,6 @@ Le graphique suivant montre le membre de noms qui sont retournés lorsque vous u
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Attributs](attributes.md)  
-- [Arguments nommés](parameters-and-arguments.md#named-arguments)  
-- [Paramètres facultatifs](parameters-and-arguments.md#optional-parameters)  
+- [Attributs](attributes.md)
+- [Arguments nommés](parameters-and-arguments.md#named-arguments)
+- [Paramètres facultatifs](parameters-and-arguments.md#optional-parameters)

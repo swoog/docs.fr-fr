@@ -1,17 +1,17 @@
 ---
-title: Enregistrements (F#)
+title: Enregistrements
 description: Découvrez comment F# enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48261288"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656139"
 ---
 # <a name="records"></a>Enregistrements
 
-Les enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.  À partir de F# 4.1, ils peuvent être soit types structs ou référence.  Ils sont des types de référence par défaut.
+Les enregistrements représentent des agrégats simples de valeurs nommées, éventuellement avec des membres.  En commençant par F# 4.1, ils peuvent appartenir types structs ou référence.  Ils sont des types de référence par défaut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -89,6 +89,29 @@ let defaultRecord2 = { Field1 = 1; Field2 = 25 }
 // and leave the rest with default values.
 let rr3 = { defaultRecord1 with Field2 = 42 }
 ```
+
+## <a name="creating-mutually-recursive-records"></a>Création de mutuellement récursives enregistrements
+
+Un certain temps lorsque vous créez un enregistrement, vous souhaiterez probablement qu’il dépend d’un autre type que vous souhaitez définir par la suite. Il s’agit d’une erreur de compilation, sauf si vous définissez les types d’enregistrement pour être mutuellement récursives.
+
+Définition mutuellement récursives enregistrements est effectuée avec la `and` mot clé. Cela vous permet de relier les types de 2 ou plus d’enregistrements.
+
+Par exemple, le code suivant définit un `Person` et `Address` type comme mutuellement récursives :
+
+```fsharp
+// Create a Person type and use the Address type that is not defined
+type Person =
+  { Name: string
+    Age: int
+    Address: Address }
+// Define the Address type which is used in the Person record
+and Address =
+  { Line1: string
+    Line2: string
+    PostCode: string }
+```
+
+Si vous deviez définir l’exemple précédent, sans le `and` mot clé, puis il n’est pas compilée. Le `and` mot clé est requise pour les définitions récursives s’excluent mutuellement.
 
 ## <a name="pattern-matching-with-records"></a>Critères spéciaux avec enregistrements
 

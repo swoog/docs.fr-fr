@@ -2,12 +2,12 @@
 title: Authentification dans SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0172259446724e0be85bd7ca2d15cf299db04e27
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521515"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613100"
 ---
 # <a name="authentication-in-sql-server"></a>Authentification dans SQL Server
 SQL Server prend en charge deux modes d'authentification, le mode d'authentification Windows et le mode mixte.  
@@ -19,7 +19,7 @@ SQL Server prend en charge deux modes d'authentification, le mode d'authentifica
 > [!IMPORTANT]
 >  Il est recommandé d'utiliser l'authentification Windows chaque fois que possible. L'authentification Windows utilise une série de messages chiffrés pour authentifier les utilisateurs dans SQL Server. Lorsque les connexions SQL Server sont utilisées, les noms de connexion SQL Server et les mots de passe chiffrés sont passées via le réseau, ce qui les rend moins sûrs.  
   
- Avec l'authentification Windows, les utilisateurs ont déjà ouvert une session Windows et n'ont pas besoin d'ouvrir une session SQL Server distincte. Le `SqlConnection.ConnectionString` suivant spécifie l'authentification Windows sans nécessiter de nom d'utilisateur ni de mot de passe.  
+ Avec l'authentification Windows, les utilisateurs ont déjà ouvert une session Windows et n'ont pas besoin d'ouvrir une session SQL Server distincte. Ce qui suit `SqlConnection.ConnectionString` Spécifie l’authentification Windows sans obliger les utilisateurs à fournir un nom d’utilisateur ou le mot de passe.  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  

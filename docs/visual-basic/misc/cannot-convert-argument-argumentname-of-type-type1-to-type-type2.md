@@ -1,17 +1,17 @@
 ---
-title: Impossible de convertir l’argument &#39; &lt;nom_argument&gt; &#39; de type &#39; &lt;type1&gt; &#39; au type &#39; &lt;type2&gt;&#39;
+title: Impossible de convertir l’argument '&lt;nom_argument&gt;'de type'&lt;type1&gt;' en type'&lt;type2&gt;'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-ms.openlocfilehash: 0a241150870397591da8cbc04ad334b6e5d72741
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8cf34180a48e47ec32af06e740323cbfa94f22
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635131"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781334"
 ---
-# <a name="cannot-convert-argument-39ltargumentnamegt39-of-type-39lttype1gt39-to-type-39lttype2gt39"></a>Impossible de convertir l’argument &#39; &lt;nom_argument&gt; &#39; de type &#39; &lt;type1&gt; &#39; au type &#39; &lt;type2&gt;&#39;
+# <a name="cannot-convert-argument-ltargumentnamegt-of-type-lttype1gt-to-type-lttype2gt"></a>Impossible de convertir l’argument '&lt;nom_argument&gt;'de type'&lt;type1&gt;' en type'&lt;type2&gt;'
 Une opération de conversion tente de convertir un argument en un type incompatible.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
@@ -19,4 +19,4 @@ Une opération de conversion tente de convertir un argument en un type incompati
 1.  Vérifiez que l’argument est converti en type valide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conversions de type dans Visual Basic](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+ [Conversions de type en Visual Basic](../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

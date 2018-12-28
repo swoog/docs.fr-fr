@@ -1,15 +1,15 @@
 ---
-title: 'Champs explicites : mot clé val (F#)'
-description: En savoir plus sur F# 'val' mot clé, qui est utilisé pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans initialiser le type.
+title: 'Champs explicites : Val mot clé'
+description: En savoir plus sur les F# mot clé « val », ce qui est utilisée pour déclarer un emplacement pour stocker une valeur dans un type classe ou structure sans initialiser le type.
 ms.date: 05/16/2016
-ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45746367"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773625"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>Champs explicites : mot clé val
+# <a name="explicit-fields-the-val-keyword"></a>Champs explicites : Val mot clé
 
 Le mot clé `val` est utilisé pour déclarer un emplacement pour stocker une valeur dans un type de classe ou de structure sans l'initialiser. Emplacements de stockage déclarés de cette manière sont appelés *champs explicites*. Une autre utilisation du mot clé `val` consiste à l'associer avec le mot clé `member` pour déclarer une propriété implémentée automatiquement. Pour plus d’informations sur les propriétés implémentées automatiquement, consultez [propriétés](properties.md).
 
@@ -64,6 +64,10 @@ Le code suivant illustre l'utilisation de champs explicites dans une structure. 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 Le résultat est `11 xyz`.
+
+**Soyez attentif aux**, si vous vous apprêtez à initialiser votre structure avec `mutable` champs sans `mutable` mot clé, vos attributions fonctionnera sur une copie de la structure qui sera ignorée juste après l’attribution. Par conséquent, votre structure ne changera pas.
+
+[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 Les champs explicites n'ont pas vocation à être utilisés dans le cadre d'une routine. En général, quand cela est possible, vous devez utiliser une liaison `let` dans une classe au lieu d'un champ explicite. Les champs explicites s'avèrent utiles dans certains scénarios d'interopérabilité, notamment quand vous devez définir une structure qui sera utilisée dans un appel de code non managé à une API native ou dans des scénarios COM interop. Pour plus d’informations, consultez [fonctions externes](../functions/external-functions.md). Une autre situation dans laquelle un champ explicite peut s'avérer nécessaire est liée à l'utilisation d'un générateur de code F# qui émet des classes sans constructeur principal. Les champs explicites s'avèrent également utiles pour les variables static de thread ou les constructions similaires. Pour plus d'informations, consultez `System.ThreadStaticAttribute`.
 

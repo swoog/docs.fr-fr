@@ -1,17 +1,17 @@
 ---
-title: Le mot clé Fixed (F#)
-description: Découvrez comment vous pouvez « pin » une variable locale dans la pile pour empêcher la collecte avec F# « fixed » mot clé.
+title: Le mot clé fixed
+description: Découvrez comment vous pouvez « pin » une variable locale dans la pile pour éviter la collection avec le F# mot clé « fixed ».
 ms.date: 04/24/2017
-ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fdf66560f3e2ab7584b00c7e4584d7f6c161858
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45624507"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614334"
 ---
-# <a name="the-fixed-keyword"></a>Le mot clé Fixed
+# <a name="the-fixed-keyword"></a>Le mot clé fixed
 
-F# 4.1 introduit le `fixed` mot clé, qui vous permet de « épingler » une variable locale dans la pile pour éviter d’être collectées ou déplacé pendant le garbage collection.  Il est utilisé pour les scénarios de programmation de bas niveau.
+F#4.1 introduit le `fixed` mot clé, qui vous permet de « épingler » une variable locale dans la pile pour éviter d’être collectées ou déplacé pendant le garbage collection.  Il est utilisé pour les scénarios de programmation de bas niveau.
 
 ## <a name="syntax"></a>Syntaxe
 

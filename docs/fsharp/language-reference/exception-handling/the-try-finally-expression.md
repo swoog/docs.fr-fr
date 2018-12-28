@@ -1,15 +1,15 @@
 ---
-title: 'Exceptions : expression try...finally (F#)'
-description: Découvrez comment F# « try... finally' expression vous permet d’exécuter du code de nettoyage même si un bloc de code lève une exception.
+title: 'Exceptions : try...finally (expression)'
+description: Découvrez comment la F# ' try... finally' expression vous permet d’exécuter du code de nettoyage même si un bloc de code lève une exception.
 ms.date: 05/16/2016
-ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 24613185818c8ea30b27dcf639b22af320c4b401
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45970316"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611618"
 ---
-# <a name="exceptions-the-tryfinally-expression"></a>Exceptions : expression try...finally
+# <a name="exceptions-the-tryfinally-expression"></a>Exceptions : try...finally (expression)
 
 Le `try...finally` expression vous permet d’exécuter du code de nettoyage même si un bloc de code lève une exception.
 
@@ -50,4 +50,4 @@ Dans le contexte d’expressions de calcul, y compris les expressions de séquen
 ## <a name="see-also"></a>Voir aussi
 
 - [Gestion des exceptions](index.md)
-- [Exceptions : expression `try...with`](the-try-with-expression.md)
+- [Exceptions : Le `try...with` Expression](the-try-with-expression.md)

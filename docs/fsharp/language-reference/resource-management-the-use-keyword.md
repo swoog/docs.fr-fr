@@ -1,13 +1,13 @@
 ---
-title: 'Gestion des ressources : L’utilisation du mot clé (F#)'
+title: 'Gestion des ressources : L’utilisation du mot clé'
 description: En savoir plus sur les F# mot clé 'use' et la fonction 'using', qui permettre contrôler l’initialisation et la libération de ressources.
 ms.date: 05/16/2016
-ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147630"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613087"
 ---
 # <a name="resource-management-the-use-keyword"></a>Gestion des ressources : L’utilisation du mot clé
 

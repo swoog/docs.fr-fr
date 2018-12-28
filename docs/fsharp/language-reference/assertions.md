@@ -1,13 +1,13 @@
 ---
-title: Assertions (F#)
+title: Assertions
 description: Découvrez comment utiliser l’expression « déclarer » comme une fonctionnalité de débogage pour le test des expressions dans le F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c2d97386e87e9b915da490a78fff9aedb9def616
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127249"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610201"
 ---
 # <a name="assertions"></a>Assertions
 

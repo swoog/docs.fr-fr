@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7a8858059159edddb4456561719c572fb9268be7
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3070e293fc335bb24dd1234007307773d152ceee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509481"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611397"
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; élément
 Spécifie si les assemblys chargés à partir de sources distantes doivent être accordés une confiance totale dans .NET Framework 4 et versions ultérieures.
   
 > [!NOTE]
->  Si vous avez été dirigé vers cette rubrique en raison d’un message d’erreur dans la liste d’erreurs de projet Visual Studio ou une erreur de build, consultez [Comment : utiliser un Assembly à partir du Web dans Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Si vous avez été dirigé vers cette rubrique en raison d’un message d’erreur dans la liste d’erreurs de projet Visual Studio ou une erreur de build, consultez [Comment : Utiliser un Assembly à partir du Web dans Visual Studio](https://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
  \<configuration>  
 \<runtime>  
@@ -74,7 +74,7 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 Pour charger l’assembly et exécuter son code, vous devez :
 
-- Créer explicitement un bac à sable pour l’assembly (consultez [Comment : exécuter partiellement approuvé du Code dans un bac à sable](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
+- Créer explicitement un bac à sable pour l’assembly (consultez [Comment : Exécuter le Code de confiance partiel dans un bac à sable](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)).
 
 - Exécutez le code de l’assembly avec une confiance totale. Pour cela, vous devez configurer le `<loadFromRemoteSources>` élément. Il vous permet de spécifier que les assemblys qui s’exécutent en confiance partielle dans les versions antérieures du .NET Framework s’exécutent maintenant en mode confiance totale dans le .NET Framework 4 et versions ultérieures.
 
@@ -117,8 +117,8 @@ L’exemple suivant montre comment accorder une confiance totale aux assemblys c
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilise plus implicite de stratégie CAS : loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
-[Guide pratique pour exécuter du code d’un niveau de confiance partiel dans un bac à sable (sandbox)](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
-[Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
-[Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
+- [Utilise plus implicite de stratégie CAS : loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)  
+- [Guide pratique pour Exécuter le Code de confiance partiel dans un bac à sable](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  

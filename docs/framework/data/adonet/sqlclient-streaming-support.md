@@ -2,12 +2,12 @@
 title: Prise en charge de la diffusion en continu pour SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eeec8f2a88894762fd8dab93bf0b3b11941ba17a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152888"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612996"
 ---
 # <a name="sqlclient-streaming-support"></a>Prise en charge de la diffusion en continu pour SqlClient
 Prise en charge entre SQL Server et une application de diffusion en continu (nouveauté de [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) prend en charge les données non structurées sur le serveur (documents, images et fichiers multimédias). Une base de données SQL Server peut stocker des objets binaires volumineux (BLOB), mais la récupération des objets BLOB peuvent utiliser beaucoup de mémoire.  
@@ -326,7 +326,7 @@ GO
   
 -   Utilisation de la nouvelle fonctionnalité asynchrone et du mot clé await pour transférer un objet BLOB.  
   
--   Annuler le transfert d'un grand BLOB.  
+-   Annuler le transfert d’un objet BLOB.  
   
 -   Diffusion en continu à partir d’une instance SQL Server à un autre à l’aide de la nouvelle fonctionnalité asynchrone.  
   

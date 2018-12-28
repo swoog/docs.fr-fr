@@ -1,15 +1,15 @@
 ---
-title: 'Expressions lambda : mot clé fun (F#)'
-description: Découvrez comment utiliser le mot clé F# « fun » pour définir une expression lambda, qui est une fonction anonyme.
+title: 'Expressions lambda : Le mot clé fun'
+description: Découvrez comment utiliser le F# mot clé « fun » pour définir une expression lambda, qui est une fonction anonyme.
 ms.date: 05/16/2016
-ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47231019"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614458"
 ---
-# <a name="lambda-expressions-the-fun-keyword-f"></a>Expressions lambda : mot clé fun (F#)
+# <a name="lambda-expressions-the-fun-keyword-f"></a>Expressions lambda : Le mot clé fun (F#)
 
 Le `fun` mot clé est utilisé pour définir une expression lambda, autrement dit, une fonction anonyme.
 
@@ -21,7 +21,7 @@ fun parameter-list -> expression
 
 ## <a name="remarks"></a>Notes
 
-Le *liste de paramètres* se compose généralement de noms et, éventuellement, de types de paramètres. En règle générale, le *liste de paramètres* peuvent être composées de n’importe quel modèle F#. Pour obtenir une liste complète des modèles possibles, consultez [critères spéciaux](../pattern-matching.md). Listes de paramètres valides comprennent les exemples suivants.
+Le *liste de paramètres* se compose généralement de noms et, éventuellement, de types de paramètres. En règle générale, le *liste de paramètres* peuvent être composées de n’importe quel F# modèles. Pour obtenir une liste complète des modèles possibles, consultez [critères spéciaux](../pattern-matching.md). Listes de paramètres valides comprennent les exemples suivants.
 
 ```fsharp
 // Lambda expressions with parameter lists.
@@ -42,7 +42,7 @@ Le *expression* est le corps de la fonction, la dernière expression qui génèr
 
 ## <a name="using-lambda-expressions"></a>Utilisation d’expressions lambda
 
-Expressions lambda sont particulièrement utiles lorsque vous souhaitez effectuer des opérations sur une liste ou une autre collection et souhaitez éviter le travail supplémentaire de la définition d’une fonction. De nombreuses fonctions de bibliothèque F# prennent des valeurs de fonction en tant qu’arguments, et il peut être particulièrement pratique d’utiliser une expression lambda dans ces cas. Le code suivant applique une expression lambda aux éléments d’une liste. Dans ce cas, la fonction anonyme ajoute 1 à chaque élément d’une liste.
+Expressions lambda sont particulièrement utiles lorsque vous souhaitez effectuer des opérations sur une liste ou une autre collection et souhaitez éviter le travail supplémentaire de la définition d’une fonction. Nombreux F# les fonctions de bibliothèque acceptent des valeurs de fonction en tant qu’arguments, et il peut être particulièrement pratique d’utiliser une expression lambda dans ces cas. Le code suivant applique une expression lambda aux éléments d’une liste. Dans ce cas, la fonction anonyme ajoute 1 à chaque élément d’une liste.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet302.fs)]
 

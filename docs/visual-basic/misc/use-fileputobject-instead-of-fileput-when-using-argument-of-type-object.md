@@ -1,17 +1,18 @@
 ---
-title: Utilisez &#39;FilePutObject&#39; au lieu de &#39;FilePut&#39; quand l’argument de type &#39;objet&#39;
+title: Utilisez ’FilePutObject’ à la place de ’FilePut’ quand l’argument est de type ’Object’.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
-ms.openlocfilehash: 529352d98c175981c20861205ce04c8a2ebcdca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df7d7c54992984bcb1684e41f60ae8361a3aed03
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774223"
 ---
-# <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>Utilisez &#39;FilePutObject&#39; au lieu de &#39;FilePut&#39; quand l’argument de type &#39;objet&#39;
-Le `FilePut` méthode inclut un argument de type `Object`. `FilePutObject` doit être utilisé à la place de `FilePut` pour éviter toute ambiguïté.  
+# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>Utilisez ’FilePutObject’ à la place de ’FilePut’ quand l’argument est de type ’Object’.
+La méthode `FilePut` comprend un argument de type `Object`. `FilePutObject` doit être utilisé à la place de `FilePut` pour éviter toute ambiguïté.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
   

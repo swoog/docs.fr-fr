@@ -1,13 +1,13 @@
 ---
-title: Abréviations de types (F#)
-description: Découvrez les abréviations de type F# pour donner un nom plus significatif à un type afin de faciliter la lecture du code.
+title: Abréviations de types
+description: En savoir plus sur F# type abréviations pour donner un nom plus significatif à un type afin de faciliter la lecture du code.
 ms.date: 05/16/2016
-ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842422"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613347"
 ---
 # <a name="type-abbreviations"></a>Abréviations de types
 
@@ -33,7 +33,7 @@ Abréviations de types peuvent inclure des paramètres génériques, comme dans 
 
 Dans le code précédent, `Transform` est une abréviation de type qui représente une fonction qui accepte un argument unique de n’importe quel type et qui retourne une valeur unique du même type.
 
-Abréviations de types ne sont pas conservées dans le code MSIL .NET Framework. Par conséquent, lorsque vous utilisez un assembly F# à partir d’un autre langage .NET Framework, vous devez utiliser le nom de type sous-jacent pour une abréviation de type.
+Abréviations de types ne sont pas conservées dans le code MSIL .NET Framework. Par conséquent, lorsque vous utilisez un F# assembly à partir d’un autre langage .NET Framework, vous devez utiliser le nom de type sous-jacent pour une abréviation de type.
 
 Abréviations de type peuvent également servir sur des unités de mesure. Pour plus d’informations, consultez [unités](units-of-measure.md).
 

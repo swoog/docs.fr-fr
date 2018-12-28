@@ -1,25 +1,25 @@
 ---
-title: Inférence de type (F#)
-description: Découvrez comment le compilateur F# déduit les types de valeurs, variables, paramètres et valeurs de retour.
+title: Inférence de type
+description: Découvrez comment la F# compilateur déduit les types de valeurs, variables, paramètres et valeurs de retour.
 ms.date: 05/16/2016
-ms.openlocfilehash: fd826ac48fb9a70aa6f4ff746599c11b7e21a02e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 3e61d5c81fde0a48af66a47745123a842dc04cb1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865694"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612788"
 ---
 # <a name="type-inference"></a>Inférence de type
 
-Cette rubrique décrit comment le compilateur F# déduit les types de valeurs, variables, paramètres et valeurs de retour.
+Cette rubrique décrit comment la F# compilateur déduit les types de valeurs, variables, paramètres et valeurs de retour.
 
 ## <a name="type-inference-in-general"></a>En général l’inférence de type
 
-L’idée d’inférence de type est que vous n’êtes pas obligé de spécifier les types de constructions F#, sauf lorsque le compilateur ne peut pas déduire ait le type. Omettre les informations de type explicite ne signifie pas que F# est un langage saisi dynamiquement ou que les valeurs en F# sont faiblement typées. F# est un langage statiquement typé, ce qui signifie que le compilateur déduit un type exact pour chaque construction pendant la compilation. S’il n’est pas suffisamment d’informations pour le compilateur de déduire les types de chaque construction, vous devez fournir les informations de type supplémentaires, généralement en ajoutant des annotations de type explicite quelque part dans le code.
+L’idée d’inférence de type est que vous n’êtes pas obligé de spécifier les types de F# constructions, sauf lorsque le compilateur ne peut pas déduire ait le type. Omettre les informations de type explicite ne signifie pas que F# est un langage saisi dynamiquement ou que les valeurs de F# sont faiblement typée. F#est un langage statiquement typé, ce qui signifie que le compilateur déduit un type exact pour chaque construction pendant la compilation. S’il n’est pas suffisamment d’informations pour le compilateur de déduire les types de chaque construction, vous devez fournir les informations de type supplémentaires, généralement en ajoutant des annotations de type explicite quelque part dans le code.
 
 ## <a name="inference-of-parameter-and-return-types"></a>Inférence des Types de retour et de paramètre
 
-Dans une liste de paramètres, il est inutile de spécifier le type de chaque paramètre. Pourtant, F# est un langage typé statiquement, et par conséquent, chaque valeur et chaque expression ont un type défini au moment de la compilation. Pour ces types que vous ne spécifiez pas explicitement, le compilateur déduit le type en fonction du contexte. Si le type n’est pas un spécifiée autrement, il est déduit de manière générique. Si le code utilise une valeur de façon incohérente, de sorte qu’il n’existe pas d’une seule déduit le type qui satisfait à toutes les utilisations d’une valeur, que le compilateur signale une erreur.
+Dans une liste de paramètres, il est inutile de spécifier le type de chaque paramètre. Et pourtant, F# est un langage typé statiquement, et par conséquent, chaque valeur et chaque expression ont un type défini au moment de la compilation. Pour ces types que vous ne spécifiez pas explicitement, le compilateur déduit le type en fonction du contexte. Si le type n’est pas un spécifiée autrement, il est déduit de manière générique. Si le code utilise une valeur de façon incohérente, de sorte qu’il n’existe pas d’une seule déduit le type qui satisfait à toutes les utilisations d’une valeur, que le compilateur signale une erreur.
 
 Le type de retour d’une fonction est déterminé par le type de la dernière expression dans la fonction.
 
@@ -59,7 +59,7 @@ Le type est déduit pour être
 
 ## <a name="additional-information"></a>Informations supplémentaires
 
-Inférence de type est décrite plus en détail dans la spécification du langage F#.
+Inférence de type est décrite plus en détail dans le F# spécification du langage.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,22 +1,22 @@
 ---
-title: Options de valeur (F#)
-description: En savoir plus sur le type d’Option de valeur F#, qui est une version de la structure du type d’Option.
+title: Options de valeur
+description: En savoir plus sur les F# type d’Option de valeur, qui est une version de la structure du type d’Option.
 ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: d5209e620d53e12e9344faea09321f640af21491
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50185834"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613425"
 ---
 # <a name="value-options"></a>Options de valeur
 
-Le type d’Option de valeur en F# est utilisé lorsque vous maintenez les deux circonstances suivantes :
+Le type d’Option de valeur dans F# sert à contiennent les deux circonstances suivantes :
 
-1. Un scénario est adapté pour une [Option F#](options.md).
+1. Un scénario est adapté pour une [ F# Option](options.md).
 2. À l’aide d’un struct fournit un gain de performances dans votre scénario.
 
-Pas tous les scénarios sensibles aux performances sont « résolus » à l’aide de structs. Vous devez prendre en compte le coût supplémentaire de copie lors de leur utilisation au lieu de types référence. Toutefois, des programmes F# volumineux instancier couramment nombreux types facultatifs qui transitent par les chemins d’accès à chaud, étant donné que les structs peuvent produire parfois mieux les performances globales pendant la durée de vie d’un programme.
+Pas tous les scénarios sensibles aux performances sont « résolus » à l’aide de structs. Vous devez prendre en compte le coût supplémentaire de copie lors de leur utilisation au lieu de types référence. Toutefois, grand F# programmes instancier couramment des nombreux types facultatifs qui transitent par les chemins d’accès à chaud, étant donné que les structs peuvent produire parfois de meilleures performances globales pendant la durée de vie d’un programme.
 
 ## <a name="definition"></a>Définition
 

@@ -1,17 +1,17 @@
 ---
-title: Options (F#)
-description: Découvrez comment utiliser F# option types lorsqu’une valeur réelle n’existe ne peut-être pas pour une valeur nommée ou une variable.
+title: Options
+description: Découvrez comment utiliser F# option types lorsqu’une valeur réelle n’existerait pas pour une valeur nommée ou une variable.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46479518"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613503"
 ---
 # <a name="options"></a>Options
 
-Le type d’option en F# est utilisé lorsqu’une valeur réelle n’existerait pas pour une valeur nommée ou une variable. Une option a un type sous-jacent et peut contenir une valeur de ce type, ou il ne peut pas avoir une valeur.
+Le type d’option dans F# est utilisé lorsqu’une valeur réelle n’existerait pas pour une valeur nommée ou une variable. Une option a un type sous-jacent et peut contenir une valeur de ce type, ou il ne peut pas avoir une valeur.
 
 ## <a name="remarks"></a>Notes
 
@@ -33,7 +33,7 @@ Options sont couramment utilisées lors d’une recherche ne retourne pas de ré
 
 Dans le code précédent, une liste est effectuée de manière récursive. La fonction `tryFindMatch` prend une fonction de prédicat `pred` qui retourne une valeur booléenne et une liste à rechercher. Si un élément qui répond au prédicat est trouvé, la récursivité se termine et la fonction retourne la valeur en tant qu’option dans l’expression `Some(head)`. La récursivité se termine lorsque la liste vide est mis en correspondance. À ce stade, la valeur `head` n’a pas été trouvé, et `None` est retourné.
 
-Nombreuses fonctions de bibliothèque F# qui recherchent une collection pour une valeur qui peut existe ou non retourner la `option` type. Par convention, ces fonctions commencent par le `try` de préfixe, par exemple, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
+Nombreux F# des fonctions de bibliothèque qui recherchent une collection pour une valeur qui peut existe ou non retourner la `option` type. Par convention, ces fonctions commencent par le `try` de préfixe, par exemple, [ `Seq.tryFindIndex` ](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a).
 
 Options peuvent également être utiles lorsqu’une valeur ne peut pas exister, par exemple s’il est possible qu’une exception est levée lorsque vous tentez de construire une valeur. L'exemple de code suivant illustre ceci.
 

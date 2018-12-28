@@ -1,13 +1,13 @@
 ---
-title: 'Boucles : expression for...to (F#)'
-description: Voir comment le F# for.. à l’expression est utilisé pour effectuer une itération dans une boucle sur une plage de valeurs d’une variable de boucle.
+title: 'Boucles : expression for...to'
+description: Voir comment la F# for.. à l’expression est utilisé pour effectuer une itération dans une boucle sur une plage de valeurs d’une variable de boucle.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800467"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612320"
 ---
 # <a name="loops-forto-expression"></a>Boucles : expression for...to
 
@@ -39,5 +39,5 @@ La sortie du code précédent est la suivante.
 ## <a name="see-also"></a>Voir aussi
 
 - [Informations de référence du langage F#](index.md)
-- [Boucles : expression `for...in`](loops-for-in-expression.md)
-- [Boucles : expression `while...do`](loops-while-do-expression.md)
+- [Boucles : `for...in` Expression](loops-for-in-expression.md)
+- [Boucles : `while...do` Expression](loops-while-do-expression.md)

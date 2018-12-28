@@ -1,25 +1,25 @@
 ---
 title: Fournisseurs de type
-description: Découvrez comment un fournisseur de type F# est un composant qui fournit des types, propriétés et méthodes à utiliser dans vos programmes.
+description: Découvrez comment un F# fournisseur de type est un composant qui fournit des types, propriétés et méthodes à utiliser dans vos programmes.
 ms.date: 04/02/2018
-ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 39000fd1ca2af78afd1c333816fe9d5c0e2517cb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "46697761"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611631"
 ---
 # <a name="type-providers"></a>Fournisseurs de type
 
-Un fournisseur de type F# est un composant qui fournit des types, des propriétés et des méthodes à utiliser dans votre programme. Fournisseurs de type génèrent ce que l'on **Types fourni**, qui sont généré par le compilateur F# et sont basé sur une source de données externe.
+Un fournisseur de type F# est un composant qui fournit des types, des propriétés et des méthodes à utiliser dans votre programme. Fournisseurs de type génèrent ce que l'on **Types fourni**, qui sont généré par le F# compilateur et sont basés sur une source de données externe.
 
-Par exemple, un fournisseur de Type F# pour SQL peut générer des types représentant les tables et colonnes dans une base de données relationnelle. En fait, c’est ce que le [SQLProvider](https://fsprojects.github.io/SQLProvider/) fournisseur de Type ne.
+Par exemple, un F# fournisseur de Type pour SQL peut générer des types représentant les tables et colonnes dans une base de données relationnelle. En fait, c’est ce que le [SQLProvider](https://fsprojects.github.io/SQLProvider/) fournisseur de Type ne.
 
 Fourni que types dépendent des paramètres d’entrée à un fournisseur de Type. Entrée de ce genre peut être un exemple de source de données (par exemple, un fichier de schéma JSON), une URL qui pointe directement vers un service externe ou une chaîne de connexion à une source de données. Un fournisseur de Type peut également vous assurer que les groupes de types sont développés uniquement à la demande ; Autrement dit, ils sont développés si les types sont réellement référencés par votre programme. Cela permet l'intégration directe et à la demande d'espaces d'informations à grande échelle, tels que les marchés de données en ligne, de manière fortement typée.
 
 ## <a name="generative-and-erased-type-providers"></a>Fournisseurs de Type générative et effacé
 
-Fournisseurs de type se présentent sous deux formes : générative et effacées.
+Fournisseurs de type se présentent sous deux formes : Générative et effacées.
 
 Les fournisseurs de Type générative produisent des types qui peuvent être écrits en tant que types .NET dans l’assembly dans lequel ils sont générés. Cela leur permet d’être utilisé à partir du code dans d’autres assemblys. Cela signifie que la représentation typée de la source de données doit être généralement un est possible de représenter avec des types .NET.
 
@@ -30,8 +30,8 @@ Effacement des fournisseurs de Type produisent des types qui peuvent uniquement 
 Les bibliothèques de largement utilisé suivantes contiennent des fournisseurs de Type pour différentes utilisations :
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) inclut les fournisseurs de Type pour les formats de document JSON, XML, CSV, HTML et ressources.
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fournit accès fortement typé aux bases de données de relation via LINQ F# et de mappage de l’objet de requêtes par rapport à ces sources de données.
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) a un ensemble de fournisseurs de type pour le moment de la compilation vérifié l’incorporation de T-SQL en F#.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fournit l’accès fortement typé aux bases de données de relation via le mappage de l’objet et F# requêtes LINQ sur ces sources de données.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) a un ensemble de fournisseurs de type pour le moment de la compilation vérifié l’incorporation de T-SQL dans F#.
 - [Fournisseur de Type de stockage Azure](https://fsprojects.github.io/AzureStorageTypeProvider/) fournit des types pour les objets BLOB Azure, les Tables et les files d’attente, ce qui vous permet d’accéder à ces ressources sans avoir à spécifier des noms de ressources sous forme de chaînes tout au long de votre programme.
 - [FSharp.Data.GraphQL](https://fsprojects.github.io/FSharp.Data.GraphQL/index.html) contient le **GraphQLProvider**, qui fournit des types basés sur un serveur GraphQL spécifié par URL.
 
@@ -39,6 +39,6 @@ Lorsque cela est nécessaire, vous pouvez [créer vos propres fournisseurs de ty
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Didacticiel : Créer un fournisseur de Type](creating-a-type-provider.md)
+- [Tutoriel : Créer un fournisseur de Type](creating-a-type-provider.md)
 - [Informations de référence du langage F#](../../language-reference/index.md)
 - [Visual F#](../../index.md)

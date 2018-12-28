@@ -1,17 +1,17 @@
 ---
 title: Sécurité du fournisseur de type
-description: En savoir plus sur la sécurité de fournisseur de type en F#, notamment comment modifier les paramètres d’approbation pour un fournisseur de type.
+description: En savoir plus sur la sécurité du type de fournisseur dans F#, y compris comment modifier les paramètres d’approbation pour un fournisseur de type.
 ms.date: 05/16/2016
-ms.openlocfilehash: 26f95ad3950b37a668c497f293b9941ed13a18c7
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9ccb33d7298736c3d6b54980b6fe09bc9f2e0259
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43861905"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611189"
 ---
 # <a name="type-provider-security"></a>Sécurité du fournisseur de type
 
-Fournisseurs de type sont des assemblys (DLL) référencés par votre projet F# ou un script qui contiennent du code pour se connecter aux sources de données externes et de faire apparaître ces informations de type à l’environnement de type F#. En règle générale, le code dans les assemblys référencés s’exécute seulement lorsque vous compilez et puis exécutez le code (ou dans le cas d’un script, envoyez le code à F# Interactive). Toutefois, un assembly de fournisseur de type sera exécuté à l’intérieur de Visual Studio lorsque le code est simplement naviguer dans l’éditeur. Cela se produit, car les fournisseurs de type doivent exécuter pour ajouter des informations supplémentaires à l’éditeur, telles que des info-bulles Info express, les saisies semi-automatiques IntelliSense et ainsi de suite. Par conséquent, il existe des considérations de sécurité supplémentaire pour le type des assemblys de fournisseur, car ils s’exécutent automatiquement à l’intérieur du processus Visual Studio.
+Fournisseurs de type sont des assemblys (DLL) référencés par votre F# projet ou un script qui contiennent du code pour se connecter aux sources de données externes et de faire apparaître ces informations de type pour le F# environnement de type. En règle générale, le code dans les assemblys référencés est exécuté uniquement lorsque vous compilez et exécutez ensuite le code (ou dans le cas d’un script, envoyer le code à F# Interactive). Toutefois, un assembly de fournisseur de type sera exécuté à l’intérieur de Visual Studio lorsque le code est simplement naviguer dans l’éditeur. Cela se produit, car les fournisseurs de type doivent exécuter pour ajouter des informations supplémentaires à l’éditeur, telles que des info-bulles Info express, les saisies semi-automatiques IntelliSense et ainsi de suite. Par conséquent, il existe des considérations de sécurité supplémentaire pour le type des assemblys de fournisseur, car ils s’exécutent automatiquement à l’intérieur du processus Visual Studio.
 
 ## <a name="security-warning-dialog"></a>Boîte de dialogue sécurité
 
