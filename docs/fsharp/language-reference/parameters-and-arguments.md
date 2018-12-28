@@ -1,13 +1,13 @@
 ---
-title: Paramètres et arguments (F#)
-description: En savoir plus sur F# prise en charge linguistique pour la définition de paramètres et en transmettant des arguments aux fonctions, méthodes et propriétés.
+title: Paramètres et arguments
+description: En savoir plus sur F# prise en charge de langage de définition de paramètres et en transmettant des arguments aux fonctions, méthodes et propriétés.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 08332ad9ab1c1a05f68ba27b2f1513ad0fe7c4d5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50744455"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612476"
 ---
 # <a name="parameters-and-arguments"></a>Paramètres et arguments
 
@@ -109,7 +109,7 @@ Pour plus d’informations, consultez [constructeurs (F#)](https://msdn.microsof
 
 ## <a name="optional-parameters"></a>Paramètres facultatifs
 
-Vous pouvez spécifier un paramètre facultatif pour une méthode à l’aide d’un point d’interrogation devant le nom du paramètre. Paramètres facultatifs sont interprétés comme le type d’option F#, vous pouvez les interroger de façon habituelle que les types d’option sont interrogées, à l’aide un `match` expression avec `Some` et `None`. Paramètres facultatifs sont autorisés uniquement sur les membres, et non sur les fonctions créées à l’aide de `let` liaisons.
+Vous pouvez spécifier un paramètre facultatif pour une méthode à l’aide d’un point d’interrogation devant le nom du paramètre. Paramètres facultatifs sont interprétés comme le F# option type, donc vous pouvez les interroger de façon habituelle que les types d’option sont interrogées, en utilisant un `match` expression avec `Some` et `None`. Paramètres facultatifs sont autorisés uniquement sur les membres, et non sur les fonctions créées à l’aide de `let` liaisons.
 
 Vous pouvez passer les valeurs facultatives existants à la méthode par nom de paramètre, tel que `?arg=None` ou `?arg=Some(3)` ou `?arg=arg`. Cela peut être utile lors de la création d’une méthode qui transmet les arguments facultatifs à une autre méthode.
 
@@ -151,7 +151,7 @@ Dans ce cas, le compilateur génère un avertissement et ignore complètement le
 
 ## <a name="passing-by-reference"></a>Passage par référence
 
-Passage d’une valeur de F# par référence implique [ByRef](byrefs.md), qui sont des types de pointeur managé. Conseils pour le type à utiliser sont la suivante :
+En passant un F# implique la valeur par référence [ByRef](byrefs.md), qui sont des types de pointeur managé. Conseils pour le type à utiliser sont la suivante :
 
 * Utilisez `inref<'T>` si vous avez besoin uniquement de lire le pointeur.
 * Utilisez `outref<'T>` si vous avez besoin uniquement d’écrire dans le pointeur.
@@ -186,11 +186,11 @@ Vous pouvez utiliser un tuple comme valeur de retour pour stocker les `out` para
 
 Parfois, il est nécessaire de définir une fonction qui accepte un nombre arbitraire de paramètres de type hétérogène. Il ne serait pas pratique de créer toutes les méthodes surchargées possibles pour prendre en compte pour tous les types qui peuvent être utilisées. Les implémentations de .NET prennent en charge ces méthodes via la fonctionnalité de tableau de paramètre. Une méthode qui prend un tableau de paramètres dans sa signature peut être fournie avec un nombre arbitraire de paramètres. Les paramètres sont placés dans un tableau. Le type des éléments du tableau détermine les types de paramètres qui peuvent être passés à la fonction. Si vous définissez le tableau de paramètres avec `System.Object` en tant que le type d’élément, puis le code client peut passer des valeurs de n’importe quel type.
 
-En F#, les tableaux de paramètres peuvent uniquement être définies dans les méthodes. Ils ne peuvent pas être utilisés dans des fonctions autonomes ou des fonctions qui sont définies dans les modules.
+Dans F#, tableaux de paramètres peuvent uniquement être définies dans les méthodes. Ils ne peuvent pas être utilisés dans des fonctions autonomes ou des fonctions qui sont définies dans les modules.
 
 Vous définissez un tableau de paramètres à l’aide de la `ParamArray` attribut. Le `ParamArray` attribut peut uniquement être appliqué au dernier paramètre.
 
-Le code suivant illustre l’appel à une méthode .NET qui prend un tableau de paramètres et la définition d’un type en F# qui a une méthode qui prend un tableau de paramètres.
+Le code suivant illustre l’appel à une méthode .NET qui prend un tableau de paramètres et la définition d’un type dans F# qui a une méthode qui prend un tableau de paramètres.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/parameters-and-arguments-2/snippet3811.fs)]
 

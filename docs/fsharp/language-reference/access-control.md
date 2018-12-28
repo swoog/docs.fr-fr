@@ -1,13 +1,13 @@
 ---
-title: Contrôle d'accès (F#)
+title: Contrôle d'accès
 description: Découvrez comment contrôler l’accès aux éléments de programmation, tels que les types, méthodes et fonctions, dans le F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: 136eba5ec33fa6128e677b614fc0ace3c71d17df
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8db178b26f3beb6ce95bff84ccad9ac9e8c40ce7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153707"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612805"
 ---
 # <a name="access-control"></a>Contrôle d'accès
 

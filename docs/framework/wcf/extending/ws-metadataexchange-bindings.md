@@ -2,12 +2,12 @@
 title: Liaisons WS-MetadataExchange
 ms.date: 03/30/2017
 ms.assetid: 10f8de5d-b81d-4ea7-b37e-7f2c00c39714
-ms.openlocfilehash: 384e5bb05ba4263f245f6901b84e2388ea19bd73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03e6e6d5ee7e69b397acd0f51b8037f02c1804ec
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488622"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53767346"
 ---
 # <a name="ws-metadataexchange-bindings"></a>Liaisons WS-MetadataExchange
 Cette rubrique décrit comment les liaisons d’échange de métadonnées par défaut sont construites pour les divers transports.  
@@ -16,7 +16,7 @@ Cette rubrique décrit comment les liaisons d’échange de métadonnées par d�
   
 |Nom de la liaison par défaut|Construction de la liaison|  
 |--------------------------|------------------------------------|  
-|MexHttpBinding|<xref:System.ServiceModel.WSHttpBinding> avec la sécurité au niveau du transport désactivée.|  
-|MexHttpsBinding|<xref:System.ServiceModel.WSHttpBinding> qui prend en charge la sécurité au niveau du transport.|  
-|MexNamedPipeBinding|<xref:System.ServiceModel.Channels.CustomBinding> avec <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement> en utilisant les valeurs par défaut.|  
-|MexTcpBinding|<xref:System.ServiceModel.Channels.CustomBinding> avec <xref:System.ServiceModel.Channels.TcpTransportBindingElement> en utilisant les valeurs par défaut.|
+|mexHttpBinding|<xref:System.ServiceModel.WSHttpBinding> avec la sécurité au niveau du transport désactivée.|  
+|mexHttpsBinding|<xref:System.ServiceModel.WSHttpBinding> qui prend en charge la sécurité au niveau du transport.|  
+|mexNamedPipeBinding|<xref:System.ServiceModel.Channels.CustomBinding> avec <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement> en utilisant les valeurs par défaut.|  
+|mexTcpBinding|<xref:System.ServiceModel.Channels.CustomBinding> avec <xref:System.ServiceModel.Channels.TcpTransportBindingElement> en utilisant les valeurs par défaut.|

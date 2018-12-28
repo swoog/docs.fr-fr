@@ -7,11 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0cfd8c971edd4537de6e073c49f128f86eb8a042
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 49dc991fd1f30bce6c328725a794750c753145cd
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613282"
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a>&lt;NetFx40_PInvokeStackResilience&gt; élément
 Indique si le runtime corrige automatiquement les déclarations incorrectes d’appel de code non managé à l’exécution, au prix de transitions plus lentes entre le code managé et le code non managé.  
@@ -33,14 +34,14 @@ Indique si le runtime corrige automatiquement les déclarations incorrectes d’
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`enabled`|Attribut requis.<br /><br /> Spécifie si le runtime détecte plateforme incorrect déclarations d’appel et résout automatiquement la pile au moment de l’exécution sur les plateformes 32 bits.|  
+|`enabled`|Attribut requis.<br /><br /> Spécifie si le runtime détecte plateforme incorrecte les déclarations d’appel et résout automatiquement la pile en cours d’exécution sur les plateformes 32 bits.|  
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |`0`|Le runtime utilise l’architecture introduite dans de marshaling d’interopérabilité plus rapide la [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], qui ne détecte pas et les déclarations d’appel de plateforme incorrect de correctif. Il s'agit de la valeur par défaut.|  
-|`1`|Les runtime utilise les transitions lentes pour détecter et corriger la plateforme incorrecte les déclarations d’appel.|  
+|`1`|Les runtime utilise des transitions plus lentes pour détecter et corriger la plateforme incorrecte les déclarations d’appel.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -53,19 +54,19 @@ Indique si le runtime corrige automatiquement les déclarations incorrectes d’
 |`runtime`|Contient des informations sur les options d'initialisation du runtime.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément vous permet aux échanges plus rapidement le marshaling d’interopérabilité pour les déclarations d’appel de résilience d’exécution sur la plateforme incorrecte.  
+ Cet élément vous permet aux échanges plus rapidement le marshaling d’interopérabilité pour les déclarations d’appel de résilience d’exécution par rapport à la plateforme incorrecte.  
   
  En commençant par le [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], une architecture de marshaling d’interopérabilité simplifiée offre une amélioration significative des performances pour les transitions du code managé au code non managé. Dans les versions antérieures du .NET Framework, la plateforme incorrecte détectée de couche marshaling sur les plateformes 32 bits, les déclarations d’appel et corrigés automatiquement la pile. La nouvelle architecture de marshaling élimine cette étape. Par conséquent, les transitions sont très rapides, mais une déclaration non managé incorrectes peuvent provoquer un échec du programme.  
   
- Pour faciliter la détection des déclarations incorrectes pendant le développement, le débogage de Visual Studio a été amélioré. Le [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) assistant débogage managé (MDA) vous notifie de plateforme incorrect appel déclarations lorsque votre application s’exécute avec le débogueur attaché.  
+ Pour faciliter la détection des déclarations incorrectes pendant le développement, l’expérience de débogage Visual Studio a été améliorée. Le [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md) assistant débogage managé (MDA) vous notifie de plateforme incorrect appel déclarations lorsque votre application s’exécute avec le débogueur attaché.  
   
- Pour les scénarios où votre application utilise des composants que vous ne pouvez pas recompiler et qu’avez incorrect non managé déclarations, vous pouvez utiliser la `NetFx40_PInvokeStackResilience` élément. Ajout de cet élément à votre fichier de configuration d’application avec `enabled="1"` opte pour un mode de compatibilité avec le comportement des versions antérieures du .NET Framework, au prix de transitions plus lentes. Les assemblys qui ont été compilés avec des versions antérieures du .NET Framework sont automatiquement choisis dans ce mode de compatibilité et n’avez pas besoin de cet élément.  
+ Pour répondre aux scénarios où votre application utilise les composants que vous ne pouvez pas recompiler et qu’avez incorrect non managé déclarations, vous pouvez utiliser le `NetFx40_PInvokeStackResilience` élément. Ajout de cet élément au fichier de configuration de votre application avec `enabled="1"` opte pour un mode de compatibilité avec le comportement des versions antérieures du .NET Framework, au prix de transitions plus lentes. Les assemblys qui ont été compilés sur des versions antérieures du .NET Framework sont automatiquement accepté d’utiliser ce mode de compatibilité et n’avez pas besoin de cet élément.  
   
 ## <a name="configuration-file"></a>Fichier de configuration  
  Cet élément peut être utilisé uniquement dans le fichier de configuration d’application.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment adopter une résistance accrue contre incorrect pour une application, au prix de transitions plus lentes entre les déclarations d’appel de plateforme de code managé et.  
+ L’exemple suivant montre comment à opter pour une meilleure résilience contre incorrect plateforme déclarations d’appel pour une application, au prix de transitions plus lentes entre code managé et.  
   
 ```xml  
 <configuration>  
@@ -76,6 +77,6 @@ Indique si le runtime corrige automatiquement les déclarations incorrectes d’
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [pInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)

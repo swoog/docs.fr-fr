@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 750b0dbc925ec484dd80e1796ba991435e354709
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5e0a443f86848a446a7233a2c2e80f693cae9be
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745225"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611410"
 ---
 # <a name="ltgcallowverylargeobjectsgt-element"></a>&lt;gcAllowVeryLargeObjects&gt; élément
 Sur les plateformes 64 bits, autorise les tableaux dont la taille totale est supérieure à 2 gigaoctets (Go).  
@@ -35,14 +35,14 @@ Sur les plateformes 64 bits, autorise les tableaux dont la taille totale est sup
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`enabled`|Attribut requis.<br /><br /> Spécifie si les tableaux sont supérieures à 2 Go de taille totale sont activés sur des plateformes 64 bits.|  
+|`enabled`|Attribut requis.<br /><br /> Spécifie si les tableaux qui sont supérieures à 2 Go de taille totale sont activés sur les plateformes 64 bits.|  
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |`false`|Supérieure à 2 Go de taille totale des tableaux ne sont pas activés. Il s'agit de la valeur par défaut.|  
-|`true`|Supérieure à 2 Go de taille totale des tableaux sont activés sur des plateformes 64 bits.|  
+|`true`|Supérieure à 2 Go de taille totale des tableaux sont activés sur les plateformes 64 bits.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -55,16 +55,16 @@ Sur les plateformes 64 bits, autorise les tableaux dont la taille totale est sup
 |`runtime`|Contient des informations sur les options d'initialisation du runtime.|  
   
 ## <a name="remarks"></a>Notes  
- Dans votre fichier de configuration d’application à l’aide de cet élément permet de tableaux supérieurs à 2 Go, mais ne modifie pas les autres limites sur la taille de l’objet ou de la taille du tableau :  
+ À l’aide de cet élément dans votre fichier de configuration d’application permet de tableaux supérieurs à 2 Go, mais ne modifie pas les autres limites concernant la taille de l’objet ou de la taille du tableau :  
   
 -   Le nombre maximal d’éléments dans un tableau est <xref:System.UInt32.MaxValue?displayProperty=nameWithType>.  
   
--   L’index maximal dans n’importe quelle dimension unique est 2,147,483,591 (0x7FFFFFC7) pour les tableaux d’octets et les tableaux de structures d’un octet et 2,146,435,071 (0X7FEFFFFF) pour les autres types.  
+-   L’index maximal dans n’importe quelle dimension unique est 2,147,483,591 (0x7FFFFFC7) pour les tableaux d’octets et des tableaux de structures d’un octet et 2,146,435,071 (0X7FEFFFFF) pour les autres types.  
   
--   La taille maximale pour les chaînes et autres objets non-tableau est inchangée.  
+-   La taille maximale pour les chaînes et autres objets autres que des tableaux est inchangée.  
   
 > [!CAUTION]
->  Avant d’activer cette fonctionnalité, vérifiez que votre application n’inclut pas de code unsafe qui suppose que tous les tableaux sont inférieures à 2 Go. Par exemple, du code qui utilise des tableaux en tant que les mémoires tampons unsafe peut-être susceptibles d’être dépassements de mémoire tampon si elle est écrite sur l’hypothèse que les tableaux ne dépassent pas 2 Go.  
+>  Avant d’activer cette fonctionnalité, assurez-vous que votre application n’inclut pas le code unsafe qui part du principe que tous les tableaux sont inférieures à 2 Go. Par exemple, le code qui utilise des tableaux de mémoires tampons unsafe peut-être expose à des dépassements de mémoire tampon s’il est écrit sur l’hypothèse que les tableaux ne dépassent pas 2 Go.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant montre comment activer cette fonctionnalité pour une application.  
@@ -78,5 +78,5 @@ Sur les plateformes 64 bits, autorise les tableaux dont la taille totale est sup
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

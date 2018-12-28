@@ -1,17 +1,17 @@
 ---
-title: Résultats (F#)
-description: Découvrez comment utiliser le type 'Entraîner' F# pour vous aider à écrire du code à tolérance d’erreur.
+title: Résultats
+description: Découvrez comment utiliser le F# « Result » tapez pour vous aider à écrire du code à tolérance d’erreur.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213038"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612710"
 ---
 # <a name="results"></a>Résultats
 
-À partir de F# 4.1, il existe un `Result<'T,'TFailure>` type que vous pouvez utiliser pour l’écriture de code à tolérance d’erreur qui peut être composée.
+En commençant par F# 4.1, il existe un `Result<'T,'TFailure>` type que vous pouvez utiliser pour l’écriture de code à tolérance d’erreur qui peut être composée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ type Result<'T,'TError> =
 
 Notez que le type de résultat est un [union discriminée de struct](discriminated-unions.md#struct-discriminated-unions), qui est une autre fonctionnalité introduite dans F# 4.1.  Sémantique d’égalité structurelle s’appliquent ici.
 
-Le `Result` type est généralement utilisé dans monadic-gestion des erreurs, qui sont souvent appelée [programmation orientée sur les chemins de fer](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) au sein de la Communauté F#.  L’exemple simple suivant illustre cette approche.
+Le `Result` type est généralement utilisé dans monadic-gestion des erreurs, qui sont souvent appelée [programmation orientée sur les chemins de fer](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) au sein de la F# Communauté.  L’exemple simple suivant illustre cette approche.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

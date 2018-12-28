@@ -1,15 +1,15 @@
 ---
-title: '&#39;ReDim&#39; opérande Preserve ne peut pas être Nothing'
+title: L’opérande 'ReDim' ne peut pas être Nothing
 ms.date: 07/20/2015
 ms.assetid: b857f313-3fc2-4262-a577-88df1718b811
-ms.openlocfilehash: e679a18b32eaaa1da5b3f4268412f08d925d6949
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 15ebf86a41911ccb636d7e0a74c0fb1bf71e6a24
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777910"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53768178"
 ---
-# <a name="39redim39-preserve-operand-cannot-be-nothing"></a>&#39;ReDim&#39; opérande Preserve ne peut pas être Nothing
+# <a name="redim-preserve-operand-cannot-be-nothing"></a>L’opérande 'ReDim' ne peut pas être Nothing
 Une instruction `ReDim` tente d’utiliser le mot clé `Preserve` pour modifier une dimension d’un tableau qui n’est pas la dernière dimension, mais elle ne fournit pas de valeur valide pour son opérande.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  
@@ -21,4 +21,4 @@ Une instruction `ReDim` tente d’utiliser le mot clé `Preserve` pour modifier 
  [Dimensions du tableau en Visual Basic](~/docs/visual-basic/programming-guide/language-features/arrays/array-dimensions.md)  
  [ReDim (instruction)](../../visual-basic/language-reference/statements/redim-statement.md)  
  [Dim (instruction)](../../visual-basic/language-reference/statements/dim-statement.md)  
- [Conserver - supprimer](https://msdn.microsoft.com/library/91badeab-b4e0-48b6-92c9-9f0c8f995d81)
+ [Preserve - delete](https://msdn.microsoft.com/library/91badeab-b4e0-48b6-92c9-9f0c8f995d81)

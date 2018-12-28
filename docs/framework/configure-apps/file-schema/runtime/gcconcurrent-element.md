@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee00c3a307523d2cae831274630ad6828cd9daf6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5fa802ab9d1025bd130a6265b50050284aae0150
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745836"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612385"
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcConcurrent&gt; élément
 Spécifie si le common language runtime exécute l’opération garbage collection sur un thread distinct.  
@@ -62,7 +62,7 @@ Spécifie si le common language runtime exécute l’opération garbage collecti
  Dans les versions antérieures à .NET Framework 4, le garbage collection de station de travail prenait en charge le garbage collection simultané, qui exécutait l’opération garbage collection en arrière-plan sur un thread distinct. Dans .NET Framework 4, le garbage collection simultané a été remplacé par le garbage collection d'arrière-plan pour effectuer l'opération de la même manière. Depuis .NET Framework 4.5, le garbage collection d'arrière-plan est disponible dans le garbage collection de serveur. L'élément `<gcConcurrent>` contrôle si le runtime exécute le garbage collection simultané ou d'arrière-plan, s'il est disponible, ou s'il exécute le garbage collection de premier plan.  
   
 > [!WARNING]
->  Depuis .NET Framework 4, le garbage collection simultané est remplacé par le garbage collection d’arrière-plan. Les termes du contrat *simultanées* et *arrière-plan* sont utilisés indifféremment dans la documentation .NET Framework. Pour désactiver le garbage collection d'arrière-plan, utilisez l'élément `<gcConcurrent>` comme indiqué dans cet article.  
+>  Depuis .NET Framework 4, le garbage collection simultané est remplacé par le garbage collection d’arrière-plan. Les termes du contrat *simultanées* et *arrière-plan* sont utilisés indifféremment dans la documentation .NET Framework. Pour désactiver le garbage collection d’arrière-plan, utilisez l’élément `<gcConcurrent>` comme indiqué dans cet article.  
   
  Par défaut, le runtime utilise le garbage collection simultané ou d'arrière-plan, dont la latence est optimisée. Si votre application implique une grande interaction avec l'utilisateur, laissez le garbage collection simultané activé pour minimiser le temps d'interruption de l'application pendant l'exécution de l'opération garbage collection. Si vous définissez l'attribut `enabled` de l'élément `<gcConcurrent>` avec la valeur `false`, le runtime utilise le garbage collection non simultané, dont le débit est optimisé. Le fichier de configuration suivant désactive le garbage collection d'arrière-plan.  
   
@@ -76,7 +76,7 @@ Spécifie si le common language runtime exécute l’opération garbage collecti
   
  Le paramètre `<gcConcurrentSetting>` qui figure dans le fichier de configuration de l'ordinateur définit la valeur par défaut de toutes les applications .NET Framework. Ce paramètre se substitue au paramètre du fichier de configuration de l'application.  
   
- Pour plus d’informations sur simultané et garbage collection d’arrière-plan, consultez la section « le garbage collection simultané » dans le [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) rubrique.  
+ Pour plus d’informations sur simultané et garbage collection d’arrière-plan, consultez la section « garbage collection simultané » dans le [Fundamentals of Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md) rubrique.  
   
 ## <a name="example"></a>Exemple  
  L’exemple suivant active le garbage collection simultané.  
@@ -90,6 +90,6 @@ Spécifie si le common language runtime exécute l’opération garbage collecti
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Principes de base du Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Principes de base du Garbage Collection](../../../../../docs/standard/garbage-collection/fundamentals.md)

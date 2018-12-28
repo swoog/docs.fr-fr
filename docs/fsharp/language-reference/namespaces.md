@@ -1,13 +1,13 @@
 ---
-title: Espaces de noms (F#)
+title: Espaces de noms
 description: Découvrez comment un F# espace de noms vous permet d’organiser le code en zones de fonctionnalités connexes en vous permettant de joindre un nom à un regroupement d’éléments de programme.
 ms.date: 12/08/2018
-ms.openlocfilehash: ad5cca8947d09d8480bfa418b003c84546edc29b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 526d7a07e4804751811c15fa91b0c74c1954d591
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169021"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613438"
 ---
 # <a name="namespaces"></a>Espaces de noms
 

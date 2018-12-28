@@ -1,17 +1,17 @@
 ---
-title: Argument &#39;vie&#39; ne peut pas être égal à zéro
+title: L’argument ’Life’ ne peut pas être égal à zéro
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-ms.openlocfilehash: 0a8cb22250c798ffa3f3211be88c6086449c1836
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5cc06d2375536fbc4c02d7e8174a7e7f908ce4a
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597697"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773586"
 ---
-# <a name="argument-39life39-cannot-be-zero"></a>Argument &#39;vie&#39; ne peut pas être égal à zéro
+# <a name="argument-life-cannot-be-zero"></a>L’argument ’Life’ ne peut pas être égal à zéro
 Un argument pour `Life`, qui doit être un `Double` qui spécifie la durée du cycle de vie de la ressource, n’est pas valide.  
   
 ## <a name="to-correct-this-error"></a>Pour corriger cette erreur  

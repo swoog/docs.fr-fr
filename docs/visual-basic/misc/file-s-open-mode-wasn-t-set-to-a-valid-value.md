@@ -1,15 +1,15 @@
 ---
-title: Fichier&#39;s ouvrir n’était pas en mode&#39;t une valeur valide
+title: Le mode d’ouverture du fichier n’avait pas une valeur valide
 ms.date: 07/20/2015
 ms.assetid: 969541f6-9ff6-4804-ba61-0d17370060ef
-ms.openlocfilehash: be5c44def071577a82a648ee36935b69e5f00f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d4c12aaffad9be961f501ada75b5ea54e598bf3
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33635904"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53761613"
 ---
-# <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a>Fichier&#39;s ouvrir n’était pas en mode&#39;t une valeur valide
+# <a name="files-open-mode-wasnt-set-to-a-valid-value"></a>Le mode d’ouverture du fichier n’avait pas une valeur valide
 La valeur fournie pour le mode d’ouverture du fichier n’était pas valide. Le tableau suivant répertorie les valeurs valides pour l’énumération <xref:Microsoft.VisualBasic.OpenMode> :  
   
 |Value|Mode|  

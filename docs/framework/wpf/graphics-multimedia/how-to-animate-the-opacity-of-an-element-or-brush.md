@@ -1,18 +1,18 @@
 ---
-title: "Comment : animer l'opacité d'un élément ou d'un pinceau"
+title: "Procédure : Animer l'opacité d'un élément ou d'un pinceau"
 ms.date: 03/30/2017
 helpviewer_keywords:
 - opacity [WPF], animating
 - animation [WPF], Opacity property
 ms.assetid: 572af23b-39dd-48d1-9db5-4bca56a4b3d3
-ms.openlocfilehash: 549d3eab0d6d75403e962eeb146be8d7995cc931
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 659b051fe63c113bf1a4488b1fab12bbee75b1e3
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525851"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451246"
 ---
-# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Comment : animer l'opacité d'un élément ou d'un pinceau
+# <a name="how-to-animate-the-opacity-of-an-element-or-brush"></a>Procédure : Animer l'opacité d'un élément ou d'un pinceau
 Pour rendre un élément d’infrastructure apparaître et disparaître, vous pouvez animer sa <xref:System.Windows.UIElement.Opacity%2A> propriété, ou vous pouvez animer la <xref:System.Windows.Media.Brush.Opacity%2A> propriété de la <xref:System.Windows.Media.Brush> (ou pinceaux) utilisé pour peindre. Animer l’opacité de l’élément rend et ses enfants apparaître et disparaître, mais animer le pinceau utilisé pour peindre l’élément vous permet d’être plus sélectifs sur quelle partie de l’élément disparaît. Par exemple, vous pouvez animer l’opacité d’un pinceau utilisé pour peindre l’arrière-plan d’un bouton. Cela entraînerait l’arrière-plan du bouton à disparaître en fondu de la vue, tout en laissant son texte complètement opaque.  
   
 > [!NOTE]
@@ -23,4 +23,4 @@ Pour rendre un élément d’infrastructure apparaître et disparaître, vous po
 ## <a name="example"></a>Exemple  
  [!code-xaml[timingbehaviors_snip#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/OpacityAnimationExample.xaml#10)]  
   
- Code a été omis de cet exemple. L’exemple complet montre également comment animer l’opacité d’un <xref:System.Windows.Media.Color> au sein d’un <xref:System.Windows.Media.LinearGradientBrush>.  Pour l’exemple complet, consultez la [animer l’opacité d’un exemple d’élément](https://go.microsoft.com/fwlink/?LinkID=159968).
+ Code a été omis de cet exemple. L’exemple complet montre également comment animer l’opacité d’un <xref:System.Windows.Media.Color> au sein d’un <xref:System.Windows.Media.LinearGradientBrush>.  Pour l’exemple complet, consultez la [animer l’opacité d’un exemple d’élément](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/OpacityAnimation).

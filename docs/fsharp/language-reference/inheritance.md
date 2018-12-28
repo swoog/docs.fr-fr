@@ -1,13 +1,13 @@
 ---
-title: Héritage (F#)
-description: Découvrez comment spécifier des relations d’héritage F# à l’aide du mot clé « hériter ».
+title: Héritage
+description: Découvrez comment spécifier F# relations d’héritage à l’aide du mot clé « hériter ».
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864467"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610136"
 ---
 # <a name="inheritance"></a>Héritage
 
@@ -34,7 +34,7 @@ Le mot clé `base` est disponible dans les classes dérivées et fait référenc
 
 ## <a name="virtual-methods-and-overrides"></a>Les méthodes virtuelles et les remplacements
 
-Méthodes virtuelles (et propriétés) fonctionnent un peu différemment dans F# par rapport à d’autres langages .NET. Pour déclarer un nouveau membre virtuel, vous utilisez le `abstract` mot clé. Pour cela, indépendamment de si vous fournissez une implémentation par défaut pour cette méthode. Par conséquent, une définition complète d’une méthode virtuelle dans une classe de base suit ce modèle :
+Méthodes virtuelles (et les propriétés) fonctionnent un peu différemment dans F# par rapport à d’autres langages .NET. Pour déclarer un nouveau membre virtuel, vous utilisez le `abstract` mot clé. Pour cela, indépendamment de si vous fournissez une implémentation par défaut pour cette méthode. Par conséquent, une définition complète d’une méthode virtuelle dans une classe de base suit ce modèle :
 
 ```fsharp
 abstract member [method-name] : [type]
@@ -62,7 +62,7 @@ Le code suivant montre une classe de base et une classe dérivée, où la classe
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-Dans le cas de plusieurs constructeurs, le code suivant peut être utilisé. La première ligne des constructeurs de classe dérivée est la `inherit` clause et les champs apparaissent en tant que champs explicites qui sont déclarés avec le `val` mot clé. Pour plus d’informations, consultez [champs explicites : le `val` mot clé](members/explicit-fields-the-val-keyword.md).
+Dans le cas de plusieurs constructeurs, le code suivant peut être utilisé. La première ligne des constructeurs de classe dérivée est la `inherit` clause et les champs apparaissent en tant que champs explicites qui sont déclarés avec le `val` mot clé. Pour plus d’informations, consultez [champs explicites : Le `val` mot clé](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =

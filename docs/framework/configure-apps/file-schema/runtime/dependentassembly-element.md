@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54036baee6fc2d7af49e818a1c112dec8eac80aa
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b0d3bfb7e4db2fec39f37c9fb794731cdf5bbc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744910"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613295"
 ---
 # <a name="ltdependentassemblygt-element"></a>&lt;dependentAssembly&gt; élément
 Encapsule la stratégie de liaisons et l’emplacement de chaque assembly. Utilisez une `dependentAssembly` élément pour chaque assembly.  
@@ -44,7 +44,7 @@ Encapsule la stratégie de liaisons et l’emplacement de chaque assembly. Utili
 |Élément|Description|  
 |-------------|-----------------|  
 |`assemblyIdentity`|Contient des informations d’identification sur l’assembly. Cet élément doit être inclus dans chaque `dependentAssembly` élément.|  
-|`codeBase`|Spécifie où le runtime peut trouver un assembly partagé, s’il n’est pas installé sur l’ordinateur.|  
+|`codeBase`|Spécifie où le runtime peut trouver un assembly partagé s’il n’est pas installé sur l’ordinateur.|  
 |`bindingRedirect`|Redirige une version d'assembly vers une autre.|  
 |`publisherPolicy`|Spécifie si le runtime applique la stratégie d’éditeur pour cet assembly.|  
   
@@ -81,6 +81,6 @@ Encapsule la stratégie de liaisons et l’emplacement de chaque assembly. Utili
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Redirection des versions d'assemblys](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Redirection des versions d'assemblys](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

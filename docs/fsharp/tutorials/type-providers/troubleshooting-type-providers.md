@@ -1,13 +1,13 @@
 ---
 title: Résolution des problèmes liés aux fournisseurs de type
-description: Découvrez les solutions potentielles pour les problèmes que vous êtes plus susceptible de rencontrer lorsque vous utilisez des fournisseurs de type en F#.
+description: Découvrez les solutions potentielles pour les fournisseurs dans, tapez les problèmes que vous êtes plus susceptible de rencontrer lorsque vous utilisez F#.
 ms.date: 05/16/2016
-ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6c675720e0b7c306a2916c94d8096d2f09c0daca
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48873214"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610331"
 ---
 # <a name="troubleshooting-type-providers"></a>Résolution des problèmes liés aux fournisseurs de type
 

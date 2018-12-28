@@ -1,13 +1,13 @@
 ---
-title: Options du compilateur (F#)
+title: Options du compilateur
 description: Utilisez F# options de ligne de commande du compilateur pour contrôler la compilation de votre F# applications et des bibliothèques.
 ms.date: 12/10/2018
-ms.openlocfilehash: dafd872a22bf4ec4b36910f28b7c5bfe9370af8d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
+ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170871"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614491"
 ---
 # <a name="compiler-options"></a>Options du compilateur
 
@@ -67,10 +67,9 @@ Le tableau suivant présente les options du compilateur classées par ordre alph
 |`--warnon:warning-number-list`|Activer des avertissements spécifiques qui peuvent être désactivés par défaut ou désactivé par une autre option de ligne de commande. Dans F# 3.0, uniquement l’avertissement 1182 (variables inutilisées) est désactivée par défaut.|
 |<code>--warnaserror[+&#124;-] [warning-number-list]</code>|Active ou désactive l’option de signalement des avertissements comme des erreurs. Vous pouvez fournir des numéros d’avertissement spécifique pour être désactivé ou activé. Options plus loin dans la ligne de commande remplacent les options précédemment dans la ligne de commande. Par exemple, pour spécifier les avertissements que vous ne souhaitez pas signalées comme des erreurs, spécifiez `--warnaserror+` `--warnaserror-:warning-number-list`.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;warnaserror &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/406xhdz3.aspx).|
 |`--win32manifest:manifest-filename`|Ajoute un fichier manifeste Win32 à la compilation. Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;win32manifest &#40;C&#35; Options du compilateur&#41;](https://msdn.microsoft.com/library/bb545961.aspx).|
-|`--win32res:resource-filename`|Ajoute un fichier de ressources Win32 à la compilation.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;win32res (&#40;C &#35;) Options du compilateur&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
+|`--win32res:resource-filename`|Ajoute un fichier de ressources Win32 à la compilation.<br /><br />Cette option du compilateur est équivalente à la C# option du compilateur du même nom. Pour plus d’informations, consultez [ &#47;win32res (&#40;C&#35;) Options du compilateur&#41;](https://msdn.microsoft.com/library/8f2f5x2e.aspx).|
 
 ## <a name="related-articles"></a>Articles connexes
-
 
 |Titre|Description|
 |-----|-----------|

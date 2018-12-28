@@ -1,25 +1,25 @@
 ---
-title: 'Didacticiel : Créer un fournisseur de Type (F#)'
-description: Découvrez comment créer vos propres fournisseurs de type F# dans F# 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.
+title: 'Tutoriel : Créer un fournisseur de Type'
+description: Découvrez comment créer votre propre F# tapez fournisseurs dans F# 3.0 en examinant plusieurs fournisseurs de type simple pour illustrer les concepts de base.
 ms.date: 05/16/2016
-ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c5a68df5f0b89fe9496ad86ab88208e0ec4bcdc9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50183917"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614530"
 ---
-# <a name="tutorial-create-a-type-provider"></a>Didacticiel : Créer un fournisseur de Type
+# <a name="tutorial-create-a-type-provider"></a>Tutoriel : Créer un fournisseur de Type
 
-Le mécanisme de fournisseur de type en F# est une partie importante de sa prise en charge pour la programmation riche d’informations. Ce didacticiel explique comment créer vos propres fournisseurs de type en vous guidant tout au long du développement de plusieurs fournisseurs de type simple pour illustrer les concepts de base. Pour plus d’informations sur le mécanisme de fournisseur de type en F#, consultez [fournisseurs de Type](index.md).
+Le mécanisme de fournisseur de type dans F# constitue une partie significative de sa prise en charge pour la programmation riche d’informations. Ce didacticiel explique comment créer vos propres fournisseurs de type en vous guidant tout au long du développement de plusieurs fournisseurs de type simple pour illustrer les concepts de base. Pour plus d’informations sur le mécanisme de fournisseur de type dans F#, consultez [fournisseurs de Type](index.md).
 
-L’écosystème F# contient une plage de fournisseurs de type pour les services de données Internet et d’entreprise couramment utilisés. Exemple :
+Le F# écosystème contient une plage de fournisseurs de type pour les services de données Internet et d’entreprise couramment utilisés. Exemple :
 
 - [FSharp.Data](https://fsharp.github.io/FSharp.Data/) inclut les fournisseurs de type pour les formats de document JSON, XML, CSV et HTML.
 
-- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fournit des requêtes par rapport à ces sources de données d’accès fortement typé aux bases de données SQL via un mappage d’objets et de LINQ F#.
+- [SQLProvider](https://fsprojects.github.io/SQLProvider/) fournit l’accès fortement typé aux bases de données SQL via un mappage de l’objet et F# requêtes LINQ sur ces sources de données.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) a un ensemble de fournisseurs de type pour le moment de la compilation vérifié l’incorporation de T-SQL en F#.
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) a un ensemble de fournisseurs de type pour le moment de la compilation vérifié l’incorporation de T-SQL dans F#.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) est un ancien ensemble de fournisseurs de type pour une utilisation uniquement avec la programmation de .NET Framework pour accéder aux services de données SQL, Entity Framework, OData et WSDL.
 
@@ -27,7 +27,7 @@ Lorsque cela est nécessaire, vous pouvez créer des fournisseurs de type person
 
 ## <a name="before-you-start"></a>Avant de commencer
 
-Le mécanisme de fournisseur de type est principalement conçu pour injecter des données stables et informations de service dans l’expérience de programmation F#.
+Le mécanisme de fournisseur de type a été principalement conçu pour injecter des données stables et informations de service dans le F# expérience de programmation.
 
 Ce mécanisme n’est pas conçu pour injecter des espaces d’informations dont le schéma change pendant l’exécution du programme de façons qui correspondent à la logique du programme. En outre, le mécanisme n’est pas conçu pour intra-langue métaprogrammation, bien que ce domaine contient certaines utilisations valides. Vous devez utiliser ce mécanisme uniquement lorsque cela est nécessaire et où le développement d’un fournisseur de type donne la valeur très élevée.
 
@@ -35,7 +35,7 @@ Vous devez éviter d’écrire un fournisseur de type où un schéma n’est pas
 
 Avant de commencer, vous pouvez poser les questions suivantes :
 
-- Vous avez un schéma pour votre source d’informations ? Dans ce cas, ce qui est le mappage dans le système de type .NET et F# ?
+- Vous avez un schéma pour votre source d’informations ? Si, par conséquent, quel est le mappage dans le F# et système de type de .NET ?
 
 - Peut utiliser une API existante (dynamiquement typée) comme point de départ pour votre implémentation ?
 
@@ -53,7 +53,7 @@ Fournisseurs de type sont mieux adaptées aux situations où le schéma est stab
 
 ## <a name="a-simple-type-provider"></a>Un fournisseur de Type Simple
 
-Cet exemple est Samples.HelloWorldTypeProvider, similaire aux exemples dans le `examples` répertoire de la [SDK de fournisseur de Type F#](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Le fournisseur met à disposition un « espace de type » qui contient des types effacés 100, comme le montre le code suivant à l’aide de syntaxe de signature F# et en omettant les détails, sauf pour les `Type1`. Pour plus d’informations sur les types effacés, consultez [plus d’informations sur effacées fourni Types](#details-about-erased-provided-types) plus loin dans cette rubrique.
+Cet exemple est Samples.HelloWorldTypeProvider, similaire aux exemples dans le `examples` répertoire de la [ F# kit SDK de fournisseur de Type](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Le fournisseur met à disposition un « espace de type » qui contient des types effacés 100, comme le montre le code suivant à l’aide de F# syntaxe et des signatures en omettant les détails, sauf pour les `Type1`. Pour plus d’informations sur les types effacés, consultez [plus d’informations sur effacées fourni Types](#details-about-erased-provided-types) plus loin dans cette rubrique.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -128,7 +128,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 do()
 ```
 
-Pour utiliser ce fournisseur, ouvrez une instance distincte de Visual Studio, créer un script F#, puis ajoutez une référence au fournisseur à partir de votre script en utilisant #r comme le montre le code suivant :
+Pour utiliser ce fournisseur, ouvrez une instance distincte de Visual Studio, créez un F# de script, puis ajoutez une référence au fournisseur à partir de votre script en utilisant #r comme le montre le code suivant :
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -175,7 +175,7 @@ Cette section vous guide dans les sections du principal de l’implémentation d
 type SampleTypeProvider(config: TypeProviderConfig) as this =
 ```
 
-Ce type doit être publique, et vous devez la marquer avec le [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) afin que le compilateur reconnaisse le fournisseur de type lorsqu’un projet distinct de F# fait référence à l’assembly qui contient le type d’attribut. Le *config* paramètre est facultatif et, le cas échéant, contient des informations de configuration contextuelles pour l’instance de fournisseur de type qui crée le compilateur F#.
+Ce type doit être publique, et vous devez la marquer avec le [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) attribut afin que le compilateur reconnaisse le fournisseur de type quand un distinct F# projet fait référence à l’assembly qui contient le type. Le *config* paramètre est facultatif et, le cas échéant, contient des informations de configuration contextuelles pour le fournisseur de type d’instance qui le F# compilateur crée.
 
 Ensuite, vous implémentez le [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) interface. Dans ce cas, vous utilisez le `TypeProviderForNamespaces` type dans le `ProvidedTypes` API comme type de base. Ce type d’assistance peut fournir dynamiquement une collection finie d’autant d’espaces de noms, chacun d’eux contient directement un nombre fini de correction, dynamiquement des types fournis. Dans ce contexte, le fournisseur *dynamiquement* génère des types, même s’ils ne sont pas nécessaires ou utilisés.
 
@@ -255,7 +255,7 @@ let staticProp = ProvidedProperty(propertyName = "StaticProperty",
                                   getterCode = (fun args -> <@@ "Hello!" @@>))
 ```
 
-Obtention de cette propriété sera toujours évaluée comme la chaîne « Hello ! ». Le `GetterCode` pour la propriété utilise une quotation F#, qui représente le code qui génère par le compilateur hôte pour l’obtention de la propriété. Pour plus d’informations sur les devis, consultez [Quotations de Code (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
+Obtention de cette propriété sera toujours évaluée comme la chaîne « Hello ! ». Le `GetterCode` pour la propriété utilise un F# devis, qui représente le code qui génère par le compilateur hôte pour l’obtention de la propriété. Pour plus d’informations sur les devis, consultez [Quotations de Code (F#)](https://msdn.microsoft.com/library/6f055397-a1f0-4f9a-927c-f0d7c6951155).
 
 Ajouter la documentation XML à la propriété.
 
@@ -276,7 +276,7 @@ let ctor = ProvidedConstructor(parameters = [ ],
                                invokeCode = (fun args -> <@@ "The object data" :> obj @@>))
 ```
 
-Le `InvokeCode` pour le constructeur retourne une quotation F#, qui représente le code que le compilateur hôte génère lorsque le constructeur est appelé. Par exemple, vous pouvez utiliser le constructeur suivant :
+Le `InvokeCode` pour le constructeur retourne une F# devis, qui représente le code que le compilateur hôte génère lorsque le constructeur est appelé. Par exemple, vous pouvez utiliser le constructeur suivant :
 
 ```fsharp
 new Type10()
@@ -300,7 +300,7 @@ ProvidedConstructor(parameters = [ ProvidedParameter("data",typeof<string>) ],
                     invokeCode = (fun args -> <@@ (%%(args.[0]) : string) :> obj @@>))
 ```
 
-Le `InvokeCode` pour le constructeur retourne à nouveau une quotation F#, qui représente le code généré par le compilateur hôte pour un appel à la méthode. Par exemple, vous pouvez utiliser le constructeur suivant :
+Le `InvokeCode` pour le constructeur retourne à nouveau un F# devis, qui représente le code généré par le compilateur hôte pour un appel à la méthode. Par exemple, vous pouvez utiliser le constructeur suivant :
 
 ```fsharp
 new Type10("ten")
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-Obtention de cette propriété retourne la longueur de la chaîne, qui est l’objet de représentation. Le `GetterCode` propriété retourne une quotation F# qui spécifie le code qui génère par le compilateur hôte pour obtenir la propriété. Comme `InvokeCode`, le `GetterCode` fonction renvoie un devis. Le compilateur hôte appelle cette fonction avec une liste d’arguments. Dans ce cas, les arguments incluent simplement l’expression unique qui représente l’instance sur laquelle l’accesseur Get est appelée, auquel vous pouvez accéder à l’aide de `args.[0]`. L’implémentation de `GetterCode` puis jonctions de fil à la soumission de résultat du type effacé `obj`, et un cast est utilisé pour satisfaire le mécanisme du compilateur pour la vérification des types que l’objet est une chaîne. La partie suivante du `makeOneProvidedType` fournit une méthode d’instance avec un seul paramètre.
+Obtention de cette propriété retourne la longueur de la chaîne, qui est l’objet de représentation. Le `GetterCode` propriété retourne un F# guillemets qui spécifie le code qui génère par le compilateur hôte pour obtenir la propriété. Comme `InvokeCode`, le `GetterCode` fonction renvoie un devis. Le compilateur hôte appelle cette fonction avec une liste d’arguments. Dans ce cas, les arguments incluent simplement l’expression unique qui représente l’instance sur laquelle l’accesseur Get est appelée, auquel vous pouvez accéder à l’aide de `args.[0]`. L’implémentation de `GetterCode` puis jonctions de fil à la soumission de résultat du type effacé `obj`, et un cast est utilisé pour satisfaire le mécanisme du compilateur pour la vérification des types que l’objet est une chaîne. La partie suivante du `makeOneProvidedType` fournit une méthode d’instance avec un seul paramètre.
 
 ```fsharp
 let instanceMeth = 
@@ -370,7 +370,7 @@ L’exemple dans cette section fournit uniquement *effacées des types fournis*,
 
 - Lorsque vous écrivez un fournisseur pour un espace d’informations est donc importante et interconnectés qu’il soit techniquement possible de générer des types .NET réels pour l’espace d’informations.
 
-Dans cet exemple, chaque fournie type est effacé en type `obj`, et toutes les utilisations du type apparaîtront en tant que type `obj` dans le code compilé. En fait, les objets sous-jacents dans ces exemples sont des chaînes, mais le type apparaîtra comme `System.Object` dans .NET code compilé. Comme avec toutes les utilisations d’effacement de type, vous pouvez utiliser la conversion boxing explicite, unboxing et de cast de corrompre l’effacées types. Dans ce cas, une exception de cast n’est pas valide peut entraîner lorsque l’objet est utilisé. Un fournisseur runtime peut définir son propre type de représentation privée pour vous protéger contre les représentations sous forme de valeur false. Vous ne pouvez pas définir types effacées en F# lui-même. Uniquement les types fournis peuvent être effacées. Vous devez comprendre les ramifications, à la fois pratiques et sémantiques, en utilisant l’une types effacées pour votre fournisseur de type ou un fournisseur qui fournit contient types effacées. Un type effacé n’a aucun type .NET réel. Par conséquent, vous ne pouvez pas faire image précise sur le type, et pouvant perturber les types effacées si vous utilisez des casts de runtime et d’autres techniques qui s’appuient sur la sémantique de type exacte du runtime. Subversion des types effacés entraîne fréquemment des exceptions de cast de type lors de l’exécution.
+Dans cet exemple, chaque fournie type est effacé en type `obj`, et toutes les utilisations du type apparaîtront en tant que type `obj` dans le code compilé. En fait, les objets sous-jacents dans ces exemples sont des chaînes, mais le type apparaîtra comme `System.Object` dans .NET code compilé. Comme avec toutes les utilisations d’effacement de type, vous pouvez utiliser la conversion boxing explicite, unboxing et de cast de corrompre l’effacées types. Dans ce cas, une exception de cast n’est pas valide peut entraîner lorsque l’objet est utilisé. Un fournisseur runtime peut définir son propre type de représentation privée pour vous protéger contre les représentations sous forme de valeur false. Vous ne pouvez pas définir les types effacés dans F# lui-même. Uniquement les types fournis peuvent être effacées. Vous devez comprendre les ramifications, à la fois pratiques et sémantiques, en utilisant l’une types effacées pour votre fournisseur de type ou un fournisseur qui fournit contient types effacées. Un type effacé n’a aucun type .NET réel. Par conséquent, vous ne pouvez pas faire image précise sur le type, et pouvant perturber les types effacées si vous utilisez des casts de runtime et d’autres techniques qui s’appuient sur la sémantique de type exacte du runtime. Subversion des types effacés entraîne fréquemment des exceptions de cast de type lors de l’exécution.
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>Choix des représentations pour effacer des Types fournis
 
@@ -388,7 +388,7 @@ Pour certaines utilisations des types fournis effacés, aucune représentation n
 
 - Le jeu d’objets possible pour un type fourni effacées sont appelés ses représentations. Dans l’exemple dans ce document, les représentations sous forme de tous les fourni l’effacé types `Type1..Type100` sont toujours des objets de chaîne.
 
-Toutes les représentations sous forme d’un type fourni doit être compatible avec l’effacement du type fourni. (Sinon, le compilateur F# génère une erreur pour une utilisation du fournisseur de type, ou du code non vérifiable .NET qui n’est pas valide est généré. Un fournisseur de type n’est pas valide si elle retourne le code qui donne une représentation qui n’est pas valide.)
+Toutes les représentations sous forme d’un type fourni doit être compatible avec l’effacement du type fourni. (Sinon, soit la F# compilateur génère une erreur pour une utilisation du fournisseur de type ou du code non vérifiable .NET qui n’est pas valide est généré. Un fournisseur de type n’est pas valide si elle retourne le code qui donne une représentation qui n’est pas valide.)
 
 Vous pouvez choisir une représentation pour les objets fournis à l’aide d’une des approches suivantes, qui sont tous deux très courantes :
 
@@ -469,7 +469,7 @@ Notez les points suivants :
 
 - Chaque groupe nommé entraîne une propriété fournie et l’accès à la propriété entraîne une utilisation d’un indexeur sur une mise en correspondance `Groups` collection.
 
-Le code suivant est le cœur de la logique d’implémenter ce type de fournisseur, et cet exemple omet l’ajout de tous les membres vers le type fourni. Pour plus d’informations sur chaque ajout d’un membre, consultez la section correspondante plus loin dans cette rubrique. Pour le code complet, téléchargez l’exemple à partir de la [exemple de Pack F# 3.0](https://fsharp3sample.codeplex.com) sur le site Web Codeplex.
+Le code suivant est le cœur de la logique d’implémenter ce type de fournisseur, et cet exemple omet l’ajout de tous les membres vers le type fourni. Pour plus d’informations sur chaque ajout d’un membre, consultez la section correspondante plus loin dans cette rubrique. Pour le code complet, téléchargez l’exemple à partir de la [ F# exemple de Pack 3.0](https://fsharp3sample.codeplex.com) sur le site Web Codeplex.
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider
@@ -1052,7 +1052,7 @@ Chaque instance d’un fournisseur de type peut être donné un `TypeProviderCon
 
 ### <a name="invalidation"></a>Invalidation
 
-Fournisseurs peuvent déclencher des signaux d’invalidation pour informer le service de langage F# qui les hypothèses de schéma a peut-être changé. Lors de l’invalidation se produit, un typecheck est rétabli si le fournisseur est hébergé dans Visual Studio. Ce signal va être ignoré lorsque le fournisseur est hébergé dans F# Interactive ou par le compilateur F# (fsc.exe).
+Les fournisseurs peuvent déclencher des signaux d’invalidation pour notifier le F# service de langage qui les hypothèses de schéma a peut-être changé. Lors de l’invalidation se produit, un typecheck est rétabli si le fournisseur est hébergé dans Visual Studio. Ce signal est ignoré si le fournisseur est hébergé dans F# Interactive ou par le F# compilateur (fsc.exe).
 
 ### <a name="caching-schema-information"></a>La mise en cache des informations de schéma
 
@@ -1060,7 +1060,7 @@ Fournisseurs souvent doivent mettre en cache l’accès aux informations de sch�
 
 ### <a name="backing-assembly"></a>Assembly de stockage
 
-Lorsque vous compilez un `.dll` ou `.exe` de fichiers, le fichier .dll de sauvegarde pour les types générés est statiquement liée dans l’assembly résultant. Ce lien est créé en copiant les définitions de type de langage intermédiaire (IL) et toutes les ressources managées à partir de l’assembly de stockage dans l’assembly final. Lorsque vous utilisez F# Interactive, le fichier .dll de sauvegarde n’est pas copié et est chargé à la place directement dans le processus de F# Interactive.
+Lorsque vous compilez un `.dll` ou `.exe` de fichiers, le fichier .dll de sauvegarde pour les types générés est statiquement liée dans l’assembly résultant. Ce lien est créé en copiant les définitions de type de langage intermédiaire (IL) et toutes les ressources managées à partir de l’assembly de stockage dans l’assembly final. Lorsque vous utilisez F# Interactive, le fichier .dll de sauvegarde n’est pas copié et est chargé à la place directement dans le F# processus interactif.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>Exceptions et Diagnostics à partir de fournisseurs de Type
 
@@ -1070,11 +1070,11 @@ Toutes les utilisations de tous les membres de types fournis peuvent lever des e
 
 - Fournisseurs de type ne peut pas signaler les avertissements.
 
-- Lorsqu’un fournisseur de type est hébergé dans le compilateur F#, un environnement de développement F# ou F# Interactive, toutes les exceptions à partir de ce fournisseur sont interceptées. La propriété de Message est toujours le texte d’erreur, et aucune trace de la pile s’affiche. Si vous voulez lever une exception, vous pouvez lever les exemples suivants : `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- Lorsqu’un fournisseur de type est hébergé dans le F# compilateur, un F# l’environnement de développement, ou F# Interactive, toutes les exceptions à partir de ce fournisseur sont interceptées. La propriété de Message est toujours le texte d’erreur, et aucune trace de la pile s’affiche. Si vous voulez lever une exception, vous pouvez lever les exemples suivants : `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
 
 #### <a name="providing-generated-types"></a>Fournit des Types générés
 
-Jusqu’ici, ce document a décrit comment fournir des types effacés. Vous pouvez également utiliser le mécanisme de fournisseur de type en F# pour fournir des types générés, qui sont ajoutés en tant que définitions de type .NET réelles dans le programme des utilisateurs. Vous devez le référencer généré types fournis à l’aide d’une définition de type.
+Jusqu’ici, ce document a décrit comment fournir des types effacés. Vous pouvez également utiliser le mécanisme de fournisseur de type dans F# pour fournir des types générés, qui sont ajoutées des définitions de type .NET aussi réelles dans le programme des utilisateurs. Vous devez le référencer généré types fournis à l’aide d’une définition de type.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
@@ -1082,7 +1082,7 @@ open Microsoft.FSharp.TypeProviders
 type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
-Le code d’assistance ProvidedTypes-0,2 qui fait partie de la version F# 3.0 prend uniquement en charge limitée pour fournir des types générés. Les instructions suivantes doivent être remplies pour une définition de type généré :
+Le code d’assistance ProvidedTypes-0,2 qui fait partie de la F# version 3.0 prend uniquement en charge limitée pour fournir des types générés. Les instructions suivantes doivent être remplies pour une définition de type généré :
 
 - `isErased` doit être définie sur `false`.
 
@@ -1102,9 +1102,9 @@ Par exemple, certains fournisseurs ont une classe statique comme `DataTypes` qui
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>Limitations du mécanisme de fournisseur de Type
 
-Le mécanisme de fournisseur de type en F# présente les limitations suivantes :
+Le mécanisme de fournisseur de type dans F# présente les limitations suivantes :
 
-- L’infrastructure sous-jacente pour les fournisseurs de type en F# ne prend pas en charge fournie générique des types ou méthodes génériques, fourni.
+- L’infrastructure sous-jacente pour les fournisseurs de type dans F# n’une prise en charge générique des types ou méthodes génériques, fourni.
 
 - Le mécanisme ne prend pas en charge les types imbriqués avec des paramètres statiques.
 
@@ -1120,9 +1120,9 @@ Vous pouvez développer le fournisseur de type dans une seule instance et le fou
 
 Vous pouvez appeler des fournisseurs de type en utilisant les outils suivants :
 
-- FSC.exe (F# la ligne de commande du compilateur)
+- FSC.exe (le F# du compilateur de ligne de commande)
 
-- fsi.exe (F# Interactive le compilateur)
+- fsi.exe (le F# compilateur Interactive)
 
 - devenv.exe (Visual Studio)
 

@@ -1,13 +1,13 @@
 ---
-title: Expressions de correspondance (F#)
-description: Découvrez comment l’expression de correspondance F# fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.
+title: Expressions de correspondance
+description: Découvrez comment la F# expression de correspondance fournit le contrôle de branchement basé sur la comparaison d’une expression avec un jeu de modèles.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221842"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611566"
 ---
 # <a name="match-expressions"></a>Expressions de correspondance
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda : le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md).
+Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda : Le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md).
 
 L’ensemble de modèles doit couvrir toutes les correspondances possibles de la variable d’entrée. Vous utilisez fréquemment, le modèle de caractère générique (`_`) en tant que le dernier modèle pour faire correspondre les valeurs d’entrée précédemment sans correspondance.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Informations de référence du langage F#](index.md)  
-- [Modèles actifs](active-patterns.md)  
-- [Critères spéciaux](pattern-matching.md)  
+- [Informations de référence du langage F#](index.md)
+- [Modèles actifs](active-patterns.md)
+- [Critères spéciaux](pattern-matching.md)

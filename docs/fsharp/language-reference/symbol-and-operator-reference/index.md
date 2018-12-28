@@ -1,13 +1,13 @@
 ---
-title: Informations de référence sur les symboles et les opérateurs (F#)
+title: Informations de référence sur les symboles et les opérateurs
 description: En savoir plus sur les symboles et opérateurs qui sont utilisés dans le F# langage de programmation.
 ms.date: 04/04/2018
-ms.openlocfilehash: a382400213aa288bb134faefd8ce747a7319a76f
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 385ddbef2a3519d26dd7ad6abe90da1368f0a2a4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169870"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613802"
 ---
 # <a name="symbol-and-operator-reference"></a>Informations de référence sur les symboles et les opérateurs
 

@@ -1,13 +1,13 @@
 ---
-title: 'Boucles : expression for...in (F#)'
-description: Voir comment le F# for.. dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.
+title: 'Boucles : expression for...in'
+description: Voir comment la F# for.. dans l’expression de construction en boucle est utilisée pour itérer sur les correspondances d’un modèle dans une collection énumérable.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027232"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614403"
 ---
 # <a name="loops-forin-expression"></a>Boucles : expression for...in
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>Voir aussi
 
 - [Informations de référence du langage F#](index.md)
-- [Boucles : expression `for...to`](loops-for-to-expression.md)
-- [Boucles : expression `while...do`](loops-while-do-expression.md)
+- [Boucles : `for...to` Expression](loops-for-to-expression.md)
+- [Boucles : `while...do` Expression](loops-while-do-expression.md)

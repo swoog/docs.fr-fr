@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f56bbef6ed6decf6be4246f649665db4cf0f766
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b2cd047367820d249272ca220669835975dbf2d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746018"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611163"
 ---
 # <a name="ltgeneratepublisherevidencegt-element"></a>&lt;generatePublisherEvidence&gt; élément
-Spécifie si le runtime crée <xref:System.Security.Policy.Publisher> preuve de sécurité d’accès du code (CAS).  
+Spécifie si le runtime crée <xref:System.Security.Policy.Publisher> preuve pour la sécurité d’accès de code (CAS).  
   
  \<configuration>  
 \<runtime>  
@@ -41,7 +41,7 @@ Spécifie si le runtime crée <xref:System.Security.Policy.Publisher> preuve de 
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|`false`|Ne crée pas de <xref:System.Security.Policy.Publisher> preuve.|  
+|`false`|Ne crée pas <xref:System.Security.Policy.Publisher> preuve.|  
 |`true`|Crée <xref:System.Security.Policy.Publisher> preuve. Il s'agit de la valeur par défaut.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -57,18 +57,18 @@ Spécifie si le runtime crée <xref:System.Security.Policy.Publisher> preuve de 
 ## <a name="remarks"></a>Notes  
   
 > [!NOTE]
->  Dans le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] et versions ultérieures, cet élément n’a aucun effet sur le temps de chargement d’assembly. Pour plus d’informations, consultez la section « Simplification de la stratégie sécurité » dans [modifications de sécurité](../../../../../docs/framework/security/security-changes.md).  
+>  Dans le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] et versions ultérieures, cet élément n’a aucun effet sur les temps de chargement d’assembly. Pour plus d’informations, consultez la section « Simplification de la stratégie sécurité » dans [modifications de sécurité](../../../../../docs/framework/security/security-changes.md).  
   
- Le common language runtime (CLR) essaie de vérifier la signature Authenticode au moment du chargement pour créer <xref:System.Security.Policy.Publisher> preuves de l’assembly. Toutefois, par défaut, la plupart des applications ne doivent pas <xref:System.Security.Policy.Publisher> preuve. La stratégie CAS standard ne repose pas sur le <xref:System.Security.Policy.PublisherMembershipCondition>. Vous devez éviter le coût de démarrage inutile associé à la vérification de la signature de serveur de publication, sauf si votre application s’exécute sur un ordinateur avec la stratégie CAS personnalisée ou projette de répondre aux exigences de <xref:System.Security.Permissions.PublisherIdentityPermission> dans un environnement de confiance partielle. (Demandes d’autorisations d’identité aboutissent toujours dans un environnement de confiance totale.)  
+ Le common language runtime (CLR) essaie de vérifier la signature Authenticode au moment du chargement pour créer <xref:System.Security.Policy.Publisher> preuve pour l’assembly. Toutefois, par défaut, la plupart des applications ne doivent pas <xref:System.Security.Policy.Publisher> preuve. La stratégie CAS standard ne repose pas sur le <xref:System.Security.Policy.PublisherMembershipCondition>. Vous devez éviter le coût de démarrage inutile associé à la vérification de la signature de serveur de publication, sauf si votre application s’exécute sur un ordinateur avec la stratégie CAS personnalisée ou projette de répondre aux exigences pour <xref:System.Security.Permissions.PublisherIdentityPermission> dans un environnement de confiance partielle. (Demandes d’autorisations d’identité aboutissent toujours dans un environnement de confiance totale.)  
   
 > [!NOTE]
->  Nous recommandons que les services utilisent la `<generatePublisherEvidence>` élément pour améliorer les performances de démarrage.  À l’aide de cet élément peut également aider à éviter les retards qui peuvent entraîner un délai d’attente et l’annulation du démarrage du service.  
+>  Nous recommandons que les services utilisent le `<generatePublisherEvidence>` élément pour améliorer les performances de démarrage.  À l’aide de cet élément peut également aider à éviter les retards qui peuvent entraîner un délai d’attente et l’annulation du démarrage du service.  
   
 ## <a name="configuration-file"></a>Fichier de configuration  
  Cet élément peut être utilisé uniquement dans le fichier de configuration d’application.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser le `<generatePublisherEvidence>` élément pour désactiver la vérification de la stratégie d’éditeur autorités de certification pour une application.  
+ L’exemple suivant montre comment utiliser le `<generatePublisherEvidence>` élément pour désactiver la vérification de la stratégie de serveur de publication d’autorités de certification pour une application.  
   
 ```xml  
 <configuration>  
@@ -79,5 +79,5 @@ Spécifie si le runtime crée <xref:System.Security.Policy.Publisher> preuve de 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

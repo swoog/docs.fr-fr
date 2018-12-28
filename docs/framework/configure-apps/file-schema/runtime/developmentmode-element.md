@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 71b4eb1dfb50774cea2f7a50d5e5350b0338f41e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 982bc04e362f82760226b1cd2b8b3febe9cc7107
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745498"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612047"
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentMode&gt; élément
 Indique si le runtime recherche des assemblys dans les répertoires spécifiés par la variable d’environnement DEVPATH.  
@@ -40,7 +40,7 @@ Indique si le runtime recherche des assemblys dans les répertoires spécifiés 
 |---------------|-----------------|  
 |**developerInstallation**|Indique si le runtime recherche des assemblys dans les répertoires spécifiés par la variable d’environnement DEVPATH.|  
   
-## <a name="developerinstallation-attribute"></a>Attribut de developerInstallation  
+## <a name="developerinstallation-attribute"></a>developerInstallation attribut  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ Indique si le runtime recherche des assemblys dans les répertoires spécifiés 
  Utilisez ce paramètre uniquement au moment du développement. Le runtime ne vérifie pas les versions sur les assemblys avec nom fort trouvés dans DEVPATH. Elle utilise simplement le premier assembly qu’il trouve.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment le runtime recherche les assemblys dans les répertoires spécifiés par la variable d’environnement DEVPATH.  
+ L’exemple suivant montre comment entraîner le runtime recherche des assemblys dans les répertoires spécifiés par la variable d’environnement DEVPATH.  
   
 ```xml  
 <configuration>  
@@ -72,6 +72,6 @@ Indique si le runtime recherche des assemblys dans les répertoires spécifiés 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Comment : localiser des assemblys à l'aide de DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Guide pratique pour Localiser des assemblys à l’aide de DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

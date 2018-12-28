@@ -1,13 +1,13 @@
 ---
-title: Tableaux (F#)
+title: Tableaux
 description: Découvrez comment créer et utiliser des tableaux dans les F# langage de programmation.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129972"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614556"
 ---
 # <a name="arrays"></a>Tableaux
 
@@ -418,4 +418,4 @@ Le module [ `Array.Parallel` ](https://msdn.microsoft.com/library/60f30b77-5af4-
 ## <a name="see-also"></a>Voir aussi
 
 - [Informations de référence du langage F#](index.md)
-- [F#; Types](fsharp-types.md)
+- [Types F#](fsharp-types.md)

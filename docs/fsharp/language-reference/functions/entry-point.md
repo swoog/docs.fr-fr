@@ -1,17 +1,17 @@
 ---
-title: Point d'entrée (F#)
-description: Découvrez comment définir le point d’entrée à un programme F# compilé en un fichier exécutable, où l’exécution démarre formellement.
+title: Point d'entrée
+description: Découvrez comment définir le point d’entrée un F# programme compilé en un fichier exécutable, où l’exécution démarre formellement.
 ms.date: 05/16/2016
-ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 915ab17b9a4fc7fd4d0ae344cb273b1d348a02f1
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45698379"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614345"
 ---
 # <a name="entry-point"></a>Point d'entrée
 
-Cette rubrique décrit la méthode que vous utilisez pour définir le point d’entrée à un programme F#.
+Cette rubrique décrit la méthode que vous utilisez pour définir le point d’entrée un F# programme.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,7 +24,7 @@ let-function-binding
 
 Dans la syntaxe précédente, *permettent de liaison de fonction* est la définition d’une fonction dans un `let` liaison.
 
-Le point d’entrée à un programme qui est compilé comme un fichier exécutable est où l’exécution démarre formellement. Vous spécifiez le point d’entrée à une application F# en appliquant la `EntryPoint` attribut du programme `main` (fonction). Cette fonction (créée à l’aide un `let` liaison) doit être la dernière fonction dans le dernier fichier compilé. Le dernier fichier compilé est le dernier fichier dans le projet ou le dernier fichier est passé à la ligne de commande.
+Le point d’entrée à un programme qui est compilé comme un fichier exécutable est où l’exécution démarre formellement. Vous spécifiez le point d’entrée à un F# application en appliquant la `EntryPoint` attribut du programme `main` (fonction). Cette fonction (créée à l’aide un `let` liaison) doit être la dernière fonction dans le dernier fichier compilé. Le dernier fichier compilé est le dernier fichier dans le projet ou le dernier fichier est passé à la ligne de commande.
 
 La fonction de point d’entrée a le type `string array -> int`. Les arguments fournis sur la ligne de commande sont passés à la `main` fonction dans le tableau de chaînes. Le premier élément du tableau est le premier argument ; le nom du fichier exécutable n’est pas inclus dans le tableau, comme dans d’autres langages. La valeur de retour est utilisée en tant que le code de sortie pour le processus. Zéro indique généralement le cas de réussite ; valeurs différentes de zéro indiquent une erreur. Il n’existe aucune convention pour la signification spécifique de codes de retour différente de zéro ; les significations des codes de retour sont spécifiques à l’application.
 

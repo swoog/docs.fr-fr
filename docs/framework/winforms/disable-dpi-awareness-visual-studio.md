@@ -1,17 +1,17 @@
 ---
 title: Désactiver la prise en charge-DPI dans Visual Studio
 description: Présente les limitations du Concepteur de formulaires Windows sur les écrans HDPI et l’exécution de Visual Studio comme un processus dépendant PPP.
-ms.date: 08/14/2018
+ms.date: 12/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 2d3466476c33a3e5faa8be96d63f1d11442c5d70
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151263"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655996"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Désactiver la prise en charge-DPI dans Visual Studio
 
@@ -29,7 +29,7 @@ Dans Visual Studio 2017 version 15,8 et versions ultérieure, lorsque vous ouvre
 
 Lit le message **mise à l’échelle sur votre écran d’affichage principal est défini à 200 % (192 PPP). Cela peut entraîner des problèmes de rendu dans la fenêtre du concepteur.**
 
-Si vous ne travaillez pas dans le concepteur et que vous n’avez pas besoin d’ajuster la disposition de votre formulaire, vous pouvez ignorer la barre d’information et continuer à travailler dans l’éditeur de code ou dans d’autres types de concepteurs. Uniquement les **Windows Forms Designer** est affecté. Si vous n’avez pas besoin de travailler dans le **Windows Forms Designer**, la section suivante vous aide à [résoudre le problème](#to-resolve-the-problem).
+Si vous ne travaillez pas dans le concepteur et que vous n’avez pas besoin d’ajuster la disposition de votre formulaire, vous pouvez ignorer la barre d’information et continuer à travailler dans l’éditeur de code ou dans d’autres types de concepteurs. (Vous pouvez également [désactiver les notifications](#disable-notifications) afin que la barre d’information ne continue de s’afficher.) Uniquement les **Windows Forms Designer** est affecté. Si vous n’avez pas besoin de travailler dans le **Windows Forms Designer**, la section suivante vous aide à [résoudre le problème](#to-resolve-the-problem).
 
 ## <a name="to-resolve-the-problem"></a>Pour résoudre le problème
 
@@ -68,6 +68,16 @@ Vous pouvez marquer Visual Studio comme dépendant PPP en modifiant le Registre.
 Pour définir l’affichage de votre mise à l’échelle de paramètre à 100 % dans Windows 10, tapez **paramètres d’affichage** dans la barre de zone de recherche, puis sélectionnez des tâches **modifier les paramètres d’affichage**. Dans le **paramètres** fenêtre, définissez **modifier la taille du texte, les applications et les autres éléments** à **100 %**.
 
 Paramétrage de votre affichage mise à l’échelle à 100 % est peut-être pas souhaitable, car cela peut rendre l’interface utilisateur trop petite pour être utilisable.
+
+## <a name="disable-notifications"></a>Désactiver les notifications
+
+Vous pouvez choisir ne pas d’être averti de PPP mise à l’échelle des problèmes dans Visual Studio. Vous souhaiterez peut-être désactiver les notifications si vous ne travaillez pas dans le concepteur, par exemple.
+
+Pour désactiver les notifications, choisissez **outils** > **Options** pour ouvrir le **Options** boîte de dialogue. Ensuite, choisissez **Windows Forms Designer** > **général**et définissez **Notifications de mise à l’échelle PPP** à **False**.
+
+![Résolution de mise à l’échelle d’option de notifications dans Visual Studio](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+
+Si vous souhaitez réactiver ultérieurement les notifications de mise à l’échelle, définissez la propriété sur **True**.
 
 ## <a name="troubleshoot"></a>Résoudre les problèmes
 

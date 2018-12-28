@@ -1,21 +1,21 @@
 ---
-title: Critères spéciaux (F#)
-description: Découvrez comment les modèles sont utilisés en F# pour comparer des données avec les structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données.
+title: Critères spéciaux
+description: Découvrez comment les modèles sont utilisées dans F# pour comparer des données avec les structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5ad3d3e1a78246afdfa2948fd0fb84fa04686d30
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45991422"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613581"
 ---
 # <a name="pattern-matching"></a>Critères spéciaux
 
-Les modèles sont des règles de transformation des données d’entrée. Elles sont utilisées dans le langage F# pour comparer des données avec une ou plusieurs structures logiques, décomposer des données en parties constituantes ou extraire des informations à partir des données de différentes manières.
+Les modèles sont des règles de transformation des données d’entrée. Ils sont utilisés tout au long de la F# langage pour comparer des données avec une structure logique ou des structures, décomposer des données en parties constituantes ou extraire des informations à partir des données de différentes manières.
 
 ## <a name="remarks"></a>Notes
 
-Modèles utilisés dans de nombreuses constructions de langage, tels que le `match` expression. Ils sont utilisés lorsque vous traitez des arguments pour les fonctions dans `let` liaisons, des expressions lambda et gestionnaires d’exceptions associés à la `try...with` expression. Pour plus d’informations, consultez [Expressions de correspondance](match-expressions.md), [liaisons let](functions/let-bindings.md), [Expressions Lambda : le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md), et [Exceptions : le `try...with` Expression](exception-handling/the-try-with-expression.md).
+Modèles utilisés dans de nombreuses constructions de langage, tels que le `match` expression. Ils sont utilisés lorsque vous traitez des arguments pour les fonctions dans `let` liaisons, des expressions lambda et gestionnaires d’exceptions associés à la `try...with` expression. Pour plus d’informations, consultez [Expressions de correspondance](match-expressions.md), [liaisons let](functions/let-bindings.md), [Expressions Lambda : Le `fun` mot clé](functions/lambda-expressions-the-fun-keyword.md), et [Exceptions : Le `try...with` Expression](exception-handling/the-try-with-expression.md).
 
 Par exemple, dans le `match` expression, le *modèle* est ce qui suit le symbole de barre verticale.
 
@@ -103,7 +103,7 @@ match shape with
 
 Modèles actifs permettent de définir des critères spéciaux personnalisés plus complexes. Pour plus d’informations sur les modèles actifs, consultez [modèles actifs](active-patterns.md).
 
-Le cas dans lequel l’identificateur est une exception est utilisé dans les critères spéciaux dans le contexte de gestionnaires d’exceptions. Pour plus d’informations sur les critères spéciaux dans la gestion des exceptions, consultez [Exceptions : le `try...with` Expression](exception-handling/the-try-with-expression.md).
+Le cas dans lequel l’identificateur est une exception est utilisé dans les critères spéciaux dans le contexte de gestionnaires d’exceptions. Pour plus d’informations sur les critères spéciaux dans la gestion des exceptions, consultez [Exceptions : Le `try...with` Expression](exception-handling/the-try-with-expression.md).
 
 ## <a name="variable-patterns"></a>Modèles de variable
 

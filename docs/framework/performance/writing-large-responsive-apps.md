@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8c73f1a4373583530d5afde113c5c4ec049bcea4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f98d85e5fd01a631352f5db7bba6ed309449d68
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195890"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613516"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Conception d'applications .NET Framework complexes et réactives
 Cet article fournit des conseils pour améliorer les performances d'applications .NET Framework volumineuses ou d'applications qui traitent de grandes quantités de données, telles que des fichiers ou des bases de données. Ces conseils proviennent de la réécriture des compilateurs C# et Visual Basic en code managé, et cet article inclut plusieurs exemples réels issus du compilateur C#. 
@@ -28,20 +28,20 @@ Cet article fournit des conseils pour améliorer les performances d'applications
 ## <a name="just-the-facts"></a>Les faits  
  Prenez en compte les faits suivants lorsque vous réglez les performances de vos applications .NET Framework pour les rendre plus réactives. 
   
-### <a name="fact-1-dont-prematurely-optimize"></a>Fait n° 1 : N'optimisez pas prématurément  
+### <a name="fact-1-dont-prematurely-optimize"></a>Fait n° 1 : N’Optimisez pas prématurément  
  L'écriture d'un code plus complexe que nécessaire entraîne des coûts de maintenance, de débogage et de finition. Les programmeurs expérimentés ont une compréhension intuitive de la manière de résoudre les problèmes de codage et écrivent des codes plus efficaces. Toutefois, ils optimisent parfois prématurément leur code. Par exemple, ils utilisent une table de hachage lorsqu'un simple tableau suffirait, ou ils utilisent une mise en cache compliquée susceptible d'engendrer des fuites de mémoire au lieu de simplement recalculer les valeurs. Même si vous êtes un programmeur expérimenté, vous devez tester les performances et analyser votre code quand vous décelez des problèmes. 
   
-### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fait n° 2 : Si vous n'effectuez pas de mesures, vous ne faites que supposer  
+### <a name="fact-2-if-youre-not-measuring-youre-guessing"></a>Fait n° 2 : Si vous n’êtes pas mesurer, vous ne faites que supposer  
  Les profils et les mesures ne trompent pas. Les profils vous montrent si l'UC est pleinement chargée ou si vous êtes bloqué au niveau des E/S de disque. Les profils indiquent le type et la quantité de mémoire que vous allouez et si le processus [garbage collection](../../../docs/standard/garbage-collection/index.md) (GC) utilise beaucoup de ressources de votre UC. 
   
  Vous devez définir des objectifs de performances pour des scénarios ou des expériences clients clés dans votre application, et écrire des tests pour mesurer les performances. Étudiez les échecs des tests en appliquant un raisonnement scientifique : utilisez des profils pour vous guider, avancez des hypothèses concernant la nature du problème et testez vos hypothèses en faisant des expériences ou en apportant des modifications au code. Établissez des mesures de performances de référence au fil du temps en effectuant des tests réguliers, afin de pouvoir isoler les changements qui provoquent des régressions des performances. Grâce à une approche rigoureuse du traitement des performances, vous éviterez de perdre du temps avec des mises à jour de code inutiles. 
   
-### <a name="fact-3-good-tools-make-all-the-difference"></a>Fait n° 3 : Des outils efficaces font toute la différence  
+### <a name="fact-3-good-tools-make-all-the-difference"></a>Fait n° 3 : Des outils efficaces font toute la différence  
  Des outils efficaces vous permettent de plonger directement au cœur des principaux problèmes de performances (UC, mémoire ou disque) et vous aident à localiser le code à l'origine des goulots d'étranglement. Microsoft fournit divers outils d’analyse des performances, tels que le [profileur Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), l’[outil d’analyse de Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) et [PerfView](https://www.microsoft.com/download/details.aspx?id=28567). 
   
  PerfView est un outil gratuit et extrêmement puissant qui vous permet de porter toute votre attention sur des problèmes profonds liés par exemple aux E/S de disque, aux événements du GC et à la mémoire. Vous pouvez capturer des événements de [suivi d’événements pour Windows](../../../docs/framework/wcf/samples/etw-tracing.md) (ETW) liés aux performances et afficher aisément les informations pour chaque application, processus, pile et thread. PerfView vous montre la quantité et le type de mémoire que votre application alloue, ainsi que les fonctions ou les piles d'appels qui contribuent aux allocations de mémoire, et pour quels volumes. Pour plus de détails, consultez l’ensemble complet de rubriques d’aide, de démonstrations et de vidéos fournies avec l’outil (par exemple, les [didacticiels PerfView](https://channel9.msdn.com/Series/PerfView-Tutorial) sur Channel 9). 
   
-### <a name="fact-4-its-all-about-allocations"></a>Fait n° 4 : Tout se résume aux allocations  
+### <a name="fact-4-its-all-about-allocations"></a>Fait n° 4 : Il se résume aux allocations  
  Vous pouvez penser que la création d'une application .NET Framework réactive n'est qu'une question d'algorithmes, comme l'utilisation d'un tri rapide à la place d'un tri par propagation, mais ce n'est pas le cas. Le facteur principal qui intervient dans la création d'une application réactive et l'allocation de la mémoire, notamment quand votre application est très volumineuse ou traite de grandes quantités de données. 
   
  Quasiment tout le travail nécessaire pour créer des expériences IDE réactives avec les API des nouveaux compilateurs a impliqué d'éviter les allocations et de gérer les stratégies de mise en cache. Les traces PerfView indiquent que les performances des nouveaux compilateurs C# et Visual Basic sont rarement liées à l'UC. Les compilateurs peuvent être liés aux E/S lors de la lecture de centaines de milliers ou de millions de lignes de code, lors de la lecture des métadonnées ou lors de l'émission du code généré. Les retards de threads d'interface utilisateur sont quasiment tous dus au garbage collection. Le GC du .NET Framework fait l'objet d'un réglage précis pour les performances et effectue une grande part de son travail pendant que le code de l'application s'exécute. Toutefois, une seule allocation peut déclencher une collection [gen2](../../../docs/standard/garbage-collection/fundamentals.md) coûteuse, susceptible d’arrêter tous les threads. 
@@ -197,7 +197,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
   
  La première version de `WriteFormattedDocComment()` allouait un tableau, plusieurs sous-chaînes et une sous-chaîne tronquée avec un tableau `params` vide. Il est également activée pour « / / / ». Le code révisé utilise uniquement l'indexation et n'alloue rien. Il recherche le premier caractère qui n’est pas un espace blanc et puis vérifie caractère par caractère pour déterminer si la chaîne commence par « / / / ». Le nouveau code utilise `IndexOfFirstNonWhiteSpaceChar` au lieu de <xref:System.String.TrimStart%2A> pour retourner le premier index (après un index de départ spécifié) où se produit un caractère autre qu’un espace blanc. Le correctif n'est pas complet, mais vous pouvez voir comment appliquer des correctifs similaires pour obtenir une solution complète. En appliquant cette approche dans l'ensemble du code, vous pouvez supprimer toutes les allocations dans `WriteFormattedDocComment()`. 
   
- **Exemple 4 : StringBuilder**  
+ **Exemple 4 : StringBuilder**  
   
  Cet exemple utilise un objet <xref:System.Text.StringBuilder>. La fonction suivante génère un nom de type complet pour des types génériques :  
   
@@ -278,7 +278,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
 ### <a name="linq-and-lambdas"></a>Expressions LINQ et lambda  
 Language-Integrated Query (LINQ), conjointement avec les expressions lambda, est un exemple d’une fonctionnalité de productivité. Toutefois, son utilisation peut avoir un impact significatif sur les performances au fil du temps, et vous aurez peut-être que besoin de réécrire votre code.
   
- **Exemple 5 : expressions lambda, liste\<T> et IEnumerable\<T>**  
+ **Exemple 5 : Les expressions lambda, liste\<T > et IEnumerable\<T >**  
   
  Cet exemple utilise du [code de style opérationnel et LINQ](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) pour rechercher un symbole dans le modèle du compilateur, selon une chaîne de nom :  
   
@@ -361,7 +361,8 @@ public Symbol FindMatchingSymbol(string name)
  Ce code n'utilise pas d'énumérateurs, d'expressions lambda ni de méthodes d'extension LINQ, et il n'induit pas d'allocations. L'absence d'allocation vient du fait que le compilateur peut voir que la collection `symbols` est une classe <xref:System.Collections.Generic.List%601> et qu'elle peut lier l'énumérateur résultant (une structure) à une variable locale avec le type correct pour éviter le boxing. La version originale de cette fonction était un exemple parfait de la puissance expressive de C# et de la productivité du .NET Framework. Cette nouvelle version, plus efficace, conserve ces qualités sans ajouter de code complexe à tenir à jour. 
   
 ### <a name="async-method-caching"></a>Mise en cache dans les méthodes async  
- L’exemple suivant illustre un problème courant qui se produit quand vous essayez d’utiliser des résultats en cache dans une méthode [async](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7). 
+
+L’exemple suivant illustre un problème courant qui se produit quand vous essayez d’utiliser des résultats en cache dans une méthode [async](../../csharp/programming-guide/concepts/async/index.md).
   
  **Exemple 6 : mise en cache dans les méthodes async**  
   

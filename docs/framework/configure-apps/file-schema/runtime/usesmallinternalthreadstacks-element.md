@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a11b9a008878e716e9b3d8cd54abe5eb4169672a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 23a38297526090f1df35f8541026accd5a5cb9bc
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745485"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613789"
 ---
 # <a name="ltusesmallinternalthreadstacksgt-element"></a>&lt;UseSmallInternalThreadStacks&gt; élément
-Demandes de réduire la mémoire que le common language runtime (CLR) utilisent en spécifiant des tailles de pile explicites lorsqu’il crée certains threads qu’il utilise en interne, au lieu d’utiliser la taille de pile par défaut pour ces threads.  
+Les demandes que le common language runtime (CLR) réduire la mémoire utilisent en spécifiant des tailles de pile explicites lorsqu’il crée certains threads qu’il utilise en interne, au lieu d’utiliser la taille de pile par défaut pour ces threads.  
   
  \<configuration > élément  
 \<runtime > élément  
@@ -34,14 +34,14 @@ Demandes de réduire la mémoire que le common language runtime (CLR) utilisent 
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|enabled|Attribut requis.<br /><br /> Spécifie s’il faut demander que le CLR utilisation explicite des tailles de pile au lieu de la taille de pile par défaut lorsqu’il crée certains threads qu’il utilise en interne. Les tailles de pile explicites sont inférieures à la taille de pile par défaut de 1 Mo.|  
+|enabled|Attribut requis.<br /><br /> Spécifie s’il faut demander que les tailles de pile explicites d’utilisation CLR au lieu de la taille de pile par défaut lorsqu’il crée certains threads qu’il utilise en interne. Les tailles de pile explicites sont inférieures à la taille de pile par défaut de 1 Mo.|  
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|true|Demander des tailles de pile explicite.|  
-|False|Utilisez la taille de pile par défaut. Ceci est la valeur par défaut pour le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
+|true|Demander des tailles de pile explicites.|  
+|False|Utiliser la taille de pile par défaut. Il s’agit par défaut pour le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)].|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -54,15 +54,15 @@ Demandes de réduire la mémoire que le common language runtime (CLR) utilisent 
 |`runtime`|Contient des informations sur les liaisons d’assembly et l’opération garbage collection.|  
   
 ## <a name="remarks"></a>Notes  
- Cet élément de configuration est utilisé pour demander l’utilisation réduite de la mémoire virtuelle dans un processus, car les tailles de threads explicites que le CLR utilise pour ses threads internes, si la demande est honorée, sont plus petites que la taille par défaut.  
+ Cet élément de configuration est utilisé pour demander l’utilisation réduite de la mémoire virtuelle dans un processus, étant donné que les tailles de thread explicites que le CLR utilise pour ses threads internes, si la demande est honorée, sont plus petites que la taille par défaut.  
   
 > [!IMPORTANT]
->  Cet élément de configuration est une demande au CLR plutôt qu’une spécification absolue. Dans la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la demande est honorée uniquement pour les x86 architecture. Cet élément peut complètement ignoré dans les futures versions du CLR ou remplacé par des tailles de pile explicites qui sont toujours utilisés pour les threads internes sélectionnés.  
+>  Cet élément de configuration est une demande au CLR plutôt qu’une exigence absolue. Dans le [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], la demande est honorée uniquement pour le x86 architecture. Cet élément peut complètement ignoré dans les futures versions du CLR ou remplacé par des tailles de pile explicites qui sont toujours utilisés pour les threads internes sélectionnés.  
   
- Spécification de que cet élément de configuration de transactions fiabilité pour une utilisation de mémoire virtuelle plus petite si le CLR répond à la demande, car la plus petite taille de pile peut augmenter dépasse plus probable.  
+ Spécification de que cet élément de configuration entretient des relations fiabilité pour une utilisation de mémoire virtuelle plus petits si le CLR répond à la requête, car il est plus petite taille de pile peut augmenter les débordements plus probablement.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment demander que la CLR utilisation explicite des tailles de pile pour certains threads qu’il utilise en interne.  
+ L’exemple suivant montre comment demander que la CLR utilisation tailles de pile explicites pour certains threads qu’il utilise en interne.  
   
 ```xml  
 <configuration>  
@@ -73,5 +73,5 @@ Demandes de réduire la mémoire que le common language runtime (CLR) utilisent 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)

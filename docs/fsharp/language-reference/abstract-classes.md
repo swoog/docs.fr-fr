@@ -1,13 +1,13 @@
 ---
-title: Classes abstraites (F#)
-description: En savoir plus sur les classes abstraites F#, qui laissent certains ou tous les membres non implémentés et représentent les fonctionnalités communes d’une grande diversité de types d’objets.
+title: Classes abstraites
+description: En savoir plus sur F# abstraite des classes qui laissent certains ou tous les membres non implémentés et représentent les fonctionnalités communes d’une grande diversité de types d’objets.
 ms.date: 05/16/2016
-ms.openlocfilehash: 7e1bb9daca7e8a3b442cd7fb02ef99bb6a2085cb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fecd3b2d550c6b8f59fa614f5d00c5f730a4896a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43745448"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613477"
 ---
 # <a name="abstract-classes"></a>Classes abstraites
 
@@ -30,7 +30,7 @@ abstract member member-name : type-signature
 
 Dans la programmation orientée objet, une classe abstraite est utilisée comme classe de base d’une hiérarchie et représente les fonctionnalités communes d’une grande diversité de types d’objets. Comme le « abstrait » nom l’indique, les classes abstraites ne correspondent pas souvent directement à des entités concrètes dans le domaine du problème. Toutefois, ils ne représentent que nombreuses entités concrètes ont en commun.
 
-Classes abstraites doivent avoir le `AbstractClass` attribut. Qu’ils peuvent avoir implémentés et non implémentés de membres. L’utilisation du terme *abstraite* lorsqu’il est appliqué à une classe est le même que dans d’autres langages .NET ; Toutefois, l’utilisation du terme *abstraite* lorsqu’il est appliqué aux méthodes (et propriétés) est un peu différente en F# à partir de son utiliser dans d’autres langages .NET. En F#, lorsqu’une méthode est marquée avec le `abstract` mot clé, cela indique qu’un membre a une entrée, appelée un *emplacement de dispatch virtuel*, dans la table interne des fonctions virtuelles pour ce type. En d’autres termes, la méthode est virtuelle, bien que le `virtual` mot clé n’est pas utilisé dans le langage F#. Le mot clé `abstract` est utilisé sur les méthodes virtuelles, quel que soit la méthode est implémentée ou non. La déclaration d’un emplacement de dispatch virtuel est séparée de la définition d’une méthode pour cet emplacement de dispatch. Par conséquent, l’équivalent en F# d’une déclaration de méthode virtuelle et la définition dans un autre langage .NET est une combinaison d’une déclaration de méthode abstraite et une définition séparée, avec soit le `default` mot clé ou le `override` mot clé. Pour plus d’informations et des exemples, consultez [méthodes](members/methods.md).
+Classes abstraites doivent avoir le `AbstractClass` attribut. Qu’ils peuvent avoir implémentés et non implémentés de membres. L’utilisation du terme *abstraite* lorsqu’il est appliqué à une classe est le même que dans d’autres langages .NET ; Toutefois, l’utilisation du terme *abstraite* lorsqu’il est appliqué aux méthodes (et propriétés) est un peu différent dans F# à partir de son utilisation dans d’autres langages .NET. Dans F#, lorsqu’une méthode est marquée avec le `abstract` mot clé, cela indique qu’un membre a une entrée, appelée un *emplacement de dispatch virtuel*, dans la table interne des fonctions virtuelles pour ce type. En d’autres termes, la méthode est virtuelle, bien que le `virtual` mot clé n’est pas utilisé dans le F# langage. Le mot clé `abstract` est utilisé sur les méthodes virtuelles, quel que soit la méthode est implémentée ou non. La déclaration d’un emplacement de dispatch virtuel est séparée de la définition d’une méthode pour cet emplacement de dispatch. Par conséquent, le F# équivalent d’une déclaration de méthode virtuelle et une définition dans un autre langage .NET est une combinaison d’une déclaration de méthode abstraite et une définition séparée, avec soit le `default` mot clé ou le `override` mot clé. Pour plus d’informations et des exemples, consultez [méthodes](members/methods.md).
 
 Une classe est considérée comme abstraite uniquement s’il existe des méthodes abstraites qui sont déclarés mais non définis. Par conséquent, les classes qui ont des méthodes abstraites ne sont pas nécessairement des classes abstraites. Si une classe a des méthodes abstraites non définies, n’utilisez pas le **AbstractClass** attribut.
 

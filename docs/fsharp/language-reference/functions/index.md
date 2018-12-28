@@ -1,13 +1,13 @@
 ---
-title: Fonctions (F#)
-description: En savoir plus sur les fonctions en F# et comment F# prend en charge les constructions de programmation fonctionnelles courants.
+title: Fonctions
+description: En savoir plus sur les fonctions dans F# et comment F# prend en charge les constructions de programmation fonctionnelles courants.
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48839567"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610916"
 ---
 # <a name="functions"></a>Fonctions
 
@@ -142,7 +142,7 @@ Une *expression lambda* est une fonction sans nom. Dans les exemples précédent
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Pour définir des expressions lambda, utilisez le mot clé `fun`. Une expression lambda ressemble à une définition de fonction, sauf que le jeton `->` est utilisé à la place du jeton `=` pour séparer la liste d’arguments du corps de la fonction. Comme dans une définition de fonction normale, les types d’argument peuvent être déduits ou spécifiés explicitement, et le type de retour de l’expression lambda est déduit du type de la dernière expression dans le corps. Pour plus d’informations, consultez [Expressions lambda : mot clé `fun`](../functions/lambda-expressions-the-fun-keyword.md).
+Pour définir des expressions lambda, utilisez le mot clé `fun`. Une expression lambda ressemble à une définition de fonction, sauf que le jeton `->` est utilisé à la place du jeton `=` pour séparer la liste d’arguments du corps de la fonction. Comme dans une définition de fonction normale, les types d’argument peuvent être déduits ou spécifiés explicitement, et le type de retour de l’expression lambda est déduit du type de la dernière expression dans le corps. Pour plus d’informations, consultez [Expressions Lambda : Le `fun` mot clé](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composition de fonction et traitement « pipeline »
 

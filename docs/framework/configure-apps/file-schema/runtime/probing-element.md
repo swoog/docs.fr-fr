@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cab16e83466b5954bfebac07dd79c9a8b5e4594
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a5b9be3050da21c0a99931ca70cf990b0b8bf1fe
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745001"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612301"
 ---
 # <a name="ltprobinggt-element"></a>&lt;détection&gt; élément
 Spécifie les sous-répertoires de base d’application pour le common language runtime à rechercher lors du chargement d’assemblys.  
@@ -39,7 +39,7 @@ Spécifie les sous-répertoires de base d’application pour le common language 
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`privatePath`|Attribut requis.<br /><br /> Spécifie les sous-répertoires du répertoire de base de l’application contenant des assemblys. Délimiter chaque sous-répertoire par un point-virgule.|  
+|`privatePath`|Attribut requis.<br /><br /> Spécifie les sous-répertoires du répertoire de base de l’application qui peut contenir des assemblys. Délimiter chaque sous-répertoire par un point-virgule.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -53,7 +53,7 @@ Spécifie les sous-répertoires de base d’application pour le common language 
 |`runtime`|Contient des informations sur les liaisons d’assembly et l’opération garbage collection.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment spécifier les sous-répertoires base que le runtime doit rechercher les assemblys de l’application.  
+ L’exemple suivant montre comment spécifier les sous-répertoires de base d’application que le runtime doit rechercher les assemblys.  
   
 ```xml  
 <configuration>  
@@ -66,7 +66,7 @@ Spécifie les sous-répertoires de base d’application pour le common language 
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Spécification de l'emplacement d'un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Spécification de l'emplacement d'un assembly](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
+- [Méthode de localisation des assemblys par le runtime](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

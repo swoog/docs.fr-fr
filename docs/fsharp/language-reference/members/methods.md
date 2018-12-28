@@ -1,13 +1,13 @@
 ---
-title: Méthodes (F#)
-description: Découvrez comment une méthode F# est une fonction associée à un type qui sont utilisées pour exposer et implémenter les fonctionnalités et le comportement des objets et des types.
+title: Méthodes
+description: Découvrez comment un F# méthode est une fonction associée à un type qui sont utilisées pour exposer et implémenter les fonctionnalités et le comportement des objets et des types.
 ms.date: 05/16/2016
-ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03150cc67f79bfde58cf27e4a9d4dfa9e9ff3f55
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44253206"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614023"
 ---
 # <a name="methods"></a>Méthodes
 
@@ -59,7 +59,7 @@ Les méthodes non inline peuvent être utilisées de manière récursive dans le
 
 ## <a name="instance-methods"></a>Méthodes d’instance
 
-Méthodes d’instance sont déclarées avec le `member` mot clé et un *auto-identificateur*, suivie d’un point (.) et le nom de la méthode et des paramètres. Comme c’est le cas pour `let` liaisons, le *liste de paramètres* peut être un modèle. En règle générale, vous insérez la méthode paramètres entre parenthèses dans une forme de tuple, qui est les façon dont les méthodes apparaissent en F# lorsqu’elles sont créées dans d’autres langages .NET Framework. Toutefois, la forme curryfiée (paramètres séparés par des espaces) est également courant, et autres modèles sont également pris en charge.
+Méthodes d’instance sont déclarées avec le `member` mot clé et un *auto-identificateur*, suivie d’un point (.) et le nom de la méthode et des paramètres. Comme c’est le cas pour `let` liaisons, le *liste de paramètres* peut être un modèle. En règle générale, vous placez la méthode paramètres entre parenthèses dans une forme de tuple, qui est les façon dont les méthodes apparaissent dans F# lorsqu’ils sont créés dans d’autres langages .NET Framework. Toutefois, la forme curryfiée (paramètres séparés par des espaces) est également courant, et autres modèles sont également pris en charge.
 
 L’exemple suivant illustre la définition et l’utilisation d’une méthode d’instance non abstraite.
 
@@ -97,11 +97,11 @@ L’exemple suivant illustre une classe dérivée qui substitue une méthode de 
 
 ## <a name="overloaded-methods"></a>Méthodes surchargées
 
-Les méthodes surchargées sont des méthodes qui ont des noms identiques dans un type donné, mais qui ont des arguments différents. En F#, les arguments facultatifs sont généralement utilisées au lieu de méthodes surchargées. Toutefois, les méthodes surchargées sont autorisées dans le langage, autant que les arguments sont sous forme de tuple, forme curryfiée pas.
+Les méthodes surchargées sont des méthodes qui ont des noms identiques dans un type donné, mais qui ont des arguments différents. Dans F#, arguments facultatifs sont généralement utilisés au lieu des méthodes surchargées. Toutefois, les méthodes surchargées sont autorisées dans le langage, autant que les arguments sont sous forme de tuple, forme curryfiée pas.
 
 ## <a name="optional-arguments"></a>Arguments facultatifs
 
-À partir de F# 4.1, vous pouvez également avoir des arguments facultatifs avec une valeur de paramètre par défaut dans les méthodes.  Cela a pour but de faciliter l’interopérabilité avec du code c#.  L’exemple suivant illustre la syntaxe :
+En commençant par F# 4.1, vous pouvez également avoir des arguments facultatifs avec une valeur de paramètre par défaut dans les méthodes.  Cela a pour but de faciliter l’interopérabilité avec du code c#.  L’exemple suivant illustre la syntaxe :
 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
@@ -111,7 +111,7 @@ type C() =
 
 Notez que la valeur transmise pour `DefaultParameterValue` doit correspondre au type d’entrée.  Dans l’exemple ci-dessus, il est un `int`.  Tentative de transmission d’une valeur non entière dans `DefaultParameterValue` entraînerait une erreur de compilation.
 
-## <a name="example-properties-and-methods"></a>Exemple : Propriétés et méthodes
+## <a name="example-properties-and-methods"></a>Exemple : Propriétés et méthodes
 
 L’exemple suivant contient un type qui comporte des exemples de champs, des fonctions privées, des propriétés et une méthode statique.
 

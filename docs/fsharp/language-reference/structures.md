@@ -1,13 +1,13 @@
 ---
-title: Structures (F#)
-description: En savoir plus sur la structure F#, un type d’objet compact souvent plus efficace qu’une classe pour les types avec une petite quantité de données et un comportement simple.
+title: Structures
+description: En savoir plus sur les F# structure, un type d’objet compact souvent plus efficace qu’une classe pour les types avec une petite quantité de données et un comportement simple.
 ms.date: 05/16/2016
-ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48845295"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612151"
 ---
 # <a name="structures"></a>Structures
 
@@ -40,7 +40,7 @@ Les structures ne peuvent pas participer à l’héritage, ne peuvent pas conten
 
 Étant donné que les structures n'autorisent pas les liaisons `let`, vous devez déclarer leurs champs à l'aide du mot clé `val`. Le mot clé `val` définit un champ et son type, mais n'autorise pas l'initialisation. À la place, les déclarations `val` sont initialisées à la valeur zéro ou null. Pour cette raison, les structures ayant un constructeur implicite (c'est-à-dire les paramètres qui sont fournis immédiatement après le nom de la structure dans la déclaration) requièrent que les déclarations `val` soient annotées avec l'attribut `DefaultValue`. Les structures ayant un constructeur défini prennent toujours en charge l'initialisation à zéro. Par conséquent, l'attribut `DefaultValue` est une déclaration selon laquelle une telle valeur égale à zéro est valide pour le champ. Les constructeurs implicites pour les structures n'exécutent aucune action, car les liaisons `let` et `do` ne sont pas autorisées sur le type, mais les valeurs de paramètre de constructeur implicite passées sont disponibles en tant que champs privés.
 
-Les constructeurs explicites peuvent impliquer l'initialisation des valeurs de champ. Quand une structure a un constructeur explicite, elle prend toujours en charge l'initialisation à zéro ; toutefois, vous n'utilisez pas l'attribut `DefaultValue` sur les déclarations `val`, car il est en conflit avec le constructeur explicite. Pour plus d’informations sur `val` déclarations, consultez [champs explicites : le `val` mot clé](members/explicit-fields-the-val-keyword.md).
+Les constructeurs explicites peuvent impliquer l'initialisation des valeurs de champ. Quand une structure a un constructeur explicite, elle prend toujours en charge l'initialisation à zéro ; toutefois, vous n'utilisez pas l'attribut `DefaultValue` sur les déclarations `val`, car il est en conflit avec le constructeur explicite. Pour plus d’informations sur `val` déclarations, consultez [champs explicites : Le `val` mot clé](members/explicit-fields-the-val-keyword.md).
 
 Les attributs et les modificateurs d'accessibilité sont autorisés sur les structures et suivent les mêmes règles que celles des autres types. Pour plus d’informations, consultez [attributs](attributes.md) et [contrôle d’accès](access-control.md).
 
@@ -64,7 +64,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` n’implique pas `Struct`. Les deux doivent être présents sur le type.
 
-Un «`byref`-comme « struct en F# est un type de valeur de limite de la pile. Elle n’est jamais allouée sur le tas managé. Un `byref`-comme struct est utile pour la programmation de hautes performances, car elle est appliquée avec l’ensemble de vérifications fortes sur la durée de vie et de non capture. Les règles sont :
+Un «`byref`-comme « struct dans F# est un type de valeur de limite de la pile. Elle n’est jamais allouée sur le tas managé. Un `byref`-comme struct est utile pour la programmation de hautes performances, car elle est appliquée avec l’ensemble de vérifications fortes sur la durée de vie et de non capture. Les règles sont :
 
 * Elles peuvent servir comme paramètres de fonction, les paramètres de méthode, les variables locales, méthode est retournée.
 * Ils ne peuvent pas être statiques ou membres d’une classe ou un struct normal d’instance.
@@ -86,7 +86,7 @@ type S(count1: int, count2: int) =
 
 `IsReadOnly` n’implique pas `Struct`. Vous devez ajouter les deux avoir un `IsReadOnly` struct.
 
-Utilisation de cet attribut émet des métadonnées vous permettant de F# et savoir du pour traiter comme c# `inref<'T>` et `in ref`, respectivement.
+Utilisation de cet attribut émet vous permettant de métadonnées F# et C# savoir pour le traiter comme `inref<'T>` et `in ref`, respectivement.
 
 Définition d’une valeur mutable à l’intérieur d’un struct en lecture seule génère une erreur.
 

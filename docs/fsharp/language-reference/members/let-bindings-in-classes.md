@@ -1,17 +1,17 @@
 ---
-title: Liaisons let dans les classes (F#)
-description: Découvrez comment définir des champs privés et des fonctions privées pour les classes F# à l’aide de liaisons 'let' dans la définition de classe.
+title: Liaisons let dans des classes
+description: Découvrez comment définir des champs privés et des fonctions privées pour F# classes à l’aide de 'let' liaisons dans la définition de classe.
 ms.date: 05/16/2016
-ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 03dd583a141971284e6a8ddaad02272236cd1e4c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48033218"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611124"
 ---
 # <a name="let-bindings-in-classes"></a>Liaisons let dans des classes
 
-Vous pouvez définir des champs privés et des fonctions privées pour les classes F# à l’aide de `let` liaisons dans la définition de classe.
+Vous pouvez définir des champs privés et des fonctions privées pour F# classes à l’aide de `let` liaisons dans la définition de classe.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ La sortie est la suivante.
 
 ## <a name="alternative-ways-to-create-fields"></a>Autres manières de créer des champs
 
-Vous pouvez également utiliser le `val` mot clé pour créer un champ privé. Lorsque vous utilisez le `val` mot clé, le champ n'est pas une valeur donné lorsque l’objet est créé, mais est initialisé avec une valeur par défaut. Pour plus d’informations, consultez [champs explicites : val mot clé](explicit-fields-the-val-keyword.md).
+Vous pouvez également utiliser le `val` mot clé pour créer un champ privé. Lorsque vous utilisez le `val` mot clé, le champ n'est pas une valeur donné lorsque l’objet est créé, mais est initialisé avec une valeur par défaut. Pour plus d’informations, consultez [champs explicites : Val mot clé](explicit-fields-the-val-keyword.md).
 
 Vous pouvez également définir des champs privés dans une classe en utilisant une définition de membre et en ajoutant le mot clé `private` à la définition. Cela peut être utile si vous envisagez de modifier l’accessibilité d’un membre sans réécrire votre code. Pour plus d’informations, consultez [Contrôle d’accès](../access-control.md).
 

@@ -1,5 +1,5 @@
 ---
-title: "Comment : exécuter du code d'un niveau de confiance partiel dans un bac à sable (sandbox)"
+title: 'Procédure : Exécuter le Code de confiance partiel dans un bac à sable'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393271"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613217"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Comment : exécuter du code d'un niveau de confiance partiel dans un bac à sable (sandbox)
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Procédure : Exécuter le Code de confiance partiel dans un bac à sable
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  L'utilisation de bac à sable (sandbox) consiste à exécuter du code dans un environnement de sécurité restreint qui limite les autorisations d'accès accordées au code. Par exemple, si une bibliothèque managée provient d'une source qui n'est pas totalement fiable, vous ne devez pas l'exécuter comme ayant un niveau de confiance totale. Au lieu de cela, placez le code dans un bac à sable (sandbox) qui limite ses autorisations à ceux qui en ont besoin (par exemple, l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -30,7 +30,7 @@ ms.locfileid: "33393271"
   
  La surcharge possède la signature suivante :  
   
-```  
+```csharp
 AppDomain.CreateDomain( string friendlyName,  
                         Evidence securityInfo,  
                         AppDomainSetup info,  
@@ -50,7 +50,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 1.  Créez le jeu d'autorisations à accorder à l'application non fiable. L'autorisation minimale que vous pouvez accorder est l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Vous pouvez également accorder des autorisations supplémentaires que vous pensez sécurisées pour du code non fiable ; par exemple, <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Le code suivant crée un jeu d'autorisations uniquement avec l'autorisation <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
-    ```  
+    ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
@@ -67,7 +67,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 2.  Signez l'assembly qui contient la classe d'hébergement (appelée `Sandboxer` dans cet exemple) qui appelle le code non fiable. Ajouter le <xref:System.Security.Policy.StrongName> utilisé pour signer l'assembly au tableau <xref:System.Security.Policy.StrongName> du paramètre `fullTrustAssemblies` paramètre de l'appel <xref:System.AppDomain.CreateDomain%2A>. La classe d'hébergement doit être exécutée avec un niveau de confiance totale pour permettre l'exécution du code de confiance partielle ou offrir des services à l'application de confiance partielle. Voici comment lire le <xref:System.Security.Policy.StrongName> d'un assembly :  
   
-    ```  
+    ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
@@ -75,7 +75,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 3.  Initialisez le paramètre <xref:System.AppDomainSetup> de la méthode <xref:System.AppDomain.CreateDomain%2A>. Ce paramètre vous permet de contrôler la plupart des paramètres du nouveau <xref:System.AppDomain>. La propriété <xref:System.AppDomainSetup.ApplicationBase%2A> est un paramètre important qui doit être différent de la propriété <xref:System.AppDomainSetup.ApplicationBase%2A> pour le <xref:System.AppDomain> de l'application d'hébergement. Si les paramètres <xref:System.AppDomainSetup.ApplicationBase%2A> sont les mêmes, l'application de confiance partielle peut amener l'application d'hébergement à charger (avec un niveau de confiance totale) une exception définie par ses soins, et donc l'exploiter. Cela fait partie des raisons pour lesquelles un Catch (exception) n'est pas recommandé. En configurant la base d'application de l'hôte différemment de la base d'application de l'application bac à sable (sandbox), vous réduisez les risques d'attaques.  
   
-    ```  
+    ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
@@ -84,7 +84,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      La signature de cette méthode est :  
   
-    ```  
+    ```csharp
     public static AppDomain CreateDomain(string friendlyName,   
         Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
         params StrongName[] fullTrustAssemblies)  
@@ -102,7 +102,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Le code servant à créer le domaine d'application est le suivant :  
   
-    ```  
+    ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
@@ -118,7 +118,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Vous pouvez effectuer la création sous un <xref:System.Security.CodeAccessPermission.Assert%2A> pour la confiance totale (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>), ce qui vous permet de créer une instance d'une classe critique. (Cela se produit chaque fois que votre assembly n'a pas de marquages de transparence et est chargé avec un niveau de confiance totale.) Vous devez donc vous assurer de ne créer que du code fiable avec cette fonction. Nous vous recommandons de créer uniquement des instances de classes d'un niveau de confiance totale dans le nouveau domaine d'application.  
   
-    ```  
+    ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
     newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
            typeof(Sandboxer).FullName );  
@@ -126,53 +126,53 @@ AppDomain.CreateDomain( string friendlyName,
   
      Notez que pour créer une instance d'une classe dans un nouveau domaine, cette classe doit étendre la classe <xref:System.MarshalByRefObject>.  
   
-    ```  
+    ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
 6.  Désencapsulez la nouvelle instance de domaine dans une référence de ce domaine. Cette référence est utilisée pour exécuter le code non fiable.  
   
-    ```  
+    ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
 7.  Appelez la méthode `ExecuteUntrustedCode` dans l'instance de la classe `Sandboxer` que vous venez de créer.  
   
-    ```  
+    ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
      Cet appel est exécuté dans le domaine d'application bac à sable (sandbox), qui possède des autorisations restreintes.  
   
-    ```  
+    ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
+    {  
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //you can use Assembly.EntryPoint to get to the entry point in an executable.  
+        MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
+        try  
         {  
-            //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
-            //you can use Assembly.EntryPoint to get to the entry point in an executable.  
-            MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
-            try  
-            {  
-                // Invoke the method.  
-                target.Invoke(null, parameters);  
-            }  
-            catch (Exception ex)  
-            {  
-            //When information is obtained from a SecurityException extra information is provided if it is   
-            //accessed in full-trust.  
-                (new PermissionSet(PermissionState.Unrestricted)).Assert();  
-                Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
-    CodeAccessPermission.RevertAssert();  
-                Console.ReadLine();  
-            }  
+            // Invoke the method.  
+            target.Invoke(null, parameters);  
         }  
+        catch (Exception ex)  
+        {  
+        //When information is obtained from a SecurityException extra information is provided if it is   
+        //accessed in full-trust.  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
+            Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
+            CodeAccessPermission.RevertAssert();  
+            Console.ReadLine();  
+        }  
+    }  
     ```  
   
      <xref:System.Reflection> est utilisé pour obtenir le handle d'une méthode dans l'assembly de niveau de confiance partielle. Le handle permet d'exécuter du code d'une façon sécurisée avec les autorisations minimales.  
   
      Dans le code précédent, notez <xref:System.Security.PermissionSet.Assert%2A> pour l'autorisation de confiance totale avant l'affichage de <xref:System.Security.SecurityException>.  
   
-    ```  
-    new PermissionSet(PermissionState.Unrestricted)).Assert()  
+    ```csharp
+    new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
      L'assertion de confiance totale permet d'obtenir les informations détaillées de <xref:System.Security.SecurityException>. Sans <xref:System.Security.PermissionSet.Assert%2A>, la méthode <xref:System.Security.SecurityException.ToString%2A> de <xref:System.Security.SecurityException> détecte que du code de niveau de confiance partielle se trouve sur la pile et restreint les informations retournées. Cela peut provoquer des problèmes de sécurité si le code de confiance partielle peut lire ces informations. Cependant, le risque est atténué par le fait de ne pas accorder <xref:System.Security.Permissions.UIPermission>. L'assertion de confiance totale doit être utilisée avec modération et uniquement quand vous êtes sûr de ne pas autoriser du code à passer du niveau de confiance partielle au niveau de confiance totale. En règle générale, n'appelez pas de code non fiable dans la même fonction et après avoir appelé une assertion de confiance totale. Nous vous conseillons de toujours rétablir l'assertion quand vous avez terminé de l'utiliser.  
@@ -180,7 +180,7 @@ AppDomain.CreateDomain( string friendlyName,
 ## <a name="example"></a>Exemple  
  L'exemple suivant implémente la procédure de la section précédente. Dans l'exemple, un projet nommé `Sandboxer` dans une solution Visual Studio contient également un projet nommé `UntrustedCode`, qui implémente la classe `UntrustedClass`. Ce scénario suppose que vous avez téléchargé un assembly de bibliothèque qui contient une méthode censée retourner la valeur `true` ou `false` pour indiquer si le nombre que vous avez fourni est un nombre de Fibonacci. À la place, la méthode essaie de lire un fichier de votre ordinateur. L'exemple suivant illustre le code non fiable.  
   
-```  
+```csharp
 using System;  
 using System.IO;  
 namespace UntrustedCode  
@@ -200,7 +200,7 @@ namespace UntrustedCode
   
  L'exemple suivant montre le code de l'application `Sandboxer` qui exécute le code non fiable.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -264,7 +264,7 @@ class Sandboxer : MarshalByRefObject
         {  
             // When we print informations from a SecurityException extra information can be printed if we are   
             //calling it with a full-trust stack.  
-            (new PermissionSet(PermissionState.Unrestricted)).Assert();  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
             CodeAccessPermission.RevertAssert();  
             Console.ReadLine();  

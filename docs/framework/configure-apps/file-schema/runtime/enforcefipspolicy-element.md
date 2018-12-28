@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9040bf2548964cf6df5f4fd87ee9f6d979c7df1e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0bffe72a4bcadb4a36a9ac54263d55e242ffc4d4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746213"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612008"
 ---
 # <a name="ltenforcefipspolicygt-element"></a>&lt;enforceFIPSPolicy&gt; élément
 Indique s’il faut appliquer la condition de configuration d’ordinateur selon laquelle les algorithmes de chiffrement doivent être conformes aux normes FIPS (Federal Information Processing Standard).  
@@ -36,14 +36,14 @@ Indique s’il faut appliquer la condition de configuration d’ordinateur selon
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|enabled|Attribut requis.<br /><br /> Spécifie s’il faut activer la mise en œuvre d’une spécification de configuration d’ordinateur que les algorithmes de chiffrement doivent être conformes à la norme FIPS.|  
+|enabled|Attribut requis.<br /><br /> Spécifie s’il faut activer la mise en œuvre d’une exigence de configuration d’ordinateur que les algorithmes de chiffrement doivent être conformes à la norme FIPS.|  
   
 ## <a name="enabled-attribute"></a>Attribut enabled  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|`true`|Si votre ordinateur est configuré pour exiger des algorithmes de chiffrement conformes à FIPS, cette spécification est appliquée. Si une classe implémente un algorithme qui n’est pas conforme à la norme FIPS, les constructeurs ou `Create` méthodes pour cette classe lever des exceptions lorsqu’elles sont exécutées sur cet ordinateur. Il s'agit de la valeur par défaut.|  
-|`false`|Les algorithmes de chiffrement qui sont utilisés par l’application ne sont pas requis pour être conforme à la norme FIPS, quelle que soit la configuration de l’ordinateur.|  
+|`true`|Si votre ordinateur est configuré pour exiger des algorithmes de chiffrement à être conforme aux normes FIPS, cette spécification est appliquée. Si une classe implémente un algorithme qui n’est pas conforme à la norme FIPS, les constructeurs ou `Create` méthodes pour cette classe lèvent des exceptions lorsqu’elles sont exécutées sur cet ordinateur. Il s'agit de la valeur par défaut.|  
+|`false`|Les algorithmes de chiffrement qui sont utilisés par l’application ne sont pas requis pour être conformes à la norme FIPS, quelle que soit la configuration de l’ordinateur.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -56,7 +56,7 @@ Indique s’il faut appliquer la condition de configuration d’ordinateur selon
 |`runtime`|Contient des informations sur les liaisons d’assembly et l’opération garbage collection.|  
   
 ## <a name="remarks"></a>Notes  
- À compter de .NET Framework 2.0, la création de classes qui implémentent des algorithmes de chiffrement est contrôlée par la configuration de l’ordinateur. Si l’ordinateur est configuré pour exiger des algorithmes pour être conforme à la norme FIPS, et une classe qui implémente un algorithme qui n’est pas conforme à la norme FIPS, toute tentative pour créer une instance de cette classe lève une exception. Constructeurs lèvent une <xref:System.InvalidOperationException> exception, et `Create` méthodes lèvent une <xref:System.Reflection.TargetInvocationException> exception avec une exception interne <xref:System.InvalidOperationException> exception.  
+ À compter de .NET Framework 2.0, la création de classes qui implémentent des algorithmes de chiffrement est contrôlée par la configuration de l’ordinateur. Si l’ordinateur est configuré pour exiger des algorithmes pour être conforme à la norme FIPS, et une classe implémente un algorithme qui n’est pas conforme à la norme FIPS, toute tentative pour créer une instance de cette classe lève une exception. Constructeurs lèvent une <xref:System.InvalidOperationException> exception, et `Create` méthodes lèvent une <xref:System.Reflection.TargetInvocationException> exception avec une exception interne <xref:System.InvalidOperationException> exception.  
   
  Si votre application s’exécute sur les ordinateurs dont les configurations requièrent une conformité à la norme FIPS et que votre application utilise un algorithme qui n’est pas conforme à la norme FIPS, vous pouvez utiliser cet élément dans votre fichier de configuration pour empêcher le common language runtime (CLR) à partir de appliquer la conformité FIPS. Cet élément a été introduit dans le [!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)].  
   
@@ -72,6 +72,6 @@ Indique s’il faut appliquer la condition de configuration d’ordinateur selon
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Modèle de chiffrement](../../../../../docs/standard/security/cryptography-model.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Modèle de chiffrement](../../../../../docs/standard/security/cryptography-model.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Exceptions : fonction invalidArg (F#)'
-description: Découvrez comment la fonction 'invalidArg' F# génère une exception d’argument.
+title: 'Exceptions : invalidArg (fonction)'
+description: Découvrez comment la F# « invalidArg » fonction génère une exception d’argument.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44180317"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613334"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Exceptions : fonction invalidArg
+# <a name="exceptions-the-invalidarg-function"></a>Exceptions : invalidArg (fonction)
 
 Le `invalidArg` fonction génère une exception d’argument.
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Gestion des exceptions](index.md)
 - [Types d'exceptions](exception-types.md)
-- [Exceptions : expression `try...with`](the-try-with-expression.md)
-- [Exceptions : expression `try...finally`](the-try-finally-expression.md)
+- [Exceptions : Le `try...with` Expression](the-try-with-expression.md)
+- [Exceptions : Le `try...finally` Expression](the-try-finally-expression.md)
 - [Exceptions : fonction `raise`](the-raise-function.md)
-- [Exceptions : fonction `failwith`](the-failwith-function.md)
+- [Exceptions : Le `failwith` (fonction)](the-failwith-function.md)

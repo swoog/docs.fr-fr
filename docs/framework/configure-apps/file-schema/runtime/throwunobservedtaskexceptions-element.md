@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edf3fd9a4561677813adbfb970a9d6be43d7c83d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749424"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612574"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; élément
 Indique si les exceptions de tâches non gérées doivent arrêter un processus en cours d’exécution.  
@@ -44,8 +44,8 @@ Indique si les exceptions de tâches non gérées doivent arrêter un processus 
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|`false`|N’arrête pas le processus en cours d’exécution pour une exception de tâche non gérée. Il s'agit de la valeur par défaut.|  
-|`true`|Termine le processus en cours d’exécution pour une exception de tâche non gérée.|  
+|`false`|N’arrête pas le processus en cours d’exécution pour une exception de tâche non prise en charge. Il s'agit de la valeur par défaut.|  
+|`true`|Met fin au processus en cours d’exécution pour une exception de tâche non prise en charge.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -59,11 +59,11 @@ Indique si les exceptions de tâches non gérées doivent arrêter un processus 
 |||  
   
 ## <a name="remarks"></a>Notes  
- Si une exception qui est associée à un <xref:System.Threading.Tasks.Task> n’a pas été respectées, il est sans <xref:System.Threading.Tasks.Task.Wait%2A> opération, le parent n’est pas attachée et le <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propriété n’a pas lu à l’exception de la tâche est considérée comme défaillante.  
+ Si une exception qui est associée à un <xref:System.Threading.Tasks.Task> n’a pas été observée, il existe aucune <xref:System.Threading.Tasks.Task.Wait%2A> opération, le parent n’est pas attachée et le <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> propriété Impossible de lire l’exception de la tâche est considérée comme défaillante.  
   
- Dans le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], par défaut, si un <xref:System.Threading.Tasks.Task> qui a un défaillante exception est le garbage collector, le finaliseur lève une exception et met fin au processus. L’arrêt du processus est déterminée par la durée du garbage collection et la finalisation.  
+ Dans le [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], par défaut, si un <xref:System.Threading.Tasks.Task> qui a une prise en charge exception collecté, le finaliseur lève une exception et met fin au processus. L’arrêt du processus est déterminée par le minutage du garbage collection et la finalisation.  
   
- Pour le rendre plus facile pour les développeurs d’écrire du code asynchrone basé sur les tâches, les [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] modifie ce comportement par défaut pour les exceptions non prise en charge. Non prises en charge les exceptions d’entraînent toujours le <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> événement soit déclenché, mais par défaut, le processus s’arrête. Au lieu de cela, l’exception est ignorée une fois que l’événement est déclenché, indépendamment de si un gestionnaire d’événements observe l’exception.  
+ Pour le rendre plus facile pour les développeurs d’écrire du code asynchrone basé sur les tâches, le [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] modifie ce comportement par défaut pour les exceptions non prise en charge. Non prises en charge les exceptions d’entraîner la <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> événement est déclenché, mais par défaut, le processus s’arrête. Au lieu de cela, l’exception est ignorée une fois que l’événement est déclenché, indépendamment de si un gestionnaire d’événements observe l’exception.  
   
  Dans le [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], vous pouvez utiliser la [ \<ThrowUnobservedTaskExceptions > élément](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) dans un fichier de configuration d’application pour activer la [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] comportement de lever une exception.  
   
@@ -71,10 +71,10 @@ Indique si les exceptions de tâches non gérées doivent arrêter un processus 
   
 -   En définissant la variable d’environnement `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   En définissant le Registre DWORD value ThrowUnobservedTaskExceptions = 1 dans le HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework clé.  
+-   En définissant le Registre DWORD, valeur ThrowUnobservedTaskExceptions = 1 dans les clés HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework clé.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment activer la levée d’exceptions dans les tâches à l’aide d’un fichier de configuration.  
+ L’exemple suivant montre comment activer la levée d’exceptions des tâches à l’aide d’un fichier de configuration d’application.  
   
 ```xml  
 <configuration>   
@@ -91,5 +91,5 @@ Indique si les exceptions de tâches non gérées doivent arrêter un processus 
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Voir aussi  
- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Schéma des paramètres d’exécution](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Schéma des fichiers de configuration](../../../../../docs/framework/configure-apps/file-schema/index.md)
