@@ -11,6 +11,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
 ms.locfileid: "53170262"
 ---
+
 # <a name="net-core-guide"></a>Guide .NET Core
 
 [.NET Core](about.md) est une plateforme de développement généraliste [open source](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) qui est tenue à jour par Microsoft et la communauté .NET sur [GitHub](https://github.com/dotnet/core). Cette multiplateforme prend en charge Windows, macOS et Linux. Elle permet de générer des applications destinées à des appareils, au cloud et à l’Internet des objets.
@@ -19,15 +20,15 @@ Consultez [À propos de .NET Core](about.md) pour en savoir plus sur .NET Core, 
 
 Consultez les [Tutoriels .NET Core](tutorials/index.md) pour apprendre à créer une application .NET Core simple. Il suffit de quelques minutes pour créer votre première application et la rendre opérationnelle. Si vous souhaitez tester .NET Core dans votre navigateur, consultez le tutoriel en ligne [Nombres en C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="download-net-core-21"></a>Télécharger .NET Core 2.1
+## <a name="download-net-core-22"></a>Télécharger .NET Core 2.2
 
-Téléchargez le [SDK .NET Core 2.1](https://www.microsoft.com/net/download) pour tester .NET Core sur votre ordinateur Windows, macOS ou Linux. Visitez [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) si vous préférez utiliser des conteneurs Docker.
+Téléchargez le [SDK .NET Core 2.2](https://www.microsoft.com/net/download) pour tester .NET Core sur votre ordinateur Windows, macOS ou Linux. Visitez [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) si vous préférez utiliser des conteneurs Docker.
 
 Toutes les versions de .NET Core sont disponibles sur [Téléchargements de .NET Core](https://www.microsoft.com/net/download/archives) si vous recherchez une autre version de .NET Core.
 
-## <a name="net-core-21"></a>.NET Core 2.1
+## <a name="net-core-22"></a>.NET Core 2.2
 
-La version la plus récente est [.NET Core 2.1](whats-new/dotnet-core-2-1.md). Les nouvelles fonctionnalités incluent : outils généraux, API haute performance (comme <xref:System.Span%601?displayProperty=nameWithType>), compilation JIT à plusieurs niveaux, améliorations des performances de [génération](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) et du [runtime](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/), et prise en charge d’Alpine et d’ARM32.
+La version la plus récente est [.NET Core 2.2](whats-new/dotnet-core-2-2.md). Les nouvelles fonctionnalités incluent : déploiements Framework indépendant, startup hooks, authentification AAD avec Azure SQL et support pour Windows d’ARM32.
 
 ## <a name="create-your-first-application"></a>Créer votre première application
 
