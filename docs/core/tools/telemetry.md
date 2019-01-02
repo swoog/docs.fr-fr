@@ -2,14 +2,14 @@
 title: Télémétrie du kit SDK .NET Core
 description: Découvrez les fonctionnalités de télémétrie du kit SDK .NET Core, qui collecte des informations d’utilisation à des fins d’analyse, les types de données collectées et comment désactiver la télémétrie.
 author: richlander
-ms.author: mairaw
 ms.date: 06/20/2018
-ms.openlocfilehash: c8c6688b7b29c7e65c723e1f1ff31b3bd4c8c1ff
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129140"
+ms.locfileid: "53168843"
 ---
 # <a name="net-core-sdk-telemetry"></a>Télémétrie du kit SDK .NET Core
 

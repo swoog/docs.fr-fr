@@ -2,13 +2,13 @@
 title: Glossaire Machine Learning - ML.NET
 description: La liste suivante est une compilation des principaux termes Machine Learning, utiles lorsque vous générez vos modèles personnalisés.
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150574"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53760391"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossaire Machine Learning des principaux termes
 
@@ -24,8 +24,6 @@ API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetri
 
 Dans la [classification binaire](#binary-classification), une métrique d’évaluation qui correspond à la valeur de la zone sous la courbe qui trace le taux de vrais positifs (sur l’axe des y) par rapport au taux de faux positifs (sur l’axe des x). Cette valeur est comprise entre 0,5 (pire) et 1 (meilleur). Également appelée zone sous la courbe ROC (Receiver Operating Characteristic). Pour plus d’informations, consultez l’article Wikipédia [Courbe ROC](https://en.wikipedia.org/wiki/Receiver_operating_characteristic).
 
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
-
 ## <a name="binary-classification"></a>Classification binaire
 
 Cas de [classification](#classification) où l’[étiquette](#label) provient uniquement d’une de deux classes. Pour plus d’informations, consultez la section [Classification binaire](tasks.md#binary-classification) de la rubrique [Tâches d’apprentissage automatique](tasks.md).
@@ -37,8 +35,6 @@ Lorsque les données sont utilisées pour prédire une catégorie, la tâche [Ap
 ## <a name="coefficient-of-determination"></a>Coefficient de détermination
 
 Dans une [régression](#regression), une métrique d’évaluation qui indique la manière dont les données s’intègrent à un modèle. Cette valeur est comprise entre 0 et 1. Une valeur de 0 signifie que les données sont aléatoires ou ne s’intègrent pas au modèle. Une valeur de 1 signifie que le modèle correspond exactement aux données. Cette valeur est souvent désignée sous le terme r<sup>2</sup>, R<sup>2</sup> ou R carré.
-
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Fonctionnalité
 
@@ -52,8 +48,6 @@ L’ingénierie de fonctionnalité est le processus qui consiste à définir un 
 
 Dans une [classification](#classification), une métrique d’évaluation qui équilibre [précision](#precision) et [rappel](#recall).
 
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
-
 ## <a name="hyperparameter"></a>Hyperparamètre
 
 Un paramètre d’un algorithme d’apprentissage automatique. Par exemple, le nombre d’arbres à assimiler dans une forêt décisionnelle ou la taille d’étape dans un algorithme de jambage descendant dégradé. Les valeurs des *hyperparamètres* sont définies avant l’apprentissage du modèle et régissent le processus de recherche des paramètres de la fonction de prédiction, par exemple, les points de comparaison dans un arbre de décision ou les pondérations dans un modèle de régression linéaire. Pour plus d’informations, consultez l’article Wikipédia [Hyperparamètre](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)).
@@ -66,13 +60,9 @@ L’élément à prédire avec le modèle d’apprentissage automatique. Par exe
 
 Dans une [classification](#classification), une métrique d’évaluation qui caractérise la précision d’un classifieur. Plus la perte du journal est faible, plus un classifieur est précis.
 
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
-
 ## <a name="mean-absolute-error-mae"></a>Erreur d'absolue moyenne
 
 Dans une [régression](#regression), une métrique d’évaluation qui représente la moyenne de toutes les erreurs du modèle, où l’erreur de modèle est la distance entre la valeur d’[étiquette](#label) prédite et la valeur d’étiquette correcte.
-
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Modèle
 
@@ -104,8 +94,6 @@ API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetri
 
 Dans une [classification](#classification), le rappel d’une classe correspond au nombre d’éléments correctement prévus comme appartenant à cette classe, divisé par le nombre total d’éléments appartenant effectivement à la classe.
 
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
-
 ## <a name="regression"></a>Régression
 
 Une tâche [Apprentissage automatique supervisé](#supervised-machine-learning) où la sortie est une valeur réelle, par exemple, double. Exemple : prédiction de cours d’actions. Pour plus d’informations, consultez la section [Régression](tasks.md#regression) de la rubrique [Tâches d’apprentissage automatique](tasks.md).
@@ -121,8 +109,6 @@ Dans une [régression](#regression), une métrique d’évaluation correspondant
 ## <a name="root-of-mean-squared-error-rmse"></a>Racine de l’erreur quadratique moyenne (RMSE)
 
 Dans une [régression](#regression), une métrique d’évaluation correspondant à la racine carrée de la moyenne des carrés des erreurs.
-
-API ML.NET connexe : <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Apprentissage automatique supervisé
 

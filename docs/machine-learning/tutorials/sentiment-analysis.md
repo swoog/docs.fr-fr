@@ -1,15 +1,15 @@
 ---
 title: Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 description: Découvrez comment utiliser ML.NET dans un scénario de classification binaire pour comprendre comment utiliser la prédiction de sentiment afin d’effectuer l’action appropriée.
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149651"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779137"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutoriel : Utiliser ML.NET dans un scénario de classification binaire d’une analyse de sentiments
 
@@ -122,7 +122,7 @@ Vous devez créer trois champs globaux pour contenir les chemins d’accès aux 
 * `_trainDataPath` contient le chemin d’accès au jeu de données utilisé pour l’apprentissage du modèle.
 * `_testDataPath` contient le chemin d’accès au jeu de données utilisé pour évaluer le modèle.
 * `_modelPath` contient le chemin d’accès où le modèle formé est enregistré.
-* `_reader` est l’élément <xref:Microsoft.ML.Runtime.Data.TextLoader> utilisé pour charger et transformer les jeux de données.
+* `_textLoader` est l’élément <xref:Microsoft.ML.Runtime.Data.TextLoader> utilisé pour charger et transformer les jeux de données.
 
 Ajoutez le code suivant à la ligne juste au-dessus de la méthode `Main` pour spécifier ces chemins et la variable `_textLoader` :
 
@@ -216,7 +216,7 @@ Ajoutez le code suivant à la méthode `Train` :
 
 ## <a name="train-the-model"></a>Effectuer l’apprentissage du modèle
 
-Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Runtime.Data.TransformerChain%601>, selon le jeu de données qui a été chargé et transformé. Une fois l’estimation définie, vous formez votre modèle à l’aide du <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> tout en fournissant les données d’apprentissage déjà chargées. Cette méthode retourne un modèle à utiliser pour les prédictions. `pipeline.Fit()` forme le pipeline et renvoie un `Transformer` selon l’élément `DataView` transmis. L’expérience n’est pas exécutée tant que cette opération n’a pas été effectuée.
+Vous effectuez l’apprentissage du modèle, <xref:Microsoft.ML.Data.TransformerChain%601>, selon le jeu de données qui a été chargé et transformé. Une fois l’estimation définie, vous formez votre modèle à l’aide du <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A> tout en fournissant les données d’apprentissage déjà chargées. Cette méthode retourne un modèle à utiliser pour les prédictions. `pipeline.Fit()` forme le pipeline et renvoie un `Transformer` selon l’élément `DataView` transmis. L’expérience n’est pas exécutée tant que cette opération n’a pas été effectuée.
 
 Ajoutez le code suivant à la méthode `Train` :
 

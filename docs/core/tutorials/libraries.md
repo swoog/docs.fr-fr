@@ -2,15 +2,14 @@
 title: Développement de bibliothèques avec des outils multiplateformes
 description: Découvrez comment créer des bibliothèques .NET Core à l’aide des outils de l’interface de ligne de commande .NET Core. Vous allez créer une bibliothèque prenant en charge plusieurs frameworks.
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f93c39d6225eef180634b238414fcda99750189f
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148533"
+ms.locfileid: "53169363"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Développement de bibliothèques avec des outils multiplateformes
 
