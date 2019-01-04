@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542013"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029838"
 ---
 # <a name="annotations-schema"></a>Schéma d'annotations
 Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée par Microsoft Annotations Framework pour enregistrer et récupérer les données d’annotation de l’utilisateur.  
@@ -24,7 +24,7 @@ Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée
   
 -   le schéma de base XML des annotations (schéma de base).  
   
- Le schéma principal définit la structure XML primaire d’une <xref:System.Windows.Annotations.Annotation>.  La plupart des éléments XML définis dans le schéma principal correspondent aux types dans les <xref:System.Windows.Annotations> espace de noms.  Le schéma principal expose trois points d’extension qui permettent aux applications d’ajouter leurs propres données XML.  Ces points d’extension incluent le <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>et « Content ».  (Contenu d’éléments sont fournis sous la forme d’un <xref:System.Xml.XmlElement> liste.)  
+ Le schéma principal définit la structure XML primaire d’une <xref:System.Windows.Annotations.Annotation>.  La majorité des éléments XML définis dans le schéma principal correspondent aux types dans le <xref:System.Windows.Annotations> espace de noms.  Le schéma principal expose trois points d’extension qui permettent aux applications d’ajouter leurs propres données XML.  Ces points d’extension incluent le <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>et « Contenu ».  (Contenu d’éléments sont fournis sous la forme d’un <xref:System.Xml.XmlElement> liste.)  
   
  Le schéma de Base décrites dans cette rubrique définit les extensions pour le <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>et les types de contenu inclus avec la version initiale de Windows Presentation Foundation (WPF).  
   
@@ -429,11 +429,11 @@ Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ Cette rubrique décrit la définition XSD (définition de schéma XML) utilisée
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Exemple de code XML créé par des annotations XmlStreamStore  
- Le code XML suivant montre la sortie d’une annotation <xref:System.Windows.Annotations.Storage.XmlStreamStore> et l’organisation d’un exemple de fichier qui contient trois annotations - une surbrillance-pense-bête de texte et une remarque du bâton d’encre.  
+ Le code XML suivant montre la sortie d’une annotation <xref:System.Windows.Annotations.Storage.XmlStreamStore> et l’organisation d’un exemple de fichier qui contient trois annotations - une surbrillance, un pense-bête et un pense-bête manuscrit.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

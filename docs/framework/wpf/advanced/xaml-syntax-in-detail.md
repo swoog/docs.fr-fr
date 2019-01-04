@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485727"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030293"
 ---
 # <a name="xaml-syntax-in-detail"></a>Syntaxe XAML en détail
 Cette rubrique définit les termes qui sont utilisés pour décrire les éléments de syntaxe XAML. Ces termes sont utilisés fréquemment dans le reste de cette documentation, à la fois pour la documentation WPF spécifiquement et pour les autres infrastructures qui utilisent XAML ou les concepts XAML de base activées par la prise en charge du langage XAML au niveau de System.Xaml. Cette rubrique s’appuie sur la terminologie de base introduite dans la rubrique [vue d’ensemble de XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -288,7 +288,7 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>Utilisations XAML facultatives et non recommandées  
- Les sections suivantes décrivent les utilisations XAML techniquement prises en charge par les processeurs XAML, mais qui produisent des commentaires ou autres problèmes esthétiques qui interfèrent avec les fichiers XAML restant contrôlable de visu lorsque votre développement d’applications qui contiennent des sources de XAML .  
+ Les sections suivantes décrivent les utilisations XAML techniquement prises en charge par les processeurs XAML, mais qui produisent des commentaires ou autres problèmes esthétiques qui interfèrent avec les fichiers XAML restant contrôlable de visu lorsque vous développez des applications qui contiennent des sources de XAML.  
   
 ### <a name="optional-property-element-usages"></a>Utilisations des éléments de propriété facultative  
  Utilisations des éléments de propriété facultative incluent écrire explicitement les propriétés de contenu d’élément que le processeur XAML considère comme implicite. Par exemple, lorsque vous déclarez le contenu d’un <xref:System.Windows.Controls.Menu>, vous pouvez choisir de déclarer explicitement le <xref:System.Windows.Controls.ItemsControl.Items%2A> collection de la <xref:System.Windows.Controls.Menu> en tant qu’un `<Menu.Items>` balise d’élément de propriété et place chaque <xref:System.Windows.Controls.MenuItem> dans `<Menu.Items>`, au lieu de cela à l’aide du comportement du processeur XAML implicit qui tous les éléments enfants d’un <xref:System.Windows.Controls.Menu> doit être un <xref:System.Windows.Controls.MenuItem> et sont placés dans le <xref:System.Windows.Controls.ItemsControl.Items%2A> collection. Les utilisations facultatives peuvent parfois aider à clarifier visuellement la structure d’objet, comme représenté dans le balisage. Ou, parfois, une utilisation d’élément de propriété explicite peut éviter de balisage est techniquement fonctionnel mais visuellement prêtent à confusion, telles que les extensions de balisage imbriquées au sein d’une valeur d’attribut.  
@@ -317,7 +317,7 @@ Cette rubrique définit les termes qui sont utilisés pour décrire les élémen
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble du langage XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Fonctionnalités de langage pour les espaces de noms XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [XAML Namespace (x :)) Fonctionnalités de langage](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Extensions XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Vue d’ensemble des propriétés de dépendance](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters et XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873717"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030527"
 ---
 # <a name="data-contract-schema-reference"></a>Référence des schémas de contrats de données
 Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:System.Runtime.Serialization.DataContractSerializer> pour décrire les types CLR (Common Language Run-time) pour la sérialisation XML.  
@@ -202,7 +202,7 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
   
  \* Lorsque vous utilisez le `simpleType` et `complexType,` mappage pour les types anonymes est le même que pour les types non anonymes, à ceci près qu’il n’existe aucun contrat de données anonymes, et donc un contrat de données nommé est créé, avec un nom généré dérivé du nom de l’élément. Les règles pour les types anonymes sont les suivantes :  
   
--   Détail d’implémentation WCF : si le `xs:element` nom ne contient pas de périodes, le type anonyme mappe à un type interne du type de contrat de données externe. Si le nom contient des points, le type de contrat de données résultant est indépendant (n'est pas un type interne).  
+-   Détail d’implémentation de WCF : Si le `xs:element` nom ne contient pas de périodes, le type anonyme mappe à un type interne du type de contrat de données externe. Si le nom contient des points, le type de contrat de données résultant est indépendant (n'est pas un type interne).  
   
 -   Le nom de contrat de données généré du type interne est le nom de contrat de données du type externe suivi par un point, le nom de l'élément et la chaîne "Type".  
   
@@ -290,15 +290,14 @@ Cette rubrique décrit le sous-ensemble du schéma XML (XSD) utilisé par <xref:
   
  Le code suivant montre une classe d'énumération C#.  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  Cette classe mappe au schéma suivant par `DataContractSerializer`. Si les valeurs d'énumération démarrent à partir de 1, les blocs `xs:annotation` ne sont pas générés.  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  Par exemple, le code suivant marque un type énumération.  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  Le code ci-dessous montre un exemple de contrat de données.  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>Importation de schémas qui ne sont pas DataContract  
  `DataContractSerializer` dispose de l'option `ImportXmlTypes` pour autoriser l'importation des schémas non conformes au profil XSD `DataContractSerializer` (consultez la propriété <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> ). Affecter à cette option la valeur `true` active l'acceptation des types de schémas non conformes et les mappe à l'implémentation suivante, <xref:System.Xml.Serialization.IXmlSerializable> qui encapsule un tableau de <xref:System.Xml.XmlNode> (seul le nom de la classe diffère).  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  

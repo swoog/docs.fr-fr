@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198080"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030566"
 ---
 # <a name="auditing-security-events"></a>Audit des événements de sécurité
 Les applications créées avec Windows Communication Foundation (WCF) peuvent enregistrer des événements de sécurité (réussite, échec ou les deux) avec la fonctionnalité d’audit. Les événements sont écrits dans le journal des événements système Windows et peuvent être examinés à l'aide de l'Observateur d'événements.  
@@ -28,7 +28,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
  Vous pouvez vérifier les deux niveaux d’audit pour réussite ou l’échec, ce qui est appelé le *audit comportement*.  
   
 ## <a name="audit-log-location"></a>Emplacement du journal d'audit  
- Après avoir déterminé un niveau et un comportement d'audit, vous (ou un administrateur) pouvez spécifier l'emplacement du journal d'audit. Vous disposez pour cela de trois options : Default, Application et Security. Lorsque vous spécifiez Default, le journal réel dépend du système que vous utilisez et du fait que celui-ci prend ou non en charge l'écriture dans le journal Security. Pour plus d’informations, consultez la section « Système d’exploitation » plus loin dans cette rubrique.  
+ Après avoir déterminé un niveau et un comportement d'audit, vous (ou un administrateur) pouvez spécifier l'emplacement du journal d'audit. Les trois choix sont les suivants : Par défaut, Application et sécurité. Lorsque vous spécifiez Default, le journal réel dépend du système que vous utilisez et du fait que celui-ci prend ou non en charge l'écriture dans le journal Security. Pour plus d’informations, consultez la section « Système d’exploitation » plus loin dans cette rubrique.  
   
  L'écriture dans le journal Security requiert le privilège `SeAuditPrivilege`. Par défaut, seuls les comptes Système local et Service réseau possèdent ce privilège. La gestion des fonctions du journal Security `read` et `delete` requièrent le privilège `SeSecurityPrivilege`. Par défaut, seuls les administrateurs possèdent ce privilège.  
   
@@ -51,7 +51,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Spécifie les types d'événements d'autorisation de service audités au niveau du service. Les options disponibles sont `None`, `Failure`, `Success` et `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Spécifie ce que devient demande du client en cas d'échec de l'audit. Par exemple, lorsque le service tente d'écrire dans le journal Security, mais n'a pas `SeAuditPrivilege`. La valeur par défaut `true` indique que les échecs sont ignorés et que la demande du client est traitée normalement.|  
   
- Pour obtenir un exemple de la configuration d’une application pour enregistrer les événements d’audit, consultez [Comment : auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Pour obtenir un exemple de la configuration d’une application pour enregistrer les événements d’audit, consultez [Comment : Auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Configuration  
  Vous pouvez également utiliser la configuration pour spécifier le comportement d’audit en ajoutant un [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) sous le [ \<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Vous devez ajouter l’élément sous un [ \<comportement >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) comme indiqué dans le code suivant.  
@@ -61,7 +61,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  
@@ -103,7 +103,7 @@ Les applications créées avec Windows Communication Foundation (WCF) peuvent en
  <xref:System.ServiceModel.AuditLogLocation>  
  [Vue d’ensemble de la sécurité](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Programmation WCF de base](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Guide pratique pour auditer des événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
+ [Guide pratique pour Auditer les événements de sécurité](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)  
  [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)  
  [\<comportements >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)  
  [Modèle de sécurité pour Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

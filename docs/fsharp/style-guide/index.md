@@ -2,12 +2,12 @@
 title: F#guide de style
 description: Découvrez les principes de cinq bonne F# code.
 ms.date: 12/10/2018
-ms.openlocfilehash: 7718df596bde9004fb9ba6143146f1f475d25683
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9f47257626e04b09b546de2ae315d48d791678be
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168953"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030267"
 ---
 # <a name="f-style-guide"></a>F#guide de style
 
@@ -21,7 +21,7 @@ Gardez les principes suivants à l’esprit lorsque vous entrez F# code, en part
 
 1. **Bonne F# code est succinct, expressif et composable**
 
-    F#possède de nombreuses fonctionnalités qui vous permettent d’exprimer des actions dans moins de lignes de code et de réutiliser les fonctionnalités génériques. Le F# bibliothèque principale contient également de nombreux types utiles et des fonctions pour travailler avec des collections de données courantes. Composition de vos propres fonctions et de celles figurant dans le F# bibliothèque principale (ou autres bibliothèques) fait partie de la routine IDIOMATIQUE F# de programmation. En règle générale, si une solution à un problème dans moins de lignes de code, vous pouvez exprimer des autres développeurs (ou votre self futures) sera développeurs. Il est également recommandé que vous utilisez une bibliothèque de FSharp.Core, le [des bibliothèques .NET vastes](https://docs.microsoft.com/dotnet/api/) qui F# s’exécute, ou un package tiers sur [NuGet](https://www.nuget.org/) lorsque vous avez besoin effectuer une tâche non triviale.
+    F#possède de nombreuses fonctionnalités qui vous permettent d’exprimer des actions dans moins de lignes de code et de réutiliser les fonctionnalités génériques. Le F# bibliothèque principale contient également de nombreux types utiles et des fonctions pour travailler avec des collections de données courantes. Composition de vos propres fonctions et de celles figurant dans le F# bibliothèque principale (ou autres bibliothèques) fait partie de la routine IDIOMATIQUE F# de programmation. En règle générale, si une solution à un problème dans moins de lignes de code, vous pouvez exprimer des autres développeurs (ou votre self futures) sera développeurs. Il est également recommandé que vous utilisez une bibliothèque de FSharp.Core, le [des bibliothèques .NET vastes](../../../api/index.md) qui F# s’exécute, ou un package tiers sur [NuGet](https://www.nuget.org/) lorsque vous avez besoin effectuer une tâche non triviale.
 
 2. **Bonne F# code est interopérable**
 
