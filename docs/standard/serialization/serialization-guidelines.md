@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742485"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058592"
 ---
 # <a name="serialization-guidelines"></a>Indications concernant la sérialisation
 Ce document répertorie les indications à prendre en compte lors de la conception d'une API à sérialiser.  
@@ -99,7 +99,7 @@ Ce document répertorie les indications à prendre en compte lors de la concepti
   
 1.  ÉVITEZ de concevoir vos types spécifiquement pour la sérialisation XML, sauf si vous avez une bonne raison de contrôler la forme du XML généré. Cette technologie de sérialisation a été remplacée par la sérialisation du contrat de données présentée dans la section précédente.  
   
-     En d'autres termes, n'appliquez pas d'attributs de l'espace de noms <xref:System.Runtime.Serialization> aux nouveaux types, sauf si vous savez que le type doit être utilisé avec la sérialisation XML. L’exemple suivant montre comment utiliser **System.Xml.Serialization** pour contrôler la forme du XML généré.  
+     En d'autres termes, n'appliquez pas d'attributs de l'espace de noms <xref:System.Xml.Serialization> aux nouveaux types, sauf si vous savez que le type doit être utilisé avec la sérialisation XML. L’exemple suivant montre comment utiliser **System.Xml.Serialization** pour contrôler la forme du XML généré.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
