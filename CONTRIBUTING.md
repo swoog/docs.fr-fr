@@ -27,7 +27,7 @@ Vous devez avoir une connaissance élémentaire de [Git et GitHub.com](https://g
 **Étape 1 :** ignorez cette étape pour les modifications mineures. Si vous souhaitez écrire un nouveau contenu ou examiner en détail un contenu existant, ouvrez un [problème](https://github.com/dotnet/docs/issues) en décrivant ce que vous voulez faire.
 Le contenu situé dans le dossier **docs** est organisé en sections que l’on retrouve dans la table des matières. Définissez l’emplacement de la rubrique dans la table des matières. Obtenez des commentaires sur votre proposition.
 
-ou
+- ou -
 
 Vous pouvez également choisir des problèmes existants pour lesquels les contributions de la communauté sont les bienvenus. [Projets pour les contributeurs de la communauté .NET](https://github.com/dotnet/docs/projects/35) répertorie la plupart des éléments de travail disponibles aux contributeurs de la communauté. Selon vos centres d’intérêt et votre niveau de participation, vous pouvez choisir des problèmes dans les catégories suivantes :
 
@@ -39,7 +39,7 @@ Vous pouvez également choisir des problèmes existants pour lesquels les contri
 
 Vous pouvez également consulter la liste de nos [problèmes ouverts](https://github.com/dotnet/docs/issues) et vous porter volontaire pour travailler sur ceux qui vous intéressent. Nous utilisons l’étiquette [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) pour signaler les problèmes auxquels vous pouvez apporter votre contribution. 
 
-**Étape 2 :** dupliquez les référentiels `/dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` si nécessaire et créez une branche pour vos modifications.
+**Étape 2 :** dupliquez les référentiels `dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` si nécessaire et créez une branche pour vos modifications.
 
 Pour les modifications mineures, vous pouvez utiliser l’interface web de GitHub. Cliquez simplement sur le bouton **Edit the file in your fork of this project** (Modifier le fichier dans la branche de ce projet) du fichier que vous souhaitez modifier. GitHub crée la nouvelle branche lorsque vous envoyez les modifications.
 
@@ -101,7 +101,7 @@ En outre, tous les échantillons dans les dossiers *core* et *standard* doivent 
 Nous pourrons élargir ces répertoires à mesure que le référentiel docs ajoute du nouveau contenu. Par exemple, nous ajouterons des répertoires Xamarin comme `xamarin-ios` et `xamarin-android`.
 
 Chaque échantillon complet que vous créez doit contenir un fichier *readme.md*. Ce fichier doit contenir une brève description de l’échantillon (un ou deux paragraphes). Votre fichier *readme.md* doit indiquer aux lecteurs ce qu’ils vont apprendre en explorant cet échantillon. Le fichier *readme.md* doit également contenir un lien vers le document en direct sur le [site de documentation .NET](https://docs.microsoft.com/dotnet/welcome).
-Pour déterminer si un fichier donné du référentiel pointe vers ce site, remplacez `/docs` par `http://docs.microsoft.com/dotnet/articles` dans le chemin d’accès du référentiel.
+Pour déterminer si un fichier donné du référentiel pointe vers ce site, remplacez `/docs` par `https://docs.microsoft.com/dotnet` dans le chemin d’accès du référentiel.
 
 Votre rubrique contiendra également des liens vers l’échantillon. Établissez un lien direct vers le dossier de l’échantillon sur GitHub.
 

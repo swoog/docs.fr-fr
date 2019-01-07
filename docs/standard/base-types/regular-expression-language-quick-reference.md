@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779384"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030397"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "53779384"
 |`${` *name* `}`|Remplace la sous-chaîne mise en correspondance par le groupe nommé *nom*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"un deux"|"deux un"|  
 |`$$`|Remplace un "$" littéral.|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Remplace une copie de la totalité de la correspondance.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Remplace tout le texte de la chaîne d'entrée avant la correspondance.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|Remplace tout le texte de la chaîne d'entrée avant la correspondance.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|Remplace tout le texte de la chaîne d'entrée après la correspondance.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|Remplace le dernier groupe qui a été capturé.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Remplace la chaîne d'entrée entière.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
