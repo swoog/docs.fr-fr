@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20050bee696f9d47324f1b095b0b3c1120f78255
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 51e22407bd20cc6aa17b242948a83d698167590e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087328"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030152"
 ---
 # <a name="substitutions-in-regular-expressions"></a>Substitutions dans les expressions régulières
-<a name="Top"></a> Les substitutions sont des éléments de langage reconnus uniquement dans des modèles de remplacement. Elles utilisent un modèle d'expression régulière pour définir tout ou partie du texte qui doit remplacer le texte correspondant dans la chaîne d'entrée. Le modèle de remplacement peut se composer d'une ou plusieurs substitutions avec des caractères littéraux. Les modèles de remplacement sont fournis aux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> qui a un paramètre `replacement` et à la méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType>. Les méthodes remplacent le modèle correspondant par le modèle défini par le paramètre `replacement` .  
+<a name="Top"></a> Les substitutions sont des éléments de langage reconnus uniquement dans des modèles de remplacement. Elles utilisent un modèle d'expression régulière pour définir tout ou partie du texte qui doit remplacer le texte correspondant dans la chaîne d'entrée. Le modèle de remplacement peut se composer d'une ou plusieurs substitutions avec des caractères littéraux. Les modèles de remplacement sont fournis aux surcharges de la méthode <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> qui a un paramètre `replacement` et à la méthode <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> . Les méthodes remplacent le modèle correspondant par le modèle défini par le paramètre `replacement` .  
   
  Le .NET Framework définit les éléments de substitution répertoriés dans le tableau suivant.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "47087328"
 |`${` *name* `}`|Inclut la dernière sous-chaîne correspondant au groupe nommé désigné par `(?<`*nom*`> )` dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution d'un groupe nommé](#Named).|  
 |`$$`|Inclut un littéral « $ » unique dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution d'un symbole « $ »](#DollarSign).|  
 |`$&`|Inclut une copie de la correspondance entière dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution de la correspondance entière](#EntireMatch).|  
-|<code>$\`</code>|Inclut tout le texte de la chaîne d'entrée avant la correspondance dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution du texte avant la correspondance](#BeforeMatch).|  
+|``$` ``|Inclut tout le texte de la chaîne d'entrée avant la correspondance dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution du texte avant la correspondance](#BeforeMatch).|  
 |`$'`|Inclut tout le texte de la chaîne d'entrée après la correspondance dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution du texte après la correspondance](#AfterMatch).|  
 |`$+`|Inclut le dernier groupe capturé dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution du dernier groupe capturé](#LastGroup).|  
 |`$_`|Inclut la chaîne d'entrée entière dans la chaîne de remplacement. Pour plus d'informations, consultez [Substitution de la chaîne d'entrée entière](#EntireString).|  
@@ -142,14 +142,14 @@ ms.locfileid: "47087328"
   
 <a name="BeforeMatch"></a>   
 ## <a name="substituting-the-text-before-the-match"></a>Substitution du texte avant la correspondance  
- La substitution <code>$\`</code> remplace la chaîne correspondante par la chaîne d'entrée entière avant la correspondance. Autrement dit, elle duplique la chaîne d'entrée jusqu'à la correspondance en supprimant le texte correspondant. N'importe quel texte qui suit le texte correspondant est inchangé dans la chaîne de résultat. S'il existe plusieurs correspondances dans une chaîne d'entrée, le texte de remplacement est dérivé de la chaîne d'entrée d'origine, plutôt que de la chaîne dans laquelle le texte a été remplacé par des correspondances précédentes. \(Cet exemple en fournit une illustration.\) S'il n'y a pas de correspondance, la substitution <code>$\`</code> n'a aucun effet.  
+ La substitution ``$` `` remplace la chaîne correspondante par la chaîne d'entrée entière avant la correspondance. Autrement dit, elle duplique la chaîne d'entrée jusqu'à la correspondance en supprimant le texte correspondant. N'importe quel texte qui suit le texte correspondant est inchangé dans la chaîne de résultat. S'il existe plusieurs correspondances dans une chaîne d'entrée, le texte de remplacement est dérivé de la chaîne d'entrée d'origine, plutôt que de la chaîne dans laquelle le texte a été remplacé par des correspondances précédentes. \(Cet exemple en fournit une illustration.\) S'il n'y a pas de correspondance, la substitution ``$` `` n'a aucun effet.  
   
- L'exemple suivant utilise le modèle d'expression régulière `\d+` pour faire correspondre une séquence d'un ou de plusieurs chiffres décimaux dans la chaîne d'entrée. La chaîne de remplacement <code>$`</code> remplace ces chiffres par le texte qui précède la correspondance.  
+ L'exemple suivant utilise le modèle d'expression régulière `\d+` pour faire correspondre une séquence d'un ou de plusieurs chiffres décimaux dans la chaîne d'entrée. La chaîne de remplacement ``$` `` remplace ces chiffres par le texte qui précède la correspondance.  
   
  [!code-csharp[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.substitutions/cs/before1.cs#4)]
  [!code-vb[Conceptual.Regex.Language.Substitutions#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.substitutions/vb/before1.vb#4)]  
   
- Dans cet exemple, la chaîne d'entrée `"aa1bb2cc3dd4ee5"` contient cinq correspondances. Le tableau suivant illustre comment la substitution <code>$`</code> entraîne le remplacement de chaque correspondance dans la chaîne d'entrée par le moteur des expressions régulières. Le texte inséré est affiché en gras dans la colonne de résultats.  
+ Dans cet exemple, la chaîne d'entrée `"aa1bb2cc3dd4ee5"` contient cinq correspondances. Le tableau suivant illustre comment la substitution ``$` `` entraîne le remplacement de chaque correspondance dans la chaîne d'entrée par le moteur des expressions régulières. Le texte inséré est affiché en gras dans la colonne de résultats.  
   
 |Faire correspondre à|Position|Chaîne avant la correspondance|Chaîne de résultat|  
 |-----------|--------------|-------------------------|-------------------|  

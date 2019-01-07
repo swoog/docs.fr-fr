@@ -4,12 +4,12 @@ description: Architecture de microservices .NET pour les applications .NET conte
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 31f4807c956a8b4fb9381145f8e9b5eaffafe698
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 72a3e7ef8043e0016cefb45a4182b5c2e3061753
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149495"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029708"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>Utiliser des classes d’énumération à la place de types enum
 
@@ -17,7 +17,7 @@ Les [énumérations](../../../../docs/csharp/language-reference/keywords/enum.md
 
 À la place, vous pouvez créer des classes d’énumération qui activent toutes les fonctionnalités avancées d’un langage orienté objet.
 
-Toutefois, ce n’est pas un sujet très important et, dans de nombreux cas, vous pouvez toujours simplifier en utilisant des [types enum](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/enum) standard, si vous préférez. En fait, l’utilisation des classes d’énumération est davantage liée à des concepts métier.
+Toutefois, ce n’est pas un sujet très important et, dans de nombreux cas, vous pouvez toujours simplifier en utilisant des [types enum](../../../csharp/language-reference/keywords/enum.md) standard, si vous préférez. En fait, l’utilisation des classes d’énumération est davantage liée à des concepts métier.
 
 ## <a name="implement-an-enumeration-base-class"></a>Implémenter une classe d’énumération de base
 

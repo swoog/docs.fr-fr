@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185847"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029870"
 ---
 # <a name="net-class-library-overview"></a>Présentation des bibliothèques de classes .NET
 
@@ -113,5 +113,5 @@ Les implémentations .NET incluent des classes, des interfaces, des délégués 
 ## <a name="see-also"></a>Voir aussi
 
 - [Système de type commun](../../docs/standard/base-types/common-type-system.md)  
-- [Navigateur d’API .NET](https://docs.microsoft.com/dotnet/api)  
+- [Navigateur d’API .NET](../../api/index.md)  
 - [Vue d’ensemble](../../docs/framework/get-started/overview.md)
