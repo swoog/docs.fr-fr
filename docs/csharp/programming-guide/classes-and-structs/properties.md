@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: ec34d6f49a538ac106196c342a7ff0f9dad8b6d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: c37a273b4091d98ccc202f7d98859333658ccf7f
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242774"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451207"
 ---
 # <a name="properties-c-programming-guide"></a>Propriétés (Guide de programmation C#)
 
@@ -34,7 +34,7 @@ Une propriété est un membre qui fournit un mécanisme flexible pour la lecture
 
 Un modèle de base pour l’implémentation d’une propriété consiste à utiliser un champ de stockage privé pour définir et extraire la valeur de propriété. L’accesseur `get` retourne la valeur du champ privé et l’accesseur `set` peut effectuer une validation des données avant d’assigner une valeur au champ privé. Les deux accesseurs peuvent également effectuer des opérations de conversion ou de calcul sur les données avant de stocker ou retourner les données.
 
-L’exemple suivant illustre ce modèle. Dans cet exemple, la classe `TimePeriod` représente un intervalle de temps. La classe stocke l’intervalle de temps en secondes, en interne, dans un champ privé nommé `seconds`. L’utilisateur peut éventuellement spécifier l’intervalle de temps en heures à l’aide de la propriété en lecture-écriture `Hours`. Les deux accesseurs de propriété `get` et `set` effectuent ensuite la conversion nécessaire des heures en secondes. De plus, l’accesseur `set` valide les données et lève une exception <xref:System.ArgumentOutOfRangeException> si le nombre d’heures n’est pas valide. 
+L’exemple suivant illustre ce modèle. Dans cet exemple, la classe `TimePeriod` représente un intervalle de temps. La classe stocke l’intervalle de temps en secondes, en interne, dans un champ privé nommé `_seconds`. L’utilisateur peut éventuellement spécifier l’intervalle de temps en heures à l’aide de la propriété en lecture-écriture `Hours`. Les deux accesseurs de propriété `get` et `set` effectuent ensuite la conversion nécessaire des heures en secondes. De plus, l’accesseur `set` valide les données et lève une exception <xref:System.ArgumentOutOfRangeException> si le nombre d’heures n’est pas valide. 
    
  [!code-csharp[Properties#1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-1.cs)]  
   

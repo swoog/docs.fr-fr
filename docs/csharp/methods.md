@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cb47d1c7eecebca42a65557b61d782a76266c2f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127444"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030176"
 ---
 # <a name="methods"></a>Méthodes #
 
@@ -197,10 +197,7 @@ Vous voulez parfois que votre méthode retourne plusieurs valeurs. À compter de
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +205,7 @@ L’appelant peut alors consommer le tuple retourné avec du code comme celui-ci
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 Vous pouvez aussi affecter des noms aux éléments du tuple dans la définition du type tuple. L’exemple suivant montre une autre version de la méthode `GetPersonalInfo` qui utilise des éléments nommés :
@@ -218,10 +214,7 @@ Vous pouvez aussi affecter des noms aux éléments du tuple dans la définition 
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,8 +222,7 @@ L’appel précédent de la méthode `GetPersonInfo` peut alors être modifié c
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Si un tableau est passé comme argument à une méthode et que celle-ci modifie la valeur d’éléments individuels, il n’est pas nécessaire que la méthode retourne le tableau, même si vous pouvez choisir de le faire pour la qualité du style ou pour obtenir un flux fonctionnel de valeurs.  La raison en est que C# passe tous les types référence par valeur et que la valeur d’une référence de tableau est le pointeur vers ce tableau. Dans l’exemple suivant, les modifications apportées au contenu du tableau `values` qui sont effectuées dans la méthode `DoubleValues` sont observables par tout code ayant une référence au tableau.

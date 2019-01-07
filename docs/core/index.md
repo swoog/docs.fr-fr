@@ -4,14 +4,13 @@ description: .NET Core est une implémentation modulaire à hautes performances 
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170262"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030280"
 ---
-
 # <a name="net-core-guide"></a>Guide .NET Core
 
 [.NET Core](about.md) est une plateforme de développement généraliste [open source](https://github.com/dotnet/coreclr/blob/master/LICENSE.TXT) qui est tenue à jour par Microsoft et la communauté .NET sur [GitHub](https://github.com/dotnet/core). Cette multiplateforme prend en charge Windows, macOS et Linux. Elle permet de générer des applications destinées à des appareils, au cloud et à l’Internet des objets.
@@ -22,13 +21,13 @@ Consultez les [Tutoriels .NET Core](tutorials/index.md) pour apprendre à créer
 
 ## <a name="download-net-core-22"></a>Télécharger .NET Core 2.2
 
-Téléchargez le [SDK .NET Core 2.2](https://www.microsoft.com/net/download) pour tester .NET Core sur votre ordinateur Windows, macOS ou Linux. Visitez [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) si vous préférez utiliser des conteneurs Docker.
+Téléchargez le kit [SDK .NET Core 2.2](https://www.microsoft.com/net/download) pour tester .NET Core sur votre ordinateur Windows, macOS ou Linux. Visitez [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) si vous préférez utiliser des conteneurs Docker.
 
 Toutes les versions de .NET Core sont disponibles sur [Téléchargements de .NET Core](https://www.microsoft.com/net/download/archives) si vous recherchez une autre version de .NET Core.
 
 ## <a name="net-core-22"></a>.NET Core 2.2
 
-La version la plus récente est [.NET Core 2.2](whats-new/dotnet-core-2-2.md). Les nouvelles fonctionnalités incluent : déploiements Framework indépendant, startup hooks, authentification AAD avec Azure SQL et support pour Windows d’ARM32.
+La dernière version est [.NET Core 2.2](whats-new/dotnet-core-2-2.md). Nouvelles fonctionnalités : déploiements dépendants du framework, hooks de démarrage, authentification AAD avec Azure SQL et prise en charge de Windows ARM32.
 
 ## <a name="create-your-first-application"></a>Créer votre première application
 

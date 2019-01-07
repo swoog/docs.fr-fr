@@ -11,22 +11,102 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: Collections en C#
-  ms.openlocfilehash: c8f93bd922b1003aafd50d5e95d92bcb492106c1
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: c5d9ba80df952a58740ac2557bfc0011ef2ea539
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53149209"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54030410"
 items:
 - durationInMinutes: 2
   content: >
     Ce tutoriel explique comment utiliser [l’interpolation de chaîne](../../language-reference/tokens/interpolated.md) pour insérer des valeurs dans une chaîne unique. Vous allez également apprendre à contrôler la mise en forme du texte de la chaîne de résultat. En utilisant votre navigateur pour écrire et exécuter du code C#, vous voyez instantanément les résultats.
 - title: Créer une chaîne interpolée
   durationInMinutes: 2
-  content: "Exécutez le code suivant dans la fenêtre interactive. Pour cela, tapez le code dans la fenêtre interactive (remplacez `<name>` par votre nom) et sélectionnez **Exécuter** :\n\n```csharp\nvar name = \"<name>\";\nConsole.WriteLine($\"Hello, {name}. It's a pleasure to meet you!\");\n```\n\nQuand vous exécutez le code, la fenêtre **Sortie** affiche une chaîne qui inclut votre nom dans le message d’accueil. L’argument chaîne dans l’appel de la méthode <xref:System.Console.WriteLine%2A> est une *chaîne interpolée*. C’est un genre de modèle qui vous permet de construire une chaîne unique (appelée *chaîne de résultat*) à partir d’une chaîne qui comprend du code incorporé. Les chaînes interpolées sont particulièrement utiles pour insérer des valeurs dans une chaîne ou pour concaténer (joindre) plusieurs chaînes. \n\nL’exemple ci-dessus contient les deux éléments que chaque chaîne interpolée doit avoir : \n\n- Un littéral de chaîne qui commence par le caractère `$` avant ses guillemets ouvrants. Il ne peut pas y avoir d’espace entre le symbole `$` et les guillemets. (Si vous voulez voir ce qui se passe si vous en incluez un, insérez un espace après le caractère `$` dans la fenêtre interactive et exécutez le code modifié. Le compilateur C# affiche un message d’erreur : « Caractère inattendu '$' ».) \n\n- Une ou plusieurs *expressions interpolées*. Une expression interpolée est indiquée par des accolades ouvrantes et fermantes (`{` et `}`). Vous pouvez placer n’importe quelle expression C# qui retourne une valeur (notamment `null`) à l’intérieur des accolades. \n\nEssayons quelques autres exemples d’interpolation de chaîne avec d’autres types de données.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Exécutez le code suivant dans la fenêtre interactive. Pour cela, tapez le code dans la fenêtre interactive (remplacez `<name>` par votre nom) et sélectionnez **Exécuter** :
+
+
+    ```csharp
+
+    var name = "<name>";
+
+    Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
+
+    ```
+
+
+    Quand vous exécutez le code, la fenêtre **Sortie** affiche une chaîne qui inclut votre nom dans le message d’accueil. L’argument chaîne dans l’appel de la méthode <xref:System.Console.WriteLine%2A> est une *chaîne interpolée*. C’est un genre de modèle qui vous permet de construire une chaîne unique (appelée *chaîne de résultat*) à partir d’une chaîne qui comprend du code incorporé. Les chaînes interpolées sont particulièrement utiles pour insérer des valeurs dans une chaîne ou pour concaténer (joindre) plusieurs chaînes.
+
+
+    L’exemple ci-dessus contient les deux éléments que chaque chaîne interpolée doit avoir :
+
+
+    - Un littéral de chaîne qui commence par le caractère `$` avant ses guillemets ouvrants. Il ne peut pas y avoir d’espace entre le symbole `$` et les guillemets. (Si vous voulez voir ce qui se passe si vous en incluez un, insérez un espace après le caractère `$` dans la fenêtre interactive et exécutez le code modifié. Le compilateur C# affiche un message d’erreur : « Caractère inattendu '$' ».)
+
+
+    - Une ou plusieurs *expressions interpolées*. Une expression interpolée est indiquée par des accolades ouvrantes et fermantes (`{` et `}`). Vous pouvez placer n’importe quelle expression C# qui retourne une valeur (notamment `null`) à l’intérieur des accolades.
+
+
+    Essayons quelques autres exemples d’interpolation de chaîne avec d’autres types de données.
+
+
+    > [!NOTE]
+
+    > Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).
 - title: Inclure différents types de données
   durationInMinutes: 5
-  content: "À l’étape précédente, vous avez utilisé l’interpolation de chaîne pour insérer une chaîne à l’intérieur d’une autre. Le résultat d’une expression interpolée peut toutefois être de n’importe quel type de données. Nous allons insérer des valeurs de différents types de données dans une chaîne interpolée. \n\nDans l’exemple suivant, nous commençons par définir une [classe](../../programming-guide/classes-and-structs/classes.md) comme type de données `Vegetable` avec la [propriété](../../properties.md) `Name` et la [méthode](../../methods.md) `ToString`, qui [remplace](../../language-reference/keywords/override.md) le comportement de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le [modificateur d’accès `public`](../../language-reference/keywords/public.md) permet à n’importe quel code client d’obtenir la représentation sous forme de chaîne d’une instance de `Vegetable`. Dans l’exemple, la méthode `Vegetable.ToString` retourne la valeur de la propriété `Name` qui est initialisée sur le [constructeur](../../programming-guide/classes-and-structs/constructors.md) `Vegetable` : `Vegetable(string name) => Name = name;`. Ensuite, nous créons une instance de la classe `Vegetable` nommée `item` en utilisant le mot clé [`new` ](../../language-reference/keywords/new-operator.md) et en ajoutant un nom pour le constructeur `Vegetable`. Enfin, nous incluons cette instance dans une chaîne interpolée qui contient également une valeur <xref:System.DateTime>, une valeur <xref:System.Decimal> et une valeur d’[énumération](../../programming-guide/enumeration-types.md) `Unit`. Exécutez le code suivant dans la fenêtre interactive :\n\n```csharp\npublic class Vegetable\n{\n   public Vegetable(string name) => Name = name;\n\n   public string Name { get; }\n\n   public override string ToString() => Name;\n}\n\npublic enum Unit { item, kilogram, gram, dozen };\n\nvar item = new Vegetable(\"eggplant\");\nvar date = DateTime.Now;\nvar price = 1.99m;\nvar unit = Unit.item;\nConsole.WriteLine($\"On {date}, the price of {item} was {price} per {unit}.\");\n```\n\nNotez que l’expression interpolée `item` dans la chaîne interpolée correspond au texte « eggplant » (aubergines) dans la chaîne de résultat. En effet, lorsque le résultat de l’expression n’est pas de type chaîne, il est résolu en une chaîne de la façon suivante :\n\n- Si l’expression interpolée a la valeur `null`, une chaîne vide («» ou <xref:System.String.Empty?displayProperty=nameWithType>) est utilisée.\n\n- Si l’expression interpolée n’a pas la valeur `null`, en général, la méthode `ToString` du type du résultat est appelée. Vous pouvez tester cela en mettant à jour l’implémentation de la méthode `Vegetable.ToString`. Il n’est peut-être même pas nécessaire d’implémenter la méthode `ToString` étant donné que chaque type a déjà une implémentation de cette méthode. Pour tester cela, commentez la définition de la méthode `Vegetable.ToString` dans l’exemple (en la faisant précéder d’un symbole de commentaire `//`). Dans la sortie, la chaîne « eggplant » est remplacée par le nom de type qualifié complet (l’espace de noms défini par la boucle REPL C#, plus le nom de type), ce qui est le comportement par défaut de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le comportement par défaut de la méthode `ToString` pour une valeur d’énumération est de retourner la représentation sous forme de chaîne de la valeur.    \n\nDans la sortie de cet exemple, la date est trop précise (le prix des aubergines ne change pas chaque seconde) et la valeur du prix n’indique pas la devise locale. À l’étape suivante, vous découvrirez comment résoudre ces problèmes en contrôlant le format des représentations sous forme de chaînes des résultats des expressions.\n\n> [!NOTE]\n> Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    À l’étape précédente, vous avez utilisé l’interpolation de chaîne pour insérer une chaîne à l’intérieur d’une autre. Le résultat d’une expression interpolée peut toutefois être de n’importe quel type de données. Nous allons insérer des valeurs de différents types de données dans une chaîne interpolée.
+
+
+    Dans l’exemple suivant, nous commençons par définir une [classe](../../programming-guide/classes-and-structs/classes.md) comme type de données `Vegetable` avec la [propriété](../../properties.md) `Name` et la [méthode](../../methods.md) `ToString`, qui [remplace](../../language-reference/keywords/override.md) le comportement de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le [modificateur d’accès `public`](../../language-reference/keywords/public.md) permet à n’importe quel code client d’obtenir la représentation sous forme de chaîne d’une instance de `Vegetable`. Dans l’exemple, la méthode `Vegetable.ToString` retourne la valeur de la propriété `Name` qui est initialisée sur le [constructeur](../../programming-guide/classes-and-structs/constructors.md) `Vegetable` : `Vegetable(string name) => Name = name;`. Ensuite, nous créons une instance de la classe `Vegetable` nommée `item` en utilisant le mot clé [`new` ](../../language-reference/keywords/new-operator.md) et en ajoutant un nom pour le constructeur `Vegetable`. Enfin, nous incluons cette instance dans une chaîne interpolée qui contient également une valeur <xref:System.DateTime>, une valeur <xref:System.Decimal> et une valeur d’[énumération](../../programming-guide/enumeration-types.md) `Unit`. Exécutez le code suivant dans la fenêtre interactive :
+
+
+    ```csharp
+
+    public class Vegetable
+
+    {
+       public Vegetable(string name) => Name = name;
+
+       public string Name { get; }
+
+       public override string ToString() => Name;
+    }
+
+
+    public enum Unit { item, kilogram, gram, dozen };
+
+
+    var item = new Vegetable("eggplant");
+
+    var date = DateTime.Now;
+
+    var price = 1.99m;
+
+    var unit = Unit.item;
+
+    Console.WriteLine($"On {date}, the price of {item} was {price} per {unit}.");
+
+    ```
+
+
+    Notez que l’expression interpolée `item` dans la chaîne interpolée correspond au texte « eggplant » (aubergines) dans la chaîne de résultat. En effet, lorsque le résultat de l’expression n’est pas de type chaîne, il est résolu en une chaîne de la façon suivante :
+
+
+    - Si l’expression interpolée a la valeur `null`, une chaîne vide («» ou <xref:System.String.Empty?displayProperty=nameWithType>) est utilisée.
+
+
+    - Si l’expression interpolée n’a pas la valeur `null`, en général, la méthode `ToString` du type du résultat est appelée. Vous pouvez tester cela en mettant à jour l’implémentation de la méthode `Vegetable.ToString`. Il n’est peut-être même pas nécessaire d’implémenter la méthode `ToString` étant donné que chaque type a déjà une implémentation de cette méthode. Pour tester cela, commentez la définition de la méthode `Vegetable.ToString` dans l’exemple (en la faisant précéder d’un symbole de commentaire `//`). Dans la sortie, la chaîne « eggplant » est remplacée par le nom de type qualifié complet (l’espace de noms défini par la boucle REPL C#, plus le nom de type), ce qui est le comportement par défaut de la méthode <xref:System.Object.ToString?displayProperty=nameWithType>. Le comportement par défaut de la méthode `ToString` pour une valeur d’énumération est de retourner la représentation sous forme de chaîne de la valeur.
+
+
+    Dans la sortie de cet exemple, la date est trop précise (le prix des aubergines ne change pas chaque seconde) et la valeur du prix n’indique pas la devise locale. À l’étape suivante, vous découvrirez comment résoudre ces problèmes en contrôlant le format des représentations sous forme de chaînes des résultats des expressions.
+
+
+    > [!NOTE]
+
+    > Cette expérience de codage en ligne est en mode d’aperçu. Si vous rencontrez des problèmes, veuillez les signaler [sur le référentiel dotnet/try](https://github.com/dotnet/try/issues).
 - title: Contrôler la mise en forme des expressions interpolées
   durationInMinutes: 5
   content: >
