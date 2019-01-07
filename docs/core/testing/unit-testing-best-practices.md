@@ -1,23 +1,24 @@
 ---
 title: Bonnes pratiques pour l’écriture de tests unitaires
-description: Découvrez les bonnes pratiques pour écrire des tests unitaires qui améliorent la qualité du code et la résilience
+description: Découvrez les bonnes pratiques pour écrire des tests unitaires qui améliorent la qualité du code et la résilience pour les projets .NET Core et .NET Standard.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 00a0b999c9a08b04cb33bcb3a332513292beb363
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 7db37fd4fcb76d4bfcfb21204a191fd43c9bb6b6
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143407"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240721"
 ---
-# <a name="unit-testing-best-practices"></a>Bonnes pratiques relatives aux tests unitaires
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Meilleures pratiques pour les tests unitaires avec .NET Core et .NET Standard
 
-Par [John Reese](http://reesespieces.io) avec des remerciements particuliers à [Roy Osherove](http://osherove.com/)
-
-Il existe de nombreux avantages à écrire des tests unitaires. Ils facilitent la régression, fournissent de la documentation et simplifient la conception. Toutefois, les tests unitaires difficiles à lire et fragiles peuvent faire des ravages dans votre code base.
+Il existe de nombreux avantages à écrire des tests unitaires. Ils facilitent la régression, fournissent de la documentation et simplifient la conception. Toutefois, les tests unitaires difficiles à lire et fragiles peuvent faire des ravages dans votre code base. Cet article décrit certaines meilleures pratiques concernant la conception de tests unitaires pour vos projets .NET Core et .NET Standard.
 
 Dans ce guide, vous allez découvrir certaines bonnes pratiques à suivre pour écrire des tests unitaires résilients et faciles à comprendre.
+
+Par [John Reese](http://reesespieces.io) avec des remerciements particuliers à [Roy Osherove](http://osherove.com/)
 
 ## <a name="why-unit-test"></a>Pourquoi un test unitaire ?
 

@@ -2,15 +2,14 @@
 title: Porter des bibliothèques vers .NET Core
 description: Découvrez comment porter des projets de bibliothèque de .NET Framework vers .NET Core.
 author: cartermp
-ms.author: mairaw
 ms.date: 07/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143582"
+ms.locfileid: "53169678"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Porter des bibliothèques .NET Framework vers .NET Core
 
@@ -36,7 +35,7 @@ Cet article explique comment .NET Core définit et utilise les packages et comme
 [Développer des bibliothèques avec des outils multiplateformes](~/docs/core/tutorials/libraries.md)   
 Cette rubrique explique comment écrire des bibliothèques pour .NET à l’aide d’outils CLI multiplateformes.
 
-[Ajouts au format *csproj* pour .NET Core](~/docs/core/tools/csproj.md)   
+[Ajouts au format* csproj* pour .NET Core](~/docs/core/tools/csproj.md)   
 Cet article décrit les modifications qui ont été apportées au fichier projet dans le cadre du passage à *csproj* et à MSBuild.
 
 [Porter du code vers .NET Core - Analyser les dépendances tierces](~/docs/core/porting/third-party-deps.md)   

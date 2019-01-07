@@ -1,5 +1,5 @@
 ---
-title: Guide pratique pour déterminer les versions du .NET Framework installées
+title: 'Procédure : déterminer les versions du .NET Framework installées'
 ms.date: 04/10/2018
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151042"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396875"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Guide pratique pour déterminer les versions du .NET Framework installées
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Procédure : déterminer les versions du .NET Framework installées
 
 Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Framework sur leurs ordinateurs. Quand vous développez ou déployez votre application, vous pouvez avoir besoin de savoir quelles versions de .NET Framework sont installées sur l'ordinateur de l'utilisateur. Notez que .NET Framework comporte deux principaux composants, dont les versions sont définies séparément :  
   
@@ -39,7 +39,7 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
  [Utilisation de l’outil Clrver](#clr_a)  
  [Utilisation de code pour interroger la classe System.Environment](#clr_b)  
   
- Pour plus d’informations sur la détection des mises à jour installées pour chaque version du .NET Framework, consultez [Guide pratique pour déterminer les mises à jour .NET Framework installées](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Pour plus d’informations sur l’installation du .NET Framework, consultez [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md).  
+ Pour plus d’informations sur la détection des mises à jour installées pour chaque version de .NET Framework, consultez [Guide pratique pour déterminer les mises à jour .NET Framework installées](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Pour plus d’informations sur l’installation du .NET Framework, consultez [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md).  
   
 <a name="net_a"></a>   
 ## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Pour déterminer les versions du .NET Framework en affichant le Registre (.NET Framework 1-4)  
@@ -92,12 +92,12 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
     |378675|.NET Framework 4.5.1 installé avec Windows 8.1 ou Windows Server 2012 R2|
     |378758|.NET Framework 4.5.1 installé sur Windows 8, Windows 7 SP1, ou Windows Vista SP2|
     |379893|.NET Framework 4.5.2|
-    |Sur les systèmes Windows 10 uniquement : 393295<br /><br /> Sur toutes les autres versions de système d'exploitation : 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Sur les systèmes Windows 10 avec la mise à jour de novembre uniquement : 394254<br /><br /> Sur toutes les autres versions de système d'exploitation : 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Sur les systèmes Mise à jour anniversaire Windows 10 et Windows Server 2016 : 394802<br /><br /> Sur toutes les autres versions de système d’exploitation : 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Sur les systèmes Windows 10 Creators Update uniquement : 460798<br/><br/> Sur toutes les autres versions du système d’exploitation : 460805 | .NET Framework 4.7 |
+    |Sur les systèmes Windows 10 uniquement : 393295<br /><br /> Sur toutes les autres versions de système d’exploitation : 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |Sur les systèmes Windows 10 avec la mise à jour de novembre uniquement : 394254<br /><br /> Sur toutes les autres versions de système d’exploitation : 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |Sur les systèmes Mise à jour anniversaire Windows 10 et Windows Server 2016 : 394802<br /><br /> Sur toutes les autres versions de système d’exploitation : 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Sur les systèmes Windows 10 Creators Update uniquement : 460798<br/><br/> Sur toutes les autres versions de système d’exploitation : 460805 | .NET Framework 4.7 |
     |Sur les systèmes Windows 10 Fall Creators Update uniquement : 461308<br/><br/> Sur toutes les autres versions de système d’exploitation : 461310 | .NET Framework 4.7.1 |
-    |Sous Windows 10 avec la mise à jour d’octobre 2018 uniquement : 461814<br/><br/> Sur les systèmes Windows 10 avec la mise à jour d’avril 2018 uniquement : 461808<br/><br/> Sur toutes les autres versions de système d’exploitation : 461814| .NET Framework 4.7.2 |
+    |Sur les systèmes Windows 10 avec la mise à jour d’avril 2018 uniquement : 461808<br/><br/> Sur toutes les autres versions de système d’exploitation, y compris Windows 10 avec la mise à jour d’octobre 2018 : 461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Pour déterminer les versions de .NET Framework en interrogeant le Registre à l'aide de code (.NET Framework 1-4)
@@ -230,6 +230,6 @@ Les utilisateurs peuvent installer et exécuter plusieurs versions de .NET Frame
 
 ## <a name="see-also"></a>Voir aussi
 
-[Comment : déterminer les mises à jour .NET Framework installées](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[Guide pratique pour Déterminer les mises à jour .NET Framework installées](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md)  
 [Versions et dépendances](~/docs/framework/migration-guide/versions-and-dependencies.md)  

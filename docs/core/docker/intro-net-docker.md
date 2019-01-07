@@ -1,22 +1,20 @@
 ---
-title: Présentation de Docker – .NET Core
+title: Présentation de Docker
 description: Cet article présente Docker et en brosse une vue d’ensemble dans le contexte d’une application .NET Core.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1655d4652c4e9b48c48a2a22c2a1bf6cdd459088
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148884"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656165"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introduction à .NET et à Docker
 
 Cet article fournit une introduction et un contexte conceptuel à l’utilisation de .NET sur Docker.
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker : empaquetage d’applications pour leur déploiement et leur exécution partout
+## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker : empaquetage d’applications pour leur déploiement et leur exécution partout
 
 [Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) est une plateforme ouverte qui permet aux développeurs et aux administrateurs de créer des [images](https://docs.docker.com/glossary/?term=image), de livrer et d’exécuter des applications distribuées dans un environnement peu isolé appelé un [conteneur](https://www.docker.com/what-container). Cette approche permet une gestion efficace du cycle de vie des applications entre les environnements de développement, d’assurance qualité et de production.
  

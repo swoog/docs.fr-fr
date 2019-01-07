@@ -1,15 +1,13 @@
 ---
-title: Commande dotnet publish - Interface CLI .NET Core
+title: Commande dotnet publish
 description: La commande dotnet publish publie votre projet .NET Core dans un répertoire.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 17bacc92eea90072b95b2d42a87cb57e9fa0be67
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 353adfcbb0479e4a951b900f06327e23a3414225
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43511422"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169779"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 

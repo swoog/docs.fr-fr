@@ -4,12 +4,12 @@ description: HttpClientFactory est une fabrique rigide, disponible depuis .NET C
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0d08346dc59b6f6227e719658909c174e67d4a61
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145109"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030358"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Utilisez HttpClientFactory pour implémenter des requêtes HTTP résilientes
 
@@ -21,7 +21,7 @@ La bien connue classe [HttpClient](https://docs.microsoft.com/dotnet/api/system.
 
 Le premier problème, quand cette classe peut être supprimée, tient au fait que l’utiliser avec l’instruction `using` n’est pas le choix le plus judicieux, car même lorsque vous supprimez l’objet `HttpClient`, le socket sous-jacent n’est pas libéré immédiatement et peut entraîner un problème grave nommé « épuisement de sockets ». Pour plus d’informations sur ce problème, consultez le billet de blog [You're using HttpClient wrong and it is destabilizing your software](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/).
 
-Par conséquent, `HttpClient` est destiné à être instancié une seule fois et réutilisé tout au long de la durée de vie d’une application. L’instanciation d’une classe `HttpClient` pour chaque demande épuise le nombre de sockets disponibles sous des charges élevées. Ce problème entraîne des erreurs `SocketException`. Les approches possibles pour résoudre ce problème sont basées sur la création de l’objet `HttpClient` singleton ou statique, comme expliqué dans cet [article Microsoft sur l’utilisation de HttpClient](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
+Par conséquent, `HttpClient` est destiné à être instancié une seule fois et réutilisé tout au long de la durée de vie d’une application. L’instanciation d’une classe `HttpClient` pour chaque demande épuise le nombre de sockets disponibles sous des charges élevées. Ce problème entraîne des erreurs `SocketException`. Les approches possibles pour résoudre ce problème sont basées sur la création de l’objet `HttpClient` singleton ou statique, comme expliqué dans cet [article Microsoft sur l’utilisation de HttpClient](../../../csharp/tutorials/console-webapiclient.md). 
 
 Toutefois, il existe un deuxième problème avec `HttpClient`, qui peut se poser lorsque vous l’utilisez en tant qu’objet singleton ou statique. Dans ce cas, un objet `HttpClient` singleton ou statique ne respecte pas les modifications DNS, comme expliqué dans ce [problème lié au dépôt GitHub de .NET Core](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -71,7 +71,7 @@ Simplement en ajoutant vos classes de client typé avec AddHttpClient(), chaque 
 
 ### <a name="httpclient-lifetimes"></a>Durées de vie de HttpClient
 
-Chaque fois que vous obtenez un objet `HttpClient` à partir de IHttpClientFactory, une nouvelle instance de `HttpClient` est retournée. Il y aura un HttpMessageHandler** pour chaque client nommé ou typé. `IHttpClientFactory` regroupe dans un pool les instances HttpMessageHandler créées par la fabrique pour réduire la consommation de ressources. Une instance HttpMessageHandler peut être réutilisée à partir du pool lorsque vous créez une nouvelle instance `HttpClient` si sa durée de vie n’a pas expiré.
+Chaque fois que vous obtenez un objet `HttpClient` à partir de IHttpClientFactory, une nouvelle instance de `HttpClient` est retournée. Il y aura un **HttpMessageHandler** pour chaque client nommé ou typé. `IHttpClientFactory` regroupe dans un pool les instances HttpMessageHandler créées par la fabrique pour réduire la consommation de ressources. Une instance HttpMessageHandler peut être réutilisée à partir du pool lorsque vous créez une nouvelle instance `HttpClient` si sa durée de vie n’a pas expiré.
 
 Le regroupement de gestionnaires est souhaitable, car chaque gestionnaire gère généralement ses propres connexions HTTP sous-jacentes : créer plus de gestionnaires que nécessaire peut entraîner des délais dans la connexion. Certains gestionnaires conservent aussi les connexions indéfiniment ouvertes, ce qui peut empêcher le gestionnaire de réagir aux changements du DNS.
 

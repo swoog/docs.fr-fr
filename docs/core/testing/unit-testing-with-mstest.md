@@ -4,12 +4,13 @@ description: Apprenez les concepts des tests unitaires dans C# et .NET Core de m
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.openlocfilehash: 1c2b0bdd4bf76a17217db0c98b8f951f7d58f2ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: d0da8640393e298c3a6e367433eaa68ebb88fad7
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183774"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170273"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>Effectuer des tests unitaires de C# avec MSTest et .NET Core
 

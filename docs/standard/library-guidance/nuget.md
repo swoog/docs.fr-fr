@@ -4,12 +4,12 @@ description: Meilleures pratiques recommandées pour l’empaquetage avec des bi
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 8ac01046f25176b781240baeba8bf1efb9376689
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4f33c9993d8eef4b18823d5c16f9f51c06afae88
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129608"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614543"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ Les dépendances de package NuGet sont traitées en détail dans l’article sur
 
 ## <a name="important-nuget-package-metadata"></a>Métadonnées importantes de package NuGet
 
-Un package NuGet prend en charge plusieurs [propriétés de métadonnées](/nuget/reference/nuspec). Le tableau suivant indique les principales métadonnées que chaque projet open source doit fournir :
+Un package NuGet prend en charge plusieurs [propriétés de métadonnées](/nuget/reference/nuspec). Le tableau suivant indique les principales métadonnées que chaque package sur NuGet.org doit fournir :
 
 | Nom de la propriété MSBuild              | Nom nuspec              | Description  |
 | ---------------------------------- | ------------------------ | ------------ |
@@ -56,14 +56,12 @@ Un package NuGet prend en charge plusieurs [propriétés de métadonnées](/nuge
 | `PackageTags`                      | `tags`                     | Liste délimitée par des espaces des balises et mots clés qui décrivent le package. Les balises sont utilisées lors de la recherche des packages.             |
 | `PackageIconUrl`                   | `iconUrl`                  | URL d’une image à utiliser comme icône pour le package. L’URL doit être de type HTTPS et l’image doit être au format 64 x 64, avec un arrière-plan transparent.             |
 | `PackageProjectUrl`                | `projectUrl`               | Une URL pour la page d'accueil du projet ou le référentiel source.             |
-| `PackageLicenseUrl`                | `licenseUrl`               | Une URL vers la licence du projet. Peut être l’URL vers le fichier `LICENSE` dans le contrôle de code source.             |
-
-**✔️ À ENVISAGER** : Choisir un nom de package NuGet avec un préfixe qui répond à la réservation du préfixe des [critères](/nuget/reference/id-prefix-reservation) NuGet.
-
-**✔️ À ENVISAGER** : Utiliser le fichier `LICENSE` dans le contrôle de code source en tant que `LicenseUrl`. Par exemple, [LICENSE.md](https://github.com/JamesNK/Newtonsoft.Json/blob/c4af75c8e91ca0d75aa6c335e8c106780c4f7712/LICENSE.md).
+| `PackageLicenseExpression`         | `license`                  | L’[identificateur SPDX](https://spdx.org/licenses/) de la licence du projet. Seules des licences OSI et FSF approuvées peuvent utiliser un identificateur. Les autres licences doivent utiliser `PackageLicenseFile`. En savoir plus sur les [`license`métadonnées](/nuget/reference/nuspec#license). |
 
 > [!IMPORTANT]
-> Par défaut, un projet sans licence possède un [copyright exclusif](https://choosealicense.com/no-permission/), ce qui empêche d’autres personnes de l’utiliser.
+> Par défaut, un projet sans licence possède un [copyright exclusif](https://choosealicense.com/no-permission/), ce qui empêche légalement d’autres personnes de l’utiliser.
+
+**✔️ À ENVISAGER** : Choisir un nom de package NuGet avec un préfixe qui répond à la réservation du préfixe des [critères](/nuget/reference/id-prefix-reservation) NuGet.
 
 **✔️ À FAIRE** : Utiliser une href HTTPS pour l’icône de package.
 
@@ -73,9 +71,7 @@ Un package NuGet prend en charge plusieurs [propriétés de métadonnées](/nuge
 
 **✔️ À ENVISAGER** : Configurer [SourceLink](./sourcelink.md) pour ajouter des métadonnées de contrôle de code source à vos assemblys et packages NuGet.
 
-> SourceLink ajoute automatiquement des métadonnées `RepositoryUrl` et `RepositoryType` au package NuGet.
-> SourceLink ajoute également des informations sur le code source exact à partir duquel le package a été créé.
-> Par exemple, le hachage de validation est ajouté comme métadonnées à un package créé à partir d’un dépôt Git.
+> SourceLink ajoute automatiquement des métadonnées `RepositoryUrl` et `RepositoryType` au package NuGet. SourceLink ajoute également des informations sur le code source exact à partir duquel le package a été créé. Par exemple, le hachage de validation est ajouté comme métadonnées à un package créé à partir d’un dépôt Git.
 
 ## <a name="pre-release-packages"></a>Packages de préversion
 

@@ -1,65 +1,89 @@
 ---
-title: Transformations de données dans ML.NET
-description: Explorez les différentes transformations de données prises en charge dans ML.NET.
+title: Transformations de données Machine Learning - ML.NET
+description: Explorez les composants d’ingénierie de fonctionnalité pris en charge dans ML.NET.
 author: JRAlexander
-ms.date: 10/16/2018
-ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143946"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451090"
 ---
-# <a name="data-transforms-in-mlnet"></a>Transformations de données dans ML.NET
+# <a name="machine-learning-data-transforms---mlnet"></a>Transformations de données Machine Learning - ML.NET
 
-Les tableaux suivants contiennent des informations sur toutes les transformations de données prises en charge dans ML.NET (sélectionnez le type de transformation de données pour accéder au tableau correspondant) :
-
-* [Catégorie](#categorical)
-* [Combinaison et ségrégation](#combiners-and-segregators)
-* [Sélection de caractéristique](#feature-selection)
-* [Personnaliseurs](#featurizers)
-* [Analyse d’étiquette](#label-parsing)
-* [Valeurs manquantes](#missing-values)
-* [Normalisation](#normalization)
-* [Filtres de lignes](#row-filters)
-* [Schéma](#schema)
-* [Traitement de texte et personnalisation](#text-processing-and-featurization)
-* [Divers](#miscellaneous)
+Les tableaux suivants contiennent des informations sur toutes les transformations de données prises en charge dans ML.NET.
 
 > [!NOTE]
 > ML.NET est actuellement en préversion. Les transformations de données ne sont pas toutes prises en charge actuellement. Pour envoyer une requête pour une transformation particulière, signalez un problème dans le dépôt GitHub [dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues).
-
-## <a name="categorical"></a>Catégorie
-
-| Transformer | Définition |
-| --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CategoricalHashOneHotVectorizer> | Encode la variable catégorielle avec un encodage basé sur le hachage. |
-| <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer> | Encode la variable catégorielle avec un encodage à chaud en fonction d’un dictionnaire de termes. |
 
 ## <a name="combiners-and-segregators"></a>Combinaison et ségrégation
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CombinerByContiguousGroupId> | Regroupe les valeurs d’une colonne scalaire dans un vecteur en fonction d’un ID de groupe contigu. |
+| <xref:Microsoft.ML.Transforms.GroupTransform> | Regroupe les valeurs d’une colonne scalaire dans un vecteur en fonction d’un ID de groupe contigu. |
 | <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Combine toutes les caractéristiques dans une colonne de caractéristique. |
 | <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | Combine une séquence de TransformModels et un PredictorModel dans un seul PredictorModel. |
 | <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | Combine une série de TransformModels dans un seul modèle. |
 | <xref:Microsoft.ML.Legacy.Transforms.Segregator> | Dissocie des colonnes de vecteur dans des séquences de lignes (inverse de la transformation de regroupement). |
 | <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | Combine un TransformModel et un PredictorModel dans un seul PredictorModel. |
+| <xref:Microsoft.ML.Transforms.UngroupTransform> | Dissocie des colonnes de vecteur dans des séquences de lignes (inverse de la transformation de regroupement). |
 
-## <a name="feature-selection"></a>Sélection de caractéristique
-
-| Transformer | Définition |
-| --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByCount> | Sélectionne les emplacements pour lesquels le nombre de valeurs autres que des valeurs par défaut est supérieur ou égal à un seuil. |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByMutualInformation> | Sélectionne les k premiers emplacements parmi toutes les colonnes spécifiées, classés d’après leurs informations mutuelles avec la colonne d’étiquette. |
-
-## <a name="featurizers"></a>Personnaliseurs
+## <a name="conversions"></a>Conversions 
 
 | Transformer | Définition |
 | --- | --- |
+| <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Hache des colonnes à valeurs uniques ou des colonnes de vecteur. Pour les colonnes de vecteur, hache séparément chaque emplacement. Peut hacher des valeurs texte ou de valeurs de clés. |
 | <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Convertit des valeurs de colonne en hachages. Cette transformation accepte les entrées numériques et textuelles, les colonnes à la fois uniques et à valeurs vectorielles. |
-| <xref:Microsoft.ML.Legacy.Transforms.TreeLeafFeaturizer> | Effectue l’apprentissage d’un ensemble d’arborescences, ou le charge à partir d’un fichier, puis mappe un vecteur de caractéristique numérique à trois sorties : 1. Un vecteur contenant les sorties d’arborescences individuelles de l’ensemble d’arborescences. 2. Un vecteur indiquant les feuilles sur lesquelles le vecteur de caractéristique tombe dans l’ensemble d’arborescences. 3. Un vecteur indiquant les chemins sur lesquels le vecteur de caractéristique tombe dans l’ensemble d’arborescences. Si vous spécifiez à la fois un fichier de modèle et un formateur, le vecteur utilise le fichier de modèle. Si vous ne spécifiez ni l’un ni l’autre, le vecteur effectue l’apprentissage d’un modèle FastTree par défaut. Cela peut permettre de gérer des étiquettes de clés en effectuant l’apprentissage d’un modèle de régression vers leurs index éventuellement permutés. |
+| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Convertit plusieurs valeurs de colonne en hachages. Cette transformation accepte les entrées numériques et textuelles, les colonnes à la fois uniques et à valeurs vectorielles. |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Convertit une clé en colonne de vecteur binaire. |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Utilise les métadonnées KeyValues pour mapper les index de clés aux valeurs correspondantes dans les métadonnées KeyValues. |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Convertit une clé en colonne de vecteur. |
+| <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Modifie le type de colonne sous-jacent si le type peut être converti. |
+| <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Convertit des valeurs d’entrées (mots, nombres, etc.) en index dans un dictionnaire d’entrées. |
+
+
+## <a name="deep-learning"></a>Deep Learning
+
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.OnnxTransform> | Fournit des données à un modèle ONNX existant et retourne le score (prévision). |
+| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Peut retourner un score avec un modèle TensorFlow entraîné ou réentraîner un modèle TensorFlow. |
+
+## <a name="feature-extraction"></a>Extraction de fonctionnalité
+
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Supprime une liste spécifiée de mots vides en comparant des jetons individuels (comparaison sensible à la casse) à des mots vides.| 
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | Sélectionne une ou plusieurs colonnes ImageType et les convertit en une représentation en nuances de gris de la même image.|
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | Sélectionne une ou plusieurs colonnes ReadOnlyMemory et les charge au format ImageType. |
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | Sélectionne une ou plusieurs colonnes ImageType et les convertit en représentation de vecteur.|
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | Sélectionne une ou plusieurs colonnes ImageType et les redimensionne à la hauteur et à la largeur fournies.|
+| <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implémente LightLDA, une implémentation de pointe de Latent Dirichlet Allocation.|
+| <xref:Microsoft.ML.Transforms.LoadTransform> | Charge des transformations spécifiques à partir du fichier de modèle spécifié. Permet des transformations de type « cherry picking » à partir d’une chaîne sérialisée, ou l’application d’une transformation préentraînée dans une vue de données différente (mais toujours compatible). |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de valeurs consécutives de longueur 1-n) dans un vecteur de clés donné. Crée pour cela un dictionnaire de ngrams et utilise l’ID dans le dictionnaire en tant qu’index dans le conteneur. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Convertit une collection de texte tokénisé (vecteur de ReadOnlyMemory) ou des vecteurs de clés en vecteurs de fonctionnalité numériques. Les vecteurs de fonctionnalité sont des décomptes de ngrams (séquences de jetons consécutifs - mots ou clés - de longueur 1-n). | 
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Convertit une collection de texte tokénisé (vecteur de ReadOnlyMemory) en vecteurs de fonctionnalité numériques à l’aide d’un hachage. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de mots consécutifs de longueur 1-n) dans un texte donné. | 
+| <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Convertit la valeur catégorique en un tableau d’indicateurs en créant un dictionnaire de catégories selon les données et en utilisant l’ID dans le dictionnaire comme index du tableau |
+| <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Calcule la projection du vecteur de fonctionnalité sur un sous-espace de rang inférieur. |
+| <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Utilise un modèle de sentiments préformé pour évaluer les chaînes d’entrée. |
+| <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Supprime une liste spécifique à une langue de mots vides (mots les plus courants) en comparant des jetons individuels (comparaison sensible à la casse) à des mots vides. |
+| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | Mappe les colonnes de valeurs texte à de nouvelles colonnes à l’aide d’un jeu de données de mappage fourni via ses arguments. |
+| <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de mots consécutifs) dans un texte donné. Crée pour cela un dictionnaire de ngrams et utilise l’ID dans le dictionnaire en tant qu’index dans le conteneur. |
+| <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Produit un conteneur de décomptes de ngrams (séquences de mots consécutifs de longueur 1-n) dans un texte donné. Pour cela, il hache chaque ngram et utilise la valeur de hachage comme index dans le conteneur. |
+| <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Fractionne le texte en mots à l’aide de caractères de séparation. |
+
+
+## <a name="image-model-featurizers"></a>Personnaliseurs de modèle d’image
+
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle [AlexNet](https://en.wikipedia.org/wiki/AlexNet) préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. | 
+| <xref:Microsoft.ML.Transforms.ResNet18Extension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle ResNet18 préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
+| <xref:Microsoft.ML.Transforms.ResNet50Extension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle ResNet50 préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
+| <xref:Microsoft.ML.Transforms.ResNet101Extension> | Il s’agit d’une méthode d’extension à utiliser avec <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> afin d’utiliser un modèle ResNet101 préentraîné. Le package NuGet contenant cette extension est également garanti pour inclure le fichier modèle binaire. |
 
 ## <a name="label-parsing"></a>Analyse d’étiquette
 
@@ -67,7 +91,8 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Convertit des valeurs d’entrées (mots, nombres, etc.) en index dans un dictionnaire d’entrées. |
 | <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Transforme l’étiquette en clé ou valeur booléenne (si nécessaire) afin de la rendre utilisable pour la classification. |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelIndicator> | Remappeur d’étiquette utilisé par OVA. |
+| <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Convertit des étiquettes. |
+| <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Remappe les étiquettes multiclasses au format True binaire, étiquettes False, principalement pour une utilisation avec OVA.|
 | <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | Transforme l’étiquette en valeur flottante afin de la rendre utilisable pour la régression. |
 | <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | Transforme une colonne d’étiquette prédite en ses valeurs d’origine, sauf si elle est de type booléen. |
 
@@ -75,68 +100,92 @@ Les tableaux suivants contiennent des informations sur toutes les transformation
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueHandler> | Gérer les valeurs manquantes en les remplaçant par la valeur par défaut ou la valeur moyenne/min/max (pour les colonnes non textuelles uniquement). Une colonne d’indicateur peut éventuellement être concaténée, si le type de colonne d’entrée est numérique. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueIndicator> | Créer une colonne de sortie booléenne avec le même nombre d’emplacements que la colonne d’entrée, où la valeur de sortie est true si la valeur dans la colonne d’entrée est manquante. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValuesDropper> | Supprime les N/A des colonnes de vecteur. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValuesRowDropper> | Filtre les lignes qui contiennent des valeurs manquantes. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueSubstitutor> | Créer une colonne de sortie du même type et de la même taille que la colonne d’entrée, où les valeurs manquantes sont remplacées par la valeur par défaut ou par la valeur moyenne/min/max (pour les colonnes non textuelles uniquement). |
+| <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Supprime les valeurs manquantes des colonnes. |
+| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crée une colonne de sortie booléenne avec le même nombre d’emplacements que la colonne d’entrée, où la valeur de sortie est true si la valeur dans la colonne d’entrée est manquante. |
+| <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Gérer les valeurs manquantes en les remplaçant par la valeur par défaut ou la valeur moyenne/min/max (pour les colonnes non textuelles uniquement). |
+| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Crée une colonne de sortie booléenne avec le même nombre d’emplacements que la colonne d’entrée, où la valeur de sortie est true si la valeur dans la colonne d’entrée est manquante. |
 
 ## <a name="normalization"></a>Normalisation
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.BinNormalizer> | Les valeurs sont affectées à des emplacements d’équidensité et une valeur est mappée à son bin_number / number_of_bins. |
-| <xref:Microsoft.ML.Legacy.Transforms.ConditionalNormalizer> | Normaliser les colonnes uniquement si nécessaire. |
-| <xref:Microsoft.ML.Legacy.Transforms.GlobalContrastNormalizer> | Effectue une normalisation de contraste globale sur des valeurs d’entrée : Y = (s * X - M) / D, où s est une échelle, M est la moyenne et D est l’écart type ou la norme L2. | 
-| <xref:Microsoft.ML.Legacy.Transforms.LogMeanVarianceNormalizer> | Normalise les données d’après la moyenne calculée et la variance du logarithme des données. |
-| <xref:Microsoft.ML.Legacy.Transforms.LpNormalizer> | Normaliser les vecteurs (lignes) individuellement par remise à l’échelle à la norme unitaire (L2, L1 ou LInf). Effectue l’opération suivante sur un vecteur X : Y = (X - M) / D, où M est la moyenne et D est la norme L2, la norme L1 ou la norme LInf. |
-| <xref:Microsoft.ML.Legacy.Transforms.MeanVarianceNormalizer> | Normalise les données d’après la moyenne calculée et la variance des données. |
-| <xref:Microsoft.ML.Legacy.Transforms.MinMaxNormalizer> | Normalise les données d’après les valeurs minimales et maximales observées des données. |
+| <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | Transformation de normalisation Lp-Norm (selon les vecteurs/lignes). |
+| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Calcule la moyenne et la variance d’une colonne de valeurs de vecteur. Effectue le suivi de la moyenne actuelle et de la valeur M2 (somme des différences au carré des valeurs à partir de la moyenne), le nombre de valeurs NaN et le nombre d’éléments non nuls. |
+| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Calcule la moyenne et la variance d’une colonne de valeurs de vecteur. Effectue le suivi de la moyenne actuelle et de la valeur M2 (somme des différences au carré des valeurs à partir de la moyenne), le nombre de valeurs NaN et le nombre d’éléments non nuls. |
+| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Effectue le suivi des valeurs min, max, du nombre de valeurs non éparses (vCount) et du nombre d’appels ProcessValue() (trainCount) pour une colonne de valeurs de vecteur. |
+| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | Effectue le suivi des valeurs min, max, du nombre de valeurs non éparses (vCount) et du nombre d’appels ProcessValue() (trainCount) pour une colonne de valeurs de vecteur. |
+| <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Normalise des plages de fonctionnalité. |
+| <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Normalise des plages de fonctionnalité. |
+
+## <a name="onnx"></a>Onnx
+
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.OnnxTransform> | Retourne le score des modèles ONNX préformés qui utilisent la norme ONNX 1.2 |
+
+## <a name="preprocessing"></a>Prétraitement
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Effectue une approximation de l’échantillonnage d’amorçage en utilisant l’échantillonnage de Poisson. |
+| <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Produit une fonctionnalité de Fourier aléatoire. |
+| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Générateur de jetons orienté caractère où le texte est considéré comme une séquence de caractères. |
+| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Simplifie l’optimisation pour vous aider à identifier les pondérations. |
 
 ## <a name="row-filters"></a>Filtres de lignes
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.RowRangeFilter> | Filtre un DataView sur une colonne de type Single, Double ou Clé (contiguë). Conserve les valeurs qui se trouvent dans la plage min/max spécifiée. Les valeurs NaN sont toujours exclues. Si l’entrée est un type Clé, les valeurs min/max sont considérées comme des pourcentages du nombre de valeurs. |
-| <xref:Microsoft.ML.Legacy.Transforms.RowSkipAndTakeFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes à un décalage facultatif. Peut être utilisé pour implémenter la pagination des données. |
-| <xref:Microsoft.ML.Legacy.Transforms.RowSkipFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes en ignorant un nombre de lignes. |
-| <xref:Microsoft.ML.Legacy.Transforms.RowTakeFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes en prenant les N premières lignes. |
+| <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | Lit de façon aléatoire une tentative d’utilisation d’un curseur aléatoire avec un pool d’un nombre donné de lignes.  |
+| <xref:Microsoft.ML.Transforms.SkipFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes en ignorant un nombre de lignes. |
+| <xref:Microsoft.ML.Transforms.SkipTakeFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes à un décalage facultatif. Peut être utilisé pour implémenter la pagination des données. Lors de la création avec SkipTakeFilter.SkipArguments, se comporte comme `SkipFilter`.
+| <xref:Microsoft.ML.Transforms.TakeFilter> | Permet de limiter l’entrée à un sous-ensemble de lignes en prenant les N premières lignes. |
+
 
 ## <a name="schema"></a>Schéma
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> | Concatène deux colonnes du même type d’élément. |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> | Duplique des colonnes du jeu de données.|
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnDropper> | Supprime des colonnes du jeu de données. |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnSelector> | Sélectionne un ensemble de colonnes et supprime toutes les autres. |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnTypeConverter> | Convertit une colonne en un type différent, en utilisant la conversion standard. |
+| <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Duplique des colonnes du jeu de données.|
+| <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Sélectionne un ensemble de colonnes à supprimer ou à conserver à partir d’une entrée donnée. |
+| <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Supprime des emplacements des colonnes.|
 | <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform utilise les métadonnées KeyValues pour mapper les index de clés aux valeurs correspondantes dans les métadonnées KeyValues. |
-| <xref:Microsoft.ML.Legacy.Transforms.NGramTranslator> | Produit un conteneur de décomptes de ngrams (séquences de valeurs consécutives de longueur 1-n) dans un vecteur de clés donné. Crée pour cela un dictionnaire de ngrams et utilise l’ID dans le dictionnaire en tant qu’index dans le conteneur. | 
-| <xref:Microsoft.ML.Legacy.Transforms.OptionalColumnCreator> | Si la colonne source n’existe pas après la désérialisation, créer une colonne avec le type correct et les valeurs par défaut. |
+| <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Crée une nouvelle colonne avec le type et les valeurs par défaut spécifiés. |
+| <xref:Microsoft.ML.Transforms.RangeFilter> | Filtre un DataView sur une colonne de type Single, Double ou Clé (contiguë). Conserve les valeurs qui se trouvent dans la plage min/max spécifiée. Les valeurs NaN sont toujours exclues. Si l’entrée est un type Clé, les valeurs min/max sont considérées comme des pourcentages du nombre de valeurs. |
+
+## <a name="tensorflow"></a>TensorFlow
+
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Retourne un score avec un modèle TensorFlow entraîné ou réentraîne un modèle TensorFlow. |
 
 ## <a name="text-processing-and-featurization"></a>Traitement de texte et personnalisation
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CharacterTokenizer> | Générateur de jetons orienté caractère où le texte est considéré comme une séquence de caractères. |
-| <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> | Transformation qui convertit une collection de documents textuels en vecteurs de caractéristiques numériques. Les vecteurs de caractéristiques sont des décomptes normalisés de ngrams (mot et/ou caractère) dans un texte tokenisé donné. |
-| <xref:Microsoft.ML.Legacy.Transforms.TextToKeyConverter> | Convertit des valeurs d’entrées (mots, nombres, etc.) en index dans un dictionnaire d’entrées. |
-| <xref:Microsoft.ML.Legacy.Transforms.WordEmbeddings> | Transformation qui convertit des vecteurs de jetons textuels en vecteurs numériques à l’aide d’un modèle préformé. Pour plus d’informations sur la technique, consultez la page Wikipédia [Word embedding](https://en.wikipedia.org/wiki/Word_embedding). |
-| <xref:Microsoft.ML.Legacy.Transforms.WordTokenizer> | L’entrée de cette transformation est un texte, et la sortie est un vecteur de texte contenant les mots (jetons) dans le texte d’origine. Le séparateur est l’espace, mais vous pouvez spécifier tout autre caractère (ou plusieurs caractères). |
+| <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | Une transformation de normalisation de texte qui permet de normaliser la casse du texte, en supprimant des signes diacritiques, des signes de ponctuation et/ou des nombres. La transformation s’exécute sur l’entrée de texte ainsi que le vecteur de jetons/texte (vecteur de ReadOnlyMemory). |
+| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Générateur de jetons orienté caractère où le texte est considéré comme une séquence de caractères. |
+
+## <a name="time-series"></a>Série chronologique
+
+| Transformer | Définition |
+| --- | --- |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | Sélectionne une moyenne pondérée des valeurs : ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | Implémente la transformation du détecteur de point de modification pour une séquence i.i.d. (échantillon aléatoire) en fonction d’une estimation de densité de noyau adaptative et de martingales. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | Implémente la transformation du détecteur de pic pour une séquence i.i.d. (échantillon aléatoire) en fonction d’une estimation de densité de noyau adaptative. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | Fournit une moyenne pondérée des valeurs de fenêtre glissante. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | Détermine si la valeur actuelle de la série chronologique appartient au centile de valeurs supérieures de la fenêtre glissante. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | Calcule la valeur empirique p-valeur actuelle de la série en fonction des autres valeurs de la fenêtre glissante. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | Génère une fenêtre glissante sur une série chronologique de type Single. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | Implémente la transformation de détecteur de point de modification en fonction d’une modélisation Singular Spectrum de la série chronologique. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | Implémente la transformation de détecteur de pic en fonction d’une modélisation Singular Spectrum de la série chronologique. |
 
 ## <a name="miscellaneous"></a>Divers
 
 | Transformer | Définition |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.ApproximateBootstrapSampler> | Échantillonnage d’amorçage approximatif. |
-| <xref:Microsoft.ML.Legacy.Transforms.BinaryPredictionScoreColumnsRenamer> | Pour la prédiction binaire, renomme les colonnes PredictedLabel et Score de façon à inclure le nom de la classe positive.|
-| <xref:Microsoft.ML.Legacy.Transforms.DataCache> | Met en cache à l’aide de l’option de cache spécifiée. |
-| <xref:Microsoft.ML.Legacy.Transforms.DatasetScorer> | Évalue un jeu de données avec un modèle de prédiction. |
-| <xref:Microsoft.ML.Legacy.Transforms.DatasetTransformScorer> | Évalue un jeu de données avec un modèle de transformation. |
-| <xref:Microsoft.ML.Legacy.Transforms.NoOperation> | Sans effet |
-| <xref:Microsoft.ML.Legacy.Transforms.RandomNumberGenerator> | Ajoute une colonne avec une séquence de nombres générée. |
-| <xref:Microsoft.ML.Legacy.Transforms.ScoreColumnSelector> | Sélectionne uniquement les dernières colonnes de score et les colonnes supplémentaires spécifiées dans les arguments. |
-| <xref:Microsoft.ML.Legacy.Transforms.Scorer> | Convertit le modèle de prédiction en modèle de transformation. |
-| <xref:Microsoft.ML.Legacy.Transforms.SentimentAnalyzer> | Utilise un modèle de sentiments préformé pour évaluer les chaînes d’entrée. |
-| <xref:Microsoft.ML.Legacy.Transforms.TrainTestDatasetSplitter> | Fractionne le jeu de données en jeux d’apprentissage et de test. |
+| <xref:Microsoft.ML.Transforms.CompositeTransformer> | Crée une transformation de données composite. |
+| <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | Génère des colonnes supplémentaires et les ajoute à la collection `IDataView`. Ne modifie pas le nombre de lignes et peut être considéré comme le résultat d’une application de la fonction de l’utilisateur à chaque ligne des données d’entrée.|
+| <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Ajoute une colonne avec une séquence de nombres générée. |
+| <xref:Microsoft.ML.Transforms.ProduceIdTransform> | Produit une colonne avec l’ID du curseur en tant que colonne. |
+| <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Génère un nombre aléatoire. |
+| <xref:Microsoft.ML.Transforms.ScoringTransformer> | Combine les informations provenant de plusieurs modèles prévisionnels pour générer un nouveau modèle dans le pipeline à l’aide des scores d’un modèle déjà formé. |

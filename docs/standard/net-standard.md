@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 07/19/2018
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: bdaaa22f20f21e823459914a900997050a6624a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cfc830f50f2e77b85e46ebaf91e3c8658aa86c48
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50186068"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613594"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -35,7 +35,7 @@ Pour trouver la version la plus élevée de .NET Standard que vous pouvez cibler
 
 1. Recherchez la ligne indiquant l’implémentation de .NET sur laquelle vous voulez exécuter.
 2. Recherchez la colonne de cette ligne qui indique votre version, en allant de droite à gauche.
-3. L’en-tête de colonne indique la version de .NET Standard prise en charge par votre cible (et les versions inférieures de .NET Standard qu’elle prend également en charge).
+3. L’en-tête de colonne indique la version .NET Standard que votre cible prend en charge. Vous pouvez également cibler une version .NET Standard antérieure. Les versions .NET Standard ultérieures prendront également en charge votre implémentation.
 4. Répétez ce processus pour chaque plateforme que vous voulez cibler. Si vous avez plusieurs plateformes cibles, vous devez choisir la version la moins élevée parmi elles. Par exemple, si vous voulez exécuter sur le .NET Framework 4.5 et .NET Core 1.0, la version .NET Standard le plus élevée que vous pouvez utiliser est .NET Standard 1.1.
 
 ### <a name="which-net-standard-version-to-target"></a>Version de .NET Standard à cibler
@@ -57,7 +57,7 @@ Le ciblage de versions inférieures de .NET Standard génère cependant un certa
 Il existe deux règles principales de contrôle de version :
 
 - Additive : les versions de .NET Standard sont des cercles logiquement concentriques : les versions plus élevées intègrent toutes les API des versions précédentes. Il n’y a pas de ruptures entre les versions.
-- Immuable : une fois livrées, les versions de .NET Standard sont figées. Les nouvelles API sont disponibles d’abord dans les implémentations de .NET spécifiques, comme .NET Core. Si le comité de révision de .NET Standard estime que les nouvelles API doivent être disponibles pour les implémentations de .NET, elles sont ajoutées dans une nouvelle version de .NET Standard.
+- Immuable : Une fois livrées, les versions de .NET Standard sont figées. Les nouvelles API sont disponibles d’abord dans les implémentations de .NET spécifiques, comme .NET Core. Si le comité de révision de .NET Standard estime que les nouvelles API doivent être disponibles pour les implémentations de .NET, elles sont ajoutées dans une nouvelle version de .NET Standard.
 
 ## <a name="specification"></a>Spécification
 

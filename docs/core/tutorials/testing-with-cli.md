@@ -2,14 +2,14 @@
 title: Organiser et tester des projets avec la ligne de commande .NET Core
 description: Ce didacticiel explique comment organiser et tester des projets .NET Core à partir de la ligne de commande.
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415222"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242706"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organiser et tester des projets avec la ligne de commande .NET Core
 
@@ -97,25 +97,25 @@ Woof!
 Meow!
 ```
 
-Exercice facultatif : Vous pouvez ajouter un nouveau type d’animal domestique, par exemple `Bird`, en étendant ce projet. Faites en sorte que la méthode `TalkToOwner` du type Bird envoie un `Tweet!` au propriétaire. Réexécutez l’application. La sortie inclut `Tweet!`
+Exercice facultatif : vous pouvez ajouter un nouveau type d’animal domestique, par exemple `Bird`, en étendant ce projet. Faites en sorte que la méthode `TalkToOwner` du type Bird envoie un `Tweet!` au propriétaire. Réexécutez l’application. La sortie inclut `Tweet!`
 
 ### <a name="testing-the-sample"></a>Test de l’exemple
 
 Le projet `NewTypes` est en place et vous l’avez organisé en conservant les types liés aux animaux domestiques dans un dossier. Créez à présent votre projet de test et commencez à écrire des tests à l’aide du framework de tests [xUnit](https://xunit.github.io/). Les tests unitaires vous permettent de vérifier automatiquement le comportement de vos types d’animaux domestiques et de vous assurer qu’ils fonctionnent correctement.
 
-Créez un dossier*test* et un sous-dossier *NewTypesTests*. À une invite de commandes à partir du dossier *NewTypesTests*, exécutez `dotnet new xunit`. Deux fichiers sont générés : *NewTypesTests.csproj* et *UnitTest1.cs*.
+Accédez au dossier *src*, puis créez un dossier *test* et un sous-dossier *NewTypesTests*. À une invite de commandes à partir du dossier *NewTypesTests*, exécutez `dotnet new xunit`. Deux fichiers sont générés : *NewTypesTests.csproj* et *UnitTest1.cs*.
 
 Le projet de test ne peut pas actuellement tester les types dans `NewTypes` et nécessite une référence de projet au projet `NewTypes`. Pour ajouter une référence de projet, utilisez la commande [`dotnet add reference`](../tools/dotnet-add-reference.md) :
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
 Vous pouvez également ajouter manuellement la référence de projet en ajoutant un nœud `<ItemGroup>` au fichier *NewTypesTests.csproj* :
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 
@@ -159,7 +159,7 @@ public class PetTests
 }
 ```
 
-Exercice facultatif : Si vous avez précédemment ajouté un type `Bird` qui envoie un `Tweet!` au propriétaire, ajoutez une méthode de test au fichier *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, pour vérifier que la méthode `TalkToOwner` fonctionne correctement pour le type `Bird`.
+Exercice facultatif : si vous avez précédemment ajouté un type `Bird` qui envoie un `Tweet!` au propriétaire, ajoutez une méthode de test au fichier *PetTests.cs*, `BirdTalkToOwnerReturnsTweet`, pour vérifier que la méthode `TalkToOwner` fonctionne correctement pour le type `Bird`.
 
 > [!NOTE]
 > Bien que l’on s’attende à ce que les valeurs `expected` et `actual` soient identiques, une assertion initiale avec les vérifications `Assert.NotEqual` spécifie que ces valeurs *ne sont pas égales*. Commencez toujours par créer un test en le faisant échouer pour vérifier sa logique. Après avoir vérifié que le test échoue, modifiez l’assertion pour que le test réussisse.

@@ -1,16 +1,17 @@
 ---
-title: Effectuer des tests unitaires sur Visual Basic dans .NET Core à l’aide de dotnet test et de NUnit
+title: Effectuer des tests unitaires sur Visual Basic dans .NET Core avec dotnet test et NUnit
 description: Apprenez les concepts des tests unitaires dans .NET Core de manière interactive en créant un exemple de solution Visual Basic pas à pas à l’aide de NUnit.
 author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143561"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239149"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Effectuer des tests unitaires sur les bibliothèques .NET Core Visual Basic à l’aide de dotnet test et de NUnit
 
@@ -18,7 +19,7 @@ Ce didacticiel vous guide pas à pas dans la création d’un exemple de solutio
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [SDK .NET Core 2.1](https://www.microsoft.com/net/download) ou versions ultérieures.
+- [Kit SDK .NET Core 2.1](https://www.microsoft.com/net/download) (ou version ultérieure).
 - Un éditeur de texte ou un éditeur de code de votre choix.
 
 ## <a name="creating-the-source-project"></a>Création du projet source

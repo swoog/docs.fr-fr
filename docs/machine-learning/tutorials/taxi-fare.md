@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: a142ab98174182adf6f50cf6eedff27c82993f5e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130505"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030254"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Tutoriel : Prédire le prix des courses de taxi à New York à l’aide d’un apprenant de régression avec ML.NET
 
@@ -99,7 +99,9 @@ La classe `TaxiTripFarePrediction` représente les résultats prédits. Elle com
 
 ## <a name="define-data-and-model-paths"></a>Définir des chemins de données et de modèle
 
-Ajoutez les instructions `using` supplémentaires suivantes en haut du fichier *Program.cs* : [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+Ajoutez les instructions `using` supplémentaires suivantes en haut du fichier *Program.cs* :
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 Vous devez créer trois champs pour contenir les chemins des fichiers avec des jeux de données et le fichier pour enregistrer le modèle, ainsi qu’une variable globale pour `TextLoader` :
 
@@ -112,7 +114,7 @@ Ajoutez le code suivant juste au-dessus de la méthode `Main` pour spécifier ce
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
-Lors de la création d’un modèle avec ML .NET, vous commencez par créer un contexte ML. Cela s’apparente conceptuellement à l’aide `DbContext` dans Entity Framework. L’environnement fournit un contexte pour votre tâche Machine Learning et qui peut être utilisé pour le suivi des exceptions et la journalisation.
+Lors de la création d’un modèle avec ML.NET, vous commencez par créer un contexte ML. Cela s’apparente conceptuellement à l’aide `DbContext` dans Entity Framework. L’environnement fournit un contexte pour votre tâche Machine Learning et qui peut être utilisé pour le suivi des exceptions et la journalisation.
 
 ### <a name="initialize-variables-in-main"></a>Initialiser les variables dans Principal
 

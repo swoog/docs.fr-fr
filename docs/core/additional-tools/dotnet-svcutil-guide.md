@@ -1,16 +1,15 @@
 ---
-title: Présentation de l’outil WCF svcutil - .NET Core
+title: Présentation de l’outil WCF svcutil
 description: Vue d’ensemble de l’outil dotnet-svcutil Microsoft WCF, qui ajoute des fonctionnalités pour les projets .NET Core et ASP.NET Core, de manière similaire à l’outil svcutil WCF pour les projets .NET Framework.
 author: mlacouture
-ms.author: jralexander
 ms.date: 08/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e42ec0d4072c56456c824a814f1b383ea70a9307
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126014"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237257"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Outil WCF dotnet-svcutil pour .NET Core
 
@@ -100,7 +99,7 @@ static void Main(string[] args)
 ```console
 dotnet run
 ```
-La sortie suivante devrait s'afficher : « Hello dotnet-svcutil! »
+Vous devez voir la sortie suivante : "Hello dotnet-svcutil!"
 
 Pour obtenir une description détaillée des paramètres de l’outil `dotnet-svcutil`, appelez l’outil en passant le paramètre d’aide comme suit :
 

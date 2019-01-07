@@ -1,15 +1,13 @@
 ---
-title: Commande dotnet test - Interface CLI .NET Core
+title: Commande dotnet test
 description: La commande dotnet test est utilisée pour exécuter des tests unitaires dans un projet donné.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "46696454"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170842"
 ---
 # <a name="dotnet-test"></a>dotnet test
 

@@ -1,15 +1,15 @@
 ---
-title: Conteneuriser une application avec Docker - .NET Core
+title: Conteneuriser une application avec Docker
 description: Ce tutoriel vous apprend à créer une application .NET Core de base et à la conteneuriser avec Docker.
 ms.date: 10/11/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 8f08936142b0cc44baf268f100e228f68920b69d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eed72553576f4154fe63b2e5cf035a781afe4b7c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126366"
+ms.locfileid: "53169584"
 ---
 # <a name="how-to-containerize-a-net-core-application"></a>Conteneuriser une application .NET Core
 
@@ -22,7 +22,7 @@ Au cours de ce didacticiel, vous apprenez à :
 > * Créer une application .NET Core
 > * Déployer votre application dans un conteneur Docker
 
-## <a name="net-core-easiest-way-to-get-started"></a>.NET Core : la façon la plus simple de bien démarrer
+## <a name="net-core-easiest-way-to-get-started"></a>.NET Core : la façon la plus simple de bien démarrer
 
 Avant de créer l’image Docker, vous avez besoin d’une application à mettre en conteneur. Vous pouvez la créer sous Linux, MacOS ou Windows. La façon la plus rapide et la plus simple de procéder consiste à utiliser .NET Core.
 

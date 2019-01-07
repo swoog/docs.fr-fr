@@ -2,14 +2,13 @@
 title: Ajouts au format csproj pour .NET Core
 description: Découvrir les différences entre les fichiers csproj existants et les fichiers csproj .NET Core
 author: blackdwarf
-ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: f2ab476ee20ae90a84de7a6ccc76ce72738c1343
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bc81dc5c201fea6caa752248c2b59636bd7465ec
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143699"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286570"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Ajouts au format csproj pour .NET Core
 
@@ -175,7 +174,7 @@ L’exemple suivant spécifie les solutions de secours uniquement pour la cible 
 ```
 
 ## <a name="nuget-metadata-properties"></a>Propriétés de métadonnées NuGet
-Avec le passage à MSbuild, nous avons transféré les métadonnées d’entrée utilisées lors de la compression d’un package NuGet des fichiers *project.json* vers les fichiers *csproj*. Les entrées sont des propriétés MSBuild qui doivent donc être placées dans un groupe `<PropertyGroup>`. Voici la liste des propriétés qui sont utilisées comme entrées dans le processus de compression lors de l’utilisation de la commande `dotnet pack` ou de la cible MSBuild `Pack` qui fait partie du SDK. 
+Avec le passage à MSBuild, nous avons transféré les métadonnées d’entrée utilisées lors de la compression d’un package NuGet des fichiers *project.json* vers les fichiers *csproj*. Les entrées sont des propriétés MSBuild qui doivent donc être placées dans un groupe `<PropertyGroup>`. Voici la liste des propriétés qui sont utilisées comme entrées dans le processus de compression lors de l’utilisation de la commande `dotnet pack` ou de la cible MSBuild `Pack` qui fait partie du SDK. 
 
 ### <a name="ispackable"></a>IsPackable
 Valeur booléenne qui spécifie si le projet peut être compressé. La valeur par défaut est `true`. 

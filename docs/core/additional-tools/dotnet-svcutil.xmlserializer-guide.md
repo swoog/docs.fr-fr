@@ -1,18 +1,33 @@
+---
+title: Utiliser dotnet-svcutil.xmlserializer sur .NET Core
+description: Découvrez comment vous pouvez utiliser le package NuGet `dotnet-svcutil.xmlserializer` afin de prégénérer un assembly de sérialisation pour les projets .NET Core.
+author: huanwu
+ms.date: 11/27/2018
+ms.openlocfilehash: f5ffed47079a3ee122c7784d0c61c4d40461ba26
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235538"
+---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Utiliser dotnet-svcutil.xmlserializer sur .NET Core
+
+Le package NuGet `dotnet-svcutil.xmlserializer` peut prégénérer un assembly de sérialisation pour les projets .NET Core. Il prégénère un code de sérialisation C# pour les types dans l’application cliente qui sont utilisés par le contrat de service WCF et qui peuvent être sérialisés par XmlSerializer. Cela améliore les performances de démarrage de la sérialisation XML lors de la sérialisation ou de la désérialisation de ces types d’objets.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Les éléments suivants sont nécessaires pour faire fonctionner dotnet-svcutil.xmlserializer. 
-
-* [SDK .NET Core 2.1 ou version ultérieure](https://www.microsoft.com/net/download/dotnet-core/sdk-2.1.300)
-* [Runtime .NET Core 2.1 (ou version ultérieure)](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.0)
+* [SDK .NET Core 2.1](https://www.microsoft.com/net/download) ou version ultérieure
+* Votre éditeur de code favori
 
 Vous pouvez utiliser la commande `dotnet --info` pour savoir quelles versions du runtime et du kit SDK .NET Core sont déjà installées.
 
-Pour utiliser dotnet-svcutil.xmlserializer dans une application console .NET Core :
+## <a name="getting-started"></a>Bien démarrer
 
-1. Créez un service WCF nommé « MyWCFService » selon le modèle par défaut « WCF Service Application » dans .NET Framework.  Ajoutez l’attribut ```[XmlSerializerFormat]``` sur la méthode de service :
-    ```c#
+Pour utiliser `dotnet-svcutil.xmlserializer` dans une application console .NET Core :
+
+1. Créez un service WCF nommé « MyWCFService » selon le modèle par défaut « WCF Service Application » dans .NET Framework. Ajoutez l’attribut `[XmlSerializerFormat]` sur la méthode de service :
+
+   ```csharp
     [ServiceContract]
     public interface IService1
     {
@@ -21,34 +36,42 @@ Pour utiliser dotnet-svcutil.xmlserializer dans une application console .NET Cor
         string GetData(int value);
     }
     ```
-2. Créez une application de console .NET Core comme application cliente WCF qui cible netcoreapp 2.1 ; par exemple, créez une application nommée « MyWCFClient » avec la commande :
-    ```
+
+2. créez une application console .NET Core comme application cliente WCF ciblant .NET Core 2.1 ou versions ultérieures. Par exemple, créez une application nommée 'MyWCFClient' avec la commande suivante :
+
+    ```console
     dotnet new console --name MyWCFClient
     ```
-    Vérifiez que votre csproj cible netcoreapp 2.1. Pour cela, utilisez l’élément XML suivant dans votre fichier .csproj :
+
+    Pour garantir que votre projet cible .NET Core 2.1 ou version ultérieure, inspectez l’élément XML `TargetFramework` dans votre fichier projet :
+
     ```xml
     <TargetFramework>netcoreapp2.1</TargetFramework>
     ```
-3. Ajoutez une référence de package à System.ServiceModel.Http en exécutant la commande suivante :
-   
-   ```dotnet add package System.ServiceModel.Http -v 4.5.0```
+
+3. Ajoutez une référence de package à `System.ServiceModel.Http` en exécutant la commande suivante :
+
+    ```console
+    dotnet add package System.ServiceModel.Http
+    ```
 
 4. Ajoutez le code du client WCF :
+
     ```csharp
     using System.ServiceModel;
-    
-    class Program
-    {
-        static void Main(string[] args)
+
+        class Program
         {
-            var myBinding = new BasicHttpBinding();
-            var myEndpoint = new EndpointAddress("http://localhost:2561/Service1.svc"); //Fill your service url here
-            var myChannelFactory = new ChannelFactory<IService1>(myBinding, myEndpoint);
-            IService1 client = myChannelFactory.CreateChannel();
-            string s = client.GetData(1);
-            ((ICommunicationObject)client).Close();
+            static void Main(string[] args)
+            {
+                var myBinding = new BasicHttpBinding();
+                var myEndpoint = new EndpointAddress("http://localhost:2561/Service1.svc"); //Fill your service url here
+                var myChannelFactory = new ChannelFactory<IService1>(myBinding, myEndpoint);
+                IService1 client = myChannelFactory.CreateChannel();
+                string s = client.GetData(1);
+                ((ICommunicationObject)client).Close();
+            }
         }
-    }
 
     [ServiceContract]
     public interface IService1
@@ -58,17 +81,21 @@ Pour utiliser dotnet-svcutil.xmlserializer dans une application console .NET Cor
         string GetData(int value);
     }
     ```
-5. Modifiez le fichier .csproj et ajoutez une référence au package dotnet-svcutil.xmlserializer. Exemple :
 
-    i. Exécutez la commande : `dotnet add package dotnet-svcutil.xmlserializer -v 1.0.0`.
+5. Ajoutez une référence au package `dotnet-svcutil.xmlserializer` en exécutant la commande suivante :
+  
+    ```console
+    dotnet add package dotnet-svcutil.xmlserializer
+    ```
 
-    ii. Ajoutez les lignes suivantes dans MyWCFClient.csproj :
+    L’exécution de la commande doit ajouter à votre fichier projet une entrée similaire à ceci :
+  
     ```xml
     <ItemGroup>
       <DotNetCliToolReference Include="dotnet-svcutil.xmlserializer" Version="1.0.0" />
     </ItemGroup>
     ```
 
-6. Générez l’application en exécutant `dotnet build`. Si tout fonctionne, un assembly nommé MyWCFClient.XmlSerializers.dll est généré dans le dossier de sortie. Des avertissements s’affichent dans la sortie de build si l’outil n’est pas parvenu à générer l’assembly.
+6. Générez l’application en exécutant `dotnet build`. Si tout fonctionne, un assembly nommé *MyWCFClient.XmlSerializers.dll* est généré dans le dossier de sortie. Si l’outil n’est pas parvenu à générer l’assembly, des avertissements s’affichent dans la sortie de build.
 
-7. Démarrez le service WCF, par exemple, en exécutant http://localhost:2561/Service1.svc dans le navigateur. Lancez ensuite l’application cliente, qui chargera et utilisera automatiquement les sérialiseurs prégénérés à l’exécution.
+7. Démarrez le service WCF, par exemple, en exécutant `http://localhost:2561/Service1.svc` dans le navigateur. Lancez ensuite l’application cliente, qui chargera et utilisera automatiquement les sérialiseurs prégénérés à l’exécution.

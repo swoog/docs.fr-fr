@@ -1,15 +1,14 @@
 ---
-title: Commande dotnet vstest - Interface CLI .NET Core
+title: Commande dotnet vstest
 description: La commande dotnet vstest permet de générer un projet et l’ensemble de ses dépendances.
 author: guardrex
-ms.author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 84b9d9eebfbf20fefe8153dd3ae9bec0f34986c8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696336"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169015"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 

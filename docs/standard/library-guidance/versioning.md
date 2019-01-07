@@ -3,13 +3,13 @@ title: Gestion de version et bibliothèques .NET
 description: Meilleures pratiques recommandées pour la gestion de version des bibliothèques .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144557"
+ms.locfileid: "53169597"
 ---
 # <a name="versioning"></a>Gestion de version
 
@@ -77,12 +77,13 @@ La version du fichier d’assembly est utilisée pour afficher une version de fi
 
 ![Explorateur Windows](./media/versioning/win-properties.png "Explorateur Windows")
 
-> [!NOTE]
-> Un avertissement de génération inoffensive est déclenché si cette version n’adopte pas le format `Major.Minor.Build.Revision`. Vous pouvez ignorer cet avertissement sans risque.
-
 **✔️ À ENVISAGER** : Inclure un numéro de build d’intégration continue en tant que révision AssemblyFileVersion.
 
 > Par exemple, vous générez la version 1.0.0 de votre projet, et comme le numéro de build d’intégration continue est 99, votre AssemblyFileVersion est 1.0.0.99.
+
+**✔️ À FAIRE** : utiliser le format `Major.Minor.Build.Revision` pour la version du fichier.
+
+> Même si la version du fichier n’est jamais utilisée par .NET, [Windows exige une version du fichier](/windows/desktop/menurc/versioninfo-resource) au format `Major.Minor.Build.Revision`. Un avertissement est généré si la version n’utilise pas ce format.
 
 ### <a name="assembly-informational-version"></a>Version des informations sur l'assembly
 
@@ -91,6 +92,9 @@ La version des informations sur l’assembly est utilisée pour enregistrer des 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> Les versions antérieures de Visual Studio déclenchent un avertissement de build si cette version n’utilise pas le format `Major.Minor.Build.Revision`. Vous pouvez ignorer cet avertissement sans risque.
 
 **❌ À ÉVITER** : Définir vous-même la version des informations sur l’assembly.
 

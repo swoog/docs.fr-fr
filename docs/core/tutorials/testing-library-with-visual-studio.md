@@ -7,15 +7,13 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom:
-- vs-dotnet
-- seodoc18
-ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: vs-dotnet, seodoc18
+ms.openlocfilehash: 9e680921a882ab1c974a7546a6e91a892288db8d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144895"
+ms.locfileid: "53170793"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Test d’une bibliothèque de classes avec .NET Core dans Visual Studio 2017
 
@@ -30,14 +28,14 @@ Pour créer le projet de test unitaire, procédez comme suit :
 
 1. Dans la boîte de dialogue **Ajouter un nouveau projet**, sélectionnez le nœud **Visual C#**. Ensuite, sélectionnez le nœud **.NET Core** puis choisissez le modèle de projet **Projet de test MSTest (.NET Core)**. Dans la zone de texte **Nom**, entrez « StringLibraryTest » comme nom de projet. Sélectionnez **OK** pour créer le projet de test unitaire.
 
-   ![Boîte de dialogue Ajouter un nouveau projet](./media/testing-library-with-visual-studio/testproject.png)
+   ![Boîte de dialogue Ajouter un nouveau projet avec projet de test unitaire affiché - C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
    > [!NOTE]  
    > Outre un projet de test MSTest, vous pouvez utiliser Visual Studio pour créer un projet de test xUnit pour .NET Core.
 
 1. Visual Studio crée le projet et ouvre le fichier *UnitTest1.cs* dans la fenêtre de code.
 
-   ![Fenêtre de code Visual Studio montrant la classe du projet de test unitaire UnitTest1 par défaut et la méthode TestMethod1](./media/testing-library-with-visual-studio/unittestwindow.png)
+   ![Fenêtre de code Visual Studio du test unitaire avec la classe de projet et la méthode - C#](./media/testing-library-with-visual-studio/unit-test-editor-window.png)
 
    Le code source créé par le modèle de test unitaire effectue les opérations suivantes :
 
@@ -49,24 +47,24 @@ Pour créer le projet de test unitaire, procédez comme suit :
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Dépendances** du projet **StringLibraryTest** puis sélectionnez **Ajouter une référence** dans le menu contextuel.
 
-   ![Menu contextuel des dépendances de StringLibraryTest](./media/testing-library-with-visual-studio/addreference.png)
+   ![Menu contextuel des dépendances de StringLibraryTest - C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Dans la boîte de dialogue **Gestionnaire de références**, développez le nœud **Projets**, cochez la case en regard de **StringLibrary**. L’ajout d’une référence à l’assembly `StringLibrary` permet au compilateur de trouver les méthodes **StringLibrary**. Sélectionnez le bouton **OK**. Ceci ajoute une référence à votre projet de bibliothèque de classes `StringLibrary`.
 
-   ![Gestionnaire de références](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Boîte de dialogue Ajouter une référence de projet dans Visual Studio](./media/testing-library-with-visual-studio/project-reference-manager.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Dans l’**Explorateur de solutions**, ouvrez le menu contextuel du nœud de la solution **ClassLibraryProjects** et sélectionnez **Ajouter** > **Nouveau projet**.
 
 1. Dans la boîte de dialogue **Ajouter un nouveau projet**, sélectionnez le nœud **Visual Basic**. Ensuite, sélectionnez le nœud **.NET Core** puis choisissez le modèle de projet **Projet de test MSTest (.NET Core)**. Dans la zone de texte **Nom**, entrez « StringLibraryTest » comme nom de projet. Sélectionnez **OK** pour créer le projet de test unitaire.
 
-   ![Boîte de dialogue Ajouter un nouveau projet](./media/testing-library-with-visual-studio/vb-testproject.png)
+   ![Boîte de dialogue Ajouter un nouveau projet avec projet de test unitaire affiché - Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
    > [!NOTE]  
    > Outre un projet de test MSTest, vous pouvez utiliser Visual Studio pour créer un projet de test xUnit pour .NET Core.
 
 1. Visual Studio crée le projet et ouvre le fichier *UnitTest1.vb* dans la fenêtre de code.
 
-   ![Fenêtre de code Visual Studio montrant la classe du projet de test unitaire UnitTest1 par défaut et la méthode TestMethod1](./media/testing-library-with-visual-studio/vb-unittestwindow.png)
+   ![Fenêtre de code Visual Studio du test unitaire avec la classe de projet et la méthode - Visual Basic](./media/testing-library-with-visual-studio/vb-unit-test-editor-window.png)
 
    Le code source créé par le modèle de test unitaire effectue les opérations suivantes :
 
@@ -78,11 +76,11 @@ Pour créer le projet de test unitaire, procédez comme suit :
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le nœud **Dépendances** du projet **StringLibraryTest** puis sélectionnez **Ajouter une référence** dans le menu contextuel.
 
-   ![Menu contextuel des dépendances de StringLibraryTest](./media/testing-library-with-visual-studio/addreference.png)
+   ![Menu contextuel des dépendances de StringLibraryTest](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
 1. Dans la boîte de dialogue **Gestionnaire de références**, développez le nœud **Projets**, cochez la case en regard de **StringLibrary**. L’ajout d’une référence à l’assembly `StringLibrary` permet au compilateur de trouver les méthodes **StringLibrary**. Sélectionnez le bouton **OK**. Ceci ajoute une référence à votre projet de bibliothèque de classes `StringLibrary`.
 
-   ![Gestionnaire de références](./media/testing-library-with-visual-studio/referencemanager.png)
+   ![Boîte de dialogue Ajouter une référence de projet dans Visual Studio - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
 
 ## <a name="adding-and-running-unit-test-methods"></a>Ajout et exécution de méthodes de test unitaire
@@ -117,7 +115,7 @@ Pour créer les méthodes de test:
 
 1. Dans la barre de menus, sélectionnez **Fichier** > **Enregistrer UnitTest1.cs sous**. Dans la boîte de dialogue **Enregistrer le fichier sous**, cliquez sur la flèche à côté du bouton **Enregistrer**, puis choisissez **Enregistrer avec l’encodage**.
 
-   ![Boîte de dialogue Enregistrer le fichier sous](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Boîte de dialogue Enregistrer sous dans Visual Studio - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. Dans la fenêtre de code *UnitTest1.vb*, remplacez le code par le code suivant :
 
@@ -127,20 +125,20 @@ Pour créer les méthodes de test:
 
 1. Dans la barre de menus, sélectionnez **Fichier** > **Enregistrer UnitTest1.vb sous**. Dans la boîte de dialogue **Enregistrer le fichier sous**, cliquez sur la flèche à côté du bouton **Enregistrer**, puis choisissez **Enregistrer avec l’encodage**.
 
-   ![Boîte de dialogue Enregistrer le fichier sous](./media/testing-library-with-visual-studio/savefileas.png)
+   ![Boîte de dialogue Enregistrer sous dans Visual Studio - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. Dans la boîte de dialogue **Confirmer l’enregistrement sous**, sélectionnez le bouton **Oui** pour enregistrer le fichier.
 
 1. Dans la boîte de dialogue **Options d’enregistrement avancées**, sélectionnez **Unicode (UTF-8 avec signature) - Page de codes 65001** dans la liste déroulante **Encodage**, puis sélectionnez **OK**.
 
-   ![Boîte de dialogue Options d’enregistrement avancées](./media/testing-library-with-visual-studio/advancedsaveoptions.png)
+   ![Boîte de dialogue Options d’enregistrement avancées dans Visual Studio](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    Si vous ne parvenez pas à enregistrer votre code source dans un fichier encodé en UTF-8, Visual Studio peut l’enregistrer en tant que fichier ASCII. Dans ce cas, le runtime ne décode pas correctement les caractères UTF-8 en dehors de la plage ASCII, et les résultats des tests ne seront pas exacts.
 
 1. Dans la barre de menus, sélectionnez **Test** > **Exécuter** > **Tous les Tests**. La fenêtre **Explorateur de tests** s’ouvre et montre que les tests ont réussi. Les trois tests sont listés dans la section **Tests réussis** et la section **Résumé** indique le résultat de la série de tests.
 
-   ![Fenêtre Explorateur de tests](./media/testing-library-with-visual-studio/firsttest.png)
+   ![Fenêtre Explorateur de tests avec tests réussis](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
 ## <a name="handling-test-failures"></a>Gestion des échecs des tests
 
@@ -159,11 +157,11 @@ Votre série de tests n’a rencontré aucun échec : changez-la légèrement d
    ```
 1. Exécutez le test en sélectionnant **Test** > **Exécuter** > **Tous les Tests** dans la barre de menus. La fenêtre **Explorateur de tests** indique que deux tests ont réussi et qu’un test a échoué.
 
-   ![Fenêtre Explorateur de tests](./media/testing-library-with-visual-studio/failedtest.png)
+   ![Fenêtre Explorateur de tests avec tests ayant échoué](./media/testing-library-with-visual-studio/failed-test-window.png)
 
 1. Dans la section **Tests ayant échoué**, sélectionnez le test ayant échoué, `TestDoesNotStartWith`. La fenêtre **Explorateur de tests** affiche le message généré par l’assertion : « Échec de Assert.IsFalse. « Erreur » : false ; réel : True » était attendu ». En raison de l’échec, toutes les chaînes dans le tableau après « Error » n’ont pas été testées.
 
-   ![Fenêtre Explorateur de tests montrant l’échec de l’assertion IsFalse](./media/testing-library-with-visual-studio/failedtestdetail.png)
+   ![Fenêtre Explorateur de tests montrant l’échec de l’assertion IsFalse](./media/testing-library-with-visual-studio/failed-test-detail.png)
 
 1. Supprimez le code que vous avez ajouté (`"Error", `) et réexécutez le test. Les tests réussissent à nouveau.
 
@@ -175,11 +173,11 @@ Pour tester la version Release :
 
 1. Dans la barre d’outils de Visual Studio, modifiez la configuration de build de **Debug** à **Release**.
 
-   ![Barre d’outils de Visual Studio](./media/testing-library-with-visual-studio/toolbar.png)
+   ![Barre d’outils Visual Studio avec version Release mise en surbrillance](./media/testing-library-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **StringLibrary** et sélectionnez **Générer** dans le menu contextuel pour recompiler la bibliothèque.
 
-   ![Menu contextuel de StringLibrary](./media/testing-library-with-visual-studio/buildlibrary.png)
+   ![Menu contextuel de StringLibrary avec commande build](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
 1. Exécutez les tests unitaires en sélectionnant **Test** > **Exécuter** > **Tous les Tests** dans la barre de menus. Les tests réussissent.
 

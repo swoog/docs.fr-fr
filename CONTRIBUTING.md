@@ -39,11 +39,11 @@ Vous pouvez également choisir des problèmes existants pour lesquels les contri
 
 Vous pouvez également consulter la liste de nos [problèmes ouverts](https://github.com/dotnet/docs/issues) et vous porter volontaire pour travailler sur ceux qui vous intéressent. Nous utilisons l’étiquette [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) pour signaler les problèmes auxquels vous pouvez apporter votre contribution. 
 
-**Étape 2 :** dupliquez les référentiels `/dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` si nécessaire et créez une branche pour vos modifications.
+**Étape 2 :** dupliquez les référentiels `/dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` si nécessaire et créez une branche pour vos modifications.
 
 Pour les modifications mineures, vous pouvez utiliser l’interface web de GitHub. Cliquez simplement sur le bouton **Edit the file in your fork of this project** (Modifier le fichier dans la branche de ce projet) du fichier que vous souhaitez modifier. GitHub crée la nouvelle branche lorsque vous envoyez les modifications.
 
-**Étape 3 :** appliquez les modifications sur cette nouvelle branche.
+**Étape 3 :** appliquez les modifications sur cette nouvelle branche.
 
 S’il s’agit d’une nouvelle rubrique, vous pouvez utiliser ce [fichier de modèle](./styleguide/template.md) comme point de départ. Il contient les recommandations rédactionnelles et explique aussi les métadonnées nécessaires pour chaque article, comme les informations sur l’auteur.
 
@@ -66,7 +66,9 @@ Veillez à respecter la syntaxe Markdown appropriée. Pour plus d’informations
             /porting-overview
                 portability_report.png
 
-**Étape 4 :** Soumettez une demande de tirage de votre branche à `dotnet/docs/master`.
+**Étape 4 :** Soumettez une demande de tirage (pull request) de votre branche à `dotnet/docs/master`.
+
+Votre demande de tirage doit *toujours* cibler la branche principale. Vous ne devez *jamais* ouvrir une demande de tirage qui cible la branche active.
 
 Chaque demande de tirage devrait généralement résoudre un problème à la fois. La demande de tirage peut modifier un ou plusieurs fichiers. Si vous gérez plusieurs correctifs sur des fichiers différents, il est préférable d’utiliser des demandes de tirage distinctes.
 

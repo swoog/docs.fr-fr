@@ -1,14 +1,14 @@
 ---
-title: Commande dotnet nuget delete - Interface CLI .NET Core
+title: Commande dotnet nuget delete
 description: La commande nuget-dotnet-delete supprime ou retire un package du serveur.
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 451352ea652b77e44dcaf731d5b6cce230d1ef78
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126833"
+ms.locfileid: "53168310"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -62,7 +62,7 @@ La commande `dotnet nuget delete` supprime ou retire un package du serveur. Pour
 
 * **`--interactive`**
 
-  Autorise la commande pour bloquer et exige une action manuelle pour des opérations comme l'authentification. Option disponible à partir du kit SDK .NET Core 2.2.
+  Autorise la commande pour bloquer et exige une action manuelle pour des opérations comme l'authentification. Option disponible à partir du SDK .NET Core 2.2.
 
 * **`-k|--api-key <API_KEY>`**
 

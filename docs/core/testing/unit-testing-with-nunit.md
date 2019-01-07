@@ -3,12 +3,13 @@ title: Effectuer des tests unitaires de C# avec NUnit et .NET Core
 description: Apprenez les concepts des tests unitaires dans C# et .NET Core de manière interactive en créant un exemple de solution pas à pas à l’aide de dotnet test et de NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.openlocfilehash: d33a223a5cfc7f40f251175a4e88076976bd63ed
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 80c831a6d8ab9aa35435d0ff8f13334f7d169a3a
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146946"
+ms.locfileid: "53169026"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Effectuer des tests unitaires de C# avec NUnit et .NET Core
 
@@ -16,7 +17,7 @@ Ce didacticiel vous guide pas à pas dans la création d’un exemple de solutio
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [SDK .NET Core 2.1](https://www.microsoft.com/net/download) ou versions ultérieures.
+- [Kit SDK .NET Core 2.1](https://www.microsoft.com/net/download) (ou version ultérieure).
 - Un éditeur de texte ou un éditeur de code de votre choix.
 
 ## <a name="creating-the-source-project"></a>Création du projet source

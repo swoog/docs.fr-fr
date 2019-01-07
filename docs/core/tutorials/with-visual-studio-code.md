@@ -1,15 +1,15 @@
 ---
-title: Bien démarrer avec C# et Visual Studio Code - Guide C#
+title: Prise en main de C# et Visual Studio Code
 description: Découvrez comment créer et déboguer votre première application .NET Core en C# à l’aide de Visual Studio Code.
 author: kendrahavens
-ms.author: mairaw
 ms.date: 12/05/2018
-ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: bd1e5bf9df929c2c38f737ec3112d3687dba877c
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129595"
+ms.locfileid: "53168973"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Bien démarrer avec C# et Visual Studio Code
 
@@ -31,20 +31,20 @@ Commençons par un programme « Hello World » simple sur .NET Core :
     * Cliquez sur l’icône Explorer dans le menu de gauche, puis sur **Ouvrir le dossier**.
     * Sélectionnez **Fichier** > **Ouvrir le dossier** dans le menu principal pour ouvrir le dossier dans lequel vous souhaitez que votre projet C# se trouve et cliquez sur **Sélectionner le dossier**. Dans notre exemple, nous créons un dossier pour notre projet nommé *HelloWorld*.
 
-      ![VSCodeOpenFolder](media/with-visual-studio-code/vscodeopenfolder.png)
+      ![Ouvrir un dossier Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
 2. Initialiser un projet C# :
     * Ouvrez le terminal intégré à partir de Visual Studio Code en sélectionnant **Vue** > **Terminal intégré** dans le menu principal.
     * Dans la fenêtre de Terminal, tapez `dotnet new console`.
     * Cette commande crée un fichier `Program.cs` dans votre dossier avec un simple programme « Hello World » déjà écrit, ainsi qu’un fichier projet C# nommé `HelloWorld.csproj`.
 
-      ![La nouvelle commande dotnet](media/with-visual-studio-code/dotnetnew.png)
+      ![La nouvelle commande dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
 3. Résolution des ressources de génération :
 
     * Pour **.NET Core 1.x**, tapez `dotnet restore`. Exécuter `dotnet restore` vous donne accès aux packages .NET Core qui sont nécessaires pour générer votre projet.
 
-      ![La commande dotnet restore](media/with-visual-studio-code/dotnetrestore.png)
+      ![La commande dotnet restore](media/with-visual-studio-code/dotnet-restore-command.png)
 
       [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Commençons par un programme « Hello World » simple sur .NET Core :
 
     * Tapez `dotnet run`.
 
-      ![La commande dotnet run](media/with-visual-studio-code/dotnetrun.png)
+      ![La commande dotnet run](media/with-visual-studio-code/dotnet-run-command.png)
 
 Vous pouvez également regarder un court didacticiel vidéo pour plus d’informations sur la configuration sur [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) ou [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
@@ -60,7 +60,7 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 
 1. Ouvrez *Program.cs* en cliquant dessus. La première fois que vous ouvrez un fichier C# dans Visual Studio Code, [OmniSharp](https://www.omnisharp.net/) se charge dans l’éditeur.
 
-    ![Ouvrez le fichier Program.cs](media/with-visual-studio-code/opencs.png)
+    ![Ouvrez le fichier Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
 2. Visual Studio Code doit vous inviter à ajouter les ressources manquantes pour générer et déboguer votre application. Sélectionnez **Oui**.
 
@@ -68,22 +68,22 @@ Vous pouvez également regarder un court didacticiel vidéo pour plus d’inform
 
 3. Pour ouvrir la vue de débogage, cliquez sur l’icône de débogage dans le menu de gauche.
 
-    ![Ouvrez l'onglet Déboguer](media/with-visual-studio-code/opendebug.png)
+    ![Ouvrir l’onglet Déboguer dans Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
 4. Cherchez la flèche verte en haut du volet. Assurez-vous que `.NET Core Launch (console)` est sélectionné dans la liste déroulante à côté du volet.
 
-    ![Sélection de .NET Core](media/with-visual-studio-code/selectcore.png)
+    ![Sélection de .NET Core dans Visual Studio Code](media/with-visual-studio-code/select-net-core.png)
 
 5. Ajoutez un point d’arrêt à votre projet en cliquant sur la **marge de l’éditeur**, qui est l’espace à gauche des numéros de ligne dans l’éditeur, à côté de la ligne 9, ou déplacez le curseur texte vers la ligne 9 dans l’éditeur et appuyez sur <kbd>F9</kbd>.
 
-    ![Définition d'un point d'arrêt](media/with-visual-studio-code/setbreakpoint.png)
+    ![Définition d'un point d'arrêt](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. Pour démarrer le débogage, sélectionnez <kbd>F5</kbd> ou la flèche verte. Le débogueur arrête l’exécution de votre programme lorsqu’il atteint le point d’arrêt que vous avez défini à l’étape précédente.
     * Pendant le débogage, vous pouvez afficher vos variables locales dans le volet supérieur gauche ou utiliser la console de débogage.
 
 7. Sélectionnez la flèche bleue en haut pour continuer le débogage, ou le carré rouge en haut pour l’arrêter.
 
-    ![Exécuter et déboguer](media/with-visual-studio-code/rundebug.png)
+    ![Exécution et débogage dans Visual Studio Code](media/with-visual-studio-code/run-debug-vs-code.png)
 
 > [!TIP]
 > Pour obtenir plus d’informations et de conseils de dépannage sur le débogage de .NET Core avec OmniSharp dans Visual Studio Code, consultez [Instructions de configuration du débogueur .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).

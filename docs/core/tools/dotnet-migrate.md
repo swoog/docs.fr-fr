@@ -1,15 +1,13 @@
 ---
-title: Commande dotnet migrate - Interface CLI .NET Core
+title: Commande dotnet migrate
 description: La commande dotnet migrate permet de migrer un projet et l’ensemble de ses dépendances.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/25/2018
-ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 73e0169e64be4b55e10127ecca0101885061767e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697103"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170741"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 

@@ -3,12 +3,12 @@ title: Déboguer une application .NET Core Hello World avec Visual Studio 2017
 description: Découvrez comment déboguer une application Hello World écrite en C# ou Visual Basic avec Visual Studio 2017.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df153740e492b33c91b4cfc2f148a4113f1ab5d0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147526"
+ms.locfileid: "53170663"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Déboguer une application Hello World .NET Core C# ou Visual Basic avec Visual Studio 2017
 
@@ -18,7 +18,7 @@ Jusqu’à présent, vous avez suivi la procédure [Générer une application C#
 
 *Débogage* et *Mise en production* sont deux des configurations de build par défaut de Visual Studio. La configuration de build actuelle s’affiche sur la barre d’outils. L’image suivante de la barre d’outils montre que Visual Studio est configuré pour compiler votre application en mode **Débogage**.
 
-   ![Barre d’outils de Visual Studio](./media/debugging-with-visual-studio/toolbar1.png)
+   ![Barre d’outils par défaut Visual Studio avec débogage mis en surbrillance](./media/debugging-with-visual-studio/visual-studio-toolbar-debug.png)
 
 Vous devez toujours commencer par tester votre programme en mode Débogage. Le mode Débogage désactive la plupart des optimisations du compilateur et fournit des informations plus détaillées pendant le processus de génération.
 
@@ -31,7 +31,7 @@ Exécutez votre programme en mode Débogage et essayez quelques fonctionnalités
 
    Définissez un point d’arrêt sur la ligne `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` en cliquant dans la marge de gauche de la fenêtre de code ou en choisissant l’élément de menu **Débogage** > **Basculer le point d’arrêt** avec la ligne sélectionnée. Comme le montre l’illustration suivante, Visual Studio affiche la ligne sur laquelle le point d’arrêt est défini en la mettant en surbrillance et en affichant un cercle rouge dans la marge de gauche.
 
-   ![Fenêtre Programme de Visual Studio avec un point d’arrêt défini](./media/debugging-with-visual-studio/setbreakpoint.png)
+   ![Fenêtre Programme de Visual Studio avec un point d’arrêt défini](./media/debugging-with-visual-studio/set-breakpoint-in-editor.png)
 
 1. Exécutez le programme en mode Debug en sélectionnant le bouton **HelloWorld** avec la flèche verte dans la barre d’outils, en appuyant sur F5 ou en choisissant **Débogage** > **Démarrer le débogage**.
 
@@ -49,11 +49,11 @@ Exécutez votre programme en mode Débogage et essayez quelques fonctionnalités
 
    La **fenêtre Exécution** affiche la valeur de la variable de chaîne et les propriétés de la valeur <xref:System.DateTime>. En outre, la valeur des variables est mise à jour dans les fenêtres **Automatiques** et **Variables locales**.
 
-   ![Fenêtre Automatique et fenêtre Exécution](./media/debugging-with-visual-studio/autosimmediate.png)
+   ![Fenêtre Automatique et fenêtre Exécution](./media/debugging-with-visual-studio/autos-immediate-window.png)
 
 1. Continuez l’exécution du programme en sélectionnant le bouton **Continuer** dans la barre d’outils ou en sélectionnant l’élément de menu **Débogage** > **Continuer**. Les valeurs affichées dans la fenêtre de console correspondent aux modifications que vous avez apportées dans la **fenêtre Exécution**.
 
-   ![Fenêtre de console montrant la valeur entrée « Jack » à l’invite « What is your name? », suivie de « Hello Gracie on 11/1/2016 at 11:59am »](./media/debugging-with-visual-studio/changed.png)
+   ![Fenêtre de console montrant la valeur Jack à l’invite What is your name?, suivie de Hello Gracie](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Appuyez sur n’importe quelle touche pour quitter l’application et terminer le mode Debug.
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
@@ -61,7 +61,7 @@ Exécutez votre programme en mode Débogage et essayez quelques fonctionnalités
 
    Définissez un point d’arrêt sur la ligne `Console.WriteLine(vbCrLf + $"Hello, {name}, on {currentDate:d} at {currentDate:t}!")` en cliquant dans la marge de gauche de la fenêtre de code ou en choisissant l’élément de menu **Débogage** > **Basculer le point d’arrêt** avec la ligne sélectionnée. Comme le montre l’illustration suivante, Visual Studio affiche la ligne sur laquelle le point d’arrêt est défini en la mettant en surbrillance et en affichant un cercle rouge dans la marge de gauche.
 
-   ![Fenêtre Programme de Visual Studio avec un point d’arrêt défini](./media/debugging-with-visual-studio/vb-setbreakpoint.png)
+   ![Fenêtre Programme de Visual Studio avec un point d’arrêt défini](./media/debugging-with-visual-studio/vb-set-breakpoint-in-editor.png)
 
 1. Exécutez le programme en mode Debug en sélectionnant le bouton **HelloWorld** avec la flèche verte dans la barre d’outils, en appuyant sur F5 ou en choisissant **Débogage** > **Démarrer le débogage**.
 
@@ -69,7 +69,7 @@ Exécutez votre programme en mode Débogage et essayez quelques fonctionnalités
 
 1. L’exécution du programme s’arrête lorsqu’il atteint le point d’arrêt et avant l’exécution de la méthode `Console.WriteLine`. La fenêtre **Automatique** affiche les valeurs des variables utilisées autour de la ligne actuelle. La fenêtre **Variables locales** (que vous pouvez afficher en cliquant sur l’onglet **Variables locales**) affiche les valeurs des variables définies dans la méthode en cours d’exécution.
 
-   ![Fenêtre Application de Visual Studio](./media/debugging-with-visual-studio/vb-break.png)
+   ![Fenêtre Application de Visual Studio au point d'arrêt](./media/debugging-with-visual-studio/vb-stop-at-breakpoint.png)
 
 1. Vous pouvez changer la valeur des variables pour voir comment cela affecte votre programme. Si la **fenêtre Exécution** n’est pas visible, affichez-la en choisissant l’élément de menu **Débogage** > **Fenêtres** > **Exécution**. La **fenêtre Exécution** vous permet d’interagir avec l’application que vous déboguez.
 
@@ -79,7 +79,7 @@ Exécutez votre programme en mode Débogage et essayez quelques fonctionnalités
 
 1. Continuez l’exécution du programme en sélectionnant le bouton **Continuer** dans la barre d’outils ou en sélectionnant l’élément de menu **Débogage** > **Continuer**. Les valeurs affichées dans la fenêtre de console correspondent aux modifications que vous avez apportées dans la **fenêtre Exécution**.
 
-   ![Fenêtre de console montrant les valeurs modifiées entrées dans la fenêtre Exécution](./media/debugging-with-visual-studio/changed.png)
+   ![Fenêtre de console montrant les valeurs modifiées entrées dans la fenêtre Exécution](./media/debugging-with-visual-studio/debug-changed-value.png)
 
 1. Appuyez sur n’importe quelle touche pour quitter l’application et terminer le mode Debug.
 ---
@@ -93,7 +93,7 @@ Pour définir un point d’arrêt conditionnel et voir ce qu’il se passe lorsq
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Cliquez avec le bouton droit sur le point rouge qui représente le point d’arrêt. Dans le menu contextuel, sélectionnez **Conditions** pour ouvrir la boîte de dialogue **Paramètres de point d’arrêt**. Cochez la case **Conditions**.
 
-   ![Panneau Paramètres de point d’arrêt](./media/debugging-with-visual-studio/breakpointsettings.png)
+   ![Éditeur montrant le panneau des paramètres de point d’arrêt - C#](./media/debugging-with-visual-studio/breakpoint-settings.png)
 
 1. Pour l’**expression conditionnelle**, remplacez « e.g. x == 5 » par ceci :
 
@@ -119,7 +119,7 @@ Pour définir un point d’arrêt conditionnel et voir ce qu’il se passe lorsq
    ? name == String.Empty
    ```
 
-   ![Fenêtre Exécution retournant une valeur true après exécution de l’instruction](./media/debugging-with-visual-studio/emptystring.png)
+   ![Fenêtre Exécution retournant une valeur true après exécution de l’instruction - C#](./media/debugging-with-visual-studio/immediate-window-output.png)
 
 1. Sélectionnez le bouton **Continuer** dans la barre d’outils pour continuer l’exécution du programme.
 
@@ -129,7 +129,7 @@ Pour définir un point d’arrêt conditionnel et voir ce qu’il se passe lorsq
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Cliquez avec le bouton droit sur le point rouge qui représente le point d’arrêt. Dans le menu contextuel, sélectionnez **Conditions** pour ouvrir la boîte de dialogue **Paramètres de point d’arrêt**. Cochez la case **Conditions**.
 
-   ![Panneau Paramètres de point d’arrêt](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
+   ![Éditeur montrant le panneau des paramètres de point d’arrêt - Visual Basic](./media/debugging-with-visual-studio/vb-breakpointsettings.png)
 
 1. Pour **l’expression conditionnelle**, remplacez « e.g. x = 5 » par ceci :
 
@@ -154,7 +154,7 @@ Pour définir un point d’arrêt conditionnel et voir ce qu’il se passe lorsq
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
-  ![Fenêtre Exécution retournant une valeur true après exécution de l’instruction](./media/debugging-with-visual-studio/vb-emptystring.png)
+  ![Fenêtre Exécution retournant une valeur true après exécution de l’instruction - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. Sélectionnez le bouton **Continuer** dans la barre d’outils pour continuer l’exécution du programme.
 
@@ -169,13 +169,13 @@ Visual Studio vous permet également de parcourir un programme ligne par ligne e
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 1. Dans la barre de menus, choisissez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio met en surbrillance et affiche une flèche en regard de la ligne suivante de l’exécution.
 
-   ![Fenêtre Visual Studio](./media/debugging-with-visual-studio/stepinto1.png)
+   ![Méthode pas à pas détaillée dans Visual Studio - C#](./media/debugging-with-visual-studio/step-into-method.png)
 
    À ce stade, la fenêtre **Automatique** montre que notre programme n’a défini qu’une seule variable, `args`. Comme vous n’avez passé aucun argument de ligne de commande au programme, sa valeur est un tableau de chaînes vides. En outre, Visual Studio a ouvert une fenêtre de console vide.
 
 1. Sélectionnez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio place maintenant en surbrillance la ligne suivante à exécuter. Comme le montre l’illustration, il lui a fallu moins d’une milliseconde pour exécuter le code entre la dernière instruction et celle-ci. `args` reste la seule variable déclarée et la fenêtre de console reste vide.
 
-   ![Fenêtre Visual Studio](./media/debugging-with-visual-studio/stepinto2.png)
+   ![Source de la méthode pas à pas détaillée dans Visual Studio - C#](./media/debugging-with-visual-studio/step-into-source-method.png)
 
 1. Sélectionnez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio met en surbrillance l’instruction qui inclut l’attribution de la variable `name`. La fenêtre **Automatiques** fenêtre montre que `name` est `null`, et la fenêtre de console affiche la chaîne « What is your name? ».
 
@@ -193,13 +193,13 @@ Visual Studio vous permet également de parcourir un programme ligne par ligne e
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Dans la barre de menus, choisissez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio met en surbrillance et affiche une flèche en regard de la ligne suivante de l’exécution.
 
-   ![Fenêtre Visual Studio](./media/debugging-with-visual-studio/vb-stepinto1.png)
+   ![Méthode pas à pas détaillée dans Visual Studio - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-method.png)
 
    À ce stade, comme vous n’avez passé aucun argument de ligne de commande au programme, la fenêtre **Automatique** qui affiche la valeur de la variable `args` est un tableau de chaînes vide. En outre, Visual Studio a ouvert une fenêtre de console vide.
 
 1. Sélectionnez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio place maintenant en surbrillance la ligne suivante à exécuter. Comme le montre l’illustration, il lui a fallu moins d’une milliseconde pour exécuter le code entre la dernière instruction et celle-ci. `args` reste la seule variable déclarée et la fenêtre de console reste vide.
 
-   ![Fenêtre Visual Studio](./media/debugging-with-visual-studio/vb-stepinto2.png)
+   ![Source de la méthode pas à pas détaillée dans Visual Studio - Visual Basic](./media/debugging-with-visual-studio/vb-step-into-source-method.png)
 
 1. Sélectionnez **Débogage** > **Pas à pas détaillé** ou appuyez sur la touche F11. Visual Studio met en surbrillance l’instruction qui inclut l’attribution de la variable `name`. La fenêtre **Automatiques** fenêtre montre que `name` est `Nothing`, et la fenêtre de console affiche la chaîne « What is your name? ».
 
@@ -222,7 +222,7 @@ Une fois que vous avez testé la version Debug de votre application, vous devez 
 
 Pour générer et tester la version Release de votre application console, changez la configuration de build dans la barre d’outils de **Debug** en **Release**.
 
-![Image](./media/debugging-with-visual-studio/toolbar2.png)
+![Barre d’outils par défaut Visual Studio avec débogage mis en surbrillance](./media/debugging-with-visual-studio/visual-studio-toolbar-release.png)
 
 Quand vous appuyez sur F5 ou que vous choisissez **Générer la solution** à partir du menu **Build**, Visual Studio compile la version Release de votre application. Vous pouvez la tester comme vous l’avez fait pour la version Debug de l’application.
 

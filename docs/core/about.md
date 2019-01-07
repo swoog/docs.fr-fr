@@ -2,22 +2,21 @@
 title: À propos de .NET Core
 description: Découvrez plus en détail .NET Core.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126976"
+ms.locfileid: "53170403"
 ---
 # <a name="about-net-core"></a>À propos de .NET Core
 
 .NET Core a les caractéristiques suivantes :
 
-- **Multiplateforme :** S’exécute sur les [systèmes d’exploitation](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS et Linux.
-- **Cohérent entre architectures :** Exécute votre code avec le même comportement sur plusieurs architectures, notamment x64, x86 et ARM.
-- **Outils de ligne de commande :** Intègre des outils de ligne de commande faciles qui peuvent être utilisés pour le développement local et dans des scénarios d’intégration continue.
+- **Multiplateforme :** s’exécute sur les [systèmes d’exploitation](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS et Linux.
+- **Cohérent entre architectures :** exécute votre code avec le même comportement sur plusieurs architectures, notamment x64, x86 et ARM.
+- **Outils de ligne de commande :**  intègre des outils de ligne de commande faciles qui peuvent être utilisés pour le développement local et dans des scénarios d’intégration continue.
 - **Souplesse de déploiement :** peut être inclus dans votre application ou installé côte à côte à l’échelle d’un utilisateur ou de l’ordinateur. Peut être utilisé avec des [conteneurs Docker](docker/index.md).
 - **Compatibilité :** .NET Core est compatible avec le .NET Framework, Xamarin et Mono via [.NET Standard](../standard/net-standard.md).
 - **Open Source :** la plateforme .NET Core est open source et utilise des licences MIT et Apache 2. .NET Core est un projet [.NET Foundation](https://dotnetfoundation.org/).

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041614"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779384"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Langage des expressions régulières - Aide-mémoire
 <a name="top"></a> Une expression régulière est un modèle que le moteur des expressions régulières tente de faire correspondre dans le texte d’entrée. Un modèle se compose d'un ou de plusieurs littéraux de caractère, opérateurs ou constructions.  Pour obtenir une brève présentation, consultez [Expressions régulières .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "44041614"
   
  [Caractères d’échappement](#character_escapes)  
  [Classes de caractères](#character_classes)  
- [Ancres](#atomic_zerowidth_assertions)  
+ [Ancres](#anchors)  
  [Constructions de regroupement](#grouping_constructs)  
  [Quantificateurs](#quantifiers)  
  [Constructions de référence arrière](#backreference_constructs)  
@@ -73,9 +73,9 @@ ms.locfileid: "44041614"
 |Classe de caractères|Description|Motif|Correspondances|  
 |---------------------|-----------------|-------------|-------------|  
 |`[` *groupe_caractères* `]`|Correspond à n'importe quel caractère unique de *groupe_caractères*. Par défaut, la correspondance respecte la casse.|`[ae]`|"a" dans "gras"<br /><br /> "a", "e" dans "laine"|  
-|`[^` *groupe_caractères* `]`|Négation : correspond à n'importe quel caractère unique qui ne se trouve pas dans *groupe_caractères*. Par défaut, les caractères de *groupe_caractères* respectent la casse.|`[^aei]`|"r", "g", "n" dans "règne"|  
-|`[` *premier* `-` *last* `]`|Plage de caractères : correspond à n'importe quel caractère unique dans la plage comprise entre *premier* et *dernier*.|`[A-Z]`|"A", "B" dans "AB123"|  
-|`.`|Caractère générique : correspond à tout caractère à l'exception de \n.<br /><br /> Pour faire correspondre un caractère littéral « point » (. ou `\u002E`), vous devez le faire précéder du caractère d'échappement (`\.`).|`a.e`|"ave" dans "navet"<br /><br /> "ate" dans "plate"|  
+|`[^` *groupe_caractères* `]`|Négation : correspond à n'importe quel caractère unique qui ne se trouve pas dans *groupe_caractères*. Par défaut, les caractères de *groupe_caractères* respectent la casse.|`[^aei]`|"r", "g", "n" dans "règne"|  
+|`[` *premier* `-` *last* `]`|Plage de caractères : correspond à n'importe quel caractère unique dans la plage comprise entre *premier* et *dernier*.|`[A-Z]`|"A", "B" dans "AB123"|  
+|`.`|Caractère générique : correspond à tout caractère à l'exception de \n.<br /><br /> Pour faire correspondre un caractère littéral « point » (. ou `\u002E`), vous devez le faire précéder du caractère d'échappement (`\.`).|`a.e`|"ave" dans "navet"<br /><br /> "ate" dans "plate"|  
 |`\p{` *name* `}`|Correspond à n'importe quel caractère unique de la catégorie générale Unicode ou du bloc nommé spécifié par *name*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|"M", "G" dans "Mardi Gras"<br /><br /> "Д", "Ж" dans "ДЖem"|  
 |`\P{` *name* `}`|Correspond à n'importe quel caractère unique qui ne se trouve pas dans la catégorie générale Unicode ou le bloc nommé spécifié par *name*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|"a", "r", "d", "i" dans "Mardi"<br /><br /> "e", "m" dans "ДЖem"|  
 |`\w`|Correspond à n'importe quel caractère alphabétique.|`\w`|"I", "D", "A", "1", "3" dans "ID A1.3"|  
@@ -87,7 +87,6 @@ ms.locfileid: "44041614"
   
  [Retour au début](#top)  
   
-<a name="atomic_zerowidth_assertions"></a>   
 ## <a name="anchors"></a>Ancres  
  Les ancres, ou assertions de largeur nulle atomiques, entraînent le succès ou l'échec d'une correspondance en fonction de la position actuelle dans la chaîne, mais elles n'entraînent pas l'avancement du moteur à travers la chaîne ou la consommation de caractères. Les métacaractères répertoriés dans le tableau suivant sont des ancres. Pour plus d'informations, consultez [Ancres](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
@@ -161,9 +160,9 @@ ms.locfileid: "44041614"
   
 |Construction d'alternative|Description|Motif|Correspondances|  
 |---------------------------|-----------------|-------------|-------------|  
-|<code>&#124;</code>|Correspond à tout élément séparé par le caractère barre verticale (&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" dans "this is the day. " "|  
+|<code>&#124;</code>|Correspond à tout élément séparé par le caractère barre verticale (&#124;).|<code>th(e&#124;is&#124;at)</code>|"the", "this" dans "this is the day. "|  
 |`(?(` *expression* `)` *oui* <code>&#124;</code> *non* `)`|Correspond à *oui* si le modèle d'expression régulière indiqué par *expression* correspond ; sinon, correspond à *no* (facultatif). *expression* est interprétée comme une assertion de largeur nulle.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|"A10", "910" dans "A10 C103 910"|  
-|`(?(` *nom* `)` *oui* <code>&#124;</code> *non* `)`|Correspond à *oui* si *nom*, un groupe de capture nommé ou numéroté, a une correspondance ; sinon, correspond à *non*(facultatif).|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, "Yiska playing.jpg" dans "Dogs.jpg "Yiska playing.jpg""|  
+|`(?(` *name* `)` *oui* <code>&#124;</code> *non* `)`|Correspond à *oui* si *nom*, un groupe de capture nommé ou numéroté, a une correspondance ; sinon, correspond à *non*(facultatif).|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, "Yiska playing.jpg" dans "Dogs.jpg "Yiska playing.jpg""|  
   
  [Retour au début](#top)  
   
@@ -179,7 +178,7 @@ ms.locfileid: "44041614"
 |`$&`|Remplace une copie de la totalité de la correspondance.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Remplace tout le texte de la chaîne d'entrée avant la correspondance.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
 |`$'`|Remplace tout le texte de la chaîne d'entrée après la correspondance.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
-|`$+`|Remplace le dernier groupe qui a été capturé.|`B+(C+)`|`$+`|"AABBCCDD"|AACCDD|  
+|`$+`|Remplace le dernier groupe qui a été capturé.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Remplace la chaîne d'entrée entière.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  
   
  [Retour au début](#top)  
@@ -224,4 +223,4 @@ ms.locfileid: "44041614"
 - [Classes d'expressions régulières](the-regular-expression-object-model.md)  
 - [Exemples d'expressions régulières](regular-expression-examples.md)  
 - [Expressions régulières - Aide-mémoire (téléchargement au format Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
-- [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+- [Expressions régulières - Aide-mémoire (téléchargement au format PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

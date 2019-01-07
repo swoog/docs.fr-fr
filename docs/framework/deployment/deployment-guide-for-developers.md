@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 72cf3e2e60f27ed4faac12882fcc17974601f6e6
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453474"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396992"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guide de déploiement du .NET Framework pour les développeurs
 Cette rubrique fournit des informations destinées aux développeurs qui souhaitent installer une version du .NET Framework (du .NET Framework 4.5 au [!INCLUDE[net_current](../../../includes/net-current-version.md)]) avec leurs applications.
@@ -192,7 +192,7 @@ InstallAware génère l’application Windows (APPX), Windows Installer (MSI), l
 dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 ```
 
- Vous pouvez utiliser des options de ligne de commande supplémentaires pour personnaliser l'installation. Exemple :
+ Vous pouvez utiliser des options de ligne de commande supplémentaires pour personnaliser l'installation. Par exemple :
 
 - Pour permettre aux utilisateurs de fermer les applications .NET Framework en cours d'exécution, afin de réduire le nombre de redémarrages système, basculez en mode passif et utilisez l'option `/showrmui` comme suit :
 
@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Détectez](#detecting-the-language-packs) si les modules linguistiques sont déjà installés sur l'ordinateur de l'utilisateur.
 
-- Si vous souhaitez contrôler le déploiement, lancez et suivez en mode silencieux le processus d’installation du .NET Framework (consultez [Guide pratique : connaître la progression dans le programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- Si vous souhaitez contrôler le déploiement, lancez et suivez en mode silencieux le processus d’installation du .NET Framework (consultez [Guide pratique pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
 
 - Si vous déployez le programme d'installation hors connexion, [chaînez les modules linguistiques séparément](#chain_langpack).
 
@@ -247,9 +247,8 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Version|Valeur du paramètre DWORD Release|
 |-------------|--------------------------------|
-|.NET Framework 4.7.2 installé sur Windows 10 avec la mise à jour d’octobre 2018|461814|
 |.NET Framework 4.7.2 installé sur la mise à jour d’avril 2018 de Windows 10 et sur Windows Server, version 1803|461808|
-|.NET Framework 4.7.2 installé sur toutes les versions de système d’exploitation, à l’exception de la mise à jour d’octobre 2018 de Windows 10, de la mise à jour d’avril 2018 de Windows 10 et de Windows Server, version 1803|461814|
+|.NET Framework 4.7.2 installé sur toutes les versions de système d’exploitation, à l’exception de la mise à jour d’avril 2018 de Windows 10 et de Windows Server, version 1803. Cela inclut la mise à jour Windows 10 d’octobre 2018. |461814|
 |.NET framework 4.7.1 installé sur Windows 10 Fall Creators Update et Windows Server, version 1709|461308|
 |.NET Framework 4.7.1 installé sur toutes les versions de système d’exploitation autres que Windows 10 Fall Creators Update et Windows Server, version 1709|461310|
 |.NET Framework 4.7 est installé sur Windows 10 Creators Update|460798|
@@ -360,7 +359,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |------------|-----------------|
 |**/CEIPConsent**|Remplace le comportement par défaut et envoie des commentaires anonymes à Microsoft pour améliorer les futurs déploiements. Cette option peut être utilisée uniquement si l'utilisateur accepte d'envoyer des commentaires anonymes à Microsoft lorsqu'il y est invité par le programme d'installation.|
 |**/chainingpackage** `packageName`|Spécifie le nom du fichier exécutable qui effectue le chaînage. Ces informations sont envoyées à Microsoft sous forme de commentaires anonymes pour améliorer les futurs déploiements.<br /><br /> Si le nom du package inclut des espaces, utilisez des guillemets doubles comme délimiteurs. Par exemple : **/chainingpackage "Lucerne Publishing"**. Pour obtenir un exemple de package de chaînage, consultez [Obtention d’informations sur la progression d’un package d’installation](https://go.microsoft.com/fwlink/?LinkId=181926) dans MSDN Library.|
-|**/LCID**  `LCID`<br /><br /> où `LCID` spécifie un identificateur de paramètres régionaux (consultez la liste des [langues prises en charge](#supported-languages))|Installe le module linguistique spécifié par `LCID` et force l'affichage de l'interface utilisateur dans cette langue à moins que le mode silencieux soit défini.<br /><br /> Pour le programme d'installation web, cette option installe de manière chaînée le module linguistique à partir du web. **Remarque :**  Utilisez cette option uniquement avec le programme d’installation web.|
+|**/LCID**  `LCID`<br /><br /> où `LCID` spécifie un identificateur de paramètres régionaux (consultez la liste des [langues prises en charge](#supported-languages))|Installe le module linguistique spécifié par `LCID` et force l'affichage de l'interface utilisateur dans cette langue à moins que le mode silencieux soit défini.<br /><br /> Pour le programme d'installation web, cette option installe de manière chaînée le module linguistique à partir du web. **Remarque :**  Utilisez cette option uniquement avec le programme d'installation web.|
 |**/log** `file` &#124; `folder`|Spécifie l'emplacement du fichier journal. L'emplacement par défaut est le répertoire temporaire du processus et le nom par défaut du fichier est basé sur le module. Si l'extension de fichier est .txt, un journal textuel est généré. Si vous spécifiez une autre extension ou aucune extension, un journal HTML est créé.|
 |**/msioptions**|Spécifie les options à transmettre pour des éléments .msi et .msp ; par exemple : `/msioptions "PROPERTY1='Value'"`.|
 |**/norestart**|Empêche le programme d'installation de redémarrer automatiquement. Si vous utilisez cette option, l’application de chaînage doit capturer le code de retour et gérer le redémarrage (consultez [Obtention d’informations sur la progression d’un package d’installation](https://go.microsoft.com/fwlink/?LinkId=179606) dans MSDN Library).|
@@ -409,4 +408,4 @@ Le tableau ci-dessous répertorie les modules linguistiques du .NET Framework di
 - [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md)  
 - [Résolution des problèmes liés aux installations et désinstallations bloquées du .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
 - [Réduction des redémarrages système lors des installations du .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
-- [Guide pratique : connaître la progression dans le programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Guide pratique pour pour obtenir la progression à partir du programme d’installation du .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

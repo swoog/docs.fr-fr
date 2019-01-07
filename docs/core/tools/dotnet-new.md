@@ -1,15 +1,13 @@
 ---
-title: Commande dotnet new - Interface CLI .NET Core
+title: Commande dotnet new
 description: La commande dotnet new crée des projets .NET Core basés sur le modèle spécifié.
-author: mairaw
-ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3a10aaa93af57e7beb86771e7d3b00b06fca14b2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131480"
+ms.locfileid: "53169681"
 ---
 # <a name="dotnet-new"></a>dotnet new
 

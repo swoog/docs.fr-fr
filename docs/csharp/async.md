@@ -1,15 +1,16 @@
 ---
-title: Programmation asynchrone
+title: Programmation asynchrone - C#
 description: Découvrez le modèle de programmation asynchrone au niveau du langage C# fourni par .NET Core.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126495"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612125"
 ---
 # <a name="asynchronous-programming"></a>Programmation asynchrone
 
@@ -225,7 +226,7 @@ Il ne faut pas oublier ce point.  Si `await` n’est pas utilisé dans le corps 
 
 Cette convention de .NET aide à différencier les méthodes synchrones et asynchrones. Notez que cela n’est pas obligatoire pour certaines méthodes qui ne sont pas explicitement appelées par votre code (par exemple, les gestionnaires d’événements et les méthodes de contrôleur web). L’attribution d’un nom explicite pour ces méthodes a moins d’importance.
 
-*   `async void`  **doit être utilisé uniquement pour les gestionnaires d’événements.**
+*   `async void` ** doit être utilisé uniquement pour les gestionnaires d’événements.**
 
 L’utilisation de `async void` est le seul moyen de permettre le fonctionnement des gestionnaires d’événements asynchrones, car les événements n’ont pas de types de retour (et ne peuvent donc pas utiliser les objets `Task` et `Task<T>`). Toute autre utilisation de la méthode `async void` ne suit pas le modèle TAP et peut être difficile à implémenter, comme expliqué ci-après :
 
@@ -264,5 +265,5 @@ L’objectif recommandé est d’atteindre une [transparence référentielle](ht
 ## <a name="other-resources"></a>Autres ressources
 
 * L’article [Async en détail](../standard/async-in-depth.md) fournit des informations supplémentaires sur le fonctionnement des tâches.
-* [Programmation asynchrone avec async et await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Programmation asynchrone avec async et await (C#)](./programming-guide/concepts/async/index.md)
 * Les vidéos [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) de Lucian Wischik sont une ressource très utile pour la programmation asynchrone.

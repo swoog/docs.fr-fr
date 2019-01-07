@@ -2,14 +2,14 @@
 title: Empaquetage de la distribution de .NET Core
 description: Découvrez comment empaqueter, nommer et versionner .NET Core pour la distribution.
 author: bleroy
-ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 41e8729d3058c2e3e1ea1cab9a8f28b3062bb93c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: be5767351ad1cdac15c73f718f67a0d120cf65b0
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145645"
+ms.locfileid: "53170416"
 ---
 # <a name="net-core-distribution-packaging"></a>Empaquetage de la distribution de .NET Core
 
@@ -68,14 +68,14 @@ Le dossier **shared** contient des frameworks. Un framework partagé fournit un 
 
 Le contrôle de version de .NET Core est basé sur les numéros de version `[major].[minor]` du composant runtime.
 La version du SDK utilise les mêmes numéros `[major].[minor]` et a un `[patch]` indépendant qui combine la sémantique des fonctionnalités et des correctifs pour le SDK.
-Par exemple, SDK version 2.2.302 est la deuxième version du correctif de la troisième version des fonctionnalités du SDK qui prend en charge le runtime 2.2.
+Par exemple : SDK version 2.2.302 est la deuxième version du correctif de la troisième version des fonctionnalités du SDK qui prend en charge le runtime 2.2.
 
 Le nom de certains packages inclut une partie du numéro de version. Ceci permet à l’utilisateur final d’installer une version spécifique.
 Le reste de la version n’est pas inclus dans le nom de la version. Ceci permet au Gestionnaire de package du système d’exploitation de mettre à jour les packages (par exemple d’installer automatiquement des correctifs de sécurité).
 
 Le tableau suivant indique les packages recommandés.
 
-| Name                                    | Exemple                | Cas d’usage : Installer...           | Contient           | Dépendances                                   | Version            |
+| Name                                    | Exemple                | Cas d'usage : Installer...           | Contient           | Dépendances                                   | Version            |
 |-----------------------------------------|------------------------|---------------------------------|--------------------|------------------------------------------------|--------------------|
 | dotnet-sdk-[major]                      | dotnet-sdk-2           | Dernier SDK pour la version majeure du runtime    |                    | dotnet-sdk-[major].[latestminor]               | \<version sdk>     |
 | dotnet-sdk-[major].[minor]              | dotnet-sdk-2.1         | Dernier SDK pour un runtime spécifique |                    | dotnet-sdk-[major].[minor].[latest sdk feat]xx | \<version sdk>     |

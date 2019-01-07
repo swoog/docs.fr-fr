@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144572"
+ms.locfileid: "53168934"
 ---
 # <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Créer une bibliothèque de classes .NET Standard avec C# et le kit SDK .NET Core dans Visual Studio 2017
 
@@ -29,7 +29,7 @@ Commencez par créer une solution pour votre projet de bibliothèque de classes 
 
 1. Dans la boîte de dialogue **Nouveau projet**, développez le nœud **Autres types de projets** et sélectionnez **Solutions Visual Studio**. Nommez la solution « ClassLibraryProjects » puis sélectionnez le bouton **OK**.
 
-   ![Boîte de dialogue Nouveau projet](./media/library-with-visual-studio/newproject.png)
+   ![Boîte de dialogue Nouveau projet avec nouvelle solution vide mise en surbrillance](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Création du projet de bibliothèque de classes
 
@@ -39,15 +39,15 @@ Créez votre projet de bibliothèque de classes :
 
 1. Dans la boîte de dialogue **Ajouter un nouveau projet**, développez le nœud **Visual C#**, puis sélectionnez le nœud **.NET Standard** et choisissez le modèle de projet **Bibliothèque de classes (.NET Standard)**. Dans la zone de texte **Nom**, entrez « StringLibrary » comme nom de projet. Sélectionnez **OK** pour créer le projet de bibliothèque de classes.
 
-   ![Boîte de dialogue Ajouter un nouveau projet](./media/library-with-visual-studio/libproject.png)
+   ![Boîte de dialogue Ajouter un nouveau projet bibliothèque](./media/library-with-visual-studio/add-new-library-project.png)
 
    Ensuite, la fenêtre de code s’ouvre dans l’environnement de développement Visual Studio.
 
-   ![Fenêtre d’application Visual Studio montrant le code du modèle de bibliothèque de classes par défaut](./media/library-with-visual-studio/stringlibrary.png)
+   ![Fenêtre d’application Visual Studio montrant le code du modèle de bibliothèque de classes par défaut](./media/library-with-visual-studio/string-library-project.png)
 
 1. Vérifiez que notre bibliothèque cible la version appropriée de .NET Standard. Dans la fenêtre **Explorateur de solutions**, cliquez avec le bouton droit sur le projet de bibliothèque, puis sélectionnez **Propriétés**. La zone de texte **framework cible** indique que nous ciblons .NET Standard 2.0.
 
-   ![Propriétés de projet pour la bibliothèque de classes](./media/library-with-visual-studio/properties.png)
+   ![Propriétés de projet pour la bibliothèque de classes](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Remplacez le code de la fenêtre de code par le code suivant et enregistrez le fichier :
 
@@ -57,7 +57,7 @@ Créez votre projet de bibliothèque de classes :
 
 1. Dans la barre de menus, sélectionnez **Générer** > **Générer la solution**. Le projet devrait être compilé sans erreur.
 
-   ![Volet de sortie indiquant que la génération a réussi](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Volet de sortie indiquant que la génération a réussi](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Étape suivante
 

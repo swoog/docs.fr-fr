@@ -4,12 +4,13 @@ description: Apprenez les concepts des tests unitaires dans C# et .NET Core de m
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: af2ae5e1b0f9e6146975c6838cca8b22837bb012
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507828"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168986"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>Effectuer des tests unitaires de C# dans .NET Core à l’aide de dotnet test et de xUnit
 

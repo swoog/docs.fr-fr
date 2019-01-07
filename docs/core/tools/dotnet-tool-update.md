@@ -1,15 +1,13 @@
 ---
-title: Commande dotnet tool update - CLI .NET Core
+title: Commande dotnet tool update
 description: La commande dotnet tool update met à jour l’outil global .NET Core spécifié sur votre machine.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2716f7f88ffe364bebacf970d7152f5509edc888
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069391"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169734"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 

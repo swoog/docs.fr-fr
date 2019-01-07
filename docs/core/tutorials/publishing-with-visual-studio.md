@@ -4,13 +4,13 @@ description: La publication crée l’ensemble des fichiers qui sont nécessaire
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/05/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: e44ae69c9cd8f0767e369791737cef9b4c33f963
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 8d6d5cc7766334e10e7ae3a70af0c309c05bc98b
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036303"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169116"
 ---
 # <a name="publish-your-hello-world-application-with-visual-studio-2017"></a>Publier votre application Hello World avec Visual Studio 2017
 
@@ -20,14 +20,14 @@ Pour publier et exécuter votre application :
 
 1. Vérifiez que Visual Studio génère la version release de votre application. Si nécessaire, modifiez le paramètre de configuration de la génération dans la barre d’outils de **Debug** en **Release**.
 
-   ![Barre d’outils de Visual Studio](media/publishing-with-visual-studio/toolbar.png)
+   ![Barre d’outils Visual Studio avec version Release sélectionnée](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
 1. Cliquez avec le bouton droit sur le projet **HelloWorld** (et non pas sur la solution HelloWorld) et sélectionnez **Publier** dans le menu. Vous pouvez également sélectionner **Publier HelloWorld** à partir du menu **Build** principal de Visual Studio.
 
-   ![Barre d’outils de Visual Studio](media/publishing-with-visual-studio/publish1.png)
+   ![Menu contextuel Publier de Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
 
 
-   ![Barre d’outils de Visual Studio](media/publishing-with-visual-studio/publishwindow.png)
+   ![Fenêtre Publier de Visual Studio](media/publishing-with-visual-studio/publish-settings-window.png)
 
 1. Ouvrez une fenêtre de console. Par exemple, dans la zone de texte **Tapez ici pour effectuer une recherche** dans la barre des tâches Windows, entrez `Command Prompt` (ou `cmd` en abrégé) et ouvrez une fenêtre de console en sélectionnant l’application de poste de travail **Invite de commandes** ou en appuyant sur Entrée si elle est sélectionnée dans les résultats de la recherche.
 
@@ -49,7 +49,7 @@ Pour publier et exécuter votre application :
 
          Fichier de configuration du runtime de l’application. Il identifie la version de .NET Core sur laquelle votre application doit être exécutée. Pour plus d’informations, consultez [Fichiers de configuration du runtime](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
 
-   ![Fenêtre de console affichant les fichiers publiés](media/publishing-with-visual-studio/publishedfiles.png)
+   ![Fenêtre de console affichant les fichiers publiés](media/publishing-with-visual-studio/published-files-output.png)
 
 Le processus de publication crée un déploiement dépendant du framework ; qui est un type de déploiement où l’application publiée s’exécute sur toutes les plateformes prises en charge par .NET Core, avec .NET Core installé sur le système. Les utilisateurs peuvent exécuter votre application en émettant la commande `dotnet HelloWorld.dll` à partir d’une fenêtre de console.
 

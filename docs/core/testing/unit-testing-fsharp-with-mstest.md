@@ -1,17 +1,18 @@
 ---
-title: Effectuer des tests unitaires des bibliothèques F# dans .NET Core à l’aide de dotnet test et de MSTest
+title: Effectuer des tests unitaires F# dans .NET Core avec dotnet test et MSTest
 description: Apprenez les concepts des tests unitaires pour F# dans .NET Core de manière interactive en créant un exemple de solution pas à pas à l’aide de dotnet test et de MSTest.
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
 dev_langs:
 - fsharp
-ms.openlocfilehash: 14e1ac54cb966e0e38c962e92cceb764fd8e9b42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: dacf820e8e49a337792fa927838fe4b262712e41
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218856"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240084"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Effectuer des tests unitaires des bibliothèques F# dans .NET Core à l’aide de dotnet test et de MSTest
 

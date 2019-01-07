@@ -3,13 +3,13 @@ title: Prérequis pour .NET Core sur Linux
 description: Versions Linux et dépendances .NET Core prises en charge pour développer, déployer et exécuter des applications .NET Core sur des ordinateurs Linux.
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2018
-ms.openlocfilehash: e250158d10c6a03535f4e693e74954747f860a3c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/14/2018
+ms.openlocfilehash: 7a2b0b3af97500ab0988e5de7a44713a8c05ccb9
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148325"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656048"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Prérequis pour .NET Core sur Linux
 
@@ -60,6 +60,34 @@ Pour obtenir des liens de téléchargement et plus d’informations, voir [Tél�
 * openSUSE 42.3 ou versions ultérieures (.NET Core 1.1)
 
 Consultez [.NET Core 1.x - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation pris en charge par .NET Core 1.x, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.
+
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 préversion 1](#tab/netcore30)
+
+.NET Core 3.0 préversion 1 traite Linux comme un seul système d’exploitation. Il existe une seule version Linux (par architecture de puce) pour les distributions Linux prises en charge. 
+
+Pour obtenir des liens de téléchargement et plus d’informations, voir [Téléchargements .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+
+NET Core 3.0 préversion 1 est pris en charge sur les distributions/versions Linux suivantes. 
+
+Système d’exploitation                            | Version               | Architectures  
+------------------------------|-----------------------|----------------
+Red Hat Enterprise Linux      | 6                     | X64
+Red Hat Enterprise Linux<br>CentOS<br>Oracle Linux  | 7                     | X64
+Fedora                        | 28                    | X64
+Debian                        | 9                     | x64, ARM32\*, ARM64\*
+Ubuntu                        | 16.04+, 18.04+        | x64, ARM32\*, ARM64\*
+Linux Mint                    | 18                    | X64
+openSUSE                      | 42.3+                 | X64
+SUSE Enterprise Linux (SLES)  | 12 SP2+               | X64
+Alpine Linux                  | 3.8+                  | x64, ARM64
+
+\* La prise en charge ARM32 et ARM64 commence par 9 Debian et Ubuntu 16.04. Les versions antérieures de ces distributions ne sont pas prises en charge sur les processeurs ARM.
+
+Consultez [.NET Core 3.0 - Versions des systèmes d’exploitation prises en charge](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) pour obtenir la liste complète des systèmes d’exploitation, distributions et versions pris en charge par .NET Core 3.0, les systèmes d’exploitation non pris en charge et des liens sur la politique concernant le cycle de vie.
+
+Pour plus d’informations sur l’installation de .NET Core 3.0 sur ARM64, consultez [Installation de .NET Core 3.0 sur Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213).
+
+
 
 ---
 
