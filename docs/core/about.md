@@ -3,12 +3,12 @@ title: À propos de .NET Core
 description: Découvrez plus en détail .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170403"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058553"
 ---
 # <a name="about-net-core"></a>À propos de .NET Core
 
@@ -95,7 +95,7 @@ Il est peut-être plus facile d’appréhender la taille et la forme de .NET Cor
 
 Les principales différences entre .NET Core et le .NET Framework sont les suivantes :
 
-- **Modèles d’application** : .NET Core ne prend pas en charge tous les modèles d’application .NET Framework. En particulier, il ne prend en charge ASP.NET Web Forms et MVC. Il a été annoncé que [.NET Core 3 prendra en charge WPF et Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Modèles d’application** : .NET Core ne prend pas en charge tous les modèles d’application .NET Framework. En particulier, il ne prend pas en charge ASP.NET Web Forms et ASP.NET MVC, mais il prend en charge ASP.NET Core MVC. Il a été annoncé que [.NET Core 3 prendra en charge WPF et Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
 - **API** : .NET Core contient une grande partie de la bibliothèque de classes de base de .NET Framework, avec une factorisation différente (les noms d’assembly sont différents, les membres exposés sur les types diffèrent selon les cas). Ces différences nécessitent des changements pour porter la source vers .NET Core dans certains cas (consultez [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). .NET Core implémente la spécification d’API [.NET Standard](../standard/net-standard.md).
 - **Sous-systèmes** : .NET Core implémente un sous-ensemble des sous-systèmes du .NET Framework, avec l’objectif d’une implémentation et d’un modèle de programmation plus simples. Par exemple, la sécurité d’accès du code (CAS) n’est pas prise en charge, alors que la réflexion l’est.
 - **Plateformes** : le .NET Framework prend en charge Windows et Windows Server, tandis que .NET Core prend aussi en charge macOS et Linux.
