@@ -2,12 +2,12 @@
 title: Didacticiels C#
 description: Explorez ces didacticiels C# pour savoir comment générer des programmes C# et découvrez les fonctionnalités du langage C#.
 ms.date: 10/25/2018
-ms.openlocfilehash: 2e7981c0b958e6ff4682dc502b83766f56d6c528
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f49754a9d6fa7523d88fa5ce3a7f57501f434878
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195123"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084665"
 ---
 # <a name="c-tutorials"></a>Didacticiels C#
 
@@ -47,20 +47,18 @@ Ce tutoriel part du principe que vous avez fini les leçons listées ci-dessus.
 
 Tous les tutoriels de présentation proposés après la leçon Hello World sont disponibles dans votre propre environnement de développement local. À la fin de chaque tutoriel, vous décidez si vous souhaitez effectuer la leçon suivante en ligne ou sur votre propre ordinateur. Vous trouverez également des liens pour vous aider à configurer votre environnement et passer au tutoriel suivant sur votre ordinateur.
 
+## <a name="explore-new-features-in-c"></a>Explorer les nouvelles fonctionnalités dans C# #
+
+Essayez les nouvelles fonctionnalités dans [C# 6](../whats-new/csharp-6.md) grâce à cette [exploration interactive](exploration/csharp-6.yml).
+
 ## <a name="general-tutorials"></a>Tutoriels généraux
 
 Les didacticiels suivants vous permettent de générer des programmes C# à l’aide de [.NET Core](../../core/index.md) :
 
 * [Application console](console-teleprompter.md) : ce tutoriel présente les fonctionnalités d’E/S de la console, la structure d’une application console et les concepts de base du modèle de programmation asynchrone basé sur les tâches.
-
 * [Client REST](console-webapiclient.md) : ce tutoriel présente les communications web, la sérialisation JSON et les fonctionnalités orientées objet du langage C#.
-
 * [Héritage dans C# et .NET](inheritance.md) : ce didacticiel présente l’héritage dans C#, notamment l’utilisation de l’héritage pour définir des classes de base, des classes de base abstraites et des classes dérivées.
-
 * [Utilisation de LINQ](working-with-linq.md) : ce didacticiel illustre plusieurs fonctionnalités de LINQ et les éléments de langage qui le prennent en charge.
-
-* [Microservices hébergés dans Docker](microservices.md) : ce didacticiel montre comment créer un microservice ASP.NET Core et l’héberger dans Docker.
-
 * [Interpolation de chaîne](string-interpolation.md): ce tutoriel décrit comment utiliser l’interpolation de chaîne pour créer des chaînes mises en forme en C#.
-
 * [Utilisation d’attributs](attributes.md) : ce tutoriel décrit comment créer et utiliser des attributs en C#.
+* [Types de référence Nullable](nullable-reference-types.md) : montre comment utiliser des types de référence nullable pour exprimer votre intention en matière de références null.
