@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149586"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030423"
 ---
 # <a name="best-practices-for-exceptions"></a>Bonnes pratiques pour les exceptions
 
@@ -24,7 +24,7 @@ Une application bien conçue gère les exceptions et les erreurs pour empêcher 
 
 Utilisez des blocs `try`/`catch` autour du code susceptible de générer une exception ***et*** votre code peut récupérer suite à cette exception. Dans les blocs `catch`, veillez à toujours classer les exceptions de la plus dérivée à la moins dérivée. Toutes les exceptions dérivent de <xref:System.Exception>. Les exceptions les plus dérivées ne sont pas gérées par une clause catch qui est précédée d’une clause catch pour une classe d’exception de base. Quand votre code ne peut pas récupérer suite à une exception, n’interceptez pas cette exception. Activez des méthodes un peu plus haut dans la pile d’appels pour récupérer si possible.
 
-Nettoyez les ressources allouées avec des instructions `using` ou des blocs `finally`. Préférez les instructions `using` pour nettoyer automatiquement les ressources quand des exceptions sont levées. Utilisez des blocs `finally` pour nettoyer les ressources qui n’implémentent pas <xref:System.IDisposable>. Le code dans une clause `finally` est presque toujours exécuté même quand des exceptions sont levées.
+Nettoyez les ressources allouées avec des instructions `using` ou des blocs `finally`. Préférez les instructions `using` pour nettoyer automatiquement les ressources quand des exceptions sont levées. Utilisez des blocs `finally` pour nettoyer les ressources qui n’implémentent pas <xref:System.IDisposable>. Le code dans une clause `finally` est presque toujours exécuté même lorsque des exceptions sont levées.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Gérer les conditions courantes sans lever d’exception
 
@@ -86,7 +86,7 @@ Utilisez au moins les trois constructeurs communs pendant la création de vos pr
   
 * <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, qui accepte un message de type chaîne et une exception interne.  
   
-Pour obtenir un exemple, consultez [Guide pratique : créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md).
+Pour voir un exemple, consultez [Comment : Créer des exceptions définies par l’utilisateur](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Vérifier que les données d’exception sont disponibles quand le code s’exécute à distance
 

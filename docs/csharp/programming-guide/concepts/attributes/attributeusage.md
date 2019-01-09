@@ -1,12 +1,12 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500570"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656347"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -49,7 +49,7 @@ Si l’argument <xref:System.AttributeUsageAttribute.AllowMultiple> est défini 
 
 Dans ce cas, `MultiUseAttribute` peut être appliqué à plusieurs reprises, car `AllowMultiple` est défini sur `true`. Les deux formats indiqués pour appliquer plusieurs attributs sont valides.
 
-Si <xref:System.AttributeUsageAttribute.Inherited> est `false`, l’attribut n’est pas hérité par les classes dérivées d’une classe avec attributs. Exemple :
+Si <xref:System.AttributeUsageAttribute.Inherited> est `false`, l’attribut n’est pas hérité par les classes dérivées d’une classe avec attributs. Par exemple :
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 

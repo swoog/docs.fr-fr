@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1938876bcf72fccd7582ede332d052fb3d759395
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502162"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656191"
 ---
 # <a name="inheritance-in-c-and-net"></a>Héritage dans C# et .NET
 
@@ -33,7 +33,7 @@ Pour créer et exécuter les exemples de ce didacticiel, vous utilisez l’utili
 
 1. Entrez la commande [dotnet run](../../core/tools/dotnet-run.md) pour compiler et exécuter l’exemple.
 
-## <a name="background-what-is-inheritance"></a>Présentation : Qu’est-ce que l’héritage ?
+## <a name="background-what-is-inheritance"></a>Présentation : Qu’est-ce que l’héritage ?
 
 *L’héritage* est un des attributs fondamentaux de la programmation orientée objet. Il vous permet de définir une classe enfant qui réutilise (hérite), étend ou modifie le comportement d’une classe parente. La classe dont les membres sont hérités s’appelle la *classe de base*. La classe qui hérite des membres de la classe de base est appelée la *classe dérivée*.
 
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-L’héritage s’applique uniquement aux classes et interfaces. Les autres catégories de type (structures, délégués et énumérations) ne permettent pas l’héritage. En raison de ces règles, la tentative de compilation de code comme l’exemple suivant génère l’erreur de compilateur CS0527 : « Le type 'ValueType' dans la liste des interfaces n’est pas une interface ». Le message d’erreur indique que, même si vous pouvez définir les interfaces qu’implémente un struct, l’héritage n'est pas pris en charge.
+L’héritage s’applique uniquement aux classes et interfaces. Les autres catégories de type (structures, délégués et énumérations) ne permettent pas l’héritage. En raison de ces règles, la tentative de compilation de code comme l’exemple suivant génère l’erreur de compilateur CS0527 : « Le type 'ValueType' dans la liste des interfaces n’est pas une interface. » Le message d’erreur indique que, même si vous pouvez définir les interfaces qu’implémente un struct, l’héritage n'est pas pris en charge.
 
 ```csharp
 using System;
@@ -152,7 +152,7 @@ Le tableau suivant répertorie les catégories de types que vous pouvez créer e
 En règle générale, l’héritage est utilisé pour exprimer une relation « est un » entre une classe de base et une ou plusieurs classes dérivées, où les classes dérivées sont des versions spécialisées de la classe de base ; la classe dérivée est un type de la classe de base. Par exemple, la classe `Publication` représente une publication de tout type et les classes `Book` et `Magazine` représentent les classes des types spécifiques de publications.
 
 > [!NOTE]
-> Les classes et structs peuvent implémenter plusieurs interfaces. Bien que l’implémentation d’interface est souvent présentée comme une solution de contournement pour l’héritage unique ou comme une façon d’utiliser l’héritage avec les structures, elle est conçue pour exprimer une autre relation (« peut faire ») entre une interface et son type d’implémentation que l’héritage. Une interface définit un sous-ensemble de fonctionnalités (comme la capacité à tester l’égalité, comparer ou trier des objets, ou pour prendre en charge la mise en forme et l’analyse dépendant de la culture) que l’interface met à disposition pour ses types d’implémentation.
+> Les classes et structures peuvent implémenter une ou plusieurs interfaces. Bien que l’implémentation d’interface est souvent présentée comme une solution de contournement pour l’héritage unique ou comme une façon d’utiliser l’héritage avec les structures, elle est conçue pour exprimer une autre relation (« peut faire ») entre une interface et son type d’implémentation que l’héritage. Une interface définit un sous-ensemble de fonctionnalités (comme la capacité à tester l’égalité, comparer ou trier des objets, ou pour prendre en charge la mise en forme et l’analyse dépendant de la culture) que l’interface met à disposition pour ses types d’implémentation.
 
 Notez que « est un » exprime également la relation entre un type et une instanciation spécifique de ce type. Dans l’exemple suivant, `Automobile` est une classe qui possède trois propriétés en lecture seule uniques : `Make`, le fabricant de l’automobile ; `Model`, le type de voiture et `Year`, son année de fabrication. Votre classe `Automobile` comporte également un constructeur dont les arguments sont assignés aux valeurs de propriété, et elle remplace la méthode <xref:System.Object.ToString%2A?displayProperty=nameWithType> pour générer une chaîne qui identifie de façon unique l’instance `Automobile` plutôt que la classe `Automobile`.
 
@@ -249,7 +249,7 @@ Outre les membres qu’elle hérite de `Publication`, la classe `Book` définit 
 
 - Deux constructeurs
 
-  Les deux constructeurs `Book` partagent trois paramètres communs. Deux d’entre eux, *title* et *publisher*, correspondent aux paramètres du constructeur `Publication`. Le troisième est *author*, qui est stocké dans un champ privé `authorName`. Un constructeur inclut un paramètre *isbn*, qui est stocké dans l’auto-propriété `ISBN`.
+  Les deux constructeurs `Book` partagent trois paramètres communs. Deux d’entre eux, *title* et *publisher*, correspondent aux paramètres du constructeur `Publication`. Le troisième est *author*, qui est stocké dans une propriété `Author` non modifiable publique. Un constructeur inclut un paramètre *isbn*, qui est stocké dans l’auto-propriété `ISBN`.
 
   Le premier constructeur utilise le mot-clé [this](../language-reference/keywords/this.md) pour appeler l’autre constructeur. Le chaînage de constructeurs est un modèle courant pour la définition de constructeurs. Les constructeurs avec le moins de paramètres fournissent les valeurs par défaut au moment de l’appel du constructeur avec le plus grand nombre de paramètres.
 
@@ -257,11 +257,11 @@ Outre les membres qu’elle hérite de `Publication`, la classe `Book` définit 
 
 - Une propriété `ISBN` en lecture seule qui retourne le numéro ISBN de l’objet `Book`, un numéro unique à 10 ou 13 chiffres. Le numéro ISBN est fourni en tant qu’argument à un des constructeurs `Book`. Le numéro ISBN est stocké dans un champ de stockage privé qui est généré automatiquement par le compilateur.
 
-- Une propriété `Author` en lecture seule. Le nom de l’auteur est fourni en tant qu’argument aux deux constructeurs `Book` et est stocké dans le champ `authorName` privé.
+- Une propriété `Author` en lecture seule. Le nom de l’auteur est fourni en tant qu’argument aux deux constructeurs `Book` et est stocké dans la propriété.
 
-- Deux propriétés en lecture seule relatives au prix, `Price` et `Currency`. Leurs valeurs sont fournies comme arguments dans un appel de méthode `SetPrice`. Le prix est stocké dans un champ privé, `bookPrice`. La propriété `Currency` est le symbole de devise ISO à trois caractères (par exemple, USD pour le dollar américain) et est stockée dans le champ `ISOCurrencySymbol` privé. Les symboles de devise ISO peuvent être récupérés à partir de la propriété <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>.
+- Deux propriétés en lecture seule relatives au prix, `Price` et `Currency`. Leurs valeurs sont fournies comme arguments dans un appel de méthode `SetPrice`. La propriété `Currency` est le symbole de devise ISO à trois caractères (par exemple, USD pour le dollar américain). Les symboles de devise ISO peuvent être récupérés à partir de la propriété <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A>. Ces deux propriétés sont en lecture seule en externe, mais peuvent être définies par du code dans la classe `Book`.
 
-- Une méthode `SetPrice` qui définit les valeurs des champs `bookPrice` et `ISOCurrencySymbol`. Ces valeurs sont retournées par les propriétés `Price` et `Currency`.
+- Une méthode `SetPrice` qui définit les valeurs des propriétés `Price` et `Currency`. Ces valeurs sont retournées par ces mêmes propriétés.
 
 - Se substitue à la méthode `ToString` (héritée de `Publication`) et aux méthodes <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> et <xref:System.Object.GetHashCode%2A> (héritées de <xref:System.Object>).
 

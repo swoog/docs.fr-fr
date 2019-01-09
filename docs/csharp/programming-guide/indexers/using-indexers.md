@@ -5,12 +5,12 @@ ms.date: 10/03/2018
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: ad5c6f68f5eb2f62d7c6f389e374e1b2db5417c6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8c0d145fab69e60a12ebb8b28f087ab643e508b9
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241916"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397057"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Utiliser des indexeurs (Guide de programmation C#)
 
@@ -57,7 +57,7 @@ L’exemple suivant montre comment déclarer un champ de tableau privé `temps`,
   
 ## <a name="indexing-using-other-values"></a>Indexation avec d’autres valeurs
 
-C# ne limite pas les index au type entier. Par exemple, il peut être utile d’utiliser une chaîne avec un indexeur. Il est possible d’implémenter un tel indexeur en recherchant la chaîne dans la collection et en retournant la valeur appropriée. Comme les accesseurs peuvent être surchargés, les versions chaîne et entier peuvent coexister.  
+C# ne limite pas le type de paramètre d’indexeur au type entier. Par exemple, il peut être utile d’utiliser une chaîne avec un indexeur. Il est possible d’implémenter un tel indexeur en recherchant la chaîne dans la collection et en retournant la valeur appropriée. Comme les accesseurs peuvent être surchargés, les versions chaîne et entier peuvent coexister.  
   
 ## <a name="example-2"></a>Exemple 2  
   

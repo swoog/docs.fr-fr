@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 1815f057e5cf26d64e5ff151f161cc56214efc1b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237985"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396784"
 ---
 # <a name="integral-types-table-c-reference"></a>Tableau des types intégraux (référence C#)
 
@@ -36,7 +36,7 @@ Le tableau suivant indique les tailles et les plages des types intégraux, qui c
   
 Si la valeur représentée par un littéral entier dépasse <xref:System.UInt64.MaxValue?displayProperty=nameWithType>, une erreur de compilation [CS1021](../../misc/cs1021.md) se produit.
 
-Utilisez la classe <xref:System.Numerics.BigInteger?displayProperty=nameWithType> pour représenter un entier signé arbitrairement grand.
+Utilisez la structure <xref:System.Numerics.BigInteger?displayProperty=nameWithType> pour représenter un entier signé arbitrairement grand.
   
 ## <a name="see-also"></a>Voir aussi
 
@@ -48,3 +48,4 @@ Utilisez la classe <xref:System.Numerics.BigInteger?displayProperty=nameWithType
 - [Tableau des valeurs par défaut](default-values-table.md)
 - [Tableau des formats des résultats numériques](formatting-numeric-results-table.md)
 - [Tableaux des types intégrés](built-in-types-table.md)
+- [Valeurs numériques dans .NET](../../../standard/numerics.md)

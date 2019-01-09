@@ -4,12 +4,12 @@ description: Découvrez les différences et les utilisations du modèle de passe
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c0c98733271e74e119373fe359b9aa6121930a40
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eebbfa6579de4cd24f58371ed1c7ab9a5f2e1c00
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152641"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030540"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>Modèle de passerelle API et communication directe de client à microservice
 
@@ -41,7 +41,7 @@ Interagir avec plusieurs microservices pour créer un seul écran de l’interfa
 
 L’implémentation de la sécurité et de problèmes transversaux, comme la sécurité et l’autorisation, sur chaque microservice peut nécessiter un travail de développement considérable. Une approche possible consiste à avoir ces services au sein de l’hôte Docker ou du cluster interne, de façon à limiter leur l’accès direct depuis l’extérieur et à implémenter ces problèmes transversaux à un emplacement centralisé, comme une passerelle API.
 
-- Comment les applications clientes peuvent-elles communiquer avec des services qui utilisent des protocoles non conçus pour Internet ?*
+- *Comment les applications clientes peuvent-elles communiquer avec des services qui utilisent des protocoles non adaptés à Internet ?*
 
 Les protocoles utilisés du côté serveur (par exemple AMQP ou des protocoles binaires) ne sont généralement pas pris en charge dans les applications clientes. Ainsi, les requêtes doivent être exécutées via des protocoles comme HTTP/HTTPS et être traduites après cela pour les autres protocoles. Une approche par *intercepteur* peut aider dans cette situation.
 
@@ -55,13 +55,13 @@ Dans une architecture microservices, les applications clientes doivent général
 
 Par conséquent, avoir un niveau ou une couche intermédiaire d’indirection (passerelle) peut être très pratique pour les applications basées sur des microservices. Si vous n’avez pas de passerelles d’API, les applications clientes doivent envoyer des requêtes directement aux microservices, ce qui entraîne les problèmes suivants :
 
-- **Couplage** : sans le modèle de passerelle d’API, les applications clientes sont couplées aux microservices internes. Les applications clientes doivent savoir comment les différentes zones de l’application sont décomposées en microservices. Lors du développement ou de la refactorisation des microservices internes, ces actions ont un impact négatif sur la maintenance car elles entraînent des modifications avec rupture dans les applications clientes en raison de la référence directe aux microservices internes à partir des applications clientes. Les applications clientes doivent être fréquemment mises à jour, ce qui perturbe le développement de la solution.
+- **Couplage** : Sans le modèle de passerelle d’API, les applications clientes sont couplées aux microservices internes. Les applications clientes doivent savoir comment les différentes zones de l’application sont décomposées en microservices. Lors du développement ou de la refactorisation des microservices internes, ces actions ont un impact négatif sur la maintenance car elles entraînent des modifications avec rupture dans les applications clientes en raison de la référence directe aux microservices internes à partir des applications clientes. Les applications clientes doivent être fréquemment mises à jour, ce qui perturbe le développement de la solution.
 
-- **Trop d’allers-retours**: un seul écran ou une seule page dans l’application cliente peut nécessiter plusieurs appels à différents services. Cela peut entraîner plusieurs allers-retours sur le réseau entre le client et le serveur, augmentant considérablement la latence. L’agrégation gérée dans un niveau intermédiaire peut améliorer les performances et l’expérience utilisateur pour l’application cliente.
+- **Trop d’allers-retours** : Un seul écran ou une seule page dans l’application cliente peut nécessiter plusieurs appels à différents services. Cela peut entraîner plusieurs allers-retours sur le réseau entre le client et le serveur, augmentant considérablement la latence. L’agrégation gérée dans un niveau intermédiaire peut améliorer les performances et l’expérience utilisateur pour l’application cliente.
 
-- **Problèmes de sécurité** : sans passerelle, tous les microservices doivent être exposés au « monde externe », augmentant ainsi la surface d’attaque même si vous masquez les microservices internes qui ne sont pas directement utilisés par les applications clientes. Plus la surface d’attaque est réduite, plus votre application peut être sécurisée.
+- **Problèmes de sécurité** : Sans passerelle, tous les microservices doivent être exposés au « monde externe », augmentant ainsi la surface d’attaque même si vous masquez les microservices internes qui ne sont pas directement utilisés par les applications clientes. Plus la surface d’attaque est réduite, plus votre application peut être sécurisée.
 
-- **Problèmes transversaux** : chaque microservice publié doit gérer des problèmes comme une autorisation, SSL, etc. Dans de nombreux cas, ces problèmes pourraient être traités dans un même niveau afin de simplifier les microservices internes.
+- **Problèmes transversaux** : Chaque microservice publié doit gérer des problèmes comme une autorisation, SSL, etc. Dans de nombreux cas, ces problèmes pourraient être traités dans un même niveau afin de simplifier les microservices internes.
 
 ## <a name="what-is-the-api-gateway-pattern"></a>Présentation du modèle Passerelle d’API
 
@@ -172,7 +172,7 @@ Après les sections consacrées à l’architecture initiale et à la présentat
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-- **Charles Richardson. Modèle : Passerelle API / Backend for Frontend (BFF)** \
+- **Charles Richardson. Modèle : Passerelle API / Backend for Frontend (BFF)** \
   [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
 - **Modèle de passerelle API** \

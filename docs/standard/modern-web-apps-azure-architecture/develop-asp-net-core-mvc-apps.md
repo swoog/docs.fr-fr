@@ -4,12 +4,12 @@ description: Architecturer des applications web modernes avec ASP.NET Core et Az
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152775"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058501"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Développer des applications ASP.NET Core MVC
 
@@ -69,13 +69,13 @@ Pour les API web, ASP.NET Core MVC prend en charge la [_négociation de contenu_
 > ### <a name="references--mapping-requests-to-responses"></a>Références – Mappage des requêtes aux réponses
 >
 > - **Routage vers les actions du contrôleur**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **Liaison de modèle**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Validation du modèle**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Filtres**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Utilisation de dépendances
 
@@ -138,7 +138,7 @@ Une autre approche pour découpler l’application des détails d’implémentat
 
 ### <a name="feature-organization"></a>Organisation par fonctionnalité
 
-Par défaut, les applications ASP.NET Core organisent leur structure de dossiers de manière à inclure Controllers et Views, et couramment ViewModels. Le code côté client utilisé pour prendre en charge ces structures côté serveur est généralement stocké séparément dans le dossier wwwroot. Toutefois, cette organisation peut poser des problèmes pour les applications volumineuses dans la mesure où le développement d’une fonctionnalité donnée nécessite souvent de passer d’un dossier à un autre. Le niveau de complexité croît à mesure que le nombre de fichiers et de sous-dossiers dans chaque dossier augmente, occasionnant de nombreuses opérations de défilement dans l’Explorateur de solutions. Une solution à ce problème consiste à organiser le code de l’application par _fonctionnalité_ plutôt que par type de fichier. Ce style d’organisation est généralement désigné par les expressions « dossiers de fonctionnalités » ou « tranches de fonctionnalités » (voir aussi : [Vertical Slices](https://deviq.com/vertical-slices/)).
+Par défaut, les applications ASP.NET Core organisent leur structure de dossiers de manière à inclure Controllers et Views, et couramment ViewModels. Le code côté client utilisé pour prendre en charge ces structures côté serveur est généralement stocké séparément dans le dossier wwwroot. Toutefois, cette organisation peut poser des problèmes pour les applications volumineuses dans la mesure où le développement d’une fonctionnalité donnée nécessite souvent de passer d’un dossier à un autre. Le niveau de complexité croît à mesure que le nombre de fichiers et de sous-dossiers dans chaque dossier augmente, occasionnant de nombreuses opérations de défilement dans l’Explorateur de solutions. Une solution à ce problème consiste à organiser le code de l’application par _fonctionnalité_ plutôt que par type de fichier. Ce style d’organisation est généralement désigné par les expressions « dossiers de fonctionnalités » ou « tranches de fonctionnalités » (voir aussi : [Tranches verticales](https://deviq.com/vertical-slices/)).
 
 À cet effet, ASP.NET Core MVC prend en charge Areas. Les zones vous permettent de créer des jeux distincts de dossiers Controllers et Views (ainsi que tout modèle associé) dans chaque dossier Area. La Figure 7-1 montre un exemple de structure de dossiers avec Areas.
 
@@ -213,7 +213,7 @@ ASP.NET Core MVC utilise également une convention pour localiser les vues. Vous
 
 Figure 7-2 Exécution d’une requête à travers les filtres et le pipeline de requête.
 
-Les filtres sont généralement implémentés en tant qu’attributs, ce qui vous permet de les appliquer à des contrôleurs ou à des actions. Si vous les ajoutez de cette manière, les filtres spécifiés au niveau de l’action remplacent ou développent les filtres spécifiés au niveau du contrôleur, qui à leur tour remplacent les filtres globaux. Par exemple, l’attribut \[Route\] peut être utilisé pour générer des routes entre des contrôleurs et des actions. De même, l’autorisation peut être configurée au niveau du contrôleur, puis remplacée par des actions individuelles, comme dans l’exemple suivant :
+Les filtres sont généralement implémentés en tant qu’attributs, ce qui vous permet de les appliquer à des contrôleurs ou à des actions (voire globalement). Si vous les ajoutez de cette manière, les filtres spécifiés au niveau de l’action remplacent ou développent les filtres spécifiés au niveau du contrôleur, qui à leur tour remplacent les filtres globaux. Par exemple, l’attribut \[Route\] peut être utilisé pour générer des routes entre des contrôleurs et des actions. De même, l’autorisation peut être configurée au niveau du contrôleur, puis remplacée par des actions individuelles, comme dans l’exemple suivant :
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ Pour découvrir plus en détail les filtres d’implémentation et télécharger
 > - **Les zones (areas)**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine – Feature Slices for ASP.NET Core MVC**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Les filtres**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN – Real World ASP.NET Core MVC Filters**  

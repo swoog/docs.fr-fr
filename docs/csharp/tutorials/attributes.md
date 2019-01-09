@@ -4,12 +4,12 @@ description: Découvrez comment les attributs fonctionnent en C#.
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: db6db50ac59e804225bdc11c435fef3d53fa685e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 38d22e707dd8c9877183feb8446407c20a21b416
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390517"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029825"
 ---
 # <a name="using-attributes-in-c"></a>Utilisation d’attributs en C# #
 
@@ -110,7 +110,7 @@ Les attributs agissent comme métadonnées. Sans une certaine force extérieure,
 
 Pour rechercher et agir sur des attributs, la [Réflexion](../programming-guide/concepts/reflection.md) est généralement nécessaire. Je n’aborderai pas la réflexion de façon approfondie dans ce didacticiel, mais l’idée fondamentale est que la réflexion vous permet d’écrire du code en C# qui examine un autre code.
 
-Par exemple, vous pouvez utiliser la réflexion pour obtenir des informations sur une classe : 
+Par exemple, vous pouvez utiliser la réflexion pour obtenir des informations sur une classe (ajoutez `using System.Reflection;` au début de votre code) : 
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
