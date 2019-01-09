@@ -1,31 +1,43 @@
 ---
 title: '&lt;, opérateur - Référence C#'
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/18/2018
 f1_keywords:
 - <_CSharpKeyword
 helpviewer_keywords:
 - less than operator (<) [C#]
 - < operator [C#]
 ms.assetid: 38cb91e6-79a6-48ec-9c1e-7b71fd8d2b41
-ms.openlocfilehash: 3cc125471eee7bf0002e9844c2a1cdc05e8d4a03
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bb0f590bb547c4e632bd14c773f095435c8986f0
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241222"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655944"
 ---
-# <a name="lt-operator-c-reference"></a><span data-ttu-id="f40ec-102">&lt;, opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="f40ec-102">&lt; Operator (C# Reference)</span></span>
-<span data-ttu-id="f40ec-103">Tous les types numériques et d’énumération définissent un opérateur relationnel « inférieur à » (`<`) qui retourne `true` si le premier opérande est inférieur au deuxième et `false` dans le cas contraire.</span><span class="sxs-lookup"><span data-stu-id="f40ec-103">All numeric and enumeration types define a "less than" relational operator (`<`) that returns `true` if the first operand is less than the second, `false` otherwise.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="f40ec-104">Notes</span><span class="sxs-lookup"><span data-stu-id="f40ec-104">Remarks</span></span>  
- <span data-ttu-id="f40ec-105">Les types définis par l’utilisateur peuvent surcharger l’opérateur `<` (voir [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="f40ec-105">User-defined types can overload the `<` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="f40ec-106">Si `<` est surchargé, [>](../../../csharp/language-reference/operators/greater-than-operator.md) doit aussi l’être.</span><span class="sxs-lookup"><span data-stu-id="f40ec-106">If `<` is overloaded, [>](../../../csharp/language-reference/operators/greater-than-operator.md) must also be overloaded.</span></span>
-  
-## <a name="example"></a><span data-ttu-id="f40ec-107">Exemple</span><span class="sxs-lookup"><span data-stu-id="f40ec-107">Example</span></span>  
- [!code-csharp[csRefOperators#24](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="f40ec-108">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f40ec-108">See Also</span></span>
+# <a name="lt-operator-c-reference"></a><span data-ttu-id="f4c3c-102">&lt;, opérateur (référence C#)</span><span class="sxs-lookup"><span data-stu-id="f4c3c-102">&lt; Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="f40ec-109">Référence C#</span><span class="sxs-lookup"><span data-stu-id="f40ec-109">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="f40ec-110">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="f40ec-110">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f40ec-111">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="f40ec-111">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="f4c3c-103">L’opérateur de relation « inférieur à » `<` retourne `true` si son premier opérande est inférieur à son second opérande, `false` dans le cas contraire.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-103">The "less than" relational operator `<` returns `true` if its first operand is less than its second operand, `false` otherwise.</span></span> <span data-ttu-id="f4c3c-104">Tous les types numériques et d’énumération prennent en charge l’opérateur `<`.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-104">All numeric and enumeration types support the `<` operator.</span></span> <span data-ttu-id="f4c3c-105">Pour les opérandes du même type [enum](../keywords/enum.md), les valeurs correspondantes du type intégral sous-jacent sont comparées.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-105">For operands of the same [enum](../keywords/enum.md) type, the corresponding values of the underlying integral type are compared.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="f4c3c-106">Pour les opérateurs de relation `==`, `>`, `<`, `>=` et `<=`, si un des opérandes n’est pas un nombre (<xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>), le résultat de l’opération est `false`.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-106">For relational operators `==`, `>`, `<`, `>=`, and `<=`, if any of the operands is not a number (<xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType>) the result of operation is `false`.</span></span> <span data-ttu-id="f4c3c-107">Cela signifie que la valeur `NaN` n’est ni supérieure à, ni inférieure à, ni égale à n’importe quelle autre valeur `double` (ou `float`).</span><span class="sxs-lookup"><span data-stu-id="f4c3c-107">That means that the `NaN` value is neither greater than, less than, nor equal to any other `double` (or `float`) value.</span></span> <span data-ttu-id="f4c3c-108">Pour plus d’informations et des exemples, consultez l’article de référence <xref:System.Double.NaN?displayProperty=nameWithType> ou <xref:System.Single.NaN?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-108">For more information and examples, see the <xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType> reference article.</span></span>
+
+<span data-ttu-id="f4c3c-109">L’exemple suivant illustre l’utilisation de l’opérateur `<` :</span><span class="sxs-lookup"><span data-stu-id="f4c3c-109">The following example demonstrates the usage of the `<` operator:</span></span>
+
+[!code-csharp-interactive[less than example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#Less)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="f4c3c-110">Capacité de surcharge de l’opérateur</span><span class="sxs-lookup"><span data-stu-id="f4c3c-110">Operator overloadability</span></span>
+
+<span data-ttu-id="f4c3c-111">Les types définis par l’utilisateur peuvent [surcharger](../keywords/operator.md) l’opérateur `<`.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-111">User-defined types can [overload](../keywords/operator.md) the `<` operator.</span></span> <span data-ttu-id="f4c3c-112">Si un type surcharge l’opérateur « inférieur à » `<`, il doit également surcharger l’[opérateur « supérieur à »](greater-than-operator.md) `>`.</span><span class="sxs-lookup"><span data-stu-id="f4c3c-112">If a type overloads the "less than" operator `<`, it must also overload the ["greater than" operator](greater-than-operator.md) `>`.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="f4c3c-113">spécification du langage C#</span><span class="sxs-lookup"><span data-stu-id="f4c3c-113">C# language specification</span></span>
+
+<span data-ttu-id="f4c3c-114">Pour plus d’informations, consultez la section [Opérateurs relationnels et de test de type](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) de la [spécification du langage C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="f4c3c-114">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="f4c3c-115">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="f4c3c-115">See also</span></span>
+
+- [<span data-ttu-id="f4c3c-116">Référence C#</span><span class="sxs-lookup"><span data-stu-id="f4c3c-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="f4c3c-117">Guide de programmation C#</span><span class="sxs-lookup"><span data-stu-id="f4c3c-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="f4c3c-118">Opérateurs C#</span><span class="sxs-lookup"><span data-stu-id="f4c3c-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="f4c3c-119"><=, opérateur</span><span class="sxs-lookup"><span data-stu-id="f4c3c-119"><= Operator</span></span>](less-than-equal-operator.md)
+- <xref:System.IComparable%601?displayProperty=nameWithType>
