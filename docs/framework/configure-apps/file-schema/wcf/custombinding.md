@@ -2,235 +2,232 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a7743f790c1080b601c7e92236723dbc721a849b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153902"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149900"
 ---
-# <a name="ltcustombindinggt"></a><span data-ttu-id="a014c-102">&lt;customBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="a014c-102">&lt;customBinding&gt;</span></span>
-<span data-ttu-id="a014c-103">Fournit le contrôle total sur la pile de messagerie pour l'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="a014c-103">Provides full control over the messaging stack for the user.</span></span>  
+# <a name="ltcustombindinggt"></a><span data-ttu-id="84461-102">&lt;customBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="84461-102">&lt;customBinding&gt;</span></span>
+<span data-ttu-id="84461-103">Fournit le contrôle total sur la pile de messagerie pour l'utilisateur.</span><span class="sxs-lookup"><span data-stu-id="84461-103">Provides full control over the messaging stack for the user.</span></span>  
   
- <span data-ttu-id="a014c-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="a014c-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="a014c-105">\<liaisons ></span><span class="sxs-lookup"><span data-stu-id="a014c-105">\<bindings></span></span>  
-<span data-ttu-id="a014c-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="a014c-106">\<customBinding></span></span>  
+ <span data-ttu-id="84461-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="84461-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="84461-105">\<liaisons ></span><span class="sxs-lookup"><span data-stu-id="84461-105">\<bindings></span></span>  
+<span data-ttu-id="84461-106">\<customBinding ></span><span class="sxs-lookup"><span data-stu-id="84461-106">\<customBinding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a014c-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="a014c-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84461-107">Syntaxe</span><span class="sxs-lookup"><span data-stu-id="84461-107">Syntax</span></span>  
   
 ```xml  
-<customBinding>  
-    <binding name="string"  
-        closeTimeout="TimeSpan"  
-        openTimeout="TimeSpan"   
-        receiveTimeout="TimeSpan"  
-        sendTimeout="TimeSpan"  
-       <compositeDuplex clientBaseAddress="Uri"/>  
-       <reliableSession acknowledgementInterval="TimeSpan"  
-           advancedFlowControl="Boolean"   
-           bufferedMessagesQuota="Integer"  
-           inactivityTimeout="TimeSpan"  
-           maxPendingChannels="Integer"  
-           maxRetryCount="Integer"   
-           ordered="Boolean" />  
-       <pnrpPeerResolver />  
-       <windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
-       <sslStreamSecurity requireClientCertificate="Boolean" />  
-              <transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"/>  
-       <security   
-          defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-           authenticationMode="UserNameForAnonymous"  
-           contextMode="Cookie"   
-           defaultProtectionLevel="Sign"  
-           enableKeyDerivation="false"  
-           keyEntropyMode="ClientEntropy"   
-                  messageProtectionOrder="SignBeforeEncryptAndEncryptSignature"   
-           securityVersion="WSSecurityXXX2005">  
-           <localClientSettings cacheCookies="false"  
-               detectReplays="false"  
-               maxCookieCachingTime="00:07:24" />  
-           <localServiceSettings replayCacheSize="9"  
-               maxClockSkew="00:00:03"   
-               replayWindow="00:07:22.2190000" />  
-       </security>  
-       <binaryMessageEncoding maxReadPoolSize="Integer"  
-           maxWritePoolSize="Integer"  
-           maxSessionSize="Integer" />  
-       <httpsTransport manualAddressing="Boolean"  
-           maxMessageSize="Integer"  
-           authenticationScheme="Negotiate"   
-           bypassProxyOnLocal="Boolean"  
-           hostNameComparisonMode="Exact"   
-           mapAddressingHeadersToHttpHeaders="Boolean"   
-           proxyaddress="Uri"  
-           realm="String"   
-           requireClientCertificate="Boolean" />  
-       <peerTransport manualAddressing="false"  
-          maxMessageSize="20002"  
-          listenIPAddress="202.10.1.9"   
-          messageAuthentication="false"  
-          peerNodeAuthenticationMode="None"  
-          port="1000" />  
-  
-<security   
-      defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-   authenticationMode="UserNameForAnonymous"  
-   bootstrapBindingConfiguration="String"  
-   bootstrapBindingSectionName="String"  
-   defaultProtectionLevel="None/Sign/EncryptAndSign"  
-      requireDerivedKeys="Boolean"  
-   securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-   messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"   
-   protectTokens="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"  
-   requireSignatureConfirmation="Boolean" >  
-   <localClientSettings cacheCookies="Boolean"  
-      detectReplays="Boolean"  
-      replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      timestampValidityDuration="TimeSpan"  
-      cookieRenewalThresholdPercentage="Integer" />  
-   <localServiceSettings detectReplays="Boolean"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxStatefulNegotiations="Integer"  
-            replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"   
-      negotiationTimeout="TimeSpan"  
-      replayWindow="TimeSpan"  
-      inactivityTimeout="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      maxConcurrentSessions="Integer"  
-      timestampValidityDuration="TimeSpan" />  
-   <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />  
-<security   
-   defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/ Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-   authenticationMode="UserNameForAnonymous"  
-   bootstrapBindingConfiguration="String"  
-   bootstrapBindingSectionName="String"  
-   defaultProtectionLevel="None/Sign/EncryptAndSign"  
-      requireDerivedKeys="Boolean"  
-   securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-   messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"   
-   protectTokens="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"  
-   requireSignatureConfirmation="Boolean" >  
-   <localClientSettings cacheCookies="Boolean"  
-      detectReplays="Boolean"  
-      replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      timestampValidityDuration="TimeSpan"  
-      cookieRenewalThresholdPercentage="Integer" />  
-   <localServiceSettings detectReplays="Boolean"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxStatefulNegotiations="Integer"  
-            replayCacheSize="Integer"  
-      maxClockSkew="TimeSpan"   
-      negotiationTimeout="TimeSpan"  
-      replayWindow="TimeSpan"  
-      inactivityTimeout="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      reconnectOnTransportFailure="Boolean"  
-      maxConcurrentSessions="Integer"  
-      timestampValidityDuration="TimeSpan" />  
-   <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />  
-   <GenericIssuedTokenParameters>   
-      <LocalIssuerIssuedTokenParameters keyType=" SymmeticKey/PublicKey"  
-        keySize="Integer"  
-        tokenType="String" />  
-     <IssuedTokenParametersEndpointAddress address="URI"  
-        bindingConfiguration="String"  
-        binding="String" />  
-     <IssuedTokenClient localIssuerChannelBehaviors="String"  
-        cacheIssuedTokens="Boolean"  
-        maxIssuedTokenCachingTime="TimeSpan"  
-        keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy" />  
-     <IssuedTokenClientBehavior issuerAddress="String"  
-        behaviorConfiguration="String" />  
-     <IssuedTokenClientBehavior address="URI"  
-        bindingConfiguration="String"  
-        binding="String" />  
-   </GenericIssuedTokenParameters>   
-</security>  
-</binding>  
-</customBinding>  
+<customBinding>
+  <binding name="String"
+           closeTimeout="TimeSpan"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan">
+    <compositeDuplex clientBaseAddress="Uri" />
+    <reliableSession acknowledgementInterval="TimeSpan"
+                     advancedFlowControl="Boolean"
+                     bufferedMessagesQuota="Integer"
+                     inactivityTimeout="TimeSpan"
+                     maxPendingChannels="Integer"
+                     maxRetryCount="Integer"
+                     ordered="Boolean" />
+    <pnrpPeerResolver />
+    <windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
+    <sslStreamSecurity requireClientCertificate="Boolean" />
+    <transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004" />
+    <security defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+              authenticationMode="UserNameForAnonymous"
+              contextMode="Cookie"
+              defaultProtectionLevel="Sign"
+              enableKeyDerivation="false"
+              keyEntropyMode="ClientEntropy"
+              messageProtectionOrder="SignBeforeEncryptAndEncryptSignature"
+              securityVersion="WSSecurityXXX2005">
+      <localClientSettings cacheCookies="false"
+                           detectReplays="false"
+                           maxCookieCachingTime="00:07:24" />
+      <localServiceSettings replayCacheSize="9"
+                            maxClockSkew="00:00:03"
+                            replayWindow="00:07:22.2190000" />
+    </security>
+    <binaryMessageEncoding maxReadPoolSize="Integer"
+                           maxWritePoolSize="Integer"
+                           maxSessionSize="Integer" />
+    <httpsTransport manualAddressing="Boolean"
+                    maxMessageSize="Integer"
+                    authenticationScheme="Negotiate"
+                    bypassProxyOnLocal="Boolean"
+                    hostNameComparisonMode="Exact"
+                    mapAddressingHeadersToHttpHeaders="Boolean"
+                    proxyaddress="Uri"
+                    realm="String"
+                    requireClientCertificate="Boolean" />
+    <peerTransport manualAddressing="false"
+                   maxMessageSize="20002"
+                   listenIPAddress="202.10.1.9"
+                   messageAuthentication="false"
+                   peerNodeAuthenticationMode="None"
+                   port="1000" />
+    <security defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+              authenticationMode="UserNameForAnonymous"
+              bootstrapBindingConfiguration="String"
+              bootstrapBindingSectionName="String"
+              defaultProtectionLevel="None/Sign/EncryptAndSign"
+              requireDerivedKeys="Boolean"
+              securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"
+              includeTimestamp="Boolean"
+              keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+              messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+              protectTokens="Boolean"
+              requireSecurityContextCancellation="Boolean"
+              securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"
+              requireSignatureConfirmation="Boolean">
+      <localClientSettings cacheCookies="Boolean"
+                           detectReplays="Boolean"
+                           replayCacheSize="Integer"
+                           maxClockSkew="TimeSpan"
+                           maxCookieCachingTime="TimeSpan"
+                           replayWindow="TimeSpan"
+                           sessionKeyRenewalInterval="TimeSpan"
+                           sessionKeyRolloverInterval="TimeSpan"
+                           reconnectOnTransportFailure="Boolean"
+                           timestampValidityDuration="TimeSpan"
+                           cookieRenewalThresholdPercentage="Integer" />
+      <localServiceSettings detectReplays="Boolean"
+                            issuedCookieLifeTime="TimeSpan"
+                            maxStatefulNegotiations="Integer"
+                            replayCacheSize="Integer"
+                            maxClockSkew="TimeSpan"
+                            negotiationTimeout="TimeSpan"
+                            replayWindow="TimeSpan"
+                            inactivityTimeout="TimeSpan"
+                            sessionKeyRenewalInterval="TimeSpan"
+                            sessionKeyRolloverInterval="TimeSpan"
+                            reconnectOnTransportFailure="Boolean"
+                            maxConcurrentSessions="Integer"
+                            timestampValidityDuration="TimeSpan" />
+      <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />
+    </security>
+    <security defaultAlgorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+              authenticationMode="UserNameForAnonymous"
+              bootstrapBindingConfiguration="String"
+              bootstrapBindingSectionName="String"
+              defaultProtectionLevel="None/Sign/EncryptAndSign"
+              requireDerivedKeys="Boolean"
+              securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"
+              includeTimestamp="Boolean"
+              keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+              messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+              protectTokens="Boolean"
+              requireSecurityContextCancellation="Boolean"
+              securityVersion=" WSSecurityJan2004/WSSecurityXXX2005"
+              requireSignatureConfirmation="Boolean" >
+      <localClientSettings cacheCookies="Boolean"
+                           detectReplays="Boolean"
+                           replayCacheSize="Integer"
+                           maxClockSkew="TimeSpan"
+                           maxCookieCachingTime="TimeSpan"
+                           replayWindow="TimeSpan"
+                           sessionKeyRenewalInterval="TimeSpan"
+                           sessionKeyRolloverInterval="TimeSpan"
+                           reconnectOnTransportFailure="Boolean"
+                           timestampValidityDuration="TimeSpan"
+                           cookieRenewalThresholdPercentage="Integer" />
+      <localServiceSettings detectReplays="Boolean"
+                           issuedCookieLifeTime="TimeSpan"
+                           maxStatefulNegotiations="Integer"
+                           replayCacheSize="Integer"
+                           maxClockSkew="TimeSpan"
+                           negotiationTimeout="TimeSpan"
+                           replayWindow="TimeSpan"
+                           inactivityTimeout="TimeSpan"
+                           sessionKeyRenewalInterval="TimeSpan"
+                           sessionKeyRolloverInterval="TimeSpan"
+                           reconnectOnTransportFailure="Boolean"
+                           maxConcurrentSessions="Integer"
+                           timestampValidityDuration="TimeSpan" />
+      <federationParameters trustVersion="WSTrustApr2004/WSTrustFeb2005" />
+      <genericIssuedTokenParameters>
+        <localIssuerIssuedTokenParameters keyType=" SymmeticKey/PublicKey"
+                                          keySize="Integer"
+                                          tokenType="String" />
+        <issuedTokenParametersEndpointAddress address="URI"
+                                              bindingConfiguration="String"
+                                              binding="String" />
+        <issuedTokenClient localIssuerChannelBehaviors="String"
+                           cacheIssuedTokens="Boolean"
+                           maxIssuedTokenCachingTime="TimeSpan"
+                           keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy" />
+        <issuedTokenClientBehavior issuerAddress="String"
+                                   behaviorConfiguration="String" />
+        <issuedTokenClientBehavior address="URI"
+                                   bindingConfiguration="String"
+                                   binding="String" />
+      </genericIssuedTokenParameters>
+    </security>
+  </binding>
+</customBinding>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="a014c-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="a014c-108">Attributes and Elements</span></span>  
- <span data-ttu-id="a014c-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="a014c-109">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="84461-108">Attributs et éléments</span><span class="sxs-lookup"><span data-stu-id="84461-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="84461-109">Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.</span><span class="sxs-lookup"><span data-stu-id="84461-109">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="a014c-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="a014c-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="84461-110">Attributs</span><span class="sxs-lookup"><span data-stu-id="84461-110">Attributes</span></span>  
   
-|<span data-ttu-id="a014c-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="a014c-111">Attribute</span></span>|<span data-ttu-id="a014c-112">Description</span><span class="sxs-lookup"><span data-stu-id="a014c-112">Description</span></span>|  
+|<span data-ttu-id="84461-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="84461-111">Attribute</span></span>|<span data-ttu-id="84461-112">Description</span><span class="sxs-lookup"><span data-stu-id="84461-112">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="a014c-113">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="a014c-113">closeTimeout</span></span>|<span data-ttu-id="a014c-114"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de fermeture.</span><span class="sxs-lookup"><span data-stu-id="a014c-114">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="a014c-115">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="a014c-115">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="a014c-116">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="a014c-116">The default is 00:01:00.</span></span>|  
-|<span data-ttu-id="a014c-117">name</span><span class="sxs-lookup"><span data-stu-id="a014c-117">name</span></span>|<span data-ttu-id="a014c-118">Chaîne qui contient le nom de configuration de la liaison.</span><span class="sxs-lookup"><span data-stu-id="a014c-118">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="a014c-119">Cette valeur est une chaîne définie par l'utilisateur qui sert de chaîne d'identification à la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="a014c-119">This value is a user-defined string that acts as the identification string for the custom binding.</span></span> <span data-ttu-id="a014c-120">Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom.</span><span class="sxs-lookup"><span data-stu-id="a014c-120">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="a014c-121">Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="a014c-121">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
-|<span data-ttu-id="a014c-122">openTimeout</span><span class="sxs-lookup"><span data-stu-id="a014c-122">openTimeout</span></span>|<span data-ttu-id="a014c-123"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture.</span><span class="sxs-lookup"><span data-stu-id="a014c-123">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="a014c-124">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="a014c-124">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="a014c-125">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="a014c-125">The default is 00:01:00.</span></span>|  
-|<span data-ttu-id="a014c-126">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="a014c-126">receiveTimeout</span></span>|<span data-ttu-id="a014c-127"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception.</span><span class="sxs-lookup"><span data-stu-id="a014c-127">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="a014c-128">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="a014c-128">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="a014c-129">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="a014c-129">The default is 00:01:00.</span></span>|  
-|<span data-ttu-id="a014c-130">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="a014c-130">sendTimeout</span></span>|<span data-ttu-id="a014c-131"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi.</span><span class="sxs-lookup"><span data-stu-id="a014c-131">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="a014c-132">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="a014c-132">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="a014c-133">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="a014c-133">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="84461-113">closeTimeout</span><span class="sxs-lookup"><span data-stu-id="84461-113">closeTimeout</span></span>|<span data-ttu-id="84461-114"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de fermeture.</span><span class="sxs-lookup"><span data-stu-id="84461-114">A <xref:System.TimeSpan> value that specifies the interval of time provided for a close operation to complete.</span></span> <span data-ttu-id="84461-115">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="84461-115">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="84461-116">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="84461-116">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="84461-117">name</span><span class="sxs-lookup"><span data-stu-id="84461-117">name</span></span>|<span data-ttu-id="84461-118">Chaîne qui contient le nom de configuration de la liaison.</span><span class="sxs-lookup"><span data-stu-id="84461-118">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="84461-119">Cette valeur est une chaîne définie par l'utilisateur qui sert de chaîne d'identification à la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="84461-119">This value is a user-defined string that acts as the identification string for the custom binding.</span></span> <span data-ttu-id="84461-120">Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom.</span><span class="sxs-lookup"><span data-stu-id="84461-120">Starting with [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], bindings and behaviors are not required to have a name.</span></span> <span data-ttu-id="84461-121">Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span><span class="sxs-lookup"><span data-stu-id="84461-121">For more information about default configuration and nameless bindings and behaviors, see [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) and [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).</span></span>|  
+|<span data-ttu-id="84461-122">openTimeout</span><span class="sxs-lookup"><span data-stu-id="84461-122">openTimeout</span></span>|<span data-ttu-id="84461-123"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture.</span><span class="sxs-lookup"><span data-stu-id="84461-123">A <xref:System.TimeSpan> value that specifies the interval of time provided for an open operation to complete.</span></span> <span data-ttu-id="84461-124">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="84461-124">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="84461-125">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="84461-125">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="84461-126">receiveTimeout</span><span class="sxs-lookup"><span data-stu-id="84461-126">receiveTimeout</span></span>|<span data-ttu-id="84461-127"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception.</span><span class="sxs-lookup"><span data-stu-id="84461-127">A <xref:System.TimeSpan> value that specifies the interval of time provided for a receive operation to complete.</span></span> <span data-ttu-id="84461-128">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="84461-128">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="84461-129">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="84461-129">The default is 00:01:00.</span></span>|  
+|<span data-ttu-id="84461-130">sendTimeout</span><span class="sxs-lookup"><span data-stu-id="84461-130">sendTimeout</span></span>|<span data-ttu-id="84461-131"><xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi.</span><span class="sxs-lookup"><span data-stu-id="84461-131">A <xref:System.TimeSpan> value that specifies the interval of time provided for a send operation to complete.</span></span> <span data-ttu-id="84461-132">Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>.</span><span class="sxs-lookup"><span data-stu-id="84461-132">This value should be greater than or equal to <xref:System.TimeSpan.Zero>.</span></span> <span data-ttu-id="84461-133">La valeur par défaut est 00:01:00.</span><span class="sxs-lookup"><span data-stu-id="84461-133">The default is 00:01:00.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="a014c-134">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="a014c-134">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="84461-134">Éléments enfants</span><span class="sxs-lookup"><span data-stu-id="84461-134">Child Elements</span></span>  
   
-|<span data-ttu-id="a014c-135">Élément</span><span class="sxs-lookup"><span data-stu-id="a014c-135">Element</span></span>|<span data-ttu-id="a014c-136">Description</span><span class="sxs-lookup"><span data-stu-id="a014c-136">Description</span></span>|  
+|<span data-ttu-id="84461-135">Élément</span><span class="sxs-lookup"><span data-stu-id="84461-135">Element</span></span>|<span data-ttu-id="84461-136">Description</span><span class="sxs-lookup"><span data-stu-id="84461-136">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="a014c-137">\<compositeDuplex></span><span class="sxs-lookup"><span data-stu-id="a014c-137">\<compositeDuplex></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|<span data-ttu-id="a014c-138">Spécifie la messagerie bidirectionnelle pour la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="a014c-138">Specifies two-way messaging to the custom binding.</span></span> <span data-ttu-id="a014c-139">Il est utilisé avec les transports qui n'autorisent pas nativement les communications duplex, comme HTTP.</span><span class="sxs-lookup"><span data-stu-id="a014c-139">It is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="a014c-140">En revanche, TCP autorise nativement les communications duplex et ne requiert pas l'utilisation de cet élément de liaison pour permettre au service de renvoyer des messages à un client.</span><span class="sxs-lookup"><span data-stu-id="a014c-140">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span><br /><br /> <span data-ttu-id="a014c-141">Le client doit exposer une adresse pour que le service puisse entrer en contact avec lui et établir une connexion.</span><span class="sxs-lookup"><span data-stu-id="a014c-141">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="a014c-142">Cette adresse cliente est fournie par l'attribut `ClientBaseAddress`.</span><span class="sxs-lookup"><span data-stu-id="a014c-142">This client address is provided by the `ClientBaseAddress` attribute.</span></span><br /><br /> <span data-ttu-id="a014c-143">Cet élément est de type <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-143">This element is of type <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.</span></span>|  
-|[<span data-ttu-id="a014c-144">\<pnrpPeerResolver></span><span class="sxs-lookup"><span data-stu-id="a014c-144">\<pnrpPeerResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|<span data-ttu-id="a014c-145">Spécifie un programme de résolution de nom d’homologue PNRP (Peer Name Resolution Protocol).</span><span class="sxs-lookup"><span data-stu-id="a014c-145">Specifies a Peer Name Resolution Protocol (PNRP) peer name resolver.</span></span> <span data-ttu-id="a014c-146">Cet élément est de type <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-146">This element is of type <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.</span></span>|  
-|[<span data-ttu-id="a014c-147">\<reliableSession></span><span class="sxs-lookup"><span data-stu-id="a014c-147">\<reliableSession></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|<span data-ttu-id="a014c-148">Spécifie le paramètre de WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="a014c-148">Specifies the setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="a014c-149">Lorsque cet élément est ajouté à une liaison personnalisée, le canal résultant peut prendre en charge des assurances de remise EOD (Exactly-Once-Delivery).</span><span class="sxs-lookup"><span data-stu-id="a014c-149">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span> <span data-ttu-id="a014c-150">Cet élément est de type <xref:System.ServiceModel.Configuration.ReliableSessionElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-150">This element is of type <xref:System.ServiceModel.Configuration.ReliableSessionElement>.</span></span>|  
-|[<span data-ttu-id="a014c-151">\<sécurité ></span><span class="sxs-lookup"><span data-stu-id="a014c-151">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="a014c-152">Spécifie les options de sécurité de la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="a014c-152">Specifies the options for security of the custom binding.</span></span> <span data-ttu-id="a014c-153">Cet élément est de type <xref:System.ServiceModel.Configuration.SecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-153">This element is of type <xref:System.ServiceModel.Configuration.SecurityElement>.</span></span>|  
-|[<span data-ttu-id="a014c-154">\<sslStreamSecurity></span><span class="sxs-lookup"><span data-stu-id="a014c-154">\<sslStreamSecurity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|<span data-ttu-id="a014c-155">Spécifie les paramètres de sécurité pour une liaison de flux de données SSL.</span><span class="sxs-lookup"><span data-stu-id="a014c-155">Specifies the security settings for a SSL stream binding.</span></span> <span data-ttu-id="a014c-156">Cet élément est de type <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-156">This element is of type <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.</span></span>|  
-|[<span data-ttu-id="a014c-157">\<transactionFlow></span><span class="sxs-lookup"><span data-stu-id="a014c-157">\<transactionFlow></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|<span data-ttu-id="a014c-158">Spécifie que le flux de la transaction des prises en charge de la liaison, ainsi que le protocole à utiliser par l’attribut `transactionProtocol`.</span><span class="sxs-lookup"><span data-stu-id="a014c-158">Specifies that the binding supports transaction flow, and the protocol to be used by the `transactionProtocol` attribute.</span></span> <span data-ttu-id="a014c-159">Cet élément est de type <xref:System.ServiceModel.Configuration.TransactionFlowElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-159">This element is of type <xref:System.ServiceModel.Configuration.TransactionFlowElement>.</span></span>|  
-|[<span data-ttu-id="a014c-160">\<windowsStreamSecurity></span><span class="sxs-lookup"><span data-stu-id="a014c-160">\<windowsStreamSecurity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|<span data-ttu-id="a014c-161">Spécifie les options permettant de transmettre en continu la sécurité de la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="a014c-161">Specifies the options for streaming security of the custom binding.</span></span> <span data-ttu-id="a014c-162">Cet élément est de type <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="a014c-162">This element is of type <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.</span></span>|  
+|[<span data-ttu-id="84461-137">\<compositeDuplex></span><span class="sxs-lookup"><span data-stu-id="84461-137">\<compositeDuplex></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|<span data-ttu-id="84461-138">Spécifie la messagerie bidirectionnelle pour la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="84461-138">Specifies two-way messaging to the custom binding.</span></span> <span data-ttu-id="84461-139">Il est utilisé avec les transports qui n'autorisent pas nativement les communications duplex, comme HTTP.</span><span class="sxs-lookup"><span data-stu-id="84461-139">It is used with transports that do not allow duplex communications natively, for example, HTTP.</span></span> <span data-ttu-id="84461-140">En revanche, TCP autorise nativement les communications duplex et ne requiert pas l'utilisation de cet élément de liaison pour permettre au service de renvoyer des messages à un client.</span><span class="sxs-lookup"><span data-stu-id="84461-140">TCP, by contrast, allows duplex communications natively, and does not require the use of this binding element for the service to send messages back to a client.</span></span><br /><br /> <span data-ttu-id="84461-141">Le client doit exposer une adresse pour que le service puisse entrer en contact avec lui et établir une connexion.</span><span class="sxs-lookup"><span data-stu-id="84461-141">The client must expose an address for the service to make contact and establish a connection.</span></span> <span data-ttu-id="84461-142">Cette adresse cliente est fournie par l'attribut `ClientBaseAddress`.</span><span class="sxs-lookup"><span data-stu-id="84461-142">This client address is provided by the `ClientBaseAddress` attribute.</span></span><br /><br /> <span data-ttu-id="84461-143">Cet élément est de type <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-143">This element is of type <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.</span></span>|  
+|[<span data-ttu-id="84461-144">\<pnrpPeerResolver></span><span class="sxs-lookup"><span data-stu-id="84461-144">\<pnrpPeerResolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|<span data-ttu-id="84461-145">Spécifie un programme de résolution de nom d’homologue PNRP (Peer Name Resolution Protocol).</span><span class="sxs-lookup"><span data-stu-id="84461-145">Specifies a Peer Name Resolution Protocol (PNRP) peer name resolver.</span></span> <span data-ttu-id="84461-146">Cet élément est de type <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-146">This element is of type <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.</span></span>|  
+|[<span data-ttu-id="84461-147">\<reliableSession></span><span class="sxs-lookup"><span data-stu-id="84461-147">\<reliableSession></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|<span data-ttu-id="84461-148">Spécifie le paramètre de WS-Reliable Messaging.</span><span class="sxs-lookup"><span data-stu-id="84461-148">Specifies the setting for WS-Reliable Messaging.</span></span> <span data-ttu-id="84461-149">Lorsque cet élément est ajouté à une liaison personnalisée, le canal résultant peut prendre en charge des assurances de remise EOD (Exactly-Once-Delivery).</span><span class="sxs-lookup"><span data-stu-id="84461-149">When this element is added to a custom binding, the resulting channel can support exactly-once delivery assurances.</span></span> <span data-ttu-id="84461-150">Cet élément est de type <xref:System.ServiceModel.Configuration.ReliableSessionElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-150">This element is of type <xref:System.ServiceModel.Configuration.ReliableSessionElement>.</span></span>|  
+|[<span data-ttu-id="84461-151">\<sécurité ></span><span class="sxs-lookup"><span data-stu-id="84461-151">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|<span data-ttu-id="84461-152">Spécifie les options de sécurité de la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="84461-152">Specifies the options for security of the custom binding.</span></span> <span data-ttu-id="84461-153">Cet élément est de type <xref:System.ServiceModel.Configuration.SecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-153">This element is of type <xref:System.ServiceModel.Configuration.SecurityElement>.</span></span>|  
+|[<span data-ttu-id="84461-154">\<sslStreamSecurity></span><span class="sxs-lookup"><span data-stu-id="84461-154">\<sslStreamSecurity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/sslstreamsecurity.md)|<span data-ttu-id="84461-155">Spécifie les paramètres de sécurité pour une liaison de flux de données SSL.</span><span class="sxs-lookup"><span data-stu-id="84461-155">Specifies the security settings for a SSL stream binding.</span></span> <span data-ttu-id="84461-156">Cet élément est de type <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-156">This element is of type <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.</span></span>|  
+|[<span data-ttu-id="84461-157">\<transactionFlow></span><span class="sxs-lookup"><span data-stu-id="84461-157">\<transactionFlow></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)|<span data-ttu-id="84461-158">Spécifie que le flux de la transaction des prises en charge de la liaison, ainsi que le protocole à utiliser par l’attribut `transactionProtocol`.</span><span class="sxs-lookup"><span data-stu-id="84461-158">Specifies that the binding supports transaction flow, and the protocol to be used by the `transactionProtocol` attribute.</span></span> <span data-ttu-id="84461-159">Cet élément est de type <xref:System.ServiceModel.Configuration.TransactionFlowElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-159">This element is of type <xref:System.ServiceModel.Configuration.TransactionFlowElement>.</span></span>|  
+|[<span data-ttu-id="84461-160">\<windowsStreamSecurity></span><span class="sxs-lookup"><span data-stu-id="84461-160">\<windowsStreamSecurity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)|<span data-ttu-id="84461-161">Spécifie les options permettant de transmettre en continu la sécurité de la liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="84461-161">Specifies the options for streaming security of the custom binding.</span></span> <span data-ttu-id="84461-162">Cet élément est de type <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.</span><span class="sxs-lookup"><span data-stu-id="84461-162">This element is of type <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="a014c-163">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="a014c-163">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="84461-163">Éléments parents</span><span class="sxs-lookup"><span data-stu-id="84461-163">Parent Elements</span></span>  
   
-|<span data-ttu-id="a014c-164">Élément</span><span class="sxs-lookup"><span data-stu-id="a014c-164">Element</span></span>|<span data-ttu-id="a014c-165">Description</span><span class="sxs-lookup"><span data-stu-id="a014c-165">Description</span></span>|  
+|<span data-ttu-id="84461-164">Élément</span><span class="sxs-lookup"><span data-stu-id="84461-164">Element</span></span>|<span data-ttu-id="84461-165">Description</span><span class="sxs-lookup"><span data-stu-id="84461-165">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="a014c-166">liaisons</span><span class="sxs-lookup"><span data-stu-id="a014c-166">bindings</span></span>|<span data-ttu-id="a014c-167">Contient toutes les liaisons pour les applications de Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="a014c-167">Contains all bindings for Windows Communication Foundation applications.</span></span>|  
+|<span data-ttu-id="84461-166">liaisons</span><span class="sxs-lookup"><span data-stu-id="84461-166">bindings</span></span>|<span data-ttu-id="84461-167">Contient toutes les liaisons pour les applications de Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="84461-167">Contains all bindings for Windows Communication Foundation applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a014c-168">Notes</span><span class="sxs-lookup"><span data-stu-id="a014c-168">Remarks</span></span>  
- <span data-ttu-id="a014c-169">Les liaisons personnalisées permettent d’exercer un contrôle total sur la pile de messagerie WCF.</span><span class="sxs-lookup"><span data-stu-id="a014c-169">Custom bindings provide full control over the WCF messaging stack.</span></span> <span data-ttu-id="a014c-170">Les liaisons spécialement conçues peuvent être créées en ajoutant des éléments de configuration pour des entités spécifiques.</span><span class="sxs-lookup"><span data-stu-id="a014c-170">Special tailored bindings can be created my adding the configuration elements for specific entities.</span></span> <span data-ttu-id="a014c-171">Par exemple, l'utilisateur peut associer les sections `httpsTransport`, `reliableSession` et `security` pour créer une liaison fiable et sécurisée basée sur https.</span><span class="sxs-lookup"><span data-stu-id="a014c-171">For example, the user can combine the `httpsTransport` section, `reliableSession` section and the `security` section to create a reliable and secure https based binding.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84461-168">Notes</span><span class="sxs-lookup"><span data-stu-id="84461-168">Remarks</span></span>  
+ <span data-ttu-id="84461-169">Les liaisons personnalisées permettent d’exercer un contrôle total sur la pile de messagerie WCF.</span><span class="sxs-lookup"><span data-stu-id="84461-169">Custom bindings provide full control over the WCF messaging stack.</span></span> <span data-ttu-id="84461-170">Les liaisons spécialement conçues peuvent être créées en ajoutant des éléments de configuration pour des entités spécifiques.</span><span class="sxs-lookup"><span data-stu-id="84461-170">Special tailored bindings can be created my adding the configuration elements for specific entities.</span></span> <span data-ttu-id="84461-171">Par exemple, l'utilisateur peut associer les sections `httpsTransport`, `reliableSession` et `security` pour créer une liaison fiable et sécurisée basée sur https.</span><span class="sxs-lookup"><span data-stu-id="84461-171">For example, the user can combine the `httpsTransport` section, `reliableSession` section and the `security` section to create a reliable and secure https based binding.</span></span>  
   
- <span data-ttu-id="a014c-172">Une liaison individuelle définit la pile de messages en spécifiant les éléments de configuration des éléments de la pile suivant leur l'ordre d'apparition dans cette pile.</span><span class="sxs-lookup"><span data-stu-id="a014c-172">An individual binding defines the message stack by specifying the configuration elements for the stack elements in the order they appear on the stack.</span></span> <span data-ttu-id="a014c-173">Chaque élément définit et configure l'élément de la pile.</span><span class="sxs-lookup"><span data-stu-id="a014c-173">Each element defines and configures the one element of the stack.</span></span> <span data-ttu-id="a014c-174">Il doit y avoir un seul élément de transport dans chaque liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="a014c-174">There must be one and only one transport element in each custom binding.</span></span> <span data-ttu-id="a014c-175">Sans cet élément, la pile de messagerie est incomplète.</span><span class="sxs-lookup"><span data-stu-id="a014c-175">Without this element, the messaging stack is incomplete.</span></span>  
+ <span data-ttu-id="84461-172">Une liaison individuelle définit la pile de messages en spécifiant les éléments de configuration des éléments de la pile suivant leur l'ordre d'apparition dans cette pile.</span><span class="sxs-lookup"><span data-stu-id="84461-172">An individual binding defines the message stack by specifying the configuration elements for the stack elements in the order they appear on the stack.</span></span> <span data-ttu-id="84461-173">Chaque élément définit et configure l'élément de la pile.</span><span class="sxs-lookup"><span data-stu-id="84461-173">Each element defines and configures the one element of the stack.</span></span> <span data-ttu-id="84461-174">Il doit y avoir un seul élément de transport dans chaque liaison personnalisée.</span><span class="sxs-lookup"><span data-stu-id="84461-174">There must be one and only one transport element in each custom binding.</span></span> <span data-ttu-id="84461-175">Sans cet élément, la pile de messagerie est incomplète.</span><span class="sxs-lookup"><span data-stu-id="84461-175">Without this element, the messaging stack is incomplete.</span></span>  
   
- <span data-ttu-id="a014c-176">L'ordre dans lequel les éléments apparaissent dans la pile est important car il s'agit de l'ordre dans lequel les opérations sont appliquées au message.</span><span class="sxs-lookup"><span data-stu-id="a014c-176">The order in which elements appear in the stack matters, because it is the order in which operations are applied to the message.</span></span> <span data-ttu-id="a014c-177">Voici l'ordre recommandé des éléments de la pile :</span><span class="sxs-lookup"><span data-stu-id="a014c-177">The recommended order of stack elements is the following:</span></span>  
+ <span data-ttu-id="84461-176">L'ordre dans lequel les éléments apparaissent dans la pile est important car il s'agit de l'ordre dans lequel les opérations sont appliquées au message.</span><span class="sxs-lookup"><span data-stu-id="84461-176">The order in which elements appear in the stack matters, because it is the order in which operations are applied to the message.</span></span> <span data-ttu-id="84461-177">Voici l'ordre recommandé des éléments de la pile :</span><span class="sxs-lookup"><span data-stu-id="84461-177">The recommended order of stack elements is the following:</span></span>  
   
-1.  <span data-ttu-id="a014c-178">Transactions (facultatif)</span><span class="sxs-lookup"><span data-stu-id="a014c-178">Transactions (optional)</span></span>  
+1.  <span data-ttu-id="84461-178">Transactions (facultatif)</span><span class="sxs-lookup"><span data-stu-id="84461-178">Transactions (optional)</span></span>  
   
-2.  <span data-ttu-id="a014c-179">Messagerie fiable (facultatif)</span><span class="sxs-lookup"><span data-stu-id="a014c-179">Reliable Messaging (optional)</span></span>  
+2.  <span data-ttu-id="84461-179">Messagerie fiable (facultatif)</span><span class="sxs-lookup"><span data-stu-id="84461-179">Reliable Messaging (optional)</span></span>  
   
-3.  <span data-ttu-id="a014c-180">Sécurité (facultatif)</span><span class="sxs-lookup"><span data-stu-id="a014c-180">Security (optional)</span></span>  
+3.  <span data-ttu-id="84461-180">Sécurité (facultatif)</span><span class="sxs-lookup"><span data-stu-id="84461-180">Security (optional)</span></span>  
   
-4.  <span data-ttu-id="a014c-181">Transport</span><span class="sxs-lookup"><span data-stu-id="a014c-181">Transport</span></span>  
+4.  <span data-ttu-id="84461-181">Transport</span><span class="sxs-lookup"><span data-stu-id="84461-181">Transport</span></span>  
   
-5.  <span data-ttu-id="a014c-182">Encodeur (facultatif)</span><span class="sxs-lookup"><span data-stu-id="a014c-182">Encoder (optional)</span></span>  
+5.  <span data-ttu-id="84461-182">Encodeur (facultatif)</span><span class="sxs-lookup"><span data-stu-id="84461-182">Encoder (optional)</span></span>  
   
- <span data-ttu-id="a014c-183">Utilisez une liaison personnalisée lorsque l'une des liaisons fournies par le système ne répond pas aux spécifications de votre service.</span><span class="sxs-lookup"><span data-stu-id="a014c-183">Use a custom binding when one of the system-provided bindings does not meet the requirements of your service.</span></span> <span data-ttu-id="a014c-184">Une liaison personnalisée peut être utilisée, par exemple, pour activer l'utilisation d'un nouveau transport ou d'un nouvel encodeur à un point de terminaison de service.</span><span class="sxs-lookup"><span data-stu-id="a014c-184">A custom binding could be used, for example, to enable the use of a new transport or a new encoder at a service endpoint.</span></span>  
+ <span data-ttu-id="84461-183">Utilisez une liaison personnalisée lorsque l'une des liaisons fournies par le système ne répond pas aux spécifications de votre service.</span><span class="sxs-lookup"><span data-stu-id="84461-183">Use a custom binding when one of the system-provided bindings does not meet the requirements of your service.</span></span> <span data-ttu-id="84461-184">Une liaison personnalisée peut être utilisée, par exemple, pour activer l'utilisation d'un nouveau transport ou d'un nouvel encodeur à un point de terminaison de service.</span><span class="sxs-lookup"><span data-stu-id="84461-184">A custom binding could be used, for example, to enable the use of a new transport or a new encoder at a service endpoint.</span></span>  
   
- <span data-ttu-id="a014c-185">Une liaison personnalisée est construite à l'aide d'une collection <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> d'éléments de liaison « empilés » dans un ordre spécifique :</span><span class="sxs-lookup"><span data-stu-id="a014c-185">A custom binding is constructed using one of the <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> from a collection of binding elements that are "stacked" in a specific order:</span></span>  
+ <span data-ttu-id="84461-185">Une liaison personnalisée est construite à l'aide d'une collection <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> d'éléments de liaison « empilés » dans un ordre spécifique :</span><span class="sxs-lookup"><span data-stu-id="84461-185">A custom binding is constructed using one of the <xref:System.ServiceModel.Channels.CustomBinding.%23ctor%2A> from a collection of binding elements that are "stacked" in a specific order:</span></span>  
   
--   <span data-ttu-id="a014c-186">Tout en haut de cette pile figure un <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> facultatif qui autorise des transactions de flux.</span><span class="sxs-lookup"><span data-stu-id="a014c-186">At the top is an optional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> that allows flowing transactions.</span></span>  
+-   <span data-ttu-id="84461-186">Tout en haut de cette pile figure un <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> facultatif qui autorise des transactions de flux.</span><span class="sxs-lookup"><span data-stu-id="84461-186">At the top is an optional <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> that allows flowing transactions.</span></span>  
   
--   <span data-ttu-id="a014c-187">Puis figure un <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> facultatif qui fournit une session et un mécanisme de classement tel que défini dans la spécification WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="a014c-187">Next is an optional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> that provides a session and ordering mechanism as defined in the WS-ReliableMessaging specification.</span></span> <span data-ttu-id="a014c-188">Cette notion de session peut traverser les intermédiaires SOAP et de transport.</span><span class="sxs-lookup"><span data-stu-id="a014c-188">This notion of a session can cross SOAP and transport intermediaries.</span></span>  
+-   <span data-ttu-id="84461-187">Puis figure un <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> facultatif qui fournit une session et un mécanisme de classement tel que défini dans la spécification WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="84461-187">Next is an optional <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> that provides a session and ordering mechanism as defined in the WS-ReliableMessaging specification.</span></span> <span data-ttu-id="84461-188">Cette notion de session peut traverser les intermédiaires SOAP et de transport.</span><span class="sxs-lookup"><span data-stu-id="84461-188">This notion of a session can cross SOAP and transport intermediaries.</span></span>  
   
--   <span data-ttu-id="a014c-189">Puis figure un élément de liaison facultatif qui fournit des fonctionnalités de sécurité telles que l’autorisation, l’authentification, la protection et la confidentialité.</span><span class="sxs-lookup"><span data-stu-id="a014c-189">Next is an optional security binding element that provides security features like authorization, authentication, protection, and confidentiality.</span></span> <span data-ttu-id="a014c-190">Les éléments de liaison de sécurité suivants sont fournis par Windows Communication Foundation (WCF) :</span><span class="sxs-lookup"><span data-stu-id="a014c-190">The following security binding elements are provided by Windows Communication Foundation (WCF):</span></span>  
+-   <span data-ttu-id="84461-189">Puis figure un élément de liaison facultatif qui fournit des fonctionnalités de sécurité telles que l’autorisation, l’authentification, la protection et la confidentialité.</span><span class="sxs-lookup"><span data-stu-id="84461-189">Next is an optional security binding element that provides security features like authorization, authentication, protection, and confidentiality.</span></span> <span data-ttu-id="84461-190">Les éléments de liaison de sécurité suivants sont fournis par Windows Communication Foundation (WCF) :</span><span class="sxs-lookup"><span data-stu-id="84461-190">The following security binding elements are provided by Windows Communication Foundation (WCF):</span></span>  
   
     -   <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
@@ -240,11 +237,11 @@ ms.locfileid: "53153902"
   
     -   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
--   <span data-ttu-id="a014c-191">Les modèles de messages facultatifs spécifiés par des éléments de liaison figurent ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="a014c-191">Next are the optional message-patterns specified by binding elements:</span></span>  
+-   <span data-ttu-id="84461-191">Les modèles de messages facultatifs spécifiés par des éléments de liaison figurent ci-dessous :</span><span class="sxs-lookup"><span data-stu-id="84461-191">Next are the optional message-patterns specified by binding elements:</span></span>  
   
 -   <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>  
   
--   <span data-ttu-id="a014c-192">Les éléments de liaison d'assistance/de mises à niveau de transport facultatifs sont les suivants :</span><span class="sxs-lookup"><span data-stu-id="a014c-192">Next are the optional transport upgrades/helpers binding elements:</span></span>  
+-   <span data-ttu-id="84461-192">Les éléments de liaison d'assistance/de mises à niveau de transport facultatifs sont les suivants :</span><span class="sxs-lookup"><span data-stu-id="84461-192">Next are the optional transport upgrades/helpers binding elements:</span></span>  
   
     -   <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
   
@@ -252,7 +249,7 @@ ms.locfileid: "53153902"
   
     -   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
--   <span data-ttu-id="a014c-193">L'élément suivant est un message obligatoire qui encode l'élément de liaison.</span><span class="sxs-lookup"><span data-stu-id="a014c-193">Next is a required message encoding binding element.</span></span> <span data-ttu-id="a014c-194">Vous pouvez utiliser votre propre transport ou utiliser l'une des liaisons d'encodage des messages suivantes :</span><span class="sxs-lookup"><span data-stu-id="a014c-194">You can use your own transport or use one of the following message encoding bindings:</span></span>  
+-   <span data-ttu-id="84461-193">L'élément suivant est un message obligatoire qui encode l'élément de liaison.</span><span class="sxs-lookup"><span data-stu-id="84461-193">Next is a required message encoding binding element.</span></span> <span data-ttu-id="84461-194">Vous pouvez utiliser votre propre transport ou utiliser l'une des liaisons d'encodage des messages suivantes :</span><span class="sxs-lookup"><span data-stu-id="84461-194">You can use your own transport or use one of the following message encoding bindings:</span></span>  
   
     -   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
@@ -260,7 +257,7 @@ ms.locfileid: "53153902"
   
     -   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>  
   
--   <span data-ttu-id="a014c-195">Au bas de la pile se trouve un élément de transport obligatoire.</span><span class="sxs-lookup"><span data-stu-id="a014c-195">At the bottom is a required transport element.</span></span> <span data-ttu-id="a014c-196">Vous pouvez utiliser votre propre transport ou utiliser un des éléments fournis par Windows Communication Foundation (WCF) de liaison de transport :</span><span class="sxs-lookup"><span data-stu-id="a014c-196">You can use your own transport or use one of transport binding elements provided by Windows Communication Foundation (WCF):</span></span>  
+-   <span data-ttu-id="84461-195">Au bas de la pile se trouve un élément de transport obligatoire.</span><span class="sxs-lookup"><span data-stu-id="84461-195">At the bottom is a required transport element.</span></span> <span data-ttu-id="84461-196">Vous pouvez utiliser votre propre transport ou utiliser un des éléments fournis par Windows Communication Foundation (WCF) de liaison de transport :</span><span class="sxs-lookup"><span data-stu-id="84461-196">You can use your own transport or use one of transport binding elements provided by Windows Communication Foundation (WCF):</span></span>  
   
     -   <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
@@ -276,33 +273,33 @@ ms.locfileid: "53153902"
   
     -   <xref:System.ServiceModel.Channels.PeerTransportBindingElement>  
   
- <span data-ttu-id="a014c-197">Le tableau suivant récapitule les options de chaque couche.</span><span class="sxs-lookup"><span data-stu-id="a014c-197">The following table summarizes the options for each layer.</span></span>  
+ <span data-ttu-id="84461-197">Le tableau suivant récapitule les options de chaque couche.</span><span class="sxs-lookup"><span data-stu-id="84461-197">The following table summarizes the options for each layer.</span></span>  
   
-|<span data-ttu-id="a014c-198">Couche</span><span class="sxs-lookup"><span data-stu-id="a014c-198">Layer</span></span>|<span data-ttu-id="a014c-199">Options</span><span class="sxs-lookup"><span data-stu-id="a014c-199">Options</span></span>|<span data-ttu-id="a014c-200">Obligatoire</span><span class="sxs-lookup"><span data-stu-id="a014c-200">Required</span></span>|  
+|<span data-ttu-id="84461-198">Couche</span><span class="sxs-lookup"><span data-stu-id="84461-198">Layer</span></span>|<span data-ttu-id="84461-199">Options</span><span class="sxs-lookup"><span data-stu-id="84461-199">Options</span></span>|<span data-ttu-id="84461-200">Obligatoire</span><span class="sxs-lookup"><span data-stu-id="84461-200">Required</span></span>|  
 |-----------|-------------|--------------|  
-|<span data-ttu-id="a014c-201">Flux de transaction</span><span class="sxs-lookup"><span data-stu-id="a014c-201">Transaction Flow</span></span>|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|<span data-ttu-id="a014c-202">Non</span><span class="sxs-lookup"><span data-stu-id="a014c-202">No</span></span>|  
-|<span data-ttu-id="a014c-203">Fiabilité</span><span class="sxs-lookup"><span data-stu-id="a014c-203">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|<span data-ttu-id="a014c-204">Non</span><span class="sxs-lookup"><span data-stu-id="a014c-204">No</span></span>|  
-|<span data-ttu-id="a014c-205">Sécurité</span><span class="sxs-lookup"><span data-stu-id="a014c-205">Security</span></span>|<span data-ttu-id="a014c-206">Symétrique, asymétrique, au niveau du transport</span><span class="sxs-lookup"><span data-stu-id="a014c-206">Symmetric, Asymmetric, Transport-Level</span></span>|<span data-ttu-id="a014c-207">Non</span><span class="sxs-lookup"><span data-stu-id="a014c-207">No</span></span>|  
-|<span data-ttu-id="a014c-208">Modification de la forme</span><span class="sxs-lookup"><span data-stu-id="a014c-208">Shape Change</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|<span data-ttu-id="a014c-209">Non</span><span class="sxs-lookup"><span data-stu-id="a014c-209">No</span></span>|  
-|<span data-ttu-id="a014c-210">Mises à niveau de transport</span><span class="sxs-lookup"><span data-stu-id="a014c-210">Transport Upgrades</span></span>|<span data-ttu-id="a014c-211">Flux SSL, flux Windows, programme de résolution d'homologue</span><span class="sxs-lookup"><span data-stu-id="a014c-211">SSL stream, Windows stream, Peer Resolver</span></span>|<span data-ttu-id="a014c-212">Non</span><span class="sxs-lookup"><span data-stu-id="a014c-212">No</span></span>|  
-|<span data-ttu-id="a014c-213">Encodage</span><span class="sxs-lookup"><span data-stu-id="a014c-213">Encoding</span></span>|<span data-ttu-id="a014c-214">Text, Binary, MTOM, Custom</span><span class="sxs-lookup"><span data-stu-id="a014c-214">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="a014c-215">Oui</span><span class="sxs-lookup"><span data-stu-id="a014c-215">Yes</span></span>|  
-|<span data-ttu-id="a014c-216">Transport</span><span class="sxs-lookup"><span data-stu-id="a014c-216">Transport</span></span>|<span data-ttu-id="a014c-217">TCP, canaux nommés, HTTP, HTTPS, versions de MSMQ, personnalisé</span><span class="sxs-lookup"><span data-stu-id="a014c-217">TCP, Named Pipes, HTTP, HTTPS, flavors of MSMQ, Custom</span></span>|<span data-ttu-id="a014c-218">Oui</span><span class="sxs-lookup"><span data-stu-id="a014c-218">Yes</span></span>|  
+|<span data-ttu-id="84461-201">Flux de transaction</span><span class="sxs-lookup"><span data-stu-id="84461-201">Transaction Flow</span></span>|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement>|<span data-ttu-id="84461-202">Non</span><span class="sxs-lookup"><span data-stu-id="84461-202">No</span></span>|  
+|<span data-ttu-id="84461-203">Fiabilité</span><span class="sxs-lookup"><span data-stu-id="84461-203">Reliability</span></span>|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>|<span data-ttu-id="84461-204">Non</span><span class="sxs-lookup"><span data-stu-id="84461-204">No</span></span>|  
+|<span data-ttu-id="84461-205">Sécurité</span><span class="sxs-lookup"><span data-stu-id="84461-205">Security</span></span>|<span data-ttu-id="84461-206">Symétrique, asymétrique, au niveau du transport</span><span class="sxs-lookup"><span data-stu-id="84461-206">Symmetric, Asymmetric, Transport-Level</span></span>|<span data-ttu-id="84461-207">Non</span><span class="sxs-lookup"><span data-stu-id="84461-207">No</span></span>|  
+|<span data-ttu-id="84461-208">Modification de la forme</span><span class="sxs-lookup"><span data-stu-id="84461-208">Shape Change</span></span>|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|<span data-ttu-id="84461-209">Non</span><span class="sxs-lookup"><span data-stu-id="84461-209">No</span></span>|  
+|<span data-ttu-id="84461-210">Mises à niveau de transport</span><span class="sxs-lookup"><span data-stu-id="84461-210">Transport Upgrades</span></span>|<span data-ttu-id="84461-211">Flux SSL, flux Windows, programme de résolution d'homologue</span><span class="sxs-lookup"><span data-stu-id="84461-211">SSL stream, Windows stream, Peer Resolver</span></span>|<span data-ttu-id="84461-212">Non</span><span class="sxs-lookup"><span data-stu-id="84461-212">No</span></span>|  
+|<span data-ttu-id="84461-213">Encodage</span><span class="sxs-lookup"><span data-stu-id="84461-213">Encoding</span></span>|<span data-ttu-id="84461-214">Text, Binary, MTOM, Custom</span><span class="sxs-lookup"><span data-stu-id="84461-214">Text, Binary, MTOM, Custom</span></span>|<span data-ttu-id="84461-215">Oui</span><span class="sxs-lookup"><span data-stu-id="84461-215">Yes</span></span>|  
+|<span data-ttu-id="84461-216">Transport</span><span class="sxs-lookup"><span data-stu-id="84461-216">Transport</span></span>|<span data-ttu-id="84461-217">TCP, canaux nommés, HTTP, HTTPS, versions de MSMQ, personnalisé</span><span class="sxs-lookup"><span data-stu-id="84461-217">TCP, Named Pipes, HTTP, HTTPS, flavors of MSMQ, Custom</span></span>|<span data-ttu-id="84461-218">Oui</span><span class="sxs-lookup"><span data-stu-id="84461-218">Yes</span></span>|  
   
- <span data-ttu-id="a014c-219">De plus, vous pouvez définir vos propres éléments de liaison et les insérer entre chacune des couches définies précédentes.</span><span class="sxs-lookup"><span data-stu-id="a014c-219">In addition, you can define your own binding elements and insert them between any of the preceding defined layers.</span></span>  
+ <span data-ttu-id="84461-219">De plus, vous pouvez définir vos propres éléments de liaison et les insérer entre chacune des couches définies précédentes.</span><span class="sxs-lookup"><span data-stu-id="84461-219">In addition, you can define your own binding elements and insert them between any of the preceding defined layers.</span></span>  
   
- <span data-ttu-id="a014c-220">Pour une discussion sur l’utilisation d’une liaison personnalisée afin de modifier une liaison fournie par le système, consultez [Comment : Personnaliser une liaison fournie par le système](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span><span class="sxs-lookup"><span data-stu-id="a014c-220">For a discussion on how to use a custom binding to modify a system-provided binding, see [How to: Customize a System-Provided Binding](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
+ <span data-ttu-id="84461-220">Pour une discussion sur l’utilisation d’une liaison personnalisée afin de modifier une liaison fournie par le système, consultez [Comment : Personnaliser une liaison fournie par le système](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span><span class="sxs-lookup"><span data-stu-id="84461-220">For a discussion on how to use a custom binding to modify a system-provided binding, see [How to: Customize a System-Provided Binding](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).</span></span>  
     
   
-## <a name="see-also"></a><span data-ttu-id="a014c-221">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="a014c-221">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="84461-221">Voir aussi</span><span class="sxs-lookup"><span data-stu-id="84461-221">See Also</span></span>  
  <xref:System.ServiceModel.Channels.Binding>  
  <xref:System.ServiceModel.Channels.BindingElement>  
  <xref:System.ServiceModel.Configuration.BindingsSection>  
  <xref:System.ServiceModel.Channels.CustomBinding>  
- [<span data-ttu-id="a014c-222">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="a014c-222">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
- [<span data-ttu-id="a014c-223">Liaisons</span><span class="sxs-lookup"><span data-stu-id="a014c-223">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="a014c-224">Extension de liaisons</span><span class="sxs-lookup"><span data-stu-id="a014c-224">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [<span data-ttu-id="a014c-225">Liaisons personnalisées</span><span class="sxs-lookup"><span data-stu-id="a014c-225">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [<span data-ttu-id="a014c-226">CustomBinding (élément)</span><span class="sxs-lookup"><span data-stu-id="a014c-226">customBinding Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [<span data-ttu-id="a014c-227">Liaisons</span><span class="sxs-lookup"><span data-stu-id="a014c-227">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
- [<span data-ttu-id="a014c-228">Configuration des liaisons fournies par le système</span><span class="sxs-lookup"><span data-stu-id="a014c-228">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [<span data-ttu-id="a014c-229">Utilisation de liaisons pour configurer des services et des clients</span><span class="sxs-lookup"><span data-stu-id="a014c-229">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+ [<span data-ttu-id="84461-222">\<liaison ></span><span class="sxs-lookup"><span data-stu-id="84461-222">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)  
+ [<span data-ttu-id="84461-223">Liaisons</span><span class="sxs-lookup"><span data-stu-id="84461-223">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="84461-224">Extension de liaisons</span><span class="sxs-lookup"><span data-stu-id="84461-224">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
+ [<span data-ttu-id="84461-225">Liaisons personnalisées</span><span class="sxs-lookup"><span data-stu-id="84461-225">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
+ [<span data-ttu-id="84461-226">CustomBinding (élément)</span><span class="sxs-lookup"><span data-stu-id="84461-226">customBinding Element</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
+ [<span data-ttu-id="84461-227">Liaisons</span><span class="sxs-lookup"><span data-stu-id="84461-227">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)  
+ [<span data-ttu-id="84461-228">Configuration des liaisons fournies par le système</span><span class="sxs-lookup"><span data-stu-id="84461-228">Configuring System-Provided Bindings</span></span>](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+ [<span data-ttu-id="84461-229">Utilisation de liaisons pour configurer des services et des clients</span><span class="sxs-lookup"><span data-stu-id="84461-229">Using Bindings to Configure Services and Clients</span></span>](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
