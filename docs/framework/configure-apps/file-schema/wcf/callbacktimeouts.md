@@ -2,12 +2,12 @@
 title: '&lt;callbackTimeouts&gt;'
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: 48da0351d162a2143a26cc5b9eaa05b731358639
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 85e7b1f0d009e27cbacd9f69b381e4f05984bf56
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749564"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149109"
 ---
 # <a name="ltcallbacktimeoutsgt"></a>&lt;callbackTimeouts&gt;
 Spécifie la valeur du délai d’attente lors du transfert de transactions du serveur vers un client dans un scénario de contrat de rappel duplex.  
@@ -21,7 +21,7 @@ Spécifie la valeur du délai d’attente lors du transfert de transactions du s
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<callbackTimeOuts transactionTimeout="TimeSpan" />  
+<callbackTimeOuts transactionTimeout="TimeSpan" />
 ```  
   
 ## <a name="type"></a>Type  
@@ -34,7 +34,7 @@ Spécifie la valeur du délai d’attente lors du transfert de transactions du s
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|`transactionTimeout`|Valeur <xref:System.TimeSpan> qui spécifie l'intervalle au cours duquel les transactions doivent être automatiquement effectuées ou arrêtées. La valeur par défaut est « 00 : 00:00 ».|  
+|`transactionTimeout`|Valeur <xref:System.TimeSpan> qui spécifie l’intervalle au cours duquel les transactions doivent être automatiquement effectuées ou arrêtées. La valeur par défaut est « 00 : 00:00 ».|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  

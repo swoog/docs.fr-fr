@@ -2,12 +2,12 @@
 title: '&lt;issuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 550b3412b193b996b8de800856d6833369fc4bc7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2060f98e94cec9e656420ac073204a82bc592b92
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749385"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149239"
 ---
 # <a name="ltissuedtokenparametersgt"></a>&lt;issuedTokenParameters&gt;
 Indique les paramètres d'un jeton de sécurité émis dans un scénario de sécurité fédéré.  
@@ -22,21 +22,20 @@ Indique les paramètres d'un jeton de sécurité émis dans un scénario de séc
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<issuedTokenParameters   
-      DefaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"  
-      inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"  
-      keySize="Integer"  
-   keyType="AsymmetricKey/BearerKey/SymmetricKey"  
-      tokenType="String" >  
-   <additionalRequestParameters />  
-      <claimTypeRequirements>  
-            <add claimType="URI"  
-           isOptional="Boolean" />  
-      </claimTypeRequirements>  
-      <issuer address="String"   
-                      binding=" " />  
-      <issuerMetadata address="String" />   
-</issuedTokenParameters>  
+<issuedTokenParameters defaultMessageSecurityVersion="System.ServiceModel.MessageSecurityVersion"
+                       inclusionMode="AlwaysToInitiator/AlwaysToRecipient/Never/Once"
+                       keySize="Integer"
+                       keyType="AsymmetricKey/BearerKey/SymmetricKey"
+                       tokenType="String">
+  <additionalRequestParameters />
+  <claimTypeRequirements>
+    <add claimType="URI"
+         isOptional="Boolean" />
+  </claimTypeRequirements>
+  <issuer address="String"
+          binding="" />
+  <issuerMetadata address="String" />
+</issuedTokenParameters>
 ```  
   
 ## <a name="type"></a>Type  
@@ -80,7 +79,7 @@ Indique les paramètres d'un jeton de sécurité émis dans un scénario de séc
  [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Guide pratique pour créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)  
  [Identité du service et authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  

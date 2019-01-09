@@ -2,12 +2,12 @@
 title: '&lt;compositeDuplex&gt;'
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: ce04eb96868da9760412e37d2335d020cc768ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4b84b4f2816dc68b7dcee784d957189728e5a4b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748345"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149044"
 ---
 # <a name="ltcompositeduplexgt"></a>&lt;compositeDuplex&gt;
 Définit l’élément de liaison utilisé lorsque le client doit exposer un point de terminaison pour permettre au service de renvoyer des messages au client.  
@@ -21,7 +21,7 @@ Définit l’élément de liaison utilisé lorsque le client doit exposer un poi
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<compositeDuplex clientBaseAddress="URI" />  
+<compositeDuplex clientBaseAddress="URI" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -34,7 +34,7 @@ Définit l’élément de liaison utilisé lorsque le client doit exposer un poi
 |clientBaseAddress|URI qui définit l'adresse du canal arrière en mode duplex. Le service utilise cette adresse pour entrer en contact et établir une connexion avec le client.<br /><br /> Si cet attribut n’est pas défini, une adresse par défaut «`full qualified name+default port\TemporaryIndigoAddress\guid`» est générée. La valeur par défaut est `null`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -50,7 +50,7 @@ Définit l’élément de liaison utilisé lorsque le client doit exposer un poi
 ## <a name="example"></a>Exemple  
   
 ```xml  
-<compositeDuplex clientBaseAddress="http://www.contoso.com" />  
+<compositeDuplex clientBaseAddress="http://www.contoso.com" />
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -2,12 +2,12 @@
 title: '&lt;udpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 62752ca74c7e5332c025a42d87608bb4c7f725ae
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4b5fca2fbcece8c5a1641d4cea7700f12de11782
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145833"
 ---
 # <a name="ltudpbindinggt"></a>&lt;udpBinding&gt;
 Élément de configuration utilisé pour configurer la liaison <xref:System.ServiceModel.UdpBinding>.  
@@ -19,26 +19,28 @@ ms.locfileid: "48846199"
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<udpBinding>  
-   <binding   
-       closeTimeout="TimeSpan"   
-       duplicateMessageHistoryLength="Integer"  
-       maxBufferPoolSize="Integer"  
-       maxBufferSize="Integer"       maxPendingMessagesTotalSize="Integer"  
-       maxReceivedMessageSize="Integer"       maxRetransmitCount="Integer"  
-       multicastInterfaceId="Integer"  
-              name="string"   
-       openTimeout="TimeSpan"   
-       receiveTimeout="TimeSpan"  
-       sendTimeout="TimeSpan"  
-       textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-       timeToLive="TimeSpan">  
-       <readerQuotas   
-            maxArrayLength="Integer"  
-            maxBytesPerRead="Integer"  
-            maxDepth="Integer"             maxNameTableCharCount="Integer"                maxStringContentLength="Integer" />  
-   </binding>  
-</basicHttpBinding>  
+<udpBinding>
+  <binding closeTimeout="TimeSpan"
+           duplicateMessageHistoryLength="Integer"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxPendingMessagesTotalSize="Integer"
+           maxReceivedMessageSize="Integer"
+           maxRetransmitCount="Integer"
+           multicastInterfaceId="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           timeToLive="TimeSpan">
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</basicHttpBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -56,11 +58,11 @@ ms.locfileid: "48846199"
 |`maxReceivedMessageSize`|Entier positif qui définit la taille maximale du message, en octets, y compris les en-têtes d'un message pouvant être reçu sur un canal configuré avec cette liaison. L'expéditeur reçoit une erreur SOAP si le message est trop grand pour le récepteur. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65 536 octets.|  
 |`maxRetransmitCount`|Valeur entière qui spécifie le nombre maximal de retransmissions de messages.|  
 |`multicastInterfaceId`|Valeur entière qui spécifie l'ID d'interface de multidiffusion.|  
-|`name`|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Chaque liaison porte un `name` et a un attribut `namespace` qui l'identifient de façon unique dans les métadonnées du service. De plus, ce nom est unique parmi les liaisons du même type. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Chaque liaison porte un `name` et a un attribut `namespace` qui l'identifient de façon unique dans les métadonnées du service. De plus, ce nom est unique parmi les liaisons du même type. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |`receiveTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:10:00.|  
 |`sendTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
-|`textEncoding`|Définit l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -BigEndianUnicode : Codage Unicode BigEndian.<br />-Unicode : encodage de 16 bits.<br />-UTF8 : encodage 8 bits<br /><br /> La valeur par défaut est UTF8. Cet attribut est de type <xref:System.Text.Encoding>.|  
+|`textEncoding`|Définit l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -BigEndianUnicode : Codage Unicode BigEndian.<br />-Unicode : encodage 16 bits.<br />-UTF-8 : codage 8 bits<br /><br /> La valeur par défaut est UTF8. Cet attribut est de type <xref:System.Text.Encoding>.|  
 |`timeToLive`|Une valeur de période qui spécifie la durée de vie de la liaison.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -82,23 +84,23 @@ ms.locfileid: "48846199"
  L'exemple suivant indique comment configurer <xref:System.ServiceModel.UdpBinding> à l'aide de l'élément <`udpBinding`>.  
   
 ```xml  
-<udpBinding>  
-        <binding  closeTimeout="00:10:00"  
-                   duplicateMessageHistoryLength="100"  
-                   maxBufferPoolSize="100"  
-                   maxPendingMessagesTotalSize="100000"  
-                   maxReceivedMessageSize="65536"  
-                    maxRetransmitCount="10"  
-                   multicastInterfaceId="00000"  
-                   name="myUdpBinding"  
-                   openTimeout="00:10:00"  
-                   receiveTimeout="00:10:00"  
-                   sendTimeout="00:10:00"  
-                   textEncoding="utf-8"  
-                   timeToLive="00:10:00"  
-          <readerQuotas/>   
-        </binding>  
-      </udpBinding>  
+<udpBinding>
+  <binding  closeTimeout="00:10:00"
+            duplicateMessageHistoryLength="100"
+            maxBufferPoolSize="100"
+            maxPendingMessagesTotalSize="100000"
+            maxReceivedMessageSize="65536"
+            maxRetransmitCount="10"
+            multicastInterfaceId="00000"
+            name="myUdpBinding"
+            openTimeout="00:10:00"
+            receiveTimeout="00:10:00"
+            sendTimeout="00:10:00"
+            textEncoding="utf-8"
+            timeToLive="00:10:00">
+    <readerQuotas />
+  </binding>
+</udpBinding>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

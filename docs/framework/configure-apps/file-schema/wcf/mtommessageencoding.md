@@ -2,12 +2,12 @@
 title: '&lt;mtomMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7865d171-cd1e-430a-8421-39cc13541d1b
-ms.openlocfilehash: 380aa162d2bb55ac968bdd057a4bb45b2ea6abfe
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a59f4f4ca5024b492a1e99b50776870032077818
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45689208"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149611"
 ---
 # <a name="ltmtommessageencodinggt"></a>&lt;mtomMessageEncoding&gt;
 Spécifie l'encodage et le suivi des versions de message utilisés pour les messages basés sur MTOM (Message Transmission Optimization Mechanism).  
@@ -21,12 +21,11 @@ Spécifie l'encodage et le suivi des versions de message utilisés pour les mess
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<mtomMessageEncoding   
-   maxBufferSize="Integer"  
-      maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-   messageVersion="Soap11Addressing1/Soap12Addressing10"  
-      writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<mtomMessageEncoding maxBufferSize="Integer"
+                     maxReadPoolSize="Integer"
+                     maxWritePoolSize="Integer"
+                     messageVersion="Soap11Addressing1/Soap12Addressing10"
+                     writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -40,7 +39,7 @@ Spécifie l'encodage et le suivi des versions de message utilisés pour les mess
 |maxReadPoolSize|Entier qui spécifie combien de messages peuvent être lus de manière simultanée sans allouer de nouveaux lecteurs. Des pools plus volumineux permettent au système d'être plus tolérant aux pics d'activité au prix d'une plage de travail plus volumineuse. La valeur par défaut est 64.|  
 |maxWritePoolSize|Entier qui spécifie combien de messages peuvent être envoyés simultanément sans allouer de nouveaux enregistreurs. Des pools plus volumineux permettent au système d'être plus tolérant aux pics d'activité au prix d'une plage de travail plus volumineuse. La valeur par défaut est 16.|  
 |messageVersion|Spécifie la version SOAP des messages envoyés à l'aide de la liaison. Les valeurs valides sont les suivantes :<br /><br /> -Soap11Addressing1<br />-Soap12Addressing10<br /><br /> La valeur par défaut est Soap12Addressing10. Cet attribut est de type <xref:System.ServiceModel.Channels.MessageVersion>.|  
-|writeEncoding|Spécifie l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -UnicodeFffeTextEncoding : Codage Unicode BigEndian<br />-Utf16TextEncoding : Encodage de Unicode<br />-Utf8TextEncoding : encodage de 8 bits<br /><br /> La valeur par défaut est Utf8TextEncoding. Cet attribut est de type <xref:System.Text.Encoding>.|  
+|writeEncoding|Spécifie l'encodage de jeu de caractères à utiliser pour l'émission de messages sur la liaison. Les valeurs valides sont les suivantes :<br /><br /> -UnicodeFffeTextEncoding : Codage Unicode BigEndian<br />-Utf16TextEncoding : Encodage Unicode<br />-Utf8TextEncoding : codage 8 bits<br /><br /> La valeur par défaut est Utf8TextEncoding. Cet attribut est de type <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
@@ -55,17 +54,17 @@ Spécifie l'encodage et le suivi des versions de message utilisés pour les mess
 |[\<liaison >](../../../../../docs/framework/misc/binding.md)|Définit toutes les fonctions de liaison d’une liaison personnalisée.|  
   
 ## <a name="remarks"></a>Notes  
- L'encodage est le processus de transformation d'un message en une séquence d'octets. Le décodage est le processus inverse. Windows Communication Foundation (WCF) inclut trois types d'encodage des messages SOAP : Texte, Binaire et MTOM (Message Transmission Optimization Mechanism).  
+ L'encodage est le processus de transformation d'un message en une séquence d'octets. Le décodage est le processus inverse. Windows Communication Foundation (WCF) inclut trois types d’encodage des messages SOAP : Texte, binaire et Message Transmission Optimization Mechanism (MTOM).  
   
  L'élément `MtomMessageEncoding` spécifie l'encodage de caractères et le contrôle de version de message, ainsi que d'autres paramètres utilisés pour un message encodé avec MTOM (Message Transmission Optimization Mechanism). MTOM est une technologie efficace de transmission de données binaires dans les messages WCF. L'encodeur MTOM tente de créer un équilibre entre rendement et interopérabilité. L'encodage MTOM transmet la plupart des données XML sous forme textuelle, mais optimise les blocs de données binaires volumineux en les transmettant tels quels, sans conversion au format base64 encodé.  
   
 ## <a name="example"></a>Exemple  
   
 ```xml  
-<mtomMessageEncoding maxReadPoolSize="211"  
-    maxWritePoolSize="2132"  
-    messageVersion="Soap11Addressing10"  
-    textEncoding="utf-8" />  
+<mtomMessageEncoding maxReadPoolSize="211"
+                     maxWritePoolSize="2132"
+                     messageVersion="Soap11Addressing10"
+                     textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

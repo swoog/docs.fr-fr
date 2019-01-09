@@ -4,12 +4,12 @@ description: Comprendre l’éventail de scénarios pris en charge par les archi
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: cf46c601ac6aa401c7c37bd64c1f8981589ebd2e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53146705"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149675"
 ---
 # <a name="serverless-design-examples"></a>Exemples de conception sans serveur
 
@@ -65,7 +65,7 @@ Les fonctions sans serveur peuvent être utilisées pour faciliter un pipeline d
 
 ## <a name="stream-processing"></a>Traitement de Stream
 
-Appareils et capteurs génèrent souvent des flux de données qui doivent être traitées en temps réel. Il existe un certain nombre de technologies qui peuvent capturer les messages et flux [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) et [IoT Hub](https://docs.microsoft.com/azure/iot-hub) à [Service Bus](/service-bus). Quel que soit le transport, sans serveur est un mécanisme idéal pour traiter les messages et les flux de données qu’ils vous parviennent. Sans serveur peut évoluer rapidement pour répondre à la demande de gros volumes de données. Le code sans serveur peut appliquer une logique métier pour analyser les données et la sortie dans un format structuré pour l’action et d’analytique.
+Appareils et capteurs génèrent souvent des flux de données qui doivent être traitées en temps réel. Il existe un certain nombre de technologies qui peuvent capturer les messages et flux [Event Hubs](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs) et [IoT Hub](https://docs.microsoft.com/azure/iot-hub) à [Service Bus](https://docs.microsoft.com/azure/service-bus). Quel que soit le transport, sans serveur est un mécanisme idéal pour traiter les messages et les flux de données qu’ils vous parviennent. Sans serveur peut évoluer rapidement pour répondre à la demande de gros volumes de données. Le code sans serveur peut appliquer une logique métier pour analyser les données et la sortie dans un format structuré pour l’action et d’analytique.
 
 ![Traitement de flux de données sans serveur](./media/serverless-stream-processing.png)
 

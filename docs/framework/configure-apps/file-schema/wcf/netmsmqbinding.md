@@ -2,12 +2,12 @@
 title: '&lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 0fb174488f3505eeab8195df361af1f203d0f8a5
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e0b8c75d8c3407e48d177a8085f601174b18a211
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839077"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147744"
 ---
 # <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
 Définit une liaison mise en file d’attente adaptée à la communication entre ordinateurs.  
@@ -19,40 +19,44 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<netMsmqBinding>  
-    <binding   
-       closeTimeout="TimeSpan"   
-       customDeadLetterQueue="Uri"  
-       deadLetterQueue="Uri"  
-       durable="Boolean"  
-       exactlyOnce="Boolean"   
-       maxBufferPoolSize="Integer"  
-       maxReceivedMessageSize"Integer"  
-       maxRetryCycles="Integer"   
-       name="string"   
-       openTimeout="TimeSpan"   
-       poisonMessageHandling="Disabled/EnabledIfSupported"   
-       queueTransferProtocol="Native/Srmp/SrmpSecure"  
-       receiveErrorHandling="Drop/Fault/Move/Reject"  
-       receiveTimeout="TimeSpan"   
-       receiveRetryCount="Integer"  
-       rejectAfterLastRetry="Boolean"   
-       retryCycleDelay="TimeSpan"    
-       sendTimeout="TimeSpan"   
-       timeToLive="TimeSpan"    
-       useActiveDirectory="Boolean"  
-       useMsmqTracing="Boolean  
-       useSourceJournal="Boolean"  
-          <security>  
-                  <message    
-                        algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-            clientCredentialType="None/Windows/UserName/Certificate/InfoCard "/>  
-                  <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"  
-            msmqEncryptionAlgorithm="RC4Stream/AES"  
-            msmqProtectionLevel="None/Sign/EncryptAndSign"  
-            msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-          </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />   </binding></netMsmqBinding>  
+<netMsmqBinding>
+  <binding closeTimeout="TimeSpan"
+           customDeadLetterQueue="Uri"
+           deadLetterQueue="Uri"
+           durable="Boolean"
+           exactlyOnce="Boolean"
+           maxBufferPoolSize="Integer"
+           maxReceivedMessageSize="Integer"
+           maxRetryCycles="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           poisonMessageHandling="Disabled/EnabledIfSupported"
+           queueTransferProtocol="Native/Srmp/SrmpSecure"
+           receiveErrorHandling="Drop/Fault/Move/Reject"
+           receiveTimeout="TimeSpan"
+           receiveRetryCount="Integer"
+           rejectAfterLastRetry="Boolean"
+           retryCycleDelay="TimeSpan"
+           sendTimeout="TimeSpan"
+           timeToLive="TimeSpan"
+           useActiveDirectory="Boolean"
+           useMsmqTracing="Boolean"
+           useSourceJournal="Boolean">
+    <security>
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="None/Windows/UserName/Certificate/InfoCard" />
+      <transport msmqAuthenticationMode="None/WindowsDomain/Certificate"
+                 msmqEncryptionAlgorithm="RC4Stream/AES"
+                 msmqProtectionLevel="None/Sign/EncryptAndSign"
+                 msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netMsmqBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -70,7 +74,7 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 |`maxBufferPoolSize`|Entier qui spécifie la taille maximale du pool de mémoires tampons pour cette liaison. La valeur par défaut est 8.|  
 |`maxReceivedMessageSize`|Entier positif qui définit la taille maximale du message (en octets, en-têtes compris), qui est traité par cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65536. Cette limite de taille des messages a pour but d'atténuer l'exposition aux attaques par déni de service (DoS).|  
 |`maxRetryCycles`|Entier indiquant le nombre de cycles de tentatives utilisés par la fonctionnalité de détection de messages incohérents. Un message devient incohérent lorsque toutes les tentatives de remise de tous les cycles échouent. La valeur par défaut est 3. Pour plus d'informations, consultez <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Attribut requis. Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Attribut requis. Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |`QueueTransferProtocol`|Valeur <xref:System.ServiceModel.QueueTransferProtocol> valide qui spécifie le transport du canal de communication en file d'attente que cette liaison utilise. MSMQ ne prend pas en charge l'adressage Active Directory lors de l'utilisation du protocole SRMP (SOAP Reliable Messaging). Par conséquent, vous ne devez pas définir cet attribut sur `Srmp` ou `Srmps` lorsque le `useActiveDirectory` attribut a la valeur `true`.|  
 |`receiveErrorHandling`|Valeur <xref:System.ServiceModel.ReceiveErrorHandling> qui spécifie la façon dont sont gérés les messages incohérents et ne pouvant être distribués.|  
@@ -97,40 +101,40 @@ Définit une liaison mise en file d’attente adaptée à la communication entre
 |[\<liaisons >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Cet élément conserve une collection de liaisons standard et personnalisées.|  
   
 ## <a name="remarks"></a>Notes  
- La liaison `netMsmqBinding` fournit la prise en charge de la mise en file d'attente en utilisant MSMQ (Microsoft Message Queuing) comme transport et active la prise en charge des applications faiblement couplées, de l'isolation de défaillance, du nivellement de charge et des opérations hors circuit. Pour une description de ces fonctionnalités, consultez [files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ La liaison `netMsmqBinding` fournit la prise en charge de la mise en file d’attente en utilisant MSMQ (Microsoft Message Queuing) comme transport et active la prise en charge des applications faiblement couplées, de l’isolation de défaillance, du nivellement de charge et des opérations hors circuit. Pour une description de ces fonctionnalités, consultez [files d’attente dans WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Exemple  
   
 ```xml  
-<configuration>  
-<system.ServiceModel>  
-    <bindings>  
-           <netMsmqBinding>  
-                <binding   
-                         closeTimeout="00:00:10"   
-                         openTimeout="00:00:20"   
-                         receiveTimeout="00:00:30"  
-                         sendTimeout="00:00:40"  
-                         deadLetterQueue="net.msmq://localhost/blah"   
-                         durable="true"   
-                         exactlyOnce="true"   
-                         maxReceivedMessageSize="1000"  
-                         maxRetries="11"  
-                         maxRetryCycles="12"   
-                         poisonMessageHandling="Disabled"   
-                         rejectAfterLastRetry="false"   
-                         retryCycleDelay="00:05:55"   
-                         timeToLive="00:11:11"   
-                         sourceJournal="true"  
-                         useMsmqTracing="true"  
-                         useActiveDirectory="true">  
-                         <security>  
-                             <message clientCredentialType="Windows" />  
-                         </security>  
-            </netMsmqBinding>  
-    </bindings>  
-</system.ServiceModel>  
-</configuration>  
+<configuration>
+  <system.ServiceModel>
+    <bindings>
+      <netMsmqBinding>
+        <binding closeTimeout="00:00:10"
+                 openTimeout="00:00:20"
+                 receiveTimeout="00:00:30"
+                 sendTimeout="00:00:40"
+                 deadLetterQueue="net.msmq://localhost/blah"
+                 durable="true"
+                 exactlyOnce="true"
+                 maxReceivedMessageSize="1000"
+                 maxRetries="11"
+                 maxRetryCycles="12"
+                 poisonMessageHandling="Disabled"
+                 rejectAfterLastRetry="false"
+                 retryCycleDelay="00:05:55"
+                 timeToLive="00:11:11"
+                 sourceJournal="true"
+                 useMsmqTracing="true"
+                 useActiveDirectory="true">
+          <security>
+            <message clientCredentialType="Windows" />
+          </security>
+        </binding>
+      </netMsmqBinding>
+    </bindings>
+  </system.ServiceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,5 @@
 ---
-title: s_isDebuggerCheckDisabledForTestPurposes champ
+title: s_isDebuggerCheckDisabledForTestPurposes, champ
 ms.date: 03/30/2017
 ms.technology:
 - dotnet-wpf
@@ -10,17 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-robots: noindex,nofollow
-ms.openlocfilehash: fbbd8d33ea163efaad1417ab4a1435df729e4897
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f490ccb4675a434e3f3336723e321f256b10093d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752199"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149174"
 ---
-# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes champ
+# <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes, champ
 
-Ce champ privé dans la `System.Windows.Diagnostics.VisualDiagnostics` classe est utilisée par Visual Studio pour déterminer si une vérification interne pour le débogueur actif sera effectuée.
+Ce champ privé dans le `System.Windows.Diagnostics.VisualDiagnostics` classe est utilisée par Visual Studio pour déterminer si une vérification interne de débogueur actif sera effectuée.
 
 ## <a name="syntax"></a>Syntaxe
   
@@ -29,14 +28,14 @@ private static bool s_isDebuggerCheckDisabledForTestPurposes
 ```
   
 > [!WARNING]
->  L’API dans la `System.Windows.Diagnostics.VisualDiagnostics` classe sont disponibles uniquement quand une application s’exécute sous un débogueur. Définissez `s_isDebuggerCheckDisabledForTestPurposes` à `true` pour accéder aux API en dehors d’un débogueur.  
+>  API dans le `System.Windows.Diagnostics.VisualDiagnostics` classe sont disponibles uniquement quand une application s’exécute sous un débogueur. Définissez `s_isDebuggerCheckDisabledForTestPurposes` à `true` pour accéder aux API en dehors d’un débogueur.  
 >   
->  Microsoft ne prend pas en charge l’utilisation de ce champ dans une application de production en toutes circonstances.  
+>  Microsoft ne prend pas en charge l’utilisation de ce champ dans une application de production en toute circonstance.  
 
 ## <a name="requirements"></a>Spécifications
 
-**Namespace :** <xref:System.Windows.Diagnostics>
+**Espace de noms :** <xref:System.Windows.Diagnostics>
 
 **Assembly :** PresentationCore (dans PresentationCore.dll)
 
-**Versions du .NET framework :** disponible depuis 4.6.
+**Versions du .NET framework :** Disponible à partir de 4.6.

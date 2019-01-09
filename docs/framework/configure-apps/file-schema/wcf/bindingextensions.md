@@ -2,12 +2,12 @@
 title: '&lt;bindingExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: f99b38ede66dbecb44f9e8e67f921943071672ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c2b097926ac21dda6a86e1e21958e15c9b63b1c4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750773"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148433"
 ---
 # <a name="ltbindingextensionsgt"></a>&lt;bindingExtensions&gt;
 Cette section active l’utilisation d’une liaison définie par l’utilisateur à partir d’un ordinateur ou d’un fichier de configuration de l’application. Vous pouvez ajouter une liaison définie par l'utilisateur à cette collection en utilisant le mot clé `add` et affecter à l'attribut `type` de l'élément une liaison définie par l'utilisateur, aussi bien que l'attribut `name` au nom de la liaison définie par l'utilisateur.  
@@ -17,14 +17,15 @@ Cette section active l’utilisation d’une liaison définie par l’utilisateu
  L'exemple suivant utilise l'élément `add` ainsi que l'attribut `name` pour ajouter une extension de liaison à la section `bindingElementExtensions` du fichier de configuration.  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <bindingExtensions>  
-           <add name="MyBinding" type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </bindingExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <bindingExtensions>
+      <add name="MyBinding"
+           type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bindingExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  Pour ajouter des capacités de configuration à l'élément, l'utilisateur doit écrire et enregistrer un élément `bindingSection`. Pour plus d'informations, consultez la documentation <xref:System.Configuration>.  
@@ -32,11 +33,12 @@ Cette section active l’utilisation d’une liaison définie par l’utilisateu
  Après la définition de l’élément et de son type de configuration, l’extension peut être utilisée comme une partie du point de terminaison comme présenté dans l’exemple suivant.  
   
 ```xml  
-<services>  
-    <service name="MyService">  
-        <endpoint address="myAddress" binding="MyBinding" />  
-    </service>  
-</services>  
+<services>
+  <service name="MyService">
+    <endpoint address="myAddress"
+              binding="MyBinding" />
+  </service>
+</services>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
