@@ -2,12 +2,12 @@
 title: '&lt;security&gt; de &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 4a80a8337a5b98ff30de60afbe4438e0d91b946b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0079cb9e62abed42a36b67fed935f883473ebbb8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185678"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147822"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;security&gt; de &lt;netNamedPipeBinding&gt;
 Définit les paramètres de sécurité d’une liaison.  
@@ -21,13 +21,13 @@ Définit les paramètres de sécurité d’une liaison.
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<netNamedPipeBinding>  
-      <binding>  
-            <security mode="None/Transport">  
-                        <transport protectionLevel="None/Sign/EncryptAndSign" />  
-            </security>  
-      </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -37,7 +37,7 @@ Définit les paramètres de sécurité d’une liaison.
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|mode|Spécifie le type de sécurité appliqué à cette liaison. Les valeurs valides sont les suivantes :<br /><br /> -None : Sécurité est désactivée.<br />-Transport : Sécurité est assurée à l’aide de la sécurité en fonction de transport sous-jacente. Il est possible de contrôler le niveau de protection avec ce mode.<br />-La valeur par défaut est Transport. Cet attribut est de type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|mode|Spécifie le type de sécurité appliqué à cette liaison. Les valeurs valides sont les suivantes :<br /><br /> -None : Cela désactive la sécurité.<br />-Transport : Sécurité est assurée à l’aide de la sécurité en fonction de transport sous-jacente. Il est possible de contrôler le niveau de protection avec ce mode.<br />-La valeur par défaut est Transport. Cet attribut est de type <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   

@@ -2,12 +2,12 @@
 title: '&lt;certificate&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: 5329fb276766ca2bd24f0fd3aef793fbb3b1f8b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f17cb5817b2a6912eebf1d4175665c09514de15e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515393"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146470"
 ---
 # <a name="ltcertificategt-element"></a>&lt;certificate&gt;, élément
 Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages pour les clients de réseau pair à pair.  
@@ -23,12 +23,10 @@ Spécifie un certificat X.509 à utiliser pour signer et chiffrer des messages 
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<certificate findValue="String"   
-  
-storeLocation="LocalMachine/CurrentUser"  
-      storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"  
-      X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier"  
-/>  
+<certificate findValue="String"
+             storeLocation="LocalMachine/CurrentUser"
+             storeName="AddressBook/AuthRoot/CertificateAuthority/Disallowed/My/Root/TrustedPeople/TrustedPublisher"
+             X509FindType="FindByThumbPrint/FindBySubjectName/FindBySubjectDistinguishedName/FindByIssuerName/FindByIssuerDistinguishedName/FindBySerialNumber/FindByTimeValid/FindByTimeNotYetValid/FindByTemplateName/FindByApplicationPolicy/FindByCertificatePolicy/FindByExtension/FindByKeyUsage/FindBySubjectKeyIdentifier" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -40,8 +38,8 @@ storeLocation="LocalMachine/CurrentUser"
 |---------------|-----------------|  
 |`findValue`|Chaîne qui contient la valeur à rechercher dans le magasin de certificats X.509. Le type contenu dans l'attribut doit répondre aux spécifications du `x509FindType` spécifié. La valeur par défaut est une chaîne vide.|  
 |`storeLocation`|Indique l'emplacement du magasin de certificats X.509 utilisé par le client pour valider le certificat de l'homologue. Les valeurs valides sont les suivantes :<br /><br /> -LocalMachine : magasin de certificats assigné à l’ordinateur local.<br />-CurrentUser : magasin de certificats assigné à l’utilisateur actuel.<br /><br /> La valeur par défaut est LocalMachine.|  
-|`storeName`|Spécifie le nom du magasin de certificats X.509 à ouvrir. Les valeurs valides sont les suivantes :<br /><br /> -AddressBook : Magasin de certificats pour les autres utilisateurs.<br />-AuthRoot : Magasin de certificats pour autorités de certification tierce (CA).<br />-CertificateAuthority : Magasin de certificats pour les autorités de certification intermédiaires (CA).<br />-Interdit : Magasin de certificats pour les certificats révoqués.<br />-My : Magasin de certificats pour les certificats personnels.<br />-Root : Magasin de certificats pour autorités de certification racine approuvée (CA).<br />-TrustedPeople : Magasin de certificats pour directement-personnes et ressources.<br />-TrustedPublisher : Magasin de certificats pour les éditeurs directement approuvés.<br /><br /> La valeur par défaut est My.|  
-|`X509FindType`|Définit le type de recherche X.509 à exécuter. Les valeurs valides sont les suivantes :<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Le type contenu dans l'attribut `findValue` doit répondre aux spécifications du `X509FindType` spécifié.<br /><br /> La valeur par défaut est FindBySubjectDistinguishedName.|  
+|`storeName`|Spécifie le nom du magasin de certificats X.509 à ouvrir. Les valeurs valides sont les suivantes :<br /><br /> -Carnet d’adresses : Magasin de certificats pour d’autres utilisateurs.<br />-AuthRoot : Magasin de certificats Autorités de certification tierce (CA).<br />-CertificateAuthority : Magasin de certificats Autorités de certification intermédiaires (CA).<br />-Interdit : Magasin de certificats pour les certificats révoqués.<br />-Mon : Magasin de certificats pour les certificats personnels.<br />-Racine : Magasin de certificats Autorités de certification racine approuvée (CA).<br />-TrustedPeople : Magasin de certificats pour les personnes directement approuvés et des ressources.<br />-TrustedPublisher : Magasin de certificats pour les éditeurs directement approuvés.<br /><br /> La valeur par défaut est My.|  
+|`X509FindType`|Définit le type de recherche X.509 à exécuter. Les valeurs valides sont les suivantes :<br /><br /> -FindByThumbPrint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-FindByTimeValid<br />-FindByTimeNotYetValid<br />-FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-FindByKeyUsage<br />-FindBySubjectKeyIdentifier<br /><br /> Le type contenu dans l’attribut `findValue` doit répondre aux exigences du `X509FindType` spécifié.<br /><br /> La valeur par défaut est FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  
@@ -61,18 +59,19 @@ storeLocation="LocalMachine/CurrentUser"
  Le code suivant spécifie comment rechercher le certificat utilisé dans un scénario de réseau pair à pair.  
   
 ```xml  
-<behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <peer>  
-     <certificate findValue="www.contoso.com"   
-                   storeLocation="LocalMachine"  
-                   x509FindType="FindByIssuerName" />  
-    </peer>  
-   </clientCredentials>  
-  </behavior>  
-</endpointBehaviors>  
+<behaviors>
+  <endpointBehaviors>
+    <behavior name="MyEndpointBehavior">
+      <clientCredentials>
+        <peer>
+          <certificate findValue="www.contoso.com"
+                       storeLocation="LocalMachine"
+                       x509FindType="FindByIssuerName" />
+        </peer>
+      </clientCredentials>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

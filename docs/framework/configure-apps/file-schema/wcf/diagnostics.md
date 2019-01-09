@@ -1,15 +1,15 @@
 ---
-title: '&lt;tests de diagnostic&gt;'
+title: '&lt;Diagnostics&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
-ms.openlocfilehash: 0854ce6525fd7c96cf7c19d2c86dadef1b9a53bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ee611d3903ba36748837d2743cd03d54670befd
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747305"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149343"
 ---
-# <a name="ltdiagnosticsgt"></a>&lt;tests de diagnostic&gt;
+# <a name="ltdiagnosticsgt"></a>&lt;Diagnostics&gt;
 L'élément `diagnostics` définit des paramètres qui peuvent être utilisés par un administrateur à des fins d'inspection et de contrôle au moment de l'exécution.  
   
  \<system.ServiceModel>  
@@ -18,28 +18,25 @@ L'élément `diagnostics` définit des paramètres qui peuvent être utilisés p
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<system.serviceModel>  
-  <diagnostics 
-      etwProviderId="String"       
-      performanceCounters="Off/ServiceOnly/All/Default"              
-      wmiProviderEnabled="Boolean" >       
-    <endToEndTracing 
-        activityTracing="Boolean"  
-        messageFlowTracing="Boolean"  
-        propagateActivity="Boolean" />  
-    <messageLogging 
-        logEntireMessage="Boolean"  
-        logMalformedMessages="Boolean"  
-        logMessagesAtServiceLevel="Boolean"  
-        logMessagesAtTransportLevel="Boolean"  
-        maxMessagesToLog="Integer"  
-        maxSizeOfMessageToLog="Integer" >  
-      <filters>  
-        <clear />  
-      </filters>  
-    </messageLogging>  
-  </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics etwProviderId="String"
+               performanceCounters="Off/ServiceOnly/All/Default"
+               wmiProviderEnabled="Boolean">
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+    <messageLogging logEntireMessage="Boolean"
+                    logMalformedMessages="Boolean"
+                    logMessagesAtServiceLevel="Boolean"
+                    logMessagesAtTransportLevel="Boolean"
+                    maxMessagesToLog="Integer"
+                    maxSizeOfMessageToLog="Integer">
+      <filters>
+        <clear />
+      </filters>
+    </messageLogging>
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -50,7 +47,7 @@ L'élément `diagnostics` définit des paramètres qui peuvent être utilisés p
 |Attribut|Description|  
 |---------------|-----------------|  
 |etwProviderId|Chaîne qui spécifie l'identificateur du fournisseur de suivi d'événements, qui écrit des événements dans les sessions ETW.|  
-|performanceCounters|Spécifie si les compteurs de performance de l'assembly sont activés. Les valeurs valides sont les suivantes :<br /><br /> -Off : Les compteurs de Performance sont désactivés.<br />-ServiceOnly : Seuls les compteurs de performance pertinents pour ce service est activé.<br />-Tout : Performances les compteurs peuvent être affichés pendant l’exécution.<br />-Valeur par défaut : Une instance de compteur de performance unique le _WCF_Admin est créé. Cette instance est employée pour activer la collection de données SQM utilisée par l’infrastructure. Aucune des valeurs du compteur de cette instance n'est mise à jour et par conséquent toutes resteront à zéro. Il s'agit de la valeur par défaut si aucune configuration n'est présente pour WCF.|  
+|performanceCounters|Spécifie si les compteurs de performance de l'assembly sont activés. Les valeurs valides sont les suivantes :<br /><br /> -Désactivé : Les compteurs de performance sont désactivés.<br />-ServiceOnly : Seuls les compteurs de performance pertinents pour ce service sont activés.<br />-Toutes les : Les compteurs de performance peuvent être affichés pendant l'exécution.<br />-Valeur par défaut : Un compteur de performance unique de l'instance _WCF_Admin est créé. Cette instance est employée pour activer la collection de données SQM utilisée par l’infrastructure. Aucune des valeurs du compteur de cette instance n'est mise à jour et par conséquent toutes resteront à zéro. Il s'agit de la valeur par défaut si aucune configuration n'est présente pour WCF.|  
 |wmiProviderEnabled|Valeur booléenne qui spécifie si le fournisseur WMI de l'assembly est activé. Le fournisseur WMI est requis pour que l'utilisateur puisse obtenir l'accès au moment de l'exécution aux fonctionnalités d'inspection et de contrôle de Windows Communication Foundation (WCF). La valeur par défaut est `false`.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -72,21 +69,19 @@ L'élément `diagnostics` définit des paramètres qui peuvent être utilisés p
 ## <a name="example"></a>Exemple  
   
 ```xml  
-<diagnostics
-    wmiProviderEnabled="false"  
-    performanceCounters="all">  
-  <messageLogging 
-      logEntireMessage="true"  
-      logMalformedMessages="true"  
-      logMessagesAtServiceLevel="true"  
-      logMessagesAtTransportLevel="true"  
-      maxMessagesToLog="42"  
-      maxSizeOfMessageToLog="42">  
-    <filters>  
-      <clear />  
-    </filters>  
-  </messageLogging>  
-</diagnostics>  
+<diagnostics wmiProviderEnabled="false"
+             performanceCounters="all">
+  <messageLogging logEntireMessage="true"
+                  logMalformedMessages="true"
+                  logMessagesAtServiceLevel="true"
+                  logMessagesAtTransportLevel="true"
+                  maxMessagesToLog="42"
+                  maxSizeOfMessageToLog="42">
+    <filters>
+      <clear />
+    </filters>
+  </messageLogging>
+</diagnostics>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

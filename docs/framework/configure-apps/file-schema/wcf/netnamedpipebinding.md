@@ -2,12 +2,12 @@
 title: '&lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
-ms.openlocfilehash: 213f775fd3804e6d64e7dae7fe1649a4fe1868f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 545148d1f663078b8182029817f0f22d33036200
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841188"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152032"
 ---
 # <a name="ltnetnamedpipebindinggt"></a>&lt;netNamedPipeBinding&gt;
 Définit une liaison qui est sécurisée, fiable, optimisée pour la communication interprocessus sur l’ordinateur. Par défaut, elle génère une pile de communication du runtime avec WS-ReliableMessaging pour la fiabilité, la sécurité du transport pour la sécurité du transfert, des canaux nommés pour la remise de messages et l'encodage binaire de messages.  
@@ -19,26 +19,30 @@ Définit une liaison qui est sécurisée, fiable, optimisée pour la communicati
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding   
-      closeTimeout="TimeSpan"  
-      hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-      maxBufferPoolSize="Integer"  
-      maxBufferSize="Integer"  
-      maxConnections="Integer"   
-      maxReceivedMessageSize="Integer"  
-            name="string"  
-      openTimeout="TimeSpan"   
-      receiveTimeout="TimeSpan"  
-      sendTimeout="TimeSpan"  
-      transactionFlow="Boolean"  
-      transactionProtocol="OleTransactions/WS-AtomicTransactionOctober2004"  
-            transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-      <security mode="None/Transport">  
-            <transport  protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxConnections="Integer"
+           maxReceivedMessageSize="Integer"
+           name="String"
+           openTimeout="TimeSpan"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           transactionFlow="Boolean"
+           transactionProtocol="OleTransactions/WS-AtomicTransactionOctober2004"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -54,7 +58,7 @@ Définit une liaison qui est sécurisée, fiable, optimisée pour la communicati
 |maxBufferSize|Entier positif qui spécifie la taille maximale, en octets, de la mémoire tampon utilisée pour stocker des messages en mémoire. Si la mémoire tampon est pleine, les données excédentaires restent dans le socket sous-jacent jusqu'à ce que de l'espace disponible se libère dans la mémoire tampon. Cette valeur ne peut pas être inférieure à l'attribut `maxReceivedMessageSize`. La valeur par défaut est 65536. Pour plus d'informations, consultez <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
 |maxConnections|Entier qui spécifie le nombre maximal de connexions sortantes et entrantes que le service créera/acceptera. Les connexions entrantes et sortantes sont comptées par rapport à une limite distincte spécifiée par cet attribut.<br /><br /> Les connexions entrantes dépassant cette limite sont mises en file d'attente jusqu'à ce que de l'espace soit disponible sous cette limite.<br /><br /> Les connexions sortantes dépassant cette limite sont mises en file d'attente jusqu'à ce que de l'espace soit disponible sous cette limite.<br /><br /> La valeur par défaut est 10.|  
 |maxReceivedMessageSize|Entier positif qui spécifie la taille maximale du message, en octets, y compris les en-têtes, pouvant être reçu sur un canal configuré avec cette liaison. L'expéditeur d'un message qui dépasse cette limite se verra notifier une erreur SOAP. Ce dernier abandonne le message et crée une entrée d'événement dans le journal de suivi. La valeur par défaut est 65536.|  
-|name|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d'avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Chaîne qui contient le nom de configuration de la liaison. Cette valeur doit être unique car elle permet d'identifier la liaison. Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'ouverture. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
 |receiveTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération de réception. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:10:00.|  
 |sendTimeout|<xref:System.TimeSpan> qui spécifie l'intervalle de temps prévu pour la réalisation d'une opération d'envoi. Cette valeur doit être supérieure ou égale à <xref:System.TimeSpan.Zero>. La valeur par défaut est 00:01:00.|  
@@ -86,60 +90,57 @@ Définit une liaison qui est sécurisée, fiable, optimisée pour la communicati
  La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié dans l'attribut `binding` de l'élément `<endpoint>`. Si vous souhaitez configurer la liaison netNamedPipeBinding et modifier quelques-uns de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom avec un attribut `bindingConfiguration`. Dans cet exemple, la configuration de liaison est nommée Binding1.  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <services>  
-      <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
-               behaviorConfiguration="CalculatorServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <add baseAddress="http://localhost:8000/ServiceModelSamples/service"/>  
-          </baseAddresses>  
-        </host>  
-        <!-- this endpoint is exposed at the base address provided by host: net.pipe://localhost/ServiceModelSamples/service  -->  
-        <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
-                  binding="netNamedPipeBinding"  
-                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-        <!-- the mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex -->  
-        <endpoint address="mex"  
-                  binding="mexHttpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-      <netNamedPipeBinding>  
-        <binding   
-                 closeTimeout="00:01:00"  
-                 openTimeout="00:01:00"   
-                 receiveTimeout="00:10:00"   
-                 sendTimeout="00:01:00"  
-                 transactionFlow="false"   
-                 transferMode="Buffered"   
-                 transactionProtocol="OleTransactions"  
-                 hostNameComparisonMode="StrongWildcard"   
-                 maxBufferPoolSize="524288"  
-                 maxBufferSize="65536"   
-                 maxConnections="10"   
-                 maxReceivedMessageSize="65536">  
-          <security mode="Transport">  
-            <transport protectionLevel="EncryptAndSign" />  
-          </security>  
-        </binding>  
-      </netNamedPipeBinding>  
-    </bindings>  
-  
-    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <services>
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+               behaviorConfiguration="CalculatorServiceBehavior">
+        <host>
+          <baseAddresses>
+            <add baseAddress="http://localhost:8000/ServiceModelSamples/service" />
+          </baseAddresses>
+        </host>
+        <!-- this endpoint is exposed at the base address provided by host: net.pipe://localhost/ServiceModelSamples/service  -->
+        <endpoint address="net.pipe://localhost/ServiceModelSamples/service"
+                  binding="netNamedPipeBinding"
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />
+        <!-- the mex endpoint is exposed at http://localhost:8000/ServiceModelSamples/service/mex -->
+        <endpoint address="mex"
+                  binding="mexHttpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+    <bindings>
+      <netNamedPipeBinding>
+        <binding closeTimeout="00:01:00"
+                 openTimeout="00:01:00"
+                 receiveTimeout="00:10:00"
+                 sendTimeout="00:01:00"
+                 transactionFlow="false"
+                 transferMode="Buffered"
+                 transactionProtocol="OleTransactions"
+                 hostNameComparisonMode="StrongWildcard"
+                 maxBufferPoolSize="524288"
+                 maxBufferSize="65536"
+                 maxConnections="10"
+                 maxReceivedMessageSize="65536">
+          <security mode="Transport">
+            <transport protectionLevel="EncryptAndSign" />
+          </security>
+        </binding>
+      </netNamedPipeBinding>
+    </bindings>
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceMetadata httpGetEnabled="True" />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

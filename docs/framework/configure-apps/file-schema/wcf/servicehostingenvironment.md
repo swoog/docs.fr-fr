@@ -2,35 +2,37 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354318"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150316"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Cet élément définit le type instancié par l'environnement d'hébergement de service correspondant à un transport particulier. Si cet élément est vide, c'est le type par défaut qui est utilisé. Cet élément ne peut être utilisé qu'au niveau des fichiers de configuration de l'application ou de l'ordinateur.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
-                           minFreeMemoryPercentageToActivateService="Integer" 
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean"
+                           minFreeMemoryPercentageToActivateService="Integer"
                            multipleSiteBindingsEnabled="Boolean">
   <baseAddressPrefixFilters>
     <add prefix="string" />
   </baseAddressPrefixFilters>
   <serviceActivations>
-    <add factory="String" service="String" />
+    <add factory="String"
+         service="String" />
   </serviceActivations>
   <transportConfigurationTypes>
-    <add name="String" transportConfigurationType="String" />
+    <add name="String"
+         transportConfigurationType="String" />
   </transportConfigurationTypes>
-</serviceHostingEnvironment>  
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -40,9 +42,9 @@ Cet élément définit le type instancié par l'environnement d'hébergement de 
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Valeur booléenne indiquant si le mode de compatibilité ASP.NET a été activé pour l'application actuelle. La valeur par défaut est `false`.<br /><br /> Lorsque cet attribut a la valeur `true`, pour les services Windows Communication Foundation (WCF), les demandes sont acheminées via le pipeline HTTP ASP.NET, et les communications via des protocoles non HTTP sont interdite. Pour plus d’informations, consultez [Services WCF et ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Entier qui spécifie la quantité minimale de mémoire doit être disponible pour le système, avant l’activation d’un service WCF. **Attention :** spécification de cet attribut avec une confiance partielle dans le fichier web.config d’un service WCF entraîne un <xref:System.Security.SecurityException> lorsque le service est exécuté.|  
-|multipleSiteBindingsEnabled|Valeur booléenne qui spécifie si plusieurs liaisons IIS par site sont autorisées.<br /><br /> Les services IIS se composent de sites Web, qui sont des conteneurs d'applications virtuelles contenant des répertoires virtuels. L'application dans un site est accessible par le biais d'une ou de plusieurs liaisons IIS. Une liaison IIS fournit deux informations : un protocole de liaison et des informations de liaison. Le protocole de liaison définit le schéma selon lequel la communication est établie et les informations de liaison sont les informations utilisées pour accéder au site. HTTP peut être un exemple de protocole de liaison, tandis que les informations de liaison peuvent contenir une adresse IP, un port, un en-tête d'hôte, etc.<br /><br /> IIS prend en charge la spécification de plusieurs liaisons IIS par site, ce qui entraîne plusieurs adresses de base par schéma. Toutefois, un service Windows Communication Foundation (WCF) hébergé sur un site autorise la liaison qu’un seul baseAddress par schéma.<br /><br /> Pour activer les liaisons IIS multiples par site pour un service Windows Communication Foundation (WCF), définissez cet attribut sur `true`. Notez que la spécification de plusieurs liaisons de site est prise en charge uniquement pour le protocole HTTP. L'adresse des points de terminaison dans le fichier de configuration doit être un URI complet.|  
+|aspNetCompatibilityEnabled|Valeur booléenne indiquant si le mode de compatibilité ASP.NET a été activé pour l'application actuelle. La valeur par défaut est `false`.<br /><br /> Lorsque cet attribut a la valeur `true`, les demandes de services Windows Communication Foundation (WCF) acheminées via le pipeline HTTP ASP.NET et communications via des protocoles non-HTTP sont interdites. Pour plus d’informations, consultez [Services WCF et ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Entier qui spécifie la quantité minimale de mémoire disponible qui doit être disponible pour le système, avant l’activation d’un service WCF. **Attention :**  Spécification de cet attribut avec une confiance partielle dans le fichier web.config d’un service WCF entraîne un <xref:System.Security.SecurityException> lorsque le service est exécuté.|  
+|multipleSiteBindingsEnabled|Valeur booléenne qui spécifie si plusieurs liaisons IIS par site sont autorisées.<br /><br /> Les services IIS se composent de sites Web, qui sont des conteneurs d'applications virtuelles contenant des répertoires virtuels. L'application dans un site est accessible par le biais d'une ou de plusieurs liaisons IIS. Une liaison IIS fournit deux informations : un protocole de liaison et des informations de liaison. Le protocole de liaison définit le schéma selon lequel la communication est établie et les informations de liaison sont les informations utilisées pour accéder au site. HTTP peut être un exemple de protocole de liaison, tandis que les informations de liaison peuvent contenir une adresse IP, un port, un en-tête d'hôte, etc.<br /><br /> IIS prend en charge la spécification de plusieurs liaisons IIS par site, ce qui entraîne plusieurs adresses de base par schéma. Toutefois, un service Windows Communication Foundation (WCF) hébergé sur un site autorise la liaison pour qu’un seul baseAddress par schéma.<br /><br /> Pour activer plusieurs liaisons d’IIS par site pour un service Windows Communication Foundation (WCF), définissez cet attribut sur `true`. Notez que la spécification de plusieurs liaisons de site est prise en charge uniquement pour le protocole HTTP. L'adresse des points de terminaison dans le fichier de configuration doit être un URI complet.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
@@ -87,7 +89,7 @@ Cet élément définit le type instancié par l'environnement d'hébergement de 
 ## <a name="code"></a>Code  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

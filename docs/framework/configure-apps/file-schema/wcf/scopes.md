@@ -2,12 +2,12 @@
 title: '&lt;Étendues&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9a0dd3ce-e383-4ac3-b7be-7d604388304a
-ms.openlocfilehash: 7e2dda0d0def4d1f90bf1b4dbf54f18983355222
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7afab700c2d9eb91ffe57bfefaf5864782a0af5f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749619"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145326"
 ---
 # <a name="ltscopesgt"></a>&lt;Étendues&gt;
 Contient une collection d’éléments de configuration qui spécifient des URI de portée personnalisés à utiliser pour filtrer des points de terminaison de service pendant la requête.  
@@ -32,7 +32,7 @@ Contient une collection d’éléments de configuration qui spécifient des URI 
       </endpointDiscovery>
     </behavior>
   </endpointBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

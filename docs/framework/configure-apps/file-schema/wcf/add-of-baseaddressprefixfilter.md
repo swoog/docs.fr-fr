@@ -2,29 +2,29 @@
 title: '&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;'
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: e4408488036be210e3a8b9cf8b8f8f8c2e669a1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ece3178c48c84c609ab959a5cfc426062de9255f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365187"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145599"
 ---
 # <a name="ltaddgt-of-ltbaseaddressprefixfiltergt"></a>&lt;add&gt; de &lt;baseAddressPrefixFilter&gt;
-Représente un élément de configuration qui spécifie un filtre direct qui fournit un mécanisme permettant de sélectionner les liaisons de Internet Information Services (IIS) appropriées lors de l’hébergement d’une application Windows Communication Foundation (WCF) dans IIS.  
+Représente un élément de configuration qui spécifie un filtre direct, qui fournit un mécanisme permettant de sélectionner les liaisons Internet Information Services (IIS) appropriées lors de l’hébergement d’une application Windows Communication Foundation (WCF) dans IIS.  
   
  \<system.ServiceModel>  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
 \<baseAddressPrefixFilters >  
 \<add>  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="string"/>  
-     </baseAddressPrefixFilters>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <baseAddressPrefixFilters>
+    <add prefix="String" />
+  </baseAddressPrefixFilters>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -50,7 +50,7 @@ Représente un élément de configuration qui spécifie un filtre direct qui fou
   
  Les sites Web IIS sont des conteneurs d'applications virtuelles qui contiennent des répertoires virtuels. L'application dans un site est accessible par le biais d'une ou de plusieurs liaisons IIS. Les liaisons IIS fournissent deux informations : un protocole de liaison et des informations de liaison. Le protocole de liaison (par exemple, HTTP) définit le modèle sur lequel la communication se produit, tandis que les informations de liaison (par exemple, adresse IP, port, en-tête de l'hôte) contiennent les données servant à accéder au site.  
   
- IIS prend en charge la spécification de plusieurs liaisons IIS pour chaque site, ce qui génère plusieurs adresses de base pour chaque méthode. Un service WCF hébergé sur un site autorise la liaison à une seule adresse de base pour chaque modèle, vous pouvez utiliser la fonctionnalité de filtre de préfixe pour choisir l’adresse de base requise du service hébergé. Les adresses de base entrantes, fournies par IIS, sont filtrées selon le filtre de la liste de préfixes facultative.  
+ IIS prend en charge la spécification de plusieurs liaisons IIS pour chaque site, ce qui génère plusieurs adresses de base pour chaque méthode. Un service WCF hébergé sur un site autorisant la liaison à une seule adresse de base pour chaque modèle, vous pouvez utiliser la fonctionnalité de filtre de préfixe pour choisir l’adresse de base requise du service hébergé. Les adresses de base entrantes, fournies par IIS, sont filtrées selon le filtre de la liste de préfixes facultative.  
   
  Par exemple, votre site peut contenir les adresses de base suivantes.  
   
@@ -62,14 +62,14 @@ http://test2.fabrikam.com/Service.svc
  Vous pouvez utiliser le fichier de configuration suivant pour spécifier un filtre de préfixe au niveau AppDomain.  
   
 ```xml  
-<system.serviceModel>  
-  <serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://test1.fabrikam.com:8000"/>  
-        <add prefix="http://test2.fabrikam.com:9000"/>  
-    </baseAddressPrefixFilters>  
-  </serviceHostingEnvironment>  
-</system.serviceModel>  
+<system.serviceModel>
+  <serviceHostingEnvironment>
+    <baseAddressPrefixFilters>
+      <add prefix="net.tcp://test1.fabrikam.com:8000" />
+      <add prefix="http://test2.fabrikam.com:9000" />
+    </baseAddressPrefixFilters>
+  </serviceHostingEnvironment>
+</system.serviceModel>
 ```  
   
  Dans cet exemple, `net.tcp://test1.fabrikam.com:8000` et `http://test2.fabrikam.com:9000` sont les seules adresses de base pouvant être transmises pour leur modèle respectif.  

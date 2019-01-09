@@ -2,12 +2,12 @@
 title: "&lt;diagnostics&gt; pour l'activation"
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 4e5332eed87ded51cebcd614f45cbc8e80e570fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 28f051a7ab06dbc1b40f804c56071818eb37e88b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747929"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54144975"
 ---
 # <a name="ltdiagnosticsgt-for-activation"></a>&lt;diagnostics&gt; pour l'activation
 Configure les fonctionnalités de diagnostic de l’écouteur Windows Communication Foundation (WCF).  
@@ -18,11 +18,11 @@ Configure les fonctionnalités de diagnostic de l’écouteur Windows Communicat
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <diagnostics performanceCountersEnabled="Boolean" />  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <diagnostics performanceCountersEnabled="Boolean" />
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>Type  

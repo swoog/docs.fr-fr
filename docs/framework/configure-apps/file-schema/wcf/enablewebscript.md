@@ -2,12 +2,12 @@
 title: '&lt;enableWebScript&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9c7e96e1-af70-4e6e-ac5c-d67929dddbaa
-ms.openlocfilehash: b14923c1b9a80bcd1c47db0e4fad6a6224b95329
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34100ce17e67e12574ec0cdd677991949d0b9214
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751894"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150797"
 ---
 # <a name="ltenablewebscriptgt"></a>&lt;enableWebScript&gt;
 Cet élément active le comportement de point de terminaison qui permet de consommer le service à partir de pages web ASP.NET AJAX.  
@@ -21,7 +21,7 @@ Cet élément active le comportement de point de terminaison qui permet de conso
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<enableWebScript />  
+<enableWebScript />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -40,7 +40,7 @@ Cet élément active le comportement de point de terminaison qui permet de conso
 |[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Spécifie le jeu de comportements du point de terminaison.|  
   
 ## <a name="remarks"></a>Notes  
- Ce comportement doit uniquement être utilisé conjointement avec l’option le [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) liaison standard, ou le [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) élément de liaison.  Pour plus d'informations sur ce comportement, consultez <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
+ Ce comportement doit uniquement être utilisé conjointement avec soit le [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) liaison standard, ou le [ \<webMessageEncoding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webmessageencoding.md) élément de liaison.  Pour plus d'informations sur ce comportement, consultez <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>  

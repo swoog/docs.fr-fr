@@ -2,12 +2,12 @@
 title: '&lt;activityStateQuery&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: a0dae6b90659bd3f53386459513abf92f25b005b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6d55a53a6344922cee0d42c26102d5f0bbf46f67
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308311"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151786"
 ---
 # <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; de WCF
 
@@ -31,20 +31,20 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
         <activityStateQueries>
           <activityStateQuery activityName="String">
             <arguments>
-              <argument name="String"/>
+              <argument name="String" />
             </arguments>
             <states>
-              <state name="String"/>
+              <state name="String" />
             </states>
             <variables>
-              <variable name="String"/>
+              <variable name="String" />
             </variables>
           </activityStateQuery>
         </activityStateQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -76,17 +76,17 @@ Les sections suivantes décrivent des attributs, des éléments enfants et des �
 Une fonctionnalité propre à ActivityStateQuery est la possibilité d’extraire des données lors du suivi de l’exécution d’un flux de travail. Vous disposez ainsi d'un contexte supplémentaire lors de l'accès à une post-exécution d'enregistrements de suivi. Vous pouvez utiliser la [ \<arguments >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) et [ \<États >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) éléments à extraire une variable ou un argument à partir de toutes les activités dans un flux de travail. L’exemple suivant montre une requête d’état d’activité qui extrait des variables et des arguments lors de l’activité `Closed` enregistrement de suivi est émis. Variables et arguments peuvent être extraits uniquement avec un objet ActivityStateRecord et par conséquent, êtes abonnés au sein d’un suivi à l’aide du profil [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
   
 ```xml  
-<activityStateQuery activityName="SendEmailActivity">  
-  <states>  
-    <state name="Closed"/>  
-  </states>  
-  <variables>  
-    <variable name="FromAddress"/>  
-  </variables>  
-  <arguments>  
-    <argument name="Result"/>  
-  </arguments>  
-</activityStateQuery>  
+<activityStateQuery activityName="SendEmailActivity">
+  <states>
+    <state name="Closed" />
+  </states>
+  <variables>
+    <variable name="FromAddress" />
+  </variables>
+  <arguments>
+    <argument name="Result" />
+  </arguments>
+</activityStateQuery>
 ```  
   
 ## <a name="see-also"></a>Voir aussi

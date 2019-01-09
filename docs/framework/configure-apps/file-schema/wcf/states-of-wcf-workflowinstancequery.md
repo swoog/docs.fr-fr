@@ -2,12 +2,12 @@
 title: '&lt;states&gt; de WCF, &lt;workflowInstanceQuery&gt;'
 ms.date: 03/30/2017
 ms.assetid: d17f7525-8035-4e9e-85a0-4cddae59f85d
-ms.openlocfilehash: a6c54f0903f30b5a7c3147cf4b874516a766c2b8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d67f4143619b72826f8fef4adbf66ff8782e4a34
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121942"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151434"
 ---
 # <a name="ltstatesgt-of-wcf-ltworkflowinstancequerygt"></a>&lt;states&gt; de WCF, &lt;workflowInstanceQuery&gt;
 
@@ -25,7 +25,7 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
   
 ## <a name="syntax"></a>Syntaxe  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -33,7 +33,7 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -41,7 +41,7 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments
 
@@ -90,13 +90,13 @@ Les valeurs d'état possibles sont décrites dans le tableau suivant.
 La configuration suivante permet de s'abonner aux enregistrements de suivi au niveau de l'instance de flux de travail pour l'état de l'instance `Started` à l'aide de cette requête.  
   
 ```xml  
-<workflowInstanceQueries>  
-    <workflowInstanceQuery>  
-      <states>  
-        <state name="Started"/>  
-      </states>  
-    </workflowInstanceQuery>  
-</workflowInstanceQueries>  
+<workflowInstanceQueries>
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
+</workflowInstanceQueries>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

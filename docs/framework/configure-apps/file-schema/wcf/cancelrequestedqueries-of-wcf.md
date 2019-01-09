@@ -2,12 +2,12 @@
 title: '&lt;cancelRequestedQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: a7cc7125-9ea3-4d3f-99c0-878cdeb1258a
-ms.openlocfilehash: 40fbcafd641e93be6ba21635f4f6e6428be62c12
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9cf2761bdab36d95b5077e36174565659230b512
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193784"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145443"
 ---
 # <a name="ltcancelrequestedqueriesgt-of-wcf"></a>&lt;cancelRequestedQueries&gt; de WCF
 Représente une collection de requêtes qui permettent d’effectuer le suivi des demandes d’annulation d’une activité enfant par l’activité parent. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des objets d'enregistrement de demande d'annulation.  
@@ -22,21 +22,21 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
   
 ## <a name="syntax"></a>Syntaxe  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
       <workflow>
         <cancelRequestQueries>
           <cancelRequestQuery activityName="String"
-                              childActivityName="String"/>
+                              childActivityName="String" />
         </cancelRequestQueries>
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
+</tracking>
+```  
+  
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
 
 Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  

@@ -2,12 +2,12 @@
 title: '&lt;workflowInstanceQuery&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: 35c73f9d-474e-42eb-874d-ddc04b1987f3
-ms.openlocfilehash: 447564e46e5e74432802341d9f63adbb72667ab4
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 01867171941db82260d28b0825bdf3453e46e66c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123304"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148173"
 ---
 # <a name="ltworkflowinstancequerygt-of-wcf"></a>&lt;workflowInstanceQuery&gt; de WCF
 
@@ -25,7 +25,7 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
   
 ## <a name="syntax"></a>Syntaxe  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -33,7 +33,7 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -41,8 +41,8 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
     </trackingProfile>
   </profiles>
 </tracking>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
 
 Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
@@ -82,13 +82,13 @@ L'objet <xref:System.Activities.Tracking.WorkflowInstanceQuery> sert à s'abonne
 La configuration suivante permet de s'abonner aux enregistrements de suivi au niveau de l'instance de flux de travail pour l'état de l'instance `Started` à l'aide de cette requête.  
   
 ```xml  
-<workflowInstanceQueries>  
-    <workflowInstanceQuery>  
-      <states>  
-        <state name="Started"/>  
-      </states>  
-    </workflowInstanceQuery>  
-</workflowInstanceQueries>  
+<workflowInstanceQueries>
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
+</workflowInstanceQueries>
 ```  
   
 ## <a name="see-also"></a>Voir aussi

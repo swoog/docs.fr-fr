@@ -2,12 +2,12 @@
 title: '&lt;participants&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: d99dbddc-0057-4e18-8e42-f91411d39970
-ms.openlocfilehash: ffe93a6c51fe00760db2276f8ac9efb247f13355
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 341e5492f7a45ca89c18d478766b8ebd369dbdf2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316283"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151843"
 ---
 # <a name="ltparticipantsgt-of-wcf"></a>&lt;participants&gt; de WCF
 Configurez une liste de participants au suivi qui écoutent les enregistrements de suivi émis directement du runtime et les traitent en fonction de leur configuration. Cela inclut l'écriture dans une sortie spécifique (par exemple, un fichier, une console ou le suivi d'événements pour Windows [ETW]), le traitement/regroupement des enregistrements ou toute autre combinaison requise.  
@@ -20,15 +20,15 @@ Configurez une liste de participants au suivi qui écoutent les enregistrements 
   
 ## <a name="syntax"></a>Syntaxe  
   
-```xml
+```xml  
 <tracking>
   <participants>
-    <add name="String"           
+    <add name="String"
          profileName="String"
          type="String" />
   </participants>
-</tracking>    
-```
+</tracking>
+```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
  Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
@@ -61,28 +61,28 @@ Configurez une liste de participants au suivi qui écoutent les enregistrements 
  L'ID de fournisseur dont se sert le participant au suivi ETW pour écrire les enregistrements de suivi dans une session ETW est défini dans la section `<diagnostics>`. Un profil est associé au participant au suivi pour spécifier les enregistrements de suivi auxquels il est abonné. Ce profil est défini par l'attribut `profileName` de l'élément `<add>`. Une fois ces paramètres définis, le participant au suivi est ajouté au comportement de service `<etwTracking>`. Les participants au suivi sélectionnés sont ajoutés aux extensions de l’instance de flux de travail, afin qu’ils commencent à recevoir les enregistrements de suivi.  
   
 ```xml  
-<configuration>   
-  <system.web>   
-    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0"/>   
-  </system.web>   
-  <system.serviceModel>   
-    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />                
-    <tracking>   
-      <participants>   
-        <add name="EtwTrackingParticipant"   
-             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"   
-             profileName="HealthMonitoring_Tracking_Profile"/>   
-      </participants>   
-    </tracking>   
-    <behaviors>   
-      <serviceBehaviors>   
-        <behavior>   
-          <etwTracking profileName="Sample Tracking Profile"/>  
-        </behavior>   
-      </serviceBehaviors>   
-    </behaviors>   
-  </system.serviceModel>   
-</configuration>  
+<configuration>
+  <system.web>
+    <compilation targetFrameworkMoniker=".NETFramework,Version=v4.0" />
+  </system.web>
+  <system.serviceModel>
+    <diagnostics etwProviderId="52A3165D-4AD9-405C-B1E8-7D9A257EAC9F" />
+    <tracking>
+      <participants>
+        <add name="EtwTrackingParticipant"
+             type="System.Activities.Tracking.EtwTrackingParticipant, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+             profileName="HealthMonitoring_Tracking_Profile"/>
+      </participants>
+    </tracking>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <etwTracking profileName="Sample Tracking Profile"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

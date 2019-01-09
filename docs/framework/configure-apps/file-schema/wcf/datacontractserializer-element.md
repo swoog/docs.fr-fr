@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - KnownTypes
 ms.assetid: f41fb4d5-24e7-4059-8010-286a30bfea93
-ms.openlocfilehash: 5f2a05fdf2e38923205092b232995a70a87f7e87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c79c8e8db2a4ea4526000bcbe336d1e664f9c4c2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752765"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150953"
 ---
 # <a name="ltdatacontractserializergt"></a>&lt;DataContractSerializer&gt;
 Contient les données de configuration correspondant au <xref:System.Runtime.Serialization.DataContractSerializer>. Cet élément se produit dans deux hiérarchies différentes : l'une est répertoriée dans la section Hiérarchie de schéma suivante et l'autre dans la section Notes.  
@@ -26,8 +26,8 @@ Contient les données de configuration correspondant au <xref:System.Runtime.Ser
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<dataContractSerializer ignoreExtensionDataObject="Boolean"  
-   maxItemsInObjectGraph="Integer" />  
+<dataContractSerializer ignoreExtensionDataObject="Boolean"
+                        maxItemsInObjectGraph="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

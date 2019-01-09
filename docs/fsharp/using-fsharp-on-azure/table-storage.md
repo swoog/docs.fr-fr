@@ -1,16 +1,16 @@
 ---
-title: Prise en main le stockage Table Azure en F#
+title: Prise en main à l’aide du stockage Table AzureF#
 description: Store données structurées dans le cloud à l’aide du stockage Table Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2d793ba8653833ff384f1824e303b08e05aba69b
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 45a5d845dcedb5c3ea07cc4540f66bad23338a88
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43519533"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152071"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aide de F# # 
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Bien démarrer avec stockage Table Azure et l’API de Table Azure Cosmos DB à l’aideF# # 
 
 Stockage Table Azure est un service qui stocke des données NoSQL structurées dans le cloud. Stockage de table est un magasin de clés/attributs doté d’une conception sans schéma. Étant donné que le stockage de tables est sans schéma, il est facile d’adapter vos données en tant que l’évolution des besoins de votre application. Accès aux données est rapide et économique pour toutes sortes d’applications. Stockage table est généralement beaucoup moins coûteux que le SQL traditionnel pour des volumes de données similaires.
 
@@ -30,16 +30,16 @@ Pour plus d’informations, consultez [Introduction à l’API de Table Azure Co
 
 ## <a name="about-this-tutorial"></a>À propos de ce didacticiel
 
-Ce didacticiel montre comment écrire du code F# pour effectuer certaines tâches courantes à l’aide du stockage Table Azure ou l’API Azure Cosmos DB Table, y compris la création et suppression d’une table et insertion de la mise à jour, suppression et interrogation des données de table.
+Ce didacticiel montre comment écrire F# code pour effectuer certaines tâches courantes à l’aide du stockage Table Azure ou l’API Azure Cosmos DB Table, y compris la création et suppression d’une table et insertion de la mise à jour, suppression et interrogation des données de table.
 
 ## <a name="prerequisites"></a>Prérequis
 
 Pour utiliser ce guide, vous devez d’abord [créer un compte de stockage Azure](/azure/storage/storage-create-storage-account) ou [compte Azure Cosmos DB](https://azure.microsoft.com/try/cosmosdb/).
 
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Créer de Script F# et démarrer F# Interactive
+## <a name="create-an-f-script-and-start-f-interactive"></a>Créer un F# de Script et démarrer F# Interactive
 
-Les exemples de cet article peuvent être utilisés dans une application F# ou un script F#. Pour créer un script F#, créez un fichier avec le `.fsx` extension, par exemple `tables.fsx`, dans votre environnement de développement F#.
+Les exemples de cet article peuvent être utilisées dans un F# application ou un F# script. Pour créer un F# de script, créez un fichier avec le `.fsx` extension, par exemple `tables.fsx`, dans votre F# environnement de développement.
 
 Ensuite, utilisez un [Gestionnaire de package](package-management.md) comme [Paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) pour installer le `WindowsAzure.Storage` package et référence `WindowsAzure.Storage.dll` dans votre script à l’aide d’un `#r`directive. Effectuez à nouveau pour `Microsoft.WindowsAzure.ConfigurationManager` afin d’obtenir de l’espace de noms Microsoft.Azure.
 
@@ -196,7 +196,7 @@ Maintenant que vous avez appris les bases du stockage de Table, suivez ces liens
 
 - [Introduction à l’API Azure Cosmos DB Table](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
 - [Bibliothèque cliente de stockage pour .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage?view=azure-dotnet)
-- [Fournisseur de Type de stockage Azure](http://fsprojects.github.io/AzureStorageTypeProvider/)
+- [Fournisseur de Type de stockage Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
 - [Blog de l’équipe stockage Azure](https://blogs.msdn.com/b/windowsazurestorage/)
 - [Configuration des chaînes de connexion](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
 - [Bien démarrer avec stockage Table Azure dans .NET](https://azure.microsoft.com/resources/samples/storage-table-dotnet-getting-started/)

@@ -2,31 +2,31 @@
 title: '&lt;issuerChannelBehaviors&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 7e5b8ace06a224db3abcc6b9d0ec87ccbc1a6a77
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 49a149975e406376a00ddeb43fd30f4c4834a0a0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747055"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146808"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a>&lt;issuerChannelBehaviors&gt;, élément
-Contient une collection de comportements de point de terminaison de client Windows Communication Foundation (WCF) (défini dans la configuration) à utiliser lors de la communication avec les Services de jeton de sécurité spécifié. Les comportements définis ne peut pas inclure les caractères [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) éléments.  
+Contient une collection de comportements de point de terminaison de client Windows Communication Foundation (WCF) (défini dans la configuration) à utiliser lors de la communication avec les Services de jeton spécifiés. Les comportements définis ne peut pas inclure les [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) éléments.  
   
  \<system.ServiceModel>  
 \<comportements >  
 section d’endpointBehaviors  
 \<comportement >  
 \<clientCredentials>  
-\<jeton issuedToken >  
+\<issuedToken >  
 \<issuerChannelBehaviors >  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<issuerChannelBehaviors>  
-      <add behaviorConfiguraton="string"  
-                issuerAddress="string" />  
-</issuerChannelBehaviors>  
+<issuerChannelBehaviors>
+  <add behaviorConfiguraton="string"
+       issuerAddress="string" />
+</issuerChannelBehaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -45,7 +45,7 @@ section d’endpointBehaviors
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<jeton issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Spécifie un jeton personnalisé utilisé pour authentifier un client auprès d'un service.|  
+|[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Spécifie un jeton personnalisé utilisé pour authentifier un client auprès d'un service.|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez cet élément lorsque des comportements (autres que ceux qui contiennent des éléments `<clientCredentials>`) doivent être utilisés pour communiquer avec un service. Par exemple, si un [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) élément de comportement doit être inclus.  
@@ -60,6 +60,6 @@ section d’endpointBehaviors
  [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Guide pratique pour créer un client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
- [Guide pratique pour configurer un émetteur local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Guide pratique pour Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Guide pratique pour Configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

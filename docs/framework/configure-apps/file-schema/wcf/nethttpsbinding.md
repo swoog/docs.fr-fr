@@ -2,12 +2,12 @@
 title: '&lt;netHttpsBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ff122116-6042-4792-9f21-275b4f97a105
-ms.openlocfilehash: 63766a6865497da18b07a5d6423e6d2b8e306684
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: adcc53119c9928a9d2ad9ff850e8355dec69bf40
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128971"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148212"
 ---
 # <a name="ltnethttpsbindinggt"></a>&lt;netHttpsBinding&gt;
 Représente une liaison qu’un service Windows Communication Foundation (WCF) peut utiliser pour configurer et exposer des points de terminaison qui sont en mesure de communiquer via le protocole HTTPS. Lorsqu'elle est utilisée avec un contrat duplex, WebSocket est utilisé, sinon HTTPS est utilisé.  
@@ -16,39 +16,39 @@ Représente une liaison qu’un service Windows Communication Foundation (WCF) p
 Élément suivant  
   
 ## <a name="syntax"></a>Syntaxe  
-
-```xml
-<netHttpsBinding>  
-  <binding allowCookies="Boolean"  
-           bypassProxyOnLocal="Boolean"  
-           closeTimeout="TimeSpan"   
-           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-           maxBufferPoolSize="Integer"  
-           maxBufferSize="Integer"  
-           maxReceivedMessageSize="Integer"  
-           messageEncoding="Binary/Text/Mtom"  
-           name="string"   
-           openTimeout="TimeSpan"   
-           proxyAddress="URI"  
-           receiveTimeout="TimeSpan"  
-           sendTimeout="TimeSpan"  
-           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"  
-           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
+  
+```xml  
+<netHttpsBinding>
+  <binding allowCookies="Boolean"
+           bypassProxyOnLocal="Boolean"
+           closeTimeout="TimeSpan"
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           maxBufferPoolSize="Integer"
+           maxBufferSize="Integer"
+           maxReceivedMessageSize="Integer"
+           messageEncoding="Binary/Text/Mtom"
+           name="string"
+           openTimeout="TimeSpan"
+           proxyAddress="URI"
+           receiveTimeout="TimeSpan"
+           sendTimeout="TimeSpan"
+           textEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding"
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"
            useDefaultWebProxy="Boolean">
-    <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">  
-      <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"  
-                 proxyCredentialType="None/Basic/Digest/Ntlm/Windows"  
-                 realm="string" />  
-      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15" 
-               clientCredentialType="UserName/Certificate"/>  
-    </security>  
-    <readerQuotas maxArrayLength="Integer" 
-                  maxBytesPerRead="Integer" 
-                  maxDepth="Integer" 
-                  maxNameTableCharCount="Integer" 
-                  maxStringContentLength="Integer" />  
-  </binding>  
-</netHttpsBinding>  
+    <security mode="None/Transport/Message/TransportWithMessageCredential/TransportCredentialOnly">
+      <transport clientCredentialType="None/Basic/Digest/Ntlm/Windows/Certificate"
+                 proxyCredentialType="None/Basic/Digest/Ntlm/Windows"
+                 realm="string" />
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="UserName/Certificate" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"
+                  maxBytesPerRead="Integer"
+                  maxDepth="Integer"
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netHttpsBinding>
 ```  
   
 ## <a name="type"></a>Type  
@@ -102,74 +102,72 @@ Représente une liaison qu’un service Windows Communication Foundation (WCF) p
  L'exemple suivant montre l'utilisation de <xref:System.ServiceModel.NetHttpBinding> qui fournit la communication HTTPS et l'interopérabilité maximale avec les services Web de première et seconde génération. La liaison est spécifiée dans les fichiers de configuration pour le client et le service. Le type de liaison est spécifié à l'aide de l'attribut `binding` de l'élément `<endpoint>`. Si vous souhaitez configurer la liaison de base et modifier certains de ses paramètres, vous devez définir une configuration de liaison. Le point de terminaison doit référencer la configuration de liaison par nom en utilisant l’attribut `bindingConfiguration` de l’élément `<endpoint>`, comme présenté dans le code de configuration suivant pour le service.  
   
 ```xml  
-<system.serviceModel>   
-  <services>  
-    <service type="Microsoft.ServiceModel.Samples.CalculatorService"  
-             behaviorConfiguration="CalculatorServiceBehavior">  
-      <endpoint address=""  
-                binding="netHttpsBinding"  
-                bindingConfiguration="Binding1"   
-                contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-    <netHttpsBinding>  
-      <binding name="Binding1"   
-               hostNameComparisonMode="StrongWildcard" 
-               receiveTimeout="00:10:00" 
-               sendTimeout="00:10:00" 
-               openTimeout="00:10:00" 
-               closeTimeout="00:10:00" 
-               maxReceivedMessageSize="65536" 
-               maxBufferSize="65536" 
-               maxBufferPoolSize="524288" 
-               transferMode="Buffered" 
-               messageEncoding="Binary" 
-               textEncoding="utf-8" 
-               bypassProxyOnLocal="false" 
-               useDefaultWebProxy="true">  
-        <security mode="None" />  
-      </binding>  
-    </netHttpsBinding>  
-  </bindings>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpsBinding"
+                bindingConfiguration="Binding1"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpsBinding>
+      <binding name="Binding1"
+               hostNameComparisonMode="StrongWildcard"
+               receiveTimeout="00:10:00"
+               sendTimeout="00:10:00"
+               openTimeout="00:10:00"
+               closeTimeout="00:10:00"
+               maxReceivedMessageSize="65536"
+               maxBufferSize="65536"
+               maxBufferPoolSize="524288"
+               transferMode="Buffered"
+               messageEncoding="Binary"
+               textEncoding="utf-8"
+               bypassProxyOnLocal="false"
+               useDefaultWebProxy="true">
+        <security mode="None" />
+      </binding>
+    </netHttpsBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
 ## <a name="example"></a>Exemple  
  Depuis [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], les liaisons et les comportements ne sont pas obligés d’avoir un nom. La fonctionnalité de l’exemple précédent est possible en supprimant le bindingConfiguration de l’adresse de point de terminaison et le nom de la liaison.  
   
 ```xml  
-<system.serviceModel>   
-  <services>  
-    <service   
-        type="Microsoft.ServiceModel.Samples.CalculatorService"  
-        behaviorConfiguration="CalculatorServiceBehavior">  
-       <endpoint address=""  
-             binding="netHttpsBinding"  
-             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-    </service>  
-  </services>  
-  <bindings>  
-     <netHttpsBinding>  
-        <binding   
-               hostNameComparisonMode="StrongWildcard"   
-               receiveTimeout="00:10:00"  
-               sendTimeout="00:10:00"  
-               openTimeout="00:10:00"  
-               closeTimeout="00:10:00"  
-               maxReceivedMessageSize="65536"   
-               maxBufferSize="65536"   
-               maxBufferPoolSize="524288"   
-               transferMode="Buffered"   
-               messageEncoding="Binary"   
-               textEncoding="utf-8"  
-               bypassProxyOnLocal="false"  
-               useDefaultWebProxy="true" >  
-              <security mode="None" />  
-         </binding>  
-     </netHttpsBinding>  
-  </bindings>  
-</system.serviceModel>  
+<system.serviceModel>
+  <services>
+    <service type="Microsoft.ServiceModel.Samples.CalculatorService"
+             behaviorConfiguration="CalculatorServiceBehavior">
+      <endpoint address=""
+                binding="netHttpsBinding"
+                contract="Microsoft.ServiceModel.Samples.ICalculator" />
+    </service>
+  </services>
+  <bindings>
+    <netHttpsBinding>
+      <binding hostNameComparisonMode="StrongWildcard"
+               receiveTimeout="00:10:00"
+               sendTimeout="00:10:00"
+               openTimeout="00:10:00"
+               closeTimeout="00:10:00"
+               maxReceivedMessageSize="65536"
+               maxBufferSize="65536"
+               maxBufferPoolSize="524288"
+               transferMode="Buffered"
+               messageEncoding="Binary"
+               textEncoding="utf-8"
+               bypassProxyOnLocal="false"
+               useDefaultWebProxy="true">
+        <security mode="None" />
+      </binding>
+    </netHttpsBinding>
+  </bindings>
+</system.serviceModel>
 ```  
   
  Pour plus d’informations sur la configuration par défaut et les liaisons sans nom et les comportements, consultez [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) et [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  

@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;authorizationPolicies&gt;'
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f4afe0a0a72d7f45dd0ed38cbcc7a0d89d17d44
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753952"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148459"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; de &lt;authorizationPolicies&gt;
 Spécifie une stratégie d'autorisation pour la transformation de revendications.  
@@ -22,9 +22,9 @@ Spécifie une stratégie d'autorisation pour la transformation de revendications
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<authorizationPolicies>  
-   <add policyType="String" />  
-</authorizationPolicies>  
+<authorizationPolicies>
+  <add policyType="String" />
+</authorizationPolicies>
 ```  
   
 ## <a name="type"></a>Type  
@@ -60,6 +60,6 @@ Spécifie une stratégie d'autorisation pour la transformation de revendications
  <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>  
  <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
  [Autorisation de l’accès aux opérations de service](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
- [Guide pratique pour créer un gestionnaire d’autorisations personnalisé pour un service](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
+ [Guide pratique pour Créer un gestionnaire d’autorisation personnalisé pour un Service](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)  
  [Stratégie d’autorisation](../../../../../docs/framework/wcf/samples/authorization-policy.md)

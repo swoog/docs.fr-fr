@@ -2,12 +2,12 @@
 title: '&lt;windowsStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
-ms.openlocfilehash: e117c30ba2583158ee21fd11ff4a38b094c18fd9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6cce178910767d7fd197aff0d007b7cc3f4e60f3
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197630"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151122"
 ---
 # <a name="ltwindowsstreamsecuritygt"></a>&lt;windowsStreamSecurity&gt;
 Spécifiez les paramètres de sécurité de flux de données Windows pour la liaison personnalisée.  
@@ -21,7 +21,7 @@ Spécifiez les paramètres de sécurité de flux de données Windows pour la lia
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign"/>  
+<windowsStreamSecurity protectionLevel="None/Sign/EncryptAndSign" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -31,7 +31,7 @@ Spécifiez les paramètres de sécurité de flux de données Windows pour la lia
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|protectionLevel|Définit la sécurité au niveau du message. La signature des messages atténue le risque de modification par un tiers pendant le transfert. Le chiffrement garantit la confidentialité des données pendant le transport. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucune protection.<br />-Signe : Les Messages sont signés.<br />-EncryptAndSign : Les Messages sont signés et chiffrés.<br /><br /> La valeur par défaut est EncryptAndSign.<br /><br /> Cet attribut est de type <xref:System.Net.Security.ProtectionLevel>.|  
+|protectionLevel|Définit la sécurité au niveau du message. La signature des messages atténue le risque de modification par un tiers pendant le transfert. Le chiffrement garantit la confidentialité des données pendant le transport. Les valeurs valides sont les suivantes :<br /><br /> -None : Aucune protection.<br />-Signe : Les messages sont signés.<br />-EncryptAndSign : Les messages sont signés et chiffrés.<br /><br /> La valeur par défaut est EncryptAndSign.<br /><br /> Cet attribut est de type <xref:System.Net.Security.ProtectionLevel>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
  Aucun.  

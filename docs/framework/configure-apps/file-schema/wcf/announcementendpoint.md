@@ -1,16 +1,16 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
+title: '&lt;AnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351824"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151642"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-Cet élément de configuration définit un point de terminaison standard avec un contrat d'annonce fixe. Un service peut éventuellement annoncer sa disponibilité en envoyant un message d'annonce en ligne ou hors connexion selon qu'il est respectivement ouvert ou fermé. Un service Windows Communication Foundation (WCF) spécifie les points de terminaison d’annonce dans le [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) élément et utilise le AnnouncementClient pour effectuer les annonces. Un client souhaitant écouter l’annonce à partir de l’autre service est en réalité agissant comme un service WCF ; Par conséquent, vous devez configurer les points de terminaison d’annonce pour le client dans le [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.  
+# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+Cet élément de configuration définit un point de terminaison standard avec un contrat d'annonce fixe. Un service peut éventuellement annoncer sa disponibilité en envoyant un message d'annonce en ligne ou hors connexion selon qu'il est respectivement ouvert ou fermé. Un service Windows Communication Foundation (WCF) spécifie les points de terminaison d’annonce dans le [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) élément et utilise AnnouncementClient pour effectuer les annonces. Un client souhaite écouter pour l’annonce provenant d’un autre service joue en fait un service WCF ; Par conséquent, vous devez configurer les points de terminaison d’annonce pour ce client dans le [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) section.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,15 +18,15 @@ Cet élément de configuration définit un point de terminaison standard avec un
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
-                        maxAnnouncementDelay="Timespan" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxAnnouncementDelay="Timespan"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -53,29 +53,29 @@ Cet élément de configuration définit un point de terminaison standard avec un
  L'exemple suivant montre un client qui écoute des messages d'annonce sur HTTP et Peernet.  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-    <endpoint name="httpAnnouncementEndpoint"  
-              kind="announcementEndpoint"  
-              binding="basicHttpBinding"  
-              address="announcements" />  
-    <endpoint name="peerNetAnnouncementEndpoint"  
-              kind="announcementEndpoint"  
-              binding="peerTcpBinding"  
-              address="net.p2p://discoveryMesh/multicast"  
-              bindingConfiguration="discoveryPeerTcpBindingConfig" />  
-  ...  
-  </service>  
-</services>  
-  
-<standardEndpoints>  
-  <announcementEndpoint>  
-    <standardEndpoint name="httpAnnouncementEndpoint"                         
-                      version="WSDiscoveryApril2005" />  
-    <standardEndpoint name="peerNetAnnouncementEndpoint"                         
-                      version="WSDiscoveryApril2005" />  
-   </announcementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="httpAnnouncementEndpoint"
+              kind="announcementEndpoint"
+              binding="basicHttpBinding"
+              address="announcements" />
+    <endpoint name="peerNetAnnouncementEndpoint"
+              kind="announcementEndpoint"
+              binding="peerTcpBinding"
+              address="net.p2p://discoveryMesh/multicast"
+              bindingConfiguration="discoveryPeerTcpBindingConfig" />
+  ...
+  </service>
+</services>
+
+<standardEndpoints>
+  <announcementEndpoint>
+    <standardEndpoint name="httpAnnouncementEndpoint"
+                      version="WSDiscoveryApril2005" />
+    <standardEndpoint name="peerNetAnnouncementEndpoint"
+                      version="WSDiscoveryApril2005" />
+  </announcementEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

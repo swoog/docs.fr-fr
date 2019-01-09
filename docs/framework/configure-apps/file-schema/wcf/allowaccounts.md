@@ -2,12 +2,12 @@
 title: '&lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61310d530cfec2862fb64155777cd0e88132f748
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352875"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145937"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 Contient une collection d’éléments de configuration qui spécifient l’utilisateur des comptes pour les processus qui hébergent les services Windows Communication Foundation (WCF) et qui disposent d’accès à la connexion au service de partage.  
@@ -17,9 +17,9 @@ Contient une collection d’éléments de configuration qui spécifient l’util
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<allowAccounts>  
-   <add securityIdentifier="String"/>  
-</allowAccounts>  
+<allowAccounts>
+  <add securityIdentifier="String" />
+</allowAccounts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

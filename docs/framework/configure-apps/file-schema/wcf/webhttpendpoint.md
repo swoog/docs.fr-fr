@@ -2,15 +2,15 @@
 title: '&lt;webHttpEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: ecaaeb6f-ebd0-411d-8b53-92477cd45347
-ms.openlocfilehash: 46691a36b62898583132b5668b06de5659926d66
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ee14ce23370675782f4c25385c1786fdce11eba0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767087"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151967"
 ---
 # <a name="ltwebhttpendpointgt"></a>&lt;webHttpEndpoint&gt;
-Cet élément de configuration définit un point de terminaison standard avec une liste fixe [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automatiquement une liaison qui ajoute le [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportement. Utilisez ce point de terminaison lors de l'écriture d'un service REST.  
+Cet élément de configuration définit un point de terminaison standard avec fixe [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) automatiquement une liaison qui ajoute le [ \<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) comportement. Utilisez ce point de terminaison lors de l'écriture d'un service REST.  
   
 \<system.ServiceModel>  
 \<standardEndpoints >  
@@ -18,16 +18,16 @@ Cet élément de configuration définit un point de terminaison standard avec un
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <webHttpEndpoint>
-      <standardEndpoint automaticFormatSelectionEnabled="String" 
-                        defaultOutgoingResponseFormat="Xml/Json" 
-                        helpEnabled="Boolean" 
-                        webEndpointType="String"/>
+      <standardEndpoint automaticFormatSelectionEnabled="String"
+                        defaultOutgoingResponseFormat="Xml/Json"
+                        helpEnabled="Boolean"
+                        webEndpointType="String" />
     </webHttpEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

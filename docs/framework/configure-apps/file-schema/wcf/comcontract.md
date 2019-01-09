@@ -2,12 +2,12 @@
 title: '&lt;comContract&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 8e0e18c934589e89ff5e10b14ba02f8daee11c66
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839535"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146873"
 ---
 # <a name="ltcomcontractgt"></a>&lt;comContract&gt;
 Spécifie un contrat de service d'intégration COM+.  
@@ -18,29 +18,28 @@ Spécifie un contrat de service d'intégration COM+.
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="string"  
-      namespace="string"  
-      name="string"  
-      requireSession="Boolean">  
-      <exposedMethods>  
-         <exposedMethod name="string" />  
-      </exposedMethods>  
-      <userDefinedTypes>  
-         <userDefinedType name="string"  
-            typeLibID="string"  
-            typeLibVersion="string"  
-            typeDefID="string">  
-         </userDefinedType>  
-      </userDefinedTypes>  
-      <persistableTypes>  
-         <persistableType id="string"  
-            name="string">  
-         </persistableType>  
-      </persistableTypes>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="String"
+               namespace="String"
+               name="String"
+               requireSession="Boolean">
+    <exposedMethods>
+      <exposedMethod name="String" />
+    </exposedMethods>
+    <userDefinedTypes>
+      <userDefinedType name="String"
+                       typeLibID="String"
+                       typeLibVersion="String"
+                       typeDefID="String">
+      </userDefinedType>
+    </userDefinedTypes>
+    <persistableTypes>
+      <persistableType id="String"
+                       name="String">
+      </persistableType>
+    </persistableTypes>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -67,25 +66,24 @@ Spécifie un contrat de service d'intégration COM+.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|comContracts|Contient une collection d'éléments `comContract`.|  
+|comContracts|Contient une collection d’éléments `comContract`.|  
   
 ## <a name="remarks"></a>Notes  
  Contrats de service d’intégration COM + sont actuellement restreints à le `http://tempuri.org` espace de noms et nom de contrat est dérivé de l’interface COM de prise en charge. Toutefois, vous pouvez spécifier des alternatives à l'aide de la section `comContracts`, ainsi que l'élément `comContract` dans le fichier de configuration. Par exemple, vous pouvez utiliser la configuration suivante pour spécifier l'espace de noms, le nom de contrat et les types définis par l'utilisateur à inclure, ainsi que d'autres paramètres pour un contrat de service.  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
-      namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"  
-      name="_Broker"  
-      requireSession="true">  
-      <exposedMethods>  
-         <exposedMethod name="BuyStock" />  
-         <exposedMethod name="SellStock" />  
-         <exposedMethod name="ExecuteTransaction" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"
+               namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"
+               name="_Broker"
+               requireSession="true">
+    <exposedMethods>
+      <exposedMethod name="BuyStock" />
+      <exposedMethod name="SellStock" />
+      <exposedMethod name="ExecuteTransaction" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
  Lorsque le service est initialisé, les espaces de noms et les noms de contrat spécifiés sont appliqués aux descriptions de service générées.  
@@ -96,4 +94,4 @@ Spécifie un contrat de service d'intégration COM+.
  <xref:System.ServiceModel.Configuration.ComContractElement>  
  [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
  [Intégration à des applications COM+](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [Guide pratique pour configurer des paramètres de service COM+](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+ [Guide pratique pour Configurer les paramètres de Service COM +](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

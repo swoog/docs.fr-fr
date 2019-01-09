@@ -2,12 +2,12 @@
 title: '&lt;transactionFlow&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: c708098676e5634281e29c17639304a1a9cf5afe
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6f0660ce94fdfbe1ab636aa4197ef31526c21348
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748709"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145794"
 ---
 # <a name="lttransactionflowgt"></a>&lt;transactionFlow&gt;
 Spécifie le support du flux de la transaction pour la liaison personnalisée.  
@@ -21,7 +21,7 @@ Spécifie le support du flux de la transaction pour la liaison personnalisée.
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"/>  
+<transactionFlow transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -46,7 +46,7 @@ Spécifie le support du flux de la transaction pour la liaison personnalisée.
  Cet élément vous permet d’activer ou de désactiver le flux de transactions entrantes dans les paramètres de liaison d’un point de terminaison, ainsi que de spécifier le format de protocole souhaité pour les transactions entrantes. Pour plus d’informations sur l’utilisation de cet élément de configuration, consultez [Configuration des transactions ServiceModel](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md) et [l’activation de flux de Transaction](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md).  
   
 > [!CAUTION]
->  Lors de l'utilisation du protocole `OleTransactions` pour faire passer les transactions d'un point de terminaison vers un autre, le délai d'attente de transaction peut se perdre si le point de terminaison de destination tente un nouveau flux à l'aide d'un autre protocole que `OleTransactions`. Cela peut provoquer l'expiration de tous les nœuds de niveau inférieur après le tronçon OleTransactions selon un délai plus long que prévu.  
+>  Lors de l’utilisation du protocole `OleTransactions` pour faire passer les transactions d’un point de terminaison vers un autre, le délai d’attente de transaction peut se perdre si le point de terminaison de destination tente un nouveau flux à l’aide d’un autre protocole que `OleTransactions`. Cela peut provoquer l'expiration de tous les nœuds de niveau inférieur après le tronçon OleTransactions selon un délai plus long que prévu.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.Configuration.TransactionFlowElement>  

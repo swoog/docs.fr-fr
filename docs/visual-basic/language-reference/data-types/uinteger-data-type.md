@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: c63b9a25c1830f142002e9854e9ce275f55ef54b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 929197d8e8f9ab031e72e7d332422b388a22ea95
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154817"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146054"
 ---
 # <a name="uinteger-data-type"></a>UInteger (type de données)
 
@@ -68,7 +68,7 @@ Dim number = &H_0FAC_14D7ui
   
 -   **Nombres négatifs.** Étant donné que `UInteger` est un type non signé, il ne peut pas représenter un nombre négatif. Si vous utilisez le moins unaire (`-`) opérateur sur une expression qui correspond au type `UInteger`, Visual Basic convertit l’expression à `Long` première.  
   
--   **Conformité CLS.** Le `UInteger` type de données n’est pas dans le cadre de la [Common Language Specification](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), le code conforme CLS ne peut pas consommer un composant qui l’utilise.
+-   **Conformité CLS.** Le `UInteger` type de données n’est pas dans le cadre de la [Common Language Specification](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), le code conforme CLS ne peut pas consommer un composant qui l’utilise.
   
 -   **Considérations sur l’interopérabilité.** Si vous utilisez des composants non écrits pour le .NET Framework, par exemple des objets Automation ou COM, n’oubliez pas que les types tels que `uint` peut avoir une largeur de données différente (16 bits) dans d’autres environnements. Si vous passez un argument de 16 bits à un tel composant, déclarez-le en tant que `UShort` au lieu de `UInteger` dans votre code managé de Visual Basic.  
   
@@ -83,5 +83,5 @@ Dim number = &H_0FAC_14D7ui
  [Types de données](../../../visual-basic/language-reference/data-types/index.md)  
  [Fonctions de conversion de types](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Liste des conversions](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Comment : Appeler une fonction Windows qui possède des Types non signés](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Guide pratique pour appeler une fonction Windows qui possède des types non signés](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Utilisation efficace des types de données](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

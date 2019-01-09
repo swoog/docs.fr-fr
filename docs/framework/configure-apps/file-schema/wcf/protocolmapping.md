@@ -2,12 +2,12 @@
 title: '&lt;protocolMapping&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
-ms.openlocfilehash: c50ca451052c9ad9d7ab6a0cb5387e644196191e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a376f1eaa7c8790cf2174335749ed3001b403967
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525004"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147302"
 ---
 # <a name="ltprotocolmappinggt"></a>&lt;protocolMapping&gt;
 Représente une section de configuration pour définir un ensemble de mappage de protocole par défaut entre les schémas de protocole de transport (par exemple, http, net.tcp, net.pipe, etc.) et des liaisons WCF. Lorsque vous créez des points de terminaison par défaut lors de l’exécution, Windows Communication Foundation (WCF) examine les mappages configurés et décide de liaison à utiliser en tant qu’adresse de base.  
@@ -17,12 +17,14 @@ Représente une section de configuration pour définir un ensemble de mappage de
   
 ## <a name="syntax"></a>Syntaxe  
   
-```xml
+```xml  
 <protocolMapping>
-   <add binding="String" bindingConfiguration="String" scheme="http/net.msmq/net.pipe/net.tcp"/>
-</protocolMapping>  
-```
-
+  <add binding="String"
+       bindingConfiguration="String"
+       scheme="http/net.msmq/net.pipe/net.tcp" />
+</protocolMapping>
+```  
+  
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
  Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
   
@@ -45,12 +47,16 @@ Représente une section de configuration pour définir un ensemble de mappage de
  L'exemple de configuration suivant montre le mappage de protocole par défaut dans le fichier machine.config. Vous pouvez remplacer ce mappage par défaut au niveau de l'ordinateur en modifiant le fichier machine.config. Ou, si vous souhaitez uniquement le remplacer dans la portée d'une application, vous pouvez remplacer cette section dans le fichier de configuration de votre application et modifier le mappage pour les schémas de protocole individuels.  
   
 ```xml  
-<protocolMapping>  
-        <add scheme="http" binding="basicHttpBinding"/>  
-        <add scheme="net.tcp" binding="netTcpBinding"/>  
-        <add scheme="net.pipe" binding="netNamedPipeBinding"/>  
-        <add scheme="net.msmq" binding="netMsmqBinding"/>  
-</protocolMapping>  
+<protocolMapping>
+  <add scheme="http"
+       binding="basicHttpBinding" />
+  <add scheme="net.tcp"
+       binding="netTcpBinding" />
+  <add scheme="net.pipe"
+       binding="netNamedPipeBinding" />
+  <add scheme="net.msmq"
+       binding="netMsmqBinding" />
+</protocolMapping>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

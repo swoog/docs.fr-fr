@@ -1,15 +1,15 @@
 ---
-title: '&lt;serviceCredentials&gt;'
+title: '&lt;ServiceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: a3d63e3d01c009834717a80a9ed9536fd1bdf838
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9e32509a5e182301455eaf0e602a03c51fbc23a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750399"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150771"
 ---
-# <a name="ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;
+# <a name="ltservicecredentialsgt"></a>&lt;ServiceCredentials&gt;
 Spécifie l’information d’identification à utiliser pour authentifier le service, ainsi que les paramètres liés à la validation des informations d’identification du client.  
   
  \<system.ServiceModel>  
@@ -21,22 +21,22 @@ Spécifie l’information d’identification à utiliser pour authentifier le se
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<serviceCredentials type="String">  
-   <clientCertificate>  
-   </clientCertificate>  
-   <issuedTokenAuthentication>  
-   </issuedTokenAuthentication>  
-   <peer>  
-   </peer>  
-   <secureConversationAuthentication>  
-   </secureConversationAuthentication>  
-   <serviceCertificate>  
-   </serviceCertificate>  
-   <userNameAuthentication>  
-   </userNameAuthentication>  
-   <windowsAuthentication>  
-   </windowsAuthentication>  
-</serviceCredentials>  
+<serviceCredentials type="String">
+  <clientCertificate>
+  </clientCertificate>
+  <issuedTokenAuthentication>
+  </issuedTokenAuthentication>
+  <peer>
+  </peer>
+  <secureConversationAuthentication>
+  </secureConversationAuthentication>
+  <serviceCertificate>
+  </serviceCertificate>
+  <userNameAuthentication>
+  </userNameAuthentication>
+  <windowsAuthentication>
+  </windowsAuthentication>
+</serviceCredentials>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

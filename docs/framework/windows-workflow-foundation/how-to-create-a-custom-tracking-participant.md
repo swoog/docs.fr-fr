@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 74c0e8ac025d69f0fd1ee7d451033165a1c8e615
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611853"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150628"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Procédure : Créer un Participant de suivi de personnalisés
 Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow. L'exécution de workflow émet des enregistrements de suivi qui décrivent les événements de cycle de vie du workflow, les événements de cycle de vie de l'activité, la reprise de signet et les erreurs. Ces enregistrements de suivi sont consommés par les participants de suivi. Windows Workflow Foundation (WF) inclut un participant de suivi standard qui écrit des enregistrements de suivi en tant qu’événements de suivi d’événements pour Windows (ETW). Si cela ne répond pas à vos besoins, vous pouvez également écrire un participant de suivi personnalisé. Cette étape du didacticiel décrit comment créer un participant de suivi et un modèle de suivi qui capturent la sortie des activités de `WriteLine` afin qu'elles puissent être affichées à l'utilisateur.  
@@ -92,7 +92,7 @@ Le suivi de workflow offre une visibilité dans l'état d'exécution de workflow
     }  
     ```  
   
-     Si aucun modèle de suivi n'est spécifié, le modèle de suivi par défaut est utilisé. Lorsque le modèle de suivi par défaut est utilisé, les enregistrements de suivi sont émis pour tous les `ActivityStates`. Étant donné que nous devons uniquement capturer le texte une seule fois pendant le cycle de vie de l'activité `WriteLine`, nous extrayons uniquement le texte de l'état `ActivityStates.Executing`. Dans [pour créer le modèle de suivi et inscrire le participant de suivi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), un profil de suivi est créé qui spécifie que seules `WriteLine` `ActivityStates.Executing` enregistrements de suivi sont émis.  
+     Si aucun modèle de suivi n'est spécifié, le modèle de suivi par défaut est utilisé. Lorsque le modèle de suivi par défaut est utilisé, les enregistrements de suivi sont émis pour tous les `ActivityStates`. Étant donné que nous devons uniquement capturer le texte une seule fois pendant le cycle de vie de l'activité `WriteLine`, nous extrayons uniquement le texte de l'état `ActivityStates.Executing`. Dans [pour créer le modèle de suivi et inscrire le participant de suivi](#to-create-the-tracking-profile-and-register-the-tracking-participant), un profil de suivi est créé qui spécifie que seules `WriteLine` `ActivityStates.Executing` enregistrements de suivi sont émis.  
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>Pour créer le modèle de suivi et inscrire le participant de suivi  
   

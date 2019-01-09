@@ -2,12 +2,12 @@
 title: '&lt;endpoint&gt; de &lt;client&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748059"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147003"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; de &lt;client&gt;
 Spécifie les propriétés du contrat, de la liaison et de l’adresse du point de terminaison du canal employées par les clients pour se connecter aux points de terminaison de service sur le serveur.  
@@ -19,13 +19,15 @@ Spécifie les propriétés du contrat, de la liaison et de l’adresse du point 
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   contract="String"   endpointConfiguration="String"   kind="String"  
-   name="String"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          contract="String"
+          endpointConfiguration="String"
+          kind="String"
+          name="String">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -42,7 +44,7 @@ Spécifie les propriétés du contrat, de la liaison et de l’adresse du point 
 |contrat|Attribut de chaîne requis.<br /><br /> Chaîne qui indique le contrat exposé par ce point de terminaison. L'assembly doit implémenter le type de contrat.|  
 |endpointConfiguration|Chaîne qui spécifie le nom du point de terminaison standard défini par l'attribut `kind`, qui fait référence aux informations de configuration supplémentaires de ce point de terminaison standard. Le même nom doit être défini dans la section `<standardEndpoints>`.|  
 |kind|Chaîne qui spécifie le type de point de terminaison standard appliqué. Le type doit être inscrit dans la section `<extensions>` ou dans machine.config. Si rien n'est spécifié, un point de terminaison de canal commun est créé.|  
-|name|Attribut de chaîne facultatif. Cet attribut identifie uniquement un point de terminaison pour un contrat donné. Vous pouvez définir plusieurs clients pour un type de contrat donné. Chaque définition doit être différenciée par un nom de configuration unique. Si cet attribut est omis, le point de terminaison correspondant est utilisé comme point de terminaison par défaut associé au type de contrat spécifié. La valeur par défaut est une chaîne vide.<br /><br /> L'attribut `name` d'une liaison est utilisé pour l'exportation de définition à travers WSDL.|  
+|name|Attribut de chaîne facultatif. Cet attribut identifie uniquement un point de terminaison pour un contrat donné. Vous pouvez définir plusieurs clients pour un type de contrat donné. Chaque définition doit être différenciée par un nom de configuration unique. Si cet attribut est omis, le point de terminaison correspondant est utilisé comme point de terminaison par défaut associé au type de contrat spécifié. La valeur par défaut est une chaîne vide.<br /><br /> L’attribut `name` d’une liaison est utilisé pour l’exportation de définition à travers WSDL.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   
@@ -61,12 +63,12 @@ Spécifie les propriétés du contrat, de la liaison et de l’adresse du point 
  Il s'agit d'un exemple de configuration de point de terminaison de canal.  
   
 ```xml  
-<endpoint address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    name="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          name="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

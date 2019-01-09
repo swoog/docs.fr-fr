@@ -2,15 +2,15 @@
 title: '&lt;bookmarkResumptionQueries&gt; de WCF'
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147644"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146080"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; de WCF
-
+  
 Représente une collection de requêtes qui permettent d’effectuer le suivi de la reprise d’un signet dans une instance de flux de travail. La requête est nécessaire pour qu'un participant au suivi puisse s'abonner à des enregistrements de reprise de signet.  
   
 Pour plus d’informations sur les requêtes de modèle de suivi, consultez [modèles de suivi](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
@@ -25,7 +25,7 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
   
 ## <a name="syntax"></a>Syntaxe  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,15 +36,15 @@ Pour plus d’informations sur les requêtes de modèle de suivi, consultez [mod
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>Attributs et éléments
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>Attributs et éléments  
+  
 Les sections suivantes décrivent des attributs, des éléments enfants et des éléments parents.  
   
-### <a name="attributes"></a>Attributs
-
+### <a name="attributes"></a>Attributs  
+  
 Aucun.  
   
 ### <a name="child-elements"></a>Éléments enfants  

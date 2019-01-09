@@ -2,12 +2,12 @@
 title: '&lt;security&gt; de &lt;msmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
-ms.openlocfilehash: 574c0d7cba88f724143e642da13cace8c329dea6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a0c6e016980b5a40d74b9bd94dab96a0aa9fb243
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199992"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145274"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;security&gt; de &lt;msmqIntegrationBinding&gt;
 Définit les paramètres de sécurité de transport pour le canal d'intégration MSMQ (Message Queuing).  
@@ -21,19 +21,19 @@ msmqIntegrationBinding
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<msmqIntegrationBinding>  
-   <binding>   
-       <security mode="None/Transport">  
-         <transport msmqAuthenticationMode="None/Windows/Certificate"  
-            msmqEncryptionAlgorithm="RC4Stream/AES"  
-            msmqProtectionLevel="None/Sign/EncryptAndSign"  
-            msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />  
-          <message  algorithmSuite="Aes128/Aes192/Aes256/Rsa15Aes128/ Rsa15Aes256/TripleDes"  
-                        clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
-            defaultProtectionLevel="None/Sign/EncryptAndSign" />  
-       </security>  
-   </binding>  
-</msmqIntegrationBinding>   
+<msmqIntegrationBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport msmqAuthenticationMode="None/Windows/Certificate"
+                 msmqEncryptionAlgorithm="RC4Stream/AES"
+                 msmqProtectionLevel="None/Sign/EncryptAndSign"
+                 msmqSecureHashAlgorithm="MD5/SHA1/SHA256/SHA512" />
+      <message algorithmSuite="Aes128/Aes192/Aes256/Rsa15Aes128/ Rsa15Aes256/TripleDes"
+               clientCredentialType="None/Windows/UserName/Certificate/CardSpace"
+               defaultProtectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</msmqIntegrationBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -43,7 +43,7 @@ msmqIntegrationBinding
   
 |Attribut|Description|  
 |---------------|-----------------|  
-|mode|Spécifie le type de sécurité qui contrôle l'intégrité, la confidentialité et l'authentification avec le canal d'intégration Message Queuing. Les valeurs valides sont les suivantes :<br /><br /> -None : Sécurité est désactivée.<br />-Transport : Protection et l’authentification sont offertes par le transport. Cela s'applique à la sécurité des message entre les deux gestionnaires de files d'attente. Il n'y a aucune sécurité offerte entre l'application et gestionnaire de files d'attente. Les applications Msmq existantes sont équivalentes au niveau des fonctionnalités avec ce type de mode de sécurité.<br /><br /> La valeur par défaut est `Transport`. Cet attribut est de type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|mode|Spécifie le type de sécurité qui contrôle l'intégrité, la confidentialité et l'authentification avec le canal d'intégration Message Queuing. Les valeurs valides sont les suivantes :<br /><br /> -None : Cela désactive la sécurité.<br />-Transport : Protection et l’authentification sont offertes par le transport. Cela s'applique à la sécurité des message entre les deux gestionnaires de files d'attente. Il n'y a aucune sécurité offerte entre l'application et gestionnaire de files d'attente. Les applications Msmq existantes sont équivalentes au niveau des fonctionnalités avec ce type de mode de sécurité.<br /><br /> La valeur par défaut est `Transport`. Cet attribut est de type <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
   

@@ -2,12 +2,12 @@
 title: '&lt;issuer&gt; de &lt;issuedTokenParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: d6a95f32-d58c-40fc-8658-dd92564d3c90
-ms.openlocfilehash: 459f2f43d3ef9426fbce7e0a0dd067250eb2cc4b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aa647f448bad74e25ffce4a5622c7489274996c7
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748570"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151135"
 ---
 # <a name="ltissuergt-of-ltissuedtokenparametersgt"></a>&lt;issuer&gt; de &lt;issuedTokenParameters&gt;
 Spécifie le service d'émission de jeton de sécurité (STS) qui émet des jetons de sécurité.  
@@ -23,7 +23,7 @@ Spécifie le service d'émission de jeton de sécurité (STS) qui émet des jeto
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<issuer address="Uri" />  
+<issuer address="Uri" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -60,5 +60,5 @@ Spécifie le service d'émission de jeton de sécurité (STS) qui émet des jeto
  [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Guide pratique pour créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

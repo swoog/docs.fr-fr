@@ -2,12 +2,12 @@
 title: '&lt;localClientSettings&gt;, élément'
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: a960a18c472bed64609947220dffedf9ec90945c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6ed73cc2a74efbba356b71f7941cb8b1113b22b8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750945"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146145"
 ---
 # <a name="ltlocalclientsettingsgt-element"></a>&lt;localClientSettings&gt;, élément
 Spécifie les paramètres de sécurité d’un client local pour cette liaison.  
@@ -21,19 +21,19 @@ Spécifie les paramètres de sécurité d’un client local pour cette liaison.
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<security>  
-   <localClientSettings cacheCookies="Boolean"  
-      cookieRenewalThresholdPercentage="Integer"  
-      detectReplays="Boolean"  
-      maxClockSkew="TimeSpan"  
-      maxCookieCachingTime="TimeSpan"  
-      reconnectTransportOnFailure="Boolean"  
-      replayCacheSize="Integer"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      timestampValidityDuration="TimeSpan" />  
-</security>  
+<security>
+   <localClientSettings cacheCookies="Boolean"
+                        cookieRenewalThresholdPercentage="Integer"
+                        detectReplays="Boolean"
+                        maxClockSkew="TimeSpan"
+                        maxCookieCachingTime="TimeSpan"
+                        reconnectTransportOnFailure="Boolean"
+                        replayCacheSize="Integer"
+                        replayWindow="TimeSpan"
+                        sessionKeyRenewalInterval="TimeSpan"
+                        sessionKeyRolloverInterval="TimeSpan"
+                        timestampValidityDuration="TimeSpan" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -56,7 +56,7 @@ Spécifie les paramètres de sécurité d’un client local pour cette liaison.
 |`timestampValidityDuration`|<xref:System.TimeSpan> positif qui spécifie la durée de validité d'un horodatage. La valeur par défaut est « 00:15:00 ».|  
   
 ### <a name="child-elements"></a>Éléments enfants  
- Aucun  
+ Aucun.  
   
 ### <a name="parent-elements"></a>Éléments parents  
   
@@ -78,5 +78,5 @@ Spécifie les paramètres de sécurité d’un client local pour cette liaison.
  [Extension de liaisons](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Liaisons personnalisées](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Guide pratique pour créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Guide pratique pour Créer une liaison personnalisée à l’aide de SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Sécurité de liaison personnalisée](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

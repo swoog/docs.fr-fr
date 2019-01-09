@@ -2,12 +2,12 @@
 title: '&lt;add&gt; de &lt;filters&gt;'
 ms.date: 03/30/2017
 ms.assetid: e3bf437c-dd99-49f3-9792-9a8721e6eaad
-ms.openlocfilehash: 2a26a94c01fdb04b8a9e2d381a28cc909bbdac8f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fe9ce8bc2a0efb9e20800189cd9f948d5e6a2232
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754608"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150745"
 ---
 # <a name="ltaddgt-of-ltfiltersgt"></a>&lt;add&gt; de &lt;filters&gt;
 Filtre XPath qui spécifie le type de message à enregistrer.  
@@ -21,9 +21,9 @@ Filtre XPath qui spécifie le type de message à enregistrer.
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<filters>  
-   <add filter="String"/>  
-</filters>  
+<filters>
+  <add filter="String" />
+</filters>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -42,7 +42,7 @@ Filtre XPath qui spécifie le type de message à enregistrer.
   
 |Élément|Description|  
 |-------------|-----------------|  
-|[\<filtres >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contient une collection de filtres XPath utilisés pour contrôler le type de message enregistré.|  
+|[\<filtres>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters.md)|Contient une collection de filtres XPath utilisés pour contrôler le type de message enregistré.|  
   
 ## <a name="remarks"></a>Notes  
  Les filtres sont appliqués uniquement à la couche de transport, spécifiée par `logMessagesAtTransportLevel` (valeur `true`). Le niveau de service et l'enregistrement du message incorrect ne sont pas affectés par les filtres.  
@@ -57,15 +57,17 @@ Filtre XPath qui spécifie le type de message à enregistrer.
  L'exemple de code suivant illustre comment configurer un filtre afin que seuls les messages contenant une section d'en-tête SOAP soient enregistrés.  
   
 ```xml  
-<messageLogging logEntireMessage="true"  
-     logMalformedMessages="true" logMessagesAtServiceLevel="true"  
-     logMessagesAtTransportLevel="true" maxMessagesToLog="420">  
-     <filters>  
-        <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">  
-                        /soap:Envelope/soap:Headers  
-        </add>  
-     </filters>  
-</messageLogging>  
+<messageLogging logEntireMessage="true"
+                logMalformedMessages="true"
+                logMessagesAtServiceLevel="true"
+                logMessagesAtTransportLevel="true"
+                maxMessagesToLog="420">
+  <filters>
+    <add xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+      /soap:Envelope/soap:Headers
+    </add>
+  </filters>
+</messageLogging>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

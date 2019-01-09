@@ -4,16 +4,16 @@ description: Azure Event Grid est une solution sans serveur pour livraison fiabl
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a10fc6a47322de5db40870b1b727edc5559a27f6
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143660"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145873"
 ---
 # <a name="event-grid"></a>Event Grid
 
-[Azure Event Grid](/azure-event-grid/overview) fournit une infrastructure sans serveur pour les applications basées sur des événements. Vous pouvez publier sur Event Grid à partir de n’importe quelle source et consommer des messages à partir de n’importe quelle plateforme. Event Grid dispose également d’une prise en charge intégrée pour les événements à partir des ressources Azure pour simplifier l’intégration avec vos applications. Par exemple, vous pouvez vous abonner aux événements de stockage blob pour avertir votre application lors du chargement d’un fichier. Votre application peut ensuite publier un message de grille d’événement personnalisé qui est consommé par d’autres cloud ou applications locales. Event Grid est conçu pour gérer de manière fiable à grande échelle. Vous bénéficiez des avantages de la publication et l’abonnement aux messages sans la surcharge liée à la configuration de l’infrastructure nécessaire.
+[Azure Event Grid](/azure/event-grid/overview) fournit une infrastructure sans serveur pour les applications basées sur des événements. Vous pouvez publier sur Event Grid à partir de n’importe quelle source et consommer des messages à partir de n’importe quelle plateforme. Event Grid dispose également d’une prise en charge intégrée pour les événements à partir des ressources Azure pour simplifier l’intégration avec vos applications. Par exemple, vous pouvez vous abonner aux événements de stockage blob pour avertir votre application lors du chargement d’un fichier. Votre application peut ensuite publier un message de grille d’événement personnalisé qui est consommé par d’autres cloud ou applications locales. Event Grid est conçu pour gérer de manière fiable à grande échelle. Vous bénéficiez des avantages de la publication et l’abonnement aux messages sans la surcharge liée à la configuration de l’infrastructure nécessaire.
 
 ![Logo de grille d’événement](./media/event-grid-logo.png)
 

@@ -1,15 +1,15 @@
 ---
-title: Bien démarrer avec F# avec les outils de ligne de commande
-description: Découvrez comment créer une solution à projets multiples simple sur F# à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).
+title: Prise en main F# avec les outils de ligne de commande
+description: Découvrez comment créer une solution à projets multiples simple F# à l’aide de l’interface CLI .NET Core sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673907"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152097"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Bien démarrer avec F# avec l’interface CLI .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Prise en main F# avec l’interface CLI .NET Core
 
 Cet article explique comment vous pouvez commencer avec F# sur n’importe quel système d’exploitation (Windows, Mac OS ou Linux) avec l’interface CLI .NET Core. Il passe par la création d’une solution à projets multiples avec une bibliothèque de classes est appelée par une application console.
 
@@ -131,7 +131,7 @@ Ajouter le `App` de projet pour le `FSNetCore` à l’aide de la solution le `do
 dotnet sln add src/App/App.fsproj
 ```
 
-Restaurer les dépendances NuGet, `dotnet restore` ([voir la Remarque](#dotnet-restore-note)) et exécutez `dotnet build` pour générer le projet.
+Restaurer les dépendances NuGet, `dotnet restore` et exécutez `dotnet build` pour générer le projet.
 
 Accédez au répertoire le `src/App` projet de console et exécuter le projet en passant `Hello World` en tant qu’arguments :
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Consultez ensuite le [visite guidée de F#](../tour.md) pour en savoir plus sur les différentes fonctionnalités de F#.
+Consultez ensuite le [visite guidée de F# ](../tour.md) pour en savoir plus sur différentes F# fonctionnalités.
