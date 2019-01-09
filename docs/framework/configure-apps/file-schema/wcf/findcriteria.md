@@ -2,12 +2,12 @@
 title: '&lt;Critères de recherche&gt;'
 ms.date: 03/30/2017
 ms.assetid: 5454cd19-6bf5-4ba8-94d1-f58d10dc1917
-ms.openlocfilehash: 38941e4afb0cfa4fea8657c90c1105a5ab771d49
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0a2fb7ae641f8ec34c518d8dc2c11fbc2ae26190
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144198"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146925"
 ---
 # <a name="ltfindcriteriagt"></a>&lt;Critères de recherche&gt;
 Élément de configuration qui fournit un jeu de critères utilisé par une application cliente pour rechercher un service de découverte. Critères peuvent être regroupées en critères de recherche (spécifiant les services que vous recherchez) et recherchez les critères d’arrêt (la durée pendant laquelle la recherche doit durer).  
@@ -18,15 +18,18 @@ ms.locfileid: "53144198"
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <dynamicEndpoint>
       <standardEndpoint>
         <discoveryClientSettings discoveryEndpoint="String">
-          <findCriteria duration="TimeSpan" maxResults="Integer" scopeMatchBy="Uri">
+          <findCriteria duration="TimeSpan"
+                        maxResults="Integer"
+                        scopeMatchBy="Uri">
             <contractTypeNames>
-              <add name="String" namespace="String" />
-            <contractTypeNames>
+              <add name="String"
+                   namespace="String" />
+            </contractTypeNames>
             <extensions />
             <scopes>
               <add scope="URI" />
@@ -35,8 +38,8 @@ ms.locfileid: "53144198"
         </discoveryClientSettings>
       </standardEndpoint>
     </dynamicEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

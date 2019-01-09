@@ -2,12 +2,12 @@
 title: '&lt;localIssuer&gt;'
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
-ms.openlocfilehash: cb5afb0e73ad0a07ea43f06915f4e477d7f8f985
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7a48cbb3a1e17ac1fc9fa9f43301ef153cdb866c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841551"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151872"
 ---
 # <a name="ltlocalissuergt"></a>&lt;localIssuer&gt;
 Spécifie l’adresse et la liaison de l’émetteur local à utiliser pour obtenir un jeton de sécurité.  
@@ -23,9 +23,9 @@ section d’endpointBehaviors
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<localIssuer address="string"  
-      binding="string"  
-      bindingConfiguration="string" />  
+<localIssuer address="String"
+             binding="String"
+             bindingConfiguration="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -53,28 +53,28 @@ section d’endpointBehaviors
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Spécifie un jeton personnalisé utilisé pour authentifier un client auprès d'un service.|  
   
 ## <a name="remarks"></a>Notes  
- Lors de l’obtention d’un jeton émis depuis un service d’émission de jeton de sécurité (STS), l’application cliente doit être configurée avec l’adresse et la liaison à utiliser pour pouvoir communiquer avec le STS. Lorsque le <xref:System.ServiceModel.WSFederationHttpBinding> ne fournit pas d’URL pour le service de jeton de sécurité, ou lorsque l’adresse de l’émetteur d’une liaison fédérée est `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`, le canal de client Windows Communication Foundation (WCF) utilise les valeurs spécifiées par `address`et `binding` pour communiquer avec le STS pour obtenir le jeton émis. Pour plus d’informations sur la configuration d’un émetteur local, consultez [Comment : configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
+ Lors de l’obtention d’un jeton émis depuis un service d’émission de jeton de sécurité (STS), l’application cliente doit être configurée avec l’adresse et la liaison à utiliser pour pouvoir communiquer avec le STS. Lorsque le <xref:System.ServiceModel.WSFederationHttpBinding> ne fournit pas d’URL pour le service de jeton de sécurité, ou lorsque l’adresse de l’émetteur d’une liaison fédérée est `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` ou `null`, le canal de client Windows Communication Foundation (WCF) utilise les valeurs spécifiées par `address`et `binding` pour communiquer avec le STS pour obtenir le jeton émis. Pour plus d’informations sur la configuration d’un émetteur local, consultez [Comment : Configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md).  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant définit les attributs `address`, `binding` et `bindingConfiguration` d'un élément `localIssuer`.  
   
 ```xml  
-<system.serviceModel>  
- <behaviors>  
- <endpointBehaviors>  
-  <behavior name="MyEndpointBehavior">  
-   <clientCredentials>  
-    <issuedToken cacheIssuedTokens="false"   
-                 defaultKeyEntropyMode="ClientEntropy">  
-     <localIssuer address="net.tcp://cohowinery/tokens"   
-                  binding="netTcpBinding"  
-                  bindingConfiguration="myTcpBindingConfig" />  
-    </issuedToken>  
-   </clientCredentials>  
-  </behavior>  
-  </endpointBehaviors>  
-  </behaviors>  
-</system.serviceModel>  
+<system.serviceModel>
+  <behaviors>
+    <endpointBehaviors>
+      <behavior name="MyEndpointBehavior">
+        <clientCredentials>
+          <issuedToken cacheIssuedTokens="false"
+                       defaultKeyEntropyMode="ClientEntropy">
+            <localIssuer address="net.tcp://cohowinery/tokens"
+                         binding="netTcpBinding"
+                         bindingConfiguration="myTcpBindingConfig" />
+          </issuedToken>
+        </clientCredentials>
+      </behavior>
+    </endpointBehaviors>
+  </behaviors>
+</system.serviceModel>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
@@ -82,11 +82,11 @@ section d’endpointBehaviors
  <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>  
  <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
  [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
- [Guide pratique pour configurer un émetteur local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Guide pratique pour Configurer un émetteur Local](../../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  [Identité du service et authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
  [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Sécurisation des clients](../../../../../docs/framework/wcf/securing-clients.md)  
- [Guide pratique pour créer un client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Guide pratique pour Créer un Client fédéré](../../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [Fédération et jetons émis](../../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

@@ -2,12 +2,12 @@
 title: '&lt;security&gt; de &lt;netPeerBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: d32b6426009c403d74ca3a05d3c3ba7be9163cae
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eb25535e9eb0b74e8f92a77cf86656cc3788f0aa
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197325"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146119"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;security&gt; de &lt;netPeerBinding&gt;
 Définit les paramètres de sécurité de la [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), y compris le type d’authentification utilisé et la sécurité utilisée pour le transport de messages.  
@@ -21,13 +21,13 @@ Définit les paramètres de sécurité de la [ \<netPeerTcpBinding >](../../../.
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<netPeerBinding>  
-    <binding>  
-        <security mode="Message/None/Transport//TransportWithMessageCredential">  
-            <transport credentialType="Certificate/Password" />  
-        </security>  
-    </binding>  
-</netPeerBinding>  
+<netPeerBinding>
+  <binding>
+    <security mode="Message/None/Transport//TransportWithMessageCredential">
+      <transport credentialType="Certificate/Password" />
+    </security>
+  </binding>
+</netPeerBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

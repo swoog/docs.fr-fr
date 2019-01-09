@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: f6e139a4e10ca10fac45510715110d156ddf82ff
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030125"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145963"
 ---
 # <a name="redirecting-assembly-versions"></a>Redirection des versions d'assemblys
 
@@ -156,14 +156,13 @@ Vous pouvez activer la redirection de liaison automatique si votre application c
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Guide pratique pour Activer et désactiver la Redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Guide pratique pour Activer et désactiver la redirection de liaison automatique](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
 - [\<bindingRedirect > élément](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)
 - [Autorisation de sécurité pour la redirection de liaison d’assembly](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)
 - [Assemblys dans le Common Language Runtime](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programmation à l’aide d’assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [Méthode de localisation des assemblys par le runtime](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Configuration d'applications](../../../docs/framework/configure-apps/index.md)
-- [Configuration des applications .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
 - [Schéma des paramètres d’exécution](../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Schéma des fichiers de configuration](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Guide pratique pour Créer une stratégie d’éditeur](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

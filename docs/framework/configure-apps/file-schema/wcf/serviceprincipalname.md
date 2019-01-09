@@ -1,18 +1,18 @@
 ---
-title: '&lt;Nom principal de service&gt;'
+title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750724"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150634"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;Nom principal de service&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 Spécifie l'identité d'un service par son nom de principal du service (SPN).  
   
- Pour plus d’informations sur la configuration du SPN, consultez [l’identité du Service et l’authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Pour plus d’informations sur la définition du nom SPN, consultez [identité de Service et d’authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<identité >  
 \<servicePrincipalName >  
@@ -20,7 +20,7 @@ Spécifie l'identité d'un service par son nom de principal du service (SPN).
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  

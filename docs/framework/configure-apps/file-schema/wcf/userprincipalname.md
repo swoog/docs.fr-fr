@@ -2,17 +2,17 @@
 title: '&lt;userPrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 68032f69-149e-4613-bae4-18314d4fd294
-ms.openlocfilehash: 1bb0c8ac4cbe11cdfa31beb16b00b3863acabf92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff38a6975d1ec73c1a3014b94198ba630c3fec31
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358675"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149978"
 ---
 # <a name="ltuserprincipalnamegt"></a>&lt;userPrincipalName&gt;
 Indique le nom d'utilisateur principal (UPN) d'un service à authentifier par le client.  
   
- Pour plus d’informations sur la définition de l’UPN, consultez [l’identité du Service et l’authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Pour plus d’informations sur la définition de l’UPN, consultez [identité de Service et d’authentification](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 \<identité >  
 \<userPrincipalName>  
@@ -20,7 +20,7 @@ Indique le nom d'utilisateur principal (UPN) d'un service à authentifier par le
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<userPrincipalName value="String" />  
+<userPrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -42,15 +42,15 @@ Indique le nom d'utilisateur principal (UPN) d'un service à authentifier par le
 |[\<identité >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Spécifie l'identité du service à authentifier par le client.|  
   
 ## <a name="remarks"></a>Notes  
- Un client Windows Communication Foundation (WCF) sécurisé qui se connecte à un point de terminaison avec cette identité utilise l’UPN lors de l’authentification SSPI avec le point de terminaison.  
+ Un client Windows Communication Foundation (WCF) sécurisé qui se connecte à un point de terminaison avec cette identité utilise le nom UPN lors de l’authentification SSPI avec le point de terminaison.  
   
 ## <a name="example"></a>Exemple  
  Le code de configuration suivant indique le nom UPN du service devant être authentifié par le client.  
   
 ```xml  
-<identity>  
-  <userPrincipalName value="someone@cohowinery.com" />  
-</identity>  
+<identity>
+  <userPrincipalName value="someone@cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

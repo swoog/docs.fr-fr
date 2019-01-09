@@ -2,15 +2,15 @@
 title: '&lt;allowedAudienceUris&gt;'
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
-ms.openlocfilehash: b7a4ae230e9b8788d9ac23147a3fcf21637dadaf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cbbe817cb647589bf30dfeb6068c2c37536277fe
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754078"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151842"
 ---
 # <a name="ltallowedaudienceurisgt"></a>&lt;allowedAudienceUris&gt;
-Représente une collection d'URI cibles pour lesquels le jeton de sécurité <xref:System.IdentityModel.Tokens.SamlSecurityToken> peut être visé pour être considéré comme valide par une instance de <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
+Représente une collection d’URI cibles pour lesquels le jeton de sécurité <xref:System.IdentityModel.Tokens.SamlSecurityToken> peut être visé pour être considéré comme valide par une instance de <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
  \<system.ServiceModel>  
 \<comportements >  
@@ -23,9 +23,9 @@ Représente une collection d'URI cibles pour lesquels le jeton de sécurité <xr
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<allowedAudienceUris>  
-      <add allowedAudienceUri="String"/>  
-</allowedAudienceUris>  
+<allowedAudienceUris>
+  <add allowedAudienceUri="String" />
+</allowedAudienceUris>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -55,7 +55,7 @@ Représente une collection d'URI cibles pour lesquels le jeton de sécurité <xr
   
  Pour plus d'informations, consultez <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>.  
   
- Pour plus d’informations sur l’utilisation de cet élément de configuration, consultez [Comment : configurer les informations d’identification sur un Service de fédération](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
+ Pour plus d’informations sur l’utilisation de cet élément de configuration, consultez [Comment : Configurer les informations d’identification sur un Service de fédération](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>  
@@ -69,4 +69,4 @@ Représente une collection d'URI cibles pour lesquels le jeton de sécurité <xr
  [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)  
  [Comportements de sécurité](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Sécurisation des services et des clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Guide pratique pour configurer des informations d’identification sur un service FS (Federation Service)](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+ [Guide pratique pour Configurer les informations d’identification sur un Service de fédération](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

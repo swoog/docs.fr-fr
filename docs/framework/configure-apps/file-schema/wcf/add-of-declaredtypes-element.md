@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 90eaf11ce8b9e3675a23ed3875680b03f149b56b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 587c70a7b583c99e66eebac4055415e1e6a635b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754117"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146106"
 ---
 # <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a>&lt;add&gt;, élément de &lt;declaredTypes&gt;
 Ajoute un type utilisé par le <xref:System.Runtime.Serialization.DataContractSerializer> pendant la désérialisation. Chaque type déclaré inclut les types connus qui seront renvoyés comme champ ou propriété du type déclaré.  
@@ -25,12 +25,12 @@ Ajoute un type utilisé par le <xref:System.Runtime.Serialization.DataContractSe
 ## <a name="syntax"></a>Syntaxe  
   
 ```xml  
-<add type="String">  
-   <knownType type="String">  
-       <parameter index="Integer"  
-                  type="String" />  
-   </knownType>  
-</add>  
+<add type="String">
+  <knownType type="String">
+    <parameter index="Integer"
+               type="String" />
+  </knownType>
+</add>
 ```  
   
 ## <a name="attributes-and-elements"></a>Attributs et éléments  
@@ -55,7 +55,7 @@ Ajoute un type utilisé par le <xref:System.Runtime.Serialization.DataContractSe
 |[\<declaredTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|Contient les types qui requièrent des types connus pendant la désérialisation effectuée par le <xref:System.Runtime.Serialization.DataContractSerializer>.|  
   
 ## <a name="remarks"></a>Notes  
- Pour plus d’informations sur les types connus, consultez [Types connus de contrat de données](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) et <xref:System.Runtime.Serialization.DataContractSerializer>.  
+ Pour plus d’informations sur les types connus, consultez [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) et <xref:System.Runtime.Serialization.DataContractSerializer>.  
   
  Consultez le [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) pour obtenir un exemple d’utilisation de cet élément.  
   
@@ -65,14 +65,14 @@ Ajoute un type utilisé par le <xref:System.Runtime.Serialization.DataContractSe
 ## <a name="example"></a>Exemple  
   
 ```xml  
-<add type="MyCompany.Library.Shape,   
-           MyAssembly, Version=2.0.0.0, Culture=neutral,  
-           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
-           <knownType type="MyCompany.Library.Circle,   
-                      MyAssembly, Version=2.0.0.0, Culture=neutral,  
-                      PublicKeyToken=XXXXXX,  
-                      processorArchitecture=MSIL"/>  
-</add>  
+<add type="MyCompany.Library.Shape,
+           MyAssembly, Version=2.0.0.0, Culture=neutral,
+           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">
+  <knownType type="MyCompany.Library.Circle,
+                   MyAssembly, Version=2.0.0.0, Culture=neutral,
+                   PublicKeyToken=XXXXXX,
+                   processorArchitecture=MSIL" />
+</add>
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
