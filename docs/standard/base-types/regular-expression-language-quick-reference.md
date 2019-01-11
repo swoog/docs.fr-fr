@@ -68,7 +68,7 @@ ms.locfileid: "54030397"
   
 <a name="character_classes"></a>   
 ## <a name="character-classes"></a>Classes de caractères  
- Une classe de caractères fait correspondre tout caractère d'un jeu de caractères. Les classes de caractères incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Character Classes](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
+ Une classe de caractères fait correspondre tout caractère d'un jeu de caractères. Les classes de caractères incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Classes de caractères](../../../docs/standard/base-types/character-classes-in-regular-expressions.md).  
   
 |Classe de caractères|Description|Motif|Correspondances|  
 |---------------------|-----------------|-------------|-------------|  
@@ -105,15 +105,15 @@ ms.locfileid: "54030397"
   
 <a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>Constructions de regroupement  
- Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent généralement les sous-chaînes d'une chaîne d'entrée. Les constructions de regroupement incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Grouping Constructs](grouping-constructs-in-regular-expressions.md).  
+ Les constructions de regroupement délimitent les sous-expressions d'une expression régulière et capturent généralement les sous-chaînes d'une chaîne d'entrée. Les constructions de regroupement incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Constructions de regroupement](grouping-constructs-in-regular-expressions.md).  
   
 |Construction de regroupement|Description|Motif|Correspondances|  
 |------------------------|-----------------|-------------|-------------|  
 |`(` *sous-expression* `)`|Capture la sous-expression mise en correspondance et lui assigne un nombre ordinal de base un.|`(\w)\1`|"oo" dans "boot"|  
 |`(?<` *name* `>` *sous-expression* `)`|Capture la sous-expression mise en correspondance dans un groupe nommé.|`(?<double>\w)\k<double>`|"oo" dans "boot"|  
-|`(?<` *nom1* `-` *nom2* `>` *sous-expression* `)`|Définit un équilibre de définition de groupe. Pour plus d’informations, consultez la section « Équilibre de définition de groupe » dans [Grouping Constructs](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|« ((1-3)\*(3-1)) » dans « 3+2^((1-3)\*(3-1)) »|  
+|`(?<` *nom1* `-` *nom2* `>` *sous-expression* `)`|Définit un équilibre de définition de groupe. Pour plus d’informations, consultez la section « Équilibre de définition de groupe » dans [Constructions de regroupement](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|« ((1-3)\*(3-1)) » dans « 3+2^((1-3)\*(3-1)) »|  
 |`(?:` *sous-expression* `)`|Définit un groupe sans capture.|`Write(?:Line)?`|"WriteLine" dans "Console.WriteLine()"<br /><br /> "Write" dans "Console.Write(value)"|  
-|`(?imnsx-imnsx:` *sous-expression* `)`|Active ou désactive les options spécifiées dans *sous-expression*. Pour plus d'informations, consultez [Regular Expression Options](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" dans "A12xl A12XL a12xl"|  
+|`(?imnsx-imnsx:` *sous-expression* `)`|Active ou désactive les options spécifiées dans *sous-expression*. Pour plus d'informations, consultez [Options des expressions régulières](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|"A12xl", "A12XL" dans "A12xl A12XL a12xl"|  
 |`(?=` *sous-expression* `)`|Assertion de préanalyse positive de largeur nulle.|`\w+(?=\.)`|"est", "courait", et "couché" dans "Il est. Le chien courait. Le soleil est couché."|  
 |`(?!` *sous-expression* `)`|Assertion de préanalyse négative de largeur nulle.|`\b(?!un)\w+\b`|"retourner", "utilisée" dans "retourner une unité utilisée"|  
 |`(?<=` *sous-expression* `)`|Assertion de postanalyse positive de largeur nulle.|`(?<=19)\d{2}\b`|"99", "50", "05" dans "1851 1999 1950 1905 2003"|  
@@ -124,7 +124,7 @@ ms.locfileid: "54030397"
   
 <a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>Quantificateurs  
- Un quantificateur indique combien d'instances de l'élément précédent (qui peut être un caractère, un groupe ou une classe de caractères) doivent être présentes dans la chaîne d'entrée pour qu'il y ait correspondance. Les quantificateurs incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Quantifiers](quantifiers-in-regular-expressions.md).  
+ Un quantificateur indique combien d'instances de l'élément précédent (qui peut être un caractère, un groupe ou une classe de caractères) doivent être présentes dans la chaîne d'entrée pour qu'il y ait correspondance. Les quantificateurs incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Quantificateurs](quantifiers-in-regular-expressions.md).  
   
 |Quantifieur|Description|Motif|Correspondances|  
 |----------------|-----------------|-------------|-------------|  
@@ -156,7 +156,7 @@ ms.locfileid: "54030397"
   
 <a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>Constructions d’alternative  
- Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif. Ces constructions incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Alternation Constructs](alternation-constructs-in-regular-expressions.md).  
+ Les constructions d'alternative modifient une expression régulière pour permettre la correspondance de type inclusif/exclusif. Ces constructions incluent les éléments de langage répertoriés dans le tableau suivant. Pour plus d'informations, consultez [Constructions d’alternative](alternation-constructs-in-regular-expressions.md).  
   
 |Construction d'alternative|Description|Motif|Correspondances|  
 |---------------------------|-----------------|-------------|-------------|  
@@ -185,13 +185,13 @@ ms.locfileid: "54030397"
   
 <a name="options"></a>   
 ## <a name="regular-expression-options"></a>Options des expressions régulières  
- Vous pouvez définir des options qui contrôlent comment le moteur des expressions régulières interprète un modèle d'expression régulière. Bon nombre de ces options peuvent être spécifiées inline (dans le modèle d'expression régulière) ou sous la forme d'une ou de plusieurs constantes <xref:System.Text.RegularExpressions.RegexOptions> . Cette référence rapide répertorie uniquement les options inline. Pour plus d’informations sur les options inline et <xref:System.Text.RegularExpressions.RegexOptions> , consultez l’article [Regular Expression Options](regular-expression-options.md).  
+ Vous pouvez définir des options qui contrôlent comment le moteur des expressions régulières interprète un modèle d'expression régulière. Bon nombre de ces options peuvent être spécifiées inline (dans le modèle d'expression régulière) ou sous la forme d'une ou de plusieurs constantes <xref:System.Text.RegularExpressions.RegexOptions> . Cette référence rapide répertorie uniquement les options inline. Pour plus d’informations sur les options inline et <xref:System.Text.RegularExpressions.RegexOptions> , consultez l’article [Options des expressions régulières](regular-expression-options.md).  
   
  Vous pouvez spécifier une option inline de deux façons :  
   
 -   À l’aide d’une [construction diverse](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`, où un signe moins (-) devant une option ou un jeu d’options désactive ces options. Par exemple, `(?i-mn)` active la correspondance qui ne respecte pas la casse (`i`), désactive le mode multiligne (`m`) et désactive les captures de groupe sans nom (`n`). L'option s'applique au modèle d'expression régulière depuis le point au niveau duquel l'option est définie et est effective jusqu'à la fin du modèle ou jusqu'au point au niveau duquel une autre construction inverse l'option.  
   
--   À l’aide d’une [grouping construct](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sous-expression*`)`, qui définit des options uniquement pour le groupe spécifié.  
+-   À l’aide d’une [construction de regroupement](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*sous-expression*`)`, qui définit des options uniquement pour le groupe spécifié.  
   
  Le moteur d’expression régulière de .NET prend en charge les options inline suivantes.  
   
